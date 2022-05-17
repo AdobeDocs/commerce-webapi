@@ -3,8 +3,9 @@ title: Commerce Web API
 description: Learn about using REST and GraphQL to 
 ---
 
-<Hero slots="heading, text" background="rgb(244, 111, 37)"/>
+<Hero slots="image, heading, text"/>
 
+![Commerce Web APIs](_images/home-bg.jpeg)
 # Commerce Web APIs
 
 Lorem ipsum dolor sit amet
