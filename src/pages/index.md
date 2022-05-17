@@ -23,7 +23,7 @@ This documentation provides resources for working with Adobe Commerce and Magent
 
 ## Discover
 
-Use these sections to learn about how to develop PHP extensions.
+Use these sections to learn about how to use our web APIs to integrate with third-party software and build headless applications.
 
 <DiscoverBlock slots="heading, link, text"/>
 
