@@ -26,7 +26,7 @@ See Contribution guidelines (https://github.com/magento/devdocs/blob/master/.git
 
 <!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
 
-- [ ] I have signed the [Adobe Open Source CLA](https://opensource.adobe.com/cla.html).
-- [ ] My changes follow the code style of this project.
-- [ ] I have read the **CONTRIBUTING** document.
-- [ ] All new and existing tests passed.
+-  [ ] I have signed the [Adobe Open Source CLA](https://opensource.adobe.com/cla.html).
+-  [ ] My changes follow the code style of this project.
+-  [ ] I have read the **CONTRIBUTING** document.
+-  [ ] All new and existing tests passed.

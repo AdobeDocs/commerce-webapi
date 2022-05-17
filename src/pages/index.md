@@ -6,6 +6,7 @@ description: Learn about using REST and GraphQL to
 <Hero slots="image, heading, text"/>
 
 ![Commerce Web APIs](_images/home-bg.jpeg)
+
 # Commerce Web APIs
 
 Lorem ipsum dolor sit amet
