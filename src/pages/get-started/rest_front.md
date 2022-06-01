@@ -16,7 +16,7 @@ The caller issues an HTTP request, which contains the following elements:
 
 Magento returns a response payload as well as an HTTP status code.
 
-This guide introduces web API, REST, and cURL command concepts. It shows you how to authenticate and construct and run REST [web API](https://glossary.magento.com/web-api) calls. You run REST web API calls through <a href="./gs-curl.html">cURL commands</a> or a REST client.
+This guide introduces web API, REST, and cURL command concepts. It shows you how to authenticate and construct and run REST [web API](https://glossary.magento.com/web-api) calls. You run REST web API calls through <a href="./gs-curl">cURL commands</a> or a REST client.
 
 Read the following sections to get up and running with the Magento web APIs:
 
@@ -28,17 +28,17 @@ Read the following sections to get up and running with the Magento web APIs:
    </li>
    <li>
       <p>
-         <a href="./gs-web-api-request.html">Construct a request</a>
+         <a href="./gs-web-api-request">Construct a request</a>
       </p>
    </li>
    <li>
       <p>
-         <a href="./gs-curl.html">Use cURL to run the request</a>
+         <a href="./gs-curl">Use cURL to run the request</a>
       </p>
    </li>
    <li>
       <p>
-         <a href="./gs-web-api-response.html">Review the response</a>
+         <a href="./gs-web-api-response">Review the response</a>
       </p>
    </li>
 </ul>

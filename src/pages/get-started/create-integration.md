@@ -249,7 +249,7 @@ The file defines which API resources the integration has access to.
 <tr>
 <td>endpoint_url</td>
 <td><p>Optional. The [URL](https://glossary.magento.com/url) where OAuth credentials can be sent when using OAuth for token exchange. We strongly recommend using <inlineCode class="spectrum-Body--sizeS">https://</inlineCode>.</p>
-<p>See <a href="./authentication/gs-authentication-oauth.html">OAuth-based authentication</a> for details.</p></td>
+<p>See <a href="./authentication/gs-authentication-oauth">OAuth-based authentication</a> for details.</p></td>
 </tr>
 <tr>
 <td>identity_link_url</td>
@@ -326,7 +326,7 @@ The callback page must be able to perform the following tasks:
 ## Related Topics
 
 *  [Web API authentication](./authentication/)
-*  [OAuth-based authentication](./authentication/gs-authentication-oauth.)
+*  [OAuth-based authentication](./authentication/gs-authentication-oauth)
 *  [Magento System Requirements](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html)
 *  [Create the module file structure](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/build/module-file-structure.html)
 *  [Create a component](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/build/create_component.html)

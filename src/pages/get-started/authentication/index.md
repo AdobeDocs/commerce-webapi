@@ -107,7 +107,7 @@ Each type of client has a preferred authentication method. To authenticate, use 
          <p>Mobile application</p>
       </td>
       <td>
-         <p>Registered users use <a href="./authentication/gs-authentication-token.html">token-based authentication</a> to make web API calls using a mobile application. The token acts like an electronic key that provides access to the API(s).</p>
+         <p>Registered users use <a href="./authentication/gs-authentication-token">token-based authentication</a> to make web API calls using a mobile application. The token acts like an electronic key that provides access to the API(s).</p>
          <ol>
             <li>
                <p>As a registered Magento user, you request a token from the Magento token service at the endpoint that is defined for your user type.</p>
@@ -128,7 +128,7 @@ Each type of client has a preferred authentication method. To authenticate, use 
          <p>Third-party application</p>
       </td>
       <td>
-         <p>Third-party applications use <a href="./authentication/gs-authentication-oauth.html">OAuth-based authentication</a> to access the web APIs.</p>
+         <p>Third-party applications use <a href="./authentication/gs-authentication-oauth">OAuth-based authentication</a> to access the web APIs.</p>
          <ol>
             <li>
                <p>The third-party Integration registers with Magento.</p>
@@ -144,7 +144,7 @@ Each type of client has a preferred authentication method. To authenticate, use 
          <p>JavaScript widget on the Magento storefront or Admin</p>
       </td>
       <td>
-         <p>Registered users use <a href="./authentication/gs-authentication-session.html">session-based authentication</a> to log in to the Magento storefront or Admin.</p>
+         <p>Registered users use <a href="./authentication/gs-authentication-session">session-based authentication</a> to log in to the Magento storefront or Admin.</p>
          <p>A session is identified by a cookie and time out after a period of inactivity. Additionally, you can have a session as a guest user without logging in.</p>
          <ol>
             <li>
