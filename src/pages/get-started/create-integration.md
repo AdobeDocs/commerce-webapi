@@ -57,14 +57,7 @@ To develop a module, you must:
    The following example shows an example `etc/module.xml` file.
 
    ```xml
-
    <?xml version="1.0"?>
-   <!--
-      /**
-      * Copyright © Magento, Inc. All rights reserved.
-      * See COPYING.txt for license details.
-      */
-      -->
       <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
           <module name="Vendor1_Module1" setup_version="2.0.0">
                <sequence>
@@ -72,7 +65,6 @@ To develop a module, you must:
                </sequence>
           </module>
         </config>
-
    ```
 
    Module `Magento_Integration` is added to "sequence" to be loaded first. It helps to avoid the issue, when a module with integration config loaded, that leads to a malfunction.
@@ -108,11 +100,6 @@ To develop a module, you must:
 
    ```php
    <?php
-   /**
-   * Copyright © Magento, Inc. All rights reserved.
-   * See COPYING.txt for license details.
-   */
-
    \Magento\Framework\Component\ComponentRegistrar::register(
    \Magento\Framework\Component\ComponentRegistrar::MODULE,
    'Vendor1_Module1',
