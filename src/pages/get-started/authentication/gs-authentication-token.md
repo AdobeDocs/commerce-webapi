@@ -17,7 +17,7 @@ Customer | Magento grants access to resources with the `anonymous` or `self` per
 
 ## Integration tokens
 
-When a merchant creates and activates an integration, Magento generates a consumer key, consumer secret, access token, and access token secret. All of these entities are used for [OAuth-based authentication](./gs-authentication-oauth/).
+When a merchant creates and activates an integration, Magento generates a consumer key, consumer secret, access token, and access token secret. All of these entities are used for [OAuth-based authentication](./gs-authentication-oauth.md).
 
 In previous versions of Magento, the access token could be used on its own for token-based authentication. This behavior has been disabled by default due to the security implications of a never-expiring access token. Namely, if the access token is compromised it provides undetected persistent access to a store.
 
@@ -27,7 +27,7 @@ However, while it is not recommended, this behavior can be restored in the Admin
 bin/magento config:set oauth/consumer/enable_integration_as_bearer 1
 ```
 
-If you are trying to upgrade from a previous version and need to update your integration implementation to properly utilize the OAuth workflow, review [OAuth-based Authentication](./gs-authentication-oauth/). Otherwise, you can partially update your integration to simply store and utilize all four credentials to sign your requests.
+If you are trying to upgrade from a previous version and need to update your integration implementation to properly utilize the OAuth workflow, review [OAuth-based Authentication](./gs-authentication-oauth.md). Otherwise, you can partially update your integration to simply store and utilize all four credentials to sign your requests.
 
 There is a comprehensive guide for this on the OAuth-based authentication page, but can also be done in isolation without supporting the entire OAuth workflow. For example, in the following script the four credentials are used to create a new CMS page without using external libraries or implementing the full OAuth handshake.
 <p></p>
@@ -206,7 +206,7 @@ curl -X POST "http://magento.vg/index.php/rest/V1/integration/customer/token" \
      -d "<login><username>customer1</username><password>customer1pw</password></login>"
 ```
 
-For more information about the `curl` command, see [Use cURL to run the request](../gs-curl/)
+For more information about the `curl` command, see [Use cURL to run the request](../gs-curl.md)
 
 ## Authentication token response
 
@@ -237,7 +237,7 @@ For example, to make a web API call with a customer token:
 
 #### Related topics
 
-[Construct a request](../gs-web-api-request/)
+[Construct a request](../gs-web-api-request.md)
 
 [Configure services as web APIs](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/service-contracts/service-to-web-service.html)
 
