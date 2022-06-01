@@ -7,7 +7,7 @@ description: How to use OAuth authentication and token passing in the web APIs.
 
 Magento OAuth authentication is based on [OAuth 1.0a](https://tools.ietf.org/html/rfc5849), an open standard for secure [API](https://glossary.magento.com/api) authentication. OAuth is a token-passing mechanism that allows a system to control which third-party applications have access to internal data without revealing or storing any user IDs or passwords.
 
-In Magento, a third-party application that uses OAuth for authentication is called an [_integration_](../create-integration/). An integration defines which resources the application can access. The application can be granted access to all resources or a customized subset of resources.
+In Magento, a third-party application that uses OAuth for authentication is called an [_integration_](../create-integration.md). An integration defines which resources the application can access. The application can be granted access to all resources or a customized subset of resources.
 
 As the process of registering the integration proceeds, Magento creates the tokens that the application needs for authentication. It first creates a request token. This token is short-lived and must be exchanged for an access token. Access tokens are long-lived and will not expire unless the merchant revokes access from the application.
 
@@ -463,10 +463,10 @@ class OauthClient extends AbstractService
 
 #### Related topics
 
-[Create an integration](../create-integration/)
+[Create an integration](../create-integration.md)
 
-[OAuth error codes](./oauth-errors/)
+[OAuth error codes](oauth-errors)
 
-[Construct a request](../gs-web-api-request/)
+[Construct a request](gs-web-api-request)
 
 [Configure services as web APIs](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/service-contracts/service-to-web-service.html)
