@@ -281,4 +281,4 @@ This request returns a list of all customers in JSON format, as shown below. You
 
 #### Related topics
 
-Run the web API call through a [cURL command](./gs-curl) or a REST client.
+Run the web API call through a [cURL command](./gs-curl/) or a REST client.

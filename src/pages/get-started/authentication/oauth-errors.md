@@ -29,4 +29,4 @@ HTTP code | Error code | Text representation | Description
 
 ## Related topic
 
-[OAuth-based authentication](./gs-authentication-oauth)
+[OAuth-based authentication](./gs-authentication-oauth/)

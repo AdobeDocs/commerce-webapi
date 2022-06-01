@@ -11,7 +11,7 @@ Implementing a simple integration requires little knowledge of [PHP](https://glo
 
 *  [Magento REST or SOAP Web APIs](../get-started/)
 *  [Web API authentication](./authentication/)
-*  [OAuth-based authentication](./authentication/gs-authentication-oauth)
+*  [OAuth-based authentication](./authentication/gs-authentication-oauth/)
 
 Before you begin creating a module, make sure that you have a working installation of Magento 2.0, and the [Magento System Requirements](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html).
 
@@ -309,7 +309,7 @@ The callback page must be able to perform the following tasks:
 
    `POST /oauth/token/request`
 
-   See [Get a request token](./authentication/gs-authentication-oauth#get-a-request-token) for more details about this call.
+   See [Get a request token](./authentication/gs-authentication-oauth/#get-a-request-token) for more details about this call.
 
 *  Parse the request token response. The response contains an `oauth_token` and `oauth_token_secret`.
 
@@ -317,7 +317,7 @@ The callback page must be able to perform the following tasks:
 
    `POST /oauth/token/access`
 
-   See [Get an access token](./authentication/gs-authentication-oauth#get-an-access-token) for more details about this call.
+   See [Get an access token](./authentication/gs-authentication-oauth#get-an-access-token/) for more details about this call.
 
 *  Parse the access token response. The response contains an `oauth_token` and `oauth_token_secret`. These values will be different than those provided in the request token response.
 
@@ -326,7 +326,7 @@ The callback page must be able to perform the following tasks:
 ## Related Topics
 
 *  [Web API authentication](./authentication/)
-*  [OAuth-based authentication](./authentication/gs-authentication-oauth)
+*  [OAuth-based authentication](./authentication/gs-authentication-oauth/)
 *  [Magento System Requirements](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html)
 *  [Create the module file structure](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/build/module-file-structure.html)
 *  [Create a component](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/build/create_component.html)
