@@ -465,8 +465,8 @@ class OauthClient extends AbstractService
 
 [Create an integration](../create-integration.md)
 
-[OAuth error codes](oauth-errors)
+[OAuth error codes](./oauth-errors.md)
 
-[Construct a request](gs-web-api-request)
+[Construct a request](../gs-web-api-request.md)
 
 [Configure services as web APIs](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/service-contracts/service-to-web-service.html)
