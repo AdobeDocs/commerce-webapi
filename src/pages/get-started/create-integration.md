@@ -57,6 +57,7 @@ To develop a module, you must:
    The following example shows an example `etc/module.xml` file.
 
    ```xml
+
    <?xml version="1.0"?>
    <!--
       /**
@@ -71,6 +72,7 @@ To develop a module, you must:
                </sequence>
           </module>
         </config>
+
    ```
 
    Module `Magento_Integration` is added to "sequence" to be loaded first. It helps to avoid the issue, when a module with integration config loaded, that leads to a malfunction.
@@ -97,6 +99,7 @@ To develop a module, you must:
            }
         }
      }
+     
    ```
 
     For more information, see [Create a component](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/build/create_component.html).
