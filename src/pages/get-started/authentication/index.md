@@ -168,7 +168,7 @@ This method is a good choice for authenticating customers and Admin users in thi
 *  **Customer Token**—Use this token in applications to authorize specific customer and query data related to that customer (for example, customer details, cart, and orders).
 *  **Admin Token**—Use this token in applications to authorize an Admin user and access Admin-related APIs.
 
-[Request a token](./authentication/gs-authentication-token.html#get-a-request-token) and then include it in [future requests](./authentication/gs-authentication-token.html#use-the-token-in-a-web-api-request).
+[Request a token](./authentication/gs-authentication-token#get-a-request-token) and then include it in [future requests](./authentication/gs-authentication-token#use-the-token-in-a-web-api-request).
 
 <inlinealert variant="info" slots="text"/>
 
@@ -180,17 +180,17 @@ This method is a good choice for integrating with a third-party system that supp
 
 After activating an integration (self activated), you can use the generated consumer key, consumer secret, access token, and access token secret to provide third-party systems access to Magento Store resources. You do not need to make calls to the `/oauth/token/request` or `/oauth/token/access` endpoints to exchange tokens.
 
-If a third-party system provides endpoints, you can use them to [activate an integration](./authentication/gs-authentication-oauth.html#activate-an-integration) and link your account. After completing the activation process, a third-party service can use the consumer key, consumer secret, access token, and access token secret provided by Magento during activation to make API calls.
+If a third-party system provides endpoints, you can use them to [activate an integration](./authentication/gs-authentication-oauth#activate-an-integration) and link your account. After completing the activation process, a third-party service can use the consumer key, consumer secret, access token, and access token secret provided by Magento during activation to make API calls.
 
 #### Related topics
 
 Proceed to the authentication method for your preferred client:
 
-*  Mobile application. [Token-based authentication](./authentication/gs-authentication-token.html).
+*  Mobile application. [Token-based authentication](./authentication/gs-authentication-token).
 
-*  Third-party application. [OAuth-based authentication](./authentication/gs-authentication-oauth.html).
+*  Third-party application. [OAuth-based authentication](./authentication/gs-authentication-oauth).
 
-*  JavaScript [widget](https://glossary.magento.com/widget) on the Admin or [storefront](https://glossary.magento.com/storefront). [Session-based authentication](./authentication/gs-authentication-session.html).
+*  JavaScript [widget](https://glossary.magento.com/widget) on the Admin or [storefront](https://glossary.magento.com/storefront). [Session-based authentication](./authentication/gs-authentication-session).
 
 *  [Extension attribute authentication](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/attributes.html)
 

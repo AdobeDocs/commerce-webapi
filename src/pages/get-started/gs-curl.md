@@ -9,7 +9,7 @@ description: Explains cURL and how to use it in Magento.
 
 To use cURL to run your REST web [API](https://glossary.magento.com/api) call, use the cURL command syntax to construct the command.
 
-To create the endpoint in the call, append the REST URI that you constructed in [Construct a request](./gs-web-api-request.html) to this URL:
+To create the endpoint in the call, append the REST URI that you constructed in [Construct a request](./gs-web-api-request) to this URL:
 
 `https://<MAGENTO_HOST_OR_IP>/<MAGENTO_BASE_INSTALL_DIR>/rest/`
 
@@ -274,4 +274,4 @@ As result the script call `getBody` method of the cURL client.
 
 #### Related topics
 
-[Status codes and responses](./gs-web-api-response.html)
+[Status codes and responses](./gs-web-api-response)

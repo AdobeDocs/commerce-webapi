@@ -10,9 +10,9 @@ The Magento web [API](https://glossary.magento.com/api) framework provides integ
 *  Support for [GraphQL](https://devdocs.magento.com/guides/v2.4/graphql/index.html), [REST](https://devdocs.magento.com/guides/v2.4/rest/bk-rest.html) (Representational State Transfer) and [SOAP](https://devdocs.magento.com/guides/v2.4/soap/bk-soap.html) (Simple Object Access Protocol). In Magento 2, the [web API](https://glossary.magento.com/web-api) coverage is the same for both REST and SOAP.
 
 *  Three types of [authentication](./authentication/):
-   *  Third-party applications authenticate with [OAuth 1.0a](./authentication/gs-authentication-oauth.html).
-   *  Mobile applications authenticate using [tokens](./authentication/gs-authentication-token.html).
-   *  Administrators and customers are authenticated with [login credentials](./authentication/gs-authentication-token.html).
+   *  Third-party applications authenticate with [OAuth 1.0a](./authentication/gs-authentication-oauth).
+   *  Mobile applications authenticate using [tokens](./authentication/gs-authentication-token).
+   *  Administrators and customers are authenticated with [login credentials](./authentication/gs-authentication-token).
 
 *  All accounts and integrations are assigned resources that they have access to. The API framework checks that any call has the [authorization](https://glossary.magento.com/authorization) to perform the request.
 
