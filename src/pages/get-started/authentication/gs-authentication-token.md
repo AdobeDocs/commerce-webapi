@@ -239,6 +239,6 @@ For example, to make a web API call with a customer token:
 
 [Construct a request](../gs-web-api-request.md)
 
-[Configure services as web APIs](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/service-contracts/service-to-web-service.html)
+[Configure services as web APIs](https://developer.adobe.com/commerce/php/development/components/web-api/services/)
 
 [Restricting access to anonymous web APIs](https://devdocs.magento.com/guides/v2.4/rest/anonymous-api-security.html)

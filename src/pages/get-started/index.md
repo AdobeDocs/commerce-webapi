@@ -16,7 +16,7 @@ The Magento web [API](https://glossary.magento.com/api) framework provides integ
 
 *  All accounts and integrations are assigned resources that they have access to. The API framework checks that any call has the [authorization](https://glossary.magento.com/authorization) to perform the request.
 
-*  Any Magento or third-party service can be [configured as a web API](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/service-contracts/service-to-web-service.html) with a few lines of [xml](https://glossary.magento.com/xml). To configure a web API, you define XML elements and attributes in a `webapi.xml` configuration file. If a service is not defined in a configuration file, it will not be exposed at all.
+*  Any Magento or third-party service can be [configured as a web API](https://developer.adobe.com/commerce/php/development/components/web-api/services/) with a few lines of [xml](https://glossary.magento.com/xml). To configure a web API, you define XML elements and attributes in a `webapi.xml` configuration file. If a service is not defined in a configuration file, it will not be exposed at all.
 
 *  The framework is based on the CRUD (create, read, update, delete) & search model. The system does not currently support webhooks.
 

@@ -37,7 +37,7 @@ To develop a module, you must:
    mkdir -p app/code/<vendor_name>/<module_name>/Setup
    ```
 
-   For more detailed information, see [Create your component file structure](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/build/module-file-structure.html).
+   For more detailed information, see [Create your component file structure](https://developer.adobe.com/commerce/php/development/build/component-file-structure/).
 
 1. **Define your module configuration file.** The `etc/module.xml` file provides basic information about the module. Change directories to the `etc` directory and create the `module.xml` file. You must specify values for the following attributes:
 
@@ -94,7 +94,7 @@ To develop a module, you must:
      
    ```
 
-    For more information, see [Create a component](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/build/create_component.html).
+    For more information, see [Create a component](https://developer.adobe.com/commerce/php/development/build/component-name/).
 
 1. **Create a `registration.php` file** The `registration.php` registers the module with the Magento system. It must be placed in the module's root directory.
 
@@ -328,5 +328,5 @@ The callback page must be able to perform the following tasks:
 *  [Web API authentication](./authentication/)
 *  [OAuth-based authentication](./authentication/gs-authentication-oauth.md)
 *  [Magento System Requirements](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html)
-*  [Create the module file structure](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/build/module-file-structure.html)
-*  [Create a component](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/build/create_component.html)
+*  [Create the module file structure](https://developer.adobe.com/commerce/php/development/build/component-file-structure/)
+*  [Create a component](https://developer.adobe.com/commerce/php/development/build/component-name/)

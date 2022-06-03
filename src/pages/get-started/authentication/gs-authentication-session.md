@@ -31,4 +31,4 @@ The session based authentication functionality is restricted to AJAX calls. Dire
 
 ## Related topic
 
-[Configure services as web APIs](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/service-contracts/service-to-web-service.html)
+[Configure services as web APIs](https://developer.adobe.com/commerce/php/development/components/web-api/services/)

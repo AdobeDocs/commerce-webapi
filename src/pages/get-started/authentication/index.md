@@ -5,7 +5,7 @@ description: Overview of authentication methods in web APIs.
 
 # Authentication
 
-Magento allows developers to define web [API](https://glossary.magento.com/api) resources and their permissions in the `webapi.xml` configuration file. See [Services as Web APIs](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/service-contracts/service-to-web-service.html).
+Magento allows developers to define web [API](https://glossary.magento.com/api) resources and their permissions in the `webapi.xml` configuration file. See [Services as Web APIs](https://developer.adobe.com/commerce/php/development/components/web-api/services/).
 
 Before you can make [web API](https://glossary.magento.com/web-api) calls, you must authenticate your identity and have necessary permissions (authorization) to access the API resource. Authentication allows Magento to identify the caller's user type. A user's (administrator, integration, customer, or guest) access rights determine an API call's resource accessibility.
 
@@ -192,8 +192,8 @@ Proceed to the authentication method for your preferred client:
 
 *  JavaScript [widget](https://glossary.magento.com/widget) on the Admin or [storefront](https://glossary.magento.com/storefront). [Session-based authentication](./gs-authentication-session.md).
 
-*  [Extension attribute authentication](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/attributes.html)
+*  [Extension attribute authentication](https://developer.adobe.com/commerce/php/development/components/attributes/)
 
-*  [Configure services as web APIs](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/service-contracts/service-to-web-service.html)
+*  [Configure services as web APIs](https://developer.adobe.com/commerce/php/development/components/web-api/services/)
 
 *  [Create an ACL rule](https://devdocs.magento.com/guides/v2.4/ext-best-practices/tutorials/create-access-control-list-rule.html)
