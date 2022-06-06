@@ -1,6 +1,6 @@
 ---
 title: Commerce Web API
-description: Learn about using REST and GraphQL to 
+description: Learn about using REST and GraphQL with Commerce APIs
 ---
 
 <Hero slots="image, heading, text"/>
@@ -9,15 +9,14 @@ description: Learn about using REST and GraphQL to
 
 # Commerce Web APIs
 
-Lorem ipsum dolor sit amet
+REST, GraphQL, and Getting Started
 
 <Resources slots="heading, links"/>
 
 ## Resources
 
-*  [X](https://developer.adobe.com)
-*  [Y](https://developer.adobe.com)
-*  [Z](https://developer.adobe.com)
+*  [PHP Developer Guide](https://developer.adobe.com/commerce/php/development)
+*  [Configuring a Service as a Web API](https://developer.adobe.com/commerce/php/development/components/web-api/services/)
 
 ## Overview
 
@@ -33,20 +32,20 @@ Use these sections to learn about how to use our web APIs to integrate with thir
 
 [Getting Starting](get-started/)
 
-Lorem ipsum dolor sit amet
+The Magento web API framework provides integrators and developers the means to use web services that communicate with the Magento system.
 
 <DiscoverBlock slots="link, text"/>
 
 [REST](rest/)
 
-Lorem ipsum dolor sit amet
+Coming soon.
 
 <DiscoverBlock slots="link, text"/>
 
 [GraphQL](graphql/)
 
-Lorem ipsum dolor sit amet
+Coming soon.
 
 ## Contributing to this documentation
 
-We encourage you to participate in our open documentation initiative. If you have suggestions, corrections, additions, or deletions for this documentation, check out the source on [GitHub](https://github.com/adobedocs/commerce-php), and open a pull request.
+We encourage you to participate in our open documentation initiative. If you have suggestions, corrections, additions, or deletions for this documentation, check out the source on [GitHub](https://github.com/adobedocs/commerce-webapi), and open a pull request.
