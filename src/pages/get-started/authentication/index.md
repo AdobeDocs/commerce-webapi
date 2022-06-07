@@ -5,9 +5,9 @@ description: Overview of authentication methods in web APIs.
 
 # Authentication
 
-Magento allows developers to define web [API](https://glossary.magento.com/api) resources and their permissions in the `webapi.xml` configuration file. See [Services as Web APIs](https://developer.adobe.com/commerce/php/development/components/web-api/services/).
+Adobe Commerce and Magento Open Source allow developers to define web [API](https://glossary.magento.com/api) resources and their permissions in the `webapi.xml` configuration file. See [Services as Web APIs](https://developer.adobe.com/commerce/php/development/components/web-api/services/).
 
-Before you can make [web API](https://glossary.magento.com/web-api) calls, you must authenticate your identity and have necessary permissions (authorization) to access the API resource. Authentication allows Magento to identify the caller's user type. A user's (administrator, integration, customer, or guest) access rights determine an API call's resource accessibility.
+Before you can make [web API](https://glossary.magento.com/web-api) calls, you must authenticate your identity and have necessary permissions (authorization) to access the API resource. Authentication allows the application to identify the caller's user type. A user's (administrator, integration, customer, or guest) access rights determine an API call's resource accessibility.
 
 ## Accessible resources
 
@@ -25,7 +25,7 @@ Guest user | Resources with `anonymous` permission
 
 The `acl.xml` file defines the access control list (ACL) for a given [module](https://glossary.magento.com/module). It defines the available set of permissions to access resources.
 
-All `acl.xml` files across all Magento modules are consolidated to build an ACL tree, which is used to select allowed [Admin](https://glossary.magento.com/admin) role resources or third-party integration access (**System** > **Extension** > **Integration** > **Add New Integration** > **Available APIs**).
+All `acl.xml` files across all modules are consolidated to build an ACL tree, which is used to select allowed [Admin](https://glossary.magento.com/admin) role resources or third-party integration access (**System** > **Extension** > **Integration** > **Add New Integration** > **Available APIs**).
 
 ### Sample customer acl.xml
 
@@ -93,7 +93,7 @@ Similarly, self is a special access used if you already have an authenticated se
 
 ## Web API clients and authentication methods
 
-You must use a client, such as a mobile application or an external batch job, to access Magento services using web APIs.
+You must use a client, such as a mobile application or an external batch job, to access services using web APIs.
 
 Each type of client has a preferred authentication method. To authenticate, use the authentication method for your preferred client:
 
@@ -110,10 +110,10 @@ Each type of client has a preferred authentication method. To authenticate, use 
          <p>Registered users use <a href="./authentication/gs-authentication-token">token-based authentication</a> to make web API calls using a mobile application. The token acts like an electronic key that provides access to the API(s).</p>
          <ol>
             <li>
-               <p>As a registered Magento user, you request a token from the Magento token service at the endpoint that is defined for your user type.</p>
+               <p>As a registered account user, you request a token from the token service at the endpoint that is defined for your user type.</p>
             </li>
             <li>
-               <p>The token service returns a unique authentication token in exchange for a username and password for a Magento account.</p>
+               <p>The token service returns a unique authentication token in exchange for a username and password for an admin or customer account.</p>
             </li>
             <li>
                <p>
@@ -131,7 +131,7 @@ Each type of client has a preferred authentication method. To authenticate, use 
          <p>Third-party applications use <a href="./authentication/gs-authentication-oauth/">OAuth-based authentication</a> to access the web APIs.</p>
          <ol>
             <li>
-               <p>The third-party Integration registers with Magento.</p>
+               <p>The third-party Integration registers with Adobe Commerce.</p>
             </li>
             <li>
                <p>Merchants authorize extensions and applications to access or update store data.</p>
@@ -141,17 +141,17 @@ Each type of client has a preferred authentication method. To authenticate, use 
    </tr>
    <tr>
       <td>
-         <p>JavaScript widget on the Magento storefront or Admin</p>
+         <p>JavaScript widget on the storefront or Admin</p>
       </td>
       <td>
-         <p>Registered users use <a href="./authentication/gs-authentication-session">session-based authentication</a> to log in to the Magento storefront or Admin.</p>
+         <p>Registered users use <a href="./authentication/gs-authentication-session">session-based authentication</a> to log in to the storefront or Admin.</p>
          <p>A session is identified by a cookie and time out after a period of inactivity. Additionally, you can have a session as a guest user without logging in.</p>
          <ol>
             <li>
-               <p>As a customer, you log in to the Magento storefront with your customer credentials. As an administrator, you log in to the Admin with your administrator credentials.</p>
+               <p>As a customer, you log in to the storefront with your customer credentials. As an administrator, you log in to the Admin with your administrator credentials.</p>
             </li>
             <li>
-               <p>The Magento web API framework identifies you and controls access to the requested resource.
+               <p>The web API framework identifies you and controls access to the requested resource.
                </p>
             </li>
          </ol>
@@ -163,7 +163,7 @@ The following sections describe tips about which type of authentication method y
 
 ### Token based (Bearer Authentication)
 
-This method is a good choice for authenticating customers and Admin users in third-party applications that need to make authorized API calls to the Magento store.
+This method is a good choice for authenticating customers and Admin users in third-party applications that need to make authorized API calls to the store.
 
 *  **Customer Token**—Use this token in applications to authorize specific customer and query data related to that customer (for example, customer details, cart, and orders).
 *  **Admin Token**—Use this token in applications to authorize an Admin user and access Admin-related APIs.
@@ -178,9 +178,9 @@ You should use this type of authentication mechanism over HTTPS.
 
 This method is a good choice for integrating with a third-party system that supports OAuth 1.0a.
 
-After activating an integration (self activated), you can use the generated consumer key, consumer secret, access token, and access token secret to provide third-party systems access to Magento Store resources. You do not need to make calls to the `/oauth/token/request` or `/oauth/token/access` endpoints to exchange tokens.
+After activating an integration (self activated), you can use the generated consumer key, consumer secret, access token, and access token secret to provide third-party systems access to Commerce Store resources. You do not need to make calls to the `/oauth/token/request` or `/oauth/token/access` endpoints to exchange tokens.
 
-If a third-party system provides endpoints, you can use them to [activate an integration](./gs-authentication-oauth.md#activate-an-integration) and link your account. After completing the activation process, a third-party service can use the consumer key, consumer secret, access token, and access token secret provided by Magento during activation to make API calls.
+If a third-party system provides endpoints, you can use them to [activate an integration](./gs-authentication-oauth.md#activate-an-integration) and link your account. After completing the activation process, a third-party service can use the consumer key, consumer secret, access token, and access token secret provided by Commerce during activation to make API calls.
 
 #### Related topics
 

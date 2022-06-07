@@ -73,7 +73,7 @@ Part | Description
 `message` | The message explaining the error.
 `parameters` | Optional. An array of attributes used to generate a different and/or localized error message for the client.
 
-As an example, Magento returns a `code` of `400` and the following `message` when an invalid `sku` value is specified in the call `PUT V1/products/:sku`.
+As an example, the application returns a `code` of `400` and the following `message` when an invalid `sku` value is specified in the call `PUT V1/products/:sku`.
 
 ```json
 {

@@ -5,7 +5,7 @@ description: Explains how to construct and format an API request for Magento web
 
 # Construct a request
 
-To configure a web API, developers define some of the elements of each API call in the `<module root dir>/vendor/<vendor-name>/<module-name>/etc/webapi.xml` file, where `<vendor-name>` is your vendor name (for example, `magento`) and `<module-name>` is your module name (which exactly matches its definition in `composer.json`). For example, the web API for the Customer service is defined in the `<magento_root>/vendor/magento/module-customer/etc/webapi.xml` configuration file. Service data interfaces and builders define the required and optional parameters and the return values for the [API](https://glossary.magento.com/api) calls.
+To configure a web API, developers define some of the elements of each API call in the `<module root dir>/vendor/<vendor-name>/<module-name>/etc/webapi.xml` file, where `<vendor-name>` is your vendor name (for example, `sample`) and `<module-name>` is your module name (which exactly matches its definition in `composer.json`). For example, the web API for the Customer service is defined in the `<root>/vendor/sample/module-customer/etc/webapi.xml` configuration file. Service data interfaces and builders define the required and optional parameters and the return values for the [API](https://glossary.magento.com/api) calls.
 
 ## Overview
 
@@ -31,7 +31,7 @@ Specify one of these HTTP verbs in the request:
 
 An endpoint is a combination of the _server_ that fulfills a request, the web service, the store code, the resource against which the request is being made, and any template parameters.
 
-For example, in the `http://magento.ll/index.php/rest/default/V1/customerGroups/:id` endpoint, the server is `magento.ll/index.php/`, the web service is `rest`, the resource is `/V1/customerGroups`, and the template parameter is `id`.
+For example, in the `https://example.com/rest/default/V1/customerGroups/:id` endpoint, the server is `example.com`, the web service is `rest`, the resource is `/V1/customerGroups`, and the template parameter is `id`.
 
 A store code can have one of the following values.
 
@@ -49,7 +49,7 @@ Specify one or more of the following HTTP headers in your web API calls:
 
 HTTP header | Description | Syntax
 --- | --- | ---
-`Authorization` | Required, except for calls made on behalf of a guest. Specifies the authentication token that proves you as the owner of a Magento account. You specify the token in the `Authorization` request header with the `Bearer` HTTP authorization scheme. | `Authorization: Bearer <TOKEN>` <br/><br/>`<TOKEN>` is the authentication token returned by the Magento token service. See [Authentication](./authentication/).
+`Authorization` | Required, except for calls made on behalf of a guest. Specifies the authentication token that proves you as the owner of a customer, admin, or integration account. You specify the token in the `Authorization` request header with the `Bearer` HTTP authorization scheme. | `Authorization: Bearer <TOKEN>` <br/><br/>`<TOKEN>` is the authentication token returned by the token service. See [Authentication](./authentication/).
 `Accept` | Optional. Specifies the format of the response body. Default is `JSON`. | `Accept: application/<FORMAT>` <br/><br/>`<FORMAT>` is either `JSON` or `XML`.
 `Content-Type` | Required for operations with a request body. Specifies the format of the request body. | `Content-Type:application/<FORMAT>` <br/><br/>`<FORMAT>` is either `JSON` or `XML`.
 `X-Captcha` | A shopper-entered CAPTCHA value. It is required when a shopper enters a CAPTCHA value on the frontend, unless an integration token is provided. Forms requiring CAPTCHA values are configured at **Stores** > **Configuration** > **Customers** > **Customer Configuration** > **CAPTCHA** > **Forms**. | String
@@ -59,7 +59,7 @@ HTTP header | Description | Syntax
 
 The call payload is a set of input <i>parameters</i> and <i>attributes</i> that you supply with the request. API operations have both _required_ and _optional_ inputs.
 
-You specify input parameters in the URI. For example, in the `GET/V1/customers/:customerId` URI, you must specify the `customerId` template parameter. This parameter filters the response by the specified customer ID.
+You specify input parameters in the URI. For example, in the `GET /V1/customers/:customerId` URI, you must specify the `customerId` template parameter. This parameter filters the response by the specified customer ID.
 
 You specify input attributes in a JSON- or XML-formatted request body. For example, in the `POST /V1/customers` call, you must specify a request body like this:
 
@@ -132,7 +132,7 @@ This example shows you how to construct a REST web API call to create an account
 
 The following example builds a Customers Search request based on search criteria. It returns a list of customers that match given search criteria.
 
-1. Prepare `Authorization`, `Accept` and `Content-Type` headers to be passed to a request object. Use the [Authorization](https://glossary.magento.com/authorization) token returned by the Magento token service.
+1. Prepare `Authorization`, `Accept` and `Content-Type` headers to be passed to a request object. Use the [Authorization](https://glossary.magento.com/authorization) token returned by the token service.
 
    ```php?start_inline=1
    $token = 'token';

@@ -1,6 +1,6 @@
 ---
 title: Use cURL to Run the Request | Getting Started with Web APIs
-description: Explains cURL and how to use it in Magento.
+description: Explains how to use cURL.
 ---
 
 # Using cURL to run requests
@@ -11,7 +11,7 @@ To use cURL to run your REST web [API](https://glossary.magento.com/api) call, u
 
 To create the endpoint in the call, append the REST URI that you constructed in [Construct a request](./gs-web-api-request.md) to this URL:
 
-`https://<MAGENTO_HOST_OR_IP>/<MAGENTO_BASE_INSTALL_DIR>/rest/`
+`https://<HOST_OR_IP>/<BASE_INSTALL_DIR>/rest/`
 
 To pass the customer data object in the POST call payload, specify a JSON or [XML](https://glossary.magento.com/xml) request body on the call.
 
@@ -22,15 +22,15 @@ The cURL examples in this guide use the following command-line options:
 Option | Description
 --- | ---
 `-d` `-data` | Sends the specified data in a POST request to the HTTP server. Use this option to send a JSON or XML request body to the server.
-`-H` `-header` | Specifies an extra HTTP header in the request. Precede each header with the `-H` option. You can specify any number of extra headers. For a list of common headers used in Magento web API requests, see [HTTP headers](./gs-web-api-request.md#http-headers)
+`-H` `-header` | Specifies an extra HTTP header in the request. Precede each header with the `-H` option. You can specify any number of extra headers. For a list of common headers used in web API requests, see [HTTP headers](./gs-web-api-request.md#http-headers)
 `-i` `-input` | Includes the HTTP header in the output.
 `-s` `-silent` | Specifies silent or quiet mode, which makes cURL mute. Progress and error messages are suppressed.
 `-T` `-upload-file` | Transfers the specified local file to the remote URL.
 `-X` `-request` | Specifies the request method to use when communicating with the HTTP server. The specified request method is used instead of the default GET method.
 
-## Using cUrl in Magento
+## Using cUrl
 
-Magento provides its own service-wrapper for using cURL instead of using the default PHP cURL. The class ``Magento\Framework\HTTP\Client\Curl`` may be used to work with HTTP protocol using cURL library.
+Adobe Commerce and Magento Open Source provide a service-wrapper for using cURL instead of using the default PHP cURL. The class ``Magento\Framework\HTTP\Client\Curl`` may be used to work with HTTP protocol using cURL library.
 First, create an instance of `Magento\Framework\HTTP\Client\Curl`.
 
 ```php
@@ -152,7 +152,7 @@ $cookies = ["cookie-name-1" => "cookie-value-1", "cookie-name-2" => "cookie-valu
 $this->curl->setCookies($cookies);
 ```
 
-### How to use cURL with Magento
+### Example usage
 
 For example, the `Magento\Marketplace\Model\Partners` class gets partners info using cURL from the api of Magento connect.
 
@@ -269,7 +269,7 @@ class Partners
 ```
 
 First off all the cURL client instance is created in `__construct`.
-Method `getPartners` uses the cURL client makes POST request using cURL, the `post` method takes the first parameter the URL to the api of Magento connect, second parameter is empty array, then the option `CURLOPT_REFERER` added by `setOptions` method of the cURL client.
+Method `getPartners` uses the cURL client makes POST request using cURL, the `post` method takes the first parameter the URL to the api of `magento-connect`, second parameter is empty array, then the option `CURLOPT_REFERER` added by `setOptions` method of the cURL client.
 As result the script call `getBody` method of the cURL client.
 
 #### Related topics
