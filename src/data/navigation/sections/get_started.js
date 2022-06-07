@@ -36,6 +36,10 @@ module.exports = [
   header: true,
   pages: [
       {
+        title: "Authentication Introduction",
+        path: "/get-started/authentication/index.md",
+      },
+      {
           title: "Token-based authentication",
           path: "/get-started/authentication/gs-authentication-token.md",
       },

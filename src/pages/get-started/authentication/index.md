@@ -97,67 +97,35 @@ You must use a client, such as a mobile application or an external batch job, to
 
 Each type of client has a preferred authentication method. To authenticate, use the authentication method for your preferred client:
 
-<table style="width:100%">
-   <tr bgcolor="lightgray">
-      <th>Client</th>
-      <th>Authentication method and process</th>
-   </tr>
-   <tr>
-      <td>
-         <p>Mobile application</p>
-      </td>
-      <td>
-         <p>Registered users use <a href="./authentication/gs-authentication-token">token-based authentication</a> to make web API calls using a mobile application. The token acts like an electronic key that provides access to the API(s).</p>
-         <ol>
-            <li>
-               <p>As a registered account user, you request a token from the token service at the endpoint that is defined for your user type.</p>
-            </li>
-            <li>
-               <p>The token service returns a unique authentication token in exchange for a username and password for an admin or customer account.</p>
-            </li>
-            <li>
-               <p>
-                  To prove your identity, specify this token in the <samp>Authorization</samp> request header on web API calls.
-               </p>
-            </li>
-         </ol>
-      </td>
-   </tr>
-   <tr>
-      <td>
-         <p>Third-party application</p>
-      </td>
-      <td>
-         <p>Third-party applications use <a href="./authentication/gs-authentication-oauth/">OAuth-based authentication</a> to access the web APIs.</p>
-         <ol>
-            <li>
-               <p>The third-party Integration registers with Adobe Commerce.</p>
-            </li>
-            <li>
-               <p>Merchants authorize extensions and applications to access or update store data.</p>
-            </li>
-         </ol>
-      </td>
-   </tr>
-   <tr>
-      <td>
-         <p>JavaScript widget on the storefront or Admin</p>
-      </td>
-      <td>
-         <p>Registered users use <a href="./authentication/gs-authentication-session">session-based authentication</a> to log in to the storefront or Admin.</p>
-         <p>A session is identified by a cookie and time out after a period of inactivity. Additionally, you can have a session as a guest user without logging in.</p>
-         <ol>
-            <li>
-               <p>As a customer, you log in to the storefront with your customer credentials. As an administrator, you log in to the Admin with your administrator credentials.</p>
-            </li>
-            <li>
-               <p>The web API framework identifies you and controls access to the requested resource.
-               </p>
-            </li>
-         </ol>
-      </td>
-   </tr>
-</table>
+### Mobile application authentication
+
+Registered users use [token-based authentication]("./authentication/gs-authentication-token") to make web API calls using a mobile application. The token acts like an electronic key that provides access to the API(s).
+
+1. As a registered account user, you request a token from the Magento token service at the endpoint that is defined for your user type.
+
+1. The token service returns a unique authentication token in exchange for a username and password for an admin or customer account.
+
+1. To prove your identity, specify this token in the `Authorization` request header on web API calls.
+
+### Third-party application authentication
+
+Third-party applications use [OAuth-based authentication]("./authentication/gs-authentication-oauth/") to access the web APIs.
+
+1. The third-party Integration registers with Adobe Commerce.
+
+1. Merchants authorize extensions and applications to access or update store data.
+
+### JavaScript widget authentication (storefront or Admin)
+
+Registered users use [session-based authentication]("./authentication/gs-authentication-session") to log in to the storefront or Admin.
+
+A session is identified by a cookie and time out after a period of inactivity. Additionally, you can have a session as a guest user without logging in.
+
+1. As a customer, you log in to the storefront with your customer credentials. As an administrator, you log in to the Admin with your administrator credentials.
+
+1. The web API framework identifies you and controls access to the requested resource.
+
+## Authentication types
 
 The following sections describe tips about which type of authentication method you should use depending on your use case.
 
