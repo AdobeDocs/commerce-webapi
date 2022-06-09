@@ -327,6 +327,6 @@ The callback page must be able to perform the following tasks:
 
 *  [Web API authentication](./authentication/)
 *  [OAuth-based authentication](./authentication/gs-authentication-oauth.md)
-*  [Magento System Requirements](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html)
+*  [System Requirements](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html)
 *  [Create the module file structure](https://developer.adobe.com/commerce/php/development/build/component-file-structure/)
 *  [Create a component](https://developer.adobe.com/commerce/php/development/build/component-name/)

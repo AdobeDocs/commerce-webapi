@@ -337,7 +337,7 @@ class OauthClient extends AbstractService
     public function getAuthorizationEndpoint()
     {
         throw new \OAuth\Common\Exception\Exception(
-            'Magento REST API is 2-legged. Current operation is not available.'
+            'The REST API is 2-legged. Current operation is not available.'
         );
     }
 
