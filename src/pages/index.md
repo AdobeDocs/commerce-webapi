@@ -17,6 +17,7 @@ The Commerce Web APIs allow you to access and interact with your, integrate thir
 
 *  [PHP Developer Guide](https://developer.adobe.com/commerce/php/development)
 *  [Configuring a Service as a Web API](https://developer.adobe.com/commerce/php/development/components/web-api/services/)
+*  [Rest API Reference](https://magento.redoc.ly/2.4.4-admin/)
 
 ## Overview
 
@@ -30,21 +31,21 @@ Use these sections to learn about how to use our web APIs to integrate with thir
 
 ### Sections
 
-[Getting Starting](get-started/)
+[Getting Started](get-started/)
 
 The Commerce web API framework provides integrators and developers the means to use web services that communicate with the Adobe Commerce.
-<!-- 
-<DiscoverBlock slots="link, text"/>
-
-[REST](rest/)
-
-Coming soon.
 
 <DiscoverBlock slots="link, text"/>
 
-[GraphQL](graphql/)
+[REST](https://devdocs.magento.com/guides/v2.4/rest/bk-rest.html)
 
-Coming soon. -->
+The REST API documentation describes the REST APIs that are available on the latest Adobe Commerce release.
+
+<DiscoverBlock slots="link, text"/>
+
+[GraphQL](https://devdocs.magento.com/guides/v2.4/graphql/)
+
+Magento implements GraphQL to provide an alternative to REST and SOAP web APIs for frontend development.
 
 ## Contributing to this documentation
 

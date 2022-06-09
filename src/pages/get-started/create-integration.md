@@ -269,9 +269,7 @@ Use the following steps to install your module:
 
 1. Run the following command to generate the new code.
 
-    <InlineAlert variant="info" slots="text"/>
-
-   In Production mode, you may receive a message to 'Please rerun Magento compile command'.  Enter the command below. You are not prompted to run the compile command in Developer mode.
+   **Note:** In Production mode, you may receive a message to 'Please rerun Magento compile command'.  Enter the command below. You are not prompted to run the compile command in Developer mode.
 
    ```bash
    bin/magento setup:di:compile
