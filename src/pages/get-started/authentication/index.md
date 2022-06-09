@@ -105,7 +105,7 @@ Each type of client has a preferred authentication method. To authenticate, use 
 
 ### Mobile application authentication
 
-Registered users use [token-based authentication](./authentication/gs-authentication-token) to make web API calls using a mobile application. The token acts like an electronic key that provides access to the API(s).
+Registered users use [token-based authentication](gs-authentication-token.md) to make web API calls using a mobile application. The token acts like an electronic key that provides access to the API(s).
 
 1. As a registered account user, you request a token from the Magento token service at the endpoint that is defined for your user type.
 
@@ -115,7 +115,7 @@ Registered users use [token-based authentication](./authentication/gs-authentica
 
 ### Third-party application authentication
 
-Third-party applications use [OAuth-based authentication](./authentication/gs-authentication-oauth/) to access the web APIs.
+Third-party applications use [OAuth-based authentication](gs-authentication-oauth.md) to access the web APIs.
 
 1. The third-party Integration registers with Adobe Commerce.
 
@@ -123,7 +123,7 @@ Third-party applications use [OAuth-based authentication](./authentication/gs-au
 
 ### JavaScript widget authentication (storefront or Admin)
 
-Registered users use [session-based authentication](./authentication/gs-authentication-session) to log in to the storefront or Admin.
+Registered users use [session-based authentication](gs-authentication-session.md) to log in to the storefront or Admin.
 
 A session is identified by a cookie and time out after a period of inactivity. Additionally, you can have a session as a guest user without logging in.
 
