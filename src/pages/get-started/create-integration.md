@@ -213,7 +213,7 @@ In the following example, the test integration requires access to the following 
 
 Your module can optionally provide values in configuration file `config.xml`, so that the integration can be automatically pre-configured with default values. To enable this feature, update the `config.xml` file in the `etc/integration` directory.
 
-<inlinealert variant="info" slots="text"/>
+<InlineAlert variant="info" slots="text"/>
 
 If you pre-configure the integration, the values cannot be edited from the [admin](https://glossary.magento.com/admin) panel.
 

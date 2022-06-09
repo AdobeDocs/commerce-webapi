@@ -85,7 +85,7 @@ For example, in the preceding `webapi.xml` for the customerGroups resource, only
 
 [Authorization](https://glossary.magento.com/authorization) is granted to either an administrator (or an integration) defined in the Admin with the customer group selected as one of the resources in the ACL tree.
 
-<inlinealert variant="info" slots="text"/>
+<InlineAlert variant="info" slots="text"/>
 
 A guest or anonymous is a special permission that doesn't need to be defined in `acl.xml` (and will not show up in the permissions tree in the Admin). It just indicates that the current resource in `webapi.xml` can be accessed without the need for authentication.
 <br/><br/>
@@ -138,7 +138,7 @@ This method is a good choice for authenticating customers and Admin users in thi
 
 [Request a token](./gs-authentication-token.md#request-a-token) and then include it in [future requests](./gs-authentication-token.md#use-the-token-in-a-web-api-request).
 
-<inlinealert variant="info" slots="text"/>
+<InlineAlert variant="info" slots="text"/>
 
 You should use this type of authentication mechanism over HTTPS.
 

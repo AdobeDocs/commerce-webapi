@@ -9,7 +9,7 @@ description: Learn about using REST and GraphQL with Commerce APIs
 
 # Commerce Web APIs
 
-REST, GraphQL, and Getting Started
+The Commerce Web APIs allow you to access and interact with your, integrate third-party software, and build a headless applications. The Web API documentation is divided into three guides: REST, GraphQL, and Getting Started.
 
 <Resources slots="heading, links"/>
 
@@ -33,7 +33,7 @@ Use these sections to learn about how to use our web APIs to integrate with thir
 [Getting Starting](get-started/)
 
 The Commerce web API framework provides integrators and developers the means to use web services that communicate with the Adobe Commerce.
-
+<!-- 
 <DiscoverBlock slots="link, text"/>
 
 [REST](rest/)
@@ -44,7 +44,7 @@ Coming soon.
 
 [GraphQL](graphql/)
 
-Coming soon.
+Coming soon. -->
 
 ## Contributing to this documentation
 

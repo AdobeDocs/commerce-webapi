@@ -41,7 +41,7 @@ A store code can have one of the following values.
 
 ### HTTP headers
 
-<inlinealert variant="info" slots="text"/>
+<InlineAlert variant="info" slots="text"/>
 
 To specify an HTTP header in a cURL command, use the `-H` option.
 
