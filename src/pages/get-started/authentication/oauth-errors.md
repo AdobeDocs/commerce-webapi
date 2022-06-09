@@ -5,7 +5,7 @@ description: A list of possible OAuth error codes and their meanings.
 
 # OAuth error codes
 
-When the third-party application makes an invalid request to Magento, the following OAuth-related errors can occur:
+When the third-party application makes an invalid request, the following OAuth-related errors can occur:
 
 HTTP code | Error code | Text representation | Description
 --- | --- | --- | ---

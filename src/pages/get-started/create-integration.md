@@ -5,15 +5,15 @@ description: Explains how to create an integration.
 
 # Create an integration
 
-An **integration** enables third-party services to call the Magento web APIs. The Magento APIs currently supports Accounting, Enterprise Resource Planning (ERP), Customer Relationship Management (CRM), Product Information Management (PIM), and marketing automation systems out of the box.
+An **integration** enables third-party services to call the Adobe Commerce and Magento Open Source web APIs. The APIs currently support external software, such as Accounting, Enterprise Resource Planning (ERP), Customer Relationship Management (CRM), Product Information Management (PIM), and marketing automation systems out of the box.
 
-Implementing a simple integration requires little knowledge of [PHP](https://glossary.magento.com/php) or Magento internal processes. However, you will need a working knowledge of
+Implementing a simple integration requires little knowledge of [PHP](https://glossary.magento.com/php) or Commerce internal processes. However, you will need a working knowledge of
 
-*  [Magento REST or SOAP Web APIs](../get-started/)
+*  [Commerce REST or SOAP Web APIs](../get-started/)
 *  [Web API authentication](./authentication/)
 *  [OAuth-based authentication](./authentication/gs-authentication-oauth.md)
 
-Before you begin creating a module, make sure that you have a working installation of Magento 2.0, and the [Magento System Requirements](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html).
+Before you begin creating a module, make sure that you have a working installation that meets the [System Requirements](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html).
 
 To create an integration, follow these general steps:
 
@@ -21,12 +21,12 @@ To create an integration, follow these general steps:
 
 To develop a module, you must:
 
-1. **Create the module file structure.** The module for an integration, like any other of your custom modules, should be placed under `<magento_base_dir>/app/code/app/code/<vendor_name>/<module_name>`. E.g. `<magento_base_dir>/app/code/Vendor1/Module1`
+1. **Create the module file structure.** The module for an integration, like any other of your custom modules, should be placed under `<base_dir>/app/code/app/code/<vendor_name>/<module_name>`. E.g. `<base_dir>/app/code/Vendor1/Module1`
 
-   Also create  `etc`, `etc/integration`, and `Setup` subdirectories under `<magento_base_dir>/app/code/<vendor_name>/<module_name>`, as shown in the following example:
+   Also create  `etc`, `etc/integration`, and `Setup` subdirectories under `<base_dir>/app/code/<vendor_name>/<module_name>`, as shown in the following example:
 
    ```bash
-   cd <magento_base_dir>
+   cd <base_dir>
    ```
 
    ```bash
@@ -51,7 +51,7 @@ To develop a module, you must:
    </tr>
    <tr>
    <td>setup_version</td>
-   <td>The version of Magento the component uses</td>
+   <td>The version of Commerce the component uses</td>
    </tr>
    </table>
    The following example shows an example `etc/module.xml` file.
@@ -96,7 +96,7 @@ To develop a module, you must:
 
     For more information, see [Create a component](https://developer.adobe.com/commerce/php/development/build/component-name/).
 
-1. **Create a `registration.php` file** The `registration.php` registers the module with the Magento system. It must be placed in the module's root directory.
+1. **Create a `registration.php` file** The `registration.php` registers the module with the system. It must be placed in the module's root directory.
 
    ```php
    <?php
@@ -107,7 +107,7 @@ To develop a module, you must:
    );
    ```
 
-1. **Create an install class.** Change directories to your `Setup` directory. Create a `InstallData.php` file that installs the integration configuration data into the Magento integration table.
+1. **Create an install class.** Change directories to your `Setup` directory. Create a `InstallData.php` file that installs the integration configuration data into the Commerce integration table.
 
    The following sample is boilerplate and requires minor changes to make your integration work.
 
@@ -170,13 +170,13 @@ To develop a module, you must:
 
 ## Create integration files
 
-Magento provides the Integration module, which simplifies the process of defining your integration. This module automatically performs functions such as:
+The Integration module simplifies the process of defining your integration. This module automatically performs functions such as:
 
-*  Managing the third-party account that connects to Magento.
+*  Managing the third-party account that connects to Commerce.
 *  Maintaining OAuth authorizations and user data.
 *  Managing security tokens and requests.
 
-To customize your module, you must create multiple [XML](https://glossary.magento.com/xml) files and read through others files to determine what resources existing Magento modules have access to.
+To customize your module, you must create multiple [XML](https://glossary.magento.com/xml) files and read through other files to determine what resources existing modules have access to.
 
 The process for customizing your module includes
 
@@ -253,7 +253,7 @@ The file defines which API resources the integration has access to.
 </tr>
 <tr>
 <td>identity_link_url</td>
-<td>Optional. The URL that redirects the user to link their 3rd party account with the Magento integration.</td>
+<td>Optional. The URL that redirects the user to link their 3rd party account with the Commerce integration.</td>
 </tr>
 </table>
 
@@ -261,7 +261,7 @@ The file defines which API resources the integration has access to.
 
 Use the following steps to install your module:
 
-1. Run the following command to update the Magento [database schema](https://glossary.magento.com/database-schema) and data.
+1. Run the following command to update the [database schema](https://glossary.magento.com/database-schema) and data.
 
    ```bash
    bin/magento setup:upgrade
@@ -269,9 +269,9 @@ Use the following steps to install your module:
 
 1. Run the following command to generate the new code.
 
-    <inlinealert variant="info" slots="text"/>
+    <InlineAlert variant="info" slots="text"/>
 
-   In Production mode, you may receive a message to 'Please rerun Magento compile command'.  Enter the command below. Magento does not prompt you to run the compile command in Developer mode.
+   In Production mode, you may receive a message to 'Please rerun Magento compile command'.  Enter the command below. You are not prompted to run the compile command in Developer mode.
 
    ```bash
    bin/magento setup:di:compile
@@ -285,11 +285,11 @@ Use the following steps to install your module:
 
 ## Check your integration
 
-Log in to Magento and navigate to **System > Extensions > Integrations**. The integration should be displayed in the grid.
+Log in to the Admin and navigate to **System > Extensions > Integrations**. The integration should be displayed in the grid.
 
 ## Integrate with your application
 
-Before you can activate your integration in Magento, you must create two pages on your application to handle OAuth communications.
+Before you can activate your integration, you must create two pages on your application to handle OAuth communications.
 
 *  The location specified in the `identity_link_url` parameter must point to a page that can handle login requests.
 
@@ -297,15 +297,15 @@ Before you can activate your integration in Magento, you must create two pages o
 
 ### Login page
 
-When a merchant clicks the **Activate** button in Admin, a pop-up login page for the third-party application displays. Magento sends values for `oauth_consumer_key` and `success_call_back` parameters. The application must store the value for `oauth_consumer_key` to tie it to the login ID. Use the `success_call_back` parameter to return control back to Magento.
+When a merchant clicks the **Activate** button in Admin, a pop-up login page for the third-party application displays. Commerce sends values for `oauth_consumer_key` and `success_call_back` parameters. The application must store the value for `oauth_consumer_key` to tie it to the login ID. Use the `success_call_back` parameter to return control back to Commerce.
 
 ### Callback page
 
 The callback page must be able to perform the following tasks:
 
-*  Receive an initial HTTPS POST that Magento sends when the merchant activates integration. This post contains the Magento store URL, an `oauth_verifier`, the OAuth consumer key, and the OAuth consumer secret. The consumer key and secret are generated when the integration is created.
+*  Receive an initial HTTPS POST that Commerce sends when the merchant activates integration. This post contains the Commerce store URL, an `oauth_verifier`, the OAuth consumer key, and the OAuth consumer secret. The consumer key and secret are generated when the integration is created.
 
-*  Ask for a request token. A request token is a temporary token that the user exchanges for an access token. Use the following API to get a request token from Magento:
+*  Ask for a request token. A request token is a temporary token that the user exchanges for an access token. Use the following API to get a request token:
 
    `POST /oauth/token/request`
 
@@ -313,7 +313,7 @@ The callback page must be able to perform the following tasks:
 
 *  Parse the request token response. The response contains an `oauth_token` and `oauth_token_secret`.
 
-*  Ask for an access token. The request token must be exchanged for an access token. Use the following API to get a request token from Magento:
+*  Ask for an access token. The request token must be exchanged for an access token. Use the following API to get a request token:
 
    `POST /oauth/token/access`
 
@@ -321,7 +321,7 @@ The callback page must be able to perform the following tasks:
 
 *  Parse the access token response. The response contains an `oauth_token` and `oauth_token_secret`. These values will be different than those provided in the request token response.
 
-*  Save the access token and other OAuth parameters. The access token and OAuth parameters must be specified in the `Authorization` header in each call to Magento.
+*  Save the access token and other OAuth parameters. The access token and OAuth parameters must be specified in the `Authorization` header in each call to Commerce.
 
 ## Related Topics
 

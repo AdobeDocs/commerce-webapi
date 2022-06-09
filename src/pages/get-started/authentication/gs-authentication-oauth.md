@@ -5,48 +5,48 @@ description: How to use OAuth authentication and token passing in the web APIs.
 
 # OAuth-based authentication
 
-Magento OAuth authentication is based on [OAuth 1.0a](https://tools.ietf.org/html/rfc5849), an open standard for secure [API](https://glossary.magento.com/api) authentication. OAuth is a token-passing mechanism that allows a system to control which third-party applications have access to internal data without revealing or storing any user IDs or passwords.
+OAuth authentication with Adobe Commerce and Magento Open Source is based on [OAuth 1.0a](https://tools.ietf.org/html/rfc5849), an open standard for secure [API](https://glossary.magento.com/api) authentication. OAuth is a token-passing mechanism that allows a system to control which third-party applications have access to internal data without revealing or storing any user IDs or passwords.
 
-In Magento, a third-party application that uses OAuth for authentication is called an [_integration_](../create-integration.md). An integration defines which resources the application can access. The application can be granted access to all resources or a customized subset of resources.
+In Commerce, a third-party application that uses OAuth for authentication is called an [_integration_](../create-integration.md). An integration defines which resources the application can access. The application can be granted access to all resources or a customized subset of resources.
 
-As the process of registering the integration proceeds, Magento creates the tokens that the application needs for authentication. It first creates a request token. This token is short-lived and must be exchanged for an access token. Access tokens are long-lived and will not expire unless the merchant revokes access from the application.
+As the process of registering the integration proceeds, Commerce creates the tokens that the application needs for authentication. It first creates a request token. This token is short-lived and must be exchanged for an access token. Access tokens are long-lived and will not expire unless the merchant revokes access from the application.
 
 ## OAuth overview
 
 The following diagram shows the OAuth authentication process. Each step is described further.
 ![OAuth flow](../../_images/oauthflow.png)
 
-1. **Create an integration**.  The merchant creates an integration from [Admin](https://glossary.magento.com/admin). Magento generates a consumer key and a consumer secret.
+1. **Create an integration**.  The merchant creates an integration from [Admin](https://glossary.magento.com/admin). Commerce generates a consumer key and a consumer secret.
 
 1. **Activate the integration**. The OAuth process begins when the merchant activates the integration. Magento sends the OAuth consumer key and secret, an OAuth verifier, and the store [URL](https://glossary.magento.com/url) to the external application via HTTPS post to the page defined in the **Callback Link** field in Admin. See [Activate an integration](#activate-an-integration) for more information.
 
 1. **Process activation information**. The integrator must store the activation information received in step 2. These parameters will be used to ask for  tokens.
 
-1. **Call the application's login page**. Magento calls the page defined in the **Identity Link** field in Admin.
+1. **Call the application's login page**. Commerce calls the page defined in the **Identity Link** field in Admin.
 
 1. **Merchant logs in to the external application.** If the login is successful, the application returns to the location specified in the call. The login page is dismissed.
 
 1. **Ask for a request token**. The application uses the `POST /oauth/token/request` REST API to ask for a request token. The `Authorization` header includes the consumer key and other information. See [Get a request token](#get-a-request-token) for details about this token request.
 
-1. **Send the request token**. Magento returns a request token and request token secret.
+1. **Send the request token**. Commerce returns a request token and request token secret.
 
 1. **Ask for an access token**. The application uses the `POST /oauth/token/access` REST API to ask for an access token. The `Authorization` header includes the request token and other information. See [Get an access token](#get-an-access-token) for details about this token request.
 
-1. **Magento sends the access token**. If this request is successful, Magento returns an access token and access token secret.
+1. **Commerce sends the access token**. If this request is successful, Magento returns an access token and access token secret.
 
-1. **The application can access Magento resources.** All requests sent to Magento must use the full set of request parameters in `Authorization` header. See [Access the web APIs](#access-the-web-apis) for more information.
+1. **The application can access Magento resources.** All requests sent to Commerce must use the full set of request parameters in `Authorization` header. See [Access the web APIs](#access-the-web-apis) for more information.
 
 ## Activate an integration
 
-The integration must be configured from the [Admin](https://glossary.magento.com/magento-admin) (**System > Extensions > Integrations**).  The configuration includes a callback URL and an identity link URL.  The callback URL specifies where OAuth credentials can be sent when using OAuth for token exchange. The identity link points to the login page of the third-party application that is integrating with Magento.
+The integration must be configured from the [Admin](https://glossary.magento.com/magento-admin) (**System > Extensions > Integrations**).  The configuration includes a callback URL and an identity link URL.  The callback URL specifies where OAuth credentials can be sent when using OAuth for token exchange. The identity link points to the login page of the third-party application that is integrating with Commerce.
 
 A merchant can choose to select **Save and Activate** when the integration is created. Alternatively, the merchant can click on **Activate** against a previously saved integration from the Integration grid.
 
-When the integration is created, Magento generates a consumer key and a consumer secret.
+When the integration is created, Commerce generates a consumer key and a consumer secret.
 
-Activating the integration submits the credentials to the endpoint specified when creating the Integration. An HTTP POST from Magento to the Integration endpoint will contain these attributes:
+Activating the integration submits the credentials to the endpoint specified when creating the Integration. An HTTP POST from Commerce to the Integration endpoint will contain these attributes:
 
-*  `store_base_url` For example, `http://my-magento-store.com/`.
+*  `store_base_url` For example, `http://my-store.com/`.
 *  `oauth_verifier`
 *  `oauth_consumer_key`
 *  `oauth_consumer_secret`
@@ -64,7 +64,7 @@ This process is known as a 2-legged OAuth handshake.
 
 ### Get a request token
 
-A request token is a temporary token that the user exchanges for an access token. Use the following API to get a request token from Magento:
+A request token is a temporary token that the user exchanges for an access token. Use the following API to get a request token from Commerce:
 
 `POST /oauth/token/request`
 
@@ -90,7 +90,7 @@ A valid response looks like this:
 
 ### Get an access token
 
-The request token must be exchanged for an access token. Use the following API to get an access token from Magento:
+The request token must be exchanged for an access token. Use the following API to get an access token from Commerce:
 
 `POST /oauth/token/access`
 
@@ -117,7 +117,7 @@ The response contains these fields:
 
 ## Access the web APIs
 
-After the integration is authorized to make API calls, third-party applications (registered as integrations in Magento) can invoke Magento web APIs by using the access token.
+After the integration is authorized to make API calls, third-party applications (registered as integrations) can invoke web APIs by using the access token.
 
 To use the access token to make [web API](https://glossary.magento.com/web-api) calls:
 
@@ -153,9 +153,9 @@ To generate the signature, you must use the HMAC-SHA1 signature method. The sign
 
 ## OAuth token exchange example
 
-The scripts provided in this document simulate the Magento 2 [OAuth 1.0a](https://tools.ietf.org/html/rfc5849) token exchange flow. You can drop these scripts under the document root directory of your Magento application so that they can be exposed as endpoints that your Magento application can interact with to mimic the token exchange.
+The scripts provided in this document simulate the Commerce [OAuth 1.0a](https://tools.ietf.org/html/rfc5849) token exchange flow. You can drop these scripts under the document root directory of your installation so that they can be exposed as endpoints that your system can interact with to mimic the token exchange.
 
-The OAuth client is extended from and attributed to [PHPoAuthLib](https://github.com/Lusitanian/PHPoAuthLib), which is the same lib used in the [Magento OAuth client](https://github.com/magento/magento2/tree/2.4/dev/tests/api-functional/framework/Magento/TestFramework/Authentication/Rest/OauthClient.php).
+The OAuth client is extended from and attributed to [PHPoAuthLib](https://github.com/Lusitanian/PHPoAuthLib), which is the same lib used in the [OAuth client](https://github.com/magento/magento2/tree/2.4/dev/tests/api-functional/framework/Magento/TestFramework/Authentication/Rest/OauthClient.php).
 
 To simulate the OAuth 1.0a token exchange flow:
 
@@ -281,7 +281,7 @@ HTML;
 <details>
       <summary><b>OauthClient.php </b></summary>
 
-Change the instances of `http://magento.host` in this example to a valid base URL.
+Change the instances of `http://my.host` in this example to a valid base URL.
 
 ```php
 <?php
@@ -326,7 +326,7 @@ class OauthClient extends AbstractService
      */
     public function getRequestTokenEndpoint()
     {
-        return new Uri('http://magento.host/oauth/token/request');
+        return new Uri('http://my.host/oauth/token/request');
     }
 
     /**

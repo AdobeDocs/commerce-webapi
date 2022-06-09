@@ -32,7 +32,7 @@ Use these sections to learn about how to use our web APIs to integrate with thir
 
 [Getting Starting](get-started/)
 
-The Magento web API framework provides integrators and developers the means to use web services that communicate with the Magento system.
+The Commerce web API framework provides integrators and developers the means to use web services that communicate with the Adobe Commerce.
 
 <DiscoverBlock slots="link, text"/>
 

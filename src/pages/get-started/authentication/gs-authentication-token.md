@@ -7,19 +7,19 @@ description: How to use token-based authentication in web APIs.
 
 To make a web [API](https://glossary.magento.com/api) call from a client such as a mobile application, you must supply an *access token* on the call. The token acts like an electronic key that lets you access the API.
 
-Magento issues the following types of access tokens:
+Adobe Commerce and Magento Open Source issue the following types of access tokens:
 
 Token type | Description | Default lifetime
 --- | --- | ---
-Integration | The merchant determines which Magento resources the integration has access to. | Indefinite. It lasts until it is manually revoked.
-Admin | The merchant determines which Magento resources an admin user has access to. | 4 hours
-Customer | Magento grants access to resources with the `anonymous` or `self` permission. Merchants cannot edit these settings. | 1 hour
+Integration | The merchant determines which Commerce resources the integration can access. | Indefinite. It lasts until it is manually revoked.
+Admin | The merchant determines which Commerce resources an admin user has access to. | 4 hours
+Customer | Commerce grants access to resources with the `anonymous` or `self` permission. Merchants cannot edit these settings. | 1 hour
 
 ## Integration tokens
 
-When a merchant creates and activates an integration, Magento generates a consumer key, consumer secret, access token, and access token secret. All of these entities are used for [OAuth-based authentication](./gs-authentication-oauth.md).
+When a merchant creates and activates an integration, Commerce generates a consumer key, consumer secret, access token, and access token secret. All of these entities are used for [OAuth-based authentication](./gs-authentication-oauth.md).
 
-In previous versions of Magento, the access token could be used on its own for token-based authentication. This behavior has been disabled by default due to the security implications of a never-expiring access token. Namely, if the access token is compromised it provides undetected persistent access to a store.
+In previous versions of Commerce, the access token could be used on its own for token-based authentication. This behavior has been disabled by default due to the security implications of a never-expiring access token. Namely, if the access token is compromised it provides undetected persistent access to a store.
 
 However, while it is not recommended, this behavior can be restored in the Admin by setting the **Stores** > **Configuration** > **Services** > **OAuth** > **Consumer Settings** > **Allow OAuth Access Tokens to be used as standalone Bearer tokens** option to **Yes**. You can also enable this setting from the CLI by running the following command:
 
@@ -156,9 +156,9 @@ echo send($request);
 
 ## Admin and customer access tokens
 
-Magento provides a separate token service for administrators and customers. When you request a token from one of these services, the service returns a unique access token in exchange for the username and password for a Magento account.
+Commerce provides a separate token service for administrators and customers. When you request a token from one of these services, the service returns a unique access token in exchange for an account's username and password.
 
-The Magento web API framework allows *guest users* to access resources that are configured with the permission level of anonymous. Guest users are users who the framework cannot authenticate through existing authentication mechanisms. As a guest user, you do not need to, but you can, specify a token in a web API call for a resource with anonymous permission. [Restricting access to anonymous web APIs](https://devdocs.magento.com/guides/v2.4/rest/anonymous-api-security.html) contains a list of APIs that do not require a token.
+The web API framework allows *guest users* to access resources that are configured with the permission level of anonymous. Guest users are users who the framework cannot authenticate through existing authentication mechanisms. As a guest user, you do not need to, but you can, specify a token in a web API call for a resource with anonymous permission. [Restricting access to anonymous web APIs](https://devdocs.magento.com/guides/v2.4/rest/anonymous-api-security.html) contains a list of APIs that do not require a token.
 
 The following table lists endpoints and services that can be used to get an authentication token. Admin accounts must be authenticated with a [two factor authentication](https://devdocs.magento.com/guides/v2.4/security/two-factor-authentication.html) provider. Some providers may require multiple calls.
 
@@ -182,7 +182,7 @@ Component | Specifies
 --- | ---
 Endpoint |  A combination of the *server* that fulfills the request, the web service, and the `resource` against which the request is being made.<br/><br/>For example, in the `POST <host>/rest/<store_code>/V1/integration/customer/token` endpoint:<br/>The server is `magento.host/index.php/`,<br/> the web service is `rest`.<br/> and the resource is `/V1/integration/customer/token`.
 Content type | The content type of the request body. Set this value to either `"Content-Type:application/json"` or `"Content-Type:application/xml"`.
-Credentials | The username and password for a Magento account.<br/><br/>To specify these credentials in a JSON request body, include code similar to the following in the call: <br/><br/>`{"username":"<USER-NAME>;", "password":"<PASSWORD>"}`<br/><br/>To specify these credentials in XML, include code similar to the following in the call:<br/><br/>`<login><username>customer1</username><password>customer1pw</password></login>`
+Credentials | The username and password for a Commerce account.<br/><br/>To specify these credentials in a JSON request body, include code similar to the following in the call: <br/><br/>`{"username":"<USER-NAME>;", "password":"<PASSWORD>"}`<br/><br/>To specify these credentials in XML, include code similar to the following in the call:<br/><br/>`<login><username>customer1</username><password>customer1pw</password></login>`
 
 ### Examples
 
@@ -193,7 +193,7 @@ The following image shows a token request for the [admin](https://glossary.magen
 The following example uses the `curl` command to request a token for a customer account:
 
 ```bash
-curl -X POST "https://magento.host/index.php/rest/V1/integration/customer/token" \
+curl -X POST "https://<host>/rest/default/V1/integration/customer/token" \
      -H "Content-Type:application/json" \
      -d '{"username":"customer@example.com", "password":"customer_password"}'
 ```
@@ -201,7 +201,7 @@ curl -X POST "https://magento.host/index.php/rest/V1/integration/customer/token"
 The following example makes the same request with [XML](https://glossary.magento.com/xml) for a customer account token:
 
 ```bash
-curl -X POST "http://magento.vg/index.php/rest/V1/integration/customer/token" \
+curl -X POST "http://<host>/rest/default/V1/integration/customer/token" \
      -H "Content-Type:application/xml"  \
      -d "<login><username>customer1</username><password>customer1pw</password></login>"
 ```
@@ -226,14 +226,14 @@ Admins can access any resources for which they are authorized.
 
 For example, to make a web API call with an admin token:
 
-`curl -X GET "http://magento.ll/index.php/rest/V1/customers/2" -H "Authorization: Bearer vbnf3hjklp5iuytre"`
+`curl -X GET "http://<host>/rest/default/V1/customers/2" -H "Authorization: Bearer vbnf3hjklp5iuytre"`
 
 ### Customer access
 
 Customers can access only resources with `self` permissions.
 
 For example, to make a web API call with a customer token:
-`curl -X GET "http://magento.ll/index.php/rest/V1/customers/me" -H "Authorization: Bearer asdf3hjklp5iuytre"`
+`curl -X GET "http://<host>/rest/default/V1/customers/me" -H "Authorization: Bearer asdf3hjklp5iuytre"`
 
 #### Related topics
 
