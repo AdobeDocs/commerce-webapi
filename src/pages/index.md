@@ -17,7 +17,7 @@ The Commerce Web APIs allow you to access and interact with your, integrate thir
 
 *  [PHP Developer Guide](https://developer.adobe.com/commerce/php/development)
 *  [Configuring a Service as a Web API](https://developer.adobe.com/commerce/php/development/components/web-api/services/)
-*  [Rest API Reference](https://magento.redoc.ly/2.4.4-admin/)
+*  [REST API Reference](https://magento.redoc.ly/2.4.4-admin/)
 
 ## Overview
 
@@ -45,7 +45,7 @@ The REST API documentation describes the REST APIs that are available on the lat
 
 [GraphQL](https://devdocs.magento.com/guides/v2.4/graphql/)
 
-Magento implements GraphQL to provide an alternative to REST and SOAP web APIs for frontend development.
+GraphQL is a language for querying and manipulating data. It is widely viewed as more powerful, flexible, and efficient than REST for frontend development.
 
 ## Contributing to this documentation
 
