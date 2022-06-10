@@ -1,6 +1,6 @@
 ---
 title: Commerce Web API
-description: Learn about using REST and GraphQL to 
+description: Learn about using REST and GraphQL with Commerce APIs
 ---
 
 <Hero slots="image, heading, text"/>
@@ -9,15 +9,15 @@ description: Learn about using REST and GraphQL to
 
 # Commerce Web APIs
 
-Lorem ipsum dolor sit amet
+The Commerce Web APIs allow you to access and interact with your, integrate third-party software, and build a headless applications. The Web API documentation is divided into three guides: REST, GraphQL, and Getting Started.
 
 <Resources slots="heading, links"/>
 
 ## Resources
 
-*  [X](https://developer.adobe.com)
-*  [Y](https://developer.adobe.com)
-*  [Z](https://developer.adobe.com)
+*  [PHP Developer Guide](https://developer.adobe.com/commerce/php/development)
+*  [Configuring a Service as a Web API](https://developer.adobe.com/commerce/php/development/components/web-api/services/)
+*  [REST API Reference](https://magento.redoc.ly/2.4.4-admin/)
 
 ## Overview
 
@@ -31,22 +31,22 @@ Use these sections to learn about how to use our web APIs to integrate with thir
 
 ### Sections
 
-[Getting Starting](get-started/)
+[Getting Started](get-started/)
 
-Lorem ipsum dolor sit amet
-
-<DiscoverBlock slots="link, text"/>
-
-[REST](rest/)
-
-Lorem ipsum dolor sit amet
+The Commerce web API framework provides integrators and developers the means to use web services that communicate with the Adobe Commerce.
 
 <DiscoverBlock slots="link, text"/>
 
-[GraphQL](graphql/)
+[REST](https://devdocs.magento.com/guides/v2.4/rest/bk-rest.html)
 
-Lorem ipsum dolor sit amet
+The REST API documentation describes the REST APIs that are available on the latest Adobe Commerce release.
+
+<DiscoverBlock slots="link, text"/>
+
+[GraphQL](https://devdocs.magento.com/guides/v2.4/graphql/)
+
+GraphQL is a language for querying and manipulating data. It is widely viewed as more powerful, flexible, and efficient than REST for frontend development.
 
 ## Contributing to this documentation
 
-We encourage you to participate in our open documentation initiative. If you have suggestions, corrections, additions, or deletions for this documentation, check out the source on [GitHub](https://github.com/adobedocs/commerce-php), and open a pull request.
+We encourage you to participate in our open documentation initiative. If you have suggestions, corrections, additions, or deletions for this documentation, check out the source on [GitHub](https://github.com/adobedocs/commerce-webapi), and open a pull request.
