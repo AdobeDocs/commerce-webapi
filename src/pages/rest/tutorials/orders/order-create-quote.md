@@ -14,7 +14,9 @@ functional_areas:
   - Integration
   - Orders
   - Cart
----
+--- 
+ 
+# Step 4. Create a quote
 
 When a customer adds an item to their [shopping cart](https://glossary.magento.com/shopping-cart) for the first time, Magento creates a [quote](https://glossary.magento.com/quote). Magento uses a quote to perform tasks such as
 

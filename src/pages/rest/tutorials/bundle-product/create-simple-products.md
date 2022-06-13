@@ -4,7 +4,9 @@ group: rest-api
 title: Step 2. Create the simple products
 contributor_name: Goivvy LLC
 contributor_link: https://www.goivvy.com/magento-optimization-service
----
+--- 
+ 
+# Step 2. Create the simple products
 
 {:.bs-callout-info}
 Before you run the code, please verify that the attribute values are the same in your installation. See [Get the list of attributes defined in an attribute set]({{ page.baseurl }}/rest/tutorials/bundle-product/plan-product.html#get-attributes) for more information.
@@ -152,6 +154,7 @@ POST http://domain.com/rest/default/V1/products
     ]
 }
 ```
+
 {% endcollapsible %}
 
 **Payload 2:**
@@ -289,6 +292,7 @@ POST http://domain.com/rest/default/V1/products
     ]
 }
 ```
+
 {% endcollapsible %}
 
 **Payload 3:**
@@ -426,6 +430,7 @@ POST http://domain.com/rest/default/V1/products
     ]
 }
 ```
+
 {% endcollapsible %}
 
 **Payload 4:**
@@ -563,6 +568,7 @@ POST http://domain.com/rest/default/V1/products
     ]
 }
 ```
+
 {% endcollapsible %}
 
 ## Verify this step

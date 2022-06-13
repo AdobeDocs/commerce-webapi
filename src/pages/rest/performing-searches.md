@@ -1,7 +1,9 @@
 ---
 group: rest-api
 title: Search using REST endpoints
----
+--- 
+ 
+# Search using REST endpoints
 
 POST, PUT, and DELETE requests to the REST Web [API](https://glossary.magento.com/api) require the service method parameters to be in the body of the request. For example, to create a Customer, you would specify a JSON array (or [XML](https://glossary.magento.com/xml) structure) in the body of the message.
 
@@ -104,6 +106,7 @@ searchCriteria[filter_groups][0][filters][0][field]=entity_id&
 searchCriteria[filter_groups][0][filters][0][value]=1,2,3,4,5&
 searchCriteria[filter_groups][0][filters][0][condition_type]=in
 ```
+
 The query returns 5 items.
 
 ### Logical OR search

@@ -11,7 +11,9 @@ return_to:
   url: rest/tutorials/index.html
 functional_areas:
   - Integration
----
+--- 
+ 
+# Step 5. Create the personalization option
 
 Let's add a text box to the product page that allows the customer to add his name (up to 15 characters) to the back of shirt.
 
@@ -70,6 +72,7 @@ The `product_sku` is the `sku` of the configurable product. The `sku` specified 
   If the personalization option is not displayed, go to the **Champ Tee** configuration product page in Admin and set  **Stock Status** to **In Stock**.
 
 ## Congratulations! You've finished.
+
 {:.no_toc}
 
 {:.ref-header}

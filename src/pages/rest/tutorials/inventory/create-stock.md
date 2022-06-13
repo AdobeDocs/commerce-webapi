@@ -11,7 +11,9 @@ return_to:
   url: rest/tutorials/index.html
 functional_areas:
   - Integration
----
+--- 
+ 
+# Step 3. Create stocks
 
 This step guides through the process for creating **stock**. Stock represents a virtual, aggregated inventory of products for sources of your sales channels. Each stock maps sales channels with sources to determine available inventories and salable quantities.
 

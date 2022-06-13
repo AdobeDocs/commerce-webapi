@@ -3,7 +3,9 @@ group: rest-api
 title: Manage prices for multiple products
 functional_areas:
   - Integration
----
+--- 
+ 
+# Manage prices for multiple products
 
 Magento provides REST endpoints that allow you to update multiple special prices, tier prices, base prices, or cost values with a single call.
 
@@ -460,6 +462,7 @@ The following example returns the base prices for a simple and a downloadable pr
 `POST <host>/rest/<store_code>/V1/products/base-prices-information`
 
 **Payload:**
+
 ```json
 {
   "skus": [
@@ -553,6 +556,7 @@ The following example returns the cost values for a simple and a downloadable pr
 `POST <host>/rest/<store_code>/V1/products/cost-information`
 
 **Payload:**
+
 ```json
 {
   "skus": [
@@ -588,6 +592,7 @@ The following example deletes the previously-defined cost values for a simple an
 `POST <host>/rest/<store_code>/V1/products/cost-delete`
 
 **Payload:**
+
 ```json
 {
   "skus": [

@@ -4,7 +4,9 @@ title: Refunds
 functional_areas:
   - Integration
   - Catalog
----
+--- 
+ 
+# Refunds
 
 There are a couple of options to choose when issuing a refund using the Magento API.
 

@@ -11,7 +11,9 @@ return_to:
   url: rest/tutorials/index.html
 functional_areas:
   - Integration
----
+--- 
+ 
+# Step 5. Reassign products to custom sources
 
 When you install or upgrade Magento, the system assigns all existing products to the default source. Magento also assigns all subsequently-created products to the default source. For this tutorial, we want to unassign three products from the default source and assign them to custom sources.
 

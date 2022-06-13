@@ -17,6 +17,8 @@ functional_areas:
   - Shipping
 ---
 
+# Step 9. Create a shipment
+
 To create a shipment, you need the `order_item_id` of each item to be shipped. Since the Sprite Yoga Companion Kit is a bundle item, you only need to include the top-level `order_item_id` (`5`). The `order_item_id` for the Radiant Tee-M-Orange is `3`.
 
 To create a partial shipment, specify only those `order_item_id`s that are to be shipped now.

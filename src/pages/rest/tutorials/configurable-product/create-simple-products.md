@@ -11,7 +11,9 @@ return_to:
   url: rest/tutorials/index.html
 functional_areas:
   - Integration
----
+--- 
+ 
+# Step 3. Create the simple products
 
 The payloads for creating a simple product and a configurable product are identical, with the following exceptions:
 

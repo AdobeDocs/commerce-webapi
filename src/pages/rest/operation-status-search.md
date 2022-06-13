@@ -5,7 +5,9 @@ contributor_name: comwrap GmbH
 contributor_link: https://www.comwrap.com
 functional_areas:
   - Integration
----
+--- 
+ 
+# Search for the status of a bulk operation
 
 The Status Operation Search endpoint (`GET /V1/bulk/?searchCriteria`) allows you to search for bulk operation statuses.
 

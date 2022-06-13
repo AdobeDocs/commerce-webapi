@@ -14,7 +14,9 @@ functional_areas:
   - Integration
   - Orders
   - Customers
----
+--- 
+ 
+# Step 3. Create a customer
 
 Customers can make purchases in three ways:
 

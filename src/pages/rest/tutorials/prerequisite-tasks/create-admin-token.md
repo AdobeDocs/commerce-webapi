@@ -4,7 +4,9 @@ title: Generate the admin token
 functional_areas:
   - Integration
   - Orders
----
+--- 
+ 
+# Generate the admin token
 
 In a production environment, you would typically [create an integration]({{page.baseurl}}/get-started/create-integration.html) and use OAuth to provide authentication for any REST call that requires admin privileges. This process allows Magento to verify that the caller is authorized to access the affected system resource.
 

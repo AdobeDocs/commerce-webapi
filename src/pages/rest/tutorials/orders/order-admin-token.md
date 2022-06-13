@@ -11,7 +11,9 @@ level3_subgroup: order-tutorial
 functional_areas:
   - Integration
   - Orders
----
+--- 
+ 
+# Step 2. Get the admin token
 
 Each step in this tutorial provides the following information:
 

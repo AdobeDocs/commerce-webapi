@@ -11,7 +11,9 @@ return_to:
   url: rest/tutorials/index.html
 functional_areas:
   - Integration
----
+--- 
+ 
+# Step 2. Create the configurable product
 
 We have the information we need to create the Champ Tee configurable product.
 
@@ -92,6 +94,7 @@ Before you using this code sample, verify that the attribute values are the same
 **Response:**
 
 {% collapsible Show code sample %}
+
 ```json
 {
     "id": 2078,
@@ -210,6 +213,7 @@ Before you using this code sample, verify that the attribute values are the same
     ]
 }
 ```
+
 {% endcollapsible %}
 
 ## Verify this step

@@ -11,7 +11,9 @@ return_to:
   url: rest/tutorials/index.html
 functional_areas:
   - Integration
----
+--- 
+ 
+# Step 2. Create sources
 
 **Sources** are the physical locations from which you manage product inventory and ship orders. These locations can include warehouses, brick-and-mortar stores, distribution centers, and drop shippers. Magento leverages the quantities and salable quantities per stock and manages inventory amounts automatically for managed products and orders. Virtual and downloadable products can also be assigned to a source.
 
@@ -126,6 +128,7 @@ Use the following payload to create the Brooklyn store.
   }
 }
 ```
+
 ### Long Island store
 
 Use the following payload to create the Long Island store:
@@ -183,6 +186,7 @@ Use the following payload to create the Manhattan store:
   }
 }
 ```
+
 ### Berkeley store
 
 Use the following payload to create the Berkeley store:

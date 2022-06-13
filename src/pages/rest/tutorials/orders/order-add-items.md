@@ -12,7 +12,9 @@ functional_areas:
   - Integration
   - Orders
   - Catalog
----
+--- 
+ 
+# Step 5. Add items to the cart
 
 This step shows how to add a simple product, a downloadable product, and a [bundle product](https://glossary.magento.com/bundle-product) to the cart.
 

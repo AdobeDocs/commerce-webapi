@@ -11,7 +11,9 @@ return_to:
   url: rest/tutorials/index.html
 functional_areas:
   - Integration
----
+--- 
+ 
+# Step 6. Create a customer and generate a customer token
 
 This step creates a customer that lives close to several stores that serve as in-store pickup locations. Although this tutorial ships the order using a traditional shipping method, the GraphQL tutorial shows how in-store pickup can be implemented.
 

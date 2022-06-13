@@ -12,7 +12,9 @@ functional_areas:
   - Integration
   - Orders
   - Sales
----
+--- 
+ 
+# Order processing tutorial
 
 This tutorial shows a system integrator how REST APIs are used in the lifecycle of an order, including configuring a store and creating a customer; creating quotes, orders, invoices, and shipments; preparing for checkout; and more order-related tasks.
 

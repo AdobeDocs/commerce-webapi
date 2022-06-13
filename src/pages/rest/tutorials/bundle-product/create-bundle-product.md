@@ -4,7 +4,9 @@ group: rest-api
 title: Step 3. Create the bundle product 
 contributor_name: Goivvy LLC
 contributor_link: https://www.goivvy.com/magento-optimization-service
----
+--- 
+ 
+# Step 3. Create the bundle product
 
 Now we will add the bundle product. We will use two bundle options: `RAM` and `Monitor`.
 
@@ -291,7 +293,9 @@ POST http://domain.com/rest/default/V1/products
     ]
 }
 ```
+
 {% endcollapsible %}
+
 ## Verify this step
 
 1. On the Luma storefront page, search for `Desktop Computer`. There should be one result.

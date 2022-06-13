@@ -11,7 +11,9 @@ return_to:
   url: rest/tutorials/index.html
 functional_areas:
   - Integration
----
+--- 
+ 
+# Step 9. Create an order
 
 The [shopping cart](https://glossary.magento.com/shopping-cart) contains 71 items totaling $2462. The shipping charges are $350, making the grand total $2812. We're now ready to convert the [quote](https://glossary.magento.com/quote) to an order.
 

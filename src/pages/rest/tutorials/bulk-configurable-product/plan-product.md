@@ -13,9 +13,11 @@ functional_areas:
   - Integration
 contributor_name: comwrap GmbH
 contributor_link: http://comwrap.com/
----
+--- 
+ 
+# Step 1. Plan the product
 
- To create a configurable product programmatically, you'll need to know the following:
+  To create a configurable product programmatically, you'll need to know the following:
 
 *  The attribute names and values defined in the attribute set assigned to the configurable product.
 *  The category numbers assigned to the configurable product.

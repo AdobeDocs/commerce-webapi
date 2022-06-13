@@ -4,7 +4,9 @@ title: Catalog module
 functional_areas:
   - Integration
   - Catalog
----
+--- 
+ 
+# Catalog module
 
 The `Catalog` module provides functionality for creating and maintaining products and categories.
 

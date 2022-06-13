@@ -5,7 +5,9 @@ contributor_name: comwrap GmbH
 contributor_link: https://www.comwrap.com/
 functional_areas:
   - Integration
----
+--- 
+ 
+# Bulk operation status endpoints
 
 Magento generates a `bulk_uuid` each time it executes an [asynchronous API request]({{ page.baseurl }}/rest/asynchronous-web-endpoints.html). You can track the status of an asynchronous operation with the following endpoints:
 

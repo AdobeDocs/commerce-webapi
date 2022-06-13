@@ -11,7 +11,9 @@ return_to:
   url: rest/tutorials/index.html
 functional_areas:
   - Integration
----
+--- 
+ 
+# Step 8. Prepare for checkout
 
 Now that all the items have been added to the cart, we can prepare the quote for [checkout](https://glossary.magento.com/checkout). This process includes the following steps:
 

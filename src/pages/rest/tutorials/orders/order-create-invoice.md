@@ -14,7 +14,9 @@ functional_areas:
   - Integration
   - Orders
   - Sales
----
+--- 
+ 
+# Step 8. Create an invoice
 
 You create an [invoice](https://glossary.magento.com/invoice) after you receive payment for an order. In this example, the order was paid offline via a bank transfer. Therefore, you must tell Magento that payment for the order has been captured.
 

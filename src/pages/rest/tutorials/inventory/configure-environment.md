@@ -11,7 +11,9 @@ return_to:
   url: rest/tutorials/index.html
 functional_areas:
   - Integration
----
+--- 
+ 
+# Step 1. Configure your environment
 
 This step guides you through the process of configuring your Magento instance so that you can perform the Order Processing with Inventory Management tutorial.
 

@@ -3,7 +3,9 @@ group: rest-api
 title: Generate a local REST reference
 functional_areas:
   - Integration
----
+--- 
+ 
+# Generate a local REST reference
 
 The REST documentation on the Magento devdocs [website](https://glossary.magento.com/website) is generated with [Swagger UI](http://swagger.io) using a schema derived from the latest build of Magento 2. However, the REST [API](https://glossary.magento.com/api) documentation on devdocs is static in that the Magento Developers website is not running an instance of Magento, and there is no live data.
 

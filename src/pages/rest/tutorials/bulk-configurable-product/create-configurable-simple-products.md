@@ -13,9 +13,11 @@ functional_areas:
   - Integration
 contributor_name: comwrap GmbH
 contributor_link: http://comwrap.com/
----
+--- 
+ 
+# Step 2. Create the configurable and simple products
 
-By providing configurable and simple product information, you can use the bulk API to create all necessary products with a single call.
+ By providing configurable and simple product information, you can use the bulk API to create all necessary products with a single call.
 
 ### Configurable product
 

@@ -11,7 +11,9 @@ return_to:
   url: rest/tutorials/index.html
 functional_areas:
   - Integration
----
+--- 
+ 
+# Step 1. Plan the product
 
 To create a configurable product programmatically, you'll need to know the following:
 

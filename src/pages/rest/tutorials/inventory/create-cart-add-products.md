@@ -11,7 +11,9 @@ return_to:
   url: rest/tutorials/index.html
 functional_areas:
   - Integration
----
+--- 
+ 
+# Step 7. Create a cart and add products to it
 
 Next, we'll create a cart and add the items that we modified in [Step 5. Reassign products to custom sources](reassign-products-to-another-source.html).
 
@@ -185,6 +187,7 @@ Use the same endpoint to add 40 items of `24-WB01` to the cart. Multiple sources
   }
 }
 ```
+
 **Response:**
 
 Note the `item_id` for use in subsequent steps.

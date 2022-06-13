@@ -3,7 +3,9 @@ group: rest-api
 title: Create and manage grouped products tutorial
 functional_areas:
   - Integration
----
+--- 
+ 
+# Create and manage grouped products tutorial
 
 A grouped product consists of simple standalone products that are presented as a group. A group can contain variations of a single product or a collection of products that are to be sold together.
 

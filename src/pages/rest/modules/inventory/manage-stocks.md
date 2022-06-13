@@ -1,7 +1,9 @@
 ---
 group: rest-api
 title: Manage stocks
----
+--- 
+ 
+# Manage stocks
 
 Stocks map your sources to sales channels, providing a direct link to salable quantities and inventories.
 
@@ -162,6 +164,7 @@ None
 **Response:**
 
 {% collapsible Show code sample %}
+
 ```json
 {
     "items": [
@@ -206,4 +209,5 @@ None
     "total_count": 2
 }
 ```
+
 {% endcollapsible %}

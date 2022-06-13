@@ -13,9 +13,11 @@ functional_areas:
   - Integration
 contributor_name: comwrap GmbH
 contributor_link: http://comwrap.com/
----
+--- 
+ 
+# Step 4. Create the personalization option
 
-Let's add a text box to the product page that allows the customer to add his name (up to 15 characters) to the back of the shirt.
+ Let's add a text box to the product page that allows the customer to add his name (up to 15 characters) to the back of the shirt.
 
 The `product_sku` is the `sku` of the configurable product. The `sku` specified in the payload is a string that is appended to the `product_sku` when a customer selects to purchase this item. Likewise, the `price` supplied in the payload is added to the configurable product price.
 
@@ -71,6 +73,7 @@ The `product_sku` is the `sku` of the configurable product. The `sku` specified 
    If the personalization option is not displayed, go to the **Champ Tee** configuration product page in Admin and set  **Stock Status** to **In Stock**.
 
 ## Congratulations! You've finished.
+
   {:.no_toc}
 
 {:.ref-header}

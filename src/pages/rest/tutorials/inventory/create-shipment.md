@@ -11,7 +11,9 @@ return_to:
   url: rest/tutorials/index.html
 functional_areas:
   - Integration
----
+--- 
+ 
+# Step 12. Create a shipment
 
 In the previous step, the SSA recommended shipping 35 `24-WB01` items and 20 `24-WB03` items from the Northeast warehouse. It also recommended shipping 5 `24-WB01` items from the West warehouse.
 

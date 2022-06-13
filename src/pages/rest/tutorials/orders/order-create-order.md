@@ -14,7 +14,9 @@ functional_areas:
   - Integration
   - Orders
   - Sales
----
+--- 
+ 
+# Step 7. Create an order
 
 The [shopping cart](https://glossary.magento.com/shopping-cart) contains three items totaling $108. The shipping charges are $10, making the grand total $118. We're now ready to convert the [quote](https://glossary.magento.com/quote) to an order.
 

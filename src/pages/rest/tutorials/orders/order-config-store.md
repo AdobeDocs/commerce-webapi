@@ -13,7 +13,9 @@ redirect_from:
 functional_areas:
   - Integration
   - Orders
----
+--- 
+ 
+# Step 1. Configure the store
 
 The default Luma store needs additional configuration to run the REST calls mentioned in this tutorial.
 

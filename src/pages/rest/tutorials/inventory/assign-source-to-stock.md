@@ -11,7 +11,9 @@ return_to:
   url: rest/tutorials/index.html
 functional_areas:
   - Integration
----
+--- 
+ 
+# Step 4. Link stocks and sources
 
 This step links the sources we created in [Step 2. Create sources]({{page.baseurl}}/rest/tutorials/inventory/create-sources.html) with the stocks we created in [Step 3. Create stocks]({{page.baseurl}}/rest/tutorials/inventory/create-stock.html).
 

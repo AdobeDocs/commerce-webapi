@@ -3,7 +3,9 @@ group: rest-api
 title: REST API Overview
 functional_areas:
   - Integration
----
+--- 
+ 
+# REST API Overview
 
 The [REST API documentation][] describes the REST APIs that are available on the latest release of Magento 2.
 

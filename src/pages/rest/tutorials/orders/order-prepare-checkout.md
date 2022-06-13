@@ -14,7 +14,9 @@ functional_areas:
   - Orders
   - Sales
   - Checkout
----
+--- 
+ 
+# Step 6. Prepare for checkout
 
 Now that all the items have been added to the cart, we can prepare the order for [checkout](https://glossary.magento.com/checkout). This process includes the following steps:
 

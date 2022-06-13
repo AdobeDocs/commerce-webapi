@@ -3,7 +3,9 @@ group: rest-api
 title: REST usage notes
 functional_areas:
   - Integration
----
+--- 
+ 
+# REST usage notes
 
 You might encounter the following issues when using REST endpoints.
 
