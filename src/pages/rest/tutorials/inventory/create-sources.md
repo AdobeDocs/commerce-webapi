@@ -1,16 +1,6 @@
 ---
-layout: tutorial
-group: rest-api
 title: Step 2. Create sources
-subtitle: Order processing with Inventory Management
-menu_title: Step 2. Create sources
-menu_order: 20
-level3_subgroup: msi-tutorial
-return_to:
-  title: REST Tutorials
-  url: rest/tutorials/index.html
-functional_areas:
-  - Integration
+description: In this step of the tutorial you will create sources
 --- 
  
 # Step 2. Create sources
@@ -21,10 +11,11 @@ You cannot delete or disable the default source. You can create, modify, enable,
 
 This step guides you through the process of creating sources for your inventory, including warehouses for the physical products and another source for virtual and downloadable products.
 
-For more information about sources, see [Inventory Management overview]({{ page.baseurl }}/inventory/index.html).
+For more information about sources, see [Inventory Management overview](https://devdocs.magento.com/guides/v2.4/inventory/index.html).
 
-{:.bs-callout-info}
-This step requires an admin token. See [Generate the admin token]({{ page.baseurl }}/rest/tutorials/prerequisite-tasks/create-admin-token.html) for more information.
+<InlineAlert variant="info" slots="text"/>
+
+This step requires an admin token. See [Generate the admin token](/rest/tutorials/prerequisite-tasks/) for more information.
 
 ## Create the first source
 

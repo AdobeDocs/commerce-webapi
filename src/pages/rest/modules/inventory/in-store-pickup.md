@@ -1,8 +1,8 @@
 ---
-group: rest-api
 title: In-Store Pickup
 contributor_name: Oleksandr Kravchuk
 contributor_link: https://github.com/swnsma
+description: Retrieve a list or search for pickup locations using the REST API
 --- 
  
 # In-Store Pickup
@@ -56,7 +56,7 @@ Name | Type | Description
 `[sort][0][field]=` | String | Specifies the field to sort on.
 `[sort][0][direction]=` | String | Specifies whether to return results in ascending (`ASC`) or descending (`DESC`) order. The default is `DESC`.
 
-[Search using REST endpoints]({{page.baseurl}}/rest/performing-searches.html) provides a full list of supported condition types.
+[Search using REST endpoints](/rest/performing-searches/) provides a full list of supported condition types.
 
 **Sample Usage:**
 

@@ -1,18 +1,17 @@
 ---
-group: rest-api
 title: Bulk endpoints
 contributor_name: comwrap GmbH
 contributor_link: http://comwrap.com/
-functional_areas:
-  - Integration
+description: Learn how to combine multiple API calls of the same type into a single request
 --- 
  
 # Bulk endpoints
 
 Bulk API endpoints differ from other REST endpoints in that they combine multiple calls of the same type into an array and execute them as a single request. The endpoint handler splits the array into individual entities and writes them as separate messages to the message queue.
 
-{:.bs-callout-info}
-Use the [`bin/magento queue:consumers:start async.operations.all`]({{ page.baseurl }}/config-guide/cli/config-cli-subcommands-queue.html) command to start the consumer that handles asynchronous and bulk API messages. Also, before using the Bulk API to process messages, you must install and configure RabbitMQ, which is the default message broker. See [RabbitMQ]({{ page.baseurl }}/install-gde/prereq/install-rabbitmq.html).
+<InlineAlert variant="info" slots="text"/>
+
+Use the [`bin/magento queue:consumers:start async.operations.all`](https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands-queue.html) command to start the consumer that handles asynchronous and bulk API messages. Also, before using the Bulk API to process messages, you must install and configure RabbitMQ, which is the default message broker. See [RabbitMQ](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/install-rabbitmq.html).
 
 ## Routes
 
@@ -32,7 +31,8 @@ Synchronous route | Bulk route
 `PUT /V1/products/:sku/media/:entryId` | `PUT async/bulk/V1/products/bySku/media/byEntryId`
 `POST /V1/carts/:quoteId/items` | `POST async/bulk/V1/carts/byQuoteId/items`
 
-{:.bs-callout-info}
+<InlineAlert variant="info" slots="text"/>
+
 GET requests are not supported.
 
 ## Payloads
@@ -75,7 +75,8 @@ The payload of a bulk request contains an array of request bodies. For example, 
 ]
 ```
 
-{:.bs-callout-tip}
+<InlineAlert variant="success" slots="text"/>
+
 The second and third requests are duplicates.
 
 ## Responses

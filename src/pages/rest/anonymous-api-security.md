@@ -1,6 +1,6 @@
 ---
-group: rest-api
 title: Restricting access to anonymous web APIs
+description: How to restrict anonymous access to the REST API
 --- 
  
 # Restricting access to anonymous web APIs

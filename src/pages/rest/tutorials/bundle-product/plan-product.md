@@ -1,9 +1,8 @@
 ---
-layout: tutorial
-group: rest-api
 title: Step 1. Plan the product
 contributor_name: Goivvy LLC
 contributor_link: https://www.goivvy.com/magento-optimization-service
+description: In this step of the tutorial you will plan the product
 --- 
  
 # Step 1. Plan the product
@@ -149,7 +148,8 @@ Admin label | Selected value | Attribute ID | attribute_code  | Attribute value
 Tax Class | Taxable Goods | 134 | `tax_class_id` | 2
 Visibility | Catalog, Search | 99 | `visibility` | 4
 
-{:.bs-callout-warning}
+<InlineAlert variant="warning" slots="text"/>
+
 The attribute ID and value numbers will vary between different installations. Check the values carefully before using them in your calls.
 
 ### List category values

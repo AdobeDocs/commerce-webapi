@@ -1,19 +1,6 @@
 ---
-layout: tutorial
-group: rest-api
 title: Step 10. Issue a partial refund
-subtitle: Order processing tutorial
-return_to:
-  title: REST tutorials
-  url: rest/tutorials/index.html
-menu_order: 10
-level3_subgroup: order-tutorial
-redirect_from:
-  - /guides/v2.3/get-started/order-tutorial/order-issue-refund.html
-functional_areas:
-  - Integration
-  - Orders
-  - Sales
+description: In this step of the tutorial you will issue a partial refund
 --- 
  
 # Step 10. Issue a partial refund
@@ -73,18 +60,15 @@ The `return_to_stock_items` array specifies which `order_item_id`s can be return
 
 A [credit memo](https://glossary.magento.com/credit-memo) id, such as `3`.
 
-### Verify this step {#verify-step}
+### Verify this step
 
 Log in to [Admin](https://glossary.magento.com/admin). Click **Sales** > **Credit Memos**. The credit memo is displayed in the grid.
 
 ## Congratulations! You've finished.
 
-{:.no_toc}
+### Related topics
 
-{:.ref-header}
-Related topics
-
-*  [Getting Started with Magento Web APIs]({{ page.baseurl }}/get-started/bk-get-started-api.html)
-*  [Create a configurable product Tutorial]({{ page.baseurl }}/rest/tutorials/configurable-product/config-product-intro.html)
-*  [REST API Reference Overview]({{ page.baseurl }}/rest/bk-rest.html)
-*  [REST API documentation]({{site.baseurl}}/redoc/{{page.guide_version}}/)
+*  [Getting Started with Magento Web APIs](/get-started/)
+*  [Create a configurable product Tutorial](/rest/tutorials/configurable-product/)
+*  [REST API Reference Overview](/rest/)
+*  [REST API documentation](https://magento.redoc.ly/)

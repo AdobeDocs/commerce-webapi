@@ -1,16 +1,6 @@
 ---
-layout: tutorial
-group: rest-api
 title: Step 3. Create the simple products
-subtitle: Create a configurable product tutorial
-menu_title: Step 3. Create the simple products
-menu_order: 30
-level3_subgroup: configurable-product-tutorial
-return_to:
-  title: REST tutorials
-  url: rest/tutorials/index.html
-functional_areas:
-  - Integration
+description: In this step of the tutorial you will create the simple products
 --- 
  
 # Step 3. Create the simple products
@@ -27,8 +17,9 @@ Although it's not required, the simple product payload also includes `stock_item
 
 ## Create the first simple product
 
- {:.bs-callout-info}
-Before you using this code sample, verify that the attribute values are the same in your installation. See [Get the list of attributes defined in an attribute searchCriteria]({{ page.baseurl }}/rest/tutorials/configurable-product/plan-product.html#get-attributes) for more information.
+ <InlineAlert variant="info" slots="text"/>
+
+Before you using this code sample, verify that the attribute values are the same in your installation. See [Get the list of attributes defined in an attribute searchCriteria](/rest/tutorials/configurable-product/plan-product/#get-the-list-of-attributes-defined-in-an-attribute-searchcriteria ) for more information.
 
 **Endpoint:**
 
@@ -99,7 +90,8 @@ Before you using this code sample, verify that the attribute values are the same
 
 **Response:**
 
-{% collapsible Show code sample %}
+<details>
+      <summary><b>Show code sample</b></summary>
 
 ```json
 {
@@ -218,7 +210,7 @@ Before you using this code sample, verify that the attribute values are the same
 }
 ```
 
-{% endcollapsible %}
+</details>
 
 ## Create the other simple products
 
@@ -234,6 +226,6 @@ Attribute | Medium Value | Large Value
 
 *  Log in to the Luma website and select <b>Catalog > Products</b>. The product appears in the grid.
 
-  ![Product page with configurable and simple products]({{ page.baseurl }}/rest/images/products-page-all.png)
+  ![Product page with configurable and simple products](../../../_images/products-page-all.png)
 
 *  On the Luma storefront page, search for `Champ`. No results are returned.

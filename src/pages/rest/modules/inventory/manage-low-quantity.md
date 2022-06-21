@@ -1,6 +1,6 @@
 ---
-group: rest-api
 title: Manage low-quantity notifications
+description: Configure the low stock notification alert using the admin and REST API
 --- 
  
 # Manage low-quantity notifications

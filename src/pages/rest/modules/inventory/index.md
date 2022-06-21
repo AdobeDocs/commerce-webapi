@@ -1,6 +1,6 @@
 ---
-group: rest-api
 title: Manage sources
+description: Manage your stock locations using the REST API
 --- 
  
 # Manage sources
@@ -17,7 +17,8 @@ Disabling a custom source has the following effects:
 *  Stocks do not access inventory quantities from the source for aggregated inventory totals
 *  Order shipments cannot be assigned to disabled locations.
 
-{:.bs-callout-info}
+<InlineAlert variant="info" slots="text"/>
+
 Bundle and grouped products currently do not support multi-sourcing and must be assigned to the default source and default stock.
 
 **Service name:**
@@ -176,7 +177,7 @@ None
 
 The following call returns all sources that are located in the United States (`country_id` = `US`)
 
-See [Search using REST APIs]({{ page.baseurl }}/rest/performing-searches.html) for information about constructing a search query.
+See [Search using REST APIs](/rest/performing-searches/) for information about constructing a search query.
 
 **Sample Usage:**
 
@@ -188,7 +189,8 @@ None
 
 **Response:**
 
-{% collapsible Show code sample %}
+<details>
+      <summary><b>Show code sample</b></summary>
 
 ```json
 {
@@ -257,4 +259,4 @@ None
 }
 ```
 
-{% endcollapsible %}
+</details>

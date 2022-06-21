@@ -1,16 +1,6 @@
 ---
-layout: tutorial
-group: rest-api
 title: Step 14. Create an order for in-store pickup (optional)
-subtitle: Order processing with Inventory Management
-menu_title: Step 14. Bulk transfer products
-menu_order: 140
-level3_subgroup: msi-tutorial
-return_to:
-  title: REST Tutorials
-  url: rest/tutorials/index.html
-functional_areas:
-  - Integration
+description: In this step of the tutorial you will create an order for in-store pickup
 --- 
  
 # Step 14. Create an order for in-store pickup (optional)
@@ -22,7 +12,7 @@ An order must meet the following requirements to be eligible for in-store pickup
 *  All physical products must be assigned to the source that serves as the in-store pickup location.
 *  All items must be in stock.
 
-In this step, we will create a second order from the same customer. In [Step 2. Create sources]({{page.baseurl}}/rest/tutorials/inventory/create-sources.html), we created three stores in the New York City area. The customer will be able to choose from these stores when she selects a pickup location. We will skip some of the steps we performed earlier that provides information we already know.
+In this step, we will create a second order from the same customer. In [Step 2. Create sources](/rest/tutorials/inventory/create-sources/), we created three stores in the New York City area. The customer will be able to choose from these stores when she selects a pickup location. We will skip some of the steps we performed earlier that provides information we already know.
 
 ## Create a new cart
 
@@ -96,7 +86,7 @@ This time, we will add two Voyage Yoga Bags (`24-WB01`).
 
 ## Search for pickup locations
 
-The `GET /V1/inventory/in-store-pickup/pickup-locations` endpoint searches for locations, given a city name or postal code and a radius, in kilometers. You must also specify the sales channel code to search in the `scopeCode` parameter. The endpoint is described in detail in the [In-Store Pickup]({{page.baseurl}}/rest/modules/inventory/in-store-pickup.html) reference topic.
+The `GET /V1/inventory/in-store-pickup/pickup-locations` endpoint searches for locations, given a city name or postal code and a radius, in kilometers. You must also specify the sales channel code to search in the `scopeCode` parameter. The endpoint is described in detail in the [In-Store Pickup](/rest/modules/inventory/in-store-pickup/) reference topic.
 
 In this example, we will search for locations within 50 km of New York, New York that are pickup locations for product `24-WB01`.
 
@@ -201,7 +191,7 @@ The customer has chosen to pick up the order at the Brooklyn store. Once again, 
 
 *  The shipping address is that of the Brooklyn store but includes the customer's first and last name to help the store personnel identify who placed the order. The shipping address also includes the `pickup_location_code` extension attribute.
 
-*  The billing address includes the customer's billing address ID. In [Step 6. Create a customer and generate a customer token]({{page.baseurl}}/rest/tutorials/inventory/create-customer.html), the `POST /V1/customers` endpoint returned an address ID of `2`.
+*  The billing address includes the customer's billing address ID. In [Step 6. Create a customer and generate a customer token](/rest/tutorials/inventory/create-customer/), the `POST /V1/customers` endpoint returned an address ID of `2`.
 
 *  The `shipping_method_code` and `shipping_carrier_code` attributes are set to `pickup` and `instore`, respectively.
 
@@ -370,7 +360,7 @@ The customer has chosen to pick up the order at the Brooklyn store. Once again, 
 }
 ```
 
-## Send payment information {#send-payment}
+## Send payment information
 
 Send the payment information to create an order.
 

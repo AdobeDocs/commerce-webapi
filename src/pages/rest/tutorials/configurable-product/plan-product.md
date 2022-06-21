@@ -1,16 +1,6 @@
 ---
-layout: tutorial
-group: rest-api
 title: Step 1. Plan the product
-subtitle: Create a configurable product tutorial
-menu_title: Step 1. Plan the product
-menu_order: 10
-level3_subgroup: configurable-product-tutorial
-return_to:
-  title: REST tutorials
-  url: rest/tutorials/index.html
-functional_areas:
-  - Integration
+description: In this step of the tutorial you will plan the product
 --- 
  
 # Step 1. Plan the product
@@ -110,7 +100,7 @@ The `attribute_set_id` for the Top attribute set is `9`.
 }
 ```
 
-### Get the list of attributes defined in an attribute searchCriteria {#get-attributes}
+### Get the list of attributes defined in an attribute searchCriteria
 
 Use the `GET V1/products/attribute-sets/:attributeSetId/attributes` call to return information about the attributes defined in the Top attribute set.
 
@@ -171,7 +161,8 @@ Pattern | Graphic Print | 152 | `pattern` | 196
 Color | Gray | 93 | `color` | 52
 Size | Not applicable | 141 | `size` | 168 (small), 169 (medium), 170 (large)
 
-{:.bs-callout-warning}
+<InlineAlert variant="warning" slots="text"/>
+
 The attribute ID and value numbers might be different on your installation. Check the values carefully before using them in your calls.
 
 ### Get the list of category values

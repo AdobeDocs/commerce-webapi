@@ -1,18 +1,8 @@
 ---
-layout: tutorial
-group: rest-api
 title: Step 4. Create the personalization option
-subtitle: Create a configurable product using bulk APIs
-menu_title: Step 4. Create the personalization option
-menu_order: 40
-level3_subgroup: bulk-configurable-product-tutorial
-return_to:
-  title: REST tutorials
-  url: rest/tutorials/index.html
-functional_areas:
-  - Integration
 contributor_name: comwrap GmbH
 contributor_link: http://comwrap.com/
+description: In this step of the tutorial you will create the personalization option
 --- 
  
 # Step 4. Create the personalization option
@@ -63,20 +53,18 @@ The `product_sku` is the `sku` of the configurable product. The `sku` specified 
 
 *  Log in to the Luma website and select **Catalog > Products**. Click on the **Champ Tee** configurable product and expand the **Customizable Options** section.
 
-   ![Product page with configurable and simple products]({{ page.baseurl }}/rest/images/options-section.png)
+   ![Product page with configurable and simple products](../../../_images/options-section.png)
 
 *  On the Luma storefront page, search for `Champ`. Then click on the Champ Tee product.
 
-   ![Search results]({{ page.baseurl }}/rest/images/add-your-name.png)
+   ![Search results](../../../_images/add-your-name.png)
 
-   {:.bs-callout-info}
+   <InlineAlert variant="info" slots="text"/>
+
    If the personalization option is not displayed, go to the **Champ Tee** configuration product page in Admin and set  **Stock Status** to **In Stock**.
 
 ## Congratulations! You've finished.
 
-  {:.no_toc}
+### Related topics
 
-{:.ref-header}
-Related topic
-
-[Order Processing with REST APIs Tutorial]({{ page.baseurl }}/rest/tutorials/orders/order-intro.html)
+[Order Processing with REST APIs Tutorial](/rest/tutorials/orders/)

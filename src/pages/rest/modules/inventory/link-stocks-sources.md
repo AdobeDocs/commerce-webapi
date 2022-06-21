@@ -1,7 +1,6 @@
 ---
-group: rest-api
 title: Link and unlink stocks and sources
-
+description: Assign and manage sources and stocks using the REST API 
 --- 
  
 # Link and unlink stocks and sources
@@ -43,7 +42,9 @@ If you specify a sales channel that is already assigned to another stock, Magent
 
 `POST <host>/rest/<store_code>/V1/inventory/stock-source-links`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -62,11 +63,12 @@ If you specify a sales channel that is already assigned to another stock, Magent
 }
 ```
 
-**Response:**
+#### Response
 
-Magento returns empty array.
-
-`[]`
+```json
+// Magento returns empty array.
+[]
+```
 
 ## Delete links between stocks and sources
 
@@ -76,7 +78,9 @@ The `POST /V1/inventory/stock-source-links-delete` endpoint breaks the link betw
 
 `POST <host>/rest/<store_code>/V1/inventory/stock-source-links-delete`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -89,29 +93,32 @@ The `POST /V1/inventory/stock-source-links-delete` endpoint breaks the link betw
 }
 ```
 
-**Response:**
+#### Response
 
-Magento returns empty array.
-
-`[]`
+```JSON
+// Magento returns empty array.
+[]
+```
 
 ## Search for links
 
 The following call returns the link information for `stock_id = 4`.
 
-See [Search using REST APIs]({{ page.baseurl }}/rest/performing-searches.html) for information about constructing a search query.
+See [Search using REST APIs](/rest/performing-searches/) for information about constructing a search query.
 
 **Sample Usage:**
 
 `GET <host>/rest/<store_code>/V1/inventory/stock-source-links?searchCriteria[filter_groups][0][filters][0][field]=stock_id&searchCriteria[filter_groups][0][filters][0][value]=4&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-None
+#### Payload
 
-**Response:**
+```json
+// None
+```
 
-{% collapsible Show code sample %}
+#### Response
 
 ```json
 {
@@ -144,23 +151,23 @@ None
 }
 ```
 
-{% endcollapsible %}
-
 ## Get sources assigned to a stock
 
-The `GET /V1/inventory/get-sources-assigned-to-stock-ordered-by-priority/:stock_id` endpoint returns details about each source that is assigned to the specified stock. [Manage sources]({{ page.baseurl }}/rest/modules/inventory/manage-sources.html) provides definitions for each attribute returned.
+The `GET /V1/inventory/get-sources-assigned-to-stock-ordered-by-priority/:stock_id` endpoint returns details about each source that is assigned to the specified stock. [Manage sources](/rest/modules/inventory/) provides definitions for each attribute returned.
 
 **Sample Usage:**
 
 `GET <host>/rest/<store_code>/V1/inventory/get-sources-assigned-to-stock-ordered-by-priority/4`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-None
+#### Payload
 
-**Response:**
+```json
+// None
+```
 
-{% collapsible Show code sample %}
+#### Response
 
 ```json
 [
@@ -200,5 +207,3 @@ None
     }
 ]
 ```
-
-{% endcollapsible %}

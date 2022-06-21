@@ -1,19 +1,6 @@
 ---
-layout: tutorial
-group: rest-api
-subgroup:
 title: Step 6. Prepare for checkout
-subtitle: Order Processing tutorial
-return_to:
-  title: REST tutorials
-  url: rest/tutorials/index.html
-menu_order: 6
-level3_subgroup: order-tutorial
-functional_areas:
-  - Integration
-  - Orders
-  - Sales
-  - Checkout
+description: In this step of the tutorial you will prepare for checkout
 --- 
  
 # Step 6. Prepare for checkout
@@ -23,11 +10,12 @@ Now that all the items have been added to the cart, we can prepare the order for
 *  Estimate shipping costs
 *  Set shipping and billing information
 
-### Estimate shipping costs {#estimate-shipping}
+### Estimate shipping costs
 
 Magento calculates shipping costs for each shipping method that can be applied to the order. In this tutorial, the `flatrate` ($5 per item) and `tablerate` shipping methods are active.
 
-{:.bs-callout-info}
+<InlineAlert variant="info" slots="text"/>
+
 Use the `V1/guest-carts/<cartId>/estimate-shipping-methods` endpoint to estimate shipping costs on behalf of a guest. Do not include an authorization token.
 
 **Endpoint:**
@@ -44,7 +32,8 @@ Use the `V1/guest-carts/<cartId>/estimate-shipping-methods` endpoint to estimate
 
 The payload contains the shipping address.
 
-{% collapsible Show code sample %}
+<details>
+      <summary><b>Show code sample</b></summary>
 
 ```json
 {
@@ -68,13 +57,14 @@ The payload contains the shipping address.
 }
 ```
 
-{% endcollapsible %}
+</details>
 
 **Response:**
 
 Note that the cost for the `flatrate` shipping method is $15. The Sprite Yoga Companion Kit bundled product counts as one item. The Advanced Pilates & Yoga item does not have a shipping charge because the customer downloads this item.
 
-{% collapsible Show code sample %}
+<details>
+      <summary><b>Show code sample</b></summary>
 
 ```json
 [
@@ -105,15 +95,16 @@ Note that the cost for the `flatrate` shipping method is $15. The Sprite Yoga Co
 ]
 ```
 
-{% endcollapsible %}
+</details>
 
-### Set shipping and billing information {#set-addresses}
+### Set shipping and billing information
 
 In this call, you specify the shipping and billing addresses, as well as the selected `carrier_code` and `method_code`. Since the Table Rate shipping method costs only $5, the customer selected this option.
 
 Magento returns a list of payment options and calculates the order totals.
 
-{:.bs-callout-info}
+<InlineAlert variant="info" slots="text"/>
+
 Use the `V1/guest-carts/<cartId>/shipping-information` endpoint to set the billing and shipping information on behalf of a guest. Do not include an authorization token.
 
 **Endpoint:**
@@ -128,7 +119,8 @@ Use the `V1/guest-carts/<cartId>/shipping-information` endpoint to set the billi
 
 **Payload:**
 
-{% collapsible Show code sample %}
+<details>
+      <summary><b>Show code sample</b></summary>
 
 ```json
 {
@@ -169,7 +161,7 @@ Use the `V1/guest-carts/<cartId>/shipping-information` endpoint to set the billi
 }
 ```
 
-{% endcollapsible %}
+</details>
 
 **Response:**
 
@@ -177,7 +169,8 @@ The subtotal of the order is $160, and shipping charges are $5. The grand total 
 
 The available payment methods are `banktransfer` and `checkmo`. The customer will specify a [payment method](https://glossary.magento.com/payment-method) in the next step.
 
-{% collapsible Show code sample %}
+<details>
+      <summary><b>Show code sample</b></summary>
 
 ```json
 {
@@ -346,12 +339,13 @@ The available payment methods are `banktransfer` and `checkmo`. The customer wil
 }
 ```
 
-{% endcollapsible %}
+</details>
 
-{:.bs-callout-info}
-If you tried this call on your own, and the value of the `shipping_amount` parameter is `0`, then you did not deactivate the "Spend $50 or more - shipping is free!" cart price rule. See [Deactivate a cart price rule](order-config-store.html#price-rule) for details.
+<InlineAlert variant="info" slots="text"/>
 
-### Verify this step {#verify-step}
+If you tried this call on your own, and the value of the `shipping_amount` parameter is `0`, then you did not deactivate the "Spend $50 or more - shipping is free!" cart price rule. See [Deactivate a cart price rule](/rest/tutorials/orders/order-config-store#deactivate-a-cart-price-rule) for details.
+
+### Verify this step
 
 [Sign in](https://glossary.magento.com/sign-in-sign-out) as the customer and go to the checkout page.
 

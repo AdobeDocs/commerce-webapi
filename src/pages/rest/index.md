@@ -1,8 +1,6 @@
 ---
-group: rest-api
 title: REST API Overview
-functional_areas:
-  - Integration
+description: Overview of the available REST API documentation
 --- 
  
 # REST API Overview
@@ -10,7 +8,7 @@ functional_areas:
 The [REST API documentation][] describes the REST APIs that are available on the latest release of Magento 2.
 
 This documentation uses [ReDoc][] to organize and present schema files that follow an [Open-API specification][].
-The schema files this tool uses are generated from a running instance of Magento {{page.guide_version}}, and
+The schema files this tool uses are generated from a running instance of Magento 2.4, and
 it represents the state of the code at the time the file was generated.
 
 You can also create a dynamic REST API documentation set on your server with live data.

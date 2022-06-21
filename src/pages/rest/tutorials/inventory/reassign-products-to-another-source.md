@@ -1,16 +1,6 @@
 ---
-layout: tutorial
-group: rest-api
 title: Step 5. Reassign products to custom sources
-subtitle: Order processing with Inventory Management
-menu_title: Step 5. Reassign products to custom sources
-menu_order: 50
-level3_subgroup: msi-tutorial
-return_to:
-  title: REST Tutorials
-  url: rest/tutorials/index.html
-functional_areas:
-  - Integration
+description: In this step of the tutorial you will reassign products to custom sources
 --- 
  
 # Step 5. Reassign products to custom sources
@@ -29,7 +19,8 @@ Yoga Adventure | Downloadable | 240-LV06 | Not applicable
 
 Use the `POST V1/inventory/source-items-delete` endpoint to unassign one or more products from the specified source. The `sku` and `source_code` attributes are required for each product.
 
-{:.bs-callout-warning}
+<InlineAlert variant="warning" slots="text"/>
+
 When you unassign a source from a product, all source data including inventory amounts is removed from that product. This can affect salable quantities and reservations for unprocessed orders. After checkout and before shipment, all product quantities in the order have associated reservations. If you unassign a source, you can cause issues with reservations and processing orders. In a production environment, Magento strongly recommends completing all orders and shipments for those products prior to removing the source.
 
 **Endpoint:**

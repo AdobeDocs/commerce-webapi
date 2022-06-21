@@ -1,9 +1,6 @@
 ---
-group: rest-api
 title: Catalog module
-functional_areas:
-  - Integration
-  - Catalog
+description: Create and maintain products and categories with the Catalog module.
 --- 
  
 # Catalog module

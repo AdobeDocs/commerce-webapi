@@ -1,9 +1,8 @@
 ---
-layout: tutorial
-group: rest-api
 title: Step 3. Create the bundle product 
 contributor_name: Goivvy LLC
 contributor_link: https://www.goivvy.com/magento-optimization-service
+description: In this step of the tutorial you will create the bundle product
 --- 
  
 # Step 3. Create the bundle product
@@ -16,7 +15,9 @@ Now we will add the bundle product. We will use two bundle options: `RAM` and `M
 POST http://domain.com/rest/default/V1/products
 ```
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -115,9 +116,7 @@ POST http://domain.com/rest/default/V1/products
 }
 ```
 
-**Response:**
-
-{% collapsible Show response %}
+#### Response
 
 ```json
 {
@@ -294,21 +293,20 @@ POST http://domain.com/rest/default/V1/products
 }
 ```
 
-{% endcollapsible %}
-
 ## Verify this step
 
 1. On the Luma storefront page, search for `Desktop Computer`. There should be one result.
 
-    ![Search]({{ page.baseurl }}/rest/tutorials/bundle-product/images/search-desktop-computer.png)
+    ![Search](../../../_images/search-desktop-computer.png)
 
 1. Click on the Desktop Computer product.
 
-    ![Product]({{ page.baseurl }}/rest/tutorials/bundle-product/images/site-desktop-computer.png)
+    ![Product](../../../_images/site-desktop-computer.png)
 
 1. Customize Desktop Computer and add it to the shopping cart.
 
-    ![Shopping Cart]({{ page.baseurl }}/rest/tutorials/bundle-product/images/shopping-cart-desktop-computer.png)
+    ![Shopping Cart](../../../_images/shopping-cart-desktop-computer.png)
 
- {:.bs-callout-info}
+<InlineAlert variant="info" slots="text"/>
+
 If you do not see the bundle product on the frontend, you can try reindexing and clearing the cache.

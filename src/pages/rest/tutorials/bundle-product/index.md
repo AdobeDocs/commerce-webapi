@@ -1,9 +1,8 @@
 ---
-layout: tutorial
-group: rest-api
 title: Create a bundle product tutorial
 contributor_name: Goivvy LLC
 contributor_link: https://www.goivvy.com/magento-optimization-service
+description: In this tutorial you will learn how to create a bundled product
 --- 
  
 # Create a bundle product tutorial

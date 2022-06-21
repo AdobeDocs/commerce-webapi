@@ -1,10 +1,9 @@
 ---
-group: rest-api
 title: Manage prices for multiple products
-functional_areas:
-  - Integration
+description: Update multiple special prices, tier prices, base prices, or cost values with a single call.
 --- 
- 
+import * as Vars from '../../../../data/vars.js';
+
 # Manage prices for multiple products
 
 Magento provides REST endpoints that allow you to update multiple special prices, tier prices, base prices, or cost values with a single call.
@@ -42,12 +41,12 @@ Name | Description | Format | Requirements
 `store_id` | The store ID  to apply the special price | integer | Required for setting or deleting a special price
 `sku` | The SKU of the product | string | Required for setting or deleting a special price
 `skus` | An array of SKU values that is specified when retrieving a list of special prices | array | Required for retrievals
-`price_from` | The date and time the special price goes into effect. The date/time format is `YYYY-MM-DD hh:mm:ss`. The specified time must be later than the current time.  | string | Required in {{site.data.var.ee}}. Optional in {{site.data.var.ce}}.
-`price_to` | The date and time the special price ends. The date/time format is `YYYY-MM-DD hh:mm:ss` If no value is specified, the special price does not expire. | string | Required in {{site.data.var.ee}}. Optional in {{site.data.var.ce}}.
+`price_from` | The date and time the special price goes into effect. The date/time format is `YYYY-MM-DD hh:mm:ss`. The specified time must be later than the current time.  | string | Required in <Vars.sitedatavaree/>. Optional in <Vars.sitedatavarce/>.
+`price_to` | The date and time the special price ends. The date/time format is `YYYY-MM-DD hh:mm:ss` If no value is specified, the special price does not expire. | string | Required in <Vars.sitedatavaree/>. Optional in <Vars.sitedatavarce/>.
 
 ### Set special prices
 
-All calls to set special prices must include the `store_id`, `sku`, and `price` parameters. If the call is sent to an {{site.data.var.ee}} installation, the call must also include the `price_from` parameter. If the call is sent to a {{site.data.var.ce}} installation, then the `price_from` parameter is optional.
+All calls to set special prices must include the `store_id`, `sku`, and `price` parameters. If the call is sent to an <Vars.sitedatavaree/> installation, the call must also include the `price_from` parameter. If the call is sent to a <Vars.sitedatavarce/> installation, then the `price_from` parameter is optional.
 
 For bundled products, the value of the `price` parameter must be expressed as a discount percentage.
 
@@ -57,7 +56,9 @@ You can set multiple special prices in a single call, as shown in the example be
 
 `POST <host>/rest/<store_code>/V1/products/special-price`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -88,9 +89,12 @@ You can set multiple special prices in a single call, as shown in the example be
 
 ```
 
-**Response:**
+#### Response
 
-`[]` (an empty array)
+```json
+// Returns an empty array
+[] 
+```
 
 ### Get special prices
 
@@ -100,7 +104,9 @@ The following call returns the special price information for three SKU values.
 
 `POST <host>/rest/<store_code>/V1/products/special-price-information`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -112,7 +118,7 @@ The following call returns the special price information for three SKU values.
 }
 ```
 
-**Response:**
+#### Response
 
 ```json
 [
@@ -148,7 +154,9 @@ If any item to be deleted has an invalid `price`, `store_id`, `sku` or `date`, M
 
 `POST <host>/rest/<store_code>/V1/products/special-price-delete`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -178,9 +186,12 @@ If any item to be deleted has an invalid `price`, `store_id`, `sku` or `date`, M
 }
 ```
 
-**Response:**
+#### Response
 
-`[]` (an empty array)
+```json
+// Returns an empty array
+[] 
+```
 
 ## Manage tier prices
 
@@ -228,7 +239,9 @@ The `POST /V1/products/tier-prices` call adds new tier prices or updates existin
 
 `POST <host>/rest/<store_code>/V1/products/tier-prices`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 
@@ -262,9 +275,12 @@ The `POST /V1/products/tier-prices` call adds new tier prices or updates existin
 }
 ```
 
-**Response:**
+#### Response
 
-`[]` (an empty array)
+```json
+// Returns an empty array
+[] 
+```
 
 ### Replace existing tier prices
 
@@ -276,7 +292,9 @@ The following example removes the $10 tier price for `sku` 24-UG04 and changes t
 
 `PUT <host>/rest/<store_code>/V1/products/tier-prices`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -301,9 +319,12 @@ The following example removes the $10 tier price for `sku` 24-UG04 and changes t
 }
 ```
 
-**Response:**
+#### Response
 
-`[]` (an empty array)
+```json
+// Returns an empty array
+[] 
+```
 
 ### Get tier prices
 
@@ -313,7 +334,9 @@ Magento returns all active tier prices for the specified list of `skus`.
 
 `POST <host>/rest/<store_code>/V1/products/tier-prices-information`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -324,7 +347,7 @@ Magento returns all active tier prices for the specified list of `skus`.
 }
 ```
 
-**Response:**
+#### Response
 
 ```json
 [
@@ -371,7 +394,9 @@ You must specify each tier price that is to be deleted. You can delete multiple 
 
 `POST <host>/rest/<store_code>/V1/products/tier-prices-delete`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -388,15 +413,19 @@ You must specify each tier price that is to be deleted. You can delete multiple 
 }
 ```
 
-**Response:**
+#### Response
 
-`[]` (an empty array)
+```json
+// Returns an empty array
+[] 
+```
 
 ## Manage base prices
 
 A base price is the price of a product, before any discounts or extra costs (such as shipping or taxes) are applied.  The  `BasePriceStorageInterface` service provides an efficient means to set base prices for one or more products without requiring detailed information about each product.
 
-{:.bs-callout-info}
+<InlineAlert variant="info" slots="text"/>
+
 You cannot delete a base price. It can only be changed to another value (0 or greater).
 
 **REST Endpoints:**
@@ -430,7 +459,9 @@ The following example sets the base price for a simple and a downloadable produc
 
 `POST <host>/rest/<store_code>/V1/products/base-prices`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -449,9 +480,12 @@ The following example sets the base price for a simple and a downloadable produc
 }
 ```
 
-**Response:**
+#### Response
 
-`[]` (an empty array)
+```json
+// Returns an empty array
+[] 
+```
 
 ### Get base prices
 
@@ -461,7 +495,9 @@ The following example returns the base prices for a simple and a downloadable pr
 
 `POST <host>/rest/<store_code>/V1/products/base-prices-information`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -472,7 +508,7 @@ The following example returns the base prices for a simple and a downloadable pr
 }
 ```
 
-**Response:**
+#### Response
 
 ```json
 [
@@ -524,7 +560,9 @@ The following example sets the cost value for a simple and a downloadable produc
 
 `POST <host>/rest/<store_code>/V1/products/cost`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -543,9 +581,12 @@ The following example sets the cost value for a simple and a downloadable produc
 }
 ```
 
-**Response:**
+#### Response
 
-`[]` (an empty array)
+```json
+// Returns an empty array
+[] 
+```
 
 ### Get cost values
 
@@ -555,7 +596,9 @@ The following example returns the cost values for a simple and a downloadable pr
 
 `POST <host>/rest/<store_code>/V1/products/cost-information`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -566,7 +609,7 @@ The following example returns the cost values for a simple and a downloadable pr
 }
 ```
 
-**Response:**
+#### Response
 
 ```json
 [
@@ -591,7 +634,9 @@ The following example deletes the previously-defined cost values for a simple an
 
 `POST <host>/rest/<store_code>/V1/products/cost-delete`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -602,6 +647,9 @@ The following example deletes the previously-defined cost values for a simple an
 }
 ```
 
-**Response:**
+#### Response
 
-`true`, indicating the cost values were deleted
+```json
+`true`
+// indicating the cost values were deleted
+```

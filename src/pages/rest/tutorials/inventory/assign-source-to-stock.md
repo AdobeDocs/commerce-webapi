@@ -1,25 +1,16 @@
 ---
-layout: tutorial
-group: rest-api
 title: Step 4. Link stocks and sources
-subtitle: Order processing with Inventory Management
-menu_title: Step 4. Link stocks and sources
-menu_order: 40
-level3_subgroup: msi-tutorial
-return_to:
-  title: REST Tutorials
-  url: rest/tutorials/index.html
-functional_areas:
-  - Integration
+description: In this step of the tutorial you will link stocks and sources together
 --- 
  
 # Step 4. Link stocks and sources
 
-This step links the sources we created in [Step 2. Create sources]({{page.baseurl}}/rest/tutorials/inventory/create-sources.html) with the stocks we created in [Step 3. Create stocks]({{page.baseurl}}/rest/tutorials/inventory/create-stock.html).
+This step links the sources we created in [Step 2. Create sources](/rest/tutorials/inventory/create-sources) with the stocks we created in [Step 3. Create stocks](/rest/tutorials/inventory/create-stock/).
 
 Each stock can be assigned one or more sources. Magento uses these associations to calculate the virtual aggregated inventory per product.
 
-{:.bs-callout-tip}
+<InlineAlert variant="success" slots="text"/>
+
 You must reindex and flush cache after performing this step.
 
 ## Assign the source

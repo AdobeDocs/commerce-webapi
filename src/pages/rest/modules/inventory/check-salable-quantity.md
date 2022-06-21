@@ -1,6 +1,6 @@
 ---
-group: rest-api
 title: Check salable quantities
+description: Check your inventory and retrieve the salable quantity and available quantity using the REST API 
 --- 
  
 # Check salable quantities

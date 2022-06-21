@@ -1,17 +1,6 @@
 ---
-layout: tutorial
-group: rest-api
 title: Step 5. Add items to the cart
-subtitle: Order processing tutorial
-return_to:
-  title: REST tutorials
-  url: rest/tutorials/index.html
-menu_order: 5
-level3_subgroup: order-tutorial
-functional_areas:
-  - Integration
-  - Orders
-  - Catalog
+description: In this step of the tutorial you will add items to the cart
 --- 
  
 # Step 5. Add items to the cart
@@ -20,10 +9,11 @@ This step shows how to add a simple product, a downloadable product, and a [bund
 
 These calls are performed on behalf of a customer, and the customer's token is specified in the [authorization](https://glossary.magento.com/authorization) header.
 
-{:.bs-callout-info}
+<InlineAlert variant="info" slots="text"/>
+
 Use the `V1/guest-carts/<cartId>/items` endpoint to add items to the cart on behalf of a guest. Do not include an authorization token. The payload and response is same as the logged-in customer for all product types, except for from quote ID in the payload.
 
-### Add a simple product to a cart {#add-simple}
+### Add a simple product to a cart
 
 To add a [simple product](https://glossary.magento.com/simple-product) to a cart, you must provide a `sku`, the quantity, and the [quote](https://glossary.magento.com/quote) ID, which was generated when the cart was created.
 
@@ -39,7 +29,9 @@ The following example adds an orange medium-sized Radiant women's t-shirt (`sku`
 
 `Authorization: Bearer <customer token>`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -51,7 +43,7 @@ The following example adds an orange medium-sized Radiant women's t-shirt (`sku`
 }
 ```
 
-**Response:**
+#### Response
 
 ```json
 {
@@ -65,7 +57,7 @@ The following example adds an orange medium-sized Radiant women's t-shirt (`sku`
 }
 ```
 
-### Add a downloadable product to a cart {#add-downloadable}
+### Add a downloadable product to a cart
 
 The requirements for adding a [downloadable product](https://glossary.magento.com/downloadable-product) to a cart are the same as a simple product. You must specify the `sku`, the quantity, and quote ID.
 
@@ -81,7 +73,9 @@ The following example adds the downloadable product Advanced Pilates & Yoga (`sk
 
 `Authorization: Bearer <customer token>`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -93,7 +87,7 @@ The following example adds the downloadable product Advanced Pilates & Yoga (`sk
 }
 ```
 
-**Response:**
+#### Response
 
 ```json
 {
@@ -116,7 +110,7 @@ The following example adds the downloadable product Advanced Pilates & Yoga (`sk
 }
 ```
 
-### Add a configurable product to a cart {#add-configurable}
+### Add a configurable product to a cart
 
 To add a configurable product to a cart, you must specify the `sku` as well as the set of `option_id`/`option_value` pairs that make the product configurable.
 
@@ -151,7 +145,9 @@ We now know the values for `option_value` for `size` and `color` are `168` and `
 
 `Authorization: Bearer <customer token>`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -178,7 +174,7 @@ We now know the values for `option_value` for `size` and `color` are `168` and `
 }
 ```
 
-**Response:**
+#### Response
 
 ```json
 {
@@ -206,7 +202,7 @@ We now know the values for `option_value` for `size` and `color` are `168` and `
 }
 ```
 
-### Add a bundle product to a cart {#add-bundle}
+### Add a bundle product to a cart
 
 The sample data provides one bundled product, the Sprite Yoga Companion Kit (`sku`: `24-WG080`). The kit contains the following items:
 
@@ -219,7 +215,8 @@ To add a bundle product to a cart, you must specify the `sku` of the bundle prod
 
 The `GET <host>/rest/<store_code>/V1/bundle-products/24-WG080/options/all` call returns `id` values, as shown in the following simplified response:
 
-{% collapsible Show code sample %}
+<details>
+      <summary><b>Show code sample</b></summary>
 
 ```json
 [
@@ -314,7 +311,7 @@ The `GET <host>/rest/<store_code>/V1/bundle-products/24-WG080/options/all` call 
 ]
 ```
 
-{% endcollapsible %}
+</details>
 
 For this example, we'll configure the Sprite Yoga Companion Kit as follows:
 
@@ -333,9 +330,9 @@ For this example, we'll configure the Sprite Yoga Companion Kit as follows:
 
 `Authorization: Bearer <customer token>`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-{% collapsible Show code sample %}
+#### Payload
 
 ```json
 {
@@ -373,11 +370,7 @@ For this example, we'll configure the Sprite Yoga Companion Kit as follows:
 }
 ```
 
-{% endcollapsible %}
-
-**Response:**
-
-{% collapsible Show code sample %}
+#### Response
 
 ```json
 {
@@ -425,8 +418,6 @@ For this example, we'll configure the Sprite Yoga Companion Kit as follows:
 }
 ```
 
-{% endcollapsible %}
-
-### Verify this step {#verify-step}
+### Verify this step
 
 [Sign in](https://glossary.magento.com/sign-in-sign-out) as the customer and click on the [shopping cart](https://glossary.magento.com/shopping-cart). All the items you added are displayed.

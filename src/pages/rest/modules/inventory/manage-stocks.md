@@ -1,6 +1,6 @@
 ---
-group: rest-api
 title: Manage stocks
+description: Map your sources to sales channels and link to salable quantities and inventories
 --- 
  
 # Manage stocks
@@ -151,7 +151,7 @@ Magento returns an empty array.
 
 The following call returns all stocks whose name contains the string `Stock`.
 
-See [Search using REST APIs]({{ page.baseurl }}/rest/performing-searches.html) for information about constructing a search query.
+See [Search using REST APIs](/rest/performing-searches/) for information about constructing a search query.
 
 **Sample Usage:**
 
@@ -163,7 +163,8 @@ None
 
 **Response:**
 
-{% collapsible Show code sample %}
+<details>
+      <summary><b>Show code sample</b></summary>
 
 ```json
 {
@@ -210,4 +211,4 @@ None
 }
 ```
 
-{% endcollapsible %}
+</details>

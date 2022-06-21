@@ -1,16 +1,6 @@
 ---
-layout: tutorial
-group: rest-api
 title: Step 9. Create an order
-subtitle: Order processing with Inventory Management
-menu_title: Step 9. Create an order
-menu_order: 90
-level3_subgroup: msi-tutorial
-return_to:
-  title: REST Tutorials
-  url: rest/tutorials/index.html
-functional_areas:
-  - Integration
+description: In this step of the tutorial you will create an order
 --- 
  
 # Step 9. Create an order
@@ -19,7 +9,7 @@ The [shopping cart](https://glossary.magento.com/shopping-cart) contains 71 item
 
 When you create an order, Magento enters reservations for the total amount of products. These reservations place a hold on that amount of inventory per stock, temporarily deducting the amount from the salable quantity. On the Products page of Admin, the **Salable Quantity** column accounts for reservations. When an order is shipped, Magento updates the quantities in the **Quantity per Source** column.
 
-## Send payment information {#send-payment}
+## Send payment information
 
 When you submit payment information, Magento creates an order and sends an order confirmation to the customer. Since we are using an offline [payment method](https://glossary.magento.com/payment-method) in this tutorial, we do not need to provide detailed payment information. The endpoint used in this example requires only the payment method and billing address information.
 
@@ -64,7 +54,7 @@ When you submit payment information, Magento creates an order and sends an order
 
 An `orderID`, such as `3`
 
-## Verify this step {#verify-step}
+## Verify this step
 
 1. Log in to the US store as the customer. The dashboard shows the order.
 1. Log in to [Admin](https://glossary.magento.com/admin). Click **Sales** > **Orders**. The order is displayed in the grid. Its status is Pending.

@@ -1,16 +1,6 @@
 ---
-layout: tutorial
-group: rest-api
 title: Step 13. Bulk transfer products
-subtitle: Order processing with Inventory Management
-menu_title: Step 13. Bulk transfer products
-menu_order: 130
-level3_subgroup: msi-tutorial
-return_to:
-  title: REST Tutorials
-  url: rest/tutorials/index.html
-functional_areas:
-  - Integration
+description: In this step of the tutorial you will transfer products in bulk
 --- 
  
 # Step 13. Bulk transfer products

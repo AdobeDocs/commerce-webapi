@@ -1,8 +1,6 @@
 ---
-group: rest-api
 title: Protected endpoints
-functional_areas:
-  - Integration
+description: How to supply authentication for protected endpoints that use CAPTCHA
 --- 
  
 # Protected endpoints
@@ -49,7 +47,6 @@ Enable for Braintree payment form | Not applicable
 Enable for Checkout/Placing Order | `POST /V1/carts/mine/payment-information` <br/>`POST /V1/carts/mine/set-payment-information` <br/>`POST /V1/guest-carts/:cartId/payment-information` <br/>`POST /V1/guest-carts/:cartId/set-payment-information`
 Enable for Coupon Codes | `PUT /V1/carts/:cartId/coupons/:couponCode` <br/>`PUT /V1/guest-carts/:cartId/coupons/:couponCode`
 
-{:.ref-header}
-Related topics
+### Related topics
 
-[Construct a request]({{page.baseurl}}/get-started/gs-web-api-request.html)
+[Construct a request](/get-started/gs-web-api-request)

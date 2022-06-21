@@ -1,8 +1,9 @@
 ---
-group: rest-api
 title: Search using REST endpoints
+description: How to search using REST endpoints with examples
 --- 
- 
+import * as Vars from '../../data/vars.js';
+
 # Search using REST endpoints
 
 POST, PUT, and DELETE requests to the REST Web [API](https://glossary.magento.com/api) require the service method parameters to be in the body of the request. For example, to create a Customer, you would specify a JSON array (or [XML](https://glossary.magento.com/xml) structure) in the body of the message.
@@ -41,7 +42,8 @@ Condition | Notes
 `null` | Null
 `to` | The end of a range. Must be used with `from`.
 
-{:.bs-callout-info}
+<InlineAlert variant="info" slots="text"/>
+
 `condition_type` is optional if the operator is `eq`.
 
 The `filter_groups` array defines one or more `filters`. Each filter defines a search term, and the `field`, `value`, and `condition_type` of a search term must be assigned the same index number, starting with 0. Increment additional terms as needed.
@@ -53,11 +55,11 @@ When constructing a search, keep the following in mind:
 *  You cannot perform a logical OR across different `filter_groups`, such as `(A AND B) OR (X AND Y)`. ORs can be performed only within the context of a single `filter_groups`.
 *  You can only search top-level attributes.
 
-The following sections provide examples of each type of search. These examples use the {{site.data.var.ce}} sample data.
+The following sections provide examples of each type of search. These examples use the <Vars.sitedatavarce/> sample data.
 
 ## Simple search
 
-The {{site.data.var.ce}} sample data uses the `category_gear` field to describe the categories for each item listed under Gear on sample store. Each item can be assigned to multiple categories. Electronics are assigned the code 86. The following example returns all gear tagged as electronics.
+The <Vars.sitedatavarce/> sample data uses the `category_gear` field to describe the categories for each item listed under Gear on sample store. Each item can be assigned to multiple categories. Electronics are assigned the code 86. The following example returns all gear tagged as electronics.
 
 ```http
 GET <host>/rest/<store_code>/V1/products/?

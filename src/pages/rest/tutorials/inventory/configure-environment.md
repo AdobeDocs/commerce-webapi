@@ -1,16 +1,6 @@
 ---
-layout: tutorial
-group: rest-api
 title: Step 1. Configure your environment
-subtitle: Order processing with Inventory Management
-menu_title: Step 1. Configure your environment
-menu_order: 10
-level3_subgroup: msi-tutorial
-return_to:
-  title: REST Tutorials
-  url: rest/tutorials/index.html
-functional_areas:
-  - Integration
+description: In this step of the tutorial you will configure your environment
 --- 
  
 # Step 1. Configure your environment
@@ -21,15 +11,15 @@ This step guides you through the process of configuring your Magento instance so
 
 For this tutorial, we'll assume that payment and delivery methods are configured globally. You can also make configuration changes at the website or store view level.
 
-### Set the payment method {#set-payment}
+### Set the payment method
 
 {% include webapi/tutorials/set-payment-methods.md %}
 
-### Configure supported delivery methods {#ship-method}
+### Configure supported delivery methods
 
 {% include webapi/tutorials/configure-shipping-methods-24.md %}
 
-### Configure distance calculations {#instore-pickup}
+### Configure distance calculations
 
 This tutorial uses an offline method to calculate distances for shipping and in-store pickup.
 
@@ -39,7 +29,7 @@ This tutorial uses an offline method to calculate distances for shipping and in-
 
    `bin/magento inventory-geonames:import us`
 
-   [Inventory CLI reference]({{page.baseurl}}/inventory/inventory-cli-reference.html#import-geocodes) provides additional information about this command.
+   [Inventory CLI reference](https://devdocs.magento.com/guides/v2.4/inventory/inventory-cli-reference.html#import-geocodes) provides additional information about this command.
 
 ## Deactivate a cart price rule
 

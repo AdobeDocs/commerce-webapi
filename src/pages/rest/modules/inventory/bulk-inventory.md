@@ -1,6 +1,6 @@
 ---
-group: rest-api
 title: Inventory mass actions
+description: Make bulk inventory changes using the REST API
 --- 
  
 # Inventory mass actions
@@ -113,7 +113,7 @@ An empty array
 
 Use the `POST /V1/inventory/bulk-product-source-assign` endpoint to add one or more sources to your products. This endpoint helps when creating and assigning custom sources to your default or custom stocks and preparing new locations and inventory.
 
-After adding new custom sources, you can add inventory quantities per product or for multiple products using the `POST V1/inventory/source-items` endpoint. [Assign products to a source]({{ page.baseurl }}/rest/modules/inventory/manage-source-items.html#assign) describes this endpoint.
+After adding new custom sources, you can add inventory quantities per product or for multiple products using the `POST V1/inventory/source-items` endpoint. [Assign products to a source](/rest/modules/inventory/manage-source-items/#assign-products-to-a-source) describes this endpoint.
 
 The sources are added to the products with an inventory quantity of 0. You can add inventory amounts as available per source.
 
@@ -151,7 +151,8 @@ An ID that identifies the request, such as `1`.
 
 When unassigning a source from a product, you are indicating the product will no longer be stocked at that location. This process completely clears all inventory data (quantity, stock status, Notify Quantity threshold) for the source currently assigned to the product. If you need to move the existing inventory to a new location, consider using the bulk transfer endpoint (`POST /V1/inventory/bulk-product-source-transfer`).
 
-{:.bs-callout-warning}
+<InlineAlert variant="warning" slots="text"/>
+
 When you unassign a source from a product, Magento deletes all source data, including inventory amounts, from that product. This can affect salable quantities and reservations for unprocessed orders. After checkout and before shipment, all product quantities in the order have associated reservations. If you unassign a source, you can cause issues with reservations and processing orders.
 
 We strongly recommend completing all orders and shipments for those products prior to removing the source.

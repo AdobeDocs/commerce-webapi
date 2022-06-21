@@ -1,20 +1,6 @@
 ---
-layout: tutorial
-group: rest-api
 title: Step 9. Create a shipment
-subtitle: Order processing tutorial
-return_to:
-  title: REST tutorials
-  url: rest/tutorials/index.html
-menu_order: 9
-level3_subgroup: order-tutorial
-redirect_from:
-  - /guides/v2.3/get-started/order-tutorial/order-create-shipment.html
-functional_areas:
-  - Integration
-  - Orders
-  - Sales
-  - Shipping
+description: In this step of the tutorial you will create a shipment
 ---
 
 # Step 9. Create a shipment
@@ -40,8 +26,6 @@ where `3` is the order id.
 **Payload:**
 
 The `notify` field is used to trigger Magento to send the shipment email. The `tracks` array optionally allows you to include one or more tracking numbers for the [shipment](https://glossary.magento.com/shipment).
-
-{% collapsible Show code sample %}
 
 ```json
 {
@@ -69,8 +53,6 @@ The `notify` field is used to trigger Magento to send the shipment email. The `t
   ]
 }
 ```
-
-{% endcollapsible %}
 
 **Response:**
 

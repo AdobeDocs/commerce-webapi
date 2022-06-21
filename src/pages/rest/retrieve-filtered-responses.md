@@ -1,13 +1,15 @@
 ---
-group: rest-api
 title: Retrieve filtered responses for REST endpoints
+description: How to filter your REST responses
 --- 
- 
+import * as Vars from '../../data/vars.js';
+
 # Retrieve filtered responses for REST endpoints
 
 Some REST calls return dozens or even hundreds of parameters, and parsing through all this data can be unwieldy. In addition, mobile app developers might find the bandwidth needed to process a request to be excessive. To resolve these problems, Magento provides a query parameter-based syntax for REST requests that return partial responses.
 
-{:.bs-callout-tip}
+<InlineAlert variant="success" slots="text"/>
+
 This feature is not available for SOAP, because SOAP does not allow partial responses.
 
 You can append `?fields=<field_or_object1>,<field_or_object2>,...` to any GET, POST, or PUT operation to filter unimportant information from the response. `<field_or_object>` can be any of the following:
@@ -23,9 +25,7 @@ On POST and PUT requests, Magento ignores the `fields` parameter as input, but t
 
 ## Examples
 
-{:.no_toc}
-
-All examples use {{site.data.var.ce}} sample data.
+All examples use <Vars.sitedatavarce/> sample data.
 
 ## Simple fields
 
@@ -143,7 +143,7 @@ The following POST operation and payload creates a [catalog](https://glossary.ma
 
 ## Using with searchCriteria
 
-The [`searchCriteria` query parameter]({{ page.baseurl }}/rest/performing-searches.html) allows you to search across multiple objects in a collection. You can use the `fields` query parameter in conjunction with `searchCriteria` to limit the output. The question mark (?) that precedes `fields` in all the other examples in this document is replaced with an ampersand (&amp;).
+The [`searchCriteria` query parameter](/rest/performing-searches/) allows you to search across multiple objects in a collection. You can use the `fields` query parameter in conjunction with `searchCriteria` to limit the output. The question mark (?) that precedes `fields` in all the other examples in this document is replaced with an ampersand (&amp;).
 
 The following query returns only the `sku` and `name` parameters for product items whose `category_gear` attribute includes the value `86`.
 
@@ -191,7 +191,6 @@ The following query returns only the `sku` and `name` parameters for product ite
 }
 ```
 
-{:.ref-header}
-Related topics
+### Related topics
 
-*  [Search using REST APIs]({{ page.baseurl }}/rest/performing-searches.html)
+*  [Search using REST APIs](/rest/performing-searches/)

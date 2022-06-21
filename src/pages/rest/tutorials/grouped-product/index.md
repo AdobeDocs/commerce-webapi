@@ -1,8 +1,6 @@
 ---
-group: rest-api
 title: Create and manage grouped products tutorial
-functional_areas:
-  - Integration
+description: In this tutorial you will create and manage grouped products
 --- 
  
 # Create and manage grouped products tutorial
@@ -17,11 +15,11 @@ This tutorial describes how you can use the Magento REST API to create and manag
 
 *  Install a REST client. You can use any REST client to send calls to Magento. [Postman](https://www.getpostman.com/) is recommended.
 
-*  Obtain an admin authorization token. All calls in this tutorial require administrator privileges. See [Generate the admin token]({{ page.baseurl }}/rest/tutorials/prerequisite-tasks/create-admin-token.html) for more information.
+*  Obtain an admin authorization token. All calls in this tutorial require administrator privileges. See [Generate the admin token](/rest/tutorials/prerequisite-tasks/) for more information.
 
 ### Other resources
 
-*  [REST Tutorials]({{ page.baseurl }}/rest/tutorials/index.html) provides additional information about completing any Magento REST tutorial.
+*  [REST Tutorials](/rest/tutorials/index/) provides additional information about completing any Magento REST tutorial.
 
 ## 1. Create an empty grouped product
 
@@ -202,7 +200,8 @@ This step uses the `PUT /V1/products/new-grouped/links` endpoint to add an item 
 
 `true`
 
-{:.bs-callout-tip}
+<InlineAlert variant="success" slots="text"/>
+
 You also can use the `DELETE` endpoint to delete a simple product from the group product:
 `DELETE /V1/products/{sku}/links/{type}/{linkedProductSku}`
 
@@ -212,13 +211,13 @@ You also can use the `DELETE` endpoint to delete a simple product from the group
 1. Select **Catalog > Products**.
 1. Click on the **New Grouped Product** grouped product and expand the **Grouped Products** section.
 
-  ![New grouped product]({{ page.baseurl }}/rest/images/new-grouped-product.png)
+  ![New grouped product](../../../_images/new-grouped-product.png)
 
 ## Add a grouped product to a cart
 
 Customers can now add this grouped products to their carts, as shown below.
 
-Refer to the [Order processing tutorial]({{ page.baseurl }}/rest/tutorials/orders/order-intro.html) for more information about how to add items to a cart with REST.
+Refer to the [Order processing tutorial](/rest/tutorials/orders/) for more information about how to add items to a cart with REST.
 
 ### Endpoint
 

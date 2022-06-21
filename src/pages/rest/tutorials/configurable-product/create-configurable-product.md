@@ -1,16 +1,6 @@
 ---
-layout: tutorial
-group: rest-api
 title: Step 2. Create the configurable product
-subtitle: Create a configurable product tutorial
-menu_title: Step 2. Create the configurable product
-menu_order: 20
-level3_subgroup: configurable-product-tutorial
-return_to:
-  title: REST tutorials
-  url: rest/tutorials/index.html
-functional_areas:
-  - Integration
+description: In this step of the tutorial you will create the configurable product
 --- 
  
 # Step 2. Create the configurable product
@@ -30,8 +20,9 @@ Visibility | Code
 `Search` | 3
 `Catalog, Search` | 4
 
-{:.bs-callout-info}
-Before you using this code sample, verify that the attribute values are the same in your installation. See [Get the list of attributes defined in an attribute searchCriteria]({{ page.baseurl }}/rest/tutorials/configurable-product/plan-product.html#get-attributes) for more information.
+<InlineAlert variant="info" slots="text"/>
+
+Before you using this code sample, verify that the attribute values are the same in your installation. See [Get the list of attributes defined in an attribute searchCriteria](/rest/tutorials/configurable-product/plan-product/#get-the-list-of-attributes-defined-in-an-attribute-searchcriteria ) for more information.
 
 **Endpoint:**
 
@@ -93,7 +84,8 @@ Before you using this code sample, verify that the attribute values are the same
 
 **Response:**
 
-{% collapsible Show code sample %}
+<details>
+      <summary><b>Show code sample</b></summary>
 
 ```json
 {
@@ -214,12 +206,12 @@ Before you using this code sample, verify that the attribute values are the same
 }
 ```
 
-{% endcollapsible %}
+</details>
 
 ## Verify this step
 
 *  Log in to the Luma website and select **Catalog > Products**. The product appears in the grid.
 
-  ![Product page with configurable product]({{ page.baseurl }}/rest/images/products-page.png)
+  ![Product page with configurable product](../../../_images/products-page.png)
 
 *  On the Luma storefront page, search for `Champ`. No results are returned.

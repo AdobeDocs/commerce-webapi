@@ -1,16 +1,6 @@
 ---
-layout: tutorial
-group: rest-api
 title: Step 12. Create a shipment
-menu_title: Step 12. Create a shipment
-subtitle: Order processing with Inventory Management
-menu_order: 120
-level3_subgroup: msi-tutorial
-return_to:
-  title: REST Tutorials
-  url: rest/tutorials/index.html
-functional_areas:
-  - Integration
+description: In this step of the tutorial you will create a shipment
 --- 
  
 # Step 12. Create a shipment
@@ -25,7 +15,8 @@ When you complete a partial or full shipment, Magento deducts the reserved produ
 
 ## Send a partial shipment
 
-{:.bs-callout-info}
+<InlineAlert variant="info" slots="text"/>
+
 Although you can use the `POST V1/shipment` endpoint to create a shipment, the `POST /V1/order/:orderId/ship` endpoint is a better option in that it is more efficient and the payload can be simpler.
 
 We'll ship 35 `24-WB01` items and 20 `24-WB03` items from the Northeast warehouse. The `order_item_id` value for `24-WB01` is 3, and the value for `24-WB03` is 4.
@@ -106,7 +97,7 @@ Use the same endpoint to ship the remaining five `24-WB03` items from the West w
 
 The shipment ID, such as `4`.
 
-## Verify this step {#verify-step}
+## Verify this step
 
 1. Click **Sales** > **Shipments**. The two shipments for this order are displayed in the grid.
 1. Click **Catalog** > **Products**. Verify that the **Quantity per Source** values are correct for each product, based on the selections you made at shipment.

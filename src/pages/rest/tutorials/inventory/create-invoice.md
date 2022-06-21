@@ -1,16 +1,6 @@
 ---
-layout: tutorial
-group: rest-api
 title: Step 10. Create an invoice
-subtitle: Order processing with Inventory Management
-menu_title: Step 10. Create an invoice
-menu_order: 100
-level3_subgroup: msi-tutorial
-return_to:
-  title: REST Tutorials
-  url: rest/tutorials/index.html
-functional_areas:
-  - Integration
+description: In this step of the tutorial you will create an invoice
 --- 
  
 # Step 10. Create an invoice
@@ -19,7 +9,7 @@ You create an [invoice](https://glossary.magento.com/invoice) after you receive 
 
 After you submit the invoice, Magento adjusts the Quantity per Source value for non-physical products.
 
-## Capture payment {#capture-payment}
+## Capture payment
 
 This example creates a full invoice.
 
@@ -54,7 +44,7 @@ An invoice `id`, such as `3`.
 
 ## Retrieve the order item IDs
 
-When you create an order, Magento generates an `order_item_id` for each product. These values will be used in [Step 12. Create a shipment]({{page.baseurl}}/rest/tutorials/inventory/create-shipment.html).
+When you create an order, Magento generates an `order_item_id` for each product. These values will be used in [Step 12. Create a shipment](/rest/tutorials/inventory/create-shipment/).
 
 **Endpoint:**
 
@@ -195,7 +185,7 @@ Not applicable
 }
 ```
 
-## Verify this step {#verify-step}
+## Verify this step
 
 1. Click **Sales** > **Invoices**. The invoice displays in the grid with a status of Paid. Then click **Sales** > **Orders**. The status is Processing.
 

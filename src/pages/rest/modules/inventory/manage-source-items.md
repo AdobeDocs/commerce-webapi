@@ -1,6 +1,6 @@
 ---
-group: rest-api
 title: Manage source items
+description: Assign products to other sources using the REST API
 --- 
  
 # Manage source items
@@ -36,8 +36,9 @@ status |  Indicates whether the product is out of stock (0) or in stock (1) | In
 
 Use the `POST V1/inventory/source-items-delete` endpoint to unassign one or more products from the specified source. The `sku` and `source_code` attributes are required for each product.
 
-{:.bs-callout-warning}
-Unassigning a source clears all quantity data. For this example, this is OK, because the default source did not contain any quantity data. Reassigning a source that contains real quantity data can potentially cause havoc with pending orders with reservations and affect the salable quantity counts. See the [merchant documentation]({{ site.user_guide_url }}/catalog/inventory-bulk-transfer-inventory.html) for more details.
+<InlineAlert variant="warning" slots="text"/>
+
+Unassigning a source clears all quantity data. For this example, this is OK, because the default source did not contain any quantity data. Reassigning a source that contains real quantity data can potentially cause havoc with pending orders with reservations and affect the salable quantity counts. See the [merchant documentation](https://docs.magento.com/user-guide/catalog/inventory-bulk-transfer-inventory.html) for more details.
 
 **Sample usage:**
 
@@ -64,11 +65,12 @@ Magento returns an empty array.
 
 `[]`
 
-## Assign products to a source {#assign}
+## Assign products to a source
 
 `POST V1/inventory/source-items` is a powerful endpoint that allows you to define which sources carry each product as well as how many units are available at each source. You can use the endpoint to set up the initial quantities for each SKU at each source or add quantities as you receive shipments to replenish your supply.
 
-{:.bs-callout-info}
+<InlineAlert variant="info" slots="text"/>
+
 If a bundle product is configured so that all items must be shipped together, then all component products must be assigned to the same source.
 
 The following example assigns `1000` units of product `new_product1` to the `central` source and `2000` units to the `east` source. It also assigns `500` units of product `new_product2` to the `central` source and `250` units to the `east` source.
@@ -118,7 +120,7 @@ Magento returns an empty array.
 
 The following call returns all source items for `sku` = `new_product2`.
 
-See [Search using REST APIs]({{ page.baseurl }}/rest/performing-searches.html) for information about constructing a search query.
+See [Search using REST APIs](/rest/performing-searches/) for information about constructing a search query.
 
 **Sample Usage:**
 
@@ -129,8 +131,6 @@ See [Search using REST APIs]({{ page.baseurl }}/rest/performing-searches.html) f
 None
 
 **Response:**
-
-{% collapsible Show code sample %}
 
 ```json
 {
@@ -164,5 +164,3 @@ None
     "total_count": 2
 }
 ```
-
-{% endcollapsible %}

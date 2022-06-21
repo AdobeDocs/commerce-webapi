@@ -1,6 +1,6 @@
 ---
-group: rest-api
 title: Manage source selection algorithms
+description: Run and use the Source Selection ALgorithm (SSA) and other algorithms to make calculations and predictions using the REST API
 --- 
  
 # Manage source selection algorithms

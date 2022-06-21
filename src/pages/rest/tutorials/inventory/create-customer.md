@@ -1,16 +1,6 @@
 ---
-layout: tutorial
-group: rest-api
 title: Step 6. Create a customer and generate a customer token
-subtitle: Order processing with Inventory Management
-menu_title: Step 6. Create a customer and generate a customer token
-menu_order: 60
-level3_subgroup: msi-tutorial
-return_to:
-  title: REST Tutorials
-  url: rest/tutorials/index.html
-functional_areas:
-  - Integration
+description: In this step of the tutorial you will create a customer and generate a customer token
 --- 
  
 # Step 6. Create a customer and generate a customer token
@@ -19,7 +9,7 @@ This step creates a customer that lives close to several stores that serve as in
 
 ## Create a customer
 
-If you prefer to use a customer that is already defined on your installation, scroll down to [Generate the customer's access token](#get-token).
+If you prefer to use a customer that is already defined on your installation, scroll down to [Generate the customer's access token](#generate-the-customers-access-token).
 
 The response of the `POST /V1/customers` endpoint includes an address ID. This value will be used in a later step.
 
@@ -118,7 +108,7 @@ The customer `id` is `2`.
 }
 ```
 
-## Generate the customer's access token {#get-token}
+## Generate the customer's access token
 
 To generate a customer's access token, you must specify the customer's username and password in the payload. You do not specify an admin [authorization](https://glossary.magento.com/authorization) token.
 
@@ -151,7 +141,7 @@ Magento returns the customer's access token. Your integration must specify a cus
 
 `fl0o0yr1xota4w88negpwfsle38807yb`
 
-## Verify this step {#verify-step}
+## Verify this step
 
 1. Log in to the Test website using the email `jdoe@example.com` and password `Password1`.
 1. Click the account name (Jane) in the upper right corner and select **My Account**.

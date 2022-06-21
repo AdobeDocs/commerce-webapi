@@ -1,15 +1,15 @@
 ---
-layout: tutorial
-group: rest-api
 title: Step 2. Create the simple products
 contributor_name: Goivvy LLC
 contributor_link: https://www.goivvy.com/magento-optimization-service
+description: In this step of the tutorial you will create simple products
 --- 
  
 # Step 2. Create the simple products
 
-{:.bs-callout-info}
-Before you run the code, please verify that the attribute values are the same in your installation. See [Get the list of attributes defined in an attribute set]({{ page.baseurl }}/rest/tutorials/bundle-product/plan-product.html#get-attributes) for more information.
+<InlineAlert variant="info" slots="text"/>
+
+Before you run the code, please verify that the attribute values are the same in your installation. See [Get the list of attributes defined in an attribute set](/rest/tutorials/bundle-product/plan-product/#get-the-list-of-attributes-defined-in-an-attribute-searchcriteria ) for more information.
 
 We will create four simple products: `RAM 12GB`, `RAM 24GB`, `Monitor 15"` and `Monitor 17"`.
 
@@ -19,7 +19,11 @@ We will create four simple products: `RAM 12GB`, `RAM 24GB`, `Monitor 15"` and `
 POST http://domain.com/rest/default/V1/products
 ```
 
-**Payload 1:**
+## RAM-12GB
+
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+### Payload
 
 ```json
 {
@@ -58,9 +62,7 @@ POST http://domain.com/rest/default/V1/products
 }
 ```
 
-**Response 1:**
-
-{% collapsible Show code sample %}
+### Response
 
 ```json
 {
@@ -155,9 +157,11 @@ POST http://domain.com/rest/default/V1/products
 }
 ```
 
-{% endcollapsible %}
+## RAM-24GB
 
-**Payload 2:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+### Payload
 
 ```json
 {
@@ -196,9 +200,7 @@ POST http://domain.com/rest/default/V1/products
 }
 ```
 
-**Response 2:**
-
-{% collapsible Show code sample %}
+### Response
 
 ```json
 {
@@ -293,9 +295,11 @@ POST http://domain.com/rest/default/V1/products
 }
 ```
 
-{% endcollapsible %}
+## Monitor-15"
 
-**Payload 3:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+### Payload
 
 ```json
 {
@@ -334,9 +338,7 @@ POST http://domain.com/rest/default/V1/products
 }
 ```
 
-**Response 3:**
-
-{% collapsible Show code sample %}
+### Response
 
 ```json
 {
@@ -431,9 +433,11 @@ POST http://domain.com/rest/default/V1/products
 }
 ```
 
-{% endcollapsible %}
+## Monitor-17"
 
-**Payload 4:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+### Payload
 
 ```json
 {
@@ -472,9 +476,7 @@ POST http://domain.com/rest/default/V1/products
 }
 ```
 
-**Response 4:**
-
-{% collapsible Show code sample %}
+### Response
 
 ```json
 {
@@ -569,13 +571,12 @@ POST http://domain.com/rest/default/V1/products
 }
 ```
 
-{% endcollapsible %}
-
 ## Verify this step
 
 *  Log in to the Adobe Commerce Admin Panel and select <b>Catalog > Products</b> and confirm that your products appear in the grid.
 
-  ![Simple products]({{ page.baseurl }}/rest/tutorials/bundle-product/images/simple-products-admin-grid.png)
+  ![Simple products](../../../_images/simple-products-admin-grid.png)
 
- {:.bs-callout-info}
+ <InlineAlert variant="info" slots="text"/>
+
 If you do not see your products in the catalog, you can try reindexing and clearing the cache.

@@ -1,16 +1,6 @@
 ---
-layout: tutorial
-group: rest-api
 title: Step 7. Create a cart and add products to it
-subtitle: Order processing with Inventory Management
-menu_title: Step 7. Create a cart and add products to it
-menu_order: 70
-level3_subgroup: msi-tutorial
-return_to:
-  title: REST Tutorials
-  url: rest/tutorials/index.html
-functional_areas:
-  - Integration
+description: In this step of the tutorial you will create a card and add products
 --- 
  
 # Step 7. Create a cart and add products to it
@@ -270,6 +260,6 @@ Finally, we'll add a single instance of a downloadable product to the cart.
 }
 ```
 
-## Verify this step {#verify-step}
+## Verify this step
 
 Sign in as the customer at `http://<host>` and click on the shopping cart. All the items you added display in the cart.

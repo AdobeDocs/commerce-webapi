@@ -1,8 +1,6 @@
 ---
-group: rest-api
 title: REST usage notes
-functional_areas:
-  - Integration
+description: Issues you may encounter when using REST endpoints.
 --- 
  
 # REST usage notes
@@ -159,7 +157,6 @@ The following sample code creates a bundle product. The `price_type` attribute c
 }
 ```
 
-{:.ref-header}
-Related topics
+### Related topics
 
-[Search using REST APIs]({{ page.baseurl }}/rest/performing-searches.html)
+[Search using REST APIs](/rest/performing-searches/)

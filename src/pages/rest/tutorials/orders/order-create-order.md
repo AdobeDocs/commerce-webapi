@@ -1,30 +1,18 @@
 ---
-layout: tutorial
-group: rest-api
 title: Step 7. Create an order
-subtitle: Order processing tutorial
-return_to:
-  title: REST tutorials
-  url: rest/tutorials/index.html
-menu_order: 7
-level3_subgroup: order-tutorial
-redirect_from:
-  - /guides/v2.3/get-started/order-tutorial/order-create-order.html
-functional_areas:
-  - Integration
-  - Orders
-  - Sales
+description: In this step of the tutorial you will create an order
 --- 
  
 # Step 7. Create an order
 
 The [shopping cart](https://glossary.magento.com/shopping-cart) contains three items totaling $108. The shipping charges are $10, making the grand total $118. We're now ready to convert the [quote](https://glossary.magento.com/quote) to an order.
 
-### Send payment information {#send-payment}
+### Send payment information
 
 When you submit payment information, Magento creates an order and sends an order confirmation to the customer. Since we are using an offline [payment method](https://glossary.magento.com/payment-method) in this tutorial, we do not need to provide detailed payment information. The endpoint used in this example requires only the payment method and billing address information.
 
-{:.bs-callout-info}
+<InlineAlert variant="info" slots="text"/>
+
 Use the `V1/guest-carts/<cartId>/payment-information` endpoint to set the payment information on behalf of a guest. Do not include an authorization token.
 You must include the `email` attribute in the payload at the same level as `paymentMethod` and `billing_address`.
 
@@ -39,8 +27,6 @@ You must include the `email` attribute in the payload at the same level as `paym
 `Authorization: Bearer <customer token>`
 
 **Payload:**
-
-{% collapsible Show code sample %}
 
 ```json
 {
@@ -65,13 +51,11 @@ You must include the `email` attribute in the payload at the same level as `paym
 }
 ```
 
-{% endcollapsible %}
-
 **Response:**
 
 An `orderID`, such as `3`.
 
-### Review the order as an admin {#review-order}
+### Review the order as an admin
 
 When you request an order object, the response contains full details about the order, including customer information, payment details, as well as totals and subtotals for the order and each individual item.
 
@@ -93,7 +77,8 @@ Not applicable
 
 **Response:**
 
-{% collapsible Show code sample %}
+<details>
+      <summary><b>Show code sample</b></summary>
 
 ```json
 {
@@ -1578,9 +1563,9 @@ Not applicable
 }
 ```
 
-{% endcollapsible %}
+</details>
 
-### Verify this step {#verify-step}
+### Verify this step
 
 1. Log in to the Luma store as the customer. The dashboard shows the order.
 1. Log in to [Admin](https://glossary.magento.com/admin). Click **Sales** > **Orders**. The order is displayed in the grid. Its status is Pending.

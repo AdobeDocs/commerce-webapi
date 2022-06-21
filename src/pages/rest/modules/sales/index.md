@@ -1,9 +1,6 @@
 ---
-group: rest-api
 title: Refunds
-functional_areas:
-  - Integration
-  - Catalog
+description: Issue a refund using the REST API
 --- 
  
 # Refunds
@@ -26,7 +23,8 @@ The `salesRefundInvoice` service allows you to:
 
 `POST V1/invoice/:invoiceId/refund`
 
-{:.bs-callout-warning}
+<InlineAlert variant="warning" slots="text"/>
+
 If you try to apply the service to an invoice created using an offline payment method, the system will return a validation error.
 
 ## salesRefundOrderV1 service
@@ -37,7 +35,8 @@ This service performs the same operations as the `salesRefundInvoiceV1` service,
 
 `POST V1/order/:orderId/refund`
 
-{:.bs-callout-warning}
+<InlineAlert variant="warning" slots="text"/>
+
 If you try to apply the service to an invoice created using an online payment method, the system will return a validation error.
 
 ## Other services for issuing refunds

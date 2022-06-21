@@ -1,19 +1,6 @@
 ---
-layout: tutorial
-group: rest-api
 title: Step 4. Create a quote
-subtitle: Order processing tutorial
-return_to:
-  title: REST tutorials
-  url: rest/tutorials/index.html
-menu_order: 4
-level3_subgroup: order-tutorial
-redirect_from:
-  - /guides/v2.3/get-started/order-tutorial/order-create-quote.html
-functional_areas:
-  - Integration
-  - Orders
-  - Cart
+description: In this step of the tutorial you will create a quote
 --- 
  
 # Step 4. Create a quote
@@ -27,7 +14,7 @@ When a customer adds an item to their [shopping cart](https://glossary.magento.c
 *  Determine the [payment method](https://glossary.magento.com/payment-method)
 *  Place the order so that the merchant can fulfill it.
 
-### Types of carts {#cart-types}
+### Types of carts
 
 Magento identifies three types of users that can create a shopping cart:
 
@@ -35,11 +22,12 @@ Magento identifies three types of users that can create a shopping cart:
 *  A logged-in customer. Calls to create a cart and add items must contain the customer's authorization token in the authorization header.
 *  A guest user. These users could be customers who haven't logged in yet, or they could be users who have no intention of creating an account. An anonymous user's cart is called a guest cart.
 
-### Create a cart for a logged-in customer {#create-cart}
+### Create a cart for a logged-in customer
 
 All calls for a logged in customer must specify customer's token `q0u66k8h42yaevtchv09uyy3y9gaj2ap` in the header.
 
-{:.bs-callout-info}
+<InlineAlert variant="info" slots="text"/>
+
 Use the `V1/guest-carts` endpoint to create a cart on behalf of a guest. Do not include an authorization token. The `quoteId` for the guest customer quote will be masked.
 
 **Endpoint:**
@@ -60,9 +48,10 @@ None
 
 The response is the `quoteId: 4`
 
-{:.bs-callout-tip}
+<InlineAlert variant="success" slots="text"/>
+
 Some calls refer to this parameter as the `cartId`.
 
-### Verify this step {#verify-step}
+### Verify this step
 
 There are no additional verification steps.`quoteId` values are not displayed on the [website](https://glossary.magento.com/website) or in Admin.
