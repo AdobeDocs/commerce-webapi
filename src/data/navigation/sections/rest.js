@@ -1,7 +1,11 @@
 module.exports = [
     {
+       title: "Overview",
+       path: "/rest/", 
+    },
+    {
       title: "Quick reference",
-      path: "/rest/",
+      path: "/rest/redoc.md",
       pages: [
         {
           title: "Rest endpoints (ReDoc)",

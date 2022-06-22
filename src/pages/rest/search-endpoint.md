@@ -7,7 +7,7 @@ description: Search for products using the /search endpoints
  
 # Search for products with the /search endpoint
 
-Magento provides two endpoints for searching products:
+Adobe Commerce provides two endpoints for searching products:
 
 *  `GET V1/search`
 *  `GET V1/products`

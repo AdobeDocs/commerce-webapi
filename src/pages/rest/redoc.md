@@ -6,8 +6,7 @@ description: Links out to our ReDoc REST documentation
 # Rest endpoints (ReDoc)
 
 This documentation uses [ReDoc][] to organize and present schema files that follow an [Open-API specification][].
-The schema files this tool uses are generated from a running instance of Magento 2.4, and
-it represents the state of the code at the time the file was generated.
+The schema files this tool uses represent the state of the code at the time the file was generated.
 
 Use the links below to access the corresponding REST endpoints:
 

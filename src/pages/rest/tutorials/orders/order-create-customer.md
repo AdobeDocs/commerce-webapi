@@ -11,13 +11,13 @@ Customers can make purchases in three ways:
 *  As a guest user who logs in or creates an account when the order is placed
 *  As a guest user who does not create an account
 
-This tutorial creates an order by a logged-in user. Magento provides additional REST endpoints for handling guest users.
+This tutorial creates an order by a logged-in user. Adobe Commerce provides additional REST endpoints for handling guest users.
 
 ### Create a customer account
 
 <InlineAlert variant="info" slots="text"/>
 
-This example shows a simplified way of creating a customer account. Typically, you would not define a customer password using plain text. Instead, you would specify the payload without the `password` parameter. By default if the call is successful, Magento sends a "Welcome" email to the customer that includes a request to set the password. You could also initiate a password reset email by calling `PUT /V1/customers/password`.
+This example shows a simplified way of creating a customer account. Typically, you would not define a customer password using plain text. Instead, you would specify the payload without the `password` parameter. By default if the call is successful, Commerce sends a "Welcome" email to the customer that includes a request to set the password. You could also initiate a password reset email by calling `PUT /V1/customers/password`.
 
 **Endpoint:**
 
@@ -69,7 +69,7 @@ It is recommended that you substitute the value of the `email` parameter with a 
 
 **Response:**
 
-Magento assigned this user `id` value of `2`.
+Commerce assigned this user `id` value of `2`.
 
 <details>
       <summary><b>Show code sample</b></summary>
@@ -144,7 +144,7 @@ By default, a customer token is valid for 1 hour. To change this value, log in t
 
 **Response:**
 
-Magento returns the customer's access token. This token must be specified in the authorization header of every call the customer makes on his or her own behalf.
+Commerce returnsthe customer's access token. This token must be specified in the authorization header of every call the customer makes on his or her own behalf.
 
 `q0u66k8h42yaevtchv09uyy3y9gaj2ap`
 

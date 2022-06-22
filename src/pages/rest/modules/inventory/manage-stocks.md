@@ -7,7 +7,7 @@ description: Map your sources to sales channels and link to salable quantities a
 
 Stocks map your sources to sales channels, providing a direct link to salable quantities and inventories.
 
-All stores start with a default stock. When the inventory management functionality is enabled, Magento automatically assigns products to the default source and stock. Single Source merchants use the default stock only. Multi Source merchants create and configure stocks as needed to best fit their stores and order fulfillment processes.
+All stores start with a default stock. When the inventory management functionality is enabled, Adobe Commerce automatically assigns products to the default source and stock. Single Source merchants use the default stock only. Multi Source merchants create and configure stocks as needed to best fit their stores and order fulfillment processes.
 
 The `stock_id` of the default stock is `1`.  You cannot delete or add sources to the default stock, but you can perform these actions with custom stocks.
 
@@ -143,7 +143,7 @@ None
 
 **Response:**
 
-Magento returns an empty array.
+Commerce returns an empty array.
 
 `[]`
 

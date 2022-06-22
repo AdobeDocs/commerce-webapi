@@ -53,7 +53,7 @@ The `name` attribute is required.
 
 **Response:**
 
-Magento returns the `stock_id`, such as `2`. The value will be used in subsequent steps.
+Commerce returnsthe `stock_id`, such as `2`. The value will be used in subsequent steps.
 
 ## Verify this step
 

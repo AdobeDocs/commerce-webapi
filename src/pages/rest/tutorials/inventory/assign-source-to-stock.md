@@ -7,7 +7,7 @@ description: In this step of the tutorial you will link stocks and sources toget
 
 This step links the sources we created in [Step 2. Create sources](/rest/tutorials/inventory/create-sources) with the stocks we created in [Step 3. Create stocks](/rest/tutorials/inventory/create-stock/).
 
-Each stock can be assigned one or more sources. Magento uses these associations to calculate the virtual aggregated inventory per product.
+Each stock can be assigned one or more sources. Adobe Commerce uses these associations to calculate the virtual aggregated inventory per product.
 
 <InlineAlert variant="success" slots="text"/>
 
@@ -86,7 +86,7 @@ In this example, we configure the Northeast warehouse to be the primary source f
 
 **Response:**
 
-Magento returns empty array.
+Commerce returns empty array.
 
 []
 

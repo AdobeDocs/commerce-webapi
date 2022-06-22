@@ -8,11 +8,11 @@ description: In this step of the tutorial you will run the source selection algo
 One of the most significant parts of Inventory Management is the Source Selection Algorithm (SSA). The Source Priority SSA analyzes and determines the best match for sources and shipping based on the priorities you specified in [Step 4. Link stocks and sources
 ](/rest/tutorials/inventory/assign-source-to-stock/). The Distance Priority SSA calculates the distance between the sources and the shipping address. Both algorithms also provide a list of source items with quantities to deduct per each source item.
 
-For more information about shipping and SSAs, see [About Source Selection Algorithm and Reservations](https://docs.magento.com/m2/ce/user_guide/catalog/inventory-about-ssa.html) in the _Magento User Guide_.
+For more information about shipping and SSAs, see [About Source Selection Algorithm and Reservations](https://experienceleague.adobe.com/docs/commerce-admin/inventory/basics/selection-reservations.html) in the Adobe Commerce user guide.
 
 ## Get the list of algorithms
 
-Currently, Magento supports SSAs based on priority and on distance. Third-party developers and future releases may add support for additional algorithms.
+Currently, Commerce supports SSAs based on priority and on distance. Third-party developers and future releases may add support for additional algorithms.
 
 **Endpoint:**
 

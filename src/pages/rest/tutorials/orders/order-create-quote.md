@@ -5,7 +5,7 @@ description: In this step of the tutorial you will create a quote
  
 # Step 4. Create a quote
 
-When a customer adds an item to their [shopping cart](https://glossary.magento.com/shopping-cart) for the first time, Magento creates a [quote](https://glossary.magento.com/quote). Magento uses a quote to perform tasks such as
+When a customer adds an item to their [shopping cart](https://glossary.magento.com/shopping-cart) for the first time, Adobe Commerce creates a [quote](https://glossary.magento.com/quote). Commerce uses a quote to perform tasks such as
 
 *  Track each item the customer wants to buy, including the quantity and base cost
 *  Gather information about the customer, including billing and shipping addresses
@@ -16,7 +16,7 @@ When a customer adds an item to their [shopping cart](https://glossary.magento.c
 
 ### Types of carts
 
-Magento identifies three types of users that can create a shopping cart:
+Commerce identifies three types of users that can create a shopping cart:
 
 *  An [admin](https://glossary.magento.com/admin) user can create a cart on behalf of a customer. For all admin requests, you must provide an admin [authorization](https://glossary.magento.com/authorization) token in the call's authorization header.
 *  A logged-in customer. Calls to create a cart and add items must contain the customer's authorization token in the authorization header.

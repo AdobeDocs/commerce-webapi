@@ -13,7 +13,7 @@ You cannot rename, delete, or disable the default source. You can create, modify
 
 Disabling a custom source has the following effects:
 
-*  Magento ignores and does not list the source for shipment or order processing
+*  Commerce ignores and does not list the source for shipment or order processing
 *  Stocks do not access inventory quantities from the source for aggregated inventory totals
 *  Order shipments cannot be assigned to disabled locations.
 
@@ -48,7 +48,7 @@ Name | Description | Type | Requirements
 `longitude` |The latitude of the source's physical location. | Float | Optional
 `country_id` | The country ID of the source's physical location | String | Required for all POST and PUT calls.
 `region_id` | The region ID of the state or province of the source  | Integer | Optional
-`region` | The region name for countries whose provinces are not defined in Magento | String | Optional
+`region` | The region name for countries whose provinces are not defined in Commerce | String | Optional
 `city` | Th city in which the source is located | String | Optional
 `street` | The physical street address of the source | String | Optional
 `postcode` | The zip or postal code of the source's physical address | String | Required for all POST and PUT calls
@@ -103,7 +103,7 @@ The value of the `source_code` parameter can contain upper and lower case letter
 
 **Response:**
 
-Magento returns an empty array.
+Commerce returns an empty array.
 
 `[]`
 
@@ -134,7 +134,7 @@ This example updates the contact information (`contact_name`, `email`, and `phon
 
 **Response:**
 
-Magento returns an empty array.
+Commerce returns an empty array.
 
 `[]`
 

@@ -11,7 +11,7 @@ You can always override the SSA recommendations. It would be valid, for example,
 
 Fulfilling the order requires a minimum of two partial shipments. In this example, we will follow the SSA recommendations.
 
-When you complete a partial or full shipment, Magento deducts the reserved products from corresponding sources.
+When you complete a partial or full shipment, Adobe Commerce deducts the reserved products from corresponding sources.
 
 ## Send a partial shipment
 

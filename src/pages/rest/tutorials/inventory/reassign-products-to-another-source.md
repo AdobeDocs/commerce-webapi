@@ -5,7 +5,7 @@ description: In this step of the tutorial you will reassign products to custom s
  
 # Step 5. Reassign products to custom sources
 
-When you install or upgrade Magento, the system assigns all existing products to the default source. Magento also assigns all subsequently-created products to the default source. For this tutorial, we want to unassign three products from the default source and assign them to custom sources.
+When you install or upgrade Adobe Commerce, the system assigns all existing products to the default source. Commerce also assigns all subsequently-created products to the default source. For this tutorial, we want to unassign three products from the default source and assign them to custom sources.
 
 The following table describes the products we'll use in this tutorial.
 
@@ -21,7 +21,7 @@ Use the `POST V1/inventory/source-items-delete` endpoint to unassign one or more
 
 <InlineAlert variant="warning" slots="text"/>
 
-When you unassign a source from a product, all source data including inventory amounts is removed from that product. This can affect salable quantities and reservations for unprocessed orders. After checkout and before shipment, all product quantities in the order have associated reservations. If you unassign a source, you can cause issues with reservations and processing orders. In a production environment, Magento strongly recommends completing all orders and shipments for those products prior to removing the source.
+When you unassign a source from a product, all source data including inventory amounts is removed from that product. This can affect salable quantities and reservations for unprocessed orders. After checkout and before shipment, all product quantities in the order have associated reservations. If you unassign a source, you can cause issues with reservations and processing orders. In a production environment, Commerce strongly recommends completing all orders and shipments for those products prior to removing the source.
 
 **Endpoint:**
 
@@ -58,7 +58,7 @@ When you unassign a source from a product, all source data including inventory a
 
 **Response:**
 
-Magento returns an empty array.
+Commerce returnsan empty array.
 
 `[]`
 
@@ -178,7 +178,7 @@ Now we can assign each product to one or more sources. The `POST V1/inventory/so
 
 **Response:**
 
-Magento returns an empty array.
+Commerce returnsan empty array.
 
 `[]`
 

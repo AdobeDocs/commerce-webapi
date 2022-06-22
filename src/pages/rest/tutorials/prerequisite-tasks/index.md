@@ -5,7 +5,7 @@ description: In this tutorial you will generate the admin token necessary for ot
  
 # Generate the admin token
 
-In a production environment, you would typically [create an integration](/get-started/create-integration) and use OAuth to provide authentication for any REST call that requires admin privileges. This process allows Magento to verify that the caller is authorized to access the affected system resource.
+In a production environment, you would typically [create an integration](/get-started/create-integration) and use OAuth to provide authentication for any REST call that requires admin privileges. This process allows Adobe Commerce to verify that the caller is authorized to access the affected system resource.
 
 In this tutorial, we will supply an admin token instead. To get a token, you must have 2FA configured. This tutorial assumes that you are using Google Authenticator as your 2FA solution. The endpoint and payload will be different for other 2FA solutions. See [Two-Factor Authentication](https://devdocs.magento.com/guides/v2.4/security/two-factor-authentication.html) for more information.
 
@@ -35,7 +35,7 @@ See [Token-based authentication](/get-started/authentication/gs-authentication-t
 
 **Response:**
 
-Magento generates the admin's access token
+Commerce generates the admin's access token
 
 `5r8cvmpr11j6gmau8990rcj2qk7unh8i`
 

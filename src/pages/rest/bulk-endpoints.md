@@ -81,7 +81,7 @@ The second and third requests are duplicates.
 
 ## Responses
 
-The response contains an array that indicates whether the call successfully added each request to the message queue. Although the duplicated request to create a customer will fail, Magento added it to the message queue successfully.
+The response contains an array that indicates whether the call successfully added each request to the message queue. Although the duplicated request to create a customer will fail, Commerce added it to the message queue successfully.
 
 ```json
 {
@@ -155,7 +155,7 @@ PUT /all/async/bulk/V1/products/bySku
 
 The following rules apply when you create or update an object, such as a product.
 
-*  If you do not set the store code while creating a new product, Magento creates a new object with all values set globally for each scope.
-*  If you do not set the store code while updating a product, then by fallback, Magento updates values for the default store only.
-*  If you include the `all` parameter, then Magento updates values for all store scopes (in case a particular store doesn't yet have its own value set).
+*  If you do not set the store code while creating a new product, Commerce creates a new object with all values set globally for each scope.
+*  If you do not set the store code while updating a product, then by fallback, Commerce updates values for the default store only.
+*  If you include the `all` parameter, then Commerce updates values for all store scopes (in case a particular store doesn't yet have its own value set).
 *  If `<store_code>` parameter is set, then values for only defined store will be updated.

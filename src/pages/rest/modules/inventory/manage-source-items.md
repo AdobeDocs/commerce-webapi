@@ -5,7 +5,7 @@ description: Assign products to other sources using the REST API
  
 # Manage source items
 
-If Magento is configured to manage inventory, Magento assigns all existing products to the default source. Currently, Magento also assigns newly-created products to the default source. Single Source merchants do not need to manage source items, but Multi Source merchants may need to move products from the default source to a custom source, or move products from one custom source to another.
+If Adobe Commerce is configured to manage inventory, Commerce assigns all existing products to the default source. Currently, Commerce also assigns newly-created products to the default source. Single Source merchants do not need to manage source items, but Multi Source merchants may need to move products from the default source to a custom source, or move products from one custom source to another.
 
 **Service names:**
 
@@ -61,7 +61,7 @@ Unassigning a source clears all quantity data. For this example, this is OK, bec
 
 **Response:**
 
-Magento returns an empty array.
+Commerce returns an empty array.
 
 `[]`
 
@@ -112,7 +112,7 @@ The following example assigns `1000` units of product `new_product1` to the `cen
 
 **Response:**
 
-Magento returns an empty array.
+Commerce returns an empty array.
 
 `[]`
 

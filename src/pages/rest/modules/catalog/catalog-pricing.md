@@ -6,7 +6,7 @@ import * as Vars from '../../../../data/vars.js';
 
 # Manage prices for multiple products
 
-Magento provides REST endpoints that allow you to update multiple special prices, tier prices, base prices, or cost values with a single call.
+Adobe Commerce provides REST endpoints that allow you to update multiple special prices, tier prices, base prices, or cost values with a single call.
 
 The calls that update special and tier prices mimic the options available on a product's **Advanced Pricing** screen in Admin.
 
@@ -148,7 +148,7 @@ The following call returns the special price information for three SKU values.
 
 ### Delete a special price
 
-If any item to be deleted has an invalid `price`, `store_id`, `sku` or `date`, Magento marks the item as failed and excludes it from the delete list. Valid items are deleted as requested.
+If any item to be deleted has an invalid `price`, `store_id`, `sku` or `date`, Commerce marks the item as failed and excludes it from the delete list. Valid items are deleted as requested.
 
 **Sample Usage:**
 
@@ -328,7 +328,7 @@ The following example removes the $10 tier price for `sku` 24-UG04 and changes t
 
 ### Get tier prices
 
-Magento returns all active tier prices for the specified list of `skus`.
+Commerce returns all active tier prices for the specified list of `skus`.
 
 **Sample Usage:**
 

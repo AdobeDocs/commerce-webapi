@@ -10,7 +10,7 @@ You might encounter the following issues when using REST endpoints.
 ## Duplicate parameters in an REST call
 
 In a REST call, it is possible that a route variable contains one value while the request body contains a different value.
-Whenever this type of conflict occurs, Magento uses the value specified in the request body.
+Whenever this type of conflict occurs, Adobe Commerce uses the value specified in the request body.
 
 For example:
 

@@ -14,20 +14,20 @@ The **10-step tutorial** generally takes **30 minutes**.
 
 Complete the following prerequisites:
 
-*  Install a Magento 2.3 (or later) instance with sample data.
+*  Install an Adobe Commerce instance with sample data.
 
   The sample data defines a functional store, called Luma, that sells fitness clothing and accessories. The store does not provide any sandbox accounts for testing credit card payments, so transactions will be simulated using an offline [payment method](https://glossary.magento.com/payment-method).
 
-*  Install a REST client. You can use any REST client to send calls to Magento. [Postman](https://www.getpostman.com/) is recommended.
+*  Install a REST client. You can use any REST client to send calls to Commerce. [Postman](https://www.getpostman.com/) is recommended.
 
 *  Set up [two-factor authentication](https://devdocs.magento.com/guides/v2.4/security/two-factor-authentication.html). This tutorial assumes Google Authenticator is your 2FA solution.
 
-*  Know how to construct a REST call in Magento. See [Construct a request](/get-started/gs-web-api-request) for details.
+*  Know how to construct a REST call in Commerce. See [Construct a request](/get-started/gs-web-api-request) for details.
 
-*  Find the Magento REST API documentation. You can view the [static REST API documentation on devdocs](https://magento.redoc.ly/) or [generate a local API reference](/rest/generate-local/).
+*  Find the Commerce REST API documentation. You can view the [static REST API documentation on devdocs](https://magento.redoc.ly/) or [generate a local API reference](/rest/generate-local/).
 
-*  Find the Magento Merchant documentation. Refer to [Getting Started with <Vars.sitedatavarce/> 2.1](https://docs.magento.com/user-guide/getting-started.html) for information about the Luma store that is created when you install Magento with the sample data.
+*  Find the Commerce Merchant documentation. Refer to [Getting Started with <Vars.sitedatavarce/> 2.1](https://docs.magento.com/user-guide/getting-started.html) for information about the Luma store that is created when you install Commerce with the sample data.
 
 ### Other resources
 
-*  [REST Tutorials](/rest/tutorials/index/) provides additional information about completing any Magento REST tutorial.
+*  [REST Tutorials](/rest/tutorials/index/) provides additional information about completing any Commerce REST tutorial.

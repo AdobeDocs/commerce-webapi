@@ -227,7 +227,7 @@ Name | Description | Type | Requirements
 
 ## Determine distances for the Distance Priority algorithm
 
-Magento provides several endpoints to help determine GPS coordinates.
+Adobe Commerce provides several endpoints to help determine GPS coordinates.
 
 ### Get the distance provider code
 

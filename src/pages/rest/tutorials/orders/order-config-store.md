@@ -19,7 +19,7 @@ Cash on Delivery | `cashondelivery` | No
 Purchase Order | `purchaseorder` | No
 Zero Subtotal Checkout | `free` | Yes
 
-In this tutorial, configure Magento to accept bank transfer payments. To allow bank transfer payments (or any other offline payment method) as a payment method, log in to [Admin](https://glossary.magento.com/admin) and select **Stores** > **Settings** > **Configuration** > **Sales** > **Payment Methods**. Then enable the [payment method](https://glossary.magento.com/payment-method) and click **Save**.
+In this tutorial, configure Adobe Commerce to accept bank transfer payments. To allow bank transfer payments (or any other offline payment method) as a payment method, log in to [Admin](https://glossary.magento.com/admin) and select **Stores** > **Settings** > **Configuration** > **Sales** > **Payment Methods**. Then enable the [payment method](https://glossary.magento.com/payment-method) and click **Save**.
 
 Upon clicking **Save**, a notification message states that the [cache](https://glossary.magento.com/cache) needs to be refreshed. Click the **System** > **Tools** > **Cache Management** link to refresh the cache.
 
@@ -31,7 +31,7 @@ To disable this cart price rule, select **Marketing** > **Promotions** > **Cart 
 
 ### Configure supported delivery methods (optional)
 
-If an order contains one or more simple, configurable, bundle, or group products, then you must specify how the order will be shipped. Downloadable items cannot be shipped, and Magento does not calculate shipping charges for downloadable items.
+If an order contains one or more simple, configurable, bundle, or group products, then you must specify how the order will be shipped. Downloadable items cannot be shipped, and Commerce does not calculate shipping charges for downloadable items.
 
 Since we are not actually shipping any products in this tutorial, we do not need to set up an account with a shipping company such as UPS or Federal Express. Instead, we can use the offline delivery methods that are configured by default.
 

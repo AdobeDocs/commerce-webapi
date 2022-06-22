@@ -36,7 +36,7 @@ Name | Description | Type | Requirements
 
 ## Link stocks and sources
 
-If you specify a sales channel that is already assigned to another stock, Magento reassigns the sales channel from the previous stock to the current stock.
+If you specify a sales channel that is already assigned to another stock, Adobe Commerce reassigns the sales channel from the previous stock to the current stock.
 
 **Sample usage:**
 
@@ -66,13 +66,13 @@ If you specify a sales channel that is already assigned to another stock, Magent
 #### Response
 
 ```json
-// Magento returns empty array.
+// Commerce returns empty array.
 []
 ```
 
 ## Delete links between stocks and sources
 
-The `POST /V1/inventory/stock-source-links-delete` endpoint breaks the link between a stock and one or more sources. Magento does not recalculate priority of sources after you delete links.
+The `POST /V1/inventory/stock-source-links-delete` endpoint breaks the link between a stock and one or more sources. Commerce does not recalculate priority of sources after you delete links.
 
 **Sample Usage:**
 
@@ -96,7 +96,7 @@ The `POST /V1/inventory/stock-source-links-delete` endpoint breaks the link betw
 #### Response
 
 ```JSON
-// Magento returns empty array.
+// Commerce returns empty array.
 []
 ```
 

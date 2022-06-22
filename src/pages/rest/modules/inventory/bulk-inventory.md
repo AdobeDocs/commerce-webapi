@@ -5,7 +5,7 @@ description: Make bulk inventory changes using the REST API
  
 # Inventory mass actions
 
-Magento provides several endpoints that allow Multi Source merchants to make quick updates across multiple products. This is helpful for transferring inventory between sources and removing a source without editing each product individually.
+Adobe Commerce provides several endpoints that allow Multi Source merchants to make quick updates across multiple products. This is helpful for transferring inventory between sources and removing a source without editing each product individually.
 
 *  The bulk transfer endpoint moves all quantities of products from one source to another.
 *  The bulk assign source endpoint adds sources to multiple products.
@@ -35,7 +35,7 @@ Multi Source merchants may need to transfer product inventory from one source lo
 
 Bulk transfer allows you to specify multiple products, the origin source from which to transfer inventory, and the destination source to receive quantities. The bulk transfer process moves all product inventory from the origin source. Use [bulk partial transfer](#bulk-partial-transfer) to transfer specific quantities of one or more products.
 
- Unlike an unassign source action, Magento also retains product data by moving the status (in stock/out of stock), and the Notify Quantity from one source to another. If the origin and destination sources are in different stocks, performing a bulk transfer affects the aggregated Salable Quantity and reservations for in-progress orders.
+ Unlike an unassign source action, Commerce also retains product data by moving the status (in stock/out of stock), and the Notify Quantity from one source to another. If the origin and destination sources are in different stocks, performing a bulk transfer affects the aggregated Salable Quantity and reservations for in-progress orders.
 
 **Parameters:**
 
@@ -70,7 +70,7 @@ Name | Description | Type | Requirements
 
 ## Bulk partial transfer
 
-You can use the `V1/inventory/bulk-partial-source-transfer` endpoint to transfer a limited quantity of a product from one source to another. As with full transfers, Magento keeps track of the stock status as well as the Notify Quantity when you move products from one source to another.
+You can use the `V1/inventory/bulk-partial-source-transfer` endpoint to transfer a limited quantity of a product from one source to another. As with full transfers, Commerce keeps track of the stock status as well as the Notify Quantity when you move products from one source to another.
 
 **Parameters:**
 
@@ -153,7 +153,7 @@ When unassigning a source from a product, you are indicating the product will no
 
 <InlineAlert variant="warning" slots="text"/>
 
-When you unassign a source from a product, Magento deletes all source data, including inventory amounts, from that product. This can affect salable quantities and reservations for unprocessed orders. After checkout and before shipment, all product quantities in the order have associated reservations. If you unassign a source, you can cause issues with reservations and processing orders.
+When you unassign a source from a product, Commerce deletes all source data, including inventory amounts, from that product. This can affect salable quantities and reservations for unprocessed orders. After checkout and before shipment, all product quantities in the order have associated reservations. If you unassign a source, you can cause issues with reservations and processing orders.
 
 We strongly recommend completing all orders and shipments for those products prior to removing the source.
 

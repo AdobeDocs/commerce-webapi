@@ -8,13 +8,13 @@ import * as Vars from '../../data/vars.js';
 
 # Asynchronous web endpoints
 
-An asynchronous web endpoint intercepts messages to a Web API and writes them to the message queue. Each time the system accepts such an API request, it generates a UUID identifier. Magento includes this UUID when it adds the message to the queue. Then, a consumer reads the messages from the queue and executes them one-by-one.
+An asynchronous web endpoint intercepts messages to a Web API and writes them to the message queue. Each time the system accepts such an API request, it generates a UUID identifier. Adobe Commerce includes this UUID when it adds the message to the queue. Then, a consumer reads the messages from the queue and executes them one-by-one.
 
 <InlineAlert variant="success" slots="text"/>
 
 Use the `bin/magento queue:consumers:start async.operations.all` command to start the consumer that handles asynchronous and bulk API messages.
 
-Magento supports the following types of asynchronous requests:
+Commerce supports the following types of asynchronous requests:
 
 *  POST
 *  PUT
@@ -23,7 +23,7 @@ Magento supports the following types of asynchronous requests:
 
 <InlineAlert variant="info" slots="text"/>
 
-GET requests are not supported. Although Magento does not currently implement any PATCH requests, they are supported in custom extensions.
+GET requests are not supported. Although Commerce does not currently implement any PATCH requests, they are supported in custom extensions.
 
 The route to all asynchronous calls contains the prefix `/async`, added before `/V1` of a standard synchronous endpoint. For example:
 
@@ -34,7 +34,7 @@ PUT /async/V1/products/:sku
 
 <Vars.sitedatavarce/> and <Vars.sitedatavaree/> installations support asynchronous web endpoints.
 
-The [REST API documentation](/rest/) provides a list of all current synchronous Magento API routes.
+The [REST API documentation](/rest/) provides a list of all current synchronous Commerce API routes.
 
 The response of an asynchronous request contains the following fields:
 
@@ -67,7 +67,7 @@ PUT <host>/rest/<store_code>/async/V1/products/24-MB01
 
 ## Response
 
-Magento generates a `bulk_uuid` for each asynchronous request. Use the `bulk_uuid` to determine the [operation status](/rest/operation-status-endpoints/) of your request.
+Commerce generates a `bulk_uuid` for each asynchronous request. Use the `bulk_uuid` to determine the [operation status](/rest/operation-status-endpoints/) of your request.
 
 ```json
 {
@@ -105,7 +105,7 @@ PUT /all/async/V1/products/:sku
 
 The following rules apply when you create or update an object, such as a product.
 
-*  If you do not set the store code while creating a new product, Magento creates a new object with all values set globally for each scope.
-*  If you do not set the store code while updating a product, then by fallback, Magento updates values for the default store only.
-*  If you include the `all` parameter, then Magento updates values for all store scopes (in case a particular store doesn't yet have its own value set).
+*  If you do not set the store code while creating a new product, Commerce creates a new object with all values set globally for each scope.
+*  If you do not set the store code while updating a product, then by fallback, Commerce updates values for the default store only.
+*  If you include the `all` parameter, then Commerce updates values for all store scopes (in case a particular store doesn't yet have its own value set).
 *  If `<store_code>` parameter is set, then values for only defined store will be updated.

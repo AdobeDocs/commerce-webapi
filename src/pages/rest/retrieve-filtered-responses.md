@@ -6,7 +6,7 @@ import * as Vars from '../../data/vars.js';
 
 # Retrieve filtered responses for REST endpoints
 
-Some REST calls return dozens or even hundreds of parameters, and parsing through all this data can be unwieldy. In addition, mobile app developers might find the bandwidth needed to process a request to be excessive. To resolve these problems, Magento provides a query parameter-based syntax for REST requests that return partial responses.
+Some REST calls return dozens or even hundreds of parameters, and parsing through all this data can be unwieldy. In addition, mobile app developers might find the bandwidth needed to process a request to be excessive. To resolve these problems, Adobe Commerce provides a query parameter-based syntax for REST requests that return partial responses.
 
 <InlineAlert variant="success" slots="text"/>
 
@@ -21,7 +21,7 @@ You can append `?fields=<field_or_object1>,<field_or_object2>,...` to any GET, P
 
 Separate each field or object with a comma.
 
-On POST and PUT requests, Magento ignores the `fields` parameter as input, but the response includes only the requested fields and objects.
+On POST and PUT requests, Commerce ignores the `fields` parameter as input, but the response includes only the requested fields and objects.
 
 ## Examples
 
@@ -116,7 +116,7 @@ This example returns only the following:
 
 ## POST operation
 
-The following POST operation and payload creates a [catalog](https://glossary.magento.com/catalog) category named `New Category`. Magento returns only the `id`, `parent_id`, and `name` attributes
+The following POST operation and payload creates a [catalog](https://glossary.magento.com/catalog) category named `New Category`. Commerce returns only the `id`, `parent_id`, and `name` attributes
 
 `POST <host>/rest/<store_code>/V1/categories?fields=id,parent_id,name`
 

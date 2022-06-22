@@ -5,7 +5,7 @@ description: Check your inventory and retrieve the salable quantity and availabl
  
 # Check salable quantities
 
-Magento provides several endpoints that allow you to check whether a product from a specified stock is salable and the available quantity.
+Adobe Commerce provides several endpoints that allow you to check whether a product from a specified stock is salable and the available quantity.
 
 **Service names:**
 

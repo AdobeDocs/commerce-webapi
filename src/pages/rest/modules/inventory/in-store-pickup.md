@@ -27,7 +27,7 @@ POST /V1/order/notify-orders-are-ready-for-pickup
 
 The `GET /V1/inventory/in-store-pickup/pickup-locations` endpoint searches for and filters on pickup locations, allowing the shopper to quickly narrow the results. The endpoint does not require authentication.
 
-Search terms, filters, and other attributes are specified as query parameters in the URL. This endpoint uses a different syntax than other Magento GET calls that send `searchCriteria` parameters. Instead, the `GET /V1/inventory/in-store-pickup/pickup-locations` endpoint requires that each query parameter begins with `searchRequest`. The `scopeCode` parameter is required. All other parameters are optional.
+Search terms, filters, and other attributes are specified as query parameters in the URL. This endpoint uses a different syntax than other Adobe Commerce GET calls that send `searchCriteria` parameters. Instead, the `GET /V1/inventory/in-store-pickup/pickup-locations` endpoint requires that each query parameter begins with `searchRequest`. The `scopeCode` parameter is required. All other parameters are optional.
 
 Name | Type | Description
 --- | --- | ---
@@ -75,7 +75,7 @@ searchRequest[extensionAttributes][productsInfo][0][sku]=SKU1
 
 **Response:**
 
-Magento returns Pickup Locations list, search request given and total results count.
+Commerce returns Pickup Locations list, search request given and total results count.
 
 ```json
 {
@@ -138,7 +138,7 @@ The endpoint requires appropriate permission to resource `Magento_InventoryInSto
 
 **Response:**
 
-Magento returns an array with success status and an array of error messages for each failed order.
+Commerce returns an array with success status and an array of error messages for each failed order.
 
 ```json
 {

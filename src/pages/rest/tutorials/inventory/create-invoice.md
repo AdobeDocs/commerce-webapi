@@ -5,9 +5,9 @@ description: In this step of the tutorial you will create an invoice
  
 # Step 10. Create an invoice
 
-You create an [invoice](https://glossary.magento.com/invoice) after you receive payment for an order. In this example, the order was paid offline via a bank transfer. Therefore, you must tell Magento that payment for the order has been captured.
+You create an [invoice](https://glossary.magento.com/invoice) after you receive payment for an order. In this example, the order was paid offline via a bank transfer. Therefore, you must tell Adobe Commerce that payment for the order has been captured.
 
-After you submit the invoice, Magento adjusts the Quantity per Source value for non-physical products.
+After you submit the invoice, Commerce adjusts the Quantity per Source value for non-physical products.
 
 ## Capture payment
 
@@ -44,7 +44,7 @@ An invoice `id`, such as `3`.
 
 ## Retrieve the order item IDs
 
-When you create an order, Magento generates an `order_item_id` for each product. These values will be used in [Step 12. Create a shipment](/rest/tutorials/inventory/create-shipment/).
+When you create an order, Commerce generates an `order_item_id` for each product. These values will be used in [Step 12. Create a shipment](/rest/tutorials/inventory/create-shipment/).
 
 **Endpoint:**
 
@@ -189,4 +189,4 @@ Not applicable
 
 1. Click **Sales** > **Invoices**. The invoice displays in the grid with a status of Paid. Then click **Sales** > **Orders**. The status is Processing.
 
-1. Click **Catalog** > **Products**. For `vp1`, Magento adjusted the value of **Quantity per Source** and **Salable Quantity** to 9998 for all sources and stocks.
+1. Click **Catalog** > **Products**. For `vp1`, Commerce adjusted the value of **Quantity per Source** and **Salable Quantity** to 9998 for all sources and stocks.

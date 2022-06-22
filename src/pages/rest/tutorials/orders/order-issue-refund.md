@@ -5,7 +5,7 @@ description: In this step of the tutorial you will issue a partial refund
  
 # Step 10. Issue a partial refund
 
-Magento 2.1.3 introduced two endpoints that streamline the process of issuing a refund by creating a creditmemo and updating the order or [invoice](https://glossary.magento.com/invoice) in one call.
+Adobe Commerce introduced two endpoints that streamline the process of issuing a refund by creating a creditmemo and updating the order or [invoice](https://glossary.magento.com/invoice) in one call.
 
 Endpoint | Description
 --- | ---
@@ -68,7 +68,7 @@ Log in to [Admin](https://glossary.magento.com/admin). Click **Sales** > **Credi
 
 ### Related topics
 
-*  [Getting Started with Magento Web APIs](/get-started/)
+*  [Getting Started with Adobe Commerce Web APIs](/get-started/)
 *  [Create a configurable product Tutorial](/rest/tutorials/configurable-product/)
 *  [REST API Reference Overview](/rest/)
 *  [REST API documentation](https://magento.redoc.ly/)

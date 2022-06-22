@@ -9,7 +9,7 @@ To create a shipment, you need the `order_item_id` of each item to be shipped. S
 
 To create a partial shipment, specify only those `order_item_id`s that are to be shipped now.
 
-If the call is successful on a full shipment, Magento changes the status of an order to Complete.
+If the call is successful on a full shipment, Adobe Commerce changes the status of an order to Complete.
 
 **Endpoint:**
 
@@ -25,7 +25,7 @@ where `3` is the order id.
 
 **Payload:**
 
-The `notify` field is used to trigger Magento to send the shipment email. The `tracks` array optionally allows you to include one or more tracking numbers for the [shipment](https://glossary.magento.com/shipment).
+The `notify` field is used to trigger Commerce to send the shipment email. The `tracks` array optionally allows you to include one or more tracking numbers for the [shipment](https://glossary.magento.com/shipment).
 
 ```json
 {

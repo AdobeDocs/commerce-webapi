@@ -5,7 +5,7 @@ description: In this step of the tutorial you will configure your environment
  
 # Step 1. Configure your environment
 
-This step guides you through the process of configuring your Magento instance so that you can perform the Order Processing with Inventory Management tutorial.
+This step guides you through the process of configuring your Adobe Commerce instance so that you can perform the Order Processing with Inventory Management tutorial.
 
 ## Configure payment and delivery methods
 

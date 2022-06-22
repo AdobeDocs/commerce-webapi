@@ -137,7 +137,7 @@ By default, a customer token is valid for 1 hour. To change this value, click **
 
 **Response:**
 
-Magento returns the customer's access token. Your integration must specify a customer token in the authorization header of every call customers make on their own behalf.
+Adobe Commerce returns the customer's access token. Your integration must specify a customer token in the authorization header of every call customers make on their own behalf.
 
 `fl0o0yr1xota4w88negpwfsle38807yb`
 

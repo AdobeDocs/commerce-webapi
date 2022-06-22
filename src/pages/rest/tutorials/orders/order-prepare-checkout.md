@@ -12,7 +12,7 @@ Now that all the items have been added to the cart, we can prepare the order for
 
 ### Estimate shipping costs
 
-Magento calculates shipping costs for each shipping method that can be applied to the order. In this tutorial, the `flatrate` ($5 per item) and `tablerate` shipping methods are active.
+Adobe Commerce calculates shipping costs for each shipping method that can be applied to the order. In this tutorial, the `flatrate` ($5 per item) and `tablerate` shipping methods are active.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -101,7 +101,7 @@ Note that the cost for the `flatrate` shipping method is $15. The Sprite Yoga Co
 
 In this call, you specify the shipping and billing addresses, as well as the selected `carrier_code` and `method_code`. Since the Table Rate shipping method costs only $5, the customer selected this option.
 
-Magento returns a list of payment options and calculates the order totals.
+Commerce returnsa list of payment options and calculates the order totals.
 
 <InlineAlert variant="info" slots="text"/>
 

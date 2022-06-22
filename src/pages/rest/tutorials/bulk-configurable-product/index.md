@@ -7,7 +7,7 @@ description: A tutorial that describes how to create a configurable product usin
  
 # Create a configurable product using bulk APIs
 
-A system integrator can use Magento REST bulk APIs to perform actions on a large scale; such as, creating multiple customers and products, changing prices across an inventory, and assigning large groups of products to a specific warehouse, all within a single call.
+A system integrator can use Adobe Commerce REST bulk APIs to perform actions on a large scale; such as, creating multiple customers and products, changing prices across an inventory, and assigning large groups of products to a specific warehouse, all within a single call.
 
  To demonstrate how to use the REST bulk APIs, this tutorial will start with a _configurable product_. A configurable product is a parent product of multiple simple products. You define a configurable product so that the buyer must make one or more choices to select a product. For example, most clothing comes in a variety of colors and sizes. If you are offering a skirt in black, red, and blue colorways in sizes small, medium, and large, then you would create a configurable product with nine simple products, one for each combination of color and size.
 
@@ -17,13 +17,13 @@ A system integrator can use Magento REST bulk APIs to perform actions on a large
 
 ### Before you begin
 
-*  Install a Magento 2.3 (or later) instance with sample data. The sample data defines a functional store, called Luma, that sells fitness clothing and accessories.
-*  Install a REST client. You can use any REST client to send calls to Magento. [Postman](https://www.getpostman.com/) is recommended.
+*  Install a Commerce instance with sample data. The sample data defines a functional store, called Luma, that sells fitness clothing and accessories.
+*  Install a REST client. You can use any REST client to send calls to Commerce. [Postman](https://www.getpostman.com/) is recommended.
 *  Obtain an admin authorization token. All calls in this tutorial require administrator privileges. See [Generate the admin token](/rest/tutorials/prerequisite-tasks/) for more information.
 *  Use the `bin/magento queue:consumers:start async.operations.all` command to enable bulk endpoint processing.
 
 ### Other resources
 
-*  [REST Tutorials](/rest/tutorials/index/) provides additional information about completing any Magento REST tutorial.
-*  [Asynchronous web endpoints](/rest/asynchronous-web-endpoints/) provides information about how to use Magento Asynchronous API
-*  [Bulk endpoints](/rest/bulk-endpoints/) provides information about how to use Magento Bulk API
+*  [REST Tutorials](/rest/tutorials/index/) provides additional information about completing any Commerce REST tutorial.
+*  [Asynchronous web endpoints](/rest/asynchronous-web-endpoints/) provides information about how to use the Commerce Asynchronous API
+*  [Bulk endpoints](/rest/bulk-endpoints/) provides information about how to use the Commerce Bulk API

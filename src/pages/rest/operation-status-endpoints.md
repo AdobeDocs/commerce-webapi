@@ -7,7 +7,7 @@ description: Track the status of bulk endpoints
  
 # Bulk operation status endpoints
 
-Magento generates a `bulk_uuid` each time it executes an [asynchronous API request](/rest/asynchronous-web-endpoints/). You can track the status of an asynchronous operation with the following endpoints:
+Adobe Commerce generates a `bulk_uuid` each time it executes an [asynchronous API request](/rest/asynchronous-web-endpoints/). You can track the status of an asynchronous operation with the following endpoints:
 
 *  `GET /V1/bulk/:bulkUuid/status`
 *  `GET /V1/bulk/:bulkUuid/operation-status/:status`

@@ -11,7 +11,7 @@ Low stock notification alert the merchant that the salable quantity of a stock h
 *  The Advanced Inventory **Notify for Quantity Below** field (**Catalog** > **Products** > specific product > **Advanced Inventory**) overrides the value set at the website/store level. The value applies to all of the product's sources.
 *  The **Notify Quantity** fields (**Catalog** > **Products** > specific product > **Assigned Sources** section) override all other settings. The merchant can assign a different threshold for each source for the specific product.
 
-Magento deducts either the global or the overriding quantity from the total salable quantity for the stock.
+Adobe Commerce deducts either the global or the overriding quantity from the total salable quantity for the stock.
 
 The REST low-quantity notification endpoints manage the values that merchants set from the **Notify Quantity** fields.
 
@@ -36,7 +36,7 @@ POST /V1/inventory/low-quantity-notifications-delete
 Name | Description | Type | Requirements
 --- | --- | --- | ---
 `source_code` | The product's assigned source code  | String | Required to create or delete a threshold
-`notify_stock_qty` | The threshold at which Magento notifies the merchant that the salable quantity of a product is low. | Float | Required to create a threshold
+`notify_stock_qty` | The threshold at which Commerce notifies the merchant that the salable quantity of a product is low. | Float | Required to create a threshold
 `sku` | The SKU of the affected product   | String | Required for to create or delete a threshold
 
 ## Create a low quantity notification
@@ -120,6 +120,6 @@ The `POST /V1/inventory/low-quantity-notifications-delete` endpoint deletes the 
 
 **Response:**
 
-Magento returns an empty array.
+Commerce returns an empty array.
 
 `[]`
