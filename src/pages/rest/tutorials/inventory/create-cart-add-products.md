@@ -5,7 +5,7 @@ description: In this step of the tutorial you will create a card and add product
  
 # Step 7. Create a cart and add products to it
 
-Next, we'll create a cart and add the items that we modified in [Step 5. Reassign products to custom sources](./reassign-products-to-another-source).
+Next, we'll create a cart and add the items that we modified in [Step 5. Reassign products to custom sources](./reassign-products-to-another-source.md).
 
 ## Create a cart
 
@@ -35,7 +35,7 @@ The response is the `quoteId`: 3
 
 ## Check for product availability
 
-In [Step 5. Reassign products to custom sources](./reassign-products-to-another-source), we defined the quantities of products `24-WB01` and `24-WB03` for the US source as follows:
+In [Step 5. Reassign products to custom sources](./reassign-products-to-another-source.md), we defined the quantities of products `24-WB01` and `24-WB03` for the US source as follows:
 
 Product | Northeast Warehouse | Brooklyn Store  | Manhattan Store | Long Island Store | West Warehouse | Berkeley Store | Sausalito Store
 --- | --- | --- | ---
