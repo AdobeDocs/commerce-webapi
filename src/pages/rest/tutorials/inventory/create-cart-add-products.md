@@ -35,7 +35,7 @@ The response is the `quoteId`: 3
 
 ## Check for product availability
 
-In [Step 5. Reassign products to custom sources](reassign-products-to-another-source), we defined the quantities of products `24-WB01` and `24-WB03` for the US source as follows:
+In [Step 5. Reassign products to custom sources](./reassign-products-to-another-source), we defined the quantities of products `24-WB01` and `24-WB03` for the US source as follows:
 
 Product | Northeast Warehouse | Brooklyn Store  | Manhattan Store | Long Island Store | West Warehouse | Berkeley Store | Sausalito Store
 --- | --- | --- | ---
