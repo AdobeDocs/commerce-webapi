@@ -17,9 +17,9 @@ Although it's not required, the simple product payload also includes `stock_item
 
 ## Create the first simple product
 
- <InlineAlert variant="info" slots="text"/>
+<InlineAlert variant="info" slots="text"/>
 
-Before you using this code sample, verify that the attribute values are the same in your installation. See [Get the list of attributes defined in an attribute searchCriteria](/rest/tutorials/configurable-product/plan-product/#get-the-list-of-attributes-defined-in-an-attribute-searchcriteria ) for more information.
+Before using this code sample, verify that the attribute values are the same in your installation. See [Get the list of attributes defined in an attribute searchCriteria](/rest/tutorials/configurable-product/plan-product/#get-the-list-of-attributes-defined-in-an-attribute-searchcriteria ) for more information.
 
 **Endpoint:**
 

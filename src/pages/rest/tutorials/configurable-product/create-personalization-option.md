@@ -58,9 +58,9 @@ The `product_sku` is the `sku` of the configurable product. The `sku` specified 
 
   ![Search results](../../../_images/add-your-name.png)
 
-  <InlineAlert variant="info" slots="text"/>
+<InlineAlert variant="info" slots="text"/>
 
-  If the personalization option is not displayed, go to the **Champ Tee** configuration product page in Admin and set  **Stock Status** to **In Stock**.
+If the personalization option is not displayed, go to the **Champ Tee** configuration product page in Admin and set  **Stock Status** to **In Stock**.
 
 ## Congratulations! You've finished.
 

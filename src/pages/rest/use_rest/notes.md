@@ -159,4 +159,4 @@ The following sample code creates a bundle product. The `price_type` attribute c
 
 ### Related topics
 
-[Search using REST APIs](/rest/performing-searches/)
+[Search using REST APIs](/rest/use_rest/performing-searches/)

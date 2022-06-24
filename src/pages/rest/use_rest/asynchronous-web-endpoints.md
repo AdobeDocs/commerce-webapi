@@ -55,7 +55,7 @@ The following call asynchronously changes the price of the product that has a `s
 PUT <host>/rest/<store_code>/async/V1/products/24-MB01
 ```
 
-## Payload
+### Payload
 
 ```json
 {
@@ -65,9 +65,9 @@ PUT <host>/rest/<store_code>/async/V1/products/24-MB01
 }
 ```
 
-## Response
+### Response
 
-Commerce generates a `bulk_uuid` for each asynchronous request. Use the `bulk_uuid` to determine the [operation status](/rest/operation-status-endpoints/) of your request.
+Commerce generates a `bulk_uuid` for each asynchronous request. Use the `bulk_uuid` to determine the [operation status](/rest/use_rest/operation-status-endpoints/) of your request.
 
 ```json
 {

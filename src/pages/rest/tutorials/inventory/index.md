@@ -23,4 +23,4 @@ This **14-step tutorial** generally takes **1 hour**.
 
 ### Other resources
 
-*  Commerce uses [Swagger](https://swagger.io) to provide REST API documentation on local instances of Commerce. See [Generate a local API reference](/rest/generate-local/) for more information. You can view the [static REST API documentation](https://magento.redoc.ly/), which displays reference information using ReDoc.
+*  Commerce uses [Swagger](https://swagger.io) to provide REST API documentation on local instances of Commerce. See [Generate a local API reference](/rest/use_rest/generate-local/) for more information. You can view the [static REST API documentation](https://magento.redoc.ly/), which displays reference information using ReDoc.

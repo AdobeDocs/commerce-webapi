@@ -2,7 +2,7 @@
 title: Step 1. Configure your environment
 description: In this step of the tutorial you will configure your environment
 --- 
- 
+
 # Step 1. Configure your environment
 
 This step guides you through the process of configuring your Adobe Commerce instance so that you can perform the Order Processing with Inventory Management tutorial.
@@ -13,11 +13,40 @@ For this tutorial, we'll assume that payment and delivery methods are configured
 
 ### Set the payment method
 
-{% include webapi/tutorials/set-payment-methods.md %}
+If an order contains one or more physical products, then the customer must either specify a delivery method or select a location for in-store pickup. Downloadable items cannot be shipped, and Magento does not calculate shipping charges for downloadable items.
+
+Since we are not actually shipping any products in this tutorial, we do not need to set up an account with a shipping company such as UPS or Federal Express. Instead, we can use the offline delivery methods that are configured by default.
+
+Shipping type | Configuration name | Enabled by default?
+--- | --- | ---
+Flat rate | `flatrate` | Yes
+Table rate | `tablerate` | Yes
+Free shipping | `freeshipping` | No
+In-store pickup | `pickup`| No
+
+To change which offline delivery methods are available:
+
+1. Select **Stores** > **Settings** > **Configuration** > **Sales** > **Delivery Methods** in Admin.
+1. Enable the In-store pickup delivery method and adjust the status of any other delivery method, as desired.
+1. Click **Save Config**.
 
 ### Configure supported delivery methods
 
-{% include webapi/tutorials/configure-shipping-methods-24.md %}
+Since the Luma store is for demonstration purposes only, it is not set up to handle credit card payments. However, it can simulate any of the following offline payment methods:
+
+Payment type | Configuration name | Enabled by default?
+--- | --- | ---
+Check/Money Order | `checkmo` | Yes
+Bank Transfer Payment | `banktransfer` | No
+Cash on Delivery | `cashondelivery` | No
+Purchase Order | `purchaseorder` | No
+Zero Subtotal Checkout | `free` | Yes
+
+In this tutorial, configure Magento to accept bank transfer payments. To allow bank transfer payments (or any other offline payment method) as a payment method:
+
+1. Log in to [Admin](https://glossary.magento.com/admin) and select **Stores** > **Settings** > **Configuration** > **Sales** > **Payment Methods**.
+1. Enable the [payment method](https://glossary.magento.com/payment-method).
+1. Click **Save Config**.
 
 ### Configure distance calculations
 

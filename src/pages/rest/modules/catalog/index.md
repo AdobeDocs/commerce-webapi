@@ -42,7 +42,9 @@ Third-party modules may define other custom attributes.
 
 The following example uses the `POST V1/categories` call to assign four custom attributes to the "My New Category" category.
 
-## Request
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Request
 
 ```json
 {
@@ -82,7 +84,7 @@ The following example uses the `POST V1/categories` call to assign four custom a
 }
 ```
 
-## Response
+#### Response
 
 ```json
 {

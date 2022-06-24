@@ -30,7 +30,7 @@ Before you begin any tutorial, make sure you know the basics about <Vars.sitedat
 
 *  Know how to construct a REST call in Commerce. See [Construct a request](/get-started/gs-web-api-request) for details.
 
-*  Find the Commerce REST API documentation. You can view the [static REST API documentation on devdocs](https://magento.redoc.ly/) or [generate a local API reference](/rest/generate-local/).
+*  Find the Commerce REST API documentation. You can view the [static REST API documentation on devdocs](https://magento.redoc.ly/) or [generate a local API reference](/rest/use_rest/generate-local/).
 
 *  Find the Commerce Merchant documentation. Refer to [Getting Started with <Vars.sitedatavarce/>](https://docs.magento.com/user-guide/getting-started.html) for information about the Luma store that is created when you install Commerce with the sample data.
 

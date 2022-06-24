@@ -151,7 +151,7 @@ Commerce returns an empty array.
 
 The following call returns all stocks whose name contains the string `Stock`.
 
-See [Search using REST APIs](/rest/performing-searches/) for information about constructing a search query.
+See [Search using REST APIs](/rest/use_rest/performing-searches/) for information about constructing a search query.
 
 **Sample Usage:**
 
