@@ -8,10 +8,6 @@ module.exports = [
       path: "/rest/redoc.md",
       pages: [
         {
-          title: "Rest endpoints (ReDoc)",
-          path: "/rest/redoc.md",
-        },
-        {
           title: "Generate a local API Reference",
           path: "/rest/generate-local.md",
         },
@@ -21,10 +17,6 @@ module.exports = [
     title: "Use REST endpoints",
     path: "/rest/performing-searches.md",
     pages: [
-        {
-          title: "Search using REST",
-          path: "/rest/performing-searches.md",
-        },
         {
           title: "Search with the /search endpoint",
           path: "/rest/search-endpoint.md",
