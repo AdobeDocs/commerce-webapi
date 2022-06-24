@@ -2,7 +2,7 @@
 title: Generate a local REST reference
 description: Generate a local schema for testing and return relevant information
 --- 
-import * as Vars from '../../data/vars.js';
+import * as Vars from '../../../data/vars.js';
 
 # Generate a local REST reference
 

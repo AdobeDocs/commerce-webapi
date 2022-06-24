@@ -2,7 +2,7 @@
 title: Retrieve filtered responses for REST endpoints
 description: How to filter your REST responses
 --- 
-import * as Vars from '../../data/vars.js';
+import * as Vars from '../../../data/vars.js';
 
 # Retrieve filtered responses for REST endpoints
 
