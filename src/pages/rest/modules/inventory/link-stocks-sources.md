@@ -104,7 +104,7 @@ The `POST /V1/inventory/stock-source-links-delete` endpoint breaks the link betw
 
 The following call returns the link information for `stock_id = 4`.
 
-See [Search using REST APIs](/rest/use_rest/performing-searches/) for information about constructing a search query.
+See [Search using REST APIs](/rest/use-rest/performing-searches/) for information about constructing a search query.
 
 **Sample Usage:**
 

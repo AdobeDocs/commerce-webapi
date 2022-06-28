@@ -86,5 +86,5 @@ You may also use web server rewrite rules to redirect users trying to access the
 
 ### Related topics
 
-[Restricting access to anonymous web APIs](/rest/use_rest/anonymous-api-security/)
+[Restricting access to anonymous web APIs](/rest/use-rest/anonymous-api-security/)
 [Token-based authentication](/get-started/authentication/gs-authentication-token)

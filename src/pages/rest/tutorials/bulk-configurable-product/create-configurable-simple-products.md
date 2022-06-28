@@ -300,7 +300,7 @@ The payload contains both the configurable product and the simple products.
 
  <InlineAlert variant="info" slots="text"/>
 
-For information about response fields, see the [Bulk API](/rest/bulk-endpoints) section. To check the status of operations, see the API for [Bulk operation status endpoints](/rest/use_rest/operation-status-endpoints/).
+For information about response fields, see the [Bulk API](/rest/bulk-endpoints) section. To check the status of operations, see the API for [Bulk operation status endpoints](/rest/use-rest/operation-status-endpoints/).
 
 ## Verify this step
 

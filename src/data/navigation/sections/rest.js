@@ -5,58 +5,58 @@ module.exports = [
     },
     {
       title: "Quick reference",
-      path: "/rest/quick_reference/",
+      path: "/rest/quick-reference/",
       pages: [
         {
           title: "Generate a local API Reference",
-          path: "/rest/quick_reference/generate-local.md",
+          path: "/rest/quick-reference/generate-local.md",
         },
       ],
     },
   {
     title: "Use REST endpoints",
-    path: "/rest/use_rest/",
+    path: "/rest/use-rest/",
     pages: [
         {
           title: "Search using REST",
-          path: "/rest/use_rest/performing-searches.md",
+          path: "/rest/use-rest/performing-searches.md",
         },
         {
           title: "Search with the /search endpoint",
-          path: "/rest/use_rest/search-endpoint.md",
+          path: "/rest/use-rest/search-endpoint.md",
         },
         {
           title: "Retrieve filtered search responses",
-          path: "/rest/use_rest/retrieve-filtered-responses.md",
+          path: "/rest/use-rest/retrieve-filtered-responses.md",
         },
         {
           title: "Protected endpoints",
-          path: "/rest/use_rest/protected-endpoints.md",
+          path: "/rest/use-rest/protected-endpoints.md",
         
         },
         {
           title: "Restricting access to anonymous web APIs",
-          path: "/rest/use_rest/anonymous-api-security.md",
+          path: "/rest/use-rest/anonymous-api-security.md",
         },
         {
           title: "Asynchronous web endpoints",
-          path: "/rest/use_rest/asynchronous-web-endpoints.md",
+          path: "/rest/use-rest/asynchronous-web-endpoints.md",
         },
         {
           title: "Bulk endpoints",
-          path: "/rest/use_rest/bulk-endpoints.md",
+          path: "/rest/use-rest/bulk-endpoints.md",
         },
         {
           title: "Bulk operation status endpoints",
-          path: "/rest/use_rest/operation-status-endpoints.md",
+          path: "/rest/use-rest/operation-status-endpoints.md",
         },
         {
           title: "Search for the status of a bulk operation",
-          path: "/rest/use_rest/operation-status-search.md",
+          path: "/rest/use-rest/operation-status-search.md",
         },
         {
           title: "API usage notes",
-          path: "/rest/use_rest/notes.md",
+          path: "/rest/use-rest/notes.md",
         },
     ],
   },

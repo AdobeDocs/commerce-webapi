@@ -67,7 +67,7 @@ PUT <host>/rest/<store_code>/async/V1/products/24-MB01
 
 ### Response
 
-Commerce generates a `bulk_uuid` for each asynchronous request. Use the `bulk_uuid` to determine the [operation status](/rest/use_rest/operation-status-endpoints/) of your request.
+Commerce generates a `bulk_uuid` for each asynchronous request. Use the `bulk_uuid` to determine the [operation status](/rest/use-rest/operation-status-endpoints/) of your request.
 
 ```json
 {
