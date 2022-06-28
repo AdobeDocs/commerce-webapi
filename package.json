@@ -18,7 +18,7 @@
     "react-dom": "^17.0.0"
   },
   "devDependencies": {
-    "remark-cli": "^10.0.1",
+    "remark-cli": "^11.0.0",
     "remark-validate-links": "^11.0.2"
   },
   "scripts": {
