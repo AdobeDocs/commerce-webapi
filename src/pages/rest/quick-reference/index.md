@@ -1,9 +1,9 @@
 ---
-title: Rest endpoints (ReDoc)
+title: REST endpoints (ReDoc)
 description: Links out to our ReDoc REST documentation
 --- 
 
-# Rest endpoints (ReDoc)
+# REST endpoints (ReDoc)
 
 This documentation uses [ReDoc][] to organize and present schema files that follow an [Open-API specification][].
 The schema files this tool uses represent the state of the code at the time the file was generated.

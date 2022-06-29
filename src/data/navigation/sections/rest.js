@@ -287,10 +287,6 @@ module.exports = [
             ]
         },
         {
-            title: "Sales Refunds",
-            path: "/rest/modules/sales/",
-        },
-        {
             title: "Inventory",
             path: "/rest/modules/inventory/",
             pages: [
@@ -331,6 +327,10 @@ module.exports = [
             path: "/rest/modules/inventory/in-store-pickup.md",
             },
         ],
+    },
+    {
+        title: "Sales Refunds",
+        path: "/rest/modules/sales/",
     },
   ],
   },
