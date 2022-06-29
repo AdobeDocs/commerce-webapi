@@ -37,7 +37,7 @@ The Commerce web API framework provides integrators and developers the means to 
 
 <DiscoverBlock slots="link, text"/>
 
-[REST](https://devdocs.magento.com/guides/v2.4/rest/bk-rest.html)
+[REST](/rest/)
 
 The REST API documentation describes the REST APIs that are available on the latest Adobe Commerce release.
 
