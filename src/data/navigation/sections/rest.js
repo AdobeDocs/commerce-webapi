@@ -8,8 +8,26 @@ module.exports = [
       path: "/rest/quick-reference/",
       pages: [
         {
-          title: "Generate a local API Reference",
-          path: "/rest/quick-reference/generate-local.md",
+        title: "REST Endpoints (ReDoc)",
+        path: "/rest/quick-reference/",
+        pages: [
+            {
+                title: "Admin REST endpoints",
+                path: "https://magento.redoc.ly/2.4.4-admin/",
+            },
+            {
+                title: "Customer REST endpoints",
+                path: "https://magento.redoc.ly/2.4.4-customer/",
+            },
+            {
+                title: "Guest REST endpoints",
+                path: "https://magento.redoc.ly/2.4.4-guest/",
+            },
+        ],
+        },       
+        {
+            title: "Generate a local API Reference",
+            path: "/rest/quick-reference/generate-local.md",
         },
       ],
     },
