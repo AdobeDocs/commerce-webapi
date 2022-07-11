@@ -295,7 +295,7 @@ module.exports = [
             path: "/rest/modules/catalog/",
             pages: [
             {
-                title: "Catalog Module",
+                title: "Catalog module",
                 path: "/rest/modules/catalog/",
             },
             {
@@ -341,13 +341,109 @@ module.exports = [
             path: "/rest/modules/inventory/manage-source-selection.md",
             },
             {
-            title: "In-Store Pickup",
+            title: "In-store pickup",
             path: "/rest/modules/inventory/in-store-pickup.md",
             },
         ],
     },
     {
-        title: "Sales Refunds",
+        title: "B2B developer guide",
+        path: "/rest/modules/b2b/",
+        pages: [
+            {
+            title: "Introduction",
+            path: "/rest/modules/b2b/",
+            },
+            {
+                title: "Integrate with B2B using REST",
+                path: "/rest/modules/b2b/",
+                pages: [
+                    {
+                        title: "Company",
+                        path: "/rest/modules/b2b/company.md",
+                        pages: [
+                            {
+                                title: "Manage company objects",
+                                path: "/rest/modules/b2b/company-object.md",
+                            },
+                            {
+                                title: "Manage company users",
+                                path: "/rest/modules/b2b/company-users.md",
+                            },
+                            {
+                                title: "Manage company roles",
+                                path: "/rest/modules/b2b/roles.md",
+                            },
+                            {
+                                title: "Manage company structures",
+                                path: "/rest/modules/b2b/company-structures.md",
+                            },
+                        ],
+                    },
+                    {
+                        title: "Company credit",
+                        path: "/rest/modules/b2b/company-credit.md",
+                        pages: [
+                            {
+                                title: "Manage company credit",
+                                path: "/rest/modules/b2b/credit-manage.md",
+                            },
+                        ],
+                    },
+                    {
+                        title: "Shared catalog",
+                        path: "/rest/modules/b2b/shared-catalog.md",
+                        pages: [
+                            {
+                                title: "Manage shared catalogs",
+                                path: "/rest/modules/b2b/shared-cat-manage.md",
+                            },
+                            {
+                                title: "Assign categories and products",
+                                path: "/rest/modules/b2b/shared-cat-product-assign.md",
+                            },
+                            {
+                                title: "Assign companies",
+                                path: "/rest/modules/b2b/shared-cat-company.md",
+                            },
+                        ],
+                    },
+                    {
+                        title: "Negotiable Quotes",
+                        path: "/rest/modules/b2b/negotiable-quote.md",
+                        pages: [
+                            {
+                                title: "Manage negotiable quotes",
+                                path: "/rest/modules/b2b/negotiable-quote.md",
+                            },
+                            {
+                                title: "Update a negotiable quote",
+                                path: "/rest/modules/b2b/negotiable-update.md",
+                            },
+                            {
+                                title: "Negotiable quote checkout",
+                                path: "/rest/modules/b2b/negotiable-checkout.md",
+                            },
+                            {
+                                title: "Place a negotiable quote order",
+                                path: "/rest/modules/b2b/negotiable-order-workflow.md",
+                            },
+                        ],
+                    },
+                    {
+                        title: "Develop B2B extensions",
+                        path: "/rest/modules/b2b/extensions.md",
+                    },
+                    {
+                        title: "B2B Release Notes",
+                        path: "https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html",
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        title: "Sales refunds",
         path: "/rest/modules/sales/",
     },
   ],
