@@ -1,263 +1,51 @@
 ---
-title: Manage sources
-description: Manage your stock locations using the REST API
---- 
- 
-# Manage sources
+title: Inventory Management
+description: Learn about inventory management APIs for Adobe Commerce and Magento Open Source.
+---
 
-Sources represent locations storing and shipping available product stock. Any location with available stock and capable of order fulfillment can be added as a source. These locations can include warehouses, brick-and-mortar stores, distribution centers, and drop shippers.
+# Inventory Management
 
-All stores begin with a default source that must remain enabled. Single Source merchants (merchants who ship all products from one location) use the default source for their single point of inventory location and shipments. Multi Source merchants create as many sources as they need to represent each location.
+Magento Open Source and Adobe Commerce v2.3 include new and expanded features and APIs for inventory management. Inventory Management replaces all core APIs in the Open Source `CatalogInventory` module and the `ScalableInventory` module in Commerce. It also provides additional APIs to extend and add functionality.
 
-You cannot rename, delete, or disable the default source. You can create, modify, enable, and disable custom sources, but you cannot rename or delete a custom source.
+Inventory Management features include:
 
-Disabling a custom source has the following effects:
+*  Different configurations for merchants whose inventory originates from a single source and from multiple sources
+*  Stocks for tracking available aggregated quantities through assigned sources
+*  Concurrent checkout protection
+*  Shipment matching algorithms
 
-*  Commerce ignores and does not list the source for shipment or order processing
-*  Stocks do not access inventory quantities from the source for aggregated inventory totals
-*  Order shipments cannot be assigned to disabled locations.
+Merchants install Inventory Management as part of v2.3.x and upgrades with the name `magento/inventory-composer-metapackage`. For details, see [Install and Update Inventory Management](https://experienceleague.adobe.com/docs/commerce-admin/inventory/get-started/install-update.html).
 
-<InlineAlert variant="info" slots="text"/>
+**Magento Community Contribution** – Adobe thanks the many contributors to the [Magento Inventory (was MSI) project](https://github.com/magento/inventory), developing these features as part of the Magento Community Engineering program.
 
-Bundle and grouped products currently do not support multi-sourcing and must be assigned to the default source and default stock.
+## Terminology
 
-**Service name:**
+The following terms are important as you work with Inventory Management APIs:
 
-`inventoryApiSourceRepositoryV1`
+*  **Sources** represent physical locations that store and ship available products. These locations can include warehouses, brick-and-mortar stores, distribution centers, and drop shippers. (Any location can be designated as a source for virtual products.)
 
-**REST endpoints:**
+*  **Stocks** map a sales channel (currently limited to websites) to source locations and on-hand inventory. A stock can map to multiple sales channels, but a sales channel can be assigned to only one stock.
 
-```http
-POST /V1/inventory/sources
-GET /V1/inventory/sources/:sourceCode
-PUT /V1/inventory/sources/:sourceCode
-GET /V1/inventory/sources
-```
+*  **Aggregate Salable Quantity** is the total virtual inventory that can be sold through a sales channel. The amount is calculated across all sources assigned to a stock.
 
-**SourceInterface parameters:**
+*  **Reservations** track deductions from the salable quantity as customers add products to carts and complete checkout. When an order ships, the reservation clears and deducts the shipped amounts from specific source inventory quantities.
 
-Name | Description | Type | Requirements
---- | --- | --- | ---
-`source_code` | A unique identifier for the source | String | Required to create a source. This value cannot be changed with a PUT call.
-`name` | A unique display name for the source. | String | Required for all POST and PUT calls
-`email` | The email for the source's contact | String | Optional
-`contact_name` | The name of the contact for the source | String | Optional
-`enabled` | Indicates whether the source is enabled. The default value is `true`. | Boolean | Optional
-`description` | A description of the source (Maximum: 1000 characters)| String | Optional
-`latitude` | The latitude of the source's physical location. The value, along with the `longitude` value, could be used to determine the closest source to a customer's shipping address. | Float | Optional
-`longitude` |The latitude of the source's physical location. | Float | Optional
-`country_id` | The country ID of the source's physical location | String | Required for all POST and PUT calls.
-`region_id` | The region ID of the state or province of the source  | Integer | Optional
-`region` | The region name for countries whose provinces are not defined in Commerce | String | Optional
-`city` | Th city in which the source is located | String | Optional
-`street` | The physical street address of the source | String | Optional
-`postcode` | The zip or postal code of the source's physical address | String | Required for all POST and PUT calls
-`phone` | The contact's phone number | String | Optional
-`fax` | The contact's fax number | String | Optional
-`use_default_carrier_config` | Reserved for future use | Boolean | Optional
-`carrier_code` | Reserved for future use | String | Optional
-`position` | Reserved for future use | Integer | Optional
+## A simple scenario
 
-**In-Store Pickup functionality enhance Sources with next extension attributes:**
+The following diagram illustrates the relationship between source stocks, aggregate stocks, and sales channels:
 
-Name | Description | Type | Requirements
---- | --- | --- | ---
-`is_pickup_location_active` | Indicates whether a source can be used as a pickup location | Boolean | Optional
-`frontend_name` | The pickup location name. This value is used only on the Storefront. | String | Optional
-`frontend_description` | The pickup location description. It is used only on the Storefront. | String | Optional
+![Source and aggregate stock](../../../_images/inventory-diagram-stock.png)
 
-## Create a source
+In this diagram, a bicycle merchant has inventory for a mountain bike in two warehouses and a drop shipper. He has two stocks with configured website sales channels and sources. When a customer shops through the UK website, Magento aggregates bike inventory from the UK warehouse and the drop shipper sources, for a salable quantity of 95. The bike can be shipped from either the warehouse or the drop shipper, but not the NY warehouse. Amazon Marketplace has the same stock, drawing from the same aggregate stock as the UK website.
 
-The value of the `source_code` parameter can contain upper and lower case letters, numbers, dashes, and underscores. You use this ID when assigning stock to sources and when exporting or importing data.
+## Important Inventory Management objects
 
-**Sample Usage:**
+*  `Source` – Defines a physical stock.
 
-`POST <host>/rest/<store_code>/V1/inventory/sources`
+*  `SourceItem` – A relation object that represents the amount of a specific product at a physical source. We use this entity for updating inventory on each source. Quantities might change as a result of synchronizing with an external Product Information Management (PIM) or Enterprise Resource Planning (ERP) system, or internally as a stock deduction during the checkout process. A `SourceItem` cannot be used for retrieving data that must be rendered on front-end, because only aggregated data should be used for all validations and UI representation.
 
-**Payload:**
+*  `StockItem` – Also known as Aggregated Virtual Stock. This is read-only data that the re-indexation process generates. Based on a pre-defined mapping, we define what sources are assigned to the current scope (sales channel) and aggregate quantities from all assigned sources. We also use `StockItem` to check if a product is in or out of stock.  Making this segregation by Read-Only interface (`StockItem`) and Write-Only interface (`SourceItem`), the Inventory architecture achieves Command Query Responsibility Segregation (CQRS). As a result, all `GET` HTTP requests should use `StockItem` entity, and all `POST/PUT` should use `SourceItem`.
 
-```json
-{
-   "source" : {
-      "name" : "Central Shipping Center",
-      "source_code" : "central",
-      "enabled" : true,
-      "description": "Primary source for the central region",
-      "latitude": "38.741320",
-      "longitude": "-90.363267",
-      "contact_name": "Harold Smith",
-      "email": "hsmith@example.com",
-      "phone": "(314) 555-1234",
-      "country_id" : "US",
-      "region_id": 36,
-      "city": "St. Louis",
-      "street": "123 Warehouse Blvd",
-      "postcode" : "63145",
-      "extension_attributes": {
-        "is_pickup_location_active": true,
-        "frontend_name": "Sport Equipment Store",
-        "frontend_description": "Sport Equipment Store description"
-      }
-   }
-}
-```
+## Shipping algorithms
 
-**Response:**
-
-Commerce returns an empty array.
-
-`[]`
-
-## Update a source
-
-All PUT requests must contain the `name`, `country_id`, and `postcode` parameters.
-
-This example updates the contact information (`contact_name`, `email`, and `phone` parameters) of the source.
-
-**Sample Usage:**
-
-`PUT <host>/rest/<store_code>/V1/inventory/sources/central`
-
-**Payload:**
-
-```json
-{
-   "source" : {
-      "name": "Central Shipping Center",
-      "contact_name": "Donna Milton",
-      "email": "dmilton@example.com",
-      "phone": "(314) 555-1237",
-      "country_id" : "US",
-      "postcode" : "63145"
-   }
-}
-```
-
-**Response:**
-
-Commerce returns an empty array.
-
-`[]`
-
-## Return all information about a source
-
-This call returns detailed information about the specified source.
-
-**Sample Usage:**
-
-`GET <host>/rest/<store_code>/V1/inventory/sources/central`
-
-**Payload:**
-
-None
-
-**Response:**
-
-```json
-{
-    "source_code": "central",
-    "name": "Central Shipping Center",
-    "email": "dmilton@example.com",
-    "contact_name": "Donna Milton",
-    "enabled": true,
-    "description": "Primary source for the central region",
-    "latitude": 38.74132,
-    "longitude": -90.363267,
-    "country_id": "US",
-    "region_id": 36,
-    "city": "St. Louis",
-    "street": "123 Warehouse Blvd",
-    "postcode": "63145",
-    "phone": "(314) 555-1237",
-    "use_default_carrier_config": true,
-    "carrier_links": []
-}
-```
-
-## Search for sources
-
-The following call returns all sources that are located in the United States (`country_id` = `US`)
-
-See [Search using REST APIs](/rest/use-rest/performing-searches/) for information about constructing a search query.
-
-**Sample Usage:**
-
-`GET <host>/rest/<store_code>/V1/inventory/sources?searchCriteria[filter_groups][0][filters][0][field]=country_id&searchCriteria[filter_groups][0][filters][0][value]=US&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
-
-**Payload:**
-
-None
-
-**Response:**
-
-<details>
-      <summary><b>Show code sample</b></summary>
-
-```json
-{
-    "items": [
-        {
-            "source_code": "central",
-            "name": "Central Shipping Center",
-            "email": "hsmith@example.com",
-            "contact_name": "Harold Smith",
-            "enabled": true,
-            "description": "Primary source for the central region",
-            "latitude": 38.74132,
-            "longitude": -90.363267,
-            "country_id": "US",
-            "region_id": 36,
-            "city": "St. Louis",
-            "street": "123 Warehouse Blvd",
-            "postcode": "63145",
-            "phone": "(314) 555-1234",
-            "use_default_carrier_config": true,
-            "carrier_links": []
-        },
-        {
-            "source_code": "default",
-            "name": "Default Source",
-            "enabled": true,
-            "description": "Default Source",
-            "latitude": 0,
-            "longitude": 0,
-            "country_id": "US",
-            "postcode": "00000",
-            "use_default_carrier_config": true,
-            "carrier_links": []
-        },
-        {
-            "source_code": "east",
-            "name": "Eastern Shipping Center",
-            "email": "dsimons@example.com",
-            "contact_name": "Daryl Simons",
-            "enabled": true,
-            "description": "Primary source for the eastern region",
-            "country_id": "US",
-            "region_id": 45,
-            "city": "Raleigh",
-            "street": "456 Shipping Center Blvd",
-            "postcode": "27614",
-            "phone": "(919) 555-8888",
-            "use_default_carrier_config": true,
-            "carrier_links": []
-        }
-    ],
-    "search_criteria": {
-        "filter_groups": [
-            {
-                "filters": [
-                    {
-                        "field": "country_id",
-                        "value": "US",
-                        "condition_type": "eq"
-                    }
-                ]
-            }
-        ]
-    },
-    "total_count": 3
-}
-```
-
-</details>
+When merchants are ready to make a partial or full shipment, they select the source or sources from which to send the products. Customers typically want low-cost shipping and a guarantee of safe arrival of products, while the merchant needs to ensure minimal overhead for the inventory storage and shipping costs. Inventory Management includes an algorithm that takes these considerations into account and recommends the best shipping option or options. The application provides an algorithm for Priority, using the source priority per stock, where each source is given a priority in the scope of a specific sales channel, and for Distance, using the locations of sources and shipping destinations. Invenotry Management also supports developer-provided extensions for other algorithms based on criteria such as cheapest shipping and closest GPS location.
