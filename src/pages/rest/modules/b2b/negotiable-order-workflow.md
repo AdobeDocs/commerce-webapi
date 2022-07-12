@@ -4,14 +4,16 @@ description: An overview of the REST calls needed to place items in a shopping c
 ee_only: true
 ---
 
+import * as Vars from '../../../../data/vars.js';
+
 # Place a negotiable quote order
 
 This topic describes how REST calls can be used to place items in a shopping cart, initiate and complete the process of negotiating a quote, and reimbursing the buyer's credit upon receipt of payment.
 
 ## Prerequisites
 
-*  You have [installed and enabled]({{ site.baseurl }}/extensions/b2b/) {{site.data.var.b2b}}.
-*  You have [created a company]({{ page.baseurl }}/b2b/company-object.html) and a [company user]({{ page.baseurl }}/b2b/company-object.html).
+*  You have [installed and enabled](https://experienceleague.adobe.com/docs/commerce-admin/b2b/install.html) <Vars.sitedatavarb2b/>.
+*  You have [created a company](company-object.md).
 *  You have an integration or [admin authorization token](https://developer.adobe.com/commerce/webapi/rest/tutorials/orders/order-admin-token.html) to make calls on behalf of seller, and a [customer token](https://developer.adobe.com/commerce/webapi/rest/tutorials/orders/order-create-customer.html#get-token) to make calls on behalf of the company user.
 
 ## Prepare the order
@@ -33,13 +35,19 @@ Content-Type application/json
 Authorization Bearer <customer token>
 ```
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-None
+#### payload
 
-**Response:**
+```json
+// none
+```
 
-The response is the `quoteId`: `5`
+#### Response
+
+```json
+// The response is the `quoteId`: `5`
+```
 
 ### Add items
 
@@ -56,7 +64,9 @@ Content-Type application/json
 Authorization Bearer <customer token>
 ```
 
-**Payload 1:**
+<CodeBlock slots="heading, code" repeat="4" languages="JSON, JSON" />
+
+#### Payload 1
 
 ```json
 {
@@ -68,7 +78,7 @@ Authorization Bearer <customer token>
 }
 ```
 
-**Response 1:**
+#### Response 1
 
 ```json
 {
@@ -82,7 +92,7 @@ Authorization Bearer <customer token>
 }
 ```
 
-**Payload 2:**
+#### Payload 2
 
 ```json
 {
@@ -94,7 +104,7 @@ Authorization Bearer <customer token>
 }
 ```
 
-**Response 2:**
+#### Response 2
 
 ```json
 {
@@ -123,7 +133,9 @@ Content-Type application/json
 Authorization Bearer <customer token>
 ```
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {  "address": {
@@ -146,7 +158,7 @@ Authorization Bearer <customer token>
 }
 ```
 
-**Response:**
+#### Response
 
 ```json
 [
@@ -192,7 +204,9 @@ Content-Type application/json
 Authorization Bearer <customer token>
 ```
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -233,9 +247,7 @@ Authorization Bearer <customer token>
 }
 ```
 
-**Response:**
-
-{% collapsible Show code sample %}
+#### Response
 
 ```json
 {
@@ -385,8 +397,6 @@ Authorization Bearer <customer token>
 }
 ```
 
-{% endcollapsible %}
-
 ### View the cart
 
 This is an optional step to show the status of the cart before you begin the negotiable quote process.
@@ -402,13 +412,15 @@ Content-Type application/json
 Authorization Bearer <customer token>
 ```
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-None
+#### payload
 
-**Response:**
+```json
+// none
+```
 
-{% collapsible Show code sample %}
+#### Response
 
 ```json
 {
@@ -590,13 +602,12 @@ None
 }
 ```
 
-{% endcollapsible %}
-
 ## Complete a negotiable quote
 
 In this example, the buyer requests a negotiable quote. The seller applies a discount to the quote and returns the quote to the buyer. The buyer accepts the discount and completes the order.
 
- {:.bs-callout-info}
+<InlineAlert variant="info" slots="text"/>
+
 All negotiable quote calls require an admin authorization token.
 
 ### Initiate a negotiable quote
@@ -616,7 +627,9 @@ Content-Type application/json
 Authorization Bearer <admin token>
 ```
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -626,9 +639,11 @@ Authorization Bearer <admin token>
 }
 ```
 
-**Response:**
+#### Response
 
-`true`
+```json
+// `true`, indicating the request was successful
+```
 
 ### Adjust the negotiable quote
 
@@ -645,7 +660,9 @@ Authorization Bearer <admin token>
 
 `PUT /V1/negotiableQuote/5`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -661,9 +678,11 @@ Authorization Bearer <admin token>
 }
 ```
 
-**Response:**
+#### Response
 
-`[]`
+```json
+// an empty array
+```
 
 ### Return the negotiable quote to the buyer
 
@@ -682,7 +701,9 @@ Authorization Bearer <admin token>
 
 `POST /V1/negotiableQuote/submitToCustomer`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -691,9 +712,11 @@ Authorization Bearer <admin token>
 }
 ```
 
-**Response:**
+#### Response
 
-`true`
+```json
+// `true`, indicating the request was successful
+```
 
 ### Get the quote with the new amounts
 
@@ -710,13 +733,15 @@ Authorization Bearer <admin token>
 
 `GET` /V1/carts/5
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-None
+#### payload
 
-**Response:**
+```json
+// none
+```
 
-{% collapsible Show code sample %}
+#### Response
 
 ```json
 {
@@ -934,14 +959,13 @@ None
 }
 ```
 
-{% endcollapsible %}
-
 ### Set the payment information and place the order
 
 The buyer is now ready to complete the purchase. Since the buyer has already specified the billing address, only the `paymentMethod` information must be included.
 
-{:.bs-callout-info}
-The `/V1/negotiable-carts/:cartId/payment-information` endpoint runs asynchronously if the `AsyncOrder` module has been enabled. By default, the mutation runs synchronously. [Asynchronous order placement]({{page.baseurl}}/performance-best-practices/high-throughput-order-processing.html#asynchronous-order-placement) describes the benefits of enabling the module.
+<InlineAlert variant="info" slots="text"/>
+
+The `/V1/negotiable-carts/:cartId/payment-information` endpoint runs asynchronously if the `AsyncOrder` module has been enabled. By default, the mutation runs synchronously. [Asynchronous order placement](https://devdocs.magento.com/guides/v2.4/performance-best-practices/high-throughput-order-processing.html#asynchronous-order-placement) describes the benefits of enabling the module.
 
 **Headers:**
 
@@ -954,7 +978,9 @@ Authorization Bearer <admin token>
 
 `/V1/negotiable-carts/3/payment-information`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {  "paymentMethod": {
@@ -964,9 +990,11 @@ Authorization Bearer <admin token>
 }
 ```
 
-**Response:**
+#### Response
 
-The response is the order `id`: `4`
+```json
+// The response is the order `id`: `4`
+```
 
 ## Reimburse company credit
 
@@ -985,7 +1013,9 @@ Authorization Bearer <admin token>
 
 `POST /V1/companyCredits/1/increaseBalance`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -996,14 +1026,17 @@ Authorization Bearer <admin token>
 }
 ```
 
-**Response:**
+#### Response
 
-`true`, indicating the reimbursement was successfully applied. Magento sends an email to the buyer.
+
+```json
+// `true`, indicating the reimbursement was successfully applied. Magento sends an email to the buyer.
+```
 
 ## Related information
 
 *  [Order processing tutorial](https://developer.adobe.com/commerce/webapi/rest/tutorials/orders/)
-*  [Integrate with the NegotiableQuote module]({{ page.baseurl }}/b2b/negotiable-quote.html)
-*  [Manage negotiable quotes]({{ page.baseurl }}/b2b/negotiable-manage.html)
-*  [Update a negotiable quote]({{ page.baseurl }}/b2b/negotiable-update.html)
-*  [Negotiable quote checkout]({{ page.baseurl }}/b2b/negotiable-checkout.html)
+*  [Integrate with the NegotiableQuote module](negotiable-quote.md)
+*  [Manage negotiable quotes](negotiable-manage.md)
+*  [Update a negotiable quote](negotiable-update.md)
+*  [Negotiable quote checkout](negotiable-checkout.md)

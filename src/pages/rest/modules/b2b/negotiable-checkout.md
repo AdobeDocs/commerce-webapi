@@ -4,6 +4,8 @@ description: Convert the negotiable quote to an order after reaching an agreed p
 ee_only: true
 ---
 
+import * as Vars from '../../../../data/vars.js';
+
 # Negotiable quote checkout
 
 When the seller and buyer user agree on the quoted products and their prices, the negotiated quote is ready to be converted to an order.
@@ -12,9 +14,9 @@ During the standard checkout process, Magento refreshes and recalculates all pro
 
 The same rule is applied when the quote has the proposed shipping price and the shipping taxes change on the checkout. The buyer pays the updated price, but this does not affect the other quote amounts.
 
-The following diagram illustrates the workflow for {{site.data.var.b2b}} negotiable quote checkouts:
+The following diagram illustrates the workflow for <Vars.sitedatavarb2b/> negotiable quote checkouts:
 
-![Checkout process]({{ site.baseurl }}/common/images/b2b/quote-checkout-process.png)
+![Checkout process](/../../../_images/quote-checkout-process.png)
 
 ## Manage shipping addresses
 
@@ -40,7 +42,9 @@ This call takes a full shipping address as input and estimates shipping fees. It
 
 `POST <host>/rest/<store_code>/V1/negotiable-carts/86/estimate-shipping-methods`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -60,7 +64,7 @@ This call takes a full shipping address as input and estimates shipping fees. It
 }
 ```
 
-**Response:**
+#### Response
 
 ```json
 [
@@ -91,7 +95,9 @@ This call takes an address ID as input and estimates shipping fees. It returns a
 
 `POST <host>/rest/<store_code>/V1/negotiable-carts/86/estimate-shipping-methods-by-address-id`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -99,7 +105,7 @@ This call takes an address ID as input and estimates shipping fees. It returns a
 }
 ```
 
-**Response:**
+#### Response
 
 ```json
 [
@@ -130,7 +136,9 @@ In this call, you specify the shipping and billing addresses, as well as the sel
 
 `POST <host>/rest/<store_code>/V1/negotiable-carts/86/shipping-information`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -169,9 +177,7 @@ In this call, you specify the shipping and billing addresses, as well as the sel
 }
 ```
 
-**Response:**
-
-{% collapsible Show code sample %}
+#### Response
 
 ```json
 {
@@ -334,8 +340,6 @@ In this call, you specify the shipping and billing addresses, as well as the sel
 }
 ```
 
-{% endcollapsible %}
-
 ## Manage billing addresses
 
 If the billing address isn't provided through another call, use the `POST /V1/negotiable-carts/:cartId/billing-address` to specify it.
@@ -359,7 +363,9 @@ This call assigns a billing address to the specified negotiable quote.
 
 `POST <host>/rest/<store_code>/V1/negotiable-carts/86/billing-address`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {  "address": {
@@ -382,9 +388,11 @@ This call assigns a billing address to the specified negotiable quote.
 }
 ```
 
-**Response:**
+#### Response
 
-[]
+```json
+// An empty array
+```
 
 ### Return the billing address
 
@@ -394,11 +402,15 @@ This call returns the billing address for the specified negotiable quote.
 
 `GET <host>/rest/<store_code>/V1/negotiable-carts/86/billing-address`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-Not applicable
+#### Payload
 
-**Response:**
+```json
+// Not applicable
+```
+
+#### Response
 
 ```json
 {
@@ -445,13 +457,19 @@ If the initial quote applies a coupon to the totals, Magento ignores the coupon 
 
 `PUT <host>/rest/<store_code>/V1/negotiable-carts/6/coupons/SAVE5`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-Not applicable
+#### Payload
 
-**Response:**
+```json
+// Not applicable
+```
 
-`true`, indicting the request was successful
+#### Response
+
+```json
+// `true`, indicating the request was successful
+```
 
 ## Manage gift cards
 
@@ -476,7 +494,9 @@ If the initial quote applies a gift card to the totals, Magento ignores the gift
 
 `POST <host>/rest/<store_code>/V1/negotiable-carts/6/giftCards`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -488,9 +508,11 @@ If the initial quote applies a gift card to the totals, Magento ignores the gift
 }
 ```
 
-**Response:**
+#### Response
 
-`true`
+```json
+// `true`
+```
 
 ### Delete a gift card from at checkout
 
@@ -500,13 +522,19 @@ This call removes a gift card that has been applied to a negotiable quote.
 
 `DELETE <host>/rest/<store_code>/V1/negotiable-carts/6/giftCards/00HELHQED6RV`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-Not applicable
+#### Payload
 
-**Response:**
+```json
+// Not applicable
+```
 
-`true`, indicating the request was successful
+#### Response
+
+```json
+// `true`, indicating the request was successful
+```
 
 ## Manage payment information
 
@@ -532,7 +560,9 @@ This call sets payment information and the billing address for the negotiable qu
 
 `POST <host>/rest/<store_code>/V1/negotiable-carts/86/set-payment-information`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {  "paymentMethod": {
@@ -557,9 +587,11 @@ This call sets payment information and the billing address for the negotiable qu
 }
 ```
 
-**Response:**
+#### Response
 
-`true`, indicating the payment information was set
+```json
+// `true`, indicating the payment information was set
+```
 
 ### Set payment information and place the order
 
@@ -569,7 +601,9 @@ This call sets payment information and the billing address for the negotiable qu
 
 `POST <host>/rest/<store_code>/V1/negotiable-carts/86/payment-information`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {  "paymentMethod": {
@@ -594,9 +628,11 @@ This call sets payment information and the billing address for the negotiable qu
 }
 ```
 
-**Response:**
+#### Response
 
-An order ID, such as `83`
+```json
+// An order ID, such as `83`
+```
 
 ### Return payment information
 
@@ -606,13 +642,15 @@ This call payment information and all information from the `totals` object.
 
 `GET <host>/rest/<store_code>/V1/negotiable-carts/86/payment-information`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-Not applicable
+#### Payload
 
-**Response:**
+```json
+// Not applicable
+```
 
-{% collapsible Show code sample %}
+#### Response
 
 ```json
 {
@@ -775,8 +813,6 @@ Not applicable
 }
 ```
 
-{% endcollapsible %}
-
 ## Review cart totals
 
 This call is similar to `GET /V1/negotiable-carts/:cartId/payment-information`, except it does not return payment information.
@@ -795,13 +831,15 @@ GET /V1/negotiable-carts/:cartId/totals
 
 `GET <host>/rest/<store_code>/V1/negotiable-carts/86/totals`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-Not applicable
+#### Payload
 
-**Response:**
+```json
+// Not applicable
+```
 
-{% collapsible Show code sample %}
+#### Response
 
 ```json
 {
@@ -958,11 +996,9 @@ Not applicable
 }
 ```
 
-{% endcollapsible %}
-
 ## Related information
 
-*  [Integrate with the NegotiableQuote module]({{ page.baseurl }}/b2b/negotiable-quote.html)
-*  [Manage negotiable quotes]({{ page.baseurl }}/b2b/negotiable-manage.html)
-*  [Update a negotiable quote]({{ page.baseurl }}/b2b/negotiable-update.html)
-*  [Place a negotiable quote order]({{ page.baseurl }}/b2b/negotiable-order-workflow.html)
+*  [Integrate with the NegotiableQuote module](negotiable-quote.md)
+*  [Manage negotiable quotes](negotiable-manage.md)
+*  [Update a negotiable quote](negotiable-update.md)
+*  [Place a negotiable quote order](negotiable-order-workflow.md)

@@ -26,6 +26,11 @@ GET /V1/company/
 
 The following table lists the parameters defined in `CompanyInterface`.
 
+<p></p>
+<details>
+<summary><b>Click to view the table</b></summary>
+<p></p>
+
 Name | Description | Format | Requirements
 --- | --- | --- | ---
 `id` | System-generated company ID | integer | Required for updates and deletes.
@@ -49,6 +54,8 @@ Name | Description | Format | Requirements
 `rejected_at` | A timestamp indicating when the company was rejected. | string | Optional
 `super_user_id` | The `customer_id` of the company administrator. When creating a company, the `customer_id` must already exist.  | integer | Required to create or update a company.
 
+</details>
+
 ### Create a company
 
 The following example creates a company and assigns the default shared catalog (`customer_group_id`). The company admin (`super_user_id`) must be a previously-defined `customer_id`.
@@ -57,7 +64,9 @@ The following example creates a company and assigns the default shared catalog (
 
 `POST <host>/rest/<store_code>/V1/company/`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -79,7 +88,7 @@ The following example creates a company and assigns the default shared catalog (
 }
 ```
 
-**Response:**
+#### Response
 
 ```json
 {
@@ -117,7 +126,9 @@ The following call changes the company status to Rejected (`2`) and explains why
 
 `PUT <host>/rest/<store_code>/V1/company/2`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -142,7 +153,7 @@ The following call changes the company status to Rejected (`2`) and explains why
 }
 ```
 
-**Response:**
+#### Response
 
 ```json
 {
@@ -179,11 +190,15 @@ This call returns detailed information about the specified company.
 
 `GET <host>/rest/<store_code>/V1/company/2`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-None
+#### payload
 
-**Response:**
+```json
+// none
+```
+
+#### Response
 
 ```json
 {
@@ -216,19 +231,25 @@ None
 
 ### Delete a company
 
-When you delete a company, Magento assigns the "Inactive" status to all company members. The system also removes company ID from the customer profile of all company members.
+When you delete a company, Adobe Commerce assigns the "Inactive" status to all company members. The system also removes company ID from the customer profile of all company members.
 
 **Sample Usage:**
 
 `DELETE <host>/rest/<store_code>/V1/company/2`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-None
+#### payload
 
-**Response:**
+```json
+// none
+```
 
-`true`, indicating the request was successful
+#### Response
+
+```json
+// `true`, indicating the request was successful
+```
 
 ### Search for companies
 
@@ -240,13 +261,15 @@ See [Search using REST APIs](https://developer.adobe.com/commerce/webapi/rest/us
 
 `GET <host>/rest/<store_code>/V1/company?searchCriteria[filter_groups][0][filters][0][field]=region_id&searchCriteria[filter_groups][0][filters][0][value]=12&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-None
+#### payload
 
-**Response:**
+```json
+// none
+```
 
-{% collapsible Show code sample %}
+#### Response
 
 ```json
 {
@@ -328,11 +351,9 @@ None
 }
 ```
 
-{% endcollapsible %}
-
 ## Related information
 
-*  [Integrate with the Company module]({{ page.baseurl }}/b2b/company.html)
-*  [Manage company users]({{ page.baseurl }}/b2b/company-users.html)
-*  [Manage company roles]({{ page.baseurl }}/b2b/roles.html)
-*  [Manage company structures]({{ page.baseurl }}/b2b/company-structures.html)
+*  [Integrate with the Company module](company.md)
+*  [Manage company users](company-users.md)
+*  [Manage company roles](roles.md)
+*  [Manage company structures](company-structures.md)

@@ -8,7 +8,8 @@ ee_only: True
 
 This topic describes the calls required to initiate a negotiable quote and to prepare it to be converted to an order.
 
- {:.bs-callout-info}
+<InlineAlert variant="info" slots="text"/>
+
 All negotiable quote calls require an admin authorization token.
 
 **REST Endpoints:**
@@ -53,7 +54,8 @@ Before negotiable quote can begin, the following conditions must be met:
 
 If the negotiable quote requires a shipping address (for negotiation or tax calculations), you can add it to the standard quote before initiating the negotiable quote (`POST /V1/carts/:cartId/shipping-information`)
 
-{:.bs-callout-info}
+<InlineAlert variant="info" slots="text"/>
+
 Requesting a negotiable quote requires an admin authorization token.
 
 **Service Name:**
@@ -64,7 +66,9 @@ Requesting a negotiable quote requires an admin authorization token.
 
 `POST <host>/rest/<store_code>/V1/negotiableQuote/request`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -80,9 +84,11 @@ Requesting a negotiable quote requires an admin authorization token.
 }
 ```
 
-**Response:**
+#### Response
 
-`true`, indicating the request was successful
+```json
+// `true`, indicating the request was successful
+```
 
 Magento creates a negotiable quote in the `Created` state.
 
@@ -110,7 +116,9 @@ When the quote is submitted to the buyer:
 
 `POST <host>/rest/<store_code>/V1/negotiableQuote/submitToCustomer`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -119,13 +127,15 @@ When the quote is submitted to the buyer:
 }
 ```
 
-**Response:**
+#### Response
 
-`true`, indicating the request was successful
+```json
+// `true`, indicating the request was successful
+```
 
 ### Update a quote
 
-Use the `PUT /V1/negotiableQuote/:quoteId` call to update a quote. See [Update a negotiable quote]({{ page.baseurl }}/b2b/negotiable-update.html) for use cases.
+Use the `PUT /V1/negotiableQuote/:quoteId` call to update a quote. See [Update a negotiable quote](negotiable-update.md) for use cases.
 
 ### Recalculate prices
 
@@ -137,7 +147,9 @@ The request can be applied to one or more quotes at the same time.
 
 `POST <host>/rest/<store_code>/V1/negotiableQuote/pricesUpdated`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -145,9 +157,11 @@ The request can be applied to one or more quotes at the same time.
 }
 ```
 
-**Response:**
+#### Response
 
-`true`, indicating the request was successful
+```json
+// `true`, indicating the request was successful
+```
 
 ### Set the shipping method
 
@@ -157,7 +171,9 @@ To set the shipping method, the quote must be in the `created`, `processing_by_a
 
 `PUT <host>/rest/<store_code>/V1/negotiableQuote/3/shippingMethod`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -165,7 +181,11 @@ To set the shipping method, the quote must be in the `created`, `processing_by_a
 }
 ```
 
-**Response:**
+#### Response
+
+```json
+// None
+```
 
 ### Decline a quote
 
@@ -185,7 +205,9 @@ When you decline a quote, all custom pricing will be removed from the quote. The
 
 `POST <host>/rest/<store_code>/V1/negotiableQuote/decline`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -194,9 +216,11 @@ When you decline a quote, all custom pricing will be removed from the quote. The
 }
 ```
 
-**Response:**
+#### Response
 
-`true`, indicating the request was successful
+```json
+// `true`, indicating the request was successful
+```
 
 ## Miscellaneous operations
 
@@ -210,11 +234,15 @@ Magento returns all the comments associated with the specified quote ID. The com
 
 `GET <host>/rest/<store_code>/V1/negotiableQuote/87/comments`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-Not applicable
+#### Payload
 
-**Response:**
+```json
+// Not applicable
+```
+
+#### Response
 
 ```json
 [
@@ -305,11 +333,15 @@ Use the `attachmentContent` call to retrieve the files (in base64 format) attach
 
 `GET <host>/rest/<store_code>/V1/negotiableQuote/attachmentContent`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-Not applicable
+#### Payload
 
-**Response:**
+```json
+// Not applicable
+```
+
+#### Response
 
 ```json
 {
@@ -326,7 +358,7 @@ Not applicable
 
 ## Related information
 
-*  [Integrate with the NegotiableQuote module]({{ page.baseurl }}/b2b/negotiable-quote.html)
-*  [Update a negotiable quote]({{ page.baseurl }}/b2b/negotiable-update.html)
-*  [Negotiable quote checkout]({{ page.baseurl }}/b2b/negotiable-checkout.html)
-*  [Place a negotiable quote order]({{ page.baseurl }}/b2b/negotiable-order-workflow.html)
+*  [Integrate with the NegotiableQuote module](negotiable-quote.md)
+*  [Update a negotiable quote](negotiable-update.md)
+*  [Negotiable quote checkout](negotiable-checkout.md)
+*  [Place a negotiable quote order](negotiable-order-workflow.md)

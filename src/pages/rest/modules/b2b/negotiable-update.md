@@ -57,7 +57,9 @@ The `negotiated_price_type` can have one of the following values:
 
 `PUT <host>/rest/<store_code>/V1/negotiableQuote/6`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -91,7 +93,9 @@ Content-Type application/json
 Authorization Bearer <customer token>
 ```
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -103,7 +107,7 @@ Authorization Bearer <customer token>
 }
 ```
 
-**Response:**
+#### Response
 
 ```json
 {
@@ -131,7 +135,9 @@ Authorization Bearer <customer token>
 
 `PUT <host>/rest/<store_code>/V1/negotiableQuote/6`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -146,13 +152,15 @@ Authorization Bearer <customer token>
 }
 ```
 
-**Response:**
+#### Response
 
-`[]`
+```json
+// an empty array
+```
 
 ## Related information
 
-*  [Integrate with the NegotiableQuote module]({{ page.baseurl }}/b2b/negotiable-quote.html)
-*  [Manage negotiable quotes]({{ page.baseurl }}/b2b/negotiable-manage.html)
-*  [Negotiable quote checkout]({{ page.baseurl }}/b2b/negotiable-checkout.html)
-*  [Place a negotiable quote order]({{ page.baseurl }}/b2b/negotiable-order-workflow.html)
+*  [Integrate with the NegotiableQuote module](negotiable-quote.md)
+*  [Manage negotiable quotes](negotiable-manage.md)
+*  [Negotiable quote checkout](negotiable-checkout.md)
+*  [Place a negotiable quote order](negotiable-order-workflow.md)

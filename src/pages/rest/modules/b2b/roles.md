@@ -4,11 +4,13 @@ description: Create and assign user roles for B2B users
 ee_only: True
 ---
 
+import * as Vars from '../../../../data/vars.js';
+
 # Manage company roles
 
-Within a company, customers may have different job roles, levels of responsibility, and access to information about their company. {{site.data.var.b2b}} defines several types of system resources, and the Company Admin (or an integration that operates on the behalf of the Company Admin) grants or denies access to these resources using company roles. The Company Admin has access to all resources.
+Within a company, customers may have different job roles, levels of responsibility, and access to information about their company. <Vars.sitedatavarb2b/> defines several types of system resources, and the Company Admin (or an integration that operates on the behalf of the Company Admin) grants or denies access to these resources using company roles. The Company Admin has access to all resources.
 
-{{site.data.var.b2b}} defines the following types of resources:
+<Vars.sitedatavarb2b/> defines the following types of resources:
 
 *  Sales
 *  Purchase Orders
@@ -19,7 +21,52 @@ Within a company, customers may have different job roles, levels of responsibili
 
 Each of these resources contains a hierarchy of other resources. When a Company Admin grants or blocks access to a resource from the store UI, the action applies to all sub-resources, unless explicitly overridden. However, if you grant or block access using web APIs, you must specify each resource individually.
 
-{% include webapi/b2b_roles.md %}
+The following table lists all the resources that are available to the customers defined with a company. To visualize the resource hierarchy, log in to a store as the Company Admin and select **Roles and Permissions**, then click the **Edit** action next to the Default User role.
+
+<p></p>
+
+<details>
+<summary><b>Click to view the table</b></summary>
+<p></p>
+
+Display name | Resource name
+--- | ---
+&emsp; All | Magento_Company::index
+&emsp; &emsp; Sales | Magento_Sales::all
+&emsp; &emsp; &emsp; Allow Checkout | Magento_Sales::place_order
+&emsp; &emsp; &emsp; &emsp; Use Pay On Account method | Magento_Sales::payment_account
+&emsp; &emsp; &emsp; View orders |  Magento_Sales::view_orders
+&emsp; &emsp; &emsp; View orders of subordinate users |  Magento_Sales::view_orders_sub
+&emsp; &emsp; Quotes | Magento_NegotiableQuote::all
+&emsp; &emsp; &emsp; View | Magento_NegotiableQuote::view_quotes
+&emsp; &emsp; &emsp; &emsp; Request, Edit, Delete | Magento_NegotiableQuote::manage
+&emsp; &emsp; &emsp; &emsp; Checkout with Quote | Magento_NegotiableQuote::checkout
+&emsp; &emsp; &emsp; View quotes of subordinate users | Magento_NegotiableQuote::view_quotes_sub
+&emsp; Order Approvals | Magento_PurchaseOrder::all
+&emsp; &emsp; View My Purchase Orders | Magento_PurchaseOrder:view_purchase_orders
+&emsp; &emsp; &emsp; View for subordinates | Magento_PurchaseOrder:view_purchase_orders_for_subordinates
+&emsp; &emsp; &emsp; View for all company | Magento_PurchaseOrder:view_purchase_orders_for_company
+&emsp; &emsp; Auto-approve POs created within this role | Magento_PurchaseOrder:autoapprove_purchase_order
+&emsp; &emsp; Approve Purchase Orders without other approvals | Magento_PurchaseOrder:super_approve_purchase_order
+&emsp; &emsp; View Approval Rules | Magento_PurchaseOrder:view_approval_rules
+&emsp; &emsp; &emsp; Create, Edit and Delete | Magento_PurchaseOrder:manage_approval_rules
+&emsp; &emsp; Company Profile | Magento_Company::view
+&emsp; &emsp; &emsp; Account Information (View) | Magento_Company::view_account
+&emsp; &emsp; &emsp; &emsp; Edit | Magento_Company::edit_account
+&emsp; &emsp; &emsp; Legal Address (View) | Magento_Company::view_address
+&emsp; &emsp; &emsp; &emsp; Edit | Magento_Company::edit_address
+&emsp; &emsp; &emsp; Contacts (View) | Magento_Company::contacts
+&emsp; &emsp; &emsp; Payment Information (View) | Magento_Company::payment_information
+&emsp; &emsp; &emsp; Shipping Information (View) | Magento_Company::shipping_information
+&emsp; &emsp; Company User Management | Magento_Company::user_management
+&emsp; &emsp; &emsp; View roles and permissions | Magento_Company::roles_view
+&emsp; &emsp; &emsp; &emsp; Manage roles and permissions | Magento_Company::roles_edit
+&emsp; &emsp; &emsp; View users and teams | Magento_Company::users_view
+&emsp; &emsp; &emsp; &emsp; Manage users and teams | Magento_Company::users_edit
+&emsp; &emsp; Company credit | Magento_Company::credit
+&emsp; &emsp; &emsp; view | Magento_Company::credit_history
+
+</details>
 
 ## Manage company roles
 
@@ -69,7 +116,9 @@ All resources that are not explicitly allowed are denied. You must specify the `
 
 `POST <host>/rest/<store_code>/V1/company/role`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -88,9 +137,7 @@ All resources that are not explicitly allowed are denied. You must specify the `
 }
 ```
 
-**Response:**
-
-{% collapsible Show code sample %}
+#### Response
 
 ```json
 {
@@ -253,8 +300,6 @@ All resources that are not explicitly allowed are denied. You must specify the `
 }
 ```
 
-{% endcollapsible %}
-
 ### Update a role
 
 Each update call must include all resources the assignee will have access to.
@@ -265,7 +310,9 @@ This example call adds access to all Negotiable Quote resources except "View quo
 
 `PUT <host>/rest/<store_code>/V1/company/role/6`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -289,9 +336,7 @@ This example call adds access to all Negotiable Quote resources except "View quo
 }
 ```
 
-**Response:**
-
-{% collapsible Show code sample %}
+#### Response
 
 ```json
 {
@@ -453,8 +498,6 @@ This example call adds access to all Negotiable Quote resources except "View quo
   "extension_attributes": []
 }
 ```
-
-{% endcollapsible %}
 
 ### Return all information about a role
 
@@ -464,13 +507,15 @@ This call returns the `id`, role name, and set of permissions defined within the
 
 `GET <host>/rest/<store_code>/V1/company/role/6`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-None
+#### payload
 
-**Response:**
+```json
+// none
+```
 
-{% collapsible Show code sample %}
+#### Response
 
 ```json
 {
@@ -633,8 +678,6 @@ None
 }
 ```
 
-{% endcollapsible %}
-
 ### Delete a role
 
 You cannot delete a role if it is the only role defined within the company.
@@ -643,13 +686,19 @@ You cannot delete a role if it is the only role defined within the company.
 
 `DELETE <host>/rest/<store_code>/V1/company/role/5`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-None
+#### payload
 
-**Response:**
+```json
+// none
+```
 
-`true`, indicating the request was successful
+#### Response
+
+```json
+// `true`, indicating the request was successful
+```
 
 ### Search for a role
 
@@ -661,13 +710,15 @@ See [Search using REST APIs](https://developer.adobe.com/commerce/webapi/rest/us
 
 `GET <host>/rest/<store_code>/V1/company/role?searchCriteria[filter_groups][0][filters][0][field]=company_id&searchCriteria[filter_groups][0][filters][0][value]=2&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-None
+#### payload
 
-**Response:**
+```json
+// none
+```
 
-{% collapsible Show code sample %}
+#### Response
 
 ```json
 {
@@ -1162,11 +1213,9 @@ None
 
 ```
 
-{% endcollapsible %}
-
 ## Related information
 
-*  [Integrate with the Company module]({{ page.baseurl }}/b2b/company.html)
-*  [Manage company objects]({{ page.baseurl }}/b2b/company-object.html)
-*  [Manage company users]({{ page.baseurl }}/b2b/company-users.html)
-*  [Manage company structures]({{ page.baseurl }}/b2b/company-structures.html)
+*  [Integrate with the Company module](company.md)
+*  [Manage company objects](company-object.md)
+*  [Manage company users](company-users.md)
+*  [Manage company structures](company-structures.md)

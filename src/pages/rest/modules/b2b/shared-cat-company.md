@@ -22,7 +22,8 @@ GET  /V1/sharedCatalog/:sharedCatalogId/companies
 
 **Company parameters:**
 
- {:.bs-callout-info}
+<InlineAlert variant="info" slots="text"/>
+
 Although you can specify other parameters defined within a `categories` object, the `id` is the only one used to assign or unassign a category to a shared catalog.
 
 Name | Description | Format | Requirements
@@ -39,7 +40,9 @@ If a specified company is already assigned to a different shared catalog, this r
 
 `POST <host>/rest/<store_code>/V1/sharedCatalog/2/assignCompanies`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -54,9 +57,11 @@ If a specified company is already assigned to a different shared catalog, this r
 }
 ```
 
-**Response:**
+#### Response
 
-`true`, indicating the operation was successful
+```json
+// `true`, indicating the request was successful
+```
 
 ## Unassign companies from a shared catalog
 
@@ -66,7 +71,9 @@ When you unassign a company from a custom catalog, the system automatically assi
 
 `POST <host>/rest/<store_code>/V1/sharedCatalog/2/unassignCompanies`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -78,9 +85,11 @@ When you unassign a company from a custom catalog, the system automatically assi
 }
 ```
 
-**Response:**
+#### Response
 
-`true`, indicating the operation was successful
+```json
+// `true`, indicating the request was successful
+```
 
 ## List the shared catalog companies
 
@@ -90,16 +99,22 @@ The `GET` call returns an array of company IDs.
 
 `GET <host>/rest/<store_code>/V1/sharedCatalog/2/companies`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-Not applicable
+#### Payload
 
-**Response:**
+```json
+// Not applicable
+```
 
+#### Response
+
+```json
 `"[\"1\",\"2\"]"`
+```
 
 ## Related information
 
-*  [Integrate with the SharedCatalog module]({{ page.baseurl }}/b2b/shared-catalog.html)
-*  [Manage shared catalogs]({{ page.baseurl }}/b2b/shared-cat-manage.html)
-*  [Assign categories and products]({{ page.baseurl }}/b2b/shared-cat-product-assign.html)
+*  [Integrate with the SharedCatalog module](shared-catalog.md)
+*  [Manage shared catalogs](shared-cat-manage.md)
+*  [Assign categories and products](shared-cat-product-assign.md)

@@ -52,7 +52,9 @@ This call changes the company's credit limit to $1000. The `available_limit` par
 
 `PUT <host>/rest/<store_code>/V1/companyCredits/2`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -65,7 +67,7 @@ This call changes the company's credit limit to $1000. The `available_limit` par
 }
 ```
 
-**Response:**
+#### Response
 
 ```json
 {
@@ -91,11 +93,15 @@ This call returns data on the credit limit for the specified credit ID.
 
 `GET <host>/rest/<store_code>/V1/companyCredits/2`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-Not applicable
+#### Payload
 
-**Response:**
+```json
+// Not applicable
+```
+
+#### Response
 
 ```json
 {
@@ -121,11 +127,15 @@ This call returns information about the credit limit for a specified company.
 
 `GET <host>/rest/<store_code>/V1/companyCredits/company/2`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-Not applicable
+#### Payload
 
-**Response:**
+```json
+// Not applicable
+```
+
+#### Response
 
 ```json
 {
@@ -149,13 +159,15 @@ See [Search using REST APIs](https://developer.adobe.com/commerce/webapi/rest/us
 
 `GET <host>/rest/<store_code>/V1/companyCredits?searchCriteria[filter_groups][0][filters][0][field]=balance&searchCriteria[filter_groups][0][filters][0][value]=0&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-Not applicable
+#### Payload
 
-**Response:**
+```json
+// Not applicable
+```
 
-{% collapsible Show code sample %}
+#### Response
 
 ```json
 {
@@ -204,8 +216,6 @@ Not applicable
 }
 ```
 
-{% endcollapsible %}
-
 ## Balance operations
 
 The company's outstanding balance can be updated as the buyer makes payments, purchases, and other transactions.
@@ -248,7 +258,9 @@ This call increases the company credit with an Allocate, Update, Refund, Revert,
 
 `POST <host>/rest/<store_code>/V1/companyCredits/2/increaseBalance`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -259,9 +271,11 @@ This call increases the company credit with an Allocate, Update, Refund, Revert,
 }
 ```
 
-**Response:**
+#### Response
 
-`true`, indicating the increase to the company credit balance succeeded
+```json
+// `true`, indicating the increase to the company credit balance succeeded
+```
 
 ### Decrease the balance
 
@@ -271,7 +285,9 @@ This call decreases the company credit with an Update (operation type = 2), Purc
 
 `POST <host>/rest/<store_code>/V1/companyCredits/2/decreaseBalance`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -282,9 +298,11 @@ This call decreases the company credit with an Update (operation type = 2), Purc
 }
 ```
 
-**Response:**
+#### Response
 
-`true`, indicating the decrease to the company credit balance succeeded
+```json
+// `true`, indicating the decrease to the company credit balance succeeded
+```
 
 ## Credit history
 
@@ -308,7 +326,9 @@ This call updates the credit history to specify a purchase order number.
 
 `PUT <host>/rest/<store_code>/V1/companyCredits/history/6`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -317,9 +337,11 @@ This call updates the credit history to specify a purchase order number.
 }
 ```
 
-**Response:**
+#### Response
 
-`true`, indicating the call was successful
+```json
+// `true`, indicating the call was successful
+```
 
 ### Search credit history IDs
 
@@ -331,11 +353,15 @@ See [Search using REST APIs](https://developer.adobe.com/commerce/webapi/rest/us
 
 `GET <host>/rest/<store_code>/V1/companyCredits/history?searchCriteria[filter_groups][0][filters][0][field]=credit_limit&searchCriteria[filter_groups][0][filters][0][value]=500&searchCriteria[filter_groups][0][filters][0][condition_type]=gt`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-Not applicable
+#### Payload
 
-**Response:**
+```json
+// Not applicable
+```
+
+#### Response
 
 ```json
 {
@@ -395,4 +421,4 @@ Not applicable
 
 ## Related information
 
-[Integrate with the CompanyCredit module]({{ page.baseurl }}/b2b/company-credit.html)
+[Integrate with the CompanyCredit module](company-credit.md)

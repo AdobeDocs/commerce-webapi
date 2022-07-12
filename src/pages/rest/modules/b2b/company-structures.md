@@ -1,13 +1,14 @@
 ---
-group: b2b-developer-guide
 title: Manage company structures
 description: Assign company users to teams and hierarchies
 ee_only: true
 ---
 
+import * as Vars from '../../../../data/vars.js';
+
 # Manage company structures
 
-{{site.data.var.b2b}} allows company users to be assigned to company teams and hierarchies.
+<Vars.sitedatavarb2b/> allows company users to be assigned to company teams and hierarchies.
 
 ## Manage company teams
 
@@ -43,7 +44,9 @@ A newly-created team is placed under Company Admin in the company hierarchy.
 
 `POST <host>/rest/<store_code>/V1/team/2`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -54,9 +57,11 @@ A newly-created team is placed under Company Admin in the company hierarchy.
 }
 ```
 
-**Response:**
+#### Response
 
-The team ID, such as `4`.
+```json
+// The team ID, such as `4`.
+```
 
 ### Update a team
 
@@ -66,7 +71,9 @@ You can only change the name or description of a team.
 
 `PUT <host>/rest/<store_code>/V1/team/4`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -77,9 +84,11 @@ You can only change the name or description of a team.
 }
 ```
 
-**Response:**
+#### Response
 
-`true`, indicating the request was successful
+```json
+// `true`, indicating the request was successful
+```
 
 ### Return all information about a team
 
@@ -89,11 +98,15 @@ The `GET` call returns the team `id`, `name`, and `description`.
 
 `GET <host>/rest/<store_code>/V1/team/4`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-Not applicable
+#### Payload
 
-**Response:**
+```json
+// Not applicable
+```
+
+#### Response
 
 ```json
 {
@@ -111,13 +124,19 @@ You cannot delete a team if members are assigned to it.
 
 `DELETE <host>/rest/<store_code>/V1/team/4`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-Not applicable
+#### Payload
 
-**Response:**
+```json
+// Not applicable
+```
 
-An empty array
+#### Response
+
+```json
+// An empty array
+```
 
 ### Search for a team
 
@@ -129,12 +148,15 @@ See [Search using REST APIs](https://developer.adobe.com/commerce/webapi/rest/us
 
 `GET <host>/rest/<store_code>/V1/team?searchCriteria[filter_groups][0][filters][0][field]=team_id&searchCriteria[filter_groups][0][filters][0][value]=0&searchCriteria[filter_groups][0][filters][0][condition_type]=gteq`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-Not applicable
+#### Payload
 
-**Response:**
-{% collapsible Show code sample %}
+```json
+// Not applicable
+```
+
+#### Response
 
 ```json
 {
@@ -166,8 +188,6 @@ Not applicable
     "total_count": 2
 }
 ```
-
-{% endcollapsible %}
 
 ## Company hierarchies
 
@@ -205,13 +225,15 @@ Admin (structure_id = 2)
 
 `GET <host>/rest/<store_code>/V1/hierarchy/2`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-Not applicable
+#### Payload
 
-**Response:**
+```json
+// Not applicable
+```
 
-{% collapsible Show code sample %}
+#### Response
 
 ```json
 [
@@ -259,8 +281,6 @@ Not applicable
   }
 ```
 
-{% endcollapsible %}
-
 ### Assign a new parent to teams and company users
 
 The following example moves Bryce Martin (`structure_id = 4`) to the West team (`structure_id = 7`)
@@ -269,7 +289,9 @@ The following example moves Bryce Martin (`structure_id = 4`) to the West team (
 
 `PUT <host>/rest/<store_code>/V1/hierarchy/move/5`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -277,13 +299,15 @@ The following example moves Bryce Martin (`structure_id = 4`) to the West team (
 }
 ```
 
-**Response:**
+#### Response
 
-`[]` (an empty array)
+```json
+// An empty array
+```
 
 ## Related information
 
-*  [Integrate with the Company module]({{ page.baseurl }}/b2b/company.html)
-*  [Manage company objects]({{ page.baseurl }}/b2b/company-object.html)
-*  [Manage company users]({{ page.baseurl }}/b2b/company-users.html)
-*  [Manage company roles]({{ page.baseurl }}/b2b/roles.html)
+*  [Integrate with the Company module](company.md)
+*  [Manage company objects](company-object.md)
+*  [Manage company users](company-users.md)
+*  [Manage company roles](roles.md)

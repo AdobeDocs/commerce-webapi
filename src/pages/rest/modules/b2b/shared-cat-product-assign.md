@@ -16,7 +16,8 @@ The shared catalog configuration process includes assigning categories and produ
 
 The `sharedCatalogCategoryManagementV1` service is based on `catalogCategoryManagementV1`. To view a store's category structure, call `GET /V1/categories`.
 
- {:.bs-callout-info}
+<InlineAlert variant="info" slots="text"/>
+
 Products that are defined within a category are not included when you assign a category to a shared catalog. You must add products separately.
 
 **Service name:**
@@ -33,7 +34,8 @@ GET  /V1/sharedCatalog/:id/categories
 
 **Category parameters:**
 
- {:.bs-callout-info}
+<InlineAlert variant="info" slots="text"/>
+
 Although you can specify other parameters defined within a `categories` object, the `id` is the only one used to assign or unassign a category to a shared catalog.
 
 Name | Description | Format | Requirements
@@ -48,7 +50,9 @@ The following example adds the Luma Gear category (`id=3`) as well as its subcat
 
 `POST <host>/rest/<store_code>/V1/sharedCatalog/2/assignCategories`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -69,9 +73,11 @@ The following example adds the Luma Gear category (`id=3`) as well as its subcat
 }
 ```
 
-**Response:**
+#### Response
 
-`true`, indicating the operation was successful
+```json
+// `true`, indicating the operation was successful
+```
 
 ### Unassign categories from a shared catalog
 
@@ -83,7 +89,9 @@ The following example removes two categories from the shared catalog.
 
 `POST <host>/rest/<store_code>/V1/sharedCatalog/2/unassignCategories`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -99,9 +107,11 @@ The following example removes two categories from the shared catalog.
 }
 ```
 
-**Response:**
+#### Response
 
-`true`, indicating the operation was successful
+```json
+// `true`, indicating the operation was successful
+```
 
 ### List the shared catalog categories
 
@@ -111,11 +121,15 @@ The `GET` call returns an array of catalog IDs.
 
 `GET <host>/rest/<store_code>/V1/sharedCatalog/2/categories`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-Not applicable
+#### Payload
 
-**Response:**
+```json
+// Not applicable
+```
+
+#### Response
 
 ```json
 [
@@ -144,7 +158,8 @@ GET  /V1/sharedCatalog/:id/products
 
 **Category parameters:**
 
- {:.bs-callout-info}
+<InlineAlert variant="info" slots="text"/>
+
 Although you can specify other parameters defined within a `products` object, the `sku` is the only one used to assign or unassign a product to a shared catalog.
 
 Name | Description | Format | Requirements
@@ -159,7 +174,9 @@ The following example adds two products each in the Bags, Fitness Equipment, and
 
 `POST <host>/rest/<store_code>/V1/sharedCatalog/2/assignProducts`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -186,9 +203,11 @@ The following example adds two products each in the Bags, Fitness Equipment, and
 }
 ```
 
-**Response:**
+#### Response
 
-`true`, indicating the operation was successful
+```json
+// `true`, indicating the operation was successful
+```
 
 ### Unassign products from the shared catalog
 
@@ -198,7 +217,9 @@ Unassigning a product does not remove it from its category or categories.
 
 `POST <host>/rest/<store_code>/V1/sharedCatalog/2/unassignProducts`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -210,9 +231,11 @@ Unassigning a product does not remove it from its category or categories.
 }
 ```
 
-**Response:**
+#### Response
 
-`true`, indicating the operation was successful
+```json
+// `true`, indicating the operation was successful
+```
 
 ### List the shared catalog products
 
@@ -222,11 +245,15 @@ The `GET` call returns an array of SKUs.
 
 `GET <host>/rest/<store_code>/V1/sharedCatalog/2/products`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-Not applicable
+#### Payload
 
-**Response:**
+```json
+// Not applicable
+```
+
+#### Response
 
 ```json
 [
@@ -240,6 +267,6 @@ Not applicable
 
 ## Related information
 
-*  [Integrate with the SharedCatalog module]({{ page.baseurl }}/b2b/shared-catalog.html)
-*  [Manage shared catalogs]({{ page.baseurl }}/b2b/shared-cat-manage.html)
-*  [Assign companies]({{ page.baseurl }}/b2b/shared-cat-company.html)
+*  [Integrate with the SharedCatalog module](shared-catalog.md)
+*  [Manage shared catalogs](shared-cat-manage.md)
+*  [Assign companies](shared-cat-company.md)

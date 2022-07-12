@@ -4,9 +4,11 @@ description: A description of available rest endpoints and integrations in the B
 ee_only: True
 ---
 
+import * as Vars from '../../../../data/vars.js';
+
 # Integrate with B2B using REST
 
-This topic lists the REST endpoints and services that are provided with {{site.data.var.b2b}}.
+This topic lists the REST endpoints and services that are provided with <Vars.sitedatavarb2b/>.
 
 ## List of REST endpoints by module
 

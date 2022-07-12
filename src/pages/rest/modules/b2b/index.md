@@ -4,9 +4,11 @@ description: Overview of the B2B module
 ee_only: True
 ---
 
+import * as Vars from '../../../../data/vars.js';
+
 # B2B Developer Guide
 
-Unlike the standard business-to-consumer model, {{site.data.var.b2b}} (Business to Business) is designed to meet the needs of sellers (Magento merchants) whose customers are primarily companies—possibly with complex organizational structures and multiple users with various roles and levels of permission.
+Unlike the standard business-to-consumer model, <Vars.sitedatavarb2b/> (Business to Business) is designed to meet the needs of sellers (Magento merchants) whose customers are primarily companies—possibly with complex organizational structures and multiple users with various roles and levels of permission.
 
 There are two basic actors in B2B model:
 
@@ -23,7 +25,7 @@ The seller and a buyer representing a company can negotiate the price of an orde
 
 ## B2B Modules
 
-{{site.data.var.b2b}} is a set of modules that are installed on top of {{site.data.var.ee}}. The following table lists the modules provided with B2B.
+<Vars.sitedatavarb2b/> is a set of modules that are installed on top of <Vars.sitedatavaree/>. The following table lists the modules provided with B2B.
 
 Name | Description | WebAPI enabled?
 --- | --- | ---
@@ -52,5 +54,5 @@ SharedCatalog | Defines the visibility of products and prices in the catalog and
 
 ## Related information
 
-*  [Install the B2B extension]({{ site.baseurl }}/extensions/b2b/)
-*  [Getting started with {{site.data.var.b2b}}]({{ site.user_guide_url }}/getting-started.html)
+*  [Install the B2B extension](https://experienceleague.adobe.com/docs/commerce-admin/b2b/install.html)
+*  [Getting started with <Vars.sitedatavarb2b/>](https://docs.magento.com/user-guide/getting-started.html)

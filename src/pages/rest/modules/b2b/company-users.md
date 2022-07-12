@@ -4,11 +4,14 @@ description: Manage which companies a user belongs to
 ee_only: true
 ---
 
+import * as Vars from '../../../../data/vars.js';
+
 # Manage company users
 
-A company user is a customer (buyer) that is assigned extended attributes that identify the company the user belongs to. Use the `POST /V1/customers` call, which is included with {{site.data.var.ce}} and {{site.data.var.ee}}, to create the user. After the user is created, you can use the `PUT /V1/customers/:customer_id` call to set their company data with the `company_attributes` extended attributes.
+A company user is a customer (buyer) that is assigned extended attributes that identify the company the user belongs to. Use the `POST /V1/customers` call, which is included with <Vars.sitedatavarce/> and <Vars.sitedatavaree/>, to create the user. After the user is created, you can use the `PUT /V1/customers/:customer_id` call to set their company data with the `company_attributes` extended attributes.
 
- {:.bs-callout-info}
+<InlineAlert variant="info" slots="text"/>
+
 This topic discusses only the features of the `customerCustomerRepositoryV1` service that are specific to B2B. See [Create a customer](https://developer.adobe.com/commerce/webapi/rest/tutorials/orders/order-create-customer.html) for an example of creating a standard customer.
 
 ## Managing company users with REST
@@ -46,9 +49,11 @@ The `POST /V1/customers` call creates a Magento customer. B2B extends the `custo
 
 `POST <host>/rest/<store_code>/V1/customers`
 
-**Payload:**
-
 First, create the standard customer. Their `company_id` will initially be set to `0`.
+
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -60,7 +65,7 @@ First, create the standard customer. Their `company_id` will initially be set to
 }
 ```
 
-**Response:**
+#### Response
 
 ```json
 {
@@ -97,7 +102,9 @@ If you change the `status` to inactive, the account is locked. If the company us
 
 `PUT <host>/rest/<store_code>/V1/customers/13`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -119,7 +126,7 @@ If you change the `status` to inactive, the account is locked. If the company us
 }
 ```
 
-**Response:**
+#### Response
 
 ```json
 {
@@ -158,17 +165,23 @@ Magento locks the deleted user's quotes and changes their status to Closed. The 
 
 `DELETE <host>/rest/<store_code>/V1/customers/13`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-Not applicable
+#### Payload
 
-**Response:**
+```json
+// Not applicable
+```
 
-`true`, indicating the request was successful
+#### Response
+
+```json
+// `true`, indicating the request was successful
+```
 
 ## Related information
 
-*  [Integrate with the Company module]({{ page.baseurl }}/b2b/company.html)
-*  [Manage company objects]({{ page.baseurl }}/b2b/company-object.html)
-*  [Manage company roles]({{ page.baseurl }}/b2b/roles.html)
-*  [Manage company structures]({{ page.baseurl }}/b2b/company-structures.html)
+*  [Integrate with the Company module](company.md)
+*  [Manage company objects](company-object.md)
+*  [Manage company roles](roles.md)
+*  [Manage company structures](company-structures.md)

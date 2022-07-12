@@ -4,9 +4,11 @@ description: Manage public and custom shared catalogs
 ee_only: true
 ---
 
+import * as Vars from '../../../../data/vars.js';
+
 # Manage custom shared catalogs
 
-{{site.data.var.b2b}} provides two types of shared catalog: public and custom. A public catalog is the default shared catalog. It is automatically displayed to all guest customers and to logged-in customers that are not company users. The seller assigns a custom shared catalog to specific companies as configured by admin. There can only be one public catalog, and it cannot be deleted.
+<Vars.sitedatavarb2b/> provides two types of shared catalog: public and custom. A public catalog is the default shared catalog. It is automatically displayed to all guest customers and to logged-in customers that are not company users. The seller assigns a custom shared catalog to specific companies as configured by admin. There can only be one public catalog, and it cannot be deleted.
 
 **Service name:**
 
@@ -43,7 +45,9 @@ When B2B is enabled, the system creates a public shared catalog named `Default (
 
 `POST <host>/rest/<store_code>/V1/sharedCatalog`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
 
 ```json
 {
@@ -56,9 +60,11 @@ When B2B is enabled, the system creates a public shared catalog named `Default (
 }
 ```
 
-**Response:**
+#### Response
 
-The shared catalog `id`, such as `2`.
+```json
+// The shared catalog `id`, such as `2`.
+```
 
 ### Update a characteristics of a shared catalog
 
@@ -81,9 +87,11 @@ You cannot change the `type` from public (`1`) to custom (`0`). If you need to r
 }
 ```
 
-**Response:**
+#### Response
 
-The shared catalog `id`, such as `2`.
+```json
+// The shared catalog `id`, such as `2`.
+```
 
 ### Retrieve general information about a shared catalog
 
@@ -93,11 +101,15 @@ This call returns information about the specified shared catalog.
 
 `GET <host>/rest/<store_code>/V1/sharedCatalog/2`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-Not applicable
+#### Payload
 
-**Response:**
+```json
+// Not applicable
+```
+
+#### Response
 
 ```json
 {
@@ -121,13 +133,19 @@ Only custom shared catalogs can be deleted. When a custom catalog is deleted, th
 
 `DELETE <host>/rest/<store_code>/V1/sharedCatalog/2`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-Not applicable
+#### Payload
 
-**Response:**
+```json
+// Not applicable
+```
 
-`true`, indicating the request was successful
+#### Response
+
+```json
+// `true`, indicating the request was successful
+```
 
 ## Search for a shared catalog
 
@@ -139,11 +157,15 @@ See [Search using REST APIs](https://developer.adobe.com/commerce/webapi/rest/us
 
 `GET <host>/rest/<store_code>/V1/sharedCatalog?searchCriteria[filter_groups][0][filters][0][field]=type&searchCriteria[filter_groups][0][filters][0][value]=0&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
 
-**Payload:**
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
-Not applicable
+#### Payload
 
-**Response:**
+```json
+// Not applicable
+```
+
+#### Response
 
 ```json
 {
@@ -179,6 +201,6 @@ Not applicable
 
 ## Related information
 
-*  [Integrate with the SharedCatalog module]({{ page.baseurl }}/b2b/shared-catalog.html)
-*  [Assign categories and products]({{ page.baseurl }}/b2b/shared-cat-product-assign.html)
-*  [Assign companies]({{ page.baseurl }}/b2b/shared-cat-company.html)
+*  [Integrate with the SharedCatalog module](shared-catalog.md)
+*  [Assign categories and products](shared-cat-product-assign.md)
+*  [Assign companies](shared-cat-company.md)

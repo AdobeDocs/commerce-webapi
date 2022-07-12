@@ -10,7 +10,7 @@ Negotiable quotes are a mechanism that allows a company user (buyer) and a selle
 
 The negotiable quote lifecycle includes a number of stages, as shown on the diagram below.
 
-![Negotiable quote workflow]({{ site.baseurl }}/common/images/b2b/quote-workflow.jpg)
+![Negotiable quote workflow](/../../../_images/quote-workflow.jpg)
 
 The quoting process itself can be a continuous process, with a number of repeating cycles until the agreement is reached.
 
@@ -19,7 +19,8 @@ The quoting process itself can be a continuous process, with a number of repeati
 *  The buyer reviews the seller's counteroffer
 *  Upon agreement, the buyer begins the checkout process and the system converts the negotiable quote into an order
 
-{:.bs-callout-info}
+<InlineAlert variant="info" slots="text"/>
+
 You cannot negotiate prices on individual items.
 
 ## Quote statuses
@@ -56,11 +57,11 @@ Closed | Closed | Closed
 
 The following diagram shows the negotiable quote lifecycle from the perspective of statuses.
 
-![Negotiable quote status]({{ site.baseurl }}/common/images/b2b/quote-statuses.png)
+![Negotiable quote status](/../../../_images/quote-statuses.png)
 
 ## Related information
 
-*  [Manage negotiable quotes]({{ page.baseurl }}/b2b/negotiable-manage.html)
-*  [Update a negotiable quote]({{ page.baseurl }}/b2b/negotiable-update.html)
-*  [Negotiable quote checkout]({{ page.baseurl }}/b2b/negotiable-checkout.html)
-*  [Place a negotiable quote order]({{ page.baseurl }}/b2b/negotiable-order-workflow.html)
+*  [Manage negotiable quotes](negotiable-manage.md)
+*  [Update a negotiable quote](negotiable-update.md)
+*  [Negotiable quote checkout](negotiable-checkout.md)
+*  [Place a negotiable quote order](negotiable-order-workflow.md)
