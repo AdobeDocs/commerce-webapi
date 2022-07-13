@@ -4,7 +4,7 @@ description: Manage public and custom shared catalogs
 ee_only: true
 ---
 
-import * as Vars from '../../../../data/vars.js';
+import * as Vars from '../../../data/vars.js';
 
 # Manage custom shared catalogs
 

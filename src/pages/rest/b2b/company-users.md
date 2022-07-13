@@ -4,7 +4,7 @@ description: Manage which companies a user belongs to
 ee_only: true
 ---
 
-import * as Vars from '../../../../data/vars.js';
+import * as Vars from '../../../data/vars.js';
 
 # Manage company users
 

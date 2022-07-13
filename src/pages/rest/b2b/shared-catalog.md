@@ -4,7 +4,7 @@ description: Overview of the SharedCatalog module
 ee_only: True
 ---
 
-import * as Vars from '../../../../data/vars.js';
+import * as Vars from '../../../data/vars.js';
 
 # Integrate with the SharedCatalog module
 
@@ -18,4 +18,4 @@ Custom shared catalogs can be assigned to companies only. They cannot be set for
 
 ## Related information
 
--  [Manage prices for multiple products](../catalog/catalog-pricing.md)
+-  [Manage prices for multiple products](../modules/catalog/catalog-pricing.md)

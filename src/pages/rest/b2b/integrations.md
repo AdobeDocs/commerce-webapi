@@ -4,7 +4,7 @@ description: A description of available rest endpoints and integrations in the B
 ee_only: True
 ---
 
-import * as Vars from '../../../../data/vars.js';
+import * as Vars from '../../../data/vars.js';
 
 # Integrate with B2B using REST
 

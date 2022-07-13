@@ -4,7 +4,7 @@ description: Convert the negotiable quote to an order after reaching an agreed p
 ee_only: true
 ---
 
-import * as Vars from '../../../../data/vars.js';
+import * as Vars from '../../../data/vars.js';
 
 # Negotiable quote checkout
 
@@ -16,7 +16,7 @@ The same rule is applied when the quote has the proposed shipping price and the 
 
 The following diagram illustrates the workflow for <Vars.sitedatavarb2b/> negotiable quote checkouts:
 
-![Checkout process](/../../../_images/quote-checkout-process.png)
+![Checkout process](/../../_images/quote-checkout-process.png)
 
 ## Manage shipping addresses
 

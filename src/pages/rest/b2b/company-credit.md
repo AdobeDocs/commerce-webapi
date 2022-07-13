@@ -4,7 +4,7 @@ description: Set up the CompanyCredit module, which allows companies to make pur
 ee_only: True
 ---
 
-import * as Vars from '../../../../data/vars.js';
+import * as Vars from '../../../data/vars.js';
 
 # Integrate with the CompanyCredit module
 
@@ -12,4 +12,4 @@ Company credit allows company members to purchase items on credit. This is a fea
 
 The following diagram illustrates the process flow of orders using the Payment on Account method.
 
-![Payment on credit](/../../../_images/payment-on-credit.png)
+![Payment on credit](/../../_images/payment-on-credit.png)

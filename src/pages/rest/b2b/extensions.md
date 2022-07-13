@@ -4,7 +4,7 @@ description: Link to the Module Reference Guide
 ee_only: True
 ---
 
-import * as Vars from '../../../../data/vars.js';
+import * as Vars from '../../../data/vars.js';
 
 # Develop B2B extensions
 

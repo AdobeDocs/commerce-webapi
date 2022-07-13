@@ -4,7 +4,7 @@ description: Create and assign user roles for B2B users
 ee_only: True
 ---
 
-import * as Vars from '../../../../data/vars.js';
+import * as Vars from '../../../data/vars.js';
 
 # Manage company roles
 

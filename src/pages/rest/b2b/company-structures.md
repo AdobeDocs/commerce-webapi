@@ -4,7 +4,7 @@ description: Assign company users to teams and hierarchies
 ee_only: true
 ---
 
-import * as Vars from '../../../../data/vars.js';
+import * as Vars from '../../../data/vars.js';
 
 # Manage company structures
 

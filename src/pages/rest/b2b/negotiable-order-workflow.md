@@ -4,7 +4,7 @@ description: An overview of the REST calls needed to place items in a shopping c
 ee_only: true
 ---
 
-import * as Vars from '../../../../data/vars.js';
+import * as Vars from '../../../data/vars.js';
 
 # Place a negotiable quote order
 
@@ -1034,4 +1034,4 @@ Authorization Bearer <admin token>
 
 ## Related information
 
--  [Order processing tutorial](../../tutorials/orders/index.md)
+-  [Order processing tutorial](../tutorials/orders/index.md)
