@@ -1028,15 +1028,10 @@ Authorization Bearer <admin token>
 
 #### Response
 
-
 ```json
-// `true`, indicating the reimbursement was successfully applied. Magento sends an email to the buyer.
+// `true`, indicating the reimbursement was successfully applied. Commerce sends an email to the buyer.
 ```
 
 ## Related information
 
-*  [Order processing tutorial](https://developer.adobe.com/commerce/webapi/rest/tutorials/orders/)
-*  [Integrate with the NegotiableQuote module](negotiable-quote.md)
-*  [Manage negotiable quotes](negotiable-manage.md)
-*  [Update a negotiable quote](negotiable-update.md)
-*  [Negotiable quote checkout](negotiable-checkout.md)
+*  [Order processing tutorial](../../tutorials/orders/index.md)

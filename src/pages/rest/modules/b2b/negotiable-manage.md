@@ -49,7 +49,7 @@ Name | Description | Format | Requirements
 
 Before negotiable quote can begin, the following conditions must be met:
 
-*  A regular Magento quote has been created (`POST /V1/customers/:customerId/carts` or `POST /V1/customers/carts/mine`)
+*  A regular Commerce quote has been created (`POST /V1/customers/:customerId/carts` or `POST /V1/customers/carts/mine`)
 *  The quote contains items (`POST /V1/carts/:quoteId/items`)
 
 If the negotiable quote requires a shipping address (for negotiation or tax calculations), you can add it to the standard quote before initiating the negotiable quote (`POST /V1/carts/:cartId/shipping-information`)
@@ -90,7 +90,7 @@ Requesting a negotiable quote requires an admin authorization token.
 // `true`, indicating the request was successful
 ```
 
-Magento creates a negotiable quote in the `Created` state.
+Commerce creates a negotiable quote in the `Created` state.
 
 ### Submit a negotiable quote to a buyer
 
@@ -104,7 +104,7 @@ The seller can send a request to submit the quote to the buyer. The request can 
 
 When the quote is submitted to the buyer:
 
-*  Magento checks catalog prices (price per item), cart rules, and discounts then recalculates the prices and taxes. The shipping price and the negotiated price are not affected (if they are entered into the quote).
+*  Commerce checks catalog prices (price per item), cart rules, and discounts then recalculates the prices and taxes. The shipping price and the negotiated price are not affected (if they are entered into the quote).
 *  Items that are no longer active or available for this buyer are removed from quote and prices are recalculated.
 *  The quote state is changed to Submitted by admin.
 
@@ -228,7 +228,7 @@ These tasks are not essential for completing a negotiable quote, but might be us
 
 ### List all comments for a quote
 
-Magento returns all the comments associated with the specified quote ID. The comments are listed in chronological order, with the oldest comment listed first. A `creator_type` value of `3` indicates the buyer made the comment. If the value is `2`, the seller commented.
+Commerce returns all the comments associated with the specified quote ID. The comments are listed in chronological order, with the oldest comment listed first. A `creator_type` value of `3` indicates the buyer made the comment. If the value is `2`, the seller commented.
 
 **Sample Usage:**
 
@@ -355,10 +355,3 @@ Use the `attachmentContent` call to retrieve the files (in base64 format) attach
   ]
 }
 ```
-
-## Related information
-
-*  [Integrate with the NegotiableQuote module](negotiable-quote.md)
-*  [Update a negotiable quote](negotiable-update.md)
-*  [Negotiable quote checkout](negotiable-checkout.md)
-*  [Place a negotiable quote order](negotiable-order-workflow.md)

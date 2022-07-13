@@ -43,7 +43,7 @@ Name | Description | Format | Requirements
 
 ### Create a company user
 
-The `POST /V1/customers` call creates a Magento customer. B2B extends the `customerAccountManagementV1` service so that you can create a company user.
+The `POST /V1/customers` call creates an Adobe Commerce customer. B2B extends the `customerAccountManagementV1` service so that you can create a company user.
 
 **Sample Usage:**
 
@@ -157,9 +157,9 @@ If you change the `status` to inactive, the account is locked. If the company us
 
 ### Delete a company user
 
-If the specified company user has child users, the system re-assigns the child users to the parent of the deleted user. The user account is deleted from Magento with all of its content, except quotes and orders. The user's orders and quotes remain visible to the seller.
+If the specified company user has child users, the system re-assigns the child users to the parent of the deleted user. The user account is deleted from Commerce with all of its content, except quotes and orders. The user's orders and quotes remain visible to the seller.
 
-Magento locks the deleted user's quotes and changes their status to Closed. The system does not allow to make changes on such quotes.
+Commerce locks the deleted user's quotes and changes their status to Closed. The system does not allow to make changes on such quotes.
 
 **Sample Usage:**
 
@@ -178,10 +178,3 @@ Magento locks the deleted user's quotes and changes their status to Closed. The 
 ```json
 // `true`, indicating the request was successful
 ```
-
-## Related information
-
-*  [Integrate with the Company module](company.md)
-*  [Manage company objects](company-object.md)
-*  [Manage company roles](roles.md)
-*  [Manage company structures](company-structures.md)

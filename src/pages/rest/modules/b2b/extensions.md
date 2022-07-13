@@ -8,4 +8,4 @@ import * as Vars from '../../../../data/vars.js';
 
 # Develop B2B extensions
 
-See [Module Reference Guide](https://devdocs.magento.com/guides/v2.4/mrg/intro.html) for information about each <Vars.sitedatavarb2b/> module.
+See [Module Reference Guide](https://developer.adobe.com/commerce/php/module-reference/) for information about each <Vars.sitedatavarb2b/> module.

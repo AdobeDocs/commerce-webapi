@@ -350,10 +350,3 @@ See [Search using REST APIs](https://developer.adobe.com/commerce/webapi/rest/us
     "total_count": 2
 }
 ```
-
-## Related information
-
-*  [Integrate with the Company module](company.md)
-*  [Manage company users](company-users.md)
-*  [Manage company roles](roles.md)
-*  [Manage company structures](company-structures.md)

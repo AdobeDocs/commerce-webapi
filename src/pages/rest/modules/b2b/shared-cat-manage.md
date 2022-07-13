@@ -8,7 +8,7 @@ import * as Vars from '../../../../data/vars.js';
 
 # Manage custom shared catalogs
 
-<Vars.sitedatavarb2b/> provides two types of shared catalog: public and custom. A public catalog is the default shared catalog. It is automatically displayed to all guest customers and to logged-in customers that are not company users. The seller assigns a custom shared catalog to specific companies as configured by admin. There can only be one public catalog, and it cannot be deleted.
+<p><Vars.sitedatavarb2b/> provides two types of shared catalog: public and custom. A public catalog is the default shared catalog. It is automatically displayed to all guest customers and to logged-in customers that are not company users. The seller assigns a custom shared catalog to specific companies as configured by admin. There can only be one public catalog, and it cannot be deleted.</p>
 
 **Service name:**
 
@@ -39,7 +39,7 @@ Name | Description | Format | Requirements
 
 ## Create a custom shared catalog
 
-When B2B is enabled, the system creates a public shared catalog named `Default (General)`. Magento allows only one public shared catalog at a time. You can create an unlimited number of custom shared catalogs.
+When B2B is enabled, the system creates a public shared catalog named `Default (General)`. Adobe Commerce allows only one public shared catalog at a time. You can create an unlimited number of custom shared catalogs.
 
 **Sample Usage:**
 
@@ -198,9 +198,3 @@ See [Search using REST APIs](https://developer.adobe.com/commerce/webapi/rest/us
     "total_count": 1
 }
 ```
-
-## Related information
-
-*  [Integrate with the SharedCatalog module](shared-catalog.md)
-*  [Assign categories and products](shared-cat-product-assign.md)
-*  [Assign companies](shared-cat-company.md)

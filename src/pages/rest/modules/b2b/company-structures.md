@@ -304,10 +304,3 @@ The following example moves Bryce Martin (`structure_id = 4`) to the West team (
 ```json
 // An empty array
 ```
-
-## Related information
-
-*  [Integrate with the Company module](company.md)
-*  [Manage company objects](company-object.md)
-*  [Manage company users](company-users.md)
-*  [Manage company roles](roles.md)

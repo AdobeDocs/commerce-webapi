@@ -81,7 +81,7 @@ The following example adds the Luma Gear category (`id=3`) as well as its subcat
 
 ### Unassign categories from a shared catalog
 
-When you unassign a category from a shared catalog, Magento also removes its products from the shared catalog. If a product is assigned to multiple categories, then Magento removes the product from the unassigned category only.
+When you unassign a category from a shared catalog, Commerce also removes its products from the shared catalog. If a product is assigned to multiple categories, then Commerce removes the product from the unassigned category only.
 
 The following example removes two categories from the shared catalog.
 
@@ -264,9 +264,3 @@ The `GET` call returns an array of SKUs.
   "24-MG04"
 ]
 ```
-
-## Related information
-
-*  [Integrate with the SharedCatalog module](shared-catalog.md)
-*  [Manage shared catalogs](shared-cat-manage.md)
-*  [Assign companies](shared-cat-company.md)

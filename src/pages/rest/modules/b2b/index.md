@@ -8,7 +8,7 @@ import * as Vars from '../../../../data/vars.js';
 
 # B2B Developer Guide
 
-Unlike the standard business-to-consumer model, <Vars.sitedatavarb2b/> (Business to Business) is designed to meet the needs of sellers (Magento merchants) whose customers are primarily companies—possibly with complex organizational structures and multiple users with various roles and levels of permission.
+Unlike the standard business-to-consumer model, <Vars.sitedatavarb2b/> (Business to Business) is designed to meet the needs of sellers (Commerce merchants) whose customers are primarily companies—possibly with complex organizational structures and multiple users with various roles and levels of permission.
 
 There are two basic actors in B2B model:
 
@@ -25,7 +25,7 @@ The seller and a buyer representing a company can negotiate the price of an orde
 
 ## B2B Modules
 
-<Vars.sitedatavarb2b/> is a set of modules that are installed on top of <Vars.sitedatavaree/>. The following table lists the modules provided with B2B.
+<p><Vars.sitedatavarb2b/> is a set of modules that are installed on top of <Vars.sitedatavaree/>. The following table lists the modules provided with B2B.</p>
 
 Name | Description | WebAPI enabled?
 --- | --- | ---

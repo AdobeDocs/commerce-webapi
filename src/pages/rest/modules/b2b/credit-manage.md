@@ -418,7 +418,3 @@ See [Search using REST APIs](https://developer.adobe.com/commerce/webapi/rest/us
     "total_count": 2
 }
 ```
-
-## Related information
-
-[Integrate with the CompanyCredit module](company-credit.md)

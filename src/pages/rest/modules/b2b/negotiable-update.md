@@ -43,11 +43,9 @@ In every successful negotiate quote, the seller must set the negotiated price.
 
 The `negotiated_price_type` can have one of the following values:
 
-`1` - Apply a percentage discount to the quote. The `negotiated_price_value` parameter indicates the percentage.
-
-`2` - Apply a fixed amount as a discount for the quote. The `negotiated_price_value` parameter specifies the amount of the discount.
-
-`3` - Set a proposed price for the entire quote. The `negotiated_price_value` parameter specifies the proposed price.
+- `1` - Apply a percentage discount to the quote. The `negotiated_price_value` parameter indicates the percentage.
+- `2` - Apply a fixed amount as a discount for the quote. The `negotiated_price_value` parameter specifies the amount of the discount.
+- `3` - Set a proposed price for the entire quote. The `negotiated_price_value` parameter specifies the proposed price.
 
 **Service Name:**
 
@@ -57,7 +55,7 @@ The `negotiated_price_type` can have one of the following values:
 
 `PUT <host>/rest/<store_code>/V1/negotiableQuote/6`
 
-<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+<CodeBlock slots="heading, code" repeat="1" languages="JSON" />
 
 #### Payload
 
@@ -157,10 +155,3 @@ Authorization Bearer <customer token>
 ```json
 // an empty array
 ```
-
-## Related information
-
-*  [Integrate with the NegotiableQuote module](negotiable-quote.md)
-*  [Manage negotiable quotes](negotiable-manage.md)
-*  [Negotiable quote checkout](negotiable-checkout.md)
-*  [Place a negotiable quote order](negotiable-order-workflow.md)

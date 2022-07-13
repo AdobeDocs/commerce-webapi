@@ -1212,10 +1212,3 @@ See [Search using REST APIs](https://developer.adobe.com/commerce/webapi/rest/us
 }
 
 ```
-
-## Related information
-
-*  [Integrate with the Company module](company.md)
-*  [Manage company objects](company-object.md)
-*  [Manage company users](company-users.md)
-*  [Manage company structures](company-structures.md)

@@ -36,12 +36,12 @@ Open | The seller has opened the submitted quote and is reviewing/modifying it. 
 Submitted | The seller has reviewed the quote and has sent it back to buyer. The seller cannot edit the quote. | View
 Client reviewed | The buyer has opened the quote submitted by seller and is modifying it, by changing items or adding a shipping address. The seller cannot edit the quote. | View
 Updated | The buyer has re-submitted the quote to seller. The seller can edit the quote, but the buyer cannot. | View, submit, decline, save as draft.<br/><br/>Edit the expiration date, item quantity, add/remove product items, enter a proposed price, add shipping method and shipping price, add comments.
-Ordered | The buyer has purchased the quote, and Magento converts the quote to an order. Neither the seller nor the buyer can edit the quote. | View
+Ordered | The buyer has purchased the quote, and Adobe Commerce converts the quote to an order. Neither the seller nor the buyer can edit the quote. | View
 Closed | The buyer has cancelled the quote and thus stopped the negotiation process. Neither the seller nor the buyer can edit the quote. <br/><br/>The buyer clicks the **Close** button from the Quote details page. (Not available using Web API) | View
 Declined | The seller has declined the quote. All custom pricing (if any) is removed from the quote. In admin panel, the quote is locked for editing. | View
 Expired | The quote is on the buyer's side, and the quote's expiration date has passed. | View
 
-The following table maps the internal Magento system state to the statuses displayed on the Storefront and Admin.
+The following table maps the internal Commerce system state to the statuses displayed on the Storefront and Admin.
 
 System state | Buyer status | Seller status
 --- | --- | ---
@@ -58,10 +58,3 @@ Closed | Closed | Closed
 The following diagram shows the negotiable quote lifecycle from the perspective of statuses.
 
 ![Negotiable quote status](/../../../_images/quote-statuses.png)
-
-## Related information
-
-*  [Manage negotiable quotes](negotiable-manage.md)
-*  [Update a negotiable quote](negotiable-update.md)
-*  [Negotiable quote checkout](negotiable-checkout.md)
-*  [Place a negotiable quote order](negotiable-order-workflow.md)

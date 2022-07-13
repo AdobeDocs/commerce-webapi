@@ -110,11 +110,5 @@ The `GET` call returns an array of company IDs.
 #### Response
 
 ```json
-`"[\"1\",\"2\"]"`
+"[\"1\",\"2\"]"
 ```
-
-## Related information
-
-*  [Integrate with the SharedCatalog module](shared-catalog.md)
-*  [Manage shared catalogs](shared-cat-manage.md)
-*  [Assign categories and products](shared-cat-product-assign.md)

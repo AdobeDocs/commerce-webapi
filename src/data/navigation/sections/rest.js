@@ -356,7 +356,7 @@ module.exports = [
             },
             {
                 title: "Integrate with B2B using REST",
-                path: "/rest/modules/b2b/",
+                path: "/rest/modules/b2b/integrations.md",
                 pages: [
                     {
                         title: "Company",
@@ -413,10 +413,6 @@ module.exports = [
                         path: "/rest/modules/b2b/negotiable-quote.md",
                         pages: [
                             {
-                                title: "Manage negotiable quotes",
-                                path: "/rest/modules/b2b/negotiable-quote.md",
-                            },
-                            {
                                 title: "Update a negotiable quote",
                                 path: "/rest/modules/b2b/negotiable-update.md",
                             },
@@ -430,15 +426,15 @@ module.exports = [
                             },
                         ],
                     },
-                    {
-                        title: "Develop B2B extensions",
-                        path: "/rest/modules/b2b/extensions.md",
-                    },
-                    {
-                        title: "B2B Release Notes",
-                        path: "https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html",
-                    },
                 ],
+            },
+            {
+                title: "Develop B2B extensions",
+                path: "/rest/modules/b2b/extensions.md",
+            },
+            {
+                title: "B2B Release Notes",
+                path: "https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html",
             },
         ],
     },

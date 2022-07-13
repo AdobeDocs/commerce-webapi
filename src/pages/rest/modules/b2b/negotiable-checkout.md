@@ -10,7 +10,7 @@ import * as Vars from '../../../../data/vars.js';
 
 When the seller and buyer user agree on the quoted products and their prices, the negotiated quote is ready to be converted to an order.
 
-During the standard checkout process, Magento refreshes and recalculates all product and shipping prices as well as taxes. This process is different for the quote that has a negotiated price (discounted offer from the seller). The system keeps the quoted price, but checks the tax amounts. If the tax amounts are outdated, Magento recalculates them and updates the quote totals. These tax adjustments can change the order grand total. The order and invoice are created with the recalculated taxes and new grand total. All other prices in the quote remain unchanged.
+During the standard checkout process, Adobe Commerce refreshes and recalculates all product and shipping prices as well as taxes. This process is different for the quote that has a negotiated price (discounted offer from the seller). The system keeps the quoted price, but checks the tax amounts. If the tax amounts are outdated, Commerce recalculates them and updates the quote totals. These tax adjustments can change the order grand total. The order and invoice are created with the recalculated taxes and new grand total. All other prices in the quote remain unchanged.
 
 The same rule is applied when the quote has the proposed shipping price and the shipping taxes change on the checkout. The buyer pays the updated price, but this does not affect the other quote amounts.
 
@@ -126,7 +126,7 @@ This call takes an address ID as input and estimates shipping fees. It returns a
 
 ### Set the shipping and billing information
 
-In this call, you specify the shipping and billing addresses, as well as the selected `shipping_carrier_code` and `shipping_method_code`. Magento returns a list of payment options and calculates the order totals.
+In this call, you specify the shipping and billing addresses, as well as the selected `shipping_carrier_code` and `shipping_method_code`. Commerce returns a list of payment options and calculates the order totals.
 
 **Service Name:**
 
@@ -451,7 +451,7 @@ DELETE /V1/negotiable-carts/:cartId/coupons
 
 ### Apply a coupon to a negotiable quote
 
-If the initial quote applies a coupon to the totals, Magento ignores the coupon when it converts the quote to a negotiable quote. However, you can apply a coupon at checkout.
+If the initial quote applies a coupon to the totals, Commerce ignores the coupon when it converts the quote to a negotiable quote. However, you can apply a coupon at checkout.
 
 **Sample Usage:**
 
@@ -488,7 +488,7 @@ DELETE /V1/negotiable-carts/:cartId/giftCards/:giftCardCode
 
 ### Apply a gift card to a negotiable quote
 
-If the initial quote applies a gift card to the totals, Magento ignores the gift card when it converts the quote to a negotiable quote. However, you can apply a gift card at checkout.
+If the initial quote applies a gift card to the totals, Commerce ignores the gift card when it converts the quote to a negotiable quote. However, you can apply a gift card at checkout.
 
 **Sample Usage:**
 
@@ -538,7 +538,7 @@ This call removes a gift card that has been applied to a negotiable quote.
 
 ## Manage payment information
 
-When you submit payment information, Magento creates an order and sends an order confirmation to the buyer.
+When you submit payment information, Commerce creates an order and sends an order confirmation to the buyer.
 
 **Service Name:**
 
@@ -554,7 +554,7 @@ POST /V1/negotiable-carts/:cartId/set-payment-information
 
 ### Set payment information without placing the order
 
-This call sets payment information and the billing address for the negotiable quote. However, Magento does not create an order afterward.
+This call sets payment information and the billing address for the negotiable quote. However, Commerce does not create an order afterward.
 
 **Sample Usage:**
 
@@ -995,10 +995,3 @@ GET /V1/negotiable-carts/:cartId/totals
   }
 }
 ```
-
-## Related information
-
-*  [Integrate with the NegotiableQuote module](negotiable-quote.md)
-*  [Manage negotiable quotes](negotiable-manage.md)
-*  [Update a negotiable quote](negotiable-update.md)
-*  [Place a negotiable quote order](negotiable-order-workflow.md)
