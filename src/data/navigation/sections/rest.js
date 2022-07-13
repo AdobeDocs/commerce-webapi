@@ -310,7 +310,7 @@ module.exports = [
             pages: [
             {
             title: "Manage sources",
-            path: "/rest/modules/inventory/",
+            path: "/rest/modules/inventory/manage-sources.md",
             },
             {
             title: "Manage stocks",
