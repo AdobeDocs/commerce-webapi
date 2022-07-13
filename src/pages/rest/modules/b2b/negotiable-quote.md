@@ -14,10 +14,10 @@ The negotiable quote lifecycle includes a number of stages, as shown on the diag
 
 The quoting process itself can be a continuous process, with a number of repeating cycles until the agreement is reached.
 
-*  The buyer creates and submits a negotiable quote
-*  The seller reviews and modifies or declines the quote
-*  The buyer reviews the seller's counteroffer
-*  Upon agreement, the buyer begins the checkout process and the system converts the negotiable quote into an order
+-  The buyer creates and submits a negotiable quote
+-  The seller reviews and modifies or declines the quote
+-  The buyer reviews the seller's counteroffer
+-  Upon agreement, the buyer begins the checkout process and the system converts the negotiable quote into an order
 
 <InlineAlert variant="info" slots="text"/>
 

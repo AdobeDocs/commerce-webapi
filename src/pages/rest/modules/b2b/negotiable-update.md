@@ -77,8 +77,8 @@ The `negotiated_price_type` can have one of the following values:
 
 The buyer can add, update, or delete items from the quote under the following conditions:
 
-*  The quote is in one of the following system states: `created`, `processing_by_admin`, or `submitted_by_customer`.
-*  The quote doesn't have a negotiated price.
+-  The quote is in one of the following system states: `created`, `processing_by_admin`, or `submitted_by_customer`.
+-  The quote doesn't have a negotiated price.
 
 **Sample Usage:**
 

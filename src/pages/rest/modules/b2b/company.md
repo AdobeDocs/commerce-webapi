@@ -10,7 +10,7 @@ The `Company` module allows multiple buyers that belong to the same company to v
 
 ## Related information
 
-*  [Manage company objects](company-object.md)
-*  [Manage company users](company-users.md)
-*  [Manage company roles](roles.md)
-*  [Manage company structures](company-structures.md)
+- [Manage company objects](company-object.md)
+- [Manage company users](company-users.md)
+- [Manage company roles](roles.md)
+- [Manage company structures](company-structures.md)

@@ -8,9 +8,9 @@ ee_only: true
 
 The shared catalog configuration process includes assigning categories and products to the shared catalog. To assign these items to a shared catalog, the following conditions must be met:
 
-*  The category structure must already be defined. You cannot create a new category to be included in a shared catalog. Use endpoints like `POST /V1/categories` to create a new category.
+-  The category structure must already be defined. You cannot create a new category to be included in a shared catalog. Use endpoints like `POST /V1/categories` to create a new category.
 
-*  Each category must already be populated with products. You cannot add a new product to a category to be included in a shared catalog. Use endpoints like `POST /V1/products` to create a new product.
+-  Each category must already be populated with products. You cannot add a new product to a category to be included in a shared catalog. Use endpoints like `POST /V1/products` to create a new product.
 
 ## Assign categories
 

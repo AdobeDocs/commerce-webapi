@@ -12,9 +12,9 @@ This topic describes how REST calls can be used to place items in a shopping car
 
 ## Prerequisites
 
-*  You have [installed and enabled](https://experienceleague.adobe.com/docs/commerce-admin/b2b/install.html) <Vars.sitedatavarb2b/>.
-*  You have [created a company](company-object.md).
-*  You have an integration or [admin authorization token](https://developer.adobe.com/commerce/webapi/rest/tutorials/orders/order-admin-token.html) to make calls on behalf of seller, and a [customer token](https://developer.adobe.com/commerce/webapi/rest/tutorials/orders/order-create-customer.html#get-token) to make calls on behalf of the company user.
+-  You have [installed and enabled](https://experienceleague.adobe.com/docs/commerce-admin/b2b/install.html) <Vars.sitedatavarb2b/>.
+-  You have [created a company](company-object.md).
+-  You have an integration or [admin authorization token](https://developer.adobe.com/commerce/webapi/rest/tutorials/orders/order-admin-token.html) to make calls on behalf of seller, and a [customer token](https://developer.adobe.com/commerce/webapi/rest/tutorials/orders/order-create-customer.html#get-token) to make calls on behalf of the company user.
 
 ## Prepare the order
 
@@ -1034,4 +1034,4 @@ Authorization Bearer <admin token>
 
 ## Related information
 
-*  [Order processing tutorial](../../tutorials/orders/index.md)
+-  [Order processing tutorial](../../tutorials/orders/index.md)

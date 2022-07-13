@@ -12,12 +12,12 @@ Within a company, customers may have different job roles, levels of responsibili
 
 <Vars.sitedatavarb2b/> defines the following types of resources:
 
-*  Sales
-*  Purchase Orders
-*  Negotiable quotes
-*  Company profile
-*  Company user management
-*  Company credit
+-  Sales
+-  Purchase Orders
+-  Negotiable quotes
+-  Company profile
+-  Company user management
+-  Company credit
 
 Each of these resources contains a hierarchy of other resources. When a Company Admin grants or blocks access to a resource from the store UI, the action applies to all sub-resources, unless explicitly overridden. However, if you grant or block access using web APIs, you must specify each resource individually.
 

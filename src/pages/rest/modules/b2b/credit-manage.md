@@ -8,9 +8,9 @@ ee_only: true
 
 The company credit entity operates with the following attributes:
 
-*  Credit limit
-*  Available credit
-*  Outstanding balance
+-  Credit limit
+-  Available credit
+-  Outstanding balance
 
 The credit limit is allocated by seller, while available credit and outstanding balance are automatically calculated by the system based on the buyer transactions (place an order, return) and seller's transactions (refund, reimburse, update credit limit, cancel order).
 
