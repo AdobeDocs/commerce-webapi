@@ -8,7 +8,7 @@ import * as Vars from '../../../data/vars.js';
 
 # Manage company structures
 
-<Vars.sitedatavarb2b/> allows company users to be assigned to company teams and hierarchies.
+<p><Vars.sitedatavarb2b/> allows company users to be assigned to company teams and hierarchies.</p>
 
 ## Manage company teams
 

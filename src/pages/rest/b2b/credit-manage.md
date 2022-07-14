@@ -1,7 +1,7 @@
 ---
 title: Manage company credit
 description: Learn how to manage company credit limits, available credit, and outstanding balances.
-ee_only: true
+edition: ee
 ---
 
 # Manage company credit

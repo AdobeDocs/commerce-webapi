@@ -10,7 +10,7 @@ import * as Vars from '../../../data/vars.js';
 
 Within a company, customers may have different job roles, levels of responsibility, and access to information about their company. <Vars.sitedatavarb2b/> defines several types of system resources, and the Company Admin (or an integration that operates on the behalf of the Company Admin) grants or denies access to these resources using company roles. The Company Admin has access to all resources.
 
-<Vars.sitedatavarb2b/> defines the following types of resources:
+<p><Vars.sitedatavarb2b/> defines the following types of resources:</p>
 
 -  Sales
 -  Purchase Orders
@@ -22,12 +22,6 @@ Within a company, customers may have different job roles, levels of responsibili
 Each of these resources contains a hierarchy of other resources. When a Company Admin grants or blocks access to a resource from the store UI, the action applies to all sub-resources, unless explicitly overridden. However, if you grant or block access using web APIs, you must specify each resource individually.
 
 The following table lists all the resources that are available to the customers defined with a company. To visualize the resource hierarchy, log in to a store as the Company Admin and select **Roles and Permissions**, then click the **Edit** action next to the Default User role.
-
-<p></p>
-
-<details>
-<summary><b>Click to view the table</b></summary>
-<p></p>
 
 Display name | Resource name
 --- | ---
@@ -65,8 +59,6 @@ Display name | Resource name
 &emsp; &emsp; &emsp; &emsp; Manage users and teams | Magento_Company::users_edit
 &emsp; &emsp; Company credit | Magento_Company::credit
 &emsp; &emsp; &emsp; view | Magento_Company::credit_history
-
-</details>
 
 ## Manage company roles
 
