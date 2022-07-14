@@ -1,7 +1,7 @@
 ---
 title: Integrate with the Company module
 description: Overview of the Company module
-ee_only: True
+edition: ee
 ---
 
 # Integrate with the Company Module

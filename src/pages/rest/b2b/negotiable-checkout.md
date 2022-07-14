@@ -1,7 +1,7 @@
 ---
 title: Negotiable quote checkout
 description: Convert the negotiable quote to an order after reaching an agreed price
-ee_only: true
+edition: ee
 ---
 
 import * as Vars from '../../../data/vars.js';

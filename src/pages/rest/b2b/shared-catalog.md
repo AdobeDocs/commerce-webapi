@@ -1,7 +1,7 @@
 ---
 title: Integrate with the SharedCatalog module
 description: Overview of the SharedCatalog module
-ee_only: True
+edition: ee
 ---
 
 import * as Vars from '../../../data/vars.js';

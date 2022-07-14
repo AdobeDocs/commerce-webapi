@@ -1,7 +1,7 @@
 ---
 title: Integrate with B2B using REST
 description: A description of available rest endpoints and integrations in the B2B module
-ee_only: True
+edition: ee
 ---
 
 import * as Vars from '../../../data/vars.js';

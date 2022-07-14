@@ -1,7 +1,7 @@
 ---
 title: Manage company users
 description: Manage which companies a user belongs to
-ee_only: true
+edition: ee
 ---
 
 import * as Vars from '../../../data/vars.js';

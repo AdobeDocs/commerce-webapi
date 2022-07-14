@@ -1,7 +1,7 @@
 ---
 title: Manage shared catalogs
 description: Manage public and custom shared catalogs
-ee_only: true
+edition: ee
 ---
 
 import * as Vars from '../../../data/vars.js';

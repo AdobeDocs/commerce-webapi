@@ -1,7 +1,7 @@
 ---
 title: Manage company objects
 description: Describes REST endpoints used to manage company objects
-ee_only: True
+edition: ee
 ---
 
 # Manage company objects

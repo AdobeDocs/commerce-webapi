@@ -1,7 +1,7 @@
 ---
 title: Assign categories and products to a shared catalog
-description: Add categories and products to a shared catalog
-ee_only: true
+description: Review the pre-conditions necessary for adding items to a shared catalog
+edition: ee
 ---
 
 # Assign categories and products to a shared catalog

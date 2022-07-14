@@ -1,7 +1,7 @@
 ---
 title: Update a negotiable quote
 description: Update a negotiable quote with new prices, items, or expiration dates
-ee_only: true
+edition: ee
 ---
 
 # Update a negotiable quote

@@ -1,7 +1,7 @@
 ---
 title: B2B integrations
 description: Overview of the B2B module
-ee_only: True
+edition: ee
 ---
 
 import * as Vars from '../../../data/vars.js';

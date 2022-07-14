@@ -1,7 +1,7 @@
 ---
 title: Integrate with the NegotiableQuote module
 description: An overview of the NegotiableQuote module, which allows companies to negotiate prices prior to an order
-ee_only: True
+edition: ee
 ---
 
 # Integrate with the NegotiableQuote module

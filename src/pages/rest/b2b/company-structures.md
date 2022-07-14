@@ -1,7 +1,7 @@
 ---
 title: Manage company structures
 description: Assign company users to teams and hierarchies
-ee_only: true
+edition: ee
 ---
 
 import * as Vars from '../../../data/vars.js';

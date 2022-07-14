@@ -1,7 +1,7 @@
 ---
 title: Place a negotiable quote order
-description: An overview of the REST calls needed to place items in a shopping cart, negotiate a quote, and reimbursing credit
-ee_only: true
+description: An overview of the REST calls needed to place items in a shopping cart, negotiate a quote, and reimburse credit
+edition: ee
 ---
 
 import * as Vars from '../../../data/vars.js';
