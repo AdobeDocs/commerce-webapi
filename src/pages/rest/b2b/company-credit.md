@@ -1,7 +1,7 @@
 ---
 title: Integrate with the CompanyCredit module
 description: Set up the CompanyCredit module, which allows companies to make purchases on credit.
-ee_only: True
+edition: ee
 ---
 
 import * as Vars from '../../../data/vars.js';
