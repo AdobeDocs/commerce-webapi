@@ -169,7 +169,49 @@ module.exports = [
             path: "https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html",
         },
     ],
-},
+  },
+  {
+    title: "Inventory integrations",
+    path: "/rest/inventory/",
+    pages: [
+      {
+        title: "Manage sources",
+        path: "/rest/inventory/manage-sources.md",
+      },
+      {
+        title: "Manage stocks",
+        path: "/rest/inventory/manage-stocks.md",
+      },
+      {
+        title: "Link and unlink stocks and sources",
+        path: "/rest/inventory/link-stocks-sources.md",
+      },
+      {
+        title: "Manage source items",
+        path: "/rest/inventory/manage-source-items.md",
+      },
+      {
+        title: "Perform bulk actions",
+        path: "/rest/inventory/bulk-inventory.md",
+      },
+      {
+        title: "Manage low-quantity notifications",
+        path: "/rest/inventory/manage-low-quantity.md",
+      },
+      {
+        title: "Check salable quantities",
+        path: "/rest/inventory/check-salable-quantity.md",
+      },
+      {
+        title: "Manage source selection algorithms",
+        path: "/rest/inventory/manage-source-selection.md",
+      },
+      {
+        title: "In-store pickup",
+        path: "/rest/inventory/in-store-pickup.md",
+      },
+    ],
+  },
   {
     title: "Tutorials",
     path: "/rest/tutorials/",
@@ -396,48 +438,6 @@ module.exports = [
             },
             ]
         },
-        {
-            title: "Inventory",
-            path: "/rest/modules/inventory/",
-            pages: [
-            {
-            title: "Manage sources",
-            path: "/rest/modules/inventory/manage-sources.md",
-            },
-            {
-            title: "Manage stocks",
-            path: "/rest/modules/inventory/manage-stocks.md",
-            },
-            {
-            title: "Link and unlink stocks and sources",
-            path: "/rest/modules/inventory/link-stocks-sources.md",
-            },
-            {
-            title: "Manage source items",
-            path: "/rest/modules/inventory/manage-source-items.md",
-            },
-            {
-            title: "Perform bulk actions",
-            path: "/rest/modules/inventory/bulk-inventory.md",
-            },
-            {
-            title: "Manage low-quantity notifications",
-            path: "/rest/modules/inventory/manage-low-quantity.md",
-            },
-            {
-            title: "Check salable quantities",
-            path: "/rest/modules/inventory/check-salable-quantity.md",
-            },
-            {
-            title: "Manage source selection algorithms",
-            path: "/rest/modules/inventory/manage-source-selection.md",
-            },
-            {
-            title: "In-store pickup",
-            path: "/rest/modules/inventory/in-store-pickup.md",
-            },
-        ],
-    },
     {
         title: "Sales refunds",
         path: "/rest/modules/sales/",

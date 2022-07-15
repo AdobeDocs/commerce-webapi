@@ -8,5 +8,4 @@ description: Overview of available REST Modules
 Review the following modules to learn more about the REST API:
 
 - [Catalog module](./catalog/)
-- [Inventory module](./inventory/)
 - [Sales module](./sales/)
