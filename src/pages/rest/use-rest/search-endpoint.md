@@ -39,8 +39,8 @@ The basic structure of a REST call using `V1/search` follows:
 
 ```http
 GET <host>/rest/<store_code>/V1/search?searchCriteria[requestName]=<container_name>&
-searchCriteria[filter_groups][0][filters][0][field]=<filter_name>&
-searchCriteria[filter_groups][0][filters][0][value]=<search_value>
+searchCriteria[filterGroups][0][filters][0][field]=<filter_name>&
+searchCriteria[filterGroups][0][filters][0][value]=<search_value>
 ```
 
 By default, the container name can be one of these values:
@@ -75,8 +75,8 @@ The following example performs a quick search for `digital watch`:
 
 ```http
 GET <host>/rest/<store_code>/V1/search?searchCriteria[requestName]=quick_search_container&
-searchCriteria[filter_groups][0][filters][0][field]=search_term&
-searchCriteria[filter_groups][0][filters][0][value]=digital watch
+searchCriteria[filterGroups][0][filters][0][field]=search_term&
+searchCriteria[filterGroups][0][filters][0][value]=digital watch
 ```
 
 ### Advanced searches
@@ -102,19 +102,19 @@ The following example get products within a price range:
 
 ```http
 GET <host>/rest/<store_code>/V1/search?searchCriteria[requestName]=advanced_search_container&
-searchCriteria[filter_groups][0][filters][0][field]=price.from&
-searchCriteria[filter_groups][0][filters][0][value]=2&
-searchCriteria[filter_groups][0][filters][1][field]=price.to&
-searchCriteria[filter_groups][0][filters][1][value]=3
+searchCriteria[filterGroups][0][filters][0][field]=price.from&
+searchCriteria[filterGroups][0][filters][0][value]=2&
+searchCriteria[filterGroups][0][filters][1][field]=price.to&
+searchCriteria[filterGroups][0][filters][1][value]=3
 ```
 
 The following example gets products where the SKU might contain a specified string:
 
 ```http
 GET <host>/rest/<store_code>/V1/search?searchCriteria[requestName]=advanced_search_container&
-searchCriteria[filter_groups][0][filters][0][field]=sku&
-searchCriteria[filter_groups][0][filters][0][value]=shirt&
-searchCriteria[filter_groups][0][filters][0][condition_type]=like
+searchCriteria[filterGroups][0][filters][0][field]=sku&
+searchCriteria[filterGroups][0][filters][0][value]=shirt&
+searchCriteria[filterGroups][0][filters][0][condition_type]=like
 ```
 
 ### Catalog view searches
@@ -134,9 +134,9 @@ The following example gets all products in a given category:
 
 ```http
 GET <host>/rest/<store_code>/V1/search?searchCriteria[requestName]=catalog_view_container&
-searchCriteria[filter_groups][0][filters][0][field]=category_ids&
-searchCriteria[filter_groups][0][filters][0][value][0]=4&
-searchCriteria[filter_groups][0][filters][0][condition_type]=eq
+searchCriteria[filterGroups][0][filters][0][field]=category_ids&
+searchCriteria[filterGroups][0][filters][0][value][0]=4&
+searchCriteria[filterGroups][0][filters][0][condition_type]=eq
 ```
 
 ## Build queries for V1/products
