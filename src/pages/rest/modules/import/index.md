@@ -6,7 +6,7 @@ description: Import entities into Adobe Commerce using Rest API
 --- 
 ## Import API
 
-The  `StartImportInteface` service provides the means to efficiently import entities in Magento using a single API call. 
+The  `StartImportInteface` service provides the means to efficiently import entities into Adobe Commerce and  Magento Open Source using a single API call. 
 
 The `POST /rest/default/V1/import/csv` call allows import of the following entities:
 
@@ -32,11 +32,11 @@ POST /rest/default/V1/import/csv
 
 |Name | Description  | Format | Requirements|
 |-----|--------------|--------|---------------------------------------------------------------------------------|
-|`entity`|Type of entity to be imported| string | Required for determining type of entity being imported|
-|`behavior` | Import Behavior | string | Required for determining if entities are being added/updated,replaced or deleted |
-|`validationStrategy` | Strategy to use when entities are invalid | string | Required for determining validation strategy|
-|`allowedErrorCount` | No. of errors before import is canceled | string | Required for canceling import after certain number of invalid rows|
-|`csvData` | Base64 encoded string containing csv data | string | Csv data is encoded in base64 format|
+|`entity` | The type of entity to be imported| string | Required. One of .... |
+|`behavior` | The action  to perform | string | Required. One of .... |
+|`validationStrategy` | Strategy to use when entities are invalid | string | Required. One of ....|
+|`allowedErrorCount` | The maximum number of errors that can occur until import is canceled | string | Required |
+|`csvData` | Base64 encoded string containing CSV data | string | Required |
 
 **Sample Usage:**
 
@@ -65,7 +65,7 @@ POST /rest/default/V1/import/csv
 
 ```
 
-#### Response
+**Response:**
 
 ```json
 [
