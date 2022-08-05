@@ -1,12 +1,14 @@
 ---
+title: ImportCsv API
+description: Import entities into Adobe Commerce using REST.
+--- 
 
-title: ImportCsv API <br/>
-description: Import entities into Adobe Commerce using Rest API. This API allows you to execute append, replace, update and delete behaviors on entities. 
+This API allows you to execute append, replace, update and delete behaviors on entities. 
 The endpoint accepts CSV data in base64 encoded format. You can also choose the validation strategy with option to skip rows with invalid data format or
 to stop the import process altogether when first invalid row is encountered. There is also a field to define the maximum no. of errors encountered before the 
 import processing is halted. In case an error is encountered during row validation of CSV data, the import process is terminated and the valid rows are not 
 processed either. 
---- 
+
 ## Import API
 
 The  `StartImportInteface` service provides the means to efficiently import entities into Adobe Commerce using a single API call. 
