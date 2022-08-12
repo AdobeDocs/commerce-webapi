@@ -13,15 +13,15 @@ module.exports = [
         pages: [
             {
                 title: "Admin REST endpoints",
-                path: "https://magento.redoc.ly/2.4.4-admin/",
+                path: "https://magento.redoc.ly/2.4.5-admin/",
             },
             {
                 title: "Customer REST endpoints",
-                path: "https://magento.redoc.ly/2.4.4-customer/",
+                path: "https://magento.redoc.ly/2.4.5-customer/",
             },
             {
                 title: "Guest REST endpoints",
-                path: "https://magento.redoc.ly/2.4.4-guest/",
+                path: "https://magento.redoc.ly/2.4.5-guest/",
             },
         ],
         },       
