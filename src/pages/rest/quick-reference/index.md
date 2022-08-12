@@ -10,9 +10,9 @@ The schema files this tool uses represent the state of the code at the time the 
 
 Use the links below to access the corresponding REST endpoints:
 
-- [Admin REST endpoints](https://magento.redoc.ly/2.4.4-admin/)
-- [Customer REST endpoints](https://magento.redoc.ly/2.4.4-customer/)
-- [Guest REST endpoints](https://magento.redoc.ly/2.4.4-guest/)
+- [Admin REST endpoints](https://magento.redoc.ly/2.4.5-admin/)
+- [Customer REST endpoints](https://magento.redoc.ly/2.4.5-customer/)
+- [Guest REST endpoints](https://magento.redoc.ly/2.4.5-guest/)
 
 <!-- Link Definitions -->
 
