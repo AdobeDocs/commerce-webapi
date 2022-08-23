@@ -11,7 +11,7 @@ A sales channel can only be assigned to one stock.
 
 The `stock_id` of the default stock is `1`.  You cannot delete or add sources to the default stock, but you can perform these actions with custom stocks.
 
-For more information about stock, see [Inventory Management overview](https://devdocs.magento.com/guides/v2.4/inventory/index.html).
+For more information about stock, see [Inventory Management overview](https://developer.adobe.com/commerce/webapi/rest/inventory/).
 
 ## Create the stock
 
