@@ -170,4 +170,4 @@ Proceed to the authentication method for your preferred client:
 
 *  [Configure services as web APIs](https://developer.adobe.com/commerce/php/development/components/web-api/services/)
 
-*  [Create an ACL rule](https://devdocs.magento.com/guides/v2.4/ext-best-practices/tutorials/create-access-control-list-rule.html)
+*  [Create an ACL rule](https://developer.adobe.com/commerce/php/tutorials/backend/create-access-control-list-rule/)
