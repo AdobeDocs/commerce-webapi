@@ -1,21 +1,21 @@
 {
   "private": true,
-  "name": "dev-site-documentation-template",
+  "name": "commerce-webapi",
   "version": "1.0.0",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AdobeDocs/dev-site-documentation-template"
+    "url": "https://github.com/AdobeDocs/commerce-webapi"
   },
   "author": {
     "name": "Stephan Ringel",
     "url": "https://github.com/icaraps"
   },
   "dependencies": {
-    "@adobe/gatsby-theme-aio": "^4.2.2",
-    "gatsby": "^4.13.0",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "@adobe/gatsby-theme-aio": "^4.6.2",
+    "gatsby": "4.22.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "remark-cli": "^10.0.1",
