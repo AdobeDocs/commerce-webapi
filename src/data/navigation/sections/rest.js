@@ -444,5 +444,9 @@ module.exports = [
     },
   ],
   },
+  {
+    title: "Attributes",
+    path: "/rest/attributes/"
+  },
   ];
   
