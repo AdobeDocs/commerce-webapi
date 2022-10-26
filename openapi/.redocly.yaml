@@ -16,6 +16,8 @@ apis:
     root: ./openapi/customer-schema-2.3.7.yaml
   Commerce (Guest)@2.3.7:
     root: ./openapi/guest-schema-2.3.7.yaml
+extends:
+    - minimal
 features.openapi:
   pagination: section
   hideHostname: true
