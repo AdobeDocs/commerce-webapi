@@ -1,23 +1,23 @@
 # See https://docs.redoc.ly/cli/configuration/ for more information.
 
-organization: magento
+organization: adobe
+extends:
+    - minimal
 apis:
   Commerce (Admin)@2.4.5:
-    root: ./openapi/admin-schema-2.4.5.yaml
+    root: openapi/admin-schema-2.4.5.yaml
     labels:
       - main
   Commerce (Customer)@2.4.5:
-    root: ./openapi/customer-schema-2.4.5.yaml
+    root: openapi/customer-schema-2.4.5.yaml
   Commerce (Guest)@2.4.5:
-    root: ./openapi/guest-schema-2.4.5.yaml
+    root: openapi/guest-schema-2.4.5.yaml
   Commerce (Admin)@2.3.7:
-    root: ./openapi/admin-schema-2.3.7.yaml
+    root: openapi/admin-schema-2.3.7.yaml
   Commerce (Customer)@2.3.7:
-    root: ./openapi/customer-schema-2.3.7.yaml
+    root: openapi/customer-schema-2.3.7.yaml
   Commerce (Guest)@2.3.7:
-    root: ./openapi/guest-schema-2.3.7.yaml
-extends:
-    - minimal
+    root: openapi/guest-schema-2.3.7.yaml
 features.openapi:
   pagination: section
   hideHostname: true
