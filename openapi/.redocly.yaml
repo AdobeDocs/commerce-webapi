@@ -28,6 +28,7 @@ features.openapi:
   showExtensions: true
   nativeScrollbars: true
   ctrlFHijack: true
+  htmlTemplate: template/template.hbs
   scrollYOffset: .site-nav
   theme:
     typography:
