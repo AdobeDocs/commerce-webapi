@@ -1,6 +1,6 @@
 # See https://docs.redoc.ly/cli/configuration/ for more information.
 
-organization: adobe
+organization: adobe developer
 extends:
     - minimal
 apis:
