@@ -87,7 +87,7 @@ jobs:
 
       - name: Check internal links
         with:
-          cmd: yarn test:links
+          cmd: test:links
 
       - name: Build site
         if: ${{ success() }}
