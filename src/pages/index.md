@@ -5,7 +5,7 @@ description: Learn about using REST and GraphQL with Adobe Commerce and Magento 
 
 <Hero slots="image, heading, text"/>
 
-![Commerce Web APIs](_images/home-bg.jpeg)
+![Commerce Web APIs](_images/home-b.jpeg)
 
 # Commerce Web APIs
 
