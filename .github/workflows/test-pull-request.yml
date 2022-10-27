@@ -86,7 +86,7 @@ jobs:
           cmd: install
 
       - name: Check internal links
-        run: test:links
+        run: npm run test:links
 
       - name: Build site
         if: ${{ success() }}
