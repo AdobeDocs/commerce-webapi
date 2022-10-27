@@ -5,19 +5,19 @@ extends:
     - minimal
 apis:
   Commerce(Admin)@2.4.5:
-    root: openapi/admin-schema-2.4.5.yaml
+    root: src/openapi/admin-schema-2.4.5.yaml
     labels:
       - main
   Commerce(Customer)@2.4.5:
-    root: openapi/customer-schema-2.4.5.yaml
+    root: src/openapi/customer-schema-2.4.5.yaml
   Commerce(Guest)@2.4.5:
-    root: openapi/guest-schema-2.4.5.yaml
+    root: src/openapi/guest-schema-2.4.5.yaml
   Commerce(Admin)@2.3.7:
-    root: openapi/admin-schema-2.3.7.yaml
+    root: src/openapi/admin-schema-2.3.7.yaml
   Commerce(Customer)@2.3.7:
-    root: openapi/customer-schema-2.3.7.yaml
+    root: src/openapi/customer-schema-2.3.7.yaml
   Commerce(Guest)@2.3.7:
-    root: openapi/guest-schema-2.3.7.yaml
+    root: src/openapi/guest-schema-2.3.7.yaml
 features.openapi:
   pagination: section
   hideHostname: true
