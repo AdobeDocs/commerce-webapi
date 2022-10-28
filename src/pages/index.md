@@ -1,6 +1,6 @@
 ---
 title: Commerce Web API
-description: Learn about using REST and GraphQL with Commerce APIs
+description: Learn about using REST and GraphQL with Adobe Commerce and Magento Open Source APIs.
 ---
 
 <Hero slots="image, heading, text"/>
