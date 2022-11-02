@@ -71,4 +71,4 @@ Log in to [Admin](https://glossary.magento.com/admin). Click **Sales** > **Credi
 *  [Getting Started with Adobe Commerce Web APIs](/get-started/)
 *  [Create a configurable product Tutorial](/rest/tutorials/configurable-product/)
 *  [REST API Reference Overview](/rest/)
-*  [REST API documentation](https://magento.redoc.ly/)
+*  [REST API documentation](../../quick-reference/index.md)

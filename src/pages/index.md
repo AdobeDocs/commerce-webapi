@@ -17,7 +17,7 @@ The Commerce Web APIs allow you to access and interact with your, integrate thir
 
 *  [PHP Developer Guide](https://developer.adobe.com/commerce/php/development)
 *  [Configuring a Service as a Web API](https://developer.adobe.com/commerce/php/development/components/web-api/services/)
-*  [REST API Reference](https://magento.redoc.ly/2.4.5-admin/)
+*  [REST API Reference](rest/quick-reference/index.md)
 
 ## Overview
 
