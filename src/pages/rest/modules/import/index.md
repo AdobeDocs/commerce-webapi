@@ -14,18 +14,20 @@ The `POST /rest/<store_view_code>/V1/import/csv` endpoint allows you to use REST
 
 Your source data must be in the order and format Commerce expects. To understand the requirements of each import entity, go to the Import page in the Admin, select an entity type from the drop-down menu, then click **Download Sample File**. The endpoint accepts CSV data in base64 encoded format. Because you control the conversion of a file or data into base64, you do not need to escape special characters before the import.
 
-Since the API is used for importing base64 encoded CSV data, the endpoint expects the data uses ',' for the Field and Multiple Value Separators. 
-Import will fail if CSV uses any other special character for field and multiple value separators.
+Since the API is used for importing base64 encoded CSV data, the endpoint expects the data to use commas for the field and multiple value separators. 
+Import fails if CSV uses any other special character as separators.
 
 You must specify a validation strategy. You can skip rows that have an invalid data format, or
 you can stop the import process when the system first encounters an invalid row.
+Depending on the validation strategy chosen, the API will complete or cancel the Import Process.
 
-Depending on the validation strategy chosen, the API will complete or cancel the Import Process. 
-When Validation Strategy is set as `validation-stop-on-errors` and a single row data is invalid, the API cancels the Import and returns a message describing the error encountered in the first invalid row along with its corresponding row number.
-When Validation Strategy is set as `validation-skip-errors`, the API imports the valid rows as long as the total number of errors in the CSV data do not exceed the value set in `allowedErrorCount` field. 
+*  When Validation Strategy is set as `validation-stop-on-errors` and a single row data is invalid, the API cancels the Import and returns a message describing the error encountered in the first invalid row along with its corresponding row number.
+
+*  When Validation Strategy is set as `validation-skip-errors`, the API imports the valid rows as long as the total number of errors in the CSV data do not exceed the value set in `allowedErrorCount` field.
+
 If the number of errors exceed the field value of `allowedErrorCount`, the import is canceled (valid rows aren't processed either) and the first encountered error along with its row number is returned in response.
 
-The `allowedErrorCount` field defines the maximum number of errors encountered before the import processing is halted. 
+The `allowedErrorCount` field defines the maximum number of errors encountered before the import processing is halted.
 
 ## Import API
 
@@ -66,10 +68,10 @@ POST /rest/<store_view_code>/V1/import/csv
 ```json
 {
   "source":{
-    "entity":"advanced_pricing", 
+    "entity":"advanced_pricing",
     "behavior":"append",
-    "validationStrategy": "validation-stop-on-errors", 
-    "allowedErrorCount":"10", 
+    "validationStrategy": "validation-stop-on-errors",
+    "allowedErrorCount":"10",
     "csvData":"c2t1LHRpZXJfcHJpY2Vfd2Vic2l0ZSx0aWVyX3ByaWNlX2N1c3RvbWVyX2dyb3VwLHRpZXJfcHJpY2VfcXR5LHRpZXJfcHJpY2UsdGllcl9wcmljZV92YWx1ZV90eXBlClNpbXBsZTEsIkFsbCBXZWJzaXRlcyBbVVNEXSIsIk5PVCBMT0dHRUQgSU4iLDEuMDAwMCwyNTAuMDAwMDAwLEZpeGVk"
   }
 }
@@ -78,18 +80,21 @@ POST /rest/<store_view_code>/V1/import/csv
 **Response:**
 
 When Import is successful, the API response will contain the number of entities that were successfully imported.
+
 ```json
 [
   "Entities Processed: 1"
 ] 
 ```
+
 **Payload 2:**
 
-This Sample payload contains encoded CSV data with 2 valid and one invalid row.
+This sample payload contains encoded CSV data with two valid rows and one invalid row.
+
 ```json
 {
   "source": {
-    "entity":"customer", 
+    "entity":"customer",
     "behavior":"add_update",
     "validationStrategy": "validation-stop-on-errors",
     "allowedErrorCount":"10",
@@ -97,6 +102,7 @@ This Sample payload contains encoded CSV data with 2 valid and one invalid row.
   }
 }
 ```
+
 When Import fails, the response contains the row number and a message describing cause of failure for first invalid row encountered.
 
 **Response:**
@@ -109,7 +115,8 @@ When Import fails, the response contains the row number and a message describing
 
 **Payload 3:**
 
-In this example, the CSV payload contains 3 rows of data and 1 of them is invalid. Due to the selected validation strategy and `allowedErrorCount` value, only the valid rows are imported.   
+In this example, the CSV payload contains three rows of data, and one of them is invalid. Due to the selected validation strategy and `allowedErrorCount` value, only the valid rows are imported.
+
 ```json
 {
   "source": {
@@ -121,6 +128,7 @@ In this example, the CSV payload contains 3 rows of data and 1 of them is invali
   }
 }
 ```
+
 **Response:**
 
 ```json
