@@ -438,6 +438,10 @@ module.exports = [
             },
             ]
         },
+        {
+            title:"Import",
+            path:"/rest/modules/import/"
+        },
     {
         title: "Sales refunds",
         path: "/rest/modules/sales/",
