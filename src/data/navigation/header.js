@@ -11,8 +11,8 @@ module.exports = [
       title: "REST",
       path: "/rest/",
     },
-    // {
-    //   title: "GraphQL",
-    //   path: "/graphql/",
-    // },
+    {
+      title: "GraphQL",
+      path: "/graphql/",
+    },
   ];
