@@ -1,15 +1,15 @@
 module.exports = [
   {
     title: "Introduction",
-    path: "/graphql/index.md",
+    path: "/graphql/",
   },
   {
     title: "Schema",
-    path: "/graphql/schema/index.md",
+    path: "/graphql/schema/",
     pages: [
       {
         title: "Catalog Service",
-        path: "/graphql/schema/catalog-service/index.md",
+        path: "/graphql/schema/catalog-service/",
         pages: [
           {
             title: "Queries",
@@ -17,21 +17,20 @@ module.exports = [
             pages: [
               {
                 title: "products",
-                path: "/graphql/schema/catalog-service/products.md"
+                path: "/graphql/schema/catalog-service/products"
               },
               {
                 title: "productSearch",
-                path: "/graphql/schema/catalog-service/product-search.md"
+                path: "/graphql/schema/catalog-service/product-search"
               },
               {
                 title: "refineProduct",
-                path: "/graphql/schema/catalog-service/refine-product.md"
-              }
+                path: "/graphql/schema/catalog-service/refine-product"
+              },
             ],
           },
         ],
       },
-
     ],
   }
 ];
