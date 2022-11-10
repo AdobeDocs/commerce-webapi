@@ -1,4 +1,3 @@
 ---
-frameSrc: /spectaql.html
-frameHeight: 111px
+frameSrc: https://adobedocs.github.io/commerce-webapi/spectaql
 ---
