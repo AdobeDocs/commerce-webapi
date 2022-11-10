@@ -31,6 +31,26 @@ module.exports = [
           },
         ],
       },
+      {
+        title: "Live Search",
+        path: "/graphql/schema/live-search/",
+        pages: [
+          {
+            title: "Queries",
+            path: "/graphql/schema/live-search/index.md",
+            pages: [
+              {
+                title: "attributeMetadata",
+                path: "/graphql/schema/live-search/attribute-metadata"
+              },
+              {
+                title: "productSearch",
+                path: "/graphql/schema/live-search/product-search"
+              },
+            ],
+          },
+        ],
+      },
     ],
-  }
+  },
 ];

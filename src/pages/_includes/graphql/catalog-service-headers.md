@@ -6,4 +6,3 @@ Header | Description
 `Magento-Store-View-Code`| The code assigned to the active store view. For example, `default`.
 `Magento-Website-Code`| The code assigned to the website associated with the active store view. For example, `base`.
 `X-Api-Key` |  A unique key that is generated during the onboarding process.
-
