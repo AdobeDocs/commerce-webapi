@@ -1,6 +1,7 @@
 ---
 title: productSearch query
 edition: ee
+description: Describes how to construct and use the Live Search productSearch query.
 ---
 
 # productSearch query

@@ -1,6 +1,7 @@
 ---
 title: refineProduct query
 edition: ee
+description: Describes how to construct and use the Catalog Service refineProduct query.
 ---
 
 # refineProduct query

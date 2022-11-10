@@ -1,6 +1,7 @@
 ---
 title: Catalog Service for Adobe Commerce
 edition: ee
+description: Learn how Catalog Service implements GraphQL.
 ---
 
 # Catalog Service for Adobe Commerce

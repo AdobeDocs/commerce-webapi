@@ -1,6 +1,7 @@
 ---
 title: attributeMetadata query
 edition: ee
+description: Describes how to construct and use the Live Search attributeMetadata query.
 ---
 
 # attributeMetadata query
