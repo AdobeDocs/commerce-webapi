@@ -14,7 +14,8 @@
   },
   "devDependencies": {
     "remark-cli": "^10.0.1",
-    "remark-validate-links": "^11.0.2"
+    "remark-validate-links": "^11.0.2",
+    "spectaql": "^1.5.6"
   },
   "scripts": {
     "start": "gatsby build && gatsby serve",
@@ -24,7 +25,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test:links": "remark src/pages --ignore-pattern src/pages/graphql,src/pages/_includes --quiet --frail"
+    "test:links": "remark src/pages --quiet --frail",
+    "generate:graphql": "spectaql --one-file --target-dir static/ --target-file graphql-api.html spectaql/config.yml"
   },
   "remarkConfig": {
     "plugins": [

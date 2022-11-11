@@ -1,0 +1,414 @@
+# This config will not run "as-is" and will need to be modified. You can see a minimal working
+# config in /examples/config.yml
+
+spectaql:
+  # Optional path to an image to use as the logo in the top-left of the output
+  # logoFile: path/to/logo.png
+  # Optional boolean indicating whether to preserve the filename of the logo provided.
+  # If false, the logo name will default to "logo"
+  # preserveLogoName: false
+  # Control the height of your logo here. Can be useful if your logo is SVG or an
+  # inappropriate size.
+  #
+  # Default: None; No "height" property will be set on the logo
+  # logoHeightPx: 18
+
+  # Optional path to an image to use as a favicon for the site when it's not embedded
+  # faviconFile: path/to/favicon.png
+  # Optional boolean indicating whether to preserve the filename of the faviconFile provided.
+  # If false, the favicon name will default to "favicon"
+  # preserveFaviconName: false
+
+  # Optional string specifying a path to a theme directory to use for your build.
+  #
+  # Themes rely on a directory structure convention that overlays your customizations and enhancements
+  # on top of the default theme provided by SpectaQL. See /examples/themes for more.
+  #
+  # Also, a few built-in themes can be used by specifying them by name:
+  # "default": Our default theme
+  # "basic": Outputs the same HTML structure as the "default" theme, but with minimal CSS styling
+  # "spectaql": Outputs the same HTML structure as the "default" theme, but with some CSS enhancements
+  #
+  # Default: "default"
+  # themeDir: path/to/theme
+
+  # If you're embedding SpectaQL's output and you've got something like a Nav Bar that
+  # gets in the way, you can use this value to adjust the scroll offset
+  #
+  # Default: None; No "scroll-padding-top" style will be applied.
+  scrollPaddingTopPx: 0
+
+  # If an interpolated reference is not found, should SpectaQL throw an error? Otherwise a warning
+  # will be logged.
+  #
+  # Default: true
+  errorOnInterpolationReferenceNotFound: true
+
+  # Would you like to display all the servers listed in the servers area of your config? Otherwise
+  # it will try to display just the one marked "production: true".
+  #
+  # Default: false
+  displayAllServers: false
+
+  # Would you like the "run" function to resolve with an object containing the output as a string?
+  # Useful if you are using SpectaQL as a dependency (as opposed to running the binary executable)
+  #
+  # Default: true
+  resolveWithOutput: true
+
+introspection:
+  ##############################################
+  # These options specify where/how to get the information required to generate your
+  # documentation.
+  #
+  # Each of these have corresponding CLI options where they can be expressed instead of here.
+  # The CLI options will take precedence over what is in your config file
+  #
+  # 1 and only 1 of the following options must be provided:
+  #
+
+  # File containing a GraphQL Schema Definition written in SDL.
+  # Can also pass an array of paths (or glob supported by @graphql-tools/load-files)
+  # like so:
+  # schemaFile:
+  #   - path/to/schema/part1.gql
+  #   - path/to/schema/part2.gql
+  # schemaFile: schema.graphql
+
+  # File containing Introspection Query response in JS module export, or JSON format
+  introspectionFile: spectaql/schema.json
+
+  # URL of the GraphQL endpoint to hit if you want to generate the documentation based on live Introspection Query results
+  # NOTE: If not using introspection.url OR servers[], you need to provide x-url below
+  # url: http://magento2.127.0.0.1.nip.io/pub/graphql/
+
+  #
+  #
+  ##############################################
+
+  # If using the "url" option above, any headers (such as Authorization) can be added here. This
+  # can also be added via the CLI options
+  # headers:
+    # Authorization: Bearer s3cretT0k2n
+
+  # Some helpful options for those who are an "SDL-first" shop and/or want to get your metadata into
+  # SpectaQL during the SDL ingestion.
+  spectaqlDirective:
+    # Boolean indicating whether to enable and process the @spectaql directive
+    #
+    # Default: true
+    # enable: true
+
+    # String indicating the name to use for the SpectaQL directive, e.g. "@spectaql"
+    # This should be inconsequential in the end since it should be removed
+    # from your resulting Schema by SpectaQL
+    #
+    # Default: 'spectaql'
+    # directiveName: 'spectaql'
+
+    # String indicating the name to use for the Type used in the "options" array that can be passed
+    # to the SpectaQL directive.
+    # This should be inconsequential in the end since it should be removed
+    # from your resulting Schema by SpectaQL
+    #
+    # Default: 'SpectaQLOption'
+    # optionsTypeName: 'SpectaQLOption'
+
+  #
+  #
+  ##############################################
+
+  ##############################################
+  # These options are for random display or augmentation related things that didn't
+  # really fit anywhere else.
+  #
+
+  # Whether you would like to strip any trailing commas from the descriptions to keep
+  # things fresh and clean.
+  #
+  # Default: false
+  removeTrailingPeriodFromDescriptions: false
+
+  # What manipulation of the query/mutation/subscription name would you like to perform to determine
+  # the name in query examples? Possible values:
+  #
+  # - none: will use same exact name as query)
+  # - capitalizeFirst: will capitalize the first letter and leave the rest.
+  # - capitalize: will capitalize the first letter and convert the rest to lower case.
+  # - camelCase
+  # - snakeCase
+  # - upperCase: all letters to upper case.
+  # - lowerCase: all letters to lower case.
+  queryNameStrategy: none
+
+  # When generating a Query or Mutation example, to what maximum depth should any nested fields
+  # be represented before a fragment placeholder is rendered?
+  #
+  # Default: 1
+  fieldExpansionDepth: 1
+
+  #
+  #
+  ##############################################
+
+
+  ##############################################
+  # These options specify how, where and if any "metadata" information is to be added to your Introspection
+  # Query results IF it is not already present. If you are not dealing with metadata, or you have already
+  # baked it into your Introspection Query results somehow (on the server-side, for example) then you
+  # can ignore these options completely.
+  #
+
+  # File that contains your metadata data in JS module export, or JSON format
+  # metadataFile: path/to/metadata.js[on]
+
+  # The path to a key from which to read the documentation-related metadata at each level of your metadata file.
+  # Defaults to 'documentation', but in case you use a different name, or have a complex/nested metadata structure, you can
+  # specify it here.
+  #
+  # Default: documentation
+  # metadatasReadPath: documentation
+
+  # The metadata that was just read from the above key path will be woven into your Introspection Query results.
+  # This option specifies the key path where that data will be written at each level.
+  #
+  #   ***
+  #   In order to ensure that the metadata you've written can be found later on down the line, this value
+  #   should be set the same as the "metadatasPath" option below
+  #   ***
+  #
+  # Defaults to 'documentation', but in case you have a complex/nested metadata structure, you can
+  # specify it here.
+  #
+  # Default: documentation
+  # metadatasWritePath: documentation
+
+  #
+  #
+  ##############################################
+
+  ##############################################
+  # These options specify how, where and if any "metadata" information is to be found, or
+  # used/ignored when processing your documentation.
+  #
+
+  # The key path in your Introspection Query results where metadata supported by this library can
+  # be found.
+  # Defaults to 'documentation', but in case you have a complex/nested metadata structure, you can
+  # specify it here.
+  #
+  # Default: documentation
+  # metadatasPath: documentation
+
+  # Whether or not to look for and use metadata in your data. If turned off, metadata will be ignored
+  # even if it's there
+  #
+  # Default: true
+  # metadatas: true
+
+  #
+  #
+  ##############################################
+
+
+  # This allows you to specify a custom path to a JS module to handle the generation of
+  # example values for your schema.
+  # Default: none
+  # dynamicExamplesProcessingModule: path/to/examples.js
+
+  ##############################################
+  # These options specify what the default behavior should be
+  # (regarding documented vs non-documented) in the absence of
+  # metadata directives on a given item
+
+  # Whether to document any Queries at all, in the absence of a metadata directive
+  # Default: true
+  queriesDocumentedDefault: true
+  # Whether to document an individual Query, in the absence of a metadata directive
+  # Default: true
+  queryDocumentedDefault: true
+  # Whether to document a Query Argument, in the absence of a metadata directive
+  # Default: true
+  queryArgDocumentedDefault: true
+  # Hide any Queries with undocumented return types so as not to reference something
+  # that seemingly does not exist.
+  # Default: true
+  hideQueriesWithUndocumentedReturnType: true
+
+  # Whether to document any Mutations at all, in the absence of a metadata directive
+  # Default: true
+  mutationsDocumentedDefault: true
+  # Whether to document an individual Mutation, in the absence of a metadata directive
+  # Default: true
+  mutationDocumentedDefault: true
+  # Whether to document a Mutation Argument, in the absence of a metadata directive
+  # Default: true
+  mutationArgDocumentedDefault: true
+  # Hide any Mutations with undocumented return types so as not to reference something
+  # that seemingly does not exist.
+  # Default: true
+  hideMutationsWithUndocumentedReturnType: true
+
+  # Whether to document any Subscriptions at all
+  # Default: true
+  subscriptionsDocumentedDefault: true
+  # Whether to document an individual Subscription, in the absence of a metadata directive
+  # Default: true
+  subscriptionDocumentedDefault: true
+  # Whether to document a Subscription Argument, in the absence of a metadata directive
+  # Default: true
+  subscriptionArgDocumentedDefault: true
+  # Hide any Subscriptions with undocumented return types so as not to reference something
+  # that seemingly does not exist.
+  # Default: true
+  hideSubscriptionsWithUndocumentedReturnType: true
+
+  # Hide any Types that are not used anywhere in your schema after other things have been hidden.
+  # Default: true
+  hideUnusedTypes: true
+
+  # Whether to document any Types at all
+  # Default: true
+  objectsDocumentedDefault: true
+  # Whether to document an individual Type, in the absence of a metadata directive
+  # Default: true
+  objectDocumentedDefault: true
+
+  # Whether to document any Input Object types at all
+  # Default: true
+  inputsDocumentedDefault: true
+  # Whether to document an individual Input Object, in the absence of a metadata directive
+  # Default: true
+  inputDocumentedDefault: true
+
+  # Whether to document any Enums at all
+  # Default: true
+  enumsDocumentedDefault: true
+  # Whether to document an individual Enum, in the absence of a metadata directive
+  # Default: true
+  enumDocumentedDefault: true
+
+  # Whether to document any Unions at all
+  # Default: true
+  unionsDocumentedDefault: true
+  # Whether to document an individual Union, in the absence of a metadata directive
+  # Default: true
+  unionDocumentedDefault: true
+  # Hide Union possibleTypes that are not documented so as not to reference something
+  # that seemingly does not exist.
+  # Default: true
+  hideUnionTypesOfUndocumentedType: true
+
+  # Whether to document an individual Field, in the absence of a metadata directive
+  # Default: true
+  fieldDocumentedDefault: true
+  # Hide any fields of undocumented types so as not to reference something
+  # that seemingly does not exist.
+  # Default: true
+  hideFieldsOfUndocumentedType: true
+
+  # Whether to document an individual Input Field, in the absence of a metadata directive
+  # Default: true
+  inputFieldDocumentedDefault: true
+  # Hide any inputFields of undocumented types so as not to reference something
+  # that seemingly does not exist.
+  # Default: true
+  hideInputFieldsOfUndocumentedType: true
+
+  # Whether to document an individual Argument, in the absence of a metadata directive
+  # Default: true
+  argDocumentedDefault: true
+  # Hide any args of undocumented types so as not to reference something
+  # that seemingly does not exist.
+  # Default: true
+  hideArgsOfUndocumentedType: true
+
+  #
+  #
+  ##############################################
+
+extensions:
+  # Utilize the 'graphql-scalars' library when generating examples for scalars it supports that
+  # do not have an example already set via some other method. Usually this is a good
+  # thing to have on, but it is possible to turn it off.
+  # Default: true
+  graphqlScalarExamples: true
+
+servers:
+  # NOTE: If not using introspection.url OR servers[], you need to provide x-url
+
+  # same format as for OpenAPI Specification https://swagger.io/specification/#server-object
+
+  - url: https://<your store>/graphql
+    description: Production Server
+    # Indicates to use this server's URL as the typical GraphQL request base in the documentation
+    # If no server entries have this indicator, the first server's URL will be used.
+    # If no server entries are defined at all, the Introspection URL will be used.
+    production: true
+    # A place to list any Headers for your GraphQL API calls
+    # headers:
+    #   - name: Authorization
+    #     example: Bearer <YOUR_TOKEN_HERE>
+    #     comment: Your API token from the dashboard. Must be included in all API calls.
+
+info:
+  # Tries to adhere to OpenAPI Specification https://swagger.io/specification/#info-object
+  # Will be used to populate the Welcome section of the output
+
+  ##############################################
+  # Introduction area flags
+  #
+
+  # Set to true to do no Introduction area rendering at all. Supersedes the below options
+  # Default: false
+  x-hideIntroduction: false
+  # Set to true to not render a friendly Welcome section based on the description in this area
+  # Default: false
+  x-hideWelcome: false
+  # Set to true to not render your intro items
+  # Default: false
+  x-hideIntroItems: false
+
+  # Set to true to not render the deprecated label
+  # Default: false
+  x-hideIsDeprecated: false
+  # Set to true to not render the deprecation reason
+  # Default: false
+  x-hideDeprecationReason: false
+
+  #
+  ##############################################
+
+  description: GraphQL API for the Adobe Commerce with B2B
+  version: 2.4.5
+  title: Adobe Commerce GraphQL
+  # This is non-standard and optional. If omitted, will use "title". Also only relevant
+  # when building non-embedded.
+  x-htmlTitle: Your HTML page title here
+  termsOfService: 'https://www.adobe.com/legal/terms.html'
+  contact:
+    name: Commerce Help Center
+    url: https://support.magento.com/hc/en-us
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+
+  # A non-standard array of items to display in your Introduction Area
+  x-introItems:
+    # Can be a Title (for the Nav panel) + URL to simply add a link to somewhere
+    - title: More WebAPI documentation
+      url: https://developer.adobe.com/commerce/webapi/
+    # Can be a Title (for the Nav panel) + description (for the Content panel)
+    - title: Contributing
+      description: This page is auto-generated from the GraphQL schema obtained from the source code.
+        For any issues and updates, contribute to the corresponding module directly.
+    # Can be a Title (for the Nav panel) + file that gets loaded (for the Content panel)
+    # - title: Content from file that supports markdown
+    #   file: ./readme.md
+
+  # If you really want to hide the "Documentation by" at the bottom of your output, you can do so here
+  # Default: false
+  x-hidePoweredBy: false
+
+  # If not using introspection.url OR servers[], you need to provide x-url
+  # x-url: https://yoursite.com/graphql
