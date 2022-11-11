@@ -6,7 +6,7 @@ This SpectaQL configuration generates a GraphQL reference documentation from a s
 
 To vew the generated website, run in this directory:
 
-```
+```shell
 npx serve public
 ```
 
@@ -14,7 +14,7 @@ npx serve public
 
 The website in the public directory was generated for the Adobe Commerce with B2B instance from GraphQL Schema 'schema.json'. The schema was retrieved using the apollo-cli tool:
 
-```
+```shell
 npx apollo-cli download-schema $ENDPOINT_URL --output schema.json
 ```
 
@@ -24,7 +24,7 @@ where $ENDPOINT_URL is a placeholder for a URL to the endpoint.
 
 `config.yml` contains the website's configuration. To regenerate the website after any updates, run:
 
-```
+```shell
 npm run generate:graphql
 ```
 
