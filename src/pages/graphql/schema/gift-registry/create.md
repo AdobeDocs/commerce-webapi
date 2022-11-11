@@ -7,7 +7,7 @@ The `createGiftRegistry` mutation creates a gift registry for the logged in cust
 
 This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
 
-The `id` input attribute is optional. If a value is not specified, Magento will create one. If you specify a value, then you can create a gift registry and make multiple updates in a single call.
+The `id` input attribute is optional. If a value is not specified, the application creates one. If you specify a value, then you can create a gift registry and make multiple updates in a single call.
 
 When assigning a shipping address, you must specify only one of `address_data` or `address_id`.
 

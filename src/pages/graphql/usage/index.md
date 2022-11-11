@@ -7,16 +7,16 @@ description:
 
 ## Queries
 
-A GraphQL query retrieves data from the Magento server in a similar manner as a REST GET call. The current set of Magento GraphQL queries allow a mobile app or browser to render a wide variety of information, including the following:
+A GraphQL query retrieves data from the application server in a similar manner as a REST GET call. The current set of Adobe Commerce and Magento Open Source GraphQL queries allow a mobile app or browser to render a wide variety of information, including the following:
 
 *  A set of products to be displayed. This can include the entire catalog or those that match customer-specified criteria.
 *  Customer data. With a customer token, a query can retrieve basic information about a customer as well as billing and shipping addresses, wish lists, order history, and other sensitive data.
 *  Shopping cart contents. GraphQL supports both guest and logged-in customer carts.
 *  Store configuration values, including theme and CMS settings, the currency code, and supported countries.
 
-The Magento REST GET endpoints retrieve a wide variety of information on behalf of the merchant. Many of these endpoints are for retrieving backend information. For example, the `GET /V1/customers/search` endpoint can be used to find a subset of customers that meet certain criteria, such as those that live in a particular state or have a birthday this month. Likewise, the `GET /V1/invoices` endpoint can return all the recently-generated invoices. This type of functionality is not required for the frontend, so it is not available in GraphQL queries. The queries are designed to improve the customer's user experience by quickly retrieving the data needed to render pages.
+The REST GET endpoints retrieve a wide variety of information on behalf of the merchant. Many of these endpoints are for retrieving backend information. For example, the `GET /V1/customers/search` endpoint can be used to find a subset of customers that meet certain criteria, such as those that live in a particular state or have a birthday this month. Likewise, the `GET /V1/invoices` endpoint can return all the recently-generated invoices. This type of functionality is not required for the frontend, so it is not available in GraphQL queries. The queries are designed to improve the customer's user experience by quickly retrieving the data needed to render pages.
 
-Over time, the Magento GraphQL queries will duplicate the functionality of all storefront-facing GET calls, while making it possible to query more data in one request. The main difference will be that GraphQL will support storefront use cases, while REST will support admin use cases.
+Over time, the GraphQL queries will duplicate the functionality of all storefront-facing GET calls, while making it possible to query more data in one request. The main difference will be that GraphQL will support storefront use cases, while REST will support admin use cases.
 
 ## Structure of a query
 
@@ -94,7 +94,7 @@ The following example shows the query response:
 
 <InlineAlert variant="success" slots="text" />
 
-Magento will not run a query that is too complex. The number of fields, objects, and nodes are factors in determining the complexity of a query.
+Adobe Commerce and Magento Open Source will not run a query that is too complex. The number of fields, objects, and nodes are factors in determining the complexity of a query.
 
 ## Query variables
 
@@ -137,7 +137,7 @@ Variables are defined separately in JSON:
 
 ## Staging queries {#staging}
 
-Magento GraphQL allows you to use certain queries to return preview information for staged content. Staging, a Adobe Commerce feature, allows merchants to schedule a set of changes to the storefront that run for a prescribed time in the future. These changes, also known as a _campaign_, are defined within the Admin. Customers do not have access to staged content, and as a result, staging queries have requirements that do not apply to traditional queries and mutations.
+GraphQL allows you to use certain queries to return preview information for staged content. Staging, a Adobe Commerce feature, allows merchants to schedule a set of changes to the storefront that run for a prescribed time in the future. These changes, also known as a _campaign_, are defined within the Admin. Customers do not have access to staged content, and as a result, staging queries have requirements that do not apply to traditional queries and mutations.
 
 [Content Staging](https://docs.magento.com/m2/ee/user_guide/cms/content-staging.html) in the _Merchant User Guide_ describes how to create a campaign.
 
@@ -157,9 +157,9 @@ Header name | Description
 `Authorization Bearer: <authorization_token>` | An admin token. Use a 2FA REST endpoint such as  `POST /V1/tfa/provider/google/authenticate` to generate this token.
 `Preview-Version` | A timestamp (seconds since January 1, 1970) that is inside the range of dates of the campaign you are querying.
 
-Magento returns an authorization error if you specify an invalid token or do not include both headers. If the specified timestamp does not correspond to a date in a scheduled campaign, the query results reflect the current storefront settings.
+The application returns an authorization error if you specify an invalid token or do not include both headers. If the specified timestamp does not correspond to a date in a scheduled campaign, the query results reflect the current storefront settings.
 
-Magento also returns an error if you specify these headers with any other query or any mutation.
+The application also returns an error if you specify these headers with any other query or any mutation.
 
 ### Example campaign
 
@@ -431,9 +431,9 @@ Preview-Version: 1576389600
 
 ## Introspection queries
 
-Introspection queries allow you to return information about the schema. For example, you might want a list of Magento GraphQL queries or details about a specific data type. The GraphQL specification determines the structure of introspection queries. See [Introspection](https://graphql.org/learn/introspection/) for more information.
+Introspection queries allow you to return information about the schema. For example, you might want a list of GraphQL queries or details about a specific data type. The GraphQL specification determines the structure of introspection queries. See [Introspection](https://graphql.org/learn/introspection/) for more information.
 
-A Magento introspection query returns the same result whether or not you assign it an operation name, such as `IntrospectionQuery`.
+An introspection query returns the same result whether or not you assign it an operation name, such as `IntrospectionQuery`.
 
 ### Disable introspection querying
 
@@ -447,9 +447,9 @@ Introspection querying is enabled by default. To disable it in production mode t
 
 ### Example introspection queries
 
-#### Return a list of Magento queries
+#### Return a list of queries
 
-The following query returns a list of Magento queries.
+The following query returns a list of queries.
 
 **Request:**
 
@@ -469,9 +469,10 @@ query IntrospectionQuery {
   }
 }
 ```
-#### Return a list of Magento mutations
 
-The following query returns a list of Magento mutations.
+#### Return a list of mutations
+
+The following query returns a list of mutations.
 
 **Request:**
 
@@ -590,7 +591,7 @@ A mutation contains the following elements:
 *  The keyword `mutation`
 *  An operation name for your local implementation. This name is required if you include variables. Otherwise, it is optional.
 *  The mutation name
-*  The input object or attributes. Most mutations require an input object that contains data or individual attributes for the Magento server to process. However, some mutations, such as `createEmptyCart`, do not require an input object. In this particular case, the authorization token passed with the request provides the needed context.
+*  The input object or attributes. Most mutations require an input object that contains data or individual attributes for the application server to process. However, some mutations, such as `createEmptyCart`, do not require an input object. In this particular case, the authorization token passed with the request provides the needed context.
 *  The output object, which specifies which data the mutation returns.
 
 The following example shows the structure of the `createCustomer` mutation:

@@ -92,8 +92,8 @@ The following query returns information about the store's default title, keyword
 {
   "data": {
     "storeConfig": {
-      "default_title": "Magento Enterprise Edition",
-      "default_keywords": "Magento, Varien, E-commerce",
+      "default_title": "Adobe Commerce",
+      "default_keywords": "Varien, E-commerce",
       "welcome": "Default welcome msg!"
     }
   }

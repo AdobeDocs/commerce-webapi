@@ -8,7 +8,7 @@ As of version 2.4.1, the GraphQL release notes are included in the [Adobe Commer
 
 GraphQL is a flexible and performant API that allows you to build custom front-ends, including headless storefronts, [Progressive Web Apps](https://github.com/magento/pwa-studio) (PWA), and mobile apps for Magento.
 
-To take part and contribute, see the [Magento 2](https://github.com/magento/magento2) repository and look for issues with the `Project: GraphQL` tag. Join us in our [Slack](https://magentocommeng.slack.com/archives/C8076E0KS) channel (or [self signup](https://opensource.magento.com/slack)) to discuss the project.
+To take part and contribute, see the [magento2](https://github.com/magento/magento2) GitHub repository and look for issues with the `Project: GraphQL` tag. Join us in our [Slack](https://magentocommeng.slack.com/archives/C8076E0KS) channel (or [self signup](https://opensource.magento.com/slack)) to discuss the project.
 
 These release notes can include:
 
@@ -92,7 +92,7 @@ Deprecated entity | Use this instead
    -  [Assign an email]({{page.baseurl}}/graphql/mutations/set-guest-email.html) to a guest cart.
    -  [Place an order]({{page.baseurl}}/graphql/mutations/place-order.html).
 
--  {:.new} **Added support for payment methods that implement Magento Vault. See [customerPaymentTokens query]({{page.baseurl}}/graphql/queries/customer-payment-tokens.html) and [deletePaymentToken mutation]({{page.baseurl}}/graphql/mutations/delete-payment-token.html)**
+-  {:.new} **Added support for payment methods that implement Vault. See [customerPaymentTokens query]({{page.baseurl}}/graphql/queries/customer-payment-tokens.html) and [deletePaymentToken mutation]({{page.baseurl}}/graphql/mutations/delete-payment-token.html)**
 
 -  {:.new} **Added new queries and extended the functionality of others.**
 
@@ -102,7 +102,7 @@ Deprecated entity | Use this instead
 
 -  {:.new} **Queries can now be performed as HTTP GET or POST operations.**
 
--  {:.new} **Magento can use Varnish or full-page caching to [cache]({{page.baseurl}}/graphql/caching.html) pages rendered from the results of the following GraphQL queries:**
+-  {:.new} **Adobe Commerce and Magento Open Source can use Varnish or full-page caching to [cache]({{page.baseurl}}/graphql/caching.html) pages rendered from the results of the following GraphQL queries:**
 
    -  `category`
    -  `cmsBlocks`
@@ -132,7 +132,7 @@ Deprecated entity | Use this instead
 -  {:.new} **GraphQL framework enhancements**, including:
    -  Mutations that [generate]({{page.baseurl}}/graphql/mutations/generate-customer-token.html) and [revoke]({{page.baseurl}}/graphql/mutations/revoke-customer-token.html) customer tokens
    -  Page Builder and WYSIWYG fields support complex structures for PWA scenarios
-   -  Magento now calculates the complexity of queries and mutations and returns an error message if a query or mutation is deemed too complex
+   -  Adobe Commerce and Magento Open Source now calculate the complexity of queries and mutations and returns an error message if a query or mutation is deemed too complex
    -  Variable support in [queries]({{page.baseurl}}/graphql/queries/index.html) and [mutations]({{page.baseurl}}/graphql/mutations/index.html)
    -  A query that returns information about a store's [theme and CMS]({{page.baseurl}}/graphql/queries/store-config.html) configuration
    -  GraphQL tests are integrated with Travis CI​

@@ -2,7 +2,7 @@
 title: setPaymentMethodOnCart mutation
 ---
 
-The `setPaymentMethodOnCart` mutation defines which payment method to apply to the cart. Magento GraphQL supports the following offline payment methods:
+The `setPaymentMethodOnCart` mutation defines which payment method to apply to the cart. Adobe Commerce and Magento Open Source GraphQL supports the following offline payment methods:
 
 Title | Code
 --- | ---
@@ -81,7 +81,7 @@ The `SetPaymentMethodOnCartInput` object must contain the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`cart_id` | String! | The unique ID that identifies the customer’s cart
+`cart_id` | String! | The unique ID that identifies the customer's cart
 `payment_method` | [PaymentMethodInput!](#PaymentMethodInput) | An object containing the payment method code
 
 ### PaymentMethodInput attributes {#PaymentMethodInput}

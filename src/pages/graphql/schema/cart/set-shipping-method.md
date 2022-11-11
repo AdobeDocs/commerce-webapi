@@ -2,7 +2,7 @@
 title: setShippingMethodsOnCart mutation
 ---
 
-The `setShippingMethodsOnCart` mutation sets one or more delivery methods on a cart. By default, Magento GraphQL supports the following delivery methods:
+The `setShippingMethodsOnCart` mutation sets one or more delivery methods on a cart. By default, GraphQL supports the following delivery methods:
 
 Label | Carrier code | Method code
 --- | --- | ---

@@ -18,19 +18,19 @@ Klarna payments require cart information to initiate the session. For this reaso
 
    This step can be executed at any time after the cart is created. However, we recommend that you add products to the cart and set the billing address, shipping address, and shipping method on the cart before you perform this step.
 
-1. Magento forwards the request to Klarna.
+1. The application forwards the request to Klarna.
 
 1. Klarna returns the `client_token` and the `payment_categories` available to the shopper.
 
-1. Magento forwards the token to the client.
+1. The application forwards the token to the client.
 
 1. The client sends the `cart` query to retrieve the available payment methods.
 
-1. Magento must always retrieve the latest status information from Klarna before returning the Klarna payments method as an option to the shopper. This is important to ensure that the shopper is always shown the latest available payment options.
+1. The application must always retrieve the latest status information from Klarna before returning the Klarna payments method as an option to the shopper. This is important to ensure that the shopper is always shown the latest available payment options.
 
 1. Klarna returns an updated list of `payment_categories`.
 
-1. Magento returns all available payment methods, including Klarna payment methods.
+1. The application returns all available payment methods, including Klarna payment methods.
 
 1. The PWA client renders the Klarna payment widget.
 
@@ -46,15 +46,15 @@ Klarna payments require cart information to initiate the session. For this reaso
 
    The client uses the [`setPaymentMethodOnCart`]({{ page.baseurl }}/graphql/mutations/set-payment-method.html) mutation to set the payment method to `klarna_<identifier-value>`. The `authorization_token` is passed in the `klarna` object.
 
-1. Magento returns an updated `cart` object.
+1. The application returns an updated `cart` object.
 
 1. The PWA client runs the `placeOrder` mutation.
 
-1. Magento sends the place order request to Klarna.
+1. The application sends the place order request to Klarna.
 
 1. Klarna sends the response to Magento.
 
-1. Magento creates an order and sends an order ID in response to the `placeOrder` mutation.
+1. The application creates an order and sends an order ID in response to the `placeOrder` mutation.
 
 ## How to handle cart updates
 
@@ -64,15 +64,15 @@ In order to always present shoppers with the latest available payment options pr
 
 1. Perform a cart update.
 
-1. Magento returns an updated `cart` object.
+1. The application returns an updated `cart` object.
 
 1. Send the `cart` query to retrieve the latest available payment methods.
 
-1. Magento sends another request to Klarna with the latest information available from the cart.
+1. The application sends another request to Klarna with the latest information available from the cart.
 
 1. Klarna returns new list of payment methods. Note that the list might contain different options for the shopper.
 
-1. Magento returns an updated `cart` object.
+1. The application returns an updated `cart` object.
 
 1. [Reload the widget](https://developers.klarna.com/documentation/klarna-payments/single-call-descriptions/load-klarna-payments/) on the client side.
 

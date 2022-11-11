@@ -80,7 +80,7 @@ Attribute |  Data Type | Description
 
 ### PaypalExpressUrlsInput {#PaypalExpressUrlsInput}
 
-The `PaypalExpressUrlsInput` object contains a set of relative URLs that PayPal will use in response to various actions during the authorization process. Magento prepends the base URL to this value to create a full URL. For example, if the full URL is `https://www.example.com/path/to/page.html`, the relative URL is `path/to/page.html`. Use this input for Express Checkout and Payments Standard payment methods.
+The `PaypalExpressUrlsInput` object contains a set of relative URLs that PayPal will use in response to various actions during the authorization process. The application prepends the base URL to this value to create a full URL. For example, if the full URL is `https://www.example.com/path/to/page.html`, the relative URL is `path/to/page.html`. Use this input for Express Checkout and Payments Standard payment methods.
 
 Attribute |  Data Type | Description
 --- | --- | ---

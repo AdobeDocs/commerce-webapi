@@ -30,7 +30,7 @@ Attribute |  Data type | Description
 
 ### search attribute
 
-The `search` attribute causes Magento to perform a full text search on the specified keywords. This is the same type of search that is performed from the storefront. If multiple keywords are specified, each keyword is evaluated separately.
+The `search` attribute causes the application perform a full text search on the specified keywords. This is the same type of search that is performed from the storefront. If multiple keywords are specified, each keyword is evaluated separately.
 
 Each query must contain a `search` or `filter` attribute, or both.
 
@@ -49,7 +49,7 @@ filter: {
 }
 ```
 
-Magento processes the attribute values specified in a `ProductAttributeFilterInput` as simple data types (strings, integers, Booleans). However, returned attributes can be a different, complex data type. For example, in a response, `price` is an object that contains a monetary value and a currency code.
+The application processes the attribute values specified in a `ProductAttributeFilterInput` as simple data types (strings, integers, Booleans). However, returned attributes can be a different, complex data type. For example, in a response, `price` is an object that contains a monetary value and a currency code.
 
 By default, you can use the following attributes as filters. To define a custom filter, see [Filtering with custom attributes]({{page.baseurl}}/graphql/custom-filters.html). Use the `input_type` output attribute of the [`customAttributeMetadata` query]({{page.baseurl}}/graphql/queries/custom-attribute-metadata.html) to determine whether your custom filter should include the `FilterEqualTypeInput`, `FilterMatchTypeInput`, or `FilterRangeTypeInput` data type.
 
@@ -108,13 +108,13 @@ The `pageSize` attribute specifies the maximum number of items to return. If no 
 
 ### currentPage attribute
 
-The `currentPage` attribute specifies which page of results to return. If no value is specified, the first page is returned. Magento returns an error if you specify a value that is greater than the number of available pages.
+The `currentPage` attribute specifies which page of results to return. If no value is specified, the first page is returned. The application returns an error if you specify a value that is greater than the number of available pages.
 
 ### sort attribute
 
-The `sort` attribute allows you to specify which field or fields to use for sorting the results. If you specify more than one field, Magento sorts by the first field listed. Then, if any items have the same value, those items will be sorted by the secondary field. The value for each field can be set to either `ASC` or `DESC`.
+The `sort` attribute allows you to specify which field or fields to use for sorting the results. If you specify more than one field, the application sorts by the first field listed. Then, if any items have the same value, those items will be sorted by the secondary field. The value for each field can be set to either `ASC` or `DESC`.
 
-If you do not specify a `sort` object, Magento sorts as follows:
+If you do not specify a `sort` object, the application sorts as follows:
 
 -  If you specify the `search` attribute, the query sorts by relevance, in descending order.
 -  If you specify the `filter` attribute without specifying the  `search` attribute, the query sorts by position, in ascending order.

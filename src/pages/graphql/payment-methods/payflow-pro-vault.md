@@ -2,15 +2,15 @@
 title: PayPal Payflow Pro Vault payment method
 ---
 
-PayPal Payflow Pro Vault payment method processes credit and debit card payments using information stored in the Magento vault. This payment method is available for customers of the United States, Canada, Australia, and New Zealand.
+PayPal Payflow Pro Vault payment method processes credit and debit card payments using information stored in the vault. This payment method is available for customers of the United States, Canada, Australia, and New Zealand.
 
 The following conditions must be true to use this payment method:
 
 -  The shopper must be a logged-in customer.
 
--  The customer must have previously saved their payment information in the Magento vault.
+-  The customer must have previously saved their payment information in the vault.
 
-You cannot use this payment method if the customer decides to use a credit or debit card that is not stored in the Magento vault.
+You cannot use this payment method if the customer decides to use a credit or debit card that is not stored in the vault.
 
 If the customer's stored payment information becomes outdated, use the [deletePaymentToken mutation]({{page.baseurl}}/graphql/mutations/delete-payment-token.html) to remove the token. Then perform the actions described in the [PayPal Payflow Pro payment method]({{page.baseurl}}/graphql/) to generate a new token and process the order.
 
@@ -26,21 +26,21 @@ The following diagram shows the workflow for placing an order when Payflow Pro V
 
 1. Use the [`customerPaymentTokens`]({{page.baseurl}}/graphql/queries/customer-payment-tokens.html) query to retrieve the payment tokens the customer has stored in the vault.
 
-1. Magento returns an array of payment tokens.
+1. The application returns an array of payment tokens.
 
 1. The client renders the token information, and the customer selects a payment method.
 
    When the customer selects a stored payment method, the PWA uses the [`setPaymentMethodOnCart`]({{page.baseurl}}/graphql/mutations/set-payment-method.html) mutation to set the payment method to `payflowpro_cc_vault`. The vaulted public hash is passed in the [`payflowpro_cc_vault`](#payflowpro_cc_vault) object.
 
-1. Magento returns a `Cart` object.
+1. The application returns a `Cart` object.
 
 1. The client runs the [`placeOrder`]({{page.baseurl}}/graphql/mutations/place-order.html) mutation.
 
-1. Magento sends an authorization request to the gateway.
+1. The application sends an authorization request to the gateway.
 
 1. The gateway sends the response to Magento.
 
-1. Magento creates an order and sends an order ID in response to the `placeOrder` mutation.
+1. The application creates an order and sends an order ID in response to the `placeOrder` mutation.
 
 ## Additional Payment information
 

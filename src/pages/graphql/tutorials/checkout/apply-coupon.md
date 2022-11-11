@@ -8,7 +8,7 @@ Use [applyCouponToCart]({{ page.baseurl }}/graphql/mutations/apply-coupon.html) 
 
 `{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart]({{ page.baseurl }}/graphql/tutorials/checkout/checkout-add-product-to-cart.html).
 
-`{ COUPON_CODE }` is an existing Magento coupon code. It cannot be generated with GraphQL.
+`{ COUPON_CODE }` is an existing coupon code. It cannot be generated with GraphQL.
 
 ## Create a coupon
 

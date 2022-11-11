@@ -58,7 +58,7 @@ The `resetPassword` mutation returns `true` if the request was successful. Other
 
 Error | Description
 --- | ---
-`Cannot set the customer's password` | A general error message that appears on some internal system errors. The original error is logged and can be found in the Magento logs.
+`Cannot set the customer's password` | A general error message that appears on some internal system errors. The original error is logged and can be found in the application logs.
 `newPassword must be specified` | The `newPassword` argument is empty.
 `resetPasswordToken must be specified` | The `resetPasswordToken` argument is empty.
 `The account is locked` | You cannot modify a locked customer account.

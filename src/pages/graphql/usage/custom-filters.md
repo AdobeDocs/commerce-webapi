@@ -2,7 +2,7 @@
 title: Filtering with custom attributes
 ---
 
-As of Magento 2.3.4, the `filter` attribute of the [`products`]({{page.baseurl}}/graphql/queries/products.html) query accepts the `ProductAttributeFilterInput` object. (In previous versions, the `filter` attribute required a `ProductFilterInput` object. This object contained a hard-coded list of filterable attributes, and you could not filter on a custom attribute or any other attribute that was not on the list.)
+As of 2.3.4, the `filter` attribute of the [`products`]({{page.baseurl}}/graphql/queries/products.html) query accepts the `ProductAttributeFilterInput` object. (In previous versions, the `filter` attribute required a `ProductFilterInput` object. This object contained a hard-coded list of filterable attributes, and you could not filter on a custom attribute or any other attribute that was not on the list.)
 
 ## Prerequisites
 
@@ -10,7 +10,7 @@ You have several options when enabling a custom attribute (or any attribute that
 
 -  Set the **Use in Layered Navigation** field to **Filterable (with results)** or **Filterable (no results)**. This field allows the attribute to be used as a filter and returns layered navigation and aggregation data. If this field is set to **No**, then the attribute will not return layered navigation and aggregation data.
 
--  Set the **Use in Search** and **Visible in Advanced Search** fields to **Yes**. These fields primarily allow Magento to index the attribute's contents, making the data available for quick and advanced searches. Setting both these fields also allows the attribute to be used as a filter. These fields do not configure the presence or absence of layered navigation and aggregation data. If you set only one of these fields to **Yes**, the attribute cannot be used as a filter (unless you set the **Use in Layered Navigation** field to a value other than **No**).
+-  Set the **Use in Search** and **Visible in Advanced Search** fields to **Yes**. These fields primarily allow the application index the attribute's contents, making the data available for quick and advanced searches. Setting both these fields also allows the attribute to be used as a filter. These fields do not configure the presence or absence of layered navigation and aggregation data. If you set only one of these fields to **Yes**, the attribute cannot be used as a filter (unless you set the **Use in Layered Navigation** field to a value other than **No**).
 
 ## Define the filter for your query
 

@@ -4,7 +4,7 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
-Magento provides API functional tests that can verify extension points in GraphQL. These tests serve as an example for exposing new queries via GraphQL.
+Adobe Commerce and Magento Open Source provide API functional tests that can verify extension points in GraphQL. These tests serve as an example for exposing new queries via GraphQL.
 
 ## Creating a new GraphQL functional test
 
@@ -100,7 +100,7 @@ A fixture consists of two files:
 
 Each fixture should have a corresponding rollback file.
 
-Magento provides fixtures in the `dev/tests/integration/testsuite/Magento/<ModuleName>/_files` directory. Use these fixtures whenever possible. When you create your own fixture, also create a proper rollback.
+Adobe Commerce and Magento Open Source provide fixtures in the `dev/tests/integration/testsuite/Magento/<ModuleName>/_files` directory. Use these fixtures whenever possible. When you create your own fixture, also create a proper rollback.
 
 ### Fixture files
 
@@ -253,7 +253,7 @@ Your functional tests should include events that cause exceptions. Since your te
 
 <InlineAlert variant="success" slots="text" />
 
-We recommend that you declare expected exceptions in the test method body, as declaring expected exceptions with annotations has been deprecated in PHPUnit 8. Existing tests that use annotations will have to be updated when Magento requires that version of PHPUnit or higher.
+We recommend that you declare expected exceptions in the test method body, as declaring expected exceptions with annotations has been deprecated in PHPUnit 8. Existing tests that use annotations will have to be updated when Adobe Commerce or Magento Open Source require that version of PHPUnit or higher.
 
 ### Exception messages in the body of a test
 

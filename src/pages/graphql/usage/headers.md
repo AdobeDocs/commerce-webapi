@@ -2,7 +2,7 @@
 title: GraphQL headers
 ---
 
-Magento GraphQL supports the HTTP GET and POST methods. You can send a query as a GET or POST request. Mutations must be POST requests. You can optionally send a GET query request in a URL. In these requests, you must specify `query` as the query string. You might need to encode the query, as shown below:
+Adobe Commerce and Magento Open Source GraphQL supports the HTTP GET and POST methods. You can send a query as a GET or POST request. Mutations must be POST requests. You can optionally send a GET query request in a URL. In these requests, you must specify `query` as the query string. You might need to encode the query, as shown below:
 
 `http://<host>/graphql?query=%7Bproducts(filter%3A%7Bsku%3A%7Beq%3A%2224-WB01%22%7D%7D)%7Bitems%7Bname%20sku%7D%7D%7D`
 
@@ -44,7 +44,7 @@ Some queries sent as a GET request can be cached. See [GraphQL caching]({{page.b
 
 ## Request headers {#headers}
 
-Magento accepts the following headers in a GraphQL request:
+The application accepts the following headers in a GraphQL request:
 
 Header name | Value | Description
 --- | --- | ---

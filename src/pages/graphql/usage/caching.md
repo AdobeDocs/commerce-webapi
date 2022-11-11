@@ -2,7 +2,7 @@
 title: GraphQL caching
 ---
 
-Magento can cache pages rendered from the results of certain GraphQL queries with [full-page caching]({{page.baseurl}}/extension-dev-guide/cache/page-caching.html). Full-page caching improves response time and reduces the load on the server. Without caching, each page might need to run blocks of code and retrieve large amounts of information from the database. Only queries submitted with an HTTP GET operation can be cached. POST queries cannot be cached.
+Adobe Commerce and Magento Open Source can cache pages rendered from the results of certain GraphQL queries with [full-page caching]({{page.baseurl}}/extension-dev-guide/cache/page-caching.html). Full-page caching improves response time and reduces the load on the server. Without caching, each page might need to run blocks of code and retrieve large amounts of information from the database. Only queries submitted with an HTTP GET operation can be cached. POST queries cannot be cached.
 
 The GraphQL schema is cached in the Configuration cache, which can be refreshed from the Cache Management page (**System** > **Tools** > **Cache Management**).
 
@@ -14,7 +14,7 @@ The definitions for some queries include cache tags. Full page caching uses thes
 
 GraphQL allows you to make multiple queries in a single call. If you specify any uncached query, the system bypasses the cache for all queries in the call.
 
-Magento caches the following queries:
+The application caches the following queries:
 
 *  `categories`
 *  `category` (deprecated)
@@ -25,7 +25,7 @@ Magento caches the following queries:
 *  `route`
 *  `urlResolver` (deprecated)
 
-Magento explicitly disallows caching the following queries.
+The application explicitly disallows caching the following queries.
 
 *  `cart`
 *  `country`
@@ -60,7 +60,7 @@ The resultant hash is calculated as follows:
 SHA256(Store ID + Currency + Is-Logged-In + Customer group + Customer tax rate + Salt value)
 ```
 
-Magento caches the results of all applicable queries. If you specify the resultant hash as the input value for the `X-Magento-Cache-Id` header of a GraphQL request, then the cached results can be loaded. Although POST requests are not cached, the resultant hashed value provide more opportunities to obtain updated cache IDs.
+The application caches the results of all applicable queries. If you specify the resultant hash as the input value for the `X-Magento-Cache-Id` header of a GraphQL request, then the cached results can be loaded. Although POST requests are not cached, the resultant hashed value provide more opportunities to obtain updated cache IDs.
 
 To define additional factors for computing `X-Magento-Cache-Id` hash values, add a section similar to the following to the [di.xml file]({{page.baseurl}}/extension-dev-guide/build/di-xml-file.html) of a custom module. The `argument name` must be set to `idFactorProviders`, with the additional attribute names assigned as `item names`.
 
@@ -87,17 +87,16 @@ See [Configure and use Varnish]({{page.baseurl}}/config-guide/varnish/config-var
 
 ## Caching with Fastly
 
-To cache guest and customer GraphQL query results on {{ site.data.var.ece }}, the Cloud project must be running the Fastly CDN module for Magento 2 version 1.2.160 or later.
+To cache guest and customer GraphQL query results on {{ site.data.var.ece }}, the Cloud project must be running the Fastly CDN module for Adobe Commerce and Magento Open Source version 1.2.160 or later.
 
-{:.procedure}
 To enable GraphQL caching on Fastly:
 
-1. Upgrade the Fastly CDN Module for Magento 2.x to version 1.2.160 or later.
+1. Upgrade the Fastly CDN Module for Adobe Commerce and Magento Open Source 2.x to version 1.2.160 or later.
 1. Upload the updated VCL code to the Fastly servers.
 
 [Set up Fastly]({{ site.baseurl }}/cloud/cdn/configure-fastly.html) describes how to perform both of these tasks.
 
-By default, the Fastly module for Magento provides the following VCL configuration for caching guest queries:
+By default, the Fastly module for Adobe Commerce and Magento Open Source provides the following VCL configuration for caching guest queries:
 
 ```text
 if (req.request == "GET" && req.url.path ~ "/graphql" && req.url.qs ~ "query=") {
@@ -130,16 +129,16 @@ The `X-Magento-Vary` cache cookie is not supported for GraphQL. The `Store` and 
 
 ## Response headers
 
-In developer mode, Magento returns several headers that could be useful for debugging caching problems. These headers are not specific to GraphQL.
+In developer mode, the application returns several headers that could be useful for debugging caching problems. These headers are not specific to GraphQL.
 
 Header | Description
 --- |---
 `X-Magento-Cache-Debug` | HIT (the page was loaded from cache) or MISS (the page was not loaded from cache.
-`X-Magento-Tags` | A list of cache tags that correspond to the catalog, category, or CMS items returned in the query. Magento caches these items.
+`X-Magento-Tags` | A list of cache tags that correspond to the catalog, category, or CMS items returned in the query. The application caches these items.
 
 ## Cache invalidation
 
-Magento invalidates the cache when any of the following events occur:
+The application invalidates the cache when any of the following events occur:
 
 *  A change occurs to a specific entity or entities in aggregate. An increase in a product's price is a direct and obvious change. Applying a new tax class tax to products changes a set of products in aggregate.
 *  The `Preview-Version` header is specified in a query that supports caching.

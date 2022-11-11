@@ -2,7 +2,7 @@
 title: sendEmailToFriend mutation
 ---
 
-Use the `sendEmailToFriend` mutation to allow Magento to send a message on behalf of a customer to the specified email addresses.
+Use the `sendEmailToFriend` mutation to allow the application send a message on behalf of a customer to the specified email addresses.
 
 <InlineAlert variant="info" slots="text" />
 

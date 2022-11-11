@@ -6,7 +6,7 @@ contributor_link: https://www.atwix.com/
 
 The `requestPasswordResetEmail` mutation triggers the password reset email by the provided email address. Use it to initiate the process to reset the registered customer's password before calling the [resetPassword]({{page.baseurl}}/graphql/mutations/reset-password.html) mutation.
 
-When the customer clicks the `Set a New Password` button, Magento sends an email to the customer that contains a URL for resetting their password.
+When the customer clicks the `Set a New Password` button, the application sends an email to the customer that contains a URL for resetting their password.
 
 ![Reset password email](../../../_images/graphql/reset-password-email.png)
 
@@ -55,7 +55,7 @@ You must specify the customer's email address in the `email` input argument.
 The `requestPasswordResetEmail` mutation returns `true` if both of the following operations are successful:
 
 -  The reset password operation initiates.
--  Magento sends an email containing a reset link.
+-  The application sends an email containing a reset link.
 
 Otherwise, the mutation returns `false`.
 
@@ -63,7 +63,7 @@ Otherwise, the mutation returns `false`.
 
 Error | Description
 --- | ---
-`Cannot reset the customer's password` | A general error message that appears on some internal system errors. The original error is logged and can be found in the Magento logs.
+`Cannot reset the customer's password` | A general error message that appears on some internal system errors. The original error is logged and can be found in the application logs.
 `The account is locked` | You cannot modify a locked customer account.
 `The email address has an invalid format.` | The value provided in the `email` argument has an invalid format.
 `You must specify an email address.` | An empty value is provided in the `email` argument.

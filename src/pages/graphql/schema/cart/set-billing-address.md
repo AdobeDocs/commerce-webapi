@@ -2,7 +2,7 @@
 title: setBillingAddressOnCart mutation
 ---
 
-The `setBillingAddressOnCart` mutation sets the billing address for a specific cart. If you set the `same_as_shipping` attribute to `true`, Magento assigns the billing address to be the same as the shipping address.
+The `setBillingAddressOnCart` mutation sets the billing address for a specific cart. If you set the `same_as_shipping` attribute to `true`, the application assigns the billing address to be the same as the shipping address.
 
 ## Syntax
 

@@ -2,7 +2,7 @@
 title: Product interface implementations
 ---
 
-Magento provides multiple product types, and most of these product types have specialized attributes that are not defined in the `ProductInterface`.
+Adobe Commerce and Magento Open Source provides multiple product types, and most of these product types have specialized attributes that are not defined in the `ProductInterface`.
 
 Product type | Implements | Has product-specific attributes?
 --- | --- | ---

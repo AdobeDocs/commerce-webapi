@@ -5,7 +5,7 @@ edition: b2b
 
 The `createCompany` mutation creates a company at the request of either a customer or a guest. The company definition includes the first name, last name, and email address of the company administrator. The email address assigned to the account cannot already exist in the system. Therefore, a customer attempting to create a company cannot use the same email address they used to log in to the storefront.
 
-The company administrator cannot log in or perform additional company-related tasks until a Magento administrator approves the request to create a company.
+The company administrator cannot log in or perform additional company-related tasks until an administrator approves the request to create a company.
 
 ## Syntax
 
@@ -18,6 +18,7 @@ mutation {
   }
 }
 ```
+
 ## Example usage
 
 The following call creates a company on behalf of a guest.

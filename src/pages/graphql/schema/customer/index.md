@@ -757,7 +757,7 @@ The Returns object contains an array of [Return](#Return) objects.
 
 ### Store credit attributes
 
-In Adobe Commerce, the merchant can assign store credit to customers. Magento maintains the history of all changes to the balance of store credit available to the customer. The customer must be logged in to access the store credit history and balance.
+In Adobe Commerce, the merchant can assign store credit to customers. The application maintains the history of all changes to the balance of store credit available to the customer. The customer must be logged in to access the store credit history and balance.
 
 Store credits must be enabled to return store credit attributes. If store credits are disabled after previously being enabled, the query returns the customer's current balance as null.
 

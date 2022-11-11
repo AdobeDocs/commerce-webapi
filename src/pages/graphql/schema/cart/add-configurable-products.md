@@ -103,7 +103,7 @@ Attribute | Type | Description
 --- | --- | ---
 `customizable_options` | [CustomizableOptionInput](#customOptionInput) | An object that contains the ID and value of the product
 `data` | [CartItemInput!](#cartItemInput) | An object that contains the quantity and SKU of the configurable product
-`parent_sku` | String | The SKU of the simple product's parent configurable product. If you do not specify this attribute, Magento treats the product being added to the cart as a simple product
+`parent_sku` | String | The SKU of the simple product's parent configurable product. If you do not specify this attribute, the application treats the product being added to the cart as a simple product
 `variant_sku` | String | Deprecated. Use `CartItemInput.sku` instead. The SKU of the simple product
 
 ### CustomizableOptionInput object {#customOptionInput}

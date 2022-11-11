@@ -2,7 +2,7 @@
 title: cmsPage query
 ---
 
-The `cmsPage` query returns information about content pages that were developed with the Magento Content Management System (CMS).
+The `cmsPage` query returns information about content pages that were developed with the Adobe Commerce or Magento Open Source Content Management System (CMS).
 
 ## Syntax
 
@@ -41,7 +41,7 @@ You must include the CMS page identifier value to retrieve the content of a spec
       "identifier": "no-route"
       "url_key": "no-route",
       "title": "404 Not Found",
-      "content": "<dl>\r\n<dt>The page you requested was not found, and we have a fine guess why.</dt>\r\n<dd>\r\n<ul class=\"disc\">\r\n<li>If you typed the URL directly, please make sure the spelling is correct.</li>\r\n<li>If you clicked on a link to get here, the link is outdated.</li>\r\n</ul></dd>\r\n</dl>\r\n<dl>\r\n<dt>What can you do?</dt>\r\n<dd>Have no fear, help is near! There are many ways you can get back on track with Magento Store.</dd>\r\n<dd>\r\n<ul class=\"disc\">\r\n<li><a href=\"#\" onclick=\"history.go(-1); return false;\">Go back</a> to the previous page.</li>\r\n<li>Use the search bar at the top of the page to search for your products.</li>\r\n<li>Follow these links to get you back on track!<br /><a href=\"http://magento2.vagrant193/\">Store Home</a> <span class=\"separator\">|</span> <a href=\"http://magento2.vagrant193/customer/account/\">My Account</a></li></ul></dd></dl>\r\n",
+      "content": "<dl>\r\n<dt>The page you requested was not found, and we have a fine guess why.</dt>\r\n<dd>\r\n<ul class=\"disc\">\r\n<li>If you typed the URL directly, please make sure the spelling is correct.</li>\r\n<li>If you clicked on a link to get here, the link is outdated.</li>\r\n</ul></dd>\r\n</dl>\r\n<dl>\r\n<dt>What can you do?</dt>\r\n<dd>Have no fear, help is near! There are many ways you can get back on track with the Store.</dd>\r\n<dd>\r\n<ul class=\"disc\">\r\n<li><a href=\"#\" onclick=\"history.go(-1); return false;\">Go back</a> to the previous page.</li>\r\n<li>Use the search bar at the top of the page to search for your products.</li>\r\n<li>Follow these links to get you back on track!<br /><a href=\"http://magento2.vagrant193/\">Store Home</a> <span class=\"separator\">|</span> <a href=\"http://magento2.vagrant193/customer/account/\">My Account</a></li></ul></dd></dl>\r\n",
       "content_heading": "Whoops, our bad...",
       "page_layout": "2columns-right",
       "meta_title": null,

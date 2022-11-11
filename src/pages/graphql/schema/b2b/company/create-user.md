@@ -5,13 +5,13 @@ contributor_link: https://www.atwix.com/
 edition: b2b
 ---
 
-The `createCompanyUser` mutation allows an existing company user who is assigned a role that contains the `Magento_Company::users_edit` permission to create a new company user. The specified email address determines how Magento processes the request.
+The `createCompanyUser` mutation allows an existing company user who is assigned a role that contains the `Magento_Company::users_edit` permission to create a new company user. The specified email address determines how the application processes the request.
 
--  If the email address is unique for the website, Magento immediately creates the company user.
+-  If the email address is unique for the website, the application immediately creates the company user.
 
--  If the email address belongs to a customer who is not a company user, Magento sends an invitation to join the company organization to the customer. When the customer accepts the invitation, Magento adds the customer to the company organization.
+-  If the email address belongs to a customer who is not a company user, the application sends an invitation to join the company organization to the customer. When the customer accepts the invitation, the application adds the customer to the company organization.
 
--  If the email address belongs to a customer who is part of any company organization, Magento returns the error "A customer with the same email already assigned to company".
+-  If the email address belongs to a customer who is part of any company organization, the application returns the error "A customer with the same email already assigned to company".
 
 The `target_id` input attribute allows you to specify which node in the company structure will be the parent node of the company user. If you do not specify a value, the user will be assigned to the top-level (root) node of the company structure.
 
@@ -33,7 +33,7 @@ mutation {
 
 ### Create a company user (minimal payload)
 
-The following example shows the minimal payload to add a company user. Because a `target_id` is not specified, Magento places the new company user at the top node of the company structure.
+The following example shows the minimal payload to add a company user. Because a `target_id` is not specified, the application places the new company user at the top node of the company structure.
 
 **Request:**
 
@@ -181,7 +181,7 @@ import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
 
 Error | Description
 --- | ---
-`Invitation was sent to an existing customer, they will be added to your organization once they accept the invitation.` | The email provided in the `input`.`email` argument belongs to an existing customer. Magento will send an invitation  to this customer. When the customer accepts the invitation, the customer will be assigned to the company.
+`Invitation was sent to an existing customer, they will be added to your organization once they accept the invitation.` | The email provided in the `input`.`email` argument belongs to an existing customer. The application sends an invitation to this customer. When the customer accepts the invitation, the customer will be assigned to the company.
 `A customer with the same email already assigned to company.` | The email provided in the `input`.`email` argument belongs to an existing customer, and the customer has already been assigned to the company.
 `"Email" is not a valid email address.` | The value provided in the `input`.`email` argument has an invalid format.
 `Field "createCompanyUser" argument "input" requires type String!, found xxx.` | The value specified in the one of the `input` arguments has an invalid type.

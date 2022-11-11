@@ -5,7 +5,7 @@ edition: b2b
 
 The `company` query returns details about the user's company. The request must include the customer token of a company user.
 
-A company structure can contain multiple levels of teams, with company users assigned at each level. To query on a company structure, specify fragments on the `Customer` and `CompanyTeam` objects. Magento returns a [union](https://graphql.org/learn/schema/#union-types) of these objects. Specify the `__typename` attribute to distinguish the object types in the response.
+A company structure can contain multiple levels of teams, with company users assigned at each level. To query on a company structure, specify fragments on the `Customer` and `CompanyTeam` objects. The application returns a [union](https://graphql.org/learn/schema/#union-types) of these objects. Specify the `__typename` attribute to distinguish the object types in the response.
 
 ## Syntax
 

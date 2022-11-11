@@ -60,7 +60,7 @@ mutation {
 
 ## Input attributes
 
-The following table lists the attributes you can use as input for the `createCustomer` mutation. The [Customer attributes]({{page.baseurl}}/graphql/queries/customer.html#customerAttributes) table lists the attributes Magento returns.
+The following table lists the attributes you can use as input for the `createCustomer` mutation. The [Customer attributes]({{page.baseurl}}/graphql/queries/customer.html#customerAttributes) table lists the attributes the application returns.
 
 import CreateCustomer from '/src/pages/_includes/graphql/create-customer.md'
 

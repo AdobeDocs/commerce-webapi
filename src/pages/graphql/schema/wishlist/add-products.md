@@ -8,7 +8,7 @@ In Magento Open Source, customers can have only one wish list. In Adobe Commerce
 
 <InlineAlert variant="info" slots="text" />
 
-In Magento Open Source, the [createCustomerV2 mutation]({{page.baseurl}}/graphql/mutations/create-customer-v2.html) does not create a default wish list for the customer. To add items to the wish list for the first time, specify a `wishlistId` value of 0. Magento creates the customer's default wish list and returns the wish list ID in the `id` attribute. (Customers created by any other means or in Adobe Commerce do not have this limitation.)
+In Magento Open Source, the [createCustomerV2 mutation]({{page.baseurl}}/graphql/mutations/create-customer-v2.html) does not create a default wish list for the customer. To add items to the wish list for the first time, specify a `wishlistId` value of 0. The application creates the customer's default wish list and returns the wish list ID in the `id` attribute. (Customers created by any other means or in Adobe Commerce do not have this limitation.)
 
 This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
 

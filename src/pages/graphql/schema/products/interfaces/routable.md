@@ -3,7 +3,7 @@ title: RoutableInterface attributes
 
 ---
 
-Some Magento entities are "routable", meaning that they have URLs and can serve as the model for a rendered page. The following implementations of the `RoutableInterface` allow you to return details in the [`route` query]({{page.baseurl}}/graphql/queries/route.html).
+Some entities are "routable", meaning that they have URLs and can serve as the model for a rendered page. The following implementations of the `RoutableInterface` allow you to return details in the [`route` query]({{page.baseurl}}/graphql/queries/route.html).
 
 *  [BundleProduct]({{page.baseurl}}/graphql/interfaces/bundle-product.html)
 *  [CategoryTree]({{page.baseurl}}/graphql/queries/category-list.html#Categories)

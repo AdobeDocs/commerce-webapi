@@ -11,7 +11,7 @@ Attribute | Data Type | Description | Default or example value
 `allow_order` | String | Allows gift messages at the order level. Possible values: 1 (Yes) and 0 (No). <br/>Configuration path: sales/gift_options/allow_order | 0
 `allow_printed_card` | String | Indicates if a printed card can accompany an order. Possible values: 1 (Yes) and 0 (No) | 1
 `autocomplete_on_storefront` | Boolean | Enable autocomplete on login and forgot password forms. <br/>Configuration path: customer/password/autocomplete_on_storefront | true
-`base_currency_code` | String | The code representing the currency in which Magento processes all payment transactions | `USD`
+`base_currency_code` | String | The code representing the currency in which the application processes all payment transactions | `USD`
 `base_link_url` | String | A fully-qualified URL that is used to create relative links to the `base_url` | `http://magentohost.example.com/`
 `base_media_url` | String | The fully-qualified URL that specifies the location of user media files | `http://magentohost.example.com/pub/media/`
 `base_static_url` | String | The fully-qualified URL that specifies the location of static view files | `http://magentohost.example.com/pub/static/`
@@ -33,15 +33,15 @@ Attribute | Data Type | Description | Default or example value
 `check_money_order_sort_order` | Int | A number indicating the position of the Check/Money Order payment method in the list of available payment methods during checkout | 2
 `cms_home_page` | String | Returns the name of the CMS page that identifies the home page for the store | `home`
 `cms_no_cookies` | String | Identifies a specific CMS page that appears when cookies are not enabled for the browser | `enable-cookies`
-`cms_no_route` | String | Identifies a specific CMS page that you want to appear when a 404 “Page Not Found” error occurs | `no-route`
+`cms_no_route` | String | Identifies a specific CMS page that you want to appear when a 404 "Page Not Found" error occurs | `no-route`
 `code` | String | Deprecated. Use `store_code` instead. A unique identifier for the store | `default`
 `configurable_thumbnail_source` | String | Determines which thumbnail should be used in the cart for configurable products. Possible values: `parent` or `itself` (child) | `parent`
 `contact_enabled` | Boolean! | Indicates whether the Contact Us form is enabled | true or false
 `copyright` | String | The copyright statement that appears at the bottom of each page | Copyright &#169; 2013-present Magento, Inc. All rights reserved.
 `default_description` | String | The description that provides a summary of your site for search engine listings and should not be more than 160 characters in length | null
 `default_display_currency_code` | String | The code representing the currency displayed on the store | `USD`
-`default_keywords` | String | A series of keywords that describe your store, each separated by a comma | `Magento, Varien, E-commerce`
-`default_title` | String | The title that appears at the title bar of each page when viewed in a browser | Magento Enterprise Edition
+`default_keywords` | String | A series of keywords that describe your store, each separated by a comma | `Varien, E-commerce`
+`default_title` | String | The title that appears at the title bar of each page when viewed in a browser | Adobe Commerce
 `demonotice` | Int | Controls the display of the demo store notice at the top of the page. Options: `0` (No) or `1` (Yes) | 0
 `enable_multiple_wishlists` | String | Indicates whether customers can have multiple wish lists. Possible values: 1 (Yes) and 0 (No) | 1
 `front` | String | Indicates the landing page that is associated with the base URL | `cms`
@@ -71,7 +71,7 @@ Attribute | Data Type | Description | Default or example value
 `magento_reward_points_invitation_order_limit` | String | The number of order conversions that can earn points for the customer who sends the invitation. A null value indicates no limit | null
 `magento_reward_points_invitation_order` | String | The number of points for a referral when the invitee places their first order on the site | null
 `magento_reward_points_newsletter` | String | The number of points earned by registered customers who subscribe to a newsletter | null
-`magento_reward_points_order` | String | Indicates whether customers earn points for shopping according to the reward point exchange rate. In Luma, this also controls whether to show a message in the shopping cart about the rewards points earned for the purchase, as well as the customer’s current reward point balance | null
+`magento_reward_points_order` | String | Indicates whether customers earn points for shopping according to the reward point exchange rate. In Luma, this also controls whether to show a message in the shopping cart about the rewards points earned for the purchase, as well as the customer's current reward point balance | null
 `magento_reward_points_register` | String | The number of points a customer gets for registering | null
 `magento_reward_points_review_limit` | String | The maximum number of reviews that qualify for  rewards. A null value indicates no limit | null
 `magento_reward_points_review` | String | The number of points for writing a review | null
@@ -79,7 +79,7 @@ Attribute | Data Type | Description | Default or example value
 `maximum_number_of_wishlists` | String | If multiple wish lists are enabled, the maximum number of wish lists the customer can have | 5
 `minimum_password_length` | String | The minimum number of characters required for a valid password. <br/>Configuration path: customer/password/minimum_password_length | 6
 `newsletter_enabled` | Boolean! | Indicates whether newsletters are enabled | true or false
-`no_route` | String | Contains the URL of the default page that you want to appear when if a 404 “Page not Found” error occurs | `cms/noroute/index`
+`no_route` | String | Contains the URL of the default page that you want to appear when if a 404 "Page not Found" error occurs | `cms/noroute/index`
 `payment_payflowpro_cc_vault_active` | String | Payflow Pro vault status | `0` (inactive) or `1` (active)
 `printed_card_price` | String | The default price of a printed card that accompanies an order | 10
 `product_fixed_product_tax_display_setting` | [FixedProductTaxDisplaySettings](#FixedProductTaxDisplaySettings) | Corresponds to the **Display Prices On Product View Page** field. It indicates how Fixed Product Taxes information is displayed on product pages | FPT_DISABLED
@@ -131,7 +131,7 @@ Attribute |  Data Type | Description
 
 The **Stores** > Settings > **Configuration** > **Sales** > **Tax** > **Fixed Product Taxes** panel contains several fields that determine how to display fixed product tax (FPT) values and descriptions.
 
-The `FixedProductTaxDisplaySettings` data type is an enumeration that describes whether displayed prices include fixed product taxes and whether Magento separately displays detailed information about the FPTs. These attributes are defined in the `WeeeGraphQl` module.
+The `FixedProductTaxDisplaySettings` data type is an enumeration that describes whether displayed prices include fixed product taxes and whether the application separately displays detailed information about the FPTs. These attributes are defined in the `WeeeGraphQl` module.
 
 Value | Description
 --- | ---

@@ -65,7 +65,7 @@ The complexity count for the query is 6. These lines contributed to the count:
 
 Creating the `name1` alias did not cause the system to double count the entry.
 
-If the count does not exceed the threshold set by the `queryComplexity` attribute, Magento validates and processes the query.
+If the count does not exceed the threshold set by the `queryComplexity` attribute, the application validates and processes the query.
 
 ### Query depth
 

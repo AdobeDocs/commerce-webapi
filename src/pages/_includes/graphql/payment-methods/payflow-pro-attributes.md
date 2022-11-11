@@ -8,7 +8,7 @@ Attribute |  Data Type | Description
 
 ### CreditCardDetailsInput object
 
-Magento supports the following values for the `cc_type` attribute. The merchant's payment processor might support only a subset of these values.
+Adobe Commerce and Magento Open Source support the following values for the `cc_type` attribute. The merchant's payment processor might support only a subset of these values.
 
 *  `AE` - American Express
 *  `AU` - Aura

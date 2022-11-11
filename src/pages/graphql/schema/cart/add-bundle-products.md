@@ -16,7 +16,7 @@ Use the `addBundleProductsToCart` mutation to add bundle products to a specific 
 
 ## Example usage
 
-The following example uses a bundle product "Sprite Yoga Companion Kit" from Magento sample data.
+The following example uses a bundle product "Sprite Yoga Companion Kit" from Adobe Commerce and Magento Open Source sample data.
 The SKU of this product is: **24-WG080**
 
 This example adds one bundle product with following children to the specified shopping cart:
