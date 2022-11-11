@@ -2,6 +2,8 @@
 title: cart query
 ---
 
+# cart query
+
 Use the `cart` query to retrieve information about a particular cart.
 
 Cart functionality is defined in the `Quote` module. A Quote represents the contents of a customer's shopping cart. It is responsible for performing tasks such as:

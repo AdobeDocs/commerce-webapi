@@ -2,6 +2,8 @@
 title: GraphQL security configuration
 ---
 
+# GraphQL security configuration
+
 The Framework and `GraphQl` module `di.xml` files define several security-related configuration values that you should review to ensure they align with types of mutations and queries that you run.
 
 To override these default values, create a custom module and provide a new value in the appropriate [di.xml]({{page.baseurl}}/extension-dev-guide/build/di-xml-file.html) file.

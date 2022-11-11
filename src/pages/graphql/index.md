@@ -1,6 +1,8 @@
 ---
-title: GraphQL Overview
+title: GraphQL overview
 ---
+
+# GraphQL overview
 
 [GraphQL](https://graphql.org/) is a data query language developed internally by Facebook in 2012 before being publicly released in 2015. Adobe Commerce and Magento Open Source implement GraphQL to provide an alternative to REST and SOAP web APIs for frontend development.
 

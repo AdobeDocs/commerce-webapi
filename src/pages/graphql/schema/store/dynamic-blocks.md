@@ -2,6 +2,8 @@
 title: dynamicBlocks query
 ---
 
+# dynamicBlocks query
+
 The `dynamicBlocks` query returns a list of dynamic blocks that have been placed in a Dynamic Blocks Rotator inline widget and meet the specified criteria.
 
 <InlineAlert variant="info" slots="text" />

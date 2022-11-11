@@ -5,6 +5,8 @@ contributor_link: https://www.atwix.com/
 edition: b2b
 ---
 
+# isCompanyRoleNameAvailable query
+
 The `isCompanyRoleNameAvailable` query checks whether a company role name is valid for creating into a company.
 
 The query returns a `false` value if the specified role name has already found in a company.

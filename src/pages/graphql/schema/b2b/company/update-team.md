@@ -1,9 +1,11 @@
 ---
 title: updateCompanyTeam mutation
+edition: b2b
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
-edition: b2b
 ---
+
+# updateCompanyTeam mutation
 
 Use the `updateCompanyTeam` mutation to update the company team data.
 

@@ -3,6 +3,8 @@ title: updateGiftRegistryItems mutation
 edition: ee
 ---
 
+# updateGiftRegistryItems mutation
+
 The `updateGiftRegistryItems` mutation modifies the requested quantity of an item in the specified gift registry. It can also change the description of the item.
 
 This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).

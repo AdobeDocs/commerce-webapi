@@ -3,6 +3,8 @@ title: recaptchaV3Config query
 edition: pwa
 ---
 
+# recaptchaV3Config query
+
 The `recaptchaV3Config` query returns information about the reCaptcha V3 configuration.
 
 ## Syntax

@@ -4,6 +4,8 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
+# Step 6. Set the delivery method
+
 The `setShippingMethodsOnCart` mutation defines the delivery methods for your order. It requires these input parameters:
 
 *  `cart_id`

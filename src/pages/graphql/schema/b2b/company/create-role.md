@@ -5,6 +5,8 @@ contributor_link: https://www.atwix.com/
 edition: b2b
 ---
 
+# createCompanyRole mutation
+
 The `createCompanyRole` mutation defines a new company role. To create a role, you must provide an array of permissions that determine which resources the user can access.
 
 import B2BRoles from '/src/pages/_includes/graphql/b2b-roles.md'

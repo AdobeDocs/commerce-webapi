@@ -2,6 +2,8 @@
 title: createCustomerV2 mutation
 ---
 
+# createCustomerV2 mutation
+
 The `createCustomerV2` mutation creates a customer account. Use the [`createCustomerAddress` mutation]({{page.baseurl}}/graphql/mutations/create-customer-address.html) to complete the customer profile and define billing and shipping addresses.
 
 The `createCustomerV2` mutation supersedes the `createCustomer` mutation as the means to create a customer account. The input objects differ between these two mutations. The `createCustomer` mutation required the `CustomerInput` object, as did the `updateCustomer` mutation. The attributes required for creating a customer are different than those for updating a customer, but you could not determine this by looking at the schema. The `createCustomerV2` mutation requires the `CustomerCreateInput` object, which it does not share with the [`updateCustomerV2` mutation]({{page.baseurl}}/graphql/mutations/update-customer-v2.html).
@@ -61,18 +63,18 @@ The following table lists the attributes you can use as input for the `createCus
 Attribute |  Data Type | Description
 --- | --- | ---
 `allow_remote_shopping_assistance` | Boolean | Indicates whether the customer has enabled remote shopping assistance
-`date_of_birth` | String | The customer’s date of birth. In keeping with current security and privacy best practices, be sure you are aware of any potential legal and security risks associated with the storage of customers’ full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
-`dob` | String | Deprecated. Use `date_of_birth` instead. The customer’s date of birth
-`email` | String! | The customer’s email address
-`firstname` | String! | The customer’s first name
+`date_of_birth` | String | The customer's date of birth. In keeping with current security and privacy best practices, be sure you are aware of any potential legal and security risks associated with the storage of customers' full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
+`dob` | String | Deprecated. Use `date_of_birth` instead. The customer's date of birth
+`email` | String! | The customer's email address
+`firstname` | String! | The customer's first name
 `gender` | Int | The customer's gender (Male - 1, Female - 2)
 `is_subscribed` | Boolean | Indicates whether the customer subscribes to the store's newsletter
-`lastname` | String! | The customer’s last name
-`middlename` | String | The customer’s middle name
+`lastname` | String! | The customer's last name
+`middlename` | String | The customer's middle name
 `password` | String | The customer's password
 `prefix` | String | An honorific, such as Dr., Mr., or Mrs.
 `suffix` | String | A value such as Sr., Jr., or III
-`taxvat` | String | The customer’s Tax/VAT number (for corporate customers)
+`taxvat` | String | The customer's Tax/VAT number (for corporate customers)
 
 ## Output attributes
 

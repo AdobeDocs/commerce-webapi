@@ -3,6 +3,9 @@ title: updateRequisitionListItems mutation
 edition: b2b
 contributor_name: EY
 ---
+
+# updateRequisitionListItems mutation
+
 The `updateRequisitionListItems` mutation updates products in a requisition list.
 
 This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).

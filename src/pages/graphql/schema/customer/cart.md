@@ -2,6 +2,8 @@
 title: customerCart query
 ---
 
+# customerCart query
+
 The `customerCart` query returns the active cart for the logged-in customer. If the cart does not exist, the query creates one. The customer's authorization token must be specified in the headers.
 
 The `customerCart` query differs from the `cart` query in the following ways:

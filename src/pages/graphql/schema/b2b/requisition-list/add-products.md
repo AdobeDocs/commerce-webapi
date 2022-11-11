@@ -3,6 +3,9 @@ title: addProductsToRequisitionList mutation
 edition: b2b
 contributor_name: EY
 ---
+
+# addProductsToRequisitionList mutation
+
 The `addProductsToRequisitionList` mutation adds products to a requisition list.
 
 This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).

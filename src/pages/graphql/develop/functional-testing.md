@@ -4,6 +4,8 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
+# GraphQL functional testing
+
 Adobe Commerce and Magento Open Source provide API functional tests that can verify extension points in GraphQL. These tests serve as an example for exposing new queries via GraphQL.
 
 ## Creating a new GraphQL functional test

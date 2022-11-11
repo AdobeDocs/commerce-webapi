@@ -4,6 +4,8 @@ contributor_name: Klarna
 contributor_link: https://www.klarna.com/
 ---
 
+# Klarna payment method
+
 Klarna Payments enables your consumers to try before they buy, finance purchases on your store with Klarna, or let them pay directly. Klarna offers these payment methods through a widget that you can add inline on your checkout page.
 
 ## Klarna payments workflow

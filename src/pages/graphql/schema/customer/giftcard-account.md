@@ -3,6 +3,8 @@ title: giftCardAccount query
 edition: ee
 ---
 
+# giftCardAccount query
+
 The `giftCardAccount` query returns information for a specific gift card.
 
 ## Syntax

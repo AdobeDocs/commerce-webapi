@@ -5,6 +5,8 @@ contributor_name: Zilker Technology
 contributor_link: https://www.ztech.io/
 ---
 
+# deleteRequisitionList mutation
+
 The `deleteRequisitionList` mutation deletes a requisition list of the logged in customer. The response can include any remaining requisition lists.
 
 This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).

@@ -3,6 +3,9 @@ title: copyItemsBetweenRequisitionLists mutation
 edition: b2b
 contributor_name: EY
 ---
+
+# copyItemsBetweenRequisitionLists mutation
+
 The `copyItemsBetweenRequisitionLists` mutation copies items from one requisition list to another.
 
 This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).

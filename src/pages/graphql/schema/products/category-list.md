@@ -2,6 +2,8 @@
 title: categoryList query
 ---
 
+# categoryList query
+
 The `categoryList` query searches for categories that match the criteria specified in filters. It replaces the deprecated `category` query, which allowed you to search by category ID only.
 
 <InlineAlert variant="info" slots="text" />

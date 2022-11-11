@@ -4,6 +4,8 @@ contributor_name: Oleksandr Kravchuk
 contributor_link: https://github.com/swnsma
 ---
 
+# pickupLocations query
+
 Use the `pickupLocations` query to retrieve a list of available pickup locations.
 
 The `pickupLocations` query supports the following types of filters.

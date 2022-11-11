@@ -3,6 +3,8 @@ title: removeGiftCardFromCart mutation
 edition: ee
 ---
 
+# removeGiftCardFromCart mutation
+
 The `removeGiftCardFromCart` mutation removes a previously-applied gift card from the cart.
 
 ## Syntax

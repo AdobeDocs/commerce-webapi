@@ -3,6 +3,8 @@ title: deleteNegotiableQuotes mutation
 edition: b2b
 ---
 
+# deleteNegotiableQuotes mutation
+
 The `deleteNegotiableQuotes` mutation causes the specified negotiable quotes to be invisible from the Admin or from the storefront. The quotes are still present in the database.
 
 You can run the `deleteNegotiableQuotes` mutation when negotiable quotes are have the following statuses:

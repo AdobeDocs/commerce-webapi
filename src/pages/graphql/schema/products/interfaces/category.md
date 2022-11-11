@@ -2,6 +2,8 @@
 title: CategoryInterface attributes
 ---
 
+# CategoryInterface attributes
+
 `CategoryInterface` defines attributes that can be returned in the [`categoryList` query]({{page.baseurl}}/graphql/queries/category-list.html), [`categories` query]({{page.baseurl}}/graphql/queries/categories.html), and the [`products` query]({{page.baseurl}}/graphql/queries/products.html).
 
 ## CategoryInterface attributes

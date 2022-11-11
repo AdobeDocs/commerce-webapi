@@ -3,6 +3,9 @@ title: addRequisitionListItemsToCart mutation
 edition: b2b
 contributor_name: EY
 ---
+
+# addRequisitionListItemsToCart mutation
+
 The `addRequisitionListItemsToCart` mutation adds requisition list items to the cart. The requisition list does not change after adding items to the cart.
 
 This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).

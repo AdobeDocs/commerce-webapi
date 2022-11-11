@@ -4,6 +4,8 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
+# resetPassword mutation
+
 The `resetPassword` mutation resets customer password using a reset password token and the customer's email address. Use it to set a new password for the registered customer after calling the [requestPasswordResetEmail]({{page.baseurl}}/graphql/mutations/request-password-reset-email.html) mutation.
 
 ## Syntax

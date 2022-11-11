@@ -2,6 +2,8 @@
 title: wishlist query
 ---
 
+# wishlist query
+
 <InlineAlert variant="warning" slots="text" />
 
 The `wishlist` query has been deprecated. Wish list information is now provided by the [customer]({{page.baseurl}}/graphql/queries/customer.html) query.

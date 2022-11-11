@@ -2,6 +2,8 @@
 title: setGuestEmailOnCart mutation
 ---
 
+# setGuestEmailOnCart mutation
+
 For guest customers, you must assign an email to the cart before you place the order.
 
 A logged-in customer specifies an email address when they create an account. Therefore, you can place the order without explicitly setting the email.

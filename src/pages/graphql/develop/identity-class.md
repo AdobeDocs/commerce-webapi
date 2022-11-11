@@ -2,7 +2,9 @@
 title: Identity class
 ---
 
-If you create a cacheable query (similar to those for product, category, and CMS data), then you must create an `Identity` class for the module. The class must return unique identifiers for cache tags that can be invalidated when an entity changes. Place this class in your module’s `Model/Resolver` directory.
+# Identity class
+
+If you create a cacheable query (similar to those for product, category, and CMS data), then you must create an `Identity` class for the module. The class must return unique identifiers for cache tags that can be invalidated when an entity changes. Place this class in your module's `Model/Resolver` directory.
 
 An Identity class implements `Magento\Framework\GraphQl\Query\Resolver\IdentityInterface`. Your Identity class must contain the following elements:
 
@@ -48,7 +50,7 @@ class MyIdentity implements IdentityInterface
 }
 ```
 
-Use the `@cache` directive in your module’s [`graphqls` file]({{page.baseurl}}/graphql/develop/create-graphqls-file.html) to specify the location to your `Identity` class. Your module’s `graphqls` file must point to your `Identity` class, as shown below:
+Use the `@cache` directive in your module's [`graphqls` file]({{page.baseurl}}/graphql/develop/create-graphqls-file.html) to specify the location to your `Identity` class. Your module's `graphqls` file must point to your `Identity` class, as shown below:
 
 ```text
       categoryList(

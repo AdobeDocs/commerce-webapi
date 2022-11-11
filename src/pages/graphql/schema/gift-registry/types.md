@@ -5,6 +5,8 @@ contributor_name: Zilker Technology
 contributor_link: https://www.ztech.io/
 ---
 
+# giftRegistryTypes query
+
 The `giftRegistryTypes` query returns a list of available gift registry types.
 
 ## Syntax

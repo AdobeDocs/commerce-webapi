@@ -2,6 +2,8 @@
 title: createPayflowProToken mutation
 ---
 
+# createPayflowProToken mutation
+
 The `createPayflowProToken` mutation initiates a Payflow Pro transaction and receives a token. The payload must contain the redirect URLs to use when the transaction is successful, when the customer cancels the transaction, or when an error occurs.
 
 See [Paypal Payflow Pro payment method]({{page.baseurl}}/graphql/payment-methods/payflow-pro.html) for detailed information about the workflow of PayPal Payflow Pro transactions.

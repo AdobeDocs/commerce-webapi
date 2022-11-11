@@ -4,6 +4,8 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
+# Debugging GraphQL queries
+
 This topic provides recommendations on how to debug GraphQL requests.
 
 ## Debugging with PHPStorm and Xdebug

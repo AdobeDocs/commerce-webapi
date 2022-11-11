@@ -2,6 +2,8 @@
 title: createPaypalExpressToken mutation
 ---
 
+# createPaypalExpressToken mutation
+
 The `createPaypalExpressToken` mutation begins the authorization process for the following payment methods:
 
 *  PayPal Express Checkout

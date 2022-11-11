@@ -1,7 +1,8 @@
 ---
 title: updateProductsInWishlist mutation
-
 ---
+
+# updateProductsInWishlist mutation
 
 The `updateProductsInWishlist` mutation changes the quantity, description and option information for the specified items in the customer's wish list.
 

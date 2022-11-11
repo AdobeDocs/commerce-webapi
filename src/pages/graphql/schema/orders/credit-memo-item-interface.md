@@ -2,6 +2,8 @@
 title: CreditMemoItemInterface attributes and implementations
 ---
 
+# CreditMemoItemInterface attributes and implementations
+
 `CreditMemoItemInterface` provides details about items in a customer's order history that were refunded. It has the following implementations:
 
 *  [`BundleCreditMemoItem`](#BundleCreditMemoItem)

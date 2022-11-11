@@ -2,6 +2,8 @@
 title: createProductReview mutation
 ---
 
+# createProductReview mutation
+
 The `createProductReview` mutation adds a review for the specified product. Use the [`productReviewRatingsMetadata` query]({{page.baseurl}}/graphql/queries/product-review-ratings-metadata.html) to return a list of rating categories and possible values.
 
 ## Syntax

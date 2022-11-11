@@ -3,6 +3,8 @@ title: giftRegistryTypeSearch query
 edition: ee   
 ---
 
+# giftRegistryTypeSearch query
+
 The `giftRegistryTypeSearch` query returns a list of gift registries that match the specified registrant name and, optionally, registry type ID. Use the [`giftRegistryTypes` query]({{page.baseurl}}/graphql/queries/gift-registry-types.html) to return list of registry type IDs.
 
 ## Syntax

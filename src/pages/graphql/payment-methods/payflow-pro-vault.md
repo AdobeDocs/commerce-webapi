@@ -2,6 +2,8 @@
 title: PayPal Payflow Pro Vault payment method
 ---
 
+# PayPal Payflow Pro Vault payment method
+
 PayPal Payflow Pro Vault payment method processes credit and debit card payments using information stored in the vault. This payment method is available for customers of the United States, Canada, Australia, and New Zealand.
 
 The following conditions must be true to use this payment method:

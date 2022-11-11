@@ -4,6 +4,8 @@ contributor_name: Something Digital
 contributor_link: https://www.somethingdigital.com/
 ---
 
+# createBraintreeClientToken mutation
+
 The `createBraintreeClientToken` mutation creates the client token for Braintree Javascript SDK initialization.
 
 ## Syntax

@@ -2,6 +2,8 @@
 title: isEmailAvailable query
 ---
 
+# isEmailAvailable query
+
 The `isEmailAvailable` query checks whether the specified email has already been used to create a customer account. A value of `true` indicates the email address is available, and the customer can use the email address to create an account.
 
 ## Syntax

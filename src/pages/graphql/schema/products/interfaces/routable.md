@@ -1,7 +1,8 @@
 ---
 title: RoutableInterface attributes
-
 ---
+
+# RoutableInterface attributes
 
 Some entities are "routable", meaning that they have URLs and can serve as the model for a rendered page. The following implementations of the `RoutableInterface` allow you to return details in the [`route` query]({{page.baseurl}}/graphql/queries/route.html).
 

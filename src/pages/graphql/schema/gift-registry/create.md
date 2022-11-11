@@ -3,6 +3,9 @@ title: createGiftRegistry mutation
 edition: ee
 contributor_name: EY
 ---
+
+# createGiftRegistry mutation
+
 The `createGiftRegistry` mutation creates a gift registry for the logged in customer.
 
 This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).

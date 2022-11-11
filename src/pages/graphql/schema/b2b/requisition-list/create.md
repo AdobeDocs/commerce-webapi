@@ -4,6 +4,9 @@ edition: b2b
 contributor_name: Zilker Technology
 contributor_link: https://www.ztech.io/
 ---
+
+# createRequisitionList mutation
+
 The `createRequisitionList` mutation creates a requisition list for the logged in customer.
 
 This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).

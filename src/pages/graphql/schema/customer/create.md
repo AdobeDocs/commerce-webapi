@@ -2,6 +2,8 @@
 title: createCustomer mutation
 ---
 
+# createCustomer mutation
+
 <InlineAlert variant="warning" slots="text" />
 
 We recommend using the [createCustomerV2 mutation]({{page.baseurl}}/graphql/mutations/create-customer-v2.html) to create a customer.

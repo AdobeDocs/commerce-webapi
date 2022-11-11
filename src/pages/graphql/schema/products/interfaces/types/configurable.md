@@ -2,6 +2,8 @@
 title: Configurable product data types
 ---
 
+# Configurable product data types
+
 The `ConfigurableProduct` data type implements the following interfaces:
 
 -  [ProductInterface]({{page.baseurl}}/graphql/interfaces/product-interface.html)

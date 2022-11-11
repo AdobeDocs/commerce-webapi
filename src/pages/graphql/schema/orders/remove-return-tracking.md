@@ -2,6 +2,8 @@
 title: removeReturnTracking mutation
 ---
 
+# removeReturnTracking mutation
+
 The `removeReturnTracking` mutation deletes a customer-entered entry that defines the shipping carrier and tracking number for a return request. Use the [`customer` query]({{page.baseurl}}/graphql/queries/customer.html) to retrieve valid `carrier_uid` values.
 
 ## Syntax

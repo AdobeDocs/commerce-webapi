@@ -3,6 +3,8 @@ title: setNegotiableQuoteShippingMethods mutation
 edition: b2b
 ---
 
+# setNegotiableQuoteShippingMethods mutation
+
 The `setNegotiableQuoteShippingMethods` mutation sets one or more delivery methods on a negotiable quote. By default, the following delivery methods are supported:
 
 Label | Carrier code | Method code

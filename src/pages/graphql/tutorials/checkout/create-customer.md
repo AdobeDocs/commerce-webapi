@@ -4,6 +4,8 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
+# Step 1. Create a customer
+
 This step creates a customer account and generates an authentication token for that customer. You can skip this step if you want to perform this tutorial as a guest user.
 
 ## Create a customer

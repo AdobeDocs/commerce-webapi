@@ -2,6 +2,8 @@
 title: availableStores query
 ---
 
+# availableStores query
+
 The `availableStores` query returns configuration information about multiple store views. Use this query to implement a store switcher.
 
 If the `useCurrentGroup` input argument is set to `true`, then the `availableStores` query returns configuration information about store views that have the same parent _store_. If the input argument is not specified or is set to `false`, the query returns values for all store views with the same parent _website_.

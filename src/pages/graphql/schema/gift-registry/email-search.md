@@ -3,6 +3,8 @@ title: giftRegistryEmailSearch query
 edition: ee   
 ---
 
+# giftRegistryEmailSearch query
+
 The `giftRegistryEmailSearch` query returns a list of gift registries that match the specified registrant email address. The query does not return registries based on owner email address.
 
 ## Syntax

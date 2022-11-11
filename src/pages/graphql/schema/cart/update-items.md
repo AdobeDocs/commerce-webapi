@@ -2,6 +2,8 @@
 title: updateCartItems mutation
 ---
 
+# updateCartItems mutation
+
 The `updateCartItems` mutation allows you to modify items in the specified cart. You can also replace the current quantity of one or more cart items with the specified quantities. The mutation does not perform calculations to determine the quantity of cart items.
 
 <InlineAlert variant="info" slots="text" />

@@ -3,6 +3,8 @@ title: applyStoreCreditToCart mutation
 edition: ee
 ---
 
+# applyStoreCreditToCart mutation
+
 The `applyStoreCreditToCart` mutation applies store credit to the specified cart. Store credit must be enabled on the store to run this mutation.
 
 Store credit is an amount that the merchant applies to a customer account as a result of a refund or similar transaction. If gift cards are enabled for a store, then a customer receives store credit when redeeming a gift card. No matter how the customer obtains store credit, these funds can be used to pay for purchases.

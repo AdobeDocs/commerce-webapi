@@ -4,6 +4,8 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
+# subscribeEmailToNewsletter mutation
+
 The `subscribeEmailToNewsletter` mutation allows guests and registered customers to sign up to receive newsletters.
 
 ## Syntax

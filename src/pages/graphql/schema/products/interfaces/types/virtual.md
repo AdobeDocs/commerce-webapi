@@ -4,6 +4,8 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
+# Virtual product data types
+
 The `VirtualProduct` data type implements the following interfaces:
 
 -  [ProductInterface]({{page.baseurl}}/graphql/interfaces/product-interface.html)

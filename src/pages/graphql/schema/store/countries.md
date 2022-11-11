@@ -2,6 +2,8 @@
 title: countries query
 ---
 
+# countries query
+
 The `countries` query returns all countries in which the entity can do business.
 
 Use the [country]({{page.baseurl}}/graphql/queries/directory-country.html) query if you want to retrieve information about a specific country.

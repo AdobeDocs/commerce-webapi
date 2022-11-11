@@ -5,6 +5,8 @@ contributor_link: https://www.atwix.com/
 edition: b2b
 ---
 
+# createCompanyUser mutation
+
 The `createCompanyUser` mutation allows an existing company user who is assigned a role that contains the `Magento_Company::users_edit` permission to create a new company user. The specified email address determines how the application processes the request.
 
 -  If the email address is unique for the website, the application immediately creates the company user.

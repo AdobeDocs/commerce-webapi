@@ -2,6 +2,8 @@
 title: ShipmentItemInterface attributes and implementations
 ---
 
+# ShipmentItemInterface attributes and implementations
+
 `ShipmentItemInterface` provides details about items in a customer's order history that were shipped. It has the following implementations:
 
 *  [`BundleShipmentItem`](#BundleShipmentItem)

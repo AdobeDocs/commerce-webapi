@@ -4,6 +4,8 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
+# Step 7. Apply a coupon
+
 Use [applyCouponToCart]({{ page.baseurl }}/graphql/mutations/apply-coupon.html) to apply a discount coupon to the specified `cart_id`.
 
 `{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart]({{ page.baseurl }}/graphql/tutorials/checkout/checkout-add-product-to-cart.html).

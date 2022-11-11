@@ -4,6 +4,8 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
+# addProductsToCompareList mutation
+
 The `addProductsToCompareList` mutation adds products to the comparison list.
 
 You must specify the unique ID of the comparison list as well as a list of product IDs to be added to the comparison list.

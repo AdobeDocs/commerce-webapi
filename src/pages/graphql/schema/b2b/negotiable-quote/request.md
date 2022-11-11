@@ -3,6 +3,8 @@ title: requestNegotiableQuote mutation
 edition: b2b
 ---
 
+# requestNegotiableQuote mutation
+
 The `requestNegotiableQuote` mutation initiates a negotiable quote on behalf of a company user. The company user must add all products to the cart before requesting a negotiable quote. Once the request is submitted, company users cannot add new products to the quote.
 
 If the request is successful, the application assigns the cart ID to the negotiable quote. Therefore, the same cart ID is used throughout the lifecycle of the negotiable quote. The application generates a new cart ID if the company user starts a new order while a negotiable quote is in process. The cart ID must be active. You cannot create a negotiable quote if the quote is cancelled or converted to an order.

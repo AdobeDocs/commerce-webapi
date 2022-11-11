@@ -5,6 +5,8 @@ contributor_link: https://www.atwix.com/
 edition: b2b
 ---
 
+# createCompanyTeam mutation
+
 Use the `createCompanyTeam` mutation to create a new team for your company.
 
 The `target_id` input attribute allows you to specify which node in the company structure will be the parent node of the company team. If you do not specify a value, the team will be assigned to the top-level (root) node of the company structure.

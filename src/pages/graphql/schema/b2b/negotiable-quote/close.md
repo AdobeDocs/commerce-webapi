@@ -3,6 +3,8 @@ title: closeNegotiableQuotes mutation
 edition: b2b
 ---
 
+# closeNegotiableQuotes mutation
+
 The `closeNegotiableQuotes` mutation closes an active negotiable quote. Once a quote is closed, it cannot be re-opened. Closed negotiable quotes can be viewed by the merchant and company users.
 
 This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).

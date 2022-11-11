@@ -4,6 +4,8 @@ edition: ee
 contributor_name: EY
 ---
 
+# giftRegistry query
+
 The `giftRegistry` query retrieves details about the specified gift registry. Use the [`customer` query]({{page.baseurl}}/graphql/queries/customer.html) to return a list of valid `uid` values.
 
 This query requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).

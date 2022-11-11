@@ -3,6 +3,8 @@ title: isCompanyAdminEmailAvailable query
 edition: b2b
 ---
 
+# isCompanyAdminEmailAvailable query
+
 The `isCompanyAdminEmailAvailable` query checks whether the specified email can be used to create a company administrator account. If the email matches an existing customer or another company administrator account, the query returns a `false` value. A value of `true` indicates the email address can be used to create a company administrator account.
 
 ## Syntax

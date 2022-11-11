@@ -2,6 +2,8 @@
 title: placeOrder mutation
 ---
 
+# placeOrder mutation
+
 The `placeOrder` mutation converts the cart into an order and returns an order ID. You cannot manage orders with GraphQL, because orders are part of the backend. You can use REST or SOAP calls to manage orders to their completion.
 
 Perform the following actions before using the `placeOrder` mutation:

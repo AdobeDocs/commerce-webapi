@@ -3,6 +3,9 @@ title: deleteRequisitionListItems mutation
 edition: b2b
 contributor_name: EY
 ---
+
+# deleteRequisitionListItems mutation
+
 The `deleteRequisitionListItems` mutation removes items from the specified requisiton list for the logged in customer.
 
 This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).

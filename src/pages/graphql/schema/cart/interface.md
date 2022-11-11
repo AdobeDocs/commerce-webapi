@@ -2,6 +2,8 @@
 title: CartItemInterface attributes and implementations
 ---
 
+# CartItemInterface attributes and implementations
+
 The `CartItemInterface` has the following implementations:
 
 *  [BundleCartItem](#BundleCartItem)

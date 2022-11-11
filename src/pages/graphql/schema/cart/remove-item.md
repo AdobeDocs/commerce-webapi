@@ -2,6 +2,8 @@
 title: removeItemFromCart mutation
 ---
 
+# removeItemFromCart mutation
+
 The `removeItemFromCart` mutation deletes the entire quantity of a specified item from the cart. If you remove all items from the cart, the cart continues to exist.
 
 ## Syntax

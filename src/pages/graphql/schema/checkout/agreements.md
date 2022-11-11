@@ -4,6 +4,8 @@ contributor_name: Something Digital
 contributor_link: https://www.somethingdigital.com/
 ---
 
+# checkoutAgreements query
+
 The `checkoutAgreements` query retrieves checkout agreements. The query will always return an empty array when the
 **Enable Terms and Conditions** option is set to **No**.  (The config path is `checkout/options/enable_agreements`.)
 

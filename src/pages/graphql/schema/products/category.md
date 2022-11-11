@@ -2,6 +2,8 @@
 title: category query
 ---
 
+# category query
+
 <InlineAlert variant="warning" slots="text" />
 
 The `category` query has been deprecated. Use the [categories]({{page.baseurl}}/graphql/queries/categories.html) query instead.

@@ -1,8 +1,10 @@
 ---
-title: GraphQL Authorization
+title: GraphQL authorization
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
+
+# GraphQL authorization
 
 Adobe Commerce and Magento Open Source provide two mechanisms for authorizing GraphQL calls:
 

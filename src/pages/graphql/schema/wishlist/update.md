@@ -3,6 +3,8 @@ title: updateWishlist mutation
 edition: ee
 ---
 
+# updateWishlist mutation
+
 The `updateWishlist` mutation updates the properties of a wish list. Adobe Commerce allows customers to change the name and visibility of wish lists.
 
 <InlineAlert variant="info" slots="text" />

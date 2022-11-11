@@ -2,6 +2,8 @@
 title: customerDownloadableProducts query
 ---
 
+# customerDownloadableProducts query
+
 Use the `customerDownloadableProducts` query to retrieve the list of purchased downloadable products for the logged-in customer.
 
 ## Syntax

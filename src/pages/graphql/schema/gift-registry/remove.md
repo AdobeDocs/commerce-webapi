@@ -2,6 +2,9 @@
 title: removeGiftRegistry mutation
 edition: ee
 ---
+
+# removeGiftRegistry mutation
+
 The `removeGiftRegistry` mutation deletes the specified registry from the customers list of gift registries.
 
 This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).

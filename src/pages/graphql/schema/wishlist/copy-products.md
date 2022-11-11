@@ -3,6 +3,8 @@ title: copyProductsBetweenWishlists mutation
 edition: ee
 ---
 
+# copyProductsBetweenWishlists mutation
+
 The `copyProductsBetweenWishlists` mutation copies the specified quantities of one or more products to a different wish list. The original wish list is unchanged.
 
 Use the [`customer` query]({{page.baseurl}}/graphql/queries/customer.html) to return a list of wish list IDs and item IDs.

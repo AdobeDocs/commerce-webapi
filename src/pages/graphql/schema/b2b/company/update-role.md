@@ -5,6 +5,8 @@ contributor_link: https://www.atwix.com/
 edition: b2b
 ---
 
+# updateCompanyRole mutation
+
 Use the `updateCompanyRole` mutation to update the company role and permissions.
 
 You can get the role ID and the list of all resources defined within the company using the [`company`]({{page.baseurl}}/graphql/queries/company.html) query.

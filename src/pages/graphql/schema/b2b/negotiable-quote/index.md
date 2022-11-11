@@ -3,6 +3,8 @@ title: negotiableQuote query
 edition: b2b   
 ---
 
+# negotiableQuote query
+
 The `negotiableQuote` query retrieves details about the specified negotiable quote. Use the [`negotiableQuotes` query]({{page.baseurl}}/graphql/queries/negotiable-quotes.html) to return a list of valid `uid` values.
 
 This query requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).

@@ -4,6 +4,8 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
+# Step 4. Set the shipping address
+
 Use the [setShippingAddressesOnCart]({{ page.baseurl }}/graphql/mutations/set-shipping-address.html) mutation to set a shipping address.
 
 ## Add shipping address to the cart

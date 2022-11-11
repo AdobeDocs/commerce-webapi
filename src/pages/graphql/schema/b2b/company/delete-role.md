@@ -5,6 +5,8 @@ contributor_link: https://www.atwix.com/
 edition: b2b
 ---
 
+# deleteCompanyRole mutation
+
 Use the `deleteCompanyRole` mutation to delete a company role by ID.
 
 You can get the role ID with the [`company`]({{page.baseurl}}/graphql/queries/company.html) query.

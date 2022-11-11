@@ -4,6 +4,8 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
+# Step 8. Set email on the cart (guest customers only)
+
 <InlineAlert variant="success" slots="text" />
 
 Skip this step if you placed the order as a registered customer.

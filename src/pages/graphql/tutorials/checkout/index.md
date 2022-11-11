@@ -4,6 +4,8 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
+# GraphQL checkout tutorial
+
 This tutorial describes how to place an order through GraphQl. Customers can make purchases in two ways:
 
 -  As a logged-in user

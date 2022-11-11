@@ -3,6 +3,8 @@ title: updateNegotiableQuoteQuantities mutation
 edition: b2b
 ---
 
+# updateNegotiableQuoteQuantities mutation
+
 The `updateNegotiableQuoteQuantities` mutation changes the quantity of one or more products in an active negotiable quote.
 
 <InlineAlert variant="info" slots="text" />

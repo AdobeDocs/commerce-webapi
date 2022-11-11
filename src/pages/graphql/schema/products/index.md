@@ -2,6 +2,8 @@
 title: products query
 ---
 
+# products query
+
 The `products` query allows you to search for catalog items.
 
 ## Syntax

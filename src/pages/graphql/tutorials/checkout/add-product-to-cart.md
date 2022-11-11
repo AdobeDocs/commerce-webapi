@@ -4,6 +4,8 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
+# Step 3. Add products to the cart
+
 GraphQL supports all product types, but this tutorial only demonstrates how to add a simple product and a virtual product to the shopping cart. You can find more details and examples in the following topics:
 
 -  [Bundle products]({{ page.baseurl }}/graphql/mutations/add-bundle-products.html)

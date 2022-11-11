@@ -3,6 +3,9 @@ title: moveItemsBetweenRequisitionLists mutation
 edition: b2b
 contributor_name: EY
 ---
+
+# moveItemsBetweenRequisitionLists mutation
+
 The `moveItemsBetweenRequisitionLists` mutation moves items from one requisition list to another.
 
 This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).

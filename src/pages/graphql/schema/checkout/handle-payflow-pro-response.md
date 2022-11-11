@@ -2,6 +2,8 @@
 title: handlePayflowProResponse mutation
 ---
 
+# handlePayflowProResponse mutation
+
 The `handlePayflowProResponse` mutation sends the silent post data that the client received from the Payflow Pro gateway to the application server. The content of this payload varies based on factors such as the merchant's location, the items purchased, and the billing/shipping addresses. The following is an example payload:
 
 ```text

@@ -2,6 +2,8 @@
 title: ProductInterface attributes
 ---
 
+# ProductInterface attributes
+
 Any type that implements `ProductInterface` contains all the base attributes necessary for the frontend of the product model.
 The `items` that are returned in a `ProductInterface` array can also contain attributes from resources external to the `CatalogGraphQl` module:
 

@@ -2,6 +2,8 @@
 title: urlResolver query
 ---
 
+# urlResolver query
+
 <InlineAlert variant="warning" slots="text" />
 
 The `urlResolver` query has been deprecated. Use the [route]({{page.baseurl}}/graphql/queries/route.html) query instead.

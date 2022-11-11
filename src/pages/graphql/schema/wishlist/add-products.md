@@ -2,6 +2,8 @@
 title: addProductsToWishlist mutation
 ---
 
+# addProductsToWishlist mutation
+
 The `addProductsToWishlist` mutation adds one or more products to the specified wish list. This mutation supports all product types.
 
 In Magento Open Source, customers can have only one wish list. In Adobe Commerce, customers can have multiple wish lists.

@@ -2,6 +2,8 @@
 title: country query
 ---
 
+# country query
+
 Use the `country` query to retrieve information about a specific country.
 
 Use the [countries]({{page.baseurl}}/graphql/queries/directory-countries.html) query to retrieve a list of countries available in the system.

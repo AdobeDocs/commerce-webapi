@@ -3,6 +3,8 @@ title: negotiableQuotes query
 edition: b2b   
 ---
 
+# negotiableQuotes query
+
 The `negotiableQuotes` query returns a list of negotiable quotes that can be viewed by the logged-in customer, including quotes created by the customer or by subordinates in the company hierarchy.
 
 This query requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).

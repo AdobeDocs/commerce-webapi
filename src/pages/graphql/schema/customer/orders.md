@@ -2,6 +2,8 @@
 title: customerOrders query
 ---
 
+# customerOrders query
+
 <InlineAlert variant="warning" slots="text" />
 
 The `customerOrders` query has been deprecated. Specify the `orders` object in the [`customer`]({{page.baseurl}}/graphql/queries/customer.html) query instead.

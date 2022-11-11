@@ -3,6 +3,8 @@ title: giftRegistryIdSearch query
 edition: ee   
 ---
 
+# giftRegistryIdSearch query
+
 The `giftRegistryIdSearch` query returns a list of gift registries that match the specified registry ID. The ID is included in the email the application sends to invitees on behalf of the registrant.
 
 ## Syntax

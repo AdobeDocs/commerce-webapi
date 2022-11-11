@@ -3,6 +3,8 @@ title: placeNegotiableQuoteOrder mutation
 edition: b2b
 ---
 
+# placeNegotiableQuoteOrder mutation
+
 The `placeNegotiableQuoteOrder` mutation converts a negotiable quote into an order and returns an order ID.
 
 The negotiable quote must have one of the following statuses:

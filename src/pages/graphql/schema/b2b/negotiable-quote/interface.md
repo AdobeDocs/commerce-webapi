@@ -3,6 +3,8 @@ title: NegotiableQuoteAddressInterface attributes and implementations
 edition: b2b
 ---
 
+# NegotiableQuoteAddressInterface attributes and implementations
+
 The `NegotiableQuoteAddressInterface` has the following implementations:
 
 *  NegotiableQuoteBillingAddress

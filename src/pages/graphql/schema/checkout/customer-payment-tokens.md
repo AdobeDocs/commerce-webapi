@@ -2,6 +2,8 @@
 title: customerPaymentTokens query
 ---
 
+# customerPaymentTokens query
+
 When the [vault]({{page.baseurl}}/payments-integrations/vault/vault-intro.html) feature is supported by a payment integration and enabled, customers have the option during checkout to save their credit card information. (Braintree supports the vault feature. Third-party payment integrations may support this feature as well.) During subsequent checkouts, the customer is presented with a list of saved payment options. If Instant Purchase is enabled, customers can even by-pass the two-step checkout process and place the order from the product page.
 
 The `customerPaymentTokens` query returns an array of stored payment methods. Use the [deletePaymentToken mutation]({{page.baseurl}}/graphql/mutations/delete-payment-token.html) to delete a payment token from the system.

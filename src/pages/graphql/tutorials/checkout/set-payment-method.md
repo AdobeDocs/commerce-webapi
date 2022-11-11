@@ -4,6 +4,8 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
+# Step 9. Set the payment method
+
 <InlineAlert variant="success" slots="text" />
 
 You must always set a payment method for an order.

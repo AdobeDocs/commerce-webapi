@@ -3,6 +3,8 @@ title: setGiftOptionsOnCart mutation
 edition: ee
 ---
 
+# setGiftOptionsOnCart mutation
+
 The `setGiftOptionsOnCart` mutation allows the buyer to set the following gift options on the cart level:
 
 *  Gift messages

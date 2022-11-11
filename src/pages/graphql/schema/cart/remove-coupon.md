@@ -2,6 +2,8 @@
 title: removeCouponFromCart mutation
 ---
 
+# removeCouponFromCart mutation
+
 The `removeCouponFromCart` mutation removes a previously-applied coupon from the cart. The cart must contain at least one item in order to remove the coupon.
 
 ## Syntax

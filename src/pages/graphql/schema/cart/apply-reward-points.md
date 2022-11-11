@@ -3,6 +3,8 @@ title: applyRewardPointsToCart mutation
 edition: ee
 ---
 
+# applyRewardPointsToCart mutation
+
 The `applyRewardPointsToCart` mutation applies reward points to the customer's cart. You cannot specify a quantity of reward points. If the reward points balance is less than the cart total, the application applies the entire reward points balance. Otherwise, the application applies as many reward points needed to bring the total to 0. Fractional reward points are discarded.
 
 Use the [`removeRewardPointsFromCart` mutation]({{page.baseurl}}/graphql/mutations/remove-reward-points.html) to undo the results of the `applyRewardPointsToCart` mutation.

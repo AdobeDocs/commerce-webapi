@@ -3,6 +3,8 @@ title: removeNegotiableQuoteItems mutation
 edition: b2b
 ---
 
+# removeNegotiableQuoteItems mutation
+
 The `removeNegotiableQuoteItems` mutation removes the specified products from a negotiable quote.
 
 <InlineAlert variant="info" slots="text" />

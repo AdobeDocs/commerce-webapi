@@ -2,9 +2,11 @@
 title: Release Notes
 ---
 
+# GraphQL release notes
+
 <InlineAlert variant="info" slots="text" />
 
-As of version 2.4.1, the GraphQL release notes are included in the [Adobe Commerce and Magento Open Source Release Notes]({{page.baseurl}}/release-notes/bk-release-notes.html).
+As of Adobe Commerce and Magento Open Source 2.4.1, the GraphQL release notes are included in the [Adobe Commerce and Magento Open Source Release Notes]({{page.baseurl}}/release-notes/bk-release-notes.html).
 
 GraphQL is a flexible and performant API that allows you to build custom front-ends, including headless storefronts, [Progressive Web Apps](https://github.com/magento/pwa-studio) (PWA), and mobile apps for Magento.
 

@@ -2,6 +2,8 @@
 title: Bundle product data types
 ---
 
+# Bundle product data types
+
 The `BundleProduct` data type implements the following interfaces:
 
 -  [ProductInterface]({{page.baseurl}}/graphql/interfaces/product-interface.html)

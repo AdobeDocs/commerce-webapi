@@ -3,6 +3,8 @@ title: setNegotiableQuotePaymentMethod mutation
 edition: b2b
 ---
 
+# setNegotiableQuotePaymentMethod mutation
+
 The `setNegotiableQuotePaymentMethod` mutation defines which payment method to apply to the cart. The negotiable quote must be in the UPDATED state to successfully apply the payment method.
 
 Supported online payment methods include:

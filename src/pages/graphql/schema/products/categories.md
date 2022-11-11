@@ -2,6 +2,8 @@
 title: categories query
 ---
 
+# categories query
+
 The `categories` query returns a list of categories that match the specified filter. This query differs from the `categoryList` query in that it supports pagination.
 
 The `categories` query supports the following types of filters. You can specify multiple filters in a query.

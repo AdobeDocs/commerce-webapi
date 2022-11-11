@@ -3,6 +3,8 @@ title: requestReturn mutation
 edition: ee
 ---
 
+# requestReturn mutation
+
 The `requestReturn` mutation initiates a buyer's request to return an item for replacement or refund. The merchant subsequently decides whether to accept or reject the request.
 
 The following examples illustrate how to retrieve the order ID and item ID values needed to run the `requestReturn` mutation:

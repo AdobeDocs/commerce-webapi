@@ -3,6 +3,9 @@ title: clearCustomerCart mutation
 edition: b2b
 contributor_name: EY
 ---
+
+# clearCustomerCart mutation
+
 The `clearCustomerCart` mutation clears the customer's cart.
 
 This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).

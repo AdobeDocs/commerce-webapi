@@ -2,6 +2,8 @@
 title: addReturnComment mutation
 ---
 
+# addReturnComment mutation
+
 The `addReturnComment` mutation adds a comment to an existing return request.
 
 ## Syntax

@@ -3,6 +3,8 @@ title: createCompany mutation
 edition: b2b
 ---
 
+# createCompany mutation
+
 The `createCompany` mutation creates a company at the request of either a customer or a guest. The company definition includes the first name, last name, and email address of the company administrator. The email address assigned to the account cannot already exist in the system. Therefore, a customer attempting to create a company cannot use the same email address they used to log in to the storefront.
 
 The company administrator cannot log in or perform additional company-related tasks until an administrator approves the request to create a company.

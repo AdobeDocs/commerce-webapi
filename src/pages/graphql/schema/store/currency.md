@@ -2,6 +2,8 @@
 title: currency query
 ---
 
+# currency query
+
 Use the `currency` query to return information about the store's currency configuration.
 
 ## Syntax

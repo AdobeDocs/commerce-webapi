@@ -3,6 +3,8 @@ title: RequisitionListItemInterface attributes and implementations
 edition: b2b
 ---
 
+# RequisitionListItemInterface attributes and implementations
+
 `RequisitionListItemInterface` provides details about items in a requisition list. It has the following implementations:
 
 *  [`BundleRequisitionListItem`](#BundleRequisitionListItem)

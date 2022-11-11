@@ -2,6 +2,8 @@
 title: WishlistItemInterface attributes and implementations
 ---
 
+# WishlistItemInterface attributes and implementations
+
 `WishlistItemInterface` provides details about items in a wish list. It has the following implementations:
 
 *  [`BundleWishlistItem`](#BundleWishlistItem)

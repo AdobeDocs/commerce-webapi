@@ -2,6 +2,8 @@
 title: routes query
 ---
 
+# routes query
+
 A merchant can reconfigure (rewrite) the URL to any product, category, or CMS page. When the rewrite goes into effect, any links that point to the previous URL are redirected to the new address.
 
 The `routes` query returns the canonical URL for a specified product, category, or CMS page. An external app can render a page by a URL without any prior knowledge about the landing page.

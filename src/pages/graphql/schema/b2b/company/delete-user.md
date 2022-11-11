@@ -5,6 +5,8 @@ contributor_link: https://www.atwix.com/
 edition: b2b
 ---
 
+# deleteCompanyUser mutation
+
 Use the `deleteCompanyUser` mutation to deactivate the specified company user.
 
 You can get the user ID with the [`company`]({{page.baseurl}}/graphql/queries/company.html) query.

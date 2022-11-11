@@ -4,6 +4,8 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
+# createCompareList mutation
+
 The `createCompareList` mutation creates a new comparison list with products specified in the `input` attribute.
 
 Luma uses a widget to display the product name, price, and other information. To present this information without a widget, set the product attributes to be comparable at **Stores** > Attributes > **Product** > `Attribute Name` > **Storefront Properties** > **Comparable on Storefront**.

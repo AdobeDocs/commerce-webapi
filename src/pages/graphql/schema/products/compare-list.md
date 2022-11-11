@@ -4,6 +4,8 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
+# compareList query
+
 The `compareList` query retrieves information about a list of products so that the shopper can compare those products.
 
 ## Syntax

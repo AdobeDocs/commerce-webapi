@@ -2,6 +2,8 @@
 title: updateCustomer mutation
 ---
 
+# updateCustomer mutation
+
 <InlineAlert variant="warning" slots="text" />
 
 We recommend using the [updateCustomerV2 mutation]({{page.baseurl}}/graphql/mutations/update-customer-v2.html) to update a customer.

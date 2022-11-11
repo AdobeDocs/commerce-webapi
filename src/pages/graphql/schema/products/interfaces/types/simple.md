@@ -4,6 +4,8 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
+# Simple product data types
+
 The `SimpleProduct` data type implements the following interfaces:
 
 -  [ProductInterface]({{page.baseurl}}/graphql/interfaces/product-interface.html)

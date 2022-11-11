@@ -3,6 +3,8 @@ title: isCompanyEmailAvailable query
 edition: b2b
 ---
 
+# isCompanyEmailAvailable query
+
 The `isCompanyEmailAvailable` query checks whether the specified email is valid for company registration. The specified email can be the same as an existing customer or company administrator. If the email matches an existing company email, the query returns a `false` value.
 
 ## Syntax

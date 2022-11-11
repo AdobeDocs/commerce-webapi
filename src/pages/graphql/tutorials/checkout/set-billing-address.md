@@ -4,6 +4,8 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
+# Step 5. Set billing address
+
 <InlineAlert variant="success" slots="text" />
 
 You must always set the billing address to place an order.

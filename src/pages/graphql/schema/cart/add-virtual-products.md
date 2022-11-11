@@ -2,6 +2,8 @@
 title: addVirtualProductsToCart mutation
 ---
 
+# addVirtualProductsToCart mutation
+
 <InlineAlert variant="warning" slots="text" />
 
 We recommend using the [addProductsToCart mutation]({{page.baseurl}}/graphql/mutations/add-products-to-cart.html) to add any type of product to the cart.

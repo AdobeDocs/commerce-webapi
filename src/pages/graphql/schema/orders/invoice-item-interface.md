@@ -2,6 +2,8 @@
 title: InvoiceItemInterface attributes and implementations
 ---
 
+# InvoiceItemInterface attributes and implementations
+
 `InvoiceItemInterface` provides details about items in a customer's order history that were invoiced. It has the following implementations:
 
 *  [`BundleInvoiceItem`](#BundleInvoiceItem)

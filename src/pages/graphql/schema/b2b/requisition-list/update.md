@@ -4,6 +4,9 @@ edition: b2b
 contributor_name: Zilker Technology
 contributor_link: https://www.ztech.io/
 ---
+
+# updateRequisitionList mutation
+
 The `updateRequisitionList` mutation updates the name and, optionally, the description of a requisition list.
 
 This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).

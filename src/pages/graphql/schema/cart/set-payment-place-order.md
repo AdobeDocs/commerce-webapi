@@ -4,6 +4,8 @@ contributor_name: Something Digital
 contributor_link: https://www.somethingdigital.com/
 ---
 
+# setPaymentMethodAndPlaceOrder mutation
+
 <InlineAlert variant="warning" slots="text" />
 
 The `setPaymentMethodAndPlaceOrder` mutation has been deprecated. Use the [setPaymentMethodOnCart]({{page.baseurl}}/graphql/mutations/set-payment-method.html) and [placeOrder]({{page.baseurl}}/graphql/mutations/place-order.html) mutations instead. You can run the two methods in the same call if your use case allows it.

@@ -2,6 +2,8 @@
 title: deleteCustomerAddress mutation
 ---
 
+# deleteCustomerAddress mutation
+
 Use the `deleteCustomerAddress` mutation to delete the specified customer address.
 
 To return or modify information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session).

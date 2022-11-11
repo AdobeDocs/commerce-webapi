@@ -3,6 +3,8 @@ title: contactUs mutation
 edition: pwa
 ---
 
+# contactUs mutation
+
 The `contactUs` mutation submits the contents of the Contact Us form.
 
 ## Syntax

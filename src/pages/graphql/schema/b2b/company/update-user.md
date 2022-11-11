@@ -1,9 +1,11 @@
 ---
 title: updateCompanyUser mutation
+edition: b2b
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
-edition: b2b
 ---
+
+# updateCompanyUser mutation
 
 Use the `updateCompanyUser` mutation to update an existing company user.
 

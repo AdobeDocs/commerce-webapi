@@ -2,6 +2,8 @@
 title: cmsBlocks query
 ---
 
+# cmsBlocks query
+
 The `cmsBlocks` query returns information about blocks that were developed with the Adobe Commerce or Magento Open Source Content Management System (CMS).
 
 ## Syntax

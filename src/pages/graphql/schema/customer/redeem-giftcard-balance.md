@@ -3,6 +3,8 @@ title: redeemGiftCardBalanceAsStoreCredit mutation
 edition: ee
 ---
 
+# redeemGiftCardBalanceAsStoreCredit mutation
+
 The `redeemGiftCardBalanceAsStoreCredit` mutation converts the entire balance of a gift card to store credit. The gift card must be redeemable and cannot have a balance of 0 at the time you run the mutation. After successfully running the mutation, the value of the gift card changes to 0.
 
 <InlineAlert variant="info" slots="text" />

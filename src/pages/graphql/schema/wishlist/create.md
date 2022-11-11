@@ -3,6 +3,8 @@ title: createWishlist mutation
 edition: ee
 ---
 
+# createWishlist mutation
+
 The `createWishlist` mutation creates a wish list for the logged in customer. Adobe Commerce allows customers to have multiple wish lists.
 
 This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).

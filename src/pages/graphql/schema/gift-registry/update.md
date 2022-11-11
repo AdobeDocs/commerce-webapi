@@ -3,6 +3,8 @@ title: updateGiftRegistry mutation
 edition: ee
 ---
 
+# updateGiftRegistry mutation
+
 The `updateGiftRegistry` mutation modifies properties of specified gift registry. It does not update the items in a gift registry or registrants. Use the `updateGiftRegistryItems` or `updateGiftRegistryRegistrants` mutation to modify gift registry items or registrants.
 
 This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).

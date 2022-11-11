@@ -2,6 +2,8 @@
 title: storeConfig query
 ---
 
+# storeConfig query
+
 The `storeConfig` query defines information about a store's configuration. You can query a non-default store by [changing the header]({{ page.baseurl }}/graphql/send-request.html) in your GraphQL request.
 
 ## Syntax

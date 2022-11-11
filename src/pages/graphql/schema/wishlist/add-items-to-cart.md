@@ -1,6 +1,9 @@
 ---
 title: addWishlistItemsToCart mutation
 ---
+
+# addWishlistItemsToCart mutation
+
 The `addWishlistItemsToCart` mutation moves items from the specified wish list to the customer's cart.
 
 This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
