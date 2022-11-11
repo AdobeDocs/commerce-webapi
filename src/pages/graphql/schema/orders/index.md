@@ -1,6 +1,6 @@
 ---
-title: orders query | Commerce Web APIs
+title: Orders | Commerce Web APIs
 description:
 ---
 
-# orders query
+# Orders

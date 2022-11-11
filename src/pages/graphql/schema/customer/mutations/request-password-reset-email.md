@@ -10,7 +10,7 @@ The `requestPasswordResetEmail` mutation triggers the password reset email by th
 
 When the customer clicks the `Set a New Password` button, the application sends an email to the customer that contains a URL for resetting their password.
 
-![Reset password email](../../../_images/graphql/reset-password-email.png)
+![Reset password email](../../../../_images/graphql/reset-password-email.png)
 
 The URL has the following format:
 

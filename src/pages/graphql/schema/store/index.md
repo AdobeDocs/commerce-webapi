@@ -1,6 +1,6 @@
 ---
-title: store query | Commerce Web APIs
+title: Store | Commerce Web APIs
 description:
 ---
 
-# store query
+# Store

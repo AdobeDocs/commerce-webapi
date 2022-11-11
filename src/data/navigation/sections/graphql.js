@@ -72,116 +72,196 @@ module.exports = [
         path: "/graphql/schema/cart/",
         pages: [
           {
-            title: "pickupLocations",
-            path: "/graphql/schema/cart/pickup-locations/",
+            title: "Queries",
+            path: "/graphql/schema/cart/queries/",
+            pages: [
+              {
+                title: "cart",
+                path: "/graphql/schema/cart/queries/cart/",
+              },
+              {
+                title: "pickupLocations",
+                path: "/graphql/schema/cart/queries/pickup-locations/",
+              },
+            ],
           },
           {
-            title: "addBundleProductsToCart",
-            path: "/graphql/schema/cart/add-bundle-products/",
+            title: "Mutations",
+            path: "/graphql/schema/cart/mutations/",
+            pages: [
+              {
+                title: "addBundleProductsToCart",
+                path: "/graphql/schema/cart/mutations/add-bundle-products/",
+              },
+              {
+                title: "addConfigurableProductsToCart",
+                path: "/graphql/schema/cart/mutations/add-configurable-products/",
+              },
+              {
+                title: "addDownloadableProductsToCart",
+                path: "/graphql/schema/cart/mutations/add-downloadable-products/",
+              },
+              {
+                title: "addProductsToCart",
+                path: "/graphql/schema/cart/mutations/add-products/",
+              },
+              {
+                title: "addSimpleProductsToCart",
+                path: "/graphql/schema/cart/mutations/add-simple-products/",
+              },
+              {
+                title: "addVirtualProductsToCart",
+                path: "/graphql/schema/cart/mutations/add-virtual-products",
+              },
+              {
+                title: "applyCouponToCart",
+                path: "/graphql/schema/cart/mutations/apply-coupon/",
+              },
+              {
+                title: "applyGiftCartToCart",
+                path: "/graphql/schema/cart/mutations/apply-giftcard/",
+              },
+              {
+                title: "applyRewardPointsToCart",
+                path: "/graphql/schema/cart/mutations/apply-reward-points/",
+              },
+              {
+                title: "assignCustomerToGuestCart",
+                path: "/graphql/schema/cart/mutations/assign-customer-to-guest-cart/",
+              },
+              {
+                title: "createEmptyCart",
+                path: "/graphql/schema/cart/mutations/create-empty-cart/",
+              },
+              {
+                title: "mergeCarts",
+                path: "/graphql/schema/cart/mutations/merge/",
+              },
+              {
+                title: "placeOrder",
+                path: "/graphql/schema/cart/mutations/place-order/",
+              },
+              {
+                title: "removeCouponFromCart",
+                path: "/graphql/schema/cart/mutations/remove-coupon/",
+              },
+              {
+                title: "removeGiftCardFromCart",
+                path: "/graphql/schema/cart/mutations/remove-giftcard/",
+              },
+              {
+                title: "removeItemFromCart",
+                path: "/graphql/schema/cart/mutations/remove-item/",
+              },
+              {
+                title: "removeRewardPointsFromCart",
+                path: "/graphql/schema/cart/mutations/remove-reward-points/",
+              },
+              {
+                title: "removeStoreCreditFromCart",
+                path: "/graphql/schema/cart/mutations/remove-store-credit/",
+              },
+              {
+                title: "setBillingAddressOnCart",
+                path: "/graphql/schema/cart/mutations/set-billing-address/",
+              },
+              {
+                title: "setGiftOptionsOnCart",
+                path: "/graphql/schema/cart/mutations/set-gift-options/",
+              },
+              {
+                title: "setGuestEmailOnCart",
+                path: "/graphql/schema/cart/mutations/set-guest-email/",
+              },
+              {
+                title: "setPaymentMethodAndPlaceOrder",
+                path: "/graphql/schema/cart/mutations/set-payment-place-order/",
+              },
+              {
+                title: "setPaymentMethodOnCart",
+                path: "/graphql/schema/cart/mutations/set-payment-method/",
+              },
+              {
+                title: "setShippingAddressesOnCart",
+                path: "/graphql/schema/cart/mutations/set-shipping-address/",
+              },
+              {
+                title: "setShippingMethodsOnCart",
+                path: "/graphql/schema/cart/mutations/set-shipping-method/",
+              },
+              {
+                title: "updateCartItems",
+                path: "/graphql/schema/cart/mutations/update-items/",
+              },
+            ],
           },
           {
-            title: "addConfigurableProductsToCart",
-            path: "/graphql/schema/cart/add-configurable-products/",
+            title: "Interfaces",
+            path: "/graphql/schema/cart/interfaces/",
+            pages: [
+              {
+                title: "CartItemInterface",
+                path: "/graphql/schema/cart/interfaces/cart-item/",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Checkout",
+        path: "/graphql/schema/checkout/",
+        pages: [
+          {
+            title: "Queries",
+            path: "/graphql/schema/checkout/queries/",
+            pages: [
+              {
+                title: "checkoutAgreements",
+                path: "/graphql/schema/checkout/queries/agreements/",
+              },
+              {
+                title: "customerPaymentTokens",
+                path: "/graphql/schema/checkout/queries/customer-payment-tokens/",
+              },
+              {
+                title: "getHostedProUrl",
+                path: "/graphql/schema/checkout/queries/get-hosted-pro-url/",
+              },
+              {
+                title: "getPayflowLinkToken",
+                path: "/graphql/schema/checkout/queries/get-payflow-link-token/",
+              },
+            ],
           },
           {
-            title: "addDownloadableProductsToCart",
-            path: "/graphql/schema/cart/add-downloadable-products/",
-          },
-          {
-            title: "addProductsToCart",
-            path: "/graphql/schema/cart/add-products/",
-          },
-          {
-            title: "addSimpleProductsToCart",
-            path: "/graphql/schema/cart/add-simple-products/",
-          },
-          {
-            title: "addVirtualProductsToCart",
-            path: "/graphql/schema/cart/add-virtual-products",
-          },
-          {
-            title: "applyCouponToCart",
-            path: "/graphql/schema/cart/apply-coupon/",
-          },
-          {
-            title: "applyGiftCartToCart",
-            path: "/graphql/schema/cart/apply-giftcard/",
-          },
-          {
-            title: "applyRewardPointsToCart",
-            path: "/graphql/schema/cart/apply-reward-points/",
-          },
-          {
-            title: "assignCustomerToGuestCart",
-            path: "/graphql/schema/cart/assign-customer-to-guest-cart/",
-          },
-          {
-            title: "createEmptyCart",
-            path: "/graphql/schema/cart/create-empty-cart/",
-          },
-          {
-            title: "mergeCarts",
-            path: "/graphql/schema/cart/merge/",
-          },
-          {
-            title: "placeOrder",
-            path: "/graphql/schema/cart/place-order/",
-          },
-          {
-            title: "removeCouponFromCart",
-            path: "/graphql/schema/cart/remove-coupon/",
-          },
-          {
-            title: "removeGiftCardFromCart",
-            path: "/graphql/schema/cart/remove-giftcard/",
-          },
-          {
-            title: "removeItemFromCart",
-            path: "/graphql/schema/cart/remove-item/",
-          },
-          {
-            title: "removeRewardPointsFromCart",
-            path: "/graphql/schema/cart/remove-reward-points/",
-          },
-          {
-            title: "removeStoreCreditFromCart",
-            path: "/graphql/schema/cart/remove-store-credit/",
-          },
-          {
-            title: "setBillingAddressOnCart",
-            path: "/graphql/schema/cart/set-billing-address/",
-          },
-          {
-            title: "setGiftOptionsOnCart",
-            path: "/graphql/schema/cart/set-gift-options/",
-          },
-          {
-            title: "setGuestEmailOnCart",
-            path: "/graphql/schema/cart/set-guest-email/",
-          },
-          {
-            title: "setPaymentMethodAndPlaceOrder",
-            path: "/graphql/schema/cart/set-payment-place-order/",
-          },
-          {
-            title: "setPaymentMethodOnCart",
-            path: "/graphql/schema/cart/set-payment-method/",
-          },
-          {
-            title: "setShippingAddressesOnCart",
-            path: "/graphql/schema/cart/set-shipping-address/",
-          },
-          {
-            title: "setShippingMethodsOnCart",
-            path: "/graphql/schema/cart/set-shipping-method/",
-          },
-          {
-            title: "updateCartItems",
-            path: "/graphql/schema/cart/update-items/",
-          },
-          {
-            title: "CartItemInterface",
-            path: "/graphql/schema/cart/interface/",
+            title: "Mutations",
+            path: "/graphql/schema/checkout/mutations/",
+            pages: [
+              {
+                title: "createBraintreeClientToken",
+                path: "/graphql/schema/checkout/mutations/create-braintree-client-token/",
+              },
+              {
+                title: "createKlarnaPaymentsSession",
+                path: "/graphql/schema/checkout/mutations/create-klarna-payments-session/",
+              },
+              {
+                title: "createPayflowProToken",
+                path: "/graphql/schema/checkout/mutations/create-payflow-pro-token/",
+              },
+              {
+                title: "createPaypalExpressToken",
+                path: "/graphql/schema/checkout/mutations/create-paypal-express-token/",
+              },
+              {
+                title: "deletePaymentToken",
+                path: "/graphql/schema/checkout/mutations/delete-payment-token/",
+              },
+              {
+                title: "handlePayflowProResponse",
+                path: "/graphql/schema/checkout/mutations/handle-payflow-pro-response/",
+              },
+            ],
           },
         ],
       },
@@ -190,100 +270,116 @@ module.exports = [
         path: "/graphql/schema/customer/",
         pages: [
           {
-            title: "customerCart",
-            path: "/graphql/schema/customer/cart/",
+            title: "Queries",
+            path: "/graphql/schema/customer/queries/",
+            pages: [
+              {
+                title: "customer",
+                path: "/graphql/schema/customer/queries/customer/",
+              },
+              {
+                title: "customerCart",
+                path: "/graphql/schema/customer/queries/cart/",
+              },
+              {
+                title: "customerDownloadableProducts",
+                path: "/graphql/schema/customer/queries/downloadable-products/",
+              },
+              {
+                title: "customerOrders",
+                path: "/graphql/schema/customer/queries/orders/",
+              },
+              {
+                title: "giftCardAccount",
+                path: "/graphql/schema/customer/queries/giftcard-account/",
+              },
+              {
+                title: "isEmailAvailable",
+                path: "/graphql/schema/customer/queries/is-email-available/",
+              },
+            ],
           },
           {
-            title: "customerDownloadableProducts",
-            path: "/graphql/schema/customer/downloadable-products/",
-          },
-          {
-            title: "customerOrders",
-            path: "/graphql/schema/customer/orders/",
-          },
-          {
-            title: "giftCardAccount",
-            path: "/graphql/schema/customer/giftcard-account/",
-          },
-          {
-            title: "isEmailAvailable",
-            path: "/graphql/schema/customer/is-email-available/",
-          },
-          {
-            title: "assignCompareListToCustomer",
-            path: "/graphql/schema/customer/assign-compare-list/",
-          },
-          {
-            title: "changeCustomerPassword",
-            path: "/graphql/schema/customer/change-password/",
-          },
-          {
-            title: "createCustomer",
-            path: "/graphql/schema/customer/create/",
-          },
-          {
-            title: "createCustomerAddress",
-            path: "/graphql/schema/customer/create-address/",
-          },
-          {
-            title: "createCustomerV2",
-            path: "/graphql/schema/customer/create-v2/",
-          },
-          {
-            title: "deleteCustomer",
-            path: "/graphql/schema/customer/delete/",
-          },
-          {
-            title: "deleteCustomerAddress",
-            path: "/graphql/schema/customer/delete-address/",
-          },
-          {
-            title: "generateCustomerToken",
-            path: "/graphql/schema/customer/generate-token/",
-          },
-          {
-            title: "generateCustomerTokenAsAdmin",
-            path: "/graphql/schema/customer/generate-token-as-admin/",
-          },
-          {
-            title: "redeemGiftCardBalanceAsStoreCredit",
-            path: "/graphql/schema/customer/redeem-giftcard-balance/",
-          },
-          {
-            title: "requestPasswordResetEmail",
-            path: "/graphql/schema/customer/request-password-reset-email/",
-          },
-          {
-            title: "resetPassword",
-            path: "/graphql/schema/customer/reset-password/",
-          },
-          {
-            title: "revokeCustomerToken",
-            path: "/graphql/schema/customer/revoke-token/",
-          },
-          {
-            title: "sendEmailToFriend",
-            path: "/graphql/schema/customer/send-email-to-friend/",
-          },
-          {
-            title: "subscribeEmailToNewsletter",
-            path: "/graphql/schema/customer/subscribe-email-to-newsletter/",
-          },
-          {
-            title: "updateCustomer",
-            path: "/graphql/schema/customer/update/",
-          },
-          {
-            title: "updateCustomerAddress",
-            path: "/graphql/schema/customer/update-address/",
-          },
-          {
-            title: "updateCustomerEmail",
-            path: "/graphql/schema/customer/update-email/",
-          },
-          {
-            title: "updateCustomerV2",
-            path: "/graphql/schema/customer/update-v2/",
+            title: "Mutations",
+            path: "/graphql/schema/customer/mutations/",
+            pages: [
+              {
+                title: "assignCompareListToCustomer",
+                path: "/graphql/schema/customer/mutations/assign-compare-list/",
+              },
+              {
+                title: "changeCustomerPassword",
+                path: "/graphql/schema/customer/mutations/change-password/",
+              },
+              {
+                title: "createCustomer",
+                path: "/graphql/schema/customer/mutations/create/",
+              },
+              {
+                title: "createCustomerAddress",
+                path: "/graphql/schema/customer/mutations/create-address/",
+              },
+              {
+                title: "createCustomerV2",
+                path: "/graphql/schema/customer/mutations/create-v2/",
+              },
+              {
+                title: "deleteCustomer",
+                path: "/graphql/schema/customer/mutations/delete/",
+              },
+              {
+                title: "deleteCustomerAddress",
+                path: "/graphql/schema/customer/mutations/delete-address/",
+              },
+              {
+                title: "generateCustomerToken",
+                path: "/graphql/schema/customer/mutations/generate-token/",
+              },
+              {
+                title: "generateCustomerTokenAsAdmin",
+                path: "/graphql/schema/customer/mutations/generate-token-as-admin/",
+              },
+              {
+                title: "redeemGiftCardBalanceAsStoreCredit",
+                path: "/graphql/schema/customer/mutations/redeem-giftcard-balance/",
+              },
+              {
+                title: "requestPasswordResetEmail",
+                path: "/graphql/schema/customer/mutations/request-password-reset-email/",
+              },
+              {
+                title: "resetPassword",
+                path: "/graphql/schema/customer/mutations/reset-password/",
+              },
+              {
+                title: "revokeCustomerToken",
+                path: "/graphql/schema/customer/mutations/revoke-token/",
+              },
+              {
+                title: "sendEmailToFriend",
+                path: "/graphql/schema/customer/mutations/send-email-to-friend/",
+              },
+              {
+                title: "subscribeEmailToNewsletter",
+                path: "/graphql/schema/customer/mutations/subscribe-email-to-newsletter/",
+              },
+              {
+                title: "updateCustomer",
+                path: "/graphql/schema/customer/mutations/update/",
+              },
+              {
+                title: "updateCustomerAddress",
+                path: "/graphql/schema/customer/mutations/update-address/",
+              },
+              {
+                title: "updateCustomerEmail",
+                path: "/graphql/schema/customer/mutations/update-email/",
+              },
+              {
+                title: "updateCustomerV2",
+                path: "/graphql/schema/customer/mutations/update-v2/",
+              },
+            ],
           },
         ],
       },
@@ -292,56 +388,68 @@ module.exports = [
         path: "/graphql/schema/gift-registry/",
         pages: [
           {
-            title: "giftRegistryEmailSearch",
-            path: "/graphql/schema/gift-registry/email-search/",
+            title: "Queries",
+            path: "/graphql/schema/gift-registry/queries/",
+            pages: [
+              {
+                title: "giftRegistryEmailSearch",
+                path: "/graphql/schema/gift-registry/queries/email-search/",
+              },
+              {
+                title: "giftRegistryIdSearch",
+                path: "/graphql/schema/gift-registry/queries/id-search/",
+              },
+              {
+                title: "giftRegistryTypes",
+                path: "/graphql/schema/gift-registry/queries/types/",
+              },
+              {
+                title: "giftRegistryTypeSearch",
+                path: "/graphql/schema/gift-registry/queries/type-search/",
+              },
+            ],
           },
           {
-            title: "giftRegistryIdSearch",
-            path: "/graphql/schema/gift-registry/id-search/",
-          },
-          {
-            title: "giftRegistryTypes",
-            path: "/graphql/schema/gift-registry/types/",
-          },
-          {
-            title: "giftRegistryTypeSearch",
-            path: "/graphql/schema/gift-registry/type-search/",
-          },
-          {
-            title: "addGiftRegistryRegistrants",
-            path: "/graphql/schema/gift-registry/add-registrants/",
-          },
-          {
-            title: "createGiftRegistry",
-            path: "/graphql/schema/gift-registry/create/",
-          },
-          {
-            title: "moveCartItemsToGiftRegistry",
-            path: "/graphql/schema/gift-registry/move-cart-items/",
-          },
-          {
-            title: "removeGiftRegistry",
-            path: "/graphql/schema/gift-registry/remove/",
-          },
-          {
-            title: "removeGiftRegistryItems",
-            path: "/graphql/schema/gift-registry/remove-items/",
-          },
-          {
-            title: "removeGiftRegistryRegistrants",
-            path: "/graphql/schema/gift-registry/remove-registrants/",
-          },
-          {
-            title: "updateGiftRegistry",
-            path: "/graphql/schema/gift-registry/update/",
-          },
-          {
-            title: "updateGiftRegistryItems",
-            path: "/graphql/schema/gift-registry/update-items/",
-          },
-          {
-            title: "updateGiftRegistryRegistrants",
-            path: "/graphql/schema/gift-registry/update-registrants/",
+            title: "Mutations",
+            path: "/graphql/schema/gift-registry/mutations/",
+            pages: [
+              {
+                title: "addGiftRegistryRegistrants",
+                path: "/graphql/schema/gift-registry/mutations/add-registrants/",
+              },
+              {
+                title: "createGiftRegistry",
+                path: "/graphql/schema/gift-registry/mutations/create/",
+              },
+              {
+                title: "moveCartItemsToGiftRegistry",
+                path: "/graphql/schema/gift-registry/mutations/move-cart-items/",
+              },
+              {
+                title: "removeGiftRegistry",
+                path: "/graphql/schema/gift-registry/mutations/remove/",
+              },
+              {
+                title: "removeGiftRegistryItems",
+                path: "/graphql/schema/gift-registry/mutations/remove-items/",
+              },
+              {
+                title: "removeGiftRegistryRegistrants",
+                path: "/graphql/schema/gift-registry/mutations/remove-registrants/",
+              },
+              {
+                title: "updateGiftRegistry",
+                path: "/graphql/schema/gift-registry/mutations/update/",
+              },
+              {
+                title: "updateGiftRegistryItems",
+                path: "/graphql/schema/gift-registry/mutations/update-items/",
+              },
+              {
+                title: "updateGiftRegistryRegistrants",
+                path: "/graphql/schema/gift-registry/mutations/update-registrants/",
+              },
+            ],
           },
         ],
       },
@@ -350,36 +458,52 @@ module.exports = [
         path: "/graphql/schema/orders/",
         pages: [
           {
-            title: "addReturnComment",
-            path: "/graphql/schema/orders/add-return-comment/",
+            title: "Mutations",
+            path: "/graphql/schema/orders/mutations/",
+            pages: [
+              {
+                title: "addReturnComment",
+                path: "/graphql/schema/orders/mutations/add-return-comment/",
+              },
+              {
+                title: "addReturnTracking",
+                path: "/graphql/schema/orders/mutations/add-return-tracking/",
+              },
+              {
+                title: "removeReturnTracking",
+                path: "/graphql/schema/orders/mutations/remove-return-tracking/",
+              },
+              {
+                title: "reorderItems",
+                path: "/graphql/schema/orders/mutations/reorder-items/",
+              },
+              {
+                title: "requestReturn",
+                path: "/graphql/schema/orders/mutations/request-return/",
+              },
+            ],
           },
           {
-            title: "addReturnTracking",
-            path: "/graphql/schema/orders/add-return-tracking/",
-          },
-          {
-            title: "removeReturnTracking",
-            path: "/graphql/schema/orders/remove-return-tracking/",
-          },
-          {
-            title: "reorderItems",
-            path: "/graphql/schema/orders/reorder-items/",
-          },
-          {
-            title: "requestReturn",
-            path: "/graphql/schema/orders/request-return/",
-          },
-          {
-            title: "CreditMemoInterface",
-            path: "/graphql/schema/orders/credit-memo-item-interface/",
-          },
-          {
-            title: "InvoiceItemInterface",
-            path: "/graphql/schema/orders/invoice-item-interface/",
-          },
-          {
-            title: "ShipmentItemInterface",
-            path: "/graphql/schema/orders/shipment-item-interface/",
+            title: "Interfaces",
+            path: "/graphql/schema/orders/interfaces/",
+            pages: [
+              {
+                title: "CreditMemoInterface",
+                path: "/graphql/schema/orders/interfaces/credit-memo-item/",
+              },
+              {
+                title: "InvoiceItemInterface",
+                path: "/graphql/schema/orders/interfaces/invoice-item/",
+              },
+              {
+                title: "OrderItemInterface",
+                path: "/graphql/schema/orders/interfaces/order-item/",
+              },
+              {
+                title: "ShipmentItemInterface",
+                path: "/graphql/schema/orders/interfaces/shipment-item/",
+              },
+            ],
           },
         ],
       },
@@ -388,44 +512,60 @@ module.exports = [
         path: "/graphql/schema/products/",
         pages: [
           {
-            title: "categories",
-            path: "/graphql/schema/products/categories/",
+            title: "Queries",
+            path: "/graphql/schema/products/queries/",
+            pages: [
+              {
+                title: "categories",
+                path: "/graphql/schema/products/queries/categories/",
+              },
+              {
+                title: "category",
+                path: "/graphql/schema/products/queries/category/",
+              },
+              {
+                title: "categoryList",
+                path: "/graphql/schema/products/queries/category-list/",
+              },
+              {
+                title: "compareList",
+                path: "/graphql/schema/products/queries/compare-list/",
+              },
+              {
+                title: "productReviewRatingsMetadata",
+                path: "/graphql/schema/products/queries/product-review-ratings-metadata/",
+              },
+              {
+                title: "route",
+                path: "/graphql/schema/products/queries/route/",
+              },
+            ],
           },
           {
-            title: "category",
-            path: "/graphql/schema/products/category/",
-          },
-          {
-            title: "categoryList",
-            path: "/graphql/schema/products/category-list/",
-          },
-          {
-            title: "compareList",
-            path: "/graphql/schema/products/compare-list/",
-          },
-          {
-            title: "productReviewRatingsMetadata",
-            path: "/graphql/schema/products/product-review-ratings-metadata/",
-          },
-          {
-            title: "addProductsToCompareList",
-            path: "/graphql/schema/products/add-products-to-compare-list/",
-          },
-          {
-            title: "createCompareList",
-            path: "/graphql/schema/products/create-compare-list/",
-          },
-          {
-            title: "createProductReview",
-            path: "/graphql/schema/products/create-review/",
-          },
-          {
-            title: "deleteCompareList",
-            path: "/graphql/schema/products/delete-compare-list/",
-          },
-          {
-            title: "removeProductsFromCompareList",
-            path: "/graphql/schema/products/remove-from-compare-list/",
+            title: "Mutations",
+            path: "/graphql/schema/products/mutations/",
+            pages: [
+              {
+                title: "addProductsToCompareList",
+                path: "/graphql/schema/products/mutations/add-products-to-compare-list/",
+              },
+              {
+                title: "createCompareList",
+                path: "/graphql/schema/products/mutations/create-compare-list/",
+              },
+              {
+                title: "createProductReview",
+                path: "/graphql/schema/products/mutations/create-review/",
+              },
+              {
+                title: "deleteCompareList",
+                path: "/graphql/schema/products/mutations/delete-compare-list/",
+              },
+              {
+                title: "removeProductsFromCompareList",
+                path: "/graphql/schema/products/mutations/remove-from-compare-list/",
+              },
+            ],
           },
           {
             title: "Interfaces",
@@ -442,10 +582,6 @@ module.exports = [
               {
                 title: "CustomizableOptionInterface",
                 path: "/graphql/schema/products/interfaces/customizable-option/",
-              },
-              {
-                title: "RoutableInterface",
-                path: "/graphql/schema/products/interfaces/routable/",
               },
               {
                 title: "ProductInterface implementations",
@@ -481,11 +617,15 @@ module.exports = [
                   },
                 ],
               },
+              {
+                title: "PWA implementations",
+                path: "/graphql/schema/products/interfaces/pwa-implementations/",
+              },
+              {
+                title: "RoutableInterface",
+                path: "/graphql/schema/products/interfaces/routable/",
+              },
             ],
-          },
-          {
-            title: "PWA implementations",
-            path: "/graphql/schema/products/pwa-implementations/",
           },
         ],
       },
@@ -494,52 +634,64 @@ module.exports = [
         path: "/graphql/schema/store/",
         pages: [
           {
-            title: "attributesMetadata",
-            path: "/graphql/schema/store/attributes-metadata/",
+            title: "Queries",
+            path: "/graphql/schema/store/queries/",
+            pages: [
+              {
+                title: "attributesMetadata",
+                path: "/graphql/schema/store/queries/attributes-metadata/",
+              },
+              {
+                title: "availableStores",
+                path: "/graphql/schema/store/queries/available-stores/",
+              },
+              {
+                title: "cmsBlocks",
+                path: "/graphql/schema/store/queries/cms-blocks/",
+              },
+              {
+                title: "cmsPage",
+                path: "/graphql/schema/store/queries/cms-page/",
+              },
+              {
+                title: "countries",
+                path: "/graphql/schema/store/queries/countries/",
+              },
+              {
+                title: "country",
+                path: "/graphql/schema/store/queries/country/",
+              },
+              {
+                title: "currency",
+                path: "/graphql/schema/store/queries/currency/",
+              },
+              {
+                title: "customAttributeMetadata",
+                path: "/graphql/schema/store/queries/custom-attribute-metadata/",
+              },
+              {
+                title: "dynamicBlocks",
+                path: "/graphql/schema/store/queries/dynamic-blocks/",
+              },
+              {
+                title: "reCaptchaV3Config",
+                path: "/graphql/schema/store/queries/recaptcha-v3-config/",
+              },
+              {
+                title: "storeConfig",
+                path: "/graphql/schema/store/queries/store-config/",
+              },
+            ],
           },
           {
-            title: "availableStores",
-            path: "/graphql/schema/store/available-stores/",
-          },
-          {
-            title: "cmsBlocks",
-            path: "/graphql/schema/store/cms-blocks/",
-          },
-          {
-            title: "cmsPage",
-            path: "/graphql/schema/store/cms-page/",
-          },
-          {
-            title: "countries",
-            path: "/graphql/schema/store/countries/",
-          },
-          {
-            title: "country",
-            path: "/graphql/schema/store/country/",
-          },
-          {
-            title: "currency",
-            path: "/graphql/schema/store/currency/",
-          },
-          {
-            title: "customAttributeMetadata",
-            path: "/graphql/schema/store/custom-attribute-metadata/",
-          },
-          {
-            title: "dynamicBlocks",
-            path: "/graphql/schema/store/dynamic-blocks/",
-          },
-          {
-            title: "reCaptchaV3Config",
-            path: "/graphql/schema/store/recaptcha-v3-config/",
-          },
-          {
-            title: "storeConfig",
-            path: "/graphql/schema/store/store-config/",
-          },
-          {
-            title: "contactUs",
-            path: "/graphql/schema/store/contact-us/",
+            title: "Mutations",
+            path: "/graphql/schema/store/mutations/",
+            pages: [
+              {
+                title: "contactUs",
+                path: "/graphql/schema/store/mutations/contact-us/",
+              },
+            ],
           },
         ],
       },
@@ -548,44 +700,54 @@ module.exports = [
         path: "/graphql/schema/wishlist/",
         pages: [
           {
-            title: "addProductsToWishlist",
-            path: "/graphql/schema/wishlist/add-products/",
+            title: "Queries",
+            path: "/graphql/schema/wishlist/queries/",
           },
           {
-            title: "addWishlistItemsToCart",
-            path: "/graphql/schema/wishlist/add-items-to-cart/",
+            title: "Mutations",
+            path: "/graphql/schema/wishlist/mutations/",
+            pages: [
+              {
+                title: "addProductsToWishlist",
+                path: "/graphql/schema/wishlist/mutations/add-products/",
+              },
+              {
+                title: "addWishlistItemsToCart",
+                path: "/graphql/schema/wishlist/mutations/add-items-to-cart/",
+              },
+              {
+                title: "copyProductsBetweenWishlists",
+                path: "/graphql/schema/wishlist/mutations/copy-products/",
+              },
+              {
+                title: "createWishlist",
+                path: "/graphql/schema/wishlist/mutations/create/",
+              },
+              {
+                title: "deleteWishlist",
+                path: "/graphql/schema/wishlist/mutations/delete/",
+              },
+              {
+                title: "moveProductsBetweenWishlists",
+                path: "/graphql/schema/wishlist/mutations/move-products/",
+              },
+              {
+                title: "removeProductsFromWishlist",
+                path: "/graphql/schema/wishlist/mutations/remove-products/",
+              },
+              {
+                title: "updateProductsInWishlist",
+                path: "/graphql/schema/wishlist/mutations/update-products/",
+              },
+              {
+                title: "updateWishlist",
+                path: "/graphql/schema/wishlist/mutations/update/",
+              },
+            ],
           },
           {
-            title: "copyProductsBetweenWishlists",
-            path: "/graphql/schema/wishlist/copy-products/",
-          },
-          {
-            title: "createWishlist",
-            path: "/graphql/schema/wishlist/create/",
-          },
-          {
-            title: "deleteWishlist",
-            path: "/graphql/schema/wishlist/delete/",
-          },
-          {
-            title: "moveProductsBetweenWishlists",
-            path: "/graphql/schema/wishlist/move-products/",
-          },
-          {
-            title: "removeProductsFromWishlist",
-            path: "/graphql/schema/wishlist/remove-products/",
-          },
-          {
-            title: "updateProductsInWishlist",
-            path: "/graphql/schema/wishlist/update-products/",
-          },
-          {
-            title: "updateWishlist",
-            path: "/graphql/schema/wishlist/update/",
-          },
-          {
-            title: "WishlistItemInterface",
-            path: "/graphql/schema/wishlist/interface/",
+            title: "Interfaces",
+            path: "/graphql/schema/wishlist/interfaces/",
           },
         ],
       },
