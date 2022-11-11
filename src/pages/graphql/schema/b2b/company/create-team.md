@@ -123,4 +123,6 @@ Attribute |  Data Type | Description
 
 ### CompanyTeam attributes {#CompanyTeam}
 
-{% include graphql/company-team.md %}
+import CompanyTeam from '/src/pages/_includes/graphql/company-team.md'
+
+<CompanyTeam />

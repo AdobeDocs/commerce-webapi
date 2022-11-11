@@ -193,8 +193,6 @@ The following `products` query returns `ConfigurableProduct` information about t
 
 **Response:**
 
-{% collapsible View response %}
-
 ``` json
 {
   "data": {
@@ -755,7 +753,6 @@ The following `products` query returns `ConfigurableProduct` information about t
   }
 }
 ```
-{% endcollapsible %}
 
 ### Limit the number of retrieved media gallery items {#media-gallery-example}
 

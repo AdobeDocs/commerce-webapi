@@ -7,7 +7,9 @@ edition: b2b
 
 The `createCompanyRole` mutation defines a new company role. To create a role, you must provide an array of permissions that determine which resources the user can access.
 
-{% include webapi/b2b_roles.md %}
+import B2BRoles from '/src/pages/_includes/graphql/b2b-roles.md'
+
+<B2BRoles />
 
 Also, you can get the list of all resources defined within the company using the [`company`]({{page.baseurl}}/graphql/queries/company.html) query.
 
@@ -134,7 +136,9 @@ Attribute |  Data Type | Description
 
 ### CompanyRole attributes {#CompanyRole}
 
-{% include graphql/company-role.md %}
+import CompanyRole from '/src/pages/_includes/graphql/company-role.md'
+
+<CompanyRole />
 
 ## Errors
 

@@ -92,7 +92,9 @@ Attribute |  Data Type | Description
 
 ### Cart object {#CartObject}
 
-{% include graphql/cart-object-24.md %}
+import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
+
+<CartObject />
 
 ## Errors
 

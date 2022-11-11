@@ -76,4 +76,6 @@ Attribute |  Data Type | Description
 
 The `createWishlist` mutation returns the Wishlist object.
 
-{% include graphql/wishlist.md %}
+import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
+
+<Wishlist />

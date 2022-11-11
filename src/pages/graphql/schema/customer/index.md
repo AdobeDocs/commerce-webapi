@@ -662,13 +662,17 @@ The following query returns the customer's wish lists. Adobe Commerce allows cus
 
 The `customer` object can contain the following attributes:
 
-{% include graphql/customer-output-24.md %}
+import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
+
+<Customer />
 
 ### CompareList attributes {#CompareList}
 
 The `CompareList` object can contain the following attributes:
 
-{% include graphql/compare-list-output.md %}
+import CompareListOutput from '/src/pages/_includes/graphql/compare-list-output.md'
+
+<CompareListOutput />
 
 ### CustomerAddress attributes {#customerAddressOutput}
 
@@ -722,11 +726,15 @@ Attribute |  Data Type | Description
 
 ### orders input attributes {#orders}
 
-{% include graphql/customer-orders-output.md %}
+import CustomerOrdersOutput from '/src/pages/_includes/graphql/customer-orders-output.md'
+
+<CustomerOrdersOutput />
 
 #### ProductReview object {#ProductReview}
 
-{% include graphql/product-review.md %}
+import ProductReview from '/src/pages/_includes/graphql/product-review.md'
+
+<ProductReview />
 
 #### ProductReviews object {#ProductReviews}
 
@@ -739,7 +747,9 @@ Attribute |  Data Type | Description
 
 ### Return attributes {#Return}
 
-{% include graphql/return.md %}
+import Return from '/src/pages/_includes/graphql/return.md'
+
+<Return />
 
 ### Returns attributes {#Returns}
 
@@ -788,7 +798,9 @@ Attribute |  Data Type | Description
 
 ### Wishlist attributes {#Wishlist}
 
-{% include graphql/wishlist.md %}
+import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
+
+<Wishlist />
 
 ## B2B output attributes {#B2b}
 
@@ -805,7 +817,9 @@ Attribute |  Data Type | Description
 
 ### RequisitionList attributes {#RequisitionList}
 
-{% include graphql/requisition-list.md %}
+import RequisitionList from '/src/pages/_includes/graphql/requisition-list.md'
+
+<RequisitionList />
 
 ### RequisitionLists attributes {#RequisitionList}
 

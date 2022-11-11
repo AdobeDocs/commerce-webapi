@@ -534,4 +534,6 @@ Attribute | Data Type | Description
 
 ## Output attributes
 
-{% include graphql/negotiable-quote.md %}
+import NegotiableQuote from '/src/pages/_includes/graphql/negotiable-quote.md'
+
+<NegotiableQuote />

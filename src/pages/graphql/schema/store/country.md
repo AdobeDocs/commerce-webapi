@@ -103,7 +103,9 @@ Attribute | Data type | Description
 
 The query returns a single `Country` object.
 
-{% include graphql/country-output.md %}
+import CountryOutput from '/src/pages/_includes/graphql/country-output.md'
+
+<CountryOutput />
 
 ## Related topics
 

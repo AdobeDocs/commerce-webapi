@@ -137,7 +137,9 @@ Attribute |  Data Type | Description
 
 ### CustomerAddressInput attributes {#CustomerAddressInput}
 
-{% include graphql/customer-address-input.md %}
+import CustomerAddressInput from '/src/pages/_includes/graphql/customer-address-input.md'
+
+<CustomerAddressInput />
 
 ## Output attributes
 
@@ -149,4 +151,6 @@ Attribute |  Data Type | Description
 
 ### GiftRegistry attributes {#GiftRegistry}
 
-{% include graphql/gift-registry.md %}
+import GiftRegistry from '/src/pages/_includes/graphql/gift-registry.md'
+
+<GiftRegistry />

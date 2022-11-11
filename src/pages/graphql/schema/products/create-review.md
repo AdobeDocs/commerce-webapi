@@ -116,7 +116,9 @@ Attribute |  Data Type | Description
 
 ### ProductReview attributes {#ProductReview}
 
-{% include graphql/product-review.md %}
+import ProductReview from '/src/pages/_includes/graphql/product-review.md'
+
+<ProductReview />
 
 ## Errors
 

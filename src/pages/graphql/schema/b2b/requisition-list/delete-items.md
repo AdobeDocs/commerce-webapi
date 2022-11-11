@@ -77,7 +77,9 @@ Attribute |  Data Type | Description
 
 ### RequisitionList attributes {#RequisitionList}
 
-{% include graphql/requisition-list.md %}
+import RequisitionList from '/src/pages/_includes/graphql/requisition-list.md'
+
+<RequisitionList />
 ## Related topics
 
 *  [updateRequisitionList mutation]({{page.baseurl}}/graphql/mutations/update-requisition-list.html)

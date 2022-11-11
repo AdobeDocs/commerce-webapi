@@ -63,4 +63,6 @@ Attribute |  Data Type | Description
 
 ## Output attributes
 
-{% include graphql/gift-registry-search-result.md %}
+import GiftRegistrySearchResult from '/src/pages/_includes/graphql/gift-registry-search-result.md'
+
+<GiftRegistrySearchResult />

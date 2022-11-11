@@ -55,7 +55,9 @@ mutation {
 
 The following table lists the attributes you can use as input for the `updateCustomer` mutation. The [Customer attributes]({{page.baseurl}}/graphql/queries/customer.html#customerAttributes) table lists the attributes Magento returns.
 
-{% include graphql/create-customer.md %}
+import CreateCustomer from '/src/pages/_includes/graphql/create-customer.md'
+
+<CreateCustomer />
 
 ## Output attributes
 
@@ -63,7 +65,9 @@ The `updateCustomer` mutation returns the `CustomerOutput` object.
 
 The following table lists the top-level attributes of the `customer` object. See the [`customer` query]({{page.baseurl}}/graphql/queries/customer.html) for complete details about this object.
 
-{% include graphql/customer-output-24.md %}
+import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
+
+<Customer />
 
 ## Errors
 

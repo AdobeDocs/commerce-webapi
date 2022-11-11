@@ -13,7 +13,9 @@ title: InvoiceItemInterface attributes and implementations
 
 The `InvoiceItemInterface` describes a specific invoice.
 
-{% include graphql/invoice-item-interface.md %}
+import InvoiceItemInterface from '/src/pages/_includes/graphql/invoice-item-interface.md'
+
+<InvoiceItemInterface />
 
 ## Implementations
 
@@ -25,7 +27,9 @@ Attribute | Data type | Description
 --- | --- | ---
 `bundle_options` | [[ItemSelectedBundleOption]](#ItemSelectedBundleOption) | A list of bundle options that are assigned to the bundle product
 
-{% include graphql/item-selected-bundle-option.md %}
+import ItemSelectedBundleOption from '/src/pages/_includes/graphql/item-selected-bundle-option.md'
+
+<ItemSelectedBundleOption />
 
 ### DownloadableInvoiceItem attributes {#DownloadableInvoiceItem}
 
@@ -35,7 +39,9 @@ Attribute | Data type | Description
 --- | --- | ---
 `downloadable_links` | [[DownloadableItemsLinks]](#DownloadableItemsLinks) | A list of downloadable links from the invoiced downloadable product
 
-{% include graphql/downloadable-items-links.md %}
+import DownloadableItemsLinks from '/src/pages/_includes/graphql/downloadable-items-links.md'
+
+<DownloadableItemsLinks />
 
 ### GiftCardInvoiceItem attributes {#GiftCardInvoiceItem}
 
@@ -45,7 +51,9 @@ Attribute | Data type | Description
 --- | --- | ---
 `gift_card` | [GiftCardItem](#GiftCardItem) | Selected gift card properties for an invoiced item
 
-{% include graphql/gift-card-item.md %}
+import GiftCardItem from '/src/pages/_includes/graphql/gift-card-item.md'
+
+<GiftCardItem />
 
 ### InvoiceItem attributes {#InvoiceItem}
 

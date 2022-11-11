@@ -366,4 +366,6 @@ query{
 
 The `company` object returns the `Company` object.
 
-{% include graphql/company.md %}
+import Company from '/src/pages/_includes/graphql/company.md'
+
+<Company />.md %}

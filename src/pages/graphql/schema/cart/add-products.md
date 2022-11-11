@@ -562,11 +562,15 @@ Attribute |  Data Type | Description
 
 The `CartItemInput` object must contain the following attributes:
 
-{% include graphql/cart-item-input-24.md %}
+import CartItemInput from '/src/pages/_includes/graphql/cart-item-input-24.md'
+
+<CartItemInput />
 
 ### EnteredOptionInput object {#EnteredOptionInput}
 
-{% include graphql/entered-option-input.md %}
+import EnteredOptionInput from '/src/pages/_includes/graphql/entered-option-input.md'
+
+<EnteredOptionInput />
 
 ## Output attributes
 
@@ -579,13 +583,17 @@ The `AddProductsToCartOutput` object contains the `Cart` object.
 
 ### Cart object {#CartObject}
 
-{% include graphql/cart-object.md %}
+import CartObject from '/src/pages/_includes/graphql/cart-object.md'
+
+<CartObject />
 
 [Cart query output]({{page.baseurl}}/graphql/queries/cart.html#cart-output) provides more information about the `Cart` object.
 
 ### CartUserInputError attributes {#CartUserInputError}
 
-{% include graphql/cart-user-input-errors.md %}
+import CartUserInputErrors from '/src/pages/_includes/graphql/cart-user-input-errors.md'
+
+<CartUserInputErrors />
 
 ## Errors
 

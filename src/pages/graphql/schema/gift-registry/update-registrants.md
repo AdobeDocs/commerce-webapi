@@ -117,4 +117,6 @@ Attribute |  Data Type | Description
 
 ### GiftRegistry attributes {#GiftRegistry}
 
-{% include graphql/gift-registry.md %}
+import GiftRegistry from '/src/pages/_includes/graphql/gift-registry.md'
+
+<GiftRegistry />

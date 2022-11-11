@@ -175,7 +175,9 @@ Attribute |  Data Type | Description
 
 ### Return attributes {#Return}
 
-{% include graphql/return.md %}
+import Return from '/src/pages/_includes/graphql/return.md'
+
+<Return />
 
 ### Returns attributes {#Returns}
 

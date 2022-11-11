@@ -146,7 +146,9 @@ Attribute |  Data Type | Description
 
 The `CreateCompanyOutput` object contains the `Company` object.
 
-{% include graphql/company.md %}
+import Company from '/src/pages/_includes/graphql/company.md'
+
+<Company />.md %}
 
 ## Related topics
 

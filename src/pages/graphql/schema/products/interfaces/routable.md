@@ -17,7 +17,9 @@ Some Magento entities are "routable", meaning that they have URLs and can serve 
 
 ## RoutableInterface attributes
 
-{% include graphql/routable-interface.md %}
+import RoutableInterface from '/src/pages/_includes/graphql/routable-interface.md'
+
+<RoutableInterface />
 
 ## Sample Query
 

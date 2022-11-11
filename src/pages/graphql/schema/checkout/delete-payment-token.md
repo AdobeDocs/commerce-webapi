@@ -86,7 +86,9 @@ Attribute | Data Type | Description
 `customerPaymentTokens` | `CustomerPaymentTokens` | Contains an array of customer payment tokens
 `result` | Boolean! | A value of `true` indicates the request was successful
 
-{% include graphql/customer-payment-tokens.md %}
+import CustomerPaymentTokens from '/src/pages/_includes/graphql/customer-payment-tokens.md'
+
+<CustomerPaymentTokens />
 
 ## Errors
 

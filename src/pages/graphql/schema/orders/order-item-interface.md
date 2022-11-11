@@ -11,7 +11,9 @@ title: OrderItemInterface attributes and implementations
 
 ## Attributes
 
-{% include graphql/order-item-interface.md %}
+import OrderItemInterface from '/src/pages/_includes/graphql/order-item-interface.md'
+
+<OrderItemInterface />
 
 ## Implementations
 
@@ -27,7 +29,9 @@ Attribute | Data type | Description
 --- | --- | ---
 `bundle_options` | [[ItemSelectedBundleOption]](#ItemSelectedBundleOption) | A list of bundle options that are assigned to the bundle product
 
-{% include graphql/item-selected-bundle-option.md %}
+import ItemSelectedBundleOption from '/src/pages/_includes/graphql/item-selected-bundle-option.md'
+
+<ItemSelectedBundleOption />
 
 ### DownloadableOrderItem attributes {#DownloadableOrderItem}
 
@@ -37,7 +41,9 @@ Attribute | Data type | Description
 --- | --- | ---
 `downloadable_links` | [[DownloadableItemsLinks]](#DownloadableItemsLinks) | A list of downloadable links that were ordered from the downloadable product
 
-{% include graphql/downloadable-items-links.md %}
+import DownloadableItemsLinks from '/src/pages/_includes/graphql/downloadable-items-links.md'
+
+<DownloadableItemsLinks />
 
 ### GiftCardOrderItem attributes {#GiftCardOrderItem}
 
@@ -47,7 +53,9 @@ Attribute | Data type | Description
 --- | --- | ---
 `gift_card` | [GiftCardItem](#GiftCardItem) | Selected gift card properties for an order item
 
-{% include graphql/gift-card-item.md %}
+import GiftCardItem from '/src/pages/_includes/graphql/gift-card-item.md'
+
+<GiftCardItem />
 
 ## Example usage
 

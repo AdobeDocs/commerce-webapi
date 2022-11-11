@@ -175,7 +175,9 @@ Attribute |  Data Type | Description
 
 #### ProductReview object {#ProductReview}
 
-{% include graphql/product-review.md %}
+import ProductReview from '/src/pages/_includes/graphql/product-review.md'
+
+<ProductReview />
 
 #### ProductLinks object {#ProductLinks}
 

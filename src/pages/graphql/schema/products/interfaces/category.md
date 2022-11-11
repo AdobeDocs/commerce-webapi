@@ -62,4 +62,6 @@ Attribute | Data type | Description
 
 ### CmsBlock attributes
 
-{% include graphql/cms-block-object.md %}
+import CmsBlockObject from '/src/pages/_includes/graphql/cms-block-object.md'
+
+<CmsBlockObject />

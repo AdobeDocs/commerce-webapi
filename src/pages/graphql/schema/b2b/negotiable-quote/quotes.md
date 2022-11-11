@@ -84,7 +84,9 @@ query {
 
 The `negotiableQuotes` query can take the following arguments.
 
-{% include graphql/negotiable-quotes-input.md %}
+import NegotiableQuotesInput from '/src/pages/_includes/graphql/negotiable-quotes-input.md'
+
+<NegotiableQuotesInput />
 
 ## Output attributes
 
@@ -99,4 +101,6 @@ Attribute | Data Type | Description
 
 ### NegotiableQuote attributes {#NegotiableQuote}
 
-{% include graphql/negotiable-quote.md %}
+import NegotiableQuote from '/src/pages/_includes/graphql/negotiable-quote.md'
+
+<NegotiableQuote />

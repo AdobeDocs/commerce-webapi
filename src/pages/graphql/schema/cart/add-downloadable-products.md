@@ -219,13 +219,17 @@ Attribute |  Data Type | Description
 
 The `CartItemInput` object must contain the following attributes:
 
-{% include graphql/cart-item-input-24.md %}
+import CartItemInput from '/src/pages/_includes/graphql/cart-item-input-24.md'
+
+<CartItemInput />
 
 ### CustomizableOptionInput object {#CustomizableOptionInputVirtual}
 
 The `CustomizableOptionInput` object can contain the following attributes:
 
-{% include graphql/customizable-option-input-24.md %}
+import CustomizableOptionInput from '/src/pages/_includes/graphql/customizable-option-input-24.md'
+
+<CustomizableOptionInput />
 
 ### DownloadableProductCartItemInput object {#DownloadableProductCartItemInput}
 
@@ -255,7 +259,9 @@ Attribute |  Data Type | Description
 
 ### Cart object {#CartObject}
 
-{% include graphql/cart-object-24.md %}
+import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
+
+<CartObject />
 
 ## Errors
 

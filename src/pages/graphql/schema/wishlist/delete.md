@@ -77,4 +77,6 @@ Attribute |  Data Type | Description
 
 ### Wishlist attributes {#Wishlist}
 
-{% include graphql/wishlist.md %}
+import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
+
+<Wishlist />

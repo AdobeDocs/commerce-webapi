@@ -308,7 +308,9 @@ Attribute |  Data Type | Description
 
 ### EnteredOptionInput attributes {#EnteredOptionInput}
 
-{% include graphql/entered-option-input.md %}
+import EnteredOptionInput from '/src/pages/_includes/graphql/entered-option-input.md'
+
+<EnteredOptionInput />
 
 ## Output attributes
 
@@ -321,11 +323,15 @@ Attribute |  Data Type | Description
 
 ### Wishlist attributes {#Wishlist}
 
-{% include graphql/wishlist.md %}
+import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
+
+<Wishlist />
 
 ### WishListUserInputError attributes {#WishListUserInputError}
 
-{% include graphql/wishlist-user-input-errors.md %}
+import WishlistUserInputErrors from '/src/pages/_includes/graphql/wishlist-user-input-errors.md'
+
+<WishlistUserInputErrors />
 
 ## Errors
 

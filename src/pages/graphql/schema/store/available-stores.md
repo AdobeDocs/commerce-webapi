@@ -101,4 +101,6 @@ Attribute | Data type | Description
 
 ## Output attributes
 
-{% include graphql/store-config.md %}
+import StoreConfig from '/src/pages/_includes/graphql/store-config.md'
+
+<StoreConfig />

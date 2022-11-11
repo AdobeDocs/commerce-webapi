@@ -59,8 +59,6 @@ The following query returns information about virtual product.
 }
 ```
 
-{% collapsible Response %}
-
 ```json
 {
   "data": {
@@ -99,8 +97,6 @@ The following query returns information about virtual product.
   }
 }
 ```
-
-{% endcollapsible %}
 
 ## Related topics
 

@@ -14,7 +14,9 @@ title: WishlistItemInterface attributes and implementations
 
 ## Attributes
 
-{% include graphql/wishlist-item-interface.md %}
+import WishlistItemInterface from '/src/pages/_includes/graphql/wishlist-item-interface.md'
+
+<WishlistItemInterface />
 
 ## Implementations
 

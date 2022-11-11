@@ -161,7 +161,9 @@ Attribute | Data type | Description
 
 ### CategoryFilterInput object
 
-{% include graphql/category-filter-input.md %}
+import CategoryFilterInput from '/src/pages/_includes/graphql/category-filter-input.md'
+
+<CategoryFilterInput />
 
 ## Output attributes {#Categories}
 

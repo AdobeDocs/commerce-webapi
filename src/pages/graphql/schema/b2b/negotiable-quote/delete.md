@@ -103,7 +103,9 @@ Attribute | Data Type | Description
 
 The `negotiable_quotes` field takes the following arguments.
 
-{% include graphql/negotiable-quotes-input.md %}
+import NegotiableQuotesInput from '/src/pages/_includes/graphql/negotiable-quotes-input.md'
+
+<NegotiableQuotesInput />
 
 ### DeleteNegotiableQuoteOperationResult attributes {#DeleteNegotiableQuoteOperationResult}
 
@@ -161,4 +163,6 @@ quote_uid | ID! | The unique ID of a `NegotiableQuote` object
 
 ### NegotiableQuote attributes {#NegotiableQuote}
 
-{% include graphql/negotiable-quote.md %}
+import NegotiableQuote from '/src/pages/_includes/graphql/negotiable-quote.md'
+
+<NegotiableQuote />

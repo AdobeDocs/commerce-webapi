@@ -236,7 +236,9 @@ Attribute | Type | Description
 
 The `CustomizableOptionInput` object can contain the following attributes:
 
-{% include graphql/customizable-option-input-24.md %}
+import CustomizableOptionInput from '/src/pages/_includes/graphql/customizable-option-input-24.md'
+
+<CustomizableOptionInput />
 
 ## Output attributes
 
@@ -248,7 +250,9 @@ Attribute |  Data Type | Description
 
 ### Cart object {#CartObject}
 
-{% include graphql/cart-object-24.md %}
+import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
+
+<CartObject />
 
 [Cart query output]({{page.baseurl}}/graphql/queries/cart.html#cart-output) provides more information about the `Cart` object.
 

@@ -107,7 +107,9 @@ Attribute | Type | Description
 
 ## Output attributes
 
-{% include graphql/routable-interface.md %}
+import RoutableInterface from '/src/pages/_includes/graphql/routable-interface.md'
+
+<RoutableInterface />
 ## Related topics
 
 [RoutableInterface]({{page.baseurl}}/graphql/interfaces/routable-interface.html)

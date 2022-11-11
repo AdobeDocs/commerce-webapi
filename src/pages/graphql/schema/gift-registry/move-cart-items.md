@@ -113,8 +113,12 @@ Attribute |  Data Type | Description
 
 ### GiftRegistry attributes {#GiftRegistry}
 
-{% include graphql/gift-registry.md %}
+import GiftRegistry from '/src/pages/_includes/graphql/gift-registry.md'
+
+<GiftRegistry />
 
 ### GiftRegistryItemsUserError attributes {#GiftRegistryItemsUserError}
 
-{% include graphql/gift-registry-items-user-error.md %}
+import GiftRegistryItemsUserError from '/src/pages/_includes/graphql/gift-registry-items-user-error.md'
+
+<GiftRegistryItemsUserError />

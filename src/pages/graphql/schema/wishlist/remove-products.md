@@ -155,11 +155,15 @@ Attribute |  Data Type | Description
 
 ### Wishlist attributes {#Wishlist}
 
-{% include graphql/wishlist.md %}
+import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
+
+<Wishlist />
 
 ### WishListUserInputError attributes {#WishListUserInputError}
 
-{% include graphql/wishlist-user-input-errors.md %}
+import WishlistUserInputErrors from '/src/pages/_includes/graphql/wishlist-user-input-errors.md'
+
+<WishlistUserInputErrors />
 
 ## Errors
 

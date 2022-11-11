@@ -60,7 +60,9 @@ query {
 
 ## Output attributes
 
-{% include graphql/customer-payment-tokens.md %}
+import CustomerPaymentTokens from '/src/pages/_includes/graphql/customer-payment-tokens.md'
+
+<CustomerPaymentTokens />
 
 ## Errors
 

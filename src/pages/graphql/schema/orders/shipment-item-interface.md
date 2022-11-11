@@ -12,7 +12,9 @@ title: ShipmentItemInterface attributes and implementations
 
 The `ShipmentItemInterface` describes a specific shipmemt.
 
-{% include graphql/shipment-item-interface.md %}
+import ShipmentItemInterface from '/src/pages/_includes/graphql/shipment-item-interface.md'
+
+<ShipmentItemInterface />
 
 ## Implementations
 
@@ -24,7 +26,9 @@ Attribute | Data type | Description
 --- | --- | ---
 `bundle_options` | [[ItemSelectedBundleOption]](#ItemSelectedBundleOption) | A list of bundle options that are assigned to the bundle product
 
-{% include graphql/item-selected-bundle-option.md %}
+import ItemSelectedBundleOption from '/src/pages/_includes/graphql/item-selected-bundle-option.md'
+
+<ItemSelectedBundleOption />
 
 ### GiftCardShipmentItem attributes {#GiftCardShipmentItem}
 
@@ -34,7 +38,9 @@ Attribute | Data type | Description
 --- | --- | ---
 `gift_card` | [GiftCardItem](#GiftCardItem) | Selected properties for a shipped gift card
 
-{% include graphql/gift-card-item.md %}
+import GiftCardItem from '/src/pages/_includes/graphql/gift-card-item.md'
+
+<GiftCardItem />
 
 ### ShipmentItem attributes {#ShipmentItem}
 

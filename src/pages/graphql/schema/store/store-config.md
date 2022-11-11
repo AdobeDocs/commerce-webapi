@@ -240,4 +240,6 @@ The following query returns enumeration values that indicate the store's fixed p
 
 ## Output attributes
 
-{% include graphql/store-config.md %}
+import StoreConfig from '/src/pages/_includes/graphql/store-config.md'
+
+<StoreConfig />

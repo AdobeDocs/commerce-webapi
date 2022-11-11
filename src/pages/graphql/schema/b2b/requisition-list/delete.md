@@ -98,7 +98,9 @@ Attribute |  Data Type | Description
 
 ### RequisitionList attributes {#RequisitionList}
 
-{% include graphql/requisition-list.md %}
+import RequisitionList from '/src/pages/_includes/graphql/requisition-list.md'
+
+<RequisitionList />
 
 ## Related topics
 

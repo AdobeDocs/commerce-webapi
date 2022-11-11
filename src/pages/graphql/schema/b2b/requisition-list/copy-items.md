@@ -94,7 +94,9 @@ Attribute |  Data Type | Description
 `requisition_list` | [[RequisitionList](#RequisitionList)] | The destination requisition list after the items were copied
 
 ### RequisitionList attributes {#RequisitionList}
-{% include graphql/requisition-list.md %}
+import RequisitionList from '/src/pages/_includes/graphql/requisition-list.md'
+
+<RequisitionList />
 
 ## Related topics
 

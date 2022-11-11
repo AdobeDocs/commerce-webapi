@@ -640,8 +640,6 @@ By default, you cannot filter on the `color` attribute. [Filtering with custom a
 
 **Response:**
 
-{% collapsible Show sample response %}
-
 ```json
 {
   "data": {
@@ -1012,8 +1010,6 @@ By default, you cannot filter on the `color` attribute. [Filtering with custom a
 }
 ```
 
-{% endcollapsible %}
-
 ### Query with layered navigation and includeDirectChildrenOnly input filter applied
 
 The following query returns aggregations that filters on items with these characteristics:
@@ -1063,8 +1059,6 @@ products(filter: {category_id: {eq: "22"}, price: {from: "40", to: "49.99"}, col
 ```
 
 **Response:**
-
-{% collapsible Show sample response %}
 
 ```json
 {
@@ -1447,8 +1441,6 @@ products(filter: {category_id: {eq: "22"}, price: {from: "40", to: "49.99"}, col
   }
 }
 ```
-
-{% endcollapsible %}
 
 ### Return minimum and maximum prices and discount information
 

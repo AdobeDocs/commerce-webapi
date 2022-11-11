@@ -159,7 +159,9 @@ Attribute |  Data Type | Description
 
 ### Customer attributes {#Customer}
 
-{% include graphql/customer-output-24.md %}
+import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
+
+<Customer />
 
 ## Errors
 

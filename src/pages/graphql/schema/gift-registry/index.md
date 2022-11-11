@@ -203,4 +203,6 @@ Attribute |  Data Type | Description
 
 ## Output attributes
 
-{% include graphql/gift-registry.md %}
+import GiftRegistry from '/src/pages/_includes/graphql/gift-registry.md'
+
+<GiftRegistry />

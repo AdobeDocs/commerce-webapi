@@ -114,7 +114,9 @@ Attribute |  Data Type | Description
 
 ### CartAddressInput object {#CartAddressInput}
 
-{% include graphql/cart-address-input-24.md %}
+import CartAddressInput from '/src/pages/_includes/graphql/cart-address-input-24.md'
+
+<CartAddressInput />
 
 ## Output attributes
 
@@ -126,6 +128,8 @@ Attribute |  Data Type | Description
 
 ### Cart object {#CartObject}
 
-{% include graphql/cart-object-24.md %}
+import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
+
+<CartObject />
 
 [Cart query output]({{page.baseurl}}/graphql/queries/cart.html#cart-output) provides more information about the `Cart` object.

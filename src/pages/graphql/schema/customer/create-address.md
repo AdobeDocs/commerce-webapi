@@ -81,13 +81,17 @@ Attribute |  Data Type | Description
 `id` | Int | The ID assigned to the address object
 `CustomerAddressInput` | [CustomerAddress](#customerAddressInput) | An array containing the customer’s shipping and billing addresses
 
-{% include graphql/customer-address-input-24.md %}
+import CustomerAddressInput from '/src/pages/_includes/graphql/customer-address-input-24.md'
+
+<CustomerAddressInput />
 
 ## Output attributes
 
 The `createCustomerAddress` mutation returns the following attributes:
 
-{% include graphql/customer-address-output-24.md %}
+import CustomerAddressOutput from '/src/pages/_includes/graphql/customer-address-output-24.md'
+
+<CustomerAddressOutput />
 
 ## Errors
 

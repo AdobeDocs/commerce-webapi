@@ -108,8 +108,6 @@ The following query returns information about bundle product `24-WG080`, which i
 }
 ```
 
-{% collapsible Response %}
-
 ```json
 {
   "data": {
@@ -301,8 +299,6 @@ The following query returns information about bundle product `24-WG080`, which i
   }
 }
 ```
-
-{% endcollapsible %}
 
 ## Related topics
 

@@ -583,7 +583,9 @@ The top-level `Cart` object is listed first. All interfaces and child objects ar
 
 The `Cart` object can contain the following attributes.
 
-{% include graphql/cart-object-24.md %}
+import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
+
+<CartObject />
 
 ### AppliedCoupon object {#AppliedCoupon}
 
@@ -750,7 +752,9 @@ Attribute |  Data Type | Description
 
 ### GiftMessage object {#GiftMessage}
 
-{% include graphql/gift-message.md %}
+import GiftMessage from '/src/pages/_includes/graphql/gift-message.md'
+
+<GiftMessage />
 
 ### GiftOptionsPrices object {#GiftOptionsPrices}
 
@@ -764,7 +768,9 @@ Attribute |  Data Type | Description
 
 ### GiftWrapping object {#GiftWrapping}
 
-{% include graphql/gift-wrapping.md %}
+import GiftWrapping from '/src/pages/_includes/graphql/gift-wrapping.md'
+
+<GiftWrapping />
 
 ### RewardPointsAmount {#RewardPointsAmount}
 

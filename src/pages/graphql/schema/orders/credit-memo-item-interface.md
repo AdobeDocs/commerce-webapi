@@ -13,7 +13,9 @@ title: CreditMemoItemInterface attributes and implementations
 
 The `CreditMemoItemInterface` describes a specific credit memo.
 
-{% include graphql/credit-memo-item-interface.md %}
+import CreditMemoItemInterface from '/src/pages/_includes/graphql/credit-memo-item-interface.md'
+
+<CreditMemoItemInterface />
 
 ## Implementations
 
@@ -25,7 +27,9 @@ Attribute | Data type | Description
 --- | --- | ---
 `bundle_options` | [[ItemSelectedBundleOption]](#ItemSelectedBundleOption) | A list of bundle options that are assigned to the bundle product
 
-{% include graphql/item-selected-bundle-option.md %}
+import ItemSelectedBundleOption from '/src/pages/_includes/graphql/item-selected-bundle-option.md'
+
+<ItemSelectedBundleOption />
 
 ### CreditMemoItem attributes {#CreditMemoItem}
 
@@ -39,7 +43,9 @@ Attribute | Data type | Description
 --- | --- | ---
 `downloadable_links` | [[DownloadableItemsLinks]](#DownloadableItemsLinks) | A list of downloadable links that were refunded from the downloadable product
 
-{% include graphql/downloadable-items-links.md %}
+import DownloadableItemsLinks from '/src/pages/_includes/graphql/downloadable-items-links.md'
+
+<DownloadableItemsLinks />
 
 ### GiftCardCreditMemoItem attributes {#GiftCardCreditMemoItem}
 
@@ -49,7 +55,9 @@ Attribute | Data type | Description
 --- | --- | ---
 `gift_card` | [GiftCardItem](#GiftCardItem) | Selected gift card properties for an order item
 
-{% include graphql/gift-card-item.md %}
+import GiftCardItem from '/src/pages/_includes/graphql/gift-card-item.md'
+
+<GiftCardItem />
 
 ## Example usage
 

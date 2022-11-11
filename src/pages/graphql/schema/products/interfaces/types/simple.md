@@ -61,8 +61,6 @@ The following query returns information about simple product `24-MB01`, which is
 
 ```
 
-{% collapsible Response %}
-
 ```json
 {
   "data": {
@@ -106,8 +104,6 @@ The following query returns information about simple product `24-MB01`, which is
   }
 }
 ```
-
-{% endcollapsible %}
 
 ## Related topics
 

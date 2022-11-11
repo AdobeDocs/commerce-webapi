@@ -120,7 +120,9 @@ Attribute |  Data Type | Description
 
 ### NegotiableQuoteAddressInput {#NegotiableQuoteAddressInput}
 
-{% include graphql/negotiable-quote-address-input.md %}
+import NegotiableQuoteAddressInput from '/src/pages/_includes/graphql/negotiable-quote.md'
+
+<NegotiableQuoteAddressInput />
 
 ## Output attributes
 
@@ -132,4 +134,6 @@ Attribute |  Data Type | Description
 
 ### NegotiableQuote attributes {#NegotiableQuote}
 
-{% include graphql/negotiable-quote.md %}
+import NegotiableQuote from '/src/pages/_includes/graphql/negotiable-quote.md'
+
+<NegotiableQuote />

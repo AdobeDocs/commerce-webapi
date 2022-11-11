@@ -241,7 +241,9 @@ Attribute |  Data Type | Description
 `address_data` | CustomerAddressInput | The complete details of the shipping address
 `address_id` | ID | The ID of predefined customer address
 
-{% include graphql/customer-address-input.md %}
+import CustomerAddressInput from '/src/pages/_includes/graphql/customer-address-input.md'
+
+<CustomerAddressInput />
 
 ## Output attributes
 
@@ -253,4 +255,6 @@ Attribute |  Data Type | Description
 
 ### GiftRegistry attributes {#GiftRegistry}
 
-{% include graphql/gift-registry.md %}
+import GiftRegistry from '/src/pages/_includes/graphql/gift-registry.md'
+
+<GiftRegistry />
