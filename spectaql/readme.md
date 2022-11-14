@@ -28,6 +28,6 @@ where $ENDPOINT_URL is a placeholder for a URL to the endpoint.
 npm run generate:graphql
 ```
 
-This will regenerate the static/graphql-api.html page.
+This will regenerate the static/graphql-api/index.html page.
 
 For more information about SpectaQL, refer to <https://github.com/anvilco/spectaql>.
