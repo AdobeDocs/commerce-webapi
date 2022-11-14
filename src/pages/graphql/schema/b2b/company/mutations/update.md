@@ -3,6 +3,8 @@ title: updateCompany mutation
 edition: b2b
 ---
 
+# updateCompany mutation
+
 The `updateCompany` mutation allows you to update a company's address as well as top-level string attributes such as the name, legal name, and email. You cannot update the administrator or other objects such as teams, roles, or resources with this mutation.
 
 ## Syntax

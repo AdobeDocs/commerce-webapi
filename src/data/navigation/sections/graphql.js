@@ -756,72 +756,94 @@ module.exports = [
         path: "/graphql/schema/b2b/company/",
         pages: [
           {
-            title: "isCompanyAdminEmailAvailable",
-            path: "/graphql/schema/b2b/company/is-company-admin-email-available/",
+            title: "Queries",
+            path: "/graphql/schema/b2b/company/queries/",
+            pages: [
+              {
+                title: "company",
+                path: "/graphql/schema/b2b/company/queries/company/",
+              },
+              {
+                title: "isCompanyAdminEmailAvailable",
+                path: "/graphql/schema/b2b/company/queries/is-company-admin-email-available/",
+              },
+              {
+                title: "isCompanyEmailAvailable",
+                path: "/graphql/schema/b2b/company/queries/is-company-email-available/",
+              },
+              {
+                title: "isCompanyRoleNameAvailable",
+                path: "/graphql/schema/b2b/company/queries/is-company-role-name-available/",
+              },
+              {
+                title: "isCompanyUserEmailAvailable",
+                path: "/graphql/schema/b2b/company/queries/is-company-user-email-available/",
+              },
+            ],
           },
           {
-            title: "isCompanyEmailAvailable",
-            path: "/graphql/schema/b2b/company/is-company-email-available/",
+            title: "Mutations",
+            path: "/graphql/schema/b2b/company/mutations/",
+            pages: [
+              {
+                title: "createCompany",
+                path: "/graphql/schema/b2b/company/mutations/create/",
+              },
+              {
+                title: "createCompanyRole",
+                path: "/graphql/schema/b2b/company/mutations/create-role/",
+              },
+              {
+                title: "createCompanyTeam",
+                path: "/graphql/schema/b2b/company/mutations/create-team/",
+              },
+              {
+                title: "createCompanyUser",
+                path: "/graphql/schema/b2b/company/mutations/create-user/",
+              },
+              {
+                title: "deleteCompanyRole",
+                path: "/graphql/schema/b2b/company/mutations/delete-role/",
+              },
+              {
+                title: "deleteCompanyTeam",
+                path: "/graphql/schema/b2b/company/mutations/delete-team/",
+              },
+              {
+                title: "deleteCompanyUser",
+                path: "/graphql/schema/b2b/company/mutations/delete-user",
+              },
+              {
+                title: "updateCompany",
+                path: "/graphql/schema/b2b/company/mutations/update/",
+              },
+              {
+                title: "updateCompanyRole",
+                path: "/graphql/schema/b2b/company/mutations/update-role/",
+              },
+              {
+                title: "updateCompanyStructure",
+                path: "/graphql/schema/b2b/company/mutations/update-structure/",
+              },
+              {
+                title: "updateCompanyTeam",
+                path: "/graphql/schema/b2b/company/mutations/update-team/",
+              },
+              {
+                title: "updateCompanyUser",
+                path: "/graphql/schema/b2b/company/mutations/update-user/",
+              },
+            ],
           },
           {
-            title: "isCompanyRoleNameAvailable",
-            path: "/graphql/schema/b2b/company/is-company-role-name-available/",
-          },
-          {
-            title: "isCompanyUserEmailAvailable",
-            path: "/graphql/schema/b2b/company/is-company-user-email-available/",
-          },
-          {
-            title: "createCompany",
-            path: "/graphql/schema/b2b/company/create/",
-          },
-          {
-            title: "createCompanyRole",
-            path: "/graphql/schema/b2b/company/create-role/",
-          },
-          {
-            title: "createCompanyTeam",
-            path: "/graphql/schema/b2b/company/create-team/",
-          },
-          {
-            title: "createCompanyUser",
-            path: "/graphql/schema/b2b/company/create-user/",
-          },
-          {
-            title: "deleteCompanyRole",
-            path: "/graphql/schema/b2b/company/delete-role/",
-          },
-          {
-            title: "deleteCompanyTeam",
-            path: "/graphql/schema/b2b/company/delete-team/",
-          },
-          {
-            title: "deleteCompanyUser",
-            path: "/graphql/schema/b2b/company/delete-user",
-          },
-          {
-            title: "updateCompany",
-            path: "/graphql/schema/b2b/company/update/",
-          },
-          {
-            title: "updateCompanyRole",
-            path: "/graphql/schema/b2b/company/update-role/",
-          },
-          {
-            title: "updateCompanyStructure",
-            path: "/graphql/schema/b2b/company/update-structure/",
-          },
-          {
-            title: "updateCompanyTeam",
-            path: "/graphql/schema/b2b/company/update-team/",
-          },
-          {
-            title: "updateCompanyUser",
-            path: "/graphql/schema/b2b/company/update-user/",
-          },
-          {
-            title: "CompanyStructureEntity",
+            title: "Unions",
             path: "/graphql/schema/b2b/company/unions/",
+            pages: [
+              {
+                title: "CompanyStructureEntity",
+                path: "/graphql/schema/b2b/company/unions/structure-entity/",
+              },
+            ],
           },
         ],
       },
@@ -830,56 +852,82 @@ module.exports = [
         path: "/graphql/schema/b2b/negotiable-quote/",
         pages: [
           {
-            title: "negotiableQuotes",
-            path: "/graphql/schema/b2b/negotiable-quote/quotes/",
+            title: "Queries",
+            path: "/graphql/schema/b2b/negotiable-quote/queries/",
+            pages: [
+              {
+                title: "negotiableQuote",
+                path: "/graphql/schema/b2b/negotiable-quote/queries/quote/",
+              },
+              {
+                title: "negotiableQuotes",
+                path: "/graphql/schema/b2b/negotiable-quote/queries/quotes/",
+              },
+            ],
           },
           {
-            title: "closeNegotiableQuotes",
-            path: "/graphql/schema/b2b/negotiable-quote/close/",
+            title: "Mutations",
+            path: "/graphql/schema/b2b/negotiable-quote/mutations/",
+            pages: [
+              {
+                title: "closeNegotiableQuotes",
+                path: "/graphql/schema/b2b/negotiable-quote/mutations/close/",
+              },
+              {
+                title: "deleteNegotiableQuotes",
+                path: "/graphql/schema/b2b/negotiable-quote/mutations/delete/",
+              },
+              {
+                title: "placeNegotiableQuoteOrder",
+                path: "/graphql/schema/b2b/negotiable-quote/mutations/place-order/",
+              },
+              {
+                title: "removeNegotiableQuoteItems",
+                path: "/graphql/schema/b2b/negotiable-quote/mutations/remove-items/",
+              },
+              {
+                title: "requestNegotiableQuote",
+                path: "/graphql/schema/b2b/negotiable-quote/mutations/request/",
+              },
+              {
+                title: "sendNegotiableQuoteForReview",
+                path: "/graphql/schema/b2b/negotiable-quote/mutations/send-for-review/",
+              },
+              {
+                title: "setNegotiableQuoteBillingAddress",
+                path: "/graphql/schema/b2b/negotiable-quote/mutations/set-billing-address/",
+              },
+              {
+                title: "setNegotiableQuotePaymentMethod",
+                path: "/graphql/schema/b2b/negotiable-quote/mutations/set-payment-method/",
+              },
+              {
+                title: "setNegotiableQuoteShippingAddress",
+                path: "/graphql/schema/b2b/negotiable-quote/mutations/set-shipping-address/",
+              },
+              {
+                title: "setNegotiableQuoteShippingMethods",
+                path: "/graphql/schema/b2b/negotiable-quote/mutations/set-shipping-methods/",
+              },
+              {
+                title: "updateNegotiableQuoteQuantities",
+                path: "/graphql/schema/b2b/negotiable-quote/mutations/update-quantities/",
+              },
+            ],
           },
           {
-            title: "deleteNegotiableQuotes",
-            path: "/graphql/schema/b2b/negotiable-quote/delete/",
+            title: "Interfaces",
+            path: "/graphql/schema/b2b/negotiable-quote/interfaces/",
+            pages: [
+              {
+                title: "NegotiableQuoteAddressInterface",
+                path: "/graphql/schema/b2b/negotiable-quote/interfaces/address/",
+              },
+            ],
           },
           {
-            title: "placeNegotiableQuoteOrder",
-            path: "/graphql/schema/b2b/negotiable-quote/place-order/",
-          },
-          {
-            title: "removeNegotiableQuoteItems",
-            path: "/graphql/schema/b2b/negotiable-quote/remove-items/",
-          },
-          {
-            title: "requestNegotiableQuote",
-            path: "/graphql/schema/b2b/negotiable-quote/request/",
-          },
-          {
-            title: "sendNegotiableQuoteForReview",
-            path: "/graphql/schema/b2b/negotiable-quote/send-for-review/",
-          },
-          {
-            title: "setNegotiableQuoteBillingAddress",
-            path: "/graphql/schema/b2b/negotiable-quote/set-billing-address/",
-          },
-          {
-            title: "setNegotiableQuotePaymentMethod",
-            path: "/graphql/schema/b2b/negotiable-quote/set-payment-method/",
-          },
-          {
-            title: "setNegotiableQuoteShippingAddress",
-            path: "/graphql/schema/b2b/negotiable-quote/set-shipping-address/",
-          },
-          {
-            title: "setNegotiableQuoteShippingMethods",
-            path: "/graphql/schema/b2b/negotiable-quote/set-shipping-methods/",
-          },
-          {
-            title: "updateNegotiableQuoteQuantities",
-            path: "/graphql/schema/b2b/negotiable-quote/update-quantities/",
-          },
-          {
-            title: "NegotiableQuoteAddressInterface",
-            path: "/graphql/schema/b2b/negotiable-quote/interface/",
+            title: "Unions",
+            path: "/graphql/schema/b2b/negotiable-quote/unions/",
           },
         ],
       },
@@ -888,48 +936,60 @@ module.exports = [
         path: "/graphql/schema/b2b/requisition-list/",
         pages: [
           {
-            title: "addProductsToRequisitionList",
-            path: "/graphql/schema/b2b/requisition-list/add-products/",
+            title: "Mutations",
+            path: "/graphql/schema/b2b/requisition-list/mutations/",
+            pages: [
+              {
+                title: "addProductsToRequisitionList",
+                path: "/graphql/schema/b2b/requisition-list/mutations/add-products/",
+              },
+              {
+                title: "addRequisitionListItemsToCart",
+                path: "/graphql/schema/b2b/requisition-list/mutations/add-items-to-cart/",
+              },
+              {
+                title: "clearCustomerCart",
+                path: "/graphql/schema/b2b/requisition-list/mutations/clear-customer-cart/",
+              },
+              {
+                title: "copyItemsBetweenRequisitionLists",
+                path: "/graphql/schema/b2b/requisition-list/mutations/copy-items/",
+              },
+              {
+                title: "createRequisitionLists",
+                path: "/graphql/schema/b2b/requisition-list/mutations/create/",
+              },
+              {
+                title: "deleteRequisitionList",
+                path: "/graphql/schema/b2b/requisition-list/mutations/delete/",
+              },
+              {
+                title: "deleteRequisitionListItems",
+                path: "/graphql/schema/b2b/requisition-list/mutations/delete-items/",
+              },
+              {
+                title: "moveItemsBetweenRequisitionLists",
+                path: "/graphql/schema/b2b/requisition-list/mutations/move-items/",
+              },
+              {
+                title: "updateRequisitionList",
+                path: "/graphql/schema/b2b/requisition-list/mutations/update/",
+              },
+              {
+                title: "updateRequisitionListItems",
+                path: "/graphql/schema/b2b/requisition-list/mutations/update-items/",
+              },
+            ],
           },
           {
-            title: "addRequisitionListItemsToCart",
-            path: "/graphql/schema/b2b/requisition-list/add-items-to-cart/",
-          },
-          {
-            title: "clearCustomerCart",
-            path: "/graphql/schema/b2b/requisition-list/clear-customer-cart/",
-          },
-          {
-            title: "copyItemsBetweenRequisitionLists",
-            path: "/graphql/schema/b2b/requisition-list/copy-items/",
-          },
-          {
-            title: "createRequisitionLists",
-            path: "/graphql/schema/b2b/requisition-list/create/",
-          },
-          {
-            title: "deleteRequisitionList",
-            path: "/graphql/schema/b2b/requisition-list/delete/",
-          },
-          {
-            title: "deleteRequisitionListItems",
-            path: "/graphql/schema/b2b/requisition-list/delete-items/",
-          },
-          {
-            title: "moveItemsBetweenRequisitionLists",
-            path: "/graphql/schema/b2b/requisition-list/move-items/",
-          },
-          {
-            title: "updateRequisitionList",
-            path: "/graphql/schema/b2b/requisition-list/update/",
-          },
-          {
-            title: "updateRequisitionListItems",
-            path: "/graphql/schema/b2b/requisition-list/update-items/",
-          },
-          {
-            title: "RequisitionListItemInterface",
-            path: "/graphql/schema/b2b/requisition-list/interface/",
+            title: "Interfaces",
+            path: "/graphql/schema/b2b/requisition-list/interfaces/",
+            pages: [
+              {
+                title: "RequisitionListItemInterface",
+                path: "/graphql/schema/b2b/requisition-list/interfaces/item/",
+              },
+            ],
           },
         ],
       },

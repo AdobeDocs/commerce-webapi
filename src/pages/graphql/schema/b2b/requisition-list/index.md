@@ -1,6 +1,6 @@
 ---
-title: requisitionList mutation | Commerce Web APIs
+title: Requisition lists (B2B)  | Commerce Web APIs
 description:
 ---
 
-# requisitionList mutation
+# Requisition lists (B2B)
