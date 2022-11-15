@@ -26,8 +26,6 @@
 }
 ```
 
-{% collapsible Response %}
-
 ```json
 {
   "data": {
@@ -76,5 +74,3 @@
   }
 }
 ```
-
-{% endcollapsible %}

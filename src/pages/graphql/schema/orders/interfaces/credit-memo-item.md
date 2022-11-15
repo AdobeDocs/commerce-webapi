@@ -119,6 +119,7 @@ The following query returns items that were refunded in order ID `000000005`. Th
   }
 }
 ```
+
 **Response:**
 
 ```json

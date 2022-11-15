@@ -75,6 +75,7 @@ The following call returns information about the logged-in customer. Provide the
   }
 }
 ```
+
 ### Retrieve a summary of the customer's order history {#order-history}
 
 The following example returns a summary of the logged-in customer's previous orders.

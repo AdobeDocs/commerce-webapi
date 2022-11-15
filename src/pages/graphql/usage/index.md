@@ -419,6 +419,7 @@ Preview-Version: 1576389600
   }
 }
 ```
+
 **Response without headers:**
 
 ```json
@@ -492,6 +493,7 @@ query IntrospectionQuery {
   }
 }
 ```
+
 #### Get details about a data type
 
 The following introspection query returns details about the `ProductAttributeFilterInput` data type.

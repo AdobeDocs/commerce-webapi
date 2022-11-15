@@ -129,6 +129,7 @@ mutation {
   }
 }
 ```
+
 **Response:**
 
 ```json

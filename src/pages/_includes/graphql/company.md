@@ -163,6 +163,7 @@ Attribute |  Data Type | Description
 ### CompanyTeam attributes {#CompanyTeam}
 
 {% include graphql/company-team.md %}
+
 ### CompanyUsers attributes {#CompanyUsers}
 
 The `CompanyUsers` object can contain the following attributes.

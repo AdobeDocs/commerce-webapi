@@ -153,6 +153,7 @@ mutation {
   }
 }
 ```
+
 ### Add a grouped product to a cart
 
 The following example adds a grouped product (`Workout-Kit`) to a cart. The grouped product contains three simple products.

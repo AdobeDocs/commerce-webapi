@@ -1610,6 +1610,7 @@ In this example, the `description` attribute has been enabled by setting the **S
   }
 }
 ```
+
 ### Retrieve related products, up-sells, and cross-sells
 
 The following query shows how to get related products, up-sells, and cross-sells for a product:

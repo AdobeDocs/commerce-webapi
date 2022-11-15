@@ -190,6 +190,7 @@ The search returns 45 items, but only the first two items are returned on the cu
 ```
 
 ## Define mutations
+
 A mutation definition contains the following information:
 
 *  The mutation name

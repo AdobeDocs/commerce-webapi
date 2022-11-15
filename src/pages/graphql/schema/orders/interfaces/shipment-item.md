@@ -97,6 +97,7 @@ The following query returns shipping details about order ID `000000005`. The `Bu
 }
 
 ```
+
 **Response:**
 
 ```json

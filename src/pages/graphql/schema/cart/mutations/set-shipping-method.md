@@ -112,7 +112,7 @@ The `ShippingMethodOutput` object contains the `Cart` object.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`cart` |[ Cart!](#CartObject) | Describes the contents of the specified shopping cart
+`cart` |[Cart](#cart-object) | Describes the contents of the specified shopping cart
 
 ### Cart object {#CartObject}
 

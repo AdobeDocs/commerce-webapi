@@ -26,6 +26,7 @@ mutation {
   }
 }
 ```
+
 ## Example usage
 
 The following example removes the specified items from the requisition list.

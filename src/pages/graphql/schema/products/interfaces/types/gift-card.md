@@ -79,6 +79,7 @@ The following query returns information about gift card product `GiftCard25`. (I
   }
 }
 ```
+
 **Response:**
 
 ```json

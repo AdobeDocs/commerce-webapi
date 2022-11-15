@@ -67,6 +67,7 @@ mutation {
   }
 }
 ```
+
 ## Input attributes
 
 The `deletePaymentToken` object must contain the following attributes.
