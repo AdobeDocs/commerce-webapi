@@ -24,7 +24,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test:links": "remark src/pages --quiet --frail"
+    "test:links": "remark src/pages --ignore-pattern src/pages/graphql,src/pages/_includes --quiet --frail"
   },
   "remarkConfig": {
     "plugins": [

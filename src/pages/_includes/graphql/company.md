@@ -2,7 +2,7 @@ The `Company` object can contain the following attributes:
 
 Attribute | Data type | Description
 --- | --- | ---
-`acl_resources` | [[CompanyAclResource]](#CompanyAclResource) | Returns the list of all resources defined within the company
+`acl_resources` | [[CompanyAclResource]](#companyaclresource-attributes) | Returns the list of all resources defined within the company
 `company_admin` | [Customer]({{page.baseurl}}/graphql/queries/customer.html) | An object containing information about the company administrator
 `credit` | CompanyCredit! | The company credit balance
 `credit_history(filter: CompanyCreditHistoryFilterInput, pageSize: Int = 20, currentPage: Int = 1)` | CompanyCreditHistory! | A history of company credit operations
@@ -22,7 +22,7 @@ Attribute | Data type | Description
 `users(filter: CompanyUsersFilterInput, pageSize: Int = 20, currentPage: Int = 1)`| [CompanyUsers](#CompanyUsers) | Returns a list of company users based on activity status
 `vat_tax_id` | String | The value-added tax number that is assigned to the company by some jurisdictions for tax reporting purposes
 
-### CompanyAclResource attributes {#CompanyAclResource}
+### CompanyAclResource attributes
 
 The `CompanyAclResource` object can contain the following attributes.
 
@@ -33,7 +33,7 @@ Attribute |  Data Type | Description
 `sort_order` | Int | The sort order of an ACL resource
 `text` | String | The label assigned to the ACL resource
 
-### CompanyAdmin attributes {#CompanyAdmin}
+### CompanyAdmin attributes
 
 The `CompanyAdmin` object can contain the following attributes.
 

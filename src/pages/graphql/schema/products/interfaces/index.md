@@ -317,7 +317,7 @@ Attribute | Type | Description
 `name` | String | The parameter name, such as `id`
 `value` | String | The value assigned to the parameter
 
-## PhysicalProductInterface {#PhysicalProductInterface}
+## PhysicalProductInterface
 
 `PhysicalProductInterface`defines the weight of all tangible products.
 
