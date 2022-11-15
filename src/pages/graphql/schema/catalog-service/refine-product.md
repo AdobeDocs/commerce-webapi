@@ -1,5 +1,5 @@
 ---
-title: refineProduct query
+title: refineProduct query | GraphQL Developer Guide
 edition: ee
 description: Describes how to construct and use the Catalog Service refineProduct query.
 ---

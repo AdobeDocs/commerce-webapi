@@ -1,5 +1,5 @@
 ---
-title: Live Search
+title: Live Search | GraphQL Developer Guide
 edition: ee
 description: Learn how Live Search implements GraphQL.
 ---

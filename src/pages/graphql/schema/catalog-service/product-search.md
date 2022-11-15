@@ -1,5 +1,5 @@
 ---
-title: productSearch query
+title: productSearch query | GraphQL Developer Guide
 edition: ee
 description: Describes how to construct and use the Catalog Service productSearch query.
 ---
