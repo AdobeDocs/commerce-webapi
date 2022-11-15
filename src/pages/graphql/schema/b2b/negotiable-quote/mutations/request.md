@@ -13,9 +13,9 @@ If the request is successful, the negotiable quote has the SUBMITTED status.
 
 <InlineAlert variant="info" slots="text" />
 
-If the negotiable quote requires a shipping address (for negotiation or tax calculations), you can use the [`setNegotiableQuoteShippingAddresses` mutation]({{page.baseurl}}/graphql/mutations/set-negotiable-quote-shipping-address.html) to add the address to the standard quote during the negotiable quote process.
+If the negotiable quote requires a shipping address (for negotiation or tax calculations), you can use the [`setNegotiableQuoteShippingAddresses` mutation](set-shipping-address.md) to add the address to the standard quote during the negotiable quote process.
 
-This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
 
 ## Syntax
 

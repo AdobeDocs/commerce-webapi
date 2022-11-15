@@ -5,7 +5,7 @@ edition: ee
 
 # removeStoreCreditFromCart mutation
 
-The `removeStoreCreditFromCart` mutation removes store credit previously applied to the specified cart with the [`applyStoreCreditToCart`]({{page.baseurl}}/graphql/mutations/apply-store-credit.html) mutation. The application restores the customer's available store credit to its original amount and recalculates all cart totals.
+The `removeStoreCreditFromCart` mutation removes store credit previously applied to the specified cart with the [`applyStoreCreditToCart`](apply-store-credit.md) mutation. The application restores the customer's available store credit to its original amount and recalculates all cart totals.
 
 Store credit must be enabled on the store to run this mutation.
 
@@ -97,7 +97,7 @@ import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 
 <CartObject />
 
-[Cart query output]({{page.baseurl}}/graphql/queries/cart.html#cart-output) provides more information about the `Cart` object.
+[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 

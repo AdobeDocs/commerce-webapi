@@ -7,7 +7,7 @@ edition: b2b
 
 # deleteCompanyTeam mutation
 
-Use the `deleteCompanyTeam` mutation to delete a company team by ID. You can get the team ID with the [`company`]({{page.baseurl}}/graphql/queries/company.html) query.
+Use the `deleteCompanyTeam` mutation to delete a company team by ID. You can get the team ID with the [`company`](../queries/company.md) query.
 
 ## Syntax
 

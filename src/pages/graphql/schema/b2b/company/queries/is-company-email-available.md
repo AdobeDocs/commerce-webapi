@@ -51,5 +51,5 @@ Attribute |  Data Type | Description
 
 ## Related topics
 
-*  [isCompanyAdminEmailAvailable query]({{page.baseurl}}/graphql/queries/is-company-admin-email-available.html)
-*  [isCompanyUserEmailAvailable query]({{page.baseurl}}/graphql/queries/is-company-user-email-available.html)
+*  [isCompanyAdminEmailAvailable query](is-company-admin-email-available.md)
+*  [isCompanyUserEmailAvailable query](is-company-user-email-available.md)

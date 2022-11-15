@@ -17,7 +17,7 @@ The `createCompanyUser` mutation allows an existing company user who is assigned
 
 The `target_id` input attribute allows you to specify which node in the company structure will be the parent node of the company user. If you do not specify a value, the user will be assigned to the top-level (root) node of the company structure.
 
-You can get the `target_id` and the `role_id` with the [`company`]({{page.baseurl}}/graphql/queries/company.html) query.
+You can get the `target_id` and the `role_id` with the [`company`](../queries/company.md) query.
 
 ## Syntax
 

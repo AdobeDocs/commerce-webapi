@@ -9,7 +9,7 @@ contributor_link: https://www.atwix.com/
 
 Use the `updateCompanyUser` mutation to update an existing company user.
 
-You can get the user ID and role ID with the [`company`]({{page.baseurl}}/graphql/queries/company.html) query.
+You can get the user ID and role ID with the [`company`](../queries/company.md) query.
 
 ## Syntax
 

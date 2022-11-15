@@ -68,8 +68,8 @@ Error | Description
 
 ## Related topics
 
-*  [customer query]({{page.baseurl}}/graphql/queries/customer.html)
-*  [createCustomer mutation]({{page.baseurl}}/graphql/mutations/create-customer.html)
-*  [updateCustomer mutation]({{page.baseurl}}/graphql/mutations/update-customer.html)
-*  [createCustomerAddress mutation]({{page.baseurl}}/graphql/mutations/create-customer-address.html)
-*  [updateCustomerAddress mutation]({{page.baseurl}}/graphql/mutations/update-customer-address.html)
+*  [customer query](../queries/customer.md)
+*  [createCustomer mutation](create.md)
+*  [updateCustomer mutation](update.md)
+*  [createCustomerAddress mutation](create-address.md)
+*  [updateCustomerAddress mutation](update-address.md)

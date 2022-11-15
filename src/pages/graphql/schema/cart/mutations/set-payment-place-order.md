@@ -8,7 +8,7 @@ contributor_link: https://www.somethingdigital.com/
 
 <InlineAlert variant="warning" slots="text" />
 
-The `setPaymentMethodAndPlaceOrder` mutation has been deprecated. Use the [setPaymentMethodOnCart]({{page.baseurl}}/graphql/mutations/set-payment-method.html) and [placeOrder]({{page.baseurl}}/graphql/mutations/place-order.html) mutations instead. You can run the two methods in the same call if your use case allows it.
+The `setPaymentMethodAndPlaceOrder` mutation has been deprecated. Use the [setPaymentMethodOnCart](set-payment-method.md) and [placeOrder](place-order.md) mutations instead. You can run the two methods in the same call if your use case allows it.
 
 The `setPaymentMethodAndPlaceOrder` mutation sets the cart payment method and converts the cart into an order. The
 mutation returns the resulting order ID. You cannot manage orders with GraphQL, because orders are part of the backend.
@@ -25,7 +25,7 @@ Perform the following actions before using the `setPaymentMethodAndPlaceOrder` m
 
 <InlineAlert variant="info" slots="text" />
 
-The `setPaymentMethodAndPlaceOrder` mutation runs asynchronously if the `AsyncOrder` module has been enabled. By default, the mutation runs synchronously. [Asynchronous order placement]({{page.baseurl}}/performance-best-practices/high-throughput-order-processing.html#asynchronous-order-placement) describes the benefits of enabling the module.
+The `setPaymentMethodAndPlaceOrder` mutation runs asynchronously if the `AsyncOrder` module has been enabled. By default, the mutation runs synchronously. [Asynchronous order placement](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/high-throughput-order-processing.html#asynchronous-order-placement) describes the benefits of enabling the module.
 
 ## Syntax
 
@@ -102,10 +102,10 @@ Attribute |  Data Type | Description
 Error | Description
 --- | ---
 `Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` table.
-`Guest email for cart is missing.` |  The guest attempted to place an order but did not provide an email address. See the [setGuestEmailOnCart]({{ page.baseurl }}/graphql/mutations/set-guest-email.html) mutation.
+`Guest email for cart is missing.` |  The guest attempted to place an order but did not provide an email address. See the [setGuestEmailOnCart](set-guest-email.md) mutation.
 `Required parameter "cart_id" is missing` | The required `cart_id` argument contains an empty value.
 `Required parameter "code" for "payment_method" is missing.` | The value specified in the `code` argument is empty.
 `The current user cannot perform operations on cart "XXX"` | An unauthorized user (guest) tried to set a payment method and place an order with a customer's cart, or an authorized user (customer) tried to set a payment method and place an order with a cart of another customer.
-`The shipping address is missing. Set the address and try again.` | You ran `setPaymentMethodAndPlaceOrder` mutation before [setShippingAddressesOnCart]({{ page.baseurl }}/graphql/mutations/set-shipping-method.html). Set a shipping address first. [GraphQL checkout tutorial](https://devdocs.magento.com/guides/v2.3/graphql/tutorials/checkout/index.html) shows the order placement sequence.
+`The shipping address is missing. Set the address and try again.` | You ran `setPaymentMethodAndPlaceOrder` mutation before [setShippingAddressesOnCart](set-shipping-method.md). Set a shipping address first. [GraphQL checkout tutorial](https://devdocs.magento.com/guides/v2.3/graphql/tutorials/checkout/index.html) shows the order placement sequence.
 `The requested Payment Method is not available.` | The payment method specified in the `payment_method` argument is disabled or does not exist.
 `Unable to place order: Some of the products are out of stock.` | Some of the products in a cart are out of stock.

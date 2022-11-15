@@ -7,7 +7,7 @@ edition: ee
 
 The `updateGiftRegistryRegistrants` mutation updates properties of one or more registrants of the specified gify registry.
 
-This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
+This mutation requires a valid [customer authentication token](../../customer/mutations/generate-token.md).
 
 ## Syntax
 

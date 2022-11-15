@@ -9,10 +9,10 @@ The `GiftCardProduct` data type defines properties of a gift card, including the
 
 It implements the following interfaces:
 
--  [ProductInterface]({{page.baseurl}}/graphql/interfaces/product-interface.html)
--  [PhysicalProductInterface]({{page.baseurl}}/graphql/interfaces/product-interface.html#PhysicalProductInterface)
--  [CustomizableProductInterface]({{page.baseurl}}/graphql/interfaces/customizable-option-interface.html)
--  [RoutableInterface]({{page.baseurl}}/graphql/interfaces/routable-interface.html)
+-  [ProductInterface](../index.md)
+-  [PhysicalProductInterface](../index.md#physicalproductinterface)
+-  [CustomizableProductInterface](../customizable-option.md)
+-  [RoutableInterface](../routable.md)
 
 ## GiftCardProduct object
 
@@ -117,6 +117,6 @@ The following query returns information about gift card product `GiftCard25`. (I
 
 ## Related topics
 
--  [applyGiftCardToCart mutation]({{page.baseurl}}/graphql/mutations/apply-giftcard.html)
--  [redeemGiftCardBalanceAsStoreCredit mutation]({{page.baseurl}}/graphql/mutations/redeem-giftcard-balance.html)
--  [removeGiftCardFromCart mutation]({{page.baseurl}}/graphql/mutations/remove-giftcard.html)
+-  [applyGiftCardToCart mutation](../../../cart/mutations/apply-giftcard.md)
+-  [redeemGiftCardBalanceAsStoreCredit mutation](../../../customer/mutations/redeem-giftcard-balance.md)
+-  [removeGiftCardFromCart mutation](../../../cart/mutations/remove-giftcard.md)

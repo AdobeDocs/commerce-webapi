@@ -9,12 +9,12 @@ The `requestReturn` mutation initiates a buyer's request to return an item for r
 
 The following examples illustrate how to retrieve the order ID and item ID values needed to run the `requestReturn` mutation:
 
-*  [Retrieve a summary of the customer's order history]({{page.baseurl}}/graphql/queries/customer.html#order-history)
-*  [Retrieve detailed information about a specific order]({{page.baseurl}}/graphql/queries/customer.html#order-details)
+*  [Retrieve a summary of the customer's order history](../../customer/queries/customer.md#retrieve-a-summary-of-the-customers-order-history)
+*  [Retrieve detailed information about a specific order](../../customer/queries/customer.md#retrieve-detailed-information-about-a-specific-order)
 
 <InlineAlert variant="info" slots="text" />
 
-Use the [`storeConfig` query]({{page.baseurl}}/graphql/queries/store-config.html) with the `returns_enabled` attribute to determine whether returned merchandise authorization (RMAs) are enabled.
+Use the [`storeConfig` query](../../store/queries/store-config.md) with the `returns_enabled` attribute to determine whether returned merchandise authorization (RMAs) are enabled.
 
 ## Syntax
 
@@ -193,6 +193,6 @@ Attribute |  Data Type | Description
 
 ## Related topics
 
-*  [`addReturnComment` mutation]({{page.baseurl}}/graphql/mutations/add-return-comment.html)
-*  [`addReturnTracking` mutation]({{page.baseurl}}/graphql/mutations/add-return-tracking.html)
-*  [`removeReturnTracking` mutation]({{page.baseurl}}/graphql/mutations/remove-return-tracking.html)
+*  [`addReturnComment` mutation](add-return-comment.md)
+*  [`addReturnTracking` mutation](add-return-tracking.md)
+*  [`removeReturnTracking` mutation](remove-return-tracking.md)

@@ -5,7 +5,7 @@ edition: ee
 
 # removeRewardPointsFromCart mutation
 
-The `removeRewardPointsFromCart` mutation removes all reward points that were previously applied to the customer's cart with the [`applyRewardPointsToCart` mutation]({{page.baseurl}}/graphql/mutations/apply-reward-points.html).
+The `removeRewardPointsFromCart` mutation removes all reward points that were previously applied to the customer's cart with the [`applyRewardPointsToCart` mutation](apply-reward-points.md).
 
 ## Syntax
 
@@ -96,7 +96,7 @@ Attribute |  Data Type | Description
 
 <CartObject />
 
-[Cart query output]({{page.baseurl}}/graphql/queries/cart.html#cart-output) provides more information about the `Cart` object.
+[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 

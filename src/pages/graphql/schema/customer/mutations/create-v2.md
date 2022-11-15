@@ -4,9 +4,9 @@ title: createCustomerV2 mutation
 
 # createCustomerV2 mutation
 
-The `createCustomerV2` mutation creates a customer account. Use the [`createCustomerAddress` mutation]({{page.baseurl}}/graphql/mutations/create-customer-address.html) to complete the customer profile and define billing and shipping addresses.
+The `createCustomerV2` mutation creates a customer account. Use the [`createCustomerAddress` mutation](create-address.md) to complete the customer profile and define billing and shipping addresses.
 
-The `createCustomerV2` mutation supersedes the `createCustomer` mutation as the means to create a customer account. The input objects differ between these two mutations. The `createCustomer` mutation required the `CustomerInput` object, as did the `updateCustomer` mutation. The attributes required for creating a customer are different than those for updating a customer, but you could not determine this by looking at the schema. The `createCustomerV2` mutation requires the `CustomerCreateInput` object, which it does not share with the [`updateCustomerV2` mutation]({{page.baseurl}}/graphql/mutations/update-customer-v2.html).
+The `createCustomerV2` mutation supersedes the `createCustomer` mutation as the means to create a customer account. The input objects differ between these two mutations. The `createCustomer` mutation required the `CustomerInput` object, as did the `updateCustomer` mutation. The attributes required for creating a customer are different than those for updating a customer, but you could not determine this by looking at the schema. The `createCustomerV2` mutation requires the `CustomerCreateInput` object, which it does not share with the [`updateCustomerV2` mutation](create-v2.md).
 
 ## Syntax
 
@@ -80,7 +80,7 @@ Attribute |  Data Type | Description
 
 The `CustomerOutput` object contains the `Customer` object.
 
-The following table lists the top-level attributes of the `customer` object. See the [`customer` query]({{page.baseurl}}/graphql/queries/customer.html) for complete details about this object.
+The following table lists the top-level attributes of the `customer` object. See the [`customer` query](../../customer/queries/customer.md) for complete details about this object.
 
 import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
 
@@ -98,8 +98,8 @@ Error | Description
 
 ## Related topics
 
-*  [customer query]({{page.baseurl}}/graphql/queries/customer.html)
-*  [updateCustomerV2 mutation]({{page.baseurl}}/graphql/mutations/update-customer-v2.html)
-*  [createCustomerAddress mutation]({{page.baseurl}}/graphql/mutations/create-customer-address.html)
-*  [updateCustomerAddress mutation]({{page.baseurl}}/graphql/mutations/update-customer-address.html)
-*  [deleteCustomerAddress mutation]({{page.baseurl}}/graphql/mutations/delete-customer-address.html)
+*  [customer query](../../customer/queries/customer.md)
+*  [updateCustomerV2 mutation](update-v2.md)
+*  [createCustomerAddress mutation](create-address.md)
+*  [updateCustomerAddress mutation](update-address.md)
+*  [deleteCustomerAddress mutation](delete-address.md)

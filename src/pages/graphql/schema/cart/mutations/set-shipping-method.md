@@ -18,7 +18,7 @@ United States Postal Service | usps | Varies
 
 <InlineAlert variant="info" slots="text" />
 
-Do not run the `setShippingMethodsOnCart` mutation on in-store pickup orders. Instead, specify the `pickup_location_code` attribute in the [`setShippingAddressesOnCart` mutation]({{page.baseurl}}/graphql/mutations/set-shipping-address.html).
+Do not run the `setShippingMethodsOnCart` mutation on in-store pickup orders. Instead, specify the `pickup_location_code` attribute in the [`setShippingAddressesOnCart` mutation](set-shipping-address.md).
 
 ## Syntax
 
@@ -120,7 +120,7 @@ import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 
 <CartObject />
 
-[Cart query output]({{page.baseurl}}/graphql/queries/cart.html#cart-output) provides more information about the `Cart` object.
+[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 

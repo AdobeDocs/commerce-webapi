@@ -4,17 +4,17 @@ title: RoutableInterface attributes
 
 # RoutableInterface attributes
 
-Some entities are "routable", meaning that they have URLs and can serve as the model for a rendered page. The following implementations of the `RoutableInterface` allow you to return details in the [`route` query]({{page.baseurl}}/graphql/queries/route.html).
+Some entities are "routable", meaning that they have URLs and can serve as the model for a rendered page. The following implementations of the `RoutableInterface` allow you to return details in the [`route` query](../queries/route.md).
 
-*  [BundleProduct]({{page.baseurl}}/graphql/interfaces/bundle-product.html)
-*  [CategoryTree]({{page.baseurl}}/graphql/queries/category-list.html#Categories)
-*  [CmsPage]({{page.baseurl}}/graphql/queries/cms-page.html)
-*  [ConfigurableProduct]({{page.baseurl}}/graphql/interfaces/configurable-product.html)
-*  [DownloadableProduct]({{page.baseurl}}/graphql/interfaces/downloadable-product.html)
-*  [GiftCardProduct]({{page.baseurl}}/graphql/interfaces/gift-card-product.html)
-*  [GroupedProduct]({{page.baseurl}}/graphql/interfaces/grouped-product.html)
-*  [SimpleProduct]({{page.baseurl}}/graphql/interfaces/simple-product.html)
-*  [VirtualProduct]({{page.baseurl}}/graphql/interfaces/virtual-product.html)
+*  [BundleProduct](types/bundle.md)
+*  [CategoryTree](../queries/category-list.md#output-attributes)
+*  [CmsPage](../../store/queries/cms-page.md)
+*  [ConfigurableProduct](types/configurable.md)
+*  [DownloadableProduct](types/downloadable.md)
+*  [GiftCardProduct](types/gift-card.md)
+*  [GroupedProduct](types/grouped.md)
+*  [SimpleProduct](types/simple.md)
+*  [VirtualProduct](types/virtual.md)
 
 ## RoutableInterface attributes
 

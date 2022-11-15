@@ -182,7 +182,7 @@ mutation {
 
 #### Specify the SKU with selected options
 
-In this example, the mutation specifies the size and color as selected options. The first option specifies the color, while the second option specifies the size. The [`products` query]({{page.baseurl}}/graphql/queries/products.html#variant-uid) shows how to obtain the values specified in the `selected_options` array.
+In this example, the mutation specifies the size and color as selected options. The first option specifies the color, while the second option specifies the size. The [`products` query](../../products/queries/products.md#retrieve-variant-uid-values) shows how to obtain the values specified in the `selected_options` array.
 
 **Request:**
 
@@ -589,7 +589,7 @@ import CartObject from '/src/pages/_includes/graphql/cart-object.md'
 
 <CartObject />
 
-[Cart query output]({{page.baseurl}}/graphql/queries/cart.html#cart-output) provides more information about the `Cart` object.
+[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ### CartUserInputError attributes {#CartUserInputError}
 

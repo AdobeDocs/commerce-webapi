@@ -16,7 +16,7 @@ Klarna payments require cart information to initiate the session. For this reaso
 
 ![Klarna payments sequence diagram](../../_images/graphql/klarna-payments.svg)
 
-1. The PWA client calls the [`createKlarnaPaymentsSession`]({{ page.baseurl }}/graphql/mutations/create-klarna-payments-session.html) mutation to generate the `client_token` and retrieve a list of `payment_categories`.
+1. The PWA client calls the [`createKlarnaPaymentsSession`](../schema/checkout/mutations/create-klarna-payments-session.md) mutation to generate the `client_token` and retrieve a list of `payment_categories`.
 
    This step can be executed at any time after the cart is created. However, we recommend that you add products to the cart and set the billing address, shipping address, and shipping method on the cart before you perform this step.
 
@@ -46,7 +46,7 @@ Klarna payments require cart information to initiate the session. For this reaso
 
 1. Set the Payment Method providing the `authorization_token` as part of the `setPaymentMethodOnCart` mutation.
 
-   The client uses the [`setPaymentMethodOnCart`]({{ page.baseurl }}/graphql/mutations/set-payment-method.html) mutation to set the payment method to `klarna_<identifier-value>`. The `authorization_token` is passed in the `klarna` object.
+   The client uses the [`setPaymentMethodOnCart`](../schema/cart/mutations/set-payment-method.md) mutation to set the payment method to `klarna_<identifier-value>`. The `authorization_token` is passed in the `klarna` object.
 
 1. The application returns an updated `cart` object.
 
@@ -84,7 +84,7 @@ The following diagram describes the workflow:
 
 ## setPaymentMethodOnCart mutation
 
-When you set the payment method to Klarna in the [`setPaymentMethodOnCart`]({{ page.baseurl }}/graphql/mutations/set-payment-method.html) mutation, the `payment_method` object must contain a `klarna` object.
+When you set the payment method to Klarna in the [`setPaymentMethodOnCart`](../schema/cart/mutations/set-payment-method.md) mutation, the `payment_method` object must contain a `klarna` object.
 
 ### klarna object
 

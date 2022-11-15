@@ -8,25 +8,25 @@ contributor_link: https://www.atwix.com/
 
 GraphQL supports all product types, but this tutorial only demonstrates how to add a simple product and a virtual product to the shopping cart. You can find more details and examples in the following topics:
 
--  [Bundle products]({{ page.baseurl }}/graphql/mutations/add-bundle-products.html)
--  [Configurable products]({{ page.baseurl }}/graphql/mutations/add-configurable-products.html)
--  [Downloadable products]({{ page.baseurl }}/graphql/mutations/add-downloadable-products.html)
--  [Simple and grouped products]({{ page.baseurl }}/graphql/mutations/add-simple-products.html)
--  [Virtual products]({{ page.baseurl }}/graphql/mutations/add-virtual-products.html)
+-  [Bundle products](../../schema/cart/mutations/add-bundle-products.md)
+-  [Configurable products](../../schema/cart/mutations/add-configurable-products.md)
+-  [Downloadable products](../../schema/cart/mutations/add-downloadable-products.md)
+-  [Simple and grouped products](../../schema/cart/mutations/add-simple-products.md)
+-  [Virtual products](../../schema/cart/mutations/add-virtual-products.md)
 
-[Product interface implementations]({{ page.baseurl }}/graphql/interfaces/product-interface-implementations.html) also describes how to create queries that access product interfaces.
+[Product interface implementations](../../schema/products/interfaces/types/index.md) also describes how to create queries that access product interfaces.
 
 Use the `updateCartItems` mutation to update shopping cart items and `removeItemFromCart` to remove a product from the shopping cart.
 
 <InlineAlert variant="info" slots="text" />
 
-If you add a product to the shopping cart as a registered customer, be sure to send the customer's authorization token in the `Authorization` parameter of the header. See [Authorization tokens]({{page.baseurl}}/graphql/authorization-tokens.html) for more details.
+If you add a product to the shopping cart as a registered customer, be sure to send the customer's authorization token in the `Authorization` parameter of the header. See [Authorization tokens](../../usage/authorization-tokens.md) for more details.
 
 ## Add a simple product into the shopping cart
 
 The following mutation adds a simple product into the shopping cart.
 
-Replace `{ CART_ID }` with the unique shopping cart ID from [Step 2. Create empty cart]({{ page.baseurl }}/graphql/tutorials/checkout/checkout-add-product-to-cart.html).
+Replace `{ CART_ID }` with the unique shopping cart ID from [Step 2. Create empty cart](../../tutorials/checkout/add-product-to-cart.md).
 
 In this example, we will add the Aim Analog Watch (SKU 24-MG04) from the default Luma catalog to the cart. The SKU identifies the product to be added.
 

@@ -52,7 +52,7 @@ mutation {
 }
 ```
 
-The [`createCustomer`]({{ page.baseurl }}/graphql/mutations/create-customer.html) mutation describes additional parameters.
+The [`createCustomer`](../../schema/customer/mutations/create.md) mutation describes additional parameters.
 
 ## Generate an authentication token for the customer
 
@@ -85,7 +85,7 @@ mutation {
 To send requests on behalf of the customer, you must supply the generated token as a header in your GraphQL browser.
 The name of the header is `Authorization` and the value is `Bearer <token>`.
 
-[Authorization tokens]({{page.baseurl}}/graphql/authorization-tokens.html) describes the mutation further.
+[Authorization tokens](../../usage/authorization-tokens.md) describes the mutation further.
 
 ## Verify this step {#verify-step}
 

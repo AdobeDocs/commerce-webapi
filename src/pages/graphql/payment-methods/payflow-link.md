@@ -20,7 +20,7 @@ import PayflowLinkWorkflow from '/src/pages/_includes/graphql/payment-methods/pa
 
 ## Additional Payment information
 
-When you set the payment method to Payflow Link in the [`setPaymentMethodOnCart`]({{page.baseurl}}/graphql/mutations/set-payment-method.html) mutation, the `payment_method` object must contain a `payflow_link` object, which defines the following objects:
+When you set the payment method to Payflow Link in the [`setPaymentMethodOnCart`](../schema/cart/mutations/set-payment-method.md) mutation, the `payment_method` object must contain a `payflow_link` object, which defines the following objects:
 
 import PayflowLinkAttributes from '/src/pages/_includes/graphql/payment-methods/payflow-link-attributes.md'
 

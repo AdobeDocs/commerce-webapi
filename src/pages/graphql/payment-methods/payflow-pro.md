@@ -10,11 +10,11 @@ Other PayPal solutions have the same GraphQL workflow as Payflow Pro. The inform
 
 -  Payments Pro
 
-If Payflow Pro has been configured to implement Express Checkout, use the [PayPal Express Checkout for Payflow payment method]({{page.baseurl}}/graphql/payment-methods/payflow-express.html) instead.
+If Payflow Pro has been configured to implement Express Checkout, use the [PayPal Express Checkout for Payflow payment method](payflow-express.md) instead.
 
 <InlineAlert variant="info" slots="text" />
 
-If the `is_active_payment_token_enabler` attribute is set to `1` (true), in future orders, the logged-in customer can use the [Payflow Pro Vault payment method]({{page.baseurl}}/graphql/payment-methods/payflow-pro-vault.html).
+If the `is_active_payment_token_enabler` attribute is set to `1` (true), in future orders, the logged-in customer can use the [Payflow Pro Vault payment method](payflow-pro-vault.md).
 
 ## Payflow Pro workflow
 
@@ -22,11 +22,11 @@ The following diagram shows the workflow for placing an order when Payflow Pro i
 
 ![PayPal Payflow Pro sequence diagram](../../_images/graphql/paypal-payflow-pro.svg)
 
-1. On the checkout page, the customer selects **Credit Card** as the payment method and enters the credit card information as well as the billing and shipping addresses. When the customer clicks **Place Order**, the PWA client uses the [`setPaymentMethodOnCart`]({{page.baseurl}}/graphql/mutations/set-payment-method.html) mutation to set the payment method to `payflowpro`.
+1. On the checkout page, the customer selects **Credit Card** as the payment method and enters the credit card information as well as the billing and shipping addresses. When the customer clicks **Place Order**, the PWA client uses the [`setPaymentMethodOnCart`](../schema/cart/mutations/set-payment-method.md) mutation to set the payment method to `payflowpro`.
 
 1. The mutation returns a `Cart` object.
 
-1. The client runs the [`createPayflowProToken`]({{page.baseurl}}/graphql/mutations/create-payflow-pro-token.html) mutation to initiate a transaction.
+1. The client runs the [`createPayflowProToken`](../schema/checkout/mutations/create-payflow-pro-token.md) mutation to initiate a transaction.
 
 1. The application requests a secure token from the PayPal gateway. The request also contains billing and shipping information, which the application extracts from the `Cart` object.
 
@@ -38,11 +38,11 @@ The following diagram shows the workflow for placing an order when Payflow Pro i
 
 1. The gateway responds directly to the client. The response contains a payload that includes secure token information and billing and shipping information.
 
-1. The client uses the [`handlePayflowProResponse`]({{page.baseurl}}/graphql/mutations/handle-payflow-pro-response.html) mutation to send the payload to the application. The application stores this information without modifying the cart.
+1. The client uses the [`handlePayflowProResponse`](../schema/checkout/mutations/handle-payflow-pro-response.md) mutation to send the payload to the application. The application stores this information without modifying the cart.
 
 1. The mutation returns a `Cart` object.
 
-1. The client runs the [`placeOrder`]({{page.baseurl}}/graphql/mutations/place-order.html) mutation, which creates an order and begins the authorization process.
+1. The client runs the [`placeOrder`](../schema/cart/mutations/place-order.md) mutation, which creates an order and begins the authorization process.
 
 1. The application sends an authorization request to the gateway.
 
@@ -52,7 +52,7 @@ The following diagram shows the workflow for placing an order when Payflow Pro i
 
 ## Additional Payment information
 
-When you set the payment method to Payflow Pro in the [`setPaymentMethodOnCart`]({{page.baseurl}}/graphql/mutations/set-payment-method.html) mutation, the `payment_method` object must contain a `payflowpro` object and a `CreditCardDetailsInput` object.
+When you set the payment method to Payflow Pro in the [`setPaymentMethodOnCart`](../schema/cart/mutations/set-payment-method.md) mutation, the `payment_method` object must contain a `payflowpro` object and a `CreditCardDetailsInput` object.
 
 ### payflowpro object
 

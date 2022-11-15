@@ -11,7 +11,7 @@ The `customerCart` query differs from the `cart` query in the following ways:
 -  The `customerCart` query must be run on behalf of a logged-in customer. If you run this query on behalf of a guest, an exception will be thrown.
 -  The `cart` query requires a `cart_id` value as input. The `customerCart` query does not take any input parameters.
 
-You can define the query to return the `id` attribute. You can use the value of this attribute as the `destination_cart_id` input parameter in the [`mergeCarts` mutation]({{page.baseurl}}/graphql/mutations/merge-carts.html). (The `mergeCarts` mutation provides the ability to merge a guest cart with the logged-in customer's cart.)
+You can define the query to return the `id` attribute. You can use the value of this attribute as the `destination_cart_id` input parameter in the [`mergeCarts` mutation](../../cart/mutations/merge.md). (The `mergeCarts` mutation provides the ability to merge a guest cart with the logged-in customer's cart.)
 
 {: .bs-callout-tip }
 If you know the value of the logged-in customer's cart ID, you can allow the customer to start an order on one device and complete it on another.
@@ -82,4 +82,4 @@ import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 
 <CartObject />
 
-[Cart query output]({{page.baseurl}}/graphql/queries/cart.html#cart-output) provides more information about the `Cart` object.
+[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.

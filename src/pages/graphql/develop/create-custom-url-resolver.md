@@ -32,7 +32,8 @@ public function execute(EventObserver $observer)
     }
 }
 ```
-See [Events and observers]({{ page.baseurl }}/extension-dev-guide/events-and-observers.html) for more information about creating an observer.
+
+See [Events and observers](https://developer.adobe.com/commerce/php/development/components/events-and-observers/) for more information about creating an observer.
 
 ## Configure the custom module
 
@@ -61,5 +62,5 @@ Update the `graphql.xml` and `events.xml` file in your module's `etc` directory 
 
 ## Related Topics
 
-*  [Events and observers]({{ page.baseurl }}/extension-dev-guide/events-and-observers.html)
-*  [urlResolver endpoint]({{ page.baseurl }}/graphql/queries/url-resolver.html)
+*  [Events and observers](https://developer.adobe.com/commerce/php/development/components/events-and-observers/)
+*  [urlResolver endpoint](../schema/products/url-resolver.md)

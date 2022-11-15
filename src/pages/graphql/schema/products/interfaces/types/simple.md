@@ -8,12 +8,12 @@ contributor_link: https://www.atwix.com/
 
 The `SimpleProduct` data type implements the following interfaces:
 
--  [ProductInterface]({{page.baseurl}}/graphql/interfaces/product-interface.html)
--  [PhysicalProductInterface]({{page.baseurl}}/graphql/interfaces/product-interface.html#PhysicalProductInterface)
--  [CustomizableProductInterface]({{page.baseurl}}/graphql/interfaces/customizable-option-interface.html)
--  [RoutableInterface]({{page.baseurl}}/graphql/interfaces/routable-interface.html)
+-  [ProductInterface](../index.md)
+-  [PhysicalProductInterface](../index.md#physicalproductinterface)
+-  [CustomizableProductInterface](../customizable-option.md)
+-  [RoutableInterface](../routable.md)
 
-Attributes that are specific to the simple products can be used when performing a [`products`]({{page.baseurl}}/graphql/queries/products.html) query.
+Attributes that are specific to the simple products can be used when performing a [`products`](../../queries/products.md) query.
 
 ## SimpleProduct object
 
@@ -109,4 +109,4 @@ The following query returns information about simple product `24-MB01`, which is
 
 ## Related topics
 
--  [addSimpleProductsToCart mutation]({{page.baseurl}}/graphql/mutations/add-simple-products.html)
+-  [addSimpleProductsToCart mutation](../../../cart/mutations/add-simple-products.md)

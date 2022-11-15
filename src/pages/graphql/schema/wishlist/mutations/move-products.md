@@ -9,9 +9,9 @@ The `moveProductsBetweenWishlists` mutation moves the specified quantities of on
 
 If you do not specify a quantity for a product, the mutation moves the entire quantity of that product to the target wish list.
 
-Use the [`customer` query]({{page.baseurl}}/graphql/queries/customer.html) to return a list of wish list IDs and item IDs.
+Use the [`customer` query](../../customer/queries/customer.md) to return a list of wish list IDs and item IDs.
 
-This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
+This mutation requires a valid [customer authentication token](../../customer/mutations/generate-token.md).
 
 ## Syntax
 

@@ -13,7 +13,7 @@ import B2BRoles from '/src/pages/_includes/graphql/b2b-roles.md'
 
 <B2BRoles />
 
-Also, you can get the list of all resources defined within the company using the [`company`]({{page.baseurl}}/graphql/queries/company.html) query.
+Also, you can get the list of all resources defined within the company using the [`company`](../queries/company.md) query.
 
 ## Syntax
 

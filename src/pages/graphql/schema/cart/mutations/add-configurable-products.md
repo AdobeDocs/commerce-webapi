@@ -6,7 +6,7 @@ title: addConfigurableProductsToCart mutation
 
 <InlineAlert variant="warning" slots="text" />
 
-We recommend using the [addProductsToCart mutation]({{page.baseurl}}/graphql/mutations/add-products-to-cart.html) to add any type of product to the cart.
+We recommend using the [addProductsToCart mutation](add-products.md) to add any type of product to the cart.
 
 Use the `addConfigurableProductsToCart` mutation to add configurable products to a specific cart.
 
@@ -16,7 +16,7 @@ Use the `addConfigurableProductsToCart` mutation to add configurable products to
 
 ## Example usage
 
-The following example adds two black Teton Pullover Hoodies size extra-small to the specified shopping cart. The `cart_id` used in this example was [generated]({{ page.baseurl }}/graphql/mutations/create-empty-cart.html) by creating an empty cart.
+The following example adds two black Teton Pullover Hoodies size extra-small to the specified shopping cart. The `cart_id` used in this example was [generated](create-empty-cart.md) by creating an empty cart.
 
 **Request:**
 
@@ -138,7 +138,7 @@ import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 
 <CartObject />
 
-[Cart query output]({{page.baseurl}}/graphql/queries/cart.html#cart-output) provides more information about the `Cart` object.
+[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 
@@ -155,4 +155,4 @@ Error | Description
 
 ## Related topics
 
--  [Configurable product data types]({{page.baseurl}}/graphql/interfaces/configurable-product.html)
+-  [Configurable product data types](../../products/interfaces/types/configurable.md)

@@ -8,7 +8,7 @@ contributor_link: https://www.atwix.com/
 
 The `assignCompareListToCustomer` mutation assigns the specified comparison list to the logged-in customer. Use this mutation when a customer creates a comparison list as a guest, but subsequently logs in.
 
-This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
+This mutation requires a valid [customer authentication token](../../customer/mutations/generate-token.md).
 
 ## Syntax
 
@@ -139,8 +139,8 @@ import CompareListOutput from '/src/pages/_includes/graphql/compare-list-output.
 
 ## Related topics
 
-*  [compareList query]({{page.baseurl}}/graphql/queries/compare-list.html)
-*  [addProductsToCompareList mutation]({{page.baseurl}}/graphql/mutations/add-products-to-compare-list.html)
-*  [createCompareList mutation]({{page.baseurl}}/graphql/mutations/create-compare-list.html)
-*  [deleteCompareList mutation]({{page.baseurl}}/graphql/mutations/delete-compare-list.html)
-*  [removeProductsFromCompareList mutation]({{page.baseurl}}/graphql/mutations/remove-products-from-compare-list.html)
+*  [compareList query](../../products/queries/compare-list.md)
+*  [addProductsToCompareList mutation](add-products-to-compare-list.md)
+*  [createCompareList mutation](create-compare-list.md)
+*  [deleteCompareList mutation](delete-compare-list.md)
+*  [removeProductsFromCompareList mutation](remove-from-compare-list.md)

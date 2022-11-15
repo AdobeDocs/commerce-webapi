@@ -12,7 +12,7 @@ The mutation response includes an array of payment method categories. When the s
 
 The response also contains a client token. You must also supply this value in the `setPaymentMethodOnCart` mutation.
 
-[Klarna payment method]({{page.baseurl}}/graphql/payment-methods/klarna.html) provides additional information about the workflow of Klarna transactions.
+[Klarna payment method](../../../payment-methods/klarna.md) provides additional information about the workflow of Klarna transactions.
 
 ## Syntax
 
@@ -111,4 +111,4 @@ Attribute | Data type | Description
 
 Error | Description
 --- | ---
-`The Klarna payment method is not active.` | The [Klarna]({{ site.user_guide_url }}/payment/klarna.html) payment method is disabled in admin.
+`The Klarna payment method is not active.` | The [Klarna](https://docs.magento.com/user-guide/payment/klarna.html) payment method is disabled in admin.

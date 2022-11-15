@@ -4,7 +4,7 @@ title: deletePaymentToken mutation
 
 # deletePaymentToken mutation
 
-The `deletePaymentToken` mutation deletes a payment token from the system. Use the [customerPaymentTokens query]({{page.baseurl}}/graphql/queries/customer-payment-tokens.html) to retrieve all stored payment methods associated with a particular customer.
+The `deletePaymentToken` mutation deletes a payment token from the system. Use the [customerPaymentTokens query](../queries/customer-payment-tokens.md) to retrieve all stored payment methods associated with a particular customer.
 
 <InlineAlert variant="info" slots="text" />
 
@@ -101,4 +101,4 @@ Error | Description
 
 ## Related topics
 
-[customerPaymentTokens query]({{page.baseurl}}/graphql/queries/customer-payment-tokens.html)
+[customerPaymentTokens query](../queries/customer-payment-tokens.md)

@@ -6,7 +6,7 @@ contributor_link: https://www.atwix.com/
 
 # Step 4. Set the shipping address
 
-Use the [setShippingAddressesOnCart]({{ page.baseurl }}/graphql/mutations/set-shipping-address.html) mutation to set a shipping address.
+Use the [setShippingAddressesOnCart](../../schema/cart/mutations/set-shipping-address.md) mutation to set a shipping address.
 
 ## Add shipping address to the cart
 
@@ -14,7 +14,7 @@ In this step, we use the `setShippingAddressesOnCart` mutation to add a shipping
 
 If using guest checkout, run the following example.
 
-If using a logged in customer, send the customer's authorization token in the `Authorization` parameter of the header. See [Authorization tokens]({{page.baseurl}}/graphql/authorization-tokens.html) for more information.
+If using a logged in customer, send the customer's authorization token in the `Authorization` parameter of the header. See [Authorization tokens](../../usage/authorization-tokens.md) for more information.
 
 **Request:**
 
@@ -122,7 +122,7 @@ mutation {
 }
 ```
 
-`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart]({{ page.baseurl }}/graphql/tutorials/checkout/checkout-add-product-to-cart.html).
+`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](../../tutorials/checkout/add-product-to-cart.md).
 
 Note the `available_shipping_methods` in the response. We will use this information in a later step.
 

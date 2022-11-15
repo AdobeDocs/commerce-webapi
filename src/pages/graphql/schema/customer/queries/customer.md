@@ -179,10 +179,10 @@ The following example returns details about one of the customer's previous order
 
 These topics contain examples with fragments and provide even more details:
 
-*  [CreditMemoItemInterface attributes and implementations]({{page.baseurl}}/graphql/interfaces/credit-memo-item-interface.html)
-*  [InvoiceItemInterface attributes and implementations]({{page.baseurl}}/graphql/interfaces/invoice-item-interface.html)
-*  [OrderItemInterface attributes and implementations]({{page.baseurl}}/graphql/interfaces/order-item-interface.html)
-*  [ShipmentItemInterface attributes and implementations]({{page.baseurl}}/graphql/interfaces/shipment-item-interface.html)
+*  [CreditMemoItemInterface attributes and implementations](../../orders/interfaces/credit-memo-item.md)
+*  [InvoiceItemInterface attributes and implementations](../../orders/interfaces/invoice-item.md)
+*  [OrderItemInterface attributes and implementations](../../orders/interfaces/order-item.md)
+*  [ShipmentItemInterface attributes and implementations](../../orders/interfaces/shipment-item.md)
 
 **Request:**
 
@@ -480,6 +480,7 @@ query {
   }
 }
 ```
+
 ### Retrieve the customer's wish list
 
 The following query returns the customer's wish lists. Adobe Commerce allows customers to have multiple wish lists.
@@ -658,6 +659,7 @@ The following query returns the customer's wish lists. Adobe Commerce allows cus
   }
 }
 ```
+
 ## Output attributes
 
 ### Customer attributes {#customerAttributes}
@@ -745,7 +747,7 @@ import ProductReview from '/src/pages/_includes/graphql/product-review.md'
 Attribute |  Data Type | Description
 --- | --- | ---
 `items` | [[ProductReview]](#ProductReview)! | An array of product reviews
-`page_info` | [SearchResultPageInfo!]({{page.baseurl}}/graphql/queries/products.html#SearchResultPageInfo) | Metadata for pagination rendering
+`page_info` | [SearchResultPageInfo!](../../products/queries/products.md#searchresultpageinfo-attributes) | Metadata for pagination rendering
 
 ### Return attributes {#Return}
 
@@ -835,7 +837,7 @@ Attribute |  Data Type | Description
 
 ## Related topics
 
-*  [isEmailAvailable query]({{page.baseurl}}/graphql/queries/is-email-available.html)
-*  [generateCustomerToken mutation]({{page.baseurl}}/graphql/mutations/generate-customer-token.html)
-*  [createCustomer mutation]({{page.baseurl}}/graphql/mutations/create-customer.html)
-*  [createCustomerAddress mutation]({{page.baseurl}}/graphql/mutations/create-customer-address.html)
+*  [isEmailAvailable query](../../b2b/company/queries/is-company-email-available.md)
+*  [generateCustomerToken mutation](../../customer/mutations/generate-token.md)
+*  [createCustomer mutation](../../customer/mutations/create.md)
+*  [createCustomerAddress mutation](../../customer/mutations/create-address.md)

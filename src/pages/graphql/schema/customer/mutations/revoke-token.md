@@ -58,5 +58,5 @@ Error | Description
 
 ## Related topics
 
-*  [customer query]({{page.baseurl}}/graphql/queries/customer.html)
-*  [generateCustomerToken mutation]({{page.baseurl}}/graphql/mutations/generate-customer-token.html)
+*  [customer query](../../customer/queries/customer.md)
+*  [generateCustomerToken mutation](../../customer/mutations/generate-token.md)

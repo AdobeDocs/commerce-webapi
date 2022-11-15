@@ -8,7 +8,7 @@ contributor_name: EY
 
 The `shareGiftRegistry` mutation sends an invitation to a list email addresses to shop from the customer's gift registry.
 
-This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
+This mutation requires a valid [customer authentication token](../../customer/mutations/generate-token.md).
 
 ## Syntax
 

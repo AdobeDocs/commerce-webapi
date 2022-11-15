@@ -22,7 +22,7 @@ Attribute |  Data Type | Description
 `errors` | [CartItemError!](#CartItemError) | An array of errors encountered while loading the cart item. PWA Studio only.
 `id` | String | Deprecated. Use `uid` instead. The ID of the item
 `prices` | [CartItemPrices](#CartItemPrices) | Includes the price of an item, any applied discounts, and calculated totals
-`product` | [ProductInterface]({{ page.baseurl }}/graphql/interfaces/product-interface.html) | Contains attributes that are common to all types of products
+`product` | [ProductInterface](../../products/interfaces/index.md) | Contains attributes that are common to all types of products
 `quantity` | Float                                                                            | The number of items in the cart
 `uid` | ID!                                                                              | The unique ID for the `CartItemInterface` object
 
@@ -33,7 +33,7 @@ The `CartItemPrices` object can contain the following attributes.
 Attribute |  Data Type | Description
 --- | --- | ---
 `discounts`| [Discount] | An array of discounts to be applied to the cart item
-`fixed_product_taxes` | [[FixedProductTax]]({{page.baseurl}}/graphql/interfaces/product-interface.html#FixedProductTax) | The fixed product taxes to be applied to the cart item
+`fixed_product_taxes` | [[FixedProductTax]](../../products/interfaces/index.md#fixedproducttax-object) | The fixed product taxes to be applied to the cart item
 `price` | Money! | The price of the item before any discounts were applied. The price that might include tax, depending on the configured display settings for cart
 `row_total` | Money! | The value of the `price` multiplied by the quantity of the item
 `row_total_including_tax` | Money! | The value of `row_total` plus the tax applied to the item
@@ -114,7 +114,7 @@ The `ConfigurableCartItem` object adds the following attributes to the `CartItem
 Attribute | Data type | Description
 --- | --- | ---
 `configurable_options` | [[SelectedConfigurableOption!]!](#SelectedConfigurableOption) | An array of configurable options
-`configured_variant` | [ProductInterface]({{page.baseurl}}/graphql/interfaces/product-interface.html) | Returns details about a child configurable product that are different than the parent product. This attribute always returns child information, including the child product image, even if the `storeConfig.configurable_thumbnail_source` attribute is set to `parent`
+`configured_variant` | [ProductInterface](../../products/interfaces/index.md) | Returns details about a child configurable product that are different than the parent product. This attribute always returns child information, including the child product image, even if the `storeConfig.configurable_thumbnail_source` attribute is set to `parent`
 `customizable_options` | [[SelectedCustomizableOption]](#SelectedCustomizableOption) | An array of customizable options the shopper chose for the configurable product
 
 ### SelectedConfigurableOption attributes {#SelectedConfigurableOption}
@@ -138,8 +138,8 @@ The `DownloadableCartItem` object adds the following attributes to the `CartItem
 Attribute | Data type | Description
 --- | --- | ---
 `customizable_options` | [[SelectedCustomizableOption]](#SelectedCustomizableOption) | An array of customizable options the shopper chose for the downloadable product
-`links` | [[DownloadableProductLinks]]({{page.baseurl}}/graphql/interfaces/downloadable-product.html#DownloadableProductLinks) | An array containing information about the links associated with the selected downloadable product
-`samples` | [[DownloadableProductSamples]]({{page.baseurl}}/graphql/interfaces/downloadable-product.html#DownloadableProductSamples) | An array containing information about samples of the selected downloadable product
+`links` | [[DownloadableProductLinks]](../../products/interfaces/types/downloadable.md#downloadableproductlinks-attributes) | An array containing information about the links associated with the selected downloadable product
+`samples` | [[DownloadableProductSamples]](../../products/interfaces/types/downloadable.md#downloadableproductsamples-attributes) | An array containing information about samples of the selected downloadable product
 
 ## GiftCardCartItem implementation {#GiftCardCartItem}
 

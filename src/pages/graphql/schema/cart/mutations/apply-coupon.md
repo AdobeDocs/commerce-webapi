@@ -114,13 +114,13 @@ import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 
 <CartObject />
 
-[Cart query output]({{page.baseurl}}/graphql/queries/cart.html#cart-output) provides more information about the `Cart` object.
+[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 
 Error | Description
 --- | ---
-`A coupon is already applied to the cart. Please remove it to apply another` | The value specified in the `coupon_code` argument has already applied to cart. Use [removeCouponFromCart]({{page.baseurl}}/graphql/mutations/remove-coupon.html) to remove the current coupon and to apply another.
+`A coupon is already applied to the cart. Please remove it to apply another` | The value specified in the `coupon_code` argument has already applied to cart. Use [removeCouponFromCart](remove-coupon.md) to remove the current coupon and to apply another.
 `Cart does not contain products.` | The coupon cannot be applied to an empty cart.
 `Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` table.
 `Required parameter "coupon_code" is missing` | The required `coupon_code` argument contains an empty value.

@@ -575,7 +575,7 @@ query {
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`cart_id` | String! | A 32-character string that is created when you [create a cart]({{page.baseurl}}/graphql/mutations/create-empty-cart.html)
+`cart_id` | String! | A 32-character string that is created when you [create a cart](../mutations/create-empty-cart.md)
 
 ## Output attributes {#cart-output}
 
@@ -704,7 +704,7 @@ The `CartItemInterface` has the following implementations:
 *  SimpleCartItem
 *  VirtualCartItem
 
-See [`CartItemInterface`]({{page.baseurl}}/graphql/interfaces/cart-item-interface.html) for details.
+See [`CartItemInterface`](../interfaces/cart-item.md) for details.
 
 ### CartItemQuantity object {#CartItemQuantity}
 
@@ -821,12 +821,12 @@ Attribute |  Data Type | Description
 
 ## Related topics
 
-*  [createEmptyCart mutation]({{page.baseurl}}/graphql/mutations/create-empty-cart.html)
-*  [addSimpleProductsToCart mutation]({{page.baseurl}}/graphql/mutations/add-simple-products.html)
-*  [setShippingAddressesOnCart mutation]({{page.baseurl}}/graphql/mutations/set-shipping-address.html)
-*  [setShippingMethodsOnCart mutation]({{page.baseurl}}/graphql/mutations/set-shipping-method.html)
-*  [setBillingAddressOnCart mutation]({{page.baseurl}}/graphql/mutations/set-billing-address.html)
-*  [setPaymentMethodOnCart mutation]({{page.baseurl}}/graphql/mutations/set-payment-method.html)
+*  [createEmptyCart mutation](../mutations/create-empty-cart.md)
+*  [addSimpleProductsToCart mutation](../mutations/add-simple-products.md)
+*  [setShippingAddressesOnCart mutation](../mutations/set-shipping-address.md)
+*  [setShippingMethodsOnCart mutation](../mutations/set-shipping-method.md)
+*  [setBillingAddressOnCart mutation](../mutations/set-billing-address.md)
+*  [setPaymentMethodOnCart mutation](../../cart/mutations/set-payment-method.md)
 
 ## Errors
 

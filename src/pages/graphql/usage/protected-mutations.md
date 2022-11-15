@@ -54,4 +54,4 @@ Enable for Coupon Codes | `applyCouponToCart`
 {:.ref-header}
 Related topics
 
-[Construct a request]({{page.baseurl}}/get-started/gs-web-api-request.html)
+[Construct a request](../../get-started/gs-web-api-request.md)

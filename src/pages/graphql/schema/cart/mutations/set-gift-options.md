@@ -18,9 +18,9 @@ Gift messages are a feature of Magento Open Source. All other gift options requi
 
 To remove a gift message, set the `gift_message` object to null. To remove gift wrapping, set the `gift_wrapping_id` attribute to null.
 
-Use the [updateCartItems mutation]({{page.baseurl}}/graphql/mutations/update-cart-items.html) to set gift messages and gift wrapping on individual items.
+Use the [updateCartItems mutation](update-items.md) to set gift messages and gift wrapping on individual items.
 
-These options are configured on the **Stores** > Configuration > **Sales** > **Sales** > **Gift Options** screen. To determine whether these options are enabled, specify these attributes in the [`storeConfig` query]({{page.baseurl}}/graphql/queries/store-config.html).
+These options are configured on the **Stores** > Configuration > **Sales** > **Sales** > **Gift Options** screen. To determine whether these options are enabled, specify these attributes in the [`storeConfig` query](../../store/queries/store-config.md).
 
 *  `allow_gift_receipt`
 *  `allow_gift_wrapping_on_order`
@@ -188,7 +188,7 @@ import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 
 <CartObject />
 
-[Cart query output]({{page.baseurl}}/graphql/queries/cart.html#cart-output) provides more information about the `Cart` object.
+[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 

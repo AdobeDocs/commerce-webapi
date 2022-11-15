@@ -11,7 +11,7 @@ Use the `createCompanyTeam` mutation to create a new team for your company.
 
 The `target_id` input attribute allows you to specify which node in the company structure will be the parent node of the company team. If you do not specify a value, the team will be assigned to the top-level (root) node of the company structure.
 
-You can get the `target_id` with the [`company`]({{page.baseurl}}/graphql/queries/company.html) query.
+You can get the `target_id` with the [`company`](../queries/company.md) query.
 
 ## Syntax
 

@@ -140,7 +140,7 @@ Attribute | Data type | Description
 
 ### PickupLocationFilterInput object {#PickupLocationFilterInput}
 
-Use the `PickupLocationFilterInput` to filter by pickup location attributes. See [FilterTypeInput]({{ site.mage2bloburl }}/{{ page.guide_version }}/app/code/Magento/GraphQl/etc/schema.graphqls#L50).
+Use the `PickupLocationFilterInput` to filter by pickup location attributes. See [FilterTypeInput](https://github.com/magento/magento2/blob/2.4/app/code/Magento/GraphQl/etc/schema.graphqls#L50).
 
 Attribute | Data type | Description
 --- | --- | ---
@@ -155,7 +155,7 @@ Attribute | Data type | Description
 
 ### PickupLocationSortInput object {#PickupLocationSortInput}
 
-`PickupLocationSortInput` provides the ability to sort results by pickup location attributes. See [SortEnum]({{ site.mage2bloburl }}/{{ page.guide_version }}/app/code/Magento/GraphQl/etc/schema.graphqls#L88)
+`PickupLocationSortInput` provides the ability to sort results by pickup location attributes. See [SortEnum](https://github.com/magento/magento2/blob/2.4/app/code/Magento/GraphQl/etc/schema.graphqls#L88)
 
 Attribute | Data type | Description
 --- | --- | ---

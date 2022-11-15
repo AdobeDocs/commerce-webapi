@@ -6,7 +6,7 @@ title: createCustomer mutation
 
 <InlineAlert variant="warning" slots="text" />
 
-We recommend using the [createCustomerV2 mutation]({{page.baseurl}}/graphql/mutations/create-customer-v2.html) to create a customer.
+We recommend using the [createCustomerV2 mutation](create-v2.md) to create a customer.
 
 The `createCustomer` mutation creates a new customer.
 
@@ -62,7 +62,7 @@ mutation {
 
 ## Input attributes
 
-The following table lists the attributes you can use as input for the `createCustomer` mutation. The [Customer attributes]({{page.baseurl}}/graphql/queries/customer.html#customerAttributes) table lists the attributes the application returns.
+The following table lists the attributes you can use as input for the `createCustomer` mutation. The [Customer attributes](../../customer/queries/customer.md#customer-attributes) table lists the attributes the application returns.
 
 import CreateCustomer from '/src/pages/_includes/graphql/create-customer.md'
 
@@ -72,7 +72,7 @@ import CreateCustomer from '/src/pages/_includes/graphql/create-customer.md'
 
 The `createCustomer` mutation returns the `CustomerOutput` object.
 
-The following table lists the top-level attributes of the `customer` object. See the [`customer` query]({{page.baseurl}}/graphql/queries/customer.html) for complete details about this object.
+The following table lists the top-level attributes of the `customer` object. See the [`customer` query](../../customer/queries/customer.md) for complete details about this object.
 
 import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
 
@@ -90,8 +90,8 @@ Error | Description
 
 ## Related topics
 
-*  [customer query]({{page.baseurl}}/graphql/queries/customer.html)
-*  [updateCustomer mutation]({{page.baseurl}}/graphql/mutations/update-customer.html)
-*  [createCustomerAddress mutation]({{page.baseurl}}/graphql/mutations/create-customer-address.html)
-*  [updateCustomerAddress mutation]({{page.baseurl}}/graphql/mutations/update-customer-address.html)
-*  [deleteCustomerAddress mutation]({{page.baseurl}}/graphql/mutations/delete-customer-address.html)
+*  [customer query](../queries/customer.md)
+*  [updateCustomer mutation](update.md)
+*  [createCustomerAddress mutation](create-address.md)
+*  [updateCustomerAddress mutation](update-address.md)
+*  [deleteCustomerAddress mutation](delete-address.md)

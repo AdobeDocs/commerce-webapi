@@ -75,7 +75,7 @@ Attribute |  Data Type | Description
 `id` | ID! | The unique ID for a `CompanyTeam` object
 `name` | String | The display name of the team
 
-You can get the team ID with the [`company`]({{page.baseurl}}/graphql/queries/company.html) query.
+You can get the team ID with the [`company`](../queries/company.md) query.
 
 ## Output attributes
 

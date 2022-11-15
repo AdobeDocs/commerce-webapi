@@ -55,7 +55,7 @@ Attribute |  Data Type | Description
 
 The `updateCustomerEmail` mutation returns the `customer` object.
 
-The following table lists the top-level attributes of the `customer` object. See the [`customer` query]({{page.baseurl}}/graphql/queries/customer.html) for complete details about this object.
+The following table lists the top-level attributes of the `customer` object. See the [`customer` query](../../customer/queries/customer.md) for complete details about this object.
 
 import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
 
@@ -63,5 +63,5 @@ import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
 
 ## Related topics
 
-*  [customer query]({{page.baseurl}}/graphql/queries/customer.html)
-*  [updateCustomerV2 mutation]({{page.baseurl}}/graphql/mutations/update-customer-v2.html)
+*  [customer query](../queries/customer.md)
+*  [updateCustomerV2 mutation](create-v2.md)

@@ -6,12 +6,12 @@ title: Bundle product data types
 
 The `BundleProduct` data type implements the following interfaces:
 
--  [ProductInterface]({{page.baseurl}}/graphql/interfaces/product-interface.html)
--  [PhysicalProductInterface]({{page.baseurl}}/graphql/interfaces/product-interface.html#PhysicalProductInterface)
--  [CustomizableProductInterface]({{page.baseurl}}/graphql/interfaces/customizable-option-interface.html)
--  [RoutableInterface]({{page.baseurl}}/graphql/interfaces/routable-interface.html)
+-  [ProductInterface](../index.md)
+-  [PhysicalProductInterface](../index.md#physicalproductinterface)
+-  [CustomizableProductInterface](../customizable-option.md)
+-  [RoutableInterface](../routable.md)
 
-Attributes that are specific to bundle products can be used when performing a [`products`]({{page.baseurl}}/graphql/queries/products.html) query.
+Attributes that are specific to bundle products can be used when performing a [`products`](../../queries/products.md) query.
 
 ## BundleProduct object
 
@@ -54,7 +54,7 @@ Attribute | Type | Description
 `position` | Int | When a bundle item contains multiple options, the relative position of this option compared to the other options
 `price_type` | PriceTypeEnum | One of FIXED, PERCENT, or DYNAMIC
 `price` | Float | The price of the selected option
-`product` | [ProductInterface]({{page.baseurl}}/graphql/interfaces/product-interface.html) | Contains details about this product option
+`product` | [ProductInterface](../index.md) | Contains details about this product option
 `qty` | Float | Deprecated. Use `quantity` instead
 `quantity` | Float | Indicates the quantity of this specific bundle item
 `uid` | ID! | The unique ID for a `BundleItemOption` object
@@ -304,4 +304,4 @@ The following query returns information about bundle product `24-WG080`, which i
 
 ## Related topics
 
--  [addBundleProductsToCart mutation]({{page.baseurl}}/graphql/mutations/add-bundle-products.html)
+-  [addBundleProductsToCart mutation](../../../cart/mutations/add-bundle-products.md)

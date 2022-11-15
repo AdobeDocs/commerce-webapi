@@ -7,7 +7,7 @@ edition: ee
 
 The `deleteWishlist` mutation deletes the specified wish list. In Adobe Commerce, you cannot delete the customer's default (first) wish list. This mutation is not available in Magento Open Source.
 
-This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
+This mutation requires a valid [customer authentication token](../../customer/mutations/generate-token.md).
 
 ## Syntax
 

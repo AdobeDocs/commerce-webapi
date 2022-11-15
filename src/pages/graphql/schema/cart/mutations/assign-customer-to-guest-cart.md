@@ -12,11 +12,11 @@ The `assignCustomerToGuestCart` mutation merges a logged-in customer's shopping 
 
 The `masked_id` of the guest cart contains a new value. The `quote_id` remains the same.
 
-This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
+This mutation requires a valid [customer authentication token](../../customer/mutations/generate-token.md).
 
 <InlineAlert variant="info" slots="text" />
 
-Use the [mergeCarts]({{page.baseurl}}/graphql/mutations/merge-carts.html) mutation to transfer the contents of a guest cart into a customer's cart.
+Use the [mergeCarts](merge.md) mutation to transfer the contents of a guest cart into a customer's cart.
 
 ## Syntax
 
@@ -96,7 +96,7 @@ import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 
 <CartObject />
 
-[Cart query output]({{page.baseurl}}/graphql/queries/cart.html#cart-output) provides more information about the `Cart` object.
+[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 

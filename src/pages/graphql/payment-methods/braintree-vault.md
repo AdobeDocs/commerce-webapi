@@ -14,18 +14,18 @@ The following diagram shows the workflow for placing an order when Braintree Vau
 
 ![Braintree sequence diagram](../../_images/graphql/braintree-vault.svg)
 
-1. Use the [`customerPaymentTokens`]({{page.baseurl}}/graphql/queries/customer-payment-tokens.html) query to retrieve
+1. Use the [`customerPaymentTokens`](../schema/checkout/queries/customer-payment-tokens.md) query to retrieve
    the payment tokens the customer has stored in the vault.
 
 1. The application returns an array of payment tokens.
 
 1. The client renders the token information, and the customer selects a payment method.
 
-   When the customer selects a stored payment method, the PWA uses the [`setPaymentMethodOnCart`]({{page.baseurl}}/graphql/mutations/set-payment-method.html) mutation to set the payment method to [`braintree_cc_vault`](#braintree_cc_vault-object). The vaulted public hash is passed with other optional properties in the `braintree_cc_vault`.
+   When the customer selects a stored payment method, the PWA uses the [`setPaymentMethodOnCart`](../schema/cart/mutations/set-payment-method.md) mutation to set the payment method to [`braintree_cc_vault`](#braintree_cc_vault-object). The vaulted public hash is passed with other optional properties in the `braintree_cc_vault`.
 
 1. The application returns a `Cart` object.
 
-1. The client runs the [`placeOrder`]({{page.baseurl}}/graphql/mutations/place-order.html) mutation.
+1. The client runs the [`placeOrder`](../schema/cart/mutations/place-order.md) mutation.
 
 1. The application sends an authorization request to the gateway.
 
@@ -35,7 +35,7 @@ The following diagram shows the workflow for placing an order when Braintree Vau
 
 ## `setPaymentMethodOnCart` mutation
 
-When you set the payment method to Braintree in the [`setPaymentMethodOnCart`]({{page.baseurl}}/graphql/mutations/set-payment-method.html)
+When you set the payment method to Braintree in the [`setPaymentMethodOnCart`](../schema/cart/mutations/set-payment-method.md)
 mutation, the `payment_method` object must contain a [`braintree_cc_vault`](#braintree_cc_vault-object) object.
 
 ### braintree_cc_vault object

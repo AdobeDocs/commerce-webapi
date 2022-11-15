@@ -19,7 +19,7 @@ United States Postal Service | usps | Varies
 
 The negotiable quote must be in the UPDATED state to successfully set a shipping address.
 
-This query requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
+This query requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
 
 ## Syntax
 

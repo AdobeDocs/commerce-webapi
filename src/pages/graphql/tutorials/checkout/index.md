@@ -26,9 +26,9 @@ Complete the following prerequisites:
 
 -  Learn about GraphQL, how it works, and how to use it. See [Introduction to GraphQL](https://graphql.org/learn/) for details.
 
--  Know how to generate a customer token. See [Authorization tokens]({{page.baseurl}}/graphql/authorization-tokens.html) for details.
+-  Know how to generate a customer token. See [Authorization tokens](../../usage/authorization-tokens.md) for details.
 
--  In the Admin, create a [coupon]({{ site.user_guide_url }}/marketing/price-rules-cart-coupon-code-configure.html) that will be used in [Step 7. Apply a coupon]({{page.baseurl}}/graphql/tutorials/checkout/checkout-coupon.html).
+-  In the Admin, create a [coupon](https://docs.magento.com/user-guide/marketing/price-rules-cart-coupon-code-configure.html) that will be used in [Step 7. Apply a coupon](../../tutorials/checkout/apply-coupon.md).
 
 ### Other resources
 

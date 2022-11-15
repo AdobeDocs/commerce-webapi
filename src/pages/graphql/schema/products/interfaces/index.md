@@ -8,15 +8,15 @@ Any type that implements `ProductInterface` contains all the base attributes nec
 The `items` that are returned in a `ProductInterface` array can also contain attributes from resources external to the `CatalogGraphQl` module:
 
 -  Custom and extension attributes defined in any attribute set
--  The attribute is defined in the [PhysicalProductInterface](#PhysicalProductInterface) or [CustomizableOptionInterface]({{ page.baseurl }}/graphql/interfaces/customizable-option-interface.html)
+-  The attribute is defined in the [PhysicalProductInterface](#physicalproductinterface) or [CustomizableOptionInterface](customizable-option.md)
 -  Product types that define their own implementation of `ProductInterface` including:
-   -  [SimpleProduct]({{ page.baseurl }}/graphql/interfaces/simple-product.html)
-   -  [BundleProduct]({{ page.baseurl }}/graphql/interfaces/bundle-product.html)
-   -  [ConfigurableProduct]({{ page.baseurl }}/graphql/interfaces/configurable-product.html)
-   -  [DownloadableProduct]({{ page.baseurl }}/graphql/interfaces/downloadable-product.html)
-   -  [GiftCardProduct]({{ page.baseurl }}/graphql/interfaces/gift-card-product.html)
-   -  [GroupedProduct]({{ page.baseurl }}/graphql/interfaces/grouped-product.html)
-   -  [VirtualProduct]({{ page.baseurl }}/graphql/interfaces/virtual-product.html)
+   -  [SimpleProduct](types/simple.md)
+   -  [BundleProduct](types/bundle.md)
+   -  [ConfigurableProduct](types/configurable.md)
+   -  [DownloadableProduct](types/downloadable.md)
+   -  [GiftCardProduct](types/gift-card.md)
+   -  [GroupedProduct](types/grouped.md)
+   -  [VirtualProduct](types/virtual.md)
 
 ## ProductInterface attributes
 
@@ -26,7 +26,7 @@ Attribute | Data type | Description
 --- | --- | ---
 `attribute_set_id` | Int | Deprecated. This field should not be used on the storefront. The attribute set assigned to the product
 `canonical_url` | String  | The relative canonical URL. This value is returned only if the system setting **Use Canonical Link Meta Tag For Products** is enabled
-`categories` | [[CategoryInterface]]({{ page.baseurl }}/graphql/interfaces/category-interface.html) | The categories assigned to the product. See [CategoryInterface attributes]({{ page.baseurl }}/graphql/interfaces/category-interface.html) for more information
+`categories` | [[CategoryInterface]](category.md) | The categories assigned to the product. See [CategoryInterface attributes](category.md) for more information
 `country_of_manufacture` | String | The product's country of origin
 `created_at` | String | Deprecated. This field should not be used on the storefront. Timestamp indicating when the product was created
 `crosssell_products` | [ProductInterface] | An array of cross-sell products
@@ -173,7 +173,7 @@ Attribute |  Data Type | Description
 Attribute |  Data Type | Description
 --- | --- | ---
 `items` | [[ProductReview]](#ProductReview)! | An array of product reviews
-`page_info` | [SearchResultPageInfo!]({{page.baseurl}}/graphql/queries/products.html#SearchResultPageInfo) | Metadata for pagination rendering
+`page_info` | [SearchResultPageInfo!](../queries/products.md#searchresultpageinfo-attributes) | Metadata for pagination rendering
 
 #### ProductReview object {#ProductReview}
 

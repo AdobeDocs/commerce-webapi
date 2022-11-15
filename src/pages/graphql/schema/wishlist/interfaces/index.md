@@ -38,7 +38,7 @@ Attribute | Data type | Description
 --- | --- | ---
 `child_sku` | String! | Deprecated. Use `configured_variant` instead. The SKU of the simple product corresponding to a set of selected configurable options
 `configurable_options` | [SelectedConfigurableOption!] | An array of selected configurable options
-`configured_variant` | [ProductInterface]({{page.baseurl}}/graphql/interfaces/product-interface.html) | Returns details about the selected variant. The value is null if some options are not configured
+`configured_variant` | [ProductInterface](../../products/interfaces/index.md) | Returns details about the selected variant. The value is null if some options are not configured
 
 ### DownloadableWishlistItem attributes {#DownloadableWishlistItem}
 

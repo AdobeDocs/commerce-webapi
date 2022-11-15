@@ -79,7 +79,7 @@ Attribute | Data type | Description
 
 ## Related topics
 
-[cmsBlocks query]({{page.baseurl}}/graphql/queries/cms-blocks.html)
+[cmsBlocks query](../../store/queries/cms-blocks.md)
 
 ## Errors
 

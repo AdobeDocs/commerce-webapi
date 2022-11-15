@@ -6,11 +6,11 @@ title: GraphQL security configuration
 
 The Framework and `GraphQl` module `di.xml` files define several security-related configuration values that you should review to ensure they align with types of mutations and queries that you run.
 
-To override these default values, create a custom module and provide a new value in the appropriate [di.xml]({{page.baseurl}}/extension-dev-guide/build/di-xml-file.html) file.
+To override these default values, create a custom module and provide a new value in the appropriate [di.xml](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/) file.
 
 ## Input limiting
 
-In GraphQL, you can limit the maximum page size allowed. For information about how to enable and configure this feature, as well as additional arguments that are applicable to web APIs in general, see [API security]({{page.baseurl}}/get-started/api-security.html).
+In GraphQL, you can limit the maximum page size allowed. For information about how to enable and configure this feature, as well as additional arguments that are applicable to web APIs in general, see [API security](../../get-started/api-security.md).
 
 ## GraphQl module configuration
 
@@ -23,7 +23,7 @@ Attribute | Default value | Description
 
 ### Query complexity
 
-A complex GraphQL query, such as the [`cart`]({{page.baseurl}}/graphql/queries/cart.html) or [`products`]({{page.baseurl}}/graphql/queries/products.html) query, can potentially generate a heavy workload on the server. Complex queries can potentially be used to create distributed denial of service (DDoS) attacks by overloading the server with specious requests.
+A complex GraphQL query, such as the [`cart`](../schema/cart/queries/cart.md) or [`products`](../schema/products/queries/products.md) query, can potentially generate a heavy workload on the server. Complex queries can potentially be used to create distributed denial of service (DDoS) attacks by overloading the server with specious requests.
 
 Each instance of the following items adds 1 to the complexity score:
 
@@ -71,7 +71,7 @@ If the count does not exceed the threshold set by the `queryComplexity` attribut
 
 ### Query depth
 
-The `queryDepth` attribute specifies the maximum depth a query can return. This can be an issue for queries that return objects that show a hierarchy, such as [`CategoryTree`]({{page.baseurl}}/graphql/queries/categories.html), or queries that return detailed data on complex [products]({{page.baseurl}}/graphql/queries/products.html). The default value of 20 allows for deep hierarchies and products, but you might want to reduce this number if you know that legitimate queries will never reach that depth.
+The `queryDepth` attribute specifies the maximum depth a query can return. This can be an issue for queries that return objects that show a hierarchy, such as [`CategoryTree`](../schema/products/queries/categories.md), or queries that return detailed data on complex [products](../schema/products/queries/products.md). The default value of 20 allows for deep hierarchies and products, but you might want to reduce this number if you know that legitimate queries will never reach that depth.
 
 The following query has a maximum depth of 5.
 

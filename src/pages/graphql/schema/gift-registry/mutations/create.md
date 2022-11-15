@@ -8,7 +8,7 @@ contributor_name: EY
 
 The `createGiftRegistry` mutation creates a gift registry for the logged in customer.
 
-This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
+This mutation requires a valid [customer authentication token](../../customer/mutations/generate-token.md).
 
 The `id` input attribute is optional. If a value is not specified, the application creates one. If you specify a value, then you can create a gift registry and make multiple updates in a single call.
 

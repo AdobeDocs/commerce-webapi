@@ -9,7 +9,7 @@ contributor_link: https://www.atwix.com/
 
 The `moveCartItemsToGiftRegistry` mutation moves all items from the cart to a gift registry.
 
-This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
+This mutation requires a valid [customer authentication token](../../customer/mutations/generate-token.md).
 
 ## Syntax
 

@@ -6,7 +6,7 @@ title: customerOrders query
 
 <InlineAlert variant="warning" slots="text" />
 
-The `customerOrders` query has been deprecated. Specify the `orders` object in the [`customer`]({{page.baseurl}}/graphql/queries/customer.html) query instead.
+The `customerOrders` query has been deprecated. Specify the `orders` object in the [`customer`](../../customer/queries/customer.md) query instead.
 
 The Sales module performs a wide variety of functions, including order, invoice, and shipment management. However, most of these functions are performed on the backend, and the customer does not have access to this information. By returning a list of customer orders, the `customerOrders` query allows a customer to retrieve their order histories.
 
@@ -78,7 +78,7 @@ The `CustomerOrder` object defines details about each order the customer has pla
 Attribute | Data type | Description
 --- | --- | ---
 `created_at` | String | A timestamp indicating when the order was placed
-`gift_message` | [GiftMessage]({{page.baseurl}}/graphql/queries/customer-orders.html#GiftMessage) | The entered gift message for the order
+`gift_message` | [GiftMessage](orders.md#giftmessage-object) | The entered gift message for the order
 `grand_total` | Float | The total of the order
 `id` | Int | The ID assigned to the customer's order
 `increment_id` | String | Deprecated. Use `order_number` instead. An ID that indicates the sequence of the order in the customer's order history

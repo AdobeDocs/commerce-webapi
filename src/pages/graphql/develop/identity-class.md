@@ -50,7 +50,7 @@ class MyIdentity implements IdentityInterface
 }
 ```
 
-Use the `@cache` directive in your module's [`graphqls` file]({{page.baseurl}}/graphql/develop/create-graphqls-file.html) to specify the location to your `Identity` class. Your module's `graphqls` file must point to your `Identity` class, as shown below:
+Use the `@cache` directive in your module's [`graphqls` file](index.md) to specify the location to your `Identity` class. Your module's `graphqls` file must point to your `Identity` class, as shown below:
 
 ```text
       categoryList(

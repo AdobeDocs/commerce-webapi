@@ -9,15 +9,15 @@ The `setNegotiableQuotePaymentMethod` mutation defines which payment method to a
 
 Supported online payment methods include:
 
--  [Braintree]({{page.baseurl}}/graphql/payment-methods/braintree.html)
--  [Braintree Vault]({{page.baseurl}}/graphql/payment-methods/braintree-vault.html)
--  [PayPal Express Checkout]({{page.baseurl}}/graphql/payment-methods/paypal-express-checkout.html)
--  [PayPal Payflow Link]({{page.baseurl}}/graphql/payment-methods/payflow-link.html)
--  [PayPal Payflow Pro]({{page.baseurl}}/graphql/payment-methods/payflow-pro.html)
--  [PayPal Payflow Pro Vault]({{page.baseurl}}/graphql/payment-methods/payflow-pro-vault.html)
--  [PayPal Payments Advanced]({{page.baseurl}}/graphql/payment-methods/payments-advanced.html)
--  [PayPal Website Payments Pro Hosted Solution]({{page.baseurl}}/graphql/payment-methods/hosted-pro.html)
--  [Express Checkout for other PayPal solutions]({{page.baseurl}}/graphql/payment-methods/payflow-express.html)
+-  [Braintree](../../../../payment-methods/braintree.md)
+-  [Braintree Vault](../../../../payment-methods/braintree-vault.md)
+-  [PayPal Express Checkout](../../../../payment-methods/paypal-express-checkout.md)
+-  [PayPal Payflow Link](../../../../payment-methods/payflow-link.md)
+-  [PayPal Payflow Pro](../../../../payment-methods/payflow-pro.md)
+-  [PayPal Payflow Pro Vault](../../../../payment-methods/payflow-pro-vault.md)
+-  [PayPal Payments Advanced](../../../../payment-methods/payments-advanced.md)
+-  [PayPal Website Payments Pro Hosted Solution](../../../../payment-methods/hosted-pro.md)
+-  [Express Checkout for other PayPal solutions](../../../../payment-methods/payflow-express.md)
 
 The following offline payment methods are also supported:
 
@@ -29,7 +29,7 @@ Check / Money order | `checkmo`
 No Payment Information Required | `free`
 Purchase Order | `purchaseorder`
 
-This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
 
 ## Syntax
 

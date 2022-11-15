@@ -7,7 +7,7 @@ edition: b2b
 
 The `negotiableQuotes` query returns a list of negotiable quotes that can be viewed by the logged-in customer, including quotes created by the customer or by subordinates in the company hierarchy.
 
-This query requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
+This query requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
 
 ## Syntax
 
@@ -98,7 +98,7 @@ Attribute | Data Type | Description
 --- | --- | ---
 `items` | [[NegotiableQuote]!](#NegotiableQuote) | A list of negotiable quotes
 `page_info` | SearchResultPageInfo! | Contains pagination metadata
-`sort_fields` | [SortFields]({{page.baseurl}}/graphql/queries/products.html#SortFields) | Contains the default sort field and all available sort fields.
+`sort_fields` | [SortFields](../../../products/queries/products.md#sortfields-attributes) | Contains the default sort field and all available sort fields.
 `total_count` | Int! | The number of negotiable quotes returned
 
 ### NegotiableQuote attributes {#NegotiableQuote}

@@ -6,13 +6,13 @@ title: category query
 
 <InlineAlert variant="warning" slots="text" />
 
-The `category` query has been deprecated. Use the [categories]({{page.baseurl}}/graphql/queries/categories.html) query instead.
+The `category` query has been deprecated. Use the [categories](categories.md) query instead.
 
 The `category` query allows you to search for a single category definition or the entire category tree.
 
 <InlineAlert variant="info" slots="text" />
 
-You cannot return the entire category tree if the total number of nodes in the request exceeds the value specified in the `queryDepth` attribute defined in the GraphQL `di.xml` file. By default, this value is 20. [Query security]({{page.baseurl}}/graphql/security-configuration.html) further describes query depths.
+You cannot return the entire category tree if the total number of nodes in the request exceeds the value specified in the `queryDepth` attribute defined in the GraphQL `di.xml` file. By default, this value is 20. [Query security](../../../usage/security-configuration.md) further describes query depths.
 
 ## Syntax
 
@@ -211,7 +211,7 @@ Attribute | Data type | Description
 
 ## Output attributes {#Categories}
 
-The query returns a `CategoryTree` object, which implements [`CategoryInterface`]({{page.baseurl}}/graphql/interfaces/category-interface.html). The `CategoryTree` object can contain the following attribute, as we as all attributes defined in `CategoryInterface`:
+The query returns a `CategoryTree` object, which implements [`CategoryInterface`](category.md). The `CategoryTree` object can contain the following attribute, as we as all attributes defined in `CategoryInterface`:
 
 Attribute | Data type | Description
 --- | --- | ---

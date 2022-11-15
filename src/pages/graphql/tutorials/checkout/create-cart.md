@@ -8,9 +8,9 @@ contributor_link: https://www.atwix.com/
 
 The procedure for creating a cart varies for logged-in customers and guests.
 
-The `customerCart` query returns the active cart for the logged-in customer. If the cart does not exist, the query creates one. You must specify the customer's authorization token in the headers. Otherwise, the query fails. ["Get customer authorization token"]({{ page.baseurl }}/graphql/authorization-tokens.html) describes these tokens.
+The `customerCart` query returns the active cart for the logged-in customer. If the cart does not exist, the query creates one. You must specify the customer's authorization token in the headers. Otherwise, the query fails. ["Get customer authorization token"](../../usage/authorization-tokens.md) describes these tokens.
 
-For guests, use the [`createEmptyCart`]({{page.baseurl}}/graphql/mutations/create-empty-cart.html) mutation to create an empty shopping cart and generate a cart ID for a guest user. If the guest later logs in as a customer, use the [`mergeCarts`]({{page.baseurl}}/graphql/mutations/merge-carts.html) mutation to transfer the contents of the guest cart into the customer's cart.
+For guests, use the [`createEmptyCart`](../../schema/cart/mutations/create-empty-cart.md) mutation to create an empty shopping cart and generate a cart ID for a guest user. If the guest later logs in as a customer, use the [`mergeCarts`](../../schema/cart/mutations/merge.md) mutation to transfer the contents of the guest cart into the customer's cart.
 
 ## Create a customer cart
 

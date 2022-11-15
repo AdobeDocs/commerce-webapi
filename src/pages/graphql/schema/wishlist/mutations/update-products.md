@@ -10,7 +10,7 @@ The `updateProductsInWishlist` mutation changes the quantity, description and op
 
 Use the `removeProductsFromWishlist` mutation to remove an item from the wish list. Do not set the quantity of an item to 0.
 
-This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
+This mutation requires a valid [customer authentication token](../../customer/mutations/generate-token.md).
 
 ## Syntax
 

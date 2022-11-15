@@ -4,9 +4,9 @@ title: getPayflowLinkToken query
 
 # getPayflowLinkToken query
 
-The `getPayflowLinkToken` query retrieves PayPal payment credentials for a PayPal Payflow transaction. You must run this query after you [set the payment method]({{ page.baseurl}}/graphql/mutations/set-payment-method.html) and [place the order]({{ page.baseurl}}/graphql/mutations/place-order.html).
+The `getPayflowLinkToken` query retrieves PayPal payment credentials for a PayPal Payflow transaction. You must run this query after you [set the payment method](../../cart/mutations/set-payment-method.md) and [place the order](../../cart/mutations/place-order.md).
 
-See [Paypal Payflow Link payment method]({{page.baseurl}}/graphql/payment-methods/payflow-link.html) for detailed information about the workflow of PayPal Payflow Link transactions.
+See [Paypal Payflow Link payment method](../../../payment-methods/payflow-link.md) for detailed information about the workflow of PayPal Payflow Link transactions.
 
 ## Syntax
 

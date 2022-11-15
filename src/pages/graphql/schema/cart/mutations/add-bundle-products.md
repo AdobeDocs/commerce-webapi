@@ -8,7 +8,7 @@ contributor_link: https://www.atwix.com/
 
 <InlineAlert variant="warning" slots="text" />
 
-We recommend using the [addProductsToCart mutation]({{page.baseurl}}/graphql/mutations/add-products-to-cart.html) to add any type of product to the cart.
+We recommend using the [addProductsToCart mutation](add-products.md) to add any type of product to the cart.
 
 Use the `addBundleProductsToCart` mutation to add bundle products to a specific cart.
 
@@ -28,7 +28,7 @@ This example adds one bundle product with following children to the specified sh
 -  Sprite Yoga Strap 10 foot (x1)
 -  Sprite Foam Roller (x1)
 
-The `cart_id` used in this example was [generated]({{ page.baseurl }}/graphql/mutations/create-empty-cart.html) by creating an empty cart.
+The `cart_id` used in this example was [generated](create-empty-cart.md) by creating an empty cart.
 
 **Request:**
 
@@ -256,7 +256,7 @@ import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 
 <CartObject />
 
-[Cart query output]({{page.baseurl}}/graphql/queries/cart.html#cart-output) provides more information about the `Cart` object.
+[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 
@@ -268,4 +268,4 @@ Error | Description
 
 ## Related topics
 
--  [Bundle product data types]({{page.baseurl}}/graphql/interfaces/bundle-product.html)
+-  [Bundle product data types](../../products/interfaces/types/bundle.md)

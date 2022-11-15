@@ -108,4 +108,4 @@ Error | Description
 `Required parameter "cart_item_id" is missing.` | The value specified in the `cart_item_id` argument is equal to zero.
 `The current user cannot perform operations on cart "XXX"` | An unauthorized user (guest) tried to remove a product from the shopping cart of authorized user (customer), or a customer tried to remove a product from the shopping cart of another customer.
 
-[Cart query output]({{page.baseurl}}/graphql/queries/cart.html#cart-output) provides more information about the `Cart` object.
+[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.

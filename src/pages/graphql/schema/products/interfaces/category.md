@@ -4,7 +4,7 @@ title: CategoryInterface attributes
 
 # CategoryInterface attributes
 
-`CategoryInterface` defines attributes that can be returned in the [`categoryList` query]({{page.baseurl}}/graphql/queries/category-list.html), [`categories` query]({{page.baseurl}}/graphql/queries/categories.html), and the [`products` query]({{page.baseurl}}/graphql/queries/products.html).
+`CategoryInterface` defines attributes that can be returned in the [`categoryList` query](../queries/category-list.md), [`categories` query](../queries/categories.md), and the [`products` query](../queries/products.md).
 
 ## CategoryInterface attributes
 
@@ -52,13 +52,13 @@ Attribute | Data type | Description
 --- | --- | ---
 `currentPage` | Int |  Specifies which page of results to return. The default value is 1
 `pageSize` | Int | Specifies the maximum number of results to return at once. This attribute is optional. The default value is 20
-`sort` | `ProductSortInput` | Specifies which attribute to sort on, and whether to return the results in ascending or descending order. [Searches and pagination in GraphQL]({{ page.baseurl }}/graphql/queries/index.html) describes sort orders
+`sort` | `ProductSortInput` | Specifies which attribute to sort on, and whether to return the results in ascending or descending order. [Searches and pagination in GraphQL](../../../usage/index.md) describes sort orders
 
 The `CategoryProducts` object contains the following attributes:
 
 Attribute | Data type | Description
 --- | --- | ---
-`items` | [ProductInterface] | An array of products that are assigned to the category. See [ProductInterface]({{ page.baseurl }}/graphql/interfaces/product-interface.html) for more information
+`items` | [ProductInterface] | An array of products that are assigned to the category. See [ProductInterface](index.md) for more information
 `page_info` | `SearchResultPageInfo` | An object that includes the `page_info` and `currentPage` values specified in the query
 `total_count` | Int | The number of products in the category that are marked as visible. By default, in complex products, parent products are visible, but their child products are not
 

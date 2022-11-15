@@ -10,19 +10,19 @@ A GraphQL request is represented by the following arguments, which will be proce
 
 Field | Type | Description
 --- | --- | ---
-$field | [`Magento\Framework\GraphQl\Config\Element\Field`]({{ site.mage2bloburl }}/{{ page.guide_version }}/lib/internal/Magento/Framework/GraphQl/Config/Element/Field.php) | Fields are used to describe possible values for a type/interface
-$context | [`Magento\Framework\GraphQl\Query\Resolver\ContextInterface`]({{ site.mage2bloburl }}/{{ page.guide_version }}/lib/internal/Magento/Framework/GraphQl/Query/Resolver/ContextInterface.php) | Resolver context is used as a shared data extensible object in all resolvers that implement [`ResolverInterface`]({{ site.mage2bloburl }}/{{ page.guide_version }}/lib/internal/Magento/Framework/GraphQl/Query/ResolverInterface.php).
-$info | [`Magento\Framework\GraphQl\Schema\Type\ResolveInfo`]({{ site.mage2bloburl }}/{{ page.guide_version }}/lib/internal/Magento/Framework/GraphQl/Schema/Type/ResolveInfo.php) | Structure containing information useful for field resolution process.
+$field | [`Magento\Framework\GraphQl\Config\Element\Field`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/GraphQl/Config/Element/Field.php) | Fields are used to describe possible values for a type/interface
+$context | [`Magento\Framework\GraphQl\Query\Resolver\ContextInterface`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/GraphQl/Query/Resolver/ContextInterface.php) | Resolver context is used as a shared data extensible object in all resolvers that implement [`ResolverInterface`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/GraphQl/Query/ResolverInterface.php).
+$info | [`Magento\Framework\GraphQl\Schema\Type\ResolveInfo`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/GraphQl/Schema/Type/ResolveInfo.php) | Structure containing information useful for field resolution process.
 $value | array | Contains additional query parameters. `Null` in most cases.
 $args | array | Contains input arguments of query.
 
 A GraphQL resolver must implement one of the following interfaces:
 
--  [`\Magento\Framework\GraphQl\Query\Resolver\BatchResolverInterface`]({{ site.mage2bloburl }}/{{ page.guide_version }}/lib/internal/Magento/Framework/GraphQl/Query/Resolver/BatchResolverInterface.php)
+-  [`\Magento\Framework\GraphQl\Query\Resolver\BatchResolverInterface`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/GraphQl/Query/Resolver/BatchResolverInterface.php)
 
--  [`\Magento\Framework\GraphQl\Query\Resolver\BatchServiceContractResolverInterface`]({{ site.mage2bloburl }}/{{ page.guide_version }}/lib/internal/Magento/Framework/GraphQl/Query/Resolver/BatchServiceContractResolverInterface.php)
+-  [`\Magento\Framework\GraphQl\Query\Resolver\BatchServiceContractResolverInterface`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/GraphQl/Query/Resolver/BatchServiceContractResolverInterface.php)
 
--  [`\Magento\Framework\GraphQl\Query\ResolverInterface`]({{ site.mage2bloburl }}/{{ page.guide_version }}/lib/internal/Magento/Framework/GraphQl/Query/ResolverInterface.php)
+-  [`\Magento\Framework\GraphQl\Query\ResolverInterface`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/GraphQl/Query/ResolverInterface.php)
 
 The first two interfaces provide a way to resolve multiple branches/leaves at once (known as batching), while the last one resolves one request at a time. We recommend using batch resolvers for queries because they improve performance by fetching information required to resolve multiple GraphQL requests with a single operation.
 
@@ -82,9 +82,9 @@ class RelatedProducts implements BatchResolverInterface
 }
 ```
 
-Each GraphQL request object must be assigned a [`\Magento\Framework\GraphQl\Query\Resolver\Value`]({{ site.mage2bloburl }}/{{ page.guide_version }}/lib/internal/Magento/Framework/GraphQl/Query/Resolver/Value.php) result type or any type of data (mixed). This value takes in a callable function to its constructor that will be invoked at the latest possible time for the resolver to acquire its data. As a result, a list of items being resolved can be retrieved all at once by establishing a buffer that contains all relevant parent data to filter and fetch for the children list data.
+Each GraphQL request object must be assigned a [`\Magento\Framework\GraphQl\Query\Resolver\Value`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/GraphQl/Query/Resolver/Value.php) result type or any type of data (mixed). This value takes in a callable function to its constructor that will be invoked at the latest possible time for the resolver to acquire its data. As a result, a list of items being resolved can be retrieved all at once by establishing a buffer that contains all relevant parent data to filter and fetch for the children list data.
 
-[`\Magento\RelatedProductGraphQl\Model\Resolver\Batch\AbstractLinkedProducts`]({{ site.mage2bloburl }}/{{ page.guide_version }}/app/code/Magento/RelatedProductGraphQl/Model/Resolver/Batch/AbstractLikedProducts.php) contains an example of batch resolver implementation.
+[`\Magento\RelatedProductGraphQl\Model\Resolver\Batch\AbstractLinkedProducts`](https://github.com/magento/magento2/blob/2.4/app/code/Magento/RelatedProductGraphQl/Model/Resolver/Batch/AbstractLikedProducts.php) contains an example of batch resolver implementation.
 
 ### BatchServiceContractResolverInterface
 
@@ -140,7 +140,7 @@ The `getServiceContract()` method points to the service contract to be used.
 
 The `convertToServiceArgument()` method converts GraphQL requests to a criteria item to be passed in a list as the argument to the contract. Remember that batch service contract methods must accept a single argument: a list (array) of criteria objects.
 
-The `convertFromServiceResult()` method converts one of the result items into a GraphQL response (a [`\Magento\Framework\GraphQl\Query\Resolver\Value`]({{ site.mage2bloburl }}/{{ page.guide_version }}/lib/internal/Magento/Framework/GraphQl/Query/Resolver/Value.php) instance or an array). Remember that batch service contracts must return result items in the same order as were the criteria items passed as the method's list argument.
+The `convertFromServiceResult()` method converts one of the result items into a GraphQL response (a [`\Magento\Framework\GraphQl\Query\Resolver\Value`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/GraphQl/Query/Resolver/Value.php) instance or an array). Remember that batch service contracts must return result items in the same order as were the criteria items passed as the method's list argument.
 
 The batch service contract used in the example would look something like this:
 
@@ -190,15 +190,15 @@ class RelatedProductsFound
 }
 ```
 
-A real example can be found at [\Magento\CatalogGraphQl\Model\Resolver\Product\BatchProductLinks]({{ site.mage2bloburl }}/{{ page.guide_version }}/app/code/Magento/CatalogGraphQl/Model/Resolver/Product/BatchProductLinks.php)
+A real example can be found at [\Magento\CatalogGraphQl\Model\Resolver\Product\BatchProductLinks](https://github.com/magento/magento2/blob/2.4/app/code/Magento/CatalogGraphQl/Model/Resolver/Product/BatchProductLinks.php)
 
 ### ResolverInterface
 
-This interface resolves one branch or leaf at a time. It returns [`\Magento\Framework\GraphQl\Query\Resolver\Value`]({{ site.mage2bloburl }}/{{ page.guide_version }}/lib/internal/Magento/Framework/GraphQl/Query/Resolver/Value.php) or any type of data (mixed). This value takes in a callable function to its constructor that will be invoked at the latest possible time for the resolver to acquire its data. As a result, a list of items being resolved can be retrieved all at once by establishing a buffer that contains all relevant parent data to filter and fetch for the children list data.
+This interface resolves one branch or leaf at a time. It returns [`\Magento\Framework\GraphQl\Query\Resolver\Value`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/GraphQl/Query/Resolver/Value.php) or any type of data (mixed). This value takes in a callable function to its constructor that will be invoked at the latest possible time for the resolver to acquire its data. As a result, a list of items being resolved can be retrieved all at once by establishing a buffer that contains all relevant parent data to filter and fetch for the children list data.
 
-You can view an example inside the [`\Magento\BundleGraphQl\Model\Resolver\BundleItemLinks`]({{ site.mage2bloburl }}/{{ page.guide_version }}/app/code/Magento/BundleGraphQl/Model/Resolver/BundleItemLinks.php) resolver. This resolver takes each bundle option ID and its corresponding parent product ID and stores them in a collection's filter buffer (in this case, using the [`\Magento\BundleGraphQl\Model\Resolver\Links\Collection::addIdFilters()`]({{ site.mage2bloburl }}/{{ page.guide_version }}/app/code/Magento/BundleGraphQl/Model/Resolver/Links/Collection.php#L62-L70) function). Each resolver then returns a callable that invokes this collection. The collection caches the result of all link entities it fetched for all the option_id/parent_id combinations. This fetch only needs to occur once for the whole `BundleItemLink` list, and each resulting callable that is invoked for every link in the list returns an item from the collections cached result.
+You can view an example inside the [`\Magento\BundleGraphQl\Model\Resolver\BundleItemLinks`](https://github.com/magento/magento2/blob/2.4/app/code/Magento/BundleGraphQl/Model/Resolver/BundleItemLinks.php) resolver. This resolver takes each bundle option ID and its corresponding parent product ID and stores them in a collection's filter buffer (in this case, using the [`\Magento\BundleGraphQl\Model\Resolver\Links\Collection::addIdFilters()`](https://github.com/magento/magento2/blob/2.4/app/code/Magento/BundleGraphQl/Model/Resolver/Links/Collection.php#L62-L70) function). Each resolver then returns a callable that invokes this collection. The collection caches the result of all link entities it fetched for all the option_id/parent_id combinations. This fetch only needs to occur once for the whole `BundleItemLink` list, and each resulting callable that is invoked for every link in the list returns an item from the collections cached result.
 
-A `Value` object wraps a callable object, and you can use [`\Magento\Framework\GraphQl\Query\Resolver\ValueFactory`]({{ site.mage2bloburl }}/{{ page.guide_version }}/lib/internal/Magento/Framework/GraphQl/Query/Resolver/ValueFactory.php) to create a value.
+A `Value` object wraps a callable object, and you can use [`\Magento\Framework\GraphQl\Query\Resolver\ValueFactory`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/GraphQl/Query/Resolver/ValueFactory.php) to create a value.
 
 ## Mutation requirements
 

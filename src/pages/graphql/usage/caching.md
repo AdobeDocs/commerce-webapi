@@ -4,7 +4,7 @@ title: GraphQL caching
 
 # GraphQL caching
 
-Adobe Commerce and Magento Open Source can cache pages rendered from the results of certain GraphQL queries with [full-page caching]({{page.baseurl}}/extension-dev-guide/cache/page-caching.html). Full-page caching improves response time and reduces the load on the server. Without caching, each page might need to run blocks of code and retrieve large amounts of information from the database. Only queries submitted with an HTTP GET operation can be cached. POST queries cannot be cached.
+Adobe Commerce and Magento Open Source can cache pages rendered from the results of certain GraphQL queries with [full-page caching](https://developer.adobe.com/commerce/php/development/cache/page/). Full-page caching improves response time and reduces the load on the server. Without caching, each page might need to run blocks of code and retrieve large amounts of information from the database. Only queries submitted with an HTTP GET operation can be cached. POST queries cannot be cached.
 
 The GraphQL schema is cached in the Configuration cache, which can be refreshed from the Cache Management page (**System** > **Tools** > **Cache Management**).
 
@@ -41,7 +41,7 @@ The application explicitly disallows caching the following queries.
 *  `storeConfig`
 *  `wishlist` (deprecated)
 
-[Define the GraphQL schema for a module]({{page.baseurl}}/graphql/develop/create-graphqls-file.html) describes the syntax of a valid query.
+[Define the GraphQL schema for a module](../develop/index.md) describes the syntax of a valid query.
 
 ## Caching for logged-in customers {#customers}
 
@@ -64,7 +64,7 @@ SHA256(Store ID + Currency + Is-Logged-In + Customer group + Customer tax rate +
 
 The application caches the results of all applicable queries. If you specify the resultant hash as the input value for the `X-Magento-Cache-Id` header of a GraphQL request, then the cached results can be loaded. Although POST requests are not cached, the resultant hashed value provide more opportunities to obtain updated cache IDs.
 
-To define additional factors for computing `X-Magento-Cache-Id` hash values, add a section similar to the following to the [di.xml file]({{page.baseurl}}/extension-dev-guide/build/di-xml-file.html) of a custom module. The `argument name` must be set to `idFactorProviders`, with the additional attribute names assigned as `item names`.
+To define additional factors for computing `X-Magento-Cache-Id` hash values, add a section similar to the following to the [di.xml file](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/) of a custom module. The `argument name` must be set to `idFactorProviders`, with the additional attribute names assigned as `item names`.
 
 ```xml
 <type name="Magento\GraphQlCache\Model\CacheId\CacheIdCalculator">
@@ -85,18 +85,18 @@ Adding factors could generate too many unique cache keys, thereby reducing the n
 
 For on-premise installations, we recommend setting up Varnish as a reverse proxy to serve the full page cache in a production environment. The template `vcl` file that ships with each release configures support for GraphQL caching. We recommend that you review the template file each release to determine whether you need to update the `default.vcl` on your system. To view the contents of the latest template file, you can [download a template file from the Admin](https://docs.magento.com/user-guide/system/cache-full-page.html) or review the `app/code/Magento/PageCache/etc/varnish6.vcl` file in the code base.
 
-See [Configure and use Varnish]({{page.baseurl}}/config-guide/varnish/config-varnish.html) and [Configure Varnish and your web server]({{page.baseurl}}/config-guide/varnish/config-varnish-configure.html) for more information.
+See [Configure and use Varnish](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/varnish/config-varnish.html) and [Configure Varnish and your web server](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/config-varnish-server.html) for more information.
 
 ## Caching with Fastly
 
-To cache guest and customer GraphQL query results on {{ site.data.var.ece }}, the Cloud project must be running the Fastly CDN module for Adobe Commerce and Magento Open Source version 1.2.160 or later.
+To cache guest and customer GraphQL query results on Adobe Commerce on cloud infrastructure, the Cloud project must be running the Fastly CDN module for Adobe Commerce and Magento Open Source version 1.2.160 or later.
 
 To enable GraphQL caching on Fastly:
 
 1. Upgrade the Fastly CDN Module for Adobe Commerce and Magento Open Source 2.x to version 1.2.160 or later.
 1. Upload the updated VCL code to the Fastly servers.
 
-[Set up Fastly]({{ site.baseurl }}/cloud/cdn/configure-fastly.html) describes how to perform both of these tasks.
+[Set up Fastly](https://devdocs.magento.com/cloud/cdn/configure-fastly.html) describes how to perform both of these tasks.
 
 By default, the Fastly module for Adobe Commerce and Magento Open Source provides the following VCL configuration for caching guest queries:
 

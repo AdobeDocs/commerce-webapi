@@ -6,7 +6,7 @@ contributor_link: https://www.atwix.com/
 
 # requestPasswordResetEmail mutation
 
-The `requestPasswordResetEmail` mutation triggers the password reset email by the provided email address. Use it to initiate the process to reset the registered customer's password before calling the [resetPassword]({{page.baseurl}}/graphql/mutations/reset-password.html) mutation.
+The `requestPasswordResetEmail` mutation triggers the password reset email by the provided email address. Use it to initiate the process to reset the registered customer's password before calling the [resetPassword](reset-password.md) mutation.
 
 When the customer clicks the `Set a New Password` button, the application sends an email to the customer that contains a URL for resetting their password.
 
@@ -72,4 +72,4 @@ Error | Description
 
 ## Related topics
 
-[resetPassword mutation]({{page.baseurl}}/graphql/mutations/reset-password.html)
+[resetPassword mutation](reset-password.md)

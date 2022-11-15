@@ -56,7 +56,7 @@ Attribute |  Data Type | Description
 
 The `changeCustomerPassword` mutation returns the `customer` object.
 
-The following table lists the top-level attributes of the `customer` object. See the [`customer` query]({{page.baseurl}}/graphql/queries/customer.html) for complete details about this object.
+The following table lists the top-level attributes of the `customer` object. See the [`customer` query](../../customer/queries/customer.md) for complete details about this object.
 
 import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
 
@@ -74,6 +74,6 @@ Error | Description
 
 ## Related topics
 
-*  [customer query]({{page.baseurl}}/graphql/queries/customer.html)
-*  [createCustomer mutation]({{page.baseurl}}/graphql/mutations/create-customer.html)
-*  [updateCustomer mutation]({{page.baseurl}}/graphql/mutations/update-customer.html)
+*  [customer query](../queries/customer.md)
+*  [createCustomer mutation](create.md)
+*  [updateCustomer mutation](update.md)

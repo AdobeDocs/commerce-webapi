@@ -139,7 +139,7 @@ The `CompanyLegalAddressCreateInput` object can contain the following attributes
 Attribute |  Data Type | Description
 --- | --- | ---
 `city` | String! | The city where the company is registered to conduct business
-`country_id` | CountryCodeEnum! | The company's country ID. See the [`countries` query]({{page.baseurl}}/graphql/queries/directory-countries.html)
+`country_id` | CountryCodeEnum! | The company's country ID. See the [`countries` query](../../../store/queries/countries.md)
 `postcode` | String! | The postal code of the company
 `region` | CustomerAddressRegionInput! | An object containing the region name and/or region ID where the company is registered to conduct business
 `street` | [String!]! | An array of strings that define the street address where the company is registered to conduct business
@@ -155,4 +155,4 @@ import Company from '/src/pages/_includes/graphql/company.md'
 
 ## Related topics
 
-*  [updateCompany mutation]({{page.baseurl}}/graphql/mutations/update-company.html)
+*  [updateCompany mutation](update.md)

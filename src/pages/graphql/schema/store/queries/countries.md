@@ -6,7 +6,7 @@ title: countries query
 
 The `countries` query returns all countries in which the entity can do business.
 
-Use the [country]({{page.baseurl}}/graphql/queries/directory-country.html) query if you want to retrieve information about a specific country.
+Use the [country](country.md) query if you want to retrieve information about a specific country.
 
 ## Syntax
 
@@ -144,5 +144,5 @@ import CountryOutput from '/src/pages/_includes/graphql/country-output.md'
 
 ## Related topics
 
-*  [country query]({{page.baseurl}}/graphql/queries/directory-country.html)
-*  [currency query]({{page.baseurl}}/graphql/queries/directory-currency.html)
+*  [country query](country.md)
+*  [currency query](currency.md)

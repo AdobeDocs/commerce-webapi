@@ -6,7 +6,7 @@ title: productReviewRatingsMetadata query
 
 The `productReviewRatingsMetadata` query returns the active ratings attributes and the values each rating can have. In Luma, these values are one star through five stars.
 
-Use the [`createProductReview` mutation]({{page.baseurl}}/graphql/mutations/create-product-review.html) to add a product review.
+Use the [`createProductReview` mutation](../mutations/create-review.md) to add a product review.
 
 ## Syntax
 

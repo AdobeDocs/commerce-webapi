@@ -9,11 +9,11 @@ contributor_link: https://www.ztech.io/
 
 The `deleteRequisitionList` mutation deletes a requisition list of the logged in customer. The response can include any remaining requisition lists.
 
-This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
+This mutation requires a valid [customer authentication token](../../../custome r/mutations/generate-token.md).
 
 <InlineAlert variant="info" slots="text" />
 
-Use the [storeConfig query]({{page.baseurl}}/graphql/queries/store-config.html) with the `is_requisition_list_active` attribute to determine whether requisition lists are enabled.
+Use the [storeConfig query](../../../../schema/store/queries/store-config.md) with the `is_requisition_list_active` attribute to determine whether requisition lists are enabled.
 
 ## Syntax
 
@@ -106,5 +106,5 @@ import RequisitionList from '/src/pages/_includes/graphql/requisition-list.md'
 
 ## Related topics
 
-*  [createRequisitionList mutation]({{page.baseurl}}/graphql/mutations/create-requisition-list.html)
-*  [updateRequisitionList mutation]({{page.baseurl}}/graphql/mutations/update-requisition-list.html)
+*  [createRequisitionList mutation](create.md)
+*  [updateRequisitionList mutation](update.md)

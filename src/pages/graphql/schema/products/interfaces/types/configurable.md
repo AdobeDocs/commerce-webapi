@@ -6,12 +6,12 @@ title: Configurable product data types
 
 The `ConfigurableProduct` data type implements the following interfaces:
 
--  [ProductInterface]({{page.baseurl}}/graphql/interfaces/product-interface.html)
--  [PhysicalProductInterface]({{page.baseurl}}/graphql/interfaces/product-interface.html#PhysicalProductInterface)
--  [CustomizableProductInterface]({{page.baseurl}}/graphql/interfaces/customizable-option-interface.html)
--  [RoutableInterface]({{page.baseurl}}/graphql/interfaces/routable-interface.html)
+-  [ProductInterface](../index.md)
+-  [PhysicalProductInterface](../index.md#physicalproductinterface)
+-  [CustomizableProductInterface](../customizable-option.md)
+-  [RoutableInterface](../routable.md)
 
-Attributes that are specific to configurable products can be used when performing a [`products`]({{page.baseurl}}/graphql/queries/products.html) query.
+Attributes that are specific to configurable products can be used when performing a [`products`](../../queries/products.md) query.
 
 ## ConfigurableProduct object
 
@@ -1279,4 +1279,4 @@ The following query returns the color and text swatches assigned to configurable
 
 ## Related topics
 
--  [addConfigurableProductsToCart mutation]({{page.baseurl}}/graphql/mutations/add-configurable-products.html)
+-  [addConfigurableProductsToCart mutation](../../../cart/mutations/add-configurable-products.md)

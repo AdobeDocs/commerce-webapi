@@ -4,9 +4,9 @@ title: updateCustomerV2 mutation
 
 # updateCustomerV2 mutation
 
-The `updateCustomerV2` mutation updates the personal information in an existing customer account. Use the [`updateCustomerEmail` mutation]({{page.baseurl}}/graphql/mutations/update-customer-email.html) to update the customer's email address.
+The `updateCustomerV2` mutation updates the personal information in an existing customer account. Use the [`updateCustomerEmail` mutation](update-email.md) to update the customer's email address.
 
-The `updateCustomerV2` mutation supersedes the `updateCustomer` mutation as the means to update a customer account. The input objects differ between these two mutations. The `updateCustomer` mutation required the `CustomerInput` object, as did the `createCustomer` mutation. Updating a customer does not require any specific attribute, while several attributes are required when you create a customer. You could not determine this by looking at the schema for those mutations. The `updateCustomerV2` mutation requires the `CustomerUpdateInput` object, which it does not share with the [`createCustomerV2` mutation]({{page.baseurl}}/graphql/mutations/create-customer-v2.html).
+The `updateCustomerV2` mutation supersedes the `updateCustomer` mutation as the means to update a customer account. The input objects differ between these two mutations. The `updateCustomer` mutation required the `CustomerInput` object, as did the `createCustomer` mutation. Updating a customer does not require any specific attribute, while several attributes are required when you create a customer. You could not determine this by looking at the schema for those mutations. The `updateCustomerV2` mutation requires the `CustomerUpdateInput` object, which it does not share with the [`createCustomerV2` mutation](create-v2.md).
 
 To return or modify information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session).
 
@@ -74,7 +74,7 @@ Attribute |  Data Type | Description
 
 The `CustomerOutput` object contains the `Customer` object.
 
-The following table lists the top-level attributes of the `customer` object. See the [`customer` query]({{page.baseurl}}/graphql/queries/customer.html) for complete details about this object.
+The following table lists the top-level attributes of the `customer` object. See the [`customer` query](../../customer/queries/customer.md) for complete details about this object.
 
 import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
 
@@ -82,9 +82,9 @@ import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
 
 ## Related topics
 
-*  [customer query]({{page.baseurl}}/graphql/queries/customer.html)
-*  [createCustomerV2 mutation]({{page.baseurl}}/graphql/mutations/create-customer-v2.html)
-*  [createCustomerAddress mutation]({{page.baseurl}}/graphql/mutations/create-customer-address.html)
-*  [updateCustomerAddress mutation]({{page.baseurl}}/graphql/mutations/update-customer-address.html)
-*  [updateCustomerEmail mutation]({{page.baseurl}}/graphql/mutations/update-customer-email.html)
-*  [deleteCustomerAddress mutation]({{page.baseurl}}/graphql/mutations/delete-customer-address.html)
+*  [customer query](../../customer/queries/customer.md)
+*  [createCustomerV2 mutation](create-v2.md)
+*  [createCustomerAddress mutation](create-address.md)
+*  [updateCustomerAddress mutation](update-address.md)
+*  [updateCustomerEmail mutation](update-email.md)
+*  [deleteCustomerAddress mutation](delete-address.md)

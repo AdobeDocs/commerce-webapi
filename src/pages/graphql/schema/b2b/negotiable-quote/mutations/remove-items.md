@@ -9,9 +9,9 @@ The `removeNegotiableQuoteItems` mutation removes the specified products from a 
 
 <InlineAlert variant="info" slots="text" />
 
-Removing the last product from a negotiable quote causes the quote to be in a terminal state. You cannot add products to the quote, nor can you modify the quantity of any items. You can only [close]({{page.baseurl}}/graphql/mutations/close-negotiable-quotes.html) or [delete]({{page.baseurl}}/graphql/mutations/delete-negotiable-quotes.html) the quote.
+Removing the last product from a negotiable quote causes the quote to be in a terminal state. You cannot add products to the quote, nor can you modify the quantity of any items. You can only [close](close.md) or [delete](delete.md) the quote.
 
-This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
 
 ## Syntax
 

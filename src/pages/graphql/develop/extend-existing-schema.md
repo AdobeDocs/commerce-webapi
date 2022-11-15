@@ -12,7 +12,7 @@ You can extend the default GraphQL schema to add attributes and data types, modi
 
 The first step to retrieve a custom field in an existing query is to extend the appropriate schema object.
 
-In the following example, we will change the description of an existing field (`attribute_set_id`) and add a new field (`attribute_set_name`) to the GraphQL schema for the `products` query. Common use cases require adding fields to the database. [Declarative Schema]({{ page.baseurl }}/extension-dev-guide/declarative-schema/) describes how to add a custom field to the database.
+In the following example, we will change the description of an existing field (`attribute_set_id`) and add a new field (`attribute_set_name`) to the GraphQL schema for the `products` query. Common use cases require adding fields to the database. [Declarative Schema](https://developer.adobe.com/commerce/php/development/components/declarative-schema/) describes how to add a custom field to the database.
 
 The simplified structure of the query schema to get products is:
 
@@ -131,6 +131,6 @@ type StoreConfig {
 
 ## Related topics
 
--  [Define the GraphQL schema for a module]({{ page.baseurl }}/graphql/develop/create-graphqls-file.html)
--  [Resolvers]({{ page.baseurl }}/graphql/develop/resolvers.html)
--  [Declarative schema]({{ page.baseurl }}/extension-dev-guide/declarative-schema/)
+-  [Define the GraphQL schema for a module](index.md)
+-  [Resolvers](resolvers.md)
+-  [Declarative schema](https://developer.adobe.com/commerce/php/development/components/declarative-schema/)

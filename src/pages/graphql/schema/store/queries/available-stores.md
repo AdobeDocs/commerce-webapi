@@ -8,7 +8,7 @@ The `availableStores` query returns configuration information about multiple sto
 
 If the `useCurrentGroup` input argument is set to `true`, then the `availableStores` query returns configuration information about store views that have the same parent _store_. If the input argument is not specified or is set to `false`, the query returns values for all store views with the same parent _website_.
 
-Specify the [Store header]({{ page.baseurl }}/graphql/send-request.html) to determine the scope of the call. Without this header, the query returns values for the default store view and other store views with the same parent _store_.
+Specify the [Store header](../../../usage/headers.md) to determine the scope of the call. Without this header, the query returns values for the default store view and other store views with the same parent _store_.
 
 ## Syntax
 

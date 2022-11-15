@@ -85,5 +85,5 @@ Attribute | Data type | Description
 
 ## Related topics
 
-*  [countries query]({{page.baseurl}}/graphql/queries/directory-countries.html)
-*  [country query]({{page.baseurl}}/graphql/queries/directory-country.html)
+*  [countries query](../../store/queries/countries.md)
+*  [country query](../../store/queries/country.md)

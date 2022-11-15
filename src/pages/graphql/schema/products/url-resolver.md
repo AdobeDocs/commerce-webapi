@@ -6,7 +6,7 @@ title: urlResolver query
 
 <InlineAlert variant="warning" slots="text" />
 
-The `urlResolver` query has been deprecated. Use the [route]({{page.baseurl}}/graphql/queries/route.html) query instead.
+The `urlResolver` query has been deprecated. Use the [route](queries/route.md) query instead.
 
 A merchant can reconfigure (rewrite) the URL to any product, category, or CMS page. When the rewrite goes into effect, any links that point to the previous URL are redirected to the new address.
 
@@ -73,4 +73,4 @@ Attribute |  Data Type | Description
 
 ## Related topics
 
-[Products query]({{page.baseurl}}/graphql/queries/products.html)
+[Products query](queries/products.md)

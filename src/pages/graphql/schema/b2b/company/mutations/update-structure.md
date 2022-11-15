@@ -109,7 +109,7 @@ Attribute |  Data Type | Description
 `parent_tree_id` | ID! | The ID of a company that will be the new parent
 `tree_id` | ID! | The ID of the company team that is being moved to another parent
 
-You can get the `parent_tree_id` and `tree_id` with the [`company`]({{page.baseurl}}/graphql/queries/company.html) query.
+You can get the `parent_tree_id` and `tree_id` with the [`company`](../queries/company.md) query.
 
 ## Output attributes
 

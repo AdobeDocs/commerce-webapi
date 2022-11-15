@@ -50,7 +50,7 @@ Attribute |  Data Type | Description
 
 ## Related topics
 
-[customer query]({{page.baseurl}}/graphql/queries/customer.html)
+[customer query](../../customer/queries/customer.md)
 
 ## Errors
 

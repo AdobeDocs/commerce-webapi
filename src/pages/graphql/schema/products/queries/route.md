@@ -112,6 +112,7 @@ Attribute | Type | Description
 import RoutableInterface from '/src/pages/_includes/graphql/routable-interface.md'
 
 <RoutableInterface />
+
 ## Related topics
 
-[RoutableInterface]({{page.baseurl}}/graphql/interfaces/routable-interface.html)
+[RoutableInterface](../interfaces/routable.md)

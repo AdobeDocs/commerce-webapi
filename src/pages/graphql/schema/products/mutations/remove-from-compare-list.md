@@ -132,8 +132,8 @@ import CompareListOutput from '/src/pages/_includes/graphql/compare-list-output.
 
 ## Related topics
 
-*  [compareList query]({{page.baseurl}}/graphql/queries/compare-list.html)
-*  [addProductsToCompareList mutation]({{page.baseurl}}/graphql/mutations/add-products-to-compare-list.html)
-*  [assignCompareListToCustomer mutation]({{page.baseurl}}/graphql/mutations/assign-compare-list-to-customer.html)
-*  [createCompareList mutation]({{page.baseurl}}/graphql/mutations/create-compare-list.html)
-*  [deleteCompareList mutation]({{page.baseurl}}/graphql/mutations/delete-compare-list.html)
+*  [compareList query](../queries/compare-list.md)
+*  [addProductsToCompareList mutation](add-products-to-compare-list.md)
+*  [assignCompareListToCustomer mutation](assign-compare-list.md)
+*  [createCompareList mutation](create-compare-list.md)
+*  [deleteCompareList mutation](delete-compare-list.md)

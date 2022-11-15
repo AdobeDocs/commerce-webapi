@@ -4,7 +4,7 @@ title: addReturnTracking mutation
 
 # addReturnTracking mutation
 
-The `addReturnTracking` mutation adds customer-entered shipping tracking information to the specified return request. Use the `available_shipping_carriers` object in the [`customer` query]({{page.baseurl}}/graphql/queries/customer.html) to retrieve valid `carrier_uid` values.
+The `addReturnTracking` mutation adds customer-entered shipping tracking information to the specified return request. Use the `available_shipping_carriers` object in the [`customer` query](../../customer/queries/customer.md) to retrieve valid `carrier_uid` values.
 
 ## Syntax
 
@@ -85,6 +85,6 @@ import Return from '/src/pages/_includes/graphql/return.md'
 
 ## Related topics
 
-*  [`requestReturn` mutation]({{page.baseurl}}/graphql/mutations/request-return.html)
-*  [`addReturnComment` mutation]({{page.baseurl}}/graphql/mutations/add-return-comment.html)
-*  [`removeReturnTracking` mutation]({{page.baseurl}}/graphql/mutations/remove-return-tracking.html)
+*  [`requestReturn` mutation](request-return.md)
+*  [`addReturnComment` mutation](add-return-comment.md)
+*  [`removeReturnTracking` mutation](remove-return-tracking.md)

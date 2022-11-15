@@ -16,15 +16,15 @@ Purchase Order | `purchaseorder`
 
 Supported online payment methods include:
 
--  [Braintree]({{page.baseurl}}/graphql/payment-methods/braintree.html)
--  [Braintree Vault]({{page.baseurl}}/graphql/payment-methods/braintree-vault.html)
--  [PayPal Express Checkout]({{page.baseurl}}/graphql/payment-methods/paypal-express-checkout.html)
--  [PayPal Payflow Link]({{page.baseurl}}/graphql/payment-methods/payflow-link.html)
--  [PayPal Payflow Pro]({{page.baseurl}}/graphql/payment-methods/payflow-pro.html)
--  [PayPal Payflow Pro Vault]({{page.baseurl}}/graphql/payment-methods/payflow-pro-vault.html)
--  [PayPal Payments Advanced]({{page.baseurl}}/graphql/payment-methods/payments-advanced.html)
--  [PayPal Website Payments Pro Hosted Solution]({{page.baseurl}}/graphql/payment-methods/hosted-pro.html)
--  [Express Checkout for other PayPal solutions]({{page.baseurl}}/graphql/payment-methods/payflow-express.html)
+-  [Braintree](../../../payment-methods/braintree.md)
+-  [Braintree Vault](../../../payment-methods/braintree-vault.md)
+-  [PayPal Express Checkout](../../../payment-methods/paypal-express-checkout.md)
+-  [PayPal Payflow Link](../../../payment-methods/payflow-link.md)
+-  [PayPal Payflow Pro](../../../payment-methods/payflow-pro.md)
+-  [PayPal Payflow Pro Vault](../../../payment-methods/payflow-pro-vault.md)
+-  [PayPal Payments Advanced](../../../payment-methods/payments-advanced.md)
+-  [PayPal Website Payments Pro Hosted Solution](../../../payment-methods/hosted-pro.md)
+-  [Express Checkout for other PayPal solutions](../../../payment-methods/payflow-express.md)
 
 ## Syntax
 
@@ -111,7 +111,7 @@ import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 
 <CartObject />
 
-[Cart query output]({{page.baseurl}}/graphql/queries/cart.html#cart-output) provides more information about the `Cart` object.
+[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 
@@ -122,4 +122,4 @@ Error | Description
 `Required parameter "code" for "payment_method" is missing.` | The value specified in the `code` argument is empty.
 `The current user cannot perform operations on cart "XXX"` | An unauthorized user (guest) tried to set a payment method for an order on behalf of an authorized user (customer), or a customer tried to set a payment method for an order on behalf of another customer.
 `The requested Payment Method is not available.` | Specified in the `payment_method` argument payment method is disabled or does not exist.
-`The shipping address is missing. Set the address and try again.` | You ran `setPaymentMethodOnCart` mutation before [setShippingAddressesOnCart]({{ page.baseurl }}/graphql/mutations/set-shipping-method.html). Set a shipping address first. [GraphQL checkout tutorial]({{ page.baseurl }}/graphql/tutorials/checkout/index.html) shows the order placement sequence.
+`The shipping address is missing. Set the address and try again.` | You ran `setPaymentMethodOnCart` mutation before [setShippingAddressesOnCart](set-shipping-method.md). Set a shipping address first. [GraphQL checkout tutorial](../../../tutorials/checkout/index.md) shows the order placement sequence.

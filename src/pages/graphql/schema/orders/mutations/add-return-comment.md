@@ -101,6 +101,6 @@ import Return from '/src/pages/_includes/graphql/return.md'
 
 ## Related topics
 
-*  [`requestReturn` mutation]({{page.baseurl}}/graphql/mutations/request-return.html)
-*  [`addReturnTracking` mutation]({{page.baseurl}}/graphql/mutations/add-return-tracking.html)
-*  [`removeReturnTracking` mutation]({{page.baseurl}}/graphql/mutations/remove-return-tracking.html)
+*  [`requestReturn` mutation](request-return.md)
+*  [`addReturnTracking` mutation](add-return-tracking.md)
+*  [`removeReturnTracking` mutation](remove-return-tracking.md)

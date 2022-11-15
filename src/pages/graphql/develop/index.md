@@ -4,7 +4,7 @@ title: Define the GraphQL schema for a module
 
 # Define the GraphQL schema for a module
 
-Each module that adds to or extends from a GraphQL schema can do so by placing a `schema.graphqls` file in its `etc` directory. Adobe Commerce and Magento Open Source Core adds [`GraphQl`]({{ site.mage2bloburl }}/{{ page.guide_version }}/app/code/Magento/GraphQl) modules based on the purpose of the schema being extended/added and the core modules they depend on. For example, the `CustomerGraphQl` module adds a query and multiple mutations to the `graphql` endpoint to view and modify customer data. The `CustomerGraphQl` module relies on the `Customer` core module.
+Each module that adds to or extends from a GraphQL schema can do so by placing a `schema.graphqls` file in its `etc` directory. Adobe Commerce and Magento Open Source Core adds [`GraphQl`](https://github.com/magento/magento2/blob/2.4/app/code/Magento/GraphQl) modules based on the purpose of the schema being extended/added and the core modules they depend on. For example, the `CustomerGraphQl` module adds a query and multiple mutations to the `graphql` endpoint to view and modify customer data. The `CustomerGraphQl` module relies on the `Customer` core module.
 
 A GraphQL module's `schema.graphqls` file defines how the attributes defined in the module can be used in GraphQL queries and mutations. If your module's attributes are completely self-contained, then the `schema.graphqls` file defines the queries, mutations, the interfaces used, the data types of all the attributes, and any enumerations that restrict the possible attribute contents. If your module extends another module, then you must define those attributes and ensure that the other module can load your attributes. For example, the `CatalogGraphQl` module defines the `PriceAdjustmentCodesEnum`, but the `TaxGraphQl` and `WeeeGraphQl` modules define the enumeration values.
 
@@ -22,7 +22,7 @@ The base `schema.graphqls` file, located in the `app/code/Magento/GraphQl/etc/` 
 
 A query definition can be one line, or it can be complex. If your module's query implements `searchCriteria`, then you must define arguments that define filters and pagination information, all of which adds complexity. However, if you expect a single result from your query, then its definition can be simple.
 
-The following example shows the `products` query. The `type` is defined as a `Query`. The `products` definitions define the keywords that are used to construct a query, as shown in [Using queries]({{ page.baseurl }}/graphql/queries/index.html). The parameter definitions will be discussed in [Specify output attributes](#specify-output-attributes).
+The following example shows the `products` query. The `type` is defined as a `Query`. The `products` definitions define the keywords that are used to construct a query, as shown in [Using queries](../usage/index.md#queries). The parameter definitions will be discussed in [Specify output attributes](#specify-output-attributes).
 
 ```text
 type Query {
@@ -124,15 +124,15 @@ The following example shows the `products` query. The query returns a `Products`
 
 Attribute | Data type | Description
 --- | --- | ---
-`aggregations` | [[Aggregation]]({{ page.baseurl }}/graphql/queries/products.html#Aggregation) | Layered navigation aggregations
-`items` | [[ProductInterface]]({{ page.baseurl }}/graphql/queries/products.html#ProductInterface) | An array of products that match the specified search criteria
-`page_info` | [SearchResultPageInfo]({{ page.baseurl }}/graphql/queries/products.html#SearchResultPageInfo) | An object that includes the `page_info` and `currentPage` values specified in the query
-`sort_fields` |  [SortFields]({{ page.baseurl }}/graphql/queries/products.html#SortFields) | An object that includes the default sort field and all available sort fields
+`aggregations` | [[Aggregation]](../schema/products/queries/products.md#aggregation-attributes) | Layered navigation aggregations
+`items` | [[ProductInterface]](../schema/products/queries/products.md#productinterface-attributes) | An array of products that match the specified search criteria
+`page_info` | [SearchResultPageInfo](../schema/products/queries/products.md#searchresultpageinfo-attributes) | An object that includes the `page_info` and `currentPage` values specified in the query
+`sort_fields` |  [SortFields](../schema/products/queries/products.md#sortfields-attributes) | An object that includes the default sort field and all available sort fields
 `total_count` | Int | The number of products in the category that are marked as visible. By default, in complex products, parent products are visible, but their child products are not
 
 ### Define the output interface
 
-In many cases, the response contains data that was either not available as input, or was transformed in some manner from the input. For example, when you specify a price in an input filter, the application evaluates it as a Float value. However, `Price` output objects contain a Float value, a currency value, and possibly minimum/maximum values and tax adjustments. You can define a `typeResolver` to point to the Resolver object, which interprets the GraphQL query. If your module contains only attributes that extend another module, then this parameter is optional. Otherwise, it is required. See [Resolvers]({{ page.baseurl }}/graphql/develop/resolvers.html) for more information.
+In many cases, the response contains data that was either not available as input, or was transformed in some manner from the input. For example, when you specify a price in an input filter, the application evaluates it as a Float value. However, `Price` output objects contain a Float value, a currency value, and possibly minimum/maximum values and tax adjustments. You can define a `typeResolver` to point to the Resolver object, which interprets the GraphQL query. If your module contains only attributes that extend another module, then this parameter is optional. Otherwise, it is required. See [Resolvers](resolvers.md) for more information.
 
 Output types that represent entities that can be manipulated (created, updated, or removed) and/or can be cached on the client MUST have `id` field. The type of the field SHOULD be `ID`.
 
@@ -249,7 +249,7 @@ Define cachable queries in the following manner:
 @cache(cacheIdentity: "Magento\\CmsGraphQl\\Model\\Resolver\\Block\\Identity")
 ```
 
-The `cacheIdentity` value points to the [class]({{page.baseurl}}/graphql/develop/identity-class.html) responsible for retrieving cache tags.
+The `cacheIdentity` value points to the [class](identity-class.md) responsible for retrieving cache tags.
 
 A query without a `cacheIdentity` will not be cached.
 
@@ -261,4 +261,4 @@ This `cacheable` argument is intended to disable caching for queries that are de
 Specifying `@cache(cacheable: false)` or `@cache(cacheable: true)` on a query without a `cacheIdentity` class has no effect: the query will not be cached.
 If a query should **not** be cached, do not specify the `@cache` directive. Specifying `@cache(cacheable: false)`  is superfluous when no `cacheIdentity` is present.
 
-See [Create a cache type]({{page.baseurl}}/extension-dev-guide/cache/partial-caching/create-cache-type.html) for information about enabling caching for custom modules.
+See [Create a cache type](https://developer.adobe.com/commerce/php/development/cache/partial/cache-type/) for information about enabling caching for custom modules.

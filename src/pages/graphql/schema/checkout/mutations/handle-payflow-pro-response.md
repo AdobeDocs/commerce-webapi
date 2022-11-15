@@ -19,7 +19,7 @@ The `handlePayflowProResponse` mutation sends the silent post data that the clie
 'AVSADDR=Y&SECURETOKENID=MYSECURETOKENID&SHIPTOSTATE=AL&TRANSTIME=2019-06-24+07%3A53%3A10'
 ```
 
-See [Paypal Payflow Pro payment method]({{page.baseurl}}/graphql/payment-methods/payflow-pro.html) for detailed information about the workflow of PayPal Payflow Pro transactions.
+See [Paypal Payflow Pro payment method](../../../payment-methods/payflow-pro.md) for detailed information about the workflow of PayPal Payflow Pro transactions.
 
 ## Syntax
 
@@ -83,4 +83,4 @@ import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 
 <CartObject />
 
-[Cart query output]({{page.baseurl}}/graphql/queries/cart.html#cart-output) provides more information about the `Cart` object.
+[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.

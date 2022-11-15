@@ -7,9 +7,9 @@ edition: b2b
 
 The `setNegotiableQuoteBillingAddress` mutation assigns the billing address for the specified negotiable quote. You can assign an address from the company user's address book, or define a new one. The negotiable quote must be in the UPDATED state to successfully set the billing address.
 
-To return a list of valid billing addresses, construct a [`company` query]({{page.baseurl}}/graphql/queries/company.html) that includes the `user` input attribute.
+To return a list of valid billing addresses, construct a [`company` query](../../company/queries/company.md) that includes the `user` input attribute.
 
-This query requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
+This query requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
 
 ## Syntax
 

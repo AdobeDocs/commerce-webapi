@@ -6,7 +6,7 @@ contributor_link: https://www.atwix.com/
 
 # resetPassword mutation
 
-The `resetPassword` mutation resets customer password using a reset password token and the customer's email address. Use it to set a new password for the registered customer after calling the [requestPasswordResetEmail]({{page.baseurl}}/graphql/mutations/request-password-reset-email.html) mutation.
+The `resetPassword` mutation resets customer password using a reset password token and the customer's email address. Use it to set a new password for the registered customer after calling the [requestPasswordResetEmail](request-password-reset-email.md) mutation.
 
 ## Syntax
 
@@ -45,7 +45,7 @@ The `resetPassword` mutation must contain the following arguments:
 Argument | Type | Description
 --- | --- | ---
 `email` | String! | Specifies the customer account that needs a password reset
-`resetPasswordToken` | String! | A runtime token. You can find it in the reset email URL (see [requestPasswordResetEmail]({{page.baseurl}}/graphql/mutations/request-password-reset-email.html) mutation) or in the `customer_entity`.`rp_token` database table.
+`resetPasswordToken` | String! | A runtime token. You can find it in the reset email URL (see [requestPasswordResetEmail](request-password-reset-email.md) mutation) or in the `customer_entity`.`rp_token` database table.
 `newPassword` | String! | The new password
 
 <InlineAlert variant="info" slots="text" />
@@ -69,4 +69,4 @@ Error | Description
 
 ## Related topics
 
--  [requestPasswordResetEmail mutation]({{page.baseurl}}/graphql/mutations/request-password-reset-email.html)
+-  [requestPasswordResetEmail mutation](request-password-reset-email.md)

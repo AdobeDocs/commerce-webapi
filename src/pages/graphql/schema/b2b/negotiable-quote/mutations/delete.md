@@ -16,7 +16,7 @@ You can run the `deleteNegotiableQuotes` mutation when negotiable quotes are hav
 *  DECLINED
 *  EXPIRED
 
-This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
 
 ## Syntax
 
@@ -111,7 +111,7 @@ import NegotiableQuotesInput from '/src/pages/_includes/graphql/negotiable-quote
 
 ### DeleteNegotiableQuoteOperationResult attributes {#DeleteNegotiableQuoteOperationResult}
 
-The [`DeleteNegotiableQuoteOperationResult` union]({{page.baseurl}}/graphql/unions.html) provides details about the result of a request to delete a negotiable quote. To return these details, specify fragments on the `DeleteNegotiableQuoteOperationFailure` and `NegotiableQuoteUidOperationSuccess` objects. Specify the `__typename` attribute to distinguish the object types in the response.
+The [`DeleteNegotiableQuoteOperationResult` union](../unions/index.md) provides details about the result of a request to delete a negotiable quote. To return these details, specify fragments on the `DeleteNegotiableQuoteOperationFailure` and `NegotiableQuoteUidOperationSuccess` objects. Specify the `__typename` attribute to distinguish the object types in the response.
 
 ### DeleteNegotiableQuoteOperationFailure attributes {#DeleteNegotiableQuoteOperationFailure}
 

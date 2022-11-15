@@ -6,7 +6,7 @@ title: country query
 
 Use the `country` query to retrieve information about a specific country.
 
-Use the [countries]({{page.baseurl}}/graphql/queries/directory-countries.html) query to retrieve a list of countries available in the system.
+Use the [countries](../../store/queries/countries.md) query to retrieve a list of countries available in the system.
 
 ## Syntax
 
@@ -111,8 +111,8 @@ import CountryOutput from '/src/pages/_includes/graphql/country-output.md'
 
 ## Related topics
 
-*  [countries query]({{page.baseurl}}/graphql/queries/directory-countries.html)
-*  [currency query]({{page.baseurl}}/graphql/queries/directory-currency.html)
+*  [countries query](../../store/queries/countries.md)
+*  [currency query](../../store/queries/currency.md)
 
 ## Errors
 

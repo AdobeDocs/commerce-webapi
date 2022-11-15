@@ -13,7 +13,7 @@ Set the payment method code to `payflow_express` to process Express Checkout tra
 
 PayPal Express Checkout enables customers to pay by credit card or from the security of their personal PayPal accounts. During checkout, the customer is redirected to the secure PayPal site to complete the payment information. The customer is then returned to the store to complete the remainder of the checkout process.
 
-From a GraphQL integration standpoint, this payment method is identical to the [PayPal Express Checkout]({{page.baseurl}}/graphql/payment-methods/payflow-link.html) payment method, with the exception that in the `setPaymentMethodOnCart` mutation, the payment method `code` is set to `payflow_express`.
+From a GraphQL integration standpoint, this payment method is identical to the [PayPal Express Checkout](payflow-link.md) payment method, with the exception that in the `setPaymentMethodOnCart` mutation, the payment method `code` is set to `payflow_express`.
 
 ## PayPal Express Checkout workflow
 
@@ -80,6 +80,6 @@ mutation {
 
 ## Related topics
 
--  [`createPaypalExpressToken` mutation]({{page.baseurl}}/graphql/mutations/create-paypal-express-token.html)
--  [`placeOrder` mutation]({{page.baseurl}}/graphql/mutations/place-order.html)
--  [`setPaymentMethodOnCart` mutation]({{page.baseurl}}/graphql/mutations/set-payment-method.html)
+-  [`createPaypalExpressToken` mutation](../schema/checkout/mutations/create-paypal-express-token.md)
+-  [`placeOrder` mutation](../schema/cart/mutations/place-order.md)
+-  [`setPaymentMethodOnCart` mutation](../schema/cart/mutations/set-payment-method.md)

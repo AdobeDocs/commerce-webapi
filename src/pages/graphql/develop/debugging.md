@@ -10,7 +10,7 @@ This topic provides recommendations on how to debug GraphQL requests.
 
 ## Debugging with PHPStorm and Xdebug
 
-When [using GraphiQL]({{ page.baseurl }}/graphql/index.html#how-to-access-graphql) or any other client for testing GraphQL queries, you might need to debug the request processing.
+When [using GraphiQL](../index.md#how-to-access-graphql) or any other client for testing GraphQL queries, you might need to debug the request processing.
 You can use Xdebug for debugging the PHP execution of a GraphQL query just as you would for other HTTP requests.
 To start debugging, add the `?XDEBUG_SESSION_START=PHPSTORM` parameter to the endpoint URL.
 The following example shows how to establish a connection between Xdebug and PHPStorm IDE.
@@ -29,5 +29,5 @@ As a result, Xdebug within the PHP execution attempts to make a connection to an
 
 ## Related Topics
 
-*  [GraphQL request headers]({{ page.baseurl }}/graphql/send-request.html)
-*  [Exception handling]({{ page.baseurl }}/graphql/develop/exceptions.html)
+*  [GraphQL request headers](../usage/headers.md)
+*  [Exception handling](exceptions.md)

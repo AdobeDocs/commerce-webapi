@@ -9,11 +9,11 @@ contributor_link: https://www.ztech.io/
 
 The `updateRequisitionList` mutation updates the name and, optionally, the description of a requisition list.
 
-This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
 
 <InlineAlert variant="info" slots="text" />
 
-Use the [storeConfig query]({{page.baseurl}}/graphql/queries/store-config.html) with the `is_requisition_list_active` attribute to determine whether requisition lists are enabled.
+Use the [storeConfig query](../../../../schema/store/queries/store-config.md) with the `is_requisition_list_active` attribute to determine whether requisition lists are enabled.
 
 ## Syntax
 
@@ -94,5 +94,5 @@ import RequisitionList from '/src/pages/_includes/graphql/requisition-list.md'
 
 ## Related topics
 
-*  [createRequisitionList mutation]({{page.baseurl}}/graphql/mutations/create-requisition-list.html)
-*  [deleteRequisitionList mutation]({{page.baseurl}}/graphql/mutations/delete-requisition-list.html)
+*  [createRequisitionList mutation](create.md)
+*  [deleteRequisitionList mutation](delete.md)

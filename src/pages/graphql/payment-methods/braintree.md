@@ -14,7 +14,7 @@ The following diagram shows the workflow for placing an order when Braintree is 
 
 ![Braintree sequence diagram](../../_images/graphql/braintree.svg)
 
-1. The PWA client calls the [`createBraintreeClientToken`]({{page.baseurl}}/graphql/mutations/create-braintree-client-token.html) mutation to generate the client token.
+1. The PWA client calls the [`createBraintreeClientToken`](../schema/checkout/mutations/create-braintree-client-token.md) mutation to generate the client token.
 
 1. The application forwards the request to Braintree.
 
@@ -32,11 +32,11 @@ The following diagram shows the workflow for placing an order when Braintree is 
 
 1. The client extracts the payment nonce from the [Tokenized Payload](https://braintree.github.io/braintree-web/3.46.0/HostedFields.html#~tokenizePayload).
 
-   The client uses the [`setPaymentMethodOnCart`]({{page.baseurl}}/graphql/mutations/set-payment-method.html) mutation to set the payment method to `braintree`. The payment method nonce is passed with other required and optional properties in the [`braintree`](#braintree-object) object.
+   The client uses the [`setPaymentMethodOnCart`](../schema/cart/mutations/set-payment-method.md) mutation to set the payment method to `braintree`. The payment method nonce is passed with other required and optional properties in the [`braintree`](#braintree-object) object.
 
 1. The application returns a `Cart` object.
 
-1. The client uses the [`placeOrder`]({{page.baseurl}}/graphql/mutations/place-order.html) mutation.
+1. The client uses the [`placeOrder`](../schema/cart/mutations/place-order.md) mutation.
 
 1. The application sends an authorization request to Braintree.
 
@@ -46,7 +46,7 @@ The following diagram shows the workflow for placing an order when Braintree is 
 
 ## `setPaymentMethodOnCart` mutation
 
-When you set the payment method to Braintree in the [`setPaymentMethodOnCart`]({{page.baseurl}}/graphql/mutations/set-payment-method.html) mutation, the `payment_method` object must contain a `braintree` object.
+When you set the payment method to Braintree in the [`setPaymentMethodOnCart`](../schema/cart/mutations/set-payment-method.md) mutation, the `payment_method` object must contain a `braintree` object.
 
 ### braintree object
 

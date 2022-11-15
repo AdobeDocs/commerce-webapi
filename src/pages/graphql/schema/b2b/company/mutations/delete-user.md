@@ -9,7 +9,7 @@ edition: b2b
 
 Use the `deleteCompanyUser` mutation to deactivate the specified company user.
 
-You can get the user ID with the [`company`]({{page.baseurl}}/graphql/queries/company.html) query.
+You can get the user ID with the [`company`](../queries/company.md) query.
 
 ## Syntax
 

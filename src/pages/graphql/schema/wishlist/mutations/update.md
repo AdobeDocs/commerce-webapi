@@ -9,9 +9,9 @@ The `updateWishlist` mutation updates the properties of a wish list. Adobe Comme
 
 <InlineAlert variant="info" slots="text" />
 
-Use the [updateProductsInWishlist mutation]({{page.baseurl}}/graphql/mutations/update-products-in-wishlist.html) to modify the contents of a wish list.
+Use the [updateProductsInWishlist mutation](update-products.md) to modify the contents of a wish list.
 
-This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
+This mutation requires a valid [customer authentication token](../../customer/mutations/generate-token.md).
 
 ## Syntax
 

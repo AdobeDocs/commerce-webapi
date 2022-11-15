@@ -8,11 +8,11 @@ contributor_name: EY
 
 The `copyItemsBetweenRequisitionLists` mutation copies items from one requisition list to another.
 
-This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
 
 <InlineAlert variant="info" slots="text" />
 
-Use the [storeConfig query]({{page.baseurl}}/graphql/queries/store-config.html) with the `is_requisition_list_active` attribute to determine whether requisition lists are enabled.
+Use the [storeConfig query](../../../../schema/store/queries/store-config.md) with the `is_requisition_list_active` attribute to determine whether requisition lists are enabled.
 
 ## Syntax
 
@@ -97,11 +97,12 @@ Attribute |  Data Type | Description
 `requisition_list` | [[RequisitionList](#RequisitionList)] | The destination requisition list after the items were copied
 
 ### RequisitionList attributes {#RequisitionList}
+
 import RequisitionList from '/src/pages/_includes/graphql/requisition-list.md'
 
 <RequisitionList />
 
 ## Related topics
 
-*  [moveItemsBetweenRequisitionLists mutation]({{page.baseurl}}/graphql/mutations/move-items-between-requisition-lists.html)
-*  [deleteRequisitionListItems mutation]({{page.baseurl}}/graphql/mutations/delete-requisition-list-items.html)
+*  [moveItemsBetweenRequisitionLists mutation](move-items.md)
+*  [deleteRequisitionListItems mutation](delete.md)

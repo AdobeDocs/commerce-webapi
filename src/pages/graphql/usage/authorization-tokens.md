@@ -18,11 +18,11 @@ Adobe recommends that you use authorization tokens instead of session cookies fo
 
 Adobe Commerce provides separate token services for customers and administrators. When you request a token from one of these services, the service returns a unique access token in exchange for the account's username and password.
 
-GraphQL provides a mutation that returns a token on behalf of a logged-in customer, but you must use a REST call to fetch an admin token. Any time you make a GraphQL or REST call that requires a token, specify the HTTP `Authorization` request header and assign the value as `Bearer <token>`. [Request headers]({{page.baseurl}}/graphql/send-request.html#headers) provides an example.
+GraphQL provides a mutation that returns a token on behalf of a logged-in customer, but you must use a REST call to fetch an admin token. Any time you make a GraphQL or REST call that requires a token, specify the HTTP `Authorization` request header and assign the value as `Bearer <token>`. [Request headers](headers.md#request-headers) provides an example.
 
 ### Customer tokens
 
-The [`generateCustomerToken` mutation]({{page.baseurl}}/graphql/mutations/generate-customer-token.html) requires the customer email address and password in the payload, as shown in the following example.
+The [`generateCustomerToken` mutation](../schema/customer/mutations/generate-token.md) requires the customer email address and password in the payload, as shown in the following example.
 
 By default, a customer token is valid for 1 hour. You can change these values from Admin by selecting **Stores** > **Settings** > **Configuration** > **Services** > **OAuth** > **Access Token Expiration** > **Customer Token Lifetime**.
 
@@ -52,9 +52,9 @@ You can now use this token in the Authorization request header field for any que
 
 ![GraphQL Authorization Bearer](../../_images/graphql/graphql-authorization.png)
 
-You can also [revoke the customer's token]({{ page.baseurl }}/graphql/mutations/revoke-customer-token.html) when the customer logs out or changes their password.
+You can also [revoke the customer's token](../schema/customer/mutations/revoke-token.md) when the customer logs out or changes their password.
 
-The [`generateCustomerTokenAsAdmin`]({{page.baseurl}}/graphql/mutations/generate-customer-token-as-admin.html) mutation generates a new customer token as an admin so that an administrator can perform remote shopping assistance.
+The [`generateCustomerTokenAsAdmin`](../schema/customer/mutations/generate-token-as-admin.md) mutation generates a new customer token as an admin so that an administrator can perform remote shopping assistance.
 The customer must have enabled the `allow_remote_shopping_assistance` feature while creating the customer profile. The mutation requires the customer email address in the payload, as shown in the following example.
 
 **Request:**
@@ -83,7 +83,7 @@ mutation{
 
 ### Admin tokens
 
-In Adobe Commerce and Magento Open Source GraphQL, you specify an admin token only if you need to query products, categories, price rules, or other entities that are scheduled to be in a campaign (staged content). Staging is supported in Adobe Commerce only. See [Staging queries]({{page.baseurl}}/graphql/queries/index.html#staging) for more information.
+In Adobe Commerce and Magento Open Source GraphQL, you specify an admin token only if you need to query products, categories, price rules, or other entities that are scheduled to be in a campaign (staged content). Staging is supported in Adobe Commerce only. See [Staging queries](../usage/index.md#staging-queries) for more information.
 
 Adobe Commerce and Magento Open Source do not provide a GraphQL mutation that generates an admin token. You must use a REST endpoint such as `POST /V1/tfa/provider/google/authenticate` instead. [Generate the admin token](https://developer.adobe.com/commerce/webapi/rest/tutorials/prerequisite-tasks/) shows how to use this endpoint.
 

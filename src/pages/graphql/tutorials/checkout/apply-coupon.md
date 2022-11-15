@@ -6,9 +6,9 @@ contributor_link: https://www.atwix.com/
 
 # Step 7. Apply a coupon
 
-Use [applyCouponToCart]({{ page.baseurl }}/graphql/mutations/apply-coupon.html) to apply a discount coupon to the specified `cart_id`.
+Use [applyCouponToCart](apply-coupon.md) to apply a discount coupon to the specified `cart_id`.
 
-`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart]({{ page.baseurl }}/graphql/tutorials/checkout/checkout-add-product-to-cart.html).
+`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](../../tutorials/checkout/add-product-to-cart.md).
 
 `{ COUPON_CODE }` is an existing coupon code. It cannot be generated with GraphQL.
 
@@ -16,7 +16,7 @@ Use [applyCouponToCart]({{ page.baseurl }}/graphql/mutations/apply-coupon.html) 
 
 Coupons must be generated from the Admin.
 
-Creating a coupon is described in [Coupon Codes]({{ site.user_guide_url }}/marketing/price-rules-cart-coupon.html).
+Creating a coupon is described in [Coupon Codes](https://docs.magento.com/user-guide/marketing/price-rules-cart-coupon.html).
 For the purpose of this tutorial, create a Cart Price Rule with:
 
 For **Rule Information**:
@@ -43,7 +43,7 @@ The discount should be applied in the cart.
 
 When the coupon is set up, we can apply it via GraphQL. Replace the `{ CART_ID }` with your generated ID and replace the `{ COUPON_CODE }` with `Watch20` below.
 
-For logged-in customers, send the customer's authorization token in the `Authorization` parameter of the header. See [Authorization tokens]({{page.baseurl}}/graphql/authorization-tokens.html) for more information.
+For logged-in customers, send the customer's authorization token in the `Authorization` parameter of the header. See [Authorization tokens](../../usage/authorization-tokens.md) for more information.
 
 **Request:**
 
@@ -92,7 +92,7 @@ mutation {
 
 ## Remove a coupon
 
-Use [removeCouponFromCart]({{ page.baseurl }}/graphql/mutations/remove-coupon.html) to remove a discount coupon from the shopping cart.
+Use [removeCouponFromCart](../../schema/cart/mutations/remove-coupon.md) to remove a discount coupon from the shopping cart.
 
 **Request:**
 

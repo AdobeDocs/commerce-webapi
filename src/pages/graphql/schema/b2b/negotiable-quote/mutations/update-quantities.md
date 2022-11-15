@@ -11,7 +11,7 @@ The `updateNegotiableQuoteQuantities` mutation changes the quantity of one or mo
 
 Use the `removeNegotiableQuoteItems` mutation to completely remove a product from a negotiable quote.
 
-This query requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
+This query requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
 
 ## Syntax
 

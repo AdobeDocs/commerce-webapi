@@ -53,7 +53,7 @@ filter: {
 
 The application processes the attribute values specified in a `ProductAttributeFilterInput` as simple data types (strings, integers, Booleans). However, returned attributes can be a different, complex data type. For example, in a response, `price` is an object that contains a monetary value and a currency code.
 
-By default, you can use the following attributes as filters. To define a custom filter, see [Filtering with custom attributes]({{page.baseurl}}/graphql/custom-filters.html). Use the `input_type` output attribute of the [`customAttributeMetadata` query]({{page.baseurl}}/graphql/queries/custom-attribute-metadata.html) to determine whether your custom filter should include the `FilterEqualTypeInput`, `FilterMatchTypeInput`, or `FilterRangeTypeInput` data type.
+By default, you can use the following attributes as filters. To define a custom filter, see [Filtering with custom attributes](../../../usage/custom-filters.md). Use the `input_type` output attribute of the [`customAttributeMetadata` query](../../store/queries/custom-attribute-metadata.md) to determine whether your custom filter should include the `FilterEqualTypeInput`, `FilterMatchTypeInput`, or `FilterRangeTypeInput` data type.
 
 Attribute | Data type | Description
 --- | --- | ---
@@ -138,7 +138,7 @@ The `filter` and `sort` attributes require new input objects. The following sect
 
 ### ProductFilterInput attributes
 
-The `filter` attribute previously required a `ProductFilterInput` object as input. This object has been deprecated. The replacement input object, `ProductAttributeFilterInput` is more restrictive about what attributes can be used in a `products` query by default. The following attributes can no longer be used in default filters. See [Filtering with custom attributes]({{page.baseurl}}/graphql/custom-filters.html) for more information.
+The `filter` attribute previously required a `ProductFilterInput` object as input. This object has been deprecated. The replacement input object, `ProductAttributeFilterInput` is more restrictive about what attributes can be used in a `products` query by default. The following attributes can no longer be used in default filters. See [Filtering with custom attributes](../../../usage/custom-filters.md) for more information.
 
 ```text
 country_of_manufacture
@@ -299,7 +299,7 @@ Attribute | Data type | Description
 
 ### ProductInterface attributes {#ProductInterface}
 
-The `items` object contains information about each product that match the search criteria. [ProductInterface]({{page.baseurl}}/graphql/interfaces/product-interface.html) describes the possible contents of this object.
+The `items` object contains information about each product that match the search criteria. [ProductInterface](../interfaces/index.md) describes the possible contents of this object.
 
 ### SearchResultPageInfo attributes {#SearchResultPageInfo}
 
@@ -604,7 +604,7 @@ The following query returns aggregations for a query that filters on items with 
 
 <InlineAlert variant="info" slots="text" />
 
-By default, you cannot filter on the `color` attribute. [Filtering with custom attributes]({{page.baseurl}}/graphql/custom-filters.html) describes how to enable this attribute for filtering. You can also run the following query without enabling the attribute by deleting `, color: {eq: "49"}`.
+By default, you cannot filter on the `color` attribute. [Filtering with custom attributes](../../../usage/custom-filters.md) describes how to enable this attribute for filtering. You can also run the following query without enabling the attribute by deleting `, color: {eq: "49"}`.
 
 **Request:**
 
@@ -1024,7 +1024,7 @@ Because the `includeDirectChildrenOnly` input filter is set to true, the categor
 
 <InlineAlert variant="info" slots="text" />
 
-By default, you cannot filter on the `color` attribute. [Filtering with custom attributes]({{page.baseurl}}/graphql/custom-filters.html) describes how to enable this attribute for filtering. You can also run the following query without enabling the attribute by deleting `, color: {eq: "49"}`.
+By default, you cannot filter on the `color` attribute. [Filtering with custom attributes](../../../usage/custom-filters.md) describes how to enable this attribute for filtering. You can also run the following query without enabling the attribute by deleting `, color: {eq: "49"}`.
 
 **Request:**
 
@@ -1950,7 +1950,7 @@ The following product query returns URL rewrite information about the Joust Duff
 
 ### Retrieve variant `uid` values {#variant-uid}
 
-The following query returns information about each variant of the configurable product `WSH12`. Each variant has a unique combination of color and size values. Specify the `uid` values in the `selected_options` array of the [`addProductsToCart` mutation]({{page.baseurl}}/graphql/mutations/add-products-to-cart.html) to indicate which variants the shopper selected.
+The following query returns information about each variant of the configurable product `WSH12`. Each variant has a unique combination of color and size values. Specify the `uid` values in the `selected_options` array of the [`addProductsToCart` mutation](../../cart/mutations/add-products.md) to indicate which variants the shopper selected.
 
 **Request:**
 

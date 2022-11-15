@@ -8,11 +8,11 @@ contributor_link: https://www.atwix.com/
 
 The `VirtualProduct` data type implements the following interfaces:
 
--  [ProductInterface]({{page.baseurl}}/graphql/interfaces/product-interface.html)
--  [CustomizableProductInterface]({{page.baseurl}}/graphql/interfaces/customizable-option-interface.html)
--  [RoutableInterface]({{page.baseurl}}/graphql/interfaces/routable-interface.html)
+-  [ProductInterface](../index.md)
+-  [CustomizableProductInterface](../customizable-option.md)
+-  [RoutableInterface](../routable.md)
 
-Attributes that are specific to the virtual products can be used when performing a [`products`]({{page.baseurl}}/graphql/queries/products.html) query.
+Attributes that are specific to the virtual products can be used when performing a [`products`](../../queries/products.md) query.
 
 ## VirtualProduct object
 
@@ -102,4 +102,4 @@ The following query returns information about virtual product.
 
 ## Related topics
 
--  [addVirtualProductsToCart mutation]({{page.baseurl}}/graphql/mutations/add-virtual-products.html)
+-  [addVirtualProductsToCart mutation](../../../cart/mutations/add-virtual-products.md)

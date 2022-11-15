@@ -8,7 +8,7 @@ The `categoryList` query searches for categories that match the criteria specifi
 
 <InlineAlert variant="info" slots="text" />
 
-This query does not support pagination. Use the [`categories` query]({{page.baseurl}}/graphql/queries/categories.html) if you expect to return a large number of categories.
+This query does not support pagination. Use the [`categories` query](categories.md) if you expect to return a large number of categories.
 
 The `categoryList` query supports the following types of filters. You can specify multiple filters in a query.
 
@@ -24,7 +24,7 @@ The query returns a `CategoryTree` object. The top level of the `CategoryTree` o
 
 <InlineAlert variant="info" slots="text" />
 
-You cannot return the entire category tree if the total number of nodes in the request exceeds the value specified in the `queryDepth` attribute defined in the GraphQL `di.xml` file. By default, this value is 20. [Query security]({{page.baseurl}}/graphql/security-configuration.html) further describes query depths.
+You cannot return the entire category tree if the total number of nodes in the request exceeds the value specified in the `queryDepth` attribute defined in the GraphQL `di.xml` file. By default, this value is 20. [Query security](../../../usage/security-configuration.md) further describes query depths.
 
 Use the `breadcrumbs` attribute to return information about the parent categories of the queried category.
 
@@ -305,7 +305,7 @@ import CategoryFilterInput from '/src/pages/_includes/graphql/category-filter-in
 
 ## Output attributes {#Categories}
 
-The query returns a `CategoryTree` object, which implements [`CategoryInterface`]({{page.baseurl}}/graphql/interfaces/category-interface.html). The `CategoryTree` object can contain the following attribute and all attributes defined in `CategoryInterface`:
+The query returns a `CategoryTree` object, which implements [`CategoryInterface`](category.md). The `CategoryTree` object can contain the following attribute and all attributes defined in `CategoryInterface`:
 
 Attribute | Data type | Description
 --- | --- | ---

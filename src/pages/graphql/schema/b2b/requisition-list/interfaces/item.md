@@ -25,7 +25,7 @@ The `RequisitionListItemInterface` defines the following attributes.
 Attribute |  Data Type | Description
 --- | --- | ---
 `customizable_options` | [SelectedCustomizableOption]! | Selected custom options for an item in the requisition list
-`product` | [ProductInterface!]({{page.baseurl}}/graphql/interfaces/product-interface.html) | Contains details about an item added to a requisition list
+`product` | [ProductInterface!](../../../products/interfaces/index.md) | Contains details about an item added to a requisition list
 `quantity` | Float! | The amount added
 `uid` | ID! | The unique ID for the requisition list item
 

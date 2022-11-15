@@ -9,7 +9,7 @@ The `redeemGiftCardBalanceAsStoreCredit` mutation converts the entire balance of
 
 <InlineAlert variant="info" slots="text" />
 
-Run this mutation on behalf of logged-in customers only. [Authorization tokens]({{page.baseurl}}/graphql/authorization-tokens.html) describes how to send a request as a customer.
+Run this mutation on behalf of logged-in customers only. [Authorization tokens](../../../usage/authorization-tokens.md) describes how to send a request as a customer.
 
 ## Syntax
 

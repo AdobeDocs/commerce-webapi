@@ -17,13 +17,13 @@ If the status is DECLINED or EXPIRED, the negotiable quote is processed like a s
 
 Perform the following actions before using the `placeNegotiableQuoteOrder` mutation. It might be necessary to perform additional steps during the process of coming to an agreement during the negotiable quote lifecycle.
 
--  [Create an empty cart]({{page.baseurl}}/graphql/mutations/create-empty-cart.html)
--  [Add one or more products]({{page.baseurl}}/graphql/mutations/add-products-to-cart.html) to the cart
--  [Request a negotiable quote]({{page.baseurl}}/graphql/mutations/request-negotiable-quote.html)
--  [Set the billing address]({{page.baseurl}}/graphql/mutations/set-negotiable-quote-billing-address.html)
--  [Set the shipping address]({{page.baseurl}}/graphql/mutations/set-negotiable-quote-shipping-address.html)
+-  [Create an empty cart](../../../cart/mutations/create-empty-cart.md)
+-  [Add one or more products](../../../cart/mutations/add-products.md) to the cart
+-  [Request a negotiable quote](request.md)
+-  [Set the billing address](set-billing-address.md)
+-  [Set the shipping address](set-shipping-address.md)
 -  Set the shipping method
--  [Set the payment method]({{page.baseurl}}/graphql/mutations/set-negotiable-quote-payment-method.html)
+-  [Set the payment method](set-payment-method.md)
 
 You cannot manage orders with GraphQL, because orders are part of the backend. You can use REST or SOAP calls to manage orders to their completion.
 

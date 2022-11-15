@@ -4,7 +4,7 @@ title: Filtering with custom attributes
 
 # Filtering with custom attributes
 
-As of 2.3.4, the `filter` attribute of the [`products`]({{page.baseurl}}/graphql/queries/products.html) query accepts the `ProductAttributeFilterInput` object. (In previous versions, the `filter` attribute required a `ProductFilterInput` object. This object contained a hard-coded list of filterable attributes, and you could not filter on a custom attribute or any other attribute that was not on the list.)
+As of 2.3.4, the `filter` attribute of the [`products`](../schema/products/queries/products.md) query accepts the `ProductAttributeFilterInput` object. (In previous versions, the `filter` attribute required a `ProductFilterInput` object. This object contained a hard-coded list of filterable attributes, and you could not filter on a custom attribute or any other attribute that was not on the list.)
 
 ## Prerequisites
 
@@ -16,7 +16,7 @@ You have several options when enabling a custom attribute (or any attribute that
 
 ## Define the filter for your query
 
-The [`filter`]({{page.baseurl}}/graphql/queries/products.html#ProductFilterInput) definition for your custom attribute requires one of the following input data types:
+The [`filter`](../schema/products/queries/products.md#productfilterinput-attributes) definition for your custom attribute requires one of the following input data types:
 
 -  `FilterEqualTypeInput` - Specify this data type when the **Catalog Input Type for Store Owner** field for your custom attribute is set to Yes/No, Select, or Multiple select. Your filter can contain the `eq` or `in` attribute. Use the `eq` attribute to exactly match the specified string. Use the `in` attribute to filter on a comma-separated list of values.
 -  `FilterMatchTypeInput` - Specify this data type when the **Catalog Input Type for Store Owner** field for your custom attribute is set to Text Field or Text Area. Your filter must contain the `match` attribute, which will return all items that partially fuzzy match the specified string.
@@ -24,7 +24,7 @@ The [`filter`]({{page.baseurl}}/graphql/queries/products.html#ProductFilterInput
 
 ## Example
 
-In this example, the custom attribute `volume` was assigned to the `bags` attribute group. Running the [`customAttributeMetadata` query]({{page.baseurl}}/graphql/queries/custom-attribute-metadata.html) on this custom attribute reveals that the `label` and `value` values for the attribute's options are as follows:
+In this example, the custom attribute `volume` was assigned to the `bags` attribute group. Running the [`customAttributeMetadata` query](../schema/store/queries/custom-attribute-metadata.md) on this custom attribute reveals that the `label` and `value` values for the attribute's options are as follows:
 
 **Request:**
 
@@ -91,7 +91,7 @@ In this example, the custom attribute `volume` was assigned to the `bags` attrib
 `Medium` | `217`
 `Small` | `218`
 
-In this scenario, a [`products`]({{page.baseurl}}/graphql/queries/products.html) search filtered to return items where the `volume` attribute is set to `Large` would be similar to the following:
+In this scenario, a [`products`](../schema/products/queries/products.md) search filtered to return items where the `volume` attribute is set to `Large` would be similar to the following:
 
 **Request:**
 

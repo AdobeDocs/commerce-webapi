@@ -44,7 +44,7 @@ Attribute | Data Type | Description
 
 ### ProductAttributeMetadata
 
-`ProductAttributeMetadata` implements [`AttributeMetadataInterface`]({{ page.baseurl }}/graphql/interfaces/attribute-metadata.html).
+`ProductAttributeMetadata` implements [`AttributeMetadataInterface`](attribute-metadata.md).
 
 Attribute | Data Type | Description
 --- | --- | ---

@@ -7,11 +7,11 @@ edition: ee
 
 The `createWishlist` mutation creates a wish list for the logged in customer. Adobe Commerce allows customers to have multiple wish lists.
 
-This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
+This mutation requires a valid [customer authentication token](../../customer/mutations/generate-token.md).
 
 <InlineAlert variant="info" slots="text" />
 
-Use the [`storeConfig` query]({{page.baseurl}}/graphql/queries/store-config.html) with the following attributes to determine whether multiple wish lists are supported:
+Use the [`storeConfig` query](../../store/queries/store-config.md) with the following attributes to determine whether multiple wish lists are supported:
 
 *  `enable_multiple_wishlists`
 *  `magento_wishlist_general_is_enabled`

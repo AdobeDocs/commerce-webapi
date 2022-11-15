@@ -5,7 +5,7 @@ edition: pwa
 
 # attributesMetadata query
 
-The `attributesMetadata` query returns everything available in [`customAttributeMetadata`]({{page.baseurl}}/graphql/queries/custom-attribute-metadata.html) but also inclues additional information such as `data_type`, `sort_order`, and `ui_input` data, that can be used for filtering, searching and layered navigation. The information returned in `customAttributeMetadata` is in a different format when returned in `attributesMetadata`.
+The `attributesMetadata` query returns everything available in [`customAttributeMetadata`](custom-attribute-metadata.md) but also inclues additional information such as `data_type`, `sort_order`, and `ui_input` data, that can be used for filtering, searching and layered navigation. The information returned in `customAttributeMetadata` is in a different format when returned in `attributesMetadata`.
 
 ## Syntax
 

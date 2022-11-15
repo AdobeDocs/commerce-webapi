@@ -4,9 +4,9 @@ title: removeProductsFromWishlist mutation
 
 # removeProductsFromWishlist mutation
 
-The `removeProductsFromWishlist` mutation completely removes the specified items from the customer's wish list. Use the [`updateProductsInWishlist` mutation]({{page.baseurl}}/graphql/mutations/remove-products-from-wishlist.html) to change the quantity of specific items in the wish list.
+The `removeProductsFromWishlist` mutation completely removes the specified items from the customer's wish list. Use the [`updateProductsInWishlist` mutation](remove-products.md) to change the quantity of specific items in the wish list.
 
-This mutation requires a valid [customer authentication token]({{page.baseurl}}/graphql/mutations/generate-customer-token.html).
+This mutation requires a valid [customer authentication token](../../customer/mutations/generate-token.md).
 
 ## Syntax
 
@@ -23,7 +23,7 @@ mutation {
 
 ## Example usage
 
-The following example removes an item that was added in the [`addProductsToWishlist` mutation]({{page.baseurl}}/graphql/mutations/add-products-to-wishlist.html) example.
+The following example removes an item that was added in the [`addProductsToWishlist` mutation](add-products.md) example.
 
 **Request:**
 

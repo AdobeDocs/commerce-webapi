@@ -4,7 +4,7 @@ title: Downloadable product data types
 
 # Downloadable product data types
 
-The `DownloadableProduct` data type implements `ProductInterface` and `CustomizableProductInterface`. As a result, attributes that are specific to downloadable products can be used when performing a [`products`]({{page.baseurl}}/graphql/queries/products.html) query. It also implements [RoutableInterface]({{page.baseurl}}/graphql/interfaces/routable-interface.html).
+The `DownloadableProduct` data type implements `ProductInterface` and `CustomizableProductInterface`. As a result, attributes that are specific to downloadable products can be used when performing a [`products`](../../queries/products.md) query. It also implements [RoutableInterface](../routable.md).
 
 ## Downloadable product
 
@@ -158,4 +158,4 @@ The following query returns information about downloadable product `240-LV04`, w
 
 ## Related topics
 
--  [customerDownloadableProducts query]({{page.baseurl}}/graphql/queries/customer-downloadable-products.html)
+-  [customerDownloadableProducts query](../../../customer/queries/downloadable-products.md)

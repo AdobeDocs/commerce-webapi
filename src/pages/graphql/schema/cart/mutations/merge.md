@@ -10,7 +10,7 @@ The mutation retains any items that were already in the logged-in customer's car
 
 <InlineAlert variant="info" slots="text" />
 
-Use the [assignCustomerToGuestCart]({{page.baseurl}}/graphql/mutations/assign-customer-to-guest-cart.html) mutation to assign the contents of a logged-in customer's cart to a guest cart.
+Use the [assignCustomerToGuestCart](assign-customer-to-guest-cart.md) mutation to assign the contents of a logged-in customer's cart to a guest cart.
 Customer cart becomes inactive and the guest cart remains active.
 
 ## Syntax
@@ -150,7 +150,7 @@ import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 
 <CartObject />
 
-[Cart query output]({{page.baseurl}}/graphql/queries/cart.html#cart-output) provides more information about the `Cart` object.
+[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 
