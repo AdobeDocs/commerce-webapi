@@ -15,12 +15,12 @@ Attribute |  Data Type | Description
 `shipping_addresses` | [[ShippingCartAddress]][ShippingCartAddress]! | Contains one or more shipping addresses
 `total_quantity` | Float! | Total Quantity of products in the cart
 
-[AppliedCoupon]: {{page.baseurl}}/graphql/queries/cart.html#AppliedCoupon
-[AppliedGiftCard]: {{page.baseurl}}/graphql/queries/cart.html#AppliedGiftCard
-[AppliedStoreCredit]: {{page.baseurl}}/graphql/queries/cart.html#AppliedStoreCredit
-[AvailablePaymentMethod]: {{page.baseurl}}/graphql/queries/cart.html#AvailablePaymentMethod
-[BillingCartAddress]: {{page.baseurl}}/graphql/queries/cart.html#BillingCartAddress
-[CartItemInterface]: {{page.baseurl}}/graphql/queries/cart.html#CartItemInterface
-[CartPrices]: {{page.baseurl}}/graphql/queries/cart.html#CartPrices
-[SelectedPaymentMethod]: {{page.baseurl}}/graphql/queries/cart.html#SelectedPaymentMethod
-[ShippingCartAddress]: {{page.baseurl}}/graphql/queries/cart.html#ShippingCartAddress
+[AppliedCoupon]: ../../graphql/schema/cart/queries/cart.md#AppliedCoupon
+[AppliedGiftCard]: ../../graphql/schema/cart/queries/cart.md#AppliedGiftCard
+[AppliedStoreCredit]: ../../graphql/schema/cart/queries/cart.md#AppliedStoreCredit
+[AvailablePaymentMethod]: ../../graphql/schema/cart/queries/cart.md#AvailablePaymentMethod
+[BillingCartAddress]: ../../graphql/schema/cart/queries/cart.md#BillingCartAddress
+[CartItemInterface]: ../../graphql/schema/cart/queries/cart.md#CartItemInterface
+[CartPrices]: ../../graphql/schema/cart/queries/cart.md#CartPrices
+[SelectedPaymentMethod]: ../../graphql/schema/cart/queries/cart.md#SelectedPaymentMethod
+[ShippingCartAddress]: ../../graphql/schema/cart/queries/cart.md#ShippingCartAddress

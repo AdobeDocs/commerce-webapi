@@ -1,8 +1,8 @@
-1. The PWA client uses the [`setPaymentMethodOnCart`]({{page.baseurl}}/graphql/mutations/set-payment-method.html) mutation to set the payment method.
+1. The PWA client uses the [`setPaymentMethodOnCart`](../../../graphql/schema/cart/mutations/set-payment-method.md) mutation to set the payment method.
 
 1. The mutation returns a `Cart` object.
 
-1. The client runs the [`placeOrder`]({{page.baseurl}}/graphql/mutations/place-order.html) mutation, which creates an order and begins the authorization process.
+1. The client runs the [`placeOrder`](../../../graphql/schema/cart/mutations/place-order.md) mutation, which creates an order and begins the authorization process.
 
 1. The application requests a secure token from the Paypal gateway.
 
@@ -10,7 +10,7 @@
 
 1. The `placeOrder` mutation returns an order ID. The application does not return secure token information. The order has the status `payment pending`.
 
-1. The client runs the [`getPayflowLinkToken`]({{page.baseurl}}/graphql/queries/get-payflow-link-token.html) mutation to retrieve the secure token information.
+1. The client runs the [`getPayflowLinkToken`](../../../graphql/schema/checkout/queries/get-payflow-link-token.md) mutation to retrieve the secure token information.
 
 1. The application returns the token information.
 

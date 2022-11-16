@@ -6,5 +6,5 @@ Attribute | Data type | Description
 `customizable_options`| [SelectedCustomizableOption]! | Custom options selected for the wish list item
 `description`| String  | The description of the item
 `id`| ID!  | The ID of a `WishlistItemInterface` object
-`product` | [ProductInterface]({{page.baseurl}}/graphql/interfaces/product-interface.html) | Product details of the wish list item
+`product` | [ProductInterface](../../graphql/schema/products/interfaces/types/index.md) | Product details of the wish list item
 `quantity`| Float!  | The quantity of this wish list item

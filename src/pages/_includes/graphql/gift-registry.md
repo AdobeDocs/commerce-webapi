@@ -43,7 +43,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `created_at` | String! | The date the product was added to the gift registry
 `note` | String | A brief message about the gift registry item
-`product` | [ProductInterface]({{page.baseurl}}/graphql/interfaces/product-interface.html) | The details about the product
+`product` | [ProductInterface](../../graphql/schema/products/interfaces/types/index.md) | The details about the product
 `quantity` | Float! | The requested quantity of the product
 `quantity_fulfilled` | Float! | The fulfilled quantity of the product
 `uid` | ID! | The unique ID assigned to the gift registry item

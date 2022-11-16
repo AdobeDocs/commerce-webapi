@@ -21,7 +21,7 @@ The `ComparableItem` object lists items that have been added to the comparison l
 Attribute |  Data Type | Description
 --- | --- | ---
 `attributes` | [[ProductAttribute]!](#ProductAttribute) | An array of product attributes that can be used to compare products
-`product` | [ProductInterface!]({{ page.baseurl }}/graphql/interfaces/product-interface.html) | Contains details about a product in a comparison list
+`product` | [ProductInterface!](../../graphql/schema/products/interfaces/types/index.md) | Contains details about a product in a comparison list
 `uid` | ID! | The unique ID of a `ComparableItem` object
 
 ### ProductAttribute object {#ProductAttribute}

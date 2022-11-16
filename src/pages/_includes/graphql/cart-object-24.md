@@ -21,15 +21,15 @@ Attribute |  Data Type | Description
 `shipping_addresses` | [[ShippingCartAddress]][ShippingCartAddress]! | Contains one or more shipping addresses
 `total_quantity` | Float! | Total Quantity of products in the cart
 
-[AppliedCoupon]: {{page.baseurl}}/graphql/queries/cart.html#AppliedCoupon
-[AppliedGiftCard]: {{page.baseurl}}/graphql/queries/cart.html#AppliedGiftCard
-[AppliedStoreCredit]: {{page.baseurl}}/graphql/queries/cart.html#AppliedStoreCredit
-[AvailablePaymentMethod]: {{page.baseurl}}/graphql/queries/cart.html#AvailablePaymentMethod
-[BillingCartAddress]: {{page.baseurl}}/graphql/queries/cart.html#BillingCartAddress
-[CartItemInterface]: {{page.baseurl}}/graphql/queries/cart.html#CartItemInterface
-[CartPrices]: {{page.baseurl}}/graphql/queries/cart.html#CartPrices
-[GiftMessage]: {{page.baseurl}}/graphql/queries/cart.html#GiftMessage
-[GiftWrapping]: {{page.baseurl}}/graphql/queries/cart.html#GiftWrapping
-[RewardPointsAmount]: {{page.baseurl}}/graphql/queries/cart.html#RewardPointsAmount
-[SelectedPaymentMethod]: {{page.baseurl}}/graphql/queries/cart.html#SelectedPaymentMethod
-[ShippingCartAddress]: {{page.baseurl}}/graphql/queries/cart.html#ShippingCartAddress
+[AppliedCoupon]: ../../graphql/schema/cart/queries/cart.md#AppliedCoupon
+[AppliedGiftCard]: ../../graphql/schema/cart/queries/cart.md#AppliedGiftCard
+[AppliedStoreCredit]: ../../graphql/schema/cart/queries/cart.md#AppliedStoreCredit
+[AvailablePaymentMethod]: ../../graphql/schema/cart/queries/cart.md#AvailablePaymentMethod
+[BillingCartAddress]: ../../graphql/schema/cart/queries/cart.md#BillingCartAddress
+[CartItemInterface]: ../../graphql/schema/cart/queries/cart.md#CartItemInterface
+[CartPrices]: ../../graphql/schema/cart/queries/cart.md#CartPrices
+[GiftMessage]: ../../graphql/schema/cart/queries/cart.md#GiftMessage
+[GiftWrapping]: ../../graphql/schema/cart/queries/cart.md#GiftWrapping
+[RewardPointsAmount]: ../../graphql/schema/cart/queries/cart.md#RewardPointsAmount
+[SelectedPaymentMethod]: ../../graphql/schema/cart/queries/cart.md#SelectedPaymentMethod
+[ShippingCartAddress]: ../../graphql/schema/cart/queries/cart.md#ShippingCartAddress
