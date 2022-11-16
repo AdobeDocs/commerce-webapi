@@ -25,11 +25,15 @@ Attribute |  Data Type | Description
 
 ### GiftRegistryDynamicAttributeInterface attributes {#GiftRegistryDynamicAttributeInterface}
 
-{% include graphql/gift-registry-dynamic-interface.md %}
+import GiftRegistryDynamicAttributeInterface from 'src/pages/_includes/graphql/gift-registry-dynamic-interface.md'
+
+<GiftRegistryDynamicAttributeInterface />
 
 ### GiftRegistryDynamicAttributeMetadataInterface {#GiftRegistryDynamicAttributeMetadataInterface}
 
-{% include graphql/gift-registry-dynamic-attribute-metadata-interface.md %}
+import GiftRegistryDynamicAttributeMetadataInterface from 'include graphql/gift-registry-dynamic-attribute-metadata-interface.md'
+
+<GiftRegistryDynamicAttributeMetadataInterface />
 
 ### GiftRegistryItemInterface attributes {#GiftRegistryItemInterface}
 

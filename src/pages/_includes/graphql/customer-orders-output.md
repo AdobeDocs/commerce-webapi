@@ -85,7 +85,9 @@ Attribute | Data type | Description
 
 `CreditMemoItemInterface` defines the following attributes.
 
-{% include graphql/credit-memo-item-interface.md %}
+import CreditMemoItemInterface 'src/pages/_include/graphql/credit-memo-item-interface.md'
+
+<CreditMemoItemInterface />
 
 [CreditMemoItemInterface attributes and implementations]({{page.baseurl}}/graphql/interfaces/credit-memo-item-interface.html) provides additional information about the implementations of this interface.
 
@@ -116,11 +118,15 @@ Attribute | Data type | Description
 
 ### GiftMessage attributes {#GiftMessage}
 
-{% include graphql/gift-message.md %}
+import GiftMessage from 'src/pages/_includes/graphql/gift-message.md'
+
+<GiftMessage />
 
 ### GiftWrapping attributes {#GiftWrapping}
 
-{% include graphql/gift-wrapping.md %}
+import GiftWrapping from 'src/pages/_includes/graphql/gift-wrapping.md'
+
+<GiftWrapping />
 
 #### Invoice attributes {#Invoice}
 
@@ -138,7 +144,9 @@ Attribute | Data type | Description
 
 `InvoiceItemInterface` defines the following attributes.
 
-{% include graphql/invoice-item-interface.md %}
+import InvoiceItemInterface from 'src/pages/_includes/graphql/invoice-item-interface.md'
+
+<InvoiceItemInterface />
 
 [InvoiceItemInterface attributes and implementations]({{page.baseurl}}/graphql/interfaces/invoice-item-interface.html) provides additional information about the implementations of this interface.
 
@@ -214,7 +222,9 @@ Attribute |  Data Type | Description
 
 `OrderItemInterface` defines the following attributes.
 
-{% include graphql/order-item-interface.md %}
+import OrderItemInterface from 'src/pages/_includes/graphql/order-item-interface.md'
+
+<OrderItemInterface />
 
 [OrderItemInterface attributes and implementations]({{page.baseurl}}/graphql/interfaces/order-item-interface.html) provides additional information about the implementations of this interface.
 
@@ -351,7 +361,9 @@ Attribute | Data type | Description
 
 `ShipmentItemInterface` defines the following attributes.
 
-{% include graphql/shipment-item-interface.md %}
+import ShipmentItemInterface from 'src/pages/_includes/graphql/shipment-item-interface.md'
+
+<ShipmentItemInterface />
 
 [ShipmentItemInterface attributes and implementations]({{page.baseurl}}/graphql/interfaces/order-item-interface.html) provides additional information about the implementations of this interface.
 
