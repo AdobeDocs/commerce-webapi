@@ -1008,6 +1008,12 @@ module.exports = [
           {
             title: "Interfaces",
             path: "/graphql/schema/wishlist/interfaces/",
+            pages: [
+              {
+                title: "Wishlist",
+                path: "/graphql/schema/wishlist/interfaces/wishlist/",
+              },
+            ],
           },
         ],
       },
