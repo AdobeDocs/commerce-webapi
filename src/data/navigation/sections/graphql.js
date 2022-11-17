@@ -731,6 +731,10 @@ module.exports = [
                 title: "route",
                 path: "/graphql/schema/products/queries/route/",
               },
+              {
+                title: "urlResolver",
+                path: "/graphql/schema/products/queries/url-resolver/",
+              },
             ],
           },
           {
