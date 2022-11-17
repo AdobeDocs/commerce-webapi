@@ -424,10 +424,6 @@ module.exports = [
                 path: "/graphql/schema/customer/mutations/create-v2/",
               },
               {
-                title: "deleteCustomer",
-                path: "/graphql/schema/customer/mutations/delete/",
-              },
-              {
                 title: "deleteCustomerAddress",
                 path: "/graphql/schema/customer/mutations/delete-address/",
               },
