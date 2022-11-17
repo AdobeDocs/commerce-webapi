@@ -701,6 +701,10 @@ module.exports = [
             pages: [
               {
                 title: "categories",
+                path: "/graphql/schema/products/queries/categories/products/",
+              },
+              {
+                title: "categories",
                 path: "/graphql/schema/products/queries/categories/",
               },
               {
