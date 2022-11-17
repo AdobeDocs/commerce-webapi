@@ -18,7 +18,7 @@
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`addresses` | {{ customeraddress_text }}  | An array containing the customer's shipping and billing addresses
+`addresses` | CustomerAddress  | An array containing the customer's shipping and billing addresses
 `allow_remote_shopping_assistance` | Boolean! | Indicates whether the customer has enabled remote shopping assistance
 `compare_list` | CompareList | The contents of the customer's comparison list
 `created_at` | String | Timestamp indicating when the account was created
@@ -34,16 +34,16 @@ Attribute |  Data Type | Description
 `is_subscribed` | Boolean | Indicates whether the customer is subscribed to the company's newsletter
 `lastname` | String | The customer's family name
 `middlename` |String | The customer's middle name
-`orders(filter CustomerOrdersFilterInput, currentPage = 1 Int, pageSize = 20 Int)` | {{ customeroutput_text }} | A list of the customer's placed orders{{ crossref_text }}
+`orders(filter CustomerOrdersFilterInput, currentPage = 1 Int, pageSize = 20 Int)` | [CustomerOrders] | A list of the customer's placed orders
 `prefix` | String | An honorific, such as Dr., Mr., or Mrs.
 `return(uid: ID!)` | Return | Gets details about the specified return request
 `returns(pageSize: Int = 20 currentPage: Int = 1)` | Returns | Information about the customer's return requests
 `reviews(pageSize: Int = 20 currentPage: Int = 1)` | ProductReviews! | The list of reviews of the product
-`reward_points` | {{ rewardpoints_text }} | Details about the customer's reward points
+`reward_points` | [RewardPoints] | Details about the customer's reward points
 `suffix` | String | A value such as Sr., Jr., or III
 `taxvat` | String | The customer's Tax/VAT number (for corporate customers)
 `wishlist` | Wishlist! | Deprecated. Use `wishlist_v2` instead. Contains the contents of the customer's wish lists
-`wishlist_v2(id ID!)` | {{ wishlist_text }} | Retrieve the specified wish list identified by the unique ID for a Wishlist object
+`wishlist_v2(id ID!)` | [Wishlist]! | Retrieve the specified wish list identified by the unique ID for a Wishlist object
 
 For B2B, company administrators and users can have the following attributes.
 
