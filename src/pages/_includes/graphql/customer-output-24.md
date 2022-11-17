@@ -1,21 +1,3 @@
-{% if page.url contains 'graphql/queries/customer.html' %}
-{% assign comparelist_text = " '[CompareList](#CompareList)' %}
-{% assign customeraddress_text = '[CustomerAddress](#customerAddressOutput)' %}
-{% assign customeroutput_text = '[CustomerOrders](#customerOrders)' %}
-{% assign crossref_text = '. See [`orders` input attributes](#orders) for details' %}
-{% assign productreview_text = '[ProductReviews](#ProductReviews)!' %}
-{% assign rewardpoints_text = '[RewardPoints](#RewardPoints)' %}
-{% assign wishlist_text = '[Wishlist](#Wishlist)!' %}
-{% else %}
-{% assign comparelist_text = 'CompareList' %}
-{% assign customeraddress_text = 'CustomerAddress' %}
-{% assign customeroutput_text = '[CustomerOrders]' %}
-{% assign crossref_text = '' %}
-{% assign productreview_text = '[ProductReviews]!' %}
-{% assign rewardpoints_text = '[RewardPoints]' %}
-{% assign wishlist_text = '[Wishlist]!' %}
-{% endif %}
-
 Attribute |  Data Type | Description
 --- | --- | ---
 `addresses` | CustomerAddress  | An array containing the customer's shipping and billing addresses
