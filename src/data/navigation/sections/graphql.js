@@ -61,6 +61,10 @@ module.exports = [
         title: "Handle exceptions",
         path: "/graphql/develop/exceptions/",
       },
+      {
+        title: "Functional testing",
+        path: "/graphql/develop/functional-testing/",
+      },
     ],
   },
   {
