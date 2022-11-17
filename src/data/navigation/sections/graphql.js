@@ -492,6 +492,10 @@ module.exports = [
             path: "/graphql/schema/gift-registry/queries/",
             pages: [
               {
+                title: "giftRegistry",
+                path: "/graphql/schema/gift-registry/queries/gift-registry/",
+              },
+              {
                 title: "giftRegistryEmailSearch",
                 path: "/graphql/schema/gift-registry/queries/email-search/",
               },
