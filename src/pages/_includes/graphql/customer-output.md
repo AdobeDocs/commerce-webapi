@@ -19,6 +19,6 @@ Attribute |  Data Type | Description
 `taxvat` | String | The customer's Tax/VAT number (for corporate customers)
 `wishlist` | Wishlist! | Contains the contents of the customer's wish lists
 
-import CustomerAddressOutput from 'src/pages/_includes/graphql/customer-address-output.md'
+import CustomerAddressOutput from '/src/pages/_includes/graphql/customer-address-output-24.md'
 
 <CustomerAddressOutput />

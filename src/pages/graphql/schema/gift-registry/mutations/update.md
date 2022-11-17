@@ -139,7 +139,7 @@ Attribute |  Data Type | Description
 
 ### CustomerAddressInput attributes {#CustomerAddressInput}
 
-import CustomerAddressInput from '/src/pages/_includes/graphql/customer-address-input.md'
+import CustomerAddressInput from '/src/pages/_includes/graphql/customer-address-input-24.md'
 
 <CustomerAddressInput />
 

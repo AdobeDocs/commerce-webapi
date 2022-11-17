@@ -585,7 +585,7 @@ The `AddProductsToCartOutput` object contains the `Cart` object.
 
 ### Cart object {#CartObject}
 
-import CartObject from '/src/pages/_includes/graphql/cart-object.md'
+import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 
 <CartObject />
 

@@ -244,7 +244,7 @@ Attribute |  Data Type | Description
 `address_data` | CustomerAddressInput | The complete details of the shipping address
 `address_id` | ID | The ID of predefined customer address
 
-import CustomerAddressInput from '/src/pages/_includes/graphql/customer-address-input.md'
+import CustomerAddressInput from '/src/pages/_includes/graphql/customer-address-input-24.md'
 
 <CustomerAddressInput />
 
