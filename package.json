@@ -26,7 +26,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test:links": "remark src/pages --quiet --frail",
-    "generate:graphql": "spectaql --target-dir static/graphql-api/ --target-file index.html spectaql/config.yml"
+    "build:spectaql": "spectaql --target-dir static/graphql-api/ --target-file index.html spectaql/config.yml",
+    "dev:spectaql": "spectaql --development-mode-live spectaql/config.yml"
   },
   "remarkConfig": {
     "plugins": [
