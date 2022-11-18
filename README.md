@@ -67,7 +67,7 @@ To run SpectaQL in the development mode:
 yarn dev:spectaql
 ```
 
-## How to get the schema
+### How to get the schema
 
 The website in the public directory was generated for the Adobe Commerce with B2B instance from GraphQL Schema 'schema.json'. The schema was retrieved using the apollo-cli tool:
 
