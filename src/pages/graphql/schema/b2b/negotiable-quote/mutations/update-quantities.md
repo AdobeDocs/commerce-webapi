@@ -124,7 +124,7 @@ mutation {
 
 The `UpdateNegotiableQuoteQuantitiesInput` input object specifies the negotiable quote ID and the items to be updated.
 
-### UpdateNegotiableQuoteQuantitiesInput attributes {#UpdateNegotiableQuoteQuantitiesInput}
+### UpdateNegotiableQuoteQuantitiesInput attributes
 
 The `UpdateNegotiableQuoteQuantitiesInput` object contains the following attributes.
 
@@ -133,7 +133,7 @@ Attribute | Data Type | Description
 `items` | [NegotiableQuoteItemQuantityInput]! | An array of items to update
 `quote_uid` | ID! | The unique ID of a `NegotiableQuote` object
 
-### NegotiableQuoteItemQuantityInput attributes {#NegotiableQuoteItemQuantityInput}
+### NegotiableQuoteItemQuantityInput attributes
 
 The `NegotiableQuoteItemQuantityInput` object contains the following attributes.
 
@@ -150,7 +150,7 @@ Attribute | Data Type | Description
 --- | --- | ---
 `quote` | NegotiableQuote! | Contains details about the negotiable quote
 
-### NegotiableQuote attributes {#NegotiableQuote}
+### NegotiableQuote attributes
 
 import NegotiableQuote from '/src/pages/_includes/graphql/negotiable-quote.md'
 

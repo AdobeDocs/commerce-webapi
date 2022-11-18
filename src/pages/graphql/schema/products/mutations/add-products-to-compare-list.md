@@ -133,7 +133,7 @@ mutation {
 
 The `AddProductsToCompareListInput` input object defines the product IDs to be compared within an existing comparison list.
 
-### AddProductsToCompareListInput attributes {#addProductsToCompareListInput}
+### AddProductsToCompareListInput attributes
 
 The `AddProductsToCompareListInput` object contains the following attributes:
 

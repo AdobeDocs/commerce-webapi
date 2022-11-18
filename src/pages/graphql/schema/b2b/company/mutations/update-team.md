@@ -65,7 +65,7 @@ mutation {
 
 The `CompanyTeamUpdateInput` input object defines the company team data.
 
-### CompanyTeamUpdateInput attributes {#CompanyTeamUpdateInput}
+### CompanyTeamUpdateInput attributes
 
 The `CompanyTeamUpdateInput` object contains the following attributes:
 
@@ -85,7 +85,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `team` | CompanyTeam! | Contains company team data
 
-### CompanyTeam attributes {#CompanyTeam}
+### CompanyTeam attributes
 
 import CompanyTeam from '/src/pages/_includes/graphql/company-team.md'
 

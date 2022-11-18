@@ -44,7 +44,7 @@ The previous example is equivalent to the following query. You could send the qu
 
 Some queries sent as a GET request can be cached. See [GraphQL caching](../usage/caching.md) for more information.
 
-## Request headers {#headers}
+## Request headers
 
 The application accepts the following headers in a GraphQL request:
 

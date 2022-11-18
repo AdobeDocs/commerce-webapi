@@ -112,15 +112,15 @@ The CompanyCreateInput object defines the schema for creating an entity.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`company_admin` | [CompanyAdminInput!](#CompanyAdminInput) | Defines the company administrator
+`company_admin` | [CompanyAdminInput!](#companyadmininput-attributes) | Defines the company administrator
 `company_email` | String! | The email address of the company contact
 `company_name` | String! | The company name
-`legal_address` | [CompanyLegalAddressCreateInput!](#CompanyLegalAddressCreateInput) | Defines legal address data of the company
+`legal_address` | [CompanyLegalAddressCreateInput!](#companylegaladdresscreateinput-attributes) | Defines legal address data of the company
 `legal_name` | String | The full legal name of the company
 `reseller_id` | String | The resale number that is assigned to the company for tax reporting purposes
 `vat_tax_id` | String | The value-added tax number that is assigned to the company by some jurisdictions for tax reporting purposes
 
-### CompanyAdminInput attributes {#CompanyAdminInput}
+### CompanyAdminInput attributes
 
 The `CompanyAdminInput` object can contain the following attributes.
 
@@ -132,7 +132,7 @@ Attribute |  Data Type | Description
 `job_title` | String | The job title of the company administrator
 `lastname` | String! | The company administrator's last name
 
-### CompanyLegalAddressCreateInput attributes {#CompanyLegalAddressCreateInput}
+### CompanyLegalAddressCreateInput attributes
 
 The `CompanyLegalAddressCreateInput` object can contain the following attributes.
 

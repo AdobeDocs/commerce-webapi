@@ -6,12 +6,12 @@ title: CartItemInterface attributes and implementations | Commerce Web APIs
 
 The `CartItemInterface` has the following implementations:
 
-*  [BundleCartItem](#BundleCartItem)
-*  [ConfigurableCartItem](#ConfigurableCartItem)
-*  [DownloadableCartItem](#DownloadableCartItem)
-*  [GiftCardCartItem](#GiftCardCartItem)
-*  [SimpleCartItem](#SimpleCartItem)
-*  [VirtualCartItem](#VirtualCartItem)
+*  [BundleCartItem](#bundlecartitem-implementation)
+*  [ConfigurableCartItem](#configurablecartitem-implementation)
+*  [DownloadableCartItem](#downloadablecartitem-implementation)
+*  [GiftCardCartItem](#giftcardcartitem-implementation)
+*  [SimpleCartItem](#simplecartitem-implementation)
+*  [VirtualCartItem](#virtualcartitem-implementation)
 
 ## CartItemInterface attributes
 
@@ -19,27 +19,27 @@ The `CartItemInterface` and all of its implementations can contain the following
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`errors` | [CartItemError!](#CartItemError) | An array of errors encountered while loading the cart item. PWA Studio only.
+`errors` | [CartItemError!](#cartitemerror-object) | An array of errors encountered while loading the cart item. PWA Studio only.
 `id` | String | Deprecated. Use `uid` instead. The ID of the item
-`prices` | [CartItemPrices](#CartItemPrices) | Includes the price of an item, any applied discounts, and calculated totals
+`prices` | [CartItemPrices](#cartitemprices-object) | Includes the price of an item, any applied discounts, and calculated totals
 `product` | [ProductInterface](../../products/interfaces/index.md) | Contains attributes that are common to all types of products
 `quantity` | Float                                                                            | The number of items in the cart
 `uid` | ID!                                                                              | The unique ID for the `CartItemInterface` object
 
-### CartItemPrices object {#CartItemPrices}
+### CartItemPrices object
 
 The `CartItemPrices` object can contain the following attributes.
 
 Attribute |  Data Type | Description
 --- | --- | ---
 `discounts`| [Discount] | An array of discounts to be applied to the cart item
-`fixed_product_taxes` | [[FixedProductTax]](../../products/interfaces/index.md#fixedproducttax-object) | The fixed product taxes to be applied to the cart item
+`fixed_product_taxes` | [[FixedProductTax]](../../products/interfaces/attributes.md#fixedproducttax-object) | The fixed product taxes to be applied to the cart item
 `price` | Money! | The price of the item before any discounts were applied. The price that might include tax, depending on the configured display settings for cart
 `row_total` | Money! | The value of the `price` multiplied by the quantity of the item
 `row_total_including_tax` | Money! | The value of `row_total` plus the tax applied to the item
 `total_item_discount` | Money | The total of all discounts applied to the item
 
-### CartItemError object {#CartItemError}
+### CartItemError object
 
 The CartItemError object is only available in PWA Studio.
 
@@ -48,7 +48,7 @@ Attribute |  Data Type | Description
 `code` | CartItemErrorType! | An error code that describes the error encountered. One of `ITEM_QTY`, `ITEM_INCREMENTS`, or `UNDEFINED`
 `message` | String! | A localized error message
 
-### SelectedCustomizableOption attributes {#SelectedCustomizableOption}
+### SelectedCustomizableOption attributes
 
 Several product types support customization. Use the following attributes to identify a customized product that have been placed in a cart.
 
@@ -60,9 +60,9 @@ Attribute |  Data Type | Description
 `label` | String! | The display name of the selected customizable option
 `sort_order` | Int! | A value indicating the order to display this option
 `type` | String! | The type of `CustomizableOptionInterface` object
-`values` | [[SelectedCustomizableOptionValue!]!](#SelectedCustomizableOptionValue) | An array of selectable values
+`values` | [[SelectedCustomizableOptionValue!]!](#selectedcustomizableoption-attributes) | An array of selectable values
 
-### SelectedCustomizableOptionValue attributes {#SelectedCustomizableOptionValue}
+### SelectedCustomizableOptionValue attributes
 
 All customized products placed in a cart items require a value to identify the customization.
 
@@ -74,16 +74,16 @@ Attribute |  Data Type | Description
 `price` | CartItemSelectedOptionValuePrice! | The price of the selected customizable value
 `value` | String! | The text identifying the selected value
 
-## BundleCartItem implementation {#BundleCartItem}
+## BundleCartItem implementation
 
 The `BundleCartItem` object adds the following attributes to the `CartItemInterface`.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`bundle_options` | [[SelectedBundleOption!]!](#SelectedBundleOption) | An array of options selected for a bundle product
-`customizable_options` | [[SelectedCustomizableOption]!](#SelectedCustomizableOption) | An array of customizable options the shopper  chose for the bundle product
+`bundle_options` | [[SelectedBundleOption!]!](#selectedbundleoption-attributes) | An array of options selected for a bundle product
+`customizable_options` | [[SelectedCustomizableOption]!](#selectedcustomizableoption-attributes) | An array of customizable options the shopper  chose for the bundle product
 
-### SelectedBundleOption attributes {#SelectedBundleOption}
+### SelectedBundleOption attributes
 
 The `SelectedBundleOption` object contains the following attributes.
 
@@ -93,9 +93,9 @@ Attribute |  Data Type | Description
 `label` | String! | The display name of the selected bundle product option
 `type` | String! | The type of selected bundle product option
 `uid` | ID! | The unique identifier for a `SelectedBundleOption` object
-`values` | [[SelectedBundleOptionValue!]!](#SelectedBundleOptionValue) | An array of selected bundle option values
+`values` | [[SelectedBundleOptionValue!]!](#selectedbundleoptionvalue-attributes) | An array of selected bundle option values
 
-### SelectedBundleOptionValue attributes {#SelectedBundleOptionValue}
+### SelectedBundleOptionValue attributes
 
 The `SelectedBundleOptionValue` object contains the following attributes.
 
@@ -107,17 +107,17 @@ Attribute |  Data Type | Description
 `quantity` | Float! | The quantity of the selected bundle product option
 `uid` | ID! | The unique identifier for a `SelectedBundleOption` object
 
-## ConfigurableCartItem implementation {#ConfigurableCartItem}
+## ConfigurableCartItem implementation
 
 The `ConfigurableCartItem` object adds the following attributes to the `CartItemInterface`.
 
 Attribute | Data type | Description
 --- | --- | ---
-`configurable_options` | [[SelectedConfigurableOption!]!](#SelectedConfigurableOption) | An array of configurable options
+`configurable_options` | [SelectedConfigurableOption!](#selectedconfigurableoption-attributes) | An array of configurable options
 `configured_variant` | [ProductInterface](../../products/interfaces/index.md) | Returns details about a child configurable product that are different than the parent product. This attribute always returns child information, including the child product image, even if the `storeConfig.configurable_thumbnail_source` attribute is set to `parent`
-`customizable_options` | [[SelectedCustomizableOption]](#SelectedCustomizableOption) | An array of customizable options the shopper chose for the configurable product
+`customizable_options` | [SelectedCustomizableOption](#selectedcustomizableoption-attributes) | An array of customizable options the shopper chose for the configurable product
 
-### SelectedConfigurableOption attributes {#SelectedConfigurableOption}
+### SelectedConfigurableOption attributes
 
 The `SelectedConfigurableOption` object contains the following attributes.
 
@@ -131,43 +131,43 @@ Attribute | Data type | Description
 `value_label` | String! | The display name of the value for the selected configurable option
 `value_uid` | ID! | The unique ID of the value for the selected configurable option
 
-## DownloadableCartItem implementation {#DownloadableCartItem}
+## DownloadableCartItem implementation
 
 The `DownloadableCartItem` object adds the following attributes to the `CartItemInterface`.
 
 Attribute | Data type | Description
 --- | --- | ---
-`customizable_options` | [[SelectedCustomizableOption]](#SelectedCustomizableOption) | An array of customizable options the shopper chose for the downloadable product
-`links` | [[DownloadableProductLinks]](../../products/interfaces/types/downloadable.md#downloadableproductlinks-attributes) | An array containing information about the links associated with the selected downloadable product
-`samples` | [[DownloadableProductSamples]](../../products/interfaces/types/downloadable.md#downloadableproductsamples-attributes) | An array containing information about samples of the selected downloadable product
+`customizable_options` | [SelectedCustomizableOption](#selectedcustomizableoption-attributes) | An array of customizable options the shopper chose for the downloadable product
+`links` | [DownloadableProductLinks](../../products/interfaces/types/downloadable.md#downloadableproductlinks-attributes) | An array containing information about the links associated with the selected downloadable product
+`samples` | [DownloadableProductSamples](../../products/interfaces/types/downloadable.md#downloadableproductsamples-attributes) | An array containing information about samples of the selected downloadable product
 
-## GiftCardCartItem implementation {#GiftCardCartItem}
+## GiftCardCartItem implementation
 
 The `GiftCardCartItem` object adds the following attributes to the `CartItemInterface`.
 
 `amount` | Money! | The amount and currency of the gift card
-`customizable_options` | [[SelectedCustomizableOption]!](#SelectedCustomizableOption) | An array of customizations made to the gift card
+`customizable_options` | [SelectedCustomizableOption!](#selectedcustomizableoption-attributes) | An array of customizations made to the gift card
 `message` | String | A message to the recipient
 `recipient_email` | String | The email of the person receiving the gift card
 `recipient_name` | String! | The name of the person receiving the gift card
 `sender_email` | String | The email of the sender
 `sender_name` | String! | The name of the sender
 
-## SimpleCartItem implementation {#SimpleCartItem}
+## SimpleCartItem implementation
 
 The `SimpleCartItem` object adds the following attributes to the `CartItemInterface`.
 
 Attribute | Data type | Description
 --- | --- | ---
-`customizable_options` | [[SelectedCustomizableOption]!](#SelectedCustomizableOption) | An array of customizable options the shopper chose for the simple product
+`customizable_options` | [SelectedCustomizableOption!](#selectedcustomizableoption-attributes) | An array of customizable options the shopper chose for the simple product
 
-## VirtualCartItem implementation {#VirtualCartItem}
+## VirtualCartItem implementation
 
 The `VirtualCartItem` object adds the following attributes to the `CartItemInterface`.
 
 Attribute | Data type | Description
 --- | --- | ---
-`customizable_options` | [[SelectedCustomizableOption]!](#SelectedCustomizableOption) | An array of customizable options the shopper chose for the virtual product
+`customizable_options` | [SelectedCustomizableOption!](#selectedcustomizableoption-attributes) | An array of customizable options the shopper chose for the virtual product
 
 ## Example usage
 

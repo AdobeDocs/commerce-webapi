@@ -37,7 +37,7 @@ The [`CloseNegotiableQuoteOperationResult` union](../mutations/close.md#closeneg
 
 ## CompanyStructureEntity union
 
-The [`CompanyStructureEntity` union](../../company/queries/company.md#CompanyStructureItem) provides details about a node in a company structure.
+The [`CompanyStructureEntity` union](../../company/unions/structure-entity.md) provides details about a node in a company structure.
 
 **Possible types:**
 

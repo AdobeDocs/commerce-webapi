@@ -87,7 +87,7 @@ mutation {
 
 The `CreateProductReviewInput` input object defines the product review.
 
-### CreateProductReviewInput attributes {#CreateProductReviewInput}
+### CreateProductReviewInput attributes
 
 The `CreateProductReviewInput` object contains the following attributes:
 
@@ -99,7 +99,7 @@ Attribute |  Data Type | Description
 `summary` | String! | The summary (title) of the review
 `text` | String! | The review text.
 
-### ProductReviewRatingInput attributes {#ProductReviewRatingInput}
+### ProductReviewRatingInput attributes
 
 The `ProductReviewRatingInput` object contains the following attributes:
 
@@ -116,7 +116,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `review` | ProductReview! | Contains the completed product review
 
-### ProductReview attributes {#ProductReview}
+### ProductReview attributes
 
 import ProductReview from '/src/pages/_includes/graphql/product-review.md'
 

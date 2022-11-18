@@ -111,11 +111,11 @@ The `addRequisitionListItemsToCart` object returns the status, cart and errors o
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`add_requisition_list_items_to_cart_user_errors` | [[AddRequisitionListItemToCartUserError!](#AddRequisitionListItemToCartUserError)] | Indicates why the attempt to add items to the requisition list was not successful
-`cart` | [Cart](#CartObject) | The cart after adding requisition list items
+`add_requisition_list_items_to_cart_user_errors` | [[AddRequisitionListItemToCartUserError!](#addrequisitionlistitemtocartusererror-attributes)] | Indicates why the attempt to add items to the requisition list was not successful
+`cart` | [Cart](#cart-object) | The cart after adding requisition list items
 `status` | Boolean! | Indicates whether the attempt to add items to the requisition list was successful
 
-### AddRequisitionListItemToCartUserError attributes {#AddRequisitionListItemToCartUserError}
+### AddRequisitionListItemToCartUserError attributes
 
 The `AddRequisitionListItemToCartUserError` type contains the list of errors that describe why the attempt to add items to the requistion list was not successful.
 
@@ -124,7 +124,7 @@ Attribute |  Data Type | Description
 `message` | String! | A description of the error
 `type` | [AddRequisitionListItemToCartUserErrorType!](#AddRequisitionListItemToCartUserErrorType) | The error type
 
-### AddRequisitionListItemToCartUserErrorType {#AddRequisitionListItemToCartUserErrorType}
+### AddRequisitionListItemToCartUserErrorType
 
 The AddRequisitionListItemToCartUserErrorType object can be one of the following values.
 
@@ -135,7 +135,7 @@ Type | Description
 `OUT_OF_STOCK` | One of the items is out of stock
 `UNAVAILABLE_SKU` | One of the items is unavailable
 
-### Cart object {#CartObject}
+### Cart object
 
 The `Cart` object can contain the following attributes.
 

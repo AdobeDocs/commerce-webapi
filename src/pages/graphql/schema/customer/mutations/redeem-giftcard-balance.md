@@ -65,7 +65,7 @@ mutation {
 
 ## Input attributes
 
-### GiftCardAccountInput object {#GiftCardAccountInput}
+### GiftCardAccountInput object
 
 The `GiftCardAccountInput` object must contain the following attribute:
 

@@ -77,16 +77,16 @@ mutation {
 
 The top-level `SetPaymentMethodOnCartInput` object is listed first. All child objects are listed in alphabetical order.
 
-### SetPaymentMethodOnCartInput attributes {#SetPaymentMethodOnCartInput}
+### SetPaymentMethodOnCartInput attributes
 
 The `SetPaymentMethodOnCartInput` object must contain the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
 `cart_id` | String! | The unique ID that identifies the customer's cart
-`payment_method` | [PaymentMethodInput!](#PaymentMethodInput) | An object containing the payment method code
+`payment_method` | [PaymentMethodInput!](#paymentmethodinput-attributes) | An object containing the payment method code
 
-### PaymentMethodInput attributes {#PaymentMethodInput}
+### PaymentMethodInput attributes
 
 The `PaymentMethodInput` object can contain the following attributes:
 
@@ -103,9 +103,9 @@ The `SetPaymentMethodOnCartOutput` object contains the `Cart` object.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`cart` |[Cart!](#CartObject) | Describes the contents of the specified shopping cart
+`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
 
-### Cart object {#CartObject}
+### Cart object
 
 import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 

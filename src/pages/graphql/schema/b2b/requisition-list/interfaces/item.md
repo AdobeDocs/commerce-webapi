@@ -7,12 +7,12 @@ edition: b2b
 
 `RequisitionListItemInterface` provides details about items in a requisition list. It has the following implementations:
 
-*  [`BundleRequisitionListItem`](#BundleRequisitionListItem)
-*  [`ConfigurableRequisitionListItem`](#ConfigurableRequisitionListItem)
-*  [`DownloadableRequisitionListItem`](#DownloadableRequisitionListItem)
-*  [`GiftCardRequisitionListItem`](#GiftCardRequisitionListItem)
-*  [`SimpleRequisitionListItem`](#SimpleRequisitionListItem)
-*  [`VirtualRequisitionListItem`](#VirtualRequisitionListItem)
+*  [`BundleRequisitionListItem`](#bundlerequisitionlistitem-attributes)
+*  [`ConfigurableRequisitionListItem`](#configurablerequisitionlistitem-attributes)
+*  [`DownloadableRequisitionListItem`](#downloadablerequisitionlistitem-attributes)
+*  [`GiftCardRequisitionListItem`](#giftcardrequisitionlistitem-attributes)
+*  [`SimpleRequisitionListItem`](#simplerequisitionlistitem-attributes)
+*  [`VirtualRequisitionListItem`](#virtualrequisitionlistitem-attributes)
 
 <InlineAlert variant="info" slots="text" />
 
@@ -31,7 +31,7 @@ Attribute |  Data Type | Description
 
 ## Implementations
 
-### BundleRequisitionListItem attributes {#BundleRequisitionListItem}
+### BundleRequisitionListItem attributes
 
 The `BundleRequisitionListItem` implementation adds the following attribute.
 
@@ -39,7 +39,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `bundle_options`| [SelectedBundleOption]! | An array of selected options for a bundle product
 
-### ConfigurableRequisitionListItem attributes {#ConfigurableRequisitionListItem}
+### ConfigurableRequisitionListItem attributes
 
 The `ConfigurableRequisitionListItem` implementation adds the following attribute.
 
@@ -47,7 +47,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `configurable_options`| [SelectedConfigurableOption] | Selected configurable options for an item in the requisition list
 
-### DownloadableRequisitionListItem attributes {#DownloadableRequisitionListItem}
+### DownloadableRequisitionListItem attributes
 
 The `ConfigurableRequisitionListItem` implementation adds the following attributes.
 
@@ -56,7 +56,7 @@ Attribute |  Data Type | Description
 `links`| [DownloadableProductLinks] | An array of links for downloadable products in the requisition list
 `samples` | [DownloadableProductSamples] | An array of links to downloadable product samples
 
-### GiftCardRequisitionListItem attributes {#GiftCardRequisitionListItem}
+### GiftCardRequisitionListItem attributes
 
 The `GiftCardRequisitionListItem` implementation adds the following attribute.
 
@@ -64,7 +64,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `gift_card_options` | GiftCardOptions! | An array that defines gift card properties
 
-#### GiftCardOptions attributes {#GiftCardOptions}
+#### GiftCardOptions attributes
 
 The GiftCardOptions object provides details about a gift card. All attributes are optional for a requisition list.
 
@@ -77,11 +77,11 @@ Attribute |  Data Type | Description
 `sender_email` | String | The email address of the person sending the gift card
 `sender_name` | String | The name of the person sending the gift card
 
-### SimpleRequisitionListItem attributes {#SimpleRequisitionListItem}
+### SimpleRequisitionListItem attributes
 
 The SimpleRequisitionListItem data type does not provide additional attributes to the `RequisitionListItemInterface`.
 
-### VirtualRequisitionListItem attributes {#VirtualRequisitionListItem}
+### VirtualRequisitionListItem attributes
 
 The VirtualRequisitionListItem data type does not provide additional attributes to the `RequisitionListItemInterface`.
 

@@ -82,13 +82,13 @@ The following query returns the customer's wish list:
 
 Attribute | Data type | Description
 --- | --- | ---
-`items` | [WishlistItem](#wishlistitem) | An array of items in the customer's wish list
+`items` | [WishlistItem](#wish-list-item-attributes) | An array of items in the customer's wish list
 `items_count` | Int | The number of items in the wish list
 `name` | String | When multiple wish lists are enabled, the name the customer assigns to the wish list
 `sharing_code` | String | An encrypted code that the application uses to link to the wish list
 `updated_at` | String | The time of the last modification to the wish list
 
-### Wish list item attributes {#wishlistitem}
+### Wish list item attributes
 
 Attribute | Data type | Description
 --- | --- | ---

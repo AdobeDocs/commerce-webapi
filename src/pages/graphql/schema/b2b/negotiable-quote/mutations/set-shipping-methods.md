@@ -106,7 +106,7 @@ Attribute |  Data Type | Description
 `quote_uid` | ID! | The unique ID of a `NegotiableQuote` object
 `shipping_methods` | [ShippingMethodInput]! | An array of shipping methods to apply to the negotiable quote
 
-### ShippingMethodInput object {#ShippingMethodInput}
+### ShippingMethodInput object
 
 Attribute |  Data Type | Description
 --- | --- | ---
@@ -121,7 +121,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `quote` | NegotiableQuote | The updated negotiable quote
 
-### NegotiableQuote attributes {#NegotiableQuote}
+### NegotiableQuote attributes
 
 import NegotiableQuote from '/src/pages/_includes/graphql/negotiable-quote.md'
 

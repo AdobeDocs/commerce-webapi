@@ -231,7 +231,7 @@ Attribute |  Data Type | Description
 `sourceWishlistUid` | ID! | The ID of the origin wishlist
 `wishlistItems` | [WishlistItemMoveInput!]! | A list of items to be moved
 
-### WishlistItemMoveInput attributes {#WishlistItemMoveInput}
+### WishlistItemMoveInput attributes
 
 The WishlistItemMoveInput object contains the following attributes.
 
@@ -246,17 +246,17 @@ The `MoveProductsBetweenWishlistsOutput` object can contain the following attrib
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`destination_wishlist` | [Wishlist!](#Wishlist) | The destination wish list containing the moved products
-`source_wishlist` | [Wishlist!](#Wishlist) | The wish list that the products were moved from
-`user_errors` | [[WishListUserInputError!](#WishListUserInputError)] | An array of errors encountered while copying products in a wish list
+`destination_wishlist` | [Wishlist!](#wishlist-attributes) | The destination wish list containing the moved products
+`source_wishlist` | [Wishlist!](#wishlist-attributes) | The wish list that the products were moved from
+`user_errors` | [[WishListUserInputError!](#wishlistuserinputerror-attributes)] | An array of errors encountered while copying products in a wish list
 
-### Wishlist attributes {#Wishlist}
+### Wishlist attributes
 
 import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
 
 <Wishlist />
 
-### WishListUserInputError attributes {#WishListUserInputError}
+### WishListUserInputError attributes
 
 import WishlistUserInputError from '/src/pages/_includes/graphql/wishlist-user-input-errors.md'
 

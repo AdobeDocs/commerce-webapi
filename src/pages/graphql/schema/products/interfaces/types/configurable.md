@@ -7,7 +7,7 @@ title: Configurable product data types | Commerce Web APIs
 The `ConfigurableProduct` data type implements the following interfaces:
 
 -  [ProductInterface](../index.md)
--  [PhysicalProductInterface](../index.md#physicalproductinterface)
+-  [PhysicalProductInterface](../attributes.md#physicalproductinterface)
 -  [CustomizableProductInterface](../customizable-option.md)
 -  [RoutableInterface](../routable.md)
 
@@ -19,8 +19,8 @@ The `ConfigurableProduct` object contains the following attributes:
 
 Attribute | Type | Description
 --- | --- | ---
-`configurable_options` | [[ConfigurableProductOptions]](#configProdOptions) | An array of linked simple product items
-`configurable_product_options_selection(configurableOptionValueUids: [ID!])` | [ConfigurableProductOptionsSelection](#ConfigurableProductOptionsSelection) | Contains media gallery items and other details about selected configurable product options as well as details about remaining selectable options. We recommend you filter by one or more `uid` values to prevent loading a large amount of media gallery data
+`configurable_options` | [[ConfigurableProductOptions]](#configurableproductoptions) | An array of linked simple product items
+`configurable_product_options_selection(configurableOptionValueUids: [ID!])` | [ConfigurableProductOptionsSelection](#configurableproductoptionsselection-attributes) | Contains media gallery items and other details about selected configurable product options as well as details about remaining selectable options. We recommend you filter by one or more `uid` values to prevent loading a large amount of media gallery data
 `variants` | ConfigurableVariant | An array of variants of products
 
 ### ConfigurableAttributeOption object
@@ -34,7 +34,7 @@ Field | Type | Description
 `uid` | ID! | The unique ID for a `ConfigurableAttributeOption` object
 `value_index` | Int | A unique index number assigned to the configurable product option
 
-### ConfigurableOptionAvailableForSelection attributes {#ConfigurableOptionAvailableForSelection}
+### ConfigurableOptionAvailableForSelection attributes
 
 The `ConfigurableOptionAvailableForSelection` object describes configurable options that have been selected and can be selected as a result of the previous selections.
 
@@ -43,7 +43,7 @@ Attribute | Type | Description
 `attribute_code` | String! | An attribute code that uniquely identifies a configurable option
 `option_value_uids` | [ID!]! | Any array of IDs that can be selected
 
-### ConfigurableProductOptions {#configProdOptions}
+### ConfigurableProductOptions
 
 The `ConfigurableProductOptions` object contains the following attributes:
 
@@ -59,19 +59,19 @@ Attribute | Type | Description
 `product_id` | Int | Deprecated. This attribute is not needed and its value can be obtained from its parent
 `uid` | ID! | The unique ID for a `ConfigurableProductOptions` object
 `use_default` | Boolean | Indicates whether the option is the default
-`values` | [[ConfigurableProductOptionsValues]](#configProdOptionsValues) | An array that defines the `value_index` codes assigned to the configurable product
+`values` | [[ConfigurableProductOptionsValues]](#configurableproductoptionsvalues) | An array that defines the `value_index` codes assigned to the configurable product
 
-### ConfigurableProductOptionsSelection attributes {#ConfigurableProductOptionsSelection}
+### ConfigurableProductOptionsSelection attributes
 
-The `ConfigurableProductOptionsSelection` object contains metadata corresponding to the selectable configurable options for a product. Use this object in a `products` query to minimize the number of media gallery items that are displayed as the shopper selects configurable product options. [Limit the number of retrieved media gallery items](#media-gallery-example) demonstrates its use.
+The `ConfigurableProductOptionsSelection` object contains metadata corresponding to the selectable configurable options for a product. Use this object in a `products` query to minimize the number of media gallery items that are displayed as the shopper selects configurable product options. [Limit the number of retrieved media gallery items](#limit-the-number-of-retrieved-media-gallery-items) demonstrates its use.
 
 Attribute | Type | Description
 --- | --- | ---
 `media_gallery` | [MediaGalleryInterface!] | Product images and videos corresponding to the specified configurable options selection
-`options_available_for_selection` | [[ConfigurableOptionAvailableForSelection!]](#ConfigurableOptionAvailableForSelection) | Lists the options selected and the options available as a result of the previous selections
+`options_available_for_selection` | [[ConfigurableOptionAvailableForSelection!]](#configurableoptionavailableforselection-attributes) | Lists the options selected and the options available as a result of the previous selections
 `variant` | SimpleProduct | The simple product represented by the selected configurable options. This object will be null until the shopper selects an option for each attribute
 
-### ConfigurableProductOptionsValues {#configProdOptionsValues}
+### ConfigurableProductOptionsValues
 
 The `ConfigurableProductOptionsValues` object contains the following attribute:
 
@@ -94,7 +94,7 @@ Field | Type | Description
 `attributes` | ConfigurableAttributeOption | The `value_index` (and other related information) assigned to a configurable product option
 `product` | SimpleProduct | An array of linked simple products
 
-### SwatchDataInterface {#swatchDataInterface}
+### SwatchDataInterface
 
 Swatches allow the shopper to view the color, texture, or other visual aspect of a configurable product. The application displays these options as color, graphic, or text swatches.
 
@@ -756,7 +756,7 @@ The following `products` query returns `ConfigurableProduct` information about t
 }
 ```
 
-### Limit the number of retrieved media gallery items {#media-gallery-example}
+### Limit the number of retrieved media gallery items
 
 This example shows how the the media gallery items change as a shopper selects configurable options for the product with the SKU `MS10`. The configurable product attributes in the Luma sample data are limited to size and color, and these attributes have a small number of options (five and three, respectively). However, some storefronts will have products with dozens of selectable options. Returning detailed information about all media gallery items in such a storefront would create performance issues.
 

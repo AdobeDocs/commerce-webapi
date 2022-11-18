@@ -63,9 +63,9 @@ The `CustomerDownloadableProducts` object contains the following attribute.
 
 Attribute | Type | Description
 --- | --- | ---
-`items` | [[CustomerDownloadableProduct]](#custDownloadProduct) | List of purchased downloadable items
+`items` | [[CustomerDownloadableProduct]](#customerdownloadableproduct-object) | List of purchased downloadable items
 
-### CustomerDownloadableProduct object {#custDownloadProduct}
+### CustomerDownloadableProduct object
 
 The `CustomerDownloadableProduct` object contains the following attributes:
 

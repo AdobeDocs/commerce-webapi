@@ -105,24 +105,24 @@ mutation {
 
 The top-level `SetShippingAddressesOnCartInput` object is listed first. All child objects are listed in alphabetical order.
 
-### SetShippingAddressesOnCartInput object {#SetShippingAddressesOnCartInput}
+### SetShippingAddressesOnCartInput object
 
 Attribute |  Data Type | Description
 --- | --- | ---
 `cart_id` | String! | The unique ID that identifies the customer's cart
-`shipping_addresses` | [ShippingAddressInput!](#ShippingAddressInput) | The shipping address for a specific cart
+`shipping_addresses` | [ShippingAddressInput!](#shippingaddressinput-object) | The shipping address for a specific cart
 
-### CartAddressInput object {#CartAddressInputShip}
+### CartAddressInput object
 
 import CartAddressInput from '/src/pages/_includes/graphql/cart-address-input-24.md'
 
 <CartAddressInput />
 
-### ShippingAddressInput object {#ShippingAddressInput}
+### ShippingAddressInput object
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`address` | [CartAddressInput](#CartAddressInputShip) | The shipping address for the cart
+`address` | [CartAddressInput](#cartaddressinput-object) | The shipping address for the cart
 `customer_address_id` | Int | The unique ID that identifies the customer's address
 `customer_notes` | String | Text provided by the customer
 `pickup_location_code` | String | The code of the in-store pickup location where the customer will receive the order.
@@ -133,9 +133,9 @@ The `SetShippingAddressOnCartOutput` object contains the `Cart` object.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`cart` |[Cart!](#CartObject) | Describes the contents of the specified shopping cart
+`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
 
-### Cart object {#CartObject}
+### Cart object
 
 import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 

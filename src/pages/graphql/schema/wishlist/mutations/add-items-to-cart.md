@@ -130,17 +130,17 @@ The `addWishlistItemsToCart` mutation returns the status of the operation as wel
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`add_wishlist_items_to_cart_user_errors` | [[WishlistCartUserInputError!](#WishlistCartUserInputError)] | Indicates why the attempt to add items to the wish list was not successful
+`add_wishlist_items_to_cart_user_errors` | [[WishlistCartUserInputError!](#wishlistcartuserinputerror-attributes)] | Indicates why the attempt to add items to the wish list was not successful
 `status` | Boolean! | Indicates whether the attempt to add items to the cart was successful
-`wishlist` | [Wishlist!](#Wishlist) | The wish list after moving items to the cart
+`wishlist` | [Wishlist!](#wishlist-attributes) | The wish list after moving items to the cart
 
-### Wishlist attributes {#Wishlist}
+### Wishlist attributes
 
 import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
 
 <Wishlist />
 
-### WishlistCartUserInputError attributes {#WishlistCartUserInputError}
+### WishlistCartUserInputError attributes
 
 The `WishlistCartUserInputError` type contains a list of errors that indicate why the attempt to add items to the cart was not successful.
 
@@ -149,7 +149,7 @@ Attribute |  Data Type | Description
 `code` | [WishlistCartUserInputErrorType!](#WishlistCartUserInputErrorType) | An error code that describes the error encountered.
 `message` | String! | A localized error message
 
-### WishlistCartUserInputErrorType! {#WishlistCartUserInputErrorType}
+### WishlistCartUserInputErrorType!
 
 Type | Description
 --- | ---

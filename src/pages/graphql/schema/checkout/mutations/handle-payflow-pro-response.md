@@ -77,7 +77,7 @@ Attribute |  Data Type | Description
 
 The PayflowProResponseOutput contains a `Cart` object.
 
-### Cart object {#CartObject}
+### Cart object
 
 import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 

@@ -119,7 +119,7 @@ mutation {
 
 The `CompanyRoleCreateInput` input object defines the company role data for creating.
 
-### CompanyRoleCreateInput attributes {#CompanyRoleCreateInput}
+### CompanyRoleCreateInput attributes
 
 The `CompanyRoleCreateInput` object contains the following attributes:
 
@@ -136,7 +136,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `role` | CompanyRole! | Contains company role data
 
-### CompanyRole attributes {#CompanyRole}
+### CompanyRole attributes
 
 import CompanyRole from '/src/pages/_includes/graphql/company-role.md'
 

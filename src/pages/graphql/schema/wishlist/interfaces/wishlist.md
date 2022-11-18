@@ -6,13 +6,13 @@ title: WishlistItemInterface attributes and implementations | Commerce Web APIs
 
 `WishlistItemInterface` provides details about items in a wish list. It has the following implementations:
 
-*  [`BundleWishlistItem`](#BundleWishlistItem)
-*  [`ConfigurableWishlistItem`](#ConfigurableWishlistItem)
-*  [`DownloadableWishlistItem`](#DownloadableWishlistItem)
-*  [`GiftCardWishlistItem`](#GiftCardWishlistItem)
-*  [`GroupedProductWishlistItem`](#GroupedProductWishlistItem)
-*  [`SimpleWishlistItem`](#SimpleWishlistItem)
-*  [`VirtualWishlistItem`](#VirtualWishlistItem)
+*  [`BundleWishlistItem`](#bundlewishlistitem-attributes)
+*  [`ConfigurableWishlistItem`](#configurablewishlistitem-attributes)
+*  [`DownloadableWishlistItem`](#downloadablewishlistitem-attributes)
+*  [`GiftCardWishlistItem`](#giftcardwishlistitem-attributes)
+*  [`GroupedProductWishlistItem`](#groupedproductwishlistitem-attributes)
+*  [`SimpleWishlistItem`](#simplewishlistitem-attributes)
+*  [`VirtualWishlistItem`](#virtualwishlistitem-attributes)
 
 ## Attributes
 
@@ -22,7 +22,7 @@ import WishlistItemInterface from '/src/pages/_includes/graphql/wishlist-item-in
 
 ## Implementations
 
-### BundleWishlistItem attributes {#BundleWishlistItem}
+### BundleWishlistItem attributes
 
 The `BundleWishlistItem` object defines the following bundle-product specific attribute:
 
@@ -30,7 +30,7 @@ Attribute | Data type | Description
 --- | --- | ---
 `bundle_options` | [SelectedBundleOption!]| An array containing information about the selected bundle items
 
-### ConfigurableWishlistItem attributes {#ConfigurableWishlistItem}
+### ConfigurableWishlistItem attributes
 
 The `ConfigurableWishlistItem` object defines the following attributes that are specific to configurable products:
 
@@ -40,7 +40,7 @@ Attribute | Data type | Description
 `configurable_options` | [SelectedConfigurableOption!] | An array of selected configurable options
 `configured_variant` | [ProductInterface](../../products/interfaces/index.md) | Returns details about the selected variant. The value is null if some options are not configured
 
-### DownloadableWishlistItem attributes {#DownloadableWishlistItem}
+### DownloadableWishlistItem attributes
 
 The `DownloadableWishlistItem` object defines the following attributes that are specific to downloadable products:
 
@@ -49,7 +49,7 @@ Attribute | Data type | Description
 `links_v2` | [DownloadableProductLinks] | An array containing information about the selected links
 `samples` | [DownloadableProductSamples] | An array containing information about the selected samples
 
-### GiftCardWishlistItem attributes {#GiftCardWishlistItem}
+### GiftCardWishlistItem attributes
 
 The `GiftCardWishlistItem` object defines the following gift card-specific attribute:
 
@@ -57,7 +57,7 @@ Attribute | Data type | Description
 --- | --- | ---
 `gift_card_options` | GiftCardOptions! | Contains details about a gift card product
 
-#### GiftCardOptions attributes {#GiftCardOptions}
+#### GiftCardOptions attributes
 
 The GiftCardOptions object provides details about a gift card. All attributes are optional for a wish list.
 
@@ -71,15 +71,15 @@ Attribute | Data type | Description
 `sender_email` | String | The email of the sender
 `sender_name` | String | The name of the sender
 
-### GroupedProductWishlistItem attributes {#GroupedProductWishlistItem}
+### GroupedProductWishlistItem attributes
 
 The GroupedProductWishlistItem data type does not provide additional attributes to the `WishlistItemInterface`.
 
-### SimpleWishlistItem attributes {#SimpleWishlistItem}
+### SimpleWishlistItem attributes
 
 The SimpleWishlistItem data type does not provide additional attributes to the `WishlistItemInterface`.
 
-### VirtualWishlistItem attributes {#VirtualWishlistItem}
+### VirtualWishlistItem attributes
 
 The VirtualWishlistItem data type does not provide additional attributes to the `WishlistItemInterface`.
 

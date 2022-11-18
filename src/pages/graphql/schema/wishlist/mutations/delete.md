@@ -77,7 +77,7 @@ Attribute |  Data Type | Description
 `status` | Boolean! | Indicates whether the wish list was deleted
 `wishlists` | [Wishlist]! | An array of wish lists that have not been deleted
 
-### Wishlist attributes {#Wishlist}
+### Wishlist attributes
 
 import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
 

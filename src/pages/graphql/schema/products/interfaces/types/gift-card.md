@@ -10,7 +10,7 @@ The `GiftCardProduct` data type defines properties of a gift card, including the
 It implements the following interfaces:
 
 -  [ProductInterface](../index.md)
--  [PhysicalProductInterface](../index.md#physicalproductinterface)
+-  [PhysicalProductInterface](../attributes.md#physicalproductinterface)
 -  [CustomizableProductInterface](../customizable-option.md)
 -  [RoutableInterface](../routable.md)
 

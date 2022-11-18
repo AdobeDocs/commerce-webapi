@@ -55,9 +55,9 @@ The following query returns enabled checkout agreements.
 
 ## Output attributes
 
-The `CheckoutAgreements` object contains an array of [`CheckoutAgreement`](#checkoutAgreementAttributes) objects.
+The `CheckoutAgreements` object contains an array of [`CheckoutAgreement`](#checkoutagreement-attributes) objects.
 
-### CheckoutAgreement attributes {#checkoutAgreementAttributes}
+### CheckoutAgreement attributes
 
 The `CheckoutAgreement` object provides the following attributes:
 

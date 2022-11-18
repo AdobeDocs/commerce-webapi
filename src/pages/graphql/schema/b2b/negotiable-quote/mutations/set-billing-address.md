@@ -102,16 +102,16 @@ mutation {
 
 The `SetNegotiableQuoteBillingAddressInput` input object specifies the company user's cart ID and the billing address.
 
-### SetNegotiableQuoteBillingAddressInput attributes {#SetNegotiableQuoteBillingAddressInput}
+### SetNegotiableQuoteBillingAddressInput attributes
 
 The `SetNegotiableQuoteBillingAddressInput` object contains the following attributes.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`billing_address` | [NegotiableQuoteBillingAddressInput!](#NegotiableQuoteBillingAddressInput) | The billing address to be added
+`billing_address` | [NegotiableQuoteBillingAddressInput!](#negotiablequotebillingaddressinput-attributes) | The billing address to be added
 `quote_uid` | ID! | The unique ID of a `NegotiableQuote` object
 
-### NegotiableQuoteBillingAddressInput attributes {#NegotiableQuoteBillingAddressInput}
+### NegotiableQuoteBillingAddressInput attributes
 
 Attribute |  Data Type | Description
 --- | --- | ---
@@ -120,7 +120,7 @@ Attribute |  Data Type | Description
 `same_as_shipping` | Boolean | Indicates whether to set the billing address to be the same as the existing shipping address on the negotiable quote
 `use_for_shipping` | Boolean | Indicates whether to set the shipping address to be the same as this billing address
 
-### NegotiableQuoteAddressInput {#NegotiableQuoteAddressInput}
+### NegotiableQuoteAddressInput
 
 import NegotiableQuoteAddressInput from '/src/pages/_includes/graphql/negotiable-quote.md'
 
@@ -134,7 +134,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `quote` | NegotiableQuote | The negotiable quote after setting the billing address
 
-### NegotiableQuote attributes {#NegotiableQuote}
+### NegotiableQuote attributes
 
 import NegotiableQuote from '/src/pages/_includes/graphql/negotiable-quote.md'
 

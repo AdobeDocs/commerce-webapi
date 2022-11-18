@@ -100,7 +100,7 @@ mutation {
 
 The `CompanyStructureUpdateInput` input object defines the company team data.
 
-### CompanyStructureUpdateInput attributes {#CompanyStructureUpdateInput}
+### CompanyStructureUpdateInput attributes
 
 The `CompanyStructureUpdateInput` object contains the following attributes:
 

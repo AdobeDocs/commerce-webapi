@@ -98,23 +98,23 @@ mutation {
 
 The top-level `SetBillingAddressOnCartInput` object is listed first. All child objects are listed in alphabetical order.
 
-### SetBillingAddressOnCartInput object {#SetBillingAddressOnCartInput}
+### SetBillingAddressOnCartInput object
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`billing_address` | [BillingAddressInput!](#BillingAddressInput) | The billing address for a specific cart
+`billing_address` | [BillingAddressInput!](#billingaddressinput-object) | The billing address for a specific cart
 `cart_id` | String! | The unique ID that identifies the customer's cart
 
-### BillingAddressInput object {#BillingAddressInput}
+### BillingAddressInput object
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`address` | [CartAddressInput](#CartAddressInput) | The billing address for the cart
+`address` | [CartAddressInput](#cartaddressinput-object) | The billing address for the cart
 `customer_address_id` | Int | The unique ID that identifies the customer's address
 `same_as_shipping` | Boolean | Indicates whether to set the billing address based on the existing shipping address on the cart
 `use_for_shipping` | Boolean | Indicates whether to additionally set the shipping address based on the provided billing address
 
-### CartAddressInput object {#CartAddressInput}
+### CartAddressInput object
 
 import CartAddressInput from '/src/pages/_includes/graphql/cart-address-input-24.md'
 
@@ -126,9 +126,9 @@ The `SetBillingAddressOnCartOutput` object contains the `Cart` object.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`cart` |[Cart!](#CartObject) | Describes the contents of the specified shopping cart
+`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
 
-### Cart object {#CartObject}
+### Cart object
 
 import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 

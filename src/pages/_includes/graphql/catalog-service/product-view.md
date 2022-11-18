@@ -1,4 +1,4 @@
-The `ProductView` return object is an interface that can contain the following fields. It is implemented by the [`SimpleProductView`](#SimpleProductView-type) and [`ComplexProductView`](#ComplexProductView-type) types.
+The `ProductView` return object is an interface that can contain the following fields. It is implemented by the [`SimpleProductView`](#simpleproductview-type) and [`ComplexProductView`](#complexproductview-type) types.
 
 Field | Data Type | Description
 --- | --- | ---
@@ -14,7 +14,7 @@ Field | Data Type | Description
 `sku` | String | Product SKU.
 `url` | String | Canonical URL of the product.
 
-### ComplexProductView type {#ComplexProductView-type}
+### ComplexProductView type
 
 The `ComplexProductView` type represents bundle, configurable, and group products. Complex product prices are returned as a price range, because price values can vary based on selected options. The type implements `ProductView`.
 
@@ -141,7 +141,7 @@ Field | Data Type | Description
 `maximum` | ProductViewPrice | Maximum price.
 `minimum` | ProductViewPrice | Minimum price.
 
-### SimpleProductView type {#SimpleProductView-type}
+### SimpleProductView type
 
 The `SimpleProductView` type represents all product types, except bundle, configurable, and group. Simple product prices do not contain price ranges. `SimpleProductView` implements `ProductView`.
 

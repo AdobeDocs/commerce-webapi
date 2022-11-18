@@ -68,7 +68,7 @@ mutation {
 
 ## Input attributes
 
-### PaypalExpressTokenInput {#PaypalExpressTokenInput}
+### PaypalExpressTokenInput
 
 The `PaypalExpressTokenInput` object defines the attributes required to receive a payment token from PayPal.
 
@@ -80,7 +80,7 @@ Attribute |  Data Type | Description
 `urls` | [`PaypalExpressUrlsInput!`](#PaypalExpressUrlsInput) | A set of relative URLs that PayPal will use in response to various actions during the authorization process.
 `use_paypal_credit` | Boolean | Indicates whether the buyer clicked the PayPal credit button. The default value is `false`
 
-### PaypalExpressUrlsInput {#PaypalExpressUrlsInput}
+### PaypalExpressUrlsInput
 
 The `PaypalExpressUrlsInput` object contains a set of relative URLs that PayPal will use in response to various actions during the authorization process. The application prepends the base URL to this value to create a full URL. For example, if the full URL is `https://www.example.com/path/to/page.html`, the relative URL is `path/to/page.html`. Use this input for Express Checkout and Payments Standard payment methods.
 
@@ -97,7 +97,7 @@ Attribute |  Data Type | Description
 
 The `createPaypalExpressToken` mutation previously returned a `PaypalExpressToken` object, which has been deprecated. The mutation now returns a `PaypalExpressTokenOutput` object. The contents of these objects are identical.
 
-### PaypalExpressTokenOutput {#PaypalExpressTokenOutput}
+### PaypalExpressTokenOutput
 
 The `PaypalExpressToken` object contains a token returned by PayPal and a set of URLs that allow the buyer to authorize payment and adjust checkout details.
 
@@ -106,7 +106,7 @@ Attribute |  Data Type | Description
 `paypal_urls` | [PaypalExpressUrlList](#PaypalExpressUrlList) | A set of URLs that allow the buyer to authorize payment and adjust checkout details
 `token` | String | The token returned by PayPal
 
-### PaypalExpressUrlList {#PaypalExpressUrlList}
+### PaypalExpressUrlList
 
 The `PaypalExpressUrlList` object defines a set of URLs that allow the buyer to authorize payment and adjust checkout details.
 

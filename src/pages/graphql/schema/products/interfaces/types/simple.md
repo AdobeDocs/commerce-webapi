@@ -9,7 +9,7 @@ contributor_link: https://www.atwix.com/
 The `SimpleProduct` data type implements the following interfaces:
 
 -  [ProductInterface](../index.md)
--  [PhysicalProductInterface](../index.md#physicalproductinterface)
+-  [PhysicalProductInterface](../attributes.md#physicalproductinterface)
 -  [CustomizableProductInterface](../customizable-option.md)
 -  [RoutableInterface](../routable.md)
 

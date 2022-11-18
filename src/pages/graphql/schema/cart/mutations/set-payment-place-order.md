@@ -81,9 +81,9 @@ The `placeOrderInput` object must contain the following attribute:
 Attribute |  Data Type | Description
 --- | --- | ---
 `cart_id` | String! | The unique ID that identifies the customer's cart
-`payment_method` | [PaymentMethodInput!](#PaymentMethodInput) | The payment method data for the cart
+`payment_method` | [PaymentMethodInput!](#paymentmethodinput-attributes) | The payment method data for the cart
 
-### PaymentMethodInput attributes {#PaymentMethodInput}
+### PaymentMethodInput attributes
 
 import QuotePaymentInput from '/src/pages/_includes/graphql/quote-payment-input.md'
 

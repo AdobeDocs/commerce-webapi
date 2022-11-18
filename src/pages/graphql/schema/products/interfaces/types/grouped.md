@@ -4,7 +4,7 @@ title: Grouped product data types | Commerce Web APIs
 
 # Grouped product data types
 
-The `GroupedProduct` data type implements [ProductInterface](../index.md) and [PhysicalProductInterface](../index.md#physicalproductinterface). As a result, attributes that are specific to grouped products can be used when performing a [products](../../queries/products.md) query. It also implements [RoutableInterface](../routable.md).
+The `GroupedProduct` data type implements [ProductInterface](../index.md) and [PhysicalProductInterface](../attributes.md#physicalproductinterface). As a result, attributes that are specific to grouped products can be used when performing a [products](../../queries/products.md) query. It also implements [RoutableInterface](../routable.md).
 
 ## GroupedProduct
 
@@ -14,7 +14,7 @@ Attribute | Type | Description
 --- | --- | ---
 `items` | [GroupedProductItem] | An array containing grouped product items
 
-## GroupedProductItem {#GroupedProductItem}
+## GroupedProductItem
 
 The `GroupedProductItem` object contains the following attributes:
 

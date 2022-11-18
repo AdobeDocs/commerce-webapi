@@ -4,11 +4,11 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `design` | String! | The name of the gift wrapping design
 `id` | ID! | Deprecated. Use `uid` instead. The unique identifier for the gift wrapping option
-`image` | [GiftWrappingImage](#GiftWrappingImage) | The preview image for the gift wrapping option
+`image` | [GiftWrappingImage](#giftwrappingimage-object) | The preview image for the gift wrapping option
 `price` | Money! | The price of the gift wrapping option
 `uid` | ID! | The unique identifier for the `GiftWrapping` object
 
-### GiftWrappingImage object {#GiftWrappingImage}
+### GiftWrappingImage object
 
 The `GiftWrappingImage` object must contain the following attributes.
 

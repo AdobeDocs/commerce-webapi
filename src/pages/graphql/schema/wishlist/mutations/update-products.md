@@ -293,9 +293,9 @@ The `updateProductsInWishlist` mutation requires the following input.
 Attribute |  Data Type | Description
 --- | --- | ---
 `wishlistId` | ID! | The ID of the customer's wish list
-`wishlistItems`| [[WishlistItemUpdateInput!](#WishlistItemUpdateInput)]! | An array containing products to be updated
+`wishlistItems`| [[WishlistItemUpdateInput!](#wishlistitemupdateinput-attributes)]! | An array containing products to be updated
 
-### WishlistItemUpdateInput attributes {#WishlistItemUpdateInput}
+### WishlistItemUpdateInput attributes
 
 The `WishlistItemUpdateInput` object defines each item to add to the wish list.
 
@@ -307,7 +307,7 @@ Attribute |  Data Type | Description
 `selected_options` | [ID!] | An array of strings corresponding to options the customer selected
 `wishlist_item_id` | ID! | The ID of the wishlist item to update
 
-### EnteredOptionInput attributes {#EnteredOptionInput}
+### EnteredOptionInput attributes
 
 import EnteredOptionInput from '/src/pages/_includes/graphql/entered-option-input.md'
 
@@ -322,13 +322,13 @@ Attribute |  Data Type | Description
 `user_errors` | [WishListUserInputError!]! | An array of errors encountered while adding products to a wish list
 `wishlist` | Wishlist! | Contains the wish list with all items that were successfully added
 
-### Wishlist attributes {#Wishlist}
+### Wishlist attributes
 
 import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
 
 <Wishlist />
 
-### WishListUserInputError attributes {#WishListUserInputError}
+### WishListUserInputError attributes
 
 import WishlistUserInputErrors from '/src/pages/_includes/graphql/wishlist-user-input-errors.md'
 

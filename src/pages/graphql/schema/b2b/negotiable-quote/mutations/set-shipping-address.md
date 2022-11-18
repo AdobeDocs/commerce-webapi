@@ -93,7 +93,7 @@ mutation {
 
 The `SetNegotiableQuoteShippingAddressInput` input object specifies the company user's cart ID and a shipping address.
 
-### SetNegotiableQuoteShippingAddressInput attributes {#SetNegotiableQuoteShippingAddressInput}
+### SetNegotiableQuoteShippingAddressInput attributes
 
 The `customer_address_id` field is deprecated. If you specify both the `customer_address_id` and `shipping_addresses` field, the system returns an error.
 
@@ -105,7 +105,7 @@ Attribute |  Data Type | Description
 `quote_uid` | ID! | The unique ID of a `NegotiableQuote` object
 `shipping_addresses` | [NegotiableQuoteShippingAddressInput!] | An array of shipping addresses to apply to the negotiable quote
 
-### NegotiableQuoteShippingAddressInput {#NegotiableQuoteShippingAddressInput}
+### NegotiableQuoteShippingAddressInput
 
 The `NegotiableQuoteShippingAddressInput` object contains the following attributes.
 
@@ -115,7 +115,7 @@ Attribute |  Data Type | Description
 `customer_address_uid` | ID | An ID from the company user's address book that uniquely identifies the address to be used for shipping
 `customer_notes` | String | Text provided by the company user
 
-### NegotiableQuoteAddressInput {#NegotiableQuoteAddressInput}
+### NegotiableQuoteAddressInput
 
 import NegotiableQuoteAddressInput from '/src/pages/_includes/graphql/negotiable-quote.md'
 
@@ -129,7 +129,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `quote` | NegotiableQuote | Contains details about the negotiable quote
 
-### NegotiableQuote attributes {#NegotiableQuote}
+### NegotiableQuote attributes
 
 import NegotiableQuote from '/src/pages/_includes/graphql/negotiable-quote.md'
 

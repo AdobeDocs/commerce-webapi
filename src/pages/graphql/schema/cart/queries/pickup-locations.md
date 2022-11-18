@@ -122,14 +122,14 @@ All top-level attributes are optional. If no filters are provided, the query ret
 
 Attribute | Data type | Description
 --- | --- | ---
-`area` | [AreaInput](#AreaInput) | Performs a search by location using a specified radius and search term
-`filters` | [PickupLocationFilterInput](#PickupLocationFilterInput) | Applies filters by attributes
-`sort` | [PickupLocationSortInput](#PickupLocationSortInput) | Specifies which attribute to sort on, and whether to return the results in ascending or descending order.
+`area` | [AreaInput](#areainput-object) | Performs a search by location using a specified radius and search term
+`filters` | [PickupLocationFilterInput](#pickuplocationfilterinput-object) | Applies filters by attributes
+`sort` | [PickupLocationSortInput](#pickuplocationsortinput-object) | Specifies which attribute to sort on, and whether to return the results in ascending or descending order.
 `pageSize` | Int | The maximum number of pickup locations to return at once. The attribute is optional. The default value is 20.
 `currentPage` | Int | Specifies which page of results to return. The default value is 1.
-`productsInfo` |[[ProductInfoInput]](#ProductInfoInput)| Contains an array of SKUs to filter on.
+`productsInfo` |[[ProductInfoInput]](#productinfoinput-object)| Contains an array of SKUs to filter on.
 
-### AreaInput object {#AreaInput}
+### AreaInput object
 
 Use the `AreaInput` to apply filtration by distance. All attributes are required.
 
@@ -138,7 +138,7 @@ Attribute | Data type | Description
 `radius` | Int! | The radius to the search, in kilometers
 `search_term` | String! | A combination of either the region, city, or postcode, a colon, and the country code. This value determines the location to use as the center of the search radius.  Valid search terms include Texas:US, Austin:US, and 78740:US. The two-letter country code must be uppercase
 
-### PickupLocationFilterInput object {#PickupLocationFilterInput}
+### PickupLocationFilterInput object
 
 Use the `PickupLocationFilterInput` to filter by pickup location attributes. See [FilterTypeInput](https://github.com/magento/magento2/blob/2.4/app/code/Magento/GraphQl/etc/schema.graphqls#L50).
 
@@ -153,7 +153,7 @@ Attribute | Data type | Description
 `region_id` | FilterTypeInput | Filter by region ID
 `street` | FilterTypeInput | Filter by street
 
-### PickupLocationSortInput object {#PickupLocationSortInput}
+### PickupLocationSortInput object
 
 `PickupLocationSortInput` provides the ability to sort results by pickup location attributes. See [SortEnum](https://github.com/magento/magento2/blob/2.4/app/code/Magento/GraphQl/etc/schema.graphqls#L88)
 
@@ -176,7 +176,7 @@ Attribute | Data type | Description
 `region_id` | SortEnum | ID of the region
 `street` | SortEnum | Street of the pickup location
 
-### ProductInfoInput object {#ProductInfoInput}
+### ProductInfoInput object
 
 `ProductInfoInput` contains a list of SKUs. If this object is provided in the query, then the response contains locations where all the products are available for in-store pickup. If even one product in the list cannot be used as an in-store pickup location, that location will not be included in the response.
 
@@ -190,11 +190,11 @@ Attribute | Data type | Description
 
 Attribute | Data type | Description
 --- | --- | ---
-`items` | [[PickupLocation]](#PickupLocation) | An array of pickup locations that match the specific search request
-`page_info` | [SearchResultPageInfo](#SearchResultPageInfo) | An object that includes the page_info and currentPage values specified in the query
+`items` | [[PickupLocation]](#pickuplocation-object) | An array of pickup locations that match the specific search request
+`page_info` | [SearchResultPageInfo](#searchresultpageinfo-object) | An object that includes the page_info and currentPage values specified in the query
 `total_count` | Int | The number of products returned
 
-### PickupLocation object {#PickupLocation}
+### PickupLocation object
 
 Defines Pickup Location information.
 
@@ -216,7 +216,7 @@ Attribute | Data type | Description
 `region_id` | Int | ID of the region
 `street` | String | Street of the pickup location
 
-### SearchResultPageInfo object {#SearchResultPageInfo}
+### SearchResultPageInfo object
 
 Attribute | Data type | Description
 --- | --- | ---

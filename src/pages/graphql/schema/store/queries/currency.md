@@ -72,9 +72,9 @@ Attribute | Data type | Description
 `base_currency_symbol` | String | The symbol for the specified base currency, such as $
 `default_display_currency_code` | String | Specifies if the currency code is set as the store's default
 `default_display_currency_symbol` | String | Specifies if the currency symbol is set as the store's default
-`exchange_rates` | [[ExchangeRate]](#exchangeRateAttributes) | An array of exchange rates specified in the store
+`exchange_rates` | [[ExchangeRate]](#exchange-rate-attributes) | An array of exchange rates specified in the store
 
-## Exchange rate attributes {#exchangeRateAttributes}
+## Exchange rate attributes
 
 The `ExchangeRate` object provides the following attributes:
 

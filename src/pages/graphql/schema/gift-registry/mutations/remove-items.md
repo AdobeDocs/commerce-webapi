@@ -90,9 +90,9 @@ The `RemoveGiftRegistryItemsOutput` output object contains the following attribu
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`gift_registry` | [GiftRegistry](#GiftRegistry) | The gift registry after removing items
+`gift_registry` | [GiftRegistry](#giftregistry-attributes) | The gift registry after removing items
 
-### GiftRegistry attributes {#GiftRegistry}
+### GiftRegistry attributes
 
 import GiftRegistry from '/src/pages/_includes/graphql/gift-registry.md'
 

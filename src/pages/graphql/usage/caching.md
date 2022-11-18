@@ -43,7 +43,7 @@ The application explicitly disallows caching the following queries.
 
 [Define the GraphQL schema for a module](../develop/index.md) describes the syntax of a valid query.
 
-## Caching for logged-in customers {#customers}
+## Caching for logged-in customers
 
 In general, guest shoppers see the same products, categories, and prices. Guest queries are easy to cache because content can be cached based on the URL and query alone. However, once the guest logs in as a customer, factors such their customer group or status as a B2B merchant can significantly affect what they see on the storefront.
 

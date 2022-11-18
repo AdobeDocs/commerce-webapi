@@ -577,7 +577,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `cart_id` | String! | A 32-character string that is created when you [create a cart](../mutations/create-empty-cart.md)
 
-## Output attributes {#cart-output}
+## Output attributes
 
 The top-level `Cart` object is listed first. All interfaces and child objects are listed in alphabetical order.
 
@@ -589,7 +589,7 @@ import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 
 <CartObject />
 
-### AppliedCoupon object {#AppliedCoupon}
+### AppliedCoupon object
 
 The `AppliedCoupon` object must contain the following attributes.
 
@@ -597,7 +597,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `code` | String! | The coupon code applied to the order
 
-### AppliedGiftCard object {#AppliedGiftCard}
+### AppliedGiftCard object
 
 The `AppliedGiftCard` object can contain the following attributes.
 
@@ -608,7 +608,7 @@ Attribute |  Data Type | Description
 `current_balance` | Money | Current balance remaining on the gift card
 `expiration_date` | String | Gift card expiration date
 
-### AppliedStoreCredit object {#AppliedStoreCredit}
+### AppliedStoreCredit object
 
 The `AppliedStoreCredit` object can contain the following attributes.
 
@@ -618,7 +618,7 @@ Attribute |  Data Type | Description
 `current_balance` | Money | The customer's store credit balance before applying store credit to the cart
 `enabled` | Boolean | Indicates whether store credits are enabled. If the feature is disabled, then the current balance will not be returned
 
-### AvailablePaymentMethod object {#AvailablePaymentMethod}
+### AvailablePaymentMethod object
 
 The `AvailablePaymentMethod` object must contain the following attributes.
 
@@ -627,7 +627,7 @@ Attribute |  Data Type | Description
 `code` |  String! | The payment method code
 `title` | String! | The payment method title
 
-### AvailableShippingMethod object {#AvailableShippingMethod}
+### AvailableShippingMethod object
 
 The `AvailableShippingMethod` object can contain the following attributes.
 
@@ -644,11 +644,11 @@ Attribute |  Data Type | Description
 `price_excl_tax` | Money! | The cost of shipping using this shipping method, excluding tax
 `price_incl_tax` | Money! | The cost of shipping using this shipping method, excluding tax
 
-### BillingCartAddress object {#BillingCartAddress}
+### BillingCartAddress object
 
 The `BillingCartAddress` object implements [`CartAddressInterface`](#CartAddressInterface). It does not define any additional attributes.
 
-### CartAddressCountry object {#CartAddressCountry}
+### CartAddressCountry object
 
 The `CartAddressCountry` object can contain the following attributes.
 
@@ -657,7 +657,7 @@ Attribute |  Data Type | Description
 `code` | String! | The country code
 `label` | String! | The display label for the country
 
-### CartAddressInterface {#CartAddressInterface}
+### CartAddressInterface
 
 The `CartAddressInterface` contains the following attributes.
 
@@ -665,16 +665,16 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `city` | String! | The city specified for the billing address
 `company` | String | The company specified for the billing address
-`country` | [CartAddressCountry!](#CartAddressCountry) | The country code and label for the billing address
+`country` | [CartAddressCountry!](#cartaddresscountry-object) | The country code and label for the billing address
 `customer_notes` | String | Comments made to the customer that accompanies the order
 `firstname` | String! | The customer's first name
 `lastname` | String! | The customer's last name
 `postcode` | String | The postal code for the billing address
-`region` | [CartAddressRegion](#CartAddressRegion) | An object containing the region label and code
+`region` | [CartAddressRegion](#cartaddressregion-object) | An object containing the region label and code
 `street` | [String!]! | The street for the billing address
 `telephone` | String | The telephone number for the billing address
 
-### CartAddressRegion object {#CartAddressRegion}
+### CartAddressRegion object
 
 The `CartAddressRegion` object can contain the following attributes.
 
@@ -684,7 +684,7 @@ Attribute |  Data Type | Description
 `label` | String | The display label for the region
 `region_id` | Int | The unique ID for a pre-defined region
 
-### CartDiscount object {#CartDiscount}
+### CartDiscount object
 
 The `CartDiscount` object must contain the following attributes.
 
@@ -693,7 +693,7 @@ Attribute |  Data Type | Description
 `amount` | Money | The amount of all discounts applied to the cart
 `label` | [String!]! | A concatenated list of strings that describe each applied discount
 
-### CartItemInterface {#CartItemInterface}
+### CartItemInterface
 
 The `CartItemInterface` has the following implementations:
 
@@ -706,31 +706,31 @@ The `CartItemInterface` has the following implementations:
 
 See [`CartItemInterface`](../interfaces/cart-item.md) for details.
 
-### CartItemQuantity object {#CartItemQuantity}
+### CartItemQuantity object
 
-The `CartItemQuantity` data type has been deprecated. Use the `cart_items_v2` attribute with the [`CartItemInterface`](#CartItemInterface) instead.
+The `CartItemQuantity` data type has been deprecated. Use the `cart_items_v2` attribute with the [`CartItemInterface`](#cartiteminterface) instead.
 
 Attribute |  Data Type | Description
 --- | --- | ---
 `cart_item_id` | Int! | Deprecated. Use `CartItemInterface.id` instead
 `quantity` | Float! | Deprecated. Use `CartItemInterface.quantity` instead
 
-### CartPrices object {#CartPrices}
+### CartPrices object
 
 The `CartPrices` object can contain the following attributes.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`applied_taxes` | [[CartTaxItem]](#CartTaxItem) | An array containing the names and amounts of taxes applied to the item
-`discount` | [CartDiscount](#CartDiscount) | Deprecated. Use `discounts` instead
-`discounts` | [[Discount]](#Discount) | An array containing all discounts applied to the cart
-`gift_options` | [GiftOptionsPrices](#GiftOptionsPrices) | The list of prices for the selected gift options
+`applied_taxes` | [[CartTaxItem]](#carttaxitem-object) | An array containing the names and amounts of taxes applied to the item
+`discount` | [CartDiscount](#cartdiscount-object) | Deprecated. Use `discounts` instead
+`discounts` | [[Discount]](#discount-object) | An array containing all discounts applied to the cart
+`gift_options` | [GiftOptionsPrices](#giftoptionsprices-object) | The list of prices for the selected gift options
 `grand_total` | Money | The total, including discounts, taxes, shipping, and other fees
 `subtotal_excluding_tax` | Money | Subtotal without taxes
 `subtotal_including_tax` | Money | Subtotal with taxes
 `subtotal_with_discount_excluding_tax` | Money | Subtotal with any discounts applied, but not taxes
 
-### CartTaxItem object {#CartTaxItem}
+### CartTaxItem object
 
 The `CartTaxItem` object must contain the following attributes.
 
@@ -739,7 +739,7 @@ Attribute |  Data Type | Description
 `amount` | Money! | The amount of tax applied to the item
 `label` | String! | The description of the tax
 
-### Discount object {#Discount}
+### Discount object
 
 A discount can be applied to the cart as a whole or to an item.
 
@@ -752,13 +752,13 @@ Attribute |  Data Type | Description
 `amount` | Money! | The amount of the discount applied to the cart
 `label` | String! | The description of the discount
 
-### GiftMessage object {#GiftMessage}
+### GiftMessage object
 
 import GiftMessage from '/src/pages/_includes/graphql/gift-message.md'
 
 <GiftMessage />
 
-### GiftOptionsPrices object {#GiftOptionsPrices}
+### GiftOptionsPrices object
 
 The `GiftOptionsPrices` object can contain the following attributes.
 
@@ -768,13 +768,13 @@ Attribute |  Data Type | Description
 `gift_wrapping_for_order` | Money | The price of the gift wrapping for the whole order
 `printed_card` | Money | The price of the printed card
 
-### GiftWrapping object {#GiftWrapping}
+### GiftWrapping object
 
 import GiftWrapping from '/src/pages/_includes/graphql/gift-wrapping.md'
 
 <GiftWrapping />
 
-### RewardPointsAmount {#RewardPointsAmount}
+### RewardPointsAmount
 
 The `RewardPointsAmount` object must contain the following attributes.
 
@@ -783,7 +783,7 @@ Attribute |  Data Type | Description
 `points` | Float! | The amount of reward points, in points
 `money` | Money! | The amount of reward points, in the store's currency
 
-### SelectedPaymentMethod object {#SelectedPaymentMethod}
+### SelectedPaymentMethod object
 
 The `SelectedPaymentMethod` object can contain the following attributes.
 
@@ -793,7 +793,7 @@ Attribute |  Data Type | Description
 `purchase_order_number` | String | The purchase order number
 `title` | String! | The payment method title
 
-### SelectedShippingMethod object {#SelectedShippingMethod}
+### SelectedShippingMethod object
 
 The `SelectedShippingMethod` object can contain the following attributes.
 
@@ -806,18 +806,18 @@ Attribute |  Data Type | Description
 `method_code` | String! | A shipping method code associated with a carrier
 `method_title` | String! | The label for the method code
 
-### ShippingCartAddress object {#ShippingCartAddress}
+### ShippingCartAddress object
 
 The `ShippingCartAddress` object implements [`CartAddressInterface`](#CartAddressInterface). It can also contain the following attributes.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`available_shipping_methods` | [[AvailableShippingMethod]](#AvailableShippingMethod) | An array that lists the shipping methods that can be applied to the cart
-`cart_items` | [[CartItemQuantity]](#CartItemQuantity) | Deprecated. Use `cart_items_v2` instead
+`available_shipping_methods` | [[AvailableShippingMethod]](#availableshippingmethod-object) | An array that lists the shipping methods that can be applied to the cart
+`cart_items` | [[CartItemQuantity]](#cartitemquantity-object) | Deprecated. Use `cart_items_v2` instead
 `cart_items_v2` | [CartItemInterface] | An array that lists the items in the cart
 `items_weight` | Float | Deprecated. This attribute is not applicable for GraphQL
 `pickup_location_code` | String | The code of the in-store pickup location where the customer will receive the order
-`selected_shipping_method` | [SelectedShippingMethod](#SelectedShippingMethod) | An object that describes the selected shipping method
+`selected_shipping_method` | [SelectedShippingMethod](#selectedshippingmethod-object) | An object that describes the selected shipping method
 
 ## Related topics
 

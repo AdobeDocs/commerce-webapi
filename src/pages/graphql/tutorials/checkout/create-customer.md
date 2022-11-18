@@ -87,6 +87,6 @@ The name of the header is `Authorization` and the value is `Bearer <token>`.
 
 [Authorization tokens](../../usage/authorization-tokens.md) describes the mutation further.
 
-## Verify this step {#verify-step}
+## Verify this step
 
 Sign in as a customer to the website using the email `john.doe@example.com` and password `b1b2b3l@w+`. You should be successfully logged in.

@@ -89,9 +89,9 @@ The `RemoveStoreCreditFromCartOutput` object returns the `Cart` object.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`cart` |[Cart!](#CartObject) | Describes the contents of the specified shopping cart
+`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
 
-### Cart object {#CartObject}
+### Cart object
 
 import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 

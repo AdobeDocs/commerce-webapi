@@ -92,9 +92,9 @@ The `updateGiftRegistryItems` mutation requires the following input.
 Attribute |  Data Type | Description
 --- | --- | ---
 `giftRegistryUid` | ID! | The unique ID of a `GiftRegistry` object
-`items`| [[UpdateGiftRegistryItemInput!]!](#UpdateGiftRegistryItemInput) | An array of items to update
+`items`| [[UpdateGiftRegistryItemInput!]!](#updategiftregistryiteminput-attributes) | An array of items to update
 
-### UpdateGiftRegistryItemInput attributes {#UpdateGiftRegistryItemInput}
+### UpdateGiftRegistryItemInput attributes
 
 Attribute |  Data Type | Description
 --- | --- | ---
@@ -108,9 +108,9 @@ The `UpdateGiftRegistryItemsOutput` output object contains the following attribu
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`gift_registry` | [GiftRegistry](#GiftRegistry) | The gift registry after updating items
+`gift_registry` | [GiftRegistry](#giftregistry-attributes) | The gift registry after updating items
 
-### GiftRegistry attributes {#GiftRegistry}
+### GiftRegistry attributes
 
 import GiftRegistry from '/src/pages/_includes/graphql/gift-registry.md'
 

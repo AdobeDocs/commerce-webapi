@@ -242,7 +242,7 @@ Attribute |  Data Type | Description
 `attribute_type` | String | The data type of the attribute
 `entity_type` | String | The type of entity that defines the attribute, such as `catalog_product`, `catalog_category`, or `customer`
 `input_type` | String | The frontend input type of the attribute
-`storefront_properties` | [StorefrontProperties](#StorefrontProperties) | Contains details about the storefront properties configured for the attribute {#StorefrontProperties}
+`storefront_properties` | [StorefrontProperties](#storefrontproperties-object) | Contains details about the storefront properties configured for the attribute
 
 ### AttributeOption object
 
@@ -253,7 +253,7 @@ Attribute |  Data Type | Description
 `label` | String | The name of an attribute option
 `value` | String | The value assigned to an attribute option
 
-### StorefrontProperties object {#StorefrontProperties}
+### StorefrontProperties object
 
 The `StorefrontProperties` object returns information about a product attribute. Storefront properties are configured in the Admin at **Stores** > Attributes > **Product** > `Attribute Name` > **Storefront Properties**.
 

@@ -6,7 +6,7 @@ title: urlResolver query | Commerce Web APIs
 
 <InlineAlert variant="warning" slots="text" />
 
-The `urlResolver` query has been deprecated. Use the [route](queries/route.md) query instead.
+The `urlResolver` query has been deprecated. Use the [route](route.md) query instead.
 
 A merchant can reconfigure (rewrite) the URL to any product, category, or CMS page. When the rewrite goes into effect, any links that point to the previous URL are redirected to the new address.
 
@@ -73,4 +73,4 @@ Attribute |  Data Type | Description
 
 ## Related topics
 
-[Products query](queries/products.md)
+[Products query](products.md)

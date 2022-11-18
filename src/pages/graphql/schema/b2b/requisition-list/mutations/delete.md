@@ -85,20 +85,20 @@ The `deleteRequisitionList` mutation returns the status of the operation and any
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`requisition_lists` | [[RequisitionLists](#RequisitionLists)] | Contains the customer's remaining requisition lists
+`requisition_lists` | [[RequisitionLists](#requisitionlists-attributes)] | Contains the customer's remaining requisition lists
 `status` | Boolean | Indicates whether the request to delete the requisition list was successful
 
-### RequisitionLists attributes {#RequisitionLists}
+### RequisitionLists attributes
 
 The RequisitionLists object contains array of requisition list items and pagination information.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`items` | [[RequisitionList](#RequisitionList)] | An array of requisition lists
+`items` | [[RequisitionList](#requisitionlists-attributes)] | An array of requisition lists
 `page_info` | SearchResultPageInfo | Contains pagination metadata
 `total_count` | Int | The number of returned requisition lists
 
-### RequisitionList attributes {#RequisitionList}
+### RequisitionList attributes
 
 import RequisitionList from '/src/pages/_includes/graphql/requisition-list.md'
 

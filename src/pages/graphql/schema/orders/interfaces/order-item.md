@@ -6,10 +6,10 @@ title: OrderItemInterface attributes and implementations | Commerce Web APIs
 
 `OrderItemInterface` provides details about items in a customer's order history. It has the following implementations:
 
-*  [`OrderItem`](#OrderItem)
-*  [`BundleOrderItem`](#BundleOrderItem)
-*  [`DownloadableOrderItem`](#DownloadableOrderItem)
-*  [`GiftCardOrderItem`](#GiftCardOrderItem)
+*  [`OrderItem`](#orderitem-attributes)
+*  [`BundleOrderItem`](#bundleorderitem-attributes)
+*  [`DownloadableOrderItem`](#downloadableorderitem-attributes)
+*  [`GiftCardOrderItem`](#giftcardorderitem-attributes)
 
 ## Attributes
 
@@ -19,41 +19,41 @@ import OrderItemInterface from '/src/pages/_includes/graphql/order-item-interfac
 
 ## Implementations
 
-### OrderItem attributes {#OrderItem}
+### OrderItem attributes
 
 The `OrderItem` object does not introduce any additional attributes to `OrderItemInterface`.
 
-### BundleOrderItem attributes {#BundleOrderItem}
+### BundleOrderItem attributes
 
 The `BundleOrderItem` object defines the following attribute:
 
 Attribute | Data type | Description
 --- | --- | ---
-`bundle_options` | [[ItemSelectedBundleOption]](#ItemSelectedBundleOption) | A list of bundle options that are assigned to the bundle product
+`bundle_options` | [[ItemSelectedBundleOption]](#itemselectedbundleoption-attributes) | A list of bundle options that are assigned to the bundle product
 
 import ItemSelectedBundleOption from '/src/pages/_includes/graphql/item-selected-bundle-option.md'
 
 <ItemSelectedBundleOption />
 
-### DownloadableOrderItem attributes {#DownloadableOrderItem}
+### DownloadableOrderItem attributes
 
 The `DownloadableOrderItem` object defines the following attribute:
 
 Attribute | Data type | Description
 --- | --- | ---
-`downloadable_links` | [[DownloadableItemsLinks]](#DownloadableItemsLinks) | A list of downloadable links that were ordered from the downloadable product
+`downloadable_links` | [[DownloadableItemsLinks]](#downloadableorderitem-attributes) | A list of downloadable links that were ordered from the downloadable product
 
 import DownloadableItemsLinks from '/src/pages/_includes/graphql/downloadable-items-links.md'
 
 <DownloadableItemsLinks />
 
-### GiftCardOrderItem attributes {#GiftCardOrderItem}
+### GiftCardOrderItem attributes
 
 The `GiftCardOrderItem` object defines the following attribute:
 
 Attribute | Data type | Description
 --- | --- | ---
-`gift_card` | [GiftCardItem](#GiftCardItem) | Selected gift card properties for an order item
+`gift_card` | [GiftCardItem](#giftcardorderitem-attributes) | Selected gift card properties for an order item
 
 import GiftCardItem from '/src/pages/_includes/graphql/gift-card-item.md'
 

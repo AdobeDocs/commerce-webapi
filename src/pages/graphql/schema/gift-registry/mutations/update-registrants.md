@@ -94,13 +94,13 @@ The `UpdateGiftRegistryRegistrantInput` object can contain the following attribu
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`dynamic_attributes` | [[GiftRegistryDynamicAttributeInput](#GiftRegistryDynamicAttributeInput)] | As a result of the update, only the values of provided attributes will be affected. If the attribute is missing in the request, its value will not be changed
+`dynamic_attributes` | [[GiftRegistryDynamicAttributeInput](#giftregistrydynamicattributeinput-attributes)] | As a result of the update, only the values of provided attributes will be affected. If the attribute is missing in the request, its value will not be changed
 `email` | String | The updated email address of the registrant
 `firstname` | String | The updated first name of the registrant
 `giftRegistryRegistrantUid` | ID! | The unique ID of a `giftRegistryRegistrant` object
 `lastname` | String | The updated last name of the registrant
 
-### GiftRegistryDynamicAttributeInput attributes {#GiftRegistryDynamicAttributeInput}
+### GiftRegistryDynamicAttributeInput attributes
 
 The `GiftRegistryDynamicAttributeInput` object can contain the following attributes:
 
@@ -115,9 +115,9 @@ The `UpdateGiftRegistryRegistrantsOutput` output object contains the following a
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`gift_registry` | [GiftRegistry](#GiftRegistry) | The gift registry after updating registrants
+`gift_registry` | [GiftRegistry](#giftregistry-attributes) | The gift registry after updating registrants
 
-### GiftRegistry attributes {#GiftRegistry}
+### GiftRegistry attributes
 
 import GiftRegistry from '/src/pages/_includes/graphql/gift-registry.md'
 

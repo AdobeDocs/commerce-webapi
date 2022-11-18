@@ -164,7 +164,7 @@ Attribute |  Data Type | Description
 `gift_wrapping_id` | ID | The unique ID for a `GiftWrapping` object to be used for the cart
 `printed_card_included` | Boolean! | Indicates whether the customer requested a printed card for the cart
 
-### GiftMessageInput {#GiftMessageInput}
+### GiftMessageInput
 
 The `GiftMessageInput` object must contain the following attributes:
 
@@ -180,9 +180,9 @@ The `SetGiftOptionsOnCartOutput` object contains the `Cart` object.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`cart` |[Cart!](#CartObject) | Describes the contents of the specified shopping cart
+`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
 
-### Cart object {#CartObject}
+### Cart object
 
 import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 

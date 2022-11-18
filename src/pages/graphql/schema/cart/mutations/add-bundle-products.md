@@ -203,19 +203,19 @@ The `AddBundleProductsToCartInput` object contains the following attributes:
 Attribute | Type | Description
 --- | --- | ---
 `cart_id` | String! | The unique ID that identifies the customer's cart
-`cart_items` | [[BundleProductCartItemInput!]!](#bundleProductCartItemInput) | An array of bundle items to add to the cart
+`cart_items` | [[BundleProductCartItemInput!]!](#bundleproductcartiteminput-object) | An array of bundle items to add to the cart
 
-### BundleProductCartItemInput object {#bundleProductCartItemInput}
+### BundleProductCartItemInput object
 
 The `BundleProductCartItemInput` object contains the following attributes:
 
 Attribute | Type | Description
 --- | --- | ---
-`bundle_options` | [[BundleOptionInput!]!](#bundleOptionInput) | An object that contains an array of options of the bundle product with the chosen value and quantity of each option
-`customizable_options` | [[CustomizableOptionInput!]](#customOptionInput) | An object that contains the ID and value of the product
-`data` | [CartItemInput!](#cartItemInput) | An object that contains the quantity and SKU of the bundle product
+`bundle_options` | [[BundleOptionInput!]!](#bundleoptioninput-object) | An object that contains an array of options of the bundle product with the chosen value and quantity of each option
+`customizable_options` | [[CustomizableOptionInput!]](#customizableoptioninput-object) | An object that contains the ID and value of the product
+`data` | [CartItemInput!](#cartiteminput-object) | An object that contains the quantity and SKU of the bundle product
 
-### BundleOptionInput object {#bundleOptionInput}
+### BundleOptionInput object
 
 The `BundleOptionInput` object contains the following attributes:
 
@@ -225,7 +225,7 @@ Attribute | Type | Description
 `quantity` | Float! | The number of a specific child item to add to the cart
 `value` | [String!]! | An array with the chosen value of the option
 
-### CartItemInput object {#cartItemInput}
+### CartItemInput object
 
 The `CartItemInput` object contains the following attributes:
 
@@ -234,7 +234,7 @@ Attribute | Type | Description
 `quantity` | Float! | The number of items to add to the cart
 `sku` | String! | The SKU of the product
 
-### CustomizableOptionInput object {#customOptionInput}
+### CustomizableOptionInput object
 
 The `CustomizableOptionInput` object can contain the following attributes:
 
@@ -248,9 +248,9 @@ The `AddBundleProductsToCartOutput` object contains the `Cart` object.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`cart` |[Cart!](#CartObject) | Describes the contents of the specified shopping cart
+`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
 
-### Cart object {#CartObject}
+### Cart object
 
 import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 

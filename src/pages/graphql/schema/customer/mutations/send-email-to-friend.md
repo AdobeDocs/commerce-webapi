@@ -91,7 +91,7 @@ Attribute |  Data Type | Description
 `recipients` | [SendEmailToFriendRecipientInput]! | An array containing information about each recipient
 `sender` | SendEmailToFriendSenderInput! | Information about the customer and the content of the message
 
-### SendEmailToFriendRecipientInput object {#SendEmailToFriendRecipientInput}
+### SendEmailToFriendRecipientInput object
 
 The `SendEmailToFriendRecipientInput` object must contain the following attributes:
 
@@ -100,7 +100,7 @@ Attribute |  Data Type | Description
 `email` | String! | The email address of the recipient
 `name` | String! | The name of the recipient
 
-### SendEmailToFriendSenderInput object {#SendEmailToFriendSenderInput}
+### SendEmailToFriendSenderInput object
 
 The `SendEmailToFriendSenderInput` object must contain the following attributes:
 

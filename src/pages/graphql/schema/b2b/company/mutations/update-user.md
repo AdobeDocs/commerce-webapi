@@ -136,7 +136,7 @@ mutation {
 
 The `CompanyUserUpdateInput` input object defines the company user data.
 
-### CompanyUserUpdateInput attributes {#CompanyUserUpdateInput}
+### CompanyUserUpdateInput attributes
 
 The `CompanyUserUpdateInput` object contains the following attributes:
 
@@ -159,7 +159,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `user` | Customer! | Contains company user data
 
-### Customer attributes {#Customer}
+### Customer attributes
 
 import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
 

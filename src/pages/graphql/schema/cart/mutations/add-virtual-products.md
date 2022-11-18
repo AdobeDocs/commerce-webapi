@@ -87,16 +87,16 @@ mutation {
 
 The top-level `AddVirtualProductsToCartInput` object is listed first. All child objects are listed in alphabetical order.
 
-### AddVirtualProductsToCartInput object {#AddVirtualProductsToCartInput}
+### AddVirtualProductsToCartInput object
 
 The `AddVirtualProductsToCartInput` object must contain the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
 `cart_id` | String! | The unique ID that identifies the customer's cart
-`cart_items` | [VirtualProductCartItemInput!](#VirtualProductCartItemInput) | Contains the cart item IDs and quantity of each item
+`cart_items` | [VirtualProductCartItemInput!](#virtualproductcartiteminput-object) | Contains the cart item IDs and quantity of each item
 
-### CartItemInput object {#CartItemInputVirtual}
+### CartItemInput object
 
 The `CartItemInput` object must contain the following attributes:
 
@@ -104,7 +104,7 @@ import CartItemInput from '/src/pages/_includes/graphql/cart-item-input-24.md'
 
 <CartItemInput />
 
-### CustomizableOptionInput object {#CustomizableOptionInputVirtual}
+### CustomizableOptionInput object
 
 The `CustomizableOptionInput` object can contain the following attributes:
 
@@ -112,14 +112,14 @@ import CustomizableOptionInput from '/src/pages/_includes/graphql/customizable-o
 
 <CustomizableOptionInput />
 
-### VirtualProductCartItemInput object {#VirtualProductCartItemInput}
+### VirtualProductCartItemInput object
 
 The `VirtualProductCartItemInput` object must contain the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`customizable_options` |[[CustomizableOptionInput]](#CustomizableOptionInputVirtual) | An array that defines customizable options for the product
-`data` | [CartItemInput!](#CartItemInputVirtual) | An object containing the `sku` and `quantity` of the product
+`customizable_options` |[[CustomizableOptionInput]](#customizableoptioninput-object) | An array that defines customizable options for the product
+`data` | [CartItemInput!](#cartiteminput-object) | An object containing the `sku` and `quantity` of the product
 
 ## Output attributes
 
@@ -127,9 +127,9 @@ The `AddVirtualProductsToCartOutput` object contains the `Cart` object.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`cart` |[Cart!](#CartObject) | Describes the contents of the specified shopping cart
+`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
 
-### Cart object {#CartObject}
+### Cart object
 
 import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 

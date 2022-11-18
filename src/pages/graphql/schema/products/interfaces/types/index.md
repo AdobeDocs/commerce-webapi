@@ -8,12 +8,12 @@ Adobe Commerce and Magento Open Source provides multiple product types, and most
 
 Product type | Implements | Has product-specific attributes?
 --- | --- | ---
-[BundleProduct](bundle.md) | [ProductInterface](../index.md), [PhysicalProductInterface](../index.md#physicalproductinterface), [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md) | Yes
-[ConfigurableProduct](configurable.md) | [ProductInterface](../index.md), [PhysicalProductInterface](../index.md#physicalproductinterface), [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md) | Yes
+[BundleProduct](bundle.md) | [ProductInterface](../index.md), [PhysicalProductInterface](../attributes.md#physicalproductinterface), [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md) | Yes
+[ConfigurableProduct](configurable.md) | [ProductInterface](../index.md), [PhysicalProductInterface](../attributes.md#physicalproductinterface), [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md) | Yes
 [DownloadableProduct](downloadable.md) | [ProductInterface](../index.md),  [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md)  | Yes
-[GiftCardProduct](gift-card.md) | [ProductInterface](../index.md),  [PhysicalProductInterface](../index.md#PhysicalProductInterface), [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md)| Yes
-[GroupedProduct](grouped.md) | [ProductInterface](../index.md), [PhysicalProductInterface](../index.md#PhysicalProductInterface), [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md) | Yes
-[SimpleProduct](simple.md) | [ProductInterface](../index.md), [PhysicalProductInterface](../index.md#PhysicalProductInterface), [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md) | No
+[GiftCardProduct](gift-card.md) | [ProductInterface](../index.md),  [PhysicalProductInterface](../attributes.md#physicalproductinterface), [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md)| Yes
+[GroupedProduct](grouped.md) | [ProductInterface](../index.md), [PhysicalProductInterface](../attributes.md#physicalproductinterface), [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md) | Yes
+[SimpleProduct](simple.md) | [ProductInterface](../index.md), [PhysicalProductInterface](../attributes.md#physicalproductinterface), [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md) | No
 [VirtualProduct](virtual.md) | [ProductInterface](../index.md),  [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md) | No
 
 ## Query for product-specific attributes

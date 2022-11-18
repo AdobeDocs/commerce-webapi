@@ -92,14 +92,14 @@ mutation {
 
 The top-level `setShippingMethodsOnCartInput` object is listed first. All child objects are listed in alphabetical order.
 
-### setShippingMethodsOnCartInput object {#setShippingMethodsOnCartInput}
+### setShippingMethodsOnCartInput object
 
 Attribute |  Data Type | Description
 --- | --- | ---
 `cart_id` | String! | The unique ID that identifies the customer's cart
-`shipping_methods` | [ShippingMethodInput!](#ShippingMethodInput) | The shipping address for a specific cart
+`shipping_methods` | [ShippingMethodInput!](#shippingmethodinput-object) | The shipping address for a specific cart
 
-### ShippingMethodInput object {#ShippingMethodInput}
+### ShippingMethodInput object
 
 Attribute |  Data Type | Description
 --- | --- | ---
@@ -114,7 +114,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `cart` |[Cart](#cart-object) | Describes the contents of the specified shopping cart
 
-### Cart object {#CartObject}
+### Cart object
 
 import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 

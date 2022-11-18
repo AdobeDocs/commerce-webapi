@@ -77,9 +77,9 @@ The `deleteRequisitionListItems` object returns the requisition list after the d
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`requisition_list` | [RequisitionList](#RequisitionList) | The requisition list after removing items
+`requisition_list` | [RequisitionList](#requisitionlist-attributes) | The requisition list after removing items
 
-### RequisitionList attributes {#RequisitionList}
+### RequisitionList attributes
 
 import RequisitionList from '/src/pages/_includes/graphql/requisition-list.md'
 

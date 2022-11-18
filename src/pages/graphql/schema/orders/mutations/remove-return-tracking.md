@@ -91,9 +91,9 @@ The `RemoveReturnTrackingOutput` object contains the following attributes.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`return` | [Return](#Return) | Contains details about the modified return
+`return` | [Return](#return-object) | Contains details about the modified return
 
-### Return object {#Return}
+### Return object
 
 import Return from '/src/pages/_includes/graphql/return.md'
 

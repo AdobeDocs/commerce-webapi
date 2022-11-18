@@ -303,7 +303,7 @@ import CategoryFilterInput from '/src/pages/_includes/graphql/category-filter-in
 
 <CategoryFilterInput />
 
-## Output attributes {#Categories}
+## Output attributes
 
 The query returns a `CategoryTree` object, which implements [`CategoryInterface`](category.md). The `CategoryTree` object can contain the following attribute and all attributes defined in `CategoryInterface`:
 

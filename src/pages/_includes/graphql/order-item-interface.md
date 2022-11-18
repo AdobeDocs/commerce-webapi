@@ -1,7 +1,7 @@
 Attribute |  Data Type | Description
 --- | --- | ---
 `discounts` | [Discount] | Final discount information for the product
-`entered_options` | [`[OrderItemOption]`](#OrderItemOption) | The entered option for the base product, such as a logo or image
+`entered_options` | [`[OrderItemOption]`](#orderitemoption-attributes) | The entered option for the base product, such as a logo or image
 `id` | ID! | The unique identifier for the order item
 `product_name` | String | The name of the base product
 `product_sale_price` | Money! | The sale price of the base product, including selected options
@@ -14,10 +14,10 @@ Attribute |  Data Type | Description
 `quantity_refunded` | Float | The number of refunded items
 `quantity_returned` | Float | The number of returned items
 `quantity_shipped` | Float | The number of shipped items
-`selected_options` | [`[OrderItemOption]`](#OrderItemOption) | The selected options for the base product, such as color or size
+`selected_options` | [`[OrderItemOption]`](#orderitemoption-attributes) | The selected options for the base product, such as color or size
 `status` | String | The status of the order item
 
-#### OrderItemOption attributes {#OrderItemOption}
+#### OrderItemOption attributes
 
 Attribute | Data type | Description
 --- | --- | ---

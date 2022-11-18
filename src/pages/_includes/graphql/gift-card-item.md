@@ -1,4 +1,4 @@
-#### GiftCardItem attributes {#GiftCardItem}
+#### GiftCardItem attributes
 
 The `GiftCardItem` object contains selected buyer-entered gift card properties for an order item.
 

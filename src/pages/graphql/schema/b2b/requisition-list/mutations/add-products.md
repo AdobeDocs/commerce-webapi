@@ -100,10 +100,10 @@ The `addProductsToRequisitionList` mutation requires the following input.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`requisitionListItems`| [[RequisitionListItemsInput](#RequisitionListItemsInput)!]! | An array of products to be added to the requisition list
+`requisitionListItems`| [[RequisitionListItemsInput](#requisitionlistitemsinput-attributes)!]! | An array of products to be added to the requisition list
 `requisitionListUid`| ID! | The unique ID of the requisition list
 
-### RequisitionListItemsInput attributes {#RequisitionListItemsInput}
+### RequisitionListItemsInput attributes
 
 The `RequisitionListItemsInput` type contains the list of products to add to a requisition list.
 
@@ -121,9 +121,9 @@ The `addProductsToRequisitionList` object returns the requisition list object.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`requisition_list` | [[RequisitionList](#RequisitionList)] | The requisition list after the items were added
+`requisition_list` | [[RequisitionList](#requisitionlist-attributes)] | The requisition list after the items were added
 
-### RequisitionList attributes {#RequisitionList}
+### RequisitionList attributes
 
 import RequisitionList from '/src/pages/_includes/graphql/requisition-list.md'
 

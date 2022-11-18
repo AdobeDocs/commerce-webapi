@@ -6,15 +6,15 @@ Attribute |  Data Type | Description
 `comments`| [ReturnComment] | A list of comments posted for the return request
 `created_at` | String! | The date the return was requested
 `customer_email` | String! | Email of the person who created the return request
-`customer` | [ReturnCustomer](#ReturnCustomer) | The name of the person who requested the return
-`items`| [[ReturnItem]](#ReturnItem) | A list of items being returned
+`customer` | [ReturnCustomer](#returncomment-attributes) | The name of the person who requested the return
+`items`| [[ReturnItem]](#returnitem-attributes) | A list of items being returned
 `number` | String! | Human-readable return number
-`order` | [CustomerOrder](../../graphql/schema/customer/queries/customer.md#orders) | The order associated with the return
-`shipping` | [ReturnShipping](#ReturnShipping) | Shipping information for the return
+`order` | [CustomerOrder](../../graphql/schema/customer/queries/customer.md#orders-input-attributes) | The order associated with the return
+`shipping` | [ReturnShipping](#returnshipping-attributes) | Shipping information for the return
 `status` |  ReturnStatus | An enum indicating the status of the return request. Possible values are APPROVED, AUTHORIZED, CLOSED, DENIED, PARTIALLY_APPROVED, PARTIALLY_AUTHORIZED, PARTIALLY_RECEIVED, PARTIALLY_REJECTED, PENDING, PROCESSED_AND_CLOSED, RECEIVED, and REJECTED
 `uid` | ID! | The unique ID of a `Return` object
 
-#### ReturnComment attributes {#ReturnComment}
+#### ReturnComment attributes
 
 The ReturnComment object provides details about an individual comment in a refund request. Comments can be added by a customer or the merchant.
 
@@ -25,7 +25,7 @@ Attribute |  Data Type | Description
 `text` | String! | The contents of the comment
 `uid` | ID! | The unique ID of a `ReturnComment` object
 
-#### ReturnCustomAttribute attributes {#ReturnCustomAttribute}
+#### ReturnCustomAttribute attributes
 
 Attribute |  Data Type | Description
 --- | --- | ---
@@ -33,7 +33,7 @@ Attribute |  Data Type | Description
 `uid` | ID! | The unique ID of a `ReturnCustomAttribute` attribute
 `value` | String! | A JSON-encoded value of the attribute
 
-#### ReturnCustomer attributes {#ReturnCustomer}
+#### ReturnCustomer attributes
 
 The ReturnCustomer object contains information about the person requesting a return.
 
@@ -43,29 +43,29 @@ Attribute |  Data Type | Description
 `firstname` | String | The first name of the refund requester
 `lastname` | String | The last name of the refund requester
 
-#### ReturnItem attributes {#ReturnItem}
+#### ReturnItem attributes
 
 The ReturnItem object provides details about an individual item in a return request.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`custom_attributes` | [[ReturnCustomAttribute]](#ReturnCustomAttribute) | Return item custom attributes that are visible on the storefront
+`custom_attributes` | [[ReturnCustomAttribute]](#returncustomattribute-attributes) | Return item custom attributes that are visible on the storefront
 `order_item` | [OrderItemInterface!](../../graphql/schema/orders/interfaces/order-item.md) | Provides access to the product being returned, including information about selected and entered options
 `quantity` | Float! | The quantity of the item the merchant authorized to be returned
 `request_quantity` | Float! | The quantity of the item requested to be returned
 `status`| ReturnItemStatus! | An enum indicating the return status of the item. Possible values are APPROVED, AUTHORIZED, DENIED, PENDING, RECEIVED, and REJECTED
 `uid`| ID! | The unique ID of an item of a `Return` object
 
-#### ReturnShipping attributes {#ReturnShipping}
+#### ReturnShipping attributes
 
 The ReturnShipping object can contain the merchant's shipping address and tracking information.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`address`| [ReturnShippingAddress](#ReturnShippingAddress) | The merchant-defined return shipping address
-`tracking(uid: ID)` | [[ReturnShippingTracking](#ReturnShippingTracking)] | The unique ID for a `ReturnShippingTracking` object. If a single UID is specified, contains a single tracking record. Otherwise, contains all tracking information
+`address`| [ReturnShippingAddress](#returnshippingaddress-attributes) | The merchant-defined return shipping address
+`tracking(uid: ID)` | [[ReturnShippingTracking](#returnshippingtracking-attributes)] | The unique ID for a `ReturnShippingTracking` object. If a single UID is specified, contains a single tracking record. Otherwise, contains all tracking information
 
-#### ReturnShippingAddress attributes {#ReturnShippingAddress}
+#### ReturnShippingAddress attributes
 
 The ReturnShippingAddress object defines the merchant address for receiving returned items.
 
@@ -79,7 +79,7 @@ Attribute |  Data Type | Description
 `street` | [String]! | The street address for product returns
 `telephone` | String | The telephone number for product returns
 
-#### ReturnShippingCarrier attributes {#ReturnShippingCarrier}
+#### ReturnShippingCarrier attributes
 
 The ReturnShippingCarrier object contains details about the shipping carrier used to return a product.
 
@@ -88,18 +88,18 @@ Attribute |  Data Type | Description
 `label` | String! | A description of the shipping carrier
 `uid` | ID! | The unique ID of a `ReturnShippingCarrier` object
 
-#### ReturnShippingTracking attributes {#ReturnShippingTracking}
+#### ReturnShippingTracking attributes
 
 The ReturnShippingTracking object contains tracking information for an approved return.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`carrier` | [ReturnShippingCarrier!](#ReturnShippingCarrier) | Contains details of a shipping carrier
-`status` | [ReturnShippingTrackingStatus](#ReturnShippingTrackingStatus) | Contains details about the status of a shipment
+`carrier` | [ReturnShippingCarrier!](#returnshippingcarrier-attributes) | Contains details of a shipping carrier
+`status` | [ReturnShippingTrackingStatus](#returnshippingtrackingstatus-attributes) | Contains details about the status of a shipment
 `tracking_number` | String! | A tracking number assigned by the carrier
 `uid` | ID! | The unique ID assigned of a `ReturnShippingTracking` object
 
-#### ReturnShippingTrackingStatus attributes {#ReturnShippingTrackingStatus}
+#### ReturnShippingTrackingStatus attributes
 
 The ReturnShippingTrackingStatus object contains tracking status information for an approved return.
 

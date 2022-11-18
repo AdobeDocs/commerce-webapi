@@ -84,9 +84,9 @@ The `updateRequisitionList` mutation returns the new requisition list after upda
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`requisition_list` | [[RequisitionList](#RequisitionList)] | The updated requisition list
+`requisition_list` | [[RequisitionList](#requisitionlist-attributes)] | The updated requisition list
 
-### RequisitionList attributes {#RequisitionList}
+### RequisitionList attributes
 
 import RequisitionList from '/src/pages/_includes/graphql/requisition-list.md'
 

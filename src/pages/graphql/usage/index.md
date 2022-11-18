@@ -135,7 +135,7 @@ Variables are defined separately in JSON:
 }
 ```
 
-## Staging queries {#staging}
+## Staging queries
 
 GraphQL allows you to use certain queries to return preview information for staged content. Staging, a Adobe Commerce feature, allows merchants to schedule a set of changes to the storefront that run for a prescribed time in the future. These changes, also known as a _campaign_, are defined within the Admin. Customers do not have access to staged content, and as a result, staging queries have requirements that do not apply to traditional queries and mutations.
 

@@ -150,7 +150,7 @@ mutation {
 
 The `CompanyUserCreateInput` input object defines the company user data.
 
-### CompanyUserCreateInput attributes {#CompanyUserCreateInput}
+### CompanyUserCreateInput attributes
 
 The `CompanyUserCreateInput` object contains the following attributes:
 
@@ -173,7 +173,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `user` | Customer! | Contains company user data
 
-### Customer attributes {#Customer}
+### Customer attributes
 
 import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
 

@@ -209,7 +209,7 @@ Attribute | Data type | Description
 --- | --- | ---
 `id` | Int | The category ID to use as the starting point of your category search
 
-## Output attributes {#Categories}
+## Output attributes
 
 The query returns a `CategoryTree` object, which implements [`CategoryInterface`](category.md). The `CategoryTree` object can contain the following attribute, as we as all attributes defined in `CategoryInterface`:
 

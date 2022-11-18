@@ -63,4 +63,4 @@ Update the `graphql.xml` and `events.xml` file in your module's `etc` directory 
 ## Related Topics
 
 *  [Events and observers](https://developer.adobe.com/commerce/php/development/components/events-and-observers/)
-*  [urlResolver endpoint](../schema/products/url-resolver.md)
+*  [urlResolver endpoint](../schema/products/queries/url-resolver.md)

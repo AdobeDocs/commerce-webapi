@@ -46,7 +46,7 @@ The following example requests a token in a Payflow Link transaction.
 
 ## Input attributes
 
-### PayflowLinkTokenInput {#PayflowLinkTokenInput}
+### PayflowLinkTokenInput
 
 The `PayflowLinkTokenInput` object defines the attributes required to receive a Payflow Link token from PayPal.
 

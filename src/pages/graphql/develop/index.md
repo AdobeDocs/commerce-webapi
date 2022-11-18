@@ -114,7 +114,7 @@ The search returns products whose `category_id` equals 1.
 }
 ```
 
-### Specify output attributes {#specify-output-attributes}
+### Specify output attributes
 
 You must know the data type of each attribute, whether it is scalar or an object, and whether it can be part of an array. In addition, each attribute within an object must be defined in the same manner.
 

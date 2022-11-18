@@ -81,9 +81,9 @@ The `createRequisitionList` mutation returns the new requisition list.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`requisition_list` | [[RequisitionList](#RequisitionList)] | The created requisition list
+`requisition_list` | [[RequisitionList](#requisitionlist-attributes)] | The created requisition list
 
-### RequisitionList attributes {#RequisitionList}
+### RequisitionList attributes
 
 import RequisitionList from '/src/pages/_includes/graphql/requisition-list.md'
 

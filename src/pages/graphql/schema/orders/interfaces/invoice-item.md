@@ -6,10 +6,10 @@ title: InvoiceItemInterface attributes and implementations | Commerce Web APIs
 
 `InvoiceItemInterface` provides details about items in a customer's order history that were invoiced. It has the following implementations:
 
-*  [`BundleInvoiceItem`](#BundleInvoiceItem)
-*  [`DownloadableInvoiceItem`](#DownloadableInvoiceItem)
-*  [`GiftCardInvoiceItem`](#GiftCardInvoiceItem)
-*  [`InvoiceItem`](#InvoiceItem)
+*  [`BundleInvoiceItem`](#bundleinvoiceitem-attributes)
+*  [`DownloadableInvoiceItem`](#downloadableinvoiceitem-attributes)
+*  [`GiftCardInvoiceItem`](#giftcardinvoiceitem-attributes)
+*  [`InvoiceItem`](#invoiceitem-attributes)
 
 ## Attributes
 
@@ -21,43 +21,43 @@ import InvoiceItemInterface from '/src/pages/_includes/graphql/invoice-item-inte
 
 ## Implementations
 
-### BundleInvoiceItem attributes {#BundleInvoiceItem}
+### BundleInvoiceItem attributes
 
 The `BundleInvoiceItem` object defines the following attribute:
 
 Attribute | Data type | Description
 --- | --- | ---
-`bundle_options` | [[ItemSelectedBundleOption]](#ItemSelectedBundleOption) | A list of bundle options that are assigned to the bundle product
+`bundle_options` | [[ItemSelectedBundleOption]](#itemselectedbundleoption-attributes) | A list of bundle options that are assigned to the bundle product
 
 import ItemSelectedBundleOption from '/src/pages/_includes/graphql/item-selected-bundle-option.md'
 
 <ItemSelectedBundleOption />
 
-### DownloadableInvoiceItem attributes {#DownloadableInvoiceItem}
+### DownloadableInvoiceItem attributes
 
 The `DownloadableInvoiceItem` object defines the following attribute:
 
 Attribute | Data type | Description
 --- | --- | ---
-`downloadable_links` | [[DownloadableItemsLinks]](#DownloadableItemsLinks) | A list of downloadable links from the invoiced downloadable product
+`downloadable_links` | [[DownloadableItemsLinks]](#downloadableitemslinks-attributes) | A list of downloadable links from the invoiced downloadable product
 
 import DownloadableItemsLinks from '/src/pages/_includes/graphql/downloadable-items-links.md'
 
 <DownloadableItemsLinks />
 
-### GiftCardInvoiceItem attributes {#GiftCardInvoiceItem}
+### GiftCardInvoiceItem attributes
 
 The `GiftCardInvoiceItem` object defines the following attribute:
 
 Attribute | Data type | Description
 --- | --- | ---
-`gift_card` | [GiftCardItem](#GiftCardItem) | Selected gift card properties for an invoiced item
+`gift_card` | [GiftCardItem](#giftcarditem-attributes) | Selected gift card properties for an invoiced item
 
 import GiftCardItem from '/src/pages/_includes/graphql/gift-card-item.md'
 
 <GiftCardItem />
 
-### InvoiceItem attributes {#InvoiceItem}
+### InvoiceItem attributes
 
 The `InvoiceItem` object does not introduce any additional attributes to `InvoiceItemInterface`.
 

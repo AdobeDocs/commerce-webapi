@@ -8,7 +8,7 @@ A GraphQL union represents an object that could be one of several data types, bu
 
 See the GraphQL specification for more details about [unions](https://graphql.org/learn/schema/#union-types).
 
-The [`CompanyStructureEntity` union](../queries/company.md#CompanyStructureItem) provides details about a node in a company structure.
+The `CompanyStructureEntity` union provides details about a node in a company structure.
 
 **Possible types:**
 

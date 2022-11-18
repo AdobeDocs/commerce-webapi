@@ -113,7 +113,7 @@ mutation {
 
 The `RemoveProductsFromCompareListInput` input object defines the comparison list to be modified.
 
-### RemoveProductsFromCompareListInput attributes {#removeProductsFromCompareListInput}
+### RemoveProductsFromCompareListInput attributes
 
 The `RemoveProductsFromCompareListInput` object contains the following attributes:
 

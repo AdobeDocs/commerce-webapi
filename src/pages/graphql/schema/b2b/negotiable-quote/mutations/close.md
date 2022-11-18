@@ -107,11 +107,11 @@ import NegotiableQuotesInput from '/src/pages/_includes/graphql/negotiable-quote
 
 <NegotiableQuotesInput />
 
-### CloseNegotiableQuoteOperationResult attributes {#CloseNegotiableQuoteOperationResult}
+### CloseNegotiableQuoteOperationResult attributes
 
 The [`CloseNegotiableQuoteOperationResult` union](../unions/index.md) provides details about the result of a request to close a negotiable quote. To return these details, specify fragments on the `CloseNegotiableQuoteOperationFailure` and `NegotiableQuoteUidOperationSuccess` objects. Specify the `__typename` attribute to distinguish the object types in the response.
 
-### CloseNegotiableQuoteOperationFailure attributes {#CloseNegotiableQuoteOperationFailure}
+### CloseNegotiableQuoteOperationFailure attributes
 
 The CloseNegotiableQuoteOperationFailure type contains details about a failed close operation on a negotiable quote. It contains the following fields.
 
@@ -120,7 +120,7 @@ Attribute | Data Type | Description
 `errors` | [CloseNegotiableQuoteError!]! | An array of errors encountered while attempting close the negotiable quote
 `quote_uid` | ID! | The unique ID of a `NegotiableQuote` object
 
-### CloseNegotiableQuoteError attributes {#CloseNegotiableQuoteError}
+### CloseNegotiableQuoteError attributes
 
 The `CloseNegotiableQuoteError` union type contains one or more of the following data types, all of which implement `ErrorInterface`.
 
@@ -128,7 +128,7 @@ The `CloseNegotiableQuoteError` union type contains one or more of the following
 *  `NegotiableQuoteInvalidStateError`
 *  `NoSuchEntityUidError`
 
-#### InternalError attributes {#InternalError}
+#### InternalError attributes
 
 The `InternalError` object contains an error message if an internal error occurred.
 
@@ -136,7 +136,7 @@ Attribute | Data Type | Description
 --- | --- | ---
 `message` | String! | The returned error message
 
-#### NegotiableQuoteInvalidStateError attributes {#NegotiableQuoteInvalidStateError}
+#### NegotiableQuoteInvalidStateError attributes
 
 The `NegotiableQuoteInvalidStateError` object contains an error message indicating that an operation was attempted on a negotiable quote in an invalid state.
 
@@ -144,7 +144,7 @@ Attribute | Data Type | Description
 --- | --- | ---
 `message` | String! | The returned error message
 
-#### NoSuchEntityUidError attributes {#NoSuchEntityUidError}
+#### NoSuchEntityUidError attributes
 
 The `NoSuchEntityUidError` object contains an error message when an invalid UID was specified.
 
@@ -153,7 +153,7 @@ Attribute | Data Type | Description
 `message` | String! | The returned error message
 `uid` | ID! | The specified invalid unique ID of an object
 
-### NegotiableQuoteUidOperationSuccess attributes {#NoSuchEntityUidError}
+### NegotiableQuoteUidOperationSuccess attributes
 
 The `NegotiableQuoteUidOperationSuccess` object contains details about a successful operation on a negotiable quote. It implements the `NegotiableQuoteUidNonFatalResultInterface`, which defines the following field
 
@@ -161,7 +161,7 @@ Attribute | Data Type | Description
 --- | --- | ---
 quote_uid | ID! @doc(description: "The unique ID of a `NegotiableQuote` object
 
-### NegotiableQuote attributes {#NegotiableQuote}
+### NegotiableQuote attributes
 
 import NegotiableQuote from '/src/pages/_includes/graphql/negotiable-quote.md'
 

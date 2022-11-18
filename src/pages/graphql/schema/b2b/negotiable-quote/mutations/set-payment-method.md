@@ -110,7 +110,7 @@ mutation {
 
 The `SetNegotiableQuotePaymentMethodInput` input object specifies the company user's cart ID and the payment method.
 
-### SetNegotiableQuotePaymentMethodInput attributes {#SetNegotiableQuotePaymentMethodInput}
+### SetNegotiableQuotePaymentMethodInput attributes
 
 The `SetNegotiableQuotePaymentMethodInput` object contains the following attributes.
 
@@ -134,7 +134,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `quote` | NegotiableQuote | The updated negotiable quote
 
-### NegotiableQuote attributes {#NegotiableQuote}
+### NegotiableQuote attributes
 
 import NegotiableQuote from '/src/pages/_includes/graphql/negotiable-quote.md'
 

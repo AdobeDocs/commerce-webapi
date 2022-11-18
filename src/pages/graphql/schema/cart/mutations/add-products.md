@@ -558,9 +558,9 @@ The `addProductsToCart` mutation must contain the following attributes:
 Attribute |  Data Type | Description
 --- | --- | ---
 `cartId` | String! | The unique ID that identifies the customer's cart
-`cartItems` | [[CartItemInput!]!](#CartItemInput) | Contains the cart item IDs and quantity of each item
+`cartItems` | [[CartItemInput!]!](#cartiteminput-object) | Contains the cart item IDs and quantity of each item
 
-### CartItemInput object {#CartItemInput}
+### CartItemInput object
 
 The `CartItemInput` object must contain the following attributes:
 
@@ -568,7 +568,7 @@ import CartItemInput from '/src/pages/_includes/graphql/cart-item-input-24.md'
 
 <CartItemInput />
 
-### EnteredOptionInput object {#EnteredOptionInput}
+### EnteredOptionInput object
 
 import EnteredOptionInput from '/src/pages/_includes/graphql/entered-option-input.md'
 
@@ -580,10 +580,10 @@ The `AddProductsToCartOutput` object contains the `Cart` object.
 
 | Attribute     | Data Type                                  | Description                                                    |
 |---------------|--------------------------------------------|----------------------------------------------------------------|
-| `cart`        | [Cart!](#CartObject)                       | Describes the contents of the specified shopping cart          |
-| `user_errors` | [CartUserInputError!](#CartUserInputError) | An array of errors encountered while adding products to a cart |
+| `cart`        | [Cart!](#cart-object)                       | Describes the contents of the specified shopping cart          |
+| `user_errors` | [CartUserInputError!](#cartuserinputerror-attributes) | An array of errors encountered while adding products to a cart |
 
-### Cart object {#CartObject}
+### Cart object
 
 import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 
@@ -591,7 +591,7 @@ import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 
 [Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
-### CartUserInputError attributes {#CartUserInputError}
+### CartUserInputError attributes
 
 import CartUserInputErrors from '/src/pages/_includes/graphql/cart-user-input-errors.md'
 

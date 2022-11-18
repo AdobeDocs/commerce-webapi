@@ -100,10 +100,10 @@ The `updateRequisitionListItems` mutation requires the following input.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`requisitionListItems`| [[UpdateRequisitionListItemsInput](#UpdateRequisitionListItemsInput)!]! | An array of products to be updated in the requisition list
+`requisitionListItems`| [[UpdateRequisitionListItemsInput](#updaterequisitionlistitemsinput-attributes)!]! | An array of products to be updated in the requisition list
 `requisitionListUid`| ID! | The unique ID of the requisition list
 
-### UpdateRequisitionListItemsInput attributes {#UpdateRequisitionListItemsInput}
+### UpdateRequisitionListItemsInput attributes
 
 The `UpdateRequisitionListItemsInput` type contains the list of products to be updated in the requisition list.
 
@@ -120,9 +120,9 @@ The `updateRequisitionListItems` object returns the requisition list object.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`requisition_list` | [[RequisitionList](#RequisitionList)] | The requisition list after the items were updated
+`requisition_list` | [[RequisitionList](#requisitionlist-attributes)] | The requisition list after the items were updated
 
-### RequisitionList attributes {#RequisitionList}
+### RequisitionList attributes
 
 import RequisitionList from '/src/pages/_includes/graphql/requisition-list.md'
 

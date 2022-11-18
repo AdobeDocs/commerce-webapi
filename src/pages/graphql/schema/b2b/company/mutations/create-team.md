@@ -105,7 +105,7 @@ mutation {
 
 The `CompanyTeamCreateInput` input object defines the company team data.
 
-### CompanyTeamCreateInput attributes {#CompanyTeamCreateInput}
+### CompanyTeamCreateInput attributes
 
 The `CompanyTeamCreateInput` object contains the following attributes:
 
@@ -123,7 +123,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `team` | CompanyTeam! | Contains company team data
 
-### CompanyTeam attributes {#CompanyTeam}
+### CompanyTeam attributes
 
 import CompanyTeam from '/src/pages/_includes/graphql/company-team.md'
 

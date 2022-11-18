@@ -14,7 +14,7 @@ The `setShippingMethodsOnCart` mutation defines the delivery methods for your or
 
 `{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](../../tutorials/checkout/add-product-to-cart.md).
 
-The `carrier_code` and `method_code` values come from the response of the `setShippingAddressesOnCart` mutation on the [Set the shipping address](checkout-shipping-address.html) step.
+The `carrier_code` and `method_code` values come from the response of the `setShippingAddressesOnCart` mutation on the [Set the shipping address](set-shipping-address.md) step.
 
 For logged-in customers, send the customer's authorization token in the `Authorization` parameter of the header. See [Authorization tokens](../../usage/authorization-tokens.md) for more information.
 
@@ -70,7 +70,7 @@ mutation {
 }
 ```
 
-## Verify this step {#verify-step}
+## Verify this step
 
 1. Sign in as a customer to the website using the email `john.doe@example.com` and password `b1b2b3l@w+`.
 

@@ -109,17 +109,17 @@ The `MoveCartItemsToGiftRegistryOutput` object can contain the following attribu
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`gift_registry` | [GiftRegistry!](#GiftRegistry) | The gift registry containing the moved items
+`gift_registry` | [GiftRegistry!](#giftregistry-attributes) | The gift registry containing the moved items
 `status` | Boolean! | Indicates whether the attempt to move the cart items to the gift registry was successful
-`user_errors` | [[GiftRegistryItemsUserError!](#GiftRegistryItemsUserError)] | An array of errors encountered while moving items from the cart to the gift registry
+`user_errors` | [[GiftRegistryItemsUserError!](#giftregistryitemsusererror-attributes)] | An array of errors encountered while moving items from the cart to the gift registry
 
-### GiftRegistry attributes {#GiftRegistry}
+### GiftRegistry attributes
 
 import GiftRegistry from '/src/pages/_includes/graphql/gift-registry.md'
 
 <GiftRegistry />
 
-### GiftRegistryItemsUserError attributes {#GiftRegistryItemsUserError}
+### GiftRegistryItemsUserError attributes
 
 import GiftRegistryItemsUserError from '/src/pages/_includes/graphql/gift-registry-items-user-error.md'
 

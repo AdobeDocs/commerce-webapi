@@ -19,7 +19,7 @@ Attribute | Data Type | Description | Default or example value
 `cart_gift_wrapping` | String | Indicates if gift wrapping prices are displayed on the Shopping Cart page. Possible values: 1 (Yes) and 0 (No) | 1
 `cart_printed_card` | String | Indicates if printed card prices are displayed on the Shopping Cart page. Possible values: 1 (Yes) and 0 (No) | 1
 `catalog_default_sort_by` | String | The default sort order of the search results list | `position`
-`category_fixed_product_tax_display_setting` | [FixedProductTaxDisplaySettings](#FixedProductTaxDisplaySettings) | Corresponds to the **Display Prices In Product Lists** field. It indicates how Fixed Product Tax information is displayed on category pages | FPT_DISABLED
+`category_fixed_product_tax_display_setting` | [FixedProductTaxDisplaySettings](#fixedproducttaxdisplaysettings-attributes) | Corresponds to the **Display Prices In Product Lists** field. It indicates how Fixed Product Tax information is displayed on category pages | FPT_DISABLED
 `category_url_suffix` | String | The suffix applied to category pages, such as `.htm` or `.html` | `.html`
 `check_money_order_enable_for_specific_countries` | Boolean | Indicates whether only specific countries can use this payment method | true or false
 `check_money_order_enabled` | Boolean | Indicates whether the Check/Money Order payment method is enabled | true or false
@@ -82,21 +82,21 @@ Attribute | Data Type | Description | Default or example value
 `no_route` | String | Contains the URL of the default page that you want to appear when if a 404 "Page not Found" error occurs | `cms/noroute/index`
 `payment_payflowpro_cc_vault_active` | String | Payflow Pro vault status | `0` (inactive) or `1` (active)
 `printed_card_price` | String | The default price of a printed card that accompanies an order | 10
-`product_fixed_product_tax_display_setting` | [FixedProductTaxDisplaySettings](#FixedProductTaxDisplaySettings) | Corresponds to the **Display Prices On Product View Page** field. It indicates how Fixed Product Taxes information is displayed on product pages | FPT_DISABLED
+`product_fixed_product_tax_display_setting` | [FixedProductTaxDisplaySettings](#fixedproducttaxdisplaysettings-attributes) | Corresponds to the **Display Prices On Product View Page** field. It indicates how Fixed Product Taxes information is displayed on product pages | FPT_DISABLED
 `product_reviews_enabled` | String | Indicates whether product reviews are enabled. Possible values: 1 (Yes) and 0 (No) | 1
 `product_url_suffix` | String | The suffix applied to product pages, such as `.htm` or `.html` | `.html`
 `required_character_classes_number` | String | The number of different character classes required in a password (lowercase, uppercase, digits, special characters). <br/>Configuration path: customer/password/required_character_classes_number | 2
 `returns_enabled` | String! | Indicates whether RMA is enabled on the storefront. Possible values: enabled/disabled | Disabled
 `root_category_id` | Int | Deprecated. Use `root_category_uid` instead. The ID of the root category | 2
 `root_category_uid` | ID | The unique ID for the root category object implementing `CategoryInterface` | Mw==
-`sales_fixed_product_tax_display_setting` | [FixedProductTaxDisplaySettings](#FixedProductTaxDisplaySettings) | Corresponds to the **Display Prices In Sales Modules** field. It indicates how Fixed Product Taxes information is displayed on cart, checkout, and order pages | FPT_DISABLED
+`sales_fixed_product_tax_display_setting` | [FixedProductTaxDisplaySettings](#fixedproducttaxdisplaysettings-attributes) | Corresponds to the **Display Prices In Sales Modules** field. It indicates how Fixed Product Taxes information is displayed on cart, checkout, and order pages | FPT_DISABLED
 `sales_gift_wrapping` | String | Indicates if gift wrapping prices are displayed on the Orders page. Possible values: 1 (Yes) and 0 (No) | 1
 `sales_printed_card` | String | Indicates if printed card prices are displayed on the Orders page. Possible values: 1 (Yes) and 0 (No) | 1
 `secure_base_link_url` | String | A secure fully-qualified URL that is used to create relative links to the `base_url` | `https://magentohost.example.com/`
 `secure_base_media_url` | String | The secure fully-qualified URL that specifies the location of user media files | `https://magentohost.example.com/pub/media/`
 `secure_base_static_url` | String | The secure fully-qualified URL that specifies the location of static view files | `https://magentohost.example.com/pub/static/`
 `secure_base_url` | String | The store's fully-qualified secure base URL | `https://magentohost.example.com/`
-`send_friend` | [SendFriendConfiguration](#SendFriendConfiguration) | Email to a Friend configuration | Not applicable
+`send_friend` | [SendFriendConfiguration](#sendfriendconfiguration-attributes) | Email to a Friend configuration | Not applicable
 `show_cms_breadcrumbs` | Int | Determines if a breadcrumb trail appears on all CMS pages in the catalog. Options: `0` (No) or `1` (Yes) | 1
 `store_code` | ID | The unique ID of the store view. In the Admin, this is called the Store View Code. When making a GraphQL call, assign this value to the `Store` header to provide the scope | `default`
 `store_group_code` | ID | The unique ID assigned to the store group. In the Admin, this is called the Store Name | `main_website_store`
@@ -120,14 +120,14 @@ Attribute | Data Type | Description | Default or example value
 `zero_subtotal_sort_order` | Int | A number indicating the position of the Zero Subtotal payment method in the list of available payment methods during checkout | 1
 `zero_subtotal_title` | String | The title of the Zero Subtotal payment method displayed on the storefront | `No Payment Information Required`
 
-### SendFriendConfiguration attributes {#SendFriendConfiguration}
+### SendFriendConfiguration attributes
 
 Attribute |  Data Type | Description
 --- | --- | ---
 `enabled_for_customers` | Boolean! | Indicates whether the Email to a Friend feature is enabled for customers
 `enabled_for_guests` | Boolean! | Indicates whether the Email to a Friend feature is enabled for guests
 
-### FixedProductTaxDisplaySettings attributes {#FixedProductTaxDisplaySettings}
+### FixedProductTaxDisplaySettings attributes
 
 The **Stores** > Settings > **Configuration** > **Sales** > **Tax** > **Fixed Product Taxes** panel contains several fields that determine how to display fixed product tax (FPT) values and descriptions.
 

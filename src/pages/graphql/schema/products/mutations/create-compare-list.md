@@ -112,7 +112,7 @@ mutation {
 
 The `CreateCompareListInput` input object defines the product IDs for to be compared.
 
-### CreateCompareListInput attributes {#CreateCompareListInput}
+### CreateCompareListInput attributes
 
 The `CreateCompareListInput` object contains the following attributes:
 

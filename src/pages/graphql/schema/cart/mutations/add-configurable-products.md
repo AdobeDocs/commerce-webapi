@@ -95,20 +95,20 @@ The `AddConfigurableProductsToCartInput` object contains the following attribute
 Attribute | Type | Description
 --- | --- | ---
 `cart_id` | String! | The unique ID that identifies the customer's cart
-`cart_items` | [[ConfigurableProductCartItemInput]](#configProdCartItemInput) | An array of configurable items to add to the cart
+`cart_items` | [[ConfigurableProductCartItemInput]](#configurableproductcartiteminput-object) | An array of configurable items to add to the cart
 
-### ConfigurableProductCartItemInput object {#configProdCartItemInput}
+### ConfigurableProductCartItemInput object
 
 The `ConfigurableProductCartItemInput` object contains the following attributes:
 
 Attribute | Type | Description
 --- | --- | ---
-`customizable_options` | [CustomizableOptionInput](#customOptionInput) | An object that contains the ID and value of the product
-`data` | [CartItemInput!](#cartItemInput) | An object that contains the quantity and SKU of the configurable product
+`customizable_options` | [CustomizableOptionInput](#customizableoptioninput-object) | An object that contains the ID and value of the product
+`data` | [CartItemInput!](#cartiteminput-object) | An object that contains the quantity and SKU of the configurable product
 `parent_sku` | String | The SKU of the simple product's parent configurable product. If you do not specify this attribute, the application treats the product being added to the cart as a simple product
 `variant_sku` | String | Deprecated. Use `CartItemInput.sku` instead. The SKU of the simple product
 
-### CustomizableOptionInput object {#customOptionInput}
+### CustomizableOptionInput object
 
 The `CustomizableOptionInput` object contains the following attributes:
 
@@ -116,7 +116,7 @@ import CustomizableOptionInput from '/src/pages/_includes/graphql/customizable-o
 
 <CustomizableOptionInput />
 
-### CartItemInput object {#cartItemInput}
+### CartItemInput object
 
 The `CartItemInput` object must contain the following attributes:
 
@@ -130,9 +130,9 @@ The `AddConfigurableProductsToCartOutput` object contains the `Cart` object.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`cart` |[Cart!](#CartObject) | Describes the contents of the specified shopping cart
+`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
 
-### Cart object {#CartObject}
+### Cart object
 
 import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 

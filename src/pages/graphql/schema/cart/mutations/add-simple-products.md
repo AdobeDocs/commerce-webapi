@@ -216,16 +216,16 @@ mutation {
 
 The top-level `AddSimpleProductsToCartInput` object is listed first. All child objects are listed in alphabetical order.
 
-### AddSimpleProductsToCartInput object {#AddSimpleProductsToCartInput}
+### AddSimpleProductsToCartInput object
 
 The `AddSimpleProductsToCartInput` object must contain the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
 `cart_id` | String! | The unique ID that identifies the customer's cart
-`cart_items` | [SimpleProductCartItemInput!](#SimpleProductCartItemInput) | Contains the cart item IDs and quantity of each item
+`cart_items` | [SimpleProductCartItemInput!](#simpleproductcartiteminput-object) | Contains the cart item IDs and quantity of each item
 
-### CartItemInput object {#CartItemInputSimple}
+### CartItemInput object
 
 The `CartItemInput` object must contain the following attributes:
 
@@ -233,7 +233,7 @@ import CartItemInput from '/src/pages/_includes/graphql/cart-item-input-24.md'
 
 <CartItemInput />
 
-### CustomizableOptionInput object {#CustomizableOptionInputSimple}
+### CustomizableOptionInput object
 
 The `CustomizableOptionInput` object can contain the following attributes:
 
@@ -241,12 +241,12 @@ import CustomizableOptionInput from '/src/pages/_includes/graphql/customizable-o
 
 <CustomizableOptionInput />
 
-### SimpleProductCartItemInput object {#SimpleProductCartItemInput}
+### SimpleProductCartItemInput object
 
 The `SimpleProductCartItemInput` object must contain the following attributes:
 
-`customizable_options` |[[CustomizableOptionInputSimple]](#CustomizableOptionInputSimple) | An array that defines customizable options for the product
-`data` | [CartItemInput!](#CartItemInputSimple) | An object containing the `sku` and `quantity` of the product.
+`customizable_options` |[[CustomizableOptionInputSimple]](#customizableoptioninput-object) | An array that defines customizable options for the product
+`data` | [CartItemInput!](#cartiteminput-object) | An object containing the `sku` and `quantity` of the product.
 
 ## Output attributes
 
@@ -254,9 +254,9 @@ The `AddSimpleProductsToCartOutput` object contains the `Cart` object.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`cart` |[Cart!](#CartObject) | Describes the contents of the specified shopping cart
+`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
 
-### Cart object {#CartObject}
+### Cart object
 
 import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 

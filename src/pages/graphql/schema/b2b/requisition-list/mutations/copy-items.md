@@ -77,10 +77,10 @@ The `copyItemsBetweenRequisitionLists` mutation requires the following input.
 Attribute |  Data Type | Description
 --- | --- | ---
 `destinationRequisitionListUid`| ID | The unique ID of the destination requisition list. If null, a new requisition list will be created
-`requisitionListItem`| [[CopyItemsBetweenRequisitionListsInput](#CopyItemsBetweenRequisitionListsInput)] | An array of selected requisition list items that are to be copied
+`requisitionListItem`| [[CopyItemsBetweenRequisitionListsInput](#copyitemsbetweenrequisitionlistsinput-attributes)] | An array of selected requisition list items that are to be copied
 `sourceRequisitionListUid`| ID! | The unique ID of the source requisition list
 
-### CopyItemsBetweenRequisitionListsInput attributes {#CopyItemsBetweenRequisitionListsInput}
+### CopyItemsBetweenRequisitionListsInput attributes
 
 The `CopyItemsBetweenRequisitionListsInput` type contains the list of products to copy from one requisition list to other.
 
@@ -94,9 +94,9 @@ The `copyItemsBetweenRequisitionLists` mutation returns the requisition list obj
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`requisition_list` | [[RequisitionList](#RequisitionList)] | The destination requisition list after the items were copied
+`requisition_list` | [[RequisitionList](#requisitionlist-attributes)] | The destination requisition list after the items were copied
 
-### RequisitionList attributes {#RequisitionList}
+### RequisitionList attributes
 
 import RequisitionList from '/src/pages/_includes/graphql/requisition-list.md'
 

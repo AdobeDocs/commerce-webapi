@@ -86,10 +86,10 @@ The `moveItemsBetweenRequisitionLists` mutation requires the following input.
 Attribute |  Data Type | Description
 --- | --- | ---
 `destinationRequisitionListUid`| ID! | The unique ID of the destination requisition list. If null, a new requisition list will be created
-`requisitionListItem`| [[MoveItemsBetweenRequisitionListsInput](#MoveItemsBetweenRequisitionListsInput)]  | An array of selected requisition list items that are to be moved from the source to the destination list
+`requisitionListItem`| [[MoveItemsBetweenRequisitionListsInput](#moveitemsbetweenrequisitionlistsinput-attributes)]  | An array of selected requisition list items that are to be moved from the source to the destination list
 `sourceRequisitionListUid`| ID! | The unique ID of the source requisition list
 
-### MoveItemsBetweenRequisitionListsInput attributes {#MoveItemsBetweenRequisitionListsInput}
+### MoveItemsBetweenRequisitionListsInput attributes
 
 The `MoveItemsBetweenRequisitionListsInput` type contains the list of products to move from one requisition list to other.
 
@@ -103,10 +103,10 @@ The `moveItemsBetweenRequisitionLists` object returns the source requisition lis
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`destination_requisition_list` | [[RequisitionList](#RequisitionList)] | The destination requisition list after moving items
-`source_requisition_list` | [[RequisitionList](#RequisitionList)] | The source requisition list after moving items
+`destination_requisition_list` | [[RequisitionList](#requisitionlist-attributes)] | The destination requisition list after moving items
+`source_requisition_list` | [[RequisitionList](#requisitionlist-attributes)] | The source requisition list after moving items
 
-### RequisitionList attributes {#RequisitionList}
+### RequisitionList attributes
 
 import RequisitionList from '/src/pages/_includes/graphql/requisition-list.md'
 

@@ -74,10 +74,10 @@ The `AddReturnTrackingOutput` object contains the following attributes.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`return` | [Return](#Return) | Contains details about the modified return
-`return_shipping_tracking` | [ReturnShippingTracking](#ReturnShippingTracking) | Contains details about shipping for a return
+`return` | [Return](#return-object) | Contains details about the modified return
+`return_shipping_tracking` | [ReturnShippingTracking](#returnshippingtracking-attributes) | Contains details about shipping for a return
 
-### Return object {#Return}
+### Return object
 
 import Return from '/src/pages/_includes/graphql/return.md'
 

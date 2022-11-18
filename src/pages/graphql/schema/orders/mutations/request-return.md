@@ -138,7 +138,7 @@ Attribute |  Data Type | Description
 `items`| [RequestReturnItemInput!]! |An array of items to be returned
 `order_uid` | ID! | The unique ID for an `Order` object
 
-### RequestReturnItemInput attributes {#RequestReturnItemInput}
+### RequestReturnItemInput attributes
 
 The RequestReturnItemInput object
 
@@ -149,7 +149,7 @@ Attribute |  Data Type | Description
 `quantity_to_return` | Float! | The quantity of the item to be returned
 `selected_custom_attributes` | [SelectedCustomAttributeInput!] | An array of selected custom option IDs associated with the item to be returned. For example, the IDs for the selected color and size of a configurable product
 
-### EnteredCustomAttributeInput attributes {#EnteredCustomAttributeInput}
+### EnteredCustomAttributeInput attributes
 
 The EnteredCustomAttributeInput object
 
@@ -158,7 +158,7 @@ Attribute |  Data Type | Description
 `attribute_code` | String! | A string that identifies the entered custom attribute
 `value` | String! | The text or other entered value
 
-### SelectedCustomAttributeInput attributes {#SelectedCustomAttributeInput}
+### SelectedCustomAttributeInput attributes
 
 The SelectedCustomAttributeInput object
 Attribute |  Data Type | Description
@@ -175,13 +175,13 @@ Attribute |  Data Type | Description
 `return` | Return | Contains details about a single return request")
 `returns(pageSize, currentPage)` | Returns | Contains an array of return requests
 
-### Return attributes {#Return}
+### Return attributes
 
 import Return from '/src/pages/_includes/graphql/return.md'
 
 <Return />
 
-### Returns attributes {#Returns}
+### Returns attributes
 
 The `Returns` object contains an array of `Return` objects and pagination information.
 

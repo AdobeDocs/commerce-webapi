@@ -139,10 +139,10 @@ The `ReorderItemsOutput` object contains the following objects:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`cart` |[Cart!](#CartObject) | Describes the contents of the specified shopping cart
-`userInputErrors` | [CheckoutUserInputError]! | An array of reordering errors
+`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
+`userInputErrors` | [CheckoutUserInputError!](#checkoutuserinputerror-object) | An array of reordering errors
 
-### Cart object {#CartObject}
+### Cart object
 
 import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 

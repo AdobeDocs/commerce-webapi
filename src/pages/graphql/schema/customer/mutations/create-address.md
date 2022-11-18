@@ -81,7 +81,7 @@ mutation {
 Attribute |  Data Type | Description
 --- | --- | ---
 `id` | Int | The ID assigned to the address object
-`CustomerAddressInput` | [CustomerAddress](#customerAddressInput) | An array containing the customer's shipping and billing addresses
+`CustomerAddressInput` | [CustomerAddress](#customeraddressinput-attributes) | An array containing the customer's shipping and billing addresses
 
 import CustomerAddressInput from '/src/pages/_includes/graphql/customer-address-input-24.md'
 

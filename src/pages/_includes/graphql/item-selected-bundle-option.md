@@ -1,4 +1,4 @@
-#### ItemSelectedBundleOption attributes {#ItemSelectedBundleOption}
+#### ItemSelectedBundleOption attributes
 
 The ItemSelectedBundleOption object contains a list of bundle options that are assigned to the bundle product.
 
@@ -7,9 +7,9 @@ Attribute | Data type | Description
 `id` | ID! | Deprecated. Use `uid` instead. The unique identifier of the option
 `label` | String! | The label of the option
 `uid` | ID! | The unique ID for a `ItemSelectedBundleOption` object
-`values` | [[ItemSelectedBundleOptionValue](#ItemSelectedBundleOptionValue)] | A list of products that represent the values of the parent option
+`values` | [[ItemSelectedBundleOptionValue](#itemselectedbundleoptionvalue-attributes)] | A list of products that represent the values of the parent option
 
-#### ItemSelectedBundleOptionValue attributes {#ItemSelectedBundleOptionValue}
+#### ItemSelectedBundleOptionValue attributes
 
 Attribute | Data type | Description
 --- | --- | ---

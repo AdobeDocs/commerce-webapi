@@ -91,7 +91,7 @@ mutation {
 
 The `applyCouponToCart` mutation requires the `cart_id` and `coupon_code`.
 
-### ApplyCouponToCartInput object {#ApplyCouponToCartInput}
+### ApplyCouponToCartInput object
 
 The `ApplyCouponToCartInput` object must contain the following attributes:
 
@@ -106,9 +106,9 @@ The `ApplyCouponToCartOutput` object contains the `Cart` object.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`cart` |[Cart!](#CartObject) | Describes the contents of the specified shopping cart
+`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
 
-### Cart object {#CartObject}
+### Cart object
 
 import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 

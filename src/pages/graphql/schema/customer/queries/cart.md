@@ -76,7 +76,7 @@ The following query lists the products in the logged-in customer's cart:
 
 The `customerCart` query returns the `Cart` object.
 
-### Cart object {#CartObject}
+### Cart object
 
 import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 

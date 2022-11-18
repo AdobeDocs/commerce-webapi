@@ -91,16 +91,16 @@ mutation {
 
 The `UpdateCartItemsInput` object is listed first. All child objects are listed in alphabetical order.
 
-### UpdateCartItemsInput attributes {#UpdateCartItemsInput}
+### UpdateCartItemsInput attributes
 
 The `UpdateCartItemsInput` object must contain the following attributes.
 
 Attribute |  Data Type | Description
 --- | --- | ---
 `cart_id` | String! | The unique ID that identifies the customer's cart
-`cart_items` | [CartItemUpdateInput!](#CartItemUpdateInput) | Contains the cart item IDs and quantity of each item
+`cart_items` | [CartItemUpdateInput!](#cartitemupdateinput-attributes) | Contains the cart item IDs and quantity of each item
 
-### CartItemUpdateInput attributes {#CartItemUpdateInput}
+### CartItemUpdateInput attributes
 
 The `CartItemUpdateInput` object can contain the following attributes.
 
@@ -109,11 +109,11 @@ Attribute |  Data Type | Description
 `cart_item_id` | Int | Deprecated. Use `cart_item_uid` instead. The unique ID assigned when a customer places an item in the cart
 `cart_item_uid` | ID! | The unique ID for a `CartItemInterface` object
 `customizable_options` | [CustomizableOptionInput!] | An array that defines customizable options for the product
-`gift_message` | [GiftMessageInput](#GiftMessageInput) | Gift message details for the cart item
+`gift_message` | [GiftMessageInput](#giftmessageinput-attributes) | Gift message details for the cart item
 `gift_wrapping_id` | ID | The unique ID for a `GiftWrapping` object to be used for the cart item
 `quantity` | Float | The new quantity of the item. A value of `0` removes the item from the cart
 
-### CustomizableOptionInput attributes {#CustomizableOptionInputSimple}
+### CustomizableOptionInput attributes
 
 The `CustomizableOptionInput` object can contain the following attributes.
 
@@ -121,7 +121,7 @@ import CustomizableOptionInput from '/src/pages/_includes/graphql/customizable-o
 
 <CustomizableOptionInput />
 
-### GiftMessageInput attributes {#GiftMessageInput}
+### GiftMessageInput attributes
 
 The `GiftMessageInput` object must contain the following attributes.
 
@@ -137,9 +137,9 @@ The `UpdateCartItemsOutput` object contains the `Cart` object.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`cart` |[Cart!](#CartObject) | Describes the contents of the specified shopping cart
+`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
 
-### Cart object {#CartObject}
+### Cart object
 
 import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 

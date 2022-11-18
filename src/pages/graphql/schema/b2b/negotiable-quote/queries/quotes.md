@@ -96,12 +96,12 @@ The `NegotiableQuotesOutput` object contains the following attributes.
 
 Attribute | Data Type | Description
 --- | --- | ---
-`items` | [[NegotiableQuote]!](#NegotiableQuote) | A list of negotiable quotes
+`items` | [[NegotiableQuote]!](#negotiablequote-attributes) | A list of negotiable quotes
 `page_info` | SearchResultPageInfo! | Contains pagination metadata
 `sort_fields` | [SortFields](../../../products/queries/products.md#sortfields-attributes) | Contains the default sort field and all available sort fields.
 `total_count` | Int! | The number of negotiable quotes returned
 
-### NegotiableQuote attributes {#NegotiableQuote}
+### NegotiableQuote attributes
 
 import NegotiableQuote from '/src/pages/_includes/graphql/negotiable-quote.md'
 

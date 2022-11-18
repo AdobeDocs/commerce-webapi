@@ -32,7 +32,7 @@ The following diagram shows the workflow for placing an order when Payflow Pro V
 
 1. The client renders the token information, and the customer selects a payment method.
 
-   When the customer selects a stored payment method, the PWA uses the [`setPaymentMethodOnCart`](../schema/cart/mutations/set-payment-method.md) mutation to set the payment method to `payflowpro_cc_vault`. The vaulted public hash is passed in the [`payflowpro_cc_vault`](#payflowpro_cc_vault) object.
+   When the customer selects a stored payment method, the PWA uses the [`setPaymentMethodOnCart`](../schema/cart/mutations/set-payment-method.md) mutation to set the payment method to `payflowpro_cc_vault`. The vaulted public hash is passed in the [`payflowpro_cc_vault`](#payflowpro_cc_vault-attributes) object.
 
 1. The application returns a `Cart` object.
 
@@ -48,7 +48,7 @@ The following diagram shows the workflow for placing an order when Payflow Pro V
 
 When you set the payment method to Payflow Pro Vault in the [`setPaymentMethodOnCart`](../schema/cart/mutations/set-payment-method.md) mutation, the `payment_method` object must contain a `payflowpro_cc_vault` object, which contains the customer's public hash.
 
-### payflowpro_cc_vault attributes {#payflowpro_cc_vault}
+### payflowpro_cc_vault attributes
 
 The `payflowpro_cc_vault` object must contain the following attribute:
 

@@ -69,9 +69,9 @@ The `CustomerOrders` object contains the `items` attribute.
 
 Attribute | Data type | Description
 --- | --- | ---
-`items` | [`[CustomerOrder]`](#customerOrderAttributes) | An array of customer orders
+`items` | [`[CustomerOrder]`](#customerorders-query) | An array of customer orders
 
-### Customer order items attributes {#customerOrderAttributes}
+### Customer order items attributes
 
 The `CustomerOrder` object defines details about each order the customer has placed.
 
@@ -85,7 +85,7 @@ Attribute | Data type | Description
 `order_number` | String! | The order number assigned to the order
 `status` | String | The status of the order, such as `open`, `processing`, or `closed`
 
-#### GiftMessage object {#GiftMessage}
+#### GiftMessage object
 
 The `GiftMessage` object contains the following required attributes.
 

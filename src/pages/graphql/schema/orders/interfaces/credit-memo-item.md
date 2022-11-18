@@ -6,10 +6,10 @@ title: CreditMemoItemInterface attributes and implementations | Commerce Web API
 
 `CreditMemoItemInterface` provides details about items in a customer's order history that were refunded. It has the following implementations:
 
-*  [`BundleCreditMemoItem`](#BundleCreditMemoItem)
-*  [`CreditMemoItem`](#CreditMemoItem)
-*  [`DownloadableCreditMemoItem`](#DownloadableCreditMemoItem)
-*  [`GiftCardCreditMemoItem`](#GiftCardCreditMemoItem)
+*  [`BundleCreditMemoItem`](#bundlecreditmemoitem-attributes)
+*  [`CreditMemoItem`](#creditmemoitem-attributes)
+*  [`DownloadableCreditMemoItem`](#downloadablecreditmemoitem-attributes)
+*  [`GiftCardCreditMemoItem`](#giftcardcreditmemoitem-attributes)
 
 ## Attributes
 
@@ -21,41 +21,41 @@ import CreditMemoItemInterface from '/src/pages/_includes/graphql/credit-memo-it
 
 ## Implementations
 
-### BundleCreditMemoItem attributes {#BundleCreditMemoItem}
+### BundleCreditMemoItem attributes
 
 The `BundleCreditMemoItem` object defines the following attribute:
 
 Attribute | Data type | Description
 --- | --- | ---
-`bundle_options` | [[ItemSelectedBundleOption]](#ItemSelectedBundleOption) | A list of bundle options that are assigned to the bundle product
+`bundle_options` | [[ItemSelectedBundleOption]](#itemselectedbundleoption-attributes) | A list of bundle options that are assigned to the bundle product
 
 import ItemSelectedBundleOption from '/src/pages/_includes/graphql/item-selected-bundle-option.md'
 
 <ItemSelectedBundleOption />
 
-### CreditMemoItem attributes {#CreditMemoItem}
+### CreditMemoItem attributes
 
 The `CreditMemoItem` object does not introduce any additional attributes to `CreditMemoItemInterface`.
 
-### DownloadableCreditMemoItem attributes {#DownloadableCreditMemoItem}
+### DownloadableCreditMemoItem attributes
 
 The `DownloadableCreditMemoItem` object defines the following attribute:
 
 Attribute | Data type | Description
 --- | --- | ---
-`downloadable_links` | [[DownloadableItemsLinks]](#DownloadableItemsLinks) | A list of downloadable links that were refunded from the downloadable product
+`downloadable_links` | [[DownloadableItemsLinks]](#downloadableitemslinks-attributes) | A list of downloadable links that were refunded from the downloadable product
 
 import DownloadableItemsLinks from '/src/pages/_includes/graphql/downloadable-items-links.md'
 
 <DownloadableItemsLinks />
 
-### GiftCardCreditMemoItem attributes {#GiftCardCreditMemoItem}
+### GiftCardCreditMemoItem attributes
 
 The `GiftCardCreditMemoItem` object defines the following attribute:
 
 Attribute | Data type | Description
 --- | --- | ---
-`gift_card` | [GiftCardItem](#GiftCardItem) | Selected gift card properties for an order item
+`gift_card` | [GiftCardItem](#giftcarditem-attributes) | Selected gift card properties for an order item
 
 import GiftCardItem from '/src/pages/_includes/graphql/gift-card-item.md'
 

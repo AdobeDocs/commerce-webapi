@@ -167,7 +167,7 @@ import CategoryFilterInput from '/src/pages/_includes/graphql/category-filter-in
 
 <CategoryFilterInput />
 
-## Output attributes {#Categories}
+## Output attributes
 
 The `categories` query returns a `CategoryResult` object, which contains the following attributes:
 

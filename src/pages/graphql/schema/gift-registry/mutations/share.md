@@ -72,10 +72,10 @@ The `shareGiftRegistry` mutation requires the following input attributes.
 Attribute |  Data Type | Description
 --- | --- | ---
 `giftRegistryUid`| ID! | The unique ID of the gift registry to be shared
-`invitees`| [[ShareGiftRegistryInviteeInput!](#ShareGiftRegistryinviteeInput)]! | A list of people invited to participate in the event
-`sender`| [ShareGiftRegistrySenderInput!](#ShareGiftRegistrySenderInput) | Information about the invitation sender
+`invitees`| [[ShareGiftRegistryInviteeInput!](#sharegiftregistryinviteeinput-attributes)]! | A list of people invited to participate in the event
+`sender`| [ShareGiftRegistrySenderInput!](#sharegiftregistrysenderinput-attributes) | Information about the invitation sender
 
-### ShareGiftRegistrySenderInput attributes {#ShareGiftRegistrySenderInput}
+### ShareGiftRegistrySenderInput attributes
 
 The `ShareGiftRegistrySenderInput` object contains the following attributes.
 
@@ -84,7 +84,7 @@ Attribute |  Data Type | Description
 `message` | String! | A brief message from the sender
 `name`| String! | The name of the sender
 
-### ShareGiftRegistryInviteeInput attributes {#ShareGiftRegistryinviteeInput}
+### ShareGiftRegistryInviteeInput attributes
 
 The `ShareGiftRegistryInviteeInput` object contains the following attributes.
 

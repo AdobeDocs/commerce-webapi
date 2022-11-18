@@ -208,16 +208,16 @@ mutation {
 
 The top-level `AddDownloadableProductsToCartInput` object is listed first. All child objects are listed in alphabetical order.
 
-### AddDownloadableProductsToCartInput object {#AddDownloadableProductsToCartInput}
+### AddDownloadableProductsToCartInput object
 
 The `AddDownloadableProductsToCartInput` object must contain the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
 `cart_id` | String! | The unique ID that identifies the customer's cart
-`cart_items` | [[DownloadableProductCartItemInput!]!](#DownloadableProductCartItemInput) | Contains the cart item IDs and quantity of each item
+`cart_items` | [[DownloadableProductCartItemInput!]!](#downloadableproductcartiteminput-object) | Contains the cart item IDs and quantity of each item
 
-### CartItemInput object {#CartItemInputVirtual}
+### CartItemInput object
 
 The `CartItemInput` object must contain the following attributes:
 
@@ -225,7 +225,7 @@ import CartItemInput from '/src/pages/_includes/graphql/cart-item-input-24.md'
 
 <CartItemInput />
 
-### CustomizableOptionInput object {#CustomizableOptionInputVirtual}
+### CustomizableOptionInput object
 
 The `CustomizableOptionInput` object can contain the following attributes:
 
@@ -233,17 +233,17 @@ import CustomizableOptionInput from '/src/pages/_includes/graphql/customizable-o
 
 <CustomizableOptionInput />
 
-### DownloadableProductCartItemInput object {#DownloadableProductCartItemInput}
+### DownloadableProductCartItemInput object
 
 The `DownloadableProductCartItemInput` object can contain the following attribute:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`customizable_options` |[[CustomizableOptionInput!]](#CustomizableOptionInputVirtual) | An array that defines customizable options for the product
-`data` | [CartItemInput!](#CartItemInputVirtual) | Required. An object containing the `sku` and `quantity` of the product
-`downloadable_product_links` | [[DownloadableProductLinksInput!]](#DownloadableProductLinksInput) | An object containing the `link_id` of the downloadable product link
+`customizable_options` |[[CustomizableOptionInput!]](#customizableoptioninput-object) | An array that defines customizable options for the product
+`data` | [CartItemInput!](#cartiteminput-object) | Required. An object containing the `sku` and `quantity` of the product
+`downloadable_product_links` | [[DownloadableProductLinksInput!]](#downloadableproductlinksinput-object) | An object containing the `link_id` of the downloadable product link
 
-### DownloadableProductLinksInput object {#DownloadableProductLinksInput}
+### DownloadableProductLinksInput object
 
 If specified, the `DownloadableProductLinksInput` object must contain the following attribute.
 
@@ -257,9 +257,9 @@ The `AddDownloadableProductsToCartOutput` object contains the `Cart` object.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`cart` |[Cart!](#CartObject) | Describes the contents of the specified shopping cart
+`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
 
-### Cart object {#CartObject}
+### Cart object
 
 import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 

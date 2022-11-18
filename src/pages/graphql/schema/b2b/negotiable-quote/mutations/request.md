@@ -190,7 +190,7 @@ mutation {
 
 The `RequestNegotiableQuoteInput` input object specifies the company user's cart ID and other information to identify a new negotiable quote.
 
-### RequestNegotiableQuoteInput attributes {#RequestNegotiableQuoteInput}
+### RequestNegotiableQuoteInput attributes
 
 The `RequestNegotiableQuoteInput` object contains the following attributes.
 
@@ -200,7 +200,7 @@ Attribute | Data Type | Description
 `comment` | [NegotiableQuoteCommentInput!](#NegotiableQuoteCommentInput) | Comments the buyer entered to describe the request
 `quote_name` | String! | The name the buyer assigned to the negotiable quote request
 
-### NegotiableQuoteCommentInput {#NegotiableQuoteCommentInput}
+### NegotiableQuoteCommentInput
 
 The `NegotiableQuoteCommentInput` object contains the following attribute.
 
@@ -216,7 +216,7 @@ Attribute | Data Type | Description
 --- | --- | ---
 `quote` | NegotiableQuote! | Contains details about the negotiable quote
 
-### NegotiableQuote attributes {#NegotiableQuote}
+### NegotiableQuote attributes
 
 import NegotiableQuote from '/src/pages/_includes/graphql/negotiable-quote.md'
 

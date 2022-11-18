@@ -111,9 +111,9 @@ The `SendNegotiableQuoteForReviewOutput` output object contains the following at
 
 Attribute | Data Type | Description
 --- | --- | ---
-`quote` | [NegotiableQuote](#NegotiableQuote) | The negotiable quote after sending for seller review
+`quote` | [NegotiableQuote](#negotiablequote-attributes) | The negotiable quote after sending for seller review
 
-### NegotiableQuote attributes {#NegotiableQuote}
+### NegotiableQuote attributes
 
 import NegotiableQuote from '/src/pages/_includes/graphql/negotiable-quote.md'
 

@@ -155,13 +155,13 @@ Attribute |  Data Type | Description
 `user_errors` | [WishListUserInputError!]! | An array of errors encountered while adding products to a wish list
 `wishlist` | Wishlist! | Contains the wish list with all items that were successfully added
 
-### Wishlist attributes {#Wishlist}
+### Wishlist attributes
 
 import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
 
 <Wishlist />
 
-### WishListUserInputError attributes {#WishListUserInputError}
+### WishListUserInputError attributes
 
 import WishlistUserInputErrors from '/src/pages/_includes/graphql/wishlist-user-input-errors.md'
 

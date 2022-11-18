@@ -84,12 +84,12 @@ The `addGiftRegistryRegistrants` mutation requires the following input.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`dynamic_attributes` | [[GiftRegistryDynamicAttributeInput](#GiftRegistryDynamicAttributeInput)] | An array of attributes that define elements of the gift registry. Each attribute is specified as a code-value pair
+`dynamic_attributes` | [[GiftRegistryDynamicAttributeInput](#giftregistrydynamicattributeinput-attributes)] | An array of attributes that define elements of the gift registry. Each attribute is specified as a code-value pair
 `email` | String! | The email address of the registrant
 `firstname` | String! | The first name of the registrant
 `lastname` | String! | The last name of the registrant
 
-### GiftRegistryDynamicAttributeInput attributes {#GiftRegistryDynamicAttributeInput}
+### GiftRegistryDynamicAttributeInput attributes
 
 The `GiftRegistryDynamicAttributeInput` object contains the following attributes:
 
@@ -104,9 +104,9 @@ The `AddGiftRegistryRegistrantsOutput` output object contains the following attr
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`gift_registry` | [GiftRegistry](#GiftRegistry) | The gift registry after adding registrants
+`gift_registry` | [GiftRegistry](#giftregistry-attributes) | The gift registry after adding registrants
 
-### GiftRegistry attributes {#GiftRegistry}
+### GiftRegistry attributes
 
 import GiftRegistry from '/src/pages/_includes/graphql/gift-registry.md'
 

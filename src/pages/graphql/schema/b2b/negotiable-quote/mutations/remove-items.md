@@ -121,7 +121,7 @@ Attribute | Data Type | Description
 --- | --- | ---
 `quote` | NegotiableQuote | Contains details about the negotiable quote
 
-### NegotiableQuote attributes {#NegotiableQuote}
+### NegotiableQuote attributes
 
 import NegotiableQuote from '/src/pages/_includes/graphql/negotiable-quote.md'
 

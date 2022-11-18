@@ -157,7 +157,7 @@ Attribute |  Data Type | Description
 `sourceWishlistUid` | ID! | The ID of the origin wishlist
 `wishlistItems` | [WishlistItemCopyInput!]! | A list of items to be copied
 
-### WishlistItemCopyInput attributes {#WishlistItemCopyInput}
+### WishlistItemCopyInput attributes
 
 The WishlistItemCopyInput object contains the following attributes.
 
@@ -172,17 +172,17 @@ The `CopyProductsBetweenWishlistsOutput` object can contain the following attrib
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`destination_wishlist` | [Wishlist!](#Wishlist) | The destination wish list containing the copied products
-`source_wishlist` | [Wishlist!](#Wishlist) | The wish list that the products were copied from
-`user_errors` | [[WishListUserInputError!](#WishListUserInputError)] | An array of errors encountered while copying products to a wish list
+`destination_wishlist` | [Wishlist!](#wishlist-attributes) | The destination wish list containing the copied products
+`source_wishlist` | [Wishlist!](#wishlist-attributes) | The wish list that the products were copied from
+`user_errors` | [[WishListUserInputError!](#wishlistuserinputerror-attributes)] | An array of errors encountered while copying products to a wish list
 
-### Wishlist attributes {#Wishlist}
+### Wishlist attributes
 
 import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
 
 <Wishlist />
 
-### WishListUserInputError attributes {#WishListUserInputError}
+### WishListUserInputError attributes
 
 import WishlistUserInputErrors from '/src/pages/_includes/graphql/wishlist-user-input-errors.md'
 

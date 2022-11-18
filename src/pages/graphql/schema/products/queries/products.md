@@ -25,7 +25,7 @@ Each query attribute is defined below:
 Attribute |  Data type | Description
 --- | --- | ---
 `search` | String | Performs a full-text search using the specified key words
-`filter` | ProductAttributeFilterInput | Identifies which attributes to search for and return. See [filter attribute](#ProductFilterInput) object for more information
+`filter` | ProductAttributeFilterInput | Identifies which attributes to search for and return. See [filter attribute](#productfilterinput-attributes) object for more information
 `pageSize` | Int | Specifies the maximum number of results to return at once. The default value is 20
 `currentPage` | Int | Specifies which page of results to return. The default value is 1
 `sort` | ProductAttributeSortInput | Specifies which attribute to sort on, and whether to return the results in ascending or descending order
@@ -36,7 +36,7 @@ The `search` attribute causes the application perform a full text search on the 
 
 Each query must contain a `search` or `filter` attribute, or both.
 
-### filter attribute {#ProductFilterInput}
+### filter attribute
 
 The `ProductAttributeFilterInput` object determines which attributes will be used to narrow the results in a `products` query. A filter contains at least one attribute, a comparison operator, and the value that is being searched for. The following example filter searches for products that have a `name` that contains the string `Bag` with a `price` that's less than or equal to `40`.
 
@@ -102,7 +102,7 @@ Attribute | Data type | Description
 `from` | String | Use this attribute to specify the lowest possible value in the range
 `to` | String | Use this attribute to specify the highest possible value in the range
 
-### pageSize attribute {#pageSize}
+### pageSize attribute
 
 Magento's GraphQL implementation of pagination uses offsets so that it operates in the same manner as REST and SOAP API requests.
 
@@ -241,18 +241,18 @@ updated_at
 weight
 ```
 
-## Output attributes {#Response}
+## Output attributes
 
 The query returns a `Products` object containing the following information:
 
 Attribute | Data type | Description
 --- | --- | ---
-`aggregations (filter: AggregationsFilterInput)` | [[Aggregation]](#Aggregation) | Layered navigation aggregations with filters
+`aggregations (filter: AggregationsFilterInput)` | [[Aggregation]](#aggregation-attributes) | Layered navigation aggregations with filters
 `filters` | LayerFilter | Deprecated. Use `aggregations` instead
-`items` | [[ProductInterface]](#ProductInterface) | An array of products that match the specified search criteria
-`page_info` | [SearchResultPageInfo](#SearchResultPageInfo) | An object that includes the `page_info` and `currentPage` values specified in the query
-`sort_fields` |  [SortFields](#SortFields) | An object that includes the default sort field and all available sort fields
-`suggestions` | [[SearchSuggestion]](#SearchSuggestion) | An array that contains suggested search words. This object is returned when the value specified in the `search` input parameter does not return any results
+`items` | [[ProductInterface]](#productinterface-attributes) | An array of products that match the specified search criteria
+`page_info` | [SearchResultPageInfo](#searchresultpageinfo-attributes) | An object that includes the `page_info` and `currentPage` values specified in the query
+`sort_fields` |  [SortFields](#sortfields-attributes) | An object that includes the default sort field and all available sort fields
+`suggestions` | [[SearchSuggestion]](#searchsuggestion-attributes) | An array that contains suggested search words. This object is returned when the value specified in the `search` input parameter does not return any results
 `total_count` | Int | The number of products in the category that are marked as visible. By default, in complex products, parent products are visible, but their child products are not
 
 ### AggregationsFilterInput filter
@@ -271,7 +271,7 @@ Attribute | Data type | Description
 --- | --- | ---
 `includeDirectChildrenOnly` | Boolean | Indicates whether to include only direct subcategories or all children categories at all levels. The default value is false
 
-### Aggregation attributes {#Aggregation}
+### Aggregation attributes
 
 Each aggregation within the `aggregations` object is a separate bucket that contains the attribute code and label for each filterable option (such as price, category UID, and custom attributes). It also includes the number of products within the filterable option that match the specified search criteria.
 
@@ -287,7 +287,7 @@ Attribute | Data type | Description
 `options` | [AggregationOption] | Describes each aggregated filter option
 `position` | Int | The relative position of the attribute in a layered navigation block
 
-#### AggregationOption attributes {#AggregationOption}
+#### AggregationOption attributes
 
 The `AggregationOption` array contains a list of possible options for the `attribute_code` defined in the aggregation. For example, if the `attribute_code` is `category_id`, the return options could include tops, bottoms, gear, and so on.
 
@@ -297,11 +297,11 @@ Attribute | Data type | Description
 `label` | String | The label of the filter
 `value` | String! | The internal ID representing the value of the option
 
-### ProductInterface attributes {#ProductInterface}
+### ProductInterface attributes
 
 The `items` object contains information about each product that match the search criteria. [ProductInterface](../interfaces/index.md) describes the possible contents of this object.
 
-### SearchResultPageInfo attributes {#SearchResultPageInfo}
+### SearchResultPageInfo attributes
 
 The `SearchResultPageInfo` object provides navigation for the query response.
 
@@ -311,7 +311,7 @@ Attribute | Data type | Description
 `page_size` | Int | Specifies the maximum number of items to return
 `total_pages` | Int | The total number of pages returned
 
-### SearchSuggestion attributes {#SearchSuggestion}
+### SearchSuggestion attributes
 
 The `SearchSuggestion` object provides an array of suggested search terms.
 
@@ -319,7 +319,7 @@ Attribute | Data type | Description
 --- | --- | ---
 `search` | String! | A string that provides a suggested search term that matches an existing product
 
-### SortFields attributes {#SortFields}
+### SortFields attributes
 
 The `SortFields` object contains the default value for sort fields as well as all possible sort fields.
 
@@ -1862,7 +1862,7 @@ query {
 }
 ```
 
-### Query a URL's rewrite information {#urlRewriteExample}
+### Query a URL's rewrite information
 
 The following product query returns URL rewrite information about the Joust Duffle Bag.
 
@@ -1949,7 +1949,7 @@ The following product query returns URL rewrite information about the Joust Duff
 }
 ```
 
-### Retrieve variant `uid` values {#variant-uid}
+### Retrieve variant `uid` values
 
 The following query returns information about each variant of the configurable product `WSH12`. Each variant has a unique combination of color and size values. Specify the `uid` values in the `selected_options` array of the [`addProductsToCart` mutation](../../cart/mutations/add-products.md) to indicate which variants the shopper selected.
 

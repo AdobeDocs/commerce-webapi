@@ -76,7 +76,7 @@ The following call returns information about the logged-in customer. Provide the
 }
 ```
 
-### Retrieve a summary of the customer's order history {#order-history}
+### Retrieve a summary of the customer's order history
 
 The following example returns a summary of the logged-in customer's previous orders.
 
@@ -174,7 +174,7 @@ query {
 }
 ```
 
-### Retrieve detailed information about a specific order {#order-details}
+### Retrieve detailed information about a specific order
 
 The following example returns details about one of the customer's previous orders.
 
@@ -663,15 +663,15 @@ The following query returns the customer's wish lists. Adobe Commerce allows cus
 
 ## Output attributes
 
-### Customer attributes {#customerAttributes}
+### Customer attributes
 
 The `customer` object can contain the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`addresses` | [CustomerAddress](#customerAddressOutput)  | An array containing the customer's shipping and billing addresses
+`addresses` | [CustomerAddress](#customeraddress-attributes)  | An array containing the customer's shipping and billing addresses
 `allow_remote_shopping_assistance` | Boolean! | Indicates whether the customer has enabled remote shopping assistance
-`compare_list` | [CompareList](#CompareList) | The contents of the customer's comparison list
+`compare_list` | [CompareList](#comparelist-attributes) | The contents of the customer's comparison list
 `created_at` | String | Timestamp indicating when the account was created
 `date_of_birth` | String | The customer's date of birth. In keeping with current security and privacy best practices, be sure you are aware of any potential legal and security risks associated with the storage of customers' full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
 `default_billing` | String | The ID assigned to the billing address
@@ -685,16 +685,16 @@ Attribute |  Data Type | Description
 `is_subscribed` | Boolean | Indicates whether the customer is subscribed to the company's newsletter
 `lastname` | String | The customer's family name
 `middlename` |String | The customer's middle name
-`orders(filter CustomerOrdersFilterInput, currentPage = 1 Int, pageSize = 20 Int)` | [CustomerOrders](#customerOrders) | A list of the customer's placed orders. See [`orders` input attributes](#orders) for details'
+`orders(filter CustomerOrdersFilterInput, currentPage = 1 Int, pageSize = 20 Int)` | [CustomerOrders](#orders-input-attributes) | A list of the customer's placed orders. See [`orders` input attributes](#orders-input-attributes) for details'
 `prefix` | String | An honorific, such as Dr., Mr., or Mrs.
 `return(uid: ID!)` | Return | Gets details about the specified return request
 `returns(pageSize: Int = 20 currentPage: Int = 1)` | Returns | Information about the customer's return requests
-`reviews(pageSize: Int = 20 currentPage: Int = 1)` | [ProductReviews](#ProductReviews)! | The list of reviews of the product
-`reward_points` | [RewardPoints](#RewardPoints) | Details about the customer's reward points
+`reviews(pageSize: Int = 20 currentPage: Int = 1)` | [ProductReviews](#productreviews-object)! | The list of reviews of the product
+`reward_points` | [RewardPoints](#rewardpoints-attributes) | Details about the customer's reward points
 `suffix` | String | A value such as Sr., Jr., or III
 `taxvat` | String | The customer's Tax/VAT number (for corporate customers)
 `wishlist` | Wishlist! | Deprecated. Use `wishlist_v2` instead. Contains the contents of the customer's wish lists
-`wishlist_v2(id ID!)` | [Wishlist](#Wishlist)! | Retrieve the specified wish list identified by the unique ID for a Wishlist object
+`wishlist_v2(id ID!)` | [Wishlist](#wishlist-attributes)! | Retrieve the specified wish list identified by the unique ID for a Wishlist object
 
 For B2B, company administrators and users can have the following attributes.
 
@@ -707,7 +707,7 @@ Attribute |  Data Type | Description
 `team` | CompanyTeam | The team the company user is assigned to
 `telephone` | String | The phone number of the company user
 
-### CompareList attributes {#CompareList}
+### CompareList attributes
 
 The `CompareList` object can contain the following attributes:
 
@@ -715,7 +715,7 @@ import CompareListOutput from '/src/pages/_includes/graphql/compare-list-output.
 
 <CompareListOutput />
 
-### CustomerAddress attributes {#customerAddressOutput}
+### CustomerAddress attributes
 
 The values assigned to attributes such as `firstname` and `lastname` in this object may be different from those defined in the `Customer` object.
 
@@ -727,11 +727,11 @@ Attribute |  Data Type | Description
 `company` | String | The customer's company
 `country_code` | CountryCodeEnum | The customer's country
 `country_id` | String | Deprecated. Use `country_code` instead. The customer's country
-`custom_attributes` | [CustomerAddressAttribute](#customerAddressAttributeOutput) | Deprecated. Not applicable for GraphQL
+`custom_attributes` | [CustomerAddressAttribute](#customeraddressattribute-attributes) | Deprecated. Not applicable for GraphQL
 `customer_id` | Int | Deprecated. This attribute is not applicable for GraphQL. The ID assigned to the customer
 `default_billing` | Boolean | Indicates whether the address is the default billing address
 `default_shipping` | Boolean | Indicates whether the address is the default shipping address
-`extension_attributes` | [CustomerAddressAttribute](#customerAddressAttributeOutput) | Address extension attributes
+`extension_attributes` | [CustomerAddressAttribute](#customeraddressattribute-attributes) | Address extension attributes
 `fax` | String | The fax number
 `firstname` | String | The first name of the person associated with the shipping/billing address
 `id` | Int | The ID assigned to the address object
@@ -739,14 +739,14 @@ Attribute |  Data Type | Description
 `middlename` | String | The middle name of the person associated with the shipping/billing address
 `postcode` | String | The customer's ZIP or postal code
 `prefix` | String | An honorific, such as Dr., Mr., or Mrs.
-`region` | [CustomerAddressRegion](#customerAddressRegionOutput) | An object that defines the customer's state or province
+`region` | [CustomerAddressRegion](#customeraddressregion-attributes) | An object that defines the customer's state or province
 `region_id` | Int | The unique ID for a pre-defined region
 `street` | [String] | An array of strings that define the street number and name
 `suffix` | String | A value such as Sr., Jr., or III
 `telephone` | String | The telephone number
 `vat_id` | String | The customer's Tax/VAT number (for corporate customers)
 
-#### CustomerAddressAttribute attributes {#customerAddressAttributeOutput}
+#### CustomerAddressAttribute attributes
 
 The `CustomerAddressAttribute` output data type has been deprecated because the contents are not applicable for GraphQL. It can contain the following attributes:
 
@@ -755,7 +755,7 @@ Attribute |  Data Type | Description
 `attribute_code` | String | Attribute code
 `value` | String | Attribute value
 
-#### CustomerAddressRegion attributes {#customerAddressRegionOutput}
+#### CustomerAddressRegion attributes
 
 The `customerAddressRegion` output returns the following attributes:
 
@@ -765,13 +765,13 @@ Attribute |  Data Type | Description
 `region_code` | String | The address region code
 `region_id` | Int | The unique ID for a pre-defined region
 
-### orders input attributes {#orders}
+### orders input attributes
 
 import CustomerOrdersOutput from '/src/pages/_includes/graphql/customer-orders-output.md'
 
 <CustomerOrdersOutput />
 
-#### ProductReview object {#ProductReview}
+#### ProductReview object
 
 import ProductReview from '/src/pages/_includes/graphql/product-review.md'
 
@@ -783,18 +783,18 @@ import ProductReview from '/src/pages/_includes/graphql/product-review.md'
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`items` | [[ProductReview]](#ProductReview)! | An array of product reviews
+`items` | [[ProductReview]](#productreview-object)! | An array of product reviews
 `page_info` | [SearchResultPageInfo!](../../products/queries/products.md#searchresultpageinfo-attributes) | Metadata for pagination rendering
 
-### Return attributes {#Return}
+### Return attributes
 
 import Return from '/src/pages/_includes/graphql/return.md'
 
 <Return />
 
-### Returns attributes {#Returns}
+### Returns attributes
 
-The Returns object contains an array of [Return](#Return) objects.
+The Returns object contains an array of [Return](#returns-attributes) objects.
 
 ### Store credit attributes
 
@@ -804,29 +804,29 @@ Store credits must be enabled to return store credit attributes. If store credit
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`store_credit` | [CustomerStoreCredit](#CustomerStoreCredit) | Contains the store credit information for the logged-in customer
+`store_credit` | [CustomerStoreCredit](#customerstorecredit-attributes) | Contains the store credit information for the logged-in customer
 
-#### CustomerStoreCredit attributes {#CustomerStoreCredit}
+#### CustomerStoreCredit attributes
 
 The `store_credit` object contains store credit information, including the balance and history.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`balance_history` | [`CustomerStoreCreditHistory`](#CustomerStoreCreditHistory) | Lists changes to the amount of store credit available to the customer. If the history or store credit feature is disabled, then a null value will be returned.<br/><br/>You can specify the following optional parameters to control paging in the output.<br/><br/>`pageSize` - An integer that specifies the maximum number of results to return at once. The default value is 20.<br/><br/>`currentPage` - An integer that specifies which page of the results to return. The default value is 1
+`balance_history` | [`CustomerStoreCreditHistory`](#customerstorecredithistory-attributes) | Lists changes to the amount of store credit available to the customer. If the history or store credit feature is disabled, then a null value will be returned.<br/><br/>You can specify the following optional parameters to control paging in the output.<br/><br/>`pageSize` - An integer that specifies the maximum number of results to return at once. The default value is 20.<br/><br/>`currentPage` - An integer that specifies which page of the results to return. The default value is 1
 `current_balance` | Money | The current store credit balance
 `enabled` | Boolean | Indicates whether store credits are enabled. If the feature is disabled, then the balance will not be returned
 
-#### CustomerStoreCreditHistory attributes {#CustomerStoreCreditHistory}
+#### CustomerStoreCreditHistory attributes
 
 The `CustomerStoreCreditHistory` object contains an array of store credit items and paging information. If the store credit or store credit history feature is disabled, then a null value will be returned.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`items` | [[`CustomerStoreCreditHistoryItem`](#CustomerStoreCreditHistoryItem)] | An array of products that match the specified search criteria
+`items` | [[`CustomerStoreCreditHistoryItem`](#customerstorecredithistoryitem-attributes)] | An array of products that match the specified search criteria
 `page_info` | SearchResultPageInfo | An object that includes the `page_size` and `current_page` values specified in the query
 `total_count` | Int | The number of items returned
 
-#### CustomerStoreCreditHistoryItem attributes {#CustomerStoreCreditHistoryItem}
+#### CustomerStoreCreditHistoryItem attributes
 
 The `CustomerStoreCreditHistoryItem` object contains information about a specific change to the customer's store credit.
 
@@ -837,17 +837,17 @@ Attribute |  Data Type | Description
 `balance_change` | Money | The amount added to or subtracted from the store credit as a result of this action
 `date_time_changed` | String | Date and time when the store credit change was made
 
-### Wishlist attributes {#Wishlist}
+### Wishlist attributes
 
 import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
 
 <Wishlist />
 
-## B2B output attributes {#B2b}
+## B2B output attributes
 
 If B2B is installed the `Customer` object can contain additional information.
 
-### RequisitionListFilterInput attributes {#RequisitionListFilterInput}
+### RequisitionListFilterInput attributes
 
 The `RequisitionListFilterInput` object defines filters that limit the number of requisition lists returned.
 
@@ -856,19 +856,19 @@ Attribute |  Data Type | Description
 `name` | FilterMatchTypeInput | Filter by the display name of the requisition list
 `uids` | FilterEqualTypeInput | Filter requisition lists by one or more requisition list IDs
 
-### RequisitionList attributes {#RequisitionList}
+### RequisitionList attributes
 
 import RequisitionList from '/src/pages/_includes/graphql/requisition-list.md'
 
 <RequisitionList />
 
-### RequisitionLists attributes {#RequisitionList}
+### RequisitionLists attributes
 
 The RequisitionLists object contains an array of requisition lists.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`items` | [[RequisitionList]](#RequisitionList) | An array of requisition lists
+`items` | [[RequisitionList]](#requisitionlist-attributes) | An array of requisition lists
 `page_info` | SearchResultPageInfo | Contains pagination metadata
 `total_count` | Int | The number of returned requisition lists
 

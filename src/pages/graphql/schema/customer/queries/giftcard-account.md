@@ -51,7 +51,7 @@ query {
 
 The `giftCardAccount` query requires the `gift_card_code`.
 
-### GiftCardAccount object {#GiftCardAccount}
+### GiftCardAccount object
 
 The `GiftCardAccount` object must contain the following attribute:
 

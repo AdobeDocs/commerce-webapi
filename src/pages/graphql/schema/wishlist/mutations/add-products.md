@@ -256,7 +256,7 @@ Attribute |  Data Type | Description
 `wishlistId` | ID! | The ID of the customer's wish list
 `wishlistItems`| [[WishlistItemInput(#WishlistItemInput)]!]! | An array containing each product to be added to the wish list
 
-### WishlistItemInput attributes {#WishlistItemInput}
+### WishlistItemInput attributes
 
 The `WishlistItemInput` object defines each item to add to the wish list.
 
@@ -268,7 +268,7 @@ Attribute |  Data Type | Description
 `selected_options` | [ID] | An array of strings corresponding to options the customer selected
 `sku` | String! | The SKU of the product to add. For complex product types, specify the child product SKU
 
-### EnteredOptionInput attributes {#EnteredOptionInput}
+### EnteredOptionInput attributes
 
 import EnteredOptionInput from '/src/pages/_includes/graphql/entered-option-input.md'
 
@@ -280,16 +280,16 @@ The `AddProductsToWishlistOutput` object contains the customer's wish list and e
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`user_errors` | [[WishListUserInputError!](#WishListUserInputError)] | An array of errors encountered while adding products to a wish list
-`wishlist` | [Wishlist!](#Wishlist) | Contains the wish list with all items that were successfully added
+`user_errors` | [[WishListUserInputError!](#wishlistuserinputerror-attributes)] | An array of errors encountered while adding products to a wish list
+`wishlist` | [Wishlist!](#wishlist-attributes) | Contains the wish list with all items that were successfully added
 
-### Wishlist attributes {#Wishlist}
+### Wishlist attributes
 
 import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
 
 <Wishlist />
 
-### WishListUserInputError attributes {#WishListUserInputError}
+### WishListUserInputError attributes
 
 import WishlistUserInputErrors from '/src/pages/_includes/graphql/wishlist-user-input-errors.md'
 

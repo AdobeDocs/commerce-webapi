@@ -47,7 +47,7 @@ mutation {
 
 The `contactUs` mutation requires the  `contactUsInput` object.
 
-### contactUsInput object {#contactUsInput}
+### contactUsInput object
 
 The `contactUsInput` object must contain the following attributes:
 

@@ -66,6 +66,6 @@ mutation {
 In the subsequent tutorial steps, the unique shopping cart identifier `A7jCcOmUjjCh7MxDIzu1SeqdqETqEa5h` will be listed as `{ CART_ID }`.
 Copy the value of the id attribute. Use this value in subsequent steps wherever the { CART_ID } variable is specified.
 
-## Verify this step {#verify-step}
+## Verify this step
 
 There are no additional verification steps. The value of `id` is not displayed on the website or in the Admin.

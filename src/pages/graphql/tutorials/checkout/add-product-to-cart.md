@@ -153,7 +153,7 @@ mutation {
 
 The response lists all items currently in the cart, including the just-added video download.
 
-## Verify this step {#verify-step}
+## Verify this step
 
 1. Sign in as a customer to the website using the email `john.doe@example.com` and password `b1b2b3l@w+`.
 

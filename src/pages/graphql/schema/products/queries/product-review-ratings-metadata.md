@@ -128,7 +128,7 @@ query {
 
 Not applicable
 
-## Output attributes {#Categories}
+## Output attributes
 
 The `ProductReviewRatingsMetadata` output object contains the `items` object.
 
@@ -136,7 +136,7 @@ Attribute | Data type | Description
 --- | --- | ---
 `items` | [ProductReviewRatingMetadata!]! | A list of product reviews, sorted by position
 
-### ProductReviewRatingMetadata attributes {#ProductReviewRatingMetadata}
+### ProductReviewRatingMetadata attributes
 
 The `ProductReviewRatingMetadata` object contains the following attributes.
 
@@ -146,7 +146,7 @@ Attribute | Data type | Description
 `name` | String! | The label assigned to an aspect of a product that is being rated, such as quality or price
 `values` | [ProductReviewRatingValueMetadata!]! | A list of product review ratings, sorted by position
 
-### ProductReviewRatingValueMetadata attributes {#ProductReviewRatingValueMetadata}
+### ProductReviewRatingValueMetadata attributes
 
 The `ProductReviewRatingValueMetadata` object contains the following attributes.
 

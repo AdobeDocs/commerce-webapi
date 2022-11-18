@@ -159,7 +159,7 @@ To add new or change current permissions, you also must send all the current per
 
 The `CompanyRoleUpdateInput` input object defines the company role data.
 
-### CompanyRoleUpdateInput attributes {#CompanyRoleUpdateInput}
+### CompanyRoleUpdateInput attributes
 
 The `CompanyRoleUpdateInput` object contains the following attributes:
 
@@ -177,7 +177,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `role` | CompanyRole! | Contains company role data
 
-### CompanyRole attributes {#CompanyRole}
+### CompanyRole attributes
 
 import CompanyRole from '/src/pages/_includes/graphql/company-role.md'
 
