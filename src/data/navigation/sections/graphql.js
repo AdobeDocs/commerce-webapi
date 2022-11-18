@@ -8,12 +8,24 @@ module.exports = [
     path: "/graphql/usage/",
     pages: [
       {
+        title: "Authorization",
+        path: "/graphql/usage/authorization-tokens/",
+      },
+      {
+        title: "Caching",
+        path: "/graphql/usage/caching/",
+      },
+      {
+        title: "Filtering with custom attributes",
+        path: "/graphql/usage/custom-filters/",
+      },
+      {
         title: "Headers",
         path: "/graphql/usage/headers/",
       },
       {
-        title: "Authorization",
-        path: "/graphql/usage/authorization-tokens/",
+        title: "Introspection queries",
+        path: "/graphql/usage/introspection-queries/",
       },
       {
         title: "Protected mutations",
@@ -24,12 +36,8 @@ module.exports = [
         path: "/graphql/usage/security-configuration/",
       },
       {
-        title: "Caching",
-        path: "/graphql/usage/caching/",
-      },
-      {
-        title: "Filtering with custom attributes",
-        path: "/graphql/usage/custom-filters/",
+        title: "Staging queries",
+        path: "/graphql/usage/staging-queries/",
       },
     ],
   },
@@ -708,7 +716,7 @@ module.exports = [
             path: "/graphql/schema/products/queries/",
             pages: [
               {
-                title: "categories",
+                title: "products",
                 path: "/graphql/schema/products/queries/categories/products/",
               },
               {
@@ -772,10 +780,6 @@ module.exports = [
             path: "/graphql/schema/products/interfaces/",
             pages: [
               {
-                title: "Attributes",
-                path: "/graphql/schema/products/interfaces/attributes/",
-              },
-              {
                 title: "AttributeMetadata",
                 path: "/graphql/schema/products/interfaces/attribute-metadata/",
               },
@@ -786,6 +790,10 @@ module.exports = [
               {
                 title: "CustomizableOptionInterface",
                 path: "/graphql/schema/products/interfaces/customizable-option/",
+              },
+              {
+                title: "ProductInterface",
+                path: "/graphql/schema/products/interfaces/attributes/",
               },
               {
                 title: "ProductInterface implementations",
