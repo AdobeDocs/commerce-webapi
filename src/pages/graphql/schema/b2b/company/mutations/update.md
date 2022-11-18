@@ -1,5 +1,5 @@
 ---
-title: updateCompany mutation
+title: updateCompany mutation | Commerce Web APIs
 edition: b2b
 ---
 

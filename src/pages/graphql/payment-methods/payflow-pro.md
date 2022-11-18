@@ -1,5 +1,5 @@
 ---
-title: PayPal Payflow Pro payment method
+title: PayPal Payflow Pro payment method | Commerce Web APIs
 ---
 
 # PayPal Payflow Pro payment method

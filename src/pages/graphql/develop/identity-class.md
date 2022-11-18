@@ -1,5 +1,5 @@
 ---
-title: Identity class
+title: Identity class | Commerce Web APIs
 ---
 
 # Identity class

@@ -1,5 +1,5 @@
 ---
-title: shareGiftRegistry mutation
+title: shareGiftRegistry mutation | Commerce Web APIs
 edition: ee
 contributor_name: EY
 ---

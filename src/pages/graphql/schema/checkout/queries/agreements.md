@@ -1,5 +1,5 @@
 ---
-title: checkoutAgreements query
+title: checkoutAgreements query | Commerce Web APIs
 contributor_name: Something Digital
 contributor_link: https://www.somethingdigital.com/
 ---

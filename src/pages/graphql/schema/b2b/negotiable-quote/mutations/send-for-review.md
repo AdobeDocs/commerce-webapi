@@ -1,5 +1,5 @@
 ---
-title: sendNegotiableQuoteForReview mutation
+title: sendNegotiableQuoteForReview mutation | Commerce Web APIs
 edition: b2b
 ---
 

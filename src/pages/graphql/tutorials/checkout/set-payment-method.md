@@ -1,5 +1,5 @@
 ---
-title: Step 9. Set the payment method
+title: Step 9. Set the payment method | Commerce Web APIs
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---

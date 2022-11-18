@@ -1,5 +1,5 @@
 ---
-title: giftRegistryTypes query
+title: giftRegistryTypes query | Commerce Web APIs
 edition: ee
 contributor_name: Zilker Technology
 contributor_link: https://www.ztech.io/

@@ -1,5 +1,5 @@
 ---
-title: addVirtualProductsToCart mutation
+title: addVirtualProductsToCart mutation | Commerce Web APIs
 ---
 
 # addVirtualProductsToCart mutation

@@ -1,5 +1,5 @@
 ---
-title: revokeCustomerToken mutation
+title: revokeCustomerToken mutation | Commerce Web APIs
 ---
 
 # revokeCustomerToken mutation

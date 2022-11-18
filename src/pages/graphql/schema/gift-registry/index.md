@@ -1,5 +1,5 @@
 ---
-title: Gift registry
+title: Gift registry | Commerce Web APIs
 edition: ee
 ---
 

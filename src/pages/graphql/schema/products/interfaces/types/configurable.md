@@ -1,5 +1,5 @@
 ---
-title: Configurable product data types
+title: Configurable product data types | Commerce Web APIs
 ---
 
 # Configurable product data types

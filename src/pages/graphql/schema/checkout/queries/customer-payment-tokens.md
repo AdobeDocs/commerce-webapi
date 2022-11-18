@@ -1,5 +1,5 @@
 ---
-title: customerPaymentTokens query
+title: customerPaymentTokens query | Commerce Web APIs
 ---
 
 # customerPaymentTokens query

@@ -1,5 +1,5 @@
 ---
-title: Step 6. Set the delivery method
+title: Step 6. Set the delivery method | Commerce Web APIs
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---

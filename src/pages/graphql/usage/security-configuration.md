@@ -1,5 +1,5 @@
 ---
-title: GraphQL security configuration
+title: GraphQL security configuration | Commerce Web APIs
 ---
 
 # GraphQL security configuration

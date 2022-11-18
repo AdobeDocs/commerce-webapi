@@ -1,5 +1,5 @@
 ---
-title: PayPal Payflow Link payment method
+title: PayPal Payflow Link payment method | Commerce Web APIs
 ---
 
 # PayPal Payflow Link payment method

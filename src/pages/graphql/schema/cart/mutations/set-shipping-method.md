@@ -1,5 +1,5 @@
 ---
-title: setShippingMethodsOnCart mutation
+title: setShippingMethodsOnCart mutation | Commerce Web APIs
 ---
 
 # setShippingMethodsOnCart mutation

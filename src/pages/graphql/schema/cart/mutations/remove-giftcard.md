@@ -1,5 +1,5 @@
 ---
-title: removeGiftCardFromCart mutation
+title: removeGiftCardFromCart mutation | Commerce Web APIs
 edition: ee
 ---
 

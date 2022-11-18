@@ -1,5 +1,5 @@
 ---
-title: setPaymentMethodAndPlaceOrder mutation
+title: setPaymentMethodAndPlaceOrder mutation | Commerce Web APIs
 contributor_name: Something Digital
 contributor_link: https://www.somethingdigital.com/
 ---

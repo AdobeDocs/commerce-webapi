@@ -1,5 +1,5 @@
 ---
-title: changeCustomerPassword mutation
+title: changeCustomerPassword mutation | Commerce Web APIs
 ---
 
 # changeCustomerPassword mutation

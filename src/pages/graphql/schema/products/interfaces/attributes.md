@@ -1,5 +1,5 @@
 ---
-title: ProductInterface attributes
+title: ProductInterface attributes | Commerce Web APIs
 ---
 
 # ProductInterface attributes

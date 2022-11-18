@@ -1,5 +1,5 @@
 ---
-title: deleteWishlist mutation
+title: deleteWishlist mutation | Commerce Web APIs
 edition: ee
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: GraphQL checkout tutorial
+title: GraphQL checkout tutorial | Commerce Web APIs
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---

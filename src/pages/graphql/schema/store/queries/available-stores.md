@@ -1,5 +1,5 @@
 ---
-title: availableStores query
+title: availableStores query | Commerce Web APIs
 ---
 
 # availableStores query

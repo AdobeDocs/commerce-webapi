@@ -1,5 +1,5 @@
 ---
-title: Define the GraphQL schema for a module
+title: Define the GraphQL schema for a module | Commerce Web APIs
 ---
 
 # Define the GraphQL schema for a module

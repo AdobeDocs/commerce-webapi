@@ -1,5 +1,5 @@
 ---
-title: Checkout queries | Commerce Web APIs
+title: Checkout queries | Commerce Web APIs | Commerce Web APIs
 description:
 ---
 

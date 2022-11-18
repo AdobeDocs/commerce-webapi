@@ -1,5 +1,5 @@
 ---
-title: AttributeMetadataInterface
+title: AttributeMetadataInterface | Commerce Web APIs
 edition: pwa
 ---
 

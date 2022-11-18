@@ -1,5 +1,5 @@
 ---
-title: setNegotiableQuoteShippingMethods mutation
+title: setNegotiableQuoteShippingMethods mutation | Commerce Web APIs
 edition: b2b
 ---
 

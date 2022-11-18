@@ -1,5 +1,5 @@
 ---
-title: productReviewRatingsMetadata query
+title: productReviewRatingsMetadata query | Commerce Web APIs
 ---
 
 # productReviewRatingsMetadata query

@@ -1,5 +1,5 @@
 ---
-title: Grouped product data types
+title: Grouped product data types | Commerce Web APIs
 ---
 
 # Grouped product data types

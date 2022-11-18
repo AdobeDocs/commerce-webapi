@@ -1,5 +1,5 @@
 ---
-title: deletePaymentToken mutation
+title: deletePaymentToken mutation | Commerce Web APIs
 ---
 
 # deletePaymentToken mutation

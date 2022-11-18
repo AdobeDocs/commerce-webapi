@@ -1,5 +1,5 @@
 ---
-title: GraphQL tutorials | Commerce Web API
+title: GraphQL tutorials | Commerce Web APIs
 description:
 ---
 

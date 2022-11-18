@@ -1,5 +1,5 @@
 ---
-title: getPayflowLinkToken query
+title: getPayflowLinkToken query | Commerce Web APIs
 ---
 
 # getPayflowLinkToken query

@@ -1,5 +1,5 @@
 ---
-title: updateCompanyUser mutation
+title: updateCompanyUser mutation | Commerce Web APIs
 edition: b2b
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/

@@ -1,5 +1,5 @@
 ---
-title: categories query
+title: categories query | Commerce Web APIs
 ---
 
 # categories query

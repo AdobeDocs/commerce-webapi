@@ -1,5 +1,5 @@
 ---
-title: createCompareList mutation
+title: createCompareList mutation | Commerce Web APIs
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---

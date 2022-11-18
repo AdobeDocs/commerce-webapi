@@ -1,5 +1,5 @@
 ---
-title: updateWishlist mutation
+title: updateWishlist mutation | Commerce Web APIs
 edition: ee
 ---
 

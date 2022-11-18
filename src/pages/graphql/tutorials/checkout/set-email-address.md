@@ -1,5 +1,5 @@
 ---
-title: Step 8. Set email on the cart (guest customers only)
+title: Step 8. Set email on the cart (guest customers only) | Commerce Web APIs
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---

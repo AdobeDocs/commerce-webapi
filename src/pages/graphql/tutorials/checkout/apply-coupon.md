@@ -1,5 +1,5 @@
 ---
-title: Step 7. Apply a coupon
+title: Step 7. Apply a coupon | Commerce Web APIs
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---

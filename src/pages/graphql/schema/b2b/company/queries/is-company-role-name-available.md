@@ -1,5 +1,5 @@
 ---
-title: isCompanyRoleNameAvailable query
+title: isCompanyRoleNameAvailable query | Commerce Web APIs
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 edition: b2b

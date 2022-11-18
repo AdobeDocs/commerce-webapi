@@ -1,5 +1,5 @@
 ---
-title: closeNegotiableQuotes mutation
+title: closeNegotiableQuotes mutation | Commerce Web APIs
 edition: b2b
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: getHostedProUrl query
+title: getHostedProUrl query | Commerce Web APIs
 ---
 
 # getHostedProUrl query

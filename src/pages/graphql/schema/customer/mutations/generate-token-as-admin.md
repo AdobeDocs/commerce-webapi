@@ -1,5 +1,5 @@
 ---
-title: generateCustomerTokenAsAdmin mutation
+title: generateCustomerTokenAsAdmin mutation | Commerce Web APIs
 contributor_name: EY 
 ---
 

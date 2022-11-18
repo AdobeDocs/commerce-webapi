@@ -130,6 +130,10 @@ module.exports = [
                 path: "/graphql/schema/cart/mutations/apply-reward-points/",
               },
               {
+                title: "applyStoreCreditToCart",
+                path: "/graphql/schema/cart/mutations/apply-store-credit/",
+              },
+              {
                 title: "assignCustomerToGuestCart",
                 path: "/graphql/schema/cart/mutations/assign-customer-to-guest-cart/",
               },
@@ -536,6 +540,10 @@ module.exports = [
               {
                 title: "removeGiftRegistryRegistrants",
                 path: "/graphql/schema/gift-registry/mutations/remove-registrants/",
+              },
+              {
+                title: "shareGiftRegistry",
+                path: "/graphql/schema/gift-registry/mutations/share/",
               },
               {
                 title: "updateGiftRegistry",

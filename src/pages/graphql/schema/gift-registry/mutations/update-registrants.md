@@ -1,5 +1,5 @@
 ---
-title: updateGiftRegistryRegistrants mutation
+title: updateGiftRegistryRegistrants mutation | Commerce Web APIs
 edition: ee
 ---
 

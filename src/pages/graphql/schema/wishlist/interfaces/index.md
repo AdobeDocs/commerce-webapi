@@ -1,5 +1,5 @@
 ---
-title: Wishlist interfaces
+title: Wishlist interfaces | Commerce Web APIs
 ---
 
 # Wishlist interfaces

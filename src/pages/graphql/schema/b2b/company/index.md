@@ -1,5 +1,5 @@
 ---
-title: Company (B2B)
+title: Company (B2B) | Commerce Web APIs
 edition: b2b
 ---
 

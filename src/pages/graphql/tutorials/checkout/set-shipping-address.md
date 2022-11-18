@@ -1,5 +1,5 @@
 ---
-title: Step 4. Set the shipping address
+title: Step 4. Set the shipping address | Commerce Web APIs
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---

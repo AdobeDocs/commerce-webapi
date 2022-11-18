@@ -1,5 +1,5 @@
 ---
-title: Klarna payment method
+title: Klarna payment method | Commerce Web APIs
 contributor_name: Klarna
 contributor_link: https://www.klarna.com/
 ---

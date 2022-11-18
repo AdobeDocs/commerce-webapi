@@ -1,5 +1,5 @@
 ---
-title: Company (B2B) unions
+title: Company (B2B) unions | Commerce Web APIs
 edition: b2b   
 ---
 

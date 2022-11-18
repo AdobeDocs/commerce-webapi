@@ -1,5 +1,5 @@
 ---
-title: updateCustomerV2 mutation
+title: updateCustomerV2 mutation | Commerce Web APIs
 ---
 
 # updateCustomerV2 mutation

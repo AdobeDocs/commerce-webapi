@@ -1,5 +1,5 @@
 ---
-title: PayPal Payflow Pro Vault payment method
+title: PayPal Payflow Pro Vault payment method | Commerce Web APIs
 ---
 
 # PayPal Payflow Pro Vault payment method

@@ -1,5 +1,5 @@
 ---
-title: PayPal Express Checkout payment method
+title: PayPal Express Checkout payment method | Commerce Web APIs
 ---
 
 # PayPal Express Checkout payment method

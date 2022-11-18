@@ -1,5 +1,5 @@
 ---
-title: Gift card product data types
+title: Gift card product data types | Commerce Web APIs
 edition: ee
 ---
 

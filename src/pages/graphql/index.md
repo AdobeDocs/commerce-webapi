@@ -1,5 +1,5 @@
 ---
-title: GraphQL overview
+title: GraphQL overview | Commerce Web APIs
 ---
 
 # GraphQL overview

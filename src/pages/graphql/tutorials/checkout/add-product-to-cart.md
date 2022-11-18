@@ -1,5 +1,5 @@
 ---
-title: Step 3. Add products to the cart
+title: Step 3. Add products to the cart | Commerce Web APIs
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---

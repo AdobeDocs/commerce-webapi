@@ -1,5 +1,5 @@
 ---
-title: Express Checkout for other PayPal solutions
+title: Express Checkout for other PayPal solutions | Commerce Web APIs
 ---
 
 # Express Checkout for other PayPal solutions

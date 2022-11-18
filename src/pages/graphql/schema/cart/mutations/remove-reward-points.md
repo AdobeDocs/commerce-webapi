@@ -1,5 +1,5 @@
 ---
-title: removeRewardPointsFromCart mutation
+title: removeRewardPointsFromCart mutation | Commerce Web APIs
 edition: ee
 ---
 

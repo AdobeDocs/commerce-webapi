@@ -1,5 +1,5 @@
 ---
-title: negotiableQuotes query
+title: negotiableQuotes query | Commerce Web APIs
 edition: b2b   
 ---
 

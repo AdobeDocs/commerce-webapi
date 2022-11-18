@@ -1,5 +1,5 @@
 ---
-title: NegotiableQuoteAddressInterface attributes and implementations
+title: NegotiableQuoteAddressInterface attributes and implementations | Commerce Web APIs
 edition: b2b
 ---
 

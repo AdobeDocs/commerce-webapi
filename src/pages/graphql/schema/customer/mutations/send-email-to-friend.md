@@ -1,5 +1,5 @@
 ---
-title: sendEmailToFriend mutation
+title: sendEmailToFriend mutation | Commerce Web APIs
 ---
 
 # sendEmailToFriend mutation

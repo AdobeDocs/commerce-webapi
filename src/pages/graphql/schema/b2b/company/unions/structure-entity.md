@@ -1,5 +1,5 @@
 ---
-title: CompanyStructureEntity union
+title: CompanyStructureEntity union | Commerce Web APIs
 ---
 
 # CompanyStructureEntity union

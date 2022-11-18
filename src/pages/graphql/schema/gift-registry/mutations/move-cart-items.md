@@ -1,5 +1,5 @@
 ---
-title: moveCartItemsToGiftRegistry mutation
+title: moveCartItemsToGiftRegistry mutation | Commerce Web APIs
 edition: ee
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/

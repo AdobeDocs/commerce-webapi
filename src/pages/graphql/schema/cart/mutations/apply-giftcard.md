@@ -1,5 +1,5 @@
 ---
-title: applyGiftCardToCart mutation
+title: applyGiftCardToCart mutation | Commerce Web APIs
 edition: ee
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: removeGiftRegistryRegistrants mutation
+title: removeGiftRegistryRegistrants mutation | Commerce Web APIs
 edition: ee
 ---
 

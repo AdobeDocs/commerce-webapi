@@ -1,5 +1,5 @@
 ---
-title: Gift registry queries
+title: Gift registry queries | Commerce Web APIs
 ---
 
 # Gift registry queries

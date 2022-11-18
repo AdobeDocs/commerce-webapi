@@ -1,5 +1,5 @@
 ---
-title: applyRewardPointsToCart mutation
+title: applyRewardPointsToCart mutation | Commerce Web APIs
 edition: ee
 ---
 

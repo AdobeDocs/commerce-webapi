@@ -1,5 +1,5 @@
 ---
-title: PayPal Payments Advanced payment method
+title: PayPal Payments Advanced payment method | Commerce Web APIs
 ---
 
 # PayPal Payments Advanced payment method

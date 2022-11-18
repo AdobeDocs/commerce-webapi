@@ -1,5 +1,5 @@
 ---
-title: createCompany mutation
+title: createCompany mutation | Commerce Web APIs
 edition: b2b
 ---
 

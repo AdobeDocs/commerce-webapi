@@ -1,5 +1,5 @@
 ---
-title: setNegotiableQuoteShippingAddress mutation
+title: setNegotiableQuoteShippingAddress mutation | Commerce Web APIs
 edition: b2b
 ---
 
