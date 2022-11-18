@@ -75,14 +75,6 @@ The website in the public directory was generated for the Adobe Commerce with B2
 npx apollo-cli download-schema $ENDPOINT_URL --output schema.json
 ```
 
-where $ENDPOINT_URL is a placeholder for a URL to the endpoint.
-
-## How to generate the website
-
-`config.yml` contains the website's configuration. To regenerate the website after any updates, run:
-
-```shell
-yarn generate:graphql
-```
+where `$ENDPOINT_URL` is a placeholder for a URL's endpoint.
 
 For more information about SpectaQL, refer to <https://github.com/anvilco/spectaql>.
