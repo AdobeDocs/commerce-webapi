@@ -22,7 +22,7 @@ Perform the following actions before using the `placeNegotiableQuoteOrder` mutat
 -  [Request a negotiable quote](request.md)
 -  [Set the billing address](set-billing-address.md)
 -  [Set the shipping address](set-shipping-address.md)
--  Set the shipping method
+-  [Set the shipping method](set-shipping-methods.md)
 -  [Set the payment method](set-payment-method.md)
 
 You cannot manage orders with GraphQL, because orders are part of the backend. You can use REST or SOAP calls to manage orders to their completion.

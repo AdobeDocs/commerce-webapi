@@ -151,7 +151,7 @@ The `CreateCompanyOutput` object contains the `Company` object.
 
 import Company from '/src/pages/_includes/graphql/company.md'
 
-<Company />.md %}
+<Company />
 
 ## Related topics
 

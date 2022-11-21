@@ -51,7 +51,6 @@ Enable for Braintree payment form | Not applicable
 Enable for Checkout/Placing Order | `setPaymentMethodOnCart`, `setPaymentMethodAndPlaceOrder`
 Enable for Coupon Codes | `applyCouponToCart`
 
-{:.ref-header}
-Related topics
+## Related topics
 
 [Construct a request](../../get-started/gs-web-api-request.md)

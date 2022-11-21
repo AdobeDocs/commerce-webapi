@@ -717,7 +717,7 @@ module.exports = [
             pages: [
               {
                 title: "products",
-                path: "/graphql/schema/products/queries/categories/products/",
+                path: "/graphql/schema/products/queries/products/",
               },
               {
                 title: "categories",
@@ -740,7 +740,7 @@ module.exports = [
                 path: "/graphql/schema/products/queries/product-review-ratings-metadata/",
               },
               {
-                title: "route",
+                title: "routes",
                 path: "/graphql/schema/products/queries/route/",
               },
               {

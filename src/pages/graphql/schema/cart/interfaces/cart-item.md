@@ -145,6 +145,8 @@ Attribute | Data type | Description
 
 The `GiftCardCartItem` object adds the following attributes to the `CartItemInterface`.
 
+Attribute | Data type | Description
+--- | --- | ---
 `amount` | Money! | The amount and currency of the gift card
 `customizable_options` | [SelectedCustomizableOption!](#selectedcustomizableoption-attributes) | An array of customizations made to the gift card
 `message` | String | A message to the recipient
