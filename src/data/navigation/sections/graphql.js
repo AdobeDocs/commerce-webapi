@@ -716,10 +716,6 @@ module.exports = [
             path: "/graphql/schema/products/queries/",
             pages: [
               {
-                title: "products",
-                path: "/graphql/schema/products/queries/products/",
-              },
-              {
                 title: "categories",
                 path: "/graphql/schema/products/queries/categories/",
               },
@@ -734,6 +730,10 @@ module.exports = [
               {
                 title: "compareList",
                 path: "/graphql/schema/products/queries/compare-list/",
+              },
+              {
+                title: "products",
+                path: "/graphql/schema/products/queries/products/",
               },
               {
                 title: "productReviewRatingsMetadata",
