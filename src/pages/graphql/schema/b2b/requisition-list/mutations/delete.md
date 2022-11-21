@@ -9,7 +9,7 @@ contributor_link: https://www.ztech.io/
 
 The `deleteRequisitionList` mutation deletes a requisition list of the logged in customer. The response can include any remaining requisition lists.
 
-This mutation requires a valid [customer authentication token](../../../custome r/mutations/generate-token.md).
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
 
 <InlineAlert variant="info" slots="text" />
 
