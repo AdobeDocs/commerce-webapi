@@ -10,10 +10,10 @@ The Catalog Service for Adobe Commerce extension contributes to a services-only 
 
 Catalog Service provides the following queries:
 
-*  [`products`](./products.md)
-*  [`refineProduct`](./refine-product.md)
+*  [`products`](queries/products.md)
+*  [`refineProduct`](queries/refine-product.md)
 
-It also extends the Live Search [`productSearch`](./product-search.md) query to return product view data.
+It also extends the Live Search [`productSearch`](queries/product-search.md) query to return product view data.
 
 You can optionally implement [API Mesh for Adobe Developer App Builder](https://developer.adobe.com/graphql-mesh-gateway/) to integrate the two Adobe Commerce GraphQL systems with private and third-party APIs and other software interfaces using Adobe Developer. The mesh can be configured to ensure calls routed to each endpoint contain the correct authorization information in the headers.
 
