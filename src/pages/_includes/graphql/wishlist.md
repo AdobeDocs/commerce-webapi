@@ -6,10 +6,10 @@ Attribute | Data type | Description
 `items` | [[WishlistItem](#wishlistitem-attributes)] | Deprecated. Use `items_v2` instead
 `items_v2` | [[WishlistItemInterface]](../../graphql/schema/wishlist/interfaces/wishlist.md) | An array of items in the customer's wish list
 `items_count` | Int | The number of items in the wish list
-`name` | String | The wish list name. Applicable to {{site.data.var.ee}} only
+`name` | String | The wish list name. Applicable to Adobe Commerce only
 `sharing_code` | String | An encrypted code that the application uses to link to the wish list
 `updated_at` | String | The time of the last modification to the wish list
-`visibility` | WishlistVisibilityEnum! | An enum indicating whether the wish list is PUBLIC or PRIVATE. Applicable to {{site.data.var.ee}} only
+`visibility` | WishlistVisibilityEnum! | An enum indicating whether the wish list is PUBLIC or PRIVATE. Applicable to Adobe Commerce only
 
 #### WishlistItem attributes
 

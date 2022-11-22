@@ -293,7 +293,7 @@ import Docs from '/src/pages/_includes/graphql/live-search-headers.md'
 
 The following example uses "Watch" as the search phrase. The query uses the core `ProductInterface` to access product information. As a result, the query has a longer response time than using Catalog Service to retrieve this information.
 
-For an example of using Live Search with Catalog Service, see [Catalog Service productSearch query]({{site.baseurl}}/catalog-service/productsearch.html). Other than returning the `productView` object, all other attributes are the same. See full references on this page.
+For an example of using Live Search with Catalog Service, see [Catalog Service productSearch query](../../catalog-service/queries/product-search.md). Other than returning the `productView` object, all other attributes are the same. See full references on this page.
 
 **Request:**
 
