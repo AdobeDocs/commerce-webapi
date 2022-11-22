@@ -159,4 +159,3 @@ Field | Data Type | Description
 `shortDescription` | String | A summary of the product.
 `sku` | String | Product SKU.
 `url` | String | Canonical URL of the product.
-
