@@ -36,7 +36,7 @@ products (skus [String]) [ProductView]
 
 You must specify the following HTTP headers to run this query.
 
-import Docs from '/src/pages/_includes/graphql/catalog-service-headers.md'
+import Docs from '/src/pages/_includes/graphql/catalog-service/headers.md'
 
 <Docs />
 
