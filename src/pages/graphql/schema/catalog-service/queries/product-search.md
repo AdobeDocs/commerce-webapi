@@ -1,5 +1,5 @@
 ---
-title: productSearch query | GraphQL Developer Guide
+title: productSearch query | Commerce Web APIs
 edition: ee
 description: Describes how to construct and use the Catalog Service productSearch query.
 ---

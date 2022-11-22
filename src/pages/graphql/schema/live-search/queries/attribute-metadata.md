@@ -1,5 +1,5 @@
 ---
-title: attributeMetadata query | GraphQL Developer Guide
+title: attributeMetadata query | Commerce Web APIs
 edition: ee
 description: Describes how to construct and use the Live Search attributeMetadata query.
 ---

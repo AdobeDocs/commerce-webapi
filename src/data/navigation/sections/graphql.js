@@ -224,6 +224,30 @@ module.exports = [
         ],
       },
       {
+        title: "Catalog Service",
+        path: "/graphql/schema/catalog-service/",
+        pages: [
+          {
+            title: "Queries",
+            path: "/graphql/schema/catalog-service/queries/",
+            pages: [
+              {
+                title: "products",
+                path: "/graphql/schema/catalog-service/queries/products/",
+              },
+              {
+                title: "productSearch",
+                path: "/graphql/schema/catalog-service/queries/product-search/",
+              },
+              {
+                title: "refineProduct",
+                path: "/graphql/schema/catalog-service/queries/refine-product/"
+              },
+            ],
+          },
+        ],
+      },
+      {
         title: "Checkout",
         path: "/graphql/schema/checkout/",
         pages: [
@@ -564,6 +588,26 @@ module.exports = [
               {
                 title: "updateGiftRegistryRegistrants",
                 path: "/graphql/schema/gift-registry/mutations/update-registrants/",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Live Search",
+        path: "/graphql/schema/live-search/",
+        pages: [
+          {
+            title: "Queries",
+            path: "/graphql/schema/live-search/queries/",
+            pages: [
+              {
+                title: "attributeMetadata",
+                path: "/graphql/schema/live-search/queries/attribute-metadata"
+              },
+              {
+                title: "productSearch",
+                path: "/graphql/schema/live-search/queries/product-search"
               },
             ],
           },

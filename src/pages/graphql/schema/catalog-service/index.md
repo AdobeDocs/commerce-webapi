@@ -1,5 +1,5 @@
 ---
-title: Catalog Service for Adobe Commerce | GraphQL Developer Guide
+title: Catalog Service for Adobe Commerce | Commerce Web APIs
 edition: ee
 description: Learn how Catalog Service implements GraphQL.
 ---

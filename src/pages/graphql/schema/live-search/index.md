@@ -1,5 +1,5 @@
 ---
-title: Live Search | GraphQL Developer Guide
+title: Live Search | Commerce Web APIs
 edition: ee
 description: Learn how Live Search implements GraphQL.
 ---
