@@ -28,9 +28,9 @@ query Categories($roles: [String!]) {
 
 You must specify the following HTTP headers to run this query.
 
-import Docs from '/src/pages/_includes/graphql/catalog-service/headers.md'
+import Headers from '/src/pages/_includes/graphql/catalog-service/headers.md'
 
-<Docs />
+<Headers />
 
 ## Example usage
 
@@ -201,6 +201,6 @@ Field | Data type | Description
 
 ## Output fields
 
-import Docs2 from '/src/pages/_includes/graphql/catalog-service/categories.md'
+import Output from '/src/pages/_includes/graphql/catalog-service/categories.md'
 
-<Docs2 />
+<Output />
