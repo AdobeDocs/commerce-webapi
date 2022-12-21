@@ -53,7 +53,7 @@ POST /rest/<store_view_code>/V1/import/csv
 |`behavior` | The action  to perform | string | Required. One of `append`, `replace`, `delete`|
 |`validationStrategy` | Strategy to use when entities are invalid | string | Required. Either `validation_stop_on_errors` or `validation-skip-errors` |
 |`allowedErrorCount` | The maximum number of errors that can occur until import is canceled | string | Required |
-|`csvData` | Base64 encoded string containing CSV data | string | Required |
+|`csvData` | Base64 encoded string containing CSV data (optionally gzip compressed before base64) | string | Required |
 
 **Sample Usage:**
 
