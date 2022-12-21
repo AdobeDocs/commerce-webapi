@@ -52,6 +52,10 @@ POST /rest/<store_view_code>/V1/import/csv
 |`validationStrategy` | Strategy to use when entities are invalid | string | Required. Either `validation_stop_on_errors` or `validation-skip-errors` |
 |`allowedErrorCount` | The maximum number of errors that can occur until import is canceled | string | Required |
 |`csvData` | Base64 encoded string containing CSV data | string | Required |
+|`ImportFieldSeparator` | Separator used in CSV.  Default is ',' | string | Optional |
+|`ImportMultipleValueSeparator` | Separator used in columns with multiple values such as categories.  Default is ',' | string | Optional |
+|`ImportEmptyAttributeValueConstant` | Constant to be replaced with empty attribute | string | Optional |
+|`ImportImagesFileDir` | Path to images relative to &lt;Magento root directory&gt;/var/import/images | string | Optional |
 
 **Sample Usage:**
 
