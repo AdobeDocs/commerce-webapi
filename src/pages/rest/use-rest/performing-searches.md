@@ -167,24 +167,26 @@ The system creates an array, as shown in the following pseudo-code.
 
 ```http
 searchCriteria => [
-  'filterGroups' => [
-    0 => [
-      'filters' => [
-         0 => [
-           'field' => 'sku',
-           'value' => 'WSH%31%',
-           'condition_type' => 'like'
-         ]
-    1 => [
-      'filters' => [
-         0 => [
-           'field' => 'price',
-           'value' => '30',
-           'condition_type' => 'lt'
-         ]
-      ]
-    ]
-  ]
+    'filterGroups' => [
+      0 => [
+        'filters' => [
+           0 => [
+             'field' => 'sku',
+             'value' => 'WSH%31%',
+             'condition_type' => 'like'
+           ]
+        ]
+      ]  
+      1 => [
+        'filters' => [
+           0 => [
+             'field' => 'price',
+             'value' => '30',
+             'condition_type' => 'lt'
+           ]
+        ]
+      ]
+    ]
 ```
 
 The query returns 9 items.
