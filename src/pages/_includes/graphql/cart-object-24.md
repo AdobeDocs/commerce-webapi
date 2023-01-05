@@ -1,12 +1,12 @@
 Attribute |  Data Type | Description
 --- | --- | ---
 `applied_coupon` | [AppliedCoupon][AppliedCoupon] | Deprecated. Use `applied_coupons` instead
-`applied_coupons` | [AppliedCoupon][AppliedCoupon] | An array of `AppliedCoupon` objects. Each object contains the `code` text attribute, which specifies the coupon code
-`applied_gift_cards` | [AppliedGiftCard][AppliedGiftCard] | An array of `AppliedGiftCard` objects. An `AppliedGiftCard` object contains the `code` text attribute, which specifies the gift card code. `applied_gift_cards` is a Commerce-only attribute, defined in the GiftCardAccountGraphQl module
+`applied_coupons` | [[AppliedCoupon]][AppliedCoupon] | An array of `AppliedCoupon` objects. Each object contains the `code` text attribute, which specifies the coupon code
+`applied_gift_cards` | [[AppliedGiftCard]][AppliedGiftCard] | An array of `AppliedGiftCard` objects. An `AppliedGiftCard` object contains the `code` text attribute, which specifies the gift card code. `applied_gift_cards` is a Commerce-only attribute, defined in the GiftCardAccountGraphQl module
 `applied_reward_points`| [RewardPointsAmount][RewardPointsAmount] | The amount of reward points applied to the cart
 `applied_store_credit` | [AppliedStoreCredit][AppliedStoreCredit] | Contains store credit information applied to the cart. `applied_store_credit` is a Commerce-only attribute, defined in the CustomerBalanceGraphQl module
-`available_gift_wrappings` | [GiftWrapping][GiftWrapping]! | The list of available gift wrapping options for the cart
-`available_payment_methods` | [AvailablePaymentMethod][AvailablePaymentMethod] | Available payment methods
+`available_gift_wrappings` | [[GiftWrapping]][GiftWrapping]! | The list of available gift wrapping options for the cart
+`available_payment_methods` | [[AvailablePaymentMethod]][AvailablePaymentMethod] | Available payment methods
 `billing_address` | [BillingCartAddress][BillingCartAddress] | Contains the billing address specified in the customer's cart
 `email` | String | The customer's email address
 `gift_message` | [GiftMessage][GiftMessage] | A gift message added to the cart
