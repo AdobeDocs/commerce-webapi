@@ -91,7 +91,7 @@ The `NegotiableQuoteHistoryProductsRemovedChange` object provides details about 
 Attribute | Data Type | Description
 --- | --- | ---
 `products_removed_from_catalog` | [ID]| A list of product IDs the seller removed from the catalog
-`products_removed_from_quote` | [[ProductInterface]](../../graphql/schema/products/interfaces/types/index.md) | A list of products removed from the quote by either the buyer or the seller
+`products_removed_from_quote` | [[ProductInterface]](/src/pages/graphql/schema/products/interfaces/types/index.md) | A list of products removed from the quote by either the buyer or the seller
 
 ### NegotiableQuoteHistoryStatusChange attributes
 

@@ -3,7 +3,7 @@ The `Company` object can contain the following attributes:
 Attribute | Data type | Description
 --- | --- | ---
 `acl_resources` | [[CompanyAclResource]](#companyaclresource-attributes) | Returns the list of all resources defined within the company
-`company_admin` | [Customer](../../graphql/schema/customer/queries/customer.md) | An object containing information about the company administrator
+`company_admin` | [Customer](/src/pages/graphql/schema/customer/queries/customer.md) | An object containing information about the company administrator
 `credit` | CompanyCredit! | The company credit balance
 `credit_history(filter: CompanyCreditHistoryFilterInput, pageSize: Int = 20, currentPage: Int = 1)` | CompanyCreditHistory! | A history of company credit operations
 `email` | String | The email address of the company contact
@@ -18,7 +18,7 @@ Attribute | Data type | Description
 `sales_representative` |  [CompanySalesRepresentative](#companysalesrepresentative-attributes) | The company sales representative
 `structure(rootId: ID = 0 depth: Int = 10 )` | [CompanyStructure](#companystructure-attributes) | Returns the company structure of teams and customers in depth-first order
 `team(id: ID!)` | [CompanyTeam](#companyteam-attributes) | Returns company team data filtered by the unique ID for a `CompanyTeam` object
-`user(id: ID!)` | [Customer](../../graphql/schema/customer/queries/customer.md) | Returns a company user filtered by the unique ID for a `Customer` object
+`user(id: ID!)` | [Customer](/src/pages/graphql/schema/customer/queries/customer.md) | Returns a company user filtered by the unique ID for a `Customer` object
 `users(filter: CompanyUsersFilterInput, pageSize: Int = 20, currentPage: Int = 1)`| [CompanyUsers](#companyusers-attributes) | Returns a list of company users based on activity status
 `vat_tax_id` | String | The value-added tax number that is assigned to the company by some jurisdictions for tax reporting purposes
 
@@ -105,7 +105,7 @@ The `CompanyLegalAddress` object can contain the following attributes.
 Attribute |  Data Type | Description
 --- | --- | ---
 `city` | String! | The city where the company is registered to conduct business
-`country_code` | CountryCodeEnum! | Company's country ID. See the [`countries` query](../../graphql/schema/store/queries/countries.md)
+`country_code` | CountryCodeEnum! | Company's country ID. See the [`countries` query](/src/pages/graphql/schema/store/queries/countries.md)
 `postcode` | String! | The company's postal code
 `region` | CustomerAddressRegionInput! | An object containing the region name and/or region ID where the company is registered to conduct business
 `street` | [String!]! | An array of strings that define the street address where the company is registered to conduct business
@@ -156,7 +156,7 @@ The `CompanyStructureItem` object can contain the following attributes.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`entity` | CompanyStructureEntity | A union of [CompanyTeam](#companyteam-attributes) and [Customer](../../graphql/schema/customer/queries/customer.md) objects
+`entity` | CompanyStructureEntity | A union of [CompanyTeam](#companyteam-attributes) and [Customer](/src/pages/graphql/schema/customer/queries/customer.md) objects
 `id` | ID! | The unique ID for a `CompanyStructureItem` object
 `parent_id` | ID | The ID of the parent item in the company hierarchy
 
@@ -172,6 +172,6 @@ The `CompanyUsers` object can contain the following attributes.
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`items` | [[Customer]!](../../graphql/schema/customer/queries/customer.md) | An array of `CompanyUser` objects that match the specified filter criteria
+`items` | [[Customer]!](/src/pages/graphql/schema/customer/queries/customer.md) | An array of `CompanyUser` objects that match the specified filter criteria
 `page_info` | SearchResultPageInfo | Pagination metadata
 `total_count` | Int! | The number of objects returned

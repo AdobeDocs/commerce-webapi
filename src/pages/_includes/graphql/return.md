@@ -9,7 +9,7 @@ Attribute |  Data Type | Description
 `customer` | [ReturnCustomer](#returncomment-attributes) | The name of the person who requested the return
 `items`| [[ReturnItem]](#returnitem-attributes) | A list of items being returned
 `number` | String! | Human-readable return number
-`order` | [CustomerOrder](../../graphql/schema/customer/queries/customer.md#orders-input-attributes) | The order associated with the return
+`order` | [CustomerOrder](/src/pages/graphql/schema/customer/queries/customer.md#orders-input-attributes) | The order associated with the return
 `shipping` | [ReturnShipping](#returnshipping-attributes) | Shipping information for the return
 `status` |  ReturnStatus | An enum indicating the status of the return request. Possible values are APPROVED, AUTHORIZED, CLOSED, DENIED, PARTIALLY_APPROVED, PARTIALLY_AUTHORIZED, PARTIALLY_RECEIVED, PARTIALLY_REJECTED, PENDING, PROCESSED_AND_CLOSED, RECEIVED, and REJECTED
 `uid` | ID! | The unique ID of a `Return` object
@@ -50,7 +50,7 @@ The ReturnItem object provides details about an individual item in a return requ
 Attribute |  Data Type | Description
 --- | --- | ---
 `custom_attributes` | [[ReturnCustomAttribute]](#returncustomattribute-attributes) | Return item custom attributes that are visible on the storefront
-`order_item` | [OrderItemInterface!](../../graphql/schema/orders/interfaces/order-item.md) | Provides access to the product being returned, including information about selected and entered options
+`order_item` | [OrderItemInterface!](/src/pages/graphql/schema/orders/interfaces/order-item.md) | Provides access to the product being returned, including information about selected and entered options
 `quantity` | Float! | The quantity of the item the merchant authorized to be returned
 `request_quantity` | Float! | The quantity of the item requested to be returned
 `status`| ReturnItemStatus! | An enum indicating the return status of the item. Possible values are APPROVED, AUTHORIZED, DENIED, PENDING, RECEIVED, and REJECTED
