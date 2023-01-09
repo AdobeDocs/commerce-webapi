@@ -5,7 +5,7 @@ description: Overview of the available REST API documentation
  
 # REST API Overview
 
-The [REST API documentation][] describes the REST APIs that are available in Adobe Commerce.
+The REST API documentation describes the REST APIs that are available in Adobe Commerce.
 
 <TextBlock slots="image, heading, text, links" width="50%" />
 
@@ -46,5 +46,3 @@ Get an introduction to Adobe Commerce web APIs through these step-by-step tutori
 Learn about managing your catalog, managing your inventory, and refunding sales using the REST API
 
 -  [Learn more](modules/)
-
-[REST API documentation]: https://magento.redoc.ly

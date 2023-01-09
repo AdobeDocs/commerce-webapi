@@ -11,7 +11,7 @@ You cannot delete or disable the default source. You can create, modify, enable,
 
 This step guides you through the process of creating sources for your inventory, including warehouses for the physical products and another source for virtual and downloadable products.
 
-For more information about sources, see [Inventory Management overview](https://devdocs.magento.com/guides/v2.4/inventory/index.html).
+For more information about sources, see [Inventory Management overview](https://developer.adobe.com/commerce/webapi/rest/inventory/).
 
 <InlineAlert variant="info" slots="text"/>
 
