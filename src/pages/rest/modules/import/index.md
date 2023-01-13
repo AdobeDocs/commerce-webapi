@@ -1,7 +1,9 @@
 ---
 title: ImportCsv API
 description: Import entities into Adobe Commerce using REST.
---- 
+---
+
+# Import data
 
 The `POST /rest/<store_view_code>/V1/import/csv` endpoint allows you to use REST to import data into Adobe Commerce. It works much like the import functionality provided in the Admin at **System** > Data Transfer > **Import**. You can use the endpoint to import the following entities:
 
