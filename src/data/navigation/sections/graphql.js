@@ -895,15 +895,15 @@ module.exports = [
             pages: [
               {
                 title: "purchase_orders_enabled",
-                path: "/graphql/schema/b2b/purchase-order/queries/purchase-orders-enabled/",
+                path: "/graphql/schema/b2b/purchase-order/queries/enabled/",
               },
               {
                 title: "purchase_order",
-                path: "/graphql/schema/b2b/purchase-order/queries/purchase-order/",
+                path: "/graphql/schema/b2b/purchase-order/queries/single/",
               },
               {
                 title: "purchase_orders",
-                path: "/graphql/schema/b2b/purchase-order/queries/purchase-orders/",
+                path: "/graphql/schema/b2b/purchase-order/queries/list/",
               },
             ],
           },
@@ -913,31 +913,31 @@ module.exports = [
             pages: [
               {
                 title: "placePurchaseOrder",
-                path: "/graphql/schema/b2b/purchase-order/mutations/place-purchase-order/",
+                path: "/graphql/schema/b2b/purchase-order/mutations/place/",
               },
               {
                 title: "placeOrderForPurchaseOrder",
-                path: "/graphql/schema/b2b/purchase-order/mutations/place-order-for-purchase-order/",
+                path: "/graphql/schema/b2b/purchase-order/mutations/place-order/",
               },
               {
                 title: "approvePurchaseOrders",
-                path: "/graphql/schema/b2b/purchase-order/mutations/approve-purchase-order/",
+                path: "/graphql/schema/b2b/purchase-order/mutations/approve/",
               },
               {
                 title: "cancelPurchaseOrders",
-                path: "/graphql/schema/b2b/purchase-order/mutations/cancel-purchase-order/",
+                path: "/graphql/schema/b2b/purchase-order/mutations/cancel/",
               },
               {
                 title: "rejectPurchaseOrders",
-                path: "/graphql/schema/b2b/purchase-order/mutations/reject-purchase-order/",
+                path: "/graphql/schema/b2b/purchase-order/mutations/reject/",
               },
               {
                 title: "addPurchaseOrderItemsToCart",
-                path: "/graphql/schema/b2b/purchase-order/mutations/add-purchase-order-items-to-cart/",
+                path: "/graphql/schema/b2b/purchase-order/mutations/add-items-to-cart/",
               },
               {
                 title: "addPurchaseOrderComment",
-                path: "/graphql/schema/b2b/purchase-order/mutations/add-purchase-order-comment/",
+                path: "/graphql/schema/b2b/purchase-order/mutations/add-comment/",
               },
             ],
           },
@@ -957,11 +957,11 @@ module.exports = [
               },
               {
                 title: "purchase_order_approval_rule",
-                path: "/graphql/schema/b2b/purchase-order-rule/queries/rule/",
+                path: "/graphql/schema/b2b/purchase-order-rule/queries/single/",
               },
               {
                 title: "purchase_order_approval_rules",
-                path: "/graphql/schema/b2b/purchase-order-rule/queries/rules/",
+                path: "/graphql/schema/b2b/purchase-order-rule/queries/list/",
               },
               {
                 title: "approval_flow",
@@ -975,19 +975,19 @@ module.exports = [
             pages: [
               {
                 title: "validatePurchaseOrders",
-                path: "/graphql/schema/b2b/purchase-order-rule/mutations/validate-purchase-order/",
+                path: "/graphql/schema/b2b/purchase-order-rule/mutations/validate/",
               },
               {
                 title: "createPurchaseOrderApprovalRule",
-                path: "/graphql/schema/b2b/purchase-order-rule/mutations/create-purchase-order-rule/",
+                path: "/graphql/schema/b2b/purchase-order-rule/mutations/create/",
               },
               {
                 title: "deletePurchaseOrderApprovalRule",
-                path: "/graphql/schema/b2b/purchase-order-rule/mutations/delete-purchase-order-rule/",
+                path: "/graphql/schema/b2b/purchase-order-rule/mutations/delete/",
               },
               {
                 title: "updatePurchaseOrderApprovalRule",
-                path: "/graphql/schema/b2b/purchase-order-rule/mutations/update-purchase-order-rule/",
+                path: "/graphql/schema/b2b/purchase-order-rule/mutations/update/",
               },
             ],
           },
