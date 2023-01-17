@@ -7,7 +7,7 @@ description: A high-level overview of Magento web APIs.
 
 The Adobe Commerce and Magento Open Source web [API](https://glossary.magento.com/api) framework provides integrators and developers the means to use web services that communicate with the application. Key features include:
 
-*  Support for [GraphQL](https://devdocs.magento.com/guides/v2.4/graphql/index.html), [REST](https://devdocs.magento.com/guides/v2.4/rest/bk-rest.html) (Representational State Transfer) and [SOAP](https://devdocs.magento.com/guides/v2.4/soap/bk-soap.html) (Simple Object Access Protocol).
+*  Support for [GraphQL](https://devdocs.magento.com/guides/v2.4/graphql/index.html), [REST](https://developer.adobe.com/commerce/webapi/rest/) (Representational State Transfer) and [SOAP](https://devdocs.magento.com/guides/v2.4/soap/bk-soap.html) (Simple Object Access Protocol).
 
 *  Three types of [authentication](./authentication/index.md):
    *  Third-party applications authenticate with [OAuth 1.0a](./authentication/gs-authentication-oauth.md).

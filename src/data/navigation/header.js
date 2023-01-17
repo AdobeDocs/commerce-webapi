@@ -1,6 +1,6 @@
 module.exports = [
     {
-      title: "Commerce Web APIs",
+      title: "Web APIs",
       path: "/",
     },
     {
@@ -11,8 +11,8 @@ module.exports = [
       title: "REST",
       path: "/rest/",
     },
-    // {
-    //   title: "GraphQL",
-    //   path: "/graphql/",
-    // },
+    {
+      title: "GraphQL",
+      path: "/graphql/",
+    },
   ];

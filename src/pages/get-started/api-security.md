@@ -18,14 +18,14 @@ Imposing restrictions on the size and number of resources that a user can reques
 By default, these input limits are disabled, but you can use the following methods to enable them:
 
 -  Set the values in the [Admin](https://docs.magento.com/user-guide/configuration/services/magento-web-api.html).
--  Run the [`bin/magento config:set` command](https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands-config-mgmt-set.html#config-cli-config-set).
--  Add entries to the [`env.php` file](https://devdocs.magento.com/guides/v2.4/config-guide/prod/config-reference-configphp.html#system).
--  Set [environment variables](https://devdocs.magento.com/guides/v2.4/config-guide/deployment/pipeline/example/environment-variables.html).
+-  Run the [`bin/magento config:set` command](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configuration-management/set-configuration-values.html).
+-  Add entries to the [`env.php` file](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html#system).
+-  Set [environment variables](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/examples/example-environment-variables.html).
 
 When input limiting has been enabled, the system uses the default value for each limitation listed above. You can also configure custom values.
 
-Although some simple examples for configuring these values from the CLI are provided below, all of the values can be [configured per website and per store view](https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands-config-mgmt-set.html#config-cli-config-set) in addition to being configurable globally. In addition, these values can also be configured [via `env.php`](https://devdocs.magento.com/guides/v2.4/config-guide/prod/config-reference-configphp.html#system)
-as well as via [environment variables](https://devdocs.magento.com/guides/v2.4/config-guide/deployment/pipeline/example/environment-variables.html).
+Although some simple examples for configuring these values from the CLI are provided below, all of the values can be [configured per website and per store view](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configuration-management/set-configuration-values.html) in addition to being configurable globally. In addition, these values can also be configured [via `env.php`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html#system)
+as well as via [environment variables](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/examples/example-environment-variables.html).
 
 <InlineAlert variant="info" slots="text"/>
 

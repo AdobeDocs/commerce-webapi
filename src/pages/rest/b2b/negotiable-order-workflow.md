@@ -965,7 +965,7 @@ The buyer is now ready to complete the purchase. Since the buyer has already spe
 
 <InlineAlert variant="info" slots="text"/>
 
-The `/V1/negotiable-carts/:cartId/payment-information` endpoint runs asynchronously if the `AsyncOrder` module has been enabled. By default, the mutation runs synchronously. [Asynchronous order placement](https://devdocs.magento.com/guides/v2.4/performance-best-practices/high-throughput-order-processing.html#asynchronous-order-placement) describes the benefits of enabling the module.
+The `/V1/negotiable-carts/:cartId/payment-information` endpoint runs asynchronously if the `AsyncOrder` module has been enabled. By default, the mutation runs synchronously. [Asynchronous order placement](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/high-throughput-order-processing.html) describes the benefits of enabling the module.
 
 **Headers:**
 
