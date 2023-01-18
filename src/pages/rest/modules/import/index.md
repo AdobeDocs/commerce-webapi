@@ -58,7 +58,7 @@ POST /rest/<store_view_code>/V1/import/csv
 |`csvData` | Base64 encoded string containing CSV data (optionally gzip compressed before base64) | string | Required |
 |`ImportFieldSeparator` | Separator used in CSV.  Default is ',' | string | Optional |
 |`ImportMultipleValueSeparator` | Separator used in columns with multiple values such as categories.  Default is ',' | string | Optional |
-|`ImportEmptyAttributeValueConstant` | Constant to be replaced with empty attribute | string | Optional |
+|`ImportEmptyAttributeValueConstant` | Constant to be replaced with an empty attribute | string | Optional |
 |`ImportImagesFileDir` | Path to images relative to &lt;Magento root directory&gt;/var/import/images | string | Optional |
 
 **Sample Usage:**
