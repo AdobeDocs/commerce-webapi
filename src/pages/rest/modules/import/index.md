@@ -16,6 +16,8 @@ The `POST /rest/<store_view_code>/V1/import/csv` endpoint allows you to use REST
 
 Your source data must be in the order and format Commerce expects. To understand the requirements of each import entity, go to the Import page in the Admin, select an entity type from the drop-down menu, then click **Download Sample File**. The endpoint accepts CSV data in base64 encoded format. Because you control the conversion of a file or data into base64, you do not need to escape special characters before the import.
 
+Before encoding the data in base64, you can optionally use [gzip](https://www.gzip.org) to compress your data. This is useful when importing large CSV files that may otherwise run into HTTP request size limitations of HTTP server or PHP configuration.
+
 Since the API is used for importing base64 encoded CSV data, the endpoint expects the data to use commas for the field and multiple value separators. 
 Import fails if CSV uses any other special character as separators.
 
@@ -53,7 +55,7 @@ POST /rest/<store_view_code>/V1/import/csv
 |`behavior` | The action  to perform | string | Required. One of `append`, `replace`, `delete`|
 |`validationStrategy` | Strategy to use when entities are invalid | string | Required. Either `validation_stop_on_errors` or `validation-skip-errors` |
 |`allowedErrorCount` | The maximum number of errors that can occur until import is canceled | string | Required |
-|`csvData` | Base64 encoded string containing CSV data | string | Required |
+|`csvData` | Base64 encoded string containing CSV data (optionally gzip compressed before base64) | string | Required |
 |`ImportFieldSeparator` | Separator used in CSV.  Default is ',' | string | Optional |
 |`ImportMultipleValueSeparator` | Separator used in columns with multiple values such as categories.  Default is ',' | string | Optional |
 |`ImportEmptyAttributeValueConstant` | Constant to be replaced with empty attribute | string | Optional |
