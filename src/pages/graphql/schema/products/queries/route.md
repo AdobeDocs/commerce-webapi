@@ -6,11 +6,11 @@ title: routes query | Commerce Web APIs
 
 A merchant can reconfigure (rewrite) the URL to any product, category, or CMS page. When the rewrite goes into effect, any links that point to the previous URL are redirected to the new address.
 
-The `routes` query returns the canonical URL for a specified product, category, or CMS page. An external app can render a page by a URL without any prior knowledge about the landing page.
+The `route` query returns the canonical URL for a specified product, category, or CMS page. An external app can render a page by a URL without any prior knowledge about the landing page.
 
 ## Syntax
 
-`{routes(url: String!): RoutableInterface}`
+`{route(url: String!): RoutableInterface}`
 
 ## Example usage
 
@@ -101,7 +101,7 @@ The following query returns information about the product with the URL key of `j
 
 ## Input attributes
 
-The `routes` query requires the following attribute.
+The `route` query requires the following attribute.
 
 Attribute | Type | Description
 --- | --- | ---
