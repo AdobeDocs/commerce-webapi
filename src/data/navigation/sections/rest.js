@@ -398,6 +398,10 @@ module.exports = [
             },
             ],
         },
+        {
+            title: "Update product image using SKU",
+            path: "/rest/tutorials/image/"
+        },
     ],
   },
   {
@@ -429,4 +433,3 @@ module.exports = [
     path: "/rest/attributes/"
   },
   ];
-  
