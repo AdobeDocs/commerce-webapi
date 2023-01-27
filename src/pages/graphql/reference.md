@@ -1,3 +1,3 @@
 ---
-frameSrc: https://adobedocs.github.io/commerce-webapi/graphql-api
+frameSrc: https://developer.adobe.com/commerce/webapi/graphql-api
 ---
