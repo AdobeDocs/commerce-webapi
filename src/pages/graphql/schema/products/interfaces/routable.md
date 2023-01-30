@@ -191,13 +191,13 @@ The following query returns information about the specified URL key. The query c
 
 ### Example
 
-In the following example, an internal URL `community.html` is configured to redirect to an external URL `https://community.example.com/` using URL Rewrite.
+In the following example, an internal URL `support.html` is configured to redirect to an external URL `https://support.example.com/` using URL Rewrite.
 
 **Request:**
 
 ```graphql
 {
-  route(url: "community.html") {
+  route(url: "support.html") {
     __typename
     relative_url
     redirect_code
@@ -213,7 +213,7 @@ In the following example, an internal URL `community.html` is configured to redi
   "data": {
     "route": {
       "__typename": "RoutableUrl",
-      "relative_url": "https://community.example.com/",
+      "relative_url": "https://support.example.com/",
       "redirect_code": 302,
       "type": null
     }
