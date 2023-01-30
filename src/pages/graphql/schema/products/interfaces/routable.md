@@ -4,7 +4,7 @@ title: RoutableInterface attributes | Commerce Web APIs
 
 # RoutableInterface attributes
 
-Some entities are "routable", meaning that they have URLs and can serve as the model for a rendered page. The following implementations of the `RoutableInterface` allow you to return details in the [`route` query](../queries/route.md).
+Some entities are "routable", meaning that they have URLs and can serve as the model for a rendered page. The following implementations of the `RoutableInterface` allow you to return details in the [`route` query](../queries/route.md). `RoutableUrl` is returned when the URL is not linked to an entity.
 
 *  [BundleProduct](types/bundle.md)
 *  [CategoryTree](../queries/category-list.md#output-attributes)
@@ -15,6 +15,7 @@ Some entities are "routable", meaning that they have URLs and can serve as the m
 *  [GroupedProduct](types/grouped.md)
 *  [SimpleProduct](types/simple.md)
 *  [VirtualProduct](types/virtual.md)
+*  [RoutableUrl](#routable-url)
 
 ## RoutableInterface attributes
 
@@ -183,3 +184,7 @@ The following query returns information about the specified URL key. The query c
   }
 }
 ```
+
+## Routable URL
+
+`RoutableUrl` is the default implementation of RoutableInterface. This type is returned when the URL is not linked to an entity.
