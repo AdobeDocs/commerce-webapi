@@ -214,7 +214,7 @@ In the following example, an internal URL `community.html` is configured to redi
     "route": {
       "__typename": "RoutableUrl",
       "relative_url": "https://community.example.com/",
-      "redirect_code": 322,
+      "redirect_code": 302,
       "type": null
     }
   }
