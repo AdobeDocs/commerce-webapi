@@ -191,7 +191,7 @@ The following query returns information about the specified URL key. The query c
 
 ### Example
 
-In the following example, an internal URL `community.html` is configured to redirect to an external URL `https://community.adobe.com/` using URL Rewrite.
+In the following example, an internal URL `community.html` is configured to redirect to an external URL `https://community.example.com/` using URL Rewrite.
 
 **Request:**
 
@@ -213,7 +213,7 @@ In the following example, an internal URL `community.html` is configured to redi
   "data": {
     "route": {
       "__typename": "RoutableUrl",
-      "relative_url": "https://community.adobe.com/",
+      "relative_url": "https://community.example.com/",
       "redirect_code": 322,
       "type": null
     }
