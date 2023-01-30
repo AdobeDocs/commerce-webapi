@@ -187,7 +187,7 @@ The following query returns information about the specified URL key. The query c
 
 ## Routable URL
 
-`RoutableUrl` is the default implementation of RoutableInterface. This type is returned when the URL is not linked to an entity.
+`RoutableUrl` is the default implementation of RoutableInterface. This type is returned when the URL is not linked to a product or CMS page or to a category. As a result, the `RoutableUrl.type` field always returns `null`.
 
 <InlineAlert variant="info" slots="text" />
 
