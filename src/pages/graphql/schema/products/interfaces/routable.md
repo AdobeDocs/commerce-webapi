@@ -188,3 +188,35 @@ The following query returns information about the specified URL key. The query c
 ## Routable URL
 
 `RoutableUrl` is the default implementation of RoutableInterface. This type is returned when the URL is not linked to an entity.
+
+### Example
+
+In the following example, an internal URL `community.html` is configured to redirect to an external URL `https://community.adobe.com/` using URL Rewrite.
+
+**Request:**
+
+```graphql
+{
+  route(url: "community.html") {
+    __typename
+    relative_url
+    redirect_code
+    type
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "route": {
+      "__typename": "RoutableUrl",
+      "relative_url": "https://community.adobe.com/",
+      "redirect_code": 322,
+      "type": null
+    }
+  }
+}
+```
