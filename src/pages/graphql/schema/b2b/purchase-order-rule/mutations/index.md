@@ -1,6 +1,6 @@
 ---
-title: Purchase order rule (B2B) mutations | Commerce Web APIs
+title: Purchase order approval rule (B2B) mutations | Commerce Web APIs
 edition: b2b   
 ---
 
-# Purchase order rule (B2B) mutations
+# Purchase order approval rule (B2B) mutations

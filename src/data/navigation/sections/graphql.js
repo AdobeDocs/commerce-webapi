@@ -948,35 +948,9 @@ module.exports = [
         path: "/graphql/schema/b2b/purchase-order-rule/",
         pages: [
           {
-            title: "Queries",
-            path: "/graphql/schema/b2b/purchase-order-rule/queries/",
-            pages: [
-              {
-                title: "purchase_order_approval_rule_metadata",
-                path: "/graphql/schema/b2b/purchase-order-rule/queries/metadata/",
-              },
-              {
-                title: "purchase_order_approval_rule",
-                path: "/graphql/schema/b2b/purchase-order-rule/queries/single/",
-              },
-              {
-                title: "purchase_order_approval_rules",
-                path: "/graphql/schema/b2b/purchase-order-rule/queries/list/",
-              },
-              {
-                title: "approval_flow",
-                path: "/graphql/schema/b2b/purchase-order-rule/queries/approval-flow/",
-              },
-            ],
-          },
-          {
             title: "Mutations",
             path: "/graphql/schema/b2b/purchase-order-rule/mutations/",
             pages: [
-              {
-                title: "validatePurchaseOrders",
-                path: "/graphql/schema/b2b/purchase-order-rule/mutations/validate/",
-              },
               {
                 title: "createPurchaseOrderApprovalRule",
                 path: "/graphql/schema/b2b/purchase-order-rule/mutations/create/",
@@ -989,17 +963,15 @@ module.exports = [
                 title: "updatePurchaseOrderApprovalRule",
                 path: "/graphql/schema/b2b/purchase-order-rule/mutations/update/",
               },
+              {
+                title: "validatePurchaseOrders",
+                path: "/graphql/schema/b2b/purchase-order-rule/mutations/validate/",
+              },
             ],
           },
           {
             title: "Interfaces",
             path: "/graphql/schema/b2b/purchase-order-rule/interfaces/",
-            pages: [
-              {
-                title: "PurchaseOrderApprovalRuleConditionInterface",
-                path: "/graphql/schema/b2b/purchase-order-rule/interfaces/condition/",
-              },
-            ],
           },
         ],
       },
