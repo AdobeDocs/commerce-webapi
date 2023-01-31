@@ -4,7 +4,7 @@ title: RoutableInterface attributes | Commerce Web APIs
 
 # RoutableInterface attributes
 
-Some entities are "routable", meaning that they have URLs and can serve as the model for a rendered page. The following implementations of the `RoutableInterface` allow you to return details in the [`route` query](../queries/route.md).
+Some entities are "routable", meaning that they have URLs and can serve as the model for a rendered page. The following implementations of the `RoutableInterface` allow you to return details in the [`route` query](../queries/route.md). `RoutableUrl` is returned when the URL is not linked to an entity.
 
 *  [BundleProduct](types/bundle.md)
 *  [CategoryTree](../queries/category-list.md#output-attributes)
@@ -15,6 +15,7 @@ Some entities are "routable", meaning that they have URLs and can serve as the m
 *  [GroupedProduct](types/grouped.md)
 *  [SimpleProduct](types/simple.md)
 *  [VirtualProduct](types/virtual.md)
+*  [RoutableUrl](#routable-url)
 
 ## RoutableInterface attributes
 
@@ -179,6 +180,42 @@ The following query returns information about the specified URL key. The query c
           "url": "http://example.com/media/catalog/product/cache/3103a735c131a485a1ff51c24439c39b/m/h/mh02-black_back_1.jpg"
         }
       ]
+    }
+  }
+}
+```
+
+## Routable URL
+
+`RoutableUrl` is the default implementation of RoutableInterface. This type is returned when the URL is not linked to a product or CMS page or to a category. As a result, the `RoutableUrl.type` field always returns `null`.
+
+### Example
+
+In the following example, an internal URL `support.html` is configured to redirect to an external URL `https://support.example.com/` using URL Rewrite. 
+
+**Request:**
+
+```graphql
+{
+  route(url: "support.html") {
+    __typename
+    relative_url
+    redirect_code
+    type
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "route": {
+      "__typename": "RoutableUrl",
+      "relative_url": "https://support.example.com/",
+      "redirect_code": 302,
+      "type": null
     }
   }
 }
