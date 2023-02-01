@@ -5,8 +5,12 @@ edition: b2b
 
 # Purchase orders (B2B)
 
+When B2B of Adobe Commerce is installed and purchase orders are activated for a company account, all orders are automatically created as purchase orders. Company users with the required permissions can create, edit, and delete their own purchase orders as well as those created by subordinate users.
+
 Adobe Commerce provides multiple mutations that define and manage purchase orders. However, there are no top-level queries that return lists of purchase orders or purchase order details.
 The [`customer` query](../../customer/queries/customer.md) now returns details about purchase orders.
+
+See [Purchase Orders for Companies](https://experienceleague.adobe.com/docs/commerce-admin/b2b/purchase-orders/purchase-order-flow.html) in the _B2B for Adobe Commerce Guide_ for information about enabling the B2B purchase order capabilities and the different workflows for online and offline payment methods.
 
 The following examples demonstrate `customer` queries that return information about purchase orders.
 

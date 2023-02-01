@@ -10,6 +10,8 @@ In a typical implementation of purchase orders, a company admin or manager with 
 Adobe Commerce provides multiple mutations that define and validate approval rules. However, there are no top-level queries to return lists of rules or purchase orders awaiting approval.
 The [`customer` query](../../customer/queries/customer.md) now returns details about purchase orders and approval rules.
 
+[Purchase order approval rules](https://experienceleague.adobe.com/docs/commerce-admin/b2b/purchase-orders/account-dashboard-approval-rules.html) in the _B2B for Adobe Commerce Guide_ provides additional information about setting up approval rules.
+
 The following examples demonstrate `customer` queries that return information about approval rules.
 
 <InlineAlert variant="warning" slots="text" />
