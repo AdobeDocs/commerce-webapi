@@ -5,7 +5,9 @@ edition: b2b
 
 # placeOrderForPurchaseOrder mutation
 
-The `placeOrderForPurchaseOrder` mutation places an order based on the approved purchase order.
+The `placeOrderForPurchaseOrder` mutation converts an approved purchase order to an order. If the request is successful, the status of the purchase order is `ORDER_PLACED`.
+
+Use the [`placePurchaseOrder` mutation](place-purchase-order.md) to place a purchase order using the cart ID.
 
 ## Syntax
 
@@ -52,4 +54,3 @@ mutation {
   }
 }
 ```
-

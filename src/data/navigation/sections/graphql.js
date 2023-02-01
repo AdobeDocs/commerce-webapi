@@ -890,34 +890,16 @@ module.exports = [
         path: "/graphql/schema/b2b/purchase-order/",
         pages: [
           {
-            title: "Queries",
-            path: "/graphql/schema/b2b/purchase-order/queries/",
-            pages: [
-              {
-                title: "purchase_orders_enabled",
-                path: "/graphql/schema/b2b/purchase-order/queries/enabled/",
-              },
-              {
-                title: "purchase_order",
-                path: "/graphql/schema/b2b/purchase-order/queries/single/",
-              },
-              {
-                title: "purchase_orders",
-                path: "/graphql/schema/b2b/purchase-order/queries/list/",
-              },
-            ],
-          },
-          {
             title: "Mutations",
             path: "/graphql/schema/b2b/purchase-order/mutations/",
             pages: [
               {
-                title: "placePurchaseOrder",
-                path: "/graphql/schema/b2b/purchase-order/mutations/place/",
+                title: "addPurchaseOrderComment",
+                path: "/graphql/schema/b2b/purchase-order/mutations/add-comment/",
               },
               {
-                title: "placeOrderForPurchaseOrder",
-                path: "/graphql/schema/b2b/purchase-order/mutations/place-order/",
+                title: "addPurchaseOrderItemsToCart",
+                path: "/graphql/schema/b2b/purchase-order/mutations/add-items-to-cart/",
               },
               {
                 title: "approvePurchaseOrders",
@@ -928,16 +910,16 @@ module.exports = [
                 path: "/graphql/schema/b2b/purchase-order/mutations/cancel/",
               },
               {
+                title: "placeOrderForPurchaseOrder",
+                path: "/graphql/schema/b2b/purchase-order/mutations/place-order/",
+              },
+              {
+                title: "placePurchaseOrder",
+                path: "/graphql/schema/b2b/purchase-order/mutations/place-purchase-order/",
+              },
+              {
                 title: "rejectPurchaseOrders",
                 path: "/graphql/schema/b2b/purchase-order/mutations/reject/",
-              },
-              {
-                title: "addPurchaseOrderItemsToCart",
-                path: "/graphql/schema/b2b/purchase-order/mutations/add-items-to-cart/",
-              },
-              {
-                title: "addPurchaseOrderComment",
-                path: "/graphql/schema/b2b/purchase-order/mutations/add-comment/",
               },
             ],
           },

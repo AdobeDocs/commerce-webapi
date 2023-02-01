@@ -18,7 +18,7 @@ All examples require a valid [customer authentication token](../../../customer/m
 
 ## Return a list of approval rules
 
-The `purchase_order_approval_rules` query returns the list of purchase order approval rules. Use the value of the `items.uid` field to get details about a specific approval rule. 
+The `purchase_order_approval_rules` query returns the list of purchase order approval rules. Use the value of the `items.uid` field to get details about a specific approval rule.
 
 The following example returns the list of purchase order approval rules.
 

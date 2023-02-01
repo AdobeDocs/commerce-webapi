@@ -5,23 +5,23 @@ edition: b2b
 
 # rejectPurchaseOrders mutation
 
-The `rejectPurchaseOrders` mutation rejects purchase orders.
+The `rejectPurchaseOrders` mutation rejects one or more purchase orders. The specified purchase orders must have a status of PENDING.
 
 ## Syntax
 
 ```graphql
 mutation {
-    rejectPurchaseOrders(
-        input: PurchaseOrdersActionInput!
-    ) {
-        PurchaseOrdersActionOutput
-    }
+  rejectPurchaseOrders(
+    input: PurchaseOrdersActionInput!
+  ){
+    PurchaseOrdersActionOutput
+  }
 }
 ```
 
 ## Example usage
 
-The following example rejects purchase orders.
+The following example rejects a purchase order.
 
 **Request:**
 
@@ -29,15 +29,17 @@ The following example rejects purchase orders.
 mutation {
   rejectPurchaseOrders(
     input: {
-        purchase_order_uids: ["NA=="]
+      purchase_order_uids: ["MTA="]
     }
   ) {
     purchase_orders {
-        number
+      number
+      uid
+      status
     }
     errors {
-        message
-        type
+      message
+      type
     }
   }
 }
@@ -51,7 +53,9 @@ mutation {
     "rejectPurchaseOrders": {
       "purchase_orders": [
         {
-          "number": "000000004"
+          "number": "000000010",
+          "uid": "MTA=",
+          "status": "REJECTED"
         }
       ],
       "errors": []
@@ -59,4 +63,3 @@ mutation {
   }
 }
 ```
-
