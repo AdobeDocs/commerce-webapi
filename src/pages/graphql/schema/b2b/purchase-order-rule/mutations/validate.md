@@ -5,7 +5,9 @@ edition: b2b
 
 # validatePurchaseOrders mutation
 
-The `validatePurchaseOrders` mutation validates purchase orders.
+By default, Adobe Commerce validates purchase orders automatically. However, purchase orders can become stuck in certain circumstances, such as when the message queue system is down and the purchase order is in the PENDING state. You might need to run the `validatePurchaseOrders` mutation to manually validate purchase orders.
+
+You must specify one or more purchase order UIDs as input.
 
 ## Syntax
 
@@ -18,6 +20,10 @@ mutation {
     }
 }
 ```
+
+## Headers
+
+A valid [customer authentication token](../../../customer/mutations/generate-token.md) is required.
 
 ## Example usage
 
@@ -65,4 +71,3 @@ mutation {
   }
 }
 ```
-

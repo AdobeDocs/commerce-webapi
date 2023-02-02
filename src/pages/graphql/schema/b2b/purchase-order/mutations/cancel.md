@@ -5,7 +5,7 @@ edition: b2b
 
 # cancelPurchaseOrders mutation
 
-The `cancelPurchaseOrders` mutation cancels purchase orders.
+The `cancelPurchaseOrders` mutation cancels the specified purchase orders. If the request is successful, the status of each purchase order is `CANCELED`.
 
 ## Syntax
 
@@ -61,4 +61,3 @@ mutation {
   }
 }
 ```
-

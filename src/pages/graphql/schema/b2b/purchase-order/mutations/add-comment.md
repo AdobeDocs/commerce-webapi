@@ -5,7 +5,7 @@ edition: b2b
 
 # addPurchaseOrderComment mutation
 
-The `addPurchaseOrderComment` mutation adds a comment to the specified purchase order.
+The `addPurchaseOrderComment` mutation adds a comment to the specified purchase order. The response contains details about the comment.
 
 ## Syntax
 
@@ -30,7 +30,7 @@ mutation {
   addPurchaseOrderComment(
       input: {
         purchase_order_uid: "MQ==",
-        comment: "New comment text"
+        comment: "Looks good to me"
       },
     ) {
     comment {
@@ -59,7 +59,7 @@ mutation {
           "lastname": "Doe",
           "email": "john.doe@example.com"
         },
-        "text": "New comment text"
+        "text": "Looks good to me."
       }
     }
   }

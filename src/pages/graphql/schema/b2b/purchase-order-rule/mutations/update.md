@@ -5,7 +5,11 @@ edition: b2b
 
 # updatePurchaseOrderApprovalRule mutation
 
-The `updatePurchaseOrderApprovalRule` mutation updates the purchase order approval rule.
+The `updatePurchaseOrderApprovalRule` mutation updates the specified purchase order approval rule.
+
+You can use the [`customer` query](../../customer/queries/customer.md) to retrieve the `uid` value of the approval rule.
+
+The [`createPurchaseOrderApprovalRule` mutation](create.md) describes the requirements of the `condition` and `approvers` fields.
 
 ## Syntax
 
@@ -18,6 +22,10 @@ mutation {
     }
 }
 ```
+
+## Headers
+
+A valid [customer authentication token](../../../customer/mutations/generate-token.md) is required.
 
 ## Example usage
 
@@ -62,4 +70,3 @@ mutation {
   }
 }
 ```
-

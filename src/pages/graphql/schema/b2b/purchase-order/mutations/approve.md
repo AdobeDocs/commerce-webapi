@@ -5,23 +5,23 @@ edition: b2b
 
 # approvePurchaseOrders mutation
 
-The `approvePurchaseOrders` mutation approves purchase orders.
+The `approvePurchaseOrders` mutation approves one or more purchase orders. The specified purchase orders must have a status of PENDING.
 
 ## Syntax
 
 ```graphql
 mutation {
     approvePurchaseOrders(
-        input: PurchaseOrdersActionInput!
+      input: PurchaseOrdersActionInput!
     ) {
-        PurchaseOrdersActionOutput
+      PurchaseOrdersActionOutput
     }
 }
 ```
 
 ## Example usage
 
-The following example approves purchase orders.
+The following example approves a purchase order.
 
 **Request:**
 
@@ -29,15 +29,15 @@ The following example approves purchase orders.
 mutation {
   approvePurchaseOrders(
     input: {
-        purchase_order_uids: ["Ng=="]
+      purchase_order_uids: ["Ng=="]
     }
   ) {
     purchase_orders {
-        number
+      number
     }
     errors {
-        message
-        type
+      message
+      type
     }
   }
 }

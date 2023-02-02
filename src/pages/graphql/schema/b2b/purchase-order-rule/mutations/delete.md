@@ -5,7 +5,11 @@ edition: b2b
 
 # deletePurchaseOrderApprovalRule mutation
 
-The `deletePurchaseOrderApprovalRule` mutation deletes the purchase order approval rule.
+The `deletePurchaseOrderApprovalRule` mutation deletes one or more purchase order approval rules.
+
+You can use the [`customer` query](../../customer/queries/customer.md) to retrieve the `uid` value of the approval rule.
+
+If the mutation is successful, it returns null. Otherwise, the response contains details about any errors encountered.
 
 ## Syntax
 
@@ -18,6 +22,10 @@ mutation {
     }
 }
 ```
+
+## Headers
+
+A valid [customer authentication token](../../../customer/mutations/generate-token.md) is required.
 
 ## Example usage
 
@@ -51,4 +59,3 @@ mutation {
   }
 }
 ```
-
