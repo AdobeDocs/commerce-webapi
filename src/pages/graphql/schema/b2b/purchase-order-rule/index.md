@@ -10,7 +10,7 @@ In a typical implementation of purchase orders, a company admin or manager with 
 Adobe Commerce provides multiple mutations that define and validate approval rules. However, there are no top-level queries to return lists of rules or purchase orders awaiting approval.
 The [`customer` query](../../customer/queries/customer.md) now returns details about purchase orders and approval rules.
 
-[Purchase order approval rules](https://experienceleague.adobe.com/docs/commerce-admin/b2b/purchase-orders/account-dashboard-approval-rules.html) in the _B2B for Adobe Commerce Guide_ provides additional information about setting up approval rules.
+The [Purchase order approval rules](https://experienceleague.adobe.com/docs/commerce-admin/b2b/purchase-orders/account-dashboard-approval-rules.html) topic in the _B2B for Adobe Commerce Guide_ provides additional information about setting up approval rules.
 
 The following examples demonstrate `customer` queries that return information about approval rules.
 
@@ -158,7 +158,7 @@ The following example returns information about the purchase order approval rule
 
 ## Approval flow
 
-Company users that are enabled to create or review purchase orders designated as an approver can view purchase orders in the **My Purchase Orders** dashboard page.
+Company users that are enabled to create or review purchase orders and are designated as an approver can view purchase orders in the **My Purchase Orders** dashboard page.
 
 The following example returns the approval history of purchase orders made by the company user's subordinates.
 
@@ -222,7 +222,7 @@ The following example returns the approval history of purchase orders made by th
 
 ## Return approval rule metadata
 
-The following example returns the metadata necessary to render the form for creating or editing an approval rule.
+The following example returns the metadata necessary to render the form for [creating or editing an approval rule](https://experienceleague.adobe.com/docs/commerce-admin/b2b/purchase-orders/account-dashboard-approval-rules.html#approval-rule-setup).
 
 **Request:**
 

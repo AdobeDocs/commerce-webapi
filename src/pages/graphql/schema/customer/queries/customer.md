@@ -720,7 +720,7 @@ The following query returns the customer's wish lists. Adobe Commerce allows cus
 
 The following example returns information about all purchase orders the company user has made since January 1, 2023.
 
-[Purchase orders](../../b2b/purchase-order/) contains additional examples that query purchase order functionality.
+The [Purchase orders](../../b2b/purchase-order/) topic contains additional examples that query purchase order functionality.
 
 **Request:**
 
@@ -818,7 +818,7 @@ The following example returns information about all purchase orders the company 
 
 The following example returns the list of purchase order approval rules.
 
-[Purchase order approval rules](../../b2b/purchase-order-rule/) contains additional examples that query approval rule functionality.
+The [Purchase order approval rules](../../b2b/purchase-order-rule/) topic contains additional examples that query approval rule functionality.
 
 **Request:**
 
