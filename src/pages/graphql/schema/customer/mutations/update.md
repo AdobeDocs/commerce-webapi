@@ -6,7 +6,7 @@ title: updateCustomer mutation | Commerce Web APIs
 
 <InlineAlert variant="warning" slots="text" />
 
-We recommend using the [updateCustomerV2 mutation](create-v2.md) to update a customer.
+We recommend using the [updateCustomerV2 mutation](update-v2.md) to update a customer.
 
 The `updateCustomer` mutation updates the customer's personal information.
 

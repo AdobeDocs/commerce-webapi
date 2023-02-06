@@ -20,7 +20,7 @@ Complete the following prerequisites:
 
 *  Install a REST client. You can use any REST client to send calls to Commerce. [Postman](https://www.getpostman.com/) is recommended.
 
-*  Set up [two-factor authentication](https://devdocs.magento.com/guides/v2.4/security/two-factor-authentication.html). This tutorial assumes Google Authenticator is your 2FA solution.
+*  Set up [two-factor authentication](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication/). This tutorial assumes Google Authenticator is your 2FA solution.
 
 *  Know how to construct a REST call in Commerce. See [Construct a request](/get-started/gs-web-api-request) for details.
 
