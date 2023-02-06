@@ -399,8 +399,30 @@ module.exports = [
             ],
         },
         {
-            title: "Update product image using SKU",
-            path: "/rest/tutorials/image/"
+            title: "Working with product images",
+            path: "/rest/tutorials/image/",
+            pages: [
+            {
+                title: "Working with product images",
+                path: "/rest/tutorials/image/",
+            },
+            {
+                title: "Getting a list of product images",
+                path: "/rest/tutorials/image/list.md",
+            },
+            {
+                title: "Add a new image to a product",
+                path: "/rest/tutorials/image/new.md",
+            },
+            {
+                title: "Update an image of a product",
+                path: "/rest/tutorials/image/update.md",
+            },
+            {
+                title: "Delete an image of a product",
+                path: "/rest/tutorials/image/delete.md",
+            },
+            ],
         },
     ],
   },
