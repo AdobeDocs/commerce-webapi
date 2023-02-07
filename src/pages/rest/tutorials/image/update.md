@@ -7,7 +7,7 @@ description: We will learn how to update an existing image
 
 # Update an image
 
-We will update an image with **id=694**. We got image IDs in a previous [step](https://developer.adobe.com/commerce/webapi/rest/tutorials/image/list.md).
+We will update an image with **id=694**. We got image IDs in a previous [step](https://developer.adobe.com/commerce/webapi/rest/tutorials/image/list/).
 
 Here is a new image:
 
