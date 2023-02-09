@@ -27,6 +27,6 @@ true
 
 ## Verify this step
 
-Open `MJ03` on the frontend and notice the image has been deleted.
+Refresh the `MJ03` product page and see if your the image was deleted.
 
 ![Deleted Image](../../../_images/delete-image-frontend.png).
