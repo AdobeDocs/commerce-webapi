@@ -5,7 +5,7 @@ contributor_link: https://www.goivvy.com/
 description: We will learn how to add, list, update and delete product images
 --- 
  
-# Add and manage product images 
+# Add and manage product images tutorial
 
 This tutorial shows how to use Adobe Commerce REST APIs to add, list, update and delete product images.
 
