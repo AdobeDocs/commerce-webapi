@@ -65,3 +65,4 @@ true
 Open `MJ03` product and notice an update image.
 
 ![Updated Image](../../../_images/update-image-frontend.png)
+
