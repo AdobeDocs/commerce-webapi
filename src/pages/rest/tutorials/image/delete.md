@@ -15,7 +15,7 @@ In this step, we will delete an image from a SKU. In this example, we'll use the
 DELETE http://domain.com/rest/default/V1/products/MJ03/media/695
 ```
 
-The payload is empty.
+The payload must be empty.
 
 **Response:**
 
