@@ -7,7 +7,7 @@ description: We will learn how to add, list, update and delete product images.
  
 # Add and manage product images tutorial
 
-This tutorial shows how to use Adobe Commerce REST APIs to add, list, update and delete product images.
+This tutorial demonstrates how to use the Adobe Commerce REST APIs to add, list, update, and delete product images.
 
 In this tutorial, we will add an image to a product, list all available images, update an existing image with a new one and delete an image.
 
