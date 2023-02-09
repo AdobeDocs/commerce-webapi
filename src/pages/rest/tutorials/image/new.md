@@ -7,7 +7,7 @@ description: We will learn how to add a new image to a product
 
 # Add a new image
 
-We will add the following image to the product with SKU `MJ03`.
+In this step, we will add the following image to the product with SKU `MJ03`.
 
 ![New Image](../../../_images/api-new-image.png)
 
