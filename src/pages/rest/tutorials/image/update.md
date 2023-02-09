@@ -71,9 +71,10 @@ true
 
 The request might take 30 seconds or so depending on host, etc.
 
+You could try and re-run this call.
+
 ## Verify this step
 
 Refresh the `MJ03` product page and see if your the existing image was updated.
 
 ![Updated Image](../../../_images/update-image-frontend.png)
-
