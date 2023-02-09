@@ -17,6 +17,6 @@ This **4-step tutorial** generally takes **30 minutes**.
 
 *  Install an Adobe Commerce instance with sample data.
 
-*  Install a REST client. We will use _Postman_ in this tutorial.
+*  Install a REST client, such as Postman.
 
 *  Generate an [admin access token](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-token/), which will we will use to make image managing API calls.
