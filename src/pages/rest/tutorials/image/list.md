@@ -51,7 +51,7 @@ We will get all image information for product with SKU `MJ03`.
 ]
 ```
 
-We will use image **id** for later steps.
+We will use the image **id** for later steps in this tutorial.
 
 ## Verify this step
 
