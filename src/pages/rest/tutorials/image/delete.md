@@ -7,7 +7,7 @@ description: We will learn how to delete an existing image
 
 # Delete an image
 
-We will delete an image with **id=695**. You can see image IDs by using a list API call - see a previous [step](https://developer.adobe.com/commerce/webapi/rest/tutorials/image/list/).
+In this step, we will delete an image from a SKU. In this example, we'll use the image `id` of `695`. Use the [list API call](https://developer.adobe.com/commerce/webapi/rest/tutorials/image/list/) to see image IDs for your SKU.
 
 **Endpoint:**
 
