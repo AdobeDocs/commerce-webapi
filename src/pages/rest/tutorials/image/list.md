@@ -1,13 +1,13 @@
 ---
-title: Getting a list of product images 
+title: Step 1. Getting a list of product images 
 contributor_name: Goivvy LLC
 contributor_link: https://www.goivvy.com/
 description: We will learn how to get a list of all product images.
 --- 
 
-# Getting a list of product images
+# Step 1. Getting a list of product images
 
-We will get all image information for product with SKU `MJ03`.
+In this step, we will get all image information for the product with SKU `MJ03`.
 
 **Endpoint:**
 

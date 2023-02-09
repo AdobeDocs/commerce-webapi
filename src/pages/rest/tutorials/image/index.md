@@ -7,15 +7,28 @@ description: We will learn how to add, list, update and delete product images.
  
 # Add and manage product images tutorial
 
-This tutorial demonstrates how to use the Adobe Commerce REST APIs to add, list, update, and delete product images.
+This tutorial demonstrates how to use the Adobe Commerce REST APIs to:
 
-In this tutorial, we will add an image to a product, list all available images, update an existing image with a new one and delete an image.
+*  [List images](/rest/tutorials/image/list)
+
+*  [Add an image](/rest/tutorials/image/new)
+
+*  [Update an image](/rest/tutorials/image/update)
+
+*  [Delete product images](/rest/tutorials/image/delete)
+
+In this tutorial, we will:
+
+1. [List all available images](/rest/tutorials/image/list)
+2. [Add an image to a product](/rest/tutorials/image/new)
+3. [Update an existing image with a new one](/rest/tutorials/image/update)
+4. [Delete an image](/rest/tutorials/image/delete)
 
 This **4-step tutorial** generally takes **30 minutes**.
 
 ## Before you begin
 
-*  Install an Adobe Commerce instance with sample data.
+*  Install an Adobe Commerce instance with [sample data](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/next-steps/sample-data/overview.html?lang=en) or use Adobe Commerce Cloud with [sample data (cloud)](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/sample-data.html).
 
 *  Install a REST client, such as Postman.
 

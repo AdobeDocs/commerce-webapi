@@ -1,22 +1,29 @@
 ---
-title: Add a new image 
+title: Step 2. Add a new image 
 contributor_name: Goivvy LLC
 contributor_link: https://www.goivvy.com/
 description: We will learn how to add a new image to a product 
 --- 
 
-# Add a new image
+# Step 2. Add a new image
 
 In this step, we will add the following image to the product with SKU `MJ03`.
 
 ![New Image](../../../_images/api-new-image.png)
 
-Firstly, we need to convert a new image into a **base64-encoded** string.
+We need to convert a new image into a **base64-encoded** string.
 
 1. Open a bash terminal and use the `base64` command to convert the image into `base64`.
 
+Command:
+
 ```bash
 base64 -i ~/Desktop/new-image.png
+```
+
+Response:
+
+```bash
 iVBORw0KGgoAAAANSUhEUgAAAc4AAAFmCAYAAADkqXozAAAKrGlDQ1BJQ0MgUHJvZmlsZQAASImVlwdUU8kax+fem16AkBABKaE3QToBpITQQpcONkISIJQQA0HFriwu4FpQEcGKLooouBZA1oootkWxANYNsqgo62LBhsq7wCG4+85777zvnDnzu//7zTffzJm557sAUNX4UmkmrAZAliRXFhngw4pPSGThnwIyIAIacAYIX5Aj5UREhADUJvq/2/tOAI32t61HY/37+/9qNKEoRwAAFIFysjBHkIXycbS9EEhluQAgu1HdaEGudJRbUWbI0ARR7h7l1HEeGOXkMcaAMZ/oSC7KDAAIFD5flgoAhYXqrDxBKhqH4o2yrUQolqAsRdkzKytbiPIRlM1RH1SjjMZnJ38XJ/VvMZOVMfn8VCWPr2XMCL7iHGkmf9H/uR3/27Iy5RNzmKKNkiYLjER7dXTPujOyg5UsSQ4Ln2CxcMx/jNPkgTETLMjhJk6wkO8brBybGRYywSlif54yTi4veoJFOX5REyzLjlTOlSLjciaYL5ucV54Ro9TTRDxl/Py06LgJzhPHhk1wTkZU8KQPV6nL5JHK/EWSAJ/Jef2Va8/K+W69Yp5y..........[more characters]
 ```
 
@@ -54,6 +61,8 @@ POST http://domain.com/rest/default/V1/products/MJ03/media
 ```json
 "3418"
 ```
+
+The request might take 30 seconds or so depending on host, etc.
 
 The response provides the new image **id** for the added image.
 

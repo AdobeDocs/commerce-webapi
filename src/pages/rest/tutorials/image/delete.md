@@ -1,11 +1,11 @@
 ---
-title: Delete an image 
+title: Step 4. Delete an image 
 contributor_name: Goivvy LLC
 contributor_link: https://www.goivvy.com/
 description: We will learn how to delete an existing image 
 --- 
 
-# Delete an image
+# Step 4. Delete an image
 
 In this step, we will delete an image from a SKU. In this example, we'll use the image `id` of `695`. Use the [list API call](https://developer.adobe.com/commerce/webapi/rest/tutorials/image/list/) to see image IDs for your SKU.
 
