@@ -9,11 +9,10 @@ description: We will learn how to update an existing image
 
 In this step we will update an existing image with the `id` of `694`. We previously retrieved this `id` number in [Step 1. Getting a list of product images](https://developer.adobe.com/commerce/webapi/rest/tutorials/image/list/).
 
-Here is a new image:
+1. Using the following image, open a bash terminal and convert the image into `base64`:
 
 ![New Image](../../../_images/update-new-image.png)
 
-Let us get a **base64-encoded** string of the image:
 
 ```bash
 base64 -i ~/update-new-image.png
