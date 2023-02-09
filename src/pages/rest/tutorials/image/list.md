@@ -55,6 +55,10 @@ We will use the image **id** for later steps in this tutorial.
 
 ## Verify this step
 
-1. On the frontend page, search for `MJ03` and open up the product.
+1. On the storefront page, search for `MJ03`.
+
+1. Select the product in the search results.
     ![Product](../../../_images/list-product-images.png)
-2. There should be three images.
+
+1. There should be three images.
+
