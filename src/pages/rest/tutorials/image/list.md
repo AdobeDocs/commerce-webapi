@@ -11,9 +11,7 @@ We will get all image information for product with SKU `MJ03`.
 
 **Endpoint:**
 
-```html
-GET http://domain.com/rest/default/V1/products/MJ03/media
-```
+`GET http://domain.com/rest/default/V1/products/MJ03/media`
 
 **Response:**
 
