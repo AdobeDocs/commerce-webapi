@@ -13,7 +13,7 @@ In this step, we will add the following image to the product with SKU `MJ03`.
 
 Firstly, we need to convert a new image into a **base64-encoded** string.
 
-We will use _base64_ command line utility available on most Linux distributions.
+1. Open a bash terminal and use the `base64` command to convert the image into `base64`.
 
 ```bash
 base64 -i ~/Desktop/new-image.png
