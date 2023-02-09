@@ -55,7 +55,7 @@ POST http://domain.com/rest/default/V1/products/MJ03/media
 "3418"
 ```
 
-What we got in response is a new image **id** .
+The response provides the new image **id** for the added image.
 
 ## Verify this step
 
