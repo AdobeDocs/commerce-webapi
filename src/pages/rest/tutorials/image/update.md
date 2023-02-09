@@ -61,7 +61,7 @@ true
 
 ## Verify this step
 
-Open `MJ03` product and notice an update image.
+Refresh the `MJ03` product page and see if your the existing image was updated.
 
 ![Updated Image](../../../_images/update-image-frontend.png)
 
