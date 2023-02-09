@@ -1,5 +1,5 @@
 ---
-title: Add and manage product images 
+title: Manage product images tutorial
 contributor_name: Goivvy LLC
 contributor_link: https://www.goivvy.com/
 description: We will learn how to add, list, update and delete product images
