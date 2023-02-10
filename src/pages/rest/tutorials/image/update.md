@@ -7,7 +7,7 @@ description: We will learn how to update an existing image
 
 # Step 3. Update an image
 
-In this step we will update an existing image with the `id` of `694`. We previously retrieved this `id` number in [Step 1. Getting a list of product images](https://developer.adobe.com/commerce/webapi/rest/tutorials/image/list/).
+In this step, we will update an existing image with the `id` of `694`. We previously retrieved this `id` number in [Step 1. Getting a list of product images](https://developer.adobe.com/commerce/webapi/rest/tutorials/image/list/).
 
 <InlineAlert variant="info" slots="text"/>
 
