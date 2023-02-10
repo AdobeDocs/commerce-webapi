@@ -69,7 +69,7 @@ PUT http://domain.com/rest/default/V1/products/MJ03/media/694
 true
 ```
 
-The request might take 30 seconds or so depending on host, etc.
+The request might take 30 seconds or so depending on the host.
 
 You could try and re-run this call.
 
