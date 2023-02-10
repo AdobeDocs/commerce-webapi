@@ -63,4 +63,3 @@ We will use the image `id` for later steps in this tutorial.
     ![Product](../../../_images/list-product-images.png)
 
 1. Confirm that the number of images in the storefront matches the number of images in your API response.
-
