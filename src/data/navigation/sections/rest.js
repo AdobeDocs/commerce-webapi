@@ -407,19 +407,19 @@ module.exports = [
                 path: "/rest/tutorials/image/",
             },
             {
-                title: "Getting a list of product images",
+                title: "Step 1. Getting a list of product images",
                 path: "/rest/tutorials/image/list.md",
             },
             {
-                title: "Add a new image to a product",
+                title: "Step 2. Add a new image to a product",
                 path: "/rest/tutorials/image/new.md",
             },
             {
-                title: "Update an image of a product",
+                title: "Step 3. Update an image of a product",
                 path: "/rest/tutorials/image/update.md",
             },
             {
-                title: "Delete an image of a product",
+                title: "Step 4. Delete an image of a product",
                 path: "/rest/tutorials/image/delete.md",
             },
             ],
