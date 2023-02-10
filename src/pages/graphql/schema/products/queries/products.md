@@ -299,7 +299,7 @@ Attribute | Data type | Description
 
 ### ProductInterface attributes
 
-The `items` object contains information about each product that match the search criteria. [ProductInterface](../interfaces/index.md) describes the possible contents of this object.
+The `items` object contains information about each product that match the search criteria. [ProductInterface](../interfaces/types) describes the possible contents of this object.
 
 ### SearchResultPageInfo attributes
 
