@@ -62,5 +62,5 @@ We will use the image `id` for later steps in this tutorial.
 1. Select the product in the search results.
     ![Product](../../../_images/list-product-images.png)
 
-1. There should be three images.
+1. Confirm that the number of images in the storefront matches the number of images in your API response.
 
