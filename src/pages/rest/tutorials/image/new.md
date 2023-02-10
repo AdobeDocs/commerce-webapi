@@ -11,7 +11,7 @@ In this step, we will add the following image to the product with SKU `MJ03`.
 
 ![New Image](../../../_images/api-new-image.png)
 
-We need to convert this image into a **base64-encoded** string.
+We need to convert this image into a `base64` string.
 
 1. Open a bash terminal and use the `base64` command to convert the image into `base64`.
 
