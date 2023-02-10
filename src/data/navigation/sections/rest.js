@@ -403,7 +403,7 @@ module.exports = [
             path: "/rest/tutorials/image/",
             pages: [
             {
-                title: "Working with product images",
+                title: "Working with product images tutorial",
                 path: "/rest/tutorials/image/",
             },
             {
