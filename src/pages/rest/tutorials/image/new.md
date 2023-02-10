@@ -71,3 +71,4 @@ The response provides the new image **id** for the added image.
 Refresh the `MJ03` product page and see if your new image was added.
 
 ![New Product Image](../../../_images/api-frontend-new-image.png)
+
