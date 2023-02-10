@@ -2,7 +2,7 @@
 title: Step 2. Add a new image 
 contributor_name: Goivvy LLC
 contributor_link: https://www.goivvy.com/
-description: We will learn how to add a new image to a product 
+description: We will learn how to add a new image to a product.
 --- 
 
 # Step 2. Add a new image
