@@ -27,10 +27,11 @@ true
 
 The request might take 30 seconds or so depending on the host.
 
-You could try and re-run this call.
-
 ## Verify this step
 
 Refresh the `MJ03` product page and see if your image was deleted.
 
 ![Deleted Image](../../../_images/delete-image-frontend.png).
+
+You could try and re-run this call to verify the image could no longer be found. You would get a message: `No image with the provided ID was found. Verify the ID and try again`.
+
