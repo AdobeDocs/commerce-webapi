@@ -78,3 +78,4 @@ You could try and re-run this call.
 Refresh the `MJ03` product page and see if the existing image was updated.
 
 ![Updated Image](../../../_images/update-image-frontend.png)
+
