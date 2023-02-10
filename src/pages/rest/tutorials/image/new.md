@@ -62,7 +62,7 @@ POST http://domain.com/rest/default/V1/products/MJ03/media
 "3418"
 ```
 
-The request might take 30 seconds or so depending on host, etc.
+The request might take 30 seconds or so depending on the host.
 
 The response provides the new image **id** for the added image.
 
