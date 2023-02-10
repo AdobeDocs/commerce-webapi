@@ -53,7 +53,7 @@ Run the following command to list all images for the specified SKU:
 ]
 ```
 
-We will use the image **id** for later steps in this tutorial.
+We will use the image `id` for later steps in this tutorial.
 
 ## Verify this step
 
