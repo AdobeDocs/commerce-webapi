@@ -9,6 +9,8 @@ description: We will learn how to get a list of all product images.
 
 In this step, we will get all image information for the product with SKU `MJ03`.
 
+Run the following command to list all images for the specified SKU:
+
 **Endpoint:**
 
 `GET http://domain.com/rest/default/V1/products/MJ03/media`
