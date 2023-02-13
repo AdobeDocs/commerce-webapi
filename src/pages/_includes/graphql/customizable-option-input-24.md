@@ -1,4 +1,5 @@
 Attribute |  Data Type | Description
 --- | --- | ---
+`uid` | ID | A unique ID for the `CartItemInterface` object
 `id` | Int | A unique ID assigned to the customizable option
 `value_string` | String! | A value assigned to the customizable option
