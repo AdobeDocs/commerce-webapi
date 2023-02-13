@@ -407,7 +407,7 @@ module.exports = [
                 path: "/rest/tutorials/image/",
             },
             {
-                title: "Step 1. Getting a list of product images",
+                title: "Step 1. Get a list of product images",
                 path: "/rest/tutorials/image/list.md",
             },
             {
