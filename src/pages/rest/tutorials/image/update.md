@@ -11,7 +11,7 @@ In this step, we will update an existing image with the `id` of `694`. We previo
 
 <InlineAlert variant="info" slots="text"/>
 
-The id on the sample data images might not match the id listed in this tutorial, refer back to the [list call](list.md) for information on how to get a list of images for a SKU.
+The `id` on the sample data images might not match the `id` listed in this tutorial, refer back to the [list call](list.md) for information on how to get a list of images for a SKU.
 
 1. Using the following image, open a bash terminal and convert the image into `base64`:
 
