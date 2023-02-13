@@ -15,19 +15,19 @@ The id on the sample data images might not match the id listed in this tutorial,
 
 1. Using the following image, open a bash terminal and convert the image into `base64`:
 
-![New Image](../../../_images/update-new-image.png)
+    ![New Image](../../../_images/update-new-image.png)
 
-Command:
+    Command:
 
-```bash
-base64 -i ~/update-new-image.png
-```
+    ```bash
+    base64 -i ~/update-new-image.png
+    ```
 
-Response:
+    Response:
 
-```bash
-iVBORw0KGgoAAAANSUhEUgAAARwAAAFICAYAAACC60EBAAAKrGlDQ1BJQ0MgUHJvZmlsZQAASImVlwdUU8kax+fem16AkBABKaE3QToBpITQQpcONkISIJQQA0HFriwu4FpQEcGKLooouBZA1oootkWxANYNsqgo62LBhsq7wCG4+85777zvnDnzu//7zTffzJm557sAUNX4UmkmrAZAliRXFhngw4pPSGThnwIyIAIacAYIX5Aj5....[more characters]
-```
+    ```bash
+    iVBORw0KGgoAAAANSUhEUgAAARwAAAFICAYAAACC60EBAAAKrGlDQ1BJQ0MgUHJvZmlsZQAASImVlwdUU8kax+fem16AkBABKaE3QToBpITQQpcONkISIJQQA0HFriwu4FpQEcGKLooouBZA1oootkWxANYNsqgo62LBhsq7wCG4+85777zvnDnzu//7zTffzJm557sAUNX4UmkmrAZAliRXFhngw4pPSGThnwIyIAIacAYIX5Aj5....[more characters]
+    ```
 
 1. Make the following API call using the `base64-encoded` string.
 
