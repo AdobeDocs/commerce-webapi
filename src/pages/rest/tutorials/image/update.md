@@ -7,11 +7,11 @@ description: We will learn how to update an existing image
 
 # Step 3. Update an image
 
-In this step, we will update an existing image with the `id` of `694`. We previously retrieved this `id` number in [Step 1. Getting a list of product images](https://developer.adobe.com/commerce/webapi/rest/tutorials/image/list/).
+In this step, we will update an existing image with the `id` of `694`. We previously retrieved this `id` number in [Step 1. Getting a list of product images](list.md).
 
 <InlineAlert variant="info" slots="text"/>
 
-The id on the sample data images might not match the id listed in this tutorial, refer back to the [list call](/rest/tutorials/image/list) for information on how to get a list of images for a SKU.
+The id on the sample data images might not match the id listed in this tutorial, refer back to the [list call](list.md) for information on how to get a list of images for a SKU.
 
 1. Using the following image, open a bash terminal and convert the image into `base64`:
 

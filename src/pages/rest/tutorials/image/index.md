@@ -9,13 +9,13 @@ description: We will learn how to add, list, update and delete product images.
 
 This tutorial demonstrates how to use the Adobe Commerce REST APIs to:
 
-1. [List all available images](/rest/tutorials/image/list)
+1. [List all available images](list.md)
 
-1. [Add an image to a product](/rest/tutorials/image/new)
+1. [Add an image to a product](new.md)
 
-1. [Update an existing image with a new one](/rest/tutorials/image/update)
+1. [Update an existing image with a new one](update.md)
 
-1. [Delete an image](/rest/tutorials/image/delete)
+1. [Delete an image](delete.md)
 
 This **4-step tutorial** generally takes **30 minutes**.
 
@@ -25,4 +25,4 @@ This **4-step tutorial** generally takes **30 minutes**.
 
 *  Install a REST client, such as Postman.
 
-*  Generate an [admin access token](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-token/), which will we will use to make image managing API calls.
+*  Generate an [admin access token](../../../get-started/authentication/gs-authentication-token.md), which will we will use to make image managing API calls.
