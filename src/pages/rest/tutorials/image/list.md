@@ -5,7 +5,7 @@ contributor_link: https://www.goivvy.com/
 description: We will learn how to get a list of all product images.
 --- 
 
-# Step 1. Getting a list of product images
+# Step 1. Get a list of product images
 
 In this step, we will get all image information for the product with SKU `MJ03`.
 
