@@ -261,7 +261,7 @@ The `items` object can also optionally return highlighted text that shows the ma
 
 ### categoryPath
 
-This example shows how to filter returned facets when going to a category page.
+This example shows how to filter returned facets when browsing a category page.
 
 `categoryPath` performs strict filtering, meaning that the facets returned are limited to the immediate children of the current category page.
 
@@ -304,7 +304,7 @@ The response only includes the immediate children:
 
 ### categories
 
-`categories` can be used as a filter in the query when a category facet is selected in the layered navigation.
+`categories` can be used as a filter in a query when a category facet is selected in the layered navigation.
 This does not result in strict filtering when used by itself. It can be used in conjunction with the `categoryPath` filter.
 
 Example 1: Search results when filtering on a category.
@@ -372,7 +372,7 @@ Response:
 ]
 ```
 
-Example 2: The Category browse page when filtering on a category.
+Example 2: A category browse page when filtering on a category.
 The user navigates to "Womens -> Bottoms" and filters on "Pants". In this case, we expect both "Pants" and "Shorts" to appear as facets in the layered navigation.
 
 ```graphql
