@@ -12,10 +12,10 @@ Live Search uses the `productSearch` query to search for products instead of the
 
 The `productSearch` query accepts the following fields as input:
 
--  `phrase` - The string of text to search for. This field is required.
--  `filter` - An object that defines one or more product attributes to use to narrow the search results. In the Luma theme, the `sku`, `price`, and `size` attributes are among the product attributes that can be used to filter query results.
--  `sort` - An object that defines one or more product attributes to use to sort the search results. The default sortable product attributes in Luma are `price`, `name`, and `position`. A product's position is assigned within a category.
--  `page_size` and `current_page` - These optional fields allow the search results to be broken down into smaller groups so that a limited number of items are returned at a time. The default value of `page_size` is `20`, and the default value for `current_page` is `1`. In the response, counting starts at page one.
+- `phrase` - The string of text to search for. This field is required.
+- `filter` - An object that defines one or more product attributes to use to narrow the search results. In the Luma theme, the `sku`, `price`, and `size` attributes are among the product attributes that can be used to filter query results.
+- `sort` - An object that defines one or more product attributes to use to sort the search results. The default sortable product attributes in Luma are `price`, `name`, and `position`. A product's position is assigned within a category.
+- `page_size` and `current_page` - These optional fields allow the search results to be broken down into smaller groups so that a limited number of items are returned at a time. The default value of `page_size` is `20`, and the default value for `current_page` is `1`. In the response, counting starts at page one.
 
 ### Field Reference
 
@@ -259,13 +259,164 @@ The Catalog Service [products query](../catalog-service/products.md) describes t
 
 The `items` object can also optionally return highlighted text that shows the matching search terms.
 
+### categoryPath
+
+This example shows how to filter returned facets when going to a category page.
+
+`categoryPath` performs strict filtering, meaning that the facets returned are limited to the immediate children of the current category page.
+
+If you select "Womens -> Bottoms" from the category navigation, the filter would look like:
+
+```graphql
+productSearch(
+    phrase:"",
+    filter: [
+        {
+            attribute: "visibility",
+            in: ["Catalog", "Catalog, Search"]
+        },
+        {
+            attribute:"categoryPath", 
+            eq: "women/bottoms-women"
+        }
+    ],
+    page_size:12,
+    current_page: 1
+) 
+```
+
+The response only includes the immediate children:
+
+```graphql
+"buckets": [
+    {
+        "id": "27",
+        "title": "women/bottoms-women/pants-women",
+        "count": 13
+    },
+    {
+        "id": "28",
+        "title": "women/bottoms-women/shorts-women",
+        "count": 12
+    }
+] 
+```
+
+### categories
+
+`categories` can be used as a filter in the query when a category facet is selected in the layered navigation.
+This does not result in strict filtering when used by itself. It can be used in conjunction with the `categoryPath` filter.
+
+Example 1: Search results when filtering on a category.
+
+```graphql
+productSearch(
+  phrase:"pants",
+  filter: [
+    {
+      attribute:"categories", 
+      eq: "women/bottoms-women"
+    },
+    {
+      attribute: "visibility",
+      in: ["Catalog", "Catalog, Search"]
+    },
+  ]
+)
+```
+
+Response:
+
+```graphql
+"buckets": [
+    {
+        "id": "32",
+        "title": "promotions/pants-all",
+        "count": 25
+    },
+    {
+        "id": "22",
+        "title": "women/bottoms-women",
+        "count": 13
+    },
+    {
+        "id": "27",
+        "title": "women/bottoms-women/pants-women",
+        "count": 13
+    },
+    {
+        "id": "13",
+        "title": "men/bottoms-men",
+        "count": 12
+    },
+    {
+        "id": "18",
+        "title": "men/bottoms-men/pants-men",
+        "count": 12
+    },
+    {
+        "id": "34",
+        "title": "collections/erin-recommends",
+        "count": 6
+    },
+    {
+        "id": "8",
+        "title": "collections/yoga-new",
+        "count": 6
+    },
+    {
+        "id": "35",
+        "title": "collections/performance-fabrics",
+        "count": 5
+    }
+]
+```
+
+Example 2: The Category browse page when filtering on a category.
+The user navigates to "Womens -> Bottoms" and filters on "Pants". In this case, we expect both "Pants" and "Shorts" to appear as facets in the layered navigation.
+
+```graphql
+productSearch(
+    phrase:"",
+    filter: [
+        {
+            attribute: "visibility",
+            in: ["Catalog", "Catalog, Search"]
+        },
+        {
+            attribute:"categoryPath", in: ["women/bottoms-women"]
+        },
+        {
+            attribute:"categories", in: ["women/bottoms-women/pants-women"]
+        }
+    ]
+)
+```
+
+Response:
+
+```graphql
+"buckets": [
+    {
+        "id": "27",
+        "title": "women/bottoms-women/pants-women",
+        "count": 13
+    },
+    {
+        "id": "28",
+        "title": "women/bottoms-women/shorts-women",
+        "count": 12
+    }
+] 
+```
+
 ### Other fields and objects
 
 The query response can also contain the following top-level fields and objects:
 
--  `page_info` - An object that lists the `page_size` and `current_page` input arguments as well as the total number of pages available.
--  `suggestions` - An array of strings that include the names of products and categories that exist in the catalog that are similar to the search query.
--  `total_count` - The number of products returned.
+- `page_info` - An object that lists the `page_size` and `current_page` input arguments as well as the total number of pages available.
+- `suggestions` - An array of strings that include the names of products and categories that exist in the catalog that are similar to the search query.
+- `total_count` - The number of products returned.
 
 ## Syntax
 
