@@ -15,8 +15,4 @@ module.exports = [
       title: "GraphQL",
       path: "/graphql/",
     },
-    {
-      title: "GraphQL Reference",
-      path: "/graphql/reference"
-    }
   ];
