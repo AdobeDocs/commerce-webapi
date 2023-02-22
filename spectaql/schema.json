@@ -297,7 +297,7 @@
             "args": [
               {
                 "name": "id",
-                "description": "",
+                "description": "Something something",
                 "type": {
                   "kind": "SCALAR",
                   "name": "String",
