@@ -11,7 +11,7 @@
       {
         "kind": "OBJECT",
         "name": "Query",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "availableStores",
@@ -297,7 +297,7 @@
             "args": [
               {
                 "name": "id",
-                "description": "Something something",
+                "description": "No description available",
                 "type": {
                   "kind": "SCALAR",
                   "name": "String",
@@ -719,7 +719,7 @@
             "args": [
               {
                 "name": "email",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -746,7 +746,7 @@
             "args": [
               {
                 "name": "email",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -773,7 +773,7 @@
             "args": [
               {
                 "name": "name",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -800,7 +800,7 @@
             "args": [
               {
                 "name": "email",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -854,7 +854,7 @@
             "args": [
               {
                 "name": "uid",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -3145,1021 +3145,1021 @@
         "enumValues": [
           {
             "name": "AFN",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "ALL",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "AZN",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "DZD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "AOA",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "ARS",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "AMD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "AWG",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "AUD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "BSD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "BHD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "BDT",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "BBD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "BYN",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "BZD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "BMD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "BTN",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "BOB",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "BAM",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "BWP",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "BRL",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "GBP",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "BND",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "BGN",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "BUK",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "BIF",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "KHR",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "CAD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "CVE",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "CZK",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "KYD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "GQE",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "CLP",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "CNY",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "COP",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "KMF",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "CDF",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "CRC",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "HRK",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "CUP",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "DKK",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "DJF",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "DOP",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "XCD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "EGP",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "SVC",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "ERN",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "EEK",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "ETB",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "EUR",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "FKP",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "FJD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "GMD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "GEK",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "GEL",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "GHS",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "GIP",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "GTQ",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "GNF",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "GYD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "HTG",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "HNL",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "HKD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "HUF",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "ISK",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "INR",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "IDR",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "IRR",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "IQD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "ILS",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "JMD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "JPY",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "JOD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "KZT",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "KES",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "KWD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "KGS",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "LAK",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "LVL",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "LBP",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "LSL",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "LRD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "LYD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "LTL",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "MOP",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "MKD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "MGA",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "MWK",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "MYR",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "MVR",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "LSM",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "MRO",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "MUR",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "MXN",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "MDL",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "MNT",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "MAD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "MZN",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "MMK",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "NAD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "NPR",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "ANG",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "YTL",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "NZD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "NIC",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "NGN",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "KPW",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "NOK",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "OMR",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "PKR",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "PAB",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "PGK",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "PYG",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "PEN",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "PHP",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "PLN",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "QAR",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "RHD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "RON",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "RUB",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "RWF",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "SHP",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "STD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "SAR",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "RSD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "SCR",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "SLL",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "SGD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "SKK",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "SBD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "SOS",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "ZAR",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "KRW",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "LKR",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "SDG",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "SRD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "SZL",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "SEK",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "CHF",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "SYP",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "TWD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "TJS",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "TZS",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "THB",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "TOP",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "TTD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "TND",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "TMM",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "USD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "UGX",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "UAH",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "AED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "UYU",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "UZS",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "VUV",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "VEB",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "VEF",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "VND",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "CHE",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "CHW",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "XOF",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "WST",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "YER",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "ZMK",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "ZWD",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "TRY",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "AZM",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "ROL",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "TRL",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "XPF",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -4179,7 +4179,7 @@
       {
         "kind": "OBJECT",
         "name": "RewardPointsAmount",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "money",
@@ -4603,7 +4603,7 @@
       {
         "kind": "INTERFACE",
         "name": "CartAddressInterface",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "city",
@@ -5040,7 +5040,7 @@
       {
         "kind": "OBJECT",
         "name": "CartItemError",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "code",
@@ -5083,26 +5083,26 @@
       {
         "kind": "ENUM",
         "name": "CartItemErrorType",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
         "enumValues": [
           {
             "name": "UNDEFINED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "ITEM_QTY",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "ITEM_INCREMENTS",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -6721,13 +6721,13 @@
         "enumValues": [
           {
             "name": "ASC",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "DESC",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -6835,7 +6835,7 @@
       {
         "kind": "OBJECT",
         "name": "ComplexTextValue",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "html",
@@ -7406,19 +7406,19 @@
         "enumValues": [
           {
             "name": "TAX",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": true,
             "deprecationReason": "`PriceAdjustmentCodesEnum` is deprecated. Tax is included or excluded in the price. Tax is not shown separately in Catalog."
           },
           {
             "name": "WEEE",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": true,
             "deprecationReason": "WEEE code is deprecated. Use `fixed_product_taxes.label` instead."
           },
           {
             "name": "WEEE_TAX",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": true,
             "deprecationReason": "Use `fixed_product_taxes` instead.  Tax is included or excluded in price. The tax is not shown separtely in Catalog."
           }
@@ -7435,13 +7435,13 @@
         "enumValues": [
           {
             "name": "INCLUDED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "EXCLUDED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -7944,13 +7944,13 @@
         "enumValues": [
           {
             "name": "IN_STOCK",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "OUT_OF_STOCK",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -9854,19 +9854,19 @@
         "enumValues": [
           {
             "name": "CMS_PAGE",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "PRODUCT",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "CATEGORY",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -10262,7 +10262,7 @@
             "args": [
               {
                 "name": "filter",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "INPUT_OBJECT",
                   "name": "CompanyCreditHistoryFilterInput",
@@ -10272,7 +10272,7 @@
               },
               {
                 "name": "pageSize",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "SCALAR",
                   "name": "Int",
@@ -10282,7 +10282,7 @@
               },
               {
                 "name": "currentPage",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "SCALAR",
                   "name": "Int",
@@ -10401,7 +10401,7 @@
             "args": [
               {
                 "name": "id",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -10510,7 +10510,7 @@
             "args": [
               {
                 "name": "id",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -10537,7 +10537,7 @@
             "args": [
               {
                 "name": "id",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -10853,7 +10853,7 @@
             "args": [
               {
                 "name": "giftRegistryUid",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -11050,7 +11050,7 @@
             "args": [
               {
                 "name": "uid",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -11259,7 +11259,7 @@
             "args": [
               {
                 "name": "id",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -13599,7 +13599,7 @@
       {
         "kind": "OBJECT",
         "name": "GiftRegistryDynamicAttribute",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "code",
@@ -13680,7 +13680,7 @@
       {
         "kind": "INTERFACE",
         "name": "GiftRegistryDynamicAttributeInterface",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "code",
@@ -13757,37 +13757,37 @@
         "enumValues": [
           {
             "name": "EVENT_INFORMATION",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "PRIVACY_SETTINGS",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "REGISTRANT",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "GENERAL_INFORMATION",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "DETAILED_INFORMATION",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "SHIPPING_ADDRESS",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -13797,7 +13797,7 @@
       {
         "kind": "INTERFACE",
         "name": "GiftRegistryItemInterface",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "created_at",
@@ -13909,13 +13909,13 @@
         "enumValues": [
           {
             "name": "PRIVATE",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "PUBLIC",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -14016,7 +14016,7 @@
       {
         "kind": "OBJECT",
         "name": "GiftRegistryRegistrantDynamicAttribute",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "code",
@@ -14088,13 +14088,13 @@
         "enumValues": [
           {
             "name": "ACTIVE",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "INACTIVE",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -14163,7 +14163,7 @@
       {
         "kind": "INTERFACE",
         "name": "GiftRegistryDynamicAttributeMetadataInterface",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "attribute_group",
@@ -16886,44 +16886,44 @@
       {
         "kind": "ENUM",
         "name": "ReturnItemStatus",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
         "enumValues": [
           {
             "name": "PENDING",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "AUTHORIZED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "RECEIVED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "APPROVED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "REJECTED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "DENIED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -16953,7 +16953,7 @@
             "args": [
               {
                 "name": "uid",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -17102,7 +17102,7 @@
       {
         "kind": "OBJECT",
         "name": "Country",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "available_regions",
@@ -17189,7 +17189,7 @@
       {
         "kind": "OBJECT",
         "name": "Region",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "code",
@@ -17350,20 +17350,20 @@
       {
         "kind": "ENUM",
         "name": "ReturnShippingTrackingStatusType",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
         "enumValues": [
           {
             "name": "INFORMATION",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "ERROR",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -17373,80 +17373,80 @@
       {
         "kind": "ENUM",
         "name": "ReturnStatus",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
         "enumValues": [
           {
             "name": "PENDING",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "AUTHORIZED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "PARTIALLY_AUTHORIZED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "RECEIVED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "PARTIALLY_RECEIVED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "APPROVED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "PARTIALLY_APPROVED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "REJECTED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "PARTIALLY_REJECTED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "DENIED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "PROCESSED_AND_CLOSED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "CLOSED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -18515,19 +18515,19 @@
         "enumValues": [
           {
             "name": "FIXED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "PERCENT",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "DYNAMIC",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -18792,20 +18792,20 @@
       {
         "kind": "ENUM",
         "name": "RewardPointsSubscriptionStatusesEnum",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
         "enumValues": [
           {
             "name": "SUBSCRIBED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "NOT_SUBSCRIBED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -19182,7 +19182,7 @@
             "args": [
               {
                 "name": "currentPage",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "SCALAR",
                   "name": "Int",
@@ -19192,7 +19192,7 @@
               },
               {
                 "name": "pageSize",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "SCALAR",
                   "name": "Int",
@@ -19530,13 +19530,13 @@
         "enumValues": [
           {
             "name": "PUBLIC",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "PRIVATE",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -19646,44 +19646,44 @@
       {
         "kind": "ENUM",
         "name": "CompanyCreditOperationType",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
         "enumValues": [
           {
             "name": "ALLOCATION",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "UPDATE",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "PURCHASE",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "REIMBURSEMENT",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "REFUND",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "REVERT",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -19894,20 +19894,20 @@
       {
         "kind": "ENUM",
         "name": "CompanyCreditOperationUserType",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
         "enumValues": [
           {
             "name": "CUSTOMER",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "ADMIN",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -20188,7 +20188,7 @@
       {
         "kind": "UNION",
         "name": "CompanyStructureEntity",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -20289,7 +20289,7 @@
       {
         "kind": "OBJECT",
         "name": "Currency",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "available_currency_codes",
@@ -20697,19 +20697,19 @@
         "enumValues": [
           {
             "name": "NO",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "FILTERABLE_WITH_RESULTS",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "FILTERABLE_NO_RESULT",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -21002,31 +21002,31 @@
         "enumValues": [
           {
             "name": "CONTENT",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "HEADER",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "FOOTER",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "LEFT",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "RIGHT",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -21043,19 +21043,19 @@
         "enumValues": [
           {
             "name": "SPECIFIED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "CART_PRICE_RULE_RELATED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "CATALOG_PRICE_RULE_RELATED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -21306,13 +21306,13 @@
         "enumValues": [
           {
             "name": "TEST",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "LIVE",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -21883,7 +21883,7 @@
       {
         "kind": "OBJECT",
         "name": "NegotiableQuoteBillingAddress",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "city",
@@ -22032,7 +22032,7 @@
       {
         "kind": "INTERFACE",
         "name": "NegotiableQuoteAddressInterface",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "city",
@@ -22410,20 +22410,20 @@
       {
         "kind": "ENUM",
         "name": "NegotiableQuoteCommentCreatorType",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
         "enumValues": [
           {
             "name": "BUYER",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "SELLER",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -22516,32 +22516,32 @@
       {
         "kind": "ENUM",
         "name": "NegotiableQuoteHistoryEntryChangeType",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
         "enumValues": [
           {
             "name": "CREATED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "UPDATED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "CLOSED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "UPDATED_BY_SYSTEM",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -22864,56 +22864,56 @@
       {
         "kind": "ENUM",
         "name": "NegotiableQuoteStatus",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
         "enumValues": [
           {
             "name": "SUBMITTED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "PENDING",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "UPDATED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "OPEN",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "ORDERED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "CLOSED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "DECLINED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "EXPIRED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -22958,7 +22958,7 @@
       {
         "kind": "OBJECT",
         "name": "NegotiableQuoteShippingAddress",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "available_shipping_methods",
@@ -23205,7 +23205,7 @@
       {
         "kind": "ENUM",
         "name": "NegotiableQuoteSortableField",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -23528,7 +23528,7 @@
           },
           {
             "name": "finset",
-            "description": "",
+            "description": "No description available",
             "type": {
               "kind": "LIST",
               "name": null,
@@ -24391,7 +24391,7 @@
             "args": [
               {
                 "name": "filter",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "INPUT_OBJECT",
                   "name": "AggregationsFilterInput",
@@ -24803,7 +24803,7 @@
       {
         "kind": "INTERFACE",
         "name": "LayerFilterItemInterface",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "items_count",
@@ -25046,7 +25046,7 @@
       {
         "kind": "OBJECT",
         "name": "Mutation",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "addBundleProductsToCart",
@@ -25578,7 +25578,7 @@
             "args": [
               {
                 "name": "cartId",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -25659,7 +25659,7 @@
             "args": [
               {
                 "name": "cart_id",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -25911,7 +25911,7 @@
             "args": [
               {
                 "name": "input",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -25938,7 +25938,7 @@
             "args": [
               {
                 "name": "input",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -25965,7 +25965,7 @@
             "args": [
               {
                 "name": "input",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -25992,7 +25992,7 @@
             "args": [
               {
                 "name": "input",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -26019,7 +26019,7 @@
             "args": [
               {
                 "name": "input",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "INPUT_OBJECT",
                   "name": "CreateCompareListInput",
@@ -26069,7 +26069,7 @@
             "args": [
               {
                 "name": "input",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -26258,7 +26258,7 @@
             "args": [
               {
                 "name": "input",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "INPUT_OBJECT",
                   "name": "CreateRequisitionListInput",
@@ -26308,7 +26308,7 @@
             "args": [
               {
                 "name": "id",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -26335,7 +26335,7 @@
             "args": [
               {
                 "name": "id",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -26362,7 +26362,7 @@
             "args": [
               {
                 "name": "id",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -27284,7 +27284,7 @@
             "args": [
               {
                 "name": "cartId",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -27338,7 +27338,7 @@
             "args": [
               {
                 "name": "orderNumber",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -27740,7 +27740,7 @@
             "args": [
               {
                 "name": "input",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "INPUT_OBJECT",
                   "name": "SetPaymentMethodAndPlaceOrderInput",
@@ -27945,7 +27945,7 @@
             "args": [
               {
                 "name": "input",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -27972,7 +27972,7 @@
             "args": [
               {
                 "name": "input",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -27999,7 +27999,7 @@
             "args": [
               {
                 "name": "input",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -28026,7 +28026,7 @@
             "args": [
               {
                 "name": "input",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -28053,7 +28053,7 @@
             "args": [
               {
                 "name": "input",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -28441,7 +28441,7 @@
               },
               {
                 "name": "input",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "INPUT_OBJECT",
                   "name": "UpdateRequisitionListInput",
@@ -28941,7 +28941,7 @@
       {
         "kind": "INPUT_OBJECT",
         "name": "ConfigurableProductCartItemInput",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": [
           {
@@ -29027,7 +29027,7 @@
       {
         "kind": "INPUT_OBJECT",
         "name": "AddDownloadableProductsToCartInput",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": [
           {
@@ -29394,32 +29394,32 @@
       {
         "kind": "ENUM",
         "name": "CartUserInputErrorType",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
         "enumValues": [
           {
             "name": "PRODUCT_NOT_FOUND",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "NOT_SALABLE",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "INSUFFICIENT_STOCK",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "UNDEFINED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -29742,13 +29742,13 @@
         "enumValues": [
           {
             "name": "PRODUCT_NOT_FOUND",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "UNDEFINED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -29860,32 +29860,32 @@
       {
         "kind": "ENUM",
         "name": "AddRequisitionListItemToCartUserErrorType",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
         "enumValues": [
           {
             "name": "OUT_OF_STOCK",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "UNAVAILABLE_SKU",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "OPTIONS_UPDATED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "LOW_QUANTITY",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -30408,25 +30408,25 @@
         "enumValues": [
           {
             "name": "PRODUCT_NOT_FOUND",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "NOT_SALABLE",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "INSUFFICIENT_STOCK",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "UNDEFINED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -30870,7 +30870,7 @@
       {
         "kind": "UNION",
         "name": "CloseNegotiableQuoteOperationResult",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -30924,7 +30924,7 @@
       {
         "kind": "INTERFACE",
         "name": "NegotiableQuoteUidNonFatalResultInterface",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "quote_uid",
@@ -31004,7 +31004,7 @@
       {
         "kind": "UNION",
         "name": "CloseNegotiableQuoteError",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -31063,7 +31063,7 @@
       {
         "kind": "INTERFACE",
         "name": "ErrorInterface",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "message",
@@ -31188,26 +31188,26 @@
       {
         "kind": "ENUM",
         "name": "BatchMutationStatus",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
         "enumValues": [
           {
             "name": "SUCCESS",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "FAILURE",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "MIXED_RESULTS",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -33532,7 +33532,7 @@
       {
         "kind": "INPUT_OBJECT",
         "name": "DeleteNegotiableQuotesInput",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": [
           {
@@ -33661,7 +33661,7 @@
       {
         "kind": "UNION",
         "name": "DeleteNegotiableQuoteOperationResult",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -33729,7 +33729,7 @@
       {
         "kind": "UNION",
         "name": "DeleteNegotiableQuoteError",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -34017,7 +34017,7 @@
       {
         "kind": "OBJECT",
         "name": "PayflowProResponseOutput",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "cart",
@@ -35271,38 +35271,38 @@
       {
         "kind": "ENUM",
         "name": "CheckoutUserInputErrorCodes",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
         "enumValues": [
           {
             "name": "REORDER_NOT_AVAILABLE",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "PRODUCT_NOT_FOUND",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "NOT_SALABLE",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "INSUFFICIENT_STOCK",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "UNDEFINED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -37150,7 +37150,7 @@
         "inputFields": [
           {
             "name": "braintree",
-            "description": "",
+            "description": "No description available",
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "BraintreeInput",
@@ -37160,7 +37160,7 @@
           },
           {
             "name": "braintree_cc_vault",
-            "description": "",
+            "description": "No description available",
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "BraintreeCcVaultInput",
@@ -37260,7 +37260,7 @@
       {
         "kind": "INPUT_OBJECT",
         "name": "BraintreeInput",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": [
           {
@@ -37309,12 +37309,12 @@
       {
         "kind": "INPUT_OBJECT",
         "name": "BraintreeCcVaultInput",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": [
           {
             "name": "device_data",
-            "description": "",
+            "description": "No description available",
             "type": {
               "kind": "SCALAR",
               "name": "String",
@@ -37324,7 +37324,7 @@
           },
           {
             "name": "public_hash",
-            "description": "",
+            "description": "No description available",
             "type": {
               "kind": "NON_NULL",
               "name": null,
@@ -38033,25 +38033,25 @@
         "enumValues": [
           {
             "name": "NOT_ACTIVE",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "SUBSCRIBED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "UNSUBSCRIBED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "UNCONFIRMED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -40345,19 +40345,19 @@
         "enumValues": [
           {
             "name": "DATE",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "DATE_TIME",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "TIME",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -44256,7 +44256,7 @@
           },
           {
             "name": "url_path",
-            "description": "",
+            "description": "No description available",
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "FilterTypeInput",
@@ -44617,7 +44617,7 @@
           },
           {
             "name": "url_path",
-            "description": "",
+            "description": "No description available",
             "type": {
               "kind": "ENUM",
               "name": "SortEnum",
@@ -44643,7 +44643,7 @@
       {
         "kind": "OBJECT",
         "name": "LayerFilterItem",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "items_count",
@@ -45781,20 +45781,20 @@
       {
         "kind": "ENUM",
         "name": "DownloadableFileTypeEnum",
-        "description": "",
+        "description": "No description available",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
         "enumValues": [
           {
             "name": "FILE",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": true,
             "deprecationReason": "`sample_url` serves to get the downloadable sample"
           },
           {
             "name": "URL",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": true,
             "deprecationReason": "`sample_url` serves to get the downloadable sample"
           }
@@ -49019,13 +49019,13 @@
         "enumValues": [
           {
             "name": "PRICE_RANGE",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "AS_LOW_AS",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -49042,13 +49042,13 @@
         "enumValues": [
           {
             "name": "TOGETHER",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "SEPARATELY",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -51286,19 +51286,19 @@
         "enumValues": [
           {
             "name": "VIRTUAL",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "PHYSICAL",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           },
           {
             "name": "COMBINED",
-            "description": "",
+            "description": "No description available",
             "isDeprecated": false,
             "deprecationReason": ""
           }
@@ -51308,7 +51308,7 @@
       {
         "kind": "OBJECT",
         "name": "GiftCardOrderItem",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "discounts",
@@ -51648,7 +51648,7 @@
       {
         "kind": "OBJECT",
         "name": "GiftCardInvoiceItem",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "discounts",
@@ -51777,7 +51777,7 @@
       {
         "kind": "OBJECT",
         "name": "GiftCardCreditMemoItem",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "discounts",
@@ -51906,7 +51906,7 @@
       {
         "kind": "OBJECT",
         "name": "GiftCardShipmentItem",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "gift_card",
@@ -52772,7 +52772,7 @@
       {
         "kind": "OBJECT",
         "name": "SalesItemInterface",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "gift_message",
@@ -52964,7 +52964,7 @@
       {
         "kind": "OBJECT",
         "name": "GiftRegistryDynamicAttributeMetadata",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "attribute_group",
@@ -53073,7 +53073,7 @@
       {
         "kind": "OBJECT",
         "name": "GiftRegistryItem",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "created_at",
@@ -54218,7 +54218,7 @@
             "args": [
               {
                 "name": "configurableOptionValueUids",
-                "description": "",
+                "description": "No description available",
                 "type": {
                   "kind": "LIST",
                   "name": null,
@@ -55268,7 +55268,7 @@
       {
         "kind": "INTERFACE",
         "name": "SwatchDataInterface",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "value",
@@ -55842,7 +55842,7 @@
       {
         "kind": "OBJECT",
         "name": "OrderItem",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "discounts",
@@ -56099,7 +56099,7 @@
       {
         "kind": "OBJECT",
         "name": "InvoiceItem",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "discounts",
@@ -56216,7 +56216,7 @@
       {
         "kind": "OBJECT",
         "name": "ShipmentItem",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "id",
@@ -56321,7 +56321,7 @@
       {
         "kind": "OBJECT",
         "name": "CreditMemoItem",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "discounts",
@@ -56665,7 +56665,7 @@
       {
         "kind": "INTERFACE",
         "name": "SwatchLayerFilterItemInterface",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "swatch_data",
@@ -56729,7 +56729,7 @@
       {
         "kind": "OBJECT",
         "name": "SwatchLayerFilterItem",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "items_count",
@@ -56799,7 +56799,7 @@
       {
         "kind": "OBJECT",
         "name": "ImageSwatchData",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "thumbnail",
@@ -56840,7 +56840,7 @@
       {
         "kind": "OBJECT",
         "name": "TextSwatchData",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "value",
@@ -56869,7 +56869,7 @@
       {
         "kind": "OBJECT",
         "name": "ColorSwatchData",
-        "description": "",
+        "description": "No description available",
         "fields": [
           {
             "name": "value",
