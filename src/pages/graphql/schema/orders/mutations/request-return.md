@@ -161,6 +161,7 @@ Attribute |  Data Type | Description
 ### SelectedCustomAttributeInput attributes
 
 The SelectedCustomAttributeInput object
+
 Attribute |  Data Type | Description
 --- | --- | ---
 `attribute_code` | String! | A string that identifies the selected attribute
