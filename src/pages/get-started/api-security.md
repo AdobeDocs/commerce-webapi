@@ -7,6 +7,217 @@ This topic describes best practices for [API security](https://owasp.org/www-pro
 
 # API security
 
+## Rate limiting for payment information endpoint and mutation
+
+In a carding attack, an attacker tries to validate which credit cards are valid, usually in batches of thousands. In some cases, this can also be used to brute force missing details like expiry date. Adobe Commerce merchants suffer from this attack type, as their shops and integrations with 3rd party payment gateways are abused.
+Adobe Commerce introduces a new configuration for adding rate limiting for payment information endpoint and mutation. This is an added layer of protection for merchants to prevent/slow carding attacks that test many stolen credit cards at once.
+Rate limiting is disabled by default but can be enabled and configured via CLI and/or using UI. The threshold can be configured by interval and can be set independently for customers and guests.
+
+### How the feature works?
+This rate limiting functionality will be affected to the next entry points:
+- WebAPI:
+    - `{{base_url}}/rest/V1/guest-carts/{{cart_id}}/payment-information`
+    - `{{base_url}}/rest/V1/guest-carts/{{cart_id}}/order`
+    - `{{base_url}}/rest/V1/carts/mine/payment-information`
+    - `{{base_url}}/rest/V1/carts/mine/order`
+- GraphQL: `{{base_url}}/graphql`
+```
+mutation {
+    placeOrder(input:{
+        cart_id:"{{cart_id}}"
+    }) {
+    order {order_number}
+    }
+}
+```
+- Module InstantPurchase `magento/module-instant-purchase`
+
+The configuration and default values are located in the path `app/code/Magento/Quote/etc/config.xml`
+```xml
+<?xml version="1.0"?>
+<!-- ... -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        ...
+        <sales>
+            <backpressure>
+                <enabled>0</enabled>          <!-- Enable rate limiting for placing orders -->
+                <limit>10</limit>             <!-- Requests limit per authenticated customer -->
+                <guest_limit>50</guest_limit> <!-- Requests limit per guest -->
+                <period>60</period>           <!-- Counter resets in a ... [sec.]-->
+            </backpressure>
+        </sales>
+    </default>
+</config>
+```
+These settings can be explained as follows:
+- Sales restrictions are enabled `sales/backpressure/enabled` = `1`.
+- Anonymous users can place no more than 50 orders `sales/backpressure/guest_limit` = `50` from one IP address in one minute `sales/backpressure/period - 60` [sec].  Then they will have to wait for `3 x period` from the moment of the last request, i.e. 3 minutes.
+- An authorized user can place no more than 10 orders `sales/backpressure/limit` = `10` in one minute. Then he will have to wait for `3 x period` from the moment of the last request, i.e. 3 minutes.
+
+### How to use?
+
+As mentioned earlier, this functionality is disabled by default. In order to start using it, you need to add a configuration that will provide a connection to the service where the request logs will be stored until the request. By default, the connection is implemented for the Redis server.
+To start using do this, use the following options. These options work in the case of installation and in the case when the project is already installed:
+
+```shell
+# Project is already installed
+$ php bin/magento setup:config:set --help | grep backp
+      --backpressure-logger=BACKPRESSURE-LOGGER                                                  Backpressure logger handler
+      --backpressure-logger-redis-server=BACKPRESSURE-LOGGER-REDIS-SERVER                        Redis server
+      --backpressure-logger-redis-port=BACKPRESSURE-LOGGER-REDIS-PORT                            Redis server listen port
+      --backpressure-logger-redis-timeout=BACKPRESSURE-LOGGER-REDIS-TIMEOUT                      Redis server timeout
+      --backpressure-logger-redis-persistent=BACKPRESSURE-LOGGER-REDIS-PERSISTENT                Redis persistent
+      --backpressure-logger-redis-db=BACKPRESSURE-LOGGER-REDIS-DB                                Redis db number
+      --backpressure-logger-redis-password=BACKPRESSURE-LOGGER-REDIS-PASSWORD                    Redis server password
+      --backpressure-logger-redis-user=BACKPRESSURE-LOGGER-REDIS-USER                            Redis server user
+      --backpressure-logger-id-prefix=BACKPRESSURE-LOGGER-ID-PREFIX                              ID prefix for keys
+```
+
+And in the case when the project is already installed
+```shell
+# Project is not installed yet
+$ php bin/magento setup:install --help | grep backp
+      --backpressure-logger=BACKPRESSURE-LOGGER                                                  Backpressure logger handler
+      --backpressure-logger-redis-server=BACKPRESSURE-LOGGER-REDIS-SERVER                        Redis server
+      --backpressure-logger-redis-port=BACKPRESSURE-LOGGER-REDIS-PORT                            Redis server listen port
+      --backpressure-logger-redis-timeout=BACKPRESSURE-LOGGER-REDIS-TIMEOUT                      Redis server timeout
+      --backpressure-logger-redis-persistent=BACKPRESSURE-LOGGER-REDIS-PERSISTENT                Redis persistent
+      --backpressure-logger-redis-db=BACKPRESSURE-LOGGER-REDIS-DB                                Redis db number
+      --backpressure-logger-redis-password=BACKPRESSURE-LOGGER-REDIS-PASSWORD                    Redis server password
+      --backpressure-logger-redis-user=BACKPRESSURE-LOGGER-REDIS-USER                            Redis server user
+      --backpressure-logger-id-prefix=BACKPRESSURE-LOGGER-ID-PREFIX                              ID prefix for keys
+```
+
+{:.bs-callout-tip}
+The data (request time and the identifier) will be temporarily stored in the redis. In the case of a non-registered user, the identifier will be his external IP address, and his user ID in the case of a registered user ID.
+
+An example of a command that will add a new connection to the Redis server.
+
+Redis server:
+- Host: 195.34.23.5
+- Port: 9345
+- Password: s0M3StR0NgP@SsW0Rd
+- User: SomeUser
+
+```shell
+$ php bin/magento setup:config:set \
+    --backpressure-logger=redis \
+    --backpressure-logger-redis-server=195.34.23.5 \
+    --backpressure-logger-redis-port=9345 \
+    --backpressure-logger-redis-timeout=1 \
+    --backpressure-logger-redis-persistent=persistent \
+    --backpressure-logger-redis-db=3 \
+    --backpressure-logger-redis-password=s0M3StR0NgP@SsW0Rd\
+    --backpressure-logger-redis-user=SomeUser \
+    --backpressure-logger-id-prefix=some_pref
+```
+After the command is executed, the following configuration will be added to the file `app/etc/env.php`
+
+```php
+[
+//...
+    'backpressure' => [
+        'logger' => [
+            'type' => 'redis',
+            'options' => [
+                'server' => '195.34.23.5',
+                'port' => 9345,
+                'timeout' => 1,
+                'persistent' => 'persistent',
+                'db' => '3',
+                'password' => 's0meStr0ngPassw0rd',
+                'user' => 'SomeUser'
+            ],
+            'id-prefix' => 'some_pref'
+        ]
+    ]
+//...
+];
+```
+Now you are ready to enable this functionality.
+You can do this using the console commands:
+
+1. Enable - 1/ disable - 0 rate limiting for placing orders:
+```php
+$ php bin/magento config:set sales/backpressure/enabled 1
+```
+2. Requests limit per guest (ip address):
+```php
+$ php bin/magento config:set sales/backpressure/guest_limit 100
+```
+3. Requests limit per authenticated customer:
+```php
+$ php bin/magento config:set sales/backpressure/limit 10
+````
+4. Counter resets in seconds. Supported values `60`, `3600`, `86400` seconds:
+```php
+$ php bin/magento config:set sales/backpressure/period 3600
+```
+If do you need to check configurations you can use following CLI command:
+```php
+php bin/magento config:show | grep backpressure
+```
+Example:
+```php
+$ php bin/magento config:show | grep backpressure
+sales/backpressure/limit - 10
+sales/backpressure/guest_limit - 100
+sales/backpressure/period - 3600
+sales/backpressure/enabled - 1
+```
+
+Also, You can enable and configure this functionality using the user interface: `Stores` -> `Config` -> `Sales` -> `Sales` -> `Rate Limiting`:
+![](api-security/images/api-security-rate-limiting.png)
+
+{:.bs-callout-tip}
+If rate limiting for payment information endpoint and mutation functionality were enabled, but the connection to the service for store log request was not configured or configured incorrectly, then the restrictions will not apply, that is, they will be ignored.
+The behavior will be the same if this option is disabled. But the following message will be present in the application logs `<magento-root>/var/log/system.log`
+
+```
+...
+[2022-11-11T15:46:32.716679+00:00] main.ERROR: Backpressure sliding window not applied. Invalid request logger type:  [] []
+...
+[2022-11-11T15:46:37.730863+00:00] main.ERROR: Backpressure sliding window not applied. Invalid request logger type:  [] []
+...
+```
+
+In case rate limiting is applied to a REST request, then a response with HTTP status code 429 "Too Many Requests" will be generated.
+
+Example:
+```
+HTTP/1.1 429 Too Many Requests
+...
+Pragma: no-cache
+Cache-Control: no-store
+...
+{"message":"Too Many Requests","trace":null}
+```
+
+If rate limiting is applied to a GraphQl request, then a response with HTTP status code 200 "Ok" will be generated and all relevant information will be present in the response body.
+
+Example:
+```
+HTTP/1.1 200 OK
+...
+Pragma: no-cache
+Cache-Control: max-age=0, must-revalidate, no-cache, no-store
+ ...
+{
+    "errors":[
+        {
+            "message":"Too Many Requests",
+            "extensions":{"category":"graphql-too-many-requests"},
+             "locations":[
+                 {"line":2,"column":3}
+             ],
+             "path":["placeOrder"]
+        }
+    ],
+    "data":{"placeOrder":null}
+}
+```
+
 ## Input limiting
 
 Imposing restrictions on the size and number of resources that a user can request through an API can help mitigate denial-of-service (DoS) vulnerabilities. By default, the following built-in API rate limiting is available:
