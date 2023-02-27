@@ -143,7 +143,7 @@ After the command is executed, the following configuration is added to the `app/
 
 Use the following commands to enable rate limiting:
 
-1. Enable `1` or disable `0` rate limiting for placing orders:
+1. Enable (`1`) or disable (`0`) rate limiting for placing orders:
 
     ```bash
     $ bin/magento config:set sales/backpressure/enabled 1
