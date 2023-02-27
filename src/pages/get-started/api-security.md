@@ -29,6 +29,7 @@ The rate limiting functionality affects the following entry points:
 - Module InstantPurchase `magento/module-instant-purchase`
 
 The configuration and default values are located in the path `app/code/Magento/Quote/etc/config.xml`
+
 ```xml
 <?xml version="1.0"?>
 <!-- ... -->
@@ -46,6 +47,7 @@ The configuration and default values are located in the path `app/code/Magento/Q
     </default>
 </config>
 ```
+
 Configuration settings:
 - Sales restrictions are enabled `sales/backpressure/enabled` = `1`.
 - Anonymous users are limited to 50 orders `sales/backpressure/guest_limit` = `50` from a single IP address within one minute `sales/backpressure/period - 60` [sec].  Then they will have to wait for `3 x period` from the last request, i.e. 3 minutes.
@@ -56,33 +58,38 @@ Configuration settings:
 As mentioned earlier, this functionality is disabled by default. In order to start using it, you need to add a configuration that will provide a connection to the service where the request logs will be stored until the request. By default, the connection is implemented for the Redis server.
 To start using do this, use the following options. These options work in the case of installation and in the case when the project is already installed:
 
-```shell
-# Project is already installed
-$ php bin/magento setup:config:set --help | grep backp
-      --backpressure-logger=BACKPRESSURE-LOGGER                                                  Backpressure logger handler
-      --backpressure-logger-redis-server=BACKPRESSURE-LOGGER-REDIS-SERVER                        Redis server
-      --backpressure-logger-redis-port=BACKPRESSURE-LOGGER-REDIS-PORT                            Redis server listen port
-      --backpressure-logger-redis-timeout=BACKPRESSURE-LOGGER-REDIS-TIMEOUT                      Redis server timeout
-      --backpressure-logger-redis-persistent=BACKPRESSURE-LOGGER-REDIS-PERSISTENT                Redis persistent
-      --backpressure-logger-redis-db=BACKPRESSURE-LOGGER-REDIS-DB                                Redis db number
-      --backpressure-logger-redis-password=BACKPRESSURE-LOGGER-REDIS-PASSWORD                    Redis server password
-      --backpressure-logger-redis-user=BACKPRESSURE-LOGGER-REDIS-USER                            Redis server user
-      --backpressure-logger-id-prefix=BACKPRESSURE-LOGGER-ID-PREFIX                              ID prefix for keys
+```bash
+$ bin/magento setup:config:set --help | grep backp
+```
+
+```terminal
+--backpressure-logger=BACKPRESSURE-LOGGER                                                  Backpressure logger handler
+--backpressure-logger-redis-server=BACKPRESSURE-LOGGER-REDIS-SERVER                        Redis server
+--backpressure-logger-redis-port=BACKPRESSURE-LOGGER-REDIS-PORT                            Redis server listen port
+--backpressure-logger-redis-timeout=BACKPRESSURE-LOGGER-REDIS-TIMEOUT                      Redis server timeout
+--backpressure-logger-redis-persistent=BACKPRESSURE-LOGGER-REDIS-PERSISTENT                Redis persistent
+--backpressure-logger-redis-db=BACKPRESSURE-LOGGER-REDIS-DB                                Redis db number
+--backpressure-logger-redis-password=BACKPRESSURE-LOGGER-REDIS-PASSWORD                    Redis server password
+--backpressure-logger-redis-user=BACKPRESSURE-LOGGER-REDIS-USER                            Redis server user
+--backpressure-logger-id-prefix=BACKPRESSURE-LOGGER-ID-PREFIX                              ID prefix for keys
 ```
 
 And in the case when the project is already installed
-```shell
-# Project is not installed yet
-$ php bin/magento setup:install --help | grep backp
-      --backpressure-logger=BACKPRESSURE-LOGGER                                                  Backpressure logger handler
-      --backpressure-logger-redis-server=BACKPRESSURE-LOGGER-REDIS-SERVER                        Redis server
-      --backpressure-logger-redis-port=BACKPRESSURE-LOGGER-REDIS-PORT                            Redis server listen port
-      --backpressure-logger-redis-timeout=BACKPRESSURE-LOGGER-REDIS-TIMEOUT                      Redis server timeout
-      --backpressure-logger-redis-persistent=BACKPRESSURE-LOGGER-REDIS-PERSISTENT                Redis persistent
-      --backpressure-logger-redis-db=BACKPRESSURE-LOGGER-REDIS-DB                                Redis db number
-      --backpressure-logger-redis-password=BACKPRESSURE-LOGGER-REDIS-PASSWORD                    Redis server password
-      --backpressure-logger-redis-user=BACKPRESSURE-LOGGER-REDIS-USER                            Redis server user
-      --backpressure-logger-id-prefix=BACKPRESSURE-LOGGER-ID-PREFIX                              ID prefix for keys
+
+```bash
+$ bin/magento setup:install --help | grep backp
+```
+
+```terminal
+--backpressure-logger=BACKPRESSURE-LOGGER                                                  Backpressure logger handler
+--backpressure-logger-redis-server=BACKPRESSURE-LOGGER-REDIS-SERVER                        Redis server
+--backpressure-logger-redis-port=BACKPRESSURE-LOGGER-REDIS-PORT                            Redis server listen port
+--backpressure-logger-redis-timeout=BACKPRESSURE-LOGGER-REDIS-TIMEOUT                      Redis server timeout
+--backpressure-logger-redis-persistent=BACKPRESSURE-LOGGER-REDIS-PERSISTENT                Redis persistent
+--backpressure-logger-redis-db=BACKPRESSURE-LOGGER-REDIS-DB                                Redis db number
+--backpressure-logger-redis-password=BACKPRESSURE-LOGGER-REDIS-PASSWORD                    Redis server password
+--backpressure-logger-redis-user=BACKPRESSURE-LOGGER-REDIS-USER                            Redis server user
+--backpressure-logger-id-prefix=BACKPRESSURE-LOGGER-ID-PREFIX                              ID prefix for keys
 ```
 
 <InlineAlert variant="info" slots="text"/>
@@ -97,8 +104,8 @@ Redis server:
 - Password: s0M3StR0NgP@SsW0Rd
 - User: SomeUser
 
-```shell
-$ php bin/magento setup:config:set \
+```bash
+$ bin/magento setup:config:set \
     --backpressure-logger=redis \
     --backpressure-logger-redis-server=195.34.23.5 \
     --backpressure-logger-redis-port=9345 \
@@ -109,6 +116,7 @@ $ php bin/magento setup:config:set \
     --backpressure-logger-redis-user=SomeUser \
     --backpressure-logger-id-prefix=some_pref
 ```
+
 After the command is executed, the following configuration is added to the `app/etc/env.php` file.
 
 ```php
@@ -132,34 +140,45 @@ After the command is executed, the following configuration is added to the `app/
 //...
 ];
 ```
+
 Use the following commands to enable rate limiting:
 
 1. Enable `1` or disable `0` rate limiting for placing orders:
 
-    ```php
-    $ php bin/magento config:set sales/backpressure/enabled 1
+    ```bash
+    $ bin/magento config:set sales/backpressure/enabled 1
     ```
+   
 1. Set the request limit per guest (ip address):
 
-```php
-$ php bin/magento config:set sales/backpressure/guest_limit 100
-```
+    ```bash
+    $ bin/magento config:set sales/backpressure/guest_limit 100
+    ```
+   
 1. Set the request limit for authenticated customers:
-```php
-$ php bin/magento config:set sales/backpressure/limit 10
-````
+
+    ```bash
+    $ bin/magento config:set sales/backpressure/limit 10
+    ```
+   
 1. Set the amount of time (in seconds) a customer must wait after reaching the `limit`. Supported values `60`, `3600`, `86400` seconds:
-```php
-$ php bin/magento config:set sales/backpressure/period 3600
-```
+
+    ```bash
+    $ bin/magento config:set sales/backpressure/period 3600
+    ```
+   
 If you need to check a configuration, use the following CLI command:
 
-```php
-php bin/magento config:show | grep backpressure
+```bash 
+$ bin/magento config:show | grep backpressure
 ```
+
 Example:
-```php
-$ php bin/magento config:show | grep backpressure
+```bash
+$ bin/magento config:show | grep backpressure
+```
+
+```terminal
 sales/backpressure/limit - 10
 sales/backpressure/guest_limit - 100
 sales/backpressure/period - 3600
@@ -175,7 +194,7 @@ If rate limiting was enabled for the payment information endpoint and the mutati
 
 The behavior will be the same if this option is disabled, but the application logs (`<magento-root>/var/log/system.log`) will contain the following message: 
 
-```
+```text
 ...
 [2022-11-11T15:46:32.716679+00:00] main.ERROR: Backpressure sliding window not applied. Invalid request logger type:  [] []
 ...
@@ -186,7 +205,8 @@ The behavior will be the same if this option is disabled, but the application lo
 If rate limiting is applied to a REST request, then a response with HTTP status code `429 - Too Many Requests` will be generated.
 
 Example:
-```
+
+```text
 HTTP/1.1 429 Too Many Requests
 ...
 Pragma: no-cache
@@ -198,7 +218,8 @@ Cache-Control: no-store
 If rate limiting is applied to a GraphQl request, then a response with HTTP status code `200 - Ok` will be generated and all relevant information will be present in the response body.
 
 Example:
-```
+
+```text
 HTTP/1.1 200 OK
 ...
 Pragma: no-cache
@@ -351,7 +372,7 @@ bin/magento cache:clear config
 
 If you need to change the default limits for REST endpoints, then edit the `webapi` section of the `<magento_root>/app/etc/env.php` file as follows:
 
-```conf
+```php
 [
 //...
     'webapi' => [
@@ -376,6 +397,6 @@ The maximum page size setting controls the pagination of various web API respons
 
 The Default Page Size setting controls the pagination of various web API responses. You can change the default value of `20` in the Admin by selecting **Stores** > Settings > **Configuration** > **Services** > **Web API Input Limits** > **Default Page Size**. To change the value from the CLI, run the following command:
 
-```shell
+```bash
 bin/magento config:set webapi/validation/default_page_size 30
 ```
