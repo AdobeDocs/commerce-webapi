@@ -149,7 +149,7 @@ Use the following commands to enable rate limiting:
     $ bin/magento config:set sales/backpressure/enabled 1
     ```
    
-1. Set the request limit per guest (ip address):
+1. Set the request limit per guest (IP address):
 
     ```bash
     $ bin/magento config:set sales/backpressure/guest_limit 100
