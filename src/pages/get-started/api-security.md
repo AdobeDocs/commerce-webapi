@@ -189,7 +189,8 @@ You can also enable and configure rate limiting in the user interface: `Stores` 
 
 ![Rate limiting section](../_images/api-security-rate-limiting.png)
 
-{:.bs-callout-tip}
+<InlineAlert variant="info" slots="text"/>
+
 If rate limiting was enabled for the payment information endpoint and the mutation functionality, but the connection to the service for store log request was not configured or configured incorrectly, then the restrictions will not be applied.
 
 The behavior will be the same if this option is disabled, but the application logs (`<magento-root>/var/log/system.log`) will contain the following message: 
