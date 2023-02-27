@@ -55,8 +55,8 @@ Configuration settings:
 
 ### How to use?
 
-As mentioned earlier, this functionality is disabled by default. In order to start using it, you need to add a configuration that will provide a connection to the service where the request logs will be stored until the request. By default, the connection is implemented for the Redis server.
-To start using do this, use the following options. These options work in the case of installation and in the case when the project is already installed:
+As mentioned earlier, this functionality is disabled by default. To enable this feature, you need to add a configuration that connects to the service where the request logs will be stored. By default, the connection is implemented for the Redis server.
+The following options work for new and existing installations:
 
 ```bash
 $ bin/magento setup:config:set --help | grep backp
