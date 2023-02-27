@@ -9,7 +9,7 @@ This topic describes best practices for [API security](https://owasp.org/www-pro
 
 ## Rate limiting for payment information endpoint and mutation
 
-In a carding attack, an attacker tries to determine which credit cards numbers are valid, usually in batches of thousands. Attackers can use similar techniques to brute force missing details, like the expiration date. Adobe Commerce merchants can be targeted by this attack type through their shops and integrations with 3rd-party payment gateways.
+In a carding attack, an attacker tries to determine which credit card numbers are valid, usually in batches of thousands. Attackers can use similar techniques to brute force missing details, like the expiration date. Adobe Commerce merchants can be targeted by this attack type through their shops and integrations with 3rd-party payment gateways.
 
 Adobe Commerce has a new configuration for adding rate limiting for the payment information endpoint and mutation. This is an added layer of protection allows merchants to prevent and slow carding attacks that test many credit cards numbers at once.
 
