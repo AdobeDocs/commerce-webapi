@@ -9,27 +9,23 @@ This topic describes best practices for [API security](https://owasp.org/www-pro
 
 ## Rate limiting for payment information endpoint and mutation
 
-In a carding attack, an attacker tries to validate which credit cards are valid, usually in batches of thousands. In some cases, this can also be used to brute force missing details like expiry date. Adobe Commerce merchants suffer from this attack type, as their shops and integrations with 3rd party payment gateways are abused.
-Adobe Commerce introduces a new configuration for adding rate limiting for payment information endpoint and mutation. This is an added layer of protection for merchants to prevent/slow carding attacks that test many stolen credit cards at once.
-Rate limiting is disabled by default but can be enabled and configured via CLI and/or using UI. The threshold can be configured by interval and can be set independently for customers and guests.
+In a carding attack, an attacker tries to determine which credit cards numbers are valid, usually in batches of thousands. Attackers can use similar techniques to brute force missing details, like the expiration date. Adobe Commerce merchants can be targeted by this attack type through their shops and integrations with 3rd-party payment gateways.
 
-### How the feature works?
-This rate limiting functionality will be affected to the next entry points:
+Adobe Commerce has a new configuration for adding rate limiting for the payment information endpoint and mutation. This is an added layer of protection allows merchants to prevent and slow carding attacks that test many credit cards numbers at once.
+
+Rate limiting is disabled by default but can be enabled and configured via the CLI or the UI. The threshold can be configured by interval and set independently for customers and guests.
+
+### How rate limiting works
+
+The rate limiting functionality affects the following entry points:
+
 - WebAPI:
     - `{{base_url}}/rest/V1/guest-carts/{{cart_id}}/payment-information`
     - `{{base_url}}/rest/V1/guest-carts/{{cart_id}}/order`
     - `{{base_url}}/rest/V1/carts/mine/payment-information`
     - `{{base_url}}/rest/V1/carts/mine/order`
 - GraphQL: `{{base_url}}/graphql`
-```
-mutation {
-    placeOrder(input:{
-        cart_id:"{{cart_id}}"
-    }) {
-    order {order_number}
-    }
-}
-```
+
 - Module InstantPurchase `magento/module-instant-purchase`
 
 The configuration and default values are located in the path `app/code/Magento/Quote/etc/config.xml`
@@ -50,9 +46,9 @@ The configuration and default values are located in the path `app/code/Magento/Q
     </default>
 </config>
 ```
-These settings can be explained as follows:
+Configuration settings:
 - Sales restrictions are enabled `sales/backpressure/enabled` = `1`.
-- Anonymous users can place no more than 50 orders `sales/backpressure/guest_limit` = `50` from one IP address in one minute `sales/backpressure/period - 60` [sec].  Then they will have to wait for `3 x period` from the moment of the last request, i.e. 3 minutes.
+- Anonymous users are limited to 50 orders `sales/backpressure/guest_limit` = `50` from a single IP address within one minute `sales/backpressure/period - 60` [sec].  Then they will have to wait for `3 x period` from the last request, i.e. 3 minutes.
 - An authorized user can place no more than 10 orders `sales/backpressure/limit` = `10` in one minute. Then he will have to wait for `3 x period` from the moment of the last request, i.e. 3 minutes.
 
 ### How to use?
@@ -91,9 +87,9 @@ $ php bin/magento setup:install --help | grep backp
 
 <InlineAlert variant="info" slots="text"/>
 
-The data (request time and the identifier) will be temporarily stored in the redis. In the case of a non-registered user, the identifier will be his external IP address, and his user ID in the case of a registered user ID.
+The data (the request time and the identifier) is temporarily stored in Redis. Registered users are identified by their user ID. Non-registered users are identified by their external IP address.
 
-An example of a command that will add a new connection to the Redis server.
+The following command will add a new connection to the Redis server:
 
 Redis server:
 - Host: 195.34.23.5
@@ -113,7 +109,7 @@ $ php bin/magento setup:config:set \
     --backpressure-logger-redis-user=SomeUser \
     --backpressure-logger-id-prefix=some_pref
 ```
-After the command is executed, the following configuration will be added to the file `app/etc/env.php`
+After the command is executed, the following configuration is added to the `app/etc/env.php` file.
 
 ```php
 [
@@ -136,26 +132,28 @@ After the command is executed, the following configuration will be added to the 
 //...
 ];
 ```
-Now you are ready to enable this functionality.
-You can do this using the console commands:
+Use the following commands to enable rate limiting:
 
-1. Enable - 1/ disable - 0 rate limiting for placing orders:
-```php
-$ php bin/magento config:set sales/backpressure/enabled 1
-```
-2. Requests limit per guest (ip address):
+1. Enable `1` or disable `0` rate limiting for placing orders:
+
+    ```php
+    $ php bin/magento config:set sales/backpressure/enabled 1
+    ```
+1. Set the request limit per guest (ip address):
+
 ```php
 $ php bin/magento config:set sales/backpressure/guest_limit 100
 ```
-3. Requests limit per authenticated customer:
+1. Set the request limit for authenticated customers:
 ```php
 $ php bin/magento config:set sales/backpressure/limit 10
 ````
-4. Counter resets in seconds. Supported values `60`, `3600`, `86400` seconds:
+1. Set the amount of time (in seconds) a customer must wait after reaching the `limit`. Supported values `60`, `3600`, `86400` seconds:
 ```php
 $ php bin/magento config:set sales/backpressure/period 3600
 ```
-If do you need to check configurations you can use following CLI command:
+If you need to check a configuration, use the following CLI command:
+
 ```php
 php bin/magento config:show | grep backpressure
 ```
@@ -168,12 +166,14 @@ sales/backpressure/period - 3600
 sales/backpressure/enabled - 1
 ```
 
-Also, You can enable and configure this functionality using the user interface: `Stores` -> `Config` -> `Sales` -> `Sales` -> `Rate Limiting`:
+You can also enable and configure rate limiting in the user interface: `Stores` -> `Config` -> `Sales` -> `Sales` -> `Rate Limiting`:
+
 ![](api-security/images/api-security-rate-limiting.png)
 
 {:.bs-callout-tip}
-If rate limiting for payment information endpoint and mutation functionality were enabled, but the connection to the service for store log request was not configured or configured incorrectly, then the restrictions will not apply, that is, they will be ignored.
-The behavior will be the same if this option is disabled. But the following message will be present in the application logs `<magento-root>/var/log/system.log`
+If rate limiting was enabled for the payment information endpoint and the mutation functionality, but the connection to the service for store log request was not configured or configured incorrectly, then the restrictions will not be applied.
+
+The behavior will be the same if this option is disabled, but the application logs (`<magento-root>/var/log/system.log`) will contain the following message: 
 
 ```
 ...
@@ -183,7 +183,7 @@ The behavior will be the same if this option is disabled. But the following mess
 ...
 ```
 
-In case rate limiting is applied to a REST request, then a response with HTTP status code 429 "Too Many Requests" will be generated.
+If rate limiting is applied to a REST request, then a response with HTTP status code `429 - Too Many Requests` will be generated.
 
 Example:
 ```
@@ -195,7 +195,7 @@ Cache-Control: no-store
 {"message":"Too Many Requests","trace":null}
 ```
 
-If rate limiting is applied to a GraphQl request, then a response with HTTP status code 200 "Ok" will be generated and all relevant information will be present in the response body.
+If rate limiting is applied to a GraphQl request, then a response with HTTP status code `200 - Ok` will be generated and all relevant information will be present in the response body.
 
 Example:
 ```
