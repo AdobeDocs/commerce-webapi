@@ -89,7 +89,8 @@ $ php bin/magento setup:install --help | grep backp
       --backpressure-logger-id-prefix=BACKPRESSURE-LOGGER-ID-PREFIX                              ID prefix for keys
 ```
 
-{:.bs-callout-tip}
+<InlineAlert variant="info" slots="text"/>
+
 The data (request time and the identifier) will be temporarily stored in the redis. In the case of a non-registered user, the identifier will be his external IP address, and his user ID in the case of a registered user ID.
 
 An example of a command that will add a new connection to the Redis server.
