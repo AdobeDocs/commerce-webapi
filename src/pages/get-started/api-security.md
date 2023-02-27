@@ -168,7 +168,7 @@ sales/backpressure/enabled - 1
 
 You can also enable and configure rate limiting in the user interface: `Stores` -> `Config` -> `Sales` -> `Sales` -> `Rate Limiting`:
 
-![](api-security/images/api-security-rate-limiting.png)
+![Rate limiting section](../_images/api-security-rate-limiting.png)
 
 {:.bs-callout-tip}
 If rate limiting was enabled for the payment information endpoint and the mutation functionality, but the connection to the service for store log request was not configured or configured incorrectly, then the restrictions will not be applied.
