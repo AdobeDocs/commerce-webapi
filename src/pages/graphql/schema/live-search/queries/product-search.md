@@ -13,7 +13,7 @@ Live Search uses the `productSearch` query to search for products instead of the
 The `productSearch` query accepts the following fields as input:
 
 - `phrase` - The string of text to search for. This field is required.
-- `filter` - An object that defines one or more product attributes to use to narrow the search results. In the Luma theme, the `sku`, `price`, and `size` attributes are among the product attributes that can be used to filter query results.
+- `filter` - An object that defines one or more product attributes to use to narrow the search results. In the Luma theme, the `sku`, `price`, and `size` attributes are among the product attributes that can be used to filter query results. See [`categories`](#categories) and [`categoryPath`](#categorypath) for category level filtering.
 - `sort` - An object that defines one or more product attributes to use to sort the search results. The default sortable product attributes in Luma are `price`, `name`, and `position`. A product's position is assigned within a category.
 - `page_size` and `current_page` - These optional fields allow the search results to be broken down into smaller groups so that a limited number of items are returned at a time. The default value of `page_size` is `20`, and the default value for `current_page` is `1`. In the response, counting starts at page one.
 - `context` - Query context that allows customized search results to be returned based on the customer group passed. This is used to get the view history of a SKU.
@@ -293,7 +293,6 @@ If you select "Womens -> Bottoms" from the category navigation, the filter would
 
 ```graphql
 productSearch(
-    phrase:"",
     filter: [
         {
             attribute: "visibility",
@@ -373,26 +372,7 @@ Response:
         "title": "men/bottoms-men",
         "count": 12
     },
-    {
-        "id": "18",
-        "title": "men/bottoms-men/pants-men",
-        "count": 12
-    },
-    {
-        "id": "34",
-        "title": "collections/erin-recommends",
-        "count": 6
-    },
-    {
-        "id": "8",
-        "title": "collections/yoga-new",
-        "count": 6
-    },
-    {
-        "id": "35",
-        "title": "collections/performance-fabrics",
-        "count": 5
-    }
+    ...
 ]
 ```
 
@@ -401,7 +381,6 @@ The user navigates to "Womens -> Bottoms" and filters on "Pants". In this case, 
 
 ```graphql
 productSearch(
-    phrase:"",
     filter: [
         {
             attribute: "visibility",
