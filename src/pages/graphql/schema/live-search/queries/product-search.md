@@ -16,6 +16,9 @@ The `productSearch` query accepts the following fields as input:
 - `filter` - An object that defines one or more product attributes to use to narrow the search results. In the Luma theme, the `sku`, `price`, and `size` attributes are among the product attributes that can be used to filter query results.
 - `sort` - An object that defines one or more product attributes to use to sort the search results. The default sortable product attributes in Luma are `price`, `name`, and `position`. A product's position is assigned within a category.
 - `page_size` and `current_page` - These optional fields allow the search results to be broken down into smaller groups so that a limited number of items are returned at a time. The default value of `page_size` is `20`, and the default value for `current_page` is `1`. In the response, counting starts at page one.
+- `context` - Query context that allows customized search results to be returned based on the customer group passed. This is used to get the view history of a SKU.
+
+Note: The initial release does not allow for different merchandising strategies per customer group.
 
 ### Field Reference
 
@@ -106,6 +109,27 @@ The following example sets the current page to 5:
 
 ```graphql
 current_page: 5
+```
+
+#### context
+
+ `context` passes the customer group code to the query.
+ If no value is passed, the "Not Logged In" group is used.
+
+ ```graphql
+ context: {
+  customerGroup: "b6589fc6ab0dc82cf12099d1c2d40ab994e8410c",
+  userViewHistory: [
+    {
+      sku: "sku-01",
+      dateTime: "2022-10-13T20:53:21.338Z"
+    },
+    {
+      sku: "sku-02",
+      dateTime: "2022-10-13T20:53:21.338Z"
+    }
+  ]
+} 
 ```
 
 ## Interpret the results
@@ -897,6 +921,7 @@ Field | Data Type | Description
 `current_page` | Int | Specifies which page of results to return. Default value: 1
 `filter` | [[SearchClauseInput!]](#SearchClauseInput) | Identifies which attributes to search for and return
 `sort` | [[ProductSearchSortInput!]](#ProductSearchSortInput) | Specifies which attribute to sort on, and whether to return the results in ascending or descending order
+`context` | [[QueryContextInput!]](#QueryContextInput) | Query context that allows customized search results to be returned based on the context passed
 
 ### SearchClauseInput data type {#SearchClauseInput}
 
@@ -926,6 +951,24 @@ Field | Data Type | Description
 --- | --- | ---
 `attribute` | String! | The attribute code of a product attribute
 `direction` | SortEnum! | ASC (ascending) or DESC (descending)
+
+### QueryContextInput data type {#QueryContextInput}
+
+The `QueryContextInput` object can contain the following fields.
+
+Field | Data Type | Description
+--- | --- | ---
+`customerGroup` | String! | sha1 hash of customer group id (database id)
+`userViewHistory` | [ViewHistoryInput!]((#ViewHistoryInput)) | list of SKUs with timestamps. Used in "Recommended for you" ranking
+
+### ViewHistoryInput data type {#ViewHistoryInput}
+
+The `ViewHistoryInput` object can contain the following fields.
+
+Field | Data Type | Description
+--- | --- | ---
+`dateTime` | String! | Timestamps when the SKU was viewed
+`sku` | String! | The SKU of the view history being requested
 
 ## Output fields
 
