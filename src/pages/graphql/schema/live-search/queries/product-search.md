@@ -377,6 +377,7 @@ Response:
 ```
 
 Example 2: A category browse page when filtering on a category.
+
 The user navigates to "Womens -> Bottoms" and filters on "Pants". In this case, we expect both "Pants" and "Shorts" to appear as facets in the layered navigation.
 
 ```graphql
