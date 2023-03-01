@@ -6,7 +6,7 @@ description: Describes how to construct and use the Catalog Service Categories q
 
 # Categories query
 
-The `Categories` query returns Categories and the products assigned to those categories.
+The `categories` query returns Categories and the products assigned to those categories.
 
 ## Syntax
 
