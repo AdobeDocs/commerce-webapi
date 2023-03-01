@@ -1,3 +1,3 @@
 ---
-frameSrc: /graphql-api/
+frameSrc: /graphql-api/index.html
 ---
