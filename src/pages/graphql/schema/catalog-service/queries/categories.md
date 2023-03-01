@@ -11,16 +11,17 @@ The `Categories` query returns Categories and the products assigned to those cat
 ## Syntax
 
 ```graphql
-query Categories($roles: [String!]) {
-  categories(roles: $roles) {
-    id
-    name
-    level
-    path
-    parentId
-    children
-    roles
-  }
+type Query {
+  categories(ids: [String!], roles: [String!], subtree: Subtree): [CategoryView]
+}
+```
+
+Where `subtree` is:
+
+```graphql
+input Subtree {
+    startLevel: Int!,
+    depth: Int!
 }
 ```
 
@@ -108,85 +109,8 @@ The full response has been shortened for brevity.
         "roles": [
           "show_in_menu"
         ]
-      },
-      {
-        "id": "26",
-        "name": "Bras & Tanks",
-        "level": 4,
-        "path": "1/2/20/21/26",
-        "parentId": "21",
-        "children": [],
-        "roles": [
-          "show_in_menu"
-        ]
-      },
-      {
-        "id": "27",
-        "name": "Pants",
-        "level": 4,
-        "path": "1/2/20/22/27",
-        "parentId": "22",
-        "children": [],
-        "roles": [
-          "show_in_menu"
-        ]
-      },
-      {
-        "id": "28",
-        "name": "Shorts",
-        "level": 4,
-        "path": "1/2/20/22/28",
-        "parentId": "22",
-        "children": [],
-        "roles": [
-          "show_in_menu"
-        ]
-      },
-      {
-        "id": "29",
-        "name": "Promotions",
-        "level": 2,
-        "path": "1/2/29",
-        "parentId": "2",
-        "children": [
-          "30",
-          "31",
-          "32",
-          "33"
-        ],
-        "roles": [
-          "not_active"
-        ]
-      },
-      {
-        "id": "30",
-        "name": "Women Sale",
-        "level": 3,
-        "path": "1/2/29/30",
-        "parentId": "29",
-        "children": [],
-        "roles": []
-      },
-      {
-        "id": "31",
-        "name": "Men Sale",
-        "level": 3,
-        "path": "1/2/29/31",
-        "parentId": "29",
-        "children": [],
-        "roles": []
-      },
-      {
-        "id": "10",
-        "name": "Video Download",
-        "level": 3,
-        "path": "1/2/9/10",
-        "parentId": "9",
-        "children": [],
-        "roles": [
-          "show_in_menu"
-        ]
       }
+      ...
     ]
   }
 }
@@ -196,8 +120,8 @@ The full response has been shortened for brevity.
 
 Field | Data type | Description
 --- | --- | ---
-`ids` | [String!] | A list of IDs assigned to the product options the shopper has selected, such specific colors and sizes.
-`roles` | [String!]! |  The SKU of a complex product.
+`startLevel` | [Int!] |The level in the category tree where the search should begin.
+`depth` | [Int!]! |  The number of subtrees to return.
 
 ## Output fields
 
