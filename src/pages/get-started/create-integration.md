@@ -13,7 +13,7 @@ Implementing a simple integration requires little knowledge of [PHP](https://glo
 *  [Web API authentication](./authentication/)
 *  [OAuth-based authentication](./authentication/gs-authentication-oauth.md)
 
-Before you begin creating a module, make sure that you have a working installation that meets the [System Requirements](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html).
+Before you begin creating a module, make sure that you have a working installation that meets the [System Requirements](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html).
 
 To create an integration, follow these general steps:
 
@@ -198,7 +198,7 @@ In the following example, the test integration requires access to the following 
             <!-- To grant permission to Magento_Log::online, its parent Magento_Customer::customer needs to be declared as well-->
             <resource name="Magento_Customer::customer" />
             <resource name="Magento_Log::online" />
-            <!-- To grant permission to Magento_Sales::reorder, all its parent resources need to be declared-->	
+            <!-- To grant permission to Magento_Sales::reorder, all its parent resources need to be declared-->    
             <resource name="Magento_Sales::sales" />
             <resource name="Magento_Sales::sales_operation" />
             <resource name="Magento_Sales::sales_order" />
@@ -325,6 +325,6 @@ The callback page must be able to perform the following tasks:
 
 *  [Web API authentication](./authentication/)
 *  [OAuth-based authentication](./authentication/gs-authentication-oauth.md)
-*  [System Requirements](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html)
+*  [System Requirements](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)
 *  [Create the module file structure](https://developer.adobe.com/commerce/php/development/build/component-file-structure/)
 *  [Create a component](https://developer.adobe.com/commerce/php/development/build/component-name/)

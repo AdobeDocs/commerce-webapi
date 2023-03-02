@@ -38,7 +38,7 @@ This section lists the information that Commerce sends to the REST client. These
 
 In a production environment, you would typically [create an integration](/get-started/create-integration) and supply the integration token with any REST call that requires admin privileges. The token allows Commerce to verify that the caller is authorized to access a system resource.
 
-Here, we will supply an admin token instead. To get a token, you must have 2FA configured. This tutorial assumes that you are using Google Authenticator as your 2FA solution. The endpoint and payload will be different for other 2FA solutions. See [Two-Factor Authentication](https://devdocs.magento.com/guides/v2.4/security/two-factor-authentication.html) for more information.
+Here, we will supply an admin token instead. To get a token, you must have 2FA configured. This tutorial assumes that you are using Google Authenticator as your 2FA solution. The endpoint and payload will be different for other 2FA solutions. See [Two-Factor Authentication](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication/) for more information.
 
 Your request must specify the admin user's `username`, `password` and `otp` (one time password). The `otp` value is the six-digit authorization code that Google Authenticator generates.
 

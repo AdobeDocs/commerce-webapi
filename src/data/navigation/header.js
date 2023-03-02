@@ -1,6 +1,6 @@
 module.exports = [
     {
-      title: "Commerce Web APIs",
+      title: "Web APIs",
       path: "/",
     },
     {

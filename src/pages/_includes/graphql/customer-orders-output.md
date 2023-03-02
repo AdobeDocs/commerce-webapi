@@ -89,7 +89,7 @@ import CreditMemoItemInterface from '/src/pages/_includes/graphql/credit-memo-it
 
 <CreditMemoItemInterface />
 
-[CreditMemoItemInterface attributes and implementations](../../graphql/schema/orders/interfaces/credit-memo-item.md) provides additional information about the implementations of this interface.
+[CreditMemoItemInterface attributes and implementations](/src/pages/graphql/schema/orders/interfaces/credit-memo-item.md) provides additional information about the implementations of this interface.
 
 #### CreditMemoTotal attributes
 
@@ -148,7 +148,7 @@ import InvoiceItemInterface from '/src/pages/_includes/graphql/invoice-item-inte
 
 <InvoiceItemInterface />
 
-[InvoiceItemInterface attributes and implementations](../../graphql/schema/orders/interfaces/invoice-item.md) provides additional information about the implementations of this interface.
+[InvoiceItemInterface attributes and implementations](/src/pages/graphql/schema/orders/interfaces/invoice-item.md) provides additional information about the implementations of this interface.
 
 `InvoiceItemInterface` is implemented by the `InvoiceItem` and `BundleInvoiceItem` data types.
 
@@ -226,7 +226,7 @@ import OrderItemInterface from '/src/pages/_includes/graphql/order-item-interfac
 
 <OrderItemInterface />
 
-[OrderItemInterface attributes and implementations](../../graphql/schema/orders/interfaces/order-item.md) provides additional information about the implementations of this interface.
+[OrderItemInterface attributes and implementations](/src/pages/graphql/schema/orders/interfaces/order-item.md) provides additional information about the implementations of this interface.
 
 #### OrderItemOption attributes
 
@@ -365,7 +365,7 @@ import ShipmentItemInterface from '/src/pages/_includes/graphql/shipment-item-in
 
 <ShipmentItemInterface />
 
-[ShipmentItemInterface attributes and implementations](../../graphql/schema/orders/interfaces/order-item.md) provides additional information about the implementations of this interface.
+[ShipmentItemInterface attributes and implementations](/src/pages/graphql/schema/orders/interfaces/order-item.md) provides additional information about the implementations of this interface.
 
 #### ShipmentTracking attributes
 
