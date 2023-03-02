@@ -16,7 +16,6 @@ Field | Data Type | Description
 `urlPath` | String | The URL path for the category.
 `urlKey` | String | The part of the URL that identifies the category.
 
-
 ### CategoryViewInterface attributes
 
 The `CategoryViewInterface`  returns information about the CategoryView
