@@ -1,12 +1,12 @@
 ---
 title: categories query | GraphQL Developer Guide
 edition: ee
-description: Describes how to construct and use the Catalog Service Categories query.
+description: Describes how to construct and use the Catalog Service categories query.
 ---
 
-# Categories query
+# categories query
 
-The `categories` query returns Categories and the products assigned to those categories.
+The `categories` query returns categories and the products assigned to those categories.
 
 ## Syntax
 
@@ -27,7 +27,7 @@ input Subtree {
 
 ## Required headers
 
-You must specify the following HTTP headers to run this query.
+Specify the following HTTP headers to run this query.
 
 import Headers from '/src/pages/_includes/graphql/catalog-service/headers.md'
 
@@ -35,84 +35,141 @@ import Headers from '/src/pages/_includes/graphql/catalog-service/headers.md'
 
 ## Example usage
 
-### Return a basic category list
-
-The following query returns the category tree.
+The following query returns a category tree.
 
 **Request:**
 
 ```graphql
-query Categories($roles: [String!]) {
-  categories(roles: $roles) {
-    id
-    name
-    level
-    path
-    parentId
-    children
-    roles
-  }
+query() {
+    categories(ids: "2", roles: ["show_in_menu", "active"], subtree: {
+       "depth": 2,
+       "startLevel": 1
+   }) {
+       id,
+       name,
+       level,
+       parentId,
+       urlKey,
+       urlPath,
+       children,
+       roles
+    }
 }
 ```
 
 **Response:**
 
-The full response has been shortened for brevity.
-
 ```json
 {
-  "data": {
-    "categories": [
-      {
-        "id": "22",
-        "name": "Bottoms",
-        "level": 3,
-        "path": "1/2/20/22",
-        "parentId": "20",
-        "children": [
-          "27",
-          "28"
-        ],
-        "roles": [
-          "show_in_menu"
+    "data": {
+        "categories": [
+            {
+                "id": "41",
+                "name": "Gift Cards",
+                "level": 2,
+                "parentId": "2",
+                "urlKey": "gift-cards",
+                "urlPath": "gift-cards",
+                "children": [],
+                "roles": [
+                    "active",
+                    "show_in_menu"
+                ]
+            },
+            {
+                "id": "10",
+                "name": "Video Download",
+                "level": 3,
+                "parentId": "9",
+                "urlKey": "training-video",
+                "urlPath": "training/training-video",
+                "children": [],
+                "roles": [
+                    "active",
+                    "show_in_menu"
+                ]
+            },
+            {
+                "id": "12",
+                "name": "Tops",
+                "level": 3,
+                "parentId": "11",
+                "urlKey": "tops-men",
+                "urlPath": "men/tops-men",
+                "children": [
+                    "14",
+                    "15",
+                    "16",
+                    "17"
+                ],
+                "roles": [
+                    "active",
+                    "show_in_menu"
+                ]
+            },
+            {
+                "id": "38",
+                "name": "What's New",
+                "level": 2,
+                "parentId": "2",
+                "urlKey": "what-is-new",
+                "urlPath": "what-is-new",
+                "children": [],
+                "roles": [
+                    "active",
+                    "show_in_menu"
+                ]
+            },
+            {
+                "id": "48",
+                "name": "testCategory",
+                "level": 2,
+                "parentId": "2",
+                "urlKey": "testtree",
+                "urlPath": "testtree",
+                "children": [
+                    "49",
+                    "51"
+                ],
+                "roles": [
+                    "active",
+                    "show_in_menu"
+                ]
+            },
+            {
+                "id": "49",
+                "name": "Child1",
+                "level": 3,
+                "parentId": "48",
+                "urlKey": "sub1",
+                "urlPath": "testtree/sub1",
+                "children": [
+                    "50",
+                    "53"
+                ],
+                "roles": [
+                    "active",
+                    "show_in_menu"
+                ]
+            },
+            {
+                "id": "51",
+                "name": "Child2",
+                "level": 3,
+                "parentId": "48",
+                "urlKey": "child12",
+                "urlPath": "testtree/child12",
+                "children": [
+                    "52",
+                    "54"
+                ],
+                "roles": [
+                    "active",
+                    "show_in_menu"
+                ]
+            }
         ]
-      },
-      {
-        "id": "23",
-        "name": "Jackets",
-        "level": 4,
-        "path": "1/2/20/21/23",
-        "parentId": "21",
-        "children": [],
-        "roles": [
-          "show_in_menu"
-        ]
-      },
-      {
-        "id": "24",
-        "name": "Hoodies & Sweatshirts",
-        "level": 4,
-        "path": "1/2/20/21/24",
-        "parentId": "21",
-        "children": [],
-        "roles": [
-          "show_in_menu"
-        ]
-      },
-      {
-        "id": "25",
-        "name": "Tees",
-        "level": 4,
-        "path": "1/2/20/21/25",
-        "parentId": "21",
-        "children": [],
-        "roles": [
-          "show_in_menu"
-        ]
-      }
-      ...
-    ]
-  }
+    }
 }
 ```
 
@@ -120,8 +177,16 @@ The full response has been shortened for brevity.
 
 Field | Data type | Description
 --- | --- | ---
-`startLevel` | [Int!] |The level in the category tree where the search should begin.
-`depth` | [Int!]! |  The number of subtrees to return.
+`ids` | [String!] | Array of category ids to return. If using `subtree`, must contain only one id.
+`roles` | [String!]! |  The list of category roles to be queried.
+`subtree` | [[subtree](#subtree-input)] | Number of subcategories to return.
+
+### subtree input
+
+Field | Data type | Description
+--- | --- | ---
+`startLevel` | [Int!] |The level in the category tree where the search should begin. Minimus of 1.
+`depth` | [Int!]! |  The number of subtrees to return. Values over 3 may impact performance.
 
 ## Output fields
 
