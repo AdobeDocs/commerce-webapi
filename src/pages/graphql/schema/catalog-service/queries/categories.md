@@ -41,18 +41,19 @@ The following query returns a category tree.
 
 ```graphql
 query() {
-    categories(ids: "2", roles: ["show_in_menu", "active"], subtree: {
-       "depth": 2,
+    categories(ids: "11", roles: ["show_in_menu", "active"], subtree: {
+       "depth": 3,
        "startLevel": 1
    }) {
-       id,
-       name,
-       level,
-       parentId,
-       urlKey,
-       urlPath,
-       children,
-       roles
+       name
+    id
+    level
+    roles
+    path
+    urlPath
+    urlKey
+    parentId
+    children
     }
 }
 ```
@@ -60,117 +61,114 @@ query() {
 **Response:**
 
 ```json
-{
-    "data": {
-        "categories": [
-            {
-                "id": "41",
-                "name": "Gift Cards",
-                "level": 2,
-                "parentId": "2",
-                "urlKey": "gift-cards",
-                "urlPath": "gift-cards",
-                "children": [],
-                "roles": [
-                    "active",
-                    "show_in_menu"
-                ]
-            },
-            {
-                "id": "10",
-                "name": "Video Download",
-                "level": 3,
-                "parentId": "9",
-                "urlKey": "training-video",
-                "urlPath": "training/training-video",
-                "children": [],
-                "roles": [
-                    "active",
-                    "show_in_menu"
-                ]
-            },
-            {
-                "id": "12",
-                "name": "Tops",
-                "level": 3,
-                "parentId": "11",
-                "urlKey": "tops-men",
-                "urlPath": "men/tops-men",
-                "children": [
-                    "14",
-                    "15",
-                    "16",
-                    "17"
-                ],
-                "roles": [
-                    "active",
-                    "show_in_menu"
-                ]
-            },
-            {
-                "id": "38",
-                "name": "What's New",
-                "level": 2,
-                "parentId": "2",
-                "urlKey": "what-is-new",
-                "urlPath": "what-is-new",
-                "children": [],
-                "roles": [
-                    "active",
-                    "show_in_menu"
-                ]
-            },
-            {
-                "id": "48",
-                "name": "testCategory",
-                "level": 2,
-                "parentId": "2",
-                "urlKey": "testtree",
-                "urlPath": "testtree",
-                "children": [
-                    "49",
-                    "51"
-                ],
-                "roles": [
-                    "active",
-                    "show_in_menu"
-                ]
-            },
-            {
-                "id": "49",
-                "name": "Child1",
-                "level": 3,
-                "parentId": "48",
-                "urlKey": "sub1",
-                "urlPath": "testtree/sub1",
-                "children": [
-                    "50",
-                    "53"
-                ],
-                "roles": [
-                    "active",
-                    "show_in_menu"
-                ]
-            },
-            {
-                "id": "51",
-                "name": "Child2",
-                "level": 3,
-                "parentId": "48",
-                "urlKey": "child12",
-                "urlPath": "testtree/child12",
-                "children": [
-                    "52",
-                    "54"
-                ],
-                "roles": [
-                    "active",
-                    "show_in_menu"
-                ]
-            }
+[
+    {
+        "name": "Bottoms",
+        "id": "13",
+        "level": 3,
+        "roles": [
+            "active",
+            "show_in_menu"
+        ],
+        "path": "1/2/11/13",
+        "urlPath": "men/bottoms-men",
+        "urlKey": "bottoms-men",
+        "parentId": "11",
+        "children": [
+            "18",
+            "19"
         ]
+    },
+    {
+        "name": "Tops",
+        "id": "12",
+        "level": 3,
+        "roles": [
+            "active",
+            "show_in_menu"
+        ],
+        "path": "1/2/11/12",
+        "urlPath": "men/tops-men",
+        "urlKey": "tops-men",
+        "parentId": "11",
+        "children": [
+            "14",
+            "15",
+            "16",
+            "17"
+        ]
+    },
+    {
+        "name": "Jackets",
+        "id": "14",
+        "level": 4,
+        "roles": [
+            "active",
+            "show_in_menu"
+        ],
+        "path": "1/2/11/12/14",
+        "urlPath": "men/tops-men/jackets-men",
+        "urlKey": "jackets-men",
+        "parentId": "12",
+        "children": []
+    },
+    {
+        "name": "Pants",
+        "id": "18",
+        "level": 4,
+        "roles": [
+            "active",
+            "show_in_menu"
+        ],
+        "path": "1/2/11/13/18",
+        "urlPath": "men/bottoms-men/pants-men",
+        "urlKey": "pants-men",
+        "parentId": "13",
+        "children": []
+    },
+    {
+        "name": "Tanks",
+        "id": "17",
+        "level": 4,
+        "roles": [
+            "active",
+            "show_in_menu"
+        ],
+        "path": "1/2/11/12/17",
+        "urlPath": "men/tops-men/tanks-men",
+        "urlKey": "tanks-men",
+        "parentId": "12",
+        "children": []
+    },
+    {
+        "name": "Hoodies & Sweatshirts",
+        "id": "15",
+        "level": 4,
+        "roles": [
+            "active",
+            "show_in_menu"
+        ],
+        "path": "1/2/11/12/15",
+        "urlPath": "men/tops-men/hoodies-and-sweatshirts-men",
+        "urlKey": "hoodies-and-sweatshirts-men",
+        "parentId": "12",
+        "children": []
+    },
+    {
+        "name": "Shorts",
+        "id": "19",
+        "level": 4,
+        "roles": [
+            "active",
+            "show_in_menu"
+        ],
+        "path": "1/2/11/13/19",
+        "urlPath": "men/bottoms-men/shorts-men",
+        "urlKey": "shorts-men",
+        "parentId": "13",
+        "children": []
     }
-}
+]
 ```
 
 ## Input fields
