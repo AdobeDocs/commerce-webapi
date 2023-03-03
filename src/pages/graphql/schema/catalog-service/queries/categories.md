@@ -41,7 +41,7 @@ The following query returns a category tree.
 
 ```graphql
 query() {
-    categories(ids: "11", roles: ["show_in_menu", "active"], subtree: {
+    categories(ids: ["11"], roles: ["show_in_menu", "active"], subtree: {
        "depth": 3,
        "startLevel": 1
    }) {
