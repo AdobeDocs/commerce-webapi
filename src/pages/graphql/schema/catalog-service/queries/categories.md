@@ -6,7 +6,7 @@ description: Describes how to construct and use the Catalog Service categories q
 
 # categories query
 
-The `categories` query returns categories and the products assigned to those categories.
+The `categories` query returns category data and using `subtree`, their sub-categories.
 
 ## Syntax
 
@@ -185,7 +185,7 @@ Field | Data type | Description
 
 Field | Data type | Description
 --- | --- | ---
-`startLevel` | [Int!] |The level in the category tree where the search should begin. Minimus of 1.
+`startLevel` | [Int!] |The level in the category tree where the search should begin. Minimum of 1.
 `depth` | [Int!]! |  The number of subtrees to return. Values over 3 may impact performance.
 
 ## Output fields

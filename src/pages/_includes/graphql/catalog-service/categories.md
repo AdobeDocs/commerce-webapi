@@ -1,4 +1,4 @@
-The `categories` return object is an interface that can contain the following fields. It is implemented by the [`CategoryView`](#categoryview-type) and [`CategoryViewInterface`](#categoryviewinterface-attributes) types.
+The categories query returns the `CategoryView` object, which implements `CategoryViewInterface`.
 
 ### CategoryView type
 
