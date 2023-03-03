@@ -1184,6 +1184,10 @@ module.exports = [
     ],
   },
   {
+    title: "Reference",
+    path: "/graphql/reference"
+  },
+  {
     title: "Release notes",
     path: "/graphql/release-notes/",
   },

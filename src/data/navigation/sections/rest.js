@@ -398,6 +398,32 @@ module.exports = [
             },
             ],
         },
+        {
+            title: "Working with product images",
+            path: "/rest/tutorials/image/",
+            pages: [
+            {
+                title: "Working with product images tutorial",
+                path: "/rest/tutorials/image/",
+            },
+            {
+                title: "Step 1. Get a list of product images",
+                path: "/rest/tutorials/image/list.md",
+            },
+            {
+                title: "Step 2. Add a new image to a product",
+                path: "/rest/tutorials/image/new.md",
+            },
+            {
+                title: "Step 3. Update an image of a product",
+                path: "/rest/tutorials/image/update.md",
+            },
+            {
+                title: "Step 4. Delete an image of a product",
+                path: "/rest/tutorials/image/delete.md",
+            },
+            ],
+        },
     ],
   },
   {
@@ -429,4 +455,3 @@ module.exports = [
     path: "/rest/attributes/"
   },
   ];
-  

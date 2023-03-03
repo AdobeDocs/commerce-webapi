@@ -1,10 +1,10 @@
 Attribute |  Data Type | Description
 --- | --- | ---
-`applied_coupon` | [`AppliedCoupon`][AppliedCoupon] | Deprecated. Use `applied_coupons` instead
-`applied_coupons` | [[`AppliedCoupon`]][AppliedCoupon] | An array of `AppliedCoupon` objects. Each object contains the `code` text attribute, which specifies the coupon code
-`applied_gift_cards` | [[`AppliedGiftCard`]][AppliedGiftCard] | An array of `AppliedGiftCard` objects. An `AppliedGiftCard` object contains the `code` text attribute, which specifies the gift card code. `applied_gift_cards` is a Commerce-only attribute, defined in the GiftCardAccountGraphQl module
-`applied_reward_points`| [`RewardPointsAmount`][RewardPointsAmount] | The amount of reward points applied to the cart
-`applied_store_credit` | [`AppliedStoreCredit`][AppliedStoreCredit] | Contains store credit information applied to the cart. `applied_store_credit` is a Commerce-only attribute, defined in the CustomerBalanceGraphQl module
+`applied_coupon` | [AppliedCoupon][AppliedCoupon] | Deprecated. Use `applied_coupons` instead
+`applied_coupons` | [[AppliedCoupon]][AppliedCoupon] | An array of `AppliedCoupon` objects. Each object contains the `code` text attribute, which specifies the coupon code
+`applied_gift_cards` | [[AppliedGiftCard]][AppliedGiftCard] | An array of `AppliedGiftCard` objects. An `AppliedGiftCard` object contains the `code` text attribute, which specifies the gift card code. `applied_gift_cards` is a Commerce-only attribute, defined in the GiftCardAccountGraphQl module
+`applied_reward_points`| [RewardPointsAmount][RewardPointsAmount] | The amount of reward points applied to the cart
+`applied_store_credit` | [AppliedStoreCredit][AppliedStoreCredit] | Contains store credit information applied to the cart. `applied_store_credit` is a Commerce-only attribute, defined in the CustomerBalanceGraphQl module
 `available_gift_wrappings` | [[GiftWrapping]][GiftWrapping]! | The list of available gift wrapping options for the cart
 `available_payment_methods` | [[AvailablePaymentMethod]][AvailablePaymentMethod] | Available payment methods
 `billing_address` | [BillingCartAddress][BillingCartAddress] | Contains the billing address specified in the customer's cart
@@ -21,15 +21,15 @@ Attribute |  Data Type | Description
 `shipping_addresses` | [[ShippingCartAddress]][ShippingCartAddress]! | Contains one or more shipping addresses
 `total_quantity` | Float! | Total Quantity of products in the cart
 
-[AppliedCoupon]: ../../graphql/schema/cart/queries/cart.md#appliedcoupon-object
-[AppliedGiftCard]: ../../graphql/schema/cart/queries/cart.md#appliedgiftcard-object
-[AppliedStoreCredit]: ../../graphql/schema/cart/queries/cart.md#appliedstorecredit-object
-[AvailablePaymentMethod]: ../../graphql/schema/cart/queries/cart.md#availablepaymentmethod-object
-[BillingCartAddress]: ../../graphql/schema/cart/queries/cart.md#billingcartaddress-object
-[CartItemInterface]: ../../graphql/schema/cart/queries/cart.md#cartiteminterface
-[CartPrices]: ../../graphql/schema/cart/queries/cart.md#cartprices-object
-[GiftMessage]: ../../graphql/schema/cart/queries/cart.md#giftmessage-object
-[GiftWrapping]: ../../graphql/schema/cart/queries/cart.md#giftwrapping-object
-[RewardPointsAmount]: ../../graphql/schema/cart/queries/cart.md#rewardpointsamount
-[SelectedPaymentMethod]: ../../graphql/schema/cart/queries/cart.md#selectedpaymentmethod-object
-[ShippingCartAddress]: ../../graphql/schema/cart/queries/cart.md#shippingcartaddress-object
+[AppliedCoupon]: /src/pages/graphql/schema/cart/queries/cart.md#appliedcoupon-object
+[AppliedGiftCard]: /src/pages/graphql/schema/cart/queries/cart.md#appliedgiftcard-object
+[AppliedStoreCredit]: /src/pages/graphql/schema/cart/queries/cart.md#appliedstorecredit-object
+[AvailablePaymentMethod]: /src/pages/graphql/schema/cart/queries/cart.md#availablepaymentmethod-object
+[BillingCartAddress]: /src/pages/graphql/schema/cart/queries/cart.md#billingcartaddress-object
+[CartItemInterface]: /src/pages/graphql/schema/cart/queries/cart.md#cartiteminterface
+[CartPrices]: /src/pages/graphql/schema/cart/queries/cart.md#cartprices-object
+[GiftMessage]: /src/pages/graphql/schema/cart/queries/cart.md#giftmessage-object
+[GiftWrapping]: /src/pages/graphql/schema/cart/queries/cart.md#giftwrapping-object
+[RewardPointsAmount]: /src/pages/graphql/schema/cart/queries/cart.md#rewardpointsamount
+[SelectedPaymentMethod]: /src/pages/graphql/schema/cart/queries/cart.md#selectedpaymentmethod-object
+[ShippingCartAddress]: /src/pages/graphql/schema/cart/queries/cart.md#shippingcartaddress-object

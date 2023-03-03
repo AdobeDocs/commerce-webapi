@@ -14,6 +14,10 @@ const { pages, subPages } = require("./src/data/navigation");
 
 module.exports = {
   siteMetadata: {
+    "home": {
+      "title": "Commerce",
+      "path": "/commerce/docs"
+    },
     pages: pages,
     subPages: subPages,
   },
