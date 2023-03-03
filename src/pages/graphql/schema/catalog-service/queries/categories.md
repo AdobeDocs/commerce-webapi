@@ -25,6 +25,9 @@ input Subtree {
 }
 ```
 
+If using the `subtree` input, only one category `id` can be specified in the query.
+The `subtree` input allows developers to control how many levels of subcategories are returned for a particular `category`. Some sites may have a high number of subcategories and it could cause performance issues. It is recommended to keep `depth` to a maximum of 3 for the same reason.
+
 ## Required headers
 
 Specify the following HTTP headers to run this query.

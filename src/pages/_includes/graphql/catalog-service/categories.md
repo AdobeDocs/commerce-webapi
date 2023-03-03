@@ -13,8 +13,8 @@ Field | Data Type | Description
 `parentId` | String! | ID of the parent category.
 `path` | String | The path to the category, as a string of category IDs, separated by slashes (/). For example, 1/2/20
 `roles` | [String!]! | A comma-separated list of keywords that are visible only to search engines.
-`urlPath` | String | The URL path for the category.
 `urlKey` | String | The part of the URL that identifies the category.
+`urlPath` | String | The URL path for the category.
 
 ### CategoryViewInterface attributes
 
@@ -29,5 +29,5 @@ Field | Data Type | Description
 `name` | String | The category display name.
 `path` | String | The path to the category, as a string of category IDs, separated by slashes (/). For example, 1/2/20
 `roles` | [String!]! | A comma-separated list of keywords that are visible only to search engines.
-`urlPath` | String | The URL path for the category.
 `urlKey` | String | The part of the URL that identifies the category.
+`urlPath` | String | The URL path for the category.
