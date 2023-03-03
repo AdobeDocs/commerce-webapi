@@ -40,12 +40,11 @@ The following query returns a category tree.
 **Request:**
 
 ```graphql
-query() {
-    categories(ids: ["11"], roles: ["show_in_menu", "active"], subtree: {
-       "depth": 3,
-       "startLevel": 1
-   }) {
-       name
+categories(ids: ["11"], roles: ["show_in_menu", "active"], subtree: {
+    "depth": 3,
+    "startLevel": 1
+}) {
+    name
     id
     level
     roles
@@ -55,119 +54,128 @@ query() {
     parentId
     children
     }
-}
 ```
 
 **Response:**
 
 ```json
 [
-    {
-        "name": "Bottoms",
-        "id": "13",
-        "level": 3,
-        "roles": [
-            "active",
-            "show_in_menu"
-        ],
-        "path": "1/2/11/13",
-        "urlPath": "men/bottoms-men",
-        "urlKey": "bottoms-men",
-        "parentId": "11",
-        "children": [
-            "18",
-            "19"
-        ]
-    },
-    {
-        "name": "Tops",
-        "id": "12",
-        "level": 3,
-        "roles": [
-            "active",
-            "show_in_menu"
-        ],
-        "path": "1/2/11/12",
-        "urlPath": "men/tops-men",
-        "urlKey": "tops-men",
-        "parentId": "11",
-        "children": [
-            "14",
-            "15",
-            "16",
-            "17"
-        ]
-    },
-    {
-        "name": "Jackets",
-        "id": "14",
-        "level": 4,
-        "roles": [
-            "active",
-            "show_in_menu"
-        ],
-        "path": "1/2/11/12/14",
-        "urlPath": "men/tops-men/jackets-men",
-        "urlKey": "jackets-men",
-        "parentId": "12",
-        "children": []
-    },
-    {
-        "name": "Pants",
-        "id": "18",
-        "level": 4,
-        "roles": [
-            "active",
-            "show_in_menu"
-        ],
-        "path": "1/2/11/13/18",
-        "urlPath": "men/bottoms-men/pants-men",
-        "urlKey": "pants-men",
-        "parentId": "13",
-        "children": []
-    },
-    {
-        "name": "Tanks",
-        "id": "17",
-        "level": 4,
-        "roles": [
-            "active",
-            "show_in_menu"
-        ],
-        "path": "1/2/11/12/17",
-        "urlPath": "men/tops-men/tanks-men",
-        "urlKey": "tanks-men",
-        "parentId": "12",
-        "children": []
-    },
-    {
-        "name": "Hoodies & Sweatshirts",
-        "id": "15",
-        "level": 4,
-        "roles": [
-            "active",
-            "show_in_menu"
-        ],
-        "path": "1/2/11/12/15",
-        "urlPath": "men/tops-men/hoodies-and-sweatshirts-men",
-        "urlKey": "hoodies-and-sweatshirts-men",
-        "parentId": "12",
-        "children": []
-    },
-    {
-        "name": "Shorts",
-        "id": "19",
-        "level": 4,
-        "roles": [
-            "active",
-            "show_in_menu"
-        ],
-        "path": "1/2/11/13/19",
-        "urlPath": "men/bottoms-men/shorts-men",
-        "urlKey": "shorts-men",
-        "parentId": "13",
-        "children": []
-    }
+   {
+      "name":"Bottoms",
+      "id":"13",
+      "level":3,
+      "roles":[
+         "active",
+         "show_in_menu"
+      ],
+      "path":"1/2/11/13",
+      "urlPath":"men/bottoms-men",
+      "urlKey":"bottoms-men",
+      "parentId":"11",
+      "children":[
+         "18",
+         "19"
+      ]
+   },
+   {
+      "name":"Tops",
+      "id":"12",
+      "level":3,
+      "roles":[
+         "active",
+         "show_in_menu"
+      ],
+      "path":"1/2/11/12",
+      "urlPath":"men/tops-men",
+      "urlKey":"tops-men",
+      "parentId":"11",
+      "children":[
+         "14",
+         "15",
+         "16",
+         "17"
+      ]
+   },
+   {
+      "name":"Jackets",
+      "id":"14",
+      "level":4,
+      "roles":[
+         "active",
+         "show_in_menu"
+      ],
+      "path":"1/2/11/12/14",
+      "urlPath":"men/tops-men/jackets-men",
+      "urlKey":"jackets-men",
+      "parentId":"12",
+      "children":[
+         
+      ]
+   },
+   {
+      "name":"Pants",
+      "id":"18",
+      "level":4,
+      "roles":[
+         "active",
+         "show_in_menu"
+      ],
+      "path":"1/2/11/13/18",
+      "urlPath":"men/bottoms-men/pants-men",
+      "urlKey":"pants-men",
+      "parentId":"13",
+      "children":[
+         
+      ]
+   },
+   {
+      "name":"Tanks",
+      "id":"17",
+      "level":4,
+      "roles":[
+         "active",
+         "show_in_menu"
+      ],
+      "path":"1/2/11/12/17",
+      "urlPath":"men/tops-men/tanks-men",
+      "urlKey":"tanks-men",
+      "parentId":"12",
+      "children":[
+         
+      ]
+   },
+   {
+      "name":"Hoodies & Sweatshirts",
+      "id":"15",
+      "level":4,
+      "roles":[
+         "active",
+         "show_in_menu"
+      ],
+      "path":"1/2/11/12/15",
+      "urlPath":"men/tops-men/hoodies-and-sweatshirts-men",
+      "urlKey":"hoodies-and-sweatshirts-men",
+      "parentId":"12",
+      "children":[
+         
+      ]
+   },
+   {
+      "name":"Shorts",
+      "id":"19",
+      "level":4,
+      "roles":[
+         "active",
+         "show_in_menu"
+      ],
+      "path":"1/2/11/13/19",
+      "urlPath":"men/bottoms-men/shorts-men",
+      "urlKey":"shorts-men",
+      "parentId":"13",
+      "children":[
+         
+      ]
+   }
 ]
 ```
 
