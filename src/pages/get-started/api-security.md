@@ -132,7 +132,7 @@ Some custom module
 Clear the configuration cache for the changes to take effect.
 
 ```bash
-bin/magento cache:clear config
+bin/magento cache:clean config
 ```
 
 ### Values by default for REST endpoints
