@@ -113,7 +113,7 @@ current_page: 5
 
 #### context
 
- `context` passes the customer group code to the query.
+ `context` passes both the customer group code and user view history to the query.
  If no value is passed, the "Not Logged In" group is used.
 
  ```graphql
