@@ -6,7 +6,7 @@ description: Describes how to construct and use the Catalog Service categories q
 
 # categories query
 
-The `categories` query returns category data and using `subtree`, their sub-categories.
+The `categories` query returns category data. If the `subtree` input object is specified, the query returns details about subcategories.
 
 ## Syntax
 
@@ -26,7 +26,7 @@ input Subtree {
 ```
 
 If using the `subtree` input, only one category `id` can be specified in the query.
-The `subtree` object allows you to specify how many levels of sub-categories to return. Some sites may have a high number of subcategories and it could cause performance issues. It is recommended to keep `depth` to a maximum of 3 for the same reason.
+The `subtree` object allows you to specify how many levels of subcategories to return. Some sites may have a high number of subcategories, and returning the entire category tree could cause performance issues. It is recommended to keep `depth` to a maximum of 3 for the same reason.
 
 ## Required headers
 
@@ -186,9 +186,9 @@ categories(ids: ["11"], roles: ["show_in_menu", "active"], subtree: {
 
 Field | Data type | Description
 --- | --- | ---
-`ids` | [String!] | Array of category ids to return. If using `subtree`, must contain only one id.
+`ids` | [String!] | Array of category IDs to return. If using `subtree`, must contain only one ID.
 `roles` | [String!]! |  The list of category roles to be queried.
-`subtree` | [[subtree](#subtree-input)] | Number of subcategories to return.
+`subtree` | [[subtree](#subtree-input)] | Defines how many subcategories to return.
 
 ### subtree input
 
