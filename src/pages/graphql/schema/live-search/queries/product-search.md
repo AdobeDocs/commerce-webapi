@@ -159,7 +159,7 @@ Dynamic facets appear only when relevant, and the selection changes according to
 
 Intelligent dynamic facets measure the frequency that an attribute appears in the results list and its prevalence throughout the catalog. Live Search uses this information to determine the order of returned products. This makes it possible to return two types of dynamic facets: Those that are most significant, followed by those that are most popular.
 
-The `buckets` sub-object divides the data into manageable groups. For the `price` and similar numeric attributes, each bucket defines a price range and counts the items within that price range. Meanwhile, the buckets associated with the `categories` attribute list details about each category a product is a member of. The contents of dynamic facet buckets vary.
+The `buckets` subobject divides the data into manageable groups. For the `price` and similar numeric attributes, each bucket defines a price range and counts the items within that price range. Meanwhile, the buckets associated with the `categories` attribute list details about each category a product is a member of. The contents of dynamic facet buckets vary.
 
 The following snippet returns all information about the applicable facets for a search:
 
@@ -295,7 +295,15 @@ The Catalog Service [products query](../catalog-service/products.md) describes t
 
 The `items` object can also optionally return highlighted text that shows the matching search terms.
 
-### categoryPath
+### categories and categoryPath
+
+Results can be refined by category with the `categories` and `categoryPath` filters.
+They are slightly different in the type of facets returned:
+
+- `categories` is preferred for category filtering: selecting from a category filter.
+- `categoryPath` is preferred for browsing by category. `categoryPath` returns the immediate subcategories of the category path being filtered.
+
+#### categoryPath
 
 This example shows how to filter returned facets when browsing a category page.
 
@@ -397,12 +405,12 @@ The response only includes the immediate children:
 }
 ```
 
-### categories
+#### categories
 
 `categories` can be used as a filter in a query when a category facet is selected in the layered navigation.
 This does not result in strict filtering when used by itself. It can be used with the `categoryPath` filter.
 
-Example 1: Search results when filtering on a category.
+Example 1: Search results when filtering on a category. Although the category filter is for `women/bottoms-women`, pinned categories such as `men/bottoms-men` are always returned.
 
 ```graphql
 productSearch(
@@ -417,93 +425,432 @@ productSearch(
       in: ["Catalog", "Catalog, Search"]
     },
   ]
-)
+){
+    total_count
+    page_info {
+      current_page
+      page_size
+      total_pages
+    }
+    facets {
+      attribute
+      title
+      type
+      buckets {
+        title
+        __typename
+        ... on ScalarBucket {
+          title
+          id
+          count
+        }
+      }
+    }
+    items {
+      product {
+        name
+        sku
+      }
+    }
+    suggestions
+  }
 ```
 
 Response:
 
 ```graphql
 "data": {
-    "productSearch": {
-      "total_count": 11,
-      "items": [
-        {
-          "product": {
-            "name": "Sprite Foam Yoga Brick",
-            "sku": "24-WG084"
+  "productSearch": {
+    "total_count": 13,
+    "page_info": {
+      "current_page": 1,
+      "page_size": 13,
+      "total_pages": 1
+    },
+    "facets": [
+      {
+        "attribute": "categories",
+        "title": "Categories",
+        "type": "PINNED",
+        "buckets": [
+          {
+            "title": "promotions/pants-all",
+            "__typename": "ScalarBucket",
+            "id": "32",
+            "count": 25
+          },
+          {
+            "title": "men/bottoms-men",
+            "__typename": "ScalarBucket",
+            "id": "13",
+            "count": 12
+          },
+          {
+            "title": "men/bottoms-men/pants-men",
+            "__typename": "ScalarBucket",
+            "id": "18",
+            "count": 12
+          },
+          {
+            "title": "women/bottoms-women",
+            "__typename": "ScalarBucket",
+            "id": "22",
+            "count": 13
+          },
+          {
+            "title": "women/bottoms-women/pants-women",
+            "__typename": "ScalarBucket",
+            "id": "27",
+            "count": 13
+          },
+          {
+            "title": "collections/yoga-new",
+            "__typename": "ScalarBucket",
+            "id": "8",
+            "count": 6
+          },
+          {
+            "title": "collections/erin-recommends",
+            "__typename": "ScalarBucket",
+            "id": "34",
+            "count": 6
+          },
+          {
+            "title": "collections/performance-fabrics",
+            "__typename": "ScalarBucket",
+            "id": "35",
+            "count": 5
           }
-        },
-        {
-          "product": {
-            "name": "Sprite Foam Roller",
-            "sku": "24-WG088"
+        ]
+      },
+      {
+        "attribute": "price",
+        "title": "Price",
+        "type": "PINNED",
+        "buckets": [
+          {
+            "title": "25.0-50.0",
+            "__typename": "RangeBucket"
+          },
+          {
+            "title": "50.0-75.0",
+            "__typename": "RangeBucket"
           }
-        },
-        {
-          "product": {
-            "name": "Harmony Lumaflex&trade; Strength Band Kit ",
-            "sku": "24-UG03"
+        ]
+      },
+      {
+        "attribute": "climate",
+        "title": "Climate",
+        "type": "INTELLIGENT",
+        "buckets": [
+          {
+            "title": "Indoor",
+            "__typename": "ScalarBucket",
+            "id": "Indoor",
+            "count": 13
+          },
+          {
+            "title": "Mild",
+            "__typename": "ScalarBucket",
+            "id": "Mild",
+            "count": 11
+          },
+          {
+            "title": "Spring",
+            "__typename": "ScalarBucket",
+            "id": "Spring",
+            "count": 7
+          },
+          {
+            "title": "Hot",
+            "__typename": "ScalarBucket",
+            "id": "Hot",
+            "count": 6
+          },
+          {
+            "title": "Warm",
+            "__typename": "ScalarBucket",
+            "id": "Warm",
+            "count": 6
+          },
+          {
+            "title": "All-Weather",
+            "__typename": "ScalarBucket",
+            "id": "All-Weather",
+            "count": 3
+          },
+          {
+            "title": "Cool",
+            "__typename": "ScalarBucket",
+            "id": "Cool",
+            "count": 3
           }
-        },
-        {
-          "product": {
-            "name": "Zing Jump Rope",
-            "sku": "24-UG04"
+        ]
+      },
+      {
+        "attribute": "size",
+        "title": "Size",
+        "type": "INTELLIGENT",
+        "buckets": [
+          {
+            "title": "28",
+            "__typename": "ScalarBucket",
+            "id": "28",
+            "count": 13
+          },
+          {
+            "title": "29",
+            "__typename": "ScalarBucket",
+            "id": "29",
+            "count": 13
           }
-        },
-        {
-          "product": {
-            "name": "Go-Get'r Pushup Grips",
-            "sku": "24-UG05"
+        ]
+      },
+      {
+        "attribute": "color",
+        "title": "Color",
+        "type": "INTELLIGENT",
+        "buckets": [
+          {
+            "title": "Blue",
+            "__typename": "ScalarBucket",
+            "id": "Blue",
+            "count": 10
+          },
+          {
+            "title": "Black",
+            "__typename": "ScalarBucket",
+            "id": "Black",
+            "count": 8
+          },
+          {
+            "title": "Gray",
+            "__typename": "ScalarBucket",
+            "id": "Gray",
+            "count": 4
+          },
+          {
+            "title": "Green",
+            "__typename": "ScalarBucket",
+            "id": "Green",
+            "count": 4
+          },
+          {
+            "title": "Red",
+            "__typename": "ScalarBucket",
+            "id": "Red",
+            "count": 4
+          },
+          {
+            "title": "Orange",
+            "__typename": "ScalarBucket",
+            "id": "Orange",
+            "count": 3
+          },
+          {
+            "title": "Purple",
+            "__typename": "ScalarBucket",
+            "id": "Purple",
+            "count": 3
+          },
+          {
+            "title": "White",
+            "__typename": "ScalarBucket",
+            "id": "White",
+            "count": 3
           }
-        },
-        {
-          "product": {
-            "name": "Dual Handle Cardio Ball",
-            "sku": "24-UG07"
+        ]
+      },
+      {
+        "attribute": "eco_collection",
+        "title": "Eco Collection",
+        "type": "INTELLIGENT",
+        "buckets": [
+          {
+            "title": "no",
+            "__typename": "ScalarBucket",
+            "id": "no",
+            "count": 9
+          },
+          {
+            "title": "yes",
+            "__typename": "ScalarBucket",
+            "id": "yes",
+            "count": 4
           }
-        },
-        {
-          "product": {
-            "name": "Sprite Yoga Companion Kit",
-            "sku": "24-WG080"
+        ]
+      },
+      {
+        "attribute": "new",
+        "title": "New",
+        "type": "INTELLIGENT",
+        "buckets": [
+          {
+            "title": "no",
+            "__typename": "ScalarBucket",
+            "id": "no",
+            "count": 12
+          },
+          {
+            "title": "yes",
+            "__typename": "ScalarBucket",
+            "id": "yes",
+            "count": 1
           }
-        },
-        {
-          "product": {
-            "name": "Pursuit Lumaflex&trade; Tone Band",
-            "sku": "24-UG02"
+        ]
+      },
+      {
+        "attribute": "material",
+        "title": "Material",
+        "type": "INTELLIGENT",
+        "buckets": [
+          {
+            "title": "Organic Cotton",
+            "__typename": "ScalarBucket",
+            "id": "Organic Cotton",
+            "count": 8
+          },
+          {
+            "title": "Spandex",
+            "__typename": "ScalarBucket",
+            "id": "Spandex",
+            "count": 6
+          },
+          {
+            "title": "LumaTech&trade;",
+            "__typename": "ScalarBucket",
+            "id": "LumaTech&trade;",
+            "count": 3
+          },
+          {
+            "title": "Microfiber",
+            "__typename": "ScalarBucket",
+            "id": "Microfiber",
+            "count": 3
+          },
+          {
+            "title": "Cocona&reg; performance fabric",
+            "__typename": "ScalarBucket",
+            "id": "Cocona&reg; performance fabric",
+            "count": 2
+          },
+          {
+            "title": "CoolTech&trade;",
+            "__typename": "ScalarBucket",
+            "id": "CoolTech&trade;",
+            "count": 2
+          },
+          {
+            "title": "Nylon",
+            "__typename": "ScalarBucket",
+            "id": "Nylon",
+            "count": 2
+          },
+          {
+            "title": "Polyester",
+            "__typename": "ScalarBucket",
+            "id": "Polyester",
+            "count": 2
           }
-        },
-        {
-          "product": {
-            "name": "Affirm Water Bottle ",
-            "sku": "24-UG06"
-          }
-        },
-        {
-          "product": {
-            "name": "Set of Sprite Yoga Straps",
-            "sku": "24-WG085_Group"
-          }
-        },
-        {
-          "product": {
-            "name": "Quest Lumaflex&trade; Band",
-            "sku": "24-UG01"
-          }
+        ]
+      }
+    ],
+    "items": [
+      {
+        "product": {
+          "name": "Daria Bikram Pant",
+          "sku": "WP10"
         }
-      ]
-    }
+      },
+      {
+        "product": {
+          "name": "Cora Parachute Pant",
+          "sku": "WP04"
+        }
+      },
+      {
+        "product": {
+          "name": "Karmen Yoga Pant",
+          "sku": "WP01"
+        }
+      },
+      {
+        "product": {
+          "name": "Ida Workout Parachute Pant",
+          "sku": "WP03"
+        }
+      },
+      {
+        "product": {
+          "name": "Bardot Capri",
+          "sku": "WP08"
+        }
+      },
+      {
+        "product": {
+          "name": "Carina Basic Capri",
+          "sku": "WP09"
+        }
+      },
+      {
+        "product": {
+          "name": "Sylvia Capri",
+          "sku": "WP11"
+        }
+      },
+      {
+        "product": {
+          "name": "Deirdre Relaxed-Fit Capri",
+          "sku": "WP12"
+        }
+      },
+      {
+        "product": {
+          "name": "Aeon Capri",
+          "sku": "WP07"
+        }
+      },
+      {
+        "product": {
+          "name": "Portia Capri",
+          "sku": "WP13"
+        }
+      },
+      {
+        "product": {
+          "name": "Diana Tights",
+          "sku": "WP06"
+        }
+      },
+      {
+        "product": {
+          "name": "Sahara Leggings",
+          "sku": "WP05"
+        }
+      },
+      {
+        "product": {
+          "name": "Emma Leggings",
+          "sku": "WP02"
+        }
+      }
+    ],
+    "suggestions": [
+      "pants-all",
+      "pants-men",
+      "pants-women"
+    ]
   }
+}
 ```
 
-Example 2: A category browse page when filtering on a category.
+Example 2: A "category browse" page when filtering on a category.
 
-The user navigates to "Womens -> Bottoms" and filters on "Pants". In this case, both "Pants" and "Shorts" appear as facets in the layered navigation.
+The user navigates to "Womens -> Bottoms" and filters on "pants". In this case, both "Pants" and "Shorts" appear as facets in the layered navigation.
 
 ```graphql
 productSearch(
+    phrase: "pants"
     filter: [
         {
             attribute: "visibility",
@@ -516,31 +863,387 @@ productSearch(
             attribute:"categories", in: ["women/bottoms-women/pants-women"]
         }
     ]
-)
+){
+    total_count
+    page_info {
+      current_page
+      page_size
+      total_pages
+    }
+    facets {
+      attribute
+      title
+      type
+      buckets {
+        title
+        __typename
+        ... on ScalarBucket {
+          title
+          id
+          count
+        }
+      }
+    }
+    items {
+      product {
+        name
+        sku
+      }
+    }
+    suggestions
+}
 ```
 
 Response:
 
 ```graphql
-"buckets": [
-    {
-        "id": "27",
-        "title": "women/bottoms-women/pants-women",
-        "count": 13
+"data": {
+  "productSearch": {
+    "total_count": 13,
+    "page_info": {
+      "current_page": 1,
+      "page_size": 13,
+      "total_pages": 1
     },
-    {
-        "id": "28",
-        "title": "women/bottoms-women/shorts-women",
-        "count": 12
-    }
-] 
+    "facets": [
+      {
+        "attribute": "categories",
+        "title": "Categories",
+        "type": "PINNED",
+        "buckets": [
+          {
+            "title": "women/bottoms-women/pants-women",
+            "__typename": "ScalarBucket",
+            "id": "27",
+            "count": 13
+          }
+        ]
+      },
+      {
+        "attribute": "price",
+        "title": "Price",
+        "type": "PINNED",
+        "buckets": [
+          {
+            "title": "25.0-50.0",
+            "__typename": "RangeBucket"
+          },
+          {
+            "title": "50.0-75.0",
+            "__typename": "RangeBucket"
+          }
+        ]
+      },
+      {
+        "attribute": "climate",
+        "title": "Climate",
+        "type": "INTELLIGENT",
+        "buckets": [
+          {
+            "title": "Indoor",
+            "__typename": "ScalarBucket",
+            "id": "Indoor",
+            "count": 13
+          },
+          {
+            "title": "Mild",
+            "__typename": "ScalarBucket",
+            "id": "Mild",
+            "count": 11
+          },
+          {
+            "title": "Spring",
+            "__typename": "ScalarBucket",
+            "id": "Spring",
+            "count": 7
+          },
+          {
+            "title": "Hot",
+            "__typename": "ScalarBucket",
+            "id": "Hot",
+            "count": 6
+          },
+          {
+            "title": "Warm",
+            "__typename": "ScalarBucket",
+            "id": "Warm",
+            "count": 6
+          },
+          {
+            "title": "All-Weather",
+            "__typename": "ScalarBucket",
+            "id": "All-Weather",
+            "count": 3
+          },
+          {
+            "title": "Cool",
+            "__typename": "ScalarBucket",
+            "id": "Cool",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "attribute": "size",
+        "title": "Size",
+        "type": "INTELLIGENT",
+        "buckets": [
+          {
+            "title": "28",
+            "__typename": "ScalarBucket",
+            "id": "28",
+            "count": 13
+          },
+          {
+            "title": "29",
+            "__typename": "ScalarBucket",
+            "id": "29",
+            "count": 13
+          }
+        ]
+      },
+      {
+        "attribute": "color",
+        "title": "Color",
+        "type": "INTELLIGENT",
+        "buckets": [
+          {
+            "title": "Blue",
+            "__typename": "ScalarBucket",
+            "id": "Blue",
+            "count": 10
+          },
+          {
+            "title": "Black",
+            "__typename": "ScalarBucket",
+            "id": "Black",
+            "count": 8
+          },
+          {
+            "title": "Gray",
+            "__typename": "ScalarBucket",
+            "id": "Gray",
+            "count": 4
+          },
+          {
+            "title": "Green",
+            "__typename": "ScalarBucket",
+            "id": "Green",
+            "count": 4
+          },
+          {
+            "title": "Red",
+            "__typename": "ScalarBucket",
+            "id": "Red",
+            "count": 4
+          },
+          {
+            "title": "Orange",
+            "__typename": "ScalarBucket",
+            "id": "Orange",
+            "count": 3
+          },
+          {
+            "title": "Purple",
+            "__typename": "ScalarBucket",
+            "id": "Purple",
+            "count": 3
+          },
+          {
+            "title": "White",
+            "__typename": "ScalarBucket",
+            "id": "White",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "attribute": "eco_collection",
+        "title": "Eco Collection",
+        "type": "INTELLIGENT",
+        "buckets": [
+          {
+            "title": "no",
+            "__typename": "ScalarBucket",
+            "id": "no",
+            "count": 9
+          },
+          {
+            "title": "yes",
+            "__typename": "ScalarBucket",
+            "id": "yes",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "attribute": "new",
+        "title": "New",
+        "type": "INTELLIGENT",
+        "buckets": [
+          {
+            "title": "no",
+            "__typename": "ScalarBucket",
+            "id": "no",
+            "count": 12
+          },
+          {
+            "title": "yes",
+            "__typename": "ScalarBucket",
+            "id": "yes",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "attribute": "material",
+        "title": "Material",
+        "type": "INTELLIGENT",
+        "buckets": [
+          {
+            "title": "Organic Cotton",
+            "__typename": "ScalarBucket",
+            "id": "Organic Cotton",
+            "count": 8
+          },
+          {
+            "title": "Spandex",
+            "__typename": "ScalarBucket",
+            "id": "Spandex",
+            "count": 6
+          },
+          {
+            "title": "LumaTech&trade;",
+            "__typename": "ScalarBucket",
+            "id": "LumaTech&trade;",
+            "count": 3
+          },
+          {
+            "title": "Microfiber",
+            "__typename": "ScalarBucket",
+            "id": "Microfiber",
+            "count": 3
+          },
+          {
+            "title": "Cocona&reg; performance fabric",
+            "__typename": "ScalarBucket",
+            "id": "Cocona&reg; performance fabric",
+            "count": 2
+          },
+          {
+            "title": "CoolTech&trade;",
+            "__typename": "ScalarBucket",
+            "id": "CoolTech&trade;",
+            "count": 2
+          },
+          {
+            "title": "Nylon",
+            "__typename": "ScalarBucket",
+            "id": "Nylon",
+            "count": 2
+          },
+          {
+            "title": "Polyester",
+            "__typename": "ScalarBucket",
+            "id": "Polyester",
+            "count": 2
+          }
+        ]
+      }
+    ],
+    "items": [
+      {
+        "product": {
+          "name": "Daria Bikram Pant",
+          "sku": "WP10"
+        }
+      },
+      {
+        "product": {
+          "name": "Cora Parachute Pant",
+          "sku": "WP04"
+        }
+      },
+      {
+        "product": {
+          "name": "Karmen Yoga Pant",
+          "sku": "WP01"
+        }
+      },
+      {
+        "product": {
+          "name": "Ida Workout Parachute Pant",
+          "sku": "WP03"
+        }
+      },
+      {
+        "product": {
+          "name": "Sylvia Capri",
+          "sku": "WP11"
+        }
+      },
+      {
+        "product": {
+          "name": "Bardot Capri",
+          "sku": "WP08"
+        }
+      },
+      {
+        "product": {
+          "name": "Carina Basic Capri",
+          "sku": "WP09"
+        }
+      },
+      {
+        "product": {
+          "name": "Portia Capri",
+          "sku": "WP13"
+        }
+      },
+      {
+        "product": {
+          "name": "Sahara Leggings",
+          "sku": "WP05"
+        }
+      },
+      {
+        "product": {
+          "name": "Emma Leggings",
+          "sku": "WP02"
+        }
+      },
+      {
+        "product": {
+          "name": "Deirdre Relaxed-Fit Capri",
+          "sku": "WP12"
+        }
+      },
+      {
+        "product": {
+          "name": "Diana Tights",
+          "sku": "WP06"
+        }
+      },
+      {
+        "product": {
+          "name": "Aeon Capri",
+          "sku": "WP07"
+        }
+      }
+    ],
+    "suggestions": [
+      "pants-all",
+      "pants-men"
+    ]
+  }
+}
 ```
 
 ### Other fields and objects
 
 The query response can also contain the following top-level fields and objects:
 
-- `page_info` - An object that lists the `page_size` and `current_page` input arguments as well as the total number of pages available.
+- `page_info` - An object that lists the `page_size` and `current_page` input arguments and the total number of pages available.
 - `suggestions` - An array of strings that include the names of products and categories that exist in the catalog that are similar to the search query.
 - `total_count` - The number of products returned.
 
@@ -1012,7 +1715,6 @@ Field | Data Type | Description
 `page_size` | Int | Specifies the maximum number of results to return at once. Default value: 20
 `phrase` | String! | The text to search for
 `sort` | [[ProductSearchSortInput!]](#ProductSearchSortInput) | Specifies which attribute to sort on, and whether to return the results in ascending or descending order
-
 
 ### SearchClauseInput data type {#SearchClauseInput}
 
