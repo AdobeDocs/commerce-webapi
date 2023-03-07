@@ -39,7 +39,7 @@ The following sections describe each field in detail.
 
 #### phrase
 
-The `phrase` field contains the text that a shopper enters on the storefront. Live Search applies all configured rules, synonyms and other configuration settings to return determine the search results. All `productSearch` queries must contain the `phrase` field.
+The `phrase` field contains the text that a shopper enters on the storefront. Live Search applies all configured rules, synonyms, and other configuration settings to determine the search results. All `productSearch` queries must contain the `phrase` field.
 
 The following example sets `Watch` as the phrase to search for:
 
@@ -71,7 +71,7 @@ filter: [
 ]
 ```
 
-An attribute must be set to `filterableInSearch: true` if it is passed in as part of the filter. Otherwise, a "500 error" will be returned.
+An attribute must be set to `filterableInSearch: true` if it is passed in as part of the filter. Otherwise, a "500 error" is returned.
 
 Only facets specified in Live Search are returned.
 
@@ -104,7 +104,7 @@ Use the [`attributeMetadata` query](./attribute-metadata.md) to return a list of
 
 #### page_size
 
-When you run a query, you do not know in advance how many items the query will return. The query could return a few items, or it could return hundreds. The `page_size` field determines how many items to return at one time. If you use the default value of 20, and the query returns 97 items, the results will be stored in four pages containing 20 items each, and one page containing 17 items.
+When you run a query, you do not know in advance how many items the query will return. The query could return a few items, or it could return hundreds. The `page_size` field determines how many items to return at one time. If you use the default value of 20, and the query returns 97 items, the results are stored in four pages containing 20 items each, and one page containing 17 items.
 
 The following example sets the page size to 10:
 
@@ -126,7 +126,7 @@ current_page: 5
 
 #### context
 
- `context` passes both the customer group code and user view history to the query.
+ The `context` object passes both the customer group code and user view history to the query.
  If no value is passed, the "Not Logged In" group is used.
 
  ```graphql
@@ -147,7 +147,7 @@ current_page: 5
 
 ## Interpret the results
 
-The response to the `productSearch` query can contain details about each product returned as well as information about the ordering of the results.
+The response to the `productSearch` query can contain details about each product returned and information about the ordering of the results.
 
 ### Facets
 
@@ -159,7 +159,7 @@ Dynamic facets appear only when relevant, and the selection changes according to
 
 Intelligent dynamic facets measure the frequency that an attribute appears in the results list and its prevalence throughout the catalog. Live Search uses this information to determine the order of returned products. This makes it possible to return two types of dynamic facets: Those that are most significant, followed by those that are most popular.
 
-The `buckets` sub-object divides the data into manageable groups. For the `price` and similar numeric attributes, each bucket defines a price range and counts the items within that price range. Meanwhile, the buckets associated with the `categories` attribute lists details about each category a product is a member of. The contents of dynamic facet buckets vary.
+The `buckets` sub-object divides the data into manageable groups. For the `price` and similar numeric attributes, each bucket defines a price range and counts the items within that price range. Meanwhile, the buckets associated with the `categories` attribute list details about each category a product is a member of. The contents of dynamic facet buckets vary.
 
 The following snippet returns all information about the applicable facets for a search:
 
@@ -192,7 +192,7 @@ facets {
 
 ### Items list
 
-The `items` object primarily provides details about each item returned. If Catalog Service is not installed, then you must specify the `product` field to return details about each item. The `product` field uses the [`ProductInterface`](https://developer.adobe.com/commerce/webapi/graphql/schema/products/interfaces/attributes/), which is defined in Adobe Commerce and Magento Open Source, to return details about the product. A typical query might return the product name, price, SKU and image.
+The `items` object primarily provides details about each item returned. If Catalog Service is not installed, then you must specify the `product` field to return details about each item. The `product` field uses the [`ProductInterface`](https://developer.adobe.com/commerce/webapi/graphql/schema/products/interfaces/attributes/), which is defined in Adobe Commerce and Magento Open Source, to return details about the product. A typical query might return the product name, price, SKU, and image.
 
 The following snippet returns relevant information about each item when Catalog Service is not installed or used:
 
@@ -219,7 +219,7 @@ items {
 }
 ```
 
-If [Catalog Service](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/guide-overview.html) is installed, you can optionally use the `productView` field instead of the `product` field to return product details. Catalog Service uses [Catalog Sync](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/catalog-sync.html) to manage product data, resulting in query responses with less latency than is possible with the `ProductInterface`. With Catalog Service, the structure of the pricing information varies, depending on whether the product is designated as a `SimpleProduct` (simple, downloadable, gift card) or as a `ComplexProduct` (configurable, grouped, or bundle).
+If [Catalog Service](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/guide-overview.html) is installed, you can optionally use the `productView` field instead of the `product` field to return product details. Catalog Service uses [Catalog Sync](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/data-services/catalog-sync.html) to manage product data, resulting in query responses with less latency than is possible with the `ProductInterface`. With Catalog Service, the structure of the pricing information varies, depending on whether the product is designated as a `SimpleProduct` (simple, downloadable, gift card) or as a `ComplexProduct` (configurable, grouped, or bundle).
 
 The following Catalog Service snippet returns relevant information about each item:
 
@@ -400,7 +400,7 @@ The response only includes the immediate children:
 ### categories
 
 `categories` can be used as a filter in a query when a category facet is selected in the layered navigation.
-This does not result in strict filtering when used by itself. It can be used in conjunction with the `categoryPath` filter.
+This does not result in strict filtering when used by itself. It can be used with the `categoryPath` filter.
 
 Example 1: Search results when filtering on a category.
 
@@ -500,7 +500,7 @@ Response:
 
 Example 2: A category browse page when filtering on a category.
 
-The user navigates to "Womens -> Bottoms" and filters on "Pants". In this case, we expect both "Pants" and "Shorts" to appear as facets in the layered navigation.
+The user navigates to "Womens -> Bottoms" and filters on "Pants". In this case, both "Pants" and "Shorts" appear as facets in the layered navigation.
 
 ```graphql
 productSearch(
@@ -1006,12 +1006,13 @@ The `productSearch` query accepts the following fields as input:
 
 Field | Data Type | Description
 --- | --- | ---
-`phrase` | String! | The text to search for
-`page_size` | Int | Specifies the maximum number of results to return at once. Default value: 20
+`context` | [[QueryContextInput!]](#QueryContextInput) | Query context that allows customized search results to be returned based on the context passed
 `current_page` | Int | Specifies which page of results to return. Default value: 1
 `filter` | [[SearchClauseInput!]](#SearchClauseInput) | Identifies which attributes to search for and return
+`page_size` | Int | Specifies the maximum number of results to return at once. Default value: 20
+`phrase` | String! | The text to search for
 `sort` | [[ProductSearchSortInput!]](#ProductSearchSortInput) | Specifies which attribute to sort on, and whether to return the results in ascending or descending order
-`context` | [[QueryContextInput!]](#QueryContextInput) | Query context that allows customized search results to be returned based on the context passed
+
 
 ### SearchClauseInput data type {#SearchClauseInput}
 
