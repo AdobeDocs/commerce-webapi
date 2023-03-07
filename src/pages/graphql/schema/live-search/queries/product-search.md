@@ -8,6 +8,19 @@ description: Describes how to construct and use the Live Search productSearch qu
 
 Live Search uses the `productSearch` query to search for products instead of the `products` query, which is provided with Adobe Commerce and Magento Open Source. Although the two queries are functionally similar, they have different input requirements. The `products` query returns information that is relevant for layered navigation, while the `productSearch` query returns faceting data and other features that are specific to Live Search.
 
+## Syntax
+
+```graphql
+productSearch(
+    phrase: String!
+    page_size: Int = 20
+    current_page: Int = 1
+    filter: [SearchClauseInput!]
+    sort: [ProductSearchSortInput!]
+    context: [QueryContextInput!]
+): ProductSearchResponse!
+```
+
 ## Construct the query
 
 The `productSearch` query accepts the following fields as input:
@@ -179,8 +192,7 @@ facets {
 
 ### Items list
 
-<!---Add a link to ProductInterface when available -->
-The `items` object primarily provides details about each item returned. If Catalog Service is not installed, then you must specify the `product` field to return details about each item. The `product` field uses the `ProductInterface`, which is defined in Adobe Commerce and Magento Open Source, to return details about the product. A typical query might return the product name, price, SKU and image.
+The `items` object primarily provides details about each item returned. If Catalog Service is not installed, then you must specify the `product` field to return details about each item. The `product` field uses the [`ProductInterface`](https://developer.adobe.com/commerce/webapi/graphql/schema/products/interfaces/attributes/), which is defined in Adobe Commerce and Magento Open Source, to return details about the product. A typical query might return the product name, price, SKU and image.
 
 The following snippet returns relevant information about each item when Catalog Service is not installed or used:
 
@@ -289,40 +301,100 @@ This example shows how to filter returned facets when browsing a category page.
 
 `categoryPath` performs strict filtering, meaning that the facets returned are limited to the immediate children of the current category page.
 
-If you select "Womens -> Bottoms" from the category navigation, the filter would look like:
+If you select "Gear -> Fitness Equipment" from the category navigation, the filter would look like:
 
 ```graphql
-productSearch(
-    filter: [
-        {
-            attribute: "visibility",
-            in: ["Catalog", "Catalog, Search"]
-        },
-        {
-            attribute:"categoryPath", 
-            eq: "women/bottoms-women"
-        }
-    ],
-    page_size:12,
-    current_page: 1
-) 
+query productSearch {
+  productSearch(
+    phrase: "",
+    filter:[{attribute:"categoryPath", eq: "gear/fitness-equipment"}]) {
+    total_count
+    items {
+      product {
+        name
+        sku
+      }
+    }
+  }
+}
 ```
 
 The response only includes the immediate children:
 
 ```graphql
-"buckets": [
-    {
-        "id": "27",
-        "title": "women/bottoms-women/pants-women",
-        "count": 13
-    },
-    {
-        "id": "28",
-        "title": "women/bottoms-women/shorts-women",
-        "count": 12
-    }
-] 
+"data": {
+  "productSearch": {
+    "total_count": 11,
+    "items": [
+      {
+        "product": {
+          "name": "Sprite Foam Yoga Brick",
+          "sku": "24-WG084"
+        }
+      },
+      {
+        "product": {
+          "name": "Sprite Foam Roller",
+          "sku": "24-WG088"
+        }
+      },
+      {
+        "product": {
+          "name": "Harmony Lumaflex&trade; Strength Band Kit ",
+          "sku": "24-UG03"
+        }
+      },
+      {
+        "product": {
+          "name": "Zing Jump Rope",
+          "sku": "24-UG04"
+        }
+      },
+      {
+        "product": {
+          "name": "Go-Get'r Pushup Grips",
+          "sku": "24-UG05"
+        }
+      },
+      {
+        "product": {
+          "name": "Dual Handle Cardio Ball",
+          "sku": "24-UG07"
+        }
+      },
+      {
+        "product": {
+          "name": "Sprite Yoga Companion Kit",
+          "sku": "24-WG080"
+        }
+      },
+      {
+        "product": {
+          "name": "Pursuit Lumaflex&trade; Tone Band",
+          "sku": "24-UG02"
+        }
+      },
+      {
+        "product": {
+          "name": "Affirm Water Bottle ",
+          "sku": "24-UG06"
+        }
+      },
+      {
+        "product": {
+          "name": "Set of Sprite Yoga Straps",
+          "sku": "24-WG085_Group"
+        }
+      },
+      {
+        "product": {
+          "name": "Quest Lumaflex&trade; Band",
+          "sku": "24-UG01"
+        }
+      }
+    ]
+  }
+}
 ```
 
 ### categories
@@ -351,29 +423,79 @@ productSearch(
 Response:
 
 ```graphql
-"buckets": [
-    {
-        "id": "32",
-        "title": "promotions/pants-all",
-        "count": 25
-    },
-    {
-        "id": "22",
-        "title": "women/bottoms-women",
-        "count": 13
-    },
-    {
-        "id": "27",
-        "title": "women/bottoms-women/pants-women",
-        "count": 13
-    },
-    {
-        "id": "13",
-        "title": "men/bottoms-men",
-        "count": 12
-    },
-    ...
-]
+"data": {
+    "productSearch": {
+      "total_count": 11,
+      "items": [
+        {
+          "product": {
+            "name": "Sprite Foam Yoga Brick",
+            "sku": "24-WG084"
+          }
+        },
+        {
+          "product": {
+            "name": "Sprite Foam Roller",
+            "sku": "24-WG088"
+          }
+        },
+        {
+          "product": {
+            "name": "Harmony Lumaflex&trade; Strength Band Kit ",
+            "sku": "24-UG03"
+          }
+        },
+        {
+          "product": {
+            "name": "Zing Jump Rope",
+            "sku": "24-UG04"
+          }
+        },
+        {
+          "product": {
+            "name": "Go-Get'r Pushup Grips",
+            "sku": "24-UG05"
+          }
+        },
+        {
+          "product": {
+            "name": "Dual Handle Cardio Ball",
+            "sku": "24-UG07"
+          }
+        },
+        {
+          "product": {
+            "name": "Sprite Yoga Companion Kit",
+            "sku": "24-WG080"
+          }
+        },
+        {
+          "product": {
+            "name": "Pursuit Lumaflex&trade; Tone Band",
+            "sku": "24-UG02"
+          }
+        },
+        {
+          "product": {
+            "name": "Affirm Water Bottle ",
+            "sku": "24-UG06"
+          }
+        },
+        {
+          "product": {
+            "name": "Set of Sprite Yoga Straps",
+            "sku": "24-WG085_Group"
+          }
+        },
+        {
+          "product": {
+            "name": "Quest Lumaflex&trade; Band",
+            "sku": "24-UG01"
+          }
+        }
+      ]
+    }
+  }
 ```
 
 Example 2: A category browse page when filtering on a category.
@@ -422,18 +544,6 @@ The query response can also contain the following top-level fields and objects:
 - `suggestions` - An array of strings that include the names of products and categories that exist in the catalog that are similar to the search query.
 - `total_count` - The number of products returned.
 
-## Syntax
-
-```graphql
-productSearch(
-    phrase: String!
-    page_size: Int = 20
-    current_page: Int = 1
-    filter: [SearchClauseInput!]
-    sort: [ProductSearchSortInput!]
-): ProductSearchResponse!
-```
-
 ## Required headers
 
 You must specify the following HTTP headers to run this query.
@@ -446,7 +556,7 @@ import Docs from '/src/pages/_includes/graphql/live-search-headers.md'
 
 ### Live Search
 
-The following example uses "Watch" as the search phrase. The query uses the core `ProductInterface` to access product information. As a result, the query has a longer response time than using Catalog Service to retrieve this information.
+The following example uses "bag" as the search phrase. The query uses the core `ProductInterface` to access product information. As a result, the query has a longer response time than using Catalog Service to retrieve this information.
 
 For an example of using Live Search with Catalog Service, see [Catalog Service productSearch query](../../catalog-service/queries/product-search.md). Other than returning the `productView` object, all other attributes are the same. See full references on this page.
 
@@ -938,8 +1048,8 @@ The `QueryContextInput` object can contain the following fields.
 
 Field | Data Type | Description
 --- | --- | ---
-`customerGroup` | String! | sha1 hash of customer group id (database id)
-`userViewHistory` | [ViewHistoryInput!]((#ViewHistoryInput)) | list of SKUs with timestamps. Used in "Recommended for you" ranking
+`customerGroup` | String! | Customer group code. For storefront clients, this value is available in the `dataservices_customer_group` cookie.
+`userViewHistory` | [ViewHistoryInput!]((#ViewHistoryInput)) | List of SKUs with timestamps. Used in "Recommended for you" ranking.
 
 ### ViewHistoryInput data type {#ViewHistoryInput}
 
@@ -1015,12 +1125,10 @@ Field | Data Type | Description
 
 The `ProductSearchItem` data type can contain the following fields:
 
-<!--- Add link to productInterface-->
-
 Field | Data Type | Description
 --- | --- | ---
 `appliedQueryRule` | AppliedQueryRule | The query rule type that was applied to this product, if any (in preview mode only, returns null otherwise). Possible values: `BOOST`, `BURY`, and `PIN`
-`product` | ProductInterface! | Contains details about the product. Go to `productInterface` for more information.
+`product` | [ProductInterface!](https://developer.adobe.com/commerce/webapi/graphql/schema/products/interfaces/attributes/) | Contains details about the product. Go to `productInterface` for more information.
 `productView` | ProductView | If Catalog Service is installed, contains details about the product view. The Catalog Service [`products` query](../catalog-service/products.md) fully describes this object.
 
 ### SearchResultPageInfo data type {#SearchResultPageInfo}
