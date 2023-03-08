@@ -161,7 +161,7 @@ Use the following commands to enable rate limiting:
     $ bin/magento config:set sales/backpressure/limit 10
     ```
    
-1. Set the amount of time (in seconds) a customer must wait after reaching the `limit`. Supported values `60`, `3600`, `86400` seconds:
+1. Set the period of time (in seconds) for the request limit. Supported values `60`, `3600`, `86400` seconds. This time period is multiplied by three to calculate the timeout period:
 
     ```bash
     $ bin/magento config:set sales/backpressure/period 3600
