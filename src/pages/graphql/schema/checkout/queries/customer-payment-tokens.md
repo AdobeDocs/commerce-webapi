@@ -16,6 +16,10 @@ You must specify the customer's authorization token in the header of the call.
 
 `{customerPaymentTokens{CustomerPaymentTokens}}`
 
+## Reference
+
+The [`customerPaymentTokens`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-customerPaymentTokens) reference provides detailed information about the types and fields defined in this query.
+
 ## Example usage
 
 The following example returns all the current customer's payment tokens. The `public_hash` output values will be unique to your application.
