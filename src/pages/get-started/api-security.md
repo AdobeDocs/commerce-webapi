@@ -169,10 +169,6 @@ Use the following commands to enable rate limiting:
    
 If you need to check a configuration, use the following CLI command:
 
-```bash 
-$ bin/magento config:show | grep backpressure
-```
-
 Example:
 ```bash
 $ bin/magento config:show | grep backpressure
