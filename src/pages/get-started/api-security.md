@@ -51,7 +51,7 @@ The configuration and default values are located in the path `app/code/Magento/Q
 Configuration settings:
 - Sales restrictions are enabled `sales/backpressure/enabled` = `1`.
 - Anonymous users are limited to 50 orders (`sales/backpressure/guest_limit` = `50`) from a single IP address within one minute (`sales/backpressure/period - 60`).  If they exceed the order limit, then they will have to wait three times the specified `period` of time from their last request.
-- An authorized user can place no more than 10 orders `sales/backpressure/limit` = `10` in one minute. Then he will have to wait for `3 x period` from the moment of the last request, i.e. 3 minutes.
+-  For example, if an authorized user attempts to place more than `10` orders (`sales/backpressure/limit` = `10`) within the `period` of `60` seconds, then the user will not be able to place an order for a period of `180` seconds.
 
 ### How to use?
 
