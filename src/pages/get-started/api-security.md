@@ -38,7 +38,7 @@ The configuration and default values are located in the path `app/code/Magento/Q
         ...
         <sales>
             <backpressure>
-                <enabled>0</enabled>          <!-- Enable rate limiting for placing orders -->
+                <enabled>1</enabled>          <!-- Enable rate limiting for placing orders -->
                 <limit>10</limit>             <!-- Requests limit per authenticated customer -->
                 <guest_limit>50</guest_limit> <!-- Requests limit per guest -->
                 <period>60</period>           <!-- Counter resets in a ... [sec.]-->
