@@ -64,12 +64,6 @@ query {
 }
 ```
 
-## Output attributes
-
-import CustomerPaymentTokens from '/src/pages/_includes/graphql/customer-payment-tokens.md'
-
-<CustomerPaymentTokens />
-
 ## Errors
 
 Error | Description
