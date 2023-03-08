@@ -412,13 +412,15 @@ This does not result in strict filtering when used by itself. It can be used wit
 
 Example 1: Search results when filtering on a category. Although the category filter is for `women/bottoms-women`, pinned categories such as `men/bottoms-men` are always returned.
 
+**Request:**
+
 ```graphql
 productSearch(
   phrase:"pants",
   filter: [
     {
       attribute:"categories", 
-      eq: "women/bottoms-women"
+      in: "women/bottoms-women"
     },
     {
       attribute: "visibility",
@@ -456,7 +458,10 @@ productSearch(
   }
 ```
 
-Response:
+**Response:**
+
+<details>
+<summary><b>Response</b></summary>
 
 ```graphql
 "data": {
@@ -844,9 +849,13 @@ Response:
 }
 ```
 
+</details>
+
 Example 2: A "category browse" page when filtering on a category.
 
 The user navigates to "Womens -> Bottoms" and filters on "pants". In this case, both "Pants" and "Shorts" appear as facets in the layered navigation.
+
+**Request:**
 
 ```graphql
 productSearch(
@@ -857,7 +866,7 @@ productSearch(
             in: ["Catalog", "Catalog, Search"]
         },
         {
-            attribute:"categoryPath", in: ["women/bottoms-women"]
+            attribute:"categoryPath", eq: ["women/bottoms-women"]
         },
         {
             attribute:"categories", in: ["women/bottoms-women/pants-women"]
@@ -894,7 +903,10 @@ productSearch(
 }
 ```
 
-Response:
+**Response:**
+
+<details>
+<summary><b>Response</b></summary>
 
 ```graphql
 "data": {
@@ -1238,6 +1250,8 @@ Response:
   }
 }
 ```
+
+</details>
 
 ### Other fields and objects
 
