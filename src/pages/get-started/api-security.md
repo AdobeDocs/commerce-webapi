@@ -55,7 +55,7 @@ Configuration settings:
 
 ### How to use?
 
-As mentioned earlier, this functionality is disabled by default. To enable this feature, you need to add a configuration that connects to the service where the request logs will be stored. By default, the connection is implemented for the Redis server.
+Since this functionality is disabled by default, you need to add a configuration that connects to the service where the request logs will be stored. By default, the connection is configured for a Redis server.
 The following options work for new and existing installations:
 
 ```bash
