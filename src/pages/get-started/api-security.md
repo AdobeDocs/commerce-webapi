@@ -173,6 +173,7 @@ Example:
 ```bash
 $ bin/magento config:show | grep backpressure
 ```
+Response:
 
 ```terminal
 sales/backpressure/limit - 10
