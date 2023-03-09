@@ -27,7 +27,8 @@
     "clean": "gatsby clean",
     "test:links": "remark src/pages --ignore-pattern src/pages/graphql,src/pages/_includes --quiet --frail",
     "build:spectaql": "spectaql --target-dir static/graphql-api/ --target-file index.html spectaql/config.yml",
-    "dev:spectaql": "spectaql --development-mode-live spectaql/config.yml"
+    "dev:spectaql": "spectaql --development-mode-live spectaql/config.yml",
+    "lint": "docker run --rm -e RUN_LOCAL=true --env-file '.github/super-linter.env' -v \"$PWD\":/tmp/lint github/super-linter:slim-v4.10.1"
   },
   "remarkConfig": {
     "plugins": [
