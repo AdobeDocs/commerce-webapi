@@ -302,8 +302,9 @@ The `items` object can also optionally return highlighted text that shows the ma
 Results can be refined by category with the `categories` and `categoryPath` filters.
 They are slightly different in the type of facets returned:
 
-- `categories` is preferred for category filtering: selecting from a category filter.
-- `categoryPath` is preferred for browsing by category. `categoryPath` returns the immediate subcategories of the category path being filtered.
+`categories` is preferred when selecting from a category filter. Filtering on `categories` with "women/bottoms-women" and the phrase `pants`, the category facets returned will be "promotions/pants-all", "women/bottoms-women/pants-women", and similar.
+
+`categoryPath` is preferred when browsing by category. `categoryPath` returns the immediate subcategories of the category path being filtered. Filtering on `categoryPath` with "women/bottoms-women", the category facets returned are its children such as "women/bottoms-women/pants-women" and "women/bottoms-women/shorts-women".
 
 #### categoryPath
 
