@@ -194,7 +194,7 @@ facets {
 
 ### Items list
 
-The `items` object primarily provides details about each item returned. If Catalog Service is not installed, then you must specify the `product` field to return details about each item. The `product` field uses the [`ProductInterface`](https://developer.adobe.com/commerce/webapi/graphql/schema/products/interfaces/attributes/), which is defined in Adobe Commerce and Magento Open Source, to return details about the product. A typical query might return the product name, price, SKU, and image.
+The `items` object primarily provides details about each item returned. If Catalog Service is not installed, then you must specify the `product` field to return details about each item. The `product` field uses the [`ProductInterface`](../../products/interfaces/attributes/), which is defined in Adobe Commerce and Magento Open Source, to return details about the product. A typical query might return the product name, price, SKU, and image.
 
 The following snippet returns relevant information about each item when Catalog Service is not installed or used:
 
@@ -293,7 +293,7 @@ items {
 
 <InlineAlert variant="info" slots="text"/>
 
-The Catalog Service [products query](../catalog-service/products.md) describes the contents of the `ProductView` object.
+The Catalog Service [products query](../../catalog-service/products.md) describes the contents of the `ProductView` object.
 
 The `items` object can also optionally return highlighted text that shows the matching search terms.
 
@@ -1847,8 +1847,8 @@ The `ProductSearchItem` data type can contain the following fields:
 Field | Data Type | Description
 --- | --- | ---
 `appliedQueryRule` | AppliedQueryRule | The query rule type that was applied to this product, if any (in preview mode only, returns null otherwise). Possible values: `BOOST`, `BURY`, and `PIN`
-`product` | [ProductInterface!](https://developer.adobe.com/commerce/webapi/graphql/schema/products/interfaces/attributes/) | Contains details about the product. Go to `productInterface` for more information.
-`productView` | ProductView | If Catalog Service is installed, contains details about the product view. The Catalog Service [`products` query](../catalog-service/products.md) fully describes this object.
+`product` | [ProductInterface!](../../products/interfaces/attributes/) | Contains details about the product. Go to `productInterface` for more information.
+`productView` | ProductView | If Catalog Service is installed, contains details about the product view. The Catalog Service [`products` query](../../catalog-service/queries/products/) fully describes this object.
 
 ### SearchResultPageInfo data type {#SearchResultPageInfo}
 
