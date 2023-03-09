@@ -58,28 +58,6 @@ Configuration settings:
 Since this functionality is disabled by default, you need to add a configuration that connects to the service where the request logs will be stored. By default, the connection is configured for a Redis server.
 The following options work for new and existing installations:
 
-```bash
-$ bin/magento setup:config:set --help | grep backp
-```
-
-```terminal
---backpressure-logger=BACKPRESSURE-LOGGER                                                  Backpressure logger handler
---backpressure-logger-redis-server=BACKPRESSURE-LOGGER-REDIS-SERVER                        Redis server
---backpressure-logger-redis-port=BACKPRESSURE-LOGGER-REDIS-PORT                            Redis server listen port
---backpressure-logger-redis-timeout=BACKPRESSURE-LOGGER-REDIS-TIMEOUT                      Redis server timeout
---backpressure-logger-redis-persistent=BACKPRESSURE-LOGGER-REDIS-PERSISTENT                Redis persistent
---backpressure-logger-redis-db=BACKPRESSURE-LOGGER-REDIS-DB                                Redis db number
---backpressure-logger-redis-password=BACKPRESSURE-LOGGER-REDIS-PASSWORD                    Redis server password
---backpressure-logger-redis-user=BACKPRESSURE-LOGGER-REDIS-USER                            Redis server user
---backpressure-logger-id-prefix=BACKPRESSURE-LOGGER-ID-PREFIX                              ID prefix for keys
-```
-
-And in the case when the project is already installed
-
-```bash
-$ bin/magento setup:install --help | grep backp
-```
-
 ```terminal
 --backpressure-logger=BACKPRESSURE-LOGGER                                                  Backpressure logger handler
 --backpressure-logger-redis-server=BACKPRESSURE-LOGGER-REDIS-SERVER                        Redis server
@@ -170,6 +148,7 @@ Use the following commands to enable rate limiting:
 If you need to check a configuration, use the following CLI command:
 
 Example:
+
 ```bash
 $ bin/magento config:show | grep backpressure
 ```
