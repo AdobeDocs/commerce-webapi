@@ -31,7 +31,9 @@ The `productSearch` query accepts the following fields as input:
 - `page_size` and `current_page` - These optional fields allow the search results to be broken down into smaller groups so that a limited number of items are returned at a time. The default value of `page_size` is `20`, and the default value for `current_page` is `1`. In the response, counting starts at page one.
 - `context` - Query context that allows customized search results to be returned based on the customer group passed. This is used to get the view history of a SKU.
 
-Note: The initial release does not allow for different merchandising strategies per customer group.
+<InlineAlert variant="info" slots="text" />
+
+The initial release does not allow for different merchandising strategies per customer group.
 
 ### Field Reference
 
@@ -309,7 +311,7 @@ This example shows how to filter returned facets when browsing a category page.
 
 `categoryPath` performs strict filtering, meaning that the facets returned are limited to the immediate children of the current category page.
 
-If you select "Gear -> Fitness Equipment" from the category navigation, the filter would look like:
+The following query corresponds to a shopper selecting **Gear** > **Fitness Equipment**.
 
 ```graphql
 query productSearch {
@@ -853,7 +855,7 @@ productSearch(
 
 Example 2: A "category browse" page when filtering on a category.
 
-The user navigates to "Womens -> Bottoms" and filters on "pants". In this case, both "Pants" and "Shorts" appear as facets in the layered navigation.
+The shopper navigates to "Womens -> Bottoms" and filters on "pants". In this case, both "Pants" and "Shorts" appear as facets in the layered navigation.
 
 **Request:**
 
@@ -1765,7 +1767,7 @@ The `QueryContextInput` object can contain the following fields.
 
 Field | Data Type | Description
 --- | --- | ---
-`customerGroup` | String! | Customer group code. For storefront clients, this value is available in the `dataservices_customer_group` cookie.
+`customerGroup` | String! | The customer group code. For storefront clients, this value is available in the `dataservices_customer_group` cookie.
 `userViewHistory` | [ViewHistoryInput!]((#ViewHistoryInput)) | List of SKUs with timestamps. Used in "Recommended for you" ranking.
 
 ### ViewHistoryInput data type {#ViewHistoryInput}
