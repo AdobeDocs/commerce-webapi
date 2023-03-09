@@ -25,7 +25,7 @@ productSearch(
 
 The `productSearch` query accepts the following fields as input:
 
-- `phrase` - The string of text to search for. This field is required.
+- `phrase` - The string of text to search for. This field is required but an empty string may be used if only sorting by `category` or `categoryPath`
 - `filter` - An object that defines one or more product attributes to use to narrow the search results. In the Luma theme, the `sku`, `price`, and `size` attributes are among the product attributes that can be used to filter query results. See [`categories`](#categories) and [`categoryPath`](#categorypath) for category level filtering.
 - `sort` - An object that defines one or more product attributes to use to sort the search results. The default sortable product attributes in Luma are `price`, `name`, and `position`. A product's position is assigned within a category.
 - `page_size` and `current_page` - These optional fields allow the search results to be broken down into smaller groups so that a limited number of items are returned at a time. The default value of `page_size` is `20`, and the default value for `current_page` is `1`. In the response, counting starts at page one.
@@ -302,9 +302,11 @@ The `items` object can also optionally return highlighted text that shows the ma
 Results can be refined by category with the `categories` and `categoryPath` filters.
 They are slightly different in the type of facets returned:
 
-`categories` is preferred when selecting from a category filter. Filtering on `categories` with "women/bottoms-women" and the phrase `pants`, the category facets returned will be "promotions/pants-all", "women/bottoms-women/pants-women", and similar.
+`categories` is preferred when selecting from a category filter. Filtering on `categories` with "women/bottoms-women" and the phrase `pants`, the category facets returned are "promotions/pants-all", "women/bottoms-women/pants-women", and similar.
 
 `categoryPath` is preferred when browsing by category. `categoryPath` returns the immediate subcategories of the category path being filtered. Filtering on `categoryPath` with "women/bottoms-women", the category facets returned are its children such as "women/bottoms-women/pants-women" and "women/bottoms-women/shorts-women".
+
+`phrase` is required but can be an empty string if you are filtering by `category` or `categoryPath`.
 
 #### categoryPath
 
@@ -1730,7 +1732,7 @@ Field | Data Type | Description
 `current_page` | Int | Specifies which page of results to return. Default value: 1
 `filter` | [[SearchClauseInput!]](#SearchClauseInput) | Identifies which attributes to search for and return
 `page_size` | Int | Specifies the maximum number of results to return at once. Default value: 20
-`phrase` | String! | The text to search for
+`phrase` | String! | The text to filter on. Can be an empty string.
 `sort` | [[ProductSearchSortInput!]](#ProductSearchSortInput) | Specifies which attribute to sort on, and whether to return the results in ascending or descending order
 
 ### SearchClauseInput data type {#SearchClauseInput}
