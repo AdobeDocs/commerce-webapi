@@ -94,7 +94,7 @@ $ bin/magento setup:install --help | grep backp
 
 <InlineAlert variant="info" slots="text"/>
 
-The data (the request time and the identifier) is temporarily stored in Redis. Registered users are identified by their user ID. Non-registered users are identified by their external IP address.
+The data, including request time and identifier, is temporarily stored in Redis. Registered users are identified by their user ID. Non-registered users are identified by their external IP address.
 
 The following command will add a new connection to the Redis server:
 
