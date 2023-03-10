@@ -11,7 +11,7 @@ Bulk API endpoints differ from other REST endpoints in that they combine multipl
 
 <InlineAlert variant="info" slots="text"/>
 
-Use the [`bin/magento queue:consumers:start async.operations.all`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/start-message-queues.html) command to start the consumer that handles asynchronous and bulk API messages. Also, before using the Bulk API to process messages, you must install and configure RabbitMQ, which is the default message broker. See [RabbitMQ](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/install-rabbitmq.html).
+Use the [`bin/magento queue:consumers:start async.operations.all`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/start-message-queues.html) command to start the consumer that handles asynchronous and bulk API messages. Also, before using the Bulk API to process messages, you must install and configure RabbitMQ, which is the default message broker. See [RabbitMQ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/rabbitmq.html).
 
 ## Routes
 

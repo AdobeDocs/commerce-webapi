@@ -90,4 +90,4 @@ $soapResponse = $soapClient->testModule1AllSoapAndRestV1Item($serviceArgs); ?>
 
 *  [OAuth-based authentication](./authentication/gs-authentication-oauth.md)
 *  [Service contracts](https://developer.adobe.com/commerce/php/development/components/service-contracts/)
-*  [SOAP Reference](https://devdocs.magento.com/guides/v2.4/soap/bk-soap.html)
+*  [SOAP Reference](soap-web-api-calls.md)

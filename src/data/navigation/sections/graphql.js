@@ -232,6 +232,10 @@ module.exports = [
             path: "/graphql/schema/catalog-service/queries/",
             pages: [
               {
+                title: "categories",
+                path: "/graphql/schema/catalog-service/queries/categories/",
+              },
+              {
                 title: "products",
                 path: "/graphql/schema/catalog-service/queries/products/",
               },
@@ -1250,6 +1254,10 @@ module.exports = [
         path: "/graphql/tutorials/checkout/place-order/"
       },
     ],
+  },
+  {
+    title: "Reference",
+    path: "/graphql/reference"
   },
   {
     title: "Release notes",
