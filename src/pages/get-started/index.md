@@ -7,7 +7,7 @@ description: A high-level overview of Magento web APIs.
 
 The Adobe Commerce and Magento Open Source web [API](https://glossary.magento.com/api) framework provides integrators and developers the means to use web services that communicate with the application. Key features include:
 
-*  Support for [GraphQL](https://devdocs.magento.com/guides/v2.4/graphql/index.html), [REST](https://developer.adobe.com/commerce/webapi/rest/) (Representational State Transfer) and [SOAP](https://devdocs.magento.com/guides/v2.4/soap/bk-soap.html) (Simple Object Access Protocol).
+*  Support for [GraphQL](../graphql/), [REST](https://developer.adobe.com/commerce/webapi/rest/) (Representational State Transfer) and [SOAP](soap-web-api-calls.md) (Simple Object Access Protocol).
 
 *  Three types of [authentication](./authentication/index.md):
    *  Third-party applications authenticate with [OAuth 1.0a](./authentication/gs-authentication-oauth.md).
@@ -22,7 +22,7 @@ The Adobe Commerce and Magento Open Source web [API](https://glossary.magento.co
 
 *  The framework supports field filtering of web API responses to conserve mobile bandwidth.
 
-*  Integration style web APIs enable a single web API call to run multiple services at once for a more efficient integration.  An example of this behavior can be seen in the [Catalog](https://glossary.magento.com/catalog) where one web API call can create a product. If your payload includes the `stock_item` and `media_gallery_entries` objects, then the framework will also create the product’s inventory & media in that one API call.
+*  Integration style web APIs enable a single web API call to run multiple services at once for a more efficient integration.  An example of this behavior can be seen in the [Catalog](https://glossary.magento.com/catalog) where one web API call can create a product. If your payload includes the `stock_item` and `media_gallery_entries` objects, then the framework will also create the product's inventory & media in that one API call.
 
 ## What can I do with the web APIs?
 

@@ -140,7 +140,7 @@ Attribute |  Data Type | Description
 
 ### RequestReturnItemInput attributes
 
-The RequestReturnItemInput object
+The RequestReturnItemInput object can contain the following fields:
 
 Attribute |  Data Type | Description
 --- | --- | ---
@@ -151,7 +151,7 @@ Attribute |  Data Type | Description
 
 ### EnteredCustomAttributeInput attributes
 
-The EnteredCustomAttributeInput object
+The EnteredCustomAttributeInput object must contained the following fields:
 
 Attribute |  Data Type | Description
 --- | --- | ---
@@ -160,7 +160,8 @@ Attribute |  Data Type | Description
 
 ### SelectedCustomAttributeInput attributes
 
-The SelectedCustomAttributeInput object
+The SelectedCustomAttributeInput object must contain the following fields:
+
 Attribute |  Data Type | Description
 --- | --- | ---
 `attribute_code` | String! | A string that identifies the selected attribute

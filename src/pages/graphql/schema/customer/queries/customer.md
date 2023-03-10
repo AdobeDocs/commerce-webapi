@@ -258,9 +258,6 @@ These topics contain examples with fragments and provide even more details:
           product_url_key
           product_sale_price {
             value
-          }
-          product_sale_price {
-            value
             currency
           }
           quantity_ordered
