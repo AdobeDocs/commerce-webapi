@@ -70,7 +70,7 @@ Use the [`attributeMetadata` query](./attribute-metadata.md) to return a list of
 
 ### current_page
 
-The `currentPage` field specifies which page of results to return. If no value is specified, the first page is returned. To continue with the values mentioned in the `page_size` field, page number `5` contains items 81 - 97.
+The `currentPage` field specifies which page of results to return. If no value is specified, the first page is returned.
 
 The system returns an error if you specify a value that is greater than the number of available pages.
 
@@ -99,12 +99,12 @@ The following example causes the query to filter first by `price`, and then by `
 ```graphql
 sort: [
     {
-        attribute: "price"
-        direction: DESC
+      attribute: "price"
+      direction: DESC
     }
     {
-        attribute: "name"
-        direction: DESC
+      attribute: "name"
+      direction: DESC
     }
 ]
 ```
@@ -165,7 +165,12 @@ This example shows how to filter returned facets when browsing a category page.
 The following snippet corresponds to a shopper selecting **Women** > **Bottoms**.
 
 ```graphql
-filter:[{attribute:"categoryPath", eq: "women/bottoms-women"}] 
+filter:[
+  {
+    attribute:"categoryPath",
+    eq: "women/bottoms-women"
+    }
+  ] 
 ```
 
 #### categories
@@ -192,14 +197,16 @@ Here, the shopper navigates to "Womens -> Bottoms" and filters on "pants". This 
 ```graphql
 filter: [
   {
-      attribute: "visibility",
-      in: ["Catalog", "Catalog, Search"]
+    attribute: "visibility",
+    in: ["Catalog", "Catalog, Search"]
   },
   {
-      attribute:"categoryPath", eq: ["women/bottoms-women"]
+    attribute:"categoryPath",
+    eq: ["women/bottoms-women"]
   },
   {
-      attribute:"categories", in: ["women/bottoms-women/pants-women"]
+    attribute:"categories",
+    in: ["women/bottoms-women/pants-women"]
   }
 ]
 ```
