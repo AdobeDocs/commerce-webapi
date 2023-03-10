@@ -43,7 +43,7 @@ The REST API documentation describes the REST APIs that are available on the lat
 
 <DiscoverBlock slots="link, text"/>
 
-[GraphQL](https://devdocs.magento.com/guides/v2.4/graphql/)
+[GraphQL](./graphql/)
 
 GraphQL is a language for querying and manipulating data. It is widely viewed as more powerful, flexible, and efficient than REST for frontend development.
 

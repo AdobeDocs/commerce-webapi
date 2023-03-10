@@ -25,6 +25,10 @@ See [Paypal Payflow Pro payment method](../../../payment-methods/payflow-pro.md)
 
 `handlePayflowProResponse(input: PayflowProResponseInput!): PayflowProResponseOutput`
 
+## Reference
+
+The [`handlePayflowProResponse`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-handlePayflowProResponse) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example sends the Payflow Pro payload to Magento:
@@ -63,24 +67,3 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `PayflowProResponseInput` object must contain the `cart_id` and `paypal_payload` attributes.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart_id` | String! | The unique ID that identifies the customer's cart
-`paypal_payload` | String! | The payload returned from PayPal
-
-## Output attributes
-
-The PayflowProResponseOutput contains a `Cart` object.
-
-### Cart object
-
-import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
