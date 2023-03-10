@@ -23,7 +23,7 @@ productSearch(
 
 The `productSearch` query accepts the following fields as input:
 
-- `phrase` - The string of text to search for. This field is required but an empty string may be used if only sorting by `category` or `categoryPath`.
+- `phrase` - The string of text to search for. This field is required but an empty string may be used if only filtering by `category` or `categoryPath`.
 - `context` - Query context that allows customized search results to be returned based on the customer group passed. This is used to get the view history of a SKU.
 - `current_page` and `page_size`- These optional fields allow the search results to be broken down into smaller groups so that a limited number of items are returned at a time. The default value of `page_size` is `20`, and the default value for `current_page` is `1`. In the response, counting starts at page one.
 - `sort` - An object that defines one or more product attributes to use to sort the search results. The default sortable product attributes in Luma are `price`, `name`, and `position`. A product's position is assigned within a category.
@@ -35,7 +35,7 @@ The initial release does not allow for different merchandising strategies per cu
 
 ### phrase
 
-The `phrase` field contains the text that a shopper enters on the storefront. Live Search applies all configured rules, synonyms, and other configuration settings to determine the search results. All `productSearch` queries must contain the `phrase` field.
+The `phrase` field contains the text that a shopper enters on the storefront. Live Search applies all configured rules, synonyms, and other configuration settings to determine the search results. All `productSearch` queries must contain the `phrase` field. If the query filters on a category or category path, the value of the `phrase` field can be an empty string.
 
 The following example sets `pants` as the phrase to search for:
 
@@ -372,7 +372,7 @@ import Docs from '/src/pages/_includes/graphql/live-search-headers.md'
 
 ## Example usage
 
-This is an example of using Live Search to retrieve and filter results. The query uses the core `ProductInterface` to access product information. As a result, the query has a longer response time than using [[!DNL Catalog Service]](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/guide-overview.html) to retrieve this information.
+This is an example of using Live Search to retrieve and filter results. The query uses the core `ProductInterface` to access product information. As a result, the query has a longer response time than using [Catalog Service](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/guide-overview.html) to retrieve this information.
 
 For an example of using Live Search with Catalog Service, see [Catalog Service productSearch query](../../catalog-service/queries/product-search.md). Other than returning the `productView` object, all other attributes are the same.
 
