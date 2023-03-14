@@ -174,6 +174,61 @@ query {
 }
 ```
 
+### Retrieve orders based on scope argument:
+
+The following query returns all customer orders, across all store view codes. The value of GLOBAL in the scope field overrides the store view code specified in the Store header.
+
+**Request:**
+
+```graphql
+{
+    customer {
+        orders(
+            pageSize: 20,
+            scope: GLOBAL
+        ) {
+            items {
+                id
+                order_number
+                order_date
+                total {
+                    grand_total
+                    { value currency }
+                }
+                status
+            }
+        }
+    }
+}
+```
+
+**Response:**
+
+```json
+{
+    "data": {
+        "customer": {
+            "orders": {
+                "items": [
+                    {
+                        "id": "ODg=",
+                        "order_number": "48000000001",
+                        "order_date": "2022-07-27 18:01:38",
+                        "total": {
+                            "grand_total": {
+                                "value": 15,
+                                "currency": "USD"
+                            }
+                        },
+                        "status": "Pending"
+                    }
+                ]
+            }
+        }
+    }
+}
+```
+
 ### Retrieve detailed information about a specific order
 
 The following example returns details about one of the customer's previous orders.
@@ -653,6 +708,164 @@ The following query returns the customer's wish lists. Adobe Commerce allows cus
           }
         }
       ]
+    }
+  }
+}
+```
+
+### List a company user's purchase orders
+
+The following example returns information about all purchase orders the company user has made since January 1, 2023.
+
+The [Purchase orders](../../b2b/purchase-order/) topic contains additional examples that query purchase order functionality.
+
+**Request:**
+
+```graphql
+{
+    customer {
+        purchase_orders(
+            currentPage: 1,
+            pageSize: 20,
+            filter: {
+                created_date: {
+                  from: "2023-01-21 00:00:00"
+            }
+      }
+        ) {
+            total_count
+            page_info {
+                current_page
+                page_size
+                total_pages
+            }
+            items {
+                uid
+                number
+              order {
+                id
+              }
+              created_at
+              updated_at
+              created_by {
+                firstname
+                lastname
+              }
+              status
+              order {
+                total {
+                  grand_total {
+                    value
+                    currency
+                  }
+                }
+              }
+            }
+        }
+    }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "customer": {
+      "purchase_orders": {
+        "total_count": 2,
+        "page_info": {
+          "current_page": 1,
+          "page_size": 20,
+          "total_pages": 1
+        },
+        "items": [
+          {
+            "uid": "MTE=",
+            "number": "000000011",
+            "order": null,
+            "created_at": "2023-02-01 18:01:40",
+            "updated_at": "2023-02-01 18:01:40",
+            "created_by": {
+              "firstname": "John",
+              "lastname": "Doe"
+            },
+            "status": "PENDING"
+          },
+          {
+            "uid": "MTA=",
+            "number": "000000010",
+            "order": null,
+            "created_at": "2023-01-31 20:46:16",
+            "updated_at": "2023-01-31 21:10:38",
+            "created_by": {
+              "firstname": "John",
+              "lastname": "Doe"
+            },
+            "status": "REJECTED"
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+### List purchase order approval rules
+
+The following example returns the list of purchase order approval rules.
+
+The [Purchase order approval rules](../../b2b/purchase-order-rule/) topic contains additional examples that query approval rule functionality.
+
+**Request:**
+
+```graphql
+{
+  customer {
+    purchase_order_approval_rules {
+      items {
+        name
+        uid
+      }
+      page_info {
+        page_size
+        current_page
+        total_pages
+      }
+      total_count
+    }
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "customer": {
+      "purchase_order_approval_rules": {
+        "items": [
+          {
+            "name": "Autoapprove order",
+            "uid": "OQ=="
+          },
+          {
+            "name": "Over 10 SKUs",
+            "uid": "Ng=="
+          },
+          {
+            "name": "Purchase order over $1000",
+            "uid": "NQ=="
+          }
+        ],
+        "page_info": {
+          "page_size": 20,
+          "current_page": 1,
+          "total_pages": 1
+        },
+        "total_count": 3
+      }
     }
   }
 }

@@ -890,6 +890,78 @@ module.exports = [
         ],
       },
       {
+        title: "Purchase orders (B2B)",
+        path: "/graphql/schema/b2b/purchase-order/",
+        pages: [
+          {
+            title: "Mutations",
+            path: "/graphql/schema/b2b/purchase-order/mutations/",
+            pages: [
+              {
+                title: "addPurchaseOrderComment",
+                path: "/graphql/schema/b2b/purchase-order/mutations/add-comment/",
+              },
+              {
+                title: "addPurchaseOrderItemsToCart",
+                path: "/graphql/schema/b2b/purchase-order/mutations/add-items-to-cart/",
+              },
+              {
+                title: "approvePurchaseOrders",
+                path: "/graphql/schema/b2b/purchase-order/mutations/approve/",
+              },
+              {
+                title: "cancelPurchaseOrders",
+                path: "/graphql/schema/b2b/purchase-order/mutations/cancel/",
+              },
+              {
+                title: "placeOrderForPurchaseOrder",
+                path: "/graphql/schema/b2b/purchase-order/mutations/place-order/",
+              },
+              {
+                title: "placePurchaseOrder",
+                path: "/graphql/schema/b2b/purchase-order/mutations/place-purchase-order/",
+              },
+              {
+                title: "rejectPurchaseOrders",
+                path: "/graphql/schema/b2b/purchase-order/mutations/reject/",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Purchase order rules (B2B)",
+        path: "/graphql/schema/b2b/purchase-order-rule/",
+        pages: [
+          {
+            title: "Mutations",
+            path: "/graphql/schema/b2b/purchase-order-rule/mutations/",
+            pages: [
+              {
+                title: "createPurchaseOrderApprovalRule",
+                path: "/graphql/schema/b2b/purchase-order-rule/mutations/create/",
+              },
+              {
+                title: "deletePurchaseOrderApprovalRule",
+                path: "/graphql/schema/b2b/purchase-order-rule/mutations/delete/",
+              },
+              {
+                title: "updatePurchaseOrderApprovalRule",
+                path: "/graphql/schema/b2b/purchase-order-rule/mutations/update/",
+              },
+              {
+                title: "validatePurchaseOrders",
+                path: "/graphql/schema/b2b/purchase-order-rule/mutations/validate/",
+              },
+            ],
+          },
+          {
+            title: "Interfaces",
+            path: "/graphql/schema/b2b/purchase-order-rule/interfaces/",
+          },
+        ],
+      },
+      {
         title: "Requisition lists (B2B)",
         path: "/graphql/schema/b2b/requisition-list/",
         pages: [
