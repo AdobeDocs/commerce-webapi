@@ -52,6 +52,8 @@ For bundled products, the value of the `price` parameter must be expressed as a 
 
 You can set multiple special prices in a single call, as shown in the example below. The call sets special prices for a simple product, downloadable product, and bundle product for two days.
 
+**Adobe Commerce Note:** It is only possible to use a global price scope (Stores > Settings > Configuration > Catalog > Catalog > Price > Catalog Price Scope) for this endpoint. The mandatory parameters price_from and price_to trigger a catalog schedule, which is currently only supported on global scope. Overlapping date ranges on multiple stores will trigger a "Future Update already exists in this time range. Set a different range and try again." error.
+
 **Sample Usage:**
 
 `POST <host>/rest/<store_code>/V1/products/special-price`
