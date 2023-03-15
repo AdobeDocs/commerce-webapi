@@ -3,7 +3,7 @@ securityDefinitions:
     type: apiKey
     name: api_key
     in: header
-swagger: '2.0'
+swagger: "2.0"
 info:
   version: 2.4.6
   title: Commerce Customer REST endpoints - All inclusive
@@ -13,66 +13,66 @@ schemes:
   - https
 tags:
   - name: applepay/auth
-  - name: 'carts/guest-carts/{cartId}/checkGiftCard/{giftCardCode}'
-  - name: 'carts/guest-carts/{cartId}/giftCards'
-  - name: 'carts/guest-carts/{cartId}/giftCards/{giftCardCode}'
+  - name: carts/guest-carts/{cartId}/checkGiftCard/{giftCardCode}
+  - name: carts/guest-carts/{cartId}/giftCards
+  - name: carts/guest-carts/{cartId}/giftCards/{giftCardCode}
   - name: carts/mine
   - name: carts/mine/balance/apply
-  - name: 'carts/mine/checkGiftCard/{giftCardCode}'
+  - name: carts/mine/checkGiftCard/{giftCardCode}
   - name: carts/mine/collect-totals
   - name: carts/mine/payment-information
   - name: carts/mine/po-payment-information
   - name: carts/mine/set-payment-information
   - name: customers
-  - name: 'customers/{customerId}/password/resetLinkToken/{resetPasswordLinkToken}'
+  - name: customers/{customerId}/password/resetLinkToken/{resetPasswordLinkToken}
   - name: customers/isEmailAvailable
   - name: customers/me/activate
   - name: customers/me/password
   - name: customers/password
   - name: customers/resetPassword
   - name: directory/countries
-  - name: 'directory/countries/{countryId}'
+  - name: directory/countries/{countryId}
   - name: directory/currency
   - name: giftregistry/mine/estimate-shipping-methods
   - name: guest-carts
-  - name: 'guest-carts/{cartId}'
-  - name: 'guest-carts/{cartId}/billing-address'
-  - name: 'guest-carts/{cartId}/collect-totals'
-  - name: 'guest-carts/{cartId}/coupons'
-  - name: 'guest-carts/{cartId}/coupons/{couponCode}'
-  - name: 'guest-carts/{cartId}/estimate-shipping-methods'
-  - name: 'guest-carts/{cartId}/gift-message'
-  - name: 'guest-carts/{cartId}/gift-message/{itemId}'
-  - name: 'guest-carts/{cartId}/items'
-  - name: 'guest-carts/{cartId}/items/{itemId}'
-  - name: 'guest-carts/{cartId}/order'
-  - name: 'guest-carts/{cartId}/payment-information'
-  - name: 'guest-carts/{cartId}/payment-methods'
-  - name: 'guest-carts/{cartId}/selected-payment-method'
-  - name: 'guest-carts/{cartId}/set-payment-information'
-  - name: 'guest-carts/{cartId}/shipping-information'
-  - name: 'guest-carts/{cartId}/shipping-methods'
-  - name: 'guest-carts/{cartId}/totals'
-  - name: 'guest-carts/{cartId}/totals-information'
-  - name: 'guest-giftregistry/{cartId}/estimate-shipping-methods'
+  - name: guest-carts/{cartId}
+  - name: guest-carts/{cartId}/billing-address
+  - name: guest-carts/{cartId}/collect-totals
+  - name: guest-carts/{cartId}/coupons
+  - name: guest-carts/{cartId}/coupons/{couponCode}
+  - name: guest-carts/{cartId}/estimate-shipping-methods
+  - name: guest-carts/{cartId}/gift-message
+  - name: guest-carts/{cartId}/gift-message/{itemId}
+  - name: guest-carts/{cartId}/items
+  - name: guest-carts/{cartId}/items/{itemId}
+  - name: guest-carts/{cartId}/order
+  - name: guest-carts/{cartId}/payment-information
+  - name: guest-carts/{cartId}/payment-methods
+  - name: guest-carts/{cartId}/selected-payment-method
+  - name: guest-carts/{cartId}/set-payment-information
+  - name: guest-carts/{cartId}/shipping-information
+  - name: guest-carts/{cartId}/shipping-methods
+  - name: guest-carts/{cartId}/totals
+  - name: guest-carts/{cartId}/totals-information
+  - name: guest-giftregistry/{cartId}/estimate-shipping-methods
   - name: integration/admin/token
   - name: integration/customer/revoke-customer-token
   - name: integration/customer/token
   - name: inventory/in-store-pickup/pickup-locations/
-  - name: 'negotiable-carts/{cartId}/billing-address'
-  - name: 'negotiable-carts/{cartId}/coupons'
-  - name: 'negotiable-carts/{cartId}/coupons/{couponCode}'
-  - name: 'negotiable-carts/{cartId}/estimate-shipping-methods'
-  - name: 'negotiable-carts/{cartId}/estimate-shipping-methods-by-address-id'
-  - name: 'negotiable-carts/{cartId}/giftCards'
-  - name: 'negotiable-carts/{cartId}/giftCards/{giftCardCode}'
-  - name: 'negotiable-carts/{cartId}/payment-information'
-  - name: 'negotiable-carts/{cartId}/set-payment-information'
-  - name: 'negotiable-carts/{cartId}/shipping-information'
-  - name: 'negotiable-carts/{cartId}/totals'
+  - name: negotiable-carts/{cartId}/billing-address
+  - name: negotiable-carts/{cartId}/coupons
+  - name: negotiable-carts/{cartId}/coupons/{couponCode}
+  - name: negotiable-carts/{cartId}/estimate-shipping-methods
+  - name: negotiable-carts/{cartId}/estimate-shipping-methods-by-address-id
+  - name: negotiable-carts/{cartId}/giftCards
+  - name: negotiable-carts/{cartId}/giftCards/{giftCardCode}
+  - name: negotiable-carts/{cartId}/payment-information
+  - name: negotiable-carts/{cartId}/set-payment-information
+  - name: negotiable-carts/{cartId}/shipping-information
+  - name: negotiable-carts/{cartId}/totals
   - name: products-render-info
-  - name: 'purchase-order-carts/{cartId}/payment-information'
-  - name: 'purchase-order-carts/{cartId}/set-payment-information'
+  - name: purchase-order-carts/{cartId}/payment-information
+  - name: purchase-order-carts/{cartId}/set-payment-information
   - name: quick-checkout/account-details
   - name: quick-checkout/has-account
   - name: quick-checkout/storefront/has-account
@@ -83,7 +83,7 @@ tags:
   - name: tfa/provider/authy/authenticate
   - name: tfa/provider/authy/authenticate-onetouch
   - name: tfa/provider/authy/configure
-  - name: 'tfa/provider/authy/send-token/{via}'
+  - name: tfa/provider/authy/send-token/{via}
   - name: tfa/provider/duo_security/activate
   - name: tfa/provider/duo_security/authenticate
   - name: tfa/provider/duo_security/configure
@@ -111,19 +111,19 @@ paths:
         - application/json
         - application/xml
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/pay-pal-braintree-data-auth-data-interface'
+            $ref: "#/definitions/pay-pal-braintree-data-auth-data-interface"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: applepay/auth
-  '/V1/carts/guest-carts/{cartId}/checkGiftCard/{giftCardCode}':
+  "/V1/carts/guest-carts/{cartId}/checkGiftCard/{giftCardCode}":
     get:
       tags:
-        - 'carts/guest-carts/{cartId}/checkGiftCard/{giftCardCode}'
+        - carts/guest-carts/{cartId}/checkGiftCard/{giftCardCode}
       description: Check gift card balance if added to the cart.
       operationId: GetV1CartsGuestcartsCartIdCheckGiftCardGiftCardCode
       consumes:
@@ -142,27 +142,27 @@ paths:
           type: string
           required: true
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: number
-        '400':
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
-        '500':
+            $ref: "#/definitions/error-response"
+        "500":
           description: Internal Server error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'carts/guest-carts/{cartId}/checkGiftCard/{giftCardCode}'
-  '/V1/carts/guest-carts/{cartId}/giftCards':
+            $ref: "#/definitions/error-response"
+      summary: carts/guest-carts/{cartId}/checkGiftCard/{giftCardCode}
+  "/V1/carts/guest-carts/{cartId}/giftCards":
     post:
       tags:
-        - 'carts/guest-carts/{cartId}/giftCards'
+        - carts/guest-carts/{cartId}/giftCards
       description: Add gift card to the cart.
       operationId: PostV1CartsGuestcartsCartIdGiftCards
       consumes:
@@ -183,29 +183,28 @@ paths:
               - giftCardAccountData
             properties:
               giftCardAccountData:
-                $ref: >-
-                  #/definitions/gift-card-account-data-gift-card-account-interface
+                $ref: "#/definitions/gift-card-account-data-gift-card-account-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: boolean
-        '500':
+        "500":
           description: Internal Server error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'carts/guest-carts/{cartId}/giftCards'
-  '/V1/carts/guest-carts/{cartId}/giftCards/{giftCardCode}':
+            $ref: "#/definitions/error-response"
+      summary: carts/guest-carts/{cartId}/giftCards
+  "/V1/carts/guest-carts/{cartId}/giftCards/{giftCardCode}":
     delete:
       tags:
-        - 'carts/guest-carts/{cartId}/giftCards/{giftCardCode}'
+        - carts/guest-carts/{cartId}/giftCards/{giftCardCode}
       description: Remove GiftCard Account entity.
       operationId: DeleteV1CartsGuestcartsCartIdGiftCardsGiftCardCode
       consumes:
@@ -224,15 +223,15 @@ paths:
           type: string
           required: true
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: boolean
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'carts/guest-carts/{cartId}/giftCards/{giftCardCode}'
+            $ref: "#/definitions/error-response"
+      summary: carts/guest-carts/{cartId}/giftCards/{giftCardCode}
   /V1/carts/mine:
     put:
       tags:
@@ -253,19 +252,19 @@ paths:
               - quote
             properties:
               quote:
-                $ref: '#/definitions/quote-data-cart-interface'
+                $ref: "#/definitions/quote-data-cart-interface"
             type: object
             xml:
               name: request
       responses:
-        '401':
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: carts/mine
     get:
       tags:
@@ -279,22 +278,22 @@ paths:
         - application/json
         - application/xml
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/quote-data-cart-interface'
-        '400':
+            $ref: "#/definitions/quote-data-cart-interface"
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
-        '401':
+            $ref: "#/definitions/error-response"
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: carts/mine
   /V1/carts/mine/balance/apply:
     post:
@@ -309,23 +308,23 @@ paths:
         - application/json
         - application/xml
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: boolean
-        '401':
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: carts/mine/balance/apply
-  '/V1/carts/mine/checkGiftCard/{giftCardCode}':
+  "/V1/carts/mine/checkGiftCard/{giftCardCode}":
     get:
       tags:
-        - 'carts/mine/checkGiftCard/{giftCardCode}'
+        - carts/mine/checkGiftCard/{giftCardCode}
       description: Check gift card balance if applied to given cart.
       operationId: GetV1CartsMineCheckGiftCardGiftCardCode
       consumes:
@@ -340,30 +339,29 @@ paths:
           type: string
           required: true
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: number
-        '401':
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
-        '500':
+            $ref: "#/definitions/error-response"
+        "500":
           description: Internal Server error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'carts/mine/checkGiftCard/{giftCardCode}'
+            $ref: "#/definitions/error-response"
+      summary: carts/mine/checkGiftCard/{giftCardCode}
   /V1/carts/mine/collect-totals:
     put:
       tags:
         - carts/mine/collect-totals
-      description: >-
-        Set shipping/billing methods and additional data for cart and collect
-        totals.
+      description: Set shipping/billing methods and additional data for cart and
+        collect totals.
       operationId: PutV1CartsMineCollecttotals
       consumes:
         - application/json
@@ -379,7 +377,7 @@ paths:
               - paymentMethod
             properties:
               paymentMethod:
-                $ref: '#/definitions/quote-data-payment-interface'
+                $ref: "#/definitions/quote-data-payment-interface"
               shippingCarrierCode:
                 type: string
                 description: The carrier code.
@@ -387,23 +385,23 @@ paths:
                 type: string
                 description: The shipping method code.
               additionalData:
-                $ref: '#/definitions/quote-data-totals-additional-data-interface'
+                $ref: "#/definitions/quote-data-totals-additional-data-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/quote-data-totals-interface'
-        '401':
+            $ref: "#/definitions/quote-data-totals-interface"
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: carts/mine/collect-totals
   /V1/carts/mine/payment-information:
     post:
@@ -425,30 +423,30 @@ paths:
               - paymentMethod
             properties:
               paymentMethod:
-                $ref: '#/definitions/quote-data-payment-interface'
+                $ref: "#/definitions/quote-data-payment-interface"
               billingAddress:
-                $ref: '#/definitions/quote-data-address-interface'
+                $ref: "#/definitions/quote-data-address-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: integer
             description: Order ID.
-        '401':
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
-        '500':
+            $ref: "#/definitions/error-response"
+        "500":
           description: Internal Server error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: carts/mine/payment-information
     get:
       tags:
@@ -462,18 +460,18 @@ paths:
         - application/json
         - application/xml
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/checkout-data-payment-details-interface'
-        '401':
+            $ref: "#/definitions/checkout-data-payment-details-interface"
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: carts/mine/payment-information
   /V1/carts/mine/po-payment-information:
     post:
@@ -495,30 +493,30 @@ paths:
               - paymentMethod
             properties:
               paymentMethod:
-                $ref: '#/definitions/quote-data-payment-interface'
+                $ref: "#/definitions/quote-data-payment-interface"
               billingAddress:
-                $ref: '#/definitions/quote-data-address-interface'
+                $ref: "#/definitions/quote-data-address-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: integer
             description: Purchase Order ID.
-        '401':
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
-        '500':
+            $ref: "#/definitions/error-response"
+        "500":
           description: Internal Server error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: carts/mine/po-payment-information
   /V1/carts/mine/set-payment-information:
     post:
@@ -540,37 +538,36 @@ paths:
               - paymentMethod
             properties:
               paymentMethod:
-                $ref: '#/definitions/quote-data-payment-interface'
+                $ref: "#/definitions/quote-data-payment-interface"
               billingAddress:
-                $ref: '#/definitions/quote-data-address-interface'
+                $ref: "#/definitions/quote-data-address-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: integer
             description: Order ID.
-        '400':
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
-        '401':
+            $ref: "#/definitions/error-response"
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: carts/mine/set-payment-information
   /V1/customers:
     post:
       tags:
         - customers
-      description: >-
-        Create customer account. Perform necessary business operations like
+      description: Create customer account. Perform necessary business operations like
         sending email.
       operationId: PostV1Customers
       consumes:
@@ -587,7 +584,7 @@ paths:
               - customer
             properties:
               customer:
-                $ref: '#/definitions/customer-data-customer-interface'
+                $ref: "#/definitions/customer-data-customer-interface"
               password:
                 type: string
               redirectUrl:
@@ -596,25 +593,24 @@ paths:
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/customer-data-customer-interface'
-        '500':
+            $ref: "#/definitions/customer-data-customer-interface"
+        "500":
           description: Internal Server error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: customers
   /V1/customers/isEmailAvailable:
     post:
       tags:
         - customers/isEmailAvailable
-      description: >-
-        Check if given email is associated with a customer account in given
+      description: Check if given email is associated with a customer account in given
         website.
       operationId: PostV1CustomersIsEmailAvailable
       consumes:
@@ -634,31 +630,30 @@ paths:
                 type: string
               websiteId:
                 type: integer
-                description: 'If not set, will use the current websiteId'
+                description: If not set, will use the current websiteId
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: boolean
-        '500':
+        "500":
           description: Internal Server error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: customers/isEmailAvailable
   /V1/customers/me/activate:
     put:
       tags:
         - customers/me/activate
-      description: >-
-        Activate a customer account using a key that was sent in a confirmation
-        email.
+      description: Activate a customer account using a key that was sent in a
+        confirmation email.
       operationId: PutV1CustomersMeActivate
       consumes:
         - application/json
@@ -679,22 +674,22 @@ paths:
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/customer-data-customer-interface'
-        '401':
+            $ref: "#/definitions/customer-data-customer-interface"
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
-        '500':
+            $ref: "#/definitions/error-response"
+        "500":
           description: Internal Server error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: customers/me/activate
   /V1/customers/me/password:
     put:
@@ -724,23 +719,23 @@ paths:
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: boolean
             description: true on success
-        '401':
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
-        '500':
+            $ref: "#/definitions/error-response"
+        "500":
           description: Internal Server error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: customers/me/password
   /V1/customers/password:
     put:
@@ -772,19 +767,19 @@ paths:
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: boolean
             description: true on success
-        '500':
+        "500":
           description: Internal Server error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: customers/password
   /V1/customers/resetPassword:
     post:
@@ -809,9 +804,8 @@ paths:
             properties:
               email:
                 type: string
-                description: >-
-                  If empty value given then the customer will be matched by the
-                  RP token.
+                description: If empty value given then the customer will be matched by the RP
+                  token.
               resetToken:
                 type: string
               newPassword:
@@ -820,25 +814,24 @@ paths:
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: boolean
             description: true on success
-        '500':
+        "500":
           description: Internal Server error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: customers/resetPassword
-  '/V1/customers/{customerId}/password/resetLinkToken/{resetPasswordLinkToken}':
+  "/V1/customers/{customerId}/password/resetLinkToken/{resetPasswordLinkToken}":
     get:
       tags:
-        - >-
-          customers/{customerId}/password/resetLinkToken/{resetPasswordLinkToken}
+        - customers/{customerId}/password/resetLinkToken/{resetPasswordLinkToken}
       description: Check if password reset token is valid.
       operationId: GetV1CustomersCustomerIdPasswordResetLinkTokenResetPasswordLinkToken
       consumes:
@@ -858,24 +851,24 @@ paths:
           type: string
           required: true
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: boolean
             description: True if the token is valid
-        '400':
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
-        '500':
+            $ref: "#/definitions/error-response"
+        "500":
           description: Internal Server error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'customers/{customerId}/password/resetLinkToken/{resetPasswordLinkToken}'
+            $ref: "#/definitions/error-response"
+      summary: customers/{customerId}/password/resetLinkToken/{resetPasswordLinkToken}
   /V1/directory/countries:
     get:
       tags:
@@ -889,21 +882,21 @@ paths:
         - application/json
         - application/xml
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: array
             items:
-              $ref: '#/definitions/directory-data-country-information-interface'
+              $ref: "#/definitions/directory-data-country-information-interface"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: directory/countries
-  '/V1/directory/countries/{countryId}':
+  "/V1/directory/countries/{countryId}":
     get:
       tags:
-        - 'directory/countries/{countryId}'
+        - directory/countries/{countryId}
       description: Get country and region information for the store.
       operationId: GetV1DirectoryCountriesCountryId
       consumes:
@@ -918,19 +911,19 @@ paths:
           type: string
           required: true
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/directory-data-country-information-interface'
-        '400':
+            $ref: "#/definitions/directory-data-country-information-interface"
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'directory/countries/{countryId}'
+            $ref: "#/definitions/error-response"
+      summary: directory/countries/{countryId}
   /V1/directory/currency:
     get:
       tags:
@@ -944,14 +937,14 @@ paths:
         - application/json
         - application/xml
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/directory-data-currency-information-interface'
+            $ref: "#/definitions/directory-data-currency-information-interface"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: directory/currency
   /V1/giftregistry/mine/estimate-shipping-methods:
     post:
@@ -979,33 +972,32 @@ paths:
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: array
             description: An array of shipping methods.
             items:
-              $ref: '#/definitions/quote-data-shipping-method-interface'
-        '400':
+              $ref: "#/definitions/quote-data-shipping-method-interface"
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
-        '401':
+            $ref: "#/definitions/error-response"
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: giftregistry/mine/estimate-shipping-methods
   /V1/guest-carts:
     post:
       tags:
         - guest-carts
-      description: >-
-        Enable an customer or guest user to create an empty cart and quote for
-        an anonymous customer.
+      description: Enable an customer or guest user to create an empty cart and quote
+        for an anonymous customer.
       operationId: PostV1Guestcarts
       consumes:
         - application/json
@@ -1014,24 +1006,24 @@ paths:
         - application/json
         - application/xml
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: string
             description: Cart ID.
-        '400':
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: guest-carts
-  '/V1/guest-carts/{cartId}':
+  "/V1/guest-carts/{cartId}":
     get:
       tags:
-        - 'guest-carts/{cartId}'
+        - guest-carts/{cartId}
       description: Enable a guest user to return information for a specified cart.
       operationId: GetV1GuestcartsCartId
       consumes:
@@ -1046,22 +1038,22 @@ paths:
           type: string
           required: true
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/quote-data-cart-interface'
-        '400':
+            $ref: "#/definitions/quote-data-cart-interface"
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}'
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}
     put:
       tags:
-        - 'guest-carts/{cartId}'
+        - guest-carts/{cartId}
       description: Assign a specified customer to a specified shopping cart.
       operationId: PutV1GuestcartsCartId
       consumes:
@@ -1092,23 +1084,23 @@ paths:
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: boolean
-        '401':
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}'
-  '/V1/guest-carts/{cartId}/billing-address':
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}
+  "/V1/guest-carts/{cartId}/billing-address":
     get:
       tags:
-        - 'guest-carts/{cartId}/billing-address'
+        - guest-carts/{cartId}/billing-address
       description: Return the billing address for a specified quote.
       operationId: GetV1GuestcartsCartIdBillingaddress
       consumes:
@@ -1124,22 +1116,22 @@ paths:
           required: true
           description: The cart ID.
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/quote-data-address-interface'
-        '400':
+            $ref: "#/definitions/quote-data-address-interface"
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/billing-address'
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/billing-address
     post:
       tags:
-        - 'guest-carts/{cartId}/billing-address'
+        - guest-carts/{cartId}/billing-address
       description: Assign a specified billing address to a specified cart.
       operationId: PostV1GuestcartsCartIdBillingaddress
       consumes:
@@ -1161,34 +1153,33 @@ paths:
               - address
             properties:
               address:
-                $ref: '#/definitions/quote-data-address-interface'
+                $ref: "#/definitions/quote-data-address-interface"
               useForShipping:
                 type: boolean
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: integer
             description: Address ID.
-        '400':
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/billing-address'
-  '/V1/guest-carts/{cartId}/collect-totals':
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/billing-address
+  "/V1/guest-carts/{cartId}/collect-totals":
     put:
       tags:
-        - 'guest-carts/{cartId}/collect-totals'
-      description: >-
-        Set shipping/billing methods and additional data for cart and collect
-        totals for guest.
+        - guest-carts/{cartId}/collect-totals
+      description: Set shipping/billing methods and additional data for cart and
+        collect totals for guest.
       operationId: PutV1GuestcartsCartIdCollecttotals
       consumes:
         - application/json
@@ -1209,7 +1200,7 @@ paths:
               - paymentMethod
             properties:
               paymentMethod:
-                $ref: '#/definitions/quote-data-payment-interface'
+                $ref: "#/definitions/quote-data-payment-interface"
               shippingCarrierCode:
                 type: string
                 description: The carrier code.
@@ -1217,24 +1208,24 @@ paths:
                 type: string
                 description: The shipping method code.
               additionalData:
-                $ref: '#/definitions/quote-data-totals-additional-data-interface'
+                $ref: "#/definitions/quote-data-totals-additional-data-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/quote-data-totals-interface'
+            $ref: "#/definitions/quote-data-totals-interface"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/collect-totals'
-  '/V1/guest-carts/{cartId}/coupons':
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/collect-totals
+  "/V1/guest-carts/{cartId}/coupons":
     get:
       tags:
-        - 'guest-carts/{cartId}/coupons'
+        - guest-carts/{cartId}/coupons
       description: Return information for a coupon in a specified cart.
       operationId: GetV1GuestcartsCartIdCoupons
       consumes:
@@ -1250,23 +1241,23 @@ paths:
           required: true
           description: The cart ID.
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: string
             description: The coupon code data.
-        '400':
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/coupons'
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/coupons
     delete:
       tags:
-        - 'guest-carts/{cartId}/coupons'
+        - guest-carts/{cartId}/coupons
       description: Delete a coupon from a specified cart.
       operationId: DeleteV1GuestcartsCartIdCoupons
       consumes:
@@ -1282,23 +1273,23 @@ paths:
           required: true
           description: The cart ID.
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: boolean
-        '400':
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/coupons'
-  '/V1/guest-carts/{cartId}/coupons/{couponCode}':
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/coupons
+  "/V1/guest-carts/{cartId}/coupons/{couponCode}":
     put:
       tags:
-        - 'guest-carts/{cartId}/coupons/{couponCode}'
+        - guest-carts/{cartId}/coupons/{couponCode}
       description: Add a coupon by code to a specified cart.
       operationId: PutV1GuestcartsCartIdCouponsCouponCode
       consumes:
@@ -1319,25 +1310,24 @@ paths:
           required: true
           description: The coupon code data.
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: boolean
-        '400':
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/coupons/{couponCode}'
-  '/V1/guest-carts/{cartId}/estimate-shipping-methods':
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/coupons/{couponCode}
+  "/V1/guest-carts/{cartId}/estimate-shipping-methods":
     post:
       tags:
-        - 'guest-carts/{cartId}/estimate-shipping-methods'
-      description: >-
-        Estimate shipping by address and return list of available shipping
+        - guest-carts/{cartId}/estimate-shipping-methods
+      description: Estimate shipping by address and return list of available shipping
         methods
       operationId: PostV1GuestcartsCartIdEstimateshippingmethods
       consumes:
@@ -1358,27 +1348,27 @@ paths:
               - address
             properties:
               address:
-                $ref: '#/definitions/quote-data-address-interface'
+                $ref: "#/definitions/quote-data-address-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: array
             description: An array of shipping methods
             items:
-              $ref: '#/definitions/quote-data-shipping-method-interface'
+              $ref: "#/definitions/quote-data-shipping-method-interface"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/estimate-shipping-methods'
-  '/V1/guest-carts/{cartId}/gift-message':
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/estimate-shipping-methods
+  "/V1/guest-carts/{cartId}/gift-message":
     get:
       tags:
-        - 'guest-carts/{cartId}/gift-message'
+        - guest-carts/{cartId}/gift-message
       description: Return the gift message for a specified order.
       operationId: GetV1GuestcartsCartIdGiftmessage
       consumes:
@@ -1394,18 +1384,18 @@ paths:
           required: true
           description: The shopping cart ID.
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/gift-message-data-message-interface'
+            $ref: "#/definitions/gift-message-data-message-interface"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/gift-message'
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/gift-message
     post:
       tags:
-        - 'guest-carts/{cartId}/gift-message'
+        - guest-carts/{cartId}/gift-message
       description: Set the gift message for an entire order.
       operationId: PostV1GuestcartsCartIdGiftmessage
       consumes:
@@ -1427,31 +1417,30 @@ paths:
               - giftMessage
             properties:
               giftMessage:
-                $ref: '#/definitions/gift-message-data-message-interface'
+                $ref: "#/definitions/gift-message-data-message-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: boolean
-        '400':
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/gift-message'
-  '/V1/guest-carts/{cartId}/gift-message/{itemId}':
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/gift-message
+  "/V1/guest-carts/{cartId}/gift-message/{itemId}":
     get:
       tags:
-        - 'guest-carts/{cartId}/gift-message/{itemId}'
-      description: >-
-        Return the gift message for a specified item in a specified shopping
-        cart.
+        - guest-carts/{cartId}/gift-message/{itemId}
+      description: Return the gift message for a specified item in a specified
+        shopping cart.
       operationId: GetV1GuestcartsCartIdGiftmessageItemId
       consumes:
         - application/json
@@ -1471,22 +1460,22 @@ paths:
           required: true
           description: The item ID.
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/gift-message-data-message-interface'
-        '400':
+            $ref: "#/definitions/gift-message-data-message-interface"
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/gift-message/{itemId}'
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/gift-message/{itemId}
     post:
       tags:
-        - 'guest-carts/{cartId}/gift-message/{itemId}'
+        - guest-carts/{cartId}/gift-message/{itemId}
       description: Set the gift message for a specified item in a specified shopping cart.
       operationId: PostV1GuestcartsCartIdGiftmessageItemId
       consumes:
@@ -1513,28 +1502,28 @@ paths:
               - giftMessage
             properties:
               giftMessage:
-                $ref: '#/definitions/gift-message-data-message-interface'
+                $ref: "#/definitions/gift-message-data-message-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: boolean
-        '400':
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/gift-message/{itemId}'
-  '/V1/guest-carts/{cartId}/items':
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/gift-message/{itemId}
+  "/V1/guest-carts/{cartId}/items":
     get:
       tags:
-        - 'guest-carts/{cartId}/items'
+        - guest-carts/{cartId}/items
       description: List items that are assigned to a specified cart.
       operationId: GetV1GuestcartsCartIdItems
       consumes:
@@ -1550,25 +1539,25 @@ paths:
           required: true
           description: The cart ID.
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: array
             description: Array of items.
             items:
-              $ref: '#/definitions/quote-data-cart-item-interface'
-        '400':
+              $ref: "#/definitions/quote-data-cart-item-interface"
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/items'
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/items
     post:
       tags:
-        - 'guest-carts/{cartId}/items'
+        - guest-carts/{cartId}/items
       description: Add/update the specified cart item.
       operationId: PostV1GuestcartsCartIdItems
       consumes:
@@ -1589,28 +1578,28 @@ paths:
               - cartItem
             properties:
               cartItem:
-                $ref: '#/definitions/quote-data-cart-item-interface'
+                $ref: "#/definitions/quote-data-cart-item-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/quote-data-cart-item-interface'
-        '400':
+            $ref: "#/definitions/quote-data-cart-item-interface"
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/items'
-  '/V1/guest-carts/{cartId}/items/{itemId}':
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/items
+  "/V1/guest-carts/{cartId}/items/{itemId}":
     put:
       tags:
-        - 'guest-carts/{cartId}/items/{itemId}'
+        - guest-carts/{cartId}/items/{itemId}
       description: Add/update the specified cart item.
       operationId: PutV1GuestcartsCartIdItemsItemId
       consumes:
@@ -1635,27 +1624,27 @@ paths:
               - cartItem
             properties:
               cartItem:
-                $ref: '#/definitions/quote-data-cart-item-interface'
+                $ref: "#/definitions/quote-data-cart-item-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/quote-data-cart-item-interface'
-        '400':
+            $ref: "#/definitions/quote-data-cart-item-interface"
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/items/{itemId}'
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/items/{itemId}
     delete:
       tags:
-        - 'guest-carts/{cartId}/items/{itemId}'
+        - guest-carts/{cartId}/items/{itemId}
       description: Remove the specified item from the specified cart.
       operationId: DeleteV1GuestcartsCartIdItemsItemId
       consumes:
@@ -1676,23 +1665,23 @@ paths:
           required: true
           description: The item ID of the item to be removed.
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: boolean
-        '400':
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/items/{itemId}'
-  '/V1/guest-carts/{cartId}/order':
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/items/{itemId}
+  "/V1/guest-carts/{cartId}/order":
     put:
       tags:
-        - 'guest-carts/{cartId}/order'
+        - guest-carts/{cartId}/order
       description: Place an order for a specified cart.
       operationId: PutV1GuestcartsCartIdOrder
       consumes:
@@ -1712,29 +1701,29 @@ paths:
           schema:
             properties:
               paymentMethod:
-                $ref: '#/definitions/quote-data-payment-interface'
+                $ref: "#/definitions/quote-data-payment-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: integer
             description: Order ID.
-        '400':
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/order'
-  '/V1/guest-carts/{cartId}/payment-information':
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/order
+  "/V1/guest-carts/{cartId}/payment-information":
     post:
       tags:
-        - 'guest-carts/{cartId}/payment-information'
+        - guest-carts/{cartId}/payment-information
       description: Set payment information and place order for a specified cart.
       operationId: PostV1GuestcartsCartIdPaymentinformation
       consumes:
@@ -1758,30 +1747,30 @@ paths:
               email:
                 type: string
               paymentMethod:
-                $ref: '#/definitions/quote-data-payment-interface'
+                $ref: "#/definitions/quote-data-payment-interface"
               billingAddress:
-                $ref: '#/definitions/quote-data-address-interface'
+                $ref: "#/definitions/quote-data-address-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: integer
             description: Order ID.
-        '500':
+        "500":
           description: Internal Server error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/payment-information'
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/payment-information
     get:
       tags:
-        - 'guest-carts/{cartId}/payment-information'
+        - guest-carts/{cartId}/payment-information
       description: Get payment information
       operationId: GetV1GuestcartsCartIdPaymentinformation
       consumes:
@@ -1796,22 +1785,21 @@ paths:
           type: string
           required: true
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/checkout-data-payment-details-interface'
+            $ref: "#/definitions/checkout-data-payment-details-interface"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/payment-information'
-  '/V1/guest-carts/{cartId}/payment-methods':
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/payment-information
+  "/V1/guest-carts/{cartId}/payment-methods":
     get:
       tags:
-        - 'guest-carts/{cartId}/payment-methods'
-      description: >-
-        List available payment methods for a specified shopping cart. This call
-        returns an array of objects, but detailed information about each
+        - guest-carts/{cartId}/payment-methods
+      description: List available payment methods for a specified shopping cart. This
+        call returns an array of objects, but detailed information about each
         object’s attributes might not be included.  See
         https://devdocs.magento.com/codelinks/attributes.html#GuestPaymentMethodManagementInterface
         to determine which call to use to get detailed information about all
@@ -1830,26 +1818,26 @@ paths:
           required: true
           description: The cart ID.
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: array
             description: Array of payment methods.
             items:
-              $ref: '#/definitions/quote-data-payment-method-interface'
-        '400':
+              $ref: "#/definitions/quote-data-payment-method-interface"
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/payment-methods'
-  '/V1/guest-carts/{cartId}/selected-payment-method':
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/payment-methods
+  "/V1/guest-carts/{cartId}/selected-payment-method":
     get:
       tags:
-        - 'guest-carts/{cartId}/selected-payment-method'
+        - guest-carts/{cartId}/selected-payment-method
       description: Return the payment method for a specified shopping cart.
       operationId: GetV1GuestcartsCartIdSelectedpaymentmethod
       consumes:
@@ -1865,22 +1853,22 @@ paths:
           required: true
           description: The cart ID.
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/quote-data-payment-interface'
-        '400':
+            $ref: "#/definitions/quote-data-payment-interface"
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/selected-payment-method'
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/selected-payment-method
     put:
       tags:
-        - 'guest-carts/{cartId}/selected-payment-method'
+        - guest-carts/{cartId}/selected-payment-method
       description: Add a specified payment method to a specified shopping cart.
       operationId: PutV1GuestcartsCartIdSelectedpaymentmethod
       consumes:
@@ -1902,29 +1890,29 @@ paths:
               - method
             properties:
               method:
-                $ref: '#/definitions/quote-data-payment-interface'
+                $ref: "#/definitions/quote-data-payment-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: integer
             description: Payment method ID.
-        '400':
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/selected-payment-method'
-  '/V1/guest-carts/{cartId}/set-payment-information':
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/selected-payment-method
+  "/V1/guest-carts/{cartId}/set-payment-information":
     post:
       tags:
-        - 'guest-carts/{cartId}/set-payment-information'
+        - guest-carts/{cartId}/set-payment-information
       description: Set payment information for a specified cart.
       operationId: PostV1GuestcartsCartIdSetpaymentinformation
       consumes:
@@ -1948,32 +1936,32 @@ paths:
               email:
                 type: string
               paymentMethod:
-                $ref: '#/definitions/quote-data-payment-interface'
+                $ref: "#/definitions/quote-data-payment-interface"
               billingAddress:
-                $ref: '#/definitions/quote-data-address-interface'
+                $ref: "#/definitions/quote-data-address-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: integer
             description: Order ID.
-        '400':
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/set-payment-information'
-  '/V1/guest-carts/{cartId}/shipping-information':
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/set-payment-information
+  "/V1/guest-carts/{cartId}/shipping-information":
     post:
       tags:
-        - 'guest-carts/{cartId}/shipping-information'
-      description: ''
+        - guest-carts/{cartId}/shipping-information
+      description: ""
       operationId: PostV1GuestcartsCartIdShippinginformation
       consumes:
         - application/json
@@ -1993,24 +1981,24 @@ paths:
               - addressInformation
             properties:
               addressInformation:
-                $ref: '#/definitions/checkout-data-shipping-information-interface'
+                $ref: "#/definitions/checkout-data-shipping-information-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/checkout-data-payment-details-interface'
+            $ref: "#/definitions/checkout-data-payment-details-interface"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/shipping-information'
-  '/V1/guest-carts/{cartId}/shipping-methods':
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/shipping-information
+  "/V1/guest-carts/{cartId}/shipping-methods":
     get:
       tags:
-        - 'guest-carts/{cartId}/shipping-methods'
+        - guest-carts/{cartId}/shipping-methods
       description: List applicable shipping methods for a specified quote.
       operationId: GetV1GuestcartsCartIdShippingmethods
       consumes:
@@ -2026,26 +2014,26 @@ paths:
           required: true
           description: The shopping cart ID.
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: array
             description: An array of shipping methods.
             items:
-              $ref: '#/definitions/quote-data-shipping-method-interface'
-        '400':
+              $ref: "#/definitions/quote-data-shipping-method-interface"
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/shipping-methods'
-  '/V1/guest-carts/{cartId}/totals':
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/shipping-methods
+  "/V1/guest-carts/{cartId}/totals":
     get:
       tags:
-        - 'guest-carts/{cartId}/totals'
+        - guest-carts/{cartId}/totals
       description: Return quote totals data for a specified cart.
       operationId: GetV1GuestcartsCartIdTotals
       consumes:
@@ -2061,23 +2049,23 @@ paths:
           required: true
           description: The cart ID.
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/quote-data-totals-interface'
-        '400':
+            $ref: "#/definitions/quote-data-totals-interface"
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/totals'
-  '/V1/guest-carts/{cartId}/totals-information':
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/totals
+  "/V1/guest-carts/{cartId}/totals-information":
     post:
       tags:
-        - 'guest-carts/{cartId}/totals-information'
+        - guest-carts/{cartId}/totals-information
       description: Calculate quote totals based on address and shipping method.
       operationId: PostV1GuestcartsCartIdTotalsinformation
       consumes:
@@ -2098,24 +2086,24 @@ paths:
               - addressInformation
             properties:
               addressInformation:
-                $ref: '#/definitions/checkout-data-totals-information-interface'
+                $ref: "#/definitions/checkout-data-totals-information-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/quote-data-totals-interface'
+            $ref: "#/definitions/quote-data-totals-interface"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-carts/{cartId}/totals-information'
-  '/V1/guest-giftregistry/{cartId}/estimate-shipping-methods':
+            $ref: "#/definitions/error-response"
+      summary: guest-carts/{cartId}/totals-information
+  "/V1/guest-giftregistry/{cartId}/estimate-shipping-methods":
     post:
       tags:
-        - 'guest-giftregistry/{cartId}/estimate-shipping-methods'
+        - guest-giftregistry/{cartId}/estimate-shipping-methods
       description: Estimate shipping
       operationId: PostV1GuestgiftregistryCartIdEstimateshippingmethods
       consumes:
@@ -2143,22 +2131,22 @@ paths:
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: array
             description: An array of shipping methods.
             items:
-              $ref: '#/definitions/quote-data-shipping-method-interface'
-        '400':
+              $ref: "#/definitions/quote-data-shipping-method-interface"
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'guest-giftregistry/{cartId}/estimate-shipping-methods'
+            $ref: "#/definitions/error-response"
+      summary: guest-giftregistry/{cartId}/estimate-shipping-methods
   /V1/integration/admin/token:
     post:
       tags:
@@ -2187,23 +2175,23 @@ paths:
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: string
             description: Token created
-        '400':
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
-        '500':
+            $ref: "#/definitions/error-response"
+        "500":
           description: Internal Server error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: integration/admin/token
   /V1/integration/customer/revoke-customer-token:
     post:
@@ -2218,22 +2206,22 @@ paths:
         - application/json
         - application/xml
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: boolean
-        '401':
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
-        '500':
+            $ref: "#/definitions/error-response"
+        "500":
           description: Internal Server error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: integration/customer/revoke-customer-token
   /V1/integration/customer/token:
     post:
@@ -2263,27 +2251,26 @@ paths:
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: string
             description: Token created
-        '400':
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: integration/customer/token
   /V1/inventory/in-store-pickup/pickup-locations/:
     get:
       tags:
         - inventory/in-store-pickup/pickup-locations/
-      description: >-
-        Get Pickup Locations according to the results of filtration by Search
-        Request.
+      description: Get Pickup Locations according to the results of filtration by
+        Search Request.
       operationId: GetV1InventoryInstorepickupPickuplocations
       consumes:
         - application/json
@@ -2292,121 +2279,120 @@ paths:
         - application/json
         - application/xml
       parameters:
-        - name: 'searchRequest[area][radius]'
+        - name: searchRequest[area][radius]
           in: query
           type: integer
           description: Search radius in KM.
-        - name: 'searchRequest[area][searchTerm]'
+        - name: searchRequest[area][searchTerm]
           in: query
           type: string
           description: Search term string.
-        - name: 'searchRequest[filters][country][value]'
+        - name: searchRequest[filters][country][value]
           in: query
           type: string
           description: Value.
-        - name: 'searchRequest[filters][country][conditionType]'
+        - name: searchRequest[filters][country][conditionType]
           in: query
           type: string
           description: Condition Type.
-        - name: 'searchRequest[filters][postcode][value]'
+        - name: searchRequest[filters][postcode][value]
           in: query
           type: string
           description: Value.
-        - name: 'searchRequest[filters][postcode][conditionType]'
+        - name: searchRequest[filters][postcode][conditionType]
           in: query
           type: string
           description: Condition Type.
-        - name: 'searchRequest[filters][region][value]'
+        - name: searchRequest[filters][region][value]
           in: query
           type: string
           description: Value.
-        - name: 'searchRequest[filters][region][conditionType]'
+        - name: searchRequest[filters][region][conditionType]
           in: query
           type: string
           description: Condition Type.
-        - name: 'searchRequest[filters][regionId][value]'
+        - name: searchRequest[filters][regionId][value]
           in: query
           type: string
           description: Value.
-        - name: 'searchRequest[filters][regionId][conditionType]'
+        - name: searchRequest[filters][regionId][conditionType]
           in: query
           type: string
           description: Condition Type.
-        - name: 'searchRequest[filters][city][value]'
+        - name: searchRequest[filters][city][value]
           in: query
           type: string
           description: Value.
-        - name: 'searchRequest[filters][city][conditionType]'
+        - name: searchRequest[filters][city][conditionType]
           in: query
           type: string
           description: Condition Type.
-        - name: 'searchRequest[filters][street][value]'
+        - name: searchRequest[filters][street][value]
           in: query
           type: string
           description: Value.
-        - name: 'searchRequest[filters][street][conditionType]'
+        - name: searchRequest[filters][street][conditionType]
           in: query
           type: string
           description: Condition Type.
-        - name: 'searchRequest[filters][name][value]'
+        - name: searchRequest[filters][name][value]
           in: query
           type: string
           description: Value.
-        - name: 'searchRequest[filters][name][conditionType]'
+        - name: searchRequest[filters][name][conditionType]
           in: query
           type: string
           description: Condition Type.
-        - name: 'searchRequest[filters][pickupLocationCode][value]'
+        - name: searchRequest[filters][pickupLocationCode][value]
           in: query
           type: string
           description: Value.
-        - name: 'searchRequest[filters][pickupLocationCode][conditionType]'
+        - name: searchRequest[filters][pickupLocationCode][conditionType]
           in: query
           type: string
           description: Condition Type.
-        - name: 'searchRequest[pageSize]'
+        - name: searchRequest[pageSize]
           in: query
           type: integer
           description: Page size.
-        - name: 'searchRequest[currentPage]'
+        - name: searchRequest[currentPage]
           in: query
           type: integer
           description: Current page.
-        - name: 'searchRequest[scopeType]'
+        - name: searchRequest[scopeType]
           in: query
           type: string
           description: Sales Channel Type.
-        - name: 'searchRequest[scopeCode]'
+        - name: searchRequest[scopeCode]
           in: query
           type: string
           description: Sales Channel code.
-        - name: 'searchRequest[sort][0][field]'
+        - name: searchRequest[sort][0][field]
           in: query
           type: string
           description: Sorting field.
-        - name: 'searchRequest[sort][0][direction]'
+        - name: searchRequest[sort][0][direction]
           in: query
           type: string
           description: Sorting direction.
-        - name: 'searchRequest[extensionAttributes][productsInfo][0][sku]'
+        - name: searchRequest[extensionAttributes][productsInfo][0][sku]
           in: query
           type: string
           description: Product SKU.
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: >-
-              #/definitions/inventory-in-store-pickup-api-data-search-result-interface
+            $ref: "#/definitions/inventory-in-store-pickup-api-data-search-result-interface"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: inventory/in-store-pickup/pickup-locations/
-  '/V1/negotiable-carts/{cartId}/billing-address':
+  "/V1/negotiable-carts/{cartId}/billing-address":
     get:
       tags:
-        - 'negotiable-carts/{cartId}/billing-address'
+        - negotiable-carts/{cartId}/billing-address
       description: Returns the billing address for a specified quote.
       operationId: GetV1NegotiablecartsCartIdBillingaddress
       consumes:
@@ -2422,26 +2408,26 @@ paths:
           required: true
           description: The cart ID.
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/quote-data-address-interface'
-        '400':
+            $ref: "#/definitions/quote-data-address-interface"
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
-        '401':
+            $ref: "#/definitions/error-response"
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'negotiable-carts/{cartId}/billing-address'
+            $ref: "#/definitions/error-response"
+      summary: negotiable-carts/{cartId}/billing-address
     post:
       tags:
-        - 'negotiable-carts/{cartId}/billing-address'
+        - negotiable-carts/{cartId}/billing-address
       description: Assigns a specified billing address to a specified cart.
       operationId: PostV1NegotiablecartsCartIdBillingaddress
       consumes:
@@ -2463,35 +2449,35 @@ paths:
               - address
             properties:
               address:
-                $ref: '#/definitions/quote-data-address-interface'
+                $ref: "#/definitions/quote-data-address-interface"
               useForShipping:
                 type: boolean
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: integer
             description: Address ID.
-        '400':
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
-        '401':
+            $ref: "#/definitions/error-response"
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'negotiable-carts/{cartId}/billing-address'
-  '/V1/negotiable-carts/{cartId}/coupons':
+            $ref: "#/definitions/error-response"
+      summary: negotiable-carts/{cartId}/billing-address
+  "/V1/negotiable-carts/{cartId}/coupons":
     delete:
       tags:
-        - 'negotiable-carts/{cartId}/coupons'
+        - negotiable-carts/{cartId}/coupons
       description: Deletes a coupon from a specified cart.
       operationId: DeleteV1NegotiablecartsCartIdCoupons
       consumes:
@@ -2507,27 +2493,27 @@ paths:
           required: true
           description: The cart ID.
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: boolean
-        '400':
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
-        '401':
+            $ref: "#/definitions/error-response"
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'negotiable-carts/{cartId}/coupons'
-  '/V1/negotiable-carts/{cartId}/coupons/{couponCode}':
+            $ref: "#/definitions/error-response"
+      summary: negotiable-carts/{cartId}/coupons
+  "/V1/negotiable-carts/{cartId}/coupons/{couponCode}":
     put:
       tags:
-        - 'negotiable-carts/{cartId}/coupons/{couponCode}'
+        - negotiable-carts/{cartId}/coupons/{couponCode}
       description: Adds a coupon by code to a specified cart.
       operationId: PutV1NegotiablecartsCartIdCouponsCouponCode
       consumes:
@@ -2548,29 +2534,28 @@ paths:
           required: true
           description: The coupon code data.
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: boolean
-        '400':
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
-        '401':
+            $ref: "#/definitions/error-response"
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'negotiable-carts/{cartId}/coupons/{couponCode}'
-  '/V1/negotiable-carts/{cartId}/estimate-shipping-methods':
+            $ref: "#/definitions/error-response"
+      summary: negotiable-carts/{cartId}/coupons/{couponCode}
+  "/V1/negotiable-carts/{cartId}/estimate-shipping-methods":
     post:
       tags:
-        - 'negotiable-carts/{cartId}/estimate-shipping-methods'
-      description: >-
-        Estimate shipping by address and return list of available shipping
+        - negotiable-carts/{cartId}/estimate-shipping-methods
+      description: Estimate shipping by address and return list of available shipping
         methods
       operationId: PostV1NegotiablecartsCartIdEstimateshippingmethods
       consumes:
@@ -2591,31 +2576,31 @@ paths:
               - address
             properties:
               address:
-                $ref: '#/definitions/quote-data-address-interface'
+                $ref: "#/definitions/quote-data-address-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: array
             description: An array of shipping methods
             items:
-              $ref: '#/definitions/quote-data-shipping-method-interface'
-        '401':
+              $ref: "#/definitions/quote-data-shipping-method-interface"
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'negotiable-carts/{cartId}/estimate-shipping-methods'
-  '/V1/negotiable-carts/{cartId}/estimate-shipping-methods-by-address-id':
+            $ref: "#/definitions/error-response"
+      summary: negotiable-carts/{cartId}/estimate-shipping-methods
+  "/V1/negotiable-carts/{cartId}/estimate-shipping-methods-by-address-id":
     post:
       tags:
-        - 'negotiable-carts/{cartId}/estimate-shipping-methods-by-address-id'
+        - negotiable-carts/{cartId}/estimate-shipping-methods-by-address-id
       description: Estimate shipping
       operationId: PostV1NegotiablecartsCartIdEstimateshippingmethodsbyaddressid
       consumes:
@@ -2643,27 +2628,27 @@ paths:
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: array
             description: An array of shipping methods.
             items:
-              $ref: '#/definitions/quote-data-shipping-method-interface'
-        '401':
+              $ref: "#/definitions/quote-data-shipping-method-interface"
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'negotiable-carts/{cartId}/estimate-shipping-methods-by-address-id'
-  '/V1/negotiable-carts/{cartId}/giftCards':
+            $ref: "#/definitions/error-response"
+      summary: negotiable-carts/{cartId}/estimate-shipping-methods-by-address-id
+  "/V1/negotiable-carts/{cartId}/giftCards":
     post:
       tags:
-        - 'negotiable-carts/{cartId}/giftCards'
-      description: ''
+        - negotiable-carts/{cartId}/giftCards
+      description: ""
       operationId: PostV1NegotiablecartsCartIdGiftCards
       consumes:
         - application/json
@@ -2683,29 +2668,28 @@ paths:
               - giftCardAccountData
             properties:
               giftCardAccountData:
-                $ref: >-
-                  #/definitions/gift-card-account-data-gift-card-account-interface
+                $ref: "#/definitions/gift-card-account-data-gift-card-account-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: boolean
-        '401':
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'negotiable-carts/{cartId}/giftCards'
-  '/V1/negotiable-carts/{cartId}/giftCards/{giftCardCode}':
+            $ref: "#/definitions/error-response"
+      summary: negotiable-carts/{cartId}/giftCards
+  "/V1/negotiable-carts/{cartId}/giftCards/{giftCardCode}":
     delete:
       tags:
-        - 'negotiable-carts/{cartId}/giftCards/{giftCardCode}'
+        - negotiable-carts/{cartId}/giftCards/{giftCardCode}
       description: Remove GiftCard Account entity
       operationId: DeleteV1NegotiablecartsCartIdGiftCardsGiftCardCode
       consumes:
@@ -2724,23 +2708,23 @@ paths:
           type: string
           required: true
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: boolean
-        '401':
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'negotiable-carts/{cartId}/giftCards/{giftCardCode}'
-  '/V1/negotiable-carts/{cartId}/payment-information':
+            $ref: "#/definitions/error-response"
+      summary: negotiable-carts/{cartId}/giftCards/{giftCardCode}
+  "/V1/negotiable-carts/{cartId}/payment-information":
     post:
       tags:
-        - 'negotiable-carts/{cartId}/payment-information'
+        - negotiable-carts/{cartId}/payment-information
       description: Set payment information and place order for a specified cart.
       operationId: PostV1NegotiablecartsCartIdPaymentinformation
       consumes:
@@ -2761,34 +2745,34 @@ paths:
               - paymentMethod
             properties:
               paymentMethod:
-                $ref: '#/definitions/quote-data-payment-interface'
+                $ref: "#/definitions/quote-data-payment-interface"
               billingAddress:
-                $ref: '#/definitions/quote-data-address-interface'
+                $ref: "#/definitions/quote-data-address-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: integer
             description: Order ID.
-        '401':
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
-        '500':
+            $ref: "#/definitions/error-response"
+        "500":
           description: Internal Server error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'negotiable-carts/{cartId}/payment-information'
+            $ref: "#/definitions/error-response"
+      summary: negotiable-carts/{cartId}/payment-information
     get:
       tags:
-        - 'negotiable-carts/{cartId}/payment-information'
+        - negotiable-carts/{cartId}/payment-information
       description: Get payment information
       operationId: GetV1NegotiablecartsCartIdPaymentinformation
       consumes:
@@ -2803,23 +2787,23 @@ paths:
           type: integer
           required: true
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/checkout-data-payment-details-interface'
-        '401':
+            $ref: "#/definitions/checkout-data-payment-details-interface"
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'negotiable-carts/{cartId}/payment-information'
-  '/V1/negotiable-carts/{cartId}/set-payment-information':
+            $ref: "#/definitions/error-response"
+      summary: negotiable-carts/{cartId}/payment-information
+  "/V1/negotiable-carts/{cartId}/set-payment-information":
     post:
       tags:
-        - 'negotiable-carts/{cartId}/set-payment-information'
+        - negotiable-carts/{cartId}/set-payment-information
       description: Set payment information for a specified cart.
       operationId: PostV1NegotiablecartsCartIdSetpaymentinformation
       consumes:
@@ -2840,36 +2824,36 @@ paths:
               - paymentMethod
             properties:
               paymentMethod:
-                $ref: '#/definitions/quote-data-payment-interface'
+                $ref: "#/definitions/quote-data-payment-interface"
               billingAddress:
-                $ref: '#/definitions/quote-data-address-interface'
+                $ref: "#/definitions/quote-data-address-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: integer
             description: Order ID.
-        '400':
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
-        '401':
+            $ref: "#/definitions/error-response"
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'negotiable-carts/{cartId}/set-payment-information'
-  '/V1/negotiable-carts/{cartId}/shipping-information':
+            $ref: "#/definitions/error-response"
+      summary: negotiable-carts/{cartId}/set-payment-information
+  "/V1/negotiable-carts/{cartId}/shipping-information":
     post:
       tags:
-        - 'negotiable-carts/{cartId}/shipping-information'
-      description: ''
+        - negotiable-carts/{cartId}/shipping-information
+      description: ""
       operationId: PostV1NegotiablecartsCartIdShippinginformation
       consumes:
         - application/json
@@ -2889,28 +2873,28 @@ paths:
               - addressInformation
             properties:
               addressInformation:
-                $ref: '#/definitions/checkout-data-shipping-information-interface'
+                $ref: "#/definitions/checkout-data-shipping-information-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/checkout-data-payment-details-interface'
-        '401':
+            $ref: "#/definitions/checkout-data-payment-details-interface"
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'negotiable-carts/{cartId}/shipping-information'
-  '/V1/negotiable-carts/{cartId}/totals':
+            $ref: "#/definitions/error-response"
+      summary: negotiable-carts/{cartId}/shipping-information
+  "/V1/negotiable-carts/{cartId}/totals":
     get:
       tags:
-        - 'negotiable-carts/{cartId}/totals'
+        - negotiable-carts/{cartId}/totals
       description: Returns quote totals data for a specified cart.
       operationId: GetV1NegotiablecartsCartIdTotals
       consumes:
@@ -2926,31 +2910,30 @@ paths:
           required: true
           description: The cart ID.
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/quote-data-totals-interface'
-        '400':
+            $ref: "#/definitions/quote-data-totals-interface"
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
-        '401':
+            $ref: "#/definitions/error-response"
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'negotiable-carts/{cartId}/totals'
+            $ref: "#/definitions/error-response"
+      summary: negotiable-carts/{cartId}/totals
   /V1/products-render-info:
     get:
       tags:
         - products-render-info
-      description: >-
-        Collect and retrieve the list of product render info. This info contains
-        raw prices and formatted prices, product name, stock status, store_id,
-        etc.
+      description: Collect and retrieve the list of product render info. This info
+        contains raw prices and formatted prices, product name, stock status,
+        store_id, etc.
       operationId: GetV1Productsrenderinfo
       consumes:
         - application/json
@@ -2959,31 +2942,31 @@ paths:
         - application/json
         - application/xml
       parameters:
-        - name: 'searchCriteria[filterGroups][0][filters][0][field]'
+        - name: searchCriteria[filterGroups][0][filters][0][field]
           in: query
           type: string
           description: Field
-        - name: 'searchCriteria[filterGroups][0][filters][0][value]'
+        - name: searchCriteria[filterGroups][0][filters][0][value]
           in: query
           type: string
           description: Value
-        - name: 'searchCriteria[filterGroups][0][filters][0][conditionType]'
+        - name: searchCriteria[filterGroups][0][filters][0][conditionType]
           in: query
           type: string
           description: Condition type
-        - name: 'searchCriteria[sortOrders][0][field]'
+        - name: searchCriteria[sortOrders][0][field]
           in: query
           type: string
           description: Sorting field.
-        - name: 'searchCriteria[sortOrders][0][direction]'
+        - name: searchCriteria[sortOrders][0][direction]
           in: query
           type: string
           description: Sorting direction.
-        - name: 'searchCriteria[pageSize]'
+        - name: searchCriteria[pageSize]
           in: query
           type: integer
           description: Page size.
-        - name: 'searchCriteria[currentPage]'
+        - name: searchCriteria[currentPage]
           in: query
           type: integer
           description: Current page.
@@ -2996,19 +2979,19 @@ paths:
           type: string
           required: true
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/catalog-data-product-render-search-results-interface'
+            $ref: "#/definitions/catalog-data-product-render-search-results-interface"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: products-render-info
-  '/V1/purchase-order-carts/{cartId}/payment-information':
+  "/V1/purchase-order-carts/{cartId}/payment-information":
     post:
       tags:
-        - 'purchase-order-carts/{cartId}/payment-information'
+        - purchase-order-carts/{cartId}/payment-information
       description: Set payment information and place order for a specified cart.
       operationId: PostV1PurchaseordercartsCartIdPaymentinformation
       consumes:
@@ -3029,34 +3012,34 @@ paths:
               - paymentMethod
             properties:
               paymentMethod:
-                $ref: '#/definitions/quote-data-payment-interface'
+                $ref: "#/definitions/quote-data-payment-interface"
               billingAddress:
-                $ref: '#/definitions/quote-data-address-interface'
+                $ref: "#/definitions/quote-data-address-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: integer
             description: Order ID.
-        '400':
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
-        '401':
+            $ref: "#/definitions/error-response"
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'purchase-order-carts/{cartId}/payment-information'
+            $ref: "#/definitions/error-response"
+      summary: purchase-order-carts/{cartId}/payment-information
     get:
       tags:
-        - 'purchase-order-carts/{cartId}/payment-information'
+        - purchase-order-carts/{cartId}/payment-information
       description: Get payment information
       operationId: GetV1PurchaseordercartsCartIdPaymentinformation
       consumes:
@@ -3071,23 +3054,23 @@ paths:
           type: integer
           required: true
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/checkout-data-payment-details-interface'
-        '401':
+            $ref: "#/definitions/checkout-data-payment-details-interface"
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'purchase-order-carts/{cartId}/payment-information'
-  '/V1/purchase-order-carts/{cartId}/set-payment-information':
+            $ref: "#/definitions/error-response"
+      summary: purchase-order-carts/{cartId}/payment-information
+  "/V1/purchase-order-carts/{cartId}/set-payment-information":
     post:
       tags:
-        - 'purchase-order-carts/{cartId}/set-payment-information'
+        - purchase-order-carts/{cartId}/set-payment-information
       description: Set payment information for a specified cart.
       operationId: PostV1PurchaseordercartsCartIdSetpaymentinformation
       consumes:
@@ -3108,31 +3091,31 @@ paths:
               - paymentMethod
             properties:
               paymentMethod:
-                $ref: '#/definitions/quote-data-payment-interface'
+                $ref: "#/definitions/quote-data-payment-interface"
               billingAddress:
-                $ref: '#/definitions/quote-data-address-interface'
+                $ref: "#/definitions/quote-data-address-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: integer
             description: Order ID.
-        '400':
+        "400":
           description: 400 Bad Request
           schema:
-            $ref: '#/definitions/error-response'
-        '401':
+            $ref: "#/definitions/error-response"
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'purchase-order-carts/{cartId}/set-payment-information'
+            $ref: "#/definitions/error-response"
+      summary: purchase-order-carts/{cartId}/set-payment-information
   /V1/quick-checkout/account-details:
     post:
       tags:
@@ -3146,14 +3129,14 @@ paths:
         - application/json
         - application/xml
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/quick-checkout-data-account-interface'
+            $ref: "#/definitions/quick-checkout-data-account-interface"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: quick-checkout/account-details
   /V1/quick-checkout/has-account:
     post:
@@ -3180,14 +3163,14 @@ paths:
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: boolean
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: quick-checkout/has-account
   /V1/quick-checkout/storefront/has-account:
     post:
@@ -3214,18 +3197,18 @@ paths:
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: boolean
-        '500':
+        "500":
           description: Internal Server error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: quick-checkout/storefront/has-account
   /V1/requisition_lists:
     post:
@@ -3247,27 +3230,27 @@ paths:
               - requisitionList
             properties:
               requisitionList:
-                $ref: '#/definitions/requisition-list-data-requisition-list-interface'
+                $ref: "#/definitions/requisition-list-data-requisition-list-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/requisition-list-data-requisition-list-interface'
-        '401':
+            $ref: "#/definitions/requisition-list-data-requisition-list-interface"
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
-        '500':
+            $ref: "#/definitions/error-response"
+        "500":
           description: Internal Server error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: requisition_lists
   /V1/reward/mine/use-reward:
     post:
@@ -3282,18 +3265,18 @@ paths:
         - application/json
         - application/xml
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: boolean
-        '401':
+        "401":
           description: 401 Unauthorized
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: reward/mine/use-reward
   /V1/search:
     get:
@@ -3308,46 +3291,46 @@ paths:
         - application/json
         - application/xml
       parameters:
-        - name: 'searchCriteria[requestName]'
+        - name: searchCriteria[requestName]
           in: query
           type: string
-        - name: 'searchCriteria[filterGroups][0][filters][0][field]'
+        - name: searchCriteria[filterGroups][0][filters][0][field]
           in: query
           type: string
           description: Field
-        - name: 'searchCriteria[filterGroups][0][filters][0][value]'
+        - name: searchCriteria[filterGroups][0][filters][0][value]
           in: query
           type: string
           description: Value
-        - name: 'searchCriteria[filterGroups][0][filters][0][conditionType]'
+        - name: searchCriteria[filterGroups][0][filters][0][conditionType]
           in: query
           type: string
           description: Condition type
-        - name: 'searchCriteria[sortOrders][0][field]'
+        - name: searchCriteria[sortOrders][0][field]
           in: query
           type: string
           description: Sorting field.
-        - name: 'searchCriteria[sortOrders][0][direction]'
+        - name: searchCriteria[sortOrders][0][direction]
           in: query
           type: string
           description: Sorting direction.
-        - name: 'searchCriteria[pageSize]'
+        - name: searchCriteria[pageSize]
           in: query
           type: integer
           description: Page size.
-        - name: 'searchCriteria[currentPage]'
+        - name: searchCriteria[currentPage]
           in: query
           type: integer
           description: Current page.
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/framework-search-search-result-interface'
+            $ref: "#/definitions/framework-search-search-result-interface"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: search
   /V1/tfa/provider/authy/activate:
     post:
@@ -3380,7 +3363,7 @@ paths:
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: tfa/provider/authy/activate
   /V1/tfa/provider/authy/authenticate:
     post:
@@ -3413,7 +3396,7 @@ paths:
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: string
@@ -3421,7 +3404,7 @@ paths:
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: tfa/provider/authy/authenticate
   /V1/tfa/provider/authy/authenticate-onetouch:
     post:
@@ -3451,14 +3434,14 @@ paths:
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: string
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: tfa/provider/authy/authenticate-onetouch
   /V1/tfa/provider/authy/configure:
     post:
@@ -3483,25 +3466,25 @@ paths:
               tfaToken:
                 type: string
               deviceData:
-                $ref: '#/definitions/two-factor-auth-data-authy-device-interface'
+                $ref: "#/definitions/two-factor-auth-data-authy-device-interface"
             type: object
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: >-
-              #/definitions/two-factor-auth-data-authy-registration-prompt-response-interface
+            $ref: "#/definitions/two-factor-auth-data-authy-registration-prompt-response-in\
+              terface"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: tfa/provider/authy/configure
-  '/V1/tfa/provider/authy/send-token/{via}':
+  "/V1/tfa/provider/authy/send-token/{via}":
     post:
       tags:
-        - 'tfa/provider/authy/send-token/{via}'
+        - tfa/provider/authy/send-token/{via}
       description: Send a one time password to a device using authy
       operationId: PostV1TfaProviderAuthySendtokenVia
       consumes:
@@ -3533,8 +3516,8 @@ paths:
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
-      summary: 'tfa/provider/authy/send-token/{via}'
+            $ref: "#/definitions/error-response"
+      summary: tfa/provider/authy/send-token/{via}
   /V1/tfa/provider/duo_security/activate:
     post:
       tags:
@@ -3566,7 +3549,7 @@ paths:
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: tfa/provider/duo_security/activate
   /V1/tfa/provider/duo_security/authenticate:
     post:
@@ -3599,14 +3582,14 @@ paths:
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: string
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: tfa/provider/duo_security/authenticate
   /V1/tfa/provider/duo_security/configure:
     post:
@@ -3633,14 +3616,14 @@ paths:
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/two-factor-auth-data-duo-data-interface'
+            $ref: "#/definitions/two-factor-auth-data-duo-data-interface"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: tfa/provider/duo_security/configure
   /V1/tfa/provider/duo_security/get-authentication-data:
     post:
@@ -3670,14 +3653,14 @@ paths:
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/two-factor-auth-data-duo-data-interface'
+            $ref: "#/definitions/two-factor-auth-data-duo-data-interface"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: tfa/provider/duo_security/get-authentication-data
   /V1/tfa/provider/google/activate:
     post:
@@ -3710,7 +3693,7 @@ paths:
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: tfa/provider/google/activate
   /V1/tfa/provider/google/authenticate:
     post:
@@ -3743,14 +3726,14 @@ paths:
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: string
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: tfa/provider/google/authenticate
   /V1/tfa/provider/google/configure:
     post:
@@ -3777,14 +3760,14 @@ paths:
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/two-factor-auth-data-google-configure-interface'
+            $ref: "#/definitions/two-factor-auth-data-google-configure-interface"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: tfa/provider/google/configure
   /V1/tfa/provider/u2fkey/activate:
     post:
@@ -3817,7 +3800,7 @@ paths:
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: tfa/provider/u2fkey/activate
   /V1/tfa/provider/u2fkey/authentication-challenge:
     post:
@@ -3847,14 +3830,14 @@ paths:
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/two-factor-auth-data-u2f-web-authn-request-interface'
+            $ref: "#/definitions/two-factor-auth-data-u2f-web-authn-request-interface"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: tfa/provider/u2fkey/authentication-challenge
   /V1/tfa/provider/u2fkey/configure:
     post:
@@ -3881,14 +3864,14 @@ paths:
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
-            $ref: '#/definitions/two-factor-auth-data-u2f-web-authn-request-interface'
+            $ref: "#/definitions/two-factor-auth-data-u2f-web-authn-request-interface"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: tfa/provider/u2fkey/configure
   /V1/tfa/provider/u2fkey/verify:
     post:
@@ -3921,14 +3904,14 @@ paths:
             xml:
               name: request
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: string
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: tfa/provider/u2fkey/verify
   /V1/tfa/tfat-providers-to-activate:
     get:
@@ -3948,16 +3931,16 @@ paths:
           type: string
           required: true
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: array
             items:
-              $ref: '#/definitions/two-factor-auth-provider-interface'
+              $ref: "#/definitions/two-factor-auth-provider-interface"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: tfa/tfat-providers-to-activate
   /V1/tfa/tfat-user-providers:
     get:
@@ -3977,16 +3960,16 @@ paths:
           type: string
           required: true
       responses:
-        '200':
+        "200":
           description: 200 Success.
           schema:
             type: array
             items:
-              $ref: '#/definitions/two-factor-auth-provider-interface'
+              $ref: "#/definitions/two-factor-auth-provider-interface"
         default:
           description: Unexpected error
           schema:
-            $ref: '#/definitions/error-response'
+            $ref: "#/definitions/error-response"
       summary: tfa/tfat-user-providers
 definitions:
   error-response:
@@ -3996,12 +3979,12 @@ definitions:
         type: string
         description: Error message
       errors:
-        $ref: '#/definitions/error-errors'
+        $ref: "#/definitions/error-errors"
       code:
         type: integer
         description: Error code
       parameters:
-        $ref: '#/definitions/error-parameters'
+        $ref: "#/definitions/error-parameters"
       trace:
         type: string
         description: Stack trace
@@ -4011,7 +3994,7 @@ definitions:
     type: array
     description: Errors list
     items:
-      $ref: '#/definitions/error-errors-item'
+      $ref: "#/definitions/error-errors-item"
   error-errors-item:
     type: object
     description: Error details
@@ -4020,12 +4003,12 @@ definitions:
         type: string
         description: Error message
       parameters:
-        $ref: '#/definitions/error-parameters'
+        $ref: "#/definitions/error-parameters"
   error-parameters:
     type: array
     description: Error parameters list
     items:
-      $ref: '#/definitions/error-parameters-item'
+      $ref: "#/definitions/error-parameters-item"
   error-parameters-item:
     type: object
     description: Error parameters item
@@ -4064,9 +4047,9 @@ definitions:
         type: array
         description: The list of exchange rate information for the store.
         items:
-          $ref: '#/definitions/directory-data-exchange-rate-interface'
+          $ref: "#/definitions/directory-data-exchange-rate-interface"
       extension_attributes:
-        $ref: '#/definitions/directory-data-currency-information-extension-interface'
+        $ref: "#/definitions/directory-data-currency-information-extension-interface"
     required:
       - base_currency_code
       - base_currency_symbol
@@ -4083,23 +4066,20 @@ definitions:
         description: The currency code associated with the exchange rate.
       rate:
         type: number
-        description: >-
-          The exchange rate for the associated currency and the store's base
+        description: The exchange rate for the associated currency and the store's base
           currency.
       extension_attributes:
-        $ref: '#/definitions/directory-data-exchange-rate-extension-interface'
+        $ref: "#/definitions/directory-data-exchange-rate-extension-interface"
     required:
       - currency_to
       - rate
   directory-data-exchange-rate-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Directory\Api\Data\ExchangeRateInterface
   directory-data-currency-information-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Directory\Api\Data\CurrencyInformationInterface
   directory-data-country-information-interface:
     type: object
@@ -4124,9 +4104,9 @@ definitions:
         type: array
         description: The available regions for the store.
         items:
-          $ref: '#/definitions/directory-data-region-information-interface'
+          $ref: "#/definitions/directory-data-region-information-interface"
       extension_attributes:
-        $ref: '#/definitions/directory-data-country-information-extension-interface'
+        $ref: "#/definitions/directory-data-country-information-extension-interface"
     required:
       - id
       - two_letter_abbreviation
@@ -4147,20 +4127,18 @@ definitions:
         type: string
         description: Region name
       extension_attributes:
-        $ref: '#/definitions/directory-data-region-information-extension-interface'
+        $ref: "#/definitions/directory-data-region-information-extension-interface"
     required:
       - id
       - code
       - name
   directory-data-region-information-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Directory\Api\Data\RegionInformationInterface
   directory-data-country-information-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Directory\Api\Data\CountryInformationInterface
   customer-data-customer-interface:
     type: object
@@ -4192,12 +4170,11 @@ definitions:
         description: Created in area
       dob:
         type: string
-        description: >-
-          In keeping with current security and privacy best practices, be sure
-          you are aware of any potential legal and security risks associated
-          with the storage of customers’ full date of birth (month, day, year)
-          along with other personal identifiers (e.g., full name) before
-          collecting or processing such data.
+        description: In keeping with current security and privacy best practices, be
+          sure you are aware of any potential legal and security risks
+          associated with the storage of customers’ full date of birth (month,
+          day, year) along with other personal identifiers (e.g., full name)
+          before collecting or processing such data.
       email:
         type: string
         description: Email address
@@ -4232,17 +4209,17 @@ definitions:
         type: array
         description: Customer addresses.
         items:
-          $ref: '#/definitions/customer-data-address-interface'
+          $ref: "#/definitions/customer-data-address-interface"
       disable_auto_group_change:
         type: integer
         description: Disable auto group change flag.
       extension_attributes:
-        $ref: '#/definitions/customer-data-customer-extension-interface'
+        $ref: "#/definitions/customer-data-customer-extension-interface"
       custom_attributes:
         type: array
         description: Custom attributes values.
         items:
-          $ref: '#/definitions/framework-attribute-interface'
+          $ref: "#/definitions/framework-attribute-interface"
     required:
       - email
       - firstname
@@ -4258,7 +4235,7 @@ definitions:
         type: integer
         description: Customer ID
       region:
-        $ref: '#/definitions/customer-data-region-interface'
+        $ref: "#/definitions/customer-data-region-interface"
       region_id:
         type: integer
         description: Region ID
@@ -4310,12 +4287,12 @@ definitions:
         type: boolean
         description: If this address is default billing address
       extension_attributes:
-        $ref: '#/definitions/customer-data-address-extension-interface'
+        $ref: "#/definitions/customer-data-address-extension-interface"
       custom_attributes:
         type: array
         description: Custom attributes values.
         items:
-          $ref: '#/definitions/framework-attribute-interface'
+          $ref: "#/definitions/framework-attribute-interface"
   customer-data-region-interface:
     type: object
     description: Customer address region interface.
@@ -4330,20 +4307,18 @@ definitions:
         type: integer
         description: Region id
       extension_attributes:
-        $ref: '#/definitions/customer-data-region-extension-interface'
+        $ref: "#/definitions/customer-data-region-extension-interface"
     required:
       - region_code
       - region
       - region_id
   customer-data-region-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Customer\Api\Data\RegionInterface
   customer-data-address-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Customer\Api\Data\AddressInterface
   framework-attribute-interface:
     type: object
@@ -4360,12 +4335,11 @@ definitions:
       - value
   customer-data-customer-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Customer\Api\Data\CustomerInterface
     properties:
       company_attributes:
-        $ref: '#/definitions/company-data-company-customer-interface'
+        $ref: "#/definitions/company-data-company-customer-interface"
       assistance_allowed:
         type: integer
       is_subscribed:
@@ -4390,11 +4364,10 @@ definitions:
         type: string
         description: Get telephone.
       extension_attributes:
-        $ref: '#/definitions/company-data-company-customer-extension-interface'
+        $ref: "#/definitions/company-data-company-customer-extension-interface"
   company-data-company-customer-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Company\Api\Data\CompanyCustomerInterface
   catalog-data-product-render-search-results-interface:
     type: object
@@ -4404,27 +4377,26 @@ definitions:
         type: array
         description: List of products rendered information
         items:
-          $ref: '#/definitions/catalog-data-product-render-interface'
+          $ref: "#/definitions/catalog-data-product-render-interface"
     required:
       - items
   catalog-data-product-render-interface:
     type: object
-    description: >-
-      Represents Data Object which holds enough information to render product
-      This information is put into part as Add To Cart or Add to Compare Data or
-      Price Data
+    description: Represents Data Object which holds enough information to render
+      product This information is put into part as Add To Cart or Add to Compare
+      Data or Price Data
     properties:
       add_to_cart_button:
-        $ref: '#/definitions/catalog-data-product-render-button-interface'
+        $ref: "#/definitions/catalog-data-product-render-button-interface"
       add_to_compare_button:
-        $ref: '#/definitions/catalog-data-product-render-button-interface'
+        $ref: "#/definitions/catalog-data-product-render-button-interface"
       price_info:
-        $ref: '#/definitions/catalog-data-product-render-price-info-interface'
+        $ref: "#/definitions/catalog-data-product-render-price-info-interface"
       images:
         type: array
-        description: 'Enough information, that needed to render image on front'
+        description: Enough information, that needed to render image on front
         items:
-          $ref: '#/definitions/catalog-data-product-render-image-interface'
+          $ref: "#/definitions/catalog-data-product-render-image-interface"
       url:
         type: string
         description: Product url
@@ -4436,7 +4408,7 @@ definitions:
         description: Product name
       type:
         type: string
-        description: 'Product type. Such as bundle, grouped, simple, etc...'
+        description: Product type. Such as bundle, grouped, simple, etc...
       is_salable:
         type: string
         description: Information about product saleability (In Stock)
@@ -4447,7 +4419,7 @@ definitions:
         type: string
         description: Current or desired currency code to product
       extension_attributes:
-        $ref: '#/definitions/catalog-data-product-render-extension-interface'
+        $ref: "#/definitions/catalog-data-product-render-extension-interface"
     required:
       - add_to_cart_button
       - add_to_compare_button
@@ -4463,30 +4435,28 @@ definitions:
       - extension_attributes
   catalog-data-product-render-button-interface:
     type: object
-    description: >-
-      Button interface. This interface represents all manner of product buttons:
-      add to cart, add to compare, etc... The buttons describes by this
-      interface should have interaction with backend
+    description: "Button interface. This interface represents all manner of product
+      buttons: add to cart, add to compare, etc... The buttons describes by this
+      interface should have interaction with backend"
     properties:
       post_data:
         type: string
         description: Post data
       url:
         type: string
-        description: 'Url, needed to add product to cart'
+        description: Url, needed to add product to cart
       required_options:
         type: boolean
         description: Flag whether a product has options or not
       extension_attributes:
-        $ref: '#/definitions/catalog-data-product-render-button-extension-interface'
+        $ref: "#/definitions/catalog-data-product-render-button-extension-interface"
     required:
       - post_data
       - url
       - required_options
   catalog-data-product-render-button-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Catalog\Api\Data\ProductRender\ButtonInterface
   catalog-data-product-render-price-info-interface:
     type: object
@@ -4514,11 +4484,9 @@ definitions:
         type: number
         description: Regular price
       formatted_prices:
-        $ref: >-
-          #/definitions/catalog-data-product-render-formatted-price-info-interface
+        $ref: "#/definitions/catalog-data-product-render-formatted-price-info-interface"
       extension_attributes:
-        $ref: >-
-          #/definitions/catalog-data-product-render-price-info-extension-interface
+        $ref: "#/definitions/catalog-data-product-render-price-info-extension-interface"
     required:
       - final_price
       - max_price
@@ -4530,10 +4498,9 @@ definitions:
       - formatted_prices
   catalog-data-product-render-formatted-price-info-interface:
     type: object
-    description: >-
-      Formatted Price interface. Aggregate formatted html with price
+    description: 'Formatted Price interface. Aggregate formatted html with price
       representations. E.g.: <span class="price">$9.00</span> Consider currency,
-      rounding and html
+      rounding and html'
     properties:
       final_price:
         type: string
@@ -4555,12 +4522,11 @@ definitions:
         description: Special price
       regular_price:
         type: string
-        description: >-
-          Price - is price of product without discounts and special price with
-          taxes and fixed product tax
+        description: Price - is price of product without discounts and special price
+          with taxes and fixed product tax
       extension_attributes:
-        $ref: >-
-          #/definitions/catalog-data-product-render-formatted-price-info-extension-interface
+        $ref: "#/definitions/catalog-data-product-render-formatted-price-info-extension\
+          -interface"
     required:
       - final_price
       - max_price
@@ -4571,24 +4537,22 @@ definitions:
       - regular_price
   catalog-data-product-render-formatted-price-info-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Catalog\Api\Data\ProductRender\FormattedPriceInfoInterface
   catalog-data-product-render-price-info-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Catalog\Api\Data\ProductRender\PriceInfoInterface
     properties:
       msrp:
-        $ref: '#/definitions/msrp-data-product-render-msrp-price-info-interface'
+        $ref: "#/definitions/msrp-data-product-render-msrp-price-info-interface"
       tax_adjustments:
-        $ref: '#/definitions/catalog-data-product-render-price-info-interface'
+        $ref: "#/definitions/catalog-data-product-render-price-info-interface"
       weee_attributes:
         type: array
         items:
-          $ref: >-
-            #/definitions/weee-data-product-render-weee-adjustment-attribute-interface
+          $ref: "#/definitions/weee-data-product-render-weee-adjustment-attribute-interfa\
+            ce"
       weee_adjustment:
         type: string
   msrp-data-product-render-msrp-price-info-interface:
@@ -4606,8 +4570,8 @@ definitions:
       explanation_message:
         type: string
       extension_attributes:
-        $ref: >-
-          #/definitions/msrp-data-product-render-msrp-price-info-extension-interface
+        $ref: "#/definitions/msrp-data-product-render-msrp-price-info-extension-interfa\
+          ce"
     required:
       - msrp_price
       - is_applicable
@@ -4616,12 +4580,11 @@ definitions:
       - explanation_message
   msrp-data-product-render-msrp-price-info-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Msrp\Api\Data\ProductRender\MsrpPriceInfoInterface
   weee-data-product-render-weee-adjustment-attribute-interface:
     type: object
-    description: 'List of all weee attributes, their amounts, etc.., that product has'
+    description: List of all weee attributes, their amounts, etc.., that product has
     properties:
       amount:
         type: string
@@ -4639,8 +4602,8 @@ definitions:
         type: string
         description: Weee attribute code
       extension_attributes:
-        $ref: >-
-          #/definitions/weee-data-product-render-weee-adjustment-attribute-extension-interface
+        $ref: "#/definitions/weee-data-product-render-weee-adjustment-attribute-extensi\
+          on-interface"
     required:
       - amount
       - tax_amount
@@ -4650,14 +4613,12 @@ definitions:
       - extension_attributes
   weee-data-product-render-weee-adjustment-attribute-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Weee\Api\Data\ProductRender\WeeeAdjustmentAttributeInterface
   catalog-data-product-render-image-interface:
     type: object
-    description: >-
-      Product Render image interface. Represents physical characteristics of
-      image, that can be used in product listing or product view
+    description: Product Render image interface. Represents physical characteristics
+      of image, that can be used in product listing or product view
     properties:
       url:
         type: string
@@ -4681,7 +4642,7 @@ definitions:
         type: number
         description: Resize height
       extension_attributes:
-        $ref: '#/definitions/catalog-data-product-render-image-extension-interface'
+        $ref: "#/definitions/catalog-data-product-render-image-extension-interface"
     required:
       - url
       - code
@@ -4692,17 +4653,15 @@ definitions:
       - resized_height
   catalog-data-product-render-image-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Catalog\Api\Data\ProductRender\ImageInterface
   catalog-data-product-render-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Catalog\Api\Data\ProductRenderInterface
     properties:
       wishlist_button:
-        $ref: '#/definitions/catalog-data-product-render-button-interface'
+        $ref: "#/definitions/catalog-data-product-render-button-interface"
       review_html:
         type: string
   quote-data-cart-interface:
@@ -4714,45 +4673,45 @@ definitions:
         description: Cart/quote ID.
       created_at:
         type: string
-        description: 'Cart creation date and time. Otherwise, null.'
+        description: Cart creation date and time. Otherwise, null.
       updated_at:
         type: string
-        description: 'Cart last update date and time. Otherwise, null.'
+        description: Cart last update date and time. Otherwise, null.
       converted_at:
         type: string
-        description: 'Cart conversion date and time. Otherwise, null.'
+        description: Cart conversion date and time. Otherwise, null.
       is_active:
         type: boolean
-        description: 'Active status flag value. Otherwise, null.'
+        description: Active status flag value. Otherwise, null.
       is_virtual:
         type: boolean
-        description: 'Virtual flag value. Otherwise, null.'
+        description: Virtual flag value. Otherwise, null.
       items:
         type: array
-        description: 'Array of items. Otherwise, null.'
+        description: Array of items. Otherwise, null.
         items:
-          $ref: '#/definitions/quote-data-cart-item-interface'
+          $ref: "#/definitions/quote-data-cart-item-interface"
       items_count:
         type: integer
-        description: 'Number of different items or products in the cart. Otherwise, null.'
+        description: Number of different items or products in the cart. Otherwise, null.
       items_qty:
         type: number
-        description: 'Total quantity of all cart items. Otherwise, null.'
+        description: Total quantity of all cart items. Otherwise, null.
       customer:
-        $ref: '#/definitions/customer-data-customer-interface'
+        $ref: "#/definitions/customer-data-customer-interface"
       billing_address:
-        $ref: '#/definitions/quote-data-address-interface'
+        $ref: "#/definitions/quote-data-address-interface"
       reserved_order_id:
         type: string
-        description: 'Reserved order ID. Otherwise, null.'
+        description: Reserved order ID. Otherwise, null.
       orig_order_id:
         type: integer
-        description: 'Original order ID. Otherwise, null.'
+        description: Original order ID. Otherwise, null.
       currency:
-        $ref: '#/definitions/quote-data-currency-interface'
+        $ref: "#/definitions/quote-data-currency-interface"
       customer_is_guest:
         type: boolean
-        description: 'For guest customers, false for logged in customers'
+        description: For guest customers, false for logged in customers
       customer_note:
         type: string
         description: Notice text
@@ -4766,7 +4725,7 @@ definitions:
         type: integer
         description: Store identifier
       extension_attributes:
-        $ref: '#/definitions/quote-data-cart-extension-interface'
+        $ref: "#/definitions/quote-data-cart-extension-interface"
     required:
       - id
       - customer
@@ -4777,29 +4736,29 @@ definitions:
     properties:
       item_id:
         type: integer
-        description: 'Item ID. Otherwise, null.'
+        description: Item ID. Otherwise, null.
       sku:
         type: string
-        description: 'Product SKU. Otherwise, null.'
+        description: Product SKU. Otherwise, null.
       qty:
         type: number
         description: Product quantity.
       name:
         type: string
-        description: 'Product name. Otherwise, null.'
+        description: Product name. Otherwise, null.
       price:
         type: number
-        description: 'Product price. Otherwise, null.'
+        description: Product price. Otherwise, null.
       product_type:
         type: string
-        description: 'Product type. Otherwise, null.'
+        description: Product type. Otherwise, null.
       quote_id:
         type: string
         description: Quote id.
       product_option:
-        $ref: '#/definitions/quote-data-product-option-interface'
+        $ref: "#/definitions/quote-data-product-option-interface"
       extension_attributes:
-        $ref: '#/definitions/quote-data-cart-item-extension-interface'
+        $ref: "#/definitions/quote-data-cart-item-extension-interface"
     required:
       - qty
       - quote_id
@@ -4808,34 +4767,33 @@ definitions:
     description: Product option interface
     properties:
       extension_attributes:
-        $ref: '#/definitions/quote-data-product-option-extension-interface'
+        $ref: "#/definitions/quote-data-product-option-extension-interface"
   quote-data-product-option-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Quote\Api\Data\ProductOptionInterface
     properties:
       custom_options:
         type: array
         items:
-          $ref: '#/definitions/catalog-data-custom-option-interface'
+          $ref: "#/definitions/catalog-data-custom-option-interface"
       bundle_options:
         type: array
         items:
-          $ref: '#/definitions/bundle-data-bundle-option-interface'
+          $ref: "#/definitions/bundle-data-bundle-option-interface"
       downloadable_option:
-        $ref: '#/definitions/downloadable-data-downloadable-option-interface'
+        $ref: "#/definitions/downloadable-data-downloadable-option-interface"
       giftcard_item_option:
-        $ref: '#/definitions/gift-card-data-gift-card-option-interface'
+        $ref: "#/definitions/gift-card-data-gift-card-option-interface"
       configurable_item_options:
         type: array
         items:
-          $ref: >-
-            #/definitions/configurable-product-data-configurable-item-option-value-interface
+          $ref: "#/definitions/configurable-product-data-configurable-item-option-value-i\
+            nterface"
       grouped_options:
         type: array
         items:
-          $ref: '#/definitions/grouped-product-data-grouped-options-interface'
+          $ref: "#/definitions/grouped-product-data-grouped-options-interface"
   catalog-data-custom-option-interface:
     type: object
     description: Interface CustomOptionInterface
@@ -4847,18 +4805,17 @@ definitions:
         type: string
         description: Option value
       extension_attributes:
-        $ref: '#/definitions/catalog-data-custom-option-extension-interface'
+        $ref: "#/definitions/catalog-data-custom-option-extension-interface"
     required:
       - option_id
       - option_value
   catalog-data-custom-option-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Catalog\Api\Data\CustomOptionInterface
     properties:
       file_info:
-        $ref: '#/definitions/framework-data-image-content-interface'
+        $ref: "#/definitions/framework-data-image-content-interface"
   framework-data-image-content-interface:
     type: object
     description: Image Content data interface
@@ -4892,15 +4849,14 @@ definitions:
         items:
           type: integer
       extension_attributes:
-        $ref: '#/definitions/bundle-data-bundle-option-extension-interface'
+        $ref: "#/definitions/bundle-data-bundle-option-extension-interface"
     required:
       - option_id
       - option_qty
       - option_selections
   bundle-data-bundle-option-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Bundle\Api\Data\BundleOptionInterface
   downloadable-data-downloadable-option-interface:
     type: object
@@ -4939,7 +4895,7 @@ definitions:
         type: string
         description: Giftcard message.
       extension_attributes:
-        $ref: '#/definitions/gift-card-data-gift-card-option-extension-interface'
+        $ref: "#/definitions/gift-card-data-gift-card-option-extension-interface"
     required:
       - giftcard_amount
       - giftcard_sender_name
@@ -4948,8 +4904,7 @@ definitions:
       - giftcard_recipient_email
   gift-card-data-gift-card-option-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\GiftCard\Api\Data\GiftCardOptionInterface
     properties:
       giftcard_created_codes:
@@ -4967,14 +4922,13 @@ definitions:
         type: integer
         description: Item id
       extension_attributes:
-        $ref: >-
-          #/definitions/configurable-product-data-configurable-item-option-value-extension-interface
+        $ref: "#/definitions/configurable-product-data-configurable-item-option-value-e\
+          xtension-interface"
     required:
       - option_id
   configurable-product-data-configurable-item-option-value-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\ConfigurableProduct\Api\Data\ConfigurableItemOptionValueInterface
   grouped-product-data-grouped-options-interface:
     type: object
@@ -4987,30 +4941,27 @@ definitions:
         type: integer
         description: Associated product qty
       extension_attributes:
-        $ref: '#/definitions/grouped-product-data-grouped-options-extension-interface'
+        $ref: "#/definitions/grouped-product-data-grouped-options-extension-interface"
   grouped-product-data-grouped-options-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\GroupedProduct\Api\Data\GroupedOptionsInterface
   quote-data-cart-item-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
-      \Magento\Quote\Api\Data\CartItemInterface
+    description: ExtensionInterface class for @see \Magento\Quote\Api\Data\CartItemInterface
     properties:
       discounts:
         type: array
         items:
-          $ref: '#/definitions/sales-rule-data-rule-discount-interface'
+          $ref: "#/definitions/sales-rule-data-rule-discount-interface"
       negotiable_quote_item:
-        $ref: '#/definitions/negotiable-quote-data-negotiable-quote-item-interface'
+        $ref: "#/definitions/negotiable-quote-data-negotiable-quote-item-interface"
   sales-rule-data-rule-discount-interface:
     type: object
     description: Rule discount Interface
     properties:
       discount_data:
-        $ref: '#/definitions/sales-rule-data-discount-data-interface'
+        $ref: "#/definitions/sales-rule-data-discount-data-interface"
       rule_label:
         type: string
         description: Rule Label
@@ -5059,8 +5010,8 @@ definitions:
         type: number
         description: Quote item original discount amount
       extension_attributes:
-        $ref: >-
-          #/definitions/negotiable-quote-data-negotiable-quote-item-extension-interface
+        $ref: "#/definitions/negotiable-quote-data-negotiable-quote-item-extension-inte\
+          rface"
     required:
       - item_id
       - original_price
@@ -5068,8 +5019,7 @@ definitions:
       - original_discount_amount
   negotiable-quote-data-negotiable-quote-item-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\NegotiableQuote\Api\Data\NegotiableQuoteItemInterface
   quote-data-address-interface:
     type: object
@@ -5144,12 +5094,12 @@ definitions:
         type: integer
         description: Save in address book flag
       extension_attributes:
-        $ref: '#/definitions/quote-data-address-extension-interface'
+        $ref: "#/definitions/quote-data-address-extension-interface"
       custom_attributes:
         type: array
         description: Custom attributes values.
         items:
-          $ref: '#/definitions/framework-attribute-interface'
+          $ref: "#/definitions/framework-attribute-interface"
     required:
       - region
       - region_id
@@ -5169,7 +5119,7 @@ definitions:
       discounts:
         type: array
         items:
-          $ref: '#/definitions/sales-rule-data-rule-discount-interface'
+          $ref: "#/definitions/sales-rule-data-rule-discount-interface"
       gift_registry_id:
         type: integer
       pickup_location_code:
@@ -5205,12 +5155,10 @@ definitions:
         type: number
         description: Base currency to quote currency rate
       extension_attributes:
-        $ref: '#/definitions/quote-data-currency-extension-interface'
+        $ref: "#/definitions/quote-data-currency-extension-interface"
   quote-data-currency-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
-      \Magento\Quote\Api\Data\CurrencyInterface
+    description: ExtensionInterface class for @see \Magento\Quote\Api\Data\CurrencyInterface
   quote-data-cart-extension-interface:
     type: object
     description: ExtensionInterface class for @see \Magento\Quote\Api\Data\CartInterface
@@ -5218,21 +5166,21 @@ definitions:
       shipping_assignments:
         type: array
         items:
-          $ref: '#/definitions/quote-data-shipping-assignment-interface'
+          $ref: "#/definitions/quote-data-shipping-assignment-interface"
       negotiable_quote:
-        $ref: '#/definitions/negotiable-quote-data-negotiable-quote-interface'
+        $ref: "#/definitions/negotiable-quote-data-negotiable-quote-interface"
   quote-data-shipping-assignment-interface:
     type: object
     description: Interface ShippingAssignmentInterface
     properties:
       shipping:
-        $ref: '#/definitions/quote-data-shipping-interface'
+        $ref: "#/definitions/quote-data-shipping-interface"
       items:
         type: array
         items:
-          $ref: '#/definitions/quote-data-cart-item-interface'
+          $ref: "#/definitions/quote-data-cart-item-interface"
       extension_attributes:
-        $ref: '#/definitions/quote-data-shipping-assignment-extension-interface'
+        $ref: "#/definitions/quote-data-shipping-assignment-extension-interface"
     required:
       - shipping
       - items
@@ -5241,24 +5189,21 @@ definitions:
     description: Interface ShippingInterface
     properties:
       address:
-        $ref: '#/definitions/quote-data-address-interface'
+        $ref: "#/definitions/quote-data-address-interface"
       method:
         type: string
         description: Shipping method
       extension_attributes:
-        $ref: '#/definitions/quote-data-shipping-extension-interface'
+        $ref: "#/definitions/quote-data-shipping-extension-interface"
     required:
       - address
       - method
   quote-data-shipping-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
-      \Magento\Quote\Api\Data\ShippingInterface
+    description: ExtensionInterface class for @see \Magento\Quote\Api\Data\ShippingInterface
   quote-data-shipping-assignment-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Quote\Api\Data\ShippingAssignmentInterface
   negotiable-quote-data-negotiable-quote-interface:
     type: object
@@ -5331,8 +5276,7 @@ definitions:
         type: number
         description: Quote negotiated total price in base currency.
       extension_attributes:
-        $ref: >-
-          #/definitions/negotiable-quote-data-negotiable-quote-extension-interface
+        $ref: "#/definitions/negotiable-quote-data-negotiable-quote-extension-interface"
     required:
       - quote_id
       - is_regular_quote
@@ -5354,8 +5298,7 @@ definitions:
       - creator_type
   negotiable-quote-data-negotiable-quote-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\NegotiableQuote\Api\Data\NegotiableQuoteInterface
   quote-data-payment-interface:
     type: object
@@ -5373,7 +5316,7 @@ definitions:
         items:
           type: string
       extension_attributes:
-        $ref: '#/definitions/quote-data-payment-extension-interface'
+        $ref: "#/definitions/quote-data-payment-extension-interface"
     required:
       - method
   quote-data-payment-extension-interface:
@@ -5396,10 +5339,10 @@ definitions:
         description: Shipping method code.
       carrier_title:
         type: string
-        description: 'Shipping carrier title. Otherwise, null.'
+        description: Shipping carrier title. Otherwise, null.
       method_title:
         type: string
-        description: 'Shipping method title. Otherwise, null.'
+        description: Shipping method title. Otherwise, null.
       amount:
         type: number
         description: Shipping amount in store currency.
@@ -5410,7 +5353,7 @@ definitions:
         type: boolean
         description: The value of the availability flag for the current shipping method.
       extension_attributes:
-        $ref: '#/definitions/quote-data-shipping-method-extension-interface'
+        $ref: "#/definitions/quote-data-shipping-method-extension-interface"
       error_message:
         type: string
         description: Shipping Error message.
@@ -5431,8 +5374,7 @@ definitions:
       - price_incl_tax
   quote-data-shipping-method-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Quote\Api\Data\ShippingMethodInterface
   quote-data-payment-method-interface:
     type: object
@@ -5452,32 +5394,31 @@ definitions:
     description: Additional data for totals collection.
     properties:
       extension_attributes:
-        $ref: '#/definitions/quote-data-totals-additional-data-extension-interface'
+        $ref: "#/definitions/quote-data-totals-additional-data-extension-interface"
       custom_attributes:
         type: array
         description: Custom attributes values.
         items:
-          $ref: '#/definitions/framework-attribute-interface'
+          $ref: "#/definitions/framework-attribute-interface"
   quote-data-totals-additional-data-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Quote\Api\Data\TotalsAdditionalDataInterface
     properties:
       gift_messages:
         type: array
         items:
-          $ref: '#/definitions/gift-message-data-message-interface'
+          $ref: "#/definitions/gift-message-data-message-interface"
   gift-message-data-message-interface:
     type: object
     description: Interface MessageInterface
     properties:
       gift_message_id:
         type: integer
-        description: 'Gift message ID. Otherwise, null.'
+        description: Gift message ID. Otherwise, null.
       customer_id:
         type: integer
-        description: 'Customer ID. Otherwise, null.'
+        description: Customer ID. Otherwise, null.
       sender:
         type: string
         description: Sender name.
@@ -5488,15 +5429,14 @@ definitions:
         type: string
         description: Message text.
       extension_attributes:
-        $ref: '#/definitions/gift-message-data-message-extension-interface'
+        $ref: "#/definitions/gift-message-data-message-extension-interface"
     required:
       - sender
       - recipient
       - message
   gift-message-data-message-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\GiftMessage\Api\Data\MessageInterface
     properties:
       entity_id:
@@ -5592,14 +5532,14 @@ definitions:
         type: array
         description: Totals by items
         items:
-          $ref: '#/definitions/quote-data-totals-item-interface'
+          $ref: "#/definitions/quote-data-totals-item-interface"
       total_segments:
         type: array
         description: Dynamically calculated totals
         items:
-          $ref: '#/definitions/quote-data-total-segment-interface'
+          $ref: "#/definitions/quote-data-total-segment-interface"
       extension_attributes:
-        $ref: '#/definitions/quote-data-totals-extension-interface'
+        $ref: "#/definitions/quote-data-totals-extension-interface"
     required:
       - weee_tax_applied_amount
       - total_segments
@@ -5627,37 +5567,37 @@ definitions:
         description: Row total in base currency.
       row_total_with_discount:
         type: number
-        description: 'Row total with discount in quote currency. Otherwise, null.'
+        description: Row total with discount in quote currency. Otherwise, null.
       tax_amount:
         type: number
-        description: 'Tax amount in quote currency. Otherwise, null.'
+        description: Tax amount in quote currency. Otherwise, null.
       base_tax_amount:
         type: number
-        description: 'Tax amount in base currency. Otherwise, null.'
+        description: Tax amount in base currency. Otherwise, null.
       tax_percent:
         type: number
-        description: 'Tax percent. Otherwise, null.'
+        description: Tax percent. Otherwise, null.
       discount_amount:
         type: number
-        description: 'Discount amount in quote currency. Otherwise, null.'
+        description: Discount amount in quote currency. Otherwise, null.
       base_discount_amount:
         type: number
-        description: 'Discount amount in base currency. Otherwise, null.'
+        description: Discount amount in base currency. Otherwise, null.
       discount_percent:
         type: number
-        description: 'Discount percent. Otherwise, null.'
+        description: Discount percent. Otherwise, null.
       price_incl_tax:
         type: number
-        description: 'Price including tax in quote currency. Otherwise, null.'
+        description: Price including tax in quote currency. Otherwise, null.
       base_price_incl_tax:
         type: number
-        description: 'Price including tax in base currency. Otherwise, null.'
+        description: Price including tax in base currency. Otherwise, null.
       row_total_incl_tax:
         type: number
-        description: 'Row total including tax in quote currency. Otherwise, null.'
+        description: Row total including tax in quote currency. Otherwise, null.
       base_row_total_incl_tax:
         type: number
-        description: 'Row total including tax in base currency. Otherwise, null.'
+        description: Row total including tax in base currency. Otherwise, null.
       options:
         type: string
         description: Item price in quote currency.
@@ -5668,10 +5608,10 @@ definitions:
         type: string
         description: Item weee tax applied in quote currency.
       extension_attributes:
-        $ref: '#/definitions/quote-data-totals-item-extension-interface'
+        $ref: "#/definitions/quote-data-totals-item-extension-interface"
       name:
         type: string
-        description: 'Product name. Otherwise, null.'
+        description: Product name. Otherwise, null.
     required:
       - item_id
       - price
@@ -5684,13 +5624,12 @@ definitions:
       - weee_tax_applied
   quote-data-totals-item-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Quote\Api\Data\TotalsItemInterface
     properties:
       negotiable_quote_item_totals:
-        $ref: >-
-          #/definitions/negotiable-quote-data-negotiable-quote-item-totals-interface
+        $ref: "#/definitions/negotiable-quote-data-negotiable-quote-item-totals-interfa\
+          ce"
   negotiable-quote-data-negotiable-quote-item-totals-interface:
     type: object
     description: Extension attribute for quote item totals model.
@@ -5729,8 +5668,8 @@ definitions:
         type: number
         description: Cart price with included tax for quote item in base currency.
       extension_attributes:
-        $ref: >-
-          #/definitions/negotiable-quote-data-negotiable-quote-item-totals-extension-interface
+        $ref: "#/definitions/negotiable-quote-data-negotiable-quote-item-totals-extensi\
+          on-interface"
     required:
       - cost
       - catalog_price
@@ -5745,8 +5684,7 @@ definitions:
       - base_cart_price_incl_tax
   negotiable-quote-data-negotiable-quote-item-totals-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\NegotiableQuote\Api\Data\NegotiableQuoteItemTotalsInterface
   quote-data-total-segment-interface:
     type: object
@@ -5765,20 +5703,19 @@ definitions:
         type: string
         description: Display area code.
       extension_attributes:
-        $ref: '#/definitions/quote-data-total-segment-extension-interface'
+        $ref: "#/definitions/quote-data-total-segment-extension-interface"
     required:
       - code
       - value
   quote-data-total-segment-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Quote\Api\Data\TotalSegmentInterface
     properties:
       tax_grandtotal_details:
         type: array
         items:
-          $ref: '#/definitions/tax-data-grand-total-details-interface'
+          $ref: "#/definitions/tax-data-grand-total-details-interface"
       gift_cards:
         type: string
       gw_order_id:
@@ -5838,7 +5775,7 @@ definitions:
         type: array
         description: Tax rates info
         items:
-          $ref: '#/definitions/tax-data-grand-total-rates-interface'
+          $ref: "#/definitions/tax-data-grand-total-rates-interface"
       group_id:
         type: integer
         description: Group identifier
@@ -5866,7 +5803,7 @@ definitions:
       coupon_label:
         type: string
       negotiable_quote_totals:
-        $ref: '#/definitions/negotiable-quote-data-negotiable-quote-totals-interface'
+        $ref: "#/definitions/negotiable-quote-data-negotiable-quote-totals-interface"
       base_customer_balance_amount:
         type: number
       customer_balance_amount:
@@ -5969,10 +5906,9 @@ definitions:
         type: array
         description: Requisition List Items
         items:
-          $ref: '#/definitions/requisition-list-data-requisition-list-item-interface'
+          $ref: "#/definitions/requisition-list-data-requisition-list-item-interface"
       extension_attributes:
-        $ref: >-
-          #/definitions/requisition-list-data-requisition-list-extension-interface
+        $ref: "#/definitions/requisition-list-data-requisition-list-extension-interface"
     required:
       - id
       - customer_id
@@ -6008,8 +5944,8 @@ definitions:
         type: string
         description: Added_at value.
       extension_attributes:
-        $ref: >-
-          #/definitions/requisition-list-data-requisition-list-item-extension-interface
+        $ref: "#/definitions/requisition-list-data-requisition-list-item-extension-inte\
+          rface"
     required:
       - id
       - sku
@@ -6020,13 +5956,11 @@ definitions:
       - added_at
   requisition-list-data-requisition-list-item-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\RequisitionList\Api\Data\RequisitionListItemInterface
   requisition-list-data-requisition-list-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\RequisitionList\Api\Data\RequisitionListInterface
   framework-search-search-result-interface:
     type: object
@@ -6035,11 +5969,11 @@ definitions:
       items:
         type: array
         items:
-          $ref: '#/definitions/framework-search-document-interface'
+          $ref: "#/definitions/framework-search-document-interface"
       aggregations:
-        $ref: '#/definitions/framework-search-aggregation-interface'
+        $ref: "#/definitions/framework-search-aggregation-interface"
       search_criteria:
-        $ref: '#/definitions/framework-search-search-criteria-interface'
+        $ref: "#/definitions/framework-search-search-criteria-interface"
       total_count:
         type: integer
         description: Total count.
@@ -6058,7 +5992,7 @@ definitions:
         type: array
         description: Custom attributes values.
         items:
-          $ref: '#/definitions/framework-attribute-interface'
+          $ref: "#/definitions/framework-attribute-interface"
     required:
       - id
   framework-search-aggregation-interface:
@@ -6069,7 +6003,7 @@ definitions:
         type: array
         description: All Document fields
         items:
-          $ref: '#/definitions/framework-search-bucket-interface'
+          $ref: "#/definitions/framework-search-bucket-interface"
       bucket_names:
         type: array
         description: Document field names
@@ -6089,7 +6023,7 @@ definitions:
         type: array
         description: Field values
         items:
-          $ref: '#/definitions/framework-search-aggregation-value-interface'
+          $ref: "#/definitions/framework-search-aggregation-value-interface"
     required:
       - name
       - values
@@ -6118,12 +6052,12 @@ definitions:
         type: array
         description: A list of filter groups.
         items:
-          $ref: '#/definitions/framework-search-filter-group'
+          $ref: "#/definitions/framework-search-filter-group"
       sort_orders:
         type: array
         description: Sort order.
         items:
-          $ref: '#/definitions/framework-sort-order'
+          $ref: "#/definitions/framework-sort-order"
       page_size:
         type: integer
         description: Page size.
@@ -6141,7 +6075,7 @@ definitions:
         type: array
         description: A list of filters in this group
         items:
-          $ref: '#/definitions/framework-filter'
+          $ref: "#/definitions/framework-filter"
   framework-filter:
     type: object
     description: Filter which can be used by any methods from service layer.
@@ -6176,9 +6110,9 @@ definitions:
     description: Interface ShippingInformationInterface
     properties:
       shipping_address:
-        $ref: '#/definitions/quote-data-address-interface'
+        $ref: "#/definitions/quote-data-address-interface"
       billing_address:
-        $ref: '#/definitions/quote-data-address-interface'
+        $ref: "#/definitions/quote-data-address-interface"
       shipping_method_code:
         type: string
         description: Shipping method code
@@ -6186,20 +6120,19 @@ definitions:
         type: string
         description: Carrier code
       extension_attributes:
-        $ref: '#/definitions/checkout-data-shipping-information-extension-interface'
+        $ref: "#/definitions/checkout-data-shipping-information-extension-interface"
       custom_attributes:
         type: array
         description: Custom attributes values.
         items:
-          $ref: '#/definitions/framework-attribute-interface'
+          $ref: "#/definitions/framework-attribute-interface"
     required:
       - shipping_address
       - shipping_method_code
       - shipping_carrier_code
   checkout-data-shipping-information-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Checkout\Api\Data\ShippingInformationInterface
   checkout-data-payment-details-interface:
     type: object
@@ -6208,25 +6141,24 @@ definitions:
       payment_methods:
         type: array
         items:
-          $ref: '#/definitions/quote-data-payment-method-interface'
+          $ref: "#/definitions/quote-data-payment-method-interface"
       totals:
-        $ref: '#/definitions/quote-data-totals-interface'
+        $ref: "#/definitions/quote-data-totals-interface"
       extension_attributes:
-        $ref: '#/definitions/checkout-data-payment-details-extension-interface'
+        $ref: "#/definitions/checkout-data-payment-details-extension-interface"
     required:
       - payment_methods
       - totals
   checkout-data-payment-details-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Checkout\Api\Data\PaymentDetailsInterface
   checkout-data-totals-information-interface:
     type: object
     description: Interface TotalsInformationInterface
     properties:
       address:
-        $ref: '#/definitions/quote-data-address-interface'
+        $ref: "#/definitions/quote-data-address-interface"
       shipping_method_code:
         type: string
         description: Shipping method code
@@ -6234,18 +6166,17 @@ definitions:
         type: string
         description: Carrier code
       extension_attributes:
-        $ref: '#/definitions/checkout-data-totals-information-extension-interface'
+        $ref: "#/definitions/checkout-data-totals-information-extension-interface"
       custom_attributes:
         type: array
         description: Custom attributes values.
         items:
-          $ref: '#/definitions/framework-attribute-interface'
+          $ref: "#/definitions/framework-attribute-interface"
     required:
       - address
   checkout-data-totals-information-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\Checkout\Api\Data\TotalsInformationInterface
   two-factor-auth-provider-interface:
     type: object
@@ -6255,7 +6186,7 @@ definitions:
         type: boolean
         description: True if this provider has been enabled by admin
       engine:
-        $ref: '#/definitions/two-factor-auth-engine-interface'
+        $ref: "#/definitions/two-factor-auth-engine-interface"
       code:
         type: string
         description: Provider code
@@ -6309,15 +6240,13 @@ definitions:
         type: string
         description: Value for secret code
       extension_attributes:
-        $ref: >-
-          #/definitions/two-factor-auth-data-google-configure-extension-interface
+        $ref: "#/definitions/two-factor-auth-data-google-configure-extension-interface"
     required:
       - qr_code_base64
       - secret_code
   two-factor-auth-data-google-configure-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\TwoFactorAuth\Api\Data\GoogleConfigureInterface
   two-factor-auth-data-authy-device-interface:
     type: object
@@ -6333,15 +6262,14 @@ definitions:
         type: string
         description: The method to authenticate with
       extension_attributes:
-        $ref: '#/definitions/two-factor-auth-data-authy-device-extension-interface'
+        $ref: "#/definitions/two-factor-auth-data-authy-device-extension-interface"
     required:
       - country
       - phone_number
       - method
   two-factor-auth-data-authy-device-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\TwoFactorAuth\Api\Data\AuthyDeviceInterface
   two-factor-auth-data-authy-registration-prompt-response-interface:
     type: object
@@ -6354,15 +6282,14 @@ definitions:
         type: string
         description: The seconds to expire
       extension_attributes:
-        $ref: >-
-          #/definitions/two-factor-auth-data-authy-registration-prompt-response-extension-interface
+        $ref: "#/definitions/two-factor-auth-data-authy-registration-prompt-response-ex\
+          tension-interface"
     required:
       - message
       - expiration_seconds
   two-factor-auth-data-authy-registration-prompt-response-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\TwoFactorAuth\Api\Data\AuthyRegistrationPromptResponseInterface
   two-factor-auth-data-u2f-web-authn-request-interface:
     type: object
@@ -6372,14 +6299,13 @@ definitions:
         type: string
         description: The needed data to initiate a WebAuthn registration ceremony
       extension_attributes:
-        $ref: >-
-          #/definitions/two-factor-auth-data-u2f-web-authn-request-extension-interface
+        $ref: "#/definitions/two-factor-auth-data-u2f-web-authn-request-extension-inter\
+          face"
     required:
       - credential_request_options_json
   two-factor-auth-data-u2f-web-authn-request-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\TwoFactorAuth\Api\Data\U2fWebAuthnRequestInterface
   two-factor-auth-data-duo-data-interface:
     type: object
@@ -6392,14 +6318,13 @@ definitions:
         type: string
         description: The api hostname
       extension_attributes:
-        $ref: '#/definitions/two-factor-auth-data-duo-data-extension-interface'
+        $ref: "#/definitions/two-factor-auth-data-duo-data-extension-interface"
     required:
       - signature
       - api_hostname
   two-factor-auth-data-duo-data-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\TwoFactorAuth\Api\Data\DuoDataInterface
   gift-card-account-data-gift-card-account-interface:
     type: object
@@ -6423,8 +6348,8 @@ definitions:
         type: number
         description: Cards amount used in base currency.
       extension_attributes:
-        $ref: >-
-          #/definitions/gift-card-account-data-gift-card-account-extension-interface
+        $ref: "#/definitions/gift-card-account-data-gift-card-account-extension-interfa\
+          ce"
     required:
       - gift_cards_amount
       - base_gift_cards_amount
@@ -6432,8 +6357,7 @@ definitions:
       - base_gift_cards_amount_used
   gift-card-account-data-gift-card-account-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\GiftCardAccount\Api\Data\GiftCardAccountInterface
   inventory-in-store-pickup-api-data-search-result-interface:
     type: object
@@ -6443,11 +6367,11 @@ definitions:
         type: array
         description: Items list.
         items:
-          $ref: >-
-            #/definitions/inventory-in-store-pickup-api-data-pickup-location-interface
+          $ref: "#/definitions/inventory-in-store-pickup-api-data-pickup-location-interfa\
+            ce"
       search_request:
-        $ref: >-
-          #/definitions/inventory-in-store-pickup-api-data-search-request-interface
+        $ref: "#/definitions/inventory-in-store-pickup-api-data-search-request-interfac\
+          e"
       total_count:
         type: integer
         description: Total count.
@@ -6457,10 +6381,9 @@ definitions:
       - total_count
   inventory-in-store-pickup-api-data-pickup-location-interface:
     type: object
-    description: >-
-      Represents sources projection on In-Store Pickup context. Realisation must
-      follow immutable DTO concept. Partial immutability done according to
-      restriction of current Extension Attributes implementation.
+    description: Represents sources projection on In-Store Pickup context.
+      Realisation must follow immutable DTO concept. Partial immutability done
+      according to restriction of current Extension Attributes implementation.
     properties:
       pickup_location_code:
         type: string
@@ -6508,31 +6431,29 @@ definitions:
         type: string
         description: Pickup Location phone.
       extension_attributes:
-        $ref: >-
-          #/definitions/inventory-in-store-pickup-api-data-pickup-location-extension-interface
+        $ref: "#/definitions/inventory-in-store-pickup-api-data-pickup-location-extensi\
+          on-interface"
     required:
       - pickup_location_code
   inventory-in-store-pickup-api-data-pickup-location-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\InventoryInStorePickupApi\Api\Data\PickupLocationInterface
   inventory-in-store-pickup-api-data-search-request-interface:
     type: object
-    description: >-
-      Endpoint used to search Pickup Locations by different parameters: - by
-      attribute filters fields @see
-      \Magento\InventoryInStorePickupApi\Api\Data\SearchRequest\FiltersInterface
-      - by distance to the address @see
-      \Magento\InventoryInStorePickupApi\Api\Data\SearchRequest\AreaInterface
-      Also, endpoint supports paging and sort orders.
+    description: "Endpoint used to search Pickup Locations by different parameters:
+      - by attribute filters fields @see
+      \\Magento\\InventoryInStorePickupApi\\Api\\Data\\SearchRequest\\FiltersIn\
+      terface - by distance to the address @see
+      \\Magento\\InventoryInStorePickupApi\\Api\\Data\\SearchRequest\\AreaInter\
+      face Also, endpoint supports paging and sort orders."
     properties:
       area:
-        $ref: >-
-          #/definitions/inventory-in-store-pickup-api-data-search-request-area-interface
+        $ref: "#/definitions/inventory-in-store-pickup-api-data-search-request-area-int\
+          erface"
       filters:
-        $ref: >-
-          #/definitions/inventory-in-store-pickup-api-data-search-request-filters-interface
+        $ref: "#/definitions/inventory-in-store-pickup-api-data-search-request-filters-\
+          interface"
       page_size:
         type: integer
         description: Page size.
@@ -6549,21 +6470,20 @@ definitions:
         type: array
         description: Sort Order.
         items:
-          $ref: '#/definitions/framework-sort-order'
+          $ref: "#/definitions/framework-sort-order"
       extension_attributes:
-        $ref: >-
-          #/definitions/inventory-in-store-pickup-api-data-search-request-extension-interface
+        $ref: "#/definitions/inventory-in-store-pickup-api-data-search-request-extensio\
+          n-interface"
     required:
       - current_page
       - scope_type
       - scope_code
   inventory-in-store-pickup-api-data-search-request-area-interface:
     type: object
-    description: >-
-      Filter by Distance to the Address. Pickup Locations will be filtered by
-      distance according to the geo-position of the entered address. Required
-      fields for the address are country and one of the field: region or city or
-      postcode.
+    description: "Filter by Distance to the Address. Pickup Locations will be
+      filtered by distance according to the geo-position of the entered address.
+      Required fields for the address are country and one of the field: region
+      or city or postcode."
     properties:
       radius:
         type: integer
@@ -6576,35 +6496,34 @@ definitions:
       - search_term
   inventory-in-store-pickup-api-data-search-request-filters-interface:
     type: object
-    description: >-
-      Filter to filter by Fields. Each field may be filtered with different
-      condition type. Supported condition types restricted by @see
+    description: Filter to filter by Fields. Each field may be filtered with
+      different condition type. Supported condition types restricted by @see
       \Magento\Framework\Api\SearchCriteriaInterface
     properties:
       country:
-        $ref: >-
-          #/definitions/inventory-in-store-pickup-api-data-search-request-filter-interface
+        $ref: "#/definitions/inventory-in-store-pickup-api-data-search-request-filter-i\
+          nterface"
       postcode:
-        $ref: >-
-          #/definitions/inventory-in-store-pickup-api-data-search-request-filter-interface
+        $ref: "#/definitions/inventory-in-store-pickup-api-data-search-request-filter-i\
+          nterface"
       region:
-        $ref: >-
-          #/definitions/inventory-in-store-pickup-api-data-search-request-filter-interface
+        $ref: "#/definitions/inventory-in-store-pickup-api-data-search-request-filter-i\
+          nterface"
       region_id:
-        $ref: >-
-          #/definitions/inventory-in-store-pickup-api-data-search-request-filter-interface
+        $ref: "#/definitions/inventory-in-store-pickup-api-data-search-request-filter-i\
+          nterface"
       city:
-        $ref: >-
-          #/definitions/inventory-in-store-pickup-api-data-search-request-filter-interface
+        $ref: "#/definitions/inventory-in-store-pickup-api-data-search-request-filter-i\
+          nterface"
       street:
-        $ref: >-
-          #/definitions/inventory-in-store-pickup-api-data-search-request-filter-interface
+        $ref: "#/definitions/inventory-in-store-pickup-api-data-search-request-filter-i\
+          nterface"
       name:
-        $ref: >-
-          #/definitions/inventory-in-store-pickup-api-data-search-request-filter-interface
+        $ref: "#/definitions/inventory-in-store-pickup-api-data-search-request-filter-i\
+          nterface"
       pickup_location_code:
-        $ref: >-
-          #/definitions/inventory-in-store-pickup-api-data-search-request-filter-interface
+        $ref: "#/definitions/inventory-in-store-pickup-api-data-search-request-filter-i\
+          nterface"
   inventory-in-store-pickup-api-data-search-request-filter-interface:
     type: object
     description: Filter for Pickup Location search.
@@ -6620,15 +6539,14 @@ definitions:
       - condition_type
   inventory-in-store-pickup-api-data-search-request-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\InventoryInStorePickupApi\Api\Data\SearchRequestInterface
     properties:
       products_info:
         type: array
         items:
-          $ref: >-
-            #/definitions/inventory-in-store-pickup-api-data-search-request-product-info-interface
+          $ref: "#/definitions/inventory-in-store-pickup-api-data-search-request-product-\
+            info-interface"
   inventory-in-store-pickup-api-data-search-request-product-info-interface:
     type: object
     description: Product Info Data Transfer Object.
@@ -6637,14 +6555,13 @@ definitions:
         type: string
         description: Product SKU.
       extension_attributes:
-        $ref: >-
-          #/definitions/inventory-in-store-pickup-api-data-search-request-product-info-extension-interface
+        $ref: "#/definitions/inventory-in-store-pickup-api-data-search-request-product-\
+          info-extension-interface"
     required:
       - sku
   inventory-in-store-pickup-api-data-search-request-product-info-extension-interface:
     type: object
-    description: >-
-      ExtensionInterface class for @see
+    description: ExtensionInterface class for @see
       \Magento\InventoryInStorePickupApi\Api\Data\SearchRequest\ProductInfoInterface
   quick-checkout-data-account-interface:
     type: object
@@ -6654,12 +6571,12 @@ definitions:
         type: array
         description: Addresses
         items:
-          $ref: '#/definitions/quick-checkout-data-address-interface'
+          $ref: "#/definitions/quick-checkout-data-address-interface"
       payment_methods:
         type: array
         description: Payment methods
         items:
-          $ref: '#/definitions/quick-checkout-data-payment-method-interface'
+          $ref: "#/definitions/quick-checkout-data-payment-method-interface"
       email:
         type: string
         description: Email
@@ -6756,7 +6673,7 @@ definitions:
         type: string
         description: Card network
       billing_address:
-        $ref: '#/definitions/quick-checkout-data-address-interface'
+        $ref: "#/definitions/quick-checkout-data-address-interface"
       expiration_month:
         type: string
         description: Expiration month of the card
@@ -6799,12 +6716,12 @@ x-tagGroups:
       - applepay/auth
   - name: carts
     tags:
-      - 'carts/guest-carts/{cartId}/checkGiftCard/{giftCardCode}'
-      - 'carts/guest-carts/{cartId}/giftCards'
-      - 'carts/guest-carts/{cartId}/giftCards/{giftCardCode}'
+      - carts/guest-carts/{cartId}/checkGiftCard/{giftCardCode}
+      - carts/guest-carts/{cartId}/giftCards
+      - carts/guest-carts/{cartId}/giftCards/{giftCardCode}
       - carts/mine
       - carts/mine/balance/apply
-      - 'carts/mine/checkGiftCard/{giftCardCode}'
+      - carts/mine/checkGiftCard/{giftCardCode}
       - carts/mine/collect-totals
       - carts/mine/payment-information
       - carts/mine/po-payment-information
@@ -6817,11 +6734,11 @@ x-tagGroups:
       - customers/me/password
       - customers/password
       - customers/resetPassword
-      - 'customers/{customerId}/password/resetLinkToken/{resetPasswordLinkToken}'
+      - customers/{customerId}/password/resetLinkToken/{resetPasswordLinkToken}
   - name: directory
     tags:
       - directory/countries
-      - 'directory/countries/{countryId}'
+      - directory/countries/{countryId}
       - directory/currency
   - name: giftregistry
     tags:
@@ -6829,28 +6746,28 @@ x-tagGroups:
   - name: guest carts
     tags:
       - guest-carts
-      - 'guest-carts/{cartId}'
-      - 'guest-carts/{cartId}/billing-address'
-      - 'guest-carts/{cartId}/collect-totals'
-      - 'guest-carts/{cartId}/coupons'
-      - 'guest-carts/{cartId}/coupons/{couponCode}'
-      - 'guest-carts/{cartId}/estimate-shipping-methods'
-      - 'guest-carts/{cartId}/gift-message'
-      - 'guest-carts/{cartId}/gift-message/{itemId}'
-      - 'guest-carts/{cartId}/items'
-      - 'guest-carts/{cartId}/items/{itemId}'
-      - 'guest-carts/{cartId}/order'
-      - 'guest-carts/{cartId}/payment-information'
-      - 'guest-carts/{cartId}/payment-methods'
-      - 'guest-carts/{cartId}/selected-payment-method'
-      - 'guest-carts/{cartId}/set-payment-information'
-      - 'guest-carts/{cartId}/shipping-information'
-      - 'guest-carts/{cartId}/shipping-methods'
-      - 'guest-carts/{cartId}/totals'
-      - 'guest-carts/{cartId}/totals-information'
+      - guest-carts/{cartId}
+      - guest-carts/{cartId}/billing-address
+      - guest-carts/{cartId}/collect-totals
+      - guest-carts/{cartId}/coupons
+      - guest-carts/{cartId}/coupons/{couponCode}
+      - guest-carts/{cartId}/estimate-shipping-methods
+      - guest-carts/{cartId}/gift-message
+      - guest-carts/{cartId}/gift-message/{itemId}
+      - guest-carts/{cartId}/items
+      - guest-carts/{cartId}/items/{itemId}
+      - guest-carts/{cartId}/order
+      - guest-carts/{cartId}/payment-information
+      - guest-carts/{cartId}/payment-methods
+      - guest-carts/{cartId}/selected-payment-method
+      - guest-carts/{cartId}/set-payment-information
+      - guest-carts/{cartId}/shipping-information
+      - guest-carts/{cartId}/shipping-methods
+      - guest-carts/{cartId}/totals
+      - guest-carts/{cartId}/totals-information
   - name: guest giftregistry
     tags:
-      - 'guest-giftregistry/{cartId}/estimate-shipping-methods'
+      - guest-giftregistry/{cartId}/estimate-shipping-methods
   - name: integration
     tags:
       - integration/admin/token
@@ -6861,24 +6778,24 @@ x-tagGroups:
       - inventory/in-store-pickup/pickup-locations/
   - name: negotiable carts
     tags:
-      - 'negotiable-carts/{cartId}/billing-address'
-      - 'negotiable-carts/{cartId}/coupons'
-      - 'negotiable-carts/{cartId}/coupons/{couponCode}'
-      - 'negotiable-carts/{cartId}/estimate-shipping-methods'
-      - 'negotiable-carts/{cartId}/estimate-shipping-methods-by-address-id'
-      - 'negotiable-carts/{cartId}/giftCards'
-      - 'negotiable-carts/{cartId}/giftCards/{giftCardCode}'
-      - 'negotiable-carts/{cartId}/payment-information'
-      - 'negotiable-carts/{cartId}/set-payment-information'
-      - 'negotiable-carts/{cartId}/shipping-information'
-      - 'negotiable-carts/{cartId}/totals'
+      - negotiable-carts/{cartId}/billing-address
+      - negotiable-carts/{cartId}/coupons
+      - negotiable-carts/{cartId}/coupons/{couponCode}
+      - negotiable-carts/{cartId}/estimate-shipping-methods
+      - negotiable-carts/{cartId}/estimate-shipping-methods-by-address-id
+      - negotiable-carts/{cartId}/giftCards
+      - negotiable-carts/{cartId}/giftCards/{giftCardCode}
+      - negotiable-carts/{cartId}/payment-information
+      - negotiable-carts/{cartId}/set-payment-information
+      - negotiable-carts/{cartId}/shipping-information
+      - negotiable-carts/{cartId}/totals
   - name: products render info
     tags:
       - products-render-info
   - name: purchase order carts
     tags:
-      - 'purchase-order-carts/{cartId}/payment-information'
-      - 'purchase-order-carts/{cartId}/set-payment-information'
+      - purchase-order-carts/{cartId}/payment-information
+      - purchase-order-carts/{cartId}/set-payment-information
   - name: quick checkout
     tags:
       - quick-checkout/account-details
@@ -6899,7 +6816,7 @@ x-tagGroups:
       - tfa/provider/authy/authenticate
       - tfa/provider/authy/authenticate-onetouch
       - tfa/provider/authy/configure
-      - 'tfa/provider/authy/send-token/{via}'
+      - tfa/provider/authy/send-token/{via}
       - tfa/provider/duo_security/activate
       - tfa/provider/duo_security/authenticate
       - tfa/provider/duo_security/configure
