@@ -134,7 +134,7 @@ Field | Data Type | Description
 --- | --- | ---
 `id` | ID | The ID of an option value.
 `title` | String | The display name of the option value.
-`type` | SwatchType | Indicates the type of swatch. Can be `Text`, `IMAGE`, `COLOR_HEX`, or `CUSTOM`.
+`type` | SwatchType | Indicates the type of swatch. Can be `TEXT`, `IMAGE`, `COLOR_HEX`, or `CUSTOM`.
 `value` | String | The value of the swatch.
 
 ### ProductViewPrice type
