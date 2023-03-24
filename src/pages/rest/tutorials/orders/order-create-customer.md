@@ -144,7 +144,7 @@ By default, a customer token is valid for 1 hour. To change this value, log in t
 
 **Response:**
 
-Commerce returnsthe customer's access token. This token must be specified in the authorization header of every call the customer makes on his or her own behalf.
+Commerce returns the customer's access token. This token must be specified in the authorization header of every call the customer makes on his or her own behalf.
 
 `q0u66k8h42yaevtchv09uyy3y9gaj2ap`
 
