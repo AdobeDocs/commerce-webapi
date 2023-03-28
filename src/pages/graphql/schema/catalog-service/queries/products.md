@@ -373,6 +373,6 @@ query {
 
 ## Output fields
 
-import Docs2 from '/src/pages/_includes/graphql/catalog-product-view.md'
+import Docs2 from '/src/pages/_includes/graphql/catalog-service/product-view.md'
 
 <Docs2 />
