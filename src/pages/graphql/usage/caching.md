@@ -25,6 +25,7 @@ The application caches the following queries:
 *  `cmsPage`
 *  `products`
 *  `route`
+*  `storeConfig`
 *  `urlResolver` (deprecated)
 
 The application explicitly disallows caching the following queries.
@@ -38,7 +39,6 @@ The application explicitly disallows caching the following queries.
 *  `customerDownloadableProducts`
 *  `customerOrders`
 *  `customerPaymentTokens`
-*  `storeConfig`
 *  `wishlist` (deprecated)
 
 [Define the GraphQL schema for a module](../develop/index.md) describes the syntax of a valid query.
