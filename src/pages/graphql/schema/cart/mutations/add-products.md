@@ -10,7 +10,7 @@ The `addProductsToCart` mutation adds any type of product to the shopping cart. 
 
 You must specify the Cart ID along with the list of SKU and quantity pairs as parameters to add the products to the shopping cart.
 
-The `CartItemInput` object now contains the `selected_options` and `enter_options` attributes. A selected option is predefined, and the shopper chooses from a set of possible values. Entered options generally contain text the shopper types, but other possibilities exist.
+The `CartItemInput` object now contains the `selected_options` and `entered_options` attributes. A selected option is predefined, and the shopper chooses from a set of possible values. Entered options generally contain text the shopper types, but other possibilities exist.
 
 Selected options can be used in the following product types:
 
