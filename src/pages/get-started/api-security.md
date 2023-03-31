@@ -28,32 +28,21 @@ The rate limiting functionality affects the following entry points:
 
 - Module InstantPurchase `magento/module-instant-purchase`
 
-The configuration and default values are located in the path `app/code/Magento/Quote/etc/config.xml`
+### Enable rate limiting
 
-```xml
-<?xml version="1.0"?>
-<!-- ... -->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
-    <default>
-        ...
-        <sales>
-            <backpressure>
-                <enabled>1</enabled>          <!-- Enable rate limiting for placing orders -->
-                <limit>10</limit>             <!-- Requests limit per authenticated customer -->
-                <guest_limit>50</guest_limit> <!-- Requests limit per guest -->
-                <period>60</period>           <!-- Counter resets in a ... [sec.]-->
-            </backpressure>
-        </sales>
-    </default>
-</config>
-```
+Prerequisite: You must configure Redis to enable rate limiting.
 
-Configuration settings:
+| Parametr                       | Description                               |
+|--------------------------------|-------------------------------------------|
+| sales/backpressure/enabled     | Enable rate limiting for placing orders.  |
+| sales/backpressure/guest_limit | Requests limit per guest                  |
+| sales/backpressure/limit       | Requests limit per authenticated customer |
+| sales/backpressure/period      | Counter resets in a ... [sec.]            |
+
+Example:
 - Sales restrictions are enabled `sales/backpressure/enabled` = `1`.
 - Anonymous users are limited to 50 orders (`sales/backpressure/guest_limit` = `50`) from a single IP address within one minute (`sales/backpressure/period - 60`).  If they exceed the order limit, then they will have to wait three times the specified `period` of time from their last request.
 -  For example, if an authorized user attempts to place more than `10` orders (`sales/backpressure/limit` = `10`) within the `period` of `60` seconds, then the user will not be able to place an order for a period of `180` seconds.
-
-### How to use?
 
 Since this functionality is disabled by default, you need to add a configuration that connects to the service where the request logs will be stored. By default, the connection is configured for a Redis server.
 The following options work for new and existing installations:
@@ -176,6 +165,8 @@ If rate limiting has been enabled for the payment information endpoint and the G
 [2022-11-11T15:46:37.730863+00:00] main.ERROR: Backpressure sliding window not applied. Invalid request logger type:  [] []
 ...
 ```
+
+#### Example Responses
 
 If rate limiting is applied to a REST request, then a response with HTTP status code `429 - Too Many Requests` will be generated.
 
