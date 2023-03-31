@@ -11,15 +11,15 @@ This topic describes best practices for [API security](https://owasp.org/www-pro
 
 In a carding attack, an attacker tries to determine which credit card numbers are valid, usually in batches of thousands. Attackers can use similar techniques to brute force missing details, like the expiration date. Adobe Commerce merchants can be targeted by this attack type through their shops and integrations with 3rd-party payment gateways.
 
-Adobe Commerce has a new configuration for adding rate limiting for the payment information endpoint and mutation. This added layer of protection allows merchants to prevent and slow carding attacks that test many credit card numbers at once.
+As of Adobe Commerce 2.4.7, you can configure rate limiting for the payment information transmitted using REST and GraphQL. This added layer of protection allows merchants to prevent and decrease the volume of carding attacks that test many credit card numbers at once.
 
-Rate limiting is disabled by default but can be enabled and configured via the CLI or the UI. The threshold can be configured by interval and set independently for customers and guests.
+Rate limiting is disabled by default, but you can enable and configure this feature from either the CLI or the Admin. The threshold can be configured by interval and set independently for customers and guests.
 
 ### How rate limiting works
 
 The rate limiting functionality affects the following entry points:
 
-- WebAPI:
+- REST:
     - `{{base_url}}/rest/V1/guest-carts/{{cart_id}}/payment-information`
     - `{{base_url}}/rest/V1/guest-carts/{{cart_id}}/order`
     - `{{base_url}}/rest/V1/carts/mine/payment-information`
@@ -161,7 +161,7 @@ sales/backpressure/period - 3600
 sales/backpressure/enabled - 1
 ```
 
-You can also enable and configure rate limiting in the user interface: `Stores` -> `Config` -> `Sales` -> `Sales` -> `Rate Limiting`:
+You can also enable and configure rate limiting in the user interface: **Stores** > **Configuration** > **Sales** > **Sales** > **Rate Limiting**:
 
 ![Rate limiting section](../_images/api-security-rate-limiting.png)
 
