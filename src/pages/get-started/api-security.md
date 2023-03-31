@@ -20,11 +20,11 @@ Rate limiting is disabled by default, but you can enable and configure this feat
 The rate limiting functionality affects the following entry points:
 
 - REST:
-    - `{{base_url}}/rest/V1/guest-carts/{{cart_id}}/payment-information`
-    - `{{base_url}}/rest/V1/guest-carts/{{cart_id}}/order`
-    - `{{base_url}}/rest/V1/carts/mine/payment-information`
-    - `{{base_url}}/rest/V1/carts/mine/order`
-- GraphQL: `{{base_url}}/graphql`
+    - `<base_url>/rest/V1/<store_code>/guest-carts/<cart_id>/payment-information`
+    - `<base_url>/rest/V1/<store_code>/guest-carts/<cart_id>/order`
+    - `<base_url>/rest/V1/<store_code>/carts/mine/payment-information`
+    - `<base_url>/rest/V1/<store_code>/carts/mine/order`
+- GraphQL: `<base_url>/graphql`
 
 - Module InstantPurchase `magento/module-instant-purchase`
 
@@ -167,9 +167,7 @@ You can also enable and configure rate limiting in the user interface: **Stores*
 
 <InlineAlert variant="info" slots="text"/>
 
-If rate limiting was enabled for the payment information endpoint and the mutation functionality, but the connection to the service for store log request was not configured or configured incorrectly, then the restrictions will not be applied.
-
-The behavior will be the same if this option is disabled, but the application logs (`<magento-root>/var/log/system.log`) will contain the following message: 
+If rate limiting has been enabled for the payment information endpoint and the GraphQl mutation via the UI/CLI, but the Redis service connection for store log requests has not been configured in the `app/etc/env.php` file, then the rate-limiting will not apply. The behavior will be the same if this option is disabled, but the application logs (`<magento-root>/var/log/system.log`) will contain the following message: 
 
 ```text
 ...
