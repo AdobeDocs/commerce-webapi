@@ -25,7 +25,7 @@ where `3` is the order id.
 
 **Payload:**
 
-The `notify` field is used to trigger Commerce to send the shipment email. The `tracks` array optionally allows you to include one or more tracking numbers for the [shipment](https://glossary.magento.com/shipment).
+The `notify` field is used to trigger Commerce to send the shipment email. The `tracks` array optionally allows you to include one or more tracking numbers for the shipment.
 
 ```json
 {
@@ -60,4 +60,4 @@ A shipment ID, such as `3`.
 
 ## Verify this step
 
-Log in to [Admin](https://glossary.magento.com/admin). Click **Sales** > **Shipments**. The shipment is displayed in the grid. Then click **Sales** > **Orders**. The order status is Complete.
+Log in to Admin. Click **Sales** > **Shipments**. The shipment is displayed in the grid. Then click **Sales** > **Orders**. The order status is Complete.

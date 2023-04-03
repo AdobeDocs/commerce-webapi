@@ -5,7 +5,7 @@ description: In this step of the tutorial you will create an invoice
  
 # Step 8. Create an invoice
 
-You create an [invoice](https://glossary.magento.com/invoice) after you receive payment for an order. In this example, the order was paid offline via a bank transfer. Therefore, you must tell Adobe Commerce that payment for the order has been captured.
+You create an invoice after you receive payment for an order. In this example, the order was paid offline via a bank transfer. Therefore, you must tell Adobe Commerce that payment for the order has been captured.
 
 ### Capture payment
 
@@ -56,7 +56,7 @@ Not applicable
 
 **Response:**
 
-You will use the `order_item_id` values to create a [shipment](https://glossary.magento.com/shipment) in the next step.
+You will use the `order_item_id` values to create a shipment in the next step.
 
 <details>
       <summary><b>Show code sample</b></summary>
@@ -283,4 +283,4 @@ You will use the `order_item_id` values to create a [shipment](https://glossary.
 
 ### Verify this step
 
-Log in to [Admin](https://glossary.magento.com/admin). Click **Sales** > **Invoices**. The invoice is displayed in the grid. The status is Paid. Then click **Sales** > **Orders**. The status is Processing.
+Log in to Admin. Click **Sales** > **Invoices**. The invoice is displayed in the grid. The status is Paid. Then click **Sales** > **Orders**. The status is Processing.

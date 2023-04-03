@@ -39,7 +39,7 @@ Commerce generates the admin's access token
 
 `5r8cvmpr11j6gmau8990rcj2qk7unh8i`
 
-This token must be specified in the authorization header of every call that requires [admin](https://glossary.magento.com/admin) permissions.
+This token must be specified in the authorization header of every call that requires admin permissions.
 
 ### Verify this step
 

@@ -5,7 +5,7 @@ description: In this step of the tutorial you will create an invoice
  
 # Step 10. Create an invoice
 
-You create an [invoice](https://glossary.magento.com/invoice) after you receive payment for an order. In this example, the order was paid offline via a bank transfer. Therefore, you must tell Adobe Commerce that payment for the order has been captured.
+You create an invoice after you receive payment for an order. In this example, the order was paid offline via a bank transfer. Therefore, you must tell Adobe Commerce that payment for the order has been captured.
 
 After you submit the invoice, Commerce adjusts the Quantity per Source value for non-physical products.
 

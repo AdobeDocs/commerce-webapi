@@ -5,7 +5,7 @@ description: In this step of the tutorial you will prepare for checkout
  
 # Step 8. Prepare for checkout
 
-Now that all the items have been added to the cart, we can prepare the quote for [checkout](https://glossary.magento.com/checkout). This process includes the following steps:
+Now that all the items have been added to the cart, we can prepare the quote for checkout. This process includes the following steps:
 
 *  Estimate shipping costs
 *  Set shipping and billing information
@@ -139,7 +139,7 @@ Commerce returnsa list of payment options and calculates the order totals.
 
 The subtotal of the order is $2022, and shipping charges are $300. The grand total is $2322.
 
-The available payment methods are `banktransfer` and `checkmo`. The customer will specify a [payment method](https://glossary.magento.com/payment-method) in the next step.
+The available payment methods are `banktransfer` and `checkmo`. The customer will specify a payment method in the next step.
 
 ```json
 {
@@ -314,6 +314,6 @@ The available payment methods are `banktransfer` and `checkmo`. The customer wil
 
 ### Verify this step
 
-[Sign in](https://glossary.magento.com/sign-in-sign-out) to the US store (`http://<host>/us`) as the customer and go to the checkout page.
+Sign in to the US store (`http://<host>/us`) as the customer and go to the checkout page.
 
 The payment method is Bank Transfer, the billing and shipping addresses are displayed, and the shipping charges and shipping charges calculate and display.

@@ -121,7 +121,7 @@ You can log in to the Luma store using the username `jdoe@example.com` and passw
 
 ### Get the customer's access token
 
-To get a customer's access token, you must specify the customer's username and password in the payload. You do not need to specify an admin [authorization](https://glossary.magento.com/authorization) token.
+To get a customer's access token, you must specify the customer's username and password in the payload. You do not need to specify an admin authorization token.
 
 By default, a customer token is valid for 1 hour. To change this value, log in to Admin and go to **Stores** > Settings > **Configuration** > **Services** > **OAuth** > **Access Token Expiration**.
 
@@ -150,6 +150,6 @@ Commerce returns the customer's access token. This token must be specified in th
 
 ### Verify this step
 
-1. Log in to the Luma [website](https://glossary.magento.com/website) using the email `jdoe@example.com` and password `Password1`.
+1. Log in to the Luma website using the email `jdoe@example.com` and password `Password1`.
 1. Click the account name (Jane) in the upper right corner and select **My Account**.
 1. Click **Address Book** to view the default billing and shipping addresses.

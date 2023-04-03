@@ -7,13 +7,13 @@ description: Explains how to use cURL.
 
 ['cURL'](https://curl.haxx.se/) is a command-line tool that lets you transmit HTTP requests and receive responses from the command line or a shell script. It is available for Linux distributions, Mac OS X, and Windows.
 
-To use cURL to run your REST web [API](https://glossary.magento.com/api) call, use the cURL command syntax to construct the command.
+To use cURL to run your REST web API call, use the cURL command syntax to construct the command.
 
 To create the endpoint in the call, append the REST URI that you constructed in [Construct a request](./gs-web-api-request.md) to this URL:
 
 `https://<HOST_OR_IP>/<BASE_INSTALL_DIR>/rest/`
 
-To pass the customer data object in the POST call payload, specify a JSON or [XML](https://glossary.magento.com/xml) request body on the call.
+To pass the customer data object in the POST call payload, specify a JSON or XML request body on the call.
 
 For a complete list of cURL command options, see [curl.1 the man page](http://curl.haxx.se/docs/manpage.html).
 
