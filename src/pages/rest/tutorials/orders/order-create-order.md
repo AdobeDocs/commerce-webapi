@@ -5,11 +5,11 @@ description: In this step of the tutorial you will create an order
  
 # Step 7. Create an order
 
-The [shopping cart](https://glossary.magento.com/shopping-cart) contains three items totaling $108. The shipping charges are $10, making the grand total $118. We're now ready to convert the [quote](https://glossary.magento.com/quote) to an order.
+The shopping cart contains three items totaling $108. The shipping charges are $10, making the grand total $118. We're now ready to convert the quote to an order.
 
 ### Send payment information
 
-When you submit payment information, Adobe Commerce creates an order and sends an order confirmation to the customer. Since we are using an offline [payment method](https://glossary.magento.com/payment-method) in this tutorial, we do not need to provide detailed payment information. The endpoint used in this example requires only the payment method and billing address information.
+When you submit payment information, Adobe Commerce creates an order and sends an order confirmation to the customer. Since we are using an offline payment method in this tutorial, we do not need to provide detailed payment information. The endpoint used in this example requires only the payment method and billing address information.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -324,4 +324,4 @@ Not applicable
 ### Verify this step
 
 1. Log in to the Luma store as the customer. The dashboard shows the order.
-1. Log in to [Admin](https://glossary.magento.com/admin). Click **Sales** > **Orders**. The order is displayed in the grid. Its status is Pending.
+1. Log in to Admin. Click **Sales** > **Orders**. The order is displayed in the grid. Its status is Pending.

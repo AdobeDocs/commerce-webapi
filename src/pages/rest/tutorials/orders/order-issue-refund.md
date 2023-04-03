@@ -5,7 +5,7 @@ description: In this step of the tutorial you will issue a partial refund
  
 # Step 10. Issue a partial refund
 
-Adobe Commerce introduced two endpoints that streamline the process of issuing a refund by creating a creditmemo and updating the order or [invoice](https://glossary.magento.com/invoice) in one call.
+Adobe Commerce introduced two endpoints that streamline the process of issuing a refund by creating a creditmemo and updating the order or invoice in one call.
 
 Endpoint | Description
 --- | ---
@@ -58,11 +58,11 @@ The `return_to_stock_items` array specifies which `order_item_id`s can be return
 
 **Response:**
 
-A [credit memo](https://glossary.magento.com/credit-memo) id, such as `3`.
+A credit memo id, such as `3`.
 
 ### Verify this step
 
-Log in to [Admin](https://glossary.magento.com/admin). Click **Sales** > **Credit Memos**. The credit memo is displayed in the grid.
+Log in to Admin. Click **Sales** > **Credit Memos**. The credit memo is displayed in the grid.
 
 ## Congratulations! You've finished.
 
