@@ -5,7 +5,7 @@ description: Overview of basic Magento REST API information.
 
 # Using REST APIs
 
-The Magento REST [API](https://glossary.magento.com/api) defines a set of functions that a developer can use to perform requests and receive responses. These interactions are performed using the HTTP protocol.
+The Magento REST API defines a set of functions that a developer can use to perform requests and receive responses. These interactions are performed using the HTTP protocol.
 
 The caller issues an HTTP request, which contains the following elements:
 
@@ -16,7 +16,7 @@ The caller issues an HTTP request, which contains the following elements:
 
 Magento returns a response payload as well as an HTTP status code.
 
-This guide introduces web API, REST, and cURL command concepts. It shows you how to authenticate and construct and run REST [web API](https://glossary.magento.com/web-api) calls. You run REST web API calls through <a href="./gs-curl">cURL commands</a> or a REST client.
+This guide introduces web API, REST, and cURL command concepts. It shows you how to authenticate and construct and run REST web API calls. You run REST web API calls through <a href="./gs-curl">cURL commands</a> or a REST client.
 
 Read the following sections to get up and running with the Magento web APIs:
 

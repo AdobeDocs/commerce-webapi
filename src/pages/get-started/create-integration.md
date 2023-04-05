@@ -7,13 +7,13 @@ description: Explains how to create an integration.
 
 An **integration** enables third-party services to call the Adobe Commerce and Magento Open Source web APIs. The APIs currently support external software, such as Accounting, Enterprise Resource Planning (ERP), Customer Relationship Management (CRM), Product Information Management (PIM), and marketing automation systems out of the box.
 
-Implementing a simple integration requires little knowledge of [PHP](https://glossary.magento.com/php) or Commerce internal processes. However, you will need a working knowledge of
+Implementing a simple integration requires little knowledge of PHP or Commerce internal processes. However, you will need a working knowledge of
 
 *  [Commerce REST or SOAP Web APIs](../get-started/)
 *  [Web API authentication](./authentication/)
 *  [OAuth-based authentication](./authentication/gs-authentication-oauth.md)
 
-Before you begin creating a module, make sure that you have a working installation that meets the [System Requirements](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html).
+Before you begin creating a module, make sure that you have a working installation that meets the [System Requirements](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html).
 
 To create an integration, follow these general steps:
 
@@ -47,7 +47,7 @@ To develop a module, you must:
    </tr>
    <tr>
    <td>name</td>
-   <td>A string that uniquely identifies the [module](https://glossary.magento.com/module).</td>
+   <td>A string that uniquely identifies the module.</td>
    </tr>
    <tr>
    <td>setup_version</td>
@@ -176,7 +176,7 @@ The Integration module simplifies the process of defining your integration. This
 *  Maintaining OAuth authorizations and user data.
 *  Managing security tokens and requests.
 
-To customize your module, you must create multiple [XML](https://glossary.magento.com/xml) files and read through other files to determine what resources existing modules have access to.
+To customize your module, you must create multiple XML files and read through other files to determine what resources existing modules have access to.
 
 The process for customizing your module includes
 
@@ -185,7 +185,7 @@ The process for customizing your module includes
 
 ### Define the required resources
 
-The `etc/integration/api.xml` file defines which [API](https://glossary.magento.com/api) resources the integration has access to.
+The `etc/integration/api.xml` file defines which API resources the integration has access to.
 
 To determine which resources an integration needs access to, review the permissions defined in each module's `etc/acl.xml` file.
 
@@ -198,7 +198,7 @@ In the following example, the test integration requires access to the following 
             <!-- To grant permission to Magento_Log::online, its parent Magento_Customer::customer needs to be declared as well-->
             <resource name="Magento_Customer::customer" />
             <resource name="Magento_Log::online" />
-            <!-- To grant permission to Magento_Sales::reorder, all its parent resources need to be declared-->	
+            <!-- To grant permission to Magento_Sales::reorder, all its parent resources need to be declared-->    
             <resource name="Magento_Sales::sales" />
             <resource name="Magento_Sales::sales_operation" />
             <resource name="Magento_Sales::sales_order" />
@@ -215,7 +215,7 @@ Your module can optionally provide values in configuration file `config.xml`, so
 
 <InlineAlert variant="info" slots="text"/>
 
-If you pre-configure the integration, the values cannot be edited from the [admin](https://glossary.magento.com/admin) panel.
+If you pre-configure the integration, the values cannot be edited from the admin panel.
 
 The file defines which API resources the integration has access to.
 
@@ -248,7 +248,7 @@ The file defines which API resources the integration has access to.
 </tr>
 <tr>
 <td>endpoint_url</td>
-<td><p>Optional. The [URL](https://glossary.magento.com/url) where OAuth credentials can be sent when using OAuth for token exchange. We strongly recommend using <inlineCode class="spectrum-Body--sizeS">https://</inlineCode>.</p>
+<td><p>Optional. The URL where OAuth credentials can be sent when using OAuth for token exchange. We strongly recommend using <inlineCode class="spectrum-Body--sizeS">https://</inlineCode>.</p>
 <p>See <a href="./authentication/gs-authentication-oauth">OAuth-based authentication</a> for details.</p></td>
 </tr>
 <tr>
@@ -261,7 +261,7 @@ The file defines which API resources the integration has access to.
 
 Use the following steps to install your module:
 
-1. Run the following command to update the [database schema](https://glossary.magento.com/database-schema) and data.
+1. Run the following command to update the database schema and data.
 
    ```bash
    bin/magento setup:upgrade
@@ -325,6 +325,6 @@ The callback page must be able to perform the following tasks:
 
 *  [Web API authentication](./authentication/)
 *  [OAuth-based authentication](./authentication/gs-authentication-oauth.md)
-*  [System Requirements](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html)
+*  [System Requirements](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)
 *  [Create the module file structure](https://developer.adobe.com/commerce/php/development/build/component-file-structure/)
 *  [Create a component](https://developer.adobe.com/commerce/php/development/build/component-name/)

@@ -16,11 +16,11 @@ Complete the following prerequisites:
 
 *  Install an Adobe Commerce instance with sample data.
 
-  The sample data defines a functional store, called Luma, that sells fitness clothing and accessories. The store does not provide any sandbox accounts for testing credit card payments, so transactions will be simulated using an offline [payment method](https://glossary.magento.com/payment-method).
+  The sample data defines a functional store, called Luma, that sells fitness clothing and accessories. The store does not provide any sandbox accounts for testing credit card payments, so transactions will be simulated using an offline payment method.
 
 *  Install a REST client. You can use any REST client to send calls to Commerce. [Postman](https://www.getpostman.com/) is recommended.
 
-*  Set up [two-factor authentication](https://devdocs.magento.com/guides/v2.4/security/two-factor-authentication.html). This tutorial assumes Google Authenticator is your 2FA solution.
+*  Set up [two-factor authentication](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication/). This tutorial assumes Google Authenticator is your 2FA solution.
 
 *  Know how to construct a REST call in Commerce. See [Construct a request](/get-started/gs-web-api-request) for details.
 

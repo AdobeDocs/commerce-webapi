@@ -5,7 +5,7 @@ description: In this step of the tutorial you will prepare for checkout
  
 # Step 6. Prepare for checkout
 
-Now that all the items have been added to the cart, we can prepare the order for [checkout](https://glossary.magento.com/checkout). This process includes the following steps:
+Now that all the items have been added to the cart, we can prepare the order for checkout. This process includes the following steps:
 
 *  Estimate shipping costs
 *  Set shipping and billing information
@@ -167,7 +167,7 @@ Use the `V1/guest-carts/<cartId>/shipping-information` endpoint to set the billi
 
 The subtotal of the order is $160, and shipping charges are $5. The grand total is $165.
 
-The available payment methods are `banktransfer` and `checkmo`. The customer will specify a [payment method](https://glossary.magento.com/payment-method) in the next step.
+The available payment methods are `banktransfer` and `checkmo`. The customer will specify a payment method in the next step.
 
 <details>
       <summary><b>Show code sample</b></summary>
@@ -347,6 +347,6 @@ If you tried this call on your own, and the value of the `shipping_amount` param
 
 ### Verify this step
 
-[Sign in](https://glossary.magento.com/sign-in-sign-out) as the customer and go to the checkout page.
+Sign in as the customer and go to the checkout page.
 
 The payment method is Bank Transfer, the billing and shipping addresses are displayed, and the shipping charges have been calculated.

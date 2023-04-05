@@ -5,11 +5,11 @@ description: Explains how to construct and format an API request for Magento web
 
 # Construct a request
 
-To configure a web API, developers define some of the elements of each API call in the `<module root dir>/vendor/<vendor-name>/<module-name>/etc/webapi.xml` file, where `<vendor-name>` is your vendor name (for example, `sample`) and `<module-name>` is your module name (which exactly matches its definition in `composer.json`). For example, the web API for the Customer service is defined in the `<root>/vendor/sample/module-customer/etc/webapi.xml` configuration file. Service data interfaces and builders define the required and optional parameters and the return values for the [API](https://glossary.magento.com/api) calls.
+To configure a web API, developers define some of the elements of each API call in the `<module root dir>/vendor/<vendor-name>/<module-name>/etc/webapi.xml` file, where `<vendor-name>` is your vendor name (for example, `sample`) and `<module-name>` is your module name (which exactly matches its definition in `composer.json`). For example, the web API for the Customer service is defined in the `<root>/vendor/sample/module-customer/etc/webapi.xml` configuration file. Service data interfaces and builders define the required and optional parameters and the return values for the API calls.
 
 ## Overview
 
-The following table and the sections that follow the table describe [web API](https://glossary.magento.com/web-api) call elements:
+The following table and the sections that follow the table describe web API call elements:
 
 Element | Specifies
 --- | ---
@@ -37,7 +37,7 @@ A store code can have one of the following values.
 
 *  The store's assigned store code.
 *  `default`. This is the default value when no store code is provided.
-*  `all`. This value only applies to endpoints defined in the [CMS](https://glossary.magento.com/cms) and Product modules. If this value is specified, the [API](https://glossary.magento.com/api) call affects all of the merchant's stores.
+*  `all`. This value only applies to endpoints defined in the CMS and Product modules. If this value is specified, the API call affects all of the merchant's stores.
 
 ### HTTP headers
 
@@ -112,7 +112,7 @@ This example shows you how to construct a REST web API call to create an account
 
 1. Use the `method` and `url` values on the `route` element to construct the URI. In this example, the URI is POST `/V1/customers`.
 
-1. Use the `class` attribute on the `service` element to identify the service interface. In this example, the service interface is the `AccountManagementInterface` [PHP](https://glossary.magento.com/php) file.
+1. Use the `class` attribute on the `service` element to identify the service interface. In this example, the service interface is the `AccountManagementInterface` PHP file.
 
    Open the [AccountManagementInterface.php](https://github.com/magento/magento2/tree/2.4/app/code/Magento/Customer/Api/AccountManagementInterface.php) file and find the `createAccount` method, as follows:
 
@@ -126,13 +126,13 @@ This example shows you how to construct a REST web API call to create an account
 
     The `createAccount` call requires a `customer` data object. The `password` and `redirectUrl` values are optional. The default `password` value is `null` and the default `redirectUrl` value is blank.
 
-1. To pass the `customer` data object in the POST call payload, specify [JSON](http://www.json.com/) or [XML](https://glossary.magento.com/xml) request body on the call.
+1. To pass the `customer` data object in the POST call payload, specify [JSON](http://www.json.com/) or XML request body on the call.
 
 ### Customers Search API request example
 
 The following example builds a Customers Search request based on search criteria. It returns a list of customers that match given search criteria.
 
-1. Prepare `Authorization`, `Accept` and `Content-Type` headers to be passed to a request object. Use the [Authorization](https://glossary.magento.com/authorization) token returned by the token service.
+1. Prepare `Authorization`, `Accept` and `Content-Type` headers to be passed to a request object. Use the Authorization token returned by the token service.
 
    ```php?start_inline=1
    $token = 'token';

@@ -116,7 +116,7 @@ This example returns only the following:
 
 ## POST operation
 
-The following POST operation and payload creates a [catalog](https://glossary.magento.com/catalog) category named `New Category`. Commerce returns only the `id`, `parent_id`, and `name` attributes
+The following POST operation and payload creates a catalog category named `New Category`. Commerce returns only the `id`, `parent_id`, and `name` attributes
 
 `POST <host>/rest/<store_code>/V1/categories?fields=id,parent_id,name`
 

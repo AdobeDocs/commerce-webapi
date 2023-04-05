@@ -5,7 +5,7 @@ description: How to use token-based authentication in web APIs.
 
 # Token-based authentication
 
-To make a web [API](https://glossary.magento.com/api) call from a client such as a mobile application, you must supply an *access token* on the call. The token acts like an electronic key that lets you access the API.
+To make a web API call from a client such as a mobile application, you must supply an *access token* on the call. The token acts like an electronic key that lets you access the API.
 
 Adobe Commerce and Magento Open Source issue the following types of access tokens:
 
@@ -160,7 +160,7 @@ Commerce provides a separate token service for administrators and customers. Whe
 
 The web API framework allows *guest users* to access resources that are configured with the permission level of anonymous. Guest users are users who the framework cannot authenticate through existing authentication mechanisms. As a guest user, you do not need to, but you can, specify a token in a web API call for a resource with anonymous permission. [Restricting access to anonymous web APIs](https://developer.adobe.com/commerce/webapi/rest/use-rest/anonymous-api-security/) contains a list of APIs that do not require a token.
 
-The following table lists endpoints and services that can be used to get an authentication token. Admin accounts must be authenticated with a [two factor authentication](https://devdocs.magento.com/guides/v2.4/security/two-factor-authentication.html) provider. Some providers may require multiple calls.
+The following table lists endpoints and services that can be used to get an authentication token. Admin accounts must be authenticated with a [two factor authentication](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication/) provider. Some providers may require multiple calls.
 
 Token type |REST| SOAP
 ---|---|---
@@ -170,7 +170,7 @@ Admin with Authy | `POST /V1/tfa/provider/authy/authenticate` | `twoFactorAuthAu
 Admin with U2F | `POST /V1/tfa/provider/u2fkey/verify` | `twoFactorAuthU2fKeyAuthenticateV1`
 Customer | `POST /V1/integration/customer/token` | `integrationCustomerTokenServiceV1`
 
-For most [web API](https://glossary.magento.com/web-api) calls, you supply this token in the `Authorization` request header with the `Bearer` HTTP [authorization](https://glossary.magento.com/authorization) scheme to prove your identity. By default, an admin token is valid for 4 hours, while a customer token is valid for 1 hour. You can change these values from Admin by selecting **Stores** > **Settings** > **Configuration** > **Services** > **OAuth** > **Access Token Expiration**.
+For most web API calls, you supply this token in the `Authorization` request header with the `Bearer` HTTP authorization scheme to prove your identity. By default, an admin token is valid for 4 hours, while a customer token is valid for 1 hour. You can change these values from Admin by selecting **Stores** > **Settings** > **Configuration** > **Services** > **OAuth** > **Access Token Expiration**.
 
 A cron job that runs hourly removes all expired tokens.
 
@@ -186,7 +186,7 @@ Credentials | The username and password for a Commerce account.<br/><br/>To spec
 
 ### Examples
 
-The following image shows a token request for the [admin](https://glossary.magento.com/admin) account using a REST client:
+The following image shows a token request for the admin account using a REST client:
 
 ![REST client](../../_images/gs_auth_token1.png)
 
@@ -198,7 +198,7 @@ curl -X POST "https://<host>/rest/default/V1/integration/customer/token" \
      -d '{"username":"customer@example.com", "password":"customer_password"}'
 ```
 
-The following example makes the same request with [XML](https://glossary.magento.com/xml) for a customer account token:
+The following example makes the same request with XML for a customer account token:
 
 ```bash
 curl -X POST "http://<host>/rest/default/V1/integration/customer/token" \

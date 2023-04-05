@@ -6,7 +6,7 @@ import * as Vars from '../../../data/vars.js';
 
 # Generate a local REST reference
 
-The REST documentation on the Adobe Commerce devdocs [website](https://glossary.magento.com/website) is generated with [Swagger UI](http://swagger.io) using a schema derived from the latest build of Commerce. However, the REST [API](https://glossary.magento.com/api) documentation on devdocs is static in that the Commerce Developers website is not running an instance of Commerce, and there is no live data.
+The REST documentation on the Adobe Commerce devdocs website is generated with [Swagger UI](http://swagger.io) using a schema derived from the latest build of Commerce. However, the REST API documentation on devdocs is static in that the Commerce Developers website is not running an instance of Commerce, and there is no live data.
 
 Commerce provides two ways to get detailed information about the structure of the REST endpoints, as described below.
 
@@ -17,7 +17,7 @@ Commerce provides two ways to get detailed information about the structure of th
 For improved application security, starting from Commerce 2.4.4, Swagger UI does not function if the operation mode is set to Production. It only functions in Developer mode.
 See how to switch operation mode [here](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/set-mode.html#change-to-developer-mode).
 
-The Swagger UI is installed automatically on your server. As a result, you can generate live REST API documentation that can include <Vars.sitedatavaree/> modules, third-party modules, and [extension](https://glossary.magento.com/extension) attributes that have been installed on your system. To view this documentation, go to:
+The Swagger UI is installed automatically on your server. As a result, you can generate live REST API documentation that can include <Vars.sitedatavaree/> modules, third-party modules, and extension attributes that have been installed on your system. To view this documentation, go to:
 
 `http://<commerce_host>/swagger`
 
@@ -29,11 +29,11 @@ To view the Swagger documentation for a specific store view, use this URL:
 
 -  `default`
 -  The assigned store code
--  `all`. This value only applies to the [CMS](https://glossary.magento.com/cms) and Product modules. If this value is specified, the API call affects all the merchant's stores.
+-  `all`. This value only applies to the CMS and Product modules. If this value is specified, the API call affects all the merchant's stores.
 
 By default, Commerce returns documentation for resources available to anonymous users across all stores. If you specify a valid customer or admin token in the `api_key` text box in the upper right corner, Swagger returns documentation for all the endpoints the user has access to. To generate an API key, call the `POST /V1/integration/customer/token` endpoint or a 2FA endpoint such as `POST /V1/tfa/provider/google/authenticate` with the appropriate payload, as directed in [Token-based authentication](/get-started/authentication/gs-authentication-token).
 
-The generated Swagger documentation provides the capability to test REST requests. A user can enter a sample request, then press the **Try it out!** button, and Swagger returns information such as a `curl` command, a request URL, a response body, a response code, and the response header. The **Try it out!** button will not work unless a bearer [authorization](https://glossary.magento.com/authorization) token has been specified.
+The generated Swagger documentation provides the capability to test REST requests. A user can enter a sample request, then press the **Try it out!** button, and Swagger returns information such as a `curl` command, a request URL, a response body, a response code, and the response header. The **Try it out!** button will not work unless a bearer authorization token has been specified.
 
 ### REST reference for Asynchronous API
 
@@ -45,7 +45,7 @@ Swagger returns information about all resources available for asynchronous REST 
 
 ## Return the JSON schema for one or more services
 
-You can use a REST client to generate the JSON schema for one or more services. In the client, set the method to `GET` and the [URL](https://glossary.magento.com/url) to
+You can use a REST client to generate the JSON schema for one or more services. In the client, set the method to `GET` and the URL to
 
 `http://<commerce_host>/rest/<store_code>/schema?services=<serviceName1,serviceName2,..>`
 
