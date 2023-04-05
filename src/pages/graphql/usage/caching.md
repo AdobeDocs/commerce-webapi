@@ -24,8 +24,8 @@ The application caches the following queries:
 * `categoryList`
 * `cmsBlocks`
 * `cmsPage`
-* `country`
 * `countries`
+* `country`
 * `currency`
 * `customAttributeMetadata`
 * `products`
