@@ -27,10 +27,10 @@ The application caches the following queries:
 * `country`
 * `countries`
 * `currency`
+* `customAttributeMetadata`
 * `products`
 * `route`
 * `storeConfig`
-* `customAttributeMetadata`
 * `urlResolver` (deprecated)
 
 The application explicitly disallows caching the following queries.
