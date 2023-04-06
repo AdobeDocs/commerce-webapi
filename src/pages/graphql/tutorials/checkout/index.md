@@ -20,7 +20,7 @@ Adobe Commerce and Magento Open Source GraphQL is designed to run queries and pe
 Complete the following prerequisites:
 
 -  Install an Adobe Commerce or Magento Open Source instance with sample data.
-   The sample data defines a functional store, called Luma, that sells fitness clothing and accessories. The store does not provide any sandbox accounts for testing credit card payments, so transactions will be simulated using an offline [payment method](https://glossary.magento.com/payment-method).
+   The sample data defines a functional store, called Luma, that sells fitness clothing and accessories. The store does not provide any sandbox accounts for testing credit card payments, so transactions will be simulated using an offline payment method.
 
 -  Install a GraphQl client. You can use any GraphQl client to send calls to Magento. [Altair](https://altair.sirmuel.design/) is a good example.
 

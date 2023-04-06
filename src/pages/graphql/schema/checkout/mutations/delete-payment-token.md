@@ -22,6 +22,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`deletePaymentToken`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-deletePaymentToken) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example deletes the Discover Card listed in the results of the `customerPaymentTokens` query. The `public_hash` you specify will be unique to your application.
@@ -67,31 +71,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `deletePaymentToken` object must contain the following attributes.
-
-Attribute | Data Type | Description
---- | --- | ---
-`public_hash` | `String!` | The public hash of the token
-
-## Output attributes
-
-The top-level `DeletePaymentTokenOutput` object is listed first. All child objects are listed in alphabetical order.
-
-### DeletePaymentTokenOutput attributes
-
-The `DeletePaymentTokenOutput` object returns the result of the operation and details about the remaining customer payment tokens.
-
-Attribute | Data Type | Description
---- | --- | ---
-`customerPaymentTokens` | `CustomerPaymentTokens` | Contains an array of customer payment tokens
-`result` | Boolean! | A value of `true` indicates the request was successful
-
-import CustomerPaymentTokens from '/src/pages/_includes/graphql/customer-payment-tokens.md'
-
-<CustomerPaymentTokens />
 
 ## Errors
 

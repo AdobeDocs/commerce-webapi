@@ -2,6 +2,7 @@ The `ProductView` return object is an interface that can contain the following f
 
 Field | Data Type | Description
 --- | --- | ---
+`addToCartAllowed` | Boolean | Indicates whether the product can be added to the cart.
 `attributes(roles: [String])` | [ProductViewAttribute] | A list of merchant-defined attributes designated for the storefront.
 `description` | String | The detailed description of the product.
 `id` | ID! | The product ID, generated as a composite key, unique per locale.
@@ -20,6 +21,7 @@ The `ComplexProductView` type represents bundle, configurable, and group product
 
 Field | Data Type | Description
 --- | --- | ---
+`addToCartAllowed` | Boolean | Indicates whether the product can be added to the cart.
 `attributes(roles: [String])` | [ProductViewAttribute] | A list of merchant-defined attributes designated for the storefront.
 `description` | String | The detailed description of the product.
 `id` | ID! | The product ID, generated as a composite key, unique per locale.
@@ -119,8 +121,21 @@ The `ProductViewOptionValueProduct` type is an implementation of `ProductViewOpt
 Field | Data Type | Description
 --- | --- | ---
 `id` | ID | The ID of an option value.
-`title` | String | The display name of the option value.
+`isDefault` | Boolean | Indicates whether the option is the default.
 `product` | SimpleProductView | Details about a simple product.
+`quantity` | SimpleProductView | Default quantity of an option value.
+`title` | String | The display name of the option value.
+
+### ProductViewOptionValueSwatch type
+
+The `ProductViewOptionValueSwatch` type is an implementation of `ProductViewOptionValue` that adds details about a product swatch.
+
+Field | Data Type | Description
+--- | --- | ---
+`id` | ID | The ID of an option value.
+`title` | String | The display name of the option value.
+`type` | SwatchType | Indicates the type of swatch. Can be `TEXT`, `IMAGE`, `COLOR_HEX`, or `CUSTOM`.
+`value` | String | The value of the swatch.
 
 ### ProductViewPrice type
 
@@ -147,6 +162,7 @@ The `SimpleProductView` type represents all product types, except bundle, config
 
 Field | Data Type | Description
 --- | --- | ---
+`addToCartAllowed` | Boolean | Indicates whether the product can be added to the cart.
 `attributes(roles: [String])` | [ProductViewAttribute] | A list of merchant-defined attributes designated for the storefront.
 `description` | String | The detailed description of the product.
 `id` | ID! | The product ID, generated as a composite key, unique per locale.

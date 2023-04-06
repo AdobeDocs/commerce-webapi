@@ -18,7 +18,7 @@ Your source data must be in the order and format Commerce expects. To understand
 
 Before encoding the data in base64, you can optionally use [gzip](https://www.gzip.org) to compress your data. This is useful when importing large CSV files that may otherwise run into HTTP request size limitations of HTTP server or PHP configuration.
 
-Since the API is used for importing base64 encoded CSV data, the endpoint expects the data to use commas for the field and multiple value separators. 
+Since the API is used for importing base64 encoded CSV data, the endpoint expects the data to use commas for the field and multiple value separators.
 Import fails if CSV uses any other special character as separators.
 
 You must specify a validation strategy. You can skip rows that have an invalid data format, or
@@ -53,7 +53,7 @@ POST /rest/<store_view_code>/V1/import/csv
 |-----|-----|-----|-----|
 |`entity` | The type of entity to be imported | string | Required. One of `advanced_pricing`, `catalog_product`, `customer`, `customer_address`, `customer_composite`, or `customer_finance` |
 |`behavior` | The action  to perform | string | Required. One of `append`, `replace`, `delete`|
-|`validationStrategy` | Strategy to use when entities are invalid | string | Required. Either `validation_stop_on_errors` or `validation-skip-errors` |
+|`validationStrategy` | Strategy to use when entities are invalid | string | Required. Either `validation-stop-on-errors` or `validation-skip-errors` |
 |`allowedErrorCount` | The maximum number of errors that can occur until import is canceled | string | Required |
 |`csvData` | Base64 encoded string containing CSV data (optionally gzip compressed before base64) | string | Required |
 |`ImportFieldSeparator` | Separator used in CSV.  Default is ',' | string | Optional |
@@ -114,7 +114,7 @@ This sample payload contains encoded CSV data with two valid rows and one invali
 When Import fails, the response contains the row number and a message describing cause of failure for first invalid row encountered.
 
 **Response:**
- 
+
 ```json
 [
   "Row 3: Please enter a password with a valid length."

@@ -1,45 +1,21 @@
-<!--- Provide a general summary of your changes in the Title above -->
+## Purpose of this pull request
 
-## Description
+This pull request (PR) ...
 
-<!--- Describe your changes in detail -->
+## Affected pages
 
-## Related Issue
+<!-- REQUIRED List the affected pages on developer.adobe.com (URLs). Not necessary for large numbers of files. -->
 
-<!--- This project only accepts pull requests related to open issues -->
-<!--- If suggesting a new feature or change, please discuss it in an issue first -->
-<!--- If fixing a bug, there should be an issue describing it with steps to reproduce -->
-<!--- Please link to the issue here: -->
+- ...
 
-## Motivation and Context
+## Links to Magento Open Source code
 
-<!--- Why is this change required? What problem does it solve? -->
+<!--  OPTIONAL - REMOVE THIS SECTION IF NOT USED. If this pull request references a file in a Magento Open Source or Adobe Commerce codebase repository, add it here. -->
 
-## How Has This Been Tested?
+- ...
 
-<!--- Please describe in detail how you tested your changes. -->
-<!--- Include details of your testing environment, and the tests you ran to -->
-<!--- see how your change affects other areas of the code, etc. -->
-
-## Screenshots (if appropriate):
-
-## Types of changes
-
-<!--- What types of changes does your code introduce? Put an `x` in all the boxes that apply: -->
-
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to change)
-
-## Checklist:
-
-<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
-<!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
-
-- [ ] I have signed the [Adobe Open Source CLA](https://opensource.adobe.com/cla.html).
-- [ ] My code follows the code style of this project.
-- [ ] My change requires a change to the documentation.
-- [ ] I have updated the documentation accordingly.
-- [ ] I have read the **CONTRIBUTING** document.
-- [ ] I have added tests to cover my changes.
-- [ ] All new and existing tests passed.
+<!--
+If you are fixing a GitHub issue, using the GitHub keyword format (https://help.github.com/en/articles/closing-issues-using-keywords#closing-an-issue-in-a-different-repository) closes the issue when this pull request is merged. Example: `Fixes #1234`.
+`main` is the default branch. Merged pull requests to `main` go live on the site automatically. Any requested changes to content on the `main` branch must be related to the released codebase. Any content related to future releases goes in the `develop` branch.
+See Contribution guidelines (https://github.com/AdobeDocs/commerce-webapi/blob/main/.github/CONTRIBUTING.md) for more information.
+-->

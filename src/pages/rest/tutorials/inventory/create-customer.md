@@ -110,7 +110,7 @@ The customer `id` is `2`.
 
 ## Generate the customer's access token
 
-To generate a customer's access token, you must specify the customer's username and password in the payload. You do not specify an admin [authorization](https://glossary.magento.com/authorization) token.
+To generate a customer's access token, you must specify the customer's username and password in the payload. You do not specify an admin authorization token.
 
 By default, a customer token is valid for 1 hour. To change this value, click **Stores** > Settings > **Configuration** > **Services** > **OAuth** > **Access Token Expiration**. Then enter a new value for **Customer Token Lifetime (hours)**.
 
