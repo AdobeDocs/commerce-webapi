@@ -191,7 +191,7 @@ The following query returns information about the specified URL key. The query c
 
 ### Example
 
-In the following example, an internal URL `support.html` is configured to redirect to an external URL `https://support.example.com/` using URL Rewrite. 
+In the following example, an internal URL `support.html` is configured to redirect to an external URL `https://support.example.com/` using URL Rewrite.
 
 **Request:**
 
