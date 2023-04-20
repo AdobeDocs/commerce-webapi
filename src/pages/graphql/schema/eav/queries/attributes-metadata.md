@@ -73,6 +73,7 @@ The following call returns information about the `customer firstname` attribute 
 ```
 
 ## Input attributes
+
 The `AttributeInput` object contains the following attributes:
 
 Attribute | Data Type | Description
@@ -81,6 +82,7 @@ Attribute | Data Type | Description
 `entity_type` | String | The type of entity that defines the attribute
 
 ## Output attributes
+
 The `AttributesMetadataOutput` object contains the following attributes:
 
 Attribute |  Data Type | Description
