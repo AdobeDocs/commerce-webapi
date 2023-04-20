@@ -520,6 +520,22 @@ module.exports = [
         ],
       },
       {
+        title: "Eav",
+        path: "/graphql/schema/eav/",
+        pages: [
+          {
+            title: "Queries",
+            path: "/graphql/schema/eav/queries/",
+            pages: [
+              {
+                title: "attributesMetadata",
+                path: "/graphql/schema/eav/queries/attributes-metadata/",
+              },
+            ],
+          }
+        ]
+      },
+      {
         title: "Gift registry",
         path: "/graphql/schema/gift-registry/",
         pages: [
