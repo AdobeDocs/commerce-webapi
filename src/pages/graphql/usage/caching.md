@@ -77,6 +77,10 @@ To define additional factors for computing `X-Magento-Cache-Id` hash values, add
 </type>
 ```
 
+<InlineAlert variant="warning" slots="text"/>
+
+The `X-Magento-Cache-Id` response header is only compatible with Varnish or Fastly.  It cannot be reliably used with built-in Full Page Cache.
+
 <InlineAlert variant="info" slots="text" />
 
 Adding factors could generate too many unique cache keys, thereby reducing the number of caching hits and affecting performance.
