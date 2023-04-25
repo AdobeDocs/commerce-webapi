@@ -5,14 +5,14 @@ description: Overview of authentication methods in web APIs.
 
 # Authentication
 
-Adobe Commerce and Magento Open Source allow developers to define web [API](https://glossary.magento.com/api) resources and their permissions in the `webapi.xml` configuration file. See [Services as Web APIs](https://developer.adobe.com/commerce/php/development/components/web-api/services/).
+Adobe Commerce and Magento Open Source allow developers to define web API resources and their permissions in the `webapi.xml` configuration file. See [Services as Web APIs](https://developer.adobe.com/commerce/php/development/components/web-api/services/).
 
-Before you can make [web API](https://glossary.magento.com/web-api) calls, you must authenticate your identity and have necessary permissions (authorization) to access the API resource. Authentication allows the application to identify the caller's user type. A user's (administrator, integration, customer, or guest) access rights determine an API call's resource accessibility.
+Before you can make web API calls, you must authenticate your identity and have necessary permissions (authorization) to access the API resource. Authentication allows the application to identify the caller's user type. A user's (administrator, integration, customer, or guest) access rights determine an API call's resource accessibility.
 
 ## Accessible resources
 
 The list of resources that you can access depends on your user type. All customers have the same permissions, and as a result the same resources accessible. The preceding statement is true for guest users as well.
-Each administrator or integration user can have a unique set of permissions which is configured in the [Admin](https://glossary.magento.com/magento-admin).
+Each administrator or integration user can have a unique set of permissions which is configured in the Admin.
 Permissions required to access particular resource are configured in the `webapi.xml` file. This table lists the resources that each user type can access:
 
 User type | Accessible resources (defined in webapi.xml)
@@ -23,9 +23,9 @@ Guest user | Resources with `anonymous` permission
 
 ## Relationship between acl.xml and webapi.xml
 
-The `acl.xml` file defines the access control list (ACL) for a given [module](https://glossary.magento.com/module). It defines the available set of permissions to access resources.
+The `acl.xml` file defines the access control list (ACL) for a given module. It defines the available set of permissions to access resources.
 
-All `acl.xml` files across all modules are consolidated to build an ACL tree, which is used to select allowed [Admin](https://glossary.magento.com/admin) role resources or third-party integration access (**System** > **Extension** > **Integration** > **Add New Integration** > **Available APIs**).
+All `acl.xml` files across all modules are consolidated to build an ACL tree, which is used to select allowed Admin role resources or third-party integration access (**System** > **Extension** > **Integration** > **Add New Integration** > **Available APIs**).
 
 ### Sample customer acl.xml
 
@@ -83,7 +83,7 @@ When a developer creates the Web API configuration file (`webapi.xml`), the perm
 
 For example, in the preceding `webapi.xml` for the customerGroups resource, only a user with `Magento_Customer::group` authorization can `GET /V1/customerGroups/:id`. On the other hand, you can create a customer using `POST /V1/customers` anonymously (or by a guest).
 
-[Authorization](https://glossary.magento.com/authorization) is granted to either an administrator (or an integration) defined in the Admin with the customer group selected as one of the resources in the ACL tree.
+Authorization is granted to either an administrator (or an integration) defined in the Admin with the customer group selected as one of the resources in the ACL tree.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -164,7 +164,7 @@ Proceed to the authentication method for your preferred client:
 
 *  Third-party application. [OAuth-based authentication](./gs-authentication-oauth.md).
 
-*  JavaScript [widget](https://glossary.magento.com/widget) on the Admin or [storefront](https://glossary.magento.com/storefront). [Session-based authentication](./gs-authentication-session.md).
+*  JavaScript widget on the Admin or storefront. [Session-based authentication](./gs-authentication-session.md).
 
 *  [Extension attribute authentication](https://developer.adobe.com/commerce/php/development/components/attributes/)
 

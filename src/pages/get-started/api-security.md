@@ -315,7 +315,7 @@ Add the `data` tag with the `input-array-size-limit` attribute to the route conf
 <?xml version="1.0"?>
 <!--
 Some custom module
--->	
+-->    
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
     <route url="/V1/some-custom-route" method="POST">
@@ -331,7 +331,7 @@ Some custom module
 Clear the configuration cache for the changes to take effect.
 
 ```bash
-bin/magento cache:clear config
+bin/magento cache:clean config
 ```
 
 ### Values by default for REST endpoints
@@ -357,7 +357,7 @@ If you need to change the default limits for REST endpoints, then edit the `weba
 
 The maximum page size setting controls the pagination of various web API responses. By default, the maximum value is `300`. You can change the default in the Admin by selecting **Stores** > Settings > **Configuration** > **Services** > **Web API Input Limits** or **GraphQl Input Limits** >  **Maximum Page Size** field.
 
-[GraphQL security configuration](https://devdocs.magento.com/guides/v2.4/graphql/security-configuration.html) describes how to set the maximum page size in GraphQL.
+[GraphQL security configuration](../graphql/usage/security-configuration.md describes how to set the maximum page size in GraphQL.
 
 ### Default page size
 

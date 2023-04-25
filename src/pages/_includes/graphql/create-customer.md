@@ -5,7 +5,7 @@ Attribute |  Data Type | Description
 `email` | String | The customer's email address. Required to create a customer
 `firstname` | String | The customer's first name. Required to create a customer
 `gender` | Int | The customer's gender (Male - 1, Female - 2)
-`is_subscribed` | Boolean | The customer's new password
+`is_subscribed` | Boolean | Indicates whether the customer is subscribed to the company's newsletter
 `lastname` | String | The customer's last name. Required to create a customer
 `middlename` | String | The customer's middle name
 `password` | String | The customer's password. Required to create a customer

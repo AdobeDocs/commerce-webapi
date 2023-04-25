@@ -244,7 +244,7 @@ type Query {
 
 The `@cache` directive defines whether the results of certain queries can be cached. Queries relating to products, categories, and CMS may be cached.
 
-Define cachable queries in the following manner:
+Define cacheable queries in the following manner:
 
 ```text
 @cache(cacheIdentity: "Magento\\CmsGraphQl\\Model\\Resolver\\Block\\Identity")

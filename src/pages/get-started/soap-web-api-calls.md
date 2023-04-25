@@ -9,11 +9,11 @@ description: A description of available SOAP services and their conventions
 
 A WSDL file is generated only for services that you request. This means that different clients may use different services and therefore use different WSDLs.
 
-The Adobe Commerce and Magento Open Source web [API](https://glossary.magento.com/api) uses WSDL 1.2, which complies with WS-I 2.0 Basic Profile.
+The Adobe Commerce and Magento Open Source web API uses WSDL 1.2, which complies with WS-I 2.0 Basic Profile.
 
-Each service interface that is part of a [service contract](https://glossary.magento.com/service-contract) is represented as a separate service in the WSDL.
+Each service interface that is part of a service contract is represented as a separate service in the WSDL.
 
-To consume several services, you must specify them in the WSDL endpoint [URL](https://glossary.magento.com/url).
+To consume several services, you must specify them in the WSDL endpoint URL.
 
 | Service | WSDL endpoint URL | Available services |
 | --------- | ---------- | ------------------------------------------ |
@@ -56,7 +56,7 @@ Service names use the following conventions:
 *  The string `Service` is omitted.
 *  The `Magento` prefix is omitted.
 *  The `Interface` suffix is omitted.
-*  If the service name is the same as the [module](https://glossary.magento.com/module) name, the module name is omitted. For example, if there is a customer service interface in the customer module, the word `customer` will be used in the service name only once.
+*  If the service name is the same as the module name, the module name is omitted. For example, if there is a customer service interface in the customer module, the word `customer` will be used in the service name only once.
 
 | Original Service Interface Name | Service Name |
 | --- | --- |
@@ -66,9 +66,9 @@ Service names use the following conventions:
 
 ## Authentication
 
-Protected SOAP resources can be accessed using bearer tokens (OAuth access tokens) over HTTP. Access tokens are strings representing an access [authorization](https://glossary.magento.com/authorization) issued to the client. For more information, see [OAuth-based authentication](./authentication/gs-authentication-oauth.md)
+Protected SOAP resources can be accessed using bearer tokens (OAuth access tokens) over HTTP. Access tokens are strings representing an access authorization issued to the client. For more information, see [OAuth-based authentication](./authentication/gs-authentication-oauth.md)
 
-The following [PHP](https://glossary.magento.com/php) script illustrates how to get an access token:
+The following PHP script illustrates how to get an access token:
 
 ```php
 <?php
@@ -90,4 +90,4 @@ $soapResponse = $soapClient->testModule1AllSoapAndRestV1Item($serviceArgs); ?>
 
 *  [OAuth-based authentication](./authentication/gs-authentication-oauth.md)
 *  [Service contracts](https://developer.adobe.com/commerce/php/development/components/service-contracts/)
-*  [SOAP Reference](https://devdocs.magento.com/guides/v2.4/soap/bk-soap.html)
+*  [SOAP Reference](soap-web-api-calls.md)

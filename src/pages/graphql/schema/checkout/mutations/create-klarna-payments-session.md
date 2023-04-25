@@ -6,6 +6,11 @@ contributor_link: https://www.klarna.com/
 
 # createKlarnaPaymentsSession mutation
 
+<InlineAlert variant="info" slots="text" />
+
+The Klarna Vendor Bundled Extension was removed from the Adobe Commerce codebase in version 2.4.4.
+This mutation is no longer supported.
+
 The `createKlarnaPaymentsSession` mutation initiates a Klarna session. You can create a session at any time before you display the available payment methods, but ideally, the cart would already contain products, the billing address, shipping address, and shipping method. If the cart changes afterward, you must run the mutation again to ensure that the latest payment methods are made available to the shopper. Factors such as the cart contents, the shipping and billing addresses, and the grand total after applying coupons can determine the payment methods Klarna offers.
 
 The mutation response includes an array of payment method categories. When the shopper selects a Klarna payment method, prepend the string `klarna_` to the selected `identifer`, and use the resulting string as the `payment_method.code` value in the subsequent `setPaymentMethodOnCart` mutation. For example, if the shopper selects the "Pay later in 30 days" payment method, the `identifier` value is `pay_later`, and the `payment_method.code` value is `klarna_pay_later`.
