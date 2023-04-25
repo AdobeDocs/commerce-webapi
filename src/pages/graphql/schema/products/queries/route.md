@@ -1,8 +1,8 @@
 ---
-title: routes query | Commerce Web APIs
+title: route query | Commerce Web APIs
 ---
 
-# routes query
+# route query
 
 A merchant can reconfigure (rewrite) the URL to any product, category, or CMS page. When the rewrite goes into effect, any links that point to the previous URL are redirected to the new address.
 
