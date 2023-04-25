@@ -1,15 +1,15 @@
 ---
-title: attributesMetadata query | Commerce Web APIs
+title: customAttributeMetadataV2 query | Commerce Web APIs
 ---
 
-# attributesMetadata query
+# customAttributeMetadataV2 query
 
-The `attributesMetadata` query retrieves information about the attributes metadata for the list of combinations of 
+The `customAttributeMetadataV2` query retrieves information about the attributes metadata for the list of combinations of 
 **attribute_code, entity_type** specified on the query.
 
 ## Syntax
 
-`{attributesMetadata(attributes: [AttributeInput!]): {AttributesMetadataOutput!}}`
+`{customAttributeMetadataV2(attributes: [AttributeInput!]): {AttributesMetadataOutput!}}`
 
 ## Example usage
 
@@ -21,7 +21,7 @@ The following call returns information about the `customer firstname` attribute 
 
 ```graphql
 {
-    attributesMetadata(
+    customAttributeMetadataV2(
         attributes: [{entity_type: "customer", attribute_code: "firstname"}]
     ) {
         items {
@@ -52,7 +52,7 @@ The following call returns information about the `customer firstname` attribute 
 ```json
 {
   "data": {
-    "attributesMetadata": {
+    "customAttributeMetadataV2": {
       "items": [
         {
           "uid": "Y3VzdG9tZXIvZmlyc3RuYW1l",

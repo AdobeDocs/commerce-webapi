@@ -4,6 +4,10 @@ title: customAttributeMetadata query | Commerce Web APIs
 
 # customAttributeMetadata query
 
+<InlineAlert variant="warning" slots="text" />
+
+The `customAttributeMetadata` query has been deprecated. Use the [`customAttributeMetadataV2`](../../eav/queries/custom-attribute-metadata-v2.md) query instead.
+
 The `customAttributeMetadata` query returns the attribute type, given an attribute code and entity type. All entity attributes can be added to an equivalent GraphQL type, including custom, extension, and EAV (which have precedence set in that order for collisions). The GraphQL query consumer does not have the ability to know a field's attribute type.
 
 ## Syntax

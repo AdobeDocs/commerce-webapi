@@ -528,8 +528,8 @@ module.exports = [
             path: "/graphql/schema/eav/queries/",
             pages: [
               {
-                title: "attributesMetadata",
-                path: "/graphql/schema/eav/queries/attributes-metadata/",
+                title: "customAttributeMetadataV2",
+                path: "/graphql/schema/eav/queries/custom-attribute-metadata-v2/",
               },
             ],
           }

@@ -5,6 +5,10 @@ edition: pwa
 
 # attributesMetadata query
 
+<InlineAlert variant="warning" slots="text" />
+
+The `attributesMetadata` query has been deprecated. Use the [`customAttributeMetadataV2`](../../eav/queries/custom-attribute-metadata-v2.md) query instead.
+
 The `attributesMetadata` query returns everything available in [`customAttributeMetadata`](custom-attribute-metadata.md) but also inclues additional information such as `data_type`, `sort_order`, and `ui_input` data, that can be used for filtering, searching and layered navigation. The information returned in `customAttributeMetadata` is in a different format when returned in `attributesMetadata`.
 
 ## Syntax
