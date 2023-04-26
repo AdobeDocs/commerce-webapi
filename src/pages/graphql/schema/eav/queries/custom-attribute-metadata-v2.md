@@ -85,26 +85,26 @@ Attribute | Data Type | Description
 
 The `AttributesMetadataOutput` object contains the following attributes:
 
-Attribute |  Data Type | Description
---- | --- | ---
-`items` | [AttributeMetadataInterface!]! | Requested attributes metadata
-`errors` | [AttributeMetadataError!]! | Errors of retrieving certain attributes metadata
+Attribute | Data Type                            | Description
+--- |--------------------------------------| ---
+`items` | [CustomAttributeMetadataInterface!]! | Requested attributes metadata
+`errors` | [AttributeMetadataError!]!           | Errors of retrieving certain attributes metadata
 
-The `AttributeMetadataInterface` object contains the following attributes:
+The `CustomAttributeMetadataInterface` object contains the following attributes:
 
-Attribute |  Data Type | Description
---- | --- | ---
-`uid` | ID! | The unique ID of an attribute. Based on entity type and attribute code
-`code` | String! | The unique identifier for an attribute code. This value should be in lowercase letters without spaces
-`label` | String | The label assigned to the attribute
-`entity_type` | AttributeEntityTypeEnum! | The type of entity that defines the attribute
-`frontend_input` | AttributeFrontendInputEnum |  The frontend input type of the attribute
-`is_required` | Boolean! | Whether the attribute value is required
-`default_value` | String | Default attribute value
-`is_unique` | Boolean! | Whether the attribute value must be unique
-`options` | [AttributeOptionInterface!]! | Attribute options
+Attribute | Data Type                          | Description
+--- |------------------------------------| ---
+`uid` | ID!                                | The unique ID of an attribute. Based on entity type and attribute code
+`code` | String!                            | The unique identifier for an attribute code. This value should be in lowercase letters without spaces
+`label` | String                             | The label assigned to the attribute
+`entity_type` | AttributeEntityTypeEnum!           | The type of entity that defines the attribute
+`frontend_input` | AttributeFrontendInputEnum         |  The frontend input type of the attribute
+`is_required` | Boolean!                           | Whether the attribute value is required
+`default_value` | String                             | Default attribute value
+`is_unique` | Boolean!                           | Whether the attribute value must be unique
+`options` | [CustomAttributeOptionInterface!]! | Attribute options
 
-The `AttributeOptionInterface` object contains the following attributes:
+The `CustomAttributeOptionInterface` object contains the following attributes:
 
 Attribute | Data Type | Description
 --- |----------| ---
