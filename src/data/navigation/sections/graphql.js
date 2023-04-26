@@ -804,7 +804,7 @@ module.exports = [
                 path: "/graphql/schema/products/queries/product-review-ratings-metadata/",
               },
               {
-                title: "routes",
+                title: "route",
                 path: "/graphql/schema/products/queries/route/",
               },
               {
