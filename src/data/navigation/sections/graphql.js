@@ -520,16 +520,16 @@ module.exports = [
         ],
       },
       {
-        title: "Eav",
-        path: "/graphql/schema/eav/",
+        title: "Attributes",
+        path: "/graphql/schema/attributes/",
         pages: [
           {
             title: "Queries",
-            path: "/graphql/schema/eav/queries/",
+            path: "/graphql/schema/attributes/queries/",
             pages: [
               {
                 title: "customAttributeMetadataV2",
-                path: "/graphql/schema/eav/queries/custom-attribute-metadata-v2/",
+                path: "/graphql/schema/attributes/queries/custom-attribute-metadata-v2/",
               },
             ],
           }
