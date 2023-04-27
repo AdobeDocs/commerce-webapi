@@ -24,7 +24,7 @@ The [`filter`](../schema/products/queries/products.md#productfilterinput-attribu
 
 ## Example
 
-In this example, the custom attribute `volume` was assigned to the `bags` attribute group. Running the [`customAttributeMetadata` query](../schema/store/queries/custom-attribute-metadata.md) on this custom attribute reveals that the `label` and `value` values for the attribute's options are as follows:
+In this example, the custom attribute `volume` was assigned to the `bags` attribute group. Running the [`customAttributeMetadata` query](../schema/attributes/queries/custom-attribute-metadata.md) on this custom attribute reveals that the `label` and `value` values for the attribute's options are as follows:
 
 **Request:**
 

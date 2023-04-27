@@ -80,6 +80,26 @@ module.exports = [
     path: "/graphql/schema/",
     pages: [
       {
+        title: "Attributes",
+        path: "/graphql/schema/attributes/",
+        pages: [
+          {
+            title: "Queries",
+            path: "/graphql/schema/attributes/queries/",
+            pages: [
+              {
+                title: "attributesMetadata",
+                path: "/graphql/schema/attributes/queries/attributes-metadata.md"
+              },
+              {
+                title: "customAttributeMetadata",
+                path: "/graphql/schema/attributes/queries/custom-attribute-metadata.md"
+              }
+            ]
+          }
+        ]
+      },
+      {
         title: "Cart",
         path: "/graphql/schema/cart/",
         pages: [
@@ -1032,10 +1052,6 @@ module.exports = [
             path: "/graphql/schema/store/queries/",
             pages: [
               {
-                title: "attributesMetadata",
-                path: "/graphql/schema/store/queries/attributes-metadata/",
-              },
-              {
                 title: "availableStores",
                 path: "/graphql/schema/store/queries/available-stores/",
               },
@@ -1058,10 +1074,6 @@ module.exports = [
               {
                 title: "currency",
                 path: "/graphql/schema/store/queries/currency/",
-              },
-              {
-                title: "customAttributeMetadata",
-                path: "/graphql/schema/store/queries/custom-attribute-metadata/",
               },
               {
                 title: "dynamicBlocks",
