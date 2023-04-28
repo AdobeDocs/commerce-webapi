@@ -7,12 +7,14 @@ title: customAttributeMetadataV2 query | Commerce Web APIs
 The `customAttributeMetadataV2` query retrieves metadata for the specified `entity_type` and `attribute_code` pairs.
 
 This query replaces [`attributesMetadata`](../../store/queries/attributes-metadata.md) 
-and [`customAttributeMetadata`](../../store/queries/custom-attribute-metadata.md). 
+and [`customAttributeMetadata`](../../store/queries/custom-attribute-metadata.md).
 
-Some of the differences of this new query are:
-- Can be extended by all entity types. 
-- This provides access to all properties of eav attributes.
-- It introduced uid information for the attributes.
+This new query has several features that were not available in the deprecated queries:
+
+- All entity types can extend this query.
+- The query provides access to all properties of EAV attributes.
+- `uid` values are now available.
+
 
 ## Syntax
 
@@ -92,37 +94,37 @@ Attribute | Data Type | Description
 
 The `AttributesMetadataOutput` object contains the following attributes:
 
-Attribute | Data Type                            | Description
---- |--------------------------------------| ---
+Attribute | Data Type | Description
+--- |---| ---
 `items` | [CustomAttributeMetadataInterface!]! | Requested attributes metadata
-`errors` | [AttributeMetadataError!]!           | Errors of retrieving certain attributes metadata
+`errors` | [AttributeMetadataError!]! | Errors of retrieving certain attributes metadata
 
 The `CustomAttributeMetadataInterface` object contains the following attributes:
 
-Attribute | Data Type                          | Description
---- |------------------------------------| ---
-`uid` | ID!                                | The unique ID of an attribute. Based on entity type and attribute code
-`code` | String!                            | The unique identifier for an attribute code. This value should be in lowercase letters without spaces
-`label` | String                             | The label assigned to the attribute
-`entity_type` | AttributeEntityTypeEnum!           | The type of entity that defines the attribute
-`frontend_input` | AttributeFrontendInputEnum         |  The frontend input type of the attribute
-`is_required` | Boolean!                           | Whether the attribute value is required
-`default_value` | String                             | Default attribute value
-`is_unique` | Boolean!                           | Whether the attribute value must be unique
+Attribute | Data Type | Description
+--- |---| ---
+`uid` | ID! | The unique ID of an attribute. Based on entity type and attribute code
+`code` | String! | The unique identifier for an attribute code. This value should be in lowercase letters without spaces
+`label` | String | The label assigned to the attribute
+`entity_type` | AttributeEntityTypeEnum! | The type of entity that defines the attribute
+`frontend_input` | AttributeFrontendInputEnum | The frontend input type of the attribute
+`is_required` | Boolean! | Whether the attribute value is required
+`default_value` | String | Default attribute value
+`is_unique` | Boolean! | Whether the attribute value must be unique
 `options` | [CustomAttributeOptionInterface!]! | Attribute options
 
 The `CustomAttributeOptionInterface` object contains the following attributes:
 
 Attribute | Data Type | Description
---- |----------| ---
-`uid` | ID!      | The unique ID of an attribute option
-`label` | String!  | The label assigned to the attribute option
-`value` | String!  | The attribute option value
-`is_default` | Boolean  | Is the option value default
+--- |---| ---
+`uid` | ID! | The unique ID of an attribute option
+`label` | String! | The label assigned to the attribute option
+`value` | String! | The attribute option value
+`is_default` | Boolean | Is the option value default
 
 The `AttributeMetadataError` object contains the following attributes:
 
-Attribute |  Data Type | Description
+Attribute | Data Type | Description
 --- | --- | ---
 `type` | AttributeMetadataErrorType! | Attribute metadata retrieval error type
 `message` | String! | Attribute metadata retrieval error message
