@@ -6,7 +6,7 @@ title: customAttributeMetadataV2 query | Commerce Web APIs
 
 The `customAttributeMetadataV2` query retrieves metadata for the specified `entity_type` and `attribute_code` pairs.
 
-This query replaces [`attributesMetadata`](../../store/queries/attributes-metadata.md) and [`customAttributeMetadata`](../../store/queries/custom-attribute-metadata.md).
+This query replaces [`attributesMetadata`](attributes-metadata.md) and [`customAttributeMetadata`](custom-attribute-metadata.md).
 
 This new query has several features that were not available in the deprecated queries:
 
