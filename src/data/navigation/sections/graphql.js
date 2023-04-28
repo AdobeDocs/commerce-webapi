@@ -98,7 +98,6 @@ module.exports = [
               {
                 title: "customAttributeMetadataV2",
                 path: "/graphql/schema/attributes/queries/custom-attribute-metadata-v2.md"
-              },
               }
             ]
           }
