@@ -40,6 +40,7 @@ Prerequisite: You must configure Redis to enable rate limiting.
 | sales/backpressure/period      | Counter resets in a ... [sec.]            |
 
 Example:
+
 - Sales restrictions are enabled `sales/backpressure/enabled` = `1`.
 - Anonymous users are limited to 50 orders (`sales/backpressure/guest_limit` = `50`) from a single IP address within one minute (`sales/backpressure/period - 60`).  If they exceed the order limit, then they will have to wait three times the specified `period` of time from their last request.
 -  For example, if an authorized user attempts to place more than `10` orders (`sales/backpressure/limit` = `10`) within the `period` of `60` seconds, then the user will not be able to place an order for a period of `180` seconds.
@@ -66,6 +67,7 @@ The data, including request time and identifier, is temporarily stored in Redis.
 The following command will add a new connection to the Redis server:
 
 Redis server:
+
 - Host: 195.34.23.5
 - Port: 9345
 - Password: s0M3StR0NgP@SsW0Rd
@@ -115,32 +117,28 @@ Use the following commands to enable rate limiting:
     ```bash
     $ bin/magento config:set sales/backpressure/enabled 1
     ```
-   
 1. Set the request limit per guest (IP address):
 
     ```bash
     $ bin/magento config:set sales/backpressure/guest_limit 100
     ```
-   
+  
 1. Set the request limit for authenticated customers:
 
     ```bash
     $ bin/magento config:set sales/backpressure/limit 10
     ```
-   
 1. Set the period of time (in seconds) for the request limit. Supported values `60`, `3600`, `86400` seconds. This time period is multiplied by three to calculate the timeout period:
 
     ```bash
     $ bin/magento config:set sales/backpressure/period 60
     ```
-   
 If you need to check a configuration, use the following CLI command:
 
 Example:
 
 ```bash
 $ bin/magento config:show | grep backpressure
-```
 Response:
 
 ```terminal
@@ -156,7 +154,7 @@ You can also enable and configure rate limiting in the user interface: **Stores*
 
 <InlineAlert variant="info" slots="text"/>
 
-If rate limiting has been enabled for the payment information endpoint and the GraphQl mutation via the UI/CLI, but the Redis service connection for store log requests has not been configured in the `app/etc/env.php` file, then the rate-limiting will not apply. The behavior will be the same if this option is disabled, but the application logs (`<magento-root>/var/log/system.log`) will contain the following message: 
+If rate limiting has been enabled for the payment information endpoint and the GraphQl mutation via the UI/CLI, but the Redis service connection for store log requests has not been configured in the `app/etc/env.php` file, then the rate-limiting will not apply. The behavior will be the same if this option is disabled, but the application logs (`<magento-root>/var/log/system.log`) will contain the following message:
 
 ```text
 ...
