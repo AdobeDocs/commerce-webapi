@@ -135,7 +135,7 @@ Use the following commands to enable rate limiting:
     ```bash
     $ bin/magento config:set sales/backpressure/period 60
     ```
-   
+
 If you need to check a configuration, use the following CLI command:
 
 Example:
