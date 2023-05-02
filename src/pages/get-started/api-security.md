@@ -117,7 +117,7 @@ Use the following commands to enable rate limiting:
     ```bash
     $ bin/magento config:set sales/backpressure/enabled 1
     ```
-   
+
 1. Set the request limit per guest (IP address):
 
     ```bash
@@ -129,7 +129,7 @@ Use the following commands to enable rate limiting:
     ```bash
     $ bin/magento config:set sales/backpressure/limit 10
     ```
-   
+
 1. Set the period of time (in seconds) for the request limit. Supported values `60`, `3600`, `86400` seconds. This time period is multiplied by three to calculate the timeout period:
 
     ```bash
