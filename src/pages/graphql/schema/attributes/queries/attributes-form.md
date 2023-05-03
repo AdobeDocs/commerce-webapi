@@ -8,7 +8,7 @@ The `attributesForm` query retrieves EAV attributes associated to a frontend `fo
 
 ## Syntax
 
-`{attributesForm(type: String!): {AttributesFormOutput!}}`
+`{attributesForm(formCode: String!): {AttributesFormOutput!}}`
 
 
 ## Example usage
@@ -21,7 +21,7 @@ The following query returns the list of attributes metadata associated to the fo
 
 ```graphql
 {
-  attributesForm(type: "customer_register_address") {
+  attributesForm(formCode: "customer_register_address") {
     items {
       label
       entity_type
@@ -125,7 +125,7 @@ The following query returns the list of attributes metadata associated to the fo
 
 Attribute | Data Type | Description
 --- |-----------| ---
-`type` | String!   | Form type.
+`formCode` | String!   | Form code.
 
 ## Output attributes
 
