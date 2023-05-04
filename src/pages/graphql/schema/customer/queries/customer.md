@@ -76,9 +76,9 @@ The following call returns information about the logged-in customer. Provide the
 }
 ```
 
-### Retrieve customer attributes metadata information
+### Retrieve custom attributes metadata from a customer
 
-The following call returns customer attributes for the logged-in customer. Provide the customer's token in the header section of the query.
+The following call returns custom attributes for the logged-in customer. Provide the customer's token in the header section of the query.
 **Request:**
 
 ```graphql
@@ -109,6 +109,47 @@ The following call returns customer attributes for the logged-in customer. Provi
       "custom_attributes": [
         {
           "code": "reward_update_notification"
+        }
+      ]
+    }
+  }
+}
+```
+
+### Retrieve custom attributes metadata from a customer address
+
+The following call returns the customer address custom attributes for the logged-in customer. Provide the customer's token in the header section of the query.
+**Request:**
+
+```graphql
+{
+  customer {
+    email
+    addresses {
+      city
+      custom_attributesV2 {
+        code
+      }
+    }
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "customer": {
+      "email": "jdoe@example.com",
+      "addresses": [
+        {
+          "city": "Marseille",
+          "custom_attributesV2": [
+            {
+              "code": "neighbourhood"
+            }
+          ]
         }
       ]
     }
@@ -919,10 +960,11 @@ The `customer` object can contain the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`addresses` | [CustomerAddress](#customeraddress-attributes)  | An array containing the customer's shipping and billing addresses
+`addresses` | [CustomerAddress](#customeraddress-attributes) | An array containing the customer's shipping and billing addresses
 `allow_remote_shopping_assistance` | Boolean! | Indicates whether the customer has enabled remote shopping assistance
 `compare_list` | [CompareList](#comparelist-attributes) | The contents of the customer's comparison list
 `created_at` | String | Timestamp indicating when the account was created
+`custom_attributes` | [AttributeValueInterface](#attributevalueinterface-attributes) | Customer's custom attributes
 `date_of_birth` | String | The customer's date of birth. In keeping with current security and privacy best practices, be sure you are aware of any potential legal and security risks associated with the storage of customers' full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
 `default_billing` | String | The ID assigned to the billing address
 `default_shipping` | String | The ID assigned to the shipping address
@@ -965,6 +1007,36 @@ import CompareListOutput from '/src/pages/_includes/graphql/compare-list-output.
 
 <CompareListOutput />
 
+### AttributeValueInterface attributes
+The `AttributeValueInterface` contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`uid` | ID! | The unique ID of an attribute value
+`code` | String! | The attribute code
+
+Currently, `AttributeValueInterface` has 2 different implementations: `AttributeValue` and `AttributeSelectedOptions`.
+
+Apart from the attributes described for `AttributeValueInterface`, the `AttributeValue` contains the following:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`value` | String! | The attribute value
+
+On the other hand, the `AttributeSelectedOptions` contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`selected_options` | [AttributeSelectedOptionInterface!]! | An array with selected option(s) for select or multiselect attribute
+
+The `AttributeSelectedOptionInterface` contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`uid` | ID! | The unique ID of an attribute selected option
+`label` | String! | The attribute selected option label
+`value` | String! | The attribute selected option value
+
 ### CustomerAddress attributes
 
 The values assigned to attributes such as `firstname` and `lastname` in this object may be different from those defined in the `Customer` object.
@@ -978,6 +1050,7 @@ Attribute |  Data Type | Description
 `country_code` | CountryCodeEnum | The customer's country
 `country_id` | String | Deprecated. Use `country_code` instead. The customer's country
 `custom_attributes` | [CustomerAddressAttribute](#customeraddressattribute-attributes) | Deprecated. Not applicable for GraphQL
+`custom_attributesV2` | [AttributeValueInterface](#attributevalueinterface-attributes) | Customer address' custom attributes
 `customer_id` | Int | Deprecated. This attribute is not applicable for GraphQL. The ID assigned to the customer
 `default_billing` | Boolean | Indicates whether the address is the default billing address
 `default_shipping` | Boolean | Indicates whether the address is the default shipping address
