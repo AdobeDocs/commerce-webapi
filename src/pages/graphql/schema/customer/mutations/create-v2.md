@@ -27,6 +27,12 @@ mutation {
       email: "bobloblaw@example.com"
       password: "b0bl0bl@w"
       is_subscribed: true
+      custom_attributes: [
+        {
+          attribute_code: "alternative_email",
+          value: "abc@example.com"
+        }
+      ]
     }
   ) {
     customer {
@@ -34,6 +40,12 @@ mutation {
       lastname
       email
       is_subscribed
+      custom_attributes {
+        code
+        ... on AttributeValue {
+          value
+        }
+      }
     }
   }
 }
@@ -49,7 +61,13 @@ mutation {
         "firstname": "Bob",
         "lastname": "Loblaw",
         "email": "bobloblaw@example.com",
-        "is_subscribed": true
+        "is_subscribed": true,
+        "custom_attributes": [
+          {
+            "code": "alternative_email",
+            "value": "abc@example.com"
+          }
+        ]
       }
     }
   }
@@ -75,6 +93,22 @@ Attribute |  Data Type | Description
 `prefix` | String | An honorific, such as Dr., Mr., or Mrs.
 `suffix` | String | A value such as Sr., Jr., or III
 `taxvat` | String | The customer's Tax/VAT number (for corporate customers)
+`custom_attributes` | [AttributeValueInput!] | The customer's custom attributes
+
+The `AttributeValueInput` object contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`attribute_code` | String! | The code of the attribute
+`value` | String | The value which should be set for the attribute
+`selected_options` | [AttributeInputSelectedOption!] | An array with selected option(s) for select or multiselect attribute
+
+The `AttributeInputSelectedOption` specifies selected option for dropdown or multiselect attribute value.
+This object contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`value` | String! | The attribute option value
 
 ## Output attributes
 

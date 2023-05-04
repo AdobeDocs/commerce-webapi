@@ -26,6 +26,7 @@ Attribute |  Data Type | Description
 `taxvat` | String | The customer's Tax/VAT number (for corporate customers)
 `wishlist` | Wishlist! | Deprecated. Use `wishlist_v2` instead. Contains the contents of the customer's wish lists
 `wishlist_v2(id ID!)` | [Wishlist]! | Retrieve the specified wish list identified by the unique ID for a Wishlist object
+`custom_attributes` | [AttributeValueInterface] | Customer's custom attributes
 
 For B2B, company administrators and users can have the following attributes.
 
