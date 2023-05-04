@@ -76,6 +76,46 @@ The following call returns information about the logged-in customer. Provide the
 }
 ```
 
+### Retrieve customer attributes metadata information
+
+The following call returns customer attributes for the logged-in customer. Provide the customer's token in the header section of the query.
+**Request:**
+
+```graphql
+{
+  customer {
+    firstname
+    lastname
+    suffix
+    email
+    custom_attributes {
+      uid
+      code
+    }
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "customer": {
+      "firstname": "John",
+      "lastname": "Doe",
+      "suffix": null,
+      "email": "jdoe@example.com",
+      "custom_attributes": [
+        {
+          "code": "reward_update_notification"
+        }
+      ]
+    }
+  }
+}
+```
+
 ### Retrieve a summary of the customer's order history
 
 The following example returns a summary of the logged-in customer's previous orders.
