@@ -6,13 +6,13 @@ title: attributesList query | Commerce Web APIs
 
 The `attributesList` query retrieves a list of attributes metadata for a given `entity_type`.
 
+The possible values for this attribute are populated by the modules introducing EAV entities, which currently are `CUSTOMER`, `CUSTOMER_ADDRESS` and `CATALOG_PRODUCT`.
+
 ## Syntax
 
 `{attributesList(entityType: AttributeEntityTypeEnum!): {AttributesMetadataOutput}}`
 
 ## Example usage
-
-### Retrieve EAV attribute metadata
 
 The following call returns the list of attributes metadata for a `customer`.
 
@@ -91,10 +91,6 @@ The `AttributeEntityTypeEnum` object contains the following attributes:
 Attribute | Data Type | Description
 --- |---| ---
 `entityType` | String | The type of entity that defines the attribute.
-
-The possible values for this attribute are populated by the modules introducing EAV entities.
-
-For instance: `CUSTOMER`, `CUSTOMER_ADDRESS`, `CATALOG_CATEGORY`, `CATALOG_PRODUCT`, `INVOICE`, etc.
 
 ## Output attributes
 
