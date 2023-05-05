@@ -102,8 +102,8 @@ The `AttributesMetadataOutput` object contains the following attributes:
 
 Attribute | Data Type | Description
 --- |---| ---
-`items` | [CustomAttributeMetadataInterface!]! | Requested attributes metadata.
-`errors` | [AttributeMetadataError!]! | Errors of retrieving certain attributes metadata.
+`items` | [CustomAttributeMetadataInterface!]! | Requested attributes metadata
+`errors` | [AttributeMetadataError!]! | Errors of retrieving certain attributes metadata
 
 The `CustomAttributeMetadataInterface` object contains the following attributes:
 
