@@ -22,11 +22,29 @@ The following call updates the customer's city and postcode.
 mutation {
   updateCustomerAddress(id:3, input: {
     city: "New City"
-    postcode: "55555"
+    postcode: "55555",
+    custom_attributes: [
+      {
+        attribute_code: "station",
+        value: "Times Sq - 42 St"
+      }
+    ]
   }) {
     id
     city
     postcode
+    custom_attributesV2 {
+      code
+      ... on AttributeValue {
+        value
+      }
+      ... on AttributeSelectedOptions {
+        selected_options {
+          label
+          value
+        }
+      }
+    }
   }
 }
 ```
@@ -39,7 +57,13 @@ mutation {
     "updateCustomerAddress": {
       "id": 3,
       "city": "New City",
-      "postcode": 55555
+      "postcode": 55555,
+      "custom_attributesV2": [
+        {
+          "code": "station",
+          "value": "Times Sq - 42 St"
+        }
+      ]
     }
   }
 }

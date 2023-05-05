@@ -34,6 +34,12 @@ mutation {
     lastname: "Loblaw"
     default_shipping: true
     default_billing: false
+    custom_attributes: [
+      {
+        attribute_code: "station",
+        value: "Encanto/Central Ave"
+      }
+    ]
   }) {
     id
     region {
@@ -47,6 +53,18 @@ mutation {
     city
     default_shipping
     default_billing
+    custom_attributesV2 {
+      code
+      ... on AttributeValue {
+        value
+      }
+      ... on AttributeSelectedOptions {
+        selected_options {
+          label
+          value
+        }
+      }
+    }
   }
 }
 ```
@@ -70,7 +88,13 @@ mutation {
       "postcode": "77777",
       "city": "Phoenix",
       "default_shipping": true,
-      "default_billing": false
+      "default_billing": false,
+      "custom_attributesV2": [
+        {
+          "code": "station",
+          "value": "Encanto/Central Ave"
+        }
+      ]
     }
   }
 }

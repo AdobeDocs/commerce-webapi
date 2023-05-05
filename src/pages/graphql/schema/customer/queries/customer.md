@@ -89,8 +89,16 @@ The following call returns custom attributes for the logged-in customer. Provide
     suffix
     email
     custom_attributes {
-      uid
       code
+      ... on AttributeValue {
+        value
+      }
+      ... on AttributeSelectedOptions {
+        selected_options {
+          label
+          value
+        }
+      }
     }
   }
 }
@@ -108,7 +116,8 @@ The following call returns custom attributes for the logged-in customer. Provide
       "email": "jdoe@example.com",
       "custom_attributes": [
         {
-          "code": "reward_update_notification"
+          "code": "reward_update_notification",
+          "value": true
         }
       ]
     }
@@ -129,6 +138,15 @@ The following call returns the customer address custom attributes for the logged
       city
       custom_attributesV2 {
         code
+        ... on AttributeValue {
+            value
+        }
+        ... on AttributeSelectedOptions {
+          selected_options {
+            label
+            value
+          }
+        }
       }
     }
   }
