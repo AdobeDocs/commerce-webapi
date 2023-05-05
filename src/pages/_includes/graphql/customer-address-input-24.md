@@ -33,6 +33,13 @@ Attribute |  Data Type | Description
 `value` | String | The value which should be set for the attribute
 `selected_options` | [AttributeInputSelectedOption!] |  An array with selected option(s) for select or multiselect attribute
 
+The `AttributeInputSelectedOption` specifies selected option for dropdown or multiselect attribute value.
+This object contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`value` | String! | The attribute option value
+
 ### CustomerAddressRegionInput attributes
 
 The `customerAddressRegionInput` object can contain the following attributes:

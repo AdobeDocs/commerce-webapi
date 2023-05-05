@@ -117,7 +117,7 @@ The following call returns custom attributes for the logged-in customer. Provide
       "custom_attributes": [
         {
           "code": "reward_update_notification",
-          "value": true
+          "value": "0"
         }
       ]
     }
@@ -165,7 +165,8 @@ The following call returns the customer address custom attributes for the logged
           "city": "Marseille",
           "custom_attributesV2": [
             {
-              "code": "neighbourhood"
+              "code": "neighbourhood",
+              "value": "St Barnabé"
             }
           ]
         }
