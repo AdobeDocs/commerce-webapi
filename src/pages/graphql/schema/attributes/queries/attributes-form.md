@@ -123,7 +123,7 @@ The following query returns the list of attributes metadata associated to the fo
 
 Attribute | Data Type | Description
 --- |-----------| ---
-`formCode` | String!   | Form code.
+`formCode` | String!   | Form code
 
 ## Output attributes
 
@@ -131,8 +131,8 @@ The `AttributesFormOutput` object contains the following attributes:
 
 Attribute | Data Type | Description
 --- |---| ---
-`items` | [CustomAttributeMetadataInterface!]! | Requested attributes metadata.
-`errors` | [AttributeMetadataError!]! | Errors of retrieving certain attributes metadata.
+`items` | [CustomAttributeMetadataInterface!]! | Requested attributes metadata
+`errors` | [AttributeMetadataError!]! | Errors of retrieving certain attributes metadata
 
 The `CustomAttributeMetadataInterface` object contains the following attributes:
 
