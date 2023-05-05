@@ -13,8 +13,6 @@ The `attributesForm` query retrieves EAV attributes associated to a frontend `fo
 
 ## Example usage
 
-### Retrieve EAV attribute metadata
-
 The following query returns the list of attributes metadata associated to the form `customer_register_address`.
 
 **Request:**
