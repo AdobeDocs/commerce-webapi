@@ -45,6 +45,12 @@ mutation {
         ... on AttributeValue {
           value
         }
+        ... on AttributeSelectedOptions {
+          selected_options {
+            label
+            value
+          }
+        }
       }
     }
   }
