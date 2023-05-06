@@ -118,6 +118,19 @@ The following call returns custom attributes for the logged-in customer. Provide
         {
           "code": "reward_update_notification",
           "value": "0"
+        },
+        {
+          "code": "studies",
+          "selected_options": [
+            {
+              "label": "BSc",
+              "value": "501"
+            },
+            {
+              "label": "MBA",
+              "value": "502"
+            }
+          ]
         }
       ]
     }
@@ -167,6 +180,19 @@ The following call returns the customer address custom attributes for the logged
             {
               "code": "neighbourhood",
               "value": "St Barnabé"
+            },
+            {
+              "code": "services",
+              "selected_options": [
+                {
+                  "label": "hospital",
+                  "value": "507"
+                },
+                {
+                  "label": "police",
+                  "value": "508"
+                }
+              ]
             }
           ]
         }

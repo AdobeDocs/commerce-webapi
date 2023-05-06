@@ -22,6 +22,7 @@ The following call creates an address for the specified customer.
 mutation {
   createCustomerAddress(input: {
     region: {
+      region_id: 4
       region: "Arizona"
       region_code: "AZ"
     }
@@ -36,13 +37,27 @@ mutation {
     default_billing: false
     custom_attributes: [
       {
-        attribute_code: "station",
+        attribute_code: "station"
         value: "Encanto/Central Ave"
+      },
+      {
+        attribute_code: "services"
+        value: "507,508"
+        selected_options: [
+          {
+            uid: "NTA3"
+            value: "507"
+          },
+          {
+            uid: "NTA4"
+            value: "508"
+          }
+        ]
       }
     ]
   }) {
-    id
     region {
+      region_id
       region
       region_code
     }
@@ -93,6 +108,19 @@ mutation {
         {
           "code": "station",
           "value": "Encanto/Central Ave"
+        },
+        {
+          "code": "services",
+          "selected_options": [
+            {
+              "label": "hospital",
+              "value": "507"
+            },
+            {
+              "label": "police",
+              "value": "508"
+            }
+          ]
         }
       ]
     }

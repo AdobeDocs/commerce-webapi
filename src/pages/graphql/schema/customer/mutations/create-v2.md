@@ -29,8 +29,22 @@ mutation {
       is_subscribed: true
       custom_attributes: [
         {
-          attribute_code: "alternative_email",
+          attribute_code: "alternative_email"
           value: "abc@example.com"
+        },
+        {
+          attribute_code: "studies"
+          value: "501,502"
+          selected_options: [
+            {
+              uid: "NTEw"
+              value: "501"
+            },
+            {
+              uid: "NTEx"
+              value: "502"
+            }
+          ]
         }
       ]
     }
@@ -72,6 +86,19 @@ mutation {
           {
             "code": "alternative_email",
             "value": "abc@example.com"
+          },
+          {
+            "code": "studies",
+            "selected_options": [
+              {
+                "label": "BSc",
+                "value": "501"
+              },
+              {
+                "label": "MBA",
+                "value": "502"
+              }
+            ]
           }
         ]
       }

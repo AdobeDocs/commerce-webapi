@@ -22,11 +22,21 @@ The following call updates the customer's city and postcode.
 mutation {
   updateCustomerAddress(id:3, input: {
     city: "New City"
-    postcode: "55555",
+    postcode: "55555"
     custom_attributes: [
       {
         attribute_code: "station",
         value: "Times Sq - 42 St"
+      },
+      {
+        attribute_code: "services"
+        value: "507"
+        selected_options: [
+          {
+            uid: "NTA3"
+            value: "507"
+          }
+        ]
       }
     ]
   }) {
@@ -62,6 +72,15 @@ mutation {
         {
           "code": "station",
           "value": "Times Sq - 42 St"
+        },
+        {
+          "code": "services",
+          "selected_options": [
+            {
+              "label": "hospital",
+              "value": "507"
+            }
+          ]
         }
       ]
     }

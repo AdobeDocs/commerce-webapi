@@ -28,8 +28,18 @@ mutation {
       is_subscribed: false
       custom_attributes: [
         {
-          attribute_code: "random_attribute",
+          attribute_code: "random_attribute"
           value: "abc123"
+        },
+        {
+          attribute_code: "studies"
+          value: "502"
+          selected_options: [
+            {
+              uid: "NTEx"
+              value: "502"
+            }
+          ]
         }
       ]
     }
@@ -67,6 +77,15 @@ mutation {
           {
             "code": "random_attribute",
             "value": "abc123"
+          },
+          {
+            "code": "studies",
+            "selected_options": [
+              {
+                "label": "MBA",
+                "value": "502"
+              }
+            ]
           }
         ]
       }
