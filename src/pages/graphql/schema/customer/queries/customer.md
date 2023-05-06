@@ -1053,6 +1053,7 @@ import CompareListOutput from '/src/pages/_includes/graphql/compare-list-output.
 <CompareListOutput />
 
 ### AttributeValueInterface attributes
+
 The `AttributeValueInterface` contains the following attributes:
 
 Attribute |  Data Type | Description
