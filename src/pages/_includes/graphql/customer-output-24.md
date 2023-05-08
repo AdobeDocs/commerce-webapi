@@ -4,6 +4,7 @@ Attribute |  Data Type | Description
 `allow_remote_shopping_assistance` | Boolean! | Indicates whether the customer has enabled remote shopping assistance
 `compare_list` | CompareList | The contents of the customer's comparison list
 `created_at` | String | Timestamp indicating when the account was created
+`custom_attributes` | [AttributeValueInterface](#attributevalueinterface-attributes)| Custom attributes assigned to the customer address
 `date_of_birth` | String | The customer's date of birth. In keeping with current security and privacy best practices, be sure you are aware of any potential legal and security risks associated with the storage of customers’ full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
 `default_billing` | String | The ID assigned to the billing address
 `default_shipping` | String | The ID assigned to the shipping address
@@ -37,3 +38,34 @@ Attribute |  Data Type | Description
 `status` | CompanyUserStatusEnum | Indicates whether the company user is ACTIVE or INACTIVE
 `team` | CompanyTeam | The team the company user is assigned to
 `telephone` | String | The phone number of the company user
+
+### AttributeValueInterface attributes
+
+The `AttributeValueInterface` contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`code` | String! | The attribute code
+`uid` | ID! | The unique ID of an attribute value
+
+Currently, `AttributeValueInterface` has two different implementations: `AttributeValue` and `AttributeSelectedOptions`.
+
+In addition to the attributes described for `AttributeValueInterface`, the `AttributeValue` contains the following:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`value` | String! | The attribute value
+
+The `AttributeSelectedOptions` object contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`selected_options` | [AttributeSelectedOptionInterface!]! | An array containing selected options for a select or multiselect attribute
+
+The `AttributeSelectedOptionInterface` contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`label` | String! | The attribute selected option label
+`uid` | ID! | The unique ID of an attribute selected option
+`value` | String! | The attribute selected option value

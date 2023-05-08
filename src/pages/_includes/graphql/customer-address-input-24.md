@@ -8,7 +8,7 @@ Attribute |  Data Type | Description
 `company` | String | The customer's company
 `country_code` | String | The customer's country
 `country_id` | String | Deprecated. Use `country_code` instead. The customer's country
-`custom_attributes` | [CustomerAddressAttributeInput](#customeraddressattributeinput-attributes) | Deprecated. Not applicable for GraphQL
+`custom_attributes` | [AttributeValueInput](#attributevalueinput-attributes)| Custom attributes assigned to the customer address
 `default_billing` | Boolean | Indicates whether the address is the default billing address
 `default_shipping` | Boolean | Indicates whether the address is the default shipping address
 `fax` | String | The fax number
@@ -23,14 +23,22 @@ Attribute |  Data Type | Description
 `telephone` | String | The telephone number
 `vat_id` | String | The customer's Tax/VAT number (for corporate customers)
 
-### CustomerAddressAttributeInput attributes
+### AttributeValueInput attributes
 
-The `CustomerAddressAttributeInput` data type has been deprecated because the contents are not applicable for GraphQL. It can contain the following attributes:
+The `AttributeValueInput` data type contains the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`attribute_code` | String | Attribute code
-`value` | String | Attribute value
+`attribute_code`| String! | The code of the attribute
+`selected_options` | [AttributeInputSelectedOption!] | An array containing selected options for a select or multiselect attribute
+`value` | String | The value assigned to the attribute
+
+The `AttributeInputSelectedOption` data type contains the value of the selected option for a dropdown or multiselect attribute.
+This object contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`value` | String! | The attribute option value
 
 ### CustomerAddressRegionInput attributes
 

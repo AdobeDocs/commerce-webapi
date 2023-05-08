@@ -14,7 +14,9 @@ To return or modify information about a customer, we recommend you use customer 
 
 ## Example usage
 
-The following call creates an address for the specified customer.
+The following call creates an address for the specified customer, assigning values for custom attributes.
+
+The merchant has previously created the custom attributes `station` and `services` for customer addresses.
 
 **Request:**
 
@@ -22,6 +24,7 @@ The following call creates an address for the specified customer.
 mutation {
   createCustomerAddress(input: {
     region: {
+      region_id: 4
       region: "Arizona"
       region_code: "AZ"
     }
@@ -34,9 +37,29 @@ mutation {
     lastname: "Loblaw"
     default_shipping: true
     default_billing: false
+    custom_attributes: [
+      {
+        attribute_code: "station"
+        value: "Encanto/Central Ave"
+      },
+      {
+        attribute_code: "services"
+        value: "507,508"
+        selected_options: [
+          {
+            uid: "NTA3"
+            value: "507"
+          },
+          {
+            uid: "NTA4"
+            value: "508"
+          }
+        ]
+      }
+    ]
   }) {
-    id
     region {
+      region_id
       region
       region_code
     }
@@ -47,6 +70,18 @@ mutation {
     city
     default_shipping
     default_billing
+    custom_attributesV2 {
+      code
+      ... on AttributeValue {
+        value
+      }
+      ... on AttributeSelectedOptions {
+        selected_options {
+          label
+          value
+        }
+      }
+    }
   }
 }
 ```
@@ -70,7 +105,26 @@ mutation {
       "postcode": "77777",
       "city": "Phoenix",
       "default_shipping": true,
-      "default_billing": false
+      "default_billing": false,
+      "custom_attributesV2": [
+        {
+          "code": "station",
+          "value": "Encanto/Central Ave"
+        },
+        {
+          "code": "services",
+          "selected_options": [
+            {
+              "label": "hospital",
+              "value": "507"
+            },
+            {
+              "label": "police",
+              "value": "508"
+            }
+          ]
+        }
+      ]
     }
   }
 }
