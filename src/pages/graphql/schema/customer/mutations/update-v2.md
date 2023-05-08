@@ -16,7 +16,7 @@ To return or modify information about a customer, we recommend you use customer 
 
 ## Example usage
 
-The following call updates the first name and the newsletter subscription status for a specific customer.
+The following call updates the first name, newsletter subscription status, and custom attribute values for a specific customer. The merchant has previously created the `random_attribute` and `studies` attributes for customer addresses.
 
 **Request:**
 
