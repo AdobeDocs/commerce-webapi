@@ -14,7 +14,9 @@ The `createCustomerV2` mutation supersedes the `createCustomer` mutation as the 
 
 ## Example usage
 
-The following call creates a new customer.
+The following call creates a new customer, assigning values for custom attributes.
+
+The merchant has previously created the custom attributes `alternative_email` and `studies` for customers.
 
 **Request:**
 
