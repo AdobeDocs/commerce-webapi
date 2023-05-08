@@ -7,6 +7,8 @@ Field | Data Type | Description
 `description` | String | The detailed description of the product.
 `id` | ID! | The product ID, generated as a composite key, unique per locale.
 `images(roles: [String])` | [ProductViewImage] | A list of images defined for the product.
+`inStock` | Boolean | Indicates whether the product is in stock.
+`lowStock` | Boolean | Indicates whether the product stock is low.
 `metaDescription` | String | A brief overview of the product for search results listings.
 `metaKeyword` | String | A comma-separated list of keywords that are visible only to search engines.
 `metaTitle` | String | A string that is displayed in the title bar and tab of the browser and in search results lists.
@@ -26,6 +28,8 @@ Field | Data Type | Description
 `description` | String | The detailed description of the product.
 `id` | ID! | The product ID, generated as a composite key, unique per locale.
 `images(roles: [String])` | [ProductViewImage] | A list of images defined for the product.
+`inStock` | Boolean | Indicates whether the product is in stock.
+`lowStock` | Boolean | Indicates whether the product stock is low.
 `metaDescription` | String | A brief overview of the product for search results listings.
 `metaKeyword` | String | A comma-separated list of keywords that are visible only to search engines.
 `metaTitle` | String | A string that is displayed in the title bar and tab of the browser and in search results lists.
@@ -167,6 +171,8 @@ Field | Data Type | Description
 `description` | String | The detailed description of the product.
 `id` | ID! | The product ID, generated as a composite key, unique per locale.
 `images(roles: [String])` | [ProductViewImage] | A list of images defined for the product.
+`inStock` | Boolean | Indicates whether the product is in stock.
+`lowStock` | Boolean | Indicates whether the product stock is low.
 `metaDescription` | String | A brief overview of the product for search results listings.
 `metaKeyword` | String | A comma-separated list of keywords that are visible only to search engines.
 `metaTitle` | String | A string that is displayed in the title bar and tab of the browser and in search results lists.
