@@ -4,7 +4,7 @@ Attribute |  Data Type | Description
 `allow_remote_shopping_assistance` | Boolean! | Indicates whether the customer has enabled remote shopping assistance
 `compare_list` | CompareList | The contents of the customer's comparison list
 `created_at` | String | Timestamp indicating when the account was created
-`custom_attributes` | [AttributeValueInterface](#attributevalueinterface-attributes)| Customer's custom attributes
+`custom_attributes` | [AttributeValueInterface](#attributevalueinterface-attributes)| Custom attributes assigned to the customer address
 `date_of_birth` | String | The customer's date of birth. In keeping with current security and privacy best practices, be sure you are aware of any potential legal and security risks associated with the storage of customers’ full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
 `default_billing` | String | The ID assigned to the billing address
 `default_shipping` | String | The ID assigned to the shipping address
@@ -48,19 +48,19 @@ Attribute |  Data Type | Description
 `uid` | ID! | The unique ID of an attribute value
 `code` | String! | The attribute code
 
-Currently, `AttributeValueInterface` has 2 different implementations: `AttributeValue` and `AttributeSelectedOptions`.
+Currently, `AttributeValueInterface` has two different implementations: `AttributeValue` and `AttributeSelectedOptions`.
 
-Apart from the attributes described for `AttributeValueInterface`, the `AttributeValue` contains the following:
+In addition to the attributes described for `AttributeValueInterface`, the `AttributeValue` contains the following:
 
 Attribute |  Data Type | Description
 --- | --- | ---
 `value` | String! | The attribute value
 
-On the other hand, the `AttributeSelectedOptions` contains the following attributes:
+The `AttributeSelectedOptions` object contains the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`selected_options` | [AttributeSelectedOptionInterface!]! | An array with selected option(s) for select or multiselect attribute
+`selected_options` | [AttributeSelectedOptionInterface!]! | An array containing selected options for a select or multiselect attribute
 
 The `AttributeSelectedOptionInterface` contains the following attributes:
 

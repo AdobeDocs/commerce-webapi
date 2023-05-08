@@ -8,7 +8,7 @@ Attribute |  Data Type | Description
 `company` | String | The customer's company
 `country_code` | String | The customer's country
 `country_id` | String | Deprecated. Use `country_code` instead. The customer's country
-`custom_attributes` | [AttributeValueInput](#attributevalueinput-attributes)| Customer address' custom attributes
+`custom_attributes` | [AttributeValueInput](#attributevalueinput-attributes)| Custom attributes assigned to the customer address
 `default_billing` | Boolean | Indicates whether the address is the default billing address
 `default_shipping` | Boolean | Indicates whether the address is the default shipping address
 `fax` | String | The fax number
@@ -25,15 +25,15 @@ Attribute |  Data Type | Description
 
 ### AttributeValueInput attributes
 
-The `AttributeValueInput` contains the following attributes:
+The `AttributeValueInput` data type contains the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
 `attribute_code`| String! | The code of the attribute
-`value` | String | The value which should be set for the attribute
-`selected_options` | [AttributeInputSelectedOption!] |  An array with selected option(s) for select or multiselect attribute
+`value` | String | The value assigned to the attribute
+`selected_options` | [AttributeInputSelectedOption!] |  An array containing selected options for a select or multiselect attribute
 
-The `AttributeInputSelectedOption` specifies selected option for dropdown or multiselect attribute value.
+The `AttributeInputSelectedOption` data type contains the value of the selected option for a dropdown or multiselect attribute.
 This object contains the following attributes:
 
 Attribute |  Data Type | Description

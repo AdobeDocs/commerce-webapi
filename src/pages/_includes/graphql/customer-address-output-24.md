@@ -10,8 +10,8 @@ Attribute |  Data Type | Description
 `company` | String | The customer's company
 `country_code` | CountryCodeEnum | The customer's country
 `country_id` | String | Deprecated. Use `country_code` instead. The customer's country
-`custom_attributes` | [CustomerAddressAttribute](#customeraddress-attributes) | Deprecated. Use custom_attributesV2 instead
-`custom_attributesV2` | [AttributeValueInterface](#attributevalueinterface-attributes)| Customer address' custom attributes
+`custom_attributes` | [CustomerAddressAttribute](#customeraddress-attributes) | Deprecated. Use `custom_attributesV2` instead
+`custom_attributesV2` | [AttributeValueInterface](#attributevalueinterface-attributes)| Custom attributes assigned to the customer address
 `customer_id` | Int | Deprecated. This attribute is not applicable for GraphQL. The ID assigned to the customer
 `default_billing` | Boolean | Indicates whether the address is the default billing address
 `default_shipping` | Boolean | Indicates whether the address is the default shipping address
@@ -39,19 +39,19 @@ Attribute |  Data Type | Description
 `uid` | ID! | The unique ID of an attribute value
 `code` | String! | The attribute code
 
-Currently, `AttributeValueInterface` has 2 different implementations: `AttributeValue` and `AttributeSelectedOptions`.
+Currently, `AttributeValueInterface` has two different implementations: `AttributeValue` and `AttributeSelectedOptions`.
 
-Apart from the attributes described for `AttributeValueInterface`, the `AttributeValue` contains the following:
+In addition to the attributes described for `AttributeValueInterface`, the `AttributeValue` contains the following:
 
 Attribute |  Data Type | Description
 --- | --- | ---
 `value` | String! | The attribute value
 
-On the other hand, the `AttributeSelectedOptions` contains the following attributes:
+The `AttributeSelectedOptions` object contains the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`selected_options` | [AttributeSelectedOptionInterface!]! | An array with selected option(s) for select or multiselect attribute
+`selected_options` | [AttributeSelectedOptionInterface!]! | An array containing selected options for a select or multiselect attribute
 
 The `AttributeSelectedOptionInterface` contains the following attributes:
 
