@@ -119,8 +119,8 @@ The `AttributeValueInput` object contains the following attributes:
 Attribute |  Data Type | Description
 --- | --- | ---
 `attribute_code` | String! | The code of the attribute
-`value` | String | The value which should be set for the attribute
-`selected_options` | [AttributeInputSelectedOption!] | An array with selected option(s) for select or multiselect attribute
+`selected_options` | [AttributeInputSelectedOption!] | An array containing selected options for a select or multiselect attribute
+`value` | String | The value assigned to the attribute
 
 The `AttributeInputSelectedOption` specifies selected option for dropdown or multiselect attribute value.
 This object contains the following attributes:

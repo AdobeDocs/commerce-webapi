@@ -79,6 +79,7 @@ The following call returns information about the logged-in customer. Provide the
 ### Retrieve custom attributes metadata from a customer
 
 The following call returns custom attributes for the logged-in customer. Provide the customer's token in the header section of the query.
+
 **Request:**
 
 ```graphql
@@ -141,6 +142,7 @@ The following call returns custom attributes for the logged-in customer. Provide
 ### Retrieve custom attributes metadata from a customer address
 
 The following call returns the customer address custom attributes for the logged-in customer. Provide the customer's token in the header section of the query.
+
 **Request:**
 
 ```graphql
@@ -1054,12 +1056,13 @@ import CompareListOutput from '/src/pages/_includes/graphql/compare-list-output.
 
 ### AttributeValueInterface attributes
 
+
 The `AttributeValueInterface` contains the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`uid` | ID! | The unique ID of an attribute value
 `code` | String! | The attribute code
+`uid` | ID! | The unique ID of an attribute value
 
 Currently, `AttributeValueInterface` has two different implementations: `AttributeValue` and `AttributeSelectedOptions`.
 
@@ -1073,14 +1076,14 @@ The `AttributeSelectedOptions` object contains the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`selected_options` | [AttributeSelectedOptionInterface!]! | An array with selected option(s) for select or multiselect attribute
+`selected_options` | [AttributeSelectedOptionInterface!]! | An array containing selected options for a select or multiselect attribute
 
 The `AttributeSelectedOptionInterface` contains the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`uid` | ID! | The unique ID of an attribute selected option
 `label` | String! | The attribute selected option label
+`uid` | ID! | The unique ID of an attribute selected option
 `value` | String! | The attribute selected option value
 
 ### CustomerAddress attributes

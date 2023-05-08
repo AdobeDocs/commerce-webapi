@@ -45,8 +45,8 @@ The `AttributeValueInterface` contains the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`uid` | ID! | The unique ID of an attribute value
 `code` | String! | The attribute code
+`uid` | ID! | The unique ID of an attribute value
 
 Currently, `AttributeValueInterface` has two different implementations: `AttributeValue` and `AttributeSelectedOptions`.
 
@@ -66,6 +66,6 @@ The `AttributeSelectedOptionInterface` contains the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`uid` | ID! | The unique ID of an attribute selected option
 `label` | String! | The attribute selected option label
+`uid` | ID! | The unique ID of an attribute selected option
 `value` | String! | The attribute selected option value
