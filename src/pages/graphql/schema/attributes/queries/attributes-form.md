@@ -10,7 +10,6 @@ The `attributesForm` query retrieves EAV attributes associated to a frontend `fo
 
 `{attributesForm(formCode: String!): {AttributesFormOutput!}}`
 
-
 ## Example usage
 
 The following query returns the list of attributes metadata associated to the form `customer_register_address`.
