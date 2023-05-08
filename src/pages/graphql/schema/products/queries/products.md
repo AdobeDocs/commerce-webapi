@@ -53,7 +53,7 @@ filter: {
 
 The application processes the attribute values specified in a `ProductAttributeFilterInput` as simple data types (strings, integers, Booleans). However, returned attributes can be a different, complex data type. For example, in a response, `price` is an object that contains a monetary value and a currency code.
 
-By default, you can use the following attributes as filters. To define a custom filter, see [Filtering with custom attributes](../../../usage/custom-filters.md). Use the `input_type` output attribute of the [`customAttributeMetadata` query](../../store/queries/custom-attribute-metadata.md) to determine whether your custom filter should include the `FilterEqualTypeInput`, `FilterMatchTypeInput`, or `FilterRangeTypeInput` data type.
+By default, you can use the following attributes as filters. To define a custom filter, see [Filtering with custom attributes](../../../usage/custom-filters.md). Use the `input_type` output attribute of the [`customAttributeMetadata` query](../../attributes/queries/custom-attribute-metadata.md) to determine whether your custom filter should include the `FilterEqualTypeInput`, `FilterMatchTypeInput`, or `FilterRangeTypeInput` data type.
 
 Attribute | Data type | Description
 --- | --- | ---
