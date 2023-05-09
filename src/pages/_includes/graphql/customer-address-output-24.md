@@ -10,7 +10,8 @@ Attribute |  Data Type | Description
 `company` | String | The customer's company
 `country_code` | CountryCodeEnum | The customer's country
 `country_id` | String | Deprecated. Use `country_code` instead. The customer's country
-`custom_attributes` | [CustomerAddressAttribute](#customeraddress-attributes) | Deprecated. Not applicable for GraphQL
+`custom_attributes` | [CustomerAddressAttribute](#customeraddress-attributes) | Deprecated. Use `custom_attributesV2` instead
+`custom_attributesV2` | [AttributeValueInterface](#attributevalueinterface-attributes)| Custom attributes assigned to the customer address
 `customer_id` | Int | Deprecated. This attribute is not applicable for GraphQL. The ID assigned to the customer
 `default_billing` | Boolean | Indicates whether the address is the default billing address
 `default_shipping` | Boolean | Indicates whether the address is the default shipping address
@@ -28,6 +29,37 @@ Attribute |  Data Type | Description
 `suffix` | String | A value such as Sr., Jr., or III
 `telephone` | String | The telephone number
 `vat_id` | String | The customer's Tax/VAT number (for corporate customers)
+
+### AttributeValueInterface attributes
+
+The `AttributeValueInterface` contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`code` | String! | The attribute code
+`uid` | ID! | The unique ID of an attribute value
+
+Currently, `AttributeValueInterface` has two different implementations: `AttributeValue` and `AttributeSelectedOptions`.
+
+In addition to the attributes described for `AttributeValueInterface`, the `AttributeValue` contains the following:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`value` | String! | The attribute value
+
+The `AttributeSelectedOptions` object contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`selected_options` | [AttributeSelectedOptionInterface!]! | An array containing selected options for a select or multiselect attribute
+
+The `AttributeSelectedOptionInterface` contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`label` | String! | The attribute selected option label
+`uid` | ID! | The unique ID of an attribute selected option
+`value` | String! | The attribute selected option value
 
 ### CustomerAddressAttribute attributes
 

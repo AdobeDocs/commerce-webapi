@@ -14,7 +14,9 @@ The `createCustomerV2` mutation supersedes the `createCustomer` mutation as the 
 
 ## Example usage
 
-The following call creates a new customer.
+The following call creates a new customer, assigning values for custom attributes.
+
+The merchant has previously created the custom attributes `alternative_email` and `studies` for customers.
 
 **Request:**
 
@@ -27,6 +29,26 @@ mutation {
       email: "bobloblaw@example.com"
       password: "b0bl0bl@w"
       is_subscribed: true
+      custom_attributes: [
+        {
+          attribute_code: "alternative_email"
+          value: "abc@example.com"
+        },
+        {
+          attribute_code: "studies"
+          value: "501,502"
+          selected_options: [
+            {
+              uid: "NTEw"
+              value: "501"
+            },
+            {
+              uid: "NTEx"
+              value: "502"
+            }
+          ]
+        }
+      ]
     }
   ) {
     customer {
@@ -34,6 +56,18 @@ mutation {
       lastname
       email
       is_subscribed
+      custom_attributes {
+        code
+        ... on AttributeValue {
+          value
+        }
+        ... on AttributeSelectedOptions {
+          selected_options {
+            label
+            value
+          }
+        }
+      }
     }
   }
 }
@@ -49,7 +83,26 @@ mutation {
         "firstname": "Bob",
         "lastname": "Loblaw",
         "email": "bobloblaw@example.com",
-        "is_subscribed": true
+        "is_subscribed": true,
+        "custom_attributes": [
+          {
+            "code": "alternative_email",
+            "value": "abc@example.com"
+          },
+          {
+            "code": "studies",
+            "selected_options": [
+              {
+                "label": "BSc",
+                "value": "501"
+              },
+              {
+                "label": "MBA",
+                "value": "502"
+              }
+            ]
+          }
+        ]
       }
     }
   }
@@ -64,6 +117,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `allow_remote_shopping_assistance` | Boolean | Indicates whether the customer has enabled remote shopping assistance
 `date_of_birth` | String | The customer's date of birth. In keeping with current security and privacy best practices, be sure you are aware of any potential legal and security risks associated with the storage of customers' full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
+`custom_attributes` | [AttributeValueInput!] | The customer's custom attributes
 `dob` | String | Deprecated. Use `date_of_birth` instead. The customer's date of birth
 `email` | String! | The customer's email address
 `firstname` | String! | The customer's first name
@@ -75,6 +129,21 @@ Attribute |  Data Type | Description
 `prefix` | String | An honorific, such as Dr., Mr., or Mrs.
 `suffix` | String | A value such as Sr., Jr., or III
 `taxvat` | String | The customer's Tax/VAT number (for corporate customers)
+
+The `AttributeValueInput` object contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`attribute_code` | String! | The code of the attribute
+`selected_options` | [AttributeInputSelectedOption!] | An array containing selected options for a select or multiselect attribute
+`value` | String | The value assigned to the attribute
+
+The `AttributeInputSelectedOption` specifies selected option for dropdown or multiselect attribute value.
+This object contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`value` | String! | The attribute option value
 
 ## Output attributes
 
