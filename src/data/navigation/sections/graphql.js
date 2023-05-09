@@ -88,6 +88,10 @@ module.exports = [
             path: "/graphql/schema/attributes/queries/",
             pages: [
               {
+                title: "attributesForm",
+                path: "/graphql/schema/attributes/queries/attributes-form.md"
+              },
+              {
                 title: "attributesList",
                 path: "/graphql/schema/attributes/queries/attributes-list.md"
               },
