@@ -9,7 +9,7 @@ The `attributesForm` query retrieves EAV attributes associated to `customer` and
 These are the ones available in the "Forms to Use In" configuration setting, when creating or editing a custom attribute through the Admin site.
 With the only exception of the `admin forms` which is not possible to query on.
 
-You can easily find them checking the following pages `Stores` > `Attributes` > `Customer` or `Customer Address` of the Admin site.
+You can easily find them checking the following pages `Stores` > `Attributes` > `Customer` and `Customer Address` when adding or editing an attibute.
 
 ## Syntax
 
