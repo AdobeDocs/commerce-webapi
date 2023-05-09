@@ -6,10 +6,19 @@ title: attributesForm query | Commerce Web APIs
 
 The `attributesForm` query retrieves EAV attributes associated to `customer` and `customer_address` frontend forms.
 
-These are the ones available in the "Forms to Use In" configuration setting, when creating or editing a custom attribute through the Admin site.
-With the only exception of the `admin forms` which is not possible to query on.
+These forms are visible when using the Admin to create or edit a customer or customer address address (**Stores** > Attributes > **Customer** or **Customer Address**).
 
-You can easily find them checking the following pages `Stores` > `Attributes` > `Customer` and `Customer Address` when adding or editing an attibute.
+The following table maps the display names of the applicable forms to values that you can specify as a `formCode` value.
+
+| Type | Display name | `formCode` value |
+| --- | --- | --- |
+| Customer | Customer Account Edit | `customer_account_edit` |
+| Customer | Customer Registration | `customer_account_create` |
+| Customer address |  Customer Address Registration |  `customer_register_address` |
+| Customer address | Customer Account Address | `customer_address_edit` |
+<InlineAlert slots="text" />
+
+You cannot query on the Admin Checkout form.
 
 ## Syntax
 
