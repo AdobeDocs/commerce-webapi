@@ -4,7 +4,7 @@ title: attributesForm query | Commerce Web APIs
 
 # attributesForm query
 
-The `attributesForm` query retrieves EAV attributes associated to `customer` and `customer_address` frontend forms.
+The `attributesForm` query retrieves EAV attributes associated with customer and customer address frontend forms.
 
 These forms are visible when using the Admin to create or edit a customer or customer address address (**Stores** > Attributes > **Customer** or **Customer Address**).
 
