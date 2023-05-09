@@ -1,11 +1,9 @@
 ---
 title: Rate limiting | Getting Started with Web APIs
-description: Explains input limiting and other API security safeguards against denial-of-service (DoS) attacks.
+description: Explains how to limit attacks that attempt to brute force credit card details.
 ---
 
 # Rate limiting
-
-This topic describes best practices for [API security](https://owasp.org/www-project-api-security/).
 
 In a carding attack, an attacker tries to determine which credit card numbers are valid, usually in batches of thousands. Attackers can use similar techniques to brute force missing details, such as the expiration date. Adobe Commerce merchants can be targeted by this attack type through their shops and integrations with 3rd-party payment gateways.
 
@@ -30,13 +28,13 @@ InstantPurchase module:
 
 Setting up rate limiting has two discrete steps:
 
-1. Add a configuration that connects to the service where the request logs will be stored. By default, the connection is configured for a Redis server. Most merchants must configure a cloud or local installation of Redis to implement the rate limiting feature. However, merchants who have instances hosted on Amazon EC2 use an AWS ElastiCache instead of a cloud or local Redis instance.
+1. Add a configuration that connects to the service where the request logs will be stored. By default, the connection is configured for a Redis server. Most merchants must configure a cloud or local installation of Redis to implement the rate limiting feature. However, merchants who have [instances hosted on Amazon EC2](#use-aws-elasticache-with-your-ec2-instance) use an AWS ElastiCache instead of a cloud or local Redis instance.
 
   **Note:** The data, including request time and identifier, is temporarily stored in Redis. Registered users are identified by their user ID. Non-registered users are identified by their external IP address.
 
 1. Configure Commerce to set restrictions on guest users and authenticated customers. This step is the same for all merchants.
 
-## Set the Redis service connection (on-premises)
+## Set the Redis service connection (most merchants)
 
 The [Configure Redis](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/config-redis.html) topic in the _Commerce Configuration Guide_ describes basic installation and configuration information.
 
