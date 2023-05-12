@@ -132,6 +132,7 @@ Attribute | Data type | Description
 `locations` | [DynamicBlockLocationEnum] | An array indicating the locations the dynamic block can be placed. The possible values are CONTENT, HEADER, FOOTER, LEFT, and RIGHT. If this attribute is not specified, the query returns all locations
 `product_uid` | ID | The unique ID of the product currently viewed. Available in the `magento2-pwa-commerce` module only.
 `type` | DynamicBlockTypeEnum! | A value indicating the type of dynamic block to filter on. The possible values are CART_PRICE_RULE_RELATED, CATALOG_PRICE_RULE_RELATED, and SPECIFIED
+`audeince_id` | FilterEqualTypeInput | Audience ID for this block. Available in the `magento/audiences` module only.
 
 ## Output attributes
 
@@ -151,6 +152,7 @@ Attribute | Data type | Description
 --- | --- | ---
 `content` | ComplexTextValue! | Contains the renderable HTML code of the dynamic block
 `uid` | ID! | The unique ID of a DynamicBlock object
+`audeince_id` | [ID] | An array of of Audience IDs for this block. Available in the `magento/audiences` module only.
 
 ### ComplexTextValue attributes
 
