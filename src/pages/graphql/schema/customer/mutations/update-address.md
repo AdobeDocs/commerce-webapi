@@ -23,7 +23,7 @@ mutation {
   updateCustomerAddress(id:3, input: {
     city: "New City"
     postcode: "55555"
-    custom_attributes: [
+    custom_attributesV2: [
       {
         attribute_code: "station",
         value: "Times Sq - 42 St"
