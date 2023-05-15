@@ -8,7 +8,8 @@ Attribute |  Data Type | Description
 `company` | String | The customer's company
 `country_code` | String | The customer's country
 `country_id` | String | Deprecated. Use `country_code` instead. The customer's country
-`custom_attributes` | [AttributeValueInput](#attributevalueinput-attributes)| Custom attributes assigned to the customer address
+`custom_attributes` | [CustomerAddressAttributeInput](#customeraddressattributeinput-attributes) | Deprecated. Use `custom_attributesV2` instead
+`custom_attributesV2` | [AttributeValueInput](#attributevalueinput-attributes)| Custom attributes assigned to the customer address
 `default_billing` | Boolean | Indicates whether the address is the default billing address
 `default_shipping` | Boolean | Indicates whether the address is the default shipping address
 `fax` | String | The fax number
@@ -39,6 +40,15 @@ This object contains the following attributes:
 Attribute |  Data Type | Description
 --- | --- | ---
 `value` | String! | The attribute option value
+
+### CustomerAddressAttributeInput attributes
+
+The `CustomerAddressAttributeInput` data type has been deprecated. Use `custom_attributesV2` instead. It can contain the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`attribute_code` | String | Attribute code
+`value` | String | Attribute value
 
 ### CustomerAddressRegionInput attributes
 

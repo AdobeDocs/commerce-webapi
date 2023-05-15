@@ -37,7 +37,7 @@ mutation {
     lastname: "Loblaw"
     default_shipping: true
     default_billing: false
-    custom_attributes: [
+    custom_attributesV2: [
       {
         attribute_code: "station"
         value: "Encanto/Central Ave"

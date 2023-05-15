@@ -63,7 +63,7 @@ Attribute |  Data Type | Description
 
 ### CustomerAddressAttribute attributes
 
-The `CustomerAddressAttribute` output data type has been deprecated because the contents are not applicable for GraphQL. It can contain the following attributes:
+The `CustomerAddressAttribute` output data type has been deprecated. Use `custom_attributesV2` instead. It can contain the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
