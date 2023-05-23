@@ -127,12 +127,12 @@ The following code illustrates the definition of the dynamic block with the `uid
 
 Attribute | Data type | Description
 --- | --- | ---
+`audeince_id` | FilterEqualTypeInput | Audience ID for this block. Available in the `magento/audiences` module only.
 `cart_id` | String | The unique ID that identifies the customer's cart. Available in the `magento2-pwa-commerce` module only.
 `dynamic_block_uids` | [ID] | An array of dynamic block UIDs to filter on
 `locations` | [DynamicBlockLocationEnum] | An array indicating the locations the dynamic block can be placed. The possible values are CONTENT, HEADER, FOOTER, LEFT, and RIGHT. If this attribute is not specified, the query returns all locations
 `product_uid` | ID | The unique ID of the product currently viewed. Available in the `magento2-pwa-commerce` module only.
 `type` | DynamicBlockTypeEnum! | A value indicating the type of dynamic block to filter on. The possible values are CART_PRICE_RULE_RELATED, CATALOG_PRICE_RULE_RELATED, and SPECIFIED
-`audeince_id` | FilterEqualTypeInput | Audience ID for this block. Available in the `magento/audiences` module only.
 
 ## Output attributes
 
@@ -150,9 +150,9 @@ The `DynamicBlock` object contains the following attributes.
 
 Attribute | Data type | Description
 --- | --- | ---
+`audeince_id` | [ID] | An array of of Audience IDs for this block. Available in the `magento/audiences` module only.
 `content` | ComplexTextValue! | Contains the renderable HTML code of the dynamic block
 `uid` | ID! | The unique ID of a DynamicBlock object
-`audeince_id` | [ID] | An array of of Audience IDs for this block. Available in the `magento/audiences` module only.
 
 ### ComplexTextValue attributes
 
