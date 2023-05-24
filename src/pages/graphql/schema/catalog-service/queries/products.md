@@ -180,46 +180,28 @@ The following query returns details about a configurable product.
 
 ```graphql
 query {
-  products(skus: ["MH12"]) {
-    __typename
+  products(skus: ["24-MB02"]) {
     id
     sku
     name
     url
     description
     shortDescription
+    inStock
+    lowStock
     attributes(roles: ["visible in Search"]) {
       name
       label
       value
       roles
     }
-    ... on ComplexProductView {
-      priceRange {
-        maximum {
-          regular {
-            amount {
-              value
-              currency
-            }
+    ... on SimpleProductView {
+      price {
+        regular {
+          amount {
+            value
+            currency
           }
-        }
-        minimum {
-          regular {
-            amount {
-              value
-              currency
-            }
-          }
-        }
-      }
-      options {
-        id
-        required
-        title
-        values {
-          id
-          title
         }
       }
     }
@@ -241,6 +223,8 @@ query {
         "url": "http://example.com/ajax-full-zip-sweatshirt.html",
         "description": "<p>The Ajax Full-Zip Sweatshirt makes the optimal layering or outer piece for archers, golfers, hikers and virtually any other sportsmen. Not only does it have top-notch moisture-wicking abilities, but the tight-weave fabric also prevents pilling from repeated wash-and-wear cycles.</p>\r\n<p>&bull; Mint striped full zip hoodie.<br />&bull; 100% bonded polyester fleece.<br />&bull; Pouch pocket.<br />&bull; Rib cuffs and hem. <br />&bull; Machine washable.</p>",
         "shortDescription": "",
+        "inStock": true,
+        "lowStock": false,
         "attributes": [
           {
             "name": "climate",
