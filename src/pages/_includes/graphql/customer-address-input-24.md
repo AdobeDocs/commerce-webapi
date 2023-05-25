@@ -9,7 +9,7 @@ Attribute |  Data Type | Description
 `country_code` | String | The customer's country
 `country_id` | String | Deprecated. Use `country_code` instead. The customer's country
 `custom_attributes` | [CustomerAddressAttributeInput](#customeraddressattributeinput-attributes) | Deprecated. Use `custom_attributesV2` instead
-`custom_attributesV2` | [AttributeValueInput](#attributevalueinput-attributes)| Custom attributes assigned to the customer address
+`custom_attributesV2` | [AttributeValueInput](#attributevalueinput-attributes)| Custom attributes assigned to the customer address (2.4.7-beta only)
 `default_billing` | Boolean | Indicates whether the address is the default billing address
 `default_shipping` | Boolean | Indicates whether the address is the default shipping address
 `fax` | String | The fax number
@@ -25,6 +25,10 @@ Attribute |  Data Type | Description
 `vat_id` | String | The customer's Tax/VAT number (for corporate customers)
 
 ### AttributeValueInput attributes
+
+import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
+
+<BetaNote />
 
 The `AttributeValueInput` data type contains the following attributes:
 

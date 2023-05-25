@@ -14,6 +14,10 @@ The `createCustomerV2` mutation supersedes the `createCustomer` mutation as the 
 
 ## Example usage
 
+import BetaExample from '/src/pages/_includes/graphql/notes/beta-example.md'
+
+<BetaExample />
+
 The following call creates a new customer, assigning values for custom attributes.
 
 The merchant has previously created the custom attributes `alternative_email` and `studies` for customers.
@@ -117,7 +121,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `allow_remote_shopping_assistance` | Boolean | Indicates whether the customer has enabled remote shopping assistance
 `date_of_birth` | String | The customer's date of birth. In keeping with current security and privacy best practices, be sure you are aware of any potential legal and security risks associated with the storage of customers' full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
-`custom_attributes` | [AttributeValueInput!] | The customer's custom attributes
+`custom_attributes` | [AttributeValueInput!] | The customer's custom attributes (2.4.7-beta only)
 `dob` | String | Deprecated. Use `date_of_birth` instead. The customer's date of birth
 `email` | String! | The customer's email address
 `firstname` | String! | The customer's first name
@@ -131,6 +135,10 @@ Attribute |  Data Type | Description
 `taxvat` | String | The customer's Tax/VAT number (for corporate customers)
 
 The `AttributeValueInput` object contains the following attributes:
+
+import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
+
+<BetaNote />
 
 Attribute |  Data Type | Description
 --- | --- | ---

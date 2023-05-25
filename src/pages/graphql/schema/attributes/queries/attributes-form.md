@@ -2,6 +2,10 @@
 title: attributesForm query | Commerce Web APIs
 ---
 
+import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
+
+<BetaNote />
+
 # attributesForm query
 
 The `attributesForm` query retrieves EAV attributes associated with customer and customer address frontend forms.

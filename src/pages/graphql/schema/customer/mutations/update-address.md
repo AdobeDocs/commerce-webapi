@@ -14,6 +14,10 @@ To return or modify information about a customer, we recommend you use customer 
 
 ## Example usage
 
+import BetaExample from '/src/pages/_includes/graphql/notes/beta-example.md'
+
+<BetaExample />
+
 The following call updates the customer's city, postcode, and custom attributes. The merchant has previously created the `station` and `services` attributes for customer addresses.
 
 **Request:**

@@ -18,29 +18,34 @@ GraphQL allows you to make multiple queries in a single call. If you specify any
 
 The application caches the following queries:
 
-* `availableStores`
+* `availableStores` (2.4.7-beta only)
 * `categories`
 * `category` (deprecated)
 * `categoryList`
 * `cmsBlocks`
 * `cmsPage`
-* `countries`
-* `country`
-* `currency`
-* `customAttributeMetadata`
+* `countries` (2.4.7-beta only)
+* `country` (2.4.7-beta only)
+* `currency` (2.4.7-beta only)
+* `customAttributeMetadata` (2.4.7-beta only)
 * `products`
 * `route`
-* `storeConfig`
+* `storeConfig` (2.4.7-beta only)
 * `urlResolver` (deprecated)
 
 The application explicitly disallows caching the following queries.
 
-*  `cart`
-*  `customer`
-*  `customerDownloadableProducts`
-*  `customerOrders`
-*  `customerPaymentTokens`
-*  `wishlist` (deprecated)
+* `cart`
+* `country` (allowed in 2.4.7-beta)
+* `countries` (allowed in 2.4.7-beta)
+* `currency` (allowed in 2.4.7-beta)
+* `customAttributeMetadata` (allowed in 2.4.7-beta)
+* `customer`
+* `customerDownloadableProducts`
+* `customerOrders`
+* `customerPaymentTokens`
+* `storeConfig` (allowed in 2.4.7-beta)
+* `wishlist` (deprecated)
 
 [Define the GraphQL schema for a module](../develop/index.md) describes the syntax of a valid query.
 

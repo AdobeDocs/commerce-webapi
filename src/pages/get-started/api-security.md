@@ -9,9 +9,13 @@ This topic describes best practices for [API security](https://owasp.org/www-pro
 
 ## Rate limiting for payment information endpoint and mutation
 
+import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
+
+<BetaNote />
+
 In a carding attack, an attacker tries to determine which credit card numbers are valid, usually in batches of thousands. Attackers can use similar techniques to brute force missing details, like the expiration date. Adobe Commerce merchants can be targeted by this attack type through their shops and integrations with 3rd-party payment gateways.
 
-As of Adobe Commerce 2.4.7, you can configure rate limiting for the payment information transmitted using REST and GraphQL. This added layer of protection allows merchants to prevent and decrease the volume of carding attacks that test many credit card numbers at once.
+As of Adobe Commerce 2.4.7-beta, you can configure rate limiting for the payment information transmitted using REST and GraphQL. This added layer of protection allows merchants to prevent and decrease the volume of carding attacks that test many credit card numbers at once.
 
 Rate limiting is disabled by default, but you can enable and configure this feature from either the CLI or the Admin. The threshold can be configured by interval and set independently for customers and guests.
 
