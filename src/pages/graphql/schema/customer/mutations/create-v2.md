@@ -121,7 +121,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `allow_remote_shopping_assistance` | Boolean | Indicates whether the customer has enabled remote shopping assistance
 `date_of_birth` | String | The customer's date of birth. In keeping with current security and privacy best practices, be sure you are aware of any potential legal and security risks associated with the storage of customers' full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
-`custom_attributes` | [AttributeValueInput!] | The customer's custom attributes (2.4.7-beta1 only)
+`custom_attributes` | [AttributeValueInput!] | The customer's custom attributes (2.4.7-beta only)
 `dob` | String | Deprecated. Use `date_of_birth` instead. The customer's date of birth
 `email` | String! | The customer's email address
 `firstname` | String! | The customer's first name

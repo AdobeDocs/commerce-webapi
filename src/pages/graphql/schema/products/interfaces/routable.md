@@ -15,7 +15,7 @@ Some entities are "routable", meaning that they have URLs and can serve as the m
 *  [GroupedProduct](types/grouped.md)
 *  [SimpleProduct](types/simple.md)
 *  [VirtualProduct](types/virtual.md)
-*  [RoutableUrl](#routable-url) (2.4.7-beta1 only)
+*  [RoutableUrl](#routable-url) (2.4.7-beta only)
 
 ## RoutableInterface attributes
 
