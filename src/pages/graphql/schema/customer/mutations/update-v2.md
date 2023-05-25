@@ -120,9 +120,9 @@ Attribute |  Data Type | Description
 
 The `AttributeValueInput` object contains the following attributes:
 
-import RoutableInterface from '/src/pages/_includes/graphql/routable-interface.md'
+import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
 
-<RoutableInterface />
+<BetaNote />
 
 Attribute |  Data Type | Description
 --- | --- | ---

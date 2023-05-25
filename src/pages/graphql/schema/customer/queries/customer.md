@@ -1166,9 +1166,9 @@ import CompareListOutput from '/src/pages/_includes/graphql/compare-list-output.
 
 ### AttributeValueInterface attributes
 
-import RoutableInterface from '/src/pages/_includes/graphql/routable-interface.md'
+import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
 
-<RoutableInterface />
+<BetaNote />
 
 The `AttributeValueInterface` contains the following attributes:
 
