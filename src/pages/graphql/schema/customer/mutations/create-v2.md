@@ -14,154 +14,19 @@ The `createCustomerV2` mutation supersedes the `createCustomer` mutation as the 
 
 ## Example usage
 
-<!-- <TabsBlock orientation="vertical" slots="heading, content" /> -->
+<TabsBlock orientation="vertical" slots="heading, content" repeat="2" theme="light"/>
 
 ### 2.4.6
 
-The following call creates a new customer.
+import Example246 from '/src/pages/_includes/graphql/create-v2-246-example.md'
 
-<CodeBlock slots="heading, code" repeat="2" languages="GRAPHQL,JSON"/>
-
-#### Request
-
-```graphql
-mutation {
-  createCustomerV2(
-    input: {
-      firstname: "Bob"
-      lastname: "Loblaw"
-      email: "bobloblaw@example.com"
-      password: "b0bl0bl@w"
-      is_subscribed: true
-    }
-  ) {
-    customer {
-      firstname
-      lastname
-      email
-      is_subscribed
-    }
-  }
-}
-```
-
-#### Response
-
-```json
-{
-  "data": {
-    "createCustomer": {
-      "customer": {
-        "firstname": "Bob",
-        "lastname": "Loblaw",
-        "email": "bobloblaw@example.com",
-        "is_subscribed": true
-      }
-    }
-  }
-}
-```
-
-<!-- <TabsBlock orientation="vertical" slots="heading, content" /> -->
+<Example246 />
 
 ### 2.4.7-beta
 
-The following call creates a new customer, assigning values for custom attributes.
+import Example247 from '/src/pages/_includes/graphql/create-v2-247beta-example.md'
 
-The merchant has previously created the custom attributes `alternative_email` and `studies` for customers.
-
-<CodeBlock slots="heading, code" repeat="2" languages="GRAPHQL,JSON"/>
-
-#### Request
-
-```graphql
-mutation {
-  createCustomerV2(
-    input: {
-      firstname: "Bob"
-      lastname: "Loblaw"
-      email: "bobloblaw@example.com"
-      password: "b0bl0bl@w"
-      is_subscribed: true
-      custom_attributes: [
-        {
-          attribute_code: "alternative_email"
-          value: "abc@example.com"
-        },
-        {
-          attribute_code: "studies"
-          value: "501,502"
-          selected_options: [
-            {
-              uid: "NTEw"
-              value: "501"
-            },
-            {
-              uid: "NTEx"
-              value: "502"
-            }
-          ]
-        }
-      ]
-    }
-  ) {
-    customer {
-      firstname
-      lastname
-      email
-      is_subscribed
-      custom_attributes {
-        code
-        ... on AttributeValue {
-          value
-        }
-        ... on AttributeSelectedOptions {
-          selected_options {
-            label
-            value
-          }
-        }
-      }
-    }
-  }
-}
-```
-
-#### Response
-
-```json
-{
-  "data": {
-    "createCustomer": {
-      "customer": {
-        "firstname": "Bob",
-        "lastname": "Loblaw",
-        "email": "bobloblaw@example.com",
-        "is_subscribed": true,
-        "custom_attributes": [
-          {
-            "code": "alternative_email",
-            "value": "abc@example.com"
-          },
-          {
-            "code": "studies",
-            "selected_options": [
-              {
-                "label": "BSc",
-                "value": "501"
-              },
-              {
-                "label": "MBA",
-                "value": "502"
-              }
-            ]
-          }
-        ]
-      }
-    }
-  }
-}
-```
+<Example247 />
 
 ## Input attributes
 
