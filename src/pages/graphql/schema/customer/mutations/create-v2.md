@@ -14,15 +14,65 @@ The `createCustomerV2` mutation supersedes the `createCustomer` mutation as the 
 
 ## Example usage
 
-import BetaExample from '/src/pages/_includes/graphql/notes/beta-example.md'
+<!-- <TabsBlock orientation="vertical" slots="heading, content" /> -->
 
-<BetaExample />
+### 2.4.6
+
+The following call creates a new customer.
+
+<CodeBlock slots="heading, code" repeat="2" languages="GRAPHQL,JSON"/>
+
+#### Request
+
+```graphql
+mutation {
+  createCustomerV2(
+    input: {
+      firstname: "Bob"
+      lastname: "Loblaw"
+      email: "bobloblaw@example.com"
+      password: "b0bl0bl@w"
+      is_subscribed: true
+    }
+  ) {
+    customer {
+      firstname
+      lastname
+      email
+      is_subscribed
+    }
+  }
+}
+```
+
+#### Response
+
+```json
+{
+  "data": {
+    "createCustomer": {
+      "customer": {
+        "firstname": "Bob",
+        "lastname": "Loblaw",
+        "email": "bobloblaw@example.com",
+        "is_subscribed": true
+      }
+    }
+  }
+}
+```
+
+<!-- <TabsBlock orientation="vertical" slots="heading, content" /> -->
+
+### 2.4.7-beta
 
 The following call creates a new customer, assigning values for custom attributes.
 
 The merchant has previously created the custom attributes `alternative_email` and `studies` for customers.
 
-**Request:**
+<CodeBlock slots="heading, code" repeat="2" languages="GRAPHQL,JSON"/>
+
+#### Request
 
 ```graphql
 mutation {
@@ -77,7 +127,7 @@ mutation {
 }
 ```
 
-**Response:**
+#### Response
 
 ```json
 {
