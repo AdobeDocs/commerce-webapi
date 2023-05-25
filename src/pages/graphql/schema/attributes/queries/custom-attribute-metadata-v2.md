@@ -2,6 +2,10 @@
 title: customAttributeMetadataV2 query | Commerce Web APIs
 ---
 
+import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
+
+<BetaNote />
+
 # customAttributeMetadataV2 query
 
 The `customAttributeMetadataV2` query retrieves metadata for the specified `entity_type` and `attribute_code` pairs.

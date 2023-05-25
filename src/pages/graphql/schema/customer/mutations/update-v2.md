@@ -16,6 +16,10 @@ To return or modify information about a customer, we recommend you use customer 
 
 ## Example usage
 
+import BetaExample from '/src/pages/_includes/graphql/notes/beta-example.md'
+
+<BetaExample />
+
 The following call updates the first name, newsletter subscription status, and custom attribute values for a specific customer. The merchant has previously created the `random_attribute` and `studies` attributes for customer addresses.
 
 **Request:**
@@ -101,7 +105,7 @@ The following table lists the attributes you can use as input for the `updateCus
 Attribute |  Data Type | Description
 --- | --- | ---
 `allow_remote_shopping_assistance` | Boolean | Indicates whether the customer has enabled remote shopping assistance
-`custom_attributes` | [AttributeValueInput!] | The customer's custom attributes
+`custom_attributes` | [AttributeValueInput!] | The customer's custom attributes (2.4.7-beta1 only)
 `date_of_birth` | String | The customer's date of birth. In keeping with current security and privacy best practices, be sure you are aware of any potential legal and security risks associated with the storage of customers' full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
 `dob` | String | Deprecated. Use `date_of_birth` instead. The customer's date of birth
 `firstname` | String | The customer's first name
@@ -115,6 +119,10 @@ Attribute |  Data Type | Description
 `taxvat` | String | The customer's Tax/VAT number (for corporate customers)
 
 The `AttributeValueInput` object contains the following attributes:
+
+import RoutableInterface from '/src/pages/_includes/graphql/routable-interface.md'
+
+<RoutableInterface />
 
 Attribute |  Data Type | Description
 --- | --- | ---

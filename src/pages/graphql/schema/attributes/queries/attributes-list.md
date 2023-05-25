@@ -2,6 +2,10 @@
 title: attributesList query | Commerce Web APIs
 ---
 
+import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
+
+<BetaNote />
+
 # attributesList query
 
 The `attributesList` query retrieves a list of attributes metadata for a given `entity_type`.

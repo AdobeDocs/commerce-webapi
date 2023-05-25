@@ -14,6 +14,10 @@ To return or modify information about a customer, we recommend you use customer 
 
 ## Example usage
 
+import BetaExample from '/src/pages/_includes/graphql/notes/beta-example.md'
+
+<BetaExample />
+
 The following call creates an address for the specified customer, assigning values for custom attributes.
 
 The merchant has previously created the custom attributes `station` and `services` for customer addresses.
