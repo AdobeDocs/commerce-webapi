@@ -2,6 +2,10 @@
 title: createCustomerV2 mutation | Commerce Web APIs
 ---
 
+import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
+import Example246 from '/src/pages/_includes/graphql/examples/create-v2-246.md'
+import Example247 from '/src/pages/_includes/graphql/examples/create-v2-247beta.md'
+
 # createCustomerV2 mutation
 
 The `createCustomerV2` mutation creates a customer account. Use the [`createCustomerAddress` mutation](create-address.md) to complete the customer profile and define billing and shipping addresses.
@@ -18,13 +22,9 @@ The `createCustomerV2` mutation supersedes the `createCustomer` mutation as the 
 
 ### 2.4.6
 
-import Example246 from '/src/pages/_includes/graphql/create-v2-246-example.md'
-
 <Example246 />
 
 ### 2.4.7-beta
-
-import Example247 from '/src/pages/_includes/graphql/create-v2-247beta-example.md'
 
 <Example247 />
 
@@ -51,8 +51,6 @@ Attribute |  Data Type | Description
 
 The `AttributeValueInput` object contains the following attributes:
 
-import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
-
 <BetaNote />
 
 Attribute |  Data Type | Description
@@ -73,8 +71,6 @@ Attribute |  Data Type | Description
 The `CustomerOutput` object contains the `Customer` object.
 
 The following table lists the top-level attributes of the `customer` object. See the [`customer` query](../../customer/queries/customer.md) for complete details about this object.
-
-import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
 
 <Customer />
 
