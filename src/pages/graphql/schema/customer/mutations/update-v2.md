@@ -16,7 +16,11 @@ To return or modify information about a customer, we recommend you use customer 
 
 ## Example usage
 
-The following call updates the first name and the newsletter subscription status for a specific customer.
+import BetaExample from '/src/pages/_includes/graphql/notes/beta-example.md'
+
+<BetaExample />
+
+The following call updates the first name, newsletter subscription status, and custom attribute values for a specific customer. The merchant has previously created the `random_attribute` and `studies` attributes for customer addresses.
 
 **Request:**
 
@@ -26,11 +30,39 @@ mutation {
     input: {
       firstname: "Robert"
       is_subscribed: false
+      custom_attributes: [
+        {
+          attribute_code: "random_attribute"
+          value: "abc123"
+        },
+        {
+          attribute_code: "studies"
+          value: "502"
+          selected_options: [
+            {
+              uid: "NTEx"
+              value: "502"
+            }
+          ]
+        }
+      ]
     }
   ) {
     customer {
       firstname
       is_subscribed
+      custom_attributes {
+        code
+        ... on AttributeValue {
+          value
+        }
+        ... on AttributeSelectedOptions {
+          selected_options {
+            label
+            value
+          }
+        }
+      }
     }
   }
 }
@@ -44,7 +76,22 @@ mutation {
     "updateCustomerV2": {
       "customer": {
         "firstname": "Robert",
-        "is_subscribed": false
+        "is_subscribed": false,
+        "custom_attributes": [
+          {
+            "code": "random_attribute",
+            "value": "abc123"
+          },
+          {
+            "code": "studies",
+            "selected_options": [
+              {
+                "label": "MBA",
+                "value": "502"
+              }
+            ]
+          }
+        ]
       }
     }
   }
@@ -58,6 +105,7 @@ The following table lists the attributes you can use as input for the `updateCus
 Attribute |  Data Type | Description
 --- | --- | ---
 `allow_remote_shopping_assistance` | Boolean | Indicates whether the customer has enabled remote shopping assistance
+`custom_attributes` | [AttributeValueInput!] | The customer's custom attributes (2.4.7-beta only)
 `date_of_birth` | String | The customer's date of birth. In keeping with current security and privacy best practices, be sure you are aware of any potential legal and security risks associated with the storage of customers' full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
 `dob` | String | Deprecated. Use `date_of_birth` instead. The customer's date of birth
 `firstname` | String | The customer's first name
@@ -69,6 +117,25 @@ Attribute |  Data Type | Description
 `prefix` | String | An honorific, such as Dr., Mr., or Mrs.
 `suffix` | String | A value such as Sr., Jr., or III
 `taxvat` | String | The customer's Tax/VAT number (for corporate customers)
+
+The `AttributeValueInput` object contains the following attributes:
+
+import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
+
+<BetaNote />
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`attribute_code` | String! | The code of the attribute
+`selected_options` | [AttributeInputSelectedOption!] | An array containing selected options for a select or multiselect attribute
+`value` | String | The value assigned to the attribute
+
+The `AttributeInputSelectedOption` specifies selected option for dropdown or multiselect attribute value.
+This object contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`value` | String! | The attribute option value
 
 ## Output attributes
 

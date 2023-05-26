@@ -76,6 +76,244 @@ The following call returns information about the logged-in customer. Provide the
 }
 ```
 
+### Retrieve custom attributes metadata from a customer
+
+import BetaExample1 from '/src/pages/_includes/graphql/notes/beta-example.md'
+
+<BetaExample1 />
+
+The following call returns custom attributes for the logged-in customer. Provide the customer's token in the header section of the query.
+
+**Request:**
+
+```graphql
+{
+  customer {
+    firstname
+    lastname
+    suffix
+    email
+    custom_attributes {
+      code
+      ... on AttributeValue {
+        value
+      }
+      ... on AttributeSelectedOptions {
+        selected_options {
+          label
+          value
+        }
+      }
+    }
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "customer": {
+      "firstname": "John",
+      "lastname": "Doe",
+      "suffix": null,
+      "email": "jdoe@example.com",
+      "custom_attributes": [
+        {
+          "code": "reward_update_notification",
+          "value": "0"
+        },
+        {
+          "code": "studies",
+          "selected_options": [
+            {
+              "label": "BSc",
+              "value": "501"
+            },
+            {
+              "label": "MBA",
+              "value": "502"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
+
+### Retrieve custom attributes metadata from a customer address
+
+import BetaExample2 from '/src/pages/_includes/graphql/notes/beta-example.md'
+
+<BetaExample2 />
+
+The following call returns the customer address custom attributes for the logged-in customer. Provide the customer's token in the header section of the query.
+
+**Request:**
+
+```graphql
+{
+  customer {
+    email
+    addresses {
+      city
+      custom_attributesV2 {
+        code
+        ... on AttributeValue {
+            value
+        }
+        ... on AttributeSelectedOptions {
+          selected_options {
+            label
+            value
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "customer": {
+      "email": "jdoe@example.com",
+      "addresses": [
+        {
+          "city": "Marseille",
+          "custom_attributesV2": [
+            {
+              "code": "neighbourhood",
+              "value": "St Barnabé"
+            },
+            {
+              "code": "services",
+              "selected_options": [
+                {
+                  "label": "hospital",
+                  "value": "507"
+                },
+                {
+                  "label": "police",
+                  "value": "508"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
+
+### Retrieve custom attributes metadata filtered by `uid`
+
+import BetaExample3 from '/src/pages/_includes/graphql/notes/beta-example.md'
+
+<BetaExample3 />
+
+The following call returns the customer and customer address custom attributes for the logged-in customer filtered by `uid`. Provide the customer's token in the header section of the query.
+
+**Request:**
+
+```graphql
+{
+  customer {
+    email
+    custom_attributes(uids: ["Y3VzdG9tZXIvc3R1ZGllcw=="]) {
+      uid
+      code
+      ... on AttributeValue {
+        value
+      }
+      ... on AttributeSelectedOptions {
+        selected_options {
+          uid
+          label
+          value
+        }
+      }
+    }
+    addresses {
+      city
+      custom_attributesV2(uids: ["Y3VzdG9tZXJfYWRkcmVzcy9zZXJ2aWNlcw=="]) {
+        uid
+        code
+        ... on AttributeValue {
+            value
+        }
+        ... on AttributeSelectedOptions {
+          selected_options {
+            uid
+            label
+            value
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "customer": {
+      "email": "jdoe@example.com",
+      "custom_attributes": [
+        {
+          "uid": "Y3VzdG9tZXIvc3R1ZGllcw==",
+          "code": "studies",
+          "selected_options": [
+            {
+              "uid": "NTEw",
+              "label": "BSc",
+              "value": "501"
+            },
+            {
+              "uid": "NTEx",
+              "label": "MBA",
+              "value": "502"
+            }
+          ]
+        }
+      ],
+      "addresses": [
+        {
+          "city": "Marseille",
+          "custom_attributesV2": [
+            {
+              "uid": "Y3VzdG9tZXJfYWRkcmVzcy9zZXJ2aWNlcw==",
+              "code": "services",
+              "selected_options": [
+                {
+                  "uid": "NTA3",
+                  "label": "hospital",
+                  "value": "507"
+                },
+                {
+                  "uid": "NTA4",
+                  "label": "police",
+                  "value": "508"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
+
 ### Retrieve a summary of the customer's order history
 
 The following example returns a summary of the logged-in customer's previous orders.
@@ -879,10 +1117,11 @@ The `customer` object can contain the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`addresses` | [CustomerAddress](#customeraddress-attributes)  | An array containing the customer's shipping and billing addresses
+`addresses` | [CustomerAddress](#customeraddress-attributes) | An array containing the customer's shipping and billing addresses
 `allow_remote_shopping_assistance` | Boolean! | Indicates whether the customer has enabled remote shopping assistance
 `compare_list` | [CompareList](#comparelist-attributes) | The contents of the customer's comparison list
 `created_at` | String | Timestamp indicating when the account was created
+`custom_attributes(uids: [ID!])` | [AttributeValueInterface](#attributevalueinterface-attributes) | Customer's custom attributes (2.4.7-beta only)
 `date_of_birth` | String | The customer's date of birth. In keeping with current security and privacy best practices, be sure you are aware of any potential legal and security risks associated with the storage of customers' full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
 `default_billing` | String | The ID assigned to the billing address
 `default_shipping` | String | The ID assigned to the shipping address
@@ -925,6 +1164,41 @@ import CompareListOutput from '/src/pages/_includes/graphql/compare-list-output.
 
 <CompareListOutput />
 
+### AttributeValueInterface attributes
+
+import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
+
+<BetaNote />
+
+The `AttributeValueInterface` contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`code` | String! | The attribute code
+`uid` | ID! | The unique ID of an attribute value
+
+Currently, `AttributeValueInterface` has two different implementations: `AttributeValue` and `AttributeSelectedOptions`.
+
+In addition to the attributes described for `AttributeValueInterface`, the `AttributeValue` contains the following:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`value` | String! | The attribute value
+
+The `AttributeSelectedOptions` object contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`selected_options` | [AttributeSelectedOptionInterface!]! | An array containing selected options for a select or multiselect attribute
+
+The `AttributeSelectedOptionInterface` contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`label` | String! | The attribute selected option label
+`uid` | ID! | The unique ID of an attribute selected option
+`value` | String! | The attribute selected option value
+
 ### CustomerAddress attributes
 
 The values assigned to attributes such as `firstname` and `lastname` in this object may be different from those defined in the `Customer` object.
@@ -937,7 +1211,8 @@ Attribute |  Data Type | Description
 `company` | String | The customer's company
 `country_code` | CountryCodeEnum | The customer's country
 `country_id` | String | Deprecated. Use `country_code` instead. The customer's country
-`custom_attributes` | [CustomerAddressAttribute](#customeraddressattribute-attributes) | Deprecated. Not applicable for GraphQL
+`custom_attributes` | [CustomerAddressAttribute](#customeraddressattribute-attributes) | Deprecated. Use `custom_attributesV2` instead
+`custom_attributesV2(uids: [ID!])` | [AttributeValueInterface](#attributevalueinterface-attributes) | Custom attributes assigned to the customer address (2.4.7-beta only)
 `customer_id` | Int | Deprecated. This attribute is not applicable for GraphQL. The ID assigned to the customer
 `default_billing` | Boolean | Indicates whether the address is the default billing address
 `default_shipping` | Boolean | Indicates whether the address is the default shipping address
