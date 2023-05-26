@@ -14,7 +14,7 @@ The `createCustomerV2` mutation supersedes the `createCustomer` mutation as the 
 
 ## Example usage
 
-<TabsBlock orientation="vertical" slots="heading, content" repeat="2" theme="light"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2" theme="light"/>
 
 ### 2.4.6
 
