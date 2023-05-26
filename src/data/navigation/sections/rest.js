@@ -136,6 +136,10 @@ module.exports = [
                             title: "Place a negotiable quote order",
                             path: "/rest/b2b/negotiable-order-workflow.md",
                         },
+                        {
+                            title: "Initiate a negotiable quote by seller",
+                            path: "/rest/b2b/negotiable-by-seller-workflow.md",
+                        },
                     ],
                 },
             ],

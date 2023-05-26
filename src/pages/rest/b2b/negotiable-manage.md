@@ -16,6 +16,7 @@ All negotiable quote calls require an admin authorization token.
 
 ```json
 POST /V1/negotiableQuote/request
+POST /V1/negotiableQuote/draft
 POST /V1/negotiableQuote/submitToCustomer
 POST /V1/negotiableQuote/decline
 POST /V1/negotiableQuote/pricesUpdated
@@ -91,6 +92,41 @@ Requesting a negotiable quote requires an admin authorization token.
 ```
 
 Commerce creates a negotiable quote in the `Created` state.
+
+### Create Draft negotiable quote
+
+Call to `POST /V1/negotiableQuote/draft` could be used to create an empty negotiable quote for specific buyer in the `Draft` state.
+Use the `PUT /V1/negotiableQuote/:quoteId` call to add quote items. See [Update a negotiable quote](negotiable-update.md) for more information.
+
+
+<InlineAlert variant="info" slots="text"/>
+
+Creating draft negotiable quote requires an admin authorization token.
+
+**Service Name:**
+
+`negotiableQuoteNegotiableQuoteDraftManagementV1`
+
+**Sample Usage:**
+
+`POST <host>/rest/<store_code>/V1/negotiableQuote/draft`
+
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
+
+```json
+{
+  "customerId": 3
+}
+```
+
+#### Response
+
+```json
+// `321`, An integer indicating the new quoteId
+```
+
 
 ### Submit a negotiable quote to a buyer
 
