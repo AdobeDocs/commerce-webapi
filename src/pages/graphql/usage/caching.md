@@ -2,6 +2,9 @@
 title: GraphQL caching | Commerce Web APIs
 ---
 
+import Queries246 from '/src/pages/_includes/graphql/cache/queries-246.md'
+import Queries247 from '/src/pages/_includes/graphql/cache/queries-247beta.md'
+
 # GraphQL caching
 
 Adobe Commerce and Magento Open Source can cache pages rendered from the results of certain GraphQL queries with [full-page caching](https://developer.adobe.com/commerce/php/development/cache/page/). Full-page caching improves response time and reduces the load on the server. Without caching, each page might need to run blocks of code and retrieve large amounts of information from the database. Only queries submitted with an HTTP GET operation can be cached. POST queries cannot be cached.
@@ -16,36 +19,15 @@ The definitions for some queries include cache tags. Full page caching uses thes
 
 GraphQL allows you to make multiple queries in a single call. If you specify any uncached query, the system bypasses the cache for all queries in the call.
 
-The application caches the following queries:
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2" theme="light"/>
 
-* `availableStores` (2.4.7-beta only)
-* `categories`
-* `category` (deprecated)
-* `categoryList`
-* `cmsBlocks`
-* `cmsPage`
-* `countries` (2.4.7-beta only)
-* `country` (2.4.7-beta only)
-* `currency` (2.4.7-beta only)
-* `customAttributeMetadata` (2.4.7-beta only)
-* `products`
-* `route`
-* `storeConfig` (2.4.7-beta only)
-* `urlResolver` (deprecated)
+### 2.4.6
 
-The application explicitly disallows caching the following queries.
+<Queries246 />
 
-* `cart`
-* `country` (allowed in 2.4.7-beta)
-* `countries` (allowed in 2.4.7-beta)
-* `currency` (allowed in 2.4.7-beta)
-* `customAttributeMetadata` (allowed in 2.4.7-beta)
-* `customer`
-* `customerDownloadableProducts`
-* `customerOrders`
-* `customerPaymentTokens`
-* `storeConfig` (allowed in 2.4.7-beta)
-* `wishlist` (deprecated)
+### 2.4.7-beta
+
+<Queries247 />
 
 [Define the GraphQL schema for a module](../develop/index.md) describes the syntax of a valid query.
 
