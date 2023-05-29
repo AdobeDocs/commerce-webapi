@@ -10,13 +10,15 @@ import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
 
 The `attributesList` query retrieves a list of attributes metadata for a given `entity_type`.
 
-The possible values for this attribute are populated by the modules introducing EAV entities, which currently are `CUSTOMER`, `CUSTOMER_ADDRESS` and `CATALOG_PRODUCT`.
+The possible values for this attribute are populated by the modules introducing EAV entities, which currently are `CUSTOMER`, `CUSTOMER_ADDRESS`, `CATALOG_PRODUCT` and `RMA_ITEM`.
 
 ## Syntax
 
 `{attributesList(entityType: AttributeEntityTypeEnum!): {AttributesMetadataOutput}}`
 
 ## Example usage
+
+### Attributes list for `customer`
 
 The following call returns the list of attributes metadata for a `customer`.
 
@@ -35,8 +37,7 @@ The following call returns the list of attributes metadata for a `customer`.
       message
     }
   }
-} 
-
+}
 ```
 
 **Response:**
@@ -80,6 +81,149 @@ The following call returns the list of attributes metadata for a `customer`.
           "uid": "Y3VzdG9tZXIvZGlzYWJsZV9hdXRvX2dyb3VwX2NoYW5nZQ==",
           "code": "disable_auto_group_change",
           "label": "Disable Automatic Group Change Based on VAT ID"
+        }
+      ],
+      "errors": []
+    }
+  }
+}
+```
+
+### Attributes list for `rma_item`
+
+The following call returns the list of attributes metadata for a `rma_item`.
+
+**Request:**
+
+```graphql
+{
+  attributesList(entityType: RMA_ITEM) {
+    items {
+      uid
+      code
+      label
+      default_value
+      frontend_input
+      is_unique
+      is_required
+      options {
+        is_default
+        uid
+        label
+        value
+      }
+    }
+    errors {
+      type
+      message
+    }
+  }
+} 
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "attributesList": {
+      "items": [
+        {
+          "uid": "cm1hX2l0ZW0vcmVzb2x1dGlvbg==",
+          "code": "resolution",
+          "label": "Resolution",
+          "default_value": null,
+          "frontend_input": "SELECT",
+          "is_unique": false,
+          "is_required": true,
+          "options": [
+            {
+              "is_default": null,
+              "uid": "NA==",
+              "label": "Exchange",
+              "value": "4"
+            },
+            {
+              "is_default": null,
+              "uid": "NQ==",
+              "label": "Refund",
+              "value": "5"
+            },
+            {
+              "is_default": null,
+              "uid": "Ng==",
+              "label": "Store Credit",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "uid": "cm1hX2l0ZW0vY29uZGl0aW9u",
+          "code": "condition",
+          "label": "Item Condition",
+          "default_value": null,
+          "frontend_input": "SELECT",
+          "is_unique": false,
+          "is_required": true,
+          "options": [
+            {
+              "is_default": null,
+              "uid": "Nw==",
+              "label": "Unopened",
+              "value": "7"
+            },
+            {
+              "is_default": null,
+              "uid": "OA==",
+              "label": "Opened",
+              "value": "8"
+            },
+            {
+              "is_default": null,
+              "uid": "OQ==",
+              "label": "Damaged",
+              "value": "9"
+            }
+          ]
+        },
+        {
+          "uid": "cm1hX2l0ZW0vcmVhc29u",
+          "code": "reason",
+          "label": "Reason to Return",
+          "default_value": null,
+          "frontend_input": "SELECT",
+          "is_unique": false,
+          "is_required": true,
+          "options": [
+            {
+              "is_default": null,
+              "uid": "MTA=",
+              "label": "Wrong Color",
+              "value": "10"
+            },
+            {
+              "is_default": null,
+              "uid": "MTE=",
+              "label": "Wrong Size",
+              "value": "11"
+            },
+            {
+              "is_default": null,
+              "uid": "MTI=",
+              "label": "Out of Service",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "uid": "cm1hX2l0ZW0vcmVhc29uX290aGVy",
+          "code": "reason_other",
+          "label": "Other",
+          "default_value": null,
+          "frontend_input": "TEXT",
+          "is_unique": false,
+          "is_required": true,
+          "options": []
         }
       ],
       "errors": []
