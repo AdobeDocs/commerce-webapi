@@ -24,17 +24,15 @@ This new query has several features that were not available in the deprecated qu
 
 ## Example usage
 
-### Retrieve EAV attribute metadata
+### Retrieve EAV attribute metadata of a `customer`
 
-The following call returns information about the `customer firstname` attribute metadata.
+The following call returns metadata information about the `firstname` attribute of a `customer`.
 
 **Request:**
 
 ```graphql
 {
-    customAttributeMetadataV2(
-        attributes: [{entity_type: "customer", attribute_code: "firstname"}]
-    ) {
+    customAttributeMetadataV2(attributes: [{entity_type: "customer", attribute_code: "firstname"}]) {
         items {
             uid
             code
@@ -75,6 +73,84 @@ The following call returns information about the `customer firstname` attribute 
           "default_value": null,
           "is_unique": false,
           "options": []
+        }
+      ],
+      "errors": []
+    }
+  }
+}
+```
+
+### Retrieve EAV attribute metadata of a `rma_item`
+
+The following call returns metadata information about the `resolution` attribute of a `rma_item`.
+
+**Request:**
+
+```graphql
+{
+  customAttributeMetadataV2(attributes: [{attribute_code: "resolution", entity_type: "rma_item"}]) {
+    items {
+      uid
+      code
+      default_value
+      label
+      entity_type
+      frontend_input
+      is_required
+      is_unique
+      options {
+        label
+        value
+      }
+      ... on ReturnItemAttributeMetadata {
+        input_filter
+        validate_rules {
+          name
+          value
+        }
+      }
+    }
+    errors {
+      type
+      message
+    }
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "customAttributeMetadataV2": {
+      "items": [
+        {
+          "uid": "cm1hX2l0ZW0vcmVzb2x1dGlvbg==",
+          "code": "resolution",
+          "default_value": null,
+          "label": "Resolution",
+          "entity_type": "RMA_ITEM",
+          "frontend_input": "SELECT",
+          "is_required": true,
+          "is_unique": false,
+          "options": [
+            {
+              "label": "Exchange",
+              "value": "4"
+            },
+            {
+              "label": "Refund",
+              "value": "5"
+            },
+            {
+              "label": "Store Credit",
+              "value": "6"
+            }
+          ],
+          "input_filter": "NONE",
+          "validate_rules": []
         }
       ],
       "errors": []
