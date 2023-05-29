@@ -24,15 +24,15 @@ This new query has several features that were not available in the deprecated qu
 
 ## Example usage
 
-### Retrieve EAV attribute metadata of a `customer`
+### Custom attribute metadata for a `customer` attribute
 
-The following call returns metadata information about the `firstname` attribute of a `customer`.
+The following call returns metadata information for the `firstname` attribute of a `customer`.
 
 **Request:**
 
 ```graphql
 {
-    customAttributeMetadataV2(attributes: [{entity_type: "customer", attribute_code: "firstname"}]) {
+    customAttributeMetadataV2(attributes: [{attribute_code: "firstname", entity_type: "customer"}]) {
         items {
             uid
             code
@@ -81,9 +81,9 @@ The following call returns metadata information about the `firstname` attribute 
 }
 ```
 
-### Retrieve EAV attribute metadata of a `rma_item`
+### Custom attribute metadata for a `rma_item` attribute
 
-The following call returns metadata information about the `resolution` attribute of a `rma_item`.
+The following call returns metadata information for the `resolution` attribute of a `rma_item`.
 
 **Request:**
 
