@@ -2,6 +2,17 @@
 title: customer query | Commerce Web APIs
 ---
 
+import BetaNote1 from '/src/pages/_includes/graphql/notes/beta.md'
+import BetaNote2 from '/src/pages/_includes/graphql/notes/beta.md'
+import BetaNote3 from '/src/pages/_includes/graphql/notes/beta.md'
+import BetaNote4 from '/src/pages/_includes/graphql/notes/beta.md'
+import CompareListOutput from '/src/pages/_includes/graphql/compare-list-output.md'
+import CustomerOrdersOutput from '/src/pages/_includes/graphql/customer-orders-output.md'
+import ProductReview from '/src/pages/_includes/graphql/product-review.md'
+import RequisitionList from '/src/pages/_includes/graphql/requisition-list.md'
+import Return from '/src/pages/_includes/graphql/return.md'
+import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
+
 # customer query
 
 The `customer` query returns information about the logged-in customer, store credit history and customer's wishlist.
@@ -78,9 +89,7 @@ The following call returns information about the logged-in customer. Provide the
 
 ### Retrieve custom attributes metadata from a customer
 
-import BetaExample1 from '/src/pages/_includes/graphql/notes/beta-example.md'
-
-<BetaExample1 />
+<BetaNote1 />
 
 The following call returns custom attributes for the logged-in customer. Provide the customer's token in the header section of the query.
 
@@ -145,9 +154,7 @@ The following call returns custom attributes for the logged-in customer. Provide
 
 ### Retrieve custom attributes metadata from a customer address
 
-import BetaExample2 from '/src/pages/_includes/graphql/notes/beta-example.md'
-
-<BetaExample2 />
+<BetaNote2 />
 
 The following call returns the customer address custom attributes for the logged-in customer. Provide the customer's token in the header section of the query.
 
@@ -1058,15 +1065,11 @@ Attribute |  Data Type | Description
 
 The `CompareList` object can contain the following attributes:
 
-import CompareListOutput from '/src/pages/_includes/graphql/compare-list-output.md'
-
 <CompareListOutput />
 
 ### AttributeValueInterface attributes
 
-import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
-
-<BetaNote />
+<BetaNote4 />
 
 The `AttributeValueInterface` contains the following attributes:
 
@@ -1150,13 +1153,9 @@ Attribute |  Data Type | Description
 
 ### orders input attributes
 
-import CustomerOrdersOutput from '/src/pages/_includes/graphql/customer-orders-output.md'
-
 <CustomerOrdersOutput />
 
 #### ProductReview object
-
-import ProductReview from '/src/pages/_includes/graphql/product-review.md'
 
 <ProductReview />
 
@@ -1170,8 +1169,6 @@ Attribute |  Data Type | Description
 `page_info` | [SearchResultPageInfo!](../../products/queries/products.md#searchresultpageinfo-attributes) | Metadata for pagination rendering
 
 ### Return attributes
-
-import Return from '/src/pages/_includes/graphql/return.md'
 
 <Return />
 
@@ -1222,8 +1219,6 @@ Attribute |  Data Type | Description
 
 ### Wishlist attributes
 
-import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
-
 <Wishlist />
 
 ## B2B output attributes
@@ -1240,8 +1235,6 @@ Attribute |  Data Type | Description
 `uids` | FilterEqualTypeInput | Filter requisition lists by one or more requisition list IDs
 
 ### RequisitionList attributes
-
-import RequisitionList from '/src/pages/_includes/graphql/requisition-list.md'
 
 <RequisitionList />
 
