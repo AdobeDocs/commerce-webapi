@@ -78,6 +78,10 @@ The following call returns information about the logged-in customer. Provide the
 
 ### Retrieve custom attributes metadata from a customer
 
+import BetaExample1 from '/src/pages/_includes/graphql/notes/beta-example.md'
+
+<BetaExample1 />
+
 The following call returns custom attributes for the logged-in customer. Provide the customer's token in the header section of the query.
 
 **Request:**
@@ -140,6 +144,10 @@ The following call returns custom attributes for the logged-in customer. Provide
 ```
 
 ### Retrieve custom attributes metadata from a customer address
+
+import BetaExample2 from '/src/pages/_includes/graphql/notes/beta-example.md'
+
+<BetaExample2 />
 
 The following call returns the customer address custom attributes for the logged-in customer. Provide the customer's token in the header section of the query.
 
@@ -205,6 +213,10 @@ The following call returns the customer address custom attributes for the logged
 ```
 
 ### Retrieve custom attributes metadata filtered by `uid`
+
+import BetaExample3 from '/src/pages/_includes/graphql/notes/beta-example.md'
+
+<BetaExample3 />
 
 The following call returns the customer and customer address custom attributes for the logged-in customer filtered by `uid`. Provide the customer's token in the header section of the query.
 
@@ -1109,7 +1121,7 @@ Attribute |  Data Type | Description
 `allow_remote_shopping_assistance` | Boolean! | Indicates whether the customer has enabled remote shopping assistance
 `compare_list` | [CompareList](#comparelist-attributes) | The contents of the customer's comparison list
 `created_at` | String | Timestamp indicating when the account was created
-`custom_attributes(uids: [ID!])` | [AttributeValueInterface](#attributevalueinterface-attributes) | Customer's custom attributes
+`custom_attributes(uids: [ID!])` | [AttributeValueInterface](#attributevalueinterface-attributes) | Customer's custom attributes (2.4.7-beta only)
 `date_of_birth` | String | The customer's date of birth. In keeping with current security and privacy best practices, be sure you are aware of any potential legal and security risks associated with the storage of customers' full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
 `default_billing` | String | The ID assigned to the billing address
 `default_shipping` | String | The ID assigned to the shipping address
@@ -1154,6 +1166,10 @@ import CompareListOutput from '/src/pages/_includes/graphql/compare-list-output.
 
 ### AttributeValueInterface attributes
 
+import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
+
+<BetaNote />
+
 The `AttributeValueInterface` contains the following attributes:
 
 Attribute |  Data Type | Description
@@ -1196,7 +1212,7 @@ Attribute |  Data Type | Description
 `country_code` | CountryCodeEnum | The customer's country
 `country_id` | String | Deprecated. Use `country_code` instead. The customer's country
 `custom_attributes` | [CustomerAddressAttribute](#customeraddressattribute-attributes) | Deprecated. Use `custom_attributesV2` instead
-`custom_attributesV2(uids: [ID!])` | [AttributeValueInterface](#attributevalueinterface-attributes) | Custom attributes assigned to the customer address
+`custom_attributesV2(uids: [ID!])` | [AttributeValueInterface](#attributevalueinterface-attributes) | Custom attributes assigned to the customer address (2.4.7-beta only)
 `customer_id` | Int | Deprecated. This attribute is not applicable for GraphQL. The ID assigned to the customer
 `default_billing` | Boolean | Indicates whether the address is the default billing address
 `default_shipping` | Boolean | Indicates whether the address is the default shipping address

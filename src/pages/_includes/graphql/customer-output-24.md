@@ -5,7 +5,7 @@ Attribute |  Data Type | Description
 `compare_list` | CompareList | The contents of the customer's comparison list
 `created_at` | String | Timestamp indicating when the account was created
 `custom_attributes(uids: [ID!])` | [AttributeValueInterface](#attributevalueinterface-attributes)| Custom attributes assigned to the customer address
-`date_of_birth` | String | The customer's date of birth. In keeping with current security and privacy best practices, be sure you are aware of any potential legal and security risks associated with the storage of customers’ full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
+`date_of_birth` | String | The customer's date of birth. In keeping with current security and privacy best practices, be sure you are aware of any potential legal and security risks associated with the storage of customers' full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
 `default_billing` | String | The ID assigned to the billing address
 `default_shipping` | String | The ID assigned to the shipping address
 `dob` | String | Deprecated. Use `date_of_birth` instead. The customer's date of birth
