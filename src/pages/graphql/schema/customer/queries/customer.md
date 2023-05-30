@@ -6,6 +6,7 @@ import BetaNote1 from '/src/pages/_includes/graphql/notes/beta.md'
 import BetaNote2 from '/src/pages/_includes/graphql/notes/beta.md'
 import BetaNote3 from '/src/pages/_includes/graphql/notes/beta.md'
 import BetaNote4 from '/src/pages/_includes/graphql/notes/beta.md'
+import BetaNote5 from '/src/pages/_includes/graphql/notes/beta.md'
 import CompareListOutput from '/src/pages/_includes/graphql/compare-list-output.md'
 import CustomerOrdersOutput from '/src/pages/_includes/graphql/customer-orders-output.md'
 import ProductReview from '/src/pages/_includes/graphql/product-review.md'
@@ -206,6 +207,106 @@ The following call returns the customer address custom attributes for the logged
                   "value": "507"
                 },
                 {
+                  "label": "police",
+                  "value": "508"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
+
+### Retrieve custom attributes metadata filtered by `uid`
+
+<BetaNote1 />
+
+The following call returns the customer and customer address custom attributes for the logged-in customer filtered by `uid`. Provide the customer's token in the header section of the query.
+
+**Request:**
+
+```graphql
+{
+  customer {
+    email
+    custom_attributes(uids: ["Y3VzdG9tZXIvc3R1ZGllcw=="]) {
+      uid
+      code
+      ... on AttributeValue {
+        value
+      }
+      ... on AttributeSelectedOptions {
+        selected_options {
+          uid
+          label
+          value
+        }
+      }
+    }
+    addresses {
+      city
+      custom_attributesV2(uids: ["Y3VzdG9tZXJfYWRkcmVzcy9zZXJ2aWNlcw=="]) {
+        uid
+        code
+        ... on AttributeValue {
+            value
+        }
+        ... on AttributeSelectedOptions {
+          selected_options {
+            uid
+            label
+            value
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "customer": {
+      "email": "jdoe@example.com",
+      "custom_attributes": [
+        {
+          "uid": "Y3VzdG9tZXIvc3R1ZGllcw==",
+          "code": "studies",
+          "selected_options": [
+            {
+              "uid": "NTEw",
+              "label": "BSc",
+              "value": "501"
+            },
+            {
+              "uid": "NTEx",
+              "label": "MBA",
+              "value": "502"
+            }
+          ]
+        }
+      ],
+      "addresses": [
+        {
+          "city": "Marseille",
+          "custom_attributesV2": [
+            {
+              "uid": "Y3VzdG9tZXJfYWRkcmVzcy9zZXJ2aWNlcw==",
+              "code": "services",
+              "selected_options": [
+                {
+                  "uid": "NTA3",
+                  "label": "hospital",
+                  "value": "507"
+                },
+                {
+                  "uid": "NTA4",
                   "label": "police",
                   "value": "508"
                 }
