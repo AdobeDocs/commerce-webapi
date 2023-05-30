@@ -219,106 +219,6 @@ The following call returns the customer address custom attributes for the logged
 }
 ```
 
-### Retrieve custom attributes metadata filtered by `uid`
-
-<BetaNote3 />
-
-The following call returns the customer and customer address custom attributes for the logged-in customer filtered by `uid`. Provide the customer's token in the header section of the query.
-
-**Request:**
-
-```graphql
-{
-  customer {
-    email
-    custom_attributes(uids: ["Y3VzdG9tZXIvc3R1ZGllcw=="]) {
-      uid
-      code
-      ... on AttributeValue {
-        value
-      }
-      ... on AttributeSelectedOptions {
-        selected_options {
-          uid
-          label
-          value
-        }
-      }
-    }
-    addresses {
-      city
-      custom_attributesV2(uids: ["Y3VzdG9tZXJfYWRkcmVzcy9zZXJ2aWNlcw=="]) {
-        uid
-        code
-        ... on AttributeValue {
-            value
-        }
-        ... on AttributeSelectedOptions {
-          selected_options {
-            uid
-            label
-            value
-          }
-        }
-      }
-    }
-  }
-}
-```
-
-**Response:**
-
-```json
-{
-  "data": {
-    "customer": {
-      "email": "jdoe@example.com",
-      "custom_attributes": [
-        {
-          "uid": "Y3VzdG9tZXIvc3R1ZGllcw==",
-          "code": "studies",
-          "selected_options": [
-            {
-              "uid": "NTEw",
-              "label": "BSc",
-              "value": "501"
-            },
-            {
-              "uid": "NTEx",
-              "label": "MBA",
-              "value": "502"
-            }
-          ]
-        }
-      ],
-      "addresses": [
-        {
-          "city": "Marseille",
-          "custom_attributesV2": [
-            {
-              "uid": "Y3VzdG9tZXJfYWRkcmVzcy9zZXJ2aWNlcw==",
-              "code": "services",
-              "selected_options": [
-                {
-                  "uid": "NTA3",
-                  "label": "hospital",
-                  "value": "507"
-                },
-                {
-                  "uid": "NTA4",
-                  "label": "police",
-                  "value": "508"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  }
-}
-```
-
 ### Retrieve a summary of the customer's order history
 
 The following example returns a summary of the logged-in customer's previous orders.
@@ -1126,7 +1026,7 @@ Attribute |  Data Type | Description
 `allow_remote_shopping_assistance` | Boolean! | Indicates whether the customer has enabled remote shopping assistance
 `compare_list` | [CompareList](#comparelist-attributes) | The contents of the customer's comparison list
 `created_at` | String | Timestamp indicating when the account was created
-`custom_attributes(uids: [ID!])` | [AttributeValueInterface](#attributevalueinterface-attributes) | Customer's custom attributes (2.4.7-beta only)
+`custom_attributes` | [AttributeValueInterface](#attributevalueinterface-attributes) | Customer's custom attributes
 `date_of_birth` | String | The customer's date of birth. In keeping with current security and privacy best practices, be sure you are aware of any potential legal and security risks associated with the storage of customers' full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
 `default_billing` | String | The ID assigned to the billing address
 `default_shipping` | String | The ID assigned to the shipping address
@@ -1213,7 +1113,7 @@ Attribute |  Data Type | Description
 `country_code` | CountryCodeEnum | The customer's country
 `country_id` | String | Deprecated. Use `country_code` instead. The customer's country
 `custom_attributes` | [CustomerAddressAttribute](#customeraddressattribute-attributes) | Deprecated. Use `custom_attributesV2` instead
-`custom_attributesV2(uids: [ID!])` | [AttributeValueInterface](#attributevalueinterface-attributes) | Custom attributes assigned to the customer address (2.4.7-beta only)
+`custom_attributesV2` | [AttributeValueInterface](#attributevalueinterface-attributes) | Custom attributes assigned to the customer address
 `customer_id` | Int | Deprecated. This attribute is not applicable for GraphQL. The ID assigned to the customer
 `default_billing` | Boolean | Indicates whether the address is the default billing address
 `default_shipping` | Boolean | Indicates whether the address is the default shipping address
