@@ -2,6 +2,10 @@
 title: updateCustomerV2 mutation | Commerce Web APIs
 ---
 
+import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
+import Example246 from '/src/pages/_includes/graphql/examples/update-v2-246.md'
+import Example247 from '/src/pages/_includes/graphql/examples/update-v2-247beta.md'
+
 # updateCustomerV2 mutation
 
 The `updateCustomerV2` mutation updates the personal information in an existing customer account. Use the [`updateCustomerEmail` mutation](update-email.md) to update the customer's email address.
@@ -16,87 +20,15 @@ To return or modify information about a customer, we recommend you use customer 
 
 ## Example usage
 
-import BetaExample from '/src/pages/_includes/graphql/notes/beta-example.md'
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2" theme="light"/>
 
-<BetaExample />
+### 2.4.6
 
-The following call updates the first name, newsletter subscription status, and custom attribute values for a specific customer. The merchant has previously created the `random_attribute` and `studies` attributes for customer addresses.
+<Example246 />
 
-**Request:**
+### 2.4.7-beta
 
-```graphql
-mutation {
-  updateCustomerV2(
-    input: {
-      firstname: "Robert"
-      is_subscribed: false
-      custom_attributes: [
-        {
-          attribute_code: "random_attribute"
-          value: "abc123"
-        },
-        {
-          attribute_code: "studies"
-          value: "502"
-          selected_options: [
-            {
-              uid: "NTEx"
-              value: "502"
-            }
-          ]
-        }
-      ]
-    }
-  ) {
-    customer {
-      firstname
-      is_subscribed
-      custom_attributes {
-        code
-        ... on AttributeValue {
-          value
-        }
-        ... on AttributeSelectedOptions {
-          selected_options {
-            label
-            value
-          }
-        }
-      }
-    }
-  }
-}
-```
-
-**Response:**
-
-```json
-{
-  "data": {
-    "updateCustomerV2": {
-      "customer": {
-        "firstname": "Robert",
-        "is_subscribed": false,
-        "custom_attributes": [
-          {
-            "code": "random_attribute",
-            "value": "abc123"
-          },
-          {
-            "code": "studies",
-            "selected_options": [
-              {
-                "label": "MBA",
-                "value": "502"
-              }
-            ]
-          }
-        ]
-      }
-    }
-  }
-}
-```
+<Example247 />
 
 ## Input attributes
 
@@ -142,8 +74,6 @@ Attribute |  Data Type | Description
 The `CustomerOutput` object contains the `Customer` object.
 
 The following table lists the top-level attributes of the `customer` object. See the [`customer` query](../../customer/queries/customer.md) for complete details about this object.
-
-import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
 
 <Customer />
 

@@ -2,6 +2,10 @@
 title: createCustomerV2 mutation | Commerce Web APIs
 ---
 
+import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
+import Example246 from '/src/pages/_includes/graphql/examples/create-v2-246.md'
+import Example247 from '/src/pages/_includes/graphql/examples/create-v2-247beta.md'
+
 # createCustomerV2 mutation
 
 The `createCustomerV2` mutation creates a customer account. Use the [`createCustomerAddress` mutation](create-address.md) to complete the customer profile and define billing and shipping addresses.
@@ -14,104 +18,15 @@ The `createCustomerV2` mutation supersedes the `createCustomer` mutation as the 
 
 ## Example usage
 
-import BetaExample from '/src/pages/_includes/graphql/notes/beta-example.md'
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2" theme="light"/>
 
-<BetaExample />
+### 2.4.6
 
-The following call creates a new customer, assigning values for custom attributes.
+<Example246 />
 
-The merchant has previously created the custom attributes `alternative_email` and `studies` for customers.
+### 2.4.7-beta
 
-**Request:**
-
-```graphql
-mutation {
-  createCustomerV2(
-    input: {
-      firstname: "Bob"
-      lastname: "Loblaw"
-      email: "bobloblaw@example.com"
-      password: "b0bl0bl@w"
-      is_subscribed: true
-      custom_attributes: [
-        {
-          attribute_code: "alternative_email"
-          value: "abc@example.com"
-        },
-        {
-          attribute_code: "studies"
-          value: "501,502"
-          selected_options: [
-            {
-              uid: "NTEw"
-              value: "501"
-            },
-            {
-              uid: "NTEx"
-              value: "502"
-            }
-          ]
-        }
-      ]
-    }
-  ) {
-    customer {
-      firstname
-      lastname
-      email
-      is_subscribed
-      custom_attributes {
-        code
-        ... on AttributeValue {
-          value
-        }
-        ... on AttributeSelectedOptions {
-          selected_options {
-            label
-            value
-          }
-        }
-      }
-    }
-  }
-}
-```
-
-**Response:**
-
-```json
-{
-  "data": {
-    "createCustomer": {
-      "customer": {
-        "firstname": "Bob",
-        "lastname": "Loblaw",
-        "email": "bobloblaw@example.com",
-        "is_subscribed": true,
-        "custom_attributes": [
-          {
-            "code": "alternative_email",
-            "value": "abc@example.com"
-          },
-          {
-            "code": "studies",
-            "selected_options": [
-              {
-                "label": "BSc",
-                "value": "501"
-              },
-              {
-                "label": "MBA",
-                "value": "502"
-              }
-            ]
-          }
-        ]
-      }
-    }
-  }
-}
-```
+<Example247 />
 
 ## Input attributes
 
@@ -136,8 +51,6 @@ Attribute |  Data Type | Description
 
 The `AttributeValueInput` object contains the following attributes:
 
-import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
-
 <BetaNote />
 
 Attribute |  Data Type | Description
@@ -158,8 +71,6 @@ Attribute |  Data Type | Description
 The `CustomerOutput` object contains the `Customer` object.
 
 The following table lists the top-level attributes of the `customer` object. See the [`customer` query](../../customer/queries/customer.md) for complete details about this object.
-
-import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
 
 <Customer />
 
