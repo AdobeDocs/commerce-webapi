@@ -4,6 +4,8 @@ description: Endpoints used to create a negotiable quote
 edition: ee
 ---
 
+import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
+
 # Manage negotiable quotes
 
 This topic describes the calls required to initiate a negotiable quote and to prepare it to be converted to an order.
@@ -94,6 +96,8 @@ Requesting a negotiable quote requires an admin authorization token.
 Commerce creates a negotiable quote in the `Created` state.
 
 ### Create draft quote for a buyer
+
+<BetaNote />
 
 The `POST /V1/negotiableQuote/draft` call creates an empty negotiable quote for a specific buyer in the `Draft` state. After creating the draft quote, use the [`PUT /V1/negotiableQuote/:quoteId`](negotiable-update.md) call to add items the quote.
 
