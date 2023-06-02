@@ -22,6 +22,7 @@ This topic describes how a seller can use REST calls to create a negotiable quot
 ## Create a negotiable quote
 
 The following example shows the API request workflow for a seller to complete the following tasks:
+
 - Initiate a negotiable quote for a company buyer by creating an empty draft quote
 - Update the draft quote to add items and modify the quote name
 - Apply a discount to the quote
