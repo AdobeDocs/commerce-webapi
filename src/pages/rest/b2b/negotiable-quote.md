@@ -6,7 +6,7 @@ edition: ee
 
 # Integrate with the NegotiableQuote module
 
-Negotiable quotes are a mechanism that allows a company user (buyer) and a seller (admin user) to negotiate product and/or shipping prices before the company user places an order. Its functionality is available for companies only.
+Negotiable quotes are a mechanism that allows a company user (buyer) and a seller (admin user) to negotiate product and/or shipping prices before the company user places an order. The negotiable quote functionality is available for companies only.
 
 The negotiable quote lifecycle includes a number of stages, as shown in the following diagram.
 
@@ -38,7 +38,7 @@ The negotiated price set in the negotiable quote is exactly the price that will 
 
 Status | Description | Available actions to seller
 --- | -- | ---
-Draft | The seller has created an empty quote. Quote is not visible for buyer. | View, submit, save as draft. <br/><br/>Edit name, the expiration date, item quantity, add/remove product items, enter a proposed price, add comments.
+Draft | The seller has created an empty quote that is not visible to the buyer. | View, submit, save as draft. <br/><br/>Edit the name, expiration date, and item quantity, add or remove product items, enter a proposed price, add comments.
 New | The buyer submitted the quote, but the seller has not opened it yet. The buyer can edit the quote. <br/><br/>The system creates a new quote record with its own ID. | View
 Open | The seller has opened the submitted quote and is reviewing/modifying it. The seller can edit the quote, but the buyer cannot. | View, submit, decline, save as draft. <br/><br/>Edit the expiration date, item quantity, add/remove product items, enter a proposed price, add shipping method and shipping price, add comments.
 Submitted | The seller has reviewed the quote and has sent it back to buyer. The seller cannot edit the quote. | View

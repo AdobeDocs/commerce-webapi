@@ -7,9 +7,9 @@ edition: ee
 import * as Vars from '../../../data/vars.js';
 import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
 
-# Place a negotiable quote order initiated by seller
+# Initiate a negotiable quote order by seller
 
-This topic describes how REST calls can be used to create negotiable quote in Draft state, add products to quote, update quote data such as name, provide discount.
+This topic describes how a seller can use REST calls to create a negotiable quote for a specific buyer in Draft state, add products to the quote, update quote data such as name and expiration date, and apply a discount.
 
 <BetaNote />
 
@@ -24,15 +24,15 @@ This topic describes how REST calls can be used to create negotiable quote in Dr
 
 The following example shows the API request workflow for a seller to complete the following tasks:
 - Initiate a negotiable quote for a company buyer by creating an empty draft quote
-- Update the draft quote to add items and modify quote name
+- Update the draft quote to add items and modify the quote name
 - Apply a discount to the quote
 - Send the quote to the buyer for review
 
 ### Initiate a negotiable quote
 
-The seller initiates a negotiable quote.
+The seller initiates a negotiable quote by creating a quote for a company buyer.
 
-Initiating a negotiable quote by seller places it in the `draft_by_admin` state.
+The new quote is empty with a `draft_by_admin` system state. In the interface, the quote has a `Draft` status and is visible only to the seller.
 
 **Endpoint:**
 
@@ -63,7 +63,7 @@ Authorization Bearer <admin token>
 
 ### Update negotiable quote
 
-Seller can now add products and optionally change negotiable quote name
+The seller can now update the quote to add products, and optionally change the negotiable quote name.
 
 **Headers:**
 
@@ -111,7 +111,7 @@ Authorization Bearer <admin token>
 
 ### Adjust the negotiable quote
 
-The seller provides a 5% discount. The `negotiated_price_type` value of `1` indicates a percentage discount.
+The seller updates the quote to provide a 5% discount that applies to the entire quote. The `negotiated_price_type` value of `1` indicates a percentage discount.
 
 **Headers:**
 
@@ -150,7 +150,7 @@ Authorization Bearer <admin token>
 
 ### Recalculate prices
 
-Prices must be recalculated before sending quote to buyer.
+Before sending the quote to the buyer, the seller recalculates the prices to reflect the discount.
 
 **Headers:**
 
@@ -181,9 +181,9 @@ Authorization Bearer <admin token>
 
 ### Send the negotiable quote to the buyer
 
-Now that the seller has updated the quote, it must be sent to the buyer. The buyer will then be able to either accept the offer and begin the checkout process, or request further negotiations.
+After completing updates to the quote, the seller can submit the quote to the buyer for review, including any relevant comments. Then, the buyer can either accept the offer and begin the checkout process, or request further negotiations.
 
-This call places the quote in the `submitted_by_admin` state.
+This call places the quote in the `submitted_by_admin` state. In the interface, the buyer quote status is `Updated`. The seller quote status is `Submitted`. At this point, the quote is locked and can be updated only by the buyer.
 
 **Headers:**
 
