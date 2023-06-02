@@ -97,7 +97,7 @@ Commerce creates a negotiable quote in the `Created` state.
 
 The `POST /V1/negotiableQuote/draft` request creates an empty negotiable quote for a specific buyer in the `Draft` state. The quote is not visible to the buyer.
 
-After creating the draft quote, use the [`PUT /V1/negotiableQuote/:quoteId`](negotiable-update.md) request to add items the quote.
+After creating the draft quote, use the [`PUT /V1/negotiableQuote/:quoteId`](negotiable-update.md) request to modify the quote (add products, set discount, rename the quote, etc.).
 
 **Service Name:**
 
