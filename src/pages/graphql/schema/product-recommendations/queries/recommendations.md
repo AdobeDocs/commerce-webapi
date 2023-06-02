@@ -6,7 +6,7 @@ description: Describes how to construct and use the Product Recommendations reco
 
 # recommendations query
 
-The `recommendations` query returns information about product recommendation blocks and product data.
+The `recommendations` query returns information about product recommendation blocks for a given SKU.
 
 ## Syntax
 
@@ -22,14 +22,6 @@ type Query {
     ): Recommendations
 }
 ```
-
-## Required headers
-
-Specify the following HTTP headers to run this query.
-
-import Headers from '/src/pages/_includes/graphql/catalog-service/headers.md'
-
-<Headers />
 
 ## Example usage
 
@@ -170,15 +162,15 @@ Field | Data type | Description
 
 Field | Data type | Description
 --- | --- | ---
-`date` | DateTime | XXX
-`items` | [String]! | XXX
+`date` | DateTime | Date of purchase
+`items` | [String]! | Items purchased
 
 ### ViewHistory
 
 Field | Data type | Description
 --- | --- | ---
-`date` | DateTime | XXX
-`sku` | [String]! | CCC
+`date` | DateTime | Date the items were viewed
+`sku` | [String]! | SKU of items viewed
 
 ## Output fields
 
