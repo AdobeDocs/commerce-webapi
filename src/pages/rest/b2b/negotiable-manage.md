@@ -129,6 +129,7 @@ After creating the draft quote and adding details, the seller can submit the neg
 
 A quote must have one of the following system states:
 
+-  Draft 
 -  Created
 -  Processing by admin
 -  Submitted by customer
