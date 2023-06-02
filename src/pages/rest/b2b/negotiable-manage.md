@@ -120,7 +120,7 @@ After creating the draft quote, use the [`PUT /V1/negotiableQuote/:quoteId`](neg
 #### Response
 
 ```json
-// `321`, An integer indicating the new quoteId
+`321`  // An integer indicating the new quoteId
 ```
 
 ### Submit a negotiable quote to a buyer
