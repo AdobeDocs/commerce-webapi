@@ -19,7 +19,6 @@ This topic describes how a seller can use REST calls to create a negotiable quot
 -  You have [created a company](company-object.md).
 -  You have an integration or [admin authorization token](https://developer.adobe.com/commerce/webapi/rest/tutorials/orders/order-admin-token.html) to make calls on behalf of seller
 
-
 ## Create a negotiable quote
 
 The following example shows the API request workflow for a seller to complete the following tasks:
