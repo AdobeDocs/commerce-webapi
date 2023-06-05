@@ -127,7 +127,7 @@ After creating the draft quote, use the [`PUT /V1/negotiableQuote/:quoteId`](neg
 
 A negotiable quote can be submitted for review when it is in one of the following system states:
 
--  Draft 
+-  Draft
 -  Created
 -  Processing by admin
 -  Submitted by customer
