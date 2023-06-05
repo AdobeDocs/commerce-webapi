@@ -123,18 +123,16 @@ After creating the draft quote, use the [`PUT /V1/negotiableQuote/:quoteId`](neg
 `321`  // An integer indicating the new quoteId
 ```
 
-### Submit a negotiable quote to a buyer
+### Submit a negotiable quote
 
-After creating the draft quote and adding details, the seller can submit the negotiable quote to the buyer for review.
-
-A quote must have one of the following system states:
+A negotiable quote can be submitted for review when it is in one of the following system states:
 
 -  Draft 
 -  Created
 -  Processing by admin
 -  Submitted by customer
 
-When the negotiable quote is submitted to the buyer:
+When the negotiable quote is submitted for review:
 
 -  Commerce checks catalog prices (price per item), cart rules, and discounts then recalculates the prices and taxes. The shipping price and the negotiated price are not affected (if they are entered into the quote).
 -  Items that are no longer active or available for this buyer are removed from the quote and prices are recalculated.
