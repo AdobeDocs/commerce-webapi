@@ -1,6 +1,7 @@
 ---
 title: Product Recommendations | Commerce Web APIs
 description:
+edition: ee
 ---
 
 # Product Recommendations
