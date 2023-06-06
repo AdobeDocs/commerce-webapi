@@ -125,6 +125,10 @@ module.exports = [
                     path: "/rest/b2b/negotiable-quote.md",
                     pages: [
                         {
+                            title: "Manage negotiable quotes",
+                            path: "/rest/b2b/negotiable-manage.md",
+                        },
+                        {
                             title: "Update a negotiable quote",
                             path: "/rest/b2b/negotiable-update.md",
                         },
@@ -135,6 +139,10 @@ module.exports = [
                         {
                             title: "Place a negotiable quote order",
                             path: "/rest/b2b/negotiable-order-workflow.md",
+                        },
+                        {
+                            title: "Initiate a negotiable quote by seller",
+                            path: "/rest/b2b/negotiable-by-seller-workflow.md",
                         },
                     ],
                 },
