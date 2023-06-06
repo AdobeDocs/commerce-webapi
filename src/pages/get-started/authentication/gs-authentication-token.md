@@ -174,6 +174,18 @@ For most web API calls, you supply this token in the `Authorization` request hea
 
 A cron job that runs hourly removes all expired tokens.
 
+## MS Access tokens for web API calls
+
+Web API services and events need access tokens to provide authentication credentials to protected resources once the Commerce Admin is integrated with the IMS authentication workflow.
+
+### IMS access tokens and the admin_adobe_ims_webapi table
+
+Each IMS access token is defined by an `access_token_hash` entry in the `admin_adobe_ims_webapi` table. This table keeps a record of all validated access tokens. When a token is validated or invalidated, a record of its status is preserved here.
+
+### Access token expiration
+
+No dependency exists between IMS access token lifetime and Commerce session lifetime. Access token life is set by the Adobe IMS service and has a default value of 24 hours. Each access token's expiration time is saved in an `expires_in` value in the `admin_adobe_ims_webapi` table.
+
 ## Request a token
 
 A access token request contains three basic elements:
