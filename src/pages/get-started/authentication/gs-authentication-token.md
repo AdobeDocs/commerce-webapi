@@ -174,7 +174,7 @@ For most web API calls, you supply this token in the `Authorization` request hea
 
 A cron job that runs hourly removes all expired tokens.
 
-## IMS Access tokens for web API calls
+## IMS access tokens for web API calls
 
 Web API services and events need access tokens to provide authentication credentials to protected resources once the Commerce Admin is integrated with the IMS authentication workflow.
 
