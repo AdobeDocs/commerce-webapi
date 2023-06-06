@@ -192,7 +192,7 @@ Access tokens hold both user credentials and login session information. Once a u
 
 `token_last_check_time`. Identifies the current time and is used by the `\Magento\AdminAdobeIms\Plugin\BackendAuthSessionPlugin` plugin.
 
-adobe_access_token — Identifies  the `ACCESS_TOKEN` value received during authorization.
+`adobe_access_token` — Identifies  the `ACCESS_TOKEN` value received during authorization.
 
 The `\Magento\AdminAdobeIms\Plugin\BackendAuthSessionPlugin` plugin checks if the `token_last_check_time` was updated 10 min ago. If the `token_last_check_time` was checked ten minutes ago, then the authentication workflow makes an API call to IMS to validate the access token, and the session continues. If the access token is valid, then the `token_last_check_time` value is updated to the current time. If the token is not valid, the session is terminated.
 
