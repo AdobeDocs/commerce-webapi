@@ -179,7 +179,7 @@ The `Recommendations` object contains details about recommended products for a g
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`results` | [RecommendationUnit] | List of recommendation units for recommended products
+`results` | [RecommendationUnit] | Array of recommendation units for recommended products
 `totalResults` | Int | Total number of recommendation units for returned recommendation
 
 ### RecommendationUnit attributes
