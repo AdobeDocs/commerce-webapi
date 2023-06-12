@@ -4,7 +4,7 @@ edition: ee
 description: Describes how to construct and use the Product Recommendations recommendations query.
 ---
 
-import BetaNote from '/src/pages/_includes/graphql/notes/beta.md
+import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
 
 # recommendations query
 
