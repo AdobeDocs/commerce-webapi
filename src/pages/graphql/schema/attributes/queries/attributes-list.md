@@ -1,61 +1,42 @@
 ---
-title: customAttributeMetadataV2 query | Commerce Web APIs
+title: attributesList query | Commerce Web APIs
 ---
 
 import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
 
 <BetaNote />
 
-# customAttributeMetadataV2 query
+# attributesList query
 
-The `customAttributeMetadataV2` query retrieves metadata for the specified `entity_type` and `attribute_code` pairs.
+The `attributesList` query retrieves a list of attributes metadata for a given `entity_type`.
 
-This query replaces [`attributesMetadata`](attributes-metadata.md) and [`customAttributeMetadata`](custom-attribute-metadata.md).
-
-This new query has several features that were not available in the deprecated queries:
-
-- All entity types can extend this query.
-- The query provides access to all properties of EAV attributes.
-- `uid` values are now available.
+The possible values for this attribute are populated by the modules introducing EAV entities, which currently are `CUSTOMER`, `CUSTOMER_ADDRESS` and `CATALOG_PRODUCT`.
 
 ## Syntax
 
-`{customAttributeMetadataV2(attributes: [AttributeInput!]): {AttributesMetadataOutput!}}`
+`{attributesList(entityType: AttributeEntityTypeEnum!): {AttributesMetadataOutput}}`
 
 ## Example usage
 
-### Retrieve EAV attribute metadata
-
-The following call returns information about the `customer firstname` attribute metadata.
+The following call returns the list of attributes metadata for a `customer`.
 
 **Request:**
 
 ```graphql
 {
-    customAttributeMetadataV2(
-        attributes: [{entity_type: "customer", attribute_code: "firstname"}]
-    ) {
-        items {
-            uid
-            code
-            label
-            entity_type
-            frontend_input
-            is_required
-            default_value
-            is_unique
-            options {
-                uid
-                label
-                value
-            }
-        }
-        errors {
-            type
-            message
-        }
+  attributesList(entityType: CUSTOMER) {
+    items {
+      uid
+      code
+      label
+      # other attribute metadata
     }
-}
+    errors {
+      message
+    }
+  }
+} 
+
 ```
 
 **Response:**
@@ -63,18 +44,42 @@ The following call returns information about the `customer firstname` attribute 
 ```json
 {
   "data": {
-    "customAttributeMetadataV2": {
+    "attributesList": {
       "items": [
+        {
+          "uid": "Y3VzdG9tZXIvd2Vic2l0ZV9pZA==",
+          "code": "website_id",
+          "label": "Associate to Website"
+        },
+        {
+          "uid": "Y3VzdG9tZXIvY3JlYXRlZF9pbg==",
+          "code": "created_in",
+          "label": "Created From"
+        },
         {
           "uid": "Y3VzdG9tZXIvZmlyc3RuYW1l",
           "code": "firstname",
-          "label": "First Name",
-          "entity_type": "CUSTOMER",
-          "frontend_input": "TEXT",
-          "is_required": true,
-          "default_value": null,
-          "is_unique": false,
-          "options": []
+          "label": "First Name"
+        },
+        {
+          "uid": "Y3VzdG9tZXIvbGFzdG5hbWU=",
+          "code": "lastname",
+          "label": "Last Name"
+        },
+        {
+          "uid": "Y3VzdG9tZXIvZW1haWw=",
+          "code": "email",
+          "label": "Email"
+        },
+        {
+          "uid": "Y3VzdG9tZXIvZ3JvdXBfaWQ=",
+          "code": "group_id",
+          "label": "Group"
+        },
+        {
+          "uid": "Y3VzdG9tZXIvZGlzYWJsZV9hdXRvX2dyb3VwX2NoYW5nZQ==",
+          "code": "disable_auto_group_change",
+          "label": "Disable Automatic Group Change Based on VAT ID"
         }
       ],
       "errors": []
@@ -85,12 +90,11 @@ The following call returns information about the `customer firstname` attribute 
 
 ## Input attributes
 
-The `AttributeInput` object contains the following attributes:
+The `AttributeEntityTypeEnum` object contains the following attributes:
 
 Attribute | Data Type | Description
 --- |---| ---
-`attribute_code` | String | The unique identifier for an attribute code. This value should be in lowercase letters without spaces
-`entity_type` | String | The type of entity that defines the attribute
+`entityType` | String | The type of entity that defines the attribute.
 
 ## Output attributes
 
