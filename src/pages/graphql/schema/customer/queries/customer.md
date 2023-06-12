@@ -2,6 +2,17 @@
 title: customer query | Commerce Web APIs
 ---
 
+import BetaNote1 from '/src/pages/_includes/graphql/notes/beta.md'
+import BetaNote2 from '/src/pages/_includes/graphql/notes/beta.md'
+import BetaNote3 from '/src/pages/_includes/graphql/notes/beta.md'
+import BetaNote4 from '/src/pages/_includes/graphql/notes/beta.md'
+import CompareListOutput from '/src/pages/_includes/graphql/compare-list-output.md'
+import CustomerOrdersOutput from '/src/pages/_includes/graphql/customer-orders-output.md'
+import ProductReview from '/src/pages/_includes/graphql/product-review.md'
+import RequisitionList from '/src/pages/_includes/graphql/requisition-list.md'
+import Return from '/src/pages/_includes/graphql/return.md'
+import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
+
 # customer query
 
 The `customer` query returns information about the logged-in customer, store credit history and customer's wishlist.
@@ -69,6 +80,138 @@ The following call returns information about the logged-in customer. Provide the
          "postcode": "78758",
          "country_code": "US",
          "telephone": "512 555-1212"
+        }
+      ]
+    }
+  }
+}
+```
+
+### Retrieve custom attributes metadata from a customer
+
+<BetaNote1 />
+
+The following call returns custom attributes for the logged-in customer. Provide the customer's token in the header section of the query.
+
+**Request:**
+
+```graphql
+{
+  customer {
+    firstname
+    lastname
+    suffix
+    email
+    custom_attributes {
+      code
+      ... on AttributeValue {
+        value
+      }
+      ... on AttributeSelectedOptions {
+        selected_options {
+          label
+          value
+        }
+      }
+    }
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "customer": {
+      "firstname": "John",
+      "lastname": "Doe",
+      "suffix": null,
+      "email": "jdoe@example.com",
+      "custom_attributes": [
+        {
+          "code": "reward_update_notification",
+          "value": "0"
+        },
+        {
+          "code": "studies",
+          "selected_options": [
+            {
+              "label": "BSc",
+              "value": "501"
+            },
+            {
+              "label": "MBA",
+              "value": "502"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
+
+### Retrieve custom attributes metadata from a customer address
+
+<BetaNote2 />
+
+The following call returns the customer address custom attributes for the logged-in customer. Provide the customer's token in the header section of the query.
+
+**Request:**
+
+```graphql
+{
+  customer {
+    email
+    addresses {
+      city
+      custom_attributesV2 {
+        code
+        ... on AttributeValue {
+            value
+        }
+        ... on AttributeSelectedOptions {
+          selected_options {
+            label
+            value
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "customer": {
+      "email": "jdoe@example.com",
+      "addresses": [
+        {
+          "city": "Marseille",
+          "custom_attributesV2": [
+            {
+              "code": "neighbourhood",
+              "value": "St Barnabé"
+            },
+            {
+              "code": "services",
+              "selected_options": [
+                {
+                  "label": "hospital",
+                  "value": "507"
+                },
+                {
+                  "label": "police",
+                  "value": "508"
+                }
+              ]
+            }
+          ]
         }
       ]
     }
@@ -879,10 +1022,11 @@ The `customer` object can contain the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`addresses` | [CustomerAddress](#customeraddress-attributes)  | An array containing the customer's shipping and billing addresses
+`addresses` | [CustomerAddress](#customeraddress-attributes) | An array containing the customer's shipping and billing addresses
 `allow_remote_shopping_assistance` | Boolean! | Indicates whether the customer has enabled remote shopping assistance
 `compare_list` | [CompareList](#comparelist-attributes) | The contents of the customer's comparison list
 `created_at` | String | Timestamp indicating when the account was created
+`custom_attributes` | [AttributeValueInterface](#attributevalueinterface-attributes) | Customer's custom attributes
 `date_of_birth` | String | The customer's date of birth. In keeping with current security and privacy best practices, be sure you are aware of any potential legal and security risks associated with the storage of customers' full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
 `default_billing` | String | The ID assigned to the billing address
 `default_shipping` | String | The ID assigned to the shipping address
@@ -921,9 +1065,40 @@ Attribute |  Data Type | Description
 
 The `CompareList` object can contain the following attributes:
 
-import CompareListOutput from '/src/pages/_includes/graphql/compare-list-output.md'
-
 <CompareListOutput />
+
+### AttributeValueInterface attributes
+
+<BetaNote4 />
+
+The `AttributeValueInterface` contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`code` | String! | The attribute code
+`uid` | ID! | The unique ID of an attribute value
+
+Currently, `AttributeValueInterface` has two different implementations: `AttributeValue` and `AttributeSelectedOptions`.
+
+In addition to the attributes described for `AttributeValueInterface`, the `AttributeValue` contains the following:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`value` | String! | The attribute value
+
+The `AttributeSelectedOptions` object contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`selected_options` | [AttributeSelectedOptionInterface!]! | An array containing selected options for a select or multiselect attribute
+
+The `AttributeSelectedOptionInterface` contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`label` | String! | The attribute selected option label
+`uid` | ID! | The unique ID of an attribute selected option
+`value` | String! | The attribute selected option value
 
 ### CustomerAddress attributes
 
@@ -937,7 +1112,8 @@ Attribute |  Data Type | Description
 `company` | String | The customer's company
 `country_code` | CountryCodeEnum | The customer's country
 `country_id` | String | Deprecated. Use `country_code` instead. The customer's country
-`custom_attributes` | [CustomerAddressAttribute](#customeraddressattribute-attributes) | Deprecated. Not applicable for GraphQL
+`custom_attributes` | [CustomerAddressAttribute](#customeraddressattribute-attributes) | Deprecated. Use `custom_attributesV2` instead
+`custom_attributesV2` | [AttributeValueInterface](#attributevalueinterface-attributes) | Custom attributes assigned to the customer address
 `customer_id` | Int | Deprecated. This attribute is not applicable for GraphQL. The ID assigned to the customer
 `default_billing` | Boolean | Indicates whether the address is the default billing address
 `default_shipping` | Boolean | Indicates whether the address is the default shipping address
@@ -977,13 +1153,9 @@ Attribute |  Data Type | Description
 
 ### orders input attributes
 
-import CustomerOrdersOutput from '/src/pages/_includes/graphql/customer-orders-output.md'
-
 <CustomerOrdersOutput />
 
 #### ProductReview object
-
-import ProductReview from '/src/pages/_includes/graphql/product-review.md'
 
 <ProductReview />
 
@@ -997,8 +1169,6 @@ Attribute |  Data Type | Description
 `page_info` | [SearchResultPageInfo!](../../products/queries/products.md#searchresultpageinfo-attributes) | Metadata for pagination rendering
 
 ### Return attributes
-
-import Return from '/src/pages/_includes/graphql/return.md'
 
 <Return />
 
@@ -1049,8 +1219,6 @@ Attribute |  Data Type | Description
 
 ### Wishlist attributes
 
-import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
-
 <Wishlist />
 
 ## B2B output attributes
@@ -1067,8 +1235,6 @@ Attribute |  Data Type | Description
 `uids` | FilterEqualTypeInput | Filter requisition lists by one or more requisition list IDs
 
 ### RequisitionList attributes
-
-import RequisitionList from '/src/pages/_includes/graphql/requisition-list.md'
 
 <RequisitionList />
 
