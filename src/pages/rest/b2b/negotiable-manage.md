@@ -4,18 +4,21 @@ description: Endpoints used to create a negotiable quote
 edition: ee
 ---
 
+import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
+
 # Manage negotiable quotes
 
-This topic describes the calls required to initiate a negotiable quote and to prepare it to be converted to an order.
+This topic describes the API requests required to initiate a negotiable quote and to prepare it to be converted to an order.
 
 <InlineAlert variant="info" slots="text"/>
 
-All negotiable quote calls require an admin authorization token.
+All negotiable quote requests require an admin authorization token.
 
 **REST Endpoints:**
 
 ```json
 POST /V1/negotiableQuote/request
+POST /V1/negotiableQuote/draft
 POST /V1/negotiableQuote/submitToCustomer
 POST /V1/negotiableQuote/decline
 POST /V1/negotiableQuote/pricesUpdated
@@ -47,16 +50,12 @@ Name | Description | Format | Requirements
 
 ### Request a negotiable quote
 
-Before negotiable quote can begin, the following conditions must be met:
+Before initiating a negotiable quote, the following conditions must be met:
 
 -  A regular Commerce quote has been created (`POST /V1/customers/:customerId/carts` or `POST /V1/customers/carts/mine`)
 -  The quote contains items (`POST /V1/carts/:quoteId/items`)
 
-If the negotiable quote requires a shipping address (for negotiation or tax calculations), you can add it to the standard quote before initiating the negotiable quote (`POST /V1/carts/:cartId/shipping-information`)
-
-<InlineAlert variant="info" slots="text"/>
-
-Requesting a negotiable quote requires an admin authorization token.
+If the negotiable quote requires a shipping address (for negotiation or tax calculations), add it to the standard quote before initiating the negotiable quote (`POST /V1/carts/:cartId/shipping-information`)
 
 **Service Name:**
 
@@ -92,21 +91,52 @@ Requesting a negotiable quote requires an admin authorization token.
 
 Commerce creates a negotiable quote in the `Created` state.
 
-### Submit a negotiable quote to a buyer
+### Create draft quote for a buyer
 
-When you submit a negotiable quote to the buyer, the status for the buyer changes to "Updated". The buyer can subsequently edit or update the quote.
+<BetaNote />
 
-The seller can send a request to submit the quote to the buyer. The request can be submitted only for quotes in the following system states:
+The `POST /V1/negotiableQuote/draft` request creates an empty negotiable quote for a specific buyer in the `Draft` state. The quote is not visible to the buyer.
 
+After creating the draft quote, use the [`PUT /V1/negotiableQuote/:quoteId`](negotiable-update.md) request to modify the quote (add products, set discount, rename the quote, etc.).
+
+**Service Name:**
+
+`negotiableQuoteNegotiableQuoteDraftManagementV1`
+
+**Sample Usage:**
+
+`POST <host>/rest/<store_code>/V1/negotiableQuote/draft`
+
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
+
+```json
+{
+  "customerId": 3
+}
+```
+
+#### Response
+
+```json
+`321`  // An integer indicating the new quoteId
+```
+
+### Submit a negotiable quote
+
+A negotiable quote can be submitted for review when it is in one of the following system states:
+
+-  Draft
 -  Created
 -  Processing by admin
 -  Submitted by customer
 
-When the quote is submitted to the buyer:
+When the negotiable quote is submitted for review:
 
 -  Commerce checks catalog prices (price per item), cart rules, and discounts then recalculates the prices and taxes. The shipping price and the negotiated price are not affected (if they are entered into the quote).
--  Items that are no longer active or available for this buyer are removed from quote and prices are recalculated.
--  The quote state is changed to Submitted by admin.
+-  Items that are no longer active or available for this buyer are removed from the quote and prices are recalculated.
+-  The quote state is changed to `Submitted by admin`.
 
 **Service Name:**
 
@@ -135,11 +165,11 @@ When the quote is submitted to the buyer:
 
 ### Update a quote
 
-Use the `PUT /V1/negotiableQuote/:quoteId` call to update a quote. See [Update a negotiable quote](negotiable-update.md) for use cases.
+Use the `PUT /V1/negotiableQuote/:quoteId` request to update a quote. See [Update a negotiable quote](negotiable-update.md) for use cases.
 
 ### Recalculate prices
 
-The process of completing a negotiable quote can take days, or even longer. During that time, the prices for the items in the quote may have changed directly or indirectly.  For example, someone could have changed prices in the shared catalogs or adjusted price rules, and the prices in the negotiable quote are stale. This call refreshes item prices, taxes, discounts, cart rules in the negotiable quote. Quotes that are locked for the seller will not be updated.
+The process of completing a negotiable quote can take days, or even longer. During that time, the prices for the items in the quote may have changed directly or indirectly.  For example, someone could have changed prices in the shared catalogs or adjusted price rules, and the prices in the negotiable quote are stale. The `pricesUpdated` request refreshes item prices, taxes, discounts, cart rules in the negotiable quote. Quotes that are locked for the seller will not be updated.
 
 The request can be applied to one or more quotes at the same time.
 
@@ -165,7 +195,10 @@ The request can be applied to one or more quotes at the same time.
 
 ### Set the shipping method
 
-To set the shipping method, the quote must be in the `created`, `processing_by_admin` or `submitted_by_customer`. In addition, the quote must have a shipping address but no shipping method or shipping price.
+A quote must meet the following conditions to set the shipping method:
+
+- The system state must be `created`, `processing_by_admin`, or `submitted_by_customer`
+- The quote must have a shipping address but no shipping method or shipping price.
 
 **Sample Usage:**
 
@@ -189,13 +222,13 @@ To set the shipping method, the quote must be in the `created`, `processing_by_a
 
 ### Decline a quote
 
-The seller can send a request to decline the quote. The request can be submitted only for quotes in the following system states:
+The seller can decline a quote in any of the following system states:
 
 -  Created
 -  Processing by admin
 -  Submitted by customer
 
-When you decline a quote, all custom pricing will be removed from the quote. The buyer will be able to place an order using their standard catalog prices and discounts.
+Declining a quote removes all custom pricing from the quote. If the buyer places an order, their standard catalog prices and discounts are applied.
 
 **Service Name:**
 
@@ -224,7 +257,7 @@ When you decline a quote, all custom pricing will be removed from the quote. The
 
 ## Miscellaneous operations
 
-These tasks are not essential for completing a negotiable quote, but might be useful
+These tasks are not essential for completing a negotiable quote, but might be useful.
 
 ### List all comments for a quote
 
@@ -325,7 +358,7 @@ Commerce returns all the comments associated with the specified quote ID. The co
 
 ### Retrieve a negotiable quote attachment
 
-Use the `attachmentContent` call to retrieve the files (in base64 format) attached to a negotiable quote.
+Use the `attachmentContent` request to retrieve the files (in base64 format) attached to a negotiable quote.
 
 `negotiableQuoteAttachmentContentManagementV1`
 

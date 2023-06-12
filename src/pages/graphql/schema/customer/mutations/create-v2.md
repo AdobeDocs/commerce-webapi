@@ -2,6 +2,10 @@
 title: createCustomerV2 mutation | Commerce Web APIs
 ---
 
+import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
+import Example246 from '/src/pages/_includes/graphql/examples/create-v2-246.md'
+import Example247 from '/src/pages/_includes/graphql/examples/create-v2-247beta.md'
+
 # createCustomerV2 mutation
 
 The `createCustomerV2` mutation creates a customer account. Use the [`createCustomerAddress` mutation](create-address.md) to complete the customer profile and define billing and shipping addresses.
@@ -14,47 +18,15 @@ The `createCustomerV2` mutation supersedes the `createCustomer` mutation as the 
 
 ## Example usage
 
-The following call creates a new customer.
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2" theme="light"/>
 
-**Request:**
+### 2.4.6
 
-```graphql
-mutation {
-  createCustomerV2(
-    input: {
-      firstname: "Bob"
-      lastname: "Loblaw"
-      email: "bobloblaw@example.com"
-      password: "b0bl0bl@w"
-      is_subscribed: true
-    }
-  ) {
-    customer {
-      firstname
-      lastname
-      email
-      is_subscribed
-    }
-  }
-}
-```
+<Example246 />
 
-**Response:**
+### 2.4.7-beta
 
-```json
-{
-  "data": {
-    "createCustomer": {
-      "customer": {
-        "firstname": "Bob",
-        "lastname": "Loblaw",
-        "email": "bobloblaw@example.com",
-        "is_subscribed": true
-      }
-    }
-  }
-}
-```
+<Example247 />
 
 ## Input attributes
 
@@ -64,6 +36,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `allow_remote_shopping_assistance` | Boolean | Indicates whether the customer has enabled remote shopping assistance
 `date_of_birth` | String | The customer's date of birth. In keeping with current security and privacy best practices, be sure you are aware of any potential legal and security risks associated with the storage of customers' full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
+`custom_attributes` | [AttributeValueInput!] | The customer's custom attributes (2.4.7-beta only)
 `dob` | String | Deprecated. Use `date_of_birth` instead. The customer's date of birth
 `email` | String! | The customer's email address
 `firstname` | String! | The customer's first name
@@ -76,13 +49,28 @@ Attribute |  Data Type | Description
 `suffix` | String | A value such as Sr., Jr., or III
 `taxvat` | String | The customer's Tax/VAT number (for corporate customers)
 
+The `AttributeValueInput` object contains the following attributes:
+
+<BetaNote />
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`attribute_code` | String! | The code of the attribute
+`selected_options` | [AttributeInputSelectedOption!] | An array containing selected options for a select or multiselect attribute
+`value` | String | The value assigned to the attribute
+
+The `AttributeInputSelectedOption` specifies selected option for dropdown or multiselect attribute value.
+This object contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`value` | String! | The attribute option value
+
 ## Output attributes
 
 The `CustomerOutput` object contains the `Customer` object.
 
 The following table lists the top-level attributes of the `customer` object. See the [`customer` query](../../customer/queries/customer.md) for complete details about this object.
-
-import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
 
 <Customer />
 

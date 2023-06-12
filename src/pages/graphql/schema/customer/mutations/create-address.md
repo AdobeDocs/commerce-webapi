@@ -2,6 +2,11 @@
 title: createCustomerAddress mutation | Commerce Web APIs
 ---
 
+import Example246 from '/src/pages/_includes/graphql/examples/create-address-246.md'
+import Example247 from '/src/pages/_includes/graphql/examples/create-address-247beta.md'
+import CustomerAddressInput from '/src/pages/_includes/graphql/customer-address-input-24.md'
+import CustomerAddressOutput from '/src/pages/_includes/graphql/customer-address-output-24.md'
+
 # createCustomerAddress mutation
 
 Use the `createCustomerAddress` mutation to create the customer's address.
@@ -14,67 +19,15 @@ To return or modify information about a customer, we recommend you use customer 
 
 ## Example usage
 
-The following call creates an address for the specified customer.
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2" theme="light"/>
 
-**Request:**
+### 2.4.6
 
-```graphql
-mutation {
-  createCustomerAddress(input: {
-    region: {
-      region: "Arizona"
-      region_code: "AZ"
-    }
-    country_code: US
-    street: ["123 Main Street"]
-    telephone: "7777777777"
-    postcode: "77777"
-    city: "Phoenix"
-    firstname: "Bob"
-    lastname: "Loblaw"
-    default_shipping: true
-    default_billing: false
-  }) {
-    id
-    region {
-      region
-      region_code
-    }
-    country_code
-    street
-    telephone
-    postcode
-    city
-    default_shipping
-    default_billing
-  }
-}
-```
+<Example246 />
 
-**Response:**
+### 2.4.7-beta
 
-```json
-{
-  "data": {
-    "createCustomerAddress": {
-      "id": 4,
-      "region": {
-        "region": "Arizona",
-        "region_code": "AZ"
-      },
-      "country_code": "US",
-      "street": [
-        "123 Main Street"
-      ],
-      "telephone": "7777777777",
-      "postcode": "77777",
-      "city": "Phoenix",
-      "default_shipping": true,
-      "default_billing": false
-    }
-  }
-}
-```
+<Example247 />
 
 ## Input attributes
 
@@ -83,15 +36,11 @@ Attribute |  Data Type | Description
 `id` | Int | The ID assigned to the address object
 `CustomerAddressInput` | [CustomerAddress](#customeraddressinput-attributes) | An array containing the customer's shipping and billing addresses
 
-import CustomerAddressInput from '/src/pages/_includes/graphql/customer-address-input-24.md'
-
 <CustomerAddressInput />
 
 ## Output attributes
 
 The `createCustomerAddress` mutation returns the following attributes:
-
-import CustomerAddressOutput from '/src/pages/_includes/graphql/customer-address-output-24.md'
 
 <CustomerAddressOutput />
 
