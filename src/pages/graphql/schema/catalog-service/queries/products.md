@@ -24,7 +24,7 @@ The `ProductView` output object is significantly different than the core `produc
 
 *  Merchant-defined attributes are exposed in a top-level container and indicate their storefront roles. Roles include Show on PDP, Show on PLP, and Show on Search Results.
 
-*  Images are also accessible as a top-level container and can be filtered by their role. An image can have a base, small, or thumbnail role.
+*  Images are also accessible as a top-level container and can be filtered by their role. An image can have an `image`, `small_image`, or `thumbnail` role.
 
 ## Syntax
 
