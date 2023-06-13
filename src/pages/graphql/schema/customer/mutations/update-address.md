@@ -2,6 +2,11 @@
 title: updateCustomerAddress mutation | Commerce Web APIs
 ---
 
+import Example246 from '/src/pages/_includes/graphql/examples/update-address-246.md'
+import Example247 from '/src/pages/_includes/graphql/examples/update-address-247beta.md'
+import CustomerAddressInput from '/src/pages/_includes/graphql/customer-address-input-24.md'
+import CustomerAddressOutput from '/src/pages/_includes/graphql/customer-address-output-24.md'
+
 # updateCustomerAddress mutation
 
 Use the `updateCustomerAddress` mutation to update the customer's address.
@@ -14,36 +19,15 @@ To return or modify information about a customer, we recommend you use customer 
 
 ## Example usage
 
-The following call updates the customer's city and postcode.
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2" theme="light"/>
 
-**Request:**
+### 2.4.6
 
-```graphql
-mutation {
-  updateCustomerAddress(id:3, input: {
-    city: "New City"
-    postcode: "55555"
-  }) {
-    id
-    city
-    postcode
-  }
-}
-```
+<Example246 />
 
-**Response:**
+### 2.4.7-beta
 
-```json
-{
-  "data": {
-    "updateCustomerAddress": {
-      "id": 3,
-      "city": "New City",
-      "postcode": 55555
-    }
-  }
-}
-```
+<Example247 />
 
 ## Input attributes
 
@@ -54,15 +38,11 @@ Attribute |  Data Type | Description
 `id` | Int! | The ID assigned to the address object
 `CustomerAddressInput` | [CustomerAddress](#customeraddressinput-attributes)| An array containing the customer's shipping and billing addresses
 
-import CustomerAddressInput from '/src/pages/_includes/graphql/customer-address-input-24.md'
-
 <CustomerAddressInput />
 
 ## Output attributes
 
 The `updateCustomerAddress` mutation returns the `CustomerAddress` object.
-
-import CustomerAddressOutput from '/src/pages/_includes/graphql/customer-address-output-24.md'
 
 <CustomerAddressOutput />
 
