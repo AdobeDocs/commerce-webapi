@@ -88,12 +88,24 @@ module.exports = [
             path: "/graphql/schema/attributes/queries/",
             pages: [
               {
+                title: "attributesForm",
+                path: "/graphql/schema/attributes/queries/attributes-form.md"
+              },
+              {
+                title: "attributesList",
+                path: "/graphql/schema/attributes/queries/attributes-list.md"
+              },
+              {
                 title: "attributesMetadata",
                 path: "/graphql/schema/attributes/queries/attributes-metadata.md"
               },
               {
                 title: "customAttributeMetadata",
                 path: "/graphql/schema/attributes/queries/custom-attribute-metadata.md"
+              },
+              {
+                title: "customAttributeMetadataV2",
+                path: "/graphql/schema/attributes/queries/custom-attribute-metadata-v2.md"
               }
             ]
           }
@@ -538,6 +550,22 @@ module.exports = [
             ],
           },
         ],
+      },
+      {
+        title: "Attributes",
+        path: "/graphql/schema/attributes/",
+        pages: [
+          {
+            title: "Queries",
+            path: "/graphql/schema/attributes/queries/",
+            pages: [
+              {
+                title: "customAttributeMetadataV2",
+                path: "/graphql/schema/attributes/queries/custom-attribute-metadata-v2/",
+              },
+            ],
+          }
+        ]
       },
       {
         title: "Gift registry",
@@ -1269,7 +1297,13 @@ module.exports = [
   },
   {
     title: "Reference",
-    path: "/graphql/reference"
+    path: "/graphql/reference",
+    pages: [
+      {
+        title: "Reference (Beta)",
+        path: "/graphql/reference/beta"
+      }
+    ]
   },
   {
     title: "Release notes",

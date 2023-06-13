@@ -1,13 +1,11 @@
 ---
-title: API Security | Getting Started with Web APIs
+title: Input limiting | Getting Started with Web APIs
 description: Explains input limiting and other API security safeguards against denial-of-service (DoS) attacks.
 ---
 
+# Input limiting
+
 This topic describes best practices for [API security](https://owasp.org/www-project-api-security/).
-
-# API security
-
-## Input limiting
 
 Imposing restrictions on the size and number of resources that a user can request through an API can help mitigate denial-of-service (DoS) vulnerabilities. By default, the following built-in API rate limiting is available:
 
@@ -31,7 +29,7 @@ as well as via [environment variables](https://experienceleague.adobe.com/docs/c
 
 In addition, the Admin provides a configuration setting for limiting session sizes for Admin users and storefront visitors.
 
-### Enable the input limiting system
+## Enable the input limiting system
 
 To enable these input limiting features from the Admin, go to **Stores** > Settings > **Configuration** > **Services** > **Web Api Limits** or **GraphQL Input Limits** and set **Enable Input Limits** to **Yes**.
 
@@ -45,7 +43,7 @@ bin/magento config:set webapi/validation/input_limit_enabled 1
 bin/magento config:set graphql/validation/input_limit_enabled 1
 ```
 
-### Maximum parameter inputs
+## Maximum parameter inputs
 
 The `EntityArrayValidator` class constructor limits the number of objects that can be given to inputs that represent arrays of objects. For example, the `PUT /V1/guest-carts/{cartId}/collect-totals` endpoint contains the input parameter `additionalData->extension_attributes->gift_messages`, which represents a list of gift message information objects.
 
@@ -103,7 +101,7 @@ There are four possible input arrays:
 
 By default, any one of these arrays can include up to 20 items, but you can change this value in the configuration UI via **Stores** > Settings > **Configuration** > **Services** > **Web API Input Limits** > **Input List Limit** or via CLI using the `webapi/validation/complex_array_limit` configuration path.
 
-### Input limit for REST endpoints
+## Input limit for REST endpoints
 
 Some REST endpoints can contain a high number of elements, and developers need a way to set the limit for each endpoint. The limit for a specific REST endpoint can be set in the `webapi.xml` configuration file for synchronous requests and `webapi_async.xml` for asynchronous requests.
 To do this, assign a value for the `<data input-array-size-limit/>` attribute within a `<route>` definition. The value for `input-array-size-limit` must be a non-negative integer.
@@ -135,11 +133,11 @@ Clear the configuration cache for the changes to take effect.
 bin/magento cache:clean config
 ```
 
-### Values by default for REST endpoints
+## Values by default for REST endpoints
 
 If you need to change the default limits for REST endpoints, then edit the `webapi` section of the `<magento_root>/app/etc/env.php` file as follows:
 
-```conf
+```php
 [
 //...
     'webapi' => [
@@ -154,16 +152,16 @@ If you need to change the default limits for REST endpoints, then edit the `weba
 ];
 ```
 
-### Maximum page size
+## Maximum page size
 
 The maximum page size setting controls the pagination of various web API responses. By default, the maximum value is `300`. You can change the default in the Admin by selecting **Stores** > Settings > **Configuration** > **Services** > **Web API Input Limits** or **GraphQl Input Limits** >  **Maximum Page Size** field.
 
 [GraphQL security configuration](../graphql/usage/security-configuration.md describes how to set the maximum page size in GraphQL.
 
-### Default page size
+## Default page size
 
 The Default Page Size setting controls the pagination of various web API responses. You can change the default value of `20` in the Admin by selecting **Stores** > Settings > **Configuration** > **Services** > **Web API Input Limits** > **Default Page Size**. To change the value from the CLI, run the following command:
 
-```shell
+```bash
 bin/magento config:set webapi/validation/default_page_size 30
 ```
