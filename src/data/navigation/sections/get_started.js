@@ -24,10 +24,6 @@ module.exports = [
     header: true,
     pages: [
         {
-            title: "API security",
-            path: "/get-started/api-security.md",
-        },
-        {
             title: "Construct a request",
             path: "/get-started/gs-web-api-request.md",
         },
