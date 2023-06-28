@@ -127,6 +127,7 @@ The following code illustrates the definition of the dynamic block with the `uid
 
 Attribute | Data type | Description
 --- | --- | ---
+`audience_id` | FilterEqualTypeInput | Audience ID for this block. Available in the `magento/audiences` module only.
 `cart_id` | String | The unique ID that identifies the customer's cart. Available in the `magento2-pwa-commerce` module only.
 `dynamic_block_uids` | [ID] | An array of dynamic block UIDs to filter on
 `locations` | [DynamicBlockLocationEnum] | An array indicating the locations the dynamic block can be placed. The possible values are CONTENT, HEADER, FOOTER, LEFT, and RIGHT. If this attribute is not specified, the query returns all locations
@@ -149,6 +150,7 @@ The `DynamicBlock` object contains the following attributes.
 
 Attribute | Data type | Description
 --- | --- | ---
+`audience_id` | [ID] | An array of of Audience IDs for this block. Available in the `magento/audiences` module only.
 `content` | ComplexTextValue! | Contains the renderable HTML code of the dynamic block
 `uid` | ID! | The unique ID of a DynamicBlock object
 

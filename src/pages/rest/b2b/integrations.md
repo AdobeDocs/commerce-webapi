@@ -53,6 +53,7 @@ PUT    /V1/companyCredits/history/:historyId
 
 ```terminal
 POST   /V1/negotiableQuote/request
+POST   /V1/negotiableQuote/draft
 POST   /V1/negotiableQuote/submitToCustomer
 POST   /V1/negotiableQuote/decline
 POST   /V1/negotiableQuote/pricesUpdated
@@ -132,6 +133,7 @@ negotiableQuoteCommentLocatorV1
 negotiableQuoteCouponManagementV1
 negotiableQuoteGiftCardAccountManagementV1
 negotiableQuoteNegotiableQuoteManagementV1
+negotiableQuoteNegotiableQuoteDraftManagementV1
 negotiableQuoteNegotiableQuotePriceManagementV1
 negotiableQuoteNegotiableQuoteShippingManagementV1
 negotiableQuotePaymentInformationManagementV1
