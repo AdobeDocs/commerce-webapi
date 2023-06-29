@@ -88,7 +88,7 @@ The `ProductViewLink` type contains details about product links for related prod
 Field | Data Type | Description
 --- | --- | ---
 `product` | ProductView! | Details about the product in the link.
-`linkTypes` | [String!]! | Types of links for this product. Can be `crossell`, `related`, and `upsell`.
+`linkTypes` | [String!]! | Types of links for this product. Can be `crosssell`, `related`, and `upsell`.
 
 ### ProductViewMoney type
 
