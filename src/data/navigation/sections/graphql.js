@@ -804,22 +804,6 @@ module.exports = [
         ],
       },
       {
-        title: "Product Recommendations",
-        path: "/graphql/schema/product-recommendations/",
-        pages: [
-          {
-            title: "Queries",
-            path: "/graphql/schema/products/queries/",
-            pages: [
-              {
-                title: "recommendations",
-                path: "/graphql/schema/product-recommendations/queries/recommendations/",
-              },
-            ],
-          },
-        ],
-      },
-      {
         title: "Products",
         path: "/graphql/schema/products/",
         pages: [
