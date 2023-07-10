@@ -310,6 +310,7 @@ If other promotions or price adjustments are applied to the cart through either 
         amount {
           value
         }
+        applied_to
         label
       }
       grand_total {
@@ -376,12 +377,14 @@ If other promotions or price adjustments are applied to the cart through either 
             "amount": {
               "value": 29
             },
+            "applied_to": "ITEM",
             "label": "3T1free"
           },
           {
             "amount": {
               "value": 8.7
             },
+            "applied_to": "ITEM",
             "label": "10% Off for New Customers"
           }
         ],
@@ -439,6 +442,7 @@ query {
     prices {
       discounts {
         label
+        applied_to
         amount {
           value
         }
@@ -549,6 +553,7 @@ query {
         "discounts": [
           {
             "label": "200",
+            "applied_to": "ITEM",
             "amount": {
               "value": 55.28
             }
@@ -741,7 +746,7 @@ Attribute |  Data Type | Description
 
 ### Discount object
 
-A discount can be applied to the cart as a whole or to an item.
+A discount can be applied to the cart as a whole, to an item, or toward shipping (2.4.7-beta only).
 
 If a cart rule does not have a label, the application uses `Discount` as the default label.
 
@@ -750,6 +755,7 @@ The `Discount` object must contain the following attributes.
 Attribute |  Data Type | Description
 --- | --- | ---
 `amount` | Money! | The amount of the discount applied to the cart
+`applied_to` | CartDiscountType! | The type of the entity the discount is applied to. One of `ITEM`, `SHIPPING`
 `label` | String! | The description of the discount
 
 ### GiftMessage object
