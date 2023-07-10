@@ -746,7 +746,7 @@ Attribute |  Data Type | Description
 
 ### Discount object
 
-A discount can be applied to the cart as a whole or to an item, shipping.
+A discount can be applied to the cart as a whole, to an item, or toward shipping (2.4.7-beta only).
 
 If a cart rule does not have a label, the application uses `Discount` as the default label.
 
