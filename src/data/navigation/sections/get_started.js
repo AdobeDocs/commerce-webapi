@@ -4,6 +4,21 @@ module.exports = [
     path: "/get-started.md",
   },
   {
+    title: "API Security",
+    path: "/get-started/api-security.md",
+    header: true,
+    pages: [
+      {
+        title: "Input limiting",
+        path: "/get-started/api-security.md",
+      },
+      {
+        title: "Rate limiting",
+        path: "/get-started/rate-limiting.md"
+      }
+    ],
+  },
+  {
     title: "Use REST APIs",
     path: "/get-started/api-security.md",
     header: true,
