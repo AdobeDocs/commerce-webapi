@@ -552,22 +552,6 @@ module.exports = [
         ],
       },
       {
-        title: "Attributes",
-        path: "/graphql/schema/attributes/",
-        pages: [
-          {
-            title: "Queries",
-            path: "/graphql/schema/attributes/queries/",
-            pages: [
-              {
-                title: "customAttributeMetadataV2",
-                path: "/graphql/schema/attributes/queries/custom-attribute-metadata-v2/",
-              },
-            ],
-          }
-        ]
-      },
-      {
         title: "Gift registry",
         path: "/graphql/schema/gift-registry/",
         pages: [
