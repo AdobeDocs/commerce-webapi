@@ -755,7 +755,7 @@ The `Discount` object must contain the following attributes.
 Attribute |  Data Type | Description
 --- | --- | ---
 `amount` | Money! | The amount of the discount applied to the cart
-`applied_to` | CartDiscountType! | The type of the entity the discount is applied to. One of `ITEM`, `SHIPPING`
+`applied_to` | CartDiscountType! | The type of the entity the discount is applied to: `ITEM` or `SHIPPING`
 `label` | String! | The description of the discount
 
 ### GiftMessage object
