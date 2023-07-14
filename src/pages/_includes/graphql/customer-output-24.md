@@ -5,7 +5,7 @@ Attribute |  Data Type | Description
 `compare_list` | CompareList | The contents of the customer's comparison list
 `created_at` | String | Timestamp indicating when the account was created
 `custom_attributes` | [CustomerAddressAttribute](#customeraddress-attributes) | Deprecated. Use `custom_attributesV2` instead
-`custom_attributes(uids: [ID!])` | [AttributeValueInterface](#attributevalueinterface-attributes)| Custom attributes assigned to the customer address (2.4.7-beta only)
+`custom_attributesV2(attributeCodes: [ID!])` | [AttributeValueInterface](#attributevalueinterface-attributes)| Custom attributes assigned to the customer address (2.4.7-beta only)
 `date_of_birth` | String | The customer's date of birth. In keeping with current security and privacy best practices, be sure you are aware of any potential legal and security risks associated with the storage of customers' full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
 `default_billing` | String | The ID assigned to the billing address
 `default_shipping` | String | The ID assigned to the shipping address
@@ -48,10 +48,9 @@ import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
 
 The `AttributeValueInterface` contains the following attributes:
 
-Attribute |  Data Type | Description
---- | --- | ---
-`code` | String! | The attribute code
-`uid` | ID! | The unique ID of an attribute value
+Attribute | Data Type | Description
+--- |-----------| ---
+`code` | ID!       | The attribute code
 
 Currently, `AttributeValueInterface` has two different implementations: `AttributeValue` and `AttributeSelectedOptions`.
 
@@ -72,5 +71,4 @@ The `AttributeSelectedOptionInterface` contains the following attributes:
 Attribute |  Data Type | Description
 --- | --- | ---
 `label` | String! | The attribute selected option label
-`uid` | ID! | The unique ID of an attribute selected option
 `value` | String! | The attribute selected option value

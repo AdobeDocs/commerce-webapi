@@ -153,23 +153,21 @@ Attribute | Data Type | Description
 
 The `CustomAttributeMetadataInterface` object contains the following attributes:
 
-Attribute | Data Type | Description
---- |---| ---
-`uid` | ID! | The unique ID of an attribute. Based on entity type and attribute code
-`code` | String! | The unique identifier for an attribute code. This value should be in lowercase letters without spaces
-`label` | String | The label assigned to the attribute
-`entity_type` | AttributeEntityTypeEnum! | The type of entity that defines the attribute
-`frontend_input` | AttributeFrontendInputEnum | The frontend input type of the attribute
-`is_required` | Boolean! | Whether the attribute value is required
-`default_value` | String | Default attribute value
-`is_unique` | Boolean! | Whether the attribute value must be unique
+Attribute | Data Type                          | Description
+--- |------------------------------------| ---
+`code` | ID!                                | The unique identifier for an attribute code. This value should be in lowercase letters without spaces
+`label` | String                             | The label assigned to the attribute
+`entity_type` | AttributeEntityTypeEnum!           | The type of entity that defines the attribute
+`frontend_input` | AttributeFrontendInputEnum         | The frontend input type of the attribute
+`is_required` | Boolean!                           | Whether the attribute value is required
+`default_value` | String                             | Default attribute value
+`is_unique` | Boolean!                           | Whether the attribute value must be unique
 `options` | [CustomAttributeOptionInterface!]! | Attribute options
 
 The `CustomAttributeOptionInterface` object contains the following attributes:
 
 Attribute | Data Type | Description
 --- |---| ---
-`uid` | ID! | The unique ID of an attribute option
 `label` | String! | The label assigned to the attribute option
 `value` | String! | The attribute option value
 `is_default` | Boolean | Is the option value default

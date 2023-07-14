@@ -55,6 +55,7 @@ Attribute |  Data Type | Description
 `request_quantity` | Float! | The quantity of the item requested to be returned
 `status`| ReturnItemStatus! | An enum indicating the return status of the item. Possible values are APPROVED, AUTHORIZED, DENIED, PENDING, RECEIVED, and REJECTED
 `uid`| ID! | The unique ID of an item of a `Return` object
+`custom_attributesV2` | [AttributeValueInterface!] | Custom attributes that are visible on the storefront
 
 #### ReturnShipping attributes
 

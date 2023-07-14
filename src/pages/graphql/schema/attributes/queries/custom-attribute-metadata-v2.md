@@ -34,7 +34,6 @@ The following call returns metadata information for the `firstname` attribute of
 {
     customAttributeMetadataV2(attributes: [{attribute_code: "firstname", entity_type: "customer"}]) {
         items {
-            uid
             code
             label
             entity_type
@@ -43,7 +42,6 @@ The following call returns metadata information for the `firstname` attribute of
             default_value
             is_unique
             options {
-                uid
                 label
                 value
             }
@@ -64,7 +62,6 @@ The following call returns metadata information for the `firstname` attribute of
     "customAttributeMetadataV2": {
       "items": [
         {
-          "uid": "Y3VzdG9tZXIvZmlyc3RuYW1l",
           "code": "firstname",
           "label": "First Name",
           "entity_type": "CUSTOMER",
@@ -91,7 +88,6 @@ The following call returns metadata information for the `resolution` attribute o
 {
   customAttributeMetadataV2(attributes: [{attribute_code: "resolution", entity_type: "rma_item"}]) {
     items {
-      uid
       code
       default_value
       label
@@ -127,7 +123,6 @@ The following call returns metadata information for the `resolution` attribute o
     "customAttributeMetadataV2": {
       "items": [
         {
-          "uid": "cm1hX2l0ZW0vcmVzb2x1dGlvbg==",
           "code": "resolution",
           "default_value": null,
           "label": "Resolution",
@@ -273,7 +268,7 @@ The `AttributeInput` object contains the following attributes:
 
 Attribute | Data Type | Description
 --- |---| ---
-`attribute_code` | String | The unique identifier for an attribute code. This value should be in lowercase letters without spaces
+`attribute_code` | String | The unique identifier for an attribute. This value should be in lowercase letters without spaces
 `entity_type` | String | The type of entity that defines the attribute
 
 ## Output attributes
@@ -287,23 +282,21 @@ Attribute | Data Type | Description
 
 The `CustomAttributeMetadataInterface` object contains the following attributes:
 
-Attribute | Data Type | Description
---- |---| ---
-`uid` | ID! | The unique ID of an attribute. Based on entity type and attribute code
-`code` | String! | The unique identifier for an attribute code. This value should be in lowercase letters without spaces
-`label` | String | The label assigned to the attribute
-`entity_type` | AttributeEntityTypeEnum! | The type of entity that defines the attribute. Possible values are CATALOG_CATEGORY and CATALOG_PRODUCT
-`frontend_input` | AttributeFrontendInputEnum | The frontend input type of the attribute. Possible values are BOOLEAN, DATE, DATETIME, FILE, GALLERY, HIDDEN, IMAGE, MEDIA_IMAGE, MULTILINE, MULTISELECT, PRICE, SELECT, TEXT, TEXTAREA, WEIGHT and UNDEFINED
-`is_required` | Boolean! | Whether the attribute value is required
-`default_value` | String | Default attribute value
-`is_unique` | Boolean! | Whether the attribute value must be unique
+Attribute | Data Type                          | Description
+--- |------------------------------------| ---
+`code` | ID!                                | The unique identifier for an attribute. This value should be in lowercase letters without spaces
+`label` | String                             | The label assigned to the attribute
+`entity_type` | AttributeEntityTypeEnum!           | The type of entity that defines the attribute. Possible values are CATALOG_CATEGORY and CATALOG_PRODUCT
+`frontend_input` | AttributeFrontendInputEnum         | The frontend input type of the attribute. Possible values are BOOLEAN, DATE, DATETIME, FILE, GALLERY, HIDDEN, IMAGE, MEDIA_IMAGE, MULTILINE, MULTISELECT, PRICE, SELECT, TEXT, TEXTAREA, WEIGHT and UNDEFINED
+`is_required` | Boolean!                           | Whether the attribute value is required
+`default_value` | String                             | Default attribute value
+`is_unique` | Boolean!                           | Whether the attribute value must be unique
 `options` | [CustomAttributeOptionInterface!]! | Attribute options
 
 The `CustomAttributeOptionInterface` object contains the following attributes:
 
 Attribute | Data Type | Description
 --- |---| ---
-`uid` | ID! | The unique ID of an attribute option
 `label` | String! | The label assigned to the attribute option
 `value` | String! | The attribute option value
 `is_default` | Boolean | Is the option value default

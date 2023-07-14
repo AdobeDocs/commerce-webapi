@@ -232,15 +232,13 @@ The following call returns the customer and customer address custom attributes f
 {
   customer {
     email
-    custom_attributes(uids: ["Y3VzdG9tZXIvc3R1ZGllcw=="]) {
-      uid
+    custom_attributes(attributeCodes: ["studies"]) {
       code
       ... on AttributeValue {
         value
       }
       ... on AttributeSelectedOptions {
         selected_options {
-          uid
           label
           value
         }
@@ -248,15 +246,13 @@ The following call returns the customer and customer address custom attributes f
     }
     addresses {
       city
-      custom_attributesV2(uids: ["Y3VzdG9tZXJfYWRkcmVzcy9zZXJ2aWNlcw=="]) {
-        uid
+      custom_attributesV2(attributeCodes: ["services"]) {
         code
         ... on AttributeValue {
             value
         }
         ... on AttributeSelectedOptions {
           selected_options {
-            uid
             label
             value
           }
@@ -276,16 +272,13 @@ The following call returns the customer and customer address custom attributes f
       "email": "jdoe@example.com",
       "custom_attributes": [
         {
-          "uid": "Y3VzdG9tZXIvc3R1ZGllcw==",
           "code": "studies",
           "selected_options": [
             {
-              "uid": "NTEw",
               "label": "BSc",
               "value": "501"
             },
             {
-              "uid": "NTEx",
               "label": "MBA",
               "value": "502"
             }
@@ -297,16 +290,13 @@ The following call returns the customer and customer address custom attributes f
           "city": "Marseille",
           "custom_attributesV2": [
             {
-              "uid": "Y3VzdG9tZXJfYWRkcmVzcy9zZXJ2aWNlcw==",
               "code": "services",
               "selected_options": [
                 {
-                  "uid": "NTA3",
                   "label": "hospital",
                   "value": "507"
                 },
                 {
-                  "uid": "NTA4",
                   "label": "police",
                   "value": "508"
                 }
