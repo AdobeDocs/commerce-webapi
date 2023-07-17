@@ -232,13 +232,167 @@ The following call returns the list of attributes metadata for a `rma_item`.
 }
 ```
 
+### Apply a filter to the attributes list query
+
+The following call returns the list of attributes metadata for a `catalog_product` filtered by `is_visible_on_front` and `is_comparable`.
+
+**Request:**
+
+```graphql
+{
+    attributesList(entityType: CATALOG_PRODUCT, filters: {is_visible_on_front:true, is_comparable: true}) {
+        items {
+            uid
+            code
+            label
+            default_value
+            is_required
+            frontend_class
+            is_unique
+            options {
+                value
+                label
+            }
+        }
+        errors {
+            type
+            message
+        }
+    }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "attributesList": {
+      "items": [
+        {
+          "uid": "Y2F0YWxvZ19wcm9kdWN0L2FjdGl2aXR5",
+          "code": "activity",
+          "label": "Activity",
+          "default_value": "",
+          "is_required": false,
+          "frontend_class": null,
+          "is_unique": false,
+          "options": [
+            {
+              "value": "13",
+              "label": "Hike"
+            },
+            {
+              "value": "14",
+              "label": "Outdoor"
+            },
+            {
+              "value": "15",
+              "label": "Running"
+            },
+            {
+              "value": "16",
+              "label": "Warmup"
+            },
+            {
+              "value": "17",
+              "label": "Yoga"
+            },
+            {
+              "value": "18",
+              "label": "Recreation"
+            },
+            {
+              "value": "19",
+              "label": "Lounge"
+            },
+            {
+              "value": "20",
+              "label": "Gym"
+            },
+            {
+              "value": "21",
+              "label": "Climbing"
+            },
+            {
+              "value": "22",
+              "label": "Crosstraining"
+            },
+            {
+              "value": "23",
+              "label": "Post-workout"
+            },
+            {
+              "value": "24",
+              "label": "Cycling"
+            },
+            {
+              "value": "25",
+              "label": "Athletic"
+            },
+            {
+              "value": "26",
+              "label": "Sports"
+            },
+            {
+              "value": "27",
+              "label": "Hiking"
+            },
+            {
+              "value": "28",
+              "label": "Overnight"
+            },
+            {
+              "value": "29",
+              "label": "School"
+            },
+            {
+              "value": "30",
+              "label": "Trail"
+            },
+            {
+              "value": "31",
+              "label": "Travel"
+            },
+            {
+              "value": "32",
+              "label": "Urban"
+            }
+          ]
+        }
+      ],
+      "errors": []
+    }
+  }
+}
+```
+
 ## Input attributes
 
 The `AttributeEntityTypeEnum` object contains the following attributes:
 
 Attribute | Data Type | Description
 --- |---| ---
-`entityType` | String | The type of entity that defines the attribute.
+`entityType` | String | The type of entity that defines the attribute
+`filters` | AttributeFilterInput | Identifies which filter inputs to search for and return
+
+## Attribute Filter Input
+
+The `AttributeFilterInput` object specifies the filters used for attributes. It contains the following attributes:
+
+Attribute | Data Type | Description
+--- |---| ---
+`is_filterable_in_search` | Boolean | Whether a product or category attribute can be filtered in search or not
+`used_in_product_listing` | Boolean | Whether a product or category attribute is used in product listing or not
+`is_comparable` | Boolean | Whether a product or category attribute can be compared against another or not
+`is_searchable` | Boolean | Whether a product or category attribute can be searched or not
+`is_filterable` | Boolean | Whether a product or category attribute can be filtered or not
+`is_html_allowed_on_front` | Boolean | Whether a product or category attribute can use HTML on front or not
+`is_used_for_price_rules` | Boolean | Whether a product or category attribute can be used for price rules or not
+`is_wysiwyg_enabled` | Boolean | Whether a product or category attribute has WYSIWYG enabled or not
+`is_used_for_promo_rules` | Boolean | Whether a product or category attribute is used for promo rules or not
+`is_visible_in_advanced_search` | Boolean | Whether a product or category attribute is visible in advanced search or not
+`is_visible_on_front` | Boolean | Whether a product or category attribute is visible on front or not
 
 ## Output attributes
 
