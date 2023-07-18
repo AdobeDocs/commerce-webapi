@@ -4,13 +4,13 @@ edition: ee
 description: Describes how to construct and use the Product Recommendations recommendations query.
 ---
 
-import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
-
 # recommendations query
 
-<BetaNote />
-
 The `recommendations` query returns information about product recommendation blocks for a given SKU.
+
+Merchants must have both Product Recommendations and Catalog Service (v2.2.0+) installed to get complete data through the storefront gateway.
+
+Note that the `recommendations` query does not support the `alternateEnvironmentId` attribute.
 
 ## Required headers
 
