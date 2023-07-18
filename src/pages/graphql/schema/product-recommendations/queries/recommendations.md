@@ -4,13 +4,15 @@ edition: ee
 description: Describes how to construct and use the Product Recommendations recommendations query.
 ---
 
-import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
-
 # recommendations query
 
-<BetaNote />
-
 The `recommendations` query returns information about product recommendation blocks for a given SKU.
+
+Merchants must have both Product Recommendations and Catalog Service (v2.2.0+) installed to get complete data through the storefront gateway.
+
+<InlineAlert variant="info" slots="text" />
+
+The `recommendations` query does not support the `alternateEnvironmentId` attribute.
 
 ## Required headers
 
@@ -159,7 +161,7 @@ Field | Data type | Description
 `cartSKUs` | [String] | SKUs of the products in the cart.
 `category` | String | The category currently being viewed.
 `currentSKU` | String |  SKU of the product currently being viewed on the product detail page.
-`pageType` | Enum | Type of page on which recommendations are requested. Possible values are Cart, Category, Checkout, CMS, PageBuilder and Product.
+`pageType` | PageType  | An enum indicating the type of page on which recommendations are requested. Possible values are Cart, Category, Checkout, CMS, PageBuilder and Product.
 `userPurchaseHistory` | [PurchaseHistory] | User purchase history with timestamp.
 `userViewHistory` | [ViewHistory] | User view history with timestamp.
 
