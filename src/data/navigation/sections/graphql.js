@@ -552,22 +552,6 @@ module.exports = [
         ],
       },
       {
-        title: "Attributes",
-        path: "/graphql/schema/attributes/",
-        pages: [
-          {
-            title: "Queries",
-            path: "/graphql/schema/attributes/queries/",
-            pages: [
-              {
-                title: "customAttributeMetadataV2",
-                path: "/graphql/schema/attributes/queries/custom-attribute-metadata-v2/",
-              },
-            ],
-          }
-        ]
-      },
-      {
         title: "Gift registry",
         path: "/graphql/schema/gift-registry/",
         pages: [
@@ -798,22 +782,6 @@ module.exports = [
               {
                 title: "ShipmentItemInterface",
                 path: "/graphql/schema/orders/interfaces/shipment-item/",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        title: "Product Recommendations",
-        path: "/graphql/schema/product-recommendations/",
-        pages: [
-          {
-            title: "Queries",
-            path: "/graphql/schema/products/queries/",
-            pages: [
-              {
-                title: "recommendations",
-                path: "/graphql/schema/product-recommendations/queries/recommendations/",
               },
             ],
           },
