@@ -10,7 +10,9 @@ The `recommendations` query returns information about product recommendation blo
 
 Merchants must have both Product Recommendations and Catalog Service (v2.2.0+) installed to get complete data through the storefront gateway.
 
-Note that the `recommendations` query does not support the `alternateEnvironmentId` attribute.
+<InlineAlert variant="info" slots="text" />
+
+The `recommendations` query does not support the `alternateEnvironmentId` attribute.
 
 ## Required headers
 
