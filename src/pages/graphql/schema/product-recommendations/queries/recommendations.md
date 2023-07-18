@@ -161,7 +161,7 @@ Field | Data type | Description
 `cartSKUs` | [String] | SKUs of the products in the cart.
 `category` | String | The category currently being viewed.
 `currentSKU` | String |  SKU of the product currently being viewed on the product detail page.
-`pageType` | Enum | Type of page on which recommendations are requested. Possible values are Cart, Category, Checkout, CMS, PageBuilder and Product.
+`pageType` | PageType  | An enum indicating the type of page on which recommendations are requested. Possible values are Cart, Category, Checkout, CMS, PageBuilder and Product.
 `userPurchaseHistory` | [PurchaseHistory] | User purchase history with timestamp.
 `userViewHistory` | [ViewHistory] | User view history with timestamp.
 
