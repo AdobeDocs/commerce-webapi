@@ -8,6 +8,7 @@ Field | Data Type | Description
 `id` | ID! | The product ID, generated as a composite key, unique per locale.
 `images(roles: [String])` | [ProductViewImage] | A list of images defined for the product.
 `inStock` | Boolean | Indicates whether the product is in stock.
+`links(linkTypes: [String!])` | [ProductViewLink] | A list of product links.
 `lowStock` | Boolean | Indicates whether the product stock is low.
 `metaDescription` | String | A brief overview of the product for search results listings.
 `metaKeyword` | String | A comma-separated list of keywords that are visible only to search engines.
@@ -29,6 +30,7 @@ Field | Data Type | Description
 `id` | ID! | The product ID, generated as a composite key, unique per locale.
 `images(roles: [String])` | [ProductViewImage] | A list of images defined for the product.
 `inStock` | Boolean | Indicates whether the product is in stock.
+`links(linkTypes: [String!])` | [ProductViewLink] | A list of product links.
 `lowStock` | Boolean | Indicates whether the product stock is low.
 `metaDescription` | String | A brief overview of the product for search results listings.
 `metaKeyword` | String | A comma-separated list of keywords that are visible only to search engines.
@@ -78,6 +80,15 @@ Field | Data Type | Description
 `label` | String | The display label of the product image.
 `roles` | [String] | A list that describes how the image is used. Can be `image`, `small_image`, or `thumbnail`.
 `url` | String! | The URL to the product image.
+
+### ProductViewLink type
+
+The `ProductViewLink` type contains details about product links for related products and cross selling.
+
+Field | Data Type | Description
+--- | --- | ---
+`product` | ProductView! | Details about the product in the link.
+`linkTypes` | [String!]! | Types of links for this product. Can be `crosssell`, `related`, and `upsell`.
 
 ### ProductViewMoney type
 
@@ -172,6 +183,7 @@ Field | Data Type | Description
 `id` | ID! | The product ID, generated as a composite key, unique per locale.
 `images(roles: [String])` | [ProductViewImage] | A list of images defined for the product.
 `inStock` | Boolean | Indicates whether the product is in stock.
+`links(linkTypes: [String!])` | [ProductViewLink] | A list of product links.
 `lowStock` | Boolean | Indicates whether the product stock is low.
 `metaDescription` | String | A brief overview of the product for search results listings.
 `metaKeyword` | String | A comma-separated list of keywords that are visible only to search engines.
