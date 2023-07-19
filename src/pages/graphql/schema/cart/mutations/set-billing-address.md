@@ -24,7 +24,10 @@ mutation {
       billing_address: {
         address: {
           firstname: "Bob"
+          middlename: "Joe"
           lastname: "Roll"
+          prefix: "Mr."
+          suffix: "Jr."
           company: "Magento"
           street: ["Magento Pkwy", "Main Street"]
           city: "Austin"
@@ -32,6 +35,7 @@ mutation {
           postcode: "78758"
           country_code: "US"
           telephone: "8675309"
+          fax: "8675311"
           save_in_address_book: true
         }
         same_as_shipping: false
@@ -41,7 +45,10 @@ mutation {
     cart {
       billing_address {
         firstname
+        middlename
         lastname
+        prefix
+        suffix
         company
         street
         city
@@ -51,6 +58,7 @@ mutation {
         }
         postcode
         telephone
+        fax
         country{
           code
           label
@@ -70,7 +78,10 @@ mutation {
       "cart": {
         "billing_address": {
           "firstname": "Bob",
+          "middlename": "Joe",
           "lastname": "Roll",
+          "prefix": "Mr.",
+          "suffix": "Jr.",
           "company": "Magento",
           "street": [
             "Magento Pkwy",
@@ -83,6 +94,7 @@ mutation {
             },
           "postcode": "78758",
           "telephone": "8675309",
+          "fax": "8675311",
            "country": {
              "code": "US",
              "label": "US"
