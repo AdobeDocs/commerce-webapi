@@ -49,8 +49,8 @@ import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
 The `AttributeValueInterface` contains the following attributes:
 
 Attribute | Data Type | Description
---- |-----------| ---
-`code` | ID!       | The attribute code
+--- | --- | ---
+`code` | ID! | The attribute code
 
 Currently, `AttributeValueInterface` has two different implementations: `AttributeValue` and `AttributeSelectedOptions`.
 
