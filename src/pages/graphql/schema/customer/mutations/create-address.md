@@ -40,7 +40,9 @@ Attribute |  Data Type | Description
 
 ## Output attributes
 
-The `createCustomerAddress` mutation returns the following attributes:
+The `createCustomerAddress` mutation returns a `CustomerAddress` object.
+
+### CustomerAddress attributes
 
 <CustomerAddressOutput />
 

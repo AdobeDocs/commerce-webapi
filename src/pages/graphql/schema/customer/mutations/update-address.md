@@ -44,6 +44,8 @@ Attribute |  Data Type | Description
 
 The `updateCustomerAddress` mutation returns the `CustomerAddress` object.
 
+### CustomerAddress attributes
+
 <CustomerAddressOutput />
 
 ## Errors
