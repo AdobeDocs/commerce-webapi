@@ -44,7 +44,6 @@ The `createCustomerAddress` mutation returns a `CustomerAddress` object.
 
 ### CustomerAddress attributes
 
-
 <CustomerAddressOutput />
 
 ## Errors
