@@ -5,6 +5,10 @@ edition: pwa
 
 # PWA implementations and attributes
 
+<InlineAlert variant="warning" slots="text" />
+
+Deprecated. Check [ProductInterface attributes](../interfaces/attributes/).
+
 ## Interfaces
 
 ### AttributeOptionsInterface
