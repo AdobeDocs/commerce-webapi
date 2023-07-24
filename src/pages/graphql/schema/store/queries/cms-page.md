@@ -12,6 +12,10 @@ Return the contents of a CMS page:
 
 `cmsPage(identifier: String): CmsPage`
 
+## Reference
+
+[`cmsPage`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-cmsPage) query
+
 ## Example usage
 
 You must include the CMS page identifier value to retrieve the content of a specific CMS page. The following query returns information about the "404 Not Found" CMS page:
@@ -54,36 +58,13 @@ You must include the CMS page identifier value to retrieve the content of a spec
 }
 ```
 
-## Input attributes
-
-Attribute | Data type | Description
---- | --- | ---
-`id` | Int | Deprecated. Use `identifier` instead.
-`identifier` | String | The identifier of a CMS page
-
-## Output attributes
-
-The `CmsPage` object can contain the following attributes:
-
-Attribute | Data type | Description
---- | --- | ---
-`content` | String | The content of the CMS page in raw HTML
-`content_heading` | String | The heading that displays at the top of the CMS page
-`identifier` | String | The identifier of the CMS page
-`meta_description` | String | A brief description of the page for search results listings
-`meta_keywords` | String | A set of keywords that search engines can use to index the page
-`meta_title` | String | A page title that is indexed by search engines and appears in search results listings
-`page_layout` | String | The design layout of the page, indicating the number of columns and navigation features used on the page
-`title` | String | The name that appears in the breadcrumb trail navigation and in the browser title bar and tab
-`url_key` |String | The URL key of the CMS page, which is often based on the `content_heading`
-
-## Related topics
-
-[cmsBlocks query](../../store/queries/cms-blocks.md)
-
 ## Errors
 
 Error | Description
 --- | ---
 `The CMS page with the "XXXX" ID doesn't exist` | The specified CMS page ID is invalid.
 `Page id/identifier should be specified"` | The `identifier` parameter is required for identifying the CMS page.
+
+## Related topics
+
+[cmsBlocks query](cms-blocks.md)

@@ -12,6 +12,10 @@ Use the [country](country.md) query if you want to retrieve information about a 
 
 `{countries {Countries}}`
 
+## Reference
+
+[`countries`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#query-countries) query
+
 ## Example usage
 
 The following query returns all countries listed for the current instance of Magento:
@@ -133,14 +137,6 @@ In this example, the response is intentionally truncated. The `available_regions
   }
 }
 ```
-
-## Output attributes
-
-The query returns an array of `Country` objects.
-
-import CountryOutput from '/src/pages/_includes/graphql/country-output.md'
-
-<CountryOutput />
 
 ## Related topics
 
