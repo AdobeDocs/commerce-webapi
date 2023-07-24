@@ -1,5 +1,3 @@
-### CustomerAddress attributes
-
 The values assigned to attributes such as `firstname` and `lastname` in this object may be different from those defined in the `Customer` object.
 
 The `CustomerAddress` output returns the following attributes:
