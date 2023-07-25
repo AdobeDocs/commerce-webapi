@@ -30,7 +30,6 @@ Field | Type | Description
 `cart_id` | String | The unique ID that identifies the customer's cart. Available in the `magento2-pwa-commerce` module only.
 `product_uid` | ID | The unique ID of the product currently viewed. Available in the `magento2-pwa-commerce` module only.
 
-
 If the `magento/audiences` module is installed, the following field can be returned:
 
 Field | Type | Description
