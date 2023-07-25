@@ -26,7 +26,7 @@ The following input fields are available only if specialized modules have been i
 
 Field | Type | Description
 --- | --- | ---
-`audience_id` field | FilterEqualTypeInput | Audience ID for this block. Available in the `magento/audiences` module only.
+`audience_id` field | FilterEqualTypeInput | The Audience ID for this block. Available in the `magento/audiences` module only.
 `cart_id` | String | The unique ID that identifies the customer's cart. Available in the `magento2-pwa-commerce` module only.
 `product_uid` | ID | The unique ID of the product currently viewed. Available in the `magento2-pwa-commerce` module only.
 
@@ -35,7 +35,7 @@ If the `magento/audiences` module is installed, the following field can be retur
 
 Field | Type | Description
 --- | --- | ---
-`DynamicBlocks.audience_id` | [ID] | An array of of Audience IDs for this block. Available in the `magento/audiences` module only.
+`DynamicBlocks.audience_id` | [ID] | An array of Audience IDs for this block. Available in the `magento/audiences` module only.
 
 ## Syntax
 
