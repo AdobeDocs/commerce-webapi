@@ -301,6 +301,47 @@ Attribute | Data type | Description
 
 The `items` object contains information about each product that match the search criteria. [ProductInterface](../interfaces/attributes/) describes the possible contents of this object.
 
+### `filters` attribute for `custom_attributesV2`
+
+The `filters` object determines which custom attributes will be used to narrow the results when using `products` query. It contains at least one attribute and the value that is being searched for. The following example searches for custom attributes of a product where `is_comparable` is `true`.
+
+```graphql
+{
+    products(filter: {sku: {eq: "24-MB02"}})
+    {
+        items
+        {
+            custom_attributesV2(filters: {is_comparable: true}) 								{
+                items {
+                    is_comparable
+                    code
+                }
+                errors {
+                    type
+                    message
+                }
+            }
+        }
+    }
+}
+```
+
+The application processes the attribute values specified in `filters`. By default, you can use the following attributes:
+
+Attribute | Data type | Description
+--- | --- | ---
+`is_comparable` | Boolean | Whether a product or category attribute can be compared against another or not
+`is_filterable` | Boolean | Whether a product or category attribute can be filtered or not
+`is_filterable_in_search` | Boolean | Whether a product or category attribute can be filtered in search or not
+`is_html_allowed_on_front` | Boolean | Whether a product or category attribute can use HTML on front or not
+`is_searchable` | Boolean | Whether a product or category attribute can be searched or not
+`is_used_for_price_rules` | Boolean | Whether a product or category attribute can be used for price rules or not
+`is_used_for_promo_rules` | Boolean | Whether a product or category attribute is used for promo rules or not
+`is_visible_in_advanced_search` | Boolean | Whether a product or category attribute is visible in advanced search or not
+`is_visible_on_front` | Boolean | Whether a product or category attribute is visible on front or not
+`is_wysiwyg_enabled` | Boolean | Whether a product or category attribute has WYSIWYG enabled or not
+`used_in_product_listing` | Boolean | Whether a product or category attribute is used in product listing or not
+
 ### SearchResultPageInfo attributes
 
 The `SearchResultPageInfo` object provides navigation for the query response.
@@ -2069,6 +2110,92 @@ The following query returns information about each variant of the configurable p
               ]
             }
           ]
+        }
+      ]
+    }
+  }
+}
+```
+
+### Filter `custom_attributesV2` of a product
+
+The following query returns `custom_attributes` of a product that have `is_comparable` enabled.
+
+**Request:**
+
+```graphql
+{
+    products(filter: {sku: {eq: "24-MB02"}})
+    {
+        items
+        {
+            sku
+            name
+            custom_attributesV2(filters: {is_comparable: true})
+            {
+                items
+                {
+                    is_comparable
+                    code
+                    is_visible_on_front
+                    ... on AttributeValue {
+                        value
+                    }
+                    ... on AttributeSelectedOptions {
+                        selected_options {
+                            label
+                            value
+                        }
+                    }
+                },
+                errors {
+                    type
+                    message
+                }
+            }
+        }
+    }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "products": {
+      "items": [
+        {
+          "sku": "24-MB02",
+          "name": "Fusion Backpack",
+          "custom_attributesV2": {
+            "items": [
+              {
+                "is_comparable": true,
+                "code": "description",
+                "value": "<p>With the Fusion Backpack strapped on, every trek is an adventure - even a bus ride to work. That's partly because two large zippered compartments store everything you need, while a front zippered pocket and side mesh pouches are perfect for stashing those little extras, in case you change your mind and take the day off.</p>\n<ul>\n<li>Durable nylon construction.</li>\n<li>2 main zippered compartments.</li>\n<li>1 exterior zippered pocket.</li>\n<li>Mesh side pouches.</li>\n<li>Padded, adjustable straps.</li>\n<li>Top carry handle.</li>\n<li>Dimensions: 18\" x 10\" x 6\".</li>\n</ul>"
+              },
+              {
+                "is_comparable": true,
+                "code": "activity",
+                "selected_options": [
+                  {
+                    "label": "Yoga",
+                    "value": "17"
+                  },
+                  {
+                    "label": "Hiking",
+                    "value": "27"
+                  },
+                  {
+                    "label": "School",
+                    "value": "29"
+                  }
+                ]
+              }
+            ],
+            "errors": []
+          }
         }
       ]
     }
