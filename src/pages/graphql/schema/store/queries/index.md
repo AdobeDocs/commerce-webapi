@@ -4,7 +4,7 @@ title: Store queries | Commerce Web APIs
 
 # Store queries
 
-The queries in the store schema fetch store configuration data and content blocks. 
+The queries in the store schema fetch store configuration data and content blocks.
 
 - Store configuration
   - [availableStores](available-stores.md)
