@@ -14,7 +14,7 @@ Return the contents of one or more CMS blocks:
 
 ## Reference
 
-[`cmsBlocks`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-cmsBlocks) query
+The [`cmsBlocks`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-cmsBlocks) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

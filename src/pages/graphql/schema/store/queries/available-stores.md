@@ -16,7 +16,7 @@ Specify the [Store header](../../../usage/headers.md) to determine the scope of 
 
 ## Reference
 
-[`availableStores`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-availableStores) query
+The [`availableStores`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-availableStores) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

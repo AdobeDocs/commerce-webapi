@@ -12,7 +12,7 @@ Use the `currency` query to return information about the store's currency config
 
 ## Reference
 
-[`currency`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#query-currency) query
+The [`currency`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#query-currency) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

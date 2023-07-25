@@ -12,7 +12,7 @@ The `storeConfig` query defines information about a store's configuration. You c
 
 ## Reference
 
-[`storeConfig`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-storeConfig) query
+The [`storeConfig`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-storeConfig) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
