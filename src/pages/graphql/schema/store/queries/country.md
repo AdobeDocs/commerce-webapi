@@ -14,7 +14,7 @@ Use the [countries](../../store/queries/countries.md) query to retrieve a list o
 
 ## Reference
 
-The [`country`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#query-country) reference provides detailed information about the types and fields defined in this query.
+The [`country`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-country) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
