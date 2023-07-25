@@ -10,6 +10,10 @@ The `storeConfig` query defines information about a store's configuration. You c
 
 `storeConfig: StoreConfig`
 
+## Reference
+
+[`storeConfig`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-storeConfig) query
+
 ## Example usage
 
 ### Query a store's configuration
@@ -239,9 +243,3 @@ The following query returns enumeration values that indicate the store's fixed p
   }
 }
 ```
-
-## Output attributes
-
-import StoreConfig from '/src/pages/_includes/graphql/store-config.md'
-
-<StoreConfig />
