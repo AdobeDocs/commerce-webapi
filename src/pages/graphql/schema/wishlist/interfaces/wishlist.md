@@ -6,13 +6,13 @@ title: WishlistItemInterface attributes and implementations | Commerce Web APIs
 
 `WishlistItemInterface` provides details about items in a wish list. It has the following implementations:
 
-*  [`BundleWishlistItem`]
-*  [`ConfigurableWishlistItem`]
-*  [`DownloadableWishlistItem`]
-*  [`GiftCardWishlistItem`]
-*  [`GroupedProductWishlistItem`]
-*  [`SimpleWishlistItem`]
-*  [`VirtualWishlistItem`]
+*  `BundleWishlistItem`
+*  `ConfigurableWishlistItem`
+*  `DownloadableWishlistItem`
+*  `GiftCardWishlistItem`
+*  `GroupedProductWishlistItem`
+*  `SimpleWishlistItem`
+*  `VirtualWishlistItem`
 
 ## Reference
 
