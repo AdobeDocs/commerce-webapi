@@ -22,15 +22,33 @@ Widgets defined with the **Specified Dynamic Blocks** option affect CMS page ren
 
 Adobe Commerce and Magento Open Source GraphQL supports the **Display all instead of rotating** rotation mode only.
 
+The following input fields are available only if specialized modules have been installed:
+
+Field | Type | Description
+--- | --- | ---
+`audience_id` field | FilterEqualTypeInput | The Audience ID for this block. Available in the `magento/audiences` module only.
+`cart_id` | String | The unique ID that identifies the customer's cart. Available in the `magento2-pwa-commerce` module only.
+`product_uid` | ID | The unique ID of the currently viewed product. Available in the `magento2-pwa-commerce` module only.
+
+If the `magento/audiences` module is installed, the following field can be returned:
+
+Field | Type | Description
+--- | --- | ---
+`DynamicBlocks.audience_id` | [ID] | An array of Audience IDs for this block. Available in the `magento/audiences` module only.
+
 ## Syntax
 
 ```graphql
-dynamic_blocks(
+dynamicBlocks(
     input: DynamicBlocksFilterInput
     pageSize: Int
     currentPage: Int
     ): DynamicBlocks!
 ```
+
+## Reference
+
+The [`dynamic_blocks`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-dynamicBlocks) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -122,42 +140,3 @@ The following code illustrates the definition of the dynamic block with the `uid
   </ul>\n
 </div>
 ```
-
-## Input attributes
-
-Attribute | Data type | Description
---- | --- | ---
-`audience_id` | FilterEqualTypeInput | Audience ID for this block. Available in the `magento/audiences` module only.
-`cart_id` | String | The unique ID that identifies the customer's cart. Available in the `magento2-pwa-commerce` module only.
-`dynamic_block_uids` | [ID] | An array of dynamic block UIDs to filter on
-`locations` | [DynamicBlockLocationEnum] | An array indicating the locations the dynamic block can be placed. The possible values are CONTENT, HEADER, FOOTER, LEFT, and RIGHT. If this attribute is not specified, the query returns all locations
-`product_uid` | ID | The unique ID of the product currently viewed. Available in the `magento2-pwa-commerce` module only.
-`type` | DynamicBlockTypeEnum! | A value indicating the type of dynamic block to filter on. The possible values are CART_PRICE_RULE_RELATED, CATALOG_PRICE_RULE_RELATED, and SPECIFIED
-
-## Output attributes
-
-The `DynamicBlocks` output object contains the following attributes.
-
-Attribute | Data type | Description
---- | --- | ---
-`items` | [DynamicBlock]! | An array containing individual dynamic blocks
-`page_info` | SearchResultPageInfo | Metadata for pagination rendering
-`total_count` | Int! | The number of returned dynamic blocks
-
-### DynamicBlock attributes
-
-The `DynamicBlock` object contains the following attributes.
-
-Attribute | Data type | Description
---- | --- | ---
-`audience_id` | [ID] | An array of of Audience IDs for this block. Available in the `magento/audiences` module only.
-`content` | ComplexTextValue! | Contains the renderable HTML code of the dynamic block
-`uid` | ID! | The unique ID of a DynamicBlock object
-
-### ComplexTextValue attributes
-
-The `DynamicBlock` object contains the following attributes.
-
-Attribute | Data type | Description
---- | --- | ---
-`html` | String! | The HTML content of the dynamic block
