@@ -27,6 +27,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`updateWishlist`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateWishlist) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example changes the name of an existing wish list.
@@ -60,23 +64,3 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `updateWishlist` mutation requires the following input.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`name` | String! | The unique ID of `Wishlist` object
-`visibility`| WishlistVisibilityEnum! | Describes the visibility of the wish list. Possible values are `PRIVATE` and `PUBLIC`
-`wishlistUid` | ID! | The ID of the wish list to update
-
-## Output attributes
-
-The `UpdateWishlistOutput` object can contain the following attributes.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`name` | String! | The wish list name
-`uid` | ID! | The ID of the updated wish list
-`visibility` | WishlistVisibilityEnum! | The wish list visibility. Possible values are `PRIVATE` and `PUBLIC`

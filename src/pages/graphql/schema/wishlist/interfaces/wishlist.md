@@ -6,82 +6,17 @@ title: WishlistItemInterface attributes and implementations | Commerce Web APIs
 
 `WishlistItemInterface` provides details about items in a wish list. It has the following implementations:
 
-*  [`BundleWishlistItem`](#bundlewishlistitem-attributes)
-*  [`ConfigurableWishlistItem`](#configurablewishlistitem-attributes)
-*  [`DownloadableWishlistItem`](#downloadablewishlistitem-attributes)
-*  [`GiftCardWishlistItem`](#giftcardwishlistitem-attributes)
-*  [`GroupedProductWishlistItem`](#groupedproductwishlistitem-attributes)
-*  [`SimpleWishlistItem`](#simplewishlistitem-attributes)
-*  [`VirtualWishlistItem`](#virtualwishlistitem-attributes)
+*  `BundleWishlistItem`
+*  `ConfigurableWishlistItem`
+*  `DownloadableWishlistItem`
+*  `GiftCardWishlistItem`
+*  `GroupedProductWishlistItem`
+*  `SimpleWishlistItem`
+*  `VirtualWishlistItem`
 
-## Attributes
+## Reference
 
-import WishlistItemInterface from '/src/pages/_includes/graphql/wishlist-item-interface.md'
-
-<WishlistItemInterface />
-
-## Implementations
-
-### BundleWishlistItem attributes
-
-The `BundleWishlistItem` object defines the following bundle-product specific attribute:
-
-Attribute | Data type | Description
---- | --- | ---
-`bundle_options` | [SelectedBundleOption!]| An array containing information about the selected bundle items
-
-### ConfigurableWishlistItem attributes
-
-The `ConfigurableWishlistItem` object defines the following attributes that are specific to configurable products:
-
-Attribute | Data type | Description
---- | --- | ---
-`child_sku` | String! | Deprecated. Use `configured_variant` instead. The SKU of the simple product corresponding to a set of selected configurable options
-`configurable_options` | [SelectedConfigurableOption!] | An array of selected configurable options
-`configured_variant` | [ProductInterface](../../products/interfaces/index.md) | Returns details about the selected variant. The value is null if some options are not configured
-
-### DownloadableWishlistItem attributes
-
-The `DownloadableWishlistItem` object defines the following attributes that are specific to downloadable products:
-
-Attribute | Data type | Description
---- | --- | ---
-`links_v2` | [DownloadableProductLinks] | An array containing information about the selected links
-`samples` | [DownloadableProductSamples] | An array containing information about the selected samples
-
-### GiftCardWishlistItem attributes
-
-The `GiftCardWishlistItem` object defines the following gift card-specific attribute:
-
-Attribute | Data type | Description
---- | --- | ---
-`gift_card_options` | GiftCardOptions! | Contains details about a gift card product
-
-#### GiftCardOptions attributes
-
-The GiftCardOptions object provides details about a gift card. All attributes are optional for a wish list.
-
-Attribute | Data type | Description
---- | --- | ---
-`amount` | Money | The amount and currency of the gift card
-`custom_giftcard_amount` | Money | The custom amount and currency of the gift card
-`message` | String | A message to the recipient
-`recipient_email` | String | The email of the person receiving the gift card
-`recipient_name` | String | The name of the person receiving the gift card
-`sender_email` | String | The email of the sender
-`sender_name` | String | The name of the sender
-
-### GroupedProductWishlistItem attributes
-
-The GroupedProductWishlistItem data type does not provide additional attributes to the `WishlistItemInterface`.
-
-### SimpleWishlistItem attributes
-
-The SimpleWishlistItem data type does not provide additional attributes to the `WishlistItemInterface`.
-
-### VirtualWishlistItem attributes
-
-The VirtualWishlistItem data type does not provide additional attributes to the `WishlistItemInterface`.
+The [`WishlistItemInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-WishlistItemInterface) reference provides detailed information about the types and fields defined in this interface.
 
 ## Example usage
 

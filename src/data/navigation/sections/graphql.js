@@ -1130,7 +1130,7 @@ module.exports = [
         ],
       },
       {
-        title: "Wishlist",
+        title: "Wish list",
         path: "/graphql/schema/wishlist/",
         pages: [
           {
@@ -1138,7 +1138,7 @@ module.exports = [
             path: "/graphql/schema/wishlist/queries/",
             pages: [
               {
-                title: "Wishlist",
+                title: "wishlist",
                 path: "/graphql/schema/wishlist/queries/wishlist/",
               },
             ],
@@ -1190,7 +1190,7 @@ module.exports = [
             path: "/graphql/schema/wishlist/interfaces/",
             pages: [
               {
-                title: "Wishlist",
+                title: "WishlistItemInterface",
                 path: "/graphql/schema/wishlist/interfaces/wishlist/",
               },
             ],
