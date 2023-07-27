@@ -220,11 +220,11 @@ The following call returns the customer address custom attributes for the logged
 }
 ```
 
-### Retrieve custom attributes metadata filtered by `uid`
+### Retrieve custom attributes metadata filtered by `code`
 
 <BetaNote5 />
 
-The following call returns the customer and customer address custom attributes for the logged-in customer filtered by `uid`. Provide the customer's token in the header section of the query.
+The following call returns the customer and customer address custom attributes for the logged-in customer filtered by `code`. Provide the customer's token in the header section of the query.
 
 **Request:**
 
@@ -232,15 +232,13 @@ The following call returns the customer and customer address custom attributes f
 {
   customer {
     email
-    custom_attributes(uids: ["Y3VzdG9tZXIvc3R1ZGllcw=="]) {
-      uid
+    custom_attributes(attributeCodes: ["studies"]) {
       code
       ... on AttributeValue {
         value
       }
       ... on AttributeSelectedOptions {
         selected_options {
-          uid
           label
           value
         }
@@ -248,15 +246,13 @@ The following call returns the customer and customer address custom attributes f
     }
     addresses {
       city
-      custom_attributesV2(uids: ["Y3VzdG9tZXJfYWRkcmVzcy9zZXJ2aWNlcw=="]) {
-        uid
+      custom_attributesV2(attributeCodes: ["services"]) {
         code
         ... on AttributeValue {
             value
         }
         ... on AttributeSelectedOptions {
           selected_options {
-            uid
             label
             value
           }
@@ -276,16 +272,13 @@ The following call returns the customer and customer address custom attributes f
       "email": "jdoe@example.com",
       "custom_attributes": [
         {
-          "uid": "Y3VzdG9tZXIvc3R1ZGllcw==",
           "code": "studies",
           "selected_options": [
             {
-              "uid": "NTEw",
               "label": "BSc",
               "value": "501"
             },
             {
-              "uid": "NTEx",
               "label": "MBA",
               "value": "502"
             }
@@ -297,16 +290,13 @@ The following call returns the customer and customer address custom attributes f
           "city": "Marseille",
           "custom_attributesV2": [
             {
-              "uid": "Y3VzdG9tZXJfYWRkcmVzcy9zZXJ2aWNlcw==",
               "code": "services",
               "selected_options": [
                 {
-                  "uid": "NTA3",
                   "label": "hospital",
                   "value": "507"
                 },
                 {
-                  "uid": "NTA4",
                   "label": "police",
                   "value": "508"
                 }
@@ -1176,8 +1166,18 @@ The `AttributeValueInterface` contains the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`code` | String! | The attribute code
-`uid` | ID! | The unique ID of an attribute value
+`code` | ID! | The attribute code
+`is_comparable` | Boolean | Whether a product or category attribute can be compared against another or not
+`is_filterable` | Boolean | Whether a product or category attribute can be filtered or not
+`is_filterable_in_search` | Boolean | Whether a product or category attribute can be filtered in search or not
+`is_html_allowed_on_front` | Boolean | Whether a product or category attribute can use HTML on front or not
+`is_searchable` | Boolean | Whether a product or category attribute can be searched or not
+`is_used_for_price_rules` | Boolean | Whether a product or category attribute can be used for price rules or not
+`is_used_for_promo_rules` | Boolean | Whether a product or category attribute is used for promo rules or not
+`is_visible_in_advanced_search` | Boolean | Whether a product or category attribute is visible in advanced search or not
+`is_visible_on_front` | Boolean | Whether a product or category attribute is visible on front or not
+`is_wysiwyg_enabled` | Boolean | Whether a product or category attribute has WYSIWYG enabled or not
+`used_in_product_listing` | Boolean | Whether a product or category attribute is used in product listing or not
 
 Currently, `AttributeValueInterface` has two different implementations: `AttributeValue` and `AttributeSelectedOptions`.
 
