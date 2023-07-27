@@ -40,5 +40,4 @@ The `AttributeSelectedOptionInterface` contains the following attributes:
 Attribute |  Data Type | Description
 --- | --- | ---
 `label` | String! | The attribute selected option label
-`uid` | ID! | The unique ID of an attribute selected option
 `value` | String! | The attribute selected option value

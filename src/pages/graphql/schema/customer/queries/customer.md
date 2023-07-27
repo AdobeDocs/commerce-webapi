@@ -220,11 +220,11 @@ The following call returns the customer address custom attributes for the logged
 }
 ```
 
-### Retrieve custom attributes metadata filtered by `uid`
+### Retrieve custom attributes metadata filtered by `code`
 
 <BetaNote5 />
 
-The following call returns the customer and customer address custom attributes for the logged-in customer filtered by `uid`. Provide the customer's token in the header section of the query.
+The following call returns the customer and customer address custom attributes for the logged-in customer filtered by `code`. Provide the customer's token in the header section of the query.
 
 **Request:**
 

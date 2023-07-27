@@ -85,8 +85,8 @@ The `ProductCustomAttributes` object contains the following attributes:
 
 Attribute | Data Type | Description
 --- |---| ---
-`items` | [AttributeValueInterface!](#attributevalueinterface)! | Requested attributes metadata
 `errors` | [AttributeMetadataError!](#attributemetadataerror)! | Errors of retrieving certain attributes metadata
+`items` | [AttributeValueInterface!](#attributevalueinterface)! | Requested attributes metadata
 
 #### AttributeValueInterface
 
@@ -113,8 +113,8 @@ The `AttributeMetadataError` object contains the following attributes:
 
 Attribute | Data Type | Description
 --- | --- | ---
-`type` | AttributeMetadataErrorType! | Attribute metadata retrieval error type
 `message` | String! | Attribute metadata retrieval error message
+`type` | AttributeMetadataErrorType! | Attribute metadata retrieval error type
 
 ### ProductPrices object
 

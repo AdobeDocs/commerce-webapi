@@ -16,7 +16,6 @@ This new query has several features that were not available in the deprecated qu
 
 - All entity types can extend this query.
 - The query provides access to all properties of EAV attributes.
-- `uid` values are now available.
 
 ## Syntax
 
@@ -277,62 +276,62 @@ The `AttributesMetadataOutput` object contains the following attributes:
 
 Attribute | Data Type | Description
 --- |---| ---
-`items` | [CustomAttributeMetadataInterface!]! | Requested attributes metadata
 `errors` | [AttributeMetadataError!]! | Errors of retrieving certain attributes metadata
+`items` | [CustomAttributeMetadataInterface!]! | Requested attributes metadata
 
 The `CustomAttributeMetadataInterface` object contains the following attributes:
 
 Attribute | Data Type | Description
 --- |---| ---
 `code` | ID! | The unique identifier for an attribute. This value should be in lowercase letters without spaces
-`label` | String | The label assigned to the attribute
+`default_value` | String | Default attribute value
 `entity_type` | AttributeEntityTypeEnum! | The type of entity that defines the attribute. Possible values are CATALOG_CATEGORY and CATALOG_PRODUCT
 `frontend_input` | AttributeFrontendInputEnum | The frontend input type of the attribute. Possible values are BOOLEAN, DATE, DATETIME, FILE, GALLERY, HIDDEN, IMAGE, MEDIA_IMAGE, MULTILINE, MULTISELECT, PRICE, SELECT, TEXT, TEXTAREA, WEIGHT and UNDEFINED
-`is_required` | Boolean! | Whether the attribute value is required
-`default_value` | String | Default attribute value
-`is_unique` | Boolean! | Whether the attribute value must be unique
-`options` | [CustomAttributeOptionInterface!]! | Attribute options
 `is_comparable` | Boolean | Whether a product or category attribute can be compared against another or not
 `is_filterable` | Boolean | Whether a product or category attribute can be filtered or not
 `is_filterable_in_search` | Boolean | Whether a product or category attribute can be filtered in search or not
 `is_html_allowed_on_front` | Boolean | Whether a product or category attribute can use HTML on front or not
+`is_required` | Boolean! | Whether the attribute value is required
 `is_searchable` | Boolean | Whether a product or category attribute can be searched or not
+`is_unique` | Boolean! | Whether the attribute value must be unique
 `is_used_for_price_rules` | Boolean | Whether a product or category attribute can be used for price rules or not
 `is_used_for_promo_rules` | Boolean | Whether a product or category attribute is used for promo rules or not
 `is_visible_in_advanced_search` | Boolean | Whether a product or category attribute is visible in advanced search or not
 `is_visible_on_front` | Boolean | Whether a product or category attribute is visible on front or not
 `is_wysiwyg_enabled` | Boolean | Whether a product or category attribute has WYSIWYG enabled or not
+`label` | String | The label assigned to the attribute
+`options` | [CustomAttributeOptionInterface!]! | Attribute options
 `used_in_product_listing` | Boolean | Whether a product or category attribute is used in product listing or not
 
 The `CustomAttributeOptionInterface` object contains the following attributes:
 
 Attribute | Data Type | Description
 --- |---| ---
+`is_default` | Boolean | Is the option value default
 `label` | String! | The label assigned to the attribute option
 `value` | String! | The attribute option value
-`is_default` | Boolean | Is the option value default
 
 The `AttributeMetadataError` object contains the following attributes:
 
 Attribute | Data Type | Description
 --- | --- | ---
-`type` | AttributeMetadataErrorType! | Attribute metadata retrieval error type
 `message` | String! | Attribute metadata retrieval error message
+`type` | AttributeMetadataErrorType! | Attribute metadata retrieval error type
 
 The `CatalogAttributeMetadata` is an implementation of the `CustomAttributeMetadataInterface`. This object contains the following attributes:
 
 Attribute | Data Type | Description
 --- |---| ---
-`is_filterable_in_search` | Boolean! | Whether a product or category attribute can be filtered in search or not
-`used_in_product_listing` | Boolean! | Whether a product or category attribute is used in product listing or not
-`is_searchable` | Boolean! | Whether a product or category attribute can be searched or not
-`is_filterable` | Boolean! | Whether a product or category attribute can be filtered or not
+`apply_to` | [CatalogAttributeApplyToEnum] | To which catalog types an attribute can be applied. Possible values are SIMPLE, VIRTUAL, BUNDLE, DOWNLOADABLE, CONFIGURABLE, GROUPED and CATEGORY
 `is_comparable` | Boolean! | Whether a product or category attribute can be compared against another or not
+`is_filterable` | Boolean! | Whether a product or category attribute can be filtered or not
+`is_filterable_in_search` | Boolean! | Whether a product or category attribute can be filtered in search or not
 `is_html_allowed_on_front` | Boolean! | Whether a product or category attribute can use HTML on front or not
 `is_used_for_price_rules` | Boolean! | Whether a product or category attribute can be used for price rules or not
-`is_wysiwyg_enabled` | Boolean! | Whether a product or category attribute has WYSIWYG enabled or not
+`is_searchable` | Boolean! | Whether a product or category attribute can be searched or not
 `is_used_for_promo_rules` | Boolean! | Whether a product or category attribute is used for promo rules or not
-`apply_to` | [CatalogAttributeApplyToEnum] | To which catalog types an attribute can be applied. Possible values are SIMPLE, VIRTUAL, BUNDLE, DOWNLOADABLE, CONFIGURABLE, GROUPED and CATEGORY
+`is_wysiwyg_enabled` | Boolean! | Whether a product or category attribute has WYSIWYG enabled or not
+`used_in_product_listing` | Boolean! | Whether a product or category attribute is used in product listing or not
 
 Additionally, if the attribute manages `swatch options` (values of the attribute), this object will contain the following attributes:
 

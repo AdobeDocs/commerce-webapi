@@ -50,12 +50,12 @@ The ReturnItem object provides details about an individual item in a return requ
 Attribute |  Data Type | Description
 --- | --- | ---
 `custom_attributes` | [[ReturnCustomAttribute]](#returncustomattribute-attributes) | Return item custom attributes that are visible on the storefront
+`custom_attributesV2` | [AttributeValueInterface!] | Custom attributes that are visible on the storefront
 `order_item` | [OrderItemInterface!](/src/pages/graphql/schema/orders/interfaces/order-item.md) | Provides access to the product being returned, including information about selected and entered options
 `quantity` | Float! | The quantity of the item the merchant authorized to be returned
 `request_quantity` | Float! | The quantity of the item requested to be returned
 `status`| ReturnItemStatus! | An enum indicating the return status of the item. Possible values are APPROVED, AUTHORIZED, DENIED, PENDING, RECEIVED, and REJECTED
 `uid`| ID! | The unique ID of an item of a `Return` object
-`custom_attributesV2` | [AttributeValueInterface!] | Custom attributes that are visible on the storefront
 
 #### ReturnShipping attributes
 
