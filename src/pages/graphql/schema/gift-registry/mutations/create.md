@@ -12,6 +12,8 @@ This mutation requires a valid [customer authentication token](../../customer/mu
 
 The `id` input attribute is optional. If a value is not specified, the application creates one. If you specify a value, then you can create a gift registry and make multiple updates in a single call.
 
+The `dynamic_attributes` input field contains an array of attributes that define elements of the gift registry. Each attribute is specified as a code-value pair.
+
 When assigning a shipping address, you must specify only one of `address_data` or `address_id`.
 
 Only the gift registry owner can view the following output attributes:
@@ -32,6 +34,10 @@ mutation {
   }
 }
 ```
+
+## Reference
+
+The [`createGiftRegistry`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createGiftRegistry) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -199,65 +205,3 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `CreateGiftRegistryInput` input object defines the gift registry.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`dynamic_attributes` | [[GiftRegistryDynamicAttributeInput](#giftregistrydynamicattributeinput-attributes)] | An array of attributes that define elements of the gift registry. Each attribute is specified as a code-value pair
-`event_name` | String! | The name of the event
-`gift_registry_type_uid` | ID! | The ID of the selected event type
-`message` | String! | A message describing the event
-`privacy_settings` | GiftRegistryPrivacySettings! | Indicates whether the registry is PRIVATE or PUBLIC
-`registrants` | [[AddGiftRegistryRegistrantInput!](#addgiftregistryregistrantinput-attributes)]! | The list of people who receive notifications about the registry
-`shipping_address` | [GiftRegistryShippingAddressInput](#giftregistryshippingaddressinput-attributes) | The address for shipping the gift registry. Specify either the `address_data` object or the `address_id` attribute. Validation fails if both are provided
-`status` | GiftRegistryStatus! | An enum that states whether the gift registry is ACTIVE or INACTIVE. Only the registry owner can access this attribute
-
-### AddGiftRegistryRegistrantInput attributes
-
-The `AddGiftRegistryRegistrantInput` object contains the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`dynamic_attributes` | [[GiftRegistryDynamicAttributeInput](#giftregistrydynamicattributeinput-attributes)] | An array of attributes that define elements of the gift registry. Each attribute is specified as a code-value pair
-`email` | String! | The email address of the registrant
-`firstname` | String! | The first name of the registrant
-`lastname` | String! | The last name of the registrant
-
-### GiftRegistryDynamicAttributeInput attributes
-
-The `GiftRegistryDynamicAttributeInput` object contains the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`code` | ID! | A unique key for an additional attribute of the event
-`value` | String! | A corresponding value for the code
-
-### GiftRegistryShippingAddressInput attributes
-
-The `GiftRegistryShippingAddressInput` object contains the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`address_data` | CustomerAddressInput | The complete details of the shipping address
-`address_id` | ID | The ID of predefined customer address
-
-import CustomerAddressInput from '/src/pages/_includes/graphql/customer-address-input-24.md'
-
-<CustomerAddressInput />
-
-## Output attributes
-
-The `CreateGiftRegistryOutput` output object contains the following attribute:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`gift_registry` | [GiftRegistry](#giftregistry-attributes) | Contains the created gift registry
-
-### GiftRegistry attributes
-
-import GiftRegistry from '/src/pages/_includes/graphql/gift-registry.md'
-
-<GiftRegistry />

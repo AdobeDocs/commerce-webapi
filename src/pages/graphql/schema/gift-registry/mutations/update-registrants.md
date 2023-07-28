@@ -22,6 +22,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`updateGiftRegistryRegistrants`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateGiftRegistryRegistrants) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example updates a registrant's e-mail address.
@@ -78,47 +82,3 @@ mutation{
   }
 }
 ```
-
-## Input attributes
-
-The `updateGiftRegistryRegistrants` mutation requires the following input.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`giftRegistryRegistrantUid` | ID! | The unique ID of a `giftRegistryRegistrant` object
-`registrants` | [UpdateGiftRegistryRegistrantInput!]! | An array of registrants to update
-
-### UpdateGiftRegistryRegistrantInput attributes
-
-The `UpdateGiftRegistryRegistrantInput` object can contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`dynamic_attributes` | [[GiftRegistryDynamicAttributeInput](#giftregistrydynamicattributeinput-attributes)] | As a result of the update, only the values of provided attributes will be affected. If the attribute is missing in the request, its value will not be changed
-`email` | String | The updated email address of the registrant
-`firstname` | String | The updated first name of the registrant
-`giftRegistryRegistrantUid` | ID! | The unique ID of a `giftRegistryRegistrant` object
-`lastname` | String | The updated last name of the registrant
-
-### GiftRegistryDynamicAttributeInput attributes
-
-The `GiftRegistryDynamicAttributeInput` object can contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`code` | ID! | A unique key for an additional attribute of the event
-`value` | String! | A corresponding value for the code
-
-## Output attributes
-
-The `UpdateGiftRegistryRegistrantsOutput` output object contains the following attribute.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`gift_registry` | [GiftRegistry](#giftregistry-attributes) | The gift registry after updating registrants
-
-### GiftRegistry attributes
-
-import GiftRegistry from '/src/pages/_includes/graphql/gift-registry.md'
-
-<GiftRegistry />
