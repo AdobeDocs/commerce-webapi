@@ -12,7 +12,7 @@ This mutation requires a valid [customer authentication token](../../customer/mu
 
 The `id` input attribute is optional. If a value is not specified, the application creates one. If you specify a value, then you can create a gift registry and make multiple updates in a single call.
 
-The `dynamic_attributes` input field contains an array of attributes that define elements of the gift registry. Each attribute is specified as a code-value pair
+The `dynamic_attributes` input field contains an array of attributes that define elements of the gift registry. Each attribute is specified as a code-value pair.
 
 When assigning a shipping address, you must specify only one of `address_data` or `address_id`.
 
