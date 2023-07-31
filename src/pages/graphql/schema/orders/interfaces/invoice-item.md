@@ -6,60 +6,14 @@ title: InvoiceItemInterface attributes and implementations | Commerce Web APIs
 
 `InvoiceItemInterface` provides details about items in a customer's order history that were invoiced. It has the following implementations:
 
-*  [`BundleInvoiceItem`](#bundleinvoiceitem-attributes)
-*  [`DownloadableInvoiceItem`](#downloadableinvoiceitem-attributes)
-*  [`GiftCardInvoiceItem`](#giftcardinvoiceitem-attributes)
-*  [`InvoiceItem`](#invoiceitem-attributes)
+*  `BundleInvoiceItem`
+*  `DownloadableInvoiceItem`
+*  `GiftCardInvoiceItem`
+*  `InvoiceItem`
 
-## Attributes
+## Reference
 
-The `InvoiceItemInterface` describes a specific invoice.
-
-import InvoiceItemInterface from '/src/pages/_includes/graphql/invoice-item-interface.md'
-
-<InvoiceItemInterface />
-
-## Implementations
-
-### BundleInvoiceItem attributes
-
-The `BundleInvoiceItem` object defines the following attribute:
-
-Attribute | Data type | Description
---- | --- | ---
-`bundle_options` | [[ItemSelectedBundleOption]](#itemselectedbundleoption-attributes) | A list of bundle options that are assigned to the bundle product
-
-import ItemSelectedBundleOption from '/src/pages/_includes/graphql/item-selected-bundle-option.md'
-
-<ItemSelectedBundleOption />
-
-### DownloadableInvoiceItem attributes
-
-The `DownloadableInvoiceItem` object defines the following attribute:
-
-Attribute | Data type | Description
---- | --- | ---
-`downloadable_links` | [[DownloadableItemsLinks]](#downloadableitemslinks-attributes) | A list of downloadable links from the invoiced downloadable product
-
-import DownloadableItemsLinks from '/src/pages/_includes/graphql/downloadable-items-links.md'
-
-<DownloadableItemsLinks />
-
-### GiftCardInvoiceItem attributes
-
-The `GiftCardInvoiceItem` object defines the following attribute:
-
-Attribute | Data type | Description
---- | --- | ---
-`gift_card` | [GiftCardItem](#giftcarditem-attributes) | Selected gift card properties for an invoiced item
-
-import GiftCardItem from '/src/pages/_includes/graphql/gift-card-item.md'
-
-<GiftCardItem />
-
-### InvoiceItem attributes
-
-The `InvoiceItem` object does not introduce any additional attributes to `InvoiceItemInterface`.
+The [`InvoiceItemInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-InvoiceItemInterface) reference provides detailed information about the types and fields defined in this interface.
 
 ## Example usage
 

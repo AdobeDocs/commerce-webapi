@@ -14,6 +14,10 @@ mutation: {
 }
 ```
 
+## Reference
+
+The [`addReturnTracking`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addReturnTracking) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example adds the shipping carrier and a tracking number for the specified return request.
@@ -57,31 +61,6 @@ mutation{
   }
 }
 ```
-
-## Input attributes
-
-The `AddReturnTrackingInput` object must contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`carrier_uid`| ID! | The unique ID of a `ReturnShippingCarrier` object
-`return_uid` | ID! | The unique ID of a `Return` object
-`tracking_number` | String! | The shipping tracking number for this return request
-
-## Output attributes
-
-The `AddReturnTrackingOutput` object contains the following attributes.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`return` | [Return](#return-object) | Contains details about the modified return
-`return_shipping_tracking` | [ReturnShippingTracking](#returnshippingtracking-attributes) | Contains details about shipping for a return
-
-### Return object
-
-import Return from '/src/pages/_includes/graphql/return.md'
-
-<Return />
 
 ## Related topics
 
