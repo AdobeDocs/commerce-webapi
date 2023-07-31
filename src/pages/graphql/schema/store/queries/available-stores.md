@@ -14,9 +14,14 @@ Specify the [Store header](../../../usage/headers.md) to determine the scope of 
 
 `availableStores(useCurrentGroup: Boolean): [StoreConfig]`
 
+## Reference
+
+The [`availableStores`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-availableStores) reference provides detailed information about the types and fields defined in this query.
+
 ## Example usage
 
 The following query returns information about the store's basic catalog configuration.
+
 **Request:**
 
 ```graphql
@@ -94,15 +99,3 @@ query {
   }
 }
 ```
-
-## Input attributes
-
-Attribute | Data type | Description
---- | --- | ---
-`useCurrentGroup` | Boolean | Filter store views by current store group
-
-## Output attributes
-
-import StoreConfig from '/src/pages/_includes/graphql/store-config.md'
-
-<StoreConfig />

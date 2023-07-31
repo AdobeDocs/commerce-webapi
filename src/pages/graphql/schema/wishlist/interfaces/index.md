@@ -1,5 +1,7 @@
 ---
-title: Wishlist interfaces | Commerce Web APIs
+title: Wish list interfaces | Commerce Web APIs
 ---
 
-# Wishlist interfaces
+# Wish list interfaces
+
+`WishlistItemInterface` provides details about items in a wish list.

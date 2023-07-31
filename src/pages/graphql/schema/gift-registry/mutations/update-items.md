@@ -22,6 +22,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`updateGiftRegistryItems`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateGiftRegistryItems) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example changes the quantity and description of an item in a gift registry
@@ -84,34 +88,3 @@ mutation{
   }
 }
 ```
-
-## Input attributes
-
-The `updateGiftRegistryItems` mutation requires the following input.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`giftRegistryUid` | ID! | The unique ID of a `GiftRegistry` object
-`items`| [[UpdateGiftRegistryItemInput!]!](#updategiftregistryiteminput-attributes) | An array of items to update
-
-### UpdateGiftRegistryItemInput attributes
-
-Attribute |  Data Type | Description
---- | --- | ---
-`gift_registry_item_uid` | ID! | The unique ID of a `giftRegistryItem` object
-`note` |String | The updated description of the item
-`quantity` | Float! | The updated quantity of the gift registry item
-
-## Output attributes
-
-The `UpdateGiftRegistryItemsOutput` output object contains the following attribute.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`gift_registry` | [GiftRegistry](#giftregistry-attributes) | The gift registry after updating items
-
-### GiftRegistry attributes
-
-import GiftRegistry from '/src/pages/_includes/graphql/gift-registry.md'
-
-<GiftRegistry />

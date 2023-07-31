@@ -27,6 +27,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`moveProductsBetweenWishlists`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-moveProductsBetweenWishlists) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example moves an item to another wish list. The ID of the moved product changes.
@@ -220,44 +224,3 @@ mutation{
   }
 }
 ```
-
-## Input attributes
-
-The `moveProductsBetweenWishlists` mutation requires the following input.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`destinationWishlistUid` | ID! | The ID of the wishlist to move products to
-`sourceWishlistUid` | ID! | The ID of the origin wishlist
-`wishlistItems` | [WishlistItemMoveInput!]! | A list of items to be moved
-
-### WishlistItemMoveInput attributes
-
-The WishlistItemMoveInput object contains the following attributes.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`quantity` | Float | The quantity of this item to move to the destination wish list. This value cannot be greater than the quantity in the source wish list
-`wishlist_item_id` | ID! | The unique ID of the `WishlistItemInterface` item to be moved
-
-## Output attributes
-
-The `MoveProductsBetweenWishlistsOutput` object can contain the following attributes.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`destination_wishlist` | [Wishlist!](#wishlist-attributes) | The destination wish list containing the moved products
-`source_wishlist` | [Wishlist!](#wishlist-attributes) | The wish list that the products were moved from
-`user_errors` | [[WishListUserInputError!](#wishlistuserinputerror-attributes)] | An array of errors encountered while copying products in a wish list
-
-### Wishlist attributes
-
-import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
-
-<Wishlist />
-
-### WishListUserInputError attributes
-
-import WishlistUserInputError from '/src/pages/_includes/graphql/wishlist-user-input-errors.md'
-
-<WishlistUserInputError />
