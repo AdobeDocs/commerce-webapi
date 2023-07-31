@@ -6,60 +6,14 @@ title: CreditMemoItemInterface attributes and implementations | Commerce Web API
 
 `CreditMemoItemInterface` provides details about items in a customer's order history that were refunded. It has the following implementations:
 
-*  [`BundleCreditMemoItem`](#bundlecreditmemoitem-attributes)
-*  [`CreditMemoItem`](#creditmemoitem-attributes)
-*  [`DownloadableCreditMemoItem`](#downloadablecreditmemoitem-attributes)
-*  [`GiftCardCreditMemoItem`](#giftcardcreditmemoitem-attributes)
+*  `BundleCreditMemoItem`
+*  `CreditMemoItem`
+*  `DownloadableCreditMemoItem`
+*  `GiftCardCreditMemoItem`
 
-## Attributes
+## Reference
 
-The `CreditMemoItemInterface` describes a specific credit memo.
-
-import CreditMemoItemInterface from '/src/pages/_includes/graphql/credit-memo-item-interface.md'
-
-<CreditMemoItemInterface />
-
-## Implementations
-
-### BundleCreditMemoItem attributes
-
-The `BundleCreditMemoItem` object defines the following attribute:
-
-Attribute | Data type | Description
---- | --- | ---
-`bundle_options` | [[ItemSelectedBundleOption]](#itemselectedbundleoption-attributes) | A list of bundle options that are assigned to the bundle product
-
-import ItemSelectedBundleOption from '/src/pages/_includes/graphql/item-selected-bundle-option.md'
-
-<ItemSelectedBundleOption />
-
-### CreditMemoItem attributes
-
-The `CreditMemoItem` object does not introduce any additional attributes to `CreditMemoItemInterface`.
-
-### DownloadableCreditMemoItem attributes
-
-The `DownloadableCreditMemoItem` object defines the following attribute:
-
-Attribute | Data type | Description
---- | --- | ---
-`downloadable_links` | [[DownloadableItemsLinks]](#downloadableitemslinks-attributes) | A list of downloadable links that were refunded from the downloadable product
-
-import DownloadableItemsLinks from '/src/pages/_includes/graphql/downloadable-items-links.md'
-
-<DownloadableItemsLinks />
-
-### GiftCardCreditMemoItem attributes
-
-The `GiftCardCreditMemoItem` object defines the following attribute:
-
-Attribute | Data type | Description
---- | --- | ---
-`gift_card` | [GiftCardItem](#giftcarditem-attributes) | Selected gift card properties for an order item
-
-import GiftCardItem from '/src/pages/_includes/graphql/gift-card-item.md'
-
-<GiftCardItem />
+The [`CreditMemoItemInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CreditMemoItemInterface) reference provides detailed information about the types and fields defined in this interface.
 
 ## Example usage
 
