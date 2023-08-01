@@ -14,7 +14,7 @@ These forms are visible when using the Admin to create or edit a customer or cus
 
 <InlineAlert variant="info" slots="text" />
 
-Use the [country](https://github.com/AdobeDocs/store/queries/country.md) and [countries](https://github.com/AdobeDocs/stores/queries/countries.md) mutations to retrieve information about the region_id and country_id attributes.
+Use the [country](../../store/queries/country.md) and [countries](../../store/queries/countries.md) mutations to retrieve information about the region_id and country_id attributes.
 
 The following table maps the display names of the applicable forms to values that you can specify as a `formCode` value.
 
