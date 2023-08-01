@@ -15,6 +15,10 @@ The `giftRegistryTypes` query returns a list of available gift registry types.
 giftRegistryTypes: [GiftRegistryType]
 ```
 
+## Reference
+
+The [`giftRegistryTypes`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-giftRegistryTypes) reference provides detailed information about the types and fields defined in this query.
+
 ## Example usage
 
 The following example returns information about the list of available gift registry types.

@@ -12,6 +12,10 @@ Use the [countries](../../store/queries/countries.md) query to retrieve a list o
 
 `{country(id: String) {Country}}`
 
+## Reference
+
+The [`country`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-country) reference provides detailed information about the types and fields defined in this query.
+
 ## Example usage
 
 The following query uses a two-letter abbreviation for the country ID (id: "AU"), which returns information about Australia.
@@ -92,22 +96,6 @@ query {
   }
 }
 ```
-
-## Input attributes
-
-The `country` query requires the following input:
-
-Attribute | Data type | Description
---- | --- | ---
-`id` | String | A unique ID for the country
-
-## Output attributes
-
-The query returns a single `Country` object.
-
-import CountryOutput from '/src/pages/_includes/graphql/country-output.md'
-
-<CountryOutput />
 
 ## Related topics
 

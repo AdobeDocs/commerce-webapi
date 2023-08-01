@@ -27,6 +27,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`createWishlist`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createWishlist) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example creates the `My favorites` public wish list.
@@ -64,20 +68,3 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `CreateWishlistInput` object requires the following input.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`name` | String! | The ID of the customer's wish list
-`visibility`| WishlistVisibilityEnum! | Describes the visibility of the wish list. Possible values are `PRIVATE` and `PUBLIC`
-
-## Output attributes
-
-The `createWishlist` mutation returns the Wishlist object.
-
-import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
-
-<Wishlist />

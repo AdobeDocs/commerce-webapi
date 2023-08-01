@@ -17,6 +17,10 @@ giftRegistryTypeSearch(
 ): [GiftRegistrySearchResult]
 ```
 
+## Reference
+
+The [`giftRegistryTypeSearch`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-giftRegistryTypeSearch) reference provides detailed information about the types and fields defined in this query.
+
 ## Example usage
 
 The following example returns all gift registries in which the specified person is a registrant.
@@ -52,19 +56,3 @@ query{
   }
 }
 ```
-
-## Input attributes
-
-The `giftRegistryTypeSearch` query accepts the following input attributes.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`firstName` | String! | The first name of the registrant
-`lastName` | String! | The last name of the registrant
-`giftRegistryTypeUid` | String | The type UID of the registry
-
-## Output attributes
-
-import GiftRegistrySearchResult from '/src/pages/_includes/graphql/gift-registry-search-result.md'
-
-<GiftRegistrySearchResult />

@@ -6,58 +6,14 @@ title: OrderItemInterface attributes and implementations | Commerce Web APIs
 
 `OrderItemInterface` provides details about items in a customer's order history. It has the following implementations:
 
-*  [`OrderItem`](#orderitem-attributes)
-*  [`BundleOrderItem`](#bundleorderitem-attributes)
-*  [`DownloadableOrderItem`](#downloadableorderitem-attributes)
-*  [`GiftCardOrderItem`](#giftcardorderitem-attributes)
+*  `OrderItem`
+*  `BundleOrderItem`
+*  `DownloadableOrderItem`
+*  `GiftCardOrderItem`
 
-## Attributes
+## Reference
 
-import OrderItemInterface from '/src/pages/_includes/graphql/order-item-interface.md'
-
-<OrderItemInterface />
-
-## Implementations
-
-### OrderItem attributes
-
-The `OrderItem` object does not introduce any additional attributes to `OrderItemInterface`.
-
-### BundleOrderItem attributes
-
-The `BundleOrderItem` object defines the following attribute:
-
-Attribute | Data type | Description
---- | --- | ---
-`bundle_options` | [[ItemSelectedBundleOption]](#itemselectedbundleoption-attributes) | A list of bundle options that are assigned to the bundle product
-
-import ItemSelectedBundleOption from '/src/pages/_includes/graphql/item-selected-bundle-option.md'
-
-<ItemSelectedBundleOption />
-
-### DownloadableOrderItem attributes
-
-The `DownloadableOrderItem` object defines the following attribute:
-
-Attribute | Data type | Description
---- | --- | ---
-`downloadable_links` | [[DownloadableItemsLinks]](#downloadableorderitem-attributes) | A list of downloadable links that were ordered from the downloadable product
-
-import DownloadableItemsLinks from '/src/pages/_includes/graphql/downloadable-items-links.md'
-
-<DownloadableItemsLinks />
-
-### GiftCardOrderItem attributes
-
-The `GiftCardOrderItem` object defines the following attribute:
-
-Attribute | Data type | Description
---- | --- | ---
-`gift_card` | [GiftCardItem](#giftcardorderitem-attributes) | Selected gift card properties for an order item
-
-import GiftCardItem from '/src/pages/_includes/graphql/gift-card-item.md'
-
-<GiftCardItem />
+The [`OrderItemInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-OrderItemInterface) reference provides detailed information about the types and fields defined in this interface.
 
 ## Example usage
 

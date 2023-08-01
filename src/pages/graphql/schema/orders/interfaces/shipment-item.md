@@ -6,47 +6,13 @@ title: ShipmentItemInterface attributes and implementations | Commerce Web APIs
 
 `ShipmentItemInterface` provides details about items in a customer's order history that were shipped. It has the following implementations:
 
-*  [`BundleShipmentItem`](#bundleshipmentitem-attributes)
-*  [`GiftCardShipmentItem`](#giftcardshipmentitem-attributes)
-*  [`ShipmentItem`](#shipmentitem-attributes)
+*  `BundleShipmentItem`
+*  `GiftCardShipmentItem`
+*  `ShipmentItem`
 
-## Attributes
+## Reference
 
-The `ShipmentItemInterface` describes a specific shipmemt.
-
-import ShipmentItemInterface from '/src/pages/_includes/graphql/shipment-item-interface.md'
-
-<ShipmentItemInterface />
-
-## Implementations
-
-### BundleShipmentItem attributes
-
-The `BundleShipmentItem` object defines the following attribute:
-
-Attribute | Data type | Description
---- | --- | ---
-`bundle_options` | [[ItemSelectedBundleOption]](#itemselectedbundleoption-attributes) | A list of bundle options that are assigned to the bundle product
-
-import ItemSelectedBundleOption from '/src/pages/_includes/graphql/item-selected-bundle-option.md'
-
-<ItemSelectedBundleOption />
-
-### GiftCardShipmentItem attributes
-
-The `GiftCardShipmentItem` object defines the following attribute:
-
-Attribute | Data type | Description
---- | --- | ---
-`gift_card` | [GiftCardItem](#giftcardshipmentitem-attributes) | Selected properties for a shipped gift card
-
-import GiftCardItem from '/src/pages/_includes/graphql/gift-card-item.md'
-
-<GiftCardItem />
-
-### ShipmentItem attributes
-
-The `ShipmentItem` object does not introduce any additional attributes to `ShipmentItemInterface`.
+The [`ShipmentItemInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-ShipmentItemInterface) reference provides detailed information about the types and fields defined in this interface.
 
 ## Example usage
 
