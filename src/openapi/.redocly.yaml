@@ -28,3 +28,5 @@ features.openapi:
   nativeScrollbars: true
   ctrlFHijack: true
   scrollYOffset: .site-nav
+theme.openapi:
+  searchFieldLevelBoost: .5
