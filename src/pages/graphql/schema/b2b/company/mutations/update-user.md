@@ -161,7 +161,7 @@ Attribute |  Data Type | Description
 
 ### Customer attributes
 
-import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
+import Customer from '/src/_includes/graphql/customer-output-24.md'
 
 <Customer />
 

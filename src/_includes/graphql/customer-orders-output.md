@@ -86,7 +86,7 @@ Attribute | Data type | Description
 
 `CreditMemoItemInterface` defines the following attributes.
 
-import CreditMemoItemInterface from '/src/pages/_includes/graphql/credit-memo-item-interface.md'
+import CreditMemoItemInterface from '/src/_includes/graphql/credit-memo-item-interface.md'
 
 <CreditMemoItemInterface />
 
@@ -119,13 +119,13 @@ Attribute | Data type | Description
 
 ### GiftMessage attributes
 
-import GiftMessage from '/src/pages/_includes/graphql/gift-message.md'
+import GiftMessage from '/src/_includes/graphql/gift-message.md'
 
 <GiftMessage />
 
 ### GiftWrapping attributes
 
-import GiftWrapping from '/src/pages/_includes/graphql/gift-wrapping.md'
+import GiftWrapping from '/src/_includes/graphql/gift-wrapping.md'
 
 <GiftWrapping />
 
@@ -145,7 +145,7 @@ Attribute | Data type | Description
 
 `InvoiceItemInterface` defines the following attributes.
 
-import InvoiceItemInterface from '/src/pages/_includes/graphql/invoice-item-interface.md'
+import InvoiceItemInterface from '/src/_includes/graphql/invoice-item-interface.md'
 
 <InvoiceItemInterface />
 
@@ -223,7 +223,7 @@ Attribute |  Data Type | Description
 
 `OrderItemInterface` defines the following attributes.
 
-import OrderItemInterface from '/src/pages/_includes/graphql/order-item-interface.md'
+import OrderItemInterface from '/src/_includes/graphql/order-item-interface.md'
 
 <OrderItemInterface />
 
@@ -362,7 +362,7 @@ Attribute | Data type | Description
 
 `ShipmentItemInterface` defines the following attributes.
 
-import ShipmentItemInterface from '/src/pages/_includes/graphql/shipment-item-interface.md'
+import ShipmentItemInterface from '/src/_includes/graphql/shipment-item-interface.md'
 
 <ShipmentItemInterface />
 

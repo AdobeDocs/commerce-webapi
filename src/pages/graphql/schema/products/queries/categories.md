@@ -163,7 +163,7 @@ Attribute | Data type | Description
 
 ### CategoryFilterInput object
 
-import CategoryFilterInput from '/src/pages/_includes/graphql/category-filter-input.md'
+import CategoryFilterInput from '/src/_includes/graphql/category-filter-input.md'
 
 <CategoryFilterInput />
 

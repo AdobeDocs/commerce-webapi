@@ -75,6 +75,6 @@ Attribute |  Data Type | Description
 
 The `Cart` object can contain the following attributes.
 
-import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
+import CartObject from '/src/_includes/graphql/cart-object-24.md'
 
 <CartObject />

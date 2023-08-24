@@ -2,9 +2,9 @@
 title: updateCustomerV2 mutation | Commerce Web APIs
 ---
 
-import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
-import Example246 from '/src/pages/_includes/graphql/examples/update-v2-246.md'
-import Example247 from '/src/pages/_includes/graphql/examples/update-v2-247beta.md'
+import Customer from '/src/_includes/graphql/customer-output-24.md'
+import Example246 from '/src/_includes/graphql/examples/update-v2-246.md'
+import Example247 from '/src/_includes/graphql/examples/update-v2-247beta.md'
 
 # updateCustomerV2 mutation
 
@@ -52,7 +52,7 @@ Attribute |  Data Type | Description
 
 The `AttributeValueInput` object contains the following attributes:
 
-import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
+import BetaNote from '/src/_includes/graphql/notes/beta.md'
 
 <BetaNote />
 

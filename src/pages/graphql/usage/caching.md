@@ -2,8 +2,8 @@
 title: GraphQL caching | Commerce Web APIs
 ---
 
-import Queries246 from '/src/pages/_includes/graphql/cache/queries-246.md'
-import Queries247 from '/src/pages/_includes/graphql/cache/queries-247beta.md'
+import Queries246 from '/src/_includes/graphql/cache/queries-246.md'
+import Queries247 from '/src/_includes/graphql/cache/queries-247beta.md'
 
 # GraphQL caching
 

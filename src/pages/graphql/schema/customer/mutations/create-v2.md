@@ -2,9 +2,9 @@
 title: createCustomerV2 mutation | Commerce Web APIs
 ---
 
-import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
-import Example246 from '/src/pages/_includes/graphql/examples/create-v2-246.md'
-import Example247 from '/src/pages/_includes/graphql/examples/create-v2-247beta.md'
+import Customer from '/src/_includes/graphql/customer-output-24.md'
+import Example246 from '/src/_includes/graphql/examples/create-v2-246.md'
+import Example247 from '/src/_includes/graphql/examples/create-v2-247beta.md'
 
 # createCustomerV2 mutation
 
