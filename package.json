@@ -25,7 +25,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test:links": "remark src/pages --ignore-pattern src/pages/graphql,src/pages/_includes --quiet --frail",
+    "test:links": "remark src/pages --ignore-pattern src/pages/graphql,src/_includes --quiet --frail",
     "build:spectaql": "spectaql --target-dir static/graphql-api/ --target-file index.html spectaql/config.yml",
     "build:spectaql:beta": "spectaql --target-dir static/graphql-api/beta/ --target-file index.html spectaql/config_beta.yml",
     "dev:spectaql": "spectaql --development-mode-live spectaql/config.yml",
