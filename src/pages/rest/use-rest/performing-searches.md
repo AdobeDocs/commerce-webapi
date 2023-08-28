@@ -231,7 +231,7 @@ This example shows how to use search criteria to determine the sort order and at
 
 **Endpoint:**
 
-`GET <host>/rest/<store_code>/V1/orders/`
+`GET <host>/rest/V1/orders/`
 
 **Headers:**
 

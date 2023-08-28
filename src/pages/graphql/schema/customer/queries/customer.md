@@ -2,18 +2,18 @@
 title: customer query | Commerce Web APIs
 ---
 
-import BetaNote1 from '/src/pages/_includes/graphql/notes/beta.md'
-import BetaNote2 from '/src/pages/_includes/graphql/notes/beta.md'
-import BetaNote3 from '/src/pages/_includes/graphql/notes/beta.md'
-import BetaNote4 from '/src/pages/_includes/graphql/notes/beta.md'
-import BetaNote5 from '/src/pages/_includes/graphql/notes/beta.md'
-import CompareListOutput from '/src/pages/_includes/graphql/compare-list-output.md'
-import CustomerAddressOutput from '/src/pages/_includes/graphql/customer-address-output-24.md'
-import CustomerOrdersOutput from '/src/pages/_includes/graphql/customer-orders-output.md'
-import ProductReview from '/src/pages/_includes/graphql/product-review.md'
-import RequisitionList from '/src/pages/_includes/graphql/requisition-list.md'
-import Return from '/src/pages/_includes/graphql/return.md'
-import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
+import BetaNote1 from '/src/_includes/graphql/notes/beta.md'
+import BetaNote2 from '/src/_includes/graphql/notes/beta.md'
+import BetaNote3 from '/src/_includes/graphql/notes/beta.md'
+import BetaNote4 from '/src/_includes/graphql/notes/beta.md'
+import BetaNote5 from '/src/_includes/graphql/notes/beta.md'
+import CompareListOutput from '/src/_includes/graphql/compare-list-output.md'
+import CustomerAddressOutput from '/src/_includes/graphql/customer-address-output-24.md'
+import CustomerOrdersOutput from '/src/_includes/graphql/customer-orders-output.md'
+import ProductReview from '/src/_includes/graphql/product-review.md'
+import RequisitionList from '/src/_includes/graphql/requisition-list.md'
+import Return from '/src/_includes/graphql/return.md'
+import Wishlist from '/src/_includes/graphql/wishlist.md'
 
 # customer query
 

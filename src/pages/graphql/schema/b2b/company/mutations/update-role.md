@@ -11,7 +11,7 @@ Use the `updateCompanyRole` mutation to update the company role and permissions.
 
 You can get the role ID and the list of all resources defined within the company using the [`company`](../queries/company.md) query.
 
-import B2BRoles from '/src/pages/_includes/graphql/b2b-roles.md'
+import B2BRoles from '/src/_includes/graphql/b2b-roles.md'
 
 <B2BRoles />
 
@@ -179,7 +179,7 @@ Attribute |  Data Type | Description
 
 ### CompanyRole attributes
 
-import CompanyRole from '/src/pages/_includes/graphql/company-role.md'
+import CompanyRole from '/src/_includes/graphql/company-role.md'
 
 <CompanyRole />
 
