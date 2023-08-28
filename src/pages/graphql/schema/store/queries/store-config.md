@@ -243,3 +243,49 @@ The following query returns enumeration values that indicate the store's fixed p
   }
 }
 ```
+
+### Query a store's order cancellation configuration
+
+The following query returns store's order cancellation settings, indicating if it is enabled and the available cancellation reasons.
+
+**Request:**
+
+```graphql
+ {
+    storeConfig {
+        order_cancellation_enabled
+        order_cancellation_reasons {
+            description
+        }
+    }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "storeConfig": {
+      "order_cancellation_enabled": false,
+      "order_cancellation_reasons": [
+        {
+          "description": "The item(s) are no longer needed"
+        },
+        {
+          "description": "The order was placed by mistake"
+        },
+        {
+          "description": "Item(s) not arriving within the expected timeframe"
+        },
+        {
+          "description": "Found a better price elsewhere"
+        },
+        {
+          "description": "Other"
+        }
+      ]
+    }
+  }
+}
+```
