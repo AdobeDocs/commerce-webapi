@@ -750,6 +750,10 @@ module.exports = [
                 path: "/graphql/schema/orders/mutations/add-return-tracking/",
               },
               {
+                title: "cancelOrder",
+                path: "/graphql/schema/orders/mutations/cancel-order/",
+              },
+              {
                 title: "removeReturnTracking",
                 path: "/graphql/schema/orders/mutations/remove-return-tracking/",
               },
