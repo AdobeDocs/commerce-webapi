@@ -3,7 +3,7 @@ title: Rate limiting | Getting Started with Web APIs
 description: Explains how to limit attacks that attempt to brute force credit card details.
 ---
 
-import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
+import BetaNote from '/src/_includes/graphql/notes/beta.md'
 
 # Rate limiting
 

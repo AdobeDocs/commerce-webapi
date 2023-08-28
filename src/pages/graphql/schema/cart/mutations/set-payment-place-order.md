@@ -85,7 +85,7 @@ Attribute |  Data Type | Description
 
 ### PaymentMethodInput attributes
 
-import QuotePaymentInput from '/src/pages/_includes/graphql/quote-payment-input.md'
+import QuotePaymentInput from '/src/_includes/graphql/quote-payment-input.md'
 
 <QuotePaymentInput />
 

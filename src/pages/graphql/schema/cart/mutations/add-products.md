@@ -564,13 +564,13 @@ Attribute |  Data Type | Description
 
 The `CartItemInput` object must contain the following attributes:
 
-import CartItemInput from '/src/pages/_includes/graphql/cart-item-input-24.md'
+import CartItemInput from '/src/_includes/graphql/cart-item-input-24.md'
 
 <CartItemInput />
 
 ### EnteredOptionInput object
 
-import EnteredOptionInput from '/src/pages/_includes/graphql/entered-option-input.md'
+import EnteredOptionInput from '/src/_includes/graphql/entered-option-input.md'
 
 <EnteredOptionInput />
 
@@ -585,7 +585,7 @@ The `AddProductsToCartOutput` object contains the `Cart` object.
 
 ### Cart object
 
-import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
+import CartObject from '/src/_includes/graphql/cart-object-24.md'
 
 <CartObject />
 
@@ -593,7 +593,7 @@ import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
 
 ### CartUserInputError attributes
 
-import CartUserInputErrors from '/src/pages/_includes/graphql/cart-user-input-errors.md'
+import CartUserInputErrors from '/src/_includes/graphql/cart-user-input-errors.md'
 
 <CartUserInputErrors />
 

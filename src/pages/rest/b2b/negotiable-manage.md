@@ -4,7 +4,7 @@ description: Endpoints used to create a negotiable quote
 edition: ee
 ---
 
-import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
+import BetaNote from '/src/_includes/graphql/notes/beta.md'
 
 # Manage negotiable quotes
 
