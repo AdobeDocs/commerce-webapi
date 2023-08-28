@@ -162,7 +162,7 @@ Attribute |  Data Type | Description
 
 ### CompanyTeam attributes
 
-import CompanyTeam from '/src/pages/_includes/graphql/company-team.md'
+import CompanyTeam from '/src/_includes/graphql/company-team.md'
 
 <CompanyTeam />
 

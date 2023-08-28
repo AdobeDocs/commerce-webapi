@@ -146,7 +146,7 @@ Attribute |  Data Type | Description
 
 The `CompareList` output object contains the following attribute:
 
-import CompareListOutput from '/src/pages/_includes/graphql/compare-list-output.md'
+import CompareListOutput from '/src/_includes/graphql/compare-list-output.md'
 
 <CompareListOutput />
 

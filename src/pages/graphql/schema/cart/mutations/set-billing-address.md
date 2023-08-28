@@ -128,7 +128,7 @@ Attribute |  Data Type | Description
 
 ### CartAddressInput object
 
-import CartAddressInput from '/src/pages/_includes/graphql/cart-address-input-24.md'
+import CartAddressInput from '/src/_includes/graphql/cart-address-input-24.md'
 
 <CartAddressInput />
 
@@ -142,7 +142,7 @@ Attribute |  Data Type | Description
 
 ### Cart object
 
-import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
+import CartObject from '/src/_includes/graphql/cart-object-24.md'
 
 <CartObject />
 

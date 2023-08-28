@@ -117,7 +117,7 @@ Attribute |  Data Type | Description
 
 The `CustomizableOptionInput` object can contain the following attributes.
 
-import CustomizableOptionInput from '/src/pages/_includes/graphql/customizable-option-input-24.md'
+import CustomizableOptionInput from '/src/_includes/graphql/customizable-option-input-24.md'
 
 <CustomizableOptionInput />
 
@@ -141,7 +141,7 @@ Attribute |  Data Type | Description
 
 ### Cart object
 
-import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
+import CartObject from '/src/_includes/graphql/cart-object-24.md'
 
 <CartObject />
 

@@ -18,7 +18,7 @@ The `recommendations` query does not support the `alternateEnvironmentId` attrib
 
 You must specify the following HTTP headers to run this query.
 
-import Docs from '/src/pages/_includes/graphql/catalog-service/headers.md'
+import Docs from '/src/_includes/graphql/catalog-service/headers.md'
 
 <Docs />
 
