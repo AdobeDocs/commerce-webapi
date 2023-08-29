@@ -370,4 +370,4 @@ The `company` object returns the `Company` object.
 
 import Company from '/src/_includes/graphql/company.md'
 
-<Company />.md %}
+<Company />
