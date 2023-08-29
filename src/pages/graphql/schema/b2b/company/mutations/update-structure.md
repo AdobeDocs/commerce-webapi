@@ -119,6 +119,6 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `company` | Company! | Contains company data
 
-import Company from '/src/pages/_includes/graphql/company.md'
+import Company from '/src/_includes/graphql/company.md'
 
 <Company />.md %}

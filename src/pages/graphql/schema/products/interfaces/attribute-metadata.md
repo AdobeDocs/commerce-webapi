@@ -9,6 +9,6 @@ The `AttributeMetadataInterface` data type defines properties of custom attribut
 
 ## AttributeMetadataInterface object
 
-import AttributeMetadata from '/src/pages/_includes/graphql/attribute-metadata.md'
+import AttributeMetadata from '/src/_includes/graphql/attribute-metadata.md'
 
 <AttributeMetadata />

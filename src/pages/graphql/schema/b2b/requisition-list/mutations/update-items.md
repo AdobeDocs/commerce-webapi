@@ -124,6 +124,6 @@ Attribute |  Data Type | Description
 
 ### RequisitionList attributes
 
-import RequisitionList from '/src/pages/_includes/graphql/requisition-list.md'
+import RequisitionList from '/src/_includes/graphql/requisition-list.md'
 
 <RequisitionList />
