@@ -795,4 +795,4 @@ The Import JSON API is exclusively available via REST and does not support SOAP.
 
 ### Performance
 
-The Import JSON API is designed for high performance and scalability, tailored to handle large-scale data imports. In our testing environment, the API demonstrated the capability to efficiently process up to 100,000 products per minute in parallel mode using multiple threads.
+The Import JSON API is designed for high performance and scalability and tailored to handle large-scale data imports. In our testing environment, the API demonstrated the capability to efficiently process up to 100,000 products per minute in parallel mode, using multiple threads.
