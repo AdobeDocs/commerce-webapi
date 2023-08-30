@@ -619,7 +619,7 @@ The multiple select attribute for products is represented as an array of strings
 }
 ```
 
-Customer and customer address multiple select attributes are represented as an array of strings.
+The multiple select attributes for customer and customer address are represented as an array of strings.
 
 ```json
 {
