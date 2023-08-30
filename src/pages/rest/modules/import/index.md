@@ -680,7 +680,7 @@ The Import JSON API does not create attributes automatically. You need to create
 
 **Payload (Customer Finances):**
 
-Customer finances is represented as an array of JSON objects.
+`customer_finance` is represented as an array of JSON objects.
 
 ```json
 {
