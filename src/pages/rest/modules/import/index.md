@@ -5,7 +5,7 @@ description: Import entities into Adobe Commerce using REST.
 
 # Import data
 
-The `POST /rest/<store_view_code>/V1/import/csv` and `POST /rest/<store_view_code>/V1/import/json` endpoints provide a RESTful way to import data into Adobe Commerce. They mirror the import capabilities found in the Admin at **System** > Data Transfer > **Import**. These endpoints support the import of following entities:
+The `POST /rest/<store_view_code>/V1/import/csv` and `POST /rest/<store_view_code>/V1/import/json` endpoints provide a RESTful way to import data into Adobe Commerce. They mirror the import capabilities found in the Admin at **System** > Data Transfer > **Import**. These endpoints support the import of the following entities:
 
 *  `advanced_pricing`
 *  `catalog_product`
