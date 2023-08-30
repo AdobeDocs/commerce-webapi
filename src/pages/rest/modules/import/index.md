@@ -23,7 +23,7 @@ Ensure your source data conforms to the sequence and format expected by Commerce
 
 The `import/csv` endpoint expects data in base64 encoded format:
 
-*  **Encoding**: Before submitting, your CSV data must be base64 encoded. This means there's no need to escape special characters beforehand.
+*  **Encoding**: Before submitting, your CSV data must be base64 encoded, which means there is no need to escape special characters.
 *  **Compression**: Optionally use [gzip](https://www.gzip.org) to compress your data before encoding, especially when handling larger CSVs that might hit server or PHP request size limits.
 *  **Delimiter**: This API is tailored for CSVs using commas as field and multi-value separators. Any other delimiters will cause the import to fail.
 
