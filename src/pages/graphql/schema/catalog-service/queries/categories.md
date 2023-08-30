@@ -32,7 +32,7 @@ The `subtree` object allows you to specify how many levels of subcategories to r
 
 Specify the following HTTP headers to run this query.
 
-import Headers from '/src/pages/_includes/graphql/catalog-service/headers.md'
+import Headers from '/src/_includes/graphql/catalog-service/headers.md'
 
 <Headers />
 
@@ -199,6 +199,6 @@ Field | Data type | Description
 
 ## Output fields
 
-import Output from '/src/pages/_includes/graphql/catalog-service/categories.md'
+import Output from '/src/_includes/graphql/catalog-service/categories.md'
 
 <Output />

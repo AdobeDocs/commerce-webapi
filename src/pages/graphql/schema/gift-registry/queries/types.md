@@ -141,6 +141,6 @@ Attribute |  Data Type | Description
 
 ### GiftRegistryDynamicAttributeMetadataInterface attributes
 
-import GiftRegistryMetadata from '/src/pages/_includes/graphql/gift-registry-dynamic-attribute-metadata-interface.md'
+import GiftRegistryMetadata from '/src/_includes/graphql/gift-registry-dynamic-attribute-metadata-interface.md'
 
 <GiftRegistryMetadata />
