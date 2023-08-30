@@ -387,7 +387,7 @@ POST /rest/<store_view_code>/V1/import/json
 
 **Response:**
 
-When Import is successful, the API response will contain the number of entities that were successfully imported.
+When the import is successful, the API response will contain the number of entities that were successfully imported.
 
 ```json
 [
