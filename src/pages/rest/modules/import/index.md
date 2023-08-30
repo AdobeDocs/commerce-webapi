@@ -711,7 +711,7 @@ Customer finances is represented as an array of JSON objects.
 
 **Payload (Customers and Addresses):**
 
-Customers and Addresses is represented as an array of JSON objects.
+Customers and Addresses information is represented as an array of JSON objects.
 
 ```json
 {
