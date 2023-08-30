@@ -597,7 +597,9 @@ The following sample query returns product by SKU. You have to pass SKU value to
 
 ### Query with filter by name attribute and match_type
 
-The following sample query returns different results if match_type is provided besides the product name. You have to pass name value to return product information. If match_type is not provided, the results will default to match_type: PARTIAL.
+The following sample query returns different results if match_type is provided besides the product name.
+You have to pass name value and select between PARTIAL and FULL for match_type to return product information.
+If match_type is not provided, the results will default to match_type: PARTIAL.
 
 **Request:**
 
