@@ -416,7 +416,7 @@ Although the string format shown above provides compatibility with the import CS
 
 For a configurable product:
 
-*  The `configurable_variations` attribute accepts an array of JSON objects that describe variations. Each object represents a product variation, denoted by SKU, with associated attributes (e.g., color, size).
+*  The `configurable_variations` attribute accepts an array of JSON objects that describe variations. Each object represents a product variation, denoted by SKU, with associated attributes (such as color or size).
 *  The `configurable_variation_labels` attribute accepts a JSON object that assigns human-readable labels to the variation attributes.
 
 ```json
