@@ -585,7 +585,7 @@ This structure can be found nested within individual product items in the full p
 
 For a gift card product:
 
-*  The `giftcard_amount` attribute accepts an array of amounts that can be used to purchase the gift card.
+*  The `giftcard_amount` attribute accepts an array of amounts that can be used to purchase a gift card.
 
 ```json
 {
