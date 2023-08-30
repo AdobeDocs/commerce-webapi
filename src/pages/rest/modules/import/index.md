@@ -639,7 +639,7 @@ The Import JSON API does not create attributes automatically. You need to create
 
 **Payload (Advanced Pricing):**
 
-Advanced pricing is represented as an array of JSON objects.
+`advanced_pricing` is represented as an array of JSON objects.
 
 ```json
 {
