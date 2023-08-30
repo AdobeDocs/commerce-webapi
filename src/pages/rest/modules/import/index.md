@@ -38,7 +38,7 @@ The `import/json` endpoint is designed for JSON data:
 
 A validation strategy is mandatory. Depending on your chosen strategy, the API will either proceed with the import or abort it upon encountering invalid rows.
 
-*  `validation-stop-on-errors`: The API halts the import upon finding the first error. It will return an error message detailing the issue in the erroneous row and its number.
+*  `validation-stop-on-errors`: The API halts the import upon finding the first error. It will return an error message describing the issue and its row number.
 *  `validation-skip-errors`: The API imports valid rows unless the total number of errors surpasses the `allowedErrorCount`. If errors go beyond this count, the import is halted (even valid rows won't be processed). The response will contain details of the first error found and its row number.
 
 The `allowedErrorCount` field stipulates the maximum allowable error count before terminating the import process.
