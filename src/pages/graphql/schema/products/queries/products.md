@@ -86,6 +86,7 @@ Use the `FilterMatchTypeInput` object to construct a filter that returns product
 Attribute | Data type | Description
 --- | --- | ---
 `match` | String | Use this attribute to partially fuzzy match the specified string. For example, to filter on a specific SKU, specify a value such as `24-MB01`
+`match_type` | FilterMatchTypeEnum | Use this attribute to finetune the type of search by specifying PARTIAL or FULL. If match_type is not provided, the search will default to match_type PARTIAL.
 
 You must specify a `FilterMatchTypeInput` object to filter on a custom product attribute of the following types:
 
@@ -626,6 +627,138 @@ The following sample query returns product by SKU. You have to pass SKU value to
         }
       ],
       "total_count": 1,
+      "page_info": {
+        "page_size": 20
+      }
+    }
+  }
+}
+```
+
+### Query with filter by name attribute and match_type
+
+The following sample query returns different results if match_type is provided besides the product name. You have to pass name value to return product information. If match_type is not provided, the results will default to match_type: PARTIAL.
+
+**Request:**
+
+```graphql
+{
+  products(filter: { name: { match: "Life", match_type: PARTIAL } }) {
+    items {
+      name
+      sku
+      url_key
+      stock_status
+      price_range {
+        minimum_price {
+          regular_price {
+            value
+            currency
+          }
+        }
+      }
+    }
+    total_count
+    page_info {
+      page_size
+    }
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "products": {
+      "items": [
+        {
+          "name": "Luma Yoga For Life",
+          "sku": "240-LV09",
+          "url_key": "luma-yoga-for-life",
+          "stock_status": "IN_STOCK",
+          "price_range": {
+            "minimum_price": {
+              "regular_price": {
+                "value": 0,
+                "currency": "USD"
+              }
+            }
+          }
+        }
+      ],
+      "total_count": 1,
+      "page_info": {
+        "page_size": 20
+      }
+    }
+  }
+}
+```
+
+```graphql
+{
+  products(filter: { name: { match: "Life", match_type: FULL } }) {
+    items {
+      name
+      sku
+      url_key
+      stock_status
+      price_range {
+        minimum_price {
+          regular_price {
+            value
+            currency
+          }
+        }
+      }
+    }
+    total_count
+    page_info {
+      page_size
+    }
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "products": {
+      "items": [
+        {
+          "name": "Luma Yoga For Life",
+          "sku": "240-LV09",
+          "url_key": "luma-yoga-for-life",
+          "stock_status": "IN_STOCK",
+          "price_range": {
+            "minimum_price": {
+              "regular_price": {
+                "value": 0,
+                "currency": "USD"
+              }
+            }
+          }
+        },
+        {
+          "name": "LifeLong Fitness IV",
+          "sku": "240-LV05",
+          "url_key": "lifelong-fitness-iv",
+          "stock_status": "IN_STOCK",
+          "price_range": {
+            "minimum_price": {
+              "regular_price": {
+                "value": 14,
+                "currency": "USD"
+              }
+            }
+          }
+        }
+      ],
+      "total_count": 2,
       "page_info": {
         "page_size": 20
       }
