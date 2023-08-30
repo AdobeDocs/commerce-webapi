@@ -775,7 +775,7 @@ Customers and Addresses information is represented as an array of JSON objects.
 }
 ```
 
-`delivery_preferences` and `interests` are address and customer multiple select attributes. They are represented as an array of strings.
+`delivery_preferences` and `interests` are multiple select attributes for addresses and customers. They are represented as an array of strings.
 
 **Response:**
 
