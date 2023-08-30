@@ -29,6 +29,8 @@ The `import/csv` endpoint expects data in base64 encoded format:
 
 ### JSON Import
 
+The Import JSON API endpoint is only available in `2.4.7-beta`.
+
 The `import/json` endpoint is designed for JSON data:
 
 *  Convert your CSV into JSON using any trustworthy online converter.
