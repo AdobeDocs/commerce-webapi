@@ -604,7 +604,7 @@ This structure can be found nested within individual product items in the full p
 
 **Payload 7 (Multiple select attributes):**
 
-Product multiple select attribute is represented as an array of strings.
+The multiple select attribute for products is represented as an array of strings.
 
 ```json
 {
