@@ -787,7 +787,7 @@ When the import is successful, the API response will contain the number of entit
 ] 
 ```
 
-The `"entity": "customer_composite"` represents a composite entity that includes both a customer and an associated address. Thus, even though the payload contains one item in the `items` array, it results in two entities (customer and address) being processed. Therefore, the response indicates "Entities Processed: 2".
+The `"entity": "customer_composite"` represents a composite entity that includes both a customer and an associated address. While the payload contains one item in the `items` array, it results in two entities (customer and address) being processed. Therefore, the response indicates "Entities Processed: 2".
 
 <InlineAlert variant="info" slots="text"/>
 
