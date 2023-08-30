@@ -567,7 +567,7 @@ This structure can be found nested within individual product items in the full p
 
 For a grouped product:
 
-*  The `associated_skus` attribute accepts a JSON object where keys are SKUs of products that the grouped product consists of, and values are the quantities of each SKU in the grouped product.
+*  The `associated_skus` attribute accepts a JSON object where the keys are SKUs of products that comprise the grouped product, and the values are the quantities of each SKU in the grouped product.
 
 ```json
 {
