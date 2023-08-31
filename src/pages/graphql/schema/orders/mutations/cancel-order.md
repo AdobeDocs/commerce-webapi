@@ -1,12 +1,20 @@
 ---
 title: cancelOrder mutation | Commerce Web APIs
 ---
+import BetaNote from '/src/_includes/graphql/notes/beta.md'
+
+<BetaNote />
 
 # cancelOrder mutation
 
 The `cancelOrder` mutation allows the owner of the order and admin users to cancel an order, passing an order identifier and a cancellation reason.
 
-Orders can only be cancelled if `order_cancellation_enabled` config is `true` and if they are in status *RECEIVED* or *PENDING*. If any charge has been done to the customer, the order will be refunded.
+A customer can cancel an order only if the following conditions are true:
+
+ *  The `order_cancellation_enabled` configuration setting is `true`.
+ *  The order has a status of **RECEIVED** or **PENDING**.
+
+If the customer has been charged for the order, they will be issued a refund. Otherwise, the status of the order is set to CANCELED.
 
 The mutation returns an error if the order cannot be cancelled.
 
@@ -14,9 +22,13 @@ The mutation returns an error if the order cannot be cancelled.
 
 `mutation: {cancelOrder(input: CanceOrderInput!) {CancelOrderOutput}}`
 
+## Reference
+
+The [`cancelOrder`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-cancelOrder) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
-The following example cancels the order with id `99999999` providing a reason for its cancellation.
+The following example cancels order ID `99999999` and includes the reason for its cancellation.
 
 **Request:**
 
@@ -44,10 +56,6 @@ mutation{
   }
 }
 ```
-
-## Reference
-
-The [`cancelOrder`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-cancelOrder) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Related topics
 
