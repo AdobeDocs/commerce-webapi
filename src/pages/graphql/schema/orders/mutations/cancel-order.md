@@ -12,7 +12,7 @@ The `cancelOrder` mutation allows a customer to cancel an order, passing its ide
 A customer can cancel an order only if the following conditions are true:
 
  * The customer has previously placed the order.
- * The `order_cancellation_enabled` configuration setting is `true`. 
+ * The `order_cancellation_enabled` configuration setting is `true`.
  * The order has a status of **RECEIVED** or **PENDING**.
 
 If the customer has been charged for the order, the order is placed in the CLOSED state, and the customer will be issued a refund. Otherwise, the status of the order is set to CANCELED.
@@ -34,14 +34,17 @@ The following example cancels order ID `99999999` and includes the reason for it
 **Request:**
 
 ```graphql
-mutation{
+mutation {
     cancelOrder(
         input: {
             order_id: "99999999",
             reason: "The order was placed by mistake"
         }
-    ) {
-        status
+    ){
+        error
+        order {
+            status
+        }
     }
 }
 ```
@@ -52,7 +55,10 @@ mutation{
 {
   "data": {
     "cancelOrder": {
-      "status": "canceled"
+      "error": null,
+      "order": {
+        "status": "Canceled"
+      }
     }
   }
 }
