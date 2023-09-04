@@ -7,12 +7,13 @@ import BetaNote from '/src/_includes/graphql/notes/beta.md'
 
 # cancelOrder mutation
 
-The `cancelOrder` mutation allows the owner of the order and admin users to cancel an order, passing an order identifier and a cancellation reason.
+The `cancelOrder` mutation allows a customer to cancel an order, passing its identifier and a cancellation reason.
 
 A customer can cancel an order only if the following conditions are true:
 
- *  The `order_cancellation_enabled` configuration setting is `true`.
- *  The order has a status of **RECEIVED** or **PENDING**.
+ * The customer has previously placed the order.
+ * The `order_cancellation_enabled` configuration setting is `true`. 
+ * The order has a status of **RECEIVED** or **PENDING**.
 
 If the customer has been charged for the order, the order is placed in the CLOSED state, and the customer will be issued a refund. Otherwise, the status of the order is set to CANCELED.
 
@@ -59,4 +60,4 @@ mutation{
 
 ## Related topics
 
- *  [order cancellation](/src/pages/graphql/schema/store/queries/store-config.md#query-a-stores-order-cancellation-configuration) configuration example on `storeConfig` page.
+ * [order cancellation](/src/pages/graphql/schema/store/queries/store-config.md#query-a-stores-order-cancellation-configuration) configuration example on `storeConfig` page.
