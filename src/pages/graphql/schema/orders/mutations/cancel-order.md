@@ -14,7 +14,7 @@ A customer can cancel an order only if the following conditions are true:
  *  The `order_cancellation_enabled` configuration setting is `true`.
  *  The order has a status of **RECEIVED** or **PENDING**.
 
-If the customer has been charged for the order, they will be issued a refund. Otherwise, the status of the order is set to CANCELED.
+If the customer has been charged for the order, the order is placed in the CLOSED state, and the customer will be issued a refund. Otherwise, the status of the order is set to CANCELED.
 
 The mutation returns an error if the order cannot be cancelled.
 
@@ -59,4 +59,4 @@ mutation{
 
 ## Related topics
 
--  [order cancellation](/src/pages/graphql/schema/store/queries/store-config.md#query-a-stores-order-cancellation-configuration) configuration example on `storeConfig` page.
+ *  [order cancellation](/src/pages/graphql/schema/store/queries/store-config.md#query-a-stores-order-cancellation-configuration) configuration example on `storeConfig` page.
