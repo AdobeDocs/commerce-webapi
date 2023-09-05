@@ -294,7 +294,7 @@ query {
 }
 ```
 
-### Return details about a complex product {#complex-product-example}
+### Return details about a complex product
 
 The following query returns details about a complex product.
 
