@@ -160,7 +160,7 @@ In this example, the CSV payload contains three rows of data, and one of them is
 
 ## Import JSON API
 
-The  `StartImportInterface` service provides the means to efficiently import entities into Adobe Commerce using a single API call.
+The `POST /rest/<store_view_code>/V1/import/json` endpoint uses the `StartImportInterface` service to efficiently import entities into Adobe Commerce. The payload must contain data in JSON format.
 
 **Service Name:**
 
