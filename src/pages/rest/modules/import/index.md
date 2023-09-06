@@ -565,7 +565,7 @@ For a downloadable product:
 
 This structure can be found nested within individual product items in the full payload.
 
-**Payload 5 (Grouped product):**
+**Grouped product payload:**
 
 For a grouped product:
 
