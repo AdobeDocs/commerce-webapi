@@ -456,7 +456,7 @@ For a configurable product:
 
 This structure can be found nested within individual product items in the full payload.
 
-**Payload 3 (Bundle product):**
+**Bundle product payload:**
 
 For a bundle product:
 
