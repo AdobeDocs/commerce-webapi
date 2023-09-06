@@ -29,7 +29,9 @@ The `import/csv` endpoint expects data in base64 encoded format:
 
 ### JSON Import
 
-The Import JSON API endpoint is only available in `2.4.7-beta`.
+import BetaNote from '/src/_includes/graphql/notes/beta.md'
+
+<BetaNote />
 
 The `import/json` endpoint is designed for JSON data:
 
@@ -159,6 +161,12 @@ In this example, the CSV payload contains three rows of data, and one of them is
 ```
 
 ## Import JSON API
+
+import BetaNote2 from '/src/_includes/graphql/notes/beta.md'
+
+<BetaNote2 />
+
+The Import JSON API is exclusively available via REST and does not support SOAP. This is because the payload consists of complex JSON objects with nested arrays, which are inherently challenging to represent with the XML structure that SOAP relies upon.
 
 The `POST /rest/<store_view_code>/V1/import/json` endpoint uses the `StartImportInterface` service to efficiently import entities into Adobe Commerce. The payload must contain data in JSON format.
 
@@ -790,11 +798,3 @@ When the import is successful, the API response will contain the number of entit
 ```
 
 The `"entity": "customer_composite"` represents a composite entity that includes both a customer and an associated address. While the payload contains one item in the `items` array, it results in two entities (customer and address) being processed. Therefore, the response indicates "Entities Processed: 2".
-
-<InlineAlert variant="info" slots="text"/>
-
-The Import JSON API is exclusively available via REST and does not support SOAP. This is because the payload consists of complex JSON objects with nested arrays, which are inherently challenging to represent with the XML structure that SOAP relies upon.
-
-### Performance
-
-The Import JSON API is designed for high performance and scalability and tailored to handle large-scale data imports. In our testing environment, the API demonstrated the capability to efficiently process up to 100,000 products per minute in parallel mode, using multiple threads.
