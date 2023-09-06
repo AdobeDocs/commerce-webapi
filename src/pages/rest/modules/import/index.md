@@ -583,7 +583,7 @@ For a grouped product:
 
 This structure can be found nested within individual product items in the full payload.
 
-**Payload 6 (Gift card product):**
+**Gift card payload:**
 
 For a gift card product:
 
