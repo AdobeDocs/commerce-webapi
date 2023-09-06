@@ -194,7 +194,7 @@ POST /rest/<store_view_code>/V1/import/json
 
 `Authorization: Bearer <administrator token>`
 
-**Payload 1 (Simple Product):**
+**Simple product payload:**
 
 ```json
 {
