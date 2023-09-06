@@ -711,7 +711,7 @@ The Import JSON API does not create attributes automatically. You need to create
 }
 ```
 
-**Payload (Customers and Addresses):**
+**Customers and addresses payload:**
 
 Customers and Addresses information is represented as an array of JSON objects.
 
