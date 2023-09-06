@@ -47,7 +47,7 @@ The `allowedErrorCount` field specifies the maximum allowable error count before
 
 ## Import CSV API
 
-The  `StartImportInterface` service provides the means to efficiently import entities into Adobe Commerce using a single API call.
+The `POST /rest/<store_view_code>/V1/import/csv` endpoint uses the `StartImportInterface` service to efficiently import entities into Adobe Commerce. The payload must contain data in a base64 encoded format.
 
 **Service Name:**
 
