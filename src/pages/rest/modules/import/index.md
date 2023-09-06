@@ -414,7 +414,7 @@ Additionally, these arguments can also accept string values, similar to the impo
 
 Although the string format shown above provides compatibility with the import CSV API, using a structured JSON format is recommended for better readability and precision.
 
-**Payload 2 (Configurable product):**
+**Configurable product payload:**
 
 For a configurable product:
 
