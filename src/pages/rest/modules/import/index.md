@@ -504,7 +504,7 @@ For a bundle product:
 
 This structure can be found nested within individual product items in the full payload.
 
-**Payload 4 (Downloadable product):**
+**Downloadable product payload:**
 
 For a downloadable product:
 
