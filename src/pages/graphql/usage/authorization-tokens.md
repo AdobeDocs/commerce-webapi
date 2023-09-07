@@ -83,7 +83,7 @@ mutation{
 
 ### Admin tokens
 
-In Adobe Commerce and Magento Open Source GraphQL, you specify an admin token only if you need to query products, categories, price rules, or other entities that are scheduled to be in a campaign (staged content). Staging is supported in Adobe Commerce only. See [Staging queries](../usage/index.md#staging-queries) for more information.
+In Adobe Commerce and Magento Open Source GraphQL, you specify an admin token only if you need to query products, categories, price rules, or other entities that are scheduled to be in a campaign (staged content). Staging is supported in Adobe Commerce only. See [Staging queries](staging-queries.md) for more information.
 
 Adobe Commerce and Magento Open Source do not provide a GraphQL mutation that generates an admin token. You must use a REST endpoint such as `POST /V1/tfa/provider/google/authenticate` instead. [Generate the admin token](https://developer.adobe.com/commerce/webapi/rest/tutorials/prerequisite-tasks/) shows how to use this endpoint.
 
