@@ -58,6 +58,10 @@ You must include the CMS page identifier value to retrieve the content of a spec
 }
 ```
 
+<InlineAlert variant="info" slots="text" />
+
+Note that the `content` field may contain HTML markup and CSS styles. Hidden and system elements will be included in the response.
+
 ## Errors
 
 Error | Description
