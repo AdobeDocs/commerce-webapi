@@ -1,5 +1,5 @@
 ---
-title: OAuth Error Codes | Getting Started with Web APIs
+title: OAuth Error Codes
 description: A list of possible OAuth error codes and their meanings.
 ---
 

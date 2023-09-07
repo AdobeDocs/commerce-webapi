@@ -1,5 +1,5 @@
 ---
-title: recaptchaV3Config query | Commerce Web APIs
+title: recaptchaV3Config query
 edition: pwa
 ---
 

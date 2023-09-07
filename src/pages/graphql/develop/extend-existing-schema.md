@@ -1,5 +1,5 @@
 ---
-title: Extend an existing GraphQL schema | Commerce Web APIs
+title: Extend an existing GraphQL schema
 contributor_name: Adarsh Manickam
 contributor_link: https://github.com/drpayyne
 ---

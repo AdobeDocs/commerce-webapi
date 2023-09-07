@@ -1,5 +1,6 @@
 ---
-title: GraphQL staging queries | Commerce Web APIs
+title: GraphQL staging queries
+description: 
 ---
 
 # Staging queries

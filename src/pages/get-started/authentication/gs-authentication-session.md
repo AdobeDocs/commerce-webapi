@@ -1,5 +1,5 @@
 ---
-title: Session-Based Authentication | Getting Started with Web APIs
+title: Session-Based Authentication
 description: How to use session-based authentication in the web APIs.
 ---
 

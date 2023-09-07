@@ -1,5 +1,5 @@
 ---
-title: giftRegistryIdSearch query | Commerce Web APIs
+title: giftRegistryIdSearch query
 edition: ee   
 ---
 

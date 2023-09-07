@@ -1,5 +1,5 @@
 ---
-title: isCompanyAdminEmailAvailable query | Commerce Web APIs
+title: isCompanyAdminEmailAvailable query
 edition: b2b
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Braintree payment method | Commerce Web APIs
+title: Braintree payment method
 contributor_name: Something Digital
 contributor_link: https://www.somethingdigital.com/
 ---

@@ -1,5 +1,5 @@
 ---
-title: Authentication | Getting Started with Web APIs
+title: Authentication
 description: Overview of authentication methods in web APIs.
 ---
 

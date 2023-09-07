@@ -1,5 +1,5 @@
 ---
-title: removeNegotiableQuoteItems mutation | Commerce Web APIs
+title: removeNegotiableQuoteItems mutation
 edition: b2b
 ---
 

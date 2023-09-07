@@ -1,5 +1,5 @@
 ---
-title: CreditMemoItemInterface attributes and implementations | Commerce Web APIs
+title: CreditMemoItemInterface attributes and implementations
 ---
 
 # CreditMemoItemInterface attributes and implementations

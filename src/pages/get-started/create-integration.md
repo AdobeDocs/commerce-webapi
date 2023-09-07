@@ -1,5 +1,5 @@
 ---
-title: Create an Integration | Getting Started with Web APIs
+title: Create an Integration
 description: Explains how to create an integration.
 ---
 

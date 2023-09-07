@@ -1,5 +1,5 @@
 ---
-title: PayPal Website Payments Pro Hosted Solution payment method | Commerce Web APIs
+title: PayPal Website Payments Pro Hosted Solution payment method
 ---
 
 # PayPal Website Payments Pro Hosted Solution payment method

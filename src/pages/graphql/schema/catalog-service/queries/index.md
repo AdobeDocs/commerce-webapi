@@ -1,5 +1,5 @@
 ---
-title: Catalog Service queries | Commerce Web APIs
+title: Catalog Service queries
 edition: ee
 ---
 

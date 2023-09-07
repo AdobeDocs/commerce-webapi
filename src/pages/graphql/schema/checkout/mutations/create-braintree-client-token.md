@@ -1,5 +1,5 @@
 ---
-title: createBraintreeClientToken mutation | Commerce Web APIs
+title: createBraintreeClientToken mutation
 contributor_name: Something Digital
 contributor_link: https://www.somethingdigital.com/
 ---

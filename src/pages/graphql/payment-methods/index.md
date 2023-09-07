@@ -1,5 +1,5 @@
 ---
-title: GraphQL payment methods | Commerce Web APIs
+title: GraphQL payment methods
 description:
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: GraphQL headers | Commerce Web APIs
+title: GraphQL headers
 ---
 
 # GraphQL headers

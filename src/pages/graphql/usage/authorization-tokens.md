@@ -1,5 +1,5 @@
 ---
-title: GraphQL authorization | Commerce Web APIs
+title: GraphQL authorization
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---

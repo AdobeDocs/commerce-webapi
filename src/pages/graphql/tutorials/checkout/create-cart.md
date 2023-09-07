@@ -1,5 +1,5 @@
 ---
-title: Step 2. Create an empty cart | Commerce Web APIs
+title: Step 2. Create an empty cart
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---

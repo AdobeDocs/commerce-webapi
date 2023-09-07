@@ -1,5 +1,5 @@
 ---
-title: Graphql release notes | Commerce Web APIs
+title: Graphql release notes
 ---
 
 # GraphQL release notes

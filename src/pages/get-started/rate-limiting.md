@@ -1,5 +1,5 @@
 ---
-title: Rate limiting | Getting Started with Web APIs
+title: Rate limiting
 description: Explains how to limit attacks that attempt to brute force credit card details.
 ---
 

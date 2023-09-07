@@ -1,5 +1,5 @@
 ---
-title: removeProductsFromWishlist mutation | Commerce Web APIs
+title: removeProductsFromWishlist mutation
 ---
 
 # removeProductsFromWishlist mutation

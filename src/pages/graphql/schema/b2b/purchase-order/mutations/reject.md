@@ -1,5 +1,5 @@
 ---
-title: rejectPurchaseOrders mutation | Commerce Web APIs
+title: rejectPurchaseOrders mutation
 edition: b2b
 ---
 

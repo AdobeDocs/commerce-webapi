@@ -1,5 +1,5 @@
 ---
-title: Protected mutations | Commerce Web APIs
+title: Protected mutations
 ---
 
 # Protected mutations

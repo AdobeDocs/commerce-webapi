@@ -1,5 +1,5 @@
 ---
-title: GraphQL resolvers | Commerce Web APIs
+title: GraphQL resolvers
 ---
 
 # GraphQL resolvers

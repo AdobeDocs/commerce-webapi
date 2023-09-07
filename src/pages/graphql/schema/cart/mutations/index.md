@@ -1,5 +1,5 @@
 ---
-title: Cart mutations | Commerce Web APIs
+title: Cart mutations
 ---
 
 # Cart mutations

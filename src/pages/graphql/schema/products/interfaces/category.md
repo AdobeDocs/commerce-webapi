@@ -1,5 +1,5 @@
 ---
-title: CategoryInterface attributes | Commerce Web APIs
+title: CategoryInterface attributes
 ---
 
 # CategoryInterface attributes

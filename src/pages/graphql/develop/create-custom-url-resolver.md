@@ -1,5 +1,5 @@
 ---
-title: Create a custom GraphQL urlResolver service | Commerce Web APIs
+title: Create a custom GraphQL urlResolver service
 ---
 
 # Create a custom GraphQL urlResolver service

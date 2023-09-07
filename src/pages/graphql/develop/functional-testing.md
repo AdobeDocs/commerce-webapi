@@ -1,5 +1,5 @@
 ---
-title: GraphQL functional testing | Commerce Web APIs
+title: GraphQL functional testing
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---

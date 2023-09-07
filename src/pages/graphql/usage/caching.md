@@ -1,5 +1,5 @@
 ---
-title: GraphQL caching | Commerce Web APIs
+title: GraphQL caching
 ---
 
 import Queries246 from '/src/_includes/graphql/cache/queries-246.md'

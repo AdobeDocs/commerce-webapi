@@ -1,5 +1,5 @@
 ---
-title: Negotiable quote (B2B) queries | Commerce Web APIs
+title: Negotiable quote (B2B) queries
 edition: b2b   
 ---
 

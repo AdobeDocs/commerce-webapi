@@ -1,5 +1,5 @@
 ---
-title: Order mutations | Commerce Web APIs
+title: Order mutations
 ---
 
 # Orders mutations

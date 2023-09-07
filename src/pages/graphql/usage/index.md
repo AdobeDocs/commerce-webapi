@@ -1,5 +1,5 @@
 ---
-title: Run Graphql queries and mutations | Commerce Web APIs
+title: Run Graphql queries and mutations
 description:
 ---
 

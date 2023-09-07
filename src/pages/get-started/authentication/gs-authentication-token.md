@@ -1,5 +1,5 @@
 ---
-title: Token-Based Authentication | Getting Started with Web APIs
+title: Token-Based Authentication
 description: How to use token-based authentication in web APIs.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Attributes queries | Commerce Web APIs
+title: Attributes queries
 ---
 
 # Attributes queries

@@ -1,5 +1,5 @@
 ---
-title: Exception handling | Commerce Web APIs
+title: Exception handling
 ---
 
 # Exception handling

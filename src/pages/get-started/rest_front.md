@@ -1,5 +1,5 @@
 ---
-title: Use REST APIs | Getting Started with Web APIs
+title: Use REST APIs
 description: Overview of basic Magento REST API information.
 ---
 

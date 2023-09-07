@@ -1,5 +1,5 @@
 ---
-title: Step 1. Create a customer | Commerce Web APIs
+title: Step 1. Create a customer
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---

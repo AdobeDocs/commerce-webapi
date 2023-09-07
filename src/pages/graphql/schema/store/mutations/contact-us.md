@@ -1,5 +1,5 @@
 ---
-title: contactUs mutation | Commerce Web APIs
+title: contactUs mutation
 edition: pwa
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Filtering with custom attributes | Commerce Web APIs
+title: Filtering with custom attributes
 ---
 
 # Filtering with custom attributes

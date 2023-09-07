@@ -1,5 +1,5 @@
 ---
-title: Products | Commerce Web APIs
+title: Products
 description:
 ---
 

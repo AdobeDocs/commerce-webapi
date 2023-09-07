@@ -1,5 +1,5 @@
 ---
-title: Web API Functional Testing | Getting Started with Web APIs
+title: Web API Functional Testing
 description: How to implement and run functional tests on Web APIs.
 ---
 

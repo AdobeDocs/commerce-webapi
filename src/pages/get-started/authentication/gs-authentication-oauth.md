@@ -1,5 +1,5 @@
 ---
-title: OAuth-Based Authentication | Getting Started with Web APIs
+title: OAuth-Based Authentication
 description: How to use OAuth authentication and token passing in the web APIs.
 ---
 

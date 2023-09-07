@@ -1,5 +1,5 @@
 ---
-title: removeReturnTracking mutation | Commerce Web APIs
+title: removeReturnTracking mutation
 ---
 
 # removeReturnTracking mutation

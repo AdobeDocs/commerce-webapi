@@ -1,5 +1,5 @@
 ---
-title: Use cURL to Run the Request | Getting Started with Web APIs
+title: Use cURL to Run the Request
 description: Explains how to use cURL.
 ---
 

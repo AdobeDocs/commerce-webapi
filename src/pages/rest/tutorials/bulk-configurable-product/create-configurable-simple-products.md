@@ -1,8 +1,8 @@
 ---
 title: Step 2. Create the configurable and simple products
+description: In this step of the tutorial you will create the configurable and simple products
 contributor_name: comwrap GmbH
 contributor_link: http://comwrap.com/
-Description: In this step of the tutorial you will create the configurable and simple products
 --- 
  
 # Step 2. Create the configurable and simple products

@@ -1,5 +1,5 @@
 ---
-title: Step 10. Place the order | Commerce Web APIs
+title: Step 10. Place the order
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---

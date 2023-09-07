@@ -1,5 +1,5 @@
 ---
-title: GraphQL introspection queries | Commerce Web APIs
+title: GraphQL introspection queries
 ---
 
 # Introspection queries
