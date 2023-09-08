@@ -1,5 +1,6 @@
 ---
 title: GraphQL functional testing
+description: Learn how to use the Adobe Commerce and Magento Open Source test framework to create fixtures, define exceptions, and run finctional tests.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---

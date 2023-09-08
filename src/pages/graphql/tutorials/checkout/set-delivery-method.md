@@ -1,5 +1,6 @@
 ---
 title: Step 6. Set the delivery method
+description: Learn how to set a delivery method for an order with the GraphQL API.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---

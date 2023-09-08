@@ -1,5 +1,6 @@
 ---
 title: GraphQL introspection queries
+description: Learn how to view details about specific data types.
 ---
 
 # Introspection queries

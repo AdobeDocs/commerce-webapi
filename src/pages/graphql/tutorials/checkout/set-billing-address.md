@@ -1,5 +1,6 @@
 ---
 title: Step 5. Set billing address
+description: Learn how to set a billing address for an order with the GraphQL API.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---

@@ -1,6 +1,6 @@
 ---
+description: Learn about the structure of queries and mutations and how to use variables.
 title: Run Graphql queries and mutations
-description:
 ---
 
 # Run Graphql queries and mutations

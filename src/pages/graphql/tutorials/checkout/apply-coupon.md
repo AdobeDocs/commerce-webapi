@@ -1,5 +1,6 @@
 ---
 title: Step 7. Apply a coupon
+description: Learn how to set a apply a coupon to an order with the GraphQL API.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---

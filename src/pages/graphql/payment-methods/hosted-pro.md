@@ -1,5 +1,6 @@
 ---
 title: PayPal Website Payments Pro Hosted Solution payment method
+description: Learn how to use the GraphQL API mutation for the PayPal Website Payments Pro Hosted payment solution.
 ---
 
 # PayPal Website Payments Pro Hosted Solution payment method

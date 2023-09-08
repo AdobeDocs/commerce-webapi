@@ -1,5 +1,6 @@
 ---
 title: PayPal Payflow Pro payment method
+description: Learn how to use the GraphQL API mutation for the PayPal Payflow Pro payment solution.
 ---
 
 # PayPal Payflow Pro payment method

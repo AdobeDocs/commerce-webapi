@@ -1,6 +1,6 @@
 ---
 title: GraphQL staging queries
-description: 
+description: Learn how to preview scheduled campaign information.
 ---
 
 # Staging queries

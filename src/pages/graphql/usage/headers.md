@@ -1,5 +1,6 @@
 ---
 title: GraphQL headers
+description: Learn about the headers that Adobe Commerce accepts and how to specify them.
 ---
 
 # GraphQL headers

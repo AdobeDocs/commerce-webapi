@@ -1,5 +1,6 @@
 ---
 title: Exception handling
+description: Learn how to implement the \GraphQL\Error\ClientAware interface to handle errors in your Adobe Commerce and Magento Open Soure modules.
 ---
 
 # Exception handling

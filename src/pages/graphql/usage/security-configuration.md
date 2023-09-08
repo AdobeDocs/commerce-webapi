@@ -1,5 +1,6 @@
 ---
 title: GraphQL security configuration
+description: Learn how to customize default security values.
 ---
 
 # GraphQL security configuration

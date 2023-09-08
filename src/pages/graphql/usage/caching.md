@@ -1,5 +1,6 @@
 ---
 title: GraphQL caching
+description: Learn how to use request headers and third-party services to enable caching for queries.
 ---
 
 import Queries246 from '/src/_includes/graphql/cache/queries-246.md'

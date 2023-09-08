@@ -1,5 +1,6 @@
 ---
 title: PayPal Express Checkout payment method
+description: Learn how to use the GraphQL API mutation for the PayPal Express Checkout payment solution.
 ---
 
 # PayPal Express Checkout payment method

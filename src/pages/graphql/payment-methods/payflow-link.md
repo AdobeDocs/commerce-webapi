@@ -1,5 +1,6 @@
 ---
 title: PayPal Payflow Link payment method
+description: Learn how to use the GraphQL API mutation for the PayPal Payflow Link payment solution.
 ---
 
 # PayPal Payflow Link payment method

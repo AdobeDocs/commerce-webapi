@@ -1,5 +1,6 @@
 ---
 title: Step 10. Place the order
+description: Learn how to place an order with the GraphQL API.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
