@@ -7,7 +7,8 @@ swagger: "2.0"
 info:
   version: 2.4.6
   title: Commerce Admin REST endpoints - All inclusive
-  description: Adobe Commerce allows some web APIs to be accessed by unauthenticated (anonymous) users. Many of these APIs allow a customer to have a robust shopping experience on the website without having to log in.
+  description: 
+    $ref: ./_includes/redocly-intro.md
 host: example.com
 basePath: /rest/default
 schemes:
