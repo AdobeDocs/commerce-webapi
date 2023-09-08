@@ -3,7 +3,7 @@ securityDefinitions:
     type: apiKey
     name: api_key
     in: header
-swagger: "2.0"
+swagger: "3.0"
 info:
   version: 2.4.6
   title: Commerce Guest REST endpoints - All inclusive
