@@ -1,6 +1,9 @@
 ---
 title: Create an Integration
 description: Explains how to create an integration.
+keywords:
+  - Integration
+  - REST
 ---
 
 # Create an integration

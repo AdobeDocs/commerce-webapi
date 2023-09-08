@@ -1,6 +1,9 @@
 ---
 title: Token-Based Authentication
 description: How to use token-based authentication in web APIs.
+keywords:
+  - REST
+  - Security
 ---
 
 # Token-based authentication

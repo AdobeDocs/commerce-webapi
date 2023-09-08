@@ -1,6 +1,9 @@
 ---
 title: Session-Based Authentication
 description: How to use session-based authentication in the web APIs.
+keywords:
+  - REST
+  - Security
 ---
 
 # Session-based authentication

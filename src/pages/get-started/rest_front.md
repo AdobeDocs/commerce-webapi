@@ -1,6 +1,8 @@
 ---
 title: Use REST APIs
 description: Overview of basic Magento REST API information.
+keywords:
+  - REST
 ---
 
 # Using REST APIs

@@ -1,6 +1,9 @@
 ---
 title: Construct a Request
 description: Explains how to construct and format an API request for Magento web APIs.
+keywords:
+  - GraphQL
+  - REST
 ---
 
 # Construct a request

@@ -1,6 +1,8 @@
 ---
 title: Use cURL to Run the Request
 description: Explains how to use cURL.
+keywords:
+  - REST
 ---
 
 # Using cURL to run requests

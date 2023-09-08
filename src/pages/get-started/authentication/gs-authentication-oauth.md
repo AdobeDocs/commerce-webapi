@@ -1,6 +1,9 @@
 ---
 title: OAuth-Based Authentication
 description: How to use OAuth authentication and token passing in the web APIs.
+keywords:
+  - REST
+  - Security
 ---
 
 # OAuth-based authentication

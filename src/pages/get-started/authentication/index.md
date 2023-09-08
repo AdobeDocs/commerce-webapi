@@ -1,6 +1,9 @@
 ---
 title: Authentication
 description: Overview of authentication methods in web APIs.
+keywords:
+  - REST
+  - Security
 ---
 
 # Authentication
