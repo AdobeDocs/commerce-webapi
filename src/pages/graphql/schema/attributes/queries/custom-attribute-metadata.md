@@ -1,5 +1,5 @@
 ---
-title: customAttributeMetadata query | Commerce Web APIs
+title: customAttributeMetadata query
 ---
 
 # customAttributeMetadata query

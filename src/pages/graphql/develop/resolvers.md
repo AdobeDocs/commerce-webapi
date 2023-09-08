@@ -1,5 +1,8 @@
 ---
-title: GraphQL resolvers | Commerce Web APIs
+title: GraphQL resolvers
+description: Learn how to create query resolvers.
+keywords:
+  - GraphQL
 ---
 
 # GraphQL resolvers

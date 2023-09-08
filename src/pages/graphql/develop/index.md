@@ -1,5 +1,8 @@
 ---
-title: Define the GraphQL schema for a module | Commerce Web APIs
+title: Define the GraphQL schema for a module
+description: Learn how to define queries, input/output attributes and interfaces, mutations, enumerations, and annotations.
+keywords:
+  - GraphQL
 ---
 
 # Define the GraphQL schema for a module

@@ -1,5 +1,5 @@
 ---
-title: currency query | Commerce Web APIs
+title: currency query
 ---
 
 # currency query

@@ -1,5 +1,5 @@
 ---
-title: placeOrder mutation | Commerce Web APIs
+title: placeOrder mutation
 ---
 
 # placeOrder mutation

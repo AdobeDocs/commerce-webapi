@@ -1,5 +1,5 @@
 ---
-title: createKlarnaPaymentsSession mutation | Commerce Web APIs
+title: createKlarnaPaymentsSession mutation
 contributor_name: Klarna
 contributor_link: https://www.klarna.com/
 ---

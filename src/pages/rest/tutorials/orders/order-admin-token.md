@@ -1,6 +1,8 @@
 ---
 title: Step 2. Get the admin token
 description: In this step of the tutorial you will get the admin token
+keywords:
+  - REST
 --- 
  
 # Step 2. Get the admin token

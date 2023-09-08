@@ -1,5 +1,5 @@
 ---
-title: Cart queries | Commerce Web APIs
+title: Cart queries
 ---
 
 # Cart queries

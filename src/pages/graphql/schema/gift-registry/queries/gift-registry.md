@@ -1,5 +1,5 @@
 ---
-title: giftRegistry query | Commerce Web APIs
+title: giftRegistry query
 edition: ee   
 contributor_name: EY
 ---

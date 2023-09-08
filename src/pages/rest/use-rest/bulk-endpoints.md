@@ -1,8 +1,10 @@
 ---
 title: Bulk endpoints
+description: Learn how to combine multiple API calls of the same type into a single request
 contributor_name: comwrap GmbH
 contributor_link: http://comwrap.com/
-description: Learn how to combine multiple API calls of the same type into a single request
+keywords:
+  - REST
 --- 
  
 # Bulk endpoints

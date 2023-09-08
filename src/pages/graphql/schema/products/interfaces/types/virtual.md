@@ -1,5 +1,5 @@
 ---
-title: Virtual product data types | Commerce Web APIs
+title: Virtual product data types
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---

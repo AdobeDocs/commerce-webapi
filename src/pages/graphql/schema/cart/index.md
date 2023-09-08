@@ -1,5 +1,5 @@
 ---
-title: Cart | Commerce Web APIs
+title: Cart
 ---
 
 # Cart

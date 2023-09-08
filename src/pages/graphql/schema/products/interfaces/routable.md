@@ -1,5 +1,5 @@
 ---
-title: RoutableInterface attributes | Commerce Web APIs
+title: RoutableInterface attributes
 ---
 
 # RoutableInterface attributes

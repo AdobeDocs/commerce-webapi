@@ -1,5 +1,5 @@
 ---
-title: Store mutations | Commerce Web APIs
+title: Store mutations
 ---
 
 # Store mutations

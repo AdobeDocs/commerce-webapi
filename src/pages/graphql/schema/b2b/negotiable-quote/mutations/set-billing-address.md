@@ -1,5 +1,5 @@
 ---
-title: setNegotiableQuoteBillingAddress mutation | Commerce Web APIs
+title: setNegotiableQuoteBillingAddress mutation
 edition: b2b
 ---
 

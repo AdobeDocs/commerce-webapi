@@ -1,5 +1,5 @@
 ---
-title: removeCouponFromCart mutation | Commerce Web APIs
+title: removeCouponFromCart mutation
 ---
 
 # removeCouponFromCart mutation

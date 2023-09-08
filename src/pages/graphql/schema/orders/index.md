@@ -1,5 +1,5 @@
 ---
-title: Orders | Commerce Web APIs
+title: Orders
 description:
 ---
 

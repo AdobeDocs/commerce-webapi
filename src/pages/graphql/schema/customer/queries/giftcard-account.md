@@ -1,5 +1,5 @@
 ---
-title: giftCardAccount query | Commerce Web APIs
+title: giftCardAccount query
 edition: ee
 ---
 

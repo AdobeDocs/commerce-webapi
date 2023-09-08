@@ -1,6 +1,8 @@
 ---
 title: REST usage notes
 description: Issues you may encounter when using REST endpoints.
+keywords:
+  - REST
 --- 
  
 # REST usage notes

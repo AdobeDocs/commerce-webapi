@@ -1,5 +1,5 @@
 ---
-title: placePurchaseOrder mutation | Commerce Web APIs
+title: placePurchaseOrder mutation
 edition: b2b
 ---
 

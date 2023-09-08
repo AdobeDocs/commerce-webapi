@@ -2,6 +2,9 @@
 title: Integrate with the Company module
 description: Overview of the Company module
 edition: ee
+keywords:
+  - B2B
+  - REST
 ---
 
 # Integrate with the Company Module

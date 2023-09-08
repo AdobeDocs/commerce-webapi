@@ -1,5 +1,5 @@
 ---
-title: createProductReview mutation | Commerce Web APIs
+title: createProductReview mutation
 ---
 
 # createProductReview mutation

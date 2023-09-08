@@ -1,5 +1,5 @@
 ---
-title: customerDownloadableProducts query | Commerce Web APIs
+title: customerDownloadableProducts query
 ---
 
 # customerDownloadableProducts query

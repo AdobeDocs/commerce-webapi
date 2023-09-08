@@ -1,5 +1,5 @@
 ---
-title: reorderItems mutation | Commerce Web APIs
+title: reorderItems mutation
 ---
 
 # reorderItems mutation

@@ -1,5 +1,5 @@
 ---
-title: updateCustomer mutation | Commerce Web APIs
+title: updateCustomer mutation
 ---
 
 # updateCustomer mutation

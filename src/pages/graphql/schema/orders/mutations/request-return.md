@@ -1,5 +1,5 @@
 ---
-title: requestReturn mutation | Commerce Web APIs
+title: requestReturn mutation
 edition: ee
 ---
 

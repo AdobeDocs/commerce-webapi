@@ -1,5 +1,5 @@
 ---
-title: applyStoreCreditToCart mutation | Commerce Web APIs
+title: applyStoreCreditToCart mutation
 edition: ee
 ---
 

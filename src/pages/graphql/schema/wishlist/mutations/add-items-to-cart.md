@@ -1,5 +1,5 @@
 ---
-title: addWishlistItemsToCart mutation | Commerce Web APIs
+title: addWishlistItemsToCart mutation
 ---
 
 # addWishlistItemsToCart mutation

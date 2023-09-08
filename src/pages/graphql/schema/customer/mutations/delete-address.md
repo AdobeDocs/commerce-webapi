@@ -1,5 +1,5 @@
 ---
-title: deleteCustomerAddress mutation | Commerce Web APIs
+title: deleteCustomerAddress mutation
 ---
 
 # deleteCustomerAddress mutation

@@ -1,8 +1,10 @@
 ---
 title: Step 1. Plan the product
+description: In this step of the tutorial you will plan and define the product
 contributor_name: comwrap GmbH
 contributor_link: http://comwrap.com/
-description: In this step of the tutorial you will plan and define the product
+keywords:
+  - REST
 --- 
  
 # Step 1. Plan the product

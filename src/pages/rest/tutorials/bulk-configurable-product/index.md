@@ -1,8 +1,10 @@
 ---
 title: Create a configurable product using bulk APIs
+description: A tutorial that describes how to create a configurable product using bulk API calls
 contributor_name: comwrap GmbH
 contributor_link: http://comwrap.com/
-description: A tutorial that describes how to create a configurable product using bulk API calls
+keywords:
+  - REST
 --- 
  
 # Create a configurable product using bulk APIs

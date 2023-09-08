@@ -1,8 +1,10 @@
 ---
 title: Search for products with the /search endpoint
+description: Search for products using the /search endpoints
 contributor_name: comwrap GmbH
 contributor_link: https://www.comwrap.com/
-description: Search for products using the /search endpoints
+keywords:
+  - REST
 --- 
  
 # Search for products with the /search endpoint

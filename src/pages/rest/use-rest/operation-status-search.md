@@ -1,8 +1,10 @@
 ---
 title: Search for the status of a bulk operation
+description: Search for bulk operation statuses
 contributor_name: comwrap GmbH
 contributor_link: https://www.comwrap.com
-description: Search for bulk operation statuses
+keywords:
+  - REST
 --- 
  
 # Search for the status of a bulk operation
