@@ -2,6 +2,9 @@
 title: Manage company structures
 description: Assign company users to teams and hierarchies
 edition: ee
+keywords:
+  - B2B
+  - REST
 ---
 
 import * as Vars from '../../../data/vars.js';

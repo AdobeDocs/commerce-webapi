@@ -1,6 +1,8 @@
 ---
 title: Generate the admin token
 description: In this tutorial you will generate the admin token necessary for other tutorials 
+keywords:
+  - REST
 --- 
  
 # Generate the admin token

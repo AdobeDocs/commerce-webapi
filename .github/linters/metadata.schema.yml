@@ -20,7 +20,7 @@ properties:
         - Events
         - Extensibility
         - GraphQL
-        - null
+        - Inventory
         - Performance
         - REST
         - Security

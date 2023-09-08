@@ -1,8 +1,10 @@
 ---
 title: Step 3. Create the bundle product 
+description: In this step of the tutorial you will create the bundle product
 contributor_name: Goivvy LLC
 contributor_link: https://www.goivvy.com/magento-optimization-service
-description: In this step of the tutorial you will create the bundle product
+keywords:
+  - REST
 --- 
  
 # Step 3. Create the bundle product

@@ -1,8 +1,10 @@
 ---
 title: Step 3. Define configurable product options
+description: In this step of the tutorial you will define the configurable product options
 contributor_name: comwrap GmbH
 contributor_link: http://comwrap.com/
-description: In this step of the tutorial you will define the configurable product options
+keywords:
+  - REST
 --- 
  
 # Step 3. Define configurable product options

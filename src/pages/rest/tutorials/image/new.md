@@ -1,9 +1,11 @@
 ---
 title: Step 2. Add a new image 
+description: We will learn how to add a new image to a product.
 contributor_name: Goivvy LLC
 contributor_link: https://www.goivvy.com/
-description: We will learn how to add a new image to a product.
---- 
+keywords:
+  - REST
+---
 
 # Step 2. Add a new image
 

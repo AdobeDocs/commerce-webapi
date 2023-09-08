@@ -1,6 +1,8 @@
 ---
 title: Order processing tutorial
 description: In this tutorial you will configure a store, create a customer, quotes, orders and more using the REST API
+keywords:
+  - REST
 --- 
 import * as Vars from '../../../../data/vars.js';
 

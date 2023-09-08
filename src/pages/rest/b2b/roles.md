@@ -2,6 +2,9 @@
 title: Manage company roles
 description: Create and assign user roles for B2B users
 edition: ee
+keywords:
+  - B2B
+  - REST
 ---
 
 import * as Vars from '../../../data/vars.js';

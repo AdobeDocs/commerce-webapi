@@ -1,6 +1,8 @@
 ---
 title: Step 1. Configure the store
 description: In this step of the tutorial you will configure the store
+keywords:
+  - REST
 --- 
  
 # Step 1. Configure the store

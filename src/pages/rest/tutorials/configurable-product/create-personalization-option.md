@@ -1,7 +1,9 @@
 ---
 title: Step 5. Create the personalization option
 description: In this step of the tutorial you will create the personalization options
---- 
+keywords:
+  - REST
+---
  
 # Step 5. Create the personalization option
 
