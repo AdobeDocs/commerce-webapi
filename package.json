@@ -34,10 +34,5 @@
     "dev:spectaql:beta": "spectaql --development-mode-live spectaql/config_beta.yml",
     "lint": "docker run --rm -e RUN_LOCAL=true --env-file '.github/super-linter.env' -v \"$PWD\":/tmp/lint github/super-linter:slim-v4.10.1"
   },
-  "remarkConfig": {
-    "plugins": [
-      "remark-validate-links"
-    ]
-  },
   "packageManager": "yarn@3.2.4"
 }
