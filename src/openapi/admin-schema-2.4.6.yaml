@@ -11,9 +11,9 @@ info:
   description: 
     $ref: ../_includes/redocly-intro.md
 host: example.com
-basePath: /rest/default
+basePath: "/rest/default"
 schemes:
-  - https
+  - http
 tags:
   - name: addresses/{addressId}
   - name: adobe_io_events/check_configuration
