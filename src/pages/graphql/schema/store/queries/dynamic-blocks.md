@@ -1,5 +1,5 @@
 ---
-title: dynamicBlocks query | Commerce Web APIs
+title: dynamicBlocks query
 ---
 
 # dynamicBlocks query

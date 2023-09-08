@@ -1,6 +1,8 @@
 ---
 title: Create and manage grouped products tutorial
 description: In this tutorial you will create and manage grouped products
+keywords:
+  - REST
 --- 
  
 # Create and manage grouped products tutorial

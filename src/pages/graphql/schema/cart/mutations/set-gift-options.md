@@ -1,5 +1,5 @@
 ---
-title: setGiftOptionsOnCart mutation | Commerce Web APIs
+title: setGiftOptionsOnCart mutation
 edition: ee
 ---
 

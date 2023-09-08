@@ -1,5 +1,5 @@
 ---
-title: moveProductsBetweenWishlists mutation | Commerce Web APIs
+title: moveProductsBetweenWishlists mutation
 ee_only: true
 ---
 

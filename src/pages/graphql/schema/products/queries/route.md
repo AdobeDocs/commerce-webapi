@@ -1,5 +1,5 @@
 ---
-title: route query | Commerce Web APIs
+title: route query
 ---
 
 # route query

@@ -1,5 +1,5 @@
 ---
-title: createEmptyCart mutation | Commerce Web APIs
+title: createEmptyCart mutation
 ---
 
 # createEmptyCart mutation

@@ -1,5 +1,5 @@
 ---
-title: deletePurchaseOrderApprovalRule mutation | Commerce Web APIs
+title: deletePurchaseOrderApprovalRule mutation
 edition: b2b
 ---
 

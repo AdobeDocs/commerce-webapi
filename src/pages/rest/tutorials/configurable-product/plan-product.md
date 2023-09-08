@@ -1,6 +1,8 @@
 ---
 title: Step 1. Plan the product
 description: In this step of the tutorial you will plan the product
+keywords:
+  - REST
 --- 
  
 # Step 1. Plan the product

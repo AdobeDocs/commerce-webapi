@@ -1,5 +1,5 @@
 ---
-title: cmsPage query | Commerce Web APIs
+title: cmsPage query
 ---
 
 # cmsPage query

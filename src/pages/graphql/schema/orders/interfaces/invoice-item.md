@@ -1,5 +1,5 @@
 ---
-title: InvoiceItemInterface attributes and implementations | Commerce Web APIs
+title: InvoiceItemInterface attributes and implementations
 ---
 
 # InvoiceItemInterface attributes and implementations

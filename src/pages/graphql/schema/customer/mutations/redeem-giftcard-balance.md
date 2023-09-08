@@ -1,5 +1,5 @@
 ---
-title: redeemGiftCardBalanceAsStoreCredit mutation | Commerce Web APIs
+title: redeemGiftCardBalanceAsStoreCredit mutation
 edition: ee
 ---
 

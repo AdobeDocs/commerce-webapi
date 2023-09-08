@@ -1,6 +1,8 @@
 ---
 title: Search using REST endpoints
 description: How to search using REST endpoints with examples
+keywords:
+  - REST
 --- 
 import * as Vars from '../../../data/vars.js';
 

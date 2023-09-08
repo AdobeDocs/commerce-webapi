@@ -1,6 +1,9 @@
 ---
 title: Step 10. Create an invoice
 description: In this step of the tutorial you will create an invoice
+keywords:
+  - Inventory
+  - REST
 --- 
  
 # Step 10. Create an invoice

@@ -1,5 +1,5 @@
 ---
-title: Checkout | Commerce Web APIs
+title: Checkout
 ---
 
 # Checkout

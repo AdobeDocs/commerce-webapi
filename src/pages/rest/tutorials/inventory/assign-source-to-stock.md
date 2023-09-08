@@ -1,7 +1,10 @@
 ---
 title: Step 4. Link stocks and sources
 description: In this step of the tutorial you will link stocks and sources together
---- 
+keywords:
+  - Inventory
+  - REST
+---
  
 # Step 4. Link stocks and sources
 

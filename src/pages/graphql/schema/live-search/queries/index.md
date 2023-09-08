@@ -1,5 +1,5 @@
 ---
-title: Live Search queries | Commerce Web APIs
+title: Live Search queries
 edition: ee
 ---
 

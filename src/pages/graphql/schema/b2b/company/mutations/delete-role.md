@@ -1,5 +1,5 @@
 ---
-title: deleteCompanyRole mutation | Commerce Web APIs
+title: deleteCompanyRole mutation
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 edition: b2b

@@ -1,5 +1,8 @@
 ---
-title: GraphQL introspection queries | Commerce Web APIs
+title: GraphQL introspection queries
+description: Learn how to view details about specific data types.
+keywords:
+  - GraphQL
 ---
 
 # Introspection queries

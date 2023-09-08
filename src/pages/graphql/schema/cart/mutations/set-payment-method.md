@@ -1,5 +1,5 @@
 ---
-title: setPaymentMethodOnCart mutation | Commerce Web APIs
+title: setPaymentMethodOnCart mutation
 ---
 
 # setPaymentMethodOnCart mutation

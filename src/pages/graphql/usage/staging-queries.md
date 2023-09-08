@@ -1,5 +1,8 @@
 ---
-title: GraphQL staging queries | Commerce Web APIs
+title: GraphQL staging queries
+description: Learn how to preview scheduled campaign information.
+keywords:
+  - GraphQL
 ---
 
 # Staging queries

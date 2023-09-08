@@ -1,5 +1,5 @@
 ---
-title: Simple product data types | Commerce Web APIs
+title: Simple product data types
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---

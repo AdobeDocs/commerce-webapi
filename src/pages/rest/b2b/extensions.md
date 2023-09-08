@@ -2,6 +2,9 @@
 title: Develop B2B extensions
 description: Review details about developing extensions in the Module Reference Guide
 edition: ee
+keywords:
+  - B2B
+  - REST
 ---
 
 import * as Vars from '../../../data/vars.js';

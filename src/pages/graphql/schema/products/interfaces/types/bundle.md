@@ -1,5 +1,5 @@
 ---
-title: Bundle product data types | Commerce Web APIs
+title: Bundle product data types
 ---
 
 # Bundle product data types

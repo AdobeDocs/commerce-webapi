@@ -1,5 +1,5 @@
 ---
-title: createPaypalExpressToken mutation | Commerce Web APIs
+title: createPaypalExpressToken mutation
 ---
 
 # createPaypalExpressToken mutation

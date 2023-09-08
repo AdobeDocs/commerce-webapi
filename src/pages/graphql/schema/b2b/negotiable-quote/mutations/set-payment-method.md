@@ -1,5 +1,5 @@
 ---
-title: setNegotiableQuotePaymentMethod mutation | Commerce Web APIs
+title: setNegotiableQuotePaymentMethod mutation
 edition: b2b
 ---
 

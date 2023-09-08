@@ -1,5 +1,5 @@
 ---
-title: addGiftRegistryRegistrants mutation | Commerce Web APIs
+title: addGiftRegistryRegistrants mutation
 edition: ee
 ---
 
