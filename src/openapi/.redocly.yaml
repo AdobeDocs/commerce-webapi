@@ -1,8 +1,5 @@
 # See https://docs.redoc.ly/cli/configuration/ for more information.
 organization: adobe-developers
-info:
-  title: test title
-  description: this is a test description.
 extends:
     - minimal
 apis:
