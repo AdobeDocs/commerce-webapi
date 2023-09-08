@@ -1,6 +1,8 @@
 ---
 title: GraphQL resolvers
 description: Learn how to create query resolvers.
+keywords:
+  - GraphQL
 ---
 
 # GraphQL resolvers

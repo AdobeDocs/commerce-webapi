@@ -1,6 +1,9 @@
 ---
 title: PayPal Payments Advanced payment method
 description: Learn how to use the GraphQL API mutation for the PayPal Payments Advanced payment solution.
+keywords:
+  - GraphQL
+  - Payments
 ---
 
 # PayPal Payments Advanced payment method

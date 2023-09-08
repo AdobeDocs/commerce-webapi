@@ -3,6 +3,9 @@ title: Step 2. Create an empty cart
 description: Learn how to create a cart with the GraphQL API.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
+keywords:
+  - GraphQL
+  - Checkout
 ---
 
 # Step 2. Create an empty cart

@@ -1,6 +1,8 @@
 ---
 title: GraphQL release notes
 description: Learn about new features, enhancements, and bug fixes for the Adobe Commerce and Magento Open Source GraphQL API.
+keywords:
+  - GraphQL
 ---
 
 # GraphQL release notes

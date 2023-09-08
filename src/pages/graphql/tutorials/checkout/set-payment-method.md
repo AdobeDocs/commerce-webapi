@@ -3,6 +3,9 @@ title: Step 9. Set the payment method
 description: Learn how to set a payment method for an order with the GraphQL API.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
+keywords:
+  - GraphQL
+  - Checkout
 ---
 
 # Step 9. Set the payment method

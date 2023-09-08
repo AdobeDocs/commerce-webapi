@@ -1,6 +1,8 @@
 ---
 title: Identity class
 description: Learn how to implement an identity class for cacheable GraphQL API queries in your Adobe Commerce and Magento Open Source modules.
+keywords:
+  - GraphQL
 ---
 
 # Identity class

@@ -3,6 +3,9 @@ title: GraphQL checkout tutorial
 description: Learn how to place an order with the GraphQL API.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
+keywords:
+  - GraphQL
+  - Checkout
 ---
 
 # GraphQL checkout tutorial

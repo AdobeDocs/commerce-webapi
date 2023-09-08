@@ -1,6 +1,9 @@
 ---
 title: PayPal Payflow Pro Vault payment method
 description: Learn how to use the GraphQL API mutation for the PayPal Payflow Pro Vault payment solution.
+keywords:
+  - GraphQL
+  - Payments
 ---
 
 # PayPal Payflow Pro Vault payment method

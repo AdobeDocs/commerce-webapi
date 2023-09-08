@@ -3,6 +3,9 @@ title: Step 1. Create a customer
 description: Learn how to create a customer with the GraphQL API.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
+keywords:
+  - GraphQL
+  - Checkout
 ---
 
 # Step 1. Create a customer

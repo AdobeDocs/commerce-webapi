@@ -3,6 +3,9 @@ title: Braintree payment method
 description: Learn how to use the GraphQL API mutation for the Braintree payment solution.
 contributor_name: Something Digital
 contributor_link: https://www.somethingdigital.com/
+keywords:
+  - GraphQL
+  - Payments
 ---
 
 # Braintree payment method

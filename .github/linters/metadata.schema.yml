@@ -14,6 +14,7 @@ properties:
         - App Builder
         - B2B
         - Cache
+        - Checkout
         - Cloud
         - Configuration
         - Cron
@@ -22,6 +23,7 @@ properties:
         - GraphQL
         - Integration
         - Inventory
+        - Payments
         - Performance
         - REST
         - Security

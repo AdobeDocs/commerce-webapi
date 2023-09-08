@@ -1,6 +1,8 @@
 ---
 title: GraphQL tutorials
 description: Follow step-by-step instructions to develop common ecommerce workflows with the GraphQL API.
+keywords:
+  - GraphQL
 ---
 
 # GraphQL tutorials

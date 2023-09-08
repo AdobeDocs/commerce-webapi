@@ -1,6 +1,9 @@
 ---
 title: GraphQL payment methods
 description: Learn about all available mutations for third-party payment providers.
+keywords:
+  - GraphQL
+  - Payments
 ---
 
 # GraphQL payment methods
