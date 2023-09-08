@@ -1,5 +1,5 @@
 ---
-title: setBillingAddressOnCart mutation | Commerce Web APIs
+title: setBillingAddressOnCart mutation
 ---
 
 # setBillingAddressOnCart mutation

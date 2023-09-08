@@ -1,5 +1,5 @@
 ---
-title: storeConfig query | Commerce Web APIs
+title: storeConfig query
 ---
 
 # storeConfig query

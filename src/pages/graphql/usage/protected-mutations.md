@@ -1,5 +1,9 @@
 ---
-title: Protected mutations | Commerce Web APIs
+title: Protected mutations
+description: Learn how to use CAPTCHA and reCAPTCHA to protect GraphQL mutations.
+keywords:
+  - GraphQL
+  - Security
 ---
 
 # Protected mutations

@@ -1,5 +1,5 @@
 ---
-title: products query | Commerce Web APIs
+title: products query
 edition: ee
 description: Describes how to construct and use the Catalog Service products query.
 ---
@@ -294,7 +294,7 @@ query {
 }
 ```
 
-### Return details about a complex product {#complex-product-example}
+### Return details about a complex product
 
 The following query returns details about a complex product.
 

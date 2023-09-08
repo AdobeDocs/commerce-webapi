@@ -1,5 +1,5 @@
 ---
-title: attributesMetadata query | Commerce Web APIs
+title: attributesMetadata query
 edition: pwa
 ---
 

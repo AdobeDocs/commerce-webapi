@@ -1,7 +1,11 @@
 ---
-title: Step 3. Add products to the cart | Commerce Web APIs
+title: Step 3. Add products to the cart
+description: Learn how to add products to a cart with the GraphQL API.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
+keywords:
+  - GraphQL
+  - Checkout
 ---
 
 # Step 3. Add products to the cart

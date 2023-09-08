@@ -1,5 +1,8 @@
 ---
-title: Graphql release notes | Commerce Web APIs
+title: GraphQL release notes
+description: Learn about new features, enhancements, and bug fixes for the Adobe Commerce and Magento Open Source GraphQL API.
+keywords:
+  - GraphQL
 ---
 
 # GraphQL release notes
@@ -24,7 +27,7 @@ The [Magento Open Source 2.4.0 Release Notes](https://experienceleague.adobe.com
 
 ## Adobe Commerce and Magento Open Source 2.3.5
 
--  **The `products` and `categoryList` queries can now be used to retrieve information about products and categories that have been added to a staged campaign.** These queries require an admin authorization token. See [Using queries](usage/index.md#staging-queries) for details.
+-  **The `products` and `categoryList` queries can now be used to retrieve information about products and categories that have been added to a staged campaign.** These queries require an admin authorization token. See [Staging queries](usage/staging-queries.md) for details.
 -  Custom attributes used in layered navigation no longer require the **Use in Search**, **Visible in Advanced Search**, and **Use in Search Results Layered Navigation** fields be set to Yes.
 -  Added the `position` and `disabled` attributes to the `MediaGalleryInterface`.
 -  When you apply a gift card to a cart, an exception is no longer thrown when the last product is removed from the cart.

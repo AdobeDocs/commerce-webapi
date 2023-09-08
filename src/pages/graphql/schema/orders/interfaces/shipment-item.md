@@ -1,5 +1,5 @@
 ---
-title: ShipmentItemInterface attributes and implementations | Commerce Web APIs
+title: ShipmentItemInterface attributes and implementations
 ---
 
 # ShipmentItemInterface attributes and implementations

@@ -1,5 +1,5 @@
 ---
-title: Unions | Commerce Web APIs
+title: Unions
 ---
 
 # Unions

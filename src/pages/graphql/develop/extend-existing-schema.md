@@ -1,7 +1,10 @@
 ---
-title: Extend an existing GraphQL schema | Commerce Web APIs
+title: Extend an existing GraphQL schema
+description: Learn how to add attributes and data types, modify resolver behavior, and add features using extension points.
 contributor_name: Adarsh Manickam
 contributor_link: https://github.com/drpayyne
+keywords:
+  - GraphQL
 ---
 
 # Extend an existing GraphQL schema

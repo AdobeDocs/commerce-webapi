@@ -1,5 +1,5 @@
 ---
-title: updateCustomerV2 mutation | Commerce Web APIs
+title: updateCustomerV2 mutation
 ---
 
 import Customer from '/src/_includes/graphql/customer-output-24.md'

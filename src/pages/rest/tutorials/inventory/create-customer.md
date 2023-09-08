@@ -1,6 +1,9 @@
 ---
 title: Step 6. Create a customer and generate a customer token
 description: In this step of the tutorial you will create a customer and generate a customer token
+keywords:
+  - Inventory
+  - REST
 --- 
  
 # Step 6. Create a customer and generate a customer token

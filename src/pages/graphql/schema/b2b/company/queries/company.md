@@ -1,5 +1,5 @@
 ---
-title: company query | Commerce Web APIs
+title: company query
 edition: b2b
 ---
 
@@ -370,4 +370,4 @@ The `company` object returns the `Company` object.
 
 import Company from '/src/_includes/graphql/company.md'
 
-<Company />.md %}
+<Company />

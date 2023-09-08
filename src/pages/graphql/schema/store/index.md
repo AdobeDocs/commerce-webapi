@@ -1,5 +1,5 @@
 ---
-title: Store | Commerce Web APIs
+title: Store
 ---
 
 # Store

@@ -1,8 +1,10 @@
 ---
 title: Step 1. Plan the product
+description: In this step of the tutorial you will plan the product
 contributor_name: Goivvy LLC
 contributor_link: https://www.goivvy.com/magento-optimization-service
-description: In this step of the tutorial you will plan the product
+keywords:
+  - REST
 --- 
  
 # Step 1. Plan the product

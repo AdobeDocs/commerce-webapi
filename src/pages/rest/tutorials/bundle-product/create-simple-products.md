@@ -1,8 +1,10 @@
 ---
 title: Step 2. Create the simple products
+description: In this step of the tutorial you will create simple products
 contributor_name: Goivvy LLC
 contributor_link: https://www.goivvy.com/magento-optimization-service
-description: In this step of the tutorial you will create simple products
+keywords:
+  - REST
 --- 
  
 # Step 2. Create the simple products

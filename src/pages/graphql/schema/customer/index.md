@@ -1,5 +1,5 @@
 ---
-title: Customer | Commerce Web APIs
+title: Customer
 ---
 
 # Customer

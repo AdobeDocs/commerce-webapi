@@ -1,6 +1,9 @@
 ---
 title: Step 8. Prepare for checkout
 description: In this step of the tutorial you will prepare for checkout
+keywords:
+  - Inventory
+  - REST
 --- 
  
 # Step 8. Prepare for checkout

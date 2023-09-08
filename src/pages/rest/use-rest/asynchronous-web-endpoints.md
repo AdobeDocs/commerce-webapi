@@ -1,8 +1,10 @@
 ---
 title: Asynchronous web endpoints
+description: Learn about asynchronous web points, how they are used and how to define store scopes
 contributor_name: comwrap GmbH
 contributor_link: http://comwrap.com/
-description: Learn about asynchronous web points, how they are used and how to define store scopes
+keywords:
+  - REST
 --- 
 import * as Vars from '../../../data/vars.js';
 

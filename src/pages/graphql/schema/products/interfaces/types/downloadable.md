@@ -1,5 +1,5 @@
 ---
-title: Downloadable product data types | Commerce Web APIs
+title: Downloadable product data types
 ---
 
 # Downloadable product data types

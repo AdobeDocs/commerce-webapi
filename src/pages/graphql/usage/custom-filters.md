@@ -1,5 +1,8 @@
 ---
-title: Filtering with custom attributes | Commerce Web APIs
+title: Filtering with custom attributes
+description: Learn how to retrieve default and custom attributes with the products query.
+keywords:
+  - GraphQL
 ---
 
 # Filtering with custom attributes

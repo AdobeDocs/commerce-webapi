@@ -1,6 +1,8 @@
 ---
 title: Step 2. Create the configurable product
 description: In this step of the tutorial you will create the configurable product
+keywords:
+  - REST
 --- 
  
 # Step 2. Create the configurable product

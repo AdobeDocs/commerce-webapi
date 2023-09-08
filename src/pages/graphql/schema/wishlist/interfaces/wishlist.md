@@ -1,5 +1,5 @@
 ---
-title: WishlistItemInterface attributes and implementations | Commerce Web APIs
+title: WishlistItemInterface attributes and implementations
 ---
 
 # WishlistItemInterface attributes and implementations

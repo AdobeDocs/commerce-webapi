@@ -1,5 +1,5 @@
 ---
-title: Product interface implementations | Commerce Web APIs
+title: Product interface implementations
 ---
 
 # Product interface implementations

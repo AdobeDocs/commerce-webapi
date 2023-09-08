@@ -1,5 +1,5 @@
 ---
-title: addPurchaseOrderComment mutation | Commerce Web APIs
+title: addPurchaseOrderComment mutation
 edition: b2b
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Gift registry mutations | Commerce Web APIs
+title: Gift registry mutations
 ---
 
 # Gift registry mutations

@@ -1,5 +1,5 @@
 ---
-title: updateNegotiableQuoteQuantities mutation | Commerce Web APIs
+title: updateNegotiableQuoteQuantities mutation
 edition: b2b
 ---
 

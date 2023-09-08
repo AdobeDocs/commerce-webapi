@@ -1,5 +1,5 @@
 ---
-title: createPayflowProToken mutation | Commerce Web APIs
+title: createPayflowProToken mutation
 ---
 
 # createPayflowProToken mutation
