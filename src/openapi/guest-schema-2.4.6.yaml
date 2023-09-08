@@ -3,12 +3,12 @@ securityDefinitions:
     type: apiKey
     name: api_key
     in: header
-swagger: "3.0"
+swagger: "2.0"
 info:
   version: 2.4.6
   title: Commerce Guest REST endpoints - All inclusive
   description: 
-    $ref: ../_includes/redocly-intro.md
+    $ref: https://raw.githubusercontent.com/AdobeDocs/commerce-webapi/main/src/_includes/redocly-intro.md
 host: example.com
 basePath: /rest/default
 schemes:
