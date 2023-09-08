@@ -9,7 +9,7 @@ info:
   version: 2.4.7-beta
   title: Commerce Admin REST endpoints - All inclusive
   description: 
-    $ref: src/_includes/redocly-intro.md
+    $ref: ../_includes/redocly-intro.md
 host: example.com
 basePath: "/rest/default"
 schemes:
