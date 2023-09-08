@@ -8,7 +8,7 @@ info:
   version: 2.4.6
   title: Commerce Guest REST endpoints - All inclusive
   description: 
-    $ref: ./_includes/redocly-intro.md
+    $ref: '../_includes/redocly-intro.md'
 host: example.com
 basePath: /rest/default
 schemes:
