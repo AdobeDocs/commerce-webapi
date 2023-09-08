@@ -7,8 +7,6 @@ swagger: "2.0"
 info:
   version: 2.4.6
   title: Commerce Customer REST endpoints - All inclusive
-  description: 
-    $ref: https://raw.githubusercontent.com/AdobeDocs/commerce-webapi/main/src/_includes/graphql/notes/beta.md
 host: example.com
 basePath: /rest/default
 schemes:
