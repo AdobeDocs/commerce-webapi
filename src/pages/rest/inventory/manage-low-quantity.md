@@ -1,6 +1,9 @@
 ---
 title: Manage low-quantity notifications
 description: Configure the low stock notification alert using the admin and REST API
+keywords:
+  - Inventory
+  - REST
 --- 
  
 # Manage low-quantity notifications

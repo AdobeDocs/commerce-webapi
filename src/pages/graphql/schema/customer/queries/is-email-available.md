@@ -1,5 +1,5 @@
 ---
-title: isEmailAvailable query | Commerce Web APIs
+title: isEmailAvailable query
 ---
 
 # isEmailAvailable query

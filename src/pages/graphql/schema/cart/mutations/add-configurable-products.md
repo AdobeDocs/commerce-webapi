@@ -1,5 +1,5 @@
 ---
-title: addConfigurableProductsToCart mutation | Commerce Web APIs
+title: addConfigurableProductsToCart mutation
 ---
 
 # addConfigurableProductsToCart mutation

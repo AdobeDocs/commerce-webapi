@@ -1,5 +1,5 @@
 ---
-title: OrderItemInterface attributes and implementations | Commerce Web APIs
+title: OrderItemInterface attributes and implementations
 ---
 
 # OrderItemInterface attributes and implementations

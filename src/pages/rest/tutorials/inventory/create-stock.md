@@ -1,6 +1,9 @@
 ---
 title: Step 3. Create stocks
 description: In this step of the tutorial you will create stocks
+keywords:
+  - Inventory
+  - REST
 --- 
  
 # Step 3. Create stocks

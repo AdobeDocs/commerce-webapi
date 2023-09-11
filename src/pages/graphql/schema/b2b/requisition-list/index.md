@@ -1,5 +1,5 @@
 ---
-title: Requisition lists (B2B)  | Commerce Web APIs
+title: Requisition lists (B2B) 
 description:
 ---
 

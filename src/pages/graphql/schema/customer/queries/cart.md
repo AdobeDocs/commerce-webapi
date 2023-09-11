@@ -1,5 +1,5 @@
 ---
-title: customerCart query | Commerce Web APIs
+title: customerCart query
 ---
 
 # customerCart query

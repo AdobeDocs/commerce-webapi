@@ -1,5 +1,5 @@
 ---
-title: addPurchaseOrderItemsToCart mutation | Commerce Web APIs
+title: addPurchaseOrderItemsToCart mutation
 edition: b2b
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: PWA implementations and attributes | Commerce Web APIs
+title: PWA implementations and attributes
 edition: pwa
 ---
 

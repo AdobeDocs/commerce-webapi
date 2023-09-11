@@ -1,6 +1,8 @@
 ---
 title: REST tutorials
 description: A list of tutorials on the Commerce REST APIs
+keywords:
+  - REST
 ---
 import * as Vars from '../../../data/vars.js';
 

@@ -1,5 +1,5 @@
 ---
-title: createCustomer mutation | Commerce Web APIs
+title: createCustomer mutation
 ---
 
 # createCustomer mutation

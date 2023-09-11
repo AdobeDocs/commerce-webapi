@@ -1,5 +1,5 @@
 ---
-title: addReturnTracking mutation | Commerce Web APIs
+title: addReturnTracking mutation
 ---
 
 # addReturnTracking mutation

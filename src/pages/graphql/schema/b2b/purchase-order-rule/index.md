@@ -1,5 +1,5 @@
 ---
-title: Purchase order approval rules (B2B) | Commerce Web APIs
+title: Purchase order approval rules (B2B)
 edition: b2b   
 ---
 

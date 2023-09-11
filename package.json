@@ -7,13 +7,15 @@
     "url": "https://github.com/AdobeDocs/commerce-webapi"
   },
   "dependencies": {
-    "@adobe/gatsby-theme-aio": "4.10.4",
+    "@adobe/gatsby-theme-aio": "4.10.5",
     "gatsby": "4.22.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "remark-cli": "^10.0.1",
+    "remark-frontmatter": "4.0.1",
+    "remark-lint-frontmatter-schema": "^3.15.2",
     "remark-validate-links": "^11.0.2",
     "spectaql": "^1.5.6"
   },
@@ -25,7 +27,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test:links": "remark src/pages --ignore-pattern src/pages/graphql,src/_includes --quiet --frail",
+    "test:links": "remark src/pages --ignore-pattern src/pages/graphql/schema,src/_includes --quiet --frail",
     "build:spectaql": "spectaql --target-dir static/graphql-api/ --target-file index.html spectaql/config.yml",
     "build:spectaql:beta": "spectaql --target-dir static/graphql-api/beta/ --target-file index.html spectaql/config_beta.yml",
     "dev:spectaql": "spectaql --development-mode-live spectaql/config.yml",

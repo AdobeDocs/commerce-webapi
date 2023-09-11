@@ -1,5 +1,5 @@
 ---
-title: Wishlist | Commerce Web APIs
+title: Wishlist
 ---
 
 # Wish list

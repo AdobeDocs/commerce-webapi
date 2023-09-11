@@ -1,5 +1,5 @@
 ---
-title: attributesList query | Commerce Web APIs
+title: attributesList query
 ---
 
 import BetaNote from '/src/_includes/graphql/notes/beta.md'

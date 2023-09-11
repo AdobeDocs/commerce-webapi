@@ -1,6 +1,9 @@
 ---
 title: Step 7. Create a cart and add products to it
 description: In this step of the tutorial you will create a card and add products
+keywords:
+  - Inventory
+  - REST
 --- 
  
 # Step 7. Create a cart and add products to it
@@ -9,7 +12,7 @@ Next, we'll create a cart and add the items that we modified in [Step 5. Reassig
 
 ## Create a cart
 
-The call to create a cart and add items must contain the customer’s authorization token in the authorization header.
+The call to create a cart and add items must contain the customer's authorization token in the authorization header.
 
 **Endpoint:**
 

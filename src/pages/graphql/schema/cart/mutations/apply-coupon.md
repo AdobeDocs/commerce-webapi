@@ -1,5 +1,5 @@
 ---
-title: applyCouponToCart mutation | Commerce Web APIs
+title: applyCouponToCart mutation
 ---
 
 # applyCouponToCart mutation

@@ -1,5 +1,5 @@
 ---
-title: CustomizableOptionInterface | Commerce Web APIs
+title: CustomizableOptionInterface
 ---
 
 # CustomizableOptionInterface

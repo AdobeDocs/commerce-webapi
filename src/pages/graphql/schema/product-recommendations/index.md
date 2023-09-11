@@ -1,5 +1,5 @@
 ---
-title: Product Recommendations | Commerce Web APIs
+title: Product Recommendations
 description:
 edition: ee
 ---

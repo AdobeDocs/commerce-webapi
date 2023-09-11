@@ -1,5 +1,5 @@
 ---
-title: Store queries | Commerce Web APIs
+title: Store queries
 ---
 
 # Store queries

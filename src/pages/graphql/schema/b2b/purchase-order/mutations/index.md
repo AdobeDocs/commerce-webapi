@@ -1,5 +1,5 @@
 ---
-title: Purchase order (B2B) mutations | Commerce Web APIs
+title: Purchase order (B2B) mutations
 edition: b2b   
 ---
 

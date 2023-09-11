@@ -1,5 +1,5 @@
 ---
-title: products query | Commerce Web APIs
+title: products query
 ---
 
 # products query

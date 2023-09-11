@@ -1,6 +1,8 @@
 ---
 title: Using REST endpoints
 description: Links to other pages describing the endpoints for the Adobe Commerce REST
+keywords:
+  - REST
 ---
 
 # Using REST endpoints

@@ -2,6 +2,9 @@
 title: Integrate with the SharedCatalog module
 description: Overview of the SharedCatalog module
 edition: ee
+keywords:
+  - B2B
+  - REST
 ---
 
 import * as Vars from '../../../data/vars.js';

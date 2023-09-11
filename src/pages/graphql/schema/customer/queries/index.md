@@ -1,5 +1,5 @@
 ---
-title: Customer queries | Commerce Web APIs
+title: Customer queries
 ---
 
 # Customer queries

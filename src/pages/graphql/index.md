@@ -1,5 +1,8 @@
 ---
-title: GraphQL overview | Commerce Web APIs
+title: GraphQL overview
+description: Review high-level concepts about the Adobe Commerce and Magento Open Source GraphQL API.
+keywords:
+  - GraphQL
 ---
 
 # GraphQL overview

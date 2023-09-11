@@ -1,5 +1,8 @@
 ---
-title: Create a custom GraphQL urlResolver service | Commerce Web APIs
+title: Create a custom GraphQL urlResolver service
+description: Learn how to save and delete records in the url_rewrite database table.
+keywords:
+  - GraphQL
 ---
 
 # Create a custom GraphQL urlResolver service

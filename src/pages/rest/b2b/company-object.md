@@ -2,6 +2,9 @@
 title: Manage company objects
 description: Describes REST endpoints used to manage company objects
 edition: ee
+keywords:
+  - B2B
+  - REST
 ---
 
 # Manage company objects

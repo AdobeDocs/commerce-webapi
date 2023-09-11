@@ -1,5 +1,5 @@
 ---
-title: Cart interfaces | Commerce Web APIs
+title: Cart interfaces
 ---
 
 # Cart interfaces

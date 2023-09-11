@@ -1,5 +1,5 @@
 ---
-title: customer query | Commerce Web APIs
+title: customer query
 ---
 
 import BetaNote1 from '/src/_includes/graphql/notes/beta.md'
