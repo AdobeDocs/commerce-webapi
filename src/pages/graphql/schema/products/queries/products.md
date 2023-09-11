@@ -81,12 +81,12 @@ Attribute | Data type | Description
 
 #### FilterMatchTypeInput attributes
 
-Use the `FilterMatchTypeInput` object to construct a filter that returns products that partially fuzzy match a string or contain the specified pattern.
+Use the `FilterMatchTypeInput` object to construct a filter that returns products that partially match a string or contain the specified pattern.
 
 Attribute | Data type | Description
 --- | --- | ---
-`match` | String | Use this attribute to partially fuzzy match the specified string. For example, to filter on a specific SKU, specify a value such as `24-MB01`
-`match_type` | FilterMatchTypeEnum | Use this attribute to finetune the type of search by specifying PARTIAL or FULL. If match_type is not provided, the search will default to match_type PARTIAL.
+`match` | String | Use this attribute to partially match the specified string. For example, to filter on a specific SKU, specify a value such as `24-MB01`
+`match_type` | FilterMatchTypeEnum | Use this attribute to finetune the type of search by specifying the word type match, PARTIAL or FULL. If match_type is not provided, the search will default to match_type FULL.
 
 You must specify a `FilterMatchTypeInput` object to filter on a custom product attribute of the following types:
 
@@ -639,13 +639,13 @@ The following sample query returns product by SKU. You have to pass SKU value to
 
 The following sample query returns different results if match_type is provided besides the product name.
 You have to pass name value and select between PARTIAL and FULL for match_type to return product information.
-If match_type is not provided, the results will default to match_type: PARTIAL.
+If match_type is not provided, the results will default to match_type: FULL.
 
 **Request:**
 
 ```graphql
 {
-  products(filter: { name: { match: "Life", match_type: PARTIAL } }) {
+  products(filter: { name: { match: "Life", match_type: FULL } }) {
     items {
       name
       sku
@@ -701,7 +701,7 @@ If match_type is not provided, the results will default to match_type: PARTIAL.
 
 ```graphql
 {
-  products(filter: { name: { match: "Life", match_type: FULL } }) {
+  products(filter: { name: { match: "Life", match_type: PARTIAL } }) {
     items {
       name
       sku
