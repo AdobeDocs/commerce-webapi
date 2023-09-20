@@ -1,5 +1,5 @@
 ---
-title: Order interfaces | Commerce Web APIs
+title: Order interfaces
 ---
 
 # Orders interfaces

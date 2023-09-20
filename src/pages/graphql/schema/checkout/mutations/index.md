@@ -1,5 +1,5 @@
 ---
-title: Checkout mutations | Commerce Web APIs
+title: Checkout mutations
 ---
 
 # Checkout mutations

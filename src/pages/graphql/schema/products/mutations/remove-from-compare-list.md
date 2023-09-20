@@ -1,5 +1,5 @@
 ---
-title: removeProductsFromCompareList mutation | Commerce Web APIs
+title: removeProductsFromCompareList mutation
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---

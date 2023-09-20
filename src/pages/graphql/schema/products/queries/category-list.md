@@ -1,5 +1,5 @@
 ---
-title: categoryList query | Commerce Web APIs
+title: categoryList query
 ---
 
 # categoryList query

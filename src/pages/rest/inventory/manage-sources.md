@@ -1,6 +1,9 @@
 ---
 title: Manage sources
 description: Manage your stock locations using the REST API
+keywords:
+  - Inventory
+  - REST
 --- 
  
 # Manage sources

@@ -1,6 +1,9 @@
 ---
 title: Inventory mass actions
 description: Make bulk inventory changes using the REST API
+keywords:
+  - Inventory
+  - REST
 --- 
  
 # Inventory mass actions

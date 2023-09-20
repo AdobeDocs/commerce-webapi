@@ -1,6 +1,8 @@
 ---
 title: Step 3. Create a customer
 description: In this step of the tutorial you will create a customer
+keywords:
+  - REST
 --- 
  
 # Step 3. Create a customer

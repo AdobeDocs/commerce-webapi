@@ -1,5 +1,5 @@
 ---
-title: copyProductsBetweenWishlists mutation | Commerce Web APIs
+title: copyProductsBetweenWishlists mutation
 edition: ee
 ---
 

@@ -1,6 +1,9 @@
 ---
-title: Getting Started with Adobe Commerce Web APIs | Getting Started with Web APIs
+title: Getting Started with Adobe Commerce Web APIs
 description: A high-level overview of Magento web APIs.
+keywords:
+  - GraphQL
+  - REST
 ---
 
 # Getting started with Adobe Commerce web APIs

@@ -1,6 +1,8 @@
 ---
 title: Create a configurable product tutorial
 description: This tutorial describes how to create a configurable product using the REST API
+keywords:
+  - REST
 --- 
  
 # Create a configurable product tutorial

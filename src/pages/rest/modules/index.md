@@ -1,6 +1,8 @@
 ---
 title: Modules Overview
 description: Overview of available REST Modules
+keywords:
+  - REST
 ---
 
 # Modules Overview

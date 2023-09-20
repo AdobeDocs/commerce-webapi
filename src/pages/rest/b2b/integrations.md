@@ -2,6 +2,9 @@
 title: Integrate with B2B using REST
 description: A description of available rest endpoints and integrations in the B2B module
 edition: ee
+keywords:
+  - B2B
+  - REST
 ---
 
 import * as Vars from '../../../data/vars.js';

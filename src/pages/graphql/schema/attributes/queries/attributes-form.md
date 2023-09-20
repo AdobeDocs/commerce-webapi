@@ -1,5 +1,5 @@
 ---
-title: attributesForm query | Commerce Web APIs
+title: attributesForm query
 ---
 
 import BetaNote from '/src/_includes/graphql/notes/beta.md'

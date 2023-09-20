@@ -1,8 +1,10 @@
 ---
 title: Step 4. Delete an image 
+description: We will learn how to delete an existing image.
 contributor_name: Goivvy LLC
 contributor_link: https://www.goivvy.com/
-description: We will learn how to delete an existing image.
+keywords:
+  - REST
 --- 
 
 # Step 4. Delete an image

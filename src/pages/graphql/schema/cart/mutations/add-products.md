@@ -1,5 +1,5 @@
 ---
-title: addProductsToCart mutation | Commerce Web APIs
+title: addProductsToCart mutation
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---

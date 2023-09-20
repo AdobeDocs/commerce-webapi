@@ -1,5 +1,5 @@
 ---
-title: createGiftRegistry mutation | Commerce Web APIs
+title: createGiftRegistry mutation
 edition: ee
 contributor_name: EY
 ---

@@ -1,6 +1,9 @@
 ---
-title: Status Codes and Responses | Getting Started with Web APIs
+title: Status Codes and Responses
 description: A list of status codes and REST responses that can be returned from the APIs.
+keywords:
+  - GraphQL
+  - REST
 ---
 
 # Status codes and REST responses

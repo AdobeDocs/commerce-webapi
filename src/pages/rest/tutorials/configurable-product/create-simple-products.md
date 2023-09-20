@@ -1,6 +1,8 @@
 ---
 title: Step 3. Create the simple products
 description: In this step of the tutorial you will create the simple products
+keywords:
+  - REST
 --- 
  
 # Step 3. Create the simple products

@@ -1,6 +1,9 @@
 ---
 title: Inventory Management
 description: Learn about inventory management APIs for Adobe Commerce and Magento Open Source.
+keywords:
+  - Inventory
+  - REST
 ---
 
 # Inventory Management

@@ -1,0 +1,35 @@
+properties:
+  title:
+    type: string
+    maxLength: 60
+  description:
+    type: string
+    maxLength: 160
+  keywords:
+    type: array
+    items:
+      type: string
+      enum:
+        - API Mesh
+        - App Builder
+        - B2B
+        - Cache
+        - Checkout
+        - Cloud
+        - Configuration
+        - Cron
+        - Events
+        - Extensibility
+        - GraphQL
+        - Integration
+        - Inventory
+        - Payments
+        - Performance
+        - REST
+        - Security
+        - Tools
+        - Upgrade
+
+required:
+  - title
+  - description

@@ -1,5 +1,5 @@
 ---
-title: country query | Commerce Web APIs
+title: country query
 ---
 
 # country query

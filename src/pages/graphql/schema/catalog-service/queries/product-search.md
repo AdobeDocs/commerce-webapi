@@ -1,5 +1,5 @@
 ---
-title: productSearch query | Commerce Web APIs
+title: productSearch query
 edition: ee
 description: Describes how to construct and use the Catalog Service productSearch query.
 ---

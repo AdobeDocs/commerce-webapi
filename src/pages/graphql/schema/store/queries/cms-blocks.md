@@ -1,5 +1,5 @@
 ---
-title: cmsBlocks query | Commerce Web APIs
+title: cmsBlocks query
 ---
 
 # cmsBlocks query

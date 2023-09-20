@@ -1,6 +1,9 @@
 ---
 title: Manage stocks
 description: Map your sources to sales channels and link to salable quantities and inventories
+keywords:
+  - Inventory
+  - REST
 --- 
  
 # Manage stocks

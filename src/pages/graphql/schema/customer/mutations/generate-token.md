@@ -1,5 +1,5 @@
 ---
-title: generateCustomerToken mutation | Commerce Web APIs
+title: generateCustomerToken mutation
 ---
 
 # generateCustomerToken mutation

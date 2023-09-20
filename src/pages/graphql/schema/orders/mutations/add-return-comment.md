@@ -1,5 +1,5 @@
 ---
-title: addReturnComment mutation | Commerce Web APIs
+title: addReturnComment mutation
 ---
 
 # addReturnComment mutation

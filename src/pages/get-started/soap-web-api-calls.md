@@ -1,5 +1,5 @@
 ---
-title: Use SOAP Services | Getting Started with Web APIs
+title: Use SOAP Services
 description: A description of available SOAP services and their conventions
 ---
 

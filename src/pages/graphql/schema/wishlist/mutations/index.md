@@ -1,5 +1,5 @@
 ---
-title: Wish list mutations | Commerce Web APIs
+title: Wish list mutations
 ---
 
 # Wish list mutations

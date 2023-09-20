@@ -1,5 +1,5 @@
 ---
-title: validatePurchaseOrders mutation | Commerce Web APIs
+title: validatePurchaseOrders mutation
 edition: b2b
 ---
 

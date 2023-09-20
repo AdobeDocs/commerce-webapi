@@ -1,5 +1,5 @@
 ---
-title: removeStoreCreditFromCart mutation | Commerce Web APIs
+title: removeStoreCreditFromCart mutation
 edition: ee
 ---
 

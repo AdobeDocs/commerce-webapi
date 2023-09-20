@@ -1,5 +1,5 @@
 ---
-title: cancelPurchaseOrders mutation | Commerce Web APIs
+title: cancelPurchaseOrders mutation
 edition: b2b
 ---
 

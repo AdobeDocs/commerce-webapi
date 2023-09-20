@@ -1,5 +1,5 @@
 ---
-title: Product mutations | Commerce Web APIs
+title: Product mutations
 ---
 
 # Product mutations

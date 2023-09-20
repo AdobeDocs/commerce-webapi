@@ -1,6 +1,8 @@
 ---
 title: Manage prices for multiple products
 description: Update multiple special prices, tier prices, base prices, or cost values with a single call.
+keywords:
+  - REST
 --- 
 import * as Vars from '../../../../data/vars.js';
 

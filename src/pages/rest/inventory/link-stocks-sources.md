@@ -1,6 +1,9 @@
 ---
 title: Link and unlink stocks and sources
 description: Assign and manage sources and stocks using the REST API 
+keywords:
+  - Inventory
+  - REST
 --- 
  
 # Link and unlink stocks and sources

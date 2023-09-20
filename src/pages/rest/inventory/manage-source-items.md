@@ -1,6 +1,9 @@
 ---
 title: Manage source items
 description: Assign products to other sources using the REST API
+keywords:
+  - Inventory
+  - REST
 --- 
  
 # Manage source items

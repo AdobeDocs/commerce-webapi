@@ -1,5 +1,5 @@
 ---
-title: mergeCarts mutation | Commerce Web APIs
+title: mergeCarts mutation
 ---
 
 # mergeCarts mutation

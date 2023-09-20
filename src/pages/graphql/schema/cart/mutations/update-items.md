@@ -1,5 +1,5 @@
 ---
-title: updateCartItems mutation | Commerce Web APIs
+title: updateCartItems mutation
 ---
 
 # updateCartItems mutation

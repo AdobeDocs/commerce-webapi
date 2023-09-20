@@ -1,5 +1,5 @@
 ---
-title: company query | Commerce Web APIs
+title: company query
 edition: b2b
 ---
 

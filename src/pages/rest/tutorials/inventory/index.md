@@ -1,6 +1,9 @@
 ---
 title: Order Processing with Inventory Management
 description: In this tutorial you will process orders using Inventory Management in the REST API
+keywords:
+  - Inventory
+  - REST
 --- 
  
 # Order Processing with Inventory Management

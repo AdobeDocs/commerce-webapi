@@ -1,5 +1,5 @@
 ---
-title: updateCustomerAddress mutation | Commerce Web APIs
+title: updateCustomerAddress mutation
 ---
 
 import Example246 from '/src/_includes/graphql/examples/update-address-246.md'

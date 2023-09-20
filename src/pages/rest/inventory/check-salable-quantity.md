@@ -1,7 +1,10 @@
 ---
 title: Check salable quantities
 description: Check your inventory and retrieve the salable quantity and available quantity using the REST API 
---- 
+keywords:
+  - Inventory
+  - REST
+---
  
 # Check salable quantities
 
