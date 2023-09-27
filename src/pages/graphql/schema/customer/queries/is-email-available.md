@@ -4,7 +4,9 @@ title: isEmailAvailable query
 
 # isEmailAvailable query
 
-The `isEmailAvailable` query checks whether the specified email has already been used to create a customer account. A value of `true` indicates the email address is available, and the customer can use the email address to create an account.
+The `isEmailAvailable` query checks whether the specified email has already been used to create a customer account. A value of `true` indicates the email address is available, and the customer can use the email address to create an account. The value of `false` indicates the email address is not available, and the customer cannot use the email address to create an account.
+
+The default behavior of this query depends on the configuration option `Enable Guest Checkout Login` located at `Config > Sales > Checkout` in the Admin. By default, this option is set to `No` making this query return `true` unconditionally for all email addresses. Please note, that setting this option to `Yes` may allow exposing information to unauthenticated users.
 
 ## Syntax
 
@@ -50,7 +52,8 @@ Attribute |  Data Type | Description
 
 ## Related topics
 
-[customer query](../../customer/queries/customer.md)
+[Customer Query](../../customer/queries/customer.md)
+[Backward incompatible change of isEmailAvailable query](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/#isemailavailable-api)
 
 ## Errors
 
