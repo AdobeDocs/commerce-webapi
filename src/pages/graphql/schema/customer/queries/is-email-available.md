@@ -6,7 +6,8 @@ title: isEmailAvailable query
 
 The `isEmailAvailable` query checks whether the specified email has already been used to create a customer account. As of Commerce 2.4.7, by default the query always returns a value of `true` for all email addresses. You can change this behavior by setting the **Stores > Configuration > **Sales** > **Checkout** > **Enable Guest Checkout Login** field in the Admin to **Yes**. However, doing this can expose customer information to unauthenticated users.
 
-The default behavior of this query depends on the configuration option `Enable Guest Checkout Login` located at `Config > Sales > Checkout` in the Admin. By default, this option is set to `No` making this query return `true` unconditionally for all email addresses. Please note, that setting this option to `Yes` may allow exposing information to unauthenticated users.
+When guest checkout logins are enabled, or in versions prior to 2.4.7, a value of `true` indicates the email address is available, and the customer can use the email address to create an account. The value of `false` indicates the email address is not available, and the customer cannot use the email address to create an account.
+
 
 ## Syntax
 
