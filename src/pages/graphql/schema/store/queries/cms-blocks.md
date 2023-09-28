@@ -52,6 +52,10 @@ The following query returns information about the `login-data` block:
 }
 ```
 
+<InlineAlert variant="info" slots="text" />
+
+The `content` field may contain HTML markup and CSS styles. Hidden and system elements may be included in the response.
+
 ## Errors
 
 Error | Description
