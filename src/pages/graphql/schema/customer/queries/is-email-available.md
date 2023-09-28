@@ -53,7 +53,7 @@ Attribute |  Data Type | Description
 
 ## Related topics
 
-[Customer Query](../../customer/queries/customer.md)
+[customer Query](../../customer/queries/customer.md)
 [Backward incompatible change of isEmailAvailable query](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/#isemailavailable-api)
 
 ## Errors
