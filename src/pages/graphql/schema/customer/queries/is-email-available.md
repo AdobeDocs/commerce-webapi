@@ -8,7 +8,6 @@ The `isEmailAvailable` query checks whether the specified email has already been
 
 When guest checkout logins are enabled, or in versions prior to 2.4.7, a value of `true` indicates the email address is available, and the customer can use the email address to create an account. The value of `false` indicates the email address is not available, and the customer cannot use the email address to create an account.
 
-
 ## Syntax
 
 `{isEmailAvailable (email): {IsEmailAvailableOutput}}`
