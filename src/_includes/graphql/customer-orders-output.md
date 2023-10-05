@@ -323,7 +323,7 @@ Attribute | Data type | Description
 
 #### RewardPointsSubscriptionStatus attributes
 
-The `RewardPointsSubscriptionStatus` object indicates whether the customer is subscribed to newsletters that provide reward points balances and expiration notifications. The possible values of these attribtutes are `NOT SUBSCRIBED` and `SUBSCRIBED`.
+The `RewardPointsSubscriptionStatus` object indicates whether the customer is subscribed to newsletters that provide reward points balances and expiration notifications. The possible values of these attributes are `NOT SUBSCRIBED` and `SUBSCRIBED`.
 
 Attribute | Data type | Description
 --- | --- | ---
