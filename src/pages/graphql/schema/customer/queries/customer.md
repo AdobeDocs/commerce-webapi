@@ -6,6 +6,7 @@ import BetaNote1 from '/src/_includes/graphql/notes/beta.md'
 import BetaNote2 from '/src/_includes/graphql/notes/beta.md'
 import BetaNote3 from '/src/_includes/graphql/notes/beta.md'
 import BetaNote4 from '/src/_includes/graphql/notes/beta.md'
+import BetaNote5 from '/src/_includes/graphql/notes/beta.md'
 import CompareListOutput from '/src/_includes/graphql/compare-list-output.md'
 import CustomerAddressOutput from '/src/_includes/graphql/customer-address-output-24.md'
 import CustomerOrdersOutput from '/src/_includes/graphql/customer-orders-output.md'
@@ -199,6 +200,96 @@ The following call returns the customer address custom attributes for the logged
               "code": "neighbourhood",
               "value": "St Barnabé"
             },
+            {
+              "code": "services",
+              "selected_options": [
+                {
+                  "label": "hospital",
+                  "value": "507"
+                },
+                {
+                  "label": "police",
+                  "value": "508"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
+
+### Retrieve custom attributes metadata filtered by `code`
+
+<BetaNote5 />
+
+The following call returns the customer and customer address custom attributes for the logged-in customer filtered by `code`. Provide the customer's token in the header section of the query.
+
+**Request:**
+
+```graphql
+{
+  customer {
+    email
+    custom_attributes(attributeCodes: ["studies"]) {
+      code
+      ... on AttributeValue {
+        value
+      }
+      ... on AttributeSelectedOptions {
+        selected_options {
+          label
+          value
+        }
+      }
+    }
+    addresses {
+      city
+      custom_attributesV2(attributeCodes: ["services"]) {
+        code
+        ... on AttributeValue {
+            value
+        }
+        ... on AttributeSelectedOptions {
+          selected_options {
+            label
+            value
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "customer": {
+      "email": "jdoe@example.com",
+      "custom_attributes": [
+        {
+          "code": "studies",
+          "selected_options": [
+            {
+              "label": "BSc",
+              "value": "501"
+            },
+            {
+              "label": "MBA",
+              "value": "502"
+            }
+          ]
+        }
+      ],
+      "addresses": [
+        {
+          "city": "Marseille",
+          "custom_attributesV2": [
             {
               "code": "services",
               "selected_options": [
@@ -1076,8 +1167,18 @@ The `AttributeValueInterface` contains the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`code` | String! | The attribute code
-`uid` | ID! | The unique ID of an attribute value
+`code` | ID! | The attribute code
+`is_comparable` | Boolean | Whether a product or category attribute can be compared against another or not
+`is_filterable` | Boolean | Whether a product or category attribute can be filtered or not
+`is_filterable_in_search` | Boolean | Whether a product or category attribute can be filtered in search or not
+`is_html_allowed_on_front` | Boolean | Whether a product or category attribute can use HTML on front or not
+`is_searchable` | Boolean | Whether a product or category attribute can be searched or not
+`is_used_for_price_rules` | Boolean | Whether a product or category attribute can be used for price rules or not
+`is_used_for_promo_rules` | Boolean | Whether a product or category attribute is used for promo rules or not
+`is_visible_in_advanced_search` | Boolean | Whether a product or category attribute is visible in advanced search or not
+`is_visible_on_front` | Boolean | Whether a product or category attribute is visible on front or not
+`is_wysiwyg_enabled` | Boolean | Whether a product or category attribute has WYSIWYG enabled or not
+`used_in_product_listing` | Boolean | Whether a product or category attribute is used in product listing or not
 
 Currently, `AttributeValueInterface` has two different implementations: `AttributeValue` and `AttributeSelectedOptions`.
 
