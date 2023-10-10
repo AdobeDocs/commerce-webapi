@@ -4,7 +4,8 @@ Attribute |  Data Type | Description
 `allow_remote_shopping_assistance` | Boolean! | Indicates whether the customer has enabled remote shopping assistance
 `compare_list` | CompareList | The contents of the customer's comparison list
 `created_at` | String | Timestamp indicating when the account was created
-`custom_attributes` | [AttributeValueInterface](#attributevalueinterface-attributes)| Custom attributes assigned to the customer address
+`custom_attributes` | [CustomerAddressAttribute](#customeraddress-attributes) | Deprecated. Use `custom_attributesV2` instead
+`custom_attributesV2(attributeCodes: [ID!])` | [AttributeValueInterface](#attributevalueinterface-attributes)| Custom attributes assigned to the customer address (2.4.7-beta only)
 `date_of_birth` | String | The customer's date of birth. In keeping with current security and privacy best practices, be sure you are aware of any potential legal and security risks associated with the storage of customers' full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
 `default_billing` | String | The ID assigned to the billing address
 `default_shipping` | String | The ID assigned to the shipping address
@@ -47,10 +48,20 @@ import BetaNote from '/src/_includes/graphql/notes/beta.md'
 
 The `AttributeValueInterface` contains the following attributes:
 
-Attribute |  Data Type | Description
+Attribute | Data Type | Description
 --- | --- | ---
-`code` | String! | The attribute code
-`uid` | ID! | The unique ID of an attribute value
+`code` | ID! | The attribute code
+`is_comparable` | Boolean | Whether a product or category attribute can be compared against another or not
+`is_filterable` | Boolean | Whether a product or category attribute can be filtered or not
+`is_filterable_in_search` | Boolean | Whether a product or category attribute can be filtered in search or not
+`is_html_allowed_on_front` | Boolean | Whether a product or category attribute can use HTML on front or not
+`is_searchable` | Boolean | Whether a product or category attribute can be searched or not
+`is_used_for_price_rules` | Boolean | Whether a product or category attribute can be used for price rules or not
+`is_used_for_promo_rules` | Boolean | Whether a product or category attribute is used for promo rules or not
+`is_visible_in_advanced_search` | Boolean | Whether a product or category attribute is visible in advanced search or not
+`is_visible_on_front` | Boolean | Whether a product or category attribute is visible on front or not
+`is_wysiwyg_enabled` | Boolean | Whether a product or category attribute has WYSIWYG enabled or not
+`used_in_product_listing` | Boolean | Whether a product or category attribute is used in product listing or not
 
 Currently, `AttributeValueInterface` has two different implementations: `AttributeValue` and `AttributeSelectedOptions`.
 
@@ -71,5 +82,4 @@ The `AttributeSelectedOptionInterface` contains the following attributes:
 Attribute |  Data Type | Description
 --- | --- | ---
 `label` | String! | The attribute selected option label
-`uid` | ID! | The unique ID of an attribute selected option
 `value` | String! | The attribute selected option value

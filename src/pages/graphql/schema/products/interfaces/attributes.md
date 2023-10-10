@@ -30,7 +30,8 @@ Attribute | Data type | Description
 `country_of_manufacture` | String | The product's country of origin
 `created_at` | String | Deprecated. This field should not be used on the storefront. Timestamp indicating when the product was created
 `crosssell_products` | [ProductInterface] | An array of cross-sell products
-`custom_attributes` | [ProductInterface] | An array of attribute names for a product. PWA Studio only.
+`custom_attributes` | [ProductInterface] | Deprecated. Use `custom_attributesV2` instead
+`custom_attributesV2` | [ProductCustomAttributes](#productcustomattributes-object) | Product custom attributes
 `description` | ComplexTextValue | An object that contains detailed information about the product. The object can include simple HTML tags
 `gift_message_available` | String | Indicates whether a gift message is available
 `id` | Int | Deprecated. Use `uid` instead. The ID number assigned to the product
@@ -77,6 +78,43 @@ Attribute | Data type | Description
 `url_suffix` | String | The part of the URL that is appended to the `url_key`, such as `.html`. This attribute is defined in the `CatalogUrlRewriteGraphQl` module
 `url_rewrites` | [[UrlRewrite]](#urlrewrite-object) | A list of URL rewrites
 `websites` | [[Website]](#website-object) | Deprecated. This attribute is not applicable for GraphQL
+
+### ProductCustomAttributes object
+
+The `ProductCustomAttributes` object contains the following attributes:
+
+Attribute | Data Type | Description
+--- |---| ---
+`errors` | [AttributeMetadataError!](#attributemetadataerror)! | Errors of retrieving certain attributes metadata
+`items` | [AttributeValueInterface!](#attributevalueinterface)! | Requested attributes metadata
+
+#### AttributeValueInterface
+
+The `AttributeValueInterface` contains the following attributes:
+
+Attribute | Data Type | Description
+--- | --- | ---
+`code` | ID! | The attribute code
+`is_comparable` | Boolean | Whether a product or category attribute can be compared against another or not
+`is_filterable` | Boolean | Whether a product or category attribute can be filtered or not
+`is_filterable_in_search` | Boolean | Whether a product or category attribute can be filtered in search or not
+`is_html_allowed_on_front` | Boolean | Whether a product or category attribute can use HTML on front or not
+`is_searchable` | Boolean | Whether a product or category attribute can be searched or not
+`is_used_for_price_rules` | Boolean | Whether a product or category attribute can be used for price rules or not
+`is_used_for_promo_rules` | Boolean | Whether a product or category attribute is used for promo rules or not
+`is_visible_in_advanced_search` | Boolean | Whether a product or category attribute is visible in advanced search or not
+`is_visible_on_front` | Boolean | Whether a product or category attribute is visible on front or not
+`is_wysiwyg_enabled` | Boolean | Whether a product or category attribute has WYSIWYG enabled or not
+`used_in_product_listing` | Boolean | Whether a product or category attribute is used in product listing or not
+
+#### AttributeMetadataError
+
+The `AttributeMetadataError` object contains the following attributes:
+
+Attribute | Data Type | Description
+--- | --- | ---
+`message` | String! | Attribute metadata retrieval error message
+`type` | AttributeMetadataErrorType! | Attribute metadata retrieval error type
 
 ### ProductPrices object
 
