@@ -8,8 +8,8 @@ swagger: '2.0'
 info:
   version: 2.4.7-beta
   title: Commerce Guest REST endpoints - All inclusive
-  description: 
-    $ref: ../_includes/redocly-intro.md
+  description:
+    "$ref": "../_includes/redocly-intro.md"
 host: example.com
 basePath: "/rest/default"
 schemes:
@@ -52,9 +52,6 @@ tags:
 - name: integration/customer/token
 - name: inventory/in-store-pickup/pickup-locations/
 - name: products-render-info
-- name: quick-checkout/account-details
-- name: quick-checkout/has-account
-- name: quick-checkout/storefront/has-account
 - name: search
 - name: tfa/provider/authy/activate
 - name: tfa/provider/authy/authenticate
@@ -1886,100 +1883,6 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: products-render-info
-  "/V1/quick-checkout/account-details":
-    post:
-      tags:
-      - quick-checkout/account-details
-      description: Retrieve account information
-      operationId: PostV1QuickcheckoutAccountdetails
-      consumes:
-      - application/json
-      - application/xml
-      produces:
-      - application/json
-      - application/xml
-      responses:
-        '200':
-          description: 200 Success.
-          schema:
-            "$ref": "#/definitions/quick-checkout-data-account-interface"
-        default:
-          description: Unexpected error
-          schema:
-            "$ref": "#/definitions/error-response"
-      summary: quick-checkout/account-details
-  "/V1/quick-checkout/has-account":
-    post:
-      tags:
-      - quick-checkout/has-account
-      description: Check if email exists in Bolt
-      operationId: PostV1QuickcheckoutHasaccount
-      consumes:
-      - application/json
-      - application/xml
-      produces:
-      - application/json
-      - application/xml
-      parameters:
-      - name: PostV1QuickcheckoutHasaccountBody
-        in: body
-        schema:
-          required:
-          - email
-          properties:
-            email:
-              type: string
-          type: object
-          xml:
-            name: request
-      responses:
-        '200':
-          description: 200 Success.
-          schema:
-            type: boolean
-        default:
-          description: Unexpected error
-          schema:
-            "$ref": "#/definitions/error-response"
-      summary: quick-checkout/has-account
-  "/V1/quick-checkout/storefront/has-account":
-    post:
-      tags:
-      - quick-checkout/storefront/has-account
-      description: Check if email exists in Storefront
-      operationId: PostV1QuickcheckoutStorefrontHasaccount
-      consumes:
-      - application/json
-      - application/xml
-      produces:
-      - application/json
-      - application/xml
-      parameters:
-      - name: PostV1QuickcheckoutStorefrontHasaccountBody
-        in: body
-        schema:
-          required:
-          - email
-          properties:
-            email:
-              type: string
-          type: object
-          xml:
-            name: request
-      responses:
-        '200':
-          description: 200 Success.
-          schema:
-            type: boolean
-        '500':
-          description: Internal Server error
-          schema:
-            "$ref": "#/definitions/error-response"
-        default:
-          description: Unexpected error
-          schema:
-            "$ref": "#/definitions/error-response"
-      summary: quick-checkout/storefront/has-account
   "/V1/search":
     get:
       tags:
@@ -3035,10 +2938,10 @@ definitions:
     properties:
       company_attributes:
         "$ref": "#/definitions/company-data-company-customer-interface"
-      assistance_allowed:
-        type: integer
       is_subscribed:
         type: boolean
+      assistance_allowed:
+        type: integer
   company-data-company-customer-interface:
     type: object
     description: Extended customer custom attributes interface.
@@ -3837,8 +3740,6 @@ definitions:
       gift_registry_id:
         type: integer
       pickup_location_code:
-        type: string
-      bolt_id:
         type: string
   quote-data-currency-interface:
     type: object
@@ -5153,130 +5054,6 @@ definitions:
   inventory-in-store-pickup-api-data-search-request-product-info-extension-interface:
     type: object
     description: ExtensionInterface class for @see \Magento\InventoryInStorePickupApi\Api\Data\SearchRequest\ProductInfoInterface
-  quick-checkout-data-account-interface:
-    type: object
-    description: Data account interface
-    properties:
-      addresses:
-        type: array
-        description: Addresses
-        items:
-          "$ref": "#/definitions/quick-checkout-data-address-interface"
-      payment_methods:
-        type: array
-        description: Payment methods
-        items:
-          "$ref": "#/definitions/quick-checkout-data-payment-method-interface"
-      email:
-        type: string
-        description: Email
-      first_name:
-        type: string
-        description: First name
-      last_name:
-        type: string
-        description: Last name
-      default_address_changed:
-        type: boolean
-        description: Shipping address changed
-    required:
-    - addresses
-    - payment_methods
-    - email
-    - first_name
-    - last_name
-    - default_address_changed
-  quick-checkout-data-address-interface:
-    type: object
-    description: Account address
-    properties:
-      id:
-        type: string
-        description: Id
-      region:
-        type: string
-        description: Region
-      region_code:
-        type: string
-        description: Region code
-      region_id:
-        type: string
-        description: Region id
-      country_id:
-        type: string
-        description: Country code in ISO_3166-2 format
-      street:
-        type: array
-        description: Street
-        items:
-          type: string
-      email:
-        type: string
-        description: Email
-      telephone:
-        type: string
-        description: Telephone number
-      postcode:
-        type: string
-        description: Postcode
-      city:
-        type: string
-        description: City name
-      firstname:
-        type: string
-        description: First name
-      lastname:
-        type: string
-        description: Last name
-      company:
-        type: string
-        description: Company
-      external_address:
-        type: boolean
-        description: External address
-    required:
-    - id
-    - country_id
-    - street
-    - email
-    - telephone
-    - postcode
-    - city
-    - firstname
-    - lastname
-    - company
-    - external_address
-  quick-checkout-data-payment-method-interface:
-    type: object
-    description: Account payment
-    properties:
-      id:
-        type: string
-        description: Id
-      type:
-        type: string
-        description: Type
-      last4:
-        type: string
-        description: Last four digits of card
-      network:
-        type: string
-        description: Card network
-      billing_address:
-        "$ref": "#/definitions/quick-checkout-data-address-interface"
-      expiration_month:
-        type: string
-        description: Expiration month of the card
-      expiration_year:
-        type: string
-        description: Expiration year of the card
-    required:
-    - id
-    - type
-    - last4
-    - network
-    - expiration_month
-    - expiration_year
   pay-pal-braintree-data-auth-data-interface:
     type: object
     description: Interface AuthDataInterface
@@ -5356,11 +5133,6 @@ x-tagGroups:
 - name: products render info
   tags:
   - products-render-info
-- name: quick checkout
-  tags:
-  - quick-checkout/account-details
-  - quick-checkout/has-account
-  - quick-checkout/storefront/has-account
 - name: search
   tags:
   - search
