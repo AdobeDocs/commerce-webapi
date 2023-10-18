@@ -9,7 +9,7 @@ Attribute |  Data Type | Description
 `country_code` | CountryCodeEnum | The customer's country
 `country_id` | String | Deprecated. Use `country_code` instead. The customer's country
 `custom_attributes` | [CustomerAddressAttribute](#customeraddress-attributes) | Deprecated. Use `custom_attributesV2` instead
-`custom_attributesV2` | [AttributeValueInterface](#attributevalueinterface-attributes)| Custom attributes assigned to the customer address
+`custom_attributesV2(uids: [ID!])` | [AttributeValueInterface](#attributevalueinterface-attributes)| Custom attributes assigned to the customer address (2.4.7-beta only)
 `customer_id` | Int | Deprecated. This attribute is not applicable for GraphQL. The ID assigned to the customer
 `default_billing` | Boolean | Indicates whether the address is the default billing address
 `default_shipping` | Boolean | Indicates whether the address is the default shipping address
@@ -38,8 +38,18 @@ The `AttributeValueInterface` contains the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`code` | String! | The attribute code
-`uid` | ID! | The unique ID of an attribute value
+`code` | ID! | The attribute code
+`is_comparable` | Boolean | Whether a product or category attribute can be compared against another or not
+`is_filterable` | Boolean | Whether a product or category attribute can be filtered or not
+`is_filterable_in_search` | Boolean | Whether a product or category attribute can be filtered in search or not
+`is_html_allowed_on_front` | Boolean | Whether a product or category attribute can use HTML on front or not
+`is_searchable` | Boolean | Whether a product or category attribute can be searched or not
+`is_used_for_price_rules` | Boolean | Whether a product or category attribute can be used for price rules or not
+`is_used_for_promo_rules` | Boolean | Whether a product or category attribute is used for promo rules or not
+`is_visible_in_advanced_search` | Boolean | Whether a product or category attribute is visible in advanced search or not
+`is_visible_on_front` | Boolean | Whether a product or category attribute is visible on front or not
+`is_wysiwyg_enabled` | Boolean | Whether a product or category attribute has WYSIWYG enabled or not
+`used_in_product_listing` | Boolean | Whether a product or category attribute is used in product listing or not
 
 Currently, `AttributeValueInterface` has two different implementations: `AttributeValue` and `AttributeSelectedOptions`.
 
@@ -60,7 +70,6 @@ The `AttributeSelectedOptionInterface` contains the following attributes:
 Attribute |  Data Type | Description
 --- | --- | ---
 `label` | String! | The attribute selected option label
-`uid` | ID! | The unique ID of an attribute selected option
 `value` | String! | The attribute selected option value
 
 ### CustomerAddressAttribute attributes
