@@ -5,6 +5,7 @@ Field | Data Type | Description
 `addToCartAllowed` | Boolean | Indicates whether the product can be added to the cart.
 `attributes(roles: [String])` | [ProductViewAttribute] | A list of merchant-defined attributes designated for the storefront.
 `description` | String | The detailed description of the product.
+`externalId`| String | The external ID of the product.
 `id` | ID! | The product ID, generated as a composite key, unique per locale.
 `images(roles: [String])` | [ProductViewImage] | A list of images defined for the product.
 `inStock` | Boolean | Indicates whether the product is in stock.
@@ -17,6 +18,7 @@ Field | Data Type | Description
 `shortDescription` | String | A summary of the product.
 `sku` | String | Product SKU.
 `url` | String | Canonical URL of the product.
+`urlKey` | String | URL key of the product.
 
 ### ComplexProductView type
 
@@ -27,6 +29,7 @@ Field | Data Type | Description
 `addToCartAllowed` | Boolean | Indicates whether the product can be added to the cart.
 `attributes(roles: [String])` | [ProductViewAttribute] | A list of merchant-defined attributes designated for the storefront.
 `description` | String | The detailed description of the product.
+`externalId`| String | The external ID of the product.
 `id` | ID! | The product ID, generated as a composite key, unique per locale.
 `images(roles: [String])` | [ProductViewImage] | A list of images defined for the product.
 `inStock` | Boolean | Indicates whether the product is in stock.
@@ -41,6 +44,7 @@ Field | Data Type | Description
 `shortDescription` | String | A summary of the product.
 `sku` | String | Product SKU.
 `url` | String | Canonical URL of the product.
+`urlKey` | String | URL key of the product.
 
 ### Price type
 
@@ -118,6 +122,7 @@ The `ProductViewOptionValue` interface defines the product fields available to t
 Field | Data Type | Description
 --- | --- | ---
 `id` | ID | The ID of an option value.
+`inStock` | Boolean | Indicates if the option is in stock.
 `title` | String | The display name of the option value.
 
 ### ProductViewOptionValueConfiguration type
@@ -127,6 +132,7 @@ The `ProductViewOptionValueConfiguration` type is an implementation of `ProductV
 Field | Data Type | Description
 --- | --- | ---
 `id` | ID | The ID of an option value.
+`inStock` | Boolean | Indicates if the option is in stock.
 `title` | String | The display name of the option value.
 
 ### ProductViewOptionValueProduct type
@@ -136,6 +142,7 @@ The `ProductViewOptionValueProduct` type is an implementation of `ProductViewOpt
 Field | Data Type | Description
 --- | --- | ---
 `id` | ID | The ID of an option value.
+`inStock` | Boolean | Indicates if the option is in stock.
 `isDefault` | Boolean | Indicates whether the option is the default.
 `product` | SimpleProductView | Details about a simple product.
 `quantity` | SimpleProductView | Default quantity of an option value.
@@ -148,6 +155,7 @@ The `ProductViewOptionValueSwatch` type is an implementation of `ProductViewOpti
 Field | Data Type | Description
 --- | --- | ---
 `id` | ID | The ID of an option value.
+`inStock` | Boolean | Indicates if the option is in stock.
 `title` | String | The display name of the option value.
 `type` | SwatchType | Indicates the type of swatch. Can be `TEXT`, `IMAGE`, `COLOR_HEX`, or `CUSTOM`.
 `value` | String | The value of the swatch.
@@ -180,6 +188,7 @@ Field | Data Type | Description
 `addToCartAllowed` | Boolean | Indicates whether the product can be added to the cart.
 `attributes(roles: [String])` | [ProductViewAttribute] | A list of merchant-defined attributes designated for the storefront.
 `description` | String | The detailed description of the product.
+`externalId`| String | The external ID of the product.
 `id` | ID! | The product ID, generated as a composite key, unique per locale.
 `images(roles: [String])` | [ProductViewImage] | A list of images defined for the product.
 `inStock` | Boolean | Indicates whether the product is in stock.
@@ -193,3 +202,4 @@ Field | Data Type | Description
 `shortDescription` | String | A summary of the product.
 `sku` | String | Product SKU.
 `url` | String | Canonical URL of the product.
+`urlKey` | String | URL key of the product.
