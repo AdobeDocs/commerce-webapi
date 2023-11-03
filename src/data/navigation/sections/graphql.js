@@ -257,31 +257,7 @@ module.exports = [
       },
       {
         title: "Catalog Service",
-        path: "/graphql/schema/catalog-service/",
-        pages: [
-          {
-            title: "Queries",
-            path: "/graphql/schema/catalog-service/queries/",
-            pages: [
-              {
-                title: "categories",
-                path: "/graphql/schema/catalog-service/queries/categories/",
-              },
-              {
-                title: "products",
-                path: "/graphql/schema/catalog-service/queries/products/",
-              },
-              {
-                title: "productSearch",
-                path: "/graphql/schema/catalog-service/queries/product-search/",
-              },
-              {
-                title: "refineProduct",
-                path: "/graphql/schema/catalog-service/queries/refine-product/"
-              },
-            ],
-          },
-        ],
+        path: "https://developer.adobe.com/commerce/services/graphql/catalog-service/"
       },
       {
         title: "Checkout",
@@ -631,23 +607,7 @@ module.exports = [
       },
       {
         title: "Live Search",
-        path: "/graphql/schema/live-search/",
-        pages: [
-          {
-            title: "Queries",
-            path: "/graphql/schema/live-search/queries/",
-            pages: [
-              {
-                title: "attributeMetadata",
-                path: "/graphql/schema/live-search/queries/attribute-metadata"
-              },
-              {
-                title: "productSearch",
-                path: "/graphql/schema/live-search/queries/product-search"
-              },
-            ],
-          },
-        ],
+        path: "https://developer.adobe.com/commerce/services/graphql/live-search/"
       },
       {
         title: "Negotiable quotes (B2B)",
@@ -793,19 +753,7 @@ module.exports = [
       },
       {
         title: "Product Recommendations",
-        path: "/graphql/schema/product-recommendations/",
-        pages: [
-          {
-            title: "Queries",
-            path: "/graphql/schema/products/queries/",
-            pages: [
-              {
-                title: "recommendations",
-                path: "/graphql/schema/product-recommendations/queries/recommendations/",
-              },
-            ],
-          },
-        ],
+        path: "https://developer.adobe.com/commerce/services/graphql/recommendations/recommendations/"
       },
       {
         title: "Products",
