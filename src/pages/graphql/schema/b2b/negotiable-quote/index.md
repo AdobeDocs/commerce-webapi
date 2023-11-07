@@ -5,7 +5,7 @@ edition: b2b
 
 # Negotiable quote (B2B)
 
-Company users (buyers) and merchants (sellers) use negotiable quotes to manage the negotiation process for an order. Although negotiation process can be complex, the basic steps are as follows:
+Company users (buyers) and merchants (sellers) use negotiable quotes to manage the negotiation process for an order. Although the negotiation process can be complex, the basic steps are as follows:
 
 * The buyer adds items to the cart and initiates a negotiable quote.
 
