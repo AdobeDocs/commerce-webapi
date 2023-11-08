@@ -23,6 +23,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`updatePurchaseOrderApprovalRule`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updatePurchaseOrderApprovalRule) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Headers
 
 A valid [customer authentication token](../../../customer/mutations/generate-token.md) is required.

@@ -7,9 +7,15 @@ edition: b2b
 
 The `isCompanyUserEmailAvailable` query checks whether an email is valid for registering a company user. The query returns a `false` value if the specified email matches the email of an existing customer or a company administrator.
 
+This query requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
+
 ## Syntax
 
 `isCompanyUserEmailAvailable ( email String! ) IsCompanyUserEmailAvailableOutput`
+
+## Reference
+
+The [`isCompanyUserEmailAvailable`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-isCompanyUserEmailAvailable) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -36,18 +42,6 @@ query{
   }
 }
 ```
-
-## Input attribute
-
-Attribute |  Data Type | Description
---- | --- | ---
-`email` | String! | The email address to check
-
-## Output attribute
-
-Attribute |  Data Type | Description
---- | --- | ---
-`is_email_available` | Boolean! | A value of `true` indicates the email address is available
 
 ## Related topics
 

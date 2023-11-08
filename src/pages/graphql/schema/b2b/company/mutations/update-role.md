@@ -15,6 +15,14 @@ import B2BRoles from '/src/_includes/graphql/b2b-roles.md'
 
 <B2BRoles />
 
+You can change or add permissions to the company role using the `permissions` attribute.
+
+<InlineAlert variant="warning" slots="text" />
+
+Any time you use the `permissions` object to update role capabilities, you must include the entire hierarchy of permissions. The `updateCompanyRole` mutation rewrites all role permissions based on the specified payload.
+
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
+
 ## Syntax
 
 ```graphql
@@ -26,6 +34,10 @@ mutation {
     }
 }
 ```
+
+## Reference
+
+The [`updateCompanyRole`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateCompanyRole) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -148,40 +160,6 @@ mutation {
   }
 }
 ```
-
-You can change or add permissions to the company role using "permissions" attribute.
-
-<InlineAlert variant="warning" slots="text" />
-
-To add new or change current permissions, you also must send all the current permissions every time you use the "permissions" attribute. The company role permissions are rewritten completely from the "permissions" attribute.
-
-## Input attributes
-
-The `CompanyRoleUpdateInput` input object defines the company role data.
-
-### CompanyRoleUpdateInput attributes
-
-The `CompanyRoleUpdateInput` object contains the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`id` | ID! | The encoded company role ID for updating
-`name` | String | Role name.
-`permissions` | [String!] | A list of role permission resources.
-
-## Output attributes
-
-The `UpdateCompanyRoleOutput` output object contains the following attribute:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`role` | CompanyRole! | Contains company role data
-
-### CompanyRole attributes
-
-import CompanyRole from '/src/_includes/graphql/company-role.md'
-
-<CompanyRole />
 
 ## Errors
 
