@@ -9,11 +9,11 @@ contributor_link: https://www.ztech.io/
 
 The `updateRequisitionList` mutation updates the name and, optionally, the description of a requisition list.
 
-This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
-
 <InlineAlert variant="info" slots="text" />
 
 Use the [storeConfig query](../../../../schema/store/queries/store-config.md) with the `is_requisition_list_active` attribute to determine whether requisition lists are enabled.
+
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
 
 ## Syntax
 
@@ -28,6 +28,10 @@ mutation {
   }
 }
 ```
+
+## Reference
+
+The [`updateRequisitionList`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateRequisitionList) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -67,30 +71,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `updateRequisitionList` mutation requires the following input.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`description`| String | Description of the customer's requisition list
-`name` | String! | The name of the customer's requisition list
-`requisitionListUid` | ID! | The ID of the new requisition list
-
-## Output attributes
-
-The `updateRequisitionList` mutation returns the new requisition list after updating a list.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`requisition_list` | [[RequisitionList](#requisitionlist-attributes)] | The updated requisition list
-
-### RequisitionList attributes
-
-import RequisitionList from '/src/_includes/graphql/requisition-list.md'
-
-<RequisitionList />
 
 ## Related topics
 

@@ -1007,13 +1007,7 @@ module.exports = [
           },
           {
             title: "Interfaces",
-            path: "/graphql/schema/b2b/requisition-list/interfaces/",
-            pages: [
-              {
-                title: "RequisitionListItemInterface",
-                path: "/graphql/schema/b2b/requisition-list/interfaces/item/",
-              },
-            ],
+            path: "/graphql/schema/b2b/requisition-list/interfaces/"
           },
         ],
       },
