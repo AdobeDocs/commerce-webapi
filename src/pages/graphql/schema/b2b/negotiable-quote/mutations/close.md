@@ -7,6 +7,14 @@ edition: b2b
 
 The `closeNegotiableQuotes` mutation closes an active negotiable quote. Once a quote is closed, it cannot be re-opened. Closed negotiable quotes can be viewed by the merchant and company users.
 
+The [`CloseNegotiableQuoteOperationResult` union](../unions/index.md) is an output object that provides details about the result of a request to close a negotiable quote. To return these details, specify fragments on the `CloseNegotiableQuoteOperationFailure` and `NegotiableQuoteUidOperationSuccess` objects. Specify the `__typename` attribute to distinguish the object types in the response.
+
+The `CloseNegotiableQuoteError` union type contains one or more of the following data types, all of which implement `ErrorInterface`.
+
+*  `InternalError`
+*  `NegotiableQuoteInvalidStateError`
+*  `NoSuchEntityUidError`
+
 This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
 
 ## Syntax
@@ -16,6 +24,10 @@ This mutation requires a valid [customer authentication token](../../../customer
         input: CloseNegotiableQuotesInput!
     ): CloseNegotiableQuotesOutput
 ```
+
+## Reference
+
+The [`closeNegotiableQuotes`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-closeNegotiableQuotes) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -81,88 +93,3 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `CloseNegotiableQuotesInput` object contains the following attribute.
-
-Attribute | Data Type | Description
---- | --- | ---
-`quote_item_uids` | [ID!]! | A list of unique IDs from `NegotiableQuote` objects
-
-## Output attributes
-
-The `CloseNegotiableQuotesOutput` output object contains the following fields.
-
-Attribute | Data Type | Description
---- | --- | ---
-`closed_quotes` | [NegotiableQuote] | Deprecated. Use `operation_results` instead. An array containing the negotiable quotes that were just closed
-`negotiable_quotes (filter NegotiableQuoteFilterInput, pageSize = 20 Int, currentPage = 1 Int)` | NegotiableQuotesOutput | A list of negotiable quotes that the customer can view
-`operation_results` | [CloseNegotiableQuoteOperationResult!]! | An array of closed negotiable quote UIDs and details about any errors
-`result_status` | BatchMutationStatus | The status of the request to close one or more negotiable quotes. The possible values are SUCCESS, FAILURE, and MIXED_RESULTS
-
-The `negotiable_quotes` attribute takes the following arguments.
-
-import NegotiableQuotesInput from '/src/_includes/graphql/negotiable-quotes-input.md'
-
-<NegotiableQuotesInput />
-
-### CloseNegotiableQuoteOperationResult attributes
-
-The [`CloseNegotiableQuoteOperationResult` union](../unions/index.md) provides details about the result of a request to close a negotiable quote. To return these details, specify fragments on the `CloseNegotiableQuoteOperationFailure` and `NegotiableQuoteUidOperationSuccess` objects. Specify the `__typename` attribute to distinguish the object types in the response.
-
-### CloseNegotiableQuoteOperationFailure attributes
-
-The CloseNegotiableQuoteOperationFailure type contains details about a failed close operation on a negotiable quote. It contains the following fields.
-
-Attribute | Data Type | Description
---- | --- | ---
-`errors` | [CloseNegotiableQuoteError!]! | An array of errors encountered while attempting close the negotiable quote
-`quote_uid` | ID! | The unique ID of a `NegotiableQuote` object
-
-### CloseNegotiableQuoteError attributes
-
-The `CloseNegotiableQuoteError` union type contains one or more of the following data types, all of which implement `ErrorInterface`.
-
-*  `InternalError`
-*  `NegotiableQuoteInvalidStateError`
-*  `NoSuchEntityUidError`
-
-#### InternalError attributes
-
-The `InternalError` object contains an error message if an internal error occurred.
-
-Attribute | Data Type | Description
---- | --- | ---
-`message` | String! | The returned error message
-
-#### NegotiableQuoteInvalidStateError attributes
-
-The `NegotiableQuoteInvalidStateError` object contains an error message indicating that an operation was attempted on a negotiable quote in an invalid state.
-
-Attribute | Data Type | Description
---- | --- | ---
-`message` | String! | The returned error message
-
-#### NoSuchEntityUidError attributes
-
-The `NoSuchEntityUidError` object contains an error message when an invalid UID was specified.
-
-Attribute | Data Type | Description
---- | --- | ---
-`message` | String! | The returned error message
-`uid` | ID! | The specified invalid unique ID of an object
-
-### NegotiableQuoteUidOperationSuccess attributes
-
-The `NegotiableQuoteUidOperationSuccess` object contains details about a successful operation on a negotiable quote. It implements the `NegotiableQuoteUidNonFatalResultInterface`, which defines the following field
-
-Attribute | Data Type | Description
---- | --- | ---
-quote_uid | ID! @doc(description: "The unique ID of a `NegotiableQuote` object
-
-### NegotiableQuote attributes
-
-import NegotiableQuote from '/src/_includes/graphql/negotiable-quote.md'
-
-<NegotiableQuote />
