@@ -15,3 +15,4 @@ Supported payment providers inlcude:
 - Braintree
 - Klarna
 - PayPal
+- Payment Services
