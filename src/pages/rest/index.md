@@ -7,7 +7,7 @@ keywords:
  
 # REST API Overview
 
-The REST API documentation describes the REST APIs that are available in Adobe Commerce.
+The REST API documentation describes the REST APIs that are available in Adobe Commerce and Magento Open Source.
 
 <TextBlock slots="image, heading, text, links" width="50%" />
 
