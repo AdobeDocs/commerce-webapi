@@ -1,6 +1,6 @@
 ---
 title: REST API Overview
-description: Overview of the available REST API documentation
+description: Overview of the Adobe Commerce and Magento Open Source REST API documentation.
 keywords:
   - REST
 --- 

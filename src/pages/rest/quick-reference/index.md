@@ -1,6 +1,6 @@
 ---
 title: REST endpoints (ReDoc)
-description: Links out to our ReDoc REST documentation
+description: Review comprehensive reference documentation for the Adobe Commerce and Magento Open Source REST API schema.
 keywords:
   - REST
 frameSrc: https://adobe-commerce.redoc.ly
