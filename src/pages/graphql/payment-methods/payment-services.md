@@ -12,17 +12,23 @@ Payment Services for Adobe Commerce and Magento Open Source is your turnkey self
 
 ## Payment services checkout workflow
 
-![PayPal Payments Advanced sequence diagram](../../_images/graphql/payment-services.svg)
+![Payment Services sequence diagram](../../_images/graphql/payment-services.svg)
 
 These steps describe the additional flow of calls required to complete a typical [Checkout](../tutorials/checkout/index.md) authorization with the `Payment Services` functionality enabled.
 
 1. Fetch the payment configuration with `GetPaymentConfig` in order to render payment methods, or PayPal components.
 
+1. PayPal returns the available payment configuration.
+
 1. Use the `setPaymentMethodOnCart` mutation to [set the payment method](../tutorials/checkout/set-payment-method.md) for the order.
+
+1. `Cart_id` is provided with the available payment method for the order.
 
 1. Create the order needed with the `CreatePaymentOrder` mutation to set payment source.
 
-1. Get order information with query `GetPaymentOrder`. PayPal order details for the user cart are needed for hosted fields if the Signifyd integration enabled.
+1. PayPal returns `order_id`.
+
+1. Get order information with query `GetPaymentOrder`. PayPal order details for the user cart are needed for hosted fields if the Signifyd integration is enabled.
 
 1. [Place the order](../tutorials/checkout/place-order.md) with the additional data previously sent with the `SetPaymentAndPlaceOrder` call.
 
