@@ -3,7 +3,7 @@ title: Payment Services as payment method
 description: Learn how to use the GraphQL API mutation for the Payment Services solution.
 keywords:
   - GraphQL
-  - Payment Services
+  - Payments
 ---
 
 # Payment services as payment method
