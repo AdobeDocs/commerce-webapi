@@ -680,12 +680,6 @@ module.exports = [
           {
             title: "Interfaces",
             path: "/graphql/schema/b2b/negotiable-quote/interfaces/",
-            pages: [
-              {
-                title: "NegotiableQuoteAddressInterface",
-                path: "/graphql/schema/b2b/negotiable-quote/interfaces/address/",
-              },
-            ],
           },
           {
             title: "Unions",
@@ -1013,13 +1007,7 @@ module.exports = [
           },
           {
             title: "Interfaces",
-            path: "/graphql/schema/b2b/requisition-list/interfaces/",
-            pages: [
-              {
-                title: "RequisitionListItemInterface",
-                path: "/graphql/schema/b2b/requisition-list/interfaces/item/",
-              },
-            ],
+            path: "/graphql/schema/b2b/requisition-list/interfaces/"
           },
         ],
       },

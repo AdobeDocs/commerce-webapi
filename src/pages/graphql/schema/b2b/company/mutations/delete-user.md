@@ -11,6 +11,8 @@ Use the `deleteCompanyUser` mutation to deactivate the specified company user.
 
 You can get the user ID with the [`company`](../queries/company.md) query.
 
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
+
 ## Syntax
 
 ```graphql
@@ -22,6 +24,10 @@ mutation {
     }
 }
 ```
+
+## Reference
+
+The [`deleteCompanyUser`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-deleteCompanyUser) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -50,22 +56,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `deleteCompanyUser` mutation requires the following input:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`id` | ID! | The encoded user ID to deactivate
-
-## Output attributes
-
-The `deleteCompanyUser` mutation returns a Boolean value that indicates whether the operation was successful.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`success` | Boolean! | Indicates whether the company user has been deactivated successfully (`true` or `false`)
 
 ## Errors
 

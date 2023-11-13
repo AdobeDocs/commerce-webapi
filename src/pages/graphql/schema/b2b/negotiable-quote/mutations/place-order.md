@@ -39,6 +39,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`placeNegotiableQuoteOrder`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-placeNegotiableQuoteOrder) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 **Request:**
@@ -70,25 +74,3 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `PlaceNegotiableQuoteOrderInput` object must contain the following attribute:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`quote_uid` | String! | The unique ID of a `NegotiableQuote` object
-
-## Output attributes
-
-The `placeOrderOutput` object returns an `order` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`order` | Order! | Contains the generated order number
-
-### Order object
-
-Attribute |  Data Type | Description
---- | --- | ---
-`order_number` | String | The unique ID that identifies the order

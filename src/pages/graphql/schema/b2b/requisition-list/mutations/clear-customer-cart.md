@@ -6,13 +6,13 @@ contributor_name: EY
 
 # clearCustomerCart mutation
 
-The `clearCustomerCart` mutation clears the customer's cart.
-
-This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
+The `clearCustomerCart` mutation clears the customer's cart. B2B requisition lists must be enabled to execute this mutation.
 
 <InlineAlert variant="info" slots="text" />
 
 Use the [storeConfig query](../../../../schema/store/queries/store-config.md) with the `is_requisition_list_active` attribute to determine whether requisition lists are enabled.
+
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
 
 ## Syntax
 
@@ -25,6 +25,10 @@ mutation {
   }
 }
 ```
+
+## Reference
+
+The [`clearCustomerCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-clearCustomerCart) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -53,28 +57,3 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `clearCustomerCart` mutation requires the following input.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cartUid`| String! | The masked ID of the cart.
-
-## Output attributes
-
-The `clearCustomerCart` object returns the status and cart object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart` | [Cart](#cart-object) | The cart after clearing items.
-`status` | Boolean! | Indicates whether cart was cleared.
-
-### Cart object
-
-The `Cart` object can contain the following attributes.
-
-import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
