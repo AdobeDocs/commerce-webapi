@@ -34,7 +34,7 @@ These steps describe the additional flow of calls required to complete a typical
 
 ## Example usage
 
-### `GetPaymentConfig`
+### `GetPaymentConfig` 
 
 The following example shows the `GetPaymentConfig` mutation constructed for the Payment Services payment method.
 
