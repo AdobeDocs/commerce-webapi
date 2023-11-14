@@ -30,7 +30,9 @@ These steps describe the additional flow of calls required to complete a typical
 
 1. Get order information with query `getPaymentOrder`. PayPal order details for the user cart are needed for hosted fields if the Signifyd integration is enabled.
 
-1. [Place the order](../tutorials/checkout/place-order.md) with the additional data previously sent with the `setPaymentAndPlaceOrder` call.
+1. PayPal sends response to Adobe Commerce.
+
+1. Continue with a typical checkout to [place the order](../tutorials/checkout/place-order.md).
 
 ## Example usage
 
