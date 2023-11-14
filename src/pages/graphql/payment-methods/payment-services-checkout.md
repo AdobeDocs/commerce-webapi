@@ -28,7 +28,9 @@ These steps describe the additional flow of calls required to complete a typical
 
 1. PayPal returns `order_id`.
 
-1. Get order information with query `getPaymentOrder`. PayPal order details for the user cart are needed for hosted fields if the Signifyd integration is enabled.
+1. Get order information with query `getPaymentOrder`.
+
+1. PayPal order details for the user cart are needed for hosted fields if the Signifyd integration with Payment Services is enabled.
 
 1. PayPal sends response to Adobe Commerce.
 
