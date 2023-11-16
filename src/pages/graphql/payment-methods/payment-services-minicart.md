@@ -34,10 +34,6 @@ These steps describe the additional flow of requests and responses required to p
 
 1. Returns the `cart_id` with coupon applied.
 
-1. Updates the order with the `updatePaymentOrder` mutation to check new amounts if the price changes.
-
-1. Returns order with price changes.
-
 1.  Continues to [place the order](../tutorials/checkout/place-order.md).
 
 1.  Request to `placeOrder` is forwarded with additional data  from `createPaymentOrder`.
