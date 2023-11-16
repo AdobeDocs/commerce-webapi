@@ -20,11 +20,11 @@ These steps describe the additional flow of requests and responses required to p
 
 1. Request forwarded to PayPal.
 
-1. PayPal returns `order_id` and `mp_order_id` values.
+1. PayPal returns an `id` value.
 
-1. Adobe Commerce forwards values to client.
+1. Adobe Commerce forwards the PayPal `id` and the `mp_order_id` values to the client.
 
-1. Run the `syncPaymentOrder` mutation  to get payment details and update the quote with shipping, billing, email and phone number details. This step redirects to the review page.
+1. Run the `syncPaymentOrder` mutation  to get payment details and update the quote with shipping, billing, email and phone number details.
 
 1. Returns details to client.
 
@@ -32,13 +32,15 @@ These steps describe the additional flow of requests and responses required to p
 
 1. Use `applyCouponToCart` to apply a discount coupon to the specified `cart_id`.
 
-1. Update the order with the `UpdatePaymentOrder` mutation to check new amounts if the price changes.
+1. Returns the `cart_id` with coupon applied.
+
+1. Updates the order with the `updatePaymentOrder` mutation to check new amounts if the price changes.
 
 1. Returns order with price changes.
 
-1.  Continue to [place the order](../tutorials/checkout/place-order.md).
+1.  Continues to [place the order](../tutorials/checkout/place-order.md).
 
-1.  Request to `placeOrder` is forwarded with additional data  from `CreatePaymentOrder`.
+1.  Request to `placeOrder` is forwarded with additional data  from `createPaymentOrder`.
 
 1. Request to `placeOrder` is forwarded to PayPal.
 
