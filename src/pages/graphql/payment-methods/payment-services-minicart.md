@@ -26,15 +26,25 @@ These steps describe the additional flow of requests and responses required to p
 
 1. Run the `syncPaymentOrder` mutation  to get payment details and update the quote with shipping, billing, email and phone number details. This step redirects to the review page.
 
+1. Returns details to client.
+
 1. Run the `setShippingMethodsOnCart` mutation to define the delivery methods for your order.
 
 1. Use `applyCouponToCart` to apply a discount coupon to the specified `cart_id`.
 
 1. Update the order with the `UpdatePaymentOrder` mutation to check new amounts if the price changes.
 
+1. Returns order with price changes.
+
 1.  Continue to [place the order](../tutorials/checkout/place-order.md).
 
 1.  Request to `placeOrder` is forwarded with additional data  from `CreatePaymentOrder`.
+
+1. Request to `placeOrder` is forwarded to PayPal.
+
+1. PayPal returns result to Adobe Commerce.
+
+1. Adobe Commerce forwards results to the client integration.
 
 ## Example usage
 

@@ -15,3 +15,5 @@ Supported payment providers inlcude:
 - Braintree
 - Klarna
 - PayPal
+- Payment Services in checkout
+- Payment Services in product page
