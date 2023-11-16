@@ -8,7 +8,7 @@ keywords:
 
 # Payment services product page workflow
 
-![Payment Services sequence diagram](../../_images/graphql/payment-services.svg)
+![Payment Services sequence diagram](../../_images/graphql/payment-services-minicart.svg)
 
 These steps describe the additional flow of requests and responses required to place an order after [adding a product to your cart](../tutorials/checkout/add-product-to-cart.md) with the [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html){target=_blank} solution enabled.
 
