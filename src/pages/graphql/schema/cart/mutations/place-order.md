@@ -32,6 +32,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`placeOrder`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-placeOrder) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 **Request:**
@@ -63,29 +67,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `placeOrderInput` object must contain the following attribute:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart_id` | String! | The unique ID that identifies the customer's cart
-
-## Output attributes
-
-The `placeOrderOutput` object returns an `order` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`order` | Order! | The unique ID that identifies the order
-
-### Order object
-
-Attribute |  Data Type | Description
---- | --- | ---
-`order_id` | String! | Deprecated. Use `order_number` instead. The unique ID that identifies the order
-`order_number` | String | The unique ID that identifies the order
 
 ## Errors
 
