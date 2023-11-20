@@ -16,33 +16,33 @@ Payment Services for Adobe Commerce and Magento Open Source is your turnkey self
 
 These steps describe the flow of requests and responses required to complete a typical [checkout](../tutorials/checkout/index.md) authorization with [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html) solution enabled.
 
-1. Fetch the payment configuration with the `getPaymentConfig` query to retrieve and render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
+1. Run `getPaymentConfig` to fetch the payment configuration to retrieve and render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
 
 1. Commerce returns payment configuration information.
 
-1. Use the `setPaymentMethodOnCart` mutation to [set the payment method](../tutorials/checkout/set-payment-method.md).
+1. Run `setPaymentMethodOnCart` to [set the payment method](../tutorials/checkout/set-payment-method.md).
 
-1. Adobe Commerce returns the `Cart` object.
+1. Adobe Commerce returns a `Cart` object with available payment methods for the order.
 
-1. Run the `createPaymentOrder` mutation to begin the authorization process.
+1. Run `createPaymentOrder` to begin the authorization process.
 
 1. Commerce forwards the request to PayPal.
 
-1. PayPal returns `order_id` and `mp_order_id` values.
+1. PayPal returns an `id` value.
 
-1. Adobe Commerce forwards values to client.
+1. Adobe Commerce generates a `order_id` and forwards the value in the `mp_order_id` field and the PayPal response in the `id` field.
 
-1. (Optional) If hosted fields and the Signifyd integration are enabled, run the `getPaymentOrder` mutation.  The Signifyd extension reads this information.
+1. (Optional) If hosted fields and the Signifyd integration are enabled, run `getPaymentOrder`.
 
-1. (Optional) Adobe Commerce returns these details.
+1.  (Optional) Adobe Commerce returns these details.
 
-1. Run the `placeOrder` mutation.
+1.  Run `placeOrder`.
 
-1. Commerce sends an authorization request to PayPal.
+1.  Commerce sends an authorization request to PayPal.
 
-1. PayPal returns the result to Commerce.
+1.  PayPal returns the result to Commerce.
 
-1. Commerce creates an order and sends an order ID in response to the `placeOrder` mutation.
+1.  Commerce creates an order.
 
 ## Example usage
 
