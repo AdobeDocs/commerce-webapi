@@ -1,6 +1,6 @@
 ---
 title: Payment Services as a payment method
-description: Learn how to use the GraphQL API mutations for the Payment Services solution.
+description: Learn how Adobe Commerce uses GraphQL to process orders for the Payment Services payment method.
 keywords:
   - GraphQL
   - Payments
@@ -14,35 +14,35 @@ Payment Services for Adobe Commerce and Magento Open Source is your turnkey self
 
 ![Payment Services sequence diagram](../../_images/graphql/payment-services.svg)
 
-These steps describe the additional flow of requests and responses required to complete a typical [checkout](../tutorials/checkout/index.md) authorization with [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html){target=_blank} solution enabled.
+These steps describe the flow of requests and responses required to complete a typical [checkout](../tutorials/checkout/index.md) authorization with [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html) solution enabled.
 
-1. Fetch the payment configuration by running the `getPaymentConfig` mutation in order to render payment methods.
+1. Fetch the payment configuration with the `getPaymentConfig` query to retrieve and render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
 
-1. Adobe Commerce returns available payment configuration.
+1. Commerce returns payment configuration information.
 
-1. Use the `setPaymentMethodOnCart` mutation to [set the payment method](../tutorials/checkout/set-payment-method.md) for the order.
+1. Use the `setPaymentMethodOnCart` mutation to [set the payment method](../tutorials/checkout/set-payment-method.md).
 
-1. Adobe Commerce returns the `cart_id` with the available payment methods for the order.
+1. Adobe Commerce returns the `Cart` object.
 
-1. Creates the order with the `createPaymentOrder` mutation.
+1. Run the `createPaymentOrder` mutation to begin the authorization process.
 
-1. Request forwarded to PayPal.
+1. Commerce forwards the request to PayPal.
 
 1. PayPal returns `order_id` and `mp_order_id` values.
 
 1. Adobe Commerce forwards values to client.
 
-1. (Optiona) Run the `getPaymentOrder` mutation if hosted fields and the Signifyd integration are enabled.
+1. (Optional) If hosted fields and the Signifyd integration are enabled, run the `getPaymentOrder` mutation.  The Signifyd extension reads this information.
 
-1. Adobe Commerce returns these details.
+1. (Optional) Adobe Commerce returns these details.
 
-1. Continue with a typical checkout to [place the order](../tutorials/checkout/place-order.md).
+1. Run the `placeOrder` mutation.
 
-1. Request to `placeOrder` is forwarded to PayPal.
+1. Commerce sends an authorization request to PayPal.
 
-1. PayPal returns result to Adobe Commerce.
+1. PayPal returns the result to Commerce.
 
-1. Adobe Commerce forwards results to the client integration.
+1. Commerce creates an order and sends an order ID in response to the `placeOrder` mutation.
 
 ## Example usage
 
