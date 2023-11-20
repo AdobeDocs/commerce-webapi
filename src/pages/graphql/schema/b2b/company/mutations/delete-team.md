@@ -9,6 +9,8 @@ edition: b2b
 
 Use the `deleteCompanyTeam` mutation to delete a company team by ID. You can get the team ID with the [`company`](../queries/company.md) query.
 
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
+
 ## Syntax
 
 ```graphql
@@ -20,6 +22,10 @@ mutation {
     }
 }
 ```
+
+## Reference
+
+The [`deleteCompanyTeam`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-deleteCompanyTeam) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -48,19 +54,3 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `deleteCompanyTeam` mutation requires the following input:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`id` | ID! | The encoded team ID to delete
-
-## Output attributes
-
-The `deleteCompanyTeam` mutation returns a Boolean value that indicates whether the operation was successful.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`success` | Boolean | Indicates whether the company team has been deleted successfully (`true` or `false`)

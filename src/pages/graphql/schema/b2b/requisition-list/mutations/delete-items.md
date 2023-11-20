@@ -6,13 +6,13 @@ contributor_name: EY
 
 # deleteRequisitionListItems mutation
 
-The `deleteRequisitionListItems` mutation removes items from the specified requisiton list for the logged in customer.
-
-This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
+The `deleteRequisitionListItems` mutation removes items from the specified requisition list for the logged in customer.
 
 <InlineAlert variant="info" slots="text" />
 
 Use the [storeConfig query](../../../../schema/store/queries/store-config.md) with the `is_requisition_list_active` attribute to determine whether requisition lists are enabled.
+
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
 
 ## Syntax
 
@@ -26,6 +26,10 @@ mutation {
   }
 }
 ```
+
+## Reference
+
+The [`deleteRequisitionListItems`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-deleteRequisitionListItems) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -61,29 +65,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `deleteRequisitionListItems` mutation requires the following input.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`requisitionListItemUids`| [ID!]! | An array of UIDs representing products to be removed from the requisition list
-`requisitionListUid`| ID! | The unique ID of the requisition list
-
-## Output attributes
-
-The `deleteRequisitionListItems` object returns the requisition list after the deletion of items.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`requisition_list` | [RequisitionList](#requisitionlist-attributes) | The requisition list after removing items
-
-### RequisitionList attributes
-
-import RequisitionList from '/src/_includes/graphql/requisition-list.md'
-
-<RequisitionList />
 
 ## Related topics
 

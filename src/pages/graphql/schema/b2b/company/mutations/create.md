@@ -9,6 +9,8 @@ The `createCompany` mutation creates a company at the request of either a custom
 
 The company administrator cannot log in or perform additional company-related tasks until an administrator approves the request to create a company.
 
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
+
 ## Syntax
 
 ```graphql
@@ -20,6 +22,10 @@ mutation {
   }
 }
 ```
+
+## Reference
+
+The [`createCompany`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createCompany) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -105,53 +111,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The CompanyCreateInput object defines the schema for creating an entity.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`company_admin` | [CompanyAdminInput!](#companyadmininput-attributes) | Defines the company administrator
-`company_email` | String! | The email address of the company contact
-`company_name` | String! | The company name
-`legal_address` | [CompanyLegalAddressCreateInput!](#companylegaladdresscreateinput-attributes) | Defines legal address data of the company
-`legal_name` | String | The full legal name of the company
-`reseller_id` | String | The resale number that is assigned to the company for tax reporting purposes
-`vat_tax_id` | String | The value-added tax number that is assigned to the company by some jurisdictions for tax reporting purposes
-
-### CompanyAdminInput attributes
-
-The `CompanyAdminInput` object can contain the following attributes.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`email` | String! | The email address of the company administrator
-`firstname` | String! | The company administrator's first name
-`gender` | Int | The company administrator's gender (Male - 1, Female - 2, Not Specified - 3)
-`job_title` | String | The job title of the company administrator
-`lastname` | String! | The company administrator's last name
-
-### CompanyLegalAddressCreateInput attributes
-
-The `CompanyLegalAddressCreateInput` object can contain the following attributes.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`city` | String! | The city where the company is registered to conduct business
-`country_id` | CountryCodeEnum! | The company's country ID. See the [`countries` query](../../../store/queries/countries.md)
-`postcode` | String! | The postal code of the company
-`region` | CustomerAddressRegionInput! | An object containing the region name and/or region ID where the company is registered to conduct business
-`street` | [String!]! | An array of strings that define the street address where the company is registered to conduct business
-`telephone` | String! | The primary phone number of the company
-
-## Output attributes
-
-The `CreateCompanyOutput` object contains the `Company` object.
-
-import Company from '/src/_includes/graphql/company.md'
-
-<Company />
 
 ## Related topics
 

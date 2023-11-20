@@ -21,6 +21,10 @@ This query requires a valid [customer authentication token](../../../customer/mu
 }
 ```
 
+## Reference
+
+The [`negotiableQuotes`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-negotiableQuotes) reference provides detailed information about the types and fields defined in this query.
+
 ## Example usage
 
 The following example returns general information about the negotiable quotes containing the string `request` that are accessible to the company user. The results are sorted by negotiable quote name, listed in ascending order.
@@ -81,28 +85,3 @@ query {
   }
 }
 ```
-
-## Input attributes
-
-The `negotiableQuotes` query can take the following arguments.
-
-import NegotiableQuotesInput from '/src/_includes/graphql/negotiable-quotes-input.md'
-
-<NegotiableQuotesInput />
-
-## Output attributes
-
-The `NegotiableQuotesOutput` object contains the following attributes.
-
-Attribute | Data Type | Description
---- | --- | ---
-`items` | [[NegotiableQuote]!](#negotiablequote-attributes) | A list of negotiable quotes
-`page_info` | SearchResultPageInfo! | Contains pagination metadata
-`sort_fields` | [SortFields](../../../products/queries/products.md#sortfields-attributes) | Contains the default sort field and all available sort fields.
-`total_count` | Int! | The number of negotiable quotes returned
-
-### NegotiableQuote attributes
-
-import NegotiableQuote from '/src/_includes/graphql/negotiable-quote.md'
-
-<NegotiableQuote />
