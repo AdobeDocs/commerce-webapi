@@ -21,6 +21,10 @@ This new query has several features that were not available in the deprecated qu
 
 `{customAttributeMetadataV2(attributes: [AttributeInput!]): {AttributesMetadataOutput!}}`
 
+## Reference
+
+The [`customAttributeMetadataV2`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-customAttributeMetadataV2) reference provides detailed information about the types and fields defined in this query.
+
 ## Example usage
 
 ### Custom attribute metadata for a `customer` attribute
@@ -260,83 +264,3 @@ The `swatch options` are the possible values of the attribute.
   }
 }
 ```
-
-## Input attributes
-
-The `AttributeInput` object contains the following attributes:
-
-Attribute | Data Type | Description
---- |---| ---
-`attribute_code` | String | The unique identifier for an attribute. This value should be in lowercase letters without spaces
-`entity_type` | String | The type of entity that defines the attribute
-
-## Output attributes
-
-The `AttributesMetadataOutput` object contains the following attributes:
-
-Attribute | Data Type | Description
---- |---| ---
-`errors` | [AttributeMetadataError!]! | Errors of retrieving certain attributes metadata
-`items` | [CustomAttributeMetadataInterface!]! | Requested attributes metadata
-
-The `CustomAttributeMetadataInterface` object contains the following attributes:
-
-Attribute | Data Type | Description
---- |---| ---
-`code` | ID! | The unique identifier for an attribute. This value should be in lowercase letters without spaces
-`default_value` | String | Default attribute value
-`entity_type` | AttributeEntityTypeEnum! | The type of entity that defines the attribute. Possible values are CATALOG_CATEGORY and CATALOG_PRODUCT
-`frontend_input` | AttributeFrontendInputEnum | The frontend input type of the attribute. Possible values are BOOLEAN, DATE, DATETIME, FILE, GALLERY, HIDDEN, IMAGE, MEDIA_IMAGE, MULTILINE, MULTISELECT, PRICE, SELECT, TEXT, TEXTAREA, WEIGHT and UNDEFINED
-`is_comparable` | Boolean | Whether a product or category attribute can be compared against another or not
-`is_filterable` | Boolean | Whether a product or category attribute can be filtered or not
-`is_filterable_in_search` | Boolean | Whether a product or category attribute can be filtered in search or not
-`is_html_allowed_on_front` | Boolean | Whether a product or category attribute can use HTML on front or not
-`is_required` | Boolean! | Whether the attribute value is required
-`is_searchable` | Boolean | Whether a product or category attribute can be searched or not
-`is_unique` | Boolean! | Whether the attribute value must be unique
-`is_used_for_price_rules` | Boolean | Whether a product or category attribute can be used for price rules or not
-`is_used_for_promo_rules` | Boolean | Whether a product or category attribute is used for promo rules or not
-`is_visible_in_advanced_search` | Boolean | Whether a product or category attribute is visible in advanced search or not
-`is_visible_on_front` | Boolean | Whether a product or category attribute is visible on front or not
-`is_wysiwyg_enabled` | Boolean | Whether a product or category attribute has WYSIWYG enabled or not
-`label` | String | The label assigned to the attribute
-`options` | [CustomAttributeOptionInterface!]! | Attribute options
-`used_in_product_listing` | Boolean | Whether a product or category attribute is used in product listing or not
-
-The `CustomAttributeOptionInterface` object contains the following attributes:
-
-Attribute | Data Type | Description
---- |---| ---
-`is_default` | Boolean | Is the option value default
-`label` | String! | The label assigned to the attribute option
-`value` | String! | The attribute option value
-
-The `AttributeMetadataError` object contains the following attributes:
-
-Attribute | Data Type | Description
---- | --- | ---
-`message` | String! | Attribute metadata retrieval error message
-`type` | AttributeMetadataErrorType! | Attribute metadata retrieval error type
-
-The `CatalogAttributeMetadata` is an implementation of the `CustomAttributeMetadataInterface`. This object contains the following attributes:
-
-Attribute | Data Type | Description
---- |---| ---
-`apply_to` | [CatalogAttributeApplyToEnum] | To which catalog types an attribute can be applied. Possible values are SIMPLE, VIRTUAL, BUNDLE, DOWNLOADABLE, CONFIGURABLE, GROUPED and CATEGORY
-`is_comparable` | Boolean! | Whether a product or category attribute can be compared against another or not
-`is_filterable` | Boolean! | Whether a product or category attribute can be filtered or not
-`is_filterable_in_search` | Boolean! | Whether a product or category attribute can be filtered in search or not
-`is_html_allowed_on_front` | Boolean! | Whether a product or category attribute can use HTML on front or not
-`is_used_for_price_rules` | Boolean! | Whether a product or category attribute can be used for price rules or not
-`is_searchable` | Boolean! | Whether a product or category attribute can be searched or not
-`is_used_for_promo_rules` | Boolean! | Whether a product or category attribute is used for promo rules or not
-`is_wysiwyg_enabled` | Boolean! | Whether a product or category attribute has WYSIWYG enabled or not
-`used_in_product_listing` | Boolean! | Whether a product or category attribute is used in product listing or not
-
-Additionally, if the attribute manages `swatch options` (values of the attribute), this object will contain the following attributes:
-
-Attribute | Data Type | Description
---- |---| ---
-`swatch_input_type` | SwatchInputTypeEnum | Input type of the swatch attribute option. Possible values are BOOLEAN, DATE, DATETIME, DROPDOWN, FILE, GALLERY, HIDDEN, IMAGE, MEDIA_IMAGE, MULTILINE, MULTISELECT, PRICE, SELECT, TEXT, TEXTAREA, UNDEFINED, VISUAL and WEIGHT
-`update_product_preview_image` | Boolean | Whether update product preview image or not
-`use_product_image_for_swatch` | Boolean | Whether use product image for swatch or not

@@ -22,6 +22,10 @@ The `attributesMetadata` query returns everything available in [`customAttribute
 }
 ```
 
+## Reference
+
+The [`attributesMetadata`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-attributesMetadata) reference provides detailed information about the types and fields defined in this query.
+
 ## Example usage
 
 **Request:**
@@ -103,17 +107,3 @@ attributesMetadata(
           }
         }
 ```
-
-## Input attributes
-
-Attribute | Data type | Description
---- | --- | ---
-`attributeUids` | [ID!] | An array of attribute IDs to search
-`entityType` | AttributeEntityTypeEnum! | The type of entity to search
-`showSystemAttributes` | Boolean | Indicates whether to also return matching system attributes
-
-## Output attributes
-
-import AttributeMetadata from '/src/_includes/graphql/attribute-metadata.md'
-
-<AttributeMetadata />
