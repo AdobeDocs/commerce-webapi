@@ -23,7 +23,7 @@ This new query has several features that were not available in the deprecated qu
 
 ## Reference
 
-The [`customAttributeMetadataV2`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-customAttributeMetadataV2) reference provides detailed information about the types and fields defined in this query.
+The [`customAttributeMetadataV2`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#query-customAttributeMetadataV2) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
