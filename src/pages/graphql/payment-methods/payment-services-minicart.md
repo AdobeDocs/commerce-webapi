@@ -1,5 +1,5 @@
 ---
-title: Payment Services product page workflow
+title: Payment Services cart workflow
 description: Learn how to use the GraphQL API mutations for the Payment Services solution.
 keywords:
   - GraphQL
@@ -12,37 +12,33 @@ keywords:
 
 These steps describe the additional flow of requests and responses required to place an order after [adding a product to your cart](../tutorials/checkout/add-product-to-cart.md) with the [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html){target=_blank} solution enabled.
 
-1. Requests the payment configuration by running the `getPaymentConfig` mutation in order to render payment methods.
+1. Run `getPaymentConfig` to fetch the payment configuration to retrieve and render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
 
-1. Adobe Commerce returns available payment configuration.
+1. Commerce returns payment configuration information.
 
-1. Creates the order with the `createPaymentOrder` mutation.
+1. Run `createPaymentOrder` to begin the authorization process.
 
-1. Request forwarded to PayPal.
+1. Commerce forwards the request to PayPal.
 
-1. PayPal returns a `PayPal id` value.
+1. PayPal returns an `id` value.
 
-1. Adobe Commerce forwards the `PayPal id` and the `mp_order_id` values to the client.
+1. Adobe Commerce generates an `order_id` and forwards the value in the `mp_order_id` field and the PayPal response in the `id` field.
 
-1. Run the `syncPaymentOrder` mutation  to get payment details and update the quote with shipping, billing, email and phone number details.
+1. Run `syncPaymentOrder` to get payment details and update the quote with shipping, billing, email and phone number details.
 
-1. Adobe Commerce returns details to client.
+1. Commerce returns these details.
 
-1. Run the `setShippingMethodsOnCart` mutation to define the delivery methods for your order.
+1. Run `setShippingMethodsOnCart` to define the delivery methods for your order.
 
-1. (Optional) Use `applyCouponToCart` to apply a discount coupon to the specified `cart_id`.
+1. Commerce returns these details.
 
-1. (Optional) Adobe Commerce returns the `cart_id` with the applied coupon.
+1.  Run `placeOrder`.
 
-1.  Continues to [place the order](../tutorials/checkout/place-order.md).
+1.  Commerce sends an authorization request to PayPal.
 
-1.  Request to `placeOrder` is forwarded with additional data  from `createPaymentOrder`.
+1.  PayPal returns the result to Commerce.
 
-1. Adobe Commerce request to `placeOrder` is forwarded to PayPal.
-
-1. PayPal returns results to Adobe Commerce.
-
-1. Adobe Commerce forwards results to the client integration.
+1.  Commerce creates an order.
 
 ## Example usage
 
