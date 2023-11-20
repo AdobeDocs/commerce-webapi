@@ -26,9 +26,22 @@ Supported online payment methods include:
 -  [PayPal Website Payments Pro Hosted Solution](../../../payment-methods/hosted-pro.md)
 -  [Express Checkout for other PayPal solutions](../../../payment-methods/payflow-express.md)
 
+For all online payment methods, the payload must include an object that defines additional information specific to that payment method. For example, the payload for Braintree payment method includes the following object:
+
+```graphql
+braintree: {
+  payment_method_nonce: "fake-nonce"
+  is_active_payment_token_enabler: false
+}
+```
+
 ## Syntax
 
 `mutation: {setPaymentMethodOnCart(input: SetPaymentMethodOnCartInput): SetPaymentMethodOnCartOutput}}`
+
+## Reference
+
+The [`setPaymentMethodOnCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-setPaymentMethodOnCart) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -73,6 +86,48 @@ mutation {
 }
 ```
 
+## Online payment method
+
+The following example shows the `setPaymentMethodOnCart` mutation constructed for the Braintree payment method.
+
+**Request:**
+
+```graphql
+mutation {
+  setPaymentMethodOnCart(input: {
+    cart_id: "IeTUiU0oCXjm0uRqGCOuhQ2AuQatogjG"
+    payment_method: {
+      code: "braintree"
+      braintree: {
+        payment_method_nonce: "fake-nonce"
+        is_active_payment_token_enabler: false
+      }
+    }
+  }) {
+  cart {
+    selected_payment_method {
+      code
+    }
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "setPaymentMethodOnCart": {
+      "cart": {
+        "selected_payment_method": {
+          "code": "braintree"
+        }
+      }
+    }
+  }
+}
+```
+
 ## Input attributes
 
 The top-level `SetPaymentMethodOnCartInput` object is listed first. All child objects are listed in alphabetical order.
@@ -96,22 +151,6 @@ Attribute |  Data Type | Description
 `purchase_order_number` | String | The purchase order number. Optional for most payment methods
 
 For all online payment methods, the payload must include an object that defines additional information specific to that payment method.
-
-## Output attributes
-
-The `SetPaymentMethodOnCartOutput` object contains the `Cart` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
-
-### Cart object
-
-import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 
