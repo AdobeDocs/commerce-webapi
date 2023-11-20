@@ -245,13 +245,7 @@ module.exports = [
           },
           {
             title: "Interfaces",
-            path: "/graphql/schema/cart/interfaces/",
-            pages: [
-              {
-                title: "CartItemInterface",
-                path: "/graphql/schema/cart/interfaces/cart-item/",
-              },
-            ],
+            path: "/graphql/schema/cart/interfaces/"
           },
         ],
       },

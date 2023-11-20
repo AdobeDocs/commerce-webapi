@@ -16,6 +16,10 @@ Use the `addBundleProductsToCart` mutation to add bundle products to a specific 
 
 `mutation: {addBundleProductsToCart(input: AddBundleProductsToCartInput): {AddBundleProductsToCartOutput}}`
 
+## Reference
+
+The [`addBundleProductsToCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addBundleProductsToCart) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example uses a bundle product "Sprite Yoga Companion Kit" from Adobe Commerce and Magento Open Source sample data.
@@ -191,72 +195,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The top-level `AddBundleProductsToCartInput` object is listed first. All interfaces and child objects are listed in alphabetical order.
-
-### AddBundleProductsToCartInput object
-
-The `AddBundleProductsToCartInput` object contains the following attributes:
-
-Attribute | Type | Description
---- | --- | ---
-`cart_id` | String! | The unique ID that identifies the customer's cart
-`cart_items` | [[BundleProductCartItemInput!]!](#bundleproductcartiteminput-object) | An array of bundle items to add to the cart
-
-### BundleProductCartItemInput object
-
-The `BundleProductCartItemInput` object contains the following attributes:
-
-Attribute | Type | Description
---- | --- | ---
-`bundle_options` | [[BundleOptionInput!]!](#bundleoptioninput-object) | An object that contains an array of options of the bundle product with the chosen value and quantity of each option
-`customizable_options` | [[CustomizableOptionInput!]](#customizableoptioninput-object) | An object that contains the ID and value of the product
-`data` | [CartItemInput!](#cartiteminput-object) | An object that contains the quantity and SKU of the bundle product
-
-### BundleOptionInput object
-
-The `BundleOptionInput` object contains the following attributes:
-
-Attribute | Type | Description
---- | --- | ---
-`id` | Int! | ID of the option
-`quantity` | Float! | The number of a specific child item to add to the cart
-`value` | [String!]! | An array with the chosen value of the option
-
-### CartItemInput object
-
-The `CartItemInput` object contains the following attributes:
-
-Attribute | Type | Description
---- | --- | ---
-`quantity` | Float! | The number of items to add to the cart
-`sku` | String! | The SKU of the product
-
-### CustomizableOptionInput object
-
-The `CustomizableOptionInput` object can contain the following attributes:
-
-import CustomizableOptionInput from '/src/_includes/graphql/customizable-option-input-24.md'
-
-<CustomizableOptionInput />
-
-## Output attributes
-
-The `AddBundleProductsToCartOutput` object contains the `Cart` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
-
-### Cart object
-
-import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 
