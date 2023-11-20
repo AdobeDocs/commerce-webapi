@@ -10,7 +10,7 @@ Use the `pickupLocations` query to retrieve a list of available pickup locations
 
 The `pickupLocations` query supports the following types of filters.
 
-*  Area filters allow you to specify a location and a radius to find all locations within that radius. The `search_term` field must contain a either the region, city, or postcode, followed by a colon and the country code. This value determines the location to use as the center of the search radius.  Valid search terms include Texas:US, Austin:US, and 78740:US. The two-letter country code must be uppercase.
+*  Area filters allow you to specify a location and a radius to find all locations within that radius. The `search_term` field must contain either the region, city, or postcode, followed by a colon and the country code. This value determines the location to use as the center of the search radius.  Valid search terms include Texas:US, Austin:US, and 78740:US. The two-letter country code must be uppercase.
 
 *  Attribute filters allow you to return locations within a specified country, postal code, region, city, street, street, name, and pickup location code.
 
