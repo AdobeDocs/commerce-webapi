@@ -26,11 +26,11 @@ These steps describe the additional flow of requests and responses required to p
 
 1. Run `syncPaymentOrder` to get payment details and update the quote with shipping, billing, email and phone number details.
 
-1. Commerce returns these details.
+1. Commerce returns details about the payment order.
 
 1. Run `setShippingMethodsOnCart` to define the delivery methods for your order.
 
-1. Commerce returns these details.
+1. Commerce returns details about the delivery methods for your order.
 
 1.  Run `placeOrder`.
 
