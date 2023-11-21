@@ -22,7 +22,7 @@ These steps describe the flow of requests and responses required to complete a t
 
 1. Run `setPaymentMethodOnCart` to [set the payment method](../tutorials/checkout/set-payment-method.md).
 
-1. Adobe Commerce returns a `Cart` object with available payment methods for the order.
+1. Adobe Commerce returns a `Cart` object.
 
 1. Run `createPaymentOrder` to begin the authorization process.
 
@@ -34,7 +34,7 @@ These steps describe the flow of requests and responses required to complete a t
 
 1. (Optional) If hosted fields and the Signifyd integration are enabled, run `getPaymentOrder`.
 
-1.  (Optional) Adobe Commerce returns these details.
+1.  (Optional) Adobe Commerce returns details about the payment order..
 
 1.  Run `placeOrder`.
 
