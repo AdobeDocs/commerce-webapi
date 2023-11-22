@@ -285,15 +285,15 @@ module.exports = [
               },
               {
                 title: "GetPaymentConfig",
-                path: "/graphql/schema/checkout/queries/getpaymentconfig/",
+                path: "/graphql/schema/checkout/queries/get-payment-config/",
               },
               {
                 title: "getPaymentSDK",
-                path: "/graphql/schema/checkout/queries/getpaymentsdk/",
+                path: "/graphql/schema/checkout/queries/get-payment-sdk/",
               },
               {
                 title: "getPaymentOrder",
-                path: "/graphql/schema/checkout/queries/getpaymentorder/",
+                path: "/graphql/schema/checkout/queries/get-payment-order/",
               },
             ],
           },
@@ -327,11 +327,11 @@ module.exports = [
               },
               {
                 title: "createPaymentOrder",
-                path: "/graphql/schema/checkout/mutations/createPaymentOrder/",
+                path: "/graphql/schema/checkout/mutations/create-payment-order/",
               },
               {
                 title: "syncPaymentOrder",
-                path: "/graphql/schema/checkout/mutations/syncPaymentOrder/",
+                path: "/graphql/schema/checkout/mutations/sync-payment-order/",
               },
             ],
           },
