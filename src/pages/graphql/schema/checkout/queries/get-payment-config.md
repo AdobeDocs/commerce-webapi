@@ -12,27 +12,64 @@ The `getPaymentConfig` query returns the payment configuration for the available
 * PRODUCT_DETAIL
 * ADMIN
 
-These payment methods for the `getPaymentConfig` query are the ones supported in [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/payments-checkout/payments-options.html).
+These payment methods for the `getPaymentConfig` query are the ones supported in [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/payments-checkout/payments-options.html):
+
+* PayPal Hosted Fields
+* Apple Pay
+* PayPal Smart Buttons
 
 ## getPaymentConfig object
 
-The `getPaymentConfig` object will differ on which attributes must contain depending on the payment methods that are available for a specific `PaymentLocation`. The common attributes for each payment method are:
+The `getPaymentConfig` object will differ on which attributes must contain depending on the payment method.
+
+### Payment method `hosted_fields`
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`payment_source` | String! | Optional. The identifiable payment source for the payment method.
 `code` | String! | The code for the payment method used in the order. Required field for sale transactions
 `title` | String! | The displayed name for the payment method
 `payment_intent` | String | Defines the payment intent (Authorize or Capture)
 `sort_order` | String | Defines the preference for the sorting order of the payment method
 `sdk_params` | String | PayPal parameters required to load JS SDK
 `is_visible` | String | Defines if the payment method is shown
+`payment_source` | String! | Optional. The identifiable payment source for the payment method.
+`three_ds` | String | Defines if 3DS mode is enabled
+`is_commerce_vault_enabled` | String | Defines if card vaulting is enabled
+`cc_vault_code` | String | The vault payment method code
+`requires_card_details` | String | Required card and bin details if Signifyd integration is enabled for hosted fields
+
+### Payment method `smart_buttons`
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`code` | String! | The code for the payment method used in the order. Required field for sale transactions
+`title` | String! | The displayed name for the payment method
+`payment_intent` | String | Defines the payment intent (Authorize or Capture)
+`sort_order` | String | Defines the preference for the sorting order of the payment method
+`sdk_params` | String | PayPal parameters required to load JS SDK
+`is_visible` | String | Defines if the payment method is shown
+`display_venmo` | String | Defines if the Venmo option is shown
+`message_styles` | String | The message styles for the PayPal Pay Later configuration
+`display_message` | String | Defines if PayPal Pay Later message is shown
+`button_styles` | String | The styles for the PayPal Smart Button configuration
+
+### Payment method `apple_pay`
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`code` | String! | The code for the payment method used in the order. Required field for sale transactions
+`title` | String! | The displayed name for the payment method
+`payment_intent` | String | Defines the payment intent (Authorize or Capture)
+`sort_order` | String | Defines the preference for the sorting order of the payment method
+`sdk_params` | String | PayPal parameters required to load JS SDK
+`is_visible` | String | Defines if the payment method is shown
+`button_styles` | String | The styles for the ApplePay Smart Button configuration
 
 ## Example usage
 
 ### `getPaymentConfig`
 
-The following example shows the `getPaymentConfig` query constructed for a `PaymentLocation: CHECKOUT` with several payment methods available:
+The following example shows the `getPaymentConfig` query:
 
 **Request:**
 
@@ -53,6 +90,7 @@ query {
                 three_ds
                 is_vault_enabled
                 cc_vault_code
+                requires_card_details
             }
             smart_buttons {
                 code
@@ -142,6 +180,7 @@ query {
                     "three_ds": false,
                     "is_commerce_vault_enabled": true,
                     "cc_vault_code": "payment_services_paypal_vault"
+                    "requires_card_details": false
                 },
                 "smart_buttons": {
                     "code": "payment_services_paypal_smart_buttons",

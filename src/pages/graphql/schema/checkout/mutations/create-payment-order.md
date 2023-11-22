@@ -15,7 +15,7 @@ Attribute |  Data Type | Description
 `cartId` | String! | The unique id for the generated cart. Required field for sale transactions
 `methodCode` | String! | The code for the payment method used in the order. Required field for sale transactions
 `payment_source` | String! | The identifiable payment source for the payment method
-`vaultIntent` | String | Defines the intent for vaulting. Set by default to `false`
+`vaultIntent` | String | Defines the intent for vault. Stores the payment method information. Set by default to `false`
 
 ## Example usage
 
