@@ -8,7 +8,6 @@ The `createPaymentOrder` mutation creates a payment order for later processing w
 
 ## createPaymentOrder object
 
-
 The `createPaymentOrder` object must contain the following attributes:
 
 Attribute |  Data Type | Description
@@ -38,7 +37,7 @@ mutation {
     mp_order_id
     status
   }
-} 
+}
 ```
 
 **Response:**
