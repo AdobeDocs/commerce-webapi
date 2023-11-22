@@ -283,6 +283,18 @@ module.exports = [
                 title: "getPayflowLinkToken",
                 path: "/graphql/schema/checkout/queries/get-payflow-link-token/",
               },
+              {
+                title: "GetPaymentConfig",
+                path: "/graphql/schema/checkout/queries/getpaymentconfig/",
+              },
+              {
+                title: "getPaymentSDK",
+                path: "/graphql/schema/checkout/queries/getpaymentsdk/",
+              },
+              {
+                title: "getPaymentOrder",
+                path: "/graphql/schema/checkout/queries/getpaymentorder/",
+              },
             ],
           },
           {
@@ -312,6 +324,14 @@ module.exports = [
               {
                 title: "handlePayflowProResponse",
                 path: "/graphql/schema/checkout/mutations/handle-payflow-pro-response/",
+              },
+              {
+                title: "createPaymentOrder",
+                path: "/graphql/schema/checkout/mutations/createPaymentOrder/",
+              },
+              {
+                title: "syncPaymentOrder",
+                path: "/graphql/schema/checkout/mutations/syncPaymentOrder/",
               },
             ],
           },
