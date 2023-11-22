@@ -1,12 +1,12 @@
 ---
-title: Payment Services as a payment method during a checkout authorization
+title: Payment Services during a checkout authorization
 description: Learn how Adobe Commerce uses GraphQL to process orders for the Payment Services payment method during a typical checkout authorization.
 keywords:
   - GraphQL
   - Payments
 ---
 
-# Payment services as a payment method during a checkout authorization
+# Payment services during a checkout authorization
 
 Payment Services for Adobe Commerce and Magento Open Source is your turnkey self-service solution, including sandbox testing and a simple setup, for providing robust and secure payment processing for your Commerce websites.
 
