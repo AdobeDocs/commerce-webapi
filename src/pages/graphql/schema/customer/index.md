@@ -11,7 +11,7 @@ To return or modify information about a customer, we recommend you use [customer
 B2B for Adobe Commerce adds the following top-level fields to the [`Customer`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-Customer) object for company administrators and users.
 
 * `job_title`
-* `requisition_lists
+* `requisition_lists`
 * `role`
 * `status`
 * `team`
