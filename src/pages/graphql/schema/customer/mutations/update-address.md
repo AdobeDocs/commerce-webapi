@@ -53,7 +53,6 @@ mutation {
 }
 ```
 
-
 ### Update a customer address with custom attributes
 
 <BetaNote />
