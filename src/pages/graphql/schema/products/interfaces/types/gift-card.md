@@ -119,5 +119,5 @@ The following query returns information about gift card product `GiftCard25`. (I
 ## Related topics
 
 -  [applyGiftCardToCart mutation](../../../cart/mutations/apply-giftcard.md)
--  [redeemGiftCardBalanceAsStoreCredit mutation](../../../customer/mutations/redeem-giftcard-balance.md)
+-  [redeemGiftCardBalanceAsStoreCredit mutation](../../../cart/mutations/redeem-giftcard-balance.md)
 -  [removeGiftCardFromCart mutation](../../../cart/mutations/remove-giftcard.md)

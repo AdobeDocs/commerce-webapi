@@ -4,9 +4,9 @@ title: revokeCustomerToken mutation
 
 # revokeCustomerToken mutation
 
-Use the `revokeCustomerToken` mutation to revokes the customer's token.
+The `revokeCustomerToken` mutation revokes the customer's token. It returns `true` if the token was successfully revoked.
 
-To return or modify information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session).
+We recommend you specify a customer token in the header of your call. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session).
 
 ## Syntax
 
@@ -17,6 +17,10 @@ mutation {
   }
 }
 ```
+
+## Reference
+
+The [`revokeCustomerToken`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-revokeCustomerToken) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -44,12 +48,6 @@ mutation {
 }
 ```
 
-## Output attributes
-
-Attribute |  Data Type | Description
---- | --- | ---
-`result` | Boolean! | Returns `true` if the token was successfully revoked
-
 ## Errors
 
 Error | Description
@@ -58,5 +56,5 @@ Error | Description
 
 ## Related topics
 
-*  [customer query](../../customer/queries/customer.md)
-*  [generateCustomerToken mutation](../../customer/mutations/generate-token.md)
+*  [customer query](../queries/customer.md)
+*  [generateCustomerToken mutation](generate-token.md)
