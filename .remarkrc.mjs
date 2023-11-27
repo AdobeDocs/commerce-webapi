@@ -14,9 +14,9 @@ const remarkConfig = {
 			{
 				schemas: {
 					/* One schema for many files */
-					"./.github/linters/metadata.schema.yml": [
+					'./.github/linters/metadata.schema.yml': [
 						/* Support glob patterns ———v */
-						"./src/pages/**/*.md",
+						'./src/pages/**/*.md, !src/pages/graphql/schema/**'
 					],
 				},
 			},
@@ -25,7 +25,7 @@ const remarkConfig = {
 			remarkLintNoDeadUrls,
 			{
 				skipUrlPatterns: [
-					"https://www.php.net"
+					'https://www.php.net'
 				]
 			}
 		],
