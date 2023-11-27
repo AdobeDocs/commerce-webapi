@@ -8,17 +8,13 @@ contributor_link: https://www.atwix.com/
 
 The `VirtualProduct` data type implements the following interfaces:
 
--  [ProductInterface](../index.md)
--  [CustomizableProductInterface](../customizable-option.md)
--  [RoutableInterface](../routable.md)
+-  [ProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-ProductInterface)
+-  [CustomizableProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-CustomizableProductInterface)
+-  [RoutableInterface](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-RoutableInterface)
 
 Attributes that are specific to the virtual products can be used when performing a [`products`](../../queries/products.md) query.
 
-## VirtualProduct object
-
-The `VirtualProduct` object contains attributes only from implemented interfaces:
-
-## Sample Query
+## Sample query
 
 The following query returns information about virtual product.
 

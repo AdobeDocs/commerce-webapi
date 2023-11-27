@@ -30,6 +30,7 @@ The cart mutations allow you to perform the following operations:
   * [`applyGiftCardToCart`](apply-giftcard.md)
   * [`applyRewardPointsToCart`](apply-reward-points.md)
   * [`applyStoreCreditToCart`](apply-store-credit.md)
+  * [`redeemGiftCardBalanceAsStoreCredit`](redeem-giftcard-balance.md)
   * [`removeCouponFromCart`](remove-coupon.md)
   * [`removeGiftCardFromCart`](remove-giftcard.md)
   * [`removeRewardPointsFromCart`](remove-reward-points.md)

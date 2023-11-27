@@ -12,6 +12,10 @@ To return or modify information about a customer, we recommend you use customer 
 
 `mutation: {changeCustomerPassword(currentPassword: String! newPassword: String!) {Customer}}`
 
+## Reference
+
+The [`changeCustomerPassword`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-changeCustomerPassword) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following call updates the customer's password.
@@ -42,25 +46,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `changeCustomerPassword` mutation requires the following inputs:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`currentPassword` | String | The customer's current password
-`newPassword` | String | The customer's new password
-
-## Output attributes
-
-The `changeCustomerPassword` mutation returns the `customer` object.
-
-The following table lists the top-level attributes of the `customer` object. See the [`customer` query](../../customer/queries/customer.md) for complete details about this object.
-
-import Customer from '/src/_includes/graphql/customer-output-24.md'
-
-<Customer />
 
 ## Errors
 

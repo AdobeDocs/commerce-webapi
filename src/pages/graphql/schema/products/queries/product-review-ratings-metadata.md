@@ -12,6 +12,10 @@ Use the [`createProductReview` mutation](../mutations/create-review.md) to add a
 
 `productReviewRatingsMetadata: ProductReviewRatingsMetadata!`
 
+## Reference
+
+The [`productReviewRatingsMetadata`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-productReviewRatingsMetadata) reference provides detailed information about the types and fields defined in this query.
+
 ## Example usage
 
 The following query returns the metadata for all active ratings attributes. In this example, the default `Rating` attribute has been renamed to `Overall`, and the `Quality` and `Value` attributes have been enabled.
@@ -123,34 +127,3 @@ query {
   }
 }
 ```
-
-## Input attributes
-
-Not applicable
-
-## Output attributes
-
-The `ProductReviewRatingsMetadata` output object contains the `items` object.
-
-Attribute | Data type | Description
---- | --- | ---
-`items` | [ProductReviewRatingMetadata!]! | A list of product reviews, sorted by position
-
-### ProductReviewRatingMetadata attributes
-
-The `ProductReviewRatingMetadata` object contains the following attributes.
-
-Attribute | Data type | Description
---- | --- | ---
-`id` | String! | An encoded rating ID
-`name` | String! | The label assigned to an aspect of a product that is being rated, such as quality or price
-`values` | [ProductReviewRatingValueMetadata!]! | A list of product review ratings, sorted by position
-
-### ProductReviewRatingValueMetadata attributes
-
-The `ProductReviewRatingValueMetadata` object contains the following attributes.
-
-Attribute | Data type | Description
---- | --- | ---
-value | String! | A ratings scale, such as the number of stars awarded
-value_id | String! | An encoded rating value ID
