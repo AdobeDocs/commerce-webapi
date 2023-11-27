@@ -81,18 +81,12 @@ The `category_id`, `sku`, and `url_key` filters require a `FilterEqualTypeInput`
 -  Select
 -  Multiple select
 
-Attribute | Description
---- | ---
-`eq` | Use this attribute to exactly match the specified string. For example, to filter on a specific category ID, specify a value like `5`
-`in` | Use this attribute to filter on an array of values. For example, to filter on category IDs 4, 5, and 6, specify a value of `["4", "5", "6"]`
+The comparison operator must be either `eq` or `in`. Use `eq` to exactly match the specified string. For example, to filter on a specific category ID, specify a value like `5`.
+Use `in` to filter on an array of values. For example, to filter on category IDs 4, 5, and 6, specify a value of `["4", "5", "6"]`
 
 #### FilterMatchTypeInput attributes
 
-Use the `FilterMatchTypeInput` object to construct a filter that returns products that partially fuzzy match a string or contain the specified pattern.
-
-Attribute | Description
---- | ---
-`match` | Use this attribute to partially fuzzy match the specified string. For example, to filter on a specific SKU, specify a value such as `24-MB01`
+Use the `FilterMatchTypeInput` object to construct a filter that returns products that partially fuzzy match a string or contain the specified pattern. This object must contain the `match` attribute. Use this attribute to partially fuzzy match the specified string. For example, to filter on a specific SKU, specify a value such as `24-MB01`
 
 You must specify a `FilterMatchTypeInput` object to filter on a custom product attribute of the following types:
 

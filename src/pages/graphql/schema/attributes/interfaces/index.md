@@ -6,7 +6,6 @@ import BetaNote from '/src/_includes/graphql/notes/beta.md'
 import CustomAttributeCustomer from '/src/_includes/graphql/examples/custom-attribute-customer.md'
 import CustomAttributeFilterProduct from '/src/_includes/graphql/examples/custom-attribute-filter-product.md'
 
-
 # Attribute interfaces and implementations
 
 <BetaNote />
