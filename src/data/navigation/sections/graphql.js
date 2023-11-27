@@ -108,6 +108,10 @@ module.exports = [
                 path: "/graphql/schema/attributes/queries/custom-attribute-metadata-v2.md"
               }
             ]
+          },
+          {
+            title: "Interfaces",
+            path: "/graphql/schema/attributes/interfaces/"
           }
         ]
       },
@@ -188,6 +192,10 @@ module.exports = [
               {
                 title: "placeOrder",
                 path: "/graphql/schema/cart/mutations/place-order/",
+              },
+              {
+                title: "redeemGiftCardBalanceAsStoreCredit",
+                path: "/graphql/schema/customer/mutations/redeem-giftcard-balance/",
               },
               {
                 title: "removeCouponFromCart",
@@ -476,10 +484,6 @@ module.exports = [
               {
                 title: "generateCustomerTokenAsAdmin",
                 path: "/graphql/schema/customer/mutations/generate-token-as-admin/",
-              },
-              {
-                title: "redeemGiftCardBalanceAsStoreCredit",
-                path: "/graphql/schema/customer/mutations/redeem-giftcard-balance/",
               },
               {
                 title: "requestPasswordResetEmail",

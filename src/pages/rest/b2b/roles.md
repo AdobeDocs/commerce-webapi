@@ -699,7 +699,7 @@ You cannot delete a role if it is the only role defined within the company.
 
 The following call returns all roles that have been created for a company  (`company_id` = `2`).
 
-See [Search using REST APIs](https://developer.adobe.com/commerce/webapi/rest/use-rest/performing-searches.html) for information about constructing a search query.
+See [Search using REST APIs](../use-rest/performing-searches.md) for information about constructing a search query.
 
 **Sample Usage:**
 

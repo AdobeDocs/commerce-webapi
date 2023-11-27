@@ -8,9 +8,13 @@ keywords:
 
 # PayPal Payments Advanced payment method
 
+<InlineAlert variant="info" slots="text" />
+
+PayPal has designated Payments Advanced as a legacy product.
+
 The PayPal Payments Advanced payment solution allows merchants to enable their online stores to collect payments directly via credit card or from the PayPal Credit service. If Payments Advanced has been configured to implement Express Checkout, use the [PayPal Express Checkout for Payflow payment method](payflow-express.md) instead.
 
-From a GraphQL integration standpoint, PayPal Payments Advanced payment method is identical to the PayPal [Payflow Link](payflow-link.md) payment method, with the exception of the payment method `code`. The PayPal [Payments Advanced documentation](https://developer.paypal.com/docs/classic/products/paypal-payments-advanced/) describes other ways in which the payment methods differ.
+From a GraphQL integration standpoint, PayPal Payments Advanced payment method is identical to the PayPal [Payflow Link](payflow-link.md) payment method, with the exception of the payment method `code`.
 
 PayPal Payments Advanced is available in the US and Canada only.
 

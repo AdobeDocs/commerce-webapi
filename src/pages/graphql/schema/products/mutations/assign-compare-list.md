@@ -22,6 +22,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`assignCompareListToCustomer`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-assignCompareListToCustomer) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example assigns the comparison list with a `uid` value of `sssXyGZkTFksdPnxNoK1ut6OiV4bbchD` to the logged-in customer.
@@ -112,34 +116,9 @@ mutation {
 }
 ```
 
-## Input attributes
-
-The `assignCompareListToCustomer` mutation requires the following input.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`uid` | ID! | The unique ID of the comparison list to assign
-
-## Output attributes
-
-The `AssignCompareListToCustomerOutput` object contains the result of the assigning process and the comparison list.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`compare_list` | [CompareList](#comparelist-attributes) | The contents of the comparison list
-`result` | Boolean! | A value of `true` indicates the comparison list has been assigned successfully
-
-### CompareList attributes
-
-The `CompareList` output object contains the following attributes:
-
-import CompareListOutput from '/src/_includes/graphql/compare-list-output.md'
-
-<CompareListOutput />
-
 ## Related topics
 
-*  [compareList query](../../products/queries/compare-list.md)
+*  [compareList query](../queries/compare-list.md)
 *  [addProductsToCompareList mutation](add-products-to-compare-list.md)
 *  [createCompareList mutation](create-compare-list.md)
 *  [deleteCompareList mutation](delete-compare-list.md)

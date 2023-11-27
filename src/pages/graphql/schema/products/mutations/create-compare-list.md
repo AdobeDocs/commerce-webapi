@@ -22,6 +22,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`createCompareList`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createCompareList) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example shows how to create a comparison list containing two products.
@@ -107,26 +111,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `CreateCompareListInput` input object defines the product IDs for to be compared.
-
-### CreateCompareListInput attributes
-
-The `CreateCompareListInput` object contains the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`products` | [ID!] | An array of product `id` values to add to the comparison list. Note that these are not `uid` values
-
-## Output attributes
-
-The `CompareList` output object contains the following attributes:
-
-import CompareListOutput from '/src/_includes/graphql/compare-list-output.md'
-
-<CompareListOutput />
 
 ## Related topics
 

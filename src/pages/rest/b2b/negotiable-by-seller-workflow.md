@@ -20,7 +20,7 @@ This topic describes how a seller can use REST calls to create a negotiable quot
 
 -  You have [installed and enabled](https://experienceleague.adobe.com/docs/commerce-admin/b2b/install.html) <Vars.sitedatavarb2b/>.
 -  You have [created a company](company-object.md).
--  You have an integration or [admin authorization token](https://developer.adobe.com/commerce/webapi/rest/tutorials/orders/order-admin-token.html) to make calls on behalf of seller
+-  You have an integration or [admin authorization token](../tutorials/orders/order-admin-token.md) to make calls on behalf of seller.
 
 ## Create a negotiable quote
 
