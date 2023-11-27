@@ -22,6 +22,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`addProductsToCompareList`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addProductsToCompareList) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example shows how to add two products to the existing comparison list with the `uid` value of `sssXyGZkTFksdPnxNoK1ut6OiV4bbchD`.
@@ -129,30 +133,9 @@ mutation {
 }
 ```
 
-## Input attributes
-
-The `AddProductsToCompareListInput` input object defines the product IDs to be compared within an existing comparison list.
-
-### AddProductsToCompareListInput attributes
-
-The `AddProductsToCompareListInput` object contains the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`products` | [ID!]! | An array of product `id` values to add to the comparison list. Note that these are not `uid` values
-`uid` | ID! | The unique ID of a `CompareList` object
-
-## Output attributes
-
-The `CompareList` output object contains the following attribute:
-
-import CompareListOutput from '/src/_includes/graphql/compare-list-output.md'
-
-<CompareListOutput />
-
 ## Related topics
 
-*  [compareList query](../../products/queries/compare-list.md)
+*  [compareList query](../queries/compare-list.md)
 *  [assignCompareListToCustomer mutation](assign-compare-list.md)
 *  [createCompareList mutation](create-compare-list.md)
 *  [deleteCompareList mutation](delete-compare-list.md)
