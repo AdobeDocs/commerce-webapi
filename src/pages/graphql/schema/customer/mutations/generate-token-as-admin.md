@@ -15,6 +15,10 @@ To run this mutation, the customer must have enabled the **Allow remote shopping
 mutation {generateCustomerTokenAsAdmin(input: GenerateCustomerTokenAsAdminInput!) {GenerateCustomerTokenAsAdminOutput}}
 ```
 
+## Reference
+
+The [`generateCustomerTokenAsAdmin`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-generateCustomerTokenAsAdmin) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following call creates a new customer token.
@@ -42,22 +46,6 @@ mutation{
   }
 }
 ```
-
-## Input attributes
-
-The `generateCustomerTokenAsAdmin` mutation requires the following input attribute:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`customer_email` | String! | The customer's email address
-
-## Output attributes
-
-The `generateCustomerTokenAsAdmin` mutation returns a valid customer token as the output.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`customer_token` | String! | The customer token
 
 ## Related topics
 

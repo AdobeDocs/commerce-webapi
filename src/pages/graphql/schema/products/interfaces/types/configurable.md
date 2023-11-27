@@ -6,95 +6,14 @@ title: Configurable product data types
 
 The `ConfigurableProduct` data type implements the following interfaces:
 
--  [ProductInterface](../index.md)
--  [PhysicalProductInterface](../attributes.md#physicalproductinterface)
--  [CustomizableProductInterface](../customizable-option.md)
--  [RoutableInterface](../routable.md)
+-  [ProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-ProductInterface)
+-  [PhysicalProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-PhysicalProductInterface)
+-  [CustomizableProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-CustomizableProductInterface)
+-  [RoutableInterface](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-RoutableInterface)
 
 Attributes that are specific to configurable products can be used when performing a [`products`](../../queries/products.md) query.
 
-## ConfigurableProduct object
-
-The `ConfigurableProduct` object contains the following attributes:
-
-Attribute | Type | Description
---- | --- | ---
-`configurable_options` | [[ConfigurableProductOptions]](#configurableproductoptions) | An array of linked simple product items
-`configurable_product_options_selection(configurableOptionValueUids: [ID!])` | [ConfigurableProductOptionsSelection](#configurableproductoptionsselection-attributes) | Contains media gallery items and other details about selected configurable product options as well as details about remaining selectable options. We recommend you filter by one or more `uid` values to prevent loading a large amount of media gallery data
-`variants` | ConfigurableVariant | An array of variants of products
-
-### ConfigurableAttributeOption object
-
-The `ConfigurableAttributeOption` object contains the following attributes:
-
-Field | Type | Description
---- | --- | ---
-`code` | String | The ID assigned to the attribute
-`label` | String | A string that describes the configurable attribute option
-`uid` | ID! | The unique ID for a `ConfigurableAttributeOption` object
-`value_index` | Int | A unique index number assigned to the configurable product option
-
-### ConfigurableOptionAvailableForSelection attributes
-
-The `ConfigurableOptionAvailableForSelection` object describes configurable options that have been selected and can be selected as a result of the previous selections.
-
-Attribute | Type | Description
---- | --- | ---
-`attribute_code` | String! | An attribute code that uniquely identifies a configurable option
-`option_value_uids` | [ID!]! | Any array of IDs that can be selected
-
-### ConfigurableProductOptions
-
-The `ConfigurableProductOptions` object contains the following attributes:
-
-Attribute | Type | Description
---- | --- | ---
-`attribute_code` | String | A string that identifies the attribute
-`attribute_id` | String | Deprecated. Use `attribute_uid` instead
-`attribute_id_v2` | Int | Deprecated. Use `attribute_uid` instead. The ID assigned to the attribute
-`attribute_uid` | ID! | The unique ID for a `ConfigurableProductOptions` object
-`id` | Int | Deprecated. Use `uid` instead. The configurable option ID number assigned by the system
-`label` | String | A string that describes the configurable product option. It is displayed on the UI.
-`position` | Int | A number that indicates the order in which the attribute is displayed
-`product_id` | Int | Deprecated. This attribute is not needed and its value can be obtained from its parent
-`uid` | ID! | The unique ID for a `ConfigurableProductOptions` object
-`use_default` | Boolean | Indicates whether the option is the default
-`values` | [[ConfigurableProductOptionsValues]](#configurableproductoptionsvalues) | An array that defines the `value_index` codes assigned to the configurable product
-
-### ConfigurableProductOptionsSelection attributes
-
 The `ConfigurableProductOptionsSelection` object contains metadata corresponding to the selectable configurable options for a product. Use this object in a `products` query to minimize the number of media gallery items that are displayed as the shopper selects configurable product options. [Limit the number of retrieved media gallery items](#limit-the-number-of-retrieved-media-gallery-items) demonstrates its use.
-
-Attribute | Type | Description
---- | --- | ---
-`media_gallery` | [MediaGalleryInterface!] | Product images and videos corresponding to the specified configurable options selection
-`options_available_for_selection` | [[ConfigurableOptionAvailableForSelection!]](#configurableoptionavailableforselection-attributes) | Lists the options selected and the options available as a result of the previous selections
-`variant` | SimpleProduct | The simple product represented by the selected configurable options. This object will be null until the shopper selects an option for each attribute
-
-### ConfigurableProductOptionsValues
-
-The `ConfigurableProductOptionsValues` object contains the following attribute:
-
-Attribute | Type | Description
---- | --- | ---
-`default_label` | String | The label of the product on the default store
-`label` | String | The label of the product
-`store_label` | String | The label of the product on the current store
-`swatch_data` | [SwatchDataInterface](#swatchDataInterface) | Details about swatches that can be displayed for configurable product options
-`use_default_value` | Boolean | Indicates whether to use the default_label
-`uid` | ID! | The unique ID for a `ConfigurableProductOptionsValues` object
-`value_index` | Int | Deprecated. Use `uid` instead. A unique index number assigned to the configurable product option
-
-### ConfigurableVariant object
-
-The `ConfigurableVariant` object contains the following attributes:
-
-Field | Type | Description
---- | --- | ---
-`attributes` | ConfigurableAttributeOption | The `value_index` (and other related information) assigned to a configurable product option
-`product` | SimpleProduct | An array of linked simple products
-
-### SwatchDataInterface
 
 Swatches allow the shopper to view the color, texture, or other visual aspect of a configurable product. The application displays these options as color, graphic, or text swatches.
 
@@ -103,11 +22,6 @@ The following data types implement `SwatchDataInterface`:
 -  `ColorSwatchData`
 -  `ImageSwatchData`
 -  `TextSwatchData`
-
-Attribute | Type | Description
---- | --- | ---
-`value` | String | The value of swatch item. The value is a hexadecimal color code, such as `#000000` (black), for color swatches, the image link for image swatches, or the display text for text swatches
-`thumbnail` | String | Applicable to image swatches only. The URL to thumbnail swatch image
 
 ## Sample queries
 

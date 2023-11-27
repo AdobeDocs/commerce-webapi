@@ -8,9 +8,21 @@ contributor_link: https://www.atwix.com/
 
 The `resetPassword` mutation resets customer password using a reset password token and the customer's email address. Use it to set a new password for the registered customer after calling the [requestPasswordResetEmail](request-password-reset-email.md) mutation.
 
+The new password must satisfy the password policies set for the store.
+
+The mutation returns `true` if the request was successful. Otherwise, it returns `false`.
+
+<InlineAlert variant="info" slots="text" />
+
+The reset password token value can also be found in the `customer_entity`.`rp_token` database table.
+
 ## Syntax
 
 `mutation: {resetPassword(email: String!, resetPasswordToken: String!, newPassword: String!): Boolean}`
+
+## Reference
+
+The [`resetPassword`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-resetPassword) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -37,24 +49,6 @@ mutation {
   }
 }
 ```
-
-## Input arguments
-
-The `resetPassword` mutation must contain the following arguments:
-
-Argument | Type | Description
---- | --- | ---
-`email` | String! | Specifies the customer account that needs a password reset
-`resetPasswordToken` | String! | A runtime token. You can find it in the reset email URL (see [requestPasswordResetEmail](request-password-reset-email.md) mutation) or in the `customer_entity`.`rp_token` database table.
-`newPassword` | String! | The new password
-
-<InlineAlert variant="info" slots="text" />
-
-The new password must satisfy the password policies set for the store.
-
-## Output
-
-The `resetPassword` mutation returns `true` if the request was successful. Otherwise, it returns `false`.
 
 ## Errors
 

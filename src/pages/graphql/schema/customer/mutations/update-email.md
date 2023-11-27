@@ -12,6 +12,10 @@ To return or modify information about a customer, we recommend you use customer 
 
 `mutation: updateCustomerEmail(email: String! password: String!): CustomerOutput`
 
+## Reference
+
+The [`updateCustomerEmail`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateCustomerEmail) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following call updates the customer's email address.
@@ -41,25 +45,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `updateCustomerEmail` mutation requires the following inputs:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`email` | String! | The customer's new email address
-`password` | String! | The customer's password
-
-## Output attributes
-
-The `updateCustomerEmail` mutation returns the `customer` object.
-
-The following table lists the top-level attributes of the `customer` object. See the [`customer` query](../../customer/queries/customer.md) for complete details about this object.
-
-import Customer from '/src/_includes/graphql/customer-output-24.md'
-
-<Customer />
 
 ## Related topics
 
