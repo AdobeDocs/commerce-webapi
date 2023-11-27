@@ -7,7 +7,7 @@ edition: b2b
 
 The `updatePurchaseOrderApprovalRule` mutation updates the specified purchase order approval rule.
 
-You can use the [`customer` query](../../customer/queries/customer.md) to retrieve the `uid` value of the approval rule.
+You can use the [`customer` query](../../../customer/queries/customer.md) to retrieve the `uid` value of the approval rule.
 
 The [`createPurchaseOrderApprovalRule` mutation](create.md) describes the requirements of the `condition` and `approvers` fields.
 
