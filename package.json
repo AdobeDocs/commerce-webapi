@@ -15,6 +15,7 @@
   "devDependencies": {
     "remark-cli": "^10.0.1",
     "remark-frontmatter": "4.0.1",
+    "remark-heading-id": "^1.0.1",
     "remark-lint-frontmatter-schema": "^3.15.2",
     "remark-lint-no-dead-urls": "^1.1.0",
     "remark-validate-links": "^11.0.2",
@@ -28,7 +29,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "remark src/pages --ignore-pattern src/pages/graphql/schema,src/_includes --quiet --frail",
+    "test": "remark src/pages --ignore-pattern src/pages/graphql/schema --quiet --frail",
     "build:spectaql": "spectaql --target-dir static/graphql-api/ --target-file index.html spectaql/config.yml",
     "build:spectaql:beta": "spectaql --target-dir static/graphql-api/beta/ --target-file index.html spectaql/config_beta.yml",
     "dev:spectaql": "spectaql --development-mode-live spectaql/config.yml",
