@@ -15,6 +15,7 @@
   "devDependencies": {
     "remark-cli": "^10.0.1",
     "remark-frontmatter": "4.0.1",
+    "remark-heading-id": "^1.0.1",
     "remark-lint-frontmatter-schema": "^3.15.2",
     "remark-lint-no-dead-urls": "^1.1.0",
     "remark-validate-links": "^11.0.2",
