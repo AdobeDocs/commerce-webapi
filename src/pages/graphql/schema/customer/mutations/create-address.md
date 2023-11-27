@@ -2,10 +2,7 @@
 title: createCustomerAddress mutation
 ---
 
-import Example246 from '/src/_includes/graphql/examples/create-address-246.md'
-import Example247 from '/src/_includes/graphql/examples/create-address-247beta.md'
-import CustomerAddressInput from '/src/_includes/graphql/customer-address-input-24.md'
-import CustomerAddressOutput from '/src/_includes/graphql/customer-address-output-24.md'
+import BetaNote from '/src/_includes/graphql/notes/beta.md'
 
 # createCustomerAddress mutation
 
@@ -17,34 +14,195 @@ To return or modify information about a customer, we recommend you use customer 
 
 `mutation: {createCustomerAddress(input: CustomerAddressInput!) {CustomerAddress}}`
 
+## Reference
+
+The [`createCustomerAddress`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createCustomerAddress) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2" theme="light"/>
+### Create a customer address
 
-### 2.4.6
+The following call creates an address for the specified customer.
 
-<Example246 />
+**Request:**
 
-### 2.4.7-beta
+```graphql
+mutation {
+  createCustomerAddress(input: {
+    region: {
+      region: "Arizona"
+      region_code: "AZ"
+    }
+    country_code: US
+    street: ["123 Main Street"]
+    telephone: "7777777777"
+    postcode: "77777"
+    city: "Phoenix"
+    firstname: "Bob"
+    lastname: "Loblaw"
+    default_shipping: true
+    default_billing: false
+  }) {
+    id
+    region {
+      region
+      region_code
+    }
+    country_code
+    street
+    telephone
+    postcode
+    city
+    default_shipping
+    default_billing
+  }
+}
+```
 
-<Example247 />
+**Response:**
 
-## Input attributes
+```json
+{
+  "data": {
+    "createCustomerAddress": {
+      "id": 4,
+      "region": {
+        "region": "Arizona",
+        "region_code": "AZ"
+      },
+      "country_code": "US",
+      "street": [
+        "123 Main Street"
+      ],
+      "telephone": "7777777777",
+      "postcode": "77777",
+      "city": "Phoenix",
+      "default_shipping": true,
+      "default_billing": false
+    }
+  }
+}
+```
 
-Attribute |  Data Type | Description
---- | --- | ---
-`id` | Int | The ID assigned to the address object
-`CustomerAddressInput` | [CustomerAddress](#customeraddressinput-attributes) | An array containing the customer's shipping and billing addresses
+### Create an address with custom attributes
 
-<CustomerAddressInput />
+<BetaNote />
 
-## Output attributes
+The following call creates an address for the specified customer, assigning values for custom attributes.
 
-The `createCustomerAddress` mutation returns a `CustomerAddress` object.
+The merchant has previously created the custom attributes `station` and `services` for customer addresses.
 
-### CustomerAddress attributes
+#### Request
 
-<CustomerAddressOutput />
+```graphql
+mutation {
+  createCustomerAddress(input: {
+    region: {
+      region_id: 4
+      region: "Arizona"
+      region_code: "AZ"
+    }
+    country_code: US
+    street: ["123 Main Street"]
+    telephone: "7777777777"
+    postcode: "77777"
+    city: "Phoenix"
+    firstname: "Bob"
+    lastname: "Loblaw"
+    default_shipping: true
+    default_billing: false
+    custom_attributesV2: [
+      {
+        attribute_code: "station"
+        value: "Encanto/Central Ave"
+      },
+      {
+        attribute_code: "services"
+        value: "507,508"
+        selected_options: [
+          {
+            uid: "NTA3"
+            value: "507"
+          },
+          {
+            uid: "NTA4"
+            value: "508"
+          }
+        ]
+      }
+    ]
+  }) {
+    region {
+      region_id
+      region
+      region_code
+    }
+    country_code
+    street
+    telephone
+    postcode
+    city
+    default_shipping
+    default_billing
+    custom_attributesV2 {
+      code
+      ... on AttributeValue {
+        value
+      }
+      ... on AttributeSelectedOptions {
+        selected_options {
+          label
+          value
+        }
+      }
+    }
+  }
+}
+```
+
+#### Response
+
+```json
+{
+  "data": {
+    "createCustomerAddress": {
+      "id": 4,
+      "region": {
+        "region": "Arizona",
+        "region_code": "AZ"
+      },
+      "country_code": "US",
+      "street": [
+        "123 Main Street"
+      ],
+      "telephone": "7777777777",
+      "postcode": "77777",
+      "city": "Phoenix",
+      "default_shipping": true,
+      "default_billing": false,
+      "custom_attributesV2": [
+        {
+          "code": "station",
+          "value": "Encanto/Central Ave"
+        },
+        {
+          "code": "services",
+          "selected_options": [
+            {
+              "label": "hospital",
+              "value": "507"
+            },
+            {
+              "label": "police",
+              "value": "508"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
 
 ## Errors
 

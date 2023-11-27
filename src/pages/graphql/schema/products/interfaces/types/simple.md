@@ -8,18 +8,14 @@ contributor_link: https://www.atwix.com/
 
 The `SimpleProduct` data type implements the following interfaces:
 
--  [ProductInterface](../index.md)
--  [PhysicalProductInterface](../attributes.md#physicalproductinterface)
--  [CustomizableProductInterface](../customizable-option.md)
--  [RoutableInterface](../routable.md)
+-  [ProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-ProductInterface)
+-  [PhysicalProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-PhysicalProductInterface)
+-  [CustomizableProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-CustomizableProductInterface)
+-  [RoutableInterface](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-RoutableInterface)
 
 Attributes that are specific to the simple products can be used when performing a [`products`](../../queries/products.md) query.
 
-## SimpleProduct object
-
-The `SimpleProduct` object contains attributes only from implemented interfaces:
-
-## Sample Query
+## Sample query
 
 The following query returns information about simple product `24-MB01`, which is defined in the sample data.
 

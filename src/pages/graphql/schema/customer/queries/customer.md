@@ -7,23 +7,21 @@ import BetaNote2 from '/src/_includes/graphql/notes/beta.md'
 import BetaNote3 from '/src/_includes/graphql/notes/beta.md'
 import BetaNote4 from '/src/_includes/graphql/notes/beta.md'
 import BetaNote5 from '/src/_includes/graphql/notes/beta.md'
-import CompareListOutput from '/src/_includes/graphql/compare-list-output.md'
-import CustomerAddressOutput from '/src/_includes/graphql/customer-address-output-24.md'
-import CustomerOrdersOutput from '/src/_includes/graphql/customer-orders-output.md'
-import ProductReview from '/src/_includes/graphql/product-review.md'
-import RequisitionList from '/src/_includes/graphql/requisition-list.md'
-import Return from '/src/_includes/graphql/return.md'
-import Wishlist from '/src/_includes/graphql/wishlist.md'
+import CustomAttributeCustomer from '/src/_includes/graphql/examples/custom-attribute-customer.md'
 
 # customer query
 
 The `customer` query returns information about the logged-in customer, store credit history and customer's wishlist.
 
-To return or modify information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session).
+To retrieve information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session).
 
 ## Syntax
 
 `{customer: {Customer}}`
+
+## Reference
+
+The [`customer`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-customer) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -93,66 +91,7 @@ The following call returns information about the logged-in customer. Provide the
 
 <BetaNote1 />
 
-The following call returns custom attributes for the logged-in customer. Provide the customer's token in the header section of the query.
-
-**Request:**
-
-```graphql
-{
-  customer {
-    firstname
-    lastname
-    suffix
-    email
-    custom_attributes {
-      code
-      ... on AttributeValue {
-        value
-      }
-      ... on AttributeSelectedOptions {
-        selected_options {
-          label
-          value
-        }
-      }
-    }
-  }
-}
-```
-
-**Response:**
-
-```json
-{
-  "data": {
-    "customer": {
-      "firstname": "John",
-      "lastname": "Doe",
-      "suffix": null,
-      "email": "jdoe@example.com",
-      "custom_attributes": [
-        {
-          "code": "reward_update_notification",
-          "value": "0"
-        },
-        {
-          "code": "studies",
-          "selected_options": [
-            {
-              "label": "BSc",
-              "value": "501"
-            },
-            {
-              "label": "MBA",
-              "value": "502"
-            }
-          ]
-        }
-      ]
-    }
-  }
-}
-```
+< CustomAttributeCustomer />
 
 ### Retrieve custom attributes metadata from a customer address
 
@@ -1106,206 +1045,9 @@ The [Purchase order approval rules](../../b2b/purchase-order-rule/) topic contai
 }
 ```
 
-## Output attributes
-
-### Customer attributes
-
-The `customer` object can contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`addresses` | [CustomerAddress](#customeraddress-attributes) | An array containing the customer's shipping and billing addresses
-`allow_remote_shopping_assistance` | Boolean! | Indicates whether the customer has enabled remote shopping assistance
-`compare_list` | [CompareList](#comparelist-attributes) | The contents of the customer's comparison list
-`created_at` | String | Timestamp indicating when the account was created
-`custom_attributes` | [AttributeValueInterface](#attributevalueinterface-attributes) | Customer's custom attributes
-`date_of_birth` | String | The customer's date of birth. In keeping with current security and privacy best practices, be sure you are aware of any potential legal and security risks associated with the storage of customers' full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
-`default_billing` | String | The ID assigned to the billing address
-`default_shipping` | String | The ID assigned to the shipping address
-`dob` | String | Deprecated. Use `date_of_birth` instead. The customer's date of birth
-`email` | String | The customer's email address
-`firstname` | String | The customer's first name
-`gender` | Int | The customer's gender (Male - 1, Female - 2)
-`group_id` | Int | Deprecated. This attribute is not applicable for GraphQL. The group assigned to the user. Default values are 0 (Not logged in), 1 (General), 2 (Wholesale), and 3 (Retailer)
-`id` | Int | Deprecated. This attribute is not applicable for GraphQL. The ID assigned to the customer
-`is_subscribed` | Boolean | Indicates whether the customer is subscribed to the company's newsletter
-`lastname` | String | The customer's family name
-`middlename` |String | The customer's middle name
-`orders(filter CustomerOrdersFilterInput, currentPage = 1 Int, pageSize = 20 Int)` | [CustomerOrders](#orders-input-attributes) | A list of the customer's placed orders. See [`orders` input attributes](#orders-input-attributes) for details'
-`prefix` | String | An honorific, such as Dr., Mr., or Mrs.
-`return(uid: ID!)` | Return | Gets details about the specified return request
-`returns(pageSize: Int = 20 currentPage: Int = 1)` | Returns | Information about the customer's return requests
-`reviews(pageSize: Int = 20 currentPage: Int = 1)` | [ProductReviews](#productreviews-object)! | The list of reviews of the product
-`reward_points` | [RewardPoints](#rewardpoints-attributes) | Details about the customer's reward points
-`suffix` | String | A value such as Sr., Jr., or III
-`taxvat` | String | The customer's Tax/VAT number (for corporate customers)
-`wishlist` | Wishlist! | Deprecated. Use `wishlist_v2` instead. Contains the contents of the customer's wish lists
-`wishlist_v2(id ID!)` | [Wishlist](#wishlist-attributes)! | Retrieve the specified wish list identified by the unique ID for a Wishlist object
-
-For B2B, company administrators and users can have the following attributes.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`job_title` | String | The job title for a B2B company user
-`requisition_lists (pageSize = 20 Int, currentPage = 1 Int, filter RequisitionListFilterInput)` | RequisitionLists | Contains the customer's requisition lists
-`role`| CompanyRole | The role name and permissions assigned to the company user
-`status` | CompanyUserStatusEnum | Indicates whether the company user is ACTIVE or INACTIVE
-`team` | CompanyTeam | The team the company user is assigned to
-`telephone` | String | The phone number of the company user
-
-### CompareList attributes
-
-The `CompareList` object can contain the following attributes:
-
-<CompareListOutput />
-
-### AttributeValueInterface attributes
-
-<BetaNote4 />
-
-The `AttributeValueInterface` contains the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`code` | ID! | The attribute code
-`is_comparable` | Boolean | Whether a product or category attribute can be compared against another or not
-`is_filterable` | Boolean | Whether a product or category attribute can be filtered or not
-`is_filterable_in_search` | Boolean | Whether a product or category attribute can be filtered in search or not
-`is_html_allowed_on_front` | Boolean | Whether a product or category attribute can use HTML on front or not
-`is_searchable` | Boolean | Whether a product or category attribute can be searched or not
-`is_used_for_price_rules` | Boolean | Whether a product or category attribute can be used for price rules or not
-`is_used_for_promo_rules` | Boolean | Whether a product or category attribute is used for promo rules or not
-`is_visible_in_advanced_search` | Boolean | Whether a product or category attribute is visible in advanced search or not
-`is_visible_on_front` | Boolean | Whether a product or category attribute is visible on front or not
-`is_wysiwyg_enabled` | Boolean | Whether a product or category attribute has WYSIWYG enabled or not
-`used_in_product_listing` | Boolean | Whether a product or category attribute is used in product listing or not
-
-Currently, `AttributeValueInterface` has two different implementations: `AttributeValue` and `AttributeSelectedOptions`.
-
-In addition to the attributes described for `AttributeValueInterface`, the `AttributeValue` contains the following:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`value` | String! | The attribute value
-
-The `AttributeSelectedOptions` object contains the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`selected_options` | [AttributeSelectedOptionInterface!]! | An array containing selected options for a select or multiselect attribute
-
-The `AttributeSelectedOptionInterface` contains the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`label` | String! | The attribute selected option label
-`uid` | ID! | The unique ID of an attribute selected option
-`value` | String! | The attribute selected option value
-
-### CustomerAddress attributes
-
-<CustomerAddressOutput />
-
-### orders input attributes
-
-<CustomerOrdersOutput />
-
-#### ProductReview object
-
-<ProductReview />
-
-#### ProductReviews object
-
-`ProductReviews` contains an array of reviews written about the product.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`items` | [[ProductReview]](#productreview-object)! | An array of product reviews
-`page_info` | [SearchResultPageInfo!](../../products/queries/products.md#searchresultpageinfo-attributes) | Metadata for pagination rendering
-
-### Return attributes
-
-<Return />
-
-### Returns attributes
-
-The Returns object contains an array of [Return](#returns-attributes) objects.
-
-### Store credit attributes
-
-In Adobe Commerce, the merchant can assign store credit to customers. The application maintains the history of all changes to the balance of store credit available to the customer. The customer must be logged in to access the store credit history and balance.
-
-Store credits must be enabled to return store credit attributes. If store credits are disabled after previously being enabled, the query returns the customer's current balance as null.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`store_credit` | [CustomerStoreCredit](#customerstorecredit-attributes) | Contains the store credit information for the logged-in customer
-
-#### CustomerStoreCredit attributes
-
-The `store_credit` object contains store credit information, including the balance and history.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`balance_history` | [`CustomerStoreCreditHistory`](#customerstorecredithistory-attributes) | Lists changes to the amount of store credit available to the customer. If the history or store credit feature is disabled, then a null value will be returned.<br/><br/>You can specify the following optional parameters to control paging in the output.<br/><br/>`pageSize` - An integer that specifies the maximum number of results to return at once. The default value is 20.<br/><br/>`currentPage` - An integer that specifies which page of the results to return. The default value is 1
-`current_balance` | Money | The current store credit balance
-`enabled` | Boolean | Indicates whether store credits are enabled. If the feature is disabled, then the balance will not be returned
-
-#### CustomerStoreCreditHistory attributes
-
-The `CustomerStoreCreditHistory` object contains an array of store credit items and paging information. If the store credit or store credit history feature is disabled, then a null value will be returned.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`items` | [[`CustomerStoreCreditHistoryItem`](#customerstorecredithistoryitem-attributes)] | An array of products that match the specified search criteria
-`page_info` | SearchResultPageInfo | An object that includes the `page_size` and `current_page` values specified in the query
-`total_count` | Int | The number of items returned
-
-#### CustomerStoreCreditHistoryItem attributes
-
-The `CustomerStoreCreditHistoryItem` object contains information about a specific change to the customer's store credit.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`action` | String | The action taken on the customer's store credit
-`actual_balance` | Money | The store credit available to the customer as a result of this action
-`balance_change` | Money | The amount added to or subtracted from the store credit as a result of this action
-`date_time_changed` | String | Date and time when the store credit change was made
-
-### Wishlist attributes
-
-<Wishlist />
-
-## B2B output attributes
-
-If B2B is installed the `Customer` object can contain additional information.
-
-### RequisitionListFilterInput attributes
-
-The `RequisitionListFilterInput` object defines filters that limit the number of requisition lists returned.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`name` | FilterMatchTypeInput | Filter by the display name of the requisition list
-`uids` | FilterEqualTypeInput | Filter requisition lists by one or more requisition list IDs
-
-### RequisitionList attributes
-
-<RequisitionList />
-
-### RequisitionLists attributes
-
-The RequisitionLists object contains an array of requisition lists.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`items` | [[RequisitionList]](#requisitionlist-attributes) | An array of requisition lists
-`page_info` | SearchResultPageInfo | Contains pagination metadata
-`total_count` | Int | The number of returned requisition lists
-
 ## Related topics
 
 *  [isEmailAvailable query](../../b2b/company/queries/is-company-email-available.md)
-*  [generateCustomerToken mutation](../../customer/mutations/generate-token.md)
-*  [createCustomer mutation](../../customer/mutations/create.md)
-*  [createCustomerAddress mutation](../../customer/mutations/create-address.md)
+*  [generateCustomerToken mutation](../mutations/generate-token.md)
+*  [createCustomerV2 mutation](../mutations/create-v2.md)
+*  [createCustomerAddress mutation](../mutations/create-address.md)

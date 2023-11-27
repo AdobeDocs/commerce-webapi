@@ -22,6 +22,10 @@ category (
 ): CategoryTree
 ```
 
+## Reference
+
+The [`category`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-category) reference provides detailed information about the types and fields defined in this query.
+
 ## Example usage
 
 ### Return the category tree of a top-level category
@@ -202,20 +206,6 @@ The following query returns breadcrumb information about the women's `Tops` cate
   }
 }
 ```
-
-## Input attributes
-
-Attribute | Data type | Description
---- | --- | ---
-`id` | Int | The category ID to use as the starting point of your category search
-
-## Output attributes
-
-The query returns a `CategoryTree` object, which implements [`CategoryInterface`](category.md). The `CategoryTree` object can contain the following attribute, as we as all attributes defined in `CategoryInterface`:
-
-Attribute | Data type | Description
---- | --- | ---
-`children` | `CategoryTree` | An array containing the next level of subcategories. By default, you can specify up to 10 levels of child categories
 
 ## Errors
 

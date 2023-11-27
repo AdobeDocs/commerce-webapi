@@ -4,51 +4,9 @@ title: Downloadable product data types
 
 # Downloadable product data types
 
-The `DownloadableProduct` data type implements `ProductInterface` and `CustomizableProductInterface`. As a result, attributes that are specific to downloadable products can be used when performing a [`products`](../../queries/products.md) query. It also implements [RoutableInterface](../routable.md).
+The `DownloadableProduct` data type implements [`ProductInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-ProductInterface) and [`CustomizableProductInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-CustomizableProductInterface). As a result, attributes that are specific to downloadable products can be used when performing a [`products`](../../queries/products.md) query. It also implements [RoutableInterface](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-RoutableInterface).
 
-## Downloadable product
-
-The `DownloadableProduct` object contains the following attributes:
-
-Attribute | Type | Description
---- | --- | ---
-`downloadable_product_links` | [[DownloadableProductLinks]](#downloadableproductlinks-attributes) | An array containing information about the links for this downloadable product
-`downloadable_product_samples` | [[DownloadableProductSamples]](#downloadableproductsamples-attributes)  | An array containing information about samples of this downloadable product
-`links_purchased_separately` | Int | A value of 1 indicates that each link in the array must be purchased separately
-`links_title` | String | The heading above the list of downloadable products
-
-### DownloadableProductSamples attributes
-
-The `DownloadableProductSamples` object contains the following attributes:
-
-Attribute | Type | Description
---- | --- | ---
-`id` | Int | Deprecated. This attribute is not applicable for GraphQL
-`sample_file` | String | Deprecated. Use `sample_url` instead
-`sample_type` | DownloadableFileTypeEnum | Deprecated. Use `sample_url` instead
-`sample_url` | String | The URL to the downloadable sample
-`sort_order` | Int | A number indicating the sort order
-`title` | String | The display name of the sample
-
-### DownloadableProductLinks attributes
-
-The `DownloadableProductLinks` object contains the following attributes:
-
-Attribute | Type | Description
---- | --- | ---
-`id` | Int | Deprecated. Use `uid` instead
-`is_shareable` | Boolean | Deprecated. This attribute is not applicable for GraphQL
-`link_type` | DownloadableFileTypeEnum | Deprecated. Use `sample_url` instead
-`number_of_downloads` | Int | Deprecated. This attribute is not applicable for GraphQL
-`price` | Float | The price of the downloadable product
-`sample_file` | String | Deprecated. Use `sample_url` instead
-`sample_type` | DownloadableFileTypeEnum | Deprecated. Use `sample_url` instead
-`sample_url` | String | The URL to the downloadable sample
-`sort_order` | Int | A number indicating the sort order
-`title` | String | The display name of the link
-`uid` | ID! | The unique ID for a `DownloadableProductLinks` object
-
-## Example usage
+## Sample query
 
 Add the following inline fragment to the output section of your `products` query to return information specific to downloadable products:
 

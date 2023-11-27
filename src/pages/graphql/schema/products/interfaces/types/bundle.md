@@ -4,62 +4,16 @@ title: Bundle product data types
 
 # Bundle product data types
 
-The `BundleProduct` data type implements the following interfaces:
+The [`BundleProduct`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-BundleProduct) data type implements the following interfaces:
 
--  [ProductInterface](../index.md)
--  [PhysicalProductInterface](../attributes.md#physicalproductinterface)
--  [CustomizableProductInterface](../customizable-option.md)
--  [RoutableInterface](../routable.md)
+-  [ProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-ProductInterface)
+-  [PhysicalProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-PhysicalProductInterface)
+-  [CustomizableProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-CustomizableProductInterface)
+-  [RoutableInterface](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-RoutableInterface)
 
 Attributes that are specific to bundle products can be used when performing a [`products`](../../queries/products.md) query.
 
-## BundleProduct object
-
-The `BundleProduct` object contains the following attributes:
-
-Attribute | Type | Description
---- | --- | ---
-`dynamic_price` | Boolean | Indicates whether the bundle product has a dynamic price
-`dynamic_sku` | Boolean | Indicates whether the bundle product has a dynamic SKU
-`dynamic_weight` | Boolean | Indicates whether the bundle product has a dynamically calculated weight
-`items` | [BundleItem] | An array containing information about individual bundle items
-`price_view` | PriceViewEnum | One of PRICE_RANGE or AS_LOW_AS
-`ship_bundle_items` | ShipBundleItemsEnum | Indicates whether to ship bundle items TOGETHER or SEPARATELY
-
-## BundleItem object
-
-The `BundleItem` object contains the following attributes:
-
-Attribute | Type | Description
---- | --- | ---
-`option_id` | Int | Deprecated. Use `uid` instead. An ID assigned to each type of item in a bundle product
-`options`  | [BundleItemOption] | An array of additional options for this bundle item
-`position` | Int | The relative position of this item compared to the other bundle items
-`required` | Boolean | Indicates whether the item must be included in the bundle
-`sku` | String | The SKU of the bundle product
-`title` | String | The display name of the item
-`type` | String | The input type that the customer uses to select the item. Examples include radio button and checkbox
-`uid` | ID | The unique ID for a `BundleItem` object
-
-## BundleItemOption object
-
-The `BundleItemOption` object contains the following attributes:
-
-Attribute | Type | Description
---- | --- | ---
-`can_change_quantity` | Boolean | Indicates whether the customer can change the number of items for this option
-`id` | Int | Deprecated. Use `uid` instead. The ID assigned to the bundled item option
-`is_default` | Boolean | Indicates whether this option is the default option
-`label` | String | The text that identifies the bundled item option
-`position` | Int | When a bundle item contains multiple options, the relative position of this option compared to the other options
-`price_type` | PriceTypeEnum | One of FIXED, PERCENT, or DYNAMIC
-`price` | Float | The price of the selected option
-`product` | [ProductInterface](../index.md) | Contains details about this product option
-`qty` | Float | Deprecated. Use `quantity` instead
-`quantity` | Float | Indicates the quantity of this specific bundle item
-`uid` | ID! | The unique ID for a `BundleItemOption` object
-
-## Sample Query
+## Sample query
 
 The following query returns information about bundle product `24-WG080`, which is defined in the sample data.
 
