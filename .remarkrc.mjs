@@ -16,7 +16,7 @@ const remarkConfig = {
 					/* One schema for many files */
 					'./.github/linters/metadata.schema.yml': [
 						/* Support glob patterns ———v */
-						'./src/pages/**/*.md, !src/pages/graphql/schema/**'
+						'!src/pages/graphql/schema/**/*.md'
 					],
 				},
 			},
