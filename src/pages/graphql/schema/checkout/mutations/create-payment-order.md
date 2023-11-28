@@ -20,7 +20,7 @@ These payment methods for the `createPaymentOrder` mutation are the ones support
 * Apple Pay
 * PayPal Smart Buttons
 
-Each of these payment methods can have a different payment source, for example, PayPal Hosted Fields only works with credit cards.
+Each of these payment methods can have a different payment source, for example, `hosted_fields` only works with credit cards.
 
 ## Syntax
 
