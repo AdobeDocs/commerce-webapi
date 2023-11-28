@@ -4,11 +4,11 @@ title: getPaymentOrder query
 
 # getPaymentOrder query
 
-The `getPaymentOrder` query gets the payment order details.
+The `getPaymentOrder` query gets the payment order details when the Signifyd integration and hosted fields are enabled.
 
-## getPaymentOrder object
+## Input attributes
 
-The `getPaymentOrder` object must contain the following attributes:
+The `getPaymentOrder` query must contain the following input attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
@@ -18,15 +18,13 @@ Attribute |  Data Type | Description
 `status` | String! | The status of the payment order
 `payment_source_details` | String! | The payment source details for the order
 
-## Example usage
-
-### `getPaymentOrder`
+### `getPaymentOrder` query example
 
 The following example shows the `getPaymentOrder` query:
 
 **Request:**
 
-```text
+```graphql
 query {
     getPaymentOrder (
       cartId: "rPG5SFUQN6ePsfNNDnhrmmr9SNWqpPSS"
