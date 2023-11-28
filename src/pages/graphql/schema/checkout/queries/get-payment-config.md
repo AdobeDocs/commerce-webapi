@@ -65,6 +65,41 @@ Attribute |  Data Type | Description
 `is_visible` | String | Defines if the payment method is shown
 `button_styles` | String | The styles for the ApplePay Smart Button configuration
 
+## Output attributes
+
+The `PaymentConfigOutput` object contains the following output attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+
+    apple_pay: ApplePayConfig @resolver(class: "\\Magento\\PaymentServicesPaypalGraphQl\\Model\\Resolver\\PaymentConfigMethod") @doc(description: "ApplePay configuration")
+    hosted_fields: HostedFieldsConfig @resolver(class: "\\Magento\\PaymentServicesPaypalGraphQl\\Model\\Resolver\\PaymentConfigMethod") @doc(description: "Hosted fields configuration")
+    smart_buttons: SmartButtonsConfig @resolver(class: "\\Magento\\PaymentServicesPaypalGraphQl\\Model\\Resolver\\PaymentConfigMethod") @doc(description: "Smart Buttons configuration")
+
+## PaymentConfigItem interface
+
+The PaymentConfigItem interface contains fields that are common to all payment processors. It also has the following implementations:
+
+* ApplePayConfig
+* HostedFieldsConfig
+* SmartButtonsConfig
+
+ PaymentConfigItem table
+     code: String @doc(description: "Payment method code as defined in the payment gateway")
+    is_visible: Boolean @doc(description: "Display payment method")
+    sdk_params: [SDKParams] @resolver(class: "\\Magento\\PaymentServicesPaypalGraphQl\\Model\\Resolver\\SdkParams") @doc(description: "PayPal parameters required to load JS SDK")
+    sort_order: String @doc(description: "Sort order preference")
+    payment_intent: String @doc(description: "Payment intent (Authorize or Capture")
+    title: String @doc(description: "Displayed payment method name")
+
+### ApplePayConfig attributes
+
+### HostedFieldsConfig attributes
+
+### SDKParams attributes
+
+### SmartButtonsConfig attributes
+
 ## Example usage
 
 ### `getPaymentConfig`
