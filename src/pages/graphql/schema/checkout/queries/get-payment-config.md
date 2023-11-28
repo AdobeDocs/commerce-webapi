@@ -4,27 +4,23 @@ title: getPaymentConfig query
 
 # getPaymentConfig query
 
-The `getPaymentConfig` query returns the payment configuration for the available payment methods for a specific `PaymentLocation`:
+The `getPaymentConfig` query returns the payment configuration details from locations in the storefront and Admin where the payment method can be set.
 
-* CHECKOUT
-* MINICART
-* CART
-* PRODUCT_DETAIL
-* ADMIN
+The query can return details about the following supported payment methods in [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/payments-checkout/payments-options.html): :
 
-These payment methods for the `getPaymentConfig` query are the ones supported in [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/payments-checkout/payments-options.html):
-
-* PayPal Hosted Fields
 * Apple Pay
+* PayPal Hosted Fields
 * PayPal Smart Buttons
+
+Each of these payment methods can have a different payment source, for example, `hosted_fields` only works with credit cards.
 
 ## Syntax
 
 ```graphql
 { 
-    getPaymentSDK(
-        getPaymentSDKInput: getPaymentOrderInput! 
-    ): getPaymentSDKOutput    
+    getPaymentConfig(
+        input: getPaymentConfigInput! 
+    ): getPaymentConfigOutput    
 }
 ```
 
@@ -32,94 +28,120 @@ These payment methods for the `getPaymentConfig` query are the ones supported in
 
 The `getPaymentConfig` object will differ on which attributes must contain depending on the payment method.
 
-### Payment method `hosted_fields`
-
 Attribute |  Data Type | Description
 --- | --- | ---
-`code` | String! | The code for the payment method used in the order. Required field for sale transactions
-`title` | String! | The displayed name for the payment method
-`payment_intent` | String | Defines the payment intent (Authorize or Capture)
-`sort_order` | String | Defines the preference for the sorting order of the payment method
-`sdk_params` | String | PayPal parameters required to load JS SDK
-`is_visible` | String | Defines if the payment method is shown
-`payment_source` | String! | Optional. The identifiable payment source for the payment method.
-`three_ds` | String | Defines if 3DS mode is enabled
-`is_commerce_vault_enabled` | String | Defines if card vaulting is enabled
-`cc_vault_code` | String | The vault payment method code
-`requires_card_details` | String | Required card and bin details if Signifyd integration is enabled for hosted fields
-
-### Payment method `smart_buttons`
-
-Attribute |  Data Type | Description
---- | --- | ---
-`code` | String! | The code for the payment method used in the order. Required field for sale transactions
-`title` | String! | The displayed name for the payment method
-`payment_intent` | String | Defines the payment intent (Authorize or Capture)
-`sort_order` | String | Defines the preference for the sorting order of the payment method
-`sdk_params` | String | PayPal parameters required to load JS SDK
-`is_visible` | String | Defines if the payment method is shown
-`display_venmo` | String | Defines if the Venmo option is shown
-`message_styles` | String | The message styles for the PayPal Pay Later configuration
-`display_message` | String | Defines if PayPal Pay Later message is shown
-`button_styles` | String | The styles for the PayPal Smart Button configuration
-
-### Payment method `apple_pay`
-
-Attribute |  Data Type | Description
---- | --- | ---
-`code` | String! | The code for the payment method used in the order. Required field for sale transactions
-`title` | String! | The displayed name for the payment method
-`payment_intent` | String | Defines the payment intent (Authorize or Capture)
-`sort_order` | String | Defines the preference for the sorting order of the payment method
-`sdk_params` | String | PayPal parameters required to load JS SDK
-`is_visible` | String | Defines if the payment method is shown
-`button_styles` | String | The styles for the ApplePay Smart Button configuration
+`location` | PaymentLocation! | The origin location for that payment request. The possible values are
+PRODUCT_DETAIL, MINICART, CART, CHECKOUT, ADMIN
+`methodCode` | String! | Optiona. The code for the selected payment method. The possible values are Apple Pay, Hosted Fields, Smart Buttons
 
 ## Output attributes
 
-The `PaymentConfigOutput` object contains the following output attributes:
+The `PaymentConfigOutput` contains details about each configured payment method:
 
 Attribute |  Data Type | Description
 --- | --- | ---
+`ApplePayConfig` | String! | ApplePay payment method configuration
+`HostedFieldsConfig` | String! | PayPal Hosted fields payment method configuration
+`SmartButtonsConfig` | String! | PayPal Smart Buttons payment method configuration
 
-    apple_pay: ApplePayConfig @resolver(class: "\\Magento\\PaymentServicesPaypalGraphQl\\Model\\Resolver\\PaymentConfigMethod") @doc(description: "ApplePay configuration")
-    hosted_fields: HostedFieldsConfig @resolver(class: "\\Magento\\PaymentServicesPaypalGraphQl\\Model\\Resolver\\PaymentConfigMethod") @doc(description: "Hosted fields configuration")
-    smart_buttons: SmartButtonsConfig @resolver(class: "\\Magento\\PaymentServicesPaypalGraphQl\\Model\\Resolver\\PaymentConfigMethod") @doc(description: "Smart Buttons configuration")
+## `PaymentConfigItem` interface
 
-## PaymentConfigItem interface
+The `PaymentConfigItem` interface contains the fields that are common to all thepayment methods. This interface contains the following elements:
 
-The PaymentConfigItem interface contains fields that are common to all payment processors. It also has the following implementations:
+Attribute |  Data Type | Description
+--- | --- | ---
+`code` | String! | The payment method code as defined in the payment gateway
+`is_visible` | Boolean | Indicates whether the payment method is shown. The possible values are `True` or `False`
+`sdk_params` | SDKParams | PayPal parameters required to load JS SDK
+`sort_order` | String | Defines the preference for the sorting order of the payment method
+`payment_intent` | String | Defines the payment intent. The possible values are `Authorize` or `Capture`
+`title` | String! | The display name of the payment method
+
+This interface also has the following implementations:
 
 * ApplePayConfig
 * HostedFieldsConfig
 * SmartButtonsConfig
 
- PaymentConfigItem table
-     code: String @doc(description: "Payment method code as defined in the payment gateway")
-    is_visible: Boolean @doc(description: "Display payment method")
-    sdk_params: [SDKParams] @resolver(class: "\\Magento\\PaymentServicesPaypalGraphQl\\Model\\Resolver\\SdkParams") @doc(description: "PayPal parameters required to load JS SDK")
-    sort_order: String @doc(description: "Sort order preference")
-    payment_intent: String @doc(description: "Payment intent (Authorize or Capture")
-    title: String @doc(description: "Displayed payment method name")
+Each implementation contains objects with specific attributes for each of tthese payment methods.
 
-### ApplePayConfig attributes
+### `ApplePayConfig` attributes
 
-### HostedFieldsConfig attributes
+The `ApplePayConfig` payment method configuration has a `button_styles` object containing the following attributes:
 
-### SDKParams attributes
+Attribute | Data Type | Description
+--- | --- | ---
+`color` | String | The button color
+`height` | Int | The button height
+`label` | String | The button label
+`layout` | String | The button layout
+`shape` | String | The button shape
+`tagline` | Boolean | Displays tagline. The possible values are `True` or `False`
+`use_default_height` | Boolean | Defines if button uses default height. The possible values are `True` or `False`. If value is `False`, `height` is used
 
-### SmartButtonsConfig attributes
+### `HostedFieldsConfig` attributes
 
-## Example usage
+The `HostedFieldsConfig` payment method configuration contains the following attributes:
 
-### `getPaymentConfig`
+Attribute |  Data Type | Description
+--- | --- | ---
+`cc_vault_code` | String | The vault payment method code. `hosted_fields` only works with credit cards (cc)
+`is_vault_enabled` | Boolean | Indicates whether card vaulting is enabled. The possible values are `True` or `False`
+`payment_source` | String! | Optional. The identifiable payment source for the payment method.
+`requires_card_details` | Boolean | Indicates whether card and bin details are required. This value is true when the Signifyd integration is enabled for `hosted_fields`. The possible values are `True` or `False`
+`three_ds` | Boolean | Indicates whether 3DS mode is enabled. The possible values are `True` or `False`
 
-The following example shows the `getPaymentConfig` query:
+### `SmartButtonsConfig` attributes
+
+The `SmartButtonsConfig` payment method configuration contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`button_styles` | String | The styles for the PayPal Smart Button configuration
+`display_message` | Boolean | Defines if PayPal Pay Later message is shown. The possible values are `True` or `False`
+`display_venmo` | Boolean | Defines if the Venmo option is shown. The possible values are `True` or `False`
+`message_styles` | String | The message styles for the PayPal Pay Later configuration
+
+#### `button_styles` object
+
+The `SmartButtonsConfig` payment method configuration has a `button_styles` object containing the following attributes:
+
+Attribute | Data Type | Description
+--- | --- | ---
+`color` | String | The button color
+`height` | Int | The button height
+`label` | String | The button label
+`layout` | String | The button layout
+`shape` | String | The button shape
+`tagline` | Boolean | Displays tagline. The possible values are `True` or `False`
+`use_default_height` | Boolean | Defines if button uses default height. The possible values are `True` or `False`. If value is `False`, `height` is used
+
+#### `message_styles` object
+
+The `SmartButtonsConfig` payment method configuration has a `message_styles` object containing the following attributes:
+
+Attribute | Data Type | Description
+--- | --- | ---
+`layout` | String | The message layout
+`logo` | String | The message logo
+
+#### `SDK_Params` attributes
+
+The `sdk_params` object provides details about the SDK parameters:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`name` | String! | The name of the SDK parameter
+`value` | String! | The value of the SDK parameter
+
+## `getPaymentConfig` query example
+
+The following example runs the `getPaymentConfig` query for a `location: CHECKOUT`. This query provides all available payment methods for that location:
 
 **Request:**
 
-```text
-query {
+```graphql
+{
     getPaymentConfig( location: CHECKOUT ) {
             hosted_fields {
                 code

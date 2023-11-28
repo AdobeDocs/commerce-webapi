@@ -48,7 +48,7 @@ Attribute |  Data Type | Description
 `last_digits` | String! | Last digits of the card
 `name` | String! | Name on the card
 
-### `getPaymentOrder` query example
+## `getPaymentOrder` query example
 
 The following example runs the `getPaymentOrder` query:
 
