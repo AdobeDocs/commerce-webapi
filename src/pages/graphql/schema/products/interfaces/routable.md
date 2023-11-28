@@ -7,7 +7,7 @@ title: RoutableInterface attributes
 Some entities are "routable", meaning that they have URLs and can serve as the model for a rendered page. The following implementations of the [`RoutableInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-RoutableInterface) allow you to return details in the [`route` query](../queries/route.md). `RoutableUrl` is returned when the URL is not linked to an entity.
 
 *  [BundleProduct](types/bundle.md)
-*  [CategoryTree](../queries/category-list.md#output-attributes)
+*  [CategoryTree](../queries/category-list.md#return-the-category-tree-of-a-top-level-category)
 *  [CmsPage](../../store/queries/cms-page.md)
 *  [ConfigurableProduct](types/configurable.md)
 *  [DownloadableProduct](types/downloadable.md)

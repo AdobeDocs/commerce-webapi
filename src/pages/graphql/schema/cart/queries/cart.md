@@ -601,4 +601,4 @@ Error | Description
 *  [setShippingAddressesOnCart mutation](../mutations/set-shipping-address.md)
 *  [setShippingMethodsOnCart mutation](../mutations/set-shipping-method.md)
 *  [setBillingAddressOnCart mutation](../mutations/set-billing-address.md)
-*  [setPaymentMethodOnCart mutation](../cart/mutations/set-payment-method.md)
+*  [setPaymentMethodOnCart mutation](../mutations/set-payment-method.md)
