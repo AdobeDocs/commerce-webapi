@@ -18,7 +18,17 @@ These payment methods for the `getPaymentConfig` query are the ones supported in
 * Apple Pay
 * PayPal Smart Buttons
 
-## getPaymentConfig object
+## Syntax
+
+```graphql
+{ 
+    getPaymentSDK(
+        getPaymentSDKInput: getPaymentOrderInput! 
+    ): getPaymentSDKOutput    
+}
+```
+
+## Input attributes
 
 The `getPaymentConfig` object will differ on which attributes must contain depending on the payment method.
 

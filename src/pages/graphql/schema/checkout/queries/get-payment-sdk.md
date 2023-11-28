@@ -6,20 +6,47 @@ title: getPaymentSDK query
 
 The `getPaymentSDK` query gets the payment paypal SDK urls and other related values.
 
-## getPaymentSDK object
+## Syntax
 
-The `getPaymentSDK` object must contain the following attributes:
+```graphql
+{ 
+    getPaymentSDK(
+        getPaymentSDKInput: getPaymentOrderInput! 
+    ): getPaymentSDKOutput    
+}
+```
+
+## Input attributes
+
+The `getPaymentSDKInput` object must contain the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`location` | PaymentLocation! | The origin location for that payment request. The possible values are
+PRODUCT_DETAIL, MINICART, CART, CHECKOUT, ADMIN
+`methodCode` | String! | Optional. The code for the selected payment method
+
+## Output attributes
+
+The `getPaymentSDKOutput` object must contain the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
 `code` | String! | The code for the payment method used in the order
 `params` | String! | The SDK parameters for the payment method
 
-## Example usage
+### `params` object
 
-### `getPaymentSDK`
+The `params` object provides details about the SDK parameters:
 
-The following example shows the `getPaymentSDK` query:
+Attribute |  Data Type | Description
+--- | --- | ---
+`name` | String! | The name of the SDK parameter
+`value` | String! | The value of the SDK parameter
+
+### `getPaymentSDK` query example
+
+The following example runs the `getPaymentSDK` query. The payment method was previously set to `payment_services_paypal_hosted_fields`.
 
 **Request:**
 

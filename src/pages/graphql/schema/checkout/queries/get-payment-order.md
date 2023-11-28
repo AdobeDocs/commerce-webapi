@@ -11,7 +11,7 @@ The `getPaymentOrder` query retrieves the payment details for the order. You mus
 ```graphql
 { 
     getPaymentOrder(
-        input: getPaymentOrderInput! 
+       input: getPaymentOrderInput! 
     ): getPaymentOrderOutput    
 }
 ```
@@ -50,7 +50,7 @@ Attribute |  Data Type | Description
 
 ### `getPaymentOrder` query example
 
-The following example shows the `getPaymentOrder` query:
+The following example runs the `getPaymentOrder` query:
 
 **Request:**
 
