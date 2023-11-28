@@ -6,7 +6,7 @@ title: createPaymentOrder mutation
 
 The `createPaymentOrder` mutation creates a payment order for later processing with Payment Services enabled.
 
-The mutation can return details about the following payment methods supported in [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/payments-checkout/payments-options.html): 
+The mutation can return details about the following payment methods supported in [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/payments-checkout/payments-options.html):
 
 * Apple Pay
 * PayPal Hosted Fields
