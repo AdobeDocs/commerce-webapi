@@ -70,12 +70,12 @@ mutation {
     setPaymentMethodOnCart ( input: {
       cart_id: "uocGxUi5H97XFAMhY3s66q4aFYG3Bmdr",
       payment_method: {
-        code: "payment_services_paypal_vault",        
-        payment_services_paypal_vault: {
-          payment_source: "vault",
+        code: "payment_services_paypal_hosted_fields",
+        payment_services_paypal_hosted_fields: {
+          payment_source: "cc",
           payments_order_id: "mp-order-a4babd34-13d3-4ac0-b1b0-109bb7be1574",
           paypal_order_id: "9R90936863877801D",
-          public_hash: "shew83bdbd83y2bdjbwb2ib2ds",
+          is_active_payment_token_enabler: true,
           location: PRODUCT_DETAIL
         }
       }
