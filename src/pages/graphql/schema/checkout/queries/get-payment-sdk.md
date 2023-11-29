@@ -4,55 +4,27 @@ title: getPaymentSDK query
 
 # getPaymentSDK query
 
-The `getPaymentSDK` query gets the payment paypal SDK urls and other related values.
+The `getPaymentSDK` query gets the payment paypal SDK URLs and other related values.
 
 ## Syntax
 
 ```graphql
-{ 
+{
     getPaymentSDK(
-       input: getPaymentSDKInput! 
-    ): getPaymentSDKOutput    
+      location: PaymentLocation!
+    )GetPaymentSDKOutput
 }
 ```
 
-## Input attributes
+## Example usage
 
-The `getPaymentSDKInput` object must contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`location` | PaymentLocation! | The origin location for that payment request. The possible values are
-PRODUCT_DETAIL, MINICART, CART, CHECKOUT, ADMIN
-`methodCode` | String! | Optional. The code for the selected payment method
-
-## Output attributes
-
-The `getPaymentSDKOutput` object must contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`code` | String! | The payment method code as defined in the payment gateway
-`params` | String! | PayPal parameters required to load JS SDK
-
-### `params` object
-
-The `params` object provides details about the SDK parameters:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`name` | String! | The name of the SDK parameter
-`value` | String! | The value of the SDK parameter
-
-## `getPaymentSDK` query example
-
-The following example runs the `getPaymentSDK` query. The payment method was previously set to `payment_services_paypal_hosted_fields`.
+The following example runs the `getPaymentSDK` query.
 
 **Request:**
 
-```text
+```graphql
 query {
-  getPaymentSDK(input: { location: "CHECKOUT", methodCode: "payment_services_paypal_hosted_fields" }) {
+  getPaymentSDK(input: { location: "CHECKOUT" }) {
     sdkParams {
       code
       params {
@@ -97,3 +69,30 @@ query {
   }
 }
 ```
+
+## Input attributes
+
+The `getPaymentSDK` query must contain the following attribute:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`location` | PaymentLocation! | The origin location for that payment request. The possible values are
+PRODUCT_DETAIL, MINICART, CART, CHECKOUT, ADMIN
+
+## Output attributes
+
+The `getPaymentSDKOutput` object must contain the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`code` | String | The payment method code as defined in the payment gateway
+`params` | String | PayPal parameters required to load JS SDK
+
+### `params` object
+
+The `params` object provides details about the SDK parameters:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`name` | String! | The name of the SDK parameter
+`value` | String! | The value of the SDK parameter

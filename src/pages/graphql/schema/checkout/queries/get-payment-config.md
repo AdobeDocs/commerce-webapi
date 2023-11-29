@@ -24,117 +24,7 @@ Each of these payment methods can have a different payment source, for example, 
 }
 ```
 
-## Input attributes
-
-The `getPaymentConfig` object will differ on which attributes must contain depending on the payment method.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`location` | PaymentLocation! | The origin location for that payment request. The possible values are
-PRODUCT_DETAIL, MINICART, CART, CHECKOUT, ADMIN
-`methodCode` | String! | Optiona. The code for the selected payment method. The possible values are Apple Pay, Hosted Fields, Smart Buttons
-
-## Output attributes
-
-The `PaymentConfigOutput` contains details about each configured payment method:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`ApplePayConfig` | String! | ApplePay payment method configuration
-`HostedFieldsConfig` | String! | PayPal Hosted fields payment method configuration
-`SmartButtonsConfig` | String! | PayPal Smart Buttons payment method configuration
-
-## `PaymentConfigItem` interface
-
-The `PaymentConfigItem` interface contains the fields that are common to all thepayment methods. This interface contains the following elements:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`code` | String! | The payment method code as defined in the payment gateway
-`is_visible` | Boolean | Indicates whether the payment method is shown. The possible values are `True` or `False`
-`sdk_params` | SDKParams | PayPal parameters required to load JS SDK
-`sort_order` | String | Defines the preference for the sorting order of the payment method
-`payment_intent` | String | Defines the payment intent. The possible values are `Authorize` or `Capture`
-`title` | String! | The display name of the payment method
-
-This interface also has the following implementations:
-
-* ApplePayConfig
-* HostedFieldsConfig
-* SmartButtonsConfig
-
-Each implementation contains objects with specific attributes for each of tthese payment methods.
-
-### `ApplePayConfig` attributes
-
-The `ApplePayConfig` payment method configuration has a `button_styles` object containing the following attributes:
-
-Attribute | Data Type | Description
---- | --- | ---
-`color` | String | The button color
-`height` | Int | The button height
-`label` | String | The button label
-`layout` | String | The button layout
-`shape` | String | The button shape
-`tagline` | Boolean | Displays tagline. The possible values are `True` or `False`
-`use_default_height` | Boolean | Defines if button uses default height. The possible values are `True` or `False`. If value is `False`, `height` is used
-
-### `HostedFieldsConfig` attributes
-
-The `HostedFieldsConfig` payment method configuration contains the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cc_vault_code` | String | The vault payment method code. `hosted_fields` only works with credit cards (cc)
-`is_vault_enabled` | Boolean | Indicates whether card vaulting is enabled. The possible values are `True` or `False`
-`payment_source` | String! | Optional. The identifiable payment source for the payment method.
-`requires_card_details` | Boolean | Indicates whether card and bin details are required. This value is true when the Signifyd integration is enabled for `hosted_fields`. The possible values are `True` or `False`
-`three_ds` | Boolean | Indicates whether 3DS mode is enabled. The possible values are `True` or `False`
-
-### `SmartButtonsConfig` attributes
-
-The `SmartButtonsConfig` payment method configuration contains the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`button_styles` | String | The styles for the PayPal Smart Button configuration
-`display_message` | Boolean | Defines if PayPal Pay Later message is shown. The possible values are `True` or `False`
-`display_venmo` | Boolean | Defines if the Venmo option is shown. The possible values are `True` or `False`
-`message_styles` | String | The message styles for the PayPal Pay Later configuration
-
-#### `button_styles` object
-
-The `SmartButtonsConfig` payment method configuration has a `button_styles` object containing the following attributes:
-
-Attribute | Data Type | Description
---- | --- | ---
-`color` | String | The button color
-`height` | Int | The button height
-`label` | String | The button label
-`layout` | String | The button layout
-`shape` | String | The button shape
-`tagline` | Boolean | Displays tagline. The possible values are `True` or `False`
-`use_default_height` | Boolean | Defines if button uses default height. The possible values are `True` or `False`. If value is `False`, `height` is used
-
-#### `message_styles` object
-
-The `SmartButtonsConfig` payment method configuration has a `message_styles` object containing the following attributes:
-
-Attribute | Data Type | Description
---- | --- | ---
-`layout` | String | The message layout
-`logo` | String | The message logo
-
-#### `SDK_Params` attributes
-
-The `sdk_params` object provides details about the SDK parameters:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`name` | String! | The name of the SDK parameter
-`value` | String! | The value of the SDK parameter
-
-## `getPaymentConfig` query example
+## Example usage
 
 The following example runs the `getPaymentConfig` query for a `location: CHECKOUT`. This query provides all available payment methods for that location:
 
@@ -316,3 +206,117 @@ The following example runs the `getPaymentConfig` query for a `location: CHECKOU
     }
 }
 ```
+
+## Input attributes
+
+The `getPaymentConfig` object will differ on which attributes must contain depending on the payment method.
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`location` | PaymentLocation! | The origin location for that payment request. The possible values are PRODUCT_DETAIL, MINICART, CART, CHECKOUT, ADMIN
+
+## Output attributes
+
+The `PaymentConfigOutput` contains details about each configured payment method:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`ApplePayConfig` | String! | ApplePay payment method configuration
+`HostedFieldsConfig` | String! | PayPal Hosted fields payment method configuration
+`SmartButtonsConfig` | String! | PayPal Smart Buttons payment method configuration
+
+## `PaymentConfigItem` interface
+
+The `PaymentConfigItem` interface contains the fields that are common to all the payment methods. This interface contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`code` | String! | The payment method code as defined in the payment gateway
+`is_visible` | Boolean | Indicates whether the payment method is shown
+`payment_intent` | String | Defines the payment intent. The possible values are `Authorize` or `Capture`
+`sdk_params` | SDKParams | PayPal parameters required to load the PayPal JavaScript SDK
+`sort_order` | String | Defines the preference for the sorting order of the payment method
+`title` | String! | The display name of the payment method
+
+This interface also has the following implementations:
+
+* ApplePayConfig
+* HostedFieldsConfig
+* SmartButtonsConfig
+
+Each implementation contains objects with specific attributes for each of tthese payment methods.
+
+### `ApplePayConfig` attributes
+
+The `ApplePayConfig` payment method configuration has a `button_styles` object containing the following attributes:
+
+Attribute | Data Type | Description
+--- | --- | ---
+`color` | String | The button color
+`height` | Units | The button height
+`label` | String | The button label
+`layout` | String | The button layout
+`shape` | String | The button shape
+`tagline` | Boolean | Indicates whether the tagline is displayed
+`use_default_height` | Boolean | Defines if button uses default height. If the value is `False`, the value of `height` is used
+
+See [Payment options](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/payments-checkout/payments-options.html) for more information.
+
+### `HostedFieldsConfig` attributes
+
+The `HostedFieldsConfig` payment method configuration contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`cc_vault_code` | String | The vault payment method code. Hosted fields only works with credit cards (cc)
+`is_vault_enabled` | Boolean | Indicates whether card vaulting is enabled
+`payment_source` | String | The identifiable payment source for the payment method. The possible values are credit card (cc), PayPal (paypal), and Apple Pay (applepay)
+`requires_card_details` | Boolean | Indicates whether card and bin details are required. This value is true when the Signifyd integration is enabled for hosted fields
+`three_ds` | Boolean | Indicates whether 3DS mode is enabled
+
+### `SmartButtonsConfig` attributes
+
+The `SmartButtonsConfig` payment method configuration contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`button_styles` | ButtonStyles | The styles for the PayPal Smart Button configuration
+`display_message` | Boolean | Indicates whether the PayPal Pay Later message is shown
+`display_venmo` | Boolean | Defines if the Venmo option is shown
+`message_styles` | MessageStyles | The message styles for the PayPal Pay Later configuration
+
+See [Payment options](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/payments-checkout/payments-options.html) for more information.
+
+#### `ButtonStyles` object
+
+The `SmartButtonsConfig` payment method configuration has a `ButtonStyles` object containing the following attributes:
+
+Attribute | Data Type | Description
+--- | --- | ---
+`color` | String | The button color
+`height` | Int | The button height
+`label` | String | The button label
+`layout` | String | The button layout
+`shape` | String | The button shape
+`tagline` | Boolean | Indicates whether to display the PayPal tagline
+`use_default_height` | Boolean | Defines if button uses default height. If the value is `False`, the value of `height` is used
+
+#### `MessageStyles` object
+
+The `SmartButtonsConfig` payment method configuration has a `MessageStyles` object containing the following attributes:
+
+Attribute | Data Type | Description
+--- | --- | ---
+`layout` | String | The message layout
+`logo` | String | The message logo
+
+#### `SDKParams` attributes
+
+The `SDKParams` object provides details about the SDK parameters:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`name` | String! | The name of the SDK parameter
+`value` | String! | The value of the SDK parameter
+
+These values come from [PayPal JavaScript SDK](https://developer.paypal.com/sdk/js/reference/).
