@@ -12,7 +12,7 @@ The mutation can return details about the following payment methods supported in
 * PayPal Hosted Fields
 * PayPal Smart Buttons
 
-Each of these payment methods can have a different payment source, for example, `hosted_fields` only works with credit cards.
+Each of these payment methods can have a different payment source, for example, PayPal Hosted Fields only works with credit cards. You need to run `getPaymentConfig` and `setPaymentMethodOnCart` endpoints before running the `createPaymentOrder` mutation.
 
 ## Syntax
 
@@ -34,12 +34,12 @@ Attribute |  Data Type | Description
 `location` | PaymentLocation! | The origin location for that payment request. The possible values are
 PRODUCT_DETAIL, MINICART, CART, CHECKOUT, ADMIN
 `methodCode` | String | The code for the selected payment method
-`payment_source` | String | The payment source for the payment method. The possible values are credit card, PayPal, and Apple Pay
-`vaultIntent` | Boolean | Indicates whether the payment information should be vaulted. This attribute is only applicable to the `hosted_fields` payment method. Set by default to `false`
+`payment_source` | String | The payment source for the payment method. The possible values are credit card (cc), PayPal (paypal), and Apple Pay (applepay)
+`vaultIntent` | Boolean | Indicates whether the payment information should be vaulted. This attribute is only applicable to the `hosted_fields` payment method. The default value is `false`
 
 ## Output attributes
 
-The `createPaymentOrderOutput` object contains the payment order details that are needed to fulfill a payment. These are the following output attributes:
+The `createPaymentOrderOutput` object contains the payment order details that are needed to fulfill a payment.
 
 Attribute |  Data Type | Description
 --- | --- | ---
@@ -47,7 +47,7 @@ Attribute |  Data Type | Description
 `mp_order_id` | String | The unique order ID generated in Commerce if Payment Services is enabled after PayPal returns the `id`
 `status` | String | The status of the payment order. See [order status](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/order-management/orders/order-status.html) for more information
 
-## `createPaymentOrder` mutation example
+## Example usage
 
 The following example creates a payment order. The payment method was previously set to `payment_services_paypal_hosted_fields`.
 
