@@ -46,7 +46,11 @@ These steps describe the flow of requests and responses required to complete a t
 
 ## `setPaymentMethodOnCartInput` object
 
-When you set the payment method to Payment Services in the [`setPaymentMethodOnCart`](../schema/cart/mutations/set-payment-method.md) mutation, the `setPaymentMethodOnCartInput` object must contain specific `Payment Services` attributes for the supported payment methods.
+When you set the payment method to Payment Services in the [`setPaymentMethodOnCart`](../schema/cart/mutations/set-payment-method.md) mutation, the value of the `code` field can be one of the following:
+
+* `payment_services_paypal_hosted_fields`
+* `payment_services_paypal_smart_buttons`
+* `payment_services_paypal_apple_pay`
 
 ### Payment Services object
 
