@@ -1156,6 +1156,10 @@ module.exports = [
         path: "/graphql/payment-methods/klarna/",
       },
       {
+        title: "Payment Services Checkout",
+        path: "/graphql/payment-methods/payment-services-checkout/",
+      },
+      {
         title: "PayPal Express Checkout",
         path: "/graphql/payment-methods/paypal-express-checkout/",
       },
