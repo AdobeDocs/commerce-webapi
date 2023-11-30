@@ -16,7 +16,7 @@ These steps describe the flow of requests and responses required to complete a t
 
 ![Payment Services sequence diagram](../../_images/graphql/payment-services.svg)
 
-1. Run `getPaymentConfig` to fetch the payment configuration to retrieve and render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
+1. Run `getPaymentConfig` to fetch the payment configuration and render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
 
 1. Commerce returns payment configuration information.
 
@@ -51,7 +51,6 @@ You need to run the `getPaymentConfig` endpoint before the [`setPaymentMethodOnC
 * `payment_services_paypal_hosted_fields`
 * `payment_services_paypal_smart_buttons`
 * `payment_services_paypal_apple_pay`
-* `payment_services_paypal_vault`
 
 ### Payment Services object
 
@@ -72,13 +71,7 @@ Attribute |  Data Type | Description
 `cardExpiryYear` | String | Expiry year on card
 `cardLast4` | String | Last digits of card
 `holderName` | String | Name on card
-`is_active_payment_token_enabler` | Boolean | States whether a customer-entered credit/debit card should be tokenized for later usage. Required only if vaulting is enabled for Payment Services payment integration. The possible values are `True` or `False`
-
-If `payment_services_paypal_vault` is the selected option, the object contains the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`public_hash` | String |The public hash of the vault token
+`is_active_payment_token_enabler` | Boolean | States whether a customer-entered credit/debit card should be tokenized for later usage. Required only if vaulting is enabled for Payment Services payment integration
 
 ### `setPaymentMethodOnCart` mutation example
 
