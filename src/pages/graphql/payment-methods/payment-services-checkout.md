@@ -67,11 +67,11 @@ If `payment_services_paypal_hosted_fields` is the selected payment method, the o
 Attribute |  Data Type | Description
 --- | --- | ---
 `cardBin` | String | Card bin number
-`cardExpiryMonth` |String | Expiry month on card
-`cardExpiryYear` | String | Expiry year on card
-`cardLast4` | String | Last digits of card
+`cardExpiryMonth` | String | Expiration month of the card
+`cardExpiryYear` | String | Expiration year of the card
+`cardLast4` | String | Last four digits of the card
 `holderName` | String | Name on card
-`is_active_payment_token_enabler` | Boolean | States whether a customer-entered credit/debit card should be tokenized for later usage. Required only if vaulting is enabled for Payment Services payment integration
+`is_active_payment_token_enabler` | Boolean | States whether a customer-entered credit/debit card should be tokenized for later usage. The default value is false. Required only if vaulting is enabled for Payment Services payment integration
 
 ### `setPaymentMethodOnCart` mutation example
 
