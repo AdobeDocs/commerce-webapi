@@ -1218,6 +1218,10 @@ module.exports = [
         path: "/graphql/payment-services/checkout.md"
       },
       {
+        title: "Minicart",
+        path: "/graphql/payment-services/minicart.md"
+      },
+      {
         title: "Vault",
         path: "/graphql/payment-services/vault.md"
       }
