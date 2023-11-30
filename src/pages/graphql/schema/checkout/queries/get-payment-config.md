@@ -237,7 +237,7 @@ Attribute |  Data Type | Description
 `is_visible` | Boolean | Indicates whether the payment method is shown
 `payment_intent` | String | Defines the payment intent. The possible values are `Authorize` or `Capture`
 `sdk_params` | SDKParams | PayPal parameters required to load the PayPal JavaScript SDK
-`sort_order` | String | Defines the preference for the sorting order of the payment method
+`sort_order` | String | The relative order the payment method is displayed on the checkout page
 `title` | String! | The display name of the payment method
 
 This interface also has the following implementations:
