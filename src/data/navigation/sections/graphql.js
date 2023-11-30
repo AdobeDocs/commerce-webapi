@@ -1160,7 +1160,7 @@ module.exports = [
     ],
   },
   {
-    title: "Payment methods",
+    title: "Core payment methods",
     path: "/graphql/payment-methods/",
     pages: [
       {
@@ -1208,6 +1208,20 @@ module.exports = [
         path: "/graphql/payment-methods/hosted-pro/",
       },
     ],
+  },
+  {
+    title: "Payment Services payment methods",
+    path: "/graphql/payment-services/",
+    pages: [
+      {
+        title: "Checkout",
+        path: "/graphql/payment-services/checkout.md"
+      },
+      {
+        title: "Vault",
+        path: "/graphql/payment-services/vault.md"
+      }
+    ]
   },
   {
     title: "Tutorial",
