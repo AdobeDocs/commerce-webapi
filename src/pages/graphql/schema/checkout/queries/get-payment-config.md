@@ -255,7 +255,7 @@ The `ApplePayConfig` payment method configuration has a `button_styles` object c
 Attribute | Data Type | Description
 --- | --- | ---
 `color` | String | The button color
-`height` | Int | The button height
+`height` | Int | The button height in pixels
 `label` | String | The button label
 `layout` | String | The button layout
 `shape` | String | The button shape
@@ -296,7 +296,7 @@ The `SmartButtonsConfig` payment method configuration has a `ButtonStyles` objec
 Attribute | Data Type | Description
 --- | --- | ---
 `color` | String | The button color
-`height` | Int | The button height
+`height` | Int | The button height in pixels
 `label` | String | The button label
 `layout` | String | The button layout
 `shape` | String | The button shape
