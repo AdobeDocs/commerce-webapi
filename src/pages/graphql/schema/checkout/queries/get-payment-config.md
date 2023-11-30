@@ -246,7 +246,7 @@ This interface also has the following implementations:
 * HostedFieldsConfig
 * SmartButtonsConfig
 
-Each implementation contains objects with specific attributes for each of tthese payment methods.
+Each implementation contains objects with specific attributes for each of these payment methods.
 
 ### `ApplePayConfig` attributes
 

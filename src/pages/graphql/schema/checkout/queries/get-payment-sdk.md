@@ -76,8 +76,7 @@ The `getPaymentSDK` query must contain the following attribute:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`location` | PaymentLocation! | The origin location for that payment request. The possible values are
-PRODUCT_DETAIL, MINICART, CART, CHECKOUT, ADMIN
+`location` | PaymentLocation! | The origin location for that payment request. The possible values are PRODUCT_DETAIL, MINICART, CART, CHECKOUT, ADMIN
 
 ## Output attributes
 
