@@ -99,7 +99,7 @@ mutation {
       "cart": {
         "id": "r8TKHa58b7Y8VaZHLyABNxrEdS8hJJTZ",
         "selected_payment_method": {
-          "code": "payment_services_paypal_vault"
+          "code": "payment_services_paypal_hosted_fields"
         }
       }
     }
