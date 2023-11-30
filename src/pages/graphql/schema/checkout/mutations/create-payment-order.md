@@ -65,7 +65,7 @@ The `createPaymentOrderinput` object contains the following input attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`cartId` | String | The unique ID of the cart
+`cartId` | String! | The unique ID of the cart
 `location` | PaymentLocation! | The origin location for that payment request. The possible values are
 PRODUCT_DETAIL, MINICART, CART, CHECKOUT, ADMIN
 `methodCode` | String | The code for the selected payment method
