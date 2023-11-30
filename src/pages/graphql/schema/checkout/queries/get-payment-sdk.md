@@ -81,16 +81,16 @@ PRODUCT_DETAIL, MINICART, CART, CHECKOUT, ADMIN
 
 ## Output attributes
 
-The `getPaymentSDKOutput` object must contain the following attributes:
+The `GetPaymentSDKOutput` object must contain the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
 `code` | String | The payment method code as defined in the payment gateway
-`params` | String | PayPal parameters required to load JS SDK
+`params` | [SDKParams] | PayPal parameters required to load JS SDK
 
-### `params` object
+### `SDKParams` object
 
-The `params` object provides details about the SDK parameters:
+The `SDKParams` object provides details about the SDK parameters:
 
 Attribute |  Data Type | Description
 --- | --- | ---

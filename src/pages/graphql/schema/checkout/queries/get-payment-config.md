@@ -20,7 +20,7 @@ Each of these payment methods can have a different payment source, for example, 
 { 
     getPaymentConfig(
         input: getPaymentConfigInput! 
-    ): getPaymentConfigOutput    
+    ) getPaymentConfigOutput    
 }
 ```
 
@@ -209,7 +209,7 @@ The following example runs the `getPaymentConfig` query for a `location: CHECKOU
 
 ## Input attributes
 
-The `getPaymentConfig` object will differ on which attributes must contain depending on the payment method.
+The `getPaymentConfig` query requires the following input attribute:
 
 Attribute |  Data Type | Description
 --- | --- | ---
@@ -225,13 +225,15 @@ Attribute |  Data Type | Description
 `HostedFieldsConfig` | String! | PayPal Hosted fields payment method configuration
 `SmartButtonsConfig` | String! | PayPal Smart Buttons payment method configuration
 
+Each of these output attributes implements the `PaymentConfigItem` interface.
+
 ## `PaymentConfigItem` interface
 
 The `PaymentConfigItem` interface contains the fields that are common to all the payment methods. This interface contains the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`code` | String! | The payment method code as defined in the payment gateway
+`code` | String | The payment method code as defined in the payment gateway
 `is_visible` | Boolean | Indicates whether the payment method is shown
 `payment_intent` | String | Defines the payment intent. The possible values are `Authorize` or `Capture`
 `sdk_params` | SDKParams | PayPal parameters required to load the PayPal JavaScript SDK
@@ -253,7 +255,7 @@ The `ApplePayConfig` payment method configuration has a `button_styles` object c
 Attribute | Data Type | Description
 --- | --- | ---
 `color` | String | The button color
-`height` | Units | The button height
+`height` | Int | The button height
 `label` | String | The button label
 `layout` | String | The button layout
 `shape` | String | The button shape
@@ -316,7 +318,7 @@ The `SDKParams` object provides details about the SDK parameters:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`name` | String! | The name of the SDK parameter
-`value` | String! | The value of the SDK parameter
+`name` | String | The name of the SDK parameter
+`value` | String | The value of the SDK parameter
 
 These values come from [PayPal JavaScript SDK](https://developer.paypal.com/sdk/js/reference/).

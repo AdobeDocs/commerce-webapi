@@ -98,11 +98,11 @@ The `PaymentSourceDetails` object contains the payment details for the order for
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`card` | String | The payment card details for the order
+`card` | Card | The payment card details for the order
 
 #### `Card` attributes
 
-The `PaymentSourceDetails` object has a `card` object containing the following attributes:
+The `PaymentSourceDetails` object has a `Card` object containing the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---

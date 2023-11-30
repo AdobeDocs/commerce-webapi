@@ -20,7 +20,7 @@ Each of these payment methods can have a different payment source, for example, 
 mutation { 
     createPaymentOrder(
         input: CreatePaymentOrderInput! 
-    ): CreatePaymentOrderOutput    
+    ) CreatePaymentOrderOutput    
 }
 ```
 
@@ -61,7 +61,7 @@ mutation {
 
 ## Input attributes
 
-The `createPaymentOrderinput` object contains the following input attributes:
+The `CreatePaymentOrderinput` object contains the following input attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
@@ -74,7 +74,7 @@ PRODUCT_DETAIL, MINICART, CART, CHECKOUT, ADMIN
 
 ## Output attributes
 
-The `createPaymentOrderOutput` object contains the payment order details that are needed to fulfill a payment.
+The `CreatePaymentOrderOutput` object contains the payment order details that are needed to fulfill a payment.
 
 Attribute |  Data Type | Description
 --- | --- | ---
