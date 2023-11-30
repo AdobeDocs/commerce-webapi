@@ -28,7 +28,7 @@ Use the [`storeConfig` query](../schema/store/queries/store-config.md) and speci
 
 The following diagram shows the workflow for placing an order when Payflow Pro Vault is the selected payment method.
 
-![PayPal Payflow Pro Vault sequence diagram](../../_images/graphql/paypal-payflow-pro-vault.svg)
+![PayPal Payflow Pro Vault sequence diagram](../../_images/graphql/payment-services-paypal-vault.svg)
 
 1. Use the [`customerPaymentTokens`](../schema/checkout/queries/customer-payment-tokens.md) query to retrieve the payment tokens the customer has stored in the vault.
 
