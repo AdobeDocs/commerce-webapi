@@ -19,6 +19,10 @@ If the amount of available store credit equals or exceeds the grand total of the
 
 `mutation: {applyStoreCreditToCart(input: ApplyStoreCreditToCartInput): {ApplyStoreCreditToCartOutput}}`
 
+## Reference
+
+The [`applyStoreCreditToCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-applyStoreCreditToCart) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 In the following example, the customer starts with $10 of store credit. The subtotal of the items in the cart before applying the store credit plus shipping and tax is $34.64. The grand total on the cart after applying the store credit is $24.64.
@@ -82,30 +86,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `ApplyStoreCreditToCartInput` object must contain the following attributes.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart_id` | String! | The unique ID that identifies the customer's cart
-
-## Output attributes
-
-The `ApplyStoreCreditToCartOutput` object returns the `Cart` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
-
-### Cart object
-
-import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 

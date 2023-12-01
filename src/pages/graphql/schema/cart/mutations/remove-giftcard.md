@@ -11,6 +11,10 @@ The `removeGiftCardFromCart` mutation removes a previously-applied gift card fro
 
  `mutation: removeGiftCardFromCart(input: RemoveGiftCardFromCartInput): RemoveGiftCardFromCartOutput`
 
+## Reference
+
+The [`removeGiftCardFromCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-removeGiftCardFromCart) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
  The following example removes a gift card from the cart.
@@ -47,31 +51,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `removeGiftCardFromCartInput` object must contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart_id` | String! | The unique ID that identifies the customer's cart
-`gift_card_code` | String! | The gift card code
-
-## Output attributes
-
-The `removeGiftCardFromCartOutput` object contains the `Cart` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
-
-### Cart object
-
- import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 

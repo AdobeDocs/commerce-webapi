@@ -1,15 +1,22 @@
 ---
 title: recaptchaV3Config query
-edition: pwa
 ---
 
+import BetaPwaNote from '/src/_includes/graphql/notes/beta-pwa.md'
+
 # recaptchaV3Config query
+
+<BetaPwaNote />
 
 The `recaptchaV3Config` query returns information about the reCaptcha V3 configuration.
 
 ## Syntax
 
 `{recaptchaV3Config {ReCaptchaConfigurationV3}}`
+
+## Reference
+
+The [`recaptchaV3Config`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#query-recaptchaV3Config) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -51,18 +58,3 @@ query {
   }
 }
 ```
-
-## Input attributes
-
-None
-
-## Output attributes
-
-Attribute | Data Type | Description
---- | --- | ---
-`badge_position` | String! | The position of the invisible reCAPTCHA badge on each page
-`failure_message` | String! | The message that appears to the user if validation fails
-`forms` | [ReCaptchaFormEnum!]! | A list of forms on the storefront that have been configured to use reCAPTCHA V3
-`language_code` | String | A two-character code that specifies the language that is used for Google reCAPTCHA text and messaging
-`minimum_score` | Float! | The minimum score that identifies a user interaction as a potential risk
-`website_key` | String! | The website key generated when the Google reCAPTCHA account was registered

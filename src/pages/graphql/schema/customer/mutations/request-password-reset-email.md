@@ -8,6 +8,13 @@ contributor_link: https://www.atwix.com/
 
 The `requestPasswordResetEmail` mutation triggers the password reset email by the provided email address. Use it to initiate the process to reset the registered customer's password before calling the [resetPassword](reset-password.md) mutation.
 
+The mutation returns `true` if both of the following operations are successful:
+
+-  The reset password operation initiates.
+-  The application sends an email containing a reset link.
+
+Otherwise, the mutation returns `false`.
+
 When the customer clicks the `Set a New Password` button, the application sends an email to the customer that contains a URL for resetting their password.
 
 ![Reset password email](../../../../_images/graphql/reset-password-email.png)
@@ -15,7 +22,7 @@ When the customer clicks the `Set a New Password` button, the application sends 
 The URL has the following format:
 
 ```text
-https://<MAGENTOSITE>/customer/account/createPassword/?token=gh80pkjGdsPyiXc0sUUXswX1uGN7crUr
+https://<HOST>/customer/account/createPassword/?token=gh80pkjGdsPyiXc0sUUXswX1uGN7crUr
 ```
 
 Use the value of the token in the `resetPassword` mutation.
@@ -23,6 +30,10 @@ Use the value of the token in the `resetPassword` mutation.
 ## Syntax
 
 `mutation: {requestPasswordResetEmail(email: String!): Boolean}`
+
+## Reference
+
+The [`requestPasswordResetEmail`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-requestPasswordResetEmail) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -47,19 +58,6 @@ mutation {
   }
 }
 ```
-
-## Input arguments
-
-You must specify the customer's email address in the `email` input argument.
-
-## Output attributes
-
-The `requestPasswordResetEmail` mutation returns `true` if both of the following operations are successful:
-
--  The reset password operation initiates.
--  The application sends an email containing a reset link.
-
-Otherwise, the mutation returns `false`.
 
 ## Errors
 

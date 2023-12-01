@@ -16,7 +16,7 @@ The following examples demonstrate `customer` queries that return information ab
 
 <InlineAlert variant="warning" slots="text" />
 
-All examples require a valid [customer authentication token](../../../customer/mutations/generate-token.md).
+All examples require a valid [customer authentication token](../../customer/mutations/generate-token.md).
 
 ## Return a list of purchase orders
 
