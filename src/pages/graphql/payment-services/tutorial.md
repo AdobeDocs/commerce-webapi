@@ -1,13 +1,40 @@
-## Example usage
+---
+title: Payment Services checkout tutorial
+description: Learn how to place an order with the Payment Services GraphQL API.
+keywords:
+  - GraphQL
+  - Payments
+---
 
-### `getPaymentConfig`
+# Payment Services checkout tutorial
 
-The following example shows the `getPaymentConfig` mutation constructed for the Payment Services payment method.
+This tutorial describes describe the steps to complete a checkout authorization with P[ayment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html) enabled.
+
+## Before you begin
+
+Complete the following prerequisites:
+
+*  Install an Adobe Commerce or Magento Open Source instance with sample data.
+   The sample data defines a functional store, called Luma, that sells fitness clothing and accessories. The store does not provide any sandbox accounts for testing credit card payments, so transactions will be simulated using an offline payment method.
+
+*  Install a GraphQl client. You can use any GraphQl client to send calls to Magento. [Altair](https://altair.sirmuel.design/) is a good example.
+
+*  Learn about GraphQL, how it works, and how to use it. See [Introduction to GraphQL](https://graphql.org/learn/) for details.
+
+*  Know how to generate a customer token. See [Authorization tokens](../../usage/authorization-tokens.md) for details.
+
+## Checkout tutorial
+
+### Step 1. Fetch the payment configuration
+
+Use the [`getPaymentConfig`](../schema/checkout/queries/get-payment-config.md) query to fetch the payment configuration needed to render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
+
+The `getPaymentConfig` query returns the payment configuration details from locations in the storefront and Admin where the payment method can be set.
 
 **Request:**
 
-```text
-query {
+```graphql
+{
     getPaymentConfig( location: CHECKOUT ) {
             hosted_fields {
                 code
@@ -181,13 +208,62 @@ query {
 }
 ```
 
-### `createPaymentOrder`
+### Step 2. Set the payment method
 
-The following example shows the `createPaymentOrder` mutation constructed for the Payment Services payment method.
+Run the [`setPaymentMethodOnCart`](../schema/cart/mutations/set-payment-method.md) mutation to set the payment method for your order.
 
 **Request:**
 
-```text
+```graphql
+mutation {
+    setPaymentMethodOnCart ( input: {
+      cart_id: "uocGxUi5H97XFAMhY3s66q4aFYG3Bmdr",
+      payment_method: {
+        code: "payment_services_paypal_hosted_fields",
+        payment_services_paypal_hosted_fields: {
+          payment_source: "cc",
+          payments_order_id: "mp-order-a4babd34-13d3-4ac0-b1b0-109bb7be1574",
+          paypal_order_id: "9R90936863877801D",
+          is_active_payment_token_enabler: true,
+          location: PRODUCT_DETAIL
+        }
+      }
+    }
+    ) {
+       cart {
+         id
+         selected_payment_method {
+           code
+         }
+       }
+    }
+  } 
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "setPaymentMethodOnCart": {
+      "cart": {
+        "id": "r8TKHa58b7Y8VaZHLyABNxrEdS8hJJTZ",
+        "selected_payment_method": {
+          "code": "payment_services_paypal_hosted_fields"
+        }
+      }
+    }
+  }
+}
+```
+
+### Step 3. Create a payment order
+
+Use the [`createPaymentOrder`](../schema/checkout/mutations/create-payment-order.md) mutation to create a payment order to begin the authorization process.
+
+**Request:**
+
+```graphql
 mutation {
   createPaymentOrder(input: {
     cartId: "AJCY8dhIfuch9LcDHAxEkw7oG3DjGdKt"
@@ -216,14 +292,14 @@ mutation {
 }
 ```
 
-### `getPaymentOrder`
+### Step 4. Retrieve the payment details for the order
 
-The following example shows the `getPaymentOrder` mutation constructed for the Payment Services payment method.
+Use the [`getPaymentOrder`](../schema/checkout/queries/get-payment-order.md) query to retrieve the payment details for the order. You must run this query  when the Signifyd integration and Hosted fields are enabled in [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/payments-checkout/payments-options.html).
 
 **Request:**
 
-```text
-query {
+```graphql
+{
     getPaymentOrder (
       cartId: "rPG5SFUQN6ePsfNNDnhrmmr9SNWqpPSS"
       id: "9XD295279E1088104"

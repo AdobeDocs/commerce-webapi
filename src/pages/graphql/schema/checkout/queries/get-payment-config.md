@@ -10,7 +10,7 @@ This query is available only if you have installed [Payment Services for Adobe C
 
 The `getPaymentConfig` query returns the payment configuration details from locations in the storefront and Admin where the payment method can be set.
 
-The query can return details about the following supported payment methods in [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/payments-checkout/payments-options.html): :
+The query can return details about the following supported payment methods in [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/payments-checkout/payments-options.html):
 
 * Apple Pay
 * PayPal Hosted Fields
