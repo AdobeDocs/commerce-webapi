@@ -40,6 +40,7 @@ mutation {
     cartId: "AJCY8dhIfuch9LcDHAxEkw7oG3DjGdKt"
     methodCode: "payment_services_paypal_hosted_fields"
     paymentSource: "cc"
+    location: CHECKOUT
     vaultIntent: false
   }) {
     id
