@@ -8,7 +8,7 @@ keywords:
 
 # Payment Services checkout tutorial
 
-This tutorial describes describe the steps to complete a checkout authorization with P[ayment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html) enabled.
+This tutorial describes describe the steps to complete a checkout authorization with [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html) enabled.
 
 ## Before you begin
 
@@ -343,3 +343,42 @@ Use the [`getPaymentOrder`](../schema/checkout/queries/get-payment-order.md) que
         }
       }
     }
+```
+
+### Step 5. Place the order
+
+Run the [`placeOrder`](../schema/cart/mutations/place-order.md) mutation to create an order.
+
+**Request:**
+
+```graphql
+mutation {
+  placeOrder(input: {cart_id: "{ CART_ID }"}) {
+    order {
+      order_number
+    }
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "placeOrder": {
+      "order": {
+        "order_number": "000000001"
+      }
+    }
+  }
+}
+```
+
+Make sure you have a cart ID before you create the order. See [create empty cart](../../tutorials/checkout/add-product-to-cart.md) for more information.
+
+## Verify this step
+
+1. Sign in as a customer to the website using the email `john.doe@example.com` and password `b1b2b3l@w+`.
+
+1. Go to **My Account** > **My Orders**. The order you created is displayed.  The order is also displayed on the Orders grid (**Sales** > **Orders**) in the Admin.
