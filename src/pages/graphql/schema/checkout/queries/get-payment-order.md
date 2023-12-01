@@ -4,6 +4,10 @@ title: getPaymentOrder query
 
 # getPaymentOrder query
 
+<InlineAlert variant="info" slots="text" />
+
+This query is available only if you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.3.0 or higher.
+
 The `getPaymentOrder` query retrieves the payment details for the order. You must run the `getPaymentOrder` query  when the Signifyd integration and `hosted_fields` are enabled in [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/payments-checkout/payments-options.html).
 
 ## Syntax
