@@ -10,12 +10,6 @@ keywords:
 
 Payment Services is your one-stop-shop for online checkout (from settlement and refunds to getting paid). Payment Services is designed to meet _all_ your payment needs.
 
-* Easy to set up and maintain
-* Designed to maximize your profit
-* Safe and secure
-* Designed to meet all your payments needs
-* Self-contained within the Admin
-
 It provides powerful tools to give you the insight and control needed for creating the best experience for your buyers.
 
 * [**Onboarding**](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/get-started/onboard.html)---Commercial signup, technical configuration, entitlements, sandbox environment configuration, and live payment enablement.
