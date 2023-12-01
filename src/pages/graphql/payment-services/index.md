@@ -8,7 +8,7 @@ keywords:
 
 # Payment Services Payment Methods
 
-Payment Services is your one-stop-shop for online checkout (from settlement and refunds to getting paid). Payment Services is:
+Payment Services is your one-stop-shop for online checkout (from settlement and refunds to getting paid). Payment Services is designed to meet _all_ your payment needs.
 
 * Easy to set up and maintain
 * Designed to maximize your profit
