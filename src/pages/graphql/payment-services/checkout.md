@@ -16,7 +16,7 @@ These steps describe the flow of requests and responses required to complete a t
 
 ![Payment Services sequence diagram](../../_images/graphql/payment-services.svg)
 
-1. Run `getPaymentConfig` to fetch the payment configuration and render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
+1. Run the [`getPaymentConfig`](../schema/checkout/queries/get-payment-config.md) query to fetch the payment configuration and render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
 
 1. Commerce returns payment configuration information.
 
