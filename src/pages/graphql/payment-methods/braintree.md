@@ -22,7 +22,7 @@ The following diagram shows the workflow for placing an order when Braintree is 
 
 1. The application forwards the request to Braintree.
 
-1. Braintree returns the token to Magento.
+1. Braintree returns the token to Adobe Commerce.
 
 1. The application forwards the token to the client.
 
@@ -44,7 +44,7 @@ The following diagram shows the workflow for placing an order when Braintree is 
 
 1. The application sends an authorization request to Braintree.
 
-1. Braintree sends the response to Magento.
+1. Braintree sends the response to Adobe Commerce.
 
 1. The application creates an order and sends an order ID in response to the `placeOrder` mutation.
 

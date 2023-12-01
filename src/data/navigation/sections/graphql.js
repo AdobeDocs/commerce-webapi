@@ -285,6 +285,18 @@ module.exports = [
                 title: "getPayflowLinkToken",
                 path: "/graphql/schema/checkout/queries/get-payflow-link-token/",
               },
+              {
+                title: "getPaymentConfig",
+                path: "/graphql/schema/checkout/queries/get-payment-config/",
+              },
+              {
+                title: "getPaymentOrder",
+                path: "/graphql/schema/checkout/queries/get-payment-order/",
+              },
+              {
+                title: "getPaymentSDK",
+                path: "/graphql/schema/checkout/queries/get-payment-sdk/",
+              },
             ],
           },
           {
@@ -304,6 +316,10 @@ module.exports = [
                 path: "/graphql/schema/checkout/mutations/create-payflow-pro-token/",
               },
               {
+                title: "createPaymentOrder",
+                path: "/graphql/schema/checkout/mutations/create-payment-order/",
+              },
+              {
                 title: "createPaypalExpressToken",
                 path: "/graphql/schema/checkout/mutations/create-paypal-express-token/",
               },
@@ -314,6 +330,10 @@ module.exports = [
               {
                 title: "handlePayflowProResponse",
                 path: "/graphql/schema/checkout/mutations/handle-payflow-pro-response/",
+              },
+              {
+                title: "syncPaymentOrder",
+                path: "/graphql/schema/checkout/mutations/sync-payment-order/",
               },
             ],
           },
@@ -1138,7 +1158,7 @@ module.exports = [
     ],
   },
   {
-    title: "Payment methods",
+    title: "Core payment methods",
     path: "/graphql/payment-methods/",
     pages: [
       {
@@ -1152,6 +1172,10 @@ module.exports = [
       {
         title: "Klarna",
         path: "/graphql/payment-methods/klarna/",
+      },
+      {
+        title: "Payment Services Checkout",
+        path: "/graphql/payment-methods/payment-services-checkout/",
       },
       {
         title: "PayPal Express Checkout",
@@ -1182,6 +1206,24 @@ module.exports = [
         path: "/graphql/payment-methods/hosted-pro/",
       },
     ],
+  },
+  {
+    title: "Payment Services payment methods",
+    path: "/graphql/payment-services/",
+    pages: [
+      {
+        title: "Checkout",
+        path: "/graphql/payment-services/checkout.md"
+      },
+      {
+        title: "Minicart",
+        path: "/graphql/payment-services/minicart.md"
+      },
+      {
+        title: "Vault",
+        path: "/graphql/payment-services/vault.md"
+      }
+    ]
   },
   {
     title: "Tutorial",
