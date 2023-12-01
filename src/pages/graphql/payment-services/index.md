@@ -18,7 +18,7 @@ Payment Services is your one-stop-shop for online checkout (from settlement and 
 
 It provides powerful tools to give you the insight and control needed for creating the best experience for your buyers.
 
-* [**Onboarding**](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/get-started/onboard.html)---The process guides you through commercial signup, technical configuration, entitlements, sandbox environment configuration, and live payment enablement.
+* [**Onboarding**](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/get-started/onboard.html)---Commercial signup, technical configuration, entitlements, sandbox environment configuration, and live payment enablement.
 * [**Payment options**](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/payments-checkout/payments-options.html)---Set the payment options to customize the methods available for your store (or multistore) customers.
 * **Cash flow management financial reporting**---Synchronize [payment details](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/reporting/order-payment-status.html) with orders to get full transparency to the processed volume, payment balance, [payouts](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/reporting/payouts.html), and detailed [transaction-level reporting](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/reporting/transactions.html) for financial reconciliation and the utmost in transaction visibility.
 * **Transparent pricing**---Pricing is clear and upfront; what you see is what you get.
