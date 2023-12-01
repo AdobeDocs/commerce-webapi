@@ -10,7 +10,7 @@ This mutation is available only if you have installed [Payment Services for Adob
 
 The `syncPaymentOrder` mutation synchronizes the payment order details for the PayPal Smart Buttons and Apple Pay payment methods. This mutation updates the quote with the shipping, billing, email, and phone number details. It returns a Boolean value indicating whether the synchronization was successful.
 
-You must run this mutation after running tje [`createPaymentOrder`](create-payment-order.md) mutation.
+You must run this mutation after running the [`createPaymentOrder`](create-payment-order.md) mutation.
 
 ## Syntax
 
