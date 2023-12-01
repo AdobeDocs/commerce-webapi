@@ -16,7 +16,7 @@ These steps describe the additional flow of requests and responses required to p
 
 1. Run the [`getPaymentConfig`](../schema/checkout/queries/get-payment-config.md) query to fetch the payment configuration needed to render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
 
-1. Commerce returns payment configuration information.
+1. Adobe Commerce returns payment configuration information.
 
 1. Run [`createPaymentOrder`](../schema/checkout/mutations/create-payment-order.md) to begin the authorization process.
 
@@ -24,7 +24,7 @@ These steps describe the additional flow of requests and responses required to p
 
 1. PayPal returns an `id` value.
 
-1. Adobe Commerce generates an `order_id` and forwards the value in the `mp_order_id` field and in the PayPal response in the `id` field.
+1. Commerce generates an `order_id` and forwards the value in the `mp_order_id` field and in the PayPal response in the `id` field.
 
 1. Run the [`syncPaymentOrder`](../schema/checkout/mutations/sync-payment-order.md) mutation to get payment details and update the quote with shipping, billing, email, and phone number details.
 
@@ -34,13 +34,13 @@ These steps describe the additional flow of requests and responses required to p
 
 1. Commerce returns details about the delivery methods for your order.
 
-1.  Run the [`placeOrder`](../schema/cart/mutations/place-order.md) mutation.
+1. Run the [`placeOrder`](../schema/cart/mutations/place-order.md) mutation.
 
-1.  Commerce sends an authorization request to PayPal.
+1. Commerce sends an authorization request to PayPal.
 
-1.  PayPal returns the result to Commerce.
+1. PayPal returns the result to Commerce.
 
-1.  Commerce creates an order.
+1. Commerce creates an order.
 
 ## `setPaymentMethodOnCartInput` object
 
