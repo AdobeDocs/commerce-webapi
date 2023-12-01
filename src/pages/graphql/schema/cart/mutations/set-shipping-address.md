@@ -13,6 +13,10 @@ The `setShippingAddressesOnCart` mutation sets one or more shipping addresses on
 
 `mutation: {setShippingAddressesOnCart(input: SetShippingAddressesOnCartInput) {SetShippingAddressesOnCartOutput}}`
 
+## Reference
+
+The [`setShippingAddressesOnCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-setShippingAddressesOnCart) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 **Request:**
@@ -112,48 +116,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The top-level `SetShippingAddressesOnCartInput` object is listed first. All child objects are listed in alphabetical order.
-
-### SetShippingAddressesOnCartInput object
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart_id` | String! | The unique ID that identifies the customer's cart
-`shipping_addresses` | [ShippingAddressInput!](#shippingaddressinput-object) | The shipping address for a specific cart
-
-### CartAddressInput object
-
-import CartAddressInput from '/src/_includes/graphql/cart-address-input-24.md'
-
-<CartAddressInput />
-
-### ShippingAddressInput object
-
-Attribute |  Data Type | Description
---- | --- | ---
-`address` | [CartAddressInput](#cartaddressinput-object) | The shipping address for the cart
-`customer_address_id` | Int | The unique ID that identifies the customer's address
-`customer_notes` | String | Text provided by the customer
-`pickup_location_code` | String | The code of the in-store pickup location where the customer will receive the order.
-
-## Output attributes
-
-The `SetShippingAddressOnCartOutput` object contains the `Cart` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
-
-### Cart object
-
-import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 

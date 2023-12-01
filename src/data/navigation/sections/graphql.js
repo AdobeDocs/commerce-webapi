@@ -108,6 +108,10 @@ module.exports = [
                 path: "/graphql/schema/attributes/queries/custom-attribute-metadata-v2.md"
               }
             ]
+          },
+          {
+            title: "Interfaces",
+            path: "/graphql/schema/attributes/interfaces/"
           }
         ]
       },
@@ -190,6 +194,10 @@ module.exports = [
                 path: "/graphql/schema/cart/mutations/place-order/",
               },
               {
+                title: "redeemGiftCardBalanceAsStoreCredit",
+                path: "/graphql/schema/customer/mutations/redeem-giftcard-balance/",
+              },
+              {
                 title: "removeCouponFromCart",
                 path: "/graphql/schema/cart/mutations/remove-coupon/",
               },
@@ -245,13 +253,7 @@ module.exports = [
           },
           {
             title: "Interfaces",
-            path: "/graphql/schema/cart/interfaces/",
-            pages: [
-              {
-                title: "CartItemInterface",
-                path: "/graphql/schema/cart/interfaces/cart-item/",
-              },
-            ],
+            path: "/graphql/schema/cart/interfaces/"
           },
         ],
       },
@@ -502,10 +504,6 @@ module.exports = [
               {
                 title: "generateCustomerTokenAsAdmin",
                 path: "/graphql/schema/customer/mutations/generate-token-as-admin/",
-              },
-              {
-                title: "redeemGiftCardBalanceAsStoreCredit",
-                path: "/graphql/schema/customer/mutations/redeem-giftcard-balance/",
               },
               {
                 title: "requestPasswordResetEmail",
@@ -1278,11 +1276,11 @@ module.exports = [
     ],
   },
   {
-    title: "Reference",
+    title: "Reference (2.4.6)",
     path: "/graphql/reference",
     pages: [
       {
-        title: "Reference (Beta)",
+        title: "Reference (2.4.7-beta)",
         path: "/graphql/reference/beta"
       }
     ]

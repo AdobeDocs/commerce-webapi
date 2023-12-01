@@ -47,6 +47,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`addProductsToCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addProductsToCart) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 These examples show the minimal payload for adding products, including those with customizable options.
@@ -550,52 +554,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `addProductsToCart` mutation must contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cartId` | String! | The unique ID that identifies the customer's cart
-`cartItems` | [[CartItemInput!]!](#cartiteminput-object) | Contains the cart item IDs and quantity of each item
-
-### CartItemInput object
-
-The `CartItemInput` object must contain the following attributes:
-
-import CartItemInput from '/src/_includes/graphql/cart-item-input-24.md'
-
-<CartItemInput />
-
-### EnteredOptionInput object
-
-import EnteredOptionInput from '/src/_includes/graphql/entered-option-input.md'
-
-<EnteredOptionInput />
-
-## Output attributes
-
-The `AddProductsToCartOutput` object contains the `Cart` object.
-
-| Attribute     | Data Type                                  | Description                                                    |
-|---------------|--------------------------------------------|----------------------------------------------------------------|
-| `cart`        | [Cart!](#cart-object)                       | Describes the contents of the specified shopping cart          |
-| `user_errors` | [CartUserInputError!](#cartuserinputerror-attributes) | An array of errors encountered while adding products to a cart |
-
-### Cart object
-
-import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
-
-### CartUserInputError attributes
-
-import CartUserInputErrors from '/src/_includes/graphql/cart-user-input-errors.md'
-
-<CartUserInputErrors />
 
 ## Errors
 

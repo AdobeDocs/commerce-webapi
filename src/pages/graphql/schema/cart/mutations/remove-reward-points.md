@@ -11,6 +11,10 @@ The `removeRewardPointsFromCart` mutation removes all reward points that were pr
 
 `mutation: removeRewardPointsFromCart(cartId: ID!): RemoveRewardPointsFromCartOutput`
 
+## Reference
+
+The [`removeRewardPointsFromCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-removeRewardPointsFromCart) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example removes all reward points from the customer's cart. The `applied_rewards_points` object is now null.
@@ -73,30 +77,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `removeRewardPointsFromCart` mutation requires the `cart_id` attribute.
-
-Attribute | Data Type | Description
---- | --- | ---
-`cart_id` | String! | The unique ID that identifies the customer's cart
-
-## Output attributes
-
-The `RemoveRewardPointsFromCartOutput` object contains the `Cart` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
-
-### Cart object
-
- import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 

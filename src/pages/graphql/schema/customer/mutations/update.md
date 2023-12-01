@@ -16,6 +16,10 @@ To return or modify information about a customer, we recommend you use customer 
 
 `mutation: {updateCustomer(input: CustomerInput!) {CustomerOutput}}`
 
+## Reference
+
+The [`updateCustomer`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateCustomer) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following call updates the first name and email address for a specific customer.
@@ -53,24 +57,6 @@ mutation {
 }
 ```
 
-## Input attributes
-
-The following table lists the attributes you can use as input for the `updateCustomer` mutation. The [Customer attributes](../../customer/queries/customer.md#customer-attributes) table lists the attributes the application returns.
-
-import CreateCustomer from '/src/_includes/graphql/create-customer.md'
-
-<CreateCustomer />
-
-## Output attributes
-
-The `updateCustomer` mutation returns the `CustomerOutput` object.
-
-The following table lists the top-level attributes of the `customer` object. See the [`customer` query](../../customer/queries/customer.md) for complete details about this object.
-
-import Customer from '/src/_includes/graphql/customer-output-24.md'
-
-<Customer />
-
 ## Errors
 
 Error | Description
@@ -84,7 +70,7 @@ Error | Description
 
 ## Related topics
 
-*  [customer query](../../customer/queries/customer.md)
+*  [customer query](../queries/customer.md)
 *  [createCustomer mutation](create.md)
 *  [createCustomerAddress mutation](create-address.md)
 *  [updateCustomerAddress mutation](update-address.md)

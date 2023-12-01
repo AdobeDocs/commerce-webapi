@@ -23,6 +23,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`redeemGiftCardBalanceAsStoreCredit`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-redeemGiftCardBalanceAsStoreCredit) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example redeems the gift card with code `"056MHP57TJ5C"`.
@@ -62,26 +66,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-### GiftCardAccountInput object
-
-The `GiftCardAccountInput` object must contain the following attribute:
-
-Attribute | Data Type | Description
---- | --- | ---
-`gift_card_code` | String! | The gift card code
-
-## Output attributes
-
-The `GiftCardAccount` object contains the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`balance` | Money | The remaining balance of the gift card, including the currency
-`code` | String | The gift card code
-`expiration_date` | String | The date when the gift card expires, if any
 
 ## Errors
 

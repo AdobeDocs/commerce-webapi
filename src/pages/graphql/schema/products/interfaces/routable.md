@@ -4,10 +4,10 @@ title: RoutableInterface attributes
 
 # RoutableInterface attributes
 
-Some entities are "routable", meaning that they have URLs and can serve as the model for a rendered page. The following implementations of the `RoutableInterface` allow you to return details in the [`route` query](../queries/route.md). `RoutableUrl` is returned when the URL is not linked to an entity.
+Some entities are "routable", meaning that they have URLs and can serve as the model for a rendered page. The following implementations of the [`RoutableInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-RoutableInterface) allow you to return details in the [`route` query](../queries/route.md). `RoutableUrl` is returned when the URL is not linked to an entity.
 
 *  [BundleProduct](types/bundle.md)
-*  [CategoryTree](../queries/category-list.md#output-attributes)
+*  [CategoryTree](../queries/category-list.md#return-the-category-tree-of-a-top-level-category)
 *  [CmsPage](../../store/queries/cms-page.md)
 *  [ConfigurableProduct](types/configurable.md)
 *  [DownloadableProduct](types/downloadable.md)
@@ -17,13 +17,17 @@ Some entities are "routable", meaning that they have URLs and can serve as the m
 *  [VirtualProduct](types/virtual.md)
 *  [RoutableUrl](#routable-url) (2.4.7-beta only)
 
-## RoutableInterface attributes
+## Routable URL
 
-import RoutableInterface from '/src/_includes/graphql/routable-interface.md'
+import BetaNote from '/src/_includes/graphql/notes/beta.md'
 
-<RoutableInterface />
+<BetaNote />
 
-## Sample Query
+`RoutableUrl` is the default implementation of RoutableInterface. This type is returned when the URL is not linked to a product or CMS page or to a category. As a result, the `RoutableUrl.type` field always returns `null`.
+
+## Sample queries
+
+### Return information about a URL key
 
 The following query returns information about the specified URL key. The query contains multiple fragments so that it can be used for categories, CMS pages, and multiple product types.
 
@@ -185,15 +189,7 @@ The following query returns information about the specified URL key. The query c
 }
 ```
 
-## Routable URL
-
-import BetaNote from '/src/_includes/graphql/notes/beta.md'
-
-<BetaNote />
-
-`RoutableUrl` is the default implementation of RoutableInterface. This type is returned when the URL is not linked to a product or CMS page or to a category. As a result, the `RoutableUrl.type` field always returns `null`.
-
-### Example
+### Find the external redirect URL
 
 In the following example, an internal URL `support.html` is configured to redirect to an external URL `https://support.example.com/` using URL Rewrite.
 
