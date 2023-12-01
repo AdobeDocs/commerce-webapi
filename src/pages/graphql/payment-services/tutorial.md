@@ -21,7 +21,7 @@ Complete the following prerequisites:
 
 *  Learn about GraphQL, how it works, and how to use it. See [Introduction to GraphQL](https://graphql.org/learn/) for details.
 
-*  Know how to generate a customer token. See [Authorization tokens](../../usage/authorization-tokens.md) for details.
+*  Know how to generate a customer token. See [Authorization tokens](../usage/authorization-tokens.md) for details.
 
 ## Checkout tutorial
 
@@ -375,7 +375,7 @@ mutation {
 }
 ```
 
-Make sure you have a cart ID before you create the order. See [create empty cart](../../tutorials/checkout/add-product-to-cart.md) for more information.
+Make sure you have a cart ID before you create the order. See [create empty cart](../tutorials/checkout/add-product-to-cart.md) for more information.
 
 ## Verify this step
 
