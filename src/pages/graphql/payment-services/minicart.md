@@ -1,16 +1,16 @@
 ---
-title: Payment Services product page workflow
-description: Learn how Adobe Commerce uses GraphQL to process orders with Payment Services as a payment method from the product page.
+title: Payment Services minicart workflow
+description: Learn how Adobe Commerce uses GraphQL to process orders with Payment Services as a payment method from the minicart.
 keywords:
   - GraphQL
   - Payments
 ---
 
-# Payment services product page workflow
+# Payment services minicart workflow
 
 These steps describe the additional flow of requests and responses required to place an order after [adding a product to your cart](../tutorials/checkout/add-product-to-cart.md) with the [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html) solution enabled.
 
-## Product page workflow
+## Minicart workflow
 
 ![Payment Services sequence diagram](../../_images/graphql/payment-services-minicart.svg)
 
