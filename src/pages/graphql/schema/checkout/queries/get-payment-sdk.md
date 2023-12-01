@@ -4,6 +4,10 @@ title: getPaymentSDK query
 
 # getPaymentSDK query
 
+<InlineAlert variant="info" slots="text" />
+
+This query is available only if you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.3.0 or higher.
+
 The `getPaymentSDK` query gets the payment paypal SDK URLs and other related values.
 
 ## Syntax

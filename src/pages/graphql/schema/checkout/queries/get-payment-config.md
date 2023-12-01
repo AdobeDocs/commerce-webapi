@@ -4,6 +4,10 @@ title: getPaymentConfig query
 
 # getPaymentConfig query
 
+<InlineAlert variant="info" slots="text" />
+
+This query is available only if you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.3.0 or higher.
+
 The `getPaymentConfig` query returns the payment configuration details from locations in the storefront and Admin where the payment method can be set.
 
 The query can return details about the following supported payment methods in [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/payments-checkout/payments-options.html): :
