@@ -4,6 +4,10 @@ title: createPaymentOrder mutation
 
 # createPaymentOrder mutation
 
+<InlineAlert variant="info" slots="text" />
+
+This mutation is available only if you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.3.0 or higher.
+
 The `createPaymentOrder` mutation creates a payment order for later processing with Payment Services enabled.
 
 The mutation can return details about the following payment methods supported in [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/payments-checkout/payments-options.html):
