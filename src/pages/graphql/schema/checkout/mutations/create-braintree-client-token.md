@@ -1,6 +1,6 @@
 ---
 title: createBraintreeClientToken mutation
-contributor_name: Something Digital (Now Rightpoint)
+contributor_name: Something Digital (now Rightpoint)
 contributor_link: https://www.rightpoint.com/
 ---
 
