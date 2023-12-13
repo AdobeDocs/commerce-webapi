@@ -6,13 +6,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      - name: Yarn Install
-        uses: bahmutov/npm-install@v1
-      - name: Build
-        run: |
-          yarn build
+        uses: actions/checkout@v4
+
+      - name: Setup Node v16
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
+
+      - name: Enable Corepack for Yarn
+        run: corepack enable
+
+      - name: Install Dependencies
+        run: yarn install
         env:
+          YARN_ENABLE_IMMUTABLE_INSTALLS: false
+
+      - name: Build site
+        run: yarn build
+        env:
+          NODE_OPTIONS: "--max-old-space-size=8192"
           PREFIX_PATHS: true # works like --prefix-paths flag for 'gatsby build'
           PATH_PREFIX: ${{ github.event.repository.name }}
           ADOBE_LAUNCH_SRC: ${{ secrets.AIO_ADOBE_LAUNCH_SRC }}
