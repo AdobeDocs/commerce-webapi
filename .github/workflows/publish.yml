@@ -12,7 +12,7 @@ jobs:
       branch_short_ref: ${{ steps.get_branch.outputs.branch }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Get pathPrefix
         uses: actions/github-script@v6
@@ -56,30 +56,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Setup Node v16 for Yarn v3
+      - name: Setup Node v16
         uses: actions/setup-node@v3
         with:
-          node-version: '16.15.0' # Current LTS version
-
-      - name: Enable Corepack for Yarn v3
+          node-version-file: '.nvmrc'
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
+  
+      - name: Enable Corepack for Yarn
         run: corepack enable
-
-      - name: Install Yarn v3
-        uses: borales/actions-yarn@v3
-        with:
-          cmd: set version stable
-
+  
       - name: Install Dependencies
-        uses: borales/actions-yarn@v3
+        run: yarn install
         env:
           YARN_ENABLE_IMMUTABLE_INSTALLS: false
-        with:
-          cmd: install
-
+  
       - name: Gatsby Cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3.3.2
         with:
           path: |
             public
@@ -89,9 +84,7 @@ jobs:
             ${{ needs.set-state.outputs.branch_short_ref }}-gatsby-cache-
 
       - name: Build site
-        uses: borales/actions-yarn@v3
-        with:
-          cmd: build
+        run: yarn build
         env:
           NODE_OPTIONS: "--max_old_space_size=8192"
           PREFIX_PATHS: true # equivalent to --prefix-paths flag for 'gatsby build'
