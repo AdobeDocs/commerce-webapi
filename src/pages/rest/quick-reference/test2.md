@@ -1,1 +1,1 @@
-<RedoclyAPIBlock src="https://raw.githubusercontent.com/AdobeDocs/commerce-webapi/main/src/openapi/admin-schema-2.4.7-beta.yaml" />
+<RedoclyAPIBlock src="https://developer-stage.adobe.com/shared/openapi/cc_openapi.yaml" />
