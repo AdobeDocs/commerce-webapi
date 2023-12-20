@@ -31,23 +31,23 @@ import {
   rootFix,
   rootFixPages,
   cleanRootFix
-} from '../../utils';
+} from '@adobe/gatsby-theme-aio/src/utils';
 
-import { Footer } from '@adobe/gatsby-theme-aio';
-import { Contributors } from '@adobe/gatsby-theme-aio';
-import { Feedback } from '@adobe/gatsby-theme-aio';
-import { GitHubActions } from '@adobe/gatsby-theme-aio';
-import { Breadcrumbs } from '@adobe/gatsby-theme-aio';
-import { Attribution } from '@adobe/gatsby-theme-aio';
-import { Edition } from '@adobe/gatsby-theme-aio';
-import { OnThisPage } from '@adobe/gatsby-theme-aio';
-import { NextSteps } from '@adobe/gatsby-theme-aio';
-import { NextPrev } from '@adobe/gatsby-theme-aio';
+import { Footer } from '@adobe/gatsby-theme-aio/src/components/Footer';
+import { Contributors } from '@adobe/gatsby-theme-aio/src/components/Contributors';
+import { Feedback } from '@adobe/gatsby-theme-aio/src/components/Feedback';
+import { GitHubActions } from '@adobe/gatsby-theme-aio/src/components/GitHubActions';
+import { Breadcrumbs } from '@adobe/gatsby-theme-aio/src/components/Breadcrumbs';
+import { Attribution } from '@adobe/gatsby-theme-aio/src/components/Attribution';
+import { Edition } from '@adobe/gatsby-theme-aio/src/components/Edition';
+import { OnThisPage } from '@adobe/gatsby-theme-aio/src/components/OnThisPage';
+import { NextSteps } from '@adobe/gatsby-theme-aio/src/components/NextSteps';
+import { NextPrev } from '@adobe/gatsby-theme-aio/src/components/NextPrev';
 
-import { jsDocFilter } from '@adobe/gatsby-theme-aio';
+import { jsDocFilter } from '@adobe/gatsby-theme-aio/src/components/JsDocParameters';
 
-import { MDXComponents } from '@adobe/gatsby-theme-aio';
-import { MDXBlocks } from '@adobe/gatsby-theme-aio';
+import { MDXComponents } from '@adobe/gatsby-theme-aio/src/components/MDXFilter/MDXComponents';
+import { MDXBlocks } from '@adobe/gatsby-theme-aio/src/components/MDXFilter/MDXBlocks';
 
 // Filters custom MDX components out of the markdown
 const filterChildren = ({ childrenArray, query, hasSideNav }) => {
