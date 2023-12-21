@@ -16,7 +16,7 @@ import { MDXProvider } from '@mdx-js/react';
 import { css } from '@emotion/react';
 import '@spectrum-css/divider';
 import '@spectrum-css/actiongroup';
-import Context from '@adobe/gatsby-theme-aio';
+import Context from '@adobe/gatsby-theme-aio/src/components/Context';
 import {
   layoutColumns,
   findSelectedPage,
