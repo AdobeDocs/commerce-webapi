@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@adobe/gatsby-theme-aio": "4.11.0",
+    "@spectrum-css/button": "^11.0.18",
     "gatsby": "4.22.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"

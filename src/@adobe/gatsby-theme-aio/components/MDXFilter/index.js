@@ -34,7 +34,6 @@ import {
 } from '@adobe/gatsby-theme-aio/src/utils';
 
 import { Footer } from '@adobe/gatsby-theme-aio/src/components/Footer';
-import { Contributors } from '@adobe/gatsby-theme-aio/src/components/Contributors';
 import { Feedback } from '@adobe/gatsby-theme-aio/src/components/Feedback';
 import { GitHubActions } from '@adobe/gatsby-theme-aio/src/components/GitHubActions';
 import { Breadcrumbs } from '@adobe/gatsby-theme-aio/src/components/Breadcrumbs';
@@ -323,10 +322,10 @@ export default ({ children, pageContext, query }) => {
                                 href: withPrefix(selectedTopPageMenu.href)
                               },
                               ...selectedSubPages.map((page) => page.title === selectedTopPage?.title && page.href === selectedTopPage?.href ? null :
-                                   ({
-                                    ...page,
-                                    href: withPrefix(cleanRootFix(page.href))
-                                  })
+                                ({
+                                  ...page,
+                                  href: withPrefix(cleanRootFix(page.href))
+                                })
                               )
                             ]}
                           />
@@ -338,73 +337,25 @@ export default ({ children, pageContext, query }) => {
                         margin-left: auto;
                         display: flex;
                         align-items: center;
-
                         @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
                           margin-left: 0;
                           margin-top: var(--spectrum-global-dimension-size-200);
                         }
                       `}>
-                      {siteMetadata && siteMetadata.githubIssue && siteMetadata.githubIssue.removeLogIssue ? null : <GitHubActions repository={repository} branch={branch} root={root} pagePath={pagePath} /> }
+                      {siteMetadata && siteMetadata.githubIssue && siteMetadata.githubIssue.removeLogIssue ? null : <GitHubActions repository={repository} branch={branch} root={root} pagePath={pagePath} />}
                     </div>
                   </div>
                 )}
-                <div
-                  css={css`
-                    display: block;
-                  `}>
+                <div css={css`display: block;`}>
                   {edition && <Edition name={edition} />}
                   {contributorLink && <Attribution name={contributorName} link={contributorLink} />}
+                  {filteredChildren}
+                  {isDocs && isFirstSubPage && <NextSteps pages={selectedPageSiblings} />}
+                  {isDocs && <NextPrev nextPage={nextPage} previousPage={previousPage} />}
+                  {!isDiscovery && <Feedback />}
                 </div>
-
-                {filteredChildren}
-
-                {isDocs && isFirstSubPage && <NextSteps pages={selectedPageSiblings} />}
-
-                {isDocs && <NextPrev nextPage={nextPage} previousPage={previousPage} />}
-
-                {!isDiscovery && (
-                  <div
-                    css={css`
-                      display: flex;
-                      flex-wrap: wrap;
-                      align-items: center;
-                      justify-content: space-between;
-                      margin-bottom: var(--spectrum-global-dimension-size-200);
-                      position: sticky;
-                      bottom: 3px;
-                      background: white;
-                      border: 1px solid;
-                      border-color: lightgray;
-                      border-radius: 4px;
-                      padding: .75rem;
-                      box-shadow: 5px 5px 5px gray;
-                    `}>
-                    <div>
-                      <Contributors
-                        repository={repository}
-                        branch={branch}
-                        root={root}
-                        pagePath={pagePath}
-                        contributors={contributors}
-                        externalContributors={pageContext?.frontmatter?.contributors}
-                        date={
-                          contributors[0]?.date
-                            ? new Date(contributors[0].date).toLocaleDateString()
-                            : ""
-                        }
-                      />
-                    </div>
-                    <div
-                      css={css`
-                        @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
-                          margin-top: var(--spectrum-global-dimension-size-200);
-                        }
-                      `}>
-                      <Feedback />
-                    </div>
-                  </div>
-                )}
               </div>
+
               {hasOnThisPage && <OnThisPage tableOfContents={tableOfContents} />}
               {resourcesChild && resourcesChild}
             </div>
