@@ -29,23 +29,21 @@ Some notes about the configurable product payload example:
 *  The `visibility` is set to `1`, indicating the simple product should not be displayed on the store.
 *  The `price` and `size` attributes are specified.
 
- Although it's not required, the simple product payload also includes `stock_item` information. By default, the Luma store hides out-of-stock items, so adding stock will make the Champ Tee visible on the website.
+Although it's not required, the simple product payload also includes `stock_item` information. By default, the Luma store hides out-of-stock items, so adding stock will make the Champ Tee visible on the website.
 
- <InlineAlert variant="info" slots="text"/>
+<InlineAlert variant="info" slots="text" />
 
 Before you use this code sample, verify that the attribute values are the same in your installation. See [Get the list of attributes defined in an attribute searchCriteria](/rest/tutorials/configurable-product/plan-product/#get-the-list-of-attributes-defined-in-an-attribute-searchcriteria ) for more information.
 
- <InlineAlert variant="info" slots="text"/>
+**Endpoint:**
 
-The payload contains both the configurable product and the simple products.
+`POST <host>/rest/default/async/bulk/V1/products`
 
- **Endpoint:**
-
- `POST <host>/rest/default/async/bulk/V1/products`
-
- <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
 #### Payload
+
+The payload contains both the configurable product and the simple products.
 
  ```json
 [{
