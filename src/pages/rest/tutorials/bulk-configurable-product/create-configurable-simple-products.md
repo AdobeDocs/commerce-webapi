@@ -29,7 +29,7 @@ Some notes about the configurable product payload example:
 *  The `visibility` is set to `1`, indicating the simple product should not be displayed on the store.
 *  The `price` and `size` attributes are specified.
 
-Although it's not required, the simple product payload also includes `stock_item` information. By default, the Luma store hides out-of-stock items, so adding stock will make the Champ Tee visible on the website.
+Although it is not required, the simple product payload includes `stock_item` information. By default, the Luma store hides out-of-stock items, so adding stock makes the Champ Tee visible on the website.
 
 <InlineAlert variant="info" slots="text" />
 
