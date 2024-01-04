@@ -48,7 +48,7 @@ POST http://domain.com/rest/default/V1/products
         {
           "option_id": 0,
           "position": 1,
-          "sku": "compuer-ram",
+          "sku": "computer-ram",
           "title": "RAM",
           "type": "select",
           "required": true,
