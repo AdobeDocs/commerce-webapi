@@ -9,8 +9,6 @@ The `createCompany` mutation creates a company at the request of either a custom
 
 The company administrator cannot log in or perform additional company-related tasks until an administrator approves the request to create a company.
 
-This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
-
 ## Syntax
 
 ```graphql
