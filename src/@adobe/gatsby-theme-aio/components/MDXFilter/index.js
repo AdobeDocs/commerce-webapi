@@ -377,7 +377,6 @@ export default ({ children, pageContext, query }) => {
                       border-color: lightgray;
                       border-radius: 4px;
                       padding: .75rem;
-                      box-shadow: 5px 5px 5px gray;
                     `}>
                     <div>
                       <Contributors
