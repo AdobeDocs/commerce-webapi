@@ -61,7 +61,9 @@ mutation {
     "createPaymentOrder": {
       "id": "9SA28234K9340625D",
       "mp_order_id": "mp-order-8b0488f9-46c5-4640-b577-c5f7d90cf224",
-      "status": "CREATED"
+      "status": "CREATED",
+      "amount": 50,
+      "currency_code": "USD"
     }
   }
 }
