@@ -92,4 +92,4 @@ Attribute |  Data Type | Description
 `amount` | Float | The amount of the payment order
 `currency_code` | String | The currency code of the payment order
 
-See [Google Pay currency codes](https://developers.google.com/adsense/management/appendix/currencies) documentation for more information.
+See [PayPal currency codes](https://developer.paypal.com/reference/currency-codes/) documentation for more information.
