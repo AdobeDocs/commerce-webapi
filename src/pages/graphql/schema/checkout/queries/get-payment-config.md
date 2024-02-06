@@ -13,6 +13,7 @@ The `getPaymentConfig` query returns the payment configuration details from loca
 The query can return details about the following supported payment methods in [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/payments-checkout/payments-options.html): :
 
 * Apple Pay
+* Google Pay
 * PayPal Hosted Fields
 * PayPal Smart Buttons
 
@@ -100,6 +101,24 @@ The following example runs the `getPaymentConfig` query for a `location: CHECKOU
                     tagline
                     height
                     use_default_height
+                }
+            }
+            google_pay {
+                payment_source
+                code
+                title
+                payment_intent
+                sort_order
+                sdk_params {
+                    name
+                    value
+                }
+                is_visible
+                button_styles {
+                    color
+                    height
+                    size_mode
+                    type
                 }
             }
         }
@@ -205,6 +224,26 @@ The following example runs the `getPaymentConfig` query for a `location: CHECKOU
                         "tagline": false
                     }
                 }
+                "google_pay": {
+                    "payment_source": "googlepay",
+                    "code": "payment_services_paypal_google_pay",
+                    "title": "Google Pay",
+                    "payment_intent": "authorize",
+                    "sort_order": "0",
+                    "sdk_params": [
+                        {
+                            "name": "src",
+                            "value": "https://www.paypal.com/sdk/js?client-id=..."
+                        }
+                    ],
+                    "is_visible": true,
+                    "button_styles": {
+                        "color": "default",
+                        "height": 10,
+                        "size_mode": "fill",
+                        "type": "buy"
+                    }
+                }
             }
         }
     }
@@ -226,6 +265,7 @@ The `PaymentConfigOutput` contains details about each configured payment method:
 Attribute |  Data Type | Description
 --- | --- | ---
 `ApplePayConfig` | String! | ApplePay payment method configuration
+`GooglePayConfig` | String! | GooglePay payment method configuration
 `HostedFieldsConfig` | String! | PayPal Hosted fields payment method configuration
 `SmartButtonsConfig` | String! | PayPal Smart Buttons payment method configuration
 
@@ -247,6 +287,7 @@ Attribute |  Data Type | Description
 This interface also has the following implementations:
 
 * ApplePayConfig
+* GooglePayConfig
 * HostedFieldsConfig
 * SmartButtonsConfig
 
@@ -268,6 +309,31 @@ Attribute | Data Type | Description
 
 See [Payment options](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/payments-checkout/payments-options.html) for more information.
 
+### `GooglePayConfig` attributes
+
+The `GooglePayConfig` payment method configuration contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`code` | String | The payment method code as defined in the payment gateway
+`is_visible` | Boolean | Indicates whether the payment method is shown
+`payment_intent` | String | Defines the payment intent. The possible values are `Authorize` or `Capture`
+`payment_source` | String | The identifiable payment source for the payment method
+`sdk_params` | SDKParams | PayPal parameters required to load the PayPal JavaScript SDK
+`sort_order` | String | The relative order the payment method is displayed on the checkout page
+`title` | String! | The display name of the payment method
+
+The `GooglePayConfig` payment method configuration also has a `button_styles` object containing the following attributes:
+
+Attribute | Data Type | Description
+--- | --- | ---
+`color` | String | The button color
+`height` | Int | The button height in pixels
+`size_mode` | String | Defines the button size mode. The possible values are `static` or `fill`
+`type` | String | Defines the button type. The possible values are `book`, `buy`, `checkout`, `donate`, `order`, `pay`, `plain`, and `subscribe`
+
+See [Google Pay API request object options](https://developers.google.com/pay/api/web/reference/request-objects) documentation for more information.
+
 ### `HostedFieldsConfig` attributes
 
 The `HostedFieldsConfig` payment method configuration contains the following attributes:
@@ -276,7 +342,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `cc_vault_code` | String | The vault payment method code. Hosted fields only works with credit cards (cc)
 `is_vault_enabled` | Boolean | Indicates whether card vaulting is enabled
-`payment_source` | String | The identifiable payment source for the payment method. The possible values are credit card (cc), PayPal (paypal), and Apple Pay (applepay)
+`payment_source` | String | The identifiable payment source for the payment method. The possible values are credit card (cc), PayPal (paypal), GooglePay (googlepay), and Apple Pay (applepay)
 `requires_card_details` | Boolean | Indicates whether card and bin details are required. This value is true when the Signifyd integration is enabled for hosted fields
 `three_ds` | Boolean | Indicates whether 3DS mode is enabled
 
