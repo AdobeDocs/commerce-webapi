@@ -264,8 +264,8 @@ The `PaymentConfigOutput` contains details about each configured payment method:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`ApplePayConfig` | String! | ApplePay payment method configuration
-`GooglePayConfig` | String! | GooglePay payment method configuration
+`ApplePayConfig` | String! | Apple Pay payment method configuration
+`GooglePayConfig` | String! | Google Pay payment method configuration
 `HostedFieldsConfig` | String! | PayPal Hosted fields payment method configuration
 `SmartButtonsConfig` | String! | PayPal Smart Buttons payment method configuration
 
@@ -342,7 +342,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `cc_vault_code` | String | The vault payment method code. Hosted fields only works with credit cards (cc)
 `is_vault_enabled` | Boolean | Indicates whether card vaulting is enabled
-`payment_source` | String | The identifiable payment source for the payment method. The possible values are credit card (cc), PayPal (paypal), GooglePay (googlepay), and Apple Pay (applepay)
+`payment_source` | String | The identifiable payment source for the payment method. The possible values are credit card (cc), PayPal (paypal), Google Pay (googlepay), and Apple Pay (applepay)
 `requires_card_details` | Boolean | Indicates whether card and bin details are required. This value is true when the Signifyd integration is enabled for hosted fields
 `three_ds` | Boolean | Indicates whether 3DS mode is enabled
 
