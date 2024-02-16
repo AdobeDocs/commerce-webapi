@@ -117,7 +117,6 @@ The following example runs the `getPaymentConfig` query for a `location: CHECKOU
                 button_styles {
                     color
                     height
-                    size_mode
                     type
                 }
             }
@@ -229,7 +228,7 @@ The following example runs the `getPaymentConfig` query for a `location: CHECKOU
                     "code": "payment_services_paypal_google_pay",
                     "title": "Google Pay",
                     "payment_intent": "authorize",
-                    "sort_order": "0",
+                    "sort_order": "20",
                     "sdk_params": [
                         {
                             "name": "src",
@@ -240,7 +239,6 @@ The following example runs the `getPaymentConfig` query for a `location: CHECKOU
                     "button_styles": {
                         "color": "default",
                         "height": 10,
-                        "size_mode": "fill",
                         "type": "buy"
                     }
                 }
@@ -329,8 +327,7 @@ Attribute | Data Type | Description
 --- | --- | ---
 `color` | String | The button color
 `height` | Int | The button height in pixels
-`size_mode` | String | Defines the button size mode. The possible values are `static` or `fill`
-`type` | String | Defines the button type. The possible values are `book`, `buy`, `checkout`, `donate`, `order`, `pay`, `plain`, and `subscribe`
+`type` | String | Defines the button type. The possible values are `buy`, `checkout`, `order`, `pay`, and `plain`
 
 See [Google Pay API request object options](https://developers.google.com/pay/api/web/reference/request-objects) documentation for more information.
 
