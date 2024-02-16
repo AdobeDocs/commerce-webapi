@@ -52,7 +52,7 @@ query {
                     "params": [
                         {
                             "name": "src",
-                            "value": "https:\/\/www.paypal.com\/sdk\/js?client-id=AeFUI2PCqy7MicQ1gLbJf_8T7XUlEG51Pdd7sn2LE3d0_qAVhVBm4VOpPGmV08S9qsMCPXSCiBslhV53&intent=capture&locale=en_US&merchant-id=2PZE7VHLY4B94&currency=USD&commit=false&disable-funding=bancontact,boleto,boletobancario,blik,eps,giropay,ideal,itau,mercadopago,multibanco,mybank,oxxo,payu,p24,satispay,sepa,sofort,trustly,wechatpay,applepay&enable-funding=card,paylater&components=buttons"
+                            "value": "https:\/\/www.paypal.com\/sdk\/js?client-id=..."
                         }
                     ]
                 },
@@ -61,7 +61,7 @@ query {
                     "params": [
                         {
                             "name": "src",
-                            "value": "https:\/\/www.paypal.com\/sdk\/js?client-id=AeFUI2PCqy7MicQ1gLbJf_8T7XUlEG51Pdd7sn2LE3d0_qAVhVBm4VOpPGmV08S9qsMCPXSCiBslhV53&intent=capture&locale=en_US&merchant-id=2PZE7VHLY4B94&currency=USD&commit=false&disable-funding=bancontact,boleto,boletobancario,blik,eps,giropay,ideal,itau,mercadopago,multibanco,mybank,oxxo,payu,p24,satispay,sepa,sofort,trustly,wechatpay,credit,card&enable-funding=applepay&components=buttons"
+                            "value": "https:\/\/www.paypal.com\/sdk\/js?client-id=..."
                         }
                     ]
                 },
@@ -70,7 +70,7 @@ query {
                     "params": [
                         {
                             "name": "src",
-                            "value": "https:\/\/www.paypal.com\/sdk\/js?client-id=AeFUI2PCqy7MicQ1gLbJf_8T7XUlEG51Pdd7sn2LE3d0_qAVhVBm4VOpPGmV08S9qsMCPXSCiBslhV53&intent=authorize&locale=en_US&merchant-id=2PZE7VHLY4B94&currency=USD&disable-funding=bancontact,boleto,boletobancario,blik,eps,giropay,ideal,itau,mercadopago,multibanco,mybank,oxxo,payu,p24,satispay,sepa,sofort,trustly,wechatpay&components=googlepay"
+                            "value": "https:\/\/www.paypal.com\/sdk\/js?client-id=..."
                         }
                     ]
                 },
@@ -79,7 +79,7 @@ query {
                     "params": [
                         {
                             "name": "src",
-                            "value": "https:\/\/www.paypal.com\/sdk\/js?client-id=AeFUI2PCqy7MicQ1gLbJf_8T7XUlEG51Pdd7sn2LE3d0_qAVhVBm4VOpPGmV08S9qsMCPXSCiBslhV53&intent=capture&locale=en_US&merchant-id=2PZE7VHLY4B94&currency=USD&disable-funding=bancontact,boleto,boletobancario,blik,eps,giropay,ideal,itau,mercadopago,multibanco,mybank,oxxo,payu,p24,satispay,sepa,sofort,trustly,wechatpay&components=hosted-fields"
+                            "value": "https:\/\/www.paypal.com\/sdk\/js?client-id=..."
                         },
                         {
                             "name": "data-partner-attribution-id",
