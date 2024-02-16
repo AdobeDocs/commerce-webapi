@@ -321,6 +321,8 @@ Attribute |  Data Type | Description
 `sort_order` | String | The relative order the payment method is displayed on the checkout page
 `title` | String! | The display name of the payment method
 
+The possible values for `payment_source` are credit card (cc), PayPal (paypal), Google Pay (googlepay), and Apple Pay (applepay) depending on the payment method.
+
 The `GooglePayConfig` payment method configuration also has a `button_styles` object containing the following attributes:
 
 Attribute | Data Type | Description
@@ -339,7 +341,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `cc_vault_code` | String | The vault payment method code. Hosted fields only works with credit cards (cc)
 `is_vault_enabled` | Boolean | Indicates whether card vaulting is enabled
-`payment_source` | String | The identifiable payment source for the payment method. The possible values are credit card (cc), PayPal (paypal), Google Pay (googlepay), and Apple Pay (applepay)
+`payment_source` | String | The identifiable payment source for the payment method
 `requires_card_details` | Boolean | Indicates whether card and bin details are required. This value is true when the Signifyd integration is enabled for hosted fields
 `three_ds` | Boolean | Indicates whether 3DS mode is enabled
 
