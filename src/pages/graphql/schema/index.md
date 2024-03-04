@@ -6,7 +6,7 @@ title: GraphQL schema
 
 We have reorganized the Adobe Commerce and Magento Open Source GraphQL reference documentation to make it easier to find related queries, mutations, interfaces, and other data types. Use the left navigation to review usage information and examples for each entity in the Commerce schema.
 
-<iframe width="100%" height="300px" frameBorder="0" src="/graphql-schema.svg"></iframe>
+<iframe width="100%" height="300px" frameBorder="0" src="/commerce/webapi/graphql-schema.svg"></iframe>
 
 <InlineAlert variant="info" slots="text" />
 
