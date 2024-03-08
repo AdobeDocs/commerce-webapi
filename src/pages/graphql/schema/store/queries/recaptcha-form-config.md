@@ -38,6 +38,8 @@ query {
 
 **Response:**
 
+If reCaptcha is enabled for particular form type, there are all the configuration details in the response:
+
 ```json
 {
   "data": {
@@ -57,6 +59,20 @@ query {
   }
 }
 ```
+
+If reCaptcha is disabled for the form, the response provides the following information:
+
+```json
+{
+  "data": {
+    "recaptchaFormConfig": {
+      "is_enabled": false,
+      "configurations": null
+    }
+  }
+}
+```
+
 
 ## Input attributes
 
