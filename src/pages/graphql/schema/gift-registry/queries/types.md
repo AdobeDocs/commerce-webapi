@@ -1,5 +1,5 @@
 ---
-title: giftRegistryTypes query | Commerce Web APIs
+title: giftRegistryTypes query
 edition: ee
 contributor_name: Zilker Technology
 contributor_link: https://www.ztech.io/
@@ -14,6 +14,10 @@ The `giftRegistryTypes` query returns a list of available gift registry types.
 ```graphql
 giftRegistryTypes: [GiftRegistryType]
 ```
+
+## Reference
+
+The [`giftRegistryTypes`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-giftRegistryTypes) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -137,6 +141,6 @@ Attribute |  Data Type | Description
 
 ### GiftRegistryDynamicAttributeMetadataInterface attributes
 
-import GiftRegistryMetadata from '/src/pages/_includes/graphql/gift-registry-dynamic-attribute-metadata-interface.md'
+import GiftRegistryMetadata from '/src/_includes/graphql/gift-registry-dynamic-attribute-metadata-interface.md'
 
 <GiftRegistryMetadata />

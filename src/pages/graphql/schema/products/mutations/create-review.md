@@ -1,5 +1,5 @@
 ---
-title: createProductReview mutation | Commerce Web APIs
+title: createProductReview mutation
 ---
 
 # createProductReview mutation
@@ -118,7 +118,7 @@ Attribute |  Data Type | Description
 
 ### ProductReview attributes
 
-import ProductReview from '/src/pages/_includes/graphql/product-review.md'
+import ProductReview from '/src/_includes/graphql/product-review.md'
 
 <ProductReview />
 

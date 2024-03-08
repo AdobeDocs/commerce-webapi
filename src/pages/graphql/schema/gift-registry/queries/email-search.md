@@ -1,5 +1,5 @@
 ---
-title: giftRegistryEmailSearch query | Commerce Web APIs
+title: giftRegistryEmailSearch query
 edition: ee   
 ---
 
@@ -12,6 +12,10 @@ The `giftRegistryEmailSearch` query returns a list of gift registries that match
 ```graphql
 giftRegistryEmailSearch(email: String!): [GiftRegistrySearchResult]
 ```
+
+## Reference
+
+The [`giftRegistryEmailSearch`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-giftRegistryEmailSearch) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -48,17 +52,3 @@ query{
   }
 }
 ```
-
-## Input attributes
-
-The `giftRegistryEmailSearch` query requires the `email` attribute as input.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`email` | String | The registrant's email address
-
-## Output attributes
-
-import GiftRegistrySearchResult from '/src/pages/_includes/graphql/gift-registry-search-result.md'
-
-<GiftRegistrySearchResult />

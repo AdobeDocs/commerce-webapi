@@ -1,6 +1,8 @@
 ---
-title: Run Graphql queries and mutations | Commerce Web APIs
-description:
+title: Run Graphql queries and mutations
+description: Learn about the structure of queries and mutations and how to use variables.
+keywords:
+  - GraphQL
 ---
 
 # Run Graphql queries and mutations
@@ -271,3 +273,7 @@ The variables are defined separately.
   "password": "Password1"
 }
 ```
+
+## Timestamps
+
+Commerce stores timestamps as UTC (Coordinated Universal time) values and returns timestamp fields in query or mutation responses in this format. You must implement custom code to convert the timestamps to other values.

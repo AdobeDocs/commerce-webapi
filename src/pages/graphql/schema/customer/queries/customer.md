@@ -1,18 +1,19 @@
 ---
-title: customer query | Commerce Web APIs
+title: customer query
 ---
 
-import BetaNote1 from '/src/pages/_includes/graphql/notes/beta.md'
-import BetaNote2 from '/src/pages/_includes/graphql/notes/beta.md'
-import BetaNote3 from '/src/pages/_includes/graphql/notes/beta.md'
-import BetaNote4 from '/src/pages/_includes/graphql/notes/beta.md'
-import BetaNote5 from '/src/pages/_includes/graphql/notes/beta.md'
-import CompareListOutput from '/src/pages/_includes/graphql/compare-list-output.md'
-import CustomerOrdersOutput from '/src/pages/_includes/graphql/customer-orders-output.md'
-import ProductReview from '/src/pages/_includes/graphql/product-review.md'
-import RequisitionList from '/src/pages/_includes/graphql/requisition-list.md'
-import Return from '/src/pages/_includes/graphql/return.md'
-import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
+import BetaNote1 from '/src/_includes/graphql/notes/beta.md'
+import BetaNote2 from '/src/_includes/graphql/notes/beta.md'
+import BetaNote3 from '/src/_includes/graphql/notes/beta.md'
+import BetaNote4 from '/src/_includes/graphql/notes/beta.md'
+import BetaNote5 from '/src/_includes/graphql/notes/beta.md'
+import CompareListOutput from '/src/_includes/graphql/compare-list-output.md'
+import CustomerAddressOutput from '/src/_includes/graphql/customer-address-output-24.md'
+import CustomerOrdersOutput from '/src/_includes/graphql/customer-orders-output.md'
+import ProductReview from '/src/_includes/graphql/product-review.md'
+import RequisitionList from '/src/_includes/graphql/requisition-list.md'
+import Return from '/src/_includes/graphql/return.md'
+import Wishlist from '/src/_includes/graphql/wishlist.md'
 
 # customer query
 
@@ -1203,54 +1204,7 @@ Attribute |  Data Type | Description
 
 ### CustomerAddress attributes
 
-The values assigned to attributes such as `firstname` and `lastname` in this object may be different from those defined in the `Customer` object.
-
-The `CustomerAddress` output returns the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`city` | String | The city or town
-`company` | String | The customer's company
-`country_code` | CountryCodeEnum | The customer's country
-`country_id` | String | Deprecated. Use `country_code` instead. The customer's country
-`custom_attributes` | [CustomerAddressAttribute](#customeraddressattribute-attributes) | Deprecated. Use `custom_attributesV2` instead
-`custom_attributesV2` | [AttributeValueInterface](#attributevalueinterface-attributes) | Custom attributes assigned to the customer address
-`customer_id` | Int | Deprecated. This attribute is not applicable for GraphQL. The ID assigned to the customer
-`default_billing` | Boolean | Indicates whether the address is the default billing address
-`default_shipping` | Boolean | Indicates whether the address is the default shipping address
-`extension_attributes` | [CustomerAddressAttribute](#customeraddressattribute-attributes) | Address extension attributes
-`fax` | String | The fax number
-`firstname` | String | The first name of the person associated with the shipping/billing address
-`id` | Int | The ID assigned to the address object
-`lastname` | String | The family name of the person associated with the shipping/billing address
-`middlename` | String | The middle name of the person associated with the shipping/billing address
-`postcode` | String | The customer's ZIP or postal code
-`prefix` | String | An honorific, such as Dr., Mr., or Mrs.
-`region` | [CustomerAddressRegion](#customeraddressregion-attributes) | An object that defines the customer's state or province
-`region_id` | Int | The unique ID for a pre-defined region
-`street` | [String] | An array of strings that define the street number and name
-`suffix` | String | A value such as Sr., Jr., or III
-`telephone` | String | The telephone number
-`vat_id` | String | The customer's Tax/VAT number (for corporate customers)
-
-#### CustomerAddressAttribute attributes
-
-The `CustomerAddressAttribute` output data type has been deprecated because the contents are not applicable for GraphQL. It can contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`attribute_code` | String | Attribute code
-`value` | String | Attribute value
-
-#### CustomerAddressRegion attributes
-
-The `customerAddressRegion` output returns the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`region` | String | The state or province name
-`region_code` | String | The address region code
-`region_id` | Int | The unique ID for a pre-defined region
+<CustomerAddressOutput />
 
 ### orders input attributes
 

@@ -1,5 +1,5 @@
 ---
-title: Attributes | Commerce Web APIs
+title: Attributes
 ---
 
 # Attributes

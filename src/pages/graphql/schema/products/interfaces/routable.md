@@ -1,5 +1,5 @@
 ---
-title: RoutableInterface attributes | Commerce Web APIs
+title: RoutableInterface attributes
 ---
 
 # RoutableInterface attributes
@@ -19,7 +19,7 @@ Some entities are "routable", meaning that they have URLs and can serve as the m
 
 ## RoutableInterface attributes
 
-import RoutableInterface from '/src/pages/_includes/graphql/routable-interface.md'
+import RoutableInterface from '/src/_includes/graphql/routable-interface.md'
 
 <RoutableInterface />
 
@@ -187,7 +187,7 @@ The following query returns information about the specified URL key. The query c
 
 ## Routable URL
 
-import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
+import BetaNote from '/src/_includes/graphql/notes/beta.md'
 
 <BetaNote />
 

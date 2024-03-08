@@ -1,5 +1,5 @@
 ---
-title: removeGiftRegistry mutation | Commerce Web APIs
+title: removeGiftRegistry mutation
 edition: ee
 ---
 
@@ -14,6 +14,10 @@ This mutation requires a valid [customer authentication token](../../customer/mu
 ```graphql
 removeGiftRegistry ( giftRegistryUid ID! ) RemoveGiftRegistryOutput
 ```
+
+## Reference
+
+The [`removeGiftRegistry`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-removeGiftRegistry) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -40,19 +44,3 @@ mutation{
   }
 }
 ```
-
-## Input attributes
-
-The `removeGiftRegistry` mutation requires the following input.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`giftRegistryUid` | ID! | The unique ID of the gift registry to update
-
-## Output attributes
-
-The `RemoveGiftRegistryOutput` output object contains the following attribute:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`success` | Boolean! | Indicates whether the gift registry was successfully deleted

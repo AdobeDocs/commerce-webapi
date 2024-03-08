@@ -1,5 +1,5 @@
 ---
-title: deleteWishlist mutation | Commerce Web APIs
+title: deleteWishlist mutation
 edition: ee
 ---
 
@@ -16,6 +16,10 @@ mutation {
   deleteWishlist(wishlistId: ID!): DeleteWishlistOutput
 }
 ```
+
+## Reference
+
+The [`deleteWishlist`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-deleteWishlist) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -59,26 +63,3 @@ mutation{
   }
 }
 ```
-
-## Input attributes
-
-The `deleteWishlist` mutation requires the following input.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`wishlistId` | ID! | The ID of the wish list to delete
-
-## Output attributes
-
-The DeleteWishlistOutput object can contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`status` | Boolean! | Indicates whether the wish list was deleted
-`wishlists` | [Wishlist]! | An array of wish lists that have not been deleted
-
-### Wishlist attributes
-
-import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
-
-<Wishlist />

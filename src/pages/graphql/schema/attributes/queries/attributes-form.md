@@ -1,8 +1,8 @@
 ---
-title: attributesForm query | Commerce Web APIs
+title: attributesForm query
 ---
 
-import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
+import BetaNote from '/src/_includes/graphql/notes/beta.md'
 
 <BetaNote />
 
@@ -12,7 +12,9 @@ The `attributesForm` query retrieves EAV attributes associated with customer and
 
 These forms are visible when using the Admin to create or edit a customer or customer address address (**Stores** > Attributes > **Customer** or **Customer Address**).
 
-**Note:** For `region_id` and `country_id` attributes information use queries available in the `DirectoryGraphQl` module.
+<InlineAlert variant="info" slots="text" />
+
+Use the [country](../../store/queries/country.md) and [countries](../../store/queries/countries.md) mutations to retrieve information about the region_id and country_id attributes.
 
 The following table maps the display names of the applicable forms to values that you can specify as a `formCode` value.
 

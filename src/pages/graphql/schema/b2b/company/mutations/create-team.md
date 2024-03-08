@@ -1,5 +1,5 @@
 ---
-title: createCompanyTeam mutation | Commerce Web APIs
+title: createCompanyTeam mutation
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 edition: b2b
@@ -125,6 +125,6 @@ Attribute |  Data Type | Description
 
 ### CompanyTeam attributes
 
-import CompanyTeam from '/src/pages/_includes/graphql/company-team.md'
+import CompanyTeam from '/src/_includes/graphql/company-team.md'
 
 <CompanyTeam />

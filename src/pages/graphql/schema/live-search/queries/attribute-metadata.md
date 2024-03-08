@@ -1,5 +1,5 @@
 ---
-title: attributeMetadata query | Commerce Web APIs
+title: attributeMetadata query
 edition: ee
 description: Describes how to construct and use the Live Search attributeMetadata query.
 ---
@@ -16,7 +16,7 @@ The `attributeMetadata` query returns a list of product attribute codes that can
 
 You must specify the following HTTP headers to run this query.
 
-import Docs from '/src/pages/_includes/graphql/live-search-headers.md'
+import Docs from '/src/_includes/graphql/live-search-headers.md'
 
 <Docs />
 

@@ -1,6 +1,8 @@
 ---
 title: Search using REST endpoints
 description: How to search using REST endpoints with examples
+keywords:
+  - REST
 --- 
 import * as Vars from '../../../data/vars.js';
 
@@ -231,7 +233,7 @@ This example shows how to use search criteria to determine the sort order and at
 
 **Endpoint:**
 
-`GET <host>/rest/<store_code>/V1/orders/`
+`GET <host>/rest/V1/orders/`
 
 **Headers:**
 

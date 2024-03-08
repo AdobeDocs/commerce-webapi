@@ -1,5 +1,5 @@
 ---
-title: createCompany mutation | Commerce Web APIs
+title: createCompany mutation
 edition: b2b
 ---
 
@@ -149,7 +149,7 @@ Attribute |  Data Type | Description
 
 The `CreateCompanyOutput` object contains the `Company` object.
 
-import Company from '/src/pages/_includes/graphql/company.md'
+import Company from '/src/_includes/graphql/company.md'
 
 <Company />
 

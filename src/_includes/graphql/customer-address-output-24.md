@@ -1,5 +1,3 @@
-### CustomerAddress attributes
-
 The values assigned to attributes such as `firstname` and `lastname` in this object may be different from those defined in the `Customer` object.
 
 The `CustomerAddress` output returns the following attributes:
@@ -32,7 +30,7 @@ Attribute |  Data Type | Description
 
 ### AttributeValueInterface attributes
 
-import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
+import BetaNote from '/src/_includes/graphql/notes/beta.md'
 
 <BetaNote />
 

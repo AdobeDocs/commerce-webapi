@@ -1,5 +1,5 @@
 ---
-title: countries query | Commerce Web APIs
+title: countries query
 ---
 
 # countries query
@@ -11,6 +11,10 @@ Use the [country](country.md) query if you want to retrieve information about a 
 ## Syntax
 
 `{countries {Countries}}`
+
+## Reference
+
+The [`countries`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-countries) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -133,14 +137,6 @@ In this example, the response is intentionally truncated. The `available_regions
   }
 }
 ```
-
-## Output attributes
-
-The query returns an array of `Country` objects.
-
-import CountryOutput from '/src/pages/_includes/graphql/country-output.md'
-
-<CountryOutput />
 
 ## Related topics
 

@@ -1,11 +1,11 @@
 ---
-title: createCustomerAddress mutation | Commerce Web APIs
+title: createCustomerAddress mutation
 ---
 
-import Example246 from '/src/pages/_includes/graphql/examples/create-address-246.md'
-import Example247 from '/src/pages/_includes/graphql/examples/create-address-247beta.md'
-import CustomerAddressInput from '/src/pages/_includes/graphql/customer-address-input-24.md'
-import CustomerAddressOutput from '/src/pages/_includes/graphql/customer-address-output-24.md'
+import Example246 from '/src/_includes/graphql/examples/create-address-246.md'
+import Example247 from '/src/_includes/graphql/examples/create-address-247beta.md'
+import CustomerAddressInput from '/src/_includes/graphql/customer-address-input-24.md'
+import CustomerAddressOutput from '/src/_includes/graphql/customer-address-output-24.md'
 
 # createCustomerAddress mutation
 
@@ -40,7 +40,9 @@ Attribute |  Data Type | Description
 
 ## Output attributes
 
-The `createCustomerAddress` mutation returns the following attributes:
+The `createCustomerAddress` mutation returns a `CustomerAddress` object.
+
+### CustomerAddress attributes
 
 <CustomerAddressOutput />
 

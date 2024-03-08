@@ -1,5 +1,5 @@
 ---
-title: removeGiftRegistryItems mutation | Commerce Web APIs
+title: removeGiftRegistryItems mutation
 edition: ee
 ---
 
@@ -21,6 +21,10 @@ mutation {
   }
 }
 ```
+
+## Reference
+
+The [`removeGiftRegistryItems`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-removeGiftRegistryItems) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -74,26 +78,3 @@ mutation{
   }
 }
 ```
-
-## Input attributes
-
-The `removeGiftRegistryItems` mutation requires the following input.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`giftRegistryUid` | ID! | The unique ID of a `GiftRegistry` object
-`itemsUid` | [ID!]! | An array of item IDs to remove
-
-## Output attributes
-
-The `RemoveGiftRegistryItemsOutput` output object contains the following attribute.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`gift_registry` | [GiftRegistry](#giftregistry-attributes) | The gift registry after removing items
-
-### GiftRegistry attributes
-
-import GiftRegistry from '/src/pages/_includes/graphql/gift-registry.md'
-
-<GiftRegistry />

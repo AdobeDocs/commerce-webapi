@@ -1,6 +1,9 @@
 ---
-title: Input limiting | Getting Started with Web APIs
+title: Input limiting
 description: Explains input limiting and other API security safeguards against denial-of-service (DoS) attacks.
+keywords:
+  - REST
+  - Security
 ---
 
 # Input limiting

@@ -1,5 +1,5 @@
 ---
-title: placeNegotiableQuoteOrder mutation | Commerce Web APIs
+title: placeNegotiableQuoteOrder mutation
 edition: b2b
 ---
 

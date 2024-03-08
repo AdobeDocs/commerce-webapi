@@ -1,5 +1,5 @@
 ---
-title: Purchase orders (B2B) | Commerce Web APIs
+title: Purchase orders (B2B)
 edition: b2b   
 ---
 

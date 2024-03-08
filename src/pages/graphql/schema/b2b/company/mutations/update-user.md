@@ -1,5 +1,5 @@
 ---
-title: updateCompanyUser mutation | Commerce Web APIs
+title: updateCompanyUser mutation
 edition: b2b
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
@@ -161,7 +161,7 @@ Attribute |  Data Type | Description
 
 ### Customer attributes
 
-import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
+import Customer from '/src/_includes/graphql/customer-output-24.md'
 
 <Customer />
 

@@ -1,5 +1,5 @@
 ---
-title: storeConfig query | Commerce Web APIs
+title: storeConfig query
 ---
 
 # storeConfig query
@@ -9,6 +9,10 @@ The `storeConfig` query defines information about a store's configuration. You c
 ## Syntax
 
 `storeConfig: StoreConfig`
+
+## Reference
+
+The [`storeConfig`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-storeConfig) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -240,8 +244,52 @@ The following query returns enumeration values that indicate the store's fixed p
 }
 ```
 
-## Output attributes
+### Query a store's order cancellation configuration
 
-import StoreConfig from '/src/pages/_includes/graphql/store-config.md'
+import BetaNote from '/src/_includes/graphql/notes/beta.md'
 
-<StoreConfig />
+<BetaNote />
+
+The following query returns the store's order cancellation settings, indicating if it is enabled and the available cancellation reasons.
+
+**Request:**
+
+```graphql
+ {
+    storeConfig {
+        order_cancellation_enabled
+        order_cancellation_reasons {
+            description
+        }
+    }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "storeConfig": {
+      "order_cancellation_enabled": true,
+      "order_cancellation_reasons": [
+        {
+          "description": "The item(s) are no longer needed"
+        },
+        {
+          "description": "The order was placed by mistake"
+        },
+        {
+          "description": "Item(s) not arriving within the expected timeframe"
+        },
+        {
+          "description": "Found a better price elsewhere"
+        },
+        {
+          "description": "Other"
+        }
+      ]
+    }
+  }
+}
+```

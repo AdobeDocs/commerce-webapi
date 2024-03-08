@@ -1,5 +1,9 @@
 ---
-title: PayPal Payments Advanced payment method | Commerce Web APIs
+title: PayPal Payments Advanced payment method
+description: Learn how to use the GraphQL API mutation for the PayPal Payments Advanced payment solution.
+keywords:
+  - GraphQL
+  - Payments
 ---
 
 # PayPal Payments Advanced payment method
@@ -16,7 +20,7 @@ The following diagram shows the workflow for placing an order when Payments Adva
 
 ![PayPal Payments Advanced sequence diagram](../../_images/graphql/paypal-payflow-link.svg)
 
-import PayflowLinkWorkflow from '/src/pages/_includes/graphql/payment-methods/payflow-link-workflow.md'
+import PayflowLinkWorkflow from '/src/_includes/graphql/payment-methods/payflow-link-workflow.md'
 
 <PayflowLinkWorkflow />
 
@@ -26,7 +30,7 @@ import PayflowLinkWorkflow from '/src/pages/_includes/graphql/payment-methods/pa
 
 When you set the payment method to PayPal Payments Advanced, you must set the `code` attribute to `payflow_advanced`. In addition, the payload must contain a `payflow_link` object, which defines the following attributes:
 
-import PayflowLinkAttributes from '/src/pages/_includes/graphql/payment-methods/payflow-link-attributes.md'
+import PayflowLinkAttributes from '/src/_includes/graphql/payment-methods/payflow-link-attributes.md'
 
 <PayflowLinkAttributes />
 

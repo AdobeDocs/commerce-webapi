@@ -1,5 +1,5 @@
 ---
-title: removeProductsFromWishlist mutation | Commerce Web APIs
+title: removeProductsFromWishlist mutation
 ---
 
 # removeProductsFromWishlist mutation
@@ -20,6 +20,10 @@ mutation {
   }
 }
   ```
+
+## Reference
+
+The [`removeProductsFromWishlist`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-removeProductsFromWishlist) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -136,36 +140,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `removeProductsFromWishlist` mutation requires the following input.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`wishlistId` | ID! | The ID of the customer's wish list
-`wishlistItemsIds`| [ID!]! | An array of wish list item IDs to be removed
-
-## Output attributes
-
-The `RemoveProductsFromWishlistOutput` object contains the customer's wish list and error message information.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`user_errors` | [WishListUserInputError!]! | An array of errors encountered while adding products to a wish list
-`wishlist` | Wishlist! | Contains the wish list with all items that were successfully added
-
-### Wishlist attributes
-
-import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
-
-<Wishlist />
-
-### WishListUserInputError attributes
-
-import WishlistUserInputErrors from '/src/pages/_includes/graphql/wishlist-user-input-errors.md'
-
-<WishlistUserInputErrors />
 
 ## Errors
 

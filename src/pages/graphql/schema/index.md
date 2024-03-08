@@ -1,5 +1,5 @@
 ---
-title: GraphQL schema | Commerce Web APIs
+title: GraphQL schema
 ---
 
 # GraphQL schema

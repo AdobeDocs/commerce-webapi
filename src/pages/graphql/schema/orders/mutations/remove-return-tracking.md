@@ -1,5 +1,5 @@
 ---
-title: removeReturnTracking mutation | Commerce Web APIs
+title: removeReturnTracking mutation
 ---
 
 # removeReturnTracking mutation
@@ -13,6 +13,10 @@ mutation: {
     removeReturnTracking(input: RemoveReturnTrackingInput!): RemoveReturnTrackingOutput
 }
 ```
+
+## Reference
+
+The [`removeReturnTracking`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-removeReturnTracking) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -76,28 +80,6 @@ mutation{
   }
 }
 ```
-
-## Input attributes
-
-The `RemoveReturnTrackingInput` object must contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`return_shipping_tracking_uid` | ID! | The encoded ID of the tracking item to delete
-
-## Output attributes
-
-The `RemoveReturnTrackingOutput` object contains the following attributes.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`return` | [Return](#return-object) | Contains details about the modified return
-
-### Return object
-
-import Return from '/src/pages/_includes/graphql/return.md'
-
-<Return />
 
 ## Related topics
 

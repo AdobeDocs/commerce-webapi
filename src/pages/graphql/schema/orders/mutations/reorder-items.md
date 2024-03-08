@@ -1,10 +1,10 @@
 ---
-title: reorderItems mutation | Commerce Web APIs
+title: reorderItems mutation
 ---
 
 # reorderItems mutation
 
-The `reorderItems` mutation allows a logged-in user to add all the products from a previous order into their cart. The **Stores** > Settings > **Sales** > **Sales** > **Reorder** > **Allow Reorder** field must be set to **Yes** to enable reorders. You must provide a customer authorization token with the call.
+The `reorderItems` mutation allows a logged-in user to add all the products from a previous order into their cart. The **Stores** > Settings > **Sales** > **Sales** > **Reorder** > **Allow Reorder** field must be set to **Yes** to enable reorders. You must provide a customer authorization token with the call. The customer associated with the authorization token must match the customer who placed the specified order.
 
 The mutation returns an error if it cannot add a product to the customer's cart:
 
@@ -21,6 +21,10 @@ The `reorderItems` mutation will not add any products to the cart if it encounte
 ## Syntax
 
 `mutation: {reorderItems(orderNumber: String!) {ReorderItemsOutput}}`
+
+## Reference
+
+The [`reorderItems`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-reorderItems) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -124,46 +128,6 @@ mutation{
   }
 }
 ```
-
-## Input attributes
-
-The `reorderItems` mutation requires a valid order number. The customer associated with the authorization token must match the customer who placed the specified order.
-
-Attribute | Type | Description
---- | --- | ---
-`orderNumber` | String! | The ID of the order to be used as the source for reordering products
-
-## Output attributes
-
-The `ReorderItemsOutput` object contains the following objects:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
-`userInputErrors` | [CheckoutUserInputError!](#checkoutuserinputerror-object) | An array of reordering errors
-
-### Cart object
-
-import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
-
-### userInputErrors object
-
-The `userInputErrors` object contains an array of errors encountered while attempting to reorder products.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`userInputErrors` |[CheckoutUserInputError]!| An array of reordering errors
-
-### CheckoutUserInputError object
-
-Attribute |  Data Type | Description
---- | --- | ---
-`message` | String! | A localized error message
-`path` | [String]! | The value for this mutation is `orderNumber`
 
 ## Related topics
 

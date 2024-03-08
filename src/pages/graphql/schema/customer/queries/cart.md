@@ -1,5 +1,5 @@
 ---
-title: customerCart query | Commerce Web APIs
+title: customerCart query
 ---
 
 # customerCart query
@@ -78,7 +78,7 @@ The `customerCart` query returns the `Cart` object.
 
 ### Cart object
 
-import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
+import CartObject from '/src/_includes/graphql/cart-object-24.md'
 
 <CartObject />
 

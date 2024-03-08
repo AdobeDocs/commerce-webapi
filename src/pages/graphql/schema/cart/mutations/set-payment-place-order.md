@@ -1,5 +1,5 @@
 ---
-title: setPaymentMethodAndPlaceOrder mutation | Commerce Web APIs
+title: setPaymentMethodAndPlaceOrder mutation
 contributor_name: Something Digital
 contributor_link: https://www.somethingdigital.com/
 ---
@@ -85,7 +85,7 @@ Attribute |  Data Type | Description
 
 ### PaymentMethodInput attributes
 
-import QuotePaymentInput from '/src/pages/_includes/graphql/quote-payment-input.md'
+import QuotePaymentInput from '/src/_includes/graphql/quote-payment-input.md'
 
 <QuotePaymentInput />
 

@@ -1,8 +1,10 @@
 ---
 title: Step 4. Create the personalization option
+description: In this step of the tutorial you will create the personalization option
 contributor_name: comwrap GmbH
 contributor_link: http://comwrap.com/
-description: In this step of the tutorial you will create the personalization option
+keywords:
+  - REST
 --- 
  
 # Step 4. Create the personalization option

@@ -1,5 +1,9 @@
 ---
-title: PayPal Payflow Pro payment method | Commerce Web APIs
+title: PayPal Payflow Pro payment method
+description: Learn how to use the GraphQL API mutation for the PayPal Payflow Pro payment solution.
+keywords:
+  - GraphQL
+  - Payments
 ---
 
 # PayPal Payflow Pro payment method

@@ -1,5 +1,5 @@
 ---
-title: Grouped product data types | Commerce Web APIs
+title: Grouped product data types
 ---
 
 # Grouped product data types
@@ -28,6 +28,6 @@ Attribute | Type | Description
 
 The following query returns information about downloadable product `24-WG085_Group`, which is defined in the sample data.
 
-import GroupedProductSample from '/src/pages/_includes/graphql/grouped-product-sample-24.md'
+import GroupedProductSample from '/src/_includes/graphql/grouped-product-sample-24.md'
 
 <GroupedProductSample />

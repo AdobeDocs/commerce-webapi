@@ -1,5 +1,5 @@
 ---
-title: setGuestEmailOnCart mutation | Commerce Web APIs
+title: setGuestEmailOnCart mutation
 ---
 
 # setGuestEmailOnCart mutation
@@ -64,7 +64,7 @@ Attribute |  Data Type | Description
 
 ### Cart object
 
-import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
+import CartObject from '/src/_includes/graphql/cart-object-24.md'
 
 <CartObject />
 

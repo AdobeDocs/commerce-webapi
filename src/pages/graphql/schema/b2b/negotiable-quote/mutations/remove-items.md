@@ -1,5 +1,5 @@
 ---
-title: removeNegotiableQuoteItems mutation | Commerce Web APIs
+title: removeNegotiableQuoteItems mutation
 edition: b2b
 ---
 
@@ -123,6 +123,6 @@ Attribute | Data Type | Description
 
 ### NegotiableQuote attributes
 
-import NegotiableQuote from '/src/pages/_includes/graphql/negotiable-quote.md'
+import NegotiableQuote from '/src/_includes/graphql/negotiable-quote.md'
 
 <NegotiableQuote />

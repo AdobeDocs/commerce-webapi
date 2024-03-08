@@ -1,5 +1,5 @@
 ---
-title: createCustomer mutation | Commerce Web APIs
+title: createCustomer mutation
 ---
 
 # createCustomer mutation
@@ -64,7 +64,7 @@ mutation {
 
 The following table lists the attributes you can use as input for the `createCustomer` mutation. The [Customer attributes](../../customer/queries/customer.md#customer-attributes) table lists the attributes the application returns.
 
-import CreateCustomer from '/src/pages/_includes/graphql/create-customer.md'
+import CreateCustomer from '/src/_includes/graphql/create-customer.md'
 
 <CreateCustomer />
 
@@ -74,7 +74,7 @@ The `createCustomer` mutation returns the `CustomerOutput` object.
 
 The following table lists the top-level attributes of the `customer` object. See the [`customer` query](../../customer/queries/customer.md) for complete details about this object.
 
-import Customer from '/src/pages/_includes/graphql/customer-output-24.md'
+import Customer from '/src/_includes/graphql/customer-output-24.md'
 
 <Customer />
 

@@ -1,5 +1,5 @@
 ---
-title: urlResolver query | Commerce Web APIs
+title: urlResolver query
 ---
 
 # urlResolver query

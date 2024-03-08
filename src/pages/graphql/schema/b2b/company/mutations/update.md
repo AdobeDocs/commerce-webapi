@@ -1,5 +1,5 @@
 ---
-title: updateCompany mutation | Commerce Web APIs
+title: updateCompany mutation
 edition: b2b
 ---
 
@@ -107,7 +107,7 @@ Attribute |  Data Type | Description
 
 The `UpdateCompanyOutput` object contains the `Company` object.
 
-import Company from '/src/pages/_includes/graphql/company.md'
+import Company from '/src/_includes/graphql/company.md'
 
 <Company />.md %}
 

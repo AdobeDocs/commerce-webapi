@@ -1,6 +1,8 @@
 ---
 title: Step 5. Add items to the cart
 description: In this step of the tutorial you will add items to the cart
+keywords:
+  - REST
 --- 
  
 # Step 5. Add items to the cart

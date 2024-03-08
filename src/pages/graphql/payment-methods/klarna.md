@@ -1,7 +1,11 @@
 ---
-title: Klarna payment method | Commerce Web APIs
+title: Klarna payment method
+description: Learn how to use the GraphQL API mutation for the Klarna payment solution.
 contributor_name: Klarna
 contributor_link: https://www.klarna.com/
+keywords:
+  - GraphQL
+  - Payments
 ---
 
 # Klarna payment method

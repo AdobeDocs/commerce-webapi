@@ -1,5 +1,5 @@
 ---
-title: addProductsToWishlist mutation | Commerce Web APIs
+title: addProductsToWishlist mutation
 ---
 
 # addProductsToWishlist mutation
@@ -30,6 +30,10 @@ To determine whether wish lists are enabled, specify the `magento_wishlist_gener
   }
 }
 ```
+
+## Reference
+
+The [`addProductsToWishlist`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addProductsToWishlist) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -246,54 +250,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `addProductsToWishlist` mutation requires the following input.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`wishlistId` | ID! | The ID of the customer's wish list
-`wishlistItems`| [[WishlistItemInput(#WishlistItemInput)]!]! | An array containing each product to be added to the wish list
-
-### WishlistItemInput attributes
-
-The `WishlistItemInput` object defines each item to add to the wish list.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`entered_options`| [EnteredOptionInput!] | An array of options that the customer entered
-`parent_sku` | String | For complex product types, the SKU of the parent product
-`quantity` | Float! | The amount or number of items to add
-`selected_options` | [ID] | An array of strings corresponding to options the customer selected
-`sku` | String! | The SKU of the product to add. For complex product types, specify the child product SKU
-
-### EnteredOptionInput attributes
-
-import EnteredOptionInput from '/src/pages/_includes/graphql/entered-option-input.md'
-
-<EnteredOptionInput />
-
-## Output attributes
-
-The `AddProductsToWishlistOutput` object contains the customer's wish list and error message information.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`user_errors` | [[WishListUserInputError!](#wishlistuserinputerror-attributes)] | An array of errors encountered while adding products to a wish list
-`wishlist` | [Wishlist!](#wishlist-attributes) | Contains the wish list with all items that were successfully added
-
-### Wishlist attributes
-
-import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
-
-<Wishlist />
-
-### WishListUserInputError attributes
-
-import WishlistUserInputErrors from '/src/pages/_includes/graphql/wishlist-user-input-errors.md'
-
-<WishlistUserInputErrors />
 
 ## Errors
 

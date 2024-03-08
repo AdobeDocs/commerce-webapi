@@ -2,6 +2,9 @@
 title: Negotiable quote checkout
 description: Convert the negotiable quote to an order after reaching an agreed price
 edition: ee
+keywords:
+  - B2B
+  - REST
 ---
 
 import * as Vars from '../../../data/vars.js';

@@ -1,9 +1,13 @@
 ---
-title: GraphQL caching | Commerce Web APIs
+title: GraphQL caching
+description: Learn how to use request headers and third-party services to enable caching for queries.
+keywords:
+  - Cache
+  - GraphQL
 ---
 
-import Queries246 from '/src/pages/_includes/graphql/cache/queries-246.md'
-import Queries247 from '/src/pages/_includes/graphql/cache/queries-247beta.md'
+import Queries246 from '/src/_includes/graphql/cache/queries-246.md'
+import Queries247 from '/src/_includes/graphql/cache/queries-247beta.md'
 
 # GraphQL caching
 

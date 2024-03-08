@@ -1,5 +1,5 @@
 ---
-title: createPurchaseOrderApprovalRule mutation | Commerce Web APIs
+title: createPurchaseOrderApprovalRule mutation
 edition: b2b
 ---
 

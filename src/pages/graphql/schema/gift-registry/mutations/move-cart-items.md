@@ -1,5 +1,5 @@
 ---
-title: moveCartItemsToGiftRegistry mutation | Commerce Web APIs
+title: moveCartItemsToGiftRegistry mutation
 edition: ee
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
@@ -23,6 +23,10 @@ mutation {
     }
 }
 ```
+
+## Reference
+
+The [`moveCartItemsToGiftRegistry`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-moveCartItemsToGiftRegistry) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -93,34 +97,3 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `moveCartItemsToGiftRegistry` mutation requires the following input:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cartUid` | ID! | The unique ID that identifies the customer's cart
-`giftRegistryUid` | ID! | The unique ID of a `GiftRegistry` object
-
-## Output attributes
-
-The `MoveCartItemsToGiftRegistryOutput` object can contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`gift_registry` | [GiftRegistry!](#giftregistry-attributes) | The gift registry containing the moved items
-`status` | Boolean! | Indicates whether the attempt to move the cart items to the gift registry was successful
-`user_errors` | [[GiftRegistryItemsUserError!](#giftregistryitemsusererror-attributes)] | An array of errors encountered while moving items from the cart to the gift registry
-
-### GiftRegistry attributes
-
-import GiftRegistry from '/src/pages/_includes/graphql/gift-registry.md'
-
-<GiftRegistry />
-
-### GiftRegistryItemsUserError attributes
-
-import GiftRegistryItemsUserError from '/src/pages/_includes/graphql/gift-registry-items-user-error.md'
-
-<GiftRegistryItemsUserError />

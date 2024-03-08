@@ -1,5 +1,5 @@
 ---
-title: productSearch query | Commerce Web APIs
+title: productSearch query
 edition: ee
 description: Describes how to construct and use the Live Search productSearch query.
 ---
@@ -373,7 +373,7 @@ The query response can also contain the following top-level fields and objects:
 
 You must specify the following HTTP headers to run this query.
 
-import Docs from '/src/pages/_includes/graphql/live-search-headers.md'
+import Docs from '/src/_includes/graphql/live-search-headers.md'
 
 <Docs />
 

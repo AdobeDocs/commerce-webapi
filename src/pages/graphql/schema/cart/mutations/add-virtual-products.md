@@ -1,5 +1,5 @@
 ---
-title: addVirtualProductsToCart mutation | Commerce Web APIs
+title: addVirtualProductsToCart mutation
 ---
 
 # addVirtualProductsToCart mutation
@@ -100,7 +100,7 @@ Attribute |  Data Type | Description
 
 The `CartItemInput` object must contain the following attributes:
 
-import CartItemInput from '/src/pages/_includes/graphql/cart-item-input-24.md'
+import CartItemInput from '/src/_includes/graphql/cart-item-input-24.md'
 
 <CartItemInput />
 
@@ -108,7 +108,7 @@ import CartItemInput from '/src/pages/_includes/graphql/cart-item-input-24.md'
 
 The `CustomizableOptionInput` object can contain the following attributes:
 
-import CustomizableOptionInput from '/src/pages/_includes/graphql/customizable-option-input-24.md'
+import CustomizableOptionInput from '/src/_includes/graphql/customizable-option-input-24.md'
 
 <CustomizableOptionInput />
 
@@ -131,7 +131,7 @@ Attribute |  Data Type | Description
 
 ### Cart object
 
-import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
+import CartObject from '/src/_includes/graphql/cart-object-24.md'
 
 <CartObject />
 

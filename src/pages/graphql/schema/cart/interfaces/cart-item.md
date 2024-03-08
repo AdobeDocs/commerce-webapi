@@ -1,5 +1,5 @@
 ---
-title: CartItemInterface attributes and implementations | Commerce Web APIs
+title: CartItemInterface attributes and implementations
 ---
 
 # CartItemInterface attributes and implementations

@@ -1,5 +1,5 @@
 ---
-title: updateCompanyStructure mutation | Commerce Web APIs
+title: updateCompanyStructure mutation
 edition: b2b
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
@@ -119,6 +119,6 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `company` | Company! | Contains company data
 
-import Company from '/src/pages/_includes/graphql/company.md'
+import Company from '/src/_includes/graphql/company.md'
 
 <Company />.md %}

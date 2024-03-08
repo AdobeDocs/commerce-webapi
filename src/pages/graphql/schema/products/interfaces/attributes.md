@@ -1,5 +1,5 @@
 ---
-title: ProductInterface attributes | Commerce Web APIs
+title: ProductInterface attributes
 ---
 
 # ProductInterface attributes
@@ -215,7 +215,7 @@ Attribute |  Data Type | Description
 
 #### ProductReview object
 
-import ProductReview from '/src/pages/_includes/graphql/product-review.md'
+import ProductReview from '/src/_includes/graphql/product-review.md'
 
 <ProductReview />
 

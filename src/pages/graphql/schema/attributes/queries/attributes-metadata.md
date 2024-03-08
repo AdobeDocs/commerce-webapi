@@ -1,5 +1,5 @@
 ---
-title: attributesMetadata query | Commerce Web APIs
+title: attributesMetadata query
 edition: pwa
 ---
 
@@ -114,6 +114,6 @@ Attribute | Data type | Description
 
 ## Output attributes
 
-import AttributeMetadata from '/src/pages/_includes/graphql/attribute-metadata.md'
+import AttributeMetadata from '/src/_includes/graphql/attribute-metadata.md'
 
 <AttributeMetadata />

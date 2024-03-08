@@ -754,6 +754,10 @@ module.exports = [
                 path: "/graphql/schema/orders/mutations/add-return-tracking/",
               },
               {
+                title: "cancelOrder",
+                path: "/graphql/schema/orders/mutations/cancel-order/",
+              },
+              {
                 title: "removeReturnTracking",
                 path: "/graphql/schema/orders/mutations/remove-return-tracking/",
               },
@@ -786,6 +790,22 @@ module.exports = [
               {
                 title: "ShipmentItemInterface",
                 path: "/graphql/schema/orders/interfaces/shipment-item/",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Product Recommendations",
+        path: "/graphql/schema/product-recommendations/",
+        pages: [
+          {
+            title: "Queries",
+            path: "/graphql/schema/products/queries/",
+            pages: [
+              {
+                title: "recommendations",
+                path: "/graphql/schema/product-recommendations/queries/recommendations/",
               },
             ],
           },
@@ -1118,7 +1138,7 @@ module.exports = [
         ],
       },
       {
-        title: "Wishlist",
+        title: "Wish list",
         path: "/graphql/schema/wishlist/",
         pages: [
           {
@@ -1126,7 +1146,7 @@ module.exports = [
             path: "/graphql/schema/wishlist/queries/",
             pages: [
               {
-                title: "Wishlist",
+                title: "wishlist",
                 path: "/graphql/schema/wishlist/queries/wishlist/",
               },
             ],
@@ -1178,7 +1198,7 @@ module.exports = [
             path: "/graphql/schema/wishlist/interfaces/",
             pages: [
               {
-                title: "Wishlist",
+                title: "WishlistItemInterface",
                 path: "/graphql/schema/wishlist/interfaces/wishlist/",
               },
             ],

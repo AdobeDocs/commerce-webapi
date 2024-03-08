@@ -1,5 +1,5 @@
 ---
-title: negotiableQuote query | Commerce Web APIs
+title: negotiableQuote query
 edition: b2b   
 ---
 
@@ -536,6 +536,6 @@ Attribute | Data Type | Description
 
 ## Output attributes
 
-import NegotiableQuote from '/src/pages/_includes/graphql/negotiable-quote.md'
+import NegotiableQuote from '/src/_includes/graphql/negotiable-quote.md'
 
 <NegotiableQuote />

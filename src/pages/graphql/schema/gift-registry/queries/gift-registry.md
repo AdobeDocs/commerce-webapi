@@ -1,5 +1,5 @@
 ---
-title: giftRegistry query | Commerce Web APIs
+title: giftRegistry query
 edition: ee   
 contributor_name: EY
 ---
@@ -15,6 +15,10 @@ This query requires a valid [customer authentication token](../../customer/mutat
 ```graphql
 giftRegistry(uid: ID!): GiftRegistry
 ```
+
+## Reference
+
+The [`giftRegistry`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-giftRegistry) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -194,17 +198,3 @@ query{
   }
 }
 ```
-
-## Input attributes
-
-The `giftRegistry` query requires the gift registry ID.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`uid` | ID! | The unique ID assigned to the gift registry
-
-## Output attributes
-
-import GiftRegistry from '/src/pages/_includes/graphql/gift-registry.md'
-
-<GiftRegistry />

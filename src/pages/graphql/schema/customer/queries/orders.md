@@ -1,5 +1,5 @@
 ---
-title: customerOrders query | Commerce Web APIs
+title: customerOrders query
 ---
 
 # customerOrders query

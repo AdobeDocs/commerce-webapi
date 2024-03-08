@@ -1,5 +1,5 @@
 ---
-title: removeRewardPointsFromCart mutation | Commerce Web APIs
+title: removeRewardPointsFromCart mutation
 edition: ee
 ---
 
@@ -92,7 +92,7 @@ Attribute |  Data Type | Description
 
 ### Cart object
 
- import CartObject from '/src/pages/_includes/graphql/cart-object-24.md'
+ import CartObject from '/src/_includes/graphql/cart-object-24.md'
 
 <CartObject />
 

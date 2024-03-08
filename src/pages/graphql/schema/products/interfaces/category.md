@@ -1,5 +1,5 @@
 ---
-title: CategoryInterface attributes | Commerce Web APIs
+title: CategoryInterface attributes
 ---
 
 # CategoryInterface attributes
@@ -64,6 +64,6 @@ Attribute | Data type | Description
 
 ### CmsBlock attributes
 
-import CmsBlockObject from '/src/pages/_includes/graphql/cms-block-object.md'
+import CmsBlockObject from '/src/_includes/graphql/cms-block-object.md'
 
 <CmsBlockObject />

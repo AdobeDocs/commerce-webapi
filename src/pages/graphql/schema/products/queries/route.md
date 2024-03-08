@@ -1,5 +1,5 @@
 ---
-title: route query | Commerce Web APIs
+title: route query
 ---
 
 # route query
@@ -109,7 +109,7 @@ Attribute | Type | Description
 
 ## Output attributes
 
-import RoutableInterface from '/src/pages/_includes/graphql/routable-interface.md'
+import RoutableInterface from '/src/_includes/graphql/routable-interface.md'
 
 <RoutableInterface />
 

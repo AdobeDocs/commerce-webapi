@@ -1,5 +1,5 @@
 ---
-title: Customer mutations | Commerce Web APIs
+title: Customer mutations
 ---
 
 # Customer mutations

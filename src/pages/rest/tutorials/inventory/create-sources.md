@@ -1,6 +1,9 @@
 ---
 title: Step 2. Create sources
 description: In this step of the tutorial you will create sources
+keywords:
+  - Inventory
+  - REST
 --- 
  
 # Step 2. Create sources

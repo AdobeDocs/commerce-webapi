@@ -1,5 +1,5 @@
 ---
-title: giftRegistryIdSearch query | Commerce Web APIs
+title: giftRegistryIdSearch query
 edition: ee   
 ---
 
@@ -12,6 +12,10 @@ The `giftRegistryIdSearch` query returns a list of gift registries that match th
 ```graphql
 giftRegistryIdSearch(giftRegistryUid: String!): [GiftRegistrySearchResult]
 ```
+
+## Reference
+
+The [`giftRegistryIdSearch`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-giftRegistryIdSearch) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -48,17 +52,3 @@ query{
   }
 }
 ```
-
-## Input attributes
-
-The `giftRegistryIdSearch` query requires the `giftRegistryUid` attribute as input.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`giftRegistryUid` | ID! | The unique ID of the gift registry to search for
-
-## Output attributes
-
-import GiftRegistrySearchResult from '/src/pages/_includes/graphql/gift-registry-search-result.md'
-
-<GiftRegistrySearchResult />

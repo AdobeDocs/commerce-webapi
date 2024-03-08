@@ -1,5 +1,5 @@
 ---
-title: createCompanyRole mutation | Commerce Web APIs
+title: createCompanyRole mutation
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 edition: b2b
@@ -9,7 +9,7 @@ edition: b2b
 
 The `createCompanyRole` mutation defines a new company role. To create a role, you must provide an array of permissions that determine which resources the user can access.
 
-import B2BRoles from '/src/pages/_includes/graphql/b2b-roles.md'
+import B2BRoles from '/src/_includes/graphql/b2b-roles.md'
 
 <B2BRoles />
 
@@ -138,7 +138,7 @@ Attribute |  Data Type | Description
 
 ### CompanyRole attributes
 
-import CompanyRole from '/src/pages/_includes/graphql/company-role.md'
+import CompanyRole from '/src/_includes/graphql/company-role.md'
 
 <CompanyRole />
 

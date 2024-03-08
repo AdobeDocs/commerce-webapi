@@ -1,5 +1,5 @@
 ---
-title: handlePayflowProResponse mutation | Commerce Web APIs
+title: handlePayflowProResponse mutation
 ---
 
 # handlePayflowProResponse mutation

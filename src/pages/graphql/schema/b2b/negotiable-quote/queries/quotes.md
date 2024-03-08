@@ -1,5 +1,5 @@
 ---
-title: negotiableQuotes query | Commerce Web APIs
+title: negotiableQuotes query
 edition: b2b   
 ---
 
@@ -86,7 +86,7 @@ query {
 
 The `negotiableQuotes` query can take the following arguments.
 
-import NegotiableQuotesInput from '/src/pages/_includes/graphql/negotiable-quotes-input.md'
+import NegotiableQuotesInput from '/src/_includes/graphql/negotiable-quotes-input.md'
 
 <NegotiableQuotesInput />
 
@@ -103,6 +103,6 @@ Attribute | Data Type | Description
 
 ### NegotiableQuote attributes
 
-import NegotiableQuote from '/src/pages/_includes/graphql/negotiable-quote.md'
+import NegotiableQuote from '/src/_includes/graphql/negotiable-quote.md'
 
 <NegotiableQuote />

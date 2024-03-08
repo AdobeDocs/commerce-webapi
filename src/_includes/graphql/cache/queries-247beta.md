@@ -1,5 +1,7 @@
 The application caches the following queries:
 
+* `attributesForm`
+* `attributesList`
 * `availableStores`
 * `categories`
 * `category` (deprecated)
@@ -10,6 +12,7 @@ The application caches the following queries:
 * `country`
 * `currency`
 * `customAttributeMetadata`
+* `customAttributeMetadataV2`
 * `products`
 * `route`
 * `storeConfig`

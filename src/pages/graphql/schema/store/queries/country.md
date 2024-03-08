@@ -1,5 +1,5 @@
 ---
-title: country query | Commerce Web APIs
+title: country query
 ---
 
 # country query
@@ -11,6 +11,10 @@ Use the [countries](../../store/queries/countries.md) query to retrieve a list o
 ## Syntax
 
 `{country(id: String) {Country}}`
+
+## Reference
+
+The [`country`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-country) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -92,22 +96,6 @@ query {
   }
 }
 ```
-
-## Input attributes
-
-The `country` query requires the following input:
-
-Attribute | Data type | Description
---- | --- | ---
-`id` | String | A unique ID for the country
-
-## Output attributes
-
-The query returns a single `Country` object.
-
-import CountryOutput from '/src/pages/_includes/graphql/country-output.md'
-
-<CountryOutput />
 
 ## Related topics
 

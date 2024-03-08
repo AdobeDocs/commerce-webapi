@@ -1,6 +1,8 @@
 ---
 title: Step 8. Create an invoice
 description: In this step of the tutorial you will create an invoice
+keywords:
+  - REST
 --- 
  
 # Step 8. Create an invoice

@@ -1,11 +1,13 @@
 ---
-title: ImportCsv API
+title: Import API
 description: Import entities into Adobe Commerce using REST.
+keywords:
+  - REST
 ---
 
 # Import data
 
-The `POST /rest/<store_view_code>/V1/import/csv` endpoint allows you to use REST to import data into Adobe Commerce. It works much like the import functionality provided in the Admin at **System** > Data Transfer > **Import**. You can use the endpoint to import the following entities:
+The `POST /rest/<store_view_code>/V1/import/csv` and `POST /rest/<store_view_code>/V1/import/json` endpoints provide a RESTful way to import data into Adobe Commerce. They mirror the import capabilities found in the Admin at **System** > Data Transfer > **Import**. These endpoints support the import of the following entities:
 
 *  `advanced_pricing`
 *  `catalog_product`
@@ -13,29 +15,43 @@ The `POST /rest/<store_view_code>/V1/import/csv` endpoint allows you to use REST
 *  `customer_address`
 *  `customer_composite`
 *  `customer_finance`
+*  `stock_sources`
 
-Your source data must be in the order and format Commerce expects. To understand the requirements of each import entity, go to the Import page in the Admin, select an entity type from the drop-down menu, then click **Download Sample File**. The endpoint accepts CSV data in base64 encoded format. Because you control the conversion of a file or data into base64, you do not need to escape special characters before the import.
+### Source Data Format and Requirements
 
-Before encoding the data in base64, you can optionally use [gzip](https://www.gzip.org) to compress your data. This is useful when importing large CSV files that may otherwise run into HTTP request size limitations of HTTP server or PHP configuration.
+Ensure your source data conforms to the sequence and format expected by Commerce. To acquaint yourself with each import entity's requirements, visit the Import page in the Admin, select an entity from the dropdown, and click **Download Sample File**.
 
-Since the API is used for importing base64 encoded CSV data, the endpoint expects the data to use commas for the field and multiple value separators.
-Import fails if CSV uses any other special character as separators.
+### CSV Import
 
-You must specify a validation strategy. You can skip rows that have an invalid data format, or
-you can stop the import process when the system first encounters an invalid row.
-Depending on the validation strategy chosen, the API will complete or cancel the Import Process.
+The `import/csv` endpoint expects data in base64 encoded format:
 
-*  When Validation Strategy is set as `validation-stop-on-errors` and a single row data is invalid, the API cancels the Import and returns a message describing the error encountered in the first invalid row along with its corresponding row number.
+*  **Encoding**: Before submitting, your CSV data must be base64 encoded, which means there is no need to escape special characters.
+*  **Compression**: You can use [gzip](https://www.gzip.org) to compress your data before encoding. This is especially useful when handling larger CSV files that might exceed server or PHP request size limits.
+*  **Delimiter**: This API is tailored for CSV files that use commas as field and multi-value separators. Any other delimiters will cause the import to fail.
 
-*  When Validation Strategy is set as `validation-skip-errors`, the API imports the valid rows as long as the total number of errors in the CSV data do not exceed the value set in `allowedErrorCount` field.
+### JSON Import
 
-If the number of errors exceed the field value of `allowedErrorCount`, the import is canceled (valid rows aren't processed either) and the first encountered error along with its row number is returned in response.
+import BetaNote from '/src/_includes/graphql/notes/beta.md'
 
-The `allowedErrorCount` field defines the maximum number of errors encountered before the import processing is halted.
+<BetaNote />
 
-## Import API
+The `import/json` endpoint is designed for JSON data:
 
-The  `StartImportInterface` service provides the means to efficiently import entities into Adobe Commerce using a single API call.
+*  Convert your CSV into JSON using any trustworthy online converter.
+*  When converting CSV to JSON using standard tools or libraries, special characters within the data are typically escaped automatically. Ensure that any manual edits or custom conversion processes handle this escaping appropriately.
+
+### Validation Strategy
+
+A validation strategy is mandatory. Depending on your chosen strategy, the API will either proceed with the import or abort it upon encountering invalid rows.
+
+*  `validation-stop-on-errors`: The API halts the import upon finding the first error. It will return an error message describing the issue and its row number.
+*  `validation-skip-errors`: The API imports valid rows unless the total number of errors surpasses the `allowedErrorCount`. If errors go beyond this count, the import is halted (even valid rows will not be processed). The response will contain details of the first error found and its row number.
+
+The `allowedErrorCount` field specifies the maximum allowable error count before terminating the import process.
+
+## Import CSV API
+
+The `POST /rest/<store_view_code>/V1/import/csv` endpoint uses the `StartImportInterface` service to efficiently import entities into Adobe Commerce. The payload must contain data in a base64 encoded format.
 
 **Service Name:**
 
@@ -49,17 +65,18 @@ POST /rest/<store_view_code>/V1/import/csv
 
 **StartImportInterface Parameters:**
 
-|Name | Description  | Format | Requirements |
-|-----|-----|-----|-----|
-|`entity` | The type of entity to be imported | string | Required. One of `advanced_pricing`, `catalog_product`, `customer`, `customer_address`, `customer_composite`, or `customer_finance` |
-|`behavior` | The action  to perform | string | Required. One of `add_update`, `replace`, `delete`|
-|`validationStrategy` | Strategy to use when entities are invalid | string | Required. Either `validation-stop-on-errors` or `validation-skip-errors` |
-|`allowedErrorCount` | The maximum number of errors that can occur until import is canceled | string | Required |
-|`csvData` | Base64 encoded string containing CSV data (optionally gzip compressed before base64) | string | Required |
-|`ImportFieldSeparator` | Separator used in CSV.  Default is ',' | string | Optional |
-|`ImportMultipleValueSeparator` | Separator used in columns with multiple values such as categories.  Default is ',' | string | Optional |
-|`ImportEmptyAttributeValueConstant` | Constant to be replaced with an empty attribute | string | Optional |
-|`ImportImagesFileDir` | Path to images relative to &lt;Magento root directory&gt;/var/import/images | string | Optional |
+| Name                                | Description  | Format | Requirements                                                                                                                                                                                                                          |
+|-------------------------------------|-----|-----|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `locale`                            | The language and country combination for the data being imported | string | Optional                                                                                                                                                                                                                              |
+| `entity`                            | The type of entity to be imported | string | Required. The value must be one of the following: `advanced_pricing`, `catalog_product`, `customer`, `customer_address`, `customer_composite`, `customer_finance`, or `stock_sources`.                                                                                   |
+| `behavior`                          | The action to perform | string | Required. For `advanced_pricing`, `catalog_product`, `customer_composite`, or `stock_sources` the value must be one of the following: `append`, `replace`, or `delete`. For `customer`, `customer_address`, or `customer_finance` the value must be one of the following: `add_update`, `delete`, or `custom`.|
+| `validationStrategy`                | Strategy to use when entities are invalid | string | Required. The value must be either `validation-stop-on-errors` or `validation-skip-errors`.                                                                                                                                                             |
+| `allowedErrorCount`                 | The maximum number of errors that can occur before the import is canceled | string | Required                                                                                                                                                                                                                              |
+| `csvData`                           | Base64 encoded string containing CSV data (optionally gzip compressed before base64) | string | Required                                                                                                                                                                                                                              |
+| `importFieldSeparator`              | Separator used in CSV.  Default is ',' | string | Optional                                                                                                                                                                                                                              |
+| `importMultipleValueSeparator`      | Separator used in columns with multiple values such as categories.  Default is ',' | string | Optional                                                                                                                                                                                                                              |
+| `importEmptyAttributeValueConstant` | Constant to be replaced with an empty attribute | string | Optional                                                                                                                                                                                                                              |
+| `importImagesFileDir`               | Path to images relative to &lt;Magento root directory&gt;/var/import/images | string | Optional                                                                                                                                                                                                                              |
 
 **Sample Usage:**
 
@@ -144,3 +161,642 @@ In this example, the CSV payload contains three rows of data, and one of them is
   "Entities Processed: 2"
 ] 
 ```
+
+## Import JSON API
+
+import BetaNote2 from '/src/_includes/graphql/notes/beta.md'
+
+<BetaNote2 />
+
+The Import JSON API is exclusively available via REST and does not support SOAP. This is because the payload consists of complex JSON objects with nested arrays, which are inherently challenging to represent with the XML structure that SOAP relies upon.
+
+The `POST /rest/<store_view_code>/V1/import/json` endpoint uses the `StartImportInterface` service to efficiently import entities into Adobe Commerce. The payload must contain data in JSON format.
+
+**Service Name:**
+
+`StartImportInterface`
+
+**REST Endpoint:**
+
+```http
+POST /rest/<store_view_code>/V1/import/json
+```
+
+**StartImportInterface Parameters:**
+
+| Name                  | Description                                                                                                                                     | Format                | Requirements                                                                                                                                                                                                                         |
+|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `locale`              | The language and country combination for the data being imported                                                                                | string                | Optional                                                                                 |
+| `entity`              | The type of entity to be imported                                                                                                               | string                | Required. Must be one of the following values: `advanced_pricing`, `catalog_product`, `customer`, `customer_address`, `customer_composite`, `customer_finance`, or `stock_sources`                                                                                  |
+| `behavior`            | The action to perform                                                                                                                           | string                | Required. For `advanced_pricing`, `catalog_product`, `customer_composite`, or `stock_sources` the value must be one of the following: `append`, `replace`, or `delete`. For `customer`, `customer_address`, or `customer_finance` the value must be one of the following: `add_update`, `delete`, or `custom`.|
+| `validationStrategy`  | Strategy to use when entities are invalid                                                                                                       | string                | Required.  The value must be either `validation-stop-on-errors` or `validation-skip-errors`.                                                                                                                                                         |
+| `allowedErrorCount`   | The maximum number of errors that can occur before the import is canceled                                                                            | string                | Required                                                                                                                                                                                                                             |
+| `items`               | An array of entities to be imported. Each entity, represented as a JSON object, contains details specific to its type (such as products or customers)| array of JSON objects | Required                                                                                                                                                                                                                             |
+| `importImagesFileDir` | Path to images relative to &lt;Magento root directory&gt;/var/import/images                                                                     | string                | Optional                                                                                                                                                                                                                             |
+
+**Sample Usage:**
+
+`POST <host>/<store_view_code>/default/V1/import/json`
+
+**Headers:**
+
+`Content-Type: application/json`
+
+`Authorization: Bearer <administrator token>`
+
+**Simple product payload:**
+
+```json
+{
+    "source": {
+        "locale": "en_EN",
+        "entity": "catalog_product",
+        "behavior": "append",
+        "validation_strategy": "validation-stop-on-errors",
+        "allowed_error_count": 0,
+        "items":	[
+            {
+                "sku": "Simple Product 1",
+                "store_view_code": "",
+                "attribute_set_code": "Default",
+                "product_type": "simple",
+                "categories": [
+                    "Default Category/Category 1",
+                    "Default Category/Category 2"
+                ],
+                "product_websites": [
+                    "base",
+                    "french"
+                ],
+                "name": "Simple Product 1",
+                "description": "",
+                "short_description": "",
+                "weight": 12,
+                "product_online": 1,
+                "tax_class_name": "Taxable Goods",
+                "visibility": "Catalog, Search",
+                "price": 9.99,
+                "special_price": 8.99,
+                "special_price_from_date": "7/20/23",
+                "special_price_to_date": "",
+                "url_key": "simple-product-1",
+                "meta_title": "Simple Product 1",
+                "meta_keywords": "Simple Product 1",
+                "meta_description": "Simple Product 1 ",
+                "base_image": "/1/_/1.png",
+                "base_image_label": "one",
+                "small_image": "/1/_/1.png",
+                "small_image_label": "one",
+                "thumbnail_image": "/1/_/1.png",
+                "thumbnail_image_label": "one",
+                "swatch_image": "/2/_/2.png",
+                "swatch_image_label": "two",
+                "created_at": "7/20/23, 11:36 AM",
+                "updated_at": "7/21/23, 12:20 PM",
+                "new_from_date": "7/21/23",
+                "new_to_date": "",
+                "display_product_options_in": "Block after Info Column",
+                "map_price": "",
+                "msrp_price": "",
+                "map_enabled": "",
+                "gift_message_available": "Yes",
+                "custom_design": "",
+                "custom_design_from": "",
+                "custom_design_to": "",
+                "custom_layout_update": "",
+                "page_layout": "",
+                "product_options_container": "",
+                "msrp_display_actual_price_type": "Use config",
+                "country_of_manufacture": "China",
+                "additional_attributes": {
+                    "date_time": "7/21/23",
+                    "gift_wrapping_available": "Use config",
+                    "gift_wrapping_price": 1.99,
+                    "instructions": "Here instruction go how to use this product indoors, outdoors.",
+                    "material": "cotton",
+                    "size": "large",
+                    "usage": [
+                        "Travel",
+                        "Sports",
+                        "Office",
+                        "Casual"
+                    ]
+                },
+                "qty": 1000,
+                "out_of_stock_qty": 0,
+                "use_config_min_qty": 1,
+                "is_qty_decimal": 0,
+                "allow_backorders": 0,
+                "use_config_backorders": 1,
+                "min_cart_qty": 1,
+                "use_config_min_sale_qty": 1,
+                "max_cart_qty": 10000,
+                "use_config_max_sale_qty": 1,
+                "is_in_stock": 1,
+                "notify_on_stock_below": 1,
+                "use_config_notify_stock_qty": 1,
+                "manage_stock": 1,
+                "use_config_manage_stock": 1,
+                "use_config_qty_increments": 1,
+                "qty_increments": 1,
+                "use_config_enable_qty_inc": 1,
+                "enable_qty_increments": 0,
+                "is_decimal_divided": 0,
+                "website_id": 0,
+                "deferred_stock_update": 0,
+                "use_config_deferred_stock_update": 1,
+                "related_skus": "",
+                "related_position": "",
+                "crosssell_skus": "",
+                "crosssell_position": "",
+                "upsell_skus": "",
+                "upsell_position": "",
+                "additional_images": [
+                    "/3/_/3.png",
+                    "/4/_/4.png"
+                ],
+                "additional_image_labels": [
+                    "three",
+                    "four"
+                ],
+                "hide_from_product_page": "",
+                "custom_options":
+                [
+                    {
+                        "name": "Option 1",
+                        "type": "drop_down",
+                        "required": 0,
+                        "price": 25,
+                        "sku": "",
+                        "max_characters": 0,
+                        "file_extension": "",
+                        "image_size_x": 0,
+                        "image_size_y": 0,
+                        "price_type": "percent",
+                        "option_title": "A"
+                    },
+                    {
+                        "name": "Option 2",
+                        "type": "multiple",
+                        "required": 1,
+                        "price": 1.99,
+                        "sku": "",
+                        "max_characters": 0,
+                        "file_extension": "",
+                        "image_size_x": 0,
+                        "image_size_y": 0,
+                        "price_type": "fixed",
+                        "option_title": "B"
+                    },
+                    {
+                        "name": "Option 2",
+                        "type": "multiple",
+                        "required": 1,
+                        "price": 4.00,
+                        "sku": "",
+                        "max_characters": 0,
+                        "file_extension": "",
+                        "image_size_x": 0,
+                        "image_size_y": 0,
+                        "price_type": "fixed",
+                        "option_title": "C"
+                    }
+                ],
+                "giftcard_type": "",
+                "giftcard_allow_open_amount": "",
+                "giftcard_open_amount_min": "",
+                "giftcard_open_amount_max": "",
+                "giftcard_amount": "",
+                "use_config_is_redeemable": "",
+                "giftcard_is_redeemable": "",
+                "use_config_lifetime": "",
+                "giftcard_lifetime": "",
+                "use_config_allow_message": "",
+                "giftcard_allow_message": "",
+                "use_config_email_template": "",
+                "giftcard_email_template": "",
+                "bundle_price_type": "",
+                "bundle_sku_type": "",
+                "bundle_price_view": "",
+                "bundle_weight_type": "",
+                "bundle_values": "",
+                "bundle_shipment_type": "",
+                "downloadable_links": "",
+                "downloadable_samples": "",
+                "associated_skus": "",
+                "configurable_variations": "",
+                "configurable_variation_labels": ""
+            },
+            {
+                "sku": "Simple Product 2",
+                "_comment": "additional information for Simple Product 2"
+            }
+        ],
+        "import_images_file_dir": "var/import/images/product_images"
+    }
+}
+```
+
+**Response:**
+
+When the import is successful, the API response will contain the number of entities that were successfully imported.
+
+```json
+[
+  "Entities Processed: 2"
+] 
+```
+
+Arguments that support multiple values, such as `categories`, `product_websites`, `additional_attributes`, `additional_images`, `additional_image_labels`, and `custom_options`, can accept inputs in the form of an array, an array of JSON objects, or a singular JSON object.
+
+Additionally, these arguments can also accept string values, similar to the import CSV API.
+
+```json
+{
+    "categories": "Default Category/Category 1,Default Category/Category 2",
+    "product_websites": "base,french",
+    "additional_attributes": "date_time=7/21/23,gift_wrapping_available=Use config,gift_wrapping_price=1.990000,instructions=Here instruction go how to use this product indoors, outdoors.,material=cotton,size=large,usage=Travel|Sports|Office|Casual",
+    "additional_images": "/3/_/3.png,/4/_/4.png",
+    "additional_image_labels": "three,four",
+    "custom_options": "name=Option 1,type=drop_down,required=1,price=25,sku=,max_characters=0,file_extension=,image_size_x=0,image_size_y=0,price_type=percent,option_title=A|name=Option 2,type=multiple,required=1,price=1.99,sku=,max_characters=0,file_extension=,image_size_x=0,image_size_y=0,price_type=fixed,option_title=B|name=Option 2,type=multiple,required=1,price=4,sku=,max_characters=0,file_extension=,image_size_x=0,image_size_y=0,price_type=fixed,option_title=C"
+}
+```
+
+Although the string format shown above provides compatibility with the import CSV API, using a structured JSON format is recommended for better readability and precision.
+
+**Configurable product payload:**
+
+For a configurable product:
+
+*  The `configurable_variations` attribute accepts an array of JSON objects that describe variations. Each object represents a product variation, denoted by SKU, with associated attributes (such as color or size).
+*  The `configurable_variation_labels` attribute accepts a JSON object that assigns human-readable labels to the variation attributes.
+
+```json
+{
+    "configurable_variations":
+    [
+        {
+            "sku": "Configurable 1-Red-small",
+            "color_swatch": "Red",
+            "size": "small"
+        },
+        {
+            "sku": "Configurable 1-Red-large",
+            "color_swatch": "Red",
+            "size": "large"
+        },
+        {
+            "sku": "Configurable 1-Green-small",
+            "color_swatch": "Green",
+            "size": "small"
+        },
+        {
+            "sku": "Configurable 1-Green-large",
+            "color_swatch": "Green",
+            "size": "large"
+        }
+    ],
+    "configurable_variation_labels":
+    {
+        "color_swatch": "Color Swatch",
+        "size": "Size"
+    }
+}
+```
+
+This structure can be found nested within individual product items in the full payload.
+
+**Bundle product payload:**
+
+For a bundle product:
+
+*  The `bundle_values` attribute accepts an array of JSON objects that describe bundle items.
+
+```json
+{
+    "bundle_values": [
+        {
+            "name": "Stasis Ball",
+            "type": "select",
+            "required": 1,
+            "sku": "Sprite Statis Ball 55mm",
+            "price": 7.99,
+            "default": 0,
+            "default_qty": 1,
+            "price_type": "fixed",
+            "can_change_qty": 1
+        },
+        {
+            "name": "Stasis Ball",
+            "type": "select",
+            "required": 1,
+            "sku": "Sprite Statis Ball 65mm",
+            "price": 9.99,
+            "default": 0,
+            "default_qty": 1,
+            "price_type": "fixed",
+            "can_change_qty": 1
+        },
+        {
+            "name": "Yoga Brick",
+            "type": "checkbox",
+            "required": 0,
+            "sku": "Sprite Foam Yoga Brick",
+            "price": 25,
+            "default": 0,
+            "default_qty": 1,
+            "price_type": "percent",
+            "can_change_qty": 0
+        }
+    ]
+}
+```
+
+This structure can be found nested within individual product items in the full payload.
+
+**Downloadable product payload:**
+
+For a downloadable product:
+
+*  The `downloadable_links` attribute accepts an array of JSON objects that describe downloadable product links.
+*  The `downloadable_samples` attribute accepts an array of JSON objects that describe downloadable product samples.
+
+```json
+{
+    "downloadable_links":
+    [
+        {
+            "link_id": 1,
+            "id": 1,
+            "title": "Part 1",
+            "sort_order": 1,
+            "sample_type": "file",
+            "sample_file": "/test/1.png",
+            "price": 4.99,
+            "number_of_downloads": 100,
+            "is_shareable": 1,
+            "link_type": "file",
+            "link_file": "/test/red.png"
+        },
+        {
+            "link_id": 2,
+            "id": 2,
+            "title": "Part 2",
+            "sort_order": 2,
+            "sample_type": "file",
+            "sample_file": "/test/2.png",
+            "price": 4.49,
+            "is_shareable": 1,
+            "link_type": "file",
+            "link_file": "/test/green.png"
+        }
+    ],
+    "downloadable_samples":
+    [
+        {
+            "sample_id": 1,
+            "id": 1,
+            "title": "Sample A",
+            "sort_order": 1,
+            "sample_type": "url",
+            "sample_url": "http://example.com/pub/media/lemon.jpeg"
+        },
+        {
+            "sample_id": 2,
+            "id": 2,
+            "title": "Sample B",
+            "sort_order": 2,
+            "sample_type": "file",
+            "sample_file": "/test/pumpkin.png"
+        }
+    ]
+}
+```
+
+This structure can be found nested within individual product items in the full payload.
+
+**Grouped product payload:**
+
+For a grouped product:
+
+*  The `associated_skus` attribute accepts a JSON object where the keys are SKUs of products that comprise the grouped product, and the values are the quantities of each SKU in the grouped product.
+
+```json
+{
+    "associated_skus": {
+        "Sprite Statis Ball 55mm": 1,
+        "Sprite Foam Yoga Brick": 1,
+        "Sprite Yoga Strap 6 foot": 1
+    }
+}
+```
+
+This structure can be found nested within individual product items in the full payload.
+
+**Gift card payload:**
+
+For a gift card product:
+
+*  The `giftcard_amount` attribute accepts an array of amounts that can be used to purchase a gift card.
+
+```json
+{
+    "giftcard_open_amount_min": 5,
+    "giftcard_open_amount_max": 500,
+    "giftcard_amount": [
+        25,
+        50,
+        75,
+        100
+    ]
+}
+```
+
+This structure can be found nested within individual product items in the full payload.
+
+**Payload 7 (Multiple select attributes):**
+
+The multiple select attribute for products is represented as an array of strings.
+
+```json
+{
+    "additional_attributes": {
+        "usage": [
+            "Travel",
+            "Sports",
+            "Office",
+            "Casual"
+        ]
+    }
+}
+```
+
+The multiple select attributes for customer and customer address are represented as an array of strings.
+
+```json
+{
+    "interests": [
+        "Electronics",
+        "Sports",
+        "Automotive"
+    ],
+    "delivery_preferences": [
+        "Hand directly to resident",
+        "Leave in the mailbox"
+    ]
+}
+```
+
+The Import JSON API does not create attributes automatically. You need to create attributes manually before importing data. For more information, see [Create attributes](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/attributes.html#create-attributes).
+
+**Advanced Pricing payload:**
+
+`advanced_pricing` is represented as an array of JSON objects.
+
+```json
+{
+    "source": {
+        "entity": "advanced_pricing",
+        "behavior": "append",
+        "validation_strategy": "validation-stop-on-errors",
+        "allowed_error_count": 10,
+        "items":	[
+            {
+                "sku": "Simple Product 1",
+                "tier_price_website": "All Websites [USD]",
+                "tier_price_customer_group": "ALL GROUPS",
+                "tier_price_qty": 1,
+                "tier_price": 7.99,
+                "tier_price_value_type": "Fixed"
+            },
+            {
+                "sku": "Simple Product 1",
+                "tier_price_website": "base",
+                "tier_price_customer_group": "NOT LOGGED IN",
+                "tier_price_qty": 2,
+                "tier_price": 40,
+                "tier_price_value_type": "Discount"
+            },
+            {
+                "sku": "Simple Product 1",
+                "tier_price_website": "french",
+                "tier_price_customer_group": "General",
+                "tier_price_qty": 5,
+                "tier_price": 60,
+                "tier_price_value_type": "Discount"
+            }
+        ]
+    }
+}
+```
+
+**Customer finance payload:**
+
+`customer_finance` is represented as an array of JSON objects.
+
+```json
+{
+    "source": {
+        "entity": "customer_finance",
+        "behavior": "add_update",
+        "validation_strategy": "validation-stop-on-errors",
+        "allowed_error_count": 0,
+        "items":	[
+            {
+                "_email": "johndoe@example.com",
+                "_website": "base",
+                "_finance_website": "base",
+                "store_credit": 99.99,
+                "reward_points": "100"
+            },
+            {
+                "_email": "johndoe@example.com",
+                "_website": "base",
+                "_finance_website": "french",
+                "store_credit": 50,
+                "reward_points": 200
+            }
+        ]
+    }
+}
+```
+
+**Customers and addresses payload:**
+
+Customers and Addresses information is represented as an array of JSON objects.
+
+```json
+{
+    "source": {
+        "entity": "customer_composite",
+        "behavior": "append",
+        "validation_strategy": "validation-stop-on-errors",
+        "allowed_error_count": 0,
+        "items":	[
+            {
+                "email": "johndoe@example.com",
+                "_website": "base",
+                "_store": "admin",
+                "confirmation": "",
+                "created_at": "4/19/23 12:55",
+                "created_in": "Admin",
+                "disable_auto_group_change": 0,
+                "dob": "4/19/16 0:00",
+                "firstname": "John",
+                "gender": "Male",
+                "group_id": 1,
+                "lastname": "Doe",
+                "middlename": "",
+                "password_hash": "<password hash here>",
+                "prefix": "",
+                "rp_token": "",
+                "rp_token_created_at": "",
+                "store_id": 0,
+                "suffix": "",
+                "taxvat": "",
+                "website_id": 1,
+                "password": "",
+                "_address_city": "Los Angeles",
+                "_address_company": "",
+                "_address_country_id": "US",
+                "_address_fax": "",
+                "_address_firstname": "John",
+                "_address_lastname": "Doe",
+                "_address_middlename": "",
+                "_address_postcode": 90017,
+                "_address_prefix": "",
+                "_address_region": "California",
+                "_address_street": "Main Street 100\nSuite 200",
+                "_address_suffix": "",
+                "_address_telephone": 3233361267,
+                "_address_vat_id": "",
+                "_address_default_billing_": 1,
+                "_address_default_shipping_": 1,
+                "delivery_preferences": [
+                    "Hand directly to resident",
+                    "Leave in the mailbox"
+                ],
+                "interests": [
+                    "Electronics",
+                    "Sports",
+                    "Automotive"
+                ]
+            }
+        ]
+    }
+}
+```
+
+`delivery_preferences` and `interests` are multiple select attributes for addresses and customers. They are represented as an array of strings.
+
+**Response:**
+
+When the import is successful, the API response will contain the number of entities that were successfully imported.
+
+```json
+[
+  "Entities Processed: 2"
+] 
+```
+
+The `"entity": "customer_composite"` represents a composite entity that includes both a customer and an associated address. While the payload contains one item in the `items` array, it results in two entities (customer and address) being processed. Therefore, the response indicates "Entities Processed: 2".

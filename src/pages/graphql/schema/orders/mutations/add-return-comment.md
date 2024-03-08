@@ -1,5 +1,5 @@
 ---
-title: addReturnComment mutation | Commerce Web APIs
+title: addReturnComment mutation
 ---
 
 # addReturnComment mutation
@@ -13,6 +13,10 @@ mutation: {
     addReturnComment(input: AddReturnCommentInput!): AddReturnCommentOutput
 }
 ```
+
+## Reference
+
+The [`addReturnComment`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addReturnComment) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -75,29 +79,6 @@ mutation{
   }
 }
 ```
-
-## Input attributes
-
-The `AddReturnCommentInput` object must contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`comment_text` | String! | The text added to the return request
-`return_uid` | ID! | The unique ID of a `Return` object
-
-## Output attributes
-
-The `AddReturnCommentOutput` object contains the `Return` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`return` | Return | Contains details about the modified return
-
-### Return object
-
-import Return from '/src/pages/_includes/graphql/return.md'
-
-<Return />
 
 ## Related topics
 

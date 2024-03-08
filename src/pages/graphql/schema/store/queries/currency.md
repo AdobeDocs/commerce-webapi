@@ -1,5 +1,5 @@
 ---
-title: currency query | Commerce Web APIs
+title: currency query
 ---
 
 # currency query
@@ -9,6 +9,10 @@ Use the `currency` query to return information about the store's currency config
 ## Syntax
 
 `{currency {Currency}}`
+
+## Reference
+
+The [`currency`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-currency) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -60,28 +64,6 @@ query {
   }
 }
 ```
-
-## Output attributes
-
-The `currency` object provides the following attributes:
-
-Attribute | Data type | Description
---- | --- | ---
-`available_currency_codes` | [String] | An array of three-letter currency codes accepted by the store, such as `USD` and `EUR`
-`base_currency_code` | String | The base currency set for the store, such as USD
-`base_currency_symbol` | String | The symbol for the specified base currency, such as $
-`default_display_currency_code` | String | Specifies if the currency code is set as the store's default
-`default_display_currency_symbol` | String | Specifies if the currency symbol is set as the store's default
-`exchange_rates` | [[ExchangeRate]](#exchange-rate-attributes) | An array of exchange rates specified in the store
-
-## Exchange rate attributes
-
-The `ExchangeRate` object provides the following attributes:
-
-Attribute | Data type | Description
---- | --- | ---
-`currency_to` | String | Specifies the store's default currency to exchange to
-`rate` | Float | The exchange rate for the store's default currency
 
 ## Related topics
 

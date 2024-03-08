@@ -1,5 +1,5 @@
 ---
-title: updateProductsInWishlist mutation | Commerce Web APIs
+title: updateProductsInWishlist mutation
 ---
 
 # updateProductsInWishlist mutation
@@ -24,6 +24,10 @@ mutation {
   }
 }
 ```
+
+## Reference
+
+The [`updateProductsInWishlist`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateProductsInWishlist) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -286,57 +290,9 @@ mutation {
 }
 ```
 
-## Input attributes
-
-The `updateProductsInWishlist` mutation requires the following input.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`wishlistId` | ID! | The ID of the customer's wish list
-`wishlistItems`| [[WishlistItemUpdateInput!](#wishlistitemupdateinput-attributes)]! | An array containing products to be updated
-
-### WishlistItemUpdateInput attributes
-
-The `WishlistItemUpdateInput` object defines each item to add to the wish list.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`description` | String | Customer-entered comments about the item
-`entered_options`| [EnteredOptionInput] | An array of options that the customer entered
-`quantity` | Float | The amount or number of items to add
-`selected_options` | [ID!] | An array of strings corresponding to options the customer selected
-`wishlist_item_id` | ID! | The ID of the wishlist item to update
-
-### EnteredOptionInput attributes
-
-import EnteredOptionInput from '/src/pages/_includes/graphql/entered-option-input.md'
-
-<EnteredOptionInput />
-
-## Output attributes
-
-The `UpdateProductsInWishlistOutput` object contains the customer's wish list and error message information.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`user_errors` | [WishListUserInputError!]! | An array of errors encountered while adding products to a wish list
-`wishlist` | Wishlist! | Contains the wish list with all items that were successfully added
-
-### Wishlist attributes
-
-import Wishlist from '/src/pages/_includes/graphql/wishlist.md'
-
-<Wishlist />
-
-### WishListUserInputError attributes
-
-import WishlistUserInputErrors from '/src/pages/_includes/graphql/wishlist-user-input-errors.md'
-
-<WishlistUserInputErrors />
-
 ## Errors
 
 Error | Description
 --- | ---
 `The current user cannot perform operations on wishlist` | An unauthorized user (guest) tried to add an item to a wishlist, or an authorized user (customer) tried to add an item to a wishlist of another customer.
-`The wishlist was not found.` | The value provifed in the `wishlistId` field is invalid or does not exist for the customer.
+`The wishlist was not found.` | The value provided in the `wishlistId` field is invalid or does not exist for the customer.

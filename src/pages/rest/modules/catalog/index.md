@@ -1,6 +1,8 @@
 ---
 title: Catalog module
 description: Create and maintain products and categories with the Catalog module.
+keywords:
+  - REST
 --- 
  
 # Catalog module

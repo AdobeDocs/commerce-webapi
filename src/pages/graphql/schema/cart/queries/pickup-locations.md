@@ -1,5 +1,5 @@
 ---
-title: pickupLocations query | Commerce Web APIs
+title: pickupLocations query
 contributor_name: Oleksandr Kravchuk
 contributor_link: https://github.com/swnsma
 ---
