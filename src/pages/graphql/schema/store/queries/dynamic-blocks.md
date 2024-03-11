@@ -48,7 +48,7 @@ dynamicBlocks(
 
 ## Reference
 
-The [`dynamic_blocks`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-dynamicBlocks) reference provides detailed information about the types and fields defined in this query.
+The [`dynamicBlocks`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-dynamicBlocks) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

@@ -11,6 +11,8 @@ Use the `updateCompanyUser` mutation to update an existing company user.
 
 You can get the user ID and role ID with the [`company`](../queries/company.md) query.
 
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
+
 ## Syntax
 
 ```graphql
@@ -22,6 +24,10 @@ mutation {
     }
 }
 ```
+
+## Reference
+
+The [`updateCompanyUser`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateCompanyUser) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -131,39 +137,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `CompanyUserUpdateInput` input object defines the company user data.
-
-### CompanyUserUpdateInput attributes
-
-The `CompanyUserUpdateInput` object contains the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`email` | String | The company user's email address
-`firstname` | String | The company user's first name
-`id` | ID! | The encoded user ID of the company user to be updated
-`job_title` | String | The company user's job title or function
-`lastname` | String | The company user's last name
-`role_id` | ID | The ID of the role assigned to the company user
-`status` | CompanyUserStatusEnum | Indicates whether the company user is ACTIVE or INACTIVE
-`telephone` | String | The company user's phone number
-
-## Output attributes
-
-The `UpdateCompanyUserOutput` output object contains the following attribute:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`user` | Customer! | Contains company user data
-
-### Customer attributes
-
-import Customer from '/src/_includes/graphql/customer-output-24.md'
-
-<Customer />
 
 ## Errors
 

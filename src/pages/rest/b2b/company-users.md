@@ -15,7 +15,7 @@ A company user is a customer (buyer) that is assigned extended attributes that i
 
 <InlineAlert variant="info" slots="text"/>
 
-This topic discusses only the features of the `customerCustomerRepositoryV1` service that are specific to B2B. See [Create a customer](https://developer.adobe.com/commerce/webapi/rest/tutorials/orders/order-create-customer.html) for an example of creating a standard customer.
+This topic discusses only the features of the `customerCustomerRepositoryV1` service that are specific to B2B. See [Create a customer](../tutorials/orders/order-create-customer.md) for an example of creating a standard customer.
 
 ## Managing company users with REST
 

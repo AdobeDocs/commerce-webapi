@@ -21,6 +21,10 @@ This mutation requires a valid [customer authentication token](../../../customer
     ): RemoveNegotiableQuoteItemsOutput
 ```
 
+## Reference
+
+The [`removeNegotiableQuoteItems`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-removeNegotiableQuoteItems) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example removes a product from a negotiable quote.
@@ -103,26 +107,3 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `RemoveNegotiableQuoteItemsInput` object contains the following attributes.
-
-Attribute | Data Type | Description
---- | --- | ---
-`quote_item_uids` | [ID!]! | An array of IDs indicating which items to remove from the negotiable quote
-`quote_uid` | ID! | The unique ID of a `NegotiableQuote` object
-
-## Output attributes
-
-The `RemoveNegotiableQuoteItemsOutput` output object contains the following attribute.
-
-Attribute | Data Type | Description
---- | --- | ---
-`quote` | NegotiableQuote | Contains details about the negotiable quote
-
-### NegotiableQuote attributes
-
-import NegotiableQuote from '/src/_includes/graphql/negotiable-quote.md'
-
-<NegotiableQuote />

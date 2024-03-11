@@ -18,3 +18,7 @@ To begin exploring GraphQL, set the GraphQL endpoint by entering `http://<commer
 The following image shows a sample query, its response, and the GraphQL browser:
 
 ![GraphiQL browser](../_images/graphql/graphql-browser.png)
+
+<InlineAlert variant="info" slots="text" />
+
+The Catalog Service, Live Search, and Product Recommendations services have schemas that are independent from the core schema for Adobe Commerce and Magento Open Source. You can find the schema reference documentation and examples for these services in [Storefront Services GraphQL](https://developer.adobe.com/commerce/services/graphql/).

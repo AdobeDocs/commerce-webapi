@@ -6,11 +6,15 @@ contributor_link: https://www.atwix.com/
 
 # subscribeEmailToNewsletter mutation
 
-The `subscribeEmailToNewsletter` mutation allows guests and registered customers to sign up to receive newsletters.
+The `subscribeEmailToNewsletter` mutation allows guests and registered customers to sign up to receive newsletters. It can return a value of `NOT_ACTIVE` or `SUBSCRIBED`.
 
 ## Syntax
 
 `mutation: {subscribeEmailToNewsletter(email: String!): SubscribeEmailToNewsletterOutput}`
+
+## Reference
+
+The [`subscribeEmailToNewsletter`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-subscribeEmailToNewsletter) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -39,34 +43,6 @@ mutation {
   }
 }
 ```
-
-## Input arguments
-
-The mutation contains a required `email` parameter that specifies the email address to be added into a newsletter subscription.
-
-## Output attributes
-
-The `SubscribeEmailToNewsletterOutput` object contains the following attributes:
-
-Attribute | Data Type | Description
---- | --- | ---
-`status` | SubscriptionStatusesEnum | Contains a subscription status of specified `email` address.
-
-### SubscriptionStatusesEnum
-
-The `SubscriptionStatusesEnum` is a predefined set of possible subscription statuses:
-
-Value | Description
---- | ---
-`NOT_ACTIVE` | The subscription requires a confirmation. A confirmation email has been sent to specified email address to confirm the subscription.
-`SUBSCRIBED` | The email address is subscribed.
-`UNSUBSCRIBED` | The email address is unsubscribed.
-`UNCONFIRMED` | The specified email is that of a customer who did not previously confirm a required customer registration.
-
-The `subscribeEmailToNewsletter` mutation for the `status` field may return only the following statuses:
-
--  `NOT_ACTIVE`
--  `SUBSCRIBED`
 
 ## Errors
 

@@ -19,7 +19,7 @@ You have several options when enabling a custom attribute (or any attribute that
 
 ## Define the filter for your query
 
-The [`filter`](../schema/products/queries/products.md#productfilterinput-attributes) definition for your custom attribute requires one of the following input data types:
+The `filter` definition for your custom attribute requires one of the following input data types:
 
 -  `FilterEqualTypeInput` - Specify this data type when the **Catalog Input Type for Store Owner** field for your custom attribute is set to Yes/No, Select, or Multiple select. Your filter can contain the `eq` or `in` attribute. Use the `eq` attribute to exactly match the specified string. Use the `in` attribute to filter on a comma-separated list of values.
 -  `FilterMatchTypeInput` - Specify this data type when the **Catalog Input Type for Store Owner** field for your custom attribute is set to Text Field or Text Area. Your filter must contain the `match` attribute, which will return all items that partially fuzzy match the specified string.

@@ -10,6 +10,10 @@ The `createProductReview` mutation adds a review for the specified product. Use 
 
 `createProductReview(input: CreateProductReviewInput!): CreateProductReviewOutput!`
 
+## Reference
+
+The [`createProductReview`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createProductReview) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 In the following example, Roni gives product `WH08` four stars overall, three stars for value, and four stars for quality.
@@ -82,45 +86,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `CreateProductReviewInput` input object defines the product review.
-
-### CreateProductReviewInput attributes
-
-The `CreateProductReviewInput` object contains the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`nickname` | String! | The customer's nickname. Defaults to the customer name, if logged in
-`ratings` | [ProductReviewRatingInput!]! | Ratings details by category. e.g price: 5, quality: 4 etc
-`sku` | String! | The SKU of the reviewed product
-`summary` | String! | The summary (title) of the review
-`text` | String! | The review text.
-
-### ProductReviewRatingInput attributes
-
-The `ProductReviewRatingInput` object contains the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`id` | String! | An encoded rating ID
-`value_id` | String! | An encoded rating value ID
-
-## Output attributes
-
-The `CreateProductReviewOutput` output object contains the following attribute:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`review` | ProductReview! | Contains the completed product review
-
-### ProductReview attributes
-
-import ProductReview from '/src/_includes/graphql/product-review.md'
-
-<ProductReview />
 
 ## Errors
 

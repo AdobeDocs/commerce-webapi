@@ -8,7 +8,11 @@ keywords:
 
 # PayPal Payflow Link payment method
 
-PayPal [PayFlow Link](https://developer.paypal.com/docs/classic/payflow/integration-guide/) is available for merchants in the United States and Canada only. Customers are not required to have a personal PayPal account. Instead, customers enter their credit card information in a form that is hosted by PayPal.
+<InlineAlert variant="info" slots="text" />
+
+PayPal has designated PayFlow Link as a legacy product.
+
+PayPal [PayFlow Link](https://developer.paypal.com/api/nvp-soap/payflow/payflow-gateway/) is available for merchants in the United States and Canada only. Customers are not required to have a personal PayPal account. Instead, customers enter their credit card information in a form that is hosted by PayPal.
 
 The Payflow gateway uses a secure token to send non-credit card transaction data to the Payflow server for storage in a way that cannot be intercepted and manipulated maliciously. This token secures the data for a one-time transaction and is valid for 30 minutes. When the PWA client runs the `placeOrder` mutation, the application requests a secure token. The Payflow server returns the token as a string of up to 32 alphanumeric characters.
 
