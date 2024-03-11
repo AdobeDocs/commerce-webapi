@@ -12,6 +12,10 @@ A logged-in customer specifies an email address when they create an account. The
 
 `mutation: {setGuestEmailOnCart(input: SetGuestEmailOnCartInput): {SetGuestEmailOnCartOutput}}`
 
+## Reference
+
+The [`setGuestEmailOnCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-setGuestEmailOnCart) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 **Request:**
@@ -44,31 +48,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `SetGuestEmailOnCartInput` object must contain the following attributes.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart_id` | String! | The unique ID that identifies the customer's cart
-`email` | String! | The guest user's email
-
-## Output attributes
-
-The `SetGuestEmailOnCartOutput` object contains the `Cart` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
-
-### Cart object
-
-import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 

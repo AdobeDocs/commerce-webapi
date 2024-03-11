@@ -10,6 +10,10 @@ The `applyCouponToCart` mutation applies a pre-defined coupon code to the specif
 
 `mutation: {applyCouponToCart(input: ApplyCouponToCartInput) {ApplyCouponToCartOutput}}`
 
+## Reference
+
+The [`applyCouponToCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-applyCouponToCart) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example applies the coupon code `H2O` to the cart. For this coupon to be valid, the Affirm Water Bottle (`sku`: 24-UG06) must be in the cart.
@@ -86,35 +90,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `applyCouponToCart` mutation requires the `cart_id` and `coupon_code`.
-
-### ApplyCouponToCartInput object
-
-The `ApplyCouponToCartInput` object must contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart_id` | String! | The unique ID that identifies the customer's cart
-`coupon_code` | String! | A valid coupon code
-
-## Output attributes
-
-The `ApplyCouponToCartOutput` object contains the `Cart` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
-
-### Cart object
-
-import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 

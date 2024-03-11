@@ -7,6 +7,8 @@ edition: b2b
 
 The `updateCompany` mutation allows you to update a company's address as well as top-level string attributes such as the name, legal name, and email. You cannot update the administrator or other objects such as teams, roles, or resources with this mutation.
 
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
+
 ## Syntax
 
 ```graphql
@@ -18,6 +20,10 @@ mutation {
   }
 }
 ```
+
+## Reference
+
+The [`updateCompany`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateCompany) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -76,40 +82,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The CompanyUpdateInput object defines the schema for updating a company.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`company_email` | String | The email address of the company contact
-`company_name` | String | The name of the company to update
-`legal_address` | [CompanyLegalAddressUpdateInput](#companylegaladdressupdateinput-attributes) | Defines the legal address data of the company
-`legal_name` | String | The full legal name of the company
-`reseller_id` | String | The resale number that is assigned to the company for tax reporting purposes
-`vat_tax_id` | String | The value-added tax number that is assigned to the company by some jurisdictions for tax reporting purposes
-
-### CompanyLegalAddressUpdateInput attributes
-
-The `CompanyLegalAddressUpdateInput` object can contain the following attributes.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`city` | String | The city where the company is registered to conduct business
-`country_id` | CountryCodeEnum | Company's country ID. See the [`countries` query](../../../store/queries/countries.md)
-`postcode` | String | The ZIP/postal code of the company
-`region` | CustomerAddressRegionInput! | An object containing the region name and/or region ID where the company is registered to conduct business
-`street` | [String!] | An array of strings that define the street address where the company is registered to conduct business
-`telephone` | String | The primary phone number of the company
-
-## Output attributes
-
-The `UpdateCompanyOutput` object contains the `Company` object.
-
-import Company from '/src/_includes/graphql/company.md'
-
-<Company />.md %}
 
 ## Related topics
 

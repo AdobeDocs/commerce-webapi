@@ -6,11 +6,15 @@ title: route query
 
 A merchant can reconfigure (rewrite) the URL to any product, category, or CMS page. When the rewrite goes into effect, any links that point to the previous URL are redirected to the new address.
 
-The `route` query returns the canonical URL for a specified product, category, or CMS page. An external app can render a page by a URL without any prior knowledge about the landing page.
+The `route` query returns the canonical URL for a specified product, category, or CMS page. An external app can render a page by a URL without any prior knowledge about the landing page. To query for product and category pages, the `url` value must contain the URL key and suffix. For CMS page queries, the `url` value must contain the URL key only.
 
 ## Syntax
 
 `{route(url: String!): RoutableInterface}`
+
+## Reference
+
+The [`route`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-route) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -98,20 +102,6 @@ The following query returns information about the product with the URL key of `j
   }
 }
 ```
-
-## Input attributes
-
-The `route` query requires the following attribute.
-
-Attribute | Type | Description
---- | --- | ---
-`url` | String! | The requested URL. To query for product and category pages, the `url` value must contain the URL key and suffix. For CMS page queries, the `url` value must contain the URL key only.
-
-## Output attributes
-
-import RoutableInterface from '/src/_includes/graphql/routable-interface.md'
-
-<RoutableInterface />
 
 ## Related topics
 

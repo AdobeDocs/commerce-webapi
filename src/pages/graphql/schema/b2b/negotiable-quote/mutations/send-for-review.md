@@ -17,6 +17,10 @@ sendNegotiableQuoteForReview(
 ) : SendNegotiableQuoteForReviewOutput
 ```
 
+## Reference
+
+The [`sendNegotiableQuoteForReview`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-sendNegotiableQuoteForReview) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example adds a comment to the specified negotiable quote.
@@ -95,26 +99,3 @@ mutation{
   }
 }
 ```
-
-## Input attributes
-
-The `SendNegotiableQuoteForReviewInput` object contains the following attribute.
-
-Attribute | Data Type | Description
---- | --- | ---
-`comment` | NegotiableQuoteCommentInput | A comment for the seller to review
-`quote_uid` | ID! | The unique ID of a `NegotiableQuote` object
-
-## Output attributes
-
-The `SendNegotiableQuoteForReviewOutput` output object contains the following attribute.
-
-Attribute | Data Type | Description
---- | --- | ---
-`quote` | [NegotiableQuote](#negotiablequote-attributes) | The negotiable quote after sending for seller review
-
-### NegotiableQuote attributes
-
-import NegotiableQuote from '/src/_includes/graphql/negotiable-quote.md'
-
-<NegotiableQuote />

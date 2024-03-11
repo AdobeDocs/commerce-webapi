@@ -575,10 +575,10 @@ POST http://domain.com/rest/default/V1/products
 
 ## Verify this step
 
-*  Log in to the Adobe Commerce Admin Panel and select <b>Catalog > Products</b> and confirm that your products appear in the grid.
+Log in to the Adobe Commerce Admin Panel and select **Catalog** > **Products** and confirm that your products appear in the grid.
 
-  ![Simple products](../../../_images/simple-products-admin-grid.png)
+![Simple products](../../../_images/simple-products-admin-grid.png)
 
- <InlineAlert variant="info" slots="text"/>
+<InlineAlert variant="info" slots="text"/>
 
 If you do not see your products in the catalog, you can try reindexing and clearing the cache.

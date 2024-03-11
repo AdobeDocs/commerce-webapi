@@ -6,6 +6,8 @@ title: mergeCarts mutation
 
 The `mergeCarts` mutation transfers the contents of a guest cart into the cart of a logged-in customer. This mutation must be run on behalf of a logged-in customer.
 
+If you do not specify a value for the `destination_cart_id` input argument, the mutation determines the customer's cart ID and uses that value.
+
 The mutation retains any items that were already in the logged-in customer's cart. If both the guest and customer carts contain the same item, `mergeCarts` adds the quantities. Upon success, the mutation deletes the original guest cart.
 
 <InlineAlert variant="info" slots="text" />
@@ -25,6 +27,10 @@ mutation {
     }
 }
 ```
+
+## Reference
+
+The [`mergeCarts`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-mergeCarts) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -128,29 +134,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-Attribute |  Data Type | Description
---- | --- | ---
-`destination_cart_id` | String | The ID of the logged-in customer's cart. If you do not specify a value, the mutation determines the customer's cart ID and uses that value.
-`source_cart_id` | String! | The ID of the guest cart
-
-## Output attributes
-
-The `mergeCarts` mutation returns a `Cart` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
-
-### Cart object
-
-import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 

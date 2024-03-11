@@ -25,6 +25,10 @@ requestNegotiableQuote(
 ): RequestNegotiableQuoteOutput
 ```
 
+## Reference
+
+The [`requestNegotiableQuote`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-requestNegotiableQuote) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example requests a negotiable quote. The cart contains three items.
@@ -185,39 +189,3 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `RequestNegotiableQuoteInput` input object specifies the company user's cart ID and other information to identify a new negotiable quote.
-
-### RequestNegotiableQuoteInput attributes
-
-The `RequestNegotiableQuoteInput` object contains the following attributes.
-
-Attribute | Data Type | Description
---- | --- | ---
-`cart_id`| ID! | The cart ID of the buyer requesting a new negotiable quote
-`comment` | [NegotiableQuoteCommentInput!](#NegotiableQuoteCommentInput) | Comments the buyer entered to describe the request
-`quote_name` | String! | The name the buyer assigned to the negotiable quote request
-
-### NegotiableQuoteCommentInput
-
-The `NegotiableQuoteCommentInput` object contains the following attribute.
-
-Attribute | Data Type | Description
---- | --- | ---
-`comment` | String! | The comment provided by the buyer
-
-## Output attributes
-
-The `RequestNegotiableQuoteOutput` output object contains the following attribute.
-
-Attribute | Data Type | Description
---- | --- | ---
-`quote` | NegotiableQuote! | Contains details about the negotiable quote
-
-### NegotiableQuote attributes
-
-import NegotiableQuote from '/src/_includes/graphql/negotiable-quote.md'
-
-<NegotiableQuote />

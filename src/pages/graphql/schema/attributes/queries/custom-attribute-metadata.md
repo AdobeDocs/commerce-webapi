@@ -10,9 +10,15 @@ The `customAttributeMetadata` query has been deprecated. Use the [`customAttribu
 
 The `customAttributeMetadata` query returns the attribute type, given an attribute code and entity type. All entity attributes can be added to an equivalent GraphQL type, including custom, extension, and EAV (which have precedence set in that order for collisions). The GraphQL query consumer does not have the ability to know a field's attribute type.
 
+The `StorefrontProperties` output object returns information about a product attribute. Storefront properties are configured in the Admin at **Stores** > Attributes > **Product** > `Attribute Name` > **Storefront Properties**.
+
 ## Syntax
 
 `customAttributeMetadata(attributes: [AttributeInput!]!): CustomAttributeMetadata`
+
+## Reference
+
+The [`customAttributeMetadata`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-customAttributeMetadata) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -225,49 +231,6 @@ The following query returns the attribute type for various custom and EAV attrib
   }
 }
 ```
-
-## Input attributes
-
-The `AttributeInput` input object requires the following attributes.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`attribute_code` | String | The unique identifier for an attribute code. This value should be in lowercase letters without spaces
-`entity_type` | String | The type of entity that defines the attribute, such as `catalog_product`, `catalog_category`, or `customer`
-
-## Output attributes
-
-The `CustomAttributeMetadata` object contains the `items` attribute field, which returns an array of `Attribute` objects. The `Attribute` object can contain the following attributes.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`attribute_code` | String | The unique identifier for an attribute code. This value should be in lowercase letters without spaces
-`attribute_options` | [`AttributeOption`] | An array of attribute options
-`attribute_type` | String | The data type of the attribute
-`entity_type` | String | The type of entity that defines the attribute, such as `catalog_product`, `catalog_category`, or `customer`
-`input_type` | String | The frontend input type of the attribute
-`storefront_properties` | [StorefrontProperties](#storefrontproperties-object) | Contains details about the storefront properties configured for the attribute
-
-### AttributeOption object
-
-The `AttributeOption` object contains the name and value of the option.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`label` | String | The name of an attribute option
-`value` | String | The value assigned to an attribute option
-
-### StorefrontProperties object
-
-The `StorefrontProperties` object returns information about a product attribute. Storefront properties are configured in the Admin at **Stores** > Attributes > **Product** > `Attribute Name` > **Storefront Properties**.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`position`| Int | The relative position of the attribute in the layered navigation block
-`use_in_layered_navigation` | UseInLayeredNavigationOptions | Indicates whether the attribute is filterable with results, without results, or not at all
-`use_in_product_listing` | Boolean | Indicates whether the attribute is displayed in product listings
-`use_in_search_results_layered_navigation`| Boolean | Indicates whether the attribute can be used in layered navigation on search results pages
-`visible_on_catalog_pages`| Boolean | Indicates whether the attribute is displayed on product pages
 
 ## Errors
 

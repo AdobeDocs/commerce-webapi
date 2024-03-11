@@ -22,6 +22,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`createEmptyCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createEmptyCart) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 ### Create a cart with a randomly-generated cart ID
@@ -73,16 +77,6 @@ The mutation returns the same `cart_id`.
   }
 }
 ```
-
-## Input attributes
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart_id` | String | An optional 32-character string
-
-## Output attributes
-
-The `createEmptyCart` mutation returns the cart ID.
 
 ## Errors
 

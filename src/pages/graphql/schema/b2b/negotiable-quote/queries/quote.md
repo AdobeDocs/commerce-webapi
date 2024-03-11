@@ -15,6 +15,10 @@ This query requires a valid [customer authentication token](../../../customer/mu
 negotiableQuote (uid ID!): NegotiableQuote
 ```
 
+## Reference
+
+The [`negotiableQuote`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-negotiableQuote) reference provides detailed information about the types and fields defined in this query.
+
 ## Example usage
 
 The following example returns information about the negotiable quote with the UID of `kw6mLEvl6vjjPNsjtJqwpamv5o0iT1bc`. The buyer and seller agreed to a five percent discount on the order.
@@ -525,17 +529,3 @@ query{
   }
 }
 ```
-
-## Input attributes
-
-The `negotiableQuote` query requires a valid negotiable quote ID.
-
-Attribute | Data Type | Description
---- | --- | ---
-`uid` | ID! | The unique ID assigned to the negotiable quote
-
-## Output attributes
-
-import NegotiableQuote from '/src/_includes/graphql/negotiable-quote.md'
-
-<NegotiableQuote />

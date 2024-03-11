@@ -41,6 +41,10 @@ This mutation requires a valid [customer authentication token](../../../customer
 }
 ```
 
+## Reference
+
+The [`setNegotiableQuotePaymentMethod`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-setNegotiableQuotePaymentMethod) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example sets the payment method .
@@ -105,37 +109,3 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `SetNegotiableQuotePaymentMethodInput` input object specifies the company user's cart ID and the payment method.
-
-### SetNegotiableQuotePaymentMethodInput attributes
-
-The `SetNegotiableQuotePaymentMethodInput` object contains the following attributes.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`payment_method`| NegotiableQuotePaymentMethodInput! | The payment method to be assigned to the negotiable quote
-`quote_uid` | ID! | The unique ID of a `NegotiableQuote` object
-
-### NegotiableQuotePaymentMethodInput attributes
-
-Attribute |  Data Type | Description
---- | --- | ---
-`code` | String! | The internal name for the payment method
-`purchase_order_number` | String | The purchase order number. Optional for most payment methods.
-
-## Output attributes
-
-The `SetNegotiableQuotePaymentMethodOutput` output object contains the following attribute.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`quote` | NegotiableQuote | The updated negotiable quote
-
-### NegotiableQuote attributes
-
-import NegotiableQuote from '/src/_includes/graphql/negotiable-quote.md'
-
-<NegotiableQuote />

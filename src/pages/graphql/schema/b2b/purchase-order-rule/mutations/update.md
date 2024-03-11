@@ -7,7 +7,7 @@ edition: b2b
 
 The `updatePurchaseOrderApprovalRule` mutation updates the specified purchase order approval rule.
 
-You can use the [`customer` query](../../customer/queries/customer.md) to retrieve the `uid` value of the approval rule.
+You can use the [`customer` query](../../../customer/queries/customer.md) to retrieve the `uid` value of the approval rule.
 
 The [`createPurchaseOrderApprovalRule` mutation](create.md) describes the requirements of the `condition` and `approvers` fields.
 
@@ -22,6 +22,10 @@ mutation {
     }
 }
 ```
+
+## Reference
+
+The [`updatePurchaseOrderApprovalRule`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updatePurchaseOrderApprovalRule) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Headers
 
