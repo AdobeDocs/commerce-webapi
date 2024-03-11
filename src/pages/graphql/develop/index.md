@@ -27,7 +27,7 @@ A query definition can be one line, or it can be complex. If your module's query
 
 The following example shows the `products` query. The `type` is defined as a `Query`. The `products` definitions define the keywords that are used to construct a query, as shown in [Using queries](../usage/index.md#queries). The parameter definitions will be discussed in [Specify output attributes](#specify-output-attributes).
 
-```text
+```php
 type Query {
     products (
         search: String
@@ -41,7 +41,7 @@ type Query {
 
 In contrast, the `customer` query returns the `Customer` object associated with the current user. There is no need to define pagination information.
 
-```text
+```php
 type Query {
     customer: Customer @resolver(class: "Magento\\CustomerGraphQl\\Model\\Resolver\\Customer")
 }
@@ -127,10 +127,10 @@ The following example shows the `products` query. The query returns a `Products`
 
 Attribute | Data type | Description
 --- | --- | ---
-`aggregations` | [[Aggregation]](../schema/products/queries/products.md#aggregation-attributes) | Layered navigation aggregations
-`items` | [[ProductInterface]](../schema/products/queries/products.md#productinterface-attributes) | An array of products that match the specified search criteria
-`page_info` | [SearchResultPageInfo](../schema/products/queries/products.md#searchresultpageinfo-attributes) | An object that includes the `page_info` and `currentPage` values specified in the query
-`sort_fields` |  [SortFields](../schema/products/queries/products.md#sortfields-attributes) | An object that includes the default sort field and all available sort fields
+`aggregations` | [Aggregation] | Layered navigation aggregations
+`items` | [ProductInterface] | An array of products that match the specified search criteria
+`page_info` | SearchResultPageInfo | An object that includes the `page_info` and `currentPage` values specified in the query
+`sort_fields` |  SortFields | An object that includes the default sort field and all available sort fields
 `total_count` | Int | The number of products in the category that are marked as visible. By default, in complex products, parent products are visible, but their child products are not
 
 ### Define the output interface

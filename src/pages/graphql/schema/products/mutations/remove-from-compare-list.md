@@ -22,6 +22,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`removeProductsFromCompareList`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-removeProductsFromCompareList) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example removes two products from the comparison list with the unique ID "sssXyGZkTFksdPnxNoK1ut6OiV4bbchD".
@@ -108,27 +112,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `RemoveProductsFromCompareListInput` input object defines the comparison list to be modified.
-
-### RemoveProductsFromCompareListInput attributes
-
-The `RemoveProductsFromCompareListInput` object contains the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`products` | [ID!]! | An array of product IDs to remove from the comparison list
-`uid` | ID! | The unique identifier of the comparison list to modify
-
-## Output attributes
-
-The `CompareList` output object contains the following attributes:
-
-import CompareListOutput from '/src/_includes/graphql/compare-list-output.md'
-
-<CompareListOutput />
 
 ## Related topics
 

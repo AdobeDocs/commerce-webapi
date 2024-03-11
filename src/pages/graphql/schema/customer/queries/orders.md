@@ -16,6 +16,10 @@ We recommend you use customer tokens in the header of your GraphQL calls. Howeve
 
 `{customerOrders {CustomerOrders}}`
 
+## Reference
+
+The [`customerOrders`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-customerOrders) reference provides detailed information about the types and fields defined in this query.
+
 ## Example usage
 
 The following query returns the order history of the logged in customer.
@@ -62,38 +66,6 @@ The following query returns the order history of the logged in customer.
   }
 }
 ```
-
-## Output attributes
-
-The `CustomerOrders` object contains the `items` attribute.
-
-Attribute | Data type | Description
---- | --- | ---
-`items` | [`[CustomerOrder]`](#customerorders-query) | An array of customer orders
-
-### Customer order items attributes
-
-The `CustomerOrder` object defines details about each order the customer has placed.
-
-Attribute | Data type | Description
---- | --- | ---
-`created_at` | String | A timestamp indicating when the order was placed
-`gift_message` | [GiftMessage](orders.md#giftmessage-object) | The entered gift message for the order
-`grand_total` | Float | The total of the order
-`id` | Int | The ID assigned to the customer's order
-`increment_id` | String | Deprecated. Use `order_number` instead. An ID that indicates the sequence of the order in the customer's order history
-`order_number` | String! | The order number assigned to the order
-`status` | String | The status of the order, such as `open`, `processing`, or `closed`
-
-#### GiftMessage object
-
-The `GiftMessage` object contains the following required attributes.
-
-Attribute | Data Type | Description
---- | --- | ---
-`to` | String! | Recipient name
-`from` | String! | Sender name
-`message` | String! | Gift message text
 
 ## Errors
 

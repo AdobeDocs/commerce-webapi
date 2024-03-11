@@ -1,13 +1,13 @@
 ---
 title: REST API Overview
-description: Overview of the available REST API documentation
+description: Overview of the Adobe Commerce and Magento Open Source REST API documentation.
 keywords:
   - REST
 --- 
  
 # REST API Overview
 
-The REST API documentation describes the REST APIs that are available in Adobe Commerce.
+The REST API documentation describes the REST APIs that are available in Adobe Commerce and Magento Open Source.
 
 <TextBlock slots="image, heading, text, links" width="50%" />
 
@@ -15,7 +15,7 @@ The REST API documentation describes the REST APIs that are available in Adobe C
 
 ## Quick Reference
 
-Access the Adobe Commerce API documentation in Redoc
+Access the API documentation in Redocly
 
 -  [Learn more](quick-reference/)
 
@@ -35,7 +35,7 @@ Learn how to search, filter, and more using REST endpoints
 
 ## Tutorials
 
-Get an introduction to Adobe Commerce web APIs through these step-by-step tutorials
+Get an introduction to web APIs through these step-by-step tutorials
 
 -  [Learn more](tutorials/)
 

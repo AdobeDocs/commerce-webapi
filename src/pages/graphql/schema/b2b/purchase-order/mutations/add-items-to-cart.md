@@ -19,6 +19,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`addPurchaseOrderItemsToCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addPurchaseOrderItemsToCart) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example adds all purchase order items to the shopping cart.

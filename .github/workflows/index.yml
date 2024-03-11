@@ -18,33 +18,29 @@ jobs:
   build-and-index:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Setup Node v16 for Yarn v3
+      - name: Setup Node v16
         uses: actions/setup-node@v3
         with:
-          node-version: '16.15.0' # Current LTS version
+          node-version-file: '.nvmrc'
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
 
-      - name: Enable Corepack for Yarn v3
+      - name: Enable Corepack for Yarn
         run: corepack enable
 
-      - name: Install Yarn v3
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: set version stable
-
-      - name: Install dependencies
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: install
+      - name: Install Dependencies
+        run: yarn install
         env:
           YARN_ENABLE_IMMUTABLE_INSTALLS: false
 
       - name: Build site
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: build
+        run: yarn build
+
         env:
+          NODE_OPTIONS: "--max_old_space_size=8192"
           PREFIX_PATHS: true # equivalent to --prefix-paths flag for 'gatsby build'
           REPO_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO_OWNER: ${{ github.repository_owner }}

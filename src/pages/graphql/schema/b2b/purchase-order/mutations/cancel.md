@@ -19,6 +19,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`cancelPurchaseOrders`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-cancelPurchaseOrders) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example cancels purchase orders.

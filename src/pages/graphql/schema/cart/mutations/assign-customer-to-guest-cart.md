@@ -30,6 +30,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`assignCustomerToGuestCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-assignCustomerToGuestCart) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 In the following example, the customer and guest carts each contain one item. The mutation merges the customer's cart to the guest cart. As a result, the guest cart contains two items.
@@ -75,28 +79,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart_id` | String! | The unique ID that identifies the guest's cart
-
-## Output attributes
-
-The `assignCustomerToGuestCart` mutation returns a `Cart` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
-
-### Cart object
-
-import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 
