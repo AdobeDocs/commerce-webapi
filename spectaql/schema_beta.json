@@ -15,7 +15,7 @@
         "fields": [
           {
             "name": "attributesForm",
-            "description": "Retrieve EAV attributes associated to a frontend form. For region_id and country_id attributes information use DirectoryGraphQl module.",
+            "description": "Retrieve EAV attributes associated to a frontend form. Use countries query provided by DirectoryGraphQl module to retrieve region_id and country_id attribute options.",
             "args": [
               {
                 "name": "formCode",
@@ -644,6 +644,101 @@
             "type": {
               "kind": "OBJECT",
               "name": "PayflowLinkToken",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "getPaymentConfig",
+            "description": "Retrieves the payment configuration for a given location",
+            "args": [
+              {
+                "name": "location",
+                "description": "Defines the origin location for that payment request",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "ENUM",
+                    "name": "PaymentLocation",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PaymentConfigOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "getPaymentOrder",
+            "description": "Retrieves the payment details for the order",
+            "args": [
+              {
+                "name": "cartId",
+                "description": "The customer cart ID",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "id",
+                "description": "PayPal order ID",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PaymentOrderOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "getPaymentSDK",
+            "description": "Gets the payment SDK urls and values",
+            "args": [
+              {
+                "name": "location",
+                "description": "Defines the origin location for that payment request",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "ENUM",
+                    "name": "PaymentLocation",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "GetPaymentSDKOutput",
               "ofType": null
             },
             "isDeprecated": false,
@@ -2171,6 +2266,37 @@
             "deprecationReason": null
           },
           {
+            "name": "clearCart",
+            "description": "Remove all items from the specified cart.",
+            "args": [
+              {
+                "name": "input",
+                "description": "An input object that defines cart ID of the shopper.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "ClearCartInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ClearCartOutput",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "clearCustomerCart",
             "description": "Remove all items from the specified cart.",
             "args": [
@@ -2365,6 +2491,49 @@
             "name": "createBraintreeClientToken",
             "description": "Creates Client Token for Braintree Javascript SDK initialization.",
             "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "createBraintreePayPalClientToken",
+            "description": "Creates Client Token for Braintree PayPal Javascript SDK initialization.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "createBraintreePayPalVaultClientToken",
+            "description": "Creates Client Token for Braintree PayPal Vault Javascript SDK initialization.",
+            "args": [
+              {
+                "name": "input",
+                "description": "",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "BraintreeVaultInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
             "type": {
               "kind": "NON_NULL",
               "name": null,
@@ -2609,8 +2778,8 @@
               "name": "String",
               "ofType": null
             },
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use `Mutation.createGuestCart` or `Query.customerCart` for logged in customer"
           },
           {
             "name": "createGiftRegistry",
@@ -2640,6 +2809,29 @@
             "deprecationReason": null
           },
           {
+            "name": "createGuestCart",
+            "description": "Create a new shopping cart",
+            "args": [
+              {
+                "name": "input",
+                "description": "",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "CreateGuestCartInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "CreateGuestCartOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "createPayflowProToken",
             "description": "Initiate a transaction and receive a token. Use this mutation for Payflow Pro and Payments Pro payment methods",
             "args": [
@@ -2661,6 +2853,33 @@
             "type": {
               "kind": "OBJECT",
               "name": "CreatePayflowProTokenOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "createPaymentOrder",
+            "description": "Creates a payment order for further payment processing",
+            "args": [
+              {
+                "name": "input",
+                "description": "Contains payment order details that are used while processing the payment order",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "CreatePaymentOrderInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "CreatePaymentOrderOutput",
               "ofType": null
             },
             "isDeprecated": false,
@@ -3952,6 +4171,33 @@
             "deprecationReason": null
           },
           {
+            "name": "renameNegotiableQuote",
+            "description": "Rename negotiable quote.",
+            "args": [
+              {
+                "name": "input",
+                "description": "An input object that defines the quote item name and comment.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "RenameNegotiableQuoteInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "RenameNegotiableQuoteOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "reorderItems",
             "description": "Add all products from a customer's previous order to the cart.",
             "args": [
@@ -4557,6 +4803,29 @@
             "type": {
               "kind": "OBJECT",
               "name": "SubscribeEmailToNewsletterOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "syncPaymentOrder",
+            "description": "Synchronizes the payment order details for further payment processing",
+            "args": [
+              {
+                "name": "input",
+                "description": "Describes the variables needed to synchronize the payment order details",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "SyncPaymentOrderInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
               "ofType": null
             },
             "isDeprecated": false,
@@ -5514,10 +5783,43 @@
               "ofType": null
             },
             "defaultValue": null
+          },
+          {
+            "name": "match_type",
+            "description": "Filter match type for fine-tuned results. Possible values FULL or PARTIAL. If match_type is not provided, returned results will default to FULL match.",
+            "type": {
+              "kind": "ENUM",
+              "name": "FilterMatchTypeEnum",
+              "ofType": null
+            },
+            "defaultValue": null
           }
         ],
         "interfaces": null,
         "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "FilterMatchTypeEnum",
+        "description": "",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "FULL",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": ""
+          },
+          {
+            "name": "PARTIAL",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": ""
+          }
+        ],
         "possibleTypes": null
       },
       {
@@ -8589,12 +8891,96 @@
             "deprecationReason": null
           },
           {
+            "name": "braintree_3dsecure_allowspecific",
+            "description": "Braintree 3D Secure, should 3D Secure be used for specific countries.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_3dsecure_always_request_3ds",
+            "description": "Braintree 3D Secure, always request 3D Secure flag.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_3dsecure_specificcountry",
+            "description": "Braintree 3D Secure, the specific countries to use 3D Secure in, to be used if allow specific is status is enabled.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_3dsecure_threshold_amount",
+            "description": "Braintree 3D Secure, threshold above which 3D Secure should be requested.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_3dsecure_verify_3dsecure",
+            "description": "Braintree 3D Secure enabled/active status.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_ach_direct_debit_vault_active",
+            "description": "Braintree ACH vault status.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_applepay_merchant_name",
+            "description": "Braintree Apple Pay merchant name.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "braintree_applepay_vault_active",
             "description": "Braintree Apple Pay vault status.",
             "args": [],
             "type": {
               "kind": "SCALAR",
-              "name": "String",
+              "name": "Boolean",
               "ofType": null
             },
             "isDeprecated": false,
@@ -8613,12 +8999,816 @@
             "deprecationReason": null
           },
           {
+            "name": "braintree_cc_vault_cvv",
+            "description": "Braintree cc vault CVV re-verification enabled status.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_environment",
+            "description": "Braintree environment.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_googlepay_btn_color",
+            "description": "Braintree Google Pay button color.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_googlepay_cctypes",
+            "description": "Braintree Google Pay Card types supported.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_googlepay_merchant_id",
+            "description": "Braintree Google Pay merchant ID.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "braintree_googlepay_vault_active",
             "description": "Braintree Google Pay vault status.",
             "args": [],
             "type": {
               "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_local_payment_allowed_methods",
+            "description": "Braintree Local Payment Methods allowed payment methods.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
               "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_local_payment_fallback_button_text",
+            "description": "Braintree Local Payment Methods fallback button text.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_local_payment_redirect_on_fail",
+            "description": "Braintree Local Payment Methods redirect URL on failed payment.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_merchant_account_id",
+            "description": "Braintree Merchant Account ID.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_cart_type_credit_color",
+            "description": "Braintree PayPal Credit mini-cart & cart button style color.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_cart_type_credit_label",
+            "description": "Braintree PayPal Credit mini-cart & cart button style label.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_cart_type_credit_shape",
+            "description": "Braintree PayPal Credit mini-cart & cart button style shape.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_cart_type_credit_show",
+            "description": "Braintree PayPal Credit mini-cart & cart button show status.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_cart_type_messaging_layout",
+            "description": "Braintree PayPal Pay Later messaging mini-cart & cart style layout.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_cart_type_messaging_logo",
+            "description": "Braintree PayPal Pay Later messaging mini-cart & cart style logo.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_cart_type_messaging_logo_position",
+            "description": "Braintree PayPal Pay Later messaging mini-cart & cart style logo position.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_cart_type_messaging_show",
+            "description": "Braintree PayPal Pay Later messaging mini-cart & cart show status.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_cart_type_messaging_text_color",
+            "description": "Braintree PayPal Pay Later messaging checkout style text color.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_cart_type_paylater_color",
+            "description": "Braintree PayPal Pay Later mini-cart & cart button style color.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_cart_type_paylater_label",
+            "description": "Braintree PayPal Pay Later mini-cart & cart button style label.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_cart_type_paylater_shape",
+            "description": "Braintree PayPal Pay Later mini-cart & cart button style shape.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_cart_type_paylater_show",
+            "description": "Braintree PayPal Pay Later mini-cart & cart button show status.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_cart_type_paypal_color",
+            "description": "Braintree PayPal mini-cart & cart button style color.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_cart_type_paypal_label",
+            "description": "Braintree PayPal mini-cart & cart button style label.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_cart_type_paypal_shape",
+            "description": "Braintree PayPal mini-cart & cart button style shape.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_cart_type_paypal_show",
+            "description": "Braintree PayPal mini-cart & cart button show.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_checkout_type_credit_color",
+            "description": "Braintree PayPal Credit checkout button style color.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_checkout_type_credit_label",
+            "description": "Braintree PayPal Credit checkout button style label.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_checkout_type_credit_shape",
+            "description": "Braintree PayPal Credit checkout button style shape.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_checkout_type_credit_show",
+            "description": "Braintree PayPal Credit checkout button show status.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_checkout_type_messaging_layout",
+            "description": "Braintree PayPal Pay Later messaging checkout style layout.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_checkout_type_messaging_logo",
+            "description": "Braintree PayPal Pay Later messaging checkout style logo.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_checkout_type_messaging_logo_position",
+            "description": "Braintree PayPal Pay Later messaging checkout style logo position.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_checkout_type_messaging_show",
+            "description": "Braintree PayPal Pay Later messaging checkout show status.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_checkout_type_messaging_text_color",
+            "description": "Braintree PayPal Pay Later messaging checkout style text color.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_checkout_type_paylater_color",
+            "description": "Braintree PayPal Pay Later checkout button style color.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_checkout_type_paylater_label",
+            "description": "Braintree PayPal Pay Later checkout button style label.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_checkout_type_paylater_shape",
+            "description": "Braintree PayPal Pay Later checkout button style shape.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_checkout_type_paylater_show",
+            "description": "Braintree PayPal Pay Later checkout button show status.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_checkout_type_paypal_color",
+            "description": "Braintree PayPal checkout button style color.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_checkout_type_paypal_label",
+            "description": "Braintree PayPal checkout button style label.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_checkout_type_paypal_shape",
+            "description": "Braintree PayPal checkout button style shape.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_checkout_type_paypal_show",
+            "description": "Braintree PayPal checkout button show.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_productpage_type_credit_color",
+            "description": "Braintree PayPal Credit PDP button style color.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_productpage_type_credit_label",
+            "description": "Braintree PayPal Credit PDP button style label.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_productpage_type_credit_shape",
+            "description": "Braintree PayPal Credit PDP button style shape.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_productpage_type_credit_show",
+            "description": "Braintree PayPal Credit PDP button show status.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_productpage_type_messaging_layout",
+            "description": "Braintree PayPal Pay Later messaging PDP style layout.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_productpage_type_messaging_logo",
+            "description": "Braintree PayPal Pay Later messaging PDP style logo.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_productpage_type_messaging_logo_position",
+            "description": "Braintree PayPal Pay Later messaging PDP style logo position.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_productpage_type_messaging_show",
+            "description": "Braintree PayPal Pay Later messaging PDP show status.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_productpage_type_messaging_text_color",
+            "description": "Braintree PayPal Pay Later messaging PDP style text color.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_productpage_type_paylater_color",
+            "description": "Braintree PayPal Pay Later PDP button style color.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_productpage_type_paylater_label",
+            "description": "Braintree PayPal Pay Later PDP button style label.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_productpage_type_paylater_shape",
+            "description": "Braintree PayPal Pay Later PDP button style shape.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_productpage_type_paylater_show",
+            "description": "Braintree PayPal Pay Later PDP button show status.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_productpage_type_paypal_color",
+            "description": "Braintree PayPal PDP button style color.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_productpage_type_paypal_label",
+            "description": "Braintree PayPal PDP button style label.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_productpage_type_paypal_shape",
+            "description": "Braintree PayPal PDP button style shape.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_button_location_productpage_type_paypal_show",
+            "description": "Braintree PayPal PDP button show.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_credit_uk_merchant_name",
+            "description": "Braintree PayPal Credit Merchant Name on the FCA Register.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_display_on_shopping_cart",
+            "description": "Should display Braintree PayPal in mini-cart & cart?",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_merchant_country",
+            "description": "Braintree PayPal merchant's country.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_merchant_name_override",
+            "description": "Braintree PayPal override for Merchant Name.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_require_billing_address",
+            "description": "Does Braintree PayPal require the customer's billing address?",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_send_cart_line_items",
+            "description": "Does Braintree PayPal require the order line items?",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "braintree_paypal_vault_active",
+            "description": "Braintree PayPal vault status.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
               "ofType": null
             },
             "isDeprecated": false,
@@ -8893,6 +10083,30 @@
             "deprecationReason": null
           },
           {
+            "name": "countries_with_required_region",
+            "description": "Extended Config Data - general/region/state_required",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "default_country",
+            "description": "Extended Config Data - general/country/default",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "default_description",
             "description": "The description that provides a summary of your site for search engine listings. It should not be more than 160 characters in length.",
             "args": [],
@@ -8947,6 +10161,18 @@
             "type": {
               "kind": "SCALAR",
               "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "display_state_if_optional",
+            "description": "Extended Config Data - general/region/display_all",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
               "ofType": null
             },
             "isDeprecated": false,
@@ -9073,8 +10299,32 @@
             "deprecationReason": null
           },
           {
+            "name": "is_guest_checkout_enabled",
+            "description": "Extended Config Data - checkout/options/guest_checkout",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "is_negotiable_quote_active",
             "description": "Indicates whether negotiable quote functionality is enabled.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "is_one_page_checkout_enabled",
+            "description": "Extended Config Data - checkout/options/onepage_checkout_enabled",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -9349,6 +10599,18 @@
             "deprecationReason": null
           },
           {
+            "name": "max_items_in_order_summary",
+            "description": "Extended Config Data - checkout/options/max_items_display_count",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "maximum_number_of_wishlists",
             "description": "If multiple wish lists are enabled, the maximum number of wish lists the customer can have.",
             "args": [],
@@ -9401,13 +10663,29 @@
             "deprecationReason": null
           },
           {
+            "name": "optional_zip_countries",
+            "description": "Extended Config Data - general/country/optional_zip_countries",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "order_cancellation_enabled",
             "description": "Indicates whether orders can be cancelled by customers or not.",
             "args": [],
             "type": {
-              "kind": "SCALAR",
-              "name": "Boolean",
-              "ofType": null
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -9651,6 +10929,78 @@
             "type": {
               "kind": "OBJECT",
               "name": "SendFriendConfiguration",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "shopping_cart_display_full_summary",
+            "description": "Extended Config Data - tax/cart_display/full_summary",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "shopping_cart_display_grand_total",
+            "description": "Extended Config Data - tax/cart_display/grandtotal",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "shopping_cart_display_price",
+            "description": "Extended Config Data - tax/cart_display/price",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "shopping_cart_display_shipping",
+            "description": "Extended Config Data - tax/cart_display/shipping",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "shopping_cart_display_subtotal",
+            "description": "Extended Config Data - tax/cart_display/subtotal",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "shopping_cart_display_zero_tax",
+            "description": "Extended Config Data - tax/cart_display/zero_tax",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
               "ofType": null
             },
             "isDeprecated": false,
@@ -22937,6 +24287,12 @@
             "deprecationReason": ""
           },
           {
+            "name": "SZ",
+            "description": "Eswatini",
+            "isDeprecated": false,
+            "deprecationReason": ""
+          },
+          {
             "name": "ET",
             "description": "Ethiopia",
             "isDeprecated": false,
@@ -23773,12 +25129,6 @@
           {
             "name": "SJ",
             "description": "Svalbard & Jan Mayen",
-            "isDeprecated": false,
-            "deprecationReason": ""
-          },
-          {
-            "name": "SZ",
-            "description": "Swaziland",
             "isDeprecated": false,
             "deprecationReason": ""
           },
@@ -24735,6 +26085,27 @@
         ],
         "inputFields": null,
         "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "CreateGuestCartInput",
+        "description": "",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "cart_uid",
+            "description": "Optional client-generated ID",
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
         "enumValues": null,
         "possibleTypes": null
       },
@@ -25842,11 +27213,31 @@
             "defaultValue": null
           },
           {
+            "name": "braintree_ach_direct_debit",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "BraintreeInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "braintree_ach_direct_debit_vault",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "BraintreeVaultInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "braintree_applepay_vault",
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "BraintreeCcVaultInput",
+              "name": "BraintreeVaultInput",
               "ofType": null
             },
             "defaultValue": null
@@ -25866,7 +27257,27 @@
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "BraintreeCcVaultInput",
+              "name": "BraintreeVaultInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "braintree_paypal",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "BraintreeInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "braintree_paypal_vault",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "BraintreeVaultInput",
               "ofType": null
             },
             "defaultValue": null
@@ -25931,6 +27342,46 @@
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "VaultTokenInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "payment_services_paypal_apple_pay",
+            "description": "Required input for Apple Pay button",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "ApplePayMethodInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "payment_services_paypal_hosted_fields",
+            "description": "Required input for Hosted Fields",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "HostedFieldsInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "payment_services_paypal_smart_buttons",
+            "description": "Required input for Smart buttons",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "SmartButtonMethodInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "payment_services_paypal_vault",
+            "description": "Required input for vault",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "VaultMethodInput",
               "ofType": null
             },
             "defaultValue": null
@@ -26194,6 +27645,29 @@
                   "ofType": null
                 }
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "CreateGuestCartOutput",
+        "description": "",
+        "fields": [
+          {
+            "name": "cart",
+            "description": "The newly created cart.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "Cart",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -28382,6 +29856,22 @@
             "deprecationReason": "Use `uid` instead."
           },
           {
+            "name": "is_available",
+            "description": "True if requested quantity is less than available stock, false otherwise.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "note_from_buyer",
             "description": "The buyer's quote line item note.",
             "args": [],
@@ -28559,6 +30049,22 @@
             "deprecationReason": "Use `uid` instead."
           },
           {
+            "name": "is_available",
+            "description": "True if requested quantity is less than available stock, false otherwise.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "note_from_buyer",
             "description": "The buyer's quote line item note.",
             "args": [],
@@ -28714,6 +30220,22 @@
             },
             "isDeprecated": true,
             "deprecationReason": "Use `uid` instead."
+          },
+          {
+            "name": "is_available",
+            "description": "True if requested quantity is less than available stock, false otherwise.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
           },
           {
             "name": "note_from_buyer",
@@ -28949,6 +30471,18 @@
                 "name": "CartDiscountType",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "is_discounting_locked",
+            "description": "Is quote discounting locked for line item.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -31416,6 +32950,22 @@
             },
             "isDeprecated": true,
             "deprecationReason": "Use `uid` instead."
+          },
+          {
+            "name": "is_available",
+            "description": "True if requested quantity is less than available stock, false otherwise.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
           },
           {
             "name": "links",
@@ -36373,6 +37923,22 @@
             },
             "isDeprecated": true,
             "deprecationReason": "Use `uid` instead."
+          },
+          {
+            "name": "is_available",
+            "description": "True if requested quantity is less than available stock, false otherwise.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
           },
           {
             "name": "note_from_buyer",
@@ -43347,6 +44913,22 @@
             "deprecationReason": "Use `uid` instead."
           },
           {
+            "name": "is_available",
+            "description": "True if requested quantity is less than available stock, false otherwise.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "message",
             "description": "The message from the sender to the recipient.",
             "args": [],
@@ -43890,6 +45472,22 @@
             },
             "isDeprecated": true,
             "deprecationReason": "Use `uid` instead."
+          },
+          {
+            "name": "is_available",
+            "description": "True if requested quantity is less than available stock, false otherwise.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
           },
           {
             "name": "note_from_buyer",
@@ -54100,6 +55698,16 @@
             "defaultValue": null
           },
           {
+            "name": "is_draft",
+            "description": "Flag indicating if quote is draft or not.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "quote_name",
             "description": "The name the buyer assigned to the negotiable quote request.",
             "type": {
@@ -54751,6 +56359,55 @@
         "possibleTypes": null
       },
       {
+        "kind": "INPUT_OBJECT",
+        "name": "RenameNegotiableQuoteInput",
+        "description": "Sets new name for a negotiable quote.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "quote_comment",
+            "description": "The reason for the quote name change specified by the buyer.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "quote_name",
+            "description": "The new quote name the buyer specified to the negotiable quote request.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "quote_uid",
+            "description": "The cart ID of the buyer requesting a new negotiable quote.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
         "kind": "OBJECT",
         "name": "SetLineItemNoteOutput",
         "description": "Contains the updated negotiable quote.",
@@ -55043,6 +56700,29 @@
                 "name": "BatchMutationStatus",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "RenameNegotiableQuoteOutput",
+        "description": "Contains the updated negotiable quote.",
+        "fields": [
+          {
+            "name": "quote",
+            "description": "The negotiable quote after updating the name.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "NegotiableQuote",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -58139,6 +59819,1533 @@
             "deprecationReason": ""
           }
         ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "GetPaymentSDKOutput",
+        "description": "Gets the payment SDK URLs and values",
+        "fields": [
+          {
+            "name": "sdkParams",
+            "description": "The payment SDK parameters",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "PaymentSDKParamsItem",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PaymentSDKParamsItem",
+        "description": "",
+        "fields": [
+          {
+            "name": "code",
+            "description": "The payment method code used in the order",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "params",
+            "description": "The payment SDK parameters",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "SDKParams",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PaymentOrderOutput",
+        "description": "Contains the payment order details",
+        "fields": [
+          {
+            "name": "id",
+            "description": "PayPal order ID",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "mp_order_id",
+            "description": "The order ID generated by Payment Services",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "payment_source_details",
+            "description": "Details about the card used on the order",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PaymentSourceDetails",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "status",
+            "description": "The status of the payment order",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PaymentSourceDetails",
+        "description": "",
+        "fields": [
+          {
+            "name": "card",
+            "description": "Details about the card used on the order",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "Card",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Card",
+        "description": "",
+        "fields": [
+          {
+            "name": "bin_details",
+            "description": "Card bin details",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "CardBin",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "card_expiry_month",
+            "description": "Expiration month of the card",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "card_expiry_year",
+            "description": "Expiration year of the card",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "last_digits",
+            "description": "Last four digits of the card",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "name",
+            "description": "Name on the card",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "CardBin",
+        "description": "",
+        "fields": [
+          {
+            "name": "bin",
+            "description": "Card bin number",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "CreatePaymentOrderInput",
+        "description": "Contains payment order details that are used while processing the payment order",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "cartId",
+            "description": "The customer cart ID",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "location",
+            "description": "Defines the origin location for that payment request",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "PaymentLocation",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "methodCode",
+            "description": "The code for the payment method used in the order",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "paymentSource",
+            "description": "The identifiable payment source for the payment method",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "vaultIntent",
+            "description": "Indicates whether the payment information should be vaulted",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "SyncPaymentOrderInput",
+        "description": "Synchronizes the payment order details",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "cartId",
+            "description": "The customer cart ID",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "id",
+            "description": "PayPal order ID",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "CreatePaymentOrderOutput",
+        "description": "Contains payment order details that are used while processing the payment order",
+        "fields": [
+          {
+            "name": "id",
+            "description": "PayPal order ID",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "mp_order_id",
+            "description": "The order ID generated by Payment Services",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "status",
+            "description": "The status of the payment order",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "PaymentLocation",
+        "description": "Defines the origin location for that payment request",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "PRODUCT_DETAIL",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": ""
+          },
+          {
+            "name": "MINICART",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": ""
+          },
+          {
+            "name": "CART",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": ""
+          },
+          {
+            "name": "CHECKOUT",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": ""
+          },
+          {
+            "name": "ADMIN",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": ""
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PaymentConfigOutput",
+        "description": "Retrieves the payment configuration for a given location",
+        "fields": [
+          {
+            "name": "apple_pay",
+            "description": "ApplePay payment method configuration",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "ApplePayConfig",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "hosted_fields",
+            "description": "Hosted fields payment method configuration",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "HostedFieldsConfig",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "smart_buttons",
+            "description": "Smart Buttons payment method configuration",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "SmartButtonsConfig",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "PaymentConfigItem",
+        "description": "Contains payment fields that are common to all types of payment methods.",
+        "fields": [
+          {
+            "name": "code",
+            "description": "The payment method code as defined in the payment gateway",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "is_visible",
+            "description": "Indicates whether the payment method is displayed",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "payment_intent",
+            "description": "Defines the payment intent (Authorize or Capture",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "sdk_params",
+            "description": "The PayPal parameters required to load the JS SDK",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "SDKParams",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "sort_order",
+            "description": "The relative order the payment method is displayed on the checkout page",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "title",
+            "description": "The name displayed for the payment method",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "PaymentCommonConfig",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "HostedFieldsConfig",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "SmartButtonsConfig",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "ApplePayConfig",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PaymentCommonConfig",
+        "description": "",
+        "fields": [
+          {
+            "name": "code",
+            "description": "The payment method code as defined in the payment gateway",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "is_visible",
+            "description": "Indicates whether the payment method is displayed",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "payment_intent",
+            "description": "Defines the payment intent (Authorize or Capture",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "sdk_params",
+            "description": "The PayPal parameters required to load the JS SDK",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "SDKParams",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "sort_order",
+            "description": "The relative order the payment method is displayed on the checkout page",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "title",
+            "description": "The name displayed for the payment method",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "PaymentConfigItem",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "HostedFieldsConfig",
+        "description": "",
+        "fields": [
+          {
+            "name": "cc_vault_code",
+            "description": "Vault payment method code",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "code",
+            "description": "The payment method code as defined in the payment gateway",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "is_vault_enabled",
+            "description": "Card vault enabled",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "is_visible",
+            "description": "Indicates whether the payment method is displayed",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "payment_intent",
+            "description": "Defines the payment intent (Authorize or Capture",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "payment_source",
+            "description": "The payment source for the payment method",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "requires_card_details",
+            "description": "Card and bin details required",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "sdk_params",
+            "description": "The PayPal parameters required to load the JS SDK",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "SDKParams",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "sort_order",
+            "description": "The relative order the payment method is displayed on the checkout page",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "three_ds",
+            "description": "3DS mode",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "title",
+            "description": "The name displayed for the payment method",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "PaymentConfigItem",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "SmartButtonsConfig",
+        "description": "",
+        "fields": [
+          {
+            "name": "button_styles",
+            "description": "The styles for the PayPal Smart Button configuration",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "ButtonStyles",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "code",
+            "description": "The payment method code as defined in the payment gateway",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "display_message",
+            "description": "Indicates whether to display the PayPal Pay Later message",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "display_venmo",
+            "description": "Indicates whether to display Venmo",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "is_visible",
+            "description": "Indicates whether the payment method is displayed",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "message_styles",
+            "description": "Contains details about the styles for the PayPal Pay Later message",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "MessageStyles",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "payment_intent",
+            "description": "Defines the payment intent (Authorize or Capture",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "sdk_params",
+            "description": "The PayPal parameters required to load the JS SDK",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "SDKParams",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "sort_order",
+            "description": "The relative order the payment method is displayed on the checkout page",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "title",
+            "description": "The name displayed for the payment method",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "PaymentConfigItem",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ApplePayConfig",
+        "description": "",
+        "fields": [
+          {
+            "name": "button_styles",
+            "description": "The styles for the ApplePay Smart Button configuration",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "ButtonStyles",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "code",
+            "description": "The payment method code as defined in the payment gateway",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "is_visible",
+            "description": "Indicates whether the payment method is displayed",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "payment_intent",
+            "description": "Defines the payment intent (Authorize or Capture",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "payment_source",
+            "description": "The payment source for the payment method",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "sdk_params",
+            "description": "The PayPal parameters required to load the JS SDK",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "SDKParams",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "sort_order",
+            "description": "The relative order the payment method is displayed on the checkout page",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "title",
+            "description": "The name displayed for the payment method",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "PaymentConfigItem",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ButtonStyles",
+        "description": "",
+        "fields": [
+          {
+            "name": "color",
+            "description": "Color option",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "height",
+            "description": "Button height",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "label",
+            "description": "Button label",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "layout",
+            "description": "Determines the button layout",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "shape",
+            "description": "Shape option",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "tagline",
+            "description": "Indicates whether to display the tagline",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "use_default_height",
+            "description": "If false, the button height will be used",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "MessageStyles",
+        "description": "",
+        "fields": [
+          {
+            "name": "layout",
+            "description": "Determines the Pay Later message layout",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "logo",
+            "description": "The preferences for the Message logo",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "MessageStyleLogo",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "MessageStyleLogo",
+        "description": "",
+        "fields": [
+          {
+            "name": "type",
+            "description": "The type of logo for the PayPal Pay Later messaging",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "SDKParams",
+        "description": "Defines the name and value of a SDK parameter",
+        "fields": [
+          {
+            "name": "name",
+            "description": "The name of a SDK parameter",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "value",
+            "description": "The value of a SDK parameter",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "VaultMethodInput",
+        "description": "Vault payment inputs",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "payment_source",
+            "description": "The payment source for the payment method",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "payments_order_id",
+            "description": "The payment services order ID",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "paypal_order_id",
+            "description": "PayPal order ID",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "public_hash",
+            "description": "The public hash of the token.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "SmartButtonMethodInput",
+        "description": "Smart button payment inputs",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "payment_source",
+            "description": "The payment source for the payment method",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "payments_order_id",
+            "description": "The payment services order ID",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "paypal_order_id",
+            "description": "PayPal order ID",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "ApplePayMethodInput",
+        "description": "Apple Pay inputs",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "payment_source",
+            "description": "The payment source for the payment method",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "payments_order_id",
+            "description": "The payment services order ID",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "paypal_order_id",
+            "description": "PayPal order ID",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "HostedFieldsInput",
+        "description": "Hosted Fields payment inputs",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "cardBin",
+            "description": "Card bin number",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "cardExpiryMonth",
+            "description": "Expiration month of the card",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "cardExpiryYear",
+            "description": "Expiration year of the card",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "cardLast4",
+            "description": "Last four digits of the card",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "holderName",
+            "description": "Name on the card",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "is_active_payment_token_enabler",
+            "description": "Indicates whether details about the shopper's credit/debit card should be tokenized for later usage. Required only if Vault is enabled for the Payment Services payment integration.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "payment_source",
+            "description": "The payment source for the payment method",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "payments_order_id",
+            "description": "The payment services order ID",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "paypal_order_id",
+            "description": "PayPal order ID",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
         "possibleTypes": null
       },
       {
@@ -61417,6 +64624,148 @@
           },
           {
             "name": "NOT_FOUND",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": ""
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "ClearCartInput",
+        "description": "Assigns a specific `cart_id` to the empty cart.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "uid",
+            "description": "The unique ID of a `Cart` object.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ClearCartOutput",
+        "description": "Output of the request to clear the customer cart.",
+        "fields": [
+          {
+            "name": "cart",
+            "description": "The cart after clear cart items.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "Cart",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "errors",
+            "description": "An array of errors encountered while clearing the cart item",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ClearCartError",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ClearCartError",
+        "description": "Contains details about errors encountered when a customer clear cart.",
+        "fields": [
+          {
+            "name": "message",
+            "description": "A localized error message",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "type",
+            "description": "A cart-specific error type.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "ClearCartErrorType",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "ClearCartErrorType",
+        "description": "",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "NOT_FOUND",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": ""
+          },
+          {
+            "name": "UNAUTHORISED",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": ""
+          },
+          {
+            "name": "INACTIVE",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": ""
+          },
+          {
+            "name": "UNDEFINED",
             "description": "",
             "isDeprecated": false,
             "deprecationReason": ""
@@ -65733,7 +69082,7 @@
           },
           {
             "name": "is_active_payment_token_enabler",
-            "description": "States whether an entered by a customer credit/debit card should be tokenized for later usage. Required only if Vault is enabled for Braintree payment integration.",
+            "description": "States whether the payment details (Credit/Debit Card, PayPal Account) entered by a customer should be tokenized for later usage. Required only if Vault is enabled for the relevant Braintree payment integration.",
             "type": {
               "kind": "NON_NULL",
               "name": null,
@@ -65747,7 +69096,7 @@
           },
           {
             "name": "payment_method_nonce",
-            "description": "The one-time payment token generated by Braintree payment gateway based on card details. Required field to make sale transaction.",
+            "description": "The one-time payment token generated by Braintree payment gateway based on payment details (Card, PayPal). Required field to make sale transaction.",
             "type": {
               "kind": "NON_NULL",
               "name": null,
@@ -65767,6 +69116,41 @@
       {
         "kind": "INPUT_OBJECT",
         "name": "BraintreeCcVaultInput",
+        "description": "",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "device_data",
+            "description": "",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "public_hash",
+            "description": "",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "BraintreeVaultInput",
         "description": "",
         "fields": null,
         "inputFields": [
