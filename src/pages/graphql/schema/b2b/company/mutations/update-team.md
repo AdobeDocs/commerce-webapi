@@ -9,6 +9,8 @@ contributor_link: https://www.atwix.com/
 
 Use the `updateCompanyTeam` mutation to update the company team data.
 
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
+
 ## Syntax
 
 ```graphql
@@ -20,6 +22,10 @@ mutation {
     }
 }
 ```
+
+## Reference
+
+The [`updateCompanyTeam`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateCompanyTeam) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -60,33 +66,3 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `CompanyTeamUpdateInput` input object defines the company team data.
-
-### CompanyTeamUpdateInput attributes
-
-The `CompanyTeamUpdateInput` object contains the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`description` | String | An optional description of the team
-`id` | ID! | The unique ID for a `CompanyTeam` object
-`name` | String | The display name of the team
-
-You can get the team ID with the [`company`](../queries/company.md) query.
-
-## Output attributes
-
-The `UpdateCompanyTeamOutput` output object contains the following attribute:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`team` | CompanyTeam! | Contains company team data
-
-### CompanyTeam attributes
-
-import CompanyTeam from '/src/_includes/graphql/company-team.md'
-
-<CompanyTeam />

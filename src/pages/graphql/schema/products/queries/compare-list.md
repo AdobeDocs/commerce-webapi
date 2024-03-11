@@ -16,6 +16,10 @@ compareList(
 ): CompareList
 ```
 
+## Reference
+
+The [`compareList`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-compareList) reference provides detailed information about the types and fields defined in this query.
+
 ## Example usage
 
 The following query returns the information about products in the comparison list with the unique ID of "sssXyGZkTFksdPnxNoK1ut6OiV4bbchD":
@@ -100,25 +104,9 @@ The following query returns the information about products in the comparison lis
 }
 ```
 
-## Input attributes
-
-The `compareList` query requires the following input:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`uid` | ID! | The unique ID of the comparison list
-
-## Output attributes
-
-The `CompareList` output object contains the following attributes:
-
-import CompareListOutput from '/src/_includes/graphql/compare-list-output.md'
-
-<CompareListOutput />
-
 ## Related topics
 
-*  [addProductsToCompareList mutation](product-review-ratings-metadata.md)
+*  [addProductsToCompareList mutation](../mutations/add-products-to-compare-list.md)
 *  [assignCompareListToCustomer mutation](../mutations/assign-compare-list.md)
 *  [createCompareList mutation](../mutations/create-compare-list.md)
 *  [deleteCompareList mutation](../mutations/delete-compare-list.md)

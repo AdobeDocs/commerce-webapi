@@ -108,6 +108,10 @@ module.exports = [
                 path: "/graphql/schema/attributes/queries/custom-attribute-metadata-v2.md"
               }
             ]
+          },
+          {
+            title: "Interfaces",
+            path: "/graphql/schema/attributes/interfaces/"
           }
         ]
       },
@@ -190,6 +194,10 @@ module.exports = [
                 path: "/graphql/schema/cart/mutations/place-order/",
               },
               {
+                title: "redeemGiftCardBalanceAsStoreCredit",
+                path: "/graphql/schema/customer/mutations/redeem-giftcard-balance/",
+              },
+              {
                 title: "removeCouponFromCart",
                 path: "/graphql/schema/cart/mutations/remove-coupon/",
               },
@@ -245,43 +253,13 @@ module.exports = [
           },
           {
             title: "Interfaces",
-            path: "/graphql/schema/cart/interfaces/",
-            pages: [
-              {
-                title: "CartItemInterface",
-                path: "/graphql/schema/cart/interfaces/cart-item/",
-              },
-            ],
+            path: "/graphql/schema/cart/interfaces/"
           },
         ],
       },
       {
         title: "Catalog Service",
-        path: "/graphql/schema/catalog-service/",
-        pages: [
-          {
-            title: "Queries",
-            path: "/graphql/schema/catalog-service/queries/",
-            pages: [
-              {
-                title: "categories",
-                path: "/graphql/schema/catalog-service/queries/categories/",
-              },
-              {
-                title: "products",
-                path: "/graphql/schema/catalog-service/queries/products/",
-              },
-              {
-                title: "productSearch",
-                path: "/graphql/schema/catalog-service/queries/product-search/",
-              },
-              {
-                title: "refineProduct",
-                path: "/graphql/schema/catalog-service/queries/refine-product/"
-              },
-            ],
-          },
-        ],
+        path: "https://developer.adobe.com/commerce/services/graphql/catalog-service/"
       },
       {
         title: "Checkout",
@@ -307,6 +285,18 @@ module.exports = [
                 title: "getPayflowLinkToken",
                 path: "/graphql/schema/checkout/queries/get-payflow-link-token/",
               },
+              {
+                title: "getPaymentConfig",
+                path: "/graphql/schema/checkout/queries/get-payment-config/",
+              },
+              {
+                title: "getPaymentOrder",
+                path: "/graphql/schema/checkout/queries/get-payment-order/",
+              },
+              {
+                title: "getPaymentSDK",
+                path: "/graphql/schema/checkout/queries/get-payment-sdk/",
+              },
             ],
           },
           {
@@ -326,6 +316,10 @@ module.exports = [
                 path: "/graphql/schema/checkout/mutations/create-payflow-pro-token/",
               },
               {
+                title: "createPaymentOrder",
+                path: "/graphql/schema/checkout/mutations/create-payment-order/",
+              },
+              {
                 title: "createPaypalExpressToken",
                 path: "/graphql/schema/checkout/mutations/create-paypal-express-token/",
               },
@@ -336,6 +330,10 @@ module.exports = [
               {
                 title: "handlePayflowProResponse",
                 path: "/graphql/schema/checkout/mutations/handle-payflow-pro-response/",
+              },
+              {
+                title: "syncPaymentOrder",
+                path: "/graphql/schema/checkout/mutations/sync-payment-order/",
               },
             ],
           },
@@ -508,10 +506,6 @@ module.exports = [
                 path: "/graphql/schema/customer/mutations/generate-token-as-admin/",
               },
               {
-                title: "redeemGiftCardBalanceAsStoreCredit",
-                path: "/graphql/schema/customer/mutations/redeem-giftcard-balance/",
-              },
-              {
                 title: "requestPasswordResetEmail",
                 path: "/graphql/schema/customer/mutations/request-password-reset-email/",
               },
@@ -631,23 +625,7 @@ module.exports = [
       },
       {
         title: "Live Search",
-        path: "/graphql/schema/live-search/",
-        pages: [
-          {
-            title: "Queries",
-            path: "/graphql/schema/live-search/queries/",
-            pages: [
-              {
-                title: "attributeMetadata",
-                path: "/graphql/schema/live-search/queries/attribute-metadata"
-              },
-              {
-                title: "productSearch",
-                path: "/graphql/schema/live-search/queries/product-search"
-              },
-            ],
-          },
-        ],
+        path: "https://developer.adobe.com/commerce/services/graphql/live-search/"
       },
       {
         title: "Negotiable quotes (B2B)",
@@ -720,12 +698,6 @@ module.exports = [
           {
             title: "Interfaces",
             path: "/graphql/schema/b2b/negotiable-quote/interfaces/",
-            pages: [
-              {
-                title: "NegotiableQuoteAddressInterface",
-                path: "/graphql/schema/b2b/negotiable-quote/interfaces/address/",
-              },
-            ],
           },
           {
             title: "Unions",
@@ -793,19 +765,7 @@ module.exports = [
       },
       {
         title: "Product Recommendations",
-        path: "/graphql/schema/product-recommendations/",
-        pages: [
-          {
-            title: "Queries",
-            path: "/graphql/schema/products/queries/",
-            pages: [
-              {
-                title: "recommendations",
-                path: "/graphql/schema/product-recommendations/queries/recommendations/",
-              },
-            ],
-          },
-        ],
+        path: "https://developer.adobe.com/commerce/services/graphql/recommendations/recommendations/"
       },
       {
         title: "Products",
@@ -1065,13 +1025,7 @@ module.exports = [
           },
           {
             title: "Interfaces",
-            path: "/graphql/schema/b2b/requisition-list/interfaces/",
-            pages: [
-              {
-                title: "RequisitionListItemInterface",
-                path: "/graphql/schema/b2b/requisition-list/interfaces/item/",
-              },
-            ],
+            path: "/graphql/schema/b2b/requisition-list/interfaces/"
           },
         ],
       },
@@ -1204,7 +1158,7 @@ module.exports = [
     ],
   },
   {
-    title: "Payment methods",
+    title: "Core payment methods",
     path: "/graphql/payment-methods/",
     pages: [
       {
@@ -1248,6 +1202,24 @@ module.exports = [
         path: "/graphql/payment-methods/hosted-pro/",
       },
     ],
+  },
+  {
+    title: "Payment Services payment methods",
+    path: "/graphql/payment-services/",
+    pages: [
+      {
+        title: "Checkout",
+        path: "/graphql/payment-services/checkout.md"
+      },
+      {
+        title: "Minicart",
+        path: "/graphql/payment-services/minicart.md"
+      },
+      {
+        title: "Vault",
+        path: "/graphql/payment-services/vault.md"
+      }
+    ]
   },
   {
     title: "Tutorial",
@@ -1300,11 +1272,11 @@ module.exports = [
     ],
   },
   {
-    title: "Reference",
+    title: "Reference (2.4.6)",
     path: "/graphql/reference",
     pages: [
       {
-        title: "Reference (Beta)",
+        title: "Reference (2.4.7-beta)",
         path: "/graphql/reference/beta"
       }
     ]

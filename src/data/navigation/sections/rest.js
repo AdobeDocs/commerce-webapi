@@ -4,7 +4,7 @@ module.exports = [
         path: "/rest/", 
     },
     {
-        title: "REST endpoints (ReDoc)",
+        title: "REST endpoints (ReDocly)",
         path: "/rest/quick-reference/",
     },
     {

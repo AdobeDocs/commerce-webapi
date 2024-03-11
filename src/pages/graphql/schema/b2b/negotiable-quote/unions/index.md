@@ -10,7 +10,7 @@ See the GraphQL specification for more details about [unions](https://graphql.or
 
 ## CloseNegotiableQuoteError union
 
-The [`CloseNegotiableQuoteError` union](../mutations/close.md#closenegotiablequoteerror-attributes) provides details about failed attempts to close one or more negotiable quotes.
+The [`CloseNegotiableQuoteError`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CloseNegotiableQuoteError) union provides details about failed attempts to close one or more negotiable quotes.
 
 **Possible types:**
 
@@ -24,7 +24,7 @@ The [`CloseNegotiableQuoteError` union](../mutations/close.md#closenegotiablequo
 
 ## CloseNegotiableQuoteOperationResult union
 
-The [`CloseNegotiableQuoteOperationResult` union](../mutations/close.md#closenegotiablequoteoperationresult-attributes) provides details about the result of a request to close a negotiable quote.
+The [`CloseNegotiableQuoteOperationResult`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CloseNegotiableQuoteOperationResult) union provides details about the result of a request to close a negotiable quote.
 
 **Possible types:**
 
@@ -37,7 +37,7 @@ The [`CloseNegotiableQuoteOperationResult` union](../mutations/close.md#closeneg
 
 ## CompanyStructureEntity union
 
-The [`CompanyStructureEntity` union](../../company/unions/structure-entity.md) provides details about a node in a company structure.
+The [`CompanyStructureEntity`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CompanyStructureEntity) union provides details about a node in a company structure.
 
 **Possible types:**
 
@@ -50,7 +50,7 @@ The [`CompanyStructureEntity` union](../../company/unions/structure-entity.md) p
 
 ## DeleteNegotiableQuoteError union
 
-The [`DeleteNegotiableQuoteError` union](../mutations/delete.md#deletenegotiablequoteerror-attributes) provides details about failed attempts to delete one or more negotiable quotes.
+The [`DeleteNegotiableQuoteError`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-DeleteNegotiableQuoteError) union provides details about failed attempts to delete one or more negotiable quotes.
 
 **Possible types:**
 
@@ -64,7 +64,7 @@ The [`DeleteNegotiableQuoteError` union](../mutations/delete.md#deletenegotiable
 
 ## DeleteNegotiableQuoteOperationResult union
 
-The [`DeleteNegotiableQuoteOperationResult` union](../mutations/delete.md#deletenegotiablequoteoperationresult-attributes) provides details about the result of a request to delete a negotiable quote.
+The [`DeleteNegotiableQuoteOperationResult`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-DeleteNegotiableQuoteOperationResult) union provides details about the result of a request to delete a negotiable quote.
 
 **Possible types:**
 

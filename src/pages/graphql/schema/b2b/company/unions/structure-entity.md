@@ -1,5 +1,6 @@
 ---
 title: CompanyStructureEntity union
+edition: b2b
 ---
 
 # CompanyStructureEntity union

@@ -13,6 +13,8 @@ The `target_id` input attribute allows you to specify which node in the company 
 
 You can get the `target_id` with the [`company`](../queries/company.md) query.
 
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
+
 ## Syntax
 
 ```graphql
@@ -24,6 +26,10 @@ mutation {
     }
 }
 ```
+
+## Reference
+
+The [`createCompanyTeam`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createCompanyTeam) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -100,31 +106,3 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `CompanyTeamCreateInput` input object defines the company team data.
-
-### CompanyTeamCreateInput attributes
-
-The `CompanyTeamCreateInput` object contains the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`description` | String | An optional description of the team
-`name` | String! | The display name of the team
-`target_id` | ID | The ID of a node within a company's structure. This ID will be the parent of the created team
-
-## Output attributes
-
-The `CreateCompanyTeamOutput` output object contains the following attribute:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`team` | CompanyTeam! | Contains company team data
-
-### CompanyTeam attributes
-
-import CompanyTeam from '/src/_includes/graphql/company-team.md'
-
-<CompanyTeam />

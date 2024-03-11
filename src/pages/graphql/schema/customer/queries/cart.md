@@ -13,12 +13,17 @@ The `customerCart` query differs from the `cart` query in the following ways:
 
 You can define the query to return the `id` attribute. You can use the value of this attribute as the `destination_cart_id` input parameter in the [`mergeCarts` mutation](../../cart/mutations/merge.md). (The `mergeCarts` mutation provides the ability to merge a guest cart with the logged-in customer's cart.)
 
-{: .bs-callout-tip }
+<InlineAlert variant="info" slots="text" />
+
 If you know the value of the logged-in customer's cart ID, you can allow the customer to start an order on one device and complete it on another.
 
 ## Syntax
 
 `customerCart: Cart!`
+
+## Reference
+
+The [`customerCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-customerCart) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -71,15 +76,3 @@ The following query lists the products in the logged-in customer's cart:
   }
 }
 ```
-
-## Output attributes
-
-The `customerCart` query returns the `Cart` object.
-
-### Cart object
-
-import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.

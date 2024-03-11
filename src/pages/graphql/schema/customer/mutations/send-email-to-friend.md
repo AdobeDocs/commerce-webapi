@@ -22,6 +22,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`sendEmailToFriend`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-sendEmailToFriend) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example sends a message to two friends.
@@ -80,63 +84,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `SendEmailToFriendInput` object contains the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`product_id` | Int! | The ID of the product that the customer is referencing
-`recipients` | [SendEmailToFriendRecipientInput]! | An array containing information about each recipient
-`sender` | SendEmailToFriendSenderInput! | Information about the customer and the content of the message
-
-### SendEmailToFriendRecipientInput object
-
-The `SendEmailToFriendRecipientInput` object must contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`email` | String! | The email address of the recipient
-`name` | String! | The name of the recipient
-
-### SendEmailToFriendSenderInput object
-
-The `SendEmailToFriendSenderInput` object must contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`email` | String! | The email address of the sender
-`message` | String! | The text of the message to be sent
-`name` | String! | The name of the sender
-
-## Output attributes
-
-The `SendEmailToFriendOutput` object contains the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`recipients` | [SendEmailToFriendRecipient] | An array containing information about each recipient
-`sender` | SendEmailToFriendSender | Information about the customer and the content of the message
-
-### SendEmailToFriendRecipient object
-
-The `SendEmailToFriendRecipientInput` object can contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`email` | String | The email address of the recipient
-`name` | String | The name of the recipient
-
-### SendEmailToFriendSender object
-
-The `SendEmailToFriendSender` object can contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`email` | String | The email address of the sender
-`message` | String | The text of the message
-`name` | String | The name of the sender
 
 ## Errors
 

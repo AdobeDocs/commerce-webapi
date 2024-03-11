@@ -8,11 +8,11 @@ contributor_name: EY
 
 The `addProductsToRequisitionList` mutation adds products to a requisition list.
 
-This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
-
 <InlineAlert variant="info" slots="text" />
 
 Use the [storeConfig query](../../../../schema/store/queries/store-config.md) with the `is_requisition_list_active` attribute to determine whether requisition lists are enabled.
+
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
 
 ## Syntax
 
@@ -26,6 +26,10 @@ mutation {
   }
 }
 ```
+
+## Reference
+
+The [`addProductsToRequisitionList`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addProductsToRequisitionList) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -93,38 +97,3 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `addProductsToRequisitionList` mutation requires the following input.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`requisitionListItems`| [[RequisitionListItemsInput](#requisitionlistitemsinput-attributes)!]! | An array of products to be added to the requisition list
-`requisitionListUid`| ID! | The unique ID of the requisition list
-
-### RequisitionListItemsInput attributes
-
-The `RequisitionListItemsInput` type contains the list of products to add to a requisition list.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`entered_options` | [EnteredOptionInput!] | An array of customer entered option IDs
-`parent_sku` | String | For configurable products, the SKU of the parent product
-`quantity` | Float | The quantity of the product to add
-`selected_options` | [String!] | An array of selected option IDs
-`sku` | String! | The product SKU
-
-## Output attributes
-
-The `addProductsToRequisitionList` object returns the requisition list object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`requisition_list` | [[RequisitionList](#requisitionlist-attributes)] | The requisition list after the items were added
-
-### RequisitionList attributes
-
-import RequisitionList from '/src/_includes/graphql/requisition-list.md'
-
-<RequisitionList />
