@@ -12,6 +12,12 @@ The `confirmEmail` mutation completes the customer activation process by confirm
 
 The following call confirms `roni_cost@example.com` as the email address of the customer by using the confirmation key `abcde`.
 
+## Reference
+
+The `confirmEmail` reference provides detailed information about the types and fields defined in this query.
+
+## Example usage
+
 **Request:**
 
 ```graphql
@@ -38,14 +44,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The following table lists the attributes you can use as input for the `confirmEmail` mutation.
-
-import ConfirmEmail from '/src/pages/_includes/graphql/confirm-email-input.md'
-
-<ConfirmEmail />
 
 ## Errors
 
