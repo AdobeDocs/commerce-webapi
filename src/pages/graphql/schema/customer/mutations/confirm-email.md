@@ -10,7 +10,7 @@ The `confirmEmail` mutation completes the customer activation process by confirm
 
 `mutation: {confirmEmail(input: ConfirmEmailInput!) {CustomerOutput}}`
 
-The following call confirms `roni_cost@example.com` as the email address of the customer by using the confirmation key `abcde` that should have been received by the customer in his / her email inbox.
+The following call confirms `roni_cost@example.com` as the email address of the customer by using the confirmation key `abcde`.
 
 **Request:**
 
