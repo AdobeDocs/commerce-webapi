@@ -40,7 +40,7 @@ Klarna payments require cart information to initiate the session. For this reaso
 
 1. The PWA client renders the Klarna payment widget.
 
-   The PWA client uses the `client_token` and `payment_categories` to initialize the [Klarna Payments JS SDK](https://docs.klarna.com/klarna-payments/integrate-with-klarna-payments/).
+   The PWA client uses the `client_token` and `payment_categories` to initialize the [Klarna Payments JS SDK](https://docs.klarna.com/klarna-payments/in-depth-knowledge/klarna-payments-sdk-reference/).
 
 1. The PWA client sends the [authorization](https://docs.klarna.com/klarna-payments/integrate-with-klarna-payments/step-2-check-out/22-get-authorization/) directly to Klarna.
 
@@ -80,7 +80,7 @@ In order to always present shoppers with the latest available payment options pr
 
 1. The application returns an updated `cart` object.
 
-1. [Reload the widget](https://docs.klarna.com/klarna-payments/integrate-with-klarna-payments/step-3-create-an-order/) on the client side.
+1. [Reload the widget](https://docs.klarna.com/klarna-payments/integration-best-practices/purchase-experience/payment-widget/?q=widget) on the client side.
 
 The following diagram describes the workflow:
 
