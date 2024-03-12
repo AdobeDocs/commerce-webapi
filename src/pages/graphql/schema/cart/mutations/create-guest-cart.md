@@ -18,7 +18,7 @@ mutation {
 
 ## Reference
 
-The `createGuestCart` reference provides detailed information about the types and fields defined in this mutation.
+The [`createGuestCart`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#mutation-createGuestCart) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -83,20 +83,6 @@ The mutation returns a cart using the same `cart_id`.
   }
 }
 ```
-
-## Input attributes
-
-### CreateGuestCartInput object
-
-The `CreateGuestCartInput` object contains the following attributes:
-
-Attribute | Type | Description
---- |----| ---
-`cart_uid` | ID | Optional client-generated ID
-
-## Output attributes
-
-The `createGuestCart` mutation returns the newly created cart.
 
 ## Errors
 
