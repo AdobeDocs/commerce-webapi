@@ -15,6 +15,8 @@ import B2BRoles from '/src/_includes/graphql/b2b-roles.md'
 
 Also, you can get the list of all resources defined within the company using the [`company`](../queries/company.md) query.
 
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
+
 ## Syntax
 
 ```graphql
@@ -26,6 +28,10 @@ mutation {
     }
 }
 ```
+
+## Reference
+
+The [`createCompanyRole`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createCompanyRole) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -114,33 +120,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `CompanyRoleCreateInput` input object defines the company role data for creating.
-
-### CompanyRoleCreateInput attributes
-
-The `CompanyRoleCreateInput` object contains the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`name` | String! | The name of the role to create
-`permissions` | [String!]! | A list of resources the role can access
-
-## Output attributes
-
-The `CreateCompanyRoleOutput` output object contains the following attribute:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`role` | CompanyRole! | Contains company role data
-
-### CompanyRole attributes
-
-import CompanyRole from '/src/_includes/graphql/company-role.md'
-
-<CompanyRole />
 
 ## Errors
 

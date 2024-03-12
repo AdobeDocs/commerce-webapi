@@ -7,7 +7,7 @@ edition: b2b
 
 The `deletePurchaseOrderApprovalRule` mutation deletes one or more purchase order approval rules.
 
-You can use the [`customer` query](../../customer/queries/customer.md) to retrieve the `uid` value of the approval rule.
+You can use the [`customer` query](../../../customer/queries/customer.md) to retrieve the `uid` value of the approval rule.
 
 If the mutation is successful, it returns null. Otherwise, the response contains details about any errors encountered.
 
@@ -22,6 +22,10 @@ mutation {
     }
 }
 ```
+
+## Reference
+
+The [`deletePurchaseOrderApprovalRule`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-deletePurchaseOrderApprovalRule) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Headers
 

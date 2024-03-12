@@ -21,6 +21,10 @@ This query requires a valid [customer authentication token](../../../customer/mu
 }
 ```
 
+## Reference
+
+The [`setNegotiableQuoteShippingAddress`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-setNegotiableQuoteShippingAddress) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example adds a predefined shipping address to a negotiable quote.
@@ -88,49 +92,3 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `SetNegotiableQuoteShippingAddressInput` input object specifies the company user's cart ID and a shipping address.
-
-### SetNegotiableQuoteShippingAddressInput attributes
-
-The `customer_address_id` field is deprecated. If you specify both the `customer_address_id` and `shipping_addresses` field, the system returns an error.
-
-The `SetNegotiableQuoteShippingAddressInput` object contains the following attributes.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`customer_address_id` | ID! | Deprecated. Use `NegotiableQuoteShippingAddressInput.customer_address_uid` instead. The unique ID of a `CustomerAddress` object
-`quote_uid` | ID! | The unique ID of a `NegotiableQuote` object
-`shipping_addresses` | [NegotiableQuoteShippingAddressInput!] | An array of shipping addresses to apply to the negotiable quote
-
-### NegotiableQuoteShippingAddressInput
-
-The `NegotiableQuoteShippingAddressInput` object contains the following attributes.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`address` | NegotiableQuoteAddressInput | A shipping address
-`customer_address_uid` | ID | An ID from the company user's address book that uniquely identifies the address to be used for shipping
-`customer_notes` | String | Text provided by the company user
-
-### NegotiableQuoteAddressInput
-
-import NegotiableQuoteAddressInput from '/src/_includes/graphql/negotiable-quote.md'
-
-<NegotiableQuoteAddressInput />
-
-## Output attributes
-
-The `SetNegotiableQuoteShippingAddressOutput` output object contains the following attribute.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`quote` | NegotiableQuote | Contains details about the negotiable quote
-
-### NegotiableQuote attributes
-
-import NegotiableQuote from '/src/_includes/graphql/negotiable-quote.md'
-
-<NegotiableQuote />

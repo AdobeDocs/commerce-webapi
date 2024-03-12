@@ -9,6 +9,8 @@ contributor_link: https://www.atwix.com/
 
 Use the `updateCompanyStructure` mutation to change the parent node of a company team.
 
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
+
 ## Syntax
 
 ```graphql
@@ -20,6 +22,10 @@ mutation {
     }
 }
 ```
+
+## Reference
+
+The [`updateCompanyStructure`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateCompanyStructure) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -95,30 +101,3 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `CompanyStructureUpdateInput` input object defines the company team data.
-
-### CompanyStructureUpdateInput attributes
-
-The `CompanyStructureUpdateInput` object contains the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`parent_tree_id` | ID! | The ID of a company that will be the new parent
-`tree_id` | ID! | The ID of the company team that is being moved to another parent
-
-You can get the `parent_tree_id` and `tree_id` with the [`company`](../queries/company.md) query.
-
-## Output attributes
-
-The `UpdateCompanyStructureOutput` output object contains the following attribute:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`company` | Company! | Contains company data
-
-import Company from '/src/_includes/graphql/company.md'
-
-<Company />.md %}

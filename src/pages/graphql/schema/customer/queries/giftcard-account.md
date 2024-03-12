@@ -11,6 +11,10 @@ The `giftCardAccount` query returns information for a specific gift card.
 
  `giftCardAccount(code: String!): GiftCardAccount`
 
+## Reference
+
+The [`giftCardAccount`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-giftCardAccount) reference provides detailed information about the types and fields defined in this query.
+
 ## Example usage
 
 The following example returns information about the `01PNC9L76H4H` gift card code.
@@ -46,28 +50,6 @@ query {
   }
 }
 ```
-
-## Input attributes
-
-The `giftCardAccount` query requires the `gift_card_code`.
-
-### GiftCardAccount object
-
-The `GiftCardAccount` object must contain the following attribute:
-
-Attribute | Data Type | Description
---- | --- | ---
-`gift_card_code` | String! | The gift card code
-
-## Output attributes
-
-The `GiftCardAccount` object returns the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`balance` | Money | Returns the currency and remaining balance of the gift card
-`code` | String | Returns the gift card code
-`expiration_date` | String | Returns the date when the gift card expires, if any
 
 ## Errors
 

@@ -36,6 +36,10 @@ categoryList (
 ): CategoryTree
 ```
 
+## Reference
+
+The [`categoryList`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-categoryList) reference provides detailed information about the types and fields defined in this query.
+
 ## Example usage
 
 ### Return the category tree of a top-level category
@@ -288,25 +292,3 @@ The following query returns breadcrumb information about categories that have th
   }
 }
 ```
-
-## Input attributes
-
-You must specify the `filters` attribute as input to your query.
-
-Attribute | Data type | Description
---- | --- | ---
-`filters` | CategoryFilterInput | Contains filter definitions
-
-### CategoryFilterInput object
-
-import CategoryFilterInput from '/src/_includes/graphql/category-filter-input.md'
-
-<CategoryFilterInput />
-
-## Output attributes
-
-The query returns a `CategoryTree` object, which implements [`CategoryInterface`](category.md). The `CategoryTree` object can contain the following attribute and all attributes defined in `CategoryInterface`:
-
-Attribute | Data type | Description
---- | --- | ---
-`children` | `CategoryTree` | An array containing the next level of subcategories. By default, you can specify up to 10 levels of child categories

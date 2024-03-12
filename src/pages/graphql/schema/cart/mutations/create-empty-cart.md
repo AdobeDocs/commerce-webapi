@@ -4,6 +4,10 @@ title: createEmptyCart mutation
 
 # createEmptyCart mutation
 
+<InlineAlert variant="warning" slots="text" />
+
+The `createEmptyCart` mutation has been deprecated. Use the [createGuestCart](create-guest-cart.md) mutation instead.
+
 The `createEmptyCart` mutation creates an empty shopping cart for a guest or logged in customer. You can allow the system to generate a cart ID, or assign a specific ID.
 
 If you are creating a cart for a logged in customer, you must include the customer's authorization token in the header of the request.
@@ -17,6 +21,10 @@ mutation {
   }
 }
 ```
+
+## Reference
+
+The [`createEmptyCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createEmptyCart) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -69,16 +77,6 @@ The mutation returns the same `cart_id`.
   }
 }
 ```
-
-## Input attributes
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart_id` | String | An optional 32-character string
-
-## Output attributes
-
-The `createEmptyCart` mutation returns the cart ID.
 
 ## Errors
 

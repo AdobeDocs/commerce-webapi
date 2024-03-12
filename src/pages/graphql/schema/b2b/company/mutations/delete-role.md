@@ -11,6 +11,8 @@ Use the `deleteCompanyRole` mutation to delete a company role by ID.
 
 You can get the role ID with the [`company`](../queries/company.md) query.
 
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
+
 ## Syntax
 
 ```graphql
@@ -22,6 +24,10 @@ mutation {
     }
 }
 ```
+
+## Reference
+
+The [`deleteCompanyRole`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-deleteCompanyRole) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -50,19 +56,3 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `deleteCompanyRole` mutation requires the following input:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`id` | ID! | The encoded role ID to delete
-
-## Output attributes
-
-The `deleteCompanyRole` mutation returns a Boolean value that indicates whether the operation was successful.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`success` | Boolean | Indicates whether the company role has been deleted successfully (`true` or `false`)

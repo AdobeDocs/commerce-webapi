@@ -13,6 +13,10 @@ Use the [`removeRewardPointsFromCart` mutation](remove-reward-points.md) to undo
 
 `mutation: applyRewardPointsToCart(cartId: ID!): ApplyRewardPointsToCartOutput`
 
+## Reference
+
+The [`applyRewardPointsToCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-applyRewardPointsToCart) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example applies $5 to the cart. In this example, the exchange rate is defined as 25 reward points equals $5.
@@ -113,30 +117,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `applyRewardPointsToCart` mutation requires the `cart_id` attribute.
-
-Attribute | Data Type | Description
---- | --- | ---
-`cart_id` | String! | The unique ID that identifies the customer's cart
-
-## Output attributes
-
-The `ApplyRewardPointsToCartOutput` object contains the `Cart` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
-
-### Cart object
-
- import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 
