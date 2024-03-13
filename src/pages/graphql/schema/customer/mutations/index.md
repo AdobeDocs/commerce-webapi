@@ -16,6 +16,7 @@ The customer mutations allow you to perform the following operations:
   * [`updateCustomerAddress`](update-address.md)
   * [`updateCustomerEmail`](update-email.md)
   * [`updateCustomerV2`](update-v2.md)
+  * [`confirmEmail`](confirm-email.md)
 
 * Manage customer tokens and passwords
 
