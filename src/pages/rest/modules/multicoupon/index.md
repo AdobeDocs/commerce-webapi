@@ -18,7 +18,7 @@ The `POST /V2/carts/:cartId/coupons` and `POST /V2/carts/mine/coupons` endpoints
 
 ```json
 {
-  "couponCodes":[
+  "couponCodes": [
     "COUPON-2", "COUPON-3"
   ]
 }
@@ -32,7 +32,7 @@ The `PUT /V2/carts/:cartId/coupons` and `PUT /V2/carts/mine/coupons` endpoints c
 
 ```json
 {
-  "couponCodes":[
+  "couponCodes": [
     "COUPON-2", "COUPON-3"
   ]
 }
@@ -46,7 +46,7 @@ The `POST /V2/carts/:cartId/deleteByCodes` and `POST /V2/carts/mine/deleteByCode
 
 ```json
 {
-  "couponCodes":[
+  "couponCodes": [
     "COUPON-2", "COUPON-3"
   ]
 }
