@@ -23,6 +23,7 @@ The cart mutations allow you to perform the following operations:
   * [`removeItemFromCart`](remove-item.md)
   * [`setGiftOptionsOnCart`](set-gift-options.md)
   * [`updateCartItems`](update-items.md)
+  * [`clearCart`](clear-cart.md)
 
 * Adjust the balance
 
