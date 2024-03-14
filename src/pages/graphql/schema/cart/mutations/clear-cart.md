@@ -29,6 +29,11 @@ mutation {
     clearCart(input: {uid: "B79Qefk7pUaxahYtO8WjOtr5UyEyjaYV"}) {
         cart {
             id
+            itemsV2 {
+                items {
+                    uid
+                }
+            }
         }
         errors {
             message
@@ -46,7 +51,10 @@ The response is the cart with no items.
   "data": {
     "clearCart": {
       "cart": {
-        "id": "B79Qefk7pUaxahYtO8WjOtr5UyEyjaYV"
+        "id": "B79Qefk7pUaxahYtO8WjOtr5UyEyjaYV",
+        "itemsV2": {
+          "items": []
+        }
       },
       "errors": null
     }
