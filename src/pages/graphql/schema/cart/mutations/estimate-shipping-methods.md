@@ -17,16 +17,13 @@ mutation {
 }
 ```
 
-
 ## Reference
 
 The <estimateShippingMethods> reference provides detailed information about the types and fields defined in this <estimateShippingMethods>.
 
-
 ## Example usage
 
 In the following example, the customer located in Republic of Ireland wants to check estimated cost of shipping for the cart (`IJGaHxS7p6u5Nu7tQIGQpADRXSoZRbJw`).
-
 
 **Request:**
 
