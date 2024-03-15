@@ -8,7 +8,7 @@ keywords:
 
 # Status codes and GraphQl responses
 
-Each web GraphQl API call returns a HTTP status code and a response payload. When an error occurs, the response body also returns an error message.
+Each GraphQl API call returns a HTTP status code and a response payload. When an error occurs, the response payload returns an error message.
 
 ### HTTP status codes
 
@@ -21,64 +21,52 @@ HTTP code | Meaning | Description
 403 | Forbidden | Access is not allowed for reasons that are not covered by error code 401.
 500 | System Errors | If service implementation throws any other exception  like network errors, database communication, framework returns HTTP 500.
 
-### Response payload
-
-POST, PUT, and GET web API calls return a response payload. This payload is a JSON- or XML-formatted response body. The `Accept: application/<FORMAT>` header in the request determines the format of the response body, where `FORMAT` is either `json` or `xml`.
-
-A successful DELETE call returns `true`. An unsuccessful DELETE call returns a payload similar to the other calls.
-
-The response payload depends on the call.
-For example, a `GET /V1/customers/:customerId` call returns the following payload:
-
-```json
-{
-    "customers": {
-        "customer": {
-            "email": "user@example.com",
-            "firstname": "John",
-            "lastname": "Doe"
-        },
-        "addresses": [
-            {
-                "defaultShipping": true,
-                "defaultBilling": true,
-                "firstname": "John",
-                "lastname": "Doe",
-                "region": {
-                    "regionCode": "CA",
-                    "region": "California",
-                    "regionId": 12
-                },
-                "postcode": "90001",
-                "street": ["Zoe Ave"],
-                "city": "Los Angeles",
-                "telephone": "555-000-00-00",
-                "countryId": "US"
-            }
-        ]
-    }
-}
-```
-
-This JSON-formatted response body includes a `customer` object with the customer email, first name, and last name, and customer address information. The information in this response body shows account information for the specified customer.
-
 ### Error format
 
-When an error occurs, the response body contains an error code, error message, and optional parameters.
+When an error occurs, the response body contains an error message and data related to the executed query or mutation.
 
 Part | Description
 --- | --- | ---
-`code` | The status code representing the error.
 `message` | The message explaining the error.
-`parameters` | Optional. An array of attributes used to generate a different and/or localized error message for the client.
+`locations` | The starting position in the incoming query or mutation which causes the issue.
+`path` | The query or mutation being executed.
+`extensions` | Module that throws the error.
 
-As an example, the application returns a `code` of `400` and the following `message` when an invalid `sku` value is specified in the call `PUT V1/products/:sku`.
+As an example, the application returns a `code` of `401` and the following payload when trying to get customer email without passing a [valid token](authorization-tokens.md):
+
+**Request:**
+
+```graphql
+{
+  customer {
+    email
+  }
+}
+```
+
+**Response:**
 
 ```json
 {
-  "message": "Invalid product data: %1",
-  "parameters": [
-    "Invalid attribute set entity type"
-  ]
+  "errors": [
+    {
+      "message": "The current customer isn't authorized.",
+      "locations": [
+        {
+          "line": 2,
+          "column": 3
+        }
+      ],
+      "path": [
+        "customer"
+      ],
+      "extensions": {
+        "category": "graphql-authorization"
+      }
+    }
+  ],
+  "data": {
+    "customer": null
+  }
 }
 ```
