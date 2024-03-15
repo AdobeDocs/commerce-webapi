@@ -17,17 +17,14 @@ mutation {
 }
 ```
 
-
 ## Reference
 
 The <estimateTotals> reference provides detailed information about the types and fields defined in this <estimateTotals>.
 
-
 ## Example usage
 
-In the following example, the customer located in Republic of Ireland wants to check total estimated cost of the cart (`IJGaHxS7p6u5Nu7tQIGQpADRXSoZRbJw`). Cart contains two products with the price of 99.00 Euro each and the applied 
+In the following example, the customer located in Republic of Ireland wants to check total estimated cost of the cart (`IJGaHxS7p6u5Nu7tQIGQpADRXSoZRbJw`). Cart contains two products with the price of 99.00 Euro each and the applied
 tax amount configured for Republic of Ireland is 10%:
-
 
 **Request:**
 
