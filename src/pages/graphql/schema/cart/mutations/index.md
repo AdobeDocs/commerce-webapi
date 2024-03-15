@@ -45,3 +45,4 @@ The cart mutations allow you to perform the following operations:
   * [`setPaymentMethodAndPlaceOrder`](set-payment-place-order.md)
   * [`setShippingAddressesOnCart`](set-shipping-address.md)
   * [`setShippingMethodsOnCart`](set-shipping-method.md)
+  * [`estimateTotals`](estimate-totals.md)
