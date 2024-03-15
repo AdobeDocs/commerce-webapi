@@ -1,9 +1,8 @@
 ---
 title: Status Codes and Responses
-description: A list of status codes and REST responses that can be returned from the APIs.
+description: A list of status codes and HTTP responses that can be returned from the GraphQl API.
 keywords:
   - GraphQL
-  - REST
 ---
 
 # Status codes and GraphQl responses
