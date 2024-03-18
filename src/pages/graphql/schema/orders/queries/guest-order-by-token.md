@@ -1,8 +1,8 @@
 ---
-title: guestOrder query
+title: guestOrderByToken query
 ---
 
-# guestOrder query
+# guestOrderByToken query
 
 Use the `guestOrderByToken` query to retrieve guest order details based on token.
 
