@@ -21,7 +21,7 @@ The following example removes coupons `H2O` and `CO2` from the cart.
 
 **Request:**
 
-``` text
+```graphql
 mutation {
   removeCouponsFromCart(
     input:
@@ -31,11 +31,19 @@ mutation {
       }
     ) {
     cart {
-      items {
-        product {
-          name
+      itemsV2 {
+        items {
+          product {
+            name
+          }
+          quantity
         }
-        quantity
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
+        }
       }
       applied_coupons {
         code
@@ -58,20 +66,28 @@ mutation {
   "data": {
     "removeCouponFromCart": {
       "cart": {
-        "items": [
-          {
-            "product": {
-              "name": "Strive Shoulder Pack"
+        "itemsV2": {
+          "items": [
+            {
+              "product": {
+                "name": "Strive Shoulder Pack"
+              },
+              "quantity": 1
             },
-            "quantity": 1
-          },
-          {
-            "product": {
-              "name": "Affirm Water Bottle "
-            },
-            "quantity": 1
-          }
-        ],
+            {
+              "product": {
+                "name": "Affirm Water Bottle "
+              },
+              "quantity": 1
+            }
+          ],
+          "total_count": 2,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
+          }          
+        },
         "applied_coupons": null,
         "prices": {
           "grand_total": {

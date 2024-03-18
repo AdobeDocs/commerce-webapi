@@ -23,7 +23,7 @@ In this example we are using the `REPLACE` type to add coupons to cart, which me
 
 **Request:**
 
-``` text
+```graphql
 mutation {
   applyCouponsToCart(
     input: {
@@ -33,11 +33,19 @@ mutation {
     }
   ) {
     cart {
-      items {
-        product {
-          name
-        }
-        quantity
+        itemsV2 {
+          items {
+            product {
+              name
+            }
+            quantity
+          }
+          total_count
+          page_info {
+            page_size
+            current_page
+            total_pages
+          }
       }
       applied_coupons {
         code
@@ -60,26 +68,34 @@ mutation {
   "data": {
     "applyCouponsToCart": {
       "cart": {
-        "items": [
-          {
-            "product": {
-              "name": "Gold Membership"
+        "itemsV2": {
+          "items": [
+            {
+              "product": {
+                "name": "Gold Membership"
+              },
+              "quantity": 2
             },
-            "quantity": 2
-          },
-          {
-            "product": {
-              "name": "Strive Shoulder Pack"
+            {
+              "product": {
+                "name": "Strive Shoulder Pack"
+              },
+              "quantity": 1
             },
-            "quantity": 1
-          },
-          {
-            "product": {
-              "name": "Affirm Water Bottle "
-            },
-            "quantity": 1
+            {
+              "product": {
+                "name": "Affirm Water Bottle "
+              },
+              "quantity": 1
+            }
+          ],
+          "total_count": 3,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ],
+        },
         "applied_coupons": [
           {
             "code": "H20"
