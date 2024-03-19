@@ -213,6 +213,7 @@ The following query returns information about the store's customer configuration
   }
 }
 ```
+
 ### Query a store's access token expiration configuration
 
 The following query returns information about the store's token expiration.
