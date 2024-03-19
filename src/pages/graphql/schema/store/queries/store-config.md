@@ -213,6 +213,31 @@ The following query returns information about the store's customer configuration
   }
 }
 ```
+### Query a store's access token expiration configuration
+
+The following query returns information about the store's token expiration.
+
+**Request:**
+
+```graphql
+{
+    storeConfig {
+        customer_access_token_lifetime
+    }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "storeConfig": {
+      "customer_access_token_lifetime": 1
+    }
+  }
+}
+```
 
 ### Query a store's fixed product tax configuration
 
