@@ -315,7 +315,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `code` | String | The payment method code as defined in the payment gateway
 `is_visible` | Boolean | Indicates whether the payment method is shown
-`payment_intent` | String | Defines the payment intent. The possible values are `Authorize` or `Capture`
+`payment_intent` | String | Defines the payment intent. The possible values are `Authorize` or `Capture`.
 `payment_source` | String | The identifiable payment source for the payment method
 `sdk_params` | SDKParams | PayPal parameters required to load the PayPal JavaScript SDK
 `sort_order` | String | The relative order the payment method is displayed on the checkout page
