@@ -186,6 +186,10 @@ module.exports = [
                 path: "/graphql/schema/cart/mutations/create-empty-cart/",
               },
               {
+                title: "createGuestCart",
+                path: "/graphql/schema/cart/mutations/create-guest-cart/",
+              },
+              {
                 title: "mergeCarts",
                 path: "/graphql/schema/cart/mutations/merge/",
               },

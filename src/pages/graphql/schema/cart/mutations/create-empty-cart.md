@@ -4,6 +4,10 @@ title: createEmptyCart mutation
 
 # createEmptyCart mutation
 
+<InlineAlert variant="warning" slots="text" />
+
+The `createEmptyCart` mutation has been deprecated. Use the [createGuestCart](create-guest-cart.md) mutation instead.
+
 The `createEmptyCart` mutation creates an empty shopping cart for a guest or logged in customer. You can allow the system to generate a cart ID, or assign a specific ID.
 
 If you are creating a cart for a logged in customer, you must include the customer's authorization token in the header of the request.
