@@ -196,6 +196,7 @@ The following query returns information about the store's customer configuration
         autocomplete_on_storefront
         minimum_password_length
         required_character_classes_number
+        create_account_confirmation
     }
 }
 ```
@@ -208,7 +209,8 @@ The following query returns information about the store's customer configuration
     "storeConfig": {
       "autocomplete_on_storefront": true,
       "minimum_password_length": "6",
-      "required_character_classes_number": "2"
+      "required_character_classes_number": "2",
+      "create_account_confirmation": false
     }
   }
 }
