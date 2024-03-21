@@ -216,7 +216,7 @@ The following query returns information about the store's customer configuration
 
 ### Query a store's access token expiration configuration
 
-The following query returns information about the store's token expiration.
+The following query returns the value of the **Stores** > Settings > **Configuration** > **Services** > **OAuth** > **Access Token Expiration** > **Customer Token Lifetime (hours)** field.
 
 **Request:**
 
