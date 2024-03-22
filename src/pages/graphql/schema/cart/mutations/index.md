@@ -39,6 +39,7 @@ The cart mutations allow you to perform the following operations:
 
 * Prepare for checkout
 
+  * [`estimateTotals`](estimate-totals.md)
   * [`placeOrder`](place-order.md)
   * [`setBillingAddressOnCart`](set-billing-address.md)
   * [`setGuestEmailOnCart`](set-guest-email.md)
