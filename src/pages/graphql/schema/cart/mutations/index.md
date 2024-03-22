@@ -19,11 +19,11 @@ The cart mutations allow you to perform the following operations:
   * [`addDownloadableProductsToCart`](add-downloadable-products.md)
   * [`addProductsToCart`](add-products.md)
   * [`addSimpleProductsToCart`](add-simple-products.md)
+  * [`clearCart`](clear-cart.md)
   * [`addVirtualProductsToCart`](add-virtual-products.md)
   * [`removeItemFromCart`](remove-item.md)
   * [`setGiftOptionsOnCart`](set-gift-options.md)
   * [`updateCartItems`](update-items.md)
-  * [`clearCart`](clear-cart.md)
 
 * Adjust the balance
 
