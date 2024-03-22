@@ -267,10 +267,9 @@ The following example update bundle product option:
 14
 ```
 
-## Update store specific bundle product option links
+## Update store-specific bundle product option links
 
-The following example uses the `PUT /V1/bundle-products/{sku}/links/{optionId}` call to update bundle product option link. For store specific
-bundle product option link update use `store_code` at API request. Like this `PUT {store_code}/V1/bundle-products/{sku}/links/{optionId}`
+The following example uses the `PUT /V1/bundle-products/{sku}/links/{optionId}` call to update the bundle product option link. For a store-specific call, add `store_code` to the API request. For example, `PUT {store_code}/V1/bundle-products/{sku}/links/{optionId}`
 
 **Sample Usage:**
 
