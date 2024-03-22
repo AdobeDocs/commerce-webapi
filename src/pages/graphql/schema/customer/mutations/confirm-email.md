@@ -2,7 +2,7 @@
 title: confirmEmail mutation | Commerce Web APIs
 ---
 
-# changeCustomerPassword mutation
+# confirmEmail mutation
 
 The `confirmEmail` mutation completes the customer activation process by confirming validity of a customer's email address. Adobe Commerce sends a confirmation key to the customer when they request to create an account. The customer must supply this confirmation key.
 
@@ -14,7 +14,7 @@ The following call confirms `roni_cost@example.com` as the email address of the 
 
 ## Reference
 
-The `confirmEmail` reference provides detailed information about the types and fields defined in this query.
+The `confirmEmail` reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -56,7 +56,3 @@ Error | Description
 ## Related topics
 
 *  [customer query](../queries/customer.md)
-*  [updateCustomer mutation](update.md)
-*  [createCustomerAddress mutation](create-address.md)
-*  [updateCustomerAddress mutation](update-address.md)
-*  [deleteCustomerAddress mutation](delete-address.md)
