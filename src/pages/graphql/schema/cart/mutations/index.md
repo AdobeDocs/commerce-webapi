@@ -39,6 +39,7 @@ The cart mutations allow you to perform the following operations:
 
 * Prepare for checkout
 
+  * [`estimateShippingMethods`](estimate-shipping-methods.md)
   * [`estimateTotals`](estimate-totals.md)
   * [`placeOrder`](place-order.md)
   * [`setBillingAddressOnCart`](set-billing-address.md)
@@ -47,4 +48,3 @@ The cart mutations allow you to perform the following operations:
   * [`setPaymentMethodAndPlaceOrder`](set-payment-place-order.md)
   * [`setShippingAddressesOnCart`](set-shipping-address.md)
   * [`setShippingMethodsOnCart`](set-shipping-method.md)
-  * [`estimateShippingMethods`](estimate-shipping-methods.md)
