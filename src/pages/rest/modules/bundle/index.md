@@ -12,10 +12,8 @@ The `Bundle` module provides functionality for creating and maintaining bundle p
 
 ## Retrieve store-specific bundle product details
 
-We can retrieve store specific bundle product details for multi-store configuration
-
-The following example uses the `GET V1/products/{sku}` call to get bundle product details. For store specific
-bundle product details add `store_code` at API request. Like this `GET {store_code}/V1/products/{sku}`
+The following example retrieves store-specific bundle product details for a multi-store configuration by using the `GET V1/products/{sku}` call. For store specific
+bundle product details add the `store_code` to the API request. For example, `GET {store_code}/V1/products/{sku}`
 
 **Sample Usage:**
 
