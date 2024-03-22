@@ -306,4 +306,3 @@ The following example update bundle product option link:
 
 ```json
 true
-```
