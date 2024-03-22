@@ -277,7 +277,7 @@ The following example uses the `PUT /V1/bundle-products/{sku}/links/{optionId}` 
 
 ## Example
 
-The following example update bundle product option link:
+The following example updates the bundle product option link:
 
 `PUT <host>/rest/default/V1/bundle-products/Desktop-Computer/links/14`
 
