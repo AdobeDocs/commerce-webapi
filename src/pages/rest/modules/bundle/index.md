@@ -203,7 +203,8 @@ The following example returns bundle product details:
     ]
 }
 ```
-We can get `option_id` from bundle product options from  the response and use the `option_id` to update bundle product option.
+
+Retrieve the `option_id` from the bundle product options section of the response and use it to update the bundle product option.
 
 ## Update store-specific bundle product options
 
