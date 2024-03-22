@@ -16,9 +16,9 @@ Each GraphQl API call returns an HTTP status code that reflects the result of a 
 HTTP code | Meaning | Description
 --- | --- | ---
 200 | Success | The framework returns HTTP 200 to the caller upon success.
-401 | Unauthorized | The caller was not authorized to perform the request. For example, the request included an invalid token or a user with customer permissions attempted to access an object that requires administrator permissions.
+401 | Unauthorized | The caller was not authorized to perform the request. For example, the request included an invalid token, or a user with customer permissions attempted to access an object that requires administrator permissions.
 403 | Forbidden | Access is not allowed for reasons that are not covered by error code 401.
-500 | System Errors | If service implementation throws any other exception  like network errors, database communication, framework returns HTTP 500.
+500 | System Errors | If service implementation throws any other exception, such as a network error or database communication failure, the framework returns HTTP 500.
 
 ### Error format
 
@@ -27,7 +27,7 @@ When an error occurs, the response body contains an error message and data relat
 Part | Description
 --- | --- | ---
 `message` | The message explaining the error.
-`locations` | The starting position in the incoming query or mutation which causes the issue.
+`locations` | The starting position in the incoming query or mutation that caused the issue.
 `path` | The query or mutation being executed.
 `extensions` | Module that throws the error.
 
