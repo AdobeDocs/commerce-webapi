@@ -215,7 +215,7 @@ The following example uses the `PUT /V1/bundle-products/options/{optionId}` call
 
 ## Example
 
-The following example update bundle product option:
+The following example updates the bundle product option:
 
 `PUT <host>/rest/default/V1/bundle-products/options/14`
 
