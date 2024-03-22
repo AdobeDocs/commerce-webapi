@@ -10,7 +10,7 @@ keywords:
 
 The `Bundle` module provides functionality for creating and maintaining bundle product types.
 
-## Retrieve store specific bundle product details
+## Retrieve store-specific bundle product details
 
 We can retrieve store specific bundle product details for multi-store configuration
 
