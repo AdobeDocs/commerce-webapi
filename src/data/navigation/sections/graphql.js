@@ -482,6 +482,10 @@ module.exports = [
                 path: "/graphql/schema/customer/mutations/change-password/",
               },
               {
+                title: "confirmEmail",
+                path: "/graphql/schema/customer/mutations/confirm-email/",
+              },
+              {
                 title: "createCustomer",
                 path: "/graphql/schema/customer/mutations/create/",
               },
