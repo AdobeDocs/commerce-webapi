@@ -38,12 +38,20 @@ mutation {
     }
   ){
     cart {
-      items {
-        uid
-        product {
-          name
+      itemsV2 {
+        items {
+          uid
+          product {
+            name
+          }
+          quantity
         }
-        quantity
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
+        }
       }
       prices {
         grand_total{
@@ -63,22 +71,30 @@ mutation {
   "data": {
     "updateCartItems": {
       "cart": {
-        "items": [
-          {
-            "uid": "MjI=",
-            "product": {
-              "name": "Erika Running Short"
+        "itemsV2": {
+          "items": [
+            {
+              "uid": "MjI=",
+              "product": {
+                "name": "Erika Running Short"
+              },
+              "quantity": 1
             },
-            "quantity": 1
-          },
-          {
-            "uid": "MjQ=",
-            "product": {
-              "name": "Voyage Yoga Bag"
-            },
-            "quantity": 3
+            {
+              "uid": "MjQ=",
+              "product": {
+                "name": "Voyage Yoga Bag"
+              },
+              "quantity": 3
+            }
+          ],
+          "total_count": 2,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ],
+        },
         "prices": {
           "grand_total": {
             "value": 152.63,

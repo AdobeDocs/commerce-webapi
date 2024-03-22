@@ -30,12 +30,20 @@ mutation {
   )
  {
   cart {
-    items {
-      id
-      product {
-        name
+    itemsV2 {
+      items {
+        id
+        product {
+          name
+        }
+        quantity
       }
-      quantity
+      total_count
+      page_info {
+        page_size
+        current_page
+        total_pages
+      }
     }
     prices {
       grand_total{
@@ -55,15 +63,23 @@ mutation {
   "data": {
     "removeItemFromCart": {
       "cart": {
-        "items": [
-          {
-            "uid": "NDA=",
-            "product": {
-              "name": "Strive Shoulder Pack"
-            },
-            "quantity": 3
+        "itemsV2": {
+          "items": [
+            {
+              "uid": "NDA=",
+              "product": {
+                "name": "Strive Shoulder Pack"
+              },
+              "quantity": 3
+            }
+          ],
+          "total_count": 1,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ],
+        },
         "prices": {
           "grand_total": {
             "value": 96,
