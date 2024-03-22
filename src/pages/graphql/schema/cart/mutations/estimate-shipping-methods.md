@@ -19,7 +19,7 @@ mutation {
 
 ## Reference
 
-The <estimateShippingMethods> reference provides detailed information about the types and fields defined in this <estimateShippingMethods>.
+The `estimateShippingMethods` reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -57,7 +57,7 @@ mutation {
 
 **Response:**
 
-The response contains estimated shipping cost based on selected location (depends on store configuration):
+The response contains the estimated shipping, cost based on selected location and store configuration:
 
 ```json
 {
