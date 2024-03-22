@@ -5,7 +5,7 @@ keywords:
   - GraphQL
 ---
 
-# Status codes and GraphQl responses
+# GraphQL status codes and responses
 
 Each GraphQl API call returns a HTTP status code and a response payload. When an error occurs, the response payload returns an error message.
 
