@@ -20,6 +20,10 @@ module.exports = [
         path: "/graphql/usage/custom-filters/",
       },
       {
+        title: "GraphQL status codes and responses",
+        path: "/graphql/usage/api-response/"
+      },
+      {
         title: "Headers",
         path: "/graphql/usage/headers/",
       },
