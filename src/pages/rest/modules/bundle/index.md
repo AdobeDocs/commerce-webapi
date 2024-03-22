@@ -205,10 +205,9 @@ The following example returns bundle product details:
 ```
 We can get `option_id` from bundle product options from  the response and use the `option_id` to update bundle product option.
 
-## Update store specific bundle product options
+## Update store-specific bundle product options
 
-The following example uses the `PUT /V1/bundle-products/options/{optionId}` call to update bundle product option. For store specific
-bundle product option update use `store_code` at API request. Like this `PUT {store_code}/V1/bundle-products/options/{optionId}`
+The following example uses the `PUT /V1/bundle-products/options/{optionId}` call to update the bundle product option. For a store-specific request, add the `store_code`. For example, `PUT {store_code}/V1/bundle-products/options/{optionId}`
 
 **Sample Usage:**
 
