@@ -8,6 +8,7 @@ The customer mutations allow you to perform the following operations:
 
 * Manage customers
 
+  * [`confirmEmail`](confirm-email.md)
   * [`createCustomer`](create.md)
   * [`createCustomerAddress`](create-address.md)
   * [`createCustomerV2`](create-v2.md)
@@ -16,7 +17,6 @@ The customer mutations allow you to perform the following operations:
   * [`updateCustomerAddress`](update-address.md)
   * [`updateCustomerEmail`](update-email.md)
   * [`updateCustomerV2`](update-v2.md)
-  * [`confirmEmail`](confirm-email.md)
 
 * Manage customer tokens and passwords
 
