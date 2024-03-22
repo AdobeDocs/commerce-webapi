@@ -7,6 +7,8 @@ edition: ee
 
 The `applyCouponsToCart` mutation applies one or more pre-defined coupon codes to the specified cart. Valid coupon codes are defined in cart price rules.
 
+The `type` field of the `ApplyCouponsToCartInput` object must be set to either `APPEND` or `REPLACE`. If the value is `REPLACE`, the mutation removes any coupon codes that were previously applied. If the value is `APPEND`, the mutation keeps previously-applied coupons.
+
 ## Syntax
 
 `mutation: {applyCouponsToCart(input: ApplyCouponsToCartInput) {ApplyCouponToCartOutput}}`
@@ -19,7 +21,7 @@ The [`applyCouponsToCart`](https://developer.adobe.com/commerce/webapi/graphql-a
 
 The following example applies the coupon codes `H2O` and `CO2` to the cart. For these coupons to be valid, the Affirm Water Bottle (`sku`: 24-UG06) must be in the cart.
 
-In this example we are using the `REPLACE` type to add coupons to cart, which means that any coupon previously used in the cart will be replaced by the one specified in the mutation.
+Because the value of the `type` field is `REPLACE`, any coupon code previously applied to the cart will be replaced by the specified coupon codes.
 
 **Request:**
 
