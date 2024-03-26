@@ -14,6 +14,10 @@ Use the `addConfigurableProductsToCart` mutation to add configurable products to
 
 `mutation: {addConfigurableProductsToCart(input: AddConfigurableProductsToCartInput) {AddConfigurableProductsToCartOutput}}`
 
+## Reference
+
+The [`addConfigurableProductsToCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addConfigurableProductsToCart) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example adds two black Teton Pullover Hoodies size extra-small to the specified shopping cart. The `cart_id` used in this example was [generated](create-empty-cart.md) by creating an empty cart.
@@ -37,17 +41,25 @@ mutation {
     }
   ) {
     cart {
-      items {
-        uid
-        quantity
-        product {
-          name
-          sku
-        }
-        ... on ConfigurableCartItem {
-          configurable_options {
-            option_label
+      itemsV2 {
+        items {
+          uid
+          quantity
+          product {
+            name
+            sku
           }
+          ... on ConfigurableCartItem {
+            configurable_options {
+              option_label
+            }
+          }
+        }
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
         }
       }
     }
@@ -62,83 +74,37 @@ mutation {
   "data": {
     "addConfigurableProductsToCart": {
       "cart": {
-        "items": [
-          {
-            "uid": "Mzc=",
-            "quantity": 2,
-            "product": {
-              "name": "Teton Pullover Hoodie",
-              "sku": "MH02"
-            },
-            "configurable_options": [
-              {
-                "option_label": "Color"
+        "itemsV2": {
+          "items": [
+            {
+              "uid": "Mzc=",
+              "quantity": 2,
+              "product": {
+                "name": "Teton Pullover Hoodie",
+                "sku": "MH02"
               },
-              {
-                "option_label": "Size"
-              }
-            ]
+              "configurable_options": [
+                {
+                  "option_label": "Color"
+                },
+                {
+                  "option_label": "Size"
+                }
+              ]
+            }
+          ],
+          "total_count": 1,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ]
+        }
       }
     }
   }
 }
 ```
-
-## Input attributes
-
-### AddConfigurableProductsToCartInput object
-
-The `AddConfigurableProductsToCartInput` object contains the following attributes:
-
-Attribute | Type | Description
---- | --- | ---
-`cart_id` | String! | The unique ID that identifies the customer's cart
-`cart_items` | [[ConfigurableProductCartItemInput]](#configurableproductcartiteminput-object) | An array of configurable items to add to the cart
-
-### ConfigurableProductCartItemInput object
-
-The `ConfigurableProductCartItemInput` object contains the following attributes:
-
-Attribute | Type | Description
---- | --- | ---
-`customizable_options` | [CustomizableOptionInput](#customizableoptioninput-object) | An object that contains the ID and value of the product
-`data` | [CartItemInput!](#cartiteminput-object) | An object that contains the quantity and SKU of the configurable product
-`parent_sku` | String | The SKU of the simple product's parent configurable product. If you do not specify this attribute, the application treats the product being added to the cart as a simple product
-`variant_sku` | String | Deprecated. Use `CartItemInput.sku` instead. The SKU of the simple product
-
-### CustomizableOptionInput object
-
-The `CustomizableOptionInput` object contains the following attributes:
-
-import CustomizableOptionInput from '/src/_includes/graphql/customizable-option-input-24.md'
-
-<CustomizableOptionInput />
-
-### CartItemInput object
-
-The `CartItemInput` object must contain the following attributes:
-
-import CartItemInput from '/src/_includes/graphql/cart-item-input-24.md'
-
-<CartItemInput />
-
-## Output attributes
-
-The `AddConfigurableProductsToCartOutput` object contains the `Cart` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
-
-### Cart object
-
-import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 

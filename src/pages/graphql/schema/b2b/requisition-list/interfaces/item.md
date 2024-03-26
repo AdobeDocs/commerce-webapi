@@ -5,85 +5,18 @@ edition: b2b
 
 # RequisitionListItemInterface attributes and implementations
 
-`RequisitionListItemInterface` provides details about items in a requisition list. It has the following implementations:
+[`RequisitionListItemInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-RequisitionListItemInterface) provides details about items in a requisition list. It has the following implementations:
 
-*  [`BundleRequisitionListItem`](#bundlerequisitionlistitem-attributes)
-*  [`ConfigurableRequisitionListItem`](#configurablerequisitionlistitem-attributes)
-*  [`DownloadableRequisitionListItem`](#downloadablerequisitionlistitem-attributes)
-*  [`GiftCardRequisitionListItem`](#giftcardrequisitionlistitem-attributes)
-*  [`SimpleRequisitionListItem`](#simplerequisitionlistitem-attributes)
-*  [`VirtualRequisitionListItem`](#virtualrequisitionlistitem-attributes)
+*  [`BundleRequisitionListItem`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-BundleRequisitionListItem)
+*  [`ConfigurableRequisitionListItem`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-ConfigurableRequisitionListItem)
+*  [`DownloadableRequisitionListItem`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-DownloadableRequisitionListItem)
+*  [`GiftCardRequisitionListItem`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-GiftCardRequisitionListItem)
+*  [`SimpleRequisitionListItem`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-SimpleRequisitionListItem)
+*  [`VirtualRequisitionListItem`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-VirtualRequisitionListItem)
 
 <InlineAlert variant="info" slots="text" />
 
 There is not an implementation for grouped products. The items within a grouped product are managed individually.
-
-## Attributes
-
-The `RequisitionListItemInterface` defines the following attributes.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`customizable_options` | [SelectedCustomizableOption]! | Selected custom options for an item in the requisition list
-`product` | [ProductInterface!](../../../products/interfaces/index.md) | Contains details about an item added to a requisition list
-`quantity` | Float! | The amount added
-`uid` | ID! | The unique ID for the requisition list item
-
-## Implementations
-
-### BundleRequisitionListItem attributes
-
-The `BundleRequisitionListItem` implementation adds the following attribute.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`bundle_options`| [SelectedBundleOption]! | An array of selected options for a bundle product
-
-### ConfigurableRequisitionListItem attributes
-
-The `ConfigurableRequisitionListItem` implementation adds the following attribute.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`configurable_options`| [SelectedConfigurableOption] | Selected configurable options for an item in the requisition list
-
-### DownloadableRequisitionListItem attributes
-
-The `ConfigurableRequisitionListItem` implementation adds the following attributes.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`links`| [DownloadableProductLinks] | An array of links for downloadable products in the requisition list
-`samples` | [DownloadableProductSamples] | An array of links to downloadable product samples
-
-### GiftCardRequisitionListItem attributes
-
-The `GiftCardRequisitionListItem` implementation adds the following attribute.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`gift_card_options` | GiftCardOptions! | An array that defines gift card properties
-
-#### GiftCardOptions attributes
-
-The GiftCardOptions object provides details about a gift card. All attributes are optional for a requisition list.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`amount`| Money | The amount and currency of the gift card
-`custom_giftcard_amount` | Money | The custom amount and currency of the gift card
-`message` | String | A message to the recipient
-`recipient_email` | String | The name of the person receiving the gift card
-`sender_email` | String | The email address of the person sending the gift card
-`sender_name` | String | The name of the person sending the gift card
-
-### SimpleRequisitionListItem attributes
-
-The SimpleRequisitionListItem data type does not provide additional attributes to the `RequisitionListItemInterface`.
-
-### VirtualRequisitionListItem attributes
-
-The VirtualRequisitionListItem data type does not provide additional attributes to the `RequisitionListItemInterface`.
 
 ## Example usage
 

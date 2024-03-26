@@ -13,6 +13,10 @@ Use the [`removeRewardPointsFromCart` mutation](remove-reward-points.md) to undo
 
 `mutation: applyRewardPointsToCart(cartId: ID!): ApplyRewardPointsToCartOutput`
 
+## Reference
+
+The [`applyRewardPointsToCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-applyRewardPointsToCart) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example applies $5 to the cart. In this example, the exchange rate is defined as 25 reward points equals $5.
@@ -24,19 +28,27 @@ mutation {
   applyRewardPointsToCart(cartId: "8k0Q4MpH2IGahWrTRtqM61YV2MtLPApz")
   {
     cart {
-      items {
-        quantity
-        product {
-          sku
-          name
-          price_range {
-            maximum_price {
-              final_price {
-                currency
-                value
+      itemsV2 {
+        items {
+          quantity
+          product {
+            sku
+            name
+            price_range {
+              maximum_price {
+                final_price {
+                  currency
+                  value
+                }
               }
             }
           }
+        }
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
         }
       }
       applied_reward_points {
@@ -70,23 +82,31 @@ mutation {
   "data": {
     "applyRewardPointsToCart": {
       "cart": {
-        "items": [
-          {
-            "quantity": 1,
-            "product": {
-              "sku": "WJ04",
-              "name": "Ingrid Running Jacket",
-              "price_range": {
-                "maximum_price": {
-                  "final_price": {
-                    "currency": "USD",
-                    "value": 84
+        "itemsV2": {
+          "items": [
+            {
+              "quantity": 1,
+              "product": {
+                "sku": "WJ04",
+                "name": "Ingrid Running Jacket",
+                "price_range": {
+                  "maximum_price": {
+                    "final_price": {
+                      "currency": "USD",
+                      "value": 84
+                    }
                   }
                 }
               }
             }
+          ],
+          "total_count": 1,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ],
+        },
         "applied_reward_points": {
           "money": {
             "currency": "USD",
@@ -113,30 +133,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `applyRewardPointsToCart` mutation requires the `cart_id` attribute.
-
-Attribute | Data Type | Description
---- | --- | ---
-`cart_id` | String! | The unique ID that identifies the customer's cart
-
-## Output attributes
-
-The `ApplyRewardPointsToCartOutput` object contains the `Cart` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
-
-### Cart object
-
- import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 

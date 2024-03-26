@@ -8,14 +8,15 @@ swagger: '2.0'
 info:
   version: 2.4.7-beta
   title: Commerce Customer REST endpoints - All inclusive
-  description: 
-    $ref: ../_includes/redocly-intro.md
+  description:
+    "$ref": "../_includes/redocly-intro.md"
 host: example.com
 basePath: "/rest/default"
 schemes:
 - http
 tags:
 - name: applepay/auth
+- name: braintree/mine/payment/vault
 - name: carts/guest-carts/{cartId}/checkGiftCard/{giftCardCode}
 - name: carts/guest-carts/{cartId}/giftCards
 - name: carts/guest-carts/{cartId}/giftCards/{giftCardCode}
@@ -24,6 +25,8 @@ tags:
 - name: carts/mine/checkGiftCard/{giftCardCode}
 - name: carts/mine/collect-totals
 - name: carts/mine/payment-information
+- name: carts/mine/payment-order
+- name: carts/mine/payment-order/{id}
 - name: carts/mine/po-payment-information
 - name: carts/mine/set-payment-information
 - name: customers
@@ -51,6 +54,8 @@ tags:
 - name: guest-carts/{cartId}/order
 - name: guest-carts/{cartId}/payment-information
 - name: guest-carts/{cartId}/payment-methods
+- name: guest-carts/{cartId}/payment-order
+- name: guest-carts/{cartId}/payment-order/{id}
 - name: guest-carts/{cartId}/selected-payment-method
 - name: guest-carts/{cartId}/set-payment-information
 - name: guest-carts/{cartId}/shipping-information
@@ -73,12 +78,15 @@ tags:
 - name: negotiable-carts/{cartId}/set-payment-information
 - name: negotiable-carts/{cartId}/shipping-information
 - name: negotiable-carts/{cartId}/totals
+- name: payments-config/{location}
+- name: payments-config/apple-pay/{location}
+- name: payments-config/hosted-fields/{location}
+- name: payments-config/smart-buttons/{location}
+- name: payments-sdk/{location}
+- name: payments-sdk/{location}/{methodCode}
 - name: products-render-info
 - name: purchase-order-carts/{cartId}/payment-information
 - name: purchase-order-carts/{cartId}/set-payment-information
-- name: quick-checkout/account-details
-- name: quick-checkout/has-account
-- name: quick-checkout/storefront/has-account
 - name: requisition_lists
 - name: reward/mine/use-reward
 - name: search
@@ -124,6 +132,51 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: applepay/auth
+  "/V1/braintree/mine/payment/vault":
+    post:
+      tags:
+      - braintree/mine/payment/vault
+      description: Vault a Payment nonce for a customer. Billing address is optional
+        but advised for Card vaulting.
+      operationId: PostV1BraintreeMinePaymentVault
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PostV1BraintreeMinePaymentVaultBody
+        in: body
+        schema:
+          required:
+          - payment
+          properties:
+            payment:
+              "$ref": "#/definitions/pay-pal-braintree-data-payment-interface"
+            billingAddress:
+              "$ref": "#/definitions/customer-data-address-interface"
+          type: object
+          xml:
+            name: request
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            type: boolean
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: braintree/mine/payment/vault
   "/V1/carts/guest-carts/{cartId}/checkGiftCard/{giftCardCode}":
     get:
       tags:
@@ -477,6 +530,125 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: carts/mine/payment-information
+  "/V1/carts/mine/payment-order":
+    post:
+      tags:
+      - carts/mine/payment-order
+      description: Create a payment order for logged in customer
+      operationId: PostV1CartsMinePaymentorder
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PostV1CartsMinePaymentorderBody
+        in: body
+        schema:
+          required:
+          - methodCode
+          - paymentSource
+          - location
+          properties:
+            methodCode:
+              type: string
+            paymentSource:
+              type: string
+            location:
+              type: string
+            vaultIntent:
+              type: boolean
+          type: object
+          xml:
+            name: request
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/payment-services-paypal-data-payment-order-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: carts/mine/payment-order
+  "/V1/carts/mine/payment-order/{id}":
+    get:
+      tags:
+      - carts/mine/payment-order/{id}
+      description: Get payment order for logged in customer
+      operationId: GetV1CartsMinePaymentorderId
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: id
+        in: path
+        type: string
+        required: true
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/payment-services-paypal-data-payment-order-details-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: carts/mine/payment-order/{id}
+    post:
+      tags:
+      - carts/mine/payment-order/{id}
+      description: Sync payment order for logged in customer
+      operationId: PostV1CartsMinePaymentorderId
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: id
+        in: path
+        type: string
+        required: true
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            type: boolean
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: carts/mine/payment-order/{id}
   "/V1/carts/mine/po-payment-information":
     post:
       tags:
@@ -1365,6 +1537,10 @@ paths:
             description: An array of shipping methods
             items:
               "$ref": "#/definitions/quote-data-shipping-method-interface"
+        '400':
+          description: 400 Bad Request
+          schema:
+            "$ref": "#/definitions/error-response"
         default:
           description: Unexpected error
           schema:
@@ -1839,6 +2015,125 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: guest-carts/{cartId}/payment-methods
+  "/V1/guest-carts/{cartId}/payment-order":
+    post:
+      tags:
+      - guest-carts/{cartId}/payment-order
+      description: Create a payment order for guest customer
+      operationId: PostV1GuestcartsCartIdPaymentorder
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: cartId
+        in: path
+        type: string
+        required: true
+      - name: PostV1GuestcartsCartIdPaymentorderBody
+        in: body
+        schema:
+          required:
+          - methodCode
+          - paymentSource
+          - location
+          properties:
+            methodCode:
+              type: string
+            paymentSource:
+              type: string
+            location:
+              type: string
+            vaultIntent:
+              type: boolean
+          type: object
+          xml:
+            name: request
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/payment-services-paypal-data-payment-order-interface"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: guest-carts/{cartId}/payment-order
+  "/V1/guest-carts/{cartId}/payment-order/{id}":
+    get:
+      tags:
+      - guest-carts/{cartId}/payment-order/{id}
+      description: Get payment order for guest customer
+      operationId: GetV1GuestcartsCartIdPaymentorderId
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: cartId
+        in: path
+        type: string
+        required: true
+      - name: id
+        in: path
+        type: string
+        required: true
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/payment-services-paypal-data-payment-order-details-interface"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: guest-carts/{cartId}/payment-order/{id}
+    post:
+      tags:
+      - guest-carts/{cartId}/payment-order/{id}
+      description: Sync payment order for guest customer
+      operationId: PostV1GuestcartsCartIdPaymentorderId
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: cartId
+        in: path
+        type: string
+        required: true
+      - name: id
+        in: path
+        type: string
+        required: true
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            type: boolean
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: guest-carts/{cartId}/payment-order/{id}
   "/V1/guest-carts/{cartId}/selected-payment-method":
     get:
       tags:
@@ -2932,6 +3227,194 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: negotiable-carts/{cartId}/totals
+  "/V1/payments-config/apple-pay/{location}":
+    get:
+      tags:
+      - payments-config/apple-pay/{location}
+      description: Get Apple Pay Config.
+      operationId: GetV1PaymentsconfigApplepayLocation
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: location
+        in: path
+        type: string
+        required: true
+        description: sdk location.
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/payment-services-paypal-data-payment-config-apple-pay-interface"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: payments-config/apple-pay/{location}
+  "/V1/payments-config/hosted-fields/{location}":
+    get:
+      tags:
+      - payments-config/hosted-fields/{location}
+      description: Get Hosted Fields Config.
+      operationId: GetV1PaymentsconfigHostedfieldsLocation
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: location
+        in: path
+        type: string
+        required: true
+        description: sdk location.
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/payment-services-paypal-data-payment-config-hosted-fields-interface"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: payments-config/hosted-fields/{location}
+  "/V1/payments-config/smart-buttons/{location}":
+    get:
+      tags:
+      - payments-config/smart-buttons/{location}
+      description: Get Smart Buttons Config.
+      operationId: GetV1PaymentsconfigSmartbuttonsLocation
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: location
+        in: path
+        type: string
+        required: true
+        description: sdk location.
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/payment-services-paypal-data-payment-config-smart-buttons-interface"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: payments-config/smart-buttons/{location}
+  "/V1/payments-config/{location}":
+    get:
+      tags:
+      - payments-config/{location}
+      description: Get Config.
+      operationId: GetV1PaymentsconfigLocation
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: location
+        in: path
+        type: string
+        required: true
+        description: sdk location.
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/payment-services-paypal-payment-config-response-interface"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: payments-config/{location}
+  "/V1/payments-sdk/{location}":
+    get:
+      tags:
+      - payments-sdk/{location}
+      description: Get payment sdk url by location
+      operationId: GetV1PaymentssdkLocation
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: location
+        in: path
+        type: string
+        required: true
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            type: array
+            items:
+              "$ref": "#/definitions/payment-services-paypal-data-payment-sdk-params-interface"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: payments-sdk/{location}
+  "/V1/payments-sdk/{location}/{methodCode}":
+    get:
+      tags:
+      - payments-sdk/{location}/{methodCode}
+      description: Get payment sdk url by location and methodCode
+      operationId: GetV1PaymentssdkLocationMethodCode
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: location
+        in: path
+        type: string
+        required: true
+      - name: methodCode
+        in: path
+        type: string
+        required: true
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/payment-services-paypal-data-payment-sdk-params-interface"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: payments-sdk/{location}/{methodCode}
   "/V1/products-render-info":
     get:
       tags:
@@ -3121,100 +3604,6 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: purchase-order-carts/{cartId}/set-payment-information
-  "/V1/quick-checkout/account-details":
-    post:
-      tags:
-      - quick-checkout/account-details
-      description: Retrieve account information
-      operationId: PostV1QuickcheckoutAccountdetails
-      consumes:
-      - application/json
-      - application/xml
-      produces:
-      - application/json
-      - application/xml
-      responses:
-        '200':
-          description: 200 Success.
-          schema:
-            "$ref": "#/definitions/quick-checkout-data-account-interface"
-        default:
-          description: Unexpected error
-          schema:
-            "$ref": "#/definitions/error-response"
-      summary: quick-checkout/account-details
-  "/V1/quick-checkout/has-account":
-    post:
-      tags:
-      - quick-checkout/has-account
-      description: Check if email exists in Bolt
-      operationId: PostV1QuickcheckoutHasaccount
-      consumes:
-      - application/json
-      - application/xml
-      produces:
-      - application/json
-      - application/xml
-      parameters:
-      - name: PostV1QuickcheckoutHasaccountBody
-        in: body
-        schema:
-          required:
-          - email
-          properties:
-            email:
-              type: string
-          type: object
-          xml:
-            name: request
-      responses:
-        '200':
-          description: 200 Success.
-          schema:
-            type: boolean
-        default:
-          description: Unexpected error
-          schema:
-            "$ref": "#/definitions/error-response"
-      summary: quick-checkout/has-account
-  "/V1/quick-checkout/storefront/has-account":
-    post:
-      tags:
-      - quick-checkout/storefront/has-account
-      description: Check if email exists in Storefront
-      operationId: PostV1QuickcheckoutStorefrontHasaccount
-      consumes:
-      - application/json
-      - application/xml
-      produces:
-      - application/json
-      - application/xml
-      parameters:
-      - name: PostV1QuickcheckoutStorefrontHasaccountBody
-        in: body
-        schema:
-          required:
-          - email
-          properties:
-            email:
-              type: string
-          type: object
-          xml:
-            name: request
-      responses:
-        '200':
-          description: 200 Success.
-          schema:
-            type: boolean
-        '500':
-          description: Internal Server error
-          schema:
-            "$ref": "#/definitions/error-response"
-        default:
-          description: Unexpected error
-          schema:
-            "$ref": "#/definitions/error-response"
-      summary: quick-checkout/storefront/has-account
   "/V1/requisition_lists":
     post:
       tags:
@@ -4338,10 +4727,10 @@ definitions:
     properties:
       company_attributes:
         "$ref": "#/definitions/company-data-company-customer-interface"
-      assistance_allowed:
-        type: integer
       is_subscribed:
         type: boolean
+      assistance_allowed:
+        type: integer
   company-data-company-customer-interface:
     type: object
     description: Extended customer custom attributes interface.
@@ -4366,6 +4755,149 @@ definitions:
   company-data-company-customer-extension-interface:
     type: object
     description: ExtensionInterface class for @see \Magento\Company\Api\Data\CompanyCustomerInterface
+  framework-search-search-result-interface:
+    type: object
+    description: Interface SearchResultInterface
+    properties:
+      items:
+        type: array
+        items:
+          "$ref": "#/definitions/framework-search-document-interface"
+      aggregations:
+        "$ref": "#/definitions/framework-search-aggregation-interface"
+      search_criteria:
+        "$ref": "#/definitions/framework-search-search-criteria-interface"
+      total_count:
+        type: integer
+        description: Total count.
+    required:
+    - items
+    - aggregations
+    - search_criteria
+    - total_count
+  framework-search-document-interface:
+    type: object
+    description: Interface Search Document
+    properties:
+      id:
+        type: integer
+      custom_attributes:
+        type: array
+        description: Custom attributes values.
+        items:
+          "$ref": "#/definitions/framework-attribute-interface"
+    required:
+    - id
+  framework-search-aggregation-interface:
+    type: object
+    description: Interface Aggregation to get faceted data
+    properties:
+      buckets:
+        type: array
+        description: All Document fields
+        items:
+          "$ref": "#/definitions/framework-search-bucket-interface"
+      bucket_names:
+        type: array
+        description: Document field names
+        items:
+          type: string
+    required:
+    - buckets
+    - bucket_names
+  framework-search-bucket-interface:
+    type: object
+    description: Interface for facet Bucket
+    properties:
+      name:
+        type: string
+        description: Field name
+      values:
+        type: array
+        description: Field values
+        items:
+          "$ref": "#/definitions/framework-search-aggregation-value-interface"
+    required:
+    - name
+    - values
+  framework-search-aggregation-value-interface:
+    type: object
+    description: Interface Aggregation Value
+    properties:
+      value:
+        type: string
+        description: Aggregation
+      metrics:
+        type: array
+        description: Metrics
+        items:
+          type: string
+    required:
+    - value
+    - metrics
+  framework-search-search-criteria-interface:
+    type: object
+    description: Interface SearchCriteriaInterface
+    properties:
+      request_name:
+        type: string
+      filter_groups:
+        type: array
+        description: A list of filter groups.
+        items:
+          "$ref": "#/definitions/framework-search-filter-group"
+      sort_orders:
+        type: array
+        description: Sort order.
+        items:
+          "$ref": "#/definitions/framework-sort-order"
+      page_size:
+        type: integer
+        description: Page size.
+      current_page:
+        type: integer
+        description: Current page.
+    required:
+    - request_name
+    - filter_groups
+  framework-search-filter-group:
+    type: object
+    description: Groups two or more filters together using a logical OR
+    properties:
+      filters:
+        type: array
+        description: A list of filters in this group
+        items:
+          "$ref": "#/definitions/framework-filter"
+  framework-filter:
+    type: object
+    description: Filter which can be used by any methods from service layer.
+    properties:
+      field:
+        type: string
+        description: Field
+      value:
+        type: string
+        description: Value
+      condition_type:
+        type: string
+        description: Condition type
+    required:
+    - field
+    - value
+  framework-sort-order:
+    type: object
+    description: Data object for sort order.
+    properties:
+      field:
+        type: string
+        description: Sorting field.
+      direction:
+        type: string
+        description: Sorting direction.
+    required:
+    - field
+    - direction
   catalog-data-product-render-search-results-interface:
     type: object
     description: Dto that holds render information about products
@@ -5006,6 +5538,8 @@ definitions:
         type: array
         items:
           "$ref": "#/definitions/negotiable-quote-data-item-note-interface"
+      is_discounting_locked:
+        type: boolean
   negotiable-quote-data-item-note-interface:
     type: object
     description: Interface ItemNoteInterface
@@ -5141,8 +5675,6 @@ definitions:
         type: integer
       pickup_location_code:
         type: string
-      bolt_id:
-        type: string
   quote-data-currency-interface:
     type: object
     description: Interface CurrencyInterface
@@ -5186,6 +5718,10 @@ definitions:
           "$ref": "#/definitions/quote-data-shipping-assignment-interface"
       negotiable_quote:
         "$ref": "#/definitions/negotiable-quote-data-negotiable-quote-interface"
+      coupon_codes:
+        type: array
+        items:
+          type: string
   quote-data-shipping-assignment-interface:
     type: object
     description: Interface ShippingAssignmentInterface
@@ -5966,149 +6502,6 @@ definitions:
   requisition-list-data-requisition-list-extension-interface:
     type: object
     description: ExtensionInterface class for @see \Magento\RequisitionList\Api\Data\RequisitionListInterface
-  framework-search-search-result-interface:
-    type: object
-    description: Interface SearchResultInterface
-    properties:
-      items:
-        type: array
-        items:
-          "$ref": "#/definitions/framework-search-document-interface"
-      aggregations:
-        "$ref": "#/definitions/framework-search-aggregation-interface"
-      search_criteria:
-        "$ref": "#/definitions/framework-search-search-criteria-interface"
-      total_count:
-        type: integer
-        description: Total count.
-    required:
-    - items
-    - aggregations
-    - search_criteria
-    - total_count
-  framework-search-document-interface:
-    type: object
-    description: Interface Search Document
-    properties:
-      id:
-        type: integer
-      custom_attributes:
-        type: array
-        description: Custom attributes values.
-        items:
-          "$ref": "#/definitions/framework-attribute-interface"
-    required:
-    - id
-  framework-search-aggregation-interface:
-    type: object
-    description: Interface Aggregation to get faceted data
-    properties:
-      buckets:
-        type: array
-        description: All Document fields
-        items:
-          "$ref": "#/definitions/framework-search-bucket-interface"
-      bucket_names:
-        type: array
-        description: Document field names
-        items:
-          type: string
-    required:
-    - buckets
-    - bucket_names
-  framework-search-bucket-interface:
-    type: object
-    description: Interface for facet Bucket
-    properties:
-      name:
-        type: string
-        description: Field name
-      values:
-        type: array
-        description: Field values
-        items:
-          "$ref": "#/definitions/framework-search-aggregation-value-interface"
-    required:
-    - name
-    - values
-  framework-search-aggregation-value-interface:
-    type: object
-    description: Interface Aggregation Value
-    properties:
-      value:
-        type: string
-        description: Aggregation
-      metrics:
-        type: array
-        description: Metrics
-        items:
-          type: string
-    required:
-    - value
-    - metrics
-  framework-search-search-criteria-interface:
-    type: object
-    description: Interface SearchCriteriaInterface
-    properties:
-      request_name:
-        type: string
-      filter_groups:
-        type: array
-        description: A list of filter groups.
-        items:
-          "$ref": "#/definitions/framework-search-filter-group"
-      sort_orders:
-        type: array
-        description: Sort order.
-        items:
-          "$ref": "#/definitions/framework-sort-order"
-      page_size:
-        type: integer
-        description: Page size.
-      current_page:
-        type: integer
-        description: Current page.
-    required:
-    - request_name
-    - filter_groups
-  framework-search-filter-group:
-    type: object
-    description: Groups two or more filters together using a logical OR
-    properties:
-      filters:
-        type: array
-        description: A list of filters in this group
-        items:
-          "$ref": "#/definitions/framework-filter"
-  framework-filter:
-    type: object
-    description: Filter which can be used by any methods from service layer.
-    properties:
-      field:
-        type: string
-        description: Field
-      value:
-        type: string
-        description: Value
-      condition_type:
-        type: string
-        description: Condition type
-    required:
-    - field
-    - value
-  framework-sort-order:
-    type: object
-    description: Data object for sort order.
-    properties:
-      field:
-        type: string
-        description: Sorting field.
-      direction:
-        type: string
-        description: Sorting direction.
-    required:
-    - field
-    - direction
   checkout-data-shipping-information-interface:
     type: object
     description: Interface ShippingInformationInterface
@@ -6532,130 +6925,314 @@ definitions:
   inventory-in-store-pickup-api-data-search-request-product-info-extension-interface:
     type: object
     description: ExtensionInterface class for @see \Magento\InventoryInStorePickupApi\Api\Data\SearchRequest\ProductInfoInterface
-  quick-checkout-data-account-interface:
+  payment-services-paypal-payment-config-response-interface:
     type: object
-    description: Data account interface
+    description: ''
     properties:
-      addresses:
-        type: array
-        description: Addresses
-        items:
-          "$ref": "#/definitions/quick-checkout-data-address-interface"
-      payment_methods:
-        type: array
-        description: Payment methods
-        items:
-          "$ref": "#/definitions/quick-checkout-data-payment-method-interface"
-      email:
-        type: string
-        description: Email
-      first_name:
-        type: string
-        description: First name
-      last_name:
-        type: string
-        description: Last name
-      default_address_changed:
-        type: boolean
-        description: Shipping address changed
+      apple_pay:
+        "$ref": "#/definitions/payment-services-paypal-data-payment-config-apple-pay-interface"
+      hosted_fields:
+        "$ref": "#/definitions/payment-services-paypal-data-payment-config-hosted-fields-interface"
+      smart_buttons:
+        "$ref": "#/definitions/payment-services-paypal-data-payment-config-smart-buttons-interface"
     required:
-    - addresses
-    - payment_methods
-    - email
-    - first_name
-    - last_name
-    - default_address_changed
-  quick-checkout-data-address-interface:
+    - apple_pay
+    - hosted_fields
+    - smart_buttons
+  payment-services-paypal-data-payment-config-apple-pay-interface:
     type: object
-    description: Account address
+    description: ''
     properties:
-      id:
+      button_styles:
+        "$ref": "#/definitions/payment-services-paypal-data-payment-config-button-styles-interface"
+      payment_source:
         type: string
-        description: Id
-      region:
+        description: PaymentSource
+      code:
         type: string
-        description: Region
-      region_code:
-        type: string
-        description: Region code
-      region_id:
-        type: string
-        description: Region id
-      country_id:
-        type: string
-        description: Country code in ISO_3166-2 format
-      street:
+        description: Code
+      sdk_params:
         type: array
-        description: Street
+        description: SDK params
         items:
-          type: string
-      email:
-        type: string
-        description: Email
-      telephone:
-        type: string
-        description: Telephone number
-      postcode:
-        type: string
-        description: Postcode
-      city:
-        type: string
-        description: City name
-      firstname:
-        type: string
-        description: First name
-      lastname:
-        type: string
-        description: Last name
-      company:
-        type: string
-        description: Company
-      external_address:
+          "$ref": "#/definitions/payment-services-paypal-data-payment-config-sdk-params-interface"
+      is_visible:
         type: boolean
-        description: External address
-    required:
-    - id
-    - country_id
-    - street
-    - email
-    - telephone
-    - postcode
-    - city
-    - firstname
-    - lastname
-    - company
-    - external_address
-  quick-checkout-data-payment-method-interface:
-    type: object
-    description: Account payment
-    properties:
-      id:
+        description: Visible
+      sort_order:
         type: string
-        description: Id
+        description: Sort Order
+      payment_intent:
+        type: string
+        description: Payment intent
+      title:
+        type: string
+        description: Title
+    required:
+    - button_styles
+    - payment_source
+    - code
+    - sdk_params
+    - is_visible
+    - sort_order
+    - payment_intent
+    - title
+  payment-services-paypal-data-payment-config-button-styles-interface:
+    type: object
+    description: ''
+    properties:
+      layout:
+        type: string
+        description: Layout
+      color:
+        type: string
+        description: Color
+      shape:
+        type: string
+        description: Shape
+      label:
+        type: string
+        description: Label
+      tagline:
+        type: boolean
+        description: ShowTagline
+      height:
+        type: integer
+        description: Height
+      use_default_height:
+        type: boolean
+        description: Height
+    required:
+    - layout
+    - color
+    - shape
+    - label
+    - tagline
+    - height
+    - use_default_height
+  payment-services-paypal-data-payment-config-sdk-params-interface:
+    type: object
+    description: ''
+    properties:
+      name:
+        type: string
+        description: Code
+      value:
+        type: string
+        description: Config
+    required:
+    - name
+    - value
+  payment-services-paypal-data-payment-config-hosted-fields-interface:
+    type: object
+    description: ''
+    properties:
+      payment_source:
+        type: string
+        description: Payment Source
+      three_d_s:
+        type: string
+        description: ThreeDS
+      is_vault_enabled:
+        type: boolean
+        description: HasIsVaultEnabled
+      cc_vault_code:
+        type: string
+        description: CcVaultCode
+      requires_card_details:
+        type: boolean
+        description: RequiresCardDetails
+      code:
+        type: string
+        description: Code
+      sdk_params:
+        type: array
+        description: SDK params
+        items:
+          "$ref": "#/definitions/payment-services-paypal-data-payment-config-sdk-params-interface"
+      is_visible:
+        type: boolean
+        description: Visible
+      sort_order:
+        type: string
+        description: Sort Order
+      payment_intent:
+        type: string
+        description: Payment intent
+      title:
+        type: string
+        description: Title
+    required:
+    - payment_source
+    - three_d_s
+    - is_vault_enabled
+    - cc_vault_code
+    - requires_card_details
+    - code
+    - sdk_params
+    - is_visible
+    - sort_order
+    - payment_intent
+    - title
+  payment-services-paypal-data-payment-config-smart-buttons-interface:
+    type: object
+    description: ''
+    properties:
+      display_message:
+        type: boolean
+        description: CanDisplayMessage
+      display_venmo:
+        type: boolean
+        description: Venmo
+      message_styles:
+        "$ref": "#/definitions/payment-services-paypal-data-payment-config-smart-buttons-message-styles-interface"
+      button_styles:
+        "$ref": "#/definitions/payment-services-paypal-data-payment-config-button-styles-interface"
+      code:
+        type: string
+        description: Code
+      sdk_params:
+        type: array
+        description: SDK params
+        items:
+          "$ref": "#/definitions/payment-services-paypal-data-payment-config-sdk-params-interface"
+      is_visible:
+        type: boolean
+        description: Visible
+      sort_order:
+        type: string
+        description: Sort Order
+      payment_intent:
+        type: string
+        description: Payment intent
+      title:
+        type: string
+        description: Title
+    required:
+    - display_message
+    - display_venmo
+    - message_styles
+    - button_styles
+    - code
+    - sdk_params
+    - is_visible
+    - sort_order
+    - payment_intent
+    - title
+  payment-services-paypal-data-payment-config-smart-buttons-message-styles-interface:
+    type: object
+    description: ''
+    properties:
+      layout:
+        type: string
+        description: CanDisplayMessage
+      logo:
+        "$ref": "#/definitions/payment-services-paypal-data-payment-config-smart-buttons-logo-interface"
+    required:
+    - layout
+    - logo
+  payment-services-paypal-data-payment-config-smart-buttons-logo-interface:
+    type: object
+    description: ''
+    properties:
       type:
         type: string
-        description: Type
-      last4:
+        description: CanDisplayMessage
+    required:
+    - type
+  payment-services-paypal-data-payment-order-interface:
+    type: object
+    description: Interface PaymentOrderInterface
+    properties:
+      id:
         type: string
-        description: Last four digits of card
-      network:
+        description: Payment order id
+      mp_order_id:
         type: string
-        description: Card network
-      billing_address:
-        "$ref": "#/definitions/quick-checkout-data-address-interface"
-      expiration_month:
+        description: Payment order mpOrderId
+      status:
         type: string
-        description: Expiration month of the card
-      expiration_year:
-        type: string
-        description: Expiration year of the card
+        description: Payment order status
     required:
     - id
-    - type
-    - last4
-    - network
-    - expiration_month
-    - expiration_year
+    - mp_order_id
+    - status
+  payment-services-paypal-data-payment-order-details-interface:
+    type: object
+    description: Interface PaymentOrderDetailsInterface
+    properties:
+      payment_source_details:
+        "$ref": "#/definitions/payment-services-paypal-data-payment-source-details-interface"
+      id:
+        type: string
+        description: Payment order id
+      mp_order_id:
+        type: string
+        description: Payment order mpOrderId
+      status:
+        type: string
+        description: Payment order status
+    required:
+    - payment_source_details
+    - id
+    - mp_order_id
+    - status
+  payment-services-paypal-data-payment-source-details-interface:
+    type: object
+    description: ''
+    properties:
+      card:
+        "$ref": "#/definitions/payment-services-paypal-data-payment-card-details-interface"
+    required:
+    - card
+  payment-services-paypal-data-payment-card-details-interface:
+    type: object
+    description: ''
+    properties:
+      name:
+        type: string
+        description: Name
+      last_digits:
+        type: string
+        description: Last digits
+      card_expiry_month:
+        type: string
+        description: Card expiry month
+      card_expiry_year:
+        type: string
+        description: Card expiry year
+      bin_details:
+        "$ref": "#/definitions/payment-services-paypal-data-payment-card-bin-details-interface"
+    required:
+    - name
+    - last_digits
+    - card_expiry_month
+    - card_expiry_year
+    - bin_details
+  payment-services-paypal-data-payment-card-bin-details-interface:
+    type: object
+    description: ''
+    properties:
+      bin:
+        type: string
+        description: Bin
+    required:
+    - bin
+  payment-services-paypal-data-payment-sdk-params-interface:
+    type: object
+    description: ''
+    properties:
+      code:
+        type: string
+        description: The payments sdk code
+      params:
+        type: array
+        description: The payments sdk params
+        items:
+          "$ref": "#/definitions/payment-services-paypal-data-payment-config-sdk-params-interface"
+    required:
+    - code
+    - params
   pay-pal-braintree-data-auth-data-interface:
     type: object
     description: Interface AuthDataInterface
@@ -6679,10 +7256,26 @@ definitions:
     - action_success
     - logged_in
     - store_code
+  pay-pal-braintree-data-payment-interface:
+    type: object
+    description: ''
+    properties:
+      payment_method_code:
+        type: string
+        description: The payment method code.
+      payment_method_nonce:
+        type: string
+        description: The payment method nonce.
+      device_data:
+        type: string
+        description: The device data.
 x-tagGroups:
 - name: applepay
   tags:
   - applepay/auth
+- name: braintree
+  tags:
+  - braintree/mine/payment/vault
 - name: carts
   tags:
   - carts/guest-carts/{cartId}/checkGiftCard/{giftCardCode}
@@ -6693,6 +7286,8 @@ x-tagGroups:
   - carts/mine/checkGiftCard/{giftCardCode}
   - carts/mine/collect-totals
   - carts/mine/payment-information
+  - carts/mine/payment-order
+  - carts/mine/payment-order/{id}
   - carts/mine/po-payment-information
   - carts/mine/set-payment-information
 - name: customers
@@ -6728,6 +7323,8 @@ x-tagGroups:
   - guest-carts/{cartId}/order
   - guest-carts/{cartId}/payment-information
   - guest-carts/{cartId}/payment-methods
+  - guest-carts/{cartId}/payment-order
+  - guest-carts/{cartId}/payment-order/{id}
   - guest-carts/{cartId}/selected-payment-method
   - guest-carts/{cartId}/set-payment-information
   - guest-carts/{cartId}/shipping-information
@@ -6758,6 +7355,16 @@ x-tagGroups:
   - negotiable-carts/{cartId}/set-payment-information
   - negotiable-carts/{cartId}/shipping-information
   - negotiable-carts/{cartId}/totals
+- name: payments config
+  tags:
+  - payments-config/apple-pay/{location}
+  - payments-config/hosted-fields/{location}
+  - payments-config/smart-buttons/{location}
+  - payments-config/{location}
+- name: payments sdk
+  tags:
+  - payments-sdk/{location}
+  - payments-sdk/{location}/{methodCode}
 - name: products render info
   tags:
   - products-render-info
@@ -6765,11 +7372,6 @@ x-tagGroups:
   tags:
   - purchase-order-carts/{cartId}/payment-information
   - purchase-order-carts/{cartId}/set-payment-information
-- name: quick checkout
-  tags:
-  - quick-checkout/account-details
-  - quick-checkout/has-account
-  - quick-checkout/storefront/has-account
 - name: requisition_lists
   tags:
   - requisition_lists

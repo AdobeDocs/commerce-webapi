@@ -2,6 +2,8 @@
 title: products query
 ---
 
+import CustomAttributeFilterProduct from '/src/_includes/graphql/examples/custom-attribute-filter-product.md'
+
 # products query
 
 The `products` query allows you to search for catalog items.
@@ -18,17 +20,21 @@ products(
 ): Products
 ```
 
+## Reference
+
+The [`products`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-products) reference provides detailed information about the types and fields defined in this query.
+
 ## Input attributes
 
-Each query attribute is defined below:
+The query can contain the following input attributes:
 
-Attribute |  Data type | Description
---- | --- | ---
-`search` | String | Performs a full-text search using the specified key words
-`filter` | ProductAttributeFilterInput | Identifies which attributes to search for and return. See [filter attribute](#productfilterinput-attributes) object for more information
-`pageSize` | Int | Specifies the maximum number of results to return at once. The default value is 20
-`currentPage` | Int | Specifies which page of results to return. The default value is 1
-`sort` | ProductAttributeSortInput | Specifies which attribute to sort on, and whether to return the results in ascending or descending order
+- `search` - Performs a full-text search using the specified key words
+- `filter` - Identifies which attributes to search for and return.
+- `pageSize` - Specifies the maximum number of results to return at once.
+- `currentPage` - Specifies which page of results to return.
+- `sort` - Specifies which attribute to sort on, and whether to return the results in ascending or descending order.
+
+Each attribute is described in detail below.
 
 ### search attribute
 
@@ -38,7 +44,7 @@ Each query must contain a `search` or `filter` attribute, or both.
 
 ### filter attribute
 
-The `ProductAttributeFilterInput` object determines which attributes will be used to narrow the results in a `products` query. A filter contains at least one attribute, a comparison operator, and the value that is being searched for. The following example filter searches for products that have a `name` that contains the string `Bag` with a `price` that's less than or equal to `40`.
+The `ProductAttributeFilterInput` object determines which attributes are used to narrow the results in a `products` query. A filter contains at least one attribute, a comparison operator, and the value that is being searched for. The following example filter searches for products that have a `name` that contains the string `Bag` with a `price` that's less than or equal to `40`.
 
 ```graphql
 filter: {
@@ -53,18 +59,19 @@ filter: {
 
 The application processes the attribute values specified in a `ProductAttributeFilterInput` as simple data types (strings, integers, Booleans). However, returned attributes can be a different, complex data type. For example, in a response, `price` is an object that contains a monetary value and a currency code.
 
-By default, you can use the following attributes as filters. To define a custom filter, see [Filtering with custom attributes](../../../usage/custom-filters.md). Use the `input_type` output attribute of the [`customAttributeMetadata` query](../../attributes/queries/custom-attribute-metadata.md) to determine whether your custom filter should include the `FilterEqualTypeInput`, `FilterMatchTypeInput`, or `FilterRangeTypeInput` data type.
+Attribute | Description
+--- | ---
+`category_uid` | Filters by the unique ID of a category for objects that implement `CategoryInterface`
+`description` | Filters on the Description attribute
+`name` | Filters on the Product Name attribute
+`price` | Filters on the Price attribute
+`short_description` | Filters on the Short Description attribute
+`sku` | Filters on the SKU attribute
+`url_key` | The part of the URL that identifies the product
 
-Attribute | Data type | Description
---- | --- | ---
-`category_id` | FilterEqualTypeInput | Deprecated. Use `category_uid` instead. Filters by category ID
-`category_uid` | FilterEqualTypeInput | Filters by the unique ID of a category for objects that implement `CategoryInterface`
-`description` | FilterMatchTypeInput | Filters on the Description attribute
-`name` | FilterMatchTypeInput | Filters on the Product Name attribute
-`price` | FilterRangeTypeInput | Filters on the Price attribute
-`short_description` | FilterMatchTypeInput | Filters on the Short Description attribute
-`sku` | FilterEqualTypeInput | Filters on the SKU attribute
-`url_key` | FilterEqualTypeInput | The part of the URL that identifies the product
+You can define a custom attribute to be a filter by specifying the `custom_attributesV2` attribute within the output of your query, as shown in [Filter custom_attributesV2 of a product](#filter-custom_attributesv2-of-a-product).
+
+You can also modify the code base and [create a custom attribute](../../../usage/custom-filters.md) that can be used as a top-level filter. Use the `input_type` output attribute of the [`customAttributeMetadata` query](../../attributes/queries/custom-attribute-metadata.md) to determine the type of filter to use.
 
 #### FilterEqualTypeInput attributes
 
@@ -74,19 +81,12 @@ The `category_id`, `sku`, and `url_key` filters require a `FilterEqualTypeInput`
 -  Select
 -  Multiple select
 
-Attribute | Data type | Description
---- | --- | ---
-`eq` | String | Use this attribute to exactly match the specified string. For example, to filter on a specific category ID, specify a value like `5`
-`in` | [String] | Use this attribute to filter on an array of values. For example, to filter on category IDs 4, 5, and 6, specify a value of `["4", "5", "6"]`
+The comparison operator must be either `eq` or `in`. Use `eq` to exactly match the specified string. For example, to filter on a specific category ID, specify a value like `5`.
+Use `in` to filter on an array of values. For example, to filter on category IDs 4, 5, and 6, specify a value of `["4", "5", "6"]`
 
 #### FilterMatchTypeInput attributes
 
-Use the `FilterMatchTypeInput` object to construct a filter that returns products that partially match a string or contain the specified pattern.
-
-Attribute | Data type | Description
---- | --- | ---
-`match` | String | Use this attribute to partially match the specified string. For example, to filter on a specific SKU, specify a value such as `24-MB01`
-`match_type` | FilterMatchTypeEnum | Use this attribute to finetune the type of search by specifying the word type match, PARTIAL or FULL. If match_type is not provided, the search will default to match_type FULL.
+Use the `FilterMatchTypeInput` object to construct a filter that returns products that partially match a string or contain the specified pattern. By default, the query returns full matches. You can set the `match_type` field to `PARTIAL` return partial matches.
 
 You must specify a `FilterMatchTypeInput` object to filter on a custom product attribute of the following types:
 
@@ -96,12 +96,7 @@ You must specify a `FilterMatchTypeInput` object to filter on a custom product a
 
 #### FilterRangeTypeInput attributes
 
-Use the `FilterRangeTypeInput` object to construct a filter that returns products that fall within a range of prices or dates.
-
-Attribute | Data type | Description
---- | --- | ---
-`from` | String | Use this attribute to specify the lowest possible value in the range
-`to` | String | Use this attribute to specify the highest possible value in the range
+Use the `FilterRangeTypeInput` object to construct a filter that returns products that fall within a range of prices or dates. This object contains `from` and `to` attributes.
 
 ### pageSize attribute
 
@@ -124,284 +119,26 @@ If you do not specify a `sort` object, the application sorts as follows:
 
 In previous versions, the `sort` attribute required a `ProductSortInput` object as input. The `sort` attribute now requires a `ProductAttributeSortInput` object, which can contain the following attributes:
 
-Attribute | Data type | Description
---- | --- | ---
-`name` | SortEnum | Sorts by Product Name
-`position` | SortEnum | Sorts by the position of products
-`price` | SortEnum | Sorts by Price
-`relevance` | SortEnum | (Default) Sorts by the search relevance score
+Attribute | Description
+--- | ---
+`name` | Sorts by Product Name
+`position` | Sorts by the position of products
+`price` | Sorts by Price
+`relevance` | (Default) Sorts by the search relevance score
 
 To enable sorting by an attribute that is not in the `ProductAttributeSortInput` object, set the **Stores** > Attributes > **Product** > `Attribute Name` > **Storefront Properties** > **Use in Search** and **Used in Sorting in Product Listing** fields to Yes.
 
-## Deprecated input attributes
-
-The `filter` and `sort` attributes require new input objects. The following sections list the deprecated attributes.
-
-### ProductFilterInput attributes
-
-The `filter` attribute previously required a `ProductFilterInput` object as input. This object has been deprecated. The replacement input object, `ProductAttributeFilterInput` is more restrictive about what attributes can be used in a `products` query by default. The following attributes can no longer be used in default filters. See [Filtering with custom attributes](../../../usage/custom-filters.md) for more information.
-
-```text
-country_of_manufacture
-created_at
-custom_layout
-custom_layout_update
-gift_message_available
-has_options
-image
-image_label
-manufacturer
-max_price
-meta_description
-meta_keyword
-meta_title
-min_price
-news_from_date
-news_to_date
-options_container
-or
-required_options
-small_image
-small_image_label
-special_from_date
-special_price
-special_to_date
-swatch_image
-thumbnail
-thumbnail_label
-tier_price
-updated_at
-url_key
-url_path
-weight
-```
-
-<InlineAlert variant="info" slots="text" />
-
-The `or` attribute cannot be used in a `products` query. Logical OR searches are no longer supported.
-
--  `or` - The keyword required to perform a logical OR comparison.
--  `news_from_date` - This attribute is transformed to `new_from_date` in a response.
--  `news_to_date` - This attribute is transformed to `new_to_date` in a response.
-
-The following condition types have been deprecated:
-
-```text
-from
-gt
-gteq
-like
-lt
-lteq
-moreq
-neq
-nin
-nlike
-notnull
-null
-to
-```
-
-<InlineAlert variant="info" slots="text" />
-
-Wildcards are no longer supported in `products` queries.
-
-### ProductSortInput attributes
-
-The following sorting attributes have been deprecated:
-
-```text
-country_of_manufacture
-created_at
-custom_layout_update
-custom_layout
-description
-gift_message_available
-has_options
-image_label
-image
-manufacturer
-meta_description
-meta_keyword
-meta_title
-news_from_date
-news_to_date
-options_container
-required_options
-short_description
-sku
-small_image_label
-small_image
-special_from_date
-special_price
-special_to_date
-thumbnail_label
-thumbnail
-tier_price
-updated_at
-weight
-```
-
 ## Output attributes
 
-The query returns a `Products` object containing the following information:
-
-Attribute | Data type | Description
---- | --- | ---
-`aggregations (filter: AggregationsFilterInput)` | [[Aggregation]](#aggregation-attributes) | Layered navigation aggregations with filters
-`filters` | LayerFilter | Deprecated. Use `aggregations` instead
-`items` | [[ProductInterface]](#productinterface-attributes) | An array of products that match the specified search criteria
-`page_info` | [SearchResultPageInfo](#searchresultpageinfo-attributes) | An object that includes the `page_info` and `currentPage` values specified in the query
-`sort_fields` |  [SortFields](#sortfields-attributes) | An object that includes the default sort field and all available sort fields
-`suggestions` | [[SearchSuggestion]](#searchsuggestion-attributes) | An array that contains suggested search words. This object is returned when the value specified in the `search` input parameter does not return any results
-`total_count` | Int | The number of products in the category that are marked as visible. By default, in complex products, parent products are visible, but their child products are not
-
-### AggregationsFilterInput filter
-
-The `AggregationsFilterInput` input object specifies the filters used in aggregations. `AggregationsCategoryFilterInput` is the filter object that determines how the category `AggregationOption` attribute is aggregated in the response.
-
-Attribute | Data type | Description
---- | --- | ---
-`category` | AggregationsCategoryFilterInput | Filter category aggregations in layered navigation
-
-### AggregationsCategoryFilterInput attributes
-
-When the `category_id` field is specified as part of the `ProductAttributeFilterInput` input object, the `includeDirectChildrenOnly` field of the `AggregationsCategoryFilterInput` object can be used in the response to refine the returned aggregations. If `includeDirectChildrenOnly` is set to true, then the aggregations will contain only direct child categories. Otherwise, the category aggregations will follow the default algorithm. The default value is false.
-
-Attribute | Data type | Description
---- | --- | ---
-`includeDirectChildrenOnly` | Boolean | Indicates whether to include only direct subcategories or all children categories at all levels. The default value is false
-
-### Aggregation attributes
-
-Each aggregation within the `aggregations` object is a separate bucket that contains the attribute code and label for each filterable option (such as price, category UID, and custom attributes). It also includes the number of products within the filterable option that match the specified search criteria.
+The query returns a `Products` object. This can contain an array of aggregations. Each aggregation within the `aggregations` object is a separate bucket that contains the attribute code and label for each filterable option (such as price, category UID, and custom attributes). It also includes the number of products within the filterable option that match the specified search criteria.
 
 <InlineAlert variant="info" slots="text" />
 
 To enable a custom attribute to return layered navigation and aggregation data from the Admin, set the **Stores** > Attributes > **Product** > `Attribute Name` > **Storefront Properties** > **Use in Layered Navigation** field to **Filterable (with results)** or **Filterable (no results)**.
 
-Attribute | Data type | Description
---- | --- | ---
-`attribute_code` | String! | Attribute code of the filter item
-`count` | Int | The number of filter items in the filter group
-`label` | String | The filter name displayed in layered navigation
-`options` | [AggregationOption] | Describes each aggregated filter option
-`position` | Int | The relative position of the attribute in a layered navigation block
+When the `category_id` field is specified as part of the `ProductAttributeFilterInput` input object, the `includeDirectChildrenOnly` field of the `AggregationsCategoryFilterInput` object can be used in the response to refine the returned aggregations. If `includeDirectChildrenOnly` is set to true, then the aggregations will contain only direct child categories. Otherwise, the category aggregations will follow the default algorithm. The default value is false.
 
-#### AggregationOption attributes
-
-The `AggregationOption` array contains a list of possible options for the `attribute_code` defined in the aggregation. For example, if the `attribute_code` is `category_id`, the return options could include tops, bottoms, gear, and so on.
-
-Attribute | Data type | Description
---- | --- | ---
-`count` | Int | The number of items returned by the filter
-`label` | String | The label of the filter
-`value` | String! | The internal ID representing the value of the option
-
-### ProductInterface attributes
-
-The `items` object contains information about each product that match the search criteria. [ProductInterface](../interfaces/attributes/) describes the possible contents of this object.
-
-### `filters` attribute for `custom_attributesV2`
-
-The `filters` object determines which custom attributes will be used to narrow the results when using `products` query. It contains at least one attribute and the value that is being searched for. The following example searches for custom attributes of a product where `is_comparable` is `true`.
-
-```graphql
-{
-    products(filter: {sku: {eq: "24-MB02"}})
-    {
-        items
-        {
-            custom_attributesV2(filters: {is_comparable: true}) 								{
-                items {
-                    code
-                }
-                errors {
-                    type
-                    message
-                }
-            }
-        }
-    }
-}
-```
-
-The application processes the attribute values specified in `filters`. By default, you can use the following attributes:
-
-Attribute | Data type | Description
---- | --- | ---
-`is_comparable` | Boolean | Whether a product or category attribute can be compared against another or not
-`is_filterable` | Boolean | Whether a product or category attribute can be filtered or not
-`is_filterable_in_search` | Boolean | Whether a product or category attribute can be filtered in search or not
-`is_html_allowed_on_front` | Boolean | Whether a product or category attribute can use HTML on front or not
-`is_searchable` | Boolean | Whether a product or category attribute can be searched or not
-`is_used_for_price_rules` | Boolean | Whether a product or category attribute can be used for price rules or not
-`is_used_for_promo_rules` | Boolean | Whether a product or category attribute is used for promo rules or not
-`is_visible_in_advanced_search` | Boolean | Whether a product or category attribute is visible in advanced search or not
-`is_visible_on_front` | Boolean | Whether a product or category attribute is visible on front or not
-`is_wysiwyg_enabled` | Boolean | Whether a product or category attribute has WYSIWYG enabled or not
-`used_in_product_listing` | Boolean | Whether a product or category attribute is used in product listing or not
-
-### SearchResultPageInfo attributes
-
-The `SearchResultPageInfo` object provides navigation for the query response.
-
-Attribute | Data type | Description
---- | --- | ---
-`current_page` | Int | Specifies which page of results to return
-`page_size` | Int | Specifies the maximum number of items to return
-`total_pages` | Int | The total number of pages returned
-
-### SearchSuggestion attributes
-
-The `SearchSuggestion` object provides an array of suggested search terms.
-
-Attribute | Data type | Description
---- | --- | ---
-`search` | String! | A string that provides a suggested search term that matches an existing product
-
-### SortFields attributes
-
-The `SortFields` object contains the default value for sort fields as well as all possible sort fields.
-
-Attribute | Type | Description
---- | --- | ---
-`default` | String | The default sort field
-`options` | [SortField] | An array that contains all the fields that can be used for sorting
-
-#### SortField attributes
-
-The `SortField` object contains a list of all the attributes that can be used to sort query results.
-
-Attribute | Type | Description
---- | --- | ---
-`label` | String | The label of a sortable option
-`value` | String | The attribute code of the sort field
-
-## Deprecated output attributes
-
-The `filters` output object has been deprecated in favor of the `aggregations` object. The following sections list the deprecated attributes.
-
-### LayerFilter object
-
-The `LayerFilter` object can be returned in a response to help create layered navigation on your app.
-
-Attribute | Type | Description
---- | --- | ---
-`filter_items` |  [LayerFilterItemInterface] | An array of filter items
-`filter_items_count` | Int | The number of filter items in filter group
-`name` | String | The layered navigation filter name
-`request_var` | String | The request variable name for the filter query
-
-### LayerFilterItemInterface
-
-`LayerFilterItemInterface` contains an array of items that match the terms defined in the filter.
-
-Attribute | Type | Description
---- | --- | ---
-`items_count` | Int | The number of items the filter returned
-`label` | String | The label applied to a filter
-`value_string` | String | The value for filter request variable to be used in a query
+The `Products` object also contains an array of items that match the search criteria. [ProductInterface](../interfaces/index.md/) describes the possible contents of this object.
 
 ## Sample queries
 
@@ -2253,82 +1990,4 @@ The following query returns information about each variant of the configurable p
 
 ### Filter `custom_attributesV2` of a product
 
-The following query returns `custom_attributes` of a product that have `is_comparable` enabled.
-
-**Request:**
-
-```graphql
-{
-    products(filter: {sku: {eq: "24-MB02"}})
-    {
-        items
-        {
-            sku
-            name
-            custom_attributesV2(filters: {is_comparable: true})
-            {
-                items
-                {
-                    code
-                    ... on AttributeValue {
-                        value
-                    }
-                    ... on AttributeSelectedOptions {
-                        selected_options {
-                            label
-                            value
-                        }
-                    }
-                },
-                errors {
-                    type
-                    message
-                }
-            }
-        }
-    }
-}
-```
-
-**Response:**
-
-```json
-{
-  "data": {
-    "products": {
-      "items": [
-        {
-          "sku": "24-MB02",
-          "name": "Fusion Backpack",
-          "custom_attributesV2": {
-            "items": [
-              {
-                "code": "description",
-                "value": "<p>With the Fusion Backpack strapped on, every trek is an adventure - even a bus ride to work. That's partly because two large zippered compartments store everything you need, while a front zippered pocket and side mesh pouches are perfect for stashing those little extras, in case you change your mind and take the day off.</p>\n<ul>\n<li>Durable nylon construction.</li>\n<li>2 main zippered compartments.</li>\n<li>1 exterior zippered pocket.</li>\n<li>Mesh side pouches.</li>\n<li>Padded, adjustable straps.</li>\n<li>Top carry handle.</li>\n<li>Dimensions: 18\" x 10\" x 6\".</li>\n</ul>"
-              },
-              {
-                "code": "activity",
-                "selected_options": [
-                  {
-                    "label": "Yoga",
-                    "value": "17"
-                  },
-                  {
-                    "label": "Hiking",
-                    "value": "27"
-                  },
-                  {
-                    "label": "School",
-                    "value": "29"
-                  }
-                ]
-              }
-            ],
-            "errors": []
-          }
-        }
-      ]
-    }
-  }
-}
-```
+< CustomAttributeFilterProduct />

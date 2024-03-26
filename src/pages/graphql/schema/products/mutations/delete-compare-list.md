@@ -23,6 +23,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`deleteCompareList`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-deleteCompareList) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example deletes the comparison list with a `uid` value of `sssXyGZkTFksdPnxNoK1ut6OiV4bbchD`.
@@ -50,22 +54,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `deleteCompareList` mutation requires the following input.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`uid` | ID! | The unique ID of the compare list to delete
-
-## Output attributes
-
-The `DeleteCompareListOutput` object returns a Boolean value that indicates whether the operation was successful.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`result` | Boolean! | A value of `true` indicates the compare list has been deleted successfully. Otherwise, the value is `false`
 
 ## Related topics
 

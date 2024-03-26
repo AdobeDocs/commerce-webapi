@@ -10,11 +10,17 @@ We recommend using the [createCustomerV2 mutation](create-v2.md) to create a cus
 
 The `createCustomer` mutation creates a new customer.
 
+In keeping with current security and privacy best practices, if you include the `date_of_birth` input attribute, be sure you are aware of any potential legal and security risks associated with the storage of customers' full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
+
 To return or modify information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session).
 
 ## Syntax
 
 `mutation: {createCustomer(input: CustomerInput!) {CustomerOutput}}`
+
+## Reference
+
+The [`createCustomer`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createCustomer) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -59,24 +65,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The following table lists the attributes you can use as input for the `createCustomer` mutation. The [Customer attributes](../../customer/queries/customer.md#customer-attributes) table lists the attributes the application returns.
-
-import CreateCustomer from '/src/_includes/graphql/create-customer.md'
-
-<CreateCustomer />
-
-## Output attributes
-
-The `createCustomer` mutation returns the `CustomerOutput` object.
-
-The following table lists the top-level attributes of the `customer` object. See the [`customer` query](../../customer/queries/customer.md) for complete details about this object.
-
-import Customer from '/src/_includes/graphql/customer-output-24.md'
-
-<Customer />
 
 ## Errors
 

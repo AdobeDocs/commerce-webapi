@@ -6,6 +6,8 @@ title: mergeCarts mutation
 
 The `mergeCarts` mutation transfers the contents of a guest cart into the cart of a logged-in customer. This mutation must be run on behalf of a logged-in customer.
 
+If you do not specify a value for the `destination_cart_id` input argument, the mutation determines the customer's cart ID and uses that value.
+
 The mutation retains any items that were already in the logged-in customer's cart. If both the guest and customer carts contain the same item, `mergeCarts` adds the quantities. Upon success, the mutation deletes the original guest cart.
 
 <InlineAlert variant="info" slots="text" />
@@ -26,6 +28,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`mergeCarts`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-mergeCarts) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 In the following example, the customer had one Overnight Duffle in the cart (`CYmiiQRjPVc2gJUc5r7IsBmwegVIFO43`) before a guest cart (`mPKE05OOtcxErbk1Toej6gw6tcuxvT9O`) containing a Radiant Tee and another Overnight Duffle was merged. The cart now includes three items, including two Overnight Duffles.
@@ -38,13 +44,21 @@ mutation {
     source_cart_id: "mPKE05OOtcxErbk1Toej6gw6tcuxvT9O",
     destination_cart_id: "CYmiiQRjPVc2gJUc5r7IsBmwegVIFO43"
   ) {
-    items {
-      id
-      product {
-        name
-        sku
+    itemsV2 {
+      items {
+        id
+        product {
+          name
+          sku
+        }
+        quantity
       }
-      quantity
+      total_count
+      page_info {
+        page_size
+        current_page
+        total_pages
+      }
     }
   }
 }
@@ -56,24 +70,32 @@ mutation {
 {
   "data": {
     "mergeCarts": {
-      "items": [
-        {
-          "id": "14",
-          "product": {
-            "name": "Overnight Duffle",
-            "sku": "24-WB07"
+      "itemsV2": {
+        "items": [
+          {
+            "id": "14",
+            "product": {
+              "name": "Overnight Duffle",
+              "sku": "24-WB07"
+            },
+            "quantity": 2
           },
-          "quantity": 2
-        },
-        {
-          "id": "17",
-          "product": {
-            "name": "Radiant Tee",
-            "sku": "WS12"
-          },
-          "quantity": 1
+          {
+            "id": "17",
+            "product": {
+              "name": "Radiant Tee",
+              "sku": "WS12"
+            },
+            "quantity": 1
+          }
+        ],
+        "total_count": 2,
+        "page_info": {
+          "page_size": 20,
+          "current_page": 1,
+          "total_pages": 1
         }
-      ]
+      }
     }
   }
 }
@@ -88,13 +110,21 @@ mutation {
   mergeCarts(
     source_cart_id: "mPKE05OOtcxErbk1Toej6gw6tcuxvT9O"
   ) {
-    items {
-      id
-      product {
-        name
-        sku
+    itemsV2 {
+      items {
+        id
+        product {
+          name
+          sku
+        }
+        quantity
       }
-      quantity
+      total_count
+      page_info {
+        page_size
+        current_page
+        total_pages
+      }
     }
   }
 }
@@ -106,51 +136,36 @@ mutation {
 {
   "data": {
     "mergeCarts": {
-      "items": [
-        {
-          "id": "14",
-          "product": {
-            "name": "Overnight Duffle",
-            "sku": "24-WB07"
+      "itemsV2": {
+        "items": [
+          {
+            "id": "14",
+            "product": {
+              "name": "Overnight Duffle",
+              "sku": "24-WB07"
+            },
+            "quantity": 2
           },
-          "quantity": 2
-        },
-        {
-          "id": "17",
-          "product": {
-            "name": "Radiant Tee",
-            "sku": "WS12"
-          },
-          "quantity": 1
-        }
-      ]
+          {
+            "id": "17",
+            "product": {
+              "name": "Radiant Tee",
+              "sku": "WS12"
+            },
+            "quantity": 1
+          }
+        ]
+      },
+      "total_count": 2,
+      "page_info": {
+        "page_size": 20,
+        "current_page": 1,
+        "total_pages": 1
+      }
     }
   }
 }
 ```
-
-## Input attributes
-
-Attribute |  Data Type | Description
---- | --- | ---
-`destination_cart_id` | String | The ID of the logged-in customer's cart. If you do not specify a value, the mutation determines the customer's cart ID and uses that value.
-`source_cart_id` | String! | The ID of the guest cart
-
-## Output attributes
-
-The `mergeCarts` mutation returns a `Cart` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
-
-### Cart object
-
-import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 

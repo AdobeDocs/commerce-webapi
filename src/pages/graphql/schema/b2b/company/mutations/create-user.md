@@ -19,6 +19,8 @@ The `target_id` input attribute allows you to specify which node in the company 
 
 You can get the `target_id` and the `role_id` with the [`company`](../queries/company.md) query.
 
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
+
 ## Syntax
 
 ```graphql
@@ -30,6 +32,10 @@ mutation {
     }
 }
 ```
+
+## Reference
+
+The [`createCompanyUser`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createCompanyUser) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -145,39 +151,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `CompanyUserCreateInput` input object defines the company user data.
-
-### CompanyUserCreateInput attributes
-
-The `CompanyUserCreateInput` object contains the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`email` | String! | The company user's email address
-`firstname` | String! | The company user's first name
-`job_title` | String! | The company user's job title or function
-`lastname` | String! | The company user's last name
-`role_id` | ID! | The role ID to assign to the company user
-`status` | CompanyUserStatusEnum! | Indicates whether the company user is ACTIVE or INACTIVE
-`target_id` | ID | The ID of a node within a company's structure. This ID will be the parent of the created company user
-`telephone` | String! | The company user's phone number
-
-## Output attributes
-
-The `CreateCompanyUserOutput` output object contains the following attribute:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`user` | Customer! | Contains company user data
-
-### Customer attributes
-
-import Customer from '/src/_includes/graphql/customer-output-24.md'
-
-<Customer />
 
 ## Errors
 

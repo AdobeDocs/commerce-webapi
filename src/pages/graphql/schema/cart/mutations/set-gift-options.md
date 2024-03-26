@@ -37,6 +37,10 @@ Gift wrapping is available for simple, configurable, bundle products as well as 
 
 `mutation: {setGiftOptionsOnCart(input: SetGiftOptionsOnCartInput): SetGiftOptionsOnCartOutput}`
 
+## Reference
+
+The [`setGiftOptionsOnCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-setGiftOptionsOnCart) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example adds a gift message, gift wrapping, and a gift receipt to the cart.
@@ -70,13 +74,21 @@ mutation {
       }
       gift_receipt_included
       printed_card_included
-      items {
-        quantity
-        prices {
-          price {
-            value
-            currency
+      itemsV2 {
+        items {
+          quantity
+          prices {
+            price {
+              value
+              currency
+            }
           }
+        }
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
         }
       }
       prices {
@@ -114,26 +126,34 @@ mutation {
         },
         "gift_receipt_included": true,
         "printed_card_included": false,
-        "items": [
-          {
-            "quantity": 1,
-            "prices": {
-              "price": {
-                "value": 32,
-                "currency": "USD"
+        "itemsV2": {
+          "items": [
+            {
+              "quantity": 1,
+              "prices": {
+                "price": {
+                  "value": 32,
+                  "currency": "USD"
+                }
+              }
+            },
+            {
+              "quantity": 1,
+              "prices": {
+                "price": {
+                  "value": 84,
+                  "currency": "USD"
+                }
               }
             }
-          },
-          {
-            "quantity": 1,
-            "prices": {
-              "price": {
-                "value": 84,
-                "currency": "USD"
-              }
-            }
+          ],
+          "total_count": 2,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ],
+        },
         "prices": {
           "gift_options": {
             "gift_wrapping_for_order": {
@@ -151,44 +171,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `SetGiftOptionsOnCartInput` object can contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart_id` | String! | The unique ID that identifies the shopper's cart
-`gift_message` | [GiftMessageInput](#GiftMessageInput) | Gift message details for the cart
-`gift_receipt_included` | Boolean! | Indicates whether the customer requested a gift receipt for the cart
-`gift_wrapping_id` | ID | The unique ID for a `GiftWrapping` object to be used for the cart
-`printed_card_included` | Boolean! | Indicates whether the customer requested a printed card for the cart
-
-### GiftMessageInput
-
-The `GiftMessageInput` object must contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`from` | String! | The name of the gift sender
-`message` | String! | The text of the gift message
-`to` | String! | The name of the gift recipient
-
-## Output attributes
-
-The `SetGiftOptionsOnCartOutput` object contains the `Cart` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
-
-### Cart object
-
-import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 

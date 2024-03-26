@@ -18,6 +18,10 @@ To add a simple or grouped product to a cart, you must provide the cart ID, the 
 
 `mutation: {addSimpleProductsToCart(input: AddSimpleProductsToCartInput): {AddSimpleProductsToCartOutput}}`
 
+## Reference
+
+The [`addSimpleProductsToCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addSimpleProductsToCart) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 These examples show the minimal payload and a payload that includes customizable options.
@@ -44,13 +48,21 @@ mutation {
     }
   ) {
     cart {
-      items {
-        id
-        product {
-          name
-          sku
+      itemsV2 {
+        items {
+          id
+          product {
+            name
+            sku
+          }
+          quantity
         }
-        quantity
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
+        }
       }
     }
   }
@@ -64,16 +76,24 @@ mutation {
   "data": {
     "addSimpleProductsToCart": {
       "cart": {
-        "items": [
-          {
-            "id": "13",
-            "product": {
-              "name": "Strive Shoulder Pack",
-              "sku": "24-MB04"
-            },
-            "quantity": 1
-          }
-        ]
+        "itemsV2": {
+          "items": [
+            {
+              "id": "13",
+              "product": {
+                "name": "Strive Shoulder Pack",
+                "sku": "24-MB04"
+              },
+              "quantity": 1
+            }
+          ],
+          "total_items": 1,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
+          }          
+        }
       }
     }
   }
@@ -104,18 +124,26 @@ mutation {
     }
   }) {
     cart {
-      items {
-        product {
-           name
-        }
-        quantity
-        ... on SimpleCartItem {
-          customizable_options {
-            label
-            values {
-              value
+      itemsV2 {
+        items {
+          product {
+            name
+          }
+          quantity
+          ... on SimpleCartItem {
+            customizable_options {
+              label
+              values {
+                value
+              }
             }
           }
+        }
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
         }
       }
     }
@@ -125,29 +153,37 @@ mutation {
 
 **Response:**
 
-```text
+```json
 {
   "data": {
     "addSimpleProductsToCart": {
       "cart": {
-        "items": [
-          {
-            "product": {
-              "name": "simple"
-            },
-            "quantity": 1,
-            "customizable_options": [
-              {
-                "label": "Field Option",
-                "values": [
-                  {
-                    "value": "field value"
-                  }
-                ]
-              }
-            ]
+        "itemsV2": {
+          "items": [
+            {
+              "product": {
+                "name": "simple"
+              },
+              "quantity": 1,
+              "customizable_options": [
+                {
+                  "label": "Field Option",
+                  "values": [
+                    {
+                      "value": "field value"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "total_count": 1,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ]
+        }
       }
     }
   }
@@ -176,13 +212,21 @@ mutation {
     }
   ) {
     cart {
-      items {
-        uid
-        product {
-          name
-          sku
+      itemsV2 {
+        items {
+          uid
+          product {
+            name
+            sku
+          }
+          quantity
         }
-        quantity
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
+        }
       }
     }
   }
@@ -196,73 +240,29 @@ mutation {
   "data": {
     "addSimpleProductsToCart": {
       "cart": {
-        "items": [
-          {
-            "uid": "NDA=",
-            "product": {
-              "name": "Voyage Yoga Bag",
-              "sku": "24-WB01"
-            },
-            "quantity": 1
+        "itemsV2": {
+          "items": [
+            {
+              "uid": "NDA=",
+              "product": {
+                "name": "Voyage Yoga Bag",
+                "sku": "24-WB01"
+              },
+              "quantity": 1
+            }
+          ],
+          "total_count": 1,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ]
+        }
       }
     }
   }
 }
 ```
-
-## Input attributes
-
-The top-level `AddSimpleProductsToCartInput` object is listed first. All child objects are listed in alphabetical order.
-
-### AddSimpleProductsToCartInput object
-
-The `AddSimpleProductsToCartInput` object must contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart_id` | String! | The unique ID that identifies the customer's cart
-`cart_items` | [SimpleProductCartItemInput!](#simpleproductcartiteminput-object) | Contains the cart item IDs and quantity of each item
-
-### CartItemInput object
-
-The `CartItemInput` object must contain the following attributes:
-
-import CartItemInput from '/src/_includes/graphql/cart-item-input-24.md'
-
-<CartItemInput />
-
-### CustomizableOptionInput object
-
-The `CustomizableOptionInput` object can contain the following attributes:
-
-import CustomizableOptionInput from '/src/_includes/graphql/customizable-option-input-24.md'
-
-<CustomizableOptionInput />
-
-### SimpleProductCartItemInput object
-
-The `SimpleProductCartItemInput` object must contain the following attributes:
-
-`customizable_options` |[[CustomizableOptionInputSimple]](#customizableoptioninput-object) | An array that defines customizable options for the product
-`data` | [CartItemInput!](#cartiteminput-object) | An object containing the `sku` and `quantity` of the product.
-
-## Output attributes
-
-The `AddSimpleProductsToCartOutput` object contains the `Cart` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
-
-### Cart object
-
-import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 

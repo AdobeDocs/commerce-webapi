@@ -21,6 +21,10 @@ updateNegotiableQuoteQuantities(
 ): UpdateNegotiableQuoteItemsQuantityOutput
 ```
 
+## Reference
+
+The [`updateNegotiableQuoteQuantities`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateNegotiableQuoteQuantities) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example changes the quantity of two products in a negotiable quote.
@@ -119,39 +123,3 @@ mutation {
     }
 }
 ```
-
-## Input attributes
-
-The `UpdateNegotiableQuoteQuantitiesInput` input object specifies the negotiable quote ID and the items to be updated.
-
-### UpdateNegotiableQuoteQuantitiesInput attributes
-
-The `UpdateNegotiableQuoteQuantitiesInput` object contains the following attributes.
-
-Attribute | Data Type | Description
---- | --- | ---
-`items` | [NegotiableQuoteItemQuantityInput]! | An array of items to update
-`quote_uid` | ID! | The unique ID of a `NegotiableQuote` object
-
-### NegotiableQuoteItemQuantityInput attributes
-
-The `NegotiableQuoteItemQuantityInput` object contains the following attributes.
-
-Attribute | Data Type | Description
---- | --- | ---
-`quantity` | Float! | The new quantity of the negotiable quote item
-`quote_item_uid` | ID! | The unique ID of a CartItemInterface object
-
-## Output attributes
-
-The `UpdateNegotiableQuoteItemsQuantityOutput` output object contains the following attribute.
-
-Attribute | Data Type | Description
---- | --- | ---
-`quote` | NegotiableQuote! | Contains details about the negotiable quote
-
-### NegotiableQuote attributes
-
-import NegotiableQuote from '/src/_includes/graphql/negotiable-quote.md'
-
-<NegotiableQuote />

@@ -10,13 +10,17 @@ The `applyCouponToCart` mutation applies a pre-defined coupon code to the specif
 
 `mutation: {applyCouponToCart(input: ApplyCouponToCartInput) {ApplyCouponToCartOutput}}`
 
+## Reference
+
+The [`applyCouponToCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-applyCouponToCart) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example applies the coupon code `H2O` to the cart. For this coupon to be valid, the Affirm Water Bottle (`sku`: 24-UG06) must be in the cart.
 
 **Request:**
 
-``` text
+```graphql
 mutation {
   applyCouponToCart(
     input: {
@@ -25,11 +29,19 @@ mutation {
     }
   ) {
     cart {
-      items {
-        product {
-          name
+      itemsV2 {
+        items {
+          product {
+            name
+          }
+          quantity
         }
-        quantity
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
+        }
       }
       applied_coupons {
         code
@@ -52,26 +64,34 @@ mutation {
   "data": {
     "applyCouponToCart": {
       "cart": {
-        "items": [
-          {
-            "product": {
-              "name": "Gold Membership"
+        "itemsV2": {
+          "items": [
+            {
+              "product": {
+                "name": "Gold Membership"
+              },
+              "quantity": 2
             },
-            "quantity": 2
-          },
-          {
-            "product": {
-              "name": "Strive Shoulder Pack"
+            {
+              "product": {
+                "name": "Strive Shoulder Pack"
+              },
+              "quantity": 1
             },
-            "quantity": 1
-          },
-          {
-            "product": {
-              "name": "Affirm Water Bottle "
-            },
-            "quantity": 1
+            {
+              "product": {
+                "name": "Affirm Water Bottle "
+              },
+              "quantity": 1
+            }
+          ],
+          "total_count": 3,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ],
+        },
         "applied_coupons": {
           "code": "H20"
         },
@@ -86,35 +106,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `applyCouponToCart` mutation requires the `cart_id` and `coupon_code`.
-
-### ApplyCouponToCartInput object
-
-The `ApplyCouponToCartInput` object must contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart_id` | String! | The unique ID that identifies the customer's cart
-`coupon_code` | String! | A valid coupon code
-
-## Output attributes
-
-The `ApplyCouponToCartOutput` object contains the `Cart` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
-
-### Cart object
-
-import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 

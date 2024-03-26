@@ -28,6 +28,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`copyItemsBetweenRequisitionLists`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-copyItemsBetweenRequisitionLists) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example copies an item from one requisition list to another.
@@ -69,38 +73,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `copyItemsBetweenRequisitionLists` mutation requires the following input.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`destinationRequisitionListUid`| ID | The unique ID of the destination requisition list. If null, a new requisition list will be created
-`requisitionListItem`| [[CopyItemsBetweenRequisitionListsInput](#copyitemsbetweenrequisitionlistsinput-attributes)] | An array of selected requisition list items that are to be copied
-`sourceRequisitionListUid`| ID! | The unique ID of the source requisition list
-
-### CopyItemsBetweenRequisitionListsInput attributes
-
-The `CopyItemsBetweenRequisitionListsInput` type contains the list of products to copy from one requisition list to other.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`requisitionListItemUids` | [ID!]! | An array of IDs representing products copied from one requisition list to another
-
-## Output attributes
-
-The `copyItemsBetweenRequisitionLists` mutation returns the requisition list object to which the products were copied to.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`requisition_list` | [[RequisitionList](#requisitionlist-attributes)] | The destination requisition list after the items were copied
-
-### RequisitionList attributes
-
-import RequisitionList from '/src/_includes/graphql/requisition-list.md'
-
-<RequisitionList />
 
 ## Related topics
 
