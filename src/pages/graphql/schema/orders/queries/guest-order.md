@@ -4,7 +4,7 @@ title: guestOrder query
 
 # guestOrder query
 
-Use the `guestOrder` query to retrieve guest order details based on number, email and postcode.
+Use the `guestOrder` query to retrieve details about an order placed by a guest or customer who is not logged in. To retrieve this information, the guest must supply the order number, email, and postal code used to create the order.
 
 ## Syntax
 

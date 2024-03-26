@@ -16,6 +16,8 @@ Perform the following actions before using the `placeOrder` mutation:
 -  Set the payment method
 -  For guest customers, assign an email to the cart
 
+As of Commerce 2.4.7, the PlaceOrderOutput object can contain orderV2, which contains full details about the order.
+
 <InlineAlert variant="info" slots="text" />
 
 The `placeOrder` mutation runs asynchronously if the `AsyncOrder` module has been enabled. By default, the mutation runs synchronously. [Asynchronous order placement](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/high-throughput-order-processing.html#asynchronous-order-placement) describes the benefits of enabling the module.
