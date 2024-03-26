@@ -372,11 +372,10 @@ The following sample query returns product by SKU. You have to pass SKU value to
 }
 ```
 
-### Query with filter by name attribute and match_type
+### Query with filter by `name` attribute and `match_type`
 
-The following sample query returns different results if match_type is provided besides the product name.
-You have to pass name value and select between PARTIAL and FULL for match_type to return product information.
-If match_type is not provided, the results will default to match_type: FULL.
+The following sample query returns different results, depending on the value of `match_type`. The default value of `FULL`
+indicates the query returns full word matches. If you specify `PARTIAL`, the query performs a partial word search,
 
 **Request:**
 
