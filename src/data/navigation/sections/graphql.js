@@ -1278,12 +1278,6 @@ module.exports = [
   {
     title: "Reference (2.4.6)",
     path: "/graphql/reference",
-    pages: [
-      {
-        title: "Reference (2.4.7-beta)",
-        path: "/graphql/reference/beta"
-      }
-    ]
   },
   {
     title: "Release notes",

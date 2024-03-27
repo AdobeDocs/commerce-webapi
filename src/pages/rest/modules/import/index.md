@@ -31,10 +31,6 @@ The `import/csv` endpoint expects data in base64 encoded format:
 
 ### JSON Import
 
-import BetaNote from '/src/_includes/graphql/notes/beta.md'
-
-<BetaNote />
-
 The `import/json` endpoint is designed for JSON data:
 
 *  Convert your CSV into JSON using any trustworthy online converter.
@@ -214,7 +210,7 @@ POST /rest/<store_view_code>/V1/import/json
         "behavior": "append",
         "validation_strategy": "validation-stop-on-errors",
         "allowed_error_count": 0,
-        "items":	[
+        "items":    [
             {
                 "sku": "Simple Product 1",
                 "store_view_code": "",
@@ -660,7 +656,7 @@ The Import JSON API does not create attributes automatically. You need to create
         "behavior": "append",
         "validation_strategy": "validation-stop-on-errors",
         "allowed_error_count": 10,
-        "items":	[
+        "items":    [
             {
                 "sku": "Simple Product 1",
                 "tier_price_website": "All Websites [USD]",
@@ -701,7 +697,7 @@ The Import JSON API does not create attributes automatically. You need to create
         "behavior": "add_update",
         "validation_strategy": "validation-stop-on-errors",
         "allowed_error_count": 0,
-        "items":	[
+        "items":    [
             {
                 "_email": "johndoe@example.com",
                 "_website": "base",
@@ -732,7 +728,7 @@ Customers and Addresses information is represented as an array of JSON objects.
         "behavior": "append",
         "validation_strategy": "validation-stop-on-errors",
         "allowed_error_count": 0,
-        "items":	[
+        "items":    [
             {
                 "email": "johndoe@example.com",
                 "_website": "base",

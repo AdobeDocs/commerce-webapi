@@ -1,9 +1,5 @@
 ### AttributeValueInterface attributes
 
-import BetaNote from '/src/pages/_includes/graphql/notes/beta.md'
-
-<BetaNote />
-
 The `AttributeValueInterface` contains the following attributes:
 
 Attribute |  Data Type | Description
