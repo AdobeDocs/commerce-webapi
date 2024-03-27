@@ -2,8 +2,6 @@
 title: contactUs mutation
 ---
 
-import BetaPwaNote from '/src/_includes/graphql/notes/beta-pwa.md'
-
 # contactUs mutation
 
 The `contactUs` mutation submits the contents of the Contact Us form.

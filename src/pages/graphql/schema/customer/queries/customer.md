@@ -2,11 +2,6 @@
 title: customer query
 ---
 
-import BetaNote1 from '/src/_includes/graphql/notes/beta.md'
-import BetaNote2 from '/src/_includes/graphql/notes/beta.md'
-import BetaNote3 from '/src/_includes/graphql/notes/beta.md'
-import BetaNote4 from '/src/_includes/graphql/notes/beta.md'
-import BetaNote5 from '/src/_includes/graphql/notes/beta.md'
 import CustomAttributeCustomer from '/src/_includes/graphql/examples/custom-attribute-customer.md'
 
 # customer query
@@ -89,13 +84,9 @@ The following call returns information about the logged-in customer. Provide the
 
 ### Retrieve custom attributes metadata from a customer
 
-<BetaNote1 />
-
-< CustomAttributeCustomer />
+<CustomAttributeCustomer />
 
 ### Retrieve custom attributes metadata from a customer address
-
-<BetaNote2 />
 
 The following call returns the customer address custom attributes for the logged-in customer. Provide the customer's token in the header section of the query.
 
@@ -161,8 +152,6 @@ The following call returns the customer address custom attributes for the logged
 ```
 
 ### Retrieve custom attributes metadata filtered by `code`
-
-<BetaNote5 />
 
 The following call returns the customer and customer address custom attributes for the logged-in customer filtered by `code`. Provide the customer's token in the header section of the query.
 
