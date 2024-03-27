@@ -21,8 +21,12 @@ Send the customer's authorization token in the `Authorization` parameter of the 
 ```graphql
 mutation {
   placeOrder(input: {cart_id: "{ CART_ID }"}) {
-    order {
-      order_number
+    orderV2 {
+      number
+    }
+    errors {
+      message
+      code
     }
   }
 }
@@ -34,9 +38,10 @@ mutation {
 {
   "data": {
     "placeOrder": {
-      "order": {
-        "order_number": "000000001"
-      }
+      "orderV2": {
+        "number": "000000001"
+      },
+      "errors": []
     }
   }
 }
