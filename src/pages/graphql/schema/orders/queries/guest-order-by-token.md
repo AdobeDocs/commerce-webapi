@@ -5,6 +5,7 @@ title: guestOrderByToken query
 # guestOrderByToken query
 
 Use the `guestOrderByToken` query to retrieve guest order details based on token.
+You can retrieve the token from the **CustomerOrder** object on the [placeOrder mutation](../../cart/mutations/place-order.md) response.
 
 ## Syntax
 

@@ -51,6 +51,7 @@ mutation {
   ) {
     orderV2 {
       number
+      token
     }
     errors {
       message
@@ -67,7 +68,8 @@ mutation {
   "data": {
     "placeOrder": {
       "orderV2": {
-        "number": "000000006"
+        "number": "000000006",
+        "token": "0:3:OSScWU6PKLn3kFyMhNWyskG0opgVvFBnJmtuaFHKGwDFT83S6Kv9U39iYwixuU+vhwDz2AF4pCs3GtLhHbQ="
       },
       "errors": []
     }
