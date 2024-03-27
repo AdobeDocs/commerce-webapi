@@ -15,13 +15,9 @@ Some entities are "routable", meaning that they have URLs and can serve as the m
 *  [GroupedProduct](types/grouped.md)
 *  [SimpleProduct](types/simple.md)
 *  [VirtualProduct](types/virtual.md)
-*  [RoutableUrl](#routable-url) (2.4.7-beta only)
+*  [RoutableUrl](#routable-url)
 
 ## Routable URL
-
-import BetaNote from '/src/_includes/graphql/notes/beta.md'
-
-<BetaNote />
 
 `RoutableUrl` is the default implementation of RoutableInterface. This type is returned when the URL is not linked to a product or CMS page or to a category. As a result, the `RoutableUrl.type` field always returns `null`.
 

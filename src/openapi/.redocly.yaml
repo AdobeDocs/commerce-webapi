@@ -3,12 +3,6 @@ organization: adobe-developers
 extends:
     - minimal
 apis:
-  Commerce(Admin)@2.4.7-beta:
-    root: src/openapi/admin-schema-2.4.7-beta.yaml
-  Commerce(Customer)@2.4.7-beta:
-    root: src/openapi/customer-schema-2.4.7-beta.yaml
-  Commerce(Guest)@2.4.7-beta:
-    root: src/openapi/guest-schema-2.4.7-beta.yaml
   Commerce(Admin)@2.4.6:
     root: src/openapi/admin-schema-2.4.6.yaml
     labels:

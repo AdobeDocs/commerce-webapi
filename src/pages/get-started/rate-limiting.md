@@ -6,11 +6,7 @@ keywords:
   - Security
 ---
 
-import BetaNote from '/src/_includes/graphql/notes/beta.md'
-
 # Rate limiting
-
-<BetaNote />
 
 In a carding attack, an attacker tries to determine which credit card numbers are valid, usually in batches of thousands. Attackers can use similar techniques to brute force missing details, such as the expiration date. Adobe Commerce merchants can be targeted by this attack type through their shops and integrations with 3rd-party payment gateways.
 

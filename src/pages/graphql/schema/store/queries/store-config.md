@@ -274,10 +274,6 @@ The following query returns enumeration values that indicate the store's fixed p
 
 ### Query a store's order cancellation configuration
 
-import BetaNote from '/src/_includes/graphql/notes/beta.md'
-
-<BetaNote />
-
 The following query returns the store's order cancellation settings, indicating if it is enabled and the available cancellation reasons.
 
 **Request:**

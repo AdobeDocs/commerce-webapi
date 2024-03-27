@@ -31,10 +31,6 @@ The `import/csv` endpoint expects data in base64 encoded format:
 
 ### JSON Import
 
-import BetaNote from '/src/_includes/graphql/notes/beta.md'
-
-<BetaNote />
-
 The `import/json` endpoint is designed for JSON data:
 
 *  Convert your CSV into JSON using any trustworthy online converter.
@@ -164,10 +160,6 @@ In this example, the CSV payload contains three rows of data, and one of them is
 
 ## Import JSON API
 
-import BetaNote2 from '/src/_includes/graphql/notes/beta.md'
-
-<BetaNote2 />
-
 The Import JSON API is exclusively available via REST and does not support SOAP. This is because the payload consists of complex JSON objects with nested arrays, which are inherently challenging to represent with the XML structure that SOAP relies upon.
 
 The `POST /rest/<store_view_code>/V1/import/json` endpoint uses the `StartImportInterface` service to efficiently import entities into Adobe Commerce. The payload must contain data in JSON format.
@@ -214,7 +206,7 @@ POST /rest/<store_view_code>/V1/import/json
         "behavior": "append",
         "validation_strategy": "validation-stop-on-errors",
         "allowed_error_count": 0,
-        "items":	[
+        "items":    [
             {
                 "sku": "Simple Product 1",
                 "store_view_code": "",
@@ -660,7 +652,7 @@ The Import JSON API does not create attributes automatically. You need to create
         "behavior": "append",
         "validation_strategy": "validation-stop-on-errors",
         "allowed_error_count": 10,
-        "items":	[
+        "items":    [
             {
                 "sku": "Simple Product 1",
                 "tier_price_website": "All Websites [USD]",
@@ -701,7 +693,7 @@ The Import JSON API does not create attributes automatically. You need to create
         "behavior": "add_update",
         "validation_strategy": "validation-stop-on-errors",
         "allowed_error_count": 0,
-        "items":	[
+        "items":    [
             {
                 "_email": "johndoe@example.com",
                 "_website": "base",
@@ -732,7 +724,7 @@ Customers and Addresses information is represented as an array of JSON objects.
         "behavior": "append",
         "validation_strategy": "validation-stop-on-errors",
         "allowed_error_count": 0,
-        "items":	[
+        "items":    [
             {
                 "email": "johndoe@example.com",
                 "_website": "base",
