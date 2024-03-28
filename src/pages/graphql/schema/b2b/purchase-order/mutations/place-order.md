@@ -21,6 +21,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`placeOrderForPurchaseOrder`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-placeOrderForPurchaseOrder) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example places an order based on the approved purchase order.

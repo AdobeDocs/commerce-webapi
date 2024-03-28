@@ -9,11 +9,11 @@ contributor_link: https://www.ztech.io/
 
 The `deleteRequisitionList` mutation deletes a requisition list of the logged in customer. The response can include any remaining requisition lists.
 
-This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
-
 <InlineAlert variant="info" slots="text" />
 
 Use the [storeConfig query](../../../../schema/store/queries/store-config.md) with the `is_requisition_list_active` attribute to determine whether requisition lists are enabled.
+
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
 
 ## Syntax
 
@@ -26,6 +26,10 @@ mutation {
   }
 }
 ```
+
+## Reference
+
+The [`deleteRequisitionList`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-deleteRequisitionList) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -70,39 +74,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `deleteRequisitionList` mutation requires the following input.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`requisitionListUid` | ID! | The ID of the requisition list to delete
-
-## Output attributes
-
-The `deleteRequisitionList` mutation returns the status of the operation and any undeleted requisition lists.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`requisition_lists` | [[RequisitionLists](#requisitionlists-attributes)] | Contains the customer's remaining requisition lists
-`status` | Boolean | Indicates whether the request to delete the requisition list was successful
-
-### RequisitionLists attributes
-
-The RequisitionLists object contains array of requisition list items and pagination information.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`items` | [[RequisitionList](#requisitionlists-attributes)] | An array of requisition lists
-`page_info` | SearchResultPageInfo | Contains pagination metadata
-`total_count` | Int | The number of returned requisition lists
-
-### RequisitionList attributes
-
-import RequisitionList from '/src/_includes/graphql/requisition-list.md'
-
-<RequisitionList />
 
 ## Related topics
 

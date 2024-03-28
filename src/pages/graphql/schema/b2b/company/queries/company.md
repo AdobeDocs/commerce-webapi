@@ -9,9 +9,17 @@ The `company` query returns details about the user's company. The request must i
 
 A company structure can contain multiple levels of teams, with company users assigned at each level. To query on a company structure, specify fragments on the `Customer` and `CompanyTeam` objects. The application returns a [union](https://graphql.org/learn/schema/#union-types) of these objects. Specify the `__typename` attribute to distinguish the object types in the response.
 
+The `CompanyCredit` output object contains the company's `available_credit` and `outstanding_balance` values. These values cannot be changed with a mutation.  The `available_credit` amount is the sum of the credit limit and the outstanding balance. If the company has exceeded the credit limit, the amount is as a negative value. The `outstanding_balance` amount is the amount reimbursed, less the total due from all orders placed using the Payment on Account payment method. The amount can be a positive or negative value.
+
+This query requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
+
 ## Syntax
 
 `{company: {Company}}`
+
+## Reference
+
+The [`company`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-company) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -363,11 +371,3 @@ query{
   }
 }
 ```
-
-## Output attributes
-
-The `company` object returns the `Company` object.
-
-import Company from '/src/_includes/graphql/company.md'
-
-<Company />

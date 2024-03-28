@@ -29,6 +29,10 @@ setNegotiableQuoteShippingMethods(
 ): SetNegotiableQuoteShippingMethodsOutput
 ```
 
+## Reference
+
+The [`setNegotiableQuoteShippingMethods`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-setNegotiableQuoteShippingMethods) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example sets the shipping method for a negotiable quote.
@@ -96,33 +100,3 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `SetNegotiableQuoteShippingMethodsInput` object contains the following attributes.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`quote_uid` | ID! | The unique ID of a `NegotiableQuote` object
-`shipping_methods` | [ShippingMethodInput]! | An array of shipping methods to apply to the negotiable quote
-
-### ShippingMethodInput object
-
-Attribute |  Data Type | Description
---- | --- | ---
-`carrier_code` | String! | A string that identifies a commercial carrier or an offline delivery method
-`method_code` | String! | A string that indicates which service a commercial carrier will use to ship items. For offline delivery methods, this value is similar to the label displayed on the checkout page
-
-## Output attributes
-
-The `SetNegotiableQuoteShippingMethodsOutput` output object contains the following attribute.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`quote` | NegotiableQuote | The updated negotiable quote
-
-### NegotiableQuote attributes
-
-import NegotiableQuote from '/src/_includes/graphql/negotiable-quote.md'
-
-<NegotiableQuote />

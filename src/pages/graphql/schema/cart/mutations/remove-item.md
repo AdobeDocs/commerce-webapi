@@ -10,6 +10,10 @@ The `removeItemFromCart` mutation deletes the entire quantity of a specified ite
 
 `mutation: {removeItemFromCart(input: RemoveItemFromCartInput): {RemoveItemFromCartOutput}}`
 
+## Reference
+
+The [`removeItemFromCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-removeItemFromCart) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example removes cart item 14 from the cart.
@@ -26,12 +30,20 @@ mutation {
   )
  {
   cart {
-    items {
-      id
-      product {
-        name
+    itemsV2 {
+      items {
+        id
+        product {
+          name
+        }
+        quantity
       }
-      quantity
+      total_count
+      page_info {
+        page_size
+        current_page
+        total_pages
+      }
     }
     prices {
       grand_total{
@@ -51,15 +63,23 @@ mutation {
   "data": {
     "removeItemFromCart": {
       "cart": {
-        "items": [
-          {
-            "uid": "NDA=",
-            "product": {
-              "name": "Strive Shoulder Pack"
-            },
-            "quantity": 3
+        "itemsV2": {
+          "items": [
+            {
+              "uid": "NDA=",
+              "product": {
+                "name": "Strive Shoulder Pack"
+              },
+              "quantity": 3
+            }
+          ],
+          "total_count": 1,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ],
+        },
         "prices": {
           "grand_total": {
             "value": 96,
@@ -72,32 +92,6 @@ mutation {
 }
 ```
 
-## Input attributes
-
-### RemoveItemFromCartInput object
-
-The `RemoveItemFromCartInput` object must contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart_id` | String! | The unique ID that identifies the customer's cart
-`cart_item_id` | Int | Deprecated. Use `cart_item_uid` instead. The unique ID assigned when a customer places an item in the cart
-`cart_item_uid` | ID! | The unique ID for a `CartItemInterface` object
-
-## Output attributes
-
-The `RemoveItemFromCartOutput` object contains the `Cart` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
-
-### Cart object
-
-import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
 ## Errors
 
 Error | Description
@@ -107,5 +101,3 @@ Error | Description
 `Required parameter "cart_id" is missing.` | The value specified in the `cart_id` argument is empty.
 `Required parameter "cart_item_id" is missing.` | The value specified in the `cart_item_id` argument is equal to zero.
 `The current user cannot perform operations on cart "XXX"` | An unauthorized user (guest) tried to remove a product from the shopping cart of authorized user (customer), or a customer tried to remove a product from the shopping cart of another customer.
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.

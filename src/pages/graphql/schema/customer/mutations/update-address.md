@@ -2,11 +2,6 @@
 title: updateCustomerAddress mutation
 ---
 
-import Example246 from '/src/_includes/graphql/examples/update-address-246.md'
-import Example247 from '/src/_includes/graphql/examples/update-address-247beta.md'
-import CustomerAddressInput from '/src/_includes/graphql/customer-address-input-24.md'
-import CustomerAddressOutput from '/src/_includes/graphql/customer-address-output-24.md'
-
 # updateCustomerAddress mutation
 
 Use the `updateCustomerAddress` mutation to update the customer's address.
@@ -17,36 +12,120 @@ To return or modify information about a customer, we recommend you use customer 
 
 `mutation: {updateCustomerAddress(id: Int!, input: CustomerAddressInput) {CustomerAddress}}`
 
+## Reference
+
+The [`updateCustomerAddress`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateCustomerAddress) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2" theme="light"/>
+### Update a customer address
 
-### 2.4.6
+The following call updates the customer's city and postcode.
 
-<Example246 />
+**Request:**
 
-### 2.4.7-beta
+```graphql
+mutation {
+  updateCustomerAddress(id:3, input: {
+    city: "New City"
+    postcode: "55555"
+  }) {
+    id
+    city
+    postcode
+  }
+}
+```
 
-<Example247 />
+**Response:**
 
-## Input attributes
+```json
+{
+  "data": {
+    "updateCustomerAddress": {
+      "id": 3,
+      "city": "New City",
+      "postcode": 55555
+    }
+  }
+}
+```
 
-The `updateCustomerAddress` object contains the following inputs:
+### Update a customer address with custom attributes
 
-Attribute |  Data Type | Description
---- | --- | ---
-`id` | Int! | The ID assigned to the address object
-`CustomerAddressInput` | [CustomerAddress](#customeraddressinput-attributes)| An array containing the customer's shipping and billing addresses
+The following call updates the customer's city, postcode, and custom attributes. The merchant has previously created the `station` and `services` attributes for customer addresses.
 
-<CustomerAddressInput />
+**Request:**
 
-## Output attributes
+```graphql
+mutation {
+  updateCustomerAddress(id:3, input: {
+    city: "New City"
+    postcode: "55555"
+    custom_attributesV2: [
+      {
+        attribute_code: "station",
+        value: "Times Sq - 42 St"
+      },
+      {
+        attribute_code: "services"
+        value: "507"
+        selected_options: [
+          {
+            uid: "NTA3"
+            value: "507"
+          }
+        ]
+      }
+    ]
+  }) {
+    id
+    city
+    postcode
+    custom_attributesV2 {
+      code
+      ... on AttributeValue {
+        value
+      }
+      ... on AttributeSelectedOptions {
+        selected_options {
+          label
+          value
+        }
+      }
+    }
+  }
+}
+```
 
-The `updateCustomerAddress` mutation returns the `CustomerAddress` object.
+**Response:**
 
-### CustomerAddress attributes
-
-<CustomerAddressOutput />
+```json
+{
+  "data": {
+    "updateCustomerAddress": {
+      "id": 3,
+      "city": "New City",
+      "postcode": 55555,
+      "custom_attributesV2": [
+        {
+          "code": "station",
+          "value": "Times Sq - 42 St"
+        },
+        {
+          "code": "services",
+          "selected_options": [
+            {
+              "label": "hospital",
+              "value": "507"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
 
 ## Errors
 

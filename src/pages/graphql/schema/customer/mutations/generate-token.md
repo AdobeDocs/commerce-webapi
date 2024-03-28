@@ -21,6 +21,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`generateCustomerToken`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-generateCustomerToken) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following call creates a new customer token.
@@ -49,23 +53,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `generateCustomerToken` mutation requires the following inputs:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`email` | String | The customer's email address
-`password` | String | The customer's password
-
-## Output attributes
-
-The `generateCustomerToken` mutation returns a valid token for the customer.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`token` | String | The customer token
 
 ## Errors
 

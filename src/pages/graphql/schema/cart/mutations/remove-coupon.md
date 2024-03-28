@@ -10,24 +10,36 @@ The `removeCouponFromCart` mutation removes a previously-applied coupon from the
 
 `mutation: {removeCouponFromCart(input: RemoveCouponFromCartInput)  {RemoveCouponFromCartOutput}}`
 
+## Reference
+
+The [`removeCouponFromCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-removeCouponFromCart) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example removes a coupon from the cart.
 
 **Request:**
 
-``` text
+```graphql
 mutation {
   removeCouponFromCart(
     input:
       { cart_id: "IeTUiU0oCXjm0uRqGCOuhQ2AuQatogjG" }
     ) {
     cart {
-      items {
-        product {
-          name
+      itemsV2 {
+        items {
+          product {
+            name
+          }
+          quantity
         }
-        quantity
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
+        }
       }
       applied_coupons {
         code
@@ -50,20 +62,28 @@ mutation {
   "data": {
     "removeCouponFromCart": {
       "cart": {
-        "items": [
-          {
-            "product": {
-              "name": "Strive Shoulder Pack"
+        "itemsV2": {
+          "items": [
+            {
+              "product": {
+                "name": "Strive Shoulder Pack"
+              },
+              "quantity": 1
             },
-            "quantity": 1
-          },
-          {
-            "product": {
-              "name": "Affirm Water Bottle "
-            },
-            "quantity": 1
+            {
+              "product": {
+                "name": "Affirm Water Bottle "
+              },
+              "quantity": 1
+            }
+          ],
+          "total_count": 2,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ],
+        },
         "applied_coupons": null,
         "prices": {
           "grand_total": {
@@ -76,30 +96,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `removeCouponFromCart` mutation must contain the following attribute:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart_id` | String! | The unique ID that identifies the customer's cart
-
-## Output attributes
-
-The `removeCouponFromCart` mutation returns the `Cart` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
-
-### Cart object
-
-import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 

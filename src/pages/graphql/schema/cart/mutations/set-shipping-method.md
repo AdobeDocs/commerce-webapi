@@ -24,6 +24,10 @@ Do not run the `setShippingMethodsOnCart` mutation on in-store pickup orders. In
 
 `mutation: {setShippingMethodsOnCart(input: setShippingMethodsOnCartInput) {setShippingMethodsOnCartOutput}}`
 
+## Reference
+
+The [`setShippingMethodsOnCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-setShippingMethodsOnCart) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example sets the delivery method to Best Way.
@@ -87,40 +91,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The top-level `setShippingMethodsOnCartInput` object is listed first. All child objects are listed in alphabetical order.
-
-### setShippingMethodsOnCartInput object
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart_id` | String! | The unique ID that identifies the customer's cart
-`shipping_methods` | [ShippingMethodInput!](#shippingmethodinput-object) | The shipping address for a specific cart
-
-### ShippingMethodInput object
-
-Attribute |  Data Type | Description
---- | --- | ---
-`carrier_code` | String! | A string that identifies a commercial carrier or an offline delivery method
-`method_code` | String! | A string that indicates which service a commercial carrier will use to ship items. For offline delivery methods, this value is similar to the label displayed on the checkout page
-
-## Output attributes
-
-The `ShippingMethodOutput` object contains the `Cart` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart` |[Cart](#cart-object) | Describes the contents of the specified shopping cart
-
-### Cart object
-
-import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 

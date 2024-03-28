@@ -8,19 +8,16 @@ keywords:
 ---
 
 import * as Vars from '../../../data/vars.js';
-import BetaNote from '/src/_includes/graphql/notes/beta.md'
 
 # Initiate a negotiable quote order by seller
 
 This topic describes how a seller can use REST calls to create a negotiable quote for a specific buyer in Draft state, add products to the quote, update quote data such as name and expiration date, and apply a discount.
 
-<BetaNote />
-
 ## Prerequisites
 
 -  You have [installed and enabled](https://experienceleague.adobe.com/docs/commerce-admin/b2b/install.html) <Vars.sitedatavarb2b/>.
 -  You have [created a company](company-object.md).
--  You have an integration or [admin authorization token](https://developer.adobe.com/commerce/webapi/rest/tutorials/orders/order-admin-token.html) to make calls on behalf of seller
+-  You have an integration or [admin authorization token](../tutorials/orders/order-admin-token.md) to make calls on behalf of seller.
 
 ## Create a negotiable quote
 

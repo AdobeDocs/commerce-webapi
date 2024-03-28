@@ -5,37 +5,10 @@ edition: b2b
 
 # PurchaseOrderApprovalRuleConditionInterface attributes and implementations
 
-`PurchaseOrderApprovalRuleConditionInterface` provides details about the approval rule conditions. It has the following implementations:
+[`PurchaseOrderApprovalRuleConditionInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-PurchaseOrderApprovalRuleConditionInterface) provides details about the approval rule conditions. It has the following implementations:
 
-*  [`PurchaseOrderApprovalRuleConditionAmount`](#purchaseorderapprovalruleconditionamount-attributes)
-*  [`PurchaseOrderApprovalRuleConditionQuantity`](#purchaseorderapprovalruleconditionquantity-attributes)
-
-## Attributes
-
-The `PurchaseOrderApprovalRuleConditionInterface` defines the following attributes.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`attribute` | `PurchaseOrderApprovalRuleType` | GRAND_TOTAL, NUMBER_OF_SKUS, or SHIPPING_INCL_TAX
-`operator` | `PurchaseOrderApprovalRuleConditionOperator` | MORE_THAN, LESS_THAN, MORE_THAN_OR_EQUAL_TO, or LESS_THAN_OR_EQUAL_TO
-
-## Implementations
-
-### PurchaseOrderApprovalRuleConditionAmount attributes
-
-The `PurchaseOrderApprovalRuleConditionAmount` implementation adds the following attribute.
-
-Attribute |  Data Type | Description
---- | -- | ---
-`amount`| `Money!` | An amount used for evaluation of the approval rule condition.
-
-### PurchaseOrderApprovalRuleConditionQuantity attributes
-
-The `PurchaseOrderApprovalRuleConditionQuantity` implementation adds the following attribute.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`quantity`| `Int` | The quantity used for evaluation of the approval rule condition.
+*  [`PurchaseOrderApprovalRuleConditionAmount`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-PurchaseOrderApprovalRuleConditionAmount)
+*  [`PurchaseOrderApprovalRuleConditionQuantity`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-PurchaseOrderApprovalRuleConditionQuantity)
 
 ## Example usage
 

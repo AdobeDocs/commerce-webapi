@@ -154,7 +154,7 @@ Only custom shared catalogs can be deleted. When a custom catalog is deleted, th
 
 The following search returns all the custom shared catalogs (`type = 0`) in the system.
 
-See [Search using REST APIs](https://developer.adobe.com/commerce/webapi/rest/use-rest/performing-searches.html) for information about constructing a search query.
+See [Search using REST APIs](../use-rest/performing-searches.md) for information about constructing a search query.
 
 **Sample Usage:**
 

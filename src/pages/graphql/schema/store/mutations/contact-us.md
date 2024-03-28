@@ -1,6 +1,5 @@
 ---
 title: contactUs mutation
-edition: pwa
 ---
 
 # contactUs mutation
@@ -9,7 +8,11 @@ The `contactUs` mutation submits the contents of the Contact Us form.
 
 ## Syntax
 
- `mutation: contactUs(input: ContactUsInput!): ContactUsOutput`
+`mutation: contactUs(input: ContactUsInput!): ContactUsOutput`
+
+## Reference
+
+The [`contactUs`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#mutation-contactUs) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -42,26 +45,3 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `contactUs` mutation requires the  `contactUsInput` object.
-
-### contactUsInput object
-
-The `contactUsInput` object must contain the following attributes:
-
-Attribute | Data Type | Description
---- | --- | ---
-`email` | String! | The email address of the shopper
-`name` | String! | The full name of the shopper
-`telephone` | String | The shopper's telephone number
-`comment` | String! | The shopper's comment to the merchant
-
-## Output attributes
-
-The `contactUsOutput` object returns a Boolean value indicting the success or failure of the request.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`status` | Boolean! | Indicates whether the request was successful

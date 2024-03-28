@@ -2,10 +2,6 @@
 title: attributesList query
 ---
 
-import BetaNote from '/src/_includes/graphql/notes/beta.md'
-
-<BetaNote />
-
 # attributesList query
 
 The `attributesList` query retrieves a list of attributes metadata for a given `entity_type`.
@@ -15,6 +11,10 @@ The possible values for this attribute are populated by the modules introducing 
 ## Syntax
 
 `{attributesList(entityType: AttributeEntityTypeEnum!): {AttributesMetadataOutput}}`
+
+## Reference
+
+The [`attributesList`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#query-attributesList) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -341,78 +341,3 @@ The following call returns the list of attributes metadata for a `catalog_produc
   }
 }
 ```
-
-## Input attributes
-
-The `AttributeEntityTypeEnum` object contains the following attributes:
-
-Attribute | Data Type | Description
---- |---| ---
-`entityType` | String | The type of entity that defines the attribute
-`filters` | AttributeFilterInput | Identifies which filter inputs to search for and return
-
-## Attribute Filter Input
-
-The `AttributeFilterInput` object specifies the filters used for attributes. It contains the following attributes:
-
-Attribute | Data Type | Description
---- |---| ---
-`is_comparable` | Boolean | Whether a product or category attribute can be compared against another or not
-`is_filterable` | Boolean | Whether a product or category attribute can be filtered or not
-`is_filterable_in_search` | Boolean | Whether a product or category attribute can be filtered in search or not
-`is_html_allowed_on_front` | Boolean | Whether a product or category attribute can use HTML on front or not
-`is_searchable` | Boolean | Whether a product or category attribute can be searched or not
-`is_used_for_price_rules` | Boolean | Whether a product or category attribute can be used for price rules or not
-`is_used_for_promo_rules` | Boolean | Whether a product or category attribute is used for promo rules or not
-`is_visible_in_advanced_search` | Boolean | Whether a product or category attribute is visible in advanced search or not
-`is_visible_on_front` | Boolean | Whether a product or category attribute is visible on front or not
-`is_wysiwyg_enabled` | Boolean | Whether a product or category attribute has WYSIWYG enabled or not
-`used_in_product_listing` | Boolean | Whether a product or category attribute is used in product listing or not
-
-## Output attributes
-
-The `AttributesMetadataOutput` object contains the following attributes:
-
-Attribute | Data Type | Description
---- |---| ---
-`errors` | [AttributeMetadataError!]! | Errors of retrieving certain attributes metadata
-`items` | [CustomAttributeMetadataInterface!]! | Requested attributes metadata
-
-The `CustomAttributeMetadataInterface` object contains the following attributes:
-
-Attribute | Data Type | Description
---- |---| ---
-`code` | ID! | The unique identifier for an attribute code. This value should be in lowercase letters without spaces
-`default_value` | String | Default attribute value
-`entity_type` | AttributeEntityTypeEnum! | The type of entity that defines the attribute
-`frontend_input` | AttributeFrontendInputEnum | The frontend input type of the attribute
-`is_comparable` | Boolean | Whether a product or category attribute can be compared against another or not
-`is_filterable` | Boolean | Whether a product or category attribute can be filtered or not
-`is_filterable_in_search` | Boolean | Whether a product or category attribute can be filtered in search or not
-`is_html_allowed_on_front` | Boolean | Whether a product or category attribute can use HTML on front or not
-`is_required` | Boolean! | Whether the attribute value is required
-`is_searchable` | Boolean | Whether a product or category attribute can be searched or not
-`is_unique` | Boolean! | Whether the attribute value must be unique
-`is_used_for_price_rules` | Boolean | Whether a product or category attribute can be used for price rules or not
-`is_used_for_promo_rules` | Boolean | Whether a product or category attribute is used for promo rules or not
-`is_visible_in_advanced_search` | Boolean | Whether a product or category attribute is visible in advanced search or not
-`is_visible_on_front` | Boolean | Whether a product or category attribute is visible on front or not
-`is_wysiwyg_enabled` | Boolean | Whether a product or category attribute has WYSIWYG enabled or not
-`label` | String | The label assigned to the attribute
-`options` | [CustomAttributeOptionInterface!]! | Attribute options
-`used_in_product_listing` | Boolean | Whether a product or category attribute is used in product listing or not
-
-The `CustomAttributeOptionInterface` object contains the following attributes:
-
-Attribute | Data Type | Description
---- |---| ---
-`is_default` | Boolean | Is the option value default
-`label` | String! | The label assigned to the attribute option
-`value` | String! | The attribute option value
-
-The `AttributeMetadataError` object contains the following attributes:
-
-Attribute | Data Type | Description
---- | --- | ---
-`message` | String! | Attribute metadata retrieval error message
-`type` | AttributeMetadataErrorType! | Attribute metadata retrieval error type

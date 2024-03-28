@@ -16,13 +16,17 @@ The `addVirtualProductsToCart` mutation allows you to add multiple virtual produ
 
 `mutation: {addVirtualProductsToCart(input: AddVirtualProductsToCartInput): {AddVirtualProductsToCartOutput}}`
 
+## Reference
+
+The [`addVirtualProductsToCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addVirtualProductsToCart) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The Luma sample data does not include any virtual products. The following example requires that you create a virtual product with the `sku` value of `Membership-Gold` with a price of $49.99.
 
 **Request:**
 
-```text
+```graphql
 
 mutation {
   addVirtualProductsToCart(
@@ -39,11 +43,19 @@ mutation {
     }
   ) {
     cart {
-      items {
-        product {
-          name
+      itemsV2 {
+        items {
+          product {
+            name
+          }
+          quantity
         }
-        quantity
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
+        }
       }
       prices {
         grand_total {
@@ -63,14 +75,22 @@ mutation {
   "data": {
     "addVirtualProductsToCart": {
       "cart": {
-        "items": [
-          {
-            "product": {
-              "name": "Gold Membership"
-            },
-            "quantity": 1
+        "itemsV2": {
+          "items": [
+            {
+              "product": {
+                "name": "Gold Membership"
+              },
+              "quantity": 1
+            }
+          ],
+          "total_count": 1,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ],
+        },
         "prices": {
           "grand_total": {
             "value": 49.99,
@@ -82,60 +102,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The top-level `AddVirtualProductsToCartInput` object is listed first. All child objects are listed in alphabetical order.
-
-### AddVirtualProductsToCartInput object
-
-The `AddVirtualProductsToCartInput` object must contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart_id` | String! | The unique ID that identifies the customer's cart
-`cart_items` | [VirtualProductCartItemInput!](#virtualproductcartiteminput-object) | Contains the cart item IDs and quantity of each item
-
-### CartItemInput object
-
-The `CartItemInput` object must contain the following attributes:
-
-import CartItemInput from '/src/_includes/graphql/cart-item-input-24.md'
-
-<CartItemInput />
-
-### CustomizableOptionInput object
-
-The `CustomizableOptionInput` object can contain the following attributes:
-
-import CustomizableOptionInput from '/src/_includes/graphql/customizable-option-input-24.md'
-
-<CustomizableOptionInput />
-
-### VirtualProductCartItemInput object
-
-The `VirtualProductCartItemInput` object must contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`customizable_options` |[[CustomizableOptionInput]](#customizableoptioninput-object) | An array that defines customizable options for the product
-`data` | [CartItemInput!](#cartiteminput-object) | An object containing the `sku` and `quantity` of the product
-
-## Output attributes
-
-The `AddVirtualProductsToCartOutput` object contains the `Cart` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
-
-### Cart object
-
-import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 

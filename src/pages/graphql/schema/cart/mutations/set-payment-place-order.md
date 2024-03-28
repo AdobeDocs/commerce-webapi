@@ -1,7 +1,7 @@
 ---
 title: setPaymentMethodAndPlaceOrder mutation
-contributor_name: Something Digital
-contributor_link: https://www.somethingdigital.com/
+contributor_name: Something Digital (now Rightpoint)
+contributor_link: https://www.rightpoint.com/
 ---
 
 # setPaymentMethodAndPlaceOrder mutation
@@ -39,6 +39,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`setPaymentMethodAndPlaceOrder`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-setPaymentMethodAndPlaceOrder) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 **Request:**
@@ -73,29 +77,6 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `placeOrderInput` object must contain the following attribute:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart_id` | String! | The unique ID that identifies the customer's cart
-`payment_method` | [PaymentMethodInput!](#paymentmethodinput-attributes) | The payment method data for the cart
-
-### PaymentMethodInput attributes
-
-import QuotePaymentInput from '/src/_includes/graphql/quote-payment-input.md'
-
-<QuotePaymentInput />
-
-## Output attributes
-
-The `placeOrderOutput` object contains the `order` object, which contains the following attribute:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`order_id` | String! | The unique ID that identifies the order
 
 ## Errors
 

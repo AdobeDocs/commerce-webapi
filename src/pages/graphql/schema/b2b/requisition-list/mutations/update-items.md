@@ -8,11 +8,11 @@ contributor_name: EY
 
 The `updateRequisitionListItems` mutation updates products in a requisition list.
 
-This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
-
 <InlineAlert variant="info" slots="text" />
 
 Use the [storeConfig query](../../../../schema/store/queries/store-config.md) with the `is_requisition_list_active` attribute to determine whether requisition lists are enabled.
+
+This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
 
 ## Syntax
 
@@ -26,6 +26,10 @@ mutation {
   }
 }
 ```
+
+## Reference
+
+The [`updateRequisitionListItems`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateRequisitionListItems) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -68,7 +72,6 @@ mutation {
 
 ```json
 {
-{
   "data": {
     "updateRequisitionListItems": {
       "requisition_list": {
@@ -93,37 +96,3 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-The `updateRequisitionListItems` mutation requires the following input.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`requisitionListItems`| [[UpdateRequisitionListItemsInput](#updaterequisitionlistitemsinput-attributes)!]! | An array of products to be updated in the requisition list
-`requisitionListUid`| ID! | The unique ID of the requisition list
-
-### UpdateRequisitionListItemsInput attributes
-
-The `UpdateRequisitionListItemsInput` type contains the list of products to be updated in the requisition list.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`entered_options` | [EnteredOptionInput!] | An array of customer entered option IDs
-`item_id` | ID! | The ID of the requisition list item to update
-`quantity` | Float | The new quantity of the item
-`selected_options` | [String!] | An array of selected option IDs
-
-## Output attributes
-
-The `updateRequisitionListItems` object returns the requisition list object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`requisition_list` | [[RequisitionList](#requisitionlist-attributes)] | The requisition list after the items were updated
-
-### RequisitionList attributes
-
-import RequisitionList from '/src/_includes/graphql/requisition-list.md'
-
-<RequisitionList />

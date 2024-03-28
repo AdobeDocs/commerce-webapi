@@ -11,6 +11,8 @@ The `isCompanyRoleNameAvailable` query checks whether a company role name is val
 
 The query returns a `false` value if the specified role name has already found in a company.
 
+This query requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
+
 ## Syntax
 
 ```graphql
@@ -22,6 +24,10 @@ The query returns a `false` value if the specified role name has already found i
     }
 }
 ```
+
+## Reference
+
+The [`isCompanyRoleNameAvailable`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-isCompanyRoleNameAvailable) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -48,15 +54,3 @@ query {
   }
 }
 ```
-
-## Input attribute
-
-Attribute |  Data Type | Description
---- | --- | ---
-`name` | String! | The company role name to check
-
-## Output attribute
-
-Attribute |  Data Type | Description
---- | --- | ---
-`is_role_name_available` | Boolean | A value of `true` indicates the company role name is available

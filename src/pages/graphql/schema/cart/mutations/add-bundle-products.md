@@ -16,6 +16,10 @@ Use the `addBundleProductsToCart` mutation to add bundle products to a specific 
 
 `mutation: {addBundleProductsToCart(input: AddBundleProductsToCartInput): {AddBundleProductsToCartOutput}}`
 
+## Reference
+
+The [`addBundleProductsToCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addBundleProductsToCart) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example uses a bundle product "Sprite Yoga Companion Kit" from Adobe Commerce and Magento Open Source sample data.
@@ -77,25 +81,33 @@ mutation {
     ]
   }) {
     cart {
-      items {
-        uid
-        quantity
-        product {
-          sku
-        }
-        ... on BundleCartItem {
-          bundle_options {
-            uid
-            label
-            type
-            values {
-              id
+      itemsV2 {
+        items {
+          uid
+          quantity
+          product {
+            sku
+          }
+          ... on BundleCartItem {
+            bundle_options {
+              uid
               label
-              price
-              quantity
+              type
+              values {
+                id
+                label
+                price
+                quantity
+              }
             }
           }
         }
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
+        }          
       }
     }
   }
@@ -109,154 +121,96 @@ mutation {
   "data": {
     "addBundleProductsToCart": {
       "cart": {
-        "items": [
-          {
-            "uid": "MjI=",
-            "quantity": 1,
-            "product": {
-              "sku": "WSH12"
-            }
-          },
-          {
-            "uid": "MjQ=",
-            "quantity": 3,
-            "product": {
-              "sku": "24-WB01"
-            }
-          },
-          {
-            "uid": "MzI=",
-            "quantity": 1,
-            "product": {
-              "sku": "24-WG080"
-            },
-            "bundle_options": [
-              {
-                "uid": "YnVuZGxlLzE=",
-                "label": "Sprite Stasis Ball",
-                "type": "radio",
-                "values": [
-                  {
-                    "id": 2,
-                    "label": "Sprite Stasis Ball 65 cm",
-                    "price": 27,
-                    "quantity": 1
-                  }
-                ]
-              },
-              {
-                "uid": "YnVuZGxlLzI=",
-                "label": "Sprite Foam Yoga Brick",
-                "type": "radio",
-                "values": [
-                  {
-                    "id": 4,
-                    "label": "Sprite Foam Yoga Brick",
-                    "price": 5,
-                    "quantity": 2
-                  }
-                ]
-              },
-              {
-                "uid": "YnVuZGxlLzM=",
-                "label": "Sprite Yoga Strap",
-                "type": "radio",
-                "values": [
-                  {
-                    "id": 7,
-                    "label": "Sprite Yoga Strap 10 foot",
-                    "price": 21,
-                    "quantity": 1
-                  }
-                ]
-              },
-              {
-                "uid": "YnVuZGxlLzQ=",
-                "label": "Sprite Foam Roller",
-                "type": "radio",
-                "values": [
-                  {
-                    "id": 8,
-                    "label": "Sprite Foam Roller",
-                    "price": 19,
-                    "quantity": 1
-                  }
-                ]
+        "itemsV2": {
+          "items": [
+            {
+              "uid": "MjI=",
+              "quantity": 1,
+              "product": {
+                "sku": "WSH12"
               }
-            ]
+            },
+            {
+              "uid": "MjQ=",
+              "quantity": 3,
+              "product": {
+                "sku": "24-WB01"
+              }
+            },
+            {
+              "uid": "MzI=",
+              "quantity": 1,
+              "product": {
+                "sku": "24-WG080"
+              },
+              "bundle_options": [
+                {
+                  "uid": "YnVuZGxlLzE=",
+                  "label": "Sprite Stasis Ball",
+                  "type": "radio",
+                  "values": [
+                    {
+                      "id": 2,
+                      "label": "Sprite Stasis Ball 65 cm",
+                      "price": 27,
+                      "quantity": 1
+                    }
+                  ]
+                },
+                {
+                  "uid": "YnVuZGxlLzI=",
+                  "label": "Sprite Foam Yoga Brick",
+                  "type": "radio",
+                  "values": [
+                    {
+                      "id": 4,
+                      "label": "Sprite Foam Yoga Brick",
+                      "price": 5,
+                      "quantity": 2
+                    }
+                  ]
+                },
+                {
+                  "uid": "YnVuZGxlLzM=",
+                  "label": "Sprite Yoga Strap",
+                  "type": "radio",
+                  "values": [
+                    {
+                      "id": 7,
+                      "label": "Sprite Yoga Strap 10 foot",
+                      "price": 21,
+                      "quantity": 1
+                    }
+                  ]
+                },
+                {
+                  "uid": "YnVuZGxlLzQ=",
+                  "label": "Sprite Foam Roller",
+                  "type": "radio",
+                  "values": [
+                    {
+                      "id": 8,
+                      "label": "Sprite Foam Roller",
+                      "price": 19,
+                      "quantity": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "total_count": 3,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ]
+        }
       }
     }
   }
 }
 ```
-
-## Input attributes
-
-The top-level `AddBundleProductsToCartInput` object is listed first. All interfaces and child objects are listed in alphabetical order.
-
-### AddBundleProductsToCartInput object
-
-The `AddBundleProductsToCartInput` object contains the following attributes:
-
-Attribute | Type | Description
---- | --- | ---
-`cart_id` | String! | The unique ID that identifies the customer's cart
-`cart_items` | [[BundleProductCartItemInput!]!](#bundleproductcartiteminput-object) | An array of bundle items to add to the cart
-
-### BundleProductCartItemInput object
-
-The `BundleProductCartItemInput` object contains the following attributes:
-
-Attribute | Type | Description
---- | --- | ---
-`bundle_options` | [[BundleOptionInput!]!](#bundleoptioninput-object) | An object that contains an array of options of the bundle product with the chosen value and quantity of each option
-`customizable_options` | [[CustomizableOptionInput!]](#customizableoptioninput-object) | An object that contains the ID and value of the product
-`data` | [CartItemInput!](#cartiteminput-object) | An object that contains the quantity and SKU of the bundle product
-
-### BundleOptionInput object
-
-The `BundleOptionInput` object contains the following attributes:
-
-Attribute | Type | Description
---- | --- | ---
-`id` | Int! | ID of the option
-`quantity` | Float! | The number of a specific child item to add to the cart
-`value` | [String!]! | An array with the chosen value of the option
-
-### CartItemInput object
-
-The `CartItemInput` object contains the following attributes:
-
-Attribute | Type | Description
---- | --- | ---
-`quantity` | Float! | The number of items to add to the cart
-`sku` | String! | The SKU of the product
-
-### CustomizableOptionInput object
-
-The `CustomizableOptionInput` object can contain the following attributes:
-
-import CustomizableOptionInput from '/src/_includes/graphql/customizable-option-input-24.md'
-
-<CustomizableOptionInput />
-
-## Output attributes
-
-The `AddBundleProductsToCartOutput` object contains the `Cart` object.
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cart` |[Cart!](#cart-object) | Describes the contents of the specified shopping cart
-
-### Cart object
-
-import CartObject from '/src/_includes/graphql/cart-object-24.md'
-
-<CartObject />
-
-[Cart query output](../../cart/queries/cart.md#output-attributes) provides more information about the `Cart` object.
 
 ## Errors
 
