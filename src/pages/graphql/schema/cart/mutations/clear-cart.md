@@ -1,5 +1,6 @@
 ---
 title: clearCart mutation
+edition: ee
 ---
 
 # clearCart mutation
