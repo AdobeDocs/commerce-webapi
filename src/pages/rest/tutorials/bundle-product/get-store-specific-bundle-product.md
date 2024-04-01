@@ -1,29 +1,21 @@
 ---
-
-title: Bundle module
-description: Create and maintain bundle product type in the Magento application.
+title: Step 4. Get store specific bundle product 
+description: In this step of the tutorial you will retrieve store specific(or all store optional)
+bundle product.
 keywords:
-- REST
----
-
-# Bundle module
-
-The `Bundle` module provides functionality for creating and maintaining bundle product types.
-
-## Retrieve store-specific bundle product details
+  - REST
+--- 
+ 
+# Step 4. Get store specific bundle product
 
 The following example retrieves store-specific bundle product details for a multi-store configuration by using the `GET V1/products/{sku}` call. For store specific
 bundle product details add the `store_code` to the API request. For example, `GET {store_code}/V1/products/{sku}`
 
-**Sample Usage:**
+**Endpoint:**
 
-`GET <host>/rest/<store_code>/V1/products/{sku}`
-
-## Example
-
-The following example returns bundle product details:
-
-`GET <host>/rest/default/V1/products/Desktop-Computer`
+```html
+GET http://domain.com/rest/default/V1/products/Desktop-Computer
+```
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -205,105 +197,4 @@ The following example returns bundle product details:
 ```
 
 Retrieve the `option_id` from the bundle product options section of the response and use it to update the bundle product option.
-
-## Update store-specific bundle product options
-
-The following example uses the `PUT /V1/bundle-products/options/{optionId}` call to update the bundle product option. For a store-specific request, add the `store_code`. For example, `PUT {store_code}/V1/bundle-products/options/{optionId}`
-
-**Sample Usage:**
-
-`PUT <host>/rest/<store_code>/V1/bundle-products/options/{optionId}`
-
-## Example
-
-The following example updates the bundle product option:
-
-`PUT <host>/rest/default/V1/bundle-products/options/14`
-
-<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
-
-#### Payload
-
-```json
-{
-  "option_id": 14,
-  "title": "RAM-Version-2",
-  "required": true,
-  "type": "select",
-  "position": 1,
-  "sku": "Desktop-Computer",
-  "product_links": [
-    {
-      "id": "19",
-      "sku": "RAM-12GB",
-      "option_id": 14,
-      "qty": 10,
-      "position": 1,
-      "is_default": false,
-      "price": 25,
-      "price_type": null,
-      "can_change_quantity": 0,
-      "extension_attributes": {}
-    },
-    {
-      "id": "20",
-      "sku": "RAM-24GB",
-      "option_id": 14,
-      "qty": 12,
-      "position": 2,
-      "is_default": false,
-      "price": 50,
-      "price_type": null,
-      "can_change_quantity": 0,
-      "extension_attributes": {}
-    }
-  ],
-  "extension_attributes": {}
-}
-```
-
-#### Response
-
-```json
-14
-```
-
-## Update store-specific bundle product option links
-
-The following example uses the `PUT /V1/bundle-products/{sku}/links/{optionId}` call to update the bundle product option link. For a store-specific call, add `store_code` to the API request. For example, `PUT {store_code}/V1/bundle-products/{sku}/links/{optionId}`
-
-**Sample Usage:**
-
-`PUT <host>/rest/<store_code>/V1/bundle-products/{sku}/links/{optionId}`
-
-## Example
-
-The following example updates the bundle product option link:
-
-`PUT <host>/rest/default/V1/bundle-products/Desktop-Computer/links/14`
-
-<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
-
-#### Payload
-
-```json
-{
-  "linkedProduct":
-  {
-    "id": "19",
-    "option_id": 14,
-    "sku": "RAM-12GB",
-    "qty": 2,
-    "is_default": false,
-    "can_change_quantity": 0,
-    "price": 35,
-    "price_type": 0,
-    "extension_attributes": { }
-  }
-}
-```
-
-#### Response
-
-```json
-true
+Retrieve the `selection_id` from the bundle product option `product_links` section of the response and use it to update the bundle product option selection link.
