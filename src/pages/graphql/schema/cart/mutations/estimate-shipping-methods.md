@@ -19,7 +19,7 @@ mutation {
 
 ## Reference
 
-The `estimateShippingMethods` reference provides detailed information about the types and fields defined in this mutation.
+The [`estimateShippingMethods`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-estimateShippingMethods) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -33,7 +33,7 @@ mutation {
   estimateShippingMethods(input:{
     cart_id: "IJGaHxS7p6u5Nu7tQIGQpADRXSoZRbJw"
     address: {
-     	country_code:IE
+         country_code:IE
     }
   })
   {
