@@ -453,17 +453,21 @@ module.exports = [
             ]
         },
         {
-            title:"Import",
-            path:"/rest/modules/import/"
+            title: "Import",
+            path: "/rest/modules/import/"
         },
-    {
-        title: "Sales refunds",
-        path: "/rest/modules/sales/",
-    },
-  ],
+        {
+            title: "Multicoupon",
+            path: "/rest/modules/multicoupon/"
+        },
+        {
+            title: "Sales refunds",
+            path: "/rest/modules/sales/"
+        },
+    ],
   },
   {
     title: "Attributes",
     path: "/rest/attributes/"
   },
-  ];
+];
