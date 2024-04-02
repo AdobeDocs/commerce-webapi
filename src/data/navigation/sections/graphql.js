@@ -777,6 +777,20 @@ module.exports = [
               },
             ],
           },
+          {
+            title: "Queries",
+            path: "graphql/schema/orders/queries/",
+            pages: [
+              {
+                title: "guestOrder",
+                path: "graphql/schema/orders/queries/guest-order"
+              },
+              {
+                title: "guestOrderByToken",
+                path: "graphql/schema/orders/queries/guest-order-by-token"
+              }
+            ]
+          }
         ],
       },
       {
