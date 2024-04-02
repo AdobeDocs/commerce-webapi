@@ -11,6 +11,10 @@ The `recaptchaFormConfig` query returns information about the reCaptcha configur
 
 `recaptchaFormConfig(formType: ReCaptchaFormEnum!): ReCaptchaConfigOutput`
 
+## References
+
+The `recaptchaFormConfig` reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following query returns information about the reCaptcha configuration for the CONTACT form:
@@ -72,23 +76,3 @@ Otherwise, the `configurations` object contains a null response:
   }
 }
 ```
-
-
-## Input attributes
-
-Field | Type | Description
---- | --- | ---
-`formType` field | ReCaptchaFormEnum | The type of the form for reCaptcha configuration to be returned.
-
-## Output attributes
-
-Attribute | Data Type | Description
---- | --- | ---
-`re_captcha_type` | ReCaptchaTypeEmum! | reCaptcha type configured for the requested form 
-`badge_position` | String | The position of the invisible reCAPTCHA badge on each page
-`theme` | String | The theme used to render reCaptcha (`dark` or `light`)
-`validation_failure_message` | String! | The message that appears to the user if validation fails
-`technical_failure_message` | String! | The message that appears to the user if there is some technical fails
-`language_code` | String | A two-character code that specifies the language that is used for Google reCAPTCHA text and messaging
-`minimum_score` | Float | The minimum score that identifies a user interaction as a potential risk (reCaptchaV3 only)
-`website_key` | String! | The website key generated when the Google reCAPTCHA account was registered
