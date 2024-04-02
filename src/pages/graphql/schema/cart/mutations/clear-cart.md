@@ -1,5 +1,6 @@
 ---
 title: clearCart mutation
+edition: ee
 ---
 
 # clearCart mutation
@@ -18,7 +19,7 @@ mutation {
 
 ## Reference
 
-The `clearCart` reference provides detailed information about the types and fields defined in this mutation.
+The [`clearCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-clearCart) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

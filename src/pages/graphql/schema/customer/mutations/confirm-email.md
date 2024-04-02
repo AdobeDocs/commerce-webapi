@@ -10,13 +10,13 @@ The `confirmEmail` mutation completes the customer activation process by confirm
 
 `mutation: {confirmEmail(input: ConfirmEmailInput!) {CustomerOutput}}`
 
-The following call confirms `roni_cost@example.com` as the email address of the customer by using the confirmation key `abcde`.
-
 ## Reference
 
-The `confirmEmail` reference provides detailed information about the types and fields defined in this mutation.
+The [`confirmEmail`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-confirmEmail) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
+
+The following call confirms `roni_cost@example.com` as the email address of the customer by using the confirmation key `abcde`.
 
 **Request:**
 

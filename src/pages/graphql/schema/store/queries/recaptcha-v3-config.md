@@ -2,11 +2,7 @@
 title: recaptchaV3Config query
 ---
 
-import BetaPwaNote from '/src/_includes/graphql/notes/beta-pwa.md'
-
 # recaptchaV3Config query
-
-<BetaPwaNote />
 
 The `recaptchaV3Config` query returns information about the reCaptcha V3 configuration.
 

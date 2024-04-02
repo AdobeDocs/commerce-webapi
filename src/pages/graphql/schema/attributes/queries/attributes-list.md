@@ -2,10 +2,6 @@
 title: attributesList query
 ---
 
-import BetaNote from '/src/_includes/graphql/notes/beta.md'
-
-<BetaNote />
-
 # attributesList query
 
 The `attributesList` query retrieves a list of attributes metadata for a given `entity_type`.

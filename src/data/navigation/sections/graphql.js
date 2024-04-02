@@ -166,6 +166,10 @@ module.exports = [
                 path: "/graphql/schema/cart/mutations/apply-coupon/",
               },
               {
+                title: "applyCouponsToCart",
+                path: "/graphql/schema/cart/mutations/apply-coupons/"
+              },
+              {
                 title: "applyGiftCartToCart",
                 path: "/graphql/schema/cart/mutations/apply-giftcard/",
               },
@@ -180,6 +184,10 @@ module.exports = [
               {
                 title: "assignCustomerToGuestCart",
                 path: "/graphql/schema/cart/mutations/assign-customer-to-guest-cart/",
+              },
+              {
+                title: "clearCart",
+                path: "/graphql/schema/cart/mutations/clear-cart/"
               },
               {
                 title: "createEmptyCart",
@@ -200,6 +208,10 @@ module.exports = [
               {
                 title: "removeCouponFromCart",
                 path: "/graphql/schema/cart/mutations/remove-coupon/",
+              },
+              {
+                title: "removeCouponsFromCart",
+                path: "/graphql/schema/cart/mutations/remove-coupons"
               },
               {
                 title: "removeGiftCardFromCart",
@@ -1292,12 +1304,6 @@ module.exports = [
   {
     title: "Reference (2.4.6)",
     path: "/graphql/reference",
-    pages: [
-      {
-        title: "Reference (2.4.7-beta)",
-        path: "/graphql/reference/beta"
-      }
-    ]
   },
   {
     title: "Release notes",
