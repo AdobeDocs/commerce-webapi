@@ -23,8 +23,7 @@ The following query returns information about the reCaptcha configuration for th
 
 ```graphql
 query {
-    recaptchaFormConfig(formType:CONTACT)
-		{
+    recaptchaFormConfig(formType:CONTACT) {
     	is_enabled
     	configurations {
         re_captcha_type
