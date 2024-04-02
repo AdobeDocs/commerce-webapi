@@ -16,7 +16,7 @@ Perform the following actions before using the `placeOrder` mutation:
 -  Set the payment method
 -  For guest customers, assign an email to the cart
 
-As of Commerce 2.4.7, the `PlaceOrderOutput` object can contain `orderV2`, which contains full details about the order. When the mutation runs, Commerce generate a token in the `orderV2.token` field. You can supply the token value to the [`guestOrderByToken` query](../../orders/queries/guest-order-by-token.md) to retrieve details about an order created by a guest shopper.
+As of Commerce 2.4.7, the `PlaceOrderOutput` object can contain `orderV2`, which provides full details about the order. When the mutation runs, Commerce generates and returns a token in the `orderV2.token` field. You can supply the token value to the [`guestOrderByToken` query](../../orders/queries/guest-order-by-token.md) to retrieve details about an order created by a guest shopper.
 
 <InlineAlert variant="info" slots="text" />
 
