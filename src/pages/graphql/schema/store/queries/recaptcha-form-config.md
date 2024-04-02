@@ -5,7 +5,7 @@ edition: pwa
 
 # recaptchaFormConfig query
 
-The `recaptchaFormConfig` query returns information about reCaptcha configuration for selected form type.
+The `recaptchaFormConfig` query returns information about the reCaptcha configuration for the specified form type. You can use the [`recaptchaV3Config` query](recaptcha-v3-config.md) to return a list of form types.
 
 ## Syntax
 
