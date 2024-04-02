@@ -75,4 +75,3 @@ Otherwise, the `configurations` object contains a null response:
   }
 }
 ```
-
