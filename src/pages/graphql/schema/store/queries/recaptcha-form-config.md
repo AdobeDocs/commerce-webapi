@@ -13,7 +13,7 @@ The `recaptchaFormConfig` query returns information about the reCaptcha configur
 
 ## Example usage
 
-The following query returns information about the reCaptcha configuration for CONTACT form:
+The following query returns information about the reCaptcha configuration for the CONTACT form:
 
 **Request:**
 
