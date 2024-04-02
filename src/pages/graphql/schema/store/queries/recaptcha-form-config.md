@@ -38,7 +38,7 @@ query {
 
 **Response:**
 
-If reCaptcha is enabled for particular form type, there are all the configuration details in the response:
+If reCaptcha is enabled for the specified form type, the response contains full configuration details.
 
 ```json
 {
