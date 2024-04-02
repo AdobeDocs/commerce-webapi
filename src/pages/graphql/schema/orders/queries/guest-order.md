@@ -23,7 +23,7 @@ The `guestOrder` reference provides detailed information about the types and fie
   guestOrder(
     input: {
       number: "000000001",
-      email: "test@test.com",
+      email: "test@example.com",
       postcode: "12345-6789"
     }
   ) {
