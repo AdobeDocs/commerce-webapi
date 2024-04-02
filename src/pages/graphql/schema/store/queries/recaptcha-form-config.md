@@ -60,7 +60,7 @@ If reCaptcha is enabled for the specified form type, the response contains full 
 }
 ```
 
-If reCaptcha is disabled for the form, the response provides the following information:
+Otherwise, the `configurations` object contains a null response:
 
 ```json
 {
