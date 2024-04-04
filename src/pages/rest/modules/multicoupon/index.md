@@ -6,29 +6,21 @@ keywords:
   - REST
 ---
 
-# Retrieve applied coupons
+# Multiple coupons
 
-The `GET /V2/carts/<cartId>/coupons` and `GET /V2/carts/mine/coupons` endpoints provide a RESTful way to retrieve the coupons applied to a specified cart or the current logged in customer cart, respectively.
+As of Adobe Commerce 2.4.7, merchants can allow shoppers to apply multiple coupons to a cart. To enable this feature, set the **Stores** > Settings > **Configuration** > **Sales** > **Sales** > **Multicoupon Settings** > **Maximum number of coupons per order** field to a value greater than one.
 
-# Append coupons
+The multi-coupon endpoint routes contain the string `V2` instead of `V1`. These endpoints are meant to supersede the `V1` versions of the endpoints and are available only in Adobe Commerce. The `V1` endpoints have not been deprecated and can be used by all merchants.
 
-The `POST /V2/carts/:cartId/coupons` and `POST /V2/carts/mine/coupons` endpoints can be used to add additional discount coupons to a specified cart or the current logged in customer cart, respectively, keeping previously applied ones, if any.
+## Retrieve applied coupons
 
-## Payload
+The `GET /V2/carts/<cartId>/coupons` and `GET /V2/carts/mine/coupons` endpoints provide a RESTful way to retrieve the coupons applied to a specified cart or to the cart of the currently logged in customer, respectively.
 
-```json
-{
-  "couponCodes": [
-    "COUPON-2", "COUPON-3"
-  ]
-}
-```
+## Append coupons
 
-# Replace coupons
+The `POST /V2/carts/:cartId/coupons` and `POST /V2/carts/mine/coupons` endpoints add additional discount coupons to a specified cart or to the cart of the currently logged in customer, respectively. Previously-applied coupons remain.
 
-The `PUT /V2/carts/:cartId/coupons` and `PUT /V2/carts/mine/coupons` endpoints can be used to replace discount coupons applied to a specified cart or the current logged in customer cart, respectively.
-
-## Payload
+### Payload
 
 ```json
 {
@@ -38,11 +30,25 @@ The `PUT /V2/carts/:cartId/coupons` and `PUT /V2/carts/mine/coupons` endpoints c
 }
 ```
 
-# Delete coupons
+## Replace coupons
 
-The `POST /V2/carts/:cartId/deleteByCodes` and `POST /V2/carts/mine/deleteByCodes` endpoints can be used to delete discount coupons applied to a specified cart or the current logged in customer cart, respectively.
+The `PUT /V2/carts/:cartId/coupons` and `PUT /V2/carts/mine/coupons` endpoints replace discount coupons applied to a specified cart or to the cart of the currently logged in customer, respectively.
 
-## Payload
+### Payload
+
+```json
+{
+  "couponCodes": [
+    "COUPON-2", "COUPON-3"
+  ]
+}
+```
+
+## Delete coupons
+
+The `POST /V2/carts/:cartId/deleteByCodes` and `POST /V2/carts/mine/deleteByCodes` endpoints can be delete discount coupons applied to a specified cart or to the cart of the currently logged in customer, respectively.
+
+### Payload
 
 ```json
 {
