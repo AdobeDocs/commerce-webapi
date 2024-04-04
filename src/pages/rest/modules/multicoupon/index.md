@@ -46,7 +46,7 @@ The `PUT /V2/carts/:cartId/coupons` and `PUT /V2/carts/mine/coupons` endpoints r
 
 ## Delete coupons
 
-The `POST /V2/carts/:cartId/deleteByCodes` and `POST /V2/carts/mine/deleteByCodes` endpoints can be delete discount coupons applied to a specified cart or to the cart of the currently logged in customer, respectively.
+The `POST /V2/carts/:cartId/deleteByCodes` and `POST /V2/carts/mine/deleteByCodes` endpoints can be used to delete discount coupons applied to a specified cart or to the cart of the currently logged in customer, respectively.
 
 ### Payload
 
