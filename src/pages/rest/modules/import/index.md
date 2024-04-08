@@ -17,9 +17,11 @@ The `POST /rest/<store_view_code>/V1/import/csv` and `POST /rest/<store_view_cod
 *  `customer_finance`
 *  `stock_sources`
 
-### Source Data Format and Requirements
+## Source Data Format and Requirements
 
 Ensure your source data conforms to the sequence and format expected by Commerce. To acquaint yourself with each import entity's requirements, visit the Import page in the Admin, select an entity from the dropdown, and click **Download Sample File**.
+
+The original CSV or JSON data must use UTF-8 encoding before any compression or base64 encoding is applied. This ensures compatibility with Adobe Commerce's internal processing and supports a wide range of international characters and symbols.
 
 ### CSV Import
 
