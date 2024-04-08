@@ -50,6 +50,7 @@ mutation {
             sku
           }
           quantity
+          is_available
           ... on ConfigurableCartItem {
             configurable_options {
               configurable_product_option_uid
@@ -100,6 +101,7 @@ mutation {
                 "sku": "WSH12"
               },
               "quantity": 1,
+              "is_available": true,
               "configurable_options": [
                 {
                   "configurable_product_option_uid": "Y29uZmlndXJhYmxlLzIwNDgvOTM=",
@@ -122,6 +124,7 @@ mutation {
                 "sku": "24-WG080"
               },
               "quantity": 1,
+              "is_available": true,
               "bundle_options": [
                 {
                   "uid": "YnVuZGxlLzE=",
