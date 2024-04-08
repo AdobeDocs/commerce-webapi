@@ -28,7 +28,7 @@ The following example runs the `getPaymentSDK` query.
 
 ```graphql
 query {
-  getPaymentSDK(input: { location: "CHECKOUT" }) {
+  getPaymentSDK(location: CHECKOUT) {
     sdkParams {
       code
       params {
@@ -44,33 +44,60 @@ query {
 
 ```json
 {
-  "data": {
-    "getPaymentSDK": {
-      "sdkParams": [
-        {
-          "code": "payment_services_paypal_hosted_fields",
-          "params": [
-            {
-              "name": "src",
-              "value": "https://www.paypal.com/sdk/js?client-id=AeFUI2PCqy7MicQ1gLbJf_8T7XUlEG51Pdd7sn2LE3d0_qAVhVBm4VOpPGmV08S9qsMCPXSCiBslhV53&intent=authorize&locale=en_US&merchant-id=2PZE7VHLY4B94&currency=USD&disable-funding=bancontact,boleto,boletobancario,blik,eps,giropay,ideal,itau,mercadopago,multibanco,mybank,oxxo,payu,p24,satispay,sepa,sofort,trustly,wechatpay&components=hosted-fields"
-            },
-            {
-              "name": "data-partner-attribution-id",
-              "value": "MagentoPayments_SP_PCP_Int"
-            },
-            {
-              "name": "data-client-token",
-              "value": "eyJicmFpbnRyZWUiOnsiYXV0aG9yaXphdGlvbkZpbmdlcnByaW50IjoiYmZhNzc0YjUxOTNkZDlmYzI1MTk1ZGUxZGRkZjAwMDJkYjUzMmUyNWU4YjA3YjQwMzFhNTlkMjMyMjA4MTdkNnxtZXJjaGFudF9pZD1yd3dua3FnMnhnNTZobTJuJnB1YmxpY19rZXk9NjNrdm4zN3Z0MjlxYjRkZiZjcmVhdGVkX2F0PTIwMjMtMTAtMTFUMTQ6NDY6MzkuNzI2WiIsInZlcnNpb24iOiIzLXBheXBhbCJ9LCJwYXlwYWwiOnsiaWRUb2tlbiI6bnVsbCwiYWNjZXNzVG9rZW4iOiJBMjFBQUlSQWw2N2tQZm1FVndkYl9fOU1XSEd6OFlHNjVlWmZxdjJTVHhfcUUwTU1kQno3M1NWRDRHSlh1MlNEVGs2dlVhLXZad1R2TmZ6WEF6ZDBkWDFsM1A4UDhlTXN3In19"
-            },
-            {
-              "name": "data-expires-in",
-              "value": "3600"
-            }
-          ]
+    "data": {
+        "getPaymentSDK": {
+            "sdkParams": [
+                {
+                    "code": "payment_services_paypal_smart_buttons",
+                    "params": [
+                        {
+                            "name": "src",
+                            "value": "https:\/\/www.paypal.com\/sdk\/js?client-id=..."
+                        }
+                    ]
+                },
+                {
+                    "code": "payment_services_paypal_apple_pay",
+                    "params": [
+                        {
+                            "name": "src",
+                            "value": "https:\/\/www.paypal.com\/sdk\/js?client-id=..."
+                        }
+                    ]
+                },
+                {
+                    "code": "payment_services_paypal_google_pay",
+                    "params": [
+                        {
+                            "name": "src",
+                            "value": "https:\/\/www.paypal.com\/sdk\/js?client-id=..."
+                        }
+                    ]
+                },
+                {
+                    "code": "payment_services_paypal_hosted_fields",
+                    "params": [
+                        {
+                            "name": "src",
+                            "value": "https:\/\/www.paypal.com\/sdk\/js?client-id=..."
+                        },
+                        {
+                            "name": "data-partner-attribution-id",
+                            "value": "MagentoPayments_SP_PCP_Int"
+                        },
+                        {
+                            "name": "data-client-token",
+                            "value": "eyJicmFpbnRyZWUiOnsiYXV0aG9yaXphdGlvbkZpbmdlcnByaW50IjoiMTFiZmFjZGM5YWEyM2ZhZjdmNTQwMzc0NGZmYzEwMjI4YjFjODBmZjg4NDdlYjcyMjMyMmM1OTE0MTU3OWYzZHxtZXJjaGFudF9pZD1yd3dua3FnMnhnNTZobTJuJnB1YmxpY19rZXk9NjNrdm4zN3Z0MjlxYjRkZiZjcmVhdGVkX2F0PTIwMjQtMDItMTNUMTU6Mjc6NTkuNDg5WiIsInZlcnNpb24iOiIzLXBheXBhbCJ9LCJwYXlwYWwiOnsiaWRUb2tlbiI6bnVsbCwiYWNjZXNzVG9rZW4iOiJBMjFBQUlEc1hFbHFlVzh6d1FTTGZsVFdkMHR1UkhIYlBYVTdfYTQzNVFxUVQ5MTRmUjhzclN1RTQzdlg4TnVXV0N1NHZIeUVoVG1BUnhVekdnU3R3VDJCNVFtczBrVjRnIn19"
+                        },
+                        {
+                            "name": "data-expires-in",
+                            "value": "3600"
+                        }
+                    ]
+                }
+            ]
         }
-      ]
     }
-  }
 }
 ```
 

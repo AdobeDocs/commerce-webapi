@@ -84,20 +84,6 @@ The mutation returns a cart using the same `cart_id`.
 }
 ```
 
-## Input attributes
-
-### CreateGuestCartInput object
-
-The `CreateGuestCartInput` object contains the following attributes:
-
-Attribute | Type | Description
---- |----| ---
-`cart_uid` | ID | Optional client-generated ID
-
-## Output attributes
-
-The `createGuestCart` mutation returns the newly created cart.
-
 ## Errors
 
 Error | Description
