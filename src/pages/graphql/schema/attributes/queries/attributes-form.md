@@ -31,7 +31,7 @@ You cannot query on the Admin Checkout form.
 
 ## Reference
 
-The [`attributesForm`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#query-attributesForm) reference provides detailed information about the types and fields defined in this query.
+The [`attributesForm`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-attributesForm) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

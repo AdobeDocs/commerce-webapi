@@ -14,7 +14,7 @@ The possible values for this attribute are populated by the modules introducing 
 
 ## Reference
 
-The [`attributesList`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#query-attributesList) reference provides detailed information about the types and fields defined in this query.
+The [`attributesList`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-attributesList) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
