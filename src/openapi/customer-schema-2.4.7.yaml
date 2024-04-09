@@ -8,8 +8,8 @@ swagger: '2.0'
 info:
   version: 2.4.7
   title: Commerce Customer REST endpoints - All inclusive
-  description:
-    "$ref": "../_includes/redocly-intro.md"
+  description: 
+    $ref: https://raw.githubusercontent.com/AdobeDocs/commerce-webapi/main/src/_includes/redocly-intro.md
 host: example.com
 basePath: "/rest/default"
 schemes:
