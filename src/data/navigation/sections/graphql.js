@@ -1314,7 +1314,7 @@ module.exports = [
     ],
   },
   {
-    title: "Reference (2.4.6)",
+    title: "Reference (2.4.7)",
     path: "/graphql/reference",
   },
   {
