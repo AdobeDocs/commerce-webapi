@@ -20,7 +20,7 @@ The following example applies the coupon code `H2O` to the cart. For this coupon
 
 **Request:**
 
-``` text
+```graphql
 mutation {
   applyCouponToCart(
     input: {
@@ -29,11 +29,19 @@ mutation {
     }
   ) {
     cart {
-      items {
-        product {
-          name
+      itemsV2 {
+        items {
+          product {
+            name
+          }
+          quantity
         }
-        quantity
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
+        }
       }
       applied_coupons {
         code
@@ -56,26 +64,34 @@ mutation {
   "data": {
     "applyCouponToCart": {
       "cart": {
-        "items": [
-          {
-            "product": {
-              "name": "Gold Membership"
+        "itemsV2": {
+          "items": [
+            {
+              "product": {
+                "name": "Gold Membership"
+              },
+              "quantity": 2
             },
-            "quantity": 2
-          },
-          {
-            "product": {
-              "name": "Strive Shoulder Pack"
+            {
+              "product": {
+                "name": "Strive Shoulder Pack"
+              },
+              "quantity": 1
             },
-            "quantity": 1
-          },
-          {
-            "product": {
-              "name": "Affirm Water Bottle "
-            },
-            "quantity": 1
+            {
+              "product": {
+                "name": "Affirm Water Bottle "
+              },
+              "quantity": 1
+            }
+          ],
+          "total_count": 3,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ],
+        },
         "applied_coupons": {
           "code": "H20"
         },
