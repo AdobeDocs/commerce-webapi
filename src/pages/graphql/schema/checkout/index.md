@@ -10,7 +10,7 @@ The checkout workflow differs for each online payment time. See the following to
 
 *  [Braintree](../../payment-methods/braintree.md)
 *  [Braintree vault](../../payment-methods/braintree-vault.md)
-*  [Payment Services checkout](../../payment-services/checkout.md
+*  [Payment Services checkout](../../payment-services/checkout.md)
 *  [Payment Services minicart](../../payment-services/minicart.md)
 *  [Klarna](../../payment-methods/klarna.md) (no longer supported)
 *  [PayPal Express Checkout](../../payment-methods/paypal-express-checkout.md)

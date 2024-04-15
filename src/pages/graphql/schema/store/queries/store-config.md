@@ -196,6 +196,7 @@ The following query returns information about the store's customer configuration
         autocomplete_on_storefront
         minimum_password_length
         required_character_classes_number
+        create_account_confirmation
     }
 }
 ```
@@ -208,7 +209,34 @@ The following query returns information about the store's customer configuration
     "storeConfig": {
       "autocomplete_on_storefront": true,
       "minimum_password_length": "6",
-      "required_character_classes_number": "2"
+      "required_character_classes_number": "2",
+      "create_account_confirmation": false
+    }
+  }
+}
+```
+
+### Query a store's access token expiration configuration
+
+The following query returns the value of the **Stores** > Settings > **Configuration** > **Services** > **OAuth** > **Access Token Expiration** > **Customer Token Lifetime (hours)** field.
+
+**Request:**
+
+```graphql
+{
+    storeConfig {
+        customer_access_token_lifetime
+    }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "storeConfig": {
+      "customer_access_token_lifetime": 1
     }
   }
 }
@@ -245,10 +273,6 @@ The following query returns enumeration values that indicate the store's fixed p
 ```
 
 ### Query a store's order cancellation configuration
-
-import BetaNote from '/src/_includes/graphql/notes/beta.md'
-
-<BetaNote />
 
 The following query returns the store's order cancellation settings, indicating if it is enabled and the available cancellation reasons.
 
