@@ -1,12 +1,18 @@
 ---
-title: Step 4. Get store specific bundle product 
+title: Step 4. Update store-specific bundle product option and option links
 description: In this step of the tutorial you will retrieve store specific(or all store optional)
-bundle product.
+bundle product option and option links.
 keywords:
   - REST
 --- 
  
-# Step 4. Get store specific bundle product
+For updating bundle product option or option links we have following steps
+
+1. Get bundle product details
+2. Update bundle product options
+3. Update bundle product links
+
+# 1. Get bundle product details
 
 The following example retrieves store-specific bundle product details for a multi-store configuration by using the `GET V1/products/{sku}` call. For store specific
 bundle product details add the `store_code` to the API request. For example, `GET {store_code}/V1/products/{sku}`
@@ -196,5 +202,103 @@ GET http://domain.com/rest/default/V1/products/Desktop-Computer
 }
 ```
 
-Retrieve the `option_id` from the bundle product options section of the response and use it to update the bundle product option.
-Retrieve the `selection_id` from the bundle product option `product_links` section of the response and use it to update the bundle product option selection link.
+Retrieve the `option_id` from the bundle product options section of the response and use it to update the bundle product option and option links.
+
+# 2. Update bundle product options
+
+The following example uses the `PUT /V1/bundle-products/options/{optionId}` call 
+to update the bundle product option. For a store-specific request, add the `store_code`. 
+For example, `PUT {store_code}/V1/bundle-products/options/{optionId}`
+
+**Endpoint:**
+
+```html
+PUT http://domain.com/rest/default/V1/bundle-products/options/14
+```
+
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
+
+```json
+{
+  "option_id": 14,
+  "title": "RAM-Version-2",
+  "required": true,
+  "type": "select",
+  "position": 1,
+  "sku": "Desktop-Computer",
+  "product_links": [
+    {
+      "id": "19",
+      "sku": "RAM-12GB",
+      "option_id": 14,
+      "qty": 2,
+      "position": 1,
+      "is_default": false,
+      "price": 50,
+      "price_type": null,
+      "can_change_quantity": 0,
+      "extension_attributes": {}
+    },
+    {
+      "id": "20",
+      "sku": "RAM-24GB",
+      "option_id": 14,
+      "qty": 2,
+      "position": 2,
+      "is_default": false,
+      "price": 100,
+      "price_type": null,
+      "can_change_quantity": 0,
+      "extension_attributes": {}
+    }
+  ],
+  "extension_attributes": {}
+}
+```
+
+#### Response
+
+```json
+14
+```
+
+# 3. Update bundle product links
+
+The following example uses the `PUT /V1/bundle-products/{sku}/links/{optionId}` call to update the bundle product option link. For a store-specific call, add `store_code` to the API request.
+For example, `PUT {store_code}/V1/bundle-products/{sku}/links/{optionId}`
+
+
+**Endpoint:**
+
+```html
+PUT http://domain.com/rest/default/V1/bundle-products/Desktop-Computer/links/14
+```
+
+<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
+
+#### Payload
+
+```json
+{
+  "linkedProduct":
+  {
+    "id": "19",
+    "option_id": 14,
+    "sku": "RAM-12GB",
+    "qty": 2,
+    "is_default": false,
+    "can_change_quantity": 0,
+    "price": 50,
+    "price_type": 0,
+    "extension_attributes": { }
+  }
+}
+```
+
+#### Response
+
+```json
+true
+```
