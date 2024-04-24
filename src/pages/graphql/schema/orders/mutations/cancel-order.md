@@ -1,9 +1,6 @@
 ---
 title: cancelOrder mutation | Commerce Web APIs
 ---
-import BetaNote from '/src/_includes/graphql/notes/beta.md'
-
-<BetaNote />
 
 # cancelOrder mutation
 

@@ -73,12 +73,20 @@ mutation {
     ]
   ) {
     cart {
-      items {
-        product {
-          name
-          sku
+      itemsV2 {
+        items {
+          product {
+            name
+            sku
+          }
+          quantity
         }
-        quantity
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
+        }
       }
     }
     user_errors {
@@ -96,15 +104,23 @@ mutation {
   "data": {
     "addProductsToCart": {
       "cart": {
-        "items": [
-          {
-            "product": {
-              "name": "Strive Shoulder Pack",
-              "sku": "24-MB04"
-            },
-            "quantity": 1
+        "itemsV2": {
+          "items": [
+            {
+              "product": {
+                "name": "Strive Shoulder Pack",
+                "sku": "24-MB04"
+              },
+              "quantity": 1
+            }
+          ],
+          "total_count": 1,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ]
+        }
       },
       "user_errors": []
     }
@@ -135,13 +151,21 @@ mutation {
     ]
   ) {
     cart {
-      items {
-        id
-        product {
-          name
-          sku
+      itemsV2 {
+        items {
+          id
+          product {
+            name
+            sku
+          }
+          quantity
         }
-        quantity
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
+        }
       }
     }
     user_errors {
@@ -159,24 +183,32 @@ mutation {
   "data": {
     "addProductsToCart": {
       "cart": {
-        "items": [
-          {
-            "id": "24",
-            "product": {
-              "name": "Erika Running Short",
-              "sku": "WSH12"
+        "itemsV2": {
+          "items": [
+            {
+              "id": "24",
+              "product": {
+                "name": "Erika Running Short",
+                "sku": "WSH12"
+              },
+              "quantity": 1
             },
-            "quantity": 1
-          },
-          {
-            "id": "26",
-            "product": {
-              "name": "Erika Running Short-28-Green",
-              "sku": "WSH12-28-Green"
-            },
-            "quantity": 1
+            {
+              "id": "26",
+              "product": {
+                "name": "Erika Running Short-28-Green",
+                "sku": "WSH12-28-Green"
+              },
+              "quantity": 1
+            }
+          ],
+          "total_count": 2,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ]
+        }
       },
       "user_errors": []
     }
@@ -203,20 +235,28 @@ mutation {
     ]
   ) {
     cart {
-      items {
-        product {
-          name
-          sku
-        }
-        ... on ConfigurableCartItem {
-          configurable_options {
-            configurable_product_option_uid
-            option_label
-            configurable_product_option_value_uid
-            value_label
+      itemsV2 {
+        items {
+          product {
+            name
+            sku
           }
+          ... on ConfigurableCartItem {
+            configurable_options {
+              configurable_product_option_uid
+              option_label
+              configurable_product_option_value_uid
+              value_label
+            }
+          }
+          quantity
         }
-        quantity
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
+        }
       }
     }
     user_errors {
@@ -234,29 +274,37 @@ mutation {
   "data": {
     "addProductsToCart": {
       "cart": {
-        "items": [
-          {
-            "product": {
-              "name": "Erika Running Short",
-              "sku": "WSH12"
-            },
-            "configurable_options": [
-              {
-                "configurable_product_option_uid": "Y29uZmlndXJhYmxlLzIwNDgvOTM=",
-                "option_label": "Color",
-                "configurable_product_option_value_uid": "Y29uZmlndXJhYmxlLzkzLzUz",
-                "value_label": "Green"
+        "itemsV2": {
+          "items": [
+            {
+              "product": {
+                "name": "Erika Running Short",
+                "sku": "WSH12"
               },
-              {
-                "configurable_product_option_uid": "Y29uZmlndXJhYmxlLzIwNDgvMTYx",
-                "option_label": "Size",
-                "configurable_product_option_value_uid": "Y29uZmlndXJhYmxlLzE2MS8xNzQ=",
-                "value_label": "28"
-              }
-            ],
-            "quantity": 1
+              "configurable_options": [
+                {
+                  "configurable_product_option_uid": "Y29uZmlndXJhYmxlLzIwNDgvOTM=",
+                  "option_label": "Color",
+                  "configurable_product_option_value_uid": "Y29uZmlndXJhYmxlLzkzLzUz",
+                  "value_label": "Green"
+                },
+                {
+                  "configurable_product_option_uid": "Y29uZmlndXJhYmxlLzIwNDgvMTYx",
+                  "option_label": "Size",
+                  "configurable_product_option_value_uid": "Y29uZmlndXJhYmxlLzE2MS8xNzQ=",
+                  "value_label": "28"
+                }
+              ],
+              "quantity": 1
+            }
+          ],
+          "total_count": 1,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ]
+        }
       },
       "user_errors": []
     }
@@ -290,22 +338,30 @@ mutation {
     ]
   ) {
     cart {
-      items {
-        product {
-          name
-          sku
-        }
-        ... on SimpleCartItem {
-          customizable_options {
-            customizable_option_uid
-            label
-            values {
-              customizable_option_value_uid
-              value
+      itemsV2 {
+        items {
+          product {
+            name
+            sku
+          }
+          ... on SimpleCartItem {
+            customizable_options {
+              customizable_option_uid
+              label
+              values {
+                customizable_option_value_uid
+                value
+              }
             }
           }
+          quantity
         }
-        quantity
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
+        }
       }
     }
     user_errors {
@@ -323,28 +379,36 @@ mutation {
   "data": {
     "addProductsToCart": {
       "cart": {
-        "items": [
-          {
-            "id": "19",
-            "product": {
-              "name": "Clamber Watch",
-              "sku": "24-WG03"
-            },
-            "customizable_options": [
-              {
-                "customizable_option_uid": "Y3VzdG9tLW9wdGlvbi8x",
-                "label": "Engraving",
-                "values": [
-                  {
-                    "customizable_option_value_uid": "Y3VzdG9tLW9wdGlvbi8x",
-                    "value": "Congrats, Julie!"
-                  }
-                ]
-              }
-            ],
-            "quantity": 1
+        "itemsV2": {
+          "items": [
+            {
+              "id": "19",
+              "product": {
+                "name": "Clamber Watch",
+                "sku": "24-WG03"
+              },
+              "customizable_options": [
+                {
+                  "customizable_option_uid": "Y3VzdG9tLW9wdGlvbi8x",
+                  "label": "Engraving",
+                  "values": [
+                    {
+                      "customizable_option_value_uid": "Y3VzdG9tLW9wdGlvbi8x",
+                      "value": "Congrats, Julie!"
+                    }
+                  ]
+                }
+              ],
+              "quantity": 1
+            }
+          ],
+          "total_count": 1,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ]
+        }
       },
       "user_errors": []
     }
@@ -389,25 +453,33 @@ mutation {
     ]
   ) {
     cart {
-      items {
-        uid
-        product {
-          name
-          sku
-        }
-        quantity
-        ... on BundleCartItem {
-          bundle_options {
-            uid
-            label
-            type
-            values {
-              id
+      itemsV2 {
+        items {
+          uid
+          product {
+            name
+            sku
+          }
+          quantity
+          ... on BundleCartItem {
+            bundle_options {
+              uid
               label
-              price
-              quantity
+              type
+              values {
+                id
+                label
+                price
+                quantity
+              }
             }
           }
+        }
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
         }
       }
     }
@@ -426,70 +498,78 @@ mutation {
   "data": {
     "addProductsToCart": {
       "cart": {
-        "items": [
-          {
-            "uid": "MTQ=",
-            "product": {
-              "name": "Sprite Yoga Companion Kit",
-              "sku": "24-WG080"
-            },
-            "quantity": 1,
-            "bundle_options": [
-              {
-                "uid": "YnVuZGxlLzE=",
-                "label": "Sprite Stasis Ball",
-                "type": "radio",
-                "values": [
-                  {
-                    "id": 1,
-                    "label": "Sprite Stasis Ball 55 cm",
-                    "price": 23,
-                    "quantity": 1
-                  }
-                ]
+        "itemsV2": {
+          "items": [
+            {
+              "uid": "MTQ=",
+              "product": {
+                "name": "Sprite Yoga Companion Kit",
+                "sku": "24-WG080"
               },
-              {
-                "uid": "YnVuZGxlLzI=",
-                "label": "Sprite Foam Yoga Brick",
-                "type": "radio",
-                "values": [
-                  {
-                    "id": 4,
-                    "label": "Sprite Foam Yoga Brick",
-                    "price": 5,
-                    "quantity": 1
-                  }
-                ]
-              },
-              {
-                "uid": "YnVuZGxlLzM=",
-                "label": "Sprite Yoga Strap",
-                "type": "radio",
-                "values": [
-                  {
-                    "id": 5,
-                    "label": "Sprite Yoga Strap 6 foot",
-                    "price": 14,
-                    "quantity": 1
-                  }
-                ]
-              },
-              {
-                "uid": "YnVuZGxlLzQ=",
-                "label": "Sprite Foam Roller",
-                "type": "radio",
-                "values": [
-                  {
-                    "id": 8,
-                    "label": "Sprite Foam Roller",
-                    "price": 19,
-                    "quantity": 1
-                  }
-                ]
-              }
-            ]
+              "quantity": 1,
+              "bundle_options": [
+                {
+                  "uid": "YnVuZGxlLzE=",
+                  "label": "Sprite Stasis Ball",
+                  "type": "radio",
+                  "values": [
+                    {
+                      "id": 1,
+                      "label": "Sprite Stasis Ball 55 cm",
+                      "price": 23,
+                      "quantity": 1
+                    }
+                  ]
+                },
+                {
+                  "uid": "YnVuZGxlLzI=",
+                  "label": "Sprite Foam Yoga Brick",
+                  "type": "radio",
+                  "values": [
+                    {
+                      "id": 4,
+                      "label": "Sprite Foam Yoga Brick",
+                      "price": 5,
+                      "quantity": 1
+                    }
+                  ]
+                },
+                {
+                  "uid": "YnVuZGxlLzM=",
+                  "label": "Sprite Yoga Strap",
+                  "type": "radio",
+                  "values": [
+                    {
+                      "id": 5,
+                      "label": "Sprite Yoga Strap 6 foot",
+                      "price": 14,
+                      "quantity": 1
+                    }
+                  ]
+                },
+                {
+                  "uid": "YnVuZGxlLzQ=",
+                  "label": "Sprite Foam Roller",
+                  "type": "radio",
+                  "values": [
+                    {
+                      "id": 8,
+                      "label": "Sprite Foam Roller",
+                      "price": 19,
+                      "quantity": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "total_count": 1,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ]
+        }
       },
       "user_errors": []
     }
@@ -525,25 +605,33 @@ mutation {
     ]
   ) {
     cart {
-      items {
-        uid
-        product {
-          name
-          sku
-        }
-        quantity
-        ... on BundleCartItem {
-          bundle_options {
-            uid
-            label
-            type
-            values {
-              id
+      itemsV2 {
+        items {
+          uid
+          product {
+            name
+            sku
+          }
+          quantity
+          ... on BundleCartItem {
+            bundle_options {
+              uid
               label
-              price
-              quantity
+              type
+              values {
+                id
+                label
+                price
+                quantity
+              }
             }
           }
+        }
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
         }
       }
     }

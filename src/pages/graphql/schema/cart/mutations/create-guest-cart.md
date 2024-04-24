@@ -18,7 +18,7 @@ mutation {
 
 ## Reference
 
-The [`createGuestCart`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#mutation-createGuestCart) reference provides detailed information about the types and fields defined in this mutation.
+The [`createGuestCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createGuestCart) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
