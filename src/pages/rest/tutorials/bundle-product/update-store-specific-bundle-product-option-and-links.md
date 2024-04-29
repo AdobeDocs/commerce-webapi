@@ -204,8 +204,8 @@ Retrieve the `option_id` values from the bundle product options section of the r
 
 # 2. Update bundle product options
 
-The following example uses the `PUT /V1/bundle-products/options/{optionId}` call 
-to update the bundle product option. For a store-specific request, add the `store_code`. 
+The following example uses the `PUT /V1/bundle-products/options/{optionId}` call
+to update the bundle product option. For a store-specific request, add the `store_code`.
 For example, `PUT {store_code}/V1/bundle-products/options/{optionId}`.
 
 **Endpoint:**
@@ -265,7 +265,6 @@ PUT http://domain.com/rest/default/V1/bundle-products/options/14
 # 3. Update bundle product links
 
 The following example uses the `PUT /V1/bundle-products/{sku}/links/{optionId}` call to update a bundle product option link.
-
 
 **Endpoint:**
 
