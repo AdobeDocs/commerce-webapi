@@ -5,25 +5,25 @@ keywords:
   - REST
 --- 
  
+# Step 4. Update product options or option links (optional)
+
 Updating bundle product options or option links requires the following steps:
 
 1. Get bundle product details
 2. Update bundle product options
 3. Update bundle product links
 
-# 1. Get bundle product details
+## 1. Get bundle product details
 
 The following example retrieves store-specific bundle product details for a multi-store configuration by using the `GET {store_code}/V1/products/{sku}` call.
 
-**Endpoint:**
+**Request:**
 
 ```html
 GET http://domain.com/rest/default/V1/products/Desktop-Computer
 ```
 
-<CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
-
-#### Response
+**Response:**
 
 ```json
 {
@@ -202,7 +202,7 @@ GET http://domain.com/rest/default/V1/products/Desktop-Computer
 
 Retrieve the `option_id` values from the bundle product options section of the response and use it to update the bundle product option and option links.
 
-# 2. Update bundle product options
+## 2. Update bundle product options
 
 The following example uses the `PUT /V1/bundle-products/options/{optionId}` call
 to update the bundle product option. For a store-specific request, add the `store_code`.
@@ -262,7 +262,7 @@ PUT http://domain.com/rest/default/V1/bundle-products/options/14
 14
 ```
 
-# 3. Update bundle product links
+## 3. Update bundle product links
 
 The following example uses the `PUT /V1/bundle-products/{sku}/links/{optionId}` call to update a bundle product option link.
 

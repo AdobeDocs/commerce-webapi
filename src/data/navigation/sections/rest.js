@@ -405,8 +405,8 @@ module.exports = [
                 path: "/rest/tutorials/bundle-product/create-bundle-product.md",
             },
             {
-                title: "Step 4. Update store specific bundle product options and option links",
-                path: "/rest/tutorials/bundle-product/update-store-specific-bundle-product-option-and-links.md",
+                title: "Step 4. Update bundle product options and option links",
+                path: "/rest/tutorials/bundle-product/update-options-and-links.md",
             },
             ],
         },
