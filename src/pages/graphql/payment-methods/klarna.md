@@ -80,7 +80,7 @@ In order to always present shoppers with the latest available payment options pr
 
 1. The application returns an updated `cart` object.
 
-1. [Reload the widget](https://docs.klarna.com/klarna-payments/integration-best-practices/purchase-experience/payment-widget/?q=widget) on the client side.
+1. [Reload the widget](https://docs.klarna.com/klarna-payments/integration-best-practices/purchase-experience/) on the client side.
 
 The following diagram describes the workflow:
 
