@@ -404,6 +404,10 @@ module.exports = [
                 title: "Step 3. Create the bundle product",
                 path: "/rest/tutorials/bundle-product/create-bundle-product.md",
             },
+            {
+                title: "Step 4. Update bundle product options and option links",
+                path: "/rest/tutorials/bundle-product/update-options-and-links.md",
+            },
             ],
         },
         {
