@@ -19,7 +19,9 @@
     "remark-lint-frontmatter-schema": "^3.15.2",
     "remark-lint-no-dead-urls": "^1.1.0",
     "remark-validate-links": "^11.0.2",
-    "spectaql": "^1.5.6"
+    "spectaql": "^1.5.6",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
   },
   "scripts": {
     "start": "NODE_OPTIONS='--max-old-space-size=8192' gatsby build && gatsby serve",
@@ -34,7 +36,8 @@
     "build:spectaql:beta": "spectaql --target-dir static/graphql-api/beta/ --target-file index.html spectaql/config_beta.yml",
     "dev:spectaql": "spectaql --development-mode-live spectaql/config.yml",
     "dev:spectaql:beta": "spectaql --development-mode-live spectaql/config_beta.yml",
-    "lint": "docker run --rm -e RUN_LOCAL=true --env-file '.github/super-linter.env' -v \"$PWD\":/tmp/lint github/super-linter:slim-v5"
+    "lint": "docker run --rm -e RUN_LOCAL=true --env-file '.github/super-linter.env' -v \"$PWD\":/tmp/lint github/super-linter:slim-v5",
+    "buildNavigation": "webpack --config webpack.config.js"
   },
   "packageManager": "yarn@3.2.4"
 }
