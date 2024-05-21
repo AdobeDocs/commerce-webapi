@@ -38,7 +38,7 @@
     "dev:spectaql": "spectaql --development-mode-live spectaql/config.yml",
     "dev:spectaql:beta": "spectaql --development-mode-live spectaql/config_beta.yml",
     "lint": "docker run --rm -e RUN_LOCAL=true --env-file '.github/super-linter.env' -v \"$PWD\":/tmp/lint github/super-linter:slim-v5",
-    "buildNavigation": "webpack --config webpack.config.js"
+    "buildNavigation": "webpack --config webpack.config.js && node eds/scripts/buildNavigation.js"
   },
   "packageManager": "yarn@3.2.4"
 }
