@@ -1318,6 +1318,10 @@ module.exports = [
     path: "/graphql/reference",
   },
   {
+    title: "Reference (2.4.6)",
+    path: "/graphql/reference/legacy",
+  },
+  {
     title: "Release notes",
     path: "/graphql/release-notes/",
   },
