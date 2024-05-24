@@ -1318,7 +1318,7 @@ module.exports = [
     path: "/graphql/reference",
     pages: [
       {
-        title: "Reference (2.4.6)",
+        title: "2.4.6",
         path: "/graphql/reference/2.4.6",
       },
     ],

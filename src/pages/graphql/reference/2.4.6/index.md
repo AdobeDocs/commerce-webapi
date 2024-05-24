@@ -1,5 +1,5 @@
 ---
-title: GraphQL API legacy reference
+title: GraphQL API reference (2.4.6)
 description: Review comprehensive reference documentation for older Adobe Commerce GraphQL API schemas.
 keywords:
   - GraphQL
