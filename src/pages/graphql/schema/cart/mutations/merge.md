@@ -44,13 +44,21 @@ mutation {
     source_cart_id: "mPKE05OOtcxErbk1Toej6gw6tcuxvT9O",
     destination_cart_id: "CYmiiQRjPVc2gJUc5r7IsBmwegVIFO43"
   ) {
-    items {
-      id
-      product {
-        name
-        sku
+    itemsV2 {
+      items {
+        id
+        product {
+          name
+          sku
+        }
+        quantity
       }
-      quantity
+      total_count
+      page_info {
+        page_size
+        current_page
+        total_pages
+      }
     }
   }
 }
@@ -62,24 +70,32 @@ mutation {
 {
   "data": {
     "mergeCarts": {
-      "items": [
-        {
-          "id": "14",
-          "product": {
-            "name": "Overnight Duffle",
-            "sku": "24-WB07"
+      "itemsV2": {
+        "items": [
+          {
+            "id": "14",
+            "product": {
+              "name": "Overnight Duffle",
+              "sku": "24-WB07"
+            },
+            "quantity": 2
           },
-          "quantity": 2
-        },
-        {
-          "id": "17",
-          "product": {
-            "name": "Radiant Tee",
-            "sku": "WS12"
-          },
-          "quantity": 1
+          {
+            "id": "17",
+            "product": {
+              "name": "Radiant Tee",
+              "sku": "WS12"
+            },
+            "quantity": 1
+          }
+        ],
+        "total_count": 2,
+        "page_info": {
+          "page_size": 20,
+          "current_page": 1,
+          "total_pages": 1
         }
-      ]
+      }
     }
   }
 }
@@ -94,13 +110,21 @@ mutation {
   mergeCarts(
     source_cart_id: "mPKE05OOtcxErbk1Toej6gw6tcuxvT9O"
   ) {
-    items {
-      id
-      product {
-        name
-        sku
+    itemsV2 {
+      items {
+        id
+        product {
+          name
+          sku
+        }
+        quantity
       }
-      quantity
+      total_count
+      page_info {
+        page_size
+        current_page
+        total_pages
+      }
     }
   }
 }
@@ -112,24 +136,32 @@ mutation {
 {
   "data": {
     "mergeCarts": {
-      "items": [
-        {
-          "id": "14",
-          "product": {
-            "name": "Overnight Duffle",
-            "sku": "24-WB07"
+      "itemsV2": {
+        "items": [
+          {
+            "id": "14",
+            "product": {
+              "name": "Overnight Duffle",
+              "sku": "24-WB07"
+            },
+            "quantity": 2
           },
-          "quantity": 2
-        },
-        {
-          "id": "17",
-          "product": {
-            "name": "Radiant Tee",
-            "sku": "WS12"
-          },
-          "quantity": 1
-        }
-      ]
+          {
+            "id": "17",
+            "product": {
+              "name": "Radiant Tee",
+              "sku": "WS12"
+            },
+            "quantity": 1
+          }
+        ]
+      },
+      "total_count": 2,
+      "page_info": {
+        "page_size": 20,
+        "current_page": 1,
+        "total_pages": 1
+      }
     }
   }
 }

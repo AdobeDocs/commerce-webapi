@@ -2,8 +2,6 @@
 title: createCustomerAddress mutation
 ---
 
-import BetaNote from '/src/_includes/graphql/notes/beta.md'
-
 # createCustomerAddress mutation
 
 Use the `createCustomerAddress` mutation to create the customer's address.
@@ -85,8 +83,6 @@ mutation {
 ```
 
 ### Create an address with custom attributes
-
-<BetaNote />
 
 The following call creates an address for the specified customer, assigning values for custom attributes.
 

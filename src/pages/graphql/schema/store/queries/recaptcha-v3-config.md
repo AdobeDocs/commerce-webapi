@@ -2,11 +2,7 @@
 title: recaptchaV3Config query
 ---
 
-import BetaPwaNote from '/src/_includes/graphql/notes/beta-pwa.md'
-
 # recaptchaV3Config query
-
-<BetaPwaNote />
 
 The `recaptchaV3Config` query returns information about the reCaptcha V3 configuration.
 
@@ -16,7 +12,7 @@ The `recaptchaV3Config` query returns information about the reCaptcha V3 configu
 
 ## Reference
 
-The [`recaptchaV3Config`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#query-recaptchaV3Config) reference provides detailed information about the types and fields defined in this query.
+The [`recaptchaV3Config`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-recaptchaV3Config) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

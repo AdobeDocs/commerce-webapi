@@ -2,10 +2,6 @@
 title: attributesList query
 ---
 
-import BetaNote from '/src/_includes/graphql/notes/beta.md'
-
-<BetaNote />
-
 # attributesList query
 
 The `attributesList` query retrieves a list of attributes metadata for a given `entity_type`.
@@ -18,7 +14,7 @@ The possible values for this attribute are populated by the modules introducing 
 
 ## Reference
 
-The [`attributesList`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#query-attributesList) reference provides detailed information about the types and fields defined in this query.
+The [`attributesList`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-attributesList) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

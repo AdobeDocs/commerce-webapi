@@ -2,9 +2,6 @@
 title: createCustomerV2 mutation
 ---
 
-import BetaNote from '/src/_includes/graphql/notes/beta.md'
-import BetaNote2 from '/src/_includes/graphql/notes/beta.md'
-
 # createCustomerV2 mutation
 
 The `createCustomerV2` mutation creates a customer account. Use the [`createCustomerAddress` mutation](create-address.md) to complete the customer profile and define billing and shipping addresses.
@@ -12,8 +9,6 @@ The `createCustomerV2` mutation creates a customer account. Use the [`createCust
 The `createCustomerV2` mutation supersedes the `createCustomer` mutation as the means to create a customer account. The input objects differ between these two mutations. The `createCustomer` mutation required the `CustomerInput` object, as did the `updateCustomer` mutation. The attributes required for creating a customer are different than those for updating a customer, but you could not determine this by looking at the schema. The `createCustomerV2` mutation requires the `CustomerCreateInput` object, which it does not share with the [`updateCustomerV2` mutation](create-v2.md).
 
 In keeping with current security and privacy best practices, if you include the `date_of_birth` input attribute, be sure you are aware of any potential legal and security risks associated with the storage of customers' full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
-
-<BetaNote />
 
 As of version 2.4.7, you can use the `custom_attributes` field to define an array of custom attributes to apply to the customer.
 
@@ -74,8 +69,6 @@ mutation {
 ```
 
 ### Create a customer with custom attributes
-
-<BetaNote2 />
 
 The following call creates a new customer, assigning values for custom attributes.
 
@@ -180,7 +173,7 @@ Attribute |  Data Type | Description
 --- | --- | ---
 `allow_remote_shopping_assistance` | Boolean | Indicates whether the customer has enabled remote shopping assistance
 `date_of_birth` | String | The customer's date of birth. In keeping with current security and privacy best practices, be sure you are aware of any potential legal and security risks associated with the storage of customers' full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
-`custom_attributes` | [AttributeValueInput!] | The customer's custom attributes (2.4.7-beta only)
+`custom_attributes` | [AttributeValueInput!] | The customer's custom attributes
 `dob` | String | Deprecated. Use `date_of_birth` instead. The customer's date of birth
 `email` | String! | The customer's email address
 `firstname` | String! | The customer's first name
@@ -194,8 +187,6 @@ Attribute |  Data Type | Description
 `taxvat` | String | The customer's Tax/VAT number (for corporate customers)
 
 The `AttributeValueInput` object contains the following attributes:
-
-<BetaNote />
 
 Attribute |  Data Type | Description
 --- | --- | ---
