@@ -16,6 +16,8 @@ The [`storeConfig`](https://developer.adobe.com/commerce/webapi/graphql-api/inde
 
 ## Example usage
 
+The [Commerce API playground](https://experienceleague.adobe.com/developer/commerce/storefront/playgrounds/commerce-services/) provides a sample `storeConfig` query that you can run against a live instance of Adobe Commerce with Luma sample data. Note that the responses may vary, depending on the configuration of the Commerce instance.
+
 ### Query a store's configuration
 
 The `storeConfig` query can return `base` and `extended` store configuration setting. The following call returns all `base` details of a store's configuration.
