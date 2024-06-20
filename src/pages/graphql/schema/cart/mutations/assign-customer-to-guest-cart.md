@@ -45,10 +45,18 @@ mutation {
   assignCustomerToGuestCart(
     cart_id: "MDYKgqIdWMKr7VD1zlYwxrB7kuX8lR5s"
   ) {
-    items {
-      quantity
-      product {
-        sku
+    itemsV2 {
+      items {
+        quantity
+        product {
+          sku
+        }
+      }
+      total_count
+      page_info {
+        page_size
+        current_page
+        total_pages
       }
     }
   }
@@ -61,20 +69,28 @@ mutation {
 {
   "data": {
     "assignCustomerToGuestCart": {
-      "items": [
-        {
-          "quantity": 1,
-          "product": {
-            "sku": "customer_item"
+      "itemsV2": {
+        "items": [
+          {
+            "quantity": 1,
+            "product": {
+              "sku": "customer_item"
+            }
+          },
+          {
+            "quantity": 1,
+            "product": {
+              "sku": "guest_item"
+            }
           }
-        },
-        {
-          "quantity": 1,
-          "product": {
-            "sku": "guest_item"
-          }
+        ],
+        "total_count": 1,
+        "page_info": {
+          "page_size": 20,
+          "current_page": 1,
+          "total_pages": 1
         }
-      ]
+      }
     }
   }
 }

@@ -2,8 +2,6 @@
 title: updateCustomerAddress mutation
 ---
 
-import BetaNote from '/src/_includes/graphql/notes/beta.md'
-
 # updateCustomerAddress mutation
 
 Use the `updateCustomerAddress` mutation to update the customer's address.
@@ -54,8 +52,6 @@ mutation {
 ```
 
 ### Update a customer address with custom attributes
-
-<BetaNote />
 
 The following call updates the customer's city, postcode, and custom attributes. The merchant has previously created the `station` and `services` attributes for customer addresses.
 

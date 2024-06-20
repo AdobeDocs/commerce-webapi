@@ -16,6 +16,8 @@ Perform the following actions before using the `placeOrder` mutation:
 -  Set the payment method
 -  For guest customers, assign an email to the cart
 
+As of Commerce 2.4.7, the `PlaceOrderOutput` object can contain `orderV2`, which provides full details about the order. When the mutation runs, Commerce generates and returns a token in the `orderV2.token` field. You can supply the token value to the [`guestOrderByToken` query](../../orders/queries/guest-order-by-token.md) to retrieve details about an order created by a guest shopper.
+
 <InlineAlert variant="info" slots="text" />
 
 The `placeOrder` mutation runs asynchronously if the `AsyncOrder` module has been enabled. By default, the mutation runs synchronously. [Asynchronous order placement](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/high-throughput-order-processing.html#asynchronous-order-placement) describes the benefits of enabling the module.
@@ -47,8 +49,13 @@ mutation {
       cart_id: "IeTUiU0oCXjm0uRqGCOuhQ2AuQatogjG"
     }
   ) {
-    order {
-      order_number
+    orderV2 {
+      number
+      token
+    }
+    errors {
+      message
+      code
     }
   }
 }
@@ -60,9 +67,11 @@ mutation {
 {
   "data": {
     "placeOrder": {
-      "order": {
-        "order_number": "000000006"
-      }
+      "orderV2": {
+        "number": "000000006",
+        "token": "0:3:OSScWU6PKLn3kFyMhNWyskG0opgVvFBnJmtuaFHKGwDFT83S6Kv9U39iYwixuU+vhwDz2AF4pCs3GtLhHbQ="
+      },
+      "errors": []
     }
   }
 }
@@ -70,14 +79,15 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Enter a valid payment method and try again` | The payment method was not set. See [setPaymentMethodOnCart](../../cart/mutations/set-payment-method.md) mutation.
-`Guest email for cart is missing.` | The guest attempted to place an order but did not provide an email address. See [setGuestEmailOnCart](../../cart/mutations/set-guest-email.md) mutation.
-`Please check the billing address information` | The billing address was not set. See [setBillingAddressOnCart](../../cart/mutations/set-billing-address.md) mutation.
-`Required parameter "cart_id" is missing` | The mutation does not contain a `cart_id` parameter.
-`Some addresses can't be used due to the configurations for specific countries` | The shipping method was not set. See [setShippingMethodsOnCart](set-shipping-method.md) mutation.
-`Some of the products are out of stock` | One of the products in the shopping cart are currently out of stock.
-`The current user cannot perform operations on cart` | An unauthorized user (guest) tried to place an order on behalf of an authorized user (customer), or a customer tried to place an order on behalf of another customer.
-`The shipping method is missing. Select the shipping method and try again` | The shipping method was not set. See [setShippingMethodsOnCart](set-shipping-method.md) mutation.
-`Unable to place order: A server error stopped your order from being placed. Please try to place your order again` | The shopper tried to place an order when no products are in the shopping cart.
+Code | Error | Description
+--- | --- | ---
+`CART_NOT_FOUND` | `Could not find a cart with ID` | The specified cart ID is invalid.
+`CART_NOT_ACTIVE` | `The cart isn't active.` | The specified cart ID is not active.
+`GUEST_EMAIL_MISSING` | `Guest email for cart is missing.` | The guest attempted to place an order but did not provide an email address. See [setGuestEmailOnCart](../../cart/mutations/set-guest-email.md) mutation.
+`UNABLE_TO_PLACE_ORDER` | `A server error stopped your order from being placed. Please try to place your order again` | The shopper tried to place an order when no products are in the shopping cart.
+`UNABLE_TO_PLACE_ORDER` | `Some addresses can't be used due to the configurations for specific countries` | The shipping method was not set. See [setShippingMethodsOnCart](set-shipping-method.md) mutation.
+`UNABLE_TO_PLACE_ORDER` | `The shipping method is missing. Select the shipping method and try again` | The shipping method was not set. See [setShippingMethodsOnCart](set-shipping-method.md) mutation.
+`UNABLE_TO_PLACE_ORDER` | `Please check the billing address information` | The billing address was not set. See [setBillingAddressOnCart](../../cart/mutations/set-billing-address.md) mutation.
+`UNABLE_TO_PLACE_ORDER` | `Enter a valid payment method and try again` | The payment method was not set. See [setPaymentMethodOnCart](../../cart/mutations/set-payment-method.md) mutation.
+`UNABLE_TO_PLACE_ORDER` | `Some of the products are out of stock` | One of the products in the shopping cart are currently out of stock.
+`UNDEFINED` | `UNDEFINED` | The error message does not match any error code

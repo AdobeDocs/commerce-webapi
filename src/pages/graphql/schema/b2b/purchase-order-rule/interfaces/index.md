@@ -5,10 +5,10 @@ edition: b2b
 
 # PurchaseOrderApprovalRuleConditionInterface attributes and implementations
 
-[`PurchaseOrderApprovalRuleConditionInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-PurchaseOrderApprovalRuleConditionInterface) provides details about the approval rule conditions. It has the following implementations:
+[`PurchaseOrderApprovalRuleConditionInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-PurchaseOrderApprovalRuleConditionInterface) provides details about the approval rule conditions. It has the following implementations:
 
-*  [`PurchaseOrderApprovalRuleConditionAmount`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-PurchaseOrderApprovalRuleConditionAmount)
-*  [`PurchaseOrderApprovalRuleConditionQuantity`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-PurchaseOrderApprovalRuleConditionQuantity)
+*  [`PurchaseOrderApprovalRuleConditionAmount`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-PurchaseOrderApprovalRuleConditionAmount)
+*  [`PurchaseOrderApprovalRuleConditionQuantity`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-PurchaseOrderApprovalRuleConditionQuantity)
 
 ## Example usage
 

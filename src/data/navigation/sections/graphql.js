@@ -20,6 +20,10 @@ module.exports = [
         path: "/graphql/usage/custom-filters/",
       },
       {
+        title: "GraphQL status codes and responses",
+        path: "/graphql/usage/api-response/"
+      },
+      {
         title: "Headers",
         path: "/graphql/usage/headers/",
       },
@@ -166,6 +170,10 @@ module.exports = [
                 path: "/graphql/schema/cart/mutations/apply-coupon/",
               },
               {
+                title: "applyCouponsToCart",
+                path: "/graphql/schema/cart/mutations/apply-coupons/"
+              },
+              {
                 title: "applyGiftCartToCart",
                 path: "/graphql/schema/cart/mutations/apply-giftcard/",
               },
@@ -182,8 +190,16 @@ module.exports = [
                 path: "/graphql/schema/cart/mutations/assign-customer-to-guest-cart/",
               },
               {
+                title: "clearCart",
+                path: "/graphql/schema/cart/mutations/clear-cart/"
+              },
+              {
                 title: "createEmptyCart",
                 path: "/graphql/schema/cart/mutations/create-empty-cart/",
+              },
+              {
+                title: "createGuestCart",
+                path: "/graphql/schema/cart/mutations/create-guest-cart/",
               },
               {
                 title: "mergeCarts",
@@ -200,6 +216,10 @@ module.exports = [
               {
                 title: "removeCouponFromCart",
                 path: "/graphql/schema/cart/mutations/remove-coupon/",
+              },
+              {
+                title: "removeCouponsFromCart",
+                path: "/graphql/schema/cart/mutations/remove-coupons"
               },
               {
                 title: "removeGiftCardFromCart",
@@ -482,6 +502,10 @@ module.exports = [
                 path: "/graphql/schema/customer/mutations/change-password/",
               },
               {
+                title: "confirmEmail",
+                path: "/graphql/schema/customer/mutations/confirm-email/",
+              },
+              {
                 title: "createCustomer",
                 path: "/graphql/schema/customer/mutations/create/",
               },
@@ -761,6 +785,20 @@ module.exports = [
               },
             ],
           },
+          {
+            title: "Queries",
+            path: "graphql/schema/orders/queries/",
+            pages: [
+              {
+                title: "guestOrder",
+                path: "graphql/schema/orders/queries/guest-order"
+              },
+              {
+                title: "guestOrderByToken",
+                path: "graphql/schema/orders/queries/guest-order-by-token"
+              }
+            ]
+          }
         ],
       },
       {
@@ -1070,6 +1108,10 @@ module.exports = [
                 path: "/graphql/schema/store/queries/recaptcha-v3-config/",
               },
               {
+                title: "recaptchaFormConfig",
+                path: "/graphql/schema/store/queries/recaptcha-form-config/",
+              },
+              {
                 title: "storeConfig",
                 path: "/graphql/schema/store/queries/store-config/",
               },
@@ -1272,14 +1314,14 @@ module.exports = [
     ],
   },
   {
-    title: "Reference (2.4.6)",
+    title: "Reference (2.4.7)",
     path: "/graphql/reference",
     pages: [
       {
-        title: "Reference (2.4.7-beta)",
-        path: "/graphql/reference/beta"
-      }
-    ]
+        title: "2.4.6",
+        path: "/graphql/reference/2.4.6",
+      },
+    ],
   },
   {
     title: "Release notes",

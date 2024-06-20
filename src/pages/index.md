@@ -1,6 +1,6 @@
 ---
 title: Commerce Web API
-description: Learn about using REST and GraphQL with Adobe Commerce and Magento Open Source APIs.
+description: Learn how to use the Adobe Commerce REST and GraphQL APIs.
 keywords:
   - GraphQL
   - REST
@@ -12,19 +12,19 @@ keywords:
 
 # Commerce Web APIs
 
-The Commerce Web APIs allow you to access and interact with your, integrate third-party software, and build a headless applications. The Web API documentation is divided into three guides: REST, GraphQL, and Getting Started.
+The Commerce Web APIs allow you to integrate third-party software and build headless applications for Adobe Commerce. The Web API documentation is divided into three guides: REST, GraphQL, and Getting Started.
 
 <Resources slots="heading, links"/>
 
 ## Resources
 
-*  [PHP Developer Guide](https://developer.adobe.com/commerce/php/development)
+*  [Extensibility Guide](https://developer.adobe.com/commerce/extensibility/)
 *  [Configuring a Service as a Web API](https://developer.adobe.com/commerce/php/development/components/web-api/services/)
 *  [REST API Reference](rest/quick-reference/index.md)
 
 ## Overview
 
-This documentation provides resources for working with Adobe Commerce and Magento Open Source web APIs.
+This documentation provides resources for working with Adobe Commerce web APIs.
 
 ## Discover
 

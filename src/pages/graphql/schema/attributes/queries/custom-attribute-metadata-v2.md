@@ -2,10 +2,6 @@
 title: customAttributeMetadataV2 query
 ---
 
-import BetaNote from '/src/_includes/graphql/notes/beta.md'
-
-<BetaNote />
-
 # customAttributeMetadataV2 query
 
 The `customAttributeMetadataV2` query retrieves metadata for the specified `entity_type` and `attribute_code` pairs.
@@ -23,7 +19,7 @@ This new query has several features that were not available in the deprecated qu
 
 ## Reference
 
-The [`customAttributeMetadataV2`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#query-customAttributeMetadataV2) reference provides detailed information about the types and fields defined in this query.
+The [`customAttributeMetadataV2`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-customAttributeMetadataV2) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

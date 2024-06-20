@@ -17,9 +17,11 @@ The `POST /rest/<store_view_code>/V1/import/csv` and `POST /rest/<store_view_cod
 *  `customer_finance`
 *  `stock_sources`
 
-### Source Data Format and Requirements
+## Source Data Format and Requirements
 
 Ensure your source data conforms to the sequence and format expected by Commerce. To acquaint yourself with each import entity's requirements, visit the Import page in the Admin, select an entity from the dropdown, and click **Download Sample File**.
+
+The original CSV or JSON data must use UTF-8 encoding before any compression or base64 encoding is applied. This ensures compatibility with Adobe Commerce's internal processing and supports a wide range of international characters and symbols.
 
 ### CSV Import
 
@@ -30,10 +32,6 @@ The `import/csv` endpoint expects data in base64 encoded format:
 *  **Delimiter**: This API is tailored for CSV files that use commas as field and multi-value separators. Any other delimiters will cause the import to fail.
 
 ### JSON Import
-
-import BetaNote from '/src/_includes/graphql/notes/beta.md'
-
-<BetaNote />
 
 The `import/json` endpoint is designed for JSON data:
 
@@ -164,10 +162,6 @@ In this example, the CSV payload contains three rows of data, and one of them is
 
 ## Import JSON API
 
-import BetaNote2 from '/src/_includes/graphql/notes/beta.md'
-
-<BetaNote2 />
-
 The Import JSON API is exclusively available via REST and does not support SOAP. This is because the payload consists of complex JSON objects with nested arrays, which are inherently challenging to represent with the XML structure that SOAP relies upon.
 
 The `POST /rest/<store_view_code>/V1/import/json` endpoint uses the `StartImportInterface` service to efficiently import entities into Adobe Commerce. The payload must contain data in JSON format.
@@ -214,7 +208,7 @@ POST /rest/<store_view_code>/V1/import/json
         "behavior": "append",
         "validation_strategy": "validation-stop-on-errors",
         "allowed_error_count": 0,
-        "items":	[
+        "items":    [
             {
                 "sku": "Simple Product 1",
                 "store_view_code": "",
@@ -660,7 +654,7 @@ The Import JSON API does not create attributes automatically. You need to create
         "behavior": "append",
         "validation_strategy": "validation-stop-on-errors",
         "allowed_error_count": 10,
-        "items":	[
+        "items":    [
             {
                 "sku": "Simple Product 1",
                 "tier_price_website": "All Websites [USD]",
@@ -701,7 +695,7 @@ The Import JSON API does not create attributes automatically. You need to create
         "behavior": "add_update",
         "validation_strategy": "validation-stop-on-errors",
         "allowed_error_count": 0,
-        "items":	[
+        "items":    [
             {
                 "_email": "johndoe@example.com",
                 "_website": "base",
@@ -732,7 +726,7 @@ Customers and Addresses information is represented as an array of JSON objects.
         "behavior": "append",
         "validation_strategy": "validation-stop-on-errors",
         "allowed_error_count": 0,
-        "items":	[
+        "items":    [
             {
                 "email": "johndoe@example.com",
                 "_website": "base",

@@ -22,6 +22,10 @@ The [`cart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#
 
 ## Sample queries
 
+The [Commerce API playground](https://experienceleague.adobe.com/developer/commerce/storefront/playgrounds/commerce-services/) provides a sample `cart` query that you can run against a live instance of Adobe Commerce with Luma sample data.
+
+You can convert the hard-coded `cart_id` values in the following sample queries to a [variable](../../../usage/index.md#query-variables) and run them in the API playground. Note that the responses may vary, depending on the configuration of the Commerce instance.
+
 ### Cart ready for checkout
 
 The following query shows the status of a cart that is ready to be converted into an order.
@@ -93,18 +97,22 @@ The following query shows the status of a cart that is ready to be converted int
         method_title
       }
     }
-    items {
-      id
-      product {
-        name
-        sku
+    itemsV2 {
+      total_count
+      items {
+        id
+        product {
+          name
+          sku
+        }
+        quantity
       }
-      quantity
-      errors {
-        code
-        message
+      page_info {
+        page_size
+        current_page
+        total_pages
       }
-    }
+    }      
     available_payment_methods {
       code
       title
@@ -222,24 +230,32 @@ The following query shows the status of a cart that is ready to be converted int
           }
         }
       ],
-      "items": [
-        {
-          "uid": "Mg==",
-          "product": {
-            "name": "Strive Shoulder Pack",
-            "sku": "24-MB04"
+      "itemsV2": {
+        "total_count": 2,
+        "items": [
+          {
+            "uid": "Mg==",
+            "product": {
+              "name": "Strive Shoulder Pack",
+              "sku": "24-MB04"
+            },
+            "quantity": 2
           },
-          "quantity": 2
-        },
-        {
-          "uid": "17",
-          "product": {
-            "name": "Savvy Shoulder Tote",
-            "sku": "24-WB05"
-          },
-          "quantity": 1
+          {
+            "uid": "17",
+            "product": {
+              "name": "Savvy Shoulder Tote",
+              "sku": "24-WB05"
+            },
+            "quantity": 1
+          }
+        ],
+        "page_info": {
+          "page_size": 20,
+          "current_page": 1,
+          "total_pages": 1
         }
-      ],
+      },
       "available_payment_methods": [
         {
           "code": "braintree_cc_vault",
@@ -284,27 +300,35 @@ If other promotions or price adjustments are applied to the cart through either 
 {
   cart(cart_id: "v7jYJUjvPeHbdMJRcOfZIeQhs2Xc2ZKT") {
     email
-    items {
-      uid
-      prices {
-        total_item_discount {
-          value
-        }
-        price {
-          value
-        }
-        discounts {
-          label
-          amount {
+    itemsV2 {
+      total_count
+      items {
+        uid
+        prices {
+          total_item_discount {
             value
           }
+          price {
+            value
+          }
+          discounts {
+            label
+            amount {
+              value
+            }
+          }
         }
+        product {
+          name
+          sku
+        }
+        quantity
+      },
+      page_info {
+          page_size
+          current_page
+          total_pages
       }
-      product {
-        name
-        sku
-      }
-      quantity
     }
     applied_coupons {
       code
@@ -332,44 +356,52 @@ If other promotions or price adjustments are applied to the cart through either 
   "data": {
     "cart": {
       "email": "roni_cost@example.com",
-      "items": [
-        {
-          "uid": "MjY=",
-          "prices": {
-            "total_item_discount": {
-              "value": 37.7
-            },
-            "price": {
-              "value": 29
-            },
-            "discounts": [
-              {
-                "label": "Discount (3T1free, 10% Off for New Customers)",
-                "amount": {
-                  "value": 37.7
-                }
+      "itemsV2": {
+        "total_count": 1,
+        "items": [
+          {
+            "uid": "MjY=",
+            "prices": {
+              "total_item_discount": {
+                "value": 37.7
               },
-              {
-                "label": "Gift Card",
-                "amount": {
-                  "value": 0.1
-                }
+              "price": {
+                "value": 29
               },
-              {
-                "label": "Store Credit",
-                "amount": {
-                  "value": 0.1
+              "discounts": [
+                {
+                  "label": "Discount (3T1free, 10% Off for New Customers)",
+                  "amount": {
+                    "value": 37.7
+                  }
+                },
+                {
+                  "label": "Gift Card",
+                  "amount": {
+                    "value": 0.1
+                  }
+                },
+                {
+                  "label": "Store Credit",
+                  "amount": {
+                    "value": 0.1
+                  }
                 }
-              }
-            ]
-          },
-          "product": {
-            "name": "Elisa EverCool&trade; Tee",
-            "sku": "WS06"
-          },
-          "quantity": 4
+              ]
+            },
+            "product": {
+              "name": "Elisa EverCool&trade; Tee",
+              "sku": "WS06"
+            },
+            "quantity": 4
+          }
+        ],
+        "page_info": {
+          "page_size": 20,
+          "current_page": 1,
+          "total_pages": 1
         }
-      ],
+      },
       "applied_coupons": [
         {
           "code": "NEW"
@@ -420,27 +452,35 @@ The cart in the example contains 12 units of `24-UG05` and 8 units of `24-UG-01`
 ```graphql
 query {
   cart(cart_id: "v7jYJUjvPeHbdMJRcOfZIeQhs2Xc2ZKT"){
-    items {
-      uid
-      quantity
-      product{
-        name
-        sku
-        price_tiers {
-          quantity
-          final_price {
-            value
+    itemsV2 {
+      total_count
+      items {
+        uid
+        quantity
+        product {
+          name
+          sku
+          price_tiers {
+            quantity
+            final_price {
+              value
+            }
+            discount {
+              amount_off
+              percent_off
+            }
           }
-          discount {
-            amount_off
-            percent_off
+        }
+        prices{
+          price{
+            value
           }
         }
       }
-      prices{
-        price{
-          value
-        }
+      page_info {
+        page_size
+        current_page
+        total_pages
       }
     }
     prices {
@@ -471,88 +511,96 @@ query {
 {
   "data": {
     "cart": {
-      "items": [
-        {
-          "uid": "NjU=",
-          "quantity": 12,
-          "product": {
-            "name": "Go-Get'r Pushup Grips",
-            "sku": "24-UG05",
-            "price_tiers": [
-              {
-                "quantity": 5,
-                "final_price": {
-                  "value": 16
+      "itemsV2": {
+        "total_count": 2,
+        "items": [
+          {
+            "uid": "NjU=",
+            "quantity": 12,
+            "product": {
+              "name": "Go-Get'r Pushup Grips",
+              "sku": "24-UG05",
+              "price_tiers": [
+                {
+                  "quantity": 5,
+                  "final_price": {
+                    "value": 16
+                  },
+                  "discount": {
+                    "amount_off": 3,
+                    "percent_off": 15.79
+                  }
                 },
-                "discount": {
-                  "amount_off": 3,
-                  "percent_off": 15.79
+                {
+                  "quantity": 10,
+                  "final_price": {
+                    "value": 11
+                  },
+                  "discount": {
+                    "amount_off": 8,
+                    "percent_off": 42.11
+                  }
                 }
-              },
-              {
-                "quantity": 10,
-                "final_price": {
-                  "value": 11
-                },
-                "discount": {
-                  "amount_off": 8,
-                  "percent_off": 42.11
-                }
+              ]
+            },
+            "prices": {
+              "price": {
+                "value": 11
               }
-            ]
+            }
           },
-          "prices": {
-            "price": {
-              "value": 11
+          {
+            "uid": "NjY=",
+            "quantity": 8,
+            "product": {
+              "name": "Quest Lumaflex&trade; Band",
+              "sku": "24-UG01",
+              "price_tiers": [
+                {
+                  "quantity": 5,
+                  "final_price": {
+                    "value": 18.05
+                  },
+                  "discount": {
+                    "amount_off": 0.95,
+                    "percent_off": 5
+                  }
+                },
+                {
+                  "quantity": 10,
+                  "final_price": {
+                    "value": 17.1
+                  },
+                  "discount": {
+                    "amount_off": 1.9,
+                    "percent_off": 10
+                  }
+                },
+                {
+                  "quantity": 15,
+                  "final_price": {
+                    "value": 16.15
+                  },
+                  "discount": {
+                    "amount_off": 2.85,
+                    "percent_off": 15
+                  }
+                }
+              ]
+            },
+            "prices": {
+              "price": {
+                "value": 18.05
+              }
             }
           }
-        },
-        {
-          "uid": "NjY=",
-          "quantity": 8,
-          "product": {
-            "name": "Quest Lumaflex&trade; Band",
-            "sku": "24-UG01",
-            "price_tiers": [
-              {
-                "quantity": 5,
-                "final_price": {
-                  "value": 18.05
-                },
-                "discount": {
-                  "amount_off": 0.95,
-                  "percent_off": 5
-                }
-              },
-              {
-                "quantity": 10,
-                "final_price": {
-                  "value": 17.1
-                },
-                "discount": {
-                  "amount_off": 1.9,
-                  "percent_off": 10
-                }
-              },
-              {
-                "quantity": 15,
-                "final_price": {
-                  "value": 16.15
-                },
-                "discount": {
-                  "amount_off": 2.85,
-                  "percent_off": 15
-                }
-              }
-            ]
-          },
-          "prices": {
-            "price": {
-              "value": 18.05
-            }
-          }
+        ],
+        "page_info": {
+          "page_size": 20,
+          "current_page": 1,
+          "total_pages": 1
         }
-      ],
+      },
       "prices": {
         "discounts": [
           {
