@@ -10,7 +10,8 @@
     "@adobe/gatsby-theme-aio": "4.11.9",
     "gatsby": "4.22.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "@adobe/eds-dev-site-theme": "0.0.1"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^12.0.2",
@@ -38,7 +39,8 @@
     "dev:spectaql": "spectaql --development-mode-live spectaql/config.yml",
     "dev:spectaql:beta": "spectaql --development-mode-live spectaql/config_beta.yml",
     "lint": "docker run --rm -e RUN_LOCAL=true --env-file '.github/super-linter.env' -v \"$PWD\":/tmp/lint github/super-linter:slim-v5",
-    "buildNavigation": "webpack --config webpack.config.js && node eds/scripts/buildNavigation.js"
+    "buildNavigation": "webpack --config webpack.config.js && node eds/scripts/buildNavigation.js",
+    "postinstall": "cp node_modules/@adobe/eds-dev-site-theme/"
   },
   "packageManager": "yarn@3.2.4"
 }
