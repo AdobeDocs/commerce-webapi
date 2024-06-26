@@ -4,22 +4,24 @@ const fs = require('node:fs');
 
 try {
     const topNav = nav.gatsbyConfig.siteMetadata;
-    let topNavHtml = '';
+    let topNavHtml = `<html>\n`;
 
     // TODO: prob need url fixer from gatsby theme
     if (topNav?.home) {
-        topNavHtml += `<li> <a href="${topNav.home.path}"> ${topNav.home.title} </a> </li>`;
+        topNavHtml += `<li> <a href="${topNav.home.path}"> ${topNav.home.title} </a> </li>\n`;
     }
 
     topNav.pages?.forEach((navItem) => {
-        topNavHtml += `<li> <a href="${navItem.path}"> ${navItem.title} </a> </li>`;
+        topNavHtml += `<li> <a href="${navItem.path}"> ${navItem.title} </a> </li>\n`;
     });
 
+    topNavHtml += `</html>`
     fs.writeFileSync(path.resolve(__dirname + '/../out/topNav.html'), topNavHtml);
 
     const sideNav = nav.gatsbyConfig.siteMetadata.subPages;
-    let sideNavHtml = ''
-    sideNavHtml = buildSideNavRecursively(sideNav);
+    let sideNavHtml = `<html>`;
+    sideNavHtml += buildSideNavRecursively(sideNav);
+    sideNavHtml += `</html>`;
     fs.writeFileSync(path.resolve(__dirname + '/../out/sideNav.html'), sideNavHtml);
 } catch (err) {
     console.error(err);
