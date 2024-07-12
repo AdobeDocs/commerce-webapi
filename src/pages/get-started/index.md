@@ -19,7 +19,7 @@ The Adobe Commerce and Magento Open Source web API framework provides integrator
 
 *  All accounts and integrations are assigned resources that they have access to. The API framework checks that any call has the authorization to perform the request.
 
-*  Any native or third-party service can be [configured as a web API](https://developer.adobe.com/commerce/php/development/components/web-api/services/) with a few lines of xml. To configure a web API, you define XML elements and attributes in a `webapi.xml` configuration file. If a service is not defined in a configuration file, it will not be exposed at all.
+*  Any native or third-party service can be [configured as a web API](https://developer.adobe.com/commerce/php/development/components/web-api/services/) with a few lines of XML. To configure a web API, you define XML elements and attributes in a `webapi.xml` configuration file. If a service is not defined in a configuration file, it will not be exposed at all.
 
 *  The framework is based on the CRUD (create, read, update, delete) & search model. The system does not currently support webhooks.
 
@@ -33,11 +33,11 @@ The APIs can be used to perform a wide array of tasks. For example:
 
 *  Create a shopping app. This can be a traditional app that a user downloads on a mobile device. You could also create an app that an employee uses on a showroom floor to help customers make purchases.
 
-*  Integrate with CRM (Customer Relationship Management) or ERP (Enterprise Resource Planning) backend systems, such as Salesforce or Xero.
+*  Integrate with CRM (Customer Relationship Management) or ERP (Enterprise Resource Planning) back-end systems, such as Salesforce or Xero.
 
 *  Integrate with a CMS (Content Management System). Currently, content tagging is not supported.
 
-*  Create JavaScript widgets in the storefront or on the Admin panel. The widget makes AJAX calls to access services.
+*  Create JavaScript widgets in the storefront or on the Admin panel. The widget makes Ajax calls to access services.
 
 ## How do I get started?
 

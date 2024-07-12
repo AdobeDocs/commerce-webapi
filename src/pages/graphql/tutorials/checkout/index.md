@@ -10,14 +10,14 @@ keywords:
 
 # GraphQL checkout tutorial
 
-This tutorial describes how to place an order through GraphQl. Customers can make purchases in two ways:
+This tutorial describes how to place an order through GraphQL. Customers can make purchases in two ways:
 
 -  As a logged-in user
 -  As a guest user who does not create an account
 
 The **10-step tutorial** generally takes **30 minutes**.
 
-Adobe Commerce and Magento Open Source GraphQL is designed to run queries and perform actions on behalf of a customer. Adobe Commerce and Magento Open Source GraphQL does not perform backend tasks, such as manage invoices or shipments.
+Adobe Commerce and Magento Open Source GraphQL is designed to run queries and perform actions on behalf of a customer. Adobe Commerce and Magento Open Source GraphQL does not perform back-end tasks, such as manage invoices or shipments.
 
 ### Before you begin
 
@@ -26,7 +26,7 @@ Complete the following prerequisites:
 -  Install an Adobe Commerce or Magento Open Source instance with sample data.
    The sample data defines a functional store, called Luma, that sells fitness clothing and accessories. The store does not provide any sandbox accounts for testing credit card payments, so transactions will be simulated using an offline payment method.
 
--  Install a GraphQl client. You can use any GraphQl client to send calls to Magento. [Altair](https://altair.sirmuel.design/) is a good example.
+-  Install a GraphQL client. You can use any GraphQL client to send calls to Magento. [Altair](https://altair.sirmuel.design/) is a good example.
 
 -  Learn about GraphQL, how it works, and how to use it. See [Introduction to GraphQL](https://graphql.org/learn/) for details.
 

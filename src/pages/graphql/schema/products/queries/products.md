@@ -71,7 +71,7 @@ Attribute | Description
 
 You can define a custom attribute to be a filter by specifying the `custom_attributesV2` attribute within the output of your query, as shown in [Filter custom_attributesV2 of a product](#filter-custom_attributesv2-of-a-product).
 
-You can also modify the code base and [create a custom attribute](../../../usage/custom-filters.md) that can be used as a top-level filter. Use the `input_type` output attribute of the [`customAttributeMetadata` query](../../attributes/queries/custom-attribute-metadata.md) to determine the type of filter to use.
+You can also modify the codebase and [create a custom attribute](../../../usage/custom-filters.md) that can be used as a top-level filter. Use the `input_type` output attribute of the [`customAttributeMetadata` query](../../attributes/queries/custom-attribute-metadata.md) to determine the type of filter to use.
 
 #### FilterEqualTypeInput attributes
 
@@ -1773,7 +1773,7 @@ query {
 }
 ```
 
-### Query a URL's rewrite information
+### Query a URLs rewrite information
 
 The following product query returns URL rewrite information about the Joust Duffle Bag.
 

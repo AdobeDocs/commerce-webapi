@@ -1,4 +1,4 @@
-1. When the buyer clicks a PayPal button, the frontend executes the [`createPaypalExpressToken`](/src/pages/graphql/schema/checkout/mutations/create-paypal-express-token.md) mutation.
+1. When the buyer clicks a PayPal button, the front end executes the [`createPaypalExpressToken`](/src/pages/graphql/schema/checkout/mutations/create-paypal-express-token.md) mutation.
 
 1. The application requests a secure token from PayPal. The application gathers information in the specified cart and sends this information to PayPal as part of a request for a secure token.
 
@@ -10,7 +10,7 @@
 
 1. If the customer approves the payment, PayPal redirects the customer back to the payment confirmation page. The response includes the secure token and payer ID as GET parameters.
 
-1. Set the payment method. The frontend runs the [`setPaymentMethodOnCart`](/src/pages/graphql/schema/cart/mutations/set-payment-method.md) mutation. The payload includes the PayPal token, the payer ID, and the cart ID. The cart may have been updated since the token was requested, as shipping costs, taxes, and other adjustments might have been applied to the cart. The application submits the updated cart to PayPal.
+1. Set the payment method. The front end runs the [`setPaymentMethodOnCart`](/src/pages/graphql/schema/cart/mutations/set-payment-method.md) mutation. The payload includes the PayPal token, the payer ID, and the cart ID. The cart may have been updated since the token was requested, as shipping costs, taxes, and other adjustments might have been applied to the cart. The application submits the updated cart to PayPal.
 
 1. The application returns a `Cart` object.
 

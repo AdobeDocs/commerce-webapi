@@ -5,6 +5,7 @@
       "exclude": [
         "back[- ]end(\\w*)",
         "bug[- ]fix(es)?",
+        "client ?side",
         "end-?user(s)?",
         "indexes\\b",
         "front[- ]end(\\w*)",

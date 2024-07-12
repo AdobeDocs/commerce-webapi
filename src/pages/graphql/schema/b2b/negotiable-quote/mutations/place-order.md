@@ -25,7 +25,7 @@ Perform the following actions before using the `placeNegotiableQuoteOrder` mutat
 -  [Set the shipping method](set-shipping-methods.md)
 -  [Set the payment method](set-payment-method.md)
 
-You cannot manage orders with GraphQL, because orders are part of the backend. You can use REST or SOAP calls to manage orders to their completion.
+You cannot manage orders with GraphQL, because orders are part of the back end. You can use REST or SOAP calls to manage orders to their completion.
 
 ## Syntax
 

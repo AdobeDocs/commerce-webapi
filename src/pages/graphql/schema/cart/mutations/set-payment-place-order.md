@@ -11,7 +11,7 @@ contributor_link: https://www.rightpoint.com/
 The `setPaymentMethodAndPlaceOrder` mutation has been deprecated. Use the [setPaymentMethodOnCart](set-payment-method.md) and [placeOrder](place-order.md) mutations instead. You can run the two methods in the same call if your use case allows it.
 
 The `setPaymentMethodAndPlaceOrder` mutation sets the cart payment method and converts the cart into an order. The
-mutation returns the resulting order ID. You cannot manage orders with GraphQL, because orders are part of the backend.
+mutation returns the resulting order ID. You cannot manage orders with GraphQL, because orders are part of the back end.
 You can use REST or SOAP calls to manage orders to their completion.
 
 Perform the following actions before using the `setPaymentMethodAndPlaceOrder` mutation:

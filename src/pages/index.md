@@ -48,7 +48,7 @@ The REST API documentation describes the REST APIs that are available on the lat
 
 [GraphQL](./graphql/)
 
-GraphQL is a language for querying and manipulating data. It is widely viewed as more powerful, flexible, and efficient than REST for frontend development.
+GraphQL is a language for querying and manipulating data. It is widely viewed as more powerful, flexible, and efficient than REST for front end development.
 
 ## Contributing to this documentation
 

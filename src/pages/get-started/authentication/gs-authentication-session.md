@@ -30,7 +30,7 @@ Similarly, if an admin is logged in to the Admin and the JavaScript widget invok
 
 Admin session-based authentication is not currently possible for API endpoints.
 
-The session based authentication functionality is restricted to AJAX calls. Direct browser requests cannot be made due to security vulnerabilities. A developer can create a custom storefront widget that can issue requests without additional authentication steps.
+The session based authentication functionality is restricted to Ajax calls. Direct browser requests cannot be made due to security vulnerabilities. A developer can create a custom storefront widget that can issue requests without additional authentication steps.
 
 ## Related topic
 

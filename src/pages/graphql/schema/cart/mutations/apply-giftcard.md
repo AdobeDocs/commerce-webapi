@@ -5,7 +5,7 @@ edition: ee
 
 # applyGiftCardToCart mutation
 
-The `applyGiftCardToCart` mutation applies a pre-defined gift card code to the specified cart.
+The `applyGiftCardToCart` mutation applies a predefined gift card code to the specified cart.
 
 ## Syntax
 

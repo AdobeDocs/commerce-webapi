@@ -10,4 +10,4 @@ Attribute | Type | Description
 `label` | String | The label assigned to the attribute
 `sort_order` | Int | The relative position of the attribute
 `uid` | ID | The unique ID of an attribute
-`ui_input` | UiInputTypeInterface | Frontend UI properties of the attribute
+`ui_input` | UiInputTypeInterface | Front end UI properties of the attribute
