@@ -22,11 +22,9 @@
         "ZIP"
       ],
       "terms": [
-        ["backend(\\w*)", "back end$1"],
         ["bug[- ]fix", "bugfix"],
         ["bug-?fixes", "bug fixes"],
         ["indices\\b", "indexes"],
-        ["frontend(\\w*)", "front end$1"],
         "macOS",
         "ReadMe",
         ["smart[- ]phone(s)?", "smartphone$1"],
