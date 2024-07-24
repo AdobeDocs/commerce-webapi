@@ -17,7 +17,7 @@ This tutorial describes how to place an order through GraphQL. Customers can mak
 
 The **10-step tutorial** generally takes **30 minutes**.
 
-Adobe Commerce and Magento Open Source GraphQL is designed to run queries and perform actions on behalf of a customer. Adobe Commerce and Magento Open Source GraphQL does not perform back-end tasks, such as manage invoices or shipments.
+Adobe Commerce and Magento Open Source GraphQL is designed to run queries and perform actions on behalf of a customer. Adobe Commerce and Magento Open Source GraphQL does not perform backend tasks, such as manage invoices or shipments.
 
 ### Before you begin
 

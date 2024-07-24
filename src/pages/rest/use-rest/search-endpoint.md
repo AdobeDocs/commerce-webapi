@@ -29,11 +29,11 @@ Contains aggregations/buckets in the response? | No | Yes, for `quick_search_con
 
 The `V1/search` endpoint is generally more useful when you have only human (or human-like) search terms at hand, targeted to isolate a single product or a limited set of products. An added benefit is that the results are pre-sorted by their applicable search relevance.
 
-In all other cases, for example when building and filtering product collections, and especially when other non-human back-end data is available, such as an attribute's option IDs, the `V1/products` endpoint is a good choice.
+In all other cases, for example when building and filtering product collections, and especially when other non-human backend data is available, such as an attribute's option IDs, the `V1/products` endpoint is a good choice.
 
 ## Build queries for V1/search
 
-When you use `V1/search`, you are searching for products through the catalog. The response comes from the configured search engine (**Stores** > Settings > **Configuration** > **Catalog** > **Catalog Search** > **Search engine**), and the results are the same as those returned by using the regular front-end search.
+When you use `V1/search`, you are searching for products through the catalog. The response comes from the configured search engine (**Stores** > Settings > **Configuration** > **Catalog** > **Catalog Search** > **Search engine**), and the results are the same as those returned by using the regular frontend search.
 
 All search queries run against the `catalogsearch_fulltext` index.
 

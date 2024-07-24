@@ -33,7 +33,7 @@ The APIs can be used to perform a wide array of tasks. For example:
 
 *  Create a shopping app. This can be a traditional app that a user downloads on a mobile device. You could also create an app that an employee uses on a showroom floor to help customers make purchases.
 
-*  Integrate with CRM (Customer Relationship Management) or ERP (Enterprise Resource Planning) back-end systems, such as Salesforce or Xero.
+*  Integrate with CRM (Customer Relationship Management) or ERP (Enterprise Resource Planning) backend systems, such as Salesforce or Xero.
 
 *  Integrate with a CMS (Content Management System). Currently, content tagging is not supported.
 

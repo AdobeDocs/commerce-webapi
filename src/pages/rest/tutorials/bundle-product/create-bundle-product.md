@@ -311,4 +311,4 @@ POST http://domain.com/rest/default/V1/products
 
 <InlineAlert variant="info" slots="text"/>
 
-If you do not see the bundle product on the front end, you can try reindexing and clearing the cache.
+If you do not see the bundle product on the frontend, you can try reindexing and clearing the cache.
