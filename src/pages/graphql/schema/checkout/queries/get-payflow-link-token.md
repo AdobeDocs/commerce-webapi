@@ -6,7 +6,7 @@ title: getPayflowLinkToken query
 
 The `getPayflowLinkToken` query retrieves PayPal payment credentials for a PayPal Payflow transaction. You must run this query after you [set the payment method](../../cart/mutations/set-payment-method.md) and [place the order](../../cart/mutations/place-order.md).
 
-See [Paypal Payflow Link payment method](../../../payment-methods/payflow-link.md) for detailed information about the workflow of PayPal Payflow Link transactions.
+See [PayPal Payflow Link payment method](../../../payment-methods/payflow-link.md) for detailed information about the workflow of PayPal Payflow Link transactions.
 
 ## Syntax
 

@@ -5,7 +5,7 @@ keywords:
   - GraphQL
 ---
 
-# Run Graphql queries and mutations
+# Run GraphQL queries and mutations
 
 ## Queries
 

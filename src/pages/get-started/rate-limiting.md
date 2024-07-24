@@ -8,7 +8,7 @@ keywords:
 
 # Rate limiting
 
-In a carding attack, an attacker tries to determine which credit card numbers are valid, usually in batches of thousands. Attackers can use similar techniques to brute force missing details, such as the expiration date. Adobe Commerce merchants can be targeted by this attack type through their shops and integrations with 3rd-party payment gateways.
+In a carding attack, an attacker tries to determine which credit card numbers are valid, usually in batches of thousands. Attackers can use similar techniques to brute force missing details, such as the expiration date. Adobe Commerce merchants can be targeted by this attack type through their shops and integrations with third-party payment gateways.
 
 As of Adobe Commerce 2.4.7, you can configure rate limiting for the payment information transmitted using REST and GraphQL. This added layer of protection allows merchants to prevent and decrease the volume of carding attacks that test many credit card numbers at once.
 
@@ -212,7 +212,7 @@ sales/backpressure/enabled - 1
 
 ## Log contents
 
-If rate limiting has been enabled for the payment information endpoint and the GraphQl mutation via the UI/CLI, but the Redis service connection for store log requests has not been configured in the `app/etc/env.php` file, then the rate-limiting will not apply. The behavior will be the same if this option is disabled, but the application logs (`<magento-root>/var/log/system.log`) will contain the following message:
+If rate limiting has been enabled for the payment information endpoint and the GraphQL mutation via the UI/CLI, but the Redis service connection for store log requests has not been configured in the `app/etc/env.php` file, then the rate-limiting will not apply. The behavior will be the same if this option is disabled, but the application logs (`<magento-root>/var/log/system.log`) will contain the following message:
 
 ```text
 ...
@@ -237,7 +237,7 @@ Cache-Control: no-store
 {"message":"Too Many Requests","trace":null}
 ```
 
-If rate limiting is applied to a GraphQl request, then a response with HTTP status code `200 - Ok` will be generated and all relevant information will be present in the response body.
+If rate limiting is applied to a GraphQL request, then a response with HTTP status code `200 - Ok` will be generated and all relevant information will be present in the response body.
 
 Example:
 

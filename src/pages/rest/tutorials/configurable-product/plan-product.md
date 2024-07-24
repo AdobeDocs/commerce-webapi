@@ -208,7 +208,7 @@ searchCriteria[filter_groups][0][filters][0][condition_type]=gte
 }
 ```
 
-Note that women's tops and tees have different ids than men's tops and tees. The values for men's clothing are:
+Note that women's tops and tees have different IDs than men's tops and tees. The values for men's clothing are:
 
 *  Men - `11`
 *  Tops - `12`

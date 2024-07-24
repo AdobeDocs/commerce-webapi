@@ -172,7 +172,7 @@ The specified fixtures will now execute on every test run.
 
 Every fixture should have a rollback file. A rollback is a set of operations that remove changes introduced by the fixture from the system once the test is completed.
 
-The rollback filename should correspond to the original fixture filename postfixed by `_rollback` keyword. For example, if the fixture file name is `virtual_product.php`, name the rollback file `virtual_product_rollback.php`.
+The rollback filename should correspond to the original fixture filename postfixed by `_rollback` keyword. For example, if the fixture filename is `virtual_product.php`, name the rollback file `virtual_product_rollback.php`.
 
 The following fixture rollback removes the newly-created product from the database.
 

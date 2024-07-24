@@ -17,7 +17,7 @@ If the call is successful on a full shipment, Adobe Commerce changes the status 
 
 `POST <host>/rest/<store_code>/V1/order/3/ship`
 
-where `3` is the order id.
+where `3` is the order ID.
 
 **Headers:**
 

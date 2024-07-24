@@ -5,7 +5,7 @@ edition: ee
 
 # applyCouponsToCart mutation
 
-The `applyCouponsToCart` mutation applies one or more pre-defined coupon codes to the specified cart. Valid coupon codes are defined in cart price rules.
+The `applyCouponsToCart` mutation applies one or more predefined coupon codes to the specified cart. Valid coupon codes are defined in cart price rules.
 
 The `type` field of the `ApplyCouponsToCartInput` object must be set to either `APPEND` or `REPLACE`. If the value is `REPLACE`, the mutation removes any coupon codes that were previously applied. If the value is `APPEND`, the mutation keeps previously-applied coupons.
 

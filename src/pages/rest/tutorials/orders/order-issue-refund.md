@@ -60,7 +60,7 @@ The `return_to_stock_items` array specifies which `order_item_id`s can be return
 
 **Response:**
 
-A credit memo id, such as `3`.
+A credit memo ID, such as `3`.
 
 ### Verify this step
 
