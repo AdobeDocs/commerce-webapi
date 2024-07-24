@@ -22,6 +22,10 @@ The [`cart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#
 
 ## Sample queries
 
+The [Commerce API playground](https://experienceleague.adobe.com/developer/commerce/storefront/playgrounds/commerce-services/) provides a sample `cart` query that you can run against a live instance of Adobe Commerce with Luma sample data.
+
+You can convert the hard-coded `cart_id` values in the following sample queries to a [variable](../../../usage/index.md#query-variables) and run them in the API playground. Note that the responses may vary, depending on the configuration of the Commerce instance.
+
 ### Cart ready for checkout
 
 The following query shows the status of a cart that is ready to be converted into an order.
