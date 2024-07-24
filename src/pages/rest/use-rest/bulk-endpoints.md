@@ -15,7 +15,7 @@ Cron jobs are the default mechanism for [managing message queues](https://experi
 
 <InlineAlert variant="info" slots="text"/>
 
-Before using the Bulk API to process messages, you must install and configure RabbitMQ, which is the default message broker. See [Setup RabbiMQ service](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/rabbitmq) for cloud infrastructure projects and [Message broker](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/rabbitmq.html) for on-premises installations.
+Before using the Bulk API to process messages, you must install and configure RabbitMQ, which is the default message broker. See [Setup RabbitMQ service](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/rabbitmq) for cloud infrastructure projects and [Message broker](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/rabbitmq.html) for on-premises projects.
 
 ## Routes
 
