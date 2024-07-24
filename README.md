@@ -15,7 +15,7 @@ Ensure that your local environment matches the prerequisites described in the Ad
 
 To build the site locally:
 
-1. Clone this repo.
+1. Clone this repository.
 1. Install project dependencies.
 
    ```bash

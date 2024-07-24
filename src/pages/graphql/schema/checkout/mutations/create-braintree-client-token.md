@@ -6,7 +6,7 @@ contributor_link: https://www.rightpoint.com/
 
 # createBraintreeClientToken mutation
 
-The `createBraintreeClientToken` mutation creates the client token for Braintree Javascript SDK initialization.
+The `createBraintreeClientToken` mutation creates the client token for Braintree JavaScript SDK initialization.
 
 ## Syntax
 

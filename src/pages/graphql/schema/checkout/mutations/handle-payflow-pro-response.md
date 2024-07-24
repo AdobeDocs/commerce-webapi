@@ -19,7 +19,7 @@ The `handlePayflowProResponse` mutation sends the silent post data that the clie
 'AVSADDR=Y&SECURETOKENID=MYSECURETOKENID&SHIPTOSTATE=AL&TRANSTIME=2019-06-24+07%3A53%3A10'
 ```
 
-See [Paypal Payflow Pro payment method](../../../payment-methods/payflow-pro.md) for detailed information about the workflow of PayPal Payflow Pro transactions.
+See [PayPal Payflow Pro payment method](../../../payment-methods/payflow-pro.md) for detailed information about the workflow of PayPal Payflow Pro transactions.
 
 ## Syntax
 

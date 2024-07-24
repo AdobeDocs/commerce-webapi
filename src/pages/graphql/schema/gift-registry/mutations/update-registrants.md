@@ -28,7 +28,7 @@ The [`updateGiftRegistryRegistrants`](https://developer.adobe.com/commerce/webap
 
 ## Example usage
 
-The following example updates a registrant's e-mail address.
+The following example updates a registrant's email address.
 
 **Request:**
 

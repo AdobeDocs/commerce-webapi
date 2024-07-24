@@ -35,7 +35,7 @@ Name | Description | Format | Requirements
 `status` | 0 - Pending approval<br/>1 - Approved<br/>2 - Rejected<br/>3 - Blocked | integer | Optional
 `company_name` | Company name  | string  | Required to create or update a company.
 `legal_name`  | Legal name  | string  | Optional
-`company_email`  | Official e-mail address of the company. It does not have to be unique.  | string | Required to create or update a company.
+`company_email`  | Official email address of the company. It does not have to be unique.  | string | Required to create or update a company.
 `vat_tax_id`  | The company's Value Added Tax ID  | string  | Optional
 `reseller_id`  | Unique ID of the company reseller  | string  | Optional
 `comment`  | Additional details about the company | string | Optional

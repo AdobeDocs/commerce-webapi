@@ -7,11 +7,11 @@ keywords:
 
 # GraphQL status codes and responses
 
-Each GraphQl API call returns a HTTP status code and a response payload. When an error occurs, the response payload returns an error message.
+Each GraphQL API call returns a HTTP status code and a response payload. When an error occurs, the response payload returns an error message.
 
 ### HTTP status codes
 
-Each GraphQl API call returns an HTTP status code that reflects the result of a request:
+Each GraphQL API call returns an HTTP status code that reflects the result of a request:
 
 HTTP code | Meaning | Description
 --- | --- | ---
