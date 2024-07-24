@@ -1773,7 +1773,7 @@ query {
 }
 ```
 
-### Query a URLs rewrite information
+### Query the rewrite information for a URL
 
 The following product query returns URL rewrite information about the Joust Duffle Bag.
 

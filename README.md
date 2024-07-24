@@ -11,7 +11,7 @@ Our goal is to provide the Adobe Commerce and Magento Open Source communities wi
 ## Local development
 
 This is a [Gatsby](https://www.gatsbyjs.com/) project that uses the [Adobe I/O Theme](https://github.com/adobe/aio-theme).
-Ensure that your local environment matches the prerequisites described in the Adobe I/O Theme ReadMe.
+Ensure that your local environment matches the prerequisites described in the Adobe I/O Theme README.
 
 To build the site locally:
 
