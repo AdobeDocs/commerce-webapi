@@ -1,8 +1,6 @@
 ---
 name: Indexing
 on:
-  schedule:
-    - cron: '42 20 1 * *'
   workflow_dispatch:
     inputs:
       mode:
