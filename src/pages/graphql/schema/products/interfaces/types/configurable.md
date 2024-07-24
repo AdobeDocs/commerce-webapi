@@ -678,7 +678,7 @@ This example shows how the the media gallery items change as a shopper selects c
 
 The following query returns media gallery information on the parent configurable product and the `uid` values of each configurable option.
 
-Note that file names of the images are `ms10-blue_main_1.jpg`, `ms10-blue_alt1_1.jpg`, and `ms10-blue_back_1.jpg`.
+Note that filenames of the images are `ms10-blue_main_1.jpg`, `ms10-blue_alt1_1.jpg`, and `ms10-blue_back_1.jpg`.
 
 **Request:**
 

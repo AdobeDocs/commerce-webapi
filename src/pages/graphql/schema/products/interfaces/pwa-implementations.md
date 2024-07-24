@@ -27,7 +27,7 @@ Attribute | Data Type | Description
 
 Attribute | Data Type | Description
 --- | --- | ---
-`is_html_allowed` | Boolean | Indicates whether the attribute value is allowed to have html content
+`is_html_allowed` | Boolean | Indicates whether the attribute value is allowed to have HTML content
 `ui_input_type` | UiInputTypeEnum | The frontend input type of the attribute
 
 ## Types

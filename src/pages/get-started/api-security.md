@@ -159,7 +159,7 @@ If you need to change the default limits for REST endpoints, then edit the `weba
 
 The maximum page size setting controls the pagination of various web API responses. By default, the maximum value is `300`. You can change the default in the Admin by selecting **Stores** > Settings > **Configuration** > **Services** > **Web API Input Limits** or **GraphQl Input Limits** >  **Maximum Page Size** field.
 
-[GraphQL security configuration](../graphql/usage/security-configuration.md describes how to set the maximum page size in GraphQL.
+[GraphQL security configuration](../graphql/usage/security-configuration.md) describes how to set the maximum page size in GraphQL.
 
 ## Default page size
 

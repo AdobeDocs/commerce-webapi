@@ -4,7 +4,7 @@
 
 1. The client runs the [`placeOrder`](/src/pages/graphql/schema/cart/mutations/place-order.md) mutation, which creates an order and begins the authorization process.
 
-1. The application requests a secure token from the Paypal gateway.
+1. The application requests a secure token from the PayPal gateway.
 
 1. The gateway response includes a secure token, a secure token ID, and the URL to use for requesting the form in step 9. This token secures the data for a one-time transaction and is valid for 30 minutes.
 
