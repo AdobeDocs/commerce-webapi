@@ -68,7 +68,7 @@ See [Token-based authentication](/get-started/authentication/gs-authentication-t
 
 **Response:**
 
-Commerce returnsthe admin's access token.
+Commerce returns the admin's access token.
 
 `5r8cvmpr11j6gmau8990rcj2qk7unh8i`
 
