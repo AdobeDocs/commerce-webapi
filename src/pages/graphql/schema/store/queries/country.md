@@ -18,7 +18,7 @@ The [`country`](https://developer.adobe.com/commerce/webapi/graphql-api/index.ht
 
 ## Example usage
 
-The following query uses a two-letter abbreviation for the country ID (id: "AU"), which returns information about Australia.
+The following query uses a two-letter abbreviation for the country ID (`id: "AU"`), which returns information about Australia.
 
 **Request:**
 
