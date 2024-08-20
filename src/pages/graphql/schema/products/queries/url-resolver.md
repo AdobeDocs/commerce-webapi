@@ -22,7 +22,7 @@ The [`urlResolver`](https://developer.adobe.com/commerce/webapi/graphql-api/inde
 
 ## Example usage
 
-### Query the URL's information
+### Query information about the URL
 
 The following query returns information about the URL containing `joust-duffle-bag.html`.
 
