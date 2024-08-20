@@ -15,6 +15,11 @@
   # Start the job on a pull request to the main branch #
   ######################################################
   on: pull_request
+
+  #################################################
+  # Disable all permissions on the workflow level #
+  #################################################
+  permissions: {}
   
   ###############
   # Set the Job #
@@ -29,7 +34,6 @@
       ############################################
       permissions:
         contents: read
-        packages: read
         statuses: write
   
       ##################
@@ -56,34 +60,41 @@
           # Use full version number to avoid cases when a next
           # released version is buggy
           # About slim image: https://github.com/github/super-linter#slim-image
-          uses: super-linter/super-linter/slim@v6.7.0
+          uses: super-linter/super-linter/slim@v7.0.0
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             DEFAULT_BRANCH: main
-    test_and_build:
+
+    test:
       runs-on: ubuntu-latest
       needs: lint
+      permissions:
+        contents: read
+        statuses: write
       steps:
-        - name: Checkout Code
-          uses: actions/checkout@v4
-  
-        - name: Setup Node
-          uses: actions/setup-node@v3
+        - uses: actions/checkout@v4
+        - name: Use Setup Node and Install Dependencies Action
+          uses: commerce-docs/devsite-install-action@main
           with:
             node-version-file: '.nvmrc'
-            cache: 'yarn'
             cache-dependency-path: 'yarn.lock'
-  
-        - name: Enable Corepack for Yarn
-          run: corepack enable
-  
-        - name: Install Dependencies
-          run: yarn install
-          env:
-            YARN_ENABLE_IMMUTABLE_INSTALLS: false
   
         - name: Check links
           run: yarn test
+
+    build:
+      runs-on: ubuntu-latest
+      needs: test
+      permissions:
+        contents: read
+        statuses: write
+      steps:
+        - uses: actions/checkout@v4
+        - name: Use Setup Node and Install Dependencies Action
+          uses: commerce-docs/devsite-install-action@main
+          with:
+            node-version-file: '.nvmrc'
+            cache-dependency-path: 'yarn.lock'
   
         - name: Build site
           run: yarn build
