@@ -19,7 +19,7 @@
     "remark-lint-frontmatter-schema": "^3.15.4",
     "remark-lint-no-dead-urls": "^1.1.0",
     "remark-validate-links": "^13.0.1",
-    "spectaql": "^3.0.1"
+    "spectaql": "^3.0.2"
   },
   "scripts": {
     "start": "NODE_OPTIONS='--max-old-space-size=8192' gatsby build && gatsby serve",

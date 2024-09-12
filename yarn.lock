@@ -7131,6 +7131,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cheerio@npm:1.0.0-rc.12, cheerio@npm:^1.0.0-rc.10, cheerio@npm:^1.0.0-rc.12":
+  version: 1.0.0-rc.12
+  resolution: "cheerio@npm:1.0.0-rc.12"
+  dependencies:
+    cheerio-select: ^2.1.0
+    dom-serializer: ^2.0.0
+    domhandler: ^5.0.3
+    domutils: ^3.0.1
+    htmlparser2: ^8.0.1
+    parse5: ^7.0.0
+    parse5-htmlparser2-tree-adapter: ^7.0.0
+  checksum: 5d4c1b7a53cf22d3a2eddc0aff70cf23cbb30d01a4c79013e703a012475c02461aa1fcd99127e8d83a02216386ed6942b2c8103845fd0812300dd199e6e7e054
+  languageName: node
+  linkType: hard
+
 "cheerio@npm:^0.22.0":
   version: 0.22.0
   resolution: "cheerio@npm:0.22.0"
@@ -7152,21 +7167,6 @@ __metadata:
     lodash.reject: ^4.4.0
     lodash.some: ^4.4.0
   checksum: b0a6cfa61eb7ae96e4cb8cfeeb14eb45bb790fa40098509268629c4cecca5b99124aabe6daa1154c497ac8def47bc3f9706cef5f0e8a6177a0c137d4bdaaf8b7
-  languageName: node
-  linkType: hard
-
-"cheerio@npm:^1.0.0-rc.10, cheerio@npm:^1.0.0-rc.12":
-  version: 1.0.0-rc.12
-  resolution: "cheerio@npm:1.0.0-rc.12"
-  dependencies:
-    cheerio-select: ^2.1.0
-    dom-serializer: ^2.0.0
-    domhandler: ^5.0.3
-    domutils: ^3.0.1
-    htmlparser2: ^8.0.1
-    parse5: ^7.0.0
-    parse5-htmlparser2-tree-adapter: ^7.0.0
-  checksum: 5d4c1b7a53cf22d3a2eddc0aff70cf23cbb30d01a4c79013e703a012475c02461aa1fcd99127e8d83a02216386ed6942b2c8103845fd0812300dd199e6e7e054
   languageName: node
   linkType: hard
 
@@ -7525,7 +7525,7 @@ __metadata:
     remark-lint-frontmatter-schema: ^3.15.4
     remark-lint-no-dead-urls: ^1.1.0
     remark-validate-links: ^13.0.1
-    spectaql: ^3.0.1
+    spectaql: ^3.0.2
   languageName: unknown
   linkType: soft
 
@@ -20732,16 +20732,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"spectaql@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "spectaql@npm:3.0.1"
+"spectaql@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "spectaql@npm:3.0.2"
   dependencies:
     "@anvilco/apollo-server-plugin-introspection-metadata": ^2.2.3
     "@graphql-tools/load-files": ^6.3.2
     "@graphql-tools/merge": ^8.1.2
     "@graphql-tools/schema": ^9.0.1
     "@graphql-tools/utils": ^9.1.1
-    cheerio: ^1.0.0-rc.10
+    cheerio: 1.0.0-rc.12
     coffeescript: ^2.6.1
     commander: ^10.0.0
     fast-glob: ^3.2.12
@@ -20773,7 +20773,7 @@ __metadata:
     tmp: 0.2.1
   bin:
     spectaql: bin/spectaql.js
-  checksum: 55d4923b102368d823a0a853b9e4d1525aca9b9970fb54ecde4cf6f2a897a0842048787e2e837effbdd40e61972994197892e5ab6972aae6ecaaa6791b38c94e
+  checksum: 132da4d326d3d4ab3667ef93a501d3d3a9fb522f612e1de8b8a2da2c38f655531ea2b26d584fbbe669733d46547b5827c35899e19d45f23f08328ece10b47a20
   languageName: node
   linkType: hard
 
