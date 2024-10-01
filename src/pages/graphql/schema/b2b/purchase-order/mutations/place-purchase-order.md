@@ -7,7 +7,9 @@ edition: b2b
 
 The `placePurchaseOrder` mutation places a purchase order using the specified `cart_id`. If the request is successful, the status of the purchase order is `ORDER_PLACED`.
 
-Use the [`placeOrderForPurchaseOrder` mutation](place-order.md) to convert a purchase order to an order using the UID.
+<InlineAlert variant="info" slots="text" />
+
+To convert a purchase order to an order using the purchase order UID instead of the cart ID, use the  [`placeOrderforPurchase` mutation](place-order.md).
 
 ## Syntax
 
