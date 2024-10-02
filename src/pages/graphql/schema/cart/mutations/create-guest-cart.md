@@ -10,7 +10,7 @@ The `createGuestCart` mutation creates an empty shopping cart for a guest shoppe
 
 ```graphql
 mutation {
-  createGuestCart(input: ApplyCouponToCartInput) {
+  createGuestCart(input: CreateGuestCartInput) {
       CreateGuestCartOutput
   }
 }
