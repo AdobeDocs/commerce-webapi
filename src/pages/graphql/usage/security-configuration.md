@@ -16,7 +16,7 @@ To override these default values, create a custom module and provide a new value
 
 In GraphQL, you can limit the maximum page size allowed. For information about how to enable and configure this feature, as well as additional arguments that are applicable to web APIs in general, see [API security](../../get-started/api-security.md).
 
-## GraphQl module configuration
+## `GraphQl` module configuration
 
 The `GraphQl/etc/di.xml` file contains two arguments that can be overridden to enhance security and prevent performance bottlenecks:
 

@@ -2,6 +2,7 @@
   "rules": {
     "terminology": {
       "severity" : "warning",
+      "skip": ["Strong"],
       "exclude": [
         "back[- ]end(\\w*)",
         "bug[- ]fix(es)?",
@@ -26,7 +27,6 @@
         ["bug-?fixes", "bug fixes"],
         ["indices\\b", "indexes"],
         "macOS",
-        "ReadMe",
         ["smart[- ]phone(s)?", "smartphone$1"],
         ["spell[- ]?check(er|ing)", "spelling checker$1"],
         "UNIX",

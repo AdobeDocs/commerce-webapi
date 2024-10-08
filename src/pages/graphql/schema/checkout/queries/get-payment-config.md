@@ -321,7 +321,7 @@ Attribute |  Data Type | Description
 `sort_order` | String | The relative order the payment method is displayed on the checkout page.
 `title` | String! | The display name of the payment method.
 
-The possible values for `payment_source` are credit card (cc), PayPal (paypal), Google Pay (googlepay), and Apple Pay (applepay) depending on the payment method.
+The possible values for `payment_source` are credit card (`cc`), PayPal (`paypal`), Google Pay (`googlepay`), and Apple Pay (`applepay`), depending on the payment method.
 
 The `GooglePayConfig` payment method configuration also has a `button_styles` object containing the following attributes:
 
