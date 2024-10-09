@@ -98,10 +98,9 @@ The `\Magento\GraphQl\TestModule\GraphQlQueryTest.php` test case uses two test m
 
 Fixture and Rollback files are deprecated and should not be used for new WebAPI tests. All new WebAPI tests should use Data and Config Fixtures classes.
 
-
 In order to execute your tests, it is often required to populate some data in your testing environment or set up particular config settings. In order to do that, you can use Data Fixtures (for creating objects) and Config Fixtures (for configuration settings).
 
-Data Fixtures are special classes, which allow to create instance(s) of object(s) like eg. `Customer`, `Cart` or `Product`. See https://developer.adobe.com/commerce/testing/guide/integration/attributes/data-fixture/ for details about how to create and use Data Fixtures in your WebAPI tests. 
+Data Fixtures are special classes, which allow to create instance(s) of object(s) like eg. `Customer`, `Cart` or `Product`. See https://developer.adobe.com/commerce/testing/guide/integration/attributes/data-fixture/ for details about how to create and use Data Fixtures in your WebAPI tests.
 
 For more information about how to create and use Config Fixtures, see https://developer.adobe.com/commerce/testing/guide/integration/attributes/config-fixture/
 
