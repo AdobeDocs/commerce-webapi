@@ -92,162 +92,17 @@ The `\Magento\GraphQl\TestModule\GraphQlQueryTest.php` test case uses two test m
 *  `TestModuleGraphQlQuery` - This bare-bones module defines a `testItem` endpoint with the queryable attributes `item_id` and `name`. It's located at `<installdir>/dev/tests/api-functional/_files/TestModuleGraphQlQuery`.
 *  `TestModuleGraphQlQueryExtension` - This module extends `TestModuleGraphQlQuery`, adding the `integer_list` extension attribute. It's located at `<installdir>/dev/tests/api-functional/_files/TestModuleGraphQlQueryExtension`.
 
-## Creating fixtures
+## Data and config fixtures
 
-Fixtures, which are part of the testing framework, prepare preconditions in the system for further testing. For example, when you test the ability to add a product to the shopping cart, the precondition is that a product must be available for testing.
+<InlineAlert variant="warning" slots="text" />
 
-A fixture consists of two files:
+Fixture and rollback files are deprecated and should not be used for new WebAPI tests. All new WebAPI tests should use data and config fixtures classes.
 
-*  The fixture file, which defines the test
-*  A rollback file, which reverts the system to the state before the test was run
+To execute your tests, you often need to populate some data in your testing environment or set up particular config settings. Use data fixtures to create objects and config fixtures to define configuration settings.
 
-<InlineAlert variant="info" slots="text" />
+Data fixtures are special classes that allow you to create one or more instances of objects, such as `Customer`, `Cart` or `Product`. [Data fixture attribute](https://developer.adobe.com/commerce/testing/guide/integration/attributes/data-fixture/) in the _Application Testing Guide_ describes how to create and use data fixtures in your WebAPI tests.
 
-Each fixture should have a corresponding rollback file.
-
-Adobe Commerce and Magento Open Source provide fixtures in the `dev/tests/integration/testsuite/Magento/<ModuleName>/_files` directory. Use these fixtures whenever possible. When you create your own fixture, also create a proper rollback.
-
-### Fixture files
-
-The following fixture creates a simple product with predefined attributes.
-
-```php
-<?php
-use Magento\Catalog\Model\ProductFactory;
-use Magento\TestFramework\Helper\Bootstrap;
-use Magento\Catalog\Model\ResourceModel\Product as ProductResource;
-
-$productFactory = Bootstrap::getObjectManager()->get(ProductFactory::class);
-$product = $productFactory->create();
-$product->setTypeId(\Magento\Catalog\Model\Product\Type::TYPE_VIRTUAL)
-    ->setId(21)
-    ->setAttributeSetId(4)
-    ->setWebsiteIds([1])
-    ->setName('Virtual Product')
-    ->setSku('virtual-product')
-    ->setPrice(10)
-    ->setTaxClassId(0)
-    ->setVisibility(\Magento\Catalog\Model\Product\Visibility::VISIBILITY_BOTH)
-    ->setStatus(\Magento\Catalog\Model\Product\Attribute\Source\Status::STATUS_ENABLED)
-    ->setStockData(
-        [
-            'qty' => 100,
-            'is_in_stock' => 1,
-            'manage_stock' => 1,
-        ]
-    );
-/** @var ProductResource $productResource */
-$productResource = Bootstrap::getObjectManager()->create(ProductResource::class);
-$productResource->save($product);
-```
-
-To use this fixture in a test, add it to the test's annotation in the following manner:
-
-```php
-    /**
-     * @magentoApiDataFixture Magento/Catalog/_files/product_virtual.php
-     */
-    public function testAddVirtualProductToShoppingCart()
-    {
-      // Test body
-    }
-```
-
-You can also invoke multiple fixtures:
-
-```php
-    /**
-     * @magentoApiDataFixture Magento/Checkout/_files/quote_with_simple_product_saved.php
-     * @magentoApiDataFixture Magento/Customer/_files/customer.php
-     */
-    public function testSetNewBillingAddressByRegisteredCustomer()
-    {
-      // Test body
-    }
-```
-
-The specified fixtures will now execute on every test run.
-
-### Rollback files
-
-Every fixture should have a rollback file. A rollback is a set of operations that remove changes introduced by the fixture from the system once the test is completed.
-
-The rollback filename should correspond to the original fixture filename postfixed by `_rollback` keyword. For example, if the fixture filename is `virtual_product.php`, name the rollback file `virtual_product_rollback.php`.
-
-The following fixture rollback removes the newly-created product from the database.
-
-```php
-<?php
-use Magento\Catalog\Api\ProductRepositoryInterface;
-use Magento\Framework\Exception\NoSuchEntityException;
-use Magento\Framework\Exception\StateException;
-use Magento\TestFramework\Helper\Bootstrap;
-
-$registry = Bootstrap::getObjectManager()->get(\Magento\Framework\Registry::class);
-
-$registry->unregister('isSecureArea');
-$registry->register('isSecureArea', true);
-
-$productRepository = Bootstrap::getObjectManager()
-    ->create(ProductRepositoryInterface::class);
-
-try {
-    $product = $productRepository->get('virtual-product', false, null, true);
-    $productRepository->delete($product);
-} catch (NoSuchEntityException $exception) {
-    //Product already removed
-} catch (StateException $exception) {
-}
-
-$registry->unregister('isSecureArea');
-$registry->register('isSecureArea', false);
-```
-
-### Fixture configs
-
-Use the `@magentoConfigFixture` annotation to set a custom config value. It supports a `store` scope only.
-
-#### Syntax
-
-```php
-/**
- * @magentoConfigFixture <store_code>_store <config_key> <config_value>
- */
-```
-
-where
-
-*  `<store_code>` - Store code. See the `store`.`code` database field value.
-*  `<config_key>` - Config key. See `core_config_data`.`path`
-*  `<config_value>` - Config value. See `core_config_data`.`value`
-
-<InlineAlert variant="info" slots="text" />
-
-`@magentoConfigFixture` does not require a roll-back.
-
-#### Example usage
-
-The following example sets a store-scoped value `1` for the config key `checkout/options/enable_agreements` for the `default` store in the `GetActiveAgreement()` test:
-
-```php
-    /**
-     * @magentoConfigFixture default_store checkout/options/enable_agreements 1
-     */
-    public function testGetActiveAgreement()
-    {
-        ...
-    }
-```
-
-`@magentoConfigFixture` performs the following action as a background process before test execution:
-
-```sql
-INSERT INTO `core_config_data` (scope`, `scope_id`, `path`, `value`)
-VALUES
-  ('stores', 1, 'checkout/options/enable_agreements', '1');
-```
-
-The fixture automatically removes the `checkout/options/enable_agreements` config key from the database after the test has been completed.
+[Configuration fixture attribute](https://developer.adobe.com/commerce/testing/guide/integration/attributes/config-fixture/) describes config fixtures.
 
 ## Defining expected exceptions
 
