@@ -92,17 +92,17 @@ The `\Magento\GraphQl\TestModule\GraphQlQueryTest.php` test case uses two test m
 *  `TestModuleGraphQlQuery` - This bare-bones module defines a `testItem` endpoint with the queryable attributes `item_id` and `name`. It's located at `<installdir>/dev/tests/api-functional/_files/TestModuleGraphQlQuery`.
 *  `TestModuleGraphQlQueryExtension` - This module extends `TestModuleGraphQlQuery`, adding the `integer_list` extension attribute. It's located at `<installdir>/dev/tests/api-functional/_files/TestModuleGraphQlQueryExtension`.
 
-## Data and Config Fixtures
+## Data and config fixtures
 
 <InlineAlert variant="warning" slots="text" />
 
-Fixture and Rollback files are deprecated and should not be used for new WebAPI tests. All new WebAPI tests should use Data and Config Fixtures classes.
+Fixture and rollback files are deprecated and should not be used for new WebAPI tests. All new WebAPI tests should use data and config fixtures classes.
 
-In order to execute your tests, it is often required to populate some data in your testing environment or set up particular config settings. In order to do that, you can use Data Fixtures (for creating objects) and Config Fixtures (for configuration settings).
+To execute your tests, you often need to populate some data in your testing environment or set up particular config settings. Use data fixtures to create objects and config fixtures to define configuration settings.
 
-Data Fixtures are special classes, which allow to create instance(s) of object(s) like eg. `Customer`, `Cart` or `Product`. See https://developer.adobe.com/commerce/testing/guide/integration/attributes/data-fixture/ for details about how to create and use Data Fixtures in your WebAPI tests.
+Data fixtures are special classes that allow you to create one or more instances of objects, such as `Customer`, `Cart` or `Product`. [Data fixture attribute](https://developer.adobe.com/commerce/testing/guide/integration/attributes/data-fixture/) in the _Application Testing Guide_ describes how to create and use data fixtures in your WebAPI tests.
 
-For more information about how to create and use Config Fixtures, see https://developer.adobe.com/commerce/testing/guide/integration/attributes/config-fixture/
+[Configuration fixture attribute](https://developer.adobe.com/commerce/testing/guide/integration/attributes/config-fixture/) describes config fixtures.
 
 ## Defining expected exceptions
 
