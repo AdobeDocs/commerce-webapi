@@ -78,8 +78,12 @@ tags:
 - name: negotiable-carts/{cartId}/set-payment-information
 - name: negotiable-carts/{cartId}/shipping-information
 - name: negotiable-carts/{cartId}/totals
+- name: negotiableQuoteTemplate/accept
+- name: negotiableQuoteTemplate/generateQuote
+- name: negotiableQuoteTemplate/submitToSeller
 - name: payments-config/{location}
 - name: payments-config/apple-pay/{location}
+- name: payments-config/google-pay/{location}
 - name: payments-config/hosted-fields/{location}
 - name: payments-config/smart-buttons/{location}
 - name: payments-sdk/{location}
@@ -3227,6 +3231,122 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: negotiable-carts/{cartId}/totals
+  "/V1/negotiableQuoteTemplate/accept":
+    post:
+      tags:
+      - negotiableQuoteTemplate/accept
+      description: Create quote template from quote
+      operationId: PostV1NegotiableQuoteTemplateAccept
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PostV1NegotiableQuoteTemplateAcceptBody
+        in: body
+        schema:
+          required:
+          - templateId
+          properties:
+            templateId:
+              type: integer
+          type: object
+          xml:
+            name: request
+      responses:
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: negotiableQuoteTemplate/accept
+  "/V1/negotiableQuoteTemplate/generateQuote":
+    post:
+      tags:
+      - negotiableQuoteTemplate/generateQuote
+      description: Generate quote from template
+      operationId: PostV1NegotiableQuoteTemplateGenerateQuote
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PostV1NegotiableQuoteTemplateGenerateQuoteBody
+        in: body
+        schema:
+          required:
+          - templateId
+          properties:
+            templateId:
+              type: integer
+          type: object
+          xml:
+            name: request
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            type: integer
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: negotiableQuoteTemplate/generateQuote
+  "/V1/negotiableQuoteTemplate/submitToSeller":
+    post:
+      tags:
+      - negotiableQuoteTemplate/submitToSeller
+      description: Send template to seller
+      operationId: PostV1NegotiableQuoteTemplateSubmitToSeller
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PostV1NegotiableQuoteTemplateSubmitToSellerBody
+        in: body
+        schema:
+          required:
+          - templateId
+          properties:
+            templateId:
+              type: integer
+            commentText:
+              type: string
+            files:
+              type: array
+              items:
+                "$ref": "#/definitions/negotiable-quote-data-attachment-content-interface"
+          type: object
+          xml:
+            name: request
+      responses:
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: negotiableQuoteTemplate/submitToSeller
   "/V1/payments-config/apple-pay/{location}":
     get:
       tags:
@@ -3259,6 +3379,38 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: payments-config/apple-pay/{location}
+  "/V1/payments-config/google-pay/{location}":
+    get:
+      tags:
+      - payments-config/google-pay/{location}
+      description: Get Google Pay Config.
+      operationId: GetV1PaymentsconfigGooglepayLocation
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: location
+        in: path
+        type: string
+        required: true
+        description: sdk location.
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/payment-services-paypal-data-payment-config-google-pay-interface"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: payments-config/google-pay/{location}
   "/V1/payments-config/hosted-fields/{location}":
     get:
       tags:
@@ -4743,161 +4895,21 @@ definitions:
         description: Company ID.
       job_title:
         type: string
-        description: Get job title.
+        description: Job title.
       status:
         type: integer
         description: Customer status.
       telephone:
         type: string
-        description: Get telephone.
+        description: Telephone.
+      is_default:
+        type: boolean
+        description: Is default
       extension_attributes:
         "$ref": "#/definitions/company-data-company-customer-extension-interface"
   company-data-company-customer-extension-interface:
     type: object
     description: ExtensionInterface class for @see \Magento\Company\Api\Data\CompanyCustomerInterface
-  framework-search-search-result-interface:
-    type: object
-    description: Interface SearchResultInterface
-    properties:
-      items:
-        type: array
-        items:
-          "$ref": "#/definitions/framework-search-document-interface"
-      aggregations:
-        "$ref": "#/definitions/framework-search-aggregation-interface"
-      search_criteria:
-        "$ref": "#/definitions/framework-search-search-criteria-interface"
-      total_count:
-        type: integer
-        description: Total count.
-    required:
-    - items
-    - aggregations
-    - search_criteria
-    - total_count
-  framework-search-document-interface:
-    type: object
-    description: Interface Search Document
-    properties:
-      id:
-        type: integer
-      custom_attributes:
-        type: array
-        description: Custom attributes values.
-        items:
-          "$ref": "#/definitions/framework-attribute-interface"
-    required:
-    - id
-  framework-search-aggregation-interface:
-    type: object
-    description: Interface Aggregation to get faceted data
-    properties:
-      buckets:
-        type: array
-        description: All Document fields
-        items:
-          "$ref": "#/definitions/framework-search-bucket-interface"
-      bucket_names:
-        type: array
-        description: Document field names
-        items:
-          type: string
-    required:
-    - buckets
-    - bucket_names
-  framework-search-bucket-interface:
-    type: object
-    description: Interface for facet Bucket
-    properties:
-      name:
-        type: string
-        description: Field name
-      values:
-        type: array
-        description: Field values
-        items:
-          "$ref": "#/definitions/framework-search-aggregation-value-interface"
-    required:
-    - name
-    - values
-  framework-search-aggregation-value-interface:
-    type: object
-    description: Interface Aggregation Value
-    properties:
-      value:
-        type: string
-        description: Aggregation
-      metrics:
-        type: array
-        description: Metrics
-        items:
-          type: string
-    required:
-    - value
-    - metrics
-  framework-search-search-criteria-interface:
-    type: object
-    description: Interface SearchCriteriaInterface
-    properties:
-      request_name:
-        type: string
-      filter_groups:
-        type: array
-        description: A list of filter groups.
-        items:
-          "$ref": "#/definitions/framework-search-filter-group"
-      sort_orders:
-        type: array
-        description: Sort order.
-        items:
-          "$ref": "#/definitions/framework-sort-order"
-      page_size:
-        type: integer
-        description: Page size.
-      current_page:
-        type: integer
-        description: Current page.
-    required:
-    - request_name
-    - filter_groups
-  framework-search-filter-group:
-    type: object
-    description: Groups two or more filters together using a logical OR
-    properties:
-      filters:
-        type: array
-        description: A list of filters in this group
-        items:
-          "$ref": "#/definitions/framework-filter"
-  framework-filter:
-    type: object
-    description: Filter which can be used by any methods from service layer.
-    properties:
-      field:
-        type: string
-        description: Field
-      value:
-        type: string
-        description: Value
-      condition_type:
-        type: string
-        description: Condition type
-    required:
-    - field
-    - value
-  framework-sort-order:
-    type: object
-    description: Data object for sort order.
-    properties:
-      field:
-        type: string
-        description: Sorting field.
-      direction:
-        type: string
-        description: Sorting direction.
-    required:
-    - field
-    - direction
   catalog-data-product-render-search-results-interface:
     type: object
     description: Dto that holds render information about products
@@ -5538,6 +5550,12 @@ definitions:
         type: array
         items:
           "$ref": "#/definitions/negotiable-quote-data-item-note-interface"
+      is_discounting_locked:
+        type: boolean
+      min_qty:
+        type: number
+      max_qty:
+        type: number
   negotiable-quote-data-item-note-interface:
     type: object
     description: Interface ItemNoteInterface
@@ -5716,6 +5734,8 @@ definitions:
           "$ref": "#/definitions/quote-data-shipping-assignment-interface"
       negotiable_quote:
         "$ref": "#/definitions/negotiable-quote-data-negotiable-quote-interface"
+      company_id:
+        type: integer
       coupon_codes:
         type: array
         items:
@@ -6508,6 +6528,149 @@ definitions:
   requisition-list-data-requisition-list-extension-interface:
     type: object
     description: ExtensionInterface class for @see \Magento\RequisitionList\Api\Data\RequisitionListInterface
+  framework-search-search-result-interface:
+    type: object
+    description: Interface SearchResultInterface
+    properties:
+      items:
+        type: array
+        items:
+          "$ref": "#/definitions/framework-search-document-interface"
+      aggregations:
+        "$ref": "#/definitions/framework-search-aggregation-interface"
+      search_criteria:
+        "$ref": "#/definitions/framework-search-search-criteria-interface"
+      total_count:
+        type: integer
+        description: Total count.
+    required:
+    - items
+    - aggregations
+    - search_criteria
+    - total_count
+  framework-search-document-interface:
+    type: object
+    description: Interface Search Document
+    properties:
+      id:
+        type: integer
+      custom_attributes:
+        type: array
+        description: Custom attributes values.
+        items:
+          "$ref": "#/definitions/framework-attribute-interface"
+    required:
+    - id
+  framework-search-aggregation-interface:
+    type: object
+    description: Interface Aggregation to get faceted data
+    properties:
+      buckets:
+        type: array
+        description: All Document fields
+        items:
+          "$ref": "#/definitions/framework-search-bucket-interface"
+      bucket_names:
+        type: array
+        description: Document field names
+        items:
+          type: string
+    required:
+    - buckets
+    - bucket_names
+  framework-search-bucket-interface:
+    type: object
+    description: Interface for facet Bucket
+    properties:
+      name:
+        type: string
+        description: Field name
+      values:
+        type: array
+        description: Field values
+        items:
+          "$ref": "#/definitions/framework-search-aggregation-value-interface"
+    required:
+    - name
+    - values
+  framework-search-aggregation-value-interface:
+    type: object
+    description: Interface Aggregation Value
+    properties:
+      value:
+        type: string
+        description: Aggregation
+      metrics:
+        type: array
+        description: Metrics
+        items:
+          type: string
+    required:
+    - value
+    - metrics
+  framework-search-search-criteria-interface:
+    type: object
+    description: Interface SearchCriteriaInterface
+    properties:
+      request_name:
+        type: string
+      filter_groups:
+        type: array
+        description: A list of filter groups.
+        items:
+          "$ref": "#/definitions/framework-search-filter-group"
+      sort_orders:
+        type: array
+        description: Sort order.
+        items:
+          "$ref": "#/definitions/framework-sort-order"
+      page_size:
+        type: integer
+        description: Page size.
+      current_page:
+        type: integer
+        description: Current page.
+    required:
+    - request_name
+    - filter_groups
+  framework-search-filter-group:
+    type: object
+    description: Groups two or more filters together using a logical OR
+    properties:
+      filters:
+        type: array
+        description: A list of filters in this group
+        items:
+          "$ref": "#/definitions/framework-filter"
+  framework-filter:
+    type: object
+    description: Filter which can be used by any methods from service layer.
+    properties:
+      field:
+        type: string
+        description: Field
+      value:
+        type: string
+        description: Value
+      condition_type:
+        type: string
+        description: Condition type
+    required:
+    - field
+    - value
+  framework-sort-order:
+    type: object
+    description: Data object for sort order.
+    properties:
+      field:
+        type: string
+        description: Sorting field.
+      direction:
+        type: string
+        description: Sorting direction.
+    required:
+    - field
+    - direction
   checkout-data-shipping-information-interface:
     type: object
     description: Interface ShippingInformationInterface
@@ -6578,6 +6741,59 @@ definitions:
   checkout-data-totals-information-extension-interface:
     type: object
     description: ExtensionInterface class for @see \Magento\Checkout\Api\Data\TotalsInformationInterface
+  gift-card-account-data-gift-card-account-interface:
+    type: object
+    description: Gift Card Account data
+    properties:
+      gift_cards:
+        type: array
+        description: Cards codes.
+        items:
+          type: string
+      gift_cards_amount:
+        type: number
+        description: Cards amount in quote currency.
+      base_gift_cards_amount:
+        type: number
+        description: Cards amount in base currency.
+      gift_cards_amount_used:
+        type: number
+        description: Cards amount used in quote currency.
+      base_gift_cards_amount_used:
+        type: number
+        description: Cards amount used in base currency.
+      extension_attributes:
+        "$ref": "#/definitions/gift-card-account-data-gift-card-account-extension-interface"
+    required:
+    - gift_cards_amount
+    - base_gift_cards_amount
+    - gift_cards_amount_used
+    - base_gift_cards_amount_used
+  gift-card-account-data-gift-card-account-extension-interface:
+    type: object
+    description: ExtensionInterface class for @see \Magento\GiftCardAccount\Api\Data\GiftCardAccountInterface
+  negotiable-quote-data-attachment-content-interface:
+    type: object
+    description: Attachment files content interface.
+    properties:
+      base64_encoded_data:
+        type: string
+        description: Media data (base64 encoded content).
+      type:
+        type: string
+        description: MIME type.
+      name:
+        type: string
+        description: File name.
+      extension_attributes:
+        "$ref": "#/definitions/negotiable-quote-data-attachment-content-extension-interface"
+    required:
+    - base64_encoded_data
+    - type
+    - name
+  negotiable-quote-data-attachment-content-extension-interface:
+    type: object
+    description: ExtensionInterface class for @see \Magento\NegotiableQuote\Api\Data\AttachmentContentInterface
   two-factor-auth-provider-interface:
     type: object
     description: 2FA provider interface
@@ -6719,37 +6935,6 @@ definitions:
   two-factor-auth-data-duo-data-extension-interface:
     type: object
     description: ExtensionInterface class for @see \Magento\TwoFactorAuth\Api\Data\DuoDataInterface
-  gift-card-account-data-gift-card-account-interface:
-    type: object
-    description: Gift Card Account data
-    properties:
-      gift_cards:
-        type: array
-        description: Cards codes.
-        items:
-          type: string
-      gift_cards_amount:
-        type: number
-        description: Cards amount in quote currency.
-      base_gift_cards_amount:
-        type: number
-        description: Cards amount in base currency.
-      gift_cards_amount_used:
-        type: number
-        description: Cards amount used in quote currency.
-      base_gift_cards_amount_used:
-        type: number
-        description: Cards amount used in base currency.
-      extension_attributes:
-        "$ref": "#/definitions/gift-card-account-data-gift-card-account-extension-interface"
-    required:
-    - gift_cards_amount
-    - base_gift_cards_amount
-    - gift_cards_amount_used
-    - base_gift_cards_amount_used
-  gift-card-account-data-gift-card-account-extension-interface:
-    type: object
-    description: ExtensionInterface class for @see \Magento\GiftCardAccount\Api\Data\GiftCardAccountInterface
   inventory-in-store-pickup-api-data-search-result-interface:
     type: object
     description: Search results for providing pickup locations.
@@ -6937,12 +7122,15 @@ definitions:
     properties:
       apple_pay:
         "$ref": "#/definitions/payment-services-paypal-data-payment-config-apple-pay-interface"
+      google_pay:
+        "$ref": "#/definitions/payment-services-paypal-data-payment-config-google-pay-interface"
       hosted_fields:
         "$ref": "#/definitions/payment-services-paypal-data-payment-config-hosted-fields-interface"
       smart_buttons:
         "$ref": "#/definitions/payment-services-paypal-data-payment-config-smart-buttons-interface"
     required:
     - apple_pay
+    - google_pay
     - hosted_fields
     - smart_buttons
   payment-services-paypal-data-payment-config-apple-pay-interface:
@@ -7029,6 +7217,61 @@ definitions:
     required:
     - name
     - value
+  payment-services-paypal-data-payment-config-google-pay-interface:
+    type: object
+    description: ''
+    properties:
+      button_styles:
+        "$ref": "#/definitions/payment-services-paypal-data-payment-config-google-pay-button-styles-interface"
+      payment_source:
+        type: string
+        description: PaymentSource
+      code:
+        type: string
+        description: Code
+      sdk_params:
+        type: array
+        description: SDK params
+        items:
+          "$ref": "#/definitions/payment-services-paypal-data-payment-config-sdk-params-interface"
+      is_visible:
+        type: boolean
+        description: Visible
+      sort_order:
+        type: string
+        description: Sort Order
+      payment_intent:
+        type: string
+        description: Payment intent
+      title:
+        type: string
+        description: Title
+    required:
+    - button_styles
+    - payment_source
+    - code
+    - sdk_params
+    - is_visible
+    - sort_order
+    - payment_intent
+    - title
+  payment-services-paypal-data-payment-config-google-pay-button-styles-interface:
+    type: object
+    description: ''
+    properties:
+      color:
+        type: string
+        description: Color
+      height:
+        type: integer
+        description: Height
+      type:
+        type: string
+        description: Type
+    required:
+    - color
+    - height
+    - type
   payment-services-paypal-data-payment-config-hosted-fields-interface:
     type: object
     description: ''
@@ -7159,10 +7402,18 @@ definitions:
       status:
         type: string
         description: Payment order status
+      amount:
+        type: number
+        description: Payment order amount
+      currency_code:
+        type: string
+        description: Payment order currency code
     required:
     - id
     - mp_order_id
     - status
+    - amount
+    - currency_code
   payment-services-paypal-data-payment-order-details-interface:
     type: object
     description: Interface PaymentOrderDetailsInterface
@@ -7178,11 +7429,19 @@ definitions:
       status:
         type: string
         description: Payment order status
+      amount:
+        type: number
+        description: Payment order amount
+      currency_code:
+        type: string
+        description: Payment order currency code
     required:
     - payment_source_details
     - id
     - mp_order_id
     - status
+    - amount
+    - currency_code
   payment-services-paypal-data-payment-source-details-interface:
     type: object
     description: ''
@@ -7361,9 +7620,15 @@ x-tagGroups:
   - negotiable-carts/{cartId}/set-payment-information
   - negotiable-carts/{cartId}/shipping-information
   - negotiable-carts/{cartId}/totals
+- name: negotiableQuoteTemplate
+  tags:
+  - negotiableQuoteTemplate/accept
+  - negotiableQuoteTemplate/generateQuote
+  - negotiableQuoteTemplate/submitToSeller
 - name: payments config
   tags:
   - payments-config/apple-pay/{location}
+  - payments-config/google-pay/{location}
   - payments-config/hosted-fields/{location}
   - payments-config/smart-buttons/{location}
   - payments-config/{location}
