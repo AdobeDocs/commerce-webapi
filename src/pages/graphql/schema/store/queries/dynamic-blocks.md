@@ -10,7 +10,7 @@ The `dynamicBlocks` query returns a list of dynamic blocks that have been placed
 
 The Banner functionality was removed from Adobe Commerce and Magento Open Source 2.4.0 and replaced with dynamic blocks.
 
-When a [Dynamic Blocks Rotator inline widget is created](https://docs.magento.com/user-guide/cms/dynamic-blocks-rotate.html), the administrator can select the following options:
+When a [Dynamic Blocks Rotator inline widget is created](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/elements/dynamic-blocks/dynamic-blocks-rotate), the administrator can select the following options:
 
 *  **Specified Dynamic Blocks**
 *  **Cart Price Rule Related**
