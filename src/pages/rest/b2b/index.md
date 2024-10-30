@@ -58,4 +58,4 @@ SharedCatalog | Defines the visibility of products and prices in the catalog and
 ## Related information
 
 - [Install the B2B extension](https://experienceleague.adobe.com/docs/commerce-admin/b2b/install.html)
-- [Getting started with <Vars.sitedatavarb2b/>](https://docs.magento.com/user-guide/getting-started.html)
+- [Getting started with <Vars.sitedatavarb2b/>](https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home)

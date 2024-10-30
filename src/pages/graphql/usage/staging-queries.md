@@ -9,7 +9,7 @@ keywords:
 
 GraphQL allows you to use certain queries to return preview information for staged content. Staging, a Adobe Commerce feature, allows merchants to schedule a set of changes to the storefront that run for a prescribed time in the future. These changes, also known as a _campaign_, are defined within the Admin. Customers do not have access to staged content, and as a result, staging queries have requirements that do not apply to traditional queries and mutations.
 
-[Content Staging](https://docs.magento.com/m2/ee/user_guide/cms/content-staging.html) in the _Merchant User Guide_ describes how to create a campaign.
+[Content Staging](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/staging/content-staging) in the _Merchant User Guide_ describes how to create a campaign.
 
 You can use the following queries to return staged preview information.
 
