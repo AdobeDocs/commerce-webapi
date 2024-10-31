@@ -28,7 +28,7 @@ Complete the following prerequisites:
 
 *  Find the Commerce REST API documentation. You can view the [static REST API documentation on devdocs](../../quick-reference/index.md) or [generate a local API reference](/rest/use-rest/generate-local/).
 
-*  Find the Commerce Merchant documentation. Refer to [Getting Started with <Vars.sitedatavarce/> 2.1](https://docs.magento.com/user-guide/getting-started.html) for information about the Luma store that is created when you install Commerce with the sample data.
+*  Find the Commerce Merchant documentation. Refer to [Getting Started with <Vars.sitedatavarce/> 2.1](https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home) for information about the Luma store that is created when you install Commerce with the sample data.
 
 ### Other resources
 
