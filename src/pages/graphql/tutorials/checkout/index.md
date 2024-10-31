@@ -32,7 +32,7 @@ Complete the following prerequisites:
 
 -  Know how to generate a customer token. See [Authorization tokens](../../usage/authorization-tokens.md) for details.
 
--  In the Admin, create a [coupon](https://docs.magento.com/user-guide/marketing/price-rules-cart-coupon-code-configure.html) that will be used in [Step 7. Apply a coupon](../../tutorials/checkout/apply-coupon.md).
+-  In the Admin, create a [coupon](https://experienceleague.adobe.com/en/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart-coupon#configure-coupon-codes) that will be used in [Step 7. Apply a coupon](../../tutorials/checkout/apply-coupon.md).
 
 ### Other resources
 
