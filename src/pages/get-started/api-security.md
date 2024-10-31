@@ -18,7 +18,7 @@ Imposing restrictions on the size and number of resources that a user can reques
 
 By default, these input limits are disabled, but you can use the following methods to enable them:
 
--  Set the values in the [Admin](https://docs.magento.com/user-guide/configuration/services/magento-web-api.html).
+-  Set the values in the [Admin](https://experienceleague.adobe.com/en/docs/commerce-admin/config/services/magento-web-api).
 -  Run the [`bin/magento config:set` command](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configuration-management/set-configuration-values.html).
 -  Add entries to the [`env.php` file](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html#system).
 -  Set [environment variables](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/examples/example-environment-variables.html).
