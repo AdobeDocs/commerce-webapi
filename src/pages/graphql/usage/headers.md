@@ -54,7 +54,7 @@ The application accepts the following headers in a GraphQL request:
 Header name | Value | Description
 --- | --- | ---
 `Authorization` | `Bearer <authorization_token>` | A customer or admin token. [Authorization tokens](authorization-tokens.md) describes how to generate tokens.
-`Company` | `<company_id>` | The Company ID scope for the request that identifies the company scope when a company user is assigned to more than one company. If this value is omitted, the user's default company scope is used. Use the [Get customer query](../schema/customer/queries/customer.md) to retrieve information about the companies assigned to a company user account.
+`X-Adobe-Company` | `<company_id>` | The Company ID scope for the request that identifies the company scope when a company user is assigned to more than one company. If this value is omitted, the user's default company scope is used. Use the [Get customer query](../schema/customer/queries/customer.md) to retrieve information about the companies assigned to a company user account.
 `Content-Currency` | A valid currency code, such as `USD` | This header is required only if the currency is not the store view's default currency.
 `Content-Type` | `application/json` | Required for all requests.
 `Preview-Version` | A timestamp (seconds since January 1, 1970). | Use this header to query products, categories, price rules, and other entities that are scheduled to be in a campaign (staged content). Staging is supported in Adobe Commerce only.
