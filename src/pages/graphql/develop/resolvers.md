@@ -232,7 +232,7 @@ Use the following sample code as a template for the GraphQL resolver mutation cl
 ```php
 <?php
 /**
- * Copyright Adobe
+ * Copyright [first year code created] Adobe
  * All rights reserved.
  */
 declare(strict_types=1);
