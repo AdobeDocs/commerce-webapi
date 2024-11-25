@@ -16,6 +16,7 @@ schemes:
 - http
 tags:
 - name: addresses/{addressId}
+- name: adminuisdk/massaction/{request_id}
 - name: adobe_io_events/check_configuration
 - name: adobestock/asset/{id}
 - name: adobestock/asset/list
@@ -122,7 +123,10 @@ tags:
 - name: cmsPage/search
 - name: company/
 - name: company/{companyId}
+- name: company/{parentId}/relations
+- name: company/{parentId}/relations/{companyId}
 - name: company/assignRoles
+- name: company/relations
 - name: company/role/
 - name: company/role/{id}
 - name: company/role/{roleId}
@@ -165,12 +169,15 @@ tags:
 - name: customers/{customerId}
 - name: customers/{customerId}/billingAddress
 - name: customers/{customerId}/carts
+- name: customers/{customerId}/companies
+- name: customers/{customerId}/companies/{companyId}
 - name: customers/{customerId}/confirm
 - name: customers/{customerId}/password/resetLinkToken/{resetPasswordLinkToken}
 - name: customers/{customerId}/permissions/readonly
 - name: customers/{customerId}/shippingAddress
 - name: customers/{email}/activate
 - name: customers/addresses/{addressId}
+- name: customers/companies
 - name: customers/confirm
 - name: customers/isEmailAvailable
 - name: customers/me
@@ -279,6 +286,7 @@ tags:
 - name: negotiable-carts/{cartId}/set-payment-information
 - name: negotiable-carts/{cartId}/shipping-information
 - name: negotiable-carts/{cartId}/totals
+- name: negotiableQuote/{negotiableQuoteId}/duplicate
 - name: negotiableQuote/{quoteId}
 - name: negotiableQuote/{quoteId}/comments
 - name: negotiableQuote/{quoteId}/shippingMethod
@@ -288,6 +296,22 @@ tags:
 - name: negotiableQuote/pricesUpdated
 - name: negotiableQuote/request
 - name: negotiableQuote/submitToCustomer
+- name: negotiableQuoteTemplate
+- name: negotiableQuoteTemplate/{templateId}
+- name: negotiableQuoteTemplate/accept
+- name: negotiableQuoteTemplate/cancel
+- name: negotiableQuoteTemplate/cancel/me
+- name: negotiableQuoteTemplate/decline
+- name: negotiableQuoteTemplate/draft
+- name: negotiableQuoteTemplate/generateQuote
+- name: negotiableQuoteTemplate/me
+- name: negotiableQuoteTemplate/me/{templateId}
+- name: negotiableQuoteTemplate/open
+- name: negotiableQuoteTemplate/open/me
+- name: negotiableQuoteTemplate/request
+- name: negotiableQuoteTemplate/request/me
+- name: negotiableQuoteTemplate/submitToCustomer
+- name: negotiableQuoteTemplate/submitToSeller
 - name: order/{orderId}/invoice
 - name: order/{orderId}/refund
 - name: order/{orderId}/ship
@@ -306,6 +330,7 @@ tags:
 - name: orders/items/{id}
 - name: payments-config/{location}
 - name: payments-config/apple-pay/{location}
+- name: payments-config/google-pay/{location}
 - name: payments-config/hosted-fields/{location}
 - name: payments-config/smart-buttons/{location}
 - name: payments-sdk/{location}
@@ -500,6 +525,41 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: addresses/{addressId}
+  "/V1/adminuisdk/massaction/{request_id}":
+    get:
+      tags:
+      - adminuisdk/massaction/{request_id}
+      description: Load mass actions failed request by request id
+      operationId: GetV1AdminuisdkMassactionRequest_id
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: requestId
+        in: query
+        type: string
+        required: true
+      - name: request_id
+        in: path
+        type: string
+        required: true
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/commerce-backend-uix-data-mass-action-failed-request-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: adminuisdk/massaction/{request_id}
   "/V1/adobe_io_events/check_configuration":
     get:
       tags:
@@ -5794,6 +5854,61 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: company/assignRoles
+  "/V1/company/relations":
+    get:
+      tags:
+      - company/relations
+      description: Get existing company relation(s)
+      operationId: GetV1CompanyRelations
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: searchCriteria[filterGroups][0][filters][0][field]
+        in: query
+        type: string
+        description: Field
+      - name: searchCriteria[filterGroups][0][filters][0][value]
+        in: query
+        type: string
+        description: Value
+      - name: searchCriteria[filterGroups][0][filters][0][conditionType]
+        in: query
+        type: string
+        description: Condition type
+      - name: searchCriteria[sortOrders][0][field]
+        in: query
+        type: string
+        description: Sorting field.
+      - name: searchCriteria[sortOrders][0][direction]
+        in: query
+        type: string
+        description: Sorting direction.
+      - name: searchCriteria[pageSize]
+        in: query
+        type: integer
+        description: Page size.
+      - name: searchCriteria[currentPage]
+        in: query
+        type: integer
+        description: Current page.
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/company-relation-data-relation-search-result-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: company/relations
   "/V1/company/role/":
     get:
       tags:
@@ -6157,6 +6272,85 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: company/{companyId}
+  "/V1/company/{parentId}/relations":
+    post:
+      tags:
+      - company/{parentId}/relations
+      description: Create relation(s) between companies.
+      operationId: PostV1CompanyParentIdRelations
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: parentId
+        in: path
+        type: integer
+        required: true
+      - name: PostV1CompanyParentIdRelationsBody
+        in: body
+        schema:
+          required:
+          - relations
+          properties:
+            relations:
+              type: array
+              items:
+                "$ref": "#/definitions/company-relation-data-relation-interface"
+          type: object
+          xml:
+            name: request
+      responses:
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: company/{parentId}/relations
+  "/V1/company/{parentId}/relations/{companyId}":
+    delete:
+      tags:
+      - company/{parentId}/relations/{companyId}
+      description: Delete relation of the company to the parent by respective ids.
+      operationId: DeleteV1CompanyParentIdRelationsCompanyId
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: parentId
+        in: path
+        type: integer
+        required: true
+      - name: companyId
+        in: path
+        type: integer
+        required: true
+      responses:
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: company/{parentId}/relations/{companyId}
   "/V1/companyCredits/":
     get:
       tags:
@@ -8098,6 +8292,98 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: customers/addresses/{addressId}
+  "/V1/customers/companies":
+    post:
+      tags:
+      - customers/companies
+      description: Save customer attributes for company.
+      operationId: PostV1CustomersCompanies
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PostV1CustomersCompaniesBody
+        in: body
+        schema:
+          required:
+          - companyAttributes
+          properties:
+            companyAttributes:
+              "$ref": "#/definitions/company-data-company-customer-interface"
+          type: object
+          xml:
+            name: request
+      responses:
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: customers/companies
+    get:
+      tags:
+      - customers/companies
+      description: Returns the list of company customer attributes.
+      operationId: GetV1CustomersCompanies
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: criteria[filterGroups][0][filters][0][field]
+        in: query
+        type: string
+        description: Field
+      - name: criteria[filterGroups][0][filters][0][value]
+        in: query
+        type: string
+        description: Value
+      - name: criteria[filterGroups][0][filters][0][conditionType]
+        in: query
+        type: string
+        description: Condition type
+      - name: criteria[sortOrders][0][field]
+        in: query
+        type: string
+        description: Sorting field.
+      - name: criteria[sortOrders][0][direction]
+        in: query
+        type: string
+        description: Sorting direction.
+      - name: criteria[pageSize]
+        in: query
+        type: integer
+        description: Page size.
+      - name: criteria[currentPage]
+        in: query
+        type: integer
+        description: Current page.
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/company-data-company-customer-search-results-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: customers/companies
   "/V1/customers/confirm":
     post:
       tags:
@@ -8829,6 +9115,138 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: customers/{customerId}/carts
+  "/V1/customers/{customerId}/companies":
+    get:
+      tags:
+      - customers/{customerId}/companies
+      description: Returns a list of companies the customer is assigned to
+      operationId: GetV1CustomersCustomerIdCompanies
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: customerId
+        in: path
+        type: integer
+        required: true
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            type: array
+            items:
+              "$ref": "#/definitions/company-data-company-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: customers/{customerId}/companies
+  "/V1/customers/{customerId}/companies/{companyId}":
+    put:
+      tags:
+      - customers/{customerId}/companies/{companyId}
+      description: Assigns customer as a company user.
+      operationId: PutV1CustomersCustomerIdCompaniesCompanyId
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: companyId
+        in: path
+        type: integer
+        required: true
+      - name: customerId
+        in: path
+        type: integer
+        required: true
+      responses:
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: customers/{customerId}/companies/{companyId}
+    delete:
+      tags:
+      - customers/{customerId}/companies/{companyId}
+      description: Unassigns customer from the company.
+      operationId: DeleteV1CustomersCustomerIdCompaniesCompanyId
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: companyId
+        in: path
+        type: integer
+        required: true
+      - name: customerId
+        in: path
+        type: integer
+        required: true
+      responses:
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: customers/{customerId}/companies/{companyId}
+    get:
+      tags:
+      - customers/{customerId}/companies/{companyId}
+      description: Returns customer attributes for company by ID.
+      operationId: GetV1CustomersCustomerIdCompaniesCompanyId
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: customerId
+        in: path
+        type: integer
+        required: true
+      - name: companyId
+        in: path
+        type: integer
+        required: true
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/company-data-company-customer-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: customers/{customerId}/companies/{companyId}
   "/V1/customers/{customerId}/confirm":
     get:
       tags:
@@ -14287,6 +14705,42 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: negotiableQuote/submitToCustomer
+  "/V1/negotiableQuote/{negotiableQuoteId}/duplicate":
+    post:
+      tags:
+      - negotiableQuote/{negotiableQuoteId}/duplicate
+      description: Duplicate Negotiable Quote based on the ID of existing negotiable
+        quote. Returns ID of a duplicated quote.
+      operationId: PostV1NegotiableQuoteNegotiableQuoteIdDuplicate
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: negotiableQuoteId
+        in: path
+        type: integer
+        required: true
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            type: integer
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: negotiableQuote/{negotiableQuoteId}/duplicate
   "/V1/negotiableQuote/{quoteId}":
     put:
       tags:
@@ -14416,6 +14870,685 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: negotiableQuote/{quoteId}/shippingMethod
+  "/V1/negotiableQuoteTemplate":
+    get:
+      tags:
+      - negotiableQuoteTemplate
+      description: Get list of quote templates
+      operationId: GetV1NegotiableQuoteTemplate
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: searchCriteria[filterGroups][0][filters][0][field]
+        in: query
+        type: string
+        description: Field
+      - name: searchCriteria[filterGroups][0][filters][0][value]
+        in: query
+        type: string
+        description: Value
+      - name: searchCriteria[filterGroups][0][filters][0][conditionType]
+        in: query
+        type: string
+        description: Condition type
+      - name: searchCriteria[sortOrders][0][field]
+        in: query
+        type: string
+        description: Sorting field.
+      - name: searchCriteria[sortOrders][0][direction]
+        in: query
+        type: string
+        description: Sorting direction.
+      - name: searchCriteria[pageSize]
+        in: query
+        type: integer
+        description: Page size.
+      - name: searchCriteria[currentPage]
+        in: query
+        type: integer
+        description: Current page.
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/framework-search-results-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: negotiableQuoteTemplate
+    put:
+      tags:
+      - negotiableQuoteTemplate
+      description: Edit a quote template.
+      operationId: PutV1NegotiableQuoteTemplate
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PutV1NegotiableQuoteTemplateBody
+        in: body
+        schema:
+          required:
+          - template
+          properties:
+            template:
+              "$ref": "#/definitions/negotiable-quote-template-data-template-interface"
+          type: object
+          xml:
+            name: request
+      responses:
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: negotiableQuoteTemplate
+  "/V1/negotiableQuoteTemplate/accept":
+    post:
+      tags:
+      - negotiableQuoteTemplate/accept
+      description: Create quote template from quote
+      operationId: PostV1NegotiableQuoteTemplateAccept
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PostV1NegotiableQuoteTemplateAcceptBody
+        in: body
+        schema:
+          required:
+          - templateId
+          properties:
+            templateId:
+              type: integer
+          type: object
+          xml:
+            name: request
+      responses:
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: negotiableQuoteTemplate/accept
+  "/V1/negotiableQuoteTemplate/cancel":
+    post:
+      tags:
+      - negotiableQuoteTemplate/cancel
+      description: Cancel a quote template.
+      operationId: PostV1NegotiableQuoteTemplateCancel
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PostV1NegotiableQuoteTemplateCancelBody
+        in: body
+        schema:
+          required:
+          - templateId
+          properties:
+            templateId:
+              type: integer
+            comment:
+              type: string
+          type: object
+          xml:
+            name: request
+      responses:
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: negotiableQuoteTemplate/cancel
+  "/V1/negotiableQuoteTemplate/cancel/me":
+    post:
+      tags:
+      - negotiableQuoteTemplate/cancel/me
+      description: Cancel a quote template.
+      operationId: PostV1NegotiableQuoteTemplateCancelMe
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PostV1NegotiableQuoteTemplateCancelMeBody
+        in: body
+        schema:
+          required:
+          - templateId
+          properties:
+            templateId:
+              type: integer
+            comment:
+              type: string
+          type: object
+          xml:
+            name: request
+      responses:
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: negotiableQuoteTemplate/cancel/me
+  "/V1/negotiableQuoteTemplate/decline":
+    post:
+      tags:
+      - negotiableQuoteTemplate/decline
+      description: Decline a quote template.
+      operationId: PostV1NegotiableQuoteTemplateDecline
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PostV1NegotiableQuoteTemplateDeclineBody
+        in: body
+        schema:
+          required:
+          - templateId
+          - reason
+          properties:
+            templateId:
+              type: integer
+            reason:
+              type: string
+          type: object
+          xml:
+            name: request
+      responses:
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: negotiableQuoteTemplate/decline
+  "/V1/negotiableQuoteTemplate/draft":
+    post:
+      tags:
+      - negotiableQuoteTemplate/draft
+      description: Create a new empty B2B quote template with NegotiableQuoteInterface::STATUS_DRAFT_BY_ADMIN
+        status.
+      operationId: PostV1NegotiableQuoteTemplateDraft
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PostV1NegotiableQuoteTemplateDraftBody
+        in: body
+        schema:
+          required:
+          - customerId
+          properties:
+            customerId:
+              type: integer
+          type: object
+          xml:
+            name: request
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/negotiable-quote-template-data-template-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: negotiableQuoteTemplate/draft
+  "/V1/negotiableQuoteTemplate/generateQuote":
+    post:
+      tags:
+      - negotiableQuoteTemplate/generateQuote
+      description: Generate quote from template
+      operationId: PostV1NegotiableQuoteTemplateGenerateQuote
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PostV1NegotiableQuoteTemplateGenerateQuoteBody
+        in: body
+        schema:
+          required:
+          - templateId
+          properties:
+            templateId:
+              type: integer
+          type: object
+          xml:
+            name: request
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            type: integer
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: negotiableQuoteTemplate/generateQuote
+  "/V1/negotiableQuoteTemplate/me":
+    put:
+      tags:
+      - negotiableQuoteTemplate/me
+      description: Edit a quote template.
+      operationId: PutV1NegotiableQuoteTemplateMe
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PutV1NegotiableQuoteTemplateMeBody
+        in: body
+        schema:
+          required:
+          - template
+          properties:
+            template:
+              "$ref": "#/definitions/negotiable-quote-template-data-template-interface"
+          type: object
+          xml:
+            name: request
+      responses:
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: negotiableQuoteTemplate/me
+  "/V1/negotiableQuoteTemplate/me/{templateId}":
+    delete:
+      tags:
+      - negotiableQuoteTemplate/me/{templateId}
+      description: Delete a quote template.
+      operationId: DeleteV1NegotiableQuoteTemplateMeTemplateId
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: templateId
+        in: path
+        type: integer
+        required: true
+      responses:
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: negotiableQuoteTemplate/me/{templateId}
+  "/V1/negotiableQuoteTemplate/open":
+    post:
+      tags:
+      - negotiableQuoteTemplate/open
+      description: Open template
+      operationId: PostV1NegotiableQuoteTemplateOpen
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PostV1NegotiableQuoteTemplateOpenBody
+        in: body
+        schema:
+          required:
+          - templateId
+          properties:
+            templateId:
+              type: integer
+          type: object
+          xml:
+            name: request
+      responses:
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: negotiableQuoteTemplate/open
+  "/V1/negotiableQuoteTemplate/open/me":
+    post:
+      tags:
+      - negotiableQuoteTemplate/open/me
+      description: Open template
+      operationId: PostV1NegotiableQuoteTemplateOpenMe
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PostV1NegotiableQuoteTemplateOpenMeBody
+        in: body
+        schema:
+          required:
+          - templateId
+          properties:
+            templateId:
+              type: integer
+          type: object
+          xml:
+            name: request
+      responses:
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: negotiableQuoteTemplate/open/me
+  "/V1/negotiableQuoteTemplate/request":
+    post:
+      tags:
+      - negotiableQuoteTemplate/request
+      description: Create a template for a quote.
+      operationId: PostV1NegotiableQuoteTemplateRequest
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PostV1NegotiableQuoteTemplateRequestBody
+        in: body
+        schema:
+          required:
+          - quoteId
+          properties:
+            quoteId:
+              type: integer
+          type: object
+          xml:
+            name: request
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/negotiable-quote-template-data-template-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: negotiableQuoteTemplate/request
+  "/V1/negotiableQuoteTemplate/request/me":
+    post:
+      tags:
+      - negotiableQuoteTemplate/request/me
+      description: Create a template for a quote.
+      operationId: PostV1NegotiableQuoteTemplateRequestMe
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PostV1NegotiableQuoteTemplateRequestMeBody
+        in: body
+        schema:
+          required:
+          - quoteId
+          properties:
+            quoteId:
+              type: integer
+          type: object
+          xml:
+            name: request
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/negotiable-quote-template-data-template-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: negotiableQuoteTemplate/request/me
+  "/V1/negotiableQuoteTemplate/submitToCustomer":
+    post:
+      tags:
+      - negotiableQuoteTemplate/submitToCustomer
+      description: Seller send action
+      operationId: PostV1NegotiableQuoteTemplateSubmitToCustomer
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PostV1NegotiableQuoteTemplateSubmitToCustomerBody
+        in: body
+        schema:
+          required:
+          - templateId
+          properties:
+            templateId:
+              type: integer
+            commentText:
+              type: string
+            files:
+              type: array
+              items:
+                "$ref": "#/definitions/negotiable-quote-data-attachment-content-interface"
+          type: object
+          xml:
+            name: request
+      responses:
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: negotiableQuoteTemplate/submitToCustomer
+  "/V1/negotiableQuoteTemplate/submitToSeller":
+    post:
+      tags:
+      - negotiableQuoteTemplate/submitToSeller
+      description: Send template to seller
+      operationId: PostV1NegotiableQuoteTemplateSubmitToSeller
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PostV1NegotiableQuoteTemplateSubmitToSellerBody
+        in: body
+        schema:
+          required:
+          - templateId
+          properties:
+            templateId:
+              type: integer
+            commentText:
+              type: string
+            files:
+              type: array
+              items:
+                "$ref": "#/definitions/negotiable-quote-data-attachment-content-interface"
+          type: object
+          xml:
+            name: request
+      responses:
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: negotiableQuoteTemplate/submitToSeller
+  "/V1/negotiableQuoteTemplate/{templateId}":
+    get:
+      tags:
+      - negotiableQuoteTemplate/{templateId}
+      description: Return the negotiable quote template for a specified quote ID.
+      operationId: GetV1NegotiableQuoteTemplateTemplateId
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: templateId
+        in: path
+        type: integer
+        required: true
+        description: template id
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/negotiable-quote-template-data-template-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: negotiableQuoteTemplate/{templateId}
+    delete:
+      tags:
+      - negotiableQuoteTemplate/{templateId}
+      description: Delete a quote template.
+      operationId: DeleteV1NegotiableQuoteTemplateTemplateId
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: templateId
+        in: path
+        type: integer
+        required: true
+      responses:
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: negotiableQuoteTemplate/{templateId}
   "/V1/order/notify-orders-are-ready-for-pickup":
     post:
       tags:
@@ -15183,6 +16316,38 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: payments-config/apple-pay/{location}
+  "/V1/payments-config/google-pay/{location}":
+    get:
+      tags:
+      - payments-config/google-pay/{location}
+      description: Get Google Pay Config.
+      operationId: GetV1PaymentsconfigGooglepayLocation
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: location
+        in: path
+        type: string
+        required: true
+        description: sdk location.
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/payment-services-paypal-data-payment-config-google-pay-interface"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: payments-config/google-pay/{location}
   "/V1/payments-config/hosted-fields/{location}":
     get:
       tags:
@@ -23631,6 +24796,108 @@ definitions:
   directory-data-country-information-extension-interface:
     type: object
     description: ExtensionInterface class for @see \Magento\Directory\Api\Data\CountryInformationInterface
+  eav-data-attribute-set-search-results-interface:
+    type: object
+    description: Interface AttributeSetSearchResultsInterface
+    properties:
+      items:
+        type: array
+        description: Attribute sets list.
+        items:
+          "$ref": "#/definitions/eav-data-attribute-set-interface"
+      search_criteria:
+        "$ref": "#/definitions/framework-search-criteria-interface"
+      total_count:
+        type: integer
+        description: Total count.
+    required:
+    - items
+    - search_criteria
+    - total_count
+  eav-data-attribute-set-interface:
+    type: object
+    description: Interface AttributeSetInterface
+    properties:
+      attribute_set_id:
+        type: integer
+        description: Attribute set ID
+      attribute_set_name:
+        type: string
+        description: Attribute set name
+      sort_order:
+        type: integer
+        description: Attribute set sort order index
+      entity_type_id:
+        type: integer
+        description: Attribute set entity type id
+      extension_attributes:
+        "$ref": "#/definitions/eav-data-attribute-set-extension-interface"
+    required:
+    - attribute_set_name
+    - sort_order
+  eav-data-attribute-set-extension-interface:
+    type: object
+    description: ExtensionInterface class for @see \Magento\Eav\Api\Data\AttributeSetInterface
+  framework-search-criteria-interface:
+    type: object
+    description: Search criteria interface.
+    properties:
+      filter_groups:
+        type: array
+        description: A list of filter groups.
+        items:
+          "$ref": "#/definitions/framework-search-filter-group"
+      sort_orders:
+        type: array
+        description: Sort order.
+        items:
+          "$ref": "#/definitions/framework-sort-order"
+      page_size:
+        type: integer
+        description: Page size.
+      current_page:
+        type: integer
+        description: Current page.
+    required:
+    - filter_groups
+  framework-search-filter-group:
+    type: object
+    description: Groups two or more filters together using a logical OR
+    properties:
+      filters:
+        type: array
+        description: A list of filters in this group
+        items:
+          "$ref": "#/definitions/framework-filter"
+  framework-filter:
+    type: object
+    description: Filter which can be used by any methods from service layer.
+    properties:
+      field:
+        type: string
+        description: Field
+      value:
+        type: string
+        description: Value
+      condition_type:
+        type: string
+        description: Condition type
+    required:
+    - field
+    - value
+  framework-sort-order:
+    type: object
+    description: Data object for sort order.
+    properties:
+      field:
+        type: string
+        description: Sorting field.
+      direction:
+        type: string
+        description: Sorting direction.
+    required:
+    - field
+    - direction
   adobe-io-events-client-configuration-check-result-interface:
     type: object
     description: Contains configuration status for each necessary config setting
@@ -23682,6 +24949,9 @@ definitions:
       priority:
         type: boolean
         description: Event priority
+      hipaa_audit_required:
+        type: boolean
+        description: If event is required to be HIPAA audited
     required:
     - name
     - parent
@@ -23689,6 +24959,7 @@ definitions:
     - rules
     - destination
     - priority
+    - hipaa_audit_required
   adobe-commerce-events-client-data-event-field-interface:
     type: object
     description: Interface for event field data from webapi requests
@@ -23865,108 +25136,6 @@ definitions:
         description: Current page.
     required:
     - request_name
-    - filter_groups
-  framework-search-filter-group:
-    type: object
-    description: Groups two or more filters together using a logical OR
-    properties:
-      filters:
-        type: array
-        description: A list of filters in this group
-        items:
-          "$ref": "#/definitions/framework-filter"
-  framework-filter:
-    type: object
-    description: Filter which can be used by any methods from service layer.
-    properties:
-      field:
-        type: string
-        description: Field
-      value:
-        type: string
-        description: Value
-      condition_type:
-        type: string
-        description: Condition type
-    required:
-    - field
-    - value
-  framework-sort-order:
-    type: object
-    description: Data object for sort order.
-    properties:
-      field:
-        type: string
-        description: Sorting field.
-      direction:
-        type: string
-        description: Sorting direction.
-    required:
-    - field
-    - direction
-  eav-data-attribute-set-search-results-interface:
-    type: object
-    description: Interface AttributeSetSearchResultsInterface
-    properties:
-      items:
-        type: array
-        description: Attribute sets list.
-        items:
-          "$ref": "#/definitions/eav-data-attribute-set-interface"
-      search_criteria:
-        "$ref": "#/definitions/framework-search-criteria-interface"
-      total_count:
-        type: integer
-        description: Total count.
-    required:
-    - items
-    - search_criteria
-    - total_count
-  eav-data-attribute-set-interface:
-    type: object
-    description: Interface AttributeSetInterface
-    properties:
-      attribute_set_id:
-        type: integer
-        description: Attribute set ID
-      attribute_set_name:
-        type: string
-        description: Attribute set name
-      sort_order:
-        type: integer
-        description: Attribute set sort order index
-      entity_type_id:
-        type: integer
-        description: Attribute set entity type id
-      extension_attributes:
-        "$ref": "#/definitions/eav-data-attribute-set-extension-interface"
-    required:
-    - attribute_set_name
-    - sort_order
-  eav-data-attribute-set-extension-interface:
-    type: object
-    description: ExtensionInterface class for @see \Magento\Eav\Api\Data\AttributeSetInterface
-  framework-search-criteria-interface:
-    type: object
-    description: Search criteria interface.
-    properties:
-      filter_groups:
-        type: array
-        description: A list of filter groups.
-        items:
-          "$ref": "#/definitions/framework-search-filter-group"
-      sort_orders:
-        type: array
-        description: Sort order.
-        items:
-          "$ref": "#/definitions/framework-sort-order"
-      page_size:
-        type: integer
-        description: Page size.
-      current_page:
-        type: integer
-        description: Current page.
-    required:
     - filter_groups
   customer-data-group-interface:
     type: object
@@ -24334,13 +25503,16 @@ definitions:
         description: Company ID.
       job_title:
         type: string
-        description: Get job title.
+        description: Job title.
       status:
         type: integer
         description: Customer status.
       telephone:
         type: string
-        description: Get telephone.
+        description: Telephone.
+      is_default:
+        type: boolean
+        description: Is default
       extension_attributes:
         "$ref": "#/definitions/company-data-company-customer-extension-interface"
   company-data-company-customer-extension-interface:
@@ -26595,6 +27767,12 @@ definitions:
         type: array
         items:
           "$ref": "#/definitions/negotiable-quote-data-item-note-interface"
+      is_discounting_locked:
+        type: boolean
+      min_qty:
+        type: number
+      max_qty:
+        type: number
   negotiable-quote-data-item-note-interface:
     type: object
     description: Interface ItemNoteInterface
@@ -26773,6 +27951,8 @@ definitions:
           "$ref": "#/definitions/quote-data-shipping-assignment-interface"
       negotiable_quote:
         "$ref": "#/definitions/negotiable-quote-data-negotiable-quote-interface"
+      company_id:
+        type: integer
       coupon_codes:
         type: array
         items:
@@ -28726,6 +29906,10 @@ definitions:
           "$ref": "#/definitions/payment-data-payment-additional-info-interface"
       company_order_attributes:
         "$ref": "#/definitions/company-data-company-order-interface"
+      custom_fees:
+        type: array
+        items:
+          "$ref": "#/definitions/admin-ui-sdk-custom-fees-data-custom-fees-interface"
       applied_taxes:
         type: array
         items:
@@ -29021,6 +30205,64 @@ definitions:
   company-data-company-order-extension-interface:
     type: object
     description: ExtensionInterface class for @see \Magento\Company\Api\Data\CompanyOrderInterface
+  admin-ui-sdk-custom-fees-data-custom-fees-interface:
+    type: object
+    description: Interface CustomFeesInterface
+    properties:
+      id:
+        type: string
+        description: Id.
+      order_id:
+        type: string
+        description: The order id
+      custom_fee_code:
+        type: string
+        description: Custom fee code.
+      custom_fee_label:
+        type: string
+        description: Custom fee label.
+      custom_fee_amount:
+        type: number
+        description: Custom fee amount.
+      base_custom_fee_amount:
+        type: number
+        description: Base custom fee amount.
+      custom_fee_amount_invoiced:
+        type: number
+        description: Custom fee amount invoiced.
+      base_custom_fee_amount_invoiced:
+        type: number
+        description: Base custom fee amount invoiced.
+      custom_fee_amount_refunded:
+        type: number
+        description: Custom fee amount refunded.
+      base_custom_fee_amount_refunded:
+        type: number
+        description: Base custom fee amount refunded.
+      apply_fee_on_last_invoice:
+        type: boolean
+        description: If apply fee is set on last invoice.
+      apply_fee_on_last_creditmemo:
+        type: boolean
+        description: If apply fee is set on last credit memo.
+      invoice_id:
+        type: string
+        description: Invoice id.
+      creditmemo_id:
+        type: string
+        description: Credit memo id.
+    required:
+    - order_id
+    - custom_fee_code
+    - custom_fee_label
+    - custom_fee_amount
+    - base_custom_fee_amount
+    - custom_fee_amount_invoiced
+    - base_custom_fee_amount_invoiced
+    - custom_fee_amount_refunded
+    - base_custom_fee_amount_refunded
+    - apply_fee_on_last_invoice
+    - apply_fee_on_last_creditmemo
   tax-data-order-tax-details-applied-tax-interface:
     type: object
     description: Interface OrderTaxDetailsAppliedTaxInterface
@@ -31092,6 +32334,42 @@ definitions:
   checkout-data-totals-information-extension-interface:
     type: object
     description: ExtensionInterface class for @see \Magento\Checkout\Api\Data\TotalsInformationInterface
+  commerce-backend-uix-data-mass-action-failed-request-interface:
+    type: object
+    description: Defines the mass actions failed requests database model
+    properties:
+      id:
+        type: string
+        description: Internal id
+      request_id:
+        type: string
+        description: Request id
+      action_id:
+        type: string
+        description: Action id
+      grid_type:
+        type: string
+        description: Ui grid type
+      error_status:
+        type: string
+        description: Error status
+      error_message:
+        type: string
+        description: Error message
+      request_timestamp:
+        type: string
+        description: Request timestamp
+      selected_ids:
+        type: string
+        description: Selected ids
+    required:
+    - request_id
+    - action_id
+    - grid_type
+    - error_status
+    - error_message
+    - request_timestamp
+    - selected_ids
   checkout-agreements-data-agreement-interface:
     type: object
     description: Interface AgreementInterface
@@ -31133,260 +32411,6 @@ definitions:
   checkout-agreements-data-agreement-extension-interface:
     type: object
     description: ExtensionInterface class for @see \Magento\CheckoutAgreements\Api\Data\AgreementInterface
-  company-data-company-search-results-interface:
-    type: object
-    description: Interface for company search results
-    properties:
-      items:
-        type: array
-        description: Companies list
-        items:
-          "$ref": "#/definitions/company-data-company-interface"
-      search_criteria:
-        "$ref": "#/definitions/framework-search-criteria-interface"
-      total_count:
-        type: integer
-        description: Total count.
-    required:
-    - items
-    - search_criteria
-    - total_count
-  company-data-company-interface:
-    type: object
-    description: Interface for Company entity.
-    properties:
-      id:
-        type: integer
-        description: Id.
-      status:
-        type: integer
-        description: Status.
-      company_name:
-        type: string
-        description: Company name.
-      legal_name:
-        type: string
-        description: Legal name.
-      company_email:
-        type: string
-        description: Company email.
-      vat_tax_id:
-        type: string
-        description: Vat tax id.
-      reseller_id:
-        type: string
-        description: Reseller Id.
-      comment:
-        type: string
-        description: Comment.
-      street:
-        type: array
-        description: Street.
-        items:
-          type: string
-      city:
-        type: string
-        description: City.
-      country_id:
-        type: string
-        description: Country.
-      region:
-        type: string
-        description: Region.
-      region_id:
-        type: string
-        description: Region Id.
-      postcode:
-        type: string
-        description: Postcode.
-      telephone:
-        type: string
-        description: Telephone.
-      customer_group_id:
-        type: integer
-        description: Customer Group Id.
-      sales_representative_id:
-        type: integer
-        description: Sales Representative Id.
-      reject_reason:
-        type: string
-        description: Reject Reason.
-      rejected_at:
-        type: string
-        description: Rejected at time.
-      super_user_id:
-        type: integer
-        description: Company admin customer id.
-      extension_attributes:
-        "$ref": "#/definitions/company-data-company-extension-interface"
-    required:
-    - street
-    - customer_group_id
-    - sales_representative_id
-    - reject_reason
-    - rejected_at
-    - super_user_id
-  company-data-company-extension-interface:
-    type: object
-    description: ExtensionInterface class for @see \Magento\Company\Api\Data\CompanyInterface
-    properties:
-      applicable_payment_method:
-        type: integer
-      available_payment_methods:
-        type: string
-      use_config_settings:
-        type: integer
-      quote_config:
-        "$ref": "#/definitions/negotiable-quote-data-company-quote-config-interface"
-      is_purchase_order_enabled:
-        type: boolean
-      applicable_shipping_method:
-        type: integer
-      available_shipping_methods:
-        type: string
-      use_config_settings_shipping:
-        type: integer
-  negotiable-quote-data-company-quote-config-interface:
-    type: object
-    description: Interface CompanyQuoteConfigInterface
-    properties:
-      company_id:
-        type: string
-        description: Company id
-      is_quote_enabled:
-        type: boolean
-        description: Quote enabled for company
-      extension_attributes:
-        "$ref": "#/definitions/negotiable-quote-data-company-quote-config-extension-interface"
-    required:
-    - is_quote_enabled
-  negotiable-quote-data-company-quote-config-extension-interface:
-    type: object
-    description: ExtensionInterface class for @see \Magento\NegotiableQuote\Api\Data\CompanyQuoteConfigInterface
-  company-data-team-search-results-interface:
-    type: object
-    description: Interface for company team search results
-    properties:
-      items:
-        type: array
-        description: Teams list
-        items:
-          "$ref": "#/definitions/company-data-team-interface"
-      search_criteria:
-        "$ref": "#/definitions/framework-search-criteria-interface"
-      total_count:
-        type: integer
-        description: Total count.
-    required:
-    - items
-    - search_criteria
-    - total_count
-  company-data-team-interface:
-    type: object
-    description: Team interface
-    properties:
-      id:
-        type: integer
-        description: ID
-      name:
-        type: string
-        description: Name
-      description:
-        type: string
-        description: Description
-      extension_attributes:
-        "$ref": "#/definitions/company-data-team-extension-interface"
-      custom_attributes:
-        type: array
-        description: Custom attributes values.
-        items:
-          "$ref": "#/definitions/framework-attribute-interface"
-  company-data-team-extension-interface:
-    type: object
-    description: ExtensionInterface class for @see \Magento\Company\Api\Data\TeamInterface
-  company-data-hierarchy-interface:
-    type: object
-    description: Company hierarchy DTO interface for WebAPI.
-    properties:
-      structure_id:
-        type: integer
-        description: Structure ID.
-      entity_id:
-        type: integer
-        description: Entity ID.
-      entity_type:
-        type: string
-        description: Entity type.
-      structure_parent_id:
-        type: integer
-        description: Structure parent ID.
-      extension_attributes:
-        "$ref": "#/definitions/company-data-hierarchy-extension-interface"
-  company-data-hierarchy-extension-interface:
-    type: object
-    description: ExtensionInterface class for @see \Magento\Company\Api\Data\HierarchyInterface
-  company-data-role-search-results-interface:
-    type: object
-    description: Interface for role search results.
-    properties:
-      items:
-        type: array
-        description: Roles list.
-        items:
-          "$ref": "#/definitions/company-data-role-interface"
-      search_criteria:
-        "$ref": "#/definitions/framework-search-criteria-interface"
-      total_count:
-        type: integer
-        description: Total count.
-    required:
-    - items
-    - search_criteria
-    - total_count
-  company-data-role-interface:
-    type: object
-    description: Role data transfer object interface.
-    properties:
-      id:
-        type: integer
-        description: Role id.
-      role_name:
-        type: string
-        description: Role name.
-      permissions:
-        type: array
-        description: Permissions.
-        items:
-          "$ref": "#/definitions/company-data-permission-interface"
-      company_id:
-        type: integer
-        description: Company id.
-      extension_attributes:
-        "$ref": "#/definitions/company-data-role-extension-interface"
-    required:
-    - permissions
-  company-data-permission-interface:
-    type: object
-    description: Permission interface.
-    properties:
-      id:
-        type: integer
-        description: Id.
-      role_id:
-        type: integer
-        description: Role id.
-      resource_id:
-        type: string
-        description: Resource id.
-      permission:
-        type: string
-        description: Permission.
-    required:
-    - resource_id
-    - permission
-  company-data-role-extension-interface:
-    type: object
-    description: ExtensionInterface class for @see \Magento\Company\Api\Data\RoleInterface
   tax-data-tax-rate-interface:
     type: object
     description: Tax rate interface.
@@ -31565,6 +32589,278 @@ definitions:
         description: Items
         items:
           "$ref": "#/definitions/tax-data-tax-class-interface"
+      search_criteria:
+        "$ref": "#/definitions/framework-search-criteria-interface"
+      total_count:
+        type: integer
+        description: Total count.
+    required:
+    - items
+    - search_criteria
+    - total_count
+  company-data-company-search-results-interface:
+    type: object
+    description: Interface for company search results
+    properties:
+      items:
+        type: array
+        description: Companies list
+        items:
+          "$ref": "#/definitions/company-data-company-interface"
+      search_criteria:
+        "$ref": "#/definitions/framework-search-criteria-interface"
+      total_count:
+        type: integer
+        description: Total count.
+    required:
+    - items
+    - search_criteria
+    - total_count
+  company-data-company-interface:
+    type: object
+    description: Interface for Company entity.
+    properties:
+      id:
+        type: integer
+        description: Id.
+      status:
+        type: integer
+        description: Status.
+      company_name:
+        type: string
+        description: Company name.
+      legal_name:
+        type: string
+        description: Legal name.
+      company_email:
+        type: string
+        description: Company email.
+      vat_tax_id:
+        type: string
+        description: Vat tax id.
+      reseller_id:
+        type: string
+        description: Reseller Id.
+      comment:
+        type: string
+        description: Comment.
+      street:
+        type: array
+        description: Street.
+        items:
+          type: string
+      city:
+        type: string
+        description: City.
+      country_id:
+        type: string
+        description: Country.
+      region:
+        type: string
+        description: Region.
+      region_id:
+        type: string
+        description: Region Id.
+      postcode:
+        type: string
+        description: Postcode.
+      telephone:
+        type: string
+        description: Telephone.
+      customer_group_id:
+        type: integer
+        description: Customer Group Id.
+      sales_representative_id:
+        type: integer
+        description: Sales Representative Id.
+      reject_reason:
+        type: string
+        description: Reject Reason.
+      rejected_at:
+        type: string
+        description: Rejected at time.
+      super_user_id:
+        type: integer
+        description: Company admin customer id.
+      extension_attributes:
+        "$ref": "#/definitions/company-data-company-extension-interface"
+    required:
+    - street
+    - customer_group_id
+    - sales_representative_id
+    - reject_reason
+    - rejected_at
+    - super_user_id
+  company-data-company-extension-interface:
+    type: object
+    description: ExtensionInterface class for @see \Magento\Company\Api\Data\CompanyInterface
+    properties:
+      quote_config:
+        "$ref": "#/definitions/negotiable-quote-data-company-quote-config-interface"
+      applicable_payment_method:
+        type: integer
+      available_payment_methods:
+        type: string
+      use_config_settings:
+        type: integer
+      is_purchase_order_enabled:
+        type: boolean
+      applicable_shipping_method:
+        type: integer
+      available_shipping_methods:
+        type: string
+      use_config_settings_shipping:
+        type: integer
+  negotiable-quote-data-company-quote-config-interface:
+    type: object
+    description: Interface CompanyQuoteConfigInterface
+    properties:
+      company_id:
+        type: string
+        description: Company id
+      is_quote_enabled:
+        type: boolean
+        description: Quote enabled for company
+      extension_attributes:
+        "$ref": "#/definitions/negotiable-quote-data-company-quote-config-extension-interface"
+    required:
+    - is_quote_enabled
+  negotiable-quote-data-company-quote-config-extension-interface:
+    type: object
+    description: ExtensionInterface class for @see \Magento\NegotiableQuote\Api\Data\CompanyQuoteConfigInterface
+  company-data-team-search-results-interface:
+    type: object
+    description: Interface for company team search results
+    properties:
+      items:
+        type: array
+        description: Teams list
+        items:
+          "$ref": "#/definitions/company-data-team-interface"
+      search_criteria:
+        "$ref": "#/definitions/framework-search-criteria-interface"
+      total_count:
+        type: integer
+        description: Total count.
+    required:
+    - items
+    - search_criteria
+    - total_count
+  company-data-team-interface:
+    type: object
+    description: Team interface
+    properties:
+      id:
+        type: integer
+        description: ID
+      name:
+        type: string
+        description: Name
+      description:
+        type: string
+        description: Description
+      extension_attributes:
+        "$ref": "#/definitions/company-data-team-extension-interface"
+      custom_attributes:
+        type: array
+        description: Custom attributes values.
+        items:
+          "$ref": "#/definitions/framework-attribute-interface"
+  company-data-team-extension-interface:
+    type: object
+    description: ExtensionInterface class for @see \Magento\Company\Api\Data\TeamInterface
+  company-data-hierarchy-interface:
+    type: object
+    description: Company hierarchy DTO interface for WebAPI.
+    properties:
+      structure_id:
+        type: integer
+        description: Structure ID.
+      entity_id:
+        type: integer
+        description: Entity ID.
+      entity_type:
+        type: string
+        description: Entity type.
+      structure_parent_id:
+        type: integer
+        description: Structure parent ID.
+      extension_attributes:
+        "$ref": "#/definitions/company-data-hierarchy-extension-interface"
+  company-data-hierarchy-extension-interface:
+    type: object
+    description: ExtensionInterface class for @see \Magento\Company\Api\Data\HierarchyInterface
+  company-data-role-search-results-interface:
+    type: object
+    description: Interface for role search results.
+    properties:
+      items:
+        type: array
+        description: Roles list.
+        items:
+          "$ref": "#/definitions/company-data-role-interface"
+      search_criteria:
+        "$ref": "#/definitions/framework-search-criteria-interface"
+      total_count:
+        type: integer
+        description: Total count.
+    required:
+    - items
+    - search_criteria
+    - total_count
+  company-data-role-interface:
+    type: object
+    description: Role data transfer object interface.
+    properties:
+      id:
+        type: integer
+        description: Role id.
+      role_name:
+        type: string
+        description: Role name.
+      permissions:
+        type: array
+        description: Permissions.
+        items:
+          "$ref": "#/definitions/company-data-permission-interface"
+      company_id:
+        type: integer
+        description: Company id.
+      extension_attributes:
+        "$ref": "#/definitions/company-data-role-extension-interface"
+    required:
+    - permissions
+  company-data-permission-interface:
+    type: object
+    description: Permission interface.
+    properties:
+      id:
+        type: integer
+        description: Id.
+      role_id:
+        type: integer
+        description: Role id.
+      resource_id:
+        type: string
+        description: Resource id.
+      permission:
+        type: string
+        description: Permission.
+    required:
+    - resource_id
+    - permission
+  company-data-role-extension-interface:
+    type: object
+    description: ExtensionInterface class for @see \Magento\Company\Api\Data\RoleInterface
+  company-data-company-customer-search-results-interface:
+    type: object
+    description: Interface for company customer attributes search results
+    properties:
+      items:
+        type: array
+        description: Company customer attributes list
+        items:
+          "$ref": "#/definitions/company-data-company-customer-interface"
       search_criteria:
         "$ref": "#/definitions/framework-search-criteria-interface"
       total_count:
@@ -31756,147 +33052,6 @@ definitions:
     - amount
     - balance
     - credit_limit
-  two-factor-auth-provider-interface:
-    type: object
-    description: 2FA provider interface
-    properties:
-      enabled:
-        type: boolean
-        description: True if this provider has been enabled by admin
-      engine:
-        "$ref": "#/definitions/two-factor-auth-engine-interface"
-      code:
-        type: string
-        description: Provider code
-      name:
-        type: string
-        description: Provider name
-      icon:
-        type: string
-        description: Icon
-      reset_allowed:
-        type: boolean
-        description: True if this provider configuration can be reset
-      configure_action:
-        type: string
-        description: Configure action
-      auth_action:
-        type: string
-        description: Auth action
-      extra_actions:
-        type: array
-        description: Allowed extra actions
-        items:
-          type: string
-    required:
-    - enabled
-    - engine
-    - code
-    - name
-    - icon
-    - reset_allowed
-    - configure_action
-    - auth_action
-    - extra_actions
-  two-factor-auth-engine-interface:
-    type: object
-    description: 2FA engine interface
-    properties:
-      enabled:
-        type: boolean
-        description: True if this provider has been enabled by admin
-    required:
-    - enabled
-  two-factor-auth-data-google-configure-interface:
-    type: object
-    description: Google configuration data interface
-    properties:
-      qr_code_base64:
-        type: string
-        description: Value for QR code base 64
-      secret_code:
-        type: string
-        description: Value for secret code
-      extension_attributes:
-        "$ref": "#/definitions/two-factor-auth-data-google-configure-extension-interface"
-    required:
-    - qr_code_base64
-    - secret_code
-  two-factor-auth-data-google-configure-extension-interface:
-    type: object
-    description: ExtensionInterface class for @see \Magento\TwoFactorAuth\Api\Data\GoogleConfigureInterface
-  two-factor-auth-data-authy-device-interface:
-    type: object
-    description: Authy device data interface
-    properties:
-      country:
-        type: string
-        description: The country
-      phone_number:
-        type: string
-        description: The phone number
-      method:
-        type: string
-        description: The method to authenticate with
-      extension_attributes:
-        "$ref": "#/definitions/two-factor-auth-data-authy-device-extension-interface"
-    required:
-    - country
-    - phone_number
-    - method
-  two-factor-auth-data-authy-device-extension-interface:
-    type: object
-    description: ExtensionInterface class for @see \Magento\TwoFactorAuth\Api\Data\AuthyDeviceInterface
-  two-factor-auth-data-authy-registration-prompt-response-interface:
-    type: object
-    description: Response for device registration prompt
-    properties:
-      message:
-        type: string
-        description: The message
-      expiration_seconds:
-        type: string
-        description: The seconds to expire
-      extension_attributes:
-        "$ref": "#/definitions/two-factor-auth-data-authy-registration-prompt-response-extension-interface"
-    required:
-    - message
-    - expiration_seconds
-  two-factor-auth-data-authy-registration-prompt-response-extension-interface:
-    type: object
-    description: ExtensionInterface class for @see \Magento\TwoFactorAuth\Api\Data\AuthyRegistrationPromptResponseInterface
-  two-factor-auth-data-u2f-web-authn-request-interface:
-    type: object
-    description: Represents a WebAuthn dataset
-    properties:
-      credential_request_options_json:
-        type: string
-        description: The needed data to initiate a WebAuthn registration ceremony
-      extension_attributes:
-        "$ref": "#/definitions/two-factor-auth-data-u2f-web-authn-request-extension-interface"
-    required:
-    - credential_request_options_json
-  two-factor-auth-data-u2f-web-authn-request-extension-interface:
-    type: object
-    description: ExtensionInterface class for @see \Magento\TwoFactorAuth\Api\Data\U2fWebAuthnRequestInterface
-  two-factor-auth-data-duo-data-interface:
-    type: object
-    description: Represents the data needed to use duo
-    properties:
-      signature:
-        type: string
-        description: The signature
-      api_hostname:
-        type: string
-        description: The api hostname
-      extension_attributes:
-        "$ref": "#/definitions/two-factor-auth-data-duo-data-extension-interface"
-    required:
-    - signature
-    - api_hostname
-  two-factor-auth-data-duo-data-extension-interface:
-    type: object
-    description: ExtensionInterface class for @see \Magento\TwoFactorAuth\Api\Data\DuoDataInterface
   negotiable-quote-data-attachment-content-interface:
     type: object
     description: Attachment files content interface.
@@ -32046,6 +33201,270 @@ definitions:
     - items
     - search_criteria
     - total_count
+  negotiable-quote-template-data-template-interface:
+    type: object
+    description: Interface TemplateInterface
+    properties:
+      template_id:
+        type: integer
+        description: Negotiable quote ID.
+      parent_quote_id:
+        type: integer
+        description: Negotiable quote ID.
+      template_name:
+        type: string
+        description: Negotiable quote template name.
+      status:
+        type: string
+        description: Negotiable quote template status
+      expiration_date:
+        type: string
+        description: Expiration period.
+      creator_id:
+        type: integer
+        description: Quote template creator id.
+      creator_type:
+        type: integer
+        description: Quote creator type.
+      min_orders:
+        type: integer
+        description: Min orders for purchase
+      max_orders:
+        type: integer
+        description: Min orders for purchase
+      is_min_max_qty_used:
+        type: boolean
+        description: Is min/max qty used.
+      activated_at:
+        type: string
+        description: Activated at time
+      last_shared_at:
+        type: string
+        description: Last shared at
+      inactivated_at:
+        type: string
+        description: Inactivated at time
+      created_at:
+        type: string
+        description: Created at time
+      updated_at:
+        type: string
+        description: Updated at time
+      extension_attributes:
+        "$ref": "#/definitions/negotiable-quote-template-data-template-extension-interface"
+    required:
+    - template_id
+    - parent_quote_id
+    - template_name
+    - status
+    - expiration_date
+    - creator_id
+    - creator_type
+    - min_orders
+    - max_orders
+    - is_min_max_qty_used
+    - activated_at
+    - last_shared_at
+    - inactivated_at
+    - created_at
+    - updated_at
+    - extension_attributes
+  negotiable-quote-template-data-template-extension-interface:
+    type: object
+    description: ExtensionInterface class for @see \Magento\NegotiableQuoteTemplate\Api\Data\TemplateInterface
+  framework-search-results-interface:
+    type: object
+    description: Search results interface.
+    properties:
+      items:
+        type: array
+        description: Items list.
+        items:
+          "$ref": "#/definitions/framework-extensible-data-interface"
+      search_criteria:
+        "$ref": "#/definitions/framework-search-criteria-interface"
+      total_count:
+        type: integer
+        description: Total count.
+    required:
+    - items
+    - search_criteria
+    - total_count
+  framework-extensible-data-interface:
+    type: object
+    description: Interface for entities which can be extended with extension attributes.
+  company-relation-data-relation-search-result-interface:
+    type: object
+    description: Interface for company relation search results
+    properties:
+      items:
+        type: array
+        description: Company relations
+        items:
+          "$ref": "#/definitions/company-relation-data-relation-interface"
+      search_criteria:
+        "$ref": "#/definitions/framework-search-criteria-interface"
+      total_count:
+        type: integer
+        description: Total count.
+    required:
+    - items
+    - search_criteria
+    - total_count
+  company-relation-data-relation-interface:
+    type: object
+    description: Company relation data interface.
+    properties:
+      company_id:
+        type: integer
+        description: Company id.
+      parent_id:
+        type: integer
+        description: Parent company id.
+    required:
+    - company_id
+    - parent_id
+  two-factor-auth-provider-interface:
+    type: object
+    description: 2FA provider interface
+    properties:
+      enabled:
+        type: boolean
+        description: True if this provider has been enabled by admin
+      engine:
+        "$ref": "#/definitions/two-factor-auth-engine-interface"
+      code:
+        type: string
+        description: Provider code
+      name:
+        type: string
+        description: Provider name
+      icon:
+        type: string
+        description: Icon
+      reset_allowed:
+        type: boolean
+        description: True if this provider configuration can be reset
+      configure_action:
+        type: string
+        description: Configure action
+      auth_action:
+        type: string
+        description: Auth action
+      extra_actions:
+        type: array
+        description: Allowed extra actions
+        items:
+          type: string
+    required:
+    - enabled
+    - engine
+    - code
+    - name
+    - icon
+    - reset_allowed
+    - configure_action
+    - auth_action
+    - extra_actions
+  two-factor-auth-engine-interface:
+    type: object
+    description: 2FA engine interface
+    properties:
+      enabled:
+        type: boolean
+        description: True if this provider has been enabled by admin
+    required:
+    - enabled
+  two-factor-auth-data-google-configure-interface:
+    type: object
+    description: Google configuration data interface
+    properties:
+      qr_code_base64:
+        type: string
+        description: Value for QR code base 64
+      secret_code:
+        type: string
+        description: Value for secret code
+      extension_attributes:
+        "$ref": "#/definitions/two-factor-auth-data-google-configure-extension-interface"
+    required:
+    - qr_code_base64
+    - secret_code
+  two-factor-auth-data-google-configure-extension-interface:
+    type: object
+    description: ExtensionInterface class for @see \Magento\TwoFactorAuth\Api\Data\GoogleConfigureInterface
+  two-factor-auth-data-authy-device-interface:
+    type: object
+    description: Authy device data interface
+    properties:
+      country:
+        type: string
+        description: The country
+      phone_number:
+        type: string
+        description: The phone number
+      method:
+        type: string
+        description: The method to authenticate with
+      extension_attributes:
+        "$ref": "#/definitions/two-factor-auth-data-authy-device-extension-interface"
+    required:
+    - country
+    - phone_number
+    - method
+  two-factor-auth-data-authy-device-extension-interface:
+    type: object
+    description: ExtensionInterface class for @see \Magento\TwoFactorAuth\Api\Data\AuthyDeviceInterface
+  two-factor-auth-data-authy-registration-prompt-response-interface:
+    type: object
+    description: Response for device registration prompt
+    properties:
+      message:
+        type: string
+        description: The message
+      expiration_seconds:
+        type: string
+        description: The seconds to expire
+      extension_attributes:
+        "$ref": "#/definitions/two-factor-auth-data-authy-registration-prompt-response-extension-interface"
+    required:
+    - message
+    - expiration_seconds
+  two-factor-auth-data-authy-registration-prompt-response-extension-interface:
+    type: object
+    description: ExtensionInterface class for @see \Magento\TwoFactorAuth\Api\Data\AuthyRegistrationPromptResponseInterface
+  two-factor-auth-data-u2f-web-authn-request-interface:
+    type: object
+    description: Represents a WebAuthn dataset
+    properties:
+      credential_request_options_json:
+        type: string
+        description: The needed data to initiate a WebAuthn registration ceremony
+      extension_attributes:
+        "$ref": "#/definitions/two-factor-auth-data-u2f-web-authn-request-extension-interface"
+    required:
+    - credential_request_options_json
+  two-factor-auth-data-u2f-web-authn-request-extension-interface:
+    type: object
+    description: ExtensionInterface class for @see \Magento\TwoFactorAuth\Api\Data\U2fWebAuthnRequestInterface
+  two-factor-auth-data-duo-data-interface:
+    type: object
+    description: Represents the data needed to use duo
+    properties:
+      signature:
+        type: string
+        description: The signature
+      api_hostname:
+        type: string
+        description: The api hostname
+      extension_attributes:
+        "$ref": "#/definitions/two-factor-auth-data-duo-data-extension-interface"
+    required:
+    - signature
+    - api_hostname
+  two-factor-auth-data-duo-data-extension-interface:
+    type: object
+    description: ExtensionInterface class for @see \Magento\TwoFactorAuth\Api\Data\DuoDataInterface
   analytics-data-link-interface:
     type: object
     description: Represents link with collected data and initialized vector for decryption.
@@ -32533,9 +33952,6 @@ definitions:
     - items
     - search_criteria
     - total_count
-  framework-extensible-data-interface:
-    type: object
-    description: Interface for entities which can be extended with extension attributes.
   inventory-export-stock-api-data-product-stock-index-data-interface:
     type: object
     description: Class ExportStockIndexDataResultInterface for result Inventory stock
@@ -33075,6 +34491,172 @@ definitions:
     - items
     - search_criteria
     - total_count
+  asynchronous-operations-data-detailed-bulk-operations-status-interface:
+    type: object
+    description: Interface BulkStatusInterface Bulk summary data with list of operations
+      items full data.
+    properties:
+      operations_list:
+        type: array
+        description: Operations list.
+        items:
+          "$ref": "#/definitions/asynchronous-operations-data-operation-interface"
+      extension_attributes:
+        "$ref": "#/definitions/asynchronous-operations-data-bulk-summary-extension-interface"
+      user_type:
+        type: integer
+        description: User type
+      bulk_id:
+        type: string
+        description: Bulk uuid
+      description:
+        type: string
+        description: Bulk description
+      start_time:
+        type: string
+        description: Bulk scheduled time
+      user_id:
+        type: integer
+        description: User id
+      operation_count:
+        type: integer
+        description: Total number of operations scheduled in scope of this bulk
+    required:
+    - operations_list
+    - user_type
+    - bulk_id
+    - description
+    - start_time
+    - user_id
+    - operation_count
+  asynchronous-operations-data-operation-interface:
+    type: object
+    description: Class OperationInterface
+    properties:
+      extension_attributes:
+        "$ref": "#/definitions/asynchronous-operations-data-operation-extension-interface"
+      id:
+        type: integer
+        description: Id
+      bulk_uuid:
+        type: string
+        description: Bulk uuid
+      topic_name:
+        type: string
+        description: Queue Topic
+      serialized_data:
+        type: string
+        description: Data
+      result_serialized_data:
+        type: string
+        description: Serialized Data
+      status:
+        type: integer
+        description: Operation status
+      result_message:
+        type: string
+        description: Result message
+      error_code:
+        type: integer
+        description: Error code
+    required:
+    - id
+    - bulk_uuid
+    - topic_name
+    - serialized_data
+    - result_serialized_data
+    - status
+    - result_message
+    - error_code
+  asynchronous-operations-data-operation-extension-interface:
+    type: object
+    description: ExtensionInterface class for @see \Magento\AsynchronousOperations\Api\Data\OperationInterface
+    properties:
+      start_time:
+        type: string
+  asynchronous-operations-data-bulk-summary-extension-interface:
+    type: object
+    description: ExtensionInterface class for @see \Magento\AsynchronousOperations\Api\Data\BulkSummaryInterface
+  asynchronous-operations-data-bulk-operations-status-interface:
+    type: object
+    description: Interface BulkStatusInterface Bulk summary data with list of operations
+      items summary data.
+    properties:
+      operations_list:
+        type: array
+        description: List of operation with statuses (short data).
+        items:
+          "$ref": "#/definitions/asynchronous-operations-data-summary-operation-status-interface"
+      extension_attributes:
+        "$ref": "#/definitions/asynchronous-operations-data-bulk-summary-extension-interface"
+      user_type:
+        type: integer
+        description: User type
+      bulk_id:
+        type: string
+        description: Bulk uuid
+      description:
+        type: string
+        description: Bulk description
+      start_time:
+        type: string
+        description: Bulk scheduled time
+      user_id:
+        type: integer
+        description: User id
+      operation_count:
+        type: integer
+        description: Total number of operations scheduled in scope of this bulk
+    required:
+    - operations_list
+    - user_type
+    - bulk_id
+    - description
+    - start_time
+    - user_id
+    - operation_count
+  asynchronous-operations-data-summary-operation-status-interface:
+    type: object
+    description: Getter Class OperationsStatusInterface Instead of OperationInterface
+      this class don't provide all operation data and not responsive to set any data,
+      just to get operation data without serialized_data and result_serialized_data
+    properties:
+      id:
+        type: integer
+        description: Id
+      status:
+        type: integer
+        description: Operation status
+      result_message:
+        type: string
+        description: Result message
+      error_code:
+        type: integer
+        description: Error code
+    required:
+    - id
+    - status
+    - result_message
+    - error_code
+  asynchronous-operations-data-operation-search-results-interface:
+    type: object
+    description: Bulk operation search result interface. An bulk is a group of queue
+      messages. An bulk operation item is a queue message.
+    properties:
+      items:
+        type: array
+        description: List of operations.
+        items:
+          "$ref": "#/definitions/asynchronous-operations-data-operation-interface"
+      search_criteria:
+        "$ref": "#/definitions/framework-search-criteria-interface"
+      total_count:
+        type: integer
+        description: Total count.
+    required:
+    - items
+    - search_criteria
+    - total_count
   rma-data-track-interface:
     type: object
     description: Interface TrackInterface
@@ -33344,12 +34926,15 @@ definitions:
     properties:
       apple_pay:
         "$ref": "#/definitions/payment-services-paypal-data-payment-config-apple-pay-interface"
+      google_pay:
+        "$ref": "#/definitions/payment-services-paypal-data-payment-config-google-pay-interface"
       hosted_fields:
         "$ref": "#/definitions/payment-services-paypal-data-payment-config-hosted-fields-interface"
       smart_buttons:
         "$ref": "#/definitions/payment-services-paypal-data-payment-config-smart-buttons-interface"
     required:
     - apple_pay
+    - google_pay
     - hosted_fields
     - smart_buttons
   payment-services-paypal-data-payment-config-apple-pay-interface:
@@ -33436,6 +35021,61 @@ definitions:
     required:
     - name
     - value
+  payment-services-paypal-data-payment-config-google-pay-interface:
+    type: object
+    description: ''
+    properties:
+      button_styles:
+        "$ref": "#/definitions/payment-services-paypal-data-payment-config-google-pay-button-styles-interface"
+      payment_source:
+        type: string
+        description: PaymentSource
+      code:
+        type: string
+        description: Code
+      sdk_params:
+        type: array
+        description: SDK params
+        items:
+          "$ref": "#/definitions/payment-services-paypal-data-payment-config-sdk-params-interface"
+      is_visible:
+        type: boolean
+        description: Visible
+      sort_order:
+        type: string
+        description: Sort Order
+      payment_intent:
+        type: string
+        description: Payment intent
+      title:
+        type: string
+        description: Title
+    required:
+    - button_styles
+    - payment_source
+    - code
+    - sdk_params
+    - is_visible
+    - sort_order
+    - payment_intent
+    - title
+  payment-services-paypal-data-payment-config-google-pay-button-styles-interface:
+    type: object
+    description: ''
+    properties:
+      color:
+        type: string
+        description: Color
+      height:
+        type: integer
+        description: Height
+      type:
+        type: string
+        description: Type
+    required:
+    - color
+    - height
+    - type
   payment-services-paypal-data-payment-config-hosted-fields-interface:
     type: object
     description: ''
@@ -33566,10 +35206,18 @@ definitions:
       status:
         type: string
         description: Payment order status
+      amount:
+        type: number
+        description: Payment order amount
+      currency_code:
+        type: string
+        description: Payment order currency code
     required:
     - id
     - mp_order_id
     - status
+    - amount
+    - currency_code
   payment-services-paypal-data-payment-order-details-interface:
     type: object
     description: Interface PaymentOrderDetailsInterface
@@ -33585,11 +35233,19 @@ definitions:
       status:
         type: string
         description: Payment order status
+      amount:
+        type: number
+        description: Payment order amount
+      currency_code:
+        type: string
+        description: Payment order currency code
     required:
     - payment_source_details
     - id
     - mp_order_id
     - status
+    - amount
+    - currency_code
   payment-services-paypal-data-payment-source-details-interface:
     type: object
     description: ''
@@ -33646,172 +35302,6 @@ definitions:
     required:
     - code
     - params
-  asynchronous-operations-data-detailed-bulk-operations-status-interface:
-    type: object
-    description: Interface BulkStatusInterface Bulk summary data with list of operations
-      items full data.
-    properties:
-      operations_list:
-        type: array
-        description: Operations list.
-        items:
-          "$ref": "#/definitions/asynchronous-operations-data-operation-interface"
-      extension_attributes:
-        "$ref": "#/definitions/asynchronous-operations-data-bulk-summary-extension-interface"
-      user_type:
-        type: integer
-        description: User type
-      bulk_id:
-        type: string
-        description: Bulk uuid
-      description:
-        type: string
-        description: Bulk description
-      start_time:
-        type: string
-        description: Bulk scheduled time
-      user_id:
-        type: integer
-        description: User id
-      operation_count:
-        type: integer
-        description: Total number of operations scheduled in scope of this bulk
-    required:
-    - operations_list
-    - user_type
-    - bulk_id
-    - description
-    - start_time
-    - user_id
-    - operation_count
-  asynchronous-operations-data-operation-interface:
-    type: object
-    description: Class OperationInterface
-    properties:
-      extension_attributes:
-        "$ref": "#/definitions/asynchronous-operations-data-operation-extension-interface"
-      id:
-        type: integer
-        description: Id
-      bulk_uuid:
-        type: string
-        description: Bulk uuid
-      topic_name:
-        type: string
-        description: Queue Topic
-      serialized_data:
-        type: string
-        description: Data
-      result_serialized_data:
-        type: string
-        description: Serialized Data
-      status:
-        type: integer
-        description: Operation status
-      result_message:
-        type: string
-        description: Result message
-      error_code:
-        type: integer
-        description: Error code
-    required:
-    - id
-    - bulk_uuid
-    - topic_name
-    - serialized_data
-    - result_serialized_data
-    - status
-    - result_message
-    - error_code
-  asynchronous-operations-data-operation-extension-interface:
-    type: object
-    description: ExtensionInterface class for @see \Magento\AsynchronousOperations\Api\Data\OperationInterface
-    properties:
-      start_time:
-        type: string
-  asynchronous-operations-data-bulk-summary-extension-interface:
-    type: object
-    description: ExtensionInterface class for @see \Magento\AsynchronousOperations\Api\Data\BulkSummaryInterface
-  asynchronous-operations-data-bulk-operations-status-interface:
-    type: object
-    description: Interface BulkStatusInterface Bulk summary data with list of operations
-      items summary data.
-    properties:
-      operations_list:
-        type: array
-        description: List of operation with statuses (short data).
-        items:
-          "$ref": "#/definitions/asynchronous-operations-data-summary-operation-status-interface"
-      extension_attributes:
-        "$ref": "#/definitions/asynchronous-operations-data-bulk-summary-extension-interface"
-      user_type:
-        type: integer
-        description: User type
-      bulk_id:
-        type: string
-        description: Bulk uuid
-      description:
-        type: string
-        description: Bulk description
-      start_time:
-        type: string
-        description: Bulk scheduled time
-      user_id:
-        type: integer
-        description: User id
-      operation_count:
-        type: integer
-        description: Total number of operations scheduled in scope of this bulk
-    required:
-    - operations_list
-    - user_type
-    - bulk_id
-    - description
-    - start_time
-    - user_id
-    - operation_count
-  asynchronous-operations-data-summary-operation-status-interface:
-    type: object
-    description: Getter Class OperationsStatusInterface Instead of OperationInterface
-      this class don't provide all operation data and not responsive to set any data,
-      just to get operation data without serialized_data and result_serialized_data
-    properties:
-      id:
-        type: integer
-        description: Id
-      status:
-        type: integer
-        description: Operation status
-      result_message:
-        type: string
-        description: Result message
-      error_code:
-        type: integer
-        description: Error code
-    required:
-    - id
-    - status
-    - result_message
-    - error_code
-  asynchronous-operations-data-operation-search-results-interface:
-    type: object
-    description: Bulk operation search result interface. An bulk is a group of queue
-      messages. An bulk operation item is a queue message.
-    properties:
-      items:
-        type: array
-        description: List of operations.
-        items:
-          "$ref": "#/definitions/asynchronous-operations-data-operation-interface"
-      search_criteria:
-        "$ref": "#/definitions/framework-search-criteria-interface"
-      total_count:
-        type: integer
-        description: Total count.
-    required:
-    - items
-    - search_criteria
-    - total_count
   pay-pal-braintree-data-auth-data-interface:
     type: object
     description: Interface AuthDataInterface
@@ -33852,6 +35342,9 @@ x-tagGroups:
 - name: addresses
   tags:
   - addresses/{addressId}
+- name: adminuisdk
+  tags:
+  - adminuisdk/massaction/{request_id}
 - name: adobe_io_events
   tags:
   - adobe_io_events/check_configuration
@@ -33984,11 +35477,14 @@ x-tagGroups:
   tags:
   - company/
   - company/assignRoles
+  - company/relations
   - company/role/
   - company/role/{id}
   - company/role/{roleId}
   - company/role/{roleId}/users
   - company/{companyId}
+  - company/{parentId}/relations
+  - company/{parentId}/relations/{companyId}
 - name: companyCredits
   tags:
   - companyCredits/
@@ -34039,6 +35535,7 @@ x-tagGroups:
   tags:
   - customers
   - customers/addresses/{addressId}
+  - customers/companies
   - customers/confirm
   - customers/isEmailAvailable
   - customers/me
@@ -34053,6 +35550,8 @@ x-tagGroups:
   - customers/{customerId}
   - customers/{customerId}/billingAddress
   - customers/{customerId}/carts
+  - customers/{customerId}/companies
+  - customers/{customerId}/companies/{companyId}
   - customers/{customerId}/confirm
   - customers/{customerId}/password/resetLinkToken/{resetPasswordLinkToken}
   - customers/{customerId}/permissions/readonly
@@ -34195,9 +35694,28 @@ x-tagGroups:
   - negotiableQuote/pricesUpdated
   - negotiableQuote/request
   - negotiableQuote/submitToCustomer
+  - negotiableQuote/{negotiableQuoteId}/duplicate
   - negotiableQuote/{quoteId}
   - negotiableQuote/{quoteId}/comments
   - negotiableQuote/{quoteId}/shippingMethod
+- name: negotiableQuoteTemplate
+  tags:
+  - negotiableQuoteTemplate
+  - negotiableQuoteTemplate/accept
+  - negotiableQuoteTemplate/cancel
+  - negotiableQuoteTemplate/cancel/me
+  - negotiableQuoteTemplate/decline
+  - negotiableQuoteTemplate/draft
+  - negotiableQuoteTemplate/generateQuote
+  - negotiableQuoteTemplate/me
+  - negotiableQuoteTemplate/me/{templateId}
+  - negotiableQuoteTemplate/open
+  - negotiableQuoteTemplate/open/me
+  - negotiableQuoteTemplate/request
+  - negotiableQuoteTemplate/request/me
+  - negotiableQuoteTemplate/submitToCustomer
+  - negotiableQuoteTemplate/submitToSeller
+  - negotiableQuoteTemplate/{templateId}
 - name: order
   tags:
   - order/notify-orders-are-ready-for-pickup
@@ -34221,6 +35739,7 @@ x-tagGroups:
 - name: payments config
   tags:
   - payments-config/apple-pay/{location}
+  - payments-config/google-pay/{location}
   - payments-config/hosted-fields/{location}
   - payments-config/smart-buttons/{location}
   - payments-config/{location}
