@@ -5,7 +5,7 @@ keywords:
   - REST
 ---
 
-# Retrieving detailed atttributes
+# Retrieving detailed attributes
 
 Swagger and other types of code-generated documentation erroneously indicate several APIs that search across multiple objects return detailed information about individual objects. Detailed information, such as `extensionAttributes`,  `customAttributes`, and possibly other fields, are generally available only when requesting information on a single object.
 
