@@ -3,15 +3,15 @@ title: requestGuestReturn mutation
 edition: ee
 ---
 
-# requestReturn mutation
+# requestGuestReturn mutation
 
 The `requestGuestReturn` mutation initiates a guest buyer's request to return an item for replacement or refund.
 A confirmation email is sent to the guest provided email address with a link to confirm the return request and continue the process.
 
 The following examples illustrate how to retrieve the token and item ID values needed to run the `requestGuestReturn` mutation:
 
-*  [Retrieve details about an order placed by a guest or customer who is not logged in](../queries/guest-order)
-*  [Retrieve detailed information about a specific guest order](../queries/guest-order-by-token)
+*  [Retrieve details about an order placed by a guest or customer who is not logged in](../queries/guest-order.md)
+*  [Retrieve detailed information about a specific guest order](../queries/guest-order-by-token.md)
 
 <InlineAlert variant="info" slots="text" />
 
@@ -27,11 +27,11 @@ mutation {
 
 ## Reference
 
-The [`requestGuestReturn`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-requestReturn) reference provides detailed information about the types and fields defined in this mutation.
+The [`requestGuestReturn`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-requestGuestReturn) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
-The following example requests a product return from a guest customer.
+The following example requests a product return from a guest customer. Note that the return status after this request is `UNCONFIRMED`, as guest users need to confirm the return request as stated above. 
 
 **Request:**
 
@@ -138,7 +138,7 @@ Attribute |  Data Type | Description
 
 ## Related topics
 
-*  [`addReturnComment` mutation](add-return-comment.md)
-*  [`addReturnTracking` mutation](add-return-tracking.md)
-*  [`removeReturnTracking` mutation](remove-return-tracking.md)
-*  [`confirmReturn` mutation](confirm-return.md)
+* [`confirmReturn` mutation](confirm-return.md)
+* [`addReturnComment` mutation](add-return-comment.md)
+* [`addReturnTracking` mutation](add-return-tracking.md)
+* [`removeReturnTracking` mutation](remove-return-tracking.md)

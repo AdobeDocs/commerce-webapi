@@ -129,6 +129,7 @@ Attribute |  Data Type | Description
 
 ## Related topics
 
-*  [`addReturnComment` mutation](add-return-comment.md)
-*  [`addReturnTracking` mutation](add-return-tracking.md)
-*  [`removeReturnTracking` mutation](remove-return-tracking.md)
+* [`requestGuestReturn` mutation](request-guest-return.md) 
+* [`addReturnComment` mutation](add-return-comment.md)
+* [`addReturnTracking` mutation](add-return-tracking.md)
+* [`removeReturnTracking` mutation](remove-return-tracking.md)
