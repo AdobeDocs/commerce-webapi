@@ -1,5 +1,5 @@
 ---
-title: requestReturn mutation
+title: confirmReturn mutation
 edition: ee
 ---
 

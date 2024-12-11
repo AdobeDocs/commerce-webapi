@@ -1,5 +1,5 @@
 ---
-title: requestReturn mutation
+title: requestGuestReturn mutation
 edition: ee
 ---
 
