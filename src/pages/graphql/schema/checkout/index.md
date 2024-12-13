@@ -6,7 +6,7 @@ title: Checkout
 
 The checkout schema helps complete the customer checkout process by managing and retrieving payment tokens and checkout agreements.
 
-The checkout workflow differs for each online payment time. See the following topics for more information.
+The checkout workflow differs for each online payment type. See the following topics for more information.
 
 *  [Braintree](../../payment-methods/braintree.md)
 *  [Braintree vault](../../payment-methods/braintree-vault.md)
