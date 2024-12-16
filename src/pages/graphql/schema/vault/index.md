@@ -12,4 +12,4 @@ The vault schema provides GraphQL information to generate **vault** (stored paym
 
 Once vaulted, a payment method can be reused as many times as possible without your customer needing to re-enter or authenticate their payment information.
 
-These endpoints can be used to vault stored payment details without a purchase, but tt is possible to [vault a payment method during checkout](https://developer.adobe.com/commerce/webapi/graphql/payment-services/vault/), see the [`customer-payment-tokens`](https://developer.adobe.com/commerce/webapi/graphql/schema/checkout/queries/customer-payment-tokens/) query for more information.
+These endpoints can be used to vault stored payment details without a purchase, but it is possible to [vault a payment method during checkout](https://developer.adobe.com/commerce/webapi/graphql/payment-services/vault/), see the [`customer-payment-tokens`](https://developer.adobe.com/commerce/webapi/graphql/schema/checkout/queries/customer-payment-tokens/) query for more information.
