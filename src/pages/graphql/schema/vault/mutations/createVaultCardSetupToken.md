@@ -73,13 +73,55 @@ mutation {
 
 ## Input attributes
 
-The `createVaultCardSetupToken` object contains the following input attributes:
+The `createVaultCardSetupToken` mutation must contain the following input attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`payment_source` | String | The identifiable payment source for the payment method.
-`three_ds_mode` | Boolean | Indicates which 3D Secure authentication mode is in use.
+`setup_token` | [VaultSetupTokenInput]! | The setup token information.
+`three_ds_mode` | Boolean | Indicates which 3D Secure authentication mode is in use. The possible values are `OFF`, `SCA_WHEN_REQUIRED`, `SCA_ALWAYS`.
+
+### `VaultSetupTokenInput` attributes
+
+The VaultSetupTokenInput object describes the variables needed to create a vault card setup token
+
+Attribute                Data Type                        Description
+payment_source            [PaymentSourceInput]!            The payment source information
+    
+PaymentSourceInput object
+The PaymentSourceInput object describes the payment source information
+
+Attribute                Data Type                        Description
+card                    [CardPaymentSourceInput]!        The card payment source information
+
+CardPaymentSourceInput object
+The CardPaymentSourceInput object describes the card payment source information
+
+Attribute                Data Type                                Description
+name                    String                                    The name on the cardholder
+billing_address            [BillingAddressPaymentSourceInput]!        The billing address of the card
+
+BillingAddressPaymentSourceInput object
+The BillingAddressPaymentSourceInput object describes the billing address information
+
+Attribute                Data Type                                Description
+address_line_1            String                                    The first line of the address
+address_line_2            String                                    The second line of the address
+region                    String                                    The region of the address
+city                    String                                    The city of the address
+postal_code                String                                    The postal code of the address
+country_code            String!                                    The country code of the address
+
+ThreeDSMode object
+The ThreeDSMode enum provides description of all possible 3D Secure mode:
+
+OFF
+SCA_WHEN_REQUIRED
+SCA_ALWAYS 
 
 ## Output attributes
 
-The `createVaultCardSetupToken` object contains the `setup_token` details needed to run the `createVaultCardPaymentToken` mutation.
+The `createVaultCardSetupTokenOutput` object must contain the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`setup_token` | String! | The setup token id.

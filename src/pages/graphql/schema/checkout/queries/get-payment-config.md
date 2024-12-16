@@ -262,10 +262,10 @@ The `PaymentConfigOutput` contains details about each configured payment method:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`ApplePayConfig` | String! | Apple Pay payment method configuration
-`GooglePayConfig` | String! | Google Pay payment method configuration
-`HostedFieldsConfig` | String! | PayPal Hosted fields payment method configuration
-`SmartButtonsConfig` | String! | PayPal Smart Buttons payment method configuration
+`ApplePayConfig` | String! | Apple Pay payment method configuration.
+`GooglePayConfig` | String! | Google Pay payment method configuration.
+`HostedFieldsConfig` | String! | PayPal Hosted fields payment method configuration.
+`SmartButtonsConfig` | String! | PayPal Smart Buttons payment method configuration.
 
 Each of these output attributes implements the `PaymentConfigItem` interface.
 
@@ -275,7 +275,7 @@ The `PaymentConfigItem` interface contains the fields that are common to all the
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`code` | String | The payment method code as defined in the payment gateway
+`code` | String | The payment method code as defined in the payment gateway.
 `is_visible` | Boolean | Indicates whether the payment method is shown.
 `payment_intent` | String | Defines the payment intent. The possible values are `Authorize` or `Capture`.
 `sdk_params` | SDKParams | PayPal parameters required to load the PayPal JavaScript SDK.
@@ -297,11 +297,11 @@ The `ApplePayConfig` payment method configuration has a `button_styles` object c
 
 Attribute | Data Type | Description
 --- | --- | ---
-`color` | String | The button color
-`height` | Int | The button height in pixels
-`label` | String | The button label
-`layout` | String | The button layout
-`shape` | String | The button shape
+`color` | String | The button color.
+`height` | Int | The button height in pixels.
+`label` | String | The button label.
+`layout` | String | The button layout.
+`shape` | String | The button shape.
 `tagline` | Boolean | Indicates whether the tagline is displayed.
 `use_default_height` | Boolean | Defines if button uses default height. If the value is `False`, the value of `height` is used.
 
@@ -364,11 +364,11 @@ The `SmartButtonsConfig` payment method configuration has a `ButtonStyles` objec
 
 Attribute | Data Type | Description
 --- | --- | ---
-`color` | String | The button color
-`height` | Int | The button height in pixels
-`label` | String | The button label
-`layout` | String | The button layout
-`shape` | String | The button shape
+`color` | String | The button color.
+`height` | Int | The button height in pixels.
+`label` | String | The button label.
+`layout` | String | The button layout.
+`shape` | String | The button shape.
 `tagline` | Boolean | Indicates whether to display the PayPal tagline.
 `use_default_height` | Boolean | Defines if button uses default height. If the value is `False`, the value of `height` is used.
 
@@ -378,8 +378,8 @@ The `SmartButtonsConfig` payment method configuration has a `MessageStyles` obje
 
 Attribute | Data Type | Description
 --- | --- | ---
-`layout` | String | The message layout
-`logo` | String | The message logo
+`layout` | String | The message layout.
+`logo` | String | The message logo.
 
 #### `SDKParams` attributes
 
@@ -387,7 +387,7 @@ The `SDKParams` object provides details about the SDK parameters:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`name` | String | The name of the SDK parameter
-`value` | String | The value of the SDK parameter
+`name` | String | The name of the SDK parameter.
+`value` | String | The value of the SDK parameter.
 
 These values come from [PayPal JavaScript SDK](https://developer.paypal.com/sdk/js/reference/).

@@ -74,24 +74,29 @@ query {
 
 ## Input attributes
 
-The `getVaultConfig` query requires the following input attributes:
+The `getVaultConfig` query requires the following input attribute:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`paymentSource` | String! | The payment source for stored the payment method. For now, only `credit_card` is supported.
+`credit_card` | [VaultCreditCardConfig] | Credit card vault method configuration. For now, only `credit_card` is supported.
 
 ## Output attributes
 
-The `VaultConfigOutput` contains details about each stored payment method.
+The `VaultConfigOutput` object must contain the following attribute:
 
-### `credit_card` attributes
+Attribute |  Data Type | Description
+--- | --- | ---
+`credit_card` | [VaultCreditCardConfig] | Credit card vault method configuration.
 
-The `credit_card` payment method configuration contains the following attributes:
+### `VaultCreditCardConfig` attributes
+
+The `VaultCreditCardConfig` object provides details about the credit card vault method configuration
 
 Attribute |  Data Type | Description
 --- | --- | ---
 `is_vault_enabled` | Boolean | Indicates whether card vaulting is enabled.
-`three_ds_mode` | Boolean | Indicates which 3D Secure authentication mode is in use.
+`three_ds_mode` | Boolean | Indicates which 3D Secure authentication mode is in use. The possible values are `OFF`, `SCA_WHEN_REQUIRED`, `SCA_ALWAYS`.
+`sdk_params` | SDKParams | PayPal parameters required to load the PayPal JavaScript SDK.
 
 #### `SDKParams` attributes
 
