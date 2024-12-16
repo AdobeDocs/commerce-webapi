@@ -72,13 +72,7 @@ query {
 }
 ```
 
-## Input attributes
-
-The `getVaultConfig` query requires the following input attribute:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`credit_card` | [VaultCreditCardConfig] | Credit card vault method configuration. For now, only `credit_card` is supported.
+For now, only `credit_card` is supported with the `getVaultConfig` query.
 
 ## Output attributes
 
