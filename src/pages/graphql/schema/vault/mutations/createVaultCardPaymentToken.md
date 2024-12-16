@@ -73,9 +73,32 @@ The `createVaultCardPaymentToken` object contains the following input attributes
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`setup_token_id` | String | The identifiable payment source for the payment method.
-`card_description` | Boolean | Indicates which 3D Secure authentication mode is in use.
+`setup_token_id` | String! | The `setup_token` obtained with the `createVaultCardSetupToken` endpoint.
+`card_description` | Boolean | The description of the vaulted card.
 
 ## Output attributes
 
-The `createVaultCardSetupToken` object contains the `setup_token` details needed to run the `createVaultCardPaymentToken` mutation.
+The `createVaultCardSetupToken` object contains the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`vault_token_id` | String! | The vault payment token information.
+`payment_source` | [PaymentSourceOutput]! | The payment source information.
+
+### `PaymentSourceOutput` attributes
+
+The `PaymentSourceOutput` object describes the payment source information. Requires the following attribute:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`card` | [CardPaymentSourceOutput]! | The card payment source information.
+
+### `CardPaymentSourceOutput` object
+
+The `CardPaymentSourceOutput` object describes the card payment source information. Requires the following attributes:
+
+Attribute |  Data Type | Description
+--- | --- | ---
+`brand` | String | The brand of the card.
+`last_digits` | String | Last digits of the card.
+`expiry` | String | The expiry date of the card.
