@@ -24,7 +24,7 @@
           uses: actions/checkout@v4
   
         - name: Get pathPrefix
-          uses: actions/github-script@v6
+          uses: actions/github-script@v7
           id: get_path_prefix
           with:
             script: |
