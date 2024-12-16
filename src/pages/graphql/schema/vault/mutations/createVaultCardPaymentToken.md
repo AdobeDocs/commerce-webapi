@@ -78,7 +78,7 @@ Attribute |  Data Type | Description
 
 ## Output attributes
 
-The `createVaultCardSetupToken` object contains the following attributes:
+The `CreateVaultCardPaymentTokenOutput` object contains the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
