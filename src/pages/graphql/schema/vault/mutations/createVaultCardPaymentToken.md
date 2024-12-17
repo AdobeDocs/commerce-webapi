@@ -83,7 +83,7 @@ The `CreateVaultCardPaymentTokenOutput` object contains the following attributes
 Attribute |  Data Type | Description
 --- | --- | ---
 `vault_token_id` | String! | The vault payment token information.
-`payment_source` | [PaymentSourceOutput]! | The payment source information.
+`payment_source` | PaymentSourceOutput! | The payment source information.
 
 ### `PaymentSourceOutput` attributes
 
