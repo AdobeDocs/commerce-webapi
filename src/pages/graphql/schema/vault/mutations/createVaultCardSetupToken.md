@@ -86,7 +86,7 @@ The `VaultSetupTokenInput` object describes the variables needed to create a vau
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`payment_source` | [PaymentSourceInput]! | The payment source of the payment method.
+`payment_source` | PaymentSourceInput! | The payment source of the payment method.
 
 ### `PaymentSourceInput` attribute
 
