@@ -76,7 +76,7 @@ For now, only `credit_card` is supported with the `getVaultConfig` query.
 
 ## Output attributes
 
-The `VaultConfigOutput` object must contain the following attribute:
+The `VaultConfigOutput` object contains the following attribute:
 
 Attribute |  Data Type | Description
 --- | --- | ---
