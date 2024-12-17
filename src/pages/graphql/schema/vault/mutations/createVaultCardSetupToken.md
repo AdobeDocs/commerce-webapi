@@ -12,7 +12,7 @@ The `createVaultCardSetupToken` mutation creates a temporary `setup_token` assoc
 
 Use this token to create a permanent token with the `createVaultCardPaymentToken` mutation. The permanent token represents a payment method that is saved to the customer's vault.
 
-This setup token is generated with an empty card number in the `payment_source` object purposefully. In combination of PayPal SDK, hosted fields or credit cards fields components use this token to securely update the setup token with payment details.
+The setup token is generated with an empty card number in the `payment_source` object purposefully. The PayPal SDK, in conjunction with hosted fields or credit cards field components, securely update the setup token with payment details.
 
 See [Paypal SDK developer documentation](https://developer.paypal.com/docs/multiparty/checkout/save-payment-methods/purchase-later/js-sdk/cards/) for more information.
 
