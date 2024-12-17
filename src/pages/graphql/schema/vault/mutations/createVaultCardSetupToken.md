@@ -107,7 +107,7 @@ Attribute |  Data Type | Description
 
 ### `BillingAddressPaymentSourceInput` object
 
-The `BillingAddressPaymentSourceInput` object includes the billing address information. Requires the following attributes:
+The `BillingAddressPaymentSourceInput` object includes the billing address information
 
 Attribute |  Data Type | Description
 --- | --- | ---
