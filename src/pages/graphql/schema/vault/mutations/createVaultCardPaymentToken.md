@@ -87,7 +87,7 @@ Attribute |  Data Type | Description
 
 ### `PaymentSourceOutput` attributes
 
-The `PaymentSourceOutput` object describes the payment source information. Requires the following attribute:
+The `PaymentSourceOutput` object describes the payment source information. It contains the following attribute:
 
 Attribute |  Data Type | Description
 --- | --- | ---
