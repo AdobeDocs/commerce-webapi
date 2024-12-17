@@ -124,4 +124,4 @@ The `createVaultCardSetupTokenOutput` object must contain the following attribut
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`setup_token` | String! | The setup token id.
+`setup_token` | String! | The setup token ID
