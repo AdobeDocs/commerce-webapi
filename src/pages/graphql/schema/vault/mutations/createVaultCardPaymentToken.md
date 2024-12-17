@@ -91,7 +91,7 @@ The `PaymentSourceOutput` object describes the payment source information. It co
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`card` | [CardPaymentSourceOutput]! | The card payment source information.
+`card` | CardPaymentSourceOutput! | The card payment source information.
 
 ### `CardPaymentSourceOutput` object
 
