@@ -94,7 +94,7 @@ The `PaymentSourceInput` object describes the payment source information of the 
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`card` | [CardPaymentSourceInput]! | The card payment source information.
+`card` | CardPaymentSourceInput! | The card payment source information.
 
 ### `CardPaymentSourceInput` object
 
