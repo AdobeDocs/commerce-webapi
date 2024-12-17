@@ -1,26 +1,22 @@
 ---
 title: Payment Services Vault
-description: Learn how to use the GraphQL APIs to integrate the Payment Services Vault payment solution.
+description: Learn how to use the GraphQL APIs to integrate the Payment Services Vault solution.
 keywords:
   - GraphQL
   - Payments
 ---
 
-# Payment Services Vault payment method
+# Payment Services Vault method
 
-The [Payment Services Vault payment method](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/payments-checkout/vaulting.html) is a method of storing a transaction in which shoppers can save—or "vault"—their credit card credentials during checkout to use in a later purchase.
+The Payment Services Vault method is a solution in which shoppers can store—or "vault"—their credit card credentials to use in a later purchase:
 
-The following conditions must be true to use this payment method:
+- Logged-in customers can vault a payment method in the **My Account** dashboard [without a purchase](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/payment-services/payments-checkout/vaulting#vaulting-without-purchase)
 
--  The customer must be logged-in.
-
--  The customer must have previously saved their payment information in the vault.
-
-You cannot use this payment method if the customer decides to use a credit or debit card that is not stored in the vault.
+- Logged-in customers can [vault a credit card during checkout](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/payment-services/payments-checkout/vaulting#vaulting-a-payment-method-during-checkout) to use in a later purchases in the current store or other stores within the same merchant account
 
 ## Payment Services Vault workflow
 
-The following diagram shows the workflow for placing an order when Payment Services Vault is the selected payment method.
+The following diagram shows the workflow for storing a payment method during checkout.
 
 ![Payment Services Vault sequence diagram](../../_images/graphql/payment-services-paypal-vault.svg)
 
