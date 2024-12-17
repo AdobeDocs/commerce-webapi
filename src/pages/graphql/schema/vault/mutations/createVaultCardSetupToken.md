@@ -102,7 +102,7 @@ The `CardPaymentSourceInput` object describes the card payment source informatio
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`billing_address` | [BillingAddressPaymentSourceInput]! | The billing address of the card.
+`billing_address` | BillingAddressPaymentSourceInput! | The billing address of the card.
 `name` | String! | The cardholder's name.
 
 ### `BillingAddressPaymentSourceInput` object
