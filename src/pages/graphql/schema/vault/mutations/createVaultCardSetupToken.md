@@ -120,7 +120,7 @@ Attribute |  Data Type | Description
 
 ## Output attributes
 
-The `createVaultCardSetupTokenOutput` object must contain the following attributes:
+The `createVaultCardSetupTokenOutput` object contains the following attribute:
 
 Attribute |  Data Type | Description
 --- | --- | ---
