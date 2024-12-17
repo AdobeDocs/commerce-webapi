@@ -73,7 +73,7 @@ The `CreateVaultCardPaymentTokenInput` object contains the following input attri
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`setup_token_id` | String! | The `setup_token` obtained with the `createVaultCardSetupToken` endpoint.
+`setup_token_id` | String! | The `setup_token` obtained with the `createVaultCardSetupToken` mutation
 `card_description` | Boolean | The description of the vaulted card.
 
 ## Output attributes
