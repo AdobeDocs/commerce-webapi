@@ -95,7 +95,7 @@ Attribute |  Data Type | Description
 
 ### `CardPaymentSourceOutput` object
 
-The `CardPaymentSourceOutput` object describes the card payment source information. Requires the following attributes:
+The `CardPaymentSourceOutput` object describes the card payment source information
 
 Attribute |  Data Type | Description
 --- | --- | ---
