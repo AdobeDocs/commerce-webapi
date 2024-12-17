@@ -10,7 +10,7 @@ This mutation is available only if you have installed [Payment Services for Adob
 
 The `createVaultCardPaymentToken` mutation creates a permanent `vault_token_id` and associates an optional card description, visible in the storefront.
 
-To run the `createVaultCardPaymentToken` mutation, you need the `setup_token` generated with the `createVaultCardSetupToken` mutation.
+To run the `createVaultCardPaymentToken` mutation, you need the `setup_token` generated with the [`createVaultCardSetupToken`](create-vault-card-setup-token/) mutation.
 
 ## Syntax
 
