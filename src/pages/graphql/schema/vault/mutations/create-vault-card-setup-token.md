@@ -10,7 +10,7 @@ This mutation is available only if you have installed [Payment Services for Adob
 
 The `createVaultCardSetupToken` mutation creates a temporary `setup_token` associated to the given payment source.
 
-Use this token to create a permanent token with the `createVaultCardPaymentToken` mutation. The permanent token represents a payment method that is saved to the customer's vault.
+Use this token to create a permanent token with the [`createVaultCardPaymentToken`](create-vault-card-payment-token.md) mutation. The permanent token represents a payment method that is saved to the customer's vault.
 
 The setup token is generated with an empty card number in the `payment_source` object purposefully. The PayPal SDK, in conjunction with hosted fields or credit cards field components, securely update the setup token with payment details.
 

@@ -1130,6 +1130,36 @@ module.exports = [
         ],
       },
       {
+        title: "Vault",
+        path: "/graphql/schema/vault/",
+        pages: [
+          {
+            title: "Queries",
+            path: "/graphql/schema/vault/queries/",
+            pages: [
+              {
+                title: "getVaultConfig",
+                path: "/graphql/schema/vault/queries/get-vault-config/",
+              },
+            ],
+          },
+          {
+            title: "Mutations",
+            path: "/graphql/schema/vault/mutations/",
+            pages: [
+              {
+                title: "createVaultCardSetupToken",
+                path: "/graphql/schema/vault/mutations/create-vault-card-setup-token/",
+              },
+              {
+                title: "createVaultCardPaymentToken",
+                path: "/graphql/schema/vault/mutations/create-vault-card-payment-token/",
+              },
+            ],
+          },
+        ],
+      },
+      {
         title: "Wish list",
         path: "/graphql/schema/wishlist/",
         pages: [
