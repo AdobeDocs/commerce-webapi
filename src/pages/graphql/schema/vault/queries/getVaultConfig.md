@@ -80,7 +80,7 @@ The `VaultConfigOutput` object must contain the following attribute:
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`credit_card` | [VaultCreditCardConfig] | Credit card vault method configuration.
+`credit_card` | VaultCreditCardConfig | Credit card vault method configuration.
 
 ### `VaultCreditCardConfig` attributes
 
