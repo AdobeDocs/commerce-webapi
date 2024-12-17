@@ -73,7 +73,7 @@ mutation {
 
 ## Input attributes
 
-The `createVaultCardSetupToken` mutation must contain the following input attributes:
+The `CreateVaultCardSetupTokenInput` object must contain the following attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
