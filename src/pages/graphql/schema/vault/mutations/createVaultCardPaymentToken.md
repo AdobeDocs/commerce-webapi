@@ -69,7 +69,7 @@ mutation {
 
 ## Input attributes
 
-The `createVaultCardPaymentToken` object contains the following input attributes:
+The `CreateVaultCardPaymentTokenInput` object contains the following input attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
