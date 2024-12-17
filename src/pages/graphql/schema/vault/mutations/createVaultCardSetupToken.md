@@ -77,7 +77,7 @@ The `CreateVaultCardSetupTokenInput` object must contain the following attribute
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`setup_token` | [VaultSetupTokenInput]! | The setup token information.
+`setup_token` | VaultSetupTokenInput! | The setup token information.
 `three_ds_mode` | ThreeDSMode | Indicates which 3D Secure authentication mode is in use. The possible values are `OFF`, `SCA_WHEN_REQUIRED`, `SCA_ALWAYS`.
 
 ### `VaultSetupTokenInput` attribute
