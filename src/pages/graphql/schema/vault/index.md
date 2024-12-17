@@ -12,4 +12,4 @@ The vault-related changes to the schema allow you to generate stored payment det
 
 Once the customer has vaulted a payment method, they no longer need to re-enter or authenticate their payment information.
 
-These mutations can be used to [vault stored payment details without a purchase](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/payment-services/payments-checkout/vaulting#vaulting-without-purchase), but it is possible to [vault a payment method during checkout](../payment-services/vault/), see the [`customerPaymentTokens`](../checkout/queries/customer-payment-tokens/) query for more information.
+These mutations can be used to [vault stored payment details without a purchase](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/payment-services/payments-checkout/vaulting#vaulting-without-purchase), but it is possible to [vault a payment method during checkout](../../payment-services/vault.md), see the [`customerPaymentTokens`](../checkout/queries/customer-payment-tokens.md) query for more information.
