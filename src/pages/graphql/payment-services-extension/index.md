@@ -29,7 +29,7 @@ It provides powerful tools to give you the insight and control needed for creati
 
 ## Credit card vaulting
 
-The vault-related changes to the schema allow you to generate stored payment details and to modify a payment tokens.
+The vault-related changes to the schema allow you to generate stored payment details and to modify a payment token.
 
 The Payment Services Vault method is a solution in which shoppers can store—or "vault"—their credit card credentials to use in a later purchase:
 
