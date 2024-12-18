@@ -1,5 +1,6 @@
 ---
 title: createPaymentOrder mutation
+description: This mutation creates a payment order for later processing when Payment Services extension is enabled.
 ---
 
 # createPaymentOrder mutation

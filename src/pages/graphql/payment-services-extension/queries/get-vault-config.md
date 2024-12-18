@@ -1,5 +1,6 @@
 ---
 title: getVaultConfig query
+description: This query returns the vault configuration details for each payment method available.
 ---
 
 # getVaultConfig query

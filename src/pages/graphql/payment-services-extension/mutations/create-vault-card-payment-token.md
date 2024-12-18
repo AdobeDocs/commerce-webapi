@@ -1,5 +1,6 @@
 ---
 title: createVaultCardPaymentToken mutation
+description: This mutation creates a permanent token ID and associates an optional card description, visible in the storefront.
 ---
 
 # createVaultCardPaymentToken mutation

@@ -1,5 +1,6 @@
 ---
 title: getPaymentConfig query
+description: This query returns the payment configuration details from locations in the storefront and Admin where the payment method can be set.
 ---
 
 # getPaymentConfig query

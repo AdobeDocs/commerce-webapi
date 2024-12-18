@@ -1,5 +1,6 @@
 ---
 title: createVaultCardSetupToken mutation
+description: This mutation creates a temporary token associated to the given payment source.
 ---
 
 # createVaultCardSetupToken mutation
