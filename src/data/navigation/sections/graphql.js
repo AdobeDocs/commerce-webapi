@@ -1288,8 +1288,10 @@ module.exports = [
                 {
                   title: "Vault",
                   path: "/graphql/payment-services-extension/workflows/vault.md",
-                },
-    ]
+          },
+        ],
+      },
+    ],
   },
   {
     title: "Tutorial",
