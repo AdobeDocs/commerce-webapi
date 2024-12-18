@@ -305,18 +305,6 @@ module.exports = [
                 title: "getPayflowLinkToken",
                 path: "/graphql/schema/checkout/queries/get-payflow-link-token/",
               },
-              {
-                title: "getPaymentConfig",
-                path: "/graphql/schema/checkout/queries/get-payment-config/",
-              },
-              {
-                title: "getPaymentOrder",
-                path: "/graphql/schema/checkout/queries/get-payment-order/",
-              },
-              {
-                title: "getPaymentSDK",
-                path: "/graphql/schema/checkout/queries/get-payment-sdk/",
-              },
             ],
           },
           {
@@ -336,10 +324,6 @@ module.exports = [
                 path: "/graphql/schema/checkout/mutations/create-payflow-pro-token/",
               },
               {
-                title: "createPaymentOrder",
-                path: "/graphql/schema/checkout/mutations/create-payment-order/",
-              },
-              {
                 title: "createPaypalExpressToken",
                 path: "/graphql/schema/checkout/mutations/create-paypal-express-token/",
               },
@@ -350,10 +334,6 @@ module.exports = [
               {
                 title: "handlePayflowProResponse",
                 path: "/graphql/schema/checkout/mutations/handle-payflow-pro-response/",
-              },
-              {
-                title: "syncPaymentOrder",
-                path: "/graphql/schema/checkout/mutations/sync-payment-order/",
               },
             ],
           },
@@ -1130,36 +1110,6 @@ module.exports = [
         ],
       },
       {
-        title: "Vault",
-        path: "/graphql/schema/vault/",
-        pages: [
-          {
-            title: "Queries",
-            path: "/graphql/schema/vault/queries/",
-            pages: [
-              {
-                title: "getVaultConfig",
-                path: "/graphql/schema/vault/queries/get-vault-config/",
-              },
-            ],
-          },
-          {
-            title: "Mutations",
-            path: "/graphql/schema/vault/mutations/",
-            pages: [
-              {
-                title: "createVaultCardSetupToken",
-                path: "/graphql/schema/vault/mutations/create-vault-card-setup-token/",
-              },
-              {
-                title: "createVaultCardPaymentToken",
-                path: "/graphql/schema/vault/mutations/create-vault-card-payment-token/",
-              },
-            ],
-          },
-        ],
-      },
-      {
         title: "Wish list",
         path: "/graphql/schema/wishlist/",
         pages: [
@@ -1276,21 +1226,69 @@ module.exports = [
     ],
   },
   {
-    title: "Payment Services payment methods",
-    path: "/graphql/payment-services/",
+    title: "Payment Services extension",
+    path: "/graphql/payment-services-extension/",
     pages: [
-      {
-        title: "Checkout",
-        path: "/graphql/payment-services/checkout.md"
-      },
-      {
-        title: "Minicart",
-        path: "/graphql/payment-services/minicart.md"
-      },
-      {
-        title: "Vault",
-        path: "/graphql/payment-services/vault.md"
-      }
+        {
+            title: "Queries",
+            path: "/graphql/payment-services-extension/queries/",
+            pages: [
+                {
+                    title: "getPaymentConfig",
+                    path: "/graphql/schema/checkout/queries/get-payment-config/",
+                  },
+                  {
+                    title: "getPaymentOrder",
+                    path: "/graphql/schema/checkout/queries/get-payment-order/",
+                  },
+                  {
+                    title: "getPaymentSDK",
+                    path: "/graphql/schema/checkout/queries/get-payment-sdk/",
+                  },
+                  {
+                    title: "getVaultConfig",
+                    path: "/graphql/schema/checkout/queries/get-vault-config/",
+                  },
+            ],
+          },
+          {
+            title: "Mutations",
+            path: "/graphql/payment-services-extension/mutations/",
+            pages: [
+              {
+                title: "createPaymentOrder",
+                path: "/graphql/payment-services-extension/mutations/create-payment-order/",
+              },
+              {
+                title: "createVaultCardPaymentToken",
+                path: "/graphql/payment-services-extension/mutations/create-vault-card-payment-token/",
+              },
+              {
+                title: "createVaultCardSetupToken",
+                path: "/graphql/payment-services-extension/mutations/create-vault-card-setup-token/",
+              },
+              {
+                title: "syncPaymentOrder",
+                path: "/graphql/payment-services-extension/mutations/sync-payment-order/",
+              },
+            ],
+          },
+          {
+          title: "Workflows",
+          path: "/graphql/payment-services-extension/workflows/",
+          pages: [
+                {
+                  title: "Checkout",
+                  path: "/graphql/payment-services-extension/workflows/checkout.md",
+                },
+                {
+                  title: "Minicart",
+                  path: "/graphql/payment-services-extension/workflows/minicart.md",
+                },
+                {
+                  title: "Vault",
+                  path: "/graphql/payment-services-extension/workflows/vault.md",
+                },
     ]
   },
   {

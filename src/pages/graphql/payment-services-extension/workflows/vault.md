@@ -1,24 +1,16 @@
 ---
-title: Payment Services Vault
+title: Payment Services Vault workflow
 description: Learn how to use the GraphQL APIs to integrate the Payment Services Vault solution.
 keywords:
   - GraphQL
   - Payments
 ---
 
-# Payment Services Vault method
-
-The Payment Services Vault method is a solution in which shoppers can store—or "vault"—their credit card credentials to use in a later purchase:
-
-- Logged-in customers can vault a payment method in the **My Account** dashboard [without a purchase](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/payment-services/payments-checkout/vaulting#vaulting-without-purchase)
-
-- Logged-in customers can [vault a credit card during checkout](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/payment-services/payments-checkout/vaulting#vaulting-a-payment-method-during-checkout) to use in a later purchases in the current store or other stores within the same merchant account
-
-## Payment Services Vault workflow
+# Payment Services Vault workflow
 
 The following diagram shows the workflow for storing a payment method during checkout.
 
-![Payment Services Vault sequence diagram](../../_images/graphql/payment-services-paypal-vault.svg)
+![Payment Services Vault sequence diagram](../../../_images/graphql/payment-services-paypal-vault.svg)
 
 1. Use the [`customerPaymentTokens`](../schema/checkout/queries/customer-payment-tokens.md) query to retrieve the payment tokens the customer stored in the vault.
 
