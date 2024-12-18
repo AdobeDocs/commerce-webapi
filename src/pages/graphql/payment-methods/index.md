@@ -16,4 +16,4 @@ Supported payment providers include:
 - Klarna (deprecated)
 - PayPal
 
-[Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.3.0 and higher provides enhanced payment method capabilities. See [Payment Services Payment Methods](../payment-services/index.md) for more information.
+[Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.3.0 and higher provides enhanced payment method capabilities. See [Payment Services Payment Methods](../payment-services-extension/index.md) for more information.

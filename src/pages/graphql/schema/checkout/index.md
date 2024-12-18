@@ -10,8 +10,9 @@ The checkout workflow differs for each online payment type. See the following to
 
 *  [Braintree](../../payment-methods/braintree.md)
 *  [Braintree vault](../../payment-methods/braintree-vault.md)
-*  [Payment Services checkout](../../payment-services/checkout.md)
-*  [Payment Services minicart](../../payment-services/minicart.md)
+*  [Payment Services checkout](../../payment-services-extension/workflows/checkout.md)
+*  [Payment Services minicart](../../payment-services-extension/workflows/minicart.md)
+*  [Payment Services credit card vaulting](../../payment-services-extension/workflows/vault.md)
 *  [Klarna](../../payment-methods/klarna.md) (no longer supported)
 *  [PayPal Express Checkout](../../payment-methods/paypal-express-checkout.md)
 *  [Express Checkout for other PayPal solutions](../../payment-methods/payflow-express.md)

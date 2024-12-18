@@ -12,13 +12,13 @@ The following diagram shows the workflow for storing a payment method during che
 
 ![Payment Services Vault sequence diagram](../../../_images/graphql/payment-services-paypal-vault.svg)
 
-1. Use the [`customerPaymentTokens`](../schema/checkout/queries/customer-payment-tokens.md) query to retrieve the payment tokens the customer stored in the vault.
+1. Use the [`customerPaymentTokens`](../../schema/checkout/queries/customer-payment-tokens.md) query to retrieve the payment tokens the customer stored in the vault.
 
 1. Commerce returns an array of payment tokens.
 
 1. The client integration renders the token information, and the customer selects a payment method.
 
-   When the customer selects a stored payment method, the client integration uses the [`setPaymentMethodOnCart`](../schema/cart/mutations/set-payment-method.md) mutation to set the payment method to `payment_services_paypal_vault`.
+   When the customer selects a stored payment method, the client integration uses the [`setPaymentMethodOnCart`](../../schema/cart/mutations/set-payment-method.md) mutation to set the payment method to `payment_services_paypal_vault`.
 
 1. Commerce returns a `Cart` object.
 
@@ -32,9 +32,9 @@ The following diagram shows the workflow for storing a payment method during che
 
 ## Additional Payment information
 
-When you set the payment method to Payment Services Vault in the [`setPaymentMethodOnCart`](../schema/cart/mutations/set-payment-method.md) mutation, you must supply a value for the `public_hash` field. Run the [`customerPaymentTokens`](../schema/checkout/queries/customer-payment-tokens.md) query to retrieve the value.
+When you set the payment method to Payment Services Vault in the [`setPaymentMethodOnCart`](../../schema/cart/mutations/set-payment-method.md) mutation, you must supply a value for the `public_hash` field. Run the [`customerPaymentTokens`](../../schema/checkout/queries/customer-payment-tokens.md) query to retrieve the value.
 
-This `public_hash` comes from the [`customerPaymentTokens`](../schema/checkout/queries/customer-payment-tokens.md) query.
+This `public_hash` comes from the [`customerPaymentTokens`](../../schema/checkout/queries/customer-payment-tokens.md) query.
 
 ### `payment_services_paypal_vault` attributes
 
