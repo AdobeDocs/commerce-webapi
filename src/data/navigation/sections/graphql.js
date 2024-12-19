@@ -730,12 +730,20 @@ module.exports = [
                 path: "/graphql/schema/orders/mutations/cancel-order/",
               },
               {
+                title: "confirmReturn",
+                path: "/graphql/schema/orders/mutations/confirm-return/",
+              },
+              {
                 title: "removeReturnTracking",
                 path: "/graphql/schema/orders/mutations/remove-return-tracking/",
               },
               {
                 title: "reorderItems",
                 path: "/graphql/schema/orders/mutations/reorder-items/",
+              },
+              {
+                title: "requestGuestReturn",
+                path: "/graphql/schema/orders/mutations/request-guest-return/",
               },
               {
                 title: "requestReturn",
