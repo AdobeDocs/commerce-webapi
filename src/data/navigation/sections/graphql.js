@@ -1229,7 +1229,25 @@ module.exports = [
     title: "Payment Services extension",
     path: "/graphql/payment-services-extension/",
     pages: [
-        {
+      {
+        title: "Workflows",
+        path: "/graphql/payment-services-extension/workflows/",
+        pages: [
+              {
+                title: "Checkout",
+                path: "/graphql/payment-services-extension/workflows/checkout.md",
+              },
+              {
+                title: "Minicart",
+                path: "/graphql/payment-services-extension/workflows/minicart.md",
+              },
+              {
+                title: "Vault",
+                path: "/graphql/payment-services-extension/workflows/vault.md",
+        },
+      ],
+    },
+      {
             title: "Queries",
             path: "/graphql/payment-services-extension/queries/",
             pages: [
@@ -1273,24 +1291,6 @@ module.exports = [
               },
             ],
           },
-          {
-          title: "Workflows",
-          path: "/graphql/payment-services-extension/workflows/",
-          pages: [
-                {
-                  title: "Checkout",
-                  path: "/graphql/payment-services-extension/workflows/checkout.md",
-                },
-                {
-                  title: "Minicart",
-                  path: "/graphql/payment-services-extension/workflows/minicart.md",
-                },
-                {
-                  title: "Vault",
-                  path: "/graphql/payment-services-extension/workflows/vault.md",
-          },
-        ],
-      },
     ],
   },
   {
