@@ -5,6 +5,10 @@ edition: ee
 
 # confirmReturn mutation
 
+<InlineAlert variant="info" slots="text1" />
+
+This mutation is part of the [Storefront Compatibility Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/storefront-compatibility/). It will be added to Adobe Commerce 2.4.8-beta2.
+
 The `confirmReturn` mutation confirms a return request from a guest customer. The merchant subsequently decides whether to accept or reject the request.
 
 ## Syntax
@@ -14,11 +18,11 @@ mutation {
   confirmReturn(input: ConfirmReturnInput!): RequestReturnOutput
 }
 ```
-
+<!--
 ## Reference
 
 The [`confirmReturn`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-confirmReturn) reference provides detailed information about the types and fields defined in this mutation.
-
+-->
 ## Example usage
 
 The following example confirms a return request previously issued by a guest customer. At this point, the merchant hasn't taken action, but the response acknowledges the request was received.
