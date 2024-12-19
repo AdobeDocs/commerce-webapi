@@ -1,36 +1,24 @@
 ---
-title: Payment Services Vault
-description: Learn how to use the GraphQL APIs to integrate the Payment Services Vault payment solution.
+title: Payment Services Vault workflow
+description: Learn how to use the GraphQL APIs to integrate the Payment Services Vault solution.
 keywords:
   - GraphQL
   - Payments
 ---
 
-# Payment Services Vault payment method
+# Payment Services Vault workflow
 
-The [Payment Services Vault payment method](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/payments-checkout/vaulting.html) is a method of storing a transaction in which shoppers can save—or "vault"—their credit card credentials during checkout to use in a later purchase.
+The following diagram shows the workflow for storing a payment method during checkout.
 
-The following conditions must be true to use this payment method:
+![Payment Services Vault sequence diagram](../../../_images/graphql/payment-services-paypal-vault.svg)
 
--  The customer must be logged-in.
-
--  The customer must have previously saved their payment information in the vault.
-
-You cannot use this payment method if the customer decides to use a credit or debit card that is not stored in the vault.
-
-## Payment Services Vault workflow
-
-The following diagram shows the workflow for placing an order when Payment Services Vault is the selected payment method.
-
-![Payment Services Vault sequence diagram](../../_images/graphql/payment-services-paypal-vault.svg)
-
-1. Use the [`customerPaymentTokens`](../schema/checkout/queries/customer-payment-tokens.md) query to retrieve the payment tokens the customer stored in the vault.
+1. Use the [`customerPaymentTokens`](../../schema/checkout/queries/customer-payment-tokens.md) query to retrieve the payment tokens the customer stored in the vault.
 
 1. Commerce returns an array of payment tokens.
 
 1. The client integration renders the token information, and the customer selects a payment method.
 
-   When the customer selects a stored payment method, the client integration uses the [`setPaymentMethodOnCart`](../schema/cart/mutations/set-payment-method.md) mutation to set the payment method to `payment_services_paypal_vault`.
+   When the customer selects a stored payment method, the client integration uses the [`setPaymentMethodOnCart`](../../schema/cart/mutations/set-payment-method.md) mutation to set the payment method to `payment_services_paypal_vault`.
 
 1. Commerce returns a `Cart` object.
 
@@ -44,9 +32,9 @@ The following diagram shows the workflow for placing an order when Payment Servi
 
 ## Additional Payment information
 
-When you set the payment method to Payment Services Vault in the [`setPaymentMethodOnCart`](../schema/cart/mutations/set-payment-method.md) mutation, you must supply a value for the `public_hash` field. Run the [`customerPaymentTokens`](../schema/checkout/queries/customer-payment-tokens.md) query to retrieve the value.
+When you set the payment method to Payment Services Vault in the [`setPaymentMethodOnCart`](../../schema/cart/mutations/set-payment-method.md) mutation, you must supply a value for the `public_hash` field. Run the [`customerPaymentTokens`](../../schema/checkout/queries/customer-payment-tokens.md) query to retrieve the value.
 
-This `public_hash` comes from the [`customerPaymentTokens`](../schema/checkout/queries/customer-payment-tokens.md) query.
+This `public_hash` comes from the [`customerPaymentTokens`](../../schema/checkout/queries/customer-payment-tokens.md) query.
 
 ### `payment_services_paypal_vault` attributes
 

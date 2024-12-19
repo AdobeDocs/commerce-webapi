@@ -1,5 +1,6 @@
 ---
 title: getPaymentSDK query
+description: This query retrieves the payment PayPal SDK URLs and other related values.
 ---
 
 # getPaymentSDK query

@@ -8,17 +8,17 @@ keywords:
 
 # Payment services minicart workflow
 
-These steps describe the additional flow of requests and responses required to place an order after [adding a product to your cart](../tutorials/checkout/add-product-to-cart.md) with the [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html) solution enabled.
+These steps describe the additional flow of requests and responses required to place an order after [adding a product to your cart](../../tutorials/checkout/add-product-to-cart.md) with the [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html) solution enabled.
 
 ## Minicart workflow
 
-![Payment Services sequence diagram](../../_images/graphql/payment-services-minicart.svg)
+![Payment Services sequence diagram](../../../_images/graphql/payment-services-minicart.svg)
 
-1. Run the [`getPaymentConfig`](../schema/checkout/queries/get-payment-config.md) query to fetch the payment configuration needed to render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
+1. Run the [`getPaymentConfig`](../../payment-services-extension/queries/get-payment-config.md) query to fetch the payment configuration needed to render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
 
 1. Adobe Commerce returns payment configuration information.
 
-1. Run [`createPaymentOrder`](../schema/checkout/mutations/create-payment-order.md) to begin the authorization process.
+1. Run [`createPaymentOrder`](../../payment-services-extension/mutations/create-payment-order.md) to begin the authorization process.
 
 1. Commerce forwards the request to PayPal.
 
@@ -26,15 +26,15 @@ These steps describe the additional flow of requests and responses required to p
 
 1. Commerce generates an `order_id` and forwards the value in the `mp_order_id` field and in the PayPal response in the `id` field.
 
-1. Run the [`syncPaymentOrder`](../schema/checkout/mutations/sync-payment-order.md) mutation to get payment details and update the quote with shipping, billing, email, and phone number details.
+1. Run the [`syncPaymentOrder`](../../payment-services-extension/mutations/sync-payment-order.md) mutation to get payment details and update the quote with shipping, billing, email, and phone number details.
 
 1. Commerce returns details about the payment order.
 
-1. Run the [`setShippingMethodsOnCart`](../schema/cart/mutations/set-shipping-method.md)mutation to define the delivery methods for your order.
+1. Run the [`setShippingMethodsOnCart`](../../schema/cart/mutations/set-shipping-method.md)mutation to define the delivery methods for your order.
 
 1. Commerce returns details about the delivery methods for your order.
 
-1. Run the [`placeOrder`](../schema/cart/mutations/place-order.md) mutation.
+1. Run the [`placeOrder`](../../schema/cart/mutations/place-order.md) mutation.
 
 1. Commerce sends an authorization request to PayPal.
 
@@ -44,7 +44,7 @@ These steps describe the additional flow of requests and responses required to p
 
 ## `setPaymentMethodOnCartInput` object
 
-For the PayPal Smart Buttons and Apple Pay payment methods, you do not need to run the [`setPaymentMethodOnCart`](../schema/cart/mutations/set-payment-method.md) mutation. The hosted fields payment method requires that you run the mutation only if one of the following conditions are true:
+For the PayPal Smart Buttons and Apple Pay payment methods, you do not need to run the [`setPaymentMethodOnCart`](../../schema/cart/mutations/set-payment-method.md) mutation. The hosted fields payment method requires that you run the mutation only if one of the following conditions are true:
 
 * You intend to vault a card by setting `is_active_payment_token_enabler` to `true`.
 
