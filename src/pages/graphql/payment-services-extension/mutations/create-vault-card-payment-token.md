@@ -83,8 +83,8 @@ The `CreateVaultCardPaymentTokenOutput` object contains the following attributes
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`vault_token_id` | String! | The vault payment token information.
-`payment_source` | PaymentSourceOutput! | The payment source information.
+`vault_token_id` | String! | The vault payment token information
+`payment_source` | PaymentSourceOutput! | The payment source information
 
 ### `PaymentSourceOutput` attributes
 
@@ -100,6 +100,6 @@ The `CardPaymentSourceOutput` object describes the card payment source informati
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`brand` | String | The brand of the card.
-`last_digits` | String | Last digits of the card.
-`expiry` | String | The expiry date of the card.
+`brand` | String | The brand of the card
+`last_digits` | String | Last digits of the card
+`expiry` | String | The expiry date of the card

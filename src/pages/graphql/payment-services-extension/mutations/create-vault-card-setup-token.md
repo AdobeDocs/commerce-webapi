@@ -78,8 +78,8 @@ The `CreateVaultCardSetupTokenInput` object must contain the following attribute
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`setup_token` | VaultSetupTokenInput! | The setup token information.
-`three_ds_mode` | ThreeDSMode | Indicates which 3D Secure authentication mode is in use. The possible values are `OFF`, `SCA_WHEN_REQUIRED`, `SCA_ALWAYS`.
+`setup_token` | VaultSetupTokenInput! | The setup token information
+`three_ds_mode` | ThreeDSMode | Indicates which 3D Secure authentication mode is in use. The possible values are `OFF`, `SCA_WHEN_REQUIRED`, `SCA_ALWAYS`
 
 ### `VaultSetupTokenInput` attribute
 
@@ -103,8 +103,8 @@ The `CardPaymentSourceInput` object describes the card payment source informatio
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`billing_address` | BillingAddressPaymentSourceInput! | The billing address of the card.
-`name` | String! | The cardholder's name.
+`billing_address` | BillingAddressPaymentSourceInput! | The billing address of the card
+`name` | String! | The cardholder's name
 
 ### `BillingAddressPaymentSourceInput` object
 
@@ -112,12 +112,12 @@ The `BillingAddressPaymentSourceInput` object includes the billing address infor
 
 Attribute |  Data Type | Description
 --- | --- | ---
-`address_line_1` | String | The first line of the address.
-`address_line_2` | String | The second line of the address.
-`region` | String | The region of the address.
-`city` | String | The city of the address.
-`postal_code` | String | The postal code of the address.
-`country_code` | String! | The country code of the address.
+`address_line_1` | String | The first line of the address
+`address_line_2` | String | The second line of the address
+`region` | String | The region of the address
+`city` | String | The city of the address
+`postal_code` | String | The postal code of the address
+`country_code` | String! | The country code of the address
 
 ## Output attributes
 
