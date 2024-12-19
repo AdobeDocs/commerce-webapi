@@ -1,5 +1,6 @@
 ---
 title: getPaymentOrder query
+description: This query retrieves the payment details for the order.
 ---
 
 # getPaymentOrder query

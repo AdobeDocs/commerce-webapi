@@ -1,5 +1,6 @@
 ---
 title: syncPaymentOrder mutation
+description: This mutation synchronizes the payment order details for the PayPal Smart Buttons and Apple Pay payment methods.
 ---
 
 # syncPaymentOrder mutation
