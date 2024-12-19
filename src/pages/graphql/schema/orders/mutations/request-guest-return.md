@@ -8,7 +8,7 @@ edition: ee
 The `requestGuestReturn` mutation initiates a guest buyer's request to return an item for replacement or refund.
 A confirmation email is sent to the guest provided email address with a link to confirm the return request and continue the process.
 
-The following examples illustrate how to retrieve the token and item ID values needed to run the `requestGuestReturn` mutation:
+The following queries illustrate how to retrieve the token and item ID values needed to run the `requestGuestReturn` mutation:
 
 *  [Retrieve details about an order placed by a guest or customer who is not logged in](../queries/guest-order.md)
 *  [Retrieve detailed information about a specific guest order](../queries/guest-order-by-token.md)
