@@ -35,7 +35,7 @@ The [`requestGuestReturn`](https://developer.adobe.com/commerce/webapi/graphql-a
 -->
 ## Example usage
 
-The following example requests a product return from a guest customer. Note that the return status after this request is `UNCONFIRMED`, as guest users need to confirm the return request as stated above. 
+The following example requests a product return from a guest customer. Note that the return status after this request is `UNCONFIRMED`, as guest users need to confirm the return request as stated above.
 
 **Request:**
 
