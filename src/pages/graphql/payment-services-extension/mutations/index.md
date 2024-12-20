@@ -8,7 +8,7 @@ keywords:
 
 # Payment Services extension mutations
 
-The Payment Services extension mutations allow you to perform operations such as creating, updating, and deleting payment-related data, enabling you to manage the payment services extension with ease.
+The mutations described in this section allow you to create, update, and delete payment-related data with the Payment Services extension.
 
 If you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.3.0 or higher, you can use the following mutations during checkout:
 
