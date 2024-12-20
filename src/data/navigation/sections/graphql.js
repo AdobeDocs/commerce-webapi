@@ -1261,19 +1261,19 @@ module.exports = [
             pages: [
                 {
                     title: "getPaymentConfig",
-                    path: "/graphql/schema/checkout/queries/get-payment-config/",
+                    path: "/graphql/payment-services-extension/queries/get-payment-config/",
                   },
                   {
                     title: "getPaymentOrder",
-                    path: "/graphql/schema/checkout/queries/get-payment-order/",
+                    path: "/graphql/payment-services-extension/queries/get-payment-order/",
                   },
                   {
                     title: "getPaymentSDK",
-                    path: "/graphql/schema/checkout/queries/get-payment-sdk/",
+                    path: "/graphql/payment-services-extension/queries/get-payment-sdk/",
                   },
                   {
                     title: "getVaultConfig",
-                    path: "/graphql/schema/checkout/queries/get-vault-config/",
+                    path: "/graphql/payment-services-extension/queries/get-vault-config/",
                   },
             ],
           },
