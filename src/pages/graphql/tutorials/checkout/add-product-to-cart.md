@@ -137,7 +137,7 @@ mutation {
           {
             "id": "5",
             "product": {
-              "sku": "240-LV04",
+              "sku": "24-MG04",
               "stock_status": "IN_STOCK"
             },
             "quantity": 1
