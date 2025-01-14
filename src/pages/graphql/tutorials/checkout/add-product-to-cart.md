@@ -32,7 +32,7 @@ The following mutation adds a simple product into the shopping cart.
 
 Replace `{ CART_ID }` with the unique shopping cart ID from [Step 2. Create empty cart](../../tutorials/checkout/add-product-to-cart.md).
 
-In this example, we will add the Salt Water Magazine (SKU VDL01) from the default Luma catalog to the cart. The SKU identifies the product to be added.
+In this example, we will add the Aim Analog Watch (SKU 24-MG04) from the default Luma catalog to the cart. The SKU identifies the product to be added.
 
 **Request:**
 
@@ -45,7 +45,7 @@ mutation {
         {
           data: {
             quantity: 1
-            sku: "VDL01"
+            sku: "24-MG04"
           }
         }
       ]
