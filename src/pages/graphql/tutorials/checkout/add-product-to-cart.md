@@ -78,7 +78,7 @@ mutation {
           {
             "id": "5",
             "product": {
-              "sku": "VDL01",
+              "sku": "24-MG04",
               "stock_status": "IN_STOCK"
             },
             "quantity": 1
