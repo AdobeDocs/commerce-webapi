@@ -50,7 +50,7 @@ The following example runs the `getPaymentConfig` query for a `location: CHECKOU
                 }
                 is_visible
                 payment_source
-                three_ds
+                three_ds_mode
                 is_vault_enabled
                 cc_vault_code
                 requires_card_details
@@ -157,7 +157,7 @@ The following example runs the `getPaymentConfig` query for a `location: CHECKOU
                     ],
                     "is_visible": true,
                     "payment_source": "cc",
-                    "three_ds": false,
+                    "three_ds_mode": false,
                     "is_commerce_vault_enabled": true,
                     "cc_vault_code": "payment_services_paypal_vault"
                     "requires_card_details": false
@@ -344,7 +344,9 @@ Attribute |  Data Type | Description
 `is_vault_enabled` | Boolean | Indicates whether card vaulting is enabled
 `payment_source` | String | The identifiable payment source for the payment method
 `requires_card_details` | Boolean | Indicates whether card and bin details are required. This value is true when the Signifyd integration is enabled for hosted fields
-`three_ds` | Boolean | Indicates whether 3DS mode is enabled
+`three_ds_mode` | ThreeDSMode | Indicates which 3D Secure authentication mode is in use. The possible values are `OFF`, `SCA_WHEN_REQUIRED`, `SCA_ALWAYS`
+
+**Note:** The `three_ds` attribute is deprecated. The `HostedFieldsConfig` payment method configuration currently uses a `three_ds_mode` attribute instead.
 
 ### `SmartButtonsConfig` attributes
 
