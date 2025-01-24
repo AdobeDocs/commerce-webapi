@@ -7,7 +7,7 @@ description: This mutation creates a temporary token associated to the given pay
 
 <InlineAlert variant="info" slots="text" />
 
-This mutation is available only if you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.10.0 or higher.
+This mutation is available only if you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.10.0 or higher with the functionality [vault without a purchase](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/payment-services/payments-checkout/vaulting#vaulting-without-purchase).
 
 The `createVaultCardSetupToken` mutation creates a temporary `setup_token` associated to the given payment source.
 
