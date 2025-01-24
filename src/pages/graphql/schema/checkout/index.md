@@ -12,7 +12,7 @@ The checkout workflow differs for each online payment type. See the following to
 *  [Braintree vault](../../payment-methods/braintree-vault.md)
 *  [Payment Services checkout](../../payment-services-extension/workflows/checkout.md)
 *  [Payment Services minicart](../../payment-services-extension/workflows/minicart.md)
-*  [Payment Services credit card vaulting](../../payment-services-extension/workflows/vault.md)
+*  [Payment Services checkout using a vaulted credit card](../../payment-services-extension/workflows/vaulted-card.md)
 *  [Klarna](../../payment-methods/klarna.md) (no longer supported)
 *  [PayPal Express Checkout](../../payment-methods/paypal-express-checkout.md)
 *  [Express Checkout for other PayPal solutions](../../payment-methods/payflow-express.md)
