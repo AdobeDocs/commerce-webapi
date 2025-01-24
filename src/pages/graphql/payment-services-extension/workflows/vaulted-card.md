@@ -8,7 +8,7 @@ keywords:
 
 # Payment Services Vault workflow
 
-The following diagram shows the workflow for storing a payment method during checkout.
+The following diagram shows the workflow of a checkout authorization using a vaulted payment method.
 
 ![Payment Services Vault sequence diagram](../../../_images/graphql/payment-services-paypal-vault.svg)
 
@@ -49,7 +49,7 @@ Attribute |  Data Type | Description
 
 ### Example usage
 
-The following example shows the `setPaymentMethodOnCart` mutation constructed for the Payment Services Vault payment method.
+The following example shows the `setPaymentMethodOnCart` mutation constructed for the Payment Services vaulted card workflow.
 
 **Request:**
 

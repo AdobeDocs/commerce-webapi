@@ -37,4 +37,4 @@ The Payment Services Vault method is a solution in which shoppers can store—or
 
 * Logged-in customers can vault a payment method in the **My Account** dashboard [without a purchase](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/payment-services/payments-checkout/vaulting#vaulting-without-purchase). This functionality is available only if you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.10.0 or higher.
 
-See [Payment Services Vault workflow](../payment-services-extension/workflows/vault.md) for more information.
+See [Payment Services Vaulted card workflow](../payment-services-extension/workflows/vaulted-card.md) for more information.
