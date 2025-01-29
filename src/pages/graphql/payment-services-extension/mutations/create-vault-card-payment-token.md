@@ -1,13 +1,13 @@
 ---
 title: createVaultCardPaymentToken mutation
-description: This mutation creates a permanent token ID and associates an optional card description, visible in the storefront.
+description: This mutation stores a permanent payment token for a later purchase and associates it with an optional card description, visible in the storefront.
 ---
 
 # createVaultCardPaymentToken mutation
 
 <InlineAlert variant="info" slots="text" />
 
-This mutation is available only if you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.10.0 or higher with the functionality [vault without a purchase](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/payment-services/payments-checkout/vaulting#vaulting-without-purchase).
+This mutation is available only if you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.10.0 or higher.
 
 The `createVaultCardPaymentToken` mutation creates a permanent `vault_token_id` and associates an optional card description, visible in the storefront.
 
