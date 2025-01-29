@@ -1,6 +1,6 @@
 ---
-title: Payment Services Vault workflow
-description: Learn how to use the GraphQL APIs to integrate the Payment Services Vault solution.
+title: Payment Services vault workflow
+description: Learn how to use the GraphQL APIs to integrate the Payment Services vault solution.
 keywords:
   - GraphQL
   - Payments
@@ -8,7 +8,7 @@ keywords:
 
 # Payment Services Vault workflow
 
-The following diagram shows the workflow of a checkout authorization using a vaulted payment method.
+The following diagram shows the workflow of a checkout authorization using a vaulted card.
 
 ![Payment Services Vault sequence diagram](../../../_images/graphql/payment-services-paypal-vault.svg)
 
@@ -32,7 +32,7 @@ The following diagram shows the workflow of a checkout authorization using a vau
 
 ## Additional Payment information
 
-When you set the payment method to Payment Services Vault in the [`setPaymentMethodOnCart`](../../schema/cart/mutations/set-payment-method.md) mutation, you must supply a value for the `public_hash` field. Run the [`customerPaymentTokens`](../../schema/checkout/queries/customer-payment-tokens.md) query to retrieve the value.
+When you set the payment method to Payment Services vaulted card in the [`setPaymentMethodOnCart`](../../schema/cart/mutations/set-payment-method.md) mutation, you must supply a value for the `public_hash` field. Run the [`customerPaymentTokens`](../../schema/checkout/queries/customer-payment-tokens.md) query to retrieve the value.
 
 This `public_hash` comes from the [`customerPaymentTokens`](../../schema/checkout/queries/customer-payment-tokens.md) query.
 

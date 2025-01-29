@@ -72,7 +72,7 @@ mutation {
 
 ## Input attributes
 
-The `CreatePaymentOrderinput` object contains the following input attributes:
+The `CreatePaymentOrderInput` object contains the following input attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---

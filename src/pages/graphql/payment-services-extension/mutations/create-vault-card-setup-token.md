@@ -52,7 +52,7 @@ mutation {
                        }
                    }
             },
-            three_ds_mode: "SCA_ALWAYS"
+            three_ds_mode: SCA_ALWAYS
         }
       ) {
           setup_token
