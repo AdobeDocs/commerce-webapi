@@ -81,6 +81,14 @@ Attribute |  Data Type | Description
 `setup_token` | VaultSetupTokenInput! | The setup token information
 `three_ds_mode` | ThreeDSMode | Indicates which 3D Secure authentication mode is in use. The possible values are `OFF`, `SCA_WHEN_REQUIRED`, `SCA_ALWAYS`
 
+### `Three_ds_mode` attribute values
+
+Attribute | Description
+--- | ---
+`OFF` | No 3D Secure authentication mode is in use
+`SCA_WHEN_REQUIRED` | Triggers 3D Secure authentication for every transaction, regardless of any SCA requirements
+`SCA_ALWAYS` | Returns a 3D Secure authentication when it is a mandate in the region where you operate. This is the default when neither parameter is explicitly passed
+
 ### `VaultSetupTokenInput` attribute
 
 The `VaultSetupTokenInput` object describes the variables needed to create a vault card setup token. Requires the following attribute:
