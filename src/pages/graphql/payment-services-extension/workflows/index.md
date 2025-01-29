@@ -16,4 +16,4 @@ If you have installed [Payment Services for Adobe Commerce](https://commercemark
 
 * [Minicart](../workflows/minicart.md)---This workflow describes the additional flow of requests and responses required to place an order after adding a product to your cart with the Payment Services extension enabled.
 
-* [Checkout using a vaulted card](../workflows/vaulted-card.md)---This workflow describes a checkout authorization using a vaulted payment method.
+* [Checkout using a vaulted card](../workflows/vaulted-card.md)---This workflow describes a checkout authorization using a vaulted card.
