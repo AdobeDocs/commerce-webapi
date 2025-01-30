@@ -6,11 +6,11 @@
 spectaql:
   # Optional Boolean indicating whether to omit the HTML <body/> and generate the documentation content only
   # Default: false
-  embeddable: true
+  # embeddable: true
 
   # Optional Boolean indicating whether to embed all resources (CSS and JS) into the same file
   # Default: false
-  oneFile: false
+  oneFile: true
 
   # Optional path to the target build directory.
   # Set to null to not write the output to the filesystem, making it only available via the API (default: public)
@@ -439,8 +439,8 @@ info:
   # A non-standard array of items to display in your Introduction Area
   x-introItems:
     # Can be a Title (for the Nav panel) + URL to simply add a link to somewhere
-    - title: WebAPI guide
-      url: https://developer.adobe.com/commerce/webapi/
+    - title: Back to the GraphQL guide
+      url: https://developer.adobe.com/commerce/webapi/graphql/
     # Can be a Title (for the Nav panel) + description (for the Content panel)
     # - title: Important thing 1
     #   description: Some important stuff we wanted you to know. Supports `markdown`
