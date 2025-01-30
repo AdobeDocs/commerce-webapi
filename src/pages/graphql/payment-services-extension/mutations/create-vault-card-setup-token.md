@@ -81,13 +81,13 @@ Attribute |  Data Type | Description
 `setup_token` | VaultSetupTokenInput! | The setup token information
 `three_ds_mode` | ThreeDSMode | Indicates which 3D Secure authentication mode is in use. The possible values are `OFF`, `SCA_WHEN_REQUIRED`, `SCA_ALWAYS`
 
-### `Three_ds_mode` attribute values
+### `ThreeDSMode` enum values
 
-Attribute | Description
+Value | Description
 --- | ---
 `OFF` | No 3D Secure authentication mode is in use
-`SCA_WHEN_REQUIRED` | Triggers 3D Secure authentication for every transaction, regardless of any SCA requirements
-`SCA_ALWAYS` | Returns a 3D Secure authentication when it is a mandate in the region where you operate. This is the default when neither parameter is explicitly passed
+`SCA_WHEN_REQUIRED` | Returns a 3D Secure authentication when it is a mandate in the region where you operate. This is the default when neither parameter is explicitly passed
+`SCA_ALWAYS` | Triggers 3D Secure authentication for every transaction, regardless of any SCA requirements
 
 ### `VaultSetupTokenInput` attribute
 
