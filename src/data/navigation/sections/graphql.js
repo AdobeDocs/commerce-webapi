@@ -1250,8 +1250,8 @@ module.exports = [
                 path: "/graphql/payment-services-extension/workflows/minicart.md",
               },
               {
-                title: "Vault",
-                path: "/graphql/payment-services-extension/workflows/vault.md",
+                title: "Vaulted card",
+                path: "/graphql/payment-services-extension/workflows/vaulted-card.md",
         },
       ],
     },

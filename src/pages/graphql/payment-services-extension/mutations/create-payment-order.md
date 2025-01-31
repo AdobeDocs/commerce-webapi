@@ -72,13 +72,12 @@ mutation {
 
 ## Input attributes
 
-The `CreatePaymentOrderinput` object contains the following input attributes:
+The `CreatePaymentOrderInput` object contains the following input attributes:
 
 Attribute |  Data Type | Description
 --- | --- | ---
 `cartId` | String! | The unique ID of the cart
-`location` | PaymentLocation! | The origin location for that payment request. The possible values are
-`PRODUCT_DETAIL`, `MINICART`, `CART`, `CHECKOUT`, `ADMIN`
+`location` | PaymentLocation! | The origin location for that payment request. The possible values are `PRODUCT_DETAIL`, `MINICART`, `CART`, `CHECKOUT`, `ADMIN`
 `methodCode` | String! | The code for the selected payment method
 `paymentSource` | String! | The payment source for the payment method The possible values are credit card (`cc`), PayPal (`paypal`), and Apple Pay (`applepay`)
 `vaultIntent` | Boolean | Indicates whether the payment information should be vaulted. This attribute is only applicable to the `hosted_fields` payment method. The default value is `false`
