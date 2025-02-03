@@ -31,7 +31,7 @@ spectaql:
   # Optional URL to an image to use in your logo. This string will be provided as-is
   # to the HTML output. Should not be used with logoFile and its related options as
   # this will take precedence over the logoFile.
-  # logoUrl: https://yoursite.com/images/logo.png
+  logoUrl: https://developer.adobe.com/shared/images/adobe-social-share.png
   # Control the height of your logo here. Can be useful if your logo is SVG or an
   # inappropriate size.
   #
@@ -51,7 +51,7 @@ spectaql:
   # Optional URL to an image to use in your favicon. This string will be provided as-is
   # to the HTML output. Should not be used with faviconFile and its related options as
   # this will take precedence over the faviconFile.
-  # faviconUrl: https://yoursite.com/images/favicon.png
+  faviconUrl: https://www.adobe.com/favicon.ico
 
   # Optional string specifying a path to a theme directory to use for your build.
   #
@@ -454,4 +454,3 @@ info:
 
   # If not using introspection.url OR servers[], you need to provide x-url
   # x-url: https://yoursite.com/graphql
-  
