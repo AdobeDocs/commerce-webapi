@@ -52,13 +52,15 @@ mutation {
     }
   ) {
     cart {
-      items {
-        id
-        product {
-          sku
-          stock_status
+      itemsV2 {
+        items {
+          id
+          product {
+            sku
+            stock_status
+          }
+          quantity
         }
-        quantity
       }
     }
   }
