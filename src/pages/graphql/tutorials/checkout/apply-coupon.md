@@ -20,7 +20,7 @@ Use [applyCouponToCart](apply-coupon.md) to apply a discount coupon to the speci
 
 Coupons must be generated from the Admin.
 
-Creating a coupon is described in [Coupon Codes](https://docs.magento.com/user-guide/marketing/price-rules-cart-coupon.html).
+Creating a coupon is described in [Coupon Codes](https://experienceleague.adobe.com/en/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart-coupon).
 For the purpose of this tutorial, create a Cart Price Rule with:
 
 For **Rule Information**:

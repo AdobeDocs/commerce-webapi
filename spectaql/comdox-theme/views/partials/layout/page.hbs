@@ -1,0 +1,29 @@
+<div id="page" class="drawer-layout">
+  {{! DO THE NAVIGATION }}
+  <div id="sidebar">
+    <div class="sidebar-top-container">
+      <div id="logo">
+        {{#if logoData }}
+          <img src="data:image/png;base64,{{logoData}}" title="{{info.title}}" />
+        {{else if logoUrl}}
+          <a href="https://developer.adobe.com/commerce/webapi/graphql/"><img src="{{logoUrl}}" title="{{info.title}}" />
+            <strong class="spectrum-Heading spectrum-Heading--sizeXXS" style="text-align: center; display: block; color: #FA0F00;">Adobe&nbsp;Developer</strong>
+          </a>
+        {{else if logoImageName}}
+          <img src="images/{{logoImageName}}" title="{{info.title}}" />
+        {{/if}}
+      </div>
+      <button class="close-button" type="button">
+        <span aria-hidden="true">×</span>
+        <span class="sr-only">Close menu</span>
+      </button>
+    </div>
+    {{>layout/nav/main}}
+  </div>
+
+  <div id="docs">
+    {{>layout/nav/mobile-navbar}}
+    {{>layout/content/main}}
+    <div class="drawer-overlay"></div>
+  </div>
+</div>

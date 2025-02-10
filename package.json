@@ -7,7 +7,7 @@
     "url": "https://github.com/AdobeDocs/commerce-webapi"
   },
   "dependencies": {
-    "@adobe/gatsby-theme-aio": "4.14.10",
+    "@adobe/gatsby-theme-aio": "4.14.18",
     "gatsby": "4.22.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
@@ -32,8 +32,7 @@
     "test": "remark src/pages --quiet --frail",
     "build:spectaql": "spectaql --target-file index.html --config spectaql/config.yml",
     "build:spectaql:2.4.6": "spectaql --target-file index.html --config spectaql/config_2.4.6.yml",
-    "dev:spectaql": "spectaql --development-mode-live --config spectaql/config.yml",
-    "lint": "docker run --rm -e RUN_LOCAL=true --env-file '.github/super-linter.env' -v \"$PWD\":/tmp/lint github/super-linter:slim-v5"
+    "dev:spectaql": "spectaql --development-mode-live --config spectaql/config.yml"
   },
   "packageManager": "yarn@3.2.4"
 }

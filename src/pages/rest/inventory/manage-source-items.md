@@ -41,7 +41,7 @@ Use the `POST V1/inventory/source-items-delete` endpoint to unassign one or more
 
 <InlineAlert variant="warning" slots="text"/>
 
-Unassigning a source clears all quantity data. For this example, this is OK, because the default source did not contain any quantity data. Reassigning a source that contains real quantity data can potentially cause havoc with pending orders with reservations and affect the salable quantity counts. See the [merchant documentation](https://docs.magento.com/user-guide/catalog/inventory-bulk-transfer-inventory.html) for more details.
+Unassigning a source clears all quantity data. For this example, this is OK, because the default source did not contain any quantity data. Reassigning a source that contains real quantity data can potentially cause havoc with pending orders with reservations and affect the salable quantity counts. See the [merchant documentation](https://experienceleague.adobe.com/en/docs/commerce-admin/inventory/quantities/inventory-transfer) for more details.
 
 **Sample usage:**
 
