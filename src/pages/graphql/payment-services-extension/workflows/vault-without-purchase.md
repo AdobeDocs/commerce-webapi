@@ -14,6 +14,32 @@ These steps describe the flow of requests and responses required to [vault a pay
 
 ![Payment Services sequence diagram](../../../_images/graphql/payment-services-vault-without-purchase.svg)
 
-1. Run the [`getPaymentConfig`](../../payment-services-extension/queries/get-payment-config.md) query to fetch the payment configuration needed to render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
+1. Run the [`getVaultConfig`](../../payment-services-extension/queries/get-vault-config.md) query to fetch the vault configuration details for the available payment methods. Attribute `is_vault_enabled` set to `true`.
 
-1. Commerce returns payment configuration information.
+1. Commerce returns the vault configuration details.
+
+1. Run [`createVaultCardSetupToken`](../../payment-services-extension/mutations/create-vault-card-setup-token.md) to create a temporary `setup_token` associated to the given payment source.
+
+1. Commerce forwards token request to Paypal.
+
+1. PayPal returns the temporary `setup_token` to Commerce.
+
+1. Commerce stores the token.
+
+1. PaPal SDK updates the credit card information in the storefront.
+
+1. Run [`createVaultCardPaymentToken`](../../payment-services-extension/mutations/create-vault-card-payment-token.md) to create a permanent `vault_token_id` and associate it with an optional card description, visible in the storefront.
+
+1. Commerce forwards `setup_token` to PayPal.
+
+1. PayPal returns a permanent `vault_token_id` to Commerce.
+
+1. Commerce vaults payment method.
+
+## Additional Payment information
+
+The setup token is generated with an empty card number in the `payment_source` object purposefully. The PayPal SDK, in conjunction with hosted fields or credit cards field components, securely update the setup token with payment details.
+
+See [Paypal SDK developer documentation](https://developer.paypal.com/docs/multiparty/checkout/save-payment-methods/purchase-later/js-sdk/cards/) for more information.
+
+To run the `createVaultCardPaymentToken` mutation, you need the `setup_token` generated with the [`createVaultCardSetupToken`](create-vault-card-setup-token.md) mutation.
