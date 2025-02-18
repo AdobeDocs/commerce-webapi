@@ -42,4 +42,4 @@ The setup token is generated with an empty card number in the `payment_source` o
 
 See [Paypal SDK developer documentation](https://developer.paypal.com/docs/multiparty/checkout/save-payment-methods/purchase-later/js-sdk/cards/) for more information.
 
-To run the `createVaultCardPaymentToken` mutation, you need the `setup_token` generated with the [`createVaultCardSetupToken`](create-vault-card-setup-token.md) mutation.
+To run the `createVaultCardPaymentToken` mutation, you need the `setup_token` generated with the [`createVaultCardSetupToken`](../mutations/create-vault-card-setup-token.md) mutation.
