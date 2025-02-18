@@ -21,13 +21,13 @@ The following conditions must be true to vault a card during checkout:
 
 1. Run the [`getPaymentConfig`](../../payment-services-extension/queries/get-payment-config.md) query to fetch the payment configuration needed to render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
 
-1. Commerce returns payment configuration information.
+1. Commerce returns the payment configuration information.
 
-1. Run [`setPaymentMethodOnCart`](../../schema/cart/mutations/set-payment-method.md) to [set the payment method](../../tutorials/checkout/set-payment-method.md).
+1. Run the [`setPaymentMethodOnCart`](../../schema/cart/mutations/set-payment-method.md) mutation to [set the payment method](../../tutorials/checkout/set-payment-method.md).
 
 1. Adobe Commerce returns a `Cart` object.
 
-1. Run [`createPaymentOrder`](../../payment-services-extension/mutations/create-payment-order.md) with `vaultIntent`set to `true` to begin the authorization process.
+1. Run the [`createPaymentOrder`](../../payment-services-extension/mutations/create-payment-order.md) mutation with `vaultIntent`set to `true` to begin the authorization process.
 
 1. Commerce forwards the request to PayPal.
 
@@ -39,11 +39,11 @@ The following conditions must be true to vault a card during checkout:
 
 1. Adobe Commerce returns a token.
 
-1. (Optional) If hosted fields and the Signifyd integration are enabled, run [`getPaymentOrder`](../../payment-services-extension/queries/get-payment-order.md).
+1. (Optional) If hosted fields and the Signifyd integration are enabled, run the [`getPaymentOrder`](../../payment-services-extension/queries/get-payment-order.md) query.
 
 1. (Optional) Adobe Commerce returns details about the payment order.
 
-1. Run [`placeOrder`](../../schema/cart/mutations/place-order.md).
+1. Run the [`placeOrder`](../../schema/cart/mutations/place-order.md) mutation.
 
 1. Commerce sends an authorization request to PayPal.
 
