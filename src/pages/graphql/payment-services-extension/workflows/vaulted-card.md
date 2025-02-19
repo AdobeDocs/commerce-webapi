@@ -1,16 +1,16 @@
 ---
-title: Payment Services vault workflow
-description: Learn how to use the GraphQL APIs to integrate the Payment Services vault solution.
+title: Payment Services vaulted card workflow
+description: Learn how to use the GraphQL APIs to integrate the Payment Services into a checkout process with a vaulted card.
 keywords:
   - GraphQL
   - Payments
 ---
 
-# Payment Services Vault workflow
+# Payment Services vaulted card workflow
 
 The following diagram shows the workflow of a checkout authorization using a vaulted card.
 
-![Payment Services Vault sequence diagram](../../../_images/graphql/payment-services-paypal-vault.svg)
+![Payment Services Vault sequence diagram](../../../_images/graphql/payment-services-paypal-vaulted-card.svg)
 
 1. Use the [`customerPaymentTokens`](../../schema/checkout/queries/customer-payment-tokens.md) query to retrieve the payment tokens the customer stored in the vault.
 
