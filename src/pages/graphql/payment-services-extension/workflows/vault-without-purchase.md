@@ -10,7 +10,7 @@ keywords:
 
 These steps describe the flow of requests and responses required to [vault a payment method](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/payment-services/payments-checkout/vaulting#vaulting-without-purchase) without the typical checkout authorization with Payment Services enabled.
 
-## Vault without purchase workflow
+## Workflow
 
 ![Payment Services sequence diagram](../../../_images/graphql/payment-services-vault-without-purchase.svg)
 
@@ -36,7 +36,7 @@ These steps describe the flow of requests and responses required to [vault a pay
 
 1. Commerce vaults the payment method.
 
-## Additional Payment information
+## Additional payment information
 
 The setup token is generated with an empty card number in the `payment_source` object purposefully. The PayPal SDK, in conjunction with hosted fields or credit cards field components, securely updates the setup token with payment details.
 

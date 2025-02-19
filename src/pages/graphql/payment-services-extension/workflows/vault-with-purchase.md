@@ -1,12 +1,12 @@
 ---
-title: Vaulting a card during a checkout authorization
+title: Vault a card during a checkout authorization
 description: Learn how to vault a credit card during a typical checkout authorization.
 keywords:
   - GraphQL
   - Payments
 ---
 
-# Vaulting a card during a checkout authorization
+# Vault a card during a checkout authorization
 
 These steps describe the flow of requests and responses required to [vault a credit card](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/payment-services/payments-checkout/vaulting#vaulting-a-payment-method-during-checkout) during a typical checkout authorization with Payment Services enabled.
 
@@ -15,7 +15,7 @@ The following conditions must be true to vault a card during checkout:
 * You must have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.10.0 or higher.
 * The customer must be logged in.
 
-## Vault during checkout workflow
+## Workflow
 
 ![Payment Services sequence diagram](../../../_images/graphql/payment-services-vault-with-purchase.svg)
 
