@@ -1250,6 +1250,14 @@ module.exports = [
                 path: "/graphql/payment-services-extension/workflows/minicart.md",
               },
               {
+                title: "Vaulting a card during a checkout authorization",
+                path: "/graphql/payment-services-extension/workflows/vault-with-purchase.md",
+              },
+              {
+                title: "Vaulting a credit card without a purchase",
+                path: "/graphql/payment-services-extension/workflows/vault-without-purchase.md",
+              },
+              {
                 title: "Vaulted card",
                 path: "/graphql/payment-services-extension/workflows/vaulted-card.md",
         },

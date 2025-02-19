@@ -12,8 +12,8 @@ These steps describe the flow of requests and responses required to [vault a cre
 
 The following conditions must be true to vault a card during checkout:
 
-* The customer needs to be logged in.
 * You must have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.10.0 or higher.
+* The customer must be logged in.
 
 ## Vault during checkout workflow
 
@@ -27,7 +27,7 @@ The following conditions must be true to vault a card during checkout:
 
 1. Adobe Commerce returns a `Cart` object.
 
-1. Run the [`createPaymentOrder`](../../payment-services-extension/mutations/create-payment-order.md) mutation with `vaultIntent`set to `true` to begin the authorization process.
+1. Run the [`createPaymentOrder`](../../payment-services-extension/mutations/create-payment-order.md) mutation with `vaultIntent` set to `true` to begin the authorization process.
 
 1. Commerce forwards the request to PayPal.
 
@@ -93,7 +93,7 @@ mutation {
   "data": {
     "setPaymentMethodOnCart": {
       "cart": {
-        "id": "r8TKHa58b7Y8VaZHLyABNxrEdS8hJJTZ",
+        "id": "uocGxUi5H97XFAMhY3s66q4aFYG3Bmdr",
         "selected_payment_method": {
           "code": "payment_services_paypal_hosted_fields"
         }
