@@ -24,7 +24,7 @@ These steps describe the flow of requests and responses required to [vault a pay
 
 1. PayPal returns the temporary `setup_token` to Commerce.
 
-1. Commerce stores the token.
+1. Commerce receives the `setup_token`.
 
 1. PayPal SDK updates the credit card information in the storefront.
 
