@@ -19,7 +19,7 @@ The following conditions must be true to vault a card during checkout:
 
 ![Payment Services sequence diagram](../../../_images/graphql/payment-services-vault-with-purchase.svg)
 
-1. Run the [`getPaymentConfig`](../../payment-services-extension/queries/get-payment-config.md) query to fetch the payment configuration needed to render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
+1. Run the [`getPaymentConfig`](../../payment-services-extension/queries/get-payment-config.md) query to fetch the payment configuration needed to render details of hosted fields.
 
 1. Commerce returns the payment configuration information.
 
@@ -54,6 +54,10 @@ The following conditions must be true to vault a card during checkout:
 1. Paypal returns a vault token.
 
 1. Commerce stores the vault token for the vaulted card.
+
+## Additional information
+
+It is only possible to vault configuration details for hosted fields. See [`getPaymentConfig`](../../payment-services-extension/queries/get-payment-config.md) query for more information.
 
 ### `setPaymentMethodOnCart` mutation example
 
