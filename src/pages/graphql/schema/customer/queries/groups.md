@@ -4,7 +4,7 @@ title: all customer groups query
 
 # All customer groups query
 
-The `allCustomerGroupss` query returns information about all customer groups available.
+The `allCustomerGroups` query returns information about all customer groups available.
 
 ## Syntax
 
