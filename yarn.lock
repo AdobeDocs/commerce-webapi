@@ -33,9 +33,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/gatsby-theme-aio@npm:4.14.17":
-  version: 4.14.17
-  resolution: "@adobe/gatsby-theme-aio@npm:4.14.17"
+"@adobe/gatsby-theme-aio@npm:4.14.19":
+  version: 4.14.19
+  resolution: "@adobe/gatsby-theme-aio@npm:4.14.19"
   dependencies:
     "@adobe/focus-ring-polyfill": ^0.1.5
     "@adobe/gatsby-source-github-file-contributors": ^0.3.1
@@ -131,7 +131,7 @@ __metadata:
     gatsby: ^4.22.0
     react: ^17.0.2
     react-dom: ^17.0.2
-  checksum: 929ed9cc32b048ec243dbcd75be3ee822294946e336600bf57b67490632fcd0a0e375e4683a2980eb756b80ee023d5e9605dd91a6a6ebc910d6dac08530aee13
+  checksum: b8818a223ef3c98e75a1843341946f0987e606fbcd36525c7773712014de18808418cc7c6b7133a1d8c4cad51467bcdbb6ea5084fed5d02645eb5b9032e6a451
   languageName: node
   linkType: hard
 
@@ -7508,7 +7508,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "commerce-webapi@workspace:."
   dependencies:
-    "@adobe/gatsby-theme-aio": 4.14.17
+    "@adobe/gatsby-theme-aio": 4.14.19
     gatsby: 4.22.0
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -11993,9 +11993,9 @@ __metadata:
   linkType: hard
 
 "graphql@npm:^15.7.2":
-  version: 15.9.0
-  resolution: "graphql@npm:15.9.0"
-  checksum: fecf48b878baf8bd1d943b79860554f9e0bdf8d23a8f014356209fedcc1f1353729388538842d8a4a79078ea75b3f24d504d074223c815acf9b6059837c5c934
+  version: 15.10.1
+  resolution: "graphql@npm:15.10.1"
+  checksum: 03e67181eaf803a6248806259a24d221333a05360e8952d155dba57c63691eec5e23969c52deea1d7314e7cdfe8bfef8857d9427e321ed615fc1400a8504ff59
   languageName: node
   linkType: hard
 
@@ -16275,21 +16275,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.3.4":
-  version: 3.3.4
-  resolution: "nanoid@npm:3.3.4"
+"nanoid@npm:^3.3.4, nanoid@npm:^3.3.7":
+  version: 3.3.8
+  resolution: "nanoid@npm:3.3.8"
   bin:
     nanoid: bin/nanoid.cjs
-  checksum: 2fddd6dee994b7676f008d3ffa4ab16035a754f4bb586c61df5a22cf8c8c94017aadd360368f47d653829e0569a92b129979152ff97af23a558331e47e37cd9c
-  languageName: node
-  linkType: hard
-
-"nanoid@npm:^3.3.7":
-  version: 3.3.7
-  resolution: "nanoid@npm:3.3.7"
-  bin:
-    nanoid: bin/nanoid.cjs
-  checksum: d36c427e530713e4ac6567d488b489a36582ef89da1d6d4e3b87eded11eb10d7042a877958c6f104929809b2ab0bafa17652b076cdf84324aa75b30b722204f2
+  checksum: dfe0adbc0c77e9655b550c333075f51bb28cfc7568afbf3237249904f9c86c9aaaed1f113f0fddddba75673ee31c758c30c43d4414f014a52a7a626efc5958c9
   languageName: node
   linkType: hard
 

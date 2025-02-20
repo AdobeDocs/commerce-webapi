@@ -55,6 +55,7 @@ tags:
 - name: inventory/in-store-pickup/pickup-locations/
 - name: payments-config/{location}
 - name: payments-config/apple-pay/{location}
+- name: payments-config/google-pay/{location}
 - name: payments-config/hosted-fields/{location}
 - name: payments-config/smart-buttons/{location}
 - name: payments-sdk/{location}
@@ -1985,6 +1986,38 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: payments-config/apple-pay/{location}
+  "/V1/payments-config/google-pay/{location}":
+    get:
+      tags:
+      - payments-config/google-pay/{location}
+      description: Get Google Pay Config.
+      operationId: GetV1PaymentsconfigGooglepayLocation
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: location
+        in: path
+        type: string
+        required: true
+        description: sdk location.
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/payment-services-paypal-data-payment-config-google-pay-interface"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: payments-config/google-pay/{location}
   "/V1/payments-config/hosted-fields/{location}":
     get:
       tags:
@@ -3273,161 +3306,21 @@ definitions:
         description: Company ID.
       job_title:
         type: string
-        description: Get job title.
+        description: Job title.
       status:
         type: integer
         description: Customer status.
       telephone:
         type: string
-        description: Get telephone.
+        description: Telephone.
+      is_default:
+        type: boolean
+        description: Is default
       extension_attributes:
         "$ref": "#/definitions/company-data-company-customer-extension-interface"
   company-data-company-customer-extension-interface:
     type: object
     description: ExtensionInterface class for @see \Magento\Company\Api\Data\CompanyCustomerInterface
-  framework-search-search-result-interface:
-    type: object
-    description: Interface SearchResultInterface
-    properties:
-      items:
-        type: array
-        items:
-          "$ref": "#/definitions/framework-search-document-interface"
-      aggregations:
-        "$ref": "#/definitions/framework-search-aggregation-interface"
-      search_criteria:
-        "$ref": "#/definitions/framework-search-search-criteria-interface"
-      total_count:
-        type: integer
-        description: Total count.
-    required:
-    - items
-    - aggregations
-    - search_criteria
-    - total_count
-  framework-search-document-interface:
-    type: object
-    description: Interface Search Document
-    properties:
-      id:
-        type: integer
-      custom_attributes:
-        type: array
-        description: Custom attributes values.
-        items:
-          "$ref": "#/definitions/framework-attribute-interface"
-    required:
-    - id
-  framework-search-aggregation-interface:
-    type: object
-    description: Interface Aggregation to get faceted data
-    properties:
-      buckets:
-        type: array
-        description: All Document fields
-        items:
-          "$ref": "#/definitions/framework-search-bucket-interface"
-      bucket_names:
-        type: array
-        description: Document field names
-        items:
-          type: string
-    required:
-    - buckets
-    - bucket_names
-  framework-search-bucket-interface:
-    type: object
-    description: Interface for facet Bucket
-    properties:
-      name:
-        type: string
-        description: Field name
-      values:
-        type: array
-        description: Field values
-        items:
-          "$ref": "#/definitions/framework-search-aggregation-value-interface"
-    required:
-    - name
-    - values
-  framework-search-aggregation-value-interface:
-    type: object
-    description: Interface Aggregation Value
-    properties:
-      value:
-        type: string
-        description: Aggregation
-      metrics:
-        type: array
-        description: Metrics
-        items:
-          type: string
-    required:
-    - value
-    - metrics
-  framework-search-search-criteria-interface:
-    type: object
-    description: Interface SearchCriteriaInterface
-    properties:
-      request_name:
-        type: string
-      filter_groups:
-        type: array
-        description: A list of filter groups.
-        items:
-          "$ref": "#/definitions/framework-search-filter-group"
-      sort_orders:
-        type: array
-        description: Sort order.
-        items:
-          "$ref": "#/definitions/framework-sort-order"
-      page_size:
-        type: integer
-        description: Page size.
-      current_page:
-        type: integer
-        description: Current page.
-    required:
-    - request_name
-    - filter_groups
-  framework-search-filter-group:
-    type: object
-    description: Groups two or more filters together using a logical OR
-    properties:
-      filters:
-        type: array
-        description: A list of filters in this group
-        items:
-          "$ref": "#/definitions/framework-filter"
-  framework-filter:
-    type: object
-    description: Filter which can be used by any methods from service layer.
-    properties:
-      field:
-        type: string
-        description: Field
-      value:
-        type: string
-        description: Value
-      condition_type:
-        type: string
-        description: Condition type
-    required:
-    - field
-    - value
-  framework-sort-order:
-    type: object
-    description: Data object for sort order.
-    properties:
-      field:
-        type: string
-        description: Sorting field.
-      direction:
-        type: string
-        description: Sorting direction.
-    required:
-    - field
-    - direction
   catalog-data-product-render-search-results-interface:
     type: object
     description: Dto that holds render information about products
@@ -4068,6 +3961,12 @@ definitions:
         type: array
         items:
           "$ref": "#/definitions/negotiable-quote-data-item-note-interface"
+      is_discounting_locked:
+        type: boolean
+      min_qty:
+        type: number
+      max_qty:
+        type: number
   negotiable-quote-data-item-note-interface:
     type: object
     description: Interface ItemNoteInterface
@@ -4246,6 +4145,8 @@ definitions:
           "$ref": "#/definitions/quote-data-shipping-assignment-interface"
       negotiable_quote:
         "$ref": "#/definitions/negotiable-quote-data-negotiable-quote-interface"
+      company_id:
+        type: integer
       coupon_codes:
         type: array
         items:
@@ -4962,6 +4863,149 @@ definitions:
     - base_original_price_incl_tax
     - negotiated_price_type
     - negotiated_price_value
+  framework-search-search-result-interface:
+    type: object
+    description: Interface SearchResultInterface
+    properties:
+      items:
+        type: array
+        items:
+          "$ref": "#/definitions/framework-search-document-interface"
+      aggregations:
+        "$ref": "#/definitions/framework-search-aggregation-interface"
+      search_criteria:
+        "$ref": "#/definitions/framework-search-search-criteria-interface"
+      total_count:
+        type: integer
+        description: Total count.
+    required:
+    - items
+    - aggregations
+    - search_criteria
+    - total_count
+  framework-search-document-interface:
+    type: object
+    description: Interface Search Document
+    properties:
+      id:
+        type: integer
+      custom_attributes:
+        type: array
+        description: Custom attributes values.
+        items:
+          "$ref": "#/definitions/framework-attribute-interface"
+    required:
+    - id
+  framework-search-aggregation-interface:
+    type: object
+    description: Interface Aggregation to get faceted data
+    properties:
+      buckets:
+        type: array
+        description: All Document fields
+        items:
+          "$ref": "#/definitions/framework-search-bucket-interface"
+      bucket_names:
+        type: array
+        description: Document field names
+        items:
+          type: string
+    required:
+    - buckets
+    - bucket_names
+  framework-search-bucket-interface:
+    type: object
+    description: Interface for facet Bucket
+    properties:
+      name:
+        type: string
+        description: Field name
+      values:
+        type: array
+        description: Field values
+        items:
+          "$ref": "#/definitions/framework-search-aggregation-value-interface"
+    required:
+    - name
+    - values
+  framework-search-aggregation-value-interface:
+    type: object
+    description: Interface Aggregation Value
+    properties:
+      value:
+        type: string
+        description: Aggregation
+      metrics:
+        type: array
+        description: Metrics
+        items:
+          type: string
+    required:
+    - value
+    - metrics
+  framework-search-search-criteria-interface:
+    type: object
+    description: Interface SearchCriteriaInterface
+    properties:
+      request_name:
+        type: string
+      filter_groups:
+        type: array
+        description: A list of filter groups.
+        items:
+          "$ref": "#/definitions/framework-search-filter-group"
+      sort_orders:
+        type: array
+        description: Sort order.
+        items:
+          "$ref": "#/definitions/framework-sort-order"
+      page_size:
+        type: integer
+        description: Page size.
+      current_page:
+        type: integer
+        description: Current page.
+    required:
+    - request_name
+    - filter_groups
+  framework-search-filter-group:
+    type: object
+    description: Groups two or more filters together using a logical OR
+    properties:
+      filters:
+        type: array
+        description: A list of filters in this group
+        items:
+          "$ref": "#/definitions/framework-filter"
+  framework-filter:
+    type: object
+    description: Filter which can be used by any methods from service layer.
+    properties:
+      field:
+        type: string
+        description: Field
+      value:
+        type: string
+        description: Value
+      condition_type:
+        type: string
+        description: Condition type
+    required:
+    - field
+    - value
+  framework-sort-order:
+    type: object
+    description: Data object for sort order.
+    properties:
+      field:
+        type: string
+        description: Sorting field.
+      direction:
+        type: string
+        description: Sorting direction.
+    required:
+    - field
+    - direction
   checkout-data-shipping-information-interface:
     type: object
     description: Interface ShippingInformationInterface
@@ -5391,12 +5435,15 @@ definitions:
     properties:
       apple_pay:
         "$ref": "#/definitions/payment-services-paypal-data-payment-config-apple-pay-interface"
+      google_pay:
+        "$ref": "#/definitions/payment-services-paypal-data-payment-config-google-pay-interface"
       hosted_fields:
         "$ref": "#/definitions/payment-services-paypal-data-payment-config-hosted-fields-interface"
       smart_buttons:
         "$ref": "#/definitions/payment-services-paypal-data-payment-config-smart-buttons-interface"
     required:
     - apple_pay
+    - google_pay
     - hosted_fields
     - smart_buttons
   payment-services-paypal-data-payment-config-apple-pay-interface:
@@ -5483,6 +5530,61 @@ definitions:
     required:
     - name
     - value
+  payment-services-paypal-data-payment-config-google-pay-interface:
+    type: object
+    description: ''
+    properties:
+      button_styles:
+        "$ref": "#/definitions/payment-services-paypal-data-payment-config-google-pay-button-styles-interface"
+      payment_source:
+        type: string
+        description: PaymentSource
+      code:
+        type: string
+        description: Code
+      sdk_params:
+        type: array
+        description: SDK params
+        items:
+          "$ref": "#/definitions/payment-services-paypal-data-payment-config-sdk-params-interface"
+      is_visible:
+        type: boolean
+        description: Visible
+      sort_order:
+        type: string
+        description: Sort Order
+      payment_intent:
+        type: string
+        description: Payment intent
+      title:
+        type: string
+        description: Title
+    required:
+    - button_styles
+    - payment_source
+    - code
+    - sdk_params
+    - is_visible
+    - sort_order
+    - payment_intent
+    - title
+  payment-services-paypal-data-payment-config-google-pay-button-styles-interface:
+    type: object
+    description: ''
+    properties:
+      color:
+        type: string
+        description: Color
+      height:
+        type: integer
+        description: Height
+      type:
+        type: string
+        description: Type
+    required:
+    - color
+    - height
+    - type
   payment-services-paypal-data-payment-config-hosted-fields-interface:
     type: object
     description: ''
@@ -5613,10 +5715,18 @@ definitions:
       status:
         type: string
         description: Payment order status
+      amount:
+        type: number
+        description: Payment order amount
+      currency_code:
+        type: string
+        description: Payment order currency code
     required:
     - id
     - mp_order_id
     - status
+    - amount
+    - currency_code
   payment-services-paypal-data-payment-order-details-interface:
     type: object
     description: Interface PaymentOrderDetailsInterface
@@ -5632,11 +5742,19 @@ definitions:
       status:
         type: string
         description: Payment order status
+      amount:
+        type: number
+        description: Payment order amount
+      currency_code:
+        type: string
+        description: Payment order currency code
     required:
     - payment_source_details
     - id
     - mp_order_id
     - status
+    - amount
+    - currency_code
   payment-services-paypal-data-payment-source-details-interface:
     type: object
     description: ''
@@ -5774,6 +5892,7 @@ x-tagGroups:
 - name: payments config
   tags:
   - payments-config/apple-pay/{location}
+  - payments-config/google-pay/{location}
   - payments-config/hosted-fields/{location}
   - payments-config/smart-buttons/{location}
   - payments-config/{location}
