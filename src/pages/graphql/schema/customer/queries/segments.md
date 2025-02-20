@@ -44,8 +44,8 @@ The following call returns segments currently applied to the visitor.
 {
   "customerSegments": [
     {
-      "name": "John",
-      "description": "Doe",
+      "name": "Segment A",
+      "description": "Segment applied to visitors only",
       "apply_to": "VISITOR"
     }
   ]
@@ -54,7 +54,4 @@ The following call returns segments currently applied to the visitor.
 
 ## Related topics
 
-*  [isEmailAvailable query](../../b2b/company/queries/is-company-email-available.md)
-*  [generateCustomerToken mutation](../mutations/generate-token.md)
-*  [createCustomerV2 mutation](../mutations/create-v2.md)
-*  [createCustomerAddress mutation](../mutations/create-address.md)
+*  [allCustomerSegments query](all-segments.md)
