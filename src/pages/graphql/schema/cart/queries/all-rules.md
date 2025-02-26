@@ -11,6 +11,8 @@ This query is part of the [Storefront Compatibility Package](https://experiencel
 
 The `allCartRules` query returns a list of all active cart rules in the store.
 
+Cart price rules apply discounts to items in the shopping cart, based on a set of conditions.
+
 ## Syntax
 
 ```graphql

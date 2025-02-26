@@ -11,6 +11,8 @@ This query is part of the [Storefront Compatibility Package](https://experiencel
 
 The `allCustomerGroups` query returns a list of available customer groups.
 
+Customer groups determine which discounts are available and the tax class that is associated with the group.
+
 ## Syntax
 
 ```graphql

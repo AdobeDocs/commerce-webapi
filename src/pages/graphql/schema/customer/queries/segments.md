@@ -11,6 +11,9 @@ This query is part of the [Storefront Compatibility Package](https://experiencel
 
 The `customerSegments` query returns information about the customer segments associated with the current customer or guest.
 
+Customers segments allow shoppers to dynamically display content and promotions to specific customers, based on various properties.
+Some examples are customer address, order history, and shopping cart contents.
+
 ## Syntax
 
 ```graphql
