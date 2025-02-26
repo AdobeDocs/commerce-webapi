@@ -1,10 +1,15 @@
 ---
-title: all cart rules query
+title: allCartRules query
+edition: ee
 ---
 
-# All cart rules query
+# allCartRules query
 
-The `allCartRules` query returns information about all active cart rules in the store.
+<InlineAlert variant="info" slots="text1" />
+
+This query is part of the [Storefront Compatibility Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/storefront-compatibility/). It will be added to Adobe Commerce 2.4.8-beta4.
+
+The `allCartRules` query returns a list of all active cart rules in the store.
 
 ## Syntax
 
@@ -16,13 +21,13 @@ The `allCartRules` query returns information about all active cart rules in the 
 }
 ```
 
+<!---
 ## Reference
 
 The [`allCartRules`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-all-cart-rules) reference provides detailed information about the types and fields defined in this query.
+-->
 
 ## Example usage
-
-### Retrieve all cart rules
 
 The following call returns a list of all active cart rules in the store.
 

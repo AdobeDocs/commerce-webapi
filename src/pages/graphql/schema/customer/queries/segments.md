@@ -1,10 +1,15 @@
 ---
-title: customer segments query
+title: customerSegments query
+edition: ee
 ---
 
-# customer segments query
+# customerSegments query
 
-The `customerSegments` query returns information about the customer segments associated with the current customer or guest/visitor.
+<InlineAlert variant="info" slots="text1" />
+
+This query is part of the [Storefront Compatibility Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/storefront-compatibility/). It will be added to Adobe Commerce 2.4.8-beta4.
+
+The `customerSegments` query returns information about the customer segments associated with the current customer or guest.
 
 ## Syntax
 
@@ -16,13 +21,13 @@ The `customerSegments` query returns information about the customer segments ass
 }
 ```
 
+<!--->
 ## Reference
 
 The [`customerSegments`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-customer-segments) reference provides detailed information about the types and fields defined in this query.
+-->
 
 ## Example usage
-
-### Retrieve segments information of a visitor
 
 The following call returns segments currently applied to the visitor.
 
@@ -44,8 +49,8 @@ The following call returns segments currently applied to the visitor.
 {
   "customerSegments": [
     {
-      "name": "Segment A",
-      "description": "Segment applied to visitors only",
+      "name": "Guests",
+      "description": "All shoppers who are not logged in",
       "apply_to": "VISITOR"
     }
   ]

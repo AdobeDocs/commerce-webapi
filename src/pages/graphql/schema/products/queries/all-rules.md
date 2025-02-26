@@ -1,10 +1,15 @@
 ---
-title: all catalog rules query
+title: allCatalogRules query
+edition: ee
 ---
 
-# All catalog rules query
+# allCatalogRules query
 
-The `allCatalogRules` query returns information about all active catalog rules in the store.
+<InlineAlert variant="info" slots="text1" />
+
+This query is part of the [Storefront Compatibility Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/storefront-compatibility/). It will be added to Adobe Commerce 2.4.8-beta4.
+
+The `allCatalogRules` query returns a list of all active catalog rules in the store.
 
 ## Syntax
 
@@ -16,13 +21,13 @@ The `allCatalogRules` query returns information about all active catalog rules i
 }
 ```
 
+<!---
 ## Reference
 
-The [`allCatalogRules`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-all-catalog-rules) reference provides detailed information about the types and fields defined in this query.
+The [`allCatalogRules`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-all-catalog-rules) query returns a list of catalog rule names.
+-->
 
 ## Example usage
-
-### Retrieve all catalog rules
 
 The following call returns a list of all active catalog rules in the store.
 
