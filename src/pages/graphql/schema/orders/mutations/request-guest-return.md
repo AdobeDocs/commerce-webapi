@@ -5,10 +5,6 @@ edition: ee
 
 # requestGuestReturn mutation
 
-<InlineAlert variant="info" slots="text1" />
-
-This mutation is part of the [Storefront Compatibility Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/storefront-compatibility/). It will be added to Adobe Commerce 2.4.8-beta2.
-
 The `requestGuestReturn` mutation initiates a guest buyer's request to return an item for replacement or refund.
 A confirmation email is sent to the guest provided email address with a link to confirm the return request and continue the process.
 
@@ -28,11 +24,11 @@ mutation {
   requestGuestReturn(input: RequestGuestReturnInput!): RequestReturnOutput
 }
 ```
-<!--
+
 ## Reference
 
 The [`requestGuestReturn`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-requestGuestReturn) reference provides detailed information about the types and fields defined in this mutation.
--->
+
 ## Example usage
 
 The following example requests a product return from a guest customer. Note that the return status after this request is `UNCONFIRMED`, as guest users need to confirm the return request as stated above.
