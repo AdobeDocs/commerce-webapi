@@ -1,6 +1,6 @@
 ---
 title: Input limiting
-description: Explains input limiting and other API security safeguards against denial-of-service (DoS) attacks.
+description: Learn about input limiting and other API security features to safeguard against denial-of-service (DoS) attacks.
 keywords:
   - REST
   - Security
