@@ -128,6 +128,10 @@ module.exports = [
             path: "/graphql/schema/cart/queries/",
             pages: [
               {
+                title: "allCartRules",
+                path: "/graphql/schema/cart/queries/all-rules/",
+              },
+              {
                 title: "cart",
                 path: "/graphql/schema/cart/queries/cart/",
               },
@@ -444,6 +448,14 @@ module.exports = [
             path: "/graphql/schema/customer/queries/",
             pages: [
               {
+                title: "allCustomerGroups",
+                path: "/graphql/schema/customer/queries/all-groups/"
+              },
+              {
+                title: "allCustomerSegments",
+                path: "/graphql/schema/customer/queries/all-segments/"
+              },
+              {
                 title: "customer",
                 path: "/graphql/schema/customer/queries/customer/",
               },
@@ -458,6 +470,10 @@ module.exports = [
               {
                 title: "customerOrders",
                 path: "/graphql/schema/customer/queries/orders/",
+              },
+              {
+                title: "customerSegments",
+                path: "/graphql/schema/customer/queries/segments/"
               },
               {
                 title: "giftCardAccount",
@@ -801,6 +817,10 @@ module.exports = [
             title: "Queries",
             path: "/graphql/schema/products/queries/",
             pages: [
+              {
+                title: "allCatalogRules",
+                path: "/graphql/schema/products/queries/all-rules/",
+              },
               {
                 title: "categories",
                 path: "/graphql/schema/products/queries/categories/",
@@ -1248,6 +1268,14 @@ module.exports = [
               {
                 title: "Minicart",
                 path: "/graphql/payment-services-extension/workflows/minicart.md",
+              },
+              {
+                title: "Vault a card during a checkout authorization",
+                path: "/graphql/payment-services-extension/workflows/vault-with-purchase.md",
+              },
+              {
+                title: "Vault a credit card without a purchase",
+                path: "/graphql/payment-services-extension/workflows/vault-without-purchase.md",
               },
               {
                 title: "Vaulted card",

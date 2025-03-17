@@ -452,7 +452,7 @@ Name | Description | Format | Requirements
 
 ### Set base prices
 
-The `POST /V1/products/base-price` call can set base prices for the following types of products:
+The `POST /V1/products/base-prices` call can set base prices for the following types of products:
 
 *  Simple
 *  Virtual
