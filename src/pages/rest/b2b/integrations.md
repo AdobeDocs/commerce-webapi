@@ -23,6 +23,9 @@ GET    /V1/company/:companyId
 DELETE /V1/company/:companyId
 PUT    /V1/company/:companyId
 POST   /V1/company/
+GET   /V1/company/relations
+POST  /V1/company/:parentId/relations
+DELETE /V1/company/:parentId/relations/:companyId
 GET    /V1/team/
 GET    /V1/team/:teamId
 DELETE /V1/team/:teamId
