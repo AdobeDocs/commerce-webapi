@@ -25,7 +25,7 @@ Use Company endpoints to manage B2B companies, including company profiles, teams
 | Team Management | <code>GET /V1/team/</code> - List all teams<br><code>GET /V1/team/:teamId</code> - Get team by ID<br><code>POST /V1/team/:companyId</code> - Create new team<br><code>PUT /V1/team/:teamId</code> - Update team<br><code>DELETE /V1/team/:teamId</code> - Delete team | companyTeamRepositoryV1 |
 | Role Management | <code>GET /V1/company/role/</code> - List all roles<br><code>GET /V1/company/role/:roleId</code> - Get role by ID<br><code>POST /V1/company/role/</code> - Create new role<br><code>PUT /V1/company/role/:id</code> - Update role<br><code>DELETE /V1/company/role/:roleId</code> - Delete role | companyRoleRepositoryV1 |
 | Role Assignment | <code>PUT /V1/company/assignRoles</code> - Assign roles to users<br><code>GET /V1/company/role/:roleId/users</code> - Get users assigned to a specific role | companyAclV1 |
-| Customer Management | <code>PUT /V1/customers/me</code> - Update current customer<br><code>PUT /V1/customers/:customerId/companies/:companyId</code> - Assign customer to company<br><code>DELETE /V1/customers/:customerId/companies/:companyId</code> - Unassign customer from company<br><code>GET /V1/customers/:customerId/companies</code> - Get companies assigned to customer | companyCompanyCustomerAssignmentV1 |
+| Customer Management | <code>PUT /V1/customers/me</code> - Update current customer<br><code>PUT /V1/customers/:customerId/companies/:companyId</code> - Assign customer to company<br><code>DELETE /V1/customers/:customerId/companies/:companyId</code> - Unassign customer from company<br><code>GET /V1/customers/:customerId/companies</code> - Get companies assigned to customer | `companyCompanyCustomerAssignmentV1` |
 | Company User Management | <code>POST /V1/customers/companies</code> - Create company user<br><code>GET /V1/customers/companies</code> - List company users<br><code>GET /V1/customers/:customerId/companies/:companyId</code> - Get company user details | companyCompanyUserRepositoryV1 |
 | Company Hierarchy | <code>GET /V1/hierarchy/:id</code> - Get company hierarchy<br><code>PUT /V1/hierarchy/move/:id</code> - Move node in company hierarchy | companyCompanyHierarchyV1 |
 
@@ -43,13 +43,13 @@ Use `companyCredit` endpoints to manage company credit limits, balances, and his
 
 For details, see the [companyCredits](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/companyCredits) API reference.
 
-### Company Relations
+### CompanyRelation
 
-Use `companyRelations` endpoints to manage relationships between companies in a B2B organization. These endpoints enable administrators to create, view, and delete hierarchical relationships between companies, allowing for complex organizational structures.
+Use `company/relations` endpoints to manage relationships between companies in a B2B organization. These endpoints enable administrators to create, view, and delete hierarchical relationships between companies, allowing for complex organizational structures.
 
  Use Case | Endpoint | Service Name |
 |----------|----------|--------------|
-| Company Relations Management | <code>GET /V1/company/relations</code> - List company relationships<br><code>POST /V1/company/:parentId/relations</code> - Create company relationship<br><code>DELETE /V1/company/:parentId/relations/:companyId</code> - Delete company relationship | companyRelationRelationManagerV1 |
+| Company Relations Management | <code>GET /V1/company/relations</code> - List company relationships<br><code>POST /V1/company/:parentId/relations</code> - Create company relationship<br><code>DELETE /V1/company/:parentId/relations/:companyId</code> - Delete company relationship | `companyRelationRelationManagerV1` |
 
 For details, see the [companyRelations](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/companyrelations#operation/GetV1CompanyRelations) API reference.
 
@@ -74,9 +74,9 @@ Use `negotiableQuoteTemplate` endpoints to manage quote templates, enabling busi
 
 | Use case | Endpoints | Service name |
 |----------|---------------------------|--------------|
-| Template Management | - <code>GET /V1/negotiableQuoteTemplate/:templateId</code> - Get template by ID<br>- <code>GET /V1/negotiableQuoteTemplate</code> - List all templates<br>- <code>POST /V1/negotiableQuoteTemplate/draft</code> - Create draft template<br>- <code>POST /V1/negotiableQuoteTemplate/request</code> - Create template request<br>- <code>PUT /V1/negotiableQuoteTemplate</code> - Update template<br>- <code>DELETE /V1/negotiableQuoteTemplate/:templateId</code> - Delete template | <code>Template\RepositoryInterfaceV1</code><br><code>Template\DraftManagementInterfaceV1</code><br><code>Template\Actions\CreateInterfaceV1</code><br><code>Template\Actions\UpdateInterfaceV1</code><br><code>Template\Actions\DeleteInterfaceV1</code> |
-| Template Actions | - <code>POST /V1/negotiableQuoteTemplate/open</code> - Open template<br>- <code>POST /V1/negotiableQuoteTemplate/submitToCustomer</code> - Submit to customer<br>- <code>POST /V1/negotiableQuoteTemplate/submitToSeller</code> - Submit to seller<br>- <code>POST /V1/negotiableQuoteTemplate/decline</code> - Decline template<br>- <code>POST /V1/negotiableQuoteTemplate/accept</code> - Accept template<br>- <code>POST /V1/negotiableQuoteTemplate/generateQuote</code> - Generate quote from template<br>- <code>POST /V1/negotiableQuoteTemplate/cancel</code> - Cancel template | <code>Template\Actions\OpenInterfaceV1</code><br><code>Template\Actions\SellerSendInterfaceV1</code><br><code>Template\Actions\SendInterfaceV1</code><br><code>Template\Actions\DeclineInterfaceV1</code><br><code>Template\Actions\AcceptInterfaceV1</code><br><code>Template\Actions\GenerateQuoteInterfaceV1</code><br><code>Template\Actions\CancelInterfaceV1</code> |
-| Reference Document Links | - <code>GET /V1/negotiableQuoteTemplate/referenceDocumentLink/:linkId</code> - Get document link<br>- <code>GET /V1/negotiableQuoteTemplate/referenceDocumentLink</code> - List document links<br>- <code>PUT /V1/negotiableQuoteTemplate/referenceDocumentLink</code> - Update document link<br>- <code>DELETE /V1/negotiableQuoteTemplate/referenceDocumentLink/:linkId</code> - Delete document link | <code>Template\ReferenceDocumentLinkRepositoryInterfaceV1</code> |
+| Template Management | - <code>GET /V1/negotiableQuoteTemplate/:templateId</code> - Get template by ID<br>- <code>GET /V1/negotiableQuoteTemplate</code> - List all templates<br>- <code>POST /V1/negotiableQuoteTemplate/draft</code> - Create draft template<br>- <code>POST /V1/negotiableQuoteTemplate/request</code> - Create template request<br>- <code>PUT /V1/negotiableQuoteTemplate</code> - Update template<br>- <code>DELETE /V1/negotiableQuoteTemplate/:templateId</code> - Delete template | <code>RepositoryInterfaceV1</code><br><code>DraftManagementInterfaceV1</code><br><code>CreateInterfaceV1</code><br><code>Template\Actions\UpdateInterfaceV1</code><br><code>DeleteInterfaceV1</code> |
+| Template Actions | - <code>POST /V1/negotiableQuoteTemplate/open</code> - Open template<br>- <code>POST /V1/negotiableQuoteTemplate/submitToCustomer</code> - Submit to customer<br>- <code>POST /V1/negotiableQuoteTemplate/submitToSeller</code> - Submit to seller<br>- <code>POST /V1/negotiableQuoteTemplate/decline</code> - Decline template<br>- <code>POST /V1/negotiableQuoteTemplate/accept</code> - Accept template<br>- <code>POST /V1/negotiableQuoteTemplate/generateQuote</code> - Generate quote from template<br>- <code>POST /V1/negotiableQuoteTemplate/cancel</code> - Cancel template | <code>Template\Actions\OpenInterfaceV1</code><br><code>SellerSendInterfaceV1</code><br><code>SendInterfaceV1</code><br><code>DeclineInterfaceV1</code><br><code>AcceptInterfaceV1</code><br><code>GenerateQuoteInterfaceV1</code><br><code>CancelInterfaceV1</code> |
+| Reference Document Links | - <code>GET /V1/negotiableQuoteTemplate/referenceDocumentLink/:linkId</code> - Get document link<br>- <code>GET /V1/negotiableQuoteTemplate/referenceDocumentLink</code> - List document links<br>- <code>PUT referenceDocumentLink</code> - Update document link<br>- <code>DELETE /V1/negotiableQuoteTemplate/referenceDocumentLink/:linkId</code> - Delete document link | <code>ReferenceDocumentLinkRepositoryInterfaceV1</code> |
 
 For details, see the [negotiableQuoteTemplate](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/negotiableQuoteTemplate#operation/GetV1NegotiableQuoteTemplate) API reference.
 
@@ -118,7 +118,7 @@ Use the `requisition_lists` endpoint to save requisition lists to create and man
 
 | Use Case | Endpoint - Description | Service Name |
 |----------|----------------------|--------------|
-| Requisition List Management | POST /V1/requisition_lists - Creates or updates a requisition list | requisitionListRequisitionListRepositoryV1 |
+| Requisition List Management | POST /V1/requisition_lists - Creates or updates a requisition list | `requisitionListRequisitionListRepositoryV1` |
 
 For details, see the [requistion_lists](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/requisition_lists#operation/PostV1Requisition_lists) API reference.
 
