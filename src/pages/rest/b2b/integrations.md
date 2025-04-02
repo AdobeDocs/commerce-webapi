@@ -21,7 +21,7 @@ Use Company endpoints to manage B2B companies, including company profiles, teams
 
 | Use case | Endpoints | Service name |
 |----------|----------|--------------|
-| Company Management | `GET /V1/company/` - List all companies<br>`GET /V1/company/:companyId` - Get company by ID<br>`POST /V1/company/` - Create new company<br>`PUT /V1/company/:companyId` - Update company<br>
+| Company Management | `GET /V1/company/` - List all companies<br>`GET /V1/company/:companyId` - Get company by ID<br>`POST /V1/company/` - Create new company<br>`PUT /V1/company/:companyId` - Update company<br />
 `DELETE /V1/company/:companyId` - Delete company | `companyCompanyRepositoryV1` |
 | Team Management | `GET /V1/team/` - List all teams<br>`GET /V1/team/:teamId` - Get team by ID<br>`POST /V1/team/:companyId` - Create new team<br>`PUT /V1/team/:teamId` - Update team<br>`DELETE /V1/team/:teamId` - Delete team | `companyTeamRepositoryV1` |
 | Role Management | `GET /V1/company/role/` - List all roles<br>`GET /V1/company/role/:roleId` - Get role by ID<br>`POST /V1/company/role/` - Create new role<br>`PUT /V1/company/role/:id` - Update role<br>`DELETE /V1/company/role/:roleId` - Delete role | `companyRoleRepositoryV1` |
