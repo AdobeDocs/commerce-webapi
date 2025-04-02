@@ -56,7 +56,7 @@ For details, see the [companyRelations](https://adobe-commerce.redoc.ly/2.4.7-ad
 ### NegotiableQuote
 
 Use `negotableQuote` endpoints to manage negotiable quotes, including quote creation, modification, submission, and various cart operations.
-    
+
 | Use case | Endpoints | Service name |
 |----------|---------------------------|--------------|
 | Quote Creation and Management | - <code>POST /V1/negotiableQuote/draft</code> - Create a new draft quote<br>- <code>POST /V1/negotiableQuote/request</code> - Create a new quote request<br>- <code>POST /V1/negotiableQuote/submitToCustomer</code> - Submit quote to customer for review<br>- <code>POST /V1/negotiableQuote/decline</code> - Decline a quote<br>- <code>POST /V1/negotiableQuote/pricesUpdated</code> - Update prices in the quote<br>- <code>PUT /V1/negotiableQuote/:quoteId</code> - Update an existing quote<br>- <code>GET /V1/negotiableQuote/attachmentContent</code> - Retrieve attached documents<br>- <code>GET /V1/negotiableQuote/:quoteId/comments</code> - Get comments on a quote | <code>NegotiableQuoteDraftManagementInterfaceV1</code><br><code>NegotiableQuoteManagementInterfaceV1</code><br><code>NegotiableQuotePriceManagementInterfaceV1</code><br><code>NegotiableCartRepositoryInterfaceV1</code><br><code>AttachmentContentManagementInterfaceV1</code><br><code>CommentLocatorInterfaceV1</code> |
@@ -75,11 +75,10 @@ Use `negotiableQuoteTemplate` endpoints to manage quote templates, enabling busi
 | Use case | Endpoints | Service name |
 |----------|---------------------------|--------------|
 | Template Management | - <code>GET /V1/negotiableQuoteTemplate/:templateId</code> - Get template by ID<br>- <code>GET /V1/negotiableQuoteTemplate</code> - List all templates<br>- <code>POST /V1/negotiableQuoteTemplate/draft</code> - Create draft template<br>- <code>POST /V1/negotiableQuoteTemplate/request</code> - Create template request<br>- <code>PUT /V1/negotiableQuoteTemplate</code> - Update template<br>- <code>DELETE /V1/negotiableQuoteTemplate/:templateId</code> - Delete template | <code>RepositoryInterfaceV1</code><br><code>DraftManagementInterfaceV1</code><br><code>CreateInterfaceV1</code><br><code>Template\Actions\UpdateInterfaceV1</code><br><code>DeleteInterfaceV1</code> |
-| Template Actions | - <code>POST /V1/negotiableQuoteTemplate/open</code> - Open template<br>- <code>POST /V1/negotiableQuoteTemplate/submitToCustomer</code> - Submit to customer<br>- <code>POST /V1/negotiableQuoteTemplate/submitToSeller</code> - Submit to seller<br>- <code>POST /V1/negotiableQuoteTemplate/decline</code> - Decline template<br>- <code>POST /V1/negotiableQuoteTemplate/accept</code> - Accept template<br>- <code>POST /V1/negotiableQuoteTemplate/generateQuote</code> - Generate quote from template<br>- <code>POST /V1/negotiableQuoteTemplate/cancel</code> - Cancel template | <code>Template\Actions\OpenInterfaceV1</code><br><code>SellerSendInterfaceV1</code><br><code>SendInterfaceV1</code><br><code>DeclineInterfaceV1</code><br><code>AcceptInterfaceV1</code><br><code>GenerateQuoteInterfaceV1</code><br><code>CancelInterfaceV1</code> |
+| Template Actions | - <code>POST /V1/negotiableQuoteTemplate/open</code> - Open template<br>- <code>POST /V1/negotiableQuoteTemplate/submitToCustomer</code> - Submit to customer<br>- <code>POST /V1/negotiableQuoteTemplate/submitToSeller</code> - Submit to seller<br>- <code>POST /V1/negotiableQuoteTemplate/decline</code> - Decline template<br>- <code>POST /V1/negotiableQuoteTemplate/accept</code> - Accept template<br>- <code>POST /V1/negotiableQuoteTemplate/generateQuote</code> - Generate quote from template<br>- <code>POST /V1/negotiableQuoteTemplate/cancel</code> - Cancel template | <code>OpenInterfaceV1</code><br><code>SellerSendInterfaceV1</code><br><code>SendInterfaceV1</code><br><code>DeclineInterfaceV1</code><br><code>AcceptInterfaceV1</code><br><code>GenerateQuoteInterfaceV1</code><br><code>CancelInterfaceV1</code> |
 | Reference Document Links | - <code>GET /V1/negotiableQuoteTemplate/referenceDocumentLink/:linkId</code> - Get document link<br>- <code>GET /V1/negotiableQuoteTemplate/referenceDocumentLink</code> - List document links<br>- <code>PUT referenceDocumentLink</code> - Update document link<br>- <code>DELETE /V1/negotiableQuoteTemplate/referenceDocumentLink/:linkId</code> - Delete document link | <code>ReferenceDocumentLinkRepositoryInterfaceV1</code> |
 
 For details, see the [negotiableQuoteTemplate](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/negotiableQuoteTemplate#operation/GetV1NegotiableQuoteTemplate) API reference.
-
 
 ### PurchasOrder
 
@@ -111,6 +110,7 @@ For details, see the [sharedCatalog](https://adobe-commerce.redoc.ly/2.4.7-admin
 ### RequisitionList
 
 Use the `requisition_lists` endpoint to save requisition lists to create and manage lists of products for future purpose. The RequisitionList module automatically handles:
+
 - Customer ID assignment
 - List name processing
 - Data validation
@@ -121,4 +121,3 @@ Use the `requisition_lists` endpoint to save requisition lists to create and man
 | Requisition List Management | POST /V1/requisition_lists - Creates or updates a requisition list | `requisitionListRequisitionListRepositoryV1` |
 
 For details, see the [requistion_lists](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/requisition_lists#operation/PostV1Requisition_lists) API reference.
-
