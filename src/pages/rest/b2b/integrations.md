@@ -96,7 +96,7 @@ For details, see the [purchaseOrders](https://adobe-commerce.redoc.ly/2.4.7-admi
 
 ### SharedCatalog
 
-Use the SharedCatalog module to manage shared catalogs, including catalog management, company assignments, product management, and category management.
+Use `sharedCatalog` endpoints to manage shared catalogs, including catalog management, company assignments, product management, and category management.
 
 | Use case | Endpoint | Service name |
 |----------|----------------------|--------------|
