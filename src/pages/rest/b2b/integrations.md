@@ -29,6 +29,8 @@ Use Company endpoints to manage B2B companies, including company profiles, teams
 | Company User Management | <code>POST /V1/customers/companies</code> - Create company user<br><code>GET /V1/customers/companies</code> - List company users<br><code>GET /V1/customers/:customerId/companies/:companyId</code> - Get company user details | companyCompanyUserRepositoryV1 |
 | Company Hierarchy | <code>GET /V1/hierarchy/:id</code> - Get company hierarchy<br><code>PUT /V1/hierarchy/move/:id</code> - Move node in company hierarchy | companyCompanyHierarchyV1 |
 
+For details, see the [company](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/company#operation/GetV1Company) API reference.
+
 ### CompanyCredit
 
 Use CompanyCredit endpoints to manage company credit limits, balances, and history in the B2B environment, enabling businesses to control and track credit usage across their organization.
@@ -49,7 +51,7 @@ Use CompanyRelations endpoints to manage relationships between companies in a B2
 |----------|----------|--------------|
 | Company Relations Management | <code>GET /V1/company/relations</code> - List company relationships<br><code>POST /V1/company/:parentId/relations</code> - Create company relationship<br><code>DELETE /V1/company/:parentId/relations/:companyId</code> - Delete company relationship | companyRelationRelationManagerV1 |
 
-For details, see the [companyRelations](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/companyCredits) API reference.
+For details, see the [companyRelations](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/companyrelations#operation/GetV1CompanyRelations) API reference.
 
 ### NegotiableQuote
 
@@ -76,7 +78,7 @@ Use NegotiableQuoteTemplate endpoints to manage quote templates, enabling busine
 | Template Actions | - <code>POST /V1/negotiableQuoteTemplate/open</code> - Open template<br>- <code>POST /V1/negotiableQuoteTemplate/submitToCustomer</code> - Submit to customer<br>- <code>POST /V1/negotiableQuoteTemplate/submitToSeller</code> - Submit to seller<br>- <code>POST /V1/negotiableQuoteTemplate/decline</code> - Decline template<br>- <code>POST /V1/negotiableQuoteTemplate/accept</code> - Accept template<br>- <code>POST /V1/negotiableQuoteTemplate/generateQuote</code> - Generate quote from template<br>- <code>POST /V1/negotiableQuoteTemplate/cancel</code> - Cancel template | <code>Template\Actions\OpenInterfaceV1</code><br><code>Template\Actions\SellerSendInterfaceV1</code><br><code>Template\Actions\SendInterfaceV1</code><br><code>Template\Actions\DeclineInterfaceV1</code><br><code>Template\Actions\AcceptInterfaceV1</code><br><code>Template\Actions\GenerateQuoteInterfaceV1</code><br><code>Template\Actions\CancelInterfaceV1</code> |
 | Reference Document Links | - <code>GET /V1/negotiableQuoteTemplate/referenceDocumentLink/:linkId</code> - Get document link<br>- <code>GET /V1/negotiableQuoteTemplate/referenceDocumentLink</code> - List document links<br>- <code>PUT /V1/negotiableQuoteTemplate/referenceDocumentLink</code> - Update document link<br>- <code>DELETE /V1/negotiableQuoteTemplate/referenceDocumentLink/:linkId</code> - Delete document link | <code>Template\ReferenceDocumentLinkRepositoryInterfaceV1</code> |
 
-For details, see the [negotiableQuoteTemplate](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/negotiableQuoteattachmentContent#operation/GetV1NegotiableQuoteAttachmentContent) API reference.
+For details, see the [negotiableQuoteTemplate](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/negotiableQuoteTemplate#operation/GetV1NegotiableQuoteTemplate) API reference.
 
 
 ### PurchasOrder
