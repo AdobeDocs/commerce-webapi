@@ -33,7 +33,7 @@ For details, see the [company](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/c
 
 ### CompanyCredit
 
-Use CompanyCredit endpoints to manage company credit limits, balances, and history in the B2B environment, enabling businesses to control and track credit usage across their organization.
+Use `companyCredit` endpoints to manage company credit limits, balances, and history in the B2B environment, enabling businesses to control and track credit usage across their organization.
 
 | Use case | Endpoints| Service name |
 |----------|---------------------------|--------------|
@@ -45,7 +45,7 @@ For details, see the [companyCredits](https://adobe-commerce.redoc.ly/2.4.7-admi
 
 ### Company Relations
 
-Use CompanyRelations endpoints to manage relationships between companies in a B2B organization. It enables administrators to create, view, and delete hierarchical relationships between companies, allowing for complex organizational structures.
+Use `companyRelations` endpoints to manage relationships between companies in a B2B organization. These endpoints enable administrators to create, view, and delete hierarchical relationships between companies, allowing for complex organizational structures.
 
  Use Case | Endpoint | Service Name |
 |----------|----------|--------------|
@@ -55,7 +55,7 @@ For details, see the [companyRelations](https://adobe-commerce.redoc.ly/2.4.7-ad
 
 ### NegotiableQuote
 
-Use NegotableQuote endpoints to manage negotiable quotes, including quote creation, modification, submission, and various cart operations.
+Use `negotableQuote` endpoints to manage negotiable quotes, including quote creation, modification, submission, and various cart operations.
     
 | Use case | Endpoints | Service name |
 |----------|---------------------------|--------------|
@@ -70,7 +70,7 @@ For details, see the [negotiableQuote](https://adobe-commerce.redoc.ly/2.4.7-adm
 
 ### NegotiableQuoteTemplate
 
-Use NegotiableQuoteTemplate endpoints to manage quote templates, enabling businesses to create, store, and reuse standardized quote structures, with support for document references and template lifecycle management in the B2B environment.
+Use `negotiableQuoteTemplate` endpoints to manage quote templates, enabling businesses to create, store, and reuse standardized quote structures, with support for document references and template lifecycle management in the B2B environment.
 
 | Use case | Endpoints | Service name |
 |----------|---------------------------|--------------|
@@ -83,7 +83,7 @@ For details, see the [negotiableQuoteTemplate](https://adobe-commerce.redoc.ly/2
 
 ### PurchasOrder
 
-Use the PurchaseOrder endpoints to manage purchase orders in a B2B context, including payment information management, shipping method estimation, cart management, and gift card handling
+Use the `purchaseOrder` endpoints to manage purchase orders in a B2B context, including payment information management, shipping method estimation, cart management, and gift card handling
 
 | Use case | Endpoints | Service name |
 |----------|---------------------------|--------------|
@@ -106,11 +106,11 @@ Use the SharedCatalog module to manage shared catalogs, including catalog manage
 | Category Management | <code>GET /V1/sharedCatalog/:id/categories</code> - Retrieves list of categories in a shared catalog<br><code>POST /V1/sharedCatalog/:id/assignCategories</code> - Assigns categories to a shared catalog<br><code>POST /V1/sharedCatalog/:id/unassignCategories</code> - Removes categories from a shared catalog | <code>sharedCatalogCategoryManagementV1</code> |
 | Tier Price Management | <code>POST /V1/sharedCatalog/:sharedCatalogId/assignTierPrices</code> - Assigns tier prices to products in a shared catalog<br><code>POST /V1/sharedCatalog/:sharedCatalogId/resetTierPrices</code> - Resets tier prices for products in a shared catalog | <code>sharedCatalogAssignTierPriceV1</code> |
 
-For details, see the [SharedCatalog](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/sharedCatalog#operation/PostV1SharedCatalog) API reference.
+For details, see the [sharedCatalog](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/sharedCatalog#operation/PostV1SharedCatalog) API reference.
 
 ### RequisitionList
 
-Use the `requisition_lists` endpoint to save requisition lists. The RequisitionList module automatically handles:
+Use the `requisition_lists` endpoint to save requisition lists to create and manage lists of products for future purpose. The RequisitionList module automatically handles:
 - Customer ID assignment
 - List name processing
 - Data validation
