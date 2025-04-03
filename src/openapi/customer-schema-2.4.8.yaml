@@ -13,7 +13,7 @@ info:
 host: example.com
 basePath: "/rest/default"
 schemes:
-- https
+- http
 tags:
 - name: applepay/auth
 - name: braintree/mine/payment/vault
