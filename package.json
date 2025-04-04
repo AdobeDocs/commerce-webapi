@@ -32,6 +32,7 @@
     "test": "remark src/pages --quiet --frail",
     "build:spectaql": "spectaql --target-file index.html --config spectaql/config.yml",
     "build:spectaql:2.4.6": "spectaql --target-file index.html --config spectaql/config_2.4.6.yml",
+    "build:spectaql:2.4.7": "spectaql --target-file index.html --config spectaql/config_2.4.7.yml",
     "dev:spectaql": "spectaql --development-mode-live --config spectaql/config.yml"
   },
   "packageManager": "yarn@3.2.4"
