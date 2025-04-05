@@ -24,7 +24,7 @@ Examples include customer address, order history, and shopping cart contents.
 
 ## Reference
 
-The [`allCustomerSegments`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-all-customer-segments) reference provides detailed information about the types and fields defined in this query.
+The [`allCustomerSegments`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-allCustomerSegments) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

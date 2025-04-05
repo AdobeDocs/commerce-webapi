@@ -21,7 +21,7 @@ Cart price rules apply discounts to items in the shopping cart, based on a set o
 
 ## Reference
 
-The [`allCartRules`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-all-cart-rules) reference provides detailed information about the types and fields defined in this query.
+The [`allCartRules`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-allCartRules) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

@@ -21,7 +21,7 @@ Catalog price rules can be used to offer products to buyers at a discounted pric
 
 ## Reference
 
-The [`allCatalogRules`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-all-catalog-rules) query returns a list of catalog rule names.
+The [`allCatalogRules`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-allCatalogRules) query returns a list of catalog rule names.
 
 ## Example usage
 

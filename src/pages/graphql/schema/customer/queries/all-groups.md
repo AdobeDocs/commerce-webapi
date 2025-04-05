@@ -21,7 +21,7 @@ Customer groups determine which discounts are available and the tax class that i
 
 ## Reference
 
-The [`allCustomerGroups`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-all-customer-groups) reference provides detailed information about the types and fields defined in this query.
+The [`allCustomerGroups`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-allCustomerGroups) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
