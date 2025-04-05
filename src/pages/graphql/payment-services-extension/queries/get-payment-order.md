@@ -22,6 +22,10 @@ The `getPaymentOrder` query retrieves the payment details for the order. You mus
 }
 ```
 
+## Reference
+
+The [`getPaymentOrder`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-getPaymentOrder) reference provides detailed information about the types and fields defined in this query.
+
 ## Example usage
 
 The following example runs the `getPaymentOrder` query:

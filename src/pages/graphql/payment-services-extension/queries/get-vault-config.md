@@ -19,6 +19,10 @@ The `getVaultConfig` query returns the vault configuration details for each paym
 }
 ```
 
+## Reference
+
+The [`getVaultConfig`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-getVaultConfig) reference provides detailed information about the types and fields defined in this query.
+
 ## Example usage
 
 The following example runs the `getVaultConfig` query to retrieve all the stored payment details.
