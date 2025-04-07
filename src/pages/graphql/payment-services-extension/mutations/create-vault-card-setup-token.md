@@ -27,6 +27,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`createVaultCardSetupToken`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createVaultCardSetupToken) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example runs the `createVaultCardSetupToken` mutation to create a setup token for the given payment details.

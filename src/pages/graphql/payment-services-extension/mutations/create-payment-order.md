@@ -30,6 +30,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`createPaymentOrder`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createPaymentOrder) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example creates a payment order. The payment method was previously set to `payment_services_paypal_hosted_fields`.
