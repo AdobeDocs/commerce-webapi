@@ -1,6 +1,6 @@
 ---
 title: AttributeMetadataInterface
-edition: paas
+edition: pwa
 ---
 
 # AttributeMetadataInterface
