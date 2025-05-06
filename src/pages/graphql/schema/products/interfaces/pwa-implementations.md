@@ -1,6 +1,6 @@
 ---
 title: PWA implementations and attributes
-edition: pwa
+edition: paas
 ---
 
 # PWA implementations and attributes

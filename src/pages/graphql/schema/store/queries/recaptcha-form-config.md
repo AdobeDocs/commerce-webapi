@@ -1,6 +1,6 @@
 ---
 title: recaptchaFormConfig query
-edition: pwa
+edition: paas
 ---
 
 # recaptchaFormConfig query
