@@ -1,6 +1,6 @@
 ---
 title: applyGiftCardToCart mutation
-edition: ee
+edition: paas
 ---
 
 # applyGiftCardToCart mutation

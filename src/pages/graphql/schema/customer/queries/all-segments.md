@@ -1,6 +1,6 @@
 ---
 title: allCustomerSegments query
-edition: ee
+edition: paas
 ---
 
 # allCustomerSegments query

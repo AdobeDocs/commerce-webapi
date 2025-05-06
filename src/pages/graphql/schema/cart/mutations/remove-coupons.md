@@ -1,6 +1,6 @@
 ---
 title: removeCouponsFromCart mutation
-edition: ee
+edition: paas
 ---
 
 # removeCouponsFromCart mutation

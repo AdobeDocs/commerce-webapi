@@ -1,7 +1,7 @@
 ---
 title: Integrate with the Company module
 description: Overview of the Company module
-edition: ee
+edition: paas
 keywords:
   - B2B
   - REST

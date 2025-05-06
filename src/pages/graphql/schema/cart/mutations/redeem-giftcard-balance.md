@@ -1,6 +1,6 @@
 ---
 title: redeemGiftCardBalanceAsStoreCredit mutation
-edition: ee
+edition: paas
 ---
 
 # redeemGiftCardBalanceAsStoreCredit mutation

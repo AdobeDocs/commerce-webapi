@@ -1,6 +1,6 @@
 ---
 title: removeRewardPointsFromCart mutation
-edition: ee
+edition: paas
 ---
 
 # removeRewardPointsFromCart mutation

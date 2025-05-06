@@ -1,6 +1,6 @@
 ---
 title: allCartRules query
-edition: ee
+edition: paas
 ---
 
 # allCartRules query

@@ -1,6 +1,6 @@
 ---
 title: deleteWishlist mutation
-edition: ee
+edition: paas
 ---
 
 # deleteWishlist mutation

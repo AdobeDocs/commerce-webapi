@@ -1,6 +1,6 @@
 ---
 title: createGiftRegistry mutation
-edition: ee
+edition: paas
 contributor_name: EY
 ---
 

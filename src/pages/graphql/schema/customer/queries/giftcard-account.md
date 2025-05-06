@@ -1,6 +1,6 @@
 ---
 title: giftCardAccount query
-edition: ee
+edition: paas
 ---
 
 # giftCardAccount query

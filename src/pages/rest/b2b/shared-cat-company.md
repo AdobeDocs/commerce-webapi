@@ -1,7 +1,7 @@
 ---
 title: Assign companies to a shared catalog
 description: Assign a shared catalog to one or more companies
-edition: ee
+edition: paas
 keywords:
   - B2B
   - REST

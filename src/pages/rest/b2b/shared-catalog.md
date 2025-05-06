@@ -1,7 +1,7 @@
 ---
 title: Integrate with the SharedCatalog module
 description: Overview of the SharedCatalog module
-edition: ee
+edition: paas
 keywords:
   - B2B
   - REST

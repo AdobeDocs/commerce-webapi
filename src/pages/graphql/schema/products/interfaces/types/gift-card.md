@@ -1,6 +1,6 @@
 ---
 title: Gift card product data types
-edition: ee
+edition: paas
 ---
 
 # Gift card product data types

@@ -1,6 +1,6 @@
 ---
 title: createWishlist mutation
-edition: ee
+edition: paas
 ---
 
 # createWishlist mutation

@@ -1,6 +1,6 @@
 ---
 title: confirmReturn mutation
-edition: ee
+edition: paas
 ---
 
 # confirmReturn mutation

@@ -1,7 +1,7 @@
 ---
 title: Negotiable quote checkout
 description: Convert the negotiable quote to an order after reaching an agreed price
-edition: ee
+edition: paas
 keywords:
   - B2B
   - REST

@@ -1,6 +1,6 @@
 ---
 title: Gift registry
-edition: ee
+edition: paas
 ---
 
 # Gift registry

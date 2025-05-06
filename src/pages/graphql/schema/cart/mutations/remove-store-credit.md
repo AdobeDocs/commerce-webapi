@@ -1,6 +1,6 @@
 ---
 title: removeStoreCreditFromCart mutation
-edition: ee
+edition: paas
 ---
 
 # removeStoreCreditFromCart mutation

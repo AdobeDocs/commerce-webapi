@@ -1,6 +1,6 @@
 ---
 title: requestGuestReturn mutation
-edition: ee
+edition: paas
 ---
 
 # requestGuestReturn mutation

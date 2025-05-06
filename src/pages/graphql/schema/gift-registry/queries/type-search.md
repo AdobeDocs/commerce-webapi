@@ -1,6 +1,6 @@
 ---
 title: giftRegistryTypeSearch query
-edition: ee   
+edition: paas   
 ---
 
 # giftRegistryTypeSearch query

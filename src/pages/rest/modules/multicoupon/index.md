@@ -1,7 +1,7 @@
 ---
 title: Multicoupon API
 description: Add multiple coupons to a cart using REST.
-edition: ee
+edition: paas
 keywords:
   - REST
 ---

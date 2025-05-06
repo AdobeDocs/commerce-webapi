@@ -1,6 +1,6 @@
 ---
 title: applyStoreCreditToCart mutation
-edition: ee
+edition: paas
 ---
 
 # applyStoreCreditToCart mutation

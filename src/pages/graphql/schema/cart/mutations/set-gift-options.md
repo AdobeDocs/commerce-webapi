@@ -1,6 +1,6 @@
 ---
 title: setGiftOptionsOnCart mutation
-edition: ee
+edition: paas
 ---
 
 # setGiftOptionsOnCart mutation

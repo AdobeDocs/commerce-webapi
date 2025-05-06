@@ -1,6 +1,6 @@
 ---
 title: removeGiftCardFromCart mutation
-edition: ee
+edition: paas
 ---
 
 # removeGiftCardFromCart mutation

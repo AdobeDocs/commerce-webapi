@@ -1,6 +1,6 @@
 ---
 title: shareGiftRegistry mutation
-edition: ee
+edition: paas
 contributor_name: EY
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: updateWishlist mutation
-edition: ee
+edition: paas
 ---
 
 # updateWishlist mutation

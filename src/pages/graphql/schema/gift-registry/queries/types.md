@@ -1,6 +1,6 @@
 ---
 title: giftRegistryTypes query
-edition: ee
+edition: paas
 contributor_name: Zilker Technology
 contributor_link: https://www.ztech.io/
 ---

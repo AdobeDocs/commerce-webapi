@@ -1,7 +1,7 @@
 ---
 title: Import API
 description: Import entities into Adobe Commerce using REST.
-edition: ee
+edition: paas
 keywords:
   - REST
 ---

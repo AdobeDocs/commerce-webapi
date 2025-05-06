@@ -1,6 +1,6 @@
 ---
 title: updateGiftRegistryItems mutation
-edition: ee
+edition: paas
 ---
 
 # updateGiftRegistryItems mutation

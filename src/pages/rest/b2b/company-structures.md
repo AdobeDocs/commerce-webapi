@@ -1,7 +1,7 @@
 ---
 title: Manage company structures
 description: Assign company users to teams and hierarchies
-edition: ee
+edition: paas
 keywords:
   - B2B
   - REST

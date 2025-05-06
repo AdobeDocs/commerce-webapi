@@ -1,6 +1,6 @@
 ---
 title: requestReturn mutation
-edition: ee
+edition: paas
 ---
 
 # requestReturn mutation

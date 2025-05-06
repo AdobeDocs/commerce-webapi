@@ -1,7 +1,7 @@
 ---
 title: Manage company roles
 description: Create and assign user roles for B2B users
-edition: ee
+edition: paas
 keywords:
   - B2B
   - REST

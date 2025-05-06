@@ -1,6 +1,6 @@
 ---
 title: allCustomerGroups query
-edition: ee
+edition: paas
 ---
 
 # allCustomerGroups query

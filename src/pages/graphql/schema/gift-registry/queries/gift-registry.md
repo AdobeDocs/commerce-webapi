@@ -1,6 +1,6 @@
 ---
 title: giftRegistry query
-edition: ee   
+edition: paas   
 contributor_name: EY
 ---
 

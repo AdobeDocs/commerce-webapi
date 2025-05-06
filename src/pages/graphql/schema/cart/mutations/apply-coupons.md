@@ -1,6 +1,6 @@
 ---
 title: applyCouponsToCart mutation
-edition: ee
+edition: paas
 ---
 
 # applyCouponsToCart mutation

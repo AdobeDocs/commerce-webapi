@@ -1,6 +1,6 @@
 ---
 title: copyProductsBetweenWishlists mutation
-edition: ee
+edition: paas
 ---
 
 # copyProductsBetweenWishlists mutation

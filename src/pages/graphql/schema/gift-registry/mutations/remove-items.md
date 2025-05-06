@@ -1,6 +1,6 @@
 ---
 title: removeGiftRegistryItems mutation
-edition: ee
+edition: paas
 ---
 
 # removeGiftRegistryItems mutation

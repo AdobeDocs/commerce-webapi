@@ -1,6 +1,6 @@
 ---
 title: applyRewardPointsToCart mutation
-edition: ee
+edition: paas
 ---
 
 # applyRewardPointsToCart mutation

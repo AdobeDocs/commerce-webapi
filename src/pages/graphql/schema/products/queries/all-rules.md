@@ -1,6 +1,6 @@
 ---
 title: allCatalogRules query
-edition: ee
+edition: paas
 ---
 
 # allCatalogRules query
