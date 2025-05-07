@@ -1,13 +1,16 @@
 ---
 title: B2B integrations
 description: Overview of the B2B module
-edition: ee
 keywords:
   - B2B
   - REST
 ---
 
 import * as Vars from '../../../data/vars.js';
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # B2B integrations
 

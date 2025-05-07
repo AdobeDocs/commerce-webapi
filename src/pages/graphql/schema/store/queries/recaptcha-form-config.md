@@ -1,6 +1,5 @@
 ---
 title: recaptchaFormConfig query
-edition: pwa
 ---
 
 # recaptchaFormConfig query
@@ -24,8 +23,8 @@ The following query returns information about the reCaptcha configuration for th
 ```graphql
 query {
     recaptchaFormConfig(formType:CONTACT) {
-    	is_enabled
-    	configurations {
+        is_enabled
+        configurations {
         re_captcha_type
         badge_position
         website_key

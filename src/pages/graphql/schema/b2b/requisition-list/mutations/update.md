@@ -1,9 +1,14 @@
 ---
 title: updateRequisitionList mutation
-edition: b2b
 contributor_name: Zilker Technology
 contributor_link: https://www.ztech.io/
+keywords:
+  - B2B
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # updateRequisitionList mutation
 

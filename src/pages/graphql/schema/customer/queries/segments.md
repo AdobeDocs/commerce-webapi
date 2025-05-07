@@ -1,7 +1,10 @@
 ---
 title: customerSegments query
-edition: ee
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # customerSegments query
 

@@ -1,7 +1,13 @@
 ---
 title: Requisition lists (B2B) 
 description:
+keywords:
+  - B2B
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Requisition lists (B2B)
 

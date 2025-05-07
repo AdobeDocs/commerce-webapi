@@ -1,13 +1,16 @@
 ---
 title: Integrate with the CompanyCredit module
 description: Set up the CompanyCredit module, which allows companies to make purchases on credit.
-edition: ee
 keywords:
   - B2B
   - REST
 ---
 
 import * as Vars from '../../../data/vars.js';
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Integrate with the CompanyCredit module
 

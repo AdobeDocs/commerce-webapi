@@ -1,7 +1,10 @@
 ---
 title: allCatalogRules query
-edition: ee
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # allCatalogRules query
 

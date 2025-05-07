@@ -1,13 +1,16 @@
 ---
 title: Manage company users
 description: Manage which companies a user belongs to
-edition: ee
 keywords:
   - B2B
   - REST
 ---
 
 import * as Vars from '../../../data/vars.js';
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Manage company users
 

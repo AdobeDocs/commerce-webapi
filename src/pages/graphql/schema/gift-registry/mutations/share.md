@@ -1,8 +1,11 @@
 ---
 title: shareGiftRegistry mutation
-edition: ee
 contributor_name: EY
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # shareGiftRegistry mutation
 

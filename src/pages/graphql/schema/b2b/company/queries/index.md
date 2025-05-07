@@ -1,7 +1,12 @@
 ---
 title: Company (B2B) queries
-edition: b2b
+keywords:
+  - B2B
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Company (B2B) queries
 

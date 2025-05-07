@@ -1,9 +1,12 @@
 ---
 title: giftRegistryTypes query
-edition: ee
 contributor_name: Zilker Technology
 contributor_link: https://www.ztech.io/
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # giftRegistryTypes query
 

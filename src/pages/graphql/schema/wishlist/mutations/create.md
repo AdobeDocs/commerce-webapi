@@ -1,7 +1,10 @@
 ---
 title: createWishlist mutation
-edition: ee
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # createWishlist mutation
 

@@ -1,7 +1,10 @@
 ---
 title: removeGiftRegistryRegistrants mutation
-edition: ee
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # removeGiftRegistryRegistrants mutation
 
