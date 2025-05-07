@@ -1,7 +1,6 @@
----
-title: allCustomerGroups query
-edition: paas
----
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # allCustomerGroups query
 

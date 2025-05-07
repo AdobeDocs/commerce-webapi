@@ -1,7 +1,6 @@
 ---
 title: Integrate with the NegotiableQuote module
 description: An overview of the NegotiableQuote module, which allows companies to negotiate prices prior to an order
-edition: paas
 keywords:
   - B2B
   - REST

@@ -1,7 +1,6 @@
----
-title: allCatalogRules query
-edition: paas
----
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # allCatalogRules query
 

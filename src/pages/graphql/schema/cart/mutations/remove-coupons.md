@@ -1,7 +1,6 @@
----
-title: removeCouponsFromCart mutation
-edition: paas
----
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # removeCouponsFromCart mutation
 

@@ -1,8 +1,6 @@
----
-title: createGiftRegistry mutation
-edition: paas
-contributor_name: EY
----
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # createGiftRegistry mutation
 

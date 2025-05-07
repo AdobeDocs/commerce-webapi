@@ -1,7 +1,6 @@
 ---
 title: Manage negotiable quotes
 description: Endpoints used to create a negotiable quote
-edition: paas
 keywords:
   - B2B
   - REST

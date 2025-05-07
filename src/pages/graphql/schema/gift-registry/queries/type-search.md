@@ -1,7 +1,6 @@
----
-title: giftRegistryTypeSearch query
-edition: paas   
----
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # giftRegistryTypeSearch query
 
