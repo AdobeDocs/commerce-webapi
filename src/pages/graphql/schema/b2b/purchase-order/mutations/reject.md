@@ -1,5 +1,7 @@
 ---
 title: rejectPurchaseOrders mutation
+keywords:
+  - B2B
 ---
 
 # rejectPurchaseOrders mutation

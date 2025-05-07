@@ -1,5 +1,7 @@
 ---
 title: requestNegotiableQuote mutation
+keywords:
+  - B2B
 ---
 
 # requestNegotiableQuote mutation

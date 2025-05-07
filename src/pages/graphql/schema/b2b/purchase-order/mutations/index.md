@@ -1,5 +1,7 @@
 ---
 title: Purchase order (B2B) mutations   
+keywords:
+  - B2B
 ---
 
 # Purchase order (B2B) mutations

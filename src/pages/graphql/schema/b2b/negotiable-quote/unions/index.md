@@ -1,5 +1,7 @@
 ---
 title: Unions
+keywords:
+  - B2B
 ---
 
 # Unions

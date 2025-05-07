@@ -1,5 +1,7 @@
 ---
 title: isCompanyEmailAvailable query
+keywords:
+  - B2B
 ---
 
 # isCompanyEmailAvailable query

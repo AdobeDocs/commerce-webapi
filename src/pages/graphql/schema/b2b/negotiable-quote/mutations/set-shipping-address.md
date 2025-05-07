@@ -1,5 +1,7 @@
 ---
 title: setNegotiableQuoteShippingAddress mutation
+keywords:
+  - B2B
 ---
 
 # setNegotiableQuoteShippingAddress mutation

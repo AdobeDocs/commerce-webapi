@@ -2,6 +2,8 @@
 title: updateRequisitionList mutation
 contributor_name: Zilker Technology
 contributor_link: https://www.ztech.io/
+keywords:
+  - B2B
 ---
 
 # updateRequisitionList mutation

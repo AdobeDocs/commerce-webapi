@@ -1,5 +1,7 @@
 ---
 title: updatePurchaseOrderApprovalRule mutation
+keywords:
+  - B2B
 ---
 
 # updatePurchaseOrderApprovalRule mutation

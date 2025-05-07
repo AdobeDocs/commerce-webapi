@@ -1,6 +1,8 @@
 ---
 title: moveItemsBetweenRequisitionLists mutation
 contributor_name: EY
+keywords:
+  - B2B
 ---
 
 # moveItemsBetweenRequisitionLists mutation

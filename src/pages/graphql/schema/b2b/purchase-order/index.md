@@ -1,5 +1,7 @@
 ---
 title: Purchase orders (B2B)   
+keywords:
+  - B2B
 ---
 
 # Purchase orders (B2B)

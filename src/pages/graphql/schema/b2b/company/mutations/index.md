@@ -1,5 +1,7 @@
 ---
 title: Company (B2B) mutations
+keywords:
+  - B2B
 ---
 
 # Company (B2B) mutations

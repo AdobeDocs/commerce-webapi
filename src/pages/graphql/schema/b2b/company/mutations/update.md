@@ -1,5 +1,7 @@
 ---
 title: updateCompany mutation
+keywords:
+  - B2B
 ---
 
 # updateCompany mutation

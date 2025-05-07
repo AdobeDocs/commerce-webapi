@@ -1,5 +1,7 @@
 ---
 title: Purchase order approval rules (B2B)   
+keywords:
+  - B2B
 ---
 
 # Purchase order approval rules (B2B)

@@ -1,6 +1,8 @@
 ---
 title: addRequisitionListItemsToCart mutation
 contributor_name: EY
+keywords:
+  - B2B
 ---
 
 # addRequisitionListItemsToCart mutation

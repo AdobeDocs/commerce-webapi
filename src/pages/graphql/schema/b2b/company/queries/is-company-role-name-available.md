@@ -2,6 +2,8 @@
 title: isCompanyRoleNameAvailable query
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
+keywords:
+  - B2B
 ---
 
 # isCompanyRoleNameAvailable query

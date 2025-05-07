@@ -1,5 +1,7 @@
 ---
 title: addPurchaseOrderComment mutation
+keywords:
+  - B2B
 ---
 
 # addPurchaseOrderComment mutation

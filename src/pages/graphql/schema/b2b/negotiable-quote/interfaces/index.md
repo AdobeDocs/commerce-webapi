@@ -1,5 +1,7 @@
 ---
 title: Negotiable quote (B2B) interfaces   
+keywords:
+  - B2B
 ---
 
 # Negotiable quote (B2B) interfaces

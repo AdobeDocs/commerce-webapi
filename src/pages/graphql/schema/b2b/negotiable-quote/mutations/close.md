@@ -1,5 +1,7 @@
 ---
 title: closeNegotiableQuotes mutation
+keywords:
+  - B2B
 ---
 
 # closeNegotiableQuotes mutation

@@ -1,5 +1,7 @@
 ---
 title: Requisition list (B2B) mutations   
+keywords:
+  - B2B
 ---
 
 # Requisition list (B2B) mutations

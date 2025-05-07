@@ -1,5 +1,7 @@
 ---
 title: deleteNegotiableQuotes mutation
+keywords:
+  - B2B
 ---
 
 # deleteNegotiableQuotes mutation

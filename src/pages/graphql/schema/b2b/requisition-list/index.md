@@ -1,6 +1,8 @@
 ---
 title: Requisition lists (B2B) 
 description:
+keywords:
+  - B2B
 ---
 
 # Requisition lists (B2B)

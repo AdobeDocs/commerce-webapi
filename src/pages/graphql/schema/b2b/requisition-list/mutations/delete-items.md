@@ -1,6 +1,8 @@
 ---
 title: deleteRequisitionListItems mutation
 contributor_name: EY
+keywords:
+  - B2B
 ---
 
 # deleteRequisitionListItems mutation

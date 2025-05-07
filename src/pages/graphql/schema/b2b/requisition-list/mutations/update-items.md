@@ -1,6 +1,8 @@
 ---
 title: updateRequisitionListItems mutation
 contributor_name: EY
+keywords:
+  - B2B
 ---
 
 # updateRequisitionListItems mutation

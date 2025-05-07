@@ -2,6 +2,8 @@
 title: deleteCompanyRole mutation
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
+keywords:
+  - B2B
 ---
 
 # deleteCompanyRole mutation

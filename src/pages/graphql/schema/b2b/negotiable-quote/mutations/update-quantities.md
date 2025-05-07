@@ -1,5 +1,7 @@
 ---
 title: updateNegotiableQuoteQuantities mutation
+keywords:
+  - B2B
 ---
 
 # updateNegotiableQuoteQuantities mutation

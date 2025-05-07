@@ -1,5 +1,7 @@
 ---
 title: Company (B2B) unions   
+keywords:
+  - B2B
 ---
 
 # Company (B2B) unions

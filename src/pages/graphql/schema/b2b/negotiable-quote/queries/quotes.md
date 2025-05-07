@@ -1,5 +1,7 @@
 ---
 title: negotiableQuotes query   
+keywords:
+  - B2B
 ---
 
 # negotiableQuotes query

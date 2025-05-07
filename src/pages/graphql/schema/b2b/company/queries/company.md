@@ -1,5 +1,7 @@
 ---
 title: company query
+keywords:
+  - B2B
 ---
 
 # company query

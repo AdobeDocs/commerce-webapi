@@ -1,5 +1,7 @@
 ---
 title: deletePurchaseOrderApprovalRule mutation
+keywords:
+  - B2B
 ---
 
 # deletePurchaseOrderApprovalRule mutation

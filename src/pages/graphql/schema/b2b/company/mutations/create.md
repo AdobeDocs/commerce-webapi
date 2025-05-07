@@ -1,5 +1,7 @@
 ---
 title: createCompany mutation
+keywords:
+  - B2B
 ---
 
 # createCompany mutation

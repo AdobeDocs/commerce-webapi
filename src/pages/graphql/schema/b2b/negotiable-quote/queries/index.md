@@ -1,5 +1,7 @@
 ---
 title: Negotiable quote (B2B) queries   
+keywords:
+  - B2B
 ---
 
 # Negotiable quote (B2B) queries

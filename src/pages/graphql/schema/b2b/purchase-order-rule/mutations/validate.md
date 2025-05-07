@@ -1,5 +1,7 @@
 ---
 title: validatePurchaseOrders mutation
+keywords:
+  - B2B
 ---
 
 # validatePurchaseOrders mutation
