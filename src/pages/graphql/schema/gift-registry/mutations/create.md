@@ -1,6 +1,8 @@
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+---
+title: createGiftRegistry mutation
+edition: paas
+contributor_name: EY
+---
 
 # createGiftRegistry mutation
 

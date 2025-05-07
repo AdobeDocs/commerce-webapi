@@ -1,6 +1,7 @@
 ---
 title: B2B integrations
 description: Overview of the B2B module
+edition: paas
 keywords:
   - B2B
   - REST

@@ -1,6 +1,7 @@
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+---
+title: giftRegistryIdSearch query
+edition: paas   
+---
 
 # giftRegistryIdSearch query
 

@@ -1,6 +1,8 @@
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+---
+title: giftRegistry query
+edition: paas   
+contributor_name: EY
+---
 
 # giftRegistry query
 

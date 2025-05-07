@@ -1,6 +1,10 @@
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+---
+title: Multicoupon API
+description: Add multiple coupons to a cart using REST.
+edition: paas
+keywords:
+  - REST
+---
 
 # Multiple coupons
 

@@ -1,6 +1,7 @@
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+---
+title: allCustomerSegments query
+edition: paas
+---
 
 # allCustomerSegments query
 

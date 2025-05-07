@@ -1,6 +1,10 @@
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+---
+title: Import API
+description: Import entities into Adobe Commerce using REST.
+edition: paas
+keywords:
+  - REST
+---
 
 # Import data
 

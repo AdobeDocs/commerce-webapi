@@ -1,6 +1,7 @@
 ---
 title: Manage shared catalogs
 description: Manage public and custom shared catalogs
+edition: paas
 keywords:
   - B2B
   - REST

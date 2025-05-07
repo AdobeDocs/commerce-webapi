@@ -1,6 +1,7 @@
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+---
+title: allCartRules query
+edition: paas
+---
 
 # allCartRules query
 

@@ -1,6 +1,9 @@
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+---
+title: giftRegistryTypes query
+edition: paas
+contributor_name: Zilker Technology
+contributor_link: https://www.ztech.io/
+---
 
 # giftRegistryTypes query
 

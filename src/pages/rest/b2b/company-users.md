@@ -1,6 +1,7 @@
 ---
 title: Manage company users
 description: Manage which companies a user belongs to
+edition: paas
 keywords:
   - B2B
   - REST

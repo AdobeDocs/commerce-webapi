@@ -1,6 +1,7 @@
 ---
 title: Manage company credit
 description: Learn how to manage company credit limits, available credit, and outstanding balances.
+edition: paas
 keywords:
   - B2B
   - REST

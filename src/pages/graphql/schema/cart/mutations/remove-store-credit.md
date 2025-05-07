@@ -1,6 +1,7 @@
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+---
+title: removeStoreCreditFromCart mutation
+edition: paas
+---
 
 # removeStoreCreditFromCart mutation
 

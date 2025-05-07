@@ -1,6 +1,7 @@
 ---
 title: Integrate with the CompanyCredit module
 description: Set up the CompanyCredit module, which allows companies to make purchases on credit.
+edition: paas
 keywords:
   - B2B
   - REST

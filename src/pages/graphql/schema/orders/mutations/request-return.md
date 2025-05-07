@@ -1,6 +1,7 @@
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+---
+title: requestReturn mutation
+edition: paas
+---
 
 # requestReturn mutation
 

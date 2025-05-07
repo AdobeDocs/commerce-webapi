@@ -1,6 +1,7 @@
 ---
 title: Develop B2B extensions
 description: Review details about developing extensions in the Module Reference Guide
+edition: paas
 keywords:
   - B2B
   - REST

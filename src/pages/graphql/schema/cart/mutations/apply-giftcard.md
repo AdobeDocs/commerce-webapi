@@ -1,6 +1,7 @@
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+---
+title: applyGiftCardToCart mutation
+edition: paas
+---
 
 # applyGiftCardToCart mutation
 
