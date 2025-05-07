@@ -1,6 +1,5 @@
 ---
-title: Negotiable quote (B2B) mutations
-edition: b2b   
+title: Negotiable quote (B2B) mutations   
 ---
 
 # Negotiable quote (B2B) mutations

@@ -1,6 +1,5 @@
 ---
 title: addPurchaseOrderComment mutation
-edition: b2b
 ---
 
 # addPurchaseOrderComment mutation

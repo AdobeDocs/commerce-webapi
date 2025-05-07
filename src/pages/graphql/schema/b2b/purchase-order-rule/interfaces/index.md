@@ -1,6 +1,5 @@
 ---
 title: PurchaseOrderApprovalRuleConditionInterface attributes and implementations
-edition: b2b
 ---
 
 # PurchaseOrderApprovalRuleConditionInterface attributes and implementations

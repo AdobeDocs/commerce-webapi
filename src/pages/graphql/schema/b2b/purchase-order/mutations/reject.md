@@ -1,6 +1,5 @@
 ---
 title: rejectPurchaseOrders mutation
-edition: b2b
 ---
 
 # rejectPurchaseOrders mutation

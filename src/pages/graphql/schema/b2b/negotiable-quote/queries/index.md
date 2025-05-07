@@ -1,6 +1,5 @@
 ---
-title: Negotiable quote (B2B) queries
-edition: b2b   
+title: Negotiable quote (B2B) queries   
 ---
 
 # Negotiable quote (B2B) queries

@@ -1,6 +1,5 @@
 ---
 title: RequisitionListItemInterface attributes and implementations
-edition: b2b
 ---
 
 # RequisitionListItemInterface attributes and implementations

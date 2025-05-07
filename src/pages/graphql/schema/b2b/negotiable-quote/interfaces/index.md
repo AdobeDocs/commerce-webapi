@@ -1,6 +1,5 @@
 ---
-title: Negotiable quote (B2B) interfaces
-edition: b2b   
+title: Negotiable quote (B2B) interfaces   
 ---
 
 # Negotiable quote (B2B) interfaces

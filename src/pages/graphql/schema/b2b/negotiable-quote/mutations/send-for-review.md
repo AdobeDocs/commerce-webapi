@@ -1,6 +1,5 @@
 ---
 title: sendNegotiableQuoteForReview mutation
-edition: b2b
 ---
 
 # sendNegotiableQuoteForReview mutation

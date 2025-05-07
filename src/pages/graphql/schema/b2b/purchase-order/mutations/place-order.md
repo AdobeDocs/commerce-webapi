@@ -1,6 +1,5 @@
 ---
 title: placeOrderForPurchaseOrder mutation
-edition: b2b
 ---
 
 # placeOrderForPurchaseOrder mutation

@@ -1,6 +1,5 @@
 ---
 title: company query
-edition: b2b
 ---
 
 # company query

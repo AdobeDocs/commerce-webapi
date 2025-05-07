@@ -1,6 +1,5 @@
 ---
 title: clearCustomerCart mutation
-edition: b2b
 contributor_name: EY
 ---
 

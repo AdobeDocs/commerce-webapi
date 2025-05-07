@@ -1,6 +1,5 @@
 ---
 title: addProductsToRequisitionList mutation
-edition: b2b
 contributor_name: EY
 ---
 

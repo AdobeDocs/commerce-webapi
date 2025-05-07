@@ -1,6 +1,5 @@
 ---
 title: Company (B2B) queries
-edition: b2b
 ---
 
 # Company (B2B) queries

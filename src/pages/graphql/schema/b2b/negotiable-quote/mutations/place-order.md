@@ -1,6 +1,5 @@
 ---
 title: placeNegotiableQuoteOrder mutation
-edition: b2b
 ---
 
 # placeNegotiableQuoteOrder mutation

@@ -1,6 +1,5 @@
 ---
-title: Negotiable quote (B2B)
-edition: b2b   
+title: Negotiable quote (B2B)   
 ---
 
 # Negotiable quote (B2B)

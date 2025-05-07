@@ -1,6 +1,5 @@
 ---
 title: setNegotiableQuoteBillingAddress mutation
-edition: b2b
 ---
 
 # setNegotiableQuoteBillingAddress mutation

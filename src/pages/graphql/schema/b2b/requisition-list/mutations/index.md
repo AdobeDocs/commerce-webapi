@@ -1,6 +1,5 @@
 ---
-title: Requisition list (B2B) mutations
-edition: b2b   
+title: Requisition list (B2B) mutations   
 ---
 
 # Requisition list (B2B) mutations

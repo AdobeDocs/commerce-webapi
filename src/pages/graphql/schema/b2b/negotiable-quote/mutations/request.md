@@ -1,6 +1,5 @@
 ---
 title: requestNegotiableQuote mutation
-edition: b2b
 ---
 
 # requestNegotiableQuote mutation

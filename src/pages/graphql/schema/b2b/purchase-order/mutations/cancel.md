@@ -1,6 +1,5 @@
 ---
 title: cancelPurchaseOrders mutation
-edition: b2b
 ---
 
 # cancelPurchaseOrders mutation

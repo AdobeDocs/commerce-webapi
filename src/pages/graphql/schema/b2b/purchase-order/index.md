@@ -1,6 +1,5 @@
 ---
-title: Purchase orders (B2B)
-edition: b2b   
+title: Purchase orders (B2B)   
 ---
 
 # Purchase orders (B2B)

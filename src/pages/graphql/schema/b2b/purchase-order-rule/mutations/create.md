@@ -1,6 +1,5 @@
 ---
 title: createPurchaseOrderApprovalRule mutation
-edition: b2b
 ---
 
 # createPurchaseOrderApprovalRule mutation

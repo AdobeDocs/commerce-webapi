@@ -1,6 +1,5 @@
 ---
 title: setNegotiableQuotePaymentMethod mutation
-edition: b2b
 ---
 
 # setNegotiableQuotePaymentMethod mutation

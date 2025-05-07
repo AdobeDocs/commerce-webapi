@@ -1,6 +1,5 @@
 ---
 title: addPurchaseOrderItemsToCart mutation
-edition: b2b
 ---
 
 # addPurchaseOrderItemsToCart mutation

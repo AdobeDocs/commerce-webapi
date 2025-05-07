@@ -1,6 +1,5 @@
 ---
-title: Purchase order (B2B) mutations
-edition: b2b   
+title: Purchase order (B2B) mutations   
 ---
 
 # Purchase order (B2B) mutations

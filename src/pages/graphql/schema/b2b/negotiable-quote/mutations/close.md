@@ -1,6 +1,5 @@
 ---
 title: closeNegotiableQuotes mutation
-edition: b2b
 ---
 
 # closeNegotiableQuotes mutation

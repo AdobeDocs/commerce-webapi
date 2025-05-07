@@ -1,6 +1,5 @@
 ---
-title: negotiableQuote query
-edition: b2b   
+title: negotiableQuote query   
 ---
 
 # negotiableQuote query

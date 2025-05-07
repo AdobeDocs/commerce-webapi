@@ -1,6 +1,5 @@
 ---
 title: approvePurchaseOrders mutation
-edition: b2b
 ---
 
 # approvePurchaseOrders mutation

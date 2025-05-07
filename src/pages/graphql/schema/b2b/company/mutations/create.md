@@ -1,6 +1,5 @@
 ---
 title: createCompany mutation
-edition: b2b
 ---
 
 # createCompany mutation

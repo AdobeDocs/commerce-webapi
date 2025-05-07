@@ -1,6 +1,5 @@
 ---
-title: Purchase order approval rules (B2B)
-edition: b2b   
+title: Purchase order approval rules (B2B)   
 ---
 
 # Purchase order approval rules (B2B)

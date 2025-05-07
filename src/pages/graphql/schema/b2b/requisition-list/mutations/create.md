@@ -1,6 +1,5 @@
 ---
 title: createRequisitionList mutation
-edition: b2b
 contributor_name: Zilker Technology
 contributor_link: https://www.ztech.io/
 ---

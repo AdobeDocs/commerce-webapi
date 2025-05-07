@@ -1,6 +1,5 @@
 ---
-title: Purchase order approval rule (B2B) mutations
-edition: b2b   
+title: Purchase order approval rule (B2B) mutations   
 ---
 
 # Purchase order approval rule (B2B) mutations
