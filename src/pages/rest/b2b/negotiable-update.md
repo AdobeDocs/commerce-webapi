@@ -7,6 +7,10 @@ keywords:
   - REST
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # Update a negotiable quote
 
 Sellers and buyers can edit a negotiable quote at various times during the quote's lifecycle. Both use the `PUT /V1/negotiableQuote/:quoteId` call to update the quote. This call is defined in the

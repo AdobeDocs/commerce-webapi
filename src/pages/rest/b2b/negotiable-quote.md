@@ -7,6 +7,10 @@ keywords:
   - REST
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # Integrate with the NegotiableQuote module
 
 Negotiable quotes are a mechanism that allows a company user (buyer) and a seller (admin user) to negotiate product and/or shipping prices before the company user places an order. The negotiable quote functionality is available for companies only.

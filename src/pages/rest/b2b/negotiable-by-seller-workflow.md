@@ -9,6 +9,10 @@ keywords:
 
 import * as Vars from '../../../data/vars.js';
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # Initiate a negotiable quote order by seller
 
 This topic describes how a seller can use REST calls to create a negotiable quote for a specific buyer in Draft state, add products to the quote, update quote data such as name and expiration date, and apply a discount.

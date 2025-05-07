@@ -7,6 +7,10 @@ keywords:
   - REST
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # Integrate with the Company Module
 
 The `Company` module allows multiple buyers that belong to the same company to view product prices and make purchases based on the shared catalog assigned to this company. A company can contain a hierarchy of users and teams, with roles and permissions assigned at any level.

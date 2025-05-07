@@ -9,6 +9,10 @@ keywords:
 
 import * as Vars from '../../../data/vars.js';
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # Place a negotiable quote order
 
 This topic describes how REST calls can be used to place items in a shopping cart, initiate and complete the process of negotiating a quote, and reimbursing the buyer's credit upon receipt of payment.

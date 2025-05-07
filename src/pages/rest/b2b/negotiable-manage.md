@@ -7,6 +7,10 @@ keywords:
   - REST
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # Manage negotiable quotes
 
 This topic describes the API requests required to initiate a negotiable quote and to prepare it to be converted to an order.

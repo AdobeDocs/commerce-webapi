@@ -9,6 +9,10 @@ keywords:
 
 import * as Vars from '../../../data/vars.js';
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # Integrate with B2B using REST
 
 This topic lists the REST endpoints and services that are provided with <Vars.sitedatavarb2b/>.

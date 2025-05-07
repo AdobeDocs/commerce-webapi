@@ -9,6 +9,10 @@ keywords:
 
 import * as Vars from '../../../data/vars.js';
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # Negotiable quote checkout
 
 When the seller and buyer user agree on the quoted products and their prices, the negotiated quote is ready to be converted to an order.

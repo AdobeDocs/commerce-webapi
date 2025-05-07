@@ -7,6 +7,10 @@ keywords:
   - REST
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # Assign categories and products to a shared catalog
 
 The shared catalog configuration process includes assigning categories and products to the shared catalog. To assign these items to a shared catalog, the following conditions must be met:

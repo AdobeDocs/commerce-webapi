@@ -9,6 +9,10 @@ keywords:
 
 import * as Vars from '../../../data/vars.js';
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # B2B integrations
 
 Unlike the standard business-to-consumer model, <Vars.sitedatavarb2b/> (Business to Business) is designed to meet the needs of sellers (Commerce merchants) whose customers are primarily companies—possibly with complex organizational structures and multiple users with various roles and levels of permission.

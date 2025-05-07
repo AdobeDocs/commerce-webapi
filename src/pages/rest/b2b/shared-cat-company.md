@@ -7,6 +7,10 @@ keywords:
   - REST
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # Assign companies to a shared catalog
 
 A shared catalog must be assigned to one or more companies before it can be accessed by the company users.

@@ -9,6 +9,10 @@ keywords:
 
 import * as Vars from '../../../data/vars.js';
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # Integrate with the SharedCatalog module
 
 A shared catalog is an entity that allows a seller to set special rules for the products that company users (buyers) can purchase. By using shared catalogs, a seller can apply different pricing levels for different companies. Also, shared catalogs allow a seller to configure the visibility of categories and products specifically for different companies.

@@ -9,6 +9,10 @@ keywords:
 
 import * as Vars from '../../../data/vars.js';
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # Manage company structures
 
 <p><Vars.sitedatavarb2b/> allows company users to be assigned to company teams and hierarchies.</p>
