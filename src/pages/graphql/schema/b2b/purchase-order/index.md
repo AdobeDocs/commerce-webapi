@@ -4,6 +4,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # Purchase orders (B2B)
 
 When B2B for Adobe Commerce is installed and purchase orders are activated for a company account, all orders are automatically created as purchase orders. Company users with the required permissions can create, edit, and delete their own purchase orders as well as those created by subordinate users.

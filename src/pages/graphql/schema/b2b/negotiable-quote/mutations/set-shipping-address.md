@@ -4,6 +4,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # setNegotiableQuoteShippingAddress mutation
 
 The `setNegotiableQuoteShippingAddress` mutation assigns the shipping address for the specified negotiable quote. You can assign an address from the company user's address book, or define a new one. The negotiable quote must be in the UPDATED state to successfully set a shipping address.

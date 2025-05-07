@@ -4,6 +4,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # PurchaseOrderApprovalRuleConditionInterface attributes and implementations
 
 [`PurchaseOrderApprovalRuleConditionInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-PurchaseOrderApprovalRuleConditionInterface) provides details about the approval rule conditions. It has the following implementations:

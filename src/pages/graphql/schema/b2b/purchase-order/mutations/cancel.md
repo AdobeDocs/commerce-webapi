@@ -4,6 +4,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # cancelPurchaseOrders mutation
 
 The `cancelPurchaseOrders` mutation cancels the specified purchase orders. If the request is successful, the status of each purchase order is `CANCELED`.

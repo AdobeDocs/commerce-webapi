@@ -4,6 +4,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # approvePurchaseOrders mutation
 
 The `approvePurchaseOrders` mutation approves one or more purchase orders. The specified purchase orders must have a status of PENDING.

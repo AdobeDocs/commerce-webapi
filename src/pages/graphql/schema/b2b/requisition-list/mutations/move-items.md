@@ -5,6 +5,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # moveItemsBetweenRequisitionLists mutation
 
 The `moveItemsBetweenRequisitionLists` mutation moves items from one requisition list to another.

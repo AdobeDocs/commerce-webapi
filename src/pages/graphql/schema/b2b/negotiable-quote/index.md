@@ -4,6 +4,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # Negotiable quote (B2B)
 
 Company users (buyers) and merchants (sellers) use negotiable quotes to manage the negotiation process for an order. Although the negotiation process can be complex, the basic steps are as follows:

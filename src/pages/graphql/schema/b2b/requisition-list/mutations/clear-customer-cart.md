@@ -5,6 +5,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # clearCustomerCart mutation
 
 The `clearCustomerCart` mutation clears the customer's cart. B2B requisition lists must be enabled to execute this mutation.

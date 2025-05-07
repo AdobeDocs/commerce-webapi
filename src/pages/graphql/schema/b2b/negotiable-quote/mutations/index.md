@@ -4,6 +4,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # Negotiable quote (B2B) mutations
 
 The B2B negotiable quote mutations allow you to perform the following operations:

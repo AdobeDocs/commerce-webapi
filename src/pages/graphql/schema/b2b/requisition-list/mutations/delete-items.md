@@ -5,6 +5,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # deleteRequisitionListItems mutation
 
 The `deleteRequisitionListItems` mutation removes items from the specified requisition list for the logged in customer.

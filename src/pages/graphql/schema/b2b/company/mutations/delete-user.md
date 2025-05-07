@@ -6,6 +6,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # deleteCompanyUser mutation
 
 Use the `deleteCompanyUser` mutation to deactivate the specified company user.

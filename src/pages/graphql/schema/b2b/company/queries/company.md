@@ -4,6 +4,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # company query
 
 The `company` query returns details about the user's company. The request must include the customer token of a company user.

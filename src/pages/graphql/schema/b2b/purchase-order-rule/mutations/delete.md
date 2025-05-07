@@ -4,6 +4,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # deletePurchaseOrderApprovalRule mutation
 
 The `deletePurchaseOrderApprovalRule` mutation deletes one or more purchase order approval rules.

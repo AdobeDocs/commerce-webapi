@@ -4,6 +4,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # removeNegotiableQuoteItems mutation
 
 The `removeNegotiableQuoteItems` mutation removes the specified products from a negotiable quote.

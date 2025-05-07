@@ -6,6 +6,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # updateCompanyTeam mutation
 
 Use the `updateCompanyTeam` mutation to update the company team data.

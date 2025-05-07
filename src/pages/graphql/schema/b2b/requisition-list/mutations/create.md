@@ -6,6 +6,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # createRequisitionList mutation
 
 The `createRequisitionList` mutation creates a requisition list for the logged in customer.

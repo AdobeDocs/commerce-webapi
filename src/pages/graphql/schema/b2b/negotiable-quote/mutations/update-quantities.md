@@ -4,6 +4,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # updateNegotiableQuoteQuantities mutation
 
 The `updateNegotiableQuoteQuantities` mutation changes the quantity of one or more products in an active negotiable quote.

@@ -6,6 +6,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # updateCompanyStructure mutation
 
 Use the `updateCompanyStructure` mutation to change the parent node of a company team.

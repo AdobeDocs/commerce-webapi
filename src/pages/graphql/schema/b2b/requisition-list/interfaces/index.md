@@ -4,6 +4,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # RequisitionListItemInterface attributes and implementations
 
 [`RequisitionListItemInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-RequisitionListItemInterface) provides details about items in a requisition list. It has the following implementations:

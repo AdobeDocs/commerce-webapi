@@ -6,6 +6,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # deleteCompanyRole mutation
 
 Use the `deleteCompanyRole` mutation to delete a company role by ID.

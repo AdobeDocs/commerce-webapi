@@ -4,6 +4,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # sendNegotiableQuoteForReview mutation
 
 The `sendNegotiableQuoteForReview` mutation sends the negotiable quote to the seller for review. If the mutation is successful, the buyer cannot modify the quote until the merchant accepts the request.

@@ -6,6 +6,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # isCompanyRoleNameAvailable query
 
 The `isCompanyRoleNameAvailable` query checks whether a company role name is valid for creating into a company.

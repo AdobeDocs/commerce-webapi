@@ -5,6 +5,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # copyItemsBetweenRequisitionLists mutation
 
 The `copyItemsBetweenRequisitionLists` mutation copies items from one requisition list to another.

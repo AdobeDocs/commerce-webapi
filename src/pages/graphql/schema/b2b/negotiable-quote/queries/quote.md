@@ -4,6 +4,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # negotiableQuote query
 
 The `negotiableQuote` query retrieves details about the specified negotiable quote. Use the [`negotiableQuotes` query](quotes.md) to return a list of valid `uid` values.

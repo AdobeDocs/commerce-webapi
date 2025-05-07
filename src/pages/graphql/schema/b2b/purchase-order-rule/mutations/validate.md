@@ -4,6 +4,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # validatePurchaseOrders mutation
 
 By default, Adobe Commerce validates purchase orders automatically. However, purchase orders can become stuck in certain circumstances, such as when the message queue system is down and the purchase order is in the PENDING state. You might need to run the `validatePurchaseOrders` mutation to manually validate purchase orders.

@@ -6,6 +6,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # createCompanyTeam mutation
 
 Use the `createCompanyTeam` mutation to create a new team for your company.

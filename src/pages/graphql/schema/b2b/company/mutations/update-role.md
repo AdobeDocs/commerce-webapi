@@ -6,6 +6,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # updateCompanyRole mutation
 
 Use the `updateCompanyRole` mutation to update the company role and permissions.

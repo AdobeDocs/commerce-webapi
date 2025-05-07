@@ -5,6 +5,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # addProductsToRequisitionList mutation
 
 The `addProductsToRequisitionList` mutation adds products to a requisition list.

@@ -4,6 +4,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # addPurchaseOrderComment mutation
 
 The `addPurchaseOrderComment` mutation adds a comment to the specified purchase order. The response contains details about the comment.

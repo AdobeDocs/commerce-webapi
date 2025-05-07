@@ -4,6 +4,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # createCompany mutation
 
 The `createCompany` mutation creates a company at the request of either a customer or a guest. The company definition includes the first name, last name, and email address of the company administrator. The email address assigned to the account cannot already exist in the system. Therefore, a customer attempting to create a company cannot use the same email address they used to log in to the storefront.

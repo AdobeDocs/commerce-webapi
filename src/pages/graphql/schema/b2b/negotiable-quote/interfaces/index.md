@@ -4,6 +4,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # Negotiable quote (B2B) interfaces
 
 Negotiable quote queries and mutations can access the following interfaces:

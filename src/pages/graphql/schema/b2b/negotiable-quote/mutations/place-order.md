@@ -4,6 +4,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # placeNegotiableQuoteOrder mutation
 
 The `placeNegotiableQuoteOrder` mutation converts a negotiable quote into an order and returns an order ID.

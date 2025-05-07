@@ -6,6 +6,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # updateRequisitionList mutation
 
 The `updateRequisitionList` mutation updates the name and, optionally, the description of a requisition list.

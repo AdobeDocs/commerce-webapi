@@ -4,6 +4,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # createPurchaseOrderApprovalRule mutation
 
 The `createPurchaseOrderApprovalRule` mutation creates a purchase order approval rule.

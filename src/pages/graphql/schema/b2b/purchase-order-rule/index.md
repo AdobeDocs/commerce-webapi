@@ -4,6 +4,10 @@ keywords:
   - B2B
 ---
 
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
+
 # Purchase order approval rules (B2B)
 
 In a typical implementation of purchase orders, a company admin or manager with sufficient permissions sets up approval rules that enforce company policies. These approval rules establish who the rule applies to, when the rule is triggered, and who must approve the affected purchase order.
