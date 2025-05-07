@@ -1,7 +1,6 @@
 ---
 title: Update a negotiable quote
 description: Update a negotiable quote with new prices, items, or expiration dates
-edition: paas
 keywords:
   - B2B
   - REST

@@ -1,7 +1,6 @@
 ---
 title: Place a negotiable quote order
 description: An overview of the REST calls needed to place items in a shopping cart, negotiate a quote, and reimburse credit
-edition: paas
 keywords:
   - B2B
   - REST

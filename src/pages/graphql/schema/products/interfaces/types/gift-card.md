@@ -1,7 +1,10 @@
 ---
 title: Gift card product data types
-edition: paas
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Gift card product data types
 

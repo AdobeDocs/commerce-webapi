@@ -1,7 +1,10 @@
 ---
 title: giftRegistryEmailSearch query
-edition: paas   
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # giftRegistryEmailSearch query
 
