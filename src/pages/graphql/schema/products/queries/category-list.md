@@ -1,5 +1,6 @@
 ---
 title: categoryList query
+edition: paas
 ---
 
 # categoryList query
