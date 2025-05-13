@@ -1,5 +1,6 @@
 ---
 title: attributesMetadata query
+edition: paas
 ---
 
 # attributesMetadata query
