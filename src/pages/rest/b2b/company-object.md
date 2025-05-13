@@ -1,11 +1,14 @@
 ---
 title: Manage company objects
 description: Describes REST endpoints used to manage company objects
-edition: ee
 keywords:
   - B2B
   - REST
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Manage company objects
 

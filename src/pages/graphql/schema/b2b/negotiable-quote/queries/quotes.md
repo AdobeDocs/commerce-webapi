@@ -1,7 +1,12 @@
 ---
-title: negotiableQuotes query
-edition: b2b   
+title: negotiableQuotes query   
+keywords:
+  - B2B
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # negotiableQuotes query
 
