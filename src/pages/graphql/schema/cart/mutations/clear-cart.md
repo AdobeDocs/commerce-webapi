@@ -1,7 +1,10 @@
 ---
 title: clearCart mutation
-edition: ee
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # clearCart mutation
 

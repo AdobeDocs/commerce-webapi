@@ -1,7 +1,12 @@
 ---
-title: Purchase orders (B2B)
-edition: b2b   
+title: Purchase orders (B2B)   
+keywords:
+  - B2B
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Purchase orders (B2B)
 

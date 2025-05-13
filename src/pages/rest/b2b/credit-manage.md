@@ -1,11 +1,14 @@
 ---
 title: Manage company credit
 description: Learn how to manage company credit limits, available credit, and outstanding balances.
-edition: ee
 keywords:
   - B2B
   - REST
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Manage company credit
 

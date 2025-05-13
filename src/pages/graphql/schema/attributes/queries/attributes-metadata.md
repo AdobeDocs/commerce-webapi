@@ -1,6 +1,5 @@
 ---
 title: attributesMetadata query
-edition: pwa
 ---
 
 # attributesMetadata query

@@ -1,10 +1,13 @@
 ---
 title: Multicoupon API
 description: Add multiple coupons to a cart using REST.
-edition: ee
 keywords:
   - REST
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Multiple coupons
 

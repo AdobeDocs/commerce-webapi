@@ -1,11 +1,14 @@
 ---
 title: Integrate with the Company module
 description: Overview of the Company module
-edition: ee
 keywords:
   - B2B
   - REST
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Integrate with the Company Module
 
