@@ -1,5 +1,6 @@
 ---
 title: sendEmailToFriend mutation
+edition: paas
 ---
 
 # sendEmailToFriend mutation

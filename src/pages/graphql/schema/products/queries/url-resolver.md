@@ -1,5 +1,6 @@
 ---
 title: urlResolver query
+edition: paas
 ---
 
 # urlResolver query
