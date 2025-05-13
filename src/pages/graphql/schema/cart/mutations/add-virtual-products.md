@@ -1,5 +1,6 @@
 ---
 title: addVirtualProductsToCart mutation
+edition: paas
 ---
 
 # addVirtualProductsToCart mutation
