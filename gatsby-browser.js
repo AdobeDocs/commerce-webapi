@@ -43,7 +43,7 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
   if (isBrowser) {
     function watchAndFireAnalytics() {
       // eslint-disable-next-line no-undef
-      if (typeof window._satellite !== 'undefined') {
+      if (typeof window._satellite !== 'undefined' && typeof window._satellite.track === 'function') {
         // eslint-disable-next-line no-undef
         _satellite.track('state',
           {
