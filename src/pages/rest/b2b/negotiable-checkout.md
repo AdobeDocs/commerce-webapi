@@ -450,7 +450,7 @@ B2B allows coupons to be used toward payment.
 
 **REST Endpoints:**
 
-```json
+```text
 PUT /V1/negotiable-carts/:cartId/coupons/:couponCode
 DELETE /V1/negotiable-carts/:cartId/coupons
 ```

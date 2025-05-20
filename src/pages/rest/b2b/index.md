@@ -33,7 +33,7 @@ The seller and a buyer representing a company can negotiate the price of an orde
 
 <p><Vars.sitedatavarb2b/> is a set of modules that are installed on top of <Vars.sitedatavaree/>. The following table lists the modules provided with B2B.</p>
 
-Name | Description | WebAPI enabled?
+Name | Description | REST enabled?
 --- | --- | ---
 B2b | The base module for B2B. It also provides branding elements. | No
 BundleNegotiableQuote | Enables bundle products to be displayed in a negotiable quote in an B2B environment | No
