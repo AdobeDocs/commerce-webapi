@@ -30,7 +30,7 @@ The steps in this section are similar to those in the [Order processing tutorial
 
 <InlineAlert variant="info" slots="text" />
 
-Adobe Commerce as a Cloud Service (ACS) does not support the `POST /V1/carts/mine` endpoint. Use the [`customerCart` query](../../graphql/schema/customer/queries/cart.md) instead.
+Adobe Commerce as a Cloud Service does not support the `POST /V1/carts/mine` endpoint. Use the [`customerCart` query](../../graphql/schema/customer/queries/cart.md) instead.
 
 In this example, the customer is a company user (buyer).
 
@@ -65,7 +65,7 @@ This example adds 15 Pursuit Lumaflex Tone Bands and 10 Harmony Lumaflex Strengt
 
 <InlineAlert variant="info" slots="text" />
 
-Adobe Commerce as a Cloud Service (ACS) does not support the `POST /V1/carts/mine` endpoint. Use the [`addProductsToCart` mutation](../../graphql/schema/cart/mutations/add-products.md) instead.
+Adobe Commerce as a Cloud Service does not support the `POST /V1/carts/mine` endpoint. Use the [`addProductsToCart` mutation](../../graphql/schema/cart/mutations/add-products.md) instead.
 
 **Endpoint:**
 
@@ -138,7 +138,7 @@ You can determine shipping costs after initiating a negotiable quote, but doing 
 
 <InlineAlert variant="info" slots="text" />
 
-Adobe Commerce as a Cloud Service (ACS) does not support the `POST /V1/carts/mine/estimate-shipping-methods` endpoint. Use the [`estimateShippingMethods` mutation](../../graphql/schema/cart/mutations/estimate-shipping-methods.md) instead.
+Adobe Commerce as a Cloud Service does not support the `POST /V1/carts/mine/estimate-shipping-methods` endpoint. Use the [`estimateShippingMethods` mutation](../../graphql/schema/cart/mutations/estimate-shipping-methods.md) instead.
 
 **Endpoint:**
 
@@ -213,7 +213,7 @@ You can also set shipping and billing information after initiating a negotiable 
 
 <InlineAlert variant="info" slots="text" />
 
-Adobe Commerce as a Cloud Service (ACS) does not support the `POST /V1/carts/mine/shipping-information` endpoint. Use the [`setBillingAddress` mutation](../../graphql/schema/cart/mutations/set-billing-address.md) and the [`setShippingAddress` mutation](../../graphql/schema/cart/mutations/set-shipping-address.md) instead.
+Adobe Commerce as a Cloud Service does not support the `POST /V1/carts/mine/shipping-information` endpoint. Use the [`setBillingAddress` mutation](../../graphql/schema/cart/mutations/set-billing-address.md) and the [`setShippingAddress` mutation](../../graphql/schema/cart/mutations/set-shipping-address.md) instead.
 
 **Endpoint:**
 
@@ -425,7 +425,7 @@ This is an optional step to show the status of the cart before you begin the neg
 
 <InlineAlert variant="info" slots="text" />
 
-Adobe Commerce as a Cloud Service (ACS) does not support the `GET /V1/carts/mine` endpoint. Use the [`cart` query](../../graphql/schema/customer/queries/cart.md) instead.
+Adobe Commerce as a Cloud Service does not support the `GET /V1/carts/mine` endpoint. Use the [`cart` query](../../graphql/schema/customer/queries/cart.md) instead.
 
 **Endpoint:**
 
@@ -750,7 +750,7 @@ The price of each item has been reduced by 2.5 percent. In addition, the `negoti
 
 <InlineAlert variant="info" slots="text" />
 
-Adobe Commerce as a Cloud Service (ACS) does not support the `GET /V1/carts/mine` endpoint. Use the [`cart` query](../../graphql/schema/customer/queries/cart.md) instead.
+Adobe Commerce as a Cloud Service does not support the `GET /V1/carts/mine` endpoint. Use the [`cart` query](../../graphql/schema/customer/queries/cart.md) instead.
 
 **Headers:**
 

@@ -1,6 +1,7 @@
 ---
 title: Retrieving detailed attributes
-description: Learn how to get detailed information about PHP and REST API endpoints on Adobe Commerce and Magento Open Source projects. 
+description: Learn how to get detailed information about PHP and REST API endpoints on Adobe Commerce and Magento Open Source projects.
+edition: paas
 keywords:
   - REST
 ---

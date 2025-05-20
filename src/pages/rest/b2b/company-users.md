@@ -26,7 +26,7 @@ This section describes the REST endpoints used to manage company users.
 
 <InlineAlert variant="info" slots="text" />
 
-Adobe Commerce as a Cloud Service (ACS) does not support the REST endpoints described in this section. Use the [`createCustomerV2` mutation](../../graphql/schema/customer/mutations/create-v2.md) and [updateCustomerV2 mutation](../../graphql/schema/customer/mutations/update-v2.md) instead.
+Adobe Commerce as a Cloud Service does not support the REST endpoints described in this section. Use the [`createCustomerV2` mutation](../../graphql/schema/customer/mutations/create-v2.md) and [updateCustomerV2 mutation](../../graphql/schema/customer/mutations/update-v2.md) instead.
 
 **Service Name:**
 

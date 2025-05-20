@@ -487,7 +487,7 @@ B2B allows gift cards to be used as payment.
 
 **REST Endpoints:**
 
-```json
+```text
 POST /V1/negotiable-carts/:cartId/giftCards
 DELETE /V1/negotiable-carts/:cartId/giftCards/:giftCardCode
 ```

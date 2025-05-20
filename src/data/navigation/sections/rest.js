@@ -52,10 +52,6 @@ module.exports = [
           title: "Search for the status of a bulk operation",
           path: "/rest/use-rest/operation-status-search.md",
         },
-        {
-          title: "API usage notes",
-          path: "/rest/use-rest/notes.md",
-        },
     ],
   },
   {
