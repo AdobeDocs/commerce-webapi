@@ -33,9 +33,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/gatsby-theme-aio@npm:4.15.0":
-  version: 4.15.0
-  resolution: "@adobe/gatsby-theme-aio@npm:4.15.0"
+"@adobe/gatsby-theme-aio@npm:4.15.1":
+  version: 4.15.1
+  resolution: "@adobe/gatsby-theme-aio@npm:4.15.1"
   dependencies:
     "@adobe/focus-ring-polyfill": ^0.1.5
     "@adobe/gatsby-source-github-file-contributors": ^0.3.1
@@ -131,7 +131,7 @@ __metadata:
     gatsby: ^4.22.0
     react: ^17.0.2
     react-dom: ^17.0.2
-  checksum: 9a23ff7173005290d867190dfa35e899b306c2942b2ff01c0881a91b0aa03575caf320261d7b3cd8ca35032cfaabe0f659ee801786d9650b1d330d70c4f7c449
+  checksum: ecaca48ce1714f23a042da1ac0446b14074520dcd99aea3f89c9c89f9284a1889edfb24d00701302cf69692b51ed61994262dcc7f209d110cc0224c72ffbca70
   languageName: node
   linkType: hard
 
@@ -7529,7 +7529,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "commerce-webapi@workspace:."
   dependencies:
-    "@adobe/gatsby-theme-aio": 4.15.0
+    "@adobe/gatsby-theme-aio": 4.15.1
     gatsby: 4.22.0
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -16194,8 +16194,8 @@ __metadata:
   linkType: hard
 
 "multer@npm:^1.4.5-lts.1":
-  version: 1.4.5-lts.1
-  resolution: "multer@npm:1.4.5-lts.1"
+  version: 1.4.5-lts.2
+  resolution: "multer@npm:1.4.5-lts.2"
   dependencies:
     append-field: ^1.0.0
     busboy: ^1.0.0
@@ -16204,7 +16204,7 @@ __metadata:
     object-assign: ^4.1.1
     type-is: ^1.6.4
     xtend: ^4.0.0
-  checksum: d6dfa78a6ec592b74890412f8962da8a87a3dcfe20f612e039b735b8e0faa72c735516c447f7de694ee0d981eb0a1b892fb9e2402a0348dc6091d18c38d89ecc
+  checksum: b6f76a24c8fbc4d3ed5696ff8c98e126e7831d26f85e0ce17ab8d77e33a9ec14e33e4d05ea5e4e748e63a1b695cf450c2b05d8eee58484a74a1c13f459429713
   languageName: node
   linkType: hard
 
