@@ -1,6 +1,7 @@
 ---
 title: Step 8. Create an invoice
 description: In this step of the tutorial you will create an invoice
+edition: paas
 keywords:
   - REST
 --- 
