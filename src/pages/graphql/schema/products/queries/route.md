@@ -1,5 +1,6 @@
 ---
 title: route query
+edition: paas
 ---
 
 # route query

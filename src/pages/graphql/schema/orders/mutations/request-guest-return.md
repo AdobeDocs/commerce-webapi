@@ -1,7 +1,10 @@
 ---
 title: requestGuestReturn mutation
-edition: ee
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # requestGuestReturn mutation
 

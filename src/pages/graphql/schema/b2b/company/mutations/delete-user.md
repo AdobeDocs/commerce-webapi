@@ -2,8 +2,14 @@
 title: deleteCompanyUser mutation
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
-edition: b2b
+edition: paas
+keywords:
+  - B2B
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # deleteCompanyUser mutation
 

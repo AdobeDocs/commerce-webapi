@@ -10,9 +10,9 @@ import * as Vars from '../../../data/vars.js';
 
 The REST tutorials provide an introduction to Adobe Commerce web APIs. In general, the tutorials guide you through commonly-performed complex tasks:
 
-*  The [**order processing** tutorial](/rest/tutorials/orders/) demonstrates the lifecycle of an order. Major steps include creating a quote, converting it to an order, issuing an invoice, and shipping the order.
+*  &#8203;<Edition name="paas" /> The [**order processing** tutorial](/rest/tutorials/orders/) demonstrates the lifecycle of an order. Major steps include creating a quote, converting it to an order, issuing an invoice, and shipping the order.
 
-*  The [**order processing with Inventory Management**](/rest/tutorials/inventory/index/) tutorial builds upon the original order processing tutorial. It also configures sources and stocks and other Inventory Management features.
+*  &#8203;<Edition name="paas" /> The [**order processing with Inventory Management**](/rest/tutorials/inventory/index/) tutorial builds upon the original order processing tutorial. It also configures sources and stocks and other Inventory Management features.
 
 *  The [**configurable product** tutorial](/rest/tutorials/configurable-product/) helps you plan then create a configurable product and its component simple products.
 

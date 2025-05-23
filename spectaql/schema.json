@@ -14,70 +14,6 @@
         "description": "",
         "fields": [
           {
-            "name": "allCartRules",
-            "description": "Provides all active cart rules in the store.",
-            "args": [],
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "OBJECT",
-                "name": "CartRule",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "allCatalogRules",
-            "description": "Provides all active catalog rules in the store.",
-            "args": [],
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "OBJECT",
-                "name": "CatalogRule",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "allCustomerGroups",
-            "description": "An array containing a list of all Customer Groups available.",
-            "args": [],
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "OBJECT",
-                "name": "CustomerGroup",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "allCustomerSegments",
-            "description": "List of all active customer segments.",
-            "args": [],
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "OBJECT",
-                "name": "CustomerSegment",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "attributesForm",
             "description": "Retrieve EAV attributes associated to a frontend form. Use countries query provided by DirectoryGraphQl module to retrieve region_id and country_id attribute options.",
             "args": [
@@ -589,22 +525,6 @@
             "deprecationReason": null
           },
           {
-            "name": "customerGroup",
-            "description": "Provides name of the Customer Group assigned to the Customer or Guest.",
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "OBJECT",
-                "name": "CustomerGroup",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "customerOrders",
             "description": null,
             "args": [],
@@ -624,37 +544,6 @@
               "kind": "OBJECT",
               "name": "CustomerPaymentTokens",
               "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "customerSegments",
-            "description": "Customer segments associated with the current customer or guest/visitor.",
-            "args": [
-              {
-                "name": "cartId",
-                "description": "The unique ID of the cart to query.",
-                "type": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "String",
-                    "ofType": null
-                  }
-                },
-                "defaultValue": null
-              }
-            ],
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "OBJECT",
-                "name": "CustomerSegment",
-                "ofType": null
-              }
             },
             "isDeprecated": false,
             "deprecationReason": null

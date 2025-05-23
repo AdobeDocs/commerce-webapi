@@ -1,5 +1,6 @@
 ---
 title: wishlist query
+edition: paas
 ---
 
 # wishlist query

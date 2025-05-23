@@ -1,6 +1,12 @@
 ---
 title: Unions
+keywords:
+  - B2B
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Unions
 

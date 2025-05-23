@@ -1,5 +1,6 @@
 ---
 title: cmsPage query
+edition: paas
 ---
 
 # cmsPage query
