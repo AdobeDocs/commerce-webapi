@@ -23,7 +23,7 @@ The `POST /rest/<store_view_code>/V1/import/csv` and `POST /rest/<store_view_cod
 
 <InlineAlert variant="info" slots="text" />
 
-Adobe Commerce as a Cloud Service does not support the `POST /rest/<store_view_code>/V1/import/csv` endpoint. Use the POST /rest/<store_view_code>/V1/import/json` endpoint instead.
+Adobe Commerce as a Cloud Service does not support the `POST /rest/<store_view_code>/V1/import/csv` endpoint. Use the `POST /rest/<store_view_code>/V1/import/json` endpoint instead.
 
 ## Source Data Format and Requirements
 
