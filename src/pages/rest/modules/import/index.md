@@ -21,6 +21,10 @@ The `POST /rest/<store_view_code>/V1/import/csv` and `POST /rest/<store_view_cod
 *  `customer_finance`
 *  `stock_sources`
 
+<InlineAlert variant="info" slots="text" />
+
+Adobe Commerce as a Cloud Service does not support the `POST /rest/<store_view_code>/V1/import/csv` endpoint. Use the `POST /rest/<store_view_code>/V1/import/json` endpoint instead.
+
 ## Source Data Format and Requirements
 
 Ensure your source data conforms to the sequence and format expected by Commerce. To acquaint yourself with each import entity's requirements, visit the Import page in the Admin, select an entity from the dropdown, and click **Download Sample File**.
@@ -28,6 +32,8 @@ Ensure your source data conforms to the sequence and format expected by Commerce
 The original CSV or JSON data must use UTF-8 encoding before any compression or base64 encoding is applied. This ensures compatibility with Adobe Commerce's internal processing and supports a wide range of international characters and symbols.
 
 ### CSV Import
+
+<Edition name="paas" />
 
 The `import/csv` endpoint expects data in base64 encoded format:
 
@@ -52,6 +58,8 @@ A validation strategy is mandatory. Depending on your chosen strategy, the API w
 The `allowedErrorCount` field specifies the maximum allowable error count before terminating the import process.
 
 ## Import CSV API
+
+<Edition name="paas" />
 
 The `POST /rest/<store_view_code>/V1/import/csv` endpoint uses the `StartImportInterface` service to efficiently import entities into Adobe Commerce. The payload must contain data in a base64 encoded format.
 

@@ -1,6 +1,7 @@
 ---
 title: Step 11. Run the Source Selection Algorithms
 description: In this step of the tutorial you will run the source selection algorithms
+edition: paas
 keywords:
   - Inventory
   - REST

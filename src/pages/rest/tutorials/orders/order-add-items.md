@@ -1,6 +1,7 @@
 ---
 title: Step 5. Add items to the cart
 description: In this step of the tutorial you will add items to the cart
+edition: paas
 keywords:
   - REST
 --- 

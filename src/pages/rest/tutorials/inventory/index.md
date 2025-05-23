@@ -1,6 +1,7 @@
 ---
 title: Order Processing with Inventory Management
 description: In this tutorial you will process orders using Inventory Management in the REST API
+edition: paas
 keywords:
   - Inventory
   - REST
