@@ -1,12 +1,17 @@
 ---
 title: Authentication
 description: Overview of authentication methods in web APIs.
+edition: paas
 keywords:
   - REST
   - Security
 ---
 
 # Authentication
+
+<InlineAlert variant="info" slots="text"/>
+
+This topic is for Platform-as-a-Service (PaaS) customers only. Adobe Commerce Cloud Services customers must refer to [REST Authentication](https://developer.adobe.com/commerce/services/cloud/guides/rest/authentication/) for details on authentication.
 
 Adobe Commerce and Magento Open Source allow developers to define web API resources and their permissions in the `webapi.xml` configuration file. See [Services as Web APIs](https://developer.adobe.com/commerce/php/development/components/web-api/services/).
 

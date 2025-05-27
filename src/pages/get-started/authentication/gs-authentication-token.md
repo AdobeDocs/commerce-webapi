@@ -1,12 +1,17 @@
 ---
 title: Token-Based Authentication
 description: How to use token-based authentication in web APIs.
+edition: paas
 keywords:
   - REST
   - Security
 ---
 
 # Token-based authentication
+
+<InlineAlert variant="info" slots="text"/>
+
+This topic is for Platform-as-a-Service (PaaS) customers only. Adobe Commerce Cloud Services customers must refer to [REST Authentication](https://developer.adobe.com/commerce/services/cloud/guides/rest/authentication/) for details on authentication.
 
 To make a web API call from a client such as a mobile application, you must supply an *access token* on the call. The token acts like an electronic key that lets you access the API.
 
