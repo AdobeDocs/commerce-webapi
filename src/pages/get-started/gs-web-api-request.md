@@ -99,6 +99,8 @@ This JSON-formatted request body includes a `customer` object with the customer 
 
 ## Construct a request
 
+<Edition name="paas" />
+
 This example shows you how to construct a REST web API call to create an account.
 
 1. Open the [Magento/Customer/etc/webapi.xml](https://github.com/magento/magento2/tree/2.4/app/code/Magento/Customer/etc/webapi.xml)
@@ -133,6 +135,8 @@ This example shows you how to construct a REST web API call to create an account
 1. To pass the `customer` data object in the POST call payload, specify JSON or XML request body on the call.
 
 ### Customers Search API request example
+
+<Edition name="paas" />
 
 The following example builds a Customers Search request based on search criteria. It returns a list of customers that match given search criteria.
 
