@@ -498,6 +498,10 @@ module.exports = [
                 path: "/graphql/schema/customer/mutations/create-v2/",
               },
               {
+                title: "exchangeExternalCustomerToken",
+                path: "/graphql/schema/customer/mutations/create-external-customer-token/",
+              },
+              {
                 title: "deleteCustomerAddress",
                 path: "/graphql/schema/customer/mutations/delete-address/",
               },
@@ -528,6 +532,10 @@ module.exports = [
               {
                 title: "subscribeEmailToNewsletter",
                 path: "/graphql/schema/customer/mutations/subscribe-email-to-newsletter/",
+              },
+              {
+                title: "resendConfirmationEmail",
+                path: "/graphql/schema/customer/mutations/resend-confirmation-email/",
               },
               {
                 title: "updateCustomer",
@@ -728,6 +736,14 @@ module.exports = [
               {
                 title: "cancelOrder",
                 path: "/graphql/schema/orders/mutations/cancel-order/",
+              },
+              {
+                title: "requestGuestOrderCancel",
+                path: "/graphql/schema/orders/mutations/request-guest-order-cancel/",
+              },
+              {
+                title: "confirmCancelOrder",
+                path: "/graphql/schema/orders/mutations/confirm-cancel-order/",
               },
               {
                 title: "confirmReturn",
@@ -1150,6 +1166,10 @@ module.exports = [
               {
                 title: "createWishlist",
                 path: "/graphql/schema/wishlist/mutations/create/",
+              },
+              {
+                title: "clearWishlist",
+                path: "/graphql/schema/wishlist/mutations/clear/",
               },
               {
                 title: "deleteWishlist",

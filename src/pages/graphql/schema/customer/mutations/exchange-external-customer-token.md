@@ -1,0 +1,94 @@
+---
+title: exchangeExternalCustomerToken mutation
+---
+
+<InlineAlert variant="info" slots="text1" />
+
+This mutation is part of the [Storefront Compatibility Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/storefront-compatibility/). It will be added to Adobe Commerce 2.4.9.
+
+# exchangeExternalCustomerToken mutation
+
+The `exchangeExternalCustomerToken` mutation provides the capability for social login authentication using App Builder. With integration token credentials, it allows a customer to register or log in and returns a customer authentication token.
+
+## Syntax
+
+`mutation: {exchangeExternalCustomerToken(input: ExchangeExternalCustomerTokenInput!) {ExchangeExternalCustomerTokenOutput}}`
+
+## Reference
+
+The [`exchangeExternalCustomerToken`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-exchangeExternalCustomerToken) reference provides detailed information about the types and fields defined in this mutation.
+
+## Example usage
+
+The following call creates a new customer if does not exist and returns the customer token.
+
+## Authorization Headers
+The `exchangeExternalCustomerToken` mutation requires oAuth 1.0 authorization which uses below fields:
+* Consumer Key
+* Consumer Secret
+* Access Token
+* Token Secret
+
+> Note: above details can be found on the admin panel's `System` -> `Integrations` menu.
+
+**Request:**
+
+```graphql
+mutation {
+    exchangeExternalCustomerToken(
+        input: {
+            customer: {
+                firstname: "Roni"
+                lastname: "Cost"
+                email: "roni_cost@example.com"
+                is_subscribed: false
+            }
+        }
+    ) {
+        customer {
+            email
+            firstname
+            lastname
+            is_subscribed
+        }
+        token
+    }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "exchangeExternalCustomerToken": {
+      "customer": {
+        "email": "roni_cost@example.com",
+        "firstname": "Roni",
+        "lastname": "Cost",
+        "is_subscribed": false
+      },
+      "token": "eyJraWQiOiIxIiwiYWxnIjoiSFMyNTYifQ.eyJ1aWQiOjYsInV0eXBpZCI6MywiaWF0IjoxNzQ4NDk5NDIxLCJleHAiOjE3NDg1MDMwMjF9.hDPDh41C4KOHloM2xlUYJ0asCqunQHCELG-3x_IsIZo"
+    }
+  }
+}
+```
+
+## Errors
+
+Error | Description
+--- | ---
+`"Email" is not a valid email address.` | The value provided in the `input`.`email` argument has an invalid format.
+`Field CustomerCreateInput.email of required type String! was not provided` | The `input`.`email` argument was omitted.
+`Field CustomerCreateInput.lastname of required type String! was not provided` | The `input`.`lastname` argument was omitted.
+`Field CustomerCreateInput.firstname of required type String! was not provided` | The `input`.`firstname` argument was omitted.
+`Field "xxx" is not defined by type CustomerCreateInput.` | The `input`.`xxx` argument is undefined.
+`You do not have permission to access this resource.` | The user does not have required permission to use the mutation.
+
+## Related topics
+
+*  [customer query](../queries/customer.md)
+*  [updateCustomer mutation](update.md)
+*  [createCustomerAddress mutation](create-address.md)
+*  [updateCustomerAddress mutation](update-address.md)
+*  [deleteCustomerAddress mutation](delete-address.md)

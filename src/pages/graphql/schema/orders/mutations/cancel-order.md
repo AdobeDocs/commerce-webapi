@@ -4,7 +4,7 @@ title: cancelOrder mutation | Commerce Web APIs
 
 # cancelOrder mutation
 
-The `cancelOrder` mutation allows a customer to cancel an order, passing its identifier and a cancellation reason.
+The `cancelOrder` mutation allows a customer to cancel an order, passing its encoded order id and a cancellation reason.
 
 A customer can cancel an order only if the following conditions are true:
 
@@ -26,7 +26,7 @@ The [`cancelOrder`](https://developer.adobe.com/commerce/webapi/graphql-api/inde
 
 ## Example usage
 
-The following example cancels order ID `99999999` and includes the reason for its cancellation.
+The following example cancels order ID `Nzg=` and includes the reason for its cancellation.
 
 **Request:**
 
@@ -34,11 +34,15 @@ The following example cancels order ID `99999999` and includes the reason for it
 mutation {
     cancelOrder(
         input: {
-            order_id: "99999999",
+            order_id: "Nzg=",
             reason: "The order was placed by mistake"
         }
     ){
         error
+        errorV2 {
+            code
+            message
+        }
         order {
             status
         }
@@ -53,6 +57,7 @@ mutation {
   "data": {
     "cancelOrder": {
       "error": null,
+      "errorV2": null,
       "order": {
         "status": "Canceled"
       }
