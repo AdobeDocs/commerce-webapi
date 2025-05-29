@@ -2,13 +2,22 @@
 title: exchangeExternalCustomerToken mutation
 ---
 
-<InlineAlert variant="info" slots="text1" />
+<InlineAlert variant="info" slots="text" />
 
-This mutation is part of the [Storefront Compatibility Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/storefront-compatibility/). It will be added to Adobe Commerce 2.4.9.
+This mutation is part of the [Storefront Compatibility Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/configuration/storefront-compatibility/v248/). It will be added to Adobe Commerce 2.4.9.
 
 # exchangeExternalCustomerToken mutation
 
-The `exchangeExternalCustomerToken` mutation provides the capability for social login authentication using App Builder. With integration token credentials, it allows a customer to register or log in and returns a customer authentication token.
+The `exchangeExternalCustomerToken` mutation provides the capability for social login authentication using App Builder. With integration token credentials, it allows a shopper to log in or register as a customer. It returns a customer authentication token.
+
+This mutation requires that an [integration](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/integrations) with the external authenticating system be configured and implemented. Adobe Commerce supports oAuth 1.0. You must calls must supply the following information:
+
+* Consumer key
+* Consumer secret
+* Access token
+* Token secret
+
+You can view these values in the Admin at **System** > **Integrations**.
 
 ## Syntax
 
@@ -21,15 +30,6 @@ The [`exchangeExternalCustomerToken`](https://developer.adobe.com/commerce/webap
 ## Example usage
 
 The following call creates a new customer if does not exist and returns the customer token.
-
-## Authorization Headers
-The `exchangeExternalCustomerToken` mutation requires oAuth 1.0 authorization which uses below fields:
-* Consumer Key
-* Consumer Secret
-* Access Token
-* Token Secret
-
-> Note: above details can be found on the admin panel's `System` -> `Integrations` menu.
 
 **Request:**
 
@@ -88,7 +88,3 @@ Error | Description
 ## Related topics
 
 *  [customer query](../queries/customer.md)
-*  [updateCustomer mutation](update.md)
-*  [createCustomerAddress mutation](create-address.md)
-*  [updateCustomerAddress mutation](update-address.md)
-*  [deleteCustomerAddress mutation](delete-address.md)
