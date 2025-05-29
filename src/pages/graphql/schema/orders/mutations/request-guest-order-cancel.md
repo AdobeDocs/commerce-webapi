@@ -4,11 +4,11 @@ title: requestGuestOrderCancel mutation
 
 # requestGuestOrderCancel mutation
 
-The `requestGuestOrderCancel` mutation allows a guest to request for cancelling an order, passing the order token and a cancellation reason.
+The `requestGuestOrderCancel` mutation allows a guest customer to request for cancelling an order, passing the order token and a cancellation reason.
 
 A guest customer can request for the cancellation of an order only if the following conditions are true:
 
- * The guest has previously placed the order.
+ * The guest customer has previously placed the order.
  * The `order_cancellation_enabled` configuration setting is `true`.
  * The order has a status of **RECEIVED**, **PENDING**, or **PROCESSING**.
 

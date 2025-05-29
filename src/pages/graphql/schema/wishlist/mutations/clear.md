@@ -8,7 +8,7 @@ This mutation is part of the [Storefront Compatibility Package](https://experien
 
 # clearWishlist mutation
 
-The `clearWishlist` mutation removes all items from a wish list for the logged in customer.
+The `clearWishlist` mutation removes all items from a wishlist for the logged in customer.
 
 This mutation requires a valid [customer authentication token](../../customer/mutations/generate-token.md).
 

@@ -4,15 +4,15 @@ title: confirmCancelOrder mutation
 
 # confirmCancelOrder mutation
 
-The `confirmCancelOrder` mutation allows a guest to cancel an order, passing its encoded identifier and a confirmation key.
+The `confirmCancelOrder` mutation allows a guest customer to cancel an order by passing its encoded identifier and a confirmation key.
 
 A guest customer can cancel an order only if the following conditions are true:
 
- * The guest has previously placed the order.
+ * The guest customer has previously placed the order.
  * The `order_cancellation_enabled` configuration setting is `true`.
  * The order has a status of **RECEIVED**, **PENDING**, or **PROCESSING**.
 
-If the guest user has been charged for the order, the order is placed in the CLOSED state, and the user will be issued a refund. Otherwise, the status of the order is set to CANCELED.
+If the guest customer has been charged for the order, the order is placed in the CLOSED state, and the user will be issued a refund. Otherwise, the status of the order is set to CANCELED.
 
 The mutation returns an error if the order cannot be cancelled.
 

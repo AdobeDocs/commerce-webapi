@@ -82,7 +82,7 @@ Error | Description
 `Field CustomerCreateInput.email of required type String! was not provided` | The `input`.`email` argument was omitted.
 `Field CustomerCreateInput.lastname of required type String! was not provided` | The `input`.`lastname` argument was omitted.
 `Field CustomerCreateInput.firstname of required type String! was not provided` | The `input`.`firstname` argument was omitted.
-`Field "xxx" is not defined by type CustomerCreateInput.` | The `input`.`xxx` argument is undefined.
+`Field "xyz" is not defined by type CustomerCreateInput.` | The `input`.`xyz` argument is not defined in the schema.
 `You do not have permission to access this resource.` | The user does not have required permission to use the mutation.
 
 ## Related topics
