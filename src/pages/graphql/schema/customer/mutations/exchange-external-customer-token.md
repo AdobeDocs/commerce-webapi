@@ -10,7 +10,7 @@ This mutation is part of the [Storefront Compatibility Package](https://experien
 
 The `exchangeExternalCustomerToken` mutation provides the capability for social login authentication using App Builder. With integration token credentials, it allows a shopper to log in or register as a customer. It returns a customer authentication token.
 
-This mutation requires that an [integration](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/integrations) with the external authenticating system be configured and implemented. Adobe Commerce supports oAuth 1.0. You must calls must supply the following information:
+This mutation requires that an [integration](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/integrations) with the external authenticating system be configured and implemented. Adobe Commerce supports OAuth 1.0. Your calls must supply the following information:
 
 * Consumer key
 * Consumer secret
@@ -22,10 +22,6 @@ You can view these values in the Admin at **System** > **Integrations**.
 ## Syntax
 
 `mutation: {exchangeExternalCustomerToken(input: ExchangeExternalCustomerTokenInput!) {ExchangeExternalCustomerTokenOutput}}`
-
-## Reference
-
-The [`exchangeExternalCustomerToken`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-exchangeExternalCustomerToken) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -85,6 +81,6 @@ Error | Description
 `Field "xyz" is not defined by type CustomerCreateInput.` | The `input`.`xyz` argument is not defined in the schema.
 `You do not have permission to access this resource.` | The user does not have required permission to use the mutation.
 
-## Related topics
+## Related topic
 
 *  [customer query](../queries/customer.md)

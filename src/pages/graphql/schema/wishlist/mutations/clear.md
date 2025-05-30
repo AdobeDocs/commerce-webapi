@@ -2,15 +2,15 @@
 title: clearWishlist mutation
 ---
 
-<InlineAlert variant="info" slots="text1" />
-
-This mutation is part of the [Storefront Compatibility Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/storefront-compatibility/). It will be added to Adobe Commerce 2.4.9.
-
 # clearWishlist mutation
 
 The `clearWishlist` mutation removes all items from a wishlist for the logged in customer.
 
 This mutation requires a valid [customer authentication token](../../customer/mutations/generate-token.md).
+
+<InlineAlert variant="info" slots="text1" />
+
+This mutation is part of the [Storefront Compatibility Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/configuration/storefront-compatibility/v248/). It will be added to Adobe Commerce 2.4.9.
 
 ## Syntax
 
@@ -33,9 +33,10 @@ mutation {
 }
 ```
 
-## Reference
+[//]: # (## Reference)
 
-The [`clearWishlist`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-clearWishlist) reference provides detailed information about the types and fields defined in this mutation.
+[//]: # ()
+[//]: # (The [`clearWishlist`]&#40;https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-clearWishlist&#41; reference provides detailed information about the types and fields defined in this mutation.)
 
 ## Example usage
 

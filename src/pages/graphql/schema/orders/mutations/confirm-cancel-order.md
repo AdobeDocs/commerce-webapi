@@ -4,11 +4,11 @@ title: confirmCancelOrder mutation
 
 # confirmCancelOrder mutation
 
-The `confirmCancelOrder` mutation allows a guest customer to cancel an order by passing its encoded identifier and a confirmation key.
+The `confirmCancelOrder` mutation allows a guest shopper to cancel an order by passing its encoded identifier and a confirmation key.
 
-A guest customer can cancel an order only if the following conditions are true:
+A guest can cancel an order only if the following conditions are true:
 
- * The guest customer has previously placed the order.
+ * The guest previously placed the order.
  * The `order_cancellation_enabled` configuration setting is `true`.
  * The order has a status of **RECEIVED**, **PENDING**, or **PROCESSING**.
 
@@ -68,4 +68,4 @@ mutation {
 
 ## Related topics
 
- * [order cancellation](/src/pages/graphql/schema/store/queries/store-config.md#query-a-stores-order-cancellation-configuration) configuration example on `storeConfig` page.
+ * [`storeConfig` query](/src/pages/graphql/schema/store/queries/store-config.md#query-a-stores-order-cancellation-configuration) configuration example on `storeConfig` page.

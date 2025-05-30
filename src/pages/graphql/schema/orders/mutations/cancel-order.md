@@ -38,7 +38,6 @@ mutation {
             reason: "The order was placed by mistake"
         }
     ){
-        error
         errorV2 {
             code
             message
@@ -56,7 +55,6 @@ mutation {
 {
   "data": {
     "cancelOrder": {
-      "error": null,
       "errorV2": null,
       "order": {
         "status": "Canceled"
