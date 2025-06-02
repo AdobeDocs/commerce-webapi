@@ -456,8 +456,16 @@ module.exports = [
                 path: "/graphql/schema/customer/queries/downloadable-products/",
               },
               {
+                title: "customerGroup",
+                path: "/graphql/schema/customer/queries/customer-group/",
+              },
+              {
                 title: "customerOrders",
                 path: "/graphql/schema/customer/queries/orders/",
+              },
+              {
+                title: "customerSegments",
+                path: "/graphql/schema/customer/queries/customer-segments/",
               },
               {
                 title: "giftCardAccount",
