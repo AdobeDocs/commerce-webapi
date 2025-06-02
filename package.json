@@ -7,19 +7,18 @@
     "url": "https://github.com/AdobeDocs/commerce-webapi"
   },
   "dependencies": {
-    "@adobe/gatsby-theme-aio": "^4.11.3",
+    "@adobe/gatsby-theme-aio": "4.15.1",
     "gatsby": "4.22.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "remark-cli": "^10.0.1",
-    "remark-frontmatter": "4.0.1",
+    "remark-cli": "^12.0.1",
+    "remark-frontmatter": "^5.0.0",
     "remark-heading-id": "^1.0.1",
-    "remark-lint-frontmatter-schema": "^3.15.2",
-    "remark-lint-no-dead-urls": "^1.1.0",
-    "remark-validate-links": "^11.0.2",
-    "spectaql": "^1.5.6"
+    "remark-lint-frontmatter-schema": "^3.15.4",
+    "remark-validate-links": "^13.0.1",
+    "spectaql": "^3.0.2"
   },
   "scripts": {
     "start": "NODE_OPTIONS='--max-old-space-size=8192' gatsby build && gatsby serve",
@@ -30,11 +29,10 @@
     "serve": "NODE_OPTIONS='--max-old-space-size=8192' gatsby serve",
     "clean": "gatsby clean",
     "test": "remark src/pages --quiet --frail",
-    "build:spectaql": "spectaql --target-dir static/graphql-api/ --target-file index.html spectaql/config.yml",
-    "build:spectaql:beta": "spectaql --target-dir static/graphql-api/beta/ --target-file index.html spectaql/config_beta.yml",
-    "dev:spectaql": "spectaql --development-mode-live spectaql/config.yml",
-    "dev:spectaql:beta": "spectaql --development-mode-live spectaql/config_beta.yml",
-    "lint": "docker run --rm -e RUN_LOCAL=true --env-file '.github/super-linter.env' -v \"$PWD\":/tmp/lint github/super-linter:slim-v5"
+    "build:spectaql": "spectaql --target-file index.html --config spectaql/config.yml",
+    "build:spectaql:2.4.6": "spectaql --target-file index.html --config spectaql/config_2.4.6.yml",
+    "build:spectaql:2.4.7": "spectaql --target-file index.html --config spectaql/config_2.4.7.yml",
+    "dev:spectaql": "spectaql --development-mode-live --config spectaql/config.yml"
   },
   "packageManager": "yarn@3.2.4"
 }

@@ -1,6 +1,7 @@
 ---
 title: Step 2. Get the admin token
 description: In this step of the tutorial you will get the admin token
+edition: paas
 keywords:
   - REST
 --- 
@@ -26,7 +27,7 @@ Element | Description
 
 **HTTP headers:**
 
-This section indicates which key/value pairs you must specify in the HTTP headers. All calls require one or more HTTP headers.
+This section indicates which key-value pairs you must specify in the HTTP headers. All calls require one or more HTTP headers.
 
 **Payload:**
 
@@ -68,7 +69,7 @@ See [Token-based authentication](/get-started/authentication/gs-authentication-t
 
 **Response:**
 
-Commerce returnsthe admin's access token.
+Commerce returns the admin's access token.
 
 `5r8cvmpr11j6gmau8990rcj2qk7unh8i`
 

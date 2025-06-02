@@ -1,5 +1,6 @@
 ---
 title: createPayflowProToken mutation
+edition: paas
 ---
 
 # createPayflowProToken mutation
@@ -10,7 +11,7 @@ The `PayflowProUrlInput` object contains a set of relative URLs that PayPal will
 
 Use this input for Payflow Pro and Payment Pro payment methods.
 
-See [Paypal Payflow Pro payment method](../../../payment-methods/payflow-pro.md) for detailed information about the workflow of PayPal Payflow Pro transactions.
+See [PayPal Payflow Pro payment method](../../../payment-methods/payflow-pro.md) for detailed information about the workflow of PayPal Payflow Pro transactions.
 
 ## Syntax
 

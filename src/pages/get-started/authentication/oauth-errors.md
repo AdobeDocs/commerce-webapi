@@ -17,7 +17,7 @@ HTTP code | Error code | Text representation | Description
 400 | 3 | `parameter_rejected` | The type of the parameter or its value do not meet the protocol requirements (for example,  array is passed instead of the string).
 400 | 4 | `timestamp_refused` | The timestamp value in the oauth_timestamp parameter is incorrect.
 401 | 5 | `nonce_used` | The nonce-timestamp combination has already been used.
-400 | 6 | `signature_method_rejected`| The signature method is not supported. The following methods are supported: HMAC-SHA1.
+400 | 6 | `signature_method_rejected`| The signature method is not supported. The following methods are supported: HMAC-SHA256.
 401 | 7 | `signature_invalid` | The signature is invalid.
 401 | 8 | `consumer_key_rejected` | The Consumer Key has incorrect length or does not exist.
 401 | 9 | `token_used` | An attempt of authorization of an already authorized token or an attempt to exchange a not temporary token for a permanent one.

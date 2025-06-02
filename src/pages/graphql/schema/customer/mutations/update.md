@@ -1,5 +1,6 @@
 ---
 title: updateCustomer mutation
+edition: paas
 ---
 
 # updateCustomer mutation

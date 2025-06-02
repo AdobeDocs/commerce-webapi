@@ -3,6 +3,7 @@ title: Klarna payment method
 description: Learn how to use the GraphQL API mutation for the Klarna payment solution.
 contributor_name: Klarna
 contributor_link: https://www.klarna.com/
+edition: paas
 keywords:
   - GraphQL
   - Payments
@@ -10,7 +11,7 @@ keywords:
 
 # Klarna payment method
 
-Klarna Payments enables your consumers to try before they buy, finance purchases on your store with Klarna, or let them pay directly. Klarna offers these payment methods through a widget that you can add inline on your checkout page.
+[Klarna Payments](https://docs.klarna.com/platform-solutions/e-commerce-platforms/adobe-commerce/payments/kp-overview/) enables your consumers to try before they buy, finance purchases on your store with Klarna, or let them pay directly. Klarna offers these payment methods through a widget that you can add inline on your checkout page.
 
 ## Klarna payments workflow
 
@@ -80,7 +81,7 @@ In order to always present shoppers with the latest available payment options pr
 
 1. The application returns an updated `cart` object.
 
-1. [Reload the widget](https://docs.klarna.com/klarna-payments/integration-best-practices/purchase-experience/payment-widget/?q=widget) on the client side.
+1. [Reload the widget](https://docs.klarna.com/payments/web-payments/integrate-with-klarna-payments/step-2-checkout/#display-klarna) on the client side.
 
 The following diagram describes the workflow:
 

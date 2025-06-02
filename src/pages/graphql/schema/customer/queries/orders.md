@@ -1,5 +1,6 @@
 ---
 title: customerOrders query
+edition: paas
 ---
 
 # customerOrders query

@@ -1,6 +1,7 @@
 ---
 title: Step 9. Create a shipment
 description: In this step of the tutorial you will create a shipment
+edition: paas
 keywords:
   - REST
 ---
@@ -17,7 +18,7 @@ If the call is successful on a full shipment, Adobe Commerce changes the status 
 
 `POST <host>/rest/<store_code>/V1/order/3/ship`
 
-where `3` is the order id.
+where `3` is the order ID.
 
 **Headers:**
 

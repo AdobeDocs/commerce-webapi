@@ -52,10 +52,6 @@ module.exports = [
           title: "Search for the status of a bulk operation",
           path: "/rest/use-rest/operation-status-search.md",
         },
-        {
-          title: "API usage notes",
-          path: "/rest/use-rest/notes.md",
-        },
     ],
   },
   {
@@ -404,6 +400,10 @@ module.exports = [
                 title: "Step 3. Create the bundle product",
                 path: "/rest/tutorials/bundle-product/create-bundle-product.md",
             },
+            {
+                title: "Step 4. Update bundle product options and option links",
+                path: "/rest/tutorials/bundle-product/update-options-and-links.md",
+            },
             ],
         },
         {
@@ -453,17 +453,21 @@ module.exports = [
             ]
         },
         {
-            title:"Import",
-            path:"/rest/modules/import/"
+            title: "Import",
+            path: "/rest/modules/import/"
         },
-    {
-        title: "Sales refunds",
-        path: "/rest/modules/sales/",
-    },
-  ],
+        {
+            title: "Multicoupon",
+            path: "/rest/modules/multicoupon/"
+        },
+        {
+            title: "Sales refunds",
+            path: "/rest/modules/sales/"
+        },
+    ],
   },
   {
     title: "Attributes",
     path: "/rest/attributes/"
   },
-  ];
+];

@@ -10,7 +10,7 @@ keywords:
 
 # GraphQL checkout tutorial
 
-This tutorial describes how to place an order through GraphQl. Customers can make purchases in two ways:
+This tutorial describes how to place an order through GraphQL. Customers can make purchases in two ways:
 
 -  As a logged-in user
 -  As a guest user who does not create an account
@@ -26,13 +26,13 @@ Complete the following prerequisites:
 -  Install an Adobe Commerce or Magento Open Source instance with sample data.
    The sample data defines a functional store, called Luma, that sells fitness clothing and accessories. The store does not provide any sandbox accounts for testing credit card payments, so transactions will be simulated using an offline payment method.
 
--  Install a GraphQl client. You can use any GraphQl client to send calls to Magento. [Altair](https://altair.sirmuel.design/) is a good example.
+-  Install a GraphQL client. You can use any GraphQL client to send calls to Magento. [Altair](https://altair.sirmuel.design/) is a good example.
 
 -  Learn about GraphQL, how it works, and how to use it. See [Introduction to GraphQL](https://graphql.org/learn/) for details.
 
 -  Know how to generate a customer token. See [Authorization tokens](../../usage/authorization-tokens.md) for details.
 
--  In the Admin, create a [coupon](https://docs.magento.com/user-guide/marketing/price-rules-cart-coupon-code-configure.html) that will be used in [Step 7. Apply a coupon](../../tutorials/checkout/apply-coupon.md).
+-  In the Admin, create a [coupon](https://experienceleague.adobe.com/en/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart-coupon#configure-coupon-codes) that will be used in [Step 7. Apply a coupon](../../tutorials/checkout/apply-coupon.md).
 
 ### Other resources
 

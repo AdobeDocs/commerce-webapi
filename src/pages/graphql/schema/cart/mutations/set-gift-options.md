@@ -1,7 +1,10 @@
 ---
 title: setGiftOptionsOnCart mutation
-edition: ee
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # setGiftOptionsOnCart mutation
 
@@ -74,13 +77,21 @@ mutation {
       }
       gift_receipt_included
       printed_card_included
-      items {
-        quantity
-        prices {
-          price {
-            value
-            currency
+      itemsV2 {
+        items {
+          quantity
+          prices {
+            price {
+              value
+              currency
+            }
           }
+        }
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
         }
       }
       prices {
@@ -118,26 +129,34 @@ mutation {
         },
         "gift_receipt_included": true,
         "printed_card_included": false,
-        "items": [
-          {
-            "quantity": 1,
-            "prices": {
-              "price": {
-                "value": 32,
-                "currency": "USD"
+        "itemsV2": {
+          "items": [
+            {
+              "quantity": 1,
+              "prices": {
+                "price": {
+                  "value": 32,
+                  "currency": "USD"
+                }
+              }
+            },
+            {
+              "quantity": 1,
+              "prices": {
+                "price": {
+                  "value": 84,
+                  "currency": "USD"
+                }
               }
             }
-          },
-          {
-            "quantity": 1,
-            "prices": {
-              "price": {
-                "value": 84,
-                "currency": "USD"
-              }
-            }
+          ],
+          "total_count": 2,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ],
+        },
         "prices": {
           "gift_options": {
             "gift_wrapping_for_order": {

@@ -3,6 +3,7 @@ title: Search for products with the /search endpoint
 description: Search for products using the /search endpoints
 contributor_name: comwrap GmbH
 contributor_link: https://www.comwrap.com/
+edition: paas
 keywords:
   - REST
 --- 
@@ -15,6 +16,10 @@ Adobe Commerce provides two endpoints for searching products:
 *  `GET V1/products`
 
 The `GET V1/search` endpoint replicates the search capabilities that customers and guests use to find products on the storefront. The `GET V1/products` endpoint returns results like you would receive by searching on the product grid page in the Admin.
+
+<InlineAlert variant="info" slots="text" />
+
+Adobe Commerce as a Cloud Service does not support the `GET /V1/search` endpoint. Use the [`products` query](../../graphql/schema/products/queries/products.md) instead.
 
 The following table highlights the differences between these two endpoints:
 

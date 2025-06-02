@@ -1,11 +1,14 @@
 ---
 title: Integrate with the NegotiableQuote module
 description: An overview of the NegotiableQuote module, which allows companies to negotiate prices prior to an order
-edition: ee
 keywords:
   - B2B
   - REST
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Integrate with the NegotiableQuote module
 
@@ -35,7 +38,7 @@ You cannot negotiate prices on individual items.
 
 ## Quote statuses
 
-The quote life cycle is managed via quote statuses. The quoting interface allows both a seller and a buyer to manage items in the quote (add, delete, change quantity) as well as make an offer (or request a quote) for items and/or for shipping.
+The quote lifecycle is managed via quote statuses. The quoting interface allows both a seller and a buyer to manage items in the quote (add, delete, change quantity) as well as make an offer (or request a quote) for items and/or for shipping.
 
 The negotiated price set in the negotiable quote is exactly the price that will be applied on a quote during checkout, order generation, and invoice generation.
 

@@ -2,6 +2,7 @@
 title: createKlarnaPaymentsSession mutation
 contributor_name: Klarna
 contributor_link: https://www.klarna.com/
+edition: paas
 ---
 
 # createKlarnaPaymentsSession mutation
@@ -109,8 +110,8 @@ The `Assets` object can contain the following attributes.
 
 Attribute | Data type | Description
 --- | --- | ---
-`descriptive` | String | The payment method logo url (descriptive)
-`standard` | String | The payment method logo url (standard)
+`descriptive` | String | The payment method logo URL (descriptive)
+`standard` | String | The payment method logo URL (standard)
 
 ## Errors
 

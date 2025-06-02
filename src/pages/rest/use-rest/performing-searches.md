@@ -10,7 +10,7 @@ import * as Vars from '../../../data/vars.js';
 
 POST, PUT, and DELETE requests to the REST Web API require the service method parameters to be in the body of the request. For example, to create a Customer, you would specify a JSON array (or XML structure) in the body of the message.
 
-For search APIs that invoke a `*Repository::getList(SearchCriteriaInterface *)` call, the searchCriteria must be specified in the URL of the GET request. The basic pattern for specifying the criteria is
+For search APIs that invoke a `*Repository::getList(SearchCriteriaInterface *)` call, the `searchCriteria` must be specified in the URL of the GET request. The basic pattern for specifying the criteria is
 
 ```http
 searchCriteria[filter_groups][<index>][filters][<index>][field]=<field_name>

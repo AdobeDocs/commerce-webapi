@@ -1,11 +1,14 @@
 ---
 title: applyGiftCardToCart mutation
-edition: ee
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # applyGiftCardToCart mutation
 
-The `applyGiftCardToCart` mutation applies a pre-defined gift card code to the specified cart.
+The `applyGiftCardToCart` mutation applies a predefined gift card code to the specified cart.
 
 ## Syntax
 

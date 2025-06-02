@@ -1,13 +1,20 @@
 ---
 title: placeOrderForPurchaseOrder mutation
-edition: b2b
+keywords:
+  - B2B
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # placeOrderForPurchaseOrder mutation
 
 The `placeOrderForPurchaseOrder` mutation converts an approved purchase order to an order. If the request is successful, the status of the purchase order is `ORDER_PLACED`.
 
-Use the [`placePurchaseOrder` mutation](place-purchase-order.md) to place a purchase order using the cart ID.
+<InlineAlert variant="info" slots="text" />
+
+If you want to place a purchase order using the cart ID instead of the purchase order UID, use the [`placePurchaseOrder` mutation](place-purchase-order.md).
 
 ## Syntax
 

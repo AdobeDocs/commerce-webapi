@@ -1,13 +1,14 @@
 ---
 title: Manage negotiable quotes
 description: Endpoints used to create a negotiable quote
-edition: ee
 keywords:
   - B2B
   - REST
 ---
 
-import BetaNote from '/src/_includes/graphql/notes/beta.md'
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Manage negotiable quotes
 
@@ -95,8 +96,6 @@ If the negotiable quote requires a shipping address (for negotiation or tax calc
 Commerce creates a negotiable quote in the `Created` state.
 
 ### Create draft quote for a buyer
-
-<BetaNote />
 
 The `POST /V1/negotiableQuote/draft` request creates an empty negotiable quote for a specific buyer in the `Draft` state. The quote is not visible to the buyer.
 

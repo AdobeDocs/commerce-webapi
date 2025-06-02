@@ -2,6 +2,7 @@
 title: setPaymentMethodAndPlaceOrder mutation
 contributor_name: Something Digital (now Rightpoint)
 contributor_link: https://www.rightpoint.com/
+edition: paas
 ---
 
 # setPaymentMethodAndPlaceOrder mutation
@@ -87,6 +88,6 @@ Error | Description
 `Required parameter "cart_id" is missing` | The required `cart_id` argument contains an empty value.
 `Required parameter "code" for "payment_method" is missing.` | The value specified in the `code` argument is empty.
 `The current user cannot perform operations on cart "XXX"` | An unauthorized user (guest) tried to set a payment method and place an order with a customer's cart, or an authorized user (customer) tried to set a payment method and place an order with a cart of another customer.
-`The shipping address is missing. Set the address and try again.` | You ran `setPaymentMethodAndPlaceOrder` mutation before [setShippingAddressesOnCart](set-shipping-method.md). Set a shipping address first. [GraphQL checkout tutorial](https://devdocs.magento.com/guides/v2.3/graphql/tutorials/checkout/index.html) shows the order placement sequence.
+`The shipping address is missing. Set the address and try again.` | You ran `setPaymentMethodAndPlaceOrder` mutation before [setShippingAddressesOnCart](set-shipping-method.md). Set a shipping address first. [GraphQL checkout tutorial](/graphql/tutorials/checkout/) shows the order placement sequence.
 `The requested Payment Method is not available.` | The payment method specified in the `payment_method` argument is disabled or does not exist.
 `Unable to place order: Some of the products are out of stock.` | Some of the products in a cart are out of stock.

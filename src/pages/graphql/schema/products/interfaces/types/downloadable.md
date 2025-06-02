@@ -4,7 +4,7 @@ title: Downloadable product data types
 
 # Downloadable product data types
 
-The `DownloadableProduct` data type implements [`ProductInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-ProductInterface) and [`CustomizableProductInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-CustomizableProductInterface). As a result, attributes that are specific to downloadable products can be used when performing a [`products`](../../queries/products.md) query. It also implements [RoutableInterface](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-RoutableInterface).
+The `DownloadableProduct` data type implements [`ProductInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-ProductInterface) and [`CustomizableProductInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CustomizableProductInterface). As a result, attributes that are specific to downloadable products can be used when performing a [`products`](../../queries/products.md) query. It also implements [RoutableInterface](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-RoutableInterface).
 
 ## Sample query
 

@@ -6,10 +6,10 @@ title: Configurable product data types
 
 The `ConfigurableProduct` data type implements the following interfaces:
 
--  [ProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-ProductInterface)
--  [PhysicalProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-PhysicalProductInterface)
--  [CustomizableProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-CustomizableProductInterface)
--  [RoutableInterface](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-RoutableInterface)
+-  [ProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-ProductInterface)
+-  [PhysicalProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-PhysicalProductInterface)
+-  [CustomizableProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CustomizableProductInterface)
+-  [RoutableInterface](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-RoutableInterface)
 
 Attributes that are specific to configurable products can be used when performing a [`products`](../../queries/products.md) query.
 
@@ -678,7 +678,7 @@ This example shows how the the media gallery items change as a shopper selects c
 
 The following query returns media gallery information on the parent configurable product and the `uid` values of each configurable option.
 
-Note that file names of the images are `ms10-blue_main_1.jpg`, `ms10-blue_alt1_1.jpg`, and `ms10-blue_back_1.jpg`.
+Note that filenames of the images are `ms10-blue_main_1.jpg`, `ms10-blue_alt1_1.jpg`, and `ms10-blue_back_1.jpg`.
 
 **Request:**
 

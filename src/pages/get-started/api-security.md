@@ -1,6 +1,6 @@
 ---
 title: Input limiting
-description: Explains input limiting and other API security safeguards against denial-of-service (DoS) attacks.
+description: Learn about input limiting and other API security features to safeguard against denial-of-service (DoS) attacks.
 keywords:
   - REST
   - Security
@@ -18,10 +18,10 @@ Imposing restrictions on the size and number of resources that a user can reques
 
 By default, these input limits are disabled, but you can use the following methods to enable them:
 
--  Set the values in the [Admin](https://docs.magento.com/user-guide/configuration/services/magento-web-api.html).
--  Run the [`bin/magento config:set` command](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configuration-management/set-configuration-values.html).
--  Add entries to the [`env.php` file](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html#system).
--  Set [environment variables](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/examples/example-environment-variables.html).
+-  Set the values in the [Admin](https://experienceleague.adobe.com/en/docs/commerce-admin/config/services/magento-web-api).
+-  &#8203;<Edition name="paas" /> Run the [`bin/magento config:set` command](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configuration-management/set-configuration-values.html).
+-  &#8203;<Edition name="paas" /> Add entries to the [`env.php` file](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html#system).
+-  &#8203;<Edition name="paas" /> Set [environment variables](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/examples/example-environment-variables.html).
 
 When input limiting has been enabled, the system uses the default value for each limitation listed above. You can also configure custom values.
 
@@ -36,7 +36,7 @@ In addition, the Admin provides a configuration setting for limiting session siz
 
 To enable these input limiting features from the Admin, go to **Stores** > Settings > **Configuration** > **Services** > **Web Api Limits** or **GraphQL Input Limits** and set **Enable Input Limits** to **Yes**.
 
-To enable with the CLI, run one or both of the following commands:
+&#8203;<Edition name="paas" /> To enable with the CLI, run one or both of the following commands:
 
 ```bash
 bin/magento config:set webapi/validation/input_limit_enabled 1
@@ -47,6 +47,8 @@ bin/magento config:set graphql/validation/input_limit_enabled 1
 ```
 
 ## Maximum parameter inputs
+
+<Edition name="paas" />
 
 The `EntityArrayValidator` class constructor limits the number of objects that can be given to inputs that represent arrays of objects. For example, the `PUT /V1/guest-carts/{cartId}/collect-totals` endpoint contains the input parameter `additionalData->extension_attributes->gift_messages`, which represents a list of gift message information objects.
 
@@ -106,6 +108,8 @@ By default, any one of these arrays can include up to 20 items, but you can chan
 
 ## Input limit for REST endpoints
 
+<Edition name="paas" />
+
 Some REST endpoints can contain a high number of elements, and developers need a way to set the limit for each endpoint. The limit for a specific REST endpoint can be set in the `webapi.xml` configuration file for synchronous requests and `webapi_async.xml` for asynchronous requests.
 To do this, assign a value for the `<data input-array-size-limit/>` attribute within a `<route>` definition. The value for `input-array-size-limit` must be a non-negative integer.
 
@@ -138,6 +142,8 @@ bin/magento cache:clean config
 
 ## Values by default for REST endpoints
 
+<Edition name="paas" />
+
 If you need to change the default limits for REST endpoints, then edit the `webapi` section of the `<magento_root>/app/etc/env.php` file as follows:
 
 ```php
@@ -159,11 +165,13 @@ If you need to change the default limits for REST endpoints, then edit the `weba
 
 The maximum page size setting controls the pagination of various web API responses. By default, the maximum value is `300`. You can change the default in the Admin by selecting **Stores** > Settings > **Configuration** > **Services** > **Web API Input Limits** or **GraphQl Input Limits** >  **Maximum Page Size** field.
 
-[GraphQL security configuration](../graphql/usage/security-configuration.md describes how to set the maximum page size in GraphQL.
+[GraphQL security configuration](../graphql/usage/security-configuration.md) describes how to set the maximum page size in GraphQL.
 
 ## Default page size
 
-The Default Page Size setting controls the pagination of various web API responses. You can change the default value of `20` in the Admin by selecting **Stores** > Settings > **Configuration** > **Services** > **Web API Input Limits** > **Default Page Size**. To change the value from the CLI, run the following command:
+The Default Page Size setting controls the pagination of various web API responses. You can change the default value of `20` in the Admin by selecting **Stores** > Settings > **Configuration** > **Services** > **Web API Input Limits** > **Default Page Size**.
+
+&#8203;<Edition name="paas" /> To change the value from the CLI, run the following command:
 
 ```bash
 bin/magento config:set webapi/validation/default_page_size 30

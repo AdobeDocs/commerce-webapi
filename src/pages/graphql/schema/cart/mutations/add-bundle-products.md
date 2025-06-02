@@ -2,6 +2,7 @@
 title: addBundleProductsToCart mutation
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
+edition: paas
 ---
 
 # addBundleProductsToCart mutation
@@ -81,25 +82,33 @@ mutation {
     ]
   }) {
     cart {
-      items {
-        uid
-        quantity
-        product {
-          sku
-        }
-        ... on BundleCartItem {
-          bundle_options {
-            uid
-            label
-            type
-            values {
-              id
+      itemsV2 {
+        items {
+          uid
+          quantity
+          product {
+            sku
+          }
+          ... on BundleCartItem {
+            bundle_options {
+              uid
               label
-              price
-              quantity
+              type
+              values {
+                id
+                label
+                price
+                quantity
+              }
             }
           }
         }
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
+        }          
       }
     }
   }
@@ -113,83 +122,91 @@ mutation {
   "data": {
     "addBundleProductsToCart": {
       "cart": {
-        "items": [
-          {
-            "uid": "MjI=",
-            "quantity": 1,
-            "product": {
-              "sku": "WSH12"
-            }
-          },
-          {
-            "uid": "MjQ=",
-            "quantity": 3,
-            "product": {
-              "sku": "24-WB01"
-            }
-          },
-          {
-            "uid": "MzI=",
-            "quantity": 1,
-            "product": {
-              "sku": "24-WG080"
-            },
-            "bundle_options": [
-              {
-                "uid": "YnVuZGxlLzE=",
-                "label": "Sprite Stasis Ball",
-                "type": "radio",
-                "values": [
-                  {
-                    "id": 2,
-                    "label": "Sprite Stasis Ball 65 cm",
-                    "price": 27,
-                    "quantity": 1
-                  }
-                ]
-              },
-              {
-                "uid": "YnVuZGxlLzI=",
-                "label": "Sprite Foam Yoga Brick",
-                "type": "radio",
-                "values": [
-                  {
-                    "id": 4,
-                    "label": "Sprite Foam Yoga Brick",
-                    "price": 5,
-                    "quantity": 2
-                  }
-                ]
-              },
-              {
-                "uid": "YnVuZGxlLzM=",
-                "label": "Sprite Yoga Strap",
-                "type": "radio",
-                "values": [
-                  {
-                    "id": 7,
-                    "label": "Sprite Yoga Strap 10 foot",
-                    "price": 21,
-                    "quantity": 1
-                  }
-                ]
-              },
-              {
-                "uid": "YnVuZGxlLzQ=",
-                "label": "Sprite Foam Roller",
-                "type": "radio",
-                "values": [
-                  {
-                    "id": 8,
-                    "label": "Sprite Foam Roller",
-                    "price": 19,
-                    "quantity": 1
-                  }
-                ]
+        "itemsV2": {
+          "items": [
+            {
+              "uid": "MjI=",
+              "quantity": 1,
+              "product": {
+                "sku": "WSH12"
               }
-            ]
+            },
+            {
+              "uid": "MjQ=",
+              "quantity": 3,
+              "product": {
+                "sku": "24-WB01"
+              }
+            },
+            {
+              "uid": "MzI=",
+              "quantity": 1,
+              "product": {
+                "sku": "24-WG080"
+              },
+              "bundle_options": [
+                {
+                  "uid": "YnVuZGxlLzE=",
+                  "label": "Sprite Stasis Ball",
+                  "type": "radio",
+                  "values": [
+                    {
+                      "id": 2,
+                      "label": "Sprite Stasis Ball 65 cm",
+                      "price": 27,
+                      "quantity": 1
+                    }
+                  ]
+                },
+                {
+                  "uid": "YnVuZGxlLzI=",
+                  "label": "Sprite Foam Yoga Brick",
+                  "type": "radio",
+                  "values": [
+                    {
+                      "id": 4,
+                      "label": "Sprite Foam Yoga Brick",
+                      "price": 5,
+                      "quantity": 2
+                    }
+                  ]
+                },
+                {
+                  "uid": "YnVuZGxlLzM=",
+                  "label": "Sprite Yoga Strap",
+                  "type": "radio",
+                  "values": [
+                    {
+                      "id": 7,
+                      "label": "Sprite Yoga Strap 10 foot",
+                      "price": 21,
+                      "quantity": 1
+                    }
+                  ]
+                },
+                {
+                  "uid": "YnVuZGxlLzQ=",
+                  "label": "Sprite Foam Roller",
+                  "type": "radio",
+                  "values": [
+                    {
+                      "id": 8,
+                      "label": "Sprite Foam Roller",
+                      "price": 19,
+                      "quantity": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "total_count": 3,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ]
+        }
       }
     }
   }

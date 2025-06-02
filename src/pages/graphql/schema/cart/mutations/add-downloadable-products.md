@@ -2,6 +2,7 @@
 title: addDownloadableProductsToCart mutation
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
+edition: paas
 ---
 
 # addDownloadableProductsToCart mutation
@@ -60,20 +61,28 @@ mutation {
     }
   ) {
     cart {
-      items {
-        product {
-          sku
+      itemsV2 {
+        items {
+          product {
+            sku
+          }
+          quantity
+          ... on DownloadableCartItem {
+            links {
+              title
+              price
+            }
+            samples {
+              title
+              sample_url
+            }
+          }
         }
-        quantity
-        ... on DownloadableCartItem {
-          links {
-            title
-            price
-          }
-          samples {
-            title
-            sample_url
-          }
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
         }
       }
     }
@@ -83,43 +92,51 @@ mutation {
 
 **Response:**
 
-```text
+```json
 {
   "data": {
     "addDownloadableProductsToCart": {
       "cart": {
-        "items": [
-          {
-            "product": {
-              "sku": "240-LV09"
-            },
-            "quantity": 1,
-            "links": [
-              {
-                "title": "Episode 2",
-                "price": 9
+        "itemsV2": {
+          "items": [
+            {
+              "product": {
+                "sku": "240-LV09"
               },
-              {
-                "title": "Episode 3",
-                "price": 9
-              }
-            ],
-            "samples": [
-              {
-                "title": "Trailer #1",
-                "sample_url": "https://<M2_INSTANCE>/downloadable/download/sample/sample_id/16/"
-              },
-              {
-                "title": "Trailer #2",
-                "sample_url": "https://<M2_INSTANCE>/downloadable/download/sample/sample_id/17/"
-              },
-              {
-                "title": "Trailer #3",
-                "sample_url": "https://<M2_INSTANCE>/downloadable/download/sample/sample_id/18/"
-              }
-            ]
+              "quantity": 1,
+              "links": [
+                {
+                  "title": "Episode 2",
+                  "price": 9
+                },
+                {
+                  "title": "Episode 3",
+                  "price": 9
+                }
+              ],
+              "samples": [
+                {
+                  "title": "Trailer #1",
+                  "sample_url": "https://<M2_INSTANCE>/downloadable/download/sample/sample_id/16/"
+                },
+                {
+                  "title": "Trailer #2",
+                  "sample_url": "https://<M2_INSTANCE>/downloadable/download/sample/sample_id/17/"
+                },
+                {
+                  "title": "Trailer #3",
+                  "sample_url": "https://<M2_INSTANCE>/downloadable/download/sample/sample_id/18/"
+                }
+              ]
+            }
+          ],
+          "total_count": 1,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ]
+        }
       }
     }
   }
@@ -146,20 +163,28 @@ mutation {
     }
   ) {
     cart {
-      items {
-        product {
-          sku
+      itemsV2 {
+        items {
+          product {
+            sku
+          }
+          quantity
+          ... on DownloadableCartItem {
+            links {
+              title
+              price
+            }
+            samples {
+              title
+              sample_url
+            }
+          }
         }
-        quantity
-        ... on DownloadableCartItem {
-          links {
-            title
-            price
-          }
-          samples {
-            title
-            sample_url
-          }
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
         }
       }
     }
@@ -169,39 +194,47 @@ mutation {
 
 **Response:**
 
-```text
+```json
 {
   "data": {
     "addDownloadableProductsToCart": {
       "cart": {
-        "items": [
-          {
-            "product": {
-              "sku": "240-LV07"
-            },
-            "quantity": 2,
-            "links": [
-              {
-                "title": "Solo Power Circuit",
-                "price": 14
-              }
-            ],
-            "samples": [
-              {
-                "title": "Trailer #1",
-                "sample_url": "https://<M2_INSTANCE>/downloadable/download/sample/sample_id/10/"
+        "itemsV2": {
+          "items": [
+            {
+              "product": {
+                "sku": "240-LV07"
               },
-              {
-                "title": "Trailer #2",
-                "sample_url": "https://<M2_INSTANCE>/downloadable/download/sample/sample_id/11/"
-              },
-              {
-                "title": "Trailer #3",
-                "sample_url": "https://<M2_INSTANCE>/downloadable/download/sample/sample_id/12/"
-              }
-            ]
-          }
-        ]
+              "quantity": 2,
+              "links": [
+                {
+                  "title": "Solo Power Circuit",
+                  "price": 14
+                }
+              ],
+              "samples": [
+                {
+                  "title": "Trailer #1",
+                  "sample_url": "https://<M2_INSTANCE>/downloadable/download/sample/sample_id/10/"
+                },
+                {
+                  "title": "Trailer #2",
+                  "sample_url": "https://<M2_INSTANCE>/downloadable/download/sample/sample_id/11/"
+                },
+                {
+                  "title": "Trailer #3",
+                  "sample_url": "https://<M2_INSTANCE>/downloadable/download/sample/sample_id/12/"
+                }
+              ]
+            }
+          ],
+          "total_count": 1,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
+          }          
+        }
       }
     }
   }

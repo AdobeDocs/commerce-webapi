@@ -1,11 +1,14 @@
 ---
 title: Assign companies to a shared catalog
 description: Assign a shared catalog to one or more companies
-edition: ee
 keywords:
   - B2B
   - REST
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Assign companies to a shared catalog
 

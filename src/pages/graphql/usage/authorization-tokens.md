@@ -32,7 +32,7 @@ By default, a customer token is valid for 1 hour. You can change these values fr
 
 **Request:**
 
-```text
+```graphql
 mutation {
   generateCustomerToken(email: "customer@example.com", password: "password") {
     token

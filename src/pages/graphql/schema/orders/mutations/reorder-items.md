@@ -51,17 +51,25 @@ mutation{
   reorderItems(orderNumber: "000000003"){
     cart {
       id
-      items {
-        uid
-        product {
-          sku
-        }
-        quantity
-        prices {
-          price {
-            value
+      itemsV2 {
+        items {
+          uid
+          product {
+            sku
+          }
+          quantity
+          prices {
+            price {
+              value
+            }
           }
         }
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
+        }          
       }
     }
     userInputErrors{
@@ -81,32 +89,40 @@ mutation{
     "reorderItems": {
       "cart": {
         "id": "LrMHhWHUaOqiBGC6S0KOcnYKsINUHTWz",
-        "items": [
-          {
-            "uid": "NDQ=",
-            "product": {
-              "sku": "24-UG07"
+        "itemsV2": {
+          "items": [
+            {
+              "uid": "NDQ=",
+              "product": {
+                "sku": "24-UG07"
+              },
+              "quantity": 1,
+              "prices": {
+                "price": {
+                  "value": 12
+                }
+              }
             },
-            "quantity": 1,
-            "prices": {
-              "price": {
-                "value": 12
+            {
+              "uid": "NDU=",
+              "product": {
+                "sku": "WS06"
+              },
+              "quantity": 1,
+              "prices": {
+                "price": {
+                  "value": 29
+                }
               }
             }
-          },
-          {
-            "uid": NDU=,
-            "product": {
-              "sku": "WS06"
-            },
-            "quantity": 1,
-            "prices": {
-              "price": {
-                "value": 29
-              }
-            }
+          ],
+          "total_count": 2,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ]
+        }
       },
       "userInputErrors": [
         {

@@ -1,13 +1,16 @@
 ---
 title: B2B integrations
 description: Overview of the B2B module
-edition: ee
 keywords:
   - B2B
   - REST
 ---
 
 import * as Vars from '../../../data/vars.js';
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # B2B integrations
 
@@ -30,7 +33,7 @@ The seller and a buyer representing a company can negotiate the price of an orde
 
 <p><Vars.sitedatavarb2b/> is a set of modules that are installed on top of <Vars.sitedatavaree/>. The following table lists the modules provided with B2B.</p>
 
-Name | Description | WebAPI enabled?
+Name | Description | REST enabled?
 --- | --- | ---
 B2b | The base module for B2B. It also provides branding elements. | No
 BundleNegotiableQuote | Enables bundle products to be displayed in a negotiable quote in an B2B environment | No
@@ -58,4 +61,4 @@ SharedCatalog | Defines the visibility of products and prices in the catalog and
 ## Related information
 
 - [Install the B2B extension](https://experienceleague.adobe.com/docs/commerce-admin/b2b/install.html)
-- [Getting started with <Vars.sitedatavarb2b/>](https://docs.magento.com/user-guide/getting-started.html)
+- [Getting started with <Vars.sitedatavarb2b/>](https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home)

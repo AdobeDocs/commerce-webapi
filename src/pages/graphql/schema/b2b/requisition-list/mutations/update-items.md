@@ -1,8 +1,13 @@
 ---
 title: updateRequisitionListItems mutation
-edition: b2b
 contributor_name: EY
+keywords:
+  - B2B
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # updateRequisitionListItems mutation
 

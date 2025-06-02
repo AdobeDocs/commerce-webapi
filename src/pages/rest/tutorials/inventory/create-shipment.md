@@ -1,6 +1,7 @@
 ---
 title: Step 12. Create a shipment
 description: In this step of the tutorial you will create a shipment
+edition: paas
 keywords:
   - Inventory
   - REST
@@ -21,6 +22,10 @@ When you complete a partial or full shipment, Adobe Commerce deducts the reserve
 <InlineAlert variant="info" slots="text"/>
 
 Although you can use the `POST V1/shipment` endpoint to create a shipment, the `POST /V1/order/:orderId/ship` endpoint is a better option in that it is more efficient and the payload can be simpler.
+
+<InlineAlert variant="info" slots="text"/>
+
+To avoid multiple (duplicate) shipment record creation for the same item in the order, you must use the `POST /V1/order/:orderId/ship` endpoint instead of the `POST V1/shipment` endpoint. Only the newer `POST /V1/order/:orderId/ship` endpoint can validate total shipped quantity for each item in the order.
 
 We'll ship 35 `24-WB01` items and 20 `24-WB03` items from the Northeast warehouse. The `order_item_id` value for `24-WB01` is 3, and the value for `24-WB03` is 4.
 

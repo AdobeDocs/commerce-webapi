@@ -14,10 +14,10 @@ The checkout queries gather data necessary for completing the checkout process. 
 
 * [`getPayflowLinkToken`](get-payflow-link-token.md) is required for PayPal Payflow transactions.
 
-If you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.3.0 or higher, you can also use the following queries:
+If you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.3.0 or higher, you can also use the following queries during checkout:
 
-* [`getPaymentConfig`](get-payment-config.md)
+* [`getPaymentConfig`](../../../payment-services-extension/queries/get-payment-config.md)
 
-* [`getPaymentOrder`](get-payment-order.md)
+* [`getPaymentOrder`](../../../payment-services-extension/queries/get-payment-order.md)
 
-* [`getPaymentSDK`](get-payment-sdk.md)
+* [`getPaymentSDK`](../../../payment-services-extension/queries/get-payment-sdk.md)

@@ -1,6 +1,7 @@
 ---
 title: Web API Functional Testing
 description: How to implement and run functional tests on Web APIs.
+edition: paas
 keywords:
   - GraphQL
   - REST
@@ -10,7 +11,7 @@ keywords:
 
 The Web API testing framework allows you to test Web APIs from the client application point of view. The tests can be used with either REST or SOAP. The REST or SOAP adapter that runs the tests is specified in PHPUnit configuration. See [How to Run the Tests](#how-to-run-the-tests) for more information.
 
-To run Web API tests for GraphQl, see [GraphQL functional testing](../graphql/develop/functional-testing.md).
+To run Web API tests for GraphQL, see [GraphQL functional testing](../graphql/develop/functional-testing.md).
 
 ## Implementation Details
 

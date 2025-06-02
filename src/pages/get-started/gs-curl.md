@@ -1,6 +1,7 @@
 ---
 title: Use cURL to Run the Request
 description: Explains how to use cURL.
+edition: paas
 keywords:
   - REST
 ---
@@ -156,7 +157,7 @@ $this->curl->setCookies($cookies);
 
 ### Example usage
 
-For example, the `Magento\Marketplace\Model\Partners` class gets partners info using cURL from the api of Magento connect.
+For example, the `Magento\Marketplace\Model\Partners` class gets partners info using cURL from the API of Magento connect.
 
 ```php
 namespace Magento\Marketplace\Model;
@@ -271,7 +272,7 @@ class Partners
 ```
 
 First off all the cURL client instance is created in `__construct`.
-Method `getPartners` uses the cURL client makes POST request using cURL, the `post` method takes the first parameter the URL to the api of `magento-connect`, second parameter is empty array, then the option `CURLOPT_REFERER` added by `setOptions` method of the cURL client.
+Method `getPartners` uses the cURL client makes POST request using cURL, the `post` method takes the first parameter the URL to the API of `magento-connect`, second parameter is empty array, then the option `CURLOPT_REFERER` added by `setOptions` method of the cURL client.
 As result the script call `getBody` method of the cURL client.
 
 #### Related topics

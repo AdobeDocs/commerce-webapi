@@ -1,5 +1,6 @@
 ---
 title: addVirtualProductsToCart mutation
+edition: paas
 ---
 
 # addVirtualProductsToCart mutation
@@ -43,11 +44,19 @@ mutation {
     }
   ) {
     cart {
-      items {
-        product {
-          name
+      itemsV2 {
+        items {
+          product {
+            name
+          }
+          quantity
         }
-        quantity
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
+        }
       }
       prices {
         grand_total {
@@ -67,14 +76,22 @@ mutation {
   "data": {
     "addVirtualProductsToCart": {
       "cart": {
-        "items": [
-          {
-            "product": {
-              "name": "Gold Membership"
-            },
-            "quantity": 1
+        "itemsV2": {
+          "items": [
+            {
+              "product": {
+                "name": "Gold Membership"
+              },
+              "quantity": 1
+            }
+          ],
+          "total_count": 1,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ],
+        },
         "prices": {
           "grand_total": {
             "value": 49.99,

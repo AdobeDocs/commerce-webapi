@@ -1,6 +1,7 @@
 ---
 title: Step 7. Create a cart and add products to it
 description: In this step of the tutorial you will create a card and add products
+edition: paas
 keywords:
   - Inventory
   - REST

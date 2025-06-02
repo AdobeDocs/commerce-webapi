@@ -1,18 +1,23 @@
 ---
 title: RequisitionListItemInterface attributes and implementations
-edition: b2b
+keywords:
+  - B2B
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # RequisitionListItemInterface attributes and implementations
 
-[`RequisitionListItemInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-RequisitionListItemInterface) provides details about items in a requisition list. It has the following implementations:
+[`RequisitionListItemInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-RequisitionListItemInterface) provides details about items in a requisition list. It has the following implementations:
 
-*  [`BundleRequisitionListItem`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-BundleRequisitionListItem)
-*  [`ConfigurableRequisitionListItem`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-ConfigurableRequisitionListItem)
-*  [`DownloadableRequisitionListItem`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-DownloadableRequisitionListItem)
-*  [`GiftCardRequisitionListItem`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-GiftCardRequisitionListItem)
-*  [`SimpleRequisitionListItem`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-SimpleRequisitionListItem)
-*  [`VirtualRequisitionListItem`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#definition-VirtualRequisitionListItem)
+*  [`BundleRequisitionListItem`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-BundleRequisitionListItem)
+*  [`ConfigurableRequisitionListItem`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-ConfigurableRequisitionListItem)
+*  [`DownloadableRequisitionListItem`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-DownloadableRequisitionListItem)
+*  [`GiftCardRequisitionListItem`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-GiftCardRequisitionListItem)
+*  [`SimpleRequisitionListItem`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-SimpleRequisitionListItem)
+*  [`VirtualRequisitionListItem`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-VirtualRequisitionListItem)
 
 <InlineAlert variant="info" slots="text" />
 

@@ -2,8 +2,6 @@
 title: contactUs mutation
 ---
 
-import BetaPwaNote from '/src/_includes/graphql/notes/beta-pwa.md'
-
 # contactUs mutation
 
 The `contactUs` mutation submits the contents of the Contact Us form.
@@ -14,7 +12,7 @@ The `contactUs` mutation submits the contents of the Contact Us form.
 
 ## Reference
 
-The [`contactUs`](https://developer.adobe.com/commerce/webapi/graphql-api/beta/index.html#mutation-contactUs) reference provides detailed information about the types and fields defined in this mutation.
+The [`contactUs`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-contactUs) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

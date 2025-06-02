@@ -1,20 +1,20 @@
 ---
 title: Place a negotiable quote order
 description: An overview of the REST calls needed to place items in a shopping cart, negotiate a quote, and reimburse credit
-edition: ee
 keywords:
   - B2B
   - REST
 ---
 
 import * as Vars from '../../../data/vars.js';
-import BetaNote from '/src/_includes/graphql/notes/beta.md'
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Initiate a negotiable quote order by seller
 
 This topic describes how a seller can use REST calls to create a negotiable quote for a specific buyer in Draft state, add products to the quote, update quote data such as name and expiration date, and apply a discount.
-
-<BetaNote />
 
 ## Prerequisites
 

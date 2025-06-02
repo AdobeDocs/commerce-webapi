@@ -28,6 +28,10 @@ POST /V1/order/notify-orders-are-ready-for-pickup
 
 ## Search for pickup locations
 
+<InlineAlert variant="info" slots="text" />
+
+Adobe Commerce as a Cloud Service does not support the `GET /V1/inventory/in-store-pickup/pickup-locations` endpoint. Use the [`pickupLocations` query](../../graphql/schema/cart/queries/pickup-locations.md) instead.
+
 The `GET /V1/inventory/in-store-pickup/pickup-locations` endpoint searches for and filters on pickup locations, allowing the shopper to quickly narrow the results. The endpoint does not require authentication.
 
 Search terms, filters, and other attributes are specified as query parameters in the URL. This endpoint uses a different syntax than other Adobe Commerce GET calls that send `searchCriteria` parameters. Instead, the `GET /V1/inventory/in-store-pickup/pickup-locations` endpoint requires that each query parameter begins with `searchRequest`. The `scopeCode` parameter is required. All other parameters are optional.

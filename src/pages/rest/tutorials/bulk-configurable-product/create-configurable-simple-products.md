@@ -39,11 +39,11 @@ Before you use this code sample, verify that the attribute values are the same i
 
 `POST <host>/rest/default/async/bulk/V1/products`
 
+The payload contains both the configurable product and the simple products.
+
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
 #### Payload
-
-The payload contains both the configurable product and the simple products.
 
  ```json
 [{

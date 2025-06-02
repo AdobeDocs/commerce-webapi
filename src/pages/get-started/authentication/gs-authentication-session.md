@@ -1,12 +1,17 @@
 ---
 title: Session-Based Authentication
 description: How to use session-based authentication in the web APIs.
+edition: paas
 keywords:
   - REST
   - Security
 ---
 
 # Session-based authentication
+
+<InlineAlert variant="info" slots="text"/>
+
+This topic is for Platform-as-a-Service (PaaS) customers only. Adobe Commerce Cloud Services customers must refer to [REST Authentication](https://developer.adobe.com/commerce/services/cloud/guides/rest/authentication/) for details on authentication.
 
 As a customer, you log in to the storefront with your customer credentials. As an admin, you log in to the Admin with your admin credentials.
 
@@ -30,7 +35,7 @@ Similarly, if an admin is logged in to the Admin and the JavaScript widget invok
 
 Admin session-based authentication is not currently possible for API endpoints.
 
-The session based authentication functionality is restricted to AJAX calls. Direct browser requests cannot be made due to security vulnerabilities. A developer can create a custom storefront widget that can issue requests without additional authentication steps.
+The session based authentication functionality is restricted to Ajax calls. Direct browser requests cannot be made due to security vulnerabilities. A developer can create a custom storefront widget that can issue requests without additional authentication steps.
 
 ## Related topic
 

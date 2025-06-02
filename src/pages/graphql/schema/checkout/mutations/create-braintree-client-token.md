@@ -6,7 +6,7 @@ contributor_link: https://www.rightpoint.com/
 
 # createBraintreeClientToken mutation
 
-The `createBraintreeClientToken` mutation creates the client token for Braintree Javascript SDK initialization.
+The `createBraintreeClientToken` mutation creates the client token for Braintree JavaScript SDK initialization.
 
 ## Syntax
 
@@ -46,4 +46,4 @@ mutation {
 
 Error | Description
 --- | ---
-`The Braintree payment method is not active.` | The [Braintree](https://docs.magento.com/m2/ee/user_guide/payment/braintree.html) payment method is disabled in admin.
+`The Braintree payment method is not active.` | The [Braintree](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/payments/braintree) payment method is disabled in admin.

@@ -1,0 +1,39 @@
+{ 
+  "rules": {
+    "terminology": {
+      "severity" : "warning",
+      "skip": ["Strong"],
+      "exclude": [
+        "back[- ]end(\\w*)",
+        "bug[- ]fix(es)?",
+        "client ?side",
+        "end-?user(s)?",
+        "indexes\\b",
+        "front[- ]end(\\w*)",
+        "Mac ?OS",
+        "OS X",
+        "readme(s)?",
+        "server ?side",
+        "smartphone(s)?",
+        "spell-?check(er|ing)?",
+        "style-?sheet(s)?",
+        "web-?page(s)?",
+        "web[- ]?site(s)?",
+        "white[- ]space",
+        "ZIP"
+      ],
+      "terms": [
+        ["bug[- ]fix", "bugfix"],
+        ["bug-?fixes", "bug fixes"],
+        ["indices\\b", "indexes"],
+        "macOS",
+        ["smart[- ]phone(s)?", "smartphone$1"],
+        ["spell[- ]?check(er|ing)", "spelling checker$1"],
+        "UNIX",
+        ["web[- ]page(s)?", "webpage$1"],
+        ["web[- ]site(s)?", "website$1"],
+        ["white-?space", "white space"]
+      ]
+   }
+  }
+}

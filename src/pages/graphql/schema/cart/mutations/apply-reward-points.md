@@ -1,7 +1,10 @@
 ---
 title: applyRewardPointsToCart mutation
-edition: ee
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # applyRewardPointsToCart mutation
 
@@ -28,19 +31,27 @@ mutation {
   applyRewardPointsToCart(cartId: "8k0Q4MpH2IGahWrTRtqM61YV2MtLPApz")
   {
     cart {
-      items {
-        quantity
-        product {
-          sku
-          name
-          price_range {
-            maximum_price {
-              final_price {
-                currency
-                value
+      itemsV2 {
+        items {
+          quantity
+          product {
+            sku
+            name
+            price_range {
+              maximum_price {
+                final_price {
+                  currency
+                  value
+                }
               }
             }
           }
+        }
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
         }
       }
       applied_reward_points {
@@ -74,23 +85,31 @@ mutation {
   "data": {
     "applyRewardPointsToCart": {
       "cart": {
-        "items": [
-          {
-            "quantity": 1,
-            "product": {
-              "sku": "WJ04",
-              "name": "Ingrid Running Jacket",
-              "price_range": {
-                "maximum_price": {
-                  "final_price": {
-                    "currency": "USD",
-                    "value": 84
+        "itemsV2": {
+          "items": [
+            {
+              "quantity": 1,
+              "product": {
+                "sku": "WJ04",
+                "name": "Ingrid Running Jacket",
+                "price_range": {
+                  "maximum_price": {
+                    "final_price": {
+                      "currency": "USD",
+                      "value": 84
+                    }
                   }
                 }
               }
             }
+          ],
+          "total_count": 1,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ],
+        },
         "applied_reward_points": {
           "money": {
             "currency": "USD",

@@ -1,13 +1,16 @@
 ---
 title: Manage company structures
 description: Assign company users to teams and hierarchies
-edition: ee
 keywords:
   - B2B
   - REST
 ---
 
 import * as Vars from '../../../data/vars.js';
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Manage company structures
 
@@ -35,9 +38,9 @@ GET /V1/team/
 
 Name | Description | Format | Requirements
 --- | --- | --- | ---
-id | System-generated team ID | integer | Not applicable for create operations.
-name | The displayed name of the team | string | Required to create or update a team.
-description | An optional description of the team. | string | Optional
+`id` | System-generated team ID | integer | Not applicable for create operations.
+`name` | The displayed name of the team | string | Required to create or update a team.
+`description` | An optional description of the team. | string | Optional
 
 ### Create a team
 

@@ -1,11 +1,12 @@
 ---
 title: Retrieving detailed attributes
-description: Learn how to get detailed information about PHP and REST API endpoints on Adobe Commerce and Magento Open Source projects. 
+description: Learn how to get detailed information about PHP and REST API endpoints on Adobe Commerce and Magento Open Source projects.
+edition: paas
 keywords:
   - REST
 ---
 
-# Retrieving detailed atttributes
+# Retrieving detailed attributes
 
 Swagger and other types of code-generated documentation erroneously indicate several APIs that search across multiple objects return detailed information about individual objects. Detailed information, such as `extensionAttributes`,  `customAttributes`, and possibly other fields, are generally available only when requesting information on a single object.
 

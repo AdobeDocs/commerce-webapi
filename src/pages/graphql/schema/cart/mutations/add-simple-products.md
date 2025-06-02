@@ -1,5 +1,6 @@
 ---
 title: addSimpleProductsToCart mutation
+edition: paas
 ---
 
 # addSimpleProductsToCart mutation
@@ -48,13 +49,21 @@ mutation {
     }
   ) {
     cart {
-      items {
-        id
-        product {
-          name
-          sku
+      itemsV2 {
+        items {
+          id
+          product {
+            name
+            sku
+          }
+          quantity
         }
-        quantity
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
+        }
       }
     }
   }
@@ -68,16 +77,24 @@ mutation {
   "data": {
     "addSimpleProductsToCart": {
       "cart": {
-        "items": [
-          {
-            "id": "13",
-            "product": {
-              "name": "Strive Shoulder Pack",
-              "sku": "24-MB04"
-            },
-            "quantity": 1
-          }
-        ]
+        "itemsV2": {
+          "items": [
+            {
+              "id": "13",
+              "product": {
+                "name": "Strive Shoulder Pack",
+                "sku": "24-MB04"
+              },
+              "quantity": 1
+            }
+          ],
+          "total_items": 1,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
+          }          
+        }
       }
     }
   }
@@ -108,18 +125,26 @@ mutation {
     }
   }) {
     cart {
-      items {
-        product {
-           name
-        }
-        quantity
-        ... on SimpleCartItem {
-          customizable_options {
-            label
-            values {
-              value
+      itemsV2 {
+        items {
+          product {
+            name
+          }
+          quantity
+          ... on SimpleCartItem {
+            customizable_options {
+              label
+              values {
+                value
+              }
             }
           }
+        }
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
         }
       }
     }
@@ -134,24 +159,32 @@ mutation {
   "data": {
     "addSimpleProductsToCart": {
       "cart": {
-        "items": [
-          {
-            "product": {
-              "name": "simple"
-            },
-            "quantity": 1,
-            "customizable_options": [
-              {
-                "label": "Field Option",
-                "values": [
-                  {
-                    "value": "field value"
-                  }
-                ]
-              }
-            ]
+        "itemsV2": {
+          "items": [
+            {
+              "product": {
+                "name": "simple"
+              },
+              "quantity": 1,
+              "customizable_options": [
+                {
+                  "label": "Field Option",
+                  "values": [
+                    {
+                      "value": "field value"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "total_count": 1,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ]
+        }
       }
     }
   }
@@ -180,13 +213,21 @@ mutation {
     }
   ) {
     cart {
-      items {
-        uid
-        product {
-          name
-          sku
+      itemsV2 {
+        items {
+          uid
+          product {
+            name
+            sku
+          }
+          quantity
         }
-        quantity
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
+        }
       }
     }
   }
@@ -200,16 +241,24 @@ mutation {
   "data": {
     "addSimpleProductsToCart": {
       "cart": {
-        "items": [
-          {
-            "uid": "NDA=",
-            "product": {
-              "name": "Voyage Yoga Bag",
-              "sku": "24-WB01"
-            },
-            "quantity": 1
+        "itemsV2": {
+          "items": [
+            {
+              "uid": "NDA=",
+              "product": {
+                "name": "Voyage Yoga Bag",
+                "sku": "24-WB01"
+              },
+              "quantity": 1
+            }
+          ],
+          "total_count": 1,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ]
+        }
       }
     }
   }

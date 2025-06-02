@@ -1,5 +1,6 @@
 ---
 title: addConfigurableProductsToCart mutation
+edition: paas
 ---
 
 # addConfigurableProductsToCart mutation
@@ -41,17 +42,25 @@ mutation {
     }
   ) {
     cart {
-      items {
-        uid
-        quantity
-        product {
-          name
-          sku
-        }
-        ... on ConfigurableCartItem {
-          configurable_options {
-            option_label
+      itemsV2 {
+        items {
+          uid
+          quantity
+          product {
+            name
+            sku
           }
+          ... on ConfigurableCartItem {
+            configurable_options {
+              option_label
+            }
+          }
+        }
+        total_count
+        page_info {
+          page_size
+          current_page
+          total_pages
         }
       }
     }
@@ -66,24 +75,32 @@ mutation {
   "data": {
     "addConfigurableProductsToCart": {
       "cart": {
-        "items": [
-          {
-            "uid": "Mzc=",
-            "quantity": 2,
-            "product": {
-              "name": "Teton Pullover Hoodie",
-              "sku": "MH02"
-            },
-            "configurable_options": [
-              {
-                "option_label": "Color"
+        "itemsV2": {
+          "items": [
+            {
+              "uid": "Mzc=",
+              "quantity": 2,
+              "product": {
+                "name": "Teton Pullover Hoodie",
+                "sku": "MH02"
               },
-              {
-                "option_label": "Size"
-              }
-            ]
+              "configurable_options": [
+                {
+                  "option_label": "Color"
+                },
+                {
+                  "option_label": "Size"
+                }
+              ]
+            }
+          ],
+          "total_count": 1,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
           }
-        ]
+        }
       }
     }
   }

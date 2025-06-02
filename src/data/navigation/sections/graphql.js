@@ -20,6 +20,10 @@ module.exports = [
         path: "/graphql/usage/custom-filters/",
       },
       {
+        title: "GraphQL status codes and responses",
+        path: "/graphql/usage/api-response/"
+      },
+      {
         title: "Headers",
         path: "/graphql/usage/headers/",
       },
@@ -166,6 +170,10 @@ module.exports = [
                 path: "/graphql/schema/cart/mutations/apply-coupon/",
               },
               {
+                title: "applyCouponsToCart",
+                path: "/graphql/schema/cart/mutations/apply-coupons/"
+              },
+              {
                 title: "applyGiftCartToCart",
                 path: "/graphql/schema/cart/mutations/apply-giftcard/",
               },
@@ -180,6 +188,10 @@ module.exports = [
               {
                 title: "assignCustomerToGuestCart",
                 path: "/graphql/schema/cart/mutations/assign-customer-to-guest-cart/",
+              },
+              {
+                title: "clearCart",
+                path: "/graphql/schema/cart/mutations/clear-cart/"
               },
               {
                 title: "createEmptyCart",
@@ -204,6 +216,10 @@ module.exports = [
               {
                 title: "removeCouponFromCart",
                 path: "/graphql/schema/cart/mutations/remove-coupon/",
+              },
+              {
+                title: "removeCouponsFromCart",
+                path: "/graphql/schema/cart/mutations/remove-coupons"
               },
               {
                 title: "removeGiftCardFromCart",
@@ -289,18 +305,6 @@ module.exports = [
                 title: "getPayflowLinkToken",
                 path: "/graphql/schema/checkout/queries/get-payflow-link-token/",
               },
-              {
-                title: "getPaymentConfig",
-                path: "/graphql/schema/checkout/queries/get-payment-config/",
-              },
-              {
-                title: "getPaymentOrder",
-                path: "/graphql/schema/checkout/queries/get-payment-order/",
-              },
-              {
-                title: "getPaymentSDK",
-                path: "/graphql/schema/checkout/queries/get-payment-sdk/",
-              },
             ],
           },
           {
@@ -320,10 +324,6 @@ module.exports = [
                 path: "/graphql/schema/checkout/mutations/create-payflow-pro-token/",
               },
               {
-                title: "createPaymentOrder",
-                path: "/graphql/schema/checkout/mutations/create-payment-order/",
-              },
-              {
                 title: "createPaypalExpressToken",
                 path: "/graphql/schema/checkout/mutations/create-paypal-express-token/",
               },
@@ -334,10 +334,6 @@ module.exports = [
               {
                 title: "handlePayflowProResponse",
                 path: "/graphql/schema/checkout/mutations/handle-payflow-pro-response/",
-              },
-              {
-                title: "syncPaymentOrder",
-                path: "/graphql/schema/checkout/mutations/sync-payment-order/",
               },
             ],
           },
@@ -484,6 +480,10 @@ module.exports = [
               {
                 title: "changeCustomerPassword",
                 path: "/graphql/schema/customer/mutations/change-password/",
+              },
+              {
+                title: "confirmEmail",
+                path: "/graphql/schema/customer/mutations/confirm-email/",
               },
               {
                 title: "createCustomer",
@@ -730,12 +730,20 @@ module.exports = [
                 path: "/graphql/schema/orders/mutations/cancel-order/",
               },
               {
+                title: "confirmReturn",
+                path: "/graphql/schema/orders/mutations/confirm-return/",
+              },
+              {
                 title: "removeReturnTracking",
                 path: "/graphql/schema/orders/mutations/remove-return-tracking/",
               },
               {
                 title: "reorderItems",
                 path: "/graphql/schema/orders/mutations/reorder-items/",
+              },
+              {
+                title: "requestGuestReturn",
+                path: "/graphql/schema/orders/mutations/request-guest-return/",
               },
               {
                 title: "requestReturn",
@@ -765,6 +773,20 @@ module.exports = [
               },
             ],
           },
+          {
+            title: "Queries",
+            path: "graphql/schema/orders/queries/",
+            pages: [
+              {
+                title: "guestOrder",
+                path: "graphql/schema/orders/queries/guest-order"
+              },
+              {
+                title: "guestOrderByToken",
+                path: "graphql/schema/orders/queries/guest-order-by-token"
+              }
+            ]
+          }
         ],
       },
       {
@@ -1074,6 +1096,10 @@ module.exports = [
                 path: "/graphql/schema/store/queries/recaptcha-v3-config/",
               },
               {
+                title: "recaptchaFormConfig",
+                path: "/graphql/schema/store/queries/recaptcha-form-config/",
+              },
+              {
                 title: "storeConfig",
                 path: "/graphql/schema/store/queries/store-config/",
               },
@@ -1208,22 +1234,80 @@ module.exports = [
     ],
   },
   {
-    title: "Payment Services payment methods",
-    path: "/graphql/payment-services/",
+    title: "Payment Services extension",
+    path: "/graphql/payment-services-extension/",
     pages: [
       {
-        title: "Checkout",
-        path: "/graphql/payment-services/checkout.md"
-      },
+        title: "Workflows",
+        path: "/graphql/payment-services-extension/workflows/",
+        pages: [
+              {
+                title: "Checkout",
+                path: "/graphql/payment-services-extension/workflows/checkout.md",
+              },
+              {
+                title: "Minicart",
+                path: "/graphql/payment-services-extension/workflows/minicart.md",
+              },
+              {
+                title: "Vault a card during a checkout authorization",
+                path: "/graphql/payment-services-extension/workflows/vault-with-purchase.md",
+              },
+              {
+                title: "Vault a credit card without a purchase",
+                path: "/graphql/payment-services-extension/workflows/vault-without-purchase.md",
+              },
+              {
+                title: "Vaulted card",
+                path: "/graphql/payment-services-extension/workflows/vaulted-card.md",
+        },
+      ],
+    },
       {
-        title: "Minicart",
-        path: "/graphql/payment-services/minicart.md"
-      },
-      {
-        title: "Vault",
-        path: "/graphql/payment-services/vault.md"
-      }
-    ]
+            title: "Queries",
+            path: "/graphql/payment-services-extension/queries/",
+            pages: [
+                {
+                    title: "getPaymentConfig",
+                    path: "/graphql/payment-services-extension/queries/get-payment-config/",
+                  },
+                  {
+                    title: "getPaymentOrder",
+                    path: "/graphql/payment-services-extension/queries/get-payment-order/",
+                  },
+                  {
+                    title: "getPaymentSDK",
+                    path: "/graphql/payment-services-extension/queries/get-payment-sdk/",
+                  },
+                  {
+                    title: "getVaultConfig",
+                    path: "/graphql/payment-services-extension/queries/get-vault-config/",
+                  },
+            ],
+          },
+          {
+            title: "Mutations",
+            path: "/graphql/payment-services-extension/mutations/",
+            pages: [
+              {
+                title: "createPaymentOrder",
+                path: "/graphql/payment-services-extension/mutations/create-payment-order/",
+              },
+              {
+                title: "createVaultCardPaymentToken",
+                path: "/graphql/payment-services-extension/mutations/create-vault-card-payment-token/",
+              },
+              {
+                title: "createVaultCardSetupToken",
+                path: "/graphql/payment-services-extension/mutations/create-vault-card-setup-token/",
+              },
+              {
+                title: "syncPaymentOrder",
+                path: "/graphql/payment-services-extension/mutations/sync-payment-order/",
+              },
+            ],
+          },
+    ],
   },
   {
     title: "Tutorial",
@@ -1276,14 +1360,23 @@ module.exports = [
     ],
   },
   {
-    title: "Reference (2.4.6)",
+    title: "Reference (2.4.8)",
     path: "/graphql/reference",
     pages: [
       {
-        title: "Reference (2.4.7-beta)",
-        path: "/graphql/reference/beta"
-      }
-    ]
+        title: "2.4.8",
+        path: "https://developer.adobe.com/commerce/webapi/graphql-api/",
+        EventTarget: "_blank"
+      },
+      {
+        title: "2.4.7",
+        path: "/graphql/reference/2.4.7",
+      },
+      {
+        title: "2.4.6",
+        path: "/graphql/reference/2.4.6",
+      },
+    ],
   },
   {
     title: "Release notes",
