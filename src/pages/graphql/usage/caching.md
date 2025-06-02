@@ -89,6 +89,14 @@ To define additional factors for computing `X-Magento-Cache-Id` hash values, add
 
 The `X-Magento-Cache-Id` response header is only compatible with Varnish or Fastly.  It cannot be reliably used with built-in Full Page Cache.
 
+<InlineAlert variant="info" slots="text1, text2, text3"/>
+
+The `X-Magento-Cache-Id` response header is only compatible with Varnish or Fastly.  It cannot be reliably used with built-in Full Page Cache.
+
+Since the GraphQL mutations are not intended to be cached, the `X-Magento-Cache-Id` response header will not be returned for GraphQL mutation requests.
+
+Adding factors could generate too many unique cache keys, thereby reducing the number of caching hits and affecting performance.
+
 <InlineAlert variant="info" slots="text" />
 
 Adding factors could generate too many unique cache keys, thereby reducing the number of caching hits and affecting performance.
