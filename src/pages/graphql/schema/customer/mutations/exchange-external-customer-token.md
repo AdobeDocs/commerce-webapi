@@ -8,7 +8,7 @@ title: exchangeExternalCustomerToken mutation
 
 This mutation is part of the [Storefront Compatibility Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/configuration/storefront-compatibility/v248/). It will be added to Adobe Commerce 2.4.9.
 
-The `exchangeExternalCustomerToken` mutation provides the capability for social login authentication using App Builder. With integration token credentials, it allows a shopper to log in or register as a customer. It returns a customer authentication token.
+The `exchangeExternalCustomerToken` mutation provides the capability for social login authentication using App Builder. With integration token credentials, it allows a shopper to log in. If the shopper does not have an account, the mutation creates one.. It returns a customer authentication token.
 
 This mutation requires that an [integration](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/integrations) with the external authenticating system be configured and implemented. Adobe Commerce supports OAuth 1.0. Your calls must supply the following information:
 
