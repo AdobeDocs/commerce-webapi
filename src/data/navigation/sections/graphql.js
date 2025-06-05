@@ -456,8 +456,16 @@ module.exports = [
                 path: "/graphql/schema/customer/queries/downloadable-products/",
               },
               {
+                title: "customerGroup",
+                path: "/graphql/schema/customer/queries/customer-group/",
+              },
+              {
                 title: "customerOrders",
                 path: "/graphql/schema/customer/queries/orders/",
+              },
+              {
+                title: "customerSegments",
+                path: "/graphql/schema/customer/queries/customer-segments/",
               },
               {
                 title: "giftCardAccount",
@@ -502,6 +510,10 @@ module.exports = [
                 path: "/graphql/schema/customer/mutations/delete-address/",
               },
               {
+                title: "exchangeExternalCustomerToken",
+                path: "/graphql/schema/customer/mutations/create-external-customer-token/",
+              },
+              {
                 title: "generateCustomerToken",
                 path: "/graphql/schema/customer/mutations/generate-token/",
               },
@@ -512,6 +524,10 @@ module.exports = [
               {
                 title: "requestPasswordResetEmail",
                 path: "/graphql/schema/customer/mutations/request-password-reset-email/",
+              },
+              {
+                title: "resendConfirmationEmail",
+                path: "/graphql/schema/customer/mutations/resend-confirmation-email/",
               },
               {
                 title: "resetPassword",
@@ -730,6 +746,10 @@ module.exports = [
                 path: "/graphql/schema/orders/mutations/cancel-order/",
               },
               {
+                title: "confirmCancelOrder",
+                path: "/graphql/schema/orders/mutations/confirm-cancel-order/",
+              },
+              {
                 title: "confirmReturn",
                 path: "/graphql/schema/orders/mutations/confirm-return/",
               },
@@ -740,6 +760,10 @@ module.exports = [
               {
                 title: "reorderItems",
                 path: "/graphql/schema/orders/mutations/reorder-items/",
+              },
+              {
+                title: "requestGuestOrderCancel",
+                path: "/graphql/schema/orders/mutations/request-guest-order-cancel/",
               },
               {
                 title: "requestGuestReturn",
@@ -1146,6 +1170,10 @@ module.exports = [
               {
                 title: "copyProductsBetweenWishlists",
                 path: "/graphql/schema/wishlist/mutations/copy-products/",
+              },
+              {
+                title: "clearWishlist",
+                path: "/graphql/schema/wishlist/mutations/clear/",
               },
               {
                 title: "createWishlist",
