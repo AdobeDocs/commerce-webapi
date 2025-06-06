@@ -433,9 +433,9 @@ If other promotions or price adjustments are applied to the cart through either 
 }
 ```
 
-### Fixed Product Tax example
+### Fixed product tax example
 
-The following query shows how to retrieve Fixed Product Tax (FPT) information for items in a cart. In this example, the cart contains a product that has a base price of $100 and an associated FPT of $20 labeled as "fpt1".
+The following query shows how to retrieve fixed product tax (FPT) information for items in a cart. In this example, the cart contains a product that has a base price of $100 and an associated FPT of $20 labeled as "fpt1".
 
 **Request:**
 
@@ -605,7 +605,7 @@ The following query shows how to retrieve Fixed Product Tax (FPT) information fo
 }
 ```
 
-Note that Fixed Product Tax information appears under `cart.items.prices.fixed_product_taxes` rather than in the `applied_taxes` section. The FPT amount is included in the `subtotal_including_tax` and `grand_total` values.
+Note that fixed product tax information appears under `cart.items.prices.fixed_product_taxes` rather than in the `applied_taxes` section. The FPT amount is included in the `subtotal_including_tax` and `grand_total` values.
 
 For more details about cart item prices and FPT fields in the schema, see the [CartItemPrices](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CartItemPrices) reference.
 
