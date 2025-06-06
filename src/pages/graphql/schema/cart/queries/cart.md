@@ -607,7 +607,7 @@ The following query shows how to retrieve Fixed Product Tax (FPT) information fo
 
 Note that Fixed Product Tax information appears under `cart.items.prices.fixed_product_taxes` rather than in the `applied_taxes` section. The FPT amount is included in the `subtotal_including_tax` and `grand_total` values.
 
-For more details about cart item prices and FPT fields in the schema, see the [CartItemPrices](../../../../../../static/graphql-api/2.4.7/index.html#definition-CartItemPrices) reference.
+For more details about cart item prices and FPT fields in the schema, see the [CartItemPrices](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CartItemPrices) reference.
 
 ### Tier price example
 
