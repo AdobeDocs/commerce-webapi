@@ -453,6 +453,10 @@ module.exports = [
             ]
         },
         {
+            title: "Custom attributes",
+            path: "/rest/modules/custom-attributes/"
+        },
+        {
             title: "Import",
             path: "/rest/modules/import/"
         },
