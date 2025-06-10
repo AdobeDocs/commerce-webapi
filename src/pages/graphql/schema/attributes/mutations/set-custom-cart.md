@@ -10,6 +10,8 @@ This mutation is automatically available on [Adobe Commerce as a Cloud Service](
 
 The `setCustomAttributesOnCart` mutation sets custom attributes on a cart. The mutation accepts a cart ID and an array of custom attribute key/value pairs. It returns the updated cart.  All ID values are treated as strings.
 
+When the quote is converted to an order, the custom attributes are copied to the order.
+
 To remove a custom attribute, rerun the mutation without the previously applied custom attribute.
 
 ## Syntax
