@@ -229,13 +229,13 @@ curl -i -X POST \
  'https://<COMMERCE_URL>/rest/all/V1/orders'
 ```
 
-If an order item has custom attributes, they will be returned as part of the order item object in responses to requests like GET /V1/order/items/{id}
+If an order item has custom attributes, they will be returned as part of the order item object in responses to requests like `GET /V1/order/items/{id}`.
 
 ### Negotiable Quote
 
 <Edition name="saas" />
 
-The `POST /V1/negotiableQuote/setCustomAttributes` endpoint is new. It allows you to set custom attributes on a negotiable quote. The request body must include the `quote_id` and an array of `custom_attributes`.
+The `POST /V1/negotiableQuote/setCustomAttributes` endpoint allows you to set custom attributes on a negotiable quote. The request body must include the `quote_id` and an array of `custom_attributes`.
 
 ```curl
 curl -i -X POST \
