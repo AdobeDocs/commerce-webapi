@@ -4,6 +4,7 @@ description: Review comprehensive reference documentation for the Adobe Commerce
 layout: none
 keywords:
   - REST
+openAPISpec: https://raw.githubusercontent.com/AdobeDocs/commerce-webapi/refs/heads/jh_test-rest-saas/src/openapi/saas-schema.json
 --- 
 
-<RedoclyAPIBlock src="https://raw.githubusercontent.com/AdobeDocs/commerce-webapi/refs/heads/jh_test-rest-saas/src/openapi/saas-schema.json" />
+# REST endpoints (Adobe Commerce as a Cloud Service)

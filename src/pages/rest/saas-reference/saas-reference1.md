@@ -6,4 +6,4 @@ keywords:
   - REST
 --- 
 
-<RedoclyAPIBlock src="https://raw.githubusercontent.com/AdobeDocs/commerce-webapi/refs/heads/jh_test-rest-saas/src/openapi/saas-schema.json" />
+<RedoclyAPIBlock src="../../../openapi/saas-schema.json"/>
