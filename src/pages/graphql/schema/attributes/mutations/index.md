@@ -2,6 +2,8 @@
 title: Custom attribute mutations
 ---
 
+import InstallCustomAttributes from '/src/_includes/custom-attribute-installation.md'
+
 # Custom attribute mutations
 
 <InlineAlert variant="important" slots="text" />
@@ -43,7 +45,5 @@ The following entities now support custom attributes:
 * `QuoteItem`
 
 ## Install custom attribute support
-
-import InstallCustomAttributes from '/src/_includes/custom-attribute-installation.md'
 
 <InstallCustomAttributes />

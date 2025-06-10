@@ -3,11 +3,11 @@ title: setCustomAttributesOnCompany mutation
 edition: saas
 ---
 
+import CustomAttributesAvailability from '/src/_includes/graphql/custom-attribute-availability.md'
+
 # setCustomAttributesOnCompany mutation
 
-<InlineAlert variant="important" slots="text" />
-
-This mutation is automatically available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview) (SaaS) projects. Adobe Commerce on-premises and Cloud infrastructure (PaaS) projects can [install separate modules](./index.md) to provide this functionality.
+<CustomAttributesAvailability />
 
 The `setCustomAttributesOnCompany` mutation sets custom attributes on a company. The mutation accepts a company ID and an array of custom attribute key/value pairs. It returns the updated `Company` object.  All ID values are treated as strings.
 
