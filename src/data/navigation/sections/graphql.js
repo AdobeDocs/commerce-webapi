@@ -114,6 +114,44 @@ module.exports = [
             ]
           },
           {
+            title: "Mutations",
+            path: "/graphql/schema/attributes/mutations/",
+            pages: [
+              {
+                title: "setCustomAttributesOnCart",
+                path: "/graphql/schema/attributes/mutations/set-custom-cart.md"
+              },
+              {
+                title: "setCustomAttributesOnCartItem",
+                path: "/graphql/schema/attributes/mutations/set-custom-cart-item.md"
+              },
+              {
+                title: "setCustomAttributesOnCompany",
+                path: "/graphql/schema/attributes/mutations/set-custom-company.md"
+              },
+              {
+                title: "setCustomAttributesOnCreditMemo",
+                path: "/graphql/schema/attributes/mutations/set-custom-credit-memo.md"
+              },
+              {
+                title: "setCustomAttributesOnCreditMemoItem",
+                path: "/graphql/schema/attributes/mutations/set-custom-credit-memo-item.md"
+              },
+              {
+                title: "setCustomAttributesOnInvoice",
+                path: "/graphql/schema/attributes/mutations/set-custom-invoice.md"
+              },
+              {
+                title: "setCustomAttributesOnInvoiceItem",
+                path: "/graphql/schema/attributes/mutations/set-custom-invoice-item.md"
+              },
+              {
+                title: "setCustomAttributesOnNegotiableQuote",
+                path: "/graphql/schema/attributes/mutations/set-custom-negotiable-quote.md"
+              }
+            ]
+          },
+          {
             title: "Interfaces",
             path: "/graphql/schema/attributes/interfaces/"
           }
