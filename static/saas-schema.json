@@ -8,7 +8,7 @@
     },
     "swagger": "2.0",
     "info": {
-        "version": "3.0",
+        "version": "1.0",
         "title": "Adobe Commerce SaaS"
     },
     "host": "localhost",

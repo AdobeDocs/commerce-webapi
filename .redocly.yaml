@@ -1,0 +1,26 @@
+# See https://docs.redoc.ly/cli/configuration/ for more information.
+organization: adobe-developers
+extends:
+    - minimal
+apis:
+  Commerce(SaaS):
+    root: /saas-schema.yaml
+    labels:
+      - main
+  Commerce(SaaS1):
+    root: /src/openapi/saas-schema.yaml
+    labels:
+      - main1
+features.openapi:
+  pagination: section
+  hideHostname: true
+  sortPropsAlphabetically: true
+  pathInMiddlePanel: true
+  hideDownloadButton: false
+  hideTryItPanel: true
+  showExtensions: true
+  nativeScrollbars: true
+  ctrlFHijack: true
+  scrollYOffset: .site-nav
+  sortTagsAlphabetically: true
+  sortOperationsAlphabetically: true
