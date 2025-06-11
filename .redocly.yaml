@@ -3,14 +3,14 @@ organization: adobe-developers
 extends:
     - minimal
 apis:
-  Commerce(SaaS):
+  Commerce(SaaS0):
     root: /saas-schema.yaml
     labels:
       - main
   Commerce(SaaS1):
     root: /src/openapi/saas-schema.yaml
     labels:
-      - main1
+      - notmain
 features.openapi:
   pagination: section
   hideHostname: true
