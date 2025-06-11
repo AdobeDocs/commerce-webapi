@@ -6,4 +6,4 @@ keywords:
   - REST
 --- 
 
-<RedoclyAPIBlock src="/commerce/webapi/saas-schema.json"/>
+<RedoclyAPIBlock src="/commerce/webapi/saas-schema.yaml"/>
