@@ -4,11 +4,11 @@ extends:
     - minimal
 apis:
   Commerce(SaaS0):
-    root: /saas-schema.yaml
+    root: /src/openapi/saas-schema.yaml
     labels:
       - main
-  Commerce(SaaS1):
-    root: /src/openapi/saas-schema.yaml
+  Commerce1(SaaS1):
+    root: /saas-schema.yaml
     labels:
       - notmain
 features.openapi:
