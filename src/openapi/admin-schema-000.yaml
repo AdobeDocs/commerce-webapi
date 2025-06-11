@@ -6,9 +6,8 @@ securityDefinitions:
 swagger: '2.0'
 info:
   version: '000'
-  title: Commerce Admin REST endpoints - All inclusive
-host: example.com
-basePath: https://localhost/rest/default
+  title: Commerce SaaS REST endpoints
+host: adobe.com
 schemes:
 - https
 tags:
