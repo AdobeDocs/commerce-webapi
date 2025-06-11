@@ -1,4 +1,3 @@
----
 securityDefinitions:
   api_key:
     type: apiKey
