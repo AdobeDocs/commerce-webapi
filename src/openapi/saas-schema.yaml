@@ -1,4 +1,3 @@
----
 securityDefinitions:
   api_key:
     type: apiKey
@@ -7,11 +6,8 @@ securityDefinitions:
 swagger: '2.0'
 info:
   version: '000'
-  title: Commerce Admin REST endpoints - All inclusive
-  description:
-    "$ref": "../_includes/redocly-intro.md"
-host: example.com
-basePath: https://localhost/rest/default
+  title: Commerce SaaS REST endpoints
+host: adobe.com
 schemes:
 - https
 tags:
