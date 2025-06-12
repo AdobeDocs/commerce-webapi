@@ -18,7 +18,7 @@ The Catalog Service query requires one or more SKU values as input. The query is
 
 <InlineAlert variant="info" slots="text"/>
 
-Use the Live Search [`productSearch` query](../live-search/product-search.md) to return product listing page content.
+Use the Live Search [`productSearch` query](../../live-search/queries/product-search.md) to return product listing page content.
 
 The `ProductView` output object is significantly different than the core `products` query `Products` output object. Key differences include:
 
