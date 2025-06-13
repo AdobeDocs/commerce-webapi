@@ -11,7 +11,7 @@ The `products` query allows you to search for catalog items.
 
 <InlineAlert variant="important" slots="text" />
 
-Adobe Commerce as a Cloud Service does not support the `products` query. Use the Catalog Service [`products` query](https://developer.adobe.com/commerce/services/graphql/catalog-service/products/) instead.
+Adobe Commerce as a Cloud Service does not support the `products` query. Use the Catalog Service [`products` query](../../catalog-service/queries/products.md) instead.
 
 ## Syntax
 
