@@ -10,7 +10,7 @@ keywords:
 
 The `refineProduct` query helps narrow down the results of a `products` query that was run against a complex product. To use this query effectively, first run the `products` query and ensure that the response includes a list of options within a `ComplexProductView` inline fragment. When a shopper selects a product option (such as size or color) on the storefront, you can then run the `refineProduct query` by specifying the SKU and the selected option value IDs as input. Depending on the number of product options available for the complex product, you might need to run the `refineProduct` query multiple times until the shopper has selected a specific variant.
 
-Ensure that your query response includes both the` ComplexProductView` and `SimpleProductView` inline fragments. If the shopper has not selected all required options, the query returns the IDs of unselected options along with the minimum and maximum price of the product, based on the selected options and possible remaining options. If all required options are selected, the query returns details about a simple product, including its set price.
+Ensure that your query response includes both the `ComplexProductView` and `SimpleProductView` inline fragments. If the shopper has not selected all required options, the query returns the IDs of unselected options along with the minimum and maximum price of the product, based on the selected options and possible remaining options. If all required options are selected, the query returns details about a simple product, including its set price.
 
 ## Syntax
 
