@@ -36,7 +36,7 @@ The `ProductView` output object is significantly different than the core `produc
 ## Syntax
 
 ```graphql
-products (skus [String]) [ProductView]
+products(skus: [String]): [ProductView]
 ```
 
 ## Endpoints
