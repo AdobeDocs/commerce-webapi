@@ -200,7 +200,7 @@ Field | Data type | Description
 --- | --- | ---
 `ids` | [String!] | Array of category IDs to return. If using `subtree`, must contain only one ID.
 `roles` | [String!]! |  The list of category roles to be queried.
-`subtree` | [[subtree](#subtree-input)] | Defines how many subcategories to return.
+`subtree` | [[subtree](#subtree-input)] | Defines the number of sub-levels of categories to return.
 
 ### subtree input
 

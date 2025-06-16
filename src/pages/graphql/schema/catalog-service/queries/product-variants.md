@@ -475,7 +475,7 @@ query {
 
 ## Return variants by `optionId`
 
-This query returns the SKU, name, and images for all size large variants of product MH07. The `optionIDs` input parameter value is sourced from the [Return details about a complex product](products.md#return-details-about-a-complex-product) example in the products query.
+This query returns the SKU, name, and images for all size large variants of product MH07. The `optionIDs` input parameter value is sourced from the [Return details about a complex product](products.md#return-details-about-a-complex-product) example in the products query. The `optionIDs` parameter can be specified as a single string, or an array if you supply multiple values.
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, CURL, JSON" />
 
@@ -606,7 +606,7 @@ You must specify a SKU value for the query.
 
 Field | Data type | Description
 --- | --- | ---
-`cursor` | String | Manages pagination of variant results. Include the `cursor` value returned in the results from a previous `variants` query to fetch the next set of results. See [Return results by cursor position](#return-results-by-cursor-position).(#return-results-by-cursor-position).(#return-results-by-cursor-position) example.
+`cursor` | String | Manages pagination of variant results. Include the `cursor` value returned in the results from a previous `variants` query to fetch the next set of results. See [Return results by cursor position](#return-results-by-cursor-position) example.
 `optionIds` | [String!] | A list of IDs assigned to the product options the shopper has selected, such as specific colors and sizes.
 `pageSize` | Int | Specifies the maximum number of results to return. Default: 100.
 `sku` | String! |  The SKU of a complex product.

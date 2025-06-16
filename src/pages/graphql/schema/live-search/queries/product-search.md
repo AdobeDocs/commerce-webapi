@@ -11,7 +11,7 @@ keywords:
 
 This article discusses the `productSearch` query that is available in the Live Search and Catalog Service extension. While similar in structure and functionality, there are differences in what they output.
 
-See [Boundaries and Limits](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/live-search/boundaries-limits) for the latest recommendations for creating performant queries.
+See [Boundaries and Limits](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/live-search/boundaries-limits) in the *Live Search Guide* for the latest recommendations for creating performant queries.
 
 ## Syntax
 
@@ -1432,7 +1432,7 @@ Field | Data Type | Description
 
 ### Live Search fields
 
-Live Search contains information about the product within the [ProductInterface!](https://developer.adobe.com/commerce/webapi/graphql/schema/products/interfaces/attributes/) attribute.
+Live Search returns product information using the [ProductInterface!](https://developer.adobe.com/commerce/webapi/graphql/schema/products/interfaces/attributes/).
 
 ### Catalog Service fields
 

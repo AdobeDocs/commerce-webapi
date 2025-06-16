@@ -11,7 +11,7 @@ Field | Data Type | Description
 `inputOptions` | [`[ProductViewInputOption]`](#productviewinputoption-type) | A list of input options the shopper can supply to customize a product.
 `inStock` | Boolean | Indicates whether the product is in stock.
 `lastModifiedAt` | DateTime | Date and time when the product was last updated.
-`links(linkTypes: [String!])` | [`[ProductViewLink]`](#productviewlink-type) | A list of product links.
+`links(linkTypes: [String!])` | [`[ProductViewLink]`](#productviewlink-type) | A list of related, corss-sell, or up-sell products.
 `lowStock` | Boolean | Indicates whether the product stock is low.
 `metaDescription` | String | A brief overview of the product for search results listings.
 `metaKeyword` | String | A comma-separated list of keywords that are visible only to search engines.

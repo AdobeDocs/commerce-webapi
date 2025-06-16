@@ -8,9 +8,9 @@ keywords:
 
 # refineProduct query
 
-The `refineProduct` query narrows the results of a `products` query that was run against a complex product. Before you run the `refineProduct` query, you must run the `products` query and construct the response so that it returns a list of `options` within a `ComplexProductView` inline fragment. When a shopper selects a product option (such as size or color) on the storefront, run the `refineProduct` query, specifying the SKU and selected option value IDs as input. Depending on the number of product options the complex product has, you might need to run the `refineProduct` query multiple times, until the shopper has selected a specific variant.
+The `refineProduct` query helps narrow down the results of a `products` query that was run against a complex product. To use this query effectively, first run the `products` query and ensure that the response includes a list of options within a `ComplexProductView` inline fragment. When a shopper selects a product option (such as size or color) on the storefront, you can then run the `refineProduct query` by specifying the SKU and the selected option value IDs as input. Depending on the number of product options available for the complex product, you might need to run the `refineProduct` query multiple times until the shopper has selected a specific variant.
 
-You should construct the response of your query so that it contains both the `ComplexProductView` and `SimpleProductView` inline fragments. If the shopper has not selected all of the required options, the query will return the IDs of unselected options and the minimum and maximum price of the product, based on the selected options and possible remaining options. If the shopper has selected all the required options, the query returns details about a simple product, which includes a set price.
+Ensure that your query response includes both the` ComplexProductView` and `SimpleProductView` inline fragments. If the shopper has not selected all required options, the query returns the IDs of unselected options along with the minimum and maximum price of the product, based on the selected options and possible remaining options. If all required options are selected, the query returns details about a simple product, including its set price.
 
 ## Syntax
 
@@ -281,7 +281,7 @@ You must specify a SKU value and at least one option ID as input.
 
 Field | Data type | Description
 --- | --- | ---
-`optionIds` | [String!]! | A list of IDs assigned to the product options the shopper has selected, such specific colors and sizes.
+`optionIds` | [String!]! | A list of IDs assigned to the product options the shopper has selected, such as specific colors and sizes.
 `sku` | String! |  The SKU of a complex product.
 
 ## Output fields

@@ -9,7 +9,7 @@ keywords:
 
 # attributeMetadata query
 
-The `attributeMetadata` query returns a list of product attribute codes that can be used for sorting or filtering in a [`productSearch` query](./product-search.md). The query response can include the attribute name, display label, and a Boolean value that indicates if the attribute has a numeric value.
+The `attributeMetadata` query returns a list of product attribute codes that can be used for sorting or filtering in a [`productSearch` query](./product-search.md). The query response can include the attribute name, display label, and a Boolean value that indicates if the attribute has a numeric value that can be used for numeric operations, such as range filters or sorting.
 
 ## Syntax
 
@@ -162,7 +162,7 @@ Field | Data Type | Description
 --- | --- | ---
 `attribute` | String! | The unique identifier for an attribute code. This value should be in lowercase letters and without spaces
 `label` | String | The display name assigned to the attribute
-`numeric` | Boolean | Indicates whether this attribute has a numeric value, such as a price or integer
+`numeric` | Boolean | Indicates whether this attribute has a numeric value, such as a price or integer that can be used for numeric operations, such as range filters or sorting.
 
 ### SortableAttribute data type
 
@@ -172,4 +172,4 @@ Field | Data Type | Description
 --- | --- | ---
 `attribute` | String! | The unique identifier for an attribute code. This value should be in lowercase letters and without spaces
 `label` | String | The display name assigned to the attribute
-`numeric` | Boolean | Indicates whether this attribute has a numeric value, such as a price or integer
+`numeric` | Boolean | Indicates whether this attribute has a numeric value, such as a price or integer that can be used for numeric operations, such as range filters or sorting.
