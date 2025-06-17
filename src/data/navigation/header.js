@@ -11,12 +11,12 @@ module.exports = [
       title: "REST",
       menu: [
         {
-          title: "REST Guide",
+          title: "Guide",
           path: "/rest/",
         },
         {
-          title: "Endpoint Reference",
-          path: "/rest/quick-reference/"
+          title: "Reference",
+          path: "/rest/quick-reference/", EventTarget: "_blank"
         }
       ],
     },
@@ -24,11 +24,11 @@ module.exports = [
       title: "GraphQL",
       menu: [
         {
-          title: "GraphQL Guide",
+          title: "Guide",
           path: "/graphql/"
         },
         {
-          title: "Schema Reference",
+          title: "Reference",
           path: "https://developer.adobe.com/commerce/webapi/graphql-api/",
         EventTarget: "_blank"
         }
