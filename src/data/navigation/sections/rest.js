@@ -487,9 +487,5 @@ module.exports = [
             path: "/rest/modules/sales/"
         },
     ],
-  },
-  {
-    title: "Attributes",
-    path: "/rest/attributes/"
-  },
+  }
 ];

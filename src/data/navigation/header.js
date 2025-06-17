@@ -11,7 +11,7 @@ module.exports = [
       title: "REST",
       menu: [
         {
-          title: "Guide",
+          title: "REST Guide",
           path: "/rest/",
         },
         {
@@ -24,7 +24,7 @@ module.exports = [
       title: "GraphQL",
       menu: [
         {
-          title: "Guide",
+          title: "GraphQL Guide",
           path: "/graphql/"
         },
         {
