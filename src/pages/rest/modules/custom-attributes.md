@@ -27,7 +27,7 @@ The following sections describe the REST endpoints that support custom attribute
 
 <InlineAlert variant="important" slots="text" />
 
-Adobe Commerce as a Cloud Service does not support REST endpoints that modify the cart on behalf of a customer or guest user. Use the GraphQL [`setCustomAttributesOnCart` mutation](../../graphql/schema/attributes/mutations/set-custom-cart.md) and the [`setCustomAttributesOnCartItem mutation](../../graphql/schema/attributes/mutations/set-custom-cart-item.md) instead for these types of users. Admin users can use the REST endpoints to set custom attributes on the cart and cart items.
+Adobe Commerce as a Cloud Service does not support REST endpoints that modify the cart on behalf of a customer or guest user. Use the GraphQL [`setCustomAttributesOnCart` mutation](../../graphql/schema/attributes/mutations/set-custom-cart.md) and the [`setCustomAttributesOnCartItem` mutation](../../graphql/schema/attributes/mutations/set-custom-cart-item.md) instead for these types of users. Admin users can use the REST endpoints to set custom attributes on the cart and cart items.
 
 When the quote is converted to an order, the custom attributes are copied to the order.
 
