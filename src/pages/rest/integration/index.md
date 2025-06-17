@@ -3,7 +3,6 @@ title: Server-to-server integration
 description: Learn how to implement a server-to-server integration with the Adobe Commerce as a Cloud Service REST API.
 keywords:
   - REST
-  - Services
 edition: saas
 noIndex: true
 ---
