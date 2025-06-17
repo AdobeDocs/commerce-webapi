@@ -33,10 +33,6 @@ module.exports = [
         
         },
         {
-          title: "Restricting access to anonymous web APIs",
-          path: "/rest/use-rest/anonymous-api-security.md",
-        },
-        {
           title: "Asynchronous web endpoints",
           path: "/rest/use-rest/asynchronous-web-endpoints.md",
         },
