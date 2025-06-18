@@ -9,10 +9,29 @@ module.exports = [
     },
     {
       title: "REST",
-      path: "/rest/",
+      menu: [
+        {
+          title: "Guide",
+          path: "/rest/",
+        },
+        {
+          title: "Reference",
+          path: "/rest/quick-reference/"
+        }
+      ],
     },
     {
       title: "GraphQL",
-      path: "/graphql/",
-    },
-  ];
+      menu: [
+        {
+          title: "Guide",
+          path: "/graphql/"
+        },
+        {
+          title: "Reference",
+          path: "https://developer.adobe.com/commerce/webapi/graphql-api/",
+        EventTarget: "_blank"
+        }
+      ]
+    }
+];
