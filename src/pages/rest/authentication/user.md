@@ -147,6 +147,7 @@ Authorization code to access token:
       "token_type": "bearer"
      }
      ```
+
   1. Update the stored tokens.
 
 - Token storage best practices:
