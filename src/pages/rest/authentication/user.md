@@ -76,82 +76,84 @@ Replace the following placeholders with your values:
 
 **Handling authorization response**
 
-- Redirect handling:
-  1. User completes authentication
-  1. Browser redirects to your `redirect_uri`
-  1. Authorization code is included in URL parameters
-- Authorization code extraction:
-  1. Parse code from URL: `?code={{auth_code}}&state=something`
-  1. Verify state parameter matches original request
-- Error handling:
-  1. Check for error parameters in redirect
-  1. Implement appropriate error messaging
-  1. Provide retry mechanisms
+Redirect handling:
+
+1. User completes authentication
+1. Browser redirects to your `redirect_uri`
+1. Authorization code is included in URL parameters
+
+Authorization code extraction:
+
+1. Parse code from URL: `?code={{auth_code}}&state=something`
+1. Verify state parameter matches original request
+
+Error handling:
+
+1. Check for error parameters in redirect
+1. Implement appropriate error messaging
+1. Provide retry mechanisms
 
 ### 3. Token exchange
 
-- Authorization code to access token:
-  1. Make a `POST` request to the token endpoint.
+Authorization code to access token:
 
-<CodeBlock slots="heading, code" repeat="2" languages="HTTP, JSON" />
+1. Make a `POST` request to the token endpoint.
 
-#### Request
-
-```http
-POST https://ims-na1.adobelogin.com/ims/token/v3
-Authorization: Basic {{base64(client_id:client_secret)}}
-Content-Type: application/x-www-form-urlencoded
-
-code={{auth_code}}&grant_type=authorization_code
-```
-
-#### Response:
-
-```json
-{
+   **Request**:
+  
+   ```http
+   POST https://ims-na1.adobelogin.com/ims/token/v3
+   Authorization: Basic {{base64(client_id:client_secret)}}
+   Content-Type: application/x-www-form-urlencoded
+   
+   code={{auth_code}}&grant_type=authorization_code
+   
+   ```
+  
+   **Response**:
+  
+   ```json
+   {
     "access_token": "{ACCESS_TOKEN}",
     "refresh_token": "{REFRESH_TOKEN}",
     "sub": "A0BC123D4CD449CA0A494133@a12b34cd5b5b7e0e0a494004",
     "id_token": "{ID_TOKEN}",
     "token_type": "bearer",
     "expires_in": 86399
-}
-```
+    }
+    ```
 
 - Token refresh process:
   1. Monitor token expiration.
   1. Use refresh token to obtain new access token.
-
-<CodeBlock slots="heading, code" repeat="2" languages="HTTP, JSON" />
-
-#### Request
-
-```http
-POST https://ims-na1.adobelogin.com/ims/token/v3
-Authorization: Basic {{base64(client_id:client_secret)}}
-Content-Type: application/x-www-form-urlencoded
-
-grant_type=refresh_token&refresh_token={{refresh_token}}
-```
-
-#### Response
-
-```json
-{
-"access_token": "{ACCESS_TOKEN}",
-"refresh_token": "{REFRESH_TOKEN}",
-"expires_in": 86399,
-"token_type": "bearer"
-}
-```
-
+  
+     **Request**:
+  
+     ```http
+     POST https://ims-na1.adobelogin.com/ims/token/v3
+     Authorization: Basic {{base64(client_id:client_secret)}}
+     Content-Type: application/x-www-form-urlencoded
+     
+     grant_type=refresh_token&refresh_token={{refresh_token}}
+     ```
+  
+     **Response**:
+  
+     ```json
+     {
+      "access_token": "{ACCESS_TOKEN}",
+      "refresh_token": "{REFRESH_TOKEN}",
+      "expires_in": 86399,
+      "token_type": "bearer"
+     }
+     ```
   1. Update the stored tokens.
 
 - Token storage best practices:
 
-  1. Secure storage methods
-  1. Encryption at rest
-  1. Token rotation procedures
+  - Secure storage methods
+  - Encryption at rest
+  - Token rotation procedures
 
 ## Usage examples
 
@@ -166,6 +168,7 @@ grant_type=refresh_token&refresh_token={{refresh_token}}
   1. Token expiration handling
   1. Invalid token responses
   1. Scope-related errors
+
 - Token refresh flow
   1. Detecting expired tokens
   1. Automatic refresh implementation

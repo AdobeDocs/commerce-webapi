@@ -16,7 +16,7 @@ module.exports = [
         },
         {
           title: "Reference",
-          path: "/rest/quick-reference/", EventTarget: "_blank"
+          path: "/rest/quick-reference/"
         }
       ],
     },

@@ -13,6 +13,8 @@ import ACCSEarlyAccess from '/src/_includes/accs/accs-early-access.md'
 
 Adobe Commerce as a Cloud Service REST API authentication is handled through Adobe's Identity Management Service (IMS), providing secure access to Commerce functionality through standardized OAuth 2.0 protocols. This authentication system supports both interactive user-based workflows and automated server-to-server integrations, ensuring secure and appropriate access for different use cases.
 
+See [Authentication](../../get-started/authentication/index.md) in the _Get Started_ guide for information about the authentication methods available on other versions of Adobe Commerce.
+
 ## [User authentication with SUSI UI](./user.md)
 
 The User Authentication flow leverages Adobe's Secure User Sign-In (SUSI) interface to authenticate Commerce administrators. This method is ideal when API operations need to be executed within the context of a specific admin user's permissions. The authentication process provides a secure, OAuth-based workflow where users authenticate through Adobe's login interface, ensuring credentials are never directly handled by your application.

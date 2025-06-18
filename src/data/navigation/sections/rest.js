@@ -1,7 +1,7 @@
 module.exports = [
     {
-        title: "Overview",
-        path: "/rest/", 
+        title: "Introduction",
+        path: "/rest/",
     },
     {
         title: "REST endpoints (ReDocly)",
@@ -11,6 +11,10 @@ module.exports = [
         title: "Authentication",
         path: "/rest/authentication/",
         pages: [
+            {
+                title: "Introduction",
+                path: "/rest/authentication/"
+            },
             {
                 title: "User authentication",
                 path: "/rest/authentication/user.md",
