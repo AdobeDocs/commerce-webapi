@@ -1482,25 +1482,6 @@ module.exports = [
     ],
   },
   {
-    title: "Reference (2.4.8)",
-    path: "/graphql/reference",
-    pages: [
-      {
-        title: "2.4.8",
-        path: "https://developer.adobe.com/commerce/webapi/graphql-api/",
-        EventTarget: "_blank"
-      },
-      {
-        title: "2.4.7",
-        path: "/graphql/reference/2.4.7",
-      },
-      {
-        title: "2.4.6",
-        path: "/graphql/reference/2.4.6",
-      },
-    ],
-  },
-  {
     title: "Release notes",
     path: "/graphql/release-notes/",
   },

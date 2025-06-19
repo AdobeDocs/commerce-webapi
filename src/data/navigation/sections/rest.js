@@ -4,10 +4,6 @@ module.exports = [
         path: "/rest/",
     },
     {
-        title: "REST endpoints (ReDocly)",
-        path: "/rest/quick-reference/",
-    },
-    {
         title: "Authentication",
         path: "/rest/authentication/",
         pages: [
