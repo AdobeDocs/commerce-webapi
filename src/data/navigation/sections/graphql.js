@@ -1488,18 +1488,22 @@ module.exports = [
       {
         title: "SaaS",
         path: "https://developer.adobe.com/commerce/webapi/reference/graphql/saas/",
+        EventTarget: "_top"
       },
       {
         title: "2.4.8",
         path: "https://developer.adobe.com/commerce/webapi/reference/graphql/2.4.8/",
+        EventTarget: "_top"
       },
       {
         title: "2.4.7",
         path: "https://developer.adobe.com/commerce/webapi/reference/graphql/2.4.7/",
+        EventTarget: "_top"
       },
       {
         title: "2.4.6",
         path: "https://developer.adobe.com/commerce/webapi/reference/graphql/2.4.6/",
+        EventTarget: "_top"
       },
     ],
   },

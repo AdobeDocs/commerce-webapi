@@ -9,11 +9,13 @@ module.exports = [
         pages: [
             {
                 title: "PaaS Reference",
-                path: "https://developer.adobe.com/commerce/webapi/reference/rest/paas/"
+                path: "https://developer.adobe.com/commerce/webapi/reference/rest/paas/",
+                EventTarget: "_top"
             },
             {
                 title: "SaaS Reference",
-                path: "https://developer.adobe.com/commerce/webapi/reference/rest/saas/"
+                path: "https://developer.adobe.com/commerce/webapi/reference/rest/saas/",
+                EventTarget: "_top"
             }
         ],
     },
