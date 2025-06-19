@@ -1482,6 +1482,28 @@ module.exports = [
     ],
   },
   {
+    title: "Reference",
+    path: "/graphql/",
+    pages: [
+      {
+        title: "SaaS",
+        path: "https://developer.adobe.com/commerce/webapi/reference/graphql/saas/",
+      },
+      {
+        title: "2.4.8",
+        path: "https://developer.adobe.com/commerce/webapi/reference/graphql/2.4.8/",
+      },
+      {
+        title: "2.4.7",
+        path: "https://developer.adobe.com/commerce/webapi/reference/graphql/2.4.7/",
+      },
+      {
+        title: "2.4.6",
+        path: "https://developer.adobe.com/commerce/webapi/reference/graphql/2.4.6/",
+      },
+    ],
+  },
+  {
     title: "Release notes",
     path: "/graphql/release-notes/",
   },

@@ -4,6 +4,20 @@ module.exports = [
         path: "/rest/",
     },
     {
+        title: "Reference",
+        path: "/rest/",
+        pages: [
+            {
+                title: "PaaS Reference",
+                path: "https://developer.adobe.com/commerce/webapi/reference/rest/paas/"
+            },
+            {
+                title: "SaaS Reference",
+                path: "https://developer.adobe.com/commerce/webapi/reference/rest/saas/"
+            }
+        ],
+    },
+    {
         title: "Authentication",
         path: "/rest/authentication/",
         pages: [
