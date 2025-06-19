@@ -6,6 +6,8 @@ keywords:
   - REST
 ---
 
+<!--  This topic was removed from the navigation. I kept it here because the Commmerce codebase has multiple links to the file. I don't think this content is useful. The code annotations and this topic were added in the early days of Magento 2.0, and someone didn't want to inspect the details provided in Swagger. -->
+
 # Retrieving detailed attributes
 
 Swagger and other types of code-generated documentation erroneously indicate several APIs that search across multiple objects return detailed information about individual objects. Detailed information, such as `extensionAttributes`,  `customAttributes`, and possibly other fields, are generally available only when requesting information on a single object.

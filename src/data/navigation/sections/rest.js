@@ -1,20 +1,42 @@
 module.exports = [
     {
-        title: "Overview",
-        path: "/rest/", 
+        title: "Introduction",
+        path: "/rest/",
     },
     {
         title: "REST endpoints (ReDocly)",
         path: "/rest/quick-reference/",
     },
     {
-        title: "Generate a local API Reference",
-        path: "/rest/quick-reference/generate-local.md",
+        title: "Authentication",
+        path: "/rest/authentication/",
+        pages: [
+            {
+                title: "Introduction",
+                path: "/rest/authentication/"
+            },
+            {
+                title: "User authentication",
+                path: "/rest/authentication/user.md",
+            },
+            {
+                title: "Server-to-server authentication",
+                path: "/rest/authentication/server-to-server.md",
+            }
+        ],
+    },
+    {
+        title: "Integration",
+        path: "/rest/integration.md"
     },
   {
     title: "Use REST endpoints",
     path: "/rest/use-rest/",
     pages: [
+        {
+            title: "Generate a local API Reference",
+            path: "/rest/quick-reference/generate-local.md",
+        },
         {
           title: "Search using REST",
           path: "/rest/use-rest/performing-searches.md",
@@ -465,9 +487,5 @@ module.exports = [
             path: "/rest/modules/sales/"
         },
     ],
-  },
-  {
-    title: "Attributes",
-    path: "/rest/attributes/"
-  },
+  }
 ];
