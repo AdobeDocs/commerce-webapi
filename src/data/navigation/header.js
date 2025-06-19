@@ -15,8 +15,12 @@ module.exports = [
           path: "/rest/",
         },
         {
-          title: "Reference",
-          path: "/reference/"
+          title: "PaaS Reference",
+          path: "/reference/rest/paas"
+        },
+        {
+          title: "SaaS Reference",
+          path: "/reference/rest/saas"
         }
       ],
     },
@@ -28,16 +32,20 @@ module.exports = [
           path: "/graphql/"
         },
         {
+          title: "SaaS Reference",
+          path: "/reference/graphql/saas"
+        },
+        {
           title: "2.4.8 Reference",
-          path: "/graphql-api/",
+          path: "/reference/graphql/2.4.8",
         },
         {
           title: "2.4.7 Reference",
-          path: "/reference/2.4.7",
+          path: "/reference/graphql/2.4.7",
         },
         {
           title: "2.4.6 Reference",
-          path: "/reference/2.4.6",
+          path: "/reference/graphql/2.4.6",
         },
       ]
     }
