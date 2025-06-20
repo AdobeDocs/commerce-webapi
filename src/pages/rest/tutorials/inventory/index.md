@@ -27,4 +27,4 @@ This **14-step tutorial** generally takes **1 hour**.
 
 ### Other resources
 
-*  Commerce uses [Swagger](https://swagger.io) to provide REST API documentation on local instances of Commerce. See [Generate a local API reference](/rest/use-rest/generate-local/) for more information. You can view the [static REST API documentation](../../quick-reference/index.md), which displays reference information using ReDoc.
+*  Commerce uses [Swagger](https://swagger.io) to provide REST API documentation on local instances of Commerce. See [Generate a local API reference](/rest/use-rest/generate-local/) for more information. You can view the [static REST API documentation](../../reference/index.md), which displays reference information using ReDoc.

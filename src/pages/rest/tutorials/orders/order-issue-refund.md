@@ -74,4 +74,4 @@ Log in to Admin. Click **Sales** > **Credit Memos**. The credit memo is displaye
 *  [Getting Started with Adobe Commerce Web APIs](/get-started/)
 *  [Create a configurable product Tutorial](/rest/tutorials/configurable-product/)
 *  [REST API Reference Overview](/rest/)
-*  [REST API documentation](../../quick-reference/index.md)
+*  [REST API documentation](../../reference/index.md)
