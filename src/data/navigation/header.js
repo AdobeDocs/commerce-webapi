@@ -16,11 +16,11 @@ module.exports = [
         },
         {
           title: "PaaS Reference",
-          path: "/reference/rest/paas/"
+          path: "/reference/rest/paas"
         },
         {
           title: "SaaS Reference",
-          path: "/reference/rest/saas/"
+          path: "/reference/rest/saas"
         }
       ],
     },
