@@ -1,10 +1,10 @@
 ---
-title: test
-description: Lorem ipsum dolor sit amet
+title: REST API reference
+description: Review comprehensive reference documentation for the Adobe Commerce and Magento Open Source REST API schema.
+keywords:
+  - REST
 ---
 
-# Test
+# REST API reference
 
-Lorem ipsum dolor site amet lorem ipsum dolor site amet lorem ipsum dolor site amet lorem ipsum dolor site amet lorem ipsum dolor site amet
-
-lorem ipsum dolor site amet lorem ipsum dolor site amet lorem ipsum dolor site amet lorem ipsum dolor site amet lorem ipsum dolor site amet lorem ipsum dolor site amet lorem ipsum dolor site amet lorem ipsum dolor site amet lorem ipsum dolor site amet lorem ipsum dolor site amet lorem ipsum dolor site amet lorem ipsum dolor site amet
+This comprehensive reference provides detailed documentation for all available REST API endpoints in Adobe Commerce and Magento Open Source. Each endpoint includes complete parameter descriptions, request/response examples, authentication requirements, and error handling information to help developers integrate with the platform effectively.
