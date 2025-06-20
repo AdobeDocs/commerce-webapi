@@ -5,7 +5,7 @@ module.exports = [
     },
     {
         title: "Reference",
-        path: "/rest/",
+        path: "/rest/reference/",
         pages: [
             {
                 title: "PaaS Reference",

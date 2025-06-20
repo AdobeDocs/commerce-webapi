@@ -1483,7 +1483,7 @@ module.exports = [
   },
   {
     title: "Reference",
-    path: "/graphql/",
+    path: "/graphql/reference/",
     pages: [
       {
         title: "SaaS",
