@@ -20,8 +20,7 @@ The Commerce Web APIs allow you to integrate third-party software and build head
 
 *  [Extensibility Guide](https://developer.adobe.com/commerce/extensibility/)
 *  [Configuring a Service as a Web API](https://developer.adobe.com/commerce/php/development/components/web-api/services/)
-* &#8203;<Edition name="paas" />[REST API reference](https://developer.adobe.com/commerce/webapi/reference/rest/paas/)
-* &#8203;<Edition name="saas" />[REST API reference](https://developer.adobe.com/commerce/webapi/reference/rest/saas/)
+*  [REST API reference](./rest/reference/index.md)
 
 ## Overview
 
