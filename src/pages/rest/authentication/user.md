@@ -1,176 +1,334 @@
 ---
-title: User authentication
-description: Learn about REST API authentication in Adobe Commerce as a Cloud Service.
+title: Create server-to-server integration
+description: Learn how to set up OAuth server-to-server authentication for Adobe Commerce as a Cloud Service REST API
 keywords:
   - REST
-edition: saas
-noIndex: true
----
+  - Authentication
+  - Integration
+  - OAuth
+  - Server-to-server
+--- 
+ 
+# Create server-to-server integration
 
-# User authentication
+This guide provides practical steps for implementing server-to-server integration with Adobe Commerce as a Cloud Service REST APIs using OAuth server-to-server authentication. This type of integration enables automated system-to-system communication without user intervention, which is ideal for the following use cases:
 
-import ACCSEarlyAccess from '/src/_includes/accs/accs-early-access.md'
-
-<ACCSEarlyAccess />
-
-User Authentication with Adobe's Secure User Sign-In (SUSI) interface enables Commerce administrators to authenticate through Adobe's Identity Management Service (IMS). This authentication flow is specifically designed for scenarios where API operations need to be executed with user-specific permissions. When using this method, all API calls are performed within the context of the authenticated admin user's permissions, as defined in the Adobe Admin Console.
-
-Adobe provides three types of OAuth credentials for User Authentication with a different application architectures:
-
-1. **OAuth Web App**:  For applications with a backend server that can securely store client secrets
-1. **OAuth Single Page App (SPA)**: For browser-based JavaScript applications
-1. **OAuth Native App**: For device-native applications (iOS, Android, desktop)
-
-Each credential type has specific security considerations and implementation requirements. For detailed implementation guidance, see the [User Authentication Guide](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/).
+- Background processes and automated tasks
+- Data synchronization services
+- Automated reporting systems
+- Microservices architecture integration
 
 ## Prerequisites
 
-Before implementing user authentication, ensure you have:
+Before starting implementation, ensure you have:
 
-- An active Adobe Commerce as a Cloud Service license with access to the Admin Console
-- Access to Adobe Developer Console for creating OAuth credentials using Adobe Commerce with Adobe ID API
-- A configured redirect URI where users will return after authentication
-- A secure environment for token handling
+- Access to Adobe Developer Console
+- Completed the Server Authentication Setup
+- A development environment with:
+  - HTTP client library
+  - Environment variables or secure secrets management
+  - SSL/TLS support
+  - JSON parsing capabilities
 
 ## Implementation steps
 
-### 1. Generate IMS credentials
+### Step 1: Generate service credentials
 
-To begin the implementation, you need to obtain IMS client credentials through the Adobe Developer Console. This process involves creating a new project and configuring OAuth authentication specifically for Adobe Commerce with Adobe ID integration.
+If you have already completed the Server Authentication Setup, as mentioned in prerequisites, you can skip this step. Otherwise, follow these steps:
 
-The Adobe Developer Console provides a straightforward workflow:
+1. Navigate to your project in the Adobe Developer Console
+2. Add Adobe Commerce as a Cloud Service API
+3. Choose OAuth Server-to-Server credentials and click next
+4. Provide a credential name
+5. Choose ACCS Product Profiles and click Save credentials
+5. Make a note of the following:
+   - Client ID
+   - Client Secret
 
-- Accessing Adobe Developer Console:
+### Step 2: Configure your environment
 
-  1. Navigate to [Adobe Developer Console](https://developer.adobe.com/console).
-  1. Create or select a project that will house your authentication credentials.
-  1. Add the **Adobe Commerce with Adobe ID** API to your project to enable Commerce-specific authentication.
+1. Create an `.env` file with the following contents:
+   ```
+   IMS_CLIENT_ID=your_client_id
+   IMS_CLIENT_SECRET=your_client_secret
+   ```
+2. Add the `.env` file to your project's `.gitignore` file
 
-- Creating an OAuth User authentication project:
+### Step 3: Implement token generation
 
-  1. Select the preferred OAuth 2 authentication type: **Web App/Single-Page App/Native App**.
-  1. Configure the allowed redirect URIs.
-  1. Copy the Client ID and Client Secret.
-  1. Make a note of the authorized redirect URIs.
-  1. Securely save your credentials.
+The following example implementation uses JavaScript and Node.js. You can implement similar logic in your preferred programming language.
 
-### 2. Authorization flow
+```javascript
+// tokenManager.js
+const axios = require('axios');
+require('dotenv').config();
 
-**Building authorization URL**
+class TokenManager {
+  constructor() {
+    this.token = null;
+    this.tokenExpiry = null;
+  }
 
-The authorization URL is used to initiate the authentication process. It includes the client ID, redirect URI, scopes, and a state parameter for security. Here is the example for a web app:
+  async getValidToken() {
+    if (this.isTokenValid()) {
+      return this.token;
+    }
+    return await this.generateToken();
+  }
 
-```html
-https://ims-na1.adobelogin.com/ims/authorize/v2?client_id={{client_id}}&redirect_uri={{redirect_uri}}&scope={{scopes}}&state=something&response_type=code
+  isTokenValid() {
+    return this.token && this.tokenExpiry && Date.now() < this.tokenExpiry;
+  }
+
+  async generateToken() {
+    try {
+      const response = await axios({
+        method: 'POST',
+        url: 'https://ims-na1.adobelogin.com/ims/token/v3',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        data: new URLSearchParams({
+          client_id: process.env.IMS_CLIENT_ID,
+          client_secret: process.env.IMS_CLIENT_SECRET,
+          grant_type: 'client_credentials',
+          scope: 'openid,AdobeID,email,profile,additional_info.roles,additional_info.projectedProductContext'  // required scopes
+        })
+      });
+
+      this.token = response.data.access_token;
+      this.tokenExpiry = Date.now() + (response.data.expires_in * 1000);
+      return this.token;
+    } catch (error) {
+      console.error('Token generation failed:', error.message);
+      throw error;
+    }
+  }
+}
+
+module.exports = TokenManager;
 ```
 
-Replace the following placeholders with your values:
+### Step 4: Create an API Client
 
-- `{{client_id}}`: IMS client ID
-- `{{redirect_uri}}`: Configured redirect URI
-- `{{scopes}}`: Coma-separated list of required scopes:
+The following API client example uses JavaScript and Node.js. You can implement similar logic in your preferred programming language while following the same principles.
 
-  ```bash
-  AdobeID,openid,email,profile,additional_info.roles,additional_info.projectedProductContext`
-  ```
+```javascript
+// accsClient.js
+const axios = require('axios');
+const TokenManager = require('./tokenManager');
 
-**Handling authorization response**
+class ACCSApiClient {
+  constructor() {
+    this.baseURL = process.env.API_ENDPOINT;
+    this.tokenManager = new TokenManager();
+  }
 
-Redirect handling:
+  async request(method, endpoint, data = null) {
+    const accessToken = await this.tokenManager.getValidToken();
+    
+    const headers = {
+      'Authorization': `Bearer ${accessToken}`,
+      'x-api-key': process.env.IMS_CLIENT_ID,
+      'Content-Type': 'application/json'
+    };
 
-1. User completes authentication
-1. Browser redirects to your `redirect_uri`
-1. Authorization code is included in URL parameters
+    try {
+      const response = await axios({
+        method,
+        url: `${this.baseURL}${endpoint}`,
+        headers,
+        data,
+        validateStatus: status => status < 500
+      });
 
-Authorization code extraction:
+      if (response.status === 429) {
+        // Handle rate limiting
+        const retryAfter = response.headers['retry-after'] || 5;
+        await this.sleep(retryAfter * 1000);
+        return this.request(method, endpoint, data);
+      }
 
-1. Parse code from URL: `?code={{auth_code}}&state=something`
-1. Verify state parameter matches original request
-
-Error handling:
-
-1. Check for error parameters in redirect
-1. Implement appropriate error messaging
-1. Provide retry mechanisms
-
-### 3. Token exchange
-
-Authorization code to access token:
-
-1. Make a `POST` request to the token endpoint.
-
-   **Request**:
-  
-   ```http
-   POST https://ims-na1.adobelogin.com/ims/token/v3
-   Authorization: Basic {{base64(client_id:client_secret)}}
-   Content-Type: application/x-www-form-urlencoded
-   
-   code={{auth_code}}&grant_type=authorization_code
-   
-   ```
-  
-   **Response**:
-  
-   ```json
-   {
-    "access_token": "{ACCESS_TOKEN}",
-    "refresh_token": "{REFRESH_TOKEN}",
-    "sub": "A0BC123D4CD449CA0A494133@a12b34cd5b5b7e0e0a494004",
-    "id_token": "{ID_TOKEN}",
-    "token_type": "bearer",
-    "expires_in": 86399
+      return response.data;
+    } catch (error) {
+      this.handleError(error);
     }
-    ```
+  }
 
-- Token refresh process:
-  1. Monitor token expiration.
-  1. Use refresh token to obtain new access token.
+  handleError(error) {
+    if (error.response?.status === 401) {
+      this.tokenManager.token = null;
+    }
+    throw error;
+  }
+
+  sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+}
+
+module.exports = ACCSApiClient;
+```
+
+### Step 5: Usage example
+
+The following example implementation demonstrates how to use the API client with JavaScript and Node.js. You can adapt this example to your preferred programming language and specific use case.
+
+```javascript
+// example-usage.js
+const ACCSApiClient = require('./accsClient');
+
+async function main() {
+  const client = new ACCSApiClient();
   
-     **Request**:
-  
-     ```http
-     POST https://ims-na1.adobelogin.com/ims/token/v3
-     Authorization: Basic {{base64(client_id:client_secret)}}
-     Content-Type: application/x-www-form-urlencoded
-     
-     grant_type=refresh_token&refresh_token={{refresh_token}}
-     ```
-  
-     **Response**:
-  
-     ```json
-     {
-      "access_token": "{ACCESS_TOKEN}",
-      "refresh_token": "{REFRESH_TOKEN}",
-      "expires_in": 86399,
-      "token_type": "bearer"
-     }
-     ```
+  try {
+    // Example API call using a real ACCS REST API endpoint
+    const response = await client.request('GET', '/rest/V1/products');
+    console.log('Products:', response);
 
-  1. Update the stored tokens.
+    // Another example with a specific product SKU
+    const productSku = 'example-sku';
+    const productDetails = await client.request('GET', `/rest/V1/products/${productSku}`);
+    console.log('Product Details:', productDetails);
+  } catch (error) {
+    console.error('API call failed:', error.message);
+  }
+}
 
-- Token storage best practices:
+main();
+```
 
-  - Secure storage methods
-  - Encryption at rest
-  - Token rotation procedures
+## Best practices
 
-## Usage examples
+### Security
 
-- API request format
+- Store all sensitive credentials and secrets in a secure environment variable system or in a dedicated secrets management service
+- Never store sensitive credentials or secrets in your codebase
+- Implement regular client secret rotation to minimize security risks
+- Use environment variables for all configuration values to maintain flexibility across different environments
+- Maintain comprehensive error logs with appropriate security context while being careful not to expose sensitive information
 
-  ```http
-  GET /rest/v1/products
-  Authorization: Bearer <access_token>
-  ```
+### Performance
 
-- Error handling
-  1. Token expiration handling
-  1. Invalid token responses
-  1. Scope-related errors
+- Implement token caching to reuse valid access tokens until they approach expiration, reducing unnecessary token generation requests
+- Use connection pooling in your HTTP client to efficiently manage multiple concurrent requests and reduce resource overhead
 
-- Token refresh flow
-  1. Detecting expired tokens
-  1. Automatic refresh implementation
-  1. Session management
+### Monitoring
+
+- Set up comprehensive logging for API response times to track performance trends and identify potential issues early
+- Implement monitoring for token refresh events to detect authentication-related problems
+
+## Alternative implementations
+
+### Python Example
+
+```python
+import os
+import time
+import requests
+from urllib.parse import urlencode
+from dotenv import load_dotenv
+
+load_dotenv()
+
+class ACCSTokenManager:
+    def __init__(self):
+        self.token = None
+        self.token_expiry = None
+        self.client_id = os.getenv('IMS_CLIENT_ID')
+        self.client_secret = os.getenv('IMS_CLIENT_SECRET')
+        self.org_id = os.getenv('IMS_ORG_ID')
+    
+    def is_token_valid(self):
+        return self.token and self.token_expiry and time.time() < self.token_expiry
+    
+    def get_valid_token(self):
+        if self.is_token_valid():
+            return self.token
+        return self.generate_token()
+    
+    def generate_token(self):
+        url = 'https://ims-na1.adobelogin.com/ims/token/v3'
+        headers = {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+        data = {
+            'client_id': self.client_id,
+            'client_secret': self.client_secret,
+            'grant_type': 'client_credentials',
+            'scope': 'openid,AdobeID,email,profile,additional_info.roles,additional_info.projectedProductContext'
+        }
+        
+        try:
+            response = requests.post(url, headers=headers, data=urlencode(data))
+            response.raise_for_status()
+            
+            token_data = response.json()
+            self.token = token_data['access_token']
+            self.token_expiry = time.time() + token_data['expires_in']
+            
+            return self.token
+        except requests.RequestException as e:
+            print(f"Token generation failed: {e}")
+            raise
+    
+    def make_api_call(self, method, endpoint, data=None):
+        access_token = self.get_valid_token()
+        base_url = os.getenv('API_ENDPOINT')
+        
+        headers = {
+            'Authorization': f'Bearer {access_token}',
+            'x-api-key': self.client_id,
+            'Content-Type': 'application/json'
+        }
+        
+        try:
+            response = requests.request(
+                method=method,
+                url=f"{base_url}{endpoint}",
+                headers=headers,
+                json=data
+            )
+            
+            if response.status_code == 401:
+                self.token = None  # Force token refresh on next call
+            
+            response.raise_for_status()
+            return response.json()
+            
+        except requests.RequestException as e:
+            print(f"API call failed: {e}")
+            raise
+
+# Usage example
+token_manager = ACCSTokenManager()
+products = token_manager.make_api_call('GET', '/rest/V1/products')
+print(products)
+```
+
+## Troubleshooting
+
+### Common Issues
+
+1. **401 Unauthorized Error**
+   - Verify your client credentials are correct
+   - Check that your token hasn't expired
+   - Ensure proper scopes are included in token generation
+
+2. **403 Forbidden Error**
+   - Verify your Organization ID is correct
+   - Check that your integration has the necessary permissions
+
+3. **Token Generation Fails**
+   - Verify your client ID and secret are valid
+   - Check that your OAuth Server-to-Server credentials are properly configured
+   - Ensure you're using the correct IMS endpoint
+
+### Verification Steps
+
+To verify your server-to-server integration is working correctly:
+
+1. Generate a token using your credentials
+2. Make a test API call to `/rest/V1/store/storeConfigs`
+3. Check that you receive a valid response with store configuration data
+4. Monitor token expiration and refresh behavior
