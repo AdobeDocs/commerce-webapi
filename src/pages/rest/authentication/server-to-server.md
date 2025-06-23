@@ -1,12 +1,10 @@
 ---
 title: Create server-to-server integration
 description: Learn how to set up OAuth server-to-server authentication for Adobe Commerce as a Cloud Service REST API
+edition: saas
 keywords:
   - REST
-  - Authentication
   - Integration
-  - OAuth
-  - Server-to-server
 --- 
  
 # Create server-to-server integration
@@ -22,42 +20,40 @@ This guide provides practical steps for implementing server-to-server integratio
 
 Before starting implementation, ensure you have:
 
-- Access to Adobe Developer Console
-- An Adobe Organization Admin account
-- Completed the Server Authentication Setup
+- Access to [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started)
+- An [Adobe Organization Admin account](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/journey/admin-console)
+- Completed the [Server Authentication setup](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation)
 - A development environment with:
   - HTTP client library
   - Environment variables or secure secrets management
   - SSL/TLS support
   - JSON parsing capabilities
 
+Make a note of the following:
+
+  - Client ID
+  - Client Secret
+  - Organization ID
+
 ## Implementation steps
 
-### Step 1: Generate service credentials
+Use the following steps to implement server-to-server integration with Adobe Commerce as a Cloud Service REST APIs.
 
-If you have already completed the Server Authentication Setup, as mentioned in prerequisites, you can skip this step. Otherwise, follow these steps:
-
-1. Navigate to your project in the Adobe Developer Console
-2. Add OAuth Server-to-Server credentials to your project
-3. Provide a credential name to help identify the credential in the Adobe Admin Console
-4. Make a note of the following:
-   - Client ID
-   - Client Secret
-   - Organization ID
-
-### Step 2: Configure your environment
+### Step 1: Configure your environment
 
 1. Create an `.env` file with the following contents:
-   ```
+
+   ```text
    IMS_CLIENT_ID=your_client_id
    IMS_CLIENT_SECRET=your_client_secret
    IMS_ORG_ID=your_org_id
    ```
+
 2. Add the `.env` file to your project's `.gitignore` file
 
-### Step 3: Implement token generation
+### Step 2: Implement token generation
 
-The following example implementation uses JavaScript and Node.js. You can implement similar logic in your preferred programming language.
+To authenticate with the Adobe Commerce as a Cloud Service REST APIs, you need to generate an IMS access token using your client credentials. This token is used to authorize API requests.
 
 ```javascript
 // tokenManager.js
@@ -110,9 +106,9 @@ class TokenManager {
 module.exports = TokenManager;
 ```
 
-### Step 4: Create an API Client
+### Step 3: Create an API Client
 
-The following API client example uses JavaScript and Node.js. You can implement similar logic in your preferred programming language while following the same principles.
+Create an API client that handles authentication, request signing, and error handling. This client will use the token manager to obtain valid access tokens and make API requests.
 
 ```javascript
 // accsClient.js
@@ -172,9 +168,9 @@ class ACCSApiClient {
 module.exports = ACCSApiClient;
 ```
 
-### Step 5: Usage example
+### Step 4: Usage example
 
-The following example implementation demonstrates how to use the API client with JavaScript and Node.js. You can adapt this example to your preferred programming language and specific use case.
+The following example implementation demonstrates how to use the API client.
 
 ```javascript
 // example-usage.js
@@ -185,12 +181,12 @@ async function main() {
   
   try {
     // Example API call using a real ACCS REST API endpoint
-    const response = await client.request('GET', '/rest/V1/products');
+    const response = await client.request('GET', '/V1/products');
     console.log('Products:', response);
 
     // Another example with a specific product SKU
     const productSku = 'example-sku';
-    const productDetails = await client.request('GET', `/rest/V1/products/${productSku}`);
+    const productDetails = await client.request('GET', `/V1/products/${productSku}`);
     console.log('Product Details:', productDetails);
   } catch (error) {
     console.error('API call failed:', error.message);
@@ -202,27 +198,29 @@ main();
 
 ## Best practices
 
+The following best practices help ensure your server-to-server integration is secure, efficient, and maintainable.
+
 ### Security
 
-- Store all sensitive credentials and secrets in a secure environment variable system or in a dedicated secrets management service
-- Never store sensitive credentials or secrets in your codebase
-- Implement regular client secret rotation to minimize security risks
-- Use environment variables for all configuration values to maintain flexibility across different environments
-- Maintain comprehensive error logs with appropriate security context while being careful not to expose sensitive information
+- Store all sensitive credentials and secrets in a secure environment variable system or in a dedicated secrets management service.
+- Never store sensitive credentials or secrets in your codebase.
+- Implement regular client secret rotation to minimize security risks.
+- Use environment variables for all configuration values to maintain flexibility across different environments.
+- Maintain comprehensive error logs with appropriate security context while being careful not to expose sensitive information.
 
 ### Performance
 
-- Implement token caching to reuse valid access tokens until they approach expiration, reducing unnecessary token generation requests
-- Use connection pooling in your HTTP client to efficiently manage multiple concurrent requests and reduce resource overhead
+- Implement token caching to reuse valid access tokens until they approach expiration, reducing unnecessary token generation requests.
+- Use connection pooling in your HTTP client to efficiently manage multiple concurrent requests and reduce resource overhead.
 
 ### Monitoring
 
-- Set up comprehensive logging for API response times to track performance trends and identify potential issues early
-- Implement monitoring for token refresh events to detect authentication-related problems
+- Set up comprehensive logging for API response times to track performance trends and identify potential issues early.
+- Implement monitoring for token refresh events to detect authentication-related problems.
 
 ## Alternative implementations
 
-### Python Example
+The following example shows how to implement server-to-server integration using Python.
 
 ```python
 import os
@@ -305,35 +303,27 @@ class ACCSTokenManager:
 
 # Usage example
 token_manager = ACCSTokenManager()
-products = token_manager.make_api_call('GET', '/rest/V1/products')
+products = token_manager.make_api_call('GET', '/V1/products')
 print(products)
 ```
 
 ## Troubleshooting
 
-### Common Issues
+If you encounter issues during implementation, consider the following troubleshooting steps.
 
-1. **401 Unauthorized Error**
-   - Verify your client credentials are correct
-   - Check that your token hasn't expired
-   - Ensure proper scopes are included in token generation
+### 401 Unauthorized Error
 
-2. **403 Forbidden Error**
-   - Verify your Organization ID is correct
-   - Check that your integration has the necessary permissions
+  - Verify your client credentials are correct
+  - Check that your token hasn't expired
+  - Ensure proper scopes are included in token generation
 
-3. **Token Generation Fails**
-   - Verify your client ID and secret are valid
-   - Check that your OAuth Server-to-Server credentials are properly configured
-   - Ensure you're using the correct IMS endpoint
+### 403 Forbidden Error
 
-### Verification Steps
+  - Verify your Organization ID is correct
+  - Check that your integration has the necessary permissions
 
-To verify your server-to-server integration is working correctly:
+### Token Generation Fails
 
-1. Generate a token using your credentials
-2. Make a test API call to `/rest/V1/store/storeConfigs`
-3. Check that you receive a valid response with store configuration data
-4. Monitor token expiration and refresh behavior
-
-For more detailed information about server-to-server authentication, see the [Server-to-Server Authentication Guide](https://developer.adobe.com/commerce/services/cloud/guides/rest/authentication/server-to-server/). 
+  - Verify your client ID and secret are valid
+  - Check that your OAuth Server-to-Server credentials are properly configured
+  - Ensure you're using the correct IMS endpoint

@@ -1,40 +1,43 @@
 ---
-title: Generate the IMS access token
-description: In this tutorial you will generate the IMS access token for admin user which is necessary for Adobe Commerce as a Cloud Service REST API calls
+title: IMS access tokens
+description: IGenerate the IMS access token for admin user which is necessary for Adobe Commerce as a Cloud Service REST API calls
+edition: saas
 keywords:
   - REST
-  - Authentication
-  - IMS
-  - OAuth
+  - Integration
 --- 
  
-# Generate the IMS access token
+# IMS access tokens
 
 import ACCSEarlyAccess from '/src/_includes/accs/accs-early-access.md'
 
 <ACCSEarlyAccess />
 
-Adobe Commerce as a Cloud Service REST API authentication is handled through Adobe's Identity Management Service (IMS), providing secure access to Commerce functionality through standardized OAuth 2.0 protocols. This authentication system supports both interactive user-based workflows and automated server-to-server integrations, ensuring secure and appropriate access for different use cases.
-
-See [Authentication](../../get-started/authentication/index.md) in the _Get Started_ guide for information about the authentication methods available on other versions of Adobe Commerce.
-
-In Adobe Commerce as a Cloud Service (ACCS), you must use Adobe's Identity Management Service (IMS) for admin authentication. The traditional admin token generation method is not supported in ACCS environments. Instead, you must obtain an IMS access token through OAuth authentication.
+In Adobe Commerce as a Cloud Service (SaaS), you must use Adobe's Identity Management Service (IMS) for admin authentication. The traditional admin token generation method is not supported in SaaS environments. Instead, you must obtain an IMS access token through OAuth authentication.
 
 This authentication method ensures that all API calls are performed within the context of the authenticated admin user's permissions, as defined in the ACCS.
+
+<InlineAlert variant="note" slots="text"/>
+
+See [Authentication](../../get-started/authentication/index.md) in the _Get Started_ guide for information about the authentication methods available on other versions of Adobe Commerce.
 
 ## Authentication Options for Adobe Commerce as a Cloud Service
 
 Adobe Commerce as a Cloud Service (ACCS) supports two primary authentication methods for admin-level API access:
 
-### User Authentication (IMS)
-Use this method when you need to authenticate on behalf of a specific admin user with user-specific permissions. This page covers the user authentication flow.
+_ **User authentication (IMS)** - Use this method when you need to authenticate on behalf of a specific admin user with user-specific permissions. This page covers the user authentication flow.
 
-### Server-to-Server Integration
-Use this method for automated system-to-system communication without user intervention. For detailed instructions on setting up server-to-server integration, see [Create server-to-server integration](create-accs-integration.md).
+- **Server-to-server integration** - Use this method for automated system-to-system communication without user intervention. For detailed instructions on setting up server-to-server integration, see [Create server-to-server integration](create-accs-integration.md).
 
----
+## Security best practices
 
-## Prerequisites
+- Store tokens securely using encryption at rest
+- Implement proper token rotation procedures
+- Monitor token expiration and implement automatic refresh
+- Use HTTPS for all authentication requests
+- Validate state parameters to prevent CSRF attacks
+
+## Generate an IMS access token
 
 Before implementing IMS authentication, ensure you have:
 
@@ -43,46 +46,42 @@ Before implementing IMS authentication, ensure you have:
 - A configured redirect URI where users will return after authentication
 - A secure environment for token handling
 
-## Step 1: Generate IMS credentials
+### Step 1: Generate IMS credentials
 
-1. Navigate to [Adobe Developer Console](https://developer.adobe.com/console)
-2. Create or select a project that will house your authentication credentials
-3. Add the **Adobe Commerce with Adobe ID** API to your project
-4. Select your preferred OAuth 2 authentication type:
+1. Navigate to Adobe Developer Console.
+1. Create or select a project that will house your authentication credentials
+1. Add the **Adobe Commerce with Adobe ID** API to your project
+1. Select your preferred OAuth 2 authentication type:
    - **Web App**: For applications with a backend server that can securely store client secrets
-   - **Single-Page App (SPA)**: For browser-based JavaScript applications  
+   - **Single-Page App (SPA)**: For browser-based JavaScript applications
    - **Native App**: For device-native applications (iOS, Android, desktop)
-5. Configure the allowed redirect URIs
-6. Copy the Client ID and Client Secret
-7. Securely save your credentials
+1. Configure the allowed redirect URIs.
+1. Copy the client ID and client secret.
+1. Securely save your credentials.
 
-## Step 2: Authorization flow
+### Step 2: Implement the authorization flow and response
 
-### Build authorization URL
+To authenticate a user and obtain an authorization code, follow these steps:
 
-Create an authorization URL to initiate the authentication process:
+1. Create an authorization URL to initiate the authentication process. The URL has the following format:
 
-```
-https://ims-na1.adobelogin.com/ims/authorize/v2?client_id={{client_id}}&redirect_uri={{redirect_uri}}&scope={{scopes}}&state=something&response_type=code
-```
+   ```http
+   https://ims-na1.adobelogin.com/ims/authorize/v2?client_id={{client_id}}&redirect_uri={{redirect_uri}}&scope={{scopes}}&state=something&response_type=code
+   ```
 
-Replace the placeholders with your values:
+  Replace the placeholders with your values:
+  
+  - `{{client_id}}`: Your IMS client ID
+  - `{{redirect_uri}}`: Your configured redirect URI
+  - `{{scopes}}`: A comma-separated list of required scopes, such as `AdobeID,openid,email,profile,additional_info.roles,additional_info.projectedProductContext`
 
-- `{{client_id}}`: Your IMS client ID
-- `{{redirect_uri}}`: Your configured redirect URI
-- `{{scopes}}`: Required scopes (comma-separated):
-  ```
-  AdobeID,openid,email,profile,additional_info.roles,additional_info.projectedProductContext
-  ```
+1. Handle the authorization response. When the user completes authentication through Adobe's login interface, the browser redirects to your `redirect_uri`. The authorization code is included in URL parameters:
 
-### Handle authorization response
+  `?code={{auth_code}}&state=something`
+  
+  Extract the authorization code and verify the state parameter
 
-1. User completes authentication through Adobe's login interface
-2. Browser redirects to your `redirect_uri`
-3. Authorization code is included in URL parameters: `?code={{auth_code}}&state=something`
-4. Extract the authorization code and verify the state parameter
-
-## Step 3: Exchange authorization code for access token
+### Step 3: Exchange the authorization code for an access token
 
 Make a POST request to exchange the authorization code for an access token:
 
@@ -92,14 +91,14 @@ Make a POST request to exchange the authorization code for an access token:
 
 **Headers:**
 
-```
+```text
 Authorization: Basic {{base64(client_id:client_secret)}}
 Content-Type: application/x-www-form-urlencoded
 ```
 
 **Payload:**
 
-```
+```text
 code={{auth_code}}&grant_type=authorization_code
 ```
 
@@ -116,14 +115,17 @@ code={{auth_code}}&grant_type=authorization_code
 }
 ```
 
-## Step 4: Use the access token
+### Step 4: Use the access token
 
-Use the access token in the Authorization header for all REST API calls:
+Use the access token in the Authorization header for all Commerce REST API calls, such as retrieving a list of products.
 
-**Example API Request:**
+**Endpoint:**
 
-```
-GET /rest/v1/products
+`GET https://<server>.api.commerce.adobe.com/<tenant-id>/v1/products`
+
+**Headers:**
+
+```text
 Authorization: Bearer {ACCESS_TOKEN}
 ```
 
@@ -137,14 +139,14 @@ Access tokens expire after a certain period (typically 24 hours). Use the refres
 
 **Headers:**
 
-```
+```text
 Authorization: Basic {{base64(client_id:client_secret)}}
 Content-Type: application/x-www-form-urlencoded
 ```
 
 **Payload:**
 
-```
+```json
 grant_type=refresh_token&refresh_token={{refresh_token}}
 ```
 
@@ -158,19 +160,3 @@ grant_type=refresh_token&refresh_token={{refresh_token}}
     "token_type": "bearer"
 }
 ```
-
-## Security best practices
-
-- Store tokens securely using encryption at rest
-- Implement proper token rotation procedures
-- Monitor token expiration and implement automatic refresh
-- Use HTTPS for all authentication requests
-- Validate state parameters to prevent CSRF attacks
-
-### Verify this step
-
-To verify your IMS access token is working correctly:
-
-1. Make a test API call to `/rest/v1/store/storeConfigs` using your access token
-2. If successful, you should receive store configuration data
-3. If you receive a 401 Unauthorized error, verify your token and try refreshin
