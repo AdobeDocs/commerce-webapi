@@ -30,7 +30,7 @@ POST https://<host>/rest/<store-view-code>/async/bulk/V1/products
 PUT https://<host>/rest/<store-view-code>/async/bulk/V1/products/:sku
 ```
 
-&#8203;<Edition name="saas" /> In Adobe Commerce as a Cloud Service,  the `/async/bulk` segment occurs after the `V1` segment of the route. For example:
+&#8203;<Edition name="saas" /> In Adobe Commerce as a Cloud Service, the `/async/bulk` segment occurs after the `V1` segment of the route. For example:
 
 ```http
 POST https://<server>.api.commerce.adobe.com/<tenant-id>/V1/async/bulk/products
