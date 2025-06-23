@@ -27,7 +27,7 @@ Adobe Commerce as a Cloud Service (ACCS) supports two primary authentication met
 
 _ **User authentication (IMS)** - Use this method when you need to authenticate on behalf of a specific admin user with user-specific permissions. This page covers the user authentication flow.
 
-- **Server-to-server integration** - Use this method for automated system-to-system communication without user intervention. For detailed instructions on setting up server-to-server integration, see [Create server-to-server integration](create-accs-integration.md).
+- **Server-to-server integration** - Use this method for automated system-to-system communication without user intervention. For detailed instructions on setting up server-to-server integration, see [Create server-to-server integration](server-to-server.md).
 
 ## Security best practices
 
