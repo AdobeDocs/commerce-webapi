@@ -15,8 +15,12 @@ module.exports = [
           path: "/rest/",
         },
         {
-          title: "Reference",
-          path: "/rest/quick-reference/"
+          title: "PaaS Reference",
+          path: "/reference/rest/paas"
+        },
+        {
+          title: "SaaS Reference",
+          path: "/reference/rest/saas"
         }
       ],
     },
@@ -28,10 +32,21 @@ module.exports = [
           path: "/graphql/"
         },
         {
-          title: "Reference",
-          path: "https://developer.adobe.com/commerce/webapi/graphql-api/",
-        EventTarget: "_blank"
-        }
+          title: "SaaS Reference",
+          path: "/reference/graphql/saas"
+        },
+        {
+          title: "2.4.8 Reference",
+          path: "/reference/graphql/2.4.8",
+        },
+        {
+          title: "2.4.7 Reference",
+          path: "/reference/graphql/2.4.7",
+        },
+        {
+          title: "2.4.6 Reference",
+          path: "/reference/graphql/2.4.6",
+        },
       ]
     }
 ];
