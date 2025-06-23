@@ -135,6 +135,10 @@ The response contains an array that indicates whether the call successfully adde
 
 ## DELETE requests
 
+<InlineAlert variant="info" slots="text"/>
+
+The following example is PaaS-specific. Adobe Commerce as a Cloud Service does not support the `DELETE V1/cmsPage` endpoint or its bulk and asynchronous counterparts.
+
 The following call asynchronously deletes CMS blocks with IDs `1` and `2`:
 
 ```http
