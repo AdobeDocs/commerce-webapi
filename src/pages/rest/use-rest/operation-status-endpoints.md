@@ -17,7 +17,7 @@ Adobe Commerce generates a `bulk_uuid` each time it executes an [asynchronous AP
 
 ## Get the status summary
 
-The `GET <host>/rest/<store_code>/V1/bulk/:bulkUuid/status` endpoint returns the abbreviated status of the specified operation:
+The `GET /V1/bulk/:bulkUuid/status` endpoint returns the abbreviated status of the specified operation:
 
 Field name | Data type | Description
 --- | --- | ---
@@ -33,7 +33,12 @@ Field name | Data type | Description
 `user_id` | Integer | The user ID that executed the request.
 `operation_count` | Integer | The number of operations processed in the request.
 
-**Response:**
+**Request**:
+
+&#8203;<Edition name="paas" /> `GET https://<host>/rest/<store-view-code>/V1/bulk/:bulkUuid/status`
+&#8203;<Edition name="saas" /> `GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/bulk/:bulkUuid/status`
+
+**Response**:
 
 ```json
 {
@@ -56,7 +61,7 @@ Field name | Data type | Description
 
 ## Get operations count by bulk uuid and status
 
-The `GET <host>/rest/<store_code>/V1/bulk/:bulkUuid/operation-status/:status` endpoint returns the number of operations from the bulk batch that have the specified status.
+The `GET /V1/bulk/:bulkUuid/operation-status/:status` endpoint returns the number of operations from the bulk batch that have the specified status.
 
 Status | Description
 --- | ---
@@ -66,7 +71,12 @@ Status | Description
 `4` | Open
 `5` | Rejected
 
-**Response:**
+**Request**:
+
+&#8203;<Edition name="paas" /> `GET https://<host>/rest/<store-view-code>/V1/bulk/:bulkUuid/operation-status/:status`
+&#8203;<Edition name="saas" /> `GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/bulk/:bulkUuid/operation-status/:status`
+
+**Response**:
 
 ```json
 0
@@ -75,10 +85,6 @@ Status | Description
 ## Get the detailed status
 
 The `GET /V1/bulk/:bulkUuid/detailed-status` endpoint returns detailed information about status of a specified operation. It is similar to the `GET /V1/bulk/:bulkUuid/status` endpoint, except that the `operations_list` array also contains the message queue topic name and serialized data for each operation.
-
-```http
-GET <host>/rest/<store_code>/V1/bulk/:bulkUuid/detailed-status
-```
 
 Field name | Data type | Description
 --- | --- | ---
@@ -98,7 +104,12 @@ Field name | Data type | Description
 `user_id` | Integer | The user ID that executed the request.
 `operation_count` | Integer | The number of operations processed in the request.
 
-**Response:**
+**Request**:
+
+&#8203;<Edition name="paas" /> `GET https://<host>/rest/<store-view-code>/V1/bulk/:bulkUuid/detailed-status`
+&#8203;<Edition name="saas" /> `GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/bulk/:bulkUuid/detailed-status`
+
+**Response**:
 
 ```json
 {
