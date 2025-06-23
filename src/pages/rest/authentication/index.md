@@ -1,5 +1,5 @@
 ---
-title: IMS access tokens
+title: Authentication in Adobe Commerce as a Cloud Service
 description: IGenerate the IMS access token for admin user which is necessary for Adobe Commerce as a Cloud Service REST API calls
 edition: saas
 keywords:
@@ -7,7 +7,7 @@ keywords:
   - Integration
 --- 
  
-# IMS access tokens
+# Authentication in Adobe Commerce as a Cloud Service
 
 import ACCSEarlyAccess from '/src/_includes/accs/accs-early-access.md'
 
@@ -31,26 +31,26 @@ _ **User authentication (IMS)** - Use this method when you need to authenticate 
 
 ## Security best practices
 
-- Store tokens securely using encryption at rest
-- Implement proper token rotation procedures
-- Monitor token expiration and implement automatic refresh
-- Use HTTPS for all authentication requests
-- Validate state parameters to prevent CSRF attacks
+- Store tokens securely using encryption at rest.
+- Implement proper token rotation procedures.
+- Monitor token expiration and implement automatic refresh.
+- Use HTTPS for all authentication requests.
+- Validate state parameters to prevent CSRF attacks.
 
 ## Generate an IMS access token
 
 Before implementing IMS authentication, ensure you have:
 
-- An active Adobe Commerce as a Cloud Service license
-- Access to Adobe Developer Console for creating OAuth credentials
-- A configured redirect URI where users will return after authentication
-- A secure environment for token handling
+- An active Adobe Commerce as a Cloud Service license.
+- Access to Adobe Developer Console for creating OAuth credentials.
+- A configured redirect URI where users will return after authentication.
+- A secure environment for token handling.
 
 ### Step 1: Generate IMS credentials
 
 1. Navigate to Adobe Developer Console.
-1. Create or select a project that will house your authentication credentials
-1. Add the **Adobe Commerce with Adobe ID** API to your project
+1. Create or select a project that will house your authentication credentials.
+1. Add the **Adobe Commerce with Adobe ID** API to your project.
 1. Select your preferred OAuth 2 authentication type:
    - **Web App**: For applications with a backend server that can securely store client secrets
    - **Single-Page App (SPA)**: For browser-based JavaScript applications
