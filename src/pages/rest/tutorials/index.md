@@ -32,7 +32,7 @@ Before you begin any tutorial, make sure you know the basics about <Vars.sitedat
 
 *  Know how to construct a REST call in Commerce. See [Construct a request](/get-started/gs-web-api-request) for details.
 
-*  Find the Commerce REST API documentation. You can view the [static REST API documentation on devdocs](../quick-reference/index.md) or [generate a local API reference](/rest/use-rest/generate-local/).
+*  Find the Commerce REST API documentation. You can view the [static REST API documentation on devdocs](../reference/index.md) or [generate a local API reference](/rest/use-rest/generate-local/).
 
 *  Find the Commerce Merchant documentation. Refer to [Getting Started with <Vars.sitedatavarce/>](https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home) for information about the Luma store that is created when you install Commerce with the sample data.
 
