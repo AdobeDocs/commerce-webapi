@@ -4,14 +4,9 @@ description: Learn about Server-to-Server Authentication in Adobe Commerce as a 
 keywords:
   - REST
 edition: saas
-noIndex: true
 ---
 
 # Server-to-server authentication
-
-import ACCSEarlyAccess from '/src/_includes/accs/accs-early-access.md'
-
-<ACCSEarlyAccess />
 
 Server-to-Server Authentication provides a secure way for automated systems to interact with the Adobe Commerce as a Cloud Service REST API without user intervention. This authentication method is essential for background processes, scheduled tasks, and system integrations that need to operate independently of user sessions. Unlike user authentication, server-to-server authentication uses technical account credentials to obtain access tokens directly, making it ideal for headless commerce implementations and automated workflows.
 
