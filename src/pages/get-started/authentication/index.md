@@ -11,11 +11,11 @@ keywords:
 
 <InlineAlert variant="info" slots="text"/>
 
-This topic is for Platform-as-a-Service (PaaS) customers only. Adobe Commerce Cloud Services customers must refer to [REST Authentication](https://developer.adobe.com/commerce/services/cloud/guides/rest/authentication/) for details on authentication.
+This topic is for Platform-as-a-Service (PaaS) customers only. Adobe Commerce Cloud Services customers must refer to [REST Authentication](../../rest/authentication/index.md) for details on authentication.
 
-For practical implementation guides for Adobe Commerce as a Cloud Service (ACCS), see:
-- [Create server-to-server integration](../rest/tutorials/prerequisite-tasks/create-accs-integration.md) - Complete guide for automated system integration
-- [Generate the IMS access token](../rest/tutorials/prerequisite-tasks/index.md) - User authentication guide
+For practical implementation guides for Adobe Commerce as a Cloud Service (SaaS), see:
+- [Create server-to-server integration](../../rest/authentication/server-to-server.md) - Complete guide for automated system integration
+- [Generate the IMS access token](../../rest/authentication/index.md) - User authentication guide
 
 Adobe Commerce and Magento Open Source allow developers to define web API resources and their permissions in the `webapi.xml` configuration file. See [Services as Web APIs](https://developer.adobe.com/commerce/php/development/components/web-api/services/).
 
