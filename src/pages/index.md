@@ -46,7 +46,7 @@ The REST API documentation describes the REST APIs that are available on the lat
 
 <DiscoverBlock slots="link, text"/>
 
-[GraphQL](./graphql/)
+[GraphQL](./graphql/index.md)
 
 GraphQL is a language for querying and manipulating data. It is widely viewed as more powerful, flexible, and efficient than REST for frontend development.
 
