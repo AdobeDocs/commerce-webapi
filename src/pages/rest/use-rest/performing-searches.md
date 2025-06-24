@@ -288,7 +288,7 @@ searchCriteria[filter_groups][2][filters][0][value]=49.99&
 searchCriteria[filter_groups][2][filters][0][condition_type]=to
 ```
 
-#### SaaS 
+#### SaaS
 
 ```http
 GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/products?
