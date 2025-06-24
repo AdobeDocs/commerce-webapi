@@ -60,7 +60,6 @@ module.exports = [
         {
           title: "Protected endpoints",
           path: "/rest/use-rest/protected-endpoints.md",
-        
         },
         {
           title: "Restricting access to anonymous web APIs",
