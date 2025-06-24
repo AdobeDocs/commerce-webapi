@@ -1,6 +1,6 @@
 ---
-title: Create server-to-server integration
-description: Learn how to set up OAuth server-to-server authentication for Adobe Commerce as a Cloud Service REST API.
+title: User authentication
+description: Learn about REST API authentication in Adobe Commerce as a Cloud Service.
 edition: saas
 keywords:
   - REST
@@ -58,7 +58,7 @@ If you have already completed the Server Authentication Setup, as mentioned in p
 
 ### Step 3: Implement token generation
 
-The IMS access token is required for all API calls. It is generated using the client credentials and has a limited lifetime. The following example implementation uses JavaScript and Node.js to generate a token.
+The IMS admin token is required for all API calls. It is generated using the client credentials and has a limited lifetime. The following example implementation uses JavaScript and Node.js to generate a token.
 
 Ensure you have the `axios` library installed in your project.
 
