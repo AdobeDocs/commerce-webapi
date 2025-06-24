@@ -9,10 +9,6 @@ keywords:
  
 # Authentication in Adobe Commerce as a Cloud Service
 
-import ACCSEarlyAccess from '/src/_includes/accs/accs-early-access.md'
-
-<ACCSEarlyAccess />
-
 In Adobe Commerce as a Cloud Service (SaaS), you must use Adobe's Identity Management Service (IMS) for admin authentication. The traditional admin token generation method is not supported in SaaS environments. Instead, you must obtain an IMS admin token through OAuth authentication.
 
 This authentication method ensures that all API calls are performed within the context of the authenticated admin user's permissions, as defined in the ACCS.
