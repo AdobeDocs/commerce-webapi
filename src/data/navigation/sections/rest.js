@@ -37,10 +37,6 @@ module.exports = [
             }
         ],
     },
-    {
-        title: "Integration",
-        path: "/rest/integration.md"
-    },
   {
     title: "Use REST endpoints",
     path: "/rest/use-rest/",
@@ -64,7 +60,6 @@ module.exports = [
         {
           title: "Protected endpoints",
           path: "/rest/use-rest/protected-endpoints.md",
-        
         },
         {
           title: "Restricting access to anonymous web APIs",
