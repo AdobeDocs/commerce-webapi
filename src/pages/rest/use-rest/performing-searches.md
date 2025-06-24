@@ -57,14 +57,27 @@ When constructing a search, keep the following in mind:
 *  You cannot perform a logical OR across different `filter_groups`, such as `(A AND B) OR (X AND Y)`. ORs can be performed only within the context of a single `filter_groups`.
 *  You can only search top-level attributes.
 
-The following sections provide examples of each type of search. These examples use the <Vars.sitedatavarce/> sample data.
+The following sections provide examples of each type of search. These examples use Luma sample data, which is available in PaaS environments only. The examples are applicable in Adobe Commerce as a Cloud Service, but must be modified to return your sample data.
 
 ## Simple search
 
 The <Vars.sitedatavarce/> sample data uses the `category_gear` field to describe the categories for each item listed under Gear on sample store. Each item can be assigned to multiple categories. Electronics are assigned the code 86. The following example returns all gear tagged as electronics.
 
+<CodeBlock slots="heading, code" repeat="2" languages="HTTP, HTTP" />
+
+#### PaaS
+
 ```http
-GET <host>/rest/<store_code>/V1/products/?
+GET https://<host>/rest/<store_code>/V1/products/?
+searchCriteria[filter_groups][0][filters][0][field]=category_gear&
+searchCriteria[filter_groups][0][filters][0][value]=86&
+searchCriteria[filter_groups][0][filters][0][condition_type]=finset
+```
+
+#### SaaS
+
+```http
+GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/products/?
 searchCriteria[filter_groups][0][filters][0][field]=category_gear&
 searchCriteria[filter_groups][0][filters][0][value]=86&
 searchCriteria[filter_groups][0][filters][0][condition_type]=finset
@@ -93,8 +106,21 @@ The query returns 9 items.
 
 The following search finds all invoices created after the specified time (midnight, July 1 2016). You can set up a similar search to run periodically to poll for changes.
 
+<CodeBlock slots="heading, code" repeat="2" languages="HTTP, HTTP" />
+
+#### PaaS
+
 ```http
-GET <host>/rest/<store_code>/V1/invoices?
+GET https://<host>/rest/<store_code>/V1/invoices?
+searchCriteria[filter_groups][0][filters][0][field]=created_at&
+searchCriteria[filter_groups][0][filters][0][value]=2016-07-01 00:00:00&
+searchCriteria[filter_groups][0][filters][0][condition_type]=gt
+```
+
+#### SaaS
+
+```http
+GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/invoices?
 searchCriteria[filter_groups][0][filters][0][field]=created_at&
 searchCriteria[filter_groups][0][filters][0][value]=2016-07-01 00:00:00&
 searchCriteria[filter_groups][0][filters][0][condition_type]=gt
@@ -104,8 +130,21 @@ searchCriteria[filter_groups][0][filters][0][condition_type]=gt
 
 The following search finds all the products that are provided in the value field. When you specify the `in` condition type, the value field must be a comma separated list.
 
+<CodeBlock slots="heading, code" repeat="2" languages="HTTP, HTTP" />
+
+#### PaaS
+
 ```http
-GET <host>/rest/<store_code>/V1/products?
+GET https://<host>/rest/<store_code>/V1/products?
+searchCriteria[filter_groups][0][filters][0][field]=entity_id&
+searchCriteria[filter_groups][0][filters][0][value]=1,2,3,4,5&
+searchCriteria[filter_groups][0][filters][0][condition_type]=in
+```
+
+#### SaaS
+
+```http
+GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/products?
 searchCriteria[filter_groups][0][filters][0][field]=entity_id&
 searchCriteria[filter_groups][0][filters][0][value]=1,2,3,4,5&
 searchCriteria[filter_groups][0][filters][0][condition_type]=in
@@ -117,8 +156,24 @@ The query returns 5 items.
 
 The following example searches for all products whose names contain the string `Leggings` or `Parachute`. The instances of `%25` in the example are converted into the SQL wildcard character `%`.
 
+<CodeBlock slots="heading, code" repeat="2" languages="HTTP, HTTP" />
+
+#### PaaS
+
 ```http
-GET <host>/rest/<store_code>/V1/products?
+GET https://<host>/rest/<store_code>/V1/products?
+searchCriteria[filter_groups][0][filters][0][field]=name&
+searchCriteria[filter_groups][0][filters][0][value]=%25Leggings%25&
+searchCriteria[filter_groups][0][filters][0][condition_type]=like&
+searchCriteria[filter_groups][0][filters][1][field]=name&
+searchCriteria[filter_groups][0][filters][1][value]=%25Parachute%25&
+searchCriteria[filter_groups][0][filters][1][condition_type]=like
+```
+
+#### SaaS
+
+```http
+GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/products?
 searchCriteria[filter_groups][0][filters][0][field]=name&
 searchCriteria[filter_groups][0][filters][0][value]=%25Leggings%25&
 searchCriteria[filter_groups][0][filters][0][condition_type]=like&
@@ -155,8 +210,24 @@ The search returns 14 products that contain the string `Leggings` in the `name` 
 
 This sample searches for women's shorts that are size 31 and costs less than $30. In the CE sample data, women's shorts have a `sku` value that begins with `WSH`. The `sku` also contains the size and color, such as `WSH02-31-Yellow`.
 
+<CodeBlock slots="heading, code" repeat="2" languages="HTTP, HTTP" />
+
+#### PaaS
+
 ```http
-GET <host>/rest/<store_code>/V1/products?
+GET https://<host>/rest/<store_code>/V1/products?
+searchCriteria[filter_groups][0][filters][0][field]=sku&
+searchCriteria[filter_groups][0][filters][0][value]=WSH%2531%25&
+searchCriteria[filter_groups][0][filters][0][condition_type]=like&
+searchCriteria[filter_groups][1][filters][0][field]=price&
+searchCriteria[filter_groups][1][filters][0][value]=30&
+searchCriteria[filter_groups][1][filters][0][condition_type]=lt
+```
+
+#### SaaS
+
+```http
+GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/products?
 searchCriteria[filter_groups][0][filters][0][field]=sku&
 searchCriteria[filter_groups][0][filters][0][value]=WSH%2531%25&
 searchCriteria[filter_groups][0][filters][0][condition_type]=like&
@@ -197,8 +268,30 @@ The query returns 9 items.
 
 This sample is similar the Logical AND sample. It searches the `sku`s for women's shorts (WSH%) or pants (WP%)in size 29. The system performs two logical ANDs to restrict the results to those that cost from $40 to $49.99
 
+<CodeBlock slots="heading, code" repeat="2" languages="HTTP, HTTP" />
+
+#### PaaS
+
 ```http
-GET <host>/rest/<store_code>/V1/products?
+GET https://<host>/rest/<store_code>/V1/products?
+searchCriteria[filter_groups][0][filters][0][field]=sku&
+searchCriteria[filter_groups][0][filters][0][value]=WSH%2529%25&
+searchCriteria[filter_groups][0][filters][0][condition_type]=like&
+searchCriteria[filter_groups][0][filters][1][field]=sku&
+searchCriteria[filter_groups][0][filters][1][value]=WP%2529%25&
+searchCriteria[filter_groups][0][filters][1][condition_type]=like&
+searchCriteria[filter_groups][1][filters][0][field]=price&
+searchCriteria[filter_groups][1][filters][0][value]=40&
+searchCriteria[filter_groups][1][filters][0][condition_type]=from&
+searchCriteria[filter_groups][2][filters][0][field]=price&
+searchCriteria[filter_groups][2][filters][0][value]=49.99&
+searchCriteria[filter_groups][2][filters][0][condition_type]=to
+```
+
+#### SaaS 
+
+```http
+GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/products?
 searchCriteria[filter_groups][0][filters][0][field]=sku&
 searchCriteria[filter_groups][0][filters][0][value]=WSH%2529%25&
 searchCriteria[filter_groups][0][filters][0][condition_type]=like&
@@ -233,7 +326,9 @@ This example shows how to use search criteria to determine the sort order and at
 
 **Endpoint:**
 
-`GET <host>/rest/V1/orders/`
+&#8203;<Edition name="paas" /> `GET https://<host>/rest/<store_code>/V1/orders/`
+
+&#8203;<Edition name="saas" /> `GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/orders/`
 
 **Headers:**
 
@@ -255,8 +350,22 @@ Not applicable
 
 **Request:**
 
+<CodeBlock slots="heading, code" repeat="2" languages="HTTP, HTTP" />
+
+#### PaaS
+
 ```http
-GET <host>/rest/V1/orders?
+GET https://<host>/rest/V1/orders?
+searchCriteria[filter_groups][0][filters][0][field]=status&
+searchCriteria[filter_groups][0][filters][0][value]=pending&
+searchCriteria[sortOrders][0][field]=increment_id&
+fields=items[increment_id,entity_id]
+```
+
+#### SaaS
+
+```http
+GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/orders?
 searchCriteria[filter_groups][0][filters][0][field]=status&
 searchCriteria[filter_groups][0][filters][0][value]=pending&
 searchCriteria[sortOrders][0][field]=increment_id&

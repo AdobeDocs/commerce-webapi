@@ -75,10 +75,6 @@ grant_type=client_credentials
   1. Authentication failures
   1. Rate limiting
 
-## Next steps
-
-Once you've configured authentication, see [Server-to-Server integration](../integration/index.md)for a practical step-by-step guide with code examples on how to implement this type of integration with the Adobe Commerce as a Cloud Service Rest API.
-
 ## Security considerations
 
 - Credential storage

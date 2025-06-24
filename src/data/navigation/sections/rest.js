@@ -37,10 +37,6 @@ module.exports = [
             }
         ],
     },
-    {
-        title: "Integration",
-        path: "/rest/integration.md"
-    },
   {
     title: "Use REST endpoints",
     path: "/rest/use-rest/",
