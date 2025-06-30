@@ -53,10 +53,6 @@ mutation {
       number
       token
     }
-    errors {
-      message
-      code
-    }
   }
 }
 ```
@@ -70,8 +66,7 @@ mutation {
       "orderV2": {
         "number": "000000006",
         "token": "0:3:OSScWU6PKLn3kFyMhNWyskG0opgVvFBnJmtuaFHKGwDFT83S6Kv9U39iYwixuU+vhwDz2AF4pCs3GtLhHbQ="
-      },
-      "errors": []
+      }
     }
   }
 }
@@ -91,3 +86,31 @@ Code | Error | Description
 `UNABLE_TO_PLACE_ORDER` | `Enter a valid payment method and try again` | The payment method was not set. See [setPaymentMethodOnCart](../../cart/mutations/set-payment-method.md) mutation.
 `UNABLE_TO_PLACE_ORDER` | `Some of the products are out of stock` | One of the products in the shopping cart are currently out of stock.
 `UNDEFINED` | `UNDEFINED` | The error message does not match any error code
+
+**Example:**
+
+```json
+{
+  "errors": [
+    {
+      "message": "Unable to place order: The shipping method is missing. Select the shipping method and try again.",
+      "locations": [
+        {
+          "line": 2,
+          "column": 3
+        }
+      ],
+      "path": [
+        "placeOrder"
+      ],
+      "extensions": {
+        "category": "graphql-input",
+        "error_code": "UNABLE_TO_PLACE_ORDER"
+      }
+    }
+  ],
+  "data": {
+    "placeOrder": null
+  }
+}
+```
