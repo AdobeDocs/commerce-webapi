@@ -1,23 +1,8 @@
 import React from 'react'
 import { GetCredential } from '@adobe/gatsby-theme-aio/src/components/GetCredential';
-import { graphql, useStaticQuery } from 'gatsby';
 import commerce from "./images/commerce.svg";
 
 const GetCredentialOAuthS2s = () => {
-
-    const data = useStaticQuery(
-        graphql`
-        query { 
-          site {
-            siteMetadata{
-              template_id
-            }
-          }
-        }
-      `
-      )
-    
-      const { template_id } = data?.site?.siteMetadata;
     
   return (
 
