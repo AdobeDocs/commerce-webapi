@@ -6,7 +6,7 @@ const GetCredentialOAuthS2s = () => {
     
   return (
 
-    <GetCredential className="getCredentialContainer" templateId={template_id} productName='Adobe Commerce as a Cloud Service' >
+    <GetCredential className="getCredentialContainer" productName='Adobe Commerce as a Cloud Service' >
 
       <GetCredential.SignIn title="Get credentials" paragraph="After signing in, you can create credentials that can be used to call the Commerce APIs." buttonText="Sign in" />
 
