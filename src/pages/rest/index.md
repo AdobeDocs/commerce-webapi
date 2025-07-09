@@ -51,9 +51,9 @@ The following key differences are important to consider when planning your REST 
 
 ### Endpoints
 
-Primarily the Cloud Service REST API differs in that it includes a smaller subset of endpoints. Specifically, the customer and guest REST APIs that are available in Adobe Commerce on Cloud and on-premises deployments are not available in Adobe Commerce as a Cloud Service. However, access to similar functionality remains available with the [GraphQL APIs](..//graphql/index.md).
+Primarily the Cloud Service REST API differs in that it includes a smaller subset of endpoints. Specifically, the customer and guest REST APIs that are available in Adobe Commerce on Cloud and on-premises deployments are not available in Adobe Commerce as a Cloud Service. However, access to similar functionality remains available with the [GraphQL APIs](../graphql/index.md).
 
-<!--For more information on what endpoints are available, refer to the [API reference](/reference/cloud/rest.md). -->
+The [API reference](../reference/rest/saas.md) lists the available endpoints. -->
 
 ### Authentication
 
@@ -63,7 +63,7 @@ The authentication system supports both [interactive user-based workflows](./aut
 
 ### URL structure
 
-The URL structure for your REST endpoints will be slightly different in Adobe Commerce as a Cloud Service. In addition to your base URL changing, `/rest` is no longer needed.
+The URL structure for your REST endpoints will be slightly different in Adobe Commerce as a Cloud Service. In addition to your base URL changing, the route no longer contains the string `/rest`, nor does it contain the store view code. The store view code is specified in the `Store` header of the request.
 
 Cloud Service URLs use the following format:
 
