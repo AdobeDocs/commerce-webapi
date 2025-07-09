@@ -109,6 +109,8 @@ POST /all/async/V1/products
 PUT /all/async/V1/products/:sku
 ```
 
+&#8203;<Edition name="saas" />In Adobe Commerce as a Cloud Service, you must specify the store code in the `Store` header of the request.
+
 ### Fallback and creating/updating objects when setting store scopes
 
 The following rules apply when you create or update an object, such as a product.
