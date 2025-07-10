@@ -18,6 +18,7 @@ module.exports = {
       "title": "Commerce",
       "path": "/commerce/docs"
     },
+    template_id: process.env.GATSBY_TEMPLATE_ID,
     pages: pages,
     subPages: subPages,
   },

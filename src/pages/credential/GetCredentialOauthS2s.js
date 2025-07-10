@@ -1,12 +1,27 @@
 import React from 'react'
 import { GetCredential } from '@adobe/gatsby-theme-aio/src/components/GetCredential';
+import { graphql, useStaticQuery } from 'gatsby';
 import commerce from "./images/commerce.svg";
 
 const GetCredentialOAuthS2s = () => {
+
+  const data = useStaticQuery(
+      graphql`
+      query { 
+        site {
+          siteMetadata{
+            template_id
+          }
+        }
+      }
+    `
+    )
+  
+    const { template_id } = data?.site?.siteMetadata || {};
     
   return (
 
-    <GetCredential className="getCredentialContainer" productName='Adobe Commerce as a Cloud Service' >
+    <GetCredential className="getCredentialContainer" templateId={template_id} productName='Adobe Commerce as a Cloud Service' >
 
       <GetCredential.SignIn title="Get credentials" paragraph="After signing in, you can create credentials that can be used to call the Commerce APIs." buttonText="Sign in" />
 
