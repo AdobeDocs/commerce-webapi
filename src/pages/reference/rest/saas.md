@@ -7,8 +7,8 @@ edition: saas
 # frameSrc: https://adobe-commerce-saas.redoc.ly
 --- 
 
-import GetCredentialOauthS2s from '../../credential/GetCredentialOAuthS2s.js'
+import GetCredentialOAuthS2s from '../../credential/GetCredentialOAuthS2s.js'
 
-<GetCredentialOauthS2s />
+<GetCredentialOAuthS2s />
 
 <RedoclyAPIBlock src="/commerce-webapi/src/openapi/accs-schema.yaml"/>
