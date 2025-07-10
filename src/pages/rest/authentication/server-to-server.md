@@ -53,7 +53,7 @@ Use the following steps to implement server-to-server integration with Adobe Com
 
 ### Step 2: Implement token generation
 
-To authenticate with the Adobe Commerce as a Cloud Service REST APIs, you need to generate an IMS access token using your client credentials. This token is used to authorize API requests.
+To authenticate with the Adobe Commerce as a Cloud Service REST APIs, you need to generate an IMS access token using your client credentials. This token is used to authorize API requests. **Be sure to include the `commerce.accs` scope.**
 
 ```javascript
 // tokenManager.js
@@ -89,7 +89,7 @@ class TokenManager {
           client_id: process.env.IMS_CLIENT_ID,
           client_secret: process.env.IMS_CLIENT_SECRET,
           grant_type: 'client_credentials',
-          scope: 'openid,AdobeID,email,profile,additional_info.roles,additional_info.projectedProductContext'  // required scopes
+          scope: 'openid,AdobeID,email,profile,additional_info.roles,additional_info.projectedProductContext,commerce.accs'  // required scopes
         })
       });
 
@@ -220,7 +220,7 @@ The following best practices help ensure your server-to-server integration is se
 
 ## Alternative implementations
 
-The following example shows how to implement server-to-server integration using Python.
+The following example shows how to implement server-to-server integration using Python. **Be sure to include the `commerce.accs` scope.**
 
 ```python
 import os
@@ -256,7 +256,7 @@ class ACCSTokenManager:
             'client_id': self.client_id,
             'client_secret': self.client_secret,
             'grant_type': 'client_credentials',
-            'scope': 'openid,AdobeID,email,profile,additional_info.roles,additional_info.projectedProductContext'
+            'scope': 'openid,AdobeID,email,profile,additional_info.roles,additional_info.projectedProductContext,commerce.accs'
         }
         
         try:
