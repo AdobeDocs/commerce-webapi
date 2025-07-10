@@ -17,6 +17,10 @@ const GetCredentialOAuthS2s = () => {
     `
     )
   
+    // This line uses JavaScript object destructuring to extract the 'template_id' property from the 'siteMetadata' object,
+    // which is nested inside the 'site' object of the 'data' object returned by the GraphQL query.
+    // If any of these objects ('data', 'site', or 'siteMetadata') are undefined or null, it defaults to an empty object,
+    // so 'template_id' will be undefined instead of causing a runtime error. Only needed temporarily so builds don't fail.
     const { template_id } = data?.site?.siteMetadata || {};
     
   return (
