@@ -13,4 +13,4 @@ import GetCredentialOAuthS2s from '/src/pages/credential/GetCredentialOAuthS2s.j
 
 <GetCredentialOAuthS2s />
 
-<RedoclyAPIBlock src="/commerce-webapi/src/openapi/accs-schema.yaml"/>
+<RedoclyAPIBlock src="/commerce-webapi/src/openapi/accs-schema.yaml" pagination="section" />
