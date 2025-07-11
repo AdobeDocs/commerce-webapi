@@ -1,17 +1,17 @@
 ---
-title: Server-to-Server Authentication
-description: Learn how to set up OAuth Server-to-Server authentication for Adobe Commerce as a Cloud Service REST API
+title: Server-to-server Authentication
+description: Learn how to set up OAuth server-to-server authentication for Adobe Commerce as a Cloud Service REST API
 edition: saas
 keywords:
   - REST
   - Integration
 --- 
  
-# Server-to-Server Authentication
+# Server-to-server Authentication
 
 **When to use:** Choose this flow for automated integrations that do not require user interaction (e.g., background jobs, integrations, or scripts).
 
-This guide provides practical steps for implementing Server-to-Server integration with Adobe Commerce as a Cloud Service REST APIs using OAuth 2 Server-to-Server authentication. This type of integration enables automated communication without user intervention, which is ideal for the following use cases:
+This guide provides practical steps for implementing integration with Adobe Commerce as a Cloud Service REST APIs using OAuth 2 server-to-server authentication. This type of integration enables automated communication without user intervention, which is ideal for the following use cases:
 
 - Background processes and automated tasks
 - Data synchronization services
@@ -38,7 +38,7 @@ Make a note of the following:
 
 ## Implementation steps
 
-Use the following steps to implement Server-to-Server integration with Adobe Commerce as a Cloud Service REST APIs.
+Use the following steps to implement server-to-server integration with Adobe Commerce as a Cloud Service REST APIs.
 
 ### Step 1: Configure your environment
 
@@ -199,7 +199,7 @@ main();
 
 ---
 
-The following best practices and troubleshooting tips may help to ensure your Server-to-Server integration is secure, efficient, and maintainable:
+The following best practices and troubleshooting tips may help to ensure your server-to-server integration is secure, efficient, and maintainable:
 
 ## Best practices
 
@@ -223,7 +223,7 @@ The following best practices and troubleshooting tips may help to ensure your Se
 
 ## Alternative implementations
 
-The following example shows how to implement Server-to-Server integration using Python. **Be sure to include the `commerce.accs` scope.**
+The following example shows how to implement server-to-server integration using Python. **Be sure to include the `commerce.accs` scope.**
 
 ```python
 import os
@@ -328,5 +328,5 @@ If you encounter issues during implementation, consider the following troublesho
 ### Token Generation Fails
 
   - Verify your client ID and secret are valid
-  - Check that your OAuth Server-to-Server credentials are properly configured
+  - Check that your OAuth server-to-server credentials are properly configured
   - Ensure you're using the correct IMS endpoint

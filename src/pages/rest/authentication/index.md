@@ -13,11 +13,11 @@ Adobe Commerce as a Cloud Service REST API authentication is handled through Ado
 
 See [Authentication](../../get-started/authentication/index.md) in the _Get Started_ guide for information about the authentication methods available on other versions of Adobe Commerce.
 
-## Server-to-Server authentication
+## Server-to-server authentication
 
 **When to use:** Choose this flow for automated, system-to-system integrations that do not require user interaction (e.g., background jobs, integrations, or scripts).
 
-Server-to-Server authentication enables automated systems to interact with Commerce APIs without user intervention. This method uses technical account credentials to obtain access tokens directly, making it perfect for background processes, scheduled tasks, and system integrations that need to operate independently.
+Server-to-server authentication enables automated systems to interact with Commerce APIs without user intervention. This method uses technical account credentials to obtain access tokens directly, making it perfect for background processes, scheduled tasks, and system integrations that need to operate independently.
 
 Key benefits of this approach include:
 
@@ -26,7 +26,7 @@ Key benefits of this approach include:
 - Ideal for headless and backend integrations
 - Support for system-wide permissions and access control
 
-For detailed steps, see the [Server-to-Server Authentication Guide](./server-to-server.md).
+For detailed steps, see the [server-to-server Authentication Guide](./server-to-server.md).
 
 ## User authentication
 
