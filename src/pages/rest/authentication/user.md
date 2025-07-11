@@ -123,9 +123,10 @@ Authorization code to access token:
 
 ## Token storage best practices
 
-- Secure storage methods
-- Encryption at rest
-- Token rotation procedures
+- Always store access and refresh tokens securely, using encrypted storage mechanisms appropriate for your environment (e.g., environment variables, secure server-side storage, or encrypted browser storage for SPAs).
+- Never expose tokens in client-side code.
+- Implement automatic token expiration handling and renewal.
+- Regularly audit and rotate credentials as part of your security policy.
 
 ## Usage examples
 
