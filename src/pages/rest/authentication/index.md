@@ -9,7 +9,7 @@ keywords:
 
 # REST Authentication in Adobe Commerce as a Cloud Service
 
-Adobe Commerce as a Cloud Service REST API authentication is handled through Adobe's Identity Management System (IMS), providing secure access to Commerce functionality through standardized OAuth 2 protocols. This authentication system supports both interactive user-based workflows and automated server-to-server integrations, ensuring secure and appropriate access for different use cases.
+Adobe Commerce as a Cloud Service REST API authentication is handled through Adobe's Identity Management System (IMS) through standardized OAuth 2 protocols. This authentication system supports both interactive user-based workflows and automated server-to-server integrations, ensuring secure and appropriate access for different use cases. The traditional admin and integration token generation methods is not supported in SaaS environments. Instead, you must obtain an IMS admin token through OAuth authentication.
 
 The following types of authentication are available for Adobe Commerce as a Cloud Service REST APIs:
 

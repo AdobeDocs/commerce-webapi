@@ -1,5 +1,5 @@
 ---
-title: User authentication
+title: User Authentication
 description: Learn about User Authentication for REST API in Adobe Commerce as a Cloud Service.
 edition: saas
 keywords:
