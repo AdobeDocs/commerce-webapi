@@ -4,7 +4,7 @@ description: Review comprehensive reference documentation for the Adobe Commerce
 keywords:
   - REST
 edition: saas
-frameSrc: https://adobe-commerce-saas.redoc.ly
+# frameSrc: https://adobe-commerce-saas.redoc.ly
 ---
 
 import GetCredentialOAuthS2s from '/src/pages/credential/GetCredentialOAuthS2s.js'
@@ -12,3 +12,5 @@ import GetCredentialOAuthS2s from '/src/pages/credential/GetCredentialOAuthS2s.j
 # REST endpoints for Adobe Commerce as a Cloud Service
 
 <GetCredentialOAuthS2s />
+
+<RedoclyAPIBlock src="/commerce-webapi/src/openapi/accs-schema.yaml"/>
