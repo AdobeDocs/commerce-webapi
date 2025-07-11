@@ -7,7 +7,7 @@ edition: saas
 frameSrc: https://adobe-commerce-saas.redoc.ly
 ---
 
-import GetCredentialsOAuthS2s from '/src/pages/credential/GetCredentialOAuthS2s.js'
+import GetCredentialOAuthS2s from '/src/pages/credential/GetCredentialOAuthS2s.js'
 
 # REST endpoints for Adobe Commerce as a Cloud Service
 
