@@ -1,5 +1,5 @@
 ---
-title: Create server-to-server integration
+title: Server-to-server Authentication
 description: Learn how to set up OAuth server-to-server authentication for Adobe Commerce as a Cloud Service REST API
 edition: saas
 keywords:
@@ -7,14 +7,13 @@ keywords:
   - Integration
 --- 
  
-# Create server-to-server integration
+# Server-to-server Authentication
 
-This guide provides practical steps for implementing server-to-server integration with Adobe Commerce as a Cloud Service REST APIs using OAuth server-to-server authentication. This type of integration enables automated system-to-system communication without user intervention, which is ideal for the following use cases:
+This guide provides practical steps for implementing integration with Adobe Commerce as a Cloud Service REST APIs using OAuth 2 server-to-server authentication. This type of integration enables automated communication without user intervention, which is ideal for the following use cases:
 
 - Background processes and automated tasks
 - Data synchronization services
 - Automated reporting systems
-- Microservices architecture integration
 
 ## Prerequisites
 
@@ -53,7 +52,7 @@ Use the following steps to implement server-to-server integration with Adobe Com
 
 ### Step 2: Implement token generation
 
-To authenticate with the Adobe Commerce as a Cloud Service REST APIs, you need to generate an IMS access token using your client credentials. This token is used to authorize API requests.
+To authenticate with the Adobe Commerce as a Cloud Service REST APIs, you need to generate an IMS access token using your client credentials. This token is used to authorize API requests. **Be sure to include the `commerce.accs` scope.**
 
 ```javascript
 // tokenManager.js
@@ -89,7 +88,7 @@ class TokenManager {
           client_id: process.env.IMS_CLIENT_ID,
           client_secret: process.env.IMS_CLIENT_SECRET,
           grant_type: 'client_credentials',
-          scope: 'openid,AdobeID,email,profile,additional_info.roles,additional_info.projectedProductContext'  // required scopes
+          scope: 'openid,AdobeID,email,profile,additional_info.roles,additional_info.projectedProductContext,commerce.accs'  // required scopes
         })
       });
 
@@ -168,9 +167,9 @@ class ACCSApiClient {
 module.exports = ACCSApiClient;
 ```
 
-### Step 4: Usage example
+### Usage example
 
-The following example implementation demonstrates how to use the API client.
+Here is a real-world example of making an authenticated API request after obtaining an access token:
 
 ```javascript
 // example-usage.js
@@ -198,7 +197,7 @@ main();
 
 ## Best practices
 
-The following best practices help ensure your server-to-server integration is secure, efficient, and maintainable.
+The following best practices tips help ensure your server-to-server integration is secure, efficient, and maintainable.
 
 ### Security
 
@@ -220,7 +219,7 @@ The following best practices help ensure your server-to-server integration is se
 
 ## Alternative implementations
 
-The following example shows how to implement server-to-server integration using Python.
+The following example shows how to implement server-to-server integration using Python. **Be sure to include the `commerce.accs` scope.**
 
 ```python
 import os
@@ -256,7 +255,7 @@ class ACCSTokenManager:
             'client_id': self.client_id,
             'client_secret': self.client_secret,
             'grant_type': 'client_credentials',
-            'scope': 'openid,AdobeID,email,profile,additional_info.roles,additional_info.projectedProductContext'
+            'scope': 'openid,AdobeID,email,profile,additional_info.roles,additional_info.projectedProductContext,commerce.accs'
         }
         
         try:
@@ -325,5 +324,5 @@ If you encounter issues during implementation, consider the following troublesho
 ### Token Generation Fails
 
   - Verify your client ID and secret are valid
-  - Check that your OAuth Server-to-Server credentials are properly configured
+  - Check that your OAuth server-to-server credentials are properly configured
   - Ensure you're using the correct IMS endpoint
