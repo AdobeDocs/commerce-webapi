@@ -7,11 +7,9 @@ keywords:
   - Integration
 --- 
  
-# User Authentication
+# User authentication
 
-**When to use:** Choose this flow when API operations must be performed by an admin user according to their permissions (for example, when actions must be attributed to a specific admin).
-
-User Authentication enables Commerce Administrators to authenticate through Adobe's Identity Management System (IMS). This authentication flow is specifically designed for scenarios where API operations need to be executed with user-specific permissions. When using this method, all API calls are performed within the context of the authenticated admin user's permissions, as defined in the Adobe Admin Console.
+User authentication enables Commerce administrators to authenticate through Adobe's Identity Management System (IMS). This authentication flow is specifically designed for scenarios where API operations need to be executed with user-specific permissions. When using this method, all API calls are performed within the context of the authenticated admin user's permissions, as defined in the Adobe Admin Console.
 
 Adobe provides three types of OAuth credentials for User Authentication with different application architectures:
 
@@ -32,7 +30,9 @@ Before implementing user authentication, ensure you have:
 
 ## Implementation steps
 
-### 1. Generate IMS credentials
+The user authentication flow consists of the following steps.
+
+### Step 1. Generate IMS credentials
 
 To begin the implementation, you need to obtain IMS client credentials through the Adobe Developer Console. This process involves creating a new project and configuring OAuth authentication specifically for Adobe Commerce with Adobe ID integration.
 
@@ -52,7 +52,7 @@ The Adobe Developer Console provides a straightforward workflow:
   1. Make a note of the authorized redirect URIs.
   1. Securely save your credentials.
 
-### 2. Authorization flow
+### Step 2. Authorization flow
 
 **Building authorization URL**
 
@@ -91,7 +91,7 @@ Error handling:
 1. Implement appropriate error messaging
 1. Provide retry mechanisms
 
-### 3. Token exchange
+### Step 3. Token exchange
 
 Authorization code to access token:
 
@@ -140,6 +140,8 @@ Authorization: Bearer <access_token>
 - Handle token expiration and refresh as described below.
 
 ## Troubleshooting
+
+This section provides guidance on common issues and their resolutions when implementing user authentication.
 
 ### Error handling
 

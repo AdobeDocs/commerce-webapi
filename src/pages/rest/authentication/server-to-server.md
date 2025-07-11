@@ -9,8 +9,6 @@ keywords:
  
 # Server-to-server Authentication
 
-**When to use:** Choose this flow for automated integrations that do not require user interaction (e.g., background jobs, integrations, or scripts).
-
 This guide provides practical steps for implementing integration with Adobe Commerce as a Cloud Service REST APIs using OAuth 2 server-to-server authentication. This type of integration enables automated communication without user intervention, which is ideal for the following use cases:
 
 - Background processes and automated tasks
@@ -169,7 +167,7 @@ class ACCSApiClient {
 module.exports = ACCSApiClient;
 ```
 
-### Step 4: Usage example
+### Usage example
 
 Here is a real-world example of making an authenticated API request after obtaining an access token:
 
@@ -197,11 +195,9 @@ async function main() {
 main();
 ```
 
----
-
-The following best practices and troubleshooting tips may help to ensure your server-to-server integration is secure, efficient, and maintainable:
-
 ## Best practices
+
+The following best practices tips help ensure your server-to-server integration is secure, efficient, and maintainable.
 
 ### Security
 

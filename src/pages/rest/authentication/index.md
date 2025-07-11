@@ -11,11 +11,15 @@ keywords:
 
 Adobe Commerce as a Cloud Service REST API authentication is handled through Adobe's Identity Management System (IMS), providing secure access to Commerce functionality through standardized OAuth 2 protocols. This authentication system supports both interactive user-based workflows and automated server-to-server integrations, ensuring secure and appropriate access for different use cases.
 
+The following types of authentication are available for Adobe Commerce as a Cloud Service REST APIs:
+
+- [Server-to-server authentication](#server-to-server-authentication) - Choose this flow for automated, system-to-system integrations that do not require user interaction, such as background jobs, integrations, and scripts.
+
+- [User authentication](#user-authentication) - Choose this flow when API operations must be performed by an admin user according to their permissions, such as when actions must be attributed to a specific admin user.
+
 See [Authentication](../../get-started/authentication/index.md) in the _Get Started_ guide for information about the authentication methods available on other versions of Adobe Commerce.
 
 ## Server-to-server authentication
-
-**When to use:** Choose this flow for automated, system-to-system integrations that do not require user interaction (e.g., background jobs, integrations, or scripts).
 
 Server-to-server authentication enables automated systems to interact with Commerce APIs without user intervention. This method uses technical account credentials to obtain access tokens directly, making it perfect for background processes, scheduled tasks, and system integrations that need to operate independently.
 
@@ -30,9 +34,7 @@ For detailed steps, see the [server-to-server Authentication Guide](./server-to-
 
 ## User authentication
 
-**When to use:** Choose this flow when API operations must be performed by an admin user according to their permissions (for example, when actions must be attributed to a specific admin).
-
-The User Authentication flow provides a secure, OAuth-based workflow where users authenticate through Adobe IMS, ensuring credentials are never directly handled by your application.
+The user authentication flow provides a secure, OAuth-based workflow where users authenticate through Adobe IMS, ensuring credentials are never directly handled by your application.
 
 Key benefits of this approach include:
 
@@ -44,11 +46,9 @@ Key benefits of this approach include:
 
 For detailed steps, see the [User Authentication Guide](./user.md).
 
----
+## Getting started
 
 The following concepts apply to both authentication flows and are important for successful integration:
-
-## Getting started
 
 - Prerequisites:
   - Adobe Commerce as a Cloud Service license
