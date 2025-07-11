@@ -1,20 +1,21 @@
 ---
-title: Create server-to-server integration
-description: Learn how to set up OAuth server-to-server authentication for Adobe Commerce as a Cloud Service REST API
+title: Server-to-Server Authentication
+description: Learn how to set up OAuth Server-to-Server authentication for Adobe Commerce as a Cloud Service REST API
 edition: saas
 keywords:
   - REST
   - Integration
 --- 
  
-# Create server-to-server integration
+# Server-to-Server Authentication
 
-This guide provides practical steps for implementing server-to-server integration with Adobe Commerce as a Cloud Service REST APIs using OAuth server-to-server authentication. This type of integration enables automated system-to-system communication without user intervention, which is ideal for the following use cases:
+**When to use:** Choose this flow for automated integrations that do not require user interaction (e.g., background jobs, integrations, or scripts).
+
+This guide provides practical steps for implementing Server-to-Server integration with Adobe Commerce as a Cloud Service REST APIs using OAuth 2 Server-to-Server authentication. This type of integration enables automated communication without user intervention, which is ideal for the following use cases:
 
 - Background processes and automated tasks
 - Data synchronization services
 - Automated reporting systems
-- Microservices architecture integration
 
 ## Prerequisites
 
@@ -37,7 +38,7 @@ Make a note of the following:
 
 ## Implementation steps
 
-Use the following steps to implement server-to-server integration with Adobe Commerce as a Cloud Service REST APIs.
+Use the following steps to implement Server-to-Server integration with Adobe Commerce as a Cloud Service REST APIs.
 
 ### Step 1: Configure your environment
 
@@ -170,7 +171,7 @@ module.exports = ACCSApiClient;
 
 ### Step 4: Usage example
 
-The following example implementation demonstrates how to use the API client.
+Here is a real-world example of making an authenticated API request after obtaining an access token:
 
 ```javascript
 // example-usage.js
@@ -196,9 +197,11 @@ async function main() {
 main();
 ```
 
-## Best practices
+---
 
-The following best practices help ensure your server-to-server integration is secure, efficient, and maintainable.
+The following best practices and troubleshooting tips may help to ensure your Server-to-Server integration is secure, efficient, and maintainable:
+
+## Best practices
 
 ### Security
 
@@ -220,7 +223,7 @@ The following best practices help ensure your server-to-server integration is se
 
 ## Alternative implementations
 
-The following example shows how to implement server-to-server integration using Python. **Be sure to include the `commerce.accs` scope.**
+The following example shows how to implement Server-to-Server integration using Python. **Be sure to include the `commerce.accs` scope.**
 
 ```python
 import os

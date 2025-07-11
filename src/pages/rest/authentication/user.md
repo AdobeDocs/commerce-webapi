@@ -5,11 +5,13 @@ edition: saas
 keywords:
   - REST
   - Integration
----
-
+--- 
+ 
 # User Authentication
 
-User Authentication with Adobe's Secure User Sign-In (SUSI) interface enables Commerce Administrators to authenticate through Adobe's Identity Management System (IMS). This authentication flow is specifically designed for scenarios where API operations need to be executed with user-specific permissions. When using this method, all API calls are performed within the context of the authenticated admin user's permissions, as defined in the Adobe Admin Console.
+**When to use:** Choose this flow when API operations must be performed by an admin user according to their permissions (for example, when actions must be attributed to a specific admin).
+
+User Authentication enables Commerce Administrators to authenticate through Adobe's Identity Management System (IMS). This authentication flow is specifically designed for scenarios where API operations need to be executed with user-specific permissions. When using this method, all API calls are performed within the context of the authenticated admin user's permissions, as defined in the Adobe Admin Console.
 
 Adobe provides three types of OAuth credentials for User Authentication with different application architectures:
 
@@ -46,7 +48,6 @@ The Adobe Developer Console provides a straightforward workflow:
 
   1. Select the preferred OAuth 2 authentication type: **Web App/Single-Page App/Native App**.
   1. Configure the allowed redirect URIs.
-  1. **Add the required scope `commerce.accs` to your project.**
   1. Copy the Client ID and Client Secret.
   1. Make a note of the authorized redirect URIs.
   1. Securely save your credentials.
@@ -120,54 +121,34 @@ Authorization code to access token:
     }
     ```
 
-- Token refresh process:
-  1. Monitor token expiration.
-  1. Use refresh token to obtain new access token.
-  
-     **Request**:
-  
-     ```http
-     POST https://ims-na1.adobelogin.com/ims/token/v3
-     Authorization: Basic {{base64(client_id:client_secret)}}
-     Content-Type: application/x-www-form-urlencoded
-     
-     grant_type=refresh_token&refresh_token={{refresh_token}}
-     ```
-  
-     **Response**:
-  
-     ```json
-     {
-      "access_token": "{ACCESS_TOKEN}",
-      "refresh_token": "{REFRESH_TOKEN}",
-      "expires_in": 86399,
-      "token_type": "bearer"
-     }
-     ```
+## Token storage best practices
 
-  1. Update the stored tokens.
-
-- Token storage best practices:
-
-  - Secure storage methods
-  - Encryption at rest
-  - Token rotation procedures
+- Secure storage methods
+- Encryption at rest
+- Token rotation procedures
 
 ## Usage examples
 
-- API request format
+Here is a real-world example of making an authenticated API request after obtaining an access token:
 
-  ```http
-  GET /rest/v1/products
-  Authorization: Bearer <access_token>
-  ```
+```http
+GET /V1/products
+Authorization: Bearer <access_token>
+```
 
-- Error handling
-  1. Token expiration handling
-  1. Invalid token responses
-  1. Scope-related errors
+- Ensure you replace `<access_token>` with the actual token received from the token exchange step.
+- Handle token expiration and refresh as described below.
 
-- Token refresh flow
-  1. Detecting expired tokens
-  1. Automatic refresh implementation
-  1. Session management
+## Troubleshooting
+
+### Error handling
+
+- Token expiration handling: Detect when a token has expired and trigger a refresh.
+- Invalid token responses: Handle 401/403 errors by prompting for re-authentication or refreshing the token.
+- Scope-related errors: Ensure all required scopes are included in your authorization request.
+
+### Token refresh flow
+
+- Detecting expired tokens: Monitor API responses and token expiry time.
+- Automatic refresh implementation: Use the refresh token to obtain a new access token before the current one expires (if refresh tokens are supported).
+- Session management: Ensure user sessions are managed securely and tokens are rotated as needed.
