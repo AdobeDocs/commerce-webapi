@@ -61,14 +61,8 @@ const GetCredentialOAuthS2s = () => {
               <h3 className="spectrum-Heading spectrum-Heading--sizeS side-header">
                 Learn more
               </h3>
-              <a style={{ color: "#0265DC" }} href="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-authentication">
+              <a style={{ color: "#0265DC" }} href="https://developer.adobe.com/commerce/webapi/rest/authentication/">
                 Authentication documentation
-              </a>
-              <a style={{ color: "#0265DC" }} href="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide">
-                Adobe Experience Platform API documentation
-              </a>
-              <a style={{ color: "#0265DC" }} href="https://experienceleague.adobe.com/en/docs/experience-platform">
-                Adobe Experience Platform documentation
               </a>
             </div>
           </div>
@@ -162,14 +156,8 @@ const GetCredentialOAuthS2s = () => {
               <h3 className="spectrum-Heading spectrum-Heading--sizeS side-header">
                 Learn more
               </h3>
-              <a style={{ color: "#0265DC" }} href="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-authentication">
+              <a style={{ color: "#0265DC" }} href="https://developer.adobe.com/commerce/webapi/rest/authentication/">
                 Authentication documentation
-              </a>
-              <a style={{ color: "#0265DC" }} href="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide">
-                Adobe Experience Platform API documentation
-              </a>
-              <a style={{ color: "#0265DC" }} href="https://experienceleague.adobe.com/en/docs/experience-platform">
-                Adobe Experience Platform documentation
               </a>
             </div>
           </div>
