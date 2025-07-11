@@ -32,7 +32,7 @@ For detailed steps, see the [Server-to-Server Authentication Guide](./server-to-
 
 **When to use:** Choose this flow when API operations must be performed by an admin user according to their permissions (for example, when actions must be attributed to a specific admin).
 
-The User Authentication flow leverages Adobe's Secure User Sign-In (SUSI) interface to authenticate Commerce administrators. This method provides a secure, OAuth-based workflow where users authenticate through Adobe's login interface, ensuring credentials are never directly handled by your application.
+The User Authentication flow provides a secure, OAuth-based workflow where users authenticate through Adobe IMS, ensuring credentials are never directly handled by your application.
 
 Key benefits of this approach include:
 
