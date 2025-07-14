@@ -4,6 +4,7 @@ description: Review comprehensive reference documentation for the Adobe Commerce
 keywords:
   - REST
 edition: saas
+layout: none
 --- 
 
 # REST endpoints for Adobe Commerce as a Cloud Service
