@@ -8,4 +8,4 @@ edition: saas
 
 # REST endpoints for Adobe Commerce as a Cloud Service
 
-<RedoclyAPIBlock src='/rest/accs-schema.yaml' />
+<RedoclyAPIBlock src='/commerce/webapi/rest/accs-schema.yaml' />
