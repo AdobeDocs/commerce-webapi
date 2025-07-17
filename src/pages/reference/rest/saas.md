@@ -9,6 +9,6 @@ layout: none
 
 import GetCredentialOAuthS2s from '/src/pages/credential/GetCredentialOAuthS2s.js'
 
-<GetCredentialOAuthS2s />
+<!-- <GetCredentialOAuthS2s /> -->
 
-<RedoclyAPIBlock src='/commerce/webapi/rest/accs-schema.yaml' />
+<RedoclyAPIBlock src='/commerce/webapi/rest/data-ingestion-schema-v1.yaml' />
