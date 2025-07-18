@@ -110,7 +110,13 @@ Code | Error | Description
     }
   ],
   "data": {
-    "placeOrder": null
+    "placeOrder": null,
+    "errors": [
+      {
+        "message": "Unable to place order: The shipping method is missing. Select the shipping method and try again.",
+        "code": "UNABLE_TO_PLACE_ORDER"
+      }
+    ]
   }
 }
 ```
