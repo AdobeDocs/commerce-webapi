@@ -20,7 +20,7 @@ security:
   - imsOrgAuth: []
 servers:
   - url: https://na1-sandbox.api.commerce.adobe.com/{tenantId}
-    description: Production endpoint. The tenantId value is the identifier of the Adobe Commerce instance. See [Adobe Commerce Cloud Manager](https://experience.adobe.com/#/commerce/cloud-service/instances) to see your available instances.
+    description: Production endpoint. The tenantId value is the identifier of the Adobe Commerce instance.
     variables:
       tenantId:
         description: The identifier of the Adobe Commerce instance
@@ -207,26 +207,30 @@ paths:
               schema:
                 $ref: "#/components/schemas/ProcessFeedResponse"
         "400":
-          description: Request rejected. Some of the received items are invalid. Check the "message" and "errors" fields for details.
+          x-summary: Request rejected - invalid items
+          description: Some of the received items are invalid. Check the "message" and "errors" fields for details.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/400ProcessFeedResponse"
         "401":
-          description: Unauthorized request. Verify that the Bearer token provided in the `Authorization` header is still valid.
+          x-summary: Unauthorized request
+          description: Verify that the Bearer token provided in the `Authorization` header is still valid.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/401Response"
         "403":
-          description: Forbidden request. Verify that the `Authorization` header is present, and that the Bearer token is still valid.
+          x-summary: Forbidden request
+          description: Verify that the `Authorization` header is present, and that the Bearer token is still valid.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/403Response"
         "429":
+          x-summary: Too many requests
           description: |
-            Too many requests. Indicates that a client has exceeded the rate limit of 300 requests per minute.
+            Indicates that a client has exceeded the rate limit of 300 requests per minute.
             Check the `retry-after` header to get the time (in seconds) to wait before sending the next request.
           content:
             text/html;charset=UTF-8:
@@ -290,26 +294,30 @@ paths:
               schema:
                 $ref: "#/components/schemas/ProcessFeedResponse"
         "400":
-          description: Request rejected. Some of the received items are invalid. Check the "invalidFeedItems" node for specific errors.
+          x-summary: Request rejected - invalid items
+          description: Some of the received items are invalid. Check the "invalidFeedItems" node for specific errors.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/400ProcessFeedResponse"
         "401":
-          description: Unauthorized request. Verify that the Bearer token provided in the `Authorization` header is still valid.
+          x-summary: Unauthorized request
+          description: Verify that the Bearer token provided in the `Authorization` header is still valid.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/401Response"
         "403":
-          description: Forbidden request. Verify that the `Authorization` header is present, and that the Bearer token is still valid.
+          x-summary: Forbidden request
+          description: Verify that the `Authorization` header is present, and that the Bearer token is still valid.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/403Response"
         "429":
+          x-summary: Too many requests
           description: |
-            Too many requests. Indicates that a client has exceeded the rate limit of 300 requests per minute.
+            Indicates that a client has exceeded the rate limit of 300 requests per minute.
             Check the `retry-after` header to get the time (in seconds) to wait before sending the next request.
           content:
             text/html;charset=UTF-8:
@@ -361,26 +369,30 @@ paths:
               schema:
                 $ref: "#/components/schemas/ProcessFeedResponse"
         "400":
+          x-summary: Request rejected - invalid items
           description: Some received items are invalid. Check the ‘invalidFeedItems’ node for specific errors.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/400ProcessFeedResponse"
         "401":
-          description: Unauthorized request. Verify that the Bearer token provided in the `Authorization` header is still valid.
+          x-summary: Unauthorized request
+          description: Verify that the Bearer token provided in the `Authorization` header is still valid.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/401Response"
         "403":
-          description: Forbidden request. Verify that the `Authorization` header is present, and that the Bearer token is still valid.
+          x-summary: Forbidden request
+          description: Verify that the `Authorization` header is present, and that the Bearer token is still valid.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/403Response"
         "429":
+          x-summary: Too many requests
           description: |
-            Too many requests. Indicates that a client has exceeded the rate limit of 300 requests per minute.
+            Indicates that a client has exceeded the rate limit of 300 requests per minute.
             Check the `retry-after` header to get the time (in seconds) to wait before sending the next request.
           content:
             text/html;charset=UTF-8:
@@ -1143,26 +1155,30 @@ paths:
               schema:
                 $ref: "#/components/schemas/ProcessFeedResponse"
         "400":
-          description: Request rejected. Some of the received items are invalid. Check the "invalidFeedItems" node for specific errors.
+          x-summary: Request rejected - invalid items
+          description: Some of the received items are invalid. Check the "invalidFeedItems" node for specific errors.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/400ProcessFeedResponse"
         "401":
-          description: Unauthorized request. Verify that the Bearer token provided in the `Authorization` header is still valid.
+          x-summary: Unauthorized request
+          description: Verify that the Bearer token provided in the `Authorization` header is still valid.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/401Response"
         "403":
-          description: Forbidden request. Verify that the `Authorization` header is present, and that the Bearer token is still valid.
+          x-summary: Forbidden request
+          description: Verify that the `Authorization` header is present, and that the Bearer token is still valid.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/403Response"
         "429":
+          x-summary: Too many requests
           description: |
-            Too many requests. Indicates that a client has exceeded the rate limit of 300 requests per minute.
+            Indicates that a client has exceeded the rate limit of 300 requests per minute.
             Check the `retry-after` header to get the time (in seconds) to wait before sending the next request.
           content:
             text/html;charset=UTF-8:
@@ -1217,26 +1233,30 @@ paths:
               schema:
                 $ref: "#/components/schemas/ProcessFeedResponse"
         "400":
-          description: Request rejected. Some of the received items are invalid. Check the `invalidFeedItems` node for specific errors.
+          x-summary: Request rejected - invalid items
+          description: Some of the received items are invalid. Check the `invalidFeedItems` node for specific errors.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/400ProcessFeedResponse"
         "401":
-          description: Unauthorized request. Verify that the Bearer token provided in the `Authorization` header is still valid.
+          x-summary: Unauthorized request
+          description: Verify that the Bearer token provided in the `Authorization` header is still valid.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/401Response"
         "403":
-          description: Forbidden request. Verify that the `Authorization` header is present, and that the Bearer token is still valid.
+          x-summary: Forbidden request
+          description: Verify that the `Authorization` header is present, and that the Bearer token is still valid.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/403Response"
         "429":
+          x-summary: Too many requests
           description: |
-            Too many requests. Indicates that a client has exceeded the rate limit of 300 requests per minute.
+            Indicates that a client has exceeded the rate limit of 300 requests per minute.
             Check the `retry-after` header to get the time (in seconds) to wait before sending the next request.
           content:
             text/html;charset=UTF-8:
@@ -1286,26 +1306,30 @@ paths:
               schema:
                 $ref: "#/components/schemas/ProcessFeedResponse"
         "400":
-          description: Request rejected. Some of the received items are invalid. Check the "invalidFeedItems" node for specific errors.
+          x-summary: Request rejected - invalid items
+          description: Some of the received items are invalid. Check the "invalidFeedItems" node for specific errors.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/400ProcessFeedResponse"
         "401":
-          description: Unauthorized request. Verify that the Bearer token provided in the `Authorization` header is still valid.
+          x-summary: Unauthorized request
+          description: Verify that the Bearer token provided in the `Authorization` header is still valid.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/401Response"
         "403":
-          description: Forbidden request. Verify that the `Authorization` header is present, and that the Bearer token is still valid.
+          x-summary: Forbidden request
+          description: Verify that the `Authorization` header is present, and that the Bearer token is still valid.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/403Response"
         "429":
+          x-summary: Too many requests
           description: |
-            Too many requests. Indicates that a client has exceeded the rate limit of 300 requests per minute.
+            Indicates that a client has exceeded the rate limit of 300 requests per minute.
             Check the `retry-after` header to get the time (in seconds) to wait before sending the next request.
           content:
             text/html;charset=UTF-8:
@@ -1377,26 +1401,30 @@ paths:
               schema:
                 $ref: "#/components/schemas/ProcessFeedResponse"
         "400":
-          description: Request rejected. Some of the received items are invalid. Check the "invalidFeedItems" node for specific errors.
+          x-summary: Request rejected - invalid items
+          description: Some of the received items are invalid. Check the "invalidFeedItems" node for specific errors.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/400ProcessFeedResponse"
         "401":
-          description: Unauthorized request. Verify that the Bearer token provided in the `Authorization` header is still valid.
+          x-summary: Unauthorized request
+          description: Verify that the Bearer token provided in the `Authorization` header is still valid.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/401Response"
         "403":
-          description: Forbidden request. Verify that the `Authorization` header is present, and that the Bearer token is still valid.
+          x-summary: Forbidden request
+          description: Verify that the `Authorization` header is present, and that the Bearer token is still valid.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/403Response"
         "429":
+          x-summary: Too many requests
           description: |
-            Too many requests. Indicates that a client has exceeded the rate limit of 300 requests per minute.
+            Indicates that a client has exceeded the rate limit of 300 requests per minute.
             Check the `retry-after` header to get the time (in seconds) to wait before sending the next request.
           content:
             text/html;charset=UTF-8:
@@ -1455,28 +1483,30 @@ paths:
               schema:
                 $ref: "#/components/schemas/ProcessFeedResponse"
         "400":
-          description: |
-            Request rejected. Some of the received items are invalid.
-            Check the "invalidFeedItems" node for specific errors.
+          x-summary: Request rejected - invalid items
+          description: Some of the received items are invalid. Check the "invalidFeedItems" node for specific errors.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/400ProcessFeedResponse"
         "401":
-          description: Unauthorized request. Verify that the Bearer token provided in the `Authorization` header is still valid.
+          x-summary: Unauthorized request
+          description: Verify that the Bearer token provided in the `Authorization` header is still valid.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/401Response"
         "403":
-          description: Forbidden request. Verify that the `Authorization` header is present, and that the Bearer token is still valid.
+          x-summary: Forbidden request
+          description: Verify that the `Authorization` header is present, and that the Bearer token is still valid.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/403Response"
         "429":
+          x-summary: Too many requests
           description: |
-            Too many requests. Indicates that a client has exceeded the rate limit of 300 requests per minute.
+            Indicates that a client has exceeded the rate limit of 300 requests per minute.
             Check the `retry-after` header to get the time (in seconds) to wait before sending the next request.
           content:
             text/html;charset=UTF-8:
@@ -1525,26 +1555,30 @@ paths:
               schema:
                 $ref: "#/components/schemas/ProcessFeedResponse"
         "400":
-          description: Request rejected. Some of the received items are invalid. Check the "invalidFeedItems" node for specific errors.
+          x-summary: Request rejected - invalid items
+          description: Some of the received items are invalid. Check the "invalidFeedItems" node for specific errors.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/400ProcessFeedResponse"
         "401":
-          description: Unauthorized request. Verify that the Bearer token provided in the `Authorization` header is still valid.
+          x-summary: Unauthorized request
+          description: Verify that the Bearer token provided in the `Authorization` header is still valid.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/401Response"
         "403":
-          description: Forbidden request. Verify that the `Authorization` header is present, and that the Bearer token is still valid.
+          x-summary: Forbidden request
+          description: Verify that the `Authorization` header is present, and that the Bearer token is still valid.
           content:
             application/json;charset=UTF-8:
               schema:
                 $ref: "#/components/schemas/403Response"
         "429":
+          x-summary: Too many requests
           description: |
-            Too many requests. Indicates that a client has exceeded the rate limit of 300 requests per minute.
+            Indicates that a client has exceeded the rate limit of 300 requests per minute.
             Check the `retry-after` header to get the time (in seconds) to wait before sending the next request.
           content:
             text/html;charset=UTF-8:
@@ -1575,19 +1609,22 @@ components:
           schema:
             $ref: "#/components/schemas/ProcessFeedResponse"
     InvalidItemsResponse:
+      x-summary: Request rejected - invalid items
       description: One or all received items are invalid. Check the "invalidFeedItems" node for details
       content:
         application/json;charset=UTF-8:
           schema:
             $ref: "#/components/schemas/400ProcessFeedResponse"
     UnauthorizedResponse:
-      description: Unauthorized request. Verify that the Bearer token provided in the `Authorization` header is still valid.
+      x-summary: Unauthorized request
+      description: Verify that the Bearer token provided in the `Authorization` header is still valid.
       content:
         application/json;charset=UTF-8:
           schema:
             $ref: "#/components/schemas/401Response"
     ForbiddenResponse:
-      description: Forbidden request. Verify that the `Authorization` header is present, and that the Bearer token is still valid.
+      x-summary: Forbidden request
+      description: Verify that the `Authorization` header is present, and that the Bearer token is still valid.
       content:
         application/json;charset=UTF-8:
           schema:
