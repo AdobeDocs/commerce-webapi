@@ -20,10 +20,10 @@ security:
   - imsOrgAuth: []
 servers:
   - url: https://na1-sandbox.api.commerce.adobe.com/{tenantId}
-    description: Production endpoint. The tenantId value is the identifier of the Adobe Commerce instance.
+    description: Production sandbox endpoint
     variables:
       tenantId:
-        description: The identifier of the Adobe Commerce instance
+        description: Adobe Commerce instance identifier
         default: your-tenant-id
 
 tags:
