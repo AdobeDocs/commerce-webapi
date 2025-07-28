@@ -104,6 +104,8 @@ mutation {
 
 ## Verify this step
 
+Verification is possible after [Step 6: Set the delivery method](../../tutorials/checkout/set-delivery-method.md).
+
 1. Sign in as a customer to the website using the email `john.doe@example.com` and password `b1b2b3l@w+`.
 
 1. Go to Checkout.

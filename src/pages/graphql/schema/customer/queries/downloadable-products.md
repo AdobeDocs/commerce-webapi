@@ -1,5 +1,6 @@
 ---
 title: customerDownloadableProducts query
+edition: paas
 ---
 
 # customerDownloadableProducts query

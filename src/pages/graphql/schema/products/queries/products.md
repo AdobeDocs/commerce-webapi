@@ -1,5 +1,6 @@
 ---
 title: products query
+edition: paas
 ---
 
 import CustomAttributeFilterProduct from '/src/_includes/graphql/examples/custom-attribute-filter-product.md'
@@ -7,6 +8,10 @@ import CustomAttributeFilterProduct from '/src/_includes/graphql/examples/custom
 # products query
 
 The `products` query allows you to search for catalog items.
+
+<InlineAlert variant="important" slots="text" />
+
+Adobe Commerce as a Cloud Service does not support the `products` query. Use the Catalog Service [`products` query](../../catalog-service/queries/products.md) instead.
 
 ## Syntax
 
@@ -1523,6 +1528,8 @@ In this example, the `description` attribute has been enabled by setting the **S
 ```
 
 ### Retrieve related products, up-sells, and cross-sells
+
+<Edition name="paas" />
 
 The following query shows how to get related products, up-sells, and cross-sells for a product:
 

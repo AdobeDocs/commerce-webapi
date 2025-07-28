@@ -1,6 +1,7 @@
 ---
 title: Step 6. Create a customer and generate a customer token
 description: In this step of the tutorial you will create a customer and generate a customer token
+edition: paas
 keywords:
   - Inventory
   - REST

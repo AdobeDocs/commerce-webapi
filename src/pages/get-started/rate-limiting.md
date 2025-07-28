@@ -1,6 +1,7 @@
 ---
 title: Rate limiting
 description: Explains how to limit attacks that attempt to brute force credit card details.
+edition: paas
 keywords:
   - REST
   - Security

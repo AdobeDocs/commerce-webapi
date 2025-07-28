@@ -1,7 +1,12 @@
 ---
 title: validatePurchaseOrders mutation
-edition: b2b
+keywords:
+  - B2B
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # validatePurchaseOrders mutation
 

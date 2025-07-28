@@ -1,5 +1,6 @@
 ---
 title: createPaypalExpressToken mutation
+edition: paas
 ---
 
 # createPaypalExpressToken mutation

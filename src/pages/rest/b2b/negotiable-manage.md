@@ -1,11 +1,14 @@
 ---
 title: Manage negotiable quotes
 description: Endpoints used to create a negotiable quote
-edition: ee
 keywords:
   - B2B
   - REST
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Manage negotiable quotes
 

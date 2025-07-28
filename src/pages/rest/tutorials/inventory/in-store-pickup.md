@@ -1,6 +1,7 @@
 ---
 title: Step 14. Create an order for in-store pickup (optional)
 description: In this step of the tutorial you will create an order for in-store pickup
+edition: paas
 keywords:
   - Inventory
   - REST

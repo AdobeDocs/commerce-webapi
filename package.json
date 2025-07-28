@@ -7,7 +7,7 @@
     "url": "https://github.com/AdobeDocs/commerce-webapi"
   },
   "dependencies": {
-    "@adobe/gatsby-theme-aio": "4.15.0",
+    "@adobe/gatsby-theme-aio": "4.15.2",
     "gatsby": "4.22.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
@@ -17,7 +17,6 @@
     "remark-frontmatter": "^5.0.0",
     "remark-heading-id": "^1.0.1",
     "remark-lint-frontmatter-schema": "^3.15.4",
-    "remark-lint-no-dead-urls": "^1.1.0",
     "remark-validate-links": "^13.0.1",
     "spectaql": "^3.0.2"
   },
@@ -33,6 +32,7 @@
     "build:spectaql": "spectaql --target-file index.html --config spectaql/config.yml",
     "build:spectaql:2.4.6": "spectaql --target-file index.html --config spectaql/config_2.4.6.yml",
     "build:spectaql:2.4.7": "spectaql --target-file index.html --config spectaql/config_2.4.7.yml",
+    "build:spectaql:saas": "spectaql --target-file index.html --config spectaql/config_saas.yml",
     "dev:spectaql": "spectaql --development-mode-live --config spectaql/config.yml"
   },
   "packageManager": "yarn@3.2.4"

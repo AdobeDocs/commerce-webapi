@@ -18,4 +18,3 @@ Review the following pages for more information about Adobe Commerce REST endpoi
 - [Bulk endpoints](bulk-endpoints.md)
 - [Bulk operation status endpoints](operation-status-endpoints.md)
 - [Search for the status of a bulk operation](operation-status-search.md)
-- [API usage notes](notes.md)

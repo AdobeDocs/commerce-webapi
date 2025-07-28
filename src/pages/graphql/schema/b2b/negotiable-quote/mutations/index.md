@@ -1,7 +1,12 @@
 ---
-title: Negotiable quote (B2B) mutations
-edition: b2b   
+title: Negotiable quote (B2B) mutations   
+keywords:
+  - B2B
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Negotiable quote (B2B) mutations
 

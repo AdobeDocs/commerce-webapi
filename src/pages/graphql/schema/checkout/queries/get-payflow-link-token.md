@@ -1,5 +1,6 @@
 ---
 title: getPayflowLinkToken query
+edition: paas
 ---
 
 # getPayflowLinkToken query

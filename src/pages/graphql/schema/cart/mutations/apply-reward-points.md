@@ -1,7 +1,10 @@
 ---
 title: applyRewardPointsToCart mutation
-edition: ee
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # applyRewardPointsToCart mutation
 

@@ -433,6 +433,182 @@ If other promotions or price adjustments are applied to the cart through either 
 }
 ```
 
+### Fixed product tax example
+
+The following query shows how to retrieve fixed product tax (FPT) information for items in a cart. In this example, the cart contains a product that has a base price of $100 and an associated FPT of $20 labeled as "fpt1".
+
+**Request:**
+
+```graphql
+{
+  cart(cart_id: "YOUR_CART_ID") {
+    id
+    items {
+      uid
+      quantity
+      product {
+        uid
+        sku
+        name
+        __typename
+      }
+      prices {
+        fixed_product_taxes {
+          amount {
+            value
+            currency
+            __typename
+          }
+          label
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    shipping_addresses {
+      selected_shipping_method {
+        amount {
+          currency
+          value
+          __typename
+        }
+        __typename
+      }
+      street
+      __typename
+    }
+    prices {
+      applied_taxes {
+        amount {
+          currency
+          value
+          __typename
+        }
+        __typename
+      }
+      discounts {
+        amount {
+          currency
+          value
+          __typename
+        }
+        label
+        __typename
+      }
+      grand_total {
+        currency
+        value
+        __typename
+      }
+      subtotal_excluding_tax {
+        currency
+        value
+        __typename
+      }
+      subtotal_including_tax {
+        currency
+        value
+        __typename
+      }
+      gift_options {
+        printed_card {
+          value
+          currency
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    applied_gift_cards {
+      code
+      applied_balance {
+        value
+        currency
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+    "data": {
+        "cart": {
+            "id": "xxxxxxxxxxxxxxxxxxxxxxxxx",
+            "items": [
+                {
+                    "uid": "xxxx",
+                    "quantity": 1,
+                    "product": {
+                        "uid": "xxxx",
+                        "sku": "simple1",
+                        "name": "simple1",
+                        "__typename": "SimpleProduct"
+                    },
+                    "prices": {
+                        "fixed_product_taxes": [
+                            {
+                                "amount": {
+                                    "value": 20,
+                                    "currency": "USD",
+                                    "__typename": "Money"
+                                },
+                                "label": "fpt1",
+                                "__typename": "FixedProductTax"
+                            }
+                        ],
+                        "__typename": "CartItemPrices"
+                    },
+                    "__typename": "SimpleCartItem"
+                }
+            ],
+            "shipping_addresses": [],
+            "prices": {
+                "applied_taxes": [],
+                "discounts": null,
+                "grand_total": {
+                    "currency": "USD",
+                    "value": 125,
+                    "__typename": "Money"
+                },
+                "subtotal_excluding_tax": {
+                    "currency": "USD",
+                    "value": 100,
+                    "__typename": "Money"
+                },
+                "subtotal_including_tax": {
+                    "currency": "USD",
+                    "value": 120,
+                    "__typename": "Money"
+                },
+                "gift_options": {
+                    "printed_card": {
+                        "value": 0,
+                        "currency": "USD",
+                        "__typename": "Money"
+                    },
+                    "__typename": "GiftOptionsPrices"
+                },
+                "__typename": "CartPrices"
+            },
+            "applied_gift_cards": [],
+            "__typename": "Cart"
+        }
+    }
+}
+```
+
+Note that fixed product tax information appears under `cart.items.prices.fixed_product_taxes` rather than in the `applied_taxes` section. The FPT amount is included in the `subtotal_including_tax` and `grand_total` values.
+
+For more details about cart item prices and FPT fields in the schema, see the [CartItemPrices](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CartItemPrices) reference.
+
 ### Tier price example
 
 In the following example, tier prices has been established for product `24-UG01` and `24-UG05`, as shown in the following table:

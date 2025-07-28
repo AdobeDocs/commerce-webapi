@@ -1,6 +1,7 @@
 ---
 title: Step 2. Get the admin token
 description: In this step of the tutorial you will get the admin token
+edition: paas
 keywords:
   - REST
 --- 
