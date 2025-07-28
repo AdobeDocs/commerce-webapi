@@ -88,4 +88,3 @@ Code | Error | Description
 `UNABLE_TO_PLACE_ORDER` | `Enter a valid payment method and try again` | The payment method was not set. See [setPaymentMethodOnCart](../../cart/mutations/set-payment-method.md) mutation.
 `UNABLE_TO_PLACE_ORDER` | `Some of the products are out of stock` | One of the products in the shopping cart are currently out of stock.
 `UNDEFINED` | `UNDEFINED` | The error message does not match any error code
-
