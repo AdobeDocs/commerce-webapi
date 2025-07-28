@@ -11,7 +11,7 @@ import InstallCustomAttributes from '/src/_includes/custom-attribute-installatio
 
 <InlineAlert variant="important" slots="text" />
 
-This functionality is automatically available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview) (SaaS) projects. Adobe Commerce on-premises and Cloud infrastructure (PaaS) projects can [install separate modules](./index.md) to provide this functionality.
+This functionality is automatically available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview) (SaaS) projects. Adobe Commerce on-premises and Cloud infrastructure (PaaS) projects can [install separate modules](#install-custom-attribute-support) to provide this functionality.
 
 Custom attributes can extend the core data model in Adobe Commerce, allowing you to add additional attributes to entities without requiring code or database schema changes. Consider a situation where you want to specify a `duns_number` or `industry_type` information for a company. Custom attributes make this possible.
 

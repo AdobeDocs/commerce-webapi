@@ -28,13 +28,13 @@ module.exports = [
                 path: "/rest/authentication/"
             },
             {
+                title: "Server-to-server authentication",
+                path: "/rest/authentication/server-to-server.md",
+            },
+            {
                 title: "User authentication",
                 path: "/rest/authentication/user.md",
             },
-            {
-                title: "Server-to-server authentication",
-                path: "/rest/authentication/server-to-server.md",
-            }
         ],
     },
   {
