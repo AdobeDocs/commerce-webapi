@@ -18,6 +18,8 @@ Perform the following actions before using the `placeOrder` mutation:
 
 As of Commerce 2.4.7, the `PlaceOrderOutput` object can contain `orderV2`, which provides full details about the order. When the mutation runs, Commerce generates and returns a token in the `orderV2.token` field. You can supply the token value to the [`guestOrderByToken` query](../../orders/queries/guest-order-by-token.md) to retrieve details about an order created by a guest shopper.
 
+As of Commerce 2.4.9, the `PlaceOrderOutput` object contains the errors available on the top of the response node. This assures easy error control and provides compatibility with older versions.
+
 <InlineAlert variant="info" slots="text" />
 
 The `placeOrder` mutation runs asynchronously if the `AsyncOrder` module has been enabled. By default, the mutation runs synchronously. [Asynchronous order placement](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/high-throughput-order-processing.html#asynchronous-order-placement) describes the benefits of enabling the module.
@@ -53,10 +55,6 @@ mutation {
       number
       token
     }
-    errors {
-      message
-      code
-    }
   }
 }
 ```
@@ -70,8 +68,7 @@ mutation {
       "orderV2": {
         "number": "000000006",
         "token": "0:3:OSScWU6PKLn3kFyMhNWyskG0opgVvFBnJmtuaFHKGwDFT83S6Kv9U39iYwixuU+vhwDz2AF4pCs3GtLhHbQ="
-      },
-      "errors": []
+      }
     }
   }
 }
@@ -91,3 +88,4 @@ Code | Error | Description
 `UNABLE_TO_PLACE_ORDER` | `Enter a valid payment method and try again` | The payment method was not set. See [setPaymentMethodOnCart](../../cart/mutations/set-payment-method.md) mutation.
 `UNABLE_TO_PLACE_ORDER` | `Some of the products are out of stock` | One of the products in the shopping cart are currently out of stock.
 `UNDEFINED` | `UNDEFINED` | The error message does not match any error code
+
