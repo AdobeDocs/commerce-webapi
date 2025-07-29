@@ -114,6 +114,44 @@ module.exports = [
             ]
           },
           {
+            title: "Mutations",
+            path: "/graphql/schema/attributes/mutations/",
+            pages: [
+              {
+                title: "setCustomAttributesOnCart",
+                path: "/graphql/schema/attributes/mutations/set-custom-cart.md"
+              },
+              {
+                title: "setCustomAttributesOnCartItem",
+                path: "/graphql/schema/attributes/mutations/set-custom-cart-item.md"
+              },
+              {
+                title: "setCustomAttributesOnCompany",
+                path: "/graphql/schema/attributes/mutations/set-custom-company.md"
+              },
+              {
+                title: "setCustomAttributesOnCreditMemo",
+                path: "/graphql/schema/attributes/mutations/set-custom-credit-memo.md"
+              },
+              {
+                title: "setCustomAttributesOnCreditMemoItem",
+                path: "/graphql/schema/attributes/mutations/set-custom-credit-memo-item.md"
+              },
+              {
+                title: "setCustomAttributesOnInvoice",
+                path: "/graphql/schema/attributes/mutations/set-custom-invoice.md"
+              },
+              {
+                title: "setCustomAttributesOnInvoiceItem",
+                path: "/graphql/schema/attributes/mutations/set-custom-invoice-item.md"
+              },
+              {
+                title: "setCustomAttributesOnNegotiableQuote",
+                path: "/graphql/schema/attributes/mutations/set-custom-negotiable-quote.md"
+              }
+            ]
+          },
+          {
             title: "Interfaces",
             path: "/graphql/schema/attributes/interfaces/"
           }
@@ -279,7 +317,35 @@ module.exports = [
       },
       {
         title: "Catalog Service",
-        path: "https://developer.adobe.com/commerce/services/graphql/catalog-service/"
+        path: "/graphql/schema/catalog-service/",
+        pages:[
+          {
+            title: "Queries",
+            path: "/graphql/schema/catalog-service/queries/",
+            pages: [
+              {
+                title: "categories",
+                path: "/graphql/schema/catalog-service/queries/categories.md",
+              },
+              {
+                title: "products",
+                path: "/graphql/schema/catalog-service/queries/products.md"
+              },
+              {
+                title: "productSearch",
+                path: "/graphql/schema/live-search/queries/product-search.md",
+              },
+              {
+                title: "refineProduct",
+                path: "/graphql/schema/catalog-service/queries/refine-product.md"
+              },
+              {
+                title: "variants",
+                path: "/graphql/schema/catalog-service/queries/product-variants.md"
+              }
+            ],
+          },
+        ],
       },
       {
         title: "Checkout",
@@ -456,8 +522,16 @@ module.exports = [
                 path: "/graphql/schema/customer/queries/downloadable-products/",
               },
               {
+                title: "customerGroup",
+                path: "/graphql/schema/customer/queries/customer-group/",
+              },
+              {
                 title: "customerOrders",
                 path: "/graphql/schema/customer/queries/orders/",
+              },
+              {
+                title: "customerSegments",
+                path: "/graphql/schema/customer/queries/customer-segments/",
               },
               {
                 title: "giftCardAccount",
@@ -502,6 +576,10 @@ module.exports = [
                 path: "/graphql/schema/customer/mutations/delete-address/",
               },
               {
+                title: "exchangeExternalCustomerToken",
+                path: "/graphql/schema/customer/mutations/create-external-customer-token/",
+              },
+              {
                 title: "generateCustomerToken",
                 path: "/graphql/schema/customer/mutations/generate-token/",
               },
@@ -512,6 +590,10 @@ module.exports = [
               {
                 title: "requestPasswordResetEmail",
                 path: "/graphql/schema/customer/mutations/request-password-reset-email/",
+              },
+              {
+                title: "resendConfirmationEmail",
+                path: "/graphql/schema/customer/mutations/resend-confirmation-email/",
               },
               {
                 title: "resetPassword",
@@ -629,7 +711,23 @@ module.exports = [
       },
       {
         title: "Live Search",
-        path: "https://developer.adobe.com/commerce/services/graphql/live-search/"
+        path: "/graphql/schema/live-search",
+        pages: [
+          {
+            title: "Queries",
+            path: "/graphql/schema/live-search/queries/",
+            pages: [
+              {
+                title: "attributeMetadata",
+                path: "/graphql/schema/live-search/queries/attribute-metadata/",
+              },
+              {
+                title: "productSearch",
+                path: "/graphql/schema/live-search/queries/product-search/",
+              }
+            ],
+          }
+        ]
       },
       {
         title: "Negotiable quotes (B2B)",
@@ -730,6 +828,10 @@ module.exports = [
                 path: "/graphql/schema/orders/mutations/cancel-order/",
               },
               {
+                title: "confirmCancelOrder",
+                path: "/graphql/schema/orders/mutations/confirm-cancel-order/",
+              },
+              {
                 title: "confirmReturn",
                 path: "/graphql/schema/orders/mutations/confirm-return/",
               },
@@ -740,6 +842,10 @@ module.exports = [
               {
                 title: "reorderItems",
                 path: "/graphql/schema/orders/mutations/reorder-items/",
+              },
+              {
+                title: "requestGuestOrderCancel",
+                path: "/graphql/schema/orders/mutations/request-guest-order-cancel/",
               },
               {
                 title: "requestGuestReturn",
@@ -791,7 +897,19 @@ module.exports = [
       },
       {
         title: "Product Recommendations",
-        path: "https://developer.adobe.com/commerce/services/graphql/recommendations/recommendations/"
+        path: "/graphql/schema/product-recommendations/",
+        pages: [
+          {
+            title: "Queries",
+            path: "/graphql/schema/product-recommendations/queries/",
+            pages: [
+              {
+                title: "recommendations",
+                path: "/graphql/schema/product-recommendations/queries/recommendations/",
+              }
+            ]
+          },
+        ]
       },
       {
         title: "Products",
@@ -1148,6 +1266,10 @@ module.exports = [
                 path: "/graphql/schema/wishlist/mutations/copy-products/",
               },
               {
+                title: "clearWishlist",
+                path: "/graphql/schema/wishlist/mutations/clear/",
+              },
+              {
                 title: "createWishlist",
                 path: "/graphql/schema/wishlist/mutations/create/",
               },
@@ -1360,21 +1482,28 @@ module.exports = [
     ],
   },
   {
-    title: "Reference (2.4.8)",
-    path: "/graphql/reference",
+    title: "Reference",
+    path: "/graphql/reference/",
     pages: [
       {
+        title: "SaaS",
+        path: "https://developer.adobe.com/commerce/webapi/reference/graphql/saas/",
+        EventTarget: "_top"
+      },
+      {
         title: "2.4.8",
-        path: "https://developer.adobe.com/commerce/webapi/graphql-api/",
-        EventTarget: "_blank"
+        path: "https://developer.adobe.com/commerce/webapi/reference/graphql/2.4.8/",
+        EventTarget: "_top"
       },
       {
         title: "2.4.7",
-        path: "/graphql/reference/2.4.7",
+        path: "https://developer.adobe.com/commerce/webapi/reference/graphql/2.4.7/",
+        EventTarget: "_top"
       },
       {
         title: "2.4.6",
-        path: "/graphql/reference/2.4.6",
+        path: "https://developer.adobe.com/commerce/webapi/reference/graphql/2.4.6/",
+        EventTarget: "_top"
       },
     ],
   },
