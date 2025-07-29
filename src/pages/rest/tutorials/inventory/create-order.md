@@ -1,6 +1,7 @@
 ---
 title: Step 9. Create an order
 description: In this step of the tutorial you will create an order
+edition: paas
 keywords:
   - Inventory
   - REST

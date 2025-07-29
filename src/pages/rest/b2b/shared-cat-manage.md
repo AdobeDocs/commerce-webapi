@@ -1,13 +1,16 @@
 ---
 title: Manage shared catalogs
 description: Manage public and custom shared catalogs
-edition: ee
 keywords:
   - B2B
   - REST
 ---
 
 import * as Vars from '../../../data/vars.js';
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Manage custom shared catalogs
 

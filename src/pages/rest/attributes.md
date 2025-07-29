@@ -1,9 +1,12 @@
 ---
 title: Retrieving detailed attributes
-description: Learn how to get detailed information about PHP and REST API endpoints on Adobe Commerce and Magento Open Source projects. 
+description: Learn how to get detailed information about PHP and REST API endpoints on Adobe Commerce and Magento Open Source projects.
+edition: paas
 keywords:
   - REST
 ---
+
+<!--  This topic was removed from the navigation. I kept it here because the Commmerce codebase has multiple links to the file. I don't think this content is useful. The code annotations and this topic were added in the early days of Magento 2.0, and someone didn't want to inspect the details provided in Swagger. -->
 
 # Retrieving detailed attributes
 

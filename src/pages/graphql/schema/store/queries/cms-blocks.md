@@ -1,5 +1,6 @@
 ---
 title: cmsBlocks query
+edition: paas
 ---
 
 # cmsBlocks query

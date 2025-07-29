@@ -56,3 +56,4 @@ Error | Description
 ## Related topics
 
 *  [customer query](../queries/customer.md)
+*  [confirmEmail mutation](confirm-email.md)

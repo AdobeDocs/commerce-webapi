@@ -1,12 +1,17 @@
 ---
 title: Session-Based Authentication
 description: How to use session-based authentication in the web APIs.
+edition: paas
 keywords:
   - REST
   - Security
 ---
 
 # Session-based authentication
+
+<InlineAlert variant="info" slots="text"/>
+
+This topic is for Platform-as-a-Service (PaaS) customers only. Adobe Commerce Cloud Services customers must refer to [REST Authentication](https://developer.adobe.com/commerce/services/cloud/guides/rest/authentication/) for details on authentication.
 
 As a customer, you log in to the storefront with your customer credentials. As an admin, you log in to the Admin with your admin credentials.
 

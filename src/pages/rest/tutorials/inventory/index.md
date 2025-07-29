@@ -1,6 +1,7 @@
 ---
 title: Order Processing with Inventory Management
 description: In this tutorial you will process orders using Inventory Management in the REST API
+edition: paas
 keywords:
   - Inventory
   - REST
@@ -26,4 +27,4 @@ This **14-step tutorial** generally takes **1 hour**.
 
 ### Other resources
 
-*  Commerce uses [Swagger](https://swagger.io) to provide REST API documentation on local instances of Commerce. See [Generate a local API reference](/rest/use-rest/generate-local/) for more information. You can view the [static REST API documentation](../../quick-reference/index.md), which displays reference information using ReDoc.
+*  Commerce uses [Swagger](https://swagger.io) to provide REST API documentation on local instances of Commerce. See [Generate a local API reference](/rest/use-rest/generate-local/) for more information. You can view the [static REST API documentation](../../reference/index.md), which displays reference information using ReDoc.

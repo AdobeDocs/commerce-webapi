@@ -1,5 +1,6 @@
 ---
 title: handlePayflowProResponse mutation
+edition: paas
 ---
 
 # handlePayflowProResponse mutation

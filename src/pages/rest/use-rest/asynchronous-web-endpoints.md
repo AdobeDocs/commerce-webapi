@@ -14,7 +14,7 @@ An asynchronous web endpoint intercepts messages to a Web API and writes them to
 
 <InlineAlert variant="success" slots="text"/>
 
-Use the `bin/magento queue:consumers:start async.operations.all` command to start the consumer that handles asynchronous and bulk API messages.
+&#8203;<Edition name="paas" /> Use the `bin/magento queue:consumers:start async.operations.all` command to start the consumer that handles asynchronous and bulk API messages.
 
 Commerce supports the following types of asynchronous requests:
 
@@ -27,16 +27,21 @@ Commerce supports the following types of asynchronous requests:
 
 GET requests are not supported. Although Commerce does not currently implement any PATCH requests, they are supported in custom extensions.
 
-The route to all asynchronous calls contains the prefix `/async`, added before `/V1` of a standard synchronous endpoint. For example:
+The route to all asynchronous calls varies between platforms:
+
+&#8203;<Edition name="paas" /> In Adobe Commerce on Cloud and on-premises projects, the route contains the prefix `/async`, added before `/V1` of a standard synchronous endpoint. For example:
 
 ```http
-POST /async/V1/products
-PUT /async/V1/products/:sku
+POST https://<host>/rest/<store-view-code>/async/V1/products
+PUT https://<host>/rest/<store-view-code>/async/V1/products/:sku
 ```
 
-<Vars.sitedatavarce/> and <Vars.sitedatavaree/> installations support asynchronous web endpoints.
+&#8203;<Edition name="saas" /> In Adobe Commerce as a Cloud Service,  the `/async` segment occurs after the `V1` segment of the route. For example:
 
-The [REST API documentation](/rest/) provides a list of all current synchronous Commerce API routes.
+```http
+POST https://<server>.api.commerce.adobe.com/<tenant-id>/V1/async/products
+PUT https://<server>.api.commerce.adobe.com/<tenant-id>/V1/async/products/:sku
+```
 
 The response of an asynchronous request contains the following fields:
 
@@ -53,9 +58,8 @@ Field name | Data type | Description
 
 The following call asynchronously changes the price of the product that has a `sku` of `24-MB01`:
 
-```http
-PUT <host>/rest/<store_code>/async/V1/products/24-MB01
-```
+&#8203;<Edition name="paas" /> `PUT https://<host>/rest/<store-view-code>/async/V1/products/24-MB01`
+&#8203;<Edition name="saas" /> `PUT https://<server>.api.commerce.adobe.com/<tenant-id>/V1/async/products/24-MB01`
 
 ### Payload
 
@@ -87,6 +91,8 @@ Commerce generates a `bulk_uuid` for each asynchronous request. Use the `bulk_uu
 
 ## Store scopes
 
+<Edition name="paas" />
+
 You can specify a store code (which is labeled in the Admin as store view code) in the route of an asynchronous endpoint so that it operates on a specific store, as shown below:
 
 ```http
@@ -102,6 +108,8 @@ You can specify the `all` store code to perform operations on all existing store
 POST /all/async/V1/products
 PUT /all/async/V1/products/:sku
 ```
+
+&#8203;<Edition name="saas" />In Adobe Commerce as a Cloud Service, you must specify the store code in the `Store` header of the request.
 
 ### Fallback and creating/updating objects when setting store scopes
 

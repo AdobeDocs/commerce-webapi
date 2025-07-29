@@ -2,6 +2,7 @@
 title: setPaymentMethodAndPlaceOrder mutation
 contributor_name: Something Digital (now Rightpoint)
 contributor_link: https://www.rightpoint.com/
+edition: paas
 ---
 
 # setPaymentMethodAndPlaceOrder mutation

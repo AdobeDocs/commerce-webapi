@@ -1,20 +1,50 @@
 module.exports = [
     {
-        title: "Overview",
-        path: "/rest/", 
+        title: "Introduction",
+        path: "/rest/",
     },
     {
-        title: "REST endpoints (ReDocly)",
-        path: "/rest/quick-reference/",
+        title: "Reference",
+        path: "/rest/reference/",
+        pages: [
+            {
+                title: "PaaS Reference",
+                path: "https://developer.adobe.com/commerce/webapi/reference/rest/paas/",
+                EventTarget: "_top"
+            },
+            {
+                title: "SaaS Reference",
+                path: "https://developer.adobe.com/commerce/webapi/reference/rest/saas/",
+                EventTarget: "_top"
+            }
+        ],
     },
     {
-        title: "Generate a local API Reference",
-        path: "/rest/quick-reference/generate-local.md",
+        title: "Authentication",
+        path: "/rest/authentication/",
+        pages: [
+            {
+                title: "Introduction",
+                path: "/rest/authentication/"
+            },
+            {
+                title: "Server-to-server authentication",
+                path: "/rest/authentication/server-to-server.md",
+            },
+            {
+                title: "User authentication",
+                path: "/rest/authentication/user.md",
+            },
+        ],
     },
   {
     title: "Use REST endpoints",
     path: "/rest/use-rest/",
     pages: [
+        {
+            title: "Generate a local API Reference",
+            path: "/rest/quick-reference/generate-local.md",
+        },
         {
           title: "Search using REST",
           path: "/rest/use-rest/performing-searches.md",
@@ -30,7 +60,6 @@ module.exports = [
         {
           title: "Protected endpoints",
           path: "/rest/use-rest/protected-endpoints.md",
-        
         },
         {
           title: "Restricting access to anonymous web APIs",
@@ -51,10 +80,6 @@ module.exports = [
         {
           title: "Search for the status of a bulk operation",
           path: "/rest/use-rest/operation-status-search.md",
-        },
-        {
-          title: "API usage notes",
-          path: "/rest/use-rest/notes.md",
         },
     ],
   },
@@ -457,6 +482,10 @@ module.exports = [
             ]
         },
         {
+            title: "Custom attributes",
+            path: "/rest/modules/custom-attributes/"
+        },
+        {
             title: "Import",
             path: "/rest/modules/import/"
         },
@@ -469,9 +498,5 @@ module.exports = [
             path: "/rest/modules/sales/"
         },
     ],
-  },
-  {
-    title: "Attributes",
-    path: "/rest/attributes/"
-  },
+  }
 ];
