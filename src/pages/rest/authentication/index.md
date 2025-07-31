@@ -17,7 +17,7 @@ The following types of authentication are available for Adobe Commerce as a Clou
 
 - [User authentication](#user-authentication) - Choose this flow when API operations must be performed by an admin user according to their permissions, such as when actions must be attributed to a specific admin user.
 
-See [Authentication](../../get-started/authentication/index.md) in the _Get Started_ guide for information about the authentication methods available on other versions of Adobe Commerce.
+See [Authentication](./authentication.md) for information about the authentication methods available on other versions of Adobe Commerce.
 
 ## Server-to-server authentication
 

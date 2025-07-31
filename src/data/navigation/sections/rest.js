@@ -24,16 +24,46 @@ module.exports = [
         path: "/rest/authentication/",
         pages: [
             {
-                title: "Introduction",
-                path: "/rest/authentication/"
+                title: "SaaS Authentication",
+                path: "/rest/authentication/index.md/",
+                header: true,
+                pages: [
+                    {
+                        title: "Introduction",
+                        path: "/rest/authentication/index.md/"
+                    },
+                    {
+                        title: "Server-to-server authentication",
+                        path: "/rest/authentication/server-to-server.md",
+                    },
+                    {
+                        title: "User authentication",
+                        path: "/rest/authentication/user.md",
+                    },
+                ]
             },
             {
-                title: "Server-to-server authentication",
-                path: "/rest/authentication/server-to-server.md",
-            },
-            {
-                title: "User authentication",
-                path: "/rest/authentication/user.md",
+                title: "PaaS Authentication",
+                path: "/rest/authentication/index.md",
+                header: true,
+                pages: [
+                    {
+                        title: "Introduction",
+                        path: "/rest/authentication/authentication.md"
+                    },
+                    {
+                        title: "OAuth authentication",
+                        path: "/rest/authentication/oauth.md"
+                    },
+                    {
+                        title: "Token-based authentication",
+                        path: "/rest/authentication/token.md"
+                    },
+                    {
+                        title: "Session-based authentication",
+                        path: "/rest/authentication/session.md"
+                    },
+                ],
             },
         ],
     },
