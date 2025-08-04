@@ -52,15 +52,15 @@ module.exports = [
                         path: "/rest/authentication/authentication.md"
                     },
                     {
-                        title: "OAuth authentication",
+                        title: "OAuth",
                         path: "/rest/authentication/oauth.md"
                     },
                     {
-                        title: "Token-based authentication",
+                        title: "Token-based",
                         path: "/rest/authentication/token.md"
                     },
                     {
-                        title: "Session-based authentication",
+                        title: "Session-based",
                         path: "/rest/authentication/session.md"
                     },
                 ],
