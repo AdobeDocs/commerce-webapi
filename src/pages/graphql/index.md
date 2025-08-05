@@ -15,6 +15,10 @@ Adobe Commerce provides two comprehensive GraphQL implementations that serve as 
 
 - [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/reference/graphql/saas/) (SaaS) projects can connect to a supergraph that not only combines and streamlines the schemas available to PaaS projects, but provides instant access to the latest features added in the [Storefront Compatability Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/configuration/storefront-compatibility/v248/) and other sources. Therefore, SaaS projects can take advantage of the latest GraphQL features without needing to wait for a new release.
 
+<InlineAlert variant="info" slots="text"/>
+
+If you are migrating from PaaS to SaaS, be aware that the SaaS schema removes all deprecated queries, mutations, and fields, so you can build new applications without worrying about future deprecations. It also replaces the core `products` and `categories` queries with their service-based equivalents, also named [`products`](./schema/catalog-service/queries/products.md) and [`categories`](./schema/catalog-service/queries/categories.md). The service-based queries are not backward compatible with the core queries, so you must update your applications to use the new queries. For more information, see [Migrate to Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/migration/overview) for general guidelines.
+
 ## Why use GraphQL?
 
 -  **Get exactly what you need.** Unlike traditional REST APIs that return fixed data structures, GraphQL lets you request exactly the fields you need in a single query. This means faster load times, reduced bandwidth usage, and better user experiences.

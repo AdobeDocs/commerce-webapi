@@ -7,11 +7,11 @@ edition: paas
 
 <InlineAlert variant="important" slots="text" />
 
-Adobe Commerce as a Cloud Service does not support the `categories` query. Use the Catalog Service [`categories` query](../../catalog-service/queries/categories.md) instead.
+Adobe Commerce as a Cloud Service (SaaS) does not support this `categories` query. Use the Catalog Service [`categories` query](../../catalog-service/queries/categories.md) instead. If you are migrating from PaaS to SaaS, you must update your applications to use the Catalog Service query.
 
 The `categories` query returns a list of categories that match the specified filter. This query differs from the `categoryList` query in that it supports pagination.
 
-The `categories` query supports the following types of filters. You can specify multiple filters in a query.
+It supports the following types of filters. You can specify multiple filters in a query.
 
 -  Category ID
 -  Category name
