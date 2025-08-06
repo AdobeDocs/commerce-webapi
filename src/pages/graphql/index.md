@@ -25,7 +25,7 @@ If you are migrating from PaaS to SaaS, be aware that the SaaS schema removes al
 
 -  **Superior performance.** GraphQL minimizes over-fetching and under-fetching of data, allowing you to optimize performance by fetching only the necessary information in a single request. In addition, minimized data transfer is ideal for mobile and low-bandwidth environments.
 
--  **Enhanced developer experience.** GraphQL's strongly typed schema and introspection capabilities provide powerful tools for developers. You can explore the API, get real-time feedback, and leverage auto-completion in modern IDEs, making development faster and more efficient.
+-  **Enhanced developer experience.** GraphQL's strongly typed schema and introspection capabilities provide powerful tools for developers. You can explore the API, get realtime feedback, and leverage auto-completion in modern IDEs, making development faster and more efficient.
 
 ## Getting started with GraphQL
 
