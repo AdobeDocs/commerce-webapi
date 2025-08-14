@@ -3,6 +3,7 @@ title: Step 1. Create a customer
 description: Learn how to create a customer with the GraphQL API.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
+edition: paas
 keywords:
   - GraphQL
   - Checkout
@@ -20,7 +21,7 @@ Use the `createCustomer` mutation to register the new customer account in the st
 
 ```graphql
 mutation {
-  createCustomer(
+  createCustomerV2(
     input: {
       firstname: "John"
       lastname: "Doe"
@@ -44,11 +45,11 @@ mutation {
 ```json
 {
   "data": {
-    "createCustomer": {
+    "createCustomerV2": {
       "customer": {
-        "firstname": "John",
-        "lastname": "Doe",
-        "email": "john.doe@example.com",
+        "firstname": "Bob",
+        "lastname": "Loblaw",
+        "email": "bobloblaw@example.com",
         "is_subscribed": true
       }
     }

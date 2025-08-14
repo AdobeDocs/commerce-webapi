@@ -7,11 +7,11 @@ import CustomAttributeFilterProduct from '/src/_includes/graphql/examples/custom
 
 # products query
 
-The `products` query allows you to search for catalog items.
-
 <InlineAlert variant="important" slots="text" />
 
-Adobe Commerce as a Cloud Service does not support the `products` query. Use the Catalog Service [`products` query](../../catalog-service/queries/products.md) instead.
+Adobe Commerce as a Cloud Service (SaaS) does not support this `products` query. Use the Catalog Service [`products` query](../../catalog-service/queries/products.md) instead. If you are migrating from PaaS to SaaS, you must update your applications to use the Catalog Service query.
+
+The `products` query allows you to search for catalog items.
 
 ## Syntax
 
