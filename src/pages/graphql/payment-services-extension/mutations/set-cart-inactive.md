@@ -1,6 +1,6 @@
 ---
 title: setCartAsInactive mutation
-description: Learn how to use this mutation to mark a cart as inactive in Payment Services, helping prevent multiple active carts for logged-in customers during specific payment flows.
+description: This mutation marks a cart as inactive in Payment Services, helping prevent multiple active carts for logged-in customers during specific payment flows.
 ---
 
 # setCartAsInactive mutation

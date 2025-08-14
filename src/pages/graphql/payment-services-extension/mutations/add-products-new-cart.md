@@ -1,6 +1,6 @@
 ---
 title: addProductsToNewCart mutation
-description: Learn how to use this mutation to create a new cart and payment order in Payment Services, supporting guest and logged-in customers during checkout flows.
+description: This mutation creates a new cart and payment order in Payment Services, supporting guest and logged-in customers during checkout flows.
 ---
 
 # addProductsToNewCart mutation
