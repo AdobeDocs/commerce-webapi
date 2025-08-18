@@ -9,7 +9,7 @@ description: This mutation creates a new cart and payment order in Payment Servi
 
 This mutation is available only if you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.12.0 or higher.
 
-The `addProductsToNewCart` mutation always creates a new cart for guest, or logged-in customers, as opposite to the `addProductsToCart` mutation when a the customer is already logged-in, it was not possible to create a new cart.
+The `addProductsToNewCart` mutation always creates a new cart for the shopper then adds the specified products to that cart. This contrasts with the `addProductsToCart` mutation, which requires you to specify an existing cart ID as input.
 
 >[!NOTE]
 >
