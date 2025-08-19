@@ -391,7 +391,7 @@ servers:
     headers:
       - name: Authorization
         example: Bearer <YOUR_TOKEN_HERE>
-        comment: Your API token from the dashboard. Must be included in all API calls.
+        comment: Your API token from the dashboard. Must be included in all API calls. <pre><code>Authorization - Bearer &lt;YOUR_TOKEN_HERE&gt;</code></pre>
 
 info:
   # Tries to adhere to OpenAPI Specification https://swagger.io/specification/#info-object
