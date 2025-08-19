@@ -1,6 +1,6 @@
 ---
 title: addProductsToNewCart mutation
-description: This mutation creates a new cart and payment order in Payment Services, supporting guest and logged-in customers during checkout flows.
+description: This mutation creates a new cart in Payment Services, supporting guest and logged-in customers in the product page.
 ---
 
 # addProductsToNewCart mutation
@@ -17,7 +17,7 @@ The `addProductsToNewCart` mutation always creates a new cart for the shopper th
 
 The `addProductsToNewCart` mutation creates a new cart and adds the items, then returns a `cart` object, which includes the `cart ID` field.
 
-It is recommended to use the [`setCartAsInactive`](set-cart-inactive.md) mutation with the `addProductsToNewCart` mutation when dealing with an existing cart for a logged-in customer. This helps preventing errors, or cancellations during the payment process, and avoids having multiple active carts for logged-in customers.
+It is recommended to use the [`setCartAsInactive`](set-cart-inactive.md) mutation after the `addProductsToNewCart` mutation is successful, in case of an error during the payment process, or the user cancelling the payment process in the product page, to avoid having multiple active carts for logged-in customers.
 
 ## Syntax
 
@@ -31,15 +31,15 @@ addProductsToNewCart(
 
 ## Reference
 
-The `addProductsToNewCart` mutation reference is based on the [`addProductsToCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addProductsToCart) reference, which provides detailed information about the types and fields defined in this mutation.
+The `addProductsToNewCart` mutation reference is based on the [`addProductsToCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addProductsToCart) reference, which provides detailed information about the types and fields defined in the mutation.
 
 ## Example usage
 
-These examples show when the `addProductsToNewCart` mutation return a success, or errors, when adding a product to a new cart for logged-in customers.
+These examples show when the `addProductsToNewCart` mutation returns a successful, or error message, when creating a new cart in the product page.
 
 ### Create a new cart returns success
 
-The following example adds a simple product to a new cart succesfully, returning a [Cart](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-Cart) object.
+The following example adds a simple product to a new cart successfully, returning a [Cart](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-Cart) object.
 
 **Request:**
 
@@ -81,7 +81,7 @@ mutation {
 
 ### Create a new cart returns fails
 
-The following example fails to add a simple product to a new cart, returning a [CartUserInputError](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CartUserInputError) object.
+The following example fails to create a new cart, when the `sku` does not exist in the catalog, then returning a [CartUserInputError](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CartUserInputError) object.
 
 **Request:**
 
@@ -91,7 +91,7 @@ mutation {
         cartItems: [
         {
             quantity: 1
-            sku: "24-MB04"
+            sku: "24-MB0ee4"
         }
         ]
     ) {

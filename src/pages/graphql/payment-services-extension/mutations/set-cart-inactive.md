@@ -9,7 +9,7 @@ description: This mutation marks a cart as inactive in Payment Services, helping
 
 This mutation is available only if you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.12.0 or higher.
 
-The `setCartAsInactive` mutation sets a specific `cartId` as inactive. Use this mutation when a cart error occurs,  or to cancel callback of an Apple Pay specific payment flow. This mutation helps prevent a customer having multiple active carts created with the [`addProductsToNewCart`](add-products-new-cart.md) mutation.
+The `setCartAsInactive` mutation sets a specific `cartId` as inactive. Use this mutation when a payment error occurs,  or when a shopper cancels a payment flow, after the [`addProductsToNewCart`](add-products-new-cart.md) mutation returns a `cartId`. This mutation helps prevent a customer having multiple active carts created with the [`addProductsToNewCart`](add-products-new-cart.md) mutation.
 
 ## Syntax
 
@@ -23,11 +23,24 @@ mutation {
 
 ## Example usage
 
-These examples show when the `setCartAsInactive` mutation return a success, or errors, when adding a product to a new cart for logged-in customers.
+These examples show when the `setCartAsInactive` mutation return a successful, or error message.
 
-### Create a new cart returns success
+**Request:**
 
-The following response example shows what the mutation returns when adding a simple product to a new cart succesfully, returning a `"success": true`, and no error.
+```graphql
+mutation {
+    setCartAsInactive(
+        cartId: "gVFVNBSJPt7L6uCQis4Q1ryj6DQtcwM2"
+    ) {
+           success
+           error 
+        }
+    }
+```
+
+### Set cart as inactive returns `success:true`
+
+The following response example shows what the mutation returns when `setCartAsInactive` is successful, and no error.
 
 **Response:**
 
@@ -42,9 +55,9 @@ The following response example shows what the mutation returns when adding a sim
 }
 ```
 
-### Create a new cart returns fails
+### Set cart as inactive returns `success:false`
 
-The following response example fails to add a simple product to a new cart, returning a `"success": false`, and displaying an error message.
+The following response example shows what the mutation returns when `setCartAsInactive` fails due to non-existing `cartid`, returning a `"success": false`, and displaying an error message.
 
 **Response:**
 
@@ -53,7 +66,7 @@ The following response example fails to add a simple product to a new cart, retu
     "data": {
         "setCartAsInactive": {
             "success": false,
-            "error": "Error when setting the cart gVFVNBSJPt7L6uCQis4Q1ryj6QtcwM2 as inactive - No such entity with cartId = "
+            "error": "Error when setting the cart gVFVNBSJPt7L6uCQis4Q1ryj6QtcwM2 as inactive - No such entity with cartId = null "
         }
     }
 }

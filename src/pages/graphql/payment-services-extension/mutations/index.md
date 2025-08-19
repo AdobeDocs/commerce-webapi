@@ -22,7 +22,7 @@ If you have installed [Payment Services for Adobe Commerce](https://commercemark
 
 * [`createVaultCardPaymentToken`](../mutations/create-vault-card-payment-token.md)
 
-If you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.12.0 or higher, you can use the following mutations to manage your carts:
+If you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.12.0 or higher, you can use the following mutations to manage your carts in the Product page:
 
 * [`addProductsToNewCart`](../mutations/add-products-new-cart.md)
 
