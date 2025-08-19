@@ -15,7 +15,7 @@ The `addProductsToNewCart` mutation always creates a new cart for the shopper th
 >
 > For a logged-in customer, the customer token is passed in the [Authorization header](https://developer.adobe.com/commerce/webapi/graphql/usage/authorization-tokens/#customer-tokens).
 
-The `addProductsToNewCart` mutation creates a new cart and adds the items, then returns the Cart ID.
+The `addProductsToNewCart` mutation creates a new cart and adds the items, then returns a `cart` object, that includes the `cart ID` field.
 
 You must specify the Cart ID along with the list of SKU and quantity pairs as parameters to add the products to the shopping cart.
 
