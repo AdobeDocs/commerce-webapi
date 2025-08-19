@@ -3,6 +3,7 @@ title: Step 8. Set email on the cart
 description: Learn how to set a an email address for an order with the GraphQL API.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
+edition: paas
 keywords:
   - GraphQL
   - Checkout

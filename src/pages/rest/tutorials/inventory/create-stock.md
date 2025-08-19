@@ -1,6 +1,7 @@
 ---
 title: Step 3. Create stocks
 description: In this step of the tutorial you will create stocks
+edition: paas
 keywords:
   - Inventory
   - REST

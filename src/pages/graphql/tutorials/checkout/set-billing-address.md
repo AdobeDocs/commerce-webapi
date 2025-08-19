@@ -3,6 +3,7 @@ title: Step 5. Set billing address
 description: Learn how to set a billing address for an order with the GraphQL API.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
+edition: paas
 keywords:
   - GraphQL
   - Checkout
@@ -103,6 +104,8 @@ mutation {
 ```
 
 ## Verify this step
+
+Verification is possible after [Step 6: Set the delivery method](../../tutorials/checkout/set-delivery-method.md).
 
 1. Sign in as a customer to the website using the email `john.doe@example.com` and password `b1b2b3l@w+`.
 

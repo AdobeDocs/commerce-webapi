@@ -1,11 +1,14 @@
 ---
 title: Assign categories and products to a shared catalog
 description: Review the pre-conditions necessary for adding items to a shared catalog
-edition: ee
 keywords:
   - B2B
   - REST
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Assign categories and products to a shared catalog
 

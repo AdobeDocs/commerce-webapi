@@ -1,11 +1,16 @@
 ---
 title: Generate the admin token
 description: In this tutorial you will generate the admin token necessary for other tutorials 
+edition: paas
 keywords:
   - REST
 --- 
  
 # Generate the admin token
+
+<InlineAlert variant="info" slots="text" />
+
+This topic describes how to generate an admin token in Adobe Commerce on-premises and Cloud infrastructure (PaaS) projects. [Authentication in Adobe Commerce as a Cloud Service](../../authentication/index.md) describes authentication on that platform.
 
 In a production environment, you would typically [create an integration](/get-started/create-integration) and use OAuth to provide authentication for any REST call that requires admin privileges. This process allows Adobe Commerce to verify that the caller is authorized to access the affected system resource.
 

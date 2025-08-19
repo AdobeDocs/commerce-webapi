@@ -1,6 +1,7 @@
 ---
 title: Use cURL to Run the Request
 description: Explains how to use cURL.
+edition: paas
 keywords:
   - REST
 ---

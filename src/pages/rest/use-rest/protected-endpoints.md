@@ -1,6 +1,7 @@
 ---
 title: Protected endpoints
 description: How to supply authentication for protected endpoints that use CAPTCHA
+edition: paas
 keywords:
   - REST
   - Security

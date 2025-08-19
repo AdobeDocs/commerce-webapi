@@ -1,5 +1,6 @@
 ---
 title: getHostedProUrl query
+edition: paas
 ---
 
 # getHostedProUrl query

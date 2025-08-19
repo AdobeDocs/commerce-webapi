@@ -1,11 +1,14 @@
 ---
 title: Update a negotiable quote
 description: Update a negotiable quote with new prices, items, or expiration dates
-edition: ee
 keywords:
   - B2B
   - REST
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Update a negotiable quote
 

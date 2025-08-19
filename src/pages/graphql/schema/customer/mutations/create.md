@@ -1,5 +1,6 @@
 ---
 title: createCustomer mutation
+edition: paas
 ---
 
 # createCustomer mutation

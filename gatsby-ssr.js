@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Adobe. All rights reserved.
+ * Copyright 2020 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
  * of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -11,10 +11,16 @@
  */
 
 import React from 'react';
-import {withPrefix} from 'gatsby';
+import { MDXProvider } from '@mdx-js/react';
+import { Edition } from './src/@adobe/gatsby-theme-aio/components/Edition';
 
-export const onRenderBody = ({setHeadComponents}) => {
-  setHeadComponents([
-    <script src={withPrefix('/redirections.js')}></script>
-  ]);
+// Define the components that will be available in MDX files
+const components = {
+  // Register the Edition component for inline use
+  Edition
+};
+
+// Wrap the root element with the MDXProvider
+export const wrapRootElement = ({ element }) => {
+  return <MDXProvider components={components}>{element}</MDXProvider>;
 };

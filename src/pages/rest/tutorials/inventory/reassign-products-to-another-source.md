@@ -1,6 +1,7 @@
 ---
 title: Step 5. Reassign products to custom sources
 description: In this step of the tutorial you will reassign products to custom sources
+edition: paas
 keywords:
   - Inventory
   - REST

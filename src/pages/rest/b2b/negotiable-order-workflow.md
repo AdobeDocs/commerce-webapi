@@ -1,13 +1,16 @@
 ---
 title: Place a negotiable quote order
 description: An overview of the REST calls needed to place items in a shopping cart, negotiate a quote, and reimburse credit
-edition: ee
 keywords:
   - B2B
   - REST
 ---
 
 import * as Vars from '../../../data/vars.js';
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Place a negotiable quote order
 
@@ -24,6 +27,10 @@ This topic describes how REST calls can be used to place items in a shopping car
 The steps in this section are similar to those in the [Order processing tutorial](https://developer.adobe.com/commerce/webapi/rest/tutorials/orders/), except that different products are added to the cart.
 
 ### Create a shopping cart
+
+<InlineAlert variant="info" slots="text" />
+
+Adobe Commerce as a Cloud Service does not support the `POST /V1/carts/mine` endpoint. Use the [`customerCart` query](../../graphql/schema/customer/queries/cart.md) instead.
 
 In this example, the customer is a company user (buyer).
 
@@ -55,6 +62,10 @@ Authorization Bearer <customer token>
 ### Add items
 
 This example adds 15 Pursuit Lumaflex Tone Bands and 10 Harmony Lumaflex Strength Band Kits to the cart. You must make two calls to add these products.
+
+<InlineAlert variant="info" slots="text" />
+
+Adobe Commerce as a Cloud Service does not support the `POST /V1/carts/mine` endpoint. Use the [`addProductsToCart` mutation](../../graphql/schema/cart/mutations/add-products.md) instead.
 
 **Endpoint:**
 
@@ -124,6 +135,10 @@ Authorization Bearer <customer token>
 ### Set the shipping address
 
 You can determine shipping costs after initiating a negotiable quote, but doing it now provides a more detailed picture of the final costs to the buyer. If you want to defer setting the shipping address until after the negotiable quote has been created, use the `/V1/negotiable-carts/:cartId/estimate-shipping-methods` call.
+
+<InlineAlert variant="info" slots="text" />
+
+Adobe Commerce as a Cloud Service does not support the `POST /V1/carts/mine/estimate-shipping-methods` endpoint. Use the [`estimateShippingMethods` mutation](../../graphql/schema/cart/mutations/estimate-shipping-methods.md) instead.
 
 **Endpoint:**
 
@@ -195,6 +210,10 @@ Authorization Bearer <customer token>
 ### Set shipping and billing information
 
 You can also set shipping and billing information after initiating a negotiable quote by calling  `POST /V1/negotiable-carts/:cartId/shipping-information`.
+
+<InlineAlert variant="info" slots="text" />
+
+Adobe Commerce as a Cloud Service does not support the `POST /V1/carts/mine/shipping-information` endpoint. Use the [`setBillingAddress` mutation](../../graphql/schema/cart/mutations/set-billing-address.md) and the [`setShippingAddress` mutation](../../graphql/schema/cart/mutations/set-shipping-address.md) instead.
 
 **Endpoint:**
 
@@ -403,6 +422,10 @@ Authorization Bearer <customer token>
 ### View the cart
 
 This is an optional step to show the status of the cart before you begin the negotiable quote process.
+
+<InlineAlert variant="info" slots="text" />
+
+Adobe Commerce as a Cloud Service does not support the `GET /V1/carts/mine` endpoint. Use the [`cart` query](../../graphql/schema/customer/queries/cart.md) instead.
 
 **Endpoint:**
 
@@ -724,6 +747,10 @@ Authorization Bearer <admin token>
 ### Get the quote with the new amounts
 
 The price of each item has been reduced by 2.5 percent. In addition, the `negotiable_quote` section of the response has been updated.
+
+<InlineAlert variant="info" slots="text" />
+
+Adobe Commerce as a Cloud Service does not support the `GET /V1/carts/mine` endpoint. Use the [`cart` query](../../graphql/schema/customer/queries/cart.md) instead.
 
 **Headers:**
 

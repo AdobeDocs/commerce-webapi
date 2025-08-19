@@ -1,6 +1,7 @@
 ---
 title: Step 12. Create a shipment
 description: In this step of the tutorial you will create a shipment
+edition: paas
 keywords:
   - Inventory
   - REST

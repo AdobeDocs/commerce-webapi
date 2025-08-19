@@ -1,5 +1,6 @@
 ---
 title: createProductReview mutation
+edition: paas
 ---
 
 # createProductReview mutation

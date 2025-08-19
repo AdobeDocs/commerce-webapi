@@ -1,5 +1,6 @@
 ---
 title: createPayflowProToken mutation
+edition: paas
 ---
 
 # createPayflowProToken mutation

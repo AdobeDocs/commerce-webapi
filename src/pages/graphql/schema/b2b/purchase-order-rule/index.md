@@ -1,7 +1,12 @@
 ---
-title: Purchase order approval rules (B2B)
-edition: b2b   
+title: Purchase order approval rules (B2B)   
+keywords:
+  - B2B
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Purchase order approval rules (B2B)
 

@@ -1,6 +1,7 @@
 ---
 title: Step 13. Bulk transfer products
 description: In this step of the tutorial you will transfer products in bulk
+edition: paas
 keywords:
   - Inventory
   - REST

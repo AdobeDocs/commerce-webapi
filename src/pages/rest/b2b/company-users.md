@@ -1,13 +1,16 @@
 ---
 title: Manage company users
 description: Manage which companies a user belongs to
-edition: ee
 keywords:
   - B2B
   - REST
 ---
 
 import * as Vars from '../../../data/vars.js';
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Manage company users
 
@@ -21,13 +24,17 @@ This topic discusses only the features of the `customerCustomerRepositoryV1` ser
 
 This section describes the REST endpoints used to manage company users.
 
+<InlineAlert variant="info" slots="text" />
+
+Adobe Commerce as a Cloud Service does not support the REST endpoints described in this section. Use the [`createCustomerV2` mutation](../../graphql/schema/customer/mutations/create-v2.md) and [`updateCustomerV2` mutation](../../graphql/schema/customer/mutations/update-v2.md) instead.
+
 **Service Name:**
 
 `customerCustomerRepositoryV1`
 
 **REST Endpoints:**
 
-```terminal
+```text
 POST /V1/customers/
 PUT /V1/customers/:customerId
 ```
@@ -159,6 +166,8 @@ If you change the `status` to inactive, the account is locked. If the company us
 ```
 
 ### Delete a company user
+
+<Edition name="paas" />
 
 If the specified company user has child users, the system re-assigns the child users to the parent of the deleted user. The user account is deleted from Commerce with all of its content, except quotes and orders. The user's orders and quotes remain visible to the seller.
 

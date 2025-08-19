@@ -1,6 +1,5 @@
 ---
 title: AttributeMetadataInterface
-edition: pwa
 ---
 
 # AttributeMetadataInterface

@@ -4,6 +4,7 @@ description: Learn how to use the GraphQL API mutation for the PayPal Payflow Pr
 keywords:
   - GraphQL
   - Payments
+edition: paas
 ---
 
 # PayPal Payflow Pro payment method

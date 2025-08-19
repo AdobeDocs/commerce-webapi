@@ -1,6 +1,7 @@
 ---
 title: PayPal Payflow Link payment method
 description: Learn how to use the GraphQL API mutation for the PayPal Payflow Link payment solution.
+edition: paas
 keywords:
   - GraphQL
   - Payments

@@ -1,6 +1,7 @@
 ---
 title: Step 1. Configure your environment
 description: In this step of the tutorial you will configure your environment
+edition: paas
 keywords:
   - Inventory
   - REST

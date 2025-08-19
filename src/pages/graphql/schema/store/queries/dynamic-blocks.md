@@ -1,5 +1,6 @@
 ---
 title: dynamicBlocks query
+edition: paas
 ---
 
 # dynamicBlocks query

@@ -1,9 +1,12 @@
 ---
 title: moveCartItemsToGiftRegistry mutation
-edition: ee
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # moveCartItemsToGiftRegistry mutation
 

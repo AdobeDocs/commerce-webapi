@@ -22,7 +22,7 @@ The [`createCustomerV2`](https://developer.adobe.com/commerce/webapi/graphql-api
 
 ## Example usage
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2" theme="light"/>
+The following examples demonstrate the `createCustomerV2` mutation.
 
 ### Create a customer
 
@@ -56,7 +56,7 @@ mutation {
 ```json
 {
   "data": {
-    "createCustomer": {
+    "createCustomerV2": {
       "customer": {
         "firstname": "Bob",
         "lastname": "Loblaw",

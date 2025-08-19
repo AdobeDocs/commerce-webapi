@@ -1,6 +1,7 @@
 ---
 title: Generate a local REST reference
 description: Generate a local schema for testing and return relevant information
+edition: paas
 keywords:
   - REST
 --- 

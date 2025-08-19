@@ -1,12 +1,17 @@
 ---
 title: OAuth-Based Authentication
 description: How to use OAuth authentication and token passing in the web APIs.
+edition: paas
 keywords:
   - REST
   - Security
 ---
 
 # OAuth-based authentication
+
+<InlineAlert variant="info" slots="text"/>
+
+This topic is for Platform-as-a-Service (PaaS) customers only. Adobe Commerce Cloud Services customers must refer to [REST Authentication](https://developer.adobe.com/commerce/services/cloud/guides/rest/authentication/) for details on authentication.
 
 OAuth authentication with Adobe Commerce and Magento Open Source is based on [OAuth 1.0a](https://tools.ietf.org/html/rfc5849), an open standard for secure API authentication. OAuth is a token-passing mechanism that allows a system to control which third-party applications have access to internal data without revealing or storing any user IDs or passwords.
 

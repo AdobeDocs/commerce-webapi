@@ -1,6 +1,7 @@
 ---
 title: Restricting access to anonymous web APIs
 description: How to restrict anonymous access to the REST API
+edition: paas
 keywords:
   - REST
   - Security

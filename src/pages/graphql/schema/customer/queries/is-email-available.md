@@ -53,4 +53,4 @@ Error | Description
 
 [customer Query](customer.md)
 
-[Backward incompatible change of isEmailAvailable query](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/#isemailavailable-api)
+[Backward incompatible change of isEmailAvailable query](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/#default-behavior-for-isemailavailable-api)

@@ -1,5 +1,6 @@
 ---
 title: productReviewRatingsMetadata query
+edition: paas
 ---
 
 # productReviewRatingsMetadata query

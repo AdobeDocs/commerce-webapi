@@ -186,14 +186,6 @@ mutation {
         "itemsV2": {
           "items": [
             {
-              "id": "24",
-              "product": {
-                "name": "Erika Running Short",
-                "sku": "WSH12"
-              },
-              "quantity": 1
-            },
-            {
               "id": "26",
               "product": {
                 "name": "Erika Running Short-28-Green",
@@ -202,7 +194,7 @@ mutation {
               "quantity": 1
             }
           ],
-          "total_count": 2,
+          "total_count": 1,
           "page_info": {
             "page_size": 20,
             "current_page": 1,

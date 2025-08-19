@@ -10,10 +10,6 @@ import * as Vars from '../../../data/vars.js';
 
 Some REST calls return dozens or even hundreds of parameters, and parsing through all this data can be unwieldy. In addition, mobile app developers might find the bandwidth needed to process a request to be excessive. To resolve these problems, Adobe Commerce provides a query parameter-based syntax for REST requests that return partial responses.
 
-<InlineAlert variant="success" slots="text"/>
-
-This feature is not available for SOAP, because SOAP does not allow partial responses.
-
 You can append `?fields=<field_or_object1>,<field_or_object2>,...` to any GET, POST, or PUT operation to filter unimportant information from the response. `<field_or_object>` can be any of the following:
 
 *  Simple top-level field
@@ -25,15 +21,14 @@ Separate each field or object with a comma.
 
 On POST and PUT requests, Commerce ignores the `fields` parameter as input, but the response includes only the requested fields and objects.
 
-## Examples
-
-All examples use Luma sample data.
+The following examples use Luma sample data, which is available in PaaS environments only. The examples are applicable in Adobe Commerce as a Cloud Service, but must be modified to return your sample data.
 
 ## Simple fields
 
 The following example returns only the `sku`, `price`, and `name` for the specified product:
 
-`GET <host>/rest/<store_code>/V1/products/24-MB01?fields=sku,price,name`
+&#8203;<Edition name="paas" /> `GET https://<host>/rest/<store_code>/V1/products/24-MB01?fields=sku,price,name`
+&#8203;<Edition name="saas" /> `GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/products/24-MB01?fields=sku,price,name`
 
 ```json
 {
@@ -47,7 +42,8 @@ The following example returns only the `sku`, `price`, and `name` for the specif
 
 The following example returns only the customer first name, last name, and the entire `billing_address` object from a specified order. Do not include brackets `[]` after an object name when you want to return all of the object's contents.
 
-`GET <host>/rest/<store_code>/V1/orders/2?fields=billing_address,customer_firstname,customer_lastname`
+&#8203;<Edition name="paas" /> `GET https://<host>/rest/<store_code>/V1/orders/2?fields=billing_address,customer_firstname,customer_lastname`
+&#8203;<Edition name="saas" /> `GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/orders/2?fields=billing_address,customer_firstname,customer_lastname`
 
 ```json
 {
@@ -77,7 +73,8 @@ The following example returns only the customer first name, last name, and the e
 
 The following example returns only the `name`, `qty`, and `sku` fields defined in an `items` object from a specified shipment:
 
-`GET <host>/rest/<store_code>/V1/shipment/2?fields=items[name,qty,sku]`
+&#8203;<Edition name="paas" /> `GET https://<host>/rest/<store_code>/V1/shipment/2?fields=items[name,qty,sku]`
+&#8203;<Edition name="saas" /> `GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/shipment/2?fields=items[name,qty,sku]`
 
 ```json
 "items": [
@@ -97,7 +94,8 @@ This example returns only the following:
 *  The entire `category_links` object, which is defined in `extension_attributes`
 *  The `item_id` and `qty` fields of the `stock_item` object, which is also defined in `extension_attributes`
 
-`GET <host>/rest/<store_code>/V1/products/MT12?fields=name,sku,extension_attributes[category_links,stock_item[item_id,qty]]`
+&#8203;<Edition name="paas" /> `GET https://<host>/rest/<store_code>/V1/products/MT12?fields=name,sku,extension_attributes[category_links,stock_item[item_id,qty]]`
+&#8203;<Edition name="saas" /> `GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/products/MT12?fields=name,sku,extension_attributes[category_links,stock_item[item_id,qty]]`
 
 ```json
 {
@@ -120,7 +118,8 @@ This example returns only the following:
 
 The following POST operation and payload creates a catalog category named `New Category`. Commerce returns only the `id`, `parent_id`, and `name` attributes
 
-`POST <host>/rest/<store_code>/V1/categories?fields=id,parent_id,name`
+&#8203;<Edition name="paas" /> `POST https://<host>/rest/<store_code>/V1/categories?fields=id,parent_id,name`
+&#8203;<Edition name="saas" /> `POST https://<server>.api.commerce.adobe.com/<tenant-id>/V1/categories?fields=id,parent_id,name`
 
 **Payload:**
 
@@ -145,11 +144,12 @@ The following POST operation and payload creates a catalog category named `New C
 
 ## Using with searchCriteria
 
-The [`searchCriteria` query parameter](/rest/use-rest/performing-searches/) allows you to search across multiple objects in a collection. You can use the `fields` query parameter in conjunction with `searchCriteria` to limit the output. The question mark (?) that precedes `fields` in all the other examples in this document is replaced with an ampersand (&amp;).
+The [`searchCriteria` query parameter](./performing-searches.md) allows you to search across multiple objects in a collection. You can use the `fields` query parameter in conjunction with `searchCriteria` to limit the output. The question mark (?) that precedes `fields` in all the other examples in this document is replaced with an ampersand (&amp;).
 
 The following query returns only the `sku` and `name` parameters for product items whose `category_gear` attribute includes the value `86`.
 
-`GET <host>/rest/<store_code>/V1/products/?searchCriteria[filter_groups][0][filters][0][field]=category_gear&searchCriteria[filter_groups][0][filters][0][value]=86&searchCriteria[filter_groups][0][filters][0][condition_type]=finset&fields=items[sku,name]`
+&#8203;<Edition name="paas" /> `GET https://<host>/rest/<store_code>/V1/products/?searchCriteria[filter_groups][0][filters][0][field]=category_gear&searchCriteria[filter_groups][0][filters][0][value]=86&searchCriteria[filter_groups][0][filters][0][condition_type]=finset&fields=items[sku,name]`
+&#8203;<Edition name="saas" /> `GET https://<server>.api.commerce.adobe.com/<tenant-id>//V1/products/?searchCriteria[filter_groups][0][filters][0][field]=category_gear&searchCriteria[filter_groups][0][filters][0][value]=86&searchCriteria[filter_groups][0][filters][0][condition_type]=finset&fields=items[sku,name]`
 
 ```json
 {
@@ -195,4 +195,4 @@ The following query returns only the `sku` and `name` parameters for product ite
 
 ### Related topics
 
-*  [Search using REST APIs](/rest/use-rest/performing-searches/)
+*  [Search using REST APIs](./performing-searches.md)

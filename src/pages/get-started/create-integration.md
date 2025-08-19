@@ -1,6 +1,7 @@
 ---
 title: Create an Integration
 description: Explains how to create an integration.
+edition: paas
 keywords:
   - Integration
   - REST

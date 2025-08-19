@@ -1,12 +1,17 @@
 ---
 title: Token-Based Authentication
 description: How to use token-based authentication in web APIs.
+edition: paas
 keywords:
   - REST
   - Security
 ---
 
 # Token-based authentication
+
+<InlineAlert variant="info" slots="text"/>
+
+This topic is for Platform-as-a-Service (PaaS) customers only. Adobe Commerce Cloud Services customers must refer to [REST Authentication](https://developer.adobe.com/commerce/services/cloud/guides/rest/authentication/) for details on authentication.
 
 To make a web API call from a client such as a mobile application, you must supply an *access token* on the call. The token acts like an electronic key that lets you access the API.
 
@@ -188,16 +193,6 @@ Each IMS access token is defined by an `access_token_hash` entry in the `admin_a
 ### Access token expiration
 
 No dependency exists between IMS access token lifetime and Commerce session lifetime. Access token life is set by the Adobe IMS service and has a default value of 24 hours. Each access token's expiration time is saved in an `expires_in` value in the `admin_adobe_ims_webapi` table.
-
-### Commerce session management and Adobe IMS access tokens
-
-Access tokens hold both user credentials and login session information. Once a user has been authenticated and a session has begun, these two variables are added to the user's session:
-
-`token_last_check_time`. Identifies the current time and is used by the `\Magento\AdminAdobeIms\Plugin\BackendAuthSessionPlugin` plugin.
-
-`adobe_access_token` — Identifies  the `ACCESS_TOKEN` value received during authorization.
-
-The `\Magento\AdminAdobeIms\Plugin\BackendAuthSessionPlugin` plugin checks if the `token_last_check_time` was updated 10 min ago. If the `token_last_check_time` was checked ten minutes ago, then the authentication workflow makes an API call to IMS to validate the access token, and the session continues. If the access token is valid, then the `token_last_check_time` value is updated to the current time. If the token is not valid, the session is terminated.
 
 ## Request a token
 

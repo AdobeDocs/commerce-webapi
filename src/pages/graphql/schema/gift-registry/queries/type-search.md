@@ -1,7 +1,10 @@
 ---
 title: giftRegistryTypeSearch query
-edition: ee   
 ---
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # giftRegistryTypeSearch query
 

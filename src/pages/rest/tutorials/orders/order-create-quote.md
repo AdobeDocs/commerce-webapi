@@ -1,6 +1,7 @@
 ---
 title: Step 4. Create a quote
 description: In this step of the tutorial you will create a quote
+edition: paas
 keywords:
   - REST
 --- 

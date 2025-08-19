@@ -1,5 +1,6 @@
 ---
 title: Use SOAP Services
+edition: paas
 description: A description of available SOAP services and their conventions
 ---
 

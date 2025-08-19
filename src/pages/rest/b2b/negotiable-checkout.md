@@ -1,13 +1,16 @@
 ---
 title: Negotiable quote checkout
 description: Convert the negotiable quote to an order after reaching an agreed price
-edition: ee
 keywords:
   - B2B
   - REST
 ---
 
 import * as Vars from '../../../data/vars.js';
+
+import CommerceOnly from '/src/_includes/commerce-only.md'
+
+<CommerceOnly />
 
 # Negotiable quote checkout
 
@@ -447,7 +450,7 @@ B2B allows coupons to be used toward payment.
 
 **REST Endpoints:**
 
-```json
+```text
 PUT /V1/negotiable-carts/:cartId/coupons/:couponCode
 DELETE /V1/negotiable-carts/:cartId/coupons
 ```
@@ -484,7 +487,7 @@ B2B allows gift cards to be used as payment.
 
 **REST Endpoints:**
 
-```json
+```text
 POST /V1/negotiable-carts/:cartId/giftCards
 DELETE /V1/negotiable-carts/:cartId/giftCards/:giftCardCode
 ```
