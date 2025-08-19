@@ -16,11 +16,8 @@ The `setCartAsInactive` mutation sets a specific `cartId` as inactive. Use this 
 ```graphql
 mutation {
     setCartAsInactive(
-        cartId: "gVFVNBSJPt7L6uCQis4Q1ryj6DQtcwM2"
-    ) {
-           success
-           error 
-        }
+        cartId: String!
+    ): SetCartAsInactiveOutput
     }
 ```
 
