@@ -35,9 +35,9 @@ The `addProductsToNewCart` mutation reference is based on the [`addProductsToCar
 
 ## Example usage
 
-These examples show when the `addProductsToNewCart` mutation returns a successful, or error message, when creating a new cart in the product page.
+These examples show when the `addProductsToNewCart` mutation returns a successful, or error message, when creating a new cart in a Product Details Page.
 
-### Create a new cart returns success
+### Create a new cart (success)
 
 The following example adds a simple product to a new cart successfully, returning a [Cart](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-Cart) object.
 
@@ -79,9 +79,9 @@ mutation {
 }
 ```
 
-### Create a new cart returns fails
+### Create a new cart (failure)
 
-The following example fails to create a new cart, when the `sku` does not exist in the catalog, then returning a [CartUserInputError](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CartUserInputError) object.
+The following example fails to create a new cart beccause the `sku` does not exist in the catalog. It returns a [CartUserInputError](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CartUserInputError) object.
 
 **Request:**
 

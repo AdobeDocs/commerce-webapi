@@ -23,7 +23,7 @@ mutation {
 
 ## Example usage
 
-These examples show when the `setCartAsInactive` mutation return a successful, or error message.
+The following examples show responses to the `setCartAsInactive` mutation.
 
 **Request:**
 
@@ -38,7 +38,7 @@ mutation {
     }
 ```
 
-### Set cart as inactive returns `success:true`
+### Set cart as inactive (success)
 
 The following response example shows what the mutation returns when `setCartAsInactive` is successful, and no error.
 
@@ -55,9 +55,9 @@ The following response example shows what the mutation returns when `setCartAsIn
 }
 ```
 
-### Set cart as inactive returns `success:false`
+### Set cart as inactive (failure)
 
-The following response example shows what the mutation returns when `setCartAsInactive` fails due to non-existing `cartid`, returning a `"success": false`, and displaying an error message.
+The following example response indicates the mutation failed due to a non-existent `cartId`.
 
 **Response:**
 
