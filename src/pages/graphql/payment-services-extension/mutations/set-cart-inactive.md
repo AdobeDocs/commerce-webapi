@@ -11,6 +11,8 @@ This mutation is available only if you have installed [Payment Services for Adob
 
 The `setCartAsInactive` mutation sets a specific `cartId` as inactive. Use this mutation when a payment error occurs,  or when a shopper cancels a payment flow, after the [`addProductsToNewCart`](add-products-new-cart.md) mutation returns a `cartId`. This mutation helps prevent a customer having multiple active carts created with the [`addProductsToNewCart`](add-products-new-cart.md) mutation.
 
+See the [`addProductsToNewCart` mutation use case](add-products-new-cart.md#use-case-smart-button-on-the-product-details-page-pdp) for more information about a common workflow for the `setCartAsInactive` mutation.
+
 ## Syntax
 
 ```graphql

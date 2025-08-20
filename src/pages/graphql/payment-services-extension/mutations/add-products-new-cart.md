@@ -1,6 +1,6 @@
 ---
 title: addProductsToNewCart mutation
-description: This mutation creates a new cart in Payment Services, supporting guest and logged-in customers in the product page.
+description: This mutation creates a new cart in Payment Services, supporting guest and logged-in customers in the Product Details Page (PDP).
 ---
 
 # addProductsToNewCart mutation
@@ -15,9 +15,13 @@ The `addProductsToNewCart` mutation always creates a new cart for the shopper th
 >
 > For a logged-in customer, the customer token is passed in the [Authorization header](../../usage/authorization-tokens.md#customer-tokens).
 
-The `addProductsToNewCart` mutation creates a new cart and adds the items, then returns a `cart` object, which includes the `cart ID` field.
+## Use case: smart button on the Product Details Page (PDP)
 
-It is recommended to use the [`setCartAsInactive`](set-cart-inactive.md) mutation after the `addProductsToNewCart` mutation is successful, in case of an error during the payment process, or the user cancelling the payment process in the product page, to avoid having multiple active carts for logged-in customers.
+1. When a shopper clicks a smartbutton on the Product Details Page (PDP), the `addProductsToNewCart` mutation creates a new cart and adds the items, then returns a `cart` object, which includes the `cart ID` field.
+
+1. It is recommended to use the [`setCartAsInactive`](set-cart-inactive.md) mutation after the `addProductsToNewCart` mutation is successful, in case of an error during the payment process, or the shopper cancelling the payment process in the PDP, to avoid having multiple active carts for logged-in customers.
+
+1. If the shopper clicks the smartbutton again, `addProductsToNewCart` mutation runs once more to return a new `cart` object.
 
 ## Syntax
 
@@ -35,7 +39,7 @@ The `addProductsToNewCart` mutation reference is based on the [`addProductsToCar
 
 ## Example usage
 
-These examples show when the `addProductsToNewCart` mutation returns a successful, or error message, when creating a new cart in a Product Details Page.
+These examples show when the `addProductsToNewCart` mutation returns a successful, or error message, when creating a new cart in the PDP.
 
 ### Create a new cart (success)
 
