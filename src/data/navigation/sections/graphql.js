@@ -1412,6 +1412,10 @@ module.exports = [
             path: "/graphql/payment-services-extension/mutations/",
             pages: [
               {
+                title: "addProductsToNewCart",
+                path: "/graphql/payment-services-extension/mutations/add-products-new-cart/",
+              },
+              {
                 title: "createPaymentOrder",
                 path: "/graphql/payment-services-extension/mutations/create-payment-order/",
               },
@@ -1422,6 +1426,10 @@ module.exports = [
               {
                 title: "createVaultCardSetupToken",
                 path: "/graphql/payment-services-extension/mutations/create-vault-card-setup-token/",
+              },
+              {
+                title: "setCartAsInactive",
+                path: "/graphql/payment-services-extension/mutations/set-cart-inactive/",
               },
               {
                 title: "syncPaymentOrder",
