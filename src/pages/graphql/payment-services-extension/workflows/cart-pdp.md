@@ -1,6 +1,6 @@
 ---
-title: Payment Services smart button on the Product Details Page (PDP)
-description: Learn how Adobe Commerce uses GraphQL to process orders with Payment Services as a payment method from the minicart.
+title: Payment Services smart button in the Product Details Page (PDP)
+description: Learn how Adobe Commerce uses GraphQL to create a new cart in the Product Details Page (PDP) with smart buttons.
 keywords:
   - GraphQL
   - Payments
@@ -8,9 +8,9 @@ keywords:
 
 # Payment services minicart workflow
 
-These steps describe the additional flow of requests and responses required to place an order after [adding a product to your cart](../../tutorials/checkout/add-product-to-cart.md) with the [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html) solution enabled.
+These steps describe the flow of requests and responses, with the [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html) solution enabled for guest and logged-in customers, required to [create a new cart](../mutations/add-products-new-cart.md) in the Product Details Page (PDP) with smart buttons.
 
-## Minicart workflow
+## Cart in the PDP workflow
 
 ![Payment Services sequence diagram](../../../_images/graphql/payment-services-minicart.svg)
 

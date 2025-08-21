@@ -1372,6 +1372,10 @@ module.exports = [
                 path: "/graphql/payment-services-extension/workflows/minicart.md",
               },
               {
+                title: "Payment Services smart button in the Product Details Page (PDP)",
+                path: "/graphql/payment-services-extension/workflows/cart-pdp.md",
+              },
+              {
                 title: "Vault a card during a checkout authorization",
                 path: "/graphql/payment-services-extension/workflows/vault-with-purchase.md",
               },

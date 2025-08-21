@@ -20,4 +20,4 @@ If you have installed [Payment Services for Adobe Commerce](https://commercemark
 
 If you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.12.0 or higher, check the following workflows:
 
-* [smart button on the Product Details Page (PDP)](../workflows/cart-pdp.md)---This workflow describes the flow of requests and responses required to create a new cart in Payment Services, supporting guest and logged-in customers in the Product Details Page (PDP).
+* [smart button on the Product Details Page (PDP)](../workflows/cart-pdp.md)---This workflow describes the flow of requests and responses, in Payment Services for guest and logged-in customers, required to create a new cart in the Product Details Page (PDP) with smart buttons.
