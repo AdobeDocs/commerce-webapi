@@ -6068,13 +6068,9 @@
             "description": "The ProductInterface object, which contains details about the base product",
             "args": [],
             "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "INTERFACE",
-                "name": "ProductInterface",
-                "ofType": null
-              }
+              "kind": "INTERFACE",
+              "name": "ProductInterface",
+              "ofType": null
             },
             "isDeprecated": true,
             "deprecationReason": "Product information is part of a composable Catalog Service."
@@ -15663,13 +15659,9 @@
             "description": "The ProductInterface object, which contains details about the base product",
             "args": [],
             "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "INTERFACE",
-                "name": "ProductInterface",
-                "ofType": null
-              }
+              "kind": "INTERFACE",
+              "name": "ProductInterface",
+              "ofType": null
             },
             "isDeprecated": true,
             "deprecationReason": "Product information is part of a composable Catalog Service."
@@ -28505,13 +28497,9 @@
             "description": "The ProductInterface object, which contains details about the base product",
             "args": [],
             "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "INTERFACE",
-                "name": "ProductInterface",
-                "ofType": null
-              }
+              "kind": "INTERFACE",
+              "name": "ProductInterface",
+              "ofType": null
             },
             "isDeprecated": true,
             "deprecationReason": "Product information is part of a composable Catalog Service."
@@ -31932,13 +31920,9 @@
             "description": "The ProductInterface object, which contains details about the base product",
             "args": [],
             "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "INTERFACE",
-                "name": "ProductInterface",
-                "ofType": null
-              }
+              "kind": "INTERFACE",
+              "name": "ProductInterface",
+              "ofType": null
             },
             "isDeprecated": true,
             "deprecationReason": "Product information is part of a composable Catalog Service."
@@ -46652,13 +46636,9 @@
             "description": "The ProductInterface object, which contains details about the base product",
             "args": [],
             "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "INTERFACE",
-                "name": "ProductInterface",
-                "ofType": null
-              }
+              "kind": "INTERFACE",
+              "name": "ProductInterface",
+              "ofType": null
             },
             "isDeprecated": true,
             "deprecationReason": "Product information is part of a composable Catalog Service."
@@ -46977,13 +46957,9 @@
             "description": "The ProductInterface object, which contains details about the base product",
             "args": [],
             "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "INTERFACE",
-                "name": "ProductInterface",
-                "ofType": null
-              }
+              "kind": "INTERFACE",
+              "name": "ProductInterface",
+              "ofType": null
             },
             "isDeprecated": true,
             "deprecationReason": "Product information is part of a composable Catalog Service."
@@ -47653,6 +47629,22 @@
           {
             "name": "grand_total",
             "description": "The final total amount, including shipping, discounts, and taxes.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Money",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "grand_total_excl_tax",
+            "description": "The grand total of the order, excluding taxes.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -56571,11 +56563,11 @@
           },
           {
             "name": "recommendationsByUnitIds",
-            "description": "Get Recommendations by Unit IDs",
+            "description": null,
             "args": [
               {
                 "name": "unitIds",
-                "description": "List unit IDs of the preconfigured units",
+                "description": "List unit IDs of preconfigured units",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -65919,6 +65911,22 @@
             "deprecationReason": null
           },
           {
+            "name": "cart_merge_preference",
+            "description": "Configuration data from checkout/cart/cart_merge_preference",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "cart_printed_card",
             "description": "Indicates if printed card prices are displayed on the Shopping Cart page. Possible values: 1 (Yes) and 0 (No).",
             "args": [],
@@ -70949,6 +70957,12 @@
           },
           {
             "name": "UNDEFINED",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "REQUIRED_PARAMETER_MISSING",
             "description": "",
             "isDeprecated": false,
             "deprecationReason": null
