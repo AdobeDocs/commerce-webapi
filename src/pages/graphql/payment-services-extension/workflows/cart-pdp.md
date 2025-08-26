@@ -1,6 +1,6 @@
 ---
-title: Payment Services smart button in the Product Details Page (PDP)
-description: Learn how Adobe Commerce uses GraphQL to create a new cart in the Product Details Page (PDP) with smart buttons (Apple Pay).
+title: Add product to a new cart in the Product Details Page
+description: Learn how Adobe Commerce uses GraphQL to create a new cart in the Product Details Page with smart buttons (Apple Pay).
 keywords:
   - GraphQL
   - Payments
