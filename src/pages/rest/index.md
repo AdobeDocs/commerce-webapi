@@ -63,8 +63,26 @@ The authentication system supports both [interactive user-based workflows](./aut
 
 ### URL structure
 
-The URL structure for your REST endpoints will be slightly different in Adobe Commerce as a Cloud Service. In addition to your base URL changing, the route no longer contains the string `/rest`, nor does it contain the store view code. The store view code is specified in the `Store` header of the request.
+In Adobe Commerce as a Cloud Service, REST endpoint URLs do not include `/rest` and the store view code. The store scope is specified via the `Store` HTTP header.
 
-Cloud Service URLs use the following format:
+- Base format:
+```
+https://<server>.api.commerce.adobe.com/<tenant-id>/<endpoint>
+```
 
-`https://<server>.api.commerce.adobe.com/<tenant-id>/<endpoint>`
+- Store scope via `Store` header:
+  - Predefined values:
+    - `Store: all` — execute in global (admin) scope
+    - `Store: default` — target the default store view (or use your specific store view code)
+  - You can also pass any specific store view code: `Store: <store_view_code>`
+
+Request pattern
+
+```bash
+curl --location 'https://<server>.api.commerce.adobe.com/<tenant-id>/<endpoint>' \
+  --header 'Authorization: Bearer <token>' \
+  --header 'Content-Type: application/json' \
+  --header 'Store: <all | default | <store_view_code>>'
+  ....
+```
+
