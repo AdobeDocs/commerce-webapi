@@ -1,6 +1,6 @@
 ---
 title: Payment Services smart button in the Product Details Page (PDP)
-description: Learn how Adobe Commerce uses GraphQL to create a new cart in the Product Details Page (PDP) with smart buttons.
+description: Learn how Adobe Commerce uses GraphQL to create a new cart in the Product Details Page (PDP) with smart buttons (Apple Pay).
 keywords:
   - GraphQL
   - Payments
@@ -8,110 +8,66 @@ keywords:
 
 # Payment services minicart workflow
 
+<InlineAlert variant="info" slots="text" />
+
+This workflow is available only with Apple Pay if you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.12.0 or higher.
+
 These steps describe the flow of requests and responses, with the [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html) solution enabled for guest and logged-in customers, required to [create a new cart](../mutations/add-products-new-cart.md) in the Product Details Page (PDP) with smart buttons.
 
-## Cart in the PDP workflow
+## Add product to a new cart in a PDP workflow
 
-![Payment Services sequence diagram](../../../_images/graphql/payment-services-minicart.svg)
+These steps describe the use case when a shopper adds a product to the cart in the PDP.
+
+![Payment Services sequence diagram](../../../_images/graphql/payment-services-pdp.svg)
 
 1. Run the [`getPaymentConfig`](../../payment-services-extension/queries/get-payment-config.md) query to fetch the payment configuration needed to render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
 
 1. Adobe Commerce returns payment configuration information.
 
+1. Run [`setPaymentMethodOnCart`](../../schema/cart/mutations/set-payment-method.md) to [set the payment method](../../tutorials/checkout/set-payment-method.md).
+
+1. Adobe Commerce returns a `Cart` object.
+
+1. Run [`addProductsToNewCart`](../../payment-services-extension/mutations/add-products-new-cart.md) to create a new cart and add the item.
+
+1. Commerce returns a `cart` object, which includes the `cart ID` field.
+
 1. Run [`createPaymentOrder`](../../payment-services-extension/mutations/create-payment-order.md) to begin the authorization process.
 
 1. Commerce forwards the request to PayPal.
 
+>[!IMPORTANT]
+>
+> If there is an error during the payment process, or the shopper cancels the payment process in the PDP, run [`setCartAsInactive`](../../payment-services-extension/mutations/set-cart-inactive.md) to set a specific `cartId` as inactive and to avoid having multiple active carts for logged-in customers.
+
 1. PayPal returns an `id` value.
 
-1. Commerce generates an `order_id` and forwards the value in the `mp_order_id` field and in the PayPal response in the `id` field.
+1. Adobe Commerce generates a `order_id` and forwards the value in the `mp_order_id` field and the PayPal response in the `id` field.
 
-1. Run the [`syncPaymentOrder`](../../payment-services-extension/mutations/sync-payment-order.md) mutation to get payment details and update the quote with shipping, billing, email, and phone number details.
+1.  Run the [`placeOrder`](../../schema/cart/mutations/place-order.md) mutation.
 
-1. Commerce returns details about the payment order.
+1.  Commerce sends an authorization request to PayPal.
 
-1. Run the [`setShippingMethodsOnCart`](../../schema/cart/mutations/set-shipping-method.md)mutation to define the delivery methods for your order.
+1.  PayPal returns the result to Commerce.
 
-1. Commerce returns details about the delivery methods for your order.
+1.  Commerce creates an order.
 
-1. Run the [`placeOrder`](../../schema/cart/mutations/place-order.md) mutation.
+### Cart inactive in the PDP workflow
 
-1. Commerce sends an authorization request to PayPal.
+These steps describe the use case when a shopper cancels the payment process in the PDP.
 
-1. PayPal returns the result to Commerce.
+![Payment Services sequence diagram](../../../_images/graphql/payment-services-pdp-cartinactive.svg)
 
-1. Commerce creates an order.
+1. Run the [`getPaymentConfig`](../../payment-services-extension/queries/get-payment-config.md) query to fetch the payment configuration needed to render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
 
-## `setPaymentMethodOnCartInput` object
+1. Adobe Commerce returns payment configuration information.
 
-For the PayPal Smart Buttons and Apple Pay payment methods, you do not need to run the [`setPaymentMethodOnCart`](../../schema/cart/mutations/set-payment-method.md) mutation. The hosted fields payment method requires that you run the mutation only if one of the following conditions are true:
+1. Run [`addProductsToNewCart`](../../payment-services-extension/mutations/add-products-new-cart.md) to create a new cart and add the item.
 
-* You intend to vault a card by setting `is_active_payment_token_enabler` to `true`.
+1. Commerce returns a `cart` object, which includes the `cart ID` field.
 
-* You have a stored payment method checkout where you intend to use a stored card by setting a `public_hash` value.
+1. Run [`setCartAsInactive`](../../payment-services-extension/mutations/set-cart-inactive.md) to set a specific `cartId` as inactive.
 
-In these cases, the payment_method object must contain a `payment_services_paypal_hosted_fields` object.
+1. Commerce returns a confirmation that a specific `cartId` is inactive.
 
-### `payment_services_paypal_hosted_fields` object
-
-The `payment_services_paypal_hosted_fields` can contain the following attributes:
-
-Attribute |  Data Type | Description
---- | --- | ---
-`cardBin` | String | Card bin number
-`cardExpiryMonth` | String | Expiration month of the card
-`cardExpiryYear` | String | Expiration year of the card
-`cardLast4` | String | Last four digits of the card
-`holderName` | String | Name on card
-`is_active_payment_token_enabler` | Boolean | Indicates whether a customer-entered credit/debit card should be tokenized for later usage. The default value is false. Required only if vaulting is enabled for Payment Services payment integration
-`payments_order_id` | String | The unique order ID generated in Commerce if Payment Services is enabled after PayPal returns the `paypal_order_id`
-`paypal_order_id` | String | The unique order ID generated by PayPal when receiving the authorization request
-`payment_source` | String | The payment source for the payment method
-
-### `setPaymentMethodOnCart` mutation example
-
-The following example sets the payment method to `payment_services_paypal_hosted_fields`:
-
-**Request:**
-
-```graphql
-mutation {
-    setPaymentMethodOnCart ( input: {
-      cart_id: "uocGxUi5H97XFAMhY3s66q4aFYG3Bmdr",
-      payment_method: {
-        code: "payment_services_paypal_hosted_fields",
-        payment_services_paypal_hosted_fields: {
-          payment_source: "cc",
-          payments_order_id: "mp-order-a4babd34-13d3-4ac0-b1b0-109bb7be1574",
-          paypal_order_id: "9R90936863877801D",
-          is_active_payment_token_enabler: true
-        }
-      }
-    }
-    ) {
-       cart {
-         id
-         selected_payment_method {
-           code
-         }
-       }
-    }
-  }
-```
-
-**Response:**
-
-```json
-{
-  "data": {
-    "setPaymentMethodOnCart": {
-      "cart": {
-        "id": "r8TKHa58b7Y8VaZHLyABNxrEdS8hJJTZ",
-        "selected_payment_method": {
-          "code": "payment_services_paypal_hosted_fields"
-        }
-      }
-    }
-  }
-}
-```
+1. If the shopper clicks the smartbutton again, `addProductsToNewCart` mutation runs once more to return a new `cart` object.
