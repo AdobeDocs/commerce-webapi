@@ -67,9 +67,7 @@ In Adobe Commerce as a Cloud Service, REST endpoint URLs do not include `/rest` 
 
 * Base format:
 
-  ```
-  https://<server>.api.commerce.adobe.com/<tenant-id>/<endpoint>
-  ```
+  `https://<server>.api.commerce.adobe.com/<tenant-id>/<endpoint>`
 
 * Set the scope with the `Store` header:
 
