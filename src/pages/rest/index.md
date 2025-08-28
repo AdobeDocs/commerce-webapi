@@ -65,18 +65,22 @@ The authentication system supports both [interactive user-based workflows](./aut
 
 In Adobe Commerce as a Cloud Service, REST endpoint URLs do not include `/rest` or the store view code. The store scope is specified via the `Store` HTTP header.
 
-- Base format:
-```
-https://<server>.api.commerce.adobe.com/<tenant-id>/<endpoint>
-```
+* Base format:
 
-- Set the scope with the `Store` header:
-  - Predefined values:
-    - `Store: all` — Execute in the global scope
-    - `Store: default` — Target the default store view (or use your specific store view code)
-  - You can also pass any specific store view code: `Store: <store_view_code>`
+  ```
+  https://<server>.api.commerce.adobe.com/<tenant-id>/<endpoint>
+  ```
 
-**Request pattern:**
+* Set the scope with the `Store` header:
+
+  * Predefined values:
+
+    * `Store: all` — Execute in the global scope
+    * `Store: default` — Target the default store view (or use your specific store view code)
+
+  * You can also pass any specific store view code: `Store: <store_view_code>`
+
+The following `curl` command shows the request pattern:
 
 ```bash
 curl --location 'https://<server>.api.commerce.adobe.com/<tenant-id>/<endpoint>' \
