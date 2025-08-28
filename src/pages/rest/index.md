@@ -21,7 +21,7 @@ The APIs can be used to perform a wide array of tasks. For example:
 
 <Edition name="paas" />
 
-[Adobe Commerce on Cloud](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview?lang=en), Adobe Commerce on-premises, and [Magento Open Source](https://experienceleague.adobe.com/docs/magento-open-source/user-guide/overview/overview.html?lang=en) all use the same REST API framework. The REST API documentation describes the REST APIs that are available in these versions of Adobe Commerce and Magento Open Source.
+[Adobe Commerce on Cloud](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview?lang=en), Adobe Commerce on-premises, and [Magento Open Source](https://experienceleague.adobe.com/en/docs/commerce-admin/start/guide-overview) all use the same REST API framework. The REST API documentation describes the REST APIs that are available in these versions of Adobe Commerce and Magento Open Source.
 
 ### Endpoints
 
