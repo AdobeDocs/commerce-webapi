@@ -12,7 +12,7 @@ keywords:
 
 This workflow is available only with Apple Pay if you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.12.0 or higher.
 
-These steps describe the flow of requests and responses, with the [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html) solution enabled for guest and logged-in customers, required to [create a new cart](../mutations/add-products-new-cart.md) in the Product Details Page (PDP) with smart buttons.
+These steps describe the flow of requests and responses with the [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html) solution enabled for guests and logged-in customers. This workflow is required to [create a new cart](../mutations/add-products-new-cart.md) in the Product Details Page (PDP) with smart buttons.
 
 ## Add product to a new cart in a PDP workflow
 
@@ -30,7 +30,7 @@ These steps describe the use case when a shopper adds a product to the cart in t
 
 1. Run [`addProductsToNewCart`](../../payment-services-extension/mutations/add-products-new-cart.md) to create a new cart and add the item.
 
-1. Commerce returns a `cart` object, which includes the `cart ID` field.
+1. Commerce returns a `cart` object, which includes the cart `id` field.
 
 1. Run [`createPaymentOrder`](../../payment-services-extension/mutations/create-payment-order.md) to begin the authorization process.
 
@@ -62,7 +62,7 @@ These steps describe the use case when a shopper cancels the payment process in 
 
 1. Run [`addProductsToNewCart`](../../payment-services-extension/mutations/add-products-new-cart.md) to create a new cart and add the item.
 
-1. Commerce returns a `cart` object, which includes the `cart ID` field.
+1. Commerce returns a `cart` object, which includes the cart `id` field.
 
 1. Run [`setCartAsInactive`](../../payment-services-extension/mutations/set-cart-inactive.md) to set a specific `cartId` as inactive.
 
