@@ -82,7 +82,7 @@ curl -i -X POST \
  'https://<COMMERCE_URL>/rest/all/V1/carts/{cartId}/customAttributes'
 ```
 
-A quote item with custom attributes can be added/updated using `PUT /V1/carts/{cartId}/items/:itemId`.
+A quote item with custom attributes can be added/updated using `PUT /V1/carts/{cartId}/items/{itemId}`.
 
 ```curl
 curl -i -X PUT \
@@ -138,7 +138,7 @@ curl -i -X POST \
 
 ### Creditmemo
 
-You can use the `POST V1/creditmemo` and `PUT V1/creditmemo/:id` endpoints to set custom attributes on a credit memo and its items.
+You can use the `POST V1/creditmemo` and `PUT V1/creditmemo/{id}` endpoints to set custom attributes on a credit memo and its items.
 
 ```curl
 curl -i -X POST \
