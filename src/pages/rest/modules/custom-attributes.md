@@ -31,7 +31,7 @@ Adobe Commerce as a Cloud Service does not support REST endpoints that modify th
 
 When the quote is converted to an order, the custom attributes are copied to the order.
 
-The following example shows how to set custom attributes on a cart. The `quote` object contains the `custom_attributes` array, which includes the custom attributes to set.
+The following example shows how to set custom attributes on a cart when assigning a customer to a cart. The `quote` object contains the `custom_attributes` array, which includes the custom attributes to set.
 
 ```curl
 curl -i -X PUT \
@@ -56,7 +56,30 @@ curl -i -X PUT \
     ]
   }
 }' \
- 'https://<COMMERCE_URL>/rest/all/V1/carts/'
+ 'https://<COMMERCE_URL>/rest/all/V1/carts/{cartId}'
+```
+
+The `POST /V1/carts/{cartId}/customAttributes` endpoint allows you to set or update custom attributes on already existing carts. The request body must include the `cart_id` and an array of `custom_attributes`.
+
+```curl
+curl -i -X POST \
+   -H "Content-Type:application/json" \
+   -H "Authorization:Bearer <TOKEN>" \
+   -d \
+'{
+  "cart_id": "20",
+  "custom_attributes":[       
+    {
+       "attribute_code": "attr_one",
+       "value": "value_one"
+    },
+    {
+       "attribute_code": "attr_two",
+       "value": "value_two"
+    }
+  ]
+}' \
+ 'https://<COMMERCE_URL>/rest/all/V1/carts/{cartId}/customAttributes'
 ```
 
 A quote item with custom attributes can be added/updated using `PUT /V1/carts/{cartId}/items/:itemId`.
