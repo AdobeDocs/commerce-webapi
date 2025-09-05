@@ -18,6 +18,8 @@ The following conditions must be true to use this payment method:
 
 You cannot use this payment method if the customer decides to use a credit or debit card that is not stored in the vault.
 
+PayPal PayFlow Pro transaction IDs (PNREFs) are valid for use in Reference Transactions for a fixed period of 12 months. Once expired, the saved card will no longer be displayed and must be added again.
+
 If the customer's stored payment information becomes outdated, use the [deletePaymentToken mutation](../schema/checkout/mutations/delete-payment-token.md) to remove the token. Then perform the actions described in the [PayPal Payflow Pro payment method](../payment-methods/payflow-pro.md) to generate a new token and process the order.
 
 <InlineAlert variant="info" slots="text" />
