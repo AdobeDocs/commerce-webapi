@@ -70,7 +70,7 @@ mutation {
         "items": [
           {
             "product": {
-              "sku": "Simple product"
+              "sku": "Simple-product"
             }
           }
         ]
