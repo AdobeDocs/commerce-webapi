@@ -6,7 +6,7 @@ keywords:
   - Payments
 ---
 
-# Create a new cart in the Product Details Page workflow
+# Create a new cart in the Product Details Page workflows
 
 <InlineAlert variant="info" slots="text" />
 
