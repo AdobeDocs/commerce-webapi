@@ -11,9 +11,7 @@ This mutation is available only if you have installed [Payment Services for Adob
 
 The `addProductsToNewCart` mutation always creates a new cart for the shopper then adds the specified products to that cart. This contrasts with the `addProductsToCart` mutation, which requires you to specify an existing cart ID as input.
 
->[!NOTE]
->
-> For a logged-in customer, the customer token is passed in the [Authorization header](../../usage/authorization-tokens.md#customer-tokens).
+For a logged-in customer, the customer token is passed in the [Authorization header](../../usage/authorization-tokens.md#customer-tokens).
 
 ## Use case: smart button on the Product Details Page (PDP)
 
