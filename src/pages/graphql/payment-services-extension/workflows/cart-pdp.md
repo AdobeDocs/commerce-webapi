@@ -46,7 +46,7 @@ These steps describe the use case when a shopper adds a product to the cart in t
 
 1.  Commerce creates an order.
 
-### Payment cancellation while on a PDP workflow
+## Payment cancellation while on a PDP workflow
 
 These steps describe the use case when a shopper cancels the payment process in the PDP.
 
