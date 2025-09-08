@@ -24,10 +24,6 @@ These steps describe the use case when a shopper adds a product to the cart in t
 
 1. Adobe Commerce returns payment configuration information.
 
-1. Run [`setPaymentMethodOnCart`](../../schema/cart/mutations/set-payment-method.md) to [set the payment method](../../tutorials/checkout/set-payment-method.md).
-
-1. Adobe Commerce returns a `Cart` object.
-
 1. Run [`addProductsToNewCart`](../../payment-services-extension/mutations/add-products-new-cart.md) to create a new cart and add the item.
 
 1. Commerce returns a `cart` object, which includes the cart `id` field.
