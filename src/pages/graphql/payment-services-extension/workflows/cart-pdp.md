@@ -6,7 +6,7 @@ keywords:
   - Payments
 ---
 
-# Payment services minicart workflow
+# Create a new cart in the Product Details Page workflow
 
 <InlineAlert variant="info" slots="text" />
 
