@@ -64,4 +64,4 @@ These steps describe the use case when a shopper cancels the payment process in 
 
 1. Commerce returns a confirmation that a specific `cartId` is inactive.
 
-1. If the shopper clicks the smartbutton again, `addProductsToNewCart` mutation runs once more to return a new `cart` object.
+1. If the shopper clicks the smart button again, `addProductsToNewCart` mutation runs once more to return a new `cart` object.
