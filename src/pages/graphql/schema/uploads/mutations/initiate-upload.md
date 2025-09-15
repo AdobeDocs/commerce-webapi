@@ -1,8 +1,10 @@
 ---
 title: initiateUpload mutation
 edition: saas
+keywords:
+  - REST
+  - Integration
 ---
-
 
 # initiateUpload mutation
 

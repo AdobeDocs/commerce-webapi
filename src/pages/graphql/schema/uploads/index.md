@@ -2,6 +2,9 @@
 title: Upload files to Amazon S3
 description: Learn how to manage file and image uploads using GraphQL mutations.
 edition: saas
+keywords:
+  - REST
+  - Integration
 ---
 
 # Upload files to Amazon S3

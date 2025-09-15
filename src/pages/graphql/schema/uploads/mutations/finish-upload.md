@@ -1,8 +1,10 @@
 ---
 title: finishUpload mutation
 edition: saas
+keywords:
+  - REST
+  - Integration
 ---
-
 
 # finishUpload mutation
 
