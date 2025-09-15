@@ -1236,6 +1236,26 @@ module.exports = [
         ],
       },
       {
+        title: "Uploads",
+        path: "/graphql/schema/uploads/",
+        pages: [
+          {
+            title: "Mutations",
+            path: "/graphql/schema/uploads/",
+            pages: [
+              {
+                title: "finishUpload",
+                path: "/graphql/schema/uploads/mutations/finish-upload/",
+              },
+              {
+                title: "initiateUpload",
+                path: "/graphql/schema/uploads/mutations/initiate-upload/",
+              }
+            ]
+          }
+        ]
+      },
+      {
         title: "Wish list",
         path: "/graphql/schema/wishlist/",
         pages: [
