@@ -9,7 +9,9 @@ keywords:
 
 # Upload files to Amazon S3
 
-Adobe Commerce as a Cloud Service (SaaS) supports file uploads through GraphQL mutations. This feature allows you to upload files such as images, documents, and other media to the server. Uploading files is a multi-step process, as shown in the following diagram:
+Adobe Commerce as a Cloud Service (SaaS) supports file uploads through GraphQL mutations. This feature allows you to upload files such as images, documents, and other media to the server. [Sharing objects with presigned URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html) describes how presigned URLs work.
+
+Uploading files is a multi-step process, as shown in the following diagram:
 
 ![Upload files](../../../_images/upload-file.png)
 

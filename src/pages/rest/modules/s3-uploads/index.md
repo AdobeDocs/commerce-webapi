@@ -9,7 +9,9 @@ keywords:
 
 # Upload files to Amazon S3
 
-Adobe Commerce as a Cloud Service (SaaS) supports file uploads through GraphQL mutations. This feature allows you to upload files such as images, documents, and other media to the server. Uploading files is a multi-step process, as shown in the following diagram:
+Adobe Commerce as a Cloud Service (SaaS) supports file uploads through GraphQL mutations. This feature allows you to upload images to Amazon Simple Storage Service (S3). [Sharing objects with presigned URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html) describes how presigned URLs work.
+
+Uploading files is a multi-step process, as shown in the following diagram:
 
 ![Upload files](../../../_images/upload-file.png)
 
@@ -17,7 +19,7 @@ Adobe Commerce as a Cloud Service (SaaS) supports file uploads through GraphQL m
 
 1. **Receive the response**: The response from the `initiate-upload` call includes a presigned URL, a unique key for the file, and an expiration time for the URL. The client code extracts these values from the response.
 
-1. **Upload the file**: The client code uses the presigned URL to upload the file directly to an Amazon S3 bucket. This is done using a standard HTTP PUT request. The file is uploaded to a temporary location in the S3 bucket.
+1. **Upload the file**: The client code uses the presigned URL to upload the file directly to an Amazon S3 bucket. This is done using a standard HTTP PUT request. The file is uploaded to a temporary location in the S3 bucket. [](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html)
 
 1. **Finalize the upload**: After the file is successfully uploaded to S3, the client code calls the `POST V1/media/finish-upload` endpoint to complete the upload process. The mutation includes the unique key received from the `initiate-upload` response.
 
@@ -77,7 +79,7 @@ curl --request POST \
 
 ## Add the uploaded file to an entity
 
-Your Adobe Commerce instance must define a customer custom attribute that has an input type of `file` or `image`. Navigate to **Stores** > **Attributes** > **Customer** in the Admin and click **Add Attribute**. Your custom attribute must have the following properties:
+Your Adobe Commerce instance must define a customer custom attribute that has an input type of `file` or `image`. Navigate to **Stores** > **Attributes** > **Product** in the Admin and click **Add Attribute**. Your custom attribute must have the following properties:
 
 * **Attribute Code**: A unique identifier for the attribute, such as `image`.
 

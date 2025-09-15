@@ -41,7 +41,7 @@ The following mutation initiates an upload for a file named `example.png`.
 ```graphql
 mutation {
     initiateUpload("input": {
-        "key": "example.jpg",
+        "key": "example.png",
         "media_resource_type": "CUSTOMER_ATTRIBUTE_FILE"
     }){
         upload_url
