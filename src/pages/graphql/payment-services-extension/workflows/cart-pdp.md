@@ -1,5 +1,5 @@
 ---
-title: Add product to a new cart in the Product Details Page
+title: Add product to a new cart on a Product Details Page
 description: Learn how Adobe Commerce uses GraphQL to create a new cart in the Product Details Page with smart buttons (Apple Pay).
 keywords:
   - GraphQL
@@ -16,7 +16,7 @@ These steps describe the flow of requests and responses with the [Payment Servic
 
 ## Add product to a new cart in a PDP workflow
 
-These steps describe the use case when a shopper adds a product to the cart in the PDP.
+These steps describe the use case when a shopper adds a product to the cart on a PDP.
 
 ![Payment Services sequence diagram](../../../_images/graphql/payment-services-pdp.svg)
 
@@ -32,7 +32,7 @@ These steps describe the use case when a shopper adds a product to the cart in t
 
 1. Commerce forwards the request to PayPal.
 
-  If there is an error during the payment process, or the shopper cancels the payment process in the PDP, run [`setCartAsInactive`](../../payment-services-extension/mutations/set-cart-inactive.md) to set a specific `cartId` as inactive and to avoid having multiple active carts for logged-in customers.
+  If there is an error during the payment process, or the shopper cancels the payment process on the PDP, run [`setCartAsInactive`](../../payment-services-extension/mutations/set-cart-inactive.md) to set the corresponding `cartId` as inactive and to avoid having multiple active carts for logged-in customers.
 
 1. PayPal returns an `id` value.
 
@@ -48,7 +48,7 @@ These steps describe the use case when a shopper adds a product to the cart in t
 
 ## Payment cancellation while on a PDP workflow
 
-These steps describe the use case when a shopper cancels the payment process in the PDP.
+These steps describe the use case when a shopper cancels the payment process on the PDP.
 
 ![Payment Services sequence diagram](../../../_images/graphql/payment-services-pdp-cartinactive.svg)
 

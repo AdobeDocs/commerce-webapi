@@ -1372,7 +1372,7 @@ module.exports = [
                 path: "/graphql/payment-services-extension/workflows/minicart.md",
               },
               {
-                title: "Add product to a new cart in the Product Details Page",
+                title: "Add product to a new cart on a Product Details Page",
                 path: "/graphql/payment-services-extension/workflows/cart-pdp.md",
               },
               {
