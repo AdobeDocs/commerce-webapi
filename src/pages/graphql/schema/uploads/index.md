@@ -31,3 +31,42 @@ Adobe Commerce as a Cloud Service (SaaS) supports file uploads through GraphQL m
 1. **Receive the final response**: The response from the `finishUpload` mutation includes the unique key for the uploaded file. The client code extracts this key from the response.
 
 1. **Create or update the entity**: After `finishUpload` succeeds, the client creates or updates the entity (such as a customer) using the returned hashed key as the attribute value, not a URL or full S3 path.
+
+1. **Receive the create/update response**: The response from the create or update mutation includes the details of the created or updated entity.
+
+## Add the uploaded file to an entity
+
+Your Adobe Commerce instance must define a customer custom attribute that has an input type of `file` or `image`. Navigate to **Stores** > **Attributes** > **Customer** in the Admin and click **Add Attribute**. Your custom attribute must have the following properties:
+
+* **Attribute Code**: A unique identifier for the attribute, such as `profile_picture`.
+
+* **Input Type**: Set to **File (attachment)** or **Image file**.
+
+* **Maximum File Size**: The default file size limit on S3 is 16 MB (16777216 bytes).
+
+Once the custom attribute is created, you can use the key returned by the `finishUpload` mutation to set the value of the attribute when creating or updating a customer. For example, if the custom attribute code is `profile_picture`, you would include it in the input of the `createCustomerV2` mutation as follows:
+
+```graphql
+mutation {
+  createCustomerV2(
+    input: {
+      email: "john.doe@example.com"
+      firstname: "John"
+      lastname: "Doe"
+      password: "wzB43LF4svFd"
+            custom_attributes: [
+                {
+                    attribute_code: "profile-picture"
+                    value: "cat_106d42b2ee34de81db31d958.jpg"
+                }
+            ]
+    }
+  ) {
+    customer {
+      email
+      firstname
+      lastname
+    }
+    }
+  }
+```

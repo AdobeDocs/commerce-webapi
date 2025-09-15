@@ -12,7 +12,9 @@ When you call this mutation, Commerce uses the AWS SDK to create a presigned URL
 
 The response includes the presigned URL, a unique key for the file, and an expiration time for the URL. The `key` is a hashed value that uniquely identifies the file in the S3 bucket. The client uses the presigned URL to upload the file using a standard HTTP PUT request.
 
-Use the [`finishUpload` mutation](finish-upload.md) to complete the upload process after the file is successfully uploaded to S3.
+You must make a REST call to the S3 server that includes the `upload_url` and `key` values from the response to upload the file. See [Upload files to Amazon S3](../index.md) for details about the call.
+
+After the file is successfully uploaded, use the [`finishUpload` mutation](finish-upload.md) to complete the upload process.
 
 ## Syntax
 
