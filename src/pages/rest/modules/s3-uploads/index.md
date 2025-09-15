@@ -13,7 +13,7 @@ Adobe Commerce as a Cloud Service (SaaS) supports file uploads through GraphQL m
 
 ![Upload files](../../../_images/upload-file.png)
 
-1. **Inititiate the upload**: The shopper clicks an **Upload File** button on the storefront. The Javascript code on the page uses the `POST V1/media/initiate-upload` endpoint to start the uploard process. The call specifies the file name provided by the shopper. Commerce uses the AWS SDK to generate the URL to which the file will be uploaded.
+1. **Inititiate the upload**: The shopper clicks an **Upload File** button on the storefront. The Javascript code on the page uses the `POST V1/media/initiate-upload` endpoint to start the upload process. The call specifies the file name provided by the shopper. Commerce uses the AWS SDK to generate the URL to which the file will be uploaded.
 
 1. **Receive the response**: The response from the `initiate-upload` call includes a presigned URL, a unique key for the file, and an expiration time for the URL. The client code extracts these values from the response.
 
