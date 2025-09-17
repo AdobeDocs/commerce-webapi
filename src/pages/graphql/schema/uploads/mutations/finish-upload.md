@@ -10,7 +10,7 @@ keywords:
 
 The `finishUpload` mutation completes the file upload process initiated by the [`initiateUpload` mutation](initiate-upload.md). The `finishUpload` mutation requires the unique key generated during the initiation step as an input parameter. This key identifies the file that was uploaded to the Amazon S3 bucket.
 
-When you call this mutation, Commerce verifies that the file associated with the provided key has been successfully uploaded to the S3 bucket. If the upload is confirmed, Commerce finalizes the upload process and makes the file available for use within the system. The response from the `finishUpload` mutation includes the unique key for the uploaded file. Use this key to reference the file in subsequent operations, such as associating it with a customer file.
+When you call this mutation, Commerce verifies that the file associated with the provided key has been successfully uploaded to the S3 bucket. If the upload is confirmed, Commerce finalizes the upload process and makes the file available for use within the system. The response from the `finishUpload` mutation includes the unique key for the uploaded file. Use this key to reference the file in subsequent operations, such as associating it with a customer file or image attribute.
 
 ## Syntax
 
