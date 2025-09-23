@@ -33,7 +33,7 @@ addProductsToNewCart(
 
 ## Reference
 
-The `addProductsToNewCart` mutation reference is based on the [`addProductsToCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addProductsToCart) reference, which provides detailed information about the types and fields defined in the mutation.
+The [`addProductsToNewCart`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-addProductsToNewCart) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
