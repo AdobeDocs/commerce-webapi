@@ -23,7 +23,7 @@ Uploading files is a multi-step process, as shown in the following diagram:
 
 1. **Finalize the upload**: After the file is successfully uploaded to S3, the client code calls the `POST V1/media/finish-upload` endpoint to complete the upload process. The mutation includes the unique key received from the `initiate-upload` response.
 
-1. **Perform validation**: Commerce validates key and size (HEAD on S3 Temporary).
+1. **Perform validation**: Commerce uses a HEAD request on S3 Temporary to validate the key and size.
 
 1. **Move the file**: Commerce performs a `CopyObject` operation to move the file from the temporary location to a permanent location in the S3 bucket.
 
@@ -57,7 +57,7 @@ curl --request POST \
 The following curl command demonstrates how to upload a file using the presigned URL returned by the `POST V1/media/initiate-upload` call:
 
 ```bash
-curl --fail --show-error --silent -X PUT --data-binary @./cat.jpg 'https://s3.amazonaws.com/na1-qa-ccsaas-instance-presigned/<tenant>/cat_106d42b2ee34de81db31d958.jpg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=...&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=...&X-Amz-Date=...&X-Amz-SignedHeaders=host&X-Amz-Expires=...&X-Amz-Signature=...'
+   curl --fail --show-error --silent -X PUT --data-binary @./cat.jpg 'https://<bucket>.s3.<region>.amazonaws.com/<path-to-temp-file>?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=<token>&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=<value>&X-Amz-Date=<value>&X-Amz-SignedHeaders=host&X-Amz-Expires=<value>&X-Amz-Signature=<value>...'
 ```
 
 ## Finish the upload
