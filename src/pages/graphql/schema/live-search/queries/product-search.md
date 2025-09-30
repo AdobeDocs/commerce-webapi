@@ -431,7 +431,7 @@ facets {
 
 ### Items list
 
-The `items` object primarily provides details about each item returned..
+The `items` object primarily provides details about each item returned.
 
 #### ProductSearchItem.productView
 
