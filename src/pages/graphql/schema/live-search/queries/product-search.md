@@ -9,7 +9,7 @@ keywords:
 
 # productSearch query
 
-This article discusses the `productSearch` query that is available in the Live Search and Catalog Service extension. While similar in structure and functionality, there are differences in what they output.
+This article discusses the `productSearch` query that is available in the Live Search and Catalog Service extension.
 
 See [Boundaries and Limits](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/live-search/boundaries-limits) in the *Live Search Guide* for the latest recommendations for creating performant queries.
 
@@ -32,7 +32,7 @@ Live Search uses the `productSearch` query to search for products instead of the
 
 <InlineAlert variant="info" slots="text" />
 
-The Catalog Service `productSearch` query uses Live Search to return details about the SKUs specified as input. [Learn more](#catalog-service).
+The Catalog Service `productSearch` query uses Live Search to return details about the SKUs specified as input. 
 
 The `productSearch` query accepts the following fields as input:
 
@@ -165,13 +165,9 @@ Only facets specified in Live Search are returned.
 
 Use the [`attributeMetadata` query](./attribute-metadata.md) to return a list of product attributes that can be used to define a filter.
 
-#### Filtering using search capability
+#### Filtering using advanced search capability
 
-<InlineAlert variant="info" slots="text"/>
-
-This feature is in beta. For installation information, see the [Live Search guide](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/live-search/install#install-the-live-search-beta) in the merchant documentation.
-
-This beta supports three new capabilities:
+You can further filter search results using the following advanced search capabilities:
 
 - **Layered search** - Search within another search context - With this capability, you can undertake up to two layers of search for your search queries. For example:
   
@@ -306,7 +302,7 @@ productSearch(
 
 ##### Limitations
 
-The beta has the following limitations:
+The advanced search capabilitiies has the following limitations:
 
 - You can specify a maximum of six attributes to be enabled for **Contains** and six attributes to be enabled for **Starts with**.
 - Each aggregation returns a maximum of 1000 facets.
@@ -435,40 +431,13 @@ facets {
 
 ### Items list
 
-The `items` object primarily provides details about each item returned. The structure of this object varies between Catalog Service and Live Search. For Catalog Service, specify a `ProductSearchItem.productView` object. For Live Search, specify a `ProductSearchItem.product` object
+The `items` object primarily provides details about each item returned..
 
-#### ProductSearchItem.product (Live Search)
+#### ProductSearchItem.productView
 
-The following snippet returns relevant information about each item when Catalog Service is not installed or used:
+The `ProductSearchItem.productView` object returns product details. The structure of the pricing information varies, depending on whether the product is designated as a `SimpleProduct` (simple, downloadable, gift card) or as a `ComplexProduct` (configurable, grouped, or bundle).
 
-```graphql
-items {
-    product {
-        name
-        sku
-        price_range {
-          maximum_price {
-            final_price {
-              value
-              currency
-            }
-          }
-          minimum_price {
-            final_price {
-              value
-              currency
-            }
-          }
-        }
-    }
-}
-```
-
-#### ProductSearchItem.productView (Catalog Service)
-
-If [Catalog Service](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/guide-overview.html) is installed, you can optionally use the `productView` field instead of the `product` field to return product details. Catalog Service uses [Catalog Sync](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/data-services/catalog-sync.html) to manage product data, resulting in query responses with less latency than is possible with the `ProductInterface`. With Catalog Service, the structure of the pricing information varies, depending on whether the product is designated as a `SimpleProduct` (simple, downloadable, gift card) or as a `ComplexProduct` (configurable, grouped, or bundle).
-
-The following Catalog Service snippet returns relevant information about each item:
+The following snippet returns relevant information about each item:
 
 ```graphql
 items {
@@ -573,474 +542,7 @@ import CustomerGroupCode from '/src/_includes/graphql/customer-group-code.md'
 
 ## Example usage
 
-In the following sections provide examples for using Live Search and Catalog Service.
-
-### Live Search
-
-This is an example of using Live Search to retrieve and filter results. The query uses the core `ProductInterface` to access product information. As a result, the query has a longer response time than using [Catalog Service](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/guide-overview.html) to retrieve this information.
-
-For an example of using Live Search with Catalog Service, see [Catalog Service productSearch query](#catalog-service). Other than returning the `productView` object, all other attributes are the same.
-
-In the example below, there is no search `phrase` passed and results are filtered on the "women/bottoms-women" category. In the response, two categories are returned:
-
-```json
-{
-  "title": "women/bottoms-women/shorts-women",
-  "__typename": "ScalarBucket",
-  "id": "28",
-  "count": 12
-},
-{
-  "title": "women/bottoms-women/pants-women",
-  "__typename": "ScalarBucket",
-  "id": "27",
-  "count": 13
-}
-```
-
-If the `phrase` "pants" is added, only one category is returned and "shorts" are not returned by the query:
-
-```json
-{
-  "title": "women/bottoms-women/pants-women",
-  "__typename": "ScalarBucket",
-  "id": "27",
-  "count": 13
-}
-```
-
-**Request:**
-
-```graphql
-{
-  productSearch(
-    phrase: ""
-    sort: [
-      { attribute: "price", direction: DESC }
-      { attribute: "name", direction: DESC }
-    ]
-    filter: [
-      { attribute: "categoryPath", in: ["women/bottoms-women"] }
-    ]
-    page_size: 9
-  ) {
-    total_count
-    page_info {
-      current_page
-      page_size
-      total_pages
-    }
-    facets {
-      attribute
-      title
-      type
-      buckets {
-        title
-        __typename
-        ... on RangeBucket {
-          title
-          to
-          from
-          count
-        }
-        ... on ScalarBucket {
-          title
-          id
-          count
-        }
-        ... on StatsBucket {
-          title
-          min
-          max
-        }
-      }
-    }
-    items {
-      product {
-        name
-        sku
-      }
-    }
-    suggestions
-  }
-}
-```
-
-**Response:**
-
-<details>
-<summary><b>Response</b></summary>
-
-```json
-"data": {
-  "productSearch": {
-    "total_count": 25,
-    "page_info": {
-      "current_page": 1,
-      "page_size": 9,
-      "total_pages": 3
-    },
-    "facets": [
-      {
-        "attribute": "categories",
-        "title": "Categories",
-        "type": "PINNED",
-        "buckets": [
-          {
-            "title": "women/bottoms-women/shorts-women",
-            "__typename": "ScalarBucket",
-            "id": "28",
-            "count": 12
-          },
-          {
-            "title": "women/bottoms-women/pants-women",
-            "__typename": "ScalarBucket",
-            "id": "27",
-            "count": 13
-          }
-        ]
-      },
-      {
-        "attribute": "price",
-        "title": "Price",
-        "type": "PINNED",
-        "buckets": [
-          {
-            "title": "0.0-25.0",
-            "__typename": "RangeBucket",
-            "to": 25,
-            "from": 0,
-            "count": 1
-          },
-          {
-            "title": "25.0-50.0",
-            "__typename": "RangeBucket",
-            "to": 50,
-            "from": 25,
-            "count": 20
-          },
-          {
-            "title": "50.0-75.0",
-            "__typename": "RangeBucket",
-            "to": 75,
-            "from": 50,
-            "count": 4
-          }
-        ]
-      },
-      {
-        "attribute": "material",
-        "title": "Material",
-        "type": "POPULAR",
-        "buckets": [
-          {
-            "title": "Organic Cotton",
-            "__typename": "ScalarBucket",
-            "id": "Organic Cotton",
-            "count": 13
-          },
-          {
-            "title": "Spandex",
-            "__typename": "ScalarBucket",
-            "id": "Spandex",
-            "count": 11
-          },
-          {
-            "title": "Polyester",
-            "__typename": "ScalarBucket",
-            "id": "Polyester",
-            "count": 7
-          },
-          {
-            "title": "Cotton",
-            "__typename": "ScalarBucket",
-            "id": "Cotton",
-            "count": 4
-          },
-          {
-            "title": "LumaTech&trade;",
-            "__typename": "ScalarBucket",
-            "id": "LumaTech&trade;",
-            "count": 5
-          },
-          {
-            "title": "CoolTech&trade;",
-            "__typename": "ScalarBucket",
-            "id": "CoolTech&trade;",
-            "count": 4
-          },
-          {
-            "title": "Mesh",
-            "__typename": "ScalarBucket",
-            "id": "Mesh",
-            "count": 3
-          },
-          {
-            "title": "Cocona&reg; performance fabric",
-            "__typename": "ScalarBucket",
-            "id": "Cocona&reg; performance fabric",
-            "count": 4
-          }
-        ]
-      },
-      {
-        "attribute": "new",
-        "title": "New",
-        "type": "POPULAR",
-        "buckets": [
-          {
-            "title": "no",
-            "__typename": "ScalarBucket",
-            "id": "no",
-            "count": 21
-          },
-          {
-            "title": "yes",
-            "__typename": "ScalarBucket",
-            "id": "yes",
-            "count": 4
-          }
-        ]
-      },
-      {
-        "attribute": "color",
-        "title": "Color",
-        "type": "POPULAR",
-        "buckets": [
-          {
-            "title": "Blue",
-            "__typename": "ScalarBucket",
-            "id": "Blue",
-            "count": 14
-          },
-          {
-            "title": "Black",
-            "__typename": "ScalarBucket",
-            "id": "Black",
-            "count": 12
-          },
-          {
-            "title": "Orange",
-            "__typename": "ScalarBucket",
-            "id": "Orange",
-            "count": 9
-          },
-          {
-            "title": "Green",
-            "__typename": "ScalarBucket",
-            "id": "Green",
-            "count": 8
-          },
-          {
-            "title": "Purple",
-            "__typename": "ScalarBucket",
-            "id": "Purple",
-            "count": 8
-          },
-          {
-            "title": "Gray",
-            "__typename": "ScalarBucket",
-            "id": "Gray",
-            "count": 8
-          },
-          {
-            "title": "Red",
-            "__typename": "ScalarBucket",
-            "id": "Red",
-            "count": 7
-          },
-          {
-            "title": "White",
-            "__typename": "ScalarBucket",
-            "id": "White",
-            "count": 5
-          }
-        ]
-      },
-      {
-        "attribute": "eco_collection",
-        "title": "Eco Collection",
-        "type": "POPULAR",
-        "buckets": [
-          {
-            "title": "no",
-            "__typename": "ScalarBucket",
-            "id": "no",
-            "count": 18
-          },
-          {
-            "title": "yes",
-            "__typename": "ScalarBucket",
-            "id": "yes",
-            "count": 7
-          }
-        ]
-      },
-      {
-        "attribute": "climate",
-        "title": "Climate",
-        "type": "POPULAR",
-        "buckets": [
-          {
-            "title": "Indoor",
-            "__typename": "ScalarBucket",
-            "id": "Indoor",
-            "count": 20
-          },
-          {
-            "title": "Hot",
-            "__typename": "ScalarBucket",
-            "id": "Hot",
-            "count": 16
-          },
-          {
-            "title": "Mild",
-            "__typename": "ScalarBucket",
-            "id": "Mild",
-            "count": 17
-          },
-          {
-            "title": "Warm",
-            "__typename": "ScalarBucket",
-            "id": "Warm",
-            "count": 15
-          },
-          {
-            "title": "All-Weather",
-            "__typename": "ScalarBucket",
-            "id": "All-Weather",
-            "count": 10
-          },
-          {
-            "title": "Spring",
-            "__typename": "ScalarBucket",
-            "id": "Spring",
-            "count": 7
-          },
-          {
-            "title": "Cool",
-            "__typename": "ScalarBucket",
-            "id": "Cool",
-            "count": 3
-          }
-        ]
-      },
-      {
-        "attribute": "size",
-        "title": "Size",
-        "type": "POPULAR",
-        "buckets": [
-          {
-            "title": "28",
-            "__typename": "ScalarBucket",
-            "id": "28",
-            "count": 25
-          },
-          {
-            "title": "29",
-            "__typename": "ScalarBucket",
-            "id": "29",
-            "count": 25
-          },
-          {
-            "title": "30",
-            "__typename": "ScalarBucket",
-            "id": "30",
-            "count": 7
-          },
-          {
-            "title": "31",
-            "__typename": "ScalarBucket",
-            "id": "31",
-            "count": 7
-          },
-          {
-            "title": "32",
-            "__typename": "ScalarBucket",
-            "id": "32",
-            "count": 7
-          }
-        ]
-      },
-      {
-        "attribute": "activity",
-        "title": "Activity",
-        "type": "POPULAR",
-        "buckets": []
-      },
-      {
-        "attribute": "custom_price",
-        "title": "Custom Price",
-        "type": "POPULAR",
-        "buckets": []
-      }
-    ],
-    "items": [
-      {
-        "product": {
-          "name": "Sahara Leggings",
-          "sku": "WP05"
-        }
-      },
-      {
-        "product": {
-          "name": "Cora Parachute Pant",
-          "sku": "WP04"
-        }
-      },
-      {
-        "product": {
-          "name": "Deirdre Relaxed-Fit Capri",
-          "sku": "WP12"
-        }
-      },
-      {
-        "product": {
-          "name": "Gwen Drawstring Bike Short",
-          "sku": "WSH03"
-        }
-      },
-      {
-        "product": {
-          "name": "Ina Compression Short",
-          "sku": "WSH11"
-        }
-      },
-      {
-        "product": {
-          "name": "Diana Tights",
-          "sku": "WP06"
-        }
-      },
-      {
-        "product": {
-          "name": "Erika Running Short",
-          "sku": "WSH12"
-        }
-      },
-      {
-        "product": {
-          "name": "Artemis Running Short",
-          "sku": "WSH04"
-        }
-      },
-      {
-        "product": {
-          "name": "Sybil Running Short",
-          "sku": "WSH08"
-        }
-      }
-    ],
-    "suggestions": []
-  }
-}
-```
-
-</details>
-
-### Catalog Service
-
-In the following example, the query returns information on the same products as the Live Search [`productSearch` items list](#items-list) example. However, it has been constructed to return item information inside the Catalog Service `productView` object instead of the core `product` object. Note that the pricing information varies, depending on the product type. For the sake of brevity, facet information is not shown.
+In the following example, the query returns information inside the `productView` object. Note that the pricing information varies, depending on the product type. For the sake of brevity, facet information is not shown.
 
 **Request:**
 
@@ -1430,11 +932,7 @@ Field | Data Type | Description
 `page_size` | Int | Specifies the maximum number of items to return
 `total_pages` | Int | Specifies the total number of pages returned
 
-### Live Search fields
-
-Live Search returns product information using the [ProductInterface!](https://developer.adobe.com/commerce/webapi/graphql/schema/products/interfaces/attributes/).
-
-### Catalog Service fields
+### Live Search and Catalog Service fields
 
 import Docs2 from '/src/_includes/graphql/catalog-service/product-view.md'
 
