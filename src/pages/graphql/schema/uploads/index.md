@@ -75,3 +75,5 @@ mutation {
     }
   }
 ```
+
+[Attribute interfaces and implementations](../attributes/interfaces/index.md) provides an example of how to retrieve a file uploaded to Amazon S3.
