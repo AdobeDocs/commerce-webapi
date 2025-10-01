@@ -32,7 +32,7 @@ Live Search uses the `productSearch` query to search for products instead of the
 
 <InlineAlert variant="info" slots="text" />
 
-The Catalog Service `productSearch` query uses Live Search to return details about the SKUs specified as input. 
+The Catalog Service `productSearch` query uses Live Search to return details about the SKUs specified as input.
 
 The `productSearch` query accepts the following fields as input:
 
