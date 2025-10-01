@@ -15,4 +15,4 @@ Catalog Service provides the following queries:
 *  [`refineProduct`](refine-product.md)
 *  [`variants`](product-variants.md)
 
-It also extends the Live Search [`productSearch`](../../live-search/queries/product-search.md#catalog-service) query to return product view data.
+It also extends the Live Search [`productSearch`](../../live-search/queries/product-search.md) query to return product view data.
