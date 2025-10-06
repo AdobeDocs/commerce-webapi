@@ -37,27 +37,32 @@ The following mutation finalize an upload for a file with a key value of `cat_10
 **Request:**
 
 ```graphql
-mutation {
-    finishUpload("input": {
-        "key": "cat_106d42b2ee34de81db31d958.jpg",
-        "media_resource_type": "CUSTOMER_ATTRIBUTE_FILE"
-    }){
-        success
-        key
-        message
-    }
+mutation Finish($input: finishUploadInput!) {
+  finishUpload(input: $input) {
+    success
+    key
+    message
+  }
 }
 ```
+With variables:
 
+```json
+{
+  "input": {
+    "key": "cat_106d42b2ee34de81db31d958.jpg",
+    "media_resource_type": "CUSTOMER_ATTRIBUTE_FILE"
+  }
+}
 **Response:**
 
 ```json
 {
   "data": {
-    "finishUploadOutput": {
-        "success": true,
-        "key": "cat_106d42b2ee34de81db31d958.jpg",
-        "message": "Upload completed successfully."
+    "finishUpload": {
+      "success": true,
+      "key": "cat_106d42b2ee34de81db31d958.jpg",
+      "message": "Upload completed successfully."
     }
   }
 }

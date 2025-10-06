@@ -18,7 +18,7 @@ When you call this mutation, Commerce uses the AWS SDK to create a presigned URL
 
 The response includes the presigned URL, a unique key for the file, and an expiration time for the URL. The `key` is a hashed value that uniquely identifies the file in the S3 bucket. The client uses the presigned URL to upload the file using a standard HTTP PUT request.
 
-You must make a REST call to the S3 server that includes the `upload_url` and `key` values from the response to upload the file. See [Upload files to Amazon S3](../index.md) for details about the call.
+Use the `upload_url` from the response to PUT the file directly to S3. See [Upload files to Amazon S3](../index.md) for an example curl.
 
 After the file is successfully uploaded, use the [`finishUpload` mutation](finish-upload.md) to complete the upload process.
 
@@ -47,18 +47,23 @@ The following mutation initiates an upload for a file named `example.png`.
 **Request:**
 
 ```graphql
-mutation {
-    initiateUpload("input": {
-        "key": "example.png",
-        "media_resource_type": "CUSTOMER_ATTRIBUTE_FILE"
-    }){
-        upload_url
-        key
-        expires_at
-    }
+mutation Initiate($input: initiateUploadInput!) {
+  initiateUpload(input: $input) {
+    upload_url
+    key
+    expires_at
+  }
 }
 ```
+With variables:
 
+```json
+{
+  "input": {
+    "key": "example.png",
+    "media_resource_type": "CUSTOMER_ATTRIBUTE_FILE"
+  }
+}
 **Response:**
 
 ```json
