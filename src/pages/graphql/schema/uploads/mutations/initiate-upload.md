@@ -38,6 +38,10 @@ The [`initiateUpload`](https://developer.adobe.com/commerce/services/graphql/ref
 
 ## Example usage
 
+The following examples show how to initiate an upload different types of files.
+
+### Initiate an upload for a customer attribute file
+
 The following mutation initiates an upload for a file named `example.png`.
 
 **Request:**
@@ -64,6 +68,39 @@ mutation {
         "upload_url": "https://<bucket>.s3.<region>.amazonaws.com/<temp-location>?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=<value>...",
         "key": "customer/attribute/<hashed-key>",
         "expires_at": "2024-09-30T12:34:56Z
+    }
+  }
+}
+```
+
+### Initiate an upload for a negotiable quote attachment
+
+The following mutation initiates an upload for a file named `test-document1.txt`.
+
+**Request:**
+
+```graphql
+mutation {
+  initiateUpload(input: {
+    key: "test-document1.txt",
+    media_resource_type: NEGOTIABLE_QUOTE_ATTACHMENT
+  }) {
+    upload_url
+    key
+    expires_at
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "initiateUpload": {
+      "upload_url": "http://s3mock:9000/bucket1-presigned/tenant1/test-document1_32cb1fe50dab390be841461e.txt?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIOSFODNN7EXAMPLE%2F20250909%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20250909T160343Z&X-Amz-SignedHeaders=host&X-Amz-Expires=6600&X-Amz-Signature=5bc33cbdb2c93680a64dd9ef49d62ef34250faaafae1c6b0c17ac493f65b112d",
+      "key": "test-document1_32cb1fe50dab390be841461e.txt",
+      "expires_at": "1757440423"
     }
   }
 }

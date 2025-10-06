@@ -28,6 +28,10 @@ The [`finishUpload`](https://developer.adobe.com/commerce/services/graphql/refer
 
 ## Example usage
 
+The following examples show how to finalize an upload for different types of files.
+
+### Finalize an upload for a customer attribute file
+
 The following mutation finalize an upload for a file with a key value of `cat_106d42b2ee34de81db31d958.jpg`.
 
 **Request:**
@@ -54,6 +58,39 @@ mutation {
         "success": true,
         "key": "cat_106d42b2ee34de81db31d958.jpg",
         "message": "Upload completed successfully."
+    }
+  }
+}
+```
+
+### Finalize an upload for a negotiable quote attachment
+
+The following mutation finalizes an upload for a file with a key value of `test-document1_32cb1fe50dab390be841461e.txt`.
+
+**Request:**
+
+```graphql
+mutation {
+  finishUpload(input: {
+    key: "test-document1_32cb1fe50dab390be841461e.txt",
+    media_resource_type: "NEGOTIABLE_QUOTE_ATTACHMENT"
+  }) {
+    success
+    key
+    message
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "finishUploadOutput": {
+      "success": true,
+      "key": "test-document1_32cb1fe50dab390be841461e.txt",
+      "message": "File upload confirmed successfully."
     }
   }
 }
