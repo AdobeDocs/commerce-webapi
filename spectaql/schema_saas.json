@@ -1346,6 +1346,45 @@
       },
       {
         "kind": "OBJECT",
+        "name": "AddProductsToNewCartOutput",
+        "description": "Contains details about the cart after adding products to it.",
+        "fields": [
+          {
+            "name": "cart",
+            "description": "The cart after products have been added.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "Cart",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "user_errors",
+            "description": "Contains errors encountered while adding an item to the cart.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "CartUserInputError",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
         "name": "AddProductsToRequisitionListOutput",
         "description": "Output of the request to add products to a requisition list.",
         "fields": [
@@ -3159,6 +3198,51 @@
         "possibleTypes": null
       },
       {
+        "kind": "OBJECT",
+        "name": "AttributeFile",
+        "description": "",
+        "fields": [
+          {
+            "name": "code",
+            "description": "The attribute code.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "url",
+            "description": "File URL to download the file",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AttributeValueInterface",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
         "kind": "INPUT_OBJECT",
         "name": "AttributeFilterInput",
         "description": "An input object that specifies the filters used for attributes.",
@@ -4207,6 +4291,11 @@
         "interfaces": [],
         "enumValues": null,
         "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "AttributeFile",
+            "ofType": null
+          },
           {
             "kind": "OBJECT",
             "name": "AttributeSelectedOptions",
@@ -11990,6 +12079,38 @@
             "deprecationReason": null
           },
           {
+            "name": "available_payment_methods",
+            "description": "Available payment methods for the company with proper B2B configuration and company-specific filtering.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "AvailablePaymentMethod",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "available_shipping_methods",
+            "description": "Available shipping carriers for the company with proper B2B configuration and company-specific filtering.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "CompanyAvailableShippingMethod",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "company_admin",
             "description": "An object containing information about the company administrator.",
             "args": [],
@@ -12644,6 +12765,49 @@
           }
         ],
         "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "CompanyAvailableShippingMethod",
+        "description": "Describes a carrier-level shipping option available to the company.",
+        "fields": [
+          {
+            "name": "code",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "title",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
         "enumValues": null,
         "possibleTypes": null
       },
@@ -14694,6 +14858,45 @@
         ],
         "inputFields": null,
         "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "CompleteOrderInput",
+        "description": "Update the quote and complete the order",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "cartId",
+            "description": "The customer cart ID",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "id",
+            "description": "PayPal order ID",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
         "enumValues": null,
         "possibleTypes": null
       },
@@ -23211,6 +23414,22 @@
             "deprecationReason": null
           },
           {
+            "name": "uid",
+            "description": "The unique ID for a `CustomerAddress` object.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "vat_id",
             "description": "The customer's Value-added tax (VAT) number (for corporate customers).",
             "args": [],
@@ -30234,6 +30453,142 @@
       },
       {
         "kind": "OBJECT",
+        "name": "FastlaneConfig",
+        "description": "",
+        "fields": [
+          {
+            "name": "code",
+            "description": "The payment method code as defined in the payment gateway",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "is_visible",
+            "description": "Indicates whether the payment method is displayed",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "payment_intent",
+            "description": "Defines the payment intent (Authorize or Capture",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "payment_source",
+            "description": "The payment source for the payment method",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "sdk_params",
+            "description": "The PayPal parameters required to load the JS SDK",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "SDKParams",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "sort_order",
+            "description": "The relative order the payment method is displayed on the checkout page",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "title",
+            "description": "The name displayed for the payment method",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "PaymentConfigItem",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "FastlaneMethodInput",
+        "description": "Fastlane Payment inputs",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "payment_source",
+            "description": "The payment source for the payment method",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "paypal_fastlane_token",
+            "description": "The single use token from Fastlane",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
         "name": "FilterableInSearchAttribute",
         "description": "Contains product attributes that can be used for filtering in a `productSearch` query",
         "fields": [
@@ -30616,6 +30971,100 @@
           }
         ],
         "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "finishUploadInput",
+        "description": "",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "key",
+            "description": "The unique key identifier from the upload",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "media_resource_type",
+            "description": "The type of media resource being uploaded",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "MediaResourceType",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "finishUploadOutput",
+        "description": "",
+        "fields": [
+          {
+            "name": "key",
+            "description": "The unique key identifier",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "message",
+            "description": "Additional information about the confirmation",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "success",
+            "description": "Whether the confirmation was successful",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
         "enumValues": null,
         "possibleTypes": null
       },
@@ -36456,6 +36905,104 @@
         "possibleTypes": null
       },
       {
+        "kind": "INPUT_OBJECT",
+        "name": "initiateUploadInput",
+        "description": "",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "key",
+            "description": "The name of the file to be uploaded, cannot contain slashes",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "media_resource_type",
+            "description": "The type of media resource being uploaded",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "MediaResourceType",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "initiateUploadOutput",
+        "description": "",
+        "fields": [
+          {
+            "name": "expires_at",
+            "description": "The expiration timestamp of the URL",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "key",
+            "description": "The unique key identifier for the upload",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "upload_url",
+            "description": "The presigned URL for uploading the file",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
         "kind": "ENUM",
         "name": "InputFilterEnum",
         "description": "List of templates/filters applied to customer attribute input.",
@@ -37894,6 +38441,23 @@
         ]
       },
       {
+        "kind": "ENUM",
+        "name": "MediaResourceType",
+        "description": "Enumeration of media resource types",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "CUSTOMER_ATTRIBUTE_FILE",
+            "description": "Customer file resource type",
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
         "kind": "OBJECT",
         "name": "MessageStyleLogo",
         "description": "",
@@ -38457,6 +39021,41 @@
             "type": {
               "kind": "OBJECT",
               "name": "CompareList",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "addProductsToNewCart",
+            "description": "Creates a new cart and add any type of product to it",
+            "args": [
+              {
+                "name": "cartItems",
+                "description": "An array that defines the products to add to the new cart",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "LIST",
+                    "name": null,
+                    "ofType": {
+                      "kind": "NON_NULL",
+                      "name": null,
+                      "ofType": {
+                        "kind": "INPUT_OBJECT",
+                        "name": "CartItemInput",
+                        "ofType": null
+                      }
+                    }
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AddProductsToNewCartOutput",
               "ofType": null
             },
             "isDeprecated": false,
@@ -39164,6 +39763,29 @@
             "type": {
               "kind": "OBJECT",
               "name": "CloseNegotiableQuotesOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "completeOrder",
+            "description": "Synchronizes order details and place the order",
+            "args": [
+              {
+                "name": "input",
+                "description": "Describes the variables needed to complete or place the order",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "CompleteOrderInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PlaceOrderOutput",
               "ofType": null
             },
             "isDeprecated": false,
@@ -40255,6 +40877,33 @@
             "deprecationReason": null
           },
           {
+            "name": "finishUpload",
+            "description": null,
+            "args": [
+              {
+                "name": "input",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "finishUploadInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "finishUploadOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "generateCustomerToken",
             "description": "Generate a token for specified customer.",
             "args": [
@@ -40344,6 +40993,33 @@
             "type": {
               "kind": "OBJECT",
               "name": "GenerateNegotiableQuoteFromTemplateOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "initiateUpload",
+            "description": null,
+            "args": [
+              {
+                "name": "input",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "initiateUploadInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "initiateUploadOutput",
               "ofType": null
             },
             "isDeprecated": false,
@@ -41532,6 +42208,33 @@
             "type": {
               "kind": "OBJECT",
               "name": "SetBillingAddressOnCartOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "setCartAsInactive",
+            "description": "Sets the cart as inactive",
+            "args": [
+              {
+                "name": "cartId",
+                "description": "The customer cart ID",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "SetCartAsInactiveOutput",
               "ofType": null
             },
             "isDeprecated": false,
@@ -43238,6 +43941,30 @@
             "defaultValue": null
           },
           {
+            "name": "custom_attributes",
+            "description": "The custom attribute values of the billing or shipping negotiable quote address.",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "AttributeValueInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "fax",
+            "description": "The fax number of the customer.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "firstname",
             "description": "The first name of the company user.",
             "type": {
@@ -43266,8 +43993,28 @@
             "defaultValue": null
           },
           {
+            "name": "middlename",
+            "description": "The middle name of the person associated with the billing/shipping address.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "postcode",
             "description": "The ZIP or postal code of the billing or shipping address.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "prefix",
+            "description": "An honorific, such as Dr., Mr., or Mrs.",
             "type": {
               "kind": "SCALAR",
               "name": "String",
@@ -43324,8 +44071,28 @@
             "defaultValue": null
           },
           {
+            "name": "suffix",
+            "description": "A value such as Sr., Jr., or III.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "telephone",
             "description": "The telephone number for the billing or shipping address.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "vat_id",
+            "description": "The customer's Tax/VAT number (for corporate customers).",
             "type": {
               "kind": "SCALAR",
               "name": "String",
@@ -43388,6 +44155,34 @@
             "deprecationReason": null
           },
           {
+            "name": "custom_attributes",
+            "description": "The custom attribute values of the billing or shipping negotiable quote address.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "INTERFACE",
+                "name": "AttributeValueInterface",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fax",
+            "description": "The fax number of the customer.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "firstname",
             "description": "The first name of the company user.",
             "args": [],
@@ -43420,8 +44215,32 @@
             "deprecationReason": null
           },
           {
+            "name": "middlename",
+            "description": "The middle name of the person associated with the billing/shipping address.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "postcode",
             "description": "The company's ZIP or postal code.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "prefix",
+            "description": "An honorific, such as Dr., Mr., or Mrs.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -43464,8 +44283,48 @@
             "deprecationReason": null
           },
           {
+            "name": "suffix",
+            "description": "A value such as Sr., Jr., or III.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "telephone",
             "description": "The customer's telephone number.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "uid",
+            "description": "The unique identifier of the address.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vat_id",
+            "description": "The customer's Tax/VAT number (for corporate customers).",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -43589,6 +44448,34 @@
             "deprecationReason": null
           },
           {
+            "name": "custom_attributes",
+            "description": "The custom attribute values of the billing or shipping negotiable quote address.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "INTERFACE",
+                "name": "AttributeValueInterface",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fax",
+            "description": "The fax number of the customer.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "firstname",
             "description": "The first name of the company user.",
             "args": [],
@@ -43621,8 +44508,32 @@
             "deprecationReason": null
           },
           {
+            "name": "middlename",
+            "description": "The middle name of the person associated with the billing/shipping address.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "postcode",
             "description": "The company's ZIP or postal code.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "prefix",
+            "description": "An honorific, such as Dr., Mr., or Mrs.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -43665,8 +44576,48 @@
             "deprecationReason": null
           },
           {
+            "name": "suffix",
+            "description": "A value such as Sr., Jr., or III.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "telephone",
             "description": "The customer's telephone number.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "uid",
+            "description": "The unique identifier of the address.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vat_id",
+            "description": "The customer's Tax/VAT number (for corporate customers).",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -44619,6 +45570,34 @@
             "deprecationReason": null
           },
           {
+            "name": "custom_attributes",
+            "description": "The custom attribute values of the billing or shipping negotiable quote address.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "INTERFACE",
+                "name": "AttributeValueInterface",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fax",
+            "description": "The fax number of the customer.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "firstname",
             "description": "The first name of the company user.",
             "args": [],
@@ -44651,8 +45630,32 @@
             "deprecationReason": null
           },
           {
+            "name": "middlename",
+            "description": "The middle name of the person associated with the billing/shipping address.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "postcode",
             "description": "The company's ZIP or postal code.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "prefix",
+            "description": "An honorific, such as Dr., Mr., or Mrs.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -44707,8 +45710,48 @@
             "deprecationReason": null
           },
           {
+            "name": "suffix",
+            "description": "A value such as Sr., Jr., or III.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "telephone",
             "description": "The customer's telephone number.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "uid",
+            "description": "The unique identifier of the address.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vat_id",
+            "description": "The customer's Tax/VAT number (for corporate customers).",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -48064,6 +49107,11 @@
           },
           {
             "kind": "OBJECT",
+            "name": "FastlaneConfig",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
             "name": "GooglePayConfig",
             "ofType": null
           },
@@ -48096,6 +49144,18 @@
             "type": {
               "kind": "OBJECT",
               "name": "ApplePayConfig",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fastlane",
+            "description": "Fastlane payment method configuration",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "FastlaneConfig",
               "ofType": null
             },
             "isDeprecated": false,
@@ -48224,6 +49284,16 @@
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "ApplePayMethodInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "payment_services_paypal_fastlane",
+            "description": "Required input for fastlane",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "FastlaneMethodInput",
               "ofType": null
             },
             "defaultValue": null
@@ -49145,6 +50215,18 @@
                 "name": "Order",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "orderV2",
+            "description": "Full order information.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "CustomerOrder",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -53363,6 +54445,22 @@
             "deprecationReason": null
           },
           {
+            "name": "tiers",
+            "description": "Volume based pricing",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProductViewTierPrice",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "roles",
             "description": "Price roles, stating if the price should be visible or hidden.",
             "args": [],
@@ -53408,6 +54506,136 @@
             "type": {
               "kind": "OBJECT",
               "name": "ProductViewPrice",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "UNION",
+        "name": "ProductViewTierCondition",
+        "description": null,
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "ProductViewTierRangeCondition",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "ProductViewTierExactMatchCondition",
+            "ofType": null
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ProductViewTierExactMatchCondition",
+        "description": null,
+        "fields": [
+          {
+            "name": "in",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Float",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ProductViewTierPrice",
+        "description": null,
+        "fields": [
+          {
+            "name": "tier",
+            "description": "Volume based price",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "Price",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "quantity",
+            "description": "Condition to active price",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "UNION",
+                    "name": "ProductViewTierCondition",
+                    "ofType": null
+                  }
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ProductViewTierRangeCondition",
+        "description": null,
+        "fields": [
+          {
+            "name": "gte",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "lt",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
               "ofType": null
             },
             "isDeprecated": false,
@@ -61866,6 +63094,45 @@
               "ofType": {
                 "kind": "OBJECT",
                 "name": "Cart",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "SetCartAsInactiveOutput",
+        "description": "Sets the cart as inactive",
+        "fields": [
+          {
+            "name": "error",
+            "description": "The error message returned after failing to set the cart as inactive",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "success",
+            "description": "Indicates whether the cart was set as inactive",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
                 "ofType": null
               }
             },
