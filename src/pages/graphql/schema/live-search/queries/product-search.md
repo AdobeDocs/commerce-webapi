@@ -470,7 +470,7 @@ items {
 
 <InlineAlert variant="info" slots="text"/>
 
-If [Catalog Service](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/guide-overview.html) is installed, use the `productView` field instead of the deprecated `product` field to return product details. Catalog Service uses [Catalog Sync](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/data-services/catalog-sync.html) to manage product data, resulting in query responses with less latency than is possible with the `ProductInterface`. With Catalog Service, the structure of the pricing information varies, depending on whether the product is designated as a `SimpleProduct` (simple, downloadable, gift card) or as a `ComplexProduct` (configurable, grouped, or bundle).
+If [Catalog Service](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/guide-overview.html) is installed, use the `ProductView` field instead of the deprecated `product` field to return product details. Catalog Service uses [Catalog Sync](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/data-services/catalog-sync.html) to manage product data, resulting in query responses with less latency than is possible with the `ProductInterface`. With Catalog Service, the structure of the pricing information varies, depending on whether the product is designated as a `SimpleProduct` (simple, downloadable, gift card) or as a `ComplexProduct` (configurable, grouped, or bundle).
 
 The following Catalog Service snippet returns relevant information about each item:
 
@@ -583,11 +583,9 @@ In the following sections provide examples for using Live Search and Catalog Ser
 
 <InlineAlert variant="warning" slots="text"/>
 
-This is an example of using Live Search to retrieve and filter results. The query uses the core `ProductInterface` to access product information, which is **deprecated**. As a result, the query has a longer response time than using [Catalog Service](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/guide-overview.html) to retrieve this information.
+This is an example of using Live Search to retrieve and filter results. The query uses the core `ProductInterface` to access product information, which is **deprecated**. As a result, the query has a longer response time than using [Catalog Service](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/guide-overview.html) to retrieve this information. Use `ProductView` in the Catalog Service for better performance and future compatibility.
 
-**Recommendation**: Migrate to Catalog Service with `ProductView` for better performance and future compatibility.
-
-For an example of using Live Search with Catalog Service, see [Catalog Service productSearch query](#catalog-service). Other than returning the `productView` object, all other attributes are the same.
+For an example of using Live Search with Catalog Service, see [Catalog Service productSearch query](#catalog-service). Other than returning the `ProductView` object, all other attributes are the same.
 
 In the example below, there is no search `phrase` passed and results are filtered on the "women/bottoms-women" category. In the response, two categories are returned:
 
@@ -1050,7 +1048,7 @@ If the `phrase` "pants" is added, only one category is returned and "shorts" are
 
 <InlineAlert variant="info" slots="text"/>
 
-In the following example, the query returns information on the same products as the Live Search [`productSearch` items list](#items-list) example. However, it has been constructed to return item information inside the Catalog Service `productView` object instead of the deprecated core `product` object. Note that the pricing information varies, depending on the product type. For the sake of brevity, facet information is not shown.
+In the following example, the query returns information on the same products as the Live Search [`productSearch` items list](#items-list) example. However, it has been constructed to return item information inside the Catalog Service `ProductView` object instead of the deprecated core `product` object. Note that the pricing information varies, depending on the product type. For the sake of brevity, facet information is not shown.
 
 **Request:**
 
@@ -1444,7 +1442,7 @@ Field | Data Type | Description
 
 <InlineAlert variant="warning" slots="text"/>
 
-Live Search returns product information using the [ProductInterface!](https://developer.adobe.com/commerce/webapi/graphql/schema/products/interfaces/attributes/), which is **deprecated**. Use the `ProductView` object in the Catalog Service for better performance and future compatibility.
+Live Search returns product information using the [ProductInterface]https://developer.adobe.com/commerce/webapi/graphql/schema/products/interfaces/attributes/), which is **deprecated**. Use the `ProductView` object in the Catalog Service for better performance and future compatibility.
 
 ### Catalog Service fields
 
