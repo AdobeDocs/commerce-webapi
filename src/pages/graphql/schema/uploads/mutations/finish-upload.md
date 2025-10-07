@@ -45,7 +45,8 @@ mutation Finish($input: finishUploadInput!) {
   }
 }
 ```
-With variables:
+
+The `$input` variable contains:
 
 ```json
 {
@@ -54,6 +55,7 @@ With variables:
     "media_resource_type": "CUSTOMER_ATTRIBUTE_FILE"
   }
 }
+
 **Response:**
 
 ```json

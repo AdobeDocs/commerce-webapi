@@ -17,7 +17,6 @@ Interface | Implementations
 [`CustomAttributeMetadataInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CustomerAttributeMetadata) | [`AttributeMetadata`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-AttributeMetadata)
 [`CustomAttributeOptionInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CustomAttributeOptionInterface) | [`AttributeOptionMetadata`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-AttributeOptionMetadata).
 
-
 <InlineAlert variant="info" slots="text"/>
 
 Adobe Commerce as a Cloud Service (SaaS) provides two additional implementations of the `AttributeValueInterface` interface (`AttributeFile` and `AttributeImage`) to handle files and images uploaded to Amazon S3. If you are migrating from Adobe Commerce on Cloud Infrastructure or on-premise, these changes represent a backward incompatible change. If your project uses custom attributes for files or images, you must update your code to use the new implementations.
