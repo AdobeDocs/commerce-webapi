@@ -10,6 +10,8 @@ keywords:
 
 The `initiateUpload` mutation starts the file upload process by generating a presigned URL for uploading a file to an Amazon S3 bucket. This mutation requires the file name (`key`) and media resource type (`media_resource_type`) as input parameters. The `key` value cannot contain slashes. The following media resource types are supported:
 
+* `CUSTOMER_ATTRIBUTE_ADDRESS_FILE`
+* `CUSTOMER_ATTRIBUTE_ADDRESS_IMAGE`
 * `CUSTOMER_ATTRIBUTE_FILE`
 * `CUSTOMER_ATTRIBUTE_IMAGE`
 * `NEGOTIABLE_QUOTE_ATTACHMENT`
@@ -55,7 +57,8 @@ mutation Initiate($input: initiateUploadInput!) {
   }
 }
 ```
-With variables:
+
+The `$input` variable contains:
 
 ```json
 {
@@ -64,6 +67,8 @@ With variables:
     "media_resource_type": "CUSTOMER_ATTRIBUTE_FILE"
   }
 }
+```
+
 **Response:**
 
 ```json

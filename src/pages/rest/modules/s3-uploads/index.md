@@ -35,7 +35,14 @@ Uploading files is a multi-step process, as shown in the following diagram:
 
 ## Initiate the upload
 
-Use the `POST V1/media/initiate-upload` endpoint to start the file upload process by generating a presigned URL for uploading a file to an Amazon S3 bucket. This endpoint requires the file name (`key`) and media resource type (`media_resource_type`) as input parameters. The `key` value cannot contain slashes. Currently, the only supported media resource type is `CATEGORY_IMAGE`.
+Use the `POST V1/media/initiate-upload` endpoint to start the file upload process by generating a presigned URL for uploading a file to an Amazon S3 bucket. This endpoint requires the file name (`key`) and media resource type (`media_resource_type`) as input parameters. The `key` value cannot contain slashes. The following media resource type are supported:
+
+* `CATEGORY_IMAGE`
+* `CUSTOMER_ATTRIBUTE_ADDRESS_FILE`
+* `CUSTOMER_ATTRIBUTE_ADDRESS_IMAGE`
+* `CUSTOMER_ATTRIBUTE_FILE`
+* `CUSTOMER_ATTRIBUTE_IMAGE`
+* `NEGOTIABLE_QUOTE_ATTACHMENT`
 
 When you call this endpoint, Commerce uses the AWS SDK to create a presigned URL that allows the client to upload the file directly to a temporary location in the S3 bucket. The presigned URL is valid for a limited time, specified by the `expires_at` field in the response.
 
