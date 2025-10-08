@@ -200,6 +200,56 @@ mutation {
 }
 ```
 
+### Create an address that includes a custom file
+
+<Edition name="saas" />
+
+The following call creates an address for the specified customer that includes a file that was uploaded to Amazon S3 using the [`initiateUpload` mutation](../../uploads/mutations/initiate-upload.md).
+
+#### Request
+
+```graphql
+mutation {
+  createCustomerAddress(
+    input: {
+      "region": {
+        "region": "Arizona",
+        "region_code": "AZ"
+      },
+      "country_code": "US",
+      "street": [
+        "123 Main Street"
+      ],
+      "telephone": "5553217890",
+      "postcode": "77777",
+      "city": "Phoenix",
+      "default_shipping": true,
+      "default_billing": false,
+      custom_attributesV2: [
+        {
+          attribute_code: "test_file_add"
+          value: "example_a367071e1639483de735c639.jpg"
+        }
+      ]
+    }
+  ) {
+    id
+  }
+}
+```
+
+#### Response
+
+```json
+{
+  "data": {
+    "createCustomerAddress": {
+      "id": 5,
+    }
+  }
+}
+```
+
 ## Errors
 
 Error | Description

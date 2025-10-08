@@ -3,6 +3,7 @@ title: customer query
 ---
 
 import CustomAttributeCustomer from '/src/_includes/graphql/examples/custom-attribute-customer.md'
+import CustomerS3Download from '/src/_includes/graphql/examples/customer-s3-download.md'
 
 # customer query
 
@@ -1033,6 +1034,12 @@ The [Purchase order approval rules](../../b2b/purchase-order-rule/) topic contai
   }
 }
 ```
+
+### Retrieve a file uploaded to Amazon S3
+
+<Edition name="saas" />
+
+< CustomerS3Download />
 
 ## Related topics
 
