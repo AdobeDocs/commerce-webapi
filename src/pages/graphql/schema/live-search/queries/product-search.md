@@ -195,9 +195,9 @@ The advanced search capabilities are implemented through the `filter` parameter 
 
 ##### Examples
 
-This section provides examples of how to implement these new search capabilities in your Live Search API. Review the following requirements before exploring the examples.
+Learn how to implement these new search capabilities in your Live Search API by following the examples below. First, review the requirements to ensure proper configuration.
 
-**Frontend Support:**
+**Frontend support:**
 
 Layered search is available on the following architectures:
 
@@ -216,14 +216,14 @@ The Live Search PLP widget does not support layered search.
 - Maximum of 6 attributes can be enabled for `startsWith` search.
 - Each attribute requires proper indexing configuration.
 
-**Performance Considerations:**
+**Performance considerations:**
 
 - `startsWith` and `contains` searches are optimized for performance through specialized indexing.
 - A minimum of two characters is required for both `startsWith` and `contains` searches.
 - A maximum of 10 characters is allowed in API queries for optimal performance.
 - For `contains` search, up to 50 characters are indexed for true contains functionality.
 
-**Error Handling:**
+**Error handling:**
 
 - 500 error returned if attribute is not set to `filterableInSearch: true`.
 - Invalid attribute codes will result in no matches.
