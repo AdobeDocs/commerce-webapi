@@ -165,16 +165,22 @@ Only facets specified in Live Search are returned.
 
 Use the [`attributeMetadata` query](./attribute-metadata.md) to return a list of product attributes that can be used to define a filter.
 
-#### Filtering using advanced search capability
+#### Layered search and expansion of search types
 
-You can further filter search results using the following advanced search capabilities:
+Layered search, or search within a search, is a powerful, attribute-based filtering system that extends the traditional search functionality to include additional search parameters. These additional search parameters allow more precise and flexible product discovery.
+
+>[!NOTE]
+>
+>Layered search is available in Live Search 4.6.0.
+
+The advanced search capabilities are implemented through the `filter` parameter in the `productSearch` query using specific operators:
 
 - **Layered search** - Search within another search context - With this capability, you can undertake up to two layers of search for your search queries. For example:
   
   - **Layer 1 search** - Search for "motor" on "product_attribute_1".
   - **Layer 2 search** - Search for "part number 123" on "product_attribute_2". This example searches for "part number 123" within the results for "motor".
 
-  Layered search is available for both `startsWith` search indexation and `contains` search indexation as described below:
+  Layered search is available for both `startsWith` search indexation and `contains` search indexation in the second layer of the layered search, as described below:
 
 - **startsWith search indexation** - Search using `startsWith` indexation. This new capability allows:
 
@@ -187,7 +193,41 @@ You can further filter search results using the following advanced search capabi
 
         - Note: This search type is different from the existing [phrase search](#phrase), which performs an autocomplete search. For example, if your product attribute value is "outdoor pants", a phrase search returns a response for "out pan", but does not return a response for "oor ants". A contains search, however, does return a response for "oor ants".
 
-Refer to the following examples to learn how to implement these new search capabilities in your Live Search API.
+##### Examples
+
+This section provides examples of how to implement these new search capabilities in your Live Search API. Review the following requirements before exploring the examples.
+
+**Frontend Support:**
+
+Layered search is available on the following architectures:
+
+- Commerce Optimizer [Product Discovery drop-ins](https://experienceleague.adobe.com/developer/commerce/storefront/dropins/product-discovery/functions/)
+- Live Search (Luma)
+- Live Search (headless)
+
+<InlineAlert variant="info" slots="text" />
+
+The Live Search PLP widget does not support layered search.
+
+**API configuration requirements:**
+
+- Attributes must be configured as `filterableInSearch: true` in the [Admin](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/product-attributes/product-attributes-add#step-5-describe-the-storefront-properties).
+- Maximum of 6 attributes can be enabled for `contains` search.
+- Maximum of 6 attributes can be enabled for `startsWith` search.
+- Each attribute requires proper indexing configuration.
+
+**Performance Considerations:**
+
+- `startsWith` and `contains` searches are optimized for performance through specialized indexing.
+- A minimum of two characters is required for both `startsWith` and `contains` searches.
+- A maximum of 10 characters is allowed in API queries for optimal performance.
+- For `contains` search, up to 50 characters are indexed for true contains functionality.
+
+**Error Handling:**
+
+- 500 error returned if attribute is not set to `filterableInSearch: true`.
+- Invalid attribute codes will result in no matches.
+- Exceeding character limits will fall back to autocomplete search.
 
 ##### startsWith condition example
 
@@ -227,8 +267,6 @@ filter: [
   }  
 ]
 ```
-
-**Example queries**
 
 The following example shows how to search within search results using "motor" as the search phrase and filtering on "manufacturer" that "startsWith" the term "Sieme":
 
@@ -567,7 +605,7 @@ Header name| Description
 `Magento-Store-Code` | The code assigned to the store associated with the active store view. For example, `main_website_store`.
 `Magento-Store-View-Code` | The code assigned to the active store view. For example, `default`.
 `Magento-Website-Code` | The code assigned to the website associated with the active store view. For example, `base`.
-`X-Api-Key` | For Live Search queries, set this value to `search_gql`. For Catalog Service queries, set this value to the [unique API key](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/user-guides/integration-services/saas#genapikey) generated for your Commerce environment.
+`X-Api-Key` | Set this value to the [unique API key](https://experienceleague.adobe.com/en/docs/commerce/user-guides/integration-services/saas#genapikey) generated for your Commerce environment.
 
 ###  Find the customer group code
 
