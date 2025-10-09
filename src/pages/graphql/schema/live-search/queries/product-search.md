@@ -165,20 +165,22 @@ Only facets specified in Live Search are returned.
 
 Use the [`attributeMetadata` query](./attribute-metadata.md) to return a list of product attributes that can be used to define a filter.
 
-#### Filtering using search capability
+#### Layered search and expansion of search types
 
-<InlineAlert variant="info" slots="text"/>
+Layered search, or search within a search, is a powerful, attribute-based filtering system that extends the traditional search functionality to include additional search parameters. These additional search parameters allow more precise and flexible product discovery.
 
-This feature is in beta. For installation information, see the [Live Search guide](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/live-search/install#install-the-live-search-beta) in the merchant documentation.
+>[!NOTE]
+>
+>Layered search is available in Live Search 4.6.0.
 
-This beta supports three new capabilities:
+The advanced search capabilities are implemented through the `filter` parameter in the `productSearch` query using specific operators:
 
 - **Layered search** - Search within another search context - With this capability, you can undertake up to two layers of search for your search queries. For example:
   
   - **Layer 1 search** - Search for "motor" on "product_attribute_1".
   - **Layer 2 search** - Search for "part number 123" on "product_attribute_2". This example searches for "part number 123" within the results for "motor".
 
-  Layered search is available for both `startsWith` search indexation and `contains` search indexation as described below:
+  Layered search is available for both `startsWith` search indexation and `contains` search indexation in the second layer of the layered search, as described below:
 
 - **startsWith search indexation** - Search using `startsWith` indexation. This new capability allows:
 
@@ -191,7 +193,41 @@ This beta supports three new capabilities:
 
         - Note: This search type is different from the existing [phrase search](#phrase), which performs an autocomplete search. For example, if your product attribute value is "outdoor pants", a phrase search returns a response for "out pan", but does not return a response for "oor ants". A contains search, however, does return a response for "oor ants".
 
-Refer to the following examples to learn how to implement these new search capabilities in your Live Search API.
+##### Examples
+
+Learn how to implement these new search capabilities in your Live Search API by following the examples below. First, review the requirements to ensure proper configuration.
+
+**Frontend support:**
+
+Layered search is available on the following architectures:
+
+- Commerce Optimizer [Product Discovery drop-ins](https://experienceleague.adobe.com/developer/commerce/storefront/dropins/product-discovery/functions/)
+- Live Search (Luma)
+- Live Search (headless)
+
+<InlineAlert variant="info" slots="text" />
+
+The Live Search PLP widget does not support layered search.
+
+**API configuration requirements:**
+
+- Attributes must be configured as `filterableInSearch: true` in the [Admin](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/product-attributes/product-attributes-add#step-5-describe-the-storefront-properties).
+- Maximum of 6 attributes can be enabled for `contains` search.
+- Maximum of 6 attributes can be enabled for `startsWith` search.
+- Each attribute requires proper indexing configuration.
+
+**Performance considerations:**
+
+- `startsWith` and `contains` searches are optimized for performance through specialized indexing.
+- A minimum of two characters is required for both `startsWith` and `contains` searches.
+- A maximum of 10 characters is allowed in API queries for optimal performance.
+- For `contains` search, up to 50 characters are indexed for true contains functionality.
+
+**Error handling:**
+
+- 500 error returned if attribute is not set to `filterableInSearch: true`.
+- Invalid attribute codes will result in no matches.
+- Exceeding character limits will fall back to autocomplete search.
 
 ##### startsWith condition example
 
@@ -231,8 +267,6 @@ filter: [
   }  
 ]
 ```
-
-**Example queries**
 
 The following example shows how to search within search results using "motor" as the search phrase and filtering on "manufacturer" that "startsWith" the term "Sieme":
 
@@ -306,7 +340,7 @@ productSearch(
 
 ##### Limitations
 
-The beta has the following limitations:
+The advanced search capabilitiies has the following limitations:
 
 - You can specify a maximum of six attributes to be enabled for **Contains** and six attributes to be enabled for **Starts with**.
 - Each aggregation returns a maximum of 1000 facets.
@@ -437,9 +471,15 @@ facets {
 
 The `items` object primarily provides details about each item returned. The structure of this object varies between Catalog Service and Live Search. For Catalog Service, specify a `ProductSearchItem.productView` object. For Live Search, specify a `ProductSearchItem.product` object
 
+<InlineAlert variant="warning" slots="text"/>
+
+The `ProductInterface` object in the Search service GraphQL schema is being deprecated. Users should use the `ProductView` object instead, which is defined and documented as the recommended alternative for use with the Catalog Service.
+
 #### ProductSearchItem.product (Live Search)
 
-The following snippet returns relevant information about each item when Catalog Service is not installed or used:
+<InlineAlert variant="warning" slots="text"/>
+
+The following snippet returns relevant information about each item when Catalog Service is not installed or used. The `ProductInterface` is deprecated. Use the `ProductView` object in the Catalog Service for better performance and future compatibility.
 
 ```graphql
 items {
@@ -466,7 +506,9 @@ items {
 
 #### ProductSearchItem.productView (Catalog Service)
 
-If [Catalog Service](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/guide-overview.html) is installed, you can optionally use the `productView` field instead of the `product` field to return product details. Catalog Service uses [Catalog Sync](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/data-services/catalog-sync.html) to manage product data, resulting in query responses with less latency than is possible with the `ProductInterface`. With Catalog Service, the structure of the pricing information varies, depending on whether the product is designated as a `SimpleProduct` (simple, downloadable, gift card) or as a `ComplexProduct` (configurable, grouped, or bundle).
+<InlineAlert variant="info" slots="text"/>
+
+If [Catalog Service](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/guide-overview.html) is installed, use the `ProductView` field instead of the deprecated `product` field to return product details. Catalog Service uses [Catalog Sync](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/data-services/catalog-sync.html) to manage product data, resulting in query responses with less latency than is possible with the `ProductInterface`. With Catalog Service, the structure of the pricing information varies, depending on whether the product is designated as a `SimpleProduct` (simple, downloadable, gift card) or as a `ComplexProduct` (configurable, grouped, or bundle).
 
 The following Catalog Service snippet returns relevant information about each item:
 
@@ -563,7 +605,7 @@ Header name| Description
 `Magento-Store-Code` | The code assigned to the store associated with the active store view. For example, `main_website_store`.
 `Magento-Store-View-Code` | The code assigned to the active store view. For example, `default`.
 `Magento-Website-Code` | The code assigned to the website associated with the active store view. For example, `base`.
-`X-Api-Key` | For Live Search queries, set this value to `search_gql`. For Catalog Service queries, set this value to the [unique API key](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/user-guides/integration-services/saas#genapikey) generated for your Commerce environment.
+`X-Api-Key` | Set this value to the [unique API key](https://experienceleague.adobe.com/en/docs/commerce/user-guides/integration-services/saas#genapikey) generated for your Commerce environment.
 
 ###  Find the customer group code
 
@@ -577,9 +619,11 @@ In the following sections provide examples for using Live Search and Catalog Ser
 
 ### Live Search
 
-This is an example of using Live Search to retrieve and filter results. The query uses the core `ProductInterface` to access product information. As a result, the query has a longer response time than using [Catalog Service](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/guide-overview.html) to retrieve this information.
+<InlineAlert variant="warning" slots="text"/>
 
-For an example of using Live Search with Catalog Service, see [Catalog Service productSearch query](#catalog-service). Other than returning the `productView` object, all other attributes are the same.
+This is an example of using Live Search to retrieve and filter results. The query uses the core `ProductInterface` to access product information, which is **deprecated**. As a result, the query has a longer response time than using [Catalog Service](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/guide-overview.html) to retrieve this information. Use `ProductView` in the Catalog Service for better performance and future compatibility.
+
+For an example of using Live Search with Catalog Service, see [Catalog Service productSearch query](#catalog-service). Other than returning the `ProductView` object, all other attributes are the same.
 
 In the example below, there is no search `phrase` passed and results are filtered on the "women/bottoms-women" category. In the response, two categories are returned:
 
@@ -1040,7 +1084,9 @@ If the `phrase` "pants" is added, only one category is returned and "shorts" are
 
 ### Catalog Service
 
-In the following example, the query returns information on the same products as the Live Search [`productSearch` items list](#items-list) example. However, it has been constructed to return item information inside the Catalog Service `productView` object instead of the core `product` object. Note that the pricing information varies, depending on the product type. For the sake of brevity, facet information is not shown.
+<InlineAlert variant="info" slots="text"/>
+
+In the following example, the query returns information on the same products as the Live Search [`productSearch` items list](#items-list) example. However, it has been constructed to return item information inside the Catalog Service `ProductView` object instead of the deprecated core `product` object. Note that the pricing information varies, depending on the product type. For the sake of brevity, facet information is not shown.
 
 **Request:**
 
@@ -1432,7 +1478,9 @@ Field | Data Type | Description
 
 ### Live Search fields
 
-Live Search returns product information using the [ProductInterface!](https://developer.adobe.com/commerce/webapi/graphql/schema/products/interfaces/attributes/).
+<InlineAlert variant="warning" slots="text"/>
+
+Live Search returns product information using the [ProductInterface]https://developer.adobe.com/commerce/webapi/graphql/schema/products/interfaces/attributes/), which is **deprecated**. Use the `ProductView` object in the Catalog Service for better performance and future compatibility.
 
 ### Catalog Service fields
 
