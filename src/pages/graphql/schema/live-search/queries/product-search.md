@@ -563,7 +563,7 @@ Header name| Description
 `Magento-Store-Code` | The code assigned to the store associated with the active store view. For example, `main_website_store`.
 `Magento-Store-View-Code` | The code assigned to the active store view. For example, `default`.
 `Magento-Website-Code` | The code assigned to the website associated with the active store view. For example, `base`.
-`X-Api-Key` | For Live Search queries, set this value to `search_gql`. For Catalog Service queries, set this value to the [unique API key](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/user-guides/integration-services/saas#genapikey) generated for your Commerce environment.
+`X-Api-Key` | Set this value to the [unique API key](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/user-guides/integration-services/saas#genapikey) generated for your Commerce environment.
 
 ###  Find the customer group code
 
