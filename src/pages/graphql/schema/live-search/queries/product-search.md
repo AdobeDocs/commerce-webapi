@@ -169,9 +169,9 @@ Use the [`attributeMetadata` query](./attribute-metadata.md) to return a list of
 
 Layered search, or search within a search, is a powerful, attribute-based filtering system that extends the traditional search functionality to include additional search parameters. These additional search parameters allow more precise and flexible product discovery.
 
->[!NOTE]
->
->Layered search is available in Live Search 4.6.0.
+<InlineAlert variant="info" slots="text" />
+
+Layered search is available in Live Search 4.6.0.
 
 The advanced search capabilities are implemented through the `filter` parameter in the `productSearch` query using specific operators:
 
@@ -470,13 +470,13 @@ facets {
 
 The `items` object primarily provides details about each item returned. The structure of this object varies between Catalog Service and Live Search. For Catalog Service, specify a `ProductSearchItem.productView` object. For Live Search, specify a `ProductSearchItem.product` object
 
-<InlineAlert variant="warning" slots="text"/>
+<InlineAlert variant="info" slots="text"/>
 
 The `ProductInterface` object in the Search service GraphQL schema is being deprecated. Users should use the `ProductView` object instead, which is defined and documented as the recommended alternative for use with the Catalog Service.
 
 #### ProductSearchItem.product (Live Search)
 
-<InlineAlert variant="warning" slots="text"/>
+<InlineAlert variant="info" slots="text"/>
 
 The following snippet returns relevant information about each item when Catalog Service is not installed or used. The `ProductInterface` is deprecated. Use the `ProductView` object in the Catalog Service for better performance and future compatibility.
 
@@ -618,7 +618,7 @@ In the following sections provide examples for using Live Search and Catalog Ser
 
 ### Live Search
 
-<InlineAlert variant="warning" slots="text"/>
+<InlineAlert variant="info" slots="text"/>
 
 This is an example of using Live Search to retrieve and filter results. The query uses the core `ProductInterface` to access product information, which is **deprecated**. As a result, the query has a longer response time than using [Catalog Service](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/guide-overview.html) to retrieve this information. Use `ProductView` in the Catalog Service for better performance and future compatibility.
 
@@ -1477,9 +1477,9 @@ Field | Data Type | Description
 
 ### Live Search fields
 
-<InlineAlert variant="warning" slots="text"/>
+<InlineAlert variant="info" slots="text"/>
 
-Live Search returns product information using the [ProductInterface]https://developer.adobe.com/commerce/webapi/graphql/schema/products/interfaces/attributes/), which is **deprecated**. Use the `ProductView` object in the Catalog Service for better performance and future compatibility.
+Live Search returns product information using the `ProductInterface` object, which is **deprecated**. Use the `ProductView` object in the Catalog Service for better performance and future compatibility.
 
 ### Catalog Service fields
 
