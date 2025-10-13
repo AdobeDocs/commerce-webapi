@@ -202,12 +202,11 @@ Learn how to implement these new search capabilities in your Live Search API by 
 Layered search is available on the following architectures:
 
 - Commerce Optimizer [Product Discovery drop-ins](https://experienceleague.adobe.com/developer/commerce/storefront/dropins/product-discovery/functions/)
-- Live Search (Luma)
 - Live Search (headless)
 
 <InlineAlert variant="info" slots="text" />
 
-The Live Search PLP widget does not support layered search.
+The Live Search PLP and popover widgets do not support layered search.
 
 **API configuration requirements:**
 
