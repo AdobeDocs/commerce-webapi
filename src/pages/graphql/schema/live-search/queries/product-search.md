@@ -177,8 +177,8 @@ The advanced search capabilities are implemented through the `filter` parameter 
 
 - **Layered search** - Search within another search context - With this capability, you can undertake up to two layers of search for your search queries. For example:
   
-  - **Layer 1 search** - Search for "motor" on "product_attribute_1".
-  - **Layer 2 search** - Search for "part number 123" on "product_attribute_2". This example searches for "part number 123" within the results for "motor".
+  - **Layer 1 search** - Search for "motor" on `product_attribute_1`.
+  - **Layer 2 search** - Search for "part number 123" on `product_attribute_2`. This example searches for "part number 123" within the results for "motor".
 
   Layered search is available for both `startsWith` search indexation and `contains` search indexation in the second layer of the layered search, as described below:
 
@@ -211,14 +211,14 @@ The Live Search PLP and popover widgets do not support layered search.
 **API configuration requirements:**
 
 - Attributes must be configured as `filterableInSearch: true` in the [Admin](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/product-attributes/product-attributes-add#step-5-describe-the-storefront-properties).
-- Maximum of 6 attributes can be enabled for `contains` search.
-- Maximum of 6 attributes can be enabled for `startsWith` search.
+- A maximum of 6 attributes can be enabled for `contains` search.
+- A maximum of 6 attributes can be enabled for `startsWith` search.
 - Each attribute requires proper indexing configuration.
 
 **Performance considerations:**
 
 - `startsWith` and `contains` searches are optimized for performance through specialized indexing.
-- A minimum of two characters is required for both `startsWith` and `contains` searches.
+- Both `startsWith` and `contains` searches require a minimum of two characters.
 - A maximum of 10 characters is allowed in API queries for optimal performance.
 - For `contains` search, up to 50 characters are indexed for true contains functionality.
 
@@ -267,7 +267,7 @@ filter: [
 ]
 ```
 
-The following example shows how to search within search results using "motor" as the search phrase and filtering on "manufacturer" that "startsWith" the term "Sieme":
+The following example shows how to search within search results using "motor" as the search phrase and filtering on `manufacturer` that `startsWith` the term "Sieme":
 
 ```graphql
 productSearch(  
@@ -339,7 +339,7 @@ productSearch(
 
 ##### Limitations
 
-The advanced search capabilitiies has the following limitations:
+The advanced search capabilitiies have the following limitations:
 
 - You can specify a maximum of six attributes to be enabled for **Contains** and six attributes to be enabled for **Starts with**.
 - Each aggregation returns a maximum of 1000 facets.
