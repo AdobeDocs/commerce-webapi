@@ -206,7 +206,7 @@ Layered search is available on the following architectures:
 
 <InlineAlert variant="info" slots="text" />
 
-The Live Search PLP and popover widgets do not support layered search.
+The Live Search Product Listing Page (PLP) and popover widgets do not support layered search.
 
 **API configuration requirements:**
 
