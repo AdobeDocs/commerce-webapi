@@ -224,7 +224,7 @@ The Live Search PLP and popover widgets do not support layered search.
 
 **Error handling:**
 
-- 500 error returned if attribute is not set to `filterableInSearch: true`.
+- 500 error returned if an attribute is not set to `filterableInSearch: true`.
 - Invalid attribute codes will result in no matches.
 - Exceeding character limits will fall back to autocomplete search.
 
@@ -472,13 +472,13 @@ The `items` object primarily provides details about each item returned. The stru
 
 <InlineAlert variant="info" slots="text"/>
 
-The `ProductInterface` object in the Search service GraphQL schema has been deprecated. Users should use the `ProductView` object instead, which is defined and documented as the recommended alternative for use with the Catalog Service.
+The `ProductInterface` object in the Search service GraphQL schema has been deprecated. Use the `ProductView` object instead, which is defined and documented as the recommended alternative for use with the Catalog Service.
 
 #### ProductSearchItem.productView
 
 <InlineAlert variant="info" slots="text"/>
 
-If [Catalog Service](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/guide-overview.html) is installed, use the `ProductView` field instead of the deprecated `product` field to return product details. Catalog Service uses [Catalog Sync](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/data-services/catalog-sync.html) to manage product data, resulting in query responses with less latency than is possible with the `ProductInterface`. With Catalog Service, the structure of the pricing information varies, depending on whether the product is designated as a `SimpleProduct` (simple, downloadable, gift card) or as a `ComplexProduct` (configurable, grouped, or bundle).
+Use the `ProductView` field instead of the deprecated `product` field to return product details. Catalog Service uses [Catalog Sync](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/data-services/catalog-sync.html) to manage product data, resulting in query responses with less latency than is possible with the `ProductInterface`. With Catalog Service, the structure of the pricing information varies, depending on whether the product is designated as a `SimpleProduct` (simple, downloadable, gift card) or as a `ComplexProduct` (configurable, grouped, or bundle).
 
 The following Catalog Service snippet returns relevant information about each item:
 
@@ -585,7 +585,7 @@ import CustomerGroupCode from '/src/_includes/graphql/customer-group-code.md'
 
 ## Example usage
 
-The following example returns item information inside the Catalog Service `ProductView` object. Note that the pricing information varies, depending on the product type. For the sake of brevity, facet information is not shown.
+The following example uses the `ProductView` object to return item information. Note that the pricing information varies, depending on the product type. For the sake of brevity, facet information is not shown.
 
 **Request:**
 
@@ -979,7 +979,7 @@ Field | Data Type | Description
 
 <InlineAlert variant="info" slots="text"/>
 
-Live Search returns product information using the `ProductInterface` object, which is **deprecated**. Use the `ProductView` object in the Catalog Service for better performance and future compatibility.
+By default, Live Search uses the `ProductInterface` to return product information. This interface is **deprecated**. Use the `ProductView` object, originally defined in Catalog Service, for better performance and future compatibility.
 
 ### Catalog Service fields
 
