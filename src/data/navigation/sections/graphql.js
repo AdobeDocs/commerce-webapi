@@ -577,7 +577,11 @@ module.exports = [
               },
               {
                 title: "exchangeExternalCustomerToken",
-                path: "/graphql/schema/customer/mutations/create-external-customer-token/",
+                path: "/graphql/schema/customer/mutations/exchange-external-customer-token/",
+              },
+              {
+                title: "exchangeOtpForCustomerToken",
+                path: "/graphql/schema/customer/mutations/exchange-otp-customer-token/",
               },
               {
                 title: "generateCustomerToken",
