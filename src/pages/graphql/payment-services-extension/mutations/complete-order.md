@@ -14,7 +14,7 @@ The `completeOrder` mutation synchronizes order details before you run the `plac
 
 Before you run the `completeOrder` mutation, ensure that:
 
-1. A cart has been created (guest, or logged-in).
+1. A cart has been created (guest or logged-in customer).
 1. Products have been added to the cart.
 1. Billing and shipping addresses have been set, if applicable.
 1. A shipping method has been selected (for physical products).
@@ -119,4 +119,4 @@ mutation {
 | `CART_NOT_ACTIVE` | The cart is not active (already converted or expired). |
 | `GUEST_EMAIL_MISSING` | A guest cart does not have an email address assigned. |
 | `PAYMENT_ID_INVALID` | The provided payment or transaction ID is invalid. |
-| `UNABLE_TO_COMPLETE_ORDER` | A general error occurred while finalizing the order (e.g., missing information or out-of-stock items). |
+| `UNABLE_TO_COMPLETE_ORDER` | A general error occurred while finalizing the order (for example, missing information or out-of-stock items). |
