@@ -5,7 +5,7 @@ edition: saas
 
 # exchangeOtpForCustomerToken mutation
 
-The `exchangeOtpForCustomerToken` mutation allows you specify a shopper's email address and one-time password (OTP) and receive a customer token in exchange. This mutation is typically used in scenarios where a customer needs to authenticate using an OTP sent to their email or phone.
+The `exchangeOtpForCustomerToken` mutation allows you to specify a shopper's email address and one-time password (OTP) and receive a customer token in exchange. This mutation is typically used in scenarios where a customer needs to authenticate using an OTP sent to their email or phone.
 
 Upon successful exchange, the module invalidates the OTP so it cannot be reused. The endpoint also integrates with reCAPTCHA configuration to mitigate automated abuse.
 

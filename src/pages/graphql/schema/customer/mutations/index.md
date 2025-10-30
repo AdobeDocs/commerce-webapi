@@ -22,7 +22,7 @@ The customer mutations allow you to perform the following operations:
 
   * [`changeCustomerPassword`](change-password.md)
   * [`exchangeExternalCustomerToken`](exchange-external-customer-token.md)
-  * | [&#8203;<Edition name="saas" />`exchangeOtpForCustomerToken`](exchange-otp-customer.token.md)
+  * | [&#8203;<Edition name="saas" />`exchangeOtpForCustomerToken`](exchange-otp-customer-token.md)
   * [`generateCustomerTokenAsAdmin`](generate-token-as-admin.md)
   * [`generateCustomerToken`](generate-token.md)
   * [`requestPasswordResetEmail`](request-password-reset-email.md)
