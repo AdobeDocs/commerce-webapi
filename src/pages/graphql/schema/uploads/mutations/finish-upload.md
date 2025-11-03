@@ -55,6 +55,7 @@ The `$input` variable contains:
     "media_resource_type": "CUSTOMER_ATTRIBUTE_FILE"
   }
 }
+```
 
 **Response:**
 
