@@ -21,7 +21,13 @@ Before you run the `completeOrder` mutation, ensure that:
 1. A payment or checkout ID has been generated and is available.
 1. For guest carts, a valid email address has been assigned.
 
-As of Commerce 2.4.7, the `completeOrderOutput` object can contain `orderV2`, which provides full details about the order. When the mutation runs, Commerce generates and returns a token in the `orderV2.token` field. You can supply the token value to the [`guestOrderByToken` query](../../orders/queries/guest-order-by-token.md) to retrieve details about an order created by a guest shopper.
+As of Commerce 2.4.7, the `completeOrderOutput` object can contain `orderV2`, which provides full details about the order. When the mutation runs, Commerce generates and returns a token in the `orderV2.token` field. You can supply the token value to the [`guestOrderByToken` query](../../schema/orders/queries/guest-order-by-token.md) to retrieve details about an order created by a guest shopper.
+
+## Limitations
+
+- The `completeOrder` mutation is similar to the [`placeOrder`](../../schema/cart/mutations/place-order/) mutation, but includes an additional required field `id` to capture the payment identifier.
+- On success, the mutation returns the `orderV2` object containing the `number` and `token` fields.
+- The `token` field allows guest users to retrieve their order using queries such as `guestOrderByToken`.
 
 ## Syntax
 
@@ -34,12 +40,6 @@ mutation {
   }
 }
 ```
-
-## Limitations
-
-- The `completeOrder` mutation is similar to the [`placeOrder`](https://developer.adobe.com/commerce/webapi/graphql/schema/cart/mutations/place-order/) mutation, but includes an additional required field `id` to capture the payment identifier.
-- On success, the mutation returns the `orderV2` object containing the `number` and `token` fields.
-- The `token` field allows guest users to retrieve their order using queries such as `guestOrderByToken`.
 
 ## Example usage
 
@@ -85,8 +85,8 @@ mutation {
 
 | Field | Type | Description |
 |-------|------|--------------|
-| `cartId` | `String!` | The unique identifier of the shopping cart (quote). |
-| `id` | `String!` | The payment, checkout, or transaction identifier tied to the order. |
+| `cartId` | String! | The unique identifier of the shopping cart (quote). |
+| `id` | String! | The payment, checkout, or transaction identifier tied to the order. |
 
 ## Output attributes
 
@@ -94,22 +94,22 @@ mutation {
 
 | Field | Type | Description |
 |-------|------|--------------|
-| `orderV2` | `OrderV2` | Contains minimal order details if successful. |
-| `errors` | `[Error!]!` | List of error objects. The array is empty if there are no errors. |
+| `orderV2` | OrderV2 | Contains minimal order details if successful. |
+| `errors` | Error! | List of error objects. The array is empty if there are no errors. |
 
 ### OrderV2 object
 
 | Field | Type | Description |
 |-------|------|--------------|
-| `number` | `String` | The order number assigned by the system. |
-| `token` | `String` | A token that can be used to retrieve the order, especially for guest checkouts. |
+| `number` | String | The order number assigned by the system. |
+| `token` | String | A token that can be used to retrieve the order, especially for guest checkouts. |
 
 ### Error object
 
 | Field | Type | Description |
 |-------|------|--------------|
-| `code` | `String` | A machine-readable error code. |
-| `message` | `String` | A human-readable message describing the error. |
+| `code` | String | A machine-readable error code. |
+| `message` | String | A human-readable message describing the error. |
 
 #### Possible error codes
 
