@@ -26,7 +26,7 @@ As of Commerce 2.4.7, the `completeOrderOutput` object can contain `orderV2`, wh
 
 ## Limitations
 
-- The `completeOrder` mutation is similar to the [`placeOrder`](../../schema/cart/mutations/place-order/) mutation, but includes an additional required field `id` to capture the payment identifier.
+- The `completeOrder` mutation is similar to the [`placeOrder`](../../schema/cart/mutations/place-order.md) mutation, but includes an additional required field `id` to capture the payment identifier.
 - On success, the mutation returns the `orderV2` object containing the `number` and `token` fields.
 - The `token` field allows guest users to retrieve their order using queries such as `guestOrderByToken`.
 
