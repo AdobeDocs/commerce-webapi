@@ -1,5 +1,6 @@
 ---
 title: completeOrder mutation
+description: This mutation synchronizes order details before you run the `placeOrder` mutation.
 ---
 
 # completeOrder mutation
