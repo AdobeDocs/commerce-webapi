@@ -95,8 +95,8 @@ mutation {
 
 | Field | Type | Description |
 |-------|------|--------------|
-| `orderV2` | OrderV2 | Contains minimal order details if successful. |
 | `errors` | Error! | List of error objects. The array is empty if there are no errors. |
+| `orderV2` | OrderV2 | Contains minimal order details if successful. |
 
 ### OrderV2 object
 
