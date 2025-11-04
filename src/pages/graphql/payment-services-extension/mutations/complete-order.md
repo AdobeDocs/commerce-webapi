@@ -11,6 +11,8 @@ This mutation is available only if you have installed [Payment Services for Adob
 
 The `completeOrder` mutation synchronizes order details before you run the `placeOrder` mutation.
 
+When the mutation runs, Commerce generates and returns a token in the `orderV2.token` field. You can supply the token value to the [`guestOrderByToken` query](../../schema/orders/queries/guest-order-by-token.md) to retrieve details about an order created by a guest shopper.
+
 ## Preconditions
 
 Before you run the `completeOrder` mutation, ensure that:
