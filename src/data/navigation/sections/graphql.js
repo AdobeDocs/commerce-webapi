@@ -1420,6 +1420,10 @@ module.exports = [
                 path: "/graphql/payment-services-extension/mutations/add-products-new-cart/",
               },
               {
+                title: "completeOrder",
+                path: "/graphql/payment-services-extension/mutations/complete-order/",
+              },
+              {
                 title: "createPaymentOrder",
                 path: "/graphql/payment-services-extension/mutations/create-payment-order/",
               },
