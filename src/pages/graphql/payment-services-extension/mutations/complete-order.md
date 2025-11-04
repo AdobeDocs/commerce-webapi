@@ -22,7 +22,6 @@ Before you run the `completeOrder` mutation, ensure that:
 1. A payment or checkout ID has been generated and is available.
 1. For guest carts, a valid email address has been assigned.
 
-As of Commerce 2.4.7, the `completeOrderOutput` object can contain `orderV2`, which provides full details about the order. When the mutation runs, Commerce generates and returns a token in the `orderV2.token` field. You can supply the token value to the [`guestOrderByToken` query](../../schema/orders/queries/guest-order-by-token.md) to retrieve details about an order created by a guest shopper.
 
 ## Limitations
 
