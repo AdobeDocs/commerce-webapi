@@ -22,7 +22,6 @@ Before you run the `completeOrder` mutation, ensure that:
 1. A payment or checkout ID has been generated and is available.
 1. For guest carts, a valid email address has been assigned.
 
-
 ## Limitations
 
 - The `completeOrder` mutation is similar to the [`placeOrder`](../../schema/cart/mutations/place-order.md) mutation, but includes an additional required field `id` to capture the payment identifier.
