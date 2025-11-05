@@ -27,3 +27,5 @@ If you have installed [Payment Services for Adobe Commerce](https://commercemark
 * [`addProductsToNewCart`](../mutations/add-products-new-cart.md)
 
 * [`setCartAsInactive`](../mutations/set-cart-inactive.md)
+
+* [`completeOrtder`](../mutations/complete-order.md)
