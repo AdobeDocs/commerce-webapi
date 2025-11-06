@@ -240,6 +240,14 @@ module.exports = [
                 path: "/graphql/schema/cart/mutations/create-guest-cart/",
               },
               {
+                title: "estimateShippingMethods",
+                path: "/graphql/schema/cart/mutations/estimate-shipping-methods/",
+              },
+              {
+                title: "estimateTotals",
+                path: "/graphql/schema/cart/mutations/estimate-totals/",
+              },
+              {
                 title: "mergeCarts",
                 path: "/graphql/schema/cart/mutations/merge/",
               },
