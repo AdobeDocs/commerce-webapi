@@ -11,9 +11,7 @@ This mutation is available only if you have installed [Payment Services for Adob
 
 The `addProductsToNewCart` mutation always creates a new cart for the shopper then adds the specified products to that cart. This contrasts with the `addProductsToCart` mutation, which requires you to specify an existing cart ID as input.
 
->[!NOTE]
->
-> For a logged-in customer, the customer token is passed in the [Authorization header](../../usage/authorization-tokens.md#customer-tokens).
+For a logged-in customer, the customer token is passed in the [Authorization header](../../usage/authorization-tokens.md#customer-tokens).
 
 ## Use case: smart button on the Product Details Page (PDP)
 
@@ -35,7 +33,7 @@ addProductsToNewCart(
 
 ## Reference
 
-The `addProductsToNewCart` mutation reference is based on the [`addProductsToCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addProductsToCart) reference, which provides detailed information about the types and fields defined in the mutation.
+The [`addProductsToNewCart`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-addProductsToNewCart) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

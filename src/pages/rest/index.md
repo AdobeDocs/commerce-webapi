@@ -53,7 +53,7 @@ The following key differences are important to consider when planning your REST 
 
 Primarily the Cloud Service REST API differs in that it includes a smaller subset of endpoints. Specifically, the customer and guest REST APIs that are available in Adobe Commerce on Cloud and on-premises deployments are not available in Adobe Commerce as a Cloud Service. However, access to similar functionality remains available with the [GraphQL APIs](../graphql/index.md).
 
-The [API reference](../reference/rest/saas.md) lists the available endpoints. -->
+The [API reference](../reference/rest/saas.md) lists the available endpoints.
 
 ### Authentication
 
