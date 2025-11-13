@@ -60,10 +60,6 @@ query{
         lastname
       }
       text
-      attachments {
-        name
-        url
-      }
     }
     history {
       uid
@@ -166,13 +162,7 @@ query{
             "firstname": "Taina",
             "lastname": "Garofalo"
           },
-          "text": "Requesting a 10% discount for being a repeat customer.",
-          "attachments": [
-            {
-              "name": "terms_and_conditions.pdf",
-              "url": "https://<bucket>.s3.<region>.amazonaws.com/negotiable-quote/terms_and_conditions_5f4dcc3b5aa765d61d8327deb882cf99.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=<value>..."
-            }
-          ]
+          "text": "Requesting a 10% discount for being a repeat customer."
         },
         {
           "uid": "Mg==",
@@ -181,13 +171,7 @@ query{
             "firstname": "John Paul",
             "lastname": "Pope"
           },
-          "text": "Hello Taina! Thanks for registering with Luma as a partner company.\r\n\r\nUnfortunately, we cannot grant your request, because the 10% discount is reserved for our frequent customers, and this is your first order. We can offer a 5% discount on this order.",
-          "attachments": [
-            {
-              "name": "terms_and_conditions.pdf",
-              "url": "https://<bucket>.s3.<region>.amazonaws.com/negotiable-quote/terms_and_conditions_5f4dcc3b5aa765d61d8327deb882cf99.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=<value>..."
-            }
-          ]
+          "text": "Hello Taina! Thanks for registering with Luma as a partner company.\r\n\r\nUnfortunately, we cannot grant your request, because the 10% discount is reserved for our frequent customers, and this is your first order. We can offer a 5% discount on this order."
         },
         {
           "uid": "Mw==",
@@ -196,13 +180,7 @@ query{
             "firstname": "Taina",
             "lastname": "Garofalo"
           },
-          "text": "I understand. I&#039;ll accept your offer.",
-          "attachments": [
-            {
-              "name": "terms_and_conditions.pdf",
-              "url": "https://<bucket>.s3.<region>.amazonaws.com/negotiable-quote/terms_and_conditions_5f4dcc3b5aa765d61d8327deb882cf99.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=<value>..."
-            }
-          ]
+          "text": "I understand. I&#039;ll accept your offer."
         },
         {
           "uid": "NA==",
@@ -211,13 +189,7 @@ query{
             "firstname": "John Paul",
             "lastname": "Pope"
           },
-          "text": "Great! You should see a 5% discount in your cart. Shipping fees and taxes might apply.",
-          "attachments": [
-            {
-              "name": "terms_and_conditions.pdf",
-              "url": "https://<bucket>.s3.<region>.amazonaws.com/negotiable-quote/terms_and_conditions_5f4dcc3b5aa765d61d8327deb882cf99.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=<value>..."
-            }
-          ]
+          "text": "Great! You should see a 5% discount in your cart. Shipping fees and taxes might apply."
         },
         {
           "uid": "NQ==",
@@ -226,13 +198,7 @@ query{
             "firstname": "Taina",
             "lastname": "Garofalo"
           },
-          "text": "Adding a shipping address",
-          "attachments": [
-            {
-              "name": "terms_and_conditions.pdf",
-              "url": "https://<bucket>.s3.<region>.amazonaws.com/negotiable-quote/terms_and_conditions_5f4dcc3b5aa765d61d8327deb882cf99.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=<value>..."
-            }
-          ]
+          "text": "Adding a shipping address"
         }
       ],
       "history": [
