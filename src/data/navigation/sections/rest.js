@@ -497,10 +497,6 @@ module.exports = [
             title: "Sales refunds",
             path: "/rest/modules/sales/"
         },
-        {
-            title: "S3 uploads",
-            path: "/rest/modules/s3-uploads/"
-        }
     ],
   }
 ];

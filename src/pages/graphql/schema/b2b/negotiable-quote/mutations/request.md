@@ -36,10 +36,6 @@ The [`requestNegotiableQuote`](https://developer.adobe.com/commerce/webapi/graph
 
 ## Example usage
 
-The following examples show negotiable quote requests with and without attachments.
-
-### Request a negotiable quote
-
 The following example requests a negotiable quote. The cart contains three items.
 
 **Request:**
@@ -193,73 +189,6 @@ mutation {
             "value": 101
           }
         }
-      }
-    }
-  }
-}
-```
-
-### Request a negotiable quote with attachments
-
-<Edition name="saas" />
-
-The following example requests a negotiable quote with an attachment. The attachment must be uploaded to Amazon S3 before you can reference it in the mutation. See the [`initiateUpload` mutation](../../../uploads/mutations/initiate-upload.md) and [finishUpload` mutation](../../../uploads/mutations/finish-upload.md)for more information about uploading files.
-
-**Request:**
-
-```graphql
-mutation {
-  requestNegotiableQuote(
-    input: {
-      cart_id: "SAIanv9ZcoVbQwAFRWq6XzQbU1jK1dUT"
-      quote_name: "Test NQ"
-      comment: {
-        comment: "Please provide your best pricing for these bulk office supplies. We're looking for a long-term partnership."
-        attachments: [
-          {
-            key: "test-document1_32cb1fe50dab390be841461e.txt"
-          }
-        ]
-      }
-    }
-  ) {
-    quote {
-      uid
-      name
-      status
-      comments {
-        text
-        attachments {
-          name
-          url
-        }
-      }
-    }
-  }
-}
-```
-
-**Response:**
-
-```json
-{
-  "data": {
-    "requestNegotiableQuote": {
-      "quote": {
-        "uid": "SAIanv9ZcoVbQwAFRWq6XzQbU1jK1dUT",
-        "name": "Test NQ",
-        "status": "SUBMITTED",
-        "comments": [
-          {
-            "text": "Please provide your best pricing for these bulk office supplies. We're looking for a long-term partnership.",
-            "attachments": [
-              {
-                "name": "test-document1.txt",
-                "url": "http://bucket1.s3mock:9000/bucket1/tenant1/negotiable_quotes_attachment/test-document1_32cb1fe50dab390be841461e.txt?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIOSFODNN7EXAMPLE%2F20250909%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20250909T170138Z&X-Amz-SignedHeaders=host&X-Amz-Expires=6600&X-Amz-Signature=a4fa238e4f4f88d4819f0b80fe2699ec6374e81cd88e70fd281a7fc8fae232ec"
-              }
-            ]
-          }
-        ]
       }
     }
   }
