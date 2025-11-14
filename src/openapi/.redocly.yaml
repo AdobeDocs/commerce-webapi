@@ -3,10 +3,16 @@ organization: adobe-developers
 extends:
     - minimal
 apis:
-  Commerce(Admin)@2.4.7:
-    root: src/openapi/admin-schema-2.4.7.yaml
+  Commerce(Admin)@2.4.8:
+    root: src/openapi/admin-schema-2.4.8.yaml
     labels:
       - main
+  Commerce(Customer)@2.4.8:
+    root: src/openapi/customer-schema-2.4.8.yaml
+  Commerce(Guest)@2.4.8:
+    root: src/openapi/guest-schema-2.4.8.yaml
+  Commerce(Admin)@2.4.7:
+    root: src/openapi/admin-schema-2.4.7.yaml
   Commerce(Customer)@2.4.7:
     root: src/openapi/customer-schema-2.4.7.yaml
   Commerce(Guest)@2.4.7:
@@ -17,6 +23,8 @@ apis:
     root: src/openapi/customer-schema-2.4.6.yaml
   Commerce(Guest)@2.4.6:
     root: src/openapi/guest-schema-2.4.6.yaml
+  Commerce(SaaS):
+    root: src/openapi/accs-schema.yaml
 features.openapi:
   pagination: section
   hideHostname: true
