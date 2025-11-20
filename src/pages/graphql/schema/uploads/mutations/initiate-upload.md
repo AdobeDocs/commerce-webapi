@@ -77,7 +77,7 @@ The `$input` variable contains:
     "initiateUploadOutput": {
         "upload_url": "https://<bucket>.s3.<region>.amazonaws.com/<temp-location>?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=<value>...",
         "key": "customer/attribute/<hashed-key>",
-        "expires_at": "2024-09-30T12:34:56Z
+        "expires_at": "2024-09-30T12:34:56Z"
     }
   }
 }
