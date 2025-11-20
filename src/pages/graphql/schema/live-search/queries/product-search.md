@@ -555,8 +555,24 @@ The `items` object can also optionally return highlighted text that shows the ma
 The query response can also contain the following top-level fields and objects:
 
 - `page_info` - An object that lists the `page_size` and `current_page` input arguments and the total number of pages available.
-- `suggestions` - An array of strings that include the names of products and categories that exist in the catalog that are similar to the search query.
+- `suggestions` - An array of strings that include the names of products and categories that exist in the catalog that are similar to the search query. See **Logic used for `suggestions`** to learn more.
 - `total_count` - The number of products returned.
+
+**Logic used for `suggestions`**
+
+- Data from name and category path fields are used.
+- Name: `Supernova Sport Pant` will be stored in three phrases:
+  - `Supernova Sport Pant`
+  - `Sport Pant`
+  - `Pant`
+- Category path: tokenized by /, so "products/electronics/mobiles-and-accessories" will be stored as:
+  - `products`
+  - `electronics`
+  - `mobiles-and-accessories`
+
+When a search is made, the "suggestion" field is searched using a "prefix" based search and the matching phrase is returned.
+
+**Example** - If "sport" is searched, then "sport pant" will be one suggestion.
 
 ## Endpoints
 
@@ -906,8 +922,24 @@ Field | Data Type | Description
 `items` | [[ProductSearchItem]](#productsearchitem-data-type) | An array of products returned by the query
 `page_info` | [SearchResultPageInfo](#searchresultpageinfo-data-type) | Contains information for rendering pages of search results
 `related_terms` | [String] | Reserved for future use
-`suggestions` | [String] | An array of product URL keys that are similar to the search query. A maximum of five items are returned
+`suggestions` | [String] | An array of product URL keys that are similar to the search query. A maximum of five items are returned. See **Logic used for `suggestions`** to learn more.
 `total_count` | Int | The total number of items returned
+
+**Logic used for `suggestions`**
+
+- Data from name and category path fields are used.
+- Name: `Supernova Sport Pant` will be stored in three phrases:
+  - `Supernova Sport Pant`
+  - `Sport Pant`
+  - `Pant`
+- Category path: tokenized by /, so "products/electronics/mobiles-and-accessories" will be stored as:
+  - `products`
+  - `electronics`
+  - `mobiles-and-accessories`
+
+When a search is made, the "suggestion" field is searched using a "prefix" based search and the matching phrase is returned.
+
+**Example** - If "sport" is searched, then "sport pant" will be one suggestion.
 
 #### Aggregation data type
 
