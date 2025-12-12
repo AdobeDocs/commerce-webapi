@@ -222,7 +222,7 @@ POST /rest/<store_view_code>/V1/import/json
         "allowed_error_count": 0,
         "items":    [
             {
-                "sku": "Simple Product 1",
+                "sku": "Simple-Product-1",
                 "store_view_code": "",
                 "attribute_set_code": "Default",
                 "product_type": "simple",
@@ -394,7 +394,7 @@ POST /rest/<store_view_code>/V1/import/json
                 "configurable_variation_labels": ""
             },
             {
-                "sku": "Simple Product 2",
+                "sku": "Simple-Product-2",
                 "_comment": "additional information for Simple Product 2"
             }
         ],
@@ -485,7 +485,7 @@ For a bundle product:
             "name": "Stasis Ball",
             "type": "select",
             "required": 1,
-            "sku": "Sprite Statis Ball 55mm",
+            "sku": "Sprite-Statis-Ball-55mm",
             "price": 7.99,
             "default": 0,
             "default_qty": 1,
@@ -496,7 +496,7 @@ For a bundle product:
             "name": "Stasis Ball",
             "type": "select",
             "required": 1,
-            "sku": "Sprite Statis Ball 65mm",
+            "sku": "Sprite-Statis-Ball-65mm",
             "price": 9.99,
             "default": 0,
             "default_qty": 1,
@@ -507,7 +507,7 @@ For a bundle product:
             "name": "Yoga Brick",
             "type": "checkbox",
             "required": 0,
-            "sku": "Sprite Foam Yoga Brick",
+            "sku": "Sprite-Foam-Yoga-Brick",
             "price": 25,
             "default": 0,
             "default_qty": 1,
@@ -668,7 +668,7 @@ The Import JSON API does not create attributes automatically. You need to create
         "allowed_error_count": 10,
         "items":    [
             {
-                "sku": "Simple Product 1",
+                "sku": "Simple-Product-1",
                 "tier_price_website": "All Websites [USD]",
                 "tier_price_customer_group": "ALL GROUPS",
                 "tier_price_qty": 1,
@@ -676,7 +676,7 @@ The Import JSON API does not create attributes automatically. You need to create
                 "tier_price_value_type": "Fixed"
             },
             {
-                "sku": "Simple Product 1",
+                "sku": "Simple-Product-1",
                 "tier_price_website": "base",
                 "tier_price_customer_group": "NOT LOGGED IN",
                 "tier_price_qty": 2,
@@ -684,7 +684,7 @@ The Import JSON API does not create attributes automatically. You need to create
                 "tier_price_value_type": "Discount"
             },
             {
-                "sku": "Simple Product 1",
+                "sku": "Simple-Product-1",
                 "tier_price_website": "french",
                 "tier_price_customer_group": "General",
                 "tier_price_qty": 5,

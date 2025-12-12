@@ -240,6 +240,14 @@ module.exports = [
                 path: "/graphql/schema/cart/mutations/create-guest-cart/",
               },
               {
+                title: "estimateShippingMethods",
+                path: "/graphql/schema/cart/mutations/estimate-shipping-methods/",
+              },
+              {
+                title: "estimateTotals",
+                path: "/graphql/schema/cart/mutations/estimate-totals/",
+              },
+              {
                 title: "mergeCarts",
                 path: "/graphql/schema/cart/mutations/merge/",
               },
@@ -577,7 +585,11 @@ module.exports = [
               },
               {
                 title: "exchangeExternalCustomerToken",
-                path: "/graphql/schema/customer/mutations/create-external-customer-token/",
+                path: "/graphql/schema/customer/mutations/exchange-external-customer-token/",
+              },
+              {
+                title: "exchangeOtpForCustomerToken",
+                path: "/graphql/schema/customer/mutations/exchange-otp-customer-token/",
               },
               {
                 title: "generateCustomerToken",
@@ -1236,6 +1248,26 @@ module.exports = [
         ],
       },
       {
+        title: "Uploads",
+        path: "/graphql/schema/uploads/",
+        pages: [
+          {
+            title: "Mutations",
+            path: "/graphql/schema/uploads/",
+            pages: [
+              {
+                title: "finishUpload",
+                path: "/graphql/schema/uploads/mutations/finish-upload/",
+              },
+              {
+                title: "initiateUpload",
+                path: "/graphql/schema/uploads/mutations/initiate-upload/",
+              }
+            ]
+          }
+        ]
+      },
+      {
         title: "Wish list",
         path: "/graphql/schema/wishlist/",
         pages: [
@@ -1372,6 +1404,10 @@ module.exports = [
                 path: "/graphql/payment-services-extension/workflows/minicart.md",
               },
               {
+                title: "Add product to a new cart on a Product Details Page",
+                path: "/graphql/payment-services-extension/workflows/cart-pdp.md",
+              },
+              {
                 title: "Vault a card during a checkout authorization",
                 path: "/graphql/payment-services-extension/workflows/vault-with-purchase.md",
               },
@@ -1412,6 +1448,14 @@ module.exports = [
             path: "/graphql/payment-services-extension/mutations/",
             pages: [
               {
+                title: "addProductsToNewCart",
+                path: "/graphql/payment-services-extension/mutations/add-products-new-cart/",
+              },
+              {
+                title: "completeOrder",
+                path: "/graphql/payment-services-extension/mutations/complete-order/",
+              },
+              {
                 title: "createPaymentOrder",
                 path: "/graphql/payment-services-extension/mutations/create-payment-order/",
               },
@@ -1422,6 +1466,10 @@ module.exports = [
               {
                 title: "createVaultCardSetupToken",
                 path: "/graphql/payment-services-extension/mutations/create-vault-card-setup-token/",
+              },
+              {
+                title: "setCartAsInactive",
+                path: "/graphql/payment-services-extension/mutations/set-cart-inactive/",
               },
               {
                 title: "syncPaymentOrder",
