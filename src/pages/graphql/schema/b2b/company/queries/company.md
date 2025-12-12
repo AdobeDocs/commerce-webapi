@@ -115,6 +115,7 @@ query{
             firstname
             lastname
             email
+            id  
           }
           ... on CompanyTeam {
             name
@@ -143,7 +144,8 @@ query{
               "__typename": "Customer",
               "firstname": "Taina",
               "lastname": "Garofalo",
-              "email": "donadmin@example.com"
+              "email": "donadmin@example.com",
+              "id": "Ng=="
             }
           },
           {
@@ -159,7 +161,8 @@ query{
               "__typename": "Customer",
               "firstname": "B",
               "lastname": "BB",
-              "email": "bbb@example.com"
+              "email": "bbb@example.com",
+              "id": "Nw=="
             }
           },
           {
@@ -175,7 +178,8 @@ query{
               "__typename": "Customer",
               "firstname": "A",
               "lastname": "AA",
-              "email": "aa@example.com"
+              "email": "aa@example.com",
+              "id": "NQ=="
             }
           },
           {
@@ -191,7 +195,8 @@ query{
               "__typename": "Customer",
               "firstname": "C",
               "lastname": "CC",
-              "email": "ccc@example.com"
+              "email": "ccc@example.com",
+              "id": "NQ=="
             }
           }
         ]
