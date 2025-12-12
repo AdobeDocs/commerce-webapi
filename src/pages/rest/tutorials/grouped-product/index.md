@@ -21,7 +21,7 @@ This tutorial describes how you can use the Adobe Commerce REST API to create an
 
 ### Other resources
 
-*  [REST Tutorials](/rest/tutorials/index/) provides additional information about completing any Commerce REST tutorial.
+*  [REST Tutorials](../index.md) provides additional information about completing any Commerce REST tutorial.
 
 ## 1. Create an empty grouped product
 

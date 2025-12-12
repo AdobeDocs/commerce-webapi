@@ -32,7 +32,7 @@ Live Search uses the `productSearch` query to search for products instead of the
 
 <InlineAlert variant="info" slots="text" />
 
-The Catalog Service `productSearch` query uses Live Search to return details about the SKUs specified as input. [Learn more](#catalog-service).
+The Catalog Service `productSearch` query uses Live Search to return details about the SKUs specified as input.
 
 The `productSearch` query accepts the following fields as input:
 
@@ -165,20 +165,22 @@ Only facets specified in Live Search are returned.
 
 Use the [`attributeMetadata` query](./attribute-metadata.md) to return a list of product attributes that can be used to define a filter.
 
-#### Filtering using search capability
+#### Layered search and expansion of search types
 
-<InlineAlert variant="info" slots="text"/>
+Layered search, or search within a search, is a powerful, attribute-based filtering system that extends the traditional search functionality to include additional search parameters. These additional search parameters allow more precise and flexible product discovery. See the [merchant documentation](https://experienceleague.adobe.com/en/docs/commerce/live-search/workspace) to learn why a merchant would implement layered search for their storefront.
 
-This feature is in beta. For installation information, see the [Live Search guide](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/live-search/install#install-the-live-search-beta) in the merchant documentation.
+<InlineAlert variant="info" slots="text" />
 
-This beta supports three new capabilities:
+Layered search is available in Live Search 4.6.0.
+
+The advanced search capabilities are implemented through the `filter` parameter in the `productSearch` query using specific operators:
 
 - **Layered search** - Search within another search context - With this capability, you can undertake up to two layers of search for your search queries. For example:
   
-  - **Layer 1 search** - Search for "motor" on "product_attribute_1".
-  - **Layer 2 search** - Search for "part number 123" on "product_attribute_2". This example searches for "part number 123" within the results for "motor".
+  - **Layer 1 search** - Search for "motor" on `product_attribute_1`.
+  - **Layer 2 search** - Search for "part number 123" on `product_attribute_2`. This example searches for "part number 123" within the results for "motor".
 
-  Layered search is available for both `startsWith` search indexation and `contains` search indexation as described below:
+  Layered search is available for both `startsWith` search indexation and `contains` search indexation in the second layer of the layered search, as described below:
 
 - **startsWith search indexation** - Search using `startsWith` indexation. This new capability allows:
 
@@ -191,7 +193,40 @@ This beta supports three new capabilities:
 
         - Note: This search type is different from the existing [phrase search](#phrase), which performs an autocomplete search. For example, if your product attribute value is "outdoor pants", a phrase search returns a response for "out pan", but does not return a response for "oor ants". A contains search, however, does return a response for "oor ants".
 
-Refer to the following examples to learn how to implement these new search capabilities in your Live Search API.
+##### Examples
+
+Learn how to implement these new search capabilities in your Live Search API by following the examples below. First, review the requirements to ensure proper configuration.
+
+**Frontend support:**
+
+Layered search is available on the following architectures:
+
+- Commerce Optimizer [Product Discovery drop-ins](https://experienceleague.adobe.com/developer/commerce/storefront/dropins/product-discovery/functions/)
+- Live Search (headless)
+
+<InlineAlert variant="info" slots="text" />
+
+The Live Search Product Listing Page (PLP) and popover widgets do not support layered search.
+
+**API configuration requirements:**
+
+- Attributes must have the **Use in Search Results Layered Navigation** checkbox set to **Filterable (with results)** in the [Admin](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/product-attributes/product-attributes-add#step-5-describe-the-storefront-properties).
+- Each attribute must have the correct search type specified: `contains` or `startsWith`.
+- A maximum of 6 attributes can be enabled for `contains` search.
+- A maximum of 6 attributes can be enabled for `startsWith` search.
+
+**Performance considerations:**
+
+- `startsWith` and `contains` searches are optimized for performance through specialized indexing.
+- Both `startsWith` and `contains` searches require a minimum of two characters.
+- A search term is limited to 10 characters or less.
+- For the **Contains** indexation, string length is limited to 50 characters or less.
+
+**Error handling:**
+
+- 500 error returned if an attribute is not set to `filterableInSearch: true`.
+- Invalid attribute codes will result in no matches.
+- Exceeding character limits will fall back to autocomplete search.
 
 ##### startsWith condition example
 
@@ -232,9 +267,7 @@ filter: [
 ]
 ```
 
-**Example queries**
-
-The following example shows how to search within search results using "motor" as the search phrase and filtering on "manufacturer" that "startsWith" the term "Sieme":
+The following example shows how to search within search results using "motor" as the search phrase and filtering on `manufacturer` that `startsWith` the term "Sieme":
 
 ```graphql
 productSearch(  
@@ -306,7 +339,7 @@ productSearch(
 
 ##### Limitations
 
-The beta has the following limitations:
+The advanced search capabilitiies have the following limitations:
 
 - You can specify a maximum of six attributes to be enabled for **Contains** and six attributes to be enabled for **Starts with**.
 - Each aggregation returns a maximum of 1000 facets.
@@ -437,36 +470,15 @@ facets {
 
 The `items` object primarily provides details about each item returned. The structure of this object varies between Catalog Service and Live Search. For Catalog Service, specify a `ProductSearchItem.productView` object. For Live Search, specify a `ProductSearchItem.product` object
 
-#### ProductSearchItem.product (Live Search)
+<InlineAlert variant="info" slots="text"/>
 
-The following snippet returns relevant information about each item when Catalog Service is not installed or used:
+The `ProductInterface` object in the Search service GraphQL schema has been deprecated. Use the `ProductView` object instead, which is defined and documented as the recommended alternative for use with the Catalog Service.
 
-```graphql
-items {
-    product {
-        name
-        sku
-        price_range {
-          maximum_price {
-            final_price {
-              value
-              currency
-            }
-          }
-          minimum_price {
-            final_price {
-              value
-              currency
-            }
-          }
-        }
-    }
-}
-```
+#### ProductSearchItem.productView
 
-#### ProductSearchItem.productView (Catalog Service)
+<InlineAlert variant="info" slots="text"/>
 
-If [Catalog Service](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/guide-overview.html) is installed, you can optionally use the `productView` field instead of the `product` field to return product details. Catalog Service uses [Catalog Sync](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/data-services/catalog-sync.html) to manage product data, resulting in query responses with less latency than is possible with the `ProductInterface`. With Catalog Service, the structure of the pricing information varies, depending on whether the product is designated as a `SimpleProduct` (simple, downloadable, gift card) or as a `ComplexProduct` (configurable, grouped, or bundle).
+Use the `ProductView` field instead of the deprecated `product` field to return product details. Catalog Service uses [Catalog Sync](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/data-services/catalog-sync.html) to manage product data, resulting in query responses with less latency than is possible with the `ProductInterface`. With Catalog Service, the structure of the pricing information varies, depending on whether the product is designated as a `SimpleProduct` (simple, downloadable, gift card) or as a `ComplexProduct` (configurable, grouped, or bundle).
 
 The following Catalog Service snippet returns relevant information about each item:
 
@@ -543,7 +555,7 @@ The `items` object can also optionally return highlighted text that shows the ma
 The query response can also contain the following top-level fields and objects:
 
 - `page_info` - An object that lists the `page_size` and `current_page` input arguments and the total number of pages available.
-- `suggestions` - An array of strings that include the names of products and categories that exist in the catalog that are similar to the search query.
+- `suggestions` - An array of strings that include the names of products and categories that exist in the catalog that are similar to the search query. See [Logic used for `suggestions`](#common-fields) to learn more.
 - `total_count` - The number of products returned.
 
 ## Endpoints
@@ -563,7 +575,7 @@ Header name| Description
 `Magento-Store-Code` | The code assigned to the store associated with the active store view. For example, `main_website_store`.
 `Magento-Store-View-Code` | The code assigned to the active store view. For example, `default`.
 `Magento-Website-Code` | The code assigned to the website associated with the active store view. For example, `base`.
-`X-Api-Key` | For Live Search queries, set this value to `search_gql`. For Catalog Service queries, set this value to the [unique API key](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/user-guides/integration-services/saas#genapikey) generated for your Commerce environment.
+`X-Api-Key` | Set this value to the [unique API key](https://experienceleague.adobe.com/en/docs/commerce/user-guides/integration-services/saas#genapikey) generated for your Commerce environment.
 
 ###  Find the customer group code
 
@@ -573,474 +585,7 @@ import CustomerGroupCode from '/src/_includes/graphql/customer-group-code.md'
 
 ## Example usage
 
-In the following sections provide examples for using Live Search and Catalog Service.
-
-### Live Search
-
-This is an example of using Live Search to retrieve and filter results. The query uses the core `ProductInterface` to access product information. As a result, the query has a longer response time than using [Catalog Service](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/guide-overview.html) to retrieve this information.
-
-For an example of using Live Search with Catalog Service, see [Catalog Service productSearch query](#catalog-service). Other than returning the `productView` object, all other attributes are the same.
-
-In the example below, there is no search `phrase` passed and results are filtered on the "women/bottoms-women" category. In the response, two categories are returned:
-
-```json
-{
-  "title": "women/bottoms-women/shorts-women",
-  "__typename": "ScalarBucket",
-  "id": "28",
-  "count": 12
-},
-{
-  "title": "women/bottoms-women/pants-women",
-  "__typename": "ScalarBucket",
-  "id": "27",
-  "count": 13
-}
-```
-
-If the `phrase` "pants" is added, only one category is returned and "shorts" are not returned by the query:
-
-```json
-{
-  "title": "women/bottoms-women/pants-women",
-  "__typename": "ScalarBucket",
-  "id": "27",
-  "count": 13
-}
-```
-
-**Request:**
-
-```graphql
-{
-  productSearch(
-    phrase: ""
-    sort: [
-      { attribute: "price", direction: DESC }
-      { attribute: "name", direction: DESC }
-    ]
-    filter: [
-      { attribute: "categoryPath", in: ["women/bottoms-women"] }
-    ]
-    page_size: 9
-  ) {
-    total_count
-    page_info {
-      current_page
-      page_size
-      total_pages
-    }
-    facets {
-      attribute
-      title
-      type
-      buckets {
-        title
-        __typename
-        ... on RangeBucket {
-          title
-          to
-          from
-          count
-        }
-        ... on ScalarBucket {
-          title
-          id
-          count
-        }
-        ... on StatsBucket {
-          title
-          min
-          max
-        }
-      }
-    }
-    items {
-      product {
-        name
-        sku
-      }
-    }
-    suggestions
-  }
-}
-```
-
-**Response:**
-
-<details>
-<summary><b>Response</b></summary>
-
-```json
-"data": {
-  "productSearch": {
-    "total_count": 25,
-    "page_info": {
-      "current_page": 1,
-      "page_size": 9,
-      "total_pages": 3
-    },
-    "facets": [
-      {
-        "attribute": "categories",
-        "title": "Categories",
-        "type": "PINNED",
-        "buckets": [
-          {
-            "title": "women/bottoms-women/shorts-women",
-            "__typename": "ScalarBucket",
-            "id": "28",
-            "count": 12
-          },
-          {
-            "title": "women/bottoms-women/pants-women",
-            "__typename": "ScalarBucket",
-            "id": "27",
-            "count": 13
-          }
-        ]
-      },
-      {
-        "attribute": "price",
-        "title": "Price",
-        "type": "PINNED",
-        "buckets": [
-          {
-            "title": "0.0-25.0",
-            "__typename": "RangeBucket",
-            "to": 25,
-            "from": 0,
-            "count": 1
-          },
-          {
-            "title": "25.0-50.0",
-            "__typename": "RangeBucket",
-            "to": 50,
-            "from": 25,
-            "count": 20
-          },
-          {
-            "title": "50.0-75.0",
-            "__typename": "RangeBucket",
-            "to": 75,
-            "from": 50,
-            "count": 4
-          }
-        ]
-      },
-      {
-        "attribute": "material",
-        "title": "Material",
-        "type": "POPULAR",
-        "buckets": [
-          {
-            "title": "Organic Cotton",
-            "__typename": "ScalarBucket",
-            "id": "Organic Cotton",
-            "count": 13
-          },
-          {
-            "title": "Spandex",
-            "__typename": "ScalarBucket",
-            "id": "Spandex",
-            "count": 11
-          },
-          {
-            "title": "Polyester",
-            "__typename": "ScalarBucket",
-            "id": "Polyester",
-            "count": 7
-          },
-          {
-            "title": "Cotton",
-            "__typename": "ScalarBucket",
-            "id": "Cotton",
-            "count": 4
-          },
-          {
-            "title": "LumaTech&trade;",
-            "__typename": "ScalarBucket",
-            "id": "LumaTech&trade;",
-            "count": 5
-          },
-          {
-            "title": "CoolTech&trade;",
-            "__typename": "ScalarBucket",
-            "id": "CoolTech&trade;",
-            "count": 4
-          },
-          {
-            "title": "Mesh",
-            "__typename": "ScalarBucket",
-            "id": "Mesh",
-            "count": 3
-          },
-          {
-            "title": "Cocona&reg; performance fabric",
-            "__typename": "ScalarBucket",
-            "id": "Cocona&reg; performance fabric",
-            "count": 4
-          }
-        ]
-      },
-      {
-        "attribute": "new",
-        "title": "New",
-        "type": "POPULAR",
-        "buckets": [
-          {
-            "title": "no",
-            "__typename": "ScalarBucket",
-            "id": "no",
-            "count": 21
-          },
-          {
-            "title": "yes",
-            "__typename": "ScalarBucket",
-            "id": "yes",
-            "count": 4
-          }
-        ]
-      },
-      {
-        "attribute": "color",
-        "title": "Color",
-        "type": "POPULAR",
-        "buckets": [
-          {
-            "title": "Blue",
-            "__typename": "ScalarBucket",
-            "id": "Blue",
-            "count": 14
-          },
-          {
-            "title": "Black",
-            "__typename": "ScalarBucket",
-            "id": "Black",
-            "count": 12
-          },
-          {
-            "title": "Orange",
-            "__typename": "ScalarBucket",
-            "id": "Orange",
-            "count": 9
-          },
-          {
-            "title": "Green",
-            "__typename": "ScalarBucket",
-            "id": "Green",
-            "count": 8
-          },
-          {
-            "title": "Purple",
-            "__typename": "ScalarBucket",
-            "id": "Purple",
-            "count": 8
-          },
-          {
-            "title": "Gray",
-            "__typename": "ScalarBucket",
-            "id": "Gray",
-            "count": 8
-          },
-          {
-            "title": "Red",
-            "__typename": "ScalarBucket",
-            "id": "Red",
-            "count": 7
-          },
-          {
-            "title": "White",
-            "__typename": "ScalarBucket",
-            "id": "White",
-            "count": 5
-          }
-        ]
-      },
-      {
-        "attribute": "eco_collection",
-        "title": "Eco Collection",
-        "type": "POPULAR",
-        "buckets": [
-          {
-            "title": "no",
-            "__typename": "ScalarBucket",
-            "id": "no",
-            "count": 18
-          },
-          {
-            "title": "yes",
-            "__typename": "ScalarBucket",
-            "id": "yes",
-            "count": 7
-          }
-        ]
-      },
-      {
-        "attribute": "climate",
-        "title": "Climate",
-        "type": "POPULAR",
-        "buckets": [
-          {
-            "title": "Indoor",
-            "__typename": "ScalarBucket",
-            "id": "Indoor",
-            "count": 20
-          },
-          {
-            "title": "Hot",
-            "__typename": "ScalarBucket",
-            "id": "Hot",
-            "count": 16
-          },
-          {
-            "title": "Mild",
-            "__typename": "ScalarBucket",
-            "id": "Mild",
-            "count": 17
-          },
-          {
-            "title": "Warm",
-            "__typename": "ScalarBucket",
-            "id": "Warm",
-            "count": 15
-          },
-          {
-            "title": "All-Weather",
-            "__typename": "ScalarBucket",
-            "id": "All-Weather",
-            "count": 10
-          },
-          {
-            "title": "Spring",
-            "__typename": "ScalarBucket",
-            "id": "Spring",
-            "count": 7
-          },
-          {
-            "title": "Cool",
-            "__typename": "ScalarBucket",
-            "id": "Cool",
-            "count": 3
-          }
-        ]
-      },
-      {
-        "attribute": "size",
-        "title": "Size",
-        "type": "POPULAR",
-        "buckets": [
-          {
-            "title": "28",
-            "__typename": "ScalarBucket",
-            "id": "28",
-            "count": 25
-          },
-          {
-            "title": "29",
-            "__typename": "ScalarBucket",
-            "id": "29",
-            "count": 25
-          },
-          {
-            "title": "30",
-            "__typename": "ScalarBucket",
-            "id": "30",
-            "count": 7
-          },
-          {
-            "title": "31",
-            "__typename": "ScalarBucket",
-            "id": "31",
-            "count": 7
-          },
-          {
-            "title": "32",
-            "__typename": "ScalarBucket",
-            "id": "32",
-            "count": 7
-          }
-        ]
-      },
-      {
-        "attribute": "activity",
-        "title": "Activity",
-        "type": "POPULAR",
-        "buckets": []
-      },
-      {
-        "attribute": "custom_price",
-        "title": "Custom Price",
-        "type": "POPULAR",
-        "buckets": []
-      }
-    ],
-    "items": [
-      {
-        "product": {
-          "name": "Sahara Leggings",
-          "sku": "WP05"
-        }
-      },
-      {
-        "product": {
-          "name": "Cora Parachute Pant",
-          "sku": "WP04"
-        }
-      },
-      {
-        "product": {
-          "name": "Deirdre Relaxed-Fit Capri",
-          "sku": "WP12"
-        }
-      },
-      {
-        "product": {
-          "name": "Gwen Drawstring Bike Short",
-          "sku": "WSH03"
-        }
-      },
-      {
-        "product": {
-          "name": "Ina Compression Short",
-          "sku": "WSH11"
-        }
-      },
-      {
-        "product": {
-          "name": "Diana Tights",
-          "sku": "WP06"
-        }
-      },
-      {
-        "product": {
-          "name": "Erika Running Short",
-          "sku": "WSH12"
-        }
-      },
-      {
-        "product": {
-          "name": "Artemis Running Short",
-          "sku": "WSH04"
-        }
-      },
-      {
-        "product": {
-          "name": "Sybil Running Short",
-          "sku": "WSH08"
-        }
-      }
-    ],
-    "suggestions": []
-  }
-}
-```
-
-</details>
-
-### Catalog Service
-
-In the following example, the query returns information on the same products as the Live Search [`productSearch` items list](#items-list) example. However, it has been constructed to return item information inside the Catalog Service `productView` object instead of the core `product` object. Note that the pricing information varies, depending on the product type. For the sake of brevity, facet information is not shown.
+The following example uses the `ProductView` object to return item information. Note that the pricing information varies, depending on the product type. For the sake of brevity, facet information is not shown.
 
 **Request:**
 
@@ -1361,8 +906,24 @@ Field | Data Type | Description
 `items` | [[ProductSearchItem]](#productsearchitem-data-type) | An array of products returned by the query
 `page_info` | [SearchResultPageInfo](#searchresultpageinfo-data-type) | Contains information for rendering pages of search results
 `related_terms` | [String] | Reserved for future use
-`suggestions` | [String] | An array of product URL keys that are similar to the search query. A maximum of five items are returned
+`suggestions` | [String] | An array of product URL keys that are similar to the search query. A maximum of five items are returned. See **Logic used for `suggestions`** to learn more.
 `total_count` | Int | The total number of items returned
+
+**Logic used for `suggestions`**
+
+- Data from name and category path fields are used.
+- Name: `Supernova Sport Pant` will be stored in three phrases:
+  - `Supernova Sport Pant`
+  - `Sport Pant`
+  - `Pant`
+- Category path: tokenized by /, so "products/electronics/mobiles-and-accessories" will be stored as:
+  - `products`
+  - `electronics`
+  - `mobiles-and-accessories`
+
+When a search is made, the "suggestion" field is searched using a "prefix" based search and the matching phrases are returned.
+
+**Example** - If "sport" is searched, then "sport pant" will be one suggestion.
 
 #### Aggregation data type
 
@@ -1432,7 +993,9 @@ Field | Data Type | Description
 
 ### Live Search fields
 
-Live Search returns product information using the [ProductInterface!](https://developer.adobe.com/commerce/webapi/graphql/schema/products/interfaces/attributes/).
+<InlineAlert variant="info" slots="text"/>
+
+By default, Live Search uses the `ProductInterface` to return product information. This interface is **deprecated**. Use the `ProductView` object, originally defined in Catalog Service, for better performance and future compatibility.
 
 ### Catalog Service fields
 

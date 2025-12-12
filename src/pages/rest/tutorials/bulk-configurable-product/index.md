@@ -26,6 +26,6 @@ A system integrator can use Adobe Commerce REST bulk APIs to perform actions on 
 
 ### Other resources
 
-*  [REST Tutorials](/rest/tutorials/index/) provides additional information about completing any Commerce REST tutorial.
+*  [REST Tutorials](../index.md) provides additional information about completing any Commerce REST tutorial.
 *  [Asynchronous web endpoints](/rest/use-rest/asynchronous-web-endpoints/) provides information about how to use the Commerce Asynchronous API
 *  [Bulk endpoints](/rest/use-rest/bulk-endpoints/) provides information about how to use the Commerce Bulk API

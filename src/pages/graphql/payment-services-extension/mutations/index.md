@@ -21,3 +21,11 @@ If you have installed [Payment Services for Adobe Commerce](https://commercemark
 * [`createVaultCardSetupToken`](../mutations/create-vault-card-setup-token.md)
 
 * [`createVaultCardPaymentToken`](../mutations/create-vault-card-payment-token.md)
+
+If you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.12.0 or higher, you can use the following mutations to manage your carts in the Product Details Page (PDP):
+
+* [`addProductsToNewCart`](../mutations/add-products-new-cart.md)
+
+* [`setCartAsInactive`](../mutations/set-cart-inactive.md)
+
+* [`completeOrtder`](../mutations/complete-order.md)
