@@ -384,6 +384,47 @@ filter:[
   ] 
 ```
 
+##### Error handling for categoryPath
+
+When an empty or invalid `categoryPath` is detected with position sorting, the following warning is returned:
+
+```json
+{
+  "errors": [
+    {
+      "message": "Sort ignored due to empty or invalid categoryPath or categoryIds. Default sorting by relevance applied.",
+      "locations": [],
+      "extensions": {
+        "severity": "WARNING",
+        "code": "EMPTY_CATEGORY_PATH_OR_CATEGORY_IDS",
+        "classification": "DataFetchingException"
+      }
+    }
+  ]
+}
+```
+
+Despite the warning, the query returns product data successfully in the `data` object, sorted by relevance.
+
+**Example**
+
+```graphql
+filter: [
+  {
+    attribute: "categoryPath",
+    eq: null
+  }
+]
+sort: [
+  {
+    attribute: "position",
+    direction: "ASC"
+  }
+]
+```
+
+This configuration triggers the warning and applies relevance sorting instead of position sorting.
+
 #### categories
 
 `categories` can be used as a filter in a query when a category facet is selected in the layered navigation.
