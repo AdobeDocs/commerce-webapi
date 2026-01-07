@@ -449,7 +449,7 @@ Despite the warning, the query executes successfully and returns product data in
 }
 ```
 
-In this example, attempting to sort by `position` with a null `categoryPath` triggers the warning. The system returns products sorted by relevance with the warning message included in the response.
+In this example, the system returns products sorted by relevance with the warning message included in the response.
 
 #### categories
 
