@@ -388,10 +388,10 @@ filter:[
 
 When sorting by category `position` with an empty or invalid `categoryPath` or `categoryIDs`, the Search service gracefully handles the request to prevent `FAILED_PRECONDITION` errors. This scenario commonly occurs when attempting to sort by position at the root category level, where category paths are not standardized across store views.
 
-**Behavior when empty or invalid categoryPath is detected with position sorting:**
+**Behavior when an empty or invalid `categoryPath` is detected with position sorting:**
 
 - Category position sort is ignored
-- System falls back to relevance-based sorting
+- The system falls back to relevance-based sorting
 - Products are returned successfully
 - A structured GraphQL warning is included in the response
 
