@@ -384,9 +384,9 @@ filter:[
   ] 
 ```
 
-##### Error handling for categoryPath
+##### Error handling for categoryPath and categoryIds
 
-When sorting by category `position` with an empty or invalid `categoryPath`, the Search Service gracefully handles the request to prevent `FAILED_PRECONDITION` errors. This scenario commonly occurs when attempting to sort by position at the root category level, where category paths are not standardized across store views.
+When sorting by category `position` with an empty or invalid `categoryPath` or `categoryIDs`, the Search service gracefully handles the request to prevent `FAILED_PRECONDITION` errors. This scenario commonly occurs when attempting to sort by position at the root category level, where category paths are not standardized across store views.
 
 **Behavior when empty or invalid categoryPath is detected with position sorting:**
 
