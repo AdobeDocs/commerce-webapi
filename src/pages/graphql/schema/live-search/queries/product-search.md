@@ -386,7 +386,18 @@ filter:[
 
 ##### Error handling for categoryPath
 
-When an empty or invalid `categoryPath` is detected with position sorting, the following warning is returned:
+When sorting by category `position` with an empty or invalid `categoryPath`, the Search Service gracefully handles the request to prevent `FAILED_PRECONDITION` errors. This scenario commonly occurs when attempting to sort by position at the root category level, where category paths are not standardized across store views.
+
+**Behavior when empty or invalid categoryPath is detected with position sorting:**
+
+- Category position sort is ignored
+- System falls back to relevance-based sorting
+- Products are returned successfully
+- A structured GraphQL warning is included in the response
+
+**Warning message:**
+
+The following warning is returned in the `errors` array alongside the product data:
 
 ```json
 {
@@ -404,26 +415,41 @@ When an empty or invalid `categoryPath` is detected with position sorting, the f
 }
 ```
 
-Despite the warning, the query returns product data successfully in the `data` object, sorted by relevance.
+<InlineAlert variant="info" slots="text"/>
 
-**Example**
+Despite the warning, the query executes successfully and returns product data in the `data` object, sorted by relevance instead of position.
+
+**Example query that triggers the warning:**
 
 ```graphql
-filter: [
-  {
-    attribute: "categoryPath",
-    eq: null
+{
+  productSearch(
+    phrase: "pants"
+    page_size: 8
+    filter: [
+      {
+        attribute: "categoryPath",
+        eq: null
+      }
+    ]
+    sort: [
+      {
+        attribute: "position",
+        direction: ASC
+      }
+    ]
+  ) {
+    items {
+      productView {
+        name
+        sku
+      }
+    }
   }
-]
-sort: [
-  {
-    attribute: "position",
-    direction: "ASC"
-  }
-]
+}
 ```
 
-This configuration triggers the warning and applies relevance sorting instead of position sorting.
+In this example, attempting to sort by `position` with a null `categoryPath` triggers the warning. The system returns products sorted by relevance with the warning message included in the response.
 
 #### categories
 
