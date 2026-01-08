@@ -384,6 +384,73 @@ filter:[
   ] 
 ```
 
+##### Error handling for categoryPath and categoryIds
+
+When sorting by category `position` with an empty or invalid `categoryPath` or `categoryIDs`, the Search service gracefully handles the request to prevent `FAILED_PRECONDITION` errors. This scenario commonly occurs when attempting to sort by position at the root category level, where category paths are not standardized across store views.
+
+**Behavior when an empty or invalid `categoryPath` is detected with position sorting:**
+
+- Category position sort is ignored
+- The system falls back to relevance-based sorting
+- Products are returned successfully
+- A structured GraphQL warning is included in the response
+
+**Warning message:**
+
+The following warning is returned in the `errors` array alongside the product data:
+
+```json
+{
+  "errors": [
+    {
+      "message": "Sort ignored due to empty or invalid categoryPath or categoryIds. Default sorting by relevance applied.",
+      "locations": [],
+      "extensions": {
+        "severity": "WARNING",
+        "code": "EMPTY_CATEGORY_PATH_OR_CATEGORY_IDS",
+        "classification": "DataFetchingException"
+      }
+    }
+  ]
+}
+```
+
+<InlineAlert variant="info" slots="text"/>
+
+Despite the warning, the query executes successfully and returns product data in the `data` object, sorted by relevance instead of position.
+
+**Example query that triggers the warning:**
+
+```graphql
+{
+  productSearch(
+    phrase: "pants"
+    page_size: 8
+    filter: [
+      {
+        attribute: "categoryPath",
+        eq: null
+      }
+    ]
+    sort: [
+      {
+        attribute: "position",
+        direction: ASC
+      }
+    ]
+  ) {
+    items {
+      productView {
+        name
+        sku
+      }
+    }
+  }
+}
+```
+
+In this example, the system returns products sorted by relevance with the warning message included in the response.
+
 #### categories
 
 `categories` can be used as a filter in a query when a category facet is selected in the layered navigation.
