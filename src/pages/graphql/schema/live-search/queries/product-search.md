@@ -384,11 +384,11 @@ filter:[
   ] 
 ```
 
-##### Error handling for categoryPath and categoryIds
+##### Error handling for categories, categoryPath, and categoryIds
 
-When sorting by category `position` with an empty or invalid `categoryPath` or `categoryIDs`, the Search service gracefully handles the request to prevent `FAILED_PRECONDITION` errors. This scenario commonly occurs when attempting to sort by position at the root category level, where category paths are not standardized across store views.
+When sorting by category `position` with an empty or invalid `categories`, `categoryPath`, or `categoryIDs`, the Search service gracefully handles the request to prevent `FAILED_PRECONDITION` errors. This scenario commonly occurs when attempting to sort by position at the root category level, where category paths are not standardized across store views.
 
-**Behavior when an empty or invalid `categoryPath` is detected with position sorting:**
+**Behavior when an empty or invalid `categories`, `categoryPath`, or `categoryIDs` is detected with position sorting:**
 
 - Category position sort is ignored
 - The system falls back to relevance-based sorting
@@ -396,7 +396,7 @@ When sorting by category `position` with an empty or invalid `categoryPath` or `
 
 <InlineAlert variant="info" slots="text"/>
 
-Despite the empty or invalid `categoryPath`, the query executes successfully and returns product data in the `data` object, sorted by relevance instead of position.
+Despite the empty or invalid `categories`, `categoryPath`, or `categoryIDs`, the query executes successfully and returns product data in the `data` object, sorted by relevance instead of position.
 
 **Example query:**
 
