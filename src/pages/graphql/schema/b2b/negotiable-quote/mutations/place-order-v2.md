@@ -95,11 +95,11 @@ Code | Error | Description
 --- | --- | ---
 `CART_NOT_FOUND` | `Could not find a cart with ID` | The specified cart ID is invalid.
 `CART_NOT_ACTIVE` | `The cart isn't active.` | The specified cart ID is not active.
-`GUEST_EMAIL_MISSING` | `Guest email for cart is missing.` | The guest attempted to place an order but did not provide an email address. See [setGuestEmailOnCart](../../cart/mutations/set-guest-email.md) mutation.
+`GUEST_EMAIL_MISSING` | `Guest email for cart is missing.` | The guest attempted to place an order but did not provide an email address. See [setGuestEmailOnCart](../../../cart/mutations/set-guest-email.md) mutation.
 `UNABLE_TO_PLACE_ORDER` | `A server error stopped your order from being placed. Please try to place your order again` | The shopper tried to place an order when no products are in the shopping cart.
-`UNABLE_TO_PLACE_ORDER` | `Some addresses can't be used due to the configurations for specific countries` | The shipping method was not set. See [setShippingMethodsOnCart](set-shipping-method.md) mutation.
-`UNABLE_TO_PLACE_ORDER` | `The shipping method is missing. Select the shipping method and try again` | The shipping method was not set. See [setShippingMethodsOnCart](set-shipping-method.md) mutation.
-`UNABLE_TO_PLACE_ORDER` | `Please check the billing address information` | The billing address was not set. See [setBillingAddressOnCart](../../cart/mutations/set-billing-address.md) mutation.
-`UNABLE_TO_PLACE_ORDER` | `Enter a valid payment method and try again` | The payment method was not set. See [setPaymentMethodOnCart](../../cart/mutations/set-payment-method.md) mutation.
+`UNABLE_TO_PLACE_ORDER` | `Some addresses can't be used due to the configurations for specific countries` | The shipping method was not set. See [setShippingMethodsOnCart](set-shipping-methods.md) mutation.
+`UNABLE_TO_PLACE_ORDER` | `The shipping method is missing. Select the shipping method and try again` | The shipping method was not set. See [setShippingMethodsOnCart](set-shipping-methods.md) mutation.
+`UNABLE_TO_PLACE_ORDER` | `Please check the billing address information` | The billing address was not set. See [setBillingAddressOnCart](../../../cart/mutations/set-billing-address.md) mutation.
+`UNABLE_TO_PLACE_ORDER` | `Enter a valid payment method and try again` | The payment method was not set. See [setPaymentMethodOnCart](../../../cart/mutations/set-payment-method.md) mutation.
 `UNABLE_TO_PLACE_ORDER` | `Some of the products are out of stock` | One of the products in the shopping cart are currently out of stock.
 `UNDEFINED` | `UNDEFINED` | The error message does not match any error code
