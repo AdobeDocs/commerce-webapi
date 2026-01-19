@@ -1,5 +1,6 @@
 ---
-title: placeNegotiableQuoteOrder mutation
+title: placeNegotiableQuoteOrderV2 mutation
+edition: saas
 keywords:
   - B2B
 ---
@@ -9,6 +10,8 @@ import CommerceOnly from '/src/_includes/commerce-only.md'
 <CommerceOnly />
 
 # placeNegotiableQuoteOrderV2 mutation
+
+This mutation is part of the Storefront Compatibility Package / B2B Storefront Compatibility Package and is only available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview)
 
 The `placeNegotiableQuoteOrderV2` mutation converts a negotiable quote into an order and returns the full order object.
 

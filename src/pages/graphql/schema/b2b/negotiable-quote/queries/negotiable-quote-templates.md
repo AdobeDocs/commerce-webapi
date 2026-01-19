@@ -1,5 +1,6 @@
 ---
-title: negotiableQuotes query   
+title: negotiableQuoteTemplates query  
+edition: saas
 keywords:
   - B2B
 ---
@@ -9,6 +10,8 @@ import CommerceOnly from '/src/_includes/commerce-only.md'
 <CommerceOnly />
 
 # negotiableQuoteTemplates query
+
+This mutation is part of the Storefront Compatibility Package / B2B Storefront Compatibility Package and is only available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview)
 
 The `negotiableQuoteTemplates` query returns a list of negotiable quote templates that can be viewed by the logged-in customer, including quote templates created by the customer or by subordinates in the company hierarchy.
 
