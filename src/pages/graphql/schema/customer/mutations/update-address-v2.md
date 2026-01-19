@@ -19,9 +19,6 @@ mutation {
   }
 }
 ```
-## Reference
-
-The `updateCustomerAddressV2` reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -138,8 +135,8 @@ mutation {
 
 Error | Description
 --- | ---
-`Address "uid" value should be specified` | The `uid` argument is null.
-`Could not find a address with ID "XXX"` | The customer address specified in the `uid` argument does not exist.
+`Address "uid" value must be specified` | The `uid` argument is null or empty.
+`Could not find an address with ID "XXX"` | The customer address specified in the `uid` argument does not exist.
 `Current customer does not have permission to address with ID "XXX"` | The customer tries to update the address of another customer.
 `Field "updateCustomerAddressV2" argument "uid" of type "ID!" is required but not provided.` | The `uid` argument was omitted.
 `Field "updateCustomerAddressV2" argument "uid" requires type ID!, found "XXX".` | The specified `uid` argument value has the wrong type.

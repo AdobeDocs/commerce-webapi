@@ -20,10 +20,6 @@ mutation {
 }
 ```
 
-## Reference
-
-The `deleteCustomerAddressV2` reference provides detailed information about the types and fields defined in this mutation.
-
 ## Example usage
 
 The following call deletes a customer's address.

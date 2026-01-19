@@ -10,10 +10,6 @@ Use the `guestOrder` query to retrieve details about an order placed by a guest 
 
 `{guestOrder(input: GuestOrderInformationInput!) {CustomerOrder!}}`
 
-## Reference
-
-The `guestOrder` reference provides detailed information about the types and fields defined in this query.
-
 ## Example usage
 
 **Request:**
