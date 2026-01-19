@@ -4,6 +4,8 @@ title: deleteCustomerAddress mutation
 
 # deleteCustomerAddress mutation
 
+This mutation will be deprecated in Adobe Commerce 2.4.9. We recommend using the [deleteCustomerAddressV2 mutation](./delete-address-v2.md) instead.
+
 Use the `deleteCustomerAddress` mutation to delete the specified customer address. It returns a Boolean value that indicates whether the operation was successful.
 
 We recommend you use a customer token in the header of your call to delete a customer. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session).

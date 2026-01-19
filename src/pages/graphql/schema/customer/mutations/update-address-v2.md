@@ -8,7 +8,12 @@ Use the `updateCustomerAddressV2` mutation to update the customer's address.
 
 To return or modify information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session).
 
+<InlineAlert variant="info" slots="text1" />
+
+This mutation is part of the [Storefront Compatibility Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/configuration/storefront-compatibility/v248/). It will be added to Adobe Commerce 2.4.9.
+
 ## Syntax
+
 ```graphql
 mutation {
   updateCustomerAddressV2(

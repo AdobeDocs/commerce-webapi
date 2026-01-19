@@ -4,6 +4,10 @@ title: updateCustomerAddress mutation
 
 # updateCustomerAddress mutation
 
+<InlineAlert variant="warning" slots="text" />
+
+This mutation will be deprecated in Adobe Commerce 2.4.9. We recommend using the [updateCustomerAddressV2 mutation](./update-address-v2.md) instead.
+
 Use the `updateCustomerAddress` mutation to update the customer's address.
 
 To return or modify information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session).
