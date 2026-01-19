@@ -757,6 +757,10 @@ module.exports = [
                 title: "negotiableQuotes",
                 path: "/graphql/schema/b2b/negotiable-quote/queries/quotes/",
               },
+              {
+                title: "negotiableQuoteTemplates",
+                path: "/graphql/schema/b2b/negotiable-quote/queries/negotiable-quote-templates/",
+              },
             ],
           },
           {
@@ -774,6 +778,10 @@ module.exports = [
               {
                 title: "placeNegotiableQuoteOrder",
                 path: "/graphql/schema/b2b/negotiable-quote/mutations/place-order/",
+              },
+              {
+                title: "placeNegotiableQuoteOrderV2",
+                path: "/graphql/schema/b2b/negotiable-quote/mutations/place-negotiable-quote-order-v2/",
               },
               {
                 title: "removeNegotiableQuoteItems",
@@ -802,6 +810,10 @@ module.exports = [
               {
                 title: "setNegotiableQuoteShippingMethods",
                 path: "/graphql/schema/b2b/negotiable-quote/mutations/set-shipping-methods/",
+              },
+              {
+                title: "setQuoteTemplateExpirationDate",
+                path: "/graphql/schema/b2b/negotiable-quote/mutations/set-quote-template-expiration-date/",
               },
               {
                 title: "updateNegotiableQuoteQuantities",
