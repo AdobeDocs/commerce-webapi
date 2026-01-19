@@ -31,3 +31,4 @@ The B2B negotiable quote mutations allow you to perform the following operations
    -  [Place the order V2](place-order-v2.md)
 - Manage Quote Templates
   - [Set Negotiable Quote Template Expiration Date](set-quote-template-expiration-date.md)
+  
