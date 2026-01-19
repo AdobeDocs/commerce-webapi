@@ -27,10 +27,6 @@ This query requires a valid [customer authentication token](../../../customer/mu
 }
 ```
 
-## Reference
-
-The [`negotiableQuoteTemplates`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-negotiableQuoteTemplates) reference provides detailed information about the types and fields defined in this query.
-
 ## Example usage
 
 ### Find quote templates that contain a specific string

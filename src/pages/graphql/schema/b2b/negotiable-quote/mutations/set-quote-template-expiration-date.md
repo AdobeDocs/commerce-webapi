@@ -22,10 +22,6 @@ The `setQuoteTemplateExpirationDate` mutation can be used to set an expiration d
 }
 ```
 
-## Reference
-
-The [`setQuoteTemplateExpirationDate`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-setQuoteTemplateExpirationDate) reference provides detailed information about the types and fields defined in this mutation.
-
 ## Example usage
 
 The following example sets the expiration date for a negotiable quote.
