@@ -584,6 +584,10 @@ module.exports = [
                 path: "/graphql/schema/customer/mutations/delete-address/",
               },
               {
+                title: "deleteCustomerAddressV2",
+                path: "/graphql/schema/customer/mutations/delete-address-v2/",
+              },
+              {
                 title: "exchangeExternalCustomerToken",
                 path: "/graphql/schema/customer/mutations/exchange-external-customer-token/",
               },
@@ -630,6 +634,10 @@ module.exports = [
               {
                 title: "updateCustomerAddress",
                 path: "/graphql/schema/customer/mutations/update-address/",
+              },
+              {
+                title: "updateCustomerAddressV2",
+                path: "/graphql/schema/customer/mutations/update-address-v2/",
               },
               {
                 title: "updateCustomerEmail",
