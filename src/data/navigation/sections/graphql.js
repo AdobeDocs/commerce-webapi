@@ -759,7 +759,7 @@ module.exports = [
               },
               {
                 title: "negotiableQuoteTemplates",
-                path: "/graphql/schema/b2b/negotiable-quote/queries/negotiable-quote-templates/",
+                path: "/graphql/schema/b2b/negotiable-quote/queries/templates/",
               },
             ],
           },
@@ -781,7 +781,7 @@ module.exports = [
               },
               {
                 title: "placeNegotiableQuoteOrderV2",
-                path: "/graphql/schema/b2b/negotiable-quote/mutations/place-negotiable-quote-order-v2/",
+                path: "/graphql/schema/b2b/negotiable-quote/mutations/place-order-v2/",
               },
               {
                 title: "removeNegotiableQuoteItems",

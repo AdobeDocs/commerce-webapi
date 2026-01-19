@@ -10,6 +10,10 @@ import CommerceOnly from '/src/_includes/commerce-only.md'
 
 # placeNegotiableQuoteOrder mutation
 
+<InlineAlert variant="warning" slots="text" />
+
+This mutation has been deprecated in Adobe Commerce as a Cloud Service. Use the [placeNegotiableQuoteOrderV2 mutation](./place-order-v2.md) instead.
+
 The `placeNegotiableQuoteOrder` mutation converts a negotiable quote into an order and returns an order ID.
 
 The negotiable quote must have one of the following statuses:
@@ -30,7 +34,7 @@ Perform the following actions before using the `placeNegotiableQuoteOrder` mutat
 -  [Set the shipping method](set-shipping-methods.md)
 -  [Set the payment method](set-payment-method.md)
 
-You cannot manage orders with GraphQL, because orders are part of the backend. You can use REST or SOAP calls to manage orders to their completion.
+You cannot manage orders with GraphQL, because orders are part of the backend. You can use REST calls to manage orders to their completion.
 
 ## Syntax
 

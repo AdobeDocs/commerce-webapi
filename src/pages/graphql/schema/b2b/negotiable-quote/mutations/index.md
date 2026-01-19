@@ -28,6 +28,6 @@ The B2B negotiable quote mutations allow you to perform the following operations
    -  [Set the shipping method](set-shipping-methods.md)
    -  [Set the payment method](set-payment-method.md)
    -  [Place the order](place-order.md)
-   -  [Place the order V2](place-negotiable-quote-order-v2.md)
+   -  [Place the order V2](place-order-v2.md)
 - Manage Quote Templates
   - [Set Negotiable Quote Template Expiration Date](set-quote-template-expiration-date.md)

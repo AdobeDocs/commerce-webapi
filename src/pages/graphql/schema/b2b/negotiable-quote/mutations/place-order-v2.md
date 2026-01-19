@@ -11,7 +11,9 @@ import CommerceOnly from '/src/_includes/commerce-only.md'
 
 # placeNegotiableQuoteOrderV2 mutation
 
-This mutation is part of the Storefront Compatibility Package / B2B Storefront Compatibility Package and is only available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview)
+<InlineAlert variant="info" slots="text1" />
+
+This mutation is part of the B2B Storefront Compatibility Package and is only available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview).
 
 The `placeNegotiableQuoteOrderV2` mutation converts a negotiable quote into an order and returns the full order object.
 
@@ -33,7 +35,7 @@ Perform the following actions before using the `placeNegotiableQuoteOrderV2` mut
 -  [Set the shipping method](set-shipping-methods.md)
 -  [Set the payment method](set-payment-method.md)
 
-You cannot manage orders with GraphQL, because orders are part of the backend. You can use REST or SOAP calls to manage orders to their completion.
+You cannot manage orders with GraphQL, because orders are part of the backend. You can use REST calls to manage orders to their completion.
 
 ## Syntax
 
@@ -86,6 +88,7 @@ mutation {
   }
 }
 ```
+
 ## Errors
 
 Code | Error | Description
