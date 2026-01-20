@@ -13,7 +13,7 @@ You can retrieve the token from the `CustomerOrder` object on the [`placeOrder` 
 
 ## Reference
 
-The `guestOrderByToken` reference provides detailed information about the types and fields defined in this query.
+The [`guestOrderByToken`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-guestOrderByToken) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
