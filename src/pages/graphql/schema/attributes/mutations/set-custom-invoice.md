@@ -26,7 +26,7 @@ mutation {
 
 ## Reference
 
-The [`setCustomAttributesOnInvoice`](https://developer.adobe.com/commerce/services/graphql/reference/saas-api/index.html#mutation-setCustomAttributesOnInvoice) reference provides detailed information about the types and fields defined in this mutation.
+The [`setCustomAttributesOnInvoice`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-setCustomAttributesOnInvoice) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
