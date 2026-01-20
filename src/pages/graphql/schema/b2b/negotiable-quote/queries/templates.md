@@ -11,10 +11,6 @@ import CommerceOnly from '/src/_includes/commerce-only.md'
 
 # negotiableQuoteTemplates query
 
-<InlineAlert variant="info" slots="text1" />
-
-This query is part of the B2B Storefront Compatibility Package and is only available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview).
-
 The `negotiableQuoteTemplates` query returns a list of negotiable quote templates that can be viewed by the logged-in customer, including quote templates created by the customer or by subordinates in the company hierarchy.
 
 This query requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
@@ -31,6 +27,10 @@ This query requires a valid [customer authentication token](../../../customer/mu
     ): NegotiableQuoteTemplatesOutput
 }
 ```
+
+## Reference
+
+The [`negotiableQuoteTemplates`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-negotiableQuoteTemplates) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

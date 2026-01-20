@@ -49,6 +49,12 @@ mutation {
 }
 ```
 
+<!--
+## Reference
+
+The [`placeNegotiableQuoteOrderV2`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-placeNegotiableQuoteOrderV2) reference provides detailed information about the types and fields defined in this mutation.
+ -->
+
 ## Example usage
 
 **Request:**
