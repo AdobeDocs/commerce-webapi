@@ -6,7 +6,7 @@ title: updateCustomerAddress mutation
 
 <InlineAlert variant="warning" slots="text" />
 
-This mutation has been deprecated in Adobe Commerce as a Cloud Service and will be deprecated in Adobe Commerce 2.4.9. We recommend using the [updateCustomerAddressV2 mutation](./update-address-v2.md) instead.
+This mutation has been deprecated in Adobe Commerce as a Cloud Service and will be deprecated in Adobe Commerce 2.4.9. We recommend using the [`updateCustomerAddressV2` mutation](./update-address-v2.md) instead.
 
 Use the `updateCustomerAddress` mutation to update the customer's address.
 
