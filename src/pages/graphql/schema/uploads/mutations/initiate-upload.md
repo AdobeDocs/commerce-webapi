@@ -32,11 +32,9 @@ mutation {
 }
 ```
 
-<!--
 ## Reference
 
 The [`initiateUpload`](https://developer.adobe.com/commerce/services/graphql/reference/saas-api/index.html#mutation-initiateUpload) reference provides detailed information about the types and fields defined in this mutation.
--->
 
 ## Example usage
 
