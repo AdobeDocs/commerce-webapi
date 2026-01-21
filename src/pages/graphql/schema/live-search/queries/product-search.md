@@ -18,7 +18,7 @@ See [Boundaries and Limits](https://experienceleague.adobe.com/en/docs/commerce-
 ```graphql
 productSearch(
     phrase: String!
-    context: [QueryContextInput!]
+    context: QueryContextInput!
     current_page: Int = 1
     page_size: Int = 20
     sort: [ProductSearchSortInput!]
