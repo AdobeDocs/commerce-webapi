@@ -28,7 +28,7 @@ mutation {
 
 ## Reference
 
-The [`setCustomAttributesOnCartItem`](https://developer.adobe.com/commerce/services/graphql/reference/saas-api/index.html#mutation-setCustomAttributesOnCartItem) reference provides detailed information about the types and fields defined in this mutation.
+The [`setCustomAttributesOnCartItem`](/graphql-api/saas/index.html#mutation-setCustomAttributesOnCartItem) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
