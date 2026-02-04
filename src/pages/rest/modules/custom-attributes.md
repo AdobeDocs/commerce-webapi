@@ -227,7 +227,7 @@ curl -i -X POST \
 
 ### Order
 
-The following example uses the `POST V1/order` endpoint to set custom attributes on an order.
+The following example uses the `POST V1/orders` endpoint to set custom attributes on an order.
 
 ```curl
 curl -i -X POST \
