@@ -227,7 +227,7 @@ curl -i -X POST \
 
 ### Order
 
-The following example uses the `POST V1/order` endpoint to set custom attributes on an order.
+The following example uses the `POST V1/orders` endpoint to set custom attributes on an order.
 
 ```curl
 curl -i -X POST \
@@ -252,7 +252,7 @@ curl -i -X POST \
  'https://<COMMERCE_URL>/rest/all/V1/orders'
 ```
 
-If an order item has custom attributes, they will be returned as part of the order item object in responses to requests like `GET /V1/order/items/{id}`.
+If an order item has custom attributes, they will be returned as part of the order item object in responses to requests like `GET /V1/orders/items/{id}`.
 
 ### Negotiable Quote
 
