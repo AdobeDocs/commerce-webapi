@@ -252,7 +252,7 @@ curl -i -X POST \
  'https://<COMMERCE_URL>/rest/all/V1/orders'
 ```
 
-If an order item has custom attributes, they will be returned as part of the order item object in responses to requests like `GET /V1/order/items/{id}`.
+If an order item has custom attributes, they will be returned as part of the order item object in responses to requests like `GET /V1/orders/items/{id}`.
 
 ### Negotiable Quote
 
