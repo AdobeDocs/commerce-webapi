@@ -26423,6 +26423,9 @@ definitions:
   sales-data-invoice-creation-arguments-extension-interface:
     type: object
     description: ExtensionInterface class for @see \Magento\Sales\Api\Data\InvoiceCreationArgumentsInterface
+    properties:
+      custom_capture_amount:
+        type: number
   sales-rule-data-rule-interface:
     type: object
     description: Interface RuleInterface

@@ -11031,6 +11031,91 @@
       },
       {
         "kind": "OBJECT",
+        "name": "CategoryProductView",
+        "description": "Defines the category fields available to the ProductView.",
+        "fields": [
+          {
+            "name": "name",
+            "description": "The name of the category.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "slug",
+            "description": "The slug of the category.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "level",
+            "description": "The level of the category.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "parents",
+            "description": "The parents of the category.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "CategoryProductView",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "CategoryViewV2",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
         "name": "CategoryTree",
         "description": "Contains the hierarchy of categories.",
         "fields": [
@@ -11805,11 +11890,11 @@
       {
         "kind": "INTERFACE",
         "name": "CategoryViewV2",
-        "description": null,
+        "description": "Defines a category with essential identifying fields.",
         "fields": [
           {
             "name": "slug",
-            "description": null,
+            "description": "The slug of the category.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -11825,7 +11910,7 @@
           },
           {
             "name": "name",
-            "description": null,
+            "description": "The name of the category.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -11847,6 +11932,11 @@
           {
             "kind": "OBJECT",
             "name": "CategoryNavigationView",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "CategoryProductView",
             "ofType": null
           },
           {
@@ -12390,6 +12480,33 @@
             "ofType": null
           }
         ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "CommerceOptimizerContext",
+        "description": "Commerce Optimizer entities",
+        "fields": [
+          {
+            "name": "priceBookId",
+            "description": "The priceBookId for current customer session.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
         "enumValues": null,
         "possibleTypes": null
       },
@@ -15714,6 +15831,37 @@
                 "kind": "OBJECT",
                 "name": "ProductViewLink",
                 "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "categories",
+            "description": "A list of categories in which the product is present.",
+            "args": [
+              {
+                "name": "family",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "CategoryProductView",
+                  "ofType": null
+                }
               }
             },
             "isDeprecated": false,
@@ -54532,6 +54680,37 @@
             "deprecationReason": null
           },
           {
+            "name": "categories",
+            "description": "A list of categories in which the product is present.",
+            "args": [
+              {
+                "name": "family",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "CategoryProductView",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "queryType",
             "description": "Indicates if the product was retrieved from the primary or the backup query",
             "args": [],
@@ -58749,6 +58928,22 @@
               "ofType": {
                 "kind": "OBJECT",
                 "name": "CheckoutAgreement",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "commerceOptimizer",
+            "description": "Provide necessary information to build headless storefront when Adobe Commerce is connected to Commerce Optimizer.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "CommerceOptimizerContext",
                 "ofType": null
               }
             },
@@ -68467,6 +68662,37 @@
                 "kind": "OBJECT",
                 "name": "ProductViewLink",
                 "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "categories",
+            "description": "A list of categories in which the product is present.",
+            "args": [
+              {
+                "name": "family",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "CategoryProductView",
+                  "ofType": null
+                }
               }
             },
             "isDeprecated": false,
