@@ -171,7 +171,7 @@ Layered search, or search within a search, is an attribute-based filtering syste
 
 <InlineAlert variant="info" slots="text" />
 
-Layered search is available in Live Search 4.6.0 (PaaS) or in the October 14, 2025 [Commerce Optimizer update](https://experienceleague.adobe.com/en/docs/commerce/optimizer/release-notes) (SaaS).
+Layered search is available in Live Search 4.6.0 (PaaS) or in the latest version of [Commerce Optimizer](https://experienceleague.adobe.com/en/docs/commerce/optimizer/release-notes) (SaaS).
 
 The advanced search capabilities are implemented through the `filter` parameter in the `productSearch` query using specific operators:
 
