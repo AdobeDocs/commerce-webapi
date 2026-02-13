@@ -7,7 +7,7 @@
     "url": "https://github.com/AdobeDocs/commerce-webapi"
   },
   "dependencies": {
-    "@adobe/gatsby-theme-aio": "4.15.3",
+    "@adobe/gatsby-theme-aio": "4.15.5",
     "gatsby": "4.22.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
@@ -17,8 +17,8 @@
     "remark-frontmatter": "^5.0.0",
     "remark-heading-id": "^1.0.1",
     "remark-lint-frontmatter-schema": "^3.15.4",
-    "remark-validate-links": "^13.0.1",
-    "spectaql": "^3.0.5"
+    "remark-validate-links": "13.0.1",
+    "spectaql": "^3.0.6"
   },
   "scripts": {
     "start": "NODE_OPTIONS='--max-old-space-size=8192' gatsby build && gatsby serve",

@@ -13,14 +13,18 @@ The customer mutations allow you to perform the following operations:
   * [`createCustomerAddress`](create-address.md)
   * [`createCustomerV2`](create-v2.md)
   * [`deleteCustomerAddress`](delete-address.md)
+  * [`deleteCustomerAddressV2`](delete-address-v2.md)
   * [`updateCustomer`](update.md)
   * [`updateCustomerAddress`](update-address.md)
+  * [`updateCustomerAddressV2`](update-address-v2.md)
   * [`updateCustomerEmail`](update-email.md)
   * [`updateCustomerV2`](update-v2.md)
 
 * Manage customer tokens and passwords
 
   * [`changeCustomerPassword`](change-password.md)
+  * [`exchangeExternalCustomerToken`](exchange-external-customer-token.md)
+  * | [&#8203;<Edition name="saas" />`exchangeOtpForCustomerToken`](exchange-otp-customer-token.md)
   * [`generateCustomerTokenAsAdmin`](generate-token-as-admin.md)
   * [`generateCustomerToken`](generate-token.md)
   * [`requestPasswordResetEmail`](request-password-reset-email.md)

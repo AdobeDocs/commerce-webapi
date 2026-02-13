@@ -18,7 +18,7 @@ See [Boundaries and Limits](https://experienceleague.adobe.com/en/docs/commerce-
 ```graphql
 productSearch(
     phrase: String!
-    context: [QueryContextInput!]
+    context: QueryContextInput!
     current_page: Int = 1
     page_size: Int = 20
     sort: [ProductSearchSortInput!]
@@ -384,6 +384,52 @@ filter:[
   ] 
 ```
 
+##### Error handling for categories, categoryPath, and categoryIds
+
+When sorting by category `position` with an empty or invalid `categories`, `categoryPath`, or `categoryIDs`, the Search service gracefully handles the request to prevent `FAILED_PRECONDITION` errors. This scenario commonly occurs when attempting to sort by position at the root category level, where category paths are not standardized across store views.
+
+**Behavior when an empty or invalid `categories`, `categoryPath`, or `categoryIDs` is detected with position sorting:**
+
+- Category position sort is ignored
+- The system falls back to relevance-based sorting
+- Products are returned successfully
+
+<InlineAlert variant="info" slots="text"/>
+
+Despite the empty or invalid `categories`, `categoryPath`, or `categoryIDs`, the query executes successfully and returns product data in the `data` object, sorted by relevance instead of position.
+
+**Example query:**
+
+```graphql
+{
+  productSearch(
+    phrase: "pants"
+    page_size: 8
+    filter: [
+      {
+        attribute: "categoryPath",
+        eq: null
+      }
+    ]
+    sort: [
+      {
+        attribute: "position",
+        direction: ASC
+      }
+    ]
+  ) {
+    items {
+      productView {
+        name
+        sku
+      }
+    }
+  }
+}
+```
+
+In this example, the system returns products sorted by relevance.
+
 #### categories
 
 `categories` can be used as a filter in a query when a category facet is selected in the layered navigation.
@@ -555,7 +601,7 @@ The `items` object can also optionally return highlighted text that shows the ma
 The query response can also contain the following top-level fields and objects:
 
 - `page_info` - An object that lists the `page_size` and `current_page` input arguments and the total number of pages available.
-- `suggestions` - An array of strings that include the names of products and categories that exist in the catalog that are similar to the search query.
+- `suggestions` - An array of strings that include the names of products and categories that exist in the catalog that are similar to the search query. See [Logic used for `suggestions`](#common-fields) to learn more.
 - `total_count` - The number of products returned.
 
 ## Endpoints
@@ -906,8 +952,24 @@ Field | Data Type | Description
 `items` | [[ProductSearchItem]](#productsearchitem-data-type) | An array of products returned by the query
 `page_info` | [SearchResultPageInfo](#searchresultpageinfo-data-type) | Contains information for rendering pages of search results
 `related_terms` | [String] | Reserved for future use
-`suggestions` | [String] | An array of product URL keys that are similar to the search query. A maximum of five items are returned
+`suggestions` | [String] | An array of product URL keys that are similar to the search query. A maximum of five items are returned. See **Logic used for `suggestions`** to learn more.
 `total_count` | Int | The total number of items returned
+
+**Logic used for `suggestions`**
+
+- Data from name and category path fields are used.
+- Name: `Supernova Sport Pant` will be stored in three phrases:
+  - `Supernova Sport Pant`
+  - `Sport Pant`
+  - `Pant`
+- Category path: tokenized by /, so "products/electronics/mobiles-and-accessories" will be stored as:
+  - `products`
+  - `electronics`
+  - `mobiles-and-accessories`
+
+When a search is made, the "suggestion" field is searched using a "prefix" based search and the matching phrases are returned.
+
+**Example** - If "sport" is searched, then "sport pant" will be one suggestion.
 
 #### Aggregation data type
 
