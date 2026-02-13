@@ -409,7 +409,7 @@ info:
   x-hideWelcome: false
   # Set to true to not render your intro items
   # Default: false
-  x-hideIntroItems: false
+  x-hideIntroItems: true
 
   # Set to true to not render the deprecated label
   # Default: false
@@ -440,7 +440,7 @@ info:
   x-introItems:
     # Can be a Title (for the Nav panel) + URL to simply add a link to somewhere
     - title: GraphQL guide
-      url: https://developer.adobe.com/commerce/webapi/graphql/
+      url: https://developer.adobe.com/commerce/webapi/graphql
     # Can be a Title (for the Nav panel) + description (for the Content panel)
     # - title: Important thing 1
     #   description: Some important stuff we wanted you to know. Supports `markdown`
