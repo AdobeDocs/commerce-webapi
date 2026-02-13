@@ -440,7 +440,7 @@ info:
   x-introItems:
     # Can be a Title (for the Nav panel) + URL to simply add a link to somewhere
     - title: GraphQL guide
-      url: https://developer.adobe.com/commerce/webapi/graphql?reload=true
+      url: https://developer.adobe.com/commerce/webapi/graphql#
     # Can be a Title (for the Nav panel) + description (for the Content panel)
     # - title: Important thing 1
     #   description: Some important stuff we wanted you to know. Supports `markdown`
