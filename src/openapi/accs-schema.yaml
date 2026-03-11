@@ -16,6 +16,7 @@ schemes:
 - https
 tags:
 - name: addresses/{addressId}
+- name: adminuisdk/appmanagement/validate
 - name: adminuisdk/massaction/{request_id}
 - name: adminuisdk/orderviewbutton/{request_id}
 - name: adobe_io_events/check_configuration
@@ -119,6 +120,7 @@ tags:
 - name: creditmemo/{id}/emails
 - name: creditmemo/refund
 - name: creditmemos
+- name: custom-email/send
 - name: customerGroups
 - name: customerGroups/{id}
 - name: customerGroups/{id}/permissions
@@ -140,6 +142,7 @@ tags:
 - name: customers/addresses/{addressId}
 - name: customers/companies
 - name: customers/confirm
+- name: customers/otp
 - name: customers/search
 - name: customers/validate
 - name: customerSegments/search
@@ -419,6 +422,44 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: addresses/{addressId}
+  "/V1/adminuisdk/appmanagement/validate":
+    post:
+      tags:
+      - adminuisdk/appmanagement/validate
+      description: Validate App Management User token
+      operationId: PostV1AdminuisdkAppmanagementValidate
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PostV1AdminuisdkAppmanagementValidateBody
+        in: body
+        schema:
+          required:
+          - orgId
+          properties:
+            orgId:
+              type: string
+          type: object
+          xml:
+            name: request
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/commerce-backend-uix-data-app-management-validation-result-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: adminuisdk/appmanagement/validate
   "/V1/adminuisdk/massaction/{request_id}":
     get:
       tags:
@@ -5779,6 +5820,58 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: creditmemos
+  "/V1/custom-email/send":
+    post:
+      tags:
+      - custom-email/send
+      description: Send an email using the given template ID and variables.
+      operationId: PostV1CustomemailSend
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PostV1CustomemailSendBody
+        in: body
+        schema:
+          required:
+          - templateId
+          - recipientEmail
+          properties:
+            templateId:
+              type: integer
+              description: Email template ID
+            recipientEmail:
+              type: string
+              description: Recipient email address
+            variables:
+              type: array
+              description: Template variables (key-value map for placeholder substitution)
+              items:
+                type: string
+          type: object
+          xml:
+            name: request
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/custom-email-send-data-send-email-response-interface"
+        '400':
+          description: 400 Bad Request
+          schema:
+            "$ref": "#/definitions/error-response"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: custom-email/send
   "/V1/customerGroups":
     post:
       tags:
@@ -6453,6 +6546,49 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: customers/confirm
+  "/V1/customers/otp":
+    post:
+      tags:
+      - customers/otp
+      description: Generate a one-time password for the customer identified by email.
+        The OTP can be used with the exchangeOtpForCustomerToken GraphQL mutation.
+        Returns a successful response even when the customer does not exist (prevents
+        user enumeration).
+      operationId: PostV1CustomersOtp
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PostV1CustomersOtpBody
+        in: body
+        schema:
+          required:
+          - email
+          properties:
+            email:
+              type: string
+            reason:
+              type: string
+          type: object
+          xml:
+            name: request
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/otp-rest-data-otp-response-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: customers/otp
   "/V1/customers/search":
     get:
       tags:
@@ -24604,10 +24740,6 @@ definitions:
         type: array
         items:
           "$ref": "#/definitions/tax-data-order-tax-item-interface"
-      custom_fees:
-        type: array
-        items:
-          "$ref": "#/definitions/admin-ui-sdk-custom-fees-data-custom-fees-interface"
       gift_cards:
         type: array
         items:
@@ -24736,6 +24868,10 @@ definitions:
         type: number
       base_reward_currency_amount:
         type: number
+      custom_fees:
+        type: array
+        items:
+          "$ref": "#/definitions/admin-ui-sdk-custom-fees-data-custom-fees-interface"
   sales-data-shipping-assignment-interface:
     type: object
     description: Interface ShippingAssignmentInterface
@@ -24993,6 +25129,27 @@ definitions:
   tax-data-order-tax-extension-interface:
     type: object
     description: ExtensionInterface class for @see \Magento\Tax\Api\Data\OrderTaxInterface
+  gift-card-account-data-gift-card-interface:
+    type: object
+    description: Gift Card data
+    properties:
+      id:
+        type: integer
+        description: Id
+      code:
+        type: string
+        description: Code
+      amount:
+        type: number
+        description: Amount
+      base_amount:
+        type: number
+        description: Base Amount
+    required:
+    - id
+    - code
+    - amount
+    - base_amount
   admin-ui-sdk-custom-fees-data-custom-fees-interface:
     type: object
     description: Interface CustomFeesInterface
@@ -25051,27 +25208,6 @@ definitions:
     - base_custom_fee_amount_refunded
     - apply_fee_on_last_invoice
     - apply_fee_on_last_creditmemo
-  gift-card-account-data-gift-card-interface:
-    type: object
-    description: Gift Card data
-    properties:
-      id:
-        type: integer
-        description: Id
-      code:
-        type: string
-        description: Code
-      amount:
-        type: number
-        description: Amount
-      base_amount:
-        type: number
-        description: Base Amount
-    required:
-    - id
-    - code
-    - amount
-    - base_amount
   sales-data-order-search-result-interface:
     type: object
     description: Order search result interface. An order is a document that a web
@@ -26996,6 +27132,15 @@ definitions:
     - error_status
     - error_message
     - request_timestamp
+  commerce-backend-uix-data-app-management-validation-result-interface:
+    type: object
+    description: App Management User Validation Result Interface
+    properties:
+      authorized:
+        type: boolean
+        description: Authorization status
+    required:
+    - authorized
   company-data-company-search-results-interface:
     type: object
     description: Interface for company search results
@@ -28099,6 +28244,31 @@ definitions:
     - asset_id
     - roles
     - url
+  custom-email-send-data-send-email-response-interface:
+    type: object
+    description: Response DTO after accepting a custom email for delivery.
+    properties:
+      message:
+        type: string
+        description: Message (e.g. "Email accepted for delivery").
+      reference_id:
+        type: string
+        description: Reference ID for this send request.
+      recipient_email:
+        type: string
+        description: Email address.
+      template_id:
+        type: integer
+        description: ID used.
+      template_code:
+        type: string
+        description: Code (name) from the template record.
+    required:
+    - message
+    - reference_id
+    - recipient_email
+    - template_id
+    - template_code
   out-of-process-payment-methods-data-out-of-process-payment-method-interface:
     type: object
     description: ''
@@ -29075,6 +29245,15 @@ definitions:
     - items
     - search_criteria
     - total_count
+  otp-rest-data-otp-response-interface:
+    type: object
+    description: Response containing the one-time password for customer login.
+    properties:
+      otp:
+        type: string
+        description: The one-time password.
+    required:
+    - otp
   out-of-process-observability-data-subscription-search-result-interface:
     type: object
     description: Search result interface for observability subscriptions
@@ -29215,6 +29394,15 @@ definitions:
     - active
     - stores
     - credit_memo_tax_enabled
+  adobe-commerce-webhooks-core-saas-data-supported-webhook-interface:
+    type: object
+    description: Interface for supported webhook data returned in webapi requests
+    properties:
+      name:
+        type: string
+        description: The supported webhook name
+    required:
+    - name
   rma-data-track-interface:
     type: object
     description: Interface TrackInterface
@@ -29520,15 +29708,6 @@ definitions:
         description: The supported event name
     required:
     - name
-  adobe-commerce-webhooks-core-saas-data-supported-webhook-interface:
-    type: object
-    description: Interface for supported webhook data returned in webapi requests
-    properties:
-      name:
-        type: string
-        description: The supported webhook name
-    required:
-    - name
   customer-segment-storefront-compatibility-data-customer-segment-search-results-interface:
     type: object
     description: ''
@@ -29585,6 +29764,7 @@ x-tagGroups:
   - addresses/{addressId}
 - name: adminuisdk
   tags:
+  - adminuisdk/appmanagement/validate
   - adminuisdk/massaction/{request_id}
   - adminuisdk/orderviewbutton/{request_id}
 - name: adobe_io_events
@@ -29714,6 +29894,9 @@ x-tagGroups:
 - name: creditmemos
   tags:
   - creditmemos
+- name: custom email
+  tags:
+  - custom-email/send
 - name: customerGroups
   tags:
   - customerGroups
@@ -29732,6 +29915,7 @@ x-tagGroups:
   - customers/addresses/{addressId}
   - customers/companies
   - customers/confirm
+  - customers/otp
   - customers/search
   - customers/validate
   - customers/{customerId}
