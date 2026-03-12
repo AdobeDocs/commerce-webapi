@@ -18,7 +18,7 @@ See [Boundaries and Limits](https://experienceleague.adobe.com/en/docs/commerce-
 ```graphql
 productSearch(
     phrase: String!
-    context: [QueryContextInput!]
+    context: QueryContextInput!
     current_page: Int = 1
     page_size: Int = 20
     sort: [ProductSearchSortInput!]
@@ -167,11 +167,11 @@ Use the [`attributeMetadata` query](./attribute-metadata.md) to return a list of
 
 #### Layered search and expansion of search types
 
-Layered search, or search within a search, is a powerful, attribute-based filtering system that extends the traditional search functionality to include additional search parameters. These additional search parameters allow more precise and flexible product discovery. See the [merchant documentation](https://experienceleague.adobe.com/en/docs/commerce/live-search/workspace) to learn why a merchant would implement layered search for their storefront.
+Layered search, or search within a search, is an attribute-based filtering system that extends the traditional search functionality to include additional search parameters. These additional search parameters allow more precise and flexible product discovery. See the [merchant documentation](https://experienceleague.adobe.com/en/docs/commerce/live-search/workspace#layered-search-and-expansion-of-search-types) to learn how to update the search types in the Admin to enable layered search.
 
 <InlineAlert variant="info" slots="text" />
 
-Layered search is available in Live Search 4.6.0.
+Layered search is available in Live Search 4.6.0 (PaaS) or in the latest version of [Commerce Optimizer](https://experienceleague.adobe.com/en/docs/commerce/optimizer/release-notes) (SaaS).
 
 The advanced search capabilities are implemented through the `filter` parameter in the `productSearch` query using specific operators:
 
@@ -383,6 +383,52 @@ filter:[
     }
   ] 
 ```
+
+##### Error handling for categories, categoryPath, and categoryIds
+
+When sorting by category `position` with an empty or invalid `categories`, `categoryPath`, or `categoryIDs`, the Search service gracefully handles the request to prevent `FAILED_PRECONDITION` errors. This scenario commonly occurs when attempting to sort by position at the root category level, where category paths are not standardized across store views.
+
+**Behavior when an empty or invalid `categories`, `categoryPath`, or `categoryIDs` is detected with position sorting:**
+
+- Category position sort is ignored
+- The system falls back to relevance-based sorting
+- Products are returned successfully
+
+<InlineAlert variant="info" slots="text"/>
+
+Despite the empty or invalid `categories`, `categoryPath`, or `categoryIDs`, the query executes successfully and returns product data in the `data` object, sorted by relevance instead of position.
+
+**Example query:**
+
+```graphql
+{
+  productSearch(
+    phrase: "pants"
+    page_size: 8
+    filter: [
+      {
+        attribute: "categoryPath",
+        eq: null
+      }
+    ]
+    sort: [
+      {
+        attribute: "position",
+        direction: ASC
+      }
+    ]
+  ) {
+    items {
+      productView {
+        name
+        sku
+      }
+    }
+  }
+}
+```
+
+In this example, the system returns products sorted by relevance.
 
 #### categories
 

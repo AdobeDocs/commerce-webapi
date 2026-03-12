@@ -16,10 +16,11 @@ To install custom attributes in Adobe Commerce:
    composer require magento/out-of-process-custom-attributes=^0.2.0  --with-dependencies
    ```
 
-1. Enable the new module:
+1. Enable the new modules:
 
    ```bash
-   bin/magento module:enable Magento_OutOfProcessCustomAttributes
+   bin/magento module:enable Magento_CustomAttributeSerializable
+   bin/magento module:enable Magento_CustomAttributeSerializableGraphQl
    ```
 
 1. For on-premises installations, run the following command to upgrade Adobe Commerce and clear the cache.

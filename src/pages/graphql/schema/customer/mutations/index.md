@@ -13,8 +13,10 @@ The customer mutations allow you to perform the following operations:
   * [`createCustomerAddress`](create-address.md)
   * [`createCustomerV2`](create-v2.md)
   * [`deleteCustomerAddress`](delete-address.md)
+  * [`deleteCustomerAddressV2`](delete-address-v2.md)
   * [`updateCustomer`](update.md)
   * [`updateCustomerAddress`](update-address.md)
+  * [`updateCustomerAddressV2`](update-address-v2.md)
   * [`updateCustomerEmail`](update-email.md)
   * [`updateCustomerV2`](update-v2.md)
 

@@ -584,6 +584,10 @@ module.exports = [
                 path: "/graphql/schema/customer/mutations/delete-address/",
               },
               {
+                title: "deleteCustomerAddressV2",
+                path: "/graphql/schema/customer/mutations/delete-address-v2/",
+              },
+              {
                 title: "exchangeExternalCustomerToken",
                 path: "/graphql/schema/customer/mutations/exchange-external-customer-token/",
               },
@@ -630,6 +634,10 @@ module.exports = [
               {
                 title: "updateCustomerAddress",
                 path: "/graphql/schema/customer/mutations/update-address/",
+              },
+              {
+                title: "updateCustomerAddressV2",
+                path: "/graphql/schema/customer/mutations/update-address-v2/",
               },
               {
                 title: "updateCustomerEmail",
@@ -757,6 +765,10 @@ module.exports = [
                 title: "negotiableQuotes",
                 path: "/graphql/schema/b2b/negotiable-quote/queries/quotes/",
               },
+              {
+                title: "negotiableQuoteTemplates",
+                path: "/graphql/schema/b2b/negotiable-quote/queries/templates/",
+              },
             ],
           },
           {
@@ -774,6 +786,10 @@ module.exports = [
               {
                 title: "placeNegotiableQuoteOrder",
                 path: "/graphql/schema/b2b/negotiable-quote/mutations/place-order/",
+              },
+              {
+                title: "placeNegotiableQuoteOrderV2",
+                path: "/graphql/schema/b2b/negotiable-quote/mutations/place-order-v2/",
               },
               {
                 title: "removeNegotiableQuoteItems",
@@ -802,6 +818,10 @@ module.exports = [
               {
                 title: "setNegotiableQuoteShippingMethods",
                 path: "/graphql/schema/b2b/negotiable-quote/mutations/set-shipping-methods/",
+              },
+              {
+                title: "setQuoteTemplateExpirationDate",
+                path: "/graphql/schema/b2b/negotiable-quote/mutations/set-quote-template-expiration-date/",
               },
               {
                 title: "updateNegotiableQuoteQuantities",
@@ -1536,6 +1556,11 @@ module.exports = [
       {
         title: "SaaS",
         path: "https://developer.adobe.com/commerce/webapi/reference/graphql/saas/",
+        EventTarget: "_top"
+      },
+      {
+        title: "2.4.9-beta-1",
+        path: "https://developer.adobe.com/commerce/webapi/reference/graphql/2.4.9-beta-1/",
         EventTarget: "_top"
       },
       {

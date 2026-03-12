@@ -160,7 +160,7 @@ DELETE <server-path>/async/bulk/V1/cmsPage/byPageId
 
 ## Store scopes
 
-<edition name="paas" />
+<Edition name="paas" />
 
 You can specify a store code (which is labeled in the Admin as store view code) in the route of an asynchronous endpoint so that it operates on a specific store, as shown below:
 
@@ -180,7 +180,7 @@ PUT /all/async/bulk/V1/products/bySku
 
 ## Fallback and creating/updating objects when setting store scopes
 
-<edition name="paas" />
+<Edition name="paas" />
 
 When you create or update an object, such as a product, you can specify the store code in the request. If you do not specify a store code, Commerce uses the default store scope.
 The following rules apply when you create or update an object, such as a product.
