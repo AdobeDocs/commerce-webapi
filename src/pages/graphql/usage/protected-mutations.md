@@ -44,7 +44,7 @@ The following table lists the forms and mutations that can be configured to requ
 
 Field name | Mutation
 --- | ---
-Enable for Customer Login | `generateCustomerToken`
+Enable for Customer Login | `generateCustomerToken`,<br/><Edition name="saas" /> `exchangeOtpForCustomerToken`
 Enable for Forgot Password | `changeCustomerPassword`
 Enable for Create New Customer Account | `createCustomer`, `createCustomerV2`
 Enable for Edit Customer Account | `updateCustomer`, `updateCustomerV2`

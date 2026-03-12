@@ -36,6 +36,10 @@ module.exports = [
           path: "/reference/graphql/saas"
         },
         {
+          title: "2.4.9-beta-1 Reference",
+          path: "/reference/graphql/2.4.9-beta-1",
+        },
+        {
           title: "2.4.8 Reference",
           path: "/reference/graphql/2.4.8",
         },

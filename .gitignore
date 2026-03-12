@@ -6,6 +6,7 @@
 .history
 .idea
 .editorconfig
+.cursor
 
 # npm yarn
 node_modules

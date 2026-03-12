@@ -25,4 +25,4 @@ This **5-step tutorial** generally takes **45 minutes**.
 
 ### Other resources
 
-*  [REST Tutorials](/rest/tutorials/index/) provides additional information about completing any Commerce REST tutorial.
+*  [REST Tutorials](../index.md) provides additional information about completing any Commerce REST tutorial.

@@ -207,7 +207,7 @@ The following example returns the purchase order information.
           "items": [
             {
               "product": {
-                "sku": "Simple product"
+                "sku": "Simple-product"
               }
             }
           ],
