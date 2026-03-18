@@ -1362,6 +1362,80 @@ module.exports = [
     ],
   },
   {
+    title: "Merchant Services Schema",
+    path: "/graphql/schema/merchant-services/",
+    pages: [
+      {
+        title: "Catalog Service",
+        path: "/graphql/schema/catalog-service/",
+        pages:[
+          {
+            title: "Queries",
+            path: "/graphql/schema/catalog-service/queries/",
+            pages: [
+              {
+                title: "categories",
+                path: "/graphql/schema/catalog-service/queries/categories.md",
+              },
+              {
+                title: "products",
+                path: "/graphql/schema/catalog-service/queries/products.md"
+              },
+              {
+                title: "productSearch",
+                path: "/graphql/schema/live-search/queries/product-search.md",
+              },
+              {
+                title: "refineProduct",
+                path: "/graphql/schema/catalog-service/queries/refine-product.md"
+              },
+              {
+                title: "variants",
+                path: "/graphql/schema/catalog-service/queries/product-variants.md"
+              }
+            ],
+          },
+        ],
+      },
+      {
+        title: "Live Search",
+        path: "/graphql/schema/live-search",
+        pages: [
+          {
+            title: "Queries",
+            path: "/graphql/schema/live-search/queries/",
+            pages: [
+              {
+                title: "attributeMetadata",
+                path: "/graphql/schema/live-search/queries/attribute-metadata/",
+              },
+              {
+                title: "productSearch",
+                path: "/graphql/schema/live-search/queries/product-search/",
+              }
+            ],
+          }
+        ]
+      },
+      {
+        title: "Product Recommendations",
+        path: "/graphql/schema/product-recommendations/",
+        pages: [
+          {
+            title: "Queries",
+            path: "/graphql/schema/product-recommendations/queries/",
+            pages: [
+              {
+                title: "recommendations",
+                path: "/graphql/schema/product-recommendations/queries/recommendations/",
+              }
+            ]
+          },
+        ]
+      }
+    ]
+  },
+  {
     title: "Core payment methods",
     path: "/graphql/payment-methods/",
     pages: [
