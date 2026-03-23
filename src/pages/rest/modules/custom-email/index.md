@@ -1,6 +1,6 @@
 ---
 title: Email triggering through REST
-description: Learn how to trigger transactional emails on demand using the REST API by specifying a template ID, recipient email, and template variables for Adobe Commerce as a Cloud Service.
+description: Learn how to trigger transactional emails using the REST API for Adobe Commerce as a Cloud Service.
 edition: saas
 keywords:
   - REST
@@ -32,7 +32,7 @@ The following section explains how to send transactional emails on demand using 
 ### Endpoint
 
 -  **URL** - `POST /rest/V1/custom-email/send`
--  **Authorization** - Only **service-to-service IMS authorization** is supported. The caller must have access to the **Send Custom Email via API** (`Magento_CustomEmailSend::send_custom_email`) resource. Refer to [REST authentication](../authentication/) for more information.
+-  **Authorization** - Only **service-to-service IMS authorization** is supported. The caller must have access to the **Send Custom Email via API** (`Magento_CustomEmailSend::send_custom_email`) resource. Refer to [REST authentication](../../authentication/) for more information.
 -  **Async usage** (recommended) - Although this endpoint is implemented synchronously, we recommend calling it using the **asynchronous REST API** so that the request is queued and processed by a consumer, avoiding long-lived HTTP connections. In Adobe Commerce as a Cloud Service, you can use the route with `/async` after `V1`, for example: `POST https://<server>.api.commerce.adobe.com/<tenant-id>/V1/async/custom-email/send`.
 
    Refer to [Asynchronous web endpoints](../../use-rest/asynchronous-web-endpoints.md) for more information.
