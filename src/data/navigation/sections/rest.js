@@ -486,6 +486,14 @@ module.exports = [
             path: "/rest/modules/custom-attributes/"
         },
         {
+            title: "Custom email",
+            path: "/rest/modules/custom-email/"
+        },
+        {
+            title: "Gift card accounts",
+            path: "/rest/modules/gift-card-accounts/"
+        },
+        {
             title: "Import",
             path: "/rest/modules/import/"
         },
