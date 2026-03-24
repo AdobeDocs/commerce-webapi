@@ -501,7 +501,7 @@ module.exports = [
   },
   {
     title: "SaaS integrations",
-    path: "/rest/saas-integrations/custom-email/",
+    path: "/rest/saas-integrations/",
     pages: [
         {
             title: "Custom email",

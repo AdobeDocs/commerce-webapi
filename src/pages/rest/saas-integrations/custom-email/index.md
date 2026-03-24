@@ -46,9 +46,33 @@ The following section explains how to send transactional emails on demand using 
 
    If you are not using variables, pass an empty object or omit it. In the email template body and subject, use the variable syntax to reference a variable, for example `var order_id`. The subject also supports the same custom variables and syntax described in [Supported template scenarios](#supported-template-scenarios).
 
+### Example request
+
+```json
+{
+  "templateId": 5,
+  "recipientEmail": "john@example.com",
+  "variables": {
+    "customer_name": "John",
+    "order_id": "100000123",
+    "delivery_date": "Feb 15"
+  }
+}
+```
+
 ### Success response (HTTP 200)
 
 The API returns HTTP 200 on successful send.
+
+```json
+{
+  "message": "Email accepted for delivery",
+  "reference_id": "a1b2c3d4e5f6-1707571800",
+  "recipient_email": "john@example.com",
+  "template_id": 5,
+  "template_code": "order_update_notification"
+}
+```
 
 ### Error responses
 
