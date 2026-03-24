@@ -1550,6 +1550,16 @@ module.exports = [
     ],
   },
   {
+    title: "SaaS integrations",
+    path: "/graphql/saas-integrations/",
+    pages: [
+        {
+            title: "Login as Customer",
+            path: "/graphql/saas-integrations/login-as-customer/"
+        },
+    ],
+  },
+  {
     title: "Reference",
     path: "/graphql/reference/",
     pages: [
