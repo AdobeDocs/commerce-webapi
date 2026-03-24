@@ -41,4 +41,4 @@ curl -X POST "https://<host>/rest/V1/customer/:customerId/otp" \
 
 ## Next steps
 
-After generating an OTC, you exchange it for a customer access token using one of the available GraphQL mutations. See [Login as Customer GraphQL](/graphql/saas-integrations/login-as-customer/) for details.
+After generating an OTC, you exchange it for a customer access token using one of the available GraphQL mutations. See the [`generateCustomerToken` mutation](../../../graphql/schema/customer/mutations/generate-token.md) for details.
