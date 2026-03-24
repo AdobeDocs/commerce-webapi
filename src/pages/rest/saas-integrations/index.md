@@ -7,7 +7,7 @@ keywords:
 
 # SaaS Integrations Overview
 
-Review the following topics to learn more about REST APIs available for Adobe Commerce as a Cloud Service:
+Review the following topics to learn more about REST APIs available only on Adobe Commerce as a Cloud Service:
 
 - [Custom email](./custom-email/)
 - [Gift card accounts](./gift-card-accounts/)
