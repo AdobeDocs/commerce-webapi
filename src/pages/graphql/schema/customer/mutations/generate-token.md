@@ -9,7 +9,27 @@ Use the `generateCustomerToken` mutation to create a new customer token.
 
 To return or modify information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session).
 
+## Using `generateCustomerToken` to log in as a customer
+
 The [Login as Customer](../../../../rest/saas-integrations/login-as-customer/) workflow allows administrators to generate a one-time code (OTC) for a customer, then exchange it for a customer access token. This is useful for support sessions, admin UIs, scripts, or third-party integrations that need to act on behalf of a customer.
+
+<InlineAlert variant="info" slots="text"/>
+
+To log in as a customer, you must enable the [customer account permission for remote shopping assistance](https://experienceleague.adobe.com/en/docs/commerce-admin/customers/customer-accounts/manage/login-as-customer#customer-account-permission-for-remote-shopping-assistance).
+
+To enable permission for remote shopping assistance with GraphQL for an existing customer account, use the [`updateCustomerV2`](update-v2.md) mutation.
+
+**Query** (`updateCustomerV2`):
+
+```graphql
+mutation {
+  updateCustomerV2(input: { allow_remote_shopping_assistance: true }) {
+    customer {
+      allow_remote_shopping_assistance
+    }
+  }
+}
+```
 
 After generating an OTC (from the Admin UI or REST API), you can use the `generateCustomerToken` mutation to exchange it for a customer access token.
 
