@@ -12,4 +12,4 @@ Review the following topics to learn more about REST APIs available only on Adob
 - [Custom email](./custom-email/)
 - [Gift card accounts](./gift-card-accounts/)
 - [Login as Customer](./login-as-customer/)
-- [S3 uploads](/rest/modules/s3-uploads/)
+- [S3 uploads](./s3-uploads/)
