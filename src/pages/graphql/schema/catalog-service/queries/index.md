@@ -8,6 +8,10 @@ keywords:
 
 # Catalog Service queries
 
+<InlineAlert variant="info" slots="text"/>
+
+If you are implementing your Commerce catalog using Adobe Commerce Optimizer, see [Retrieve catalog data](https://developer.adobe.com/commerce/services/optimizer/merchandising-services/using-the-api/) in the _Adobe Commerce Optimizer Developer Guide_.
+
 Catalog Service provides the following queries:
 
 *  [`categories`](categories.md)
