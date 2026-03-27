@@ -10,6 +10,8 @@ This section describes the following queries:
 * [`category`](category.md)
 * [`categoryList`](category-list.md)
 * [`compareList`](compare-list.md)
+* [`isSubscribedProductAlertPrice`](is-subscribed-product-alert-price.md)
+* [`isSubscribedProductAlertStock`](is-subscribed-product-alert-stock.md)
 * [`productReviewRatingsMetadata`](product-review-ratings-metadata.md)
 * [`products`](products.md)
 * [`route`](route.md)

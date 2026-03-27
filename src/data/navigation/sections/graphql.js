@@ -968,6 +968,14 @@ module.exports = [
                 path: "/graphql/schema/products/queries/compare-list/",
               },
               {
+                title: "isSubscribedProductAlertPrice",
+                path: "/graphql/schema/products/queries/is-subscribed-product-alert-price/",
+              },
+              {
+                title: "isSubscribedProductAlertStock",
+                path: "/graphql/schema/products/queries/is-subscribed-product-alert-stock/",
+              },
+              {
                 title: "products",
                 path: "/graphql/schema/products/queries/products/",
               },
@@ -1008,6 +1016,30 @@ module.exports = [
               {
                 title: "removeProductsFromCompareList",
                 path: "/graphql/schema/products/mutations/remove-from-compare-list/",
+              },
+              {
+                title: "subscribeProductAlertPrice",
+                path: "/graphql/schema/products/mutations/subscribe-product-alert-price/",
+              },
+              {
+                title: "subscribeProductAlertStock",
+                path: "/graphql/schema/products/mutations/subscribe-product-alert-stock/",
+              },
+              {
+                title: "unsubscribeProductAlertPrice",
+                path: "/graphql/schema/products/mutations/unsubscribe-product-alert-price/",
+              },
+              {
+                title: "unsubscribeProductAlertPriceAll",
+                path: "/graphql/schema/products/mutations/unsubscribe-product-alert-price-all/",
+              },
+              {
+                title: "unsubscribeProductAlertStock",
+                path: "/graphql/schema/products/mutations/unsubscribe-product-alert-stock/",
+              },
+              {
+                title: "unsubscribeProductAlertStockAll",
+                path: "/graphql/schema/products/mutations/unsubscribe-product-alert-stock-all/",
               },
             ],
           },
