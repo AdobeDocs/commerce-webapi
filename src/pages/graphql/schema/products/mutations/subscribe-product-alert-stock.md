@@ -19,11 +19,9 @@ mutation {
 }
 ```
 
-<!--
 ## Reference
 
 The [`subscribeProductAlertStock`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-subscribeProductAlertStock) reference provides detailed information about the types and fields defined in this mutation.
--->
 
 ## Example usage
 

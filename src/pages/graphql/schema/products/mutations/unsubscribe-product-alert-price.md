@@ -19,11 +19,9 @@ mutation {
 }
 ```
 
-<!--
 ## Reference
 
 The [`unsubscribeProductAlertPrice`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-unsubscribeProductAlertPrice) reference provides detailed information about the types and fields defined in this mutation.
--->
 
 ## Example usage
 
