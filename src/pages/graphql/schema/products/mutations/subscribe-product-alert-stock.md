@@ -54,8 +54,6 @@ mutation {
   }
 }
 ```
-
-
 ## Errors
 
 Error | Description
