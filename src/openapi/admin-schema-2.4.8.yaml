@@ -48,6 +48,8 @@ tags:
 - name: bundle-products/options/types
 - name: carts/
 - name: carts/{cartId}
+- name: carts/{cartId}/balance/apply
+- name: carts/{cartId}/balance/unapply
 - name: carts/{cartId}/billing-address
 - name: carts/{cartId}/coupons
 - name: carts/{cartId}/coupons/{couponCode}
@@ -167,6 +169,7 @@ tags:
 - name: customerGroups/search
 - name: customers
 - name: customers/{customerId}
+- name: customers/{customerId}/balance/{websiteId}
 - name: customers/{customerId}/billingAddress
 - name: customers/{customerId}/carts
 - name: customers/{customerId}/companies
@@ -3588,6 +3591,88 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: carts/{cartId}
+  "/V1/carts/{cartId}/balance/apply":
+    post:
+      tags:
+      - carts/{cartId}/balance/apply
+      description: Apply store credit balance to a specified cart.
+      operationId: PostV1CartsCartIdBalanceApply
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: cartId
+        in: path
+        type: integer
+        required: true
+        description: The cart ID.
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            type: boolean
+            description: true on success
+        '400':
+          description: 400 Bad Request
+          schema:
+            "$ref": "#/definitions/error-response"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: carts/{cartId}/balance/apply
+  "/V1/carts/{cartId}/balance/unapply":
+    delete:
+      tags:
+      - carts/{cartId}/balance/unapply
+      description: Unapply store credit balance from a specified cart.
+      operationId: DeleteV1CartsCartIdBalanceUnapply
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: cartId
+        in: path
+        type: integer
+        required: true
+        description: The cart ID.
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            type: boolean
+            description: true on success
+        '400':
+          description: 400 Bad Request
+          schema:
+            "$ref": "#/definitions/error-response"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: carts/{cartId}/balance/unapply
   "/V1/carts/{cartId}/billing-address":
     get:
       tags:
@@ -9046,6 +9131,55 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: customers/{customerId}
+  "/V1/customers/{customerId}/balance/{websiteId}":
+    get:
+      tags:
+      - customers/{customerId}/balance/{websiteId}
+      description: Get store credit balance for a specified customer and website.
+      operationId: GetV1CustomersCustomerIdBalanceWebsiteId
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: customerId
+        in: path
+        type: integer
+        required: true
+        description: The customer ID.
+      - name: websiteId
+        in: path
+        type: integer
+        required: true
+        description: The website ID.
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/customer-balance-data-balance-interface"
+        '400':
+          description: 400 Bad Request
+          schema:
+            "$ref": "#/definitions/error-response"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '404':
+          description: 404 Not Found
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: customers/{customerId}/balance/{websiteId}
   "/V1/customers/{customerId}/billingAddress":
     get:
       tags:
@@ -24785,6 +24919,27 @@ definitions:
         description: Stack trace
     required:
     - message
+  customer-balance-data-balance-interface:
+    type: object
+    description: Store credit balance interface.
+    properties:
+      balance_id:
+        type: integer
+        description: Balance ID
+      customer_id:
+        type: integer
+        description: Customer ID
+      website_id:
+        type: integer
+        description: Website ID
+      amount:
+        type: number
+        description: Balance amount
+    required:
+    - balance_id
+    - customer_id
+    - website_id
+    - amount
   error-errors:
     type: array
     description: Errors list
@@ -35902,6 +36057,8 @@ x-tagGroups:
   - carts/mine/totals-information
   - carts/search
   - carts/{cartId}
+  - carts/{cartId}/balance/apply
+  - carts/{cartId}/balance/unapply
   - carts/{cartId}/billing-address
   - carts/{cartId}/coupons
   - carts/{cartId}/coupons/deleteByCodes
@@ -36022,6 +36179,7 @@ x-tagGroups:
   - customers/search
   - customers/validate
   - customers/{customerId}
+  - customers/{customerId}/balance/{websiteId}
   - customers/{customerId}/billingAddress
   - customers/{customerId}/carts
   - customers/{customerId}/companies
