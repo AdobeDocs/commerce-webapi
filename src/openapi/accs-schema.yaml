@@ -16,6 +16,7 @@ schemes:
 - https
 tags:
 - name: addresses/{addressId}
+- name: adminuisdk/appmanagement/validate
 - name: adminuisdk/massaction/{request_id}
 - name: adminuisdk/orderviewbutton/{request_id}
 - name: adobe_io_events/check_configuration
@@ -119,6 +120,8 @@ tags:
 - name: creditmemo/{id}/emails
 - name: creditmemo/refund
 - name: creditmemos
+- name: custom-email/send
+- name: customer/{customerId}/otp
 - name: customerGroups
 - name: customerGroups/{id}
 - name: customerGroups/{id}/permissions
@@ -143,6 +146,8 @@ tags:
 - name: customers/search
 - name: customers/validate
 - name: customerSegments/search
+- name: directory/countries
+- name: directory/countries/{countryId}
 - name: eav/attribute-sets
 - name: eav/attribute-sets/{attributeSetId}
 - name: eav/attribute-sets/list
@@ -158,6 +163,9 @@ tags:
 - name: gift-wrappings
 - name: gift-wrappings/{id}
 - name: gift-wrappings/{wrappingId}
+- name: giftcardaccounts
+- name: giftcardaccounts/{id}
+- name: giftcardaccounts/code/{code}
 - name: hierarchy/{id}
 - name: hierarchy/move/{id}
 - name: import/json
@@ -419,6 +427,44 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: addresses/{addressId}
+  "/V1/adminuisdk/appmanagement/validate":
+    post:
+      tags:
+      - adminuisdk/appmanagement/validate
+      description: Validate App Management User token
+      operationId: PostV1AdminuisdkAppmanagementValidate
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PostV1AdminuisdkAppmanagementValidateBody
+        in: body
+        schema:
+          required:
+          - orgId
+          properties:
+            orgId:
+              type: string
+          type: object
+          xml:
+            name: request
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/commerce-backend-uix-data-app-management-validation-result-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: adminuisdk/appmanagement/validate
   "/V1/adminuisdk/massaction/{request_id}":
     get:
       tags:
@@ -5779,6 +5825,98 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: creditmemos
+  "/V1/custom-email/send":
+    post:
+      tags:
+      - custom-email/send
+      description: Send an email using the given template ID and variables.
+      operationId: PostV1CustomemailSend
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PostV1CustomemailSendBody
+        in: body
+        schema:
+          required:
+          - templateId
+          - recipientEmail
+          properties:
+            templateId:
+              type: integer
+              description: Email template ID
+            recipientEmail:
+              type: string
+              description: Recipient email address
+            variables:
+              "$ref": "#/definitions/unstructured-array"
+          type: object
+          xml:
+            name: request
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/custom-email-send-data-send-email-response-interface"
+        '400':
+          description: 400 Bad Request
+          schema:
+            "$ref": "#/definitions/error-response"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: custom-email/send
+  "/V1/customer/{customerId}/otp":
+    post:
+      tags:
+      - customer/{customerId}/otp
+      description: Generate a one-time password for the customer identified by ID.
+        The OTP can be used with the exchangeOtpForCustomerToken GraphQL mutation.
+        Returns a successful response even when the customer does not exist (prevents
+        user enumeration).
+      operationId: PostV1CustomerCustomerIdOtp
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: customerId
+        in: path
+        type: integer
+        required: true
+      - name: PostV1CustomerCustomerIdOtpBody
+        in: body
+        schema:
+          properties:
+            reason:
+              type: string
+          type: object
+          xml:
+            name: request
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/otp-rest-data-otp-response-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: customer/{customerId}/otp
   "/V1/customerGroups":
     post:
       tags:
@@ -7094,6 +7232,69 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: customers/{email}/activate
+  "/V1/directory/countries":
+    get:
+      tags:
+      - directory/countries
+      description: Get all countries and regions information for the store.
+      operationId: GetV1DirectoryCountries
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            type: array
+            items:
+              "$ref": "#/definitions/directory-data-country-information-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: directory/countries
+  "/V1/directory/countries/{countryId}":
+    get:
+      tags:
+      - directory/countries/{countryId}
+      description: Get country and region information for the store.
+      operationId: GetV1DirectoryCountriesCountryId
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: countryId
+        in: path
+        type: string
+        required: true
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/directory-data-country-information-interface"
+        '400':
+          description: 400 Bad Request
+          schema:
+            "$ref": "#/definitions/error-response"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: directory/countries/{countryId}
   "/V1/eav/attribute-sets":
     post:
       tags:
@@ -7956,6 +8157,252 @@ paths:
           schema:
             "$ref": "#/definitions/error-response"
       summary: gift-wrappings/{wrappingId}
+  "/V1/giftcardaccounts":
+    post:
+      tags:
+      - giftcardaccounts
+      description: Create a new gift card account with duplicate code detection.
+      operationId: PostV1Giftcardaccounts
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: PostV1GiftcardaccountsBody
+        in: body
+        schema:
+          required:
+          - giftcardAccount
+          properties:
+            giftcardAccount:
+              "$ref": "#/definitions/gift-card-account-api-data-gift-card-account-data-interface"
+          type: object
+          xml:
+            name: request
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/gift-card-account-api-data-gift-card-account-data-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: giftcardaccounts
+    get:
+      tags:
+      - giftcardaccounts
+      description: Retrieve gift card accounts matching search criteria.
+      operationId: GetV1Giftcardaccounts
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: searchCriteria[filterGroups][0][filters][0][field]
+        in: query
+        type: string
+        description: Field
+      - name: searchCriteria[filterGroups][0][filters][0][value]
+        in: query
+        type: string
+        description: Value
+      - name: searchCriteria[filterGroups][0][filters][0][conditionType]
+        in: query
+        type: string
+        description: Condition type
+      - name: searchCriteria[sortOrders][0][field]
+        in: query
+        type: string
+        description: Sorting field.
+      - name: searchCriteria[sortOrders][0][direction]
+        in: query
+        type: string
+        description: Sorting direction.
+      - name: searchCriteria[pageSize]
+        in: query
+        type: integer
+        description: Page size.
+      - name: searchCriteria[currentPage]
+        in: query
+        type: integer
+        description: Current page.
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/gift-card-account-api-data-gift-card-account-search-result-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: giftcardaccounts
+  "/V1/giftcardaccounts/code/{code}":
+    get:
+      tags:
+      - giftcardaccounts/code/{code}
+      description: Retrieve a gift card account by code.
+      operationId: GetV1GiftcardaccountsCodeCode
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: code
+        in: path
+        type: string
+        required: true
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/gift-card-account-api-data-gift-card-account-data-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: giftcardaccounts/code/{code}
+  "/V1/giftcardaccounts/{id}":
+    get:
+      tags:
+      - giftcardaccounts/{id}
+      description: Retrieve a gift card account by ID.
+      operationId: GetV1GiftcardaccountsId
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: id
+        in: path
+        type: integer
+        required: true
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/gift-card-account-api-data-gift-card-account-data-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: giftcardaccounts/{id}
+    put:
+      tags:
+      - giftcardaccounts/{id}
+      description: Update an existing gift card account (merge semantics — only non-null
+        fields are applied). Code is immutable; passing a different code throws InputException.
+      operationId: PutV1GiftcardaccountsId
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: id
+        in: path
+        type: integer
+        required: true
+      - name: PutV1GiftcardaccountsIdBody
+        in: body
+        schema:
+          required:
+          - giftcardAccount
+          properties:
+            giftcardAccount:
+              "$ref": "#/definitions/gift-card-account-api-data-gift-card-account-data-interface"
+          type: object
+          xml:
+            name: request
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/gift-card-account-api-data-gift-card-account-data-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: giftcardaccounts/{id}
+    delete:
+      tags:
+      - giftcardaccounts/{id}
+      description: Delete a gift card account by ID.
+      operationId: DeleteV1GiftcardaccountsId
+      consumes:
+      - application/json
+      - application/xml
+      produces:
+      - application/json
+      - application/xml
+      parameters:
+      - name: id
+        in: path
+        type: integer
+        required: true
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            type: boolean
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      summary: giftcardaccounts/{id}
   "/V1/hierarchy/move/{id}":
     put:
       tags:
@@ -19663,6 +20110,63 @@ definitions:
   store-data-store-config-extension-interface:
     type: object
     description: ExtensionInterface class for @see \Magento\Store\Api\Data\StoreConfigInterface
+  directory-data-country-information-interface:
+    type: object
+    description: Country Information interface.
+    properties:
+      id:
+        type: string
+        description: The country id for the store.
+      two_letter_abbreviation:
+        type: string
+        description: The country 2 letter abbreviation for the store.
+      three_letter_abbreviation:
+        type: string
+        description: The country 3 letter abbreviation for the store.
+      full_name_locale:
+        type: string
+        description: The country full name (in store locale) for the store.
+      full_name_english:
+        type: string
+        description: The country full name (in English) for the store.
+      available_regions:
+        type: array
+        description: The available regions for the store.
+        items:
+          "$ref": "#/definitions/directory-data-region-information-interface"
+      extension_attributes:
+        "$ref": "#/definitions/directory-data-country-information-extension-interface"
+    required:
+    - id
+    - two_letter_abbreviation
+    - three_letter_abbreviation
+    - full_name_locale
+    - full_name_english
+  directory-data-region-information-interface:
+    type: object
+    description: Region Information interface.
+    properties:
+      id:
+        type: string
+        description: Region id
+      code:
+        type: string
+        description: Region code
+      name:
+        type: string
+        description: Region name
+      extension_attributes:
+        "$ref": "#/definitions/directory-data-region-information-extension-interface"
+    required:
+    - id
+    - code
+    - name
+  directory-data-region-information-extension-interface:
+    type: object
+    description: ExtensionInterface class for @see \Magento\Directory\Api\Data\RegionInformationInterface
+  directory-data-country-information-extension-interface:
+    type: object
+    description: ExtensionInterface class for @see \Magento\Directory\Api\Data\CountryInformationInterface
   eav-data-attribute-set-search-results-interface:
     type: object
     description: Interface AttributeSetSearchResultsInterface
@@ -20134,6 +20638,8 @@ definitions:
         type: boolean
       assistance_allowed:
         type: integer
+      last_login_at:
+        type: string
   company-data-company-customer-interface:
     type: object
     description: Extended customer custom attributes interface.
@@ -20271,9 +20777,13 @@ definitions:
       converter:
         type: string
         description: Event field converter
+      source:
+        type: string
+        description: Event field source
     required:
     - name
     - converter
+    - source
   adobe-commerce-events-client-data-event-rule-interface:
     type: object
     description: Interface for event rule data from webapi requests
@@ -20348,147 +20858,6 @@ definitions:
     - label
     - description
     - workspace_configuration
-  adobe-commerce-webhooks-data-webhook-data-interface:
-    type: object
-    description: Interface for webhook data from webapi requests
-    properties:
-      webhook_method:
-        type: string
-        description: Webhook method name
-      webhook_type:
-        type: string
-        description: Webhook type
-      batch_name:
-        type: string
-        description: Webhook batch name
-      batch_order:
-        type: integer
-        description: Webhook batch order
-      hook_name:
-        type: string
-        description: Hook name
-      url:
-        type: string
-        description: Hook url
-      priority:
-        type: integer
-        description: Hook priority
-      required:
-        type: boolean
-        description: If hook is required
-      soft_timeout:
-        type: integer
-        description: Hook soft timeout
-      timeout:
-        type: integer
-        description: Hook timeout
-      method:
-        type: string
-        description: Hook method
-      fallback_error_message:
-        type: string
-        description: Hook fallback error message
-      ttl:
-        type: integer
-        description: Hook ttl
-      fields:
-        type: array
-        description: Webhook fields
-        items:
-          "$ref": "#/definitions/adobe-commerce-webhooks-data-hook-field-interface"
-      rules:
-        type: array
-        description: Webhook rules
-        items:
-          "$ref": "#/definitions/adobe-commerce-webhooks-data-hook-rule-interface"
-      headers:
-        type: array
-        description: Webhook headers
-        items:
-          "$ref": "#/definitions/adobe-commerce-webhooks-data-hook-header-interface"
-      developer_console_oauth:
-        "$ref": "#/definitions/adobe-commerce-webhooks-data-developer-console-oauth-interface"
-    required:
-    - webhook_method
-    - webhook_type
-    - batch_name
-    - batch_order
-    - hook_name
-    - url
-    - priority
-    - required
-    - soft_timeout
-    - timeout
-    - method
-    - fallback_error_message
-    - ttl
-    - fields
-    - rules
-    - headers
-  adobe-commerce-webhooks-data-hook-field-interface:
-    type: object
-    description: Interface for hook field data from webapi requests
-    properties:
-      name:
-        type: string
-        description: Field name.
-      source:
-        type: string
-        description: Field source.
-    required:
-    - name
-    - source
-  adobe-commerce-webhooks-data-hook-rule-interface:
-    type: object
-    description: Interface for hook rule data from webapi requests
-    properties:
-      field:
-        type: string
-        description: Field name.
-      operator:
-        type: string
-        description: Operator.
-      value:
-        type: string
-        description: Value.
-    required:
-    - field
-    - operator
-    - value
-  adobe-commerce-webhooks-data-hook-header-interface:
-    type: object
-    description: Interface for hook header data from webapi requests
-    properties:
-      name:
-        type: string
-        description: Header name.
-      value:
-        type: string
-        description: Header value.
-    required:
-    - name
-    - value
-  adobe-commerce-webhooks-data-developer-console-oauth-interface:
-    type: object
-    description: Interface for Developer Console OAuth data from webapi requests.
-    properties:
-      client_id:
-        type: string
-        description: The Developer Console OAuth client ID.
-      client_secret:
-        type: string
-        description: The Developer Console OAuth client secret.
-      org_id:
-        type: string
-        description: The Developer Console OAuth org ID.
-      environment:
-        type: string
-        description: The Developer Console OAuth environment.
-    required:
-    - client_id
-    - client_secret
-    - org_id
-    - environment
   framework-search-search-result-interface:
     type: object
     description: Interface SearchResultInterface
@@ -20672,24 +21041,16 @@ definitions:
         type: array
         items:
           "$ref": "#/definitions/catalog-data-category-link-interface"
-      discounts:
-        type: array
-        items:
-          "$ref": "#/definitions/sales-rule-data-rule-discount-interface"
+      stock_item:
+        "$ref": "#/definitions/catalog-inventory-data-stock-item-interface"
       bundle_product_options:
         type: array
         items:
           "$ref": "#/definitions/bundle-data-option-interface"
-      stock_item:
-        "$ref": "#/definitions/catalog-inventory-data-stock-item-interface"
-      configurable_product_options:
+      discounts:
         type: array
         items:
-          "$ref": "#/definitions/configurable-product-data-option-interface"
-      configurable_product_links:
-        type: array
-        items:
-          type: integer
+          "$ref": "#/definitions/sales-rule-data-rule-discount-interface"
       downloadable_product_links:
         type: array
         items:
@@ -20698,6 +21059,14 @@ definitions:
         type: array
         items:
           "$ref": "#/definitions/downloadable-data-sample-interface"
+      configurable_product_options:
+        type: array
+        items:
+          "$ref": "#/definitions/configurable-product-data-option-interface"
+      configurable_product_links:
+        type: array
+        items:
+          type: integer
       giftcard_amounts:
         type: array
         items:
@@ -20718,115 +21087,6 @@ definitions:
   catalog-data-category-link-extension-interface:
     type: object
     description: ExtensionInterface class for @see \Magento\Catalog\Api\Data\CategoryLinkInterface
-  sales-rule-data-rule-discount-interface:
-    type: object
-    description: Rule discount Interface
-    properties:
-      discount_data:
-        "$ref": "#/definitions/sales-rule-data-discount-data-interface"
-      rule_label:
-        type: string
-        description: Rule Label
-      rule_i_d:
-        type: integer
-        description: Rule ID
-    required:
-    - discount_data
-    - rule_label
-    - rule_i_d
-  sales-rule-data-discount-data-interface:
-    type: object
-    description: Discount Data Interface
-    properties:
-      amount:
-        type: number
-        description: Amount
-      base_amount:
-        type: number
-        description: Base Amount
-      original_amount:
-        type: number
-        description: Original Amount
-      base_original_amount:
-        type: number
-        description: Base Original Amount
-    required:
-    - amount
-    - base_amount
-    - original_amount
-    - base_original_amount
-  bundle-data-option-interface:
-    type: object
-    description: Interface OptionInterface
-    properties:
-      option_id:
-        type: integer
-        description: Option id
-      title:
-        type: string
-        description: Option title
-      required:
-        type: boolean
-        description: Is required option
-      type:
-        type: string
-        description: Input type
-      position:
-        type: integer
-        description: Option position
-      sku:
-        type: string
-        description: Product sku
-      product_links:
-        type: array
-        description: Product links
-        items:
-          "$ref": "#/definitions/bundle-data-link-interface"
-      extension_attributes:
-        "$ref": "#/definitions/bundle-data-option-extension-interface"
-  bundle-data-link-interface:
-    type: object
-    description: Interface LinkInterface
-    properties:
-      id:
-        type: string
-        description: The identifier
-      sku:
-        type: string
-        description: Linked product sku
-      option_id:
-        type: integer
-        description: Option id
-      qty:
-        type: number
-        description: Qty
-      position:
-        type: integer
-        description: Position
-      is_default:
-        type: boolean
-        description: Is default
-      price:
-        type: number
-        description: Price
-      price_type:
-        type: integer
-        description: Price type
-      can_change_quantity:
-        type: integer
-        description: Whether quantity could be changed
-      extension_attributes:
-        "$ref": "#/definitions/bundle-data-link-extension-interface"
-    required:
-    - is_default
-    - price
-    - price_type
-  bundle-data-link-extension-interface:
-    type: object
-    description: ExtensionInterface class for @see \Magento\Bundle\Api\Data\LinkInterface
-  bundle-data-option-extension-interface:
-    type: object
-    description: ExtensionInterface class for @see \Magento\Bundle\Api\Data\OptionInterface
   catalog-inventory-data-stock-item-interface:
     type: object
     description: Interface StockItem
@@ -20923,44 +21183,115 @@ definitions:
   catalog-inventory-data-stock-item-extension-interface:
     type: object
     description: ExtensionInterface class for @see \Magento\CatalogInventory\Api\Data\StockItemInterface
-  configurable-product-data-option-interface:
+  bundle-data-option-interface:
     type: object
     description: Interface OptionInterface
     properties:
-      id:
+      option_id:
         type: integer
-      attribute_id:
+        description: Option id
+      title:
         type: string
-      label:
+        description: Option title
+      required:
+        type: boolean
+        description: Is required option
+      type:
         type: string
+        description: Input type
       position:
         type: integer
-      is_use_default:
-        type: boolean
-      values:
+        description: Option position
+      sku:
+        type: string
+        description: Product sku
+      product_links:
         type: array
+        description: Product links
         items:
-          "$ref": "#/definitions/configurable-product-data-option-value-interface"
+          "$ref": "#/definitions/bundle-data-link-interface"
       extension_attributes:
-        "$ref": "#/definitions/configurable-product-data-option-extension-interface"
-      product_id:
-        type: integer
-  configurable-product-data-option-value-interface:
+        "$ref": "#/definitions/bundle-data-option-extension-interface"
+  bundle-data-link-interface:
     type: object
-    description: Interface OptionValueInterface
+    description: Interface LinkInterface
     properties:
-      value_index:
+      id:
+        type: string
+        description: The identifier
+      sku:
+        type: string
+        description: Linked product sku
+      option_id:
         type: integer
+        description: Option id
+      qty:
+        type: number
+        description: Qty
+      position:
+        type: integer
+        description: Position
+      is_default:
+        type: boolean
+        description: Is default
+      price:
+        type: number
+        description: Price
+      price_type:
+        type: integer
+        description: Price type
+      can_change_quantity:
+        type: integer
+        description: Whether quantity could be changed
       extension_attributes:
-        "$ref": "#/definitions/configurable-product-data-option-value-extension-interface"
+        "$ref": "#/definitions/bundle-data-link-extension-interface"
     required:
-    - value_index
-  configurable-product-data-option-value-extension-interface:
+    - is_default
+    - price
+    - price_type
+  bundle-data-link-extension-interface:
     type: object
-    description: ExtensionInterface class for @see \Magento\ConfigurableProduct\Api\Data\OptionValueInterface
-  configurable-product-data-option-extension-interface:
+    description: ExtensionInterface class for @see \Magento\Bundle\Api\Data\LinkInterface
+  bundle-data-option-extension-interface:
     type: object
-    description: ExtensionInterface class for @see \Magento\ConfigurableProduct\Api\Data\OptionInterface
+    description: ExtensionInterface class for @see \Magento\Bundle\Api\Data\OptionInterface
+  sales-rule-data-rule-discount-interface:
+    type: object
+    description: Rule discount Interface
+    properties:
+      discount_data:
+        "$ref": "#/definitions/sales-rule-data-discount-data-interface"
+      rule_label:
+        type: string
+        description: Rule Label
+      rule_i_d:
+        type: integer
+        description: Rule ID
+    required:
+    - discount_data
+    - rule_label
+    - rule_i_d
+  sales-rule-data-discount-data-interface:
+    type: object
+    description: Discount Data Interface
+    properties:
+      amount:
+        type: number
+        description: Amount
+      base_amount:
+        type: number
+        description: Base Amount
+      original_amount:
+        type: number
+        description: Original Amount
+      base_original_amount:
+        type: number
+        description: Base Original Amount
+    required:
+    - amount
+    - base_amount
+    - original_amount
+    - base_original_amount
   downloadable-data-link-interface:
     type: object
     description: ''
@@ -21062,6 +21393,44 @@ definitions:
   downloadable-data-sample-extension-interface:
     type: object
     description: ExtensionInterface class for @see \Magento\Downloadable\Api\Data\SampleInterface
+  configurable-product-data-option-interface:
+    type: object
+    description: Interface OptionInterface
+    properties:
+      id:
+        type: integer
+      attribute_id:
+        type: string
+      label:
+        type: string
+      position:
+        type: integer
+      is_use_default:
+        type: boolean
+      values:
+        type: array
+        items:
+          "$ref": "#/definitions/configurable-product-data-option-value-interface"
+      extension_attributes:
+        "$ref": "#/definitions/configurable-product-data-option-extension-interface"
+      product_id:
+        type: integer
+  configurable-product-data-option-value-interface:
+    type: object
+    description: Interface OptionValueInterface
+    properties:
+      value_index:
+        type: integer
+      extension_attributes:
+        "$ref": "#/definitions/configurable-product-data-option-value-extension-interface"
+    required:
+    - value_index
+  configurable-product-data-option-value-extension-interface:
+    type: object
+    description: ExtensionInterface class for @see \Magento\ConfigurableProduct\Api\Data\OptionValueInterface
+  configurable-product-data-option-extension-interface:
+    type: object
+    description: ExtensionInterface class for @see \Magento\ConfigurableProduct\Api\Data\OptionInterface
   gift-card-data-giftcard-amount-interface:
     type: object
     description: 'Interface GiftcardAmountInterface: this interface is used to serialize
@@ -22260,12 +22629,12 @@ definitions:
         type: array
         items:
           "$ref": "#/definitions/bundle-data-bundle-option-interface"
+      downloadable_option:
+        "$ref": "#/definitions/downloadable-data-downloadable-option-interface"
       configurable_item_options:
         type: array
         items:
           "$ref": "#/definitions/configurable-product-data-configurable-item-option-value-interface"
-      downloadable_option:
-        "$ref": "#/definitions/downloadable-data-downloadable-option-interface"
       giftcard_item_option:
         "$ref": "#/definitions/gift-card-data-gift-card-option-interface"
       grouped_options:
@@ -22317,6 +22686,17 @@ definitions:
   bundle-data-bundle-option-extension-interface:
     type: object
     description: ExtensionInterface class for @see \Magento\Bundle\Api\Data\BundleOptionInterface
+  downloadable-data-downloadable-option-interface:
+    type: object
+    description: Downloadable Option
+    properties:
+      downloadable_links:
+        type: array
+        description: The list of downloadable links
+        items:
+          type: integer
+    required:
+    - downloadable_links
   configurable-product-data-configurable-item-option-value-interface:
     type: object
     description: Interface ConfigurableItemOptionValueInterface
@@ -22334,17 +22714,6 @@ definitions:
   configurable-product-data-configurable-item-option-value-extension-interface:
     type: object
     description: ExtensionInterface class for @see \Magento\ConfigurableProduct\Api\Data\ConfigurableItemOptionValueInterface
-  downloadable-data-downloadable-option-interface:
-    type: object
-    description: Downloadable Option
-    properties:
-      downloadable_links:
-        type: array
-        description: The list of downloadable links
-        items:
-          type: integer
-    required:
-    - downloadable_links
   gift-card-data-gift-card-option-interface:
     type: object
     description: Interface GiftCardOptionInterface
@@ -23219,12 +23588,12 @@ definitions:
     properties:
       coupon_label:
         type: string
+      negotiable_quote_totals:
+        "$ref": "#/definitions/negotiable-quote-data-negotiable-quote-totals-interface"
       base_customer_balance_amount:
         type: number
       customer_balance_amount:
         type: number
-      negotiable_quote_totals:
-        "$ref": "#/definitions/negotiable-quote-data-negotiable-quote-totals-interface"
       coupon_codes:
         type: array
         items:
@@ -23308,6 +23677,281 @@ definitions:
     - base_original_price_incl_tax
     - negotiated_price_type
     - negotiated_price_value
+  catalog-inventory-data-stock-item-collection-interface:
+    type: object
+    description: Interface StockItemCollectionInterface
+    properties:
+      items:
+        type: array
+        description: Items
+        items:
+          "$ref": "#/definitions/catalog-inventory-data-stock-item-interface"
+      search_criteria:
+        "$ref": "#/definitions/catalog-inventory-stock-item-criteria-interface"
+      total_count:
+        type: integer
+        description: Total count.
+    required:
+    - items
+    - search_criteria
+    - total_count
+  catalog-inventory-stock-item-criteria-interface:
+    type: object
+    description: Interface StockItemCriteriaInterface
+    properties:
+      mapper_interface_name:
+        type: string
+        description: Associated Mapper Interface name
+      criteria_list:
+        type: array
+        description: Criteria objects added to current Composite Criteria
+        items:
+          "$ref": "#/definitions/framework-criteria-interface"
+      filters:
+        type: array
+        description: List of filters
+        items:
+          type: string
+      orders:
+        type: array
+        description: Ordering criteria
+        items:
+          type: string
+      limit:
+        type: array
+        description: Limit
+        items:
+          type: string
+    required:
+    - mapper_interface_name
+    - criteria_list
+    - filters
+    - orders
+    - limit
+  framework-criteria-interface:
+    type: object
+    description: Interface CriteriaInterface
+    properties:
+      mapper_interface_name:
+        type: string
+        description: Associated Mapper Interface name
+      criteria_list:
+        type: array
+        description: Criteria objects added to current Composite Criteria
+        items:
+          "$ref": "#/definitions/framework-criteria-interface"
+      filters:
+        type: array
+        description: List of filters
+        items:
+          type: string
+      orders:
+        type: array
+        description: Ordering criteria
+        items:
+          type: string
+      limit:
+        type: array
+        description: Limit
+        items:
+          type: string
+    required:
+    - mapper_interface_name
+    - criteria_list
+    - filters
+    - orders
+    - limit
+  catalog-inventory-data-stock-status-interface:
+    type: object
+    description: Interface StockStatusInterface
+    properties:
+      product_id:
+        type: integer
+      stock_id:
+        type: integer
+      qty:
+        type: integer
+      stock_status:
+        type: integer
+      stock_item:
+        "$ref": "#/definitions/catalog-inventory-data-stock-item-interface"
+      extension_attributes:
+        "$ref": "#/definitions/catalog-inventory-data-stock-status-extension-interface"
+    required:
+    - product_id
+    - stock_id
+    - qty
+    - stock_status
+    - stock_item
+  catalog-inventory-data-stock-status-extension-interface:
+    type: object
+    description: ExtensionInterface class for @see \Magento\CatalogInventory\Api\Data\StockStatusInterface
+  asynchronous-operations-data-detailed-bulk-operations-status-interface:
+    type: object
+    description: Interface BulkStatusInterface Bulk summary data with list of operations
+      items full data.
+    properties:
+      operations_list:
+        type: array
+        description: Operations list.
+        items:
+          "$ref": "#/definitions/asynchronous-operations-data-operation-interface"
+      extension_attributes:
+        "$ref": "#/definitions/asynchronous-operations-data-bulk-summary-extension-interface"
+      user_type:
+        type: integer
+        description: User type
+      bulk_id:
+        type: string
+        description: Bulk uuid
+      description:
+        type: string
+        description: Bulk description
+      start_time:
+        type: string
+        description: Bulk scheduled time
+      user_id:
+        type: integer
+        description: User id
+      operation_count:
+        type: integer
+        description: Total number of operations scheduled in scope of this bulk
+    required:
+    - operations_list
+    - user_type
+    - bulk_id
+    - description
+    - start_time
+    - user_id
+    - operation_count
+  asynchronous-operations-data-operation-interface:
+    type: object
+    description: Class OperationInterface
+    properties:
+      extension_attributes:
+        "$ref": "#/definitions/asynchronous-operations-data-operation-extension-interface"
+      id:
+        type: integer
+        description: Id
+      bulk_uuid:
+        type: string
+        description: Bulk uuid
+      topic_name:
+        type: string
+        description: Queue Topic
+      serialized_data:
+        type: string
+        description: Data
+      result_serialized_data:
+        type: string
+        description: Serialized Data
+      status:
+        type: integer
+        description: Operation status
+      result_message:
+        type: string
+        description: Result message
+      error_code:
+        type: integer
+        description: Error code
+    required:
+    - id
+    - bulk_uuid
+    - topic_name
+    - serialized_data
+    - result_serialized_data
+    - status
+    - result_message
+    - error_code
+  asynchronous-operations-data-operation-extension-interface:
+    type: object
+    description: ExtensionInterface class for @see \Magento\AsynchronousOperations\Api\Data\OperationInterface
+    properties:
+      start_time:
+        type: string
+  asynchronous-operations-data-bulk-summary-extension-interface:
+    type: object
+    description: ExtensionInterface class for @see \Magento\AsynchronousOperations\Api\Data\BulkSummaryInterface
+  asynchronous-operations-data-bulk-operations-status-interface:
+    type: object
+    description: Interface BulkStatusInterface Bulk summary data with list of operations
+      items summary data.
+    properties:
+      operations_list:
+        type: array
+        description: List of operation with statuses (short data).
+        items:
+          "$ref": "#/definitions/asynchronous-operations-data-summary-operation-status-interface"
+      extension_attributes:
+        "$ref": "#/definitions/asynchronous-operations-data-bulk-summary-extension-interface"
+      user_type:
+        type: integer
+        description: User type
+      bulk_id:
+        type: string
+        description: Bulk uuid
+      description:
+        type: string
+        description: Bulk description
+      start_time:
+        type: string
+        description: Bulk scheduled time
+      user_id:
+        type: integer
+        description: User id
+      operation_count:
+        type: integer
+        description: Total number of operations scheduled in scope of this bulk
+    required:
+    - operations_list
+    - user_type
+    - bulk_id
+    - description
+    - start_time
+    - user_id
+    - operation_count
+  asynchronous-operations-data-summary-operation-status-interface:
+    type: object
+    description: Getter Class OperationsStatusInterface Instead of OperationInterface
+      this class don't provide all operation data and not responsive to set any data,
+      just to get operation data without serialized_data and result_serialized_data
+    properties:
+      id:
+        type: integer
+        description: Id
+      status:
+        type: integer
+        description: Operation status
+      result_message:
+        type: string
+        description: Result message
+      error_code:
+        type: integer
+        description: Error code
+    required:
+    - id
+    - status
+    - result_message
+    - error_code
+  asynchronous-operations-data-operation-search-results-interface:
+    type: object
+    description: Bulk operation search result interface. An bulk is a group of queue
+      messages. An bulk operation item is a queue message.
+    properties:
+      items:
+        type: array
+        description: List of operations.
+        items:
+          "$ref": "#/definitions/asynchronous-operations-data-operation-interface"
+      search_criteria:
+        "$ref": "#/definitions/framework-search-criteria-interface"
+      total_count:
+        type: integer
+        description: Total count.
+    required:
+    - items
+    - search_criteria
+    - total_count
   sales-data-order-interface:
     type: object
     description: Order interface. An order is a document that a web store issues to
@@ -24045,12 +24689,12 @@ definitions:
         type: array
         items:
           "$ref": "#/definitions/bundle-data-bundle-option-interface"
+      downloadable_option:
+        "$ref": "#/definitions/downloadable-data-downloadable-option-interface"
       configurable_item_options:
         type: array
         items:
           "$ref": "#/definitions/configurable-product-data-configurable-item-option-value-interface"
-      downloadable_option:
-        "$ref": "#/definitions/downloadable-data-downloadable-option-interface"
       giftcard_item_option:
         "$ref": "#/definitions/gift-card-data-gift-card-option-interface"
   sales-data-order-item-extension-interface:
@@ -24566,22 +25210,6 @@ definitions:
           "$ref": "#/definitions/payment-data-payment-additional-info-interface"
       company_order_attributes:
         "$ref": "#/definitions/company-data-company-order-interface"
-      base_customer_balance_amount:
-        type: number
-      customer_balance_amount:
-        type: number
-      base_customer_balance_invoiced:
-        type: number
-      customer_balance_invoiced:
-        type: number
-      base_customer_balance_refunded:
-        type: number
-      customer_balance_refunded:
-        type: number
-      base_customer_balance_total_refunded:
-        type: number
-      customer_balance_total_refunded:
-        type: number
       applied_taxes:
         type: array
         items:
@@ -24600,10 +25228,22 @@ definitions:
         type: array
         items:
           "$ref": "#/definitions/tax-data-order-tax-item-interface"
-      custom_fees:
-        type: array
-        items:
-          "$ref": "#/definitions/admin-ui-sdk-custom-fees-data-custom-fees-interface"
+      base_customer_balance_amount:
+        type: number
+      customer_balance_amount:
+        type: number
+      base_customer_balance_invoiced:
+        type: number
+      customer_balance_invoiced:
+        type: number
+      base_customer_balance_refunded:
+        type: number
+      customer_balance_refunded:
+        type: number
+      base_customer_balance_total_refunded:
+        type: number
+      customer_balance_total_refunded:
+        type: number
       gift_cards:
         type: array
         items:
@@ -24732,6 +25372,10 @@ definitions:
         type: number
       base_reward_currency_amount:
         type: number
+      custom_fees:
+        type: array
+        items:
+          "$ref": "#/definitions/admin-ui-sdk-custom-fees-data-custom-fees-interface"
   sales-data-shipping-assignment-interface:
     type: object
     description: Interface ShippingAssignmentInterface
@@ -24989,6 +25633,27 @@ definitions:
   tax-data-order-tax-extension-interface:
     type: object
     description: ExtensionInterface class for @see \Magento\Tax\Api\Data\OrderTaxInterface
+  gift-card-account-data-gift-card-interface:
+    type: object
+    description: Gift Card data
+    properties:
+      id:
+        type: integer
+        description: Id
+      code:
+        type: string
+        description: Code
+      amount:
+        type: number
+        description: Amount
+      base_amount:
+        type: number
+        description: Base Amount
+    required:
+    - id
+    - code
+    - amount
+    - base_amount
   admin-ui-sdk-custom-fees-data-custom-fees-interface:
     type: object
     description: Interface CustomFeesInterface
@@ -25047,27 +25712,6 @@ definitions:
     - base_custom_fee_amount_refunded
     - apply_fee_on_last_invoice
     - apply_fee_on_last_creditmemo
-  gift-card-account-data-gift-card-interface:
-    type: object
-    description: Gift Card data
-    properties:
-      id:
-        type: integer
-        description: Id
-      code:
-        type: string
-        description: Code
-      amount:
-        type: number
-        description: Amount
-      base_amount:
-        type: number
-        description: Base Amount
-    required:
-    - id
-    - code
-    - amount
-    - base_amount
   sales-data-order-search-result-interface:
     type: object
     description: Order search result interface. An order is a document that a web
@@ -26423,6 +27067,27 @@ definitions:
   sales-data-invoice-creation-arguments-extension-interface:
     type: object
     description: ExtensionInterface class for @see \Magento\Sales\Api\Data\InvoiceCreationArgumentsInterface
+    properties:
+      custom_capture_amount:
+        type: number
+  bundle-data-option-type-interface:
+    type: object
+    description: Interface OptionTypeInterface
+    properties:
+      label:
+        type: string
+        description: Type label
+      code:
+        type: string
+        description: Type code
+      extension_attributes:
+        "$ref": "#/definitions/bundle-data-option-type-extension-interface"
+    required:
+    - label
+    - code
+  bundle-data-option-type-extension-interface:
+    type: object
+    description: ExtensionInterface class for @see \Magento\Bundle\Api\Data\OptionTypeInterface
   sales-rule-data-rule-interface:
     type: object
     description: Interface RuleInterface
@@ -26724,133 +27389,6 @@ definitions:
     required:
     - failed_items
     - missing_items
-  bundle-data-option-type-interface:
-    type: object
-    description: Interface OptionTypeInterface
-    properties:
-      label:
-        type: string
-        description: Type label
-      code:
-        type: string
-        description: Type code
-      extension_attributes:
-        "$ref": "#/definitions/bundle-data-option-type-extension-interface"
-    required:
-    - label
-    - code
-  bundle-data-option-type-extension-interface:
-    type: object
-    description: ExtensionInterface class for @see \Magento\Bundle\Api\Data\OptionTypeInterface
-  catalog-inventory-data-stock-item-collection-interface:
-    type: object
-    description: Interface StockItemCollectionInterface
-    properties:
-      items:
-        type: array
-        description: Items
-        items:
-          "$ref": "#/definitions/catalog-inventory-data-stock-item-interface"
-      search_criteria:
-        "$ref": "#/definitions/catalog-inventory-stock-item-criteria-interface"
-      total_count:
-        type: integer
-        description: Total count.
-    required:
-    - items
-    - search_criteria
-    - total_count
-  catalog-inventory-stock-item-criteria-interface:
-    type: object
-    description: Interface StockItemCriteriaInterface
-    properties:
-      mapper_interface_name:
-        type: string
-        description: Associated Mapper Interface name
-      criteria_list:
-        type: array
-        description: Criteria objects added to current Composite Criteria
-        items:
-          "$ref": "#/definitions/framework-criteria-interface"
-      filters:
-        type: array
-        description: List of filters
-        items:
-          type: string
-      orders:
-        type: array
-        description: Ordering criteria
-        items:
-          type: string
-      limit:
-        type: array
-        description: Limit
-        items:
-          type: string
-    required:
-    - mapper_interface_name
-    - criteria_list
-    - filters
-    - orders
-    - limit
-  framework-criteria-interface:
-    type: object
-    description: Interface CriteriaInterface
-    properties:
-      mapper_interface_name:
-        type: string
-        description: Associated Mapper Interface name
-      criteria_list:
-        type: array
-        description: Criteria objects added to current Composite Criteria
-        items:
-          "$ref": "#/definitions/framework-criteria-interface"
-      filters:
-        type: array
-        description: List of filters
-        items:
-          type: string
-      orders:
-        type: array
-        description: Ordering criteria
-        items:
-          type: string
-      limit:
-        type: array
-        description: Limit
-        items:
-          type: string
-    required:
-    - mapper_interface_name
-    - criteria_list
-    - filters
-    - orders
-    - limit
-  catalog-inventory-data-stock-status-interface:
-    type: object
-    description: Interface StockStatusInterface
-    properties:
-      product_id:
-        type: integer
-      stock_id:
-        type: integer
-      qty:
-        type: integer
-      stock_status:
-        type: integer
-      stock_item:
-        "$ref": "#/definitions/catalog-inventory-data-stock-item-interface"
-      extension_attributes:
-        "$ref": "#/definitions/catalog-inventory-data-stock-status-extension-interface"
-    required:
-    - product_id
-    - stock_id
-    - qty
-    - stock_status
-    - stock_item
-  catalog-inventory-data-stock-status-extension-interface:
-    type: object
-    description: ExtensionInterface class for @see \Magento\CatalogInventory\Api\Data\StockStatusInterface
   checkout-data-shipping-information-interface:
     type: object
     description: Interface ShippingInformationInterface
@@ -26989,6 +27527,15 @@ definitions:
     - error_status
     - error_message
     - request_timestamp
+  commerce-backend-uix-data-app-management-validation-result-interface:
+    type: object
+    description: App Management User Validation Result Interface
+    properties:
+      authorized:
+        type: boolean
+        description: Authorization status
+    required:
+    - authorized
   company-data-company-search-results-interface:
     type: object
     description: Interface for company search results
@@ -27261,6 +27808,147 @@ definitions:
     - items
     - search_criteria
     - total_count
+  adobe-commerce-webhooks-data-webhook-data-interface:
+    type: object
+    description: Interface for webhook data from webapi requests
+    properties:
+      webhook_method:
+        type: string
+        description: Webhook method name
+      webhook_type:
+        type: string
+        description: Webhook type
+      batch_name:
+        type: string
+        description: Webhook batch name
+      batch_order:
+        type: integer
+        description: Webhook batch order
+      hook_name:
+        type: string
+        description: Hook name
+      url:
+        type: string
+        description: Hook url
+      priority:
+        type: integer
+        description: Hook priority
+      required:
+        type: boolean
+        description: If hook is required
+      soft_timeout:
+        type: integer
+        description: Hook soft timeout
+      timeout:
+        type: integer
+        description: Hook timeout
+      method:
+        type: string
+        description: Hook method
+      fallback_error_message:
+        type: string
+        description: Hook fallback error message
+      ttl:
+        type: integer
+        description: Hook ttl
+      fields:
+        type: array
+        description: Webhook fields
+        items:
+          "$ref": "#/definitions/adobe-commerce-webhooks-data-hook-field-interface"
+      rules:
+        type: array
+        description: Webhook rules
+        items:
+          "$ref": "#/definitions/adobe-commerce-webhooks-data-hook-rule-interface"
+      headers:
+        type: array
+        description: Webhook headers
+        items:
+          "$ref": "#/definitions/adobe-commerce-webhooks-data-hook-header-interface"
+      developer_console_oauth:
+        "$ref": "#/definitions/adobe-commerce-webhooks-data-developer-console-oauth-interface"
+    required:
+    - webhook_method
+    - webhook_type
+    - batch_name
+    - batch_order
+    - hook_name
+    - url
+    - priority
+    - required
+    - soft_timeout
+    - timeout
+    - method
+    - fallback_error_message
+    - ttl
+    - fields
+    - rules
+    - headers
+  adobe-commerce-webhooks-data-hook-field-interface:
+    type: object
+    description: Interface for hook field data from webapi requests
+    properties:
+      name:
+        type: string
+        description: Field name.
+      source:
+        type: string
+        description: Field source.
+    required:
+    - name
+    - source
+  adobe-commerce-webhooks-data-hook-rule-interface:
+    type: object
+    description: Interface for hook rule data from webapi requests
+    properties:
+      field:
+        type: string
+        description: Field name.
+      operator:
+        type: string
+        description: Operator.
+      value:
+        type: string
+        description: Value.
+    required:
+    - field
+    - operator
+    - value
+  adobe-commerce-webhooks-data-hook-header-interface:
+    type: object
+    description: Interface for hook header data from webapi requests
+    properties:
+      name:
+        type: string
+        description: Header name.
+      value:
+        type: string
+        description: Header value.
+    required:
+    - name
+    - value
+  adobe-commerce-webhooks-data-developer-console-oauth-interface:
+    type: object
+    description: Interface for Developer Console OAuth data from webapi requests.
+    properties:
+      client_id:
+        type: string
+        description: The Developer Console OAuth client ID.
+      client_secret:
+        type: string
+        description: The Developer Console OAuth client secret.
+      org_id:
+        type: string
+        description: The Developer Console OAuth org ID.
+      environment:
+        type: string
+        description: The Developer Console OAuth environment.
+    required:
+    - client_id
+    - client_secret
+    - org_id
+    - environment
   tax-data-tax-rate-interface:
     type: object
     description: Tax rate interface.
@@ -28036,62 +28724,84 @@ definitions:
     - items
     - search_criteria
     - total_count
-  adobe-assets-integration-data-video-item-interface:
+  customer-segment-storefront-compatibility-data-customer-segment-search-results-interface:
     type: object
-    description: Video item Interface. Dto to receive an import video asset.
+    description: ''
     properties:
-      sku:
-        type: string
-        description: Sku
-      asset_id:
-        type: string
-        description: Asset ID
-      roles:
+      items:
         type: array
-        description: Roles
+        description: Customer segments list.
         items:
-          type: string
-      position:
+          "$ref": "#/definitions/customer-segment-storefront-compatibility-data-customer-segment-interface"
+      search_criteria:
+        "$ref": "#/definitions/framework-search-criteria-interface"
+      total_count:
         type: integer
-        description: Position
-      url:
-        type: string
-        description: Video URL
-      video_thumbnail_url:
-        type: string
-        description: VideoThumbnailUrl
+        description: Total count.
     required:
-    - sku
-    - asset_id
-    - roles
-    - url
-    - video_thumbnail_url
-  adobe-assets-integration-data-image-item-interface:
+    - items
+    - search_criteria
+    - total_count
+  customer-segment-storefront-compatibility-data-customer-segment-interface:
     type: object
-    description: Image item Interface. Dto to receive an import image asset.
+    description: ''
     properties:
-      sku:
-        type: string
-        description: Sku
-      asset_id:
-        type: string
-        description: Asset ID
-      roles:
-        type: array
-        description: Roles
-        items:
-          type: string
-      position:
+      id:
         type: integer
-        description: Position
-      url:
+        description: Segment ID.
+      uid:
         type: string
-        description: Image URL
+        description: Segment UID.
+      name:
+        type: string
+        description: Segment name.
+      description:
+        type: string
+        description: Segment description.
+      is_active:
+        type: integer
+        description: Segment active status.
+      apply_to:
+        type: integer
+        description: Apply-to value.
+      number_of_customers:
+        type: integer
+        description: Number of customers the segment applies to.
+      associated_websites:
+        type: array
+        description: Associated websites for the segments
+        items:
+          "$ref": "#/definitions/store-data-website-interface"
     required:
-    - sku
-    - asset_id
-    - roles
-    - url
+    - associated_websites
+  unstructured-array:
+    type: object
+    description: ''
+  custom-email-send-data-send-email-response-interface:
+    type: object
+    description: Response DTO after accepting a custom email for delivery.
+    properties:
+      message:
+        type: string
+        description: Message (e.g. "Email accepted for delivery").
+      reference_id:
+        type: string
+        description: Reference ID for this send request.
+      recipient_email:
+        type: string
+        description: Email address.
+      template_id:
+        type: integer
+        description: ID used.
+      template_code:
+        type: string
+        description: Code (name) from the template record.
+    required:
+    - message
+    - reference_id
+    - recipient_email
+    - template_id
+    - template_code
   out-of-process-payment-methods-data-out-of-process-payment-method-interface:
     type: object
     description: ''
@@ -28157,6 +28867,52 @@ definitions:
     required:
     - key
     - value
+  gift-card-account-api-data-gift-card-account-data-interface:
+    type: object
+    description: Data interface for individual gift card account entities.
+    properties:
+      account_id:
+        type: integer
+        description: The gift card account ID
+      code:
+        type: string
+        description: The gift card code
+      status:
+        type: integer
+        description: The status flag
+      date_created:
+        type: string
+        description: The creation date
+      date_expires:
+        type: string
+        description: The expiration date
+      balance:
+        type: number
+        description: The balance amount
+      state:
+        type: integer
+        description: The state
+      is_redeemable:
+        type: integer
+        description: The redeemable flag
+  gift-card-account-api-data-gift-card-account-search-result-interface:
+    type: object
+    description: Search results interface for gift card account list operations.
+    properties:
+      items:
+        type: array
+        description: The list of gift card accounts.
+        items:
+          "$ref": "#/definitions/gift-card-account-api-data-gift-card-account-data-interface"
+      search_criteria:
+        "$ref": "#/definitions/framework-search-criteria-interface"
+      total_count:
+        type: integer
+        description: Total count.
+    required:
+    - items
+    - search_criteria
+    - total_count
   gift-wrapping-data-wrapping-interface:
     type: object
     description: Interface WrappingInterface
@@ -28248,9 +29004,6 @@ definitions:
     - validation_strategy
     - allowed_error_count
     - items
-  unstructured-array:
-    type: object
-    description: ''
   inventory-api-data-source-search-results-interface:
     type: object
     description: Search results of Repository::getList method Used fully qualified
@@ -28902,172 +29655,15 @@ definitions:
     - items
     - search_criteria
     - total_count
-  asynchronous-operations-data-detailed-bulk-operations-status-interface:
+  otp-rest-data-otp-response-interface:
     type: object
-    description: Interface BulkStatusInterface Bulk summary data with list of operations
-      items full data.
+    description: Response containing the one-time password for customer login.
     properties:
-      operations_list:
-        type: array
-        description: Operations list.
-        items:
-          "$ref": "#/definitions/asynchronous-operations-data-operation-interface"
-      extension_attributes:
-        "$ref": "#/definitions/asynchronous-operations-data-bulk-summary-extension-interface"
-      user_type:
-        type: integer
-        description: User type
-      bulk_id:
+      otp:
         type: string
-        description: Bulk uuid
-      description:
-        type: string
-        description: Bulk description
-      start_time:
-        type: string
-        description: Bulk scheduled time
-      user_id:
-        type: integer
-        description: User id
-      operation_count:
-        type: integer
-        description: Total number of operations scheduled in scope of this bulk
+        description: The one-time password.
     required:
-    - operations_list
-    - user_type
-    - bulk_id
-    - description
-    - start_time
-    - user_id
-    - operation_count
-  asynchronous-operations-data-operation-interface:
-    type: object
-    description: Class OperationInterface
-    properties:
-      extension_attributes:
-        "$ref": "#/definitions/asynchronous-operations-data-operation-extension-interface"
-      id:
-        type: integer
-        description: Id
-      bulk_uuid:
-        type: string
-        description: Bulk uuid
-      topic_name:
-        type: string
-        description: Queue Topic
-      serialized_data:
-        type: string
-        description: Data
-      result_serialized_data:
-        type: string
-        description: Serialized Data
-      status:
-        type: integer
-        description: Operation status
-      result_message:
-        type: string
-        description: Result message
-      error_code:
-        type: integer
-        description: Error code
-    required:
-    - id
-    - bulk_uuid
-    - topic_name
-    - serialized_data
-    - result_serialized_data
-    - status
-    - result_message
-    - error_code
-  asynchronous-operations-data-operation-extension-interface:
-    type: object
-    description: ExtensionInterface class for @see \Magento\AsynchronousOperations\Api\Data\OperationInterface
-    properties:
-      start_time:
-        type: string
-  asynchronous-operations-data-bulk-summary-extension-interface:
-    type: object
-    description: ExtensionInterface class for @see \Magento\AsynchronousOperations\Api\Data\BulkSummaryInterface
-  asynchronous-operations-data-bulk-operations-status-interface:
-    type: object
-    description: Interface BulkStatusInterface Bulk summary data with list of operations
-      items summary data.
-    properties:
-      operations_list:
-        type: array
-        description: List of operation with statuses (short data).
-        items:
-          "$ref": "#/definitions/asynchronous-operations-data-summary-operation-status-interface"
-      extension_attributes:
-        "$ref": "#/definitions/asynchronous-operations-data-bulk-summary-extension-interface"
-      user_type:
-        type: integer
-        description: User type
-      bulk_id:
-        type: string
-        description: Bulk uuid
-      description:
-        type: string
-        description: Bulk description
-      start_time:
-        type: string
-        description: Bulk scheduled time
-      user_id:
-        type: integer
-        description: User id
-      operation_count:
-        type: integer
-        description: Total number of operations scheduled in scope of this bulk
-    required:
-    - operations_list
-    - user_type
-    - bulk_id
-    - description
-    - start_time
-    - user_id
-    - operation_count
-  asynchronous-operations-data-summary-operation-status-interface:
-    type: object
-    description: Getter Class OperationsStatusInterface Instead of OperationInterface
-      this class don't provide all operation data and not responsive to set any data,
-      just to get operation data without serialized_data and result_serialized_data
-    properties:
-      id:
-        type: integer
-        description: Id
-      status:
-        type: integer
-        description: Operation status
-      result_message:
-        type: string
-        description: Result message
-      error_code:
-        type: integer
-        description: Error code
-    required:
-    - id
-    - status
-    - result_message
-    - error_code
-  asynchronous-operations-data-operation-search-results-interface:
-    type: object
-    description: Bulk operation search result interface. An bulk is a group of queue
-      messages. An bulk operation item is a queue message.
-    properties:
-      items:
-        type: array
-        description: List of operations.
-        items:
-          "$ref": "#/definitions/asynchronous-operations-data-operation-interface"
-      search_criteria:
-        "$ref": "#/definitions/framework-search-criteria-interface"
-      total_count:
-        type: integer
-        description: Total count.
-    required:
-    - items
-    - search_criteria
-    - total_count
+    - otp
   out-of-process-observability-data-subscription-search-result-interface:
     type: object
     description: Search result interface for observability subscriptions
@@ -29208,6 +29804,62 @@ definitions:
     - active
     - stores
     - credit_memo_tax_enabled
+  adobe-assets-integration-data-video-item-interface:
+    type: object
+    description: Video item Interface. Dto to receive an import video asset.
+    properties:
+      sku:
+        type: string
+        description: Sku
+      asset_id:
+        type: string
+        description: Asset ID
+      roles:
+        type: array
+        description: Roles
+        items:
+          type: string
+      position:
+        type: integer
+        description: Position
+      url:
+        type: string
+        description: Video URL
+      video_thumbnail_url:
+        type: string
+        description: VideoThumbnailUrl
+    required:
+    - sku
+    - asset_id
+    - roles
+    - url
+    - video_thumbnail_url
+  adobe-assets-integration-data-image-item-interface:
+    type: object
+    description: Image item Interface. Dto to receive an import image asset.
+    properties:
+      sku:
+        type: string
+        description: Sku
+      asset_id:
+        type: string
+        description: Asset ID
+      roles:
+        type: array
+        description: Roles
+        items:
+          type: string
+      position:
+        type: integer
+        description: Position
+      url:
+        type: string
+        description: Image URL
+    required:
+    - sku
+    - asset_id
+    - roles
+    - url
   rma-data-track-interface:
     type: object
     description: Interface TrackInterface
@@ -29522,62 +30174,13 @@ definitions:
         description: The supported webhook name
     required:
     - name
-  customer-segment-storefront-compatibility-data-customer-segment-search-results-interface:
-    type: object
-    description: ''
-    properties:
-      items:
-        type: array
-        description: Customer segments list.
-        items:
-          "$ref": "#/definitions/customer-segment-storefront-compatibility-data-customer-segment-interface"
-      search_criteria:
-        "$ref": "#/definitions/framework-search-criteria-interface"
-      total_count:
-        type: integer
-        description: Total count.
-    required:
-    - items
-    - search_criteria
-    - total_count
-  customer-segment-storefront-compatibility-data-customer-segment-interface:
-    type: object
-    description: ''
-    properties:
-      id:
-        type: integer
-        description: Segment ID.
-      uid:
-        type: string
-        description: Segment UID.
-      name:
-        type: string
-        description: Segment name.
-      description:
-        type: string
-        description: Segment description.
-      is_active:
-        type: integer
-        description: Segment active status.
-      apply_to:
-        type: integer
-        description: Apply-to value.
-      number_of_customers:
-        type: integer
-        description: Number of customers the segment applies to.
-      associated_websites:
-        type: array
-        description: Associated websites for the segments
-        items:
-          "$ref": "#/definitions/store-data-website-interface"
-    required:
-    - associated_websites
 x-tagGroups:
 - name: addresses
   tags:
   - addresses/{addressId}
 - name: adminuisdk
   tags:
+  - adminuisdk/appmanagement/validate
   - adminuisdk/massaction/{request_id}
   - adminuisdk/orderviewbutton/{request_id}
 - name: adobe_io_events
@@ -29707,6 +30310,12 @@ x-tagGroups:
 - name: creditmemos
   tags:
   - creditmemos
+- name: custom email
+  tags:
+  - custom-email/send
+- name: customer
+  tags:
+  - customer/{customerId}/otp
 - name: customerGroups
   tags:
   - customerGroups
@@ -29737,6 +30346,10 @@ x-tagGroups:
   - customers/{customerId}/shippingAddress
   - customers/{customerId}/token
   - customers/{email}/activate
+- name: directory
+  tags:
+  - directory/countries
+  - directory/countries/{countryId}
 - name: eav
   tags:
   - eav/attribute-sets
@@ -29758,6 +30371,11 @@ x-tagGroups:
   - gift-wrappings
   - gift-wrappings/{id}
   - gift-wrappings/{wrappingId}
+- name: giftcardaccounts
+  tags:
+  - giftcardaccounts
+  - giftcardaccounts/code/{code}
+  - giftcardaccounts/{id}
 - name: hierarchy
   tags:
   - hierarchy/move/{id}

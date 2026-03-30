@@ -167,11 +167,11 @@ Use the [`attributeMetadata` query](./attribute-metadata.md) to return a list of
 
 #### Layered search and expansion of search types
 
-Layered search, or search within a search, is a powerful, attribute-based filtering system that extends the traditional search functionality to include additional search parameters. These additional search parameters allow more precise and flexible product discovery. See the [merchant documentation](https://experienceleague.adobe.com/en/docs/commerce/live-search/workspace) to learn why a merchant would implement layered search for their storefront.
+Layered search, or search within a search, is an attribute-based filtering system that extends the traditional search functionality to include additional search parameters. These additional search parameters allow more precise and flexible product discovery. See the [merchant documentation](https://experienceleague.adobe.com/en/docs/commerce/live-search/workspace#layered-search-and-expansion-of-search-types) to learn how to update the search types in the Admin to enable layered search.
 
 <InlineAlert variant="info" slots="text" />
 
-Layered search is available in Live Search 4.6.0.
+Layered search is available in Live Search 4.6.0 (PaaS) or in the latest version of [Commerce Optimizer](https://experienceleague.adobe.com/en/docs/commerce/optimizer/release-notes) (SaaS).
 
 The advanced search capabilities are implemented through the `filter` parameter in the `productSearch` query using specific operators:
 

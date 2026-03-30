@@ -33,6 +33,7 @@
     "build:spectaql:2.4.6": "spectaql --target-file index.html --config spectaql/config_2.4.6.yml",
     "build:spectaql:2.4.7": "spectaql --target-file index.html --config spectaql/config_2.4.7.yml",
     "build:spectaql:saas": "spectaql --target-file index.html --config spectaql/config_saas.yml",
+    "build:spectaql:beta": "spectaql --target-file index.html --config spectaql/config_2.4.9-beta-1.yml",
     "dev:spectaql": "spectaql --development-mode-live --config spectaql/config.yml"
   },
   "packageManager": "yarn@3.2.4"

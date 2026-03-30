@@ -1559,6 +1559,11 @@ module.exports = [
         EventTarget: "_top"
       },
       {
+        title: "2.4.9-beta-1",
+        path: "https://developer.adobe.com/commerce/webapi/reference/graphql/2.4.9-beta-1/",
+        EventTarget: "_top"
+      },
+      {
         title: "2.4.8",
         path: "https://developer.adobe.com/commerce/webapi/reference/graphql/2.4.8/",
         EventTarget: "_top"
