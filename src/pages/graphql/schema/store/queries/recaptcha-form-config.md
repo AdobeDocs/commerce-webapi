@@ -4,7 +4,9 @@ title: recaptchaFormConfig query
 
 # recaptchaFormConfig query
 
-The `recaptchaFormConfig` query returns information about the reCaptcha configuration for the specified form type. You can use the [`recaptchaV3Config` query](recaptcha-v3-config.md) to return a list of form types.
+The `recaptchaFormConfig` query returns information about the reCaptcha configuration for the specified form type. To query multiple form types, use the [`recaptchaFormConfigs` query](recaptcha-form-configs.md).
+
+You can use the [`recaptchaV3Config` query](recaptcha-v3-config.md) to return a list of form types.
 
 ## Syntax
 
