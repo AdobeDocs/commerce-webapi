@@ -1282,6 +1282,10 @@ module.exports = [
                 path: "/graphql/schema/store/queries/recaptcha-form-config/",
               },
               {
+                title: "recaptchaFormConfigs",
+                path: "/graphql/schema/store/queries/recaptcha-form-configs/",
+              },
+              {
                 title: "storeConfig",
                 path: "/graphql/schema/store/queries/store-config/",
               },

@@ -12,6 +12,7 @@ The queries in the store schema fetch store configuration data and content block
   - [country](country.md)
   - [currency](currency.md)
   - [recaptchaFormConfig](recaptcha-form-config.md)
+  - [recaptchaFormConfigs](recaptcha-form-configs.md)
   - [recaptchaV3Config](recaptcha-v3-config.md)
   - [storeConfig](store-config.md)
 - Content blocks
