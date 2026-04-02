@@ -13,11 +13,9 @@ You can use the [`recaptchaV3Config` query](recaptcha-v3-config.md) to return a 
 
 `recaptchaFormConfigs(formTypes: [ReCaptchaFormEnum!]!): [ReCaptchaFormConfigItem]`
 
-<!--->
 ## Reference
 
 The [`recaptchaFormConfigs`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-recaptchaFormConfigs) reference provides detailed information about the types and fields defined in this query.
--->
 
 ## Example usage
 
