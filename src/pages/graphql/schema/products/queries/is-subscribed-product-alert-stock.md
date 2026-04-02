@@ -19,11 +19,9 @@ This query requires a valid [customer authentication token](../../customer/mutat
 }
 ```
 
-<!--
 ## Reference
 
 The [`isSubscribedProductAlertStock`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-isSubscribedProductAlertStock) reference provides detailed information about the types and fields defined in this query.
--->
 
 ## Example usage
 
