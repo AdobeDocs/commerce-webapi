@@ -1326,7 +1326,7 @@ module.exports = [
     ],
   },
   {
-    title: "Merchant Services Schema",
+    title: "Storefront Services Schema",
     path: "/graphql/schema/merchant-services/",
     pages: [
       {

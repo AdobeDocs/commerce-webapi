@@ -1,5 +1,5 @@
 ---
-title: Adobe Merchant Services GraphQL
+title: Adobe Storefront Services GraphQL
 description: Learn how Catalog Service, Live Search, and Product Recommendations GraphQL queries relate to each other and to the core Commerce schema.
 keywords:
   - GraphQL
@@ -9,9 +9,9 @@ keywords:
   - Product Recommendations
 ---
 
-# Adobe Merchant Services GraphQL
+# Adobe Storefront Services GraphQL
 
-Adobe Merchant Services—[Catalog Service](../catalog-service/), [Live Search](../live-search/), and [Product Recommendations](../product-recommendations/)—are SaaS extensions for Adobe Commerce that expose their own GraphQL schemas. These schemas are separate from the [core Commerce GraphQL schema](../index.md) and optimized for fast, read-only storefront rendering.
+Adobe Storefront Services—[Catalog Service](../catalog-service/), [Live Search](../live-search/), and [Product Recommendations](../product-recommendations/)—are SaaS extensions for Adobe Commerce that expose their own GraphQL schemas. These schemas are separate from the [core Commerce GraphQL schema](../index.md) and optimized for fast, read-only storefront rendering.
 
 ## How the three services relate to each other
 
@@ -23,7 +23,7 @@ Although each service addresses a distinct storefront use case, they share a com
 | **Live Search** | Powers product listing pages (PLPs) and on-site search with AI-driven relevance, faceting, and merchandising rules. |
 | **Product Recommendations** | Surfaces AI-generated product suggestions ("Customers who viewed this also viewed…") as recommendation units on any storefront page. |
 
-**Shared dependency.** Product Recommendations requires Catalog Service (v2.2.0 or later) to retrieve complete product data for each recommended item. If you use Product Recommendations, you must also have Catalog Service installed.
+**Shared dependency.** Both Live Search and Product Recommendations require Catalog Service (v2.2.0 or later) to retrieve complete product data for each recommended item. If you are using Live Search 3.0.2 or later and Product Recommendations  3.0.2 or later, the Catalog Service is installed automatically when you install or update the extensions.
 
 **Complementary coverage.** A typical storefront uses all three:
 
@@ -32,13 +32,13 @@ Although each service addresses a distinct storefront use case, they share a com
 - `recommendations` (Product Recommendations) as widgets on the PDP, home page, and cart page
 - `variants` and `refineProduct` (Catalog Service) for option selection on the PDP
 
-## How Merchant Services differ from the core GraphQL schema
+## How Storefront Services differ from the core GraphQL schema
 
-The core Commerce GraphQL endpoint (`<commerce-url>/graphql`) provides a comprehensive schema for all Commerce operations: catalog browsing, cart management, checkout, customer accounts, orders, and more. The Merchant Services schemas are narrowly scoped for read-only storefront rendering, and they differ from the core schema in the following ways.
+The core Commerce GraphQL endpoint (`<commerce-url>/graphql`) provides a comprehensive schema for all Commerce operations: catalog browsing, cart management, checkout, customer accounts, orders, and more. The Storefront Services schemas are narrowly scoped for read-only storefront rendering, and they differ from the core schema in the following ways.
 
 ### Separate endpoints
 
-Merchant Services queries do **not** use the standard Commerce GraphQL endpoint. They are sent to dedicated Adobe SaaS endpoints:
+Storefront Services queries do **not** use the standard Commerce GraphQL endpoint. They are sent to dedicated Adobe SaaS endpoints:
 
 | Edition | Environment | Endpoint |
 | --- | --- | --- |
@@ -49,7 +49,7 @@ Merchant Services queries do **not** use the standard Commerce GraphQL endpoint.
 
 ### Different HTTP headers
 
-Instead of the authentication tokens used by core Commerce, these services require SaaS context headers:
+These services use SaaS context headers instead of the authentication tokens used by core Commerce.
 
 | Header | Required by | Description |
 | --- | --- | --- |
@@ -63,7 +63,7 @@ Instead of the authentication tokens used by core Commerce, these services requi
 
 ### Different data types
 
-Merchant Services return their own types that are not interchangeable with core types:
+Storefront Services return their own types that are not interchangeable with core types:
 
 - The Catalog Service `products` query returns `ProductView` objects (`SimpleProductView` or `ComplexProductView`), not the core `Products` type. Prices, images, attributes, and options are structured differently.
 - The Live Search `productSearch` query returns `ProductSearchResponse` with facets (`Aggregation`) and merchandising metadata. The core `products` query returns layered-navigation data for categories, which is a fundamentally different filtering model.
@@ -71,34 +71,34 @@ Merchant Services return their own types that are not interchangeable with core 
 
 ### No write operations
 
-Merchant Services schemas contain only queries. All mutations (cart, checkout, customer, orders) remain in the core schema and must be sent to the core endpoint.
+Storefront Services schemas contain only queries. All mutations (cart, checkout, customer, orders) are in the core schema and must be sent to the core endpoint.
 
-## When to use Merchant Services queries
+## When to use Storefront Services queries
 
-**Use Merchant Services queries when:**
+**Use Storefront Services queries when:**
 
-- Building or customizing a storefront and you need the fastest possible catalog rendering for PDPs, PLPs, search, or recommendations.
-- Your storefront front end (for example, an Edge Delivery Services or headless storefront) needs to fetch catalog data independently from cart and checkout operations.
+- Building or customizing a storefront that requires the fastest possible catalog rendering for PDPs, PLPs, search, or recommendations.
+- Your storefront frontend (for example, an Edge Delivery Services or headless storefront) needs to fetch catalog data independently from cart and checkout operations.
 - You need advanced search features like semantic search, AI merchandising rules, synonyms, or faceted filtering that are not available in the core `products` query.
 - You need AI-driven product recommendations that are automatically trained on shopper behavior.
 
-**Do not use Merchant Services queries when:**
+**Do not use Storefront Services queries when:**
 
 - You need to perform a write operation (add to cart, place an order, update a customer profile). These operations always use the core schema.
-- You need real-time inventory or pricing that must be guaranteed up to the millisecond; Merchant Services data is indexed asynchronously.
-- You are working on a server-side admin workflow or integration that reads data from Commerce for non-storefront purposes (use the core REST or GraphQL APIs instead).
+- You need real-time inventory or pricing that must be guaranteed up to the millisecond; Storefront Services data is indexed asynchronously.
+- You are working on a server-side admin workflow or integration that reads data from Commerce for non-storefront purposes. In this case, use the core REST or GraphQL APIs instead.
 - The Merchant Services extensions are not installed or your Commerce instance is not connected to Adobe's SaaS platform.
 
-## How Merchant Services differ from Adobe Commerce Optimizer
+## How Storefront Services differ from Adobe Commerce Optimizer
 
 Adobe Commerce Optimizer is a standalone SaaS platform that is not installed as an extension on an existing Commerce instance. It provides the **Merchandising GraphQL API**, which covers a similar set of storefront use cases but with a different architecture, different query signatures, and different headers.
 
 ### Architectural difference
 
-| Aspect | Merchant Services | Commerce Optimizer |
+| Aspect | Storefront Services | Commerce Optimizer |
 | --- | --- | --- |
 | **Deployment model** | Extensions installed on an existing Adobe Commerce (PaaS or SaaS) instance | Standalone SaaS platform; catalog data is ingested via a separate Data Ingestion API |
-| **Data source** | Commerce catalog, indexed into Adobe SaaS | Data ingested independently into Commerce Optimizer |
+| **Data source** | Commerce catalog, indexed into the Adobe SaaS data space | Data ingested independently into the Commerce Optimizer instance |
 | **Context model** | Store view and website codes from Commerce | Catalog views and policies defined in Commerce Optimizer |
 | **Authentication** | `X-Api-Key` tied to your Commerce environment | No API key required; context is provided through `AC-View-Id` |
 
@@ -127,16 +127,16 @@ The Merchandising GraphQL API provides queries that are similar in name to some 
 | `recommendations` | Product Recommendations — returns units by recommendation type | Commerce Optimizer uses `recommendationsByUnitIds`, which requires pre-configured unit IDs |
 | _(none)_ | Not available in Merchant Services | `navigation` — returns category-based navigation structure |
 
-### When to use Commerce Optimizer instead
+### When to use Commerce Optimizer
 
-Use the Commerce Optimizer Merchandising GraphQL API instead of Merchant Services queries when:
+Use the Commerce Optimizer Merchandising GraphQL API instead of Storefront Services queries when:
 
-- You are building on Adobe Commerce Optimizer as a standalone SaaS platform rather than on an Adobe Commerce (PaaS/SaaS) instance.
+- Building on Adobe Commerce Optimizer as a standalone SaaS platform rather than on an Adobe Commerce (PaaS/SaaS) instance.
 - Your storefront needs to serve multiple catalog views or channel-specific product catalogs controlled by Commerce Optimizer policies.
 - You are migrating off a traditional Commerce installation and Commerce Optimizer is the designated catalog backend.
 
-If you are running Adobe Commerce (PaaS or SaaS) with the Merchant Services extensions installed, use the Merchant Services queries described in this section. The two API surfaces are not interchangeable—switching endpoints without also migrating your catalog data and context configuration will result in errors.
+If you are running Adobe Commerce (PaaS or SaaS) with the Storefront Services extensions installed, use the Storefront Services queries described in this section. The two API surfaces are not interchangeable—switching endpoints without also migrating your catalog data and context configuration will result in errors.
 
 ## Combining schemas with API Mesh
 
-Because Merchant Services and Commerce Optimizer both use separate endpoints from the core Commerce GraphQL endpoint, a storefront often needs to make requests to multiple endpoints. You can use [API Mesh for Adobe Developer App Builder](https://developer.adobe.com/graphql-mesh-gateway/) to unify multiple GraphQL schemas—including the core Commerce schema, Catalog Service, Live Search, and third-party APIs—into a single endpoint. API Mesh also handles the context headers for each upstream service automatically, simplifying storefront development.
+Because Storefront Services and Commerce Optimizer both use separate endpoints from the core Commerce GraphQL endpoint, a storefront often needs to make requests to multiple endpoints. You can use [API Mesh for Adobe Developer App Builder](https://developer.adobe.com/graphql-mesh-gateway/) to unify multiple GraphQL schemas—including the core Commerce schema, Catalog Service, Live Search, and third-party APIs—into a single endpoint. API Mesh also handles the context headers for each upstream service automatically, simplifying storefront development.
