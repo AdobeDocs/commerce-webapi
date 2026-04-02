@@ -13,6 +13,8 @@ keywords:
 
 Adobe Storefront Services—[Catalog Service](../catalog-service/), [Live Search](../live-search/), and [Product Recommendations](../product-recommendations/)—are SaaS extensions for Adobe Commerce that expose their own GraphQL schemas. These schemas are separate from the [core Commerce GraphQL schema](../index.md) and optimized for fast, read-only storefront rendering.
 
+In Adobe Commerce on cloud and on-premises instances (PaaS), the merchant installs the Storefront Services extensions to enable these GraphQL endpoints. In Adobe Commerce as a Cloud Service (SaaS), the services are installed automatically.
+
 ## How the three services relate to each other
 
 Although each service addresses a distinct storefront use case, they share a common technical foundation and are designed to work together:
@@ -44,8 +46,8 @@ Storefront Services queries do **not** use the standard Commerce GraphQL endpoin
 | --- | --- | --- |
 | PaaS | Testing | `https://catalog-service-sandbox.adobe.io/graphql` |
 | PaaS | Production | `https://catalog-service.adobe.io/graphql` |
-| SaaS | Testing | `https://na1-sandbox.api.commerce.adobe.com/{{tenant-id}}/graphql` |
-| SaaS | Production | `https://na1.api.commerce.adobe.com/{{tenant-id}}/graphql` |
+| SaaS | Testing | `https://{{location}}-sandbox.api.commerce.adobe.com/{{tenant-id}}/graphql` |
+| SaaS | Production | `https://{{location}}.api.commerce.adobe.com/{{tenant-id}}/graphql` |
 
 ### Different HTTP headers
 
@@ -53,13 +55,12 @@ These services use SaaS context headers instead of the authentication tokens use
 
 | Header | Required by | Description |
 | --- | --- | --- |
+| `Magento-Customer-Group` | Catalog Service, Product Recommendations | Customer group for personalized pricing |
 | `Magento-Environment-Id` | All three services | The SaaS Data Space ID from the Commerce Admin |
 | `Magento-Store-Code` | All three services | Store code |
 | `Magento-Store-View-Code` | All three services | Store view code |
 | `Magento-Website-Code` | All three services | Website code |
-| `X-Api-Key` | Catalog Service, Product Recommendations | Unique API key for your Commerce environment |
-| `X-Api-Key: search_gql` | Live Search | Fixed value required for Live Search requests |
-| `Magento-Customer-Group` | Catalog Service, Product Recommendations | Customer group for personalized pricing |
+| `X-Api-Key` | All three services | Unique API key for your Commerce environment |
 
 ### Different data types
 
@@ -87,7 +88,7 @@ Storefront Services schemas contain only queries. All mutations (cart, checkout,
 - You need to perform a write operation (add to cart, place an order, update a customer profile). These operations always use the core schema.
 - You need real-time inventory or pricing that must be guaranteed up to the millisecond; Storefront Services data is indexed asynchronously.
 - You are working on a server-side admin workflow or integration that reads data from Commerce for non-storefront purposes. In this case, use the core REST or GraphQL APIs instead.
-- The Merchant Services extensions are not installed or your Commerce instance is not connected to Adobe's SaaS platform.
+- The Storefront Services extensions are not installed or your Commerce instance is not connected to Adobe's SaaS platform.
 
 ## How Storefront Services differ from Adobe Commerce Optimizer
 
@@ -101,6 +102,8 @@ Adobe Commerce Optimizer is a standalone SaaS platform that is not installed as 
 | **Data source** | Commerce catalog, indexed into the Adobe SaaS data space | Data ingested independently into the Commerce Optimizer instance |
 | **Context model** | Store view and website codes from Commerce | Catalog views and policies defined in Commerce Optimizer |
 | **Authentication** | `X-Api-Key` tied to your Commerce environment | No API key required; context is provided through `AC-View-Id` |
+
+Commerce projects deployed on Adobe Commerce on cloud or on-premises can use the [Commerce Optimizer Connector](https://experienceleague.adobe.com/en/docs/commerce/aco-optimizer-connector/overview) to synchronize Commerce catalog data to an Adobe Commerce Optimizer instance.  When the connector is installed and enabled, customers use the Merchandising Services GraphQL queries to retrieve product and catalog data instead of using the Catalog Service, Live Search, and Product Recommendations queries.  The retrieve data for product discovery, recommendations, projects deployed on Commerce as a Cloud Service must use Storefront Services.
 
 ### Different headers
 
@@ -133,7 +136,7 @@ Use the Commerce Optimizer Merchandising GraphQL API instead of Storefront Servi
 
 - Building on Adobe Commerce Optimizer as a standalone SaaS platform rather than on an Adobe Commerce (PaaS/SaaS) instance.
 - Your storefront needs to serve multiple catalog views or channel-specific product catalogs controlled by Commerce Optimizer policies.
-- You are migrating off a traditional Commerce installation and Commerce Optimizer is the designated catalog backend.
+- Your Commerce on cloud infrastructure or on premises project has been configured to use the [Adobe Commerce Optimizer Connector](https://experienceleague.adobe.com/en/docs/commerce/aco-optimizer-connector/overview), which syncs data from your Commerce project to Adobe Commerce Optimizer.
 
 If you are running Adobe Commerce (PaaS or SaaS) with the Storefront Services extensions installed, use the Storefront Services queries described in this section. The two API surfaces are not interchangeable—switching endpoints without also migrating your catalog data and context configuration will result in errors.
 
