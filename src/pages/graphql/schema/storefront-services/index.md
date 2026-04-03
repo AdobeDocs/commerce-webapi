@@ -13,7 +13,7 @@ keywords:
 
 Adobe Storefront Services—[Catalog Service](../catalog-service/), [Live Search](../live-search/), and [Product Recommendations](../product-recommendations/)—are SaaS extensions for Adobe Commerce that expose their own GraphQL schemas. These schemas are separate from the [core Commerce GraphQL schema](../index.md) and optimized for fast, read-only storefront rendering.
 
-In Adobe Commerce on cloud and on-premises instances (PaaS), the merchant installs the Storefront Services extensions to enable these GraphQL endpoints. In Adobe Commerce as a Cloud Service (SaaS), the services are installed automatically.
+In Adobe Commerce on cloud and on-premises instances (PaaS), the merchant installs and configures the Storefront Services extensions to enable these GraphQL endpoints. In Adobe Commerce as a Cloud Service (SaaS), the services are included in the platform, and the merchant must configure Live Search and Product Recommendations services.
 
 ## How the three services relate to each other
 
@@ -103,7 +103,9 @@ Adobe Commerce Optimizer is a standalone SaaS platform that is not installed as 
 | **Context model** | Store view and website codes from Commerce | Catalog views and policies defined in Commerce Optimizer |
 | **Authentication** | `X-Api-Key` tied to your Commerce environment | No API key required; context is provided through `AC-View-Id` |
 
-Commerce projects deployed on Adobe Commerce on cloud or on-premises can use the [Commerce Optimizer Connector](https://experienceleague.adobe.com/en/docs/commerce/aco-optimizer-connector/overview) to synchronize Commerce catalog data to an Adobe Commerce Optimizer instance.  When the connector is installed and enabled, customers use the Merchandising Services GraphQL queries to retrieve product and catalog data instead of using the Catalog Service, Live Search, and Product Recommendations queries.  The retrieve data for product discovery, recommendations, projects deployed on Commerce as a Cloud Service must use Storefront Services.
+Commerce projects deployed on Adobe Commerce on cloud or on-premises can use the [Commerce Optimizer Connector](https://experienceleague.adobe.com/en/docs/commerce/aco-optimizer-connector/overview) to synchronize Commerce catalog data to an Adobe Commerce Optimizer instance.  When the connector is installed and enabled, customers use the Merchandising Services GraphQL queries to retrieve product and catalog data instead of using the Catalog Service, Live Search, and Product Recommendations queries.
+
+Commerce projects deployed on Commerce as a Cloud Service must use Catalog Service, Live Search, and Product Recommendations queries to retrieve catalog data for product listing, product discovery, and product recommendations.
 
 ### Different headers
 
@@ -119,16 +121,17 @@ Commerce Optimizer uses a different set of context headers that reflect its cata
 
 The Merchandising GraphQL API provides queries that are similar in name to some Merchant Services queries but are not identical in structure or behavior:
 
-| Query | Merchant Services | Commerce Optimizer |
+| Query | Storefront Services | Commerce Optimizer |
 | --- | --- | --- |
-| `products` | Catalog Service — fetch by SKU, returns `ProductView` | Same name, same general purpose, but uses `AC-View-Id` context |
+| `products` | Catalog Service — fetch by SKU, returns `ProductView` | Same name, same general purpose, but uses `AC-View-Id` context. Commerce Optimizer also supports an additional `CategoryProductView` interface that returns category information associated with a product, including hierarchical parent relationships and images. |
 | `productSearch` | Live Search / Catalog Service — full search with `phrase`, `filter`, `sort`, optional `context` | Similar structure, but context is provided through headers rather than a `context` input object |
 | `attributeMetadata` | Live Search — returns filterable and sortable attributes | Same name and purpose; independent implementation |
 | `refineProduct` | Catalog Service — narrow complex product options by selection | Equivalent query available |
 | `variants` | Catalog Service — return all variant combinations | Equivalent query available |
 | `categories` | Catalog Service — return category hierarchy | Commerce Optimizer uses `categoryTree` with `family` and `slugs` arguments |
-| `recommendations` | Product Recommendations — returns units by recommendation type | Commerce Optimizer uses `recommendationsByUnitIds`, which requires pre-configured unit IDs |
-| _(none)_ | Not available in Merchant Services | `navigation` — returns category-based navigation structure |
+| `recommendations` | Product Recommendations — returns units by recommendation type | Commerce Optimizer supports an equivalent `recommendations` query. Additionally,  Optimizer provides a `recommendationsByUnitIds`query, which returns specific recommendation units based on pre-configured unit IDs |
+| `navigation` | Not available in Storefront Services | Returns category-based navigation structure for a given product family. |
+|`
 
 ### When to use Commerce Optimizer
 
