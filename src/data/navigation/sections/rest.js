@@ -497,10 +497,28 @@ module.exports = [
             title: "Sales refunds",
             path: "/rest/modules/sales/"
         },
+    ],
+  },
+  {
+    title: "SaaS integrations",
+    path: "/rest/saas-integrations/",
+    pages: [
+        {
+            title: "Custom email",
+            path: "/rest/saas-integrations/custom-email/"
+        },
+        {
+            title: "Gift card accounts",
+            path: "/rest/saas-integrations/gift-card-accounts/"
+        },
+        {
+            title: "Login as Customer",
+            path: "/rest/saas-integrations/login-as-customer/"
+        },
         {
             title: "S3 uploads",
-            path: "/rest/modules/s3-uploads/"
-        }
+            path: "/rest/saas-integrations/s3-uploads/"
+        },
     ],
   }
 ];
