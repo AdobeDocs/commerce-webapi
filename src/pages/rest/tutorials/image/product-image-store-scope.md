@@ -3,10 +3,6 @@ title: Manage product images at the store view level
 description: Learn how to use the Adobe Commerce REST API to preserve, override, and restore product image gallery settings per store view in a multi-store setup.
 keywords:
   - REST
-  - product images
-  - store view
-  - multi-store
-  - media gallery
 ---
 
 # Manage product images at the store view level
