@@ -17,7 +17,11 @@ To retrieve information about a customer, we recommend you use customer tokens i
 
 ## Reference
 
-The [`customer`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-customer) reference provides detailed information about the types and fields defined in this query.
+The `customer` reference provides detailed information about the types and fields defined in this query.
+
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-customer)
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-customer)
 
 ## Example usage
 

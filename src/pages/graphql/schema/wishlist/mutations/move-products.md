@@ -29,7 +29,11 @@ mutation {
 
 ## Reference
 
-The [`moveProductsBetweenWishlists`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-moveProductsBetweenWishlists) reference provides detailed information about the types and fields defined in this mutation.
+The `moveProductsBetweenWishlists` reference provides detailed information about the types and fields defined in this mutation.
+
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-moveProductsBetweenWishlists)
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-moveProductsBetweenWishlists)
 
 ## Example usage
 

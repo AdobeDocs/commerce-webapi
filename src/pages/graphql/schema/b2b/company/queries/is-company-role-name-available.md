@@ -32,7 +32,11 @@ This query requires a valid [customer authentication token](../../../customer/mu
 
 ## Reference
 
-The [`isCompanyRoleNameAvailable`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-isCompanyRoleNameAvailable) reference provides detailed information about the types and fields defined in this query.
+The `isCompanyRoleNameAvailable` reference provides detailed information about the types and fields defined in this query.
+
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-isCompanyRoleNameAvailable)
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-isCompanyRoleNameAvailable)
 
 ## Example usage
 
