@@ -16,7 +16,11 @@ The `content` field can contain HTML or plain text. Use the `is_html` field dete
 
 ## Reference
 
-The [`checkoutAgreements`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-checkoutAgreements) reference provides detailed information about the types and fields defined in this query.
+The `checkoutAgreements` reference provides detailed information about the types and fields defined in this query.
+
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-checkoutAgreements)
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-checkoutAgreements)
 
 ## Example usage
 
