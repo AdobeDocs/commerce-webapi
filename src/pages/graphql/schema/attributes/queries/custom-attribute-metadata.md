@@ -18,7 +18,9 @@ The `StorefrontProperties` output object returns information about a product att
 
 ## Reference
 
-The [`customAttributeMetadata`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-customAttributeMetadata) reference provides detailed information about the types and fields defined in this query.
+The `customAttributeMetadata` reference provides detailed information about the types and fields defined in this query.
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-customAttributeMetadata)
 
 ## Example usage
 
