@@ -212,7 +212,7 @@ module.exports = [
                 path: "/graphql/schema/cart/mutations/apply-coupons/"
               },
               {
-                title: "applyGiftCartToCart",
+                title: "applyGiftCardToCart",
                 path: "/graphql/schema/cart/mutations/apply-giftcard/",
               },
               {

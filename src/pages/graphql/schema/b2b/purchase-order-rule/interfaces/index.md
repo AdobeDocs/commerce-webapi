@@ -10,10 +10,25 @@ import CommerceOnly from '/src/_includes/commerce-only.md'
 
 # PurchaseOrderApprovalRuleConditionInterface attributes and implementations
 
-[`PurchaseOrderApprovalRuleConditionInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-PurchaseOrderApprovalRuleConditionInterface) provides details about the approval rule conditions. It has the following implementations:
+`PurchaseOrderApprovalRuleConditionInterface` provides details about the approval rule conditions.
 
-*  [`PurchaseOrderApprovalRuleConditionAmount`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-PurchaseOrderApprovalRuleConditionAmount)
-*  [`PurchaseOrderApprovalRuleConditionQuantity`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-PurchaseOrderApprovalRuleConditionQuantity)
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-PurchaseOrderApprovalRuleConditionInterface)
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-PurchaseOrderApprovalRuleConditionInterface)
+
+It has the following implementations:
+
+*  `PurchaseOrderApprovalRuleConditionAmount`
+
+   * &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-PurchaseOrderApprovalRuleConditionAmount)
+
+   * &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-PurchaseOrderApprovalRuleConditionAmount)
+
+*  `PurchaseOrderApprovalRuleConditionQuantity`
+
+   * &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-PurchaseOrderApprovalRuleConditionQuantity)
+
+   * &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-PurchaseOrderApprovalRuleConditionQuantity)
 
 ## Example usage
 

@@ -14,7 +14,11 @@ A logged-in customer specifies an email address when they create an account. The
 
 ## Reference
 
-The [`setGuestEmailOnCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-setGuestEmailOnCart) reference provides detailed information about the types and fields defined in this mutation.
+The `setGuestEmailOnCart` reference provides detailed information about the types and fields defined in this mutation.
+
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-setGuestEmailOnCart)
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-setGuestEmailOnCart)
 
 ## Example usage
 

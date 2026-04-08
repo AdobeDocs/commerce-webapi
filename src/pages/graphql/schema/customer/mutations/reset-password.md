@@ -22,7 +22,11 @@ The reset password token value can also be found in the `customer_entity`.`rp_to
 
 ## Reference
 
-The [`resetPassword`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-resetPassword) reference provides detailed information about the types and fields defined in this mutation.
+The `resetPassword` reference provides detailed information about the types and fields defined in this mutation.
+
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-resetPassword)
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-resetPassword)
 
 ## Example usage
 
@@ -63,4 +67,4 @@ Error | Description
 
 ## Related topics
 
--  [requestPasswordResetEmail mutation](request-password-reset-email.md)
+* [requestPasswordResetEmail mutation](request-password-reset-email.md)

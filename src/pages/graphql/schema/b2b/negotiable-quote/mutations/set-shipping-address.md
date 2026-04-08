@@ -28,7 +28,11 @@ This query requires a valid [customer authentication token](../../../customer/mu
 
 ## Reference
 
-The [`setNegotiableQuoteShippingAddress`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-setNegotiableQuoteShippingAddress) reference provides detailed information about the types and fields defined in this mutation.
+The `setNegotiableQuoteShippingAddress` reference provides detailed information about the types and fields defined in this mutation.
+
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-setNegotiableQuoteShippingAddress)
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-setNegotiableQuoteShippingAddress)
 
 ## Example usage
 

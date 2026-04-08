@@ -1,6 +1,5 @@
 ---
 title: negotiableQuoteTemplates query  
-edition: saas
 keywords:
   - B2B
 ---
@@ -30,7 +29,11 @@ This query requires a valid [customer authentication token](../../../customer/mu
 
 ## Reference
 
-The [`negotiableQuoteTemplates`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-negotiableQuoteTemplates) reference provides detailed information about the types and fields defined in this query.
+The `negotiableQuoteTemplates` reference provides detailed information about the types and fields defined in this query.
+
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-negotiableQuoteTemplates)
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-negotiableQuoteTemplates)
 
 ## Example usage
 
