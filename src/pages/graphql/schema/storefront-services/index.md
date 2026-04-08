@@ -123,15 +123,21 @@ The Merchandising GraphQL API provides queries that are similar in name to some 
 
 | Query | Storefront Services | Commerce Optimizer |
 | --- | --- | --- |
-| `products` | Catalog Service — fetch by SKU, returns `ProductView` | Same name, same general purpose, but uses `AC-View-Id` context. Commerce Optimizer also supports an additional `CategoryProductView` interface that returns category information associated with a product, including hierarchical parent relationships and images. |
-| `productSearch` | Live Search / Catalog Service — full search with `phrase`, `filter`, `sort`, optional `context` | Similar structure, but context is provided through headers rather than a `context` input object |
-| `attributeMetadata` | Live Search — returns filterable and sortable attributes | Same name and purpose; independent implementation |
-| `refineProduct` | Catalog Service — narrow complex product options by selection | Equivalent query available |
-| `variants` | Catalog Service — return all variant combinations | Equivalent query available |
-| `categories` | Catalog Service — return category hierarchy | Commerce Optimizer uses `categoryTree` with `family` and `slugs` arguments |
-| `recommendations` | Product Recommendations — returns units by recommendation type | Commerce Optimizer supports an equivalent `recommendations` query. Additionally,  Optimizer provides a `recommendationsByUnitIds`query, which returns specific recommendation units based on pre-configured unit IDs |
-| `navigation` | Not available in Storefront Services | Returns category-based navigation structure for a given product family. |
-|`
+| [`products`](../catalog-service/queries/products.md) | Catalog Service — fetch by SKU, returns `ProductView` | Same name, same general purpose, but uses `AC-View-Id` context. Commerce Optimizer also supports an additional `CategoryProductView` interface that returns category information associated with a product, including hierarchical parent relationships and images. |
+| [`productSearch`](../live-search/queries/product-search.md) | Live Search / Catalog Service — full search with `phrase`, `filter`, `sort`, optional `context` | Similar structure, but context is provided through headers rather than a `context` input object. |
+| [`attributeMetadata`](../live-search/queries/attribute-metadata.md) | Live Search — returns filterable and sortable attributes | Same name and purpose; independent implementation |
+| [`refineProduct`](../catalog-service/queries/refine-product.md) | Catalog Service — narrow complex product options by selection | Equivalent query available |
+| [`variants`](../catalog-service/queries/product-variants.md) | Catalog Service — return all variant combinations | Equivalent query available |
+| [`categories`](../catalog-service/queries/categories.md) | Catalog Service — return category hierarchy | Commerce Optimizer uses `categoryTree` with `family` and `slugs` arguments. |
+| [`recommendations`](../product-recommendations/queries/recommendations.md) | Product Recommendations — returns units by recommendation type | Commerce Optimizer supports an equivalent `recommendations` query. Additionally,  Optimizer provides a `recommendationsByUnitIds` query. |
+
+Adobe Commerce Optimizer also provides additional queries that are not available in Storefront Services:
+
+| Query | Description |
+| --- | --- | --- |
+| `categoryTree` | Retrieves category tree nodes, optionally filtered by slugs and limited by depth. It can return full hierarchy metadata, descriptions, images, and SEO fields.|
+| `navigation` | Returns category-based navigation structure for a given product family. It is intended for rendering storefront menus. |
+| `recommendationsByUnitIds` | Returns recommendation units based on pre-configured unit IDs. This allows merchants to define specific recommendation sets in Commerce Optimizer and retrieve them directly, rather than relying on real-time AI generation. |
 
 ### When to use Commerce Optimizer
 
