@@ -19,6 +19,10 @@ This tutorial demonstrates how to use the Adobe Commerce REST APIs to:
 
 1. [Delete an image](delete.md)
 
+<InlineAlert variant="info" slots="text"/>
+
+For multi-store environments, see [Manage product images at the store view level](product-image-store-scope.md) for how `media_gallery_entries` behaves across store views and how to restore inherited field values.
+
 This **4-step tutorial** generally takes **30 minutes**.
 
 ## Before you begin
