@@ -162,7 +162,6 @@ POST http://domain.com/rest/default/V1/products
 }
 ```
 
-
 ## Override store view image fields
 
 When you retrieve a product and POST it back with the `media_gallery_entries` array populated, the store view fields are explicitly set — overriding any inherited values.
