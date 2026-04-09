@@ -141,7 +141,7 @@ Adobe Commerce Optimizer also provides additional queries that are not available
 
 ### When to use Commerce Optimizer
 
-Use the Commerce Optimizer Merchandising GraphQL API instead of Storefront Services queries when:
+Use the [Commerce Optimizer Merchandising GraphQL API](https://developer.adobe.com/commerce/services/optimizer/merchandising-services/using-the-api/) instead of Storefront Services queries when:
 
 - Building on Adobe Commerce Optimizer as a standalone SaaS platform rather than on an Adobe Commerce (PaaS/SaaS) instance.
 - Your storefront needs to serve multiple catalog views or channel-specific product catalogs controlled by Commerce Optimizer policies.
