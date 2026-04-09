@@ -7,7 +7,7 @@ keywords:
 
 # Manage product images at the store view level
 
-This page explains how product image gallery inheritance works in a multi-store Adobe Commerce setup and how to control it using the REST API. These behaviours only apply when your installation has multiple store views. In a single-store setup, all requests target the global scope and inheritance does not apply.
+This topic explains how product image gallery inheritance works in a multi-store Adobe Commerce setup and how to control it using the REST API. These behaviours only apply when your installation has multiple store views. In a single-store setup, all requests target the global scope and inheritance does not apply.
 
 If you are new to the product media API, complete the [Add and manage product images tutorial](/rest/tutorials/image/) first.
 
@@ -90,11 +90,15 @@ POST http://domain.com/rest/default/V1/products
 }
 ```
 
-After this call, images in each store view continue to use the **Use Default Value** setting.
+After this call, images in each store view continue to implement the **Use Default Value** setting.
 
 ### Set media_gallery_entries to null
 
-Explicitly setting `media_gallery_entries` to `null` has the same effect as omitting the field — the product's existing media gallery is left unchanged.
+Setting `media_gallery_entries` to `null` and omitting the field are equivalent. Neither modifies the images currently configured for any store view.
+
+<InlineAlert variant="warning" slots="text"/>
+
+Setting `media_gallery_entries` to an empty array `[]` is **not** the same as `null`. An empty array is treated as an explicit instruction to remove all gallery entries from all store views. Always use `null` or omit the field when you do not intend to modify images.
 
 **Endpoint:**
 
@@ -158,14 +162,6 @@ POST http://domain.com/rest/default/V1/products
 }
 ```
 
-<InlineAlert variant="info" slots="text"/>
-
-Setting `media_gallery_entries` to `null` and omitting the field are equivalent. Neither modifies the images currently configured for any store view.
-
-<InlineAlert variant="warning" slots="text"/>
-
-Setting `media_gallery_entries` to an empty array `[]` is **not** the same as `null`. An empty array is treated as an explicit instruction to remove all gallery entries from all store views. Always use `null` or omit the field when you do not intend to modify images.
-
 ## Override store view image fields
 
 When you retrieve a product and POST it back with the `media_gallery_entries` array populated, the store view fields are explicitly set — overriding any inherited values.
@@ -194,7 +190,7 @@ After this call:
 
 ## Restore inheritance by setting fields to null
 
-Setting individual image fields to `null` restores the **Use Default Value** state for those fields — equivalent to re-enabling the **Use Default Value** checkbox in the Admin product editor.
+Setting individual image fields to `null` restores the **Use Default Value** state for those fields. This is the equivalent of re-enabling the **Use Default Value** checkbox in the Admin product editor.
 
 The following fields support `null` to restore inheritance:
 
