@@ -92,7 +92,7 @@ Storefront Services schemas contain only queries. All mutations (cart, checkout,
 
 ## How Storefront Services differ from Adobe Commerce Optimizer
 
-Adobe Commerce Optimizer is a standalone SaaS platform that is not installed as an extension on an existing Commerce instance. It provides the **Merchandising GraphQL API**, which covers a similar set of storefront use cases but with a different architecture, different query signatures, and different headers.
+Adobe Commerce Optimizer is a standalone SaaS platform that is not installed as an extension on an existing Commerce instance. It provides the **[Merchandising GraphQL API](https://developer.adobe.com/commerce/services/reference/graphql/)**, which covers a similar set of storefront use cases but with a different architecture, different query signatures, and different headers.
 
 ### Architectural difference
 
