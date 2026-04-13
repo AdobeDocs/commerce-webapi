@@ -1249,7 +1249,7 @@ module.exports = [
             pages: [
                 {
                     title: "sharedRequisitionList",
-                    path: "/graphql/schema/b2b/requisition-list/mutations/shared-requisition-list/",
+                    path: "/graphql/schema/b2b/requisition-list/queries/shared-requisition-list/",
                 },
             ]
           },

@@ -1,5 +1,5 @@
 ---
-title: Requisition list (B2B) mutations   
+title: Requisition list (B2B) queries
 keywords:
   - B2B
 ---

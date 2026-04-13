@@ -29,7 +29,7 @@ The B2B requisition list mutations allow you to perform the following operations
   - [Clear the cart](clear-customer-cart.md)
 
 - Requisition List Share
-    - [Share Requisition List via Token](share-requisition-list-via-token.md)
-    - [Share Requisition List via Email](share-requisition-list-via-email.md)
+    - [Share Requisition List via Token](share-requisition-list-by-token.md)
+    - [Share Requisition List via Email](share-requisition-list-by-email.md)
     - [Import Shared Requisition List](import-shared-requisition-list.md)
   
