@@ -324,38 +324,6 @@ module.exports = [
         ],
       },
       {
-        title: "Catalog Service",
-        path: "/graphql/schema/catalog-service/",
-        pages:[
-          {
-            title: "Queries",
-            path: "/graphql/schema/catalog-service/queries/",
-            pages: [
-              {
-                title: "categories",
-                path: "/graphql/schema/catalog-service/queries/categories.md",
-              },
-              {
-                title: "products",
-                path: "/graphql/schema/catalog-service/queries/products.md"
-              },
-              {
-                title: "productSearch",
-                path: "/graphql/schema/live-search/queries/product-search.md",
-              },
-              {
-                title: "refineProduct",
-                path: "/graphql/schema/catalog-service/queries/refine-product.md"
-              },
-              {
-                title: "variants",
-                path: "/graphql/schema/catalog-service/queries/product-variants.md"
-              }
-            ],
-          },
-        ],
-      },
-      {
         title: "Checkout",
         path: "/graphql/schema/checkout/",
         pages: [
@@ -730,26 +698,6 @@ module.exports = [
         ],
       },
       {
-        title: "Live Search",
-        path: "/graphql/schema/live-search",
-        pages: [
-          {
-            title: "Queries",
-            path: "/graphql/schema/live-search/queries/",
-            pages: [
-              {
-                title: "attributeMetadata",
-                path: "/graphql/schema/live-search/queries/attribute-metadata/",
-              },
-              {
-                title: "productSearch",
-                path: "/graphql/schema/live-search/queries/product-search/",
-              }
-            ],
-          }
-        ]
-      },
-      {
         title: "Negotiable quotes (B2B)",
         path: "/graphql/schema/b2b/negotiable-quote/",
         pages: [
@@ -926,22 +874,6 @@ module.exports = [
             ]
           }
         ],
-      },
-      {
-        title: "Product Recommendations",
-        path: "/graphql/schema/product-recommendations/",
-        pages: [
-          {
-            title: "Queries",
-            path: "/graphql/schema/product-recommendations/queries/",
-            pages: [
-              {
-                title: "recommendations",
-                path: "/graphql/schema/product-recommendations/queries/recommendations/",
-              }
-            ]
-          },
-        ]
       },
       {
         title: "Products",
@@ -1396,6 +1328,80 @@ module.exports = [
         ],
       },
     ],
+  },
+  {
+    title: "Storefront Services Schema",
+    path: "/graphql/schema/storefront-services/",
+    pages: [
+      {
+        title: "Catalog Service",
+        path: "/graphql/schema/catalog-service/",
+        pages:[
+          {
+            title: "Queries",
+            path: "/graphql/schema/catalog-service/queries/",
+            pages: [
+              {
+                title: "categories",
+                path: "/graphql/schema/catalog-service/queries/categories.md",
+              },
+              {
+                title: "products",
+                path: "/graphql/schema/catalog-service/queries/products.md"
+              },
+              {
+                title: "productSearch",
+                path: "/graphql/schema/live-search/queries/product-search.md",
+              },
+              {
+                title: "refineProduct",
+                path: "/graphql/schema/catalog-service/queries/refine-product.md"
+              },
+              {
+                title: "variants",
+                path: "/graphql/schema/catalog-service/queries/product-variants.md"
+              }
+            ],
+          },
+        ],
+      },
+      {
+        title: "Live Search",
+        path: "/graphql/schema/live-search",
+        pages: [
+          {
+            title: "Queries",
+            path: "/graphql/schema/live-search/queries/",
+            pages: [
+              {
+                title: "attributeMetadata",
+                path: "/graphql/schema/live-search/queries/attribute-metadata/",
+              },
+              {
+                title: "productSearch",
+                path: "/graphql/schema/live-search/queries/product-search/",
+              }
+            ],
+          }
+        ]
+      },
+      {
+        title: "Product Recommendations",
+        path: "/graphql/schema/product-recommendations/",
+        pages: [
+          {
+            title: "Queries",
+            path: "/graphql/schema/product-recommendations/queries/",
+            pages: [
+              {
+                title: "recommendations",
+                path: "/graphql/schema/product-recommendations/queries/recommendations/",
+              }
+            ]
+          },
+        ]
+      }
+    ]
   },
   {
     title: "Core payment methods",
