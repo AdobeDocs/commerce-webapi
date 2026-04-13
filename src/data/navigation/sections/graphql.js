@@ -1226,10 +1226,6 @@ module.exports = [
                 path: "/graphql/schema/b2b/requisition-list/mutations/move-items/",
               },
               {
-                title: "sharedRequisitionList",
-                path: "/graphql/schema/b2b/requisition-list/mutations/shared-requisition-list/",
-              },
-              {
                 title: "shareRequisitionListByEmail",
                 path: "/graphql/schema/b2b/requisition-list/mutations/share-requisition-list-by-email/",
               },
@@ -1246,6 +1242,16 @@ module.exports = [
                 path: "/graphql/schema/b2b/requisition-list/mutations/update-items/",
               },
             ],
+          },
+          {
+            title: "Queries",
+            path: "/graphql/schema/b2b/requisition-list/queries",
+            pages: [
+                {
+                    title: "sharedRequisitionList",
+                    path: "/graphql/schema/b2b/requisition-list/mutations/shared-requisition-list/",
+                },
+            ]
           },
           {
             title: "Interfaces",
