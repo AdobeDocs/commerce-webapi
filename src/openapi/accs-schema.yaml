@@ -10272,8 +10272,8 @@ definitions:
     type: object
 host: https://<server>.api.commerce.adobe.com/<tenant-id>
 info:
-  title: Adobe Commerce SaaS
-  version: '1.0'
+  title: Adobe Commerce as a Cloud Service
+  version: April 2026
   description:
     "$ref": "../_includes/accs-intro.md"
 paths:
