@@ -15,7 +15,7 @@ import CommerceOnly from '/src/_includes/commerce-only.md'
 
 This mutation is part of the B2B Storefront Compatibility Package and is only available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview).
 
-The `shareRequisitionListByToken` mutation enables B2B customers to share a Requisition List with colleagues within the same company via a shareable link generated on the storefront. The mutation requires `requisitionListUid` as input parameter. This mutation returns a token associated with the Requisition list which is being shared.
+The `shareRequisitionListByToken` mutation enables B2B customers to share a requisition list with colleagues within the same company using a shareable link generated on the storefront. The mutation requires `requisitionListUid` as an input parameter. This mutation returns the token assigned to the shared requisition list.
 
 ## Syntax
 
@@ -29,7 +29,7 @@ The `shareRequisitionListByToken` mutation enables B2B customers to share a Requ
 
 ## Example usage
 
-The following example provides a token for a requisition list which is being shared.
+The following example provides a token for a shareable requisition list.
 
 **Request:**
 

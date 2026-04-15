@@ -13,9 +13,9 @@ import CommerceOnly from '/src/_includes/commerce-only.md'
 
 <InlineAlert variant="info" slots="text1" />
 
-This mutation is part of the B2B Storefront Compatibility Package and is only available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview).
+This query is part of the B2B Storefront Compatibility Package and is only available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview).
 
-The `sharedRequisitionList` query allows B2B customers to retrieve a shared Requisition List using a token, including sender details and associated items in a read-only format. The mutation requires `token` as input parameter. This query returns a `sender_name` and `requisition_list` object.
+The `sharedRequisitionList` query uses a token to retrieve a shared requisition list. The response can contain the `sender_name` and `requisition_list` object.
 
 ## Syntax
 

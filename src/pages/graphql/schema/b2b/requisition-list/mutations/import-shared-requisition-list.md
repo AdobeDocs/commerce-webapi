@@ -15,7 +15,7 @@ import CommerceOnly from '/src/_includes/commerce-only.md'
 
 This mutation is part of the B2B Storefront Compatibility Package and is only available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview).
 
-The `importSharedRequisitionList` mutation Allows recipients within the same company to import or clone a shared Requisition List using a token. The mutation requires `token` as input parameter. This mutation returns a `requisition_list` object and `user_errors` if any.
+The `importSharedRequisitionList` mutation allows recipients within the same company to import or clone a shared requisition list using a token. The mutation requires `token` (received from [shareRequisitionListByToken](share-requisition-list-by-token.md) mutation) as input parameter. This mutation returns a `requisition_list` object and `user_errors`, if any.
 
 ## Syntax
 
@@ -29,7 +29,7 @@ The `importSharedRequisitionList` mutation Allows recipients within the same com
 
 ## Example usage
 
-The following example shares a requisition list to the specified customer UIDs.
+The following example demonstrates how to import a shared requisition list using the specified token as its identifier.
 
 **Request:**
 

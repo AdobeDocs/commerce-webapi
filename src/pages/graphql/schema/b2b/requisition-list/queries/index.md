@@ -10,8 +10,7 @@ import CommerceOnly from '/src/_includes/commerce-only.md'
 
 # Requisition list (B2B) queries
 
-The B2B requisition list mutations allow you to perform the following operations:
+The following query retrieves a shared requisition list
 
-- Requisition List Share
-    - [View Shared Requisition List](shared-requisition-list.md)
+- [View Shared Requisition List](shared-requisition-list.md)
   
