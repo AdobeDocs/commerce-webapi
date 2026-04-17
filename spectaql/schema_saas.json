@@ -59307,7 +59307,7 @@
           },
           {
             "name": "categoryTree",
-            "description": "Retrieves category tree nodes, optionally filtered by slugs and limited by depth.",
+            "description": "Retrieves category tree nodes, optionally filtered by family, slugs and limited by depth.",
             "args": [
               {
                 "name": "family",
@@ -59339,7 +59339,7 @@
               },
               {
                 "name": "depth",
-                "description": "The depth of the category tree to retrieve. For example, depth 1 will retrieve only root categories (categories with level 1), depth 2 will retrieve root categories and their primary children (level 1 & level 2 categories).",
+                "description": "The depth of the category tree to retrieve. When used without an initial slug, it will specify the maximum level allowed for a category. When used with a starting slug, it specifies depth from that slug, counting the slug itself as level 1.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "Int",
