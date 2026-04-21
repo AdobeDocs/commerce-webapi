@@ -48,6 +48,31 @@ The `import/json` endpoint is designed for JSON data:
 *  Convert your CSV into JSON using any trustworthy online converter.
 *  When converting CSV to JSON using standard tools or libraries, special characters within the data are typically escaped automatically. Ensure that any manual edits or custom conversion processes handle this escaping appropriately.
 
+#### Customer imports in Adobe Commerce as a Cloud Service
+
+In Adobe Commerce as a Cloud Service, the customer import API (POST /V1/import/json with entity: "customer") does not support assistance_allowed. Attempts to pass it as a field will result in a "Header contains invalid attribute(s): assistance_allowed" error.
+
+Alternatively, you can use `POST /V1/async/bulk/customers` to bulk create customers with assistance_allowed pre-enabled.
+
+```json
+    {
+      "customer": {
+        "email": "user@example.com",
+        "firstname": "User",
+        "lastname": "One",
+        "website_id": 1,
+        "extension_attributes": {"assistance_allowed": 2}
+      },
+      "password": "Password123!"
+    }
+```
+
+Or individual existing customers using the `PUT /V1/customers/{id}` endpoint:
+
+```json
+{"customer": {"extension_attributes": {"assistance_allowed": 2}}}
+```
+
 ### Validation Strategy
 
 A validation strategy is mandatory. Depending on your chosen strategy, the API will either proceed with the import or abort it upon encountering invalid rows.
