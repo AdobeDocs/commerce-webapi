@@ -50,28 +50,30 @@ The `import/json` endpoint is designed for JSON data:
 
 #### Customer imports in Adobe Commerce as a Cloud Service
 
-In Adobe Commerce as a Cloud Service, the customer import API (POST /V1/import/json with entity: "customer") does not support assistance_allowed. Attempts to pass it as a field will result in a "Header contains invalid attribute(s): assistance_allowed" error.
+In Adobe Commerce as a Cloud Service, the customer import API (POST /V1/import/json with entity: "customer") does not support `assistance_allowed`.
 
-Alternatively, you can use `POST /V1/async/bulk/customers` to bulk create customers with assistance_allowed pre-enabled.
+If you need to create or modify customers that have [remote shopping assistance enabled](https://experienceleague.adobe.com/en/docs/commerce-admin/customers/customer-accounts/manage/login-as-customer#customer-account-permission-for-remote-shopping-assistance), you can:
 
-```json
-    {
-      "customer": {
-        "email": "user@example.com",
-        "firstname": "User",
-        "lastname": "One",
-        "website_id": 1,
-        "extension_attributes": {"assistance_allowed": 2}
-      },
-      "password": "Password123!"
-    }
-```
+- Use `POST /V1/async/bulk/customers` to bulk create customers with assistance_allowed pre-enabled.
 
-Or individual existing customers using the `PUT /V1/customers/{id}` endpoint:
+    ```json
+        {
+          "customer": {
+            "email": "user@example.com",
+            "firstname": "User",
+            "lastname": "One",
+            "website_id": 1,
+            "extension_attributes": {"assistance_allowed": 2}
+          },
+          "password": "Password123!"
+        }
+    ```
 
-```json
-{"customer": {"extension_attributes": {"assistance_allowed": 2}}}
-```
+- Use the `PUT /V1/customers/{id}` endpoint to modify existing customers individually.
+
+    ```json
+    {"customer": {"extension_attributes": {"assistance_allowed": 2}}}
+    ```
 
 ### Validation Strategy
 
