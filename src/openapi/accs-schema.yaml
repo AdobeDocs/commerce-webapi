@@ -2237,6 +2237,25 @@ definitions:
     - error_message
     - request_timestamp
     type: object
+  commerce-backend-uix-data-selected-extension-data-interface:
+    description: Defines the selected extensions table data model
+    properties:
+      extension_name:
+        description: The extension name
+        type: string
+      extension_title:
+        description: The extension title
+        type: string
+      extension_url:
+        description: The extension url
+        type: string
+      extension_workspace:
+        description: The extension workspace
+        type: string
+      id:
+        description: Id field
+        type: string
+    type: object
   company-credit-data-credit-balance-options-interface:
     description: Credit balance data transfer object interface.
     properties:
@@ -2502,6 +2521,11 @@ definitions:
       country_id:
         description: Country.
         type: string
+      custom_attributes:
+        description: Custom attributes values.
+        items:
+          "$ref": "#/definitions/framework-attribute-interface"
+        type: array
       customer_group_id:
         description: Customer Group Id.
         type: integer
@@ -4984,6 +5008,11 @@ definitions:
       creator_type:
         description: Quote creator type.
         type: integer
+      custom_attributes:
+        description: Custom attributes values.
+        items:
+          "$ref": "#/definitions/framework-attribute-interface"
+        type: array
       deleted_sku:
         description: Deleted products sku.
         type: string
@@ -5326,6 +5355,33 @@ definitions:
     - created_at
     - updated_at
     - extension_attributes
+    type: object
+  oope-api-integrations-data-order-status-interface:
+    description: Represents a configured order status with its state assignment. Combines
+      data from sales_order_status and sales_order_status_state tables. A status assigned
+      to multiple states will appear as multiple entries.
+    properties:
+      default:
+        description: This status is the default status for its assigned state.
+        type: boolean
+      label:
+        description: The status label.
+        type: string
+      state:
+        description: The associated order state code, or null if the status is not
+          assigned to any state.
+        type: string
+      status:
+        description: The status code.
+        type: string
+      visible_on_front:
+        description: This status is visible on the storefront.
+        type: boolean
+    required:
+    - status
+    - label
+    - default
+    - visible_on_front
     type: object
   otp-rest-data-otp-response-interface:
     description: Response containing the one-time password for customer login.
@@ -5686,6 +5742,11 @@ definitions:
         type: string
       currency:
         "$ref": "#/definitions/quote-data-currency-interface"
+      custom_attributes:
+        description: Custom attributes values.
+        items:
+          "$ref": "#/definitions/framework-attribute-interface"
+        type: array
       customer:
         "$ref": "#/definitions/customer-data-customer-interface"
       customer_is_guest:
@@ -5753,6 +5814,11 @@ definitions:
   quote-data-cart-item-interface:
     description: Interface CartItemInterface
     properties:
+      custom_attributes:
+        description: Custom attributes values.
+        items:
+          "$ref": "#/definitions/framework-attribute-interface"
+        type: array
       extension_attributes:
         "$ref": "#/definitions/quote-data-cart-item-extension-interface"
       item_id:
@@ -6210,6 +6276,11 @@ definitions:
       base_tax_amount:
         description: Tax amount in base currency. Otherwise, null.
         type: number
+      custom_attributes:
+        description: Custom attributes values.
+        items:
+          "$ref": "#/definitions/framework-attribute-interface"
+        type: array
       discount_amount:
         description: Discount amount in quote currency. Otherwise, null.
         type: number
@@ -6770,6 +6841,11 @@ definitions:
       creditmemo_status:
         description: Credit memo status.
         type: integer
+      custom_attributes:
+        description: Custom attributes values.
+        items:
+          "$ref": "#/definitions/framework-attribute-interface"
+        type: array
       discount_amount:
         description: Credit memo discount amount.
         type: number
@@ -6927,6 +7003,11 @@ definitions:
       base_weee_tax_row_disposition:
         description: Base WEEE tax row disposition.
         type: number
+      custom_attributes:
+        description: Custom attributes values.
+        items:
+          "$ref": "#/definitions/framework-attribute-interface"
+        type: array
       description:
         description: Description.
         type: string
@@ -7198,6 +7279,11 @@ definitions:
       created_at:
         description: Created-at timestamp.
         type: string
+      custom_attributes:
+        description: Custom attributes values.
+        items:
+          "$ref": "#/definitions/framework-attribute-interface"
+        type: array
       discount_amount:
         description: Discount amount.
         type: number
@@ -7343,6 +7429,11 @@ definitions:
       base_tax_amount:
         description: Base tax amount.
         type: number
+      custom_attributes:
+        description: Custom attributes values.
+        items:
+          "$ref": "#/definitions/framework-attribute-interface"
+        type: array
       description:
         description: Description.
         type: string
@@ -7435,6 +7526,11 @@ definitions:
       country_id:
         description: Country ID.
         type: string
+      custom_attributes:
+        description: Custom attributes values.
+        items:
+          "$ref": "#/definitions/framework-attribute-interface"
+        type: array
       customer_address_id:
         description: Country address ID.
         type: integer
@@ -7846,6 +7942,11 @@ definitions:
       created_at:
         description: Created-at timestamp.
         type: string
+      custom_attributes:
+        description: Custom attributes values.
+        items:
+          "$ref": "#/definitions/framework-attribute-interface"
+        type: array
       customer_dob:
         description: In keeping with current security and privacy best practices,
           be sure you are aware of any potential legal and security risks associated
@@ -8242,6 +8343,11 @@ definitions:
       created_at:
         description: Created-at timestamp.
         type: string
+      custom_attributes:
+        description: Custom attributes values.
+        items:
+          "$ref": "#/definitions/framework-attribute-interface"
+        type: array
       description:
         description: Description.
         type: string
@@ -10046,6 +10152,11 @@ definitions:
       class_type:
         description: Tax class type.
         type: string
+      custom_attributes:
+        description: Custom attributes values.
+        items:
+          "$ref": "#/definitions/framework-attribute-interface"
+        type: array
       extension_attributes:
         "$ref": "#/definitions/tax-data-tax-class-extension-interface"
     required:
@@ -10355,6 +10466,97 @@ paths:
       tags:
       - adminuisdk/appmanagement/validate
       summary: adminuisdk/appmanagement/validate
+  "/V1/adminuisdk/extension":
+    post:
+      consumes:
+      - application/json
+      - application/xml
+      description: Saving the selected extensions to database.
+      operationId: PostV1AdminuisdkExtension
+      parameters:
+      - in: body
+        name: PostV1AdminuisdkExtensionBody
+        schema:
+          properties:
+            extension:
+              "$ref": "#/definitions/commerce-backend-uix-data-selected-extension-data-interface"
+          required:
+          - extension
+          type: object
+          xml:
+            name: request
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '400':
+          description: 400 Bad Request
+          schema:
+            "$ref": "#/definitions/error-response"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - adminuisdk/extension
+      summary: adminuisdk/extension
+  "/V1/adminuisdk/extension/{workspace_name}/{extension_name}":
+    delete:
+      consumes:
+      - application/json
+      - application/xml
+      description: Delete selected extension by extension name.
+      operationId: DeleteV1AdminuisdkExtensionWorkspace_nameExtension_name
+      parameters:
+      - in: path
+        name: workspace_name
+        required: true
+        type: string
+      - in: path
+        name: extension_name
+        required: true
+        type: string
+      - in: body
+        name: DeleteV1AdminuisdkExtensionWorkspace_nameExtension_nameBody
+        schema:
+          properties:
+            extensionName:
+              type: string
+            workspaceName:
+              type: string
+          required:
+          - workspaceName
+          - extensionName
+          type: object
+          xml:
+            name: request
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - adminuisdk/extension/{workspace_name}/{extension_name}
+      summary: adminuisdk/extension/{workspace_name}/{extension_name}
   "/V1/adminuisdk/massaction/{request_id}":
     get:
       consumes:
@@ -22226,6 +22428,34 @@ paths:
       tags:
       - oope_tax_management/tax_integration/{code}
       summary: oope_tax_management/tax_integration/{code}
+  "/V1/order-statuses":
+    get:
+      consumes:
+      - application/json
+      - application/xml
+      description: Get all configured order statuses with their state assignments.
+      operationId: GetV1Orderstatuses
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            items:
+              "$ref": "#/definitions/oope-api-integrations-data-order-status-interface"
+            type: array
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - order-statuses
+      summary: order-statuses
   "/V1/order/notify-orders-are-ready-for-pickup":
     post:
       consumes:
@@ -29805,6 +30035,8 @@ swagger: '2.0'
 tags:
 - name: addresses/{addressId}
 - name: adminuisdk/appmanagement/validate
+- name: adminuisdk/extension
+- name: adminuisdk/extension/{workspace_name}/{extension_name}
 - name: adminuisdk/massaction/{request_id}
 - name: adminuisdk/orderviewbutton/{request_id}
 - name: adobe_io_events/check_configuration
@@ -30031,6 +30263,7 @@ tags:
 - name: oope_shipping_carrier/{code}
 - name: oope_tax_management/tax_integration
 - name: oope_tax_management/tax_integration/{code}
+- name: order-statuses
 - name: order/{orderId}/invoice
 - name: order/{orderId}/refund
 - name: order/{orderId}/ship
@@ -30181,6 +30414,8 @@ x-tagGroups:
 - name: adminuisdk
   tags:
   - adminuisdk/appmanagement/validate
+  - adminuisdk/extension
+  - adminuisdk/extension/{workspace_name}/{extension_name}
   - adminuisdk/massaction/{request_id}
   - adminuisdk/orderviewbutton/{request_id}
 - name: adobe_io_events
@@ -30481,6 +30716,9 @@ x-tagGroups:
   tags:
   - oope_tax_management/tax_integration
   - oope_tax_management/tax_integration/{code}
+- name: order statuses
+  tags:
+  - order-statuses
 - name: order
   tags:
   - order/notify-orders-are-ready-for-pickup
