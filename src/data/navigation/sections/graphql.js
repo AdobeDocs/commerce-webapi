@@ -1150,8 +1150,20 @@ module.exports = [
                 path: "/graphql/schema/b2b/requisition-list/mutations/delete-items/",
               },
               {
+                title: "importSharedRequisitionList",
+                path: "/graphql/schema/b2b/requisition-list/mutations/import-shared-requisition-list/",
+              },
+              {
                 title: "moveItemsBetweenRequisitionLists",
                 path: "/graphql/schema/b2b/requisition-list/mutations/move-items/",
+              },
+              {
+                title: "shareRequisitionListByEmail",
+                path: "/graphql/schema/b2b/requisition-list/mutations/share-requisition-list-by-email/",
+              },
+              {
+                title: "shareRequisitionListByToken",
+                path: "/graphql/schema/b2b/requisition-list/mutations/share-requisition-list-by-token/",
               },
               {
                 title: "updateRequisitionList",
@@ -1162,6 +1174,16 @@ module.exports = [
                 path: "/graphql/schema/b2b/requisition-list/mutations/update-items/",
               },
             ],
+          },
+          {
+            title: "Queries",
+            path: "/graphql/schema/b2b/requisition-list/queries",
+            pages: [
+                {
+                    title: "sharedRequisitionList",
+                    path: "/graphql/schema/b2b/requisition-list/queries/shared-requisition-list/",
+                },
+            ]
           },
           {
             title: "Interfaces",

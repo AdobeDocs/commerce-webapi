@@ -24,7 +24,11 @@ The B2B requisition list mutations allow you to perform the following operations
   - [Update items in a requisition list](update-items.md)
   - [Delete items from a requistion list](delete-items.md)
 
+- Share requisition lists
+    - [Share requisition list with a token](share-requisition-list-by-token.md)
+    - [Share requisition list by email](share-requisition-list-by-email.md)
+    - [Import shared requisition list](import-shared-requisition-list.md)
+
 - Manage the cart
   - [Add requisition list items to the cart](add-items-to-cart.md)
   - [Clear the cart](clear-customer-cart.md)
-  
