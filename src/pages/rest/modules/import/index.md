@@ -50,7 +50,7 @@ The `import/json` endpoint is designed for JSON data:
 
 #### Customer imports in Adobe Commerce as a Cloud Service
 
-In Adobe Commerce as a Cloud Service, the customer import API (POST /V1/import/json with entity: "customer") does not support `assistance_allowed`.
+In Adobe Commerce as a Cloud Service, the `POST /V1/import/json` endpoint does not support the `assistance_allowed` field when the `entity` field is set to `customer`.
 
 If you need to create or modify customers that have [remote shopping assistance enabled](https://experienceleague.adobe.com/en/docs/commerce-admin/customers/customer-accounts/manage/login-as-customer#customer-account-permission-for-remote-shopping-assistance), you can:
 
