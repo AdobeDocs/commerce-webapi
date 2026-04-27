@@ -54,24 +54,24 @@ In Adobe Commerce as a Cloud Service, the `POST /V1/import/json` endpoint does n
 
 * Use `POST /V1/async/bulk/customers` to bulk create customers with `assistance_allowed` pre-enabled.
 
-    ```json
-        {
-            "customer": {
-            "email": "user@example.com",
-            "firstname": "User",
-            "lastname": "Name",
-            "website_id": 1,
-            "extension_attributes": {"assistance_allowed": 2}
-            },
-            "password": "Password123!"
-        }
-    ```
+  ```json
+      {
+          "customer": {
+          "email": "user@example.com",
+          "firstname": "User",
+          "lastname": "Name",
+          "website_id": 1,
+          "extension_attributes": {"assistance_allowed": 2}
+          },
+          "password": "Password123!"
+      }
+  ```
 
 * Use the `PUT /V1/customers/{id}` endpoint to modify existing customers individually.
 
-    ```json
-    {"customer": {"extension_attributes": {"assistance_allowed": 2}}}
-    ```
+  ```json
+  {"customer": {"extension_attributes": {"assistance_allowed": 2}}}
+  ```
 
 ### Validation Strategy
 
