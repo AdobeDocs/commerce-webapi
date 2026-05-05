@@ -15,7 +15,7 @@ Each GraphQL API call returns an HTTP status code that reflects the result of a 
 
 HTTP code | Meaning | Description
 --- | --- | ---
-200 | Success | The framework returns HTTP 200 to the caller upon success.
+200 | Success | The framework returns HTTP 200 to the caller upon success. This code can also be returned whenever the server successfully parses and begins executing the request but encounters a business logic error before completion.
 401 | Unauthorized | The caller was not authorized to perform the request. For example, the request included an invalid token, or a user with customer permissions attempted to access an object that requires administrator permissions.
 403 | Forbidden | Access is not allowed for reasons that are not covered by error code 401.
 500 | System Errors | If service implementation throws any other exception, such as a network error or database communication failure, the framework returns HTTP 500.

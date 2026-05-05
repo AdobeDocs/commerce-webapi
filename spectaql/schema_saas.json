@@ -51244,6 +51244,65 @@
         "possibleTypes": null
       },
       {
+        "kind": "OBJECT",
+        "name": "PageInfo",
+        "description": "Provides pagination information for navigating through paginated result sets.",
+        "fields": [
+          {
+            "name": "currentPage",
+            "description": "The current page number (1-based indexing).",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "pageSize",
+            "description": "The number of items per page.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "totalPages",
+            "description": "The total number of pages available.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
         "kind": "ENUM",
         "name": "PageType",
         "description": "Type of page on which recommendations are requested",
@@ -59307,7 +59366,7 @@
           },
           {
             "name": "categoryTree",
-            "description": "Retrieves category tree nodes, optionally filtered by slugs and limited by depth.",
+            "description": "Retrieves category tree nodes, optionally filtered by family, slugs and limited by depth.",
             "args": [
               {
                 "name": "family",
@@ -59339,7 +59398,7 @@
               },
               {
                 "name": "depth",
-                "description": "The depth of the category tree to retrieve. For example, depth 1 will retrieve only root categories (categories with level 1), depth 2 will retrieve root categories and their primary children (level 1 & level 2 categories).",
+                "description": "The depth of the category tree to retrieve. When used without an initial slug, it will specify the maximum level allowed for a category. When used with a starting slug, it specifies depth from that slug, counting the slug itself as level 1.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "Int",
@@ -59356,6 +59415,63 @@
                 "name": "CategoryTreeView",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "searchCategory",
+            "description": "Search for categories by name with optional filtering and pagination.",
+            "args": [
+              {
+                "name": "searchTerm",
+                "description": "The search term to match against category names.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "family",
+                "description": "Optional product family filter to limit search results. For example, clothing, electronics or books.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "pageSize",
+                "description": "The number of results to return per page (default: 20).",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "20"
+              },
+              {
+                "name": "currentPage",
+                "description": "The page number to retrieve (1-based indexing, default: 1).",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "1"
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "SearchCategoryResultPage",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -65325,6 +65441,73 @@
               "kind": "SCALAR",
               "name": "String",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "SearchCategoryResultPage",
+        "description": "Represents a paginated result set of category search results.",
+        "fields": [
+          {
+            "name": "items",
+            "description": "The list of categories matching the search criteria.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "CategoryTreeView",
+                    "ofType": null
+                  }
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "totalCount",
+            "description": "The total number of categories matching the search criteria across all pages.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "pageInfo",
+            "description": "Pagination information for navigating through results.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "PageInfo",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
