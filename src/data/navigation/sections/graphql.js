@@ -416,6 +416,10 @@ module.exports = [
             path: "/graphql/schema/b2b/company/mutations/",
             pages: [
               {
+                title: "assignChildCompany",
+                path: "/graphql/schema/b2b/company/mutations/assign-child-company/",
+              },
+              {
                 title: "createCompany",
                 path: "/graphql/schema/b2b/company/mutations/create/",
               },
@@ -446,6 +450,10 @@ module.exports = [
               {
                 title: "updateCompany",
                 path: "/graphql/schema/b2b/company/mutations/update/",
+              },
+              {
+                title: "unassignChildCompany",
+                path: "/graphql/schema/b2b/company/mutations/unassign-child-company/",
               },
               {
                 title: "updateCompanyRole",
