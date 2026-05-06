@@ -27,6 +27,10 @@ The `sharedRequisitionList` query uses a token to retrieve a shared requisition 
 }
 ```
 
+[//]: # (## Reference)
+[//]: # ()
+[//]: # (The [`sharedRequisitionList`]&#40;https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-sharedRequisitionList&#41; reference provides detailed information about the types and fields defined in this query.)
+
 ## Example usage
 
 The following example opens a shared requisition list by specifying the shared token.

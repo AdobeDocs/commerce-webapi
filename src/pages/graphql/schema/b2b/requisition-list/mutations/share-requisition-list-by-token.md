@@ -27,6 +27,10 @@ The `shareRequisitionListByToken` mutation enables B2B customers to share a requ
 }
 ```
 
+[//]: # (## Reference)
+[//]: # ()
+[//]: # (The [`shareRequisitionListByToken`]&#40;https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-shareRequisitionListByToken&#41; reference provides detailed information about the types and fields defined in this mutation.)
+
 ## Example usage
 
 The following example provides a token for a shareable requisition list.

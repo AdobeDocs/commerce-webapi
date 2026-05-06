@@ -27,6 +27,10 @@ The `importSharedRequisitionList` mutation allows recipients within the same com
 }
 ```
 
+[//]: # (## Reference)
+[//]: # ()
+[//]: # (The [`importSharedRequisitionList`]&#40;https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-importSharedRequisitionList&#41; reference provides detailed information about the types and fields defined in this mutation.)
+
 ## Example usage
 
 The following example demonstrates how to import a shared requisition list using the specified token as its identifier.
