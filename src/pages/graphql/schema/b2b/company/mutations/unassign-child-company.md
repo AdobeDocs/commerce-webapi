@@ -27,6 +27,10 @@ The `unassignChildCompany` mutation allows company administrators to unassign a 
 }
 ```
 
+[//]: # (## Reference)
+[//]: # ()
+[//]: # (The [`unassignChildCompany`]&#40;https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-unassignChildCompany&#41; reference provides detailed information about the types and fields defined in this mutation.)
+
 ## Example usage
 
 The following example unassigns a child company from a parent company by the company admin.

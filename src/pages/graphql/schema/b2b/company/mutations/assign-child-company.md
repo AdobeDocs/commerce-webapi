@@ -27,6 +27,10 @@ The `assignChildCompany` mutation allows company administrators to assign a chil
 }
 ```
 
+[//]: # (## Reference)
+[//]: # ()
+[//]: # (The [`assignChildCompany`]&#40;https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-assignChildCompany&#41; reference provides detailed information about the types and fields defined in this mutation.)
+
 ## Example usage
 
 The following example assigns a child company to a parent company by the company admin.
