@@ -13,6 +13,10 @@ Bulk API endpoints differ from other REST endpoints in that they combine multipl
 
 &#8203;<Edition name="saas" /> In Adobe Commerce as a Cloud Service, message queues run automatically. There is no need to manage queues or install a message broker.
 
+<InlineAlert variant="info" slots="text"/>
+
+In Adobe Commerce as a Cloud Service, Bulk API limits are determined by the **Maximum Entities per Bulk Request** setting in the [Store Configuration](https://experienceleague.adobe.com/en/docs/commerce-admin/config/general/bulk-api).
+
 &#8203;<Edition name="paas" /> Cron jobs are the default mechanism for [managing message queues](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues) and starting message queue [consumers](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/consumers), but you can also use external process control systems (like [Supervisor](https://supervisord.readthedocs.io/en/latest/)) to monitor process management. You can use the [`bin/magento queue:consumers:start async.operations.all`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/start-message-queues.html) command to manually start the `async.operations.all` consumer that handles asynchronous and bulk API messages. However, manually starting consumers is not recommended because it requires you to keep your terminal session connected.
 
 <InlineAlert variant="info" slots="text"/>
