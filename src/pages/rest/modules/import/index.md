@@ -11,7 +11,7 @@ import CommerceOnly from '/src/_includes/commerce-only.md'
 
 # Import data
 
-The `POST /rest/<store_view_code>/V1/import/csv` and `POST /rest/<store_view_code>/V1/import/json` endpoints provide a RESTful way to import data into Adobe Commerce. They mirror the import capabilities found in the Admin at **System** > Data Transfer > **Import**. These endpoints support the import of the following entities:
+The `POST /V1/import/csv` and `POST /V1/import/json` endpoints provide a RESTful way to import data into Adobe Commerce. They mirror the import capabilities found in the Admin at **System** > Data Transfer > **Import**. These endpoints support the import of the following entities:
 
 *  `advanced_pricing`
 *  `catalog_product`
@@ -19,11 +19,12 @@ The `POST /rest/<store_view_code>/V1/import/csv` and `POST /rest/<store_view_cod
 *  `customer_address`
 *  `customer_composite`
 *  `customer_finance`
+*  &#8203;<Edition name="saas" />`requisition_list`
 *  `stock_sources`
 
 <InlineAlert variant="info" slots="text" />
 
-Adobe Commerce as a Cloud Service does not support the `POST /rest/<store_view_code>/V1/import/csv` endpoint. Use the `POST /rest/<store_view_code>/V1/import/json` endpoint instead.
+Adobe Commerce as a Cloud Service does not support the `POST /V1/import/csv` endpoint. Use the `POST /V1/import/json` endpoint instead.
 
 ## Source Data Format and Requirements
 
@@ -88,7 +89,7 @@ The `allowedErrorCount` field specifies the maximum allowable error count before
 
 <Edition name="paas" />
 
-The `POST /rest/<store_view_code>/V1/import/csv` endpoint uses the `StartImportInterface` service to efficiently import entities into Adobe Commerce. The payload must contain data in a base64 encoded format.
+The `POST /V1/import/csv` endpoint uses the `StartImportInterface` service to efficiently import entities into Adobe Commerce. The payload must contain data in a base64 encoded format.
 
 **Service Name:**
 
@@ -97,7 +98,7 @@ The `POST /rest/<store_view_code>/V1/import/csv` endpoint uses the `StartImportI
 **REST Endpoint:**
 
 ```http
-POST /rest/<store_view_code>/V1/import/csv
+POST /V1/import/csv
 ```
 
 **StartImportInterface Parameters:**
@@ -105,8 +106,8 @@ POST /rest/<store_view_code>/V1/import/csv
 | Name                                | Description  | Format | Requirements                                                                                                                                                                                                                          |
 |-------------------------------------|-----|-----|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `locale`                            | The language and country combination for the data being imported | string | Optional                                                                                                                                                                                                                              |
-| `entity`                            | The type of entity to be imported | string | Required. The value must be one of the following: `advanced_pricing`, `catalog_product`, `customer`, `customer_address`, `customer_composite`, `customer_finance`, or `stock_sources`.                                                                                   |
-| `behavior`                          | The action to perform | string | Required. For `advanced_pricing`, `catalog_product`, `customer_composite`, or `stock_sources` the value must be one of the following: `append`, `replace`, or `delete`. For `customer`, `customer_address`, or `customer_finance` the value must be one of the following: `add_update`, `delete`, or `custom`.|
+| `entity`                            | The type of entity to be imported | string | Required. The value must be one of the following: `advanced_pricing`, `catalog_product`, `customer`, `customer_address`, `customer_composite`, `customer_finance`, `requisition_list` or `stock_sources`.                                                                                   |
+| `behavior`                          | The action to perform | string | Required. For `advanced_pricing`, `catalog_product`, `customer_composite`, `requisition_list`, or `stock_sources` the value must be one of the following: `append`, `replace`, or `delete`. For `customer`, `customer_address`, or `customer_finance` the value must be one of the following: `add_update`, `delete`, or `custom`.|
 | `validationStrategy`                | Strategy to use when entities are invalid | string | Required. The value must be either `validation-stop-on-errors` or `validation-skip-errors`.                                                                                                                                                             |
 | `allowedErrorCount`                 | The maximum number of errors that can occur before the import is canceled | string | Required                                                                                                                                                                                                                              |
 | `csvData`                           | Base64 encoded string containing CSV data (optionally gzip compressed before base64) | string | Required                                                                                                                                                                                                                              |
@@ -117,7 +118,7 @@ POST /rest/<store_view_code>/V1/import/csv
 
 **Sample Usage:**
 
-`POST <host>/<store_view_code>/default/V1/import/csv`
+`POST /V1/import/csv`
 
 **Headers:**
 
@@ -203,7 +204,7 @@ In this example, the CSV payload contains three rows of data, and one of them is
 
 The Import JSON API is exclusively available via REST and does not support SOAP. This is because the payload consists of complex JSON objects with nested arrays, which are inherently challenging to represent with the XML structure that SOAP relies upon.
 
-The `POST /rest/<store_view_code>/V1/import/json` endpoint uses the `StartImportInterface` service to efficiently import entities into Adobe Commerce. The payload must contain data in JSON format.
+The `POST /V1/import/json` endpoint uses the `StartImportInterface` service to efficiently import entities into Adobe Commerce. The payload must contain data in JSON format.
 
 **Service Name:**
 
@@ -212,7 +213,7 @@ The `POST /rest/<store_view_code>/V1/import/json` endpoint uses the `StartImport
 **REST Endpoint:**
 
 ```http
-POST /rest/<store_view_code>/V1/import/json
+POST /V1/import/json
 ```
 
 **StartImportInterface Parameters:**
@@ -229,13 +230,15 @@ POST /rest/<store_view_code>/V1/import/json
 
 **Sample Usage:**
 
-`POST <host>/<store_view_code>/default/V1/import/json`
+`POST /V1/import/json`
 
 **Headers:**
 
 `Content-Type: application/json`
 
 `Authorization: Bearer <administrator token>`
+
+`Store: <store code>` (SaaS only)
 
 **Simple product payload:**
 
@@ -647,7 +650,7 @@ For a gift card product:
 
 This structure can be found nested within individual product items in the full payload.
 
-**Payload 7 (Multiple select attributes):**
+**Multiple select attributes payload:**
 
 The multiple select attribute for products is represented as an array of strings.
 
@@ -756,7 +759,7 @@ The Import JSON API does not create attributes automatically. You need to create
 
 **Customers and addresses payload:**
 
-Customers and Addresses information is represented as an array of JSON objects.
+Customers and addresses information is represented as an array of JSON objects.
 
 ```json
 {
@@ -821,6 +824,64 @@ Customers and Addresses information is represented as an array of JSON objects.
 ```
 
 `delivery_preferences` and `interests` are multiple select attributes for addresses and customers. They are represented as an array of strings.
+
+**Requisition list payload:**
+
+Each row in the `items` array represents an item in one requisition list. Rows are grouped by `(customer_email + list_name)` to form a parent-child relationship.
+
+The following table describes the possible contents of a requisition list item.
+
+| Column | Required | Description |
+|--------|----------|-------------|
+| `customer_email` | Yes | Customer email address (resolved to `customer_id` at import time) |
+| `list_name` | Yes | Requisition list name (max 40 chars) |
+| `description` | No | List description (max 255 chars); only the first row per group is used |
+| `sku` | Varies | Product SKU (max 64 chars). Required for all operations except delete |
+| `qty` | No | Quantity (positive number, defaults to 1) |
+| `options` | No | Serialized product options (JSON text blob) |
+
+The following example creates two requisition lists: Camp Supplies and Craft Materials. 
+
+```json
+{
+  "source": {
+    "entity": "requisition_list",
+    "behavior": "append",
+    "validation_strategy": "validation-stop-on-errors",
+    "allowed_error_count": "0",
+    "items": [
+      {
+        "customer_email": "leader@example.com",
+        "list_name": "Camp Supplies",
+        "description": "Summer camp gear",
+        "sku": "TENT-2P",
+        "qty": 5
+      },
+      {
+        "customer_email": "leader@example.com",
+        "list_name": "Camp Supplies",
+        "description": "",
+        "sku": "SLEEPING-BAG",
+        "qty": 10
+      },
+      {
+        "customer_email": "leader@example.com",
+        "list_name": "Camp Supplies",
+        "description": "",
+        "sku": "FLASHLIGHT",
+        "qty": 10
+      },
+      {
+        "customer_email": "leader@example.com",
+        "list_name": "Craft Materials",
+        "description": "Badge craft items",
+        "sku": "BADGE-KIT-A",
+        "qty": 20
+      }
+    ]
+  }
+}
+```
 
 **Response:**
 
