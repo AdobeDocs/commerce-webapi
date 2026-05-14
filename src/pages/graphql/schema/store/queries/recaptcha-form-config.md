@@ -12,9 +12,13 @@ You can use the [`recaptchaV3Config` query](recaptcha-v3-config.md) to return a 
 
 `recaptchaFormConfig(formType: ReCaptchaFormEnum!): ReCaptchaConfigOutput`
 
-## References
+## Reference
 
-The `recaptchaFormConfig` reference provides detailed information about the types and fields defined in this mutation.
+The `recaptchaFormConfig` reference provides detailed information about the types and fields defined in this query.
+
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-recaptchaFormConfig)
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-recaptchaV3Config)
 
 ## Example usage
 

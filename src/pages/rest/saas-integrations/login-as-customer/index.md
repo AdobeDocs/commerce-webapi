@@ -11,6 +11,10 @@ keywords:
 
 The Login as Customer feature allows administrators to generate a one-time code (OTC) for a customer, then exchange it for a customer access token. This is useful for support sessions, admin UIs, scripts, or third-party integrations that need to act on behalf of a customer.
 
+<InlineAlert variant="info" slots="text"/>
+
+For information on importing customers, see the [Import API](../../modules/import/index.md#customer-imports-in-adobe-commerce-as-a-cloud-service) documentation.
+
 ## Generate a one-time code using the REST API
 
 The POST `V1/customer/:customerId/otp` endpoint provides a programmatic way to generate an OTC for a customer. This is useful for admin UIs, scripts, or third-party integrations that need to trigger OTC issuance consistently.

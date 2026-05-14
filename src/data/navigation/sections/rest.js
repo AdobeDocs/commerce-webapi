@@ -459,6 +459,10 @@ module.exports = [
                 title: "Step 4. Delete an image of a product",
                 path: "/rest/tutorials/image/delete.md",
             },
+            {
+                title: "Manage product images at the store view level",
+                path: "/rest/tutorials/image/product-image-store-scope.md",
+            },
             ],
         },
     ],
