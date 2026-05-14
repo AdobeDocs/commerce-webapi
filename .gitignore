@@ -1,3 +1,5 @@
+# .gitignore
+
 
 # OS and IDE generated files #
 ##############################
@@ -6,6 +8,9 @@
 .history
 .idea
 .editorconfig
+.cursor
+.claude
+bin/
 
 # npm yarn
 node_modules
@@ -45,6 +50,6 @@ local-test.yml
 .yalc
 yalc.lock
 
-#txt
+# Added by update-bot
 linter-output.txt
 linter-report.txt
