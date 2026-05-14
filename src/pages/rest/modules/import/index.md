@@ -840,7 +840,7 @@ The following table describes the possible contents of a requisition list item.
 | `qty` | No | Quantity (positive number, defaults to 1) |
 | `options` | No | Serialized product options (JSON text blob) |
 
-The following example creates two requisition lists: Camp Supplies and Craft Materials. 
+The following example creates two requisition lists: Camp Supplies and Craft Materials.
 
 ```json
 {
