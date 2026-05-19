@@ -827,6 +827,8 @@ Customers and addresses information is represented as an array of JSON objects.
 
 **Requisition list payload:**
 
+<Edition name="saas" />
+
 Each row in the `items` array represents an item in one requisition list. Rows are grouped by `(customer_email + list_name)` to form a parent-child relationship.
 
 The following table describes the possible contents of a requisition list item.
