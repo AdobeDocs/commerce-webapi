@@ -107,7 +107,7 @@ POST /V1/import/csv
 |-------------------------------------|-----|-----|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `locale`                            | The language and country combination for the data being imported | string | Optional                                                                                                                                                                                                                              |
 | `entity`                            | The type of entity to be imported | string | Required. The value must be one of the following: `advanced_pricing`, `catalog_product`, `customer`, `customer_address`, `customer_composite`, `customer_finance`, `requisition_list` or `stock_sources`.                                                                                   |
-| `behavior`                          | The action to perform | string | Required. For `advanced_pricing`, `catalog_product`, `customer_composite`, `requisition_list`, or `stock_sources` the value must be one of the following: `append`, `replace`, or `delete`. For `customer`, `customer_address`, or `customer_finance` the value must be one of the following: `add_update`, `delete`, or `custom`.|
+| `behavior`                          | The action to perform | string | Required. For `advanced_pricing`, `catalog_product`, `customer_composite`, `requisition_list`, or `stock_sources`, the value must be: `append`, `replace`, or `delete`. For `customer`, `customer_address`, or `customer_finance`, you must use `add_update`, `delete`, or `custom`.|
 | `validationStrategy`                | Strategy to use when entities are invalid | string | Required. The value must be either `validation-stop-on-errors` or `validation-skip-errors`.                                                                                                                                                             |
 | `allowedErrorCount`                 | The maximum number of errors that can occur before the import is canceled | string | Required                                                                                                                                                                                                                              |
 | `csvData`                           | Base64 encoded string containing CSV data (optionally gzip compressed before base64) | string | Required                                                                                                                                                                                                                              |
@@ -829,13 +829,13 @@ Customers and addresses information is represented as an array of JSON objects.
 
 <Edition name="saas" />
 
-Each row in the `items` array represents an item in one requisition list. Rows are grouped by `(customer_email + list_name)` to form a parent-child relationship.
+Each row in the `items` array represents one requisition list item. Rows are grouped by `(customer_email + list_name)` to form a parent-child relationship.
 
 The following table describes the possible contents of a requisition list item.
 
 | Column | Required | Description |
 |--------|----------|-------------|
-| `customer_email` | Yes | Customer email address (resolved to `customer_id` at import time) |
+| `customer_email` | Yes | Customer email address (resolved to `customer_id` on import) |
 | `list_name` | Yes | Requisition list name (max 40 chars) |
 | `description` | No | List description (max 255 chars); only the first row per group is used |
 | `sku` | Varies | Product SKU (max 64 chars). Required for all operations except delete |
