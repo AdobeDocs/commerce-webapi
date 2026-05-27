@@ -113,7 +113,7 @@ The following query returns all dynamic blocks of type `SPECIFIED`. The returned
 
 **cmsPage query response:**
 
-The following code illustrates the definition of the dynamic block with the `uid` of `MQ==`, as returned by the [`cmsPage` query](../../store/queries/cms-page.md). The response has been reformatted for readability.
+The following code illustrates the definition of the dynamic block with the `uid` of `MQ==`, as returned by the [`cmsPage` query](cms-page.md). The response has been reformatted for readability.
 
 ```html
 <div class=\"widget block block-banners\"

@@ -17,7 +17,7 @@ The `id` on the sample data images might not match the `id` listed in this tutor
 
 1. Using the following image, open a bash terminal and convert the image into `base64`:
 
-    ![New Image](../../../_images/update-new-image.png)
+    ![New Image](../../../images/update-new-image.png)
 
     Command:
 
@@ -77,4 +77,4 @@ The request might take 30 seconds or so depending on the host.
 
 Refresh the `MJ03` product page and see if the existing image was updated.
 
-![Updated Image](../../../_images/update-image-frontend.png)
+![Updated Image](../../../images/update-image-frontend.png)

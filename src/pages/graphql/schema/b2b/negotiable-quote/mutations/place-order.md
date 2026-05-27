@@ -12,7 +12,7 @@ import CommerceOnly from '/src/_includes/commerce-only.md'
 
 <InlineAlert variant="warning" slots="text" />
 
-This mutation has been deprecated in Adobe Commerce as a Cloud Service. Use the [placeNegotiableQuoteOrderV2 mutation](./place-order-v2.md) instead.
+This mutation has been deprecated in Adobe Commerce as a Cloud Service. Use the [placeNegotiableQuoteOrderV2 mutation](place-order-v2.md) instead.
 
 The `placeNegotiableQuoteOrder` mutation converts a negotiable quote into an order and returns an order ID.
 

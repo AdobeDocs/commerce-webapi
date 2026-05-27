@@ -32,4 +32,4 @@ HTTP code | Error code | Text representation | Description
 
 ## Related topic
 
-[OAuth-based authentication](./gs-authentication-oauth.md)
+[OAuth-based authentication](gs-authentication-oauth.md)

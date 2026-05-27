@@ -217,7 +217,7 @@ Error | Description
 
 ## Related topics
 
-*  [customer query](../../customer/queries/customer.md)
+*  [customer query](../queries/customer.md)
 *  [updateCustomerV2 mutation](update-v2.md)
 *  [createCustomerAddress mutation](create-address.md)
 *  [updateCustomerAddress mutation](update-address.md)

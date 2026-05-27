@@ -127,7 +127,7 @@ mutation {
 }
 ```
 
-`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](../../tutorials/checkout/add-product-to-cart.md).
+`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](add-product-to-cart.md).
 
 Note the `available_shipping_methods` in the response. We will use this information in a later step.
 

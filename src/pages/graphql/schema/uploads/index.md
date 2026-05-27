@@ -13,9 +13,9 @@ Adobe Commerce as a Cloud Service (SaaS) supports file uploads through GraphQL m
 
 Uploading files is a multi-step process, as shown in the following diagram:
 
-![Upload files](../../../_images/upload-file.png)
+![Upload files](../../../images/upload-file.png)
 
-1. **Inititiate the upload**: The shopper clicks an **Upload File** button on the storefront. The Javascript code on the page uses the [`initiateUpload` mutation](./mutations/initiate-upload.md) to start the upload process. The mutation specifies the file name provided by the shopper. Commerce uses the AWS SDK to generate the URL to which the file will be uploaded.
+1. **Inititiate the upload**: The shopper clicks an **Upload File** button on the storefront. The Javascript code on the page uses the [`initiateUpload` mutation](mutations/initiate-upload.md) to start the upload process. The mutation specifies the file name provided by the shopper. Commerce uses the AWS SDK to generate the URL to which the file will be uploaded.
 
 1. **Receive the response**: The response from the `initiateUpload` mutation includes a presigned URL, a unique key for the file, and an expiration time for the URL. The client code extracts these values from the response.
 
@@ -27,7 +27,7 @@ Uploading files is a multi-step process, as shown in the following diagram:
    curl --fail --show-error --silent -X PUT --data-binary @./cat.jpg 'https://<bucket>.s3.<region>.amazonaws.com/<path-to-temp-file>?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=<token>&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=<value>&X-Amz-Date=<value>&X-Amz-SignedHeaders=host&X-Amz-Expires=<value>&X-Amz-Signature=<value>...'
    ```
 
-1. **Finalize the upload**: After the file is successfully uploaded to S3, the client code calls the [`finishUpload` mutation](./mutations/finish-upload.md) to complete the upload process. The mutation includes the unique key received from the `initiateUpload` response.
+1. **Finalize the upload**: After the file is successfully uploaded to S3, the client code calls the [`finishUpload` mutation](mutations/finish-upload.md) to complete the upload process. The mutation includes the unique key received from the `initiateUpload` response.
 
 1. **Perform validation**: Commerce uses a HEAD request on S3 Temporary to validate the key and size.
 

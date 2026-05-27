@@ -24,7 +24,7 @@ Pro Hosted Solution Integration Guide](https://www.paypalobjects.com/webstatic/e
 
 The following diagram shows the workflow for placing an order when Website Payments Pro Hosted Solution is the selected payment method.
 
-![PayPal Website Payments Pro Hosted Solution sequence diagram](../../_images/graphql/paypal-hosted-pro.svg)
+![PayPal Website Payments Pro Hosted Solution sequence diagram](../../images/graphql/paypal-hosted-pro.svg)
 
 import HostedProWorkflow from '/src/_includes/graphql/payment-methods/hosted-pro-workflow.md'
 

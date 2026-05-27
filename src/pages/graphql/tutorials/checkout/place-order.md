@@ -13,7 +13,7 @@ keywords:
 
 The `placeOrder` mutation places an order.
 
-`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](../../tutorials/checkout/add-product-to-cart.md).
+`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](add-product-to-cart.md).
 
 Send the customer's authorization token in the `Authorization` parameter of the header. See [Authorization tokens](../../usage/authorization-tokens.md) for more information.
 

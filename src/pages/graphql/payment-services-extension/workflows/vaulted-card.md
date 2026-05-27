@@ -10,7 +10,7 @@ keywords:
 
 The following diagram shows the workflow of a checkout authorization using a vaulted card.
 
-![Payment Services Vault sequence diagram](../../../_images/graphql/payment-services-paypal-vaulted-card.svg)
+![Payment Services Vault sequence diagram](../../../images/graphql/payment-services-paypal-vaulted-card.svg)
 
 1. Use the [`customerPaymentTokens`](../../schema/checkout/queries/customer-payment-tokens.md) query to retrieve the payment tokens the customer stored in the vault.
 

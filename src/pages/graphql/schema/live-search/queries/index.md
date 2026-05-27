@@ -11,5 +11,5 @@ keywords:
 
 Live Search provides the following queries:
 
-* [`attributeMetadata`](./attribute-metadata.md)
-* [`productSearch`](./product-search.md)
+* [`attributeMetadata`](attribute-metadata.md)
+* [`productSearch`](product-search.md)

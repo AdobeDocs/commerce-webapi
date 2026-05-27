@@ -7,7 +7,7 @@ edition: paas
 
 <InlineAlert variant="warning" slots="text" />
 
-The `customerOrders` query has been deprecated. Specify the `orders` object in the [`customer`](../../customer/queries/customer.md) query instead.
+The `customerOrders` query has been deprecated. Specify the `orders` object in the [`customer`](customer.md) query instead.
 
 The Sales module performs a wide variety of functions, including order, invoice, and shipment management. However, most of these functions are performed on the backend, and the customer does not have access to this information. By returning a list of customer orders, the `customerOrders` query allows a customer to retrieve their order histories.
 

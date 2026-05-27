@@ -213,7 +213,7 @@ You also can use the `DELETE` endpoint to delete a simple product from the group
 1. Select **Catalog > Products**.
 1. Click on the **New Grouped Product** grouped product and expand the **Grouped Products** section.
 
-  ![New grouped product](../../../_images/new-grouped-product.png)
+  ![New grouped product](../../../images/new-grouped-product.png)
 
 ## Add a grouped product to a cart
 

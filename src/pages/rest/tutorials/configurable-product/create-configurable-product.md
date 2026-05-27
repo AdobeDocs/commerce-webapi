@@ -214,6 +214,6 @@ Before you using this code sample, verify that the attribute values are the same
 
 *  Log in to the Luma website and select **Catalog > Products**. The product appears in the grid.
 
-  ![Product page with configurable product](../../../_images/products-page.png)
+  ![Product page with configurable product](../../../images/products-page.png)
 
 *  On the Luma storefront page, search for `Champ`. No results are returned.

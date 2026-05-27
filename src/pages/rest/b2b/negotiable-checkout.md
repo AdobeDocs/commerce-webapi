@@ -22,7 +22,7 @@ The same rule is applied when the quote has the proposed shipping price and the 
 
 The following diagram illustrates the workflow for <Vars.sitedatavarb2b/> negotiable quote checkouts:
 
-![Checkout process](/../../_images/quote-checkout-process.png)
+![Checkout process](/../../images/quote-checkout-process.png)
 
 ## Manage shipping addresses
 

@@ -17,7 +17,7 @@ The `setShippingMethodsOnCart` mutation defines the delivery methods for your or
 *  `carrier_code`
 *  `method_code`
 
-`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](../../tutorials/checkout/add-product-to-cart.md).
+`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](add-product-to-cart.md).
 
 The `carrier_code` and `method_code` values come from the response of the `setShippingAddressesOnCart` mutation on the [Set the shipping address](set-shipping-address.md) step.
 

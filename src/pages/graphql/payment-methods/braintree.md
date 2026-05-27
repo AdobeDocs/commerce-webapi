@@ -16,7 +16,7 @@ Braintree is a payment gateway that processes debit and credit card payments.
 
 The following diagram shows the workflow for placing an order when Braintree is the selected payment method.
 
-![Braintree sequence diagram](../../_images/graphql/braintree.svg)
+![Braintree sequence diagram](../../images/graphql/braintree.svg)
 
 1. The PWA client calls the [`createBraintreeClientToken`](../schema/checkout/mutations/create-braintree-client-token.md) mutation to generate the client token.
 

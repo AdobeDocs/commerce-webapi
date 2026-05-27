@@ -155,7 +155,7 @@ This method is a good choice for authenticating customers and Admin users in thi
 *  **Customer Token**—Use this token in applications to authorize specific customer and query data related to that customer (for example, customer details, cart, and orders).
 *  **Admin Token**—Use this token in applications to authorize an Admin user and access Admin-related APIs.
 
-[Request a token](./gs-authentication-token.md#request-a-token) and then include it in [future requests](./gs-authentication-token.md#use-the-token-in-a-web-api-request).
+[Request a token](gs-authentication-token.md#request-a-token) and then include it in [future requests](gs-authentication-token.md#use-the-token-in-a-web-api-request).
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -167,17 +167,17 @@ This method is a good choice for integrating with a third-party system that supp
 
 After activating an integration (self activated), you can use the generated consumer key, consumer secret, access token, and access token secret to provide third-party systems access to Commerce Store resources. You do not need to make calls to the `/oauth/token/request` or `/oauth/token/access` endpoints to exchange tokens.
 
-If a third-party system provides endpoints, you can use them to [activate an integration](./gs-authentication-oauth.md#activate-an-integration) and link your account. After completing the activation process, a third-party service can use the consumer key, consumer secret, access token, and access token secret provided by Commerce during activation to make API calls.
+If a third-party system provides endpoints, you can use them to [activate an integration](gs-authentication-oauth.md#activate-an-integration) and link your account. After completing the activation process, a third-party service can use the consumer key, consumer secret, access token, and access token secret provided by Commerce during activation to make API calls.
 
 #### Related topics
 
 Proceed to the authentication method for your preferred client:
 
-*  Mobile application. [Token-based authentication](./gs-authentication-token.md).
+*  Mobile application. [Token-based authentication](gs-authentication-token.md).
 
-*  Third-party application. [OAuth-based authentication](./gs-authentication-oauth.md).
+*  Third-party application. [OAuth-based authentication](gs-authentication-oauth.md).
 
-*  JavaScript widget on the Admin or storefront. [Session-based authentication](./gs-authentication-session.md).
+*  JavaScript widget on the Admin or storefront. [Session-based authentication](gs-authentication-session.md).
 
 *  [Extension attribute authentication](https://developer.adobe.com/commerce/php/development/components/attributes/)
 

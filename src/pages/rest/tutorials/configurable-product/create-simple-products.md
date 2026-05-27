@@ -228,6 +228,6 @@ Attribute | Medium Value | Large Value
 
 *  Log in to the Luma website and select <b>Catalog > Products</b>. The product appears in the grid.
 
-  ![Product page with configurable and simple products](../../../_images/products-page-all.png)
+  ![Product page with configurable and simple products](../../../images/products-page-all.png)
 
 *  On the Luma storefront page, search for `Champ`. No results are returned.

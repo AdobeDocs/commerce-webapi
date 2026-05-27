@@ -9,7 +9,7 @@ keywords:
 
 # Step 4. Delete an image
 
-In this step, we will delete an image from a SKU. In this example, we'll use the image `id` of `695`. Use the [list API call](../image/list.md) to see image IDs for your SKU.
+In this step, we will delete an image from a SKU. In this example, we'll use the image `id` of `695`. Use the [list API call](list.md) to see image IDs for your SKU.
 
 Run the following command to delete an image from the specified SKU:
 
@@ -33,6 +33,6 @@ The request might take 30 seconds or so depending on the host.
 
 Refresh the `MJ03` product page and see if your image was deleted.
 
-![Deleted Image](../../../_images/delete-image-frontend.png).
+![Deleted Image](../../../images/delete-image-frontend.png).
 
 You can re-run this call to verify that the image can no longer be found. You should receive the following message: `No image with the provided ID was found. Verify the ID and try again`.

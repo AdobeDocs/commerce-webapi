@@ -21,7 +21,7 @@ To take part and contribute, see the [magento2](https://github.com/magento/magen
 
 -  **Added the [`categories` query](schema/products/queries/categories.md) returns a list of categories that match a specified filter.** This query differs from the `categoryList` query in that it supports pagination.
 
--  **Added the [`pickupLocations` query](schema//cart/queries/pickup-locations.md).** When the Inventory in-store pickup feature is enabled, this query allows the shopper to select a pickup location. The `pickup_location_code` attribute has been added to the [`setShippingAddressesOnCart` mutation](schema/cart/mutations/set-shipping-address.md) to specify which source will serve as the pickup location.
+-  **Added the [`pickupLocations` query](schema/cart/queries/pickup-locations.md).** When the Inventory in-store pickup feature is enabled, this query allows the shopper to select a pickup location. The `pickup_location_code` attribute has been added to the [`setShippingAddressesOnCart` mutation](schema/cart/mutations/set-shipping-address.md) to specify which source will serve as the pickup location.
 
 The [Magento Open Source 2.4.0 Release Notes](https://experienceleague.adobe.com/docs/commerce-operations/release/notes/magento-open-source/2-4-0.html#graphql) and [Adobe Commerce 2.4.0 Release Notes](https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-0.html#graphql) list the bug fixes.
 

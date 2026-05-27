@@ -67,7 +67,7 @@ Service names use the following conventions:
 
 ## Authentication
 
-Protected SOAP resources can be accessed using bearer tokens (OAuth access tokens) over HTTP. Access tokens are strings representing an access authorization issued to the client. For more information, see [OAuth-based authentication](./authentication/gs-authentication-oauth.md)
+Protected SOAP resources can be accessed using bearer tokens (OAuth access tokens) over HTTP. Access tokens are strings representing an access authorization issued to the client. For more information, see [OAuth-based authentication](authentication/gs-authentication-oauth.md)
 
 The following PHP script illustrates how to get an access token:
 
@@ -89,6 +89,6 @@ $soapResponse = $soapClient->testModule1AllSoapAndRestV1Item($serviceArgs); ?>
 
 #### Related topics
 
-*  [OAuth-based authentication](./authentication/gs-authentication-oauth.md)
+*  [OAuth-based authentication](authentication/gs-authentication-oauth.md)
 *  [Service contracts](https://developer.adobe.com/commerce/php/development/components/service-contracts/)
 *  [SOAP Reference](soap-web-api-calls.md)

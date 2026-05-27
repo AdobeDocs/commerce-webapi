@@ -25,7 +25,7 @@ Customer | Commerce grants access to resources with the `anonymous` or `self` pe
 
 ## Integration tokens
 
-When a merchant creates and activates an integration, Commerce generates a consumer key, consumer secret, access token, and access token secret. All of these entities are used for [OAuth-based authentication](./gs-authentication-oauth.md).
+When a merchant creates and activates an integration, Commerce generates a consumer key, consumer secret, access token, and access token secret. All of these entities are used for [OAuth-based authentication](gs-authentication-oauth.md).
 
 In previous versions of Commerce, the access token could be used on its own for token-based authentication. This behavior has been disabled by default due to the security implications of a never-expiring access token. Namely, if the access token is compromised it provides undetected persistent access to a store.
 
@@ -35,7 +35,7 @@ However, while it is not recommended, this behavior can be restored in the Admin
 bin/magento config:set oauth/consumer/enable_integration_as_bearer 1
 ```
 
-If you are trying to upgrade from a previous version and need to update your integration implementation to properly utilize the OAuth workflow, review [OAuth-based Authentication](./gs-authentication-oauth.md). Otherwise, you can partially update your integration to simply store and utilize all four credentials to sign your requests.
+If you are trying to upgrade from a previous version and need to update your integration implementation to properly utilize the OAuth workflow, review [OAuth-based Authentication](gs-authentication-oauth.md). Otherwise, you can partially update your integration to simply store and utilize all four credentials to sign your requests.
 
 There is a comprehensive guide for this on the OAuth-based authentication page, but can also be done in isolation without supporting the entire OAuth workflow. For example, in the following script the four credentials are used to create a new CMS page without using external libraries or implementing the full OAuth handshake.
 <p></p>
@@ -208,7 +208,7 @@ Credentials | The username and password for a Commerce account.<br/><br/>To spec
 
 The following image shows a token request for the admin account using a REST client:
 
-![REST client](../../_images/gs_auth_token1.png)
+![REST client](../../images/gs-auth-token1.png)
 
 The following example uses the `curl` command to request a token for a customer account:
 

@@ -52,7 +52,7 @@ Specify one or more of the following HTTP headers in your web API calls:
 
 HTTP header | Description | Syntax
 --- | --- | ---
-`Authorization` | Required, except for calls made on behalf of a guest. Specifies the authentication token that proves you as the owner of a customer, admin, or integration account. You specify the token in the `Authorization` request header with the `Bearer` HTTP authorization scheme. | `Authorization: Bearer <TOKEN>` <br/><br/>`<TOKEN>` is the authentication token returned by the token service. See [Authentication](./authentication/).
+`Authorization` | Required, except for calls made on behalf of a guest. Specifies the authentication token that proves you as the owner of a customer, admin, or integration account. You specify the token in the `Authorization` request header with the `Bearer` HTTP authorization scheme. | `Authorization: Bearer <TOKEN>` <br/><br/>`<TOKEN>` is the authentication token returned by the token service. See [Authentication](authentication/index.md).
 `Accept` | Optional. Specifies the format of the response body. Default is `JSON`. | `Accept: application/<FORMAT>` <br/><br/>`<FORMAT>` is either `JSON` or `XML`.
 `X-Adobe-Company` | Optional. The Company unique ID scope for the request when a company user is assigned to more than one company. If this value is omitted, the user's default company scope is used. Use the `/V1/customers/:customer_id` call to get the company ids associated with a company user account.| `<company_uid>`
 `Content-Type` | Required for operations with a request body. Specifies the format of the request body. | `Content-Type:application/<FORMAT>` <br/><br/>`<FORMAT>` is either `JSON` or `XML`.
@@ -290,4 +290,4 @@ This request returns a list of all customers in JSON format, as shown below. You
 
 #### Related topics
 
-Run the web API call through a [cURL command](./gs-curl.md) or a REST client.
+Run the web API call through a [cURL command](gs-curl.md) or a REST client.

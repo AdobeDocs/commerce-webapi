@@ -6,7 +6,7 @@ title: PWA implementations and attributes
 
 <InlineAlert variant="warning" slots="text" />
 
-Deprecated. Check [ProductInterface attributes](../interfaces/attributes.md).
+Deprecated. Check [ProductInterface attributes](attributes.md).
 
 ## Interfaces
 

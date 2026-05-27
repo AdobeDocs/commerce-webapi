@@ -30,7 +30,7 @@ Key benefits of this approach include:
 - Ideal for headless and backend integrations
 - Support for system-wide permissions and access control
 
-For detailed steps, see the [server-to-server Authentication Guide](./server-to-server.md).
+For detailed steps, see the [server-to-server Authentication Guide](server-to-server.md).
 
 ## User authentication
 
@@ -44,7 +44,7 @@ Key benefits of this approach include:
 - Token refresh capabilities for extended sessions
 - Compliance with OAuth 2 security standards
 
-For detailed steps, see the [User Authentication Guide](./user.md).
+For detailed steps, see the [User Authentication Guide](user.md).
 
 ## Getting started
 

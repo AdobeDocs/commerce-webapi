@@ -19,7 +19,7 @@ Some alternate PayPal solutions have the same GraphQL workflow when Express Chec
 
 The following diagram shows the workflow for placing an order when PayPal Express Checkout is the selected payment method.
 
-![PayPal Express Checkout sequence diagram](../../_images/graphql/paypal-express-checkout.svg)
+![PayPal Express Checkout sequence diagram](../../images/graphql/paypal-express-checkout.svg)
 
 The following steps describe the flow of calls required to complete a typical PayPal Express Checkout authorization. A successful purchase requires that you send three mutations to PayPal, and the buyer must approve the purchase by logging in to PayPal.
 

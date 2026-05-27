@@ -22,7 +22,7 @@ As the process of registering the integration proceeds, Commerce creates the tok
 ## OAuth overview
 
 The following diagram shows the OAuth authentication process. Each step is described further.
-![OAuth flow](../../_images/oauthflow.png)
+![OAuth flow](../../images/oauthflow.png)
 
 1. **Create an integration**.  The merchant creates an integration from Admin. Commerce generates a consumer key and a consumer secret.
 
@@ -473,7 +473,7 @@ class OauthClient extends AbstractService
 
 [Create an integration](../create-integration.md)
 
-[OAuth error codes](./oauth-errors.md)
+[OAuth error codes](oauth-errors.md)
 
 [Construct a request](../gs-web-api-request.md)
 

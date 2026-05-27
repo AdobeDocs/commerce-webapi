@@ -15,7 +15,7 @@ The `addRequisitionListItemsToCart` mutation adds requisition list items to the 
 
 <InlineAlert variant="info" slots="text" />
 
-Use the [storeConfig query](../../../../schema/store/queries/store-config.md) with the `is_requisition_list_active` attribute to determine whether requisition lists are enabled.
+Use the [storeConfig query](../../../store/queries/store-config.md) with the `is_requisition_list_active` attribute to determine whether requisition lists are enabled.
 
 This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
 

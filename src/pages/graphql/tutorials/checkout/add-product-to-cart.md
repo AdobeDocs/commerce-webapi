@@ -31,7 +31,7 @@ If you add a product to the shopping cart as a registered customer, be sure to s
 
 The following mutation adds a simple product into the shopping cart.
 
-Replace `{ CART_ID }` with the unique shopping cart ID from [Step 2. Create empty cart](../../tutorials/checkout/add-product-to-cart.md).
+Replace `{ CART_ID }` with the unique shopping cart ID from [Step 2. Create empty cart](add-product-to-cart.md).
 
 In this example, we will add the Aim Analog Watch (SKU 24-MG04) from the default Luma catalog to the cart. The SKU identifies the product to be added.
 

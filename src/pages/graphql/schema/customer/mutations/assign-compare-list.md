@@ -8,7 +8,7 @@ contributor_link: https://www.atwix.com/
 
 The `assignCompareListToCustomer` mutation assigns the specified comparison list to the logged-in customer. Use this mutation when a customer creates a comparison list as a guest, but subsequently logs in.
 
-This mutation requires a valid [customer authentication token](../../customer/mutations/generate-token.md).
+This mutation requires a valid [customer authentication token](generate-token.md).
 
 ## Syntax
 

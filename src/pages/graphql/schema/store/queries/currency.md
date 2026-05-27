@@ -71,5 +71,5 @@ query {
 
 ## Related topics
 
-*  [countries query](../../store/queries/countries.md)
-*  [country query](../../store/queries/country.md)
+*  [countries query](countries.md)
+*  [country query](country.md)

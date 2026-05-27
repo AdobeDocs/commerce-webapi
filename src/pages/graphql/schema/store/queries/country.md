@@ -6,7 +6,7 @@ title: country query
 
 Use the `country` query to retrieve information about a specific country.
 
-Use the [countries](../../store/queries/countries.md) query to retrieve a list of countries available in the system.
+Use the [countries](countries.md) query to retrieve a list of countries available in the system.
 
 ## Syntax
 
@@ -103,8 +103,8 @@ query {
 
 ## Related topics
 
-*  [countries query](../../store/queries/countries.md)
-*  [currency query](../../store/queries/currency.md)
+*  [countries query](countries.md)
+*  [currency query](currency.md)
 
 ## Errors
 

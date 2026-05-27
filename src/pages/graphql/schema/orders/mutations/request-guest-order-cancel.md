@@ -70,4 +70,4 @@ mutation {
 
 ## Related topics
 
- * [order cancellation](/src/pages/graphql/schema/store/queries/store-config.md#query-a-stores-order-cancellation-configuration) configuration example on `storeConfig` page.
+ * [order cancellation](../../store/queries/store-config.md#query-a-stores-order-cancellation-configuration) configuration example on `storeConfig` page.

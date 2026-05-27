@@ -17,7 +17,7 @@ You must always set a payment method for an order.
 
 Use the following `cart` query to determine which payment methods which are available for your order.
 
-`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](../../tutorials/checkout/add-product-to-cart.md).
+`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](add-product-to-cart.md).
 
 For logged-in customers, send the customer's authorization token in the `Authorization` parameter of the header. See [Authorization tokens](../../usage/authorization-tokens.md) for more information.
 

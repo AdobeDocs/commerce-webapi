@@ -57,9 +57,9 @@ The [API reference](../reference/rest/saas.md) lists the available endpoints.
 
 ### Authentication
 
-In previous versions of Adobe Commerce, you would use authentication tokens to authorize your requests to the REST API. In Adobe Commerce as a Cloud Service, you must use Adobe Identity Management Service (IMS) to [authenticate your requests](./authentication/index.md).
+In previous versions of Adobe Commerce, you would use authentication tokens to authorize your requests to the REST API. In Adobe Commerce as a Cloud Service, you must use Adobe Identity Management Service (IMS) to [authenticate your requests](authentication/index.md).
 
-The authentication system supports both [interactive user-based workflows](./authentication/user.md) and automated [server-to-server integrations](./authentication/server-to-server.md), ensuring secure and appropriate access for different use cases. Both of these authentication methods require every request to be signed with an IMS Access Token.
+The authentication system supports both [interactive user-based workflows](authentication/user.md) and automated [server-to-server integrations](authentication/server-to-server.md), ensuring secure and appropriate access for different use cases. Both of these authentication methods require every request to be signed with an IMS Access Token.
 
 ### URL structure
 

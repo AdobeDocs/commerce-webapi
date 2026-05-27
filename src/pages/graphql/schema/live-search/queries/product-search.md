@@ -58,7 +58,7 @@ phrase: "pants"
 
 <InlineAlert variant="info" slots="text"/>
 
-Use the [`attributeMetadata` query](./attribute-metadata.md) to return a list of product attributes that can be used to define a filter.
+Use the [`attributeMetadata` query](attribute-metadata.md) to return a list of product attributes that can be used to define a filter.
 
 ### context
 
@@ -163,7 +163,7 @@ Only facets specified in Live Search are returned.
 
 <InlineAlert variant="info" slots="text"/>
 
-Use the [`attributeMetadata` query](./attribute-metadata.md) to return a list of product attributes that can be used to define a filter.
+Use the [`attributeMetadata` query](attribute-metadata.md) to return a list of product attributes that can be used to define a filter.
 
 #### Layered search and expansion of search types
 

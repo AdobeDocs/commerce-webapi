@@ -17,7 +17,7 @@ Skip this step if you placed the order as a registered customer.
 
 If you place an order as a guest user, you must set a quote email address. Use the `setGuestEmailOnCart` mutation query for that.
 
-`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](../../tutorials/checkout/add-product-to-cart.md).
+`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](add-product-to-cart.md).
 
 **Request:**
 

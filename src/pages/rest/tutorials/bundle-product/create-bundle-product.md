@@ -299,15 +299,15 @@ POST http://domain.com/rest/default/V1/products
 
 1. On the Luma storefront page, search for `Desktop Computer`. There should be one result.
 
-    ![Search](../../../_images/search-desktop-computer.png)
+    ![Search](../../../images/search-desktop-computer.png)
 
 1. Click on the Desktop Computer product.
 
-    ![Product](../../../_images/site-desktop-computer.png)
+    ![Product](../../../images/site-desktop-computer.png)
 
 1. Customize Desktop Computer and add it to the shopping cart.
 
-    ![Shopping Cart](../../../_images/shopping-cart-desktop-computer.png)
+    ![Shopping Cart](../../../images/shopping-cart-desktop-computer.png)
 
 <InlineAlert variant="info" slots="text"/>
 

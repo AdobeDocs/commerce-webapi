@@ -13,7 +13,7 @@ Adobe Commerce as a Cloud Service (SaaS) supports file uploads through REST endp
 
 Uploading files is a multi-step process, as shown in the following diagram:
 
-![Upload files](../../../_images/upload-file.png)
+![Upload files](../../../images/upload-file.png)
 
 1. **Initiate the upload**: The shopper clicks an **Upload File** button on the storefront. The JavaScript code on the page uses the `POST V1/media/initiate-upload` endpoint to start the upload process. The call specifies the file name provided by the shopper. Commerce uses the AWS SDK to generate the URL to which the file will be uploaded.
 

@@ -14,10 +14,10 @@
     - GraphQL
         - [Guide](/graphql/index.md)
         - [SaaS Reference](/reference/graphql/saas/index.md)
-        - [2.4.9 Reference](/reference/graphql/2.4.9/index.md)
-        - [2.4.8 Reference](/reference/graphql/2.4.8/index.md)
-        - [2.4.7 Reference](/reference/graphql/2.4.7/index.md)
-        - [2.4.6 Reference](/reference/graphql/2.4.6/index.md)
+        - [2.4.9 Reference](/reference/graphql/2-4-9/index.md)
+        - [2.4.8 Reference](/reference/graphql/2-4-8/index.md)
+        - [2.4.7 Reference](/reference/graphql/2-4-7/index.md)
+        - [2.4.6 Reference](/reference/graphql/2-4-6/index.md)
 
 - subPages:
     - [Introduction](/get-started.md)

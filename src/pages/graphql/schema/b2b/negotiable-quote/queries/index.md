@@ -12,6 +12,6 @@ import CommerceOnly from '/src/_includes/commerce-only.md'
 
 B2B for Adobe Commerce provides two negotiable quote queries.
 
-- [`negotiableQuote`](./quote.md) returns details about a single quote.
-- [`negotiableQuotes`](./quotes.md) returns multiple quotes, filtered by name or ID.
-- [`negotiableQuoteTemplates`](./templates.md) returns multiple quote templates, filtered by name or ID.
+- [`negotiableQuote`](quote.md) returns details about a single quote.
+- [`negotiableQuotes`](quotes.md) returns multiple quotes, filtered by name or ID.
+- [`negotiableQuoteTemplates`](templates.md) returns multiple quote templates, filtered by name or ID.

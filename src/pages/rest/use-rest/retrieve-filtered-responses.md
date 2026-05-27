@@ -144,7 +144,7 @@ The following POST operation and payload creates a catalog category named `New C
 
 ## Using with searchCriteria
 
-The [`searchCriteria` query parameter](./performing-searches.md) allows you to search across multiple objects in a collection. You can use the `fields` query parameter in conjunction with `searchCriteria` to limit the output. The question mark (?) that precedes `fields` in all the other examples in this document is replaced with an ampersand (&amp;).
+The [`searchCriteria` query parameter](performing-searches.md) allows you to search across multiple objects in a collection. You can use the `fields` query parameter in conjunction with `searchCriteria` to limit the output. The question mark (?) that precedes `fields` in all the other examples in this document is replaced with an ampersand (&amp;).
 
 The following query returns only the `sku` and `name` parameters for product items whose `category_gear` attribute includes the value `86`.
 
@@ -195,4 +195,4 @@ The following query returns only the `sku` and `name` parameters for product ite
 
 ### Related topics
 
-*  [Search using REST APIs](./performing-searches.md)
+*  [Search using REST APIs](performing-searches.md)

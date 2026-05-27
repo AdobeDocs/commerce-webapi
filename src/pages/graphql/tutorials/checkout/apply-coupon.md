@@ -13,7 +13,7 @@ keywords:
 
 Use [applyCouponToCart](apply-coupon.md) to apply a discount coupon to the specified `cart_id`.
 
-`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](../../tutorials/checkout/add-product-to-cart.md).
+`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](add-product-to-cart.md).
 
 `{ COUPON_CODE }` is an existing coupon code. It cannot be generated with GraphQL.
 

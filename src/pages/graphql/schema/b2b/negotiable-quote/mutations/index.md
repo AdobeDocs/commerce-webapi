@@ -13,10 +13,10 @@ import CommerceOnly from '/src/_includes/commerce-only.md'
 The B2B negotiable quote mutations allow you to perform the following operations:
 
 -  Manage the status of a negotiable quote
-   -  [Request a negotiable quote](./request.md) on behalf of a customer
-   -  [Send a negotiable quote for review](./send-for-review.md)
-   -  [Close negotiable quotes](./close.md)
-   -  [Delete negotiable quotes](./delete.md)
+   -  [Request a negotiable quote](request.md) on behalf of a customer
+   -  [Send a negotiable quote for review](send-for-review.md)
+   -  [Close negotiable quotes](close.md)
+   -  [Delete negotiable quotes](delete.md)
 
 -  Manage the contents of a negotiable quote
    -  [Update the quantity of items](update-quantities.md)

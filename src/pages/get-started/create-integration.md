@@ -13,9 +13,9 @@ An **integration** enables third-party services to call the Adobe Commerce and M
 
 Implementing a simple integration requires little knowledge of PHP or Commerce internal processes. However, you will need a working knowledge of
 
-*  [Commerce REST or SOAP Web APIs](../get-started/)
-*  [Web API authentication](./authentication/)
-*  [OAuth-based authentication](./authentication/gs-authentication-oauth.md)
+*  [Commerce REST or SOAP Web APIs](index.md)
+*  [Web API authentication](authentication/index.md)
+*  [OAuth-based authentication](authentication/gs-authentication-oauth.md)
 
 Before you begin creating a module, make sure that you have a working installation that meets the [System Requirements](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html).
 
@@ -311,7 +311,7 @@ The callback page must be able to perform the following tasks:
 
    `POST /oauth/token/request`
 
-   See [Get a request token](./authentication/gs-authentication-oauth.md#get-a-request-token) for more details about this call.
+   See [Get a request token](authentication/gs-authentication-oauth.md#get-a-request-token) for more details about this call.
 
 *  Parse the request token response. The response contains an `oauth_token` and `oauth_token_secret`.
 
@@ -319,7 +319,7 @@ The callback page must be able to perform the following tasks:
 
    `POST /oauth/token/access`
 
-   See [Get an access token](./authentication/gs-authentication-oauth.md#get-an-access-token/) for more details about this call.
+   See [Get an access token](authentication/gs-authentication-oauth.md#get-an-access-token/) for more details about this call.
 
 *  Parse the access token response. The response contains an `oauth_token` and `oauth_token_secret`. These values will be different than those provided in the request token response.
 
@@ -327,8 +327,8 @@ The callback page must be able to perform the following tasks:
 
 ## Related Topics
 
-*  [Web API authentication](./authentication/)
-*  [OAuth-based authentication](./authentication/gs-authentication-oauth.md)
+*  [Web API authentication](authentication/index.md)
+*  [OAuth-based authentication](authentication/gs-authentication-oauth.md)
 *  [System Requirements](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)
 *  [Create the module file structure](https://developer.adobe.com/commerce/php/development/build/component-file-structure/)
 *  [Create a component](https://developer.adobe.com/commerce/php/development/build/component-name/)

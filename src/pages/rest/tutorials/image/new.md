@@ -11,7 +11,7 @@ keywords:
 
 In this step, we will add the following image to the product with SKU `MJ03`.
 
-![New Image](../../../_images/api-new-image.png)
+![New Image](../../../images/api-new-image.png)
 
 We need to convert this image into a `base64` string.
 
@@ -72,4 +72,4 @@ The response provides the new image `id` for the added image.
 
 Refresh the `MJ03` product page and see if your new image was added.
 
-![New Product Image](../../../_images/api-frontend-new-image.png)
+![New Product Image](../../../images/api-frontend-new-image.png)

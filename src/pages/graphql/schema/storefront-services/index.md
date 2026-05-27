@@ -11,7 +11,7 @@ keywords:
 
 # Adobe Storefront Services GraphQL
 
-Adobe Storefront Services—[Catalog Service](../catalog-service/), [Live Search](../live-search/), and [Product Recommendations](../product-recommendations/)—are SaaS extensions for Adobe Commerce that expose their own GraphQL schemas. These schemas are separate from the [core Commerce GraphQL schema](../index.md) and optimized for fast, read-only storefront rendering.
+Adobe Storefront Services—[Catalog Service](../catalog-service/index.md), [Live Search](../live-search/index.md), and [Product Recommendations](../product-recommendations/index.md)—are SaaS extensions for Adobe Commerce that expose their own GraphQL schemas. These schemas are separate from the [core Commerce GraphQL schema](../index.md) and optimized for fast, read-only storefront rendering.
 
 In Adobe Commerce on cloud and on-premises instances (PaaS), the merchant installs and configures the Storefront Services extensions to enable these GraphQL endpoints. In Adobe Commerce as a Cloud Service (SaaS), the services are included in the platform, and the merchant must configure Live Search and Product Recommendations services.
 

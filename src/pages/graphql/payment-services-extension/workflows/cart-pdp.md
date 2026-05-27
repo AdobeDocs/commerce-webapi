@@ -18,21 +18,21 @@ These steps describe the flow of requests and responses with the [Payment Servic
 
 These steps describe the use case when a shopper adds a product to the cart on a PDP.
 
-![Payment Services sequence diagram](../../../_images/graphql/payment-services-pdp.svg)
+![Payment Services sequence diagram](../../../images/graphql/payment-services-pdp.svg)
 
-1. Run the [`getPaymentConfig`](../../payment-services-extension/queries/get-payment-config.md) query to fetch the payment configuration needed to render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
+1. Run the [`getPaymentConfig`](../queries/get-payment-config.md) query to fetch the payment configuration needed to render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
 
 1. Adobe Commerce returns payment configuration information.
 
-1. Run [`addProductsToNewCart`](../../payment-services-extension/mutations/add-products-new-cart.md) to create a new cart and add the item.
+1. Run [`addProductsToNewCart`](../mutations/add-products-new-cart.md) to create a new cart and add the item.
 
 1. Commerce returns a `cart` object, which includes the cart `id` field.
 
-1. Run [`createPaymentOrder`](../../payment-services-extension/mutations/create-payment-order.md) to begin the authorization process.
+1. Run [`createPaymentOrder`](../mutations/create-payment-order.md) to begin the authorization process.
 
 1. Commerce forwards the request to PayPal.
 
-  If there is an error during the payment process, or the shopper cancels the payment process on the PDP, run [`setCartAsInactive`](../../payment-services-extension/mutations/set-cart-inactive.md) to set the corresponding `cartId` as inactive and to avoid having multiple active carts for logged-in customers.
+  If there is an error during the payment process, or the shopper cancels the payment process on the PDP, run [`setCartAsInactive`](../mutations/set-cart-inactive.md) to set the corresponding `cartId` as inactive and to avoid having multiple active carts for logged-in customers.
 
 1. PayPal returns an `id` value.
 
@@ -50,17 +50,17 @@ These steps describe the use case when a shopper adds a product to the cart on a
 
 These steps describe the use case when a shopper cancels the payment process on the PDP.
 
-![Payment Services sequence diagram](../../../_images/graphql/payment-services-pdp-cartinactive.svg)
+![Payment Services sequence diagram](../../../images/graphql/payment-services-pdp-cartinactive.svg)
 
-1. Run the [`getPaymentConfig`](../../payment-services-extension/queries/get-payment-config.md) query to fetch the payment configuration needed to render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
+1. Run the [`getPaymentConfig`](../queries/get-payment-config.md) query to fetch the payment configuration needed to render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
 
 1. Adobe Commerce returns payment configuration information.
 
-1. Run [`addProductsToNewCart`](../../payment-services-extension/mutations/add-products-new-cart.md) to create a new cart and add the item.
+1. Run [`addProductsToNewCart`](../mutations/add-products-new-cart.md) to create a new cart and add the item.
 
 1. Commerce returns a `cart` object, which includes the cart `id` field.
 
-1. Run [`setCartAsInactive`](../../payment-services-extension/mutations/set-cart-inactive.md) to set a specific `cartId` as inactive.
+1. Run [`setCartAsInactive`](../mutations/set-cart-inactive.md) to set a specific `cartId` as inactive.
 
 1. Commerce returns a confirmation that a specific `cartId` is inactive.
 

@@ -9,7 +9,7 @@ keywords:
 
 # attributeMetadata query
 
-The `attributeMetadata` query returns a list of product attribute codes that can be used for sorting or filtering in a [`productSearch` query](./product-search.md). The query response can include the attribute name, display label, and a Boolean value that indicates if the attribute has a numeric value that can be used for numeric operations, such as range filters or sorting.
+The `attributeMetadata` query returns a list of product attribute codes that can be used for sorting or filtering in a [`productSearch` query](product-search.md). The query response can include the attribute name, display label, and a Boolean value that indicates if the attribute has a numeric value that can be used for numeric operations, such as range filters or sorting.
 
 ## Syntax
 

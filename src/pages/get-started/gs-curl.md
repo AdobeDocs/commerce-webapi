@@ -12,7 +12,7 @@ keywords:
 
 To use cURL to run your REST web API call, use the cURL command syntax to construct the command.
 
-To create the endpoint in the call, append the REST URI that you constructed in [Construct a request](./gs-web-api-request.md) to this URL:
+To create the endpoint in the call, append the REST URI that you constructed in [Construct a request](gs-web-api-request.md) to this URL:
 
 `https://<HOST_OR_IP>/<BASE_INSTALL_DIR>/rest/`
 
@@ -25,7 +25,7 @@ The cURL examples in this guide use the following command-line options:
 Option | Description
 --- | ---
 `-d` `-data` | Sends the specified data in a POST request to the HTTP server. Use this option to send a JSON or XML request body to the server.
-`-H` `-header` | Specifies an extra HTTP header in the request. Precede each header with the `-H` option. You can specify any number of extra headers. For a list of common headers used in web API requests, see [HTTP headers](./gs-web-api-request.md#http-headers)
+`-H` `-header` | Specifies an extra HTTP header in the request. Precede each header with the `-H` option. You can specify any number of extra headers. For a list of common headers used in web API requests, see [HTTP headers](gs-web-api-request.md#http-headers)
 `-i` `-input` | Includes the HTTP header in the output.
 `-s` `-silent` | Specifies silent or quiet mode, which makes cURL mute. Progress and error messages are suppressed.
 `-T` `-upload-file` | Transfers the specified local file to the remote URL.
@@ -277,4 +277,4 @@ As result the script call `getBody` method of the cURL client.
 
 #### Related topics
 
-[Status codes and responses](./gs-web-api-response.md)
+[Status codes and responses](gs-web-api-response.md)

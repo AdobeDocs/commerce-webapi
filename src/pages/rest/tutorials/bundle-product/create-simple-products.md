@@ -577,7 +577,7 @@ POST http://domain.com/rest/default/V1/products
 
 Log in to the Adobe Commerce Admin Panel and select **Catalog** > **Products** and confirm that your products appear in the grid.
 
-![Simple products](../../../_images/simple-products-admin-grid.png)
+![Simple products](../../../images/simple-products-admin-grid.png)
 
 <InlineAlert variant="info" slots="text"/>
 

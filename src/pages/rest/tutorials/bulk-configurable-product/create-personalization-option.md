@@ -55,11 +55,11 @@ The `product_sku` is the `sku` of the configurable product. The `sku` specified 
 
 *  Log in to the Luma website and select **Catalog > Products**. Click on the **Champ Tee** configurable product and expand the **Customizable Options** section.
 
-   ![Product page with configurable and simple products](../../../_images/options-section.png)
+   ![Product page with configurable and simple products](../../../images/options-section.png)
 
 *  On the Luma storefront page, search for `Champ`. Then click on the Champ Tee product.
 
-   ![Search results](../../../_images/add-your-name.png)
+   ![Search results](../../../images/add-your-name.png)
 
    <InlineAlert variant="info" slots="text"/>
 

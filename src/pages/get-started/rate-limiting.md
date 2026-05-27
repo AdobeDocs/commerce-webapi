@@ -161,7 +161,7 @@ After the Redis server connection has been configured, you can run several `bin/
 
 You can also enable and configure rate limiting from the Admin by selecting **Stores** > **Configuration** > **Sales** > **Sales** > **Rate Limiting**.
 
-![Rate limiting section](../_images/api-security-rate-limiting.png)
+![Rate limiting section](../images/api-security-rate-limiting.png)
 
 Use the following commands to enable and configure rate limiting:
 

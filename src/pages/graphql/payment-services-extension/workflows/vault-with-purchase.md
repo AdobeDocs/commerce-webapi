@@ -17,9 +17,9 @@ The following conditions must be true to vault a card during checkout:
 
 ## Workflow
 
-![Payment Services sequence diagram](../../../_images/graphql/payment-services-vault-with-purchase.svg)
+![Payment Services sequence diagram](../../../images/graphql/payment-services-vault-with-purchase.svg)
 
-1. Run the [`getPaymentConfig`](../../payment-services-extension/queries/get-payment-config.md) query to fetch the payment configuration needed to render details of hosted fields.
+1. Run the [`getPaymentConfig`](../queries/get-payment-config.md) query to fetch the payment configuration needed to render details of hosted fields.
 
 1. Commerce returns the payment configuration information.
 
@@ -27,7 +27,7 @@ The following conditions must be true to vault a card during checkout:
 
 1. Adobe Commerce returns a `Cart` object.
 
-1. Run the [`createPaymentOrder`](../../payment-services-extension/mutations/create-payment-order.md) mutation with `vaultIntent` set to `true` to begin the authorization process.
+1. Run the [`createPaymentOrder`](../mutations/create-payment-order.md) mutation with `vaultIntent` set to `true` to begin the authorization process.
 
 1. Commerce forwards the request to PayPal.
 
@@ -39,7 +39,7 @@ The following conditions must be true to vault a card during checkout:
 
 1. Adobe Commerce returns a token.
 
-1. (Optional) If hosted fields and the Signifyd integration are enabled, run the [`getPaymentOrder`](../../payment-services-extension/queries/get-payment-order.md) query.
+1. (Optional) If hosted fields and the Signifyd integration are enabled, run the [`getPaymentOrder`](../queries/get-payment-order.md) query.
 
 1. (Optional) Adobe Commerce returns details about the payment order.
 
@@ -57,7 +57,7 @@ The following conditions must be true to vault a card during checkout:
 
 ## Additional information
 
-It is only possible to vault configuration details for hosted fields. See [`getPaymentConfig`](../../payment-services-extension/queries/get-payment-config.md) query for more information.
+It is only possible to vault configuration details for hosted fields. See [`getPaymentConfig`](../queries/get-payment-config.md) query for more information.
 
 ### `setPaymentMethodOnCart` mutation example
 

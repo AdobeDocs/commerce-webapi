@@ -6,7 +6,7 @@ title: deleteCustomerAddress mutation
 
 <InlineAlert variant="warning" slots="text" />
 
-This mutation has been deprecated in Adobe Commerce as a Cloud Service and will be deprecated in Adobe Commerce 2.4.9. We recommend using the [deleteCustomerAddressV2 mutation](./delete-address-v2.md) instead.
+This mutation has been deprecated in Adobe Commerce as a Cloud Service and will be deprecated in Adobe Commerce 2.4.9. We recommend using the [deleteCustomerAddressV2 mutation](delete-address-v2.md) instead.
 
 Use the `deleteCustomerAddress` mutation to delete the specified customer address. It returns a Boolean value that indicates whether the operation was successful.
 

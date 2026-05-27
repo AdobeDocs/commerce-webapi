@@ -22,7 +22,7 @@ PayPal Payments Advanced is available in the US and Canada only.
 
 The following diagram shows the workflow for placing an order when Payments Advanced is the selected payment method.
 
-![PayPal Payments Advanced sequence diagram](../../_images/graphql/paypal-payflow-link.svg)
+![PayPal Payments Advanced sequence diagram](../../images/graphql/paypal-payflow-link.svg)
 
 import PayflowLinkWorkflow from '/src/_includes/graphql/payment-methods/payflow-link-workflow.md'
 
