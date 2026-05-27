@@ -44,7 +44,7 @@ import Headers from '/src/_includes/graphql/catalog-service/headers.md'
 
 <Headers />
 
-###  Find the customer group code
+### Find the customer group code
 
 import CustomerGroupCode from '/src/_includes/graphql/customer-group-code.md'
 
@@ -64,6 +64,7 @@ categories(ids: ["11"], roles: ["show_in_menu", "active"], subtree: {
     "startLevel": 1
 }) {
     name
+    position
     id
     level
     roles
@@ -81,6 +82,7 @@ categories(ids: ["11"], roles: ["show_in_menu", "active"], subtree: {
 [
    {
       "name":"Bottoms",
+      "position":2,
       "id":"13",
       "level":3,
       "roles":[
@@ -98,6 +100,7 @@ categories(ids: ["11"], roles: ["show_in_menu", "active"], subtree: {
    },
    {
       "name":"Tops",
+      "position":1,
       "id":"12",
       "level":3,
       "roles":[
@@ -117,6 +120,7 @@ categories(ids: ["11"], roles: ["show_in_menu", "active"], subtree: {
    },
    {
       "name":"Jackets",
+      "position":1,
       "id":"14",
       "level":4,
       "roles":[
@@ -132,6 +136,7 @@ categories(ids: ["11"], roles: ["show_in_menu", "active"], subtree: {
    },
    {
       "name":"Pants",
+      "position":1,
       "id":"18",
       "level":4,
       "roles":[
@@ -147,6 +152,7 @@ categories(ids: ["11"], roles: ["show_in_menu", "active"], subtree: {
    },
    {
       "name":"Tanks",
+      "position":4,
       "id":"17",
       "level":4,
       "roles":[
@@ -162,6 +168,7 @@ categories(ids: ["11"], roles: ["show_in_menu", "active"], subtree: {
    },
    {
       "name":"Hoodies & Sweatshirts",
+      "position":2,
       "id":"15",
       "level":4,
       "roles":[
@@ -177,6 +184,7 @@ categories(ids: ["11"], roles: ["show_in_menu", "active"], subtree: {
    },
    {
       "name":"Shorts",
+      "position":2,
       "id":"19",
       "level":4,
       "roles":[
@@ -198,16 +206,16 @@ categories(ids: ["11"], roles: ["show_in_menu", "active"], subtree: {
 
 Field | Data type | Description
 --- | --- | ---
-`ids` | [String!] | Array of category IDs to return. If using `subtree`, must contain only one ID.
-`roles` | [String!]! |  The list of category roles to be queried.
-`subtree` | [[subtree](#subtree-input)] | Defines the number of sub-levels of categories to return.
+`ids` | [String!] | List of category IDs to retrieve. For example, `123`, `456`, or `789`. If using `subtree`, must contain only one ID.
+`roles` | [String!] | List of roles to filter the categories by. Only categories assigned one of the specified roles are returned. For example, `show_on_plp`, `show_in_pdp`, or `show_in_search`.
+`subtree` | [Subtree](#subtree-input) | Limits the response to a subtree of the category hierarchy. Use `startLevel` to set the topmost level (root = 1) and `depth` to control how many levels of subcategories to include.
 
-### subtree input
+### Subtree input
 
 Field | Data type | Description
 --- | --- | ---
-`startLevel` | [Int!] |The level in the category tree where the search should begin. Minimum of 1.
-`depth` | [Int!]! |  The number of subtrees to return. Values over 3 may impact performance.
+`startLevel` | Int! | The absolute level in the category tree hierarchy to begin retrieving categories from. Level `1` is the root category, level `2` is the first level of children, level `3` is the second, and so on.
+`depth` | Int! | The number of category levels to retrieve below the `startLevel`. For example, a value of `2` returns two levels of subcategories beneath the `startLevel`. Values over 3 may impact performance.
 
 ## Output fields
 
