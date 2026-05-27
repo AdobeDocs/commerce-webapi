@@ -14,7 +14,11 @@ To return or modify information about a customer, we recommend you use customer 
 
 ## Reference
 
-The [`updateCustomerEmail`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateCustomerEmail) reference provides detailed information about the types and fields defined in this mutation.
+The `updateCustomerEmail` reference provides detailed information about the types and fields defined in this mutation.
+
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-updateCustomerEmail)
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateCustomerEmail)
 
 ## Example usage
 

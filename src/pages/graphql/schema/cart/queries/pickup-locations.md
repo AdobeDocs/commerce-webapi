@@ -36,7 +36,11 @@ pickupLocations (area: AreaInput filters: PickupLocationFilterInput sort: Pickup
 
 ## Reference
 
-The [`pickupLocations`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-pickupLocations) reference provides detailed information about the types and fields defined in this query.
+The `pickupLocations` reference provides detailed information about the types and fields defined in this query.
+
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-pickupLocations)
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-pickupLocations)
 
 ## Example usage
 

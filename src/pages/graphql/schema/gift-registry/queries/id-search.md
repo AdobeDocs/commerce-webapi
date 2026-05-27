@@ -18,7 +18,11 @@ giftRegistryIdSearch(giftRegistryUid: String!): [GiftRegistrySearchResult]
 
 ## Reference
 
-The [`giftRegistryIdSearch`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-giftRegistryIdSearch) reference provides detailed information about the types and fields defined in this query.
+The `giftRegistryIdSearch` reference provides detailed information about the types and fields defined in this query.
+
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-giftRegistryIdSearch)
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-giftRegistryIdSearch)
 
 ## Example usage
 

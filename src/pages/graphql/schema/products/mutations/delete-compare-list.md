@@ -25,7 +25,11 @@ mutation {
 
 ## Reference
 
-The [`deleteCompareList`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-deleteCompareList) reference provides detailed information about the types and fields defined in this mutation.
+The `deleteCompareList` reference provides detailed information about the types and fields defined in this mutation.
+
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-deleteCompareList)
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-deleteCompareList)
 
 ## Example usage
 

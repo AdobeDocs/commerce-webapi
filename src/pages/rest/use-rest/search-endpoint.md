@@ -142,7 +142,7 @@ The following example gets all products in a given category:
 ```http
 GET <host>/rest/<store_code>/V1/search?searchCriteria[requestName]=catalog_view_container&
 searchCriteria[filterGroups][0][filters][0][field]=category_ids&
-searchCriteria[filterGroups][0][filters][0][value][0]=4&
+searchCriteria[filterGroups][0][filters][0][value]=4&
 searchCriteria[filterGroups][0][filters][0][condition_type]=eq
 ```
 

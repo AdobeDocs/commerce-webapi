@@ -212,7 +212,7 @@ module.exports = [
                 path: "/graphql/schema/cart/mutations/apply-coupons/"
               },
               {
-                title: "applyGiftCartToCart",
+                title: "applyGiftCardToCart",
                 path: "/graphql/schema/cart/mutations/apply-giftcard/",
               },
               {
@@ -320,38 +320,6 @@ module.exports = [
           {
             title: "Interfaces",
             path: "/graphql/schema/cart/interfaces/"
-          },
-        ],
-      },
-      {
-        title: "Catalog Service",
-        path: "/graphql/schema/catalog-service/",
-        pages:[
-          {
-            title: "Queries",
-            path: "/graphql/schema/catalog-service/queries/",
-            pages: [
-              {
-                title: "categories",
-                path: "/graphql/schema/catalog-service/queries/categories.md",
-              },
-              {
-                title: "products",
-                path: "/graphql/schema/catalog-service/queries/products.md"
-              },
-              {
-                title: "productSearch",
-                path: "/graphql/schema/live-search/queries/product-search.md",
-              },
-              {
-                title: "refineProduct",
-                path: "/graphql/schema/catalog-service/queries/refine-product.md"
-              },
-              {
-                title: "variants",
-                path: "/graphql/schema/catalog-service/queries/product-variants.md"
-              }
-            ],
           },
         ],
       },
@@ -730,26 +698,6 @@ module.exports = [
         ],
       },
       {
-        title: "Live Search",
-        path: "/graphql/schema/live-search",
-        pages: [
-          {
-            title: "Queries",
-            path: "/graphql/schema/live-search/queries/",
-            pages: [
-              {
-                title: "attributeMetadata",
-                path: "/graphql/schema/live-search/queries/attribute-metadata/",
-              },
-              {
-                title: "productSearch",
-                path: "/graphql/schema/live-search/queries/product-search/",
-              }
-            ],
-          }
-        ]
-      },
-      {
         title: "Negotiable quotes (B2B)",
         path: "/graphql/schema/b2b/negotiable-quote/",
         pages: [
@@ -928,22 +876,6 @@ module.exports = [
         ],
       },
       {
-        title: "Product Recommendations",
-        path: "/graphql/schema/product-recommendations/",
-        pages: [
-          {
-            title: "Queries",
-            path: "/graphql/schema/product-recommendations/queries/",
-            pages: [
-              {
-                title: "recommendations",
-                path: "/graphql/schema/product-recommendations/queries/recommendations/",
-              }
-            ]
-          },
-        ]
-      },
-      {
         title: "Products",
         path: "/graphql/schema/products/",
         pages: [
@@ -966,6 +898,14 @@ module.exports = [
               {
                 title: "compareList",
                 path: "/graphql/schema/products/queries/compare-list/",
+              },
+              {
+                title: "isSubscribedProductAlertPrice",
+                path: "/graphql/schema/products/queries/is-subscribed-product-alert-price/",
+              },
+              {
+                title: "isSubscribedProductAlertStock",
+                path: "/graphql/schema/products/queries/is-subscribed-product-alert-stock/",
               },
               {
                 title: "products",
@@ -1008,6 +948,30 @@ module.exports = [
               {
                 title: "removeProductsFromCompareList",
                 path: "/graphql/schema/products/mutations/remove-from-compare-list/",
+              },
+              {
+                title: "subscribeProductAlertPrice",
+                path: "/graphql/schema/products/mutations/subscribe-product-alert-price/",
+              },
+              {
+                title: "subscribeProductAlertStock",
+                path: "/graphql/schema/products/mutations/subscribe-product-alert-stock/",
+              },
+              {
+                title: "unsubscribeProductAlertPrice",
+                path: "/graphql/schema/products/mutations/unsubscribe-product-alert-price/",
+              },
+              {
+                title: "unsubscribeProductAlertPriceAll",
+                path: "/graphql/schema/products/mutations/unsubscribe-product-alert-price-all/",
+              },
+              {
+                title: "unsubscribeProductAlertStock",
+                path: "/graphql/schema/products/mutations/unsubscribe-product-alert-stock/",
+              },
+              {
+                title: "unsubscribeProductAlertStockAll",
+                path: "/graphql/schema/products/mutations/unsubscribe-product-alert-stock-all/",
               },
             ],
           },
@@ -1250,6 +1214,10 @@ module.exports = [
                 path: "/graphql/schema/store/queries/recaptcha-form-config/",
               },
               {
+                title: "recaptchaFormConfigs",
+                path: "/graphql/schema/store/queries/recaptcha-form-configs/",
+              },
+              {
                 title: "storeConfig",
                 path: "/graphql/schema/store/queries/store-config/",
               },
@@ -1360,6 +1328,80 @@ module.exports = [
         ],
       },
     ],
+  },
+  {
+    title: "Storefront Services Schema",
+    path: "/graphql/schema/storefront-services/",
+    pages: [
+      {
+        title: "Catalog Service",
+        path: "/graphql/schema/catalog-service/",
+        pages:[
+          {
+            title: "Queries",
+            path: "/graphql/schema/catalog-service/queries/",
+            pages: [
+              {
+                title: "categories",
+                path: "/graphql/schema/catalog-service/queries/categories.md",
+              },
+              {
+                title: "products",
+                path: "/graphql/schema/catalog-service/queries/products.md"
+              },
+              {
+                title: "productSearch",
+                path: "/graphql/schema/live-search/queries/product-search.md",
+              },
+              {
+                title: "refineProduct",
+                path: "/graphql/schema/catalog-service/queries/refine-product.md"
+              },
+              {
+                title: "variants",
+                path: "/graphql/schema/catalog-service/queries/product-variants.md"
+              }
+            ],
+          },
+        ],
+      },
+      {
+        title: "Live Search",
+        path: "/graphql/schema/live-search",
+        pages: [
+          {
+            title: "Queries",
+            path: "/graphql/schema/live-search/queries/",
+            pages: [
+              {
+                title: "attributeMetadata",
+                path: "/graphql/schema/live-search/queries/attribute-metadata/",
+              },
+              {
+                title: "productSearch",
+                path: "/graphql/schema/live-search/queries/product-search/",
+              }
+            ],
+          }
+        ]
+      },
+      {
+        title: "Product Recommendations",
+        path: "/graphql/schema/product-recommendations/",
+        pages: [
+          {
+            title: "Queries",
+            path: "/graphql/schema/product-recommendations/queries/",
+            pages: [
+              {
+                title: "recommendations",
+                path: "/graphql/schema/product-recommendations/queries/recommendations/",
+              }
+            ]
+          },
+        ]
+      }
+    ]
   },
   {
     title: "Core payment methods",
@@ -1559,8 +1601,8 @@ module.exports = [
         EventTarget: "_top"
       },
       {
-        title: "2.4.9-beta-1",
-        path: "https://developer.adobe.com/commerce/webapi/reference/graphql/2.4.9-beta-1/",
+          title: "2.4.9",
+        path: "https://developer.adobe.com/commerce/webapi/reference/graphql/2.4.9/",
         EventTarget: "_top"
       },
       {

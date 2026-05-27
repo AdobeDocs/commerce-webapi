@@ -18,7 +18,11 @@ Cart functionality is defined in the `Quote` module. A Quote represents the cont
 
 ## Reference
 
-The [`cart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-cart) reference provides detailed information about the types and fields defined in this query.
+The `cart` reference provides detailed information about the types and fields defined in this query.
+
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-cart)
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-cart)
 
 ## Sample queries
 

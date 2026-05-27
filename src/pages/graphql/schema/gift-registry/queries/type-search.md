@@ -22,7 +22,11 @@ giftRegistryTypeSearch(
 
 ## Reference
 
-The [`giftRegistryTypeSearch`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-giftRegistryTypeSearch) reference provides detailed information about the types and fields defined in this query.
+The `giftRegistryTypeSearch` reference provides detailed information about the types and fields defined in this query.
+
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-giftRegistryTypeSearch)
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-giftRegistryTypeSearch)
 
 ## Example usage
 

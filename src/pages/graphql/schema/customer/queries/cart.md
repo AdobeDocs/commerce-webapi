@@ -23,7 +23,11 @@ If you know the value of the logged-in customer's cart ID, you can allow the cus
 
 ## Reference
 
-The [`customerCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-customerCart) reference provides detailed information about the types and fields defined in this query.
+The `customerCart` reference provides detailed information about the types and fields defined in this query.
+
+- &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-customerCart)
+
+- &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-customerCart)
 
 ## Example usage
 

@@ -14,6 +14,10 @@ Upon successful exchange, the module invalidates the OTP so it cannot be reused.
 `mutation: {
     exchangeOtpForCustomerToken(email: String!, otp: String!) {CustomerToken}}`
 
+## Reference
+
+The [`exchangeOtpForCustomerToken`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-exchangeOtpForCustomerToken) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 The following example uses the specified email and one-time password (OTP) to return a customer token.

@@ -4,5 +4,5 @@ description: Review comprehensive reference documentation for Adobe Commerce Gra
 keywords:
   - GraphQL
 edition: paas
-frameSrc: /graphql-api/index.html
+frameSrc: /graphql-api/2.4.8/index.html
 ---

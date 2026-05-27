@@ -24,7 +24,11 @@ The `reorderItems` mutation will not add any products to the cart if it encounte
 
 ## Reference
 
-The [`reorderItems`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-reorderItems) reference provides detailed information about the types and fields defined in this mutation.
+The `reorderItems` reference provides detailed information about the types and fields defined in this mutation.
+
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-reorderItems)
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-reorderItems)
 
 ## Example usage
 
@@ -39,8 +43,8 @@ Sprite Foam Yoga Brick | 24-WG084 | 1
 
 The customer wants to reorder these items, but the status of some of these items has changed:
 
--  Aeon Capri (WP07-29-Black) is in stock, but fewer than three items are available for sale.
--  The Sprite Foam Yoga Brick (24-WG084) is out of stock.
+*  Aeon Capri (WP07-29-Black) is in stock, but fewer than three items are available for sale.
+*  The Sprite Foam Yoga Brick (24-WG084) is out of stock.
 
 These items will not be added to the cart.
 
@@ -147,4 +151,4 @@ mutation{
 
 ## Related topics
 
--  [customer](../../customer/queries/customer.md) query
+*  [customer](../../customer/queries/customer.md) query

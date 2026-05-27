@@ -33,7 +33,11 @@ Use the value of the token in the `resetPassword` mutation.
 
 ## Reference
 
-The [`requestPasswordResetEmail`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-requestPasswordResetEmail) reference provides detailed information about the types and fields defined in this mutation.
+The `requestPasswordResetEmail` reference provides detailed information about the types and fields defined in this mutation.
+
+- &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-requestPasswordResetEmail)
+
+- &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-requestPasswordResetEmail)
 
 ## Example usage
 

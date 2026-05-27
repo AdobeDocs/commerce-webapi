@@ -17,4 +17,12 @@ The product mutations allow you to perform the following operations:
 * Create a product review
 
   * [`createProductReview`](create-review.md)
-  
+
+* Manage product alerts
+
+  * [`subscribeProductAlertPrice`](subscribe-product-alert-price.md)
+  * [`subscribeProductAlertStock`](subscribe-product-alert-stock.md)
+  * [`unsubscribeProductAlertPrice`](unsubscribe-product-alert-price.md)
+  * [`unsubscribeProductAlertPriceAll`](unsubscribe-product-alert-price-all.md)
+  * [`unsubscribeProductAlertStock`](unsubscribe-product-alert-stock.md)
+  * [`unsubscribeProductAlertStockAll`](unsubscribe-product-alert-stock-all.md)

@@ -16,7 +16,11 @@ See the GraphQL specification for more details about [unions](https://graphql.or
 
 ## CloseNegotiableQuoteError union
 
-The [`CloseNegotiableQuoteError`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CloseNegotiableQuoteError) union provides details about failed attempts to close one or more negotiable quotes.
+The `CloseNegotiableQuoteError` union provides details about failed attempts to close one or more negotiable quotes.
+
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-CloseNegotiableQuoteError)
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CloseNegotiableQuoteError)
 
 **Possible types:**
 
@@ -30,7 +34,11 @@ The [`CloseNegotiableQuoteError`](https://developer.adobe.com/commerce/webapi/gr
 
 ## CloseNegotiableQuoteOperationResult union
 
-The [`CloseNegotiableQuoteOperationResult`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CloseNegotiableQuoteOperationResult) union provides details about the result of a request to close a negotiable quote.
+The `CloseNegotiableQuoteOperationResult` union provides details about the result of a request to close a negotiable quote.
+
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-CloseNegotiableQuoteOperationResult)
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CloseNegotiableQuoteOperationResult)
 
 **Possible types:**
 
@@ -43,7 +51,11 @@ The [`CloseNegotiableQuoteOperationResult`](https://developer.adobe.com/commerce
 
 ## CompanyStructureEntity union
 
-The [`CompanyStructureEntity`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CompanyStructureEntity) union provides details about a node in a company structure.
+The `CompanyStructureEntity` union provides details about a node in a company structure.
+
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-CompanyStructureEntity)
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CompanyStructureEntity)
 
 **Possible types:**
 
@@ -56,7 +68,11 @@ The [`CompanyStructureEntity`](https://developer.adobe.com/commerce/webapi/graph
 
 ## DeleteNegotiableQuoteError union
 
-The [`DeleteNegotiableQuoteError`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-DeleteNegotiableQuoteError) union provides details about failed attempts to delete one or more negotiable quotes.
+The `DeleteNegotiableQuoteError` union provides details about failed attempts to delete one or more negotiable quotes.
+
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-DeleteNegotiableQuoteError)
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-DeleteNegotiableQuoteError)
 
 **Possible types:**
 
@@ -70,7 +86,11 @@ The [`DeleteNegotiableQuoteError`](https://developer.adobe.com/commerce/webapi/g
 
 ## DeleteNegotiableQuoteOperationResult union
 
-The [`DeleteNegotiableQuoteOperationResult`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-DeleteNegotiableQuoteOperationResult) union provides details about the result of a request to delete a negotiable quote.
+The `DeleteNegotiableQuoteOperationResult` union provides details about the result of a request to delete a negotiable quote.
+
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-DeleteNegotiableQuoteOperationResult)
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-DeleteNegotiableQuoteOperationResult)
 
 **Possible types:**
 

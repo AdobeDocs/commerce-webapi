@@ -21,7 +21,11 @@ giftRegistry(uid: ID!): GiftRegistry
 
 ## Reference
 
-The [`giftRegistry`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-giftRegistry) reference provides detailed information about the types and fields defined in this query.
+The `giftRegistry` reference provides detailed information about the types and fields defined in this query.
+
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-giftRegistry)
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-giftRegistry)
 
 ## Example usage
 

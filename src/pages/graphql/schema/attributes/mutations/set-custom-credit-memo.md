@@ -26,7 +26,9 @@ mutation {
 
 ## Reference
 
-The [`setCustomAttributesOnCreditMemo`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-setCustomAttributesOnCreditMemo) reference provides detailed information about the types and fields defined in this mutation.
+The `setCustomAttributesOnCreditMemo` reference provides detailed information about the types and fields defined in this mutation.
+
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-setCustomAttributesOnCreditMemo)
 
 ## Example usage
 

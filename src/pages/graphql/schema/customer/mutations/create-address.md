@@ -14,7 +14,11 @@ To return or modify information about a customer, we recommend you use customer 
 
 ## Reference
 
-The [`createCustomerAddress`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createCustomerAddress) reference provides detailed information about the types and fields defined in this mutation.
+The `createCustomerAddress` reference provides detailed information about the types and fields defined in this mutation.
+
+* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-createCustomerAddress)
+
+* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createCustomerAddress)
 
 ## Example usage
 
