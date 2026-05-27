@@ -1,5 +1,6 @@
 ---
 title: exchangeOtpForCustomerToken mutation
+description: The exchangeOtpForCustomerToken mutation allows you to specify a shopper's email address and one-time password (OTP) and receive a customer token in exchan...
 edition: saas
 ---
 
@@ -12,7 +13,7 @@ Upon successful exchange, the module invalidates the OTP so it cannot be reused.
 ## Syntax
 
 `mutation: {
-    exchangeOtpForCustomerToken(email: String!, otp: String!) {CustomerToken}}`
+    exchangeOtpForCustomerToken(email: String!, otp: String!) \{CustomerToken}}`
 
 ## Reference
 

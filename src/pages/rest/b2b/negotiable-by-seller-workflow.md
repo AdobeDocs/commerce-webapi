@@ -8,9 +8,9 @@ keywords:
 
 import * as Vars from '../../../data/vars.js';
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+| |
+|:--|
+| \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../pages/_images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
 
 # Initiate a negotiable quote order by seller
 
@@ -39,7 +39,7 @@ The new quote is empty with a `draft_by_admin` system state. In the interface, t
 
 **Endpoint:**
 
-`POST <host>/rest/default/V1/negotiableQuote/draft`
+`POST \<host\>/rest/default/V1/negotiableQuote/draft`
 
 **Headers:**
 

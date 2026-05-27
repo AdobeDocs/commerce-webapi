@@ -1,5 +1,6 @@
 ---
 title: customAttributeMetadataV2 query
+description: The customAttributeMetadataV2 query retrieves metadata for the specified entitytype and attributecode pairs.
 ---
 
 # customAttributeMetadataV2 query
@@ -264,3 +265,4 @@ The `swatch options` are the possible values of the attribute.
   }
 }
 ```
+

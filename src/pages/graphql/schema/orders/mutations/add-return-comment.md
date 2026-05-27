@@ -1,5 +1,6 @@
 ---
 title: addReturnComment mutation
+description: The addReturnComment mutation adds a comment to an existing return request.
 ---
 
 # addReturnComment mutation

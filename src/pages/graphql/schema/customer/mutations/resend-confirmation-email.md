@@ -1,5 +1,6 @@
 ---
 title: resendConfirmationEmail mutation
+description: The resendConfirmationEmail mutation resends the confirmation email to a customer who has not completed the activation process.
 ---
 
 # resendConfirmationEmail mutation

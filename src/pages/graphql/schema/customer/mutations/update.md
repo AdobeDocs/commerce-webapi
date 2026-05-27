@@ -1,5 +1,6 @@
 ---
 title: updateCustomer mutation
+description: We recommend using the updateCustomerV2 mutation to update a customer.
 edition: paas
 ---
 

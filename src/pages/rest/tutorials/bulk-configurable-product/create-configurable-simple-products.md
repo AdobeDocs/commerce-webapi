@@ -5,7 +5,7 @@ contributor_name: comwrap GmbH
 contributor_link: http://comwrap.com/
 keywords:
   - REST
---- 
+---
  
 # Step 2. Create the configurable and simple products
 
@@ -33,11 +33,11 @@ Although it is not required, the simple product payload includes `stock_item` in
 
 <InlineAlert variant="info" slots="text" />
 
-Before you use this code sample, verify that the attribute values are the same in your installation. See [Get the list of attributes defined in an attribute searchCriteria](/rest/tutorials/configurable-product/plan-product/#get-the-list-of-attributes-defined-in-an-attribute-searchcriteria ) for more information.
+Before you use this code sample, verify that the attribute values are the same in your installation. See [Get the list of attributes defined in an attribute searchCriteria](/rest/tutorials/configurable-product/plan-product.md#get-the-list-of-attributes-defined-in-an-attribute-searchcriteria) for more information.
 
 **Endpoint:**
 
-`POST <host>/rest/default/async/bulk/V1/products`
+`POST \<host\>/rest/default/async/bulk/V1/products`
 
 The payload contains both the configurable product and the simple products.
 
@@ -300,7 +300,7 @@ The payload contains both the configurable product and the simple products.
 
  <InlineAlert variant="info" slots="text"/>
 
-For information about response fields, see the [Bulk API](/rest/bulk-endpoints) section. To check the status of operations, see the API for [Bulk operation status endpoints](/rest/use-rest/operation-status-endpoints/).
+For information about response fields, see the [Bulk API](/rest/use-rest/bulk-endpoints.md) section. To check the status of operations, see the API for [Bulk operation status endpoints](/rest/use-rest/operation-status-endpoints.md).
 
 ## Verify this step
 

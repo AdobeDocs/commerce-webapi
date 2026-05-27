@@ -1,5 +1,6 @@
 ---
 title: createCustomerV2 mutation
+description: The createCustomerV2 mutation creates a customer account. Use the createCustomerAddress mutation to complete the customer profile and define billing and sh...
 ---
 
 # createCustomerV2 mutation

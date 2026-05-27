@@ -3,7 +3,7 @@ title: Step 2. Create the configurable product
 description: In this step of the tutorial you will create the configurable product
 keywords:
   - REST
---- 
+---
  
 # Step 2. Create the configurable product
 
@@ -24,11 +24,11 @@ Visibility | Code
 
 <InlineAlert variant="info" slots="text"/>
 
-Before you using this code sample, verify that the attribute values are the same in your installation. See [Get the list of attributes defined in an attribute searchCriteria](/rest/tutorials/configurable-product/plan-product/#get-the-list-of-attributes-defined-in-an-attribute-searchcriteria ) for more information.
+Before you using this code sample, verify that the attribute values are the same in your installation. See [Get the list of attributes defined in an attribute searchCriteria](/rest/tutorials/configurable-product/plan-product.md#get-the-list-of-attributes-defined-in-an-attribute-searchcriteria) for more information.
 
 **Endpoint:**
 
-`POST <host>/rest/default/V1/products`
+`POST \<host\>/rest/default/V1/products`
 
 **Payload:**
 
@@ -86,8 +86,9 @@ Before you using this code sample, verify that the attribute values are the same
 
 **Response:**
 
-<details>
-      <summary><b>Show code sample</b></summary>
+<Details slots="heading, content" />
+
+#### Show code sample
 
 ```json
 {
@@ -208,7 +209,6 @@ Before you using this code sample, verify that the attribute values are the same
 }
 ```
 
-</details>
 
 ## Verify this step
 

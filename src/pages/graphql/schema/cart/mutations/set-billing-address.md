@@ -1,5 +1,6 @@
 ---
 title: setBillingAddressOnCart mutation
+description: The setBillingAddressOnCart mutation sets the billing address for a specific cart. If you set the sameasshipping attribute to true, the application assigns...
 ---
 
 # setBillingAddressOnCart mutation

@@ -1,5 +1,6 @@
 ---
 title: applyCouponToCart mutation
+description: The applyCouponToCart mutation applies a predefined coupon code to the specified cart. Valid coupon codes are defined in cart price rules.
 ---
 
 # applyCouponToCart mutation

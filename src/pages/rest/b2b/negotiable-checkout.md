@@ -8,9 +8,9 @@ keywords:
 
 import * as Vars from '../../../data/vars.js';
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+| |
+|:--|
+| \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../pages/_images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
 
 # Negotiable quote checkout
 
@@ -46,7 +46,7 @@ This call takes a full shipping address as input and estimates shipping fees. It
 
 **Sample Usage:**
 
-`POST <host>/rest/<store_code>/V1/negotiable-carts/86/estimate-shipping-methods`
+`POST \<host\>/rest/<store_code>/V1/negotiable-carts/86/estimate-shipping-methods`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -99,7 +99,7 @@ This call takes an address ID as input and estimates shipping fees. It returns a
 
 **Sample Usage:**
 
-`POST <host>/rest/<store_code>/V1/negotiable-carts/86/estimate-shipping-methods-by-address-id`
+`POST \<host\>/rest/<store_code>/V1/negotiable-carts/86/estimate-shipping-methods-by-address-id`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -140,7 +140,7 @@ In this call, you specify the shipping and billing addresses, as well as the sel
 
 **Sample Usage:**
 
-`POST <host>/rest/<store_code>/V1/negotiable-carts/86/shipping-information`
+`POST \<host\>/rest/<store_code>/V1/negotiable-carts/86/shipping-information`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -367,7 +367,7 @@ This call assigns a billing address to the specified negotiable quote.
 
 **Sample Usage:**
 
-`POST <host>/rest/<store_code>/V1/negotiable-carts/86/billing-address`
+`POST \<host\>/rest/<store_code>/V1/negotiable-carts/86/billing-address`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -406,7 +406,7 @@ This call returns the billing address for the specified negotiable quote.
 
 **Sample Usage:**
 
-`GET <host>/rest/<store_code>/V1/negotiable-carts/86/billing-address`
+`GET \<host\>/rest/<store_code>/V1/negotiable-carts/86/billing-address`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -461,7 +461,7 @@ If the initial quote applies a coupon to the totals, Commerce ignores the coupon
 
 **Sample Usage:**
 
-`PUT <host>/rest/<store_code>/V1/negotiable-carts/6/coupons/SAVE5`
+`PUT \<host\>/rest/<store_code>/V1/negotiable-carts/6/coupons/SAVE5`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -498,7 +498,7 @@ If the initial quote applies a gift card to the totals, Commerce ignores the gif
 
 **Sample Usage:**
 
-`POST <host>/rest/<store_code>/V1/negotiable-carts/6/giftCards`
+`POST \<host\>/rest/<store_code>/V1/negotiable-carts/6/giftCards`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -526,7 +526,7 @@ This call removes a gift card that has been applied to a negotiable quote.
 
 **Sample Usage:**
 
-`DELETE <host>/rest/<store_code>/V1/negotiable-carts/6/giftCards/00HELHQED6RV`
+`DELETE \<host\>/rest/<store_code>/V1/negotiable-carts/6/giftCards/00HELHQED6RV`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -564,7 +564,7 @@ This call sets payment information and the billing address for the negotiable qu
 
 **Sample Usage:**
 
-`POST <host>/rest/<store_code>/V1/negotiable-carts/86/set-payment-information`
+`POST \<host\>/rest/<store_code>/V1/negotiable-carts/86/set-payment-information`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -605,7 +605,7 @@ This call sets payment information and the billing address for the negotiable qu
 
 **Sample Usage:**
 
-`POST <host>/rest/<store_code>/V1/negotiable-carts/86/payment-information`
+`POST \<host\>/rest/<store_code>/V1/negotiable-carts/86/payment-information`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -646,7 +646,7 @@ This call payment information and all information from the `totals` object.
 
 **Sample Usage:**
 
-`GET <host>/rest/<store_code>/V1/negotiable-carts/86/payment-information`
+`GET \<host\>/rest/<store_code>/V1/negotiable-carts/86/payment-information`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -835,7 +835,7 @@ GET /V1/negotiable-carts/:cartId/totals
 
 **Sample Usage:**
 
-`GET <host>/rest/<store_code>/V1/negotiable-carts/86/totals`
+`GET \<host\>/rest/<store_code>/V1/negotiable-carts/86/totals`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -1001,3 +1001,4 @@ GET /V1/negotiable-carts/:cartId/totals
   }
 }
 ```
+

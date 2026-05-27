@@ -1,5 +1,6 @@
 ---
 title: unsubscribeProductAlertPrice mutation
+description: The unsubscribeProductAlertPrice mutation removes the logged-in customer's subscription to a price drop alert for the specified product. After unsubscribin...
 edition: saas
 ---
 

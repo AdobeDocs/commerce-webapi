@@ -1,5 +1,6 @@
 ---
 title: Wish list
+description: Use the wish list mutations to manage wish lists and their contents. WishlistItemInterface and its implementations return details about individual items in...
 ---
 
 # Wish list

@@ -6,7 +6,7 @@ contributor_link: https://github.com/swnsma
 keywords:
   - Inventory
   - REST
---- 
+---
  
 # In-Store Pickup
 
@@ -63,11 +63,11 @@ Name | Type | Description
 `[sort][0][field]=` | String | Specifies the field to sort on.
 `[sort][0][direction]=` | String | Specifies whether to return results in ascending (`ASC`) or descending (`DESC`) order. The default is `DESC`.
 
-[Search using REST endpoints](/rest/use-rest/performing-searches/) provides a full list of supported condition types.
+[Search using REST endpoints](/rest/use-rest/performing-searches.md) provides a full list of supported condition types.
 
 **Sample Usage:**
 
-`GET <host>/rest/<store_code>/V1/inventory/in-store-pickup/pickup-locations`
+`GET \<host\>/rest/<store_code>/V1/inventory/in-store-pickup/pickup-locations`
 
 **Payload:**
 
@@ -131,7 +131,7 @@ The endpoint requires appropriate permission to resource `Magento_InventoryInSto
 
 **Sample Usage:**
 
-`POST <host>/rest/<store_code>/V1/order/notify-orders-are-ready-for-pickup`
+`POST \<host\>/rest/<store_code>/V1/order/notify-orders-are-ready-for-pickup`
 
 **Payload:**
 
@@ -153,3 +153,4 @@ Commerce returns an array with success status and an array of error messages for
   "failed": []
 }
 ```
+

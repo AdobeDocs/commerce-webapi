@@ -1,5 +1,6 @@
 ---
 title: createGuestCart mutation
+description: The createGuestCart mutation creates an empty shopping cart for a guest shopper. You can allow the system to generate a cart ID, or assign a specific ID.
 ---
 
 # createGuestCart mutation

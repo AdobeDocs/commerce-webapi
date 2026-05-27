@@ -1,5 +1,6 @@
 ---
 title: setShippingAddressesOnCart mutation
+description: The setShippingAddressesOnCart mutation sets one or more shipping addresses on a specific cart. The shipping address does not need to be specified in the f...
 ---
 
 # setShippingAddressesOnCart mutation

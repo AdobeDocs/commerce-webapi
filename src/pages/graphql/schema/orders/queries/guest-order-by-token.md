@@ -1,5 +1,6 @@
 ---
 title: guestOrderByToken query
+description: Use the guestOrderByToken query to retrieve guest order details based on token. You can retrieve the token from the CustomerOrder object on the placeOrder...
 ---
 
 # guestOrderByToken query
@@ -68,3 +69,4 @@ The `guestOrderByToken` reference provides detailed information about the types 
   }
 }
 ```
+

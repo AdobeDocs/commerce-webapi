@@ -5,7 +5,7 @@ edition: paas
 keywords:
   - Inventory
   - REST
---- 
+---
  
 # Step 2. Create sources
 
@@ -19,7 +19,7 @@ For more information about sources, see [Inventory Management overview](https://
 
 <InlineAlert variant="info" slots="text"/>
 
-This step requires an admin token. See [Generate the admin token](/rest/tutorials/prerequisite-tasks/) for more information.
+This step requires an admin token. See [Generate the admin token](/rest/tutorials/prerequisite-tasks/index.md) for more information.
 
 ## Create the first source
 
@@ -29,7 +29,7 @@ The `source_code` values will be used in subsequent steps.
 
 **Endpoint:**
 
-`POST <host>/rest/default/V1/inventory/sources`
+`POST \<host\>/rest/default/V1/inventory/sources`
 
 **Scope:**
 

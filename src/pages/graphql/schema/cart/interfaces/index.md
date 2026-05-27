@@ -1,5 +1,6 @@
 ---
 title: CartItemInterface attributes and implementations
+description: The CartItemInterface has the following implementations:
 ---
 
 # CartItemInterface attributes and implementations
@@ -193,3 +194,4 @@ mutation {
   }
 }
 ```
+

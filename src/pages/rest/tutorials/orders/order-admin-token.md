@@ -4,7 +4,7 @@ description: In this step of the tutorial you will get the admin token
 edition: paas
 keywords:
   - REST
---- 
+---
  
 # Step 2. Get the admin token
 
@@ -14,7 +14,7 @@ Each step in this tutorial provides the following information:
 
 This section lists the HTTP verb and full path to the endpoint. The basic structure of a REST call in Adobe Commerce is
 
-`<HTTP verb> http://<host>/rest/<scope>/<endpoint>`
+`\<HTTP verb\> http://\<host\>/rest/\<scope\>/\<endpoint\>`
 
 where:
 
@@ -39,7 +39,7 @@ This section lists the information that Commerce sends to the REST client. These
 
 ### Get the admin authorization token
 
-In a production environment, you would typically [create an integration](/get-started/create-integration) and supply the integration token with any REST call that requires admin privileges. The token allows Commerce to verify that the caller is authorized to access a system resource.
+In a production environment, you would typically [create an integration](/get-started/create-integration.md) and supply the integration token with any REST call that requires admin privileges. The token allows Commerce to verify that the caller is authorized to access a system resource.
 
 Here, we will supply an admin token instead. To get a token, you must have 2FA configured. This tutorial assumes that you are using Google Authenticator as your 2FA solution. The endpoint and payload will be different for other 2FA solutions. See [Two-Factor Authentication](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication/) for more information.
 
@@ -47,11 +47,11 @@ Your request must specify the admin user's `username`, `password` and `otp` (one
 
 By default, an admin token is valid for 4 hours. To change this value, log in to Admin and go to **Stores** > **Settings** > **Configuration** > **Services** > **OAuth** > **Access Token Expiration** > **Admin Token Lifetime (hours)**.
 
-See [Token-based authentication](/get-started/authentication/gs-authentication-token) for more information about authorization tokens.
+See [Token-based authentication](/get-started/authentication/gs-authentication-token.md) for more information about authorization tokens.
 
 **Endpoint:**
 
-`POST <host>/rest/<store_code>/V1/tfa/provider/google/authenticate`
+`POST \<host\>/rest/<store_code>/V1/tfa/provider/google/authenticate`
 
 **Headers:**
 

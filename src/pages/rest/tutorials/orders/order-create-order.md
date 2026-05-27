@@ -4,7 +4,7 @@ description: In this step of the tutorial you will create an order
 edition: paas
 keywords:
   - REST
---- 
+---
  
 # Step 7. Create an order
 
@@ -16,18 +16,18 @@ When you submit payment information, Adobe Commerce creates an order and sends a
 
 <InlineAlert variant="info" slots="text"/>
 
-Use the `V1/guest-carts/<cartId>/payment-information` endpoint to set the payment information on behalf of a guest. Do not include an authorization token.
+Use the `V1/guest-carts/\<cartId\>/payment-information` endpoint to set the payment information on behalf of a guest. Do not include an authorization token.
 You must include the `email` attribute in the payload at the same level as `paymentMethod` and `billing_address`.
 
 **Endpoint:**
 
-`POST <host>/rest/<store_code>/V1/carts/mine/payment-information`
+`POST \<host\>/rest/<store_code>/V1/carts/mine/payment-information`
 
 **Headers:**
 
 `Content-Type: application/json`
 
-`Authorization: Bearer <customer token>`
+`Authorization: Bearer \<customer token\>`
 
 **Payload:**
 
@@ -64,7 +64,7 @@ When you request an order object, the response contains full details about the o
 
 **Endpoint:**
 
-`GET <host>/rest/<store_code>/V1/orders/3`
+`GET \<host\>/rest/<store_code>/V1/orders/3`
 
 where `3` is the `orderid`
 
@@ -72,7 +72,7 @@ where `3` is the `orderid`
 
 `Content-Type: application/json`
 
-`Authorization: Bearer <administrator token>`
+`Authorization: Bearer \<administrator token\>`
 
 **Payload:**
 
@@ -80,8 +80,9 @@ Not applicable
 
 **Response:**
 
-<details>
-      <summary><b>Show code sample</b></summary>
+<Details slots="heading, content" />
+
+#### Show code sample
 
 ```json
 {
@@ -322,7 +323,6 @@ Not applicable
 }
 ```
 
-</details>
 
 ### Verify this step
 

@@ -27,7 +27,7 @@ HTTP code | Meaning | Description
 
 ### Response payload
 
-POST, PUT, and GET web API calls return a response payload. This payload is a JSON- or XML-formatted response body. The `Accept: application/<FORMAT>` header in the request determines the format of the response body, where `FORMAT` is either `json` or `xml`.
+POST, PUT, and GET web API calls return a response payload. This payload is a JSON- or XML-formatted response body. The `Accept: application/\<FORMAT\>` header in the request determines the format of the response body, where `FORMAT` is either `json` or `xml`.
 
 A successful DELETE call returns `true`. An unsuccessful DELETE call returns a payload similar to the other calls.
 
@@ -86,3 +86,4 @@ As an example, the application returns a `code` of `400` and the following `mess
   ]
 }
 ```
+

@@ -1,5 +1,6 @@
 ---
 title: customAttributeMetadata query
+description: The customAttributeMetadata query has been deprecated. Use the customAttributeMetadataV2 query instead.
 ---
 
 # customAttributeMetadata query

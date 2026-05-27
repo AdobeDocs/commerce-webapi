@@ -1,5 +1,6 @@
 ---
 title: sendEmailToFriend mutation
+description: Use the sendEmailToFriend mutation to allow the application send a message on behalf of a customer to the specified email addresses.
 edition: paas
 ---
 

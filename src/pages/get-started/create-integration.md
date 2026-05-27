@@ -45,19 +45,10 @@ To develop a module, you must:
 
 1. **Define your module configuration file.** The `etc/module.xml` file provides basic information about the module. Change directories to the `etc` directory and create the `module.xml` file. You must specify values for the following attributes:
 
-   <table>
-   <tr>
-   <th>Attribute</th><th>Description</th>
-   </tr>
-   <tr>
-   <td>name</td>
-   <td>A string that uniquely identifies the module.</td>
-   </tr>
-   <tr>
-   <td>setup_version</td>
-   <td>The version of Commerce the component uses</td>
-   </tr>
-   </table>
+   | Attribute | Description |
+   |---|---|
+   | name | A string that uniquely identifies the module. |
+   | setup_version | The version of Commerce the component uses |
    The following example shows an example `etc/module.xml` file.
 
    ```xml
@@ -233,33 +224,13 @@ The file defines which API resources the integration has access to.
 </integrations>
 ```
 
-<table>
-<tr>
-<th>Element</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>integrations</td>
-<td>Contains one or more integration definitions.</td>
-</tr>
-<tr>
-<td>integration name=""</td>
-<td>Defines an integration. The <inlineCode class="spectrum-Body--sizeS">name</inlineCode> must be specified.</td>
-</tr>
-<tr>
-<td>email</td>
-<td>An email to associate with this integration.</td>
-</tr>
-<tr>
-<td>endpoint_url</td>
-<td><p>Optional. The URL where OAuth credentials can be sent when using OAuth for token exchange. We strongly recommend using <inlineCode class="spectrum-Body--sizeS">https://</inlineCode>.</p>
-<p>See <a href="./authentication/gs-authentication-oauth">OAuth-based authentication</a> for details.</p></td>
-</tr>
-<tr>
-<td>identity_link_url</td>
-<td>Optional. The URL that redirects the user to link their 3rd party account with the Commerce integration.</td>
-</tr>
-</table>
+| Element | Description |
+|---|---|
+| integrations | Contains one or more integration definitions. |
+| integration name="" | Defines an integration. The `name` must be specified. |
+| email | An email to associate with this integration. |
+| endpoint_url | Optional. The URL where OAuth credentials can be sent when using OAuth for token exchange. We strongly recommend using `https://`. \<br/\> See [OAuth-based authentication](./authentication/gs-authentication-oauth.md) for details. |
+| identity_link_url | Optional. The URL that redirects the user to link their 3rd party account with the Commerce integration. |
 
 ## Install your module
 

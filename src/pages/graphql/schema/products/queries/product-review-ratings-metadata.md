@@ -1,5 +1,6 @@
 ---
 title: productReviewRatingsMetadata query
+description: The productReviewRatingsMetadata query returns the active ratings attributes and the values each rating can have. In Luma, these values are one star throug...
 edition: paas
 ---
 
@@ -128,3 +129,4 @@ query {
   }
 }
 ```
+

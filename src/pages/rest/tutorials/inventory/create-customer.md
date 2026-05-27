@@ -5,7 +5,7 @@ edition: paas
 keywords:
   - Inventory
   - REST
---- 
+---
  
 # Step 6. Create a customer and generate a customer token
 
@@ -19,7 +19,7 @@ The response of the `POST /V1/customers` endpoint includes an address ID. This v
 
 **Endpoint:**
 
-`POST <host>/rest/default/V1/customers`
+`POST \<host\>/rest/default/V1/customers`
 
 **Scope:**
 
@@ -120,7 +120,7 @@ By default, a customer token is valid for 1 hour. To change this value, click **
 
 **Endpoint:**
 
-`POST <host>/rest/default/V1/integration/customer/token`
+`POST \<host\>/rest/default/V1/integration/customer/token`
 
 **Scope:**
 

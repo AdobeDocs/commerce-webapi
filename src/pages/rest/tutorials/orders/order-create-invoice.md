@@ -4,7 +4,7 @@ description: In this step of the tutorial you will create an invoice
 edition: paas
 keywords:
   - REST
---- 
+---
  
 # Step 8. Create an invoice
 
@@ -16,7 +16,7 @@ This example creates a full invoice. You can create a partial invoice by adding 
 
 **Endpoint:**
 
-`POST <host>/rest/<store_code>/V1/order/3/invoice`
+`POST \<host\>/rest/<store_code>/V1/order/3/invoice`
 
 where `3` is the `orderid`
 
@@ -24,7 +24,7 @@ where `3` is the `orderid`
 
 `Content-Type: application/json`
 
-`Authorization: Bearer` `<administrator token>`
+`Authorization: Bearer` `\<administrator token\>`
 
 **Payload:**
 
@@ -45,13 +45,13 @@ An invoice is structurally similar to an order, but an order contains more detai
 
 **Endpoint:**
 
-`GET <host>/rest/<store_code>/V1/invoices/3`
+`GET \<host\>/rest/<store_code>/V1/invoices/3`
 
 **Headers:**
 
 `Content-Type: application/json`
 
-`Authorization: Bearer <administrator token>`
+`Authorization: Bearer \<administrator token\>`
 
 **Payload:**
 
@@ -61,8 +61,9 @@ Not applicable
 
 You will use the `order_item_id` values to create a shipment in the next step.
 
-<details>
-      <summary><b>Show code sample</b></summary>
+<Details slots="heading, content" />
+
+#### Show code sample
 
 ```json
 {
@@ -282,7 +283,6 @@ You will use the `order_item_id` values to create a shipment in the next step.
 }
 ```
 
-</details>
 
 ### Verify this step
 

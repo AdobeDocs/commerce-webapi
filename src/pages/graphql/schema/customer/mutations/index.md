@@ -1,5 +1,6 @@
 ---
 title: Customer mutations
+description: The customer mutations allow you to perform the following operations:
 ---
 
 # Customer mutations

@@ -1,5 +1,6 @@
 ---
 title: Cart
+description: The shopper performs the following tasks that affect the cart:
 ---
 
 # Cart

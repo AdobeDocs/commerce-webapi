@@ -1,5 +1,6 @@
 ---
 title: setPaymentMethodOnCart mutation
+description: The setPaymentMethodOnCart mutation defines which payment method to apply to the cart. Adobe Commerce and Magento Open Source GraphQL supports the followin...
 ---
 
 # setPaymentMethodOnCart mutation

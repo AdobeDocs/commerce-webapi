@@ -1,5 +1,6 @@
 ---
 title: deleteCustomerAddressV2 mutation
+description: Use the deleteCustomerAddressV2 mutation to delete the specified customer address. It returns a Boolean value that indicates whether the operation was succ...
 edition: saas
 ---
 

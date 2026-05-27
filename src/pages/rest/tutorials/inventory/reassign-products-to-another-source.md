@@ -5,7 +5,7 @@ edition: paas
 keywords:
   - Inventory
   - REST
---- 
+---
  
 # Step 5. Reassign products to custom sources
 
@@ -29,7 +29,7 @@ When you unassign a source from a product, all source data including inventory a
 
 **Endpoint:**
 
-`POST <host>/rest/default/V1/inventory/source-items-delete`
+`POST \<host\>/rest/default/V1/inventory/source-items-delete`
 
 **Scope:**
 
@@ -72,7 +72,7 @@ Now we can assign each product to one or more sources. The `POST V1/inventory/so
 
 **Endpoint:**
 
-`POST <host>/rest/default/V1/inventory/source-items`
+`POST \<host\>/rest/default/V1/inventory/source-items`
 
 **Scope:**
 

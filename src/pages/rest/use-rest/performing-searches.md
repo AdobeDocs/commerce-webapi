@@ -3,7 +3,7 @@ title: Search using REST endpoints
 description: How to search using REST endpoints with examples
 keywords:
   - REST
---- 
+---
 import * as Vars from '../../../data/vars.js';
 
 # Search using REST endpoints
@@ -312,9 +312,9 @@ The query returns 37 items.
 
 The following searchCriteria can be used to determine the sort order and the number of items to return.
 
-*  `searchCriteria[sortOrders][<index>][field]=<field-name>` - Specifies the field to sort on. By default, search results are returned in descending order. You can sort on multiple fields. For example, to sort on `price` first and then by `name`, call `searchCriteria[sortOrders][0][field]=price&searchCriteria[sortOrders][1][field]=name`.
+*  `searchCriteria[sortOrders][\<index\>][field]=<field-name>` - Specifies the field to sort on. By default, search results are returned in descending order. You can sort on multiple fields. For example, to sort on `price` first and then by `name`, call `searchCriteria[sortOrders][0][field]=price&searchCriteria[sortOrders][1][field]=name`.
 
-*  `searchCriteria[sortOrders][<index>][direction]=ASC | DESC` - Specifies whether to return results in ascending (ASC) or descending (DESC) order. To expand the previous example and sort the `price` fields in descending order and the `name` fields in ascending order, call `searchCriteria[sortOrders][0][field]=price&searchCriteria[sortOrders][1][field]=name&searchCriteria[sortOrders][1][direction]=ASC`.
+*  `searchCriteria[sortOrders][\<index\>][direction]=ASC | DESC` - Specifies whether to return results in ascending (ASC) or descending (DESC) order. To expand the previous example and sort the `price` fields in descending order and the `name` fields in ascending order, call `searchCriteria[sortOrders][0][field]=price&searchCriteria[sortOrders][1][field]=name&searchCriteria[sortOrders][1][direction]=ASC`.
 
 *  `searchCriteria[pageSize]` - Specifies the maximum number of items to return. The value must be an integer. If the `pageSize` is not specified, the system returns all matches.
 
@@ -326,15 +326,15 @@ This example shows how to use search criteria to determine the sort order and at
 
 **Endpoint:**
 
-&#8203;<Edition name="paas" /> `GET https://<host>/rest/<store_code>/V1/orders/`
+&#8203;<Edition name="paas" /> `GET https://\<host\>/rest/<store_code>/V1/orders/`
 
-&#8203;<Edition name="saas" /> `GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/orders/`
+&#8203;<Edition name="saas" /> `GET https://\<server\>.api.commerce.adobe.com/<tenant-id>/V1/orders/`
 
 **Headers:**
 
 `Content-Type` `application/json`
 
-`Authorization` `Bearer <administrator token>`
+`Authorization` `Bearer \<administrator token\>`
 
 **Parameters:**
 
@@ -392,3 +392,4 @@ fields=items[increment_id,entity_id]
     ]
 }
 ```
+

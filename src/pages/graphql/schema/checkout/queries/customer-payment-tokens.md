@@ -1,5 +1,6 @@
 ---
 title: customerPaymentTokens query
+description: When the vault feature is supported by a payment integration and enabled, customers have the option during checkout to save their credit card information....
 ---
 
 # customerPaymentTokens query

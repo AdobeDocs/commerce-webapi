@@ -1,5 +1,6 @@
 ---
 title: categories query
+description: Adobe Commerce as a Cloud Service (SaaS) does not support this categories query. Use the Catalog Service categories query instead. If you are migrating fro...
 edition: paas
 ---
 
@@ -161,3 +162,4 @@ The following query returns the top-level categories (as well as two levels of c
   }
 }
 ```
+

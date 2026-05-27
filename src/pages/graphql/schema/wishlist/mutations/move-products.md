@@ -1,5 +1,6 @@
 ---
 title: moveProductsBetweenWishlists mutation
+description: The moveProductsBetweenWishlists mutation moves the specified quantities of one or more products to a different wish list.
 ee_only: true
 ---
 
@@ -228,3 +229,4 @@ mutation{
   }
 }
 ```
+

@@ -16,7 +16,7 @@ If the call is successful on a full shipment, Adobe Commerce changes the status 
 
 **Endpoint:**
 
-`POST <host>/rest/<store_code>/V1/order/3/ship`
+`POST \<host\>/rest/<store_code>/V1/order/3/ship`
 
 where `3` is the order ID.
 
@@ -24,7 +24,7 @@ where `3` is the order ID.
 
 `Content-Type: application/json`
 
-`Authorization: Bearer <administrator token>`
+`Authorization: Bearer \<administrator token\>`
 
 **Payload:**
 

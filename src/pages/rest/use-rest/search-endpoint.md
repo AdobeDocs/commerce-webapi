@@ -6,7 +6,7 @@ contributor_link: https://www.comwrap.com/
 edition: paas
 keywords:
   - REST
---- 
+---
  
 # Search for products with the /search endpoint
 
@@ -99,7 +99,7 @@ The default filters for advanced searches can use the following [field] value:
 
 The filter can also be any searchable attribute. To make an attribute searchable, set **Stores** > Attributes > **Product** > <selected_attribute> >  **Storefront Properties** > **Use in Search** to **Yes**. The search query can include attributes such as the product name, SKU, or any other custom attribute.
 
-Advanced searches can use any condition type to make comparisions, such as `like`, `eq`, or `finset`. See [Search using REST](/rest/use-rest/performing-searches/) describes condition types.
+Advanced searches can use any condition type to make comparisions, such as `like`, `eq`, or `finset`. See [Search using REST](/rest/use-rest/performing-searches.md) describes condition types.
 
 Advanced searches do not return aggregation data.
 
@@ -148,4 +148,4 @@ searchCriteria[filterGroups][0][filters][0][condition_type]=eq
 
 ## Build queries for V1/products
 
-[Search using REST](/rest/use-rest/performing-searches/) provides examples that can be used to search for products.
+[Search using REST](/rest/use-rest/performing-searches.md) provides examples that can be used to search for products.

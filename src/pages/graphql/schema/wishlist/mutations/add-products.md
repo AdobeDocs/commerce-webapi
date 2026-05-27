@@ -1,5 +1,6 @@
 ---
 title: addProductsToWishlist mutation
+description: The addProductsToWishlist mutation adds one or more products to the specified wish list. This mutation supports all product types.
 ---
 
 # addProductsToWishlist mutation

@@ -1,5 +1,6 @@
 ---
 title: availableStores query
+description: The availableStores query returns configuration information about multiple store views. Use this query to implement a store switcher.
 ---
 
 # availableStores query
@@ -103,3 +104,4 @@ query {
   }
 }
 ```
+

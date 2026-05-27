@@ -5,7 +5,7 @@ edition: paas
 keywords:
   - REST
   - Security
---- 
+---
  
 # Restricting access to anonymous web APIs
 
@@ -53,12 +53,12 @@ The following table lists the APIs that are no longer available to an anonymous 
 
 <InlineAlert variant="warning" slots="text"/>
 
-<div>
-<p></p>
+\<div\>
+\<p\>\</p\>
 Preventing anonymous access to these endpoints could cause third-party integrations to fail. If a third-party integration calls any of these endpoints, it will receive an authentication error instead of the expected response. In this case, you might need to disable this feature.
-<p></p><p></p><p>&nbsp;</p>
-To disable this feature, log in to the Admin panel and navigate to <strong>Stores</strong> &gt; <strong>Settings</strong> &gt; <strong>Configuration</strong> &gt; <strong>Services</strong> &gt; <strong>Magento Web API</strong> &gt; <strong>Web API Security</strong>. Then select <strong>Yes</strong> from the <strong>Allow Anonymous Guest Access</strong> menu.
-</div>
+\<p\>\</p\>\<p\>\</p\>\<p\>&nbsp;\</p\>
+To disable this feature, log in to the Admin panel and navigate to \<strong\>Stores\</strong\> &gt; \<strong\>Settings\</strong\> &gt; \<strong\>Configuration\</strong\> &gt; \<strong\>Services\</strong\> &gt; \<strong\>Magento Web API\</strong\> &gt; \<strong\>Web API Security\</strong\>. Then select \<strong\>Yes\</strong\> from the \<strong\>Allow Anonymous Guest Access\</strong\> menu.
+\</div\>
 
 If the list of APIs that are inaccessible to anonymous users must be updated for a third-party extension, an integrator can add to their extension's `di.xml` file to update or replace the functionality defined in the WebapiSecurity module.
 

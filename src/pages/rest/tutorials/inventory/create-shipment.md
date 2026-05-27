@@ -5,7 +5,7 @@ edition: paas
 keywords:
   - Inventory
   - REST
---- 
+---
  
 # Step 12. Create a shipment
 
@@ -31,7 +31,7 @@ We'll ship 35 `24-WB01` items and 20 `24-WB03` items from the Northeast warehous
 
 **Endpoint:**
 
-`POST <host>/rest/default/V1/order/3/ship`
+`POST \<host\>/rest/default/V1/order/3/ship`
 
 where `3` is the `orderid`
 
@@ -43,7 +43,7 @@ where `3` is the `orderid`
 
 `Content-Type`: `application/json`
 
-`Authorization`: `Bearer <admin token>`
+`Authorization`: `Bearer \<admin token\>`
 
 **Payload:**
 

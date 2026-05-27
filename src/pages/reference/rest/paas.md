@@ -5,6 +5,6 @@ keywords:
   - REST
 edition: paas
 frameSrc: https://adobe-commerce.redoc.ly
---- 
+---
 
 # REST endpoints for Adobe Commerce

@@ -5,7 +5,7 @@ edition: paas
 keywords:
   - Inventory
   - REST
---- 
+---
  
 # Step 14. Create an order for in-store pickup (optional)
 
@@ -16,7 +16,7 @@ An order must meet the following requirements to be eligible for in-store pickup
 *  All physical products must be assigned to the source that serves as the in-store pickup location.
 *  All items must be in stock.
 
-In this step, we will create a second order from the same customer. In [Step 2. Create sources](/rest/tutorials/inventory/create-sources/), we created three stores in the New York City area. The customer will be able to choose from these stores when she selects a pickup location. We will skip some of the steps we performed earlier that provides information we already know.
+In this step, we will create a second order from the same customer. In [Step 2. Create sources](/rest/tutorials/inventory/create-sources.md), we created three stores in the New York City area. The customer will be able to choose from these stores when she selects a pickup location. We will skip some of the steps we performed earlier that provides information we already know.
 
 ## Create a new cart
 
@@ -24,7 +24,7 @@ We must create a new cart for the customer.
 
 **Endpoint:**
 
-`POST <host>/rest/default/V1/carts/mine`
+`POST \<host\>/rest/default/V1/carts/mine`
 
 **Scope:**
 
@@ -50,7 +50,7 @@ This time, we will add two Voyage Yoga Bags (`24-WB01`).
 
 **Endpoint:**
 
-`POST <host>/rest/default/V1/carts/mine/items`
+`POST \<host\>/rest/default/V1/carts/mine/items`
 
 **Scope:**
 
@@ -90,13 +90,13 @@ This time, we will add two Voyage Yoga Bags (`24-WB01`).
 
 ## Search for pickup locations
 
-The `GET /V1/inventory/in-store-pickup/pickup-locations` endpoint searches for locations, given a city name or postal code and a radius, in kilometers. You must also specify the sales channel code to search in the `scopeCode` parameter. The endpoint is described in detail in the [In-Store Pickup](/rest/inventory/in-store-pickup/) reference topic.
+The `GET /V1/inventory/in-store-pickup/pickup-locations` endpoint searches for locations, given a city name or postal code and a radius, in kilometers. You must also specify the sales channel code to search in the `scopeCode` parameter. The endpoint is described in detail in the [In-Store Pickup](/rest/inventory/in-store-pickup.md) reference topic.
 
 In this example, we will search for locations within 50 km of New York, New York that are pickup locations for product `24-WB01`.
 
 **Endpoint:**
 
-`GET http://<host>/rest/default/V1/inventory/in-store-pickup/pickup-locations/?
+`GET http://\<host\>/rest/default/V1/inventory/in-store-pickup/pickup-locations/?
 searchRequest[area][radius]=50&
 searchRequest[area][searchTerm]=New%20York&
 searchRequest[scopeCode]=base&
@@ -195,13 +195,13 @@ The customer has chosen to pick up the order at the Brooklyn store. Once again, 
 
 *  The shipping address is that of the Brooklyn store but includes the customer's first and last name to help the store personnel identify who placed the order. The shipping address also includes the `pickup_location_code` extension attribute.
 
-*  The billing address includes the customer's billing address ID. In [Step 6. Create a customer and generate a customer token](/rest/tutorials/inventory/create-customer/), the `POST /V1/customers` endpoint returned an address ID of `2`.
+*  The billing address includes the customer's billing address ID. In [Step 6. Create a customer and generate a customer token](/rest/tutorials/inventory/create-customer.md), the `POST /V1/customers` endpoint returned an address ID of `2`.
 
 *  The `shipping_method_code` and `shipping_carrier_code` attributes are set to `pickup` and `instore`, respectively.
 
 **Endpoint:**
 
-`POST <host>/rest/default/V1/carts/mine/shipping-information`
+`POST \<host\>/rest/default/V1/carts/mine/shipping-information`
 
 **Scope:**
 
@@ -370,7 +370,7 @@ Send the payment information to create an order.
 
 **Endpoint:**
 
-`POST <host>/rest/default/V1/carts/mine/payment-information`
+`POST \<host\>/rest/default/V1/carts/mine/payment-information`
 
 **Scope:**
 
@@ -380,7 +380,7 @@ Send the payment information to create an order.
 
 `Content-Type`: `application/json`
 
-`Authorization`: `Bearer <customer token>`
+`Authorization`: `Bearer \<customer token\>`
 
 **Payload:**
 
@@ -417,7 +417,7 @@ This call creates a shipment.
 
 **Endpoint:**
 
-`POST <host>/rest/default/V1/order/notify-orders-are-ready-for-pickup`
+`POST \<host\>/rest/default/V1/order/notify-orders-are-ready-for-pickup`
 
 **Scope:**
 
@@ -427,7 +427,7 @@ This call creates a shipment.
 
 `Content-Type`: `application/json`
 
-`Authorization`: `Bearer <admin token>`
+`Authorization`: `Bearer \<admin token\>`
 
 **Payload:**
 
@@ -449,3 +449,4 @@ The response includes the success status as well as an array of error messages f
   "failed": []
 }
 ```
+

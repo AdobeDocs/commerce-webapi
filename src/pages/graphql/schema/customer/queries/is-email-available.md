@@ -1,5 +1,6 @@
 ---
 title: isEmailAvailable query
+description: The isEmailAvailable query checks whether the specified email has already been used to create a customer account. As of Commerce 2.4.7, by default the quer...
 ---
 
 # isEmailAvailable query

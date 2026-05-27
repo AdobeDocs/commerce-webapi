@@ -1,12 +1,13 @@
 ---
 title: company query
+description: The company query returns details about the user's company. The request must include the customer token of a company user.
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+| |
+|:--|
+| \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../pages/_images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
 
 # company query
 
@@ -102,7 +103,7 @@ query{
 
 The following query returns the customer's company structure.
 
-<!--- To do: Replace the response after creating a proper structure and add a tree depicting the structure -->
+\<!--- To do: Replace the response after creating a proper structure and add a tree depicting the structure --\>
 
 **Request:**
 
@@ -385,3 +386,4 @@ query{
   }
 }
 ```
+

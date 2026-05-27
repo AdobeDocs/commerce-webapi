@@ -1,5 +1,6 @@
 ---
 title: CustomizableOptionInterface
+description: Customizable options for a product provide a way to offer customers a selection of options with a variety of text, selection, and date input types. All pro...
 ---
 
 # CustomizableOptionInterface
@@ -146,3 +147,4 @@ The following query returns information about the customizable options configure
   }
 }
 ```
+

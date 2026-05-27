@@ -1,5 +1,6 @@
 ---
 title: PWA implementations and attributes
+description: Deprecated. Check ProductInterface attributes.
 ---
 
 # PWA implementations and attributes

@@ -8,9 +8,9 @@ keywords:
 
 import * as Vars from '../../../data/vars.js';
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+| |
+|:--|
+| \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../pages/_images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
 
 # Place a negotiable quote order
 
@@ -69,7 +69,7 @@ Adobe Commerce as a Cloud Service does not support the `POST /V1/carts/mine` end
 
 **Endpoint:**
 
-`POST <host>/rest/default/V1/carts/mine`
+`POST \<host\>/rest/default/V1/carts/mine`
 
 **Headers:**
 
@@ -142,7 +142,7 @@ Adobe Commerce as a Cloud Service does not support the `POST /V1/carts/mine/esti
 
 **Endpoint:**
 
-`POST <host>/rest/default/V1/carts/mine/estimate-shipping-methods`
+`POST \<host\>/rest/default/V1/carts/mine/estimate-shipping-methods`
 
 **Headers:**
 
@@ -644,7 +644,7 @@ Initiating a negotiable quote places it in the `processing_by_admin` state.
 
 **Endpoint:**
 
-`POST <host>/rest/default/V1/negotiableQuote/request`
+`POST \<host\>/rest/default/V1/negotiableQuote/request`
 
 **Headers:**
 

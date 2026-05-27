@@ -3,7 +3,7 @@ title: Create a configurable product tutorial
 description: This tutorial describes how to create a configurable product using the REST API
 keywords:
   - REST
---- 
+---
  
 # Create a configurable product tutorial
 
@@ -21,7 +21,7 @@ This **5-step tutorial** generally takes **45 minutes**.
 
 *  [Install and configure RabbitMQ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/rabbitmq.html), which is the default message broker for bulk API endpoints.
 
-*  Obtain an admin authorization token. All calls in this tutorial require administrator privileges. See [Generate the admin token](/rest/tutorials/prerequisite-tasks/) for more information.
+*  Obtain an admin authorization token. All calls in this tutorial require administrator privileges. See [Generate the admin token](/rest/tutorials/prerequisite-tasks/index.md) for more information.
 
 ### Other resources
 

@@ -1,5 +1,6 @@
 ---
 title: cart query
+description: Use the cart query to retrieve information about a particular cart.
 ---
 
 # cart query

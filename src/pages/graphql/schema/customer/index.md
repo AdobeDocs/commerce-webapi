@@ -1,5 +1,6 @@
 ---
 title: Customer
+description: A customer is a shopper who has created an account for the store.
 ---
 
 # Customer

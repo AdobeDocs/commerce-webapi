@@ -9,7 +9,7 @@ keywords:
  
 # Step 4. Link stocks and sources
 
-This step links the sources we created in [Step 2. Create sources](/rest/tutorials/inventory/create-sources) with the stocks we created in [Step 3. Create stocks](/rest/tutorials/inventory/create-stock/).
+This step links the sources we created in [Step 2. Create sources](/rest/tutorials/inventory/create-sources.md) with the stocks we created in [Step 3. Create stocks](/rest/tutorials/inventory/create-stock.md).
 
 Each stock can be assigned one or more sources. Adobe Commerce uses these associations to calculate the virtual aggregated inventory per product.
 
@@ -27,7 +27,7 @@ In this example, we configure the Northeast warehouse to be the primary source f
 
 **Endpoint:**
 
-`POST <host>/rest/default/V1/inventory/stock-source-links`
+`POST \<host\>/rest/default/V1/inventory/stock-source-links`
 
 **Scope:**
 

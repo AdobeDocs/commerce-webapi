@@ -1,5 +1,6 @@
 ---
 title: country query
+description: Use the country query to retrieve information about a specific country.
 ---
 
 # country query

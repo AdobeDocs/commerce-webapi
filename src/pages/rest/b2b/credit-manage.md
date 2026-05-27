@@ -6,9 +6,9 @@ keywords:
   - REST
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+| |
+|:--|
+| \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../pages/_images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
 
 # Manage company credit
 
@@ -56,7 +56,7 @@ This call changes the company's credit limit to $1000. The `available_limit` par
 
 **Sample Usage:**
 
-`PUT <host>/rest/<store_code>/V1/companyCredits/2`
+`PUT \<host\>/rest/<store_code>/V1/companyCredits/2`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -97,7 +97,7 @@ This call returns data on the credit limit for the specified credit ID.
 
 **Sample Usage:**
 
-`GET <host>/rest/<store_code>/V1/companyCredits/2`
+`GET \<host\>/rest/<store_code>/V1/companyCredits/2`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -131,7 +131,7 @@ This call returns information about the credit limit for a specified company.
 
 **Sample Usage:**
 
-`GET <host>/rest/<store_code>/V1/companyCredits/company/2`
+`GET \<host\>/rest/<store_code>/V1/companyCredits/company/2`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -163,7 +163,7 @@ See [Search using REST APIs](../use-rest/performing-searches.md) for information
 
 **Sample Usage:**
 
-`GET <host>/rest/<store_code>/V1/companyCredits?searchCriteria[filter_groups][0][filters][0][field]=balance&searchCriteria[filter_groups][0][filters][0][value]=0&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
+`GET \<host\>/rest/<store_code>/V1/companyCredits?searchCriteria[filter_groups][0][filters][0][field]=balance&searchCriteria[filter_groups][0][filters][0][value]=0&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -262,7 +262,7 @@ This call increases the company credit with an Allocate, Update, Refund, Revert,
 
 **Sample Usage:**
 
-`POST <host>/rest/<store_code>/V1/companyCredits/2/increaseBalance`
+`POST \<host\>/rest/<store_code>/V1/companyCredits/2/increaseBalance`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -289,7 +289,7 @@ This call decreases the company credit with an Update (operation type = 2), Purc
 
 **Sample Usage:**
 
-`POST <host>/rest/<store_code>/V1/companyCredits/2/decreaseBalance`
+`POST \<host\>/rest/<store_code>/V1/companyCredits/2/decreaseBalance`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -330,7 +330,7 @@ This call updates the credit history to specify a purchase order number.
 
 **Sample Usage:**
 
-`PUT <host>/rest/<store_code>/V1/companyCredits/history/6`
+`PUT \<host\>/rest/<store_code>/V1/companyCredits/history/6`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -357,7 +357,7 @@ See [Search using REST APIs](../use-rest/performing-searches.md) for information
 
 **Sample Usage:**
 
-`GET <host>/rest/<store_code>/V1/companyCredits/history?searchCriteria[filter_groups][0][filters][0][field]=credit_limit&searchCriteria[filter_groups][0][filters][0][value]=500&searchCriteria[filter_groups][0][filters][0][condition_type]=gt`
+`GET \<host\>/rest/<store_code>/V1/companyCredits/history?searchCriteria[filter_groups][0][filters][0][field]=credit_limit&searchCriteria[filter_groups][0][filters][0][value]=500&searchCriteria[filter_groups][0][filters][0][condition_type]=gt`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -424,3 +424,4 @@ See [Search using REST APIs](../use-rest/performing-searches.md) for information
     "total_count": 2
 }
 ```
+

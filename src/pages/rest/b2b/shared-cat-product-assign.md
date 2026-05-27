@@ -6,9 +6,9 @@ keywords:
   - REST
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+| |
+|:--|
+| \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../pages/_images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
 
 # Assign categories and products to a shared catalog
 
@@ -54,7 +54,7 @@ The following example adds the Luma Gear category (`id=3`) as well as its subcat
 
 **Sample usage:**
 
-`POST <host>/rest/<store_code>/V1/sharedCatalog/2/assignCategories`
+`POST \<host\>/rest/<store_code>/V1/sharedCatalog/2/assignCategories`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -93,7 +93,7 @@ The following example removes two categories from the shared catalog.
 
 **Sample usage:**
 
-`POST <host>/rest/<store_code>/V1/sharedCatalog/2/unassignCategories`
+`POST \<host\>/rest/<store_code>/V1/sharedCatalog/2/unassignCategories`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -125,7 +125,7 @@ The `GET` call returns an array of catalog IDs.
 
 **Sample Usage:**
 
-`GET <host>/rest/<store_code>/V1/sharedCatalog/2/categories`
+`GET \<host\>/rest/<store_code>/V1/sharedCatalog/2/categories`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -178,7 +178,7 @@ The following example adds two products each in the Bags, Fitness Equipment, and
 
 **Sample usage:**
 
-`POST <host>/rest/<store_code>/V1/sharedCatalog/2/assignProducts`
+`POST \<host\>/rest/<store_code>/V1/sharedCatalog/2/assignProducts`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -221,7 +221,7 @@ Unassigning a product does not remove it from its category or categories.
 
 **Sample usage:**
 
-`POST <host>/rest/<store_code>/V1/sharedCatalog/2/unassignProducts`
+`POST \<host\>/rest/<store_code>/V1/sharedCatalog/2/unassignProducts`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -249,7 +249,7 @@ The `GET` call returns an array of SKUs.
 
 **Sample Usage:**
 
-`GET <host>/rest/<store_code>/V1/sharedCatalog/2/products`
+`GET \<host\>/rest/<store_code>/V1/sharedCatalog/2/products`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -270,3 +270,4 @@ The `GET` call returns an array of SKUs.
   "24-MG04"
 ]
 ```
+

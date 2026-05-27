@@ -4,7 +4,7 @@ description: In this step of the tutorial you will create a customer
 edition: paas
 keywords:
   - REST
---- 
+---
  
 # Step 3. Create a customer
 
@@ -24,7 +24,7 @@ This example shows a simplified way of creating a customer account. Typically, y
 
 **Endpoint:**
 
-`POST <host>/rest/<store_code>/V1/customers`
+`POST \<host\>/rest/<store_code>/V1/customers`
 
 **Headers:**
 
@@ -34,8 +34,9 @@ This example shows a simplified way of creating a customer account. Typically, y
 
 It is recommended that you substitute the value of the `email` parameter with a real email address so that you receive all notifications.
 
-<details>
-      <summary><b>Show code sample</b></summary>
+<Details slots="heading, content" />
+
+#### Show code sample
 
 ```json
 {
@@ -68,14 +69,14 @@ It is recommended that you substitute the value of the `email` parameter with a 
 }
 ```
 
-</details>
 
 **Response:**
 
 Commerce assigned this user `id` value of `2`.
 
-<details>
-      <summary><b>Show code sample</b></summary>
+<Details slots="heading, content" />
+
+#### Show code sample
 
 ```json
 {
@@ -118,7 +119,6 @@ Commerce assigned this user `id` value of `2`.
 }
 ```
 
-</details>
 
 You can log in to the Luma store using the username `jdoe@example.com` and password `Password1`.
 
@@ -130,7 +130,7 @@ By default, a customer token is valid for 1 hour. To change this value, log in t
 
 **Endpoint:**
 
-`POST <host>/rest/<store_code>/V1/integration/customer/token`
+`POST \<host\>/rest/<store_code>/V1/integration/customer/token`
 
 **Headers:**
 

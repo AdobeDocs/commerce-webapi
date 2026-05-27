@@ -3,7 +3,7 @@ title: Step 4. Define configurable product options
 description: In this step of the tutorial you will define the configurable product options
 keywords:
   - REST
---- 
+---
  
 # Step 4. Define configurable product options
 
@@ -17,7 +17,7 @@ The value assigned to the `value_index` must be unique within the system.
 
 **Endpoint:**
 
-`POST <host>/rest/default/V1/configurable-products/MS-Champ/options`
+`POST \<host\>/rest/default/V1/configurable-products/MS-Champ/options`
 
 **Payload:**
 
@@ -47,7 +47,7 @@ The call to link a simple (child) product to the configurable product accepts on
 
 **Endpoint:**
 
-`POST <host>/rest/default/V1/configurable-products/MS-Champ/child`
+`POST \<host\>/rest/default/V1/configurable-products/MS-Champ/child`
 
 **Payload:**
 
@@ -103,3 +103,4 @@ The call to link a simple (child) product to the configurable product accepts on
 },
 ...
 ```
+

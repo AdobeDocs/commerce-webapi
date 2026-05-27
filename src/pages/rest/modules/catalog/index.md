@@ -4,7 +4,7 @@ description: Create and maintain products and categories with the Catalog module
 edition: paas
 keywords:
   - REST
---- 
+---
  
 # Catalog module
 
@@ -143,3 +143,4 @@ The following example uses the `POST V1/categories` call to assign four custom a
     ]
 }
 ```
+

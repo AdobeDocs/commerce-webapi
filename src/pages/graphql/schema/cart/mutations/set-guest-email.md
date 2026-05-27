@@ -1,5 +1,6 @@
 ---
 title: setGuestEmailOnCart mutation
+description: For guest customers, you must assign an email to the cart before you place the order.
 ---
 
 # setGuestEmailOnCart mutation

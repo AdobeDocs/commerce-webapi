@@ -1,5 +1,6 @@
 ---
 title: recaptchaV3Config query
+description: The recaptchaV3Config query returns information about the reCaptcha V3 configuration.
 ---
 
 # recaptchaV3Config query
@@ -58,3 +59,4 @@ query {
   }
 }
 ```
+

@@ -1,5 +1,6 @@
 ---
 title: countries query
+description: The countries query returns all countries in which the entity can do business.
 ---
 
 # countries query

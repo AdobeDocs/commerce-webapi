@@ -5,7 +5,7 @@ edition: paas
 keywords:
   - Inventory
   - REST
---- 
+---
  
 # Step 3. Create stocks
 
@@ -23,7 +23,7 @@ The `POST V1/inventory/stocks` endpoint creates a stock. The `name`, `type`, and
 
 **Endpoint:**
 
-`POST <host>/rest/default/V1/inventory/stocks`
+`POST \<host\>/rest/default/V1/inventory/stocks`
 
 **Scope:**
 

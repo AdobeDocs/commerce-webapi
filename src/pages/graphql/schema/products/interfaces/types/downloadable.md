@@ -1,5 +1,6 @@
 ---
 title: Downloadable product data types
+description: The DownloadableProduct data type implements ProductInterface and CustomizableProductInterface. As a result, attributes that are specific to downloadable p...
 ---
 
 # Downloadable product data types

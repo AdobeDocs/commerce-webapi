@@ -1,5 +1,6 @@
 ---
 title: createPaypalExpressToken mutation
+description: The createPaypalExpressToken mutation begins the authorization process for the following payment methods:
 edition: paas
 ---
 

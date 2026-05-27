@@ -10,15 +10,15 @@ import * as Vars from '../../../data/vars.js';
 
 The REST tutorials provide an introduction to Adobe Commerce web APIs. In general, the tutorials guide you through commonly-performed complex tasks:
 
-*  &#8203;<Edition name="paas" /> The [**order processing** tutorial](/rest/tutorials/orders/) demonstrates the lifecycle of an order. Major steps include creating a quote, converting it to an order, issuing an invoice, and shipping the order.
+*  &#8203;<Edition name="paas" /> The [**order processing** tutorial](/rest/tutorials/orders/index.md) demonstrates the lifecycle of an order. Major steps include creating a quote, converting it to an order, issuing an invoice, and shipping the order.
 
-*  &#8203;<Edition name="paas" /> The [**order processing with Inventory Management**](/rest/tutorials/inventory/index/) tutorial builds upon the original order processing tutorial. It also configures sources and stocks and other Inventory Management features.
+*  &#8203;<Edition name="paas" /> The [**order processing with Inventory Management**](/rest/tutorials/inventory/index.md) tutorial builds upon the original order processing tutorial. It also configures sources and stocks and other Inventory Management features.
 
-*  The [**configurable product** tutorial](/rest/tutorials/configurable-product/) helps you plan then create a configurable product and its component simple products.
+*  The [**configurable product** tutorial](/rest/tutorials/configurable-product/index.md) helps you plan then create a configurable product and its component simple products.
 
-*  The [**bulk API configurable product** tutorial](/rest/tutorials/bulk-configurable-product/) demonstrates how to create configurable products using bulk APIs.
+*  The [**bulk API configurable product** tutorial](/rest/tutorials/bulk-configurable-product/index.md) demonstrates how to create configurable products using bulk APIs.
 
-*  The [**grouped products** tutorial](/rest/tutorials/grouped-product/) demonstrates how to create and manage grouped products.
+*  The [**grouped products** tutorial](/rest/tutorials/grouped-product/index.md) demonstrates how to create and manage grouped products.
 
 ## Complete these prerequisites
 
@@ -30,9 +30,9 @@ Before you begin any tutorial, make sure you know the basics about <Vars.sitedat
 
 *  Install a REST client. You can use any REST client to send calls to Commerce. [Postman](https://www.getpostman.com/) is recommended.
 
-*  Know how to construct a REST call in Commerce. See [Construct a request](/get-started/gs-web-api-request) for details.
+*  Know how to construct a REST call in Commerce. See [Construct a request](/get-started/gs-web-api-request.md) for details.
 
-*  Find the Commerce REST API documentation. You can view the [static REST API documentation on devdocs](../reference/index.md) or [generate a local API reference](/rest/use-rest/generate-local/).
+*  Find the Commerce REST API documentation. You can view the [static REST API documentation on devdocs](../reference/index.md) or [generate a local API reference](/rest/quick-reference/generate-local.md).
 
 *  Find the Commerce Merchant documentation. Refer to [Getting Started with <Vars.sitedatavarce/>](https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home) for information about the Luma store that is created when you install Commerce with the sample data.
 
@@ -44,7 +44,7 @@ Although some steps require that you configure Commerce in some way, you perform
 
 This section lists the HTTP verb and full path to the endpoint. The basic structure of a REST call in Commerce is
 
-`<HTTP verb> http://<host>/rest/<scope>/<endpoint>`
+`\<HTTP verb\> http://\<host\>/rest/\<scope\>/\<endpoint\>`
 
 where:
 

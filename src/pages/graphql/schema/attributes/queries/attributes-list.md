@@ -1,5 +1,6 @@
 ---
 title: attributesList query
+description: The attributesList query retrieves a list of attributes metadata for a given entitytype.
 ---
 
 # attributesList query
@@ -345,3 +346,4 @@ The following call returns the list of attributes metadata for a `catalog_produc
   }
 }
 ```
+

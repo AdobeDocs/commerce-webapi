@@ -5,7 +5,7 @@ contributor_name: comwrap GmbH
 contributor_link: http://comwrap.com/
 keywords:
   - REST
---- 
+---
 import * as Vars from '../../../data/vars.js';
 
 # Asynchronous web endpoints
@@ -58,8 +58,8 @@ Field name | Data type | Description
 
 The following call asynchronously changes the price of the product that has a `sku` of `24-MB01`:
 
-&#8203;<Edition name="paas" /> `PUT https://<host>/rest/<store-view-code>/async/V1/products/24-MB01`
-&#8203;<Edition name="saas" /> `PUT https://<server>.api.commerce.adobe.com/<tenant-id>/V1/async/products/24-MB01`
+&#8203;<Edition name="paas" /> `PUT https://\<host\>/rest/<store-view-code>/async/V1/products/24-MB01`
+&#8203;<Edition name="saas" /> `PUT https://\<server\>.api.commerce.adobe.com/<tenant-id>/V1/async/products/24-MB01`
 
 ### Payload
 
@@ -73,7 +73,7 @@ The following call asynchronously changes the price of the product that has a `s
 
 ### Response
 
-Commerce generates a `bulk_uuid` for each asynchronous request. Use the `bulk_uuid` to determine the [operation status](/rest/use-rest/operation-status-endpoints/) of your request.
+Commerce generates a `bulk_uuid` for each asynchronous request. Use the `bulk_uuid` to determine the [operation status](/rest/use-rest/operation-status-endpoints.md) of your request.
 
 ```json
 {

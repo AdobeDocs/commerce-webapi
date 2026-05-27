@@ -1,5 +1,6 @@
 ---
 title: exchangeExternalCustomerToken mutation
+description: This mutation is part of the Storefront Compatibility Package. It will be added to Adobe Commerce 2.4.9.
 ---
 
 # exchangeExternalCustomerToken mutation

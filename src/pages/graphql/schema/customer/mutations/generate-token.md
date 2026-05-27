@@ -1,5 +1,6 @@
 ---
 title: generateCustomerToken mutation
+description: Use the generateCustomerToken mutation to create a new customer token.
 edition: saas
 ---
 

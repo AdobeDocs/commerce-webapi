@@ -3,7 +3,7 @@ title: Create and manage grouped products tutorial
 description: In this tutorial you will create and manage grouped products
 keywords:
   - REST
---- 
+---
  
 # Create and manage grouped products tutorial
 
@@ -17,7 +17,7 @@ This tutorial describes how you can use the Adobe Commerce REST API to create an
 
 *  Install a REST client. You can use any REST client to send calls to Commerce. [Postman](https://www.getpostman.com/) is recommended.
 
-*  Obtain an admin authorization token. All calls in this tutorial require administrator privileges. See [Generate the admin token](/rest/tutorials/prerequisite-tasks/) for more information.
+*  Obtain an admin authorization token. All calls in this tutorial require administrator privileges. See [Generate the admin token](/rest/tutorials/prerequisite-tasks/index.md) for more information.
 
 ### Other resources
 
@@ -219,7 +219,7 @@ You also can use the `DELETE` endpoint to delete a simple product from the group
 
 Customers can now add this grouped products to their carts, as shown below.
 
-Refer to the [Order processing tutorial](/rest/tutorials/orders/) for more information about how to add items to a cart with REST.
+Refer to the [Order processing tutorial](/rest/tutorials/orders/index.md) for more information about how to add items to a cart with REST.
 
 ### Endpoint
 
@@ -250,3 +250,4 @@ Refer to the [Order processing tutorial](/rest/tutorials/orders/) for more infor
    "quote_id": "3"
 }
 ```
+

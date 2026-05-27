@@ -1,5 +1,6 @@
 ---
 title: reorderItems mutation
+description: The reorderItems mutation allows a logged-in user to add all the products from a previous order into their cart. The Stores > Settings > Sales > Sales > Re...
 ---
 
 # reorderItems mutation

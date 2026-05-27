@@ -5,7 +5,7 @@ edition: paas
 keywords:
   - Inventory
   - REST
---- 
+---
  
 # Step 10. Create an invoice
 
@@ -19,7 +19,7 @@ This example creates a full invoice.
 
 **Endpoint:**
 
-`POST <host>/rest/default/V1/order/3/invoice`
+`POST \<host\>/rest/default/V1/order/3/invoice`
 
 where `3` is the `orderid`
 
@@ -31,7 +31,7 @@ where `3` is the `orderid`
 
 `Content-Type`: `application/json`
 
-`Authorization`: `Bearer <admin token>`
+`Authorization`: `Bearer \<admin token\>`
 
 **Payload:**
 
@@ -48,11 +48,11 @@ An invoice `id`, such as `3`.
 
 ## Retrieve the order item IDs
 
-When you create an order, Commerce generates an `order_item_id` for each product. These values will be used in [Step 12. Create a shipment](/rest/tutorials/inventory/create-shipment/).
+When you create an order, Commerce generates an `order_item_id` for each product. These values will be used in [Step 12. Create a shipment](/rest/tutorials/inventory/create-shipment.md).
 
 **Endpoint:**
 
-`GET <host>/rest/default/V1/invoices/3`
+`GET \<host\>/rest/default/V1/invoices/3`
 
 where `3` is the invoice ID
 
@@ -64,7 +64,7 @@ where `3` is the invoice ID
 
 `Content-Type`: `application/json`
 
-`Authorization`: `Bearer <admin token>`
+`Authorization`: `Bearer \<admin token\>`
 
 **Payload:**
 

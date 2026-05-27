@@ -1,5 +1,6 @@
 ---
 title: estimateShippingMethods mutation
+description: The estimateShippingMethods mutation returns information about estimated cost of available shipping methods, depending on location.
 ---
 
 # estimateShippingMethods mutation
@@ -103,3 +104,4 @@ The response contains the estimated shipping, cost based on selected location an
   }
 }
 ```
+

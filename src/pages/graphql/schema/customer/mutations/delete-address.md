@@ -1,5 +1,6 @@
 ---
 title: deleteCustomerAddress mutation
+description: This mutation has been deprecated in Adobe Commerce as a Cloud Service and will be deprecated in Adobe Commerce 2.4.9. We recommend using the deleteCustome...
 ---
 
 # deleteCustomerAddress mutation

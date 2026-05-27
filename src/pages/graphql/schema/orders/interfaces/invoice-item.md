@@ -1,5 +1,6 @@
 ---
 title: InvoiceItemInterface attributes and implementations
+description: InvoiceItemInterface provides details about items in a customer's order history that were invoiced. It has the following implementations:
 ---
 
 # InvoiceItemInterface attributes and implementations
@@ -190,3 +191,4 @@ The following query returns invoice details about order ID `000000005`. The `Bun
   }
 }
 ```
+

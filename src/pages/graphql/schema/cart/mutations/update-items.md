@@ -1,5 +1,6 @@
 ---
 title: updateCartItems mutation
+description: The updateCartItems mutation allows you to modify items in the specified cart. You can also replace the current quantity of one or more cart items with the...
 ---
 
 # updateCartItems mutation

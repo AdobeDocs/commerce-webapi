@@ -1,5 +1,6 @@
 ---
 title: addReturnTracking mutation
+description: The addReturnTracking mutation adds customer-entered shipping tracking information to the specified return request. Use the availableshippingcarriers objec...
 ---
 
 # addReturnTracking mutation

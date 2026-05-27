@@ -1,5 +1,6 @@
 ---
 title: customerSegments query
+description: This query is part of the Storefront Compatibility Package. It will be added to Adobe Commerce 2.4.9.
 ---
 
 # customerSegments query
@@ -43,3 +44,4 @@ The following call returns encoded ID of customer group for logged-in customer o
   }
 }
 ```
+

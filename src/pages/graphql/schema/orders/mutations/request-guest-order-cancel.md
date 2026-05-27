@@ -1,5 +1,6 @@
 ---
 title: requestGuestOrderCancel mutation
+description: The requestGuestOrderCancel mutation allows a guest customer to request for cancelling an order, passing the order token and a cancellation reason.
 ---
 
 # requestGuestOrderCancel mutation

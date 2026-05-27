@@ -1,5 +1,6 @@
 ---
 title: createProductReview mutation
+description: The createProductReview mutation adds a review for the specified product. Use the productReviewRatingsMetadata query to return a list of rating categories...
 edition: paas
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: checkoutAgreements query
+description: The checkoutAgreements query retrieves checkout agreements. The query will always return an empty array when the Enable Terms and Conditions option is set...
 contributor_name: Something Digital (now Rightpoint)
 contributor_link: https://www.rightpoint.com/
 ---
@@ -61,3 +62,4 @@ The following query returns enabled checkout agreements.
   }
 }
 ```
+

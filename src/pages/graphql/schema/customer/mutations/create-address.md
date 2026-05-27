@@ -1,5 +1,6 @@
 ---
 title: createCustomerAddress mutation
+description: Use the createCustomerAddress mutation to create the customer's address.
 ---
 
 # createCustomerAddress mutation

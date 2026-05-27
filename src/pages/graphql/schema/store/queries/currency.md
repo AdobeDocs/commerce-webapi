@@ -1,5 +1,6 @@
 ---
 title: currency query
+description: Use the currency query to return information about the store's currency configuration.
 ---
 
 # currency query

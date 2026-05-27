@@ -5,9 +5,9 @@ keywords:
   - REST
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+| |
+|:--|
+| \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../pages/_images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
 
 # Multiple coupons
 
@@ -17,7 +17,7 @@ The multi-coupon endpoint routes contain the string `V2` instead of `V1`. These 
 
 ## Retrieve applied coupons
 
-The `GET /V2/carts/<cartId>/coupons` and `GET /V2/carts/mine/coupons` endpoints provide a RESTful way to retrieve the coupons applied to a specified cart or to the cart of the currently logged in customer, respectively.
+The `GET /V2/carts/\<cartId\>/coupons` and `GET /V2/carts/mine/coupons` endpoints provide a RESTful way to retrieve the coupons applied to a specified cart or to the cart of the currently logged in customer, respectively.
 
 ## Append coupons
 
@@ -60,3 +60,4 @@ The `POST /V2/carts/:cartId/deleteByCodes` and `POST /V2/carts/mine/deleteByCode
   ]
 }
 ```
+

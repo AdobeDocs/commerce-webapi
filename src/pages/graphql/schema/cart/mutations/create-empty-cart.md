@@ -1,5 +1,6 @@
 ---
 title: createEmptyCart mutation
+description: The createEmptyCart mutation has been deprecated. Use the createGuestCart mutation instead.
 edition: paas
 ---
 

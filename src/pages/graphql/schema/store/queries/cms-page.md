@@ -1,5 +1,6 @@
 ---
 title: cmsPage query
+description: The cmsPage query returns information about content pages that were developed with the Adobe Commerce or Magento Open Source Content Management System (CMS).
 edition: paas
 ---
 

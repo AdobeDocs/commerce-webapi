@@ -5,7 +5,7 @@ contributor_name: Goivvy LLC
 contributor_link: https://www.goivvy.com/
 keywords:
   - REST
---- 
+---
 
 # Step 4. Delete an image
 

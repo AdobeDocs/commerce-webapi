@@ -1,9 +1,7 @@
 ---
 title: customer query
+description: The customer query returns information about the logged-in customer, store credit history and customer's wishlist.
 ---
-
-import CustomAttributeCustomer from '/src/_includes/graphql/examples/custom-attribute-customer.md'
-import CustomerS3Download from '/src/_includes/graphql/examples/customer-s3-download.md'
 
 # customer query
 
@@ -89,7 +87,66 @@ The following call returns information about the logged-in customer. Provide the
 
 ### Retrieve custom attributes metadata from a customer
 
-<CustomAttributeCustomer />
+The following call returns custom attributes for the logged-in customer. Provide the customer's token in the header section of the query.
+
+**Request:**
+
+```graphql
+{
+  customer {
+    firstname
+    lastname
+    suffix
+    email
+    custom_attributes {
+      code
+      ... on AttributeValue {
+        value
+      }
+      ... on AttributeSelectedOptions {
+        selected_options {
+          label
+          value
+        }
+      }
+    }
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "customer": {
+      "firstname": "John",
+      "lastname": "Doe",
+      "suffix": null,
+      "email": "jdoe@example.com",
+      "custom_attributes": [
+        {
+          "code": "reward_update_notification",
+          "value": "0"
+        },
+        {
+          "code": "studies",
+          "selected_options": [
+            {
+              "label": "BSc",
+              "value": "501"
+            },
+            {
+              "label": "MBA",
+              "value": "502"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
 
 ### Retrieve custom attributes metadata from a customer address
 

@@ -5,7 +5,7 @@ edition: paas
 keywords:
   - Inventory
   - REST
---- 
+---
  
 # Step 7. Create a cart and add products to it
 
@@ -17,7 +17,7 @@ The call to create a cart and add items must contain the customer's authorizatio
 
 **Endpoint:**
 
-`POST <host>/rest/default/V1/carts/mine`
+`POST \<host\>/rest/default/V1/carts/mine`
 
 **Scope:**
 
@@ -54,7 +54,7 @@ The `get-product-salable-quantity` endpoint indicates how many items are availab
 
 **Endpoint:**
 
-`GET <host>/rest/default/V1/inventory/get-product-salable-quantity/24-WB01/2`
+`GET \<host\>/rest/default/V1/inventory/get-product-salable-quantity/24-WB01/2`
 
 **Scope:**
 
@@ -80,7 +80,7 @@ Use the same endpoint to check the quantity available for product `24-WB03`.
 
 **Endpoint:**
 
-`GET <host>/rest/default/V1/inventory/get-product-salable-quantity/24-WB03/2`
+`GET \<host\>/rest/default/V1/inventory/get-product-salable-quantity/24-WB03/2`
 
 **Scope:**
 
@@ -110,7 +110,7 @@ In this call, we'll add 20 `24-WB03` items. This portion of the order can be ful
 
 **Endpoint:**
 
-`POST <host>/rest/default/V1/carts/mine/items`
+`POST \<host\>/rest/default/V1/carts/mine/items`
 
 **Scope:**
 
@@ -266,4 +266,4 @@ Finally, we'll add a single instance of a downloadable product to the cart.
 
 ## Verify this step
 
-Sign in as the customer at `http://<host>` and click on the shopping cart. All the items you added display in the cart.
+Sign in as the customer at `http://\<host\>` and click on the shopping cart. All the items you added display in the cart.

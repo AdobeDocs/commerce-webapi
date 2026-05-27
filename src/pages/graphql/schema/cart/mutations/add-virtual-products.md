@@ -1,5 +1,6 @@
 ---
 title: addVirtualProductsToCart mutation
+description: We recommend using the addProductsToCart mutation to add any type of product to the cart.
 edition: paas
 ---
 

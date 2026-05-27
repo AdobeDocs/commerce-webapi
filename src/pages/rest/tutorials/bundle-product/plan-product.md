@@ -5,7 +5,7 @@ contributor_name: Goivvy LLC
 contributor_link: https://www.goivvy.com/magento-optimization-service
 keywords:
   - REST
---- 
+---
  
 # Step 1. Plan the product
 

@@ -4,7 +4,7 @@ description: Make bulk inventory changes using the REST API
 keywords:
   - Inventory
   - REST
---- 
+---
  
 # Inventory mass actions
 
@@ -51,7 +51,7 @@ Name | Description | Type | Requirements
 
 **Sample usage:**
 
-`POST <host>/rest/<store_code>/V1/inventory/bulk-product-source-transfer`
+`POST \<host\>/rest/<store_code>/V1/inventory/bulk-product-source-transfer`
 
 **Payload:**
 
@@ -87,7 +87,7 @@ Name | Description | Type | Requirements
 
 **Sample usage:**
 
-`POST <host>/rest/<store_code>/V1/inventory/bulk-partial-source-transfer`
+`POST \<host\>/rest/<store_code>/V1/inventory/bulk-partial-source-transfer`
 
 **Payload:**
 
@@ -116,7 +116,7 @@ An empty array
 
 Use the `POST /V1/inventory/bulk-product-source-assign` endpoint to add one or more sources to your products. This endpoint helps when creating and assigning custom sources to your default or custom stocks and preparing new locations and inventory.
 
-After adding new custom sources, you can add inventory quantities per product or for multiple products using the `POST V1/inventory/source-items` endpoint. [Assign products to a source](/rest/modules/inventory/manage-source-items/#assign-products-to-a-source) describes this endpoint.
+After adding new custom sources, you can add inventory quantities per product or for multiple products using the `POST V1/inventory/source-items` endpoint. [Assign products to a source](/rest/inventory/manage-source-items.md#assign-products-to-a-source) describes this endpoint.
 
 The sources are added to the products with an inventory quantity of 0. You can add inventory amounts as available per source.
 
@@ -129,7 +129,7 @@ Name | Description | Type | Requirements
 
 **Sample usage:**
 
-`POST <host>/rest/<store_code>/V1/inventory/bulk-product-source-assign`
+`POST \<host\>/rest/<store_code>/V1/inventory/bulk-product-source-assign`
 
 **Payload:**
 
@@ -164,7 +164,7 @@ If you unassign all sources from a product, you will not be able to sell the pro
 
 **Sample usage:**
 
-`POST <host>/rest/<store_code>/V1/inventory/bulk-product-source-unassign`
+`POST \<host\>/rest/<store_code>/V1/inventory/bulk-product-source-unassign`
 
 **Payload:**
 

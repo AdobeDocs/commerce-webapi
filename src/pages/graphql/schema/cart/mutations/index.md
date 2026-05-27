@@ -1,5 +1,6 @@
 ---
 title: Cart mutations
+description: The cart mutations allow you to perform the following operations:
 ---
 
 # Cart mutations

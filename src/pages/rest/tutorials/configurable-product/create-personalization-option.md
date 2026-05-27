@@ -13,7 +13,7 @@ The `product_sku` is the `sku` of the configurable product. The `sku` specified 
 
 **Endpoint:**
 
-`POST <host>/rest/default/V1/products/options`
+`POST \<host\>/rest/default/V1/products/options`
 
 **Payload:**
 
@@ -68,4 +68,4 @@ If the personalization option is not displayed, go to the **Champ Tee** configur
 
 ### Related topics
 
-[Order Processing with REST APIs Tutorial](/rest/tutorials/orders/)
+[Order Processing with REST APIs Tutorial](/rest/tutorials/orders/index.md)

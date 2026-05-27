@@ -1,5 +1,6 @@
 ---
 title: confirmCancelOrder mutation
+description: The confirmCancelOrder mutation allows a guest shopper to cancel an order by passing its encoded identifier and a confirmation key.
 ---
 
 # confirmCancelOrder mutation

@@ -5,7 +5,7 @@ contributor_name: comwrap GmbH
 contributor_link: http://comwrap.com/
 keywords:
   - REST
---- 
+---
  
 # Step 4. Create the personalization option
 
@@ -15,7 +15,7 @@ The `product_sku` is the `sku` of the configurable product. The `sku` specified 
 
 **Endpoint:**
 
-`POST <host>/rest/default/async/bulk/V1/products/options`
+`POST \<host\>/rest/default/async/bulk/V1/products/options`
 
 **Payload:**
 
@@ -61,12 +61,11 @@ The `product_sku` is the `sku` of the configurable product. The `sku` specified 
 
    ![Search results](../../../images/add-your-name.png)
 
-   <InlineAlert variant="info" slots="text"/>
-
+<InlineAlert variant="info" slots="text"/>
    If the personalization option is not displayed, go to the **Champ Tee** configuration product page in Admin and set  **Stock Status** to **In Stock**.
 
 ## Congratulations! You've finished.
 
 ### Related topics
 
-[Order Processing with REST APIs Tutorial](/rest/tutorials/orders/)
+[Order Processing with REST APIs Tutorial](/rest/tutorials/orders/index.md)

@@ -1,5 +1,6 @@
 ---
 title: categoryList query
+description: The categoryList query searches for categories that match the criteria specified in filters. It replaces the deprecated category query, which allowed you t...
 edition: paas
 ---
 
@@ -293,3 +294,4 @@ The following query returns breadcrumb information about categories that have th
   }
 }
 ```
+

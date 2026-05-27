@@ -6,9 +6,9 @@ keywords:
   - REST
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+| |
+|:--|
+| \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../pages/_images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
 
 # Manage company objects
 
@@ -35,7 +35,7 @@ The following table lists the parameters defined in `CompanyInterface`.
 Name | Description | Format | Requirements
 --- | --- | --- | ---
 `id` | System-generated company ID | integer | Required for updates and deletes.
-`status` | 0 - Pending approval<br/>1 - Approved<br/>2 - Rejected<br/>3 - Blocked | integer | Optional
+`status` | 0 - Pending approval\<br/\>1 - Approved\<br/\>2 - Rejected\<br/\>3 - Blocked | integer | Optional
 `company_name` | Company name  | string  | Required to create or update a company.
 `legal_name`  | Legal name  | string  | Optional
 `company_email`  | Official email address of the company. It does not have to be unique.  | string | Required to create or update a company.
@@ -61,7 +61,7 @@ The following example creates a company and assigns the default shared catalog (
 
 **Sample Usage:**
 
-`POST <host>/rest/<store_code>/V1/company/`
+`POST \<host\>/rest/<store_code>/V1/company/`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -123,7 +123,7 @@ The following call changes the company status to Rejected (`2`) and explains why
 
 **Sample Usage:**
 
-`PUT <host>/rest/<store_code>/V1/company/2`
+`PUT \<host\>/rest/<store_code>/V1/company/2`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -187,7 +187,7 @@ The following call changes the company status to Rejected (`2`) and explains why
 This call returns detailed information about the specified company.
 **Sample Usage:**
 
-`GET <host>/rest/<store_code>/V1/company/2`
+`GET \<host\>/rest/<store_code>/V1/company/2`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -234,7 +234,7 @@ When you delete a company, Adobe Commerce assigns the "Inactive" status to all c
 
 **Sample Usage:**
 
-`DELETE <host>/rest/<store_code>/V1/company/2`
+`DELETE \<host\>/rest/<store_code>/V1/company/2`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -258,7 +258,7 @@ See [Search using REST APIs](../use-rest/performing-searches.md) for information
 
 **Sample Usage:**
 
-`GET <host>/rest/<store_code>/V1/company?searchCriteria[filter_groups][0][filters][0][field]=region_id&searchCriteria[filter_groups][0][filters][0][value]=12&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
+`GET \<host\>/rest/<store_code>/V1/company?searchCriteria[filter_groups][0][filters][0][field]=region_id&searchCriteria[filter_groups][0][filters][0][value]=12&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -349,3 +349,4 @@ See [Search using REST APIs](../use-rest/performing-searches.md) for information
     "total_count": 2
 }
 ```
+

@@ -1,5 +1,6 @@
 ---
 title: removeProductsFromWishlist mutation
+description: The removeProductsFromWishlist mutation completely removes the specified items from the customer's wish list. Use the updateProductsInWishlist mutation to...
 ---
 
 # removeProductsFromWishlist mutation

@@ -33,7 +33,7 @@ The following section explains how to send transactional emails on demand using 
 
 -  **URL** - `POST /rest/V1/custom-email/send`
 -  **Authorization** - Only **service-to-service IMS authorization** is supported. The caller must have access to the **Send Custom Email via API** (`Magento_CustomEmailSend::send_custom_email`) resource. Refer to [REST authentication](../../authentication/index.md) for more information.
--  **Async usage** (recommended) - Although this endpoint is implemented synchronously, we recommend calling it using the **asynchronous REST API** so that the request is queued and processed by a consumer, avoiding long-lived HTTP connections. In Adobe Commerce as a Cloud Service, you can use the route with `/async` after `V1`, for example: `POST https://<server>.api.commerce.adobe.com/<tenant-id>/V1/async/custom-email/send`.
+-  **Async usage** (recommended) - Although this endpoint is implemented synchronously, we recommend calling it using the **asynchronous REST API** so that the request is queued and processed by a consumer, avoiding long-lived HTTP connections. In Adobe Commerce as a Cloud Service, you can use the route with `/async` after `V1`, for example: `POST https://\<server\>.api.commerce.adobe.com/<tenant-id>/V1/async/custom-email/send`.
 
    Refer to [Asynchronous web endpoints](../../use-rest/asynchronous-web-endpoints.md) for more information.
 
@@ -124,7 +124,7 @@ The template subject also supports custom variables. Use `var variableName` and 
    {{trans "Your order #%increment_id has been updated with a status of **%order_status**." increment_id=$order.increment_id order_status=$order_data.frontend_status_label |raw}}
    ```
 
--  **Raw output** – use the `|raw` filter when the translated or variable content contains HTML (for example, `<strong>` or `<a>`).
+-  **Raw output** – use the `|raw` filter when the translated or variable content contains HTML (for example, `\<strong\>` or `\<a\>`).
 
    ```html
    {{trans "Your order #%increment_id has been updated with a status of **%order_status**." increment_id=$order.increment_id order_status=$order_data.frontend_status_label |raw}}
@@ -135,3 +135,4 @@ The template subject also supports custom variables. Use `var variableName` and 
    ```html
    {{trans 'You can check the status of your order by [logging into your account](%account_url).' account_url=$this.getUrl($store,'customer/account/',[_nosid:1]) |raw}}
    ```
+

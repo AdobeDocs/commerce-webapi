@@ -1,5 +1,6 @@
 ---
 title: Checkout queries
+description: The checkout queries gather data necessary for completing the checkout process. Each has a limited scope:
 ---
 
 # Checkout queries

@@ -1,5 +1,6 @@
 ---
 title: setShippingMethodsOnCart mutation
+description: The setShippingMethodsOnCart mutation sets one or more delivery methods on a cart. By default, GraphQL supports the following delivery methods:
 ---
 
 # setShippingMethodsOnCart mutation

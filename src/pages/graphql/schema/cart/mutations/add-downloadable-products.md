@@ -1,5 +1,6 @@
 ---
 title: addDownloadableProductsToCart mutation
+description: We recommend using the addProductsToCart mutation to add any type of product to the cart.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 edition: paas

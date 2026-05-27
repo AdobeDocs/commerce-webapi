@@ -17,17 +17,37 @@ The `attributeMetadata` query returns a list of product attribute codes that can
 
 ## Endpoints
 
-import StorefrontAPIEndpoints from '/src/_includes/graphql/endpoints.md'
+&#8203;<Edition name="paas" />
 
-<StorefrontAPIEndpoints />
+| Environment | Endpoint    |
+|------------ | ----------: |
+| **Testing**    | `https://catalog-service-sandbox.adobe.io/graphql` |
+| **Production** | `https://catalog-service.adobe.io/graphql` |
+
+&#8203;<Edition name="saas" />
+
+|  Environment | Endpoint |
+| ------------ | --------:|
+| Testing | `https://{{region}}-{{environment}}.api.commerce.adobe.com/{{tenant-id}}/graphql` |
+| Production | `https://{{region}}.api.commerce.adobe.com/{{tenant-id}}/graphql` |
+
+**URL structure for SaaS endpoints**
+
+- `region` is the cloud region where your instance is deployed.
+- `environment` is the environment type, such as `sandbox`. If the environment is production, this value is omitted.
+- `tenantId` is the unique identifier for your organization's specific instance within the Adobe Experience Cloud.
 
 ## Required headers
 
 You must specify the following HTTP headers to run this query.
 
-import Docs from '/src/_includes/graphql/live-search-headers.md'
-
-<Docs />
+Header name| Description
+--- | ---
+`Magento-Environment-Id` | This value is displayed at **Stores** > **Configuration** > **Services** > **Magento Services** > **SaaS Environment** or can be obtained by running the `bin/magento config:show services_connector/services_id/environment_id` command.
+`Magento-Store-Code` | The code assigned to the store associated with the active store view. For example, `main_website_store`.
+`Magento-Store-View-Code` | The code assigned to the active store view. For example, `default`.
+`Magento-Website-Code` | The code assigned to the website associated with the active store view. For example, `base`.
+`X-Api-Key` | <Edition name="paas" /> Set this value to the [unique API key](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/user-guides/integration-services/saas#genapikey) generated for your Commerce environment.
 
 ## Example usage
 

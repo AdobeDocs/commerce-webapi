@@ -1,5 +1,6 @@
 ---
 title: Configurable product data types
+description: The ConfigurableProduct data type implements the following interfaces:
 ---
 
 # Configurable product data types

@@ -1,5 +1,6 @@
 ---
 title: updateCustomerV2 mutation
+description: The updateCustomerV2 mutation updates the personal information in an existing customer account. Use the updateCustomerEmail mutation to update the customer...
 ---
 
 # updateCustomerV2 mutation
@@ -67,7 +68,7 @@ mutation {
 
 ### Update a customer with custom attributes
 
-<BetaNote2 />
+\<BetaNote2 /\>
 
 The following call updates the first name, newsletter subscription status, and custom attribute values for a specific customer. The merchant has previously created the `random_attribute` and `studies` attributes for customer addresses.
 

@@ -5,7 +5,7 @@ edition: paas
 keywords:
   - REST
   - Security
---- 
+---
  
 # Protected endpoints
 
@@ -26,14 +26,14 @@ The endpoint that corresponds to a CAPTCHA-enabled form must include the HTTP `X
 
 Form name | REST endpoint
 --- | ---
-Add Gift Card Code | `POST /V1/carts/mine/giftCards` <br/>`POST /V1/carts/guest-carts/:cartId/giftCards`
-Applying Coupon Code | `PUT /V1/carts/:cartId/coupons/:couponCode` <br/>`PUT /V1/guest-carts/:cartId/coupons/:couponCode`
+Add Gift Card Code | `POST /V1/carts/mine/giftCards` \<br/\>`POST /V1/carts/guest-carts/:cartId/giftCards`
+Applying Coupon Code | `PUT /V1/carts/:cartId/coupons/:couponCode` \<br/\>`PUT /V1/guest-carts/:cartId/coupons/:couponCode`
 Change password | `PUT /V1/customers/me/password`
-Checkout/Placing Order | `POST /V1/carts/mine/payment-information` <br/>`POST /V1/carts/mine/set-payment-information` <br/>`POST /V1/guest-carts/:cartId/payment-information` <br/>`POST /V1/guest-carts/:cartId/set-payment-information`
+Checkout/Placing Order | `POST /V1/carts/mine/payment-information` \<br/\>`POST /V1/carts/mine/set-payment-information` \<br/\>`POST /V1/guest-carts/:cartId/payment-information` \<br/\>`POST /V1/guest-carts/:cartId/set-payment-information`
 Contact Us | Not applicable
 Create company | `POST /V1/company`
 Create user | `POST /V1/customers`
-Forgot password | `POST /V1/customers/resetPassword`<br/>`PUT /V1/customers/password`
+Forgot password | `POST /V1/customers/resetPassword`\<br/\>`PUT /V1/customers/password`
 Login | `POST /V1/integration/customer/token`
 Payflow Pro | Not applicable
 Send to Friend Form | Not applicable
@@ -55,9 +55,9 @@ Enable for Newsletter Subscription | Not applicable
 Enable for Send To Friend | Not applicable
 Enable for PayPal PayflowPro payment form | Not applicable
 Enable for Braintree payment form | Not applicable
-Enable for Checkout/Placing Order | `POST /V1/carts/mine/payment-information` <br/>`POST /V1/carts/mine/set-payment-information` <br/>`POST /V1/guest-carts/:cartId/payment-information` <br/>`POST /V1/guest-carts/:cartId/set-payment-information`
-Enable for Coupon Codes | `PUT /V1/carts/:cartId/coupons/:couponCode` <br/>`PUT /V1/guest-carts/:cartId/coupons/:couponCode`
+Enable for Checkout/Placing Order | `POST /V1/carts/mine/payment-information` \<br/\>`POST /V1/carts/mine/set-payment-information` \<br/\>`POST /V1/guest-carts/:cartId/payment-information` \<br/\>`POST /V1/guest-carts/:cartId/set-payment-information`
+Enable for Coupon Codes | `PUT /V1/carts/:cartId/coupons/:couponCode` \<br/\>`PUT /V1/guest-carts/:cartId/coupons/:couponCode`
 
 ### Related topics
 
-[Construct a request](/get-started/gs-web-api-request)
+[Construct a request](/get-started/gs-web-api-request.md)

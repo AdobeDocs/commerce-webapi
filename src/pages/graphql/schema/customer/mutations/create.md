@@ -1,5 +1,6 @@
 ---
 title: createCustomer mutation
+description: We recommend using the createCustomerV2 mutation to create a customer.
 edition: paas
 ---
 

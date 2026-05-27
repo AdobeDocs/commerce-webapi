@@ -1,5 +1,6 @@
 ---
 title: attributesForm query
+description: The attributesForm query retrieves EAV attributes associated with customer and customer address frontend forms.
 ---
 
 # attributesForm query
@@ -144,3 +145,4 @@ The following query returns the list of attributes metadata associated to the fo
   }
 }
 ```
+

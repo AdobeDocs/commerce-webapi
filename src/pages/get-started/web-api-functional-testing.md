@@ -125,3 +125,4 @@ interface AdapterInterface
    ```bash
    vendor/bin/phpunit -c <full xml file path>
    ```
+

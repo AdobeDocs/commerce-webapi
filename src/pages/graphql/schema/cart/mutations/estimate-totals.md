@@ -1,5 +1,6 @@
 ---
 title: estimateTotals mutation
+description: The estimateTotals mutation returns information about estimated total cost of items in cart, including taxes.
 ---
 
 # estimateTotals mutation
@@ -90,3 +91,4 @@ The response contains the calculated total cost based on the selected location a
   }
 }
 ```
+

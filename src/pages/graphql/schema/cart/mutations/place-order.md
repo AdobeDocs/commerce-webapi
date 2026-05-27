@@ -1,5 +1,6 @@
 ---
 title: placeOrder mutation
+description: The placeOrder mutation converts the cart into an order and returns an order ID. You cannot manage orders with GraphQL, because orders are part of the back...
 ---
 
 # placeOrder mutation

@@ -1,5 +1,6 @@
 ---
 title: Bundle product data types
+description: The BundleProduct data type implements the following interfaces:
 ---
 
 # Bundle product data types

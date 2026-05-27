@@ -1,5 +1,6 @@
 ---
 title: deletePaymentToken mutation
+description: The deletePaymentToken mutation deletes a payment token from the system. Use the customerPaymentTokens query to retrieve all stored payment methods associa...
 ---
 
 # deletePaymentToken mutation

@@ -4,7 +4,7 @@ description: Generate a local schema for testing and return relevant information
 edition: paas
 keywords:
   - REST
---- 
+---
 import * as Vars from '../../../data/vars.js';
 
 # Generate a local REST reference
@@ -34,7 +34,7 @@ To view the Swagger documentation for a specific store view, use this URL:
 -  The assigned store code
 -  `all`. This value only applies to the CMS and Product modules. If this value is specified, the API call affects all the merchant's stores.
 
-By default, Commerce returns documentation for resources available to anonymous users across all stores. If you specify a valid customer or admin token in the `api_key` text box in the upper right corner, Swagger returns documentation for all the endpoints the user has access to. To generate an API key, call the `POST /V1/integration/customer/token` endpoint or a 2FA endpoint such as `POST /V1/tfa/provider/google/authenticate` with the appropriate payload, as directed in [Token-based authentication](/get-started/authentication/gs-authentication-token).
+By default, Commerce returns documentation for resources available to anonymous users across all stores. If you specify a valid customer or admin token in the `api_key` text box in the upper right corner, Swagger returns documentation for all the endpoints the user has access to. To generate an API key, call the `POST /V1/integration/customer/token` endpoint or a 2FA endpoint such as `POST /V1/tfa/provider/google/authenticate` with the appropriate payload, as directed in [Token-based authentication](/get-started/authentication/gs-authentication-token.md).
 
 The generated Swagger documentation provides the capability to test REST requests. A user can enter a sample request, then press the **Try it out!** button, and Swagger returns information such as a `curl` command, a request URL, a response body, a response code, and the response header. The **Try it out!** button will not work unless a bearer authorization token has been specified.
 
@@ -62,7 +62,7 @@ To return information about all services:
 
 <InlineAlert variant="info" slots="text"/>
 
-You must specify an authorization token for an [admin](/get-started/authentication/gs-authentication-token) for more information.
+You must specify an authorization token for an [admin](/get-started/authentication/gs-authentication-token.md) for more information.
 
 ## Return the complete JSON schema
 
@@ -89,5 +89,5 @@ You may also use web server rewrite rules to redirect users trying to access the
 
 ### Related topics
 
-[Restricting access to anonymous web APIs](/rest/use-rest/anonymous-api-security/)
-[Token-based authentication](/get-started/authentication/gs-authentication-token)
+[Restricting access to anonymous web APIs](/rest/use-rest/anonymous-api-security.md)
+[Token-based authentication](/get-started/authentication/gs-authentication-token.md)

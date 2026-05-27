@@ -1,12 +1,13 @@
 ---
 title: setCustomAttributesOnInvoice mutation
+description: This mutation is automatically available on Adobe Commerce as a Cloud Service (SaaS) projects. Adobe Commerce on-premises and Cloud infrastructure (PaaS) p...
 ---
-
-import CustomAttributesAvailability from '/src/_includes/graphql/custom-attribute-availability.md'
 
 # setCustomAttributesOnInvoice mutation
 
-<CustomAttributesAvailability />
+<InlineAlert variant="important" slots="text" />
+
+This mutation is automatically available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview) (SaaS) projects. Adobe Commerce on-premises and Cloud infrastructure (PaaS) projects can [install separate modules](./index.md) to provide this functionality.
 
 The `setCustomAttributesOnInvoice` mutation sets custom attributes on a credit memo item. The mutation accepts a invoice ID and an array of custom attribute key/value pairs. It returns the updated invoice. All ID values are treated as strings.
 
@@ -87,3 +88,4 @@ mutation {
   }
 }
 ```
+

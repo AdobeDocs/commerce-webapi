@@ -1,5 +1,6 @@
 ---
 title: Attributes
+description: The attributes queries allow you to retrieve values stored as custom and Entity-Attribute-Value (EAV) attributes. Custom attributes are those added on beha...
 ---
 
 # Attributes

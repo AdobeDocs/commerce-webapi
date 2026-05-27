@@ -1,5 +1,6 @@
 ---
 title: CreditMemoItemInterface attributes and implementations
+description: CreditMemoItemInterface provides details about items in a customer's order history that were refunded. It has the following implementations:
 ---
 
 # CreditMemoItemInterface attributes and implementations
@@ -114,3 +115,4 @@ The following query returns items that were refunded in order ID `000000005`. Th
   }
 }
 ```
+

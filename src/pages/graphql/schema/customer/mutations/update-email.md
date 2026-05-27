@@ -1,5 +1,6 @@
 ---
 title: updateCustomerEmail mutation
+description: Use the updateCustomerEmail mutation to change the email address for the logged-in customer.
 ---
 
 # updateCustomerEmail mutation

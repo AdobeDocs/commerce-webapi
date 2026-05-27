@@ -221,7 +221,7 @@ You can optionally define enumerations to help prevent input errors. Adobe Comme
 
 You can describe any attribute, type definition, or other entity within a `schema.graphqls` file by appending the following to the line:
 
-`@doc(description: "<Text>")`
+`@doc(description: "\<Text\>")`
 
 For example:
 

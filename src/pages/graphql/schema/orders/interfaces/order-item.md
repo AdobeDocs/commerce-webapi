@@ -1,5 +1,6 @@
 ---
 title: OrderItemInterface attributes and implementations
+description: OrderItemInterface provides details about items in a customer's order history. It has the following implementations:
 ---
 
 # OrderItemInterface attributes and implementations
@@ -201,3 +202,4 @@ The following query returns details about order ID `000000005`. The `BundleOrder
   }
 }
 ```
+

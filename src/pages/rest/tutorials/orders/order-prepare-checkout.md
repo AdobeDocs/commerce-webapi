@@ -4,7 +4,7 @@ description: In this step of the tutorial you will prepare for checkout
 edition: paas
 keywords:
   - REST
---- 
+---
  
 # Step 6. Prepare for checkout
 
@@ -19,24 +19,25 @@ Adobe Commerce calculates shipping costs for each shipping method that can be ap
 
 <InlineAlert variant="info" slots="text"/>
 
-Use the `V1/guest-carts/<cartId>/estimate-shipping-methods` endpoint to estimate shipping costs on behalf of a guest. Do not include an authorization token.
+Use the `V1/guest-carts/\<cartId\>/estimate-shipping-methods` endpoint to estimate shipping costs on behalf of a guest. Do not include an authorization token.
 
 **Endpoint:**
 
-`POST <host>/rest/<store_code>/V1/carts/mine/estimate-shipping-methods`
+`POST \<host\>/rest/<store_code>/V1/carts/mine/estimate-shipping-methods`
 
 **Headers:**
 
 `Content-Type: application/json`
 
-`Authorization: Bearer <customer token>`
+`Authorization: Bearer \<customer token\>`
 
 **Payload:**
 
 The payload contains the shipping address.
 
-<details>
-      <summary><b>Show code sample</b></summary>
+<Details slots="heading, content" />
+
+#### Show code sample
 
 ```json
 {
@@ -60,14 +61,14 @@ The payload contains the shipping address.
 }
 ```
 
-</details>
 
 **Response:**
 
 Note that the cost for the `flatrate` shipping method is $15. The Sprite Yoga Companion Kit bundled product counts as one item. The Advanced Pilates & Yoga item does not have a shipping charge because the customer downloads this item.
 
-<details>
-      <summary><b>Show code sample</b></summary>
+<Details slots="heading, content" />
+
+#### Show code sample
 
 ```json
 [
@@ -98,7 +99,6 @@ Note that the cost for the `flatrate` shipping method is $15. The Sprite Yoga Co
 ]
 ```
 
-</details>
 
 ### Set shipping and billing information
 
@@ -108,22 +108,23 @@ Commerce returnsa list of payment options and calculates the order totals.
 
 <InlineAlert variant="info" slots="text"/>
 
-Use the `V1/guest-carts/<cartId>/shipping-information` endpoint to set the billing and shipping information on behalf of a guest. Do not include an authorization token.
+Use the `V1/guest-carts/\<cartId\>/shipping-information` endpoint to set the billing and shipping information on behalf of a guest. Do not include an authorization token.
 
 **Endpoint:**
 
-`POST <host>/rest/<store_code>/V1/carts/mine/shipping-information`
+`POST \<host\>/rest/<store_code>/V1/carts/mine/shipping-information`
 
 **Headers:**
 
 `Content-Type: application/json`
 
-`Authorization: Bearer <customer token>`
+`Authorization: Bearer \<customer token\>`
 
 **Payload:**
 
-<details>
-      <summary><b>Show code sample</b></summary>
+<Details slots="heading, content" />
+
+#### Show code sample
 
 ```json
 {
@@ -164,7 +165,6 @@ Use the `V1/guest-carts/<cartId>/shipping-information` endpoint to set the billi
 }
 ```
 
-</details>
 
 **Response:**
 
@@ -172,8 +172,9 @@ The subtotal of the order is $160, and shipping charges are $5. The grand total 
 
 The available payment methods are `banktransfer` and `checkmo`. The customer will specify a payment method in the next step.
 
-<details>
-      <summary><b>Show code sample</b></summary>
+<Details slots="heading, content" />
+
+#### Show code sample
 
 ```json
 {
@@ -342,11 +343,10 @@ The available payment methods are `banktransfer` and `checkmo`. The customer wil
 }
 ```
 
-</details>
 
 <InlineAlert variant="info" slots="text"/>
 
-If you tried this call on your own, and the value of the `shipping_amount` parameter is `0`, then you did not deactivate the "Spend $50 or more - shipping is free!" cart price rule. See [Deactivate a cart price rule](/rest/tutorials/orders/order-config-store#deactivate-a-cart-price-rule) for details.
+If you tried this call on your own, and the value of the `shipping_amount` parameter is `0`, then you did not deactivate the "Spend $50 or more - shipping is free!" cart price rule. See [Deactivate a cart price rule](/rest/tutorials/orders/order-config-store.md#deactivate-a-cart-price-rule) for details.
 
 ### Verify this step
 

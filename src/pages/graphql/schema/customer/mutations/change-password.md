@@ -1,5 +1,6 @@
 ---
 title: changeCustomerPassword mutation
+description: Use the changeCustomerPassword mutation to change the password for the logged-in customer.
 ---
 
 # changeCustomerPassword mutation

@@ -1,5 +1,6 @@
 ---
 title: assignCustomerToGuestCart mutation
+description: The assignCustomerToGuestCart mutation merges a logged-in customer's shopping cart into the specified guest cart. The mutation inactivates the customer's s...
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---

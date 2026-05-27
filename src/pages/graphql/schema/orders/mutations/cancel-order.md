@@ -1,5 +1,6 @@
 ---
 title: cancelOrder mutation | Commerce Web APIs
+description: The cancelOrder mutation allows a customer to cancel an order, passing its encoded order id and a cancellation reason.
 ---
 
 # cancelOrder mutation

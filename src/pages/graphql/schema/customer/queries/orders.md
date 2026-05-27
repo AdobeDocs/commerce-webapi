@@ -1,5 +1,6 @@
 ---
 title: customerOrders query
+description: The customerOrders query has been deprecated. Specify the orders object in the customer query instead.
 edition: paas
 ---
 

@@ -40,7 +40,7 @@ The Commerce web API framework provides integrators and developers the means to 
 
 <DiscoverBlock slots="link, text"/>
 
-[REST](/rest/)
+[REST](/rest/index.md)
 
 The REST API documentation describes the REST APIs that are available on the latest Adobe Commerce release.
 

@@ -4,7 +4,7 @@ description: In this step of the tutorial you will configure the store
 edition: paas
 keywords:
   - REST
---- 
+---
  
 # Step 1. Configure the store
 

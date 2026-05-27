@@ -9,7 +9,7 @@ keywords:
 
 Adobe Commerce and Magento Open Source GraphQL supports the HTTP GET and POST methods. You can send a query as a GET or POST request. Mutations must be POST requests. You can optionally send a GET query request in a URL. In these requests, you must specify `query` as the query string. You might need to encode the query, as shown below:
 
-`http://<host>/graphql?query=%7Bproducts(filter%3A%7Bsku%3A%7Beq%3A%2224-WB01%22%7D%7D)%7Bitems%7Bname%20sku%7D%7D%7D`
+`http://\<host\>/graphql?query=%7Bproducts(filter%3A%7Bsku%3A%7Beq%3A%2224-WB01%22%7D%7D)%7Bitems%7Bname%20sku%7D%7D%7D`
 
 The previous example is equivalent to the following query. You could send the query as either a GET or POST request.
 
@@ -76,3 +76,4 @@ Use the curl command with a separate `-H` argument to specify each request heade
 ```bash
 curl 'http://magento.config/graphql' -H 'Authorization: Bearer hoyz7k697ubv5hcpq92yrtx39i7x10um' -H 'Content-Type: application/json'  --data-binary '{"query":"query {\n  customer {\n    firstname\n    lastname\n    email\n  }\n}"}'
 ```
+

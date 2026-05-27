@@ -8,15 +8,15 @@ keywords:
 
 import * as Vars from '../../../data/vars.js';
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+| |
+|:--|
+| \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../pages/_images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
 
 # Manage company roles
 
 Within a company, customers may have different job roles, levels of responsibility, and access to information about their company. <Vars.sitedatavarb2b/> defines several types of system resources, and the Company Admin (or an integration that operates on the behalf of the Company Admin) grants or denies access to these resources using company roles. The Company Admin has access to all resources.
 
-<p><Vars.sitedatavarb2b/> defines the following types of resources:</p>
+\<p\><Vars.sitedatavarb2b/> defines the following types of resources:\</p\>
 
 -  Sales
 -  Purchase Orders
@@ -112,7 +112,7 @@ All resources that are not explicitly allowed are denied. You must specify the `
 
 **Sample Usage:**
 
-`POST <host>/rest/<store_code>/V1/company/role`
+`POST \<host\>/rest/<store_code>/V1/company/role`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -306,7 +306,7 @@ This example call adds access to all Negotiable Quote resources except "View quo
 
 **Sample Usage:**
 
-`PUT <host>/rest/<store_code>/V1/company/role/6`
+`PUT \<host\>/rest/<store_code>/V1/company/role/6`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -503,7 +503,7 @@ This call returns the `id`, role name, and set of permissions defined within the
 
 **Sample Usage:**
 
-`GET <host>/rest/<store_code>/V1/company/role/6`
+`GET \<host\>/rest/<store_code>/V1/company/role/6`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -682,7 +682,7 @@ You cannot delete a role if it is the only role defined within the company.
 
 **Sample Usage:**
 
-`DELETE <host>/rest/<store_code>/V1/company/role/5`
+`DELETE \<host\>/rest/<store_code>/V1/company/role/5`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -706,7 +706,7 @@ See [Search using REST APIs](../use-rest/performing-searches.md) for information
 
 **Sample Usage:**
 
-`GET <host>/rest/<store_code>/V1/company/role?searchCriteria[filter_groups][0][filters][0][field]=company_id&searchCriteria[filter_groups][0][filters][0][value]=2&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
+`GET \<host\>/rest/<store_code>/V1/company/role?searchCriteria[filter_groups][0][filters][0][field]=company_id&searchCriteria[filter_groups][0][filters][0][value]=2&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -1210,3 +1210,4 @@ See [Search using REST APIs](../use-rest/performing-searches.md) for information
 }
 
 ```
+

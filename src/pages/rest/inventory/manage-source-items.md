@@ -4,7 +4,7 @@ description: Assign products to other sources using the REST API
 keywords:
   - Inventory
   - REST
---- 
+---
  
 # Manage source items
 
@@ -45,7 +45,7 @@ Unassigning a source clears all quantity data. For this example, this is OK, bec
 
 **Sample usage:**
 
-`POST <host>/rest/<store_code>/V1/inventory/source-items-delete`
+`POST \<host\>/rest/<store_code>/V1/inventory/source-items-delete`
 
 **Payload:**
 
@@ -80,7 +80,7 @@ The following example assigns `1000` units of product `new_product1` to the `cen
 
 **Sample usage:**
 
-`POST <host>/rest/<store_code>/V1/inventory/source-items`
+`POST \<host\>/rest/<store_code>/V1/inventory/source-items`
 
 **Payload:**
 
@@ -123,11 +123,11 @@ Commerce returns an empty array.
 
 The following call returns all source items for `sku` = `new_product2`.
 
-See [Search using REST APIs](/rest/use-rest/performing-searches/) for information about constructing a search query.
+See [Search using REST APIs](/rest/use-rest/performing-searches.md) for information about constructing a search query.
 
 **Sample Usage:**
 
-`GET <host>/rest/<store_code>/V1/inventory/source-items?searchCriteria[filter_groups][0][filters][0][field]=sku&searchCriteria[filter_groups][0][filters][0][value]=new_product2&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
+`GET \<host\>/rest/<store_code>/V1/inventory/source-items?searchCriteria[filter_groups][0][filters][0][field]=sku&searchCriteria[filter_groups][0][filters][0][value]=new_product2&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
 
 **Payload:**
 
@@ -167,3 +167,4 @@ None
     "total_count": 2
 }
 ```
+

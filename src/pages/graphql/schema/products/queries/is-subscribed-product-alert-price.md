@@ -1,5 +1,6 @@
 ---
 title: isSubscribedProductAlertPrice query
+description: The isSubscribedProductAlertPrice query checks whether the logged-in customer is subscribed to a price drop alert for the specified product. Use this query...
 edition: saas
 ---
 

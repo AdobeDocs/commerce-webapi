@@ -6,9 +6,9 @@ keywords:
   - REST
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+| |
+|:--|
+| \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../pages/_images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
 
 # Manage negotiable quotes
 
@@ -67,7 +67,7 @@ If the negotiable quote requires a shipping address (for negotiation or tax calc
 
 **Sample Usage:**
 
-`POST <host>/rest/<store_code>/V1/negotiableQuote/request`
+`POST \<host\>/rest/<store_code>/V1/negotiableQuote/request`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -107,7 +107,7 @@ After creating the draft quote, use the [`PUT /V1/negotiableQuote/:quoteId`](neg
 
 **Sample Usage:**
 
-`POST <host>/rest/<store_code>/V1/negotiableQuote/draft`
+`POST \<host\>/rest/<store_code>/V1/negotiableQuote/draft`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -146,7 +146,7 @@ When the negotiable quote is submitted for review:
 
 **Sample Usage:**
 
-`POST <host>/rest/<store_code>/V1/negotiableQuote/submitToCustomer`
+`POST \<host\>/rest/<store_code>/V1/negotiableQuote/submitToCustomer`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -177,7 +177,7 @@ The request can be applied to one or more quotes at the same time.
 
 **Sample Usage:**
 
-`POST <host>/rest/<store_code>/V1/negotiableQuote/pricesUpdated`
+`POST \<host\>/rest/<store_code>/V1/negotiableQuote/pricesUpdated`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -204,7 +204,7 @@ A quote must meet the following conditions to set the shipping method:
 
 **Sample Usage:**
 
-`PUT <host>/rest/<store_code>/V1/negotiableQuote/3/shippingMethod`
+`PUT \<host\>/rest/<store_code>/V1/negotiableQuote/3/shippingMethod`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -238,7 +238,7 @@ Declining a quote removes all custom pricing from the quote. If the buyer places
 
 **Sample Usage:**
 
-`POST <host>/rest/<store_code>/V1/negotiableQuote/decline`
+`POST \<host\>/rest/<store_code>/V1/negotiableQuote/decline`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -267,7 +267,7 @@ Commerce returns all the comments associated with the specified quote ID. The co
 
 **Sample Usage:**
 
-`GET <host>/rest/<store_code>/V1/negotiableQuote/87/comments`
+`GET \<host\>/rest/<store_code>/V1/negotiableQuote/87/comments`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -366,7 +366,7 @@ Use the `attachmentContent` request to retrieve the files (in base64 format) att
 
 **Sample Usage:**
 
-`GET <host>/rest/<store_code>/V1/negotiableQuote/attachmentContent`
+`GET \<host\>/rest/<store_code>/V1/negotiableQuote/attachmentContent`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -390,3 +390,4 @@ Use the `attachmentContent` request to retrieve the files (in base64 format) att
   ]
 }
 ```
+

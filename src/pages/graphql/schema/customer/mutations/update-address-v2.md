@@ -1,5 +1,6 @@
 ---
 title: updateCustomerAddressV2 mutation
+description: Use the updateCustomerAddressV2 mutation to update the customer's address.
 edition: saas
 ---
 

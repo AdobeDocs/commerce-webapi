@@ -5,6 +5,6 @@ keywords:
   - REST
 edition: saas
 frameSrc: https://adobe-commerce-saas.redoc.ly
---- 
+---
 
 # REST endpoints for Adobe Commerce as a Cloud Service

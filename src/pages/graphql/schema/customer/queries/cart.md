@@ -1,5 +1,6 @@
 ---
 title: customerCart query
+description: The customerCart query returns the active cart for the logged-in customer. If the cart does not exist, the query creates one. The customer's authorization...
 ---
 
 # customerCart query
@@ -80,3 +81,4 @@ The following query lists the products in the logged-in customer's cart:
   }
 }
 ```
+

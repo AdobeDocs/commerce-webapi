@@ -1,5 +1,6 @@
 ---
 title: addWishlistItemsToCart mutation
+description: The addWishlistItemsToCart mutation moves items from the specified wish list to the customer's cart.
 ---
 
 # addWishlistItemsToCart mutation

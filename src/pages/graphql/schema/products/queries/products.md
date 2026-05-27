@@ -1,9 +1,8 @@
 ---
 title: products query
+description: Adobe Commerce as a Cloud Service (SaaS) does not support this products query. Use the Catalog Service products query instead. If you are migrating from Pa...
 edition: paas
 ---
-
-import CustomAttributeFilterProduct from '/src/_includes/graphql/examples/custom-attribute-filter-product.md'
 
 # products query
 
@@ -143,7 +142,7 @@ To enable a custom attribute to return layered navigation and aggregation data f
 
 When the `category_id` field is specified as part of the `ProductAttributeFilterInput` input object, the `includeDirectChildrenOnly` field of the `AggregationsCategoryFilterInput` object can be used in the response to refine the returned aggregations. If `includeDirectChildrenOnly` is set to true, then the aggregations will contain only direct child categories. Otherwise, the category aggregations will follow the default algorithm. The default value is false.
 
-The `Products` object also contains an array of items that match the search criteria. [ProductInterface](../interfaces/index.md/) describes the possible contents of this object.
+The `Products` object also contains an array of items that match the search criteria. [ProductInterface](../interfaces/index.md) describes the possible contents of this object.
 
 ## Sample queries
 

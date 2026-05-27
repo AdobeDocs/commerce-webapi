@@ -1,5 +1,6 @@
 ---
 title: mergeCarts mutation
+description: The mergeCarts mutation transfers the contents of a guest cart into the cart of a logged-in customer. This mutation must be run on behalf of a logged-in cu...
 ---
 
 # mergeCarts mutation

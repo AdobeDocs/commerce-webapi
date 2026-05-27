@@ -38,9 +38,10 @@ bin/magento config:set oauth/consumer/enable_integration_as_bearer 1
 If you are trying to upgrade from a previous version and need to update your integration implementation to properly utilize the OAuth workflow, review [OAuth-based Authentication](gs-authentication-oauth.md). Otherwise, you can partially update your integration to simply store and utilize all four credentials to sign your requests.
 
 There is a comprehensive guide for this on the OAuth-based authentication page, but can also be done in isolation without supporting the entire OAuth workflow. For example, in the following script the four credentials are used to create a new CMS page without using external libraries or implementing the full OAuth handshake.
-<p></p>
-<details>
-      <summary><b>standalone-oauth.php </b></summary>
+\<p\>\</p\>
+<Details slots="heading, content" />
+
+#### standalone-oauth.php
 
 ```php
 <?php
@@ -160,7 +161,6 @@ $request->headers[] = $oauthSigner->sign(
 echo send($request);
 ```
 
-</details>
 
 ## Admin and customer access tokens
 
@@ -200,9 +200,9 @@ A access token request contains three basic elements:
 
 Component | Specifies
 --- | ---
-Endpoint |  A combination of the *server* that fulfills the request, the web service, and the `resource` against which the request is being made.<br/><br/>For example, in the `POST <host>/rest/<store_code>/V1/integration/customer/token` endpoint:<br/>The server is `magento.host/index.php/`,<br/> the web service is `rest`.<br/> and the resource is `/V1/integration/customer/token`.
+Endpoint |  A combination of the *server* that fulfills the request, the web service, and the `resource` against which the request is being made.\<br/\>\<br/\>For example, in the `POST \<host\>/rest/<store_code>/V1/integration/customer/token` endpoint:\<br/\>The server is `magento.host/index.php/`,\<br/\> the web service is `rest`.\<br/\> and the resource is `/V1/integration/customer/token`.
 Content type | The content type of the request body. Set this value to either `"Content-Type:application/json"` or `"Content-Type:application/xml"`.
-Credentials | The username and password for a Commerce account.<br/><br/>To specify these credentials in a JSON request body, include code similar to the following in the call: <br/><br/>`{"username":"<USER-NAME>", "password":"<PASSWORD>"}`<br/><br/>To specify these credentials in XML, include code similar to the following in the call:<br/><br/>`<login><username>customer1</username><password>customer1pw</password></login>`
+Credentials | The username and password for a Commerce account.\<br/\>\<br/\>To specify these credentials in a JSON request body, include code similar to the following in the call: \<br/\>\<br/\>`{"username":"<USER-NAME>", "password":"\<PASSWORD\>"}`\<br/\>\<br/\>To specify these credentials in XML, include code similar to the following in the call:\<br/\>\<br/\>`\<login\>\<username\>customer1\</username\>\<password\>customer1pw\</password\>\</login\>`
 
 ### Examples
 
@@ -238,7 +238,7 @@ A successful request returns a response body with the token, as follows:
 
 Any web API call that accesses a resource that requires a permission level higher than anonymous must contain the authentication token in the header To do this, specify a HTTP header in the following format:
 
-`Authorization: Bearer <authentication token>`
+`Authorization: Bearer \<authentication token\>`
 
 ### Admin access
 
@@ -246,14 +246,14 @@ Admins can access any resources for which they are authorized.
 
 For example, to make a web API call with an admin token:
 
-`curl -X GET "http://<host>/rest/default/V1/customers/2" -H "Authorization: Bearer vbnf3hjklp5iuytre"`
+`curl -X GET "http://\<host\>/rest/default/V1/customers/2" -H "Authorization: Bearer vbnf3hjklp5iuytre"`
 
 ### Customer access
 
 Customers can access only resources with `self` permissions.
 
 For example, to make a web API call with a customer token:
-`curl -X GET "http://<host>/rest/default/V1/customers/me" -H "Authorization: Bearer asdf3hjklp5iuytre"`
+`curl -X GET "http://\<host\>/rest/default/V1/customers/me" -H "Authorization: Bearer asdf3hjklp5iuytre"`
 
 #### Related topics
 

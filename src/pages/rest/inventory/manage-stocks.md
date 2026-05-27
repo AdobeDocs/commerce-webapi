@@ -4,7 +4,7 @@ description: Map your sources to sales channels and link to salable quantities a
 keywords:
   - Inventory
   - REST
---- 
+---
  
 # Manage stocks
 
@@ -46,7 +46,7 @@ Only one stock can be mapped to each sales channel. If you assign a sales channe
 
 **Sample usage:**
 
-`POST <host>/rest/<store_code>/V1/inventory/stocks`
+`POST \<host\>/rest/<store_code>/V1/inventory/stocks`
 
 **Payload:**
 
@@ -78,7 +78,7 @@ If you change a sales channel between stocks, we recommend that you first comple
 
 **Sample Usage:**
 
-`PUT <host>/rest/<store_code>/V1/inventory/stocks/4`
+`PUT \<host\>/rest/<store_code>/V1/inventory/stocks/4`
 
 **Payload:**
 
@@ -108,7 +108,7 @@ This call returns detailed information about the specified stock.
 
 **Sample Usage:**
 
-`GET <host>/rest/<store_code>/V1/inventory/stocks/4`
+`GET \<host\>/rest/<store_code>/V1/inventory/stocks/4`
 
 **Payload:**
 
@@ -138,7 +138,7 @@ You cannot delete a stock if it is assigned to a sales channel. You can unassign
 
 **Sample Usage:**
 
-`DELETE <host>/rest/<store_code>/V1/inventory/stocks/4`
+`DELETE \<host\>/rest/<store_code>/V1/inventory/stocks/4`
 
 **Payload:**
 
@@ -154,11 +154,11 @@ Commerce returns an empty array.
 
 The following call returns all stocks whose name contains the string `Stock`.
 
-See [Search using REST APIs](/rest/use-rest/performing-searches/) for information about constructing a search query.
+See [Search using REST APIs](/rest/use-rest/performing-searches.md) for information about constructing a search query.
 
 **Sample Usage:**
 
-`GET <host>/rest/<store_code>/V1/inventory/stocks?searchCriteria[filter_groups][0][filters][0][field]=name&searchCriteria[filter_groups][0][filters][0][value]=%25Stock%25&searchCriteria[filter_groups][0][filters][0][condition_type]=like`
+`GET \<host\>/rest/<store_code>/V1/inventory/stocks?searchCriteria[filter_groups][0][filters][0][field]=name&searchCriteria[filter_groups][0][filters][0][value]=%25Stock%25&searchCriteria[filter_groups][0][filters][0][condition_type]=like`
 
 **Payload:**
 
@@ -166,8 +166,9 @@ None
 
 **Response:**
 
-<details>
-      <summary><b>Show code sample</b></summary>
+<Details slots="heading, content" />
+
+#### Show code sample
 
 ```json
 {
@@ -214,4 +215,3 @@ None
 }
 ```
 
-</details>

@@ -180,10 +180,11 @@ To simulate the OAuth 1.0a token exchange flow:
 1. When the token exchange completes successfully, the user is redirected back to the Integrations grid. The newly-created integration should be in the Active state.
 1. Click on the edit icon of the integration and check the Integration Details on the Integration Info tab. It should show all the credentials that can be used to make an authenticated API request using OAuth 1.0.
 
-<p></p>
+\<p\>\</p\>
 
-<details>
-      <summary><b>checklogin.php</b></summary>
+<Details slots="heading, content" />
+
+#### checklogin.php
 
 ```php
 <\?php
@@ -218,10 +219,10 @@ $accessToken = $oAuthClient->requestAccessToken(
 header("location: $callback");
 ```
 
-</details>
 
-<details>
-      <summary><b>endpoint.php</b></summary>
+<Details slots="heading, content" />
+
+#### endpoint.php
 
 ```php
 <?php
@@ -242,10 +243,10 @@ header("HTTP/1.0 200 OK");
 echo "Response";
 ```
 
-</details>
 
-<details>
-      <summary><b>login.php</b></summary>
+<Details slots="heading, content" />
+
+#### login.php
 
 ```php
 <?php
@@ -284,10 +285,10 @@ echo <<<HTML
 HTML;
 ```
 
-</details>
 
-<details>
-      <summary><b>OauthClient.php </b></summary>
+<Details slots="heading, content" />
+
+#### OauthClient.php
 
 Change the instances of `http://my.host` in this example to a valid base URL.
 
@@ -467,7 +468,6 @@ class OauthClient extends AbstractService
 }
 ```
 
-</details>
 
 #### Related topics
 

@@ -4,7 +4,7 @@ description: Manage your stock locations using the REST API
 keywords:
   - Inventory
   - REST
---- 
+---
  
 # Manage sources
 
@@ -75,7 +75,7 @@ The value of the `source_code` parameter can contain upper and lower case letter
 
 **Sample Usage:**
 
-`POST <host>/rest/<store_code>/V1/inventory/sources`
+`POST \<host\>/rest/<store_code>/V1/inventory/sources`
 
 **Payload:**
 
@@ -119,7 +119,7 @@ This example updates the contact information (`contact_name`, `email`, and `phon
 
 **Sample Usage:**
 
-`PUT <host>/rest/<store_code>/V1/inventory/sources/central`
+`PUT \<host\>/rest/<store_code>/V1/inventory/sources/central`
 
 **Payload:**
 
@@ -148,7 +148,7 @@ This call returns detailed information about the specified source.
 
 **Sample Usage:**
 
-`GET <host>/rest/<store_code>/V1/inventory/sources/central`
+`GET \<host\>/rest/<store_code>/V1/inventory/sources/central`
 
 **Payload:**
 
@@ -181,11 +181,11 @@ None
 
 The following call returns all sources that are located in the United States (`country_id` = `US`)
 
-See [Search using REST APIs](/rest/use-rest/performing-searches/) for information about constructing a search query.
+See [Search using REST APIs](/rest/use-rest/performing-searches.md) for information about constructing a search query.
 
 **Sample Usage:**
 
-`GET <host>/rest/<store_code>/V1/inventory/sources?searchCriteria[filter_groups][0][filters][0][field]=country_id&searchCriteria[filter_groups][0][filters][0][value]=US&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
+`GET \<host\>/rest/<store_code>/V1/inventory/sources?searchCriteria[filter_groups][0][filters][0][field]=country_id&searchCriteria[filter_groups][0][filters][0][value]=US&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
 
 **Payload:**
 
@@ -193,8 +193,9 @@ None
 
 **Response:**
 
-<details>
-      <summary><b>Show code sample</b></summary>
+<Details slots="heading, content" />
+
+#### Show code sample
 
 ```json
 {
@@ -263,4 +264,3 @@ None
 }
 ```
 
-</details>

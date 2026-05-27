@@ -1,5 +1,6 @@
 ---
 title: guestOrder query
+description: Use the guestOrder query to retrieve details about an order placed by a guest or customer who is not logged in. To retrieve this information, the guest mus...
 ---
 
 # guestOrder query
@@ -69,3 +70,4 @@ The `guestOrder` reference provides detailed information about the types and fie
   }
 }
 ```
+

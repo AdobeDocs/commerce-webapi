@@ -1,5 +1,6 @@
 ---
 title: getHostedProUrl query
+description: The getHostedProUrl query is required to complete a transaction when the PayPal Website Payments Pro Hosted Solution payment method is selected. The query...
 edition: paas
 ---
 

@@ -6,9 +6,9 @@ keywords:
   - REST
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+| |
+|:--|
+| \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../pages/_images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
 
 # Integrate with the NegotiableQuote module
 
@@ -44,14 +44,14 @@ The negotiated price set in the negotiable quote is exactly the price that will 
 
 Status | Description | Available actions to seller
 --- | -- | ---
-Draft | The seller has created an empty quote that is not visible to the buyer. | View, submit, save as draft. <br/><br/>Edit the name, expiration date, and item quantity, add or remove product items, enter a proposed price, add comments.
-New | The buyer submitted the quote, but the seller has not opened it yet. The buyer can edit the quote. <br/><br/>The system creates a new quote record with its own ID. | View
-Open | The seller has opened the submitted quote and is reviewing/modifying it. The seller can edit the quote, but the buyer cannot. | View, submit, decline, save as draft. <br/><br/>Edit the expiration date, item quantity, add/remove product items, enter a proposed price, add shipping method and shipping price, add comments.
+Draft | The seller has created an empty quote that is not visible to the buyer. | View, submit, save as draft. \<br/\>\<br/\>Edit the name, expiration date, and item quantity, add or remove product items, enter a proposed price, add comments.
+New | The buyer submitted the quote, but the seller has not opened it yet. The buyer can edit the quote. \<br/\>\<br/\>The system creates a new quote record with its own ID. | View
+Open | The seller has opened the submitted quote and is reviewing/modifying it. The seller can edit the quote, but the buyer cannot. | View, submit, decline, save as draft. \<br/\>\<br/\>Edit the expiration date, item quantity, add/remove product items, enter a proposed price, add shipping method and shipping price, add comments.
 Submitted | The seller has reviewed the quote and has sent it back to buyer. The seller cannot edit the quote. | View
 Client reviewed | The buyer has opened the quote submitted by seller and is modifying it, by changing items or adding a shipping address. The seller cannot edit the quote. | View
-Updated | The buyer has re-submitted the quote to seller. The seller can edit the quote, but the buyer cannot. | View, submit, decline, save as draft.<br/><br/>Edit the expiration date, item quantity, add/remove product items, enter a proposed price, add shipping method and shipping price, add comments.
+Updated | The buyer has re-submitted the quote to seller. The seller can edit the quote, but the buyer cannot. | View, submit, decline, save as draft.\<br/\>\<br/\>Edit the expiration date, item quantity, add/remove product items, enter a proposed price, add shipping method and shipping price, add comments.
 Ordered | The buyer has purchased the quote, and Adobe Commerce converts the quote to an order. Neither the seller nor the buyer can edit the quote. | View
-Closed | The buyer has cancelled the quote and thus stopped the negotiation process. Neither the seller nor the buyer can edit the quote. <br/><br/>The buyer clicks the **Close** button from the Quote details page. (Not available using Web API) | View
+Closed | The buyer has cancelled the quote and thus stopped the negotiation process. Neither the seller nor the buyer can edit the quote. \<br/\>\<br/\>The buyer clicks the **Close** button from the Quote details page. (Not available using Web API) | View
 Declined | The seller has declined the quote. All custom pricing (if any) is removed from the quote. In admin panel, the quote is locked for editing.                                                                                                 | View
 Expired | The expiration date has passed on a quote under buyer review. | View
 

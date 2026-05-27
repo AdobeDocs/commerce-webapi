@@ -1,5 +1,6 @@
 ---
 title: recaptchaFormConfig query
+description: The recaptchaFormConfig query returns information about the reCaptcha configuration for the specified form type. To query multiple form types, use the reca...
 ---
 
 # recaptchaFormConfig query
@@ -80,3 +81,4 @@ Otherwise, the `configurations` object contains a null response:
   }
 }
 ```
+

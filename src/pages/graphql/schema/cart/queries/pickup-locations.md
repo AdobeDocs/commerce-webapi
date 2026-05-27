@@ -1,5 +1,6 @@
 ---
 title: pickupLocations query
+description: Use the pickupLocations query to retrieve a list of available pickup locations.
 contributor_name: Oleksandr Kravchuk
 contributor_link: https://github.com/swnsma
 ---

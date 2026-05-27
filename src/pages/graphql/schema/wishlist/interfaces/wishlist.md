@@ -1,5 +1,6 @@
 ---
 title: WishlistItemInterface attributes and implementations
+description: WishlistItemInterface provides details about items in a wish list. It has the following implementations:
 ---
 
 # WishlistItemInterface attributes and implementations
@@ -114,3 +115,4 @@ mutation {
   }
 }
 ```
+

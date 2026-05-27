@@ -4,7 +4,7 @@ description: In this tutorial you will configure a store, create a customer, quo
 edition: paas
 keywords:
   - REST
---- 
+---
 import * as Vars from '../../../../data/vars.js';
 
 # Order processing tutorial
@@ -25,9 +25,9 @@ Complete the following prerequisites:
 
 *  Set up [two-factor authentication](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication/). This tutorial assumes Google Authenticator is your 2FA solution.
 
-*  Know how to construct a REST call in Commerce. See [Construct a request](/get-started/gs-web-api-request) for details.
+*  Know how to construct a REST call in Commerce. See [Construct a request](/get-started/gs-web-api-request.md) for details.
 
-*  Find the Commerce REST API documentation. You can view the [static REST API documentation on devdocs](../../reference/index.md) or [generate a local API reference](/rest/use-rest/generate-local/).
+*  Find the Commerce REST API documentation. You can view the [static REST API documentation on devdocs](../../reference/index.md) or [generate a local API reference](/rest/quick-reference/generate-local.md).
 
 *  Find the Commerce Merchant documentation. Refer to [Getting Started with <Vars.sitedatavarce/> 2.1](https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home) for information about the Luma store that is created when you install Commerce with the sample data.
 

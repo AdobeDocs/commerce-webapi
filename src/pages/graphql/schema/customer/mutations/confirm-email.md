@@ -1,5 +1,6 @@
 ---
 title: confirmEmail mutation | Commerce Web APIs
+description: The confirmEmail mutation completes the customer activation process by confirming validity of a customer's email address. Adobe Commerce sends a confirmati...
 ---
 
 # confirmEmail mutation

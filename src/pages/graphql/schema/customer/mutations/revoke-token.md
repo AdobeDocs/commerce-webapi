@@ -1,5 +1,6 @@
 ---
 title: revokeCustomerToken mutation
+description: The revokeCustomerToken mutation revokes the customer's token. It returns true if the token was successfully revoked.
 ---
 
 # revokeCustomerToken mutation

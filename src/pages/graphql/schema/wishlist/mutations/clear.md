@@ -1,5 +1,6 @@
 ---
 title: clearWishlist mutation
+description: The clearWishlist mutation removes all items from a wishlist for the logged in customer.
 ---
 
 # clearWishlist mutation
@@ -81,3 +82,4 @@ mutation {
   }
 }
 ```
+

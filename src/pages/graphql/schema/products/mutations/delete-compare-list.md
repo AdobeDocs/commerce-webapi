@@ -1,5 +1,6 @@
 ---
 title: deleteCompareList mutation
+description: The deleteCompareList mutation deletes the specified comparison list. Run this mutation in the following circumstances:
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---

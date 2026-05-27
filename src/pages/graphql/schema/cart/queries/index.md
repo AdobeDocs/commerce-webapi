@@ -1,5 +1,6 @@
 ---
 title: Cart queries
+description: The cart query returns the content of the shopper's cart. Adobe Commerce returns the Cart object. This object is also returned by numerous mutations, inclu...
 ---
 
 # Cart queries

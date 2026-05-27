@@ -1,14 +1,15 @@
 ---
 title: createCompanyUser mutation
+description: The createCompanyUser mutation allows an existing company user who is assigned a role that contains the MagentoCompany::usersedit permission to create a ne...
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+| |
+|:--|
+| \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../pages/_images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
 
 # createCompanyUser mutation
 

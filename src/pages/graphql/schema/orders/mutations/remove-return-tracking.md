@@ -1,5 +1,6 @@
 ---
 title: removeReturnTracking mutation
+description: The removeReturnTracking mutation deletes a customer-entered entry that defines the shipping carrier and tracking number for a return request. Use the cust...
 ---
 
 # removeReturnTracking mutation

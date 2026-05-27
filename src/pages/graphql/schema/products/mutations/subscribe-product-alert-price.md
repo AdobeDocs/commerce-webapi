@@ -1,5 +1,6 @@
 ---
 title: subscribeProductAlertPrice mutation
+description: The subscribeProductAlertPrice mutation subscribes the logged-in customer to a price drop alert for the specified product. When the product price decreases...
 edition: saas
 ---
 

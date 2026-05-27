@@ -1,5 +1,6 @@
 ---
 title: isSubscribedProductAlertStock query
+description: The isSubscribedProductAlertStock query checks whether the logged-in customer is subscribed to a stock availability alert for the specified product. Use th...
 edition: saas
 ---
 

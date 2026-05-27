@@ -1,5 +1,6 @@
 ---
 title: contactUs mutation
+description: The contactUs mutation submits the contents of the Contact Us form.
 ---
 
 # contactUs mutation
@@ -49,3 +50,4 @@ mutation {
   }
 }
 ```
+

@@ -1,5 +1,6 @@
 ---
 title: urlResolver query
+description: The urlResolver query has been deprecated. Use the route query instead.
 edition: paas
 ---
 

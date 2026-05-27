@@ -1,5 +1,6 @@
 ---
 title: category query
+description: The category query has been deprecated. Use the categories query instead.
 edition: paas
 ---
 

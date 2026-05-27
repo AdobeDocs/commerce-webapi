@@ -1,5 +1,6 @@
 ---
 title: ShipmentItemInterface attributes and implementations
+description: ShipmentItemInterface provides details about items in a customer's order history that were shipped. It has the following implementations:
 ---
 
 # ShipmentItemInterface attributes and implementations
@@ -167,3 +168,4 @@ The following query returns shipping details about order ID `000000005`. The `Bu
   }
 }
 ```
+

@@ -1,5 +1,6 @@
 ---
 title: storeConfig query
+description: The storeConfig query defines information about a store's configuration. You can query a non-default store by changing the header in your GraphQL request.
 ---
 
 # storeConfig query
@@ -323,3 +324,4 @@ The following query returns the store's order cancellation settings, indicating 
   }
 }
 ```
+

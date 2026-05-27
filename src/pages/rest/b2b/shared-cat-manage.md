@@ -8,13 +8,13 @@ keywords:
 
 import * as Vars from '../../../data/vars.js';
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+| |
+|:--|
+| \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../pages/_images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
 
 # Manage custom shared catalogs
 
-<p><Vars.sitedatavarb2b/> provides two types of shared catalog: public and custom. A public catalog is the default shared catalog. It is automatically displayed to all guest customers and to logged-in customers that are not company users. The seller assigns a custom shared catalog to specific companies as configured by admin. There can only be one public catalog, and it cannot be deleted.</p>
+\<p\><Vars.sitedatavarb2b/> provides two types of shared catalog: public and custom. A public catalog is the default shared catalog. It is automatically displayed to all guest customers and to logged-in customers that are not company users. The seller assigns a custom shared catalog to specific companies as configured by admin. There can only be one public catalog, and it cannot be deleted.\</p\>
 
 **Service name:**
 
@@ -49,7 +49,7 @@ When B2B is enabled, the system creates a public shared catalog named `Default (
 
 **Sample Usage:**
 
-`POST <host>/rest/<store_code>/V1/sharedCatalog`
+`POST \<host\>/rest/<store_code>/V1/sharedCatalog`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -78,7 +78,7 @@ You cannot change the `type` from public (`1`) to custom (`0`). If you need to r
 
 **Sample Usage:**
 
-`PUT <host>/rest/<store_code>/V1/sharedCatalog/2`
+`PUT \<host\>/rest/<store_code>/V1/sharedCatalog/2`
 
 ```json
 {
@@ -105,7 +105,7 @@ This call returns information about the specified shared catalog.
 
 **Sample Usage:**
 
-`GET <host>/rest/<store_code>/V1/sharedCatalog/2`
+`GET \<host\>/rest/<store_code>/V1/sharedCatalog/2`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -137,7 +137,7 @@ Only custom shared catalogs can be deleted. When a custom catalog is deleted, th
 
 **Sample Usage:**
 
-`DELETE <host>/rest/<store_code>/V1/sharedCatalog/2`
+`DELETE \<host\>/rest/<store_code>/V1/sharedCatalog/2`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -161,7 +161,7 @@ See [Search using REST APIs](../use-rest/performing-searches.md) for information
 
 **Sample Usage:**
 
-`GET <host>/rest/<store_code>/V1/sharedCatalog?searchCriteria[filter_groups][0][filters][0][field]=type&searchCriteria[filter_groups][0][filters][0][value]=0&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
+`GET \<host\>/rest/<store_code>/V1/sharedCatalog?searchCriteria[filter_groups][0][filters][0][field]=type&searchCriteria[filter_groups][0][filters][0][value]=0&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -204,3 +204,4 @@ See [Search using REST APIs](../use-rest/performing-searches.md) for information
     "total_count": 1
 }
 ```
+
