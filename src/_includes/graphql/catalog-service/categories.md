@@ -6,7 +6,7 @@ Field | Data type | Description
 --- | --- | ---
 `availableSortBy` | [String] | List of available sort by options. For example, `name`, `position`, or `size`. Maps to the category configuration *Display Settings > Available Product List Sort By* in the Commerce Admin.
 `children` | [String!] | List of subcategories by category ID. For example, `123`, `456`, or `789`.
-`defaultSortBy` | String | Default sort by option. For example, `name`, `position`, or `size`. Maps to the category configuration `Display Settings > Available Product List Sort By` in the Commerce Admin.
+`defaultSortBy` | String | Default sort by option. For example, `name`, `position`, or `size`. Maps to the category configuration *Display Settings > Available Product List Sort By* in the Commerce Admin.
 `id` | ID! | The category ID. For example, `123`, `456`, or `789`. Maps to Display Settings > Default Product List Sort By in the Admin.
 `level` | Int | Indicates the depth of the category within the tree. The root category is a level 1 category. For example, `men` is level 1, `men/clothing` is level 2, and `men/clothing/shorts` is level 3.
 `name` | String | The category display name. For example, `Electronics`, `Clothing`, or `Books`.
