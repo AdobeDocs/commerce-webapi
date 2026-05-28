@@ -4,7 +4,6 @@ description: A list of tutorials on the Commerce REST APIs
 keywords:
   - REST
 ---
-import * as Vars from '../../../data/vars.js';
 
 # Tutorials
 
@@ -22,7 +21,7 @@ The REST tutorials provide an introduction to Adobe Commerce web APIs. In genera
 
 ## Complete these prerequisites
 
-Before you begin any tutorial, make sure you know the basics about <Vars.sitedatavarce/>
+Before you begin any tutorial, make sure you know the basics about Magento Open Source
 
 *  Install an Commerce instance with sample data.
 
@@ -34,7 +33,7 @@ Before you begin any tutorial, make sure you know the basics about <Vars.sitedat
 
 *  Find the Commerce REST API documentation. You can view the [static REST API documentation on devdocs](../reference/index.md) or [generate a local API reference](/rest/quick-reference/generate-local.md).
 
-*  Find the Commerce Merchant documentation. Refer to [Getting Started with <Vars.sitedatavarce/>](https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home) for information about the Luma store that is created when you install Commerce with the sample data.
+*  Find the Commerce Merchant documentation. Refer to [Getting Started with Magento Open Source](https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home) for information about the Luma store that is created when you install Commerce with the sample data.
 
 ## Performing steps
 

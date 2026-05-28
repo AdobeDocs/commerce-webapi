@@ -6,15 +6,14 @@ keywords:
   - REST
 ---
 
-import * as Vars from '../../../data/vars.js';
 
 | |
 |:--|
-| \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../pages/_images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
+| \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../../images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
 
 # Manage custom shared catalogs
 
-\<p\><Vars.sitedatavarb2b/> provides two types of shared catalog: public and custom. A public catalog is the default shared catalog. It is automatically displayed to all guest customers and to logged-in customers that are not company users. The seller assigns a custom shared catalog to specific companies as configured by admin. There can only be one public catalog, and it cannot be deleted.\</p\>
+\<p\>B2B for Adobe Commerce provides two types of shared catalog: public and custom. A public catalog is the default shared catalog. It is automatically displayed to all guest customers and to logged-in customers that are not company users. The seller assigns a custom shared catalog to specific companies as configured by admin. There can only be one public catalog, and it cannot be deleted.\</p\>
 
 **Service name:**
 

@@ -100,7 +100,7 @@ The default filters for advanced searches can use the following [field] value:
 *  `price.to`
 *  `sku`
 
-The filter can also be any searchable attribute. To make an attribute searchable, set **Stores** > Attributes > **Product** > <selected_attribute> >  **Storefront Properties** > **Use in Search** to **Yes**. The search query can include attributes such as the product name, SKU, or any other custom attribute.
+The filter can also be any searchable attribute. To make an attribute searchable, set **Stores** \> Attributes \> **Product** \> `<selected_attribute>` \>  **Storefront Properties** \> **Use in Search** to **Yes**. The search query can include attributes such as the product name, SKU, or any other custom attribute.
 
 Advanced searches can use any condition type to make comparisions, such as `like`, `eq`, or `finset`. See [Search using REST](/rest/use-rest/performing-searches.md) describes condition types.
 

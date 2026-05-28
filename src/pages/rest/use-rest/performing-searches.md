@@ -4,7 +4,6 @@ description: How to search using REST endpoints with examples
 keywords:
   - REST
 ---
-import * as Vars from '../../../data/vars.js';
 
 # Search using REST endpoints
 
@@ -61,7 +60,7 @@ The following sections provide examples of each type of search. These examples u
 
 ## Simple search
 
-The <Vars.sitedatavarce/> sample data uses the `category_gear` field to describe the categories for each item listed under Gear on sample store. Each item can be assigned to multiple categories. Electronics are assigned the code 86. The following example returns all gear tagged as electronics.
+The Magento Open Source sample data uses the `category_gear` field to describe the categories for each item listed under Gear on sample store. Each item can be assigned to multiple categories. Electronics are assigned the code 86. The following example returns all gear tagged as electronics.
 
 <CodeBlock slots="heading, code" repeat="2" languages="HTTP, HTTP" />
 

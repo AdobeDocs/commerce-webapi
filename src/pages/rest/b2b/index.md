@@ -6,15 +6,14 @@ keywords:
   - REST
 ---
 
-import * as Vars from '../../../data/vars.js';
 
 | |
 |:--|
-| \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../pages/_images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
+| \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../../images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
 
 # B2B integrations
 
-Unlike the standard business-to-consumer model, <Vars.sitedatavarb2b/> (Business to Business) is designed to meet the needs of sellers (Commerce merchants) whose customers are primarily companies—possibly with complex organizational structures and multiple users with various roles and levels of permission.
+Unlike the standard business-to-consumer model, B2B for Adobe Commerce (Business to Business) is designed to meet the needs of sellers (Commerce merchants) whose customers are primarily companies—possibly with complex organizational structures and multiple users with various roles and levels of permission.
 
 There are two basic actors in B2B model:
 
@@ -31,7 +30,7 @@ The seller and a buyer representing a company can negotiate the price of an orde
 
 ## B2B Modules
 
-\<p\><Vars.sitedatavarb2b/> is a set of modules that are installed on top of <Vars.sitedatavaree/>. The following table lists the modules provided with B2B.\</p\>
+\<p\>B2B for Adobe Commerce is a set of modules that are installed on top of Adobe Commerce. The following table lists the modules provided with B2B.\</p\>
 
 Name | Description | REST enabled?
 --- | --- | ---
@@ -61,4 +60,4 @@ SharedCatalog | Defines the visibility of products and prices in the catalog and
 ## Related information
 
 - [Install the B2B extension](https://experienceleague.adobe.com/docs/commerce-admin/b2b/install.html)
-- [Getting started with <Vars.sitedatavarb2b/>](https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home)
+- [Getting started with B2B for Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home)

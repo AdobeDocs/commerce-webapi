@@ -7,15 +7,12 @@ keywords:
   - REST
 ---
 
-import * as Vars from '../../../data/vars.js';
 
 # Asynchronous web endpoints
 
 An asynchronous web endpoint intercepts messages to a Web API and writes them to the message queue. Each time the system accepts such an API request, it generates a UUID identifier. Adobe Commerce includes this UUID when it adds the message to the queue. Then, a consumer reads the messages from the queue and executes them one-by-one.
 
-<InlineAlert variant="success" slots="text"/>
-
-<Edition slots="text" backgroundcolor="blue"/>
+<InlineAlert variant="success" slots="text1, text2"/>
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 

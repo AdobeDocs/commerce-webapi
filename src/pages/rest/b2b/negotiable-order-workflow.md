@@ -6,11 +6,10 @@ keywords:
   - REST
 ---
 
-import * as Vars from '../../../data/vars.js';
 
 | |
 |:--|
-| \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../pages/_images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
+| \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../../images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
 
 # Place a negotiable quote order
 
@@ -18,7 +17,7 @@ This topic describes how REST calls can be used to place items in a shopping car
 
 ## Prerequisites
 
--  You have [installed and enabled](https://experienceleague.adobe.com/docs/commerce-admin/b2b/install.html) <Vars.sitedatavarb2b/>.
+-  You have [installed and enabled](https://experienceleague.adobe.com/docs/commerce-admin/b2b/install.html) B2B for Adobe Commerce.
 -  You have [created a company](company-object.md).
 -  You have an integration or [admin authorization token](../tutorials/orders/order-admin-token.md) to make calls on behalf of seller, and a [customer token](../tutorials/orders/order-create-customer.md#get-the-customers-access-token) to make calls on behalf of the company user.
 

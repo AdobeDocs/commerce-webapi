@@ -6,17 +6,16 @@ keywords:
   - REST
 ---
 
-import * as Vars from '../../../data/vars.js';
 
 | |
 |:--|
-| \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../pages/_images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
+| \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../../images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
 
 # Manage company roles
 
-Within a company, customers may have different job roles, levels of responsibility, and access to information about their company. <Vars.sitedatavarb2b/> defines several types of system resources, and the Company Admin (or an integration that operates on the behalf of the Company Admin) grants or denies access to these resources using company roles. The Company Admin has access to all resources.
+Within a company, customers may have different job roles, levels of responsibility, and access to information about their company. B2B for Adobe Commerce defines several types of system resources, and the Company Admin (or an integration that operates on the behalf of the Company Admin) grants or denies access to these resources using company roles. The Company Admin has access to all resources.
 
-\<p\><Vars.sitedatavarb2b/> defines the following types of resources:\</p\>
+\<p\>B2B for Adobe Commerce defines the following types of resources:\</p\>
 
 -  Sales
 -  Purchase Orders

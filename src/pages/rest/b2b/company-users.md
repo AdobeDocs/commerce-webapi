@@ -6,15 +6,14 @@ keywords:
   - REST
 ---
 
-import * as Vars from '../../../data/vars.js';
 
 | |
 |:--|
-| \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../pages/_images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
+| \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../../images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
 
 # Manage company users
 
-A company user is a customer (buyer) that is assigned extended attributes that identify the company the user belongs to. Use the `POST /V1/customers` call, which is included with <Vars.sitedatavarce/> and <Vars.sitedatavaree/>, to create the user. After the user is created, you can use the `PUT /V1/customers/:customer_id` call to set their company data with the `company_attributes` extended attributes.
+A company user is a customer (buyer) that is assigned extended attributes that identify the company the user belongs to. Use the `POST /V1/customers` call, which is included with Magento Open Source and Adobe Commerce, to create the user. After the user is created, you can use the `PUT /V1/customers/:customer_id` call to set their company data with the `company_attributes` extended attributes.
 
 <InlineAlert variant="info" slots="text"/>
 

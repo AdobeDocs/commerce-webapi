@@ -9,7 +9,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-import * as Vars from '../../../../data/vars.js';
 
 # Order processing tutorial
 
@@ -33,7 +32,7 @@ Complete the following prerequisites:
 
 *  Find the Commerce REST API documentation. You can view the [static REST API documentation on devdocs](../../reference/index.md) or [generate a local API reference](/rest/quick-reference/generate-local.md).
 
-*  Find the Commerce Merchant documentation. Refer to [Getting Started with <Vars.sitedatavarce/> 2.1](https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home) for information about the Luma store that is created when you install Commerce with the sample data.
+*  Find the Commerce Merchant documentation. Refer to [Getting Started with Magento Open Source 2.1](https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home) for information about the Luma store that is created when you install Commerce with the sample data.
 
 ### Other resources
 

@@ -4,7 +4,6 @@ description: Update multiple special prices, tier prices, base prices, or cost v
 keywords:
   - REST
 ---
-import * as Vars from '../../../../data/vars.js';
 
 # Manage prices for multiple products
 
@@ -43,12 +42,12 @@ Name | Description | Format | Requirements
 `store_id` | The store ID  to apply the special price | integer | Required for setting or deleting a special price
 `sku` | The SKU of the product | string | Required for setting or deleting a special price
 `skus` | An array of SKU values that is specified when retrieving a list of special prices | array | Required for retrievals
-`price_from` | The date and time the special price goes into effect. The date/time format is `YYYY-MM-DD hh:mm:ss`. The specified time must be later than the current time.  | string | Required in \<Vars.sitedatavaree/\>. Optional in \<Vars.sitedatavarce/\>.
-`price_to` | The date and time the special price ends. The date/time format is `YYYY-MM-DD hh:mm:ss` If no value is specified, the special price does not expire. | string | Required in \<Vars.sitedatavaree/\>. Optional in \<Vars.sitedatavarce/\>.
+`price_from` | The date and time the special price goes into effect. The date/time format is `YYYY-MM-DD hh:mm:ss`. The specified time must be later than the current time.  | string | Required in Adobe Commerce. Optional in Magento Open Source.
+`price_to` | The date and time the special price ends. The date/time format is `YYYY-MM-DD hh:mm:ss` If no value is specified, the special price does not expire. | string | Required in Adobe Commerce. Optional in Magento Open Source.
 
 ### Set special prices
 
-All calls to set special prices must include the `store_id`, `sku`, and `price` parameters. If the call is sent to an <Vars.sitedatavaree/> installation, the call must also include the `price_from` parameter. If the call is sent to a <Vars.sitedatavarce/> installation, then the `price_from` parameter is optional.
+All calls to set special prices must include the `store_id`, `sku`, and `price` parameters. If the call is sent to an Adobe Commerce installation, the call must also include the `price_from` parameter. If the call is sent to a Magento Open Source installation, then the `price_from` parameter is optional.
 
 For bundled products, the value of the `price` parameter must be expressed as a discount percentage.
 

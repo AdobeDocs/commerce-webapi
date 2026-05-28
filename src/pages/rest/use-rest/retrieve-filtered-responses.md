@@ -4,7 +4,6 @@ description: How to filter your REST responses
 keywords:
   - REST
 ---
-import * as Vars from '../../../data/vars.js';
 
 # Retrieve filtered responses for REST endpoints
 
