@@ -7,10 +7,6 @@ keywords:
   - B2B
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 | |
 |:--|
 | \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../pages/_images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
@@ -159,3 +155,7 @@ Error | Description
 `You do not have authorization to perform this action.` | The user with the ID provided in the `input`.`id` argument is not assigned to your company.
 `No such entity with roleId = xxx` | The company role with ID `xxx` doesn't exist.
 `A customer with the same email address already exists in an associated website` | The email provided in the `input`.`email` argument belongs to another user.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

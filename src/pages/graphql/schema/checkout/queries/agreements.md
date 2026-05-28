@@ -5,10 +5,6 @@ contributor_name: Something Digital (now Rightpoint)
 contributor_link: https://www.rightpoint.com/
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Something Digital (now Rightpoint) for contributing this topic!](https://www.rightpoint.com/)
-
 # checkoutAgreements query
 
 The `checkoutAgreements` query retrieves checkout agreements. The query will always return an empty array when the **Enable Terms and Conditions** option is set to **No**.  (The config path is `checkout/options/enable_agreements`.)
@@ -67,3 +63,6 @@ The following query returns enabled checkout agreements.
 }
 ```
 
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Something Digital (now Rightpoint) for contributing this topic!](https://www.rightpoint.com/)

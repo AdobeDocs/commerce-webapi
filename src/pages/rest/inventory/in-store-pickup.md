@@ -8,11 +8,6 @@ keywords:
   - REST
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Oleksandr Kravchuk for contributing this topic!](https://github.com/swnsma)
-
-
 # In-Store Pickup
 
 The Inventory In-Store Pickup functionality exposes an endpoint that retrieves a list of pickup locations, and another endpoint that notifies the customer that their order is ready for pickup.
@@ -159,3 +154,6 @@ Commerce returns an array with success status and an array of error messages for
 }
 ```
 
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Oleksandr Kravchuk for contributing this topic!](https://github.com/swnsma)

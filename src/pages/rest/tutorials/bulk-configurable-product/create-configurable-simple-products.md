@@ -7,11 +7,6 @@ keywords:
   - REST
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to comwrap GmbH for contributing this topic!](http://comwrap.com/)
-
-
 # Step 2. Create the configurable and simple products
 
  By providing configurable and simple product information, you can use the bulk API to create all necessary products with a single call.
@@ -314,3 +309,7 @@ For information about response fields, see the [Bulk API](/rest/use-rest/bulk-en
    ![Product page with configurable product](../../../images/products-page.png)
 
 *  On the Luma storefront page, search for `Champ`. No results are returned.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to comwrap GmbH for contributing this topic!](http://comwrap.com/)

@@ -5,10 +5,6 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 # addProductsToCart mutation
 
 The `addProductsToCart` mutation adds any type of product to the shopping cart. It streamlines the process of adding products by allowing you to specify multiple product types in a single call. We recommend using this mutation to add products to the cart instead of the single-purpose mutations, such as `addSimpleProductsToCart` and `addConfigurableProductsToCart`.
@@ -653,3 +649,7 @@ Code | Error | Description
 `NOT_SALABLE` | `Product that you are trying to add is not available.` | A requested product is not available
 `INSUFFICIENT_STOCK` | `This product is out of stock` | The requested product is out of stock
 `UNDEFINED` | `UNDEFINED` | The error message does not match any error code
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

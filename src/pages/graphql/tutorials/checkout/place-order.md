@@ -12,10 +12,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 # Step 10. Place the order
 
 The `placeOrder` mutation places an order.
@@ -60,3 +56,7 @@ mutation {
 1. Sign in as a customer to the website using the email `john.doe@example.com` and password `b1b2b3l@w+`.
 
 1. Go to **My Account** > **My Orders**. The order you created is displayed.  The order is also displayed on the Orders grid (**Sales** > **Orders**) in the Admin.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

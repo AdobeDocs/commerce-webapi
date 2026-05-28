@@ -12,10 +12,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 # Step 9. Set the payment method
 
 <InlineAlert variant="success" slots="text" />
@@ -108,3 +104,7 @@ If the operation is successful, the response contains the code of the selected p
 1. Go to Checkout.
 
 1. The selected payment method is displayed in the Payment Method section on the Review & Payments step.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

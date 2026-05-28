@@ -7,11 +7,6 @@ keywords:
   - REST
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to comwrap GmbH for contributing this topic!](https://www.comwrap.com/)
-
-
 # Bulk operation status endpoints
 
 Adobe Commerce generates a `bulk_uuid` each time it executes an [asynchronous API request](/rest/use-rest/asynchronous-web-endpoints.md). You can track the status of an asynchronous operation with the following endpoints:
@@ -196,3 +191,6 @@ Field name | Data type | Description
 }
 ```
 
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to comwrap GmbH for contributing this topic!](https://www.comwrap.com/)

@@ -5,10 +5,6 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 # compareList query
 
 The `compareList` query retrieves information about a list of products so that the shopper can compare those products.
@@ -120,3 +116,7 @@ The following query returns the information about products in the comparison lis
 *  [createCompareList mutation](../mutations/create-compare-list.md)
 *  [deleteCompareList mutation](../mutations/delete-compare-list.md)
 *  [removeProductsFromCompareList mutation](../mutations/remove-from-compare-list.md)
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

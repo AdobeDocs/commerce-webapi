@@ -7,10 +7,6 @@ keywords:
   - REST
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/)
-
 # Step 1. Get a list of product images
 
 In this step, we will get all image information for the product with SKU `MJ03`.
@@ -70,3 +66,7 @@ We will use the image `id` for later steps in this tutorial.
     ![Product](../../../images/list-product-images.png)
 
 1. Confirm that the number of images in the storefront matches the number of images in your API response.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/)

@@ -9,10 +9,6 @@ contributor_link: https://www.rightpoint.com/
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Something Digital (now Rightpoint) for contributing this topic!](https://www.rightpoint.com/)
-
 # setPaymentMethodAndPlaceOrder mutation
 
 <InlineAlert variant="warning" slots="text" />
@@ -99,3 +95,7 @@ Error | Description
 `The shipping address is missing. Set the address and try again.` | You ran `setPaymentMethodAndPlaceOrder` mutation before [setShippingAddressesOnCart](set-shipping-method.md). Set a shipping address first. [GraphQL checkout tutorial](/graphql/tutorials/checkout/index.md) shows the order placement sequence.
 `The requested Payment Method is not available.` | The payment method specified in the `payment_method` argument is disabled or does not exist.
 `Unable to place order: Some of the products are out of stock.` | Some of the products in a cart are out of stock.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Something Digital (now Rightpoint) for contributing this topic!](https://www.rightpoint.com/)

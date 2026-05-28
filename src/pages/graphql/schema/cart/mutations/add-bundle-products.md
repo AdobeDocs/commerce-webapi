@@ -9,10 +9,6 @@ contributor_link: https://www.atwix.com/
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 # addBundleProductsToCart mutation
 
 <InlineAlert variant="warning" slots="text" />
@@ -232,3 +228,7 @@ Error | Description
 ## Related topics
 
 -  [Bundle product data types](../../products/interfaces/types/bundle.md)
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

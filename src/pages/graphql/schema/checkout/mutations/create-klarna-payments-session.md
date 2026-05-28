@@ -9,10 +9,6 @@ contributor_link: https://www.klarna.com/
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Klarna for contributing this topic!](https://www.klarna.com/)
-
 # createKlarnaPaymentsSession mutation
 
 <InlineAlert variant="info" slots="text" />
@@ -126,3 +122,7 @@ Attribute | Data type | Description
 Error | Description
 --- | ---
 `The Klarna payment method is not active.` | The [Klarna](https://experienceleague.adobe.com/docs/commerce-admin/config/sales/payment-methods/payment-methods.html) payment method is disabled in admin.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Klarna for contributing this topic!](https://www.klarna.com/)

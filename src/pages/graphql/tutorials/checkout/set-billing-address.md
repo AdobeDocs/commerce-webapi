@@ -12,10 +12,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 # Step 5. Set billing address
 
 <InlineAlert variant="success" slots="text" />
@@ -119,3 +115,7 @@ Verification is possible after [Step 6: Set the delivery method](set-delivery-me
 1. Go to Checkout.
 
 1. Go to the Review & Payments step. The Billing Address form is populated with the address details you entered.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

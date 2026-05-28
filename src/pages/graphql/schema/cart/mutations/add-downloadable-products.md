@@ -9,10 +9,6 @@ contributor_link: https://www.atwix.com/
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 # addDownloadableProductsToCart mutation
 
 <InlineAlert variant="warning" slots="text" />
@@ -258,3 +254,7 @@ Error | Description
 `Required parameter "cart_id" is missing` | The mutation does not contain a `cart_id` argument.
 `Required parameter "cart_items" is missing` | The `cart_items` argument is empty or is not of type `array`.
 `Please specify product link(s).` | You tried to add a downloadable product in which the `Links can be purchased separately` option is enabled, but you did not specify individual product links.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

@@ -7,11 +7,6 @@ keywords:
   - REST
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/magento-optimization-service)
-
-
 # Step 2. Create the simple products
 
 <InlineAlert variant="info" slots="text"/>
@@ -587,3 +582,7 @@ Log in to the Adobe Commerce Admin Panel and select **Catalog** > **Products** a
 <InlineAlert variant="info" slots="text"/>
 
 If you do not see your products in the catalog, you can try reindexing and clearing the cache.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/magento-optimization-service)

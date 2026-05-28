@@ -5,10 +5,6 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 # subscribeEmailToNewsletter mutation
 
 The `subscribeEmailToNewsletter` mutation allows guests and registered customers to sign up to receive newsletters. It can return a value of `NOT_ACTIVE` or `SUBSCRIBED`.
@@ -63,3 +59,7 @@ Error | Description
 `The account sign-in was incorrect or your account is disabled temporarily.` | The email address provided in the `email` argument is that of a customer account pending confirmation.
 `This email address is already subscribed.` | The email address provided in the `email` argument is already subscribed.
 `You must specify an email address to subscribe to a newsletter.`| The `email` argument is empty.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

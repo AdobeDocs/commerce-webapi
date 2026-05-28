@@ -12,10 +12,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 # Step 1. Create a customer
 
 This step creates a customer account and generates an authentication token for that customer. You can skip this step if you want to perform this tutorial as a guest user.
@@ -102,3 +98,7 @@ The name of the header is `Authorization` and the value is `Bearer \<token\>`.
 ## Verify this step
 
 Sign in as a customer to the website using the email `john.doe@example.com` and password `b1b2b3l@w+`. You should be successfully logged in.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

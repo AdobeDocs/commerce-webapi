@@ -5,10 +5,6 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 # resetPassword mutation
 
 The `resetPassword` mutation resets customer password using a reset password token and the customer's email address. Use it to set a new password for the registered customer after calling the [requestPasswordResetEmail](request-password-reset-email.md) mutation.
@@ -73,3 +69,7 @@ Error | Description
 ## Related topics
 
 * [requestPasswordResetEmail mutation](request-password-reset-email.md)
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

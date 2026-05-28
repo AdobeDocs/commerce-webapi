@@ -7,10 +7,6 @@ keywords:
   - GraphQL
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Adarsh Manickam for contributing this topic!](https://github.com/drpayyne)
-
 # Extend an existing GraphQL schema
 
 You can extend the default GraphQL schema to add attributes and data types, modify existing resolver behavior, and add features using other extension points. GraphQL uses _stitching_ to assemble a single unified schema out of the many schemas defined in individual modules. All `schema.graphqls` files are stitched together to a single schema. In this process, all nodes with the same type (such as type, interface, and enum) and name are stitched together and recursively extended/overridden. This process is similar to how XML merging works.
@@ -141,3 +137,7 @@ type StoreConfig {
 -  [Define the GraphQL schema for a module](index.md)
 -  [Resolvers](resolvers.md)
 -  [Declarative schema](https://developer.adobe.com/commerce/php/development/components/declarative-schema/)
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Adarsh Manickam for contributing this topic!](https://github.com/drpayyne)

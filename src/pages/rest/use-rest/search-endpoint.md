@@ -11,11 +11,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to comwrap GmbH for contributing this topic!](https://www.comwrap.com/)
-
 # Search for products with the /search endpoint
 
 Adobe Commerce provides two endpoints for searching products:
@@ -157,3 +152,7 @@ searchCriteria[filterGroups][0][filters][0][condition_type]=eq
 ## Build queries for V1/products
 
 [Search using REST](/rest/use-rest/performing-searches.md) provides examples that can be used to search for products.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to comwrap GmbH for contributing this topic!](https://www.comwrap.com/)

@@ -7,11 +7,6 @@ keywords:
   - REST
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/magento-optimization-service)
-
-
 # Step 3. Create the bundle product
 
 Now we will add the bundle product. We will use two bundle options: `RAM` and `Monitor`.
@@ -317,3 +312,7 @@ POST http://domain.com/rest/default/V1/products
 <InlineAlert variant="info" slots="text"/>
 
 If you do not see the bundle product on the frontend, you can try reindexing and clearing the cache.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/magento-optimization-service)

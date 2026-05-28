@@ -7,11 +7,6 @@ keywords:
   - REST
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/magento-optimization-service)
-
-
 # Step 1. Plan the product
 
 To create a bundle product with REST, you need:
@@ -202,3 +197,7 @@ We can see from the above response that the `id` for `What's New` is equal to `3
 ## Verify this step
 
 Since we are only gathering information, there is nothing to verify.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/magento-optimization-service)

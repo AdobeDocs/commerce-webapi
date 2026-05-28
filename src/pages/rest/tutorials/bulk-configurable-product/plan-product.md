@@ -7,11 +7,6 @@ keywords:
   - REST
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to comwrap GmbH for contributing this topic!](http://comwrap.com/)
-
-
 # Step 1. Plan the product
 
   To create a configurable product programmatically, you'll need to know the following:
@@ -143,3 +138,7 @@ searchCriteria[filter_groups][0][filters][0][condition_type]=gte
 ## Verify this step
 
  At this point, we're gathering information, so there is nothing to verify.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to comwrap GmbH for contributing this topic!](http://comwrap.com/)

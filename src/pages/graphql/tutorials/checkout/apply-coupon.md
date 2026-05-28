@@ -12,10 +12,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 # Step 7. Apply a coupon
 
 Use [applyCouponToCart](apply-coupon.md) to apply a discount coupon to the specified `cart_id`.
@@ -136,3 +132,6 @@ mutation {
 }
 ```
 
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

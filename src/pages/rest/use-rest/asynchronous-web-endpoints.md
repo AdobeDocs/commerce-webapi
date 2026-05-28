@@ -7,10 +7,6 @@ keywords:
   - REST
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to comwrap GmbH for contributing this topic!](http://comwrap.com/)
-
 import * as Vars from '../../../data/vars.js';
 
 # Asynchronous web endpoints
@@ -151,3 +147,7 @@ The following rules apply when you create or update an object, such as a product
 *  If you do not set the store code while updating a product, then by fallback, Commerce updates values for the default store only.
 *  If you include the `all` parameter, then Commerce updates values for all store scopes (in case a particular store doesn't yet have its own value set).
 *  If `<store_code>` parameter is set, then values for only defined store will be updated.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to comwrap GmbH for contributing this topic!](http://comwrap.com/)

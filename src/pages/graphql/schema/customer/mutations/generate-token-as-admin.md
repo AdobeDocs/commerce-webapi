@@ -4,10 +4,6 @@ description: The generateCustomerTokenAsAdmin mutation generates a new customer 
 contributor_name: EY 
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-Thanks to EY for contributing this topic!
-
 # generateCustomerTokenAsAdmin mutation
 
 The `generateCustomerTokenAsAdmin` mutation generates a new customer token as an admin so that an administrator can perform remote shopping assistance on behalf of the customer. For example, if a customer has asked for help adding a product into their cart, you would specify the token returned by the `generateCustomerTokenAsAdmin` mutation in the header of your [`addProductsToCart` mutation](../../cart/mutations/add-products.md).
@@ -60,3 +56,7 @@ mutation{
 
 *  [customer query](../queries/customer.md)
 *  [revokeCustomerToken mutation](revoke-token.md)
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+Thanks to EY for contributing this topic!

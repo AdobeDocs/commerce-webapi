@@ -7,11 +7,6 @@ keywords:
   - REST
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to comwrap GmbH for contributing this topic!](https://www.comwrap.com)
-
-
 # Search for the status of a bulk operation
 
 The Status Operation Search endpoint (`GET /V1/bulk/?searchCriteria`) allows you to search for bulk operation statuses.
@@ -142,3 +137,6 @@ The operation with bulk UUID `c43ed402-3dd3-4100-92e2-dc5852d3009b` contains a `
 }
 ```
 
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to comwrap GmbH for contributing this topic!](https://www.comwrap.com)

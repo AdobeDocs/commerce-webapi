@@ -7,11 +7,6 @@ keywords:
   - REST
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to comwrap GmbH for contributing this topic!](http://comwrap.com/)
-
-
 # Step 3. Define configurable product options
 
   Now that we've created all the Champ Tee products, we need to assign `size` as the configurable attribute and link the simple products to the configurable product.
@@ -166,3 +161,6 @@ Bulk endpoint routes cannot contain input parameters, such as a `sku` value.  Yo
 ...
 ```
 
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to comwrap GmbH for contributing this topic!](http://comwrap.com/)

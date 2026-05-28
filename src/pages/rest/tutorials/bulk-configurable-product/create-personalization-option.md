@@ -7,11 +7,6 @@ keywords:
   - REST
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to comwrap GmbH for contributing this topic!](http://comwrap.com/)
-
-
 # Step 4. Create the personalization option
 
  Let's add a text box to the product page that allows the customer to add his name (up to 15 characters) to the back of the shirt.
@@ -74,3 +69,7 @@ The `product_sku` is the `sku` of the configurable product. The `sku` specified 
 ### Related topics
 
 [Order Processing with REST APIs Tutorial](/rest/tutorials/orders/index.md)
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to comwrap GmbH for contributing this topic!](http://comwrap.com/)

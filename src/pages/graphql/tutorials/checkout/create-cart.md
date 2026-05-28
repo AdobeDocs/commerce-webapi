@@ -12,10 +12,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 # Step 2. Create an empty cart
 
 The procedure for creating a cart varies for logged-in customers and guests.
@@ -89,3 +85,7 @@ Copy the value of the `id` attribute. Use this value in subsequent steps whereve
 ## Verify this step
 
 There are no additional verification steps. The value of `id` is not displayed on the website or in the Admin.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

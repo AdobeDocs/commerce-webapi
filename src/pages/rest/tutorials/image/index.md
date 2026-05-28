@@ -7,11 +7,6 @@ keywords:
   - REST
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/)
-
-
 # Add and manage product images tutorial
 
 This tutorial demonstrates how to use the Adobe Commerce REST APIs to:
@@ -37,3 +32,7 @@ This **4-step tutorial** generally takes **30 minutes**.
 *  Install a REST client, such as Postman.
 
 *  Generate an [admin access token](../../../get-started/authentication/gs-authentication-token.md), which will we will use to make image managing API calls.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/)

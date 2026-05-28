@@ -12,10 +12,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 # Step 4. Set the shipping address
 
 Use the [setShippingAddressesOnCart](../../schema/cart/mutations/set-shipping-address.md) mutation to set a shipping address.
@@ -145,3 +141,7 @@ Note the `available_shipping_methods` in the response. We will use this informat
 1. Go to Checkout.
 
 1. On the Shipping step, the Shipping Address form contains the address details you entered.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

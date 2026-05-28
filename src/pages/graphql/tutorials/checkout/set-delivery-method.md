@@ -12,10 +12,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 # Step 6. Set the delivery method
 
 The `setShippingMethodsOnCart` mutation defines the delivery methods for your order. It requires these input parameters:
@@ -89,3 +85,7 @@ mutation {
 1. Go to Checkout.
 
 1. The selected delivery method is displayed in the Shipping Methods section on the Shipping step.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

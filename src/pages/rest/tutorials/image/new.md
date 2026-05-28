@@ -7,10 +7,6 @@ keywords:
   - REST
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/)
-
 # Step 2. Add a new image
 
 In this step, we will add the following image to the product with SKU `MJ03`.
@@ -77,3 +73,7 @@ The response provides the new image `id` for the added image.
 Refresh the `MJ03` product page and see if your new image was added.
 
 ![New Product Image](../../../images/api-frontend-new-image.png)
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/)

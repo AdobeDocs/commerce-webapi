@@ -12,10 +12,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 # Step 3. Add products to the cart
 
 GraphQL supports all product types, but this tutorial only demonstrates how to add a simple product and a virtual product to the shopping cart. You can find more details and examples in the following topics:
@@ -172,3 +168,7 @@ The response lists all items currently in the cart, including the just-added vid
 1. Sign in as a customer to the website using the email `john.doe@example.com` and password `b1b2b3l@w+`.
 
 1. Go to the shopping cart. All the items you added are displayed.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

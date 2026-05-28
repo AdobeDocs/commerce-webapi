@@ -7,10 +7,6 @@ keywords:
   - REST
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/)
-
 # Step 3. Update an image
 
 In this step, we will update an existing image with the `id` of `694`. We previously retrieved this `id` number in [Step 1. Getting a list of product images](list.md).
@@ -82,3 +78,7 @@ The request might take 30 seconds or so depending on the host.
 Refresh the `MJ03` product page and see if the existing image was updated.
 
 ![Updated Image](../../../images/update-image-frontend.png)
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/)

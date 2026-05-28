@@ -7,10 +7,6 @@ keywords:
   - GraphQL
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 # Debugging GraphQL queries
 
 This topic provides recommendations on how to debug GraphQL requests.
@@ -38,3 +34,7 @@ As a result, Xdebug within the PHP execution attempts to make a connection to an
 
 *  [GraphQL request headers](../usage/headers.md)
 *  [Exception handling](exceptions.md)
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

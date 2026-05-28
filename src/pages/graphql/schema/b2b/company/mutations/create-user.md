@@ -7,10 +7,6 @@ keywords:
   - B2B
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 | |
 |:--|
 | \<span style="display:inline-block; vertical-align:middle;"\>\<img src="../pages/_images/adobe-logo.svg" alt="Adobe Commerce feature" style="height:20px; margin-right:8px; vertical-align:middle;" /\>\</span\>\<span style="display:inline-block; vertical-align:middle;"\>\<strong\>Exclusive feature only in Adobe Commerce\</strong\> (\<a href="https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions"\>Learn more\</a\>)\</span\> |
@@ -177,3 +173,7 @@ Error | Description
 `Field "xxx" is not defined by type CompanyUserCreateInput.` | The `input`.`xxx` argument is undefined.
 `Required parameters are missing: xxx` | The `input`.`xxx` argument was omitted or contains an empty value.
 `No such entity with roleId = xxx` | The company role with ID `xxx` doesn't exist.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

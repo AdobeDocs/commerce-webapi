@@ -5,10 +5,6 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 # createCompareList mutation
 
 The `createCompareList` mutation creates a new comparison list with products specified in the `input` attribute.
@@ -128,3 +124,7 @@ mutation {
 *  [assignCompareListToCustomer mutation](assign-compare-list.md)
 *  [deleteCompareList mutation](delete-compare-list.md)
 *  [removeProductsFromCompareList mutation](remove-from-compare-list.md)
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

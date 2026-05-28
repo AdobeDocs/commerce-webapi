@@ -8,10 +8,6 @@ keywords:
   - Payments
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Something Digital (now Rightpoint) for contributing this topic!](https://www.rightpoint.com/)
-
 # Braintree Vault payment method
 
 Braintree Vault is a payment gateway that processes debit and credit card payments from the Magento_Vault.
@@ -99,3 +95,6 @@ mutation {
 }
 ```
 
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Something Digital (now Rightpoint) for contributing this topic!](https://www.rightpoint.com/)

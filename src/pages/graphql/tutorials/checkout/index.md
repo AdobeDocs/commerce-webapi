@@ -12,10 +12,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 # GraphQL checkout tutorial
 
 This tutorial describes how to place an order through GraphQL. Customers can make purchases in two ways:
@@ -47,3 +43,7 @@ Complete the following prerequisites:
 -  [Order processing tutorial](https://developer.adobe.com/commerce/webapi/rest/tutorials/orders/) shows a system integrator how REST APIs are used in the lifecycle of an order, including configuring a store and creating a customer; creating quotes, orders, invoices, and shipments; preparing for checkout; and more order-related tasks.
 
 -  [REST Tutorials](https://developer.adobe.com/commerce/webapi/rest/tutorials/) provides additional information about completing any REST tutorial.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

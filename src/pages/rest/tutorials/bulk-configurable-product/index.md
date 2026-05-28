@@ -7,11 +7,6 @@ keywords:
   - REST
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to comwrap GmbH for contributing this topic!](http://comwrap.com/)
-
-
 # Create a configurable product using bulk APIs
 
 A system integrator can use Adobe Commerce REST bulk APIs to perform actions on a large scale; such as, creating multiple customers and products, changing prices across an inventory, and assigning large groups of products to a specific warehouse, all within a single call.
@@ -34,3 +29,7 @@ A system integrator can use Adobe Commerce REST bulk APIs to perform actions on 
 *  [REST Tutorials](../index.md) provides additional information about completing any Commerce REST tutorial.
 *  [Asynchronous web endpoints](/rest/use-rest/asynchronous-web-endpoints.md) provides information about how to use the Commerce Asynchronous API
 *  [Bulk endpoints](/rest/use-rest/bulk-endpoints.md) provides information about how to use the Commerce Bulk API
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to comwrap GmbH for contributing this topic!](http://comwrap.com/)

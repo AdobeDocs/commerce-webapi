@@ -8,10 +8,6 @@ keywords:
   - Payments
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Something Digital (now Rightpoint) for contributing this topic!](https://www.rightpoint.com/)
-
 # Braintree payment method
 
 Braintree is a payment gateway that processes debit and credit card payments.
@@ -108,3 +104,6 @@ mutation {
 }
 ```
 
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Something Digital (now Rightpoint) for contributing this topic!](https://www.rightpoint.com/)

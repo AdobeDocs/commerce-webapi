@@ -12,10 +12,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Klarna for contributing this topic!](https://www.klarna.com/)
-
 # Klarna payment method
 
 [Klarna Payments](https://docs.klarna.com/platform-solutions/e-commerce-platforms/adobe-commerce/payments/kp-overview/) enables your consumers to try before they buy, finance purchases on your store with Klarna, or let them pay directly. Klarna offers these payment methods through a widget that you can add inline on your checkout page.
@@ -147,3 +143,6 @@ mutation {
 }
 ```
 
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Klarna for contributing this topic!](https://www.klarna.com/)

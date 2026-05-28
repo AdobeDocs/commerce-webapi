@@ -12,10 +12,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 # Step 8. Set email on the cart (guest customers only)
 
 <InlineAlert variant="success" slots="text" />
@@ -58,3 +54,7 @@ mutation {
 ## Verify this step
 
 There are no additional verification steps. `quote`.`customer_email` is displayed for administrator on back-end side.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

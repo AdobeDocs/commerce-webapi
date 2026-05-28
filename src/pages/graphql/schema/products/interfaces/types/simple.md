@@ -5,10 +5,6 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 # Simple product data types
 
 The `SimpleProduct` data type implements the following interfaces:
@@ -111,3 +107,7 @@ The following query returns information about simple product `24-MB01`, which is
 ## Related topics
 
 -  [addSimpleProductsToCart mutation](../../../cart/mutations/add-simple-products.md)
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

@@ -8,10 +8,6 @@ keywords:
   - Security
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 # GraphQL authorization
 
 Adobe Commerce and Magento Open Source provide two mechanisms for authorizing GraphQL calls:
@@ -112,3 +108,7 @@ Run the following command to disable session cookies for GraphQL:
 To re-enable these cookies, run:
 
 `bin/magento config:set graphql/session/disable 0`
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

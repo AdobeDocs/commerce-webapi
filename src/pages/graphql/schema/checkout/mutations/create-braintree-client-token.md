@@ -6,10 +6,6 @@ contributor_link: https://www.rightpoint.com/
 ediition: paas
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Something Digital (now Rightpoint) for contributing this topic!](https://www.rightpoint.com/)
-
 # createBraintreeClientToken mutation
 
 The `createBraintreeClientToken` mutation creates the client token for Braintree JavaScript SDK initialization.
@@ -53,3 +49,7 @@ mutation {
 Error | Description
 --- | ---
 `The Braintree payment method is not active.` | The [Braintree](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/payments/braintree) payment method is disabled in admin.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Something Digital (now Rightpoint) for contributing this topic!](https://www.rightpoint.com/)

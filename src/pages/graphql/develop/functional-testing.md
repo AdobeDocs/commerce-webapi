@@ -7,10 +7,6 @@ keywords:
   - GraphQL
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 # GraphQL functional testing
 
 Adobe Commerce and Magento Open Source provide API functional tests that can verify extension points in GraphQL. These tests serve as an example for exposing new queries via GraphQL.
@@ -365,3 +361,6 @@ To run the `testFunction1` and `testFunction2` tests, which are part of the `my_
 vendor/bin/phpunit -c dev/tests/api-functional/phpunit_graphql.xml --group my_test_group dev/tests/api-functional/testsuite/Magento/GraphQl/MyTest.php
 ```
 
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

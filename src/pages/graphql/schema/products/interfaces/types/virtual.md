@@ -5,10 +5,6 @@ contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
-
 # Virtual product data types
 
 The `VirtualProduct` data type implements the following interfaces:
@@ -104,3 +100,7 @@ The following query returns information about virtual product.
 ## Related topics
 
 -  [addVirtualProductsToCart mutation](../../../cart/mutations/add-virtual-products.md)
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
