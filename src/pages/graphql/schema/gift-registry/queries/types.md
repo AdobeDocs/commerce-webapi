@@ -1,9 +1,11 @@
 ---
 title: giftRegistryTypes query
 description: The giftRegistryTypes query returns a list of available gift registry types.
+contributor_name: Zilker Technology
+contributor_link: https://www.ztech.io/
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 [Thanks to Zilker Technology for contributing this topic!](https://www.ztech.io/)
 

@@ -1,9 +1,11 @@
 ---
 title: compareList query
 description: The compareList query retrieves information about a list of products so that the shopper can compare those products.
+contributor_name: Atwix
+contributor_link: https://www.atwix.com/
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
 

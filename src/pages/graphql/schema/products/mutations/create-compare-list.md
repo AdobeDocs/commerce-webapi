@@ -1,9 +1,11 @@
 ---
 title: createCompareList mutation
 description: The createCompareList mutation creates a new comparison list with products specified in the input attribute.
+contributor_name: Atwix
+contributor_link: https://www.atwix.com/
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
 

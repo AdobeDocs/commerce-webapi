@@ -1,10 +1,12 @@
 ---
 title: createBraintreeClientToken mutation
 description: The createBraintreeClientToken mutation creates the client token for Braintree JavaScript SDK initialization.
+contributor_name: Something Digital (now Rightpoint)
+contributor_link: https://www.rightpoint.com/
 ediition: paas
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 [Thanks to Something Digital (now Rightpoint) for contributing this topic!](https://www.rightpoint.com/)
 

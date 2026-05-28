@@ -1,11 +1,13 @@
 ---
 title: Step 4. Delete an image 
 description: We will learn how to delete an existing image.
+contributor_name: Goivvy LLC
+contributor_link: https://www.goivvy.com/
 keywords:
   - REST
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 [Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/)
 

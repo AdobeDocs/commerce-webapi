@@ -1,11 +1,13 @@
 ---
 title: createCompanyRole mutation
 description: The createCompanyRole mutation defines a new company role. To create a role, you must provide an array of permissions that determine which resources the us...
+contributor_name: Atwix
+contributor_link: https://www.atwix.com/
 keywords:
   - B2B
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
 

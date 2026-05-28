@@ -1,11 +1,12 @@
 ---
 title: moveItemsBetweenRequisitionLists mutation
 description: The moveItemsBetweenRequisitionLists mutation moves items from one requisition list to another.
+contributor_name: EY
 keywords:
   - B2B
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 Thanks to EY for contributing this topic!
 

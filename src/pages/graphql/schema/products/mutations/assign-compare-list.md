@@ -1,9 +1,11 @@
 ---
 title: assignCompareListToCustomer mutation
 description: The assignCompareListToCustomer mutation assigns the specified comparison list to the logged-in customer. Use this mutation when a customer creates a compa...
+contributor_name: Atwix
+contributor_link: https://www.atwix.com/
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
 

@@ -1,9 +1,11 @@
 ---
 title: resetPassword mutation
 description: The resetPassword mutation resets customer password using a reset password token and the customer's email address. Use it to set a new password for the reg...
+contributor_name: Atwix
+contributor_link: https://www.atwix.com/
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
 

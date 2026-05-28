@@ -1,11 +1,13 @@
 ---
 title: Bulk operation status endpoints
 description: Track the status of bulk endpoints
+contributor_name: comwrap GmbH
+contributor_link: https://www.comwrap.com/
 keywords:
   - REST
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 [Thanks to comwrap GmbH for contributing this topic!](https://www.comwrap.com/)
 

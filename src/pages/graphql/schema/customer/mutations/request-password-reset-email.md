@@ -1,9 +1,11 @@
 ---
 title: requestPasswordResetEmail mutation
 description: The requestPasswordResetEmail mutation triggers the password reset email by the provided email address. Use it to initiate the process to reset the registe...
+contributor_name: Atwix
+contributor_link: https://www.atwix.com/
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
 

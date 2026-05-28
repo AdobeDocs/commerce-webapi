@@ -1,11 +1,13 @@
 ---
 title: Extend an existing GraphQL schema
 description: Learn how to add attributes and data types, modify resolver behavior, and add features using extension points.
+contributor_name: Adarsh Manickam
+contributor_link: https://github.com/drpayyne
 keywords:
   - GraphQL
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 [Thanks to Adarsh Manickam for contributing this topic!](https://github.com/drpayyne)
 

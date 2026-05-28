@@ -1,6 +1,8 @@
 ---
 title: Step 6. Set the delivery method
 description: Learn how to set a delivery method for an order with the GraphQL API.
+contributor_name: Atwix
+contributor_link: https://www.atwix.com/
 keywords:
   - GraphQL
   - Checkout
@@ -10,7 +12,7 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
 

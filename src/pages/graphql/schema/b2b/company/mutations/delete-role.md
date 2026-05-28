@@ -1,11 +1,13 @@
 ---
 title: deleteCompanyRole mutation
 description: Use the deleteCompanyRole mutation to delete a company role by ID.
+contributor_name: Atwix
+contributor_link: https://www.atwix.com/
 keywords:
   - B2B
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
 

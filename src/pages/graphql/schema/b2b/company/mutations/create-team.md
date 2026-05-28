@@ -1,11 +1,13 @@
 ---
 title: createCompanyTeam mutation
 description: Use the createCompanyTeam mutation to create a new team for your company.
+contributor_name: Atwix
+contributor_link: https://www.atwix.com/
 keywords:
   - B2B
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
 

@@ -1,11 +1,12 @@
 ---
 title: addProductsToRequisitionList mutation
 description: The addProductsToRequisitionList mutation adds products to a requisition list.
+contributor_name: EY
 keywords:
   - B2B
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 Thanks to EY for contributing this topic!
 

@@ -1,6 +1,8 @@
 ---
 title: Search for products with the /search endpoint
 description: Search for products using the /search endpoints
+contributor_name: comwrap GmbH
+contributor_link: https://www.comwrap.com/
 keywords:
   - REST
 ---
@@ -10,7 +12,7 @@ keywords:
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 [Thanks to comwrap GmbH for contributing this topic!](https://www.comwrap.com/)
 

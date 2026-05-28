@@ -1,6 +1,8 @@
 ---
 title: deleteCompanyUser mutation
 description: Use the deleteCompanyUser mutation to deactivate the specified company user.
+contributor_name: Atwix
+contributor_link: https://www.atwix.com/
 keywords:
   - B2B
 ---
@@ -9,7 +11,7 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
 

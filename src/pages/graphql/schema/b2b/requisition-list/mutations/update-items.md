@@ -1,11 +1,12 @@
 ---
 title: updateRequisitionListItems mutation
 description: The updateRequisitionListItems mutation updates products in a requisition list.
+contributor_name: EY
 keywords:
   - B2B
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 Thanks to EY for contributing this topic!
 

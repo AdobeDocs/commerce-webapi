@@ -1,11 +1,13 @@
 ---
 title: Create a bundle product tutorial
 description: In this tutorial you will learn how to create a bundled product
+contributor_name: Goivvy LLC
+contributor_link: https://www.goivvy.com/magento-optimization-service
 keywords:
   - REST
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 [Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/magento-optimization-service)
 

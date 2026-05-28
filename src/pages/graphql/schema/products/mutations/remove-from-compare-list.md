@@ -1,9 +1,11 @@
 ---
 title: removeProductsFromCompareList mutation
 description: The removeProductsFromCompareList mutation removes products from a comparison list.
+contributor_name: Atwix
+contributor_link: https://www.atwix.com/
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
 

@@ -1,9 +1,10 @@
 ---
 title: createGiftRegistry mutation
 description: The createGiftRegistry mutation creates a gift registry for the logged in customer.
+contributor_name: EY
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 Thanks to EY for contributing this topic!
 

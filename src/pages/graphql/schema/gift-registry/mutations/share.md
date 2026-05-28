@@ -1,9 +1,10 @@
 ---
 title: shareGiftRegistry mutation
 description: The shareGiftRegistry mutation sends an invitation to a list email addresses to shop from the customer's gift registry.
+contributor_name: EY
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 Thanks to EY for contributing this topic!
 

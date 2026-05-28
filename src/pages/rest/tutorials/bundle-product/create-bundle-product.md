@@ -1,11 +1,13 @@
 ---
 title: Step 3. Create the bundle product 
 description: In this step of the tutorial you will create the bundle product
+contributor_name: Goivvy LLC
+contributor_link: https://www.goivvy.com/magento-optimization-service
 keywords:
   - REST
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 [Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/magento-optimization-service)
 

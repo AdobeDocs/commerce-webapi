@@ -1,9 +1,11 @@
 ---
 title: addProductsToCart mutation
 description: The addProductsToCart mutation adds any type of product to the shopping cart. It streamlines the process of adding products by allowing you to specify mult...
+contributor_name: Atwix
+contributor_link: https://www.atwix.com/
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
 

@@ -1,11 +1,13 @@
 ---
 title: createCompanyUser mutation
 description: The createCompanyUser mutation allows an existing company user who is assigned a role that contains the MagentoCompany::usersedit permission to create a ne...
+contributor_name: Atwix
+contributor_link: https://www.atwix.com/
 keywords:
   - B2B
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
 

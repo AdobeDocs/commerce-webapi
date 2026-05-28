@@ -1,11 +1,13 @@
 ---
 title: updateCompanyRole mutation
 description: Use the updateCompanyRole mutation to update the company role and permissions.
+contributor_name: Atwix
+contributor_link: https://www.atwix.com/
 keywords:
   - B2B
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
 

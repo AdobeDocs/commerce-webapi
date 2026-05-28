@@ -1,11 +1,13 @@
 ---
 title: Step 1. Getting a list of product images 
 description: We will learn how to get a list of all product images.
+contributor_name: Goivvy LLC
+contributor_link: https://www.goivvy.com/
 keywords:
   - REST
 ---
 
-<Edition slots="text"/>
+<Edition slots="text" backgroundcolor="blue"/>
 
 [Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/)
 
