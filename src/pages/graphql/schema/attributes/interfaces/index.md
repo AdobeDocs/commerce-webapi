@@ -31,16 +31,16 @@ SaaS provides two additional implementations of the `AttributeValueInterface` in
 
 ### Retrieve custom attributes metadata from a customer
 
-< CustomAttributeCustomer />
+<Fragment src="../../../../includes/graphql/examples/custom-attribute-customer.md" />
 
 ### Filter `custom_attributesV2` of a product
 
-< CustomAttributeFilterProduct />
+<Fragment src="../../../../includes/graphql/examples/custom-attribute-filter-product.md" />
 
 ### Retrieve a file uploaded to Amazon S3
 
 <Edition slots="text" backgroundcolor="green"/>
 
-[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+**[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-< CustomerS3Download />
+<Fragment src="../../../../includes/graphql/examples/customer-s3-download.md" />
