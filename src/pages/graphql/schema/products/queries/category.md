@@ -1,8 +1,12 @@
 ---
 title: category query
 description: The category query has been deprecated. Use the categories query instead.
-edition: paas
+
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # category query
 

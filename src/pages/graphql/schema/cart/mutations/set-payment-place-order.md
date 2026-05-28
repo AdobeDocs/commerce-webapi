@@ -1,10 +1,15 @@
 ---
 title: setPaymentMethodAndPlaceOrder mutation
 description: The setPaymentMethodAndPlaceOrder mutation has been deprecated. Use the setPaymentMethodOnCart and placeOrder mutations instead. You can run the two method...
-contributor_name: Something Digital (now Rightpoint)
-contributor_link: https://www.rightpoint.com/
-edition: paas
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+<Edition slots="text"/>
+
+[Thanks to Something Digital (now Rightpoint) for contributing this topic!](https://www.rightpoint.com/)
 
 # setPaymentMethodAndPlaceOrder mutation
 

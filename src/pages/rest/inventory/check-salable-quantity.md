@@ -5,7 +5,7 @@ keywords:
   - Inventory
   - REST
 ---
- 
+
 # Check salable quantities
 
 Adobe Commerce provides several endpoints that allow you to check whether a product from a specified stock is salable and the available quantity.

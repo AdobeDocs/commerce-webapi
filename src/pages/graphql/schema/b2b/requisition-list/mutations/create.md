@@ -1,11 +1,13 @@
 ---
 title: createRequisitionList mutation
 description: The createRequisitionList mutation creates a requisition list for the logged in customer.
-contributor_name: Zilker Technology
-contributor_link: https://www.ztech.io/
 keywords:
   - B2B
 ---
+
+<Edition slots="text"/>
+
+[Thanks to Zilker Technology for contributing this topic!](https://www.ztech.io/)
 
 | |
 |:--|
@@ -38,9 +40,9 @@ mutation {
 
 The `createRequisitionList` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-createRequisitionList)
+* [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-createRequisitionList)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createRequisitionList)
+* [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createRequisitionList)
 
 ## Example usage
 

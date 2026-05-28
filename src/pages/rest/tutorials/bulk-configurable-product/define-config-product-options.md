@@ -1,12 +1,15 @@
 ---
 title: Step 3. Define configurable product options
 description: In this step of the tutorial you will define the configurable product options
-contributor_name: comwrap GmbH
-contributor_link: http://comwrap.com/
 keywords:
   - REST
 ---
- 
+
+<Edition slots="text"/>
+
+[Thanks to comwrap GmbH for contributing this topic!](http://comwrap.com/)
+
+
 # Step 3. Define configurable product options
 
   Now that we've created all the Champ Tee products, we need to assign `size` as the configurable attribute and link the simple products to the configurable product.

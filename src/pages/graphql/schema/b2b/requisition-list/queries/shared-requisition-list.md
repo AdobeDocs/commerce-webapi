@@ -1,10 +1,13 @@
 ---
 title: sharedRequisitionList query
 description: This query is part of the B2B Storefront Compatibility Package and is only available on Adobe Commerce as a Cloud Service.
-edition: saas
 keywords:
   - B2B
 ---
+
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 | |
 |:--|

@@ -5,7 +5,7 @@ keywords:
   - Inventory
   - REST
 ---
- 
+
 # Manage source selection algorithms
 
 Inventory Management uses the Source Selection Algorithm (SSA) to track the salable quantities of product inventory across all sources and make recommendations for partial and full shipments.

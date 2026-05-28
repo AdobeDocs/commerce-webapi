@@ -1,12 +1,16 @@
 ---
 title: Step 11. Run the Source Selection Algorithms
 description: In this step of the tutorial you will run the source selection algorithms
-edition: paas
 keywords:
   - Inventory
   - REST
 ---
- 
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+
 # Step 11. Run the Source Selection Algorithms
 
 One of the most significant parts of Inventory Management is the Source Selection Algorithm (SSA). The Source Priority SSA analyzes and determines the best match for sources and shipping based on the priorities you specified in [Step 4. Link stocks and sources](/rest/tutorials/inventory/assign-source-to-stock.md). The Distance Priority SSA calculates the distance between the sources and the shipping address. Both algorithms also provide a list of source items with quantities to deduct per each source item.

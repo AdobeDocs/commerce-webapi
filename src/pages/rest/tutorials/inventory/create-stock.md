@@ -1,12 +1,16 @@
 ---
 title: Step 3. Create stocks
 description: In this step of the tutorial you will create stocks
-edition: paas
 keywords:
   - Inventory
   - REST
 ---
- 
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+
 # Step 3. Create stocks
 
 This step guides through the process for creating **stock**. Stock represents a virtual, aggregated inventory of products for sources of your sales channels. Each stock maps sales channels with sources to determine available inventories and salable quantities.

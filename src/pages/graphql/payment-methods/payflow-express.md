@@ -1,11 +1,14 @@
 ---
 title: Express Checkout for other PayPal solutions
 description: Learn how to use the GraphQL API mutation for the Express Checkout for other PayPal payment solutions.
-edition: paas
 keywords:
   - GraphQL
   - Payments
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # Express Checkout for other PayPal solutions
 

@@ -1,11 +1,13 @@
 ---
 title: createCompanyUser mutation
 description: The createCompanyUser mutation allows an existing company user who is assigned a role that contains the MagentoCompany::usersedit permission to create a ne...
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 keywords:
   - B2B
 ---
+
+<Edition slots="text"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
 
 | |
 |:--|
@@ -43,9 +45,9 @@ mutation {
 
 The `createCompanyUser` reference provides detailed information about the types and fields defined in this mutation.
 
-- &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-createCompanyUser)
+- [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-createCompanyUser)
 
-- &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createCompanyUser)
+- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createCompanyUser)
 
 ## Example usage
 

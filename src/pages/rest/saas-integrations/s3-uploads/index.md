@@ -1,11 +1,14 @@
 ---
 title: Upload files to Amazon S3
 description: Learn how to manage file and image uploads using REST.
-edition: saas
 keywords:
   - REST
   - Integration
 ---
+
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # Upload files to Amazon S3
 

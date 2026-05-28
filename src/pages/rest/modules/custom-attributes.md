@@ -109,7 +109,9 @@ curl -i -X PUT \
 
 ### Company
 
-<Edition name="saas" />
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 The `POST V1/company/setCustomAttributes` endpoint allows you to set custom attributes on a company. The request body must include the `company_id` and an array of `custom_attributes`.
 
@@ -254,7 +256,9 @@ If an order item has custom attributes, they will be returned as part of the ord
 
 ### Negotiable Quote
 
-<Edition name="saas" />
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 The `POST /V1/negotiableQuote/setCustomAttributes` endpoint allows you to set custom attributes on a negotiable quote. The request body must include the `quote_id` and an array of `custom_attributes`.
 
@@ -281,7 +285,9 @@ curl -i -X POST \
 
 ## Install custom attribute support
 
-<Edition name="paas" />
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 ### Prerequisites
 

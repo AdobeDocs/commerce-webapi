@@ -1,13 +1,19 @@
 ---
 title: Search for products with the /search endpoint
 description: Search for products using the /search endpoints
-contributor_name: comwrap GmbH
-contributor_link: https://www.comwrap.com/
-edition: paas
 keywords:
   - REST
 ---
- 
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+
+<Edition slots="text"/>
+
+[Thanks to comwrap GmbH for contributing this topic!](https://www.comwrap.com/)
+
 # Search for products with the /search endpoint
 
 Adobe Commerce provides two endpoints for searching products:

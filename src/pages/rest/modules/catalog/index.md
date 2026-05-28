@@ -1,11 +1,15 @@
 ---
 title: Catalog module
 description: Create and maintain products and categories with the Catalog module.
-edition: paas
 keywords:
   - REST
 ---
- 
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+
 # Catalog module
 
 The `Catalog` module provides functionality for creating and maintaining products and categories.

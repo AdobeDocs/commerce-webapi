@@ -5,7 +5,7 @@ keywords:
   - Inventory
   - REST
 ---
- 
+
 # Manage stocks
 
 Stocks map your sources to sales channels, providing a direct link to salable quantities and inventories.

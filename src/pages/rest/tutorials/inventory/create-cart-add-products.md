@@ -1,12 +1,16 @@
 ---
 title: Step 7. Create a cart and add products to it
 description: In this step of the tutorial you will create a card and add products
-edition: paas
 keywords:
   - Inventory
   - REST
 ---
- 
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+
 # Step 7. Create a cart and add products to it
 
 Next, we'll create a cart and add the items that we modified in [Step 5. Reassign products to custom sources](reassign-products-to-another-source.md).

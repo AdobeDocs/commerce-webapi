@@ -1,13 +1,18 @@
 ---
 title: Klarna payment method
 description: Learn how to use the GraphQL API mutation for the Klarna payment solution.
-contributor_name: Klarna
-contributor_link: https://www.klarna.com/
-edition: paas
 keywords:
   - GraphQL
   - Payments
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+<Edition slots="text"/>
+
+[Thanks to Klarna for contributing this topic!](https://www.klarna.com/)
 
 # Klarna payment method
 

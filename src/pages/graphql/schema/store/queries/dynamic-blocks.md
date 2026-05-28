@@ -1,8 +1,12 @@
 ---
 title: dynamicBlocks query
 description: The dynamicBlocks query returns a list of dynamic blocks that have been placed in a Dynamic Blocks Rotator inline widget and meet the specified criteria.
-edition: paas
+
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # dynamicBlocks query
 

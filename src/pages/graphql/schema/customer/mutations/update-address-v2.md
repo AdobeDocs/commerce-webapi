@@ -1,8 +1,12 @@
 ---
 title: updateCustomerAddressV2 mutation
 description: Use the updateCustomerAddressV2 mutation to update the customer's address.
-edition: saas
+
 ---
+
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # updateCustomerAddressV2 mutation
 
@@ -31,7 +35,7 @@ mutation {
 
 The `updateCustomerAddressV2` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-updateCustomerAddressV2)
+* [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-updateCustomerAddressV2)
 
 ## Example usage
 

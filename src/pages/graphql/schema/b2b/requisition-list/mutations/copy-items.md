@@ -1,10 +1,13 @@
 ---
 title: copyItemsBetweenRequisitionLists mutation
 description: The copyItemsBetweenRequisitionLists mutation copies items from one requisition list to another.
-contributor_name: EY
 keywords:
   - B2B
 ---
+
+<Edition slots="text"/>
+
+Thanks to EY for contributing this topic!
 
 | |
 |:--|
@@ -38,9 +41,9 @@ mutation {
 
 The `copyItemsBetweenRequisitionLists` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-copyItemsBetweenRequisitionLists)
+* [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-copyItemsBetweenRequisitionLists)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-copyItemsBetweenRequisitionLists)
+* [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-copyItemsBetweenRequisitionLists)
 
 ## Example usage
 

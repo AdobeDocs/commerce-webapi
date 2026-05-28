@@ -1,12 +1,15 @@
 ---
 title: Bulk operation status endpoints
 description: Track the status of bulk endpoints
-contributor_name: comwrap GmbH
-contributor_link: https://www.comwrap.com/
 keywords:
   - REST
 ---
- 
+
+<Edition slots="text"/>
+
+[Thanks to comwrap GmbH for contributing this topic!](https://www.comwrap.com/)
+
+
 # Bulk operation status endpoints
 
 Adobe Commerce generates a `bulk_uuid` each time it executes an [asynchronous API request](/rest/use-rest/asynchronous-web-endpoints.md). You can track the status of an asynchronous operation with the following endpoints:
@@ -35,8 +38,17 @@ Field name | Data type | Description
 
 **Request**:
 
-&#8203;<Edition name="paas" /> `GET https://\<host\>/rest/<store-view-code>/V1/bulk/:bulkUuid/status`
-&#8203;<Edition name="saas" /> `GET https://\<server\>.api.commerce.adobe.com/<tenant-id>/V1/bulk/:bulkUuid/status`
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+`GET https://\<host\>/rest/<store-view-code>/V1/bulk/:bulkUuid/status`
+
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+`GET https://\<server\>.api.commerce.adobe.com/<tenant-id>/V1/bulk/:bulkUuid/status`
 
 **Response**:
 
@@ -73,8 +85,17 @@ Status | Description
 
 **Request**:
 
-&#8203;<Edition name="paas" /> `GET https://\<host\>/rest/<store-view-code>/V1/bulk/:bulkUuid/operation-status/:status`
-&#8203;<Edition name="saas" /> `GET https://\<server\>.api.commerce.adobe.com/<tenant-id>/V1/bulk/:bulkUuid/operation-status/:status`
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+`GET https://\<host\>/rest/<store-view-code>/V1/bulk/:bulkUuid/operation-status/:status`
+
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+`GET https://\<server\>.api.commerce.adobe.com/<tenant-id>/V1/bulk/:bulkUuid/operation-status/:status`
 
 **Response**:
 
@@ -106,8 +127,17 @@ Field name | Data type | Description
 
 **Request**:
 
-&#8203;<Edition name="paas" /> `GET https://\<host\>/rest/<store-view-code>/V1/bulk/:bulkUuid/detailed-status`
-&#8203;<Edition name="saas" /> `GET https://\<server\>.api.commerce.adobe.com/<tenant-id>/V1/bulk/:bulkUuid/detailed-status`
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+`GET https://\<host\>/rest/<store-view-code>/V1/bulk/:bulkUuid/detailed-status`
+
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+`GET https://\<server\>.api.commerce.adobe.com/<tenant-id>/V1/bulk/:bulkUuid/detailed-status`
 
 **Response**:
 

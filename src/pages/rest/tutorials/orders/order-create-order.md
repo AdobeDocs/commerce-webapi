@@ -1,11 +1,15 @@
 ---
 title: Step 7. Create an order
 description: In this step of the tutorial you will create an order
-edition: paas
 keywords:
   - REST
 ---
- 
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+
 # Step 7. Create an order
 
 The shopping cart contains three items totaling $108. The shipping charges are $10, making the grand total $118. We're now ready to convert the quote to an order.

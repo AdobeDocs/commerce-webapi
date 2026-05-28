@@ -4,7 +4,7 @@ description: In this step of the tutorial you will plan the product
 keywords:
   - REST
 ---
- 
+
 # Step 1. Plan the product
 
 To create a configurable product programmatically, you'll need to know the following:

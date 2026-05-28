@@ -4,7 +4,7 @@ description: In this step of the tutorial you will create the simple products
 keywords:
   - REST
 ---
- 
+
 # Step 3. Create the simple products
 
 The payloads for creating a simple product and a configurable product are identical, with the following exceptions:

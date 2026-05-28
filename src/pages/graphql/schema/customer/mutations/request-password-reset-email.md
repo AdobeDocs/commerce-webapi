@@ -1,9 +1,11 @@
 ---
 title: requestPasswordResetEmail mutation
 description: The requestPasswordResetEmail mutation triggers the password reset email by the provided email address. Use it to initiate the process to reset the registe...
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 ---
+
+<Edition slots="text"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
 
 # requestPasswordResetEmail mutation
 
@@ -36,9 +38,9 @@ Use the value of the token in the `resetPassword` mutation.
 
 The `requestPasswordResetEmail` reference provides detailed information about the types and fields defined in this mutation.
 
-- &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-requestPasswordResetEmail)
+- [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-requestPasswordResetEmail)
 
-- &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-requestPasswordResetEmail)
+- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-requestPasswordResetEmail)
 
 ## Example usage
 

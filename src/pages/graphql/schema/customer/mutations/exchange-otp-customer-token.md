@@ -1,8 +1,12 @@
 ---
 title: exchangeOtpForCustomerToken mutation
 description: The exchangeOtpForCustomerToken mutation allows you to specify a shopper's email address and one-time password (OTP) and receive a customer token in exchan...
-edition: saas
+
 ---
+
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # exchangeOtpForCustomerToken mutation
 

@@ -1,9 +1,11 @@
 ---
 title: addProductsToCart mutation
 description: The addProductsToCart mutation adds any type of product to the shopping cart. It streamlines the process of adding products by allowing you to specify mult...
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 ---
+
+<Edition slots="text"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
 
 # addProductsToCart mutation
 
@@ -52,9 +54,9 @@ mutation {
 
 The `addProductsToCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-addProductsToCart)
+* [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-addProductsToCart)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addProductsToCart)
+* [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addProductsToCart)
 
 ## Example usage
 

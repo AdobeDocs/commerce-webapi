@@ -1,11 +1,14 @@
 ---
 title: Email triggering through REST
 description: Learn how to trigger transactional emails using the REST API for Adobe Commerce as a Cloud Service.
-edition: saas
 keywords:
   - REST
   - Integration
 ---
+
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # Email triggering through the REST API
 

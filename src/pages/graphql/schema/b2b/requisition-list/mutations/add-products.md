@@ -1,10 +1,13 @@
 ---
 title: addProductsToRequisitionList mutation
 description: The addProductsToRequisitionList mutation adds products to a requisition list.
-contributor_name: EY
 keywords:
   - B2B
 ---
+
+<Edition slots="text"/>
+
+Thanks to EY for contributing this topic!
 
 | |
 |:--|
@@ -37,9 +40,9 @@ mutation {
 
 The `addProductsToRequisitionList` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-addProductsToRequisitionList)
+* [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-addProductsToRequisitionList)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addProductsToRequisitionList)
+* [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addProductsToRequisitionList)
 
 ## Example usage
 

@@ -1,8 +1,12 @@
 ---
 title: setCustomAttributesOnCompany mutation
 description: This mutation is automatically available on Adobe Commerce as a Cloud Service (SaaS) projects. Adobe Commerce on-premises and Cloud infrastructure (PaaS) p...
-edition: saas
+
 ---
+
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # setCustomAttributesOnCompany mutation
 

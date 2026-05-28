@@ -1,12 +1,14 @@
 ---
 title: GraphQL authorization
 description: Learn how to authorize GraphQL API calls using tokens. 
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 keywords:
   - GraphQL
   - Security
 ---
+
+<Edition slots="text"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
 
 # GraphQL authorization
 

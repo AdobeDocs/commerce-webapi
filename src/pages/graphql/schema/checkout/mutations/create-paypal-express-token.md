@@ -1,8 +1,12 @@
 ---
 title: createPaypalExpressToken mutation
 description: The createPaypalExpressToken mutation begins the authorization process for the following payment methods:
-edition: paas
+
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # createPaypalExpressToken mutation
 

@@ -1,11 +1,15 @@
 ---
 title: Step 8. Create an invoice
 description: In this step of the tutorial you will create an invoice
-edition: paas
 keywords:
   - REST
 ---
- 
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+
 # Step 8. Create an invoice
 
 You create an invoice after you receive payment for an order. In this example, the order was paid offline via a bank transfer. Therefore, you must tell Adobe Commerce that payment for the order has been captured.

@@ -1,11 +1,15 @@
 ---
 title: Step 5. Add items to the cart
 description: In this step of the tutorial you will add items to the cart
-edition: paas
 keywords:
   - REST
 ---
- 
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+
 # Step 5. Add items to the cart
 
 This step shows how to add a simple product, a downloadable product, and a bundle product to the cart.

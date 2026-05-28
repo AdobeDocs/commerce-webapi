@@ -1,11 +1,14 @@
 ---
 title: finishUpload mutation
 description: The finishUpload mutation completes the file upload process initiated by the initiateUpload mutation. The finishUpload mutation requires the unique key gen...
-edition: saas
 keywords:
   - REST
   - Integration
 ---
+
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # finishUpload mutation
 

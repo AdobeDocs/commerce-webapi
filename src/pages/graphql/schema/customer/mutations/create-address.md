@@ -17,9 +17,9 @@ To return or modify information about a customer, we recommend you use customer 
 
 The `createCustomerAddress` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-createCustomerAddress)
+* [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-createCustomerAddress)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createCustomerAddress)
+* [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createCustomerAddress)
 
 ## Example usage
 
@@ -207,7 +207,9 @@ mutation {
 
 ### Create an address that includes a custom file
 
-<Edition name="saas" />
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 The following call creates an address for the specified customer that includes a file that was uploaded to Amazon S3 using the [`initiateUpload` mutation](../../uploads/mutations/initiate-upload.md).
 

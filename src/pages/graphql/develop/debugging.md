@@ -1,11 +1,13 @@
 ---
 title: Debugging GraphQL queries
 description: Learn how to use PhpStorm and Xdebug to debug GraphQL API queries.
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 keywords:
   - GraphQL
 ---
+
+<Edition slots="text"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
 
 # Debugging GraphQL queries
 

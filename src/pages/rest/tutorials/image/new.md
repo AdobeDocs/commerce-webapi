@@ -1,11 +1,13 @@
 ---
 title: Step 2. Add a new image 
 description: We will learn how to add a new image to a product.
-contributor_name: Goivvy LLC
-contributor_link: https://www.goivvy.com/
 keywords:
   - REST
 ---
+
+<Edition slots="text"/>
+
+[Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/)
 
 # Step 2. Add a new image
 

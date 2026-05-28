@@ -1,12 +1,16 @@
 ---
 title: Server-to-server Authentication
 description: Learn how to set up OAuth server-to-server authentication for Adobe Commerce as a Cloud Service REST API
-edition: saas
 keywords:
   - REST
   - Integration
 ---
- 
+
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+
 # Server-to-server Authentication
 
 This guide provides practical steps for implementing integration with Adobe Commerce as a Cloud Service REST APIs using OAuth 2 server-to-server authentication. This type of integration enables automated communication without user intervention, which is ideal for the following use cases:
@@ -122,7 +126,7 @@ class ACCSApiClient {
 
   async request(method, endpoint, data = null) {
     const accessToken = await this.tokenManager.getValidToken();
-    
+
     const headers = {
       'Authorization': `Bearer ${accessToken}`,
       'x-api-key': process.env.IMS_CLIENT_ID,
@@ -177,7 +181,7 @@ const ACCSApiClient = require('./accsClient');
 
 async function main() {
   const client = new ACCSApiClient();
-  
+
   try {
     // Example API call using a real ACCS REST API endpoint
     const response = await client.request('GET', '/V1/products');
@@ -237,15 +241,15 @@ class ACCSTokenManager:
         self.client_id = os.getenv('IMS_CLIENT_ID')
         self.client_secret = os.getenv('IMS_CLIENT_SECRET')
         self.org_id = os.getenv('IMS_ORG_ID')
-    
+
     def is_token_valid(self):
         return self.token and self.token_expiry and time.time() < self.token_expiry
-    
+
     def get_valid_token(self):
         if self.is_token_valid():
             return self.token
         return self.generate_token()
-    
+
     def generate_token(self):
         url = 'https://ims-na1.adobelogin.com/ims/token/v3'
         headers = {
@@ -257,31 +261,31 @@ class ACCSTokenManager:
             'grant_type': 'client_credentials',
             'scope': 'openid,AdobeID,email,profile,additional_info.roles,additional_info.projectedProductContext,commerce.accs'
         }
-        
+
         try:
             response = requests.post(url, headers=headers, data=urlencode(data))
             response.raise_for_status()
-            
+
             token_data = response.json()
             self.token = token_data['access_token']
             self.token_expiry = time.time() + token_data['expires_in']
-            
+
             return self.token
         except requests.RequestException as e:
             print(f"Token generation failed: {e}")
             raise
-    
+
     def make_api_call(self, method, endpoint, data=None):
         access_token = self.get_valid_token()
         base_url = os.getenv('API_ENDPOINT')
-        
+
         headers = {
             'Authorization': f'Bearer {access_token}',
             'x-api-key': self.client_id,
             'x-gw-ims-org-id': self.org_id,
             'Content-Type': 'application/json'
         }
-        
+
         try:
             response = requests.request(
                 method=method,
@@ -289,13 +293,13 @@ class ACCSTokenManager:
                 headers=headers,
                 json=data
             )
-            
+
             if response.status_code == 401:
                 self.token = None  # Force token refresh on next call
-            
+
             response.raise_for_status()
             return response.json()
-            
+
         except requests.RequestException as e:
             print(f"API call failed: {e}")
             raise

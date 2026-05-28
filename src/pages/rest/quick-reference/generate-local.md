@@ -1,10 +1,14 @@
 ---
 title: Generate a local REST reference
 description: Generate a local schema for testing and return relevant information
-edition: paas
 keywords:
   - REST
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
 import * as Vars from '../../../data/vars.js';
 
 # Generate a local REST reference

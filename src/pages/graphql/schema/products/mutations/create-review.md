@@ -1,8 +1,12 @@
 ---
 title: createProductReview mutation
 description: The createProductReview mutation adds a review for the specified product. Use the productReviewRatingsMetadata query to return a list of rating categories...
-edition: paas
+
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # createProductReview mutation
 

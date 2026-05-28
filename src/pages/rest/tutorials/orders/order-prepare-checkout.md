@@ -1,11 +1,15 @@
 ---
 title: Step 6. Prepare for checkout
 description: In this step of the tutorial you will prepare for checkout
-edition: paas
 keywords:
   - REST
 ---
- 
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+
 # Step 6. Prepare for checkout
 
 Now that all the items have been added to the cart, we can prepare the order for checkout. This process includes the following steps:

@@ -1,11 +1,14 @@
 ---
 title: Login as Customer REST API
 description: Learn how to generate a one-time code for a customer using the Login as Customer REST API in Adobe Commerce as a Cloud Service.
-edition: saas
 keywords:
   - REST
   - Integration
 ---
+
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # Login as Customer
 

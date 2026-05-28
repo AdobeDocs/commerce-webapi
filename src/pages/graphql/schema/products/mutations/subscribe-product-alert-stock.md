@@ -1,8 +1,12 @@
 ---
 title: subscribeProductAlertStock mutation
 description: The subscribeProductAlertStock mutation subscribes the logged-in customer to a stock availability alert for the specified product. When the product comes b...
-edition: saas
+
 ---
+
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # subscribeProductAlertStock mutation
 

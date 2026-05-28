@@ -1,11 +1,15 @@
 ---
 title: Step 2. Get the admin token
 description: In this step of the tutorial you will get the admin token
-edition: paas
 keywords:
   - REST
 ---
- 
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+
 # Step 2. Get the admin token
 
 Each step in this tutorial provides the following information:

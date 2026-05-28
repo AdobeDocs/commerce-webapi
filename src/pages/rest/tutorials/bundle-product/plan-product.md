@@ -1,12 +1,15 @@
 ---
 title: Step 1. Plan the product
 description: In this step of the tutorial you will plan the product
-contributor_name: Goivvy LLC
-contributor_link: https://www.goivvy.com/magento-optimization-service
 keywords:
   - REST
 ---
- 
+
+<Edition slots="text"/>
+
+[Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/magento-optimization-service)
+
+
 # Step 1. Plan the product
 
 To create a bundle product with REST, you need:

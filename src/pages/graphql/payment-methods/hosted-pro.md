@@ -1,11 +1,14 @@
 ---
 title: PayPal Website Payments Pro Hosted Solution payment method
 description: Learn how to use the GraphQL API mutation for the PayPal Website Payments Pro Hosted payment solution.
-edition: paas
 keywords:
   - GraphQL
   - Payments
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # PayPal Website Payments Pro Hosted Solution payment method
 

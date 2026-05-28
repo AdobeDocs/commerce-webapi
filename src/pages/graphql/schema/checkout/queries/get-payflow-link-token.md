@@ -1,8 +1,12 @@
 ---
 title: getPayflowLinkToken query
 description: The getPayflowLinkToken query retrieves PayPal payment credentials for a PayPal Payflow transaction. You must run this query after you set the payment meth...
-edition: paas
+
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # getPayflowLinkToken query
 

@@ -1,8 +1,12 @@
 ---
 title: customerDownloadableProducts query
 description: Use the customerDownloadableProducts query to retrieve the list of purchased downloadable products for the logged-in customer.
-edition: paas
+
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # customerDownloadableProducts query
 

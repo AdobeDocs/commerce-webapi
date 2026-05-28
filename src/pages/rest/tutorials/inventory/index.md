@@ -1,12 +1,16 @@
 ---
 title: Order Processing with Inventory Management
 description: In this tutorial you will process orders using Inventory Management in the REST API
-edition: paas
 keywords:
   - Inventory
   - REST
 ---
- 
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+
 # Order Processing with Inventory Management
 
 This tutorial builds upon the workflow described in the [Order Processing with REST APIs tutorial](/rest/tutorials/orders/index.md). The Order Processing with Inventory Management tutorial provides additional steps that detail how to create stocks and sources, assign products to a custom source, and run the Source Selection Algorithms to recommend shipping options.

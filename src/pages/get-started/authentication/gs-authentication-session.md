@@ -1,11 +1,14 @@
 ---
 title: Session-Based Authentication
 description: How to use session-based authentication in the web APIs.
-edition: paas
 keywords:
   - REST
   - Security
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # Session-based authentication
 

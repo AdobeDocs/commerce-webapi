@@ -1,10 +1,13 @@
 ---
 title: Step 9. Create a shipment
 description: In this step of the tutorial you will create a shipment
-edition: paas
 keywords:
   - REST
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # Step 9. Create a shipment
 

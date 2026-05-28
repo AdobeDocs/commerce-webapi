@@ -1,8 +1,12 @@
 ---
 title: isSubscribedProductAlertStock query
 description: The isSubscribedProductAlertStock query checks whether the logged-in customer is subscribed to a stock availability alert for the specified product. Use th...
-edition: saas
+
 ---
+
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # isSubscribedProductAlertStock query
 

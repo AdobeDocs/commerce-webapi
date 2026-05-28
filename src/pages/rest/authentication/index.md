@@ -1,11 +1,14 @@
 ---
 title: Authentication in Adobe Commerce as a Cloud Service
 description: Learn about REST API authentication in Adobe Commerce as a Cloud Service.
-edition: saas
 keywords:
   - REST
   - Integration
 ---
+
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # REST Authentication in Adobe Commerce as a Cloud Service
 

@@ -1,8 +1,12 @@
 ---
 title: handlePayflowProResponse mutation
 description: The handlePayflowProResponse mutation sends the silent post data that the client received from the Payflow Pro gateway to the application server. The conte...
-edition: paas
+
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # handlePayflowProResponse mutation
 

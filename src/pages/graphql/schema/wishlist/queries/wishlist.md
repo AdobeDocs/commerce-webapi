@@ -1,8 +1,12 @@
 ---
 title: wishlist query
 description: The wishlist query has been deprecated. Wish list information is now provided by the customer query.
-edition: paas
+
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # wishlist query
 

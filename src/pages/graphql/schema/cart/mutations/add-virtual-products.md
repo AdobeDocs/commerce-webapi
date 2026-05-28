@@ -1,8 +1,12 @@
 ---
 title: addVirtualProductsToCart mutation
 description: We recommend using the addProductsToCart mutation to add any type of product to the cart.
-edition: paas
+
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # addVirtualProductsToCart mutation
 

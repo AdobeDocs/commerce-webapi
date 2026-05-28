@@ -1,12 +1,16 @@
 ---
 title: Step 5. Reassign products to custom sources
 description: In this step of the tutorial you will reassign products to custom sources
-edition: paas
 keywords:
   - Inventory
   - REST
 ---
- 
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+
 # Step 5. Reassign products to custom sources
 
 When you install or upgrade Adobe Commerce, the system assigns all existing products to the default source. Commerce also assigns all subsequently-created products to the default source. For this tutorial, we want to unassign three products from the default source and assign them to custom sources.

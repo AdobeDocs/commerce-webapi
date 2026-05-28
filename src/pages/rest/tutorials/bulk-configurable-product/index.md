@@ -1,12 +1,15 @@
 ---
 title: Create a configurable product using bulk APIs
 description: A tutorial that describes how to create a configurable product using bulk API calls
-contributor_name: comwrap GmbH
-contributor_link: http://comwrap.com/
 keywords:
   - REST
 ---
- 
+
+<Edition slots="text"/>
+
+[Thanks to comwrap GmbH for contributing this topic!](http://comwrap.com/)
+
+
 # Create a configurable product using bulk APIs
 
 A system integrator can use Adobe Commerce REST bulk APIs to perform actions on a large scale; such as, creating multiple customers and products, changing prices across an inventory, and assigning large groups of products to a specific warehouse, all within a single call.

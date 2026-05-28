@@ -1,8 +1,12 @@
 ---
 title: productReviewRatingsMetadata query
 description: The productReviewRatingsMetadata query returns the active ratings attributes and the values each rating can have. In Luma, these values are one star throug...
-edition: paas
+
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # productReviewRatingsMetadata query
 

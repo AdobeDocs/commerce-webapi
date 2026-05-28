@@ -1,8 +1,11 @@
 ---
 title: shareGiftRegistry mutation
 description: The shareGiftRegistry mutation sends an invitation to a list email addresses to shop from the customer's gift registry.
-contributor_name: EY
 ---
+
+<Edition slots="text"/>
+
+Thanks to EY for contributing this topic!
 
 | |
 |:--|
@@ -32,9 +35,9 @@ mutation {
 
 The `shareGiftRegistry` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-shareGiftRegistry)
+* [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-shareGiftRegistry)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-shareGiftRegistry)
+* [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-shareGiftRegistry)
 
 ## Example usage
 

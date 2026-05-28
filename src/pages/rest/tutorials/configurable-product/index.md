@@ -4,7 +4,7 @@ description: This tutorial describes how to create a configurable product using 
 keywords:
   - REST
 ---
- 
+
 # Create a configurable product tutorial
 
 This tutorial shows a system integrator how to use Adobe Commerce REST APIs to create a _configurable product_. A configurable product is a parent product of multiple simple products. You define a configurable product so that the buyer must make one or more choices to select a product. For example, most clothing comes in a variety of colors and sizes. If you are offering a skirt in black, red, and blue colorways in sizes small, medium, and large, then you would create a configurable product with 9 simple products, one for each combination of color and size.

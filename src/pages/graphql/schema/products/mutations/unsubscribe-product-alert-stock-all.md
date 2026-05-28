@@ -1,8 +1,12 @@
 ---
 title: unsubscribeProductAlertStockAll mutation
 description: The unsubscribeProductAlertStockAll mutation removes all stock availability alert subscriptions for the logged-in customer across the current website. Afte...
-edition: saas
+
 ---
+
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # unsubscribeProductAlertStockAll mutation
 

@@ -1,8 +1,12 @@
 ---
 title: sendEmailToFriend mutation
 description: Use the sendEmailToFriend mutation to allow the application send a message on behalf of a customer to the specified email addresses.
-edition: paas
+
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # sendEmailToFriend mutation
 

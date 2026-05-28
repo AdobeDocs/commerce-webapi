@@ -1,11 +1,15 @@
 ---
 title: Step 3. Create a customer
 description: In this step of the tutorial you will create a customer
-edition: paas
 keywords:
   - REST
 ---
- 
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+
 # Step 3. Create a customer
 
 Customers can make purchases in three ways:

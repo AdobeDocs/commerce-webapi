@@ -1,8 +1,12 @@
 ---
 title: attributesMetadata query
 description: The attributesMetadata query is available only if you have installed the PWA Metapackage for Magento Open Source Extensions. The query has been deprecated....
-edition: paas
+
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # attributesMetadata query
 

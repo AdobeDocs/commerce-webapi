@@ -40,9 +40,8 @@ Ready to experience the power of Adobe Commerce GraphQL? Here's how to get start
 
 1. Access your GraphQL endpoint. Your Adobe Commerce GraphQL endpoint is available at:
 
-   &#8203;<Edition name="paas" /> `https://<commerce-server>/graphql`
-
-   &#8203;<Edition name="saas" /> `https://\<region\>-\<environment\>.api.commerce.adobe.com/\<tenantId\>/graphql`
+   - [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) `https://<commerce-server>/graphql`
+   - [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) `https://\<region\>-\<environment\>.api.commerce.adobe.com/\<tenantId\>/graphql`
 
 1. Explore the schema. Use the schema browser in your GraphQL IDE or extension to explore the available queries, mutations, and types. This will help you understand the structure of the API and how to construct your requests. You can also use introspection queries to discover the schema programmatically.
 

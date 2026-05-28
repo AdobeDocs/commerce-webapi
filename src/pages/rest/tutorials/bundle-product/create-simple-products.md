@@ -1,12 +1,15 @@
 ---
 title: Step 2. Create the simple products
 description: In this step of the tutorial you will create simple products
-contributor_name: Goivvy LLC
-contributor_link: https://www.goivvy.com/magento-optimization-service
 keywords:
   - REST
 ---
- 
+
+<Edition slots="text"/>
+
+[Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/magento-optimization-service)
+
+
 # Step 2. Create the simple products
 
 <InlineAlert variant="info" slots="text"/>

@@ -1,9 +1,11 @@
 ---
 title: Simple product data types
 description: The SimpleProduct data type implements the following interfaces:
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 ---
+
+<Edition slots="text"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
 
 # Simple product data types
 

@@ -1,11 +1,14 @@
 ---
 title: Asynchronous web endpoints
 description: Learn about asynchronous web points, how they are used and how to define store scopes
-contributor_name: comwrap GmbH
-contributor_link: http://comwrap.com/
 keywords:
   - REST
 ---
+
+<Edition slots="text"/>
+
+[Thanks to comwrap GmbH for contributing this topic!](http://comwrap.com/)
+
 import * as Vars from '../../../data/vars.js';
 
 # Asynchronous web endpoints
@@ -14,7 +17,11 @@ An asynchronous web endpoint intercepts messages to a Web API and writes them to
 
 <InlineAlert variant="success" slots="text"/>
 
-&#8203;<Edition name="paas" /> Use the `bin/magento queue:consumers:start async.operations.all` command to start the consumer that handles asynchronous and bulk API messages.
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+Use the `bin/magento queue:consumers:start async.operations.all` command to start the consumer that handles asynchronous and bulk API messages.
 
 Commerce supports the following types of asynchronous requests:
 
@@ -29,14 +36,22 @@ GET requests are not supported. Although Commerce does not currently implement a
 
 The route to all asynchronous calls varies between platforms:
 
-&#8203;<Edition name="paas" /> In Adobe Commerce on Cloud and on-premises projects, the route contains the prefix `/async`, added before `/V1` of a standard synchronous endpoint. For example:
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+In Adobe Commerce on Cloud and on-premises projects, the route contains the prefix `/async`, added before `/V1` of a standard synchronous endpoint. For example:
 
 ```http
 POST https://<host>/rest/<store-view-code>/async/V1/products
 PUT https://<host>/rest/<store-view-code>/async/V1/products/:sku
 ```
 
-&#8203;<Edition name="saas" /> In Adobe Commerce as a Cloud Service,  the `/async` segment occurs after the `V1` segment of the route. For example:
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+In Adobe Commerce as a Cloud Service,  the `/async` segment occurs after the `V1` segment of the route. For example:
 
 ```http
 POST https://<server>.api.commerce.adobe.com/<tenant-id>/V1/async/products
@@ -58,8 +73,17 @@ Field name | Data type | Description
 
 The following call asynchronously changes the price of the product that has a `sku` of `24-MB01`:
 
-&#8203;<Edition name="paas" /> `PUT https://\<host\>/rest/<store-view-code>/async/V1/products/24-MB01`
-&#8203;<Edition name="saas" /> `PUT https://\<server\>.api.commerce.adobe.com/<tenant-id>/V1/async/products/24-MB01`
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+`PUT https://\<host\>/rest/<store-view-code>/async/V1/products/24-MB01`
+
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+`PUT https://\<server\>.api.commerce.adobe.com/<tenant-id>/V1/async/products/24-MB01`
 
 ### Payload
 
@@ -91,7 +115,9 @@ Commerce generates a `bulk_uuid` for each asynchronous request. Use the `bulk_uu
 
 ## Store scopes
 
-<Edition name="paas" />
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 You can specify a store code (which is labeled in the Admin as store view code) in the route of an asynchronous endpoint so that it operates on a specific store, as shown below:
 
@@ -109,7 +135,11 @@ POST /all/async/V1/products
 PUT /all/async/V1/products/:sku
 ```
 
-&#8203;<Edition name="saas" />In Adobe Commerce as a Cloud Service, you must specify the store code in the `Store` header of the request.
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+In Adobe Commerce as a Cloud Service, you must specify the store code in the `Store` header of the request.
 
 ### Fallback and creating/updating objects when setting store scopes
 

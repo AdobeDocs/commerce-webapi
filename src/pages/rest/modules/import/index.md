@@ -19,7 +19,7 @@ The `POST /V1/import/csv` and `POST /V1/import/json` endpoints provide a RESTful
 *  `customer_address`
 *  `customer_composite`
 *  `customer_finance`
-*  &#8203;<Edition name="saas" />`requisition_list`
+* [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) `requisition_list`
 *  `stock_sources`
 
 <InlineAlert variant="info" slots="text" />
@@ -34,7 +34,9 @@ The original CSV or JSON data must use UTF-8 encoding before any compression or 
 
 ### CSV Import
 
-<Edition name="paas" />
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 The `import/csv` endpoint expects data in base64 encoded format:
 
@@ -87,7 +89,9 @@ The `allowedErrorCount` field specifies the maximum allowable error count before
 
 ## Import CSV API
 
-<Edition name="paas" />
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 The `POST /V1/import/csv` endpoint uses the `StartImportInterface` service to efficiently import entities into Adobe Commerce. The payload must contain data in a base64 encoded format.
 
@@ -827,7 +831,9 @@ Customers and addresses information is represented as an array of JSON objects.
 
 **Requisition list payload:**
 
-<Edition name="saas" />
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 Each row in the `items` array represents one requisition list item. Rows are grouped by `(customer_email + list_name)` to form a parent-child relationship.
 

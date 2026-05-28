@@ -1,11 +1,15 @@
 ---
 title: Step 10. Issue a partial refund
 description: In this step of the tutorial you will issue a partial refund
-edition: paas
 keywords:
   - REST
 ---
- 
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+
 # Step 10. Issue a partial refund
 
 Adobe Commerce introduced two endpoints that streamline the process of issuing a refund by creating a creditmemo and updating the order or invoice in one call.

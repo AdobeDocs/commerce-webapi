@@ -39,6 +39,8 @@ SaaS provides two additional implementations of the `AttributeValueInterface` in
 
 ### Retrieve a file uploaded to Amazon S3
 
-<Edition name="saas" />
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 < CustomerS3Download />

@@ -1,8 +1,11 @@
 ---
 title: generateCustomerTokenAsAdmin mutation
 description: The generateCustomerTokenAsAdmin mutation generates a new customer token as an admin so that an administrator can perform remote shopping assistance on beh...
-contributor_name: EY 
 ---
+
+<Edition slots="text"/>
+
+Thanks to EY for contributing this topic!
 
 # generateCustomerTokenAsAdmin mutation
 
@@ -20,9 +23,9 @@ mutation {generateCustomerTokenAsAdmin(input: GenerateCustomerTokenAsAdminInput!
 
 The `generateCustomerTokenAsAdmin` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-generateCustomerTokenAsAdmin)
+* [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-generateCustomerTokenAsAdmin)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-generateCustomerTokenAsAdmin)
+* [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-generateCustomerTokenAsAdmin)
 
 ## Example usage
 

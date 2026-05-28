@@ -1,10 +1,13 @@
 ---
 title: Use cURL to Run the Request
 description: Explains how to use cURL.
-edition: paas
 keywords:
   - REST
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # Using cURL to run requests
 

@@ -1,12 +1,15 @@
 ---
 title: Step 1. Plan the product
 description: In this step of the tutorial you will plan and define the product
-contributor_name: comwrap GmbH
-contributor_link: http://comwrap.com/
 keywords:
   - REST
 ---
- 
+
+<Edition slots="text"/>
+
+[Thanks to comwrap GmbH for contributing this topic!](http://comwrap.com/)
+
+
 # Step 1. Plan the product
 
   To create a configurable product programmatically, you'll need to know the following:

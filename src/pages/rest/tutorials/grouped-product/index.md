@@ -4,7 +4,7 @@ description: In this tutorial you will create and manage grouped products
 keywords:
   - REST
 ---
- 
+
 # Create and manage grouped products tutorial
 
 A grouped product consists of simple standalone products that are presented as a group. A group can contain variations of a single product or a collection of products that are to be sold together.

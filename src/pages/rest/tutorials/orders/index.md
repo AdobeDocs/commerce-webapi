@@ -1,10 +1,14 @@
 ---
 title: Order processing tutorial
 description: In this tutorial you will configure a store, create a customer, quotes, orders and more using the REST API
-edition: paas
 keywords:
   - REST
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
 import * as Vars from '../../../../data/vars.js';
 
 # Order processing tutorial

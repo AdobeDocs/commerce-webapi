@@ -5,7 +5,7 @@ keywords:
   - Inventory
   - REST
 ---
- 
+
 # Manage sources
 
 Sources represent locations storing and shipping available product stock. Any location with available stock and capable of order fulfillment can be added as a source. These locations can include warehouses, brick-and-mortar stores, distribution centers, and drop shippers.

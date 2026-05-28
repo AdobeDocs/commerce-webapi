@@ -1,12 +1,16 @@
 ---
 title: Step 6. Create a customer and generate a customer token
 description: In this step of the tutorial you will create a customer and generate a customer token
-edition: paas
 keywords:
   - Inventory
   - REST
 ---
- 
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+
 # Step 6. Create a customer and generate a customer token
 
 This step creates a customer that lives close to several stores that serve as in-store pickup locations. Although this tutorial ships the order using a traditional shipping method, the GraphQL tutorial shows how in-store pickup can be implemented.

@@ -1,8 +1,12 @@
 ---
 title: products query
 description: Adobe Commerce as a Cloud Service (SaaS) does not support this products query. Use the Catalog Service products query instead. If you are migrating from Pa...
-edition: paas
+
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # products query
 
@@ -1528,7 +1532,9 @@ In this example, the `description` attribute has been enabled by setting the **S
 
 ### Retrieve related products, up-sells, and cross-sells
 
-<Edition name="paas" />
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 The following query shows how to get related products, up-sells, and cross-sells for a product:
 

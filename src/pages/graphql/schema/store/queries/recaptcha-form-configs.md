@@ -1,8 +1,12 @@
 ---
 title: recaptchaFormConfigs query
 description: The recaptchaFormConfigs query returns reCAPTCHA configuration details for multiple form types in a single request. Use this query when you need to retriev...
-edition: saas
+
 ---
+
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # recaptchaFormConfigs query
 

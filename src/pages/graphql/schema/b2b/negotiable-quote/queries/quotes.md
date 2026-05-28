@@ -31,9 +31,9 @@ This query requires a valid [customer authentication token](../../../customer/mu
 
 The `negotiableQuotes` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-negotiableQuotes)
+* [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-negotiableQuotes)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-negotiableQuotes)
+* [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-negotiableQuotes)
 
 ## Example usage
 
@@ -100,7 +100,9 @@ query {
 
 ### Retrieve attachments associated with comments on quotes
 
-<Edition name="saas" />
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 The following example returns detailed information about all negotiable quotes that are accessible to the company user, including any attachments associated with comments on the quotes.
 

@@ -1,12 +1,16 @@
 ---
 title: User Authentication
 description: Learn about User Authentication for REST API in Adobe Commerce as a Cloud Service.
-edition: saas
 keywords:
   - REST
   - Integration
 ---
- 
+
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+
 # User authentication
 
 User authentication enables Commerce administrators to authenticate through Adobe's Identity Management System (IMS). This authentication flow is specifically designed for scenarios where API operations need to be executed with user-specific permissions. When using this method, all API calls are performed within the context of the authenticated admin user's permissions, as defined in the Adobe Admin Console.
@@ -98,18 +102,18 @@ Authorization code to access token:
 1. Make a `POST` request to the token endpoint.
 
    **Request**:
-  
+
    ```http
    POST https://ims-na1.adobelogin.com/ims/token/v3
    Authorization: Basic {{base64(client_id:client_secret)}}
    Content-Type: application/x-www-form-urlencoded
-   
+
    code={{auth_code}}&grant_type=authorization_code
-   
+
    ```
-  
+
    **Response**:
-  
+
    ```json
    {
     "access_token": "{ACCESS_TOKEN}",

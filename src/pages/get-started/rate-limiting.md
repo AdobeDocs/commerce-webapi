@@ -1,11 +1,14 @@
 ---
 title: Rate limiting
 description: Explains how to limit attacks that attempt to brute force credit card details.
-edition: paas
 keywords:
   - REST
   - Security
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # Rate limiting
 
@@ -176,7 +179,7 @@ Use the following commands to enable and configure rate limiting:
     ```bash
     $ bin/magento config:set sales/backpressure/guest_limit 50
     ```
-  
+
 1. Set the request limit for authenticated customers:
 
     ```bash

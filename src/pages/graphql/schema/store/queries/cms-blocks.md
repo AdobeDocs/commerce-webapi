@@ -1,8 +1,12 @@
 ---
 title: cmsBlocks query
 description: The cmsBlocks query returns information about blocks that were developed with the Adobe Commerce or Magento Open Source Content Management System (CMS).
-edition: paas
+
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # cmsBlocks query
 

@@ -1,11 +1,13 @@
 ---
 title: Step 3. Update an image 
 description: We will learn how to update an existing image 
-contributor_name: Goivvy LLC
-contributor_link: https://www.goivvy.com/
 keywords:
   - REST
 ---
+
+<Edition slots="text"/>
+
+[Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/)
 
 # Step 3. Update an image
 

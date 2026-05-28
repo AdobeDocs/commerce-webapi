@@ -14,4 +14,3 @@ keywords:
 The following query retrieves a shared requisition list
 
 - [View Shared Requisition List](shared-requisition-list.md)
-  

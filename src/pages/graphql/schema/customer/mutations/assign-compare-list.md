@@ -1,9 +1,11 @@
 ---
 title: assignCompareListToCustomer mutation
 description: The assignCompareListToCustomer mutation assigns the specified comparison list to the logged-in customer. Use this mutation when a customer creates a compa...
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 ---
+
+<Edition slots="text"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
 
 # assignCompareListToCustomer mutation
 
@@ -27,9 +29,9 @@ mutation {
 
 The `assignCompareListToCustomer` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-assignCompareListToCustomer)
+* [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-assignCompareListToCustomer)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-assignCompareListToCustomer)
+* [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-assignCompareListToCustomer)
 
 ## Example usage
 

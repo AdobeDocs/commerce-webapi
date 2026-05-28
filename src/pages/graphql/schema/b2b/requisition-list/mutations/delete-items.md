@@ -1,10 +1,13 @@
 ---
 title: deleteRequisitionListItems mutation
 description: The deleteRequisitionListItems mutation removes items from the specified requisition list for the logged in customer.
-contributor_name: EY
 keywords:
   - B2B
 ---
+
+<Edition slots="text"/>
+
+Thanks to EY for contributing this topic!
 
 | |
 |:--|
@@ -37,9 +40,9 @@ mutation {
 
 The `deleteRequisitionListItems` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-deleteRequisitionListItems)
+* [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-deleteRequisitionListItems)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-deleteRequisitionListItems)
+* [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-deleteRequisitionListItems)
 
 ## Example usage
 

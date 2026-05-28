@@ -4,7 +4,7 @@ description: In this step of the tutorial you will define the configurable produ
 keywords:
   - REST
 ---
- 
+
 # Step 4. Define configurable product options
 
 Now that we've created all the Champ Tee products, we need to assign `size` as the configurable attribute and link the simple products to the configurable product.

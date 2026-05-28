@@ -1,8 +1,12 @@
 ---
 title: customerOrders query
 description: The customerOrders query has been deprecated. Specify the orders object in the customer query instead.
-edition: paas
+
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # customerOrders query
 

@@ -5,7 +5,7 @@ keywords:
   - Inventory
   - REST
 ---
- 
+
 # Manage source items
 
 If Adobe Commerce is configured to manage inventory, Commerce assigns all existing products to the default source. Currently, Commerce also assigns newly-created products to the default source. Single Source merchants do not need to manage source items, but Multi Source merchants may need to move products from the default source to a custom source, or move products from one custom source to another.

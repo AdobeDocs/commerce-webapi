@@ -1,11 +1,15 @@
 ---
 title: Step 4. Create a quote
 description: In this step of the tutorial you will create a quote
-edition: paas
 keywords:
   - REST
 ---
- 
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+
 # Step 4. Create a quote
 
 When a customer adds an item to their shopping cart for the first time, Adobe Commerce creates a quote. Commerce uses a quote to perform tasks such as

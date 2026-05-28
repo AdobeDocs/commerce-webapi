@@ -1,11 +1,14 @@
 ---
 title: Authentication
 description: Overview of authentication methods in web APIs.
-edition: paas
 keywords:
   - REST
   - Security
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # Authentication
 

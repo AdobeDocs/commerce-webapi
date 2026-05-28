@@ -1,9 +1,11 @@
 ---
 title: pickupLocations query
 description: Use the pickupLocations query to retrieve a list of available pickup locations.
-contributor_name: Oleksandr Kravchuk
-contributor_link: https://github.com/swnsma
 ---
+
+<Edition slots="text"/>
+
+[Thanks to Oleksandr Kravchuk for contributing this topic!](https://github.com/swnsma)
 
 # pickupLocations query
 
@@ -39,9 +41,9 @@ pickupLocations (area: AreaInput filters: PickupLocationFilterInput sort: Pickup
 
 The `pickupLocations` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-pickupLocations)
+* [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-pickupLocations)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-pickupLocations)
+* [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-pickupLocations)
 
 ## Example usage
 

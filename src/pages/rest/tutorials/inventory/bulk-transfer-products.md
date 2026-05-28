@@ -1,12 +1,16 @@
 ---
 title: Step 13. Bulk transfer products
 description: In this step of the tutorial you will transfer products in bulk
-edition: paas
 keywords:
   - Inventory
   - REST
 ---
- 
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+
 # Step 13. Bulk transfer products
 
 The Northeast warehouse is out of stock of Voyage Yoga Bags (`24-WB01`). In this step, we'll bulk transfer all of the stock from the Huntington store to the Northeast warehouse. As a result, the product cannot be shipped from that store. We will also transfer five bags from the Sausalito store to the West warehouse.

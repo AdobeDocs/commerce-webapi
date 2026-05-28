@@ -176,7 +176,7 @@ Layered search is available in Live Search 4.6.0 (PaaS) or in the latest version
 The advanced search capabilities are implemented through the `filter` parameter in the `productSearch` query using specific operators:
 
 - **Layered search** - Search within another search context - With this capability, you can undertake up to two layers of search for your search queries. For example:
-  
+
   - **Layer 1 search** - Search for "motor" on `product_attribute_1`.
   - **Layer 2 search** - Search for "part number 123" on `product_attribute_2`. This example searches for "part number 123" within the results for "motor".
 
@@ -606,14 +606,18 @@ The query response can also contain the following top-level fields and objects:
 
 ## Endpoints
 
-&#8203;<Edition name="paas" />
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 | Environment | Endpoint    |
 |------------ | ----------: |
 | **Testing**    | `https://catalog-service-sandbox.adobe.io/graphql` |
 | **Production** | `https://catalog-service.adobe.io/graphql` |
 
-&#8203;<Edition name="saas" />
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 |  Environment | Endpoint |
 | ------------ | --------:|

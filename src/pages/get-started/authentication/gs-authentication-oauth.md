@@ -1,11 +1,14 @@
 ---
 title: OAuth-Based Authentication
 description: How to use OAuth authentication and token passing in the web APIs.
-edition: paas
 keywords:
   - REST
   - Security
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # OAuth-based authentication
 
@@ -182,9 +185,7 @@ To simulate the OAuth 1.0a token exchange flow:
 
 \<p\>\</p\>
 
-<Details slots="heading, content" />
-
-#### checklogin.php
+<Details slots="content" summary="checklogin.php"/>
 
 ```php
 <\?php
@@ -220,9 +221,7 @@ header("location: $callback");
 ```
 
 
-<Details slots="heading, content" />
-
-#### endpoint.php
+<Details slots="content" summary="endpoint.php"/>
 
 ```php
 <?php
@@ -244,9 +243,7 @@ echo "Response";
 ```
 
 
-<Details slots="heading, content" />
-
-#### login.php
+<Details slots="content" summary="login.php"/>
 
 ```php
 <?php
@@ -286,9 +283,7 @@ HTML;
 ```
 
 
-<Details slots="heading, content" />
-
-#### OauthClient.php
+<Details slots="heading, content" summary="OauthClient.php"/>
 
 Change the instances of `http://my.host` in this example to a valid base URL.
 

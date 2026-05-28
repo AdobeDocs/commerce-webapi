@@ -1,12 +1,15 @@
 ---
 title: Search for the status of a bulk operation
 description: Search for bulk operation statuses
-contributor_name: comwrap GmbH
-contributor_link: https://www.comwrap.com
 keywords:
   - REST
 ---
- 
+
+<Edition slots="text"/>
+
+[Thanks to comwrap GmbH for contributing this topic!](https://www.comwrap.com)
+
+
 # Search for the status of a bulk operation
 
 The Status Operation Search endpoint (`GET /V1/bulk/?searchCriteria`) allows you to search for bulk operation statuses.
@@ -27,12 +30,20 @@ You can specify any of the following fields to filter on operation statuses:
 
 The following call returns bulk operations that contain an error that cannot be retried.
 
-&#8203;<Edition name="paas" /> `GET \<host\>/rest/<store_code>/V1/bulk/?
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+`GET \<host\>/rest/<store_code>/V1/bulk/?
 searchCriteria[filter_groups][0][filters][0][field]=status&
 searchCriteria[filter_groups][0][filters][0][value]=3&
 searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
 
-&#8203;<Edition name="saas" /> `GET https://\<server\>.api.commerce.adobe.com/<tenant-id>/V1/bulk/?
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+`GET https://\<server\>.api.commerce.adobe.com/<tenant-id>/V1/bulk/?
 searchCriteria[filter_groups][0][filters][0][field]=status&
 searchCriteria[filter_groups][0][filters][0][value]=3&
 searchCriteria[filter_groups][0][filters][0][condition_type]=eq`

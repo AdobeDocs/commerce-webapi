@@ -1,11 +1,13 @@
 ---
 title: updateRequisitionList mutation
 description: The updateRequisitionList mutation updates the name and, optionally, the description of a requisition list.
-contributor_name: Zilker Technology
-contributor_link: https://www.ztech.io/
 keywords:
   - B2B
 ---
+
+<Edition slots="text"/>
+
+[Thanks to Zilker Technology for contributing this topic!](https://www.ztech.io/)
 
 | |
 |:--|
@@ -39,9 +41,9 @@ mutation {
 
 The `updateRequisitionList` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-updateRequisitionList)
+* [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-updateRequisitionList)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateRequisitionList)
+* [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateRequisitionList)
 
 ## Example usage
 

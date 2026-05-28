@@ -1,13 +1,16 @@
 ---
 title: In-Store Pickup
 description: Retrieve a list or search for pickup locations using the REST API
-contributor_name: Oleksandr Kravchuk
-contributor_link: https://github.com/swnsma
 keywords:
   - Inventory
   - REST
 ---
- 
+
+<Edition slots="text"/>
+
+[Thanks to Oleksandr Kravchuk for contributing this topic!](https://github.com/swnsma)
+
+
 # In-Store Pickup
 
 The Inventory In-Store Pickup functionality exposes an endpoint that retrieves a list of pickup locations, and another endpoint that notifies the customer that their order is ready for pickup.

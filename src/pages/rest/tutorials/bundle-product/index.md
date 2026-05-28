@@ -1,12 +1,15 @@
 ---
 title: Create a bundle product tutorial
 description: In this tutorial you will learn how to create a bundled product
-contributor_name: Goivvy LLC
-contributor_link: https://www.goivvy.com/magento-optimization-service
 keywords:
   - REST
 ---
- 
+
+<Edition slots="text"/>
+
+[Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/magento-optimization-service)
+
+
 # Create a bundle product tutorial
 
 This tutorial shows a way to use Adobe Commerce REST APIs to create a _bundle product_. A bundle product is a "create your own" type of product.

@@ -1,8 +1,11 @@
 ---
 title: giftRegistry query
 description: The giftRegistry query retrieves details about the specified gift registry. Use the customer query to return a list of valid uid values.
-contributor_name: EY
 ---
+
+<Edition slots="text"/>
+
+Thanks to EY for contributing this topic!
 
 | |
 |:--|
@@ -24,9 +27,9 @@ giftRegistry(uid: ID!): GiftRegistry
 
 The `giftRegistry` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-giftRegistry)
+* [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-giftRegistry)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-giftRegistry)
+* [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-giftRegistry)
 
 ## Example usage
 

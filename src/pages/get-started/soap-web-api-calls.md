@@ -1,8 +1,11 @@
 ---
 title: Use SOAP Services
-edition: paas
 description: A description of available SOAP services and their conventions
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # Using SOAP services
 

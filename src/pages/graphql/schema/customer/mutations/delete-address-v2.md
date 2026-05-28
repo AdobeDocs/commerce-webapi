@@ -1,8 +1,12 @@
 ---
 title: deleteCustomerAddressV2 mutation
 description: Use the deleteCustomerAddressV2 mutation to delete the specified customer address. It returns a Boolean value that indicates whether the operation was succ...
-edition: saas
+
 ---
+
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # deleteCustomerAddressV2 mutation
 
@@ -30,7 +34,7 @@ mutation {
 
 The `deleteCustomerAddressV2` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-deleteCustomerAddressV2)
+* [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-deleteCustomerAddressV2)
 
 ## Example usage
 

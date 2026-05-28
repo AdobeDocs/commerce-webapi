@@ -4,7 +4,7 @@ description: In this step of the tutorial you will create the personalization op
 keywords:
   - REST
 ---
- 
+
 # Step 5. Create the personalization option
 
 Let's add a text box to the product page that allows the customer to add his name (up to 15 characters) to the back of shirt.

@@ -1,8 +1,12 @@
 ---
 title: clearCart mutation
 description: The clearCart mutation removes all items from the specified cart.
-edition: paas
+
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 | |
 |:--|

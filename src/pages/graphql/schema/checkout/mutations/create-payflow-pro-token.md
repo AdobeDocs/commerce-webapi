@@ -1,8 +1,12 @@
 ---
 title: createPayflowProToken mutation
 description: The createPayflowProToken mutation initiates a Payflow Pro transaction and receives a token. The payload must contain the redirect URLs to use when the tra...
-edition: paas
+
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # createPayflowProToken mutation
 

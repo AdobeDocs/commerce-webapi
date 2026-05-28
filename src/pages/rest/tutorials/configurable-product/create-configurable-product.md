@@ -4,7 +4,7 @@ description: In this step of the tutorial you will create the configurable produ
 keywords:
   - REST
 ---
- 
+
 # Step 2. Create the configurable product
 
 We have the information we need to create the Champ Tee configurable product.

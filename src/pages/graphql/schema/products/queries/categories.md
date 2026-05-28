@@ -1,8 +1,12 @@
 ---
 title: categories query
 description: Adobe Commerce as a Cloud Service (SaaS) does not support this categories query. Use the Catalog Service categories query instead. If you are migrating fro...
-edition: paas
+
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # categories query
 

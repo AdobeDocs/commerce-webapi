@@ -1,11 +1,14 @@
 ---
 title: Create an Integration
 description: Explains how to create an integration.
-edition: paas
 keywords:
   - Integration
   - REST
 ---
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 # Create an integration
 
@@ -86,7 +89,7 @@ To develop a module, you must:
            }
         }
      }
-     
+
    ```
 
     For more information, see [Create a component](https://developer.adobe.com/commerce/php/development/build/component-name/).

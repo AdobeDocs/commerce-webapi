@@ -1,12 +1,15 @@
 ---
 title: Step 3. Create the bundle product 
 description: In this step of the tutorial you will create the bundle product
-contributor_name: Goivvy LLC
-contributor_link: https://www.goivvy.com/magento-optimization-service
 keywords:
   - REST
 ---
- 
+
+<Edition slots="text"/>
+
+[Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/magento-optimization-service)
+
+
 # Step 3. Create the bundle product
 
 Now we will add the bundle product. We will use two bundle options: `RAM` and `Monitor`.

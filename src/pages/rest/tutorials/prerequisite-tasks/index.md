@@ -1,11 +1,15 @@
 ---
 title: Generate the admin token
 description: In this tutorial you will generate the admin token necessary for other tutorials 
-edition: paas
 keywords:
   - REST
 ---
- 
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+
 # Generate the admin token
 
 <InlineAlert variant="info" slots="text" />

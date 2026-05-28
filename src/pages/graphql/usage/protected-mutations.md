@@ -44,7 +44,12 @@ The following table lists the forms and mutations that can be configured to requ
 
 Field name | Mutation
 --- | ---
-Enable for Customer Login | `generateCustomerToken`,\<br/\><Edition name="saas" /> `exchangeOtpForCustomerToken`
+
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+Enable for Customer Login | `generateCustomerToken`,\<br/\> `exchangeOtpForCustomerToken`
 Enable for Forgot Password | `changeCustomerPassword`
 Enable for Create New Customer Account | `createCustomer`, `createCustomerV2`
 Enable for Edit Customer Account | `updateCustomer`, `updateCustomerV2`
