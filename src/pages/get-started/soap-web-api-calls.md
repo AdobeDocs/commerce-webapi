@@ -21,8 +21,8 @@ To consume several services, you must specify them in the WSDL endpoint URL.
 
 | Service | WSDL endpoint URL | Available services |
 | --------- | ---------- | ------------------------------------------ |
-| customer | http://magentohost/soap?wsdl&services=customerCustomerRepositoryV1 | \Magento\Customer\Api\Data\CustomerInterface |
-| customer, catalogProduct | http://magentohost/soap/custom_store?wsdl&services=customerCustomerRepositoryV1,catalogProductRepositoryV1 | \Magento\Customer\Api\Data\CustomerInterface, \Magento\Catalog\Api\Data\ProductInterface |
+| customer | [http://magentohost/soap?wsdl&services=customerCustomerRepositoryV1](http://magentohost/soap?wsdl&services=customerCustomerRepositoryV1) | \Magento\Customer\Api\Data\CustomerInterface |
+| customer, catalogProduct | [http://magentohost/soap/custom_store?wsdl&services=customerCustomerRepositoryV1,catalogProductRepositoryV1](http://magentohost/soap/custom_store?wsdl&services=customerCustomerRepositoryV1,catalogProductRepositoryV1) | \Magento\Customer\Api\Data\CustomerInterface, \Magento\Catalog\Api\Data\ProductInterface |
 
 The WSDL URL follows the following pattern:
 

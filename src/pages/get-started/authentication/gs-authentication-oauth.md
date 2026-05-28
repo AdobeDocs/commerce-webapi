@@ -174,8 +174,8 @@ To simulate the OAuth 1.0a token exchange flow:
 1. Click on **Add New Integration**.
 1. Complete all details in the Integration Info tab:
    *  **Name** : SomeUniqueIntegrationName
-   *  **Callback URL** : http://your_app_host/endpoint.php
-   *  **Identity link URL** : http://your_app_host/login.php
+   *  **Callback URL** : [http://your_app_host/endpoint.php](http://your_app_host/endpoint.php)
+   *  **Identity link URL** : [http://your_app_host/login.php](http://your_app_host/login.php)
    *  Add permissions as desired on the **API** tab
 1. Select the **Save and Activate** option from the drop down menu.
 1. A pop-up window displays, confirming API permissions. Click **Allow**. (Make sure your browser allows pop-up windows.) The credentials are posted to `endpoint.php`. You should also see another pop-up for the identity linking step that opens the script from `login.php`.
