@@ -14,7 +14,7 @@ These steps describe the flow of requests and responses required to complete a t
 
 ## Checkout workflow
 
-![Payment Services sequence diagram](../../../images/graphql/payment-services.svg)
+![Payment Services sequence diagram](../../../images/graphql/payment-services.png)
 
 1. Run the [`getPaymentConfig`](../queries/get-payment-config.md) query to fetch the payment configuration needed to render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
 

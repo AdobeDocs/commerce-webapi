@@ -18,7 +18,7 @@ These steps describe the flow of requests and responses with the [Payment Servic
 
 These steps describe the use case when a shopper adds a product to the cart on a PDP.
 
-![Payment Services sequence diagram](../../../images/graphql/payment-services-pdp.svg)
+![Payment Services sequence diagram](../../../images/graphql/payment-services-pdp.png)
 
 1. Run the [`getPaymentConfig`](../queries/get-payment-config.md) query to fetch the payment configuration needed to render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
 
@@ -50,7 +50,7 @@ These steps describe the use case when a shopper adds a product to the cart on a
 
 These steps describe the use case when a shopper cancels the payment process on the PDP.
 
-![Payment Services sequence diagram](../../../images/graphql/payment-services-pdp-cartinactive.svg)
+![Payment Services sequence diagram](../../../images/graphql/payment-services-pdp-cartinactive.png)
 
 1. Run the [`getPaymentConfig`](../queries/get-payment-config.md) query to fetch the payment configuration needed to render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
 

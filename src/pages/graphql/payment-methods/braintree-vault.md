@@ -16,7 +16,7 @@ Braintree Vault is a payment gateway that processes debit and credit card paymen
 
 The following diagram shows the workflow for placing an order when Braintree Vault is the selected payment method.
 
-![Braintree sequence diagram](../../images/graphql/braintree-vault.svg)
+![Braintree sequence diagram](../../images/graphql/braintree-vault.png)
 
 1. Use the [`customerPaymentTokens`](../schema/checkout/queries/customer-payment-tokens.md) query to retrieve
    the payment tokens the customer has stored in the vault.

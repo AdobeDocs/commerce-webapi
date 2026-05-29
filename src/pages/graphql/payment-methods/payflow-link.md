@@ -24,7 +24,7 @@ The Payflow gateway uses a secure token to send non-credit card transaction data
 
 The following diagram shows the workflow for placing an order when Payflow Link is the selected payment method.
 
-![PayPal Payflow Link sequence diagram](../../images/graphql/paypal-payflow-link.svg)
+![PayPal Payflow Link sequence diagram](../../images/graphql/paypal-payflow-link.png)
 
 <Fragment src="../../includes/graphql/payment-methods/payflow-link-workflow.md"/>
 

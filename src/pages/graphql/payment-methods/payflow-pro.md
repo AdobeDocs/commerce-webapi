@@ -29,7 +29,7 @@ If the `is_active_payment_token_enabler` attribute is set to `1` (true), in futu
 
 The following diagram shows the workflow for placing an order when Payflow Pro is the selected payment method.
 
-![PayPal Payflow Pro sequence diagram](../../images/graphql/paypal-payflow-pro.svg)
+![PayPal Payflow Pro sequence diagram](../../images/graphql/paypal-payflow-pro.png)
 
 1. On the checkout page, the customer selects **Credit Card** as the payment method and enters the credit card information as well as the billing and shipping addresses. When the customer clicks **Place Order**, the PWA client uses the [`setPaymentMethodOnCart`](../schema/cart/mutations/set-payment-method.md) mutation to set the payment method to `payflowpro`.
 

@@ -22,7 +22,7 @@ The following diagram shows the workflow for placing an order when Klarna is the
 
 Klarna payments require cart information to initiate the session. For this reason, the following steps can be executed only after a cart has been created.
 
-![Klarna payments sequence diagram](../../images/graphql/klarna-payments.svg)
+![Klarna payments sequence diagram](../../images/graphql/klarna-payments.png)
 
 1. The PWA client calls the [`createKlarnaPaymentsSession`](../schema/checkout/mutations/create-klarna-payments-session.md) mutation to generate the `client_token` and retrieve a list of `payment_categories`.
 
