@@ -21,7 +21,7 @@ The same rule is applied when the quote has the proposed shipping price and the 
 
 The following diagram illustrates the workflow for B2B for Adobe Commerce negotiable quote checkouts:
 
-![Checkout process](/../../images/quote-checkout-process.png)
+![Checkout process](../../images/quote-checkout-process.png)
 
 ## Manage shipping addresses
 
