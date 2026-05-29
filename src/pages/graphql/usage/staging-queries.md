@@ -46,7 +46,7 @@ The following steps describe how to create this example campaign.
 1. Schedule an update named **End of Year Sale Update** for the subcategory that takes effect at a later date. Configure the update so that the **Enable Category** field is set to **Yes**.
 1. Create a catalog sales rule with the following properties:
    *  Set the **Active** switch to **No**.
-   *  In the **Conditions** section, define the condition as **Category is <Subcategory_ID>**.
+   *  In the **Conditions** section, define the condition as **Category is `<Subcategory_ID>`**.
    *  In the **Actions** section, set the **Apply** field to **Apply a percentage of original** and the **Discount Amount** field to **25**.
 1. Schedule an update for the catalog sales rule and assign it to the **End of Year Sale Update**. In this update, set the **Active** switch to **Yes**.
 
