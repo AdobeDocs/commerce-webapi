@@ -202,14 +202,17 @@ introspection:
   #
 
   # File that contains your metadata data in JS module export, or JSON format
-  # metadataFile: path/to/metadata.js[on]
+  # Items marked with `documentation: { undocumented: true }` will be hidden
+  # from the rendered output (combined with hide*WithUndocumentedReturnType and
+  # hideUnusedTypes options below).
+  metadataFile: spectaql/metadata-saas.json
 
   # The path to a key from which to read the documentation-related metadata at each level of your metadata file.
   # Defaults to 'documentation', but in case you use a different name, or have a complex/nested metadata structure, you can
   # specify it here.
   #
   # Default: documentation
-  # metadatasReadPath: documentation
+  metadatasReadPath: documentation
 
   # The metadata that was just read from the above key path will be woven into your Introspection Query results.
   # This option specifies the key path where that data will be written at each level.
@@ -223,7 +226,7 @@ introspection:
   # specify it here.
   #
   # Default: documentation
-  # metadatasWritePath: documentation
+  metadatasWritePath: documentation
 
   #
   #
@@ -240,13 +243,13 @@ introspection:
   # specify it here.
   #
   # Default: documentation
-  # metadatasPath: documentation
+  metadatasPath: documentation
 
   # Whether or not to look for and use metadata in your data. If turned off, metadata will be ignored
   # even if it's there
   #
   # Default: true
-  # metadatas: true
+  metadatas: true
 
   #
   #

@@ -1,0 +1,33 @@
+{
+  "OBJECT": {
+    "Query": {
+      "fields": {
+        "payByLinkOrder": {
+          "documentation": {
+            "undocumented": true
+          }
+        }
+      }
+    },
+    "PayByLinkOrder": {
+      "documentation": {
+        "undocumented": true
+      }
+    },
+    "PayByLinkOrderAddress": {
+      "documentation": {
+        "undocumented": true
+      }
+    },
+    "PayByLinkOrderItem": {
+      "documentation": {
+        "undocumented": true
+      }
+    },
+    "PayByLinkOrderTotals": {
+      "documentation": {
+        "undocumented": true
+      }
+    }
+  }
+}
