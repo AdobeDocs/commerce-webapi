@@ -217,7 +217,7 @@
                 - [estimateTotals](/graphql/schema/cart/mutations/estimate-totals.md)
                 - [mergeCarts](/graphql/schema/cart/mutations/merge.md)
                 - [placeOrder](/graphql/schema/cart/mutations/place-order.md)
-                - [redeemGiftCardBalanceAsStoreCredit](/graphql/schema/customer/mutations/redeem-giftcard-balance.md)
+                - [redeemGiftCardBalanceAsStoreCredit](/graphql/schema/cart/mutations/redeem-giftcard-balance.md)
                 - [removeCouponFromCart](/graphql/schema/cart/mutations/remove-coupon.md)
                 - [removeCouponsFromCart](/graphql/schema/cart/mutations/remove-coupons.md)
                 - [removeGiftCardFromCart](/graphql/schema/cart/mutations/remove-giftcard.md)
