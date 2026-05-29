@@ -11,4 +11,4 @@ keywords:
 
 # REST endpoints for Adobe Commerce as a Cloud Service
 
-<iframe src="https://adobe-commerce-saas.redoc.ly/>
+<iframe src="https://adobe-commerce-saas.redoc.ly"/>
