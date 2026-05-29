@@ -49,3 +49,4 @@ local-test.yml
 yalc.lock
 
 linter-report.txt
+tmp

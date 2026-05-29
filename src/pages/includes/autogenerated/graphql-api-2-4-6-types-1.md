@@ -15,7 +15,7 @@ Defines the bundle products to add to the cart.
 
 ```json
 {
-  "cart_id": "xyz789",
+  "cart_id": "abc123",
   "cart_items": [BundleProductCartItemInput]
 }
 ```
@@ -55,7 +55,7 @@ Defines the configurable products to add to the cart.
 
 ```json
 {
-  "cart_id": "abc123",
+  "cart_id": "xyz789",
   "cart_items": [ConfigurableProductCartItemInput]
 }
 ```
@@ -200,7 +200,10 @@ Contains products to add to an existing compare list.
 #### Example
 
 ```json
-{"products": ["4"], "uid": 4}
+{
+  "products": ["4"],
+  "uid": "4"
+}
 ```
 
 <HorizontalLine />
@@ -260,8 +263,8 @@ Contains the comment to be added to a purchase order.
 
 ```json
 {
-  "comment": "xyz789",
-  "purchase_order_uid": "4"
+  "comment": "abc123",
+  "purchase_order_uid": 4
 }
 ```
 
@@ -302,7 +305,7 @@ Defines the purchase order and cart to act on.
 ```json
 {
   "cart_id": "abc123",
-  "purchase_order_uid": "4",
+  "purchase_order_uid": 4,
   "replace_existing_cart_items": false
 }
 ```
@@ -370,7 +373,7 @@ Output of the request to add items in a requisition list to the cart.
     AddRequisitionListItemToCartUserError
   ],
   "cart": Cart,
-  "status": true
+  "status": false
 }
 ```
 
@@ -390,10 +393,7 @@ Defines a return comment.
 #### Example
 
 ```json
-{
-  "comment_text": "abc123",
-  "return_uid": "4"
-}
+{"comment_text": "abc123", "return_uid": 4}
 ```
 
 <HorizontalLine />
@@ -517,7 +517,7 @@ Defines the virtual products to add to the cart.
 
 ```json
 {
-  "cart_id": "xyz789",
+  "cart_id": "abc123",
   "cart_items": [VirtualProductCartItemInput]
 }
 ```
@@ -561,7 +561,7 @@ Contains the resultant wish list and any error information.
   "add_wishlist_items_to_cart_user_errors": [
     WishlistCartUserInputError
   ],
-  "status": true,
+  "status": false,
   "wishlist": Wishlist
 }
 ```
@@ -587,10 +587,10 @@ Contains information for each filterable option (such as price, category `UID`, 
 ```json
 {
   "attribute_code": "abc123",
-  "count": 123,
+  "count": 987,
   "label": "xyz789",
   "options": [AggregationOption],
-  "position": 987
+  "position": 123
 }
 ```
 
@@ -612,9 +612,9 @@ An implementation of `AggregationOptionInterface`.
 
 ```json
 {
-  "count": 987,
+  "count": 123,
   "label": "xyz789",
-  "value": "xyz789"
+  "value": "abc123"
 }
 ```
 
@@ -699,7 +699,7 @@ Contains the applied coupon code.
 #### Example
 
 ```json
-{"code": "xyz789"}
+{"code": "abc123"}
 ```
 
 <HorizontalLine />
@@ -724,7 +724,7 @@ Contains an applied gift card with applied and remaining balance.
   "applied_balance": Money,
   "code": "xyz789",
   "current_balance": Money,
-  "expiration_date": "abc123"
+  "expiration_date": "xyz789"
 }
 ```
 
@@ -770,7 +770,7 @@ Specifies the coupon code to apply to the cart.
 ```json
 {
   "cart_id": "xyz789",
-  "coupon_code": "xyz789"
+  "coupon_code": "abc123"
 }
 ```
 
@@ -809,8 +809,8 @@ Defines the input required to run the `applyGiftCardToCart` mutation.
 
 ```json
 {
-  "cart_id": "xyz789",
-  "gift_card_code": "abc123"
+  "cart_id": "abc123",
+  "gift_card_code": "xyz789"
 }
 ```
 
@@ -902,7 +902,7 @@ AreaInput defines the parameters which will be used for filter by specified loca
 #### Example
 
 ```json
-{"radius": 987, "search_term": "xyz789"}
+{"radius": 987, "search_term": "abc123"}
 ```
 
 <HorizontalLine />
@@ -945,11 +945,11 @@ Contains details about the attribute, including the code and type.
 
 ```json
 {
-  "attribute_code": "xyz789",
+  "attribute_code": "abc123",
   "attribute_options": [AttributeOption],
   "attribute_type": "abc123",
   "entity_type": "xyz789",
-  "input_type": "xyz789",
+  "input_type": "abc123",
   "storefront_properties": StorefrontProperties
 }
 ```
@@ -993,7 +993,7 @@ Defines an attribute option.
 
 ```json
 {
-  "label": "xyz789",
+  "label": "abc123",
   "value": "xyz789"
 }
 ```
@@ -1067,13 +1067,13 @@ Contains details about the possible shipping methods and carriers.
 ```json
 {
   "amount": Money,
-  "available": true,
+  "available": false,
   "base_amount": Money,
-  "carrier_code": "abc123",
+  "carrier_code": "xyz789",
   "carrier_title": "abc123",
   "error_message": "xyz789",
   "method_code": "xyz789",
-  "method_title": "abc123",
+  "method_title": "xyz789",
   "price_excl_tax": Money,
   "price_incl_tax": Money
 }
@@ -1117,9 +1117,9 @@ Defines the billing address.
 ```json
 {
   "address": CartAddressInput,
-  "customer_address_id": 987,
-  "same_as_shipping": true,
-  "use_for_shipping": true
+  "customer_address_id": 123,
+  "same_as_shipping": false,
+  "use_for_shipping": false
 }
 ```
 
@@ -1150,18 +1150,18 @@ Contains details about the billing address.
 
 ```json
 {
-  "city": "xyz789",
-  "company": "abc123",
+  "city": "abc123",
+  "company": "xyz789",
   "country": CartAddressCountry,
   "customer_notes": "abc123",
   "firstname": "xyz789",
   "lastname": "xyz789",
-  "postcode": "xyz789",
+  "postcode": "abc123",
   "region": CartAddressRegion,
   "street": ["xyz789"],
-  "telephone": "abc123",
-  "uid": "abc123",
-  "vat_id": "xyz789"
+  "telephone": "xyz789",
+  "uid": "xyz789",
+  "vat_id": "abc123"
 }
 ```
 
@@ -1170,12 +1170,6 @@ Contains details about the billing address.
 ### Boolean
 
 The `Boolean` scalar type represents `true` or `false`.
-
-#### Example
-
-```json
-true
-```
 
 <HorizontalLine />
 
@@ -1192,7 +1186,7 @@ true
 
 ```json
 {
-  "device_data": "xyz789",
+  "device_data": "abc123",
   "public_hash": "abc123"
 }
 ```
@@ -1215,7 +1209,7 @@ true
 {
   "device_data": "xyz789",
   "is_active_payment_token_enabler": true,
-  "payment_method_nonce": "abc123"
+  "payment_method_nonce": "xyz789"
 }
 ```
 
@@ -1240,12 +1234,12 @@ Contains details about an individual category that comprises a breadcrumb.
 
 ```json
 {
-  "category_id": 123,
+  "category_id": 987,
   "category_level": 123,
-  "category_name": "abc123",
-  "category_uid": 4,
+  "category_name": "xyz789",
+  "category_uid": "4",
   "category_url_key": "xyz789",
-  "category_url_path": "abc123"
+  "category_url_path": "xyz789"
 }
 ```
 
@@ -1281,11 +1275,11 @@ An implementation for bundle product cart items.
   "errors": [CartItemError],
   "gift_message": GiftMessage,
   "gift_wrapping": GiftWrapping,
-  "id": "xyz789",
+  "id": "abc123",
   "prices": CartItemPrices,
   "product": ProductInterface,
-  "quantity": 987.65,
-  "uid": 4
+  "quantity": 123.45,
+  "uid": "4"
 }
 ```
 
@@ -1318,7 +1312,7 @@ Defines bundle product options for `CreditMemoItemInterface`.
   "order_item": OrderItemInterface,
   "product_name": "abc123",
   "product_sale_price": Money,
-  "product_sku": "xyz789",
+  "product_sku": "abc123",
   "quantity_refunded": 123.45
 }
 ```
@@ -1353,7 +1347,7 @@ Defines bundle product options for `InvoiceItemInterface`.
   "product_name": "xyz789",
   "product_sale_price": Money,
   "product_sku": "abc123",
-  "quantity_invoiced": 987.65
+  "quantity_invoiced": 123.45
 }
 ```
 
@@ -1381,11 +1375,11 @@ Defines an individual item within a bundle product.
 
 ```json
 {
-  "option_id": 987,
+  "option_id": 123,
   "options": [BundleItemOption],
   "position": 123,
   "price_range": PriceRange,
-  "required": false,
+  "required": true,
   "sku": "abc123",
   "title": "abc123",
   "type": "abc123",
@@ -1423,13 +1417,13 @@ Defines the characteristics that comprise a specific bundle item and its options
   "id": 987,
   "is_default": true,
   "label": "abc123",
-  "position": 123,
+  "position": 987,
   "price": 123.45,
   "price_type": "FIXED",
   "product": ProductInterface,
-  "qty": 987.65,
-  "quantity": 987.65,
-  "uid": "4"
+  "qty": 123.45,
+  "quantity": 123.45,
+  "uid": 4
 }
 ```
 
@@ -1452,8 +1446,8 @@ Defines the input for a bundle option.
 ```json
 {
   "id": 987,
-  "quantity": 123.45,
-  "value": ["abc123"]
+  "quantity": 987.65,
+  "value": ["xyz789"]
 }
 ```
 
@@ -1494,22 +1488,22 @@ Defines bundle product options for `OrderItemInterface`.
 {
   "bundle_options": [ItemSelectedBundleOption],
   "discounts": [Discount],
-  "eligible_for_return": false,
+  "eligible_for_return": true,
   "entered_options": [OrderItemOption],
   "gift_message": GiftMessage,
   "gift_wrapping": GiftWrapping,
-  "id": "4",
-  "product_name": "xyz789",
+  "id": 4,
+  "product_name": "abc123",
   "product_sale_price": Money,
-  "product_sku": "xyz789",
+  "product_sku": "abc123",
   "product_type": "xyz789",
   "product_url_key": "xyz789",
-  "quantity_canceled": 987.65,
-  "quantity_invoiced": 987.65,
+  "quantity_canceled": 123.45,
+  "quantity_invoiced": 123.45,
   "quantity_ordered": 987.65,
-  "quantity_refunded": 987.65,
-  "quantity_returned": 987.65,
-  "quantity_shipped": 987.65,
+  "quantity_refunded": 123.45,
+  "quantity_returned": 123.45,
+  "quantity_shipped": 123.45,
   "selected_options": [OrderItemOption],
   "status": "abc123"
 }
@@ -1614,55 +1608,55 @@ Defines basic features of a bundle product and contains multiple BundleItems.
 
 ```json
 {
-  "activity": "abc123",
+  "activity": "xyz789",
   "attribute_set_id": 987,
   "canonical_url": "abc123",
   "categories": [CategoryInterface],
-  "category_gear": "abc123",
+  "category_gear": "xyz789",
   "climate": "abc123",
   "collar": "xyz789",
-  "color": 123,
-  "country_of_manufacture": "xyz789",
+  "color": 987,
+  "country_of_manufacture": "abc123",
   "created_at": "xyz789",
   "crosssell_products": [ProductInterface],
   "description": ComplexTextValue,
-  "dynamic_price": true,
+  "dynamic_price": false,
   "dynamic_sku": false,
   "dynamic_weight": true,
   "eco_collection": 987,
-  "erin_recommends": 123,
+  "erin_recommends": 987,
   "features_bags": "abc123",
-  "format": 987,
+  "format": 123,
   "gender": "xyz789",
-  "gift_message_available": "xyz789",
+  "gift_message_available": "abc123",
   "id": 987,
   "image": ProductImage,
-  "is_returnable": "abc123",
+  "is_returnable": "xyz789",
   "items": [BundleItem],
-  "manufacturer": 123,
+  "manufacturer": 987,
   "material": "abc123",
   "media_gallery": [MediaGalleryInterface],
   "media_gallery_entries": [MediaGalleryEntry],
-  "meta_description": "xyz789",
-  "meta_keyword": "xyz789",
-  "meta_title": "xyz789",
+  "meta_description": "abc123",
+  "meta_keyword": "abc123",
+  "meta_title": "abc123",
   "name": "xyz789",
   "new": 123,
-  "new_from_date": "abc123",
+  "new_from_date": "xyz789",
   "new_to_date": "abc123",
-  "only_x_left_in_stock": 987.65,
+  "only_x_left_in_stock": 123.45,
   "options": [CustomizableOptionInterface],
-  "options_container": "abc123",
-  "pattern": "abc123",
+  "options_container": "xyz789",
+  "pattern": "xyz789",
   "performance_fabric": 987,
   "price": ProductPrices,
   "price_range": PriceRange,
   "price_tiers": [TierPrice],
   "price_view": "PRICE_RANGE",
   "product_links": [ProductLinksInterface],
-  "purpose": 123,
+  "purpose": 987,
   "rating_summary": 987.65,
-  "redirect_code": 123,
+  "redirect_code": 987,
   "related_products": [ProductInterface],
   "relative_url": "xyz789",
   "review_count": 987,
@@ -1674,30 +1668,30 @@ Defines basic features of a bundle product and contains multiple BundleItems.
   "sku": "abc123",
   "sleeve": "abc123",
   "small_image": ProductImage,
-  "special_from_date": "xyz789",
-  "special_price": 987.65,
+  "special_from_date": "abc123",
+  "special_price": 123.45,
   "special_to_date": "xyz789",
   "staged": false,
   "stock_status": "IN_STOCK",
   "strap_bags": "abc123",
   "style_bags": "xyz789",
   "style_bottom": "xyz789",
-  "style_general": "abc123",
-  "swatch_image": "xyz789",
+  "style_general": "xyz789",
+  "swatch_image": "abc123",
   "thumbnail": ProductImage,
-  "tier_price": 123.45,
+  "tier_price": 987.65,
   "tier_prices": [ProductTierPrices],
   "type": "CMS_PAGE",
   "type_id": "abc123",
-  "uid": "4",
-  "updated_at": "xyz789",
+  "uid": 4,
+  "updated_at": "abc123",
   "upsell_products": [ProductInterface],
-  "url_key": "abc123",
+  "url_key": "xyz789",
   "url_path": "abc123",
   "url_rewrites": [UrlRewrite],
-  "url_suffix": "abc123",
+  "url_suffix": "xyz789",
   "websites": [Website],
-  "weight": 123.45
+  "weight": 987.65
 }
 ```
 
@@ -1749,7 +1743,7 @@ Contains details about bundle products added to a requisition list.
   "customizable_options": [SelectedCustomizableOption],
   "product": ProductInterface,
   "quantity": 987.65,
-  "uid": 4
+  "uid": "4"
 }
 ```
 
@@ -1780,7 +1774,7 @@ Defines bundle product options for `ShipmentItemInterface`.
   "order_item": OrderItemInterface,
   "product_name": "abc123",
   "product_sale_price": Money,
-  "product_sku": "abc123",
+  "product_sku": "xyz789",
   "quantity_shipped": 123.45
 }
 ```
@@ -1813,7 +1807,7 @@ Defines bundle product options for `WishlistItemInterface`.
   "description": "xyz789",
   "id": "4",
   "product": ProductInterface,
-  "quantity": 123.45
+  "quantity": 987.65
 }
 ```
 
@@ -1860,18 +1854,18 @@ Contains the contents and other details about a guest or customer cart.
   "available_gift_wrappings": [GiftWrapping],
   "available_payment_methods": [AvailablePaymentMethod],
   "billing_address": BillingCartAddress,
-  "email": "xyz789",
+  "email": "abc123",
   "gift_message": GiftMessage,
   "gift_receipt_included": false,
   "gift_wrapping": GiftWrapping,
-  "id": "4",
+  "id": 4,
   "is_virtual": false,
   "items": [CartItemInterface],
   "prices": CartPrices,
-  "printed_card_included": true,
+  "printed_card_included": false,
   "selected_payment_method": SelectedPaymentMethod,
   "shipping_addresses": [ShippingCartAddress],
-  "total_quantity": 123.45
+  "total_quantity": 987.65
 }
 ```
 
@@ -1892,8 +1886,8 @@ Contains details the country in a billing or shipping address.
 
 ```json
 {
-  "code": "abc123",
-  "label": "abc123"
+  "code": "xyz789",
+  "label": "xyz789"
 }
 ```
 
@@ -1925,17 +1919,17 @@ Defines the billing or shipping address to be applied to the cart.
 ```json
 {
   "city": "xyz789",
-  "company": "xyz789",
+  "company": "abc123",
   "country_code": "xyz789",
-  "firstname": "xyz789",
-  "lastname": "xyz789",
-  "postcode": "xyz789",
-  "region": "xyz789",
+  "firstname": "abc123",
+  "lastname": "abc123",
+  "postcode": "abc123",
+  "region": "abc123",
   "region_id": 987,
-  "save_in_address_book": true,
+  "save_in_address_book": false,
   "street": ["abc123"],
-  "telephone": "abc123",
-  "vat_id": "xyz789"
+  "telephone": "xyz789",
+  "vat_id": "abc123"
 }
 ```
 
@@ -1970,17 +1964,17 @@ Defines the billing or shipping address to be applied to the cart.
 
 ```json
 {
-  "city": "xyz789",
+  "city": "abc123",
   "company": "xyz789",
   "country": CartAddressCountry,
-  "firstname": "xyz789",
+  "firstname": "abc123",
   "lastname": "abc123",
   "postcode": "abc123",
   "region": CartAddressRegion,
-  "street": ["abc123"],
+  "street": ["xyz789"],
   "telephone": "abc123",
   "uid": "xyz789",
-  "vat_id": "xyz789"
+  "vat_id": "abc123"
 }
 ```
 
@@ -2002,9 +1996,9 @@ Contains details about the region in a billing or shipping address.
 
 ```json
 {
-  "code": "abc123",
-  "label": "xyz789",
-  "region_id": 987
+  "code": "xyz789",
+  "label": "abc123",
+  "region_id": 123
 }
 ```
 
@@ -2026,7 +2020,7 @@ Contains information about discounts applied to the cart.
 ```json
 {
   "amount": Money,
-  "label": ["abc123"]
+  "label": ["xyz789"]
 }
 ```
 
@@ -2086,9 +2080,9 @@ Defines an item to be added to the cart.
 ```json
 {
   "entered_options": [EnteredOptionInput],
-  "parent_sku": "xyz789",
-  "quantity": 987.65,
-  "selected_options": [4],
+  "parent_sku": "abc123",
+  "quantity": 123.45,
+  "selected_options": ["4"],
   "sku": "xyz789"
 }
 ```
@@ -2126,7 +2120,7 @@ An interface for products in a cart.
 ```json
 {
   "errors": [CartItemError],
-  "id": "abc123",
+  "id": "xyz789",
   "prices": CartItemPrices,
   "product": ProductInterface,
   "quantity": 987.65,
@@ -2182,7 +2176,7 @@ Deprecated: The `ShippingCartAddress.cart_items` field now returns `CartItemInte
 #### Example
 
 ```json
-{"cart_item_id": 987, "quantity": 987.65}
+{"cart_item_id": 987, "quantity": 123.45}
 ```
 
 <HorizontalLine />
@@ -2204,8 +2198,8 @@ Contains details about the price of a selected customizable value.
 ```json
 {
   "type": "FIXED",
-  "units": "abc123",
-  "value": 987.65
+  "units": "xyz789",
+  "value": 123.45
 }
 ```
 
@@ -2234,7 +2228,7 @@ A single item to be updated.
   "cart_item_uid": 4,
   "customizable_options": [CustomizableOptionInput],
   "gift_message": GiftMessageInput,
-  "gift_wrapping_id": "4",
+  "gift_wrapping_id": 4,
   "quantity": 123.45
 }
 ```
@@ -2291,7 +2285,7 @@ Contains tax information about an item in the cart.
 ```json
 {
   "amount": Money,
-  "label": "xyz789"
+  "label": "abc123"
 }
 ```
 
@@ -2313,7 +2307,7 @@ An error encountered while adding an item to the the cart.
 ```json
 {
   "code": "PRODUCT_NOT_FOUND",
-  "message": "abc123"
+  "message": "xyz789"
 }
 ```
 
@@ -2423,39 +2417,39 @@ Contains the full set of attributes that can be returned in a category search.
 
 ```json
 {
-  "automatic_sorting": "xyz789",
-  "available_sort_by": ["xyz789"],
+  "automatic_sorting": "abc123",
+  "available_sort_by": ["abc123"],
   "breadcrumbs": [Breadcrumb],
   "canonical_url": "abc123",
-  "children_count": "xyz789",
+  "children_count": "abc123",
   "cms_block": CmsBlock,
-  "created_at": "xyz789",
-  "custom_layout_update_file": "xyz789",
-  "default_sort_by": "xyz789",
-  "description": "abc123",
-  "display_mode": "abc123",
+  "created_at": "abc123",
+  "custom_layout_update_file": "abc123",
+  "default_sort_by": "abc123",
+  "description": "xyz789",
+  "display_mode": "xyz789",
   "filter_price_range": 987.65,
   "id": 123,
-  "image": "abc123",
+  "image": "xyz789",
   "include_in_menu": 123,
-  "is_anchor": 123,
-  "landing_page": 123,
+  "is_anchor": 987,
+  "landing_page": 987,
   "level": 123,
-  "meta_description": "abc123",
-  "meta_keywords": "abc123",
+  "meta_description": "xyz789",
+  "meta_keywords": "xyz789",
   "meta_title": "xyz789",
-  "name": "abc123",
+  "name": "xyz789",
   "path": "abc123",
   "path_in_store": "xyz789",
   "position": 987,
   "product_count": 987,
   "products": CategoryProducts,
-  "staged": true,
+  "staged": false,
   "uid": 4,
-  "updated_at": "abc123",
+  "updated_at": "xyz789",
   "url_key": "abc123",
   "url_path": "xyz789",
-  "url_suffix": "xyz789"
+  "url_suffix": "abc123"
 }
 ```
 
@@ -2503,7 +2497,7 @@ Contains a collection of `CategoryTree` objects and pagination information.
 {
   "items": [CategoryTree],
   "page_info": SearchResultPageInfo,
-  "total_count": 123
+  "total_count": 987
 }
 ```
 
@@ -2562,40 +2556,40 @@ Contains the hierarchy of categories.
   "automatic_sorting": "xyz789",
   "available_sort_by": ["abc123"],
   "breadcrumbs": [Breadcrumb],
-  "canonical_url": "abc123",
+  "canonical_url": "xyz789",
   "children": [CategoryTree],
   "children_count": "abc123",
   "cms_block": CmsBlock,
-  "created_at": "abc123",
-  "custom_layout_update_file": "abc123",
+  "created_at": "xyz789",
+  "custom_layout_update_file": "xyz789",
   "default_sort_by": "xyz789",
-  "description": "abc123",
-  "display_mode": "abc123",
+  "description": "xyz789",
+  "display_mode": "xyz789",
   "filter_price_range": 123.45,
   "id": 987,
-  "image": "xyz789",
-  "include_in_menu": 987,
-  "is_anchor": 987,
+  "image": "abc123",
+  "include_in_menu": 123,
+  "is_anchor": 123,
   "landing_page": 987,
   "level": 123,
-  "meta_description": "abc123",
+  "meta_description": "xyz789",
   "meta_keywords": "xyz789",
-  "meta_title": "abc123",
-  "name": "abc123",
-  "path": "abc123",
-  "path_in_store": "abc123",
-  "position": 987,
-  "product_count": 123,
+  "meta_title": "xyz789",
+  "name": "xyz789",
+  "path": "xyz789",
+  "path_in_store": "xyz789",
+  "position": 123,
+  "product_count": 987,
   "products": CategoryProducts,
-  "redirect_code": 987,
-  "relative_url": "abc123",
+  "redirect_code": 123,
+  "relative_url": "xyz789",
   "staged": false,
   "type": "CMS_PAGE",
   "uid": "4",
   "updated_at": "xyz789",
   "url_key": "xyz789",
-  "url_path": "xyz789",
-  "url_suffix": "abc123"
+  "url_path": "abc123",
+  "url_suffix": "xyz789"
 }
 ```
 
@@ -2621,11 +2615,11 @@ Defines details about an individual checkout agreement.
 
 ```json
 {
-  "agreement_id": 123,
+  "agreement_id": 987,
   "checkbox_text": "abc123",
-  "content": "xyz789",
+  "content": "abc123",
   "content_height": "abc123",
-  "is_html": false,
+  "is_html": true,
   "mode": "AUTO",
   "name": "xyz789"
 }
@@ -2669,8 +2663,8 @@ An error encountered while adding an item to the cart.
 ```json
 {
   "code": "REORDER_NOT_AVAILABLE",
-  "message": "abc123",
-  "path": ["abc123"]
+  "message": "xyz789",
+  "path": ["xyz789"]
 }
 ```
 
@@ -2710,7 +2704,7 @@ Output of the request to clear the customer cart.
 #### Example
 
 ```json
-{"cart": Cart, "status": false}
+{"cart": Cart, "status": true}
 ```
 
 <HorizontalLine />
@@ -2749,7 +2743,7 @@ Contains details about a failed close operation on a negotiable quote.
 ```json
 {
   "errors": [NegotiableQuoteInvalidStateError],
-  "quote_uid": "4"
+  "quote_uid": 4
 }
 ```
 
@@ -2785,7 +2779,7 @@ Defines the negotiable quotes to mark as closed.
 #### Example
 
 ```json
-{"quote_uids": ["4"]}
+{"quote_uids": [4]}
 ```
 
 <HorizontalLine />
@@ -2885,16 +2879,16 @@ Contains details about a CMS page.
 
 ```json
 {
-  "content": "xyz789",
-  "content_heading": "xyz789",
+  "content": "abc123",
+  "content_heading": "abc123",
   "identifier": "xyz789",
-  "meta_description": "xyz789",
+  "meta_description": "abc123",
   "meta_keywords": "xyz789",
-  "meta_title": "abc123",
+  "meta_title": "xyz789",
   "page_layout": "xyz789",
-  "redirect_code": 987,
-  "relative_url": "xyz789",
-  "title": "xyz789",
+  "redirect_code": 123,
+  "relative_url": "abc123",
+  "title": "abc123",
   "type": "CMS_PAGE",
   "url_key": "abc123"
 }
@@ -2913,7 +2907,7 @@ Contains details about a CMS page.
 #### Example
 
 ```json
-{"value": "xyz789"}
+{"value": "abc123"}
 ```
 
 <HorizontalLine />
@@ -2955,10 +2949,10 @@ Contains the output schema for a company.
   "credit": CompanyCredit,
   "credit_history": CompanyCreditHistory,
   "email": "xyz789",
-  "id": "4",
+  "id": 4,
   "legal_address": CompanyLegalAddress,
-  "legal_name": "xyz789",
-  "name": "xyz789",
+  "legal_name": "abc123",
+  "name": "abc123",
   "payment_methods": ["xyz789"],
   "reseller_id": "xyz789",
   "role": CompanyRole,
@@ -3018,11 +3012,11 @@ Defines the input schema for creating a company administrator.
 
 ```json
 {
-  "email": "abc123",
+  "email": "xyz789",
   "firstname": "abc123",
   "gender": 123,
   "job_title": "abc123",
-  "lastname": "xyz789"
+  "lastname": "abc123"
 }
 ```
 
@@ -3049,11 +3043,11 @@ Defines the input schema for creating a new company.
 ```json
 {
   "company_admin": CompanyAdminInput,
-  "company_email": "abc123",
-  "company_name": "abc123",
+  "company_email": "xyz789",
+  "company_name": "xyz789",
   "legal_address": CompanyLegalAddressCreateInput,
   "legal_name": "xyz789",
-  "reseller_id": "abc123",
+  "reseller_id": "xyz789",
   "vat_tax_id": "xyz789"
 }
 ```
@@ -3124,9 +3118,9 @@ Defines a filter for narrowing the results of a credit history search.
 
 ```json
 {
-  "custom_reference_number": "abc123",
+  "custom_reference_number": "xyz789",
   "operation_type": "ALLOCATION",
-  "updated_by": "abc123"
+  "updated_by": "xyz789"
 }
 ```
 
@@ -3153,7 +3147,7 @@ Contains details about a single company credit operation.
 {
   "amount": Money,
   "balance": CompanyCredit,
-  "custom_reference_number": "xyz789",
+  "custom_reference_number": "abc123",
   "date": "xyz789",
   "type": "ALLOCATION",
   "updated_by": CompanyCreditOperationUser
@@ -3197,7 +3191,7 @@ Defines the administrator or company user that submitted a company credit operat
 #### Example
 
 ```json
-{"name": "abc123", "type": "CUSTOMER"}
+{"name": "xyz789", "type": "CUSTOMER"}
 ```
 
 <HorizontalLine />
@@ -3238,11 +3232,11 @@ Contains details about the address where the company is registered to conduct bu
 
 ```json
 {
-  "city": "xyz789",
+  "city": "abc123",
   "country_code": "AF",
   "postcode": "xyz789",
   "region": CustomerAddressRegion,
-  "street": ["xyz789"],
+  "street": ["abc123"],
   "telephone": "xyz789"
 }
 ```
@@ -3270,10 +3264,10 @@ Defines the input schema for defining a company's legal address.
 {
   "city": "xyz789",
   "country_id": "AF",
-  "postcode": "abc123",
+  "postcode": "xyz789",
   "region": CustomerAddressRegionInput,
-  "street": ["abc123"],
-  "telephone": "abc123"
+  "street": ["xyz789"],
+  "telephone": "xyz789"
 }
 ```
 
@@ -3298,12 +3292,12 @@ Defines the input schema for updating a company's legal address.
 
 ```json
 {
-  "city": "abc123",
+  "city": "xyz789",
   "country_id": "AF",
   "postcode": "abc123",
   "region": CustomerAddressRegionInput,
   "street": ["abc123"],
-  "telephone": "xyz789"
+  "telephone": "abc123"
 }
 ```
 
@@ -3326,10 +3320,10 @@ Contails details about a single role.
 
 ```json
 {
-  "id": "4",
+  "id": 4,
   "name": "abc123",
   "permissions": [CompanyAclResource],
-  "users_count": 987
+  "users_count": 123
 }
 ```
 
@@ -3351,7 +3345,7 @@ Defines the input schema for creating a company role.
 ```json
 {
   "name": "abc123",
-  "permissions": ["abc123"]
+  "permissions": ["xyz789"]
 }
 ```
 
@@ -3373,9 +3367,9 @@ Defines the input schema for updating a company role.
 
 ```json
 {
-  "id": "4",
+  "id": 4,
   "name": "xyz789",
-  "permissions": ["abc123"]
+  "permissions": ["xyz789"]
 }
 ```
 
@@ -3482,7 +3476,7 @@ Defines an individual node in the company structure.
 {
   "entity": CompanyTeam,
   "id": "4",
-  "parent_id": 4
+  "parent_id": "4"
 }
 ```
 
@@ -3524,10 +3518,10 @@ Describes a company team.
 
 ```json
 {
-  "description": "abc123",
-  "id": 4,
+  "description": "xyz789",
+  "id": "4",
   "name": "xyz789",
-  "structure_id": 4
+  "structure_id": "4"
 }
 ```
 
@@ -3601,11 +3595,11 @@ Defines the input schema for updating a company.
 ```json
 {
   "company_email": "xyz789",
-  "company_name": "xyz789",
+  "company_name": "abc123",
   "legal_address": CompanyLegalAddressUpdateInput,
   "legal_name": "xyz789",
   "reseller_id": "xyz789",
-  "vat_tax_id": "xyz789"
+  "vat_tax_id": "abc123"
 }
 ```
 
@@ -3632,7 +3626,7 @@ Defines the input schema for creating a company user.
 
 ```json
 {
-  "email": "abc123",
+  "email": "xyz789",
   "firstname": "xyz789",
   "job_title": "abc123",
   "lastname": "xyz789",
@@ -3685,12 +3679,12 @@ Defines the input schema for updating a company user.
 
 ```json
 {
-  "email": "abc123",
-  "firstname": "xyz789",
-  "id": "4",
+  "email": "xyz789",
+  "firstname": "abc123",
+  "id": 4,
   "job_title": "xyz789",
   "lastname": "xyz789",
-  "role_id": "4",
+  "role_id": 4,
   "status": "ACTIVE",
   "telephone": "xyz789"
 }
@@ -3716,7 +3710,7 @@ Contains details about company users.
 {
   "items": [Customer],
   "page_info": SearchResultPageInfo,
-  "total_count": 987
+  "total_count": 123
 }
 ```
 
@@ -3756,7 +3750,7 @@ Contains an attribute code that is used for product comparisons.
 ```json
 {
   "code": "abc123",
-  "label": "xyz789"
+  "label": "abc123"
 }
 ```
 
@@ -3804,9 +3798,9 @@ Contains iterable information such as the array of items, the count, and attribu
 ```json
 {
   "attributes": [ComparableAttribute],
-  "item_count": 123,
+  "item_count": 987,
   "items": [ComparableItem],
-  "uid": "4"
+  "uid": 4
 }
 ```
 
@@ -3823,7 +3817,7 @@ Contains iterable information such as the array of items, the count, and attribu
 #### Example
 
 ```json
-{"html": "abc123"}
+{"html": "xyz789"}
 ```
 
 <HorizontalLine />
@@ -3847,8 +3841,8 @@ Contains details about a configurable product attribute option.
 {
   "code": "abc123",
   "label": "xyz789",
-  "uid": 4,
-  "value_index": 123
+  "uid": "4",
+  "value_index": 987
 }
 ```
 
@@ -3889,7 +3883,7 @@ An implementation for configurable product cart items.
   "id": "xyz789",
   "prices": CartItemPrices,
   "product": ProductInterface,
-  "quantity": 123.45,
+  "quantity": 987.65,
   "uid": 4
 }
 ```
@@ -4012,12 +4006,12 @@ Defines basic features of a configurable product and its simple product variants
 
 ```json
 {
-  "activity": "abc123",
+  "activity": "xyz789",
   "attribute_set_id": 987,
   "canonical_url": "xyz789",
   "categories": [CategoryInterface],
-  "category_gear": "xyz789",
-  "climate": "xyz789",
+  "category_gear": "abc123",
+  "climate": "abc123",
   "collar": "xyz789",
   "color": 987,
   "configurable_options": [ConfigurableProductOptions],
@@ -4027,57 +4021,57 @@ Defines basic features of a configurable product and its simple product variants
   "crosssell_products": [ProductInterface],
   "description": ComplexTextValue,
   "eco_collection": 123,
-  "erin_recommends": 123,
+  "erin_recommends": 987,
   "features_bags": "xyz789",
-  "format": 123,
+  "format": 987,
   "gender": "abc123",
   "gift_message_available": "xyz789",
   "id": 123,
   "image": ProductImage,
-  "is_returnable": "xyz789",
-  "manufacturer": 123,
+  "is_returnable": "abc123",
+  "manufacturer": 987,
   "material": "xyz789",
   "media_gallery": [MediaGalleryInterface],
   "media_gallery_entries": [MediaGalleryEntry],
-  "meta_description": "abc123",
+  "meta_description": "xyz789",
   "meta_keyword": "abc123",
   "meta_title": "xyz789",
   "name": "xyz789",
-  "new": 987,
-  "new_from_date": "xyz789",
-  "new_to_date": "xyz789",
+  "new": 123,
+  "new_from_date": "abc123",
+  "new_to_date": "abc123",
   "only_x_left_in_stock": 987.65,
   "options": [CustomizableOptionInterface],
   "options_container": "xyz789",
   "pattern": "abc123",
-  "performance_fabric": 123,
+  "performance_fabric": 987,
   "price": ProductPrices,
   "price_range": PriceRange,
   "price_tiers": [TierPrice],
   "product_links": [ProductLinksInterface],
-  "purpose": 987,
-  "rating_summary": 123.45,
+  "purpose": 123,
+  "rating_summary": 987.65,
   "redirect_code": 987,
   "related_products": [ProductInterface],
-  "relative_url": "xyz789",
+  "relative_url": "abc123",
   "review_count": 123,
   "reviews": ProductReviews,
   "sale": 987,
   "short_description": ComplexTextValue,
-  "size": 123,
+  "size": 987,
   "sku": "abc123",
-  "sleeve": "abc123",
+  "sleeve": "xyz789",
   "small_image": ProductImage,
-  "special_from_date": "xyz789",
+  "special_from_date": "abc123",
   "special_price": 987.65,
   "special_to_date": "xyz789",
-  "staged": true,
+  "staged": false,
   "stock_status": "IN_STOCK",
-  "strap_bags": "xyz789",
+  "strap_bags": "abc123",
   "style_bags": "abc123",
-  "style_bottom": "xyz789",
-  "style_general": "abc123",
-  "swatch_image": "xyz789",
+  "style_bottom": "abc123",
+  "style_general": "xyz789",
+  "swatch_image": "abc123",
   "thumbnail": ProductImage,
   "tier_price": 987.65,
   "tier_prices": [ProductTierPrices],
@@ -4086,13 +4080,13 @@ Defines basic features of a configurable product and its simple product variants
   "uid": 4,
   "updated_at": "xyz789",
   "upsell_products": [ProductInterface],
-  "url_key": "xyz789",
+  "url_key": "abc123",
   "url_path": "xyz789",
   "url_rewrites": [UrlRewrite],
   "url_suffix": "abc123",
   "variants": [ConfigurableVariant],
   "websites": [Website],
-  "weight": 987.65
+  "weight": 123.45
 }
 ```
 
@@ -4116,7 +4110,7 @@ Defines basic features of a configurable product and its simple product variants
   "customizable_options": [CustomizableOptionInput],
   "data": CartItemInput,
   "parent_sku": "abc123",
-  "variant_sku": "xyz789"
+  "variant_sku": "abc123"
 }
 ```
 
@@ -4139,9 +4133,9 @@ Contains details about configurable product options.
 
 ```json
 {
-  "attribute_code": "abc123",
+  "attribute_code": "xyz789",
   "label": "xyz789",
-  "uid": 4,
+  "uid": "4",
   "values": [ConfigurableProductOptionValue]
 }
 ```
@@ -4167,10 +4161,10 @@ Defines a value for a configurable product option.
 ```json
 {
   "is_available": false,
-  "is_use_default": true,
-  "label": "xyz789",
+  "is_use_default": false,
+  "label": "abc123",
   "swatch": SwatchDataInterface,
-  "uid": 4
+  "uid": "4"
 }
 ```
 
@@ -4200,12 +4194,12 @@ Defines configurable attributes for the specified product.
 
 ```json
 {
-  "attribute_code": "abc123",
-  "attribute_id": "xyz789",
+  "attribute_code": "xyz789",
+  "attribute_id": "abc123",
   "attribute_id_v2": 123,
-  "attribute_uid": 4,
-  "id": 123,
-  "label": "abc123",
+  "attribute_uid": "4",
+  "id": 987,
+  "label": "xyz789",
   "position": 123,
   "product_id": 987,
   "uid": "4",
@@ -4264,12 +4258,12 @@ Contains the index number assigned to a configurable product option.
 
 ```json
 {
-  "default_label": "abc123",
-  "label": "xyz789",
+  "default_label": "xyz789",
+  "label": "abc123",
   "store_label": "xyz789",
   "swatch_data": SwatchDataInterface,
-  "uid": "4",
-  "use_default_value": true,
+  "uid": 4,
+  "use_default_value": false,
   "value_index": 123
 }
 ```
@@ -4349,7 +4343,7 @@ A configurable product wish list item.
 ```json
 {
   "added_at": "abc123",
-  "child_sku": "abc123",
+  "child_sku": "xyz789",
   "configurable_options": [SelectedConfigurableOption],
   "configured_variant": ProductInterface,
   "customizable_options": [SelectedCustomizableOption],
@@ -4442,9 +4436,9 @@ Contains the source and target wish lists after copying products.
   "available_regions": [Region],
   "full_name_english": "xyz789",
   "full_name_locale": "xyz789",
-  "id": "abc123",
-  "three_letter_abbreviation": "xyz789",
-  "two_letter_abbreviation": "xyz789"
+  "id": "xyz789",
+  "three_letter_abbreviation": "abc123",
+  "two_letter_abbreviation": "abc123"
 }
 ```
 
@@ -4797,7 +4791,7 @@ Contains an array of product IDs to use for creating a compare list.
 #### Example
 
 ```json
-{"products": ["4"]}
+{"products": [4]}
 ```
 
 <HorizontalLine />
@@ -4826,7 +4820,7 @@ Defines a new gift registry.
   "dynamic_attributes": [
     GiftRegistryDynamicAttributeInput
   ],
-  "event_name": "xyz789",
+  "event_name": "abc123",
   "gift_registry_type_uid": 4,
   "message": "abc123",
   "privacy_settings": "PRIVATE",
@@ -4875,7 +4869,7 @@ Contains the secure information used to authorize transaction. Applies to Payflo
 ```json
 {
   "response_message": "xyz789",
-  "result": 987,
+  "result": 123,
   "result_code": 987,
   "secure_token": "xyz789",
   "secure_token_id": "abc123"
@@ -4902,11 +4896,11 @@ Defines a new product review.
 
 ```json
 {
-  "nickname": "abc123",
+  "nickname": "xyz789",
   "ratings": [ProductReviewRatingInput],
   "sku": "xyz789",
   "summary": "xyz789",
-  "text": "xyz789"
+  "text": "abc123"
 }
 ```
 
@@ -4969,7 +4963,7 @@ Defines a set of conditions that apply to a rule.
   "amount": CreatePurchaseOrderApprovalRuleConditionAmountInput,
   "attribute": "GRAND_TOTAL",
   "operator": "MORE_THAN",
-  "quantity": 123
+  "quantity": 987
 }
 ```
 
@@ -4991,7 +4985,7 @@ An input object that identifies and describes a new requisition list.
 ```json
 {
   "description": "xyz789",
-  "name": "xyz789"
+  "name": "abc123"
 }
 ```
 
@@ -5029,7 +5023,7 @@ Defines the name and visibility of a new wish list.
 #### Example
 
 ```json
-{"name": "abc123", "visibility": "PUBLIC"}
+{"name": "xyz789", "visibility": "PUBLIC"}
 ```
 
 <HorizontalLine />
@@ -5071,7 +5065,7 @@ Required fields for Payflow Pro and Payments Pro credit card payments.
 {
   "cc_exp_month": 123,
   "cc_exp_year": 123,
-  "cc_last_4": 123,
+  "cc_last_4": 987,
   "cc_type": "abc123"
 }
 ```
@@ -5097,9 +5091,9 @@ Contains credit memo details.
 ```json
 {
   "comments": [SalesCommentItem],
-  "id": 4,
+  "id": "4",
   "items": [CreditMemoItemInterface],
-  "number": "xyz789",
+  "number": "abc123",
   "total": CreditMemoTotal
 }
 ```
@@ -5125,12 +5119,12 @@ Contains credit memo details.
 ```json
 {
   "discounts": [Discount],
-  "id": "4",
+  "id": 4,
   "order_item": OrderItemInterface,
-  "product_name": "abc123",
+  "product_name": "xyz789",
   "product_sale_price": Money,
   "product_sku": "abc123",
-  "quantity_refunded": 123.45
+  "quantity_refunded": 987.65
 }
 ```
 
@@ -5168,7 +5162,7 @@ Credit memo item details.
   "discounts": [Discount],
   "id": "4",
   "order_item": OrderItemInterface,
-  "product_name": "xyz789",
+  "product_name": "abc123",
   "product_sale_price": Money,
   "product_sku": "xyz789",
   "quantity_refunded": 123.45
@@ -5232,10 +5226,10 @@ Contains credit memo price details.
 
 ```json
 {
-  "available_currency_codes": ["xyz789"],
+  "available_currency_codes": ["abc123"],
   "base_currency_code": "xyz789",
-  "base_currency_symbol": "xyz789",
-  "default_display_currecy_code": "xyz789",
+  "base_currency_symbol": "abc123",
+  "default_display_currecy_code": "abc123",
   "default_display_currecy_symbol": "abc123",
   "default_display_currency_code": "xyz789",
   "default_display_currency_symbol": "xyz789",
@@ -5511,16 +5505,16 @@ Defines the customer name, addresses, and other details.
   "compare_list": CompareList,
   "created_at": "xyz789",
   "date_of_birth": "abc123",
-  "default_billing": "xyz789",
+  "default_billing": "abc123",
   "default_shipping": "abc123",
   "dob": "abc123",
   "email": "abc123",
   "firstname": "abc123",
-  "gender": 987,
+  "gender": 123,
   "gift_registries": [GiftRegistry],
   "gift_registry": GiftRegistry,
-  "group_id": 123,
-  "id": 987,
+  "group_id": 987,
+  "id": 123,
   "is_subscribed": true,
   "job_title": "abc123",
   "lastname": "abc123",
@@ -5532,7 +5526,7 @@ Defines the customer name, addresses, and other details.
   "purchase_order_approval_rule_metadata": PurchaseOrderApprovalRuleMetadata,
   "purchase_order_approval_rules": PurchaseOrderApprovalRules,
   "purchase_orders": PurchaseOrders,
-  "purchase_orders_enabled": true,
+  "purchase_orders_enabled": false,
   "requisition_lists": RequisitionLists,
   "return": Return,
   "returns": Returns,
@@ -5541,7 +5535,7 @@ Defines the customer name, addresses, and other details.
   "role": CompanyRole,
   "status": "ACTIVE",
   "store_credit": CustomerStoreCredit,
-  "structure_id": "4",
+  "structure_id": 4,
   "suffix": "xyz789",
   "taxvat": "xyz789",
   "team": CompanyTeam,
@@ -5592,25 +5586,25 @@ Contains detailed information about a customer's billing or shipping address.
   "city": "xyz789",
   "company": "abc123",
   "country_code": "AF",
-  "country_id": "xyz789",
+  "country_id": "abc123",
   "custom_attributes": [CustomerAddressAttribute],
   "customer_id": 123,
-  "default_billing": true,
+  "default_billing": false,
   "default_shipping": false,
   "extension_attributes": [CustomerAddressAttribute],
   "fax": "xyz789",
-  "firstname": "abc123",
-  "id": 987,
+  "firstname": "xyz789",
+  "id": 123,
   "lastname": "abc123",
   "middlename": "xyz789",
-  "postcode": "xyz789",
-  "prefix": "xyz789",
+  "postcode": "abc123",
+  "prefix": "abc123",
   "region": CustomerAddressRegion,
-  "region_id": 123,
-  "street": ["xyz789"],
-  "suffix": "abc123",
+  "region_id": 987,
+  "street": ["abc123"],
+  "suffix": "xyz789",
   "telephone": "xyz789",
-  "vat_id": "abc123"
+  "vat_id": "xyz789"
 }
 ```
 
@@ -5631,7 +5625,7 @@ Specifies the attribute code and value of a customer address attribute.
 
 ```json
 {
-  "attribute_code": "xyz789",
+  "attribute_code": "abc123",
   "value": "xyz789"
 }
 ```
@@ -5696,11 +5690,11 @@ Contains details about a billing or shipping address.
   "country_code": "AF",
   "country_id": "AF",
   "custom_attributes": [CustomerAddressAttributeInput],
-  "default_billing": false,
+  "default_billing": true,
   "default_shipping": false,
-  "fax": "abc123",
-  "firstname": "abc123",
-  "lastname": "xyz789",
+  "fax": "xyz789",
+  "firstname": "xyz789",
+  "lastname": "abc123",
   "middlename": "abc123",
   "postcode": "xyz789",
   "prefix": "abc123",
@@ -5708,7 +5702,7 @@ Contains details about a billing or shipping address.
   "street": ["xyz789"],
   "suffix": "xyz789",
   "telephone": "abc123",
-  "vat_id": "abc123"
+  "vat_id": "xyz789"
 }
 ```
 
@@ -5730,9 +5724,9 @@ Defines the customer's state or province.
 
 ```json
 {
-  "region": "abc123",
+  "region": "xyz789",
   "region_code": "xyz789",
-  "region_id": 987
+  "region_id": 123
 }
 ```
 
@@ -5754,8 +5748,8 @@ Defines the customer's state or province.
 
 ```json
 {
-  "region": "xyz789",
-  "region_code": "abc123",
+  "region": "abc123",
+  "region_code": "xyz789",
   "region_id": 123
 }
 ```
@@ -5791,15 +5785,15 @@ An input object for creating a customer.
   "allow_remote_shopping_assistance": true,
   "date_of_birth": "abc123",
   "dob": "abc123",
-  "email": "xyz789",
-  "firstname": "xyz789",
+  "email": "abc123",
+  "firstname": "abc123",
   "gender": 123,
   "is_subscribed": true,
   "lastname": "abc123",
   "middlename": "abc123",
-  "password": "abc123",
+  "password": "xyz789",
   "prefix": "abc123",
-  "suffix": "xyz789",
+  "suffix": "abc123",
   "taxvat": "xyz789"
 }
 ```
@@ -5824,11 +5818,11 @@ Contains details about a single downloadable product.
 
 ```json
 {
-  "date": "abc123",
-  "download_url": "abc123",
+  "date": "xyz789",
+  "download_url": "xyz789",
   "order_increment_id": "xyz789",
-  "remaining_downloads": "abc123",
-  "status": "abc123"
+  "remaining_downloads": "xyz789",
+  "status": "xyz789"
 }
 ```
 
@@ -5878,17 +5872,17 @@ An input object that assigns or updates customer attributes.
 ```json
 {
   "date_of_birth": "xyz789",
-  "dob": "xyz789",
-  "email": "abc123",
+  "dob": "abc123",
+  "email": "xyz789",
   "firstname": "xyz789",
   "gender": 123,
-  "is_subscribed": true,
-  "lastname": "abc123",
-  "middlename": "xyz789",
+  "is_subscribed": false,
+  "lastname": "xyz789",
+  "middlename": "abc123",
   "password": "abc123",
-  "prefix": "abc123",
-  "suffix": "abc123",
-  "taxvat": "abc123"
+  "prefix": "xyz789",
+  "suffix": "xyz789",
+  "taxvat": "xyz789"
 }
 ```
 
@@ -5933,29 +5927,29 @@ Contains details about each of the customer's orders.
 ```json
 {
   "billing_address": OrderAddress,
-  "carrier": "abc123",
+  "carrier": "xyz789",
   "comments": [SalesCommentItem],
   "created_at": "xyz789",
   "credit_memos": [CreditMemo],
   "gift_message": GiftMessage,
-  "gift_receipt_included": false,
+  "gift_receipt_included": true,
   "gift_wrapping": GiftWrapping,
   "grand_total": 123.45,
-  "id": "4",
+  "id": 4,
   "increment_id": "abc123",
   "invoices": [Invoice],
   "items": [OrderItemInterface],
   "items_eligible_for_return": [OrderItemInterface],
   "number": "xyz789",
   "order_date": "xyz789",
-  "order_number": "abc123",
+  "order_number": "xyz789",
   "payment_methods": [OrderPaymentMethod],
   "printed_card_included": false,
   "returns": Returns,
   "shipments": [OrderShipment],
   "shipping_address": OrderAddress,
-  "shipping_method": "xyz789",
-  "status": "abc123",
+  "shipping_method": "abc123",
+  "status": "xyz789",
   "total": OrderTotal
 }
 ```
@@ -6018,7 +6012,7 @@ The collection of orders that match the conditions defined in the filter.
 {
   "items": [CustomerOrder],
   "page_info": SearchResultPageInfo,
-  "total_count": 987
+  "total_count": 123
 }
 ```
 
@@ -6096,7 +6090,7 @@ Contains store credit information with balance and history.
 {
   "balance_history": CustomerStoreCreditHistory,
   "current_balance": Money,
-  "enabled": true
+  "enabled": false
 }
 ```
 
@@ -6120,7 +6114,7 @@ Lists changes to the amount of store credit available to the customer.
 {
   "items": [CustomerStoreCreditHistoryItem],
   "page_info": SearchResultPageInfo,
-  "total_count": 123
+  "total_count": 987
 }
 ```
 
@@ -6165,7 +6159,7 @@ Contains a customer authorization token.
 #### Example
 
 ```json
-{"token": "xyz789"}
+{"token": "abc123"}
 ```
 
 <HorizontalLine />
@@ -6199,12 +6193,12 @@ An input object for updating a customer.
   "dob": "xyz789",
   "firstname": "abc123",
   "gender": 987,
-  "is_subscribed": true,
+  "is_subscribed": false,
   "lastname": "xyz789",
   "middlename": "xyz789",
-  "prefix": "xyz789",
-  "suffix": "abc123",
-  "taxvat": "xyz789"
+  "prefix": "abc123",
+  "suffix": "xyz789",
+  "taxvat": "abc123"
 }
 ```
 
@@ -6231,11 +6225,11 @@ Contains information about a text area that is defined as part of a customizable
 ```json
 {
   "option_id": 987,
-  "product_sku": "abc123",
+  "product_sku": "xyz789",
   "required": false,
   "sort_order": 123,
   "title": "abc123",
-  "uid": "4",
+  "uid": 4,
   "value": CustomizableAreaValue
 }
 ```
@@ -6260,11 +6254,11 @@ Defines the price and sku of a product whose page contains a customized text are
 
 ```json
 {
-  "max_characters": 123,
+  "max_characters": 987,
   "price": 987.65,
   "price_type": "FIXED",
-  "sku": "xyz789",
-  "uid": "4"
+  "sku": "abc123",
+  "uid": 4
 }
 ```
 
@@ -6293,7 +6287,7 @@ Contains information about a set of checkbox values that are defined as part of 
   "required": true,
   "sort_order": 123,
   "title": "xyz789",
-  "uid": "4",
+  "uid": 4,
   "value": [CustomizableCheckboxValue]
 }
 ```
@@ -6320,12 +6314,12 @@ Defines the price and sku of a product whose page contains a customized set of c
 
 ```json
 {
-  "option_type_id": 987,
+  "option_type_id": 123,
   "price": 987.65,
   "price_type": "FIXED",
-  "sku": "xyz789",
-  "sort_order": 987,
-  "title": "xyz789",
+  "sku": "abc123",
+  "sort_order": 123,
+  "title": "abc123",
   "uid": 4
 }
 ```
@@ -6352,12 +6346,12 @@ Contains information about a date picker that is defined as part of a customizab
 
 ```json
 {
-  "option_id": 987,
+  "option_id": 123,
   "product_sku": "abc123",
-  "required": true,
-  "sort_order": 123,
+  "required": false,
+  "sort_order": 987,
   "title": "abc123",
-  "uid": 4,
+  "uid": "4",
   "value": CustomizableDateValue
 }
 ```
@@ -6434,8 +6428,8 @@ Contains information about a drop down menu that is defined as part of a customi
   "option_id": 987,
   "required": true,
   "sort_order": 123,
-  "title": "xyz789",
-  "uid": 4,
+  "title": "abc123",
+  "uid": "4",
   "value": [CustomizableDropDownValue]
 }
 ```
@@ -6462,13 +6456,13 @@ Defines the price and sku of a product whose page contains a customized drop dow
 
 ```json
 {
-  "option_type_id": 987,
+  "option_type_id": 123,
   "price": 987.65,
   "price_type": "FIXED",
   "sku": "abc123",
-  "sort_order": 123,
-  "title": "abc123",
-  "uid": 4
+  "sort_order": 987,
+  "title": "xyz789",
+  "uid": "4"
 }
 ```
 
@@ -6494,12 +6488,12 @@ Contains information about a text field that is defined as part of a customizabl
 
 ```json
 {
-  "option_id": 123,
-  "product_sku": "abc123",
-  "required": false,
-  "sort_order": 987,
-  "title": "xyz789",
-  "uid": "4",
+  "option_id": 987,
+  "product_sku": "xyz789",
+  "required": true,
+  "sort_order": 123,
+  "title": "abc123",
+  "uid": 4,
   "value": CustomizableFieldValue
 }
 ```
@@ -6524,8 +6518,8 @@ Defines the price and sku of a product whose page contains a customized text fie
 
 ```json
 {
-  "max_characters": 987,
-  "price": 987.65,
+  "max_characters": 123,
+  "price": 123.45,
   "price_type": "FIXED",
   "sku": "xyz789",
   "uid": "4"
