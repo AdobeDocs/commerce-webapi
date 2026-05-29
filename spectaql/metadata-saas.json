@@ -9,6 +9,15 @@
         }
       }
     },
+    "Mutation": {
+      "fields": {
+        "completePayByLinkPayment": {
+          "documentation": {
+            "undocumented": true
+          }
+        }
+      }
+    },
     "PayByLinkOrder": {
       "documentation": {
         "undocumented": true
@@ -25,6 +34,18 @@
       }
     },
     "PayByLinkOrderTotals": {
+      "documentation": {
+        "undocumented": true
+      }
+    },
+    "CompletePayByLinkPaymentOutput": {
+      "documentation": {
+        "undocumented": true
+      }
+    }
+  },
+  "INPUT_OBJECT": {
+    "PayByLinkInput": {
       "documentation": {
         "undocumented": true
       }
