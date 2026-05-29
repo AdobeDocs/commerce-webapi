@@ -1,0 +1,22 @@
+{{#if description}}
+{{{description}}}
+
+{{/if}}
+{{#if inputFields}}
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+{{#each inputFields}}
+| `{{name}}` - {{{mdTypeLink . codify=true}}} | {{singleLine description}}{{#if defaultValue}} Default: `{{defaultValue}}`{{/if}}{{#if (and deprecationReason (not @root.info.x-hideDeprecationReason))}} *(Deprecated: {{singleLine deprecationReason}})*{{/if}} |
+{{/each}}
+
+{{/if}}
+{{#if example}}
+#### Example
+
+```json
+{{{jsonStringify example}}}
+```
+
+{{/if}}

@@ -9,7 +9,16 @@
   "engines": {
     "node": "^24.11.0"
   },
+  "dependencies": {
+    "spectaql": "^3.0.9"
+  },
   "scripts": {
+    "generate:graphql-api-docs": "node scripts/generate-spectaql-md.js",
+    "generate:graphql-api-docs:2.4.6": "node scripts/generate-spectaql-md.js 2.4.6",
+    "generate:graphql-api-docs:2.4.7": "node scripts/generate-spectaql-md.js 2.4.7",
+    "generate:graphql-api-docs:2.4.8": "node scripts/generate-spectaql-md.js 2.4.8",
+    "generate:graphql-api-docs:2.4.9": "node scripts/generate-spectaql-md.js 2.4.9",
+    "generate:graphql-api-docs:saas": "node scripts/generate-spectaql-md.js saas",
     "dev": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils dev",
     "buildNavigation": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils buildNavigation -v",
     "buildRedirections": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils buildRedirections -v",

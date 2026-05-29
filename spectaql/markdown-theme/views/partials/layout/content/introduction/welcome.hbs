@@ -1,0 +1,28 @@
+{{#if info.description}}
+{{{info.description}}}
+{{/if}}
+{{#if (or url server servers)}}
+
+## API endpoint
+
+```text
+{{{generateApiEndpoints}}}
+```
+{{/if}}
+{{#if headers}}
+
+## Headers
+
+```text
+{{{headers}}}
+```
+{{/if}}
+{{#if server.headers}}
+
+## Required headers
+
+All API requests must include the following headers:
+
+{{#each server.headers}}{{#if required}}- `{{name}}`: {{trimRequiredPrefix comment}}
+{{/if}}{{/each}}
+{{/if}}

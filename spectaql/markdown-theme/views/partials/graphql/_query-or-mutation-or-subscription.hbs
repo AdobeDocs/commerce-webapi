@@ -1,0 +1,48 @@
+
+{{#unless @first}}<HorizontalLine />
+
+{{/unless}}
+### {{name}}
+{{#if (and isDeprecated (not @root.info.x-hideIsDeprecated))}}
+
+*Deprecated*
+{{#if (and deprecationReason (not @root.info.x-hideDeprecationReason))}}
+
+{{{deprecationReason}}}
+{{/if}}
+{{/if}}
+{{#if description}}
+
+{{{description}}}
+{{/if}}
+{{#if response}}
+
+**Response:** {{{mdTypeLink . codify=true}}}
+{{/if}}
+{{>graphql/_query-or-mutation-arguments}}
+{{#if (firstTruthy query mutation subscription)}}
+
+#### Example
+
+##### Query
+
+```graphql
+{{{firstTruthy query mutation subscription}}}
+```
+{{#if variables}}
+
+##### Variables
+
+```json
+{{{jsonStringify variables}}}
+```
+{{/if}}
+{{#if response.data}}
+
+##### Response
+
+```json
+{{{jsonStringify response.data}}}
+```
+{{/if}}
+{{/if}}
