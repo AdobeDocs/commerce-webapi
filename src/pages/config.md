@@ -1,10 +1,8 @@
 - pathPrefix:
     - /commerce/webapi/
 
-- home:
-    - [Commerce](/commerce/docs.md)
-
 - pages:
+    - [Commerce](https://developer.adobe.com/commerce/docs)
     - [Web APIs](/index.md)
     - [Get Started](/get-started/index.md)
     - REST
