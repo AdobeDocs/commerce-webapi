@@ -17,7 +17,7 @@ Inventory Management features include:
 *  Concurrent checkout protection
 *  Shipment matching algorithms
 
-Merchants install Inventory Management as part of v2.3.x and upgrades with the name `magento/inventory-composer-metapackage`. For details, see [Install and Update Inventory Management](https://experienceleague.adobe.com/docs/commerce-admin/inventory/get-started/install-update.html).
+Merchants install Inventory Management as part of v2.3.x and upgrades with the name `magento/inventory-composer-metapackage`. For details, see [Install and Update Inventory Management](https://experienceleague.adobe.com/en/docs/commerce-admin/inventory/get-started/install-update).
 
 **Magento Community Contribution** – Adobe thanks the many contributors to the [Magento Inventory (was MSI) project](https://github.com/magento/inventory), developing these features as part of the Magento Community Engineering program.
 

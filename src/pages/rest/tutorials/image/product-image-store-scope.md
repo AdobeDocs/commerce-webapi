@@ -13,7 +13,7 @@ If you are new to the product media API, complete the [Add and manage product im
 
 ## Before you begin
 
-*  An Adobe Commerce instance with at least two store views configured. The examples use `default` and a second store view. See [Add a store view](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-views.html) in the Admin documentation.
+*  An Adobe Commerce instance with at least two store views configured. The examples use `default` and a second store view. See [Add a store view](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-views) in the Admin documentation.
 
 *  A product with images in all store views, where images currently use the default value (the **Use Default Value** checkbox is enabled in Admin) in each store view.
 

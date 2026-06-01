@@ -43,7 +43,7 @@ Setting up rate limiting has two discrete steps:
 
 ## Set the Redis service connection (most merchants)
 
-The [Configure Redis](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/config-redis.html) topic in the _Commerce Configuration Guide_ describes basic installation and configuration information.
+The [Configure Redis](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/redis/config-redis) topic in the _Commerce Configuration Guide_ describes basic installation and configuration information.
 
 Commerce provides command-line options to configure the connection to the backpressure logger. Although you can configure the backpressure logger by editing the `<Commerce-install-dir>/app/etc/env.php` file, using the command line is the recommended method, especially for initial configurations. The command line provides validation, ensuring the configuration is syntactically correct.
 
@@ -117,9 +117,9 @@ This section applies to Commerce instances running on Amazon EC2 VPCs. It does n
 
 ### Configure a Redis cluster
 
-After [setting up a Redis cluster on AWS](https://aws.amazon.com/getting-started/hands-on/setting-up-a-redis-cluster-with-amazon-elasticache/), configure the EC2 instance to use the ElastiCache.
+After [setting up a Redis cluster on AWS](https://aws.amazon.com/getting-started/), configure the EC2 instance to use the ElastiCache.
 
-1. [Create an ElastiCache Cluster](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/set-up.html) in the same region and VPC of the EC2 instance.
+1. [Create an ElastiCache Cluster](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/set-up.html) in the same region and VPC of the EC2 instance.
 
 1. Verify the connection.
 

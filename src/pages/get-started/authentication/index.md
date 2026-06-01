@@ -21,7 +21,7 @@ For practical implementation guides for Adobe Commerce as a Cloud Service (SaaS)
 * [Create server-to-server integration](../../rest/authentication/server-to-server.md) - Complete guide for automated system integration
 * [Generate the IMS access token](../../rest/authentication/index.md) - User authentication guide
 
-Adobe Commerce and Magento Open Source allow developers to define web API resources and their permissions in the `webapi.xml` configuration file. See [Services as Web APIs](https://developer.adobe.com/commerce/php/development/components/web-api/services/).
+Adobe Commerce and Magento Open Source allow developers to define web API resources and their permissions in the `webapi.xml` configuration file. See [Services as Web APIs](https://developer.adobe.com/commerce/php/development/components/web-api/services).
 
 Before you can make web API calls, you must authenticate your identity and have necessary permissions (authorization) to access the API resource. Authentication allows the application to identify the caller's user type. A user's (administrator, integration, customer, or guest) access rights determine an API call's resource accessibility.
 
@@ -45,7 +45,7 @@ All `acl.xml` files across all modules are consolidated to build an ACL tree, wh
 
 ### Sample customer acl.xml
 
-For example, account management, customer configuration, and customer group resource permissions are defined in the Customer module's [`acl.xml`](https://github.com/magento/magento2/tree/2.4/app/code/Magento/Customer/etc/acl.xml).
+For example, account management, customer configuration, and customer group resource permissions are defined in the Customer module's [`acl.xml`](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Customer/etc/acl.xml).
 
 When a developer creates the Web API configuration file (`webapi.xml`), the permissions defined in acl.xml are referenced to create access rights for each API resource.
 
@@ -182,8 +182,8 @@ Proceed to the authentication method for your preferred client:
 
 *  JavaScript widget on the Admin or storefront. [Session-based authentication](gs-authentication-session.md).
 
-*  [Extension attribute authentication](https://developer.adobe.com/commerce/php/development/components/attributes/)
+*  [Extension attribute authentication](https://developer.adobe.com/commerce/php/development/components/attributes)
 
-*  [Configure services as web APIs](https://developer.adobe.com/commerce/php/development/components/web-api/services/)
+*  [Configure services as web APIs](https://developer.adobe.com/commerce/php/development/components/web-api/services)
 
-*  [Create an ACL rule](https://developer.adobe.com/commerce/php/tutorials/backend/create-access-control-list-rule/)
+*  [Create an ACL rule](https://developer.adobe.com/commerce/php/tutorials/backend/create-access-control-list-rule)

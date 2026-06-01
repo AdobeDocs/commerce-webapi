@@ -19,14 +19,14 @@ Imposing restrictions on the size and number of resources that a user can reques
 By default, these input limits are disabled, but you can use the following methods to enable them:
 
 -  Set the values in the [Admin](https://experienceleague.adobe.com/en/docs/commerce-admin/config/services/magento-web-api).
-- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) Run the [`bin/magento config:set` command](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configuration-management/set-configuration-values.html).
-- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) Add entries to the [`env.php` file](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html#system).
-- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) Set [environment variables](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/examples/example-environment-variables.html).
+- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) Run the [`bin/magento config:set` command](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configuration-management/set-configuration-values).
+- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) Add entries to the [`env.php` file](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/files/config-reference-configphp#system).
+- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) Set [environment variables](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/deployment/examples/example-environment-variables).
 
 When input limiting has been enabled, the system uses the default value for each limitation listed above. You can also configure custom values.
 
-Although some simple examples for configuring these values from the CLI are provided below, all of the values can be [configured per website and per store view](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configuration-management/set-configuration-values.html) in addition to being configurable globally. In addition, these values can also be configured [via `env.php`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html#system)
-as well as via [environment variables](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/examples/example-environment-variables.html).
+Although some simple examples for configuring these values from the CLI are provided below, all of the values can be [configured per website and per store view](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configuration-management/set-configuration-values) in addition to being configurable globally. In addition, these values can also be configured [via `env.php`](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/files/config-reference-configphp#system)
+as well as via [environment variables](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/deployment/examples/example-environment-variables).
 
 <InlineAlert variant="info" slots="text"/>
 

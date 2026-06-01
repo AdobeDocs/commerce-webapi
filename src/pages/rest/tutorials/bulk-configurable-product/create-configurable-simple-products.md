@@ -2,7 +2,7 @@
 title: Step 2. Create the configurable and simple products
 description: In this step of the tutorial you will create the configurable and simple products
 contributor_name: comwrap GmbH
-contributor_link: http://comwrap.com/
+contributor_link: https://comwrap.com/en/
 keywords:
   - REST
 ---
@@ -312,4 +312,4 @@ For information about response fields, see the [Bulk API](/rest/use-rest/bulk-en
 
 <Edition slots="text" backgroundcolor="blue"/>
 
-[Thanks to comwrap GmbH for contributing this topic!](http://comwrap.com/)
+[Thanks to comwrap GmbH for contributing this topic!](https://comwrap.com/en/)

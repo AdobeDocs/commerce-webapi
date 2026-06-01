@@ -8,7 +8,7 @@ keywords:
 
 # Payment services minicart workflow
 
-These steps describe the additional flow of requests and responses required to place an order after [adding a product to your cart](../../tutorials/checkout/add-product-to-cart.md) with the [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html) solution enabled.
+These steps describe the additional flow of requests and responses required to place an order after [adding a product to your cart](../../tutorials/checkout/add-product-to-cart.md) with the [Payment Services](https://experienceleague.adobe.com/en/docs/commerce/payment-services/guide-overview) solution enabled.
 
 ## Minicart workflow
 

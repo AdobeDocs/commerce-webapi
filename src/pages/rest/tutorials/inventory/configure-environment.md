@@ -65,7 +65,7 @@ This tutorial uses an offline method to calculate distances for shipping and in-
 
    `bin/magento inventory-geonames:import us`
 
-   [Inventory CLI reference](https://experienceleague.adobe.com/docs/commerce-admin/inventory/cli.html#import-geocodes) provides additional information about this command.
+   [Inventory CLI reference](https://experienceleague.adobe.com/en/docs/commerce-admin/inventory/cli#import-geocodes) provides additional information about this command.
 
 ## Deactivate a cart price rule
 

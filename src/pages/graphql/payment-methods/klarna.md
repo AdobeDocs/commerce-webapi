@@ -14,7 +14,7 @@ keywords:
 
 # Klarna payment method
 
-[Klarna Payments](https://docs.klarna.com/platform-solutions/e-commerce-platforms/adobe-commerce/payments/kp-overview/) enables your consumers to try before they buy, finance purchases on your store with Klarna, or let them pay directly. Klarna offers these payment methods through a widget that you can add inline on your checkout page.
+[Klarna Payments](https://docs.klarna.com/platform/adobe-commerce/payments/klarna-payments-module/) enables your consumers to try before they buy, finance purchases on your store with Klarna, or let them pay directly. Klarna offers these payment methods through a widget that you can add inline on your checkout page.
 
 ## Klarna payments workflow
 
@@ -44,9 +44,9 @@ Klarna payments require cart information to initiate the session. For this reaso
 
 1. The PWA client renders the Klarna payment widget.
 
-   The PWA client uses the `client_token` and `payment_categories` to initialize the [Klarna Payments JS SDK](https://docs.klarna.com/klarna-payments/in-depth-knowledge/klarna-payments-sdk-reference/).
+   The PWA client uses the `client_token` and `payment_categories` to initialize the [Klarna Payments JS SDK](https://docs.klarna.com/acquirer/klarna/web-payments/additional-resources/klarna-payments-sdk-reference/).
 
-1. The PWA client sends the [authorization](https://docs.klarna.com/klarna-payments/integrate-with-klarna-payments/step-2-check-out/22-get-authorization/) directly to Klarna.
+1. The PWA client sends the [authorization](https://docs.klarna.com/acquirer/klarna/web-payments/integrate-with-klarna-payments/integrate-via-sdk/step-2-checkout/#get-authorization) directly to Klarna.
 
    On the checkout page, the shopper selects Klarna as the payment method and clicks **Place Order**. When this happens, the PWA client must send the `authorize()` call to Klarna. Then the shopper follows the authorization steps on the Klarna inline modal. During this phase, the communication between the PWA client and Klarna is handled directly by the Klarna Payments JS SDK.
 
@@ -84,7 +84,7 @@ In order to always present shoppers with the latest available payment options pr
 
 1. The application returns an updated `cart` object.
 
-1. [Reload the widget](https://docs.klarna.com/payments/web-payments/integrate-with-klarna-payments/step-2-checkout/#display-klarna) on the client side.
+1. [Reload the widget](https://docs.klarna.com/acquirer/klarna/web-payments/integrate-with-klarna-payments/integrate-via-sdk/step-2-checkout/#display-klarna) on the client side.
 
 The following diagram describes the workflow:
 

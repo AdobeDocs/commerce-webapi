@@ -12,4 +12,4 @@ The Catalog Service for Adobe Commerce extension contributes to a services-only 
 
 You can optionally implement [API Mesh for Adobe Developer App Builder](https://developer.adobe.com/graphql-mesh-gateway/) to integrate the core and Catalog Service GraphQL schemas with private and third-party APIs, as well as other software interfaces. The mesh can be configured to ensure that calls routed to each endpoint contain the correct authorization information in the headers.
 
-The [Catalog Service Guide](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/overview.html) describes the architecture and implementation of this product.
+The [Catalog Service Guide](https://experienceleague.adobe.com/en/docs/commerce/catalog-service/overview) describes the architecture and implementation of this product.

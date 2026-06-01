@@ -2,7 +2,7 @@
 title: Asynchronous web endpoints
 description: Learn about asynchronous web points, how they are used and how to define store scopes
 contributor_name: comwrap GmbH
-contributor_link: http://comwrap.com/
+contributor_link: https://comwrap.com/en/
 keywords:
   - REST
 ---
@@ -147,4 +147,4 @@ The following rules apply when you create or update an object, such as a product
 
 <Edition slots="text" backgroundcolor="blue"/>
 
-[Thanks to comwrap GmbH for contributing this topic!](http://comwrap.com/)
+[Thanks to comwrap GmbH for contributing this topic!](https://comwrap.com/en/)

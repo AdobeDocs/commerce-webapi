@@ -8,7 +8,7 @@ keywords:
 
 # Payment services during a checkout authorization
 
-[Payment Services for Adobe Commerce and Magento Open Source](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html) is your turnkey self-service solution, including sandbox testing and a simple setup, for providing robust and secure payment processing for your Commerce websites.
+[Payment Services for Adobe Commerce and Magento Open Source](https://experienceleague.adobe.com/en/docs/commerce/payment-services/guide-overview) is your turnkey self-service solution, including sandbox testing and a simple setup, for providing robust and secure payment processing for your Commerce websites.
 
 These steps describe the flow of requests and responses required to complete a typical [checkout](../../tutorials/checkout/index.md) authorization with Payment Services enabled.
 

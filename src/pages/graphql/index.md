@@ -35,7 +35,7 @@ Ready to experience the power of Adobe Commerce GraphQL? Here's how to get start
 
    - [GraphiQL](https://github.com/graphql/graphiql)
    - [Altair GraphQL client](https://altairgraphql.dev/)
-   - [Altair Chrome extension](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja)
+   - [Altair Chrome extension](https://chromewebstore.google.com/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja)
    - [Apollo Studio](https://studio.apollographql.com/)
 
 1. Access your GraphQL endpoint. Your Adobe Commerce GraphQL endpoint is available at:

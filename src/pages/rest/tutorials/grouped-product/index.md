@@ -15,7 +15,7 @@ This tutorial describes how you can use the Adobe Commerce REST API to create an
 
 *  Install a Commerce instance with sample data. The sample data defines a functional store, called Luma, that sells fitness clothing and accessories.
 
-*  Install a REST client. You can use any REST client to send calls to Commerce. [Postman](https://www.getpostman.com/) is recommended.
+*  Install a REST client. You can use any REST client to send calls to Commerce. [Postman](https://www.postman.com/) is recommended.
 
 *  Obtain an admin authorization token. All calls in this tutorial require administrator privileges. See [Generate the admin token](/rest/tutorials/prerequisite-tasks/index.md) for more information.
 

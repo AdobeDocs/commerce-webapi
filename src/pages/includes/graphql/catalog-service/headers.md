@@ -5,4 +5,4 @@
 | `Magento-Store-Code`| The code assigned to the store associated with the active store view. For example, `main_website_store`. |
 | `Magento-Store-View-Code`| The code assigned to the active store view. For example, `default`. |
 | `Magento-Website-Code`| The code assigned to the website associated with the active store view. For example, `base`. |
-| `X-Api-Key` | [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) Set this value to the [unique API key](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/user-guides/integration-services/saas#genapikey) generated for your Commerce environment. |
+| `X-Api-Key` | [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) Set this value to the [unique API key](https://experienceleague.adobe.com/en/docs/commerce/user-guides/integration-services/saas#genapikey) generated for your Commerce environment. |

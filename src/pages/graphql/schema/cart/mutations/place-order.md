@@ -23,7 +23,7 @@ As of Commerce 2.4.7, the `PlaceOrderOutput` object can contain `orderV2`, which
 
 <InlineAlert variant="info" slots="text" />
 
-The `placeOrder` mutation runs asynchronously if the `AsyncOrder` module has been enabled. By default, the mutation runs synchronously. [Asynchronous order placement](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/high-throughput-order-processing.html#asynchronous-order-placement) describes the benefits of enabling the module.
+The `placeOrder` mutation runs asynchronously if the `AsyncOrder` module has been enabled. By default, the mutation runs synchronously. [Asynchronous order placement](https://experienceleague.adobe.com/en/docs/commerce-operations/performance-best-practices/high-throughput-order-processing#asynchronous-order-placement) describes the benefits of enabling the module.
 
 ## Syntax
 

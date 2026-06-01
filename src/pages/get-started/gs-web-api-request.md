@@ -106,7 +106,7 @@ This JSON-formatted request body includes a `customer` object with the customer 
 
 This example shows you how to construct a REST web API call to create an account.
 
-1. Open the [Magento/Customer/etc/webapi.xml](https://github.com/magento/magento2/tree/2.4/app/code/Magento/Customer/etc/webapi.xml)
+1. Open the [Magento/Customer/etc/webapi.xml](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Customer/etc/webapi.xml)
 
 1. Find the route element that defines the `createAccount` call:
 
@@ -123,7 +123,7 @@ This example shows you how to construct a REST web API call to create an account
 
 1. Use the `class` attribute on the `service` element to identify the service interface. In this example, the service interface is the `AccountManagementInterface` PHP file.
 
-   Open the [AccountManagementInterface.php](https://github.com/magento/magento2/tree/2.4/app/code/Magento/Customer/Api/AccountManagementInterface.php) file and find the `createAccount` method, as follows:
+   Open the [AccountManagementInterface.php](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Customer/Api/AccountManagementInterface.php) file and find the `createAccount` method, as follows:
 
    ```php?start_inline=1
    public function createAccount(
@@ -157,7 +157,7 @@ The following example builds a Customers Search request based on search criteria
    ]);
    ```
 
-1. Open the [Magento/Customer/etc/webapi.xml](https://github.com/magento/magento2/tree/2.4/app/code/Magento/Customer/etc/webapi.xml)  configuration file and find the [CustomerRepositoryInterface](https://github.com/magento/magento2/tree/2.4/app/code/Magento/Customer/Api/CustomerRepositoryInterface.php) interface with the `getList` method.
+1. Open the [Magento/Customer/etc/webapi.xml](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Customer/etc/webapi.xml)  configuration file and find the [CustomerRepositoryInterface](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Customer/Api/CustomerRepositoryInterface.php) interface with the `getList` method.
 
 1. Set the headers, URI and method to a request object. Use URI `/V1/customers/search` and method `GET` values. Use the `searchCriteria` parameter to complete the Customer Search query. See [searchCriteria usage](https://developer.adobe.com/commerce/webapi/rest/use-rest/performing-searches/).
 

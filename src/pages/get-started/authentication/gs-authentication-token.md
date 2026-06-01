@@ -14,7 +14,7 @@ keywords:
 
 <InlineAlert variant="info" slots="text"/>
 
-This topic is for Platform-as-a-Service (PaaS) customers only. Adobe Commerce Cloud Services customers must refer to [REST Authentication](https://developer.adobe.com/commerce/services/cloud/guides/rest/authentication/) for details on authentication.
+This topic is for Platform-as-a-Service (PaaS) customers only. Adobe Commerce Cloud Services customers must refer to [REST Authentication](https://developer.adobe.com/commerce/webapi/rest/authentication/) for details on authentication.
 
 To make a web API call from a client such as a mobile application, you must supply an *access token* on the call. The token acts like an electronic key that lets you access the API.
 
@@ -261,6 +261,6 @@ For example, to make a web API call with a customer token:
 
 [Construct a request](../gs-web-api-request.md)
 
-[Configure services as web APIs](https://developer.adobe.com/commerce/php/development/components/web-api/services/)
+[Configure services as web APIs](https://developer.adobe.com/commerce/php/development/components/web-api/services)
 
 [Restricting access to anonymous web APIs](https://developer.adobe.com/commerce/webapi/rest/use-rest/anonymous-api-security/)

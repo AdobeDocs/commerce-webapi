@@ -121,7 +121,7 @@ The `Assets` object can contain the following attributes.
 
 | Error | Description |
 | --- | --- |
-| `The Klarna payment method is not active.` | The [Klarna](https://experienceleague.adobe.com/docs/commerce-admin/config/sales/payment-methods/payment-methods.html) payment method is disabled in admin. |
+| `The Klarna payment method is not active.` | The [Klarna](https://experienceleague.adobe.com/en/docs/commerce-admin/config/sales/payment-methods/payment-methods) payment method is disabled in admin. |
 
 <Edition slots="text" backgroundcolor="blue"/>
 

@@ -11,7 +11,7 @@ This query is available only if you have installed [Payment Services for Adobe C
 
 The `getPaymentConfig` query returns the payment configuration details from locations in the storefront and Admin where the payment method can be set.
 
-The query can return details about the following supported payment methods in [Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/payments-checkout/payments-options.html):
+The query can return details about the following supported payment methods in [Payment Services](https://experienceleague.adobe.com/en/docs/commerce/payment-services/payments-checkout/payments-options):
 
 * Apple Pay
 * Google Pay
@@ -310,7 +310,7 @@ The `ApplePayConfig` payment method configuration has a `button_styles` object c
 | `tagline` | Boolean | Indicates whether the tagline is displayed |
 | `use_default_height` | Boolean | Defines if button uses default height. If the value is `False`, the value of `height` is used |
 
-See [Payment options](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/payments-checkout/payments-options.html) for more information.
+See [Payment options](https://experienceleague.adobe.com/en/docs/commerce/payment-services/payments-checkout/payments-options) for more information.
 
 ### `GooglePayConfig` attributes
 
@@ -363,7 +363,7 @@ The `SmartButtonsConfig` payment method configuration contains the following att
 | `display_venmo` | Boolean | Defines if the Venmo option is shown |
 | `message_styles` | MessageStyles | The message styles for the PayPal Pay Later configuration |
 
-See [Payment options](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/payments-checkout/payments-options.html) for more information.
+See [Payment options](https://experienceleague.adobe.com/en/docs/commerce/payment-services/payments-checkout/payments-options) for more information.
 
 #### `ButtonStyles` object
 

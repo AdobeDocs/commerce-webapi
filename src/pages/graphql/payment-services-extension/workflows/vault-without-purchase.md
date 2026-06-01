@@ -8,7 +8,7 @@ keywords:
 
 # Vaulting a credit card without a checkout authorization
 
-These steps describe the flow of requests and responses required to [vault a payment method](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/payment-services/payments-checkout/vaulting#vaulting-without-purchase) without the typical checkout authorization with Payment Services enabled.
+These steps describe the flow of requests and responses required to [vault a payment method](https://experienceleague.adobe.com/en/docs/commerce/payment-services/payments-checkout/vaulting#vaulting-without-purchase) without the typical checkout authorization with Payment Services enabled.
 
 ## Workflow
 

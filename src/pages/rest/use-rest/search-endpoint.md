@@ -2,7 +2,7 @@
 title: Search for products with the /search endpoint
 description: Search for products using the /search endpoints
 contributor_name: comwrap GmbH
-contributor_link: https://www.comwrap.com/
+contributor_link: https://www.comwrap.com/en/
 keywords:
   - REST
 ---
@@ -155,4 +155,4 @@ searchCriteria[filterGroups][0][filters][0][condition_type]=eq
 
 <Edition slots="text" backgroundcolor="blue"/>
 
-[Thanks to comwrap GmbH for contributing this topic!](https://www.comwrap.com/)
+[Thanks to comwrap GmbH for contributing this topic!](https://www.comwrap.com/en/)

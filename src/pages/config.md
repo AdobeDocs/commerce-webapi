@@ -75,7 +75,7 @@
                 - [Place a negotiable quote order](/rest/b2b/negotiable-order-workflow.md)
                 - [Initiate a negotiable quote by seller](/rest/b2b/negotiable-by-seller-workflow.md)
         - [Develop B2B extensions](/rest/b2b/extensions.md)
-        - [B2B Release Notes](https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html)
+        - [B2B Release Notes](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes)
     - [Inventory integrations](/rest/inventory/index.md)
         - [Manage sources](/rest/inventory/manage-sources.md)
         - [Manage stocks](/rest/inventory/manage-stocks.md)

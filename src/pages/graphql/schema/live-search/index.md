@@ -17,7 +17,7 @@ You can connect to the Live Search GraphQL endpoint to test sample queries using
 
 -  Through a standalone version of GraphQL Playground, or any other IDE, such as GraphiQL or Postman. In these applications you must specify the endpoint URL and provide a set of HTTP headers for each call.
 
-For instructions on how to install and implement this product, see [Introduction to Live Search](https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/overview.html).
+For instructions on how to install and implement this product, see [Introduction to Live Search](https://experienceleague.adobe.com/en/docs/commerce/live-search/overview).
 
 ## Error Codes
 

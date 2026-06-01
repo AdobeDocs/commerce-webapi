@@ -7,7 +7,7 @@ keywords:
 
 # Define the GraphQL schema for a module
 
-Each module that adds to or extends from a GraphQL schema can do so by placing a `schema.graphqls` file in its `etc` directory. Adobe Commerce and Magento Open Source Core adds [`GraphQl`](https://github.com/magento/magento2/blob/2.4/app/code/Magento/GraphQl) modules based on the purpose of the schema being extended/added and the core modules they depend on. For example, the `CustomerGraphQl` module adds a query and multiple mutations to the `graphql` endpoint to view and modify customer data. The `CustomerGraphQl` module relies on the `Customer` core module.
+Each module that adds to or extends from a GraphQL schema can do so by placing a `schema.graphqls` file in its `etc` directory. Adobe Commerce and Magento Open Source Core adds [`GraphQl`](https://github.com/magento/magento2/tree/2.4/app/code/Magento/GraphQl) modules based on the purpose of the schema being extended/added and the core modules they depend on. For example, the `CustomerGraphQl` module adds a query and multiple mutations to the `graphql` endpoint to view and modify customer data. The `CustomerGraphQl` module relies on the `Customer` core module.
 
 A GraphQL module's `schema.graphqls` file defines how the attributes defined in the module can be used in GraphQL queries and mutations. If your module's attributes are completely self-contained, then the `schema.graphqls` file defines the queries, mutations, the interfaces used, the data types of all the attributes, and any enumerations that restrict the possible attribute contents. If your module extends another module, then you must define those attributes and ensure that the other module can load your attributes. For example, the `CatalogGraphQl` module defines the `PriceAdjustmentCodesEnum`, but the `TaxGraphQl` and `WeeeGraphQl` modules define the enumeration values.
 
@@ -265,4 +265,4 @@ This `cacheable` argument is intended to disable caching for queries that are de
 Specifying `@cache(cacheable: false)` or `@cache(cacheable: true)` on a query without a `cacheIdentity` class has no effect: the query will not be cached.
 If a query should **not** be cached, do not specify the `@cache` directive. Specifying `@cache(cacheable: false)`  is superfluous when no `cacheIdentity` is present.
 
-See [Create a cache type](https://developer.adobe.com/commerce/php/development/cache/partial/cache-type/) for information about enabling caching for custom modules.
+See [Create a cache type](https://developer.adobe.com/commerce/php/development/cache/partial/cache-type) for information about enabling caching for custom modules.

@@ -14,9 +14,9 @@ keywords:
 
 <InlineAlert variant="info" slots="text"/>
 
-This topic is for Platform-as-a-Service (PaaS) customers only. Adobe Commerce Cloud Services customers must refer to [REST Authentication](https://developer.adobe.com/commerce/services/cloud/guides/rest/authentication/) for details on authentication.
+This topic is for Platform-as-a-Service (PaaS) customers only. Adobe Commerce Cloud Services customers must refer to [REST Authentication](https://developer.adobe.com/commerce/webapi/rest/authentication/) for details on authentication.
 
-OAuth authentication with Adobe Commerce and Magento Open Source is based on [OAuth 1.0a](https://tools.ietf.org/html/rfc5849), an open standard for secure API authentication. OAuth is a token-passing mechanism that allows a system to control which third-party applications have access to internal data without revealing or storing any user IDs or passwords.
+OAuth authentication with Adobe Commerce and Magento Open Source is based on [OAuth 1.0a](https://datatracker.ietf.org/doc/html/rfc5849), an open standard for secure API authentication. OAuth is a token-passing mechanism that allows a system to control which third-party applications have access to internal data without revealing or storing any user IDs or passwords.
 
 In Commerce, a third-party application that uses OAuth for authentication is called an [_integration_](../create-integration.md). An integration defines which resources the application can access. The application can be granted access to all resources or a customized subset of resources.
 
@@ -164,9 +164,9 @@ To generate the signature, you must use the HMAC-SHA256 signature method. The si
 
 ## OAuth token exchange example
 
-The scripts provided in this document simulate the Commerce [OAuth 1.0a](https://tools.ietf.org/html/rfc5849) token exchange flow. You can drop these scripts under the document root directory of your installation so that they can be exposed as endpoints that your system can interact with to mimic the token exchange.
+The scripts provided in this document simulate the Commerce [OAuth 1.0a](https://datatracker.ietf.org/doc/html/rfc5849) token exchange flow. You can drop these scripts under the document root directory of your installation so that they can be exposed as endpoints that your system can interact with to mimic the token exchange.
 
-The OAuth client is extended from and attributed to [PHPoAuthLib](https://github.com/Lusitanian/PHPoAuthLib), which is the same lib used in the [OAuth client](https://github.com/magento/magento2/tree/2.4/dev/tests/api-functional/framework/Magento/TestFramework/Authentication/Rest/OauthClient.php).
+The OAuth client is extended from and attributed to [PHPoAuthLib](https://github.com/daviddesberg/PHPoAuthLib), which is the same lib used in the [OAuth client](https://github.com/magento/magento2/blob/2.4/dev/tests/api-functional/framework/Magento/TestFramework/Authentication/Rest/OauthClient.php).
 
 To simulate the OAuth 1.0a token exchange flow:
 
@@ -468,4 +468,4 @@ class OauthClient extends AbstractService
 
 [Construct a request](../gs-web-api-request.md)
 
-[Configure services as web APIs](https://developer.adobe.com/commerce/php/development/components/web-api/services/)
+[Configure services as web APIs](https://developer.adobe.com/commerce/php/development/components/web-api/services)

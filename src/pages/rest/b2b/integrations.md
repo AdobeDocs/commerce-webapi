@@ -29,7 +29,7 @@ Use Company endpoints to manage B2B companies, including company profiles, teams
 | Company User Management | `POST /V1/customers/companies` - Create company user\<br /\>`GET /V1/customers/companies` - List company users\<br /\>`GET /V1/customers/:customerId/companies/:companyId` - Get company user details | `companyCompanyUserRepositoryV1` |
 | Company Hierarchy | `GET /V1/hierarchy/:id` - Get company hierarchy\<br /\>`PUT /V1/hierarchy/move/:id` - Move node in company hierarchy | `companyCompanyHierarchyV1` |
 
-For details, see the [company](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/company#operation/GetV1Company) API reference.
+For details, see the [company](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/company/#operation/GetV1Company) API reference.
 
 ### CompanyCredit
 
@@ -41,7 +41,7 @@ Use `companyCredit` endpoints to manage company credit limits, balances, and his
 | Credit Balance Management | - `POST /V1/companyCredits/:creditId/increaseBalance` - increase credit with an Allocate, Update, Refund, Revert, or Reimburse transaction. \<br /\>- `POST /V1/companyCredits/:creditId/decreaseBalance` - Decrease credit balance with an Update, Reimburse, or Purchase transaction | `CreditBalanceManagementInterfaceV1` |
 | Credit History Management | - `GET /V1/companyCredits/history` - Get credit history list \<br /\>- `PUT /V1/companyCredits/history/:historyId` - Update credit history | `CreditHistoryManagementInterfaceV1` |
 
-For details, see the [companyCredits](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/companyCredits) API reference.
+For details, see the [companyCredits](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/companyCredits/) API reference.
 
 ### CompanyRelation
 
@@ -51,7 +51,7 @@ Use `company/relations` endpoints to manage relationships between companies in a
 |----------|----------|--------------|
 | Company Relations Management | `GET /V1/company/relations` - List company relationships\<br /\>`POST /V1/company/:parentId/relations` - Create company relationship\<br /\>`DELETE /V1/company/:parentId/relations/:companyId` - Delete company relationship | `companyRelationRelationManagerV1` |
 
-For details, see the [companyRelations](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/companyrelations#operation/GetV1CompanyRelations) API reference.
+For details, see the [companyRelations](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/companyrelations/#operation/GetV1CompanyRelations) API reference.
 
 ### NegotiableQuote
 
@@ -66,7 +66,7 @@ Use `negotableQuote` endpoints to manage negotiable quotes, including quote crea
 | Gift Card Management | - `POST /V1/negotiable-carts/:cartId/giftCards` - Add gift card to quote\<br /\>- `DELETE /V1/negotiable-carts/:cartId/giftCards/:giftCardCode` - Remove gift card from quote | `GiftCardAccountManagementInterfaceV1` |
 | Item Notes Management | - `GET /V1/negotiable-cart-item-note/:noteId` - Retrieve note for specific item\<br /\>- `POST /V1/negotiable-cart-item-note` - Add note to quote item\<br /\>- `DELETE /V1/negotiable-cart-item-note/:noteId` - Remove note from quote item\<br /\>- `GET /V1/negotiable-cart-item-note/search` - Search for item notes | `ItemNoteRepositoryInterfaceV1` |
 
-For details, see the [negotiableQuote](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/negotiableQuoteattachmentContent#operation/GetV1NegotiableQuoteAttachmentContent) API reference.
+For details, see the [negotiableQuote](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/negotiableQuoteattachmentContent/#operation/GetV1NegotiableQuoteAttachmentContent) API reference.
 
 ### NegotiableQuoteTemplate
 
@@ -78,7 +78,7 @@ Use `negotiableQuoteTemplate` endpoints to manage quote templates, enabling busi
 | Template Actions | - `POST /V1/negotiableQuoteTemplate/open` - Open template\<br /\>- `POST /V1/negotiableQuoteTemplate/submitToCustomer` - Submit to customer\<br /\>- `POST /V1/negotiableQuoteTemplate/submitToSeller` - Submit to seller\<br /\>- `POST /V1/negotiableQuoteTemplate/decline` - Decline template\<br /\>- `POST /V1/negotiableQuoteTemplate/accept` - Accept template\<br /\>- `POST /V1/negotiableQuoteTemplate/generateQuote` - Generate quote from template\<br /\>- `POST /V1/negotiableQuoteTemplate/cancel` - Cancel template | `OpenInterfaceV1`\<br /\>`SellerSendInterfaceV1`\<br /\>`SendInterfaceV1`\<br /\>`DeclineInterfaceV1`\<br /\>`AcceptInterfaceV1`\<br /\>`GenerateQuoteInterfaceV1`\<br /\>`CancelInterfaceV1` |
 | Reference Document Links | - `GET /V1/negotiableQuoteTemplate/referenceDocumentLink/:linkId` - Get document link\<br /\>- `GET /V1/negotiableQuoteTemplate/referenceDocumentLink` - List document links\<br /\>- `PUT referenceDocumentLink` - Update document link\<br /\>- `DELETE /V1/negotiableQuoteTemplate/referenceDocumentLink/:linkId` - Delete document link | `ReferenceDocumentLinkRepositoryInterfaceV1` |
 
-For details, see the [negotiableQuoteTemplate](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/negotiableQuoteTemplate#operation/GetV1NegotiableQuoteTemplate) API reference.
+For details, see the [negotiableQuoteTemplate](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/negotiableQuoteTemplate/#operation/GetV1NegotiableQuoteTemplate) API reference.
 
 ### PurchasOrder
 
@@ -91,7 +91,7 @@ Use the `purchaseOrder` endpoints to manage purchase orders in a B2B context, in
 | Cart Management | - `GET /V1/purchase-order-carts/:cartId/totals` - Get cart totals\<br /\>- `POST /V1/purchase-order-carts/:cartId/billing-address` - Set billing address | `CartTotalRepositoryInterfaceV1`\<br /\>`BillingAddressManagementInterfaceV1` |
 | Gift Card Management | - `POST /V1/purchase-order-carts/:cartId/giftCards` - Add gift card to cart\<br /\>- `DELETE /V1/purchase-order-carts/:cartId/giftCards/:giftCardCode` - Remove gift card from cart | `GiftCardAccountManagementInterfaceV1` |
 
-For details, see the [purchaseOrders](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/purchase-order-cartscartIdbilling-address) API reference.
+For details, see the [purchaseOrders](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/purchase-order-cartscartIdbilling-address/) API reference.
 
 ### SharedCatalog
 
@@ -105,7 +105,7 @@ Use `sharedCatalog` endpoints to manage shared catalogs, including catalog manag
 | Category Management | `GET /V1/sharedCatalog/:id/categories` - Retrieves list of categories in a shared catalog\<br /\>`POST /V1/sharedCatalog/:id/assignCategories` - Assigns categories to a shared catalog\<br /\>`POST /V1/sharedCatalog/:id/unassignCategories` - Removes categories from a shared catalog | `sharedCatalogCategoryManagementV1` |
 | Tier Price Management | `POST /V1/sharedCatalog/:sharedCatalogId/assignTierPrices` - Assigns tier prices to products in a shared catalog\<br /\>`POST /V1/sharedCatalog/:sharedCatalogId/resetTierPrices` - Resets tier prices for products in a shared catalog | `sharedCatalogAssignTierPriceV1` |
 
-For details, see the [sharedCatalog](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/sharedCatalog#operation/PostV1SharedCatalog) API reference.
+For details, see the [sharedCatalog](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/sharedCatalog/#operation/PostV1SharedCatalog) API reference.
 
 ### RequisitionList
 
@@ -120,4 +120,4 @@ Use the `requisition_lists` endpoint to save requisition lists to create and man
 |----------|----------------------|--------------|
 | Requisition List Management | POST /V1/requisition_lists - Creates or updates a requisition list | `requisitionListRequisitionListRepositoryV1` |
 
-For details, see the [requistion_lists](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/requisition_lists#operation/PostV1Requisition_lists) API reference.
+For details, see the [requistion_lists](https://adobe-commerce.redoc.ly/2.4.7-admin/tag/requisition_lists/#operation/PostV1Requisition_lists) API reference.

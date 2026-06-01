@@ -20,7 +20,7 @@ Commerce provides two ways to get detailed information about the structure of th
 <InlineAlert variant="info" slots="text"/>
 
 For improved application security, starting from Commerce 2.4.4, Swagger UI does not function if the operation mode is set to Production. It only functions in Developer mode.
-See how to [switch operation mode to developer mode](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/set-mode.html#change-to-developer-mode).
+See how to [switch operation mode to developer mode](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/set-mode#change-to-developer-mode).
 
 The Swagger UI is installed automatically on your server. As a result, you can generate live REST API documentation that can include Adobe Commerce modules, third-party modules, and extension attributes that have been installed on your system. To view this documentation, go to:
 

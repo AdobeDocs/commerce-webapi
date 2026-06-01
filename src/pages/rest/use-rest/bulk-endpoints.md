@@ -2,7 +2,7 @@
 title: Bulk endpoints
 description: Learn how to combine multiple API calls of the same type into a single request
 contributor_name: comwrap GmbH
-contributor_link: http://comwrap.com/
+contributor_link: https://comwrap.com/en/
 keywords:
   - REST
 ---
@@ -21,11 +21,11 @@ In Adobe Commerce as a Cloud Service, message queues run automatically. There is
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-Cron jobs are the default mechanism for [managing message queues](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues) and starting message queue [consumers](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/consumers), but you can also use external process control systems (like [Supervisor](https://supervisord.readthedocs.io/en/latest/)) to monitor process management. You can use the [`bin/magento queue:consumers:start async.operations.all`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/start-message-queues.html) command to manually start the `async.operations.all` consumer that handles asynchronous and bulk API messages. However, manually starting consumers is not recommended because it requires you to keep your terminal session connected.
+Cron jobs are the default mechanism for [managing message queues](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues) and starting message queue [consumers](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/consumers), but you can also use external process control systems (like [Supervisor](https://supervisord.readthedocs.io/en/latest/)) to monitor process management. You can use the [`bin/magento queue:consumers:start async.operations.all`](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/start-message-queues) command to manually start the `async.operations.all` consumer that handles asynchronous and bulk API messages. However, manually starting consumers is not recommended because it requires you to keep your terminal session connected.
 
 <InlineAlert variant="info" slots="text"/>
 
-Before using the Bulk API to process messages, you must install and configure RabbitMQ, which is the default message broker. See [Setup RabbitMQ service](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/rabbitmq) for cloud infrastructure projects and [Message broker](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/rabbitmq.html) for on-premises projects.
+Before using the Bulk API to process messages, you must install and configure RabbitMQ, which is the default message broker. See [Setup RabbitMQ service](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq) for cloud infrastructure projects and [Message broker](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/rabbitmq) for on-premises projects.
 
 ## Routes
 
@@ -212,4 +212,4 @@ The following rules apply when you create or update an object, such as a product
 
 <Edition slots="text" backgroundcolor="blue"/>
 
-[Thanks to comwrap GmbH for contributing this topic!](http://comwrap.com/)
+[Thanks to comwrap GmbH for contributing this topic!](https://comwrap.com/en/)

@@ -57,5 +57,5 @@ The seller and a buyer representing a company can negotiate the price of an orde
 
 ## Related information
 
-- [Install the B2B extension](https://experienceleague.adobe.com/docs/commerce-admin/b2b/install.html)
+- [Install the B2B extension](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/install)
 - [Getting started with B2B for Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home)

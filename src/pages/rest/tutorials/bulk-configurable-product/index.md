@@ -2,7 +2,7 @@
 title: Create a configurable product using bulk APIs
 description: A tutorial that describes how to create a configurable product using bulk API calls
 contributor_name: comwrap GmbH
-contributor_link: http://comwrap.com/
+contributor_link: https://comwrap.com/en/
 keywords:
   - REST
 ---
@@ -20,7 +20,7 @@ A system integrator can use Adobe Commerce REST bulk APIs to perform actions on 
 ## Before you begin
 
 *  Install a Commerce instance with sample data. The sample data defines a functional store, called Luma, that sells fitness clothing and accessories.
-*  Install a REST client. You can use any REST client to send calls to Commerce. [Postman](https://www.getpostman.com/) is recommended.
+*  Install a REST client. You can use any REST client to send calls to Commerce. [Postman](https://www.postman.com/) is recommended.
 *  Obtain an admin authorization token. All calls in this tutorial require administrator privileges. See [Generate the admin token](/rest/tutorials/prerequisite-tasks/index.md) for more information.
 *  Use the `bin/magento queue:consumers:start async.operations.all` command to enable bulk endpoint processing.
 
@@ -32,4 +32,4 @@ A system integrator can use Adobe Commerce REST bulk APIs to perform actions on 
 
 <Edition slots="text" backgroundcolor="blue"/>
 
-[Thanks to comwrap GmbH for contributing this topic!](http://comwrap.com/)
+[Thanks to comwrap GmbH for contributing this topic!](https://comwrap.com/en/)

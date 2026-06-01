@@ -8,7 +8,7 @@ keywords:
 
 # Vault a card during a checkout authorization
 
-These steps describe the flow of requests and responses required to [vault a credit card](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/payment-services/payments-checkout/vaulting#vaulting-a-payment-method-during-checkout) during a typical checkout authorization with Payment Services enabled.
+These steps describe the flow of requests and responses required to [vault a credit card](https://experienceleague.adobe.com/en/docs/commerce/payment-services/payments-checkout/vaulting#vaulting-a-payment-method-during-checkout) during a typical checkout authorization with Payment Services enabled.
 
 The following conditions must be true to vault a card during checkout:
 

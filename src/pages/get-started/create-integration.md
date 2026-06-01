@@ -20,7 +20,7 @@ Implementing a simple integration requires little knowledge of PHP or Commerce i
 *  [Web API authentication](authentication/index.md)
 *  [OAuth-based authentication](authentication/gs-authentication-oauth.md)
 
-Before you begin creating a module, make sure that you have a working installation that meets the [System Requirements](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html).
+Before you begin creating a module, make sure that you have a working installation that meets the [System Requirements](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements).
 
 To create an integration, follow these general steps:
 
@@ -44,7 +44,7 @@ To develop a module, you must:
    mkdir -p app/code/<vendor_name>/<module_name>/Setup
    ```
 
-   For more detailed information, see [Create your component file structure](https://developer.adobe.com/commerce/php/development/build/component-file-structure/).
+   For more detailed information, see [Create your component file structure](https://developer.adobe.com/commerce/php/development/build/component-file-structure).
 
 1. **Define your module configuration file.** The `etc/module.xml` file provides basic information about the module. Change directories to the `etc` directory and create the `module.xml` file. You must specify values for the following attributes:
 
@@ -93,7 +93,7 @@ To develop a module, you must:
 
    ```
 
-    For more information, see [Create a component](https://developer.adobe.com/commerce/php/development/build/component-name/).
+    For more information, see [Create a component](https://developer.adobe.com/commerce/php/development/build/component-name).
 
 1. **Create a `registration.php` file** The `registration.php` registers the module with the system. It must be placed in the module's root directory.
 
@@ -304,6 +304,6 @@ The callback page must be able to perform the following tasks:
 
 *  [Web API authentication](authentication/index.md)
 *  [OAuth-based authentication](authentication/gs-authentication-oauth.md)
-*  [System Requirements](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)
-*  [Create the module file structure](https://developer.adobe.com/commerce/php/development/build/component-file-structure/)
-*  [Create a component](https://developer.adobe.com/commerce/php/development/build/component-name/)
+*  [System Requirements](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)
+*  [Create the module file structure](https://developer.adobe.com/commerce/php/development/build/component-file-structure)
+*  [Create a component](https://developer.adobe.com/commerce/php/development/build/component-name)

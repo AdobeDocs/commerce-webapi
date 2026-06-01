@@ -685,7 +685,7 @@ The multiple select attributes for customer and customer address are represented
 }
 ```
 
-The Import JSON API does not create attributes automatically. You need to create attributes manually before importing data. For more information, see [Create attributes](https://developer.adobe.com/commerce/php/development/components/attributes/).
+The Import JSON API does not create attributes automatically. You need to create attributes manually before importing data. For more information, see [Create attributes](https://developer.adobe.com/commerce/php/development/components/attributes).
 
 **Advanced Pricing payload:**
 

@@ -27,7 +27,7 @@ This **4-step tutorial** generally takes **30 minutes**.
 
 ## Before you begin
 
-*  Install an Adobe Commerce instance with [sample data](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/next-steps/sample-data/overview.html?lang=en) or use Adobe Commerce Cloud with [sample data (cloud)](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/sample-data.html).
+*  Install an Adobe Commerce instance with [sample data](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/next-steps/sample-data/overview) or use Adobe Commerce Cloud with [sample data (cloud)](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/test/sample-data).
 
 *  Install a REST client, such as Postman.
 

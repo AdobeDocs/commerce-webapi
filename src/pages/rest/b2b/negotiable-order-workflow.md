@@ -15,7 +15,7 @@ This topic describes how REST calls can be used to place items in a shopping car
 
 ## Prerequisites
 
--  You have [installed and enabled](https://experienceleague.adobe.com/docs/commerce-admin/b2b/install.html) B2B for Adobe Commerce.
+-  You have [installed and enabled](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/install) B2B for Adobe Commerce.
 -  You have [created a company](company-object.md).
 -  You have an integration or [admin authorization token](../tutorials/orders/order-admin-token.md) to make calls on behalf of seller, and a [customer token](../tutorials/orders/order-create-customer.md#get-the-customers-access-token) to make calls on behalf of the company user.
 
@@ -992,7 +992,7 @@ The buyer is now ready to complete the purchase. Since the buyer has already spe
 
 <InlineAlert variant="info" slots="text"/>
 
-The `/V1/negotiable-carts/:cartId/payment-information` endpoint runs asynchronously if the `AsyncOrder` module has been enabled. By default, the mutation runs synchronously. [Asynchronous order placement](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/high-throughput-order-processing.html) describes the benefits of enabling the module.
+The `/V1/negotiable-carts/:cartId/payment-information` endpoint runs asynchronously if the `AsyncOrder` module has been enabled. By default, the mutation runs synchronously. [Asynchronous order placement](https://experienceleague.adobe.com/en/docs/commerce-operations/performance-best-practices/high-throughput-order-processing) describes the benefits of enabling the module.
 
 **Headers:**
 

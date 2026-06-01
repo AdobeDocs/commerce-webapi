@@ -2,7 +2,7 @@
 title: Step 3. Define configurable product options
 description: In this step of the tutorial you will define the configurable product options
 contributor_name: comwrap GmbH
-contributor_link: http://comwrap.com/
+contributor_link: https://comwrap.com/en/
 keywords:
   - REST
 ---
@@ -163,4 +163,4 @@ Bulk endpoint routes cannot contain input parameters, such as a `sku` value.  Yo
 
 <Edition slots="text" backgroundcolor="blue"/>
 
-[Thanks to comwrap GmbH for contributing this topic!](http://comwrap.com/)
+[Thanks to comwrap GmbH for contributing this topic!](https://comwrap.com/en/)

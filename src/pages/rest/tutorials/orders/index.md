@@ -23,7 +23,7 @@ Complete the following prerequisites:
 
   The sample data defines a functional store, called Luma, that sells fitness clothing and accessories. The store does not provide any sandbox accounts for testing credit card payments, so transactions will be simulated using an offline payment method.
 
-*  Install a REST client. You can use any REST client to send calls to Commerce. [Postman](https://www.getpostman.com/) is recommended.
+*  Install a REST client. You can use any REST client to send calls to Commerce. [Postman](https://www.postman.com/) is recommended.
 
 *  Set up [two-factor authentication](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication/). This tutorial assumes Google Authenticator is your 2FA solution.
 

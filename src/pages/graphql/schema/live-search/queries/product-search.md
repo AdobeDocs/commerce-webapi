@@ -11,7 +11,7 @@ keywords:
 
 This article discusses the `productSearch` query that is available in the Live Search and Catalog Service extension. While similar in structure and functionality, there are differences in what they output.
 
-See [Boundaries and Limits](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/live-search/boundaries-limits) in the *Live Search Guide* for the latest recommendations for creating performant queries.
+See [Boundaries and Limits](https://experienceleague.adobe.com/en/docs/commerce/live-search/boundaries-limits) in the *Live Search Guide* for the latest recommendations for creating performant queries.
 
 ## Syntax
 
@@ -349,7 +349,7 @@ The advanced search capabilitiies have the following limitations:
 - You can paginate a maximum of 10,000 products for any `productSearch` query.
 - These new search capabilities are not available in PLP widgets or the Live Search adapter extension.
 
-For additional Live Search boundaries and limits, see [boundaries and limits](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/live-search/boundaries-limits) in the Live Search merchant guide.
+For additional Live Search boundaries and limits, see [boundaries and limits](https://experienceleague.adobe.com/en/docs/commerce/live-search/boundaries-limits) in the Live Search merchant guide.
 
 #### Filtering by categories
 
@@ -473,7 +473,7 @@ The response to the `productSearch` query can contain details about each product
 
 ### Facets
 
-[Facets](https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/live-search-admin/facets/facets.html) provide a method of high-performance filtering that uses multiple dimensions of attribute values as search criteria. Faceted search is similar, but considerably more advanced than the native layered navigation functionality.
+[Facets](https://experienceleague.adobe.com/en/docs/commerce/live-search/live-search-admin/facets/facets) provide a method of high-performance filtering that uses multiple dimensions of attribute values as search criteria. Faceted search is similar, but considerably more advanced than the native layered navigation functionality.
 
 The `facets` object contains details about each facet that affects the search results. By default, Live Search provides static facets for the `categories` and `price` product attributes that are pinned to the top of the Filters list in the storefront. The merchant can also pin other attributes to this list.
 
@@ -524,7 +524,7 @@ The `ProductInterface` object in the Search service GraphQL schema has been depr
 
 <InlineAlert variant="info" slots="text"/>
 
-Use the `ProductView` field instead of the deprecated `product` field to return product details. Catalog Service uses [Catalog Sync](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/data-services/catalog-sync.html) to manage product data, resulting in query responses with less latency than is possible with the `ProductInterface`. With Catalog Service, the structure of the pricing information varies, depending on whether the product is designated as a `SimpleProduct` (simple, downloadable, gift card) or as a `ComplexProduct` (configurable, grouped, or bundle).
+Use the `ProductView` field instead of the deprecated `product` field to return product details. Catalog Service uses [Catalog Sync](https://experienceleague.adobe.com/en/docs/commerce/user-guides/data-services/catalog-sync) to manage product data, resulting in query responses with less latency than is possible with the `ProductInterface`. With Catalog Service, the structure of the pricing information varies, depending on whether the product is designated as a `SimpleProduct` (simple, downloadable, gift card) or as a `ComplexProduct` (configurable, grouped, or bundle).
 
 The following Catalog Service snippet returns relevant information about each item:
 

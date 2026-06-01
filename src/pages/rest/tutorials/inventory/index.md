@@ -22,7 +22,7 @@ This **14-step tutorial** generally takes **1 hour**.
 
 *  Install Adobe Commerce.
 
-*  Install a REST client. You can use any REST client to send calls to Commerce. [Postman](https://www.getpostman.com/) is recommended.
+*  Install a REST client. You can use any REST client to send calls to Commerce. [Postman](https://www.postman.com/) is recommended.
 
 *  Know how to construct a REST call in Commerce. See [Construct a request](/get-started/gs-web-api-request.md) for details.
 

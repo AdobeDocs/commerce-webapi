@@ -11,7 +11,7 @@ keywords:
 
 # Using cURL to run requests
 
-['cURL'](https://curl.haxx.se/) is a command-line tool that lets you transmit HTTP requests and receive responses from the command line or a shell script. It is available for Linux distributions, Mac OS X, and Windows.
+['cURL'](https://curl.se/) is a command-line tool that lets you transmit HTTP requests and receive responses from the command line or a shell script. It is available for Linux distributions, Mac OS X, and Windows.
 
 To use cURL to run your REST web API call, use the cURL command syntax to construct the command.
 
@@ -21,7 +21,7 @@ To create the endpoint in the call, append the REST URI that you constructed in 
 
 To pass the customer data object in the POST call payload, specify a JSON or XML request body on the call.
 
-For a complete list of cURL command options, see [curl.1 the man page](http://curl.haxx.se/docs/manpage.html).
+For a complete list of cURL command options, see [curl.1 the man page](https://curl.se/docs/manpage.html).
 
 The cURL examples in this guide use the following command-line options:
 
