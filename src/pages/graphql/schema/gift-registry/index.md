@@ -3,9 +3,7 @@ title: Gift registry
 description: Once gift registry functionality is enabled and configured from the Admin, customers use the following workflow to create registries:
 ---
 
-| |
-|:--|
-| ![Adobe Commerce feature](../../../images/adobe-logo.svg) **Exclusive feature only in Adobe Commerce** ([Learn more](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions)) |
+<Fragment src="../../../includes/commerce-only.md"/>
 
 # Gift registry
 

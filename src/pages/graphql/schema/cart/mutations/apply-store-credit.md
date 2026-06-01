@@ -3,9 +3,7 @@ title: applyStoreCreditToCart mutation
 description: The applyStoreCreditToCart mutation applies store credit to the specified cart. Store credit must be enabled on the store to run this mutation.
 ---
 
-| |
-|:--|
-| ![Adobe Commerce feature](../../../../images/adobe-logo.svg) **Exclusive feature only in Adobe Commerce** ([Learn more](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions)) |
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # applyStoreCreditToCart mutation
 

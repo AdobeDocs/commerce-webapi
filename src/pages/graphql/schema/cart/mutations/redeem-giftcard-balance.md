@@ -3,9 +3,7 @@ title: redeemGiftCardBalanceAsStoreCredit mutation
 description: The redeemGiftCardBalanceAsStoreCredit mutation converts the entire balance of a gift card to store credit. The gift card must be redeemable and cannot hav...
 ---
 
-| |
-|:--|
-| ![Adobe Commerce feature](../../../../images/adobe-logo.svg) **Exclusive feature only in Adobe Commerce** ([Learn more](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions)) |
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # redeemGiftCardBalanceAsStoreCredit mutation
 

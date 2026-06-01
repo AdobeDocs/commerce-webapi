@@ -18,7 +18,7 @@
         - [2.4.6 Reference](/reference/graphql/2-4-6/index.md)
 
 - subPages:
-    - [Introduction](/get-started.md)
+    - [Introduction](/get-started/index.md)
     - API Security header
     - [Input limiting](/get-started/api-security.md)
     - [Rate limiting](/get-started/rate-limiting.md)

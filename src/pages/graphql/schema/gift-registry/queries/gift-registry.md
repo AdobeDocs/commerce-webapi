@@ -4,9 +4,7 @@ description: The giftRegistry query retrieves details about the specified gift r
 contributor_name: EY
 ---
 
-| |
-|:--|
-| ![Adobe Commerce feature](../../../../images/adobe-logo.svg) **Exclusive feature only in Adobe Commerce** ([Learn more](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions)) |
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # giftRegistry query
 

@@ -3,9 +3,7 @@ title: copyProductsBetweenWishlists mutation
 description: The copyProductsBetweenWishlists mutation copies the specified quantities of one or more products to a different wish list. The original wish list is uncha...
 ---
 
-| |
-|:--|
-| ![Adobe Commerce feature](../../../../images/adobe-logo.svg) **Exclusive feature only in Adobe Commerce** ([Learn more](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions)) |
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # copyProductsBetweenWishlists mutation
 

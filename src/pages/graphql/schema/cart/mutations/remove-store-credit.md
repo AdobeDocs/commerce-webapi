@@ -3,9 +3,7 @@ title: removeStoreCreditFromCart mutation
 description: The removeStoreCreditFromCart mutation removes store credit previously applied to the specified cart with the applyStoreCreditToCart mutation. The applicat...
 ---
 
-| |
-|:--|
-| ![Adobe Commerce feature](../../../../images/adobe-logo.svg) **Exclusive feature only in Adobe Commerce** ([Learn more](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions)) |
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # removeStoreCreditFromCart mutation
 

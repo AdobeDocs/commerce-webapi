@@ -3,9 +3,7 @@ title: Gift card product data types
 description: The GiftCardProduct data type defines properties of a gift card, including the minimum and maximum values and an array that contains the current and past v...
 ---
 
-| |
-|:--|
-| ![Adobe Commerce feature](../../../../../images/adobe-logo.svg) **Exclusive feature only in Adobe Commerce** ([Learn more](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions)) |
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # Gift card product data types
 

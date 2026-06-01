@@ -3,9 +3,7 @@ title: giftRegistryEmailSearch query
 description: The giftRegistryEmailSearch query returns a list of gift registries that match the specified registrant email address. The query does not return registries...
 ---
 
-| |
-|:--|
-| ![Adobe Commerce feature](../../../../images/adobe-logo.svg) **Exclusive feature only in Adobe Commerce** ([Learn more](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions)) |
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # giftRegistryEmailSearch query
 

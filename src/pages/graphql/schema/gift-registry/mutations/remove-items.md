@@ -3,9 +3,7 @@ title: removeGiftRegistryItems mutation
 description: The removeGiftRegistryItems mutation removes one or more items from the specified gift registry.
 ---
 
-| |
-|:--|
-| ![Adobe Commerce feature](../../../../images/adobe-logo.svg) **Exclusive feature only in Adobe Commerce** ([Learn more](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions)) |
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # removeGiftRegistryItems mutation
 

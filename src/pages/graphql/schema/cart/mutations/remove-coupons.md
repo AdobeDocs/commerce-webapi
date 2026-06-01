@@ -3,9 +3,7 @@ title: removeCouponsFromCart mutation
 description: The removeCouponsFromCart mutation removes previously-applied coupons from the cart. The cart must contain at least one item in order to remove coupons.
 ---
 
-| |
-|:--|
-| ![Adobe Commerce feature](../../../../images/adobe-logo.svg) **Exclusive feature only in Adobe Commerce** ([Learn more](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions)) |
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # removeCouponsFromCart mutation
 

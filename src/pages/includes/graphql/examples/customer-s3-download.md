@@ -1,4 +1,4 @@
-The following query returns the presigned URL of any file or image that a customer [uploaded to Amazon S3](../../uploads/index.md).
+The following query returns the presigned URL of any file or image that a customer [uploaded to Amazon S3](../../../graphql/schema/uploads/index.md).
 
 **Request:**
 

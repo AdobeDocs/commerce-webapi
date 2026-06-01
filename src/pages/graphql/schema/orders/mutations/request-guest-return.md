@@ -3,9 +3,7 @@ title: requestGuestReturn mutation
 description: The requestGuestReturn mutation initiates a guest buyer's request to return an item for replacement or refund. A confirmation email is sent to the guest pr...
 ---
 
-| |
-|:--|
-| ![Adobe Commerce feature](../../../../images/adobe-logo.svg) **Exclusive feature only in Adobe Commerce** ([Learn more](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions)) |
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # requestGuestReturn mutation
 

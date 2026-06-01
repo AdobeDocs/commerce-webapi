@@ -3,9 +3,7 @@ title: confirmReturn mutation
 description: The confirmReturn mutation confirms a return request from a guest customer. The merchant subsequently decides whether to accept or reject the request.
 ---
 
-| |
-|:--|
-| ![Adobe Commerce feature](../../../../images/adobe-logo.svg) **Exclusive feature only in Adobe Commerce** ([Learn more](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions)) |
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # confirmReturn mutation
 

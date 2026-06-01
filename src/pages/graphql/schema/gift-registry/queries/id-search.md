@@ -3,9 +3,7 @@ title: giftRegistryIdSearch query
 description: The giftRegistryIdSearch query returns a list of gift registries that match the specified registry ID. The ID is included in the email the application send...
 ---
 
-| |
-|:--|
-| ![Adobe Commerce feature](../../../../images/adobe-logo.svg) **Exclusive feature only in Adobe Commerce** ([Learn more](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions)) |
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # giftRegistryIdSearch query
 

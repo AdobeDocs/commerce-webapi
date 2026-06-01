@@ -3,9 +3,7 @@ title: updateGiftRegistry mutation
 description: The updateGiftRegistry mutation modifies properties of specified gift registry. It does not update the items in a gift registry or registrants. Use the upd...
 ---
 
-| |
-|:--|
-| ![Adobe Commerce feature](../../../../images/adobe-logo.svg) **Exclusive feature only in Adobe Commerce** ([Learn more](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions)) |
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # updateGiftRegistry mutation
 

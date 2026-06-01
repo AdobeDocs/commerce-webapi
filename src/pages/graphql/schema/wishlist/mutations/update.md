@@ -3,9 +3,7 @@ title: updateWishlist mutation
 description: The updateWishlist mutation updates the properties of a wish list. Adobe Commerce allows customers to change the name and visibility of wish lists.
 ---
 
-| |
-|:--|
-| ![Adobe Commerce feature](../../../../images/adobe-logo.svg) **Exclusive feature only in Adobe Commerce** ([Learn more](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions)) |
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # updateWishlist mutation
 

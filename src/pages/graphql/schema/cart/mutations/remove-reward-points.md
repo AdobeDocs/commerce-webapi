@@ -3,9 +3,7 @@ title: removeRewardPointsFromCart mutation
 description: The removeRewardPointsFromCart mutation removes all reward points that were previously applied to the customer's cart with the applyRewardPointsToCart muta...
 ---
 
-| |
-|:--|
-| ![Adobe Commerce feature](../../../../images/adobe-logo.svg) **Exclusive feature only in Adobe Commerce** ([Learn more](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions)) |
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # removeRewardPointsFromCart mutation
 

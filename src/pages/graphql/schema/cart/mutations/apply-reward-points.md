@@ -3,9 +3,7 @@ title: applyRewardPointsToCart mutation
 description: The applyRewardPointsToCart mutation applies reward points to the customer's cart. You cannot specify a quantity of reward points. If the reward points bal...
 ---
 
-| |
-|:--|
-| ![Adobe Commerce feature](../../../../images/adobe-logo.svg) **Exclusive feature only in Adobe Commerce** ([Learn more](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html#product-editions)) |
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # applyRewardPointsToCart mutation
 
