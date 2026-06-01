@@ -42,12 +42,12 @@ Bulk transfer allows you to specify multiple products, the origin source from wh
 
 **Parameters:**
 
-Name | Description | Type | Requirements
---- | --- | --- | ---
-`skus` | A  comma-separated list of existing SKUs to transfer | Array | Required
-`originSource` | The current source of the SKUs | String | Required
-`destinationSource` | The target source for the SKUs. This source must be already defined. | String | Required
-`unassignFromOrigin` | If `true`, the current source is removed as a source for the products. If `false`, the original source is retained, but the products are marked as being out of stock with a quantity of 0. | Boolean | Required
+| Name | Description | Type | Requirements |
+| --- | --- | --- | --- |
+| `skus` | A  comma-separated list of existing SKUs to transfer | Array | Required |
+| `originSource` | The current source of the SKUs | String | Required |
+| `destinationSource` | The target source for the SKUs. This source must be already defined. | String | Required |
+| `unassignFromOrigin` | If `true`, the current source is removed as a source for the products. If `false`, the original source is retained, but the products are marked as being out of stock with a quantity of 0. | Boolean | Required |
 
 **Sample usage:**
 
@@ -77,13 +77,13 @@ You can use the `V1/inventory/bulk-partial-source-transfer` endpoint to transfer
 
 **Parameters:**
 
-Name | Description | Type | Requirements
---- | --- | --- | ---
-`originSourceCode` | The current source of the products to be transferred | String | Required
-`destinationSourceCode` | The target source. This source must be already defined. | String | Required
-`items` | An array containing a set of products to be transferred | Array | Required
-`sku` | A product to transfer | String | Required
-`qty` | The quantity of the product to transfer | Float | Required
+| Name | Description | Type | Requirements |
+| --- | --- | --- | --- |
+| `originSourceCode` | The current source of the products to be transferred | String | Required |
+| `destinationSourceCode` | The target source. This source must be already defined. | String | Required |
+| `items` | An array containing a set of products to be transferred | Array | Required |
+| `sku` | A product to transfer | String | Required |
+| `qty` | The quantity of the product to transfer | Float | Required |
 
 **Sample usage:**
 
@@ -122,10 +122,10 @@ The sources are added to the products with an inventory quantity of 0. You can a
 
 **Parameters:**
 
-Name | Description | Type | Requirements
---- | --- | --- | ---
-`skus` | A comma-separated list of existing SKUs to assign | Array | Required
-`sourceCodes` | A comma-separated list of existing sources | Array | Required
+| Name | Description | Type | Requirements |
+| --- | --- | --- | --- |
+| `skus` | A comma-separated list of existing SKUs to assign | Array | Required |
+| `sourceCodes` | A comma-separated list of existing sources | Array | Required |
 
 **Sample usage:**
 

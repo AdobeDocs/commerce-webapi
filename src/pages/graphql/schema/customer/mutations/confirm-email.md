@@ -52,11 +52,11 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Email is invalid.` | The value provided in the `input`.`email` argument has an invalid format.
-`The confirmation token is invalid. Verify the token and try again.` | The provided confirmation token is wrong or does not belong to the provided email.
-`The account is already active.` | The provided email belongs to an account which is already active.
+| Error | Description |
+| --- | --- |
+| `Email is invalid.` | The value provided in the `input`.`email` argument has an invalid format. |
+| `The confirmation token is invalid. Verify the token and try again.` | The provided confirmation token is wrong or does not belong to the provided email. |
+| `The account is already active.` | The provided email belongs to an account which is already active. |
 
 ## Related topics
 

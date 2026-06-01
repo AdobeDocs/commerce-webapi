@@ -57,12 +57,12 @@ Endpoint routes that contain input parameters require additional changes. For ex
 
 The following table provides several examples:
 
-Platform | Synchronous route | Bulk route
---- | --- | ---
-PaaS | `PUT \<path\>/V1/products/:sku/media/:entryId` | `PUT \<path\>/async/bulk/V1/products/bySku/media/byEntryId`
-PaaS | `POST \<path\>/V1/carts/:quoteId/items` | `POST \<path\>/async/bulk/V1/carts/byQuoteId/items`
-SaaS | `PUT \<path\>/V1/products/:sku/media/:entryId` | `PUT \<path\>/V1/async/bulk/products/bySku/media/byEntryId`
-SaaS | `POST \<path\>/V1/carts/:quoteId/items` | `POST \<path\>/V1/async/bulk/carts/byQuoteId/items`
+| Platform | Synchronous route | Bulk route |
+| --- | --- | --- |
+| PaaS | `PUT \<path\>/V1/products/:sku/media/:entryId` | `PUT \<path\>/async/bulk/V1/products/bySku/media/byEntryId` |
+| PaaS | `POST \<path\>/V1/carts/:quoteId/items` | `POST \<path\>/async/bulk/V1/carts/byQuoteId/items` |
+| SaaS | `PUT \<path\>/V1/products/:sku/media/:entryId` | `PUT \<path\>/V1/async/bulk/products/bySku/media/byEntryId` |
+| SaaS | `POST \<path\>/V1/carts/:quoteId/items` | `POST \<path\>/V1/async/bulk/carts/byQuoteId/items` |
 
 <InlineAlert variant="info" slots="text"/>
 

@@ -31,16 +31,16 @@ GET  /V1/sharedCatalog/
 
 **Shared catalog parameters:**
 
-Name | Description | Format | Requirements
---- | --- | --- | ---
-`id` | The system-generated shared catalog ID number | integer | Required to update a shared catalog. Not applicable for create operations.
-`name` | The display name of the shared catalog. Must be unique | string | Required to create or update a shared catalog.
-`description` | Describes the shared catalog | string | Optional
-`customer_group_id` | A system-generated ID. It cannot be changed. | integer |  0 - Not logged in; 1 - General; 2 - Wholesale; 3 - Retailer
-`type` | Indicates whether this is a custom or public shared catalog. | integer | Required to create or update a shared catalog. 0 - Custom; 1 - Public
-`created_by` | The user ID of the admin who created the shared catalog | integer | Optional
-`store_id`  | The store ID the shared catalog is assigned to | integer | Required to create or update a shared catalog.
-`tax_class_id`  | | integer |  Required to create a shared catalog. 2 - Taxable goods; 3 - Retail Customer
+| Name | Description | Format | Requirements |
+| --- | --- | --- | --- |
+| `id` | The system-generated shared catalog ID number | integer | Required to update a shared catalog. Not applicable for create operations. |
+| `name` | The display name of the shared catalog. Must be unique | string | Required to create or update a shared catalog. |
+| `description` | Describes the shared catalog | string | Optional |
+| `customer_group_id` | A system-generated ID. It cannot be changed. | integer |  0 - Not logged in; 1 - General; 2 - Wholesale; 3 - Retailer |
+| `type` | Indicates whether this is a custom or public shared catalog. | integer | Required to create or update a shared catalog. 0 - Custom; 1 - Public |
+| `created_by` | The user ID of the admin who created the shared catalog | integer | Optional |
+| `store_id`  | The store ID the shared catalog is assigned to | integer | Required to create or update a shared catalog. |
+| `tax_class_id`  | | integer |  Required to create a shared catalog. 2 - Taxable goods; 3 - Retail Customer |
 
 ## Create a custom shared catalog
 

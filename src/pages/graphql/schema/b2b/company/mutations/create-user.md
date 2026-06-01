@@ -164,15 +164,15 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Invitation was sent to an existing customer, they will be added to your organization once they accept the invitation.` | The email provided in the `input`.`email` argument belongs to an existing customer. The application sends an invitation to this customer. When the customer accepts the invitation, the customer will be assigned to the company.
-`A customer with the same email already assigned to company.` | The email provided in the `input`.`email` argument belongs to an existing customer, and the customer has already been assigned to the company.
-`"Email" is not a valid email address.` | The value provided in the `input`.`email` argument has an invalid format.
-`Field "createCompanyUser" argument "input" requires type String!, found xxx.` | The value specified in the one of the `input` arguments has an invalid type.
-`Field "xxx" is not defined by type CompanyUserCreateInput.` | The `input`.`xxx` argument is undefined.
-`Required parameters are missing: xxx` | The `input`.`xxx` argument was omitted or contains an empty value.
-`No such entity with roleId = xxx` | The company role with ID `xxx` doesn't exist.
+| Error | Description |
+| --- | --- |
+| `Invitation was sent to an existing customer, they will be added to your organization once they accept the invitation.` | The email provided in the `input`.`email` argument belongs to an existing customer. The application sends an invitation to this customer. When the customer accepts the invitation, the customer will be assigned to the company. |
+| `A customer with the same email already assigned to company.` | The email provided in the `input`.`email` argument belongs to an existing customer, and the customer has already been assigned to the company. |
+| `"Email" is not a valid email address.` | The value provided in the `input`.`email` argument has an invalid format. |
+| `Field "createCompanyUser" argument "input" requires type String!, found xxx.` | The value specified in the one of the `input` arguments has an invalid type. |
+| `Field "xxx" is not defined by type CompanyUserCreateInput.` | The `input`.`xxx` argument is undefined. |
+| `Required parameters are missing: xxx` | The `input`.`xxx` argument was omitted or contains an empty value. |
+| `No such entity with roleId = xxx` | The company role with ID `xxx` doesn't exist. |
 
 <Edition slots="text" backgroundcolor="blue"/>
 

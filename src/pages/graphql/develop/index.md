@@ -125,13 +125,13 @@ In a `schema.graphqls` file, the output `Interface` defines top-level attributes
 
 The following example shows the `products` query. The query returns a `Products` object containing the attributes of the specified data types.
 
-Attribute | Data type | Description
---- | --- | ---
-`aggregations` | [Aggregation] | Layered navigation aggregations
-`items` | [ProductInterface] | An array of products that match the specified search criteria
-`page_info` | SearchResultPageInfo | An object that includes the `page_info` and `currentPage` values specified in the query
-`sort_fields` |  SortFields | An object that includes the default sort field and all available sort fields
-`total_count` | Int | The number of products in the category that are marked as visible. By default, in complex products, parent products are visible, but their child products are not
+| Attribute | Data type | Description |
+| --- | --- | --- |
+| `aggregations` | [Aggregation] | Layered navigation aggregations |
+| `items` | [ProductInterface] | An array of products that match the specified search criteria |
+| `page_info` | SearchResultPageInfo | An object that includes the `page_info` and `currentPage` values specified in the query |
+| `sort_fields` |  SortFields | An object that includes the default sort field and all available sort fields |
+| `total_count` | Int | The number of products in the category that are marked as visible. By default, in complex products, parent products are visible, but their child products are not |
 
 ### Define the output interface
 

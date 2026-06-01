@@ -45,12 +45,12 @@ The `attributeMetadata` query returns a list of product attribute codes that can
 
 You must specify the following HTTP headers to run this query.
 
-Header name| Description
---- | ---
-`Magento-Environment-Id` | This value is displayed at **Stores** > **Configuration** > **Services** > **Magento Services** > **SaaS Environment** or can be obtained by running the `bin/magento config:show services_connector/services_id/environment_id` command.
-`Magento-Store-Code` | The code assigned to the store associated with the active store view. For example, `main_website_store`.
-`Magento-Store-View-Code` | The code assigned to the active store view. For example, `default`.
-`Magento-Website-Code` | The code assigned to the website associated with the active store view. For example, `base`.
+| Header name| Description |
+| --- | --- |
+| `Magento-Environment-Id` | This value is displayed at **Stores** > **Configuration** > **Services** > **Magento Services** > **SaaS Environment** or can be obtained by running the `bin/magento config:show services_connector/services_id/environment_id` command. |
+| `Magento-Store-Code` | The code assigned to the store associated with the active store view. For example, `main_website_store`. |
+| `Magento-Store-View-Code` | The code assigned to the active store view. For example, `default`. |
+| `Magento-Website-Code` | The code assigned to the website associated with the active store view. For example, `base`. |
 
 <Edition slots="text" backgroundcolor="blue"/>
 
@@ -178,27 +178,27 @@ The following query returns details about all product attributes that can be use
 
 The `AttributeMetadataResponse` return object can contain the following fields:
 
-Field | Data Type | Description
---- | --- | ---
-`filterableInSearch` | [FilterableInSearchAttribute](#filterableinsearchattribute-data-type) | An array of product attributes that can be used for filtering in a `productSearch` query
-`sortable` | [SortableAttribute](#sortableattribute-data-type) | An array of product attributes that can be used for sorting in a `productSearch` query
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `filterableInSearch` | [FilterableInSearchAttribute](#filterableinsearchattribute-data-type) | An array of product attributes that can be used for filtering in a `productSearch` query |
+| `sortable` | [SortableAttribute](#sortableattribute-data-type) | An array of product attributes that can be used for sorting in a `productSearch` query |
 
 ### FilterableInSearchAttribute data type
 
 The `FilterableInSearchAttribute` data type can contain the following fields:
 
-Field | Data Type | Description
---- | --- | ---
-`attribute` | String! | The unique identifier for an attribute code. This value should be in lowercase letters and without spaces
-`label` | String | The display name assigned to the attribute
-`numeric` | Boolean | Indicates whether this attribute has a numeric value, such as a price or integer that can be used for numeric operations, such as range filters or sorting.
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `attribute` | String! | The unique identifier for an attribute code. This value should be in lowercase letters and without spaces |
+| `label` | String | The display name assigned to the attribute |
+| `numeric` | Boolean | Indicates whether this attribute has a numeric value, such as a price or integer that can be used for numeric operations, such as range filters or sorting. |
 
 ### SortableAttribute data type
 
 The `SortableAttribute` data type can contain the following fields:
 
-Field | Data Type | Description
---- | --- | ---
-`attribute` | String! | The unique identifier for an attribute code. This value should be in lowercase letters and without spaces
-`label` | String | The display name assigned to the attribute
-`numeric` | Boolean | Indicates whether this attribute has a numeric value, such as a price or integer that can be used for numeric operations, such as range filters or sorting.
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `attribute` | String! | The unique identifier for an attribute code. This value should be in lowercase letters and without spaces |
+| `label` | String | The display name assigned to the attribute |
+| `numeric` | Boolean | Indicates whether this attribute has a numeric value, such as a price or integer that can be used for numeric operations, such as range filters or sorting. |

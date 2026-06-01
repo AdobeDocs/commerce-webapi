@@ -79,10 +79,10 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Could not find a token using public hash: xxxxxxxx` | The customer token specified in the `public_hash` argument does not exist in the `vault_payment_token` table.
-`The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table.
+| Error | Description |
+| --- | --- |
+| `Could not find a token using public hash: xxxxxxxx` | The customer token specified in the `public_hash` argument does not exist in the `vault_payment_token` table. |
+| `The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table. |
 
 ## Related topics
 

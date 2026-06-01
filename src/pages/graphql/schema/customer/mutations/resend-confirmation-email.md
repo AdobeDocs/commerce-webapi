@@ -45,11 +45,11 @@ mutation ResendConfirmationEmail {
 
 ## Errors
 
-Error | Description
---- | ---
-`There is no user registered with that email address.` | The `email` provided in the input does not belong to a registered customer.
-`There was an error when sending the confirmation email'` | A general error message that appears on some internal system errors. The original error is logged and can be found in the application logs..
-`Confirmation isn't needed.` | The customer with specified `email` is already confirmed.
+| Error | Description |
+| --- | --- |
+| `There is no user registered with that email address.` | The `email` provided in the input does not belong to a registered customer. |
+| `There was an error when sending the confirmation email'` | A general error message that appears on some internal system errors. The original error is logged and can be found in the application logs.. |
+| `Confirmation isn't needed.` | The customer with specified `email` is already confirmed. |
 
 ## Related topic
 

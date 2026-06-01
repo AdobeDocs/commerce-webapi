@@ -55,14 +55,14 @@ PUT https://<server>.api.commerce.adobe.com/<tenant-id>/V1/async/products/:sku
 
 The response of an asynchronous request contains the following fields:
 
-Field name | Data type | Description
---- | --- | ---
-`bulk_uuid` | String | A generated universally unique identifier.
-`request_items` | Object | An array containing information about the status of the asynchronous request.
-`id` | Integer | A generated ID that identifies the request.
-`data_hash` | String | SHA256 encoded content of incoming message.
-`status` | String | Reserved for future use. Currently, the value is always `accepted`.
-`errors` | Boolean | Reserved for future use. Currently, the value is always `false`. If an error occurs, the system provides all error-related information as a standard `webapi` exception.
+| Field name | Data type | Description |
+| --- | --- | --- |
+| `bulk_uuid` | String | A generated universally unique identifier. |
+| `request_items` | Object | An array containing information about the status of the asynchronous request. |
+| `id` | Integer | A generated ID that identifies the request. |
+| `data_hash` | String | SHA256 encoded content of incoming message. |
+| `status` | String | Reserved for future use. Currently, the value is always `accepted`. |
+| `errors` | Boolean | Reserved for future use. Currently, the value is always `false`. If an error occurs, the system provides all error-related information as a standard `webapi` exception. |
 
 ## Sample usage
 

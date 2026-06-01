@@ -150,11 +150,11 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`You do not have authorization to perform this action.` | The user with the ID provided in the `input`.`id` argument is not assigned to your company.
-`No such entity with roleId = xxx` | The company role with ID `xxx` doesn't exist.
-`A customer with the same email address already exists in an associated website` | The email provided in the `input`.`email` argument belongs to another user.
+| Error | Description |
+| --- | --- |
+| `You do not have authorization to perform this action.` | The user with the ID provided in the `input`.`id` argument is not assigned to your company. |
+| `No such entity with roleId = xxx` | The company role with ID `xxx` doesn't exist. |
+| `A customer with the same email address already exists in an associated website` | The email provided in the `input`.`email` argument belongs to another user. |
 
 <Edition slots="text" backgroundcolor="blue"/>
 

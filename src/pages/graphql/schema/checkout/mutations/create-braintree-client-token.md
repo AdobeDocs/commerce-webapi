@@ -46,9 +46,9 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`The Braintree payment method is not active.` | The [Braintree](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/payments/braintree) payment method is disabled in admin.
+| Error | Description |
+| --- | --- |
+| `The Braintree payment method is not active.` | The [Braintree](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/payments/braintree) payment method is disabled in admin. |
 
 <Edition slots="text" backgroundcolor="blue"/>
 

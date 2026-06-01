@@ -32,13 +32,13 @@ GET /V1/inventory/stocks
 
 **StockInterface parameters:**
 
-Name | Description | Type | Requirements
---- | --- | --- | ---
-`stock_id` | An ID generated when a stock is created. | Integer | Required for PUT, DELETE, and GET operations
-`name` | The display name of the stock. | String | Required for POST and PUT operations
-`sales_channels` | Defines the sales channel for this stock. Currently, only websites are supported. | Array | Required for POST operations
-`type` | Defines the type of sales channel. This value must be `website`. | String | Required for POST operations
-`code` | Specifies a valid website code name | String | Required for POST operations
+| Name | Description | Type | Requirements |
+| --- | --- | --- | --- |
+| `stock_id` | An ID generated when a stock is created. | Integer | Required for PUT, DELETE, and GET operations |
+| `name` | The display name of the stock. | String | Required for POST and PUT operations |
+| `sales_channels` | Defines the sales channel for this stock. Currently, only websites are supported. | Array | Required for POST operations |
+| `type` | Defines the type of sales channel. This value must be `website`. | String | Required for POST operations |
+| `code` | Specifies a valid website code name | String | Required for POST operations |
 
 ## Create a stock
 

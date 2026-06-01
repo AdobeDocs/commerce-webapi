@@ -49,17 +49,17 @@ Commerce provides command-line options to configure the connection to the backpr
 
 By default, the connection is configured for a Redis server. Use the following `bin/magento setup:config:set` commands to configure the Redis service connection:
 
-Command line parameter | Value | Description | Default
---- | --- | --- | ---
-`--backpressure-logger` | `redis` | Specifies the backpressure logger handler | This value must be set to `redis`.
-`--backpressure-logger-id-prefix` | String | ID prefix for keys | None
-`--backpressure-logger-redis-db` | Database number | Required if you use Redis for both the default and full-page cache. You must specify the database number of one of the caches; the other cache uses 0 by default.\<br/\>\<br/\>**Important**: If you use Redis for more than one type of caching, the database numbers must be different. It is recommended that you assign the default caching database number to 0, the page-caching database number to 1, and the session storage database number to 2. And as a result, the number of the database for storing the backpressure log is 3. | `3`
-`--backpressure-logger-redis-password` | Password | Configuring a Redis password enables one of its built-in security features: the `auth` command, which requires clients to authenticate to access the database. The password is configured directly in Redis' configuration file: `/etc/redis/redis.conf` | None
-`--backpressure-logger-redis-persistent` | String | Unique string to enable persistent connections | None
-`--backpressure-logger-redis-port` | Port | Redis server listen port | `6379`
-`--backpressure-logger-redis-server` | Server | Fully qualified hostname, IP address, or an absolute path to a UNIX socket. The default value of 127.0.0.1 indicates Redis is installed on the Commerce server. | `127.0.0.1`
-`--backpressure-logger-redis-timeout` | Timeout | Redis server timeout, in seconds | 2.5
-`--backpressure-logger-redis-user` | User ID | Redis server user | None
+| Command line parameter | Value | Description | Default |
+| --- | --- | --- | --- |
+| `--backpressure-logger` | `redis` | Specifies the backpressure logger handler | This value must be set to `redis`. |
+| `--backpressure-logger-id-prefix` | String | ID prefix for keys | None |
+| `--backpressure-logger-redis-db` | Database number | Required if you use Redis for both the default and full-page cache. You must specify the database number of one of the caches; the other cache uses 0 by default.\<br/\>\<br/\>**Important**: If you use Redis for more than one type of caching, the database numbers must be different. It is recommended that you assign the default caching database number to 0, the page-caching database number to 1, and the session storage database number to 2. And as a result, the number of the database for storing the backpressure log is 3. | `3` |
+| `--backpressure-logger-redis-password` | Password | Configuring a Redis password enables one of its built-in security features: the `auth` command, which requires clients to authenticate to access the database. The password is configured directly in Redis' configuration file: `/etc/redis/redis.conf` | None |
+| `--backpressure-logger-redis-persistent` | String | Unique string to enable persistent connections | None |
+| `--backpressure-logger-redis-port` | Port | Redis server listen port | `6379` |
+| `--backpressure-logger-redis-server` | Server | Fully qualified hostname, IP address, or an absolute path to a UNIX socket. The default value of 127.0.0.1 indicates Redis is installed on the Commerce server. | `127.0.0.1` |
+| `--backpressure-logger-redis-timeout` | Timeout | Redis server timeout, in seconds | 2.5 |
+| `--backpressure-logger-redis-user` | User ID | Redis server user | None |
 
 The following example creates a new connection to a Redis server with the following properties:
 

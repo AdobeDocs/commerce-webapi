@@ -15,12 +15,12 @@ The `visibility` attribute is set to 4, meaning the product can be found by brow
 
 The below table shows the equivalent code for the visibility attribute
 
-Visibility | Code
---- | ---
-`Not Visible Individually` | 1
-`Catalog` | 2
-`Search` | 3
-`Catalog, Search` | 4
+| Visibility | Code |
+| --- | --- |
+| `Not Visible Individually` | 1 |
+| `Catalog` | 2 |
+| `Search` | 3 |
+| `Catalog, Search` | 4 |
 
 <InlineAlert variant="info" slots="text"/>
 

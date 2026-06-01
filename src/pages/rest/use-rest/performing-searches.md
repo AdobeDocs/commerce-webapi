@@ -23,25 +23,25 @@ where:
 *  `value` specifies the value to search for.
 *  `condition_type` is one of the following values:
 
-Condition | Notes
---- | ---
-`eq` | Equals
-`finset` | A value within a set of values
-`from` | The beginning of a range. Must be used with `to`.
-`gt` | Greater than
-`gteq` |  Greater than or equal
-`in` | In. The `value` can contain a comma-separated list of values.
-`like` | Like. The `value` can contain the SQL wildcard characters when `like` is specified.
-`lt` | Less than
-`lteq` | Less than or equal
-`moreq` | More or equal
-`neq` | Not equal
-`nfinset` | A value that is not within a set of values.
-`nin` | Not in. The `value` can contain a comma-separated list of values.
-`nlike` | Not like
-`notnull` | Not null
-`null` | Null
-`to` | The end of a range. Must be used with `from`.
+| Condition | Notes |
+| --- | --- |
+| `eq` | Equals |
+| `finset` | A value within a set of values |
+| `from` | The beginning of a range. Must be used with `to`. |
+| `gt` | Greater than |
+| `gteq` |  Greater than or equal |
+| `in` | In. The `value` can contain a comma-separated list of values. |
+| `like` | Like. The `value` can contain the SQL wildcard characters when `like` is specified. |
+| `lt` | Less than |
+| `lteq` | Less than or equal |
+| `moreq` | More or equal |
+| `neq` | Not equal |
+| `nfinset` | A value that is not within a set of values. |
+| `nin` | Not in. The `value` can contain a comma-separated list of values. |
+| `nlike` | Not like |
+| `notnull` | Not null |
+| `null` | Null |
+| `to` | The end of a range. Must be used with `from`. |
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -345,11 +345,11 @@ This example shows how to use search criteria to determine the sort order and at
 
 **Parameters:**
 
-Parameter | Value | Description
---- | --- | ---
-searchCriteria[filter_groups][0][filters][0][field] | status | Attribute name to filter
-searchCriteria[filter_groups][0][filters][0][value] | pending | Attribute value to filter
-fields | items[increment_id,entity_id] | Attributes to return in the response. If you do not specify this parameter, all attributes will be returned.
+| Parameter | Value | Description |
+| --- | --- | --- |
+| searchCriteria[filter_groups][0][filters][0][field] | status | Attribute name to filter |
+| searchCriteria[filter_groups][0][filters][0][value] | pending | Attribute value to filter |
+| fields | items[increment_id,entity_id] | Attributes to return in the response. If you do not specify this parameter, all attributes will be returned. |
 
 **Payload:**
 

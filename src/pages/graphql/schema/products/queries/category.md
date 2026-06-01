@@ -215,7 +215,7 @@ The following query returns breadcrumb information about the women's `Tops` cate
 
 ## Errors
 
-Error | Description
---- | ---
-`Category doesn't exist` | The specified category ID value does not exist.
-`Field "category" argument "id" requires type Int, found "XXX"` | The specified `id` argument value has the wrong type.
+| Error | Description |
+| --- | --- |
+| `Category doesn't exist` | The specified category ID value does not exist. |
+| `Field "category" argument "id" requires type Int, found "XXX"` | The specified `id` argument value has the wrong type. |

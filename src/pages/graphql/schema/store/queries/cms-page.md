@@ -70,10 +70,10 @@ The `content` field may contain HTML markup and CSS styles. Hidden and system el
 
 ## Errors
 
-Error | Description
---- | ---
-`The CMS page with the "XXXX" ID doesn't exist` | The specified CMS page ID is invalid.
-`Page id/identifier should be specified"` | The `identifier` parameter is required for identifying the CMS page.
+| Error | Description |
+| --- | --- |
+| `The CMS page with the "XXXX" ID doesn't exist` | The specified CMS page ID is invalid. |
+| `Page id/identifier should be specified"` | The `identifier` parameter is required for identifying the CMS page. |
 
 ## Related topics
 

@@ -64,7 +64,7 @@ The `content` field may contain HTML markup and CSS styles. Hidden and system el
 
 ## Errors
 
-Error | Description
---- | ---
-`The CMS block with the "XXXX" ID doesn't exist` | The specified CMS block ID is invalid.
-`"identifiers" of CMS blocks should be specified"` | The `identifiers` array parameter is required for identifying the CMS blocks.
+| Error | Description |
+| --- | --- |
+| `The CMS block with the "XXXX" ID doesn't exist` | The specified CMS block ID is invalid. |
+| `"identifiers" of CMS blocks should be specified"` | The `identifiers` array parameter is required for identifying the CMS blocks. |

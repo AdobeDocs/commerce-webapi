@@ -2,12 +2,12 @@ The customer group code is the encrypted value of the customer group ID, which d
 
 Use one of the following codes for a default customer group based on your requirements.
 
-Customer Group | Code
----------------| -----------------
-**NOT LOGGED IN** | `b6589fc6ab0dc82cf12099d1c2d40ab994e8410c`
-**General** | `356a192b7913b04c54574d18c28d46e6395428ab`
-**Wholesale** | `da4b9237bacccdf19c0760cab7aec4a8359010b0`
-**Retailer** |`77de68daecd823babbb58edb1c8e14d7106e83bb`
+| Customer Group | Code |
+| ---------------| ----------------- |
+| **NOT LOGGED IN** | `b6589fc6ab0dc82cf12099d1c2d40ab994e8410c` |
+| **General** | `356a192b7913b04c54574d18c28d46e6395428ab` |
+| **Wholesale** | `da4b9237bacccdf19c0760cab7aec4a8359010b0` |
+| **Retailer** |`77de68daecd823babbb58edb1c8e14d7106e83bb` |
 
 For merchant-defined groups, the customer group code is the encrypted value of the ID, `sha1(<customer_group_id>)`.
 

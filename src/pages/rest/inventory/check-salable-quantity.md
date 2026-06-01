@@ -32,14 +32,14 @@ GET /V1/inventory/stock-resolver/:type/:code
 
 **Path parameters:**
 
-Name | Description                                                                            | Type
---- |----------------------------------------------------------------------------------------| ---
-`sku` | The SKU of the product                                                                 | String
-`skus` | An array with the SKU list of products                                                 | Array of Strings
-`stock_id` | The ID of the stock the product is assigned to                                         | Integer
-`requestedQty` | The requested quantity of products                                                     | Float
-`type` | The type of sales channel the stock is assigned to. For 2.3, this value must be `website`. | String
-`code` | The code of the sales channel (website)                                                | String
+| Name | Description                                                                            | Type |
+| --- |----------------------------------------------------------------------------------------| --- |
+| `sku` | The SKU of the product                                                                 | String |
+| `skus` | An array with the SKU list of products                                                 | Array of Strings |
+| `stock_id` | The ID of the stock the product is assigned to                                         | Integer |
+| `requestedQty` | The requested quantity of products                                                     | Float |
+| `type` | The type of sales channel the stock is assigned to. For 2.3, this value must be `website`. | String |
+| `code` | The code of the sales channel (website)                                                | String |
 
 ## Check the available quantity of a salable product
 
@@ -49,10 +49,10 @@ This call returns the available quantity of a product assigned to the specified 
 
 `GET \<host\>/rest/<store_code>/V1/inventory/get-product-salable-quantity/sp2/2`
 
-Name | Description | Type
---- | --- | ---
-`sku` | The SKU of the product | String
-`stock_id` | The ID of the stock the product is assigned to | Integer
+| Name | Description | Type |
+| --- | --- | --- |
+| `sku` | The SKU of the product | String |
+| `stock_id` | The ID of the stock the product is assigned to | Integer |
 
 **Payload:**
 

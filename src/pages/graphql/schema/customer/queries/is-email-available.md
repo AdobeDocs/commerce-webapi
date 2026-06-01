@@ -49,10 +49,10 @@ The following example checks whether the email address `customer@example.com` is
 
 ## Errors
 
-Error | Description
---- | ---
-`Email is invalid` | The given email-id is not in a proper format.
-`Field isEmailAvailable.email of required type String! was not provided` | The value specified in the `isEmailAvailable.email` argument is empty.
+| Error | Description |
+| --- | --- |
+| `Email is invalid` | The given email-id is not in a proper format. |
+| `Field isEmailAvailable.email of required type String! was not provided` | The value specified in the `isEmailAvailable.email` argument is empty. |
 
 ## Related topics
 

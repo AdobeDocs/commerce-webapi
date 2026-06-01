@@ -13,10 +13,10 @@ keywords:
 
 Adobe Commerce introduced two endpoints that streamline the process of issuing a refund by creating a creditmemo and updating the order or invoice in one call.
 
-Endpoint | Description
---- | ---
-`POST /V1/order/<order_ID>/refund` | Issues an offline refund
-`POST /V1/invoice/<invoice_ID>/refund` | Issue a refund with an online payment system
+| Endpoint | Description |
+| --- | --- |
+| `POST /V1/order/<order_ID>/refund` | Issues an offline refund |
+| `POST /V1/invoice/<invoice_ID>/refund` | Issue a refund with an online payment system |
 
 In this example, the customer did not like the fit of the Radiant T-M-Orange shirt and wants a refund.
 

@@ -36,32 +36,32 @@ The `GET /V1/inventory/in-store-pickup/pickup-locations` endpoint searches for a
 
 Search terms, filters, and other attributes are specified as query parameters in the URL. This endpoint uses a different syntax than other Adobe Commerce GET calls that send `searchCriteria` parameters. Instead, the `GET /V1/inventory/in-store-pickup/pickup-locations` endpoint requires that each query parameter begins with `searchRequest`. The `scopeCode` parameter is required. All other parameters are optional.
 
-Name | Type | Description
---- | --- | ---
-`[scopeCode]=` | String | Required. The Sales Channel code of the assigned Stock.
-`[scopeType]=` | String | The Sales Channel type. The default value is `website`.
-`[area][radius]=` | Int | The radius, in kilometers, to search. The Distance Priority Algorithm must be configured to search an area. This parameter must be used with `[area][searchTerm]`.
-`[area][searchTerm]=` | String | The text to search, such as a city or region. This parameter must be used with `[area][radius]`.
-`[filters][country][value]=` | String | Filters by the specified `country_id`.
-`[filters][country][conditionType]=` | String | Optional. The default value is `eq`.
-`[filters][postcode][value]=` | String | Filters by the specified `postcode`.
-`[filters][postcode][conditionType]=` | String | Optional. The default value is `eq`.
-`[filters][region][value]=` | String | Filters by the specified `region`.
-`[filters][region][conditionType]=` | String | Optional. The default value is `eq`.
-`[filters][city][value]=` | String | Filters by the specified `city`.
-`[filters][city][conditionType]=` | String | Optional. The default value is `eq`.
-`[filters][street][value]=` | String | Filters by the specified `street`.
-`[filters][street][conditionType]=` | String | Optional. The default value is `eq`.
-`[filters][name][value]=` | String | Filters by the specified display `name`.
-`[filters][name][conditionType]=` | String | Optional. The default value is `eq`.
-`[filters][pickupLocationCode][value]=` | String | Filters by the specified source code name.
-`[filters][pickupLocationCode][conditionType]=` | String | Optional. The default value is `eq`.
-`[extensionAttributes][productsInfo][0][sku]=` | String | Returns a list of products with the specified SKU that are assigned to each pickup location. Locations without all the assigned products will be filtered out.
-`[extensionAttributes][productsInfo][0][extensionAttributes]=` | String | Extension point reserved for future use.
-`[pageSize]=` | Int | Specifies the maximum number of items to return.
-`[currentPage]=` | Int | Returns the current page.
-`[sort][0][field]=` | String | Specifies the field to sort on.
-`[sort][0][direction]=` | String | Specifies whether to return results in ascending (`ASC`) or descending (`DESC`) order. The default is `DESC`.
+| Name | Type | Description |
+| --- | --- | --- |
+| `[scopeCode]=` | String | Required. The Sales Channel code of the assigned Stock. |
+| `[scopeType]=` | String | The Sales Channel type. The default value is `website`. |
+| `[area][radius]=` | Int | The radius, in kilometers, to search. The Distance Priority Algorithm must be configured to search an area. This parameter must be used with `[area][searchTerm]`. |
+| `[area][searchTerm]=` | String | The text to search, such as a city or region. This parameter must be used with `[area][radius]`. |
+| `[filters][country][value]=` | String | Filters by the specified `country_id`. |
+| `[filters][country][conditionType]=` | String | Optional. The default value is `eq`. |
+| `[filters][postcode][value]=` | String | Filters by the specified `postcode`. |
+| `[filters][postcode][conditionType]=` | String | Optional. The default value is `eq`. |
+| `[filters][region][value]=` | String | Filters by the specified `region`. |
+| `[filters][region][conditionType]=` | String | Optional. The default value is `eq`. |
+| `[filters][city][value]=` | String | Filters by the specified `city`. |
+| `[filters][city][conditionType]=` | String | Optional. The default value is `eq`. |
+| `[filters][street][value]=` | String | Filters by the specified `street`. |
+| `[filters][street][conditionType]=` | String | Optional. The default value is `eq`. |
+| `[filters][name][value]=` | String | Filters by the specified display `name`. |
+| `[filters][name][conditionType]=` | String | Optional. The default value is `eq`. |
+| `[filters][pickupLocationCode][value]=` | String | Filters by the specified source code name. |
+| `[filters][pickupLocationCode][conditionType]=` | String | Optional. The default value is `eq`. |
+| `[extensionAttributes][productsInfo][0][sku]=` | String | Returns a list of products with the specified SKU that are assigned to each pickup location. Locations without all the assigned products will be filtered out. |
+| `[extensionAttributes][productsInfo][0][extensionAttributes]=` | String | Extension point reserved for future use. |
+| `[pageSize]=` | Int | Specifies the maximum number of items to return. |
+| `[currentPage]=` | Int | Returns the current page. |
+| `[sort][0][field]=` | String | Specifies the field to sort on. |
+| `[sort][0][direction]=` | String | Specifies whether to return results in ascending (`ASC`) or descending (`DESC`) order. The default is `DESC`. |
 
 [Search using REST endpoints](/rest/use-rest/performing-searches.md) provides a full list of supported condition types.
 

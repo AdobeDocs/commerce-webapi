@@ -66,12 +66,12 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Cannot reset the customer's password` | A general error message that appears on some internal system errors. The original error is logged and can be found in the application logs.
-`The account is locked` | You cannot modify a locked customer account.
-`The email address has an invalid format.` | The value provided in the `email` argument has an invalid format.
-`You must specify an email address.` | An empty value is provided in the `email` argument.
+| Error | Description |
+| --- | --- |
+| `Cannot reset the customer's password` | A general error message that appears on some internal system errors. The original error is logged and can be found in the application logs. |
+| `The account is locked` | You cannot modify a locked customer account. |
+| `The email address has an invalid format.` | The value provided in the `email` argument has an invalid format. |
+| `You must specify an email address.` | An empty value is provided in the `email` argument. |
 
 ## Related topics
 

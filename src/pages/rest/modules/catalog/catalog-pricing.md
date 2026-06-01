@@ -36,14 +36,14 @@ POST /V1/products/special-price-delete
 
 **SpecialPriceStorageInterface Parameters:**
 
-Name | Description | Format | Requirements
---- | --- | --- | ---
-`price` | The special price of the product | float | Required for setting or deleting a special price
-`store_id` | The store ID  to apply the special price | integer | Required for setting or deleting a special price
-`sku` | The SKU of the product | string | Required for setting or deleting a special price
-`skus` | An array of SKU values that is specified when retrieving a list of special prices | array | Required for retrievals
-`price_from` | The date and time the special price goes into effect. The date/time format is `YYYY-MM-DD hh:mm:ss`. The specified time must be later than the current time.  | string | Required in Adobe Commerce. Optional in Magento Open Source.
-`price_to` | The date and time the special price ends. The date/time format is `YYYY-MM-DD hh:mm:ss` If no value is specified, the special price does not expire. | string | Required in Adobe Commerce. Optional in Magento Open Source.
+| Name | Description | Format | Requirements |
+| --- | --- | --- | --- |
+| `price` | The special price of the product | float | Required for setting or deleting a special price |
+| `store_id` | The store ID  to apply the special price | integer | Required for setting or deleting a special price |
+| `sku` | The SKU of the product | string | Required for setting or deleting a special price |
+| `skus` | An array of SKU values that is specified when retrieving a list of special prices | array | Required for retrievals |
+| `price_from` | The date and time the special price goes into effect. The date/time format is `YYYY-MM-DD hh:mm:ss`. The specified time must be later than the current time.  | string | Required in Adobe Commerce. Optional in Magento Open Source. |
+| `price_to` | The date and time the special price ends. The date/time format is `YYYY-MM-DD hh:mm:ss` If no value is specified, the special price does not expire. | string | Required in Adobe Commerce. Optional in Magento Open Source. |
 
 ### Set special prices
 
@@ -204,12 +204,12 @@ Tier pricing offers a quantity discount to members of a specific customer group 
 
 You can use REST endpoints to set tier prices for the following product types:
 
-Product type | Tier price types
---- | ---
-Simple | fixed, discount
-Bundle | discount
-Virtual | fixed, discount
-Downloadable | fixed, discount
+| Product type | Tier price types |
+| --- | --- |
+| Simple | fixed, discount |
+| Bundle | discount |
+| Virtual | fixed, discount |
+| Downloadable | fixed, discount |
 
 **Service Name:**
 
@@ -226,15 +226,15 @@ POST /V1/products/tier-prices-delete
 
 **TierPriceStorageInterface Parameters:**
 
-Name | Description | Format | Requirements
---- | --- | --- | ---
-`price` | The discounted product price for the quantity purchased | float | Required to set, update, or delete a tier price
-`price_type` | Must be `fixed` (the set price) or `discount` (percent discount) | string | Required to set, update, or delete a tier price
-`website_id` | The website ID  to apply the tier price | integer | Required to set, update, or delete a tier price
-`sku` | The SKU of the product | string | Required to set, update, or delete a tier price
-`skus` | An array of SKU values that is specified when retrieving a list of tier prices | array | Required for retrievals
-`customer_group` |  A specific customer group that qualifies to receive the tier price discount | string | Required to set, update, or delete a tier price
-`quantity` | The quantity that must be purchased to receive the tier price | float | Required to set, update, or delete a tier price
+| Name | Description | Format | Requirements |
+| --- | --- | --- | --- |
+| `price` | The discounted product price for the quantity purchased | float | Required to set, update, or delete a tier price |
+| `price_type` | Must be `fixed` (the set price) or `discount` (percent discount) | string | Required to set, update, or delete a tier price |
+| `website_id` | The website ID  to apply the tier price | integer | Required to set, update, or delete a tier price |
+| `sku` | The SKU of the product | string | Required to set, update, or delete a tier price |
+| `skus` | An array of SKU values that is specified when retrieving a list of tier prices | array | Required for retrievals |
+| `customer_group` |  A specific customer group that qualifies to receive the tier price discount | string | Required to set, update, or delete a tier price |
+| `quantity` | The quantity that must be purchased to receive the tier price | float | Required to set, update, or delete a tier price |
 
 ### Set tier prices
 
@@ -442,12 +442,12 @@ POST /V1/products/base-prices-information
 
 **BasePriceStorageInterface Parameters:**
 
-Name | Description | Format | Requirements
---- | --- | --- | ---
-`price` | The base price of the item | float | Required to set a base price
-`store_id` | The store ID  to apply the base price | integer | Required to set a base price
-`sku` | The SKU of the product | string | Required to set a base price
-`skus` | An array of SKU values that is specified when retrieving a list of base prices | array | Required for retrievals
+| Name | Description | Format | Requirements |
+| --- | --- | --- | --- |
+| `price` | The base price of the item | float | Required to set a base price |
+| `store_id` | The store ID  to apply the base price | integer | Required to set a base price |
+| `sku` | The SKU of the product | string | Required to set a base price |
+| `skus` | An array of SKU values that is specified when retrieving a list of base prices | array | Required for retrievals |
 
 ### Set base prices
 
@@ -544,12 +544,12 @@ POST /V1/products/cost-delete
 
 **CostStorageInterface Parameters:**
 
-Name | Description | Format | Requirements
---- | --- | --- | ---
-`cost` | The amount the item costs | float | Required to set or delete a cost value
-`store_id` | The store ID  to apply the cost value | integer | Required to set or delete a cost value
-`sku` | The SKU of the product | string | Required to set or delete a cost value
-`skus` | An array of SKU values that is specified when retrieving a list of cost values | array | Required for retrievals
+| Name | Description | Format | Requirements |
+| --- | --- | --- | --- |
+| `cost` | The amount the item costs | float | Required to set or delete a cost value |
+| `store_id` | The store ID  to apply the cost value | integer | Required to set or delete a cost value |
+| `sku` | The SKU of the product | string | Required to set or delete a cost value |
+| `skus` | An array of SKU values that is specified when retrieving a list of cost values | array | Required for retrievals |
 
 ### Set cost values
 

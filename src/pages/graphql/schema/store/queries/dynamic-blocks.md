@@ -30,17 +30,17 @@ Adobe Commerce and Magento Open Source GraphQL supports the **Display all instea
 
 The following input fields are available only if specialized modules have been installed:
 
-Field | Type | Description
---- | --- | ---
-`audience_id` field | FilterEqualTypeInput | The Audience ID for this block. Available in the `magento/audiences` module only.
-`cart_id` | String | The unique ID that identifies the customer's cart. Available in the `magento2-pwa-commerce` module only.
-`product_uid` | ID | The unique ID of the currently viewed product. Available in the `magento2-pwa-commerce` module only.
+| Field | Type | Description |
+| --- | --- | --- |
+| `audience_id` field | FilterEqualTypeInput | The Audience ID for this block. Available in the `magento/audiences` module only. |
+| `cart_id` | String | The unique ID that identifies the customer's cart. Available in the `magento2-pwa-commerce` module only. |
+| `product_uid` | ID | The unique ID of the currently viewed product. Available in the `magento2-pwa-commerce` module only. |
 
 If the `magento/audiences` module is installed, the following field can be returned:
 
-Field | Type | Description
---- | --- | ---
-`DynamicBlocks.audience_id` | [ID] | An array of Audience IDs for this block. Available in the `magento/audiences` module only.
+| Field | Type | Description |
+| --- | --- | --- |
+| `DynamicBlocks.audience_id` | [ID] | An array of Audience IDs for this block. Available in the `magento/audiences` module only. |
 
 ## Syntax
 

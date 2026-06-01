@@ -16,11 +16,11 @@ When you install or upgrade Adobe Commerce, the system assigns all existing prod
 
 The following table describes the products we'll use in this tutorial.
 
-Name | Type | SKU | Quantity
---- | --- | --- | ---
-Voyage Yoga Bag | Simple | 24-WB01 | 100
-Driven Backpack | Simple | 24-WB03 | 100
-Yoga Adventure | Downloadable | 240-LV06 | Not applicable
+| Name | Type | SKU | Quantity |
+| --- | --- | --- | --- |
+| Voyage Yoga Bag | Simple | 24-WB01 | 100 |
+| Driven Backpack | Simple | 24-WB03 | 100 |
+| Yoga Adventure | Downloadable | 240-LV06 | Not applicable |
 
 ## Unassign products from the default source
 

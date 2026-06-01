@@ -56,6 +56,6 @@ The following example requests a token in a Payflow Link transaction.
 
 ## Errors
 
-Error | Description
---- | ---
-`No such entity with cartId` | An invalid `cartId` was provided
+| Error | Description |
+| --- | --- |
+| `No such entity with cartId` | An invalid `cartId` was provided |

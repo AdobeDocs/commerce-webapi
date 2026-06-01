@@ -58,9 +58,9 @@ When you set the payment method to Payflow Pro Vault in the [`setPaymentMethodOn
 
 The `payflowpro_cc_vault` object must contain the following attribute:
 
-Attribute |  Data Type | Description
---- | --- | ---
-`public_hash` | String! | The public hash of the payment token
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `public_hash` | String! | The public hash of the payment token |
 
 ### Example usage
 

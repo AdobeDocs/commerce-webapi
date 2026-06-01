@@ -111,10 +111,10 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Cart does not contain products.` | The coupon cannot be removed from the empty cart.
-`Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` table.
-`The cart isn't active.` | The user cannot perform this mutation on the inactive cart.
-`Required parameter "cart_id" is missing` | The required `cart_id` argument contains an empty value.
-`The coupon code couldn't be deleted. Verify the coupon code and try again.` | The coupon was not removed from the cart. Check the existing shopping cart price rules for details.
+| Error | Description |
+| --- | --- |
+| `Cart does not contain products.` | The coupon cannot be removed from the empty cart. |
+| `Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` table. |
+| `The cart isn't active.` | The user cannot perform this mutation on the inactive cart. |
+| `Required parameter "cart_id" is missing` | The required `cart_id` argument contains an empty value. |
+| `The coupon code couldn't be deleted. Verify the coupon code and try again.` | The coupon was not removed from the cart. Check the existing shopping cart price rules for details. |

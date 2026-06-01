@@ -54,13 +54,13 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`The current customer isn't authorized.` | The customer's token does not exist in the `oauth_token` table.
-`Invalid login or password.` | The password specified in the `currentPassword` argument is not valid.
-`Specify the "currentPassword" value.` | The password specified in the `currentPassword` argument is empty.
-`Specify the "newPassword" value.` | The password specified in the `newPassword` argument is empty.
-`The account is locked.` | The customer's password cannot be changed because the account is locked.
+| Error | Description |
+| --- | --- |
+| `The current customer isn't authorized.` | The customer's token does not exist in the `oauth_token` table. |
+| `Invalid login or password.` | The password specified in the `currentPassword` argument is not valid. |
+| `Specify the "currentPassword" value.` | The password specified in the `currentPassword` argument is empty. |
+| `Specify the "newPassword" value.` | The password specified in the `newPassword` argument is empty. |
+| `The account is locked.` | The customer's password cannot be changed because the account is locked. |
 
 ## Related topics
 

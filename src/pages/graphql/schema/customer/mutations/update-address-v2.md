@@ -150,16 +150,16 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Address "uid" value must be specified` | The `uid` argument is null or empty.
-`Could not find an address with ID "XXX"` | The customer address specified in the `uid` argument does not exist.
-`Current customer does not have permission to address with ID "XXX"` | The customer tries to update the address of another customer.
-`Field "updateCustomerAddressV2" argument "uid" of type "ID!" is required but not provided.` | The `uid` argument was omitted.
-`Field "updateCustomerAddressV2" argument "uid" requires type ID!, found "XXX".` | The specified `uid` argument value has the wrong type.
-`"input" value must be specified` | The `input` argument was omitted or was specified but is empty.
-`Syntax Error: Expected Name, found )` | The `uid` and `input` arguments are omitted.
-`The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table.
+| Error | Description |
+| --- | --- |
+| `Address "uid" value must be specified` | The `uid` argument is null or empty. |
+| `Could not find an address with ID "XXX"` | The customer address specified in the `uid` argument does not exist. |
+| `Current customer does not have permission to address with ID "XXX"` | The customer tries to update the address of another customer. |
+| `Field "updateCustomerAddressV2" argument "uid" of type "ID!" is required but not provided.` | The `uid` argument was omitted. |
+| `Field "updateCustomerAddressV2" argument "uid" requires type ID!, found "XXX".` | The specified `uid` argument value has the wrong type. |
+| `"input" value must be specified` | The `input` argument was omitted or was specified but is empty. |
+| `Syntax Error: Expected Name, found )` | The `uid` and `input` arguments are omitted. |
+| `The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table. |
 
 ## Related topics
 

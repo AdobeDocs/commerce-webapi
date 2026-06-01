@@ -86,7 +86,7 @@ The mutation returns the same `cart_id`.
 
 ## Errors
 
-Error | Description
---- | ---
-`Cart with ID "XXX" already exists.` | The specified cart ID was previously used to create a cart.
-`Cart ID length should to be 32 symbols.` | The cart ID is not the required length.
+| Error | Description |
+| --- | --- |
+| `Cart with ID "XXX" already exists.` | The specified cart ID was previously used to create a cart. |
+| `Cart ID length should to be 32 symbols.` | The cart ID is not the required length. |

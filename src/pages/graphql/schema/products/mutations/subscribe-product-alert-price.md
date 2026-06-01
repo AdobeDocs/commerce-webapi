@@ -60,12 +60,12 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Customer is not logged in.` | The request does not include a valid customer authentication token.
-`Required parameter "sku" is missing.` | The `sku` field was not provided in the input.
-`Unable to subscribe to price alert. No such entity.` | No product exists with the specified SKU.
-`Unable to subscribe to price alert` | An internal error occurred while creating the subscription.
+| Error | Description |
+| --- | --- |
+| `Customer is not logged in.` | The request does not include a valid customer authentication token. |
+| `Required parameter "sku" is missing.` | The `sku` field was not provided in the input. |
+| `Unable to subscribe to price alert. No such entity.` | No product exists with the specified SKU. |
+| `Unable to subscribe to price alert` | An internal error occurred while creating the subscription. |
 
 ## Related topics
 

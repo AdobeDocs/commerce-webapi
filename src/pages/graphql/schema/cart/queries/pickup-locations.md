@@ -132,10 +132,10 @@ For the available Pickup location, the response would look like:
 
 ## Errors
 
-Error | Description
---- | ---
-`Field AreaInput.radius of required type Int! was not provided` | The value specified in the `AreaInput.radius` argument is empty.
-`Field AreaInput.search_term of required type String! was not provided` | The value specified in the `AreaInput.search_term` argument is empty.
+| Error | Description |
+| --- | --- |
+| `Field AreaInput.radius of required type Int! was not provided` | The value specified in the `AreaInput.radius` argument is empty. |
+| `Field AreaInput.search_term of required type String! was not provided` | The value specified in the `AreaInput.search_term` argument is empty. |
 
 <Edition slots="text" backgroundcolor="blue"/>
 

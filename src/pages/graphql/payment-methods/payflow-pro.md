@@ -67,21 +67,21 @@ When you set the payment method to Payflow Pro in the [`setPaymentMethodOnCart`]
 
 The `payflowpro` object must contain the following attributes:
 
-Attribute |  Data Type | Description
---- | --- | ---
-`cc_details` | CreditCardDetailsInput! | Required input for credit card related information
-`is_active_payment_token_enabler` | Boolean | States whether details about the customer's credit/debit card should be tokenized for later use. Required only if Vault is enabled for PayPal Payflow Pro payment integration.
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `cc_details` | CreditCardDetailsInput! | Required input for credit card related information |
+| `is_active_payment_token_enabler` | Boolean | States whether details about the customer's credit/debit card should be tokenized for later use. Required only if Vault is enabled for PayPal Payflow Pro payment integration. |
 
 ### CreditCardDetailsInput object
 
 The `CreditCardDetailsInput` object must contain the following attributes:
 
-Attribute |  Data Type | Description
---- | --- | ---
-`cc_exp_month` | Int! | Credit card expiration month
-`cc_exp_year` | Int! | Credit card expiration year
-`cc_last_4` | Int! | Last four digits of the credit card
-`cc_type` | String! | Credit card type
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `cc_exp_month` | Int! | Credit card expiration month |
+| `cc_exp_year` | Int! | Credit card expiration year |
+| `cc_last_4` | Int! | Last four digits of the credit card |
+| `cc_type` | String! | Credit card type |
 
 ### Example usage
 

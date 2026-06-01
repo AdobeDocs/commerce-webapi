@@ -259,14 +259,14 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Expected type CustomerAddressInput!, found "".` | The `input` attribute contains an empty value.
-`"input" value should be specified` | The `input` argument is specified but is empty.
-`Required parameters are missing: firstname` | The `input.firstname` argument was omitted or contains an empty value.
-`"Street Address" cannot contain more than 2 lines.` | The `input.street` argument contains array with more than two elements.
-`Syntax Error: Expected Name, found )` | The `input` argument was omitted.
-`The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table.
+| Error | Description |
+| --- | --- |
+| `Expected type CustomerAddressInput!, found "".` | The `input` attribute contains an empty value. |
+| `"input" value should be specified` | The `input` argument is specified but is empty. |
+| `Required parameters are missing: firstname` | The `input.firstname` argument was omitted or contains an empty value. |
+| `"Street Address" cannot contain more than 2 lines.` | The `input.street` argument contains array with more than two elements. |
+| `Syntax Error: Expected Name, found )` | The `input` argument was omitted. |
+| `The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table. |
 
 ## Related topics
 

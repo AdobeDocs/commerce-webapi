@@ -35,11 +35,11 @@ GET /V1/team/
 
 **Company team parameters:**
 
-Name | Description | Format | Requirements
---- | --- | --- | ---
-`id` | System-generated team ID | integer | Not applicable for create operations.
-`name` | The displayed name of the team | string | Required to create or update a team.
-`description` | An optional description of the team. | string | Optional
+| Name | Description | Format | Requirements |
+| --- | --- | --- | --- |
+| `id` | System-generated team ID | integer | Not applicable for create operations. |
+| `name` | The displayed name of the team | string | Required to create or update a team. |
+| `description` | An optional description of the team. | string | Optional |
 
 ### Create a team
 

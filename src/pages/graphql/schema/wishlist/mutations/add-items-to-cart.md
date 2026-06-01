@@ -128,9 +128,9 @@ mutation {
 
 The `WishlistCartUserInputErrorType` field can contain the following values:
 
-Type | Description
---- | ---
-`INSUFFICIENT_STOCK` | The requested quantity of a product is greater than the quantity available
-`NOT_SALABLE` | A requested product is not available
-`PRODUCT_NOT_FOUND` | A product with the specified ID does not exist.
-`UNDEFINED` | The error message does not match any error code
+| Type | Description |
+| --- | --- |
+| `INSUFFICIENT_STOCK` | The requested quantity of a product is greater than the quantity available |
+| `NOT_SALABLE` | A requested product is not available |
+| `PRODUCT_NOT_FOUND` | A product with the specified ID does not exist. |
+| `UNDEFINED` | The error message does not match any error code |

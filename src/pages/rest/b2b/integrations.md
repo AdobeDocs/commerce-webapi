@@ -49,7 +49,7 @@ For details, see the [companyCredits](https://adobe-commerce.redoc.ly/2.4.7-admi
 
 Use `company/relations` endpoints to manage relationships between companies in a B2B organization. These endpoints enable administrators to create, view, and delete hierarchical relationships between companies, allowing for complex organizational structures.
 
- Use Case | Endpoint | Service Name |
+| Use Case | Endpoint | Service Name |
 |----------|----------|--------------|
 | Company Relations Management | `GET /V1/company/relations` - List company relationships\<br /\>`POST /V1/company/:parentId/relations` - Create company relationship\<br /\>`DELETE /V1/company/:parentId/relations/:companyId` - Delete company relationship | `companyRelationRelationManagerV1` |
 

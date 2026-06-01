@@ -89,7 +89,7 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Please specify a valid customer.` | The mutation requires a valid authorization token.
-`Required parameter "cart_id" is missing` | The value specified in `cart_id` is empty.
+| Error | Description |
+| --- | --- |
+| `Please specify a valid customer.` | The mutation requires a valid authorization token. |
+| `Required parameter "cart_id" is missing` | The value specified in `cart_id` is empty. |

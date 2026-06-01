@@ -56,10 +56,10 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Customer is not logged in.` | The request does not include a valid customer authentication token.
-`Unable to unsubscribe to all price alerts` | An internal error occurred while removing the subscriptions.
+| Error | Description |
+| --- | --- |
+| `Customer is not logged in.` | The request does not include a valid customer authentication token. |
+| `Unable to unsubscribe to all price alerts` | An internal error occurred while removing the subscriptions. |
 
 ## Related topics
 

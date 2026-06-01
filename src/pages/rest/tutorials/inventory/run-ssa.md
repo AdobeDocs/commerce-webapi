@@ -100,11 +100,11 @@ In [Step 4. Link stocks and sources](/rest/tutorials/inventory/assign-source-to-
 
 The SSA recommends shipping from the following sources:
 
-Product | Source | Quantity
---- | --- | ---
-`24-WB01` | Northeast warehouse | 35
-`24-WB01` | West warehouse | 5
-`24-WB03` | Northeast warehouse | 20
+| Product | Source | Quantity |
+| --- | --- | --- |
+| `24-WB01` | Northeast warehouse | 35 |
+| `24-WB01` | West warehouse | 5 |
+| `24-WB03` | Northeast warehouse | 20 |
 
 ```json
 {

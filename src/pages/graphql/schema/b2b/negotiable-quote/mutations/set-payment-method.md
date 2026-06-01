@@ -27,13 +27,13 @@ Supported online payment methods include:
 
 The following offline payment methods are also supported:
 
-Title | Code
---- | ---
-Bank Transfer Payment | `banktransfer`
-Cash on Delivery | `cashondelivery`
-Check / Money order | `checkmo`
-No Payment Information Required | `free`
-Purchase Order | `purchaseorder`
+| Title | Code |
+| --- | --- |
+| Bank Transfer Payment | `banktransfer` |
+| Cash on Delivery | `cashondelivery` |
+| Check / Money order | `checkmo` |
+| No Payment Information Required | `free` |
+| Purchase Order | `purchaseorder` |
 
 This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
 

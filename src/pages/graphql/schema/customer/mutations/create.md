@@ -74,13 +74,13 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`A customer with the same email address already exists in an associated website.` | The email provided in the `input`.`email` argument belongs to an existing customer.
-`"Email" is not a valid email address.` | The value provided in the `input`.`email` argument has an invalid format.
-`Field CustomerInput.email of required type String! was not provided` | The `input`.`email` argument was omitted.
-`Field "xxx" is not defined by type CustomerInput.` | The `input`.`xxx` argument is undefined.
-`Required parameters are missing: First Name` | The `input`.`firstname` argument was omitted or contains an empty value.
+| Error | Description |
+| --- | --- |
+| `A customer with the same email address already exists in an associated website.` | The email provided in the `input`.`email` argument belongs to an existing customer. |
+| `"Email" is not a valid email address.` | The value provided in the `input`.`email` argument has an invalid format. |
+| `Field CustomerInput.email of required type String! was not provided` | The `input`.`email` argument was omitted. |
+| `Field "xxx" is not defined by type CustomerInput.` | The `input`.`xxx` argument is undefined. |
+| `Required parameters are missing: First Name` | The `input`.`firstname` argument was omitted or contains an empty value. |
 
 ## Related topics
 

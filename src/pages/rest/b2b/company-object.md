@@ -32,28 +32,28 @@ GET /V1/company/
 
 The following table lists the parameters defined in `CompanyInterface`.
 
-Name | Description | Format | Requirements
---- | --- | --- | ---
-`id` | System-generated company ID | integer | Required for updates and deletes.
-`status` | 0 - Pending approval\<br/\>1 - Approved\<br/\>2 - Rejected\<br/\>3 - Blocked | integer | Optional
-`company_name` | Company name  | string  | Required to create or update a company.
-`legal_name`  | Legal name  | string  | Optional
-`company_email`  | Official email address of the company. It does not have to be unique.  | string | Required to create or update a company.
-`vat_tax_id`  | The company's Value Added Tax ID  | string  | Optional
-`reseller_id`  | Unique ID of the company reseller  | string  | Optional
-`comment`  | Additional details about the company | string | Optional
-`street` | Street address where the company is registered. The array can contain one or two lines. | Array[string] | Required to create or update a company.
-`city` | The company's city  | string  | Required to create or update a company.
-`country_id` | The country where the company is registered. | string  | Required to create or update a company.
-`region` | State or province | string | Required to create or update a company.
-`region_id` | An ID assigned to a state or province | string  | Optional
-`postcode` | The company's ZIP or postal code | string  | Required to create or update a company.
-`telephone` | The company contact's phone number | string | Required to create or update a company.
-`customer_group_id`  | Defines the company's shared catalog. A value of `1` assigns the default shared catalog. | integer | Required to create or update a company.
-`sales_representative_id` | User ID of the Sales Representative for the company | integer | Optional
-`reject_reason` | Specifies why a company's request to be a B2B customer is rejected | string | Optional
-`rejected_at` | A timestamp indicating when the company was rejected. | string | Optional
-`super_user_id` | The `customer_id` of the company administrator. When creating a company, the `customer_id` must already exist.  | integer | Required to create or update a company.
+| Name | Description | Format | Requirements |
+| --- | --- | --- | --- |
+| `id` | System-generated company ID | integer | Required for updates and deletes. |
+| `status` | 0 - Pending approval\<br/\>1 - Approved\<br/\>2 - Rejected\<br/\>3 - Blocked | integer | Optional |
+| `company_name` | Company name  | string  | Required to create or update a company. |
+| `legal_name`  | Legal name  | string  | Optional |
+| `company_email`  | Official email address of the company. It does not have to be unique.  | string | Required to create or update a company. |
+| `vat_tax_id`  | The company's Value Added Tax ID  | string  | Optional |
+| `reseller_id`  | Unique ID of the company reseller  | string  | Optional |
+| `comment`  | Additional details about the company | string | Optional |
+| `street` | Street address where the company is registered. The array can contain one or two lines. | Array[string] | Required to create or update a company. |
+| `city` | The company's city  | string  | Required to create or update a company. |
+| `country_id` | The country where the company is registered. | string  | Required to create or update a company. |
+| `region` | State or province | string | Required to create or update a company. |
+| `region_id` | An ID assigned to a state or province | string  | Optional |
+| `postcode` | The company's ZIP or postal code | string  | Required to create or update a company. |
+| `telephone` | The company contact's phone number | string | Required to create or update a company. |
+| `customer_group_id`  | Defines the company's shared catalog. A value of `1` assigns the default shared catalog. | integer | Required to create or update a company. |
+| `sales_representative_id` | User ID of the Sales Representative for the company | integer | Optional |
+| `reject_reason` | Specifies why a company's request to be a B2B customer is rejected | string | Optional |
+| `rejected_at` | A timestamp indicating when the company was rejected. | string | Optional |
+| `super_user_id` | The `customer_id` of the company administrator. When creating a company, the `customer_id` must already exist.  | integer | Required to create or update a company. |
 
 ### Create a company
 

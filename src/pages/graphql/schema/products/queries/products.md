@@ -67,15 +67,15 @@ filter: {
 
 The application processes the attribute values specified in a `ProductAttributeFilterInput` as simple data types (strings, integers, Booleans). However, returned attributes can be a different, complex data type. For example, in a response, `price` is an object that contains a monetary value and a currency code.
 
-Attribute | Description
---- | ---
-`category_uid` | Filters by the unique ID of a category for objects that implement `CategoryInterface`
-`description` | Filters on the Description attribute
-`name` | Filters on the Product Name attribute
-`price` | Filters on the Price attribute
-`short_description` | Filters on the Short Description attribute
-`sku` | Filters on the SKU attribute
-`url_key` | The part of the URL that identifies the product
+| Attribute | Description |
+| --- | --- |
+| `category_uid` | Filters by the unique ID of a category for objects that implement `CategoryInterface` |
+| `description` | Filters on the Description attribute |
+| `name` | Filters on the Product Name attribute |
+| `price` | Filters on the Price attribute |
+| `short_description` | Filters on the Short Description attribute |
+| `sku` | Filters on the SKU attribute |
+| `url_key` | The part of the URL that identifies the product |
 
 You can define a custom attribute to be a filter by specifying the `custom_attributesV2` attribute within the output of your query, as shown in [Filter custom_attributesV2 of a product](#filter-custom_attributesv2-of-a-product).
 
@@ -127,12 +127,12 @@ If you do not specify a `sort` object, the application sorts as follows:
 
 In previous versions, the `sort` attribute required a `ProductSortInput` object as input. The `sort` attribute now requires a `ProductAttributeSortInput` object, which can contain the following attributes:
 
-Attribute | Description
---- | ---
-`name` | Sorts by Product Name
-`position` | Sorts by the position of products
-`price` | Sorts by Price
-`relevance` | (Default) Sorts by the search relevance score
+| Attribute | Description |
+| --- | --- |
+| `name` | Sorts by Product Name |
+| `position` | Sorts by the position of products |
+| `price` | Sorts by Price |
+| `relevance` | (Default) Sorts by the search relevance score |
 
 To enable sorting by an attribute that is not in the `ProductAttributeSortInput` object, set the **Stores** > Attributes > **Product** > `Attribute Name` > **Storefront Properties** > **Use in Search** and **Used in Sorting in Product Listing** fields to Yes.
 

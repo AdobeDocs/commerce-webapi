@@ -26,14 +26,14 @@ Adobe Commerce as a Cloud Service does not support the `GET /V1/search` endpoint
 
 The following table highlights the differences between these two endpoints:
 
-Property | V1/products | V1/search
---- | --- | ---
-Requires authorization token? | Yes | No
-Has direct access to product data? | Yes | No (the Search engine acts as proxy)
-Can specify any product attribute? | Yes | No
-Contains product data in the response? | Yes | No
-Are results sorted by search relevance? | No | Yes
-Contains aggregations/buckets in the response? | No | Yes, for `quick_search_container` and `catalog_view_container` searches
+|Property | V1/products | V1/search|
+|--- | --- | ---|
+|Requires authorization token? | Yes | No|
+|Has direct access to product data? | Yes | No (the Search engine acts as proxy)|
+|Can specify any product attribute? | Yes | No|
+|Contains product data in the response? | Yes | No|
+|Are results sorted by search relevance? | No | Yes|
+|Contains aggregations/buckets in the response? | No | Yes, for `quick_search_container` and `catalog_view_container` searches|
 
 The `V1/search` endpoint is generally more useful when you have only human (or human-like) search terms at hand, targeted to isolate a single product or a limited set of products. An added benefit is that the results are pre-sorted by their applicable search relevance.
 

@@ -13,15 +13,15 @@ keywords:
 
 The `setNegotiableQuoteShippingMethods` mutation sets one or more delivery methods on a negotiable quote. By default, the following delivery methods are supported:
 
-Label | Carrier code | Method code
---- | --- | ---
-DHL | dhl | Varies
-Federal Express | fedex | Varies
-Flat Rate | flatrate | flatrate
-Free Shipping | freeshipping | freeshipping
-Best Way | tablerate | bestway
-United Parcel Service | ups | Varies
-United States Postal Service | usps | Varies
+| Label | Carrier code | Method code |
+| --- | --- | --- |
+| DHL | dhl | Varies |
+| Federal Express | fedex | Varies |
+| Flat Rate | flatrate | flatrate |
+| Free Shipping | freeshipping | freeshipping |
+| Best Way | tablerate | bestway |
+| United Parcel Service | ups | Varies |
+| United States Postal Service | usps | Varies |
 
 The negotiable quote must be in the UPDATED state to successfully set a shipping address.
 

@@ -111,11 +111,11 @@ attributesMetadata(
 
 ## Input attributes
 
-Attribute | Data type | Description
---- | --- | ---
-`attributeUids` | [ID!] | An array of attribute IDs to search
-`entityType` | AttributeEntityTypeEnum! | The type of entity to search
-`showSystemAttributes` | Boolean | Indicates whether to also return matching system attributes
+| Attribute | Data type | Description |
+| --- | --- | --- |
+| `attributeUids` | [ID!] | An array of attribute IDs to search |
+| `entityType` | AttributeEntityTypeEnum! | The type of entity to search |
+| `showSystemAttributes` | Boolean | Indicates whether to also return matching system attributes |
 
 ## Output attributes
 

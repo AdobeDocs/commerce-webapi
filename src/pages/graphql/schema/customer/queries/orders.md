@@ -75,6 +75,6 @@ The following query returns the order history of the logged in customer.
 
 ## Errors
 
-Error | Description
---- | ---
-`The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table.
+| Error | Description |
+| --- | --- |
+| `The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table. |

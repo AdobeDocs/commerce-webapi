@@ -22,13 +22,13 @@ The [Commerce API playground](https://experienceleague.adobe.com/developer/comme
 
 You must specify the following HTTP headers to run this query.
 
-Header | Description
---- | ---
-`Magento-Customer-Group` | Specify the [customer group code](#find-the-customer-group-code) for the API request.
-`Magento-Environment-Id` | This value is displayed at **System** > **Commerce Services Connector** > **SaaS Identifier** > **Data Space ID** or can be obtained by running the `bin/magento config:show services_connector/services_id/environment_id` command.
-`Magento-Store-Code`| The code assigned to the store associated with the active store view. For example, `main_website_store`.
-`Magento-Store-View-Code`| The code assigned to the active store view. For example, `default`.
-`Magento-Website-Code`| The code assigned to the website associated with the active store view. For example, `base`.
+| Header | Description |
+| --- | --- |
+| `Magento-Customer-Group` | Specify the [customer group code](#find-the-customer-group-code) for the API request. |
+| `Magento-Environment-Id` | This value is displayed at **System** > **Commerce Services Connector** > **SaaS Identifier** > **Data Space ID** or can be obtained by running the `bin/magento config:show services_connector/services_id/environment_id` command. |
+| `Magento-Store-Code`| The code assigned to the store associated with the active store view. For example, `main_website_store`. |
+| `Magento-Store-View-Code`| The code assigned to the active store view. For example, `default`. |
+| `Magento-Website-Code`| The code assigned to the website associated with the active store view. For example, `base`. |
 
 <Edition slots="text" backgroundcolor="blue"/>
 
@@ -42,12 +42,12 @@ The customer group code is the encrypted value of the customer group ID, which d
 
 Use one of the following codes for a default customer group based on your requirements.
 
-Customer Group | Code
----------------| -----------------
-**NOT LOGGED IN** | `b6589fc6ab0dc82cf12099d1c2d40ab994e8410c`
-**General** | `356a192b7913b04c54574d18c28d46e6395428ab`
-**Wholesale** | `da4b9237bacccdf19c0760cab7aec4a8359010b0`
-**Retailer** |`77de68daecd823babbb58edb1c8e14d7106e83bb`
+| Customer Group | Code |
+| ---------------| ----------------- |
+| **NOT LOGGED IN** | `b6589fc6ab0dc82cf12099d1c2d40ab994e8410c` |
+| **General** | `356a192b7913b04c54574d18c28d46e6395428ab` |
+| **Wholesale** | `da4b9237bacccdf19c0760cab7aec4a8359010b0` |
+| **Retailer** |`77de68daecd823babbb58edb1c8e14d7106e83bb` |
 
 For merchant-defined groups, the customer group code is the encrypted value of the ID, `sha1(<customer_group_id>)`.
 
@@ -191,60 +191,60 @@ recommendations(currentSku: "MP01", pageType: Product) {
 
 ## Input fields
 
-Field | Data type | Description
---- | --- | ---
-`cartSKUs` | [String] | SKUs of the products in the cart.
-`category` | String | The category currently being viewed.
-`currentSKU` | String |  SKU of the product currently being viewed on the product detail page.
-`pageType` | PageType  | An enum indicating the type of page on which recommendations are requested. Possible values are Cart, Category, Checkout, CMS, PageBuilder and Product.
-`userPurchaseHistory` | [PurchaseHistory] | User purchase history with timestamp.
-`userViewHistory` | [ViewHistory] | User view history with timestamp.
+| Field | Data type | Description |
+| --- | --- | --- |
+| `cartSKUs` | [String] | SKUs of the products in the cart. |
+| `category` | String | The category currently being viewed. |
+| `currentSKU` | String |  SKU of the product currently being viewed on the product detail page. |
+| `pageType` | PageType  | An enum indicating the type of page on which recommendations are requested. Possible values are Cart, Category, Checkout, CMS, PageBuilder and Product. |
+| `userPurchaseHistory` | [PurchaseHistory] | User purchase history with timestamp. |
+| `userViewHistory` | [ViewHistory] | User view history with timestamp. |
 
 ### PurchasedHistory
 
-Field | Data type | Description
---- | --- | ---
-`date` | DateTime | Date of purchase
-`items` | [String]! | A list of items purchased
+| Field | Data type | Description |
+| --- | --- | --- |
+| `date` | DateTime | Date of purchase |
+| `items` | [String]! | A list of items purchased |
 
 ### ViewHistory
 
-Field | Data type | Description
---- | --- | ---
-`date` | DateTime | The time the items were viewed
-`sku` | [String]! | A list of SKUs viewed
+| Field | Data type | Description |
+| --- | --- | --- |
+| `date` | DateTime | The time the items were viewed |
+| `sku` | [String]! | A list of SKUs viewed |
 
 ## Output fields
 
 The `Recommendations` object contains details about recommended products for a given SKU. It contains the following attributes.
 
-Attribute |  Data Type | Description
---- | --- | ---
-`results` | [RecommendationUnit] | Array of recommendation units for recommended products
-`totalResults` | Int | Total number of recommendation units for returned recommendation
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `results` | [RecommendationUnit] | Array of recommendation units for recommended products |
+| `totalResults` | Int | Total number of recommendation units for returned recommendation |
 
 ### RecommendationUnit attributes
 
-Attribute |  Data Type | Description
---- | --- | ---
-`displayOrder` | Int | Order in which recommendation units are displayed
-`pageType` | String | Page Type
-`productsView` | [ProductView] | List of product view
-`storefrontLabel` | String | Storefront label to be displayed on the storefront
-`totalProducts` | Int | Total number of products returned for a recommendation
-`typeId` | String | Type of recommendation
-`unitId` | String | Id of the preconfigured unit
-`unitName` | String | Name of the preconfigured unit
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `displayOrder` | Int | Order in which recommendation units are displayed |
+| `pageType` | String | Page Type |
+| `productsView` | [ProductView] | List of product view |
+| `storefrontLabel` | String | Storefront label to be displayed on the storefront |
+| `totalProducts` | Int | Total number of products returned for a recommendation |
+| `typeId` | String | Type of recommendation |
+| `unitId` | String | Id of the preconfigured unit |
+| `unitName` | String | Name of the preconfigured unit |
 
 ### ProductView interface
 
 The `ProductView` return object is an interface that can contain the following fields. It is implemented by the `SimpleProductView` and `ComplexProductView` types. Both these types contain the same set of fields as `ProductView`.
 
-Attribute |  Data Type | Description
---- | --- | ---
-`categories` | [String] | List of categories to which the product belongs
-`rank` | Int | Rank given to a product
-`queryType` | String | Indicates if the product was retrieved from the primary or backup query
-`score` | Float | Score indicating relevance of the product to the recommendation type
-`sku` | String! | The product SKU
-`visibility` | String | Visibility setting of the product
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `categories` | [String] | List of categories to which the product belongs |
+| `rank` | Int | Rank given to a product |
+| `queryType` | String | Indicates if the product was retrieved from the primary or backup query |
+| `score` | Float | Score indicating relevance of the product to the recommendation type |
+| `sku` | String! | The product SKU |
+| `visibility` | String | Visibility setting of the product |

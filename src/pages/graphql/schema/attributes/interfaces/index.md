@@ -7,21 +7,21 @@ description: Adobe Commerce on cloud and on-premises (PaaS) provides the followi
 
 Adobe Commerce on cloud and on-premises (PaaS) provides the following interfaces to access system attributes and custom attributes defined by the merchant.
 
-Interface | Implementations
---- | ---
-[`AttributeSelectedOptionInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-AttributeSelectedOptionInterface) | [`AttributeSelectedOption`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-AttributeSelectedOption)
-[`AttributeValueInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-AttributeValueInterface) | [`AttributeValue`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-AttributeValue) \<br/\>[`AttributeSelectedOptions`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-AttributeSelectedOptions)
-[`CustomAttributeMetadataInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CustomerAttributeMetadata) | [`AttributeMetadata`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-AttributeMetadata)
-[`CustomAttributeOptionInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CustomAttributeOptionInterface) | [`AttributeOptionMetadata`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-AttributeOptionMetadata).
+| Interface | Implementations |
+| --- | --- |
+| [`AttributeSelectedOptionInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-AttributeSelectedOptionInterface) | [`AttributeSelectedOption`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-AttributeSelectedOption) |
+| [`AttributeValueInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-AttributeValueInterface) | [`AttributeValue`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-AttributeValue) \<br/\>[`AttributeSelectedOptions`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-AttributeSelectedOptions) |
+| [`CustomAttributeMetadataInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CustomerAttributeMetadata) | [`AttributeMetadata`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-AttributeMetadata) |
+| [`CustomAttributeOptionInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CustomAttributeOptionInterface) | [`AttributeOptionMetadata`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-AttributeOptionMetadata). |
 
 The following table lists the same interfaces and implementations with links to the **Adobe Commerce as a Cloud Service (SaaS)** GraphQL reference.
 
-Interface | Implementations
---- | ---
-[`AttributeSelectedOptionInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeSelectedOptionInterface) | [`AttributeSelectedOption`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeSelectedOption)
-[`AttributeValueInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeValueInterface) | [`AttributeValue`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeValue) \<br/\>[`AttributeSelectedOptions`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeSelectedOptions) \<br/\>[`AttributeFile`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeFile) \<br/\>[`AttributeImage`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeImage)
-[`CustomAttributeMetadataInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-CustomerAttributeMetadata) | [`AttributeMetadata`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeMetadata)
-[`CustomAttributeOptionInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-CustomAttributeOptionInterface) | [`AttributeOptionMetadata`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeOptionMetadata).
+| Interface | Implementations |
+| --- | --- |
+| [`AttributeSelectedOptionInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeSelectedOptionInterface) | [`AttributeSelectedOption`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeSelectedOption) |
+| [`AttributeValueInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeValueInterface) | [`AttributeValue`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeValue) \<br/\>[`AttributeSelectedOptions`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeSelectedOptions) \<br/\>[`AttributeFile`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeFile) \<br/\>[`AttributeImage`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeImage) |
+| [`CustomAttributeMetadataInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-CustomerAttributeMetadata) | [`AttributeMetadata`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeMetadata) |
+| [`CustomAttributeOptionInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-CustomAttributeOptionInterface) | [`AttributeOptionMetadata`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeOptionMetadata). |
 
 <InlineAlert variant="info" slots="text"/>
 

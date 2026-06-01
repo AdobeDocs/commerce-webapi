@@ -35,22 +35,22 @@ PUT /V1/negotiableQuote/:quoteId/shippingMethod
 
 The following table lists the parameters defined in `CompanyInterface`.
 
-Name | Description | Format | Requirements
---- | --- | --- |---
-`quoteId` | Identifies the target quote for the operation. | integer | Required
-`quoteName` | The name of the quote to be created. | string | Required
-`comment` | The comment to add to the quote. | string | Optional
-`files` | An array of files to add to the quote | array | Optional
+| Name | Description | Format | Requirements |
+| --- | --- | --- |--- |
+| `quoteId` | Identifies the target quote for the operation. | integer | Required |
+| `quoteName` | The name of the quote to be created. | string | Required |
+| `comment` | The comment to add to the quote. | string | Optional |
+| `files` | An array of files to add to the quote | array | Optional |
 
 The buyer or the seller can optionally attach up to 10 files to provide details about the quote. Each file must be converted into base64.
 
 The `files` array contains the following parameters
 
-Name | Description | Format | Requirements
---- | --- | --- |---
-`base64_encoded_data` | A string in base 64 that defines the contents of the added file | string | Required
-`type` | Defines the type of file, such as `text/plain` or `application/pdf`| string | Optional
-`name` | The name of the file to be uploaded, such as `quote.txt` or `quote.pdf`. | string | Required
+| Name | Description | Format | Requirements |
+| --- | --- | --- |--- |
+| `base64_encoded_data` | A string in base 64 that defines the contents of the added file | string | Required |
+| `type` | Defines the type of file, such as `text/plain` or `application/pdf`| string | Optional |
+| `name` | The name of the file to be uploaded, such as `quote.txt` or `quote.pdf`. | string | Required |
 
 ### Request a negotiable quote
 

@@ -128,13 +128,13 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Cart does not contain products.` | The coupons cannot be applied to an empty cart.
-`Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` table.
-`Required parameter "cart_id" is missing` | The required `cart_id` argument contains an empty value.
-`Required parameter "coupon_codes" is missing` | The required `coupon_codes` argument contains an empty value.
-`The following coupon codes could not be applied:.` | The entered coupon codes are not applicable. Check the existing shopping cart price rules for details.
-`The current user cannot perform operations on cart XXX` | An unauthorized user (guest) tried to add the product into a customer's cart, or an authorized user (customer) tried to add the product into the cart of another customer.
-`The cart isn't active.` | The cart is not active
-`Maximum allowed number of applied coupons was exceeded.` | The customer's cart has exceeded the maximum number of applicable coupons.
+| Error | Description |
+| --- | --- |
+| `Cart does not contain products.` | The coupons cannot be applied to an empty cart. |
+| `Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` table. |
+| `Required parameter "cart_id" is missing` | The required `cart_id` argument contains an empty value. |
+| `Required parameter "coupon_codes" is missing` | The required `coupon_codes` argument contains an empty value. |
+| `The following coupon codes could not be applied:.` | The entered coupon codes are not applicable. Check the existing shopping cart price rules for details. |
+| `The current user cannot perform operations on cart XXX` | An unauthorized user (guest) tried to add the product into a customer's cart, or an authorized user (customer) tried to add the product into the cart of another customer. |
+| `The cart isn't active.` | The cart is not active |
+| `Maximum allowed number of applied coupons was exceeded.` | The customer's cart has exceeded the maximum number of applicable coupons. |

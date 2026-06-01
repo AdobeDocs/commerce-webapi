@@ -46,10 +46,10 @@ mutation, the `payment_method` object must contain a [`braintree_cc_vault`](#bra
 
 The `braintree_cc_vault` object must contain the following attributes:
 
-Attribute |  Data Type | Description
---- | --- | ---
-`public_hash` | String! | Required input for Magento_Vault public hash for the selected stored payment method
-`device_data` | String | Optional. JSON-encoded device data for Kount integration
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `public_hash` | String! | Required input for Magento_Vault public hash for the selected stored payment method |
+| `device_data` | String | Optional. JSON-encoded device data for Kount integration |
 
 ### Example Usage
 

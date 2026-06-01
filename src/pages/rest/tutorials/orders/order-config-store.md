@@ -17,13 +17,13 @@ The default Luma store needs additional configuration to run the REST calls ment
 
 Since the Luma store is for demonstration purposes only, it is not set up to handle credit card payments. However, it can simulate any of the following offline payment methods:
 
-Payment type | Configuration name | Enabled by default?
---- | --- | ---
-Check/Money Order | `checkmo` | Yes
-Bank Transfer Payment | `banktransfer` | No
-Cash on Delivery | `cashondelivery` | No
-Purchase Order | `purchaseorder` | No
-Zero Subtotal Checkout | `free` | Yes
+| Payment type | Configuration name | Enabled by default? |
+| --- | --- | --- |
+| Check/Money Order | `checkmo` | Yes |
+| Bank Transfer Payment | `banktransfer` | No |
+| Cash on Delivery | `cashondelivery` | No |
+| Purchase Order | `purchaseorder` | No |
+| Zero Subtotal Checkout | `free` | Yes |
 
 In this tutorial, configure Adobe Commerce to accept bank transfer payments. To allow bank transfer payments (or any other offline payment method) as a payment method, log in to Admin and select **Stores** > **Settings** > **Configuration** > **Sales** > **Payment Methods**. Then enable the payment method and click **Save**.
 
@@ -41,11 +41,11 @@ If an order contains one or more simple, configurable, bundle, or group products
 
 Since we are not actually shipping any products in this tutorial, we do not need to set up an account with a shipping company such as UPS or Federal Express. Instead, we can use the offline delivery methods that are configured by default.
 
-Shipping type | Configuration name | Enabled by default?
---- | --- | ---
-Flat rate | `flatrate` | Yes
-Table rate | `tablerate` | Yes
-Free shipping | `freeshipping` | No
+| Shipping type | Configuration name | Enabled by default? |
+| --- | --- | --- |
+| Flat rate | `flatrate` | Yes |
+| Table rate | `tablerate` | Yes |
+| Free shipping | `freeshipping` | No |
 
 If you want to change which offline delivery methods are available, select **Stores** > Settings > **Configuration** > **Sales** > **Delivery Methods** in Admin. Enable or disable the delivery methods as desired, then click **Save**.
 

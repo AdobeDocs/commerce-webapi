@@ -39,35 +39,35 @@ GET /V1/inventory/sources
 
 **SourceInterface parameters:**
 
-Name | Description | Type | Requirements
---- | --- | --- | ---
-`source_code` | A unique identifier for the source | String | Required to create a source. This value cannot be changed with a PUT call.
-`name` | A unique display name for the source. | String | Required for all POST and PUT calls
-`email` | The email for the source's contact | String | Optional
-`contact_name` | The name of the contact for the source | String | Optional
-`enabled` | Indicates whether the source is enabled. The default value is `true`. | Boolean | Optional
-`description` | A description of the source (Maximum: 1000 characters)| String | Optional
-`latitude` | The latitude of the source's physical location. The value, along with the `longitude` value, could be used to determine the closest source to a customer's shipping address. | Float | Optional
-`longitude` |The latitude of the source's physical location. | Float | Optional
-`country_id` | The country ID of the source's physical location | String | Required for all POST and PUT calls.
-`region_id` | The region ID of the state or province of the source  | Integer | Optional
-`region` | The region name for countries whose provinces are not defined in Commerce | String | Optional
-`city` | Th city in which the source is located | String | Optional
-`street` | The physical street address of the source | String | Optional
-`postcode` | The zip or postal code of the source's physical address | String | Required for all POST and PUT calls
-`phone` | The contact's phone number | String | Optional
-`fax` | The contact's fax number | String | Optional
-`use_default_carrier_config` | Reserved for future use | Boolean | Optional
-`carrier_code` | Reserved for future use | String | Optional
-`position` | Reserved for future use | Integer | Optional
+| Name | Description | Type | Requirements |
+| --- | --- | --- | --- |
+| `source_code` | A unique identifier for the source | String | Required to create a source. This value cannot be changed with a PUT call. |
+| `name` | A unique display name for the source. | String | Required for all POST and PUT calls |
+| `email` | The email for the source's contact | String | Optional |
+| `contact_name` | The name of the contact for the source | String | Optional |
+| `enabled` | Indicates whether the source is enabled. The default value is `true`. | Boolean | Optional |
+| `description` | A description of the source (Maximum: 1000 characters)| String | Optional |
+| `latitude` | The latitude of the source's physical location. The value, along with the `longitude` value, could be used to determine the closest source to a customer's shipping address. | Float | Optional |
+| `longitude` |The latitude of the source's physical location. | Float | Optional |
+| `country_id` | The country ID of the source's physical location | String | Required for all POST and PUT calls. |
+| `region_id` | The region ID of the state or province of the source  | Integer | Optional |
+| `region` | The region name for countries whose provinces are not defined in Commerce | String | Optional |
+| `city` | Th city in which the source is located | String | Optional |
+| `street` | The physical street address of the source | String | Optional |
+| `postcode` | The zip or postal code of the source's physical address | String | Required for all POST and PUT calls |
+| `phone` | The contact's phone number | String | Optional |
+| `fax` | The contact's fax number | String | Optional |
+| `use_default_carrier_config` | Reserved for future use | Boolean | Optional |
+| `carrier_code` | Reserved for future use | String | Optional |
+| `position` | Reserved for future use | Integer | Optional |
 
 **In-Store Pickup functionality enhance Sources with next extension attributes:**
 
-Name | Description | Type | Requirements
---- | --- | --- | ---
-`is_pickup_location_active` | Indicates whether a source can be used as a pickup location | Boolean | Optional
-`frontend_name` | The pickup location name. This value is used only on the Storefront. | String | Optional
-`frontend_description` | The pickup location description. It is used only on the Storefront. | String | Optional
+| Name | Description | Type | Requirements |
+| --- | --- | --- | --- |
+| `is_pickup_location_active` | Indicates whether a source can be used as a pickup location | Boolean | Optional |
+| `frontend_name` | The pickup location name. This value is used only on the Storefront. | String | Optional |
+| `frontend_description` | The pickup location description. It is used only on the Storefront. | String | Optional |
 
 ## Create a source
 

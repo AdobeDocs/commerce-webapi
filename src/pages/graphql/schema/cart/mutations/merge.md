@@ -174,10 +174,10 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Current user does not have an active cart.` | The `mergeCarts` mutation deactivates the guest cart specified in the `source_cart_id` after merging. The guest cannot make any further operations with it.
-`Required parameter "source_cart_id" is missing` | The `source_cart_id` attribute contains an empty value.
-`The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table, or you tried to merge two guest carts.
-`The current user cannot perform operations on cart` | The authorized customer tried to merge a guest cart into the cart of another customer.
-`Could not create empty cart for customer` | The system could not create an empty cart for the logged-in customer
+| Error | Description |
+| --- | --- |
+| `Current user does not have an active cart.` | The `mergeCarts` mutation deactivates the guest cart specified in the `source_cart_id` after merging. The guest cannot make any further operations with it. |
+| `Required parameter "source_cart_id" is missing` | The `source_cart_id` attribute contains an empty value. |
+| `The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table, or you tried to merge two guest carts. |
+| `The current user cannot perform operations on cart` | The authorized customer tried to merge a guest cart into the cart of another customer. |
+| `Could not create empty cart for customer` | The system could not create an empty cart for the logged-in customer |

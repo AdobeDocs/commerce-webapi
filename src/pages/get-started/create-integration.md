@@ -52,6 +52,7 @@ To develop a module, you must:
    |---|---|
    | name | A string that uniquely identifies the module. |
    | setup_version | The version of Commerce the component uses |
+
    The following example shows an example `etc/module.xml` file.
 
    ```xml

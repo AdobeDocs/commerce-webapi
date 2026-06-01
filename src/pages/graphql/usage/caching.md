@@ -149,10 +149,10 @@ The `X-Magento-Vary` cache cookie is not supported for GraphQL. The `Store` and 
 
 In developer mode, the application returns several headers that could be useful for debugging caching problems. These headers are not specific to GraphQL.
 
-Header | Description
---- |---
-`X-Magento-Cache-Debug` | HIT (the page was loaded from cache) or MISS (the page was not loaded from cache.
-`X-Magento-Tags` | A list of cache tags that correspond to the catalog, category, or CMS items returned in the query. The application caches these items.
+| Header | Description |
+| --- |--- |
+| `X-Magento-Cache-Debug` | HIT (the page was loaded from cache) or MISS (the page was not loaded from cache. |
+| `X-Magento-Tags` | A list of cache tags that correspond to the catalog, category, or CMS items returned in the query. The application caches these items. |
 
 ## Cache invalidation
 

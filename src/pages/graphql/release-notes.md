@@ -47,11 +47,11 @@ The [Magento Open Source 2.4.0 Release Notes](https://experienceleague.adobe.com
 
 The following queries and mutations have been deprecated:
 
-Deprecated entity | Use this instead
---- | ---
-`category` query | `categoryList` query
-`setPaymentMethodOnCartAndPlaceOrder` mutation | Run the `setPaymentMethodOnCart` and `placeOrder` mutations in the same request
-`wishlist` query | `customer` query
+| Deprecated entity | Use this instead |
+| --- | --- |
+| `category` query | `categoryList` query |
+| `setPaymentMethodOnCartAndPlaceOrder` mutation | Run the `setPaymentMethodOnCart` and `placeOrder` mutations in the same request |
+| `wishlist` query | `customer` query |
 
 ## Adobe Commerce and Magento Open Source 2.3.3
 

@@ -73,11 +73,11 @@ The following example checks whether the logged-in customer is subscribed to a s
 
 ## Errors
 
-Error | Description
---- | ---
-`Customer is not logged in.` | The request does not include a valid customer authentication token.
-`Required parameter "sku" is missing.` | The `sku` field was not provided in the input.
-`Unable to check if subscribed to stock alert. No such entity.` | No product exists with the specified SKU.
+| Error | Description |
+| --- | --- |
+| `Customer is not logged in.` | The request does not include a valid customer authentication token. |
+| `Required parameter "sku" is missing.` | The `sku` field was not provided in the input. |
+| `Unable to check if subscribed to stock alert. No such entity.` | No product exists with the specified SKU. |
 
 ## Related topics
 

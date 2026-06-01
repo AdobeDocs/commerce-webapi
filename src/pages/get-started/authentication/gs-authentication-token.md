@@ -20,11 +20,11 @@ To make a web API call from a client such as a mobile application, you must supp
 
 Adobe Commerce and Magento Open Source issue the following types of access tokens:
 
-Token type | Description | Default lifetime
---- | --- | ---
-Integration | The merchant determines which Commerce resources the integration can access. | Indefinite. It lasts until it is manually revoked.
-Admin | The merchant determines which Commerce resources an admin user has access to. | 4 hours
-Customer | Commerce grants access to resources with the `anonymous` or `self` permission. Merchants cannot edit these settings. | 1 hour
+| Token type | Description | Default lifetime |
+| --- | --- | --- |
+| Integration | The merchant determines which Commerce resources the integration can access. | Indefinite. It lasts until it is manually revoked. |
+| Admin | The merchant determines which Commerce resources an admin user has access to. | 4 hours |
+| Customer | Commerce grants access to resources with the `anonymous` or `self` permission. Merchants cannot edit these settings. | 1 hour |
 
 ## Integration tokens
 
@@ -172,13 +172,13 @@ The web API framework allows *guest users* to access resources that are configur
 
 The following table lists endpoints and services that can be used to get an authentication token. Admin accounts must be authenticated with a [two factor authentication](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication/) provider. Some providers may require multiple calls.
 
-Token type |REST| SOAP
----|---|---
-Admin with Google Authenticator | `POST /V1/tfa/provider/google/authenticate` | `twoFactorAuthGoogleAuthenticateV1`
-Admin with Duo Security | `POST /V1/tfa/provider/duo-security/authenticate` | `twoFactorAuthDuoAuthenticateV1`
-Admin with Authy | `POST /V1/tfa/provider/authy/authenticate` | `twoFactorAuthAuthyAuthenticateV1`
-Admin with U2F | `POST /V1/tfa/provider/u2fkey/verify` | `twoFactorAuthU2fKeyAuthenticateV1`
-Customer | `POST /V1/integration/customer/token` | `integrationCustomerTokenServiceV1`
+| Token type |REST| SOAP |
+| ---|---|--- |
+| Admin with Google Authenticator | `POST /V1/tfa/provider/google/authenticate` | `twoFactorAuthGoogleAuthenticateV1` |
+| Admin with Duo Security | `POST /V1/tfa/provider/duo-security/authenticate` | `twoFactorAuthDuoAuthenticateV1` |
+| Admin with Authy | `POST /V1/tfa/provider/authy/authenticate` | `twoFactorAuthAuthyAuthenticateV1` |
+| Admin with U2F | `POST /V1/tfa/provider/u2fkey/verify` | `twoFactorAuthU2fKeyAuthenticateV1` |
+| Customer | `POST /V1/integration/customer/token` | `integrationCustomerTokenServiceV1` |
 
 For most web API calls, you supply this token in the `Authorization` request header with the `Bearer` HTTP authorization scheme to prove your identity. By default, an admin token is valid for 4 hours, while a customer token is valid for 1 hour. You can change these values from Admin by selecting **Stores** > **Settings** > **Configuration** > **Services** > **OAuth** > **Access Token Expiration**.
 
@@ -200,11 +200,11 @@ No dependency exists between IMS access token lifetime and Commerce session life
 
 A access token request contains three basic elements:
 
-Component | Specifies
---- | ---
-Endpoint |  A combination of the *server* that fulfills the request, the web service, and the `resource` against which the request is being made.\<br/\>\<br/\>For example, in the `POST \<host\>/rest/<store_code>/V1/integration/customer/token` endpoint:\<br/\>The server is `magento.host/index.php/`,\<br/\> the web service is `rest`.\<br/\> and the resource is `/V1/integration/customer/token`.
-Content type | The content type of the request body. Set this value to either `"Content-Type:application/json"` or `"Content-Type:application/xml"`.
-Credentials | The username and password for a Commerce account.\<br/\>\<br/\>To specify these credentials in a JSON request body, include code similar to the following in the call: \<br/\>\<br/\>`{"username":"<USER-NAME>", "password":"\<PASSWORD\>"}`\<br/\>\<br/\>To specify these credentials in XML, include code similar to the following in the call:\<br/\>\<br/\>`\<login\>\<username\>customer1\</username\>\<password\>customer1pw\</password\>\</login\>`
+| Component | Specifies |
+| --- | --- |
+| Endpoint |  A combination of the *server* that fulfills the request, the web service, and the `resource` against which the request is being made.\<br/\>\<br/\>For example, in the `POST \<host\>/rest/<store_code>/V1/integration/customer/token` endpoint:\<br/\>The server is `magento.host/index.php/`,\<br/\> the web service is `rest`.\<br/\> and the resource is `/V1/integration/customer/token`. |
+| Content type | The content type of the request body. Set this value to either `"Content-Type:application/json"` or `"Content-Type:application/xml"`. |
+| Credentials | The username and password for a Commerce account.\<br/\>\<br/\>To specify these credentials in a JSON request body, include code similar to the following in the call: \<br/\>\<br/\>`{"username":"<USER-NAME>", "password":"\<PASSWORD\>"}`\<br/\>\<br/\>To specify these credentials in XML, include code similar to the following in the call:\<br/\>\<br/\>`\<login\>\<username\>customer1\</username\>\<password\>customer1pw\</password\>\</login\>` |
 
 ### Examples
 
