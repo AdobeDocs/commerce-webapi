@@ -265,4 +265,3 @@ The `swatch options` are the possible values of the attribute.
   }
 }
 ```
-

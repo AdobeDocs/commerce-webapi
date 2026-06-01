@@ -9,7 +9,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-
 # Step 6. Prepare for checkout
 
 Now that all the items have been added to the cart, we can prepare the order for checkout. This process includes the following steps:
@@ -65,7 +64,6 @@ The payload contains the shipping address.
 }
 ```
 
-
 **Response:**
 
 Note that the cost for the `flatrate` shipping method is $15. The Sprite Yoga Companion Kit bundled product counts as one item. The Advanced Pilates & Yoga item does not have a shipping charge because the customer downloads this item.
@@ -102,7 +100,6 @@ Note that the cost for the `flatrate` shipping method is $15. The Sprite Yoga Co
   }
 ]
 ```
-
 
 ### Set shipping and billing information
 
@@ -168,7 +165,6 @@ Use the `V1/guest-carts/\<cartId\>/shipping-information` endpoint to set the bil
   }
 }
 ```
-
 
 **Response:**
 
@@ -346,7 +342,6 @@ The available payment methods are `banktransfer` and `checkmo`. The customer wil
   }
 }
 ```
-
 
 <InlineAlert variant="info" slots="text"/>
 

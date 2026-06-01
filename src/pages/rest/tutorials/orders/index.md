@@ -9,7 +9,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-
 # Order processing tutorial
 
 This tutorial shows a system integrator how REST APIs are used in the lifecycle of an order, including configuring a store and creating a customer; creating quotes, orders, invoices, and shipments; preparing for checkout; and more order-related tasks.

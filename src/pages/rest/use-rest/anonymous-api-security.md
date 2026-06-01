@@ -10,7 +10,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-
 # Restricting access to anonymous web APIs
 
 Adobe Commerce allows some web APIs to be accessed by unauthenticated (anonymous) users. Many of these APIs allow a customer to have a robust shopping experience on the website without having to log in.

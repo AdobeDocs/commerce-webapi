@@ -147,4 +147,3 @@ The following query returns information about the customizable options configure
   }
 }
 ```
-

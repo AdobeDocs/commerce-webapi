@@ -91,4 +91,3 @@ The response contains the calculated total cost based on the selected location a
   }
 }
 ```
-

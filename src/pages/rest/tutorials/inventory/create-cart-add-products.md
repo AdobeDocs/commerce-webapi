@@ -10,7 +10,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-
 # Step 7. Create a cart and add products to it
 
 Next, we'll create a cart and add the items that we modified in [Step 5. Reassign products to custom sources](reassign-products-to-another-source.md).

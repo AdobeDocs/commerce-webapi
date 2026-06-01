@@ -658,4 +658,3 @@ The following example deletes the previously-defined cost values for a simple an
 `true`
 // indicating the cost values were deleted
 ```
-

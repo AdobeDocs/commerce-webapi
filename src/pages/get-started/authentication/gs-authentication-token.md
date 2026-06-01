@@ -164,7 +164,6 @@ $request->headers[] = $oauthSigner->sign(
 echo send($request);
 ```
 
-
 ## Admin and customer access tokens
 
 Commerce provides a separate token service for administrators and customers. When you request a token from one of these services, the service returns a unique access token in exchange for an account's username and password.

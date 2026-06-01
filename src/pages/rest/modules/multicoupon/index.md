@@ -60,4 +60,3 @@ The `POST /V2/carts/:cartId/deleteByCodes` and `POST /V2/carts/mine/deleteByCode
   ]
 }
 ```
-

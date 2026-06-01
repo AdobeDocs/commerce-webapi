@@ -91,4 +91,3 @@ curl --location 'https://<server>.api.commerce.adobe.com/<tenant-id>/<endpoint>'
   --header 'Store: <all | default | <store_view_code>>'
   ....
 ```
-

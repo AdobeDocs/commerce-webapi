@@ -317,4 +317,3 @@ To install custom attributes in Adobe Commerce:
    ```bash
    bin/magento setup:upgrade && bin/magento cache:clean
    ```
-

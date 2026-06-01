@@ -324,4 +324,3 @@ The following query returns the store's order cancellation settings, indicating 
   }
 }
 ```
-

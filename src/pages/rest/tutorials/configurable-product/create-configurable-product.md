@@ -209,7 +209,6 @@ Before you using this code sample, verify that the attribute values are the same
 }
 ```
 
-
 ## Verify this step
 
 *  Log in to the Luma website and select **Catalog > Products**. The product appears in the grid.

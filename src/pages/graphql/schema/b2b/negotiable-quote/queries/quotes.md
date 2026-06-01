@@ -171,4 +171,3 @@ The following example returns detailed information about all negotiable quotes t
   }
 }
 ```
-

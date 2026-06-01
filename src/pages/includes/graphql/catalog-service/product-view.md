@@ -152,7 +152,7 @@ Field | Data Type | Description
 `multi` | Boolean | Indicates whether the option allows multiple choices.
 `required` | Boolean | Indicates whether the option must be selected.
 `title` | String | The display name of the option.
-`values` | [`[ProductViewOptionValue!]`](#productviewoptionvalue-Interface) | List of available option values.
+`values` | [`[ProductViewOptionValue!]`](#productviewoptionvalue-interface) | List of available option values.
 
 ### ProductViewOptionValue interface
 

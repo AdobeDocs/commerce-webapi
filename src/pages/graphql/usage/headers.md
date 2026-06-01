@@ -76,4 +76,3 @@ Use the curl command with a separate `-H` argument to specify each request heade
 ```bash
 curl 'http://magento.config/graphql' -H 'Authorization: Bearer hoyz7k697ubv5hcpq92yrtx39i7x10um' -H 'Content-Type: application/json'  --data-binary '{"query":"query {\n  customer {\n    firstname\n    lastname\n    email\n  }\n}"}'
 ```
-

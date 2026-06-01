@@ -87,4 +87,3 @@ The following query returns the customer's wish list:
   }
 }
 ```
-

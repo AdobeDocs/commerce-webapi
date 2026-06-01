@@ -166,4 +166,3 @@ The following query returns the top-level categories (as well as two levels of c
   }
 }
 ```
-

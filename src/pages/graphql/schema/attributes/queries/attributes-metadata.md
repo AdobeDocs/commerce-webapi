@@ -120,4 +120,3 @@ Attribute | Data type | Description
 ## Output attributes
 
 <Fragment src="../../../../includes/graphql/attribute-metadata.md"/>
-

@@ -213,7 +213,6 @@ Before using this code sample, verify that the attribute values are the same in 
 }
 ```
 
-
 ## Create the other simple products
 
 Repeat the call with the following changes to the payload:

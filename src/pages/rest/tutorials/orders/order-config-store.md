@@ -9,7 +9,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-
 # Step 1. Configure the store
 
 The default Luma store needs additional configuration to run the REST calls mentioned in this tutorial.

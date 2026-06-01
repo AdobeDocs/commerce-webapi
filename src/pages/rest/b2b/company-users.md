@@ -191,4 +191,3 @@ Commerce locks the deleted user's quotes and changes their status to Closed. The
 ```json
 // `true`, indicating the request was successful
 ```
-

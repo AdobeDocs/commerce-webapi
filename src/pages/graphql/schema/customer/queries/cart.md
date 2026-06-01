@@ -81,4 +81,3 @@ The following query lists the products in the logged-in customer's cart:
   }
 }
 ```
-

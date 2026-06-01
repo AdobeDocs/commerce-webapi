@@ -399,7 +399,7 @@ query {
 }
 ```
 
-### Retrieve orders based on scope argument:
+### Retrieve orders based on scope argument
 
 The following query returns all customer orders, across all store view codes. The value of GLOBAL in the scope field overrides the store view code specified in the Store header.
 

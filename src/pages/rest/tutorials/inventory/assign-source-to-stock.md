@@ -10,7 +10,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-
 # Step 4. Link stocks and sources
 
 This step links the sources we created in [Step 2. Create sources](/rest/tutorials/inventory/create-sources.md) with the stocks we created in [Step 3. Create stocks](/rest/tutorials/inventory/create-stock.md).

@@ -145,4 +145,3 @@ The following query returns the list of attributes metadata associated to the fo
   }
 }
 ```
-

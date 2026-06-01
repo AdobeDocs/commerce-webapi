@@ -191,4 +191,3 @@ The following query returns invoice details about order ID `000000005`. The `Bun
   }
 }
 ```
-

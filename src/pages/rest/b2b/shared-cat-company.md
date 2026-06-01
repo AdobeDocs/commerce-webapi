@@ -118,4 +118,3 @@ The `GET` call returns an array of company IDs.
 ```json
 "[\"1\",\"2\"]"
 ```
-

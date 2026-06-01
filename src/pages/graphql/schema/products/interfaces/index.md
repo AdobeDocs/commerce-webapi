@@ -49,4 +49,3 @@ The `custom_attributesV2` attribute is defined in `ProductInterface`. In this ex
     }
 }
 ```
-

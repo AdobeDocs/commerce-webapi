@@ -22,7 +22,9 @@ This document lists the PHP, REST, and SOAP calls that indicate they return deta
 If the attribute is not required (is_required = false) and has a null value, then the attribute is excluded from the REST/SOAP response.
 
 ## Customer module
+
 ### Magento\Customer\Api\CustomerRepositoryInterface
+
 Language | Does not return detailed attributes | Returns detailed attributes
 --- | --- | ---
 PHP | `CustomerRepositoryInterface::getList($searchCriteria)` | `CustomerRepositoryInterface::getById($customerId)`
@@ -30,6 +32,7 @@ REST | `/V1/customers/search` | `/V1/customers/{id}`
 SOAP | `customerCustomerRepositoryV1GetList` | `customerCustomerRepositoryV1GetById`
 
 ### Magento\Customer\Api\GroupRepositoryInterface
+
 Language | Does not return detailed attributes | Returns detailed attributes
 --- | --- | ---
 PHP | `GroupRepositoryInterface::getList($searchCriteria)` | `GroupRepositoryInterface::getById($id)`
@@ -37,7 +40,9 @@ REST | `/V1/customerGroups/search` | `/V1/customerGroups/{id}`
 SOAP | `customerGroupRepositoryV1GetList` | `customerGroupRepositoryV1GetById`
 
 ## EAV module
+
 ### Magento\Eav\Api\AttributeSetRepositoryInterface
+
 Language | Does not return detailed attributes | Returns detailed attributes
 --- | --- | ---
 PHP |  `AttributeSetRepositoryInterface::getList($entityTypeCode, $searchCriteria)` | `AttributeSetRepositoryInterface::get($attributeSetId)`
@@ -45,7 +50,9 @@ REST | `/V1/eav/attribute-sets/list` | `/V1/eav/attribute-sets/{attributeSetId}`
 SOAP | `eavAttributeSetRepositoryV1GetList` | `eavAttributeSetRepositoryV1Get`
 
 ## GiftWrapping module (Enterprise Edition)
+
 ### Magento\GiftWrapping\Api\WrappingRepositoryInterface
+
 Language | Does not return detailed attributes | Returns detailed attributes
 --- | --- | ---
 PHP | `WrappingRepositoryInterface::getList($searchCriteria)` | `WrappingRepositoryInterface::get($ruleId)`
@@ -53,7 +60,9 @@ REST | `/V1/gift-wrappings` | `/V1/gift-wrappings/:id`
 SOAP | `giftWrappingWrappingRepositoryV1GetList` | `giftWrappingWrappingRepositoryV1Get`
 
 ## Quote module
+
 ### Magento\Quote\Api\CartRepositoryInterface
+
 Language | Does not return detailed attributes | Returns detailed attributes
 --- | --- | ---
 PHP | `CartRepositoryInterface::getList($searchCriteria)` | `CartRepositoryInterface::get($cartId)`
@@ -61,6 +70,7 @@ REST | `/V1/carts/search` | `/V1/carts/{cartId}`
 SOAP | `quoteCartRepositoryV1GetList` | `quoteCartRepositoryV1Get`
 
 ### Magento\Quote\Api\GuestPaymentMethodManagementInterface
+
 Language | Does not return detailed attributes | Returns detailed attributes
 --- | --- | ---
 PHP | `GuestPaymentMethodManagementInterface::getList($cartId)` | `GuestPaymentMethodManagementInterface::get($cartId)`
@@ -68,6 +78,7 @@ REST | `/V1/guest-carts/:cartId/payment-methods` | `/V1/guest-carts/:cartId/sele
 SOAP | `quoteGuestPaymentMethodManagementV1GetList` | `quoteGuestPaymentMethodManagementV1Get`
 
 ### Magento\Quote\Api\PaymentMethodManagementInterface
+
 Language | Does not return detailed attributes | Returns detailed attributes
 --- | --- | ---
 PHP | `PaymentMethodManagementInterface::getList($cartId)` | `PaymentMethodManagementInterface::get($cartId)`
@@ -81,7 +92,9 @@ REST | `/V1/carts/mine/payment-methods` | `/V1/carts/mine/selected-payment-metho
 SOAP | `quotePaymentMethodManagementV1GetList` | `quotePaymentMethodManagementV1Get`
 
 ## Sales module
+
 ### Magento\Sales\Api\CreditmemoRepositoryInterface
+
 Language | Does not return detailed attributes | Returns detailed attributes
 --- | --- | ---
 PHP | `CreditmemoRepositoryInterface::getList($searchCriteria)` | `CreditmemoRepositoryInterface::get($id)`
@@ -89,6 +102,7 @@ REST | `/V1/creditmemos` | `/V1/creditmemo/{id}`
 SOAP | `salesCreditmemoRepositoryV1GetList` | `salesCreditmemoRepositoryV1Get`
 
 ### Magento\Sales\Api\InvoiceRepositoryInterface
+
 Language | Does not return detailed attributes | Returns detailed attributes
 --- | --- | ---
 PHP | `InvoiceRepositoryInterface::getList($searchCriteria)` | `InvoiceRepositoryInterface::get($id)`
@@ -96,6 +110,7 @@ REST | `/V1/invoices` | `/V1/invoices/{id}`
 SOAP | `salesInvoiceRepositoryV1GetList` | `salesInvoiceRepositoryV1Get`
 
 ### Magento\Sales\Api\OrderItemRepositoryInterface
+
 Language | Does not return detailed attributes | Returns detailed attributes
 --- | --- | ---
 PHP | `OrderItemRepositoryInterface::getList($searchCriteria)` | `OrderItemRepositoryInterface::get($id)`
@@ -103,6 +118,7 @@ REST | `/V1/orders/items` | `/V1/orders/items/{id}`
 SOAP | `salesOrderItemRepositoryV1GetList` | `salesOrderItemRepositoryV1Get`
 
 ### Magento\Sales\Api\OrderRepositoryInterface
+
 Language | Does not return detailed attributes | Returns detailed attributes
 --- | --- | ---
 PHP | `OrderRepositoryInterface::getList($searchCriteria)` | `OrderRepositoryInterface::get($id)`
@@ -110,6 +126,7 @@ REST | `/V1/orders` | `/V1/orders/{id}`
 SOAP | `salesOrderRepositoryV1GetList` | `salesOrderRepositoryV1GetList`
 
 ### Magento\Sales\Api\ShipmentRepositoryInterface
+
 Language | Does not return detailed attributes | Returns detailed attributes
 --- | --- | ---
 PHP | `ShipmentRepositoryInterface::getList($searchCriteria)` | `ShipmentRepositoryInterface::get($id)`
@@ -117,6 +134,7 @@ REST | `/V1/shipments` | `/V1/shipment/{id}`
 SOAP | `salesShipmentRepositoryV1GetList` | `salesShipmentRepositoryV1Get`
 
 ### Magento\SalesRule\Api\TransactionRepositoryInterface
+
 Language | Does not return detailed attributes | Returns detailed attributes
 --- | --- | ---
 PHP | `TransactionRepositoryInterface::getList($searchCriteria)` | `TransactionRepositoryInterface:get($id)`
@@ -124,7 +142,9 @@ REST | `/V1/transactions` | `/V1/transactions/{id}`
 SOAP | `salesTransactionRepositoryV1GetList` | `salesTransactionRepositoryV1Get`
 
 ## SalesRule module
+
 ### Magento\SalesRule\Api\CouponRepositoryInterface
+
 Language | Does not return detailed attributes | Returns detailed attributes
 --- | --- | ---
 PHP | `CouponRepositoryInterface::getList($searchCriteria)` | `CouponRepositoryInterface::getById($couponId)`
@@ -132,6 +152,7 @@ REST |  `/V1/coupons/search` | `/V1/coupons/{couponId}`
 SOAP | `salesRuleCouponRepositoryV1GetList` | `salesRuleCouponRepositoryV1GetById`
 
 ### Magento\SalesRule\Api\RuleRepositoryInterface
+
 Language | Does not return detailed attributes | Returns detailed attributes
 --- | --- | ---
 PHP | `RuleRepositoryInterface::getList($searchCriteria)` | `RuleRepositoryInterface::getById($ruleId)`
@@ -139,7 +160,9 @@ REST |  `/V1/salesRules/search` | `/V1/salesRules/{ruleId}`
 SOAP | `salesRuleRuleRepositoryV1GetListRequest` | `salesRuleRuleRepositoryV1GetById`
 
 ## Tax module
+
 ### Magento\Tax\Api\TaxClassRepositoryInterface
+
 Language | Does not return detailed attributes | Returns detailed attributes
 --- | --- | ---
 PHP | `TaxClassRepositoryInterface::getList($searchCriteria)` | `TaxClassRepositoryInterface::get($taxClassId)`
@@ -147,6 +170,7 @@ REST | `/V1/taxClasses/search` | `/V1/taxClass/{rateId}`
 SOAP | `taxTaxClassRepositoryV1GetList` | `taxTaxClassRepositoryV1Get`
 
 ### Magento\Tax\Api\TaxRateRepositoryInterface
+
 Language | Does not return detailed attributes | Returns detailed attributes
 --- | --- | ---
 PHP | `TaxRateRepositoryInterface::getList($searchCriteria)` | `TaxRateRepositoryInterface::get($rateId)`
@@ -154,6 +178,7 @@ REST | `/V1/taxRates/search` | `/V1/taxRates/{rateId}`
 SOAP | `taxTaxRateRepositoryV1GetList` | `taxTaxRateRepositoryV1Get`
 
 ### Magento\Tax\Api\TaxRuleRepositoryInterface
+
 Language | Does not return detailed attributes | Returns detailed attributes
 --- | --- | ---
 PHP | `TaxRuleRepositoryInterface::getList($searchCriteria)` | `TaxRuleRepositoryInterface::get($ruleId)`

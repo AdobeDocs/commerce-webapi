@@ -161,4 +161,3 @@ Authorization Bearer <customer token>
 ```json
 // an empty array
 ```
-

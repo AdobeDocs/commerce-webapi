@@ -250,4 +250,3 @@ The following example returns `true` if the customer has the purchase order func
   }
 }
 ```
-

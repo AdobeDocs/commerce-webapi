@@ -210,4 +210,3 @@ The `GET /V1/inventory/get-sources-assigned-to-stock-ordered-by-priority/:stock_
     }
 ]
 ```
-

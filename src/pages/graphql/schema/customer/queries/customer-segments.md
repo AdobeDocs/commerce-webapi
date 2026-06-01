@@ -44,4 +44,3 @@ The following call returns encoded ID of customer group for logged-in customer o
   }
 }
 ```
-

@@ -81,4 +81,3 @@ The following example returns information about the purchase order approval rule
   }
 }
 ```
-

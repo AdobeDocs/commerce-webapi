@@ -87,4 +87,3 @@ The following query returns information about downloadable product `24-WG085_Gro
   }
 }
 ```
-

@@ -349,4 +349,3 @@ See [Search using REST APIs](../use-rest/performing-searches.md) for information
     "total_count": 2
 }
 ```
-

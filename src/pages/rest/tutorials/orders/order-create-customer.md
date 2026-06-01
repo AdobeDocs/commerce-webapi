@@ -9,7 +9,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-
 # Step 3. Create a customer
 
 Customers can make purchases in three ways:
@@ -73,7 +72,6 @@ It is recommended that you substitute the value of the `email` parameter with a 
 }
 ```
 
-
 **Response:**
 
 Commerce assigned this user `id` value of `2`.
@@ -122,7 +120,6 @@ Commerce assigned this user `id` value of `2`.
   "disable_auto_group_change": 0
 }
 ```
-
 
 You can log in to the Luma store using the username `jdoe@example.com` and password `Password1`.
 

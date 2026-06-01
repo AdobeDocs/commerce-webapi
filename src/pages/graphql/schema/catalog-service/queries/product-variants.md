@@ -68,7 +68,7 @@ Header | Description
 
 `X-Api-Key` | Set this value to the [unique API key](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/user-guides/integration-services/saas#genapikey) generated for your Commerce environment.
 
-###  Find the customer group code
+### Find the customer group code
 
 The customer group code is the encrypted value of the customer group ID, which determines discounts and tax class for pricing contexts. For B2B implementations, the customer group ID also determines the Shared Catalog context.
 
@@ -828,7 +828,7 @@ Field | Data Type | Description
 `multi` | Boolean | Indicates whether the option allows multiple choices.
 `required` | Boolean | Indicates whether the option must be selected.
 `title` | String | The display name of the option.
-`values` | [`[ProductViewOptionValue!]`](#productviewoptionvalue-Interface) | List of available option values.
+`values` | [`[ProductViewOptionValue!]`](#productviewoptionvalue-interface) | List of available option values.
 
 ### ProductViewOptionValue interface
 
@@ -927,4 +927,3 @@ Field | Data Type | Description
 `sku` | String | Product SKU.
 `url` | String | Canonical URL of the product.
 `urlKey` | String | URL key of the product.
-

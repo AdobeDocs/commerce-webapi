@@ -217,4 +217,3 @@ In the following example, an internal URL `support.html` is configured to redire
   }
 }
 ```
-

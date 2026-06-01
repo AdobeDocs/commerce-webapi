@@ -10,7 +10,6 @@ keywords:
 
 [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-
 # User authentication
 
 User authentication enables Commerce administrators to authenticate through Adobe's Identity Management System (IMS). This authentication flow is specifically designed for scenarios where API operations need to be executed with user-specific permissions. When using this method, all API calls are performed within the context of the authenticated admin user's permissions, as defined in the Adobe Admin Console.

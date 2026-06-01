@@ -298,4 +298,3 @@ PUT http://domain.com/rest/default/V1/bundle-products/Desktop-Computer/links/14
 ```json
 true
 ```
-

@@ -299,4 +299,3 @@ Field | Data Type | Description
 `roles` | [String] | Storefront labels assigned during category ingestion that describe visibility and placement. Use them in your storefront logic (for example, show only `active` categories in navigation) or pass matching values in the query `roles` argument to filter results. For example, `active`, `show_in_menu`, `show_on_plp`, or `show_in_search`.
 `urlKey` | String | Category URL key. For example, `electronics`, `clothing`, or `books`.
 `urlPath` | String | Category URL path. For example, `/electronics/laptops`, `/clothing/shirts`, or `/books/fiction`.
-

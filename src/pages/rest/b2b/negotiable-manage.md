@@ -390,4 +390,3 @@ Use the `attachmentContent` request to retrieve the files (in base64 format) att
   ]
 }
 ```
-

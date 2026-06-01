@@ -250,4 +250,3 @@ Refer to the [Order processing tutorial](/rest/tutorials/orders/index.md) for mo
    "quote_id": "3"
 }
 ```
-

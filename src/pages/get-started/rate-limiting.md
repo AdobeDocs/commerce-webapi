@@ -171,25 +171,25 @@ Use the following commands to enable and configure rate limiting:
 1. Enable (`1`) or disable (`0`) rate limiting for placing orders:
 
     ```bash
-    $ bin/magento config:set sales/backpressure/enabled 1
+    bin/magento config:set sales/backpressure/enabled 1
     ```
 
 1. Set the request limit per guest (IP address).
 
     ```bash
-    $ bin/magento config:set sales/backpressure/guest_limit 50
+    bin/magento config:set sales/backpressure/guest_limit 50
     ```
 
 1. Set the request limit for authenticated customers:
 
     ```bash
-    $ bin/magento config:set sales/backpressure/limit 10
+    bin/magento config:set sales/backpressure/limit 10
     ```
 
 1. Set the period of time (in seconds) for the request limit. Supported values `60`, `3600`, `86400` seconds. This time period is multiplied by three to calculate the timeout period:
 
     ```bash
-    $ bin/magento config:set sales/backpressure/period 60
+    bin/magento config:set sales/backpressure/period 60
     ```
 
 The following scenario describes how rate limiting can be configured.
@@ -202,7 +202,7 @@ If you need to check a configuration, use the following CLI command:
 Example:
 
 ```bash
-$ bin/magento config:show | grep backpressure
+bin/magento config:show | grep backpressure
 ```
 
 Response:
@@ -265,4 +265,3 @@ Cache-Control: max-age=0, must-revalidate, no-cache, no-store
     "data":{"placeOrder":null}
 }
 ```
-

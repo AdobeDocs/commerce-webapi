@@ -1000,4 +1000,3 @@ GET /V1/negotiable-carts/:cartId/totals
   }
 }
 ```
-

@@ -9,7 +9,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-
 # Step 5. Add items to the cart
 
 This step shows how to add a simple product, a downloadable product, and a bundle product to the cart.
@@ -318,7 +317,6 @@ The `GET \<host\>/rest/<store_code>/V1/bundle-products/24-WG080/options/all` cal
   }
 ]
 ```
-
 
 For this example, we'll configure the Sprite Yoga Companion Kit as follows:
 

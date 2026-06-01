@@ -109,4 +109,3 @@ For example, to return `GroupedProduct` attributes, construct your query like th
   }
 }
 ```
-

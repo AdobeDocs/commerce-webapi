@@ -270,4 +270,3 @@ The `GET` call returns an array of SKUs.
   "24-MG04"
 ]
 ```
-

@@ -298,4 +298,3 @@ The following query returns breadcrumb information about categories that have th
   }
 }
 ```
-

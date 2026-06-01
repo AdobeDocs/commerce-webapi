@@ -9,7 +9,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-
 # Step 8. Create an invoice
 
 You create an invoice after you receive payment for an order. In this example, the order was paid offline via a bank transfer. Therefore, you must tell Adobe Commerce that payment for the order has been captured.
@@ -286,7 +285,6 @@ You will use the `order_item_id` values to create a shipment in the next step.
   "comments": []
 }
 ```
-
 
 ### Verify this step
 

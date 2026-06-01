@@ -64,7 +64,7 @@ The `product_sku` is the `sku` of the configurable product. The `sku` specified 
 
 If the personalization option is not displayed, go to the **Champ Tee** configuration product page in Admin and set  **Stock Status** to **In Stock**.
 
-## Congratulations! You've finished.
+## Congratulations! You've finished
 
 ### Related topics
 

@@ -60,4 +60,3 @@ mutation ShareRequisitionListByToken {
   }
 }
 ```
-

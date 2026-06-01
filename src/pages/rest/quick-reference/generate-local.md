@@ -9,7 +9,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-
 # Generate a local REST reference
 
 The REST documentation on the Adobe Commerce devdocs website is generated with [Swagger UI](http://swagger.io) using a schema derived from the latest build of Commerce. However, the REST API documentation on devdocs is static in that the Commerce Developers website is not running an instance of Commerce, and there is no live data.

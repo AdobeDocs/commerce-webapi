@@ -9,7 +9,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-
 # Catalog module
 
 The `Catalog` module provides functionality for creating and maintaining products and categories.
@@ -147,4 +146,3 @@ The following example uses the `POST V1/categories` call to assign four custom a
     ]
 }
 ```
-

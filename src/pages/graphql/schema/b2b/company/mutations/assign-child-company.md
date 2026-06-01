@@ -78,4 +78,3 @@ mutation assignChildCompany($parentId: ID!, $childId: ID!) {
   }
 }
 ```
-

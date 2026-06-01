@@ -10,7 +10,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-
 # Step 9. Create an order
 
 The shopping cart contains 71 items totaling $2462. The shipping charges are $350, making the grand total $2812. We're now ready to convert the quote to an order.

@@ -138,4 +138,3 @@ The template subject also supports custom variables. Use `var variableName` and 
    ```html
    {{trans 'You can check the status of your order by [logging into your account](%account_url).' account_url=$this.getUrl($store,'customer/account/',[_nosid:1]) |raw}}
    ```
-

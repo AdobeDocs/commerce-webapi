@@ -9,7 +9,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-
 # Step 4. Create a quote
 
 When a customer adds an item to their shopping cart for the first time, Adobe Commerce creates a quote. Commerce uses a quote to perform tasks such as

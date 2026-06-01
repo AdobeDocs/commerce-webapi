@@ -10,7 +10,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-
 # Step 14. Create an order for in-store pickup (optional)
 
 The in-store pickup feature allows shoppers to select a physical location where they can pick up an entire order. As a result, any orders that are fulfilled with this method bypass the shipping steps in the standard workflow.
@@ -453,4 +452,3 @@ The response includes the success status as well as an array of error messages f
   "failed": []
 }
 ```
-

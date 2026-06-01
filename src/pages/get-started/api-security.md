@@ -190,4 +190,3 @@ To change the value from the CLI, run the following command:
 ```bash
 bin/magento config:set webapi/validation/default_page_size 30
 ```
-

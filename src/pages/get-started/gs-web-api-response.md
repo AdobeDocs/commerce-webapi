@@ -86,4 +86,3 @@ As an example, the application returns a `code` of `400` and the following `mess
   ]
 }
 ```
-

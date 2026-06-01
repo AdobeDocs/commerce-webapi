@@ -346,4 +346,3 @@ The following call returns the list of attributes metadata for a `catalog_produc
   }
 }
 ```
-

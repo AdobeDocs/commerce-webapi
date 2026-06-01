@@ -156,4 +156,3 @@ query IntrospectionQuery {
   }
 }
 ```
-

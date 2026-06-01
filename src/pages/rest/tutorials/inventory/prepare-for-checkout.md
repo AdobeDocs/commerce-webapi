@@ -10,7 +10,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-
 # Step 8. Prepare for checkout
 
 Now that all the items have been added to the cart, we can prepare the quote for checkout. This process includes the following steps:

@@ -309,4 +309,3 @@ The following example moves Bryce Martin (`structure_id = 4`) to the West team (
 ```json
 // An empty array
 ```
-

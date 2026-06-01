@@ -10,7 +10,6 @@ keywords:
 
 [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-
 # Server-to-server Authentication
 
 This guide provides practical steps for implementing integration with Adobe Commerce as a Cloud Service REST APIs using OAuth 2 server-to-server authentication. This type of integration enables automated communication without user intervention, which is ideal for the following use cases:

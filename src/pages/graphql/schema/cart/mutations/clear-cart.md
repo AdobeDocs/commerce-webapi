@@ -71,4 +71,3 @@ The response is the cart with no items.
   }
 }
 ```
-

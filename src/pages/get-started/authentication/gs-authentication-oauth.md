@@ -220,7 +220,6 @@ $accessToken = $oAuthClient->requestAccessToken(
 header("location: $callback");
 ```
 
-
 <Details slots="content" summary="endpoint.php"/>
 
 ```php
@@ -241,7 +240,6 @@ session_write_close();
 header("HTTP/1.0 200 OK");
 echo "Response";
 ```
-
 
 <Details slots="content" summary="login.php"/>
 
@@ -281,7 +279,6 @@ echo <<<HTML
 </table>
 HTML;
 ```
-
 
 <Details slots="heading, content" summary="OauthClient.php"/>
 
@@ -462,7 +459,6 @@ class OauthClient extends AbstractService
     }
 }
 ```
-
 
 #### Related topics
 

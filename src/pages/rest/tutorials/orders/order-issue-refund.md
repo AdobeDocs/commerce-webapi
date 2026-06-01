@@ -9,7 +9,6 @@ keywords:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-
 # Step 10. Issue a partial refund
 
 Adobe Commerce introduced two endpoints that streamline the process of issuing a refund by creating a creditmemo and updating the order or invoice in one call.
@@ -71,7 +70,7 @@ A credit memo ID, such as `3`.
 
 Log in to Admin. Click **Sales** > **Credit Memos**. The credit memo is displayed in the grid.
 
-## Congratulations! You've finished.
+## Congratulations! You've finished
 
 ### Related topics
 

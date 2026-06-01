@@ -69,4 +69,3 @@ As an example, the application returns a `code` of `401` and the following paylo
   }
 }
 ```
-

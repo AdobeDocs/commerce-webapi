@@ -70,4 +70,3 @@ The `guestOrder` reference provides detailed information about the types and fie
   }
 }
 ```
-

@@ -77,4 +77,3 @@ The following example response indicates the mutation failed due to a non-existe
     }
 }
 ```
-
