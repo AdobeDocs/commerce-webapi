@@ -7,7 +7,7 @@ The `ProductView` return object is an interface that can contain the following f
 | `description` | String | The detailed description of the product. |
 | `externalId`| String | The external ID of the product. |
 | `id` | ID! | The product ID, generated as a composite key, unique per locale. |
-| `images(roles: [String])` | [`[ProductViewImage]`](#productviewimage-type`) | A list of images defined for the product. |
+| `images(roles: [String])` | [`[ProductViewImage]`](#productviewimage-type) | A list of images defined for the product. |
 | `inputOptions` | [`[ProductViewInputOption]`](#productviewinputoption-type) | A list of input options the shopper can supply to customize a product. |
 | `inStock` | Boolean | Indicates whether the product is in stock. |
 | `lastModifiedAt` | DateTime | Date and time when the product was last updated. |
@@ -115,7 +115,7 @@ Product input options provide details about how a shopper can enter customizatio
 | -- | -- | -- |
 | `fileExtensions` | String | A comma separated list of accepted file types for the input option if it has an associated file, for example `png, jpg`. |
 | `id` | ID | The ID of the option value. |
-| `imageSize` | [`ProductViewInputOptionImageSize`](#productviewimagesize-type) | Dimensions of an image associated with the input option. |
+| `imageSize` | [`ProductViewInputOptionImageSize`](#productviewinputoptionimagesize-type) | Dimensions of an image associated with the input option. |
 | `markupAmount` | Float | Amount to add or subtract from the product price when the option is configured. |
 | `range` |[`ProductViewInputOptionRange`](#productviewinputoptionrange-type)| Value limits associated with an input option, for example allowed characters or file size. |
 | `required` | Boolean | Indicates whether the option must be supplied. |
