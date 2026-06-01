@@ -1,11 +1,15 @@
-&#8203;<Edition name="paas" />
+<Edition slots="text" backgroundcolor="blue"/>
+
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 | Environment | Endpoint    |
 |------------ | ----------: |
 | **Testing**    | `https://catalog-service-sandbox.adobe.io/graphql` |
 | **Production** | `https://catalog-service.adobe.io/graphql` |
 
-&#8203;<Edition name="saas" />
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 |  Environment | Endpoint |
 | ------------ | --------:|
