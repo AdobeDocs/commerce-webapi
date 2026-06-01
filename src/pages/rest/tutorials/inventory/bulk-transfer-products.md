@@ -22,7 +22,7 @@ The `POST /V1/inventory/bulk-product-source-transfer` endpoint allows you to spe
 
 **Endpoint:**
 
-`POST \<host\>/rest/default/V1/inventory/bulk-product-source-transfer`
+`POST <host>/rest/default/V1/inventory/bulk-product-source-transfer`
 
 **Scope:**
 
@@ -57,7 +57,7 @@ Use the `bulk-partial-source-transfer endpoint` to transfer a portion of in-stoc
 
 **Endpoint:**
 
-`POST \<host\>/rest/default/V1/inventory/bulk-partial-source-transfer`
+`POST <host>/rest/default/V1/inventory/bulk-partial-source-transfer`
 
 **Scope:**
 

@@ -59,10 +59,10 @@ The following table provides several examples:
 
 | Platform | Synchronous route | Bulk route |
 | --- | --- | --- |
-| PaaS | `PUT \<path\>/V1/products/:sku/media/:entryId` | `PUT \<path\>/async/bulk/V1/products/bySku/media/byEntryId` |
-| PaaS | `POST \<path\>/V1/carts/:quoteId/items` | `POST \<path\>/async/bulk/V1/carts/byQuoteId/items` |
-| SaaS | `PUT \<path\>/V1/products/:sku/media/:entryId` | `PUT \<path\>/V1/async/bulk/products/bySku/media/byEntryId` |
-| SaaS | `POST \<path\>/V1/carts/:quoteId/items` | `POST \<path\>/V1/async/bulk/carts/byQuoteId/items` |
+| PaaS | `PUT <path>/V1/products/:sku/media/:entryId` | `PUT <path>/async/bulk/V1/products/bySku/media/byEntryId` |
+| PaaS | `POST <path>/V1/carts/:quoteId/items` | `POST <path>/async/bulk/V1/carts/byQuoteId/items` |
+| SaaS | `PUT <path>/V1/products/:sku/media/:entryId` | `PUT <path>/V1/async/bulk/products/bySku/media/byEntryId` |
+| SaaS | `POST <path>/V1/carts/:quoteId/items` | `POST <path>/V1/async/bulk/carts/byQuoteId/items` |
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -74,7 +74,7 @@ GET requests are not supported.
 
 The following example is PaaS-specific. Adobe Commerce as a Cloud Service does not support the `POST V1/customers` endpoint. However, the payload of any bulk requests can contain an array of objects.
 
-The payload of a bulk request contains an array of request bodies. For example, the minimal payload for creating four customers with `POST \<path\>/async/bulk/V1/customers` would be structured as follows:
+The payload of a bulk request contains an array of request bodies. For example, the minimal payload for creating four customers with `POST <path>/async/bulk/V1/customers` would be structured as follows:
 
 ```json
 [{

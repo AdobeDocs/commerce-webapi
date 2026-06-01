@@ -23,7 +23,7 @@ keywords:
 
  **Endpoint:**
 
- `POST \<host\>/rest/default/async/bulk/V1/configurable-products/bySku/options`
+ `POST <host>/rest/default/async/bulk/V1/configurable-products/bySku/options`
 
  **Payload:**
 
@@ -70,7 +70,7 @@ Now that you have set the configurable attribute to be `sku`, you can link all s
 
 Bulk endpoint routes cannot contain input parameters, such as a `sku` value.  You must replace input parameters with a string that begins with `by` and ends with the input parameter name, such as `bySku`. See [`bulk endpoints`](/rest/use-rest/bulk-endpoints.md) for more information.
 
- `POST \<host\>/rest/default/async/bulk/V1/configurable-products/bySku/child`
+ `POST <host>/rest/default/async/bulk/V1/configurable-products/bySku/child`
 
  **Payload:**
 
@@ -128,7 +128,7 @@ Bulk endpoint routes cannot contain input parameters, such as a `sku` value.  Yo
 
    ![Search results](../../../images/search-results.png)
 
-*  Call `GET \<host\>/rest/default/V1/products/MS-Champ`. The response includes the `configurable_product_options` and `configurable_product_links` arrays.
+*  Call `GET <host>/rest/default/V1/products/MS-Champ`. The response includes the `configurable_product_options` and `configurable_product_links` arrays.
 
  ```json
 ...

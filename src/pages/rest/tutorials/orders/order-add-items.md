@@ -17,7 +17,7 @@ These calls are performed on behalf of a customer, and the customer's token is s
 
 <InlineAlert variant="info" slots="text"/>
 
-Use the `V1/guest-carts/\<cartId\>/items` endpoint to add items to the cart on behalf of a guest. Do not include an authorization token. The payload and response is same as the logged-in customer for all product types, except for from quote ID in the payload.
+Use the `V1/guest-carts/<cartId>/items` endpoint to add items to the cart on behalf of a guest. Do not include an authorization token. The payload and response is same as the logged-in customer for all product types, except for from quote ID in the payload.
 
 ### Add a simple product to a cart
 
@@ -27,13 +27,13 @@ The following example adds an orange medium-sized Radiant women's t-shirt (`sku`
 
 **Endpoint:**
 
-`POST \<host\>/rest/<store_code>/V1/carts/mine/items`
+`POST <host>/rest/<store_code>/V1/carts/mine/items`
 
 **Headers:**
 
 `Content-Type: application/json`
 
-`Authorization: Bearer \<customer token\>`
+`Authorization: Bearer <customer token>`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -71,13 +71,13 @@ The following example adds the downloadable product Advanced Pilates & Yoga (`sk
 
 **Endpoint:**
 
-`POST \<host\>/rest/<store_code>/V1/carts/mine/items`
+`POST <host>/rest/<store_code>/V1/carts/mine/items`
 
 **Headers:**
 
 `Content-Type: application/json`
 
-`Authorization: Bearer \<customer token\>`
+`Authorization: Bearer <customer token>`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -143,13 +143,13 @@ We now know the values for `option_value` for `size` and `color` are `168` and `
 
 **Endpoint:**
 
-`POST \<host\>/rest/<store_code>/V1/carts/mine/items`
+`POST <host>/rest/<store_code>/V1/carts/mine/items`
 
 **Headers:**
 
 `Content-Type: application/json`
 
-`Authorization: Bearer \<customer token\>`
+`Authorization: Bearer <customer token>`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -219,7 +219,7 @@ The sample data provides one bundled product, the Sprite Yoga Companion Kit (`sk
 
 To add a bundle product to a cart, you must specify the `sku` of the bundle product, but not the individual items. You add individual items to the bundle product by specifying the `id` defined in the item's `product_links` object. The `product_links` object primarily describes the ordering and placement of options on the customization page, but it also links an item's `sku` and `id` to the `sku` of the bundle product.
 
-The `GET \<host\>/rest/<store_code>/V1/bundle-products/24-WG080/options/all` call returns `id` values, as shown in the following simplified response:
+The `GET <host>/rest/<store_code>/V1/bundle-products/24-WG080/options/all` call returns `id` values, as shown in the following simplified response:
 
 <Details slots="heading, content" />
 
@@ -327,13 +327,13 @@ For this example, we'll configure the Sprite Yoga Companion Kit as follows:
 
 **Endpoint:**
 
-`POST \<host\>/rest/<store_code>/V1/carts/mine/items`
+`POST <host>/rest/<store_code>/V1/carts/mine/items`
 
 **Headers:**
 
 `Content-Type: application/json`
 
-`Authorization: Bearer \<customer token\>`
+`Authorization: Bearer <customer token>`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 

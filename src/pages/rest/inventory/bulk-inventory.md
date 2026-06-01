@@ -51,7 +51,7 @@ Bulk transfer allows you to specify multiple products, the origin source from wh
 
 **Sample usage:**
 
-`POST \<host\>/rest/<store_code>/V1/inventory/bulk-product-source-transfer`
+`POST <host>/rest/<store_code>/V1/inventory/bulk-product-source-transfer`
 
 **Payload:**
 
@@ -87,7 +87,7 @@ You can use the `V1/inventory/bulk-partial-source-transfer` endpoint to transfer
 
 **Sample usage:**
 
-`POST \<host\>/rest/<store_code>/V1/inventory/bulk-partial-source-transfer`
+`POST <host>/rest/<store_code>/V1/inventory/bulk-partial-source-transfer`
 
 **Payload:**
 
@@ -129,7 +129,7 @@ The sources are added to the products with an inventory quantity of 0. You can a
 
 **Sample usage:**
 
-`POST \<host\>/rest/<store_code>/V1/inventory/bulk-product-source-assign`
+`POST <host>/rest/<store_code>/V1/inventory/bulk-product-source-assign`
 
 **Payload:**
 
@@ -164,7 +164,7 @@ If you unassign all sources from a product, you will not be able to sell the pro
 
 **Sample usage:**
 
-`POST \<host\>/rest/<store_code>/V1/inventory/bulk-product-source-unassign`
+`POST <host>/rest/<store_code>/V1/inventory/bulk-product-source-unassign`
 
 **Payload:**
 

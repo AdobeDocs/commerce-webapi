@@ -75,7 +75,7 @@ The value of the `source_code` parameter can contain upper and lower case letter
 
 **Sample Usage:**
 
-`POST \<host\>/rest/<store_code>/V1/inventory/sources`
+`POST <host>/rest/<store_code>/V1/inventory/sources`
 
 **Payload:**
 
@@ -119,7 +119,7 @@ This example updates the contact information (`contact_name`, `email`, and `phon
 
 **Sample Usage:**
 
-`PUT \<host\>/rest/<store_code>/V1/inventory/sources/central`
+`PUT <host>/rest/<store_code>/V1/inventory/sources/central`
 
 **Payload:**
 
@@ -148,7 +148,7 @@ This call returns detailed information about the specified source.
 
 **Sample Usage:**
 
-`GET \<host\>/rest/<store_code>/V1/inventory/sources/central`
+`GET <host>/rest/<store_code>/V1/inventory/sources/central`
 
 **Payload:**
 
@@ -185,7 +185,7 @@ See [Search using REST APIs](/rest/use-rest/performing-searches.md) for informat
 
 **Sample Usage:**
 
-`GET \<host\>/rest/<store_code>/V1/inventory/sources?searchCriteria[filter_groups][0][filters][0][field]=country_id&searchCriteria[filter_groups][0][filters][0][value]=US&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
+`GET <host>/rest/<store_code>/V1/inventory/sources?searchCriteria[filter_groups][0][filters][0][field]=country_id&searchCriteria[filter_groups][0][filters][0][value]=US&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
 
 **Payload:**
 

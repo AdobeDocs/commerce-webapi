@@ -47,7 +47,7 @@ A newly-created team is placed under Company Admin in the company hierarchy.
 
 **Sample Usage:**
 
-`POST \<host\>/rest/<store_code>/V1/team/2`
+`POST <host>/rest/<store_code>/V1/team/2`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -74,7 +74,7 @@ You can only change the name or description of a team.
 
 **Sample Usage:**
 
-`PUT \<host\>/rest/<store_code>/V1/team/4`
+`PUT <host>/rest/<store_code>/V1/team/4`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -101,7 +101,7 @@ The `GET` call returns the team `id`, `name`, and `description`.
 
 **Sample Usage:**
 
-`GET \<host\>/rest/<store_code>/V1/team/4`
+`GET <host>/rest/<store_code>/V1/team/4`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -127,7 +127,7 @@ You cannot delete a team if members are assigned to it.
 
 **Sample Usage:**
 
-`DELETE \<host\>/rest/<store_code>/V1/team/4`
+`DELETE <host>/rest/<store_code>/V1/team/4`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -151,7 +151,7 @@ See [Search using REST APIs](../use-rest/performing-searches.md) for information
 
 **Sample Usage:**
 
-`GET \<host\>/rest/<store_code>/V1/team?searchCriteria[filter_groups][0][filters][0][field]=team_id&searchCriteria[filter_groups][0][filters][0][value]=0&searchCriteria[filter_groups][0][filters][0][condition_type]=gteq`
+`GET <host>/rest/<store_code>/V1/team?searchCriteria[filter_groups][0][filters][0][field]=team_id&searchCriteria[filter_groups][0][filters][0][value]=0&searchCriteria[filter_groups][0][filters][0][condition_type]=gteq`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -228,7 +228,7 @@ Admin (structure_id = 2)
 
 **Sample Usage:**
 
-`GET \<host\>/rest/<store_code>/V1/hierarchy/2`
+`GET <host>/rest/<store_code>/V1/hierarchy/2`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -292,7 +292,7 @@ The following example moves Bryce Martin (`structure_id = 4`) to the West team (
 
 **Sample Usage:**
 
-`PUT \<host\>/rest/<store_code>/V1/hierarchy/move/5`
+`PUT <host>/rest/<store_code>/V1/hierarchy/move/5`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 

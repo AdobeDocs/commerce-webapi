@@ -27,7 +27,7 @@ See [Token-based authentication](/get-started/authentication/gs-authentication-t
 
 **Endpoint:**
 
-`POST \<host\>/rest/<store_code>/V1/tfa/provider/google/authenticate`
+`POST <host>/rest/<store_code>/V1/tfa/provider/google/authenticate`
 
 **Headers:**
 

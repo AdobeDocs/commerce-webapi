@@ -67,7 +67,7 @@ Search terms, filters, and other attributes are specified as query parameters in
 
 **Sample Usage:**
 
-`GET \<host\>/rest/<store_code>/V1/inventory/in-store-pickup/pickup-locations`
+`GET <host>/rest/<store_code>/V1/inventory/in-store-pickup/pickup-locations`
 
 **Payload:**
 
@@ -131,7 +131,7 @@ The endpoint requires appropriate permission to resource `Magento_InventoryInSto
 
 **Sample Usage:**
 
-`POST \<host\>/rest/<store_code>/V1/order/notify-orders-are-ready-for-pickup`
+`POST <host>/rest/<store_code>/V1/order/notify-orders-are-ready-for-pickup`
 
 **Payload:**
 

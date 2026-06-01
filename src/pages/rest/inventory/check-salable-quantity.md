@@ -47,7 +47,7 @@ This call returns the available quantity of a product assigned to the specified 
 
 **Sample Usage:**
 
-`GET \<host\>/rest/<store_code>/V1/inventory/get-product-salable-quantity/sp2/2`
+`GET <host>/rest/<store_code>/V1/inventory/get-product-salable-quantity/sp2/2`
 
 | Name | Description | Type |
 | --- | --- | --- |
@@ -68,7 +68,7 @@ This call returns a boolean value that indicates whether the product from the sp
 
 **Sample Usage:**
 
-`GET \<host\>/rest/<store_code>/V1/inventory/is-product-salable/sp2/2`
+`GET <host>/rest/<store_code>/V1/inventory/is-product-salable/sp2/2`
 
 **Payload:**
 
@@ -84,7 +84,7 @@ This call returns boolean values that indicate whether the products provided in 
 
 **Sample Usage:**
 
-`GET \<host\>/rest/<store_code>/V1/inventory/are-products-salable/?skus[0]=Prod1&skus[1]=Prod2&stockId=2`
+`GET <host>/rest/<store_code>/V1/inventory/are-products-salable/?skus[0]=Prod1&skus[1]=Prod2&stockId=2`
 
 **Payload:**
 
@@ -113,7 +113,7 @@ This call indicates whether a product is salable for the specified quantity and 
 
 **Sample Usage:**
 
-`GET \<host\>/rest/<store_code>/V1/inventory/is-product-salable-for-requested-qty/sp2/2/30`
+`GET <host>/rest/<store_code>/V1/inventory/is-product-salable-for-requested-qty/sp2/2/30`
 
 **Payload:**
 
@@ -134,7 +134,7 @@ This call returns the stock ID associated with the specified sales channel type 
 
 **Sample Usage:**
 
-`GET \<host\>/rest/<store_code>/V1/inventory/stock-resolver/website/na_site`
+`GET <host>/rest/<store_code>/V1/inventory/stock-resolver/website/na_site`
 
 **Payload:**
 

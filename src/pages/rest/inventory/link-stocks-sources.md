@@ -43,7 +43,7 @@ If you specify a sales channel that is already assigned to another stock, Adobe 
 
 **Sample usage:**
 
-`POST \<host\>/rest/<store_code>/V1/inventory/stock-source-links`
+`POST <host>/rest/<store_code>/V1/inventory/stock-source-links`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -79,7 +79,7 @@ The `POST /V1/inventory/stock-source-links-delete` endpoint breaks the link betw
 
 **Sample Usage:**
 
-`POST \<host\>/rest/<store_code>/V1/inventory/stock-source-links-delete`
+`POST <host>/rest/<store_code>/V1/inventory/stock-source-links-delete`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -111,7 +111,7 @@ See [Search using REST APIs](/rest/use-rest/performing-searches.md) for informat
 
 **Sample Usage:**
 
-`GET \<host\>/rest/<store_code>/V1/inventory/stock-source-links?searchCriteria[filter_groups][0][filters][0][field]=stock_id&searchCriteria[filter_groups][0][filters][0][value]=4&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
+`GET <host>/rest/<store_code>/V1/inventory/stock-source-links?searchCriteria[filter_groups][0][filters][0][field]=stock_id&searchCriteria[filter_groups][0][filters][0][value]=4&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -160,7 +160,7 @@ The `GET /V1/inventory/get-sources-assigned-to-stock-ordered-by-priority/:stock_
 
 **Sample Usage:**
 
-`GET \<host\>/rest/<store_code>/V1/inventory/get-sources-assigned-to-stock-ordered-by-priority/4`
+`GET <host>/rest/<store_code>/V1/inventory/get-sources-assigned-to-stock-ordered-by-priority/4`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 

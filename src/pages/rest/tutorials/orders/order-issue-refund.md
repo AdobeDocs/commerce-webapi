@@ -20,7 +20,7 @@ Adobe Commerce introduced two endpoints that streamline the process of issuing a
 
 In this example, the customer did not like the fit of the Radiant T-M-Orange shirt and wants a refund.
 
-Since the customer paid for the order with a bank transfer, we'll call `POST /V1/order/\<order ID\>/refund`. The `order_item_id` for the Radiant Tee-M-Orange is `3`.
+Since the customer paid for the order with a bank transfer, we'll call `POST /V1/order/<order ID>/refund`. The `order_item_id` for the Radiant Tee-M-Orange is `3`.
 
 The `arguments` object allows you to adjust the amount of the credit to be refunded. Since the customer used the `tablerate` shipping method, which applied to the whole order, we'll assume that a refund can't be applied to the shipping costs. Therefore, the shipping_amount is set to `0`.
 
@@ -30,13 +30,13 @@ The `return_to_stock_items` array specifies which `order_item_id`s can be return
 
 **Endpoint:**
 
-`POST \<host\>/rest/<store_code>/V1/order/5/refund`
+`POST <host>/rest/<store_code>/V1/order/5/refund`
 
 **Headers:**
 
 `Content-Type: application/json`
 
-`Authorization: Bearer \<administrator token\>`
+`Authorization: Bearer <administrator token>`
 
 **Payload:**
 

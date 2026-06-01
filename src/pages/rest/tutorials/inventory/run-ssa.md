@@ -22,7 +22,7 @@ Currently, Commerce supports SSAs based on priority and on distance. Third-party
 
 **Endpoint:**
 
-`GET \<host\>/rest/default/V1/inventory/source-selection-algorithm-list`
+`GET <host>/rest/default/V1/inventory/source-selection-algorithm-list`
 
 **Scope:**
 
@@ -32,7 +32,7 @@ Currently, Commerce supports SSAs based on priority and on distance. Third-party
 
 `Content-Type` `application/json`
 
-`Authorization` `Bearer \<admin token\>`
+`Authorization` `Bearer <admin token>`
 
 **Payload:**
 
@@ -65,7 +65,7 @@ In [Step 4. Link stocks and sources](/rest/tutorials/inventory/assign-source-to-
 
 **Endpoint:**
 
-`POST \<host\>/rest/default/V1/inventory/source-selection-algorithm-result`
+`POST <host>/rest/default/V1/inventory/source-selection-algorithm-result`
 
 **Scope:**
 
@@ -75,7 +75,7 @@ In [Step 4. Link stocks and sources](/rest/tutorials/inventory/assign-source-to-
 
 `Content-Type`: `application/json`
 
-`Authorization`: `Bearer \<admin token\>`
+`Authorization`: `Bearer <admin token>`
 
 **Payload:**
 

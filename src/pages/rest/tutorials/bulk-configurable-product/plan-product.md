@@ -97,7 +97,7 @@ searchCriteria[filter_groups][0][filters][0][condition_type]=eq
 
  **Endpoint:**
 
- `GET \<host\>/rest/default/V1/products/attribute-sets/9/attributes`
+ `GET <host>/rest/default/V1/products/attribute-sets/9/attributes`
 
  **Response:**
 

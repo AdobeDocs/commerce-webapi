@@ -17,7 +17,7 @@ Each step in this tutorial provides the following information:
 
 This section lists the HTTP verb and full path to the endpoint. The basic structure of a REST call in Adobe Commerce is
 
-`\<HTTP verb\> http://\<host\>/rest/\<scope\>/\<endpoint\>`
+`<HTTP verb> http://<host>/rest/<scope>/<endpoint>`
 
 where:
 
@@ -54,7 +54,7 @@ See [Token-based authentication](/get-started/authentication/gs-authentication-t
 
 **Endpoint:**
 
-`POST \<host\>/rest/<store_code>/V1/tfa/provider/google/authenticate`
+`POST <host>/rest/<store_code>/V1/tfa/provider/google/authenticate`
 
 **Headers:**
 

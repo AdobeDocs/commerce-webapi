@@ -72,13 +72,13 @@ The following call asynchronously changes the price of the product that has a `s
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-`PUT https://\<host\>/rest/<store-view-code>/async/V1/products/24-MB01`
+`PUT https://<host>/rest/<store-view-code>/async/V1/products/24-MB01`
 
 <Edition slots="text" backgroundcolor="green"/>
 
 [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-`PUT https://\<server\>.api.commerce.adobe.com/<tenant-id>/V1/async/products/24-MB01`
+`PUT https://<server>.api.commerce.adobe.com/<tenant-id>/V1/async/products/24-MB01`
 
 ### Payload
 

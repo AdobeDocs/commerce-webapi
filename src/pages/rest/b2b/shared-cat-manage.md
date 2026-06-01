@@ -48,7 +48,7 @@ When B2B is enabled, the system creates a public shared catalog named `Default (
 
 **Sample Usage:**
 
-`POST \<host\>/rest/<store_code>/V1/sharedCatalog`
+`POST <host>/rest/<store_code>/V1/sharedCatalog`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -77,7 +77,7 @@ You cannot change the `type` from public (`1`) to custom (`0`). If you need to r
 
 **Sample Usage:**
 
-`PUT \<host\>/rest/<store_code>/V1/sharedCatalog/2`
+`PUT <host>/rest/<store_code>/V1/sharedCatalog/2`
 
 ```json
 {
@@ -104,7 +104,7 @@ This call returns information about the specified shared catalog.
 
 **Sample Usage:**
 
-`GET \<host\>/rest/<store_code>/V1/sharedCatalog/2`
+`GET <host>/rest/<store_code>/V1/sharedCatalog/2`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -136,7 +136,7 @@ Only custom shared catalogs can be deleted. When a custom catalog is deleted, th
 
 **Sample Usage:**
 
-`DELETE \<host\>/rest/<store_code>/V1/sharedCatalog/2`
+`DELETE <host>/rest/<store_code>/V1/sharedCatalog/2`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -160,7 +160,7 @@ See [Search using REST APIs](../use-rest/performing-searches.md) for information
 
 **Sample Usage:**
 
-`GET \<host\>/rest/<store_code>/V1/sharedCatalog?searchCriteria[filter_groups][0][filters][0][field]=type&searchCriteria[filter_groups][0][filters][0][value]=0&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
+`GET <host>/rest/<store_code>/V1/sharedCatalog?searchCriteria[filter_groups][0][filters][0][field]=type&searchCriteria[filter_groups][0][filters][0][value]=0&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 

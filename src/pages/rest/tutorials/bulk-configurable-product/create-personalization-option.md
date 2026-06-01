@@ -15,7 +15,7 @@ The `product_sku` is the `sku` of the configurable product. The `sku` specified 
 
 **Endpoint:**
 
-`POST \<host\>/rest/default/async/bulk/V1/products/options`
+`POST <host>/rest/default/async/bulk/V1/products/options`
 
 **Payload:**
 

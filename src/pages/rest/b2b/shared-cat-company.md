@@ -44,7 +44,7 @@ If a specified company is already assigned to a different shared catalog, this r
 
 **Sample usage:**
 
-`POST \<host\>/rest/<store_code>/V1/sharedCatalog/2/assignCompanies`
+`POST <host>/rest/<store_code>/V1/sharedCatalog/2/assignCompanies`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -75,7 +75,7 @@ When you unassign a company from a custom catalog, the system automatically assi
 
 **Sample usage:**
 
-`POST \<host\>/rest/<store_code>/V1/sharedCatalog/2/unassignCompanies`
+`POST <host>/rest/<store_code>/V1/sharedCatalog/2/unassignCompanies`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -103,7 +103,7 @@ The `GET` call returns an array of company IDs.
 
 **Sample Usage:**
 
-`GET \<host\>/rest/<store_code>/V1/sharedCatalog/2/companies`
+`GET <host>/rest/<store_code>/V1/sharedCatalog/2/companies`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 

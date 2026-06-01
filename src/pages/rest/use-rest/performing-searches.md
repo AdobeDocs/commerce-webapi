@@ -311,9 +311,9 @@ The query returns 37 items.
 
 The following searchCriteria can be used to determine the sort order and the number of items to return.
 
-*  `searchCriteria[sortOrders][\<index\>][field]=<field-name>` - Specifies the field to sort on. By default, search results are returned in descending order. You can sort on multiple fields. For example, to sort on `price` first and then by `name`, call `searchCriteria[sortOrders][0][field]=price&searchCriteria[sortOrders][1][field]=name`.
+*  `searchCriteria[sortOrders][<index>][field]=<field-name>` - Specifies the field to sort on. By default, search results are returned in descending order. You can sort on multiple fields. For example, to sort on `price` first and then by `name`, call `searchCriteria[sortOrders][0][field]=price&searchCriteria[sortOrders][1][field]=name`.
 
-*  `searchCriteria[sortOrders][\<index\>][direction]=ASC | DESC` - Specifies whether to return results in ascending (ASC) or descending (DESC) order. To expand the previous example and sort the `price` fields in descending order and the `name` fields in ascending order, call `searchCriteria[sortOrders][0][field]=price&searchCriteria[sortOrders][1][field]=name&searchCriteria[sortOrders][1][direction]=ASC`.
+*  `searchCriteria[sortOrders][<index>][direction]=ASC | DESC` - Specifies whether to return results in ascending (ASC) or descending (DESC) order. To expand the previous example and sort the `price` fields in descending order and the `name` fields in ascending order, call `searchCriteria[sortOrders][0][field]=price&searchCriteria[sortOrders][1][field]=name&searchCriteria[sortOrders][1][direction]=ASC`.
 
 *  `searchCriteria[pageSize]` - Specifies the maximum number of items to return. The value must be an integer. If the `pageSize` is not specified, the system returns all matches.
 
@@ -329,19 +329,19 @@ This example shows how to use search criteria to determine the sort order and at
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-`GET https://\<host\>/rest/<store_code>/V1/orders/`
+`GET https://<host>/rest/<store_code>/V1/orders/`
 
 <Edition slots="text" backgroundcolor="green"/>
 
 [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-`GET https://\<server\>.api.commerce.adobe.com/<tenant-id>/V1/orders/`
+`GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/orders/`
 
 **Headers:**
 
 `Content-Type` `application/json`
 
-`Authorization` `Bearer \<administrator token\>`
+`Authorization` `Bearer <administrator token>`
 
 **Parameters:**
 

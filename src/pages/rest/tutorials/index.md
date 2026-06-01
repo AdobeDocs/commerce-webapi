@@ -43,7 +43,7 @@ Although some steps require that you configure Commerce in some way, you perform
 
 This section lists the HTTP verb and full path to the endpoint. The basic structure of a REST call in Commerce is
 
-`\<HTTP verb\> http://\<host\>/rest/\<scope\>/\<endpoint\>`
+`<HTTP verb> http://<host>/rest/<scope>/<endpoint>`
 
 where:
 

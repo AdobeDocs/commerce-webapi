@@ -41,7 +41,7 @@ Adobe Commerce REST APIs support multiple [authentication methods](../get-starte
 
 The URL for Adobe Commerce REST endpoints is structured as follows:
 
-`https://\<host\>/rest/<store-view-code>/\<endpoint\>`
+`https://<host>/rest/<store-view-code>/<endpoint>`
 
 ## Adobe Commerce as a Cloud Service
 
@@ -71,7 +71,7 @@ In Adobe Commerce as a Cloud Service, REST endpoint URLs do not include `/rest` 
 
 * Base format:
 
-  `https://\<server\>.api.commerce.adobe.com/<tenant-id>/\<endpoint\>`
+  `https://<server>.api.commerce.adobe.com/<tenant-id>/<endpoint>`
 
 * Set the scope with the `Store` header:
 

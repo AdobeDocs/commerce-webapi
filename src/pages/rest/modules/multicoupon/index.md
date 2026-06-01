@@ -17,7 +17,7 @@ The multi-coupon endpoint routes contain the string `V2` instead of `V1`. These 
 
 ## Retrieve applied coupons
 
-The `GET /V2/carts/\<cartId\>/coupons` and `GET /V2/carts/mine/coupons` endpoints provide a RESTful way to retrieve the coupons applied to a specified cart or to the cart of the currently logged in customer, respectively.
+The `GET /V2/carts/<cartId>/coupons` and `GET /V2/carts/mine/coupons` endpoints provide a RESTful way to retrieve the coupons applied to a specified cart or to the cart of the currently logged in customer, respectively.
 
 ## Append coupons
 

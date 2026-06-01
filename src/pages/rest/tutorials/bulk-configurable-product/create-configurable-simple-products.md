@@ -37,7 +37,7 @@ Before you use this code sample, verify that the attribute values are the same i
 
 **Endpoint:**
 
-`POST \<host\>/rest/default/async/bulk/V1/products`
+`POST <host>/rest/default/async/bulk/V1/products`
 
 The payload contains both the configurable product and the simple products.
 

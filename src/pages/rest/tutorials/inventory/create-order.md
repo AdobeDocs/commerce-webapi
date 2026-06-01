@@ -22,7 +22,7 @@ When you submit payment information, Commerce creates an order and sends an orde
 
 **Endpoint:**
 
-`POST \<host\>/rest/default/V1/carts/mine/payment-information`
+`POST <host>/rest/default/V1/carts/mine/payment-information`
 
 **Scope:**
 
@@ -32,7 +32,7 @@ When you submit payment information, Commerce creates an order and sends an orde
 
 `Content-Type`: `application/json`
 
-`Authorization`: `Bearer \<customer token\>`
+`Authorization`: `Bearer <customer token>`
 
 **Payload:**
 

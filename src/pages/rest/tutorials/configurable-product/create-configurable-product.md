@@ -28,7 +28,7 @@ Before you using this code sample, verify that the attribute values are the same
 
 **Endpoint:**
 
-`POST \<host\>/rest/default/V1/products`
+`POST <host>/rest/default/V1/products`
 
 **Payload:**
 

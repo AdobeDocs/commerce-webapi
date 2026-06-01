@@ -202,9 +202,9 @@ A access token request contains three basic elements:
 
 | Component | Specifies |
 | --- | --- |
-| Endpoint |  A combination of the *server* that fulfills the request, the web service, and the `resource` against which the request is being made.\<br/\>\<br/\>For example, in the `POST \<host\>/rest/<store_code>/V1/integration/customer/token` endpoint:\<br/\>The server is `magento.host/index.php/`,\<br/\> the web service is `rest`.\<br/\> and the resource is `/V1/integration/customer/token`. |
+| Endpoint |  A combination of the *server* that fulfills the request, the web service, and the `resource` against which the request is being made.\<br/\>\<br/\>For example, in the `POST <host>/rest/<store_code>/V1/integration/customer/token` endpoint:\<br/\>The server is `magento.host/index.php/`,\<br/\> the web service is `rest`.\<br/\> and the resource is `/V1/integration/customer/token`. |
 | Content type | The content type of the request body. Set this value to either `"Content-Type:application/json"` or `"Content-Type:application/xml"`. |
-| Credentials | The username and password for a Commerce account.\<br/\>\<br/\>To specify these credentials in a JSON request body, include code similar to the following in the call: \<br/\>\<br/\>`{"username":"<USER-NAME>", "password":"\<PASSWORD\>"}`\<br/\>\<br/\>To specify these credentials in XML, include code similar to the following in the call:\<br/\>\<br/\>`\<login\>\<username\>customer1\</username\>\<password\>customer1pw\</password\>\</login\>` |
+| Credentials | The username and password for a Commerce account.\<br/\>\<br/\>To specify these credentials in a JSON request body, include code similar to the following in the call: \<br/\>\<br/\>`{"username":"<USER-NAME>", "password":"<PASSWORD>"}`\<br/\>\<br/\>To specify these credentials in XML, include code similar to the following in the call:\<br/\>\<br/\>`<login><username>customer1</username><password>customer1pw</password></login>` |
 
 ### Examples
 
@@ -240,7 +240,7 @@ A successful request returns a response body with the token, as follows:
 
 Any web API call that accesses a resource that requires a permission level higher than anonymous must contain the authentication token in the header To do this, specify a HTTP header in the following format:
 
-`Authorization: Bearer \<authentication token\>`
+`Authorization: Bearer <authentication token>`
 
 ### Admin access
 
@@ -248,14 +248,14 @@ Admins can access any resources for which they are authorized.
 
 For example, to make a web API call with an admin token:
 
-`curl -X GET "http://\<host\>/rest/default/V1/customers/2" -H "Authorization: Bearer vbnf3hjklp5iuytre"`
+`curl -X GET "http://<host>/rest/default/V1/customers/2" -H "Authorization: Bearer vbnf3hjklp5iuytre"`
 
 ### Customer access
 
 Customers can access only resources with `self` permissions.
 
 For example, to make a web API call with a customer token:
-`curl -X GET "http://\<host\>/rest/default/V1/customers/me" -H "Authorization: Bearer asdf3hjklp5iuytre"`
+`curl -X GET "http://<host>/rest/default/V1/customers/me" -H "Authorization: Bearer asdf3hjklp5iuytre"`
 
 #### Related topics
 

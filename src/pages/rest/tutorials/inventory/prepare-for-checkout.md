@@ -23,7 +23,7 @@ Adobe Commerce calculates shipping costs for each shipping method that can be ap
 
 **Endpoint:**
 
-`POST \<host\>/rest/default/V1/carts/mine/estimate-shipping-methods`
+`POST <host>/rest/default/V1/carts/mine/estimate-shipping-methods`
 
 **Scope:**
 
@@ -33,7 +33,7 @@ Adobe Commerce calculates shipping costs for each shipping method that can be ap
 
 `Content-Type`: `application/json`
 
-`Authorization`: `Bearer \<customer token\>`
+`Authorization`: `Bearer <customer token>`
 
 **Payload:**
 
@@ -89,7 +89,7 @@ Commerce returnsa list of payment options and calculates the order totals.
 
 **Endpoint:**
 
-`POST \<host\>/rest/default/V1/carts/mine/shipping-information`
+`POST <host>/rest/default/V1/carts/mine/shipping-information`
 
 **Scope:**
 
@@ -99,7 +99,7 @@ Commerce returnsa list of payment options and calculates the order totals.
 
 `Content-Type`: `application/json`
 
-`Authorization`: `Bearer \<customer token\>`
+`Authorization`: `Bearer <customer token>`
 
 **Payload:**
 
@@ -321,6 +321,6 @@ The available payment methods are `banktransfer` and `checkmo`. The customer wil
 
 ### Verify this step
 
-Sign in to the US store (`http://\<host\>/us`) as the customer and go to the checkout page.
+Sign in to the US store (`http://<host>/us`) as the customer and go to the checkout page.
 
 The payment method is Bank Transfer, the billing and shipping addresses are displayed, and the shipping charges and shipping charges calculate and display.

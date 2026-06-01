@@ -417,7 +417,7 @@ mutation {
 
 The following example adds the Sprite Yoga Companion Kit bundle product to the cart. The bundle product is comprised of four simple products, and the selected simple products are specified with a value in the `selected_options` array. Use the `products` query to determine these UID values. Note that each UID value is an encoded value representing the following string:
 
-`bundle/<bundle_option_id>/<bundle_option_selection_id>/\<quantity\>`
+`bundle/<bundle_option_id>/<bundle_option_selection_id>/<quantity>`
 
 Because the encoded value includes the quantity, the schema does not contain a `quantity` attribute for individual simple products.
 

@@ -38,7 +38,7 @@ The new quote is empty with a `draft_by_admin` system state. In the interface, t
 
 **Endpoint:**
 
-`POST \<host\>/rest/default/V1/negotiableQuote/draft`
+`POST <host>/rest/default/V1/negotiableQuote/draft`
 
 **Headers:**
 

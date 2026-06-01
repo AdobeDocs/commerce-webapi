@@ -61,7 +61,7 @@ The following example creates a company and assigns the default shared catalog (
 
 **Sample Usage:**
 
-`POST \<host\>/rest/<store_code>/V1/company/`
+`POST <host>/rest/<store_code>/V1/company/`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -123,7 +123,7 @@ The following call changes the company status to Rejected (`2`) and explains why
 
 **Sample Usage:**
 
-`PUT \<host\>/rest/<store_code>/V1/company/2`
+`PUT <host>/rest/<store_code>/V1/company/2`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -187,7 +187,7 @@ The following call changes the company status to Rejected (`2`) and explains why
 This call returns detailed information about the specified company.
 **Sample Usage:**
 
-`GET \<host\>/rest/<store_code>/V1/company/2`
+`GET <host>/rest/<store_code>/V1/company/2`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -234,7 +234,7 @@ When you delete a company, Adobe Commerce assigns the "Inactive" status to all c
 
 **Sample Usage:**
 
-`DELETE \<host\>/rest/<store_code>/V1/company/2`
+`DELETE <host>/rest/<store_code>/V1/company/2`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -258,7 +258,7 @@ See [Search using REST APIs](../use-rest/performing-searches.md) for information
 
 **Sample Usage:**
 
-`GET \<host\>/rest/<store_code>/V1/company?searchCriteria[filter_groups][0][filters][0][field]=region_id&searchCriteria[filter_groups][0][filters][0][value]=12&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
+`GET <host>/rest/<store_code>/V1/company?searchCriteria[filter_groups][0][filters][0][field]=region_id&searchCriteria[filter_groups][0][filters][0][value]=12&searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 

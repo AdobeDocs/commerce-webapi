@@ -56,7 +56,7 @@ The `POST /V1/customers` call creates an Adobe Commerce customer. B2B extends th
 
 **Sample Usage:**
 
-`POST \<host\>/rest/<store_code>/V1/customers`
+`POST <host>/rest/<store_code>/V1/customers`
 
 First, create the standard customer. Their `company_id` will initially be set to `0`.
 
@@ -109,7 +109,7 @@ If you change the `status` to inactive, the account is locked. If the company us
 
 **Sample Usage:**
 
-`PUT \<host\>/rest/<store_code>/V1/customers/13`
+`PUT <host>/rest/<store_code>/V1/customers/13`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 
@@ -176,7 +176,7 @@ Commerce locks the deleted user's quotes and changes their status to Closed. The
 
 **Sample Usage:**
 
-`DELETE \<host\>/rest/<store_code>/V1/customers/13`
+`DELETE <host>/rest/<store_code>/V1/customers/13`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 

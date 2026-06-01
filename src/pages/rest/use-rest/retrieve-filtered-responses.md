@@ -30,13 +30,13 @@ The following example returns only the `sku`, `price`, and `name` for the specif
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-`GET https://\<host\>/rest/<store_code>/V1/products/24-MB01?fields=sku,price,name`
+`GET https://<host>/rest/<store_code>/V1/products/24-MB01?fields=sku,price,name`
 
 <Edition slots="text" backgroundcolor="green"/>
 
 [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-`GET https://\<server\>.api.commerce.adobe.com/<tenant-id>/V1/products/24-MB01?fields=sku,price,name`
+`GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/products/24-MB01?fields=sku,price,name`
 
 ```json
 {
@@ -54,13 +54,13 @@ The following example returns only the customer first name, last name, and the e
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-`GET https://\<host\>/rest/<store_code>/V1/orders/2?fields=billing_address,customer_firstname,customer_lastname`
+`GET https://<host>/rest/<store_code>/V1/orders/2?fields=billing_address,customer_firstname,customer_lastname`
 
 <Edition slots="text" backgroundcolor="green"/>
 
 [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-`GET https://\<server\>.api.commerce.adobe.com/<tenant-id>/V1/orders/2?fields=billing_address,customer_firstname,customer_lastname`
+`GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/orders/2?fields=billing_address,customer_firstname,customer_lastname`
 
 ```json
 {
@@ -94,13 +94,13 @@ The following example returns only the `name`, `qty`, and `sku` fields defined i
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-`GET https://\<host\>/rest/<store_code>/V1/shipment/2?fields=items[name,qty,sku]`
+`GET https://<host>/rest/<store_code>/V1/shipment/2?fields=items[name,qty,sku]`
 
 <Edition slots="text" backgroundcolor="green"/>
 
 [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-`GET https://\<server\>.api.commerce.adobe.com/<tenant-id>/V1/shipment/2?fields=items[name,qty,sku]`
+`GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/shipment/2?fields=items[name,qty,sku]`
 
 ```json
 "items": [
@@ -124,13 +124,13 @@ This example returns only the following:
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-`GET https://\<host\>/rest/<store_code>/V1/products/MT12?fields=name,sku,extension_attributes[category_links,stock_item[item_id,qty]]`
+`GET https://<host>/rest/<store_code>/V1/products/MT12?fields=name,sku,extension_attributes[category_links,stock_item[item_id,qty]]`
 
 <Edition slots="text" backgroundcolor="green"/>
 
 [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-`GET https://\<server\>.api.commerce.adobe.com/<tenant-id>/V1/products/MT12?fields=name,sku,extension_attributes[category_links,stock_item[item_id,qty]]`
+`GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/products/MT12?fields=name,sku,extension_attributes[category_links,stock_item[item_id,qty]]`
 
 ```json
 {
@@ -157,13 +157,13 @@ The following POST operation and payload creates a catalog category named `New C
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-`POST https://\<host\>/rest/<store_code>/V1/categories?fields=id,parent_id,name`
+`POST https://<host>/rest/<store_code>/V1/categories?fields=id,parent_id,name`
 
 <Edition slots="text" backgroundcolor="green"/>
 
 [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-`POST https://\<server\>.api.commerce.adobe.com/<tenant-id>/V1/categories?fields=id,parent_id,name`
+`POST https://<server>.api.commerce.adobe.com/<tenant-id>/V1/categories?fields=id,parent_id,name`
 
 **Payload:**
 
@@ -196,13 +196,13 @@ The following query returns only the `sku` and `name` parameters for product ite
 
 [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-`GET https://\<host\>/rest/<store_code>/V1/products/?searchCriteria[filter_groups][0][filters][0][field]=category_gear&searchCriteria[filter_groups][0][filters][0][value]=86&searchCriteria[filter_groups][0][filters][0][condition_type]=finset&fields=items[sku,name]`
+`GET https://<host>/rest/<store_code>/V1/products/?searchCriteria[filter_groups][0][filters][0][field]=category_gear&searchCriteria[filter_groups][0][filters][0][value]=86&searchCriteria[filter_groups][0][filters][0][condition_type]=finset&fields=items[sku,name]`
 
 <Edition slots="text" backgroundcolor="green"/>
 
 [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
-`GET https://\<server\>.api.commerce.adobe.com/<tenant-id>//V1/products/?searchCriteria[filter_groups][0][filters][0][field]=category_gear&searchCriteria[filter_groups][0][filters][0][value]=86&searchCriteria[filter_groups][0][filters][0][condition_type]=finset&fields=items[sku,name]`
+`GET https://<server>.api.commerce.adobe.com/<tenant-id>//V1/products/?searchCriteria[filter_groups][0][filters][0][field]=category_gear&searchCriteria[filter_groups][0][filters][0][value]=86&searchCriteria[filter_groups][0][filters][0][condition_type]=finset&fields=items[sku,name]`
 
 ```json
 {

@@ -22,17 +22,17 @@ Adobe Commerce calculates shipping costs for each shipping method that can be ap
 
 <InlineAlert variant="info" slots="text"/>
 
-Use the `V1/guest-carts/\<cartId\>/estimate-shipping-methods` endpoint to estimate shipping costs on behalf of a guest. Do not include an authorization token.
+Use the `V1/guest-carts/<cartId>/estimate-shipping-methods` endpoint to estimate shipping costs on behalf of a guest. Do not include an authorization token.
 
 **Endpoint:**
 
-`POST \<host\>/rest/<store_code>/V1/carts/mine/estimate-shipping-methods`
+`POST <host>/rest/<store_code>/V1/carts/mine/estimate-shipping-methods`
 
 **Headers:**
 
 `Content-Type: application/json`
 
-`Authorization: Bearer \<customer token\>`
+`Authorization: Bearer <customer token>`
 
 **Payload:**
 
@@ -109,17 +109,17 @@ Commerce returnsa list of payment options and calculates the order totals.
 
 <InlineAlert variant="info" slots="text"/>
 
-Use the `V1/guest-carts/\<cartId\>/shipping-information` endpoint to set the billing and shipping information on behalf of a guest. Do not include an authorization token.
+Use the `V1/guest-carts/<cartId>/shipping-information` endpoint to set the billing and shipping information on behalf of a guest. Do not include an authorization token.
 
 **Endpoint:**
 
-`POST \<host\>/rest/<store_code>/V1/carts/mine/shipping-information`
+`POST <host>/rest/<store_code>/V1/carts/mine/shipping-information`
 
 **Headers:**
 
 `Content-Type: application/json`
 
-`Authorization: Bearer \<customer token\>`
+`Authorization: Bearer <customer token>`
 
 **Payload:**
 

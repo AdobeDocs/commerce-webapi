@@ -128,7 +128,7 @@ POST /V1/import/csv
 
 `Content-Type: application/json`
 
-`Authorization: Bearer \<administrator token\>`
+`Authorization: Bearer <administrator token>`
 
 **Payload:**
 
@@ -240,9 +240,9 @@ POST /V1/import/json
 
 `Content-Type: application/json`
 
-`Authorization: Bearer \<administrator token\>`
+`Authorization: Bearer <administrator token>`
 
-`Store: \<store code\>` (SaaS only)
+`Store: <store code>` (SaaS only)
 
 **Simple product payload:**
 

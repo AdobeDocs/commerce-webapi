@@ -27,7 +27,7 @@ This example shows a simplified way of creating a customer account. Typically, y
 
 **Endpoint:**
 
-`POST \<host\>/rest/<store_code>/V1/customers`
+`POST <host>/rest/<store_code>/V1/customers`
 
 **Headers:**
 
@@ -131,7 +131,7 @@ By default, a customer token is valid for 1 hour. To change this value, log in t
 
 **Endpoint:**
 
-`POST \<host\>/rest/<store_code>/V1/integration/customer/token`
+`POST <host>/rest/<store_code>/V1/integration/customer/token`
 
 **Headers:**
 

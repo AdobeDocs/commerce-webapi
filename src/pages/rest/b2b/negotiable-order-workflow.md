@@ -68,7 +68,7 @@ Adobe Commerce as a Cloud Service does not support the `POST /V1/carts/mine` end
 
 **Endpoint:**
 
-`POST \<host\>/rest/default/V1/carts/mine`
+`POST <host>/rest/default/V1/carts/mine`
 
 **Headers:**
 
@@ -141,7 +141,7 @@ Adobe Commerce as a Cloud Service does not support the `POST /V1/carts/mine/esti
 
 **Endpoint:**
 
-`POST \<host\>/rest/default/V1/carts/mine/estimate-shipping-methods`
+`POST <host>/rest/default/V1/carts/mine/estimate-shipping-methods`
 
 **Headers:**
 
@@ -643,7 +643,7 @@ Initiating a negotiable quote places it in the `processing_by_admin` state.
 
 **Endpoint:**
 
-`POST \<host\>/rest/default/V1/negotiableQuote/request`
+`POST <host>/rest/default/V1/negotiableQuote/request`
 
 **Headers:**
 

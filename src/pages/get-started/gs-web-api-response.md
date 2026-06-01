@@ -27,7 +27,7 @@ Each web API call returns an HTTP status code that reflects the result of a requ
 
 ### Response payload
 
-POST, PUT, and GET web API calls return a response payload. This payload is a JSON- or XML-formatted response body. The `Accept: application/\<FORMAT\>` header in the request determines the format of the response body, where `FORMAT` is either `json` or `xml`.
+POST, PUT, and GET web API calls return a response payload. This payload is a JSON- or XML-formatted response body. The `Accept: application/<FORMAT>` header in the request determines the format of the response body, where `FORMAT` is either `json` or `xml`.
 
 A successful DELETE call returns `true`. An unsuccessful DELETE call returns a payload similar to the other calls.
 

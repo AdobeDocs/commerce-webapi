@@ -59,7 +59,7 @@ The `negotiated_price_type` can have one of the following values:
 
 **Sample Usage:**
 
-`PUT \<host\>/rest/<store_code>/V1/negotiableQuote/6`
+`PUT <host>/rest/<store_code>/V1/negotiableQuote/6`
 
 <CodeBlock slots="heading, code" repeat="1" languages="JSON" />
 
@@ -88,7 +88,7 @@ The buyer can add, update, or delete items from the quote under the following co
 
 **Sample Usage:**
 
-`POST \<host\>/rest/<store_code>/V1/carts/mine/items`
+`POST <host>/rest/<store_code>/V1/carts/mine/items`
 
 **Headers:**
 
@@ -137,7 +137,7 @@ Authorization Bearer <customer token>
 
 **Sample Usage:**
 
-`PUT \<host\>/rest/<store_code>/V1/negotiableQuote/6`
+`PUT <host>/rest/<store_code>/V1/negotiableQuote/6`
 
 <CodeBlock slots="heading, code" repeat="2" languages="JSON, JSON" />
 

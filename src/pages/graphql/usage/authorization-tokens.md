@@ -22,7 +22,7 @@ Adobe recommends that you use authorization tokens instead of session cookies fo
 
 Adobe Commerce provides separate token services for customers and administrators. When you request a token from one of these services, the service returns a unique access token in exchange for the account's username and password.
 
-GraphQL provides a mutation that returns a token on behalf of a logged-in customer, but you must use a REST call to fetch an admin token. Any time you make a GraphQL or REST call that requires a token, specify the HTTP `Authorization` request header and assign the value as `Bearer \<token\>`. [Request headers](headers.md#request-headers) provides an example.
+GraphQL provides a mutation that returns a token on behalf of a logged-in customer, but you must use a REST call to fetch an admin token. Any time you make a GraphQL or REST call that requires a token, specify the HTTP `Authorization` request header and assign the value as `Bearer <token>`. [Request headers](headers.md#request-headers) provides an example.
 
 ### Customer tokens
 

@@ -22,7 +22,7 @@ This example creates a full invoice.
 
 **Endpoint:**
 
-`POST \<host\>/rest/default/V1/order/3/invoice`
+`POST <host>/rest/default/V1/order/3/invoice`
 
 where `3` is the `orderid`
 
@@ -34,7 +34,7 @@ where `3` is the `orderid`
 
 `Content-Type`: `application/json`
 
-`Authorization`: `Bearer \<admin token\>`
+`Authorization`: `Bearer <admin token>`
 
 **Payload:**
 
@@ -55,7 +55,7 @@ When you create an order, Commerce generates an `order_item_id` for each product
 
 **Endpoint:**
 
-`GET \<host\>/rest/default/V1/invoices/3`
+`GET <host>/rest/default/V1/invoices/3`
 
 where `3` is the invoice ID
 
@@ -67,7 +67,7 @@ where `3` is the invoice ID
 
 `Content-Type`: `application/json`
 
-`Authorization`: `Bearer \<admin token\>`
+`Authorization`: `Bearer <admin token>`
 
 **Payload:**
 

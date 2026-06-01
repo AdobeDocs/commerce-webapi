@@ -27,7 +27,7 @@ We must create a new cart for the customer.
 
 **Endpoint:**
 
-`POST \<host\>/rest/default/V1/carts/mine`
+`POST <host>/rest/default/V1/carts/mine`
 
 **Scope:**
 
@@ -53,7 +53,7 @@ This time, we will add two Voyage Yoga Bags (`24-WB01`).
 
 **Endpoint:**
 
-`POST \<host\>/rest/default/V1/carts/mine/items`
+`POST <host>/rest/default/V1/carts/mine/items`
 
 **Scope:**
 
@@ -204,7 +204,7 @@ The customer has chosen to pick up the order at the Brooklyn store. Once again, 
 
 **Endpoint:**
 
-`POST \<host\>/rest/default/V1/carts/mine/shipping-information`
+`POST <host>/rest/default/V1/carts/mine/shipping-information`
 
 **Scope:**
 
@@ -373,7 +373,7 @@ Send the payment information to create an order.
 
 **Endpoint:**
 
-`POST \<host\>/rest/default/V1/carts/mine/payment-information`
+`POST <host>/rest/default/V1/carts/mine/payment-information`
 
 **Scope:**
 
@@ -383,7 +383,7 @@ Send the payment information to create an order.
 
 `Content-Type`: `application/json`
 
-`Authorization`: `Bearer \<customer token\>`
+`Authorization`: `Bearer <customer token>`
 
 **Payload:**
 
@@ -420,7 +420,7 @@ This call creates a shipment.
 
 **Endpoint:**
 
-`POST \<host\>/rest/default/V1/order/notify-orders-are-ready-for-pickup`
+`POST <host>/rest/default/V1/order/notify-orders-are-ready-for-pickup`
 
 **Scope:**
 
@@ -430,7 +430,7 @@ This call creates a shipment.
 
 `Content-Type`: `application/json`
 
-`Authorization`: `Bearer \<admin token\>`
+`Authorization`: `Bearer <admin token>`
 
 **Payload:**
 

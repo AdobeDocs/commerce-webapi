@@ -38,13 +38,13 @@ Use the `V1/guest-carts` endpoint to create a cart on behalf of a guest. Do not 
 
 **Endpoint:**
 
-`POST \<host\>/rest/<store_code>/V1/carts/mine`
+`POST <host>/rest/<store_code>/V1/carts/mine`
 
 **Headers:**
 
 `Content-Type: application/json`
 
-`Authorization: Bearer \<customer token\>`
+`Authorization: Bearer <customer token>`
 
 **Payload:**
 

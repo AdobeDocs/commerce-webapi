@@ -26,7 +26,7 @@ To consume several services, you must specify them in the WSDL endpoint URL.
 
 The WSDL URL follows the following pattern:
 
-`http://\<host\>/soap/<optional_store_code>?wsdl&services=<service_name_1>,<service_name_2>`
+`http://<host>/soap/<optional_store_code>?wsdl&services=<service_name_1>,<service_name_2>`
 
 You must specify each service version in the endpoint URL.
 
@@ -34,7 +34,7 @@ This way, you can have a strict contract between your application and the servic
 
 If you want an overview to all the available Web Services, use the following URL format to get a list of all SOAP Services:
 
-`http://\<host\>/soap/all?wsdl_list=1`
+`http://<host>/soap/all?wsdl_list=1`
 
 ```xml
 <response>

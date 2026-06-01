@@ -19,7 +19,7 @@ This example creates a full invoice. You can create a partial invoice by adding 
 
 **Endpoint:**
 
-`POST \<host\>/rest/<store_code>/V1/order/3/invoice`
+`POST <host>/rest/<store_code>/V1/order/3/invoice`
 
 where `3` is the `orderid`
 
@@ -27,7 +27,7 @@ where `3` is the `orderid`
 
 `Content-Type: application/json`
 
-`Authorization: Bearer` `\<administrator token\>`
+`Authorization: Bearer` `<administrator token>`
 
 **Payload:**
 
@@ -48,13 +48,13 @@ An invoice is structurally similar to an order, but an order contains more detai
 
 **Endpoint:**
 
-`GET \<host\>/rest/<store_code>/V1/invoices/3`
+`GET <host>/rest/<store_code>/V1/invoices/3`
 
 **Headers:**
 
 `Content-Type: application/json`
 
-`Authorization: Bearer \<administrator token\>`
+`Authorization: Bearer <administrator token>`
 
 **Payload:**
 
