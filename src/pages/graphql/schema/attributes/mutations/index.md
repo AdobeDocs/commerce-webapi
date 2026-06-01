@@ -45,35 +45,4 @@ The following entities now support custom attributes:
 
 ## Install custom attribute support
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
-
-### Prerequisites
-
-* Adobe Commerce on cloud infrastructure or on-premises: 2.4.5+
-* PHP 8.1+
-* Magento Open Source is not supported.
-
-### Installation
-
-To install custom attributes in Adobe Commerce:
-
-1. Run the following command to install the modules:
-
-   ```bash
-   composer require magento/out-of-process-custom-attributes=^0.2.0  --with-dependencies
-   ```
-
-1. Enable the new modules:
-
-   ```bash
-   bin/magento module:enable Magento_CustomAttributeSerializable
-   bin/magento module:enable Magento_CustomAttributeSerializableGraphQl
-   ```
-
-1. For on-premises installations, run the following command to upgrade Adobe Commerce and clear the cache.
-
-   ```bash
-   bin/magento setup:upgrade && bin/magento cache:clean
-   ```
+<Fragment src="../../../../includes/custom-attribute-installation.md"/>

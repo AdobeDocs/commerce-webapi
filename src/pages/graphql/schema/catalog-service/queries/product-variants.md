@@ -26,68 +26,17 @@ variants(sku: String!, optionIds: [String!], pageSize: Int, cursor: String): Pro
 
 ## Endpoints
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
-
-| Environment | Endpoint    |
-|------------ | ----------: |
-| **Testing**    | `https://catalog-service-sandbox.adobe.io/graphql` |
-| **Production** | `https://catalog-service.adobe.io/graphql` |
-
-<Edition slots="text" backgroundcolor="green"/>
-
-[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
-
-|  Environment | Endpoint |
-| ------------ | --------:|
-| Testing | `https://{{region}}-{{environment}}.api.commerce.adobe.com/{{tenant-id}}/graphql` |
-| Production | `https://{{region}}.api.commerce.adobe.com/{{tenant-id}}/graphql` |
-
-**URL structure for SaaS endpoints:**
-
-- `region` is the cloud region where your instance is deployed.
-- `environment` is the environment type, such as `sandbox`. If the environment is production, this value is omitted.
-- `tenantId` is the unique identifier for your organization's specific instance within the Adobe Experience Cloud.
+<Fragment src="../../../../includes/graphql/endpoints.md"/>
 
 ## Required headers
 
 You must specify the following HTTP headers to run this query.
 
-| Header | Description |
-| --- | --- |
-| `Magento-Customer-Group` | Specify the [customer group code](#find-the-customer-group-code) for the API request. |
-| `Magento-Environment-Id` | This value is displayed at **System** > **Commerce Services Connector** > **SaaS Identifier** > **Data Space ID** or can be obtained by running the `bin/magento config:show services_connector/services_id/environment_id` command. |
-| `Magento-Store-Code`| The code assigned to the store associated with the active store view. For example, `main_website_store`. |
-| `Magento-Store-View-Code`| The code assigned to the active store view. For example, `default`. |
-| `Magento-Website-Code`| The code assigned to the website associated with the active store view. For example, `base`. |
-
-<Edition slots="text" backgroundcolor="blue"/>
-
-[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
-
-`X-Api-Key` | Set this value to the [unique API key](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/user-guides/integration-services/saas#genapikey) generated for your Commerce environment.
+<Fragment src="../../../../includes/graphql/catalog-service/headers.md"/>
 
 ### Find the customer group code
 
-The customer group code is the encrypted value of the customer group ID, which determines discounts and tax class for pricing contexts. For B2B implementations, the customer group ID also determines the Shared Catalog context.
-
-Use one of the following codes for a default customer group based on your requirements.
-
-| Customer Group | Code |
-| ---------------| ----------------- |
-| **NOT LOGGED IN** | `b6589fc6ab0dc82cf12099d1c2d40ab994e8410c` |
-| **General** | `356a192b7913b04c54574d18c28d46e6395428ab` |
-| **Wholesale** | `da4b9237bacccdf19c0760cab7aec4a8359010b0` |
-| **Retailer** |`77de68daecd823babbb58edb1c8e14d7106e83bb` |
-
-For merchant-defined groups, the customer group code is the encrypted value of the ID, `sha1(<customer_group_id>)`.
-
-For B2B implementations, the customer group code is the encrypted value of the customer group ID associated with the shared catalog, `sha1(<customer_group_id>)`.
-
-<InlineAlert variant="info" slots="text"/>
-
-Find a list of available customer group IDs from the Admin (**Customers** > **Customer Groups**). For details, see [Customer Groups](https://experienceleague.adobe.com/en/docs/commerce-admin/customers/customer-groups) and [Shared Catalogs](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/shared-catalogs/catalog-shared) in the _Merchant Guide_.
+<Fragment src="../../../../includes/graphql/customer-group-code.md"/>
 
 ## Example usage
 
