@@ -44,6 +44,11 @@
         "paths": [
           "src/pages/includes"
         ]
+      },
+      "missing-heading": {
+        "paths": [
+          "src/pages/includes"
+        ]
       }
     }
   }
