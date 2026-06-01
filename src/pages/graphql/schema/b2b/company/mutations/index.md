@@ -17,3 +17,4 @@ The B2B company mutations allow you to perform the management operations:
 * Create, update, and delete company teams.
 * Move the position of a company team in the company hierarchy.
 * Create, update, and delete company roles.
+* Assign and unassign a company to a company hierarchy.
