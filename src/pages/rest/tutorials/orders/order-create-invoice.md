@@ -13,7 +13,7 @@ keywords:
 
 You create an invoice after you receive payment for an order. In this example, the order was paid offline via a bank transfer. Therefore, you must tell Adobe Commerce that payment for the order has been captured.
 
-### Capture payment
+## Capture payment
 
 This example creates a full invoice. You can create a partial invoice by adding to the payload an array of items to be invoiced.
 
@@ -42,7 +42,7 @@ where `3` is the `orderid`
 
 An invoice `id`, such as `3`.
 
-### View the invoice
+## View the invoice
 
 An invoice is structurally similar to an order, but an order contains more details.
 
@@ -286,6 +286,6 @@ You will use the `order_item_id` values to create a shipment in the next step.
 }
 ```
 
-### Verify this step
+## Verify this step
 
 Log in to Admin. Click **Sales** > **Invoices**. The invoice is displayed in the grid. The status is Paid. Then click **Sales** > **Orders**. The status is Processing.

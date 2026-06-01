@@ -35,7 +35,7 @@ The `attributeMetadata` query returns a list of product attribute codes that can
 | Testing | `https://{{region}}-{{environment}}.api.commerce.adobe.com/{{tenant-id}}/graphql` |
 | Production | `https://{{region}}.api.commerce.adobe.com/{{tenant-id}}/graphql` |
 
-**URL structure for SaaS endpoints**
+**URL structure for SaaS endpoints:**
 
 - `region` is the cloud region where your instance is deployed.
 - `environment` is the environment type, such as `sandbox`. If the environment is production, this value is omitted.

@@ -4,6 +4,12 @@
 # Default state for all rules
 default: true
 
+# MD001/heading-increment - replaced by CM001 (component-aware version)
+MD001: false
+
+# CM001/comdox-heading-increment - component-aware replacement for MD001
+CM001: true
+
 # MD003/heading-style - Heading style
 MD003:
   style: atx
@@ -33,17 +39,18 @@ MD033:
     - Announcement
     - Cards
     - CodeBlock
+    - Details
     - DiscoverBlock
     - Edition
     - Fragment
+    - GetCredential
     - HeroSimple
     - HorizontalLine
+    - InlineAlert
     - RedoclyAPIBlock
     - Resources
     - SuperHero
-    - InlineAlert
-    - GetCredential
-    - Details
+    - iframe
 
 # MD034/no-bare-urls - Bare URL used
 MD034: false

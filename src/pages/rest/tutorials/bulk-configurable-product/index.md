@@ -17,14 +17,14 @@ A system integrator can use Adobe Commerce REST bulk APIs to perform actions on 
 
  This **4-step tutorial** generally takes **45 minutes**.
 
-### Before you begin
+## Before you begin
 
 *  Install a Commerce instance with sample data. The sample data defines a functional store, called Luma, that sells fitness clothing and accessories.
 *  Install a REST client. You can use any REST client to send calls to Commerce. [Postman](https://www.getpostman.com/) is recommended.
 *  Obtain an admin authorization token. All calls in this tutorial require administrator privileges. See [Generate the admin token](/rest/tutorials/prerequisite-tasks/index.md) for more information.
 *  Use the `bin/magento queue:consumers:start async.operations.all` command to enable bulk endpoint processing.
 
-### Other resources
+## Other resources
 
 *  [REST Tutorials](../index.md) provides additional information about completing any Commerce REST tutorial.
 *  [Asynchronous web endpoints](/rest/use-rest/asynchronous-web-endpoints.md) provides information about how to use the Commerce Asynchronous API

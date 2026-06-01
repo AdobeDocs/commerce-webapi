@@ -11,7 +11,7 @@ A grouped product consists of simple standalone products that are presented as a
 
 This tutorial describes how you can use the Adobe Commerce REST API to create and manage grouped products.
 
-### Before you begin
+## Before you begin
 
 *  Install a Commerce instance with sample data. The sample data defines a functional store, called Luma, that sells fitness clothing and accessories.
 

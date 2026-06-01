@@ -23,7 +23,7 @@ The **10-step tutorial** generally takes **30 minutes**.
 
 Adobe Commerce and Magento Open Source GraphQL is designed to run queries and perform actions on behalf of a customer. Adobe Commerce and Magento Open Source GraphQL does not perform backend tasks, such as manage invoices or shipments.
 
-### Before you begin
+## Before you begin
 
 Complete the following prerequisites:
 
@@ -38,7 +38,7 @@ Complete the following prerequisites:
 
 -  In the Admin, create a [coupon](https://experienceleague.adobe.com/en/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart-coupon#configure-coupon-codes) that will be used in [Step 7. Apply a coupon](apply-coupon.md).
 
-### Other resources
+## Other resources
 
 -  [Order processing tutorial](https://developer.adobe.com/commerce/webapi/rest/tutorials/orders/) shows a system integrator how REST APIs are used in the lifecycle of an order, including configuring a store and creating a customer; creating quotes, orders, invoices, and shipments; preparing for checkout; and more order-related tasks.
 

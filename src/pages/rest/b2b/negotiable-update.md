@@ -43,7 +43,7 @@ The `quote` object now contains a set of `negotiable_quote` extension attributes
 | `negotiated_total_price`  | Negotiated total price | number | Optional |
 | `base_negotiated_total_price`  | Base negotiated total price | number | Optional |
 
-### Set a negotiated price
+## Set a negotiated price
 
 In every successful negotiate quote, the seller must set the negotiated price.
 
@@ -79,7 +79,7 @@ The `negotiated_price_type` can have one of the following values:
 }
 ```
 
-### Add a new quote item to the negotiable quote
+## Add a new quote item to the negotiable quote
 
 The buyer can add, update, or delete items from the quote under the following conditions:
 
@@ -133,7 +133,7 @@ Authorization Bearer <customer token>
 }
 ```
 
-### Change the quote expiration date
+## Change the quote expiration date
 
 **Sample Usage:**
 

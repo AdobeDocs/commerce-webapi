@@ -17,7 +17,7 @@ Now that all the items have been added to the cart, we can prepare the quote for
 *  Estimate shipping costs
 *  Set shipping and billing information
 
-### Estimate shipping costs
+## Estimate shipping costs
 
 Adobe Commerce calculates shipping costs for each shipping method that can be applied to the order. In this tutorial, the `flatrate` ($5 per item) shipping method is active.
 
@@ -81,7 +81,7 @@ The cost for the `flatrate` shipping method is $300 (60 items x $5 each). The do
 ]
 ```
 
-### Set shipping and billing information
+## Set shipping and billing information
 
 In this call, you specify the shipping and billing addresses, as well as the selected `carrier_code` and `method_code`. The customer has selected the Flat Rate shipping method.
 
@@ -319,7 +319,7 @@ The available payment methods are `banktransfer` and `checkmo`. The customer wil
 }
 ```
 
-### Verify this step
+## Verify this step
 
 Sign in to the US store (`http://<host>/us`) as the customer and go to the checkout page.
 

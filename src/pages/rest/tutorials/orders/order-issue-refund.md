@@ -66,7 +66,7 @@ The `return_to_stock_items` array specifies which `order_item_id`s can be return
 
 A credit memo ID, such as `3`.
 
-### Verify this step
+## Verify this step
 
 Log in to Admin. Click **Sales** > **Credit Memos**. The credit memo is displayed in the grid.
 

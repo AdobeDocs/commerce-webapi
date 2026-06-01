@@ -15,7 +15,7 @@ In this tutorial, we will create a desktop computer by bundling a processor, mon
 
 This **3-step tutorial** generally takes **40 minutes**.
 
-### Before you begin
+## Before you begin
 
 *  Install a Commerce instance with sample data.
 

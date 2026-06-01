@@ -131,9 +131,9 @@ The `Returns` object contains an array of `Return` objects and pagination inform
 
 | Attribute |  Data Type | Description |
 | --- | --- | --- |
-| `items` | [Return] | A list of return requests |
-| `page_info` SearchResultPageInfo | Pagination metadata |
-| `total_count` | Int | The total number of return requests |
+| `items` | `[Return]` | A list of return requests |
+| `page_info` | `SearchResultPageInfo` | Pagination metadata |
+| `total_count` | `Int` | The total number of return requests |
 
 ## Related topics
 

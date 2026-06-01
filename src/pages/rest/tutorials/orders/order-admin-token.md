@@ -40,7 +40,7 @@ This section lists the information that is sent to Commerce. All payload samples
 
 This section lists the information that Commerce sends to the REST client. These values are often referenced in other steps in the tutorial. The values Commerce returnsmight be different than the values listed in the examples provided in this tutorial.
 
-### Get the admin authorization token
+## Get the admin authorization token
 
 In a production environment, you would typically [create an integration](/get-started/create-integration.md) and supply the integration token with any REST call that requires admin privileges. The token allows Commerce to verify that the caller is authorized to access a system resource.
 
@@ -78,6 +78,6 @@ Commerce returns the admin's access token.
 
 This token must be specified in the authorization header of every call that requires admin permissions.
 
-### Verify this step
+## Verify this step
 
 There are no additional verification steps. Tokens are not displayed in Admin.

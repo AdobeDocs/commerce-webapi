@@ -13,7 +13,7 @@ In this tutorial, we will create a gray t-shirt that comes in three sizes (small
 
 This **5-step tutorial** generally takes **45 minutes**.
 
-### Before you begin
+## Before you begin
 
 *  Install a Commerce instance with sample data. The sample data defines a functional store, called Luma, that sells fitness clothing and accessories.
 
@@ -23,6 +23,6 @@ This **5-step tutorial** generally takes **45 minutes**.
 
 *  Obtain an admin authorization token. All calls in this tutorial require administrator privileges. See [Generate the admin token](/rest/tutorials/prerequisite-tasks/index.md) for more information.
 
-### Other resources
+## Other resources
 
 *  [REST Tutorials](../index.md) provides additional information about completing any Commerce REST tutorial.

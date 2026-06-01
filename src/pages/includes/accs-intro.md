@@ -6,4 +6,4 @@ The base format for Adobe Commerce as a Cloud Service REST endpoint URLs is:
 
 The URL does not include `/rest` or the store view code. You must use the `Store` HTTP header to set the store scope.
 
-See the <a href="https://developer.adobe.com/commerce/webapi/rest/" target="_blank">REST Overview</a> for more details about the URL structure and authentication.
+See the [REST Overview](https://developer.adobe.com/commerce/webapi/rest/) for more details about the URL structure and authentication.

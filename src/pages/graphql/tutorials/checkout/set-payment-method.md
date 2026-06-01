@@ -54,7 +54,7 @@ query {
 }
 ```
 
-### Set payment method on cart
+## Set payment method on cart
 
 Use the `setPaymentMethodOnCart` mutation to set the payment method for your order. The value `checkmo` ("Check / Money order" payment method code) was returned in the query.
 

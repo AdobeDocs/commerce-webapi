@@ -9,7 +9,7 @@ keywords:
 
 Each GraphQL API call returns a HTTP status code and a response payload. When an error occurs, the response payload returns an error message.
 
-### HTTP status codes
+## HTTP status codes
 
 Each GraphQL API call returns an HTTP status code that reflects the result of a request:
 
@@ -20,7 +20,7 @@ Each GraphQL API call returns an HTTP status code that reflects the result of a 
 | 403 | Forbidden | Access is not allowed for reasons that are not covered by error code 401. |
 | 500 | System Errors | If service implementation throws any other exception, such as a network error or database communication failure, the framework returns HTTP 500. |
 
-### Error format
+## Error format
 
 When an error occurs, the response body contains an error message and data related to the executed query or mutation.
 

@@ -19,7 +19,7 @@ Customers can make purchases in three ways:
 
 This tutorial creates an order by a logged-in user. Adobe Commerce provides additional REST endpoints for handling guest users.
 
-### Create a customer account
+## Create a customer account
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -152,7 +152,7 @@ Commerce returns the customer's access token. This token must be specified in th
 
 `q0u66k8h42yaevtchv09uyy3y9gaj2ap`
 
-### Verify this step
+## Verify this step
 
 1. Log in to the Luma website using the email `jdoe@example.com` and password `Password1`.
 1. Click the account name (Jane) in the upper right corner and select **My Account**.

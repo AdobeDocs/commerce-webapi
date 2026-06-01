@@ -90,7 +90,7 @@ $soapClient = new SoapClient($wsdlUrl, ['version' => SOAP_1_2, 'stream_context' 
 $soapResponse = $soapClient->testModule1AllSoapAndRestV1Item($serviceArgs); ?>
 ```
 
-#### Related topics
+## Related topics
 
 *  [OAuth-based authentication](authentication/gs-authentication-oauth.md)
 *  [Service contracts](https://developer.adobe.com/commerce/php/development/components/service-contracts/)

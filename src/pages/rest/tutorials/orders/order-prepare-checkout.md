@@ -16,7 +16,7 @@ Now that all the items have been added to the cart, we can prepare the order for
 *  Estimate shipping costs
 *  Set shipping and billing information
 
-### Estimate shipping costs
+## Estimate shipping costs
 
 Adobe Commerce calculates shipping costs for each shipping method that can be applied to the order. In this tutorial, the `flatrate` ($5 per item) and `tablerate` shipping methods are active.
 

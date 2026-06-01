@@ -15,7 +15,7 @@ This tutorial shows a system integrator how REST APIs are used in the lifecycle 
 
 The **10-step tutorial** generally takes **30 minutes**.
 
-### Before you begin
+## Before you begin
 
 Complete the following prerequisites:
 
@@ -33,6 +33,6 @@ Complete the following prerequisites:
 
 *  Find the Commerce Merchant documentation. Refer to [Getting Started with Magento Open Source 2.1](https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home) for information about the Luma store that is created when you install Commerce with the sample data.
 
-### Other resources
+## Other resources
 
 *  [REST Tutorials](../index.md) provides additional information about completing any Commerce REST tutorial.

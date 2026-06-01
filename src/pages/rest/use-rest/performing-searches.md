@@ -347,9 +347,9 @@ This example shows how to use search criteria to determine the sort order and at
 
 | Parameter | Value | Description |
 | --- | --- | --- |
-| searchCriteria[filter_groups][0][filters][0][field] | status | Attribute name to filter |
-| searchCriteria[filter_groups][0][filters][0][value] | pending | Attribute value to filter |
-| fields | items[increment_id,entity_id] | Attributes to return in the response. If you do not specify this parameter, all attributes will be returned. |
+| `searchCriteria[filter_groups][0][filters][0][field]` | status | Attribute name to filter |
+| `searchCriteria[filter_groups][0][filters][0][value]` | pending | Attribute value to filter |
+| `fields` | items[increment_id,entity_id] | Attributes to return in the response. If you do not specify this parameter, all attributes will be returned. |
 
 **Payload:**
 

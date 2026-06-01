@@ -57,7 +57,7 @@ The Adobe Developer Console provides a straightforward workflow:
 
 ### Step 2. Authorization flow
 
-**Building authorization URL**
+#### Building authorization URL
 
 The authorization URL is used to initiate the authentication process. It includes the client ID, redirect URI, scopes, and a state parameter for security. Here is the example for a web app:
 
@@ -75,7 +75,7 @@ Replace the following placeholders with your values:
   AdobeID,openid,email,profile,additional_info.roles,additional_info.projectedProductContext,commerce.accs
   ```
 
-**Handling authorization response**
+#### Handling authorization response
 
 Redirect handling:
 

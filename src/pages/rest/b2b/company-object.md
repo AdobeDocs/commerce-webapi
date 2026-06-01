@@ -55,7 +55,7 @@ The following table lists the parameters defined in `CompanyInterface`.
 | `rejected_at` | A timestamp indicating when the company was rejected. | string | Optional |
 | `super_user_id` | The `customer_id` of the company administrator. When creating a company, the `customer_id` must already exist.  | integer | Required to create or update a company. |
 
-### Create a company
+## Create a company
 
 The following example creates a company and assigns the default shared catalog (`customer_group_id`). The company admin (`super_user_id`) must be a previously-defined `customer_id`.
 
@@ -117,7 +117,7 @@ The following example creates a company and assigns the default shared catalog (
 }
 ```
 
-### Update the company
+## Update the company
 
 The following call changes the company status to Rejected (`2`) and explains why.
 
@@ -182,7 +182,7 @@ The following call changes the company status to Rejected (`2`) and explains why
 }
 ```
 
-### Return all information about a company
+## Return all information about a company
 
 This call returns detailed information about the specified company.
 **Sample Usage:**
@@ -228,7 +228,7 @@ This call returns detailed information about the specified company.
 }
 ```
 
-### Delete a company
+## Delete a company
 
 When you delete a company, Adobe Commerce assigns the "Inactive" status to all company members. The system also removes company ID from the customer profile of all company members.
 
@@ -250,7 +250,7 @@ When you delete a company, Adobe Commerce assigns the "Inactive" status to all c
 // `true`, indicating the request was successful
 ```
 
-### Search for companies
+## Search for companies
 
 The following call returns all companies that are located in California (`region_id` = `12`)
 

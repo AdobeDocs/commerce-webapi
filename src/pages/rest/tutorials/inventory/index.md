@@ -18,7 +18,7 @@ For more information about key inventory features, see [Inventory Management ove
 
 This **14-step tutorial** generally takes **1 hour**.
 
-### Complete these prerequisites
+## Complete these prerequisites
 
 *  Install Adobe Commerce.
 
@@ -28,6 +28,6 @@ This **14-step tutorial** generally takes **1 hour**.
 
 *  Obtain an admin authorization token. Multiple calls in this tutorial require administrator privileges. See [Generate the admin token](/rest/tutorials/prerequisite-tasks/index.md) for more information.
 
-### Other resources
+## Other resources
 
 *  Commerce uses [Swagger](https://swagger.io) to provide REST API documentation on local instances of Commerce. See [Generate a local API reference](/rest/quick-reference/generate-local.md) for more information. You can view the [static REST API documentation](../../reference/index.md), which displays reference information using ReDoc.

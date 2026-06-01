@@ -51,6 +51,6 @@ Commerce generates the admin's access token
 
 This token must be specified in the authorization header of every call that requires admin permissions.
 
-### Verify this step
+## Verify this step
 
 There are no additional verification steps. Tokens are not displayed in Admin.
