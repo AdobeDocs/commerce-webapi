@@ -37,5 +37,14 @@
     "lint:md:fix": "npx --yes markdownlint-cli2 --fix 'src/pages/**/*.md' '*.md'",
     "test": "npx --yes jest",
     "test:config": "npx --yes jest tests/config.test.js"
+  },
+  "lint": {
+    "skipRules": {
+      "check-frontmatter": {
+        "paths": [
+          "src/pages/includes"
+        ]
+      }
+    }
   }
 }
