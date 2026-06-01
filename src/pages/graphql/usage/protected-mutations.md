@@ -44,19 +44,19 @@ The following table lists the forms and mutations that can be configured to requ
 
 | Field name | Mutation |
 | --- | --- |
-[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) Enable for Customer Login | `generateCustomerToken`,\<br/\> `exchangeOtpForCustomerToken`
-Enable for Forgot Password | `changeCustomerPassword`
-Enable for Create New Customer Account | `createCustomer`, `createCustomerV2`
-Enable for Edit Customer Account | `updateCustomer`, `updateCustomerV2`
-Enable for Contact Us | Not applicable
-Enable for Product Review | `createProductReview`
-Enable for Newsletter Subscription | `subscribeEmailToNewsletter`
-Enable for Send To Friend | `sendEmailToFriend`
-Enable for PayPal PayflowPro payment form | `createPayflowProToken`
-Enable for Braintree payment form | Not applicable
-Enable for Checkout/Placing Order | `setPaymentMethodOnCart`, `setPaymentMethodAndPlaceOrder`
-Enable for Coupon Codes | `applyCouponToCart`
-Enable for Resend Confirmation Email | `resendConfirmationEmail`
+| Enable for Customer Login | `generateCustomerToken`,\<br/\> [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) `exchangeOtpForCustomerToken` |
+| Enable for Forgot Password | `changeCustomerPassword` |
+| Enable for Create New Customer Account | `createCustomer`, `createCustomerV2` |
+| Enable for Edit Customer Account | `updateCustomer`, `updateCustomerV2` |
+| Enable for Contact Us | Not applicable |
+| Enable for Product Review | `createProductReview` |
+| Enable for Newsletter Subscription | `subscribeEmailToNewsletter` |
+| Enable for Send To Friend | `sendEmailToFriend` |
+| Enable for PayPal PayflowPro payment form | `createPayflowProToken` |
+| Enable for Braintree payment form | Not applicable |
+| Enable for Checkout/Placing Order | `setPaymentMethodOnCart`, `setPaymentMethodAndPlaceOrder` |
+| Enable for Coupon Codes | `applyCouponToCart` |
+| Enable for Resend Confirmation Email | `resendConfirmationEmail` |
 
 ## Related topics
 
