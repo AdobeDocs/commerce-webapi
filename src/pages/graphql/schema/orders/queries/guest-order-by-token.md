@@ -16,9 +16,9 @@ You can retrieve the token from the `CustomerOrder` object on the [`placeOrder` 
 
 The `guestOrderByToken` reference provides detailed information about the types and fields defined in this query.
 
-* [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-guestOrderByToken)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-guestOrderByToken)
 
-* [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-guestOrderByToken)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-guestOrderByToken)
 
 ## Example usage
 
