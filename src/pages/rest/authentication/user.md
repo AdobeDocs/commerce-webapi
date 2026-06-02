@@ -20,7 +20,7 @@ Adobe provides three types of OAuth credentials for User Authentication with dif
 1. **OAuth Single Page App (SPA)**: For browser-based JavaScript applications
 1. **OAuth Native App**: For device-native applications (iOS, Android, desktop)
 
-Each credential type has specific security considerations and implementation requirements. For detailed implementation guidance, see the [User Authentication Guide](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/).
+Each credential type has specific security considerations and implementation requirements. For detailed implementation guidance, see the [User Authentication Guide](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation).
 
 ## Prerequisites
 

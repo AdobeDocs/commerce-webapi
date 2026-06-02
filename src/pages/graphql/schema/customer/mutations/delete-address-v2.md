@@ -12,7 +12,7 @@ description: Use the deleteCustomerAddressV2 mutation to delete the specified cu
 
 Use the `deleteCustomerAddressV2` mutation to delete the specified customer address. It returns a Boolean value that indicates whether the operation was successful.
 
-We recommend you use a customer token in the header of your call to delete a customer. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session).
+We recommend you use a customer token in the header of your call to delete a customer. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session/).
 
 <InlineAlert variant="info" slots="text1" />
 

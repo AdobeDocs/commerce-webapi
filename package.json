@@ -49,7 +49,10 @@
         "paths": [
           "src/pages/includes"
         ]
-      }
+      },
+      "skipUrlPatterns": [
+        "https://commercemarketplace.adobe.com/magento-payment-services.html"
+      ]
     }
   }
 }
