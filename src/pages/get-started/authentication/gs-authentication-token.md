@@ -41,10 +41,8 @@ bin/magento config:set oauth/consumer/enable_integration_as_bearer 1
 If you are trying to upgrade from a previous version and need to update your integration implementation to properly utilize the OAuth workflow, review [OAuth-based Authentication](gs-authentication-oauth.md). Otherwise, you can partially update your integration to simply store and utilize all four credentials to sign your requests.
 
 There is a comprehensive guide for this on the OAuth-based authentication page, but can also be done in isolation without supporting the entire OAuth workflow. For example, in the following script the four credentials are used to create a new CMS page without using external libraries or implementing the full OAuth handshake.
-\<p\>\</p\>
-<Details slots="heading, content" />
 
-#### standalone-oauth.php
+<Details slots="content" summary="standalone-oauth.php" />
 
 ```php
 <?php

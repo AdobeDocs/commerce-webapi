@@ -28,7 +28,7 @@ The seller and a buyer representing a company can negotiate the price of an orde
 
 ## B2B Modules
 
-\<p\>B2B for Adobe Commerce is a set of modules that are installed on top of Adobe Commerce. The following table lists the modules provided with B2B.\</p\>
+B2B for Adobe Commerce is a set of modules that are installed on top of Adobe Commerce. The following table lists the modules provided with B2B.
 
 | Name | Description | REST enabled? |
 | --- | --- | --- |

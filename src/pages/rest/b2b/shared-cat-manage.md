@@ -11,7 +11,7 @@ keywords:
 
 # Manage custom shared catalogs
 
-\<p\>B2B for Adobe Commerce provides two types of shared catalog: public and custom. A public catalog is the default shared catalog. It is automatically displayed to all guest customers and to logged-in customers that are not company users. The seller assigns a custom shared catalog to specific companies as configured by admin. There can only be one public catalog, and it cannot be deleted.\</p\>
+B2B for Adobe Commerce provides two types of shared catalog: public and custom. A public catalog is the default shared catalog. It is automatically displayed to all guest customers and to logged-in customers that are not company users. The seller assigns a custom shared catalog to specific companies as configured by admin. There can only be one public catalog, and it cannot be deleted.
 
 **Service name:**
 

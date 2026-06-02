@@ -68,8 +68,6 @@ mutation {
 
 ### Update a customer with custom attributes
 
-\<BetaNote2 /\>
-
 The following call updates the first name, newsletter subscription status, and custom attribute values for a specific customer. The merchant has previously created the `random_attribute` and `studies` attributes for customer addresses.
 
 **Request:**

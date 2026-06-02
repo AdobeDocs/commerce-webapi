@@ -62,7 +62,7 @@ Specify one or more of the following HTTP headers in your web API calls:
 
 ### Call payload
 
-The call payload is a set of input \<i\>parameters\</i\> and \<i\>attributes\</i\> that you supply with the request. API operations have both _required_ and _optional_ inputs.
+The call payload is a set of input *parameters* and *attributes* that you supply with the request. API operations have both _required_ and _optional_ inputs.
 
 You specify input parameters in the URI. For example, in the `GET /V1/customers/:customerId` URI, you must specify the `customerId` template parameter. This parameter filters the response by the specified customer ID.
 

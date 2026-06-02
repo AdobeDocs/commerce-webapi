@@ -11,7 +11,7 @@ keywords:
 
 # Manage company structures
 
-\<p\>B2B for Adobe Commerce allows company users to be assigned to company teams and hierarchies.\</p\>
+B2B for Adobe Commerce allows company users to be assigned to company teams and hierarchies.
 
 ## Manage company teams
 

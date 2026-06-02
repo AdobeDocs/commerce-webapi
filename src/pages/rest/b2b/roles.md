@@ -13,7 +13,7 @@ keywords:
 
 Within a company, customers may have different job roles, levels of responsibility, and access to information about their company. B2B for Adobe Commerce defines several types of system resources, and the Company Admin (or an integration that operates on the behalf of the Company Admin) grants or denies access to these resources using company roles. The Company Admin has access to all resources.
 
-\<p\>B2B for Adobe Commerce defines the following types of resources:\</p\>
+B2B for Adobe Commerce defines the following types of resources:
 
 -  Sales
 -  Purchase Orders

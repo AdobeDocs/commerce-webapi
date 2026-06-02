@@ -99,7 +99,7 @@ In this example, we will search for locations within 50 km of New York, New York
 
 **Endpoint:**
 
-`GET http://\<host\>/rest/default/V1/inventory/in-store-pickup/pickup-locations/?
+`GET http://<host>/rest/default/V1/inventory/in-store-pickup/pickup-locations/?
 searchRequest[area][radius]=50&
 searchRequest[area][searchTerm]=New%20York&
 searchRequest[scopeCode]=base&

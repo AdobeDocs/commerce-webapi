@@ -71,7 +71,7 @@ This JSON-formatted response body includes a `customer` object with the customer
 When an error occurs, the response body contains an error code, error message, and optional parameters.
 
 | Part | Description |
-| --- | --- | --- |
+| --- | --- |
 | `code` | The status code representing the error. |
 | `message` | The message explaining the error. |
 | `parameters` | Optional. An array of attributes used to generate a different and/or localized error message for the client. |
