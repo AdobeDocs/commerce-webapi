@@ -23,12 +23,6 @@
       "fields": {
         "completePayByLinkPayment": {
           "documentation": { "undocumented": true }
-        },
-        "assignChildCompany": {
-          "documentation": { "undocumented": true }
-        },
-        "unassignChildCompany": {
-          "documentation": { "undocumented": true }
         }
       }
     },
@@ -67,22 +61,10 @@
     },
     "CompletePayByLinkPaymentOutput": {
       "documentation": { "undocumented": true }
-    },
-    "AssignChildCompanyOutput": {
-      "documentation": { "undocumented": true }
-    },
-    "UnassignChildCompanyOutput": {
-      "documentation": { "undocumented": true }
     }
   },
   "INPUT_OBJECT": {
     "PayByLinkInput": {
-      "documentation": { "undocumented": true }
-    },
-    "AssignChildCompanyInput": {
-      "documentation": { "undocumented": true }
-    },
-    "UnassignChildCompanyInput": {
       "documentation": { "undocumented": true }
     }
   },
