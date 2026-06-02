@@ -1041,7 +1041,7 @@ The [Purchase order approval rules](../../b2b/purchase-order-rule/index.md) topi
 
 <Fragment src="../../../../includes/saas-only.md"/>
 
-< CustomerS3Download />
+<Fragment src="../../../../includes/graphql/examples/customer-s3-download.md"/>
 
 ## Related topics
 

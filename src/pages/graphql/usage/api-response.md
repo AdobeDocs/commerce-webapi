@@ -25,7 +25,7 @@ Each GraphQL API call returns an HTTP status code that reflects the result of a 
 When an error occurs, the response body contains an error message and data related to the executed query or mutation.
 
 | Part | Description |
-| --- | --- | --- |
+| --- | --- |
 | `message` | The message explaining the error. |
 | `locations` | The starting position in the incoming query or mutation that caused the issue. |
 | `path` | The query or mutation being executed. |
