@@ -9,14 +9,12 @@
 {{{generateApiEndpoints}}}
 ```
 {{/if}}
-{{#if headers}}
+{{#if server.headers}}
 
 ## Headers
 
-```text
-{{{headers}}}
-```
-{{/if}}
+{{#each server.headers}}{{#unless required}}{{{comment}}}
+{{/unless}}{{/each}}{{/if}}
 {{#if server.headers}}
 
 ## Required headers

@@ -74,33 +74,33 @@ Defines a simple product, which is tangible and is usually sold in single units 
 
 ```json
 {
-  "attribute_set_id": 987,
-  "canonical_url": "abc123",
+  "attribute_set_id": 123,
+  "canonical_url": "xyz789",
   "categories": [CategoryInterface],
-  "color": 987,
-  "country_of_manufacture": "xyz789",
-  "created_at": "abc123",
+  "color": 123,
+  "country_of_manufacture": "abc123",
+  "created_at": "xyz789",
   "crosssell_products": [ProductInterface],
   "custom_attributesV2": ProductCustomAttributes,
   "description": ComplexTextValue,
   "gift_message_available": false,
-  "gift_wrapping_available": true,
+  "gift_wrapping_available": false,
   "gift_wrapping_price": Money,
   "id": 987,
   "image": ProductImage,
-  "is_returnable": "xyz789",
+  "is_returnable": "abc123",
   "manufacturer": 123,
   "max_sale_qty": 123.45,
   "media_gallery": [MediaGalleryInterface],
   "media_gallery_entries": [MediaGalleryEntry],
   "meta_description": "xyz789",
-  "meta_keyword": "xyz789",
+  "meta_keyword": "abc123",
   "meta_title": "abc123",
   "min_sale_qty": 123.45,
   "name": "abc123",
-  "new_from_date": "abc123",
-  "new_to_date": "xyz789",
-  "only_x_left_in_stock": 987.65,
+  "new_from_date": "xyz789",
+  "new_to_date": "abc123",
+  "only_x_left_in_stock": 123.45,
   "options": [CustomizableOptionInterface],
   "options_container": "xyz789",
   "price": ProductPrices,
@@ -109,34 +109,34 @@ Defines a simple product, which is tangible and is usually sold in single units 
   "product_links": [ProductLinksInterface],
   "quantity": 987.65,
   "rating_summary": 987.65,
-  "redirect_code": 123,
+  "redirect_code": 987,
   "related_products": [ProductInterface],
-  "relative_url": "xyz789",
-  "review_count": 987,
+  "relative_url": "abc123",
+  "review_count": 123,
   "reviews": ProductReviews,
   "short_description": ComplexTextValue,
-  "sku": "abc123",
+  "sku": "xyz789",
   "small_image": ProductImage,
-  "special_from_date": "xyz789",
+  "special_from_date": "abc123",
   "special_price": 123.45,
-  "special_to_date": "xyz789",
-  "staged": true,
+  "special_to_date": "abc123",
+  "staged": false,
   "stock_status": "IN_STOCK",
-  "swatch_image": "xyz789",
+  "swatch_image": "abc123",
   "thumbnail": ProductImage,
-  "tier_price": 123.45,
+  "tier_price": 987.65,
   "tier_prices": [ProductTierPrices],
   "type": "CMS_PAGE",
-  "type_id": "xyz789",
+  "type_id": "abc123",
   "uid": "4",
   "updated_at": "xyz789",
   "upsell_products": [ProductInterface],
-  "url_key": "abc123",
-  "url_path": "xyz789",
+  "url_key": "xyz789",
+  "url_path": "abc123",
   "url_rewrites": [UrlRewrite],
-  "url_suffix": "xyz789",
+  "url_suffix": "abc123",
   "websites": [Website],
-  "weight": 123.45
+  "weight": 987.65
 }
 ```
 
@@ -183,7 +183,7 @@ Contains details about simple products added to a requisition list.
 {
   "customizable_options": [SelectedCustomizableOption],
   "product": ProductInterface,
-  "quantity": 987.65,
+  "quantity": 123.45,
   "uid": 4
 }
 ```
@@ -209,12 +209,12 @@ Contains a simple product wish list item.
 
 ```json
 {
-  "added_at": "xyz789",
+  "added_at": "abc123",
   "customizable_options": [SelectedCustomizableOption],
-  "description": "xyz789",
-  "id": "4",
+  "description": "abc123",
+  "id": 4,
   "product": ProductInterface,
-  "quantity": 123.45
+  "quantity": 987.65
 }
 ```
 
@@ -236,7 +236,7 @@ Smart button payment inputs
 
 ```json
 {
-  "payment_source": "xyz789",
+  "payment_source": "abc123",
   "payments_order_id": "xyz789",
   "paypal_order_id": "xyz789"
 }
@@ -271,12 +271,12 @@ Smart button payment inputs
   "code": "abc123",
   "display_message": false,
   "display_venmo": true,
-  "is_visible": true,
+  "is_visible": false,
   "message_styles": MessageStyles,
   "payment_intent": "abc123",
   "sdk_params": [SDKParams],
-  "sort_order": "xyz789",
-  "title": "abc123"
+  "sort_order": "abc123",
+  "title": "xyz789"
 }
 ```
 
@@ -316,7 +316,7 @@ Defines a possible sort field.
 
 ```json
 {
-  "label": "xyz789",
+  "label": "abc123",
   "value": "xyz789"
 }
 ```
@@ -650,172 +650,172 @@ Contains information about a store's configuration.
 ```json
 {
   "absolute_footer": "abc123",
-  "allow_gift_receipt": "xyz789",
-  "allow_gift_wrapping_on_order": "xyz789",
+  "allow_gift_receipt": "abc123",
+  "allow_gift_wrapping_on_order": "abc123",
   "allow_gift_wrapping_on_order_items": "xyz789",
   "allow_guests_to_write_product_reviews": "abc123",
-  "allow_items": "abc123",
-  "allow_order": "xyz789",
-  "allow_printed_card": "xyz789",
+  "allow_items": "xyz789",
+  "allow_order": "abc123",
+  "allow_printed_card": "abc123",
   "autocomplete_on_storefront": false,
   "base_currency_code": "xyz789",
   "base_link_url": "abc123",
   "base_media_url": "abc123",
   "base_static_url": "abc123",
   "base_url": "abc123",
-  "braintree_3dsecure_allowspecific": true,
-  "braintree_3dsecure_always_request_3ds": false,
-  "braintree_3dsecure_specificcountry": "xyz789",
+  "braintree_3dsecure_allowspecific": false,
+  "braintree_3dsecure_always_request_3ds": true,
+  "braintree_3dsecure_specificcountry": "abc123",
   "braintree_3dsecure_threshold_amount": "abc123",
-  "braintree_3dsecure_verify_3dsecure": true,
+  "braintree_3dsecure_verify_3dsecure": false,
   "braintree_ach_direct_debit_vault_active": true,
   "braintree_applepay_merchant_name": "abc123",
   "braintree_applepay_vault_active": false,
   "braintree_cc_vault_active": "abc123",
-  "braintree_cc_vault_cvv": false,
-  "braintree_environment": "xyz789",
+  "braintree_cc_vault_cvv": true,
+  "braintree_environment": "abc123",
   "braintree_googlepay_btn_color": "abc123",
-  "braintree_googlepay_cctypes": "xyz789",
+  "braintree_googlepay_cctypes": "abc123",
   "braintree_googlepay_merchant_id": "xyz789",
-  "braintree_googlepay_vault_active": true,
+  "braintree_googlepay_vault_active": false,
   "braintree_local_payment_allowed_methods": "xyz789",
-  "braintree_local_payment_fallback_button_text": "abc123",
+  "braintree_local_payment_fallback_button_text": "xyz789",
   "braintree_local_payment_redirect_on_fail": "abc123",
   "braintree_merchant_account_id": "xyz789",
   "braintree_paypal_button_location_cart_type_credit_color": "xyz789",
   "braintree_paypal_button_location_cart_type_credit_label": "abc123",
-  "braintree_paypal_button_location_cart_type_credit_shape": "xyz789",
-  "braintree_paypal_button_location_cart_type_credit_show": true,
-  "braintree_paypal_button_location_cart_type_messaging_layout": "abc123",
+  "braintree_paypal_button_location_cart_type_credit_shape": "abc123",
+  "braintree_paypal_button_location_cart_type_credit_show": false,
+  "braintree_paypal_button_location_cart_type_messaging_layout": "xyz789",
   "braintree_paypal_button_location_cart_type_messaging_logo": "abc123",
   "braintree_paypal_button_location_cart_type_messaging_logo_position": "abc123",
-  "braintree_paypal_button_location_cart_type_messaging_show": false,
-  "braintree_paypal_button_location_cart_type_messaging_text_color": "xyz789",
-  "braintree_paypal_button_location_cart_type_paylater_color": "xyz789",
+  "braintree_paypal_button_location_cart_type_messaging_show": true,
+  "braintree_paypal_button_location_cart_type_messaging_text_color": "abc123",
+  "braintree_paypal_button_location_cart_type_paylater_color": "abc123",
   "braintree_paypal_button_location_cart_type_paylater_label": "xyz789",
   "braintree_paypal_button_location_cart_type_paylater_shape": "abc123",
   "braintree_paypal_button_location_cart_type_paylater_show": false,
   "braintree_paypal_button_location_cart_type_paypal_color": "abc123",
-  "braintree_paypal_button_location_cart_type_paypal_label": "abc123",
+  "braintree_paypal_button_location_cart_type_paypal_label": "xyz789",
   "braintree_paypal_button_location_cart_type_paypal_shape": "xyz789",
   "braintree_paypal_button_location_cart_type_paypal_show": false,
-  "braintree_paypal_button_location_checkout_type_credit_color": "abc123",
-  "braintree_paypal_button_location_checkout_type_credit_label": "xyz789",
-  "braintree_paypal_button_location_checkout_type_credit_shape": "abc123",
-  "braintree_paypal_button_location_checkout_type_credit_show": true,
+  "braintree_paypal_button_location_checkout_type_credit_color": "xyz789",
+  "braintree_paypal_button_location_checkout_type_credit_label": "abc123",
+  "braintree_paypal_button_location_checkout_type_credit_shape": "xyz789",
+  "braintree_paypal_button_location_checkout_type_credit_show": false,
   "braintree_paypal_button_location_checkout_type_messaging_layout": "xyz789",
-  "braintree_paypal_button_location_checkout_type_messaging_logo": "xyz789",
+  "braintree_paypal_button_location_checkout_type_messaging_logo": "abc123",
   "braintree_paypal_button_location_checkout_type_messaging_logo_position": "xyz789",
-  "braintree_paypal_button_location_checkout_type_messaging_show": false,
+  "braintree_paypal_button_location_checkout_type_messaging_show": true,
   "braintree_paypal_button_location_checkout_type_messaging_text_color": "abc123",
   "braintree_paypal_button_location_checkout_type_paylater_color": "abc123",
   "braintree_paypal_button_location_checkout_type_paylater_label": "abc123",
   "braintree_paypal_button_location_checkout_type_paylater_shape": "xyz789",
-  "braintree_paypal_button_location_checkout_type_paylater_show": false,
-  "braintree_paypal_button_location_checkout_type_paypal_color": "xyz789",
-  "braintree_paypal_button_location_checkout_type_paypal_label": "abc123",
+  "braintree_paypal_button_location_checkout_type_paylater_show": true,
+  "braintree_paypal_button_location_checkout_type_paypal_color": "abc123",
+  "braintree_paypal_button_location_checkout_type_paypal_label": "xyz789",
   "braintree_paypal_button_location_checkout_type_paypal_shape": "xyz789",
-  "braintree_paypal_button_location_checkout_type_paypal_show": true,
+  "braintree_paypal_button_location_checkout_type_paypal_show": false,
   "braintree_paypal_button_location_productpage_type_credit_color": "abc123",
-  "braintree_paypal_button_location_productpage_type_credit_label": "xyz789",
-  "braintree_paypal_button_location_productpage_type_credit_shape": "abc123",
+  "braintree_paypal_button_location_productpage_type_credit_label": "abc123",
+  "braintree_paypal_button_location_productpage_type_credit_shape": "xyz789",
   "braintree_paypal_button_location_productpage_type_credit_show": false,
-  "braintree_paypal_button_location_productpage_type_messaging_layout": "abc123",
+  "braintree_paypal_button_location_productpage_type_messaging_layout": "xyz789",
   "braintree_paypal_button_location_productpage_type_messaging_logo": "xyz789",
-  "braintree_paypal_button_location_productpage_type_messaging_logo_position": "xyz789",
-  "braintree_paypal_button_location_productpage_type_messaging_show": true,
-  "braintree_paypal_button_location_productpage_type_messaging_text_color": "xyz789",
-  "braintree_paypal_button_location_productpage_type_paylater_color": "xyz789",
+  "braintree_paypal_button_location_productpage_type_messaging_logo_position": "abc123",
+  "braintree_paypal_button_location_productpage_type_messaging_show": false,
+  "braintree_paypal_button_location_productpage_type_messaging_text_color": "abc123",
+  "braintree_paypal_button_location_productpage_type_paylater_color": "abc123",
   "braintree_paypal_button_location_productpage_type_paylater_label": "xyz789",
-  "braintree_paypal_button_location_productpage_type_paylater_shape": "abc123",
-  "braintree_paypal_button_location_productpage_type_paylater_show": false,
-  "braintree_paypal_button_location_productpage_type_paypal_color": "abc123",
+  "braintree_paypal_button_location_productpage_type_paylater_shape": "xyz789",
+  "braintree_paypal_button_location_productpage_type_paylater_show": true,
+  "braintree_paypal_button_location_productpage_type_paypal_color": "xyz789",
   "braintree_paypal_button_location_productpage_type_paypal_label": "abc123",
-  "braintree_paypal_button_location_productpage_type_paypal_shape": "xyz789",
-  "braintree_paypal_button_location_productpage_type_paypal_show": true,
+  "braintree_paypal_button_location_productpage_type_paypal_shape": "abc123",
+  "braintree_paypal_button_location_productpage_type_paypal_show": false,
   "braintree_paypal_credit_uk_merchant_name": "xyz789",
-  "braintree_paypal_display_on_shopping_cart": false,
+  "braintree_paypal_display_on_shopping_cart": true,
   "braintree_paypal_merchant_country": "xyz789",
-  "braintree_paypal_merchant_name_override": "abc123",
+  "braintree_paypal_merchant_name_override": "xyz789",
   "braintree_paypal_require_billing_address": true,
-  "braintree_paypal_send_cart_line_items": false,
+  "braintree_paypal_send_cart_line_items": true,
   "braintree_paypal_vault_active": true,
-  "cart_expires_in_days": 123,
-  "cart_gift_wrapping": "xyz789",
-  "cart_merge_preference": "abc123",
-  "cart_printed_card": "xyz789",
+  "cart_expires_in_days": 987,
+  "cart_gift_wrapping": "abc123",
+  "cart_merge_preference": "xyz789",
+  "cart_printed_card": "abc123",
   "cart_summary_display_quantity": 123,
   "catalog_default_sort_by": "xyz789",
   "category_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
-  "category_url_suffix": "xyz789",
+  "category_url_suffix": "abc123",
   "check_money_order_enable_for_specific_countries": true,
   "check_money_order_enabled": false,
-  "check_money_order_make_check_payable_to": "abc123",
-  "check_money_order_max_order_total": "abc123",
-  "check_money_order_min_order_total": "abc123",
+  "check_money_order_make_check_payable_to": "xyz789",
+  "check_money_order_max_order_total": "xyz789",
+  "check_money_order_min_order_total": "xyz789",
   "check_money_order_new_order_status": "xyz789",
   "check_money_order_payment_from_specific_countries": "xyz789",
-  "check_money_order_send_check_to": "abc123",
+  "check_money_order_send_check_to": "xyz789",
   "check_money_order_sort_order": 123,
   "check_money_order_title": "abc123",
-  "cms_home_page": "xyz789",
+  "cms_home_page": "abc123",
   "cms_no_cookies": "xyz789",
   "cms_no_route": "xyz789",
-  "code": "xyz789",
+  "code": "abc123",
   "configurable_product_image": "ITSELF",
   "configurable_thumbnail_source": "abc123",
   "contact_enabled": true,
-  "copyright": "xyz789",
-  "countries_with_required_region": "abc123",
-  "create_account_confirmation": false,
+  "copyright": "abc123",
+  "countries_with_required_region": "xyz789",
+  "create_account_confirmation": true,
   "customer_access_token_lifetime": 123.45,
   "default_country": "xyz789",
-  "default_description": "xyz789",
+  "default_description": "abc123",
   "default_display_currency_code": "abc123",
   "default_keywords": "abc123",
-  "default_title": "xyz789",
-  "demonotice": 123,
-  "display_product_prices_in_catalog": 987,
-  "display_shipping_prices": 987,
+  "default_title": "abc123",
+  "demonotice": 987,
+  "display_product_prices_in_catalog": 123,
+  "display_shipping_prices": 123,
   "display_state_if_optional": true,
-  "enable_multiple_wishlists": "xyz789",
+  "enable_multiple_wishlists": "abc123",
   "fixed_product_taxes_apply_tax_to_fpt": true,
   "fixed_product_taxes_display_prices_in_emails": 123,
   "fixed_product_taxes_display_prices_in_product_lists": 987,
   "fixed_product_taxes_display_prices_in_sales_modules": 987,
   "fixed_product_taxes_display_prices_on_product_view_page": 987,
-  "fixed_product_taxes_enable": true,
+  "fixed_product_taxes_enable": false,
   "fixed_product_taxes_include_fpt_in_subtotal": true,
-  "front": "abc123",
-  "graphql_share_customer_group": false,
+  "front": "xyz789",
+  "graphql_share_customer_group": true,
   "grid_per_page": 987,
-  "grid_per_page_values": "xyz789",
+  "grid_per_page_values": "abc123",
   "grouped_product_image": "ITSELF",
   "head_includes": "abc123",
-  "head_shortcut_icon": "abc123",
+  "head_shortcut_icon": "xyz789",
   "header_logo_src": "xyz789",
   "id": 123,
-  "is_checkout_agreements_enabled": true,
+  "is_checkout_agreements_enabled": false,
   "is_default_store": true,
   "is_default_store_group": true,
-  "is_guest_checkout_enabled": false,
+  "is_guest_checkout_enabled": true,
   "is_negotiable_quote_active": true,
-  "is_one_page_checkout_enabled": false,
+  "is_one_page_checkout_enabled": true,
   "is_requisition_list_active": "xyz789",
-  "list_mode": "abc123",
-  "list_per_page": 987,
+  "list_mode": "xyz789",
+  "list_per_page": 123,
   "list_per_page_values": "abc123",
   "locale": "abc123",
-  "logo_alt": "xyz789",
+  "logo_alt": "abc123",
   "logo_height": 987,
-  "logo_width": 987,
-  "magento_reward_general_is_enabled": "abc123",
-  "magento_reward_general_is_enabled_on_front": "xyz789",
+  "logo_width": 123,
+  "magento_reward_general_is_enabled": "xyz789",
+  "magento_reward_general_is_enabled_on_front": "abc123",
   "magento_reward_general_min_points_balance": "abc123",
-  "magento_reward_general_publish_history": "xyz789",
+  "magento_reward_general_publish_history": "abc123",
   "magento_reward_points_invitation_customer": "abc123",
   "magento_reward_points_invitation_customer_limit": "xyz789",
-  "magento_reward_points_invitation_order": "xyz789",
+  "magento_reward_points_invitation_order": "abc123",
   "magento_reward_points_invitation_order_limit": "abc123",
   "magento_reward_points_newsletter": "abc123",
   "magento_reward_points_order": "abc123",
@@ -823,61 +823,61 @@ Contains information about a store's configuration.
   "magento_reward_points_review": "abc123",
   "magento_reward_points_review_limit": "xyz789",
   "magento_wishlist_general_is_enabled": "xyz789",
-  "max_items_in_order_summary": 123,
-  "maximum_number_of_wishlists": "abc123",
-  "minicart_display": false,
+  "max_items_in_order_summary": 987,
+  "maximum_number_of_wishlists": "xyz789",
+  "minicart_display": true,
   "minicart_max_items": 987,
   "minimum_password_length": "xyz789",
-  "newsletter_enabled": false,
+  "newsletter_enabled": true,
   "no_route": "abc123",
-  "optional_zip_countries": "abc123",
+  "optional_zip_countries": "xyz789",
   "order_cancellation_enabled": false,
   "order_cancellation_reasons": [CancellationReason],
   "orders_invoices_credit_memos_display_full_summary": true,
-  "orders_invoices_credit_memos_display_grandtotal": true,
+  "orders_invoices_credit_memos_display_grandtotal": false,
   "orders_invoices_credit_memos_display_price": 987,
   "orders_invoices_credit_memos_display_shipping_amount": 987,
-  "orders_invoices_credit_memos_display_subtotal": 987,
+  "orders_invoices_credit_memos_display_subtotal": 123,
   "orders_invoices_credit_memos_display_zero_tax": false,
-  "payment_payflowpro_cc_vault_active": "xyz789",
-  "printed_card_price": "xyz789",
+  "payment_payflowpro_cc_vault_active": "abc123",
+  "printed_card_price": "abc123",
   "printed_card_priceV2": Money,
   "product_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
   "product_reviews_enabled": "abc123",
-  "product_url_suffix": "xyz789",
+  "product_url_suffix": "abc123",
   "quickorder_active": false,
   "required_character_classes_number": "abc123",
-  "returns_enabled": "abc123",
-  "root_category_id": 123,
+  "returns_enabled": "xyz789",
+  "root_category_id": 987,
   "root_category_uid": 4,
   "sales_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
-  "sales_gift_wrapping": "abc123",
+  "sales_gift_wrapping": "xyz789",
   "sales_printed_card": "xyz789",
   "secure_base_link_url": "xyz789",
   "secure_base_media_url": "xyz789",
   "secure_base_static_url": "xyz789",
   "secure_base_url": "xyz789",
   "send_friend": SendFriendConfiguration,
-  "share_active_segments": true,
-  "share_applied_cart_rule": true,
-  "shopping_cart_display_full_summary": true,
+  "share_active_segments": false,
+  "share_applied_cart_rule": false,
+  "shopping_cart_display_full_summary": false,
   "shopping_cart_display_grand_total": false,
   "shopping_cart_display_price": 123,
   "shopping_cart_display_shipping": 123,
-  "shopping_cart_display_subtotal": 123,
+  "shopping_cart_display_subtotal": 987,
   "shopping_cart_display_tax_gift_wrapping": "DISPLAY_EXCLUDING_TAX",
-  "shopping_cart_display_zero_tax": true,
+  "shopping_cart_display_zero_tax": false,
   "show_cms_breadcrumbs": 123,
   "store_code": 4,
   "store_group_code": "4",
   "store_group_name": "abc123",
-  "store_name": "abc123",
-  "store_sort_order": 123,
-  "timezone": "abc123",
-  "title_prefix": "abc123",
-  "title_separator": "abc123",
+  "store_name": "xyz789",
+  "store_sort_order": 987,
+  "timezone": "xyz789",
+  "title_prefix": "xyz789",
+  "title_separator": "xyz789",
   "title_suffix": "xyz789",
-  "use_store_in_url": false,
+  "use_store_in_url": true,
   "website_code": 4,
   "website_id": 987,
   "website_name": "xyz789",
@@ -888,7 +888,7 @@ Contains information about a store's configuration.
   "zero_subtotal_new_order_status": "xyz789",
   "zero_subtotal_payment_action": "xyz789",
   "zero_subtotal_payment_from_specific_countries": "abc123",
-  "zero_subtotal_sort_order": 987,
+  "zero_subtotal_sort_order": 123,
   "zero_subtotal_title": "abc123"
 }
 ```
@@ -913,7 +913,7 @@ Indicates where an attribute can be displayed.
 
 ```json
 {
-  "position": 987,
+  "position": 123,
   "use_in_layered_navigation": "NO",
   "use_in_product_listing": false,
   "use_in_search_results_layered_navigation": false,
@@ -932,7 +932,7 @@ represent free-form human-readable text.
 #### Example
 
 ```json
-"xyz789"
+"abc123"
 ```
 
 <HorizontalLine />
@@ -957,8 +957,8 @@ Specifies the quote template properties to update.
 ```json
 {
   "comment": "abc123",
-  "max_order_commitment": 123,
-  "min_order_commitment": 123,
+  "max_order_commitment": 987,
+  "min_order_commitment": 987,
   "name": "xyz789",
   "reference_document_links": [
     NegotiableQuoteTemplateReferenceDocumentLinkInput
@@ -1023,8 +1023,8 @@ Describes the swatch type and a value.
 
 ```json
 {
-  "type": "abc123",
-  "value": "abc123"
+  "type": "xyz789",
+  "value": "xyz789"
 }
 ```
 
@@ -1104,10 +1104,10 @@ Swatch attribute metadata input types.
 
 ```json
 {
-  "items_count": 123,
+  "items_count": 987,
   "label": "xyz789",
   "swatch_data": SwatchData,
-  "value_string": "abc123"
+  "value_string": "xyz789"
 }
 ```
 
@@ -1151,7 +1151,7 @@ Synchronizes the payment order details
 ```json
 {
   "cartId": "xyz789",
-  "id": "abc123"
+  "id": "xyz789"
 }
 ```
 
@@ -1174,7 +1174,7 @@ Contains tax item details.
 ```json
 {
   "amount": Money,
-  "rate": 987.65,
+  "rate": 123.45,
   "title": "abc123"
 }
 ```
@@ -1253,7 +1253,7 @@ Defines a price based on the quantity purchased.
 {
   "discount": ProductDiscount,
   "final_price": Money,
-  "quantity": 987.65
+  "quantity": 123.45
 }
 ```
 
@@ -1274,7 +1274,7 @@ Modifies the specified items in the cart.
 
 ```json
 {
-  "cart_id": "abc123",
+  "cart_id": "xyz789",
   "cart_items": [CartItemUpdateInput]
 }
 ```
@@ -1416,7 +1416,7 @@ Defines updates to a `GiftRegistry` object.
     GiftRegistryDynamicAttributeInput
   ],
   "event_name": "xyz789",
-  "message": "xyz789",
+  "message": "abc123",
   "privacy_settings": "PRIVATE",
   "shipping_address": GiftRegistryShippingAddressInput,
   "status": "ACTIVE"
@@ -1442,8 +1442,8 @@ Defines updates to an item in a gift registry.
 ```json
 {
   "gift_registry_item_uid": 4,
-  "note": "abc123",
-  "quantity": 987.65
+  "note": "xyz789",
+  "quantity": 123.45
 }
 ```
 
@@ -1506,10 +1506,10 @@ Defines updates to an existing registrant.
   "dynamic_attributes": [
     GiftRegistryDynamicAttributeInput
   ],
-  "email": "xyz789",
+  "email": "abc123",
   "firstname": "xyz789",
-  "gift_registry_registrant_uid": "4",
-  "lastname": "abc123"
+  "gift_registry_registrant_uid": 4,
+  "lastname": "xyz789"
 }
 ```
 
@@ -1567,7 +1567,7 @@ Specifies the items to update.
 ```json
 {
   "items": [NegotiableQuoteItemQuantityInput],
-  "quote_uid": 4
+  "quote_uid": "4"
 }
 ```
 
@@ -1656,9 +1656,9 @@ Defines the changes to be made to an approval rule.
 ```json
 {
   "applies_to": ["4"],
-  "approvers": ["4"],
+  "approvers": [4],
   "condition": CreatePurchaseOrderApprovalRuleConditionInput,
-  "description": "xyz789",
+  "description": "abc123",
   "name": "xyz789",
   "status": "ENABLED",
   "uid": "4"
@@ -1853,7 +1853,7 @@ Defines the input for returning matching companies the customer is assigned to.
 
 ```json
 {
-  "currentPage": 123,
+  "currentPage": 987,
   "pageSize": 123,
   "sort": [CompaniesSortInput]
 }
@@ -1897,7 +1897,7 @@ Contains details about a failed validation attempt.
 #### Example
 
 ```json
-{"message": "xyz789", "type": "NOT_FOUND"}
+{"message": "abc123", "type": "NOT_FOUND"}
 ```
 
 <HorizontalLine />
@@ -1978,7 +1978,7 @@ Defines a customer attribute validation rule.
 ```json
 {
   "name": "DATE_RANGE_MAX",
-  "value": "abc123"
+  "value": "xyz789"
 }
 ```
 
@@ -2145,14 +2145,14 @@ An implementation for virtual product cart items.
   "id": "xyz789",
   "is_available": true,
   "max_qty": 123.45,
-  "min_qty": 987.65,
+  "min_qty": 123.45,
   "not_available_message": "xyz789",
   "note_from_buyer": [ItemNote],
   "note_from_seller": [ItemNote],
   "prices": CartItemPrices,
   "product": ProductInterface,
-  "quantity": 123.45,
-  "uid": 4
+  "quantity": 987.65,
+  "uid": "4"
 }
 ```
 
@@ -2233,17 +2233,17 @@ Defines a virtual product, which is a non-tangible product that does not require
 
 ```json
 {
-  "attribute_set_id": 987,
+  "attribute_set_id": 123,
   "canonical_url": "abc123",
   "categories": [CategoryInterface],
-  "color": 987,
-  "country_of_manufacture": "abc123",
+  "color": 123,
+  "country_of_manufacture": "xyz789",
   "created_at": "xyz789",
   "crosssell_products": [ProductInterface],
   "custom_attributesV2": ProductCustomAttributes,
   "description": ComplexTextValue,
-  "gift_message_available": true,
-  "gift_wrapping_available": false,
+  "gift_message_available": false,
+  "gift_wrapping_available": true,
   "gift_wrapping_price": Money,
   "id": 123,
   "image": ProductImage,
@@ -2252,48 +2252,48 @@ Defines a virtual product, which is a non-tangible product that does not require
   "max_sale_qty": 123.45,
   "media_gallery": [MediaGalleryInterface],
   "media_gallery_entries": [MediaGalleryEntry],
-  "meta_description": "xyz789",
+  "meta_description": "abc123",
   "meta_keyword": "xyz789",
   "meta_title": "xyz789",
-  "min_sale_qty": 123.45,
+  "min_sale_qty": 987.65,
   "name": "abc123",
-  "new_from_date": "abc123",
+  "new_from_date": "xyz789",
   "new_to_date": "abc123",
-  "only_x_left_in_stock": 123.45,
+  "only_x_left_in_stock": 987.65,
   "options": [CustomizableOptionInterface],
   "options_container": "xyz789",
   "price": ProductPrices,
   "price_range": PriceRange,
   "price_tiers": [TierPrice],
   "product_links": [ProductLinksInterface],
-  "quantity": 987.65,
-  "rating_summary": 123.45,
-  "redirect_code": 987,
+  "quantity": 123.45,
+  "rating_summary": 987.65,
+  "redirect_code": 123,
   "related_products": [ProductInterface],
   "relative_url": "abc123",
-  "review_count": 123,
+  "review_count": 987,
   "reviews": ProductReviews,
   "short_description": ComplexTextValue,
   "sku": "xyz789",
   "small_image": ProductImage,
-  "special_from_date": "xyz789",
+  "special_from_date": "abc123",
   "special_price": 987.65,
   "special_to_date": "xyz789",
-  "staged": true,
+  "staged": false,
   "stock_status": "IN_STOCK",
   "swatch_image": "abc123",
   "thumbnail": ProductImage,
-  "tier_price": 987.65,
+  "tier_price": 123.45,
   "tier_prices": [ProductTierPrices],
   "type": "CMS_PAGE",
   "type_id": "abc123",
-  "uid": "4",
-  "updated_at": "abc123",
+  "uid": 4,
+  "updated_at": "xyz789",
   "upsell_products": [ProductInterface],
   "url_key": "xyz789",
   "url_path": "xyz789",
   "url_rewrites": [UrlRewrite],
-  "url_suffix": "xyz789",
+  "url_suffix": "abc123",
   "websites": [Website]
 }
 ```
@@ -2341,7 +2341,7 @@ Contains details about virtual products added to a requisition list.
 {
   "customizable_options": [SelectedCustomizableOption],
   "product": ProductInterface,
-  "quantity": 987.65,
+  "quantity": 123.45,
   "uid": 4
 }
 ```
@@ -2367,12 +2367,12 @@ Contains a virtual product wish list item.
 
 ```json
 {
-  "added_at": "xyz789",
+  "added_at": "abc123",
   "customizable_options": [SelectedCustomizableOption],
   "description": "xyz789",
   "id": "4",
   "product": ProductInterface,
-  "quantity": 987.65
+  "quantity": 123.45
 }
 ```
 
@@ -2397,10 +2397,10 @@ Deprecated. It should not be used on the storefront. Contains information about 
 
 ```json
 {
-  "code": "xyz789",
+  "code": "abc123",
   "default_group_id": "xyz789",
   "id": 123,
-  "is_default": false,
+  "is_default": true,
   "name": "abc123",
   "sort_order": 987
 }
@@ -2476,7 +2476,7 @@ Contains a customer wish list.
   "items_v2": WishlistItems,
   "name": "xyz789",
   "sharing_code": "xyz789",
-  "updated_at": "xyz789",
+  "updated_at": "abc123",
   "visibility": "PUBLIC"
 }
 ```
@@ -2502,8 +2502,8 @@ Contains details about errors encountered when a customer added wish list items 
 {
   "code": "PRODUCT_NOT_FOUND",
   "message": "xyz789",
-  "wishlistId": 4,
-  "wishlistItemId": "4"
+  "wishlistId": "4",
+  "wishlistItemId": 4
 }
 ```
 
@@ -2550,7 +2550,7 @@ Contains details about a wish list item.
 ```json
 {
   "added_at": "xyz789",
-  "description": "xyz789",
+  "description": "abc123",
   "id": 987,
   "product": ProductInterface,
   "qty": 123.45
@@ -2573,7 +2573,10 @@ Specifies the IDs of items to copy and their quantities.
 #### Example
 
 ```json
-{"quantity": 987.65, "wishlist_item_id": 4}
+{
+  "quantity": 987.65,
+  "wishlist_item_id": "4"
+}
 ```
 
 <HorizontalLine />
@@ -2597,10 +2600,10 @@ Defines the items to add to a wish list.
 ```json
 {
   "entered_options": [EnteredOptionInput],
-  "parent_sku": "xyz789",
-  "quantity": 123.45,
+  "parent_sku": "abc123",
+  "quantity": 987.65,
   "selected_options": [4],
-  "sku": "abc123"
+  "sku": "xyz789"
 }
 ```
 
@@ -2637,12 +2640,12 @@ The interface for wish list items.
 
 ```json
 {
-  "added_at": "xyz789",
+  "added_at": "abc123",
   "customizable_options": [SelectedCustomizableOption],
-  "description": "abc123",
-  "id": "4",
+  "description": "xyz789",
+  "id": 4,
   "product": ProductInterface,
-  "quantity": 987.65
+  "quantity": 123.45
 }
 ```
 
@@ -2662,10 +2665,7 @@ Specifies the IDs of the items to move and their quantities.
 #### Example
 
 ```json
-{
-  "quantity": 987.65,
-  "wishlist_item_id": "4"
-}
+{"quantity": 987.65, "wishlist_item_id": 4}
 ```
 
 <HorizontalLine />
@@ -2688,7 +2688,7 @@ Defines updates to items in a wish list.
 
 ```json
 {
-  "description": "abc123",
+  "description": "xyz789",
   "entered_options": [EnteredOptionInput],
   "quantity": 987.65,
   "selected_options": [4],
@@ -2739,9 +2739,9 @@ Deprecated: Use the `Wishlist` type instead.
 ```json
 {
   "items": [WishlistItem],
-  "items_count": 123,
-  "name": "xyz789",
-  "sharing_code": "xyz789",
+  "items_count": 987,
+  "name": "abc123",
+  "sharing_code": "abc123",
   "updated_at": "xyz789"
 }
 ```
@@ -2780,5 +2780,5 @@ Assigns a specific `cart_id` to the empty cart.
 #### Example
 
 ```json
-{"cart_id": "abc123"}
+{"cart_id": "xyz789"}
 ```
