@@ -219,9 +219,7 @@ To add a bundle product to a cart, you must specify the `sku` of the bundle prod
 
 The `GET <host>/rest/<store_code>/V1/bundle-products/24-WG080/options/all` call returns `id` values, as shown in the following simplified response:
 
-<Details slots="heading, content" />
-
-#### Show code sample
+<Details slots="content" summary="Show code sample" />
 
 ```json
 [

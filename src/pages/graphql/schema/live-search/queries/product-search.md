@@ -713,9 +713,7 @@ The following example uses the `ProductView` object to return item information. 
 }
 ```
 
-<Details slots="heading, content" />
-
-#### Response
+<Details slots="content" summary="Response" />
 
 ```json
 {

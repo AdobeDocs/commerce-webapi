@@ -166,9 +166,7 @@ None
 
 **Response:**
 
-<Details slots="heading, content" />
-
-#### Show code sample
+<Details slots="content" summary="Show code sample" />
 
 ```json
 {

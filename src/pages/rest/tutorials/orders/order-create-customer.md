@@ -35,9 +35,7 @@ This example shows a simplified way of creating a customer account. Typically, y
 
 It is recommended that you substitute the value of the `email` parameter with a real email address so that you receive all notifications.
 
-<Details slots="heading, content" />
-
-#### Show code sample
+<Details slots="content" summary="Show code sample" />
 
 ```json
 {
@@ -74,9 +72,7 @@ It is recommended that you substitute the value of the `email` parameter with a 
 
 Commerce assigned this user `id` value of `2`.
 
-<Details slots="heading, content" />
-
-#### Show code sample
+<Details slots="content" summary="Show code sample" />
 
 ```json
 {

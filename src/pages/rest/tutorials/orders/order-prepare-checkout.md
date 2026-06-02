@@ -36,9 +36,7 @@ Use the `V1/guest-carts/<cartId>/estimate-shipping-methods` endpoint to estimate
 
 The payload contains the shipping address.
 
-<Details slots="heading, content" />
-
-#### Show code sample
+<Details slots="content" summary="Show code sample" />
 
 ```json
 {
@@ -66,9 +64,7 @@ The payload contains the shipping address.
 
 Note that the cost for the `flatrate` shipping method is $15. The Sprite Yoga Companion Kit bundled product counts as one item. The Advanced Pilates & Yoga item does not have a shipping charge because the customer downloads this item.
 
-<Details slots="heading, content" />
-
-#### Show code sample
+<Details slots="content" summary="Show code sample" />
 
 ```json
 [
@@ -121,9 +117,7 @@ Use the `V1/guest-carts/<cartId>/shipping-information` endpoint to set the billi
 
 **Payload:**
 
-<Details slots="heading, content" />
-
-#### Show code sample
+<Details slots="content" summary="Show code sample" />
 
 ```json
 {
@@ -170,9 +164,7 @@ The subtotal of the order is $160, and shipping charges are $5. The grand total 
 
 The available payment methods are `banktransfer` and `checkmo`. The customer will specify a payment method in the next step.
 
-<Details slots="heading, content" />
-
-#### Show code sample
+<Details slots="content" summary="Show code sample" />
 
 ```json
 {

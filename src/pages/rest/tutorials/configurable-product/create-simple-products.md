@@ -92,9 +92,7 @@ Before using this code sample, verify that the attribute values are the same in 
 
 **Response:**
 
-<Details slots="heading, content" />
-
-#### Show code sample
+<Details slots="content" summary="Show code sample" />
 
 ```json
 {

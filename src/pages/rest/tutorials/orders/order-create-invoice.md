@@ -62,9 +62,7 @@ Not applicable
 
 You will use the `order_item_id` values to create a shipment in the next step.
 
-<Details slots="heading, content" />
-
-#### Show code sample
+<Details slots="content" summary="Show code sample" />
 
 ```json
 {
