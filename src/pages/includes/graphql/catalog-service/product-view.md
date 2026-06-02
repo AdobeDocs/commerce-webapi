@@ -48,7 +48,7 @@ The `ComplexProductView` type represents bundle, configurable, and group product
 | `sku` | String | Product SKU. |
 | `url` | String | Canonical URL of the product. |
 | `urlKey` | String | URL key of the product. |
-| `videos` | `[ProductViewVideo]`(#productviewvideo-type) | A list of videos linked to the product. |
+| `videos` | [`[ProductViewVideo]`](#productviewvideo-type) | A list of videos linked to the product. |
 
 ### Price type
 

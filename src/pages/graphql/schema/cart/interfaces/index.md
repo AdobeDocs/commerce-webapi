@@ -7,7 +7,7 @@ description: The CartItemInterface has the following implementations:
 
 The [`CartItemInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CartItemInterface) has the following implementations:
 
-*  [BundleCartItem]https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-BundleCartItem
+*  [BundleCartItem](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-BundleCartItem)
 *  [ConfigurableCartItem](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-ConfigurableCartItem)
 *  [DownloadableCartItem](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-DownloadableCartItem)
 *  [GiftCardCartItem](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-GiftCardCartItem)
