@@ -2,7 +2,7 @@
 title: Search for the status of a bulk operation
 description: Search for bulk operation statuses
 contributor_name: comwrap GmbH
-contributor_link: https://www.comwrap.com
+contributor_link: https://www.comwrap.com/en/
 keywords:
   - REST
 ---
@@ -135,4 +135,4 @@ The operation with bulk UUID `c43ed402-3dd3-4100-92e2-dc5852d3009b` contains a `
 
 <Edition slots="text" backgroundcolor="blue"/>
 
-[Thanks to comwrap GmbH for contributing this topic!](https://www.comwrap.com)
+[Thanks to comwrap GmbH for contributing this topic!](https://www.comwrap.com/en/)

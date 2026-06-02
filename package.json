@@ -49,10 +49,16 @@
         "paths": [
           "src/pages/includes"
         ]
-      },
-      "skipUrlPatterns": [
-        "https://commercemarketplace.adobe.com/magento-payment-services.html"
-      ]
-    }
+      }
+    },
+    "skipUrlPatterns": [
+      "https://commercemarketplace.adobe.com/magento-payment-services.html",
+      "https://www.atwix.com/",
+      "https://www.example.com/",
+      "https://www.rightpoint.com/",
+      "https://altairgraphql.dev/",
+      "http://your_app_host/",
+      "http://magentohost/"
+    ]
   }
 }
