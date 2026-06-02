@@ -19,3 +19,9 @@
 
 {{#each server.headers}}{{#unless required}}{{{comment}}}
 {{/unless}}{{/each}}{{/if}}
+{{#if info.version}}
+
+## Version
+
+{{info.version}}
+{{/if}}

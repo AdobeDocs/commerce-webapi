@@ -81,4 +81,4 @@ info:
     For more information, refer to the
     [GraphQL documentation](https://developer.adobe.com/commerce/webapi/graphql/schema/).
   version: SaaS
-  title: Adobe Commerce as a Cloud Service GraphQL API
+  # title: Adobe Commerce as a Cloud Service GraphQL API

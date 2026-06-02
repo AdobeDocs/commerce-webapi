@@ -114,8 +114,8 @@ mutation acceptNegotiableQuoteTemplate($input: AcceptNegotiableQuoteTemplateInpu
       "is_virtual": true,
       "items": [CartItemInterface],
       "max_order_commitment": 123,
-      "min_order_commitment": 123,
-      "name": "abc123",
+      "min_order_commitment": 987,
+      "name": "xyz789",
       "notifications": [QuoteTemplateNotificationMessage],
       "prices": CartPrices,
       "reference_document_links": [
@@ -124,8 +124,8 @@ mutation acceptNegotiableQuoteTemplate($input: AcceptNegotiableQuoteTemplateInpu
       "shipping_addresses": [
         NegotiableQuoteShippingAddress
       ],
-      "status": "abc123",
-      "template_id": 4,
+      "status": "xyz789",
+      "template_id": "4",
       "total_quantity": 987.65
     }
   }
@@ -299,7 +299,7 @@ mutation addGiftRegistryRegistrants(
 
 ```json
 {
-  "giftRegistryUid": "4",
+  "giftRegistryUid": 4,
   "registrants": [AddGiftRegistryRegistrantInput]
 }
 ```
@@ -424,7 +424,7 @@ mutation addProductsToCompareList($input: AddProductsToCompareListInput) {
       "attributes": [ComparableAttribute],
       "item_count": 987,
       "items": [ComparableItem],
-      "uid": 4
+      "uid": "4"
     }
   }
 }
@@ -469,7 +469,7 @@ mutation addProductsToRequisitionList(
 
 ```json
 {
-  "requisitionListUid": "4",
+  "requisitionListUid": 4,
   "requisitionListItems": [RequisitionListItemsInput]
 }
 ```
@@ -527,10 +527,7 @@ mutation addProductsToWishlist(
 ##### Variables
 
 ```json
-{
-  "wishlistId": "4",
-  "wishlistItems": [WishlistItemInput]
-}
+{"wishlistId": 4, "wishlistItems": [WishlistItemInput]}
 ```
 
 ##### Response
@@ -686,7 +683,7 @@ mutation addRequisitionListItemsToCart(
 ```json
 {
   "requisitionListUid": "4",
-  "requisitionListItemUids": [4]
+  "requisitionListItemUids": ["4"]
 }
 ```
 
@@ -930,7 +927,7 @@ mutation addWishlistItemsToCart(
       "add_wishlist_items_to_cart_user_errors": [
         WishlistCartUserInputError
       ],
-      "status": false,
+      "status": true,
       "wishlist": Wishlist
     }
   }
@@ -1229,7 +1226,7 @@ mutation assignCompareListToCustomer($uid: ID!) {
   "data": {
     "assignCompareListToCustomer": {
       "compare_list": CompareList,
-      "result": false
+      "result": true
     }
   }
 }
@@ -1336,20 +1333,20 @@ mutation assignCustomerToGuestCart($cart_id: String!) {
         AvailablePaymentMethod
       ],
       "billing_address": BillingCartAddress,
-      "email": "abc123",
+      "email": "xyz789",
       "gift_message": GiftMessage,
-      "gift_receipt_included": true,
+      "gift_receipt_included": false,
       "gift_wrapping": GiftWrapping,
-      "id": "4",
+      "id": 4,
       "is_virtual": false,
       "items": [CartItemInterface],
       "itemsV2": CartItems,
       "prices": CartPrices,
-      "printed_card_included": true,
+      "printed_card_included": false,
       "rules": [CartRule],
       "selected_payment_method": SelectedPaymentMethod,
       "shipping_addresses": [ShippingCartAddress],
-      "total_quantity": 123.45
+      "total_quantity": 987.65
     }
   }
 }
@@ -1432,9 +1429,9 @@ mutation cancelNegotiableQuoteTemplate($input: CancelNegotiableQuoteTemplateInpu
       "is_min_max_qty_used": false,
       "is_virtual": false,
       "items": [CartItemInterface],
-      "max_order_commitment": 123,
-      "min_order_commitment": 987,
-      "name": "xyz789",
+      "max_order_commitment": 987,
+      "min_order_commitment": 123,
+      "name": "abc123",
       "notifications": [QuoteTemplateNotificationMessage],
       "prices": CartPrices,
       "reference_document_links": [
@@ -1444,8 +1441,8 @@ mutation cancelNegotiableQuoteTemplate($input: CancelNegotiableQuoteTemplateInpu
         NegotiableQuoteShippingAddress
       ],
       "status": "xyz789",
-      "template_id": "4",
-      "total_quantity": 987.65
+      "template_id": 4,
+      "total_quantity": 123.45
     }
   }
 }
@@ -1703,27 +1700,27 @@ mutation changeCustomerPassword(
     "changeCustomerPassword": {
       "addresses": [CustomerAddress],
       "addressesV2": CustomerAddresses,
-      "allow_remote_shopping_assistance": true,
+      "allow_remote_shopping_assistance": false,
       "companies": UserCompaniesOutput,
       "compare_list": CompareList,
       "confirmation_status": "ACCOUNT_CONFIRMED",
-      "created_at": "xyz789",
+      "created_at": "abc123",
       "custom_attributes": [AttributeValueInterface],
-      "date_of_birth": "abc123",
+      "date_of_birth": "xyz789",
       "default_billing": "abc123",
-      "default_shipping": "abc123",
+      "default_shipping": "xyz789",
       "dob": "abc123",
       "email": "abc123",
       "firstname": "xyz789",
-      "gender": 987,
+      "gender": 123,
       "gift_registries": [GiftRegistry],
       "gift_registry": GiftRegistry,
       "group": CustomerGroup,
       "group_id": 123,
-      "id": 123,
-      "is_subscribed": false,
+      "id": 987,
+      "is_subscribed": true,
       "job_title": "abc123",
-      "lastname": "abc123",
+      "lastname": "xyz789",
       "middlename": "abc123",
       "orders": CustomerOrders,
       "prefix": "abc123",
@@ -1742,8 +1739,8 @@ mutation changeCustomerPassword(
       "segments": [CustomerSegment],
       "status": "ACTIVE",
       "store_credit": CustomerStoreCredit,
-      "structure_id": "4",
-      "suffix": "abc123",
+      "structure_id": 4,
+      "suffix": "xyz789",
       "taxvat": "abc123",
       "team": CompanyTeam,
       "telephone": "xyz789",
@@ -1845,7 +1842,7 @@ mutation clearCustomerCart($cartUid: String!) {
 ```json
 {
   "data": {
-    "clearCustomerCart": {"cart": Cart, "status": true}
+    "clearCustomerCart": {"cart": Cart, "status": false}
   }
 }
 ```
@@ -1957,7 +1954,7 @@ mutation confirmCancelOrder($input: ConfirmCancelOrderInput!) {
 {
   "data": {
     "confirmCancelOrder": {
-      "error": "abc123",
+      "error": "xyz789",
       "errorV2": CancelOrderError,
       "order": CustomerOrder
     }
@@ -2135,8 +2132,8 @@ mutation copyItemsBetweenRequisitionLists(
 
 ```json
 {
-  "sourceRequisitionListUid": "4",
-  "destinationRequisitionListUid": "4",
+  "sourceRequisitionListUid": 4,
+  "destinationRequisitionListUid": 4,
   "requisitionListItem": CopyItemsBetweenRequisitionListsInput
 }
 ```
@@ -2201,8 +2198,8 @@ mutation copyProductsBetweenWishlists(
 
 ```json
 {
-  "sourceWishlistUid": 4,
-  "destinationWishlistUid": 4,
+  "sourceWishlistUid": "4",
+  "destinationWishlistUid": "4",
   "wishlistItems": [WishlistItemCopyInput]
 }
 ```
@@ -2523,9 +2520,9 @@ mutation createCompareList($input: CreateCompareListInput) {
   "data": {
     "createCompareList": {
       "attributes": [ComparableAttribute],
-      "item_count": 123,
+      "item_count": 987,
       "items": [ComparableItem],
-      "uid": 4
+      "uid": "4"
     }
   }
 }
@@ -2641,29 +2638,29 @@ mutation createCustomerAddress($input: CustomerAddressInput!) {
 {
   "data": {
     "createCustomerAddress": {
-      "city": "xyz789",
-      "company": "abc123",
+      "city": "abc123",
+      "company": "xyz789",
       "country_code": "AF",
       "country_id": "abc123",
       "custom_attributes": [CustomerAddressAttribute],
       "custom_attributesV2": [AttributeValueInterface],
-      "customer_id": 987,
-      "default_billing": false,
-      "default_shipping": true,
+      "customer_id": 123,
+      "default_billing": true,
+      "default_shipping": false,
       "extension_attributes": [CustomerAddressAttribute],
-      "fax": "xyz789",
-      "firstname": "xyz789",
+      "fax": "abc123",
+      "firstname": "abc123",
       "id": 987,
       "lastname": "xyz789",
-      "middlename": "xyz789",
-      "postcode": "abc123",
+      "middlename": "abc123",
+      "postcode": "xyz789",
       "prefix": "abc123",
       "region": CustomerAddressRegion,
       "region_id": 123,
       "street": ["abc123"],
       "suffix": "xyz789",
-      "telephone": "xyz789",
-      "vat_id": "abc123"
+      "telephone": "abc123",
+      "vat_id": "xyz789"
     }
   }
 }
@@ -2875,11 +2872,11 @@ mutation createPayflowProToken($input: PayflowProTokenInput!) {
 {
   "data": {
     "createPayflowProToken": {
-      "response_message": "abc123",
-      "result": 123,
-      "result_code": 987,
-      "secure_token": "xyz789",
-      "secure_token_id": "abc123"
+      "response_message": "xyz789",
+      "result": 987,
+      "result_code": 123,
+      "secure_token": "abc123",
+      "secure_token_id": "xyz789"
     }
   }
 }
@@ -2928,9 +2925,9 @@ mutation createPaymentOrder($input: CreatePaymentOrderInput!) {
   "data": {
     "createPaymentOrder": {
       "amount": 123.45,
-      "currency_code": "abc123",
+      "currency_code": "xyz789",
       "id": "abc123",
-      "mp_order_id": "abc123",
+      "mp_order_id": "xyz789",
       "status": "xyz789"
     }
   }
@@ -3086,11 +3083,11 @@ mutation createPurchaseOrderApprovalRule($input: PurchaseOrderApprovalRuleInput!
       "approver_roles": [CompanyRole],
       "condition": PurchaseOrderApprovalRuleConditionInterface,
       "created_at": "abc123",
-      "created_by": "xyz789",
-      "description": "xyz789",
-      "name": "xyz789",
+      "created_by": "abc123",
+      "description": "abc123",
+      "name": "abc123",
       "status": "ENABLED",
-      "uid": 4,
+      "uid": "4",
       "updated_at": "abc123"
     }
   }
@@ -3229,7 +3226,7 @@ mutation createVaultCardSetupToken($input: CreateVaultCardSetupTokenInput!) {
 {
   "data": {
     "createVaultCardSetupToken": {
-      "setup_token": "xyz789"
+      "setup_token": "abc123"
     }
   }
 }
@@ -3304,13 +3301,13 @@ mutation deleteCompanyRole($id: ID!) {
 ##### Variables
 
 ```json
-{"id": 4}
+{"id": "4"}
 ```
 
 ##### Response
 
 ```json
-{"data": {"deleteCompanyRole": {"success": true}}}
+{"data": {"deleteCompanyRole": {"success": false}}}
 ```
 
 <HorizontalLine />
@@ -3384,7 +3381,7 @@ mutation deleteCompanyUser($id: ID!) {
 ##### Variables
 
 ```json
-{"id": "4"}
+{"id": 4}
 ```
 
 ##### Response
@@ -3422,7 +3419,7 @@ mutation deleteCompanyUserV2($id: ID!) {
 ##### Variables
 
 ```json
-{"id": 4}
+{"id": "4"}
 ```
 
 ##### Response
@@ -3526,7 +3523,7 @@ mutation deleteCustomerAddress($id: Int!) {
 ##### Response
 
 ```json
-{"data": {"deleteCustomerAddress": true}}
+{"data": {"deleteCustomerAddress": false}}
 ```
 
 <HorizontalLine />
@@ -3562,7 +3559,7 @@ mutation deleteNegotiableQuoteTemplate($input: DeleteNegotiableQuoteTemplateInpu
 ##### Response
 
 ```json
-{"data": {"deleteNegotiableQuoteTemplate": true}}
+{"data": {"deleteNegotiableQuoteTemplate": false}}
 ```
 
 <HorizontalLine />
@@ -3656,7 +3653,7 @@ mutation deletePaymentToken($public_hash: String!) {
 ##### Variables
 
 ```json
-{"public_hash": "abc123"}
+{"public_hash": "xyz789"}
 ```
 
 ##### Response
@@ -3750,7 +3747,7 @@ mutation deleteRequisitionList($requisitionListUid: ID!) {
 ##### Variables
 
 ```json
-{"requisitionListUid": 4}
+{"requisitionListUid": "4"}
 ```
 
 ##### Response
@@ -3760,7 +3757,7 @@ mutation deleteRequisitionList($requisitionListUid: ID!) {
   "data": {
     "deleteRequisitionList": {
       "requisition_lists": RequisitionLists,
-      "status": true
+      "status": false
     }
   }
 }
@@ -3804,7 +3801,10 @@ mutation deleteRequisitionListItems(
 ##### Variables
 
 ```json
-{"requisitionListUid": 4, "requisitionListItemUids": [4]}
+{
+  "requisitionListUid": 4,
+  "requisitionListItemUids": ["4"]
+}
 ```
 
 ##### Response
@@ -3968,10 +3968,10 @@ mutation estimateShippingMethods($input: EstimateTotalsInput!) {
     "estimateShippingMethods": [
       {
         "amount": Money,
-        "available": true,
+        "available": false,
         "base_amount": Money,
-        "carrier_code": "xyz789",
-        "carrier_title": "xyz789",
+        "carrier_code": "abc123",
+        "carrier_title": "abc123",
         "error_message": "xyz789",
         "method_code": "abc123",
         "method_title": "abc123",
@@ -4061,7 +4061,7 @@ mutation generateCustomerToken(
 ```json
 {
   "email": "xyz789",
-  "password": "xyz789"
+  "password": "abc123"
 }
 ```
 
@@ -4115,7 +4115,7 @@ mutation generateCustomerTokenAsAdmin($input: GenerateCustomerTokenAsAdminInput!
 {
   "data": {
     "generateCustomerTokenAsAdmin": {
-      "customer_token": "xyz789"
+      "customer_token": "abc123"
     }
   }
 }
@@ -4295,8 +4295,8 @@ mutation mergeCarts(
 
 ```json
 {
-  "source_cart_id": "abc123",
-  "destination_cart_id": "xyz789"
+  "source_cart_id": "xyz789",
+  "destination_cart_id": "abc123"
 }
 ```
 
@@ -4321,7 +4321,7 @@ mutation mergeCarts(
       "gift_receipt_included": true,
       "gift_wrapping": GiftWrapping,
       "id": 4,
-      "is_virtual": false,
+      "is_virtual": true,
       "items": [CartItemInterface],
       "itemsV2": CartItems,
       "prices": CartPrices,
@@ -4377,7 +4377,7 @@ mutation moveCartItemsToGiftRegistry(
 ##### Variables
 
 ```json
-{"cartUid": 4, "giftRegistryUid": 4}
+{"cartUid": 4, "giftRegistryUid": "4"}
 ```
 
 ##### Response
@@ -4387,7 +4387,7 @@ mutation moveCartItemsToGiftRegistry(
   "data": {
     "moveCartItemsToGiftRegistry": {
       "gift_registry": GiftRegistry,
-      "status": true,
+      "status": false,
       "user_errors": [GiftRegistryItemsUserError]
     }
   }
@@ -4439,8 +4439,8 @@ mutation moveItemsBetweenRequisitionLists(
 
 ```json
 {
-  "sourceRequisitionListUid": 4,
-  "destinationRequisitionListUid": 4,
+  "sourceRequisitionListUid": "4",
+  "destinationRequisitionListUid": "4",
   "requisitionListItem": MoveItemsBetweenRequisitionListsInput
 }
 ```
@@ -4553,7 +4553,7 @@ mutation moveProductsBetweenWishlists(
 ```json
 {
   "sourceWishlistUid": "4",
-  "destinationWishlistUid": "4",
+  "destinationWishlistUid": 4,
   "wishlistItems": [WishlistItemMoveInput]
 }
 ```
@@ -4644,12 +4644,12 @@ mutation openNegotiableQuoteTemplate($input: OpenNegotiableQuoteTemplateInput!) 
     "openNegotiableQuoteTemplate": {
       "buyer": NegotiableQuoteUser,
       "comments": [NegotiableQuoteComment],
-      "expiration_date": "xyz789",
+      "expiration_date": "abc123",
       "history": [NegotiableQuoteHistoryEntry],
-      "is_min_max_qty_used": true,
-      "is_virtual": false,
+      "is_min_max_qty_used": false,
+      "is_virtual": true,
       "items": [CartItemInterface],
-      "max_order_commitment": 123,
+      "max_order_commitment": 987,
       "min_order_commitment": 987,
       "name": "abc123",
       "notifications": [QuoteTemplateNotificationMessage],
@@ -4661,8 +4661,8 @@ mutation openNegotiableQuoteTemplate($input: OpenNegotiableQuoteTemplateInput!) 
         NegotiableQuoteShippingAddress
       ],
       "status": "xyz789",
-      "template_id": 4,
-      "total_quantity": 123.45
+      "template_id": "4",
+      "total_quantity": 987.65
     }
   }
 }
@@ -4896,7 +4896,7 @@ mutation redeemGiftCardBalanceAsStoreCredit($input: GiftCardAccountInput!) {
     "redeemGiftCardBalanceAsStoreCredit": {
       "balance": Money,
       "code": "xyz789",
-      "expiration_date": "abc123"
+      "expiration_date": "xyz789"
     }
   }
 }
@@ -5148,7 +5148,10 @@ mutation removeGiftRegistryItems(
 ##### Variables
 
 ```json
-{"giftRegistryUid": 4, "itemsUid": [4]}
+{
+  "giftRegistryUid": "4",
+  "itemsUid": ["4"]
+}
 ```
 
 ##### Response
@@ -5377,14 +5380,14 @@ mutation removeNegotiableQuoteTemplateItems($input: RemoveNegotiableQuoteTemplat
     "removeNegotiableQuoteTemplateItems": {
       "buyer": NegotiableQuoteUser,
       "comments": [NegotiableQuoteComment],
-      "expiration_date": "xyz789",
+      "expiration_date": "abc123",
       "history": [NegotiableQuoteHistoryEntry],
-      "is_min_max_qty_used": false,
-      "is_virtual": true,
+      "is_min_max_qty_used": true,
+      "is_virtual": false,
       "items": [CartItemInterface],
-      "max_order_commitment": 987,
-      "min_order_commitment": 987,
-      "name": "abc123",
+      "max_order_commitment": 123,
+      "min_order_commitment": 123,
+      "name": "xyz789",
       "notifications": [QuoteTemplateNotificationMessage],
       "prices": CartPrices,
       "reference_document_links": [
@@ -5395,7 +5398,7 @@ mutation removeNegotiableQuoteTemplateItems($input: RemoveNegotiableQuoteTemplat
       ],
       "status": "xyz789",
       "template_id": "4",
-      "total_quantity": 123.45
+      "total_quantity": 987.65
     }
   }
 }
@@ -5447,7 +5450,7 @@ mutation removeProductsFromCompareList($input: RemoveProductsFromCompareListInpu
   "data": {
     "removeProductsFromCompareList": {
       "attributes": [ComparableAttribute],
-      "item_count": 123,
+      "item_count": 987,
       "items": [ComparableItem],
       "uid": 4
     }
@@ -5496,7 +5499,7 @@ mutation removeProductsFromWishlist(
 ##### Variables
 
 ```json
-{"wishlistId": "4", "wishlistItemsIds": [4]}
+{"wishlistId": 4, "wishlistItemsIds": [4]}
 ```
 
 ##### Response
@@ -5710,7 +5713,7 @@ mutation reorderItems($orderNumber: String!) {
 ##### Variables
 
 ```json
-{"orderNumber": "abc123"}
+{"orderNumber": "xyz789"}
 ```
 
 ##### Response
@@ -5770,7 +5773,7 @@ mutation requestGuestOrderCancel($input: GuestOrderCancelInput!) {
 {
   "data": {
     "requestGuestOrderCancel": {
-      "error": "abc123",
+      "error": "xyz789",
       "errorV2": CancelOrderError,
       "order": CustomerOrder
     }
@@ -5942,14 +5945,14 @@ mutation requestNegotiableQuoteTemplateFromQuote($input: RequestNegotiableQuoteT
     "requestNegotiableQuoteTemplateFromQuote": {
       "buyer": NegotiableQuoteUser,
       "comments": [NegotiableQuoteComment],
-      "expiration_date": "xyz789",
+      "expiration_date": "abc123",
       "history": [NegotiableQuoteHistoryEntry],
       "is_min_max_qty_used": false,
       "is_virtual": false,
       "items": [CartItemInterface],
-      "max_order_commitment": 123,
+      "max_order_commitment": 987,
       "min_order_commitment": 987,
-      "name": "abc123",
+      "name": "xyz789",
       "notifications": [QuoteTemplateNotificationMessage],
       "prices": CartPrices,
       "reference_document_links": [
@@ -5959,7 +5962,7 @@ mutation requestNegotiableQuoteTemplateFromQuote($input: RequestNegotiableQuoteT
         NegotiableQuoteShippingAddress
       ],
       "status": "xyz789",
-      "template_id": "4",
+      "template_id": 4,
       "total_quantity": 987.65
     }
   }
@@ -5993,7 +5996,7 @@ mutation requestPasswordResetEmail($email: String!) {
 ##### Variables
 
 ```json
-{"email": "abc123"}
+{"email": "xyz789"}
 ```
 
 ##### Response
@@ -6085,7 +6088,7 @@ mutation resendConfirmationEmail($email: String!) {
 ##### Response
 
 ```json
-{"data": {"resendConfirmationEmail": false}}
+{"data": {"resendConfirmationEmail": true}}
 ```
 
 <HorizontalLine />
@@ -6126,8 +6129,8 @@ mutation resetPassword(
 
 ```json
 {
-  "email": "xyz789",
-  "resetPasswordToken": "abc123",
+  "email": "abc123",
+  "resetPasswordToken": "xyz789",
   "newPassword": "xyz789"
 }
 ```
@@ -6161,7 +6164,7 @@ mutation revokeCustomerToken {
 ##### Response
 
 ```json
-{"data": {"revokeCustomerToken": {"result": false}}}
+{"data": {"revokeCustomerToken": {"result": true}}}
 ```
 
 <HorizontalLine />
@@ -6693,7 +6696,7 @@ mutation setNegotiableQuoteTemplateShippingAddress($input: SetNegotiableQuoteTem
         NegotiableQuoteShippingAddress
       ],
       "status": "abc123",
-      "template_id": 4,
+      "template_id": "4",
       "total_quantity": 987.65
     }
   }
@@ -6872,7 +6875,7 @@ mutation setQuoteTemplateLineItemNote($input: QuoteTemplateLineItemNoteInput!) {
       "comments": [NegotiableQuoteComment],
       "expiration_date": "xyz789",
       "history": [NegotiableQuoteHistoryEntry],
-      "is_min_max_qty_used": false,
+      "is_min_max_qty_used": true,
       "is_virtual": false,
       "items": [CartItemInterface],
       "max_order_commitment": 123,
@@ -6887,7 +6890,7 @@ mutation setQuoteTemplateLineItemNote($input: QuoteTemplateLineItemNoteInput!) {
         NegotiableQuoteShippingAddress
       ],
       "status": "xyz789",
-      "template_id": 4,
+      "template_id": "4",
       "total_quantity": 123.45
     }
   }
@@ -7014,7 +7017,7 @@ mutation shareGiftRegistry(
 
 ```json
 {
-  "giftRegistryUid": 4,
+  "giftRegistryUid": "4",
   "sender": ShareGiftRegistrySenderInput,
   "invitees": [ShareGiftRegistryInviteeInput]
 }
@@ -7023,7 +7026,7 @@ mutation shareGiftRegistry(
 ##### Response
 
 ```json
-{"data": {"shareGiftRegistry": {"is_shared": false}}}
+{"data": {"shareGiftRegistry": {"is_shared": true}}}
 ```
 
 <HorizontalLine />
@@ -7098,13 +7101,13 @@ mutation submitNegotiableQuoteTemplateForReview($input: SubmitNegotiableQuoteTem
     "submitNegotiableQuoteTemplateForReview": {
       "buyer": NegotiableQuoteUser,
       "comments": [NegotiableQuoteComment],
-      "expiration_date": "abc123",
+      "expiration_date": "xyz789",
       "history": [NegotiableQuoteHistoryEntry],
-      "is_min_max_qty_used": false,
-      "is_virtual": true,
+      "is_min_max_qty_used": true,
+      "is_virtual": false,
       "items": [CartItemInterface],
       "max_order_commitment": 987,
-      "min_order_commitment": 987,
+      "min_order_commitment": 123,
       "name": "abc123",
       "notifications": [QuoteTemplateNotificationMessage],
       "prices": CartPrices,
@@ -7151,7 +7154,7 @@ mutation subscribeEmailToNewsletter($email: String!) {
 ##### Variables
 
 ```json
-{"email": "abc123"}
+{"email": "xyz789"}
 ```
 
 ##### Response
@@ -7193,7 +7196,7 @@ mutation syncPaymentOrder($input: SyncPaymentOrderInput) {
 ##### Response
 
 ```json
-{"data": {"syncPaymentOrder": false}}
+{"data": {"syncPaymentOrder": true}}
 ```
 
 <HorizontalLine />
@@ -7229,7 +7232,7 @@ mutation trackViewedProduct($sku: String!) {
 ##### Response
 
 ```json
-{"data": {"trackViewedProduct": false}}
+{"data": {"trackViewedProduct": true}}
 ```
 
 <HorizontalLine />
@@ -7599,29 +7602,29 @@ mutation updateCustomerAddress(
 {
   "data": {
     "updateCustomerAddress": {
-      "city": "abc123",
-      "company": "abc123",
+      "city": "xyz789",
+      "company": "xyz789",
       "country_code": "AF",
-      "country_id": "xyz789",
+      "country_id": "abc123",
       "custom_attributes": [CustomerAddressAttribute],
       "custom_attributesV2": [AttributeValueInterface],
-      "customer_id": 123,
+      "customer_id": 987,
       "default_billing": false,
       "default_shipping": true,
       "extension_attributes": [CustomerAddressAttribute],
-      "fax": "xyz789",
+      "fax": "abc123",
       "firstname": "xyz789",
-      "id": 123,
+      "id": 987,
       "lastname": "xyz789",
       "middlename": "abc123",
-      "postcode": "xyz789",
-      "prefix": "abc123",
+      "postcode": "abc123",
+      "prefix": "xyz789",
       "region": CustomerAddressRegion,
       "region_id": 123,
-      "street": ["abc123"],
-      "suffix": "abc123",
-      "telephone": "abc123",
-      "vat_id": "xyz789"
+      "street": ["xyz789"],
+      "suffix": "xyz789",
+      "telephone": "xyz789",
+      "vat_id": "abc123"
     }
   }
 }
@@ -7666,8 +7669,8 @@ mutation updateCustomerEmail(
 
 ```json
 {
-  "email": "abc123",
-  "password": "abc123"
+  "email": "xyz789",
+  "password": "xyz789"
 }
 ```
 
@@ -7756,7 +7759,7 @@ mutation updateGiftRegistry(
 
 ```json
 {
-  "giftRegistryUid": 4,
+  "giftRegistryUid": "4",
   "giftRegistry": UpdateGiftRegistryInput
 }
 ```
@@ -8091,10 +8094,10 @@ mutation updatePurchaseOrderApprovalRule($input: UpdatePurchaseOrderApprovalRule
       "applies_to_roles": [CompanyRole],
       "approver_roles": [CompanyRole],
       "condition": PurchaseOrderApprovalRuleConditionInterface,
-      "created_at": "abc123",
+      "created_at": "xyz789",
       "created_by": "abc123",
-      "description": "abc123",
-      "name": "abc123",
+      "description": "xyz789",
+      "name": "xyz789",
       "status": "ENABLED",
       "uid": 4,
       "updated_at": "abc123"
@@ -8198,7 +8201,7 @@ mutation updateRequisitionListItems(
 
 ```json
 {
-  "requisitionListUid": 4,
+  "requisitionListUid": "4",
   "requisitionListItems": [
     UpdateRequisitionListItemsInput
   ]
@@ -8259,8 +8262,8 @@ mutation updateWishlist(
 
 ```json
 {
-  "wishlistId": "4",
-  "name": "xyz789",
+  "wishlistId": 4,
+  "name": "abc123",
   "visibility": "PUBLIC"
 }
 ```
@@ -8271,7 +8274,7 @@ mutation updateWishlist(
 {
   "data": {
     "updateWishlist": {
-      "name": "abc123",
+      "name": "xyz789",
       "uid": "4",
       "visibility": "PUBLIC"
     }

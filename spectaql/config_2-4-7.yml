@@ -76,4 +76,4 @@ info:
     Commerce with B2B. You can find examples of each query and mutation in
     the main [GraphQL documentation](https://developer.adobe.com/commerce/webapi/graphql/schema/).
   version: 2.4.7
-  title: Adobe Commerce GraphQL API (2.4.7)
+  # title: Adobe Commerce GraphQL API (2.4.7)
