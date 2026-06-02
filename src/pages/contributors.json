@@ -2782,7 +2782,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/45772453?v=4"
       ],
-      "lastUpdated": "6/1/2026"
+      "lastUpdated": "6/2/2026"
     },
     {
       "page": "/graphql/schema/orders/",
@@ -4862,20 +4862,20 @@
     {
       "page": "/rest/inventory/manage-sources",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/1/2026"
+      "lastUpdated": "6/2/2026"
     },
     {
       "page": "/rest/inventory/manage-stocks",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/1/2026"
+      "lastUpdated": "6/2/2026"
     },
     {
       "page": "/rest/modules/",
@@ -5142,12 +5142,12 @@
     {
       "page": "/rest/tutorials/configurable-product/create-configurable-product",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/98363870?v=4"
       ],
-      "lastUpdated": "6/1/2026"
+      "lastUpdated": "6/2/2026"
     },
     {
       "page": "/rest/tutorials/configurable-product/create-personalization-option",
@@ -5162,12 +5162,12 @@
     {
       "page": "/rest/tutorials/configurable-product/create-simple-products",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/98363870?v=4"
       ],
-      "lastUpdated": "6/1/2026"
+      "lastUpdated": "6/2/2026"
     },
     {
       "page": "/rest/tutorials/configurable-product/define-config-product-options",
