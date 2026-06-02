@@ -1039,9 +1039,7 @@ The [Purchase order approval rules](../../b2b/purchase-order-rule/index.md) topi
 
 ### Retrieve a file uploaded to Amazon S3
 
-<Edition slots="text" backgroundcolor="green"/>
-
-[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../../../includes/saas-only.md"/>
 
 < CustomerS3Download />
 

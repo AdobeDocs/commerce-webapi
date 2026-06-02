@@ -4,9 +4,7 @@ description: Use the deleteCustomerAddressV2 mutation to delete the specified cu
 
 ---
 
-<Edition slots="text" backgroundcolor="green"/>
-
-[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../../../includes/saas-only.md"/>
 
 # deleteCustomerAddressV2 mutation
 

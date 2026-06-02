@@ -325,15 +325,11 @@ This example shows how to use search criteria to determine the sort order and at
 
 **Endpoint:**
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../includes/paas-only.md"/>
 
 `GET https://<host>/rest/<store_code>/V1/orders/`
 
-<Edition slots="text" backgroundcolor="green"/>
-
-[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../includes/saas-only.md"/>
 
 `GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/orders/`
 

@@ -204,9 +204,7 @@ mutation {
 
 ### Request a negotiable quote with attachments
 
-<Edition slots="text" backgroundcolor="green"/>
-
-[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../../../../includes/saas-only.md"/>
 
 The following example requests a negotiable quote with an attachment. The attachment must be uploaded to Amazon S3 before you can reference it in the mutation. See the [`initiateUpload` mutation](../../../uploads/mutations/initiate-upload.md) and [finishUpload` mutation](../../../uploads/mutations/finish-upload.md)for more information about uploading files.
 

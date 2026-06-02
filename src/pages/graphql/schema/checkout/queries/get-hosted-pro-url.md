@@ -4,9 +4,7 @@ description: The getHostedProUrl query is required to complete a transaction whe
 
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # getHostedProUrl query
 

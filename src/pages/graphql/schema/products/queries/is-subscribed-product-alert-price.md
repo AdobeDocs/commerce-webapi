@@ -4,9 +4,7 @@ description: The isSubscribedProductAlertPrice query checks whether the logged-i
 
 ---
 
-<Edition slots="text" backgroundcolor="green"/>
-
-[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../../../includes/saas-only.md"/>
 
 # isSubscribedProductAlertPrice query
 

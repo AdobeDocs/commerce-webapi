@@ -100,9 +100,7 @@ This JSON-formatted request body includes a `customer` object with the customer 
 
 ## Construct a request
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../includes/paas-only.md"/>
 
 This example shows you how to construct a REST web API call to create an account.
 
@@ -139,9 +137,7 @@ This example shows you how to construct a REST web API call to create an account
 
 ### Customers Search API request example
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../includes/paas-only.md"/>
 
 The following example builds a Customers Search request based on search criteria. It returns a list of customers that match given search criteria.
 

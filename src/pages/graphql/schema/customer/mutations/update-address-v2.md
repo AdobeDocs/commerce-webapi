@@ -4,9 +4,7 @@ description: Use the updateCustomerAddressV2 mutation to update the customer's a
 
 ---
 
-<Edition slots="text" backgroundcolor="green"/>
-
-[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../../../includes/saas-only.md"/>
 
 # updateCustomerAddressV2 mutation
 

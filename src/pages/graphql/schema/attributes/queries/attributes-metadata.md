@@ -4,9 +4,7 @@ description: The attributesMetadata query is available only if you have installe
 
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # attributesMetadata query
 

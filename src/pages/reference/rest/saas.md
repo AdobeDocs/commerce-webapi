@@ -5,9 +5,7 @@ keywords:
   - REST
 ---
 
-<Edition slots="text" backgroundcolor="green"/>
-
-[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../includes/saas-only.md"/>
 
 # REST endpoints for Adobe Commerce as a Cloud Service
 

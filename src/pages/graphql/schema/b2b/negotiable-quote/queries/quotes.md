@@ -98,9 +98,7 @@ query {
 
 ### Retrieve attachments associated with comments on quotes
 
-<Edition slots="text" backgroundcolor="green"/>
-
-[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../../../../includes/saas-only.md"/>
 
 The following example returns detailed information about all negotiable quotes that are accessible to the company user, including any attachments associated with comments on the quotes.
 

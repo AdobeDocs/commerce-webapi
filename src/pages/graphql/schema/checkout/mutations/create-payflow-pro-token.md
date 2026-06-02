@@ -4,9 +4,7 @@ description: The createPayflowProToken mutation initiates a Payflow Pro transact
 
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # createPayflowProToken mutation
 

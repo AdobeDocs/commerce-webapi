@@ -4,9 +4,7 @@ description: A merchant can reconfigure (rewrite) the URL to any product, catego
 
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # route query
 

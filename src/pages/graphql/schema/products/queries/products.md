@@ -4,9 +4,7 @@ description: Adobe Commerce as a Cloud Service (SaaS) does not support this prod
 
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # products query
 
@@ -1532,9 +1530,7 @@ In this example, the `description` attribute has been enabled by setting the **S
 
 ### Retrieve related products, up-sells, and cross-sells
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../../../includes/paas-only.md"/>
 
 The following query shows how to get related products, up-sells, and cross-sells for a product:
 

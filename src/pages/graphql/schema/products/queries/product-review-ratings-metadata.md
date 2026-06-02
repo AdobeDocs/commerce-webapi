@@ -4,9 +4,7 @@ description: The productReviewRatingsMetadata query returns the active ratings a
 
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # productReviewRatingsMetadata query
 

@@ -4,9 +4,7 @@ description: Use the generateCustomerToken mutation to create a new customer tok
 
 ---
 
-<Edition slots="text" backgroundcolor="green"/>
-
-[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../../../includes/saas-only.md"/>
 
 # generateCustomerToken mutation
 
@@ -16,9 +14,7 @@ To return or modify information about a customer, we recommend you use customer 
 
 ## Using `generateCustomerToken` to log in as a customer
 
-<Edition slots="text" backgroundcolor="green"/>
-
-[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../../../includes/saas-only.md"/>
 
 The [Login as Customer](../../../../rest/saas-integrations/login-as-customer/index.md) workflow allows administrators to generate a one-time code (OTC) for a customer, then exchange it for a customer access token. This is useful for support sessions, admin UIs, scripts, or third-party integrations that need to act on behalf of a customer.
 

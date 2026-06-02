@@ -19,9 +19,7 @@ The APIs can be used to perform a wide array of tasks. For example:
 
 ## Adobe Commerce
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../includes/paas-only.md"/>
 
 [Adobe Commerce on Cloud](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview?lang=en), Adobe Commerce on-premises, and [Magento Open Source](https://experienceleague.adobe.com/en/docs/commerce-admin/start/guide-overview) all use the same REST API framework. The REST API documentation describes the REST APIs that are available in these versions of Adobe Commerce and Magento Open Source.
 
@@ -45,9 +43,7 @@ The URL for Adobe Commerce REST endpoints is structured as follows:
 
 ## Adobe Commerce as a Cloud Service
 
-<Edition slots="text" backgroundcolor="green"/>
-
-[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../includes/saas-only.md"/>
 
 The Adobe Commerce as a Cloud Service REST API serves as a critical tool for extending and integrating commerce functionalities, but the endpoints available differ significantly from the REST APIs for Adobe Commerce on Cloud and on-premises deployments.
 

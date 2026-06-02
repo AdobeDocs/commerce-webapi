@@ -4,9 +4,7 @@ description: This mutation is automatically available on Adobe Commerce as a Clo
 
 ---
 
-<Edition slots="text" backgroundcolor="green"/>
-
-[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../../../includes/saas-only.md"/>
 
 # setCustomAttributesOnNegotiableQuote mutation
 

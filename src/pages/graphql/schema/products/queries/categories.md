@@ -4,9 +4,7 @@ description: Adobe Commerce as a Cloud Service (SaaS) does not support this cate
 
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # categories query
 

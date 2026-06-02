@@ -4,9 +4,7 @@ description: The subscribeProductAlertPrice mutation subscribes the logged-in cu
 
 ---
 
-<Edition slots="text" backgroundcolor="green"/>
-
-[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../../../includes/saas-only.md"/>
 
 # subscribeProductAlertPrice mutation
 

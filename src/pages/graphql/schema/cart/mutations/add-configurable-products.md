@@ -4,9 +4,7 @@ description: We recommend using the addProductsToCart mutation to add any type o
 
 ---
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # addConfigurableProductsToCart mutation
 

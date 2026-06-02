@@ -35,15 +35,11 @@ The `GET /V1/bulk/:bulkUuid/status` endpoint returns the abbreviated status of t
 
 **Request**:
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../includes/paas-only.md"/>
 
 `GET https://<host>/rest/<store-view-code>/V1/bulk/:bulkUuid/status`
 
-<Edition slots="text" backgroundcolor="green"/>
-
-[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../includes/saas-only.md"/>
 
 `GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/bulk/:bulkUuid/status`
 
@@ -82,15 +78,11 @@ The `GET /V1/bulk/:bulkUuid/operation-status/:status` endpoint returns the numbe
 
 **Request**:
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../includes/paas-only.md"/>
 
 `GET https://<host>/rest/<store-view-code>/V1/bulk/:bulkUuid/operation-status/:status`
 
-<Edition slots="text" backgroundcolor="green"/>
-
-[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../includes/saas-only.md"/>
 
 `GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/bulk/:bulkUuid/operation-status/:status`
 
@@ -124,15 +116,11 @@ The `GET /V1/bulk/:bulkUuid/detailed-status` endpoint returns detailed informati
 
 **Request**:
 
-<Edition slots="text" backgroundcolor="blue"/>
-
-[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../includes/paas-only.md"/>
 
 `GET https://<host>/rest/<store-view-code>/V1/bulk/:bulkUuid/detailed-status`
 
-<Edition slots="text" backgroundcolor="green"/>
-
-[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+<Fragment src="../../includes/saas-only.md"/>
 
 `GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/bulk/:bulkUuid/detailed-status`
 
