@@ -1,0 +1,7059 @@
+## Types
+
+### AcceptNegotiableQuoteTemplateInput
+
+Specifies the quote template id to accept quote template.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `template_id` - [`ID!`](#id) | The unique ID of a &#x60;NegotiableQuoteTemplate&#x60; object. |
+
+#### Example
+
+```json
+{"template_id": "4"}
+```
+
+<HorizontalLine />
+
+### AddCustomAttributesToCartItemOutput
+
+Contains details about the cart after adding custom attributes to it items.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `cart` - [`Cart!`](#cart) | The custom attributes to cart item have been added. |
+
+#### Example
+
+```json
+{"cart": Cart}
+```
+
+<HorizontalLine />
+
+### AddDownloadableProductsToCartInput
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `cart_id` - [`String!`](#string) | The ID of the cart. |
+| `cart_items` - [`[DownloadableProductCartItemInput]!`](#downloadableproductcartiteminput) | An array of downloadable products to add. |
+
+#### Example
+
+```json
+{
+  "cart_id": "xyz789",
+  "cart_items": [DownloadableProductCartItemInput]
+}
+```
+
+<HorizontalLine />
+
+### AddDownloadableProductsToCartOutput
+
+Contains details about the cart after adding downloadable products.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `cart` - [`Cart!`](#cart) | The cart after adding products. |
+
+#### Example
+
+```json
+{"cart": Cart}
+```
+
+<HorizontalLine />
+
+### AddGiftRegistryRegistrantInput
+
+Defines a new registrant.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `dynamic_attributes` - [`[GiftRegistryDynamicAttributeInput]`](#giftregistrydynamicattributeinput) | Additional attributes specified as a code-value pair. |
+| `email` - [`String!`](#string) | The email address of the registrant. |
+| `firstname` - [`String!`](#string) | The first name of the registrant. |
+| `lastname` - [`String!`](#string) | The last name of the registrant. |
+
+#### Example
+
+```json
+{
+  "dynamic_attributes": [
+    GiftRegistryDynamicAttributeInput
+  ],
+  "email": "xyz789",
+  "firstname": "abc123",
+  "lastname": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### AddGiftRegistryRegistrantsOutput
+
+Contains the results of a request to add registrants.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `gift_registry` - [`GiftRegistry`](#giftregistry) | The gift registry after adding registrants. |
+
+#### Example
+
+```json
+{"gift_registry": GiftRegistry}
+```
+
+<HorizontalLine />
+
+### AddProductsToCartOutput
+
+Contains details about the cart after adding products to it.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `cart` - [`Cart!`](#cart) | The cart after products have been added. |
+| `user_errors` - [`[Error]!`](#error) | Contains errors encountered while adding an item to the cart. |
+
+#### Example
+
+```json
+{
+  "cart": Cart,
+  "user_errors": [Error]
+}
+```
+
+<HorizontalLine />
+
+### AddProductsToCompareListInput
+
+Contains products to add to an existing compare list.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `products` - [`[ID]!`](#id) | An array of product IDs to add to the compare list. |
+| `uid` - [`ID!`](#id) | The unique identifier of the compare list to modify. |
+
+#### Example
+
+```json
+{"products": [4], "uid": 4}
+```
+
+<HorizontalLine />
+
+### AddProductsToNewCartOutput
+
+Contains details about the cart after adding products to it.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `cart` - [`Cart`](#cart) | The cart after products have been added. |
+| `user_errors` - [`[CartUserInputError]`](#cartuserinputerror) | Contains errors encountered while adding an item to the cart. |
+
+#### Example
+
+```json
+{
+  "cart": Cart,
+  "user_errors": [CartUserInputError]
+}
+```
+
+<HorizontalLine />
+
+### AddProductsToRequisitionListOutput
+
+Output of the request to add products to a requisition list.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `requisition_list` - [`RequisitionList`](#requisitionlist) | The requisition list after adding products. |
+
+#### Example
+
+```json
+{"requisition_list": RequisitionList}
+```
+
+<HorizontalLine />
+
+### AddProductsToWishlistOutput
+
+Contains the customer's wish list and any errors encountered.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `user_errors` - [`[WishListUserInputError]!`](#wishlistuserinputerror) | An array of errors encountered while adding products to a wish list. |
+| `wishlist` - [`Wishlist!`](#wishlist) | Contains the wish list with all items that were successfully added. |
+
+#### Example
+
+```json
+{
+  "user_errors": [WishListUserInputError],
+  "wishlist": Wishlist
+}
+```
+
+<HorizontalLine />
+
+### AddPurchaseOrderCommentInput
+
+Contains the comment to be added to a purchase order.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `comment` - [`String!`](#string) | Comment text. |
+| `purchase_order_uid` - [`ID!`](#id) | The unique ID of a purchase order. |
+
+#### Example
+
+```json
+{
+  "comment": "xyz789",
+  "purchase_order_uid": "4"
+}
+```
+
+<HorizontalLine />
+
+### AddPurchaseOrderCommentOutput
+
+Contains the successfully added comment.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `comment` - [`PurchaseOrderComment!`](#purchaseordercomment) | The purchase order comment. |
+
+#### Example
+
+```json
+{"comment": PurchaseOrderComment}
+```
+
+<HorizontalLine />
+
+### AddPurchaseOrderItemsToCartInput
+
+Defines the purchase order and cart to act on.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `cart_id` - [`String!`](#string) | The ID to assign to the cart. |
+| `purchase_order_uid` - [`ID!`](#id) | Purchase order unique ID. |
+| `replace_existing_cart_items` - [`Boolean!`](#boolean) | Replace existing cart or merge items. |
+
+#### Example
+
+```json
+{
+  "cart_id": "xyz789",
+  "purchase_order_uid": 4,
+  "replace_existing_cart_items": false
+}
+```
+
+<HorizontalLine />
+
+### AddRequisitionListItemToCartUserError
+
+Contains details about why an attempt to add items to the requistion list failed.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `message` - [`String!`](#string) | A description of the error. |
+| `type` - [`AddRequisitionListItemToCartUserErrorType!`](#addrequisitionlistitemtocartusererrortype) | The type of error that occurred. |
+
+#### Example
+
+```json
+{
+  "message": "xyz789",
+  "type": "OUT_OF_STOCK"
+}
+```
+
+<HorizontalLine />
+
+### AddRequisitionListItemToCartUserErrorType
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `OUT_OF_STOCK` |  |
+| `UNAVAILABLE_SKU` |  |
+| `OPTIONS_UPDATED` |  |
+| `LOW_QUANTITY` |  |
+
+#### Example
+
+```json
+""OUT_OF_STOCK""
+```
+
+<HorizontalLine />
+
+### AddRequisitionListItemsToCartOutput
+
+Output of the request to add items in a requisition list to the cart.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `add_requisition_list_items_to_cart_user_errors` - [`[AddRequisitionListItemToCartUserError]!`](#addrequisitionlistitemtocartusererror) | Details about why the attempt to add items to the requistion list was not successful. |
+| `cart` - [`Cart`](#cart) | The cart after adding requisition list items. |
+| `status` - [`Boolean!`](#boolean) | Indicates whether the attempt to add items to the requisition list was successful. |
+
+#### Example
+
+```json
+{
+  "add_requisition_list_items_to_cart_user_errors": [
+    AddRequisitionListItemToCartUserError
+  ],
+  "cart": Cart,
+  "status": false
+}
+```
+
+<HorizontalLine />
+
+### AddReturnCommentInput
+
+Defines a return comment.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `comment_text` - [`String!`](#string) | The text added to the return request. |
+| `return_uid` - [`ID!`](#id) | The unique ID for a &#x60;Return&#x60; object. |
+
+#### Example
+
+```json
+{
+  "comment_text": "abc123",
+  "return_uid": "4"
+}
+```
+
+<HorizontalLine />
+
+### AddReturnCommentOutput
+
+Contains details about the return request.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `return` - [`Return`](#return) | The modified return. |
+
+#### Example
+
+```json
+{"return": Return}
+```
+
+<HorizontalLine />
+
+### AddReturnTrackingInput
+
+Defines tracking information to be added to the return.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `carrier_uid` - [`ID!`](#id) | The unique ID for a &#x60;ReturnShippingCarrier&#x60; object. |
+| `return_uid` - [`ID!`](#id) | The unique ID for a &#x60;Returns&#x60; object. |
+| `tracking_number` - [`String!`](#string) | The shipping tracking number for this return request. |
+
+#### Example
+
+```json
+{
+  "carrier_uid": "4",
+  "return_uid": "4",
+  "tracking_number": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### AddReturnTrackingOutput
+
+Contains the response after adding tracking information.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `return` - [`Return`](#return) | Details about the modified return. |
+| `return_shipping_tracking` - [`ReturnShippingTracking`](#returnshippingtracking) | Details about shipping for a return. |
+
+#### Example
+
+```json
+{
+  "return": Return,
+  "return_shipping_tracking": ReturnShippingTracking
+}
+```
+
+<HorizontalLine />
+
+### AddWishlistItemsToCartOutput
+
+Contains the resultant wish list and any error information.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `add_wishlist_items_to_cart_user_errors` - [`[WishlistCartUserInputError]!`](#wishlistcartuserinputerror) | An array of errors encountered while adding products to the customer&#x27;s cart. |
+| `status` - [`Boolean!`](#boolean) | Indicates whether the attempt to add items to the customer&#x27;s cart was successful. |
+| `wishlist` - [`Wishlist!`](#wishlist) | Contains the wish list with all items that were successfully added. |
+
+#### Example
+
+```json
+{
+  "add_wishlist_items_to_cart_user_errors": [
+    WishlistCartUserInputError
+  ],
+  "status": false,
+  "wishlist": Wishlist
+}
+```
+
+<HorizontalLine />
+
+### Aggregation
+
+A bucket that contains information for each filterable option
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `attribute` - [`String!`](#string) | The attribute code of the filter item |
+| `buckets` - [`[Bucket]!`](#bucket) | A container that divides the data into manageable groups. For example, attributes that can have numeric values might have buckets that define price ranges |
+| `title` - [`String!`](#string) | The filter name displayed in layered navigation |
+| `type` - [`AggregationType`](#aggregationtype) | Identifies the data type of the aggregation |
+
+#### Example
+
+```json
+{
+  "attribute": "xyz789",
+  "buckets": [Bucket],
+  "title": "xyz789",
+  "type": "INTELLIGENT"
+}
+```
+
+<HorizontalLine />
+
+### AggregationType
+
+Identifies the data type of the aggregation
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `INTELLIGENT` |  |
+| `PINNED` |  |
+| `POPULAR` |  |
+
+#### Example
+
+```json
+""INTELLIGENT""
+```
+
+<HorizontalLine />
+
+### ApplePayConfig
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `button_styles` - [`ButtonStyles`](#buttonstyles) | The styles for the ApplePay Smart Button configuration |
+| `code` - [`String`](#string) | The payment method code as defined in the payment gateway |
+| `is_visible` - [`Boolean`](#boolean) | Indicates whether the payment method is displayed |
+| `payment_intent` - [`String`](#string) | Defines the payment intent (Authorize or Capture |
+| `payment_source` - [`String`](#string) | The payment source for the payment method |
+| `sdk_params` - [`[SDKParams]`](#sdkparams) | The PayPal parameters required to load the JS SDK |
+| `sort_order` - [`String`](#string) | The relative order the payment method is displayed on the checkout page |
+| `title` - [`String`](#string) | The name displayed for the payment method |
+
+#### Example
+
+```json
+{
+  "button_styles": ButtonStyles,
+  "code": "xyz789",
+  "is_visible": true,
+  "payment_intent": "abc123",
+  "payment_source": "abc123",
+  "sdk_params": [SDKParams],
+  "sort_order": "abc123",
+  "title": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### ApplePayMethodInput
+
+Apple Pay inputs
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `payment_source` - [`String`](#string) | The payment source for the payment method |
+| `payments_order_id` - [`String`](#string) | The payment services order ID |
+| `paypal_order_id` - [`String`](#string) | PayPal order ID |
+
+#### Example
+
+```json
+{
+  "payment_source": "xyz789",
+  "payments_order_id": "abc123",
+  "paypal_order_id": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### AppliedCoupon
+
+Contains the applied coupon code.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `code` - [`String!`](#string) | The coupon code the shopper applied to the card. |
+
+#### Example
+
+```json
+{"code": "xyz789"}
+```
+
+<HorizontalLine />
+
+### AppliedGiftCard
+
+Contains an applied gift card with applied and remaining balance.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `applied_balance` - [`Money`](#money) | The amount applied to the current cart. |
+| `code` - [`String`](#string) | The gift card account code. |
+| `current_balance` - [`Money`](#money) | The remaining balance on the gift card. |
+| `expiration_date` - [`String`](#string) | The expiration date of the gift card. |
+
+#### Example
+
+```json
+{
+  "applied_balance": Money,
+  "code": "abc123",
+  "current_balance": Money,
+  "expiration_date": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### AppliedQueryRule
+
+The rule that was applied to this product
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `action_type` - [`AppliedQueryRuleActionType`](#appliedqueryruleactiontype) | An enum that defines the type of rule that was applied |
+| `rule_id` - [`String`](#string) | The ID assigned to the rule |
+| `rule_name` - [`String`](#string) | The name of the applied rule |
+
+#### Example
+
+```json
+{
+  "action_type": "BOOST",
+  "rule_id": "xyz789",
+  "rule_name": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### AppliedQueryRuleActionType
+
+The type of rule that was applied to a product during search (optional)
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `BOOST` |  |
+| `BURY` |  |
+| `PIN` |  |
+
+#### Example
+
+```json
+""BOOST""
+```
+
+<HorizontalLine />
+
+### AppliedStoreCredit
+
+Contains the applied and current balances.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `applied_balance` - [`Money`](#money) | The applied store credit balance to the current cart. |
+| `current_balance` - [`Money`](#money) | The current balance remaining on store credit. |
+| `enabled` - [`Boolean`](#boolean) | Indicates whether store credits are enabled. If the feature is disabled, then the current balance will not be returned. |
+
+#### Example
+
+```json
+{
+  "applied_balance": Money,
+  "current_balance": Money,
+  "enabled": true
+}
+```
+
+<HorizontalLine />
+
+### ApplyCouponToCartInput
+
+Specifies the coupon code to apply to the cart.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `cart_id` - [`String!`](#string) | The unique ID of a &#x60;Cart&#x60; object. |
+| `coupon_code` - [`String!`](#string) | A valid coupon code. |
+
+#### Example
+
+```json
+{
+  "cart_id": "abc123",
+  "coupon_code": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### ApplyCouponToCartOutput
+
+Contains details about the cart after applying a coupon.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `cart` - [`Cart!`](#cart) | The cart after applying a coupon. |
+
+#### Example
+
+```json
+{"cart": Cart}
+```
+
+<HorizontalLine />
+
+### ApplyCouponsStrategy
+
+The strategy to apply coupons to the cart.
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `APPEND` | Append new coupons keeping the coupons that have been applied before. |
+| `REPLACE` | Remove all the coupons from the cart and apply only new provided coupons. |
+
+#### Example
+
+```json
+""APPEND""
+```
+
+<HorizontalLine />
+
+### ApplyCouponsToCartInput
+
+Apply coupons to the cart.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `cart_id` - [`String!`](#string) | The unique ID of a &#x60;Cart&#x60; object. |
+| `coupon_codes` - [`[String]!`](#string) | An array of valid coupon codes. |
+| `type` - [`ApplyCouponsStrategy`](#applycouponsstrategy) | &#x60;replace&#x60; to replace the existing coupon(s) or &#x60;append&#x60; to add the coupon to the coupon(s) list. |
+
+#### Example
+
+```json
+{
+  "cart_id": "xyz789",
+  "coupon_codes": ["abc123"],
+  "type": "APPEND"
+}
+```
+
+<HorizontalLine />
+
+### ApplyGiftCardToCartInput
+
+Defines the input required to run the `applyGiftCardToCart` mutation.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `cart_id` - [`String!`](#string) | The unique ID that identifies the customer&#x27;s cart. |
+| `gift_card_code` - [`String!`](#string) | The gift card code to be applied to the cart. |
+
+#### Example
+
+```json
+{
+  "cart_id": "abc123",
+  "gift_card_code": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### ApplyGiftCardToCartOutput
+
+Defines the possible output for the `applyGiftCardToCart` mutation.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `cart` - [`Cart!`](#cart) | Describes the contents of the specified shopping cart. |
+
+#### Example
+
+```json
+{"cart": Cart}
+```
+
+<HorizontalLine />
+
+### ApplyGiftCardToOrder
+
+Contains applied gift cards with gift card code and amount.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `applied_balance` - [`Money!`](#money) | The gift card amount applied to the current order. |
+| `code` - [`String!`](#string) | The gift card account code. |
+
+#### Example
+
+```json
+{
+  "applied_balance": Money,
+  "code": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### ApplyRewardPointsToCartOutput
+
+Contains the customer cart.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `cart` - [`Cart!`](#cart) | The customer cart after reward points are applied. |
+
+#### Example
+
+```json
+{"cart": Cart}
+```
+
+<HorizontalLine />
+
+### ApplyStoreCreditToCartInput
+
+Defines the input required to run the `applyStoreCreditToCart` mutation.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `cart_id` - [`String!`](#string) | The unique ID that identifies the customer&#x27;s cart. |
+
+#### Example
+
+```json
+{"cart_id": "xyz789"}
+```
+
+<HorizontalLine />
+
+### ApplyStoreCreditToCartOutput
+
+Defines the possible output for the `applyStoreCreditToCart` mutation.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `cart` - [`Cart!`](#cart) | The contents of the specified shopping cart. |
+
+#### Example
+
+```json
+{"cart": Cart}
+```
+
+<HorizontalLine />
+
+### AreaInput
+
+AreaInput defines the parameters which will be used for filter by specified location.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `radius` - [`Int!`](#int) | The radius for the search in KM. |
+| `search_term` - [`String!`](#string) | The country code where search must be performed. Required parameter together with region, city or postcode. |
+
+#### Example
+
+```json
+{"radius": 987, "search_term": "xyz789"}
+```
+
+<HorizontalLine />
+
+### AssetImage
+
+Contains information about an asset image.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `asset_image` - [`ProductMediaGalleryEntriesAssetImage`](#productmediagalleryentriesassetimage) | Contains a &#x60;ProductMediaGalleryEntriesAssetImage&#x60; object. |
+| `disabled` - [`Boolean`](#boolean) | Indicates whether the image is hidden from view. |
+| `label` - [`String`](#string) | The label of the product image or video. |
+| `position` - [`Int`](#int) | The media item&#x27;s position after it has been sorted. |
+| `url` - [`String`](#string) | The URL of the product image or video. |
+
+#### Example
+
+```json
+{
+  "asset_image": ProductMediaGalleryEntriesAssetImage,
+  "disabled": true,
+  "label": "xyz789",
+  "position": 123,
+  "url": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### AssetVideo
+
+Contains information about an asset video.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `asset_video` - [`ProductMediaGalleryEntriesAssetVideo`](#productmediagalleryentriesassetvideo) | Contains a &#x60;ProductMediaGalleryEntriesAssetVideo&#x60; object. |
+| `disabled` - [`Boolean`](#boolean) | Indicates whether the image is hidden from view. |
+| `label` - [`String`](#string) | The label of the product image or video. |
+| `position` - [`Int`](#int) | The media item&#x27;s position after it has been sorted. |
+| `url` - [`String`](#string) | The URL of the product image or video. |
+
+#### Example
+
+```json
+{
+  "asset_video": ProductMediaGalleryEntriesAssetVideo,
+  "disabled": false,
+  "label": "abc123",
+  "position": 123,
+  "url": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### AssignCompareListToCustomerOutput
+
+Contains the results of the request to assign a compare list.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `compare_list` - [`CompareList`](#comparelist) | The contents of the customer&#x27;s compare list. |
+| `result` - [`Boolean!`](#boolean) | Indicates whether the compare list was successfully assigned to the customer. |
+
+#### Example
+
+```json
+{"compare_list": CompareList, "result": true}
+```
+
+<HorizontalLine />
+
+### AttributeEntityTypeEnum
+
+List of all entity types. Populated by the modules introducing EAV entities.
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `CATALOG_PRODUCT` |  |
+| `CATALOG_CATEGORY` |  |
+| `CUSTOMER` |  |
+| `CUSTOMER_ADDRESS` |  |
+| `RMA_ITEM` |  |
+
+#### Example
+
+```json
+""CATALOG_PRODUCT""
+```
+
+<HorizontalLine />
+
+### AttributeFile
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `attribute_type` - [`String`](#string) | Attribute type code. |
+| `code` - [`ID!`](#id) | The attribute code. |
+| `url` - [`String!`](#string) | File URL to download the file. |
+| `value` - [`String!`](#string) | File code. For file download use &#x60;url&#x60; field. |
+
+#### Example
+
+```json
+{
+  "attribute_type": "abc123",
+  "code": "4",
+  "url": "abc123",
+  "value": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### AttributeFilterInput
+
+An input object that specifies the filters used for attributes.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `is_comparable` - [`Boolean`](#boolean) | Whether a product or category attribute can be compared against another or not. |
+| `is_filterable` - [`Boolean`](#boolean) | Whether a product or category attribute can be filtered or not. |
+| `is_filterable_in_search` - [`Boolean`](#boolean) | Whether a product or category attribute can be filtered in search or not. |
+| `is_html_allowed_on_front` - [`Boolean`](#boolean) | Whether a product or category attribute can use HTML on front or not. |
+| `is_searchable` - [`Boolean`](#boolean) | Whether a product or category attribute can be searched or not. |
+| `is_used_for_customer_segment` - [`Boolean`](#boolean) | Whether a customer or customer address attribute is used for customer segment or not. |
+| `is_used_for_price_rules` - [`Boolean`](#boolean) | Whether a product or category attribute can be used for price rules or not. |
+| `is_used_for_promo_rules` - [`Boolean`](#boolean) | Whether a product or category attribute is used for promo rules or not. |
+| `is_visible_in_advanced_search` - [`Boolean`](#boolean) | Whether a product or category attribute is visible in advanced search or not. |
+| `is_visible_on_front` - [`Boolean`](#boolean) | Whether a product or category attribute is visible on front or not. |
+| `is_wysiwyg_enabled` - [`Boolean`](#boolean) | Whether a product or category attribute has WYSIWYG enabled or not. |
+| `used_in_product_listing` - [`Boolean`](#boolean) | Whether a product or category attribute is used in product listing or not. |
+
+#### Example
+
+```json
+{
+  "is_comparable": true,
+  "is_filterable": false,
+  "is_filterable_in_search": false,
+  "is_html_allowed_on_front": false,
+  "is_searchable": false,
+  "is_used_for_customer_segment": true,
+  "is_used_for_price_rules": true,
+  "is_used_for_promo_rules": false,
+  "is_visible_in_advanced_search": true,
+  "is_visible_on_front": false,
+  "is_wysiwyg_enabled": true,
+  "used_in_product_listing": false
+}
+```
+
+<HorizontalLine />
+
+### AttributeFrontendInputEnum
+
+EAV attribute frontend input types.
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `BOOLEAN` |  |
+| `DATE` |  |
+| `DATETIME` |  |
+| `FILE` |  |
+| `GALLERY` |  |
+| `HIDDEN` |  |
+| `IMAGE` |  |
+| `MEDIA_IMAGE` |  |
+| `MULTILINE` |  |
+| `MULTISELECT` |  |
+| `PRICE` |  |
+| `SELECT` |  |
+| `TEXT` |  |
+| `TEXTAREA` |  |
+| `WEIGHT` |  |
+| `UNDEFINED` |  |
+
+#### Example
+
+```json
+""BOOLEAN""
+```
+
+<HorizontalLine />
+
+### AttributeImage
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `attribute_type` - [`String`](#string) | Attribute type code. |
+| `code` - [`ID!`](#id) | The attribute code. |
+| `url` - [`String!`](#string) | Image URL to download the image. |
+| `value` - [`String!`](#string) | Image code. For image download use &#x60;url&#x60; field. |
+
+#### Example
+
+```json
+{
+  "attribute_type": "xyz789",
+  "code": 4,
+  "url": "xyz789",
+  "value": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### AttributeInput
+
+Defines the attribute characteristics to search for the `attribute_code` and `entity_type` to search.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `attribute_code` - [`String`](#string) | The unique identifier for an attribute code. This value should be in lowercase letters without spaces. |
+| `entity_type` - [`String`](#string) | The type of entity that defines the attribute. |
+
+#### Example
+
+```json
+{
+  "attribute_code": "abc123",
+  "entity_type": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### AttributeInputSelectedOption
+
+Specifies selected option for a select or multiselect attribute value.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `value` - [`String!`](#string) | The attribute option value. |
+
+#### Example
+
+```json
+{"value": "xyz789"}
+```
+
+<HorizontalLine />
+
+### AttributeMetadata
+
+Base EAV implementation of CustomAttributeMetadataInterface.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `code` - [`ID!`](#id) | The unique identifier for an attribute code. This value should be in lowercase letters without spaces. |
+| `default_value` - [`String`](#string) | Default attribute value. |
+| `entity_type` - [`AttributeEntityTypeEnum!`](#attributeentitytypeenum) | The type of entity that defines the attribute. |
+| `frontend_class` - [`String`](#string) | The frontend class of the attribute. |
+| `frontend_input` - [`AttributeFrontendInputEnum`](#attributefrontendinputenum) | The frontend input type of the attribute. |
+| `is_required` - [`Boolean!`](#boolean) | Whether the attribute value is required. |
+| `is_unique` - [`Boolean!`](#boolean) | Whether the attribute value must be unique. |
+| `label` - [`String`](#string) | The label assigned to the attribute. |
+| `options` - [`[CustomAttributeOptionInterface]!`](#customattributeoptioninterface) | Attribute options. |
+
+#### Example
+
+```json
+{
+  "code": 4,
+  "default_value": "abc123",
+  "entity_type": "CATALOG_PRODUCT",
+  "frontend_class": "abc123",
+  "frontend_input": "BOOLEAN",
+  "is_required": true,
+  "is_unique": true,
+  "label": "xyz789",
+  "options": [CustomAttributeOptionInterface]
+}
+```
+
+<HorizontalLine />
+
+### AttributeMetadataError
+
+Attribute metadata retrieval error.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `message` - [`String!`](#string) | Attribute metadata retrieval error message. |
+| `type` - [`AttributeMetadataErrorType!`](#attributemetadataerrortype) | Attribute metadata retrieval error type. |
+
+#### Example
+
+```json
+{
+  "message": "xyz789",
+  "type": "ENTITY_NOT_FOUND"
+}
+```
+
+<HorizontalLine />
+
+### AttributeMetadataErrorType
+
+Attribute metadata retrieval error types.
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `ENTITY_NOT_FOUND` | The requested entity was not found. |
+| `ATTRIBUTE_NOT_FOUND` | The requested attribute was not found. |
+| `FILTER_NOT_FOUND` | The filter cannot be applied as it does not belong to the entity |
+| `UNDEFINED` | Not categorized error, see the error message. |
+
+#### Example
+
+```json
+""ENTITY_NOT_FOUND""
+```
+
+<HorizontalLine />
+
+### AttributeMetadataResponse
+
+Contains the output of the `attributeMetadata` query
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `filterableInSearch` - [`[FilterableInSearchAttribute!]`](#filterableinsearchattribute) | An array of product attributes that can be used for filtering in a &#x60;productSearch&#x60; query |
+| `sortable` - [`[SortableAttribute!]`](#sortableattribute) | An array of product attributes that can be used for sorting in a &#x60;productSearch&#x60; query |
+
+#### Example
+
+```json
+{
+  "filterableInSearch": [FilterableInSearchAttribute],
+  "sortable": [SortableAttribute]
+}
+```
+
+<HorizontalLine />
+
+### AttributeOptionMetadata
+
+Base EAV implementation of CustomAttributeOptionInterface.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `is_default` - [`Boolean!`](#boolean) | Is the option value default. |
+| `label` - [`String!`](#string) | The label assigned to the attribute option. |
+| `value` - [`String!`](#string) | The attribute option value. |
+
+#### Example
+
+```json
+{
+  "is_default": true,
+  "label": "abc123",
+  "value": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### AttributeSelectedOption
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `label` - [`String!`](#string) | The attribute selected option label. |
+| `value` - [`String!`](#string) | The attribute selected option value. |
+
+#### Example
+
+```json
+{
+  "label": "abc123",
+  "value": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### AttributeSelectedOptionInterface
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `label` - [`String!`](#string) | The attribute selected option label. |
+| `value` - [`String!`](#string) | The attribute selected option value. |
+
+#### Possible Types
+
+| AttributeSelectedOptionInterface Types |
+|----------------|
+| [`AttributeSelectedOption`](#attributeselectedoption) |
+
+#### Example
+
+```json
+{
+  "label": "xyz789",
+  "value": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### AttributeSelectedOptions
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `attribute_type` - [`String`](#string) | Attribute type code. |
+| `code` - [`ID!`](#id) | The attribute code. |
+| `selected_options` - [`[AttributeSelectedOptionInterface]!`](#attributeselectedoptioninterface) |  |
+
+#### Example
+
+```json
+{
+  "attribute_type": "xyz789",
+  "code": 4,
+  "selected_options": [AttributeSelectedOptionInterface]
+}
+```
+
+<HorizontalLine />
+
+### AttributeValue
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `attribute_type` - [`String`](#string) | Attribute type code. |
+| `code` - [`ID!`](#id) | The attribute code. |
+| `value` - [`String!`](#string) | The attribute value. |
+
+#### Example
+
+```json
+{
+  "attribute_type": "abc123",
+  "code": "4",
+  "value": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### AttributeValueInput
+
+Specifies the value for attribute.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `attribute_code` - [`String!`](#string) | The code of the attribute. |
+| `selected_options` - [`[AttributeInputSelectedOption]`](#attributeinputselectedoption) | An array containing selected options for a select or multiselect attribute. |
+| `value` - [`String`](#string) | The value assigned to the attribute. |
+
+#### Example
+
+```json
+{
+  "attribute_code": "xyz789",
+  "selected_options": [AttributeInputSelectedOption],
+  "value": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### AttributeValueInterface
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `attribute_type` - [`String`](#string) | Attribute type code. |
+| `code` - [`ID!`](#id) | The attribute code. |
+
+#### Possible Types
+
+| AttributeValueInterface Types |
+|----------------|
+| [`AttributeFile`](#attributefile) |
+| [`AttributeImage`](#attributeimage) |
+| [`AttributeSelectedOptions`](#attributeselectedoptions) |
+| [`AttributeValue`](#attributevalue) |
+| [`ProductAttributeFile`](#productattributefile) |
+
+#### Example
+
+```json
+{"attribute_type": "abc123", "code": 4}
+```
+
+<HorizontalLine />
+
+### AttributesFormOutput
+
+Metadata of EAV attributes associated to form
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `errors` - [`[AttributeMetadataError]!`](#attributemetadataerror) | Errors of retrieving certain attributes metadata. |
+| `items` - [`[CustomAttributeMetadataInterface]!`](#customattributemetadatainterface) | Requested attributes metadata. |
+
+#### Example
+
+```json
+{
+  "errors": [AttributeMetadataError],
+  "items": [CustomAttributeMetadataInterface]
+}
+```
+
+<HorizontalLine />
+
+### AttributesMetadataOutput
+
+Metadata of EAV attributes.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `errors` - [`[AttributeMetadataError]!`](#attributemetadataerror) | Errors of retrieving certain attributes metadata. |
+| `items` - [`[CustomAttributeMetadataInterface]!`](#customattributemetadatainterface) | Requested attributes metadata. |
+
+#### Example
+
+```json
+{
+  "errors": [AttributeMetadataError],
+  "items": [CustomAttributeMetadataInterface]
+}
+```
+
+<HorizontalLine />
+
+### AvailableCurrency
+
+Defines the code and symbol of a currency that can be used for purchase orders.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `code` - [`CurrencyEnum!`](#currencyenum) | 3-letter currency code, for example USD. |
+| `symbol` - [`String!`](#string) | Currency symbol, for example $. |
+
+#### Example
+
+```json
+{"code": "AFN", "symbol": "abc123"}
+```
+
+<HorizontalLine />
+
+### AvailablePaymentMethod
+
+Describes a payment method that the shopper can use to pay for the order.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `code` - [`String!`](#string) | The payment method code. |
+| `is_deferred` - [`Boolean!`](#boolean) | If the payment method is an online integration |
+| `oope_payment_method_config` - [`OopePaymentMethodConfig`](#oopepaymentmethodconfig) | Configuration for out of process payment methods |
+| `title` - [`String!`](#string) | The payment method title. |
+
+#### Example
+
+```json
+{
+  "code": "xyz789",
+  "is_deferred": true,
+  "oope_payment_method_config": OopePaymentMethodConfig,
+  "title": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### AvailableShippingMethod
+
+Contains details about the possible shipping methods and carriers.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `additional_data` - [`[ShippingAdditionalData]`](#shippingadditionaldata) | Additional data related to the shipping method. |
+| `amount` - [`Money!`](#money) | The cost of shipping using this shipping method. |
+| `available` - [`Boolean!`](#boolean) | Indicates whether this shipping method can be applied to the cart. |
+| `carrier_code` - [`String!`](#string) | A string that identifies a commercial carrier or an offline shipping method. |
+| `carrier_title` - [`String!`](#string) | The label for the carrier code. |
+| `error_message` - [`String`](#string) | Describes an error condition. |
+| `method_code` - [`String`](#string) | A shipping method code associated with a carrier. The value could be null if no method is available. |
+| `method_title` - [`String`](#string) | The label for the shipping method code. The value could be null if no method is available. |
+| `price_excl_tax` - [`Money!`](#money) | The cost of shipping using this shipping method, excluding tax. |
+| `price_incl_tax` - [`Money!`](#money) | The cost of shipping using this shipping method, including tax. |
+
+#### Example
+
+```json
+{
+  "additional_data": [ShippingAdditionalData],
+  "amount": Money,
+  "available": true,
+  "carrier_code": "abc123",
+  "carrier_title": "xyz789",
+  "error_message": "abc123",
+  "method_code": "abc123",
+  "method_title": "abc123",
+  "price_excl_tax": Money,
+  "price_incl_tax": Money
+}
+```
+
+<HorizontalLine />
+
+### BatchMutationStatus
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `SUCCESS` |  |
+| `FAILURE` |  |
+| `MIXED_RESULTS` |  |
+
+#### Example
+
+```json
+""SUCCESS""
+```
+
+<HorizontalLine />
+
+### BillingAddressInput
+
+Defines the billing address.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `address` - [`CartAddressInput`](#cartaddressinput) | Defines a billing address. |
+| `customer_address_id` - [`Int`](#int) | An ID from the customer&#x27;s address book that uniquely identifies the address to be used for billing. |
+| `customer_address_uid` - [`ID`](#id) | The unique ID from the customer&#x27;s address book that uniquely identifies the address to be used for billing. |
+| `same_as_shipping` - [`Boolean`](#boolean) | Indicates whether to set the billing address to be the same as the existing shipping address on the cart. |
+| `use_for_shipping` - [`Boolean`](#boolean) | Indicates whether to set the shipping address to be the same as this billing address. |
+
+#### Example
+
+```json
+{
+  "address": CartAddressInput,
+  "customer_address_id": 987,
+  "customer_address_uid": "4",
+  "same_as_shipping": true,
+  "use_for_shipping": false
+}
+```
+
+<HorizontalLine />
+
+### BillingAddressPaymentSourceInput
+
+The billing address information
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `address_line_1` - [`String`](#string) | The first line of the address |
+| `address_line_2` - [`String`](#string) | The second line of the address |
+| `city` - [`String`](#string) | The city of the address |
+| `country_code` - [`String!`](#string) | The country of the address |
+| `postal_code` - [`String`](#string) | The postal code of the address |
+| `region` - [`String`](#string) | The region of the address |
+
+#### Example
+
+```json
+{
+  "address_line_1": "abc123",
+  "address_line_2": "abc123",
+  "city": "abc123",
+  "country_code": "abc123",
+  "postal_code": "abc123",
+  "region": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### BillingCartAddress
+
+Contains details about the billing address.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `city` - [`String!`](#string) | The city specified for the billing or shipping address. |
+| `company` - [`String`](#string) | The company specified for the billing or shipping address. |
+| `country` - [`CartAddressCountry!`](#cartaddresscountry) | An object containing the country label and code. |
+| `custom_attributes` - [`[AttributeValueInterface]!`](#attributevalueinterface) | The custom attribute values of the billing or shipping address. |
+| `customer_address_uid` - [`ID`](#id) | The unique ID from the customer&#x27;s address book that uniquely identifies the address. |
+| `fax` - [`String`](#string) | The customer&#x27;s fax number. |
+| `firstname` - [`String!`](#string) | The first name of the customer or guest. |
+| `id` - [`Int`](#int) | Id of the customer address. *(Deprecated: Use &#x60;customer_address_uid&#x60; instead.)* |
+| `lastname` - [`String!`](#string) | The last name of the customer or guest. |
+| `middlename` - [`String`](#string) | The middle name of the person associated with the billing/shipping address. |
+| `postcode` - [`String`](#string) | The ZIP or postal code of the billing or shipping address. |
+| `prefix` - [`String`](#string) | An honorific, such as Dr., Mr., or Mrs. |
+| `region` - [`CartAddressRegion`](#cartaddressregion) | An object containing the region label and code. |
+| `street` - [`[String]!`](#string) | An array containing the street for the billing or shipping address. |
+| `suffix` - [`String`](#string) | A value such as Sr., Jr., or III. |
+| `telephone` - [`String`](#string) | The telephone number for the billing or shipping address. |
+| `uid` - [`ID!`](#id) | The unique id of the customer cart address. |
+| `vat_id` - [`String`](#string) | The VAT company number for billing or shipping address. |
+
+#### Example
+
+```json
+{
+  "city": "xyz789",
+  "company": "abc123",
+  "country": CartAddressCountry,
+  "custom_attributes": [AttributeValueInterface],
+  "customer_address_uid": "4",
+  "fax": "abc123",
+  "firstname": "xyz789",
+  "id": 987,
+  "lastname": "xyz789",
+  "middlename": "abc123",
+  "postcode": "abc123",
+  "prefix": "xyz789",
+  "region": CartAddressRegion,
+  "street": ["xyz789"],
+  "suffix": "abc123",
+  "telephone": "abc123",
+  "uid": "4",
+  "vat_id": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### Boolean
+
+The `Boolean` scalar type represents `true` or `false`.
+
+#### Example
+
+```json
+true
+```
+
+<HorizontalLine />
+
+### Breadcrumb
+
+Contains details about an individual category that comprises a breadcrumb.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `category_level` - [`Int`](#int) | The category level. |
+| `category_name` - [`String`](#string) | The display name of the category. |
+| `category_uid` - [`ID!`](#id) | The unique ID for a &#x60;Breadcrumb&#x60; object. |
+| `category_url_key` - [`String`](#string) | The URL key of the category. |
+| `category_url_path` - [`String`](#string) | The URL path of the category. |
+
+#### Example
+
+```json
+{
+  "category_level": 123,
+  "category_name": "abc123",
+  "category_uid": "4",
+  "category_url_key": "abc123",
+  "category_url_path": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### Bucket
+
+An interface for bucket contents
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `title` - [`String!`](#string) | A human-readable name of a bucket |
+
+#### Possible Types
+
+| Bucket Types |
+|----------------|
+| [`CategoryBucket`](#categorybucket) |
+| [`CategoryView`](#categoryview) |
+| [`RangeBucket`](#rangebucket) |
+| [`ScalarBucket`](#scalarbucket) |
+| [`StatsBucket`](#statsbucket) |
+
+#### Example
+
+```json
+{"title": "abc123"}
+```
+
+<HorizontalLine />
+
+### BundleCartItem
+
+An implementation for bundle product cart items.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `available_gift_wrapping` - [`[GiftWrapping]!`](#giftwrapping) | The list of available gift wrapping options for the cart item. |
+| `bundle_options` - [`[SelectedBundleOption]!`](#selectedbundleoption) | An array containing the bundle options the shopper selected. |
+| `custom_attributes` - [`[CustomAttribute]`](#customattribute) | The custom attributes for the cart item |
+| `customizable_options` - [`[SelectedCustomizableOption]!`](#selectedcustomizableoption) | An array containing the customizable options the shopper selected. |
+| `discount` - [`[Discount]`](#discount) | Contains discount for quote line item. |
+| `errors` - [`[CartItemError]`](#cartitemerror) | An array of errors encountered while loading the cart item |
+| `gift_message` - [`GiftMessage`](#giftmessage) | The entered gift message for the cart item |
+| `gift_wrapping` - [`GiftWrapping`](#giftwrapping) | The selected gift wrapping for the cart item. |
+| `is_available` - [`Boolean!`](#boolean) | True if requested quantity is less than available stock, false otherwise. |
+| `max_qty` - [`Float`](#float) | Line item max qty in quote template |
+| `min_qty` - [`Float`](#float) | Line item min qty in quote template |
+| `not_available_message` - [`String`](#string) | Message to display when the product is not available with this selected option. |
+| `note_from_buyer` - [`[ItemNote]`](#itemnote) | The buyer&#x27;s quote line item note. |
+| `note_from_seller` - [`[ItemNote]`](#itemnote) | The seller&#x27;s quote line item note. |
+| `prices` - [`CartItemPrices`](#cartitemprices) | Contains details about the price of the item, including taxes and discounts. |
+| `product` - [`ProductInterface!`](#productinterface) | Details about an item in the cart. *(Deprecated: Product information is part of a composable Catalog Service.)* |
+| `quantity` - [`Float!`](#float) | The quantity of this item in the cart. |
+| `uid` - [`ID!`](#id) | The unique ID for a &#x60;CartItemInterface&#x60; object. |
+
+#### Example
+
+```json
+{
+  "available_gift_wrapping": [GiftWrapping],
+  "bundle_options": [SelectedBundleOption],
+  "custom_attributes": [CustomAttribute],
+  "customizable_options": [SelectedCustomizableOption],
+  "discount": [Discount],
+  "errors": [CartItemError],
+  "gift_message": GiftMessage,
+  "gift_wrapping": GiftWrapping,
+  "is_available": false,
+  "max_qty": 123.45,
+  "min_qty": 123.45,
+  "not_available_message": "xyz789",
+  "note_from_buyer": [ItemNote],
+  "note_from_seller": [ItemNote],
+  "prices": CartItemPrices,
+  "product": ProductInterface,
+  "quantity": 123.45,
+  "uid": 4
+}
+```
+
+<HorizontalLine />
+
+### BundleCreditMemoItem
+
+Defines bundle product options for `CreditMemoItemInterface`.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `bundle_options` - [`[ItemSelectedBundleOption]`](#itemselectedbundleoption) | A list of bundle options that are assigned to a bundle product that is part of a credit memo. |
+| `custom_attributes` - [`[CustomAttribute]`](#customattribute) | The custom attributes for the credit memo item |
+| `discounts` - [`[Discount]`](#discount) | Details about the final discount amount for the base product, including discounts on options. |
+| `id` - [`ID!`](#id) | The unique ID for a &#x60;CreditMemoItemInterface&#x60; object. |
+| `order_item` - [`OrderItemInterface`](#orderiteminterface) | The order item the credit memo is applied to. |
+| `product_name` - [`String`](#string) | The name of the base product. |
+| `product_sale_price` - [`Money!`](#money) | The sale price for the base product, including selected options. |
+| `product_sku` - [`String!`](#string) | The SKU of the base product. |
+| `quantity_refunded` - [`Float`](#float) | The number of refunded items. |
+
+#### Example
+
+```json
+{
+  "bundle_options": [ItemSelectedBundleOption],
+  "custom_attributes": [CustomAttribute],
+  "discounts": [Discount],
+  "id": "4",
+  "order_item": OrderItemInterface,
+  "product_name": "xyz789",
+  "product_sale_price": Money,
+  "product_sku": "abc123",
+  "quantity_refunded": 123.45
+}
+```
+
+<HorizontalLine />
+
+### BundleInvoiceItem
+
+Defines bundle product options for `InvoiceItemInterface`.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `bundle_options` - [`[ItemSelectedBundleOption]`](#itemselectedbundleoption) | A list of bundle options that are assigned to an invoiced bundle product. |
+| `custom_attributes` - [`[CustomAttribute]`](#customattribute) | The custom attributes for the invoice item |
+| `discounts` - [`[Discount]`](#discount) | Information about the final discount amount for the base product, including discounts on options. |
+| `id` - [`ID!`](#id) | The unique ID for an &#x60;InvoiceItemInterface&#x60; object. |
+| `order_item` - [`OrderItemInterface`](#orderiteminterface) | Details about an individual order item. |
+| `product_name` - [`String`](#string) | The name of the base product. |
+| `product_sale_price` - [`Money!`](#money) | The sale price for the base product including selected options. |
+| `product_sku` - [`String!`](#string) | The SKU of the base product. |
+| `quantity_invoiced` - [`Float`](#float) | The number of invoiced items. |
+
+#### Example
+
+```json
+{
+  "bundle_options": [ItemSelectedBundleOption],
+  "custom_attributes": [CustomAttribute],
+  "discounts": [Discount],
+  "id": 4,
+  "order_item": OrderItemInterface,
+  "product_name": "xyz789",
+  "product_sale_price": Money,
+  "product_sku": "abc123",
+  "quantity_invoiced": 987.65
+}
+```
+
+<HorizontalLine />
+
+### BundleItem
+
+Defines an individual item within a bundle product.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `options` - [`[BundleItemOption]`](#bundleitemoption) | An array of additional options for this bundle item. |
+| `position` - [`Int`](#int) | A number indicating the sequence order of this item compared to the other bundle items. |
+| `price_range` - [`PriceRange!`](#pricerange) | The range of prices for the product |
+| `required` - [`Boolean`](#boolean) | Indicates whether the item must be included in the bundle. |
+| `sku` - [`String`](#string) | The SKU of the bundle product. |
+| `title` - [`String`](#string) | The display name of the item. |
+| `type` - [`String`](#string) | The input type that the customer uses to select the item. Examples include radio button and checkbox. |
+| `uid` - [`ID`](#id) | The unique ID for a &#x60;BundleItem&#x60; object. |
+
+#### Example
+
+```json
+{
+  "options": [BundleItemOption],
+  "position": 987,
+  "price_range": PriceRange,
+  "required": true,
+  "sku": "abc123",
+  "title": "xyz789",
+  "type": "xyz789",
+  "uid": 4
+}
+```
+
+<HorizontalLine />
+
+### BundleItemOption
+
+Defines the characteristics that comprise a specific bundle item and its options.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `can_change_quantity` - [`Boolean`](#boolean) | Indicates whether the customer can change the number of items for this option. |
+| `is_default` - [`Boolean`](#boolean) | Indicates whether this option is the default option. |
+| `label` - [`String`](#string) | The text that identifies the bundled item option. |
+| `position` - [`Int`](#int) | When a bundle item contains multiple options, the relative position of this option compared to the other options. |
+| `price` - [`Float`](#float) | The price of the selected option. |
+| `price_type` - [`PriceTypeEnum`](#pricetypeenum) | One of FIXED, PERCENT, or DYNAMIC. |
+| `product` - [`ProductInterface`](#productinterface) | Contains details about this product option. |
+| `quantity` - [`Float`](#float) | The quantity of this specific bundle item. |
+| `uid` - [`ID!`](#id) | The unique ID for a &#x60;BundleItemOption&#x60; object. |
+
+#### Example
+
+```json
+{
+  "can_change_quantity": true,
+  "is_default": true,
+  "label": "abc123",
+  "position": 987,
+  "price": 987.65,
+  "price_type": "FIXED",
+  "product": ProductInterface,
+  "quantity": 123.45,
+  "uid": "4"
+}
+```
+
+<HorizontalLine />
+
+### BundleOrderItem
+
+Defines bundle product options for `OrderItemInterface`.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `bundle_options` - [`[ItemSelectedBundleOption]`](#itemselectedbundleoption) | A list of bundle options that are assigned to the bundle product. |
+| `custom_attributes` - [`[CustomAttribute]`](#customattribute) | The custom attributes for the order item |
+| `discounts` - [`[Discount]`](#discount) | The final discount information for the product. |
+| `eligible_for_return` - [`Boolean`](#boolean) | Indicates whether the order item is eligible to be in a return request. |
+| `entered_options` - [`[OrderItemOption]`](#orderitemoption) | The entered option for the base product, such as a logo or image. |
+| `gift_message` - [`GiftMessage`](#giftmessage) | The selected gift message for the order item |
+| `gift_wrapping` - [`GiftWrapping`](#giftwrapping) | The selected gift wrapping for the order item. |
+| `id` - [`ID!`](#id) | The unique ID for an &#x60;OrderItemInterface&#x60; object. |
+| `parent_sku` - [`String`](#string) | The SKU of parent product. |
+| `prices` - [`OrderItemPrices`](#orderitemprices) | Contains details about the price of the item, including taxes and discounts. |
+| `product` - [`ProductInterface`](#productinterface) | The ProductInterface object, which contains details about the base product *(Deprecated: Product information is part of a composable Catalog Service.)* |
+| `product_name` - [`String`](#string) | The name of the base product. |
+| `product_sale_price` - [`Money!`](#money) | The sale price of the base product, including selected options. |
+| `product_sku` - [`String!`](#string) | The SKU of the base product. |
+| `product_type` - [`String`](#string) | The type of product, such as simple, configurable, etc. |
+| `product_url_key` - [`String`](#string) | URL key of the base product. |
+| `quantity_canceled` - [`Float`](#float) | The number of canceled items. |
+| `quantity_invoiced` - [`Float`](#float) | The number of invoiced items. |
+| `quantity_ordered` - [`Float`](#float) | The number of units ordered for this item. |
+| `quantity_refunded` - [`Float`](#float) | The number of refunded items. |
+| `quantity_return_requested` - [`Float`](#float) | The requested return quantity of the item. |
+| `quantity_returned` - [`Float`](#float) | The number of returned items. |
+| `quantity_shipped` - [`Float`](#float) | The number of shipped items. |
+| `selected_options` - [`[OrderItemOption]`](#orderitemoption) | The selected options for the base product, such as color or size. |
+| `status` - [`String`](#string) | The status of the order item. |
+
+#### Example
+
+```json
+{
+  "bundle_options": [ItemSelectedBundleOption],
+  "custom_attributes": [CustomAttribute],
+  "discounts": [Discount],
+  "eligible_for_return": true,
+  "entered_options": [OrderItemOption],
+  "gift_message": GiftMessage,
+  "gift_wrapping": GiftWrapping,
+  "id": 4,
+  "parent_sku": "abc123",
+  "prices": OrderItemPrices,
+  "product": ProductInterface,
+  "product_name": "xyz789",
+  "product_sale_price": Money,
+  "product_sku": "abc123",
+  "product_type": "xyz789",
+  "product_url_key": "abc123",
+  "quantity_canceled": 123.45,
+  "quantity_invoiced": 987.65,
+  "quantity_ordered": 123.45,
+  "quantity_refunded": 987.65,
+  "quantity_return_requested": 987.65,
+  "quantity_returned": 987.65,
+  "quantity_shipped": 123.45,
+  "selected_options": [OrderItemOption],
+  "status": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### BundleProduct
+
+Defines basic features of a bundle product and contains multiple BundleItems.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `canonical_url` - [`String`](#string) | The relative canonical URL. This value is returned only if the system setting &#x27;Use Canonical Link Meta Tag For Products&#x27; is enabled. |
+| `categories` - [`[CategoryInterface]`](#categoryinterface) | The categories assigned to a product. |
+| `country_of_manufacture` - [`String`](#string) | The product&#x27;s country of origin. |
+| `crosssell_products` - [`[ProductInterface]`](#productinterface) | Crosssell Products |
+| `custom_attributesV2` - [`ProductCustomAttributes`](#productcustomattributes) | Product custom attributes. |
+| `description` - [`ComplexTextValue`](#complextextvalue) | Detailed information about the product. The value can include simple HTML tags. |
+| `dynamic_price` - [`Boolean`](#boolean) | Indicates whether the bundle product has a dynamic price. |
+| `dynamic_sku` - [`Boolean`](#boolean) | Indicates whether the bundle product has a dynamic SKU. |
+| `dynamic_weight` - [`Boolean`](#boolean) | Indicates whether the bundle product has a dynamically calculated weight. |
+| `gift_message_available` - [`Boolean!`](#boolean) | Returns a value indicating gift message availability for the product. |
+| `gift_wrapping_available` - [`Boolean!`](#boolean) | Returns a value indicating gift wrapping availability for the product. |
+| `gift_wrapping_price` - [`Money`](#money) | Returns value and currency indicating gift wrapping price for the product. |
+| `image` - [`ProductImage`](#productimage) | The relative path to the main image on the product page. |
+| `is_returnable` - [`String`](#string) | Indicates whether the product can be returned. |
+| `items` - [`[BundleItem]`](#bundleitem) | An array containing information about individual bundle items. |
+| `manufacturer` - [`Int`](#int) | A number representing the product&#x27;s manufacturer. |
+| `max_sale_qty` - [`Float`](#float) | Maximum Qty Allowed in Shopping Cart |
+| `media_gallery` - [`[MediaGalleryInterface]`](#mediagalleryinterface) | An array of media gallery objects. |
+| `meta_description` - [`String`](#string) | A brief overview of the product for search results listings, maximum 255 characters. |
+| `meta_keyword` - [`String`](#string) | A comma-separated list of keywords that are visible only to search engines. |
+| `meta_title` - [`String`](#string) | A string that is displayed in the title bar and tab of the browser and in search results lists. |
+| `min_sale_qty` - [`Float`](#float) | Minimum Qty Allowed in Shopping Cart |
+| `name` - [`String`](#string) | The product name. Customers use this name to identify the product. |
+| `new_from_date` - [`String`](#string) | The beginning date for new product listings, and determines if the product is featured as a new product. |
+| `new_to_date` - [`String`](#string) | The end date for new product listings. |
+| `only_x_left_in_stock` - [`Float`](#float) | Product stock only x left count |
+| `options` - [`[CustomizableOptionInterface]`](#customizableoptioninterface) | An array of options for a customizable product. |
+| `options_container` - [`String`](#string) | If the product has multiple options, determines where they appear on the product page. |
+| `price_details` - [`PriceDetails`](#pricedetails) | The price details of the main product |
+| `price_range` - [`PriceRange!`](#pricerange) | The range of prices for the product |
+| `price_tiers` - [`[TierPrice]`](#tierprice) | An array of &#x60;TierPrice&#x60; objects. |
+| `price_view` - [`PriceViewEnum`](#priceviewenum) | One of PRICE_RANGE or AS_LOW_AS. |
+| `product_links` - [`[ProductLinksInterface]`](#productlinksinterface) | An array of &#x60;ProductLinks&#x60; objects. |
+| `quantity` - [`Float`](#float) | Quantity of available stock |
+| `related_products` - [`[ProductInterface]`](#productinterface) | An array of products to be displayed in a Related Products block. |
+| `ship_bundle_items` - [`ShipBundleItemsEnum`](#shipbundleitemsenum) | Indicates whether to ship bundle items together or individually. |
+| `short_description` - [`ComplexTextValue`](#complextextvalue) | A short description of the product. Its use depends on the theme. |
+| `sku` - [`String`](#string) | A number or code assigned to a product to identify the product, options, price, and manufacturer. |
+| `small_image` - [`ProductImage`](#productimage) | The relative path to the small image, which is used on catalog pages. |
+| `special_price` - [`Float`](#float) | The discounted price of the product. |
+| `special_to_date` - [`String`](#string) | The end date for a product with a special price. |
+| `stock_status` - [`ProductStockStatus`](#productstockstatus) | Stock status of the product |
+| `swatch_image` - [`String`](#string) | The file name of a swatch image. |
+| `thumbnail` - [`ProductImage`](#productimage) | The relative path to the product&#x27;s thumbnail image. |
+| `uid` - [`ID!`](#id) | The unique ID for a &#x60;ProductInterface&#x60; object. |
+| `upsell_products` - [`[ProductInterface]`](#productinterface) | Upsell Products |
+| `url_key` - [`String`](#string) | The part of the URL that identifies the product |
+| `weight` - [`Float`](#float) | The weight of the item, in units defined by the store. |
+
+#### Example
+
+```json
+{
+  "canonical_url": "xyz789",
+  "categories": [CategoryInterface],
+  "country_of_manufacture": "abc123",
+  "crosssell_products": [ProductInterface],
+  "custom_attributesV2": ProductCustomAttributes,
+  "description": ComplexTextValue,
+  "dynamic_price": true,
+  "dynamic_sku": false,
+  "dynamic_weight": false,
+  "gift_message_available": true,
+  "gift_wrapping_available": true,
+  "gift_wrapping_price": Money,
+  "image": ProductImage,
+  "is_returnable": "abc123",
+  "items": [BundleItem],
+  "manufacturer": 987,
+  "max_sale_qty": 987.65,
+  "media_gallery": [MediaGalleryInterface],
+  "meta_description": "abc123",
+  "meta_keyword": "abc123",
+  "meta_title": "xyz789",
+  "min_sale_qty": 987.65,
+  "name": "xyz789",
+  "new_from_date": "abc123",
+  "new_to_date": "abc123",
+  "only_x_left_in_stock": 987.65,
+  "options": [CustomizableOptionInterface],
+  "options_container": "xyz789",
+  "price_details": PriceDetails,
+  "price_range": PriceRange,
+  "price_tiers": [TierPrice],
+  "price_view": "PRICE_RANGE",
+  "product_links": [ProductLinksInterface],
+  "quantity": 123.45,
+  "related_products": [ProductInterface],
+  "ship_bundle_items": "TOGETHER",
+  "short_description": ComplexTextValue,
+  "sku": "abc123",
+  "small_image": ProductImage,
+  "special_price": 987.65,
+  "special_to_date": "abc123",
+  "stock_status": "IN_STOCK",
+  "swatch_image": "xyz789",
+  "thumbnail": ProductImage,
+  "uid": "4",
+  "upsell_products": [ProductInterface],
+  "url_key": "xyz789",
+  "weight": 123.45
+}
+```
+
+<HorizontalLine />
+
+### BundleRequisitionListItem
+
+Contains details about bundle products added to a requisition list.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `bundle_options` - [`[SelectedBundleOption]!`](#selectedbundleoption) | An array of selected options for a bundle product. |
+| `customizable_options` - [`[SelectedCustomizableOption]!`](#selectedcustomizableoption) | Selected custom options for an item in the requisition list. |
+| `product` - [`ProductInterface!`](#productinterface) | Details about a requisition list item. |
+| `quantity` - [`Float!`](#float) | The quantity of the product added to the requisition list. |
+| `sku` - [`String!`](#string) | The product SKU. |
+| `uid` - [`ID!`](#id) | The unique ID of an item in a requisition list. |
+
+#### Example
+
+```json
+{
+  "bundle_options": [SelectedBundleOption],
+  "customizable_options": [SelectedCustomizableOption],
+  "product": ProductInterface,
+  "quantity": 123.45,
+  "sku": "xyz789",
+  "uid": "4"
+}
+```
+
+<HorizontalLine />
+
+### BundleShipmentItem
+
+Defines bundle product options for `ShipmentItemInterface`.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `bundle_options` - [`[ItemSelectedBundleOption]`](#itemselectedbundleoption) | A list of bundle options that are assigned to a shipped product. |
+| `id` - [`ID!`](#id) | The unique ID for a &#x60;ShipmentItemInterface&#x60; object. |
+| `order_item` - [`OrderItemInterface`](#orderiteminterface) | The order item associated with the shipment item. |
+| `product_name` - [`String`](#string) | The name of the base product. |
+| `product_sale_price` - [`Money!`](#money) | The sale price for the base product. |
+| `product_sku` - [`String!`](#string) | The SKU of the base product. |
+| `quantity_shipped` - [`Float!`](#float) | The number of shipped items. |
+
+#### Example
+
+```json
+{
+  "bundle_options": [ItemSelectedBundleOption],
+  "id": 4,
+  "order_item": OrderItemInterface,
+  "product_name": "abc123",
+  "product_sale_price": Money,
+  "product_sku": "abc123",
+  "quantity_shipped": 987.65
+}
+```
+
+<HorizontalLine />
+
+### BundleWishlistItem
+
+Defines bundle product options for `WishlistItemInterface`.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `added_at` - [`String!`](#string) | The date and time the item was added to the wish list. |
+| `bundle_options` - [`[SelectedBundleOption]`](#selectedbundleoption) | An array containing information about the selected bundle items. |
+| `customizable_options` - [`[SelectedCustomizableOption]!`](#selectedcustomizableoption) | Custom options selected for the wish list item. |
+| `description` - [`String`](#string) | The description of the item. |
+| `id` - [`ID!`](#id) | The unique ID for a &#x60;WishlistItemInterface&#x60; object. |
+| `product` - [`ProductInterface!`](#productinterface) | Product details of the wish list item. *(Deprecated: Product information is part of a composable Catalog Service.)* |
+| `quantity` - [`Float!`](#float) | The quantity of this wish list item. |
+
+#### Example
+
+```json
+{
+  "added_at": "xyz789",
+  "bundle_options": [SelectedBundleOption],
+  "customizable_options": [SelectedCustomizableOption],
+  "description": "xyz789",
+  "id": "4",
+  "product": ProductInterface,
+  "quantity": 987.65
+}
+```
+
+<HorizontalLine />
+
+### ButtonStyles
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `color` - [`String`](#string) | The button color |
+| `height` - [`Int`](#int) | The button height in pixels |
+| `label` - [`String`](#string) | The button label |
+| `layout` - [`String`](#string) | The button layout |
+| `shape` - [`String`](#string) | The button shape |
+| `tagline` - [`Boolean`](#boolean) | Indicates whether the tagline is displayed |
+| `use_default_height` - [`Boolean`](#boolean) | Defines if the button uses default height. If the value is false, the value of height is used |
+
+#### Example
+
+```json
+{
+  "color": "abc123",
+  "height": 123,
+  "label": "abc123",
+  "layout": "abc123",
+  "shape": "abc123",
+  "tagline": false,
+  "use_default_height": true
+}
+```
+
+<HorizontalLine />
+
+### CancelNegotiableQuoteTemplateInput
+
+Specifies the quote template id of the quote template to cancel
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `cancellation_comment` - [`String`](#string) | A comment to provide reason of cancellation. |
+| `template_id` - [`ID!`](#id) | The unique ID of a &#x60;NegotiableQuoteTemplate&#x60; object. |
+
+#### Example
+
+```json
+{
+  "cancellation_comment": "xyz789",
+  "template_id": "4"
+}
+```
+
+<HorizontalLine />
+
+### CancelOrderError
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `code` - [`CancelOrderErrorCode!`](#cancelordererrorcode) | An error code that is specific to cancel order. |
+| `message` - [`String!`](#string) | A localized error message. |
+
+#### Example
+
+```json
+{
+  "code": "ORDER_CANCELLATION_DISABLED",
+  "message": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### CancelOrderErrorCode
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `ORDER_CANCELLATION_DISABLED` |  |
+| `UNDEFINED` |  |
+| `UNAUTHORISED` |  |
+| `ORDER_NOT_FOUND` |  |
+| `PARTIAL_ORDER_ITEM_SHIPPED` |  |
+| `INVALID_ORDER_STATUS` |  |
+
+#### Example
+
+```json
+""ORDER_CANCELLATION_DISABLED""
+```
+
+<HorizontalLine />
+
+### CancelOrderInput
+
+Defines the order to cancel.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `order_id` - [`ID!`](#id) | The unique ID of an &#x60;Order&#x60; type. |
+| `reason` - [`String!`](#string) | Cancellation reason. |
+
+#### Example
+
+```json
+{
+  "order_id": "4",
+  "reason": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CancelOrderOutput
+
+Contains the updated customer order and error message if any.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `error` - [`String`](#string) | Error encountered while cancelling the order. |
+| `errorV2` - [`CancelOrderError`](#cancelordererror) |  |
+| `order` - [`CustomerOrder`](#customerorder) | Updated customer order. |
+
+#### Example
+
+```json
+{
+  "error": "xyz789",
+  "errorV2": CancelOrderError,
+  "order": CustomerOrder
+}
+```
+
+<HorizontalLine />
+
+### CancellationReason
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `description` - [`String!`](#string) |  |
+
+#### Example
+
+```json
+{"description": "abc123"}
+```
+
+<HorizontalLine />
+
+### Card
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `bin_details` - [`CardBin`](#cardbin) | Card bin details |
+| `card_expiry_month` - [`String`](#string) | Expiration month of the card |
+| `card_expiry_year` - [`String`](#string) | Expiration year of the card |
+| `last_digits` - [`String`](#string) | Last four digits of the card |
+| `name` - [`String`](#string) | Name on the card |
+
+#### Example
+
+```json
+{
+  "bin_details": CardBin,
+  "card_expiry_month": "abc123",
+  "card_expiry_year": "abc123",
+  "last_digits": "xyz789",
+  "name": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### CardBin
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `bin` - [`String`](#string) | Card bin number |
+
+#### Example
+
+```json
+{"bin": "xyz789"}
+```
+
+<HorizontalLine />
+
+### CardPaymentSourceInput
+
+The card payment source information
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `billing_address` - [`BillingAddressPaymentSourceInput!`](#billingaddresspaymentsourceinput) | The billing address of the card |
+| `name` - [`String`](#string) | The name on the cardholder |
+
+#### Example
+
+```json
+{
+  "billing_address": BillingAddressPaymentSourceInput,
+  "name": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### CardPaymentSourceOutput
+
+The card payment source information
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `brand` - [`String`](#string) | The brand of the card |
+| `expiry` - [`String`](#string) | The expiry of the card |
+| `last_digits` - [`String`](#string) | The last digits of the card |
+
+#### Example
+
+```json
+{
+  "brand": "abc123",
+  "expiry": "abc123",
+  "last_digits": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### Cart
+
+Contains the contents and other details about a guest or customer cart.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `applied_coupons` - [`[AppliedCoupon]`](#appliedcoupon) | An array of &#x60;AppliedCoupon&#x60; objects. Each object contains the &#x60;code&#x60; text attribute, which specifies the coupon code. |
+| `applied_gift_cards` - [`[AppliedGiftCard]`](#appliedgiftcard) | An array of gift card items applied to the cart. |
+| `applied_reward_points` - [`RewardPointsAmount`](#rewardpointsamount) | The amount of reward points applied to the cart. |
+| `applied_store_credit` - [`AppliedStoreCredit`](#appliedstorecredit) | Store credit information applied to the cart. |
+| `available_gift_wrappings` - [`[GiftWrapping]!`](#giftwrapping) | The list of available gift wrapping options for the cart. |
+| `available_payment_methods` - [`[AvailablePaymentMethod]`](#availablepaymentmethod) | An array of available payment methods. |
+| `billing_address` - [`BillingCartAddress`](#billingcartaddress) | The billing address assigned to the cart. |
+| `custom_attributes` - [`[CustomAttribute]`](#customattribute) | The custom attributes for the cart |
+| `email` - [`String`](#string) | The email address of the guest or customer. |
+| `gift_message` - [`GiftMessage`](#giftmessage) | The entered gift message for the cart |
+| `gift_receipt_included` - [`Boolean!`](#boolean) | Indicates whether the shopper requested gift receipt for the cart. |
+| `gift_wrapping` - [`GiftWrapping`](#giftwrapping) | The selected gift wrapping for the cart. |
+| `id` - [`ID!`](#id) | The unique ID for a &#x60;Cart&#x60; object. |
+| `is_virtual` - [`Boolean!`](#boolean) | Indicates whether the cart contains only virtual products. |
+| `itemsV2` - [`CartItems`](#cartitems) |  |
+| `prices` - [`CartPrices`](#cartprices) | Pricing details for the quote. |
+| `printed_card_included` - [`Boolean!`](#boolean) | Indicates whether the shopper requested a printed card for the cart. |
+| `rules` - [`[CartRuleStorefront]`](#cartrulestorefront) | Provides applied cart rules in the current active cart |
+| `selected_payment_method` - [`SelectedPaymentMethod`](#selectedpaymentmethod) | Indicates which payment method was applied to the cart. |
+| `shipping_addresses` - [`[ShippingCartAddress]!`](#shippingcartaddress) | An array of shipping addresses assigned to the cart. |
+| `total_quantity` - [`Float!`](#float) | The total number of items in the cart. |
+
+#### Example
+
+```json
+{
+  "applied_coupons": [AppliedCoupon],
+  "applied_gift_cards": [AppliedGiftCard],
+  "applied_reward_points": RewardPointsAmount,
+  "applied_store_credit": AppliedStoreCredit,
+  "available_gift_wrappings": [GiftWrapping],
+  "available_payment_methods": [AvailablePaymentMethod],
+  "billing_address": BillingCartAddress,
+  "custom_attributes": [CustomAttribute],
+  "email": "abc123",
+  "gift_message": GiftMessage,
+  "gift_receipt_included": true,
+  "gift_wrapping": GiftWrapping,
+  "id": "4",
+  "is_virtual": false,
+  "itemsV2": CartItems,
+  "prices": CartPrices,
+  "printed_card_included": false,
+  "rules": [CartRuleStorefront],
+  "selected_payment_method": SelectedPaymentMethod,
+  "shipping_addresses": [ShippingCartAddress],
+  "total_quantity": 987.65
+}
+```
+
+<HorizontalLine />
+
+### CartAddressCountry
+
+Contains details the country in a billing or shipping address.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `code` - [`String!`](#string) | The country code. |
+| `label` - [`String!`](#string) | The display label for the country. |
+
+#### Example
+
+```json
+{
+  "code": "xyz789",
+  "label": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CartAddressInput
+
+Defines the billing or shipping address to be applied to the cart.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `city` - [`String!`](#string) | The city specified for the billing or shipping address. |
+| `company` - [`String`](#string) | The company specified for the billing or shipping address. |
+| `country_code` - [`String!`](#string) | The country code and label for the billing or shipping address. |
+| `custom_attributes` - [`[AttributeValueInput]`](#attributevalueinput) | The custom attribute values of the billing or shipping address. |
+| `fax` - [`String`](#string) | The customer&#x27;s fax number. |
+| `firstname` - [`String!`](#string) | The first name of the customer or guest. |
+| `lastname` - [`String!`](#string) | The last name of the customer or guest. |
+| `middlename` - [`String`](#string) | The middle name of the person associated with the billing/shipping address. |
+| `postcode` - [`String`](#string) | The ZIP or postal code of the billing or shipping address. |
+| `prefix` - [`String`](#string) | An honorific, such as Dr., Mr., or Mrs. |
+| `region` - [`String`](#string) | A string that defines the state or province of the billing or shipping address. |
+| `region_id` - [`Int`](#int) | An integer that defines the state or province of the billing or shipping address. |
+| `save_in_address_book` - [`Boolean`](#boolean) | Determines whether to save the address in the customer&#x27;s address book. The default value is true. |
+| `street` - [`[String]!`](#string) | An array containing the street for the billing or shipping address. |
+| `suffix` - [`String`](#string) | A value such as Sr., Jr., or III. |
+| `telephone` - [`String`](#string) | The telephone number for the billing or shipping address. |
+| `vat_id` - [`String`](#string) | The VAT company number for billing or shipping address. |
+
+#### Example
+
+```json
+{
+  "city": "abc123",
+  "company": "abc123",
+  "country_code": "abc123",
+  "custom_attributes": [AttributeValueInput],
+  "fax": "xyz789",
+  "firstname": "abc123",
+  "lastname": "abc123",
+  "middlename": "abc123",
+  "postcode": "xyz789",
+  "prefix": "xyz789",
+  "region": "xyz789",
+  "region_id": 987,
+  "save_in_address_book": true,
+  "street": ["abc123"],
+  "suffix": "xyz789",
+  "telephone": "abc123",
+  "vat_id": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### CartAddressInterface
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `city` - [`String!`](#string) | The city specified for the billing or shipping address. |
+| `company` - [`String`](#string) | The company specified for the billing or shipping address. |
+| `country` - [`CartAddressCountry!`](#cartaddresscountry) | An object containing the country label and code. |
+| `custom_attributes` - [`[AttributeValueInterface]!`](#attributevalueinterface) | The custom attribute values of the billing or shipping address. |
+| `customer_address_uid` - [`ID`](#id) | The unique ID from the customer&#x27;s address book that uniquely identifies the address. |
+| `fax` - [`String`](#string) | The customer&#x27;s fax number. |
+| `firstname` - [`String!`](#string) | The first name of the customer or guest. |
+| `id` - [`Int`](#int) | Id of the customer address. *(Deprecated: Use &#x60;customer_address_uid&#x60; instead.)* |
+| `lastname` - [`String!`](#string) | The last name of the customer or guest. |
+| `middlename` - [`String`](#string) | The middle name of the person associated with the billing/shipping address. |
+| `postcode` - [`String`](#string) | The ZIP or postal code of the billing or shipping address. |
+| `prefix` - [`String`](#string) | An honorific, such as Dr., Mr., or Mrs. |
+| `region` - [`CartAddressRegion`](#cartaddressregion) | An object containing the region label and code. |
+| `street` - [`[String]!`](#string) | An array containing the street for the billing or shipping address. |
+| `suffix` - [`String`](#string) | A value such as Sr., Jr., or III. |
+| `telephone` - [`String`](#string) | The telephone number for the billing or shipping address. |
+| `uid` - [`ID!`](#id) | The unique id of the customer cart address. |
+| `vat_id` - [`String`](#string) | The VAT company number for billing or shipping address. |
+
+#### Possible Types
+
+| CartAddressInterface Types |
+|----------------|
+| [`BillingCartAddress`](#billingcartaddress) |
+| [`ShippingCartAddress`](#shippingcartaddress) |
+
+#### Example
+
+```json
+{
+  "city": "abc123",
+  "company": "abc123",
+  "country": CartAddressCountry,
+  "custom_attributes": [AttributeValueInterface],
+  "customer_address_uid": "4",
+  "fax": "abc123",
+  "firstname": "abc123",
+  "id": 987,
+  "lastname": "abc123",
+  "middlename": "xyz789",
+  "postcode": "xyz789",
+  "prefix": "abc123",
+  "region": CartAddressRegion,
+  "street": ["xyz789"],
+  "suffix": "abc123",
+  "telephone": "abc123",
+  "uid": "4",
+  "vat_id": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CartAddressRegion
+
+Contains details about the region in a billing or shipping address.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `code` - [`String`](#string) | The state or province code. |
+| `label` - [`String`](#string) | The display label for the region. |
+| `region_id` - [`Int`](#int) | The unique ID for a pre-defined region. |
+
+#### Example
+
+```json
+{
+  "code": "abc123",
+  "label": "xyz789",
+  "region_id": 123
+}
+```
+
+<HorizontalLine />
+
+### CartCustomAttributesInput
+
+Defines a cart custom attributes.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `cart_id` - [`String!`](#string) | The cart ID. |
+| `custom_attributes` - [`[CustomAttributeInput]`](#customattributeinput) | An array of custom attributes for cart. |
+
+#### Example
+
+```json
+{
+  "cart_id": "abc123",
+  "custom_attributes": [CustomAttributeInput]
+}
+```
+
+<HorizontalLine />
+
+### CartDiscountType
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `ITEM` |  |
+| `SHIPPING` |  |
+
+#### Example
+
+```json
+""ITEM""
+```
+
+<HorizontalLine />
+
+### CartItemCustomAttributesInput
+
+Defines a cart item custom attributes.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `cart_id` - [`String!`](#string) | The cart ID. |
+| `cart_item_id` - [`String!`](#string) | The cart item ID. |
+| `custom_attributes` - [`[CustomAttributeInput]`](#customattributeinput) | An array of custom attributes for cart item. |
+
+#### Example
+
+```json
+{
+  "cart_id": "xyz789",
+  "cart_item_id": "abc123",
+  "custom_attributes": [CustomAttributeInput]
+}
+```
+
+<HorizontalLine />
+
+### CartItemError
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `code` - [`CartItemErrorType!`](#cartitemerrortype) | An error code that describes the error encountered |
+| `message` - [`String!`](#string) | A localized error message |
+
+#### Example
+
+```json
+{"code": "UNDEFINED", "message": "xyz789"}
+```
+
+<HorizontalLine />
+
+### CartItemErrorType
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `UNDEFINED` |  |
+| `ITEM_QTY` |  |
+| `ITEM_INCREMENTS` |  |
+
+#### Example
+
+```json
+""UNDEFINED""
+```
+
+<HorizontalLine />
+
+### CartItemInput
+
+Defines an item to be added to the cart.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `entered_options` - [`[EnteredOptionInput]`](#enteredoptioninput) | An array of entered options for the base product, such as personalization text. |
+| `parent_sku` - [`String`](#string) | For a child product, the SKU of its parent product. |
+| `quantity` - [`Float!`](#float) | The amount or number of an item to add. |
+| `selected_options` - [`[ID]`](#id) | The selected options for the base product, such as color or size, using the unique ID for an object such as &#x60;CustomizableRadioOption&#x60;, &#x60;CustomizableDropDownOption&#x60;, or &#x60;ConfigurableProductOptionsValues&#x60;. |
+| `sku` - [`String!`](#string) | The SKU of the product. |
+
+#### Example
+
+```json
+{
+  "entered_options": [EnteredOptionInput],
+  "parent_sku": "xyz789",
+  "quantity": 123.45,
+  "selected_options": ["4"],
+  "sku": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### CartItemInterface
+
+An interface for products in a cart.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `custom_attributes` - [`[CustomAttribute]`](#customattribute) | The custom attributes for the cart item |
+| `discount` - [`[Discount]`](#discount) | Contains discount for quote line item. |
+| `errors` - [`[CartItemError]`](#cartitemerror) | An array of errors encountered while loading the cart item |
+| `is_available` - [`Boolean!`](#boolean) | True if requested quantity is less than available stock, false otherwise. |
+| `max_qty` - [`Float`](#float) | Line item max qty in quote template |
+| `min_qty` - [`Float`](#float) | Line item min qty in quote template |
+| `not_available_message` - [`String`](#string) | Message to display when the product is not available with this selected option. |
+| `note_from_buyer` - [`[ItemNote]`](#itemnote) | The buyer&#x27;s quote line item note. |
+| `note_from_seller` - [`[ItemNote]`](#itemnote) | The seller&#x27;s quote line item note. |
+| `prices` - [`CartItemPrices`](#cartitemprices) | Contains details about the price of the item, including taxes and discounts. |
+| `product` - [`ProductInterface!`](#productinterface) | Details about an item in the cart. *(Deprecated: Product information is part of a composable Catalog Service.)* |
+| `quantity` - [`Float!`](#float) | The quantity of this item in the cart. |
+| `uid` - [`ID!`](#id) | The unique ID for a &#x60;CartItemInterface&#x60; object. |
+
+#### Possible Types
+
+| CartItemInterface Types |
+|----------------|
+| [`BundleCartItem`](#bundlecartitem) |
+| [`ConfigurableCartItem`](#configurablecartitem) |
+| [`DownloadableCartItem`](#downloadablecartitem) |
+| [`GiftCardCartItem`](#giftcardcartitem) |
+| [`SimpleCartItem`](#simplecartitem) |
+| [`VirtualCartItem`](#virtualcartitem) |
+
+#### Example
+
+```json
+{
+  "custom_attributes": [CustomAttribute],
+  "discount": [Discount],
+  "errors": [CartItemError],
+  "is_available": false,
+  "max_qty": 123.45,
+  "min_qty": 123.45,
+  "not_available_message": "xyz789",
+  "note_from_buyer": [ItemNote],
+  "note_from_seller": [ItemNote],
+  "prices": CartItemPrices,
+  "product": ProductInterface,
+  "quantity": 987.65,
+  "uid": 4
+}
+```
+
+<HorizontalLine />
+
+### CartItemPrices
+
+Contains details about the price of the item, including taxes and discounts.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `catalog_discount` - [`ProductDiscount`](#productdiscount) | The price discount for the unit price of the item represents the difference between its regular price and final price. |
+| `discounts` - [`[Discount]`](#discount) | An array of discounts to be applied to the cart item. |
+| `fixed_product_taxes` - [`[FixedProductTax]`](#fixedproducttax) | An array of FPTs applied to the cart item. |
+| `original_item_price` - [`Money!`](#money) | The value of the original unit price for the item, including discounts. |
+| `original_row_total` - [`Money!`](#money) | The value of the original price multiplied by the quantity of the item. |
+| `price` - [`Money!`](#money) | The price of the item before any discounts were applied. The price that might include tax, depending on the configured display settings for cart. |
+| `price_including_tax` - [`Money!`](#money) | The price of the item before any discounts were applied. The price that might include tax, depending on the configured display settings for cart. |
+| `row_catalog_discount` - [`ProductDiscount`](#productdiscount) | The price discount multiplied by the item quantity represents the total difference between the regular price and the final price for the entire quote item. |
+| `row_total` - [`Money!`](#money) | The value of the price multiplied by the quantity of the item. |
+| `row_total_including_tax` - [`Money!`](#money) | The value of &#x60;row_total&#x60; plus the tax applied to the item. |
+| `total_item_discount` - [`Money`](#money) | The total of all discounts applied to the item. |
+
+#### Example
+
+```json
+{
+  "catalog_discount": ProductDiscount,
+  "discounts": [Discount],
+  "fixed_product_taxes": [FixedProductTax],
+  "original_item_price": Money,
+  "original_row_total": Money,
+  "price": Money,
+  "price_including_tax": Money,
+  "row_catalog_discount": ProductDiscount,
+  "row_total": Money,
+  "row_total_including_tax": Money,
+  "total_item_discount": Money
+}
+```
+
+<HorizontalLine />
+
+### CartItemSelectedOptionValuePrice
+
+Contains details about the price of a selected customizable value.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `type` - [`PriceTypeEnum!`](#pricetypeenum) | Indicates whether the price type is fixed, percent, or dynamic. |
+| `units` - [`String!`](#string) | A string that describes the unit of the value. |
+| `value` - [`Float!`](#float) | A price value. |
+
+#### Example
+
+```json
+{
+  "type": "FIXED",
+  "units": "abc123",
+  "value": 123.45
+}
+```
+
+<HorizontalLine />
+
+### CartItemUpdateInput
+
+A single item to be updated.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `cart_item_uid` - [`ID`](#id) | The unique ID for a &#x60;CartItemInterface&#x60; object. |
+| `customizable_options` - [`[CustomizableOptionInput]`](#customizableoptioninput) | An array that defines customizable options for the product. |
+| `gift_message` - [`GiftMessageInput`](#giftmessageinput) | Gift message details for the cart item |
+| `gift_wrapping_id` - [`ID`](#id) | The unique ID for a &#x60;GiftWrapping&#x60; object to be used for the cart item. |
+| `quantity` - [`Float`](#float) | The new quantity of the item. |
+
+#### Example
+
+```json
+{
+  "cart_item_uid": 4,
+  "customizable_options": [CustomizableOptionInput],
+  "gift_message": GiftMessageInput,
+  "gift_wrapping_id": "4",
+  "quantity": 987.65
+}
+```
+
+<HorizontalLine />
+
+### CartItems
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `items` - [`[CartItemInterface]!`](#cartiteminterface) | An array of products that have been added to the cart. |
+| `page_info` - [`SearchResultPageInfo`](#searchresultpageinfo) | Metadata for pagination rendering. |
+| `total_count` - [`Int!`](#int) | The number of returned cart items. |
+
+#### Example
+
+```json
+{
+  "items": [CartItemInterface],
+  "page_info": SearchResultPageInfo,
+  "total_count": 987
+}
+```
+
+<HorizontalLine />
+
+### CartPrices
+
+Contains details about the final price of items in the cart, including discount and tax information.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `applied_taxes` - [`[CartTaxItem]`](#carttaxitem) | An array containing the names and amounts of taxes applied to each item in the cart. |
+| `discounts` - [`[Discount]`](#discount) | An array containing cart rule discounts, store credit and gift cards applied to the cart. |
+| `gift_options` - [`GiftOptionsPrices`](#giftoptionsprices) | The list of prices for the selected gift options. |
+| `grand_total` - [`Money`](#money) | The total, including discounts, taxes, shipping, and other fees. |
+| `grand_total_excluding_tax` - [`Money`](#money) | The total of the cart, including discounts, shipping, and other fees without tax. |
+| `subtotal_excluding_tax` - [`Money`](#money) | The subtotal without any applied taxes. |
+| `subtotal_including_tax` - [`Money`](#money) | The subtotal including any applied taxes. |
+| `subtotal_with_discount_excluding_tax` - [`Money`](#money) | The subtotal with any discounts applied, but not taxes. |
+
+#### Example
+
+```json
+{
+  "applied_taxes": [CartTaxItem],
+  "discounts": [Discount],
+  "gift_options": GiftOptionsPrices,
+  "grand_total": Money,
+  "grand_total_excluding_tax": Money,
+  "subtotal_excluding_tax": Money,
+  "subtotal_including_tax": Money,
+  "subtotal_with_discount_excluding_tax": Money
+}
+```
+
+<HorizontalLine />
+
+### CartRuleStorefront
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `uid` - [`ID!`](#id) | The unique ID for a &#x60;CartRule&#x60; object. |
+
+#### Example
+
+```json
+{"uid": "4"}
+```
+
+<HorizontalLine />
+
+### CartTaxItem
+
+Contains tax information about an item in the cart.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `amount` - [`Money!`](#money) | The amount of tax applied to the item. |
+| `label` - [`String!`](#string) | The description of the tax. |
+
+#### Example
+
+```json
+{
+  "amount": Money,
+  "label": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CartUserInputError
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `code` - [`CartUserInputErrorType!`](#cartuserinputerrortype) | A cart-specific error code. |
+| `message` - [`String!`](#string) | A localized error message. |
+
+#### Example
+
+```json
+{
+  "code": "PRODUCT_NOT_FOUND",
+  "message": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CartUserInputErrorType
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `PRODUCT_NOT_FOUND` |  |
+| `NOT_SALABLE` |  |
+| `INSUFFICIENT_STOCK` |  |
+| `COULD_NOT_FIND_CART_ITEM` |  |
+| `REQUIRED_PARAMETER_MISSING` |  |
+| `INVALID_PARAMETER_VALUE` |  |
+| `UNDEFINED` |  |
+| `PERMISSION_DENIED` |  |
+
+#### Example
+
+```json
+""PRODUCT_NOT_FOUND""
+```
+
+<HorizontalLine />
+
+### CatalogAttributeApplyToEnum
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `SIMPLE` |  |
+| `VIRTUAL` |  |
+| `BUNDLE` |  |
+| `DOWNLOADABLE` |  |
+| `CONFIGURABLE` |  |
+| `GROUPED` |  |
+| `CATEGORY` |  |
+
+#### Example
+
+```json
+""SIMPLE""
+```
+
+<HorizontalLine />
+
+### CatalogAttributeMetadata
+
+Swatch attribute metadata.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `apply_to` - [`[CatalogAttributeApplyToEnum]`](#catalogattributeapplytoenum) | To which catalog types an attribute can be applied. |
+| `code` - [`ID!`](#id) | The unique identifier for an attribute code. This value should be in lowercase letters without spaces. |
+| `default_value` - [`String`](#string) | Default attribute value. |
+| `entity_type` - [`AttributeEntityTypeEnum!`](#attributeentitytypeenum) | The type of entity that defines the attribute. |
+| `frontend_class` - [`String`](#string) | The frontend class of the attribute. |
+| `frontend_input` - [`AttributeFrontendInputEnum`](#attributefrontendinputenum) | The frontend input type of the attribute. |
+| `is_comparable` - [`Boolean`](#boolean) | Whether a product or category attribute can be compared against another or not. |
+| `is_filterable` - [`Boolean`](#boolean) | Whether a product or category attribute can be filtered or not. |
+| `is_filterable_in_search` - [`Boolean`](#boolean) | Whether a product or category attribute can be filtered in search or not. |
+| `is_html_allowed_on_front` - [`Boolean`](#boolean) | Whether a product or category attribute can use HTML on front or not. |
+| `is_required` - [`Boolean!`](#boolean) | Whether the attribute value is required. |
+| `is_searchable` - [`Boolean`](#boolean) | Whether a product or category attribute can be searched or not. |
+| `is_unique` - [`Boolean!`](#boolean) | Whether the attribute value must be unique. |
+| `is_used_for_price_rules` - [`Boolean`](#boolean) | Whether a product or category attribute can be used for price rules or not. |
+| `is_used_for_promo_rules` - [`Boolean`](#boolean) | Whether a product or category attribute is used for promo rules or not. |
+| `is_visible_in_advanced_search` - [`Boolean`](#boolean) | Whether a product or category attribute is visible in advanced search or not. |
+| `is_visible_on_front` - [`Boolean`](#boolean) | Whether a product or category attribute is visible on front or not. |
+| `is_wysiwyg_enabled` - [`Boolean`](#boolean) | Whether a product or category attribute has WYSIWYG enabled or not. |
+| `label` - [`String`](#string) | The label assigned to the attribute. |
+| `options` - [`[CustomAttributeOptionInterface]!`](#customattributeoptioninterface) | Attribute options. |
+| `swatch_input_type` - [`SwatchInputTypeEnum`](#swatchinputtypeenum) | Input type of the swatch attribute option. |
+| `update_product_preview_image` - [`Boolean`](#boolean) | Whether update product preview image or not. |
+| `use_product_image_for_swatch` - [`Boolean`](#boolean) | Whether use product image for swatch or not. |
+| `used_in_product_listing` - [`Boolean`](#boolean) | Whether a product or category attribute is used in product listing or not. |
+
+#### Example
+
+```json
+{
+  "apply_to": ["SIMPLE"],
+  "code": "4",
+  "default_value": "xyz789",
+  "entity_type": "CATALOG_PRODUCT",
+  "frontend_class": "abc123",
+  "frontend_input": "BOOLEAN",
+  "is_comparable": false,
+  "is_filterable": true,
+  "is_filterable_in_search": true,
+  "is_html_allowed_on_front": true,
+  "is_required": false,
+  "is_searchable": true,
+  "is_unique": true,
+  "is_used_for_price_rules": true,
+  "is_used_for_promo_rules": true,
+  "is_visible_in_advanced_search": false,
+  "is_visible_on_front": false,
+  "is_wysiwyg_enabled": true,
+  "label": "xyz789",
+  "options": [CustomAttributeOptionInterface],
+  "swatch_input_type": "BOOLEAN",
+  "update_product_preview_image": true,
+  "use_product_image_for_swatch": false,
+  "used_in_product_listing": true
+}
+```
+
+<HorizontalLine />
+
+### CategoryBucket
+
+New category bucket for federation
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `count` - [`Int!`](#int) |  |
+| `id` - [`ID!`](#id) |  |
+| `path` - [`String!`](#string) |  |
+| `title` - [`String!`](#string) |  |
+
+#### Example
+
+```json
+{
+  "count": 123,
+  "id": 4,
+  "path": "abc123",
+  "title": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### CategoryBucketInterface
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `id` - [`ID!`](#id) |  |
+
+#### Possible Types
+
+| CategoryBucketInterface Types |
+|----------------|
+| [`CategoryBucket`](#categorybucket) |
+
+#### Example
+
+```json
+{"id": "4"}
+```
+
+<HorizontalLine />
+
+### CategoryImage
+
+Represents an image associated with a category.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `url` - [`String!`](#string) | The URL where the image is hosted. |
+| `label` - [`String`](#string) | A descriptive label or alt text for the image. |
+| `roles` - [`[String]`](#string) | Standard predefined roles for the image. |
+| `customRoles` - [`[String]`](#string) | Custom roles specific to the implementation. |
+
+#### Example
+
+```json
+{
+  "url": "xyz789",
+  "label": "abc123",
+  "roles": ["xyz789"],
+  "customRoles": ["abc123"]
+}
+```
+
+<HorizontalLine />
+
+### CategoryInterface
+
+Contains the full set of attributes that can be returned in a category search.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `available_sort_by` - [`[String]`](#string) |  |
+| `breadcrumbs` - [`[Breadcrumb]`](#breadcrumb) | An array of breadcrumb items. |
+| `canonical_url` - [`String`](#string) | The relative canonical URL. This value is returned only if the system setting &#x27;Use Canonical Link Meta Tag For Categories&#x27; is enabled. |
+| `children_count` - [`String`](#string) |  |
+| `custom_layout_update_file` - [`String`](#string) |  |
+| `default_sort_by` - [`String`](#string) | The attribute to use for sorting. |
+| `description` - [`String`](#string) | An optional description of the category. |
+| `display_mode` - [`String`](#string) |  |
+| `filter_price_range` - [`Float`](#float) |  |
+| `image` - [`String`](#string) |  |
+| `include_in_menu` - [`Int`](#int) |  |
+| `is_anchor` - [`Int`](#int) |  |
+| `landing_page` - [`Int`](#int) |  |
+| `level` - [`Int`](#int) | The depth of the category within the tree. |
+| `meta_description` - [`String`](#string) |  |
+| `meta_keywords` - [`String`](#string) |  |
+| `meta_title` - [`String`](#string) |  |
+| `name` - [`String`](#string) | The display name of the category. |
+| `path` - [`String`](#string) | The full category path. |
+| `path_in_store` - [`String`](#string) | The category path within the store. |
+| `position` - [`Int`](#int) | The position of the category relative to other categories at the same level in tree. |
+| `product_count` - [`Int`](#int) | The number of products in the category that are marked as visible. By default, in complex products, parent products are visible, but their child products are not. |
+| `uid` - [`ID!`](#id) | The unique ID for a &#x60;CategoryInterface&#x60; object. |
+| `url_key` - [`String`](#string) | The URL key assigned to the category. |
+| `url_path` - [`String`](#string) | The URL path assigned to the category. |
+
+#### Possible Types
+
+| CategoryInterface Types |
+|----------------|
+| [`CategoryTree`](#categorytree) |
+
+#### Example
+
+```json
+{
+  "available_sort_by": ["xyz789"],
+  "breadcrumbs": [Breadcrumb],
+  "canonical_url": "abc123",
+  "children_count": "abc123",
+  "custom_layout_update_file": "xyz789",
+  "default_sort_by": "xyz789",
+  "description": "abc123",
+  "display_mode": "xyz789",
+  "filter_price_range": 123.45,
+  "image": "abc123",
+  "include_in_menu": 123,
+  "is_anchor": 123,
+  "landing_page": 123,
+  "level": 987,
+  "meta_description": "xyz789",
+  "meta_keywords": "abc123",
+  "meta_title": "abc123",
+  "name": "xyz789",
+  "path": "xyz789",
+  "path_in_store": "xyz789",
+  "position": 987,
+  "product_count": 987,
+  "uid": 4,
+  "url_key": "abc123",
+  "url_path": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### CategoryMetaTags
+
+SEO metadata tags for the category.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `title` - [`String`](#string) | The page title for SEO purposes. |
+| `description` - [`String`](#string) | The meta description for SEO purposes. |
+| `keywords` - [`[String]`](#string) | Keywords associated with the category for SEO. |
+
+#### Example
+
+```json
+{
+  "title": "abc123",
+  "description": "xyz789",
+  "keywords": ["xyz789"]
+}
+```
+
+<HorizontalLine />
+
+### CategoryNavigationView
+
+Represents a category optimized for navigation menus, with nested children for building navigation trees.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `slug` - [`String!`](#string) | The unique URL-friendly identifier for the category. |
+| `name` - [`String!`](#string) | Category name. For example, &#x60;Electronics&#x60;, &#x60;Clothing&#x60; or &#x60;Books&#x60;. |
+| `children` - [`[CategoryNavigationView]`](#categorynavigationview) | The direct child categories for building nested navigation menus. |
+
+#### Example
+
+```json
+{
+  "slug": "abc123",
+  "name": "xyz789",
+  "children": [CategoryNavigationView]
+}
+```
+
+<HorizontalLine />
+
+### CategoryProductView
+
+Represents category information associated with a product, including hierarchical parent relationships.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `name` - [`String!`](#string) | Category name. For example, &#x60;Electronics&#x60;, &#x60;Clothing&#x60; or &#x60;Books&#x60;. |
+| `slug` - [`String!`](#string) | The unique URL-friendly identifier for the category. |
+| `level` - [`Int!`](#int) | The level of the category. The root category is a level 1 category. For example, men -&gt; level 1, men/clothing -&gt; level 2, men/clothing/shorts -&gt; level 3 |
+| `parents` - [`[CategoryProductView!]`](#categoryproductview) | The ancestor categories in the hierarchy, ordered from root to immediate parent. |
+
+#### Example
+
+```json
+{
+  "name": "abc123",
+  "slug": "xyz789",
+  "level": 123,
+  "parents": [CategoryProductView]
+}
+```
+
+<HorizontalLine />
+
+### CategoryTree
+
+Contains the hierarchy of categories.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `available_sort_by` - [`[String]`](#string) |  |
+| `breadcrumbs` - [`[Breadcrumb]`](#breadcrumb) | An array of breadcrumb items. |
+| `canonical_url` - [`String`](#string) | The relative canonical URL. This value is returned only if the system setting &#x27;Use Canonical Link Meta Tag For Categories&#x27; is enabled. |
+| `children_count` - [`String`](#string) |  |
+| `custom_layout_update_file` - [`String`](#string) |  |
+| `default_sort_by` - [`String`](#string) | The attribute to use for sorting. |
+| `description` - [`String`](#string) | An optional description of the category. |
+| `display_mode` - [`String`](#string) |  |
+| `filter_price_range` - [`Float`](#float) |  |
+| `image` - [`String`](#string) |  |
+| `include_in_menu` - [`Int`](#int) |  |
+| `is_anchor` - [`Int`](#int) |  |
+| `landing_page` - [`Int`](#int) |  |
+| `level` - [`Int`](#int) | The depth of the category within the tree. |
+| `meta_description` - [`String`](#string) |  |
+| `meta_keywords` - [`String`](#string) |  |
+| `meta_title` - [`String`](#string) |  |
+| `name` - [`String`](#string) | The display name of the category. |
+| `path` - [`String`](#string) | The full category path. |
+| `path_in_store` - [`String`](#string) | The category path within the store. |
+| `position` - [`Int`](#int) | The position of the category relative to other categories at the same level in tree. |
+| `product_count` - [`Int`](#int) | The number of products in the category that are marked as visible. By default, in complex products, parent products are visible, but their child products are not. |
+| `uid` - [`ID!`](#id) | The unique ID for a &#x60;CategoryInterface&#x60; object. |
+| `url_key` - [`String`](#string) | The URL key assigned to the category. |
+| `url_path` - [`String`](#string) | The URL path assigned to the category. |
+
+#### Example
+
+```json
+{
+  "available_sort_by": ["xyz789"],
+  "breadcrumbs": [Breadcrumb],
+  "canonical_url": "abc123",
+  "children_count": "xyz789",
+  "custom_layout_update_file": "xyz789",
+  "default_sort_by": "xyz789",
+  "description": "xyz789",
+  "display_mode": "xyz789",
+  "filter_price_range": 123.45,
+  "image": "abc123",
+  "include_in_menu": 123,
+  "is_anchor": 987,
+  "landing_page": 987,
+  "level": 987,
+  "meta_description": "xyz789",
+  "meta_keywords": "abc123",
+  "meta_title": "abc123",
+  "name": "abc123",
+  "path": "abc123",
+  "path_in_store": "abc123",
+  "position": 123,
+  "product_count": 987,
+  "uid": 4,
+  "url_key": "xyz789",
+  "url_path": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CategoryTreeView
+
+Represents a category within a hierarchical tree structure, including parent and children relationships.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `slug` - [`String!`](#string) | The unique URL-friendly identifier for the category. |
+| `name` - [`String!`](#string) | Category name. For example, &#x60;Electronics&#x60;, &#x60;Clothing&#x60; or &#x60;Books&#x60;. |
+| `description` - [`String`](#string) | A detailed description of the category. |
+| `metaTags` - [`CategoryMetaTags`](#categorymetatags) | SEO metadata tags for the category. |
+| `images` - [`[CategoryImage]`](#categoryimage) | Visual images associated with the category. |
+| `level` - [`Int`](#int) | The root category is a level 1 category. For example, men -&gt; level 1, men/clothing -&gt; level 2, men/clothing/shorts -&gt; level 3 |
+| `parentSlug` - [`String`](#string) | The slug of the parent category, if any. |
+| `childrenSlugs` - [`[String]`](#string) | The slugs of all direct child categories. Ex: men/clothing/shorts -&gt; [men/clothing/shorts/athletic, men/clothing/shorts/swimwear] |
+
+#### Example
+
+```json
+{
+  "slug": "xyz789",
+  "name": "xyz789",
+  "description": "xyz789",
+  "metaTags": CategoryMetaTags,
+  "images": [CategoryImage],
+  "level": 123,
+  "parentSlug": "abc123",
+  "childrenSlugs": ["xyz789"]
+}
+```
+
+<HorizontalLine />
+
+### CategoryView
+
+Represents a category. Contains information about a category, including the category ID, the category name, the category path, the category URL key, the category URL path, and the category roles.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `availableSortBy` - [`[String]`](#string) | List of available sort by options. For example, &#x60;name&#x60;, &#x60;position&#x60; or &#x60;size&#x60;. |
+| `children` - [`[String!]`](#string) | List of child category IDs. For example, &#x60;123&#x60;, &#x60;456&#x60; or &#x60;789&#x60;. |
+| `defaultSortBy` - [`String`](#string) | Default sort by option. For example, &#x60;name&#x60;, &#x60;position&#x60; or &#x60;size&#x60;. |
+| `id` - [`ID!`](#id) | Category ID. For example, &#x60;123&#x60;, &#x60;456&#x60; or &#x60;789&#x60;. *(Deprecated: &#x27;CategoryView&#x27; is deprecated for use as a Bucket in &#x27;productSearch&#x27; facet (to be removed after Sep 1, 2024). Use &#x27;CategoryBucket&#x27; instead.)* |
+| `level` - [`Int`](#int) | The level of the category. The root category is a level 1 category. For example, men -&gt; level 1, men/clothing -&gt; level 2, men/clothing/shorts -&gt; level 3 |
+| `name` - [`String`](#string) | Category name. For example, &#x60;Electronics&#x60;, &#x60;Clothing&#x60; or &#x60;Books&#x60;. |
+| `parentId` - [`String!`](#string) | Parent category ID. For example, &#x60;123&#x60;, &#x60;456&#x60; or &#x60;789&#x60;. |
+| `path` - [`String`](#string) | Category path. For example, &#x60;/electronics/laptops&#x60;, &#x60;/clothing/shirts&#x60; or &#x60;/books/fiction&#x60;. *(Deprecated: &#x27;CategoryView&#x27; is deprecated for use as a Bucket in &#x27;productSearch&#x27; facet (to be removed after Sep 1, 2024). Use &#x27;CategoryBucket&#x27; instead.)* |
+| `roles` - [`[String!]!`](#string) | List of roles for the category. For example, &#x60;show_on_plp&#x60;, &#x60;show_in_pdp&#x60; or &#x60;show_in_search&#x60;. |
+| `urlKey` - [`String`](#string) | Category URL key. For example, &#x60;electronics&#x60;, &#x60;clothing&#x60; or &#x60;books&#x60;. |
+| `urlPath` - [`String`](#string) | Category URL path. For example, &#x60;/electronics/laptops&#x60;, &#x60;/clothing/shirts&#x60; or &#x60;/books/fiction&#x60;. |
+| `count` - [`Int!`](#int) |  *(Deprecated: &#x27;CategoryView&#x27; is deprecated for use as a Bucket in &#x27;productSearch&#x27; facet (to be removed after Sep 1, 2024). Use &#x27;CategoryBucket&#x27; instead.)* |
+| `title` - [`String!`](#string) |  *(Deprecated: &#x27;CategoryView&#x27; is deprecated for use as a Bucket in &#x27;productSearch&#x27; facet (to be removed after Sep 1, 2024). Use &#x27;CategoryBucket&#x27; instead.)* |
+
+#### Example
+
+```json
+{
+  "availableSortBy": ["abc123"],
+  "children": ["xyz789"],
+  "defaultSortBy": "abc123",
+  "id": "4",
+  "level": 123,
+  "name": "abc123",
+  "parentId": "xyz789",
+  "path": "xyz789",
+  "roles": ["xyz789"],
+  "urlKey": "xyz789",
+  "urlPath": "xyz789",
+  "count": 987,
+  "title": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CategoryViewInterface
+
+Base interface defining essential category fields shared across all category views.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `availableSortBy` - [`[String]`](#string) | List of available sort by options. For example, name, size or position. |
+| `defaultSortBy` - [`String`](#string) | Default sort by option. For example, name, size or position. |
+| `id` - [`ID!`](#id) | Category ID. For example, &#x60;123&#x60;, &#x60;456&#x60; or &#x60;789&#x60;. *(Deprecated: &#x27;CategoryView&#x27; is deprecated for use as a Bucket in &#x27;productSearch&#x27; facet (to be removed after Sep 1, 2024). Use &#x27;CategoryBucket&#x27; instead.)* |
+| `level` - [`Int`](#int) | The level of the category. The root category is a level 1 category. For example, men -&gt; level 1, men/clothing -&gt; level 2, men/clothing/shorts -&gt; level 3 |
+| `name` - [`String`](#string) | Category name. For example, &#x60;Electronics&#x60;, &#x60;Clothing&#x60; or &#x60;Books&#x60;. |
+| `path` - [`String`](#string) | Category path. For example, &#x60;/electronics/laptops&#x60;, &#x60;/clothing/shirts&#x60; or &#x60;/books/fiction&#x60;. |
+| `roles` - [`[String]`](#string) | List of roles for the category. For example, &#x60;show_on_plp&#x60;, &#x60;show_in_pdp&#x60; or &#x60;show_in_search&#x60;. |
+| `urlKey` - [`String`](#string) | Category URL key. For example, &#x60;electronics&#x60;, &#x60;clothing&#x60; or &#x60;books&#x60;. |
+| `urlPath` - [`String`](#string) | Category URL path. For example, &#x60;/electronics/laptops&#x60;, &#x60;/clothing/shirts&#x60; or &#x60;/books/fiction&#x60;. |
+
+#### Possible Types
+
+| CategoryViewInterface Types |
+|----------------|
+| [`CategoryView`](#categoryview) |
+
+#### Example
+
+```json
+{
+  "availableSortBy": ["xyz789"],
+  "defaultSortBy": "abc123",
+  "id": 4,
+  "level": 987,
+  "name": "abc123",
+  "path": "abc123",
+  "roles": ["abc123"],
+  "urlKey": "xyz789",
+  "urlPath": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CategoryViewV2
+
+Base interface defining essential category fields shared across all category views.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `slug` - [`String!`](#string) | The unique URL-friendly identifier for the category. |
+| `name` - [`String!`](#string) | Category name. For example, &#x60;Electronics&#x60;, &#x60;Clothing&#x60; or &#x60;Books&#x60;. |
+
+#### Possible Types
+
+| CategoryViewV2 Types |
+|----------------|
+| [`CategoryNavigationView`](#categorynavigationview) |
+| [`CategoryProductView`](#categoryproductview) |
+| [`CategoryTreeView`](#categorytreeview) |
+
+#### Example
+
+```json
+{
+  "slug": "abc123",
+  "name": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CheckoutAgreement
+
+Defines details about an individual checkout agreement.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `agreement_id` - [`Int!`](#int) | The ID for a checkout agreement. |
+| `checkbox_text` - [`String!`](#string) | The checkbox text for the checkout agreement. |
+| `content` - [`String!`](#string) | Required. The text of the agreement. |
+| `content_height` - [`String`](#string) | The height of the text box where the Terms and Conditions statement appears during checkout. |
+| `is_html` - [`Boolean!`](#boolean) | Indicates whether the &#x60;content&#x60; text is in HTML format. |
+| `mode` - [`CheckoutAgreementMode!`](#checkoutagreementmode) | Indicates whether agreements are accepted automatically or manually. |
+| `name` - [`String!`](#string) | The name given to the condition. |
+
+#### Example
+
+```json
+{
+  "agreement_id": 123,
+  "checkbox_text": "abc123",
+  "content": "xyz789",
+  "content_height": "abc123",
+  "is_html": false,
+  "mode": "AUTO",
+  "name": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CheckoutAgreementMode
+
+Indicates how agreements are accepted.
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `AUTO` | Conditions are automatically accepted upon checkout. |
+| `MANUAL` | Shoppers must manually accept the conditions to place an order. |
+
+#### Example
+
+```json
+""AUTO""
+```
+
+<HorizontalLine />
+
+### CheckoutUserInputError
+
+An error encountered while adding an item to the cart.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `code` - [`CheckoutUserInputErrorCodes!`](#checkoutuserinputerrorcodes) | An error code that is specific to Checkout. |
+| `message` - [`String!`](#string) | A localized error message. |
+| `path` - [`[String]!`](#string) | The path to the input field that caused an error. See the GraphQL specification about path errors for details: http://spec.graphql.org/draft/#sec-Errors |
+
+#### Example
+
+```json
+{
+  "code": "REORDER_NOT_AVAILABLE",
+  "message": "abc123",
+  "path": ["xyz789"]
+}
+```
+
+<HorizontalLine />
+
+### CheckoutUserInputErrorCodes
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `REORDER_NOT_AVAILABLE` |  |
+| `PRODUCT_NOT_FOUND` |  |
+| `NOT_SALABLE` |  |
+| `INSUFFICIENT_STOCK` |  |
+| `UNDEFINED` |  |
+
+#### Example
+
+```json
+""REORDER_NOT_AVAILABLE""
+```
+
+<HorizontalLine />
+
+### ClearCustomerCartOutput
+
+Output of the request to clear the customer cart.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `cart` - [`Cart`](#cart) | The cart after clearing items. |
+| `status` - [`Boolean!`](#boolean) | Indicates whether cart was cleared. |
+
+#### Example
+
+```json
+{"cart": Cart, "status": true}
+```
+
+<HorizontalLine />
+
+### CloseNegotiableQuoteError
+
+#### Types
+
+| Union Types |
+|-------------|
+| [`NegotiableQuoteInvalidStateError`](#negotiablequoteinvalidstateerror) |
+| [`NoSuchEntityUidError`](#nosuchentityuiderror) |
+| [`InternalError`](#internalerror) |
+
+#### Example
+
+```json
+NegotiableQuoteInvalidStateError
+```
+
+<HorizontalLine />
+
+### CloseNegotiableQuoteOperationFailure
+
+Contains details about a failed close operation on a negotiable quote.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `errors` - [`[CloseNegotiableQuoteError]!`](#closenegotiablequoteerror) | An array of errors encountered while attempting close the negotiable quote. |
+| `quote_uid` - [`ID!`](#id) | The unique ID of a &#x60;NegotiableQuote&#x60; object. |
+
+#### Example
+
+```json
+{
+  "errors": [NegotiableQuoteInvalidStateError],
+  "quote_uid": 4
+}
+```
+
+<HorizontalLine />
+
+### CloseNegotiableQuoteOperationResult
+
+#### Types
+
+| Union Types |
+|-------------|
+| [`NegotiableQuoteUidOperationSuccess`](#negotiablequoteuidoperationsuccess) |
+| [`CloseNegotiableQuoteOperationFailure`](#closenegotiablequoteoperationfailure) |
+
+#### Example
+
+```json
+NegotiableQuoteUidOperationSuccess
+```
+
+<HorizontalLine />
+
+### CloseNegotiableQuotesInput
+
+Defines the negotiable quotes to mark as closed.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `quote_uids` - [`[ID]!`](#id) | A list of unique IDs from &#x60;NegotiableQuote&#x60; objects. |
+
+#### Example
+
+```json
+{"quote_uids": ["4"]}
+```
+
+<HorizontalLine />
+
+### CloseNegotiableQuotesOutput
+
+Contains the closed negotiable quotes and other negotiable quotes the company user can view.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `negotiable_quotes` - [`NegotiableQuotesOutput`](#negotiablequotesoutput) | A list of negotiable quotes that can be viewed by the logged-in customer |
+| `operation_results` - [`[CloseNegotiableQuoteOperationResult]!`](#closenegotiablequoteoperationresult) | An array of closed negotiable quote UIDs and details about any errors. |
+| `result_status` - [`BatchMutationStatus!`](#batchmutationstatus) | The status of the request to close one or more negotiable quotes. |
+
+#### Example
+
+```json
+{
+  "negotiable_quotes": NegotiableQuotesOutput,
+  "operation_results": [
+    NegotiableQuoteUidOperationSuccess
+  ],
+  "result_status": "SUCCESS"
+}
+```
+
+<HorizontalLine />
+
+### ColorSwatchData
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `value` - [`String`](#string) | The value can be represented as color (HEX code), image link, or text. |
+
+#### Example
+
+```json
+{"value": "abc123"}
+```
+
+<HorizontalLine />
+
+### CommerceOptimizerContext
+
+Commerce Optimizer entities
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `priceBookId` - [`ID!`](#id) | The priceBookId for current customer session. |
+
+#### Example
+
+```json
+{"priceBookId": 4}
+```
+
+<HorizontalLine />
+
+### CompaniesSortFieldEnum
+
+The fields available for sorting the customer companies.
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `NAME` | The name of the company. |
+
+#### Example
+
+```json
+""NAME""
+```
+
+<HorizontalLine />
+
+### CompaniesSortInput
+
+Specifies which field to sort on, and whether to return the results in ascending or descending order.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `field` - [`CompaniesSortFieldEnum!`](#companiessortfieldenum) | The field for sorting the results. |
+| `order` - [`SortEnum!`](#sortenum) | Indicates whether to return results in ascending or descending order. |
+
+#### Example
+
+```json
+{"field": "NAME", "order": "ASC"}
+```
+
+<HorizontalLine />
+
+### Company
+
+Contains the output schema for a company.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `acl_resources` - [`[CompanyAclResource]`](#companyaclresource) | The list of all resources defined within the company. |
+| `available_payment_methods` - [`[AvailablePaymentMethod]`](#availablepaymentmethod) | Available payment methods for the company with proper B2B configuration and company-specific filtering. |
+| `available_shipping_methods` - [`[CompanyAvailableShippingMethod]`](#companyavailableshippingmethod) | Available shipping carriers for the company with proper B2B configuration and company-specific filtering. |
+| `company_admin` - [`Customer`](#customer) | An object containing information about the company administrator. |
+| `credit` - [`CompanyCredit!`](#companycredit) | Company credit balances and limits. |
+| `credit_history` - [`CompanyCreditHistory!`](#companycredithistory) | Details about the history of company credit operations. |
+| `custom_attributes` - [`[CustomAttribute]`](#customattribute) | The custom attributes for the company |
+| `email` - [`String`](#string) | The email address of the company contact. |
+| `id` - [`ID!`](#id) | The unique ID of a &#x60;Company&#x60; object. |
+| `legal_address` - [`CompanyLegalAddress`](#companylegaladdress) | The address where the company is registered to conduct business. |
+| `legal_name` - [`String`](#string) | The full legal name of the company. |
+| `name` - [`String`](#string) | The name of the company. |
+| `payment_methods` - [`[String]`](#string) | The list of payment methods available to a company. |
+| `reseller_id` - [`String`](#string) | The resale number that is assigned to the company for tax reporting purposes. |
+| `role` - [`CompanyRole`](#companyrole) | A company role filtered by the unique ID of a &#x60;CompanyRole&#x60; object. |
+| `roles` - [`CompanyRoles!`](#companyroles) | An object that contains a list of company roles. |
+| `sales_representative` - [`CompanySalesRepresentative`](#companysalesrepresentative) | An object containing information about the company sales representative. |
+| `status` - [`CompanyStatusEnum`](#companystatusenum) | The current status of the company. |
+| `structure` - [`CompanyStructure`](#companystructure) | The company structure of teams and customers in depth-first order. |
+| `team` - [`CompanyTeam`](#companyteam) | The company team data filtered by the unique ID for a &#x60;CompanyTeam&#x60; object. |
+| `user` - [`Customer`](#customer) | A company user filtered by the unique ID of a &#x60;Customer&#x60; object. |
+| `users` - [`CompanyUsers`](#companyusers) | An object that contains a list of company users based on activity status. |
+| `vat_tax_id` - [`String`](#string) | The value-added tax number that is assigned to the company by some jurisdictions for tax reporting purposes. |
+
+#### Example
+
+```json
+{
+  "acl_resources": [CompanyAclResource],
+  "available_payment_methods": [AvailablePaymentMethod],
+  "available_shipping_methods": [
+    CompanyAvailableShippingMethod
+  ],
+  "company_admin": Customer,
+  "credit": CompanyCredit,
+  "credit_history": CompanyCreditHistory,
+  "custom_attributes": [CustomAttribute],
+  "email": "xyz789",
+  "id": "4",
+  "legal_address": CompanyLegalAddress,
+  "legal_name": "abc123",
+  "name": "abc123",
+  "payment_methods": ["abc123"],
+  "reseller_id": "abc123",
+  "role": CompanyRole,
+  "roles": CompanyRoles,
+  "sales_representative": CompanySalesRepresentative,
+  "status": "PENDING",
+  "structure": CompanyStructure,
+  "team": CompanyTeam,
+  "user": Customer,
+  "users": CompanyUsers,
+  "vat_tax_id": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CompanyAclResource
+
+Contains details about the access control list settings of a resource.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `children` - [`[CompanyAclResource]`](#companyaclresource) | An array of sub-resources. |
+| `id` - [`ID!`](#id) | The unique ID for a &#x60;CompanyAclResource&#x60; object. |
+| `sort_order` - [`Int`](#int) | The sort order of an ACL resource. |
+| `text` - [`String`](#string) | The label assigned to the ACL resource. |
+
+#### Example
+
+```json
+{
+  "children": [CompanyAclResource],
+  "id": "4",
+  "sort_order": 123,
+  "text": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### CompanyAdminInput
+
+Defines the input schema for creating a company administrator.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `custom_attributes` - [`[AttributeValueInput]`](#attributevalueinput) | The company administrator&#x27;s custom attributes. |
+| `email` - [`String!`](#string) | The email address of the company administrator. |
+| `firstname` - [`String!`](#string) | The company administrator&#x27;s first name. |
+| `gender` - [`Int`](#int) | The company administrator&#x27;s gender (Male - 1, Female - 2, Not Specified - 3). |
+| `job_title` - [`String`](#string) | The job title of the company administrator. |
+| `lastname` - [`String!`](#string) | The company administrator&#x27;s last name. |
+| `telephone` - [`String`](#string) | The phone number of the company administrator. |
+
+#### Example
+
+```json
+{
+  "custom_attributes": [AttributeValueInput],
+  "email": "xyz789",
+  "firstname": "xyz789",
+  "gender": 987,
+  "job_title": "abc123",
+  "lastname": "abc123",
+  "telephone": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### CompanyAvailableShippingMethod
+
+Describes a carrier-level shipping option available to the company.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `code` - [`String!`](#string) |  |
+| `title` - [`String!`](#string) |  |
+
+#### Example
+
+```json
+{
+  "code": "xyz789",
+  "title": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### CompanyBasicInfo
+
+The minimal required information to identify and display the company.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `id` - [`ID!`](#id) | The unique ID of a &#x60;Company&#x60; object. |
+| `legal_name` - [`String`](#string) | The full legal name of the company. |
+| `name` - [`String`](#string) | The name of the company. |
+| `status` - [`CompanyStatusEnum`](#companystatusenum) | The current status of the company. |
+
+#### Example
+
+```json
+{
+  "id": "4",
+  "legal_name": "xyz789",
+  "name": "xyz789",
+  "status": "PENDING"
+}
+```
+
+<HorizontalLine />
+
+### CompanyCreateInput
+
+Defines the input schema for creating a new company.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `company_admin` - [`CompanyAdminInput!`](#companyadmininput) | Defines the company administrator. |
+| `company_email` - [`String!`](#string) | The email address of the company contact. |
+| `company_name` - [`String!`](#string) | The name of the company to create. |
+| `legal_address` - [`CompanyLegalAddressCreateInput!`](#companylegaladdresscreateinput) | Defines legal address data of the company. |
+| `legal_name` - [`String`](#string) | The full legal name of the company. |
+| `reseller_id` - [`String`](#string) | The resale number that is assigned to the company for tax reporting purposes. |
+| `vat_tax_id` - [`String`](#string) | The value-added tax number that is assigned to the company by some jurisdictions for tax reporting purposes. |
+
+#### Example
+
+```json
+{
+  "company_admin": CompanyAdminInput,
+  "company_email": "xyz789",
+  "company_name": "xyz789",
+  "legal_address": CompanyLegalAddressCreateInput,
+  "legal_name": "xyz789",
+  "reseller_id": "xyz789",
+  "vat_tax_id": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CompanyCredit
+
+Contains company credit balances and limits.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `available_credit` - [`Money!`](#money) | The sum of the credit limit and the outstanding balance. If the company has exceeded the credit limit, the amount is as a negative value. |
+| `credit_limit` - [`Money!`](#money) | The amount of credit extended to the company. |
+| `exceed_limit` - [`Boolean!`](#boolean) | Indicates whether company credit functionality is allowed to exceed current company credit limit. |
+| `outstanding_balance` - [`Money!`](#money) | The amount reimbursed, less the total due from all orders placed using the Payment on Account payment method. The amount can be a positive or negative value. |
+
+#### Example
+
+```json
+{
+  "available_credit": Money,
+  "credit_limit": Money,
+  "exceed_limit": false,
+  "outstanding_balance": Money
+}
+```
+
+<HorizontalLine />
+
+### CompanyCreditHistory
+
+Contains details about prior company credit operations.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `items` - [`[CompanyCreditOperation]!`](#companycreditoperation) | An array of company credit operations. |
+| `page_info` - [`SearchResultPageInfo!`](#searchresultpageinfo) | Metadata for pagination rendering. |
+| `total_count` - [`Int`](#int) | The number of the company credit operations matching the specified filter. |
+
+#### Example
+
+```json
+{
+  "items": [CompanyCreditOperation],
+  "page_info": SearchResultPageInfo,
+  "total_count": 123
+}
+```
+
+<HorizontalLine />
+
+### CompanyCreditHistoryFilterInput
+
+Defines a filter for narrowing the results of a credit history search.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `custom_reference_number` - [`String`](#string) | The purchase order number associated with the company credit operation. |
+| `operation_type` - [`CompanyCreditOperationType`](#companycreditoperationtype) | The type of the company credit operation. |
+| `updated_by` - [`String`](#string) | The name of the person submitting the company credit operation. |
+
+#### Example
+
+```json
+{
+  "custom_reference_number": "abc123",
+  "operation_type": "ALLOCATION",
+  "updated_by": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CompanyCreditOperation
+
+Contains details about a single company credit operation.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `amount` - [`Money`](#money) | The amount of the company credit operation. |
+| `balance` - [`CompanyCredit!`](#companycredit) | The credit balance as a result of the operation. |
+| `custom_reference_number` - [`String`](#string) | The purchase order number associated with the company credit operation. |
+| `date` - [`String!`](#string) | The date the operation occurred. |
+| `type` - [`CompanyCreditOperationType!`](#companycreditoperationtype) | The type of the company credit operation. |
+| `updated_by` - [`CompanyCreditOperationUser!`](#companycreditoperationuser) | The company user that submitted the company credit operation. |
+
+#### Example
+
+```json
+{
+  "amount": Money,
+  "balance": CompanyCredit,
+  "custom_reference_number": "abc123",
+  "date": "abc123",
+  "type": "ALLOCATION",
+  "updated_by": CompanyCreditOperationUser
+}
+```
+
+<HorizontalLine />
+
+### CompanyCreditOperationType
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `ALLOCATION` |  |
+| `UPDATE` |  |
+| `PURCHASE` |  |
+| `REIMBURSEMENT` |  |
+| `REFUND` |  |
+| `REVERT` |  |
+
+#### Example
+
+```json
+""ALLOCATION""
+```
+
+<HorizontalLine />
+
+### CompanyCreditOperationUser
+
+Defines the administrator or company user that submitted a company credit operation.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `name` - [`String!`](#string) | The name of the company user submitting the company credit operation. |
+| `type` - [`CompanyCreditOperationUserType!`](#companycreditoperationusertype) | The type of the company user submitting the company credit operation. |
+
+#### Example
+
+```json
+{"name": "xyz789", "type": "CUSTOMER"}
+```
+
+<HorizontalLine />
+
+### CompanyCreditOperationUserType
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `CUSTOMER` |  |
+| `ADMIN` |  |
+
+#### Example
+
+```json
+""CUSTOMER""
+```
+
+<HorizontalLine />
+
+### CompanyInvitationInput
+
+Defines the input schema for accepting the company invitation.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `code` - [`String!`](#string) | The invitation code. |
+| `role_id` - [`ID`](#id) | The company role id. |
+| `user` - [`CompanyInvitationUserInput!`](#companyinvitationuserinput) | Company user attributes in the invitation. |
+
+#### Example
+
+```json
+{
+  "code": "xyz789",
+  "role_id": 4,
+  "user": CompanyInvitationUserInput
+}
+```
+
+<HorizontalLine />
+
+### CompanyInvitationOutput
+
+The result of accepting the company invitation.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `success` - [`Boolean`](#boolean) | Indicates whether the customer was added to the company successfully. |
+
+#### Example
+
+```json
+{"success": true}
+```
+
+<HorizontalLine />
+
+### CompanyInvitationUserInput
+
+Company user attributes in the invitation.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `company_id` - [`ID!`](#id) | The company unique identifier. |
+| `customer_id` - [`ID!`](#id) | The customer unique identifier. |
+| `job_title` - [`String`](#string) | The job title of a company user. |
+| `status` - [`CompanyUserStatusEnum`](#companyuserstatusenum) | Indicates whether the company user is ACTIVE or INACTIVE. |
+| `telephone` - [`String`](#string) | The phone number of the company user. |
+
+#### Example
+
+```json
+{
+  "company_id": 4,
+  "customer_id": "4",
+  "job_title": "abc123",
+  "status": "ACTIVE",
+  "telephone": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### CompanyLegalAddress
+
+Contains details about the address where the company is registered to conduct business.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `city` - [`String`](#string) | The city where the company is registered to conduct business. |
+| `country_code` - [`CountryCodeEnum`](#countrycodeenum) | The country code of the company&#x27;s legal address. |
+| `postcode` - [`String`](#string) | The company&#x27;s postal code. |
+| `region` - [`CustomerAddressRegion`](#customeraddressregion) | An object containing region data for the company. |
+| `street` - [`[String]`](#string) | An array of strings that define the company&#x27;s street address. |
+| `telephone` - [`String`](#string) | The company&#x27;s phone number. |
+
+#### Example
+
+```json
+{
+  "city": "xyz789",
+  "country_code": "AF",
+  "postcode": "abc123",
+  "region": CustomerAddressRegion,
+  "street": ["abc123"],
+  "telephone": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CompanyLegalAddressCreateInput
+
+Defines the input schema for defining a company's legal address.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `city` - [`String!`](#string) | The city where the company is registered to conduct business. |
+| `country_id` - [`CountryCodeEnum!`](#countrycodeenum) | The company&#x27;s country ID. Use the &#x60;countries&#x60; query to get this value. |
+| `postcode` - [`String!`](#string) | The postal code of the company. |
+| `region` - [`CustomerAddressRegionInput!`](#customeraddressregioninput) | An object containing the region name and/or region ID where the company is registered to conduct business. |
+| `street` - [`[String]!`](#string) | An array of strings that define the street address where the company is registered to conduct business. |
+| `telephone` - [`String!`](#string) | The primary phone number of the company. |
+
+#### Example
+
+```json
+{
+  "city": "xyz789",
+  "country_id": "AF",
+  "postcode": "abc123",
+  "region": CustomerAddressRegionInput,
+  "street": ["abc123"],
+  "telephone": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### CompanyLegalAddressUpdateInput
+
+Defines the input schema for updating a company's legal address.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `city` - [`String`](#string) | The city where the company is registered to conduct business. |
+| `country_id` - [`CountryCodeEnum`](#countrycodeenum) | The unique ID for a &#x60;Country&#x60; object. |
+| `postcode` - [`String`](#string) | The postal code of the company. |
+| `region` - [`CustomerAddressRegionInput`](#customeraddressregioninput) | An object containing the region name and/or region ID where the company is registered to conduct business. |
+| `street` - [`[String]`](#string) | An array of strings that define the street address where the company is registered to conduct business. |
+| `telephone` - [`String`](#string) | The primary phone number of the company. |
+
+#### Example
+
+```json
+{
+  "city": "xyz789",
+  "country_id": "AF",
+  "postcode": "abc123",
+  "region": CustomerAddressRegionInput,
+  "street": ["xyz789"],
+  "telephone": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### CompanyRole
+
+Contails details about a single role.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `id` - [`ID!`](#id) | The unique ID for a &#x60;CompanyRole&#x60; object. |
+| `name` - [`String`](#string) | The name assigned to the role. |
+| `permissions` - [`[CompanyAclResource]`](#companyaclresource) | A list of permission resources defined for a role. |
+| `users_count` - [`Int`](#int) | The total number of users assigned the specified role. |
+
+#### Example
+
+```json
+{
+  "id": "4",
+  "name": "abc123",
+  "permissions": [CompanyAclResource],
+  "users_count": 123
+}
+```
+
+<HorizontalLine />
+
+### CompanyRoleCreateInput
+
+Defines the input schema for creating a company role.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `name` - [`String!`](#string) | The name of the role to create. |
+| `permissions` - [`[String]`](#string) | A list of resources the role can access. |
+
+#### Example
+
+```json
+{
+  "name": "abc123",
+  "permissions": ["abc123"]
+}
+```
+
+<HorizontalLine />
+
+### CompanyRoleUpdateInput
+
+Defines the input schema for updating a company role.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `id` - [`ID!`](#id) | The unique ID for a &#x60;CompanyRole&#x60; object. |
+| `name` - [`String`](#string) | The name of the role to update. |
+| `permissions` - [`[String]`](#string) | A list of resources the role can access. |
+
+#### Example
+
+```json
+{
+  "id": "4",
+  "name": "xyz789",
+  "permissions": ["xyz789"]
+}
+```
+
+<HorizontalLine />
+
+### CompanyRoles
+
+Contains an array of roles.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `items` - [`[CompanyRole]!`](#companyrole) | A list of company roles that match the specified filter criteria. |
+| `page_info` - [`SearchResultPageInfo`](#searchresultpageinfo) | Pagination metadata. |
+| `total_count` - [`Int!`](#int) | The total number of objects matching the specified filter. |
+
+#### Example
+
+```json
+{
+  "items": [CompanyRole],
+  "page_info": SearchResultPageInfo,
+  "total_count": 987
+}
+```
+
+<HorizontalLine />
+
+### CompanySalesRepresentative
+
+Contains details about a company sales representative.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `email` - [`String`](#string) | The email address of the company sales representative. |
+| `firstname` - [`String`](#string) | The company sales representative&#x27;s first name. |
+| `lastname` - [`String`](#string) | The company sales representative&#x27;s last name. |
+
+#### Example
+
+```json
+{
+  "email": "abc123",
+  "firstname": "xyz789",
+  "lastname": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CompanyStatusEnum
+
+Defines the list of company status values.
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `PENDING` | Company is pending approval. |
+| `APPROVED` | Company is approved. |
+| `REJECTED` | Company is rejected. |
+| `BLOCKED` | Company is blocked. |
+
+#### Example
+
+```json
+""PENDING""
+```
+
+<HorizontalLine />
+
+### CompanyStructure
+
+Contains an array of the individual nodes that comprise the company structure.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `items` - [`[CompanyStructureItem]`](#companystructureitem) | An array of elements in a company structure. |
+
+#### Example
+
+```json
+{"items": [CompanyStructureItem]}
+```
+
+<HorizontalLine />
+
+### CompanyStructureEntity
+
+#### Types
+
+| Union Types |
+|-------------|
+| [`CompanyTeam`](#companyteam) |
+| [`Customer`](#customer) |
+
+#### Example
+
+```json
+CompanyTeam
+```
+
+<HorizontalLine />
+
+### CompanyStructureItem
+
+Defines an individual node in the company structure.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `entity` - [`CompanyStructureEntity`](#companystructureentity) | A union of &#x60;CompanyTeam&#x60; and &#x60;Customer&#x60; objects. |
+| `id` - [`ID!`](#id) | The unique ID for a &#x60;CompanyStructureItem&#x60; object. |
+| `parent_id` - [`ID`](#id) | The ID of the parent item in the company hierarchy. |
+
+#### Example
+
+```json
+{
+  "entity": CompanyTeam,
+  "id": "4",
+  "parent_id": 4
+}
+```
+
+<HorizontalLine />
+
+### CompanyStructureUpdateInput
+
+Defines the input schema for updating the company structure.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `parent_tree_id` - [`ID!`](#id) | The ID of a company that will be the new parent. |
+| `tree_id` - [`ID!`](#id) | The ID of the company team that is being moved to another parent. |
+
+#### Example
+
+```json
+{
+  "parent_tree_id": "4",
+  "tree_id": "4"
+}
+```
+
+<HorizontalLine />
+
+### CompanyTeam
+
+Describes a company team.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `description` - [`String`](#string) | An optional description of the team. |
+| `id` - [`ID`](#id) | The unique ID for a &#x60;CompanyTeam&#x60; object. |
+| `name` - [`String`](#string) | The display name of the team. |
+| `structure_id` - [`ID!`](#id) | ID of the company structure |
+
+#### Example
+
+```json
+{
+  "description": "abc123",
+  "id": 4,
+  "name": "abc123",
+  "structure_id": "4"
+}
+```
+
+<HorizontalLine />
+
+### CompanyTeamCreateInput
+
+Defines the input schema for creating a company team.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `description` - [`String`](#string) | An optional description of the team. |
+| `name` - [`String!`](#string) | The display name of the team. |
+| `target_id` - [`ID`](#id) | The ID of a node within a company&#x27;s structure. This ID will be the parent of the created team. |
+
+#### Example
+
+```json
+{
+  "description": "abc123",
+  "name": "xyz789",
+  "target_id": "4"
+}
+```
+
+<HorizontalLine />
+
+### CompanyTeamUpdateInput
+
+Defines the input schema for updating a company team.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `description` - [`String`](#string) | An optional description of the team. |
+| `id` - [`ID!`](#id) | The unique ID of the &#x60;CompanyTeam&#x60; object to update. |
+| `name` - [`String`](#string) | The display name of the team. |
+
+#### Example
+
+```json
+{
+  "description": "xyz789",
+  "id": "4",
+  "name": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CompanyUpdateInput
+
+Defines the input schema for updating a company.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `company_email` - [`String`](#string) | The email address of the company contact. |
+| `company_name` - [`String`](#string) | The name of the company to update. |
+| `legal_address` - [`CompanyLegalAddressUpdateInput`](#companylegaladdressupdateinput) | The legal address data of the company. |
+| `legal_name` - [`String`](#string) | The full legal name of the company. |
+| `reseller_id` - [`String`](#string) | The resale number that is assigned to the company for tax reporting purposes. |
+| `vat_tax_id` - [`String`](#string) | The value-added tax number that is assigned to the company by some jurisdictions for tax reporting purposes. |
+
+#### Example
+
+```json
+{
+  "company_email": "xyz789",
+  "company_name": "abc123",
+  "legal_address": CompanyLegalAddressUpdateInput,
+  "legal_name": "abc123",
+  "reseller_id": "abc123",
+  "vat_tax_id": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CompanyUserCreateInput
+
+Defines the input schema for creating a company user.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `email` - [`String!`](#string) | The company user&#x27;s email address |
+| `firstname` - [`String!`](#string) | The company user&#x27;s first name. |
+| `job_title` - [`String!`](#string) | The company user&#x27;s job title or function. |
+| `lastname` - [`String!`](#string) | The company user&#x27;s last name. |
+| `role_id` - [`ID!`](#id) | The unique ID for a &#x60;CompanyRole&#x60; object. |
+| `status` - [`CompanyUserStatusEnum!`](#companyuserstatusenum) | Indicates whether the company user is ACTIVE or INACTIVE. |
+| `target_id` - [`ID`](#id) | The ID of a node within a company&#x27;s structure. This ID will be the parent of the created company user. |
+| `telephone` - [`String!`](#string) | The company user&#x27;s phone number. |
+
+#### Example
+
+```json
+{
+  "email": "abc123",
+  "firstname": "abc123",
+  "job_title": "abc123",
+  "lastname": "xyz789",
+  "role_id": "4",
+  "status": "ACTIVE",
+  "target_id": 4,
+  "telephone": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CompanyUserStatusEnum
+
+Defines the list of company user status values.
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `ACTIVE` | Only active users. |
+| `INACTIVE` | Only inactive users. |
+
+#### Example
+
+```json
+""ACTIVE""
+```
+
+<HorizontalLine />
+
+### CompanyUserUpdateInput
+
+Defines the input schema for updating a company user.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `email` - [`String`](#string) | The company user&#x27;s email address. |
+| `firstname` - [`String`](#string) | The company user&#x27;s first name. |
+| `id` - [`ID!`](#id) | The unique ID of a &#x60;Customer&#x60; object. |
+| `job_title` - [`String`](#string) | The company user&#x27;s job title or function. |
+| `lastname` - [`String`](#string) | The company user&#x27;s last name. |
+| `role_id` - [`ID`](#id) | The unique ID for a &#x60;CompanyRole&#x60; object. |
+| `status` - [`CompanyUserStatusEnum`](#companyuserstatusenum) | Indicates whether the company user is ACTIVE or INACTIVE. |
+| `telephone` - [`String`](#string) | The company user&#x27;s phone number. |
+
+#### Example
+
+```json
+{
+  "email": "abc123",
+  "firstname": "abc123",
+  "id": "4",
+  "job_title": "xyz789",
+  "lastname": "xyz789",
+  "role_id": "4",
+  "status": "ACTIVE",
+  "telephone": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CompanyUsers
+
+Contains details about company users.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `items` - [`[Customer]!`](#customer) | An array of &#x60;CompanyUser&#x60; objects that match the specified filter criteria. |
+| `page_info` - [`SearchResultPageInfo`](#searchresultpageinfo) | Pagination metadata. |
+| `total_count` - [`Int!`](#int) | The number of objects returned. |
+
+#### Example
+
+```json
+{
+  "items": [Customer],
+  "page_info": SearchResultPageInfo,
+  "total_count": 123
+}
+```
+
+<HorizontalLine />
+
+### CompanyUsersFilterInput
+
+Defines the filter for returning a list of company users.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `status` - [`CompanyUserStatusEnum`](#companyuserstatusenum) | The activity status to filter on. |
+
+#### Example
+
+```json
+{"status": "ACTIVE"}
+```
+
+<HorizontalLine />
+
+### ComparableAttribute
+
+Contains an attribute code that is used for product comparisons.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `code` - [`String!`](#string) | An attribute code that is enabled for product comparisons. |
+| `label` - [`String!`](#string) | The label of the attribute code. |
+
+#### Example
+
+```json
+{
+  "code": "xyz789",
+  "label": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### ComparableItem
+
+Defines an object used to iterate through items for product comparisons.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `attributes` - [`[ProductAttribute]!`](#productattribute) | An array of product attributes that can be used to compare products. |
+| `product` - [`ProductInterface!`](#productinterface) | Details about a product in a compare list. *(Deprecated: Product information is part of a composable Catalog Service.)* |
+| `uid` - [`ID!`](#id) | The unique ID of an item in a compare list. |
+
+#### Example
+
+```json
+{
+  "attributes": [ProductAttribute],
+  "product": ProductInterface,
+  "uid": "4"
+}
+```
+
+<HorizontalLine />
+
+### CompareList
+
+Contains iterable information such as the array of items, the count, and attributes that represent the compare list.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `attributes` - [`[ComparableAttribute]`](#comparableattribute) | An array of attributes that can be used for comparing products. |
+| `item_count` - [`Int!`](#int) | The number of items in the compare list. |
+| `items` - [`[ComparableItem]`](#comparableitem) | An array of products to compare. |
+| `uid` - [`ID!`](#id) | The unique ID assigned to the compare list. |
+
+#### Example
+
+```json
+{
+  "attributes": [ComparableAttribute],
+  "item_count": 123,
+  "items": [ComparableItem],
+  "uid": "4"
+}
+```
+
+<HorizontalLine />
+
+### CompleteOrderInput
+
+Update the quote and complete the order
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `cartId` - [`String!`](#string) | The customer cart ID |
+| `id` - [`String!`](#string) | PayPal order ID |
+
+#### Example
+
+```json
+{
+  "cartId": "abc123",
+  "id": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### ComplexProductView
+
+Represents all product types, except simple products. Complex product prices are returned as a price range, because price values can vary based on selected options.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `addToCartAllowed` - [`Boolean`](#boolean) | A flag stating if the product can be added to cart *(Deprecated: This field is deprecated and will be removed.)* |
+| `inStock` - [`Boolean`](#boolean) | A flag stating if the product is in stock *(Deprecated: This field is deprecated and will be removed.)* |
+| `lowStock` - [`Boolean`](#boolean) | Indicates whether the remaining quantity of the product has reached the Only X Left threshold. *(Deprecated: This field is deprecated and will be removed.)* |
+| `attributes` - [`[ProductViewAttribute]`](#productviewattribute) | A list of merchant-defined attributes designated for the storefront. They can be filtered by roles and names. |
+| `description` - [`String`](#string) | The detailed description of the product. |
+| `id` - [`ID!`](#id) | The product ID, generated as a composite key, unique per locale. |
+| `images` - [`[ProductViewImage]`](#productviewimage) | A list of images defined for the product. Possible values include &#x60;image&#x60;, &#x60;small_image&#x60; or &#x60;swatch&#x60;. |
+| `videos` - [`[ProductViewVideo]`](#productviewvideo) | A list of videos defined for the product. |
+| `lastModifiedAt` - [`DateTime`](#datetime) | Date and time when the product was last updated. |
+| `metaDescription` - [`String`](#string) | A brief overview of the product for search results listings. |
+| `metaKeyword` - [`String`](#string) | A comma-separated list of keywords that are visible only to search engines. |
+| `metaTitle` - [`String`](#string) | A string that is displayed in the title bar and tab of the browser and in search results lists. |
+| `name` - [`String`](#string) | Product name. |
+| `inputOptions` - [`[ProductViewInputOption]`](#productviewinputoption) | A list of input options. *(Deprecated: This field is deprecated and will be removed.)* |
+| `options` - [`[ProductViewOption]`](#productviewoption) | A list of selectable options. |
+| `priceRange` - [`ProductViewPriceRange`](#productviewpricerange) | A range of possible prices for a complex product. |
+| `shortDescription` - [`String`](#string) | A summary of the product. |
+| `sku` - [`String`](#string) | A unique code used for identification of a product. |
+| `externalId` - [`String`](#string) | External Id *(Deprecated: This field is deprecated and will be removed.)* |
+| `url` - [`String`](#string) | Canonical URL of the product. *(Deprecated: This field is deprecated and will be removed.)* |
+| `urlKey` - [`String`](#string) | The URL key of the product. |
+| `links` - [`[ProductViewLink]`](#productviewlink) | A list of product links. Links are used to navigate from one product to another. |
+| `categories` - [`[CategoryProductView!]`](#categoryproductview) | A list of categories in which the product is present. |
+| `queryType` - [`String`](#string) | Indicates if the product was retrieved from the primary or the backup query |
+| `visibility` - [`String`](#string) | Visibility setting of the product |
+
+#### Example
+
+```json
+{
+  "addToCartAllowed": true,
+  "inStock": false,
+  "lowStock": true,
+  "attributes": [ProductViewAttribute],
+  "description": "abc123",
+  "id": 4,
+  "images": [ProductViewImage],
+  "videos": [ProductViewVideo],
+  "lastModifiedAt": "2007-12-03T10:15:30Z",
+  "metaDescription": "xyz789",
+  "metaKeyword": "xyz789",
+  "metaTitle": "xyz789",
+  "name": "xyz789",
+  "inputOptions": [ProductViewInputOption],
+  "options": [ProductViewOption],
+  "priceRange": ProductViewPriceRange,
+  "shortDescription": "xyz789",
+  "sku": "xyz789",
+  "externalId": "abc123",
+  "url": "abc123",
+  "urlKey": "abc123",
+  "links": [ProductViewLink],
+  "categories": [CategoryProductView],
+  "queryType": "xyz789",
+  "visibility": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### ComplexTextValue
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `html` - [`String!`](#string) | Text that can contain HTML tags. |
+
+#### Example
+
+```json
+{"html": "xyz789"}
+```
+
+<HorizontalLine />
+
+### ConditionInput
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `field` - [`Field`](#field) |  |
+| `operator` - [`OperatorInput`](#operatorinput) |  |
+| `enabled` - [`Boolean`](#boolean) |  |
+
+#### Example
+
+```json
+{
+  "field": "UNKNOWN_FIELD",
+  "operator": OperatorInput,
+  "enabled": true
+}
+```
+
+<HorizontalLine />
+
+### ConfigurableAttributeOption
+
+Contains details about a configurable product attribute option.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `code` - [`String`](#string) | The ID assigned to the attribute. |
+| `label` - [`String`](#string) | A string that describes the configurable attribute option. |
+| `uid` - [`ID!`](#id) | The unique ID for a &#x60;ConfigurableAttributeOption&#x60; object. |
+| `value_index` - [`Int`](#int) | A unique index number assigned to the configurable product option. |
+
+#### Example
+
+```json
+{
+  "code": "abc123",
+  "label": "xyz789",
+  "uid": "4",
+  "value_index": 123
+}
+```
+
+<HorizontalLine />
+
+### ConfigurableCartItem
+
+An implementation for configurable product cart items.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `available_gift_wrapping` - [`[GiftWrapping]!`](#giftwrapping) | The list of available gift wrapping options for the cart item. |
+| `configurable_options` - [`[SelectedConfigurableOption]!`](#selectedconfigurableoption) | An array containing the configuranle options the shopper selected. |
+| `configured_variant` - [`ProductInterface!`](#productinterface) | Product details of the cart item. |
+| `custom_attributes` - [`[CustomAttribute]`](#customattribute) | The custom attributes for the cart item |
+| `customizable_options` - [`[SelectedCustomizableOption]!`](#selectedcustomizableoption) | An array containing the customizable options the shopper selected. |
+| `discount` - [`[Discount]`](#discount) | Contains discount for quote line item. |
+| `errors` - [`[CartItemError]`](#cartitemerror) | An array of errors encountered while loading the cart item |
+| `gift_message` - [`GiftMessage`](#giftmessage) | The entered gift message for the cart item |
+| `gift_wrapping` - [`GiftWrapping`](#giftwrapping) | The selected gift wrapping for the cart item. |
+| `is_available` - [`Boolean!`](#boolean) | True if requested quantity is less than available stock, false otherwise. |
+| `max_qty` - [`Float`](#float) | Line item max qty in quote template |
+| `min_qty` - [`Float`](#float) | Line item min qty in quote template |
+| `not_available_message` - [`String`](#string) | Message to display when the product is not available with this selected option. |
+| `note_from_buyer` - [`[ItemNote]`](#itemnote) | The buyer&#x27;s quote line item note. |
+| `note_from_seller` - [`[ItemNote]`](#itemnote) | The seller&#x27;s quote line item note. |
+| `prices` - [`CartItemPrices`](#cartitemprices) | Contains details about the price of the item, including taxes and discounts. |
+| `product` - [`ProductInterface!`](#productinterface) | Details about an item in the cart. *(Deprecated: Product information is part of a composable Catalog Service.)* |
+| `quantity` - [`Float!`](#float) | The quantity of this item in the cart. |
+| `uid` - [`ID!`](#id) | The unique ID for a &#x60;CartItemInterface&#x60; object. |
+
+#### Example
+
+```json
+{
+  "available_gift_wrapping": [GiftWrapping],
+  "configurable_options": [SelectedConfigurableOption],
+  "configured_variant": ProductInterface,
+  "custom_attributes": [CustomAttribute],
+  "customizable_options": [SelectedCustomizableOption],
+  "discount": [Discount],
+  "errors": [CartItemError],
+  "gift_message": GiftMessage,
+  "gift_wrapping": GiftWrapping,
+  "is_available": false,
+  "max_qty": 123.45,
+  "min_qty": 123.45,
+  "not_available_message": "abc123",
+  "note_from_buyer": [ItemNote],
+  "note_from_seller": [ItemNote],
+  "prices": CartItemPrices,
+  "product": ProductInterface,
+  "quantity": 123.45,
+  "uid": "4"
+}
+```
+
+<HorizontalLine />
+
+### ConfigurableOptionAvailableForSelection
+
+Describes configurable options that have been selected and can be selected as a result of the previous selections.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `attribute_code` - [`String!`](#string) | An attribute code that uniquely identifies a configurable option. |
+| `option_value_uids` - [`[ID]!`](#id) | An array of selectable option value IDs. |
+
+#### Example
+
+```json
+{
+  "attribute_code": "abc123",
+  "option_value_uids": [4]
+}
+```
+
+<HorizontalLine />
+
+### ConfigurableOrderItem
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `custom_attributes` - [`[CustomAttribute]`](#customattribute) | The custom attributes for the order item |
+| `discounts` - [`[Discount]`](#discount) | The final discount information for the product. |
+| `eligible_for_return` - [`Boolean`](#boolean) | Indicates whether the order item is eligible to be in a return request. |
+| `entered_options` - [`[OrderItemOption]`](#orderitemoption) | The entered option for the base product, such as a logo or image. |
+| `gift_message` - [`GiftMessage`](#giftmessage) | The selected gift message for the order item |
+| `gift_wrapping` - [`GiftWrapping`](#giftwrapping) | The selected gift wrapping for the order item. |
+| `id` - [`ID!`](#id) | The unique ID for an &#x60;OrderItemInterface&#x60; object. |
+| `parent_sku` - [`String`](#string) | The SKU of parent product. |
+| `prices` - [`OrderItemPrices`](#orderitemprices) | Contains details about the price of the item, including taxes and discounts. |
+| `product` - [`ProductInterface`](#productinterface) | The ProductInterface object, which contains details about the base product *(Deprecated: Product information is part of a composable Catalog Service.)* |
+| `product_name` - [`String`](#string) | The name of the base product. |
+| `product_sale_price` - [`Money!`](#money) | The sale price of the base product, including selected options. |
+| `product_sku` - [`String!`](#string) | The SKU of the base product. |
+| `product_type` - [`String`](#string) | The type of product, such as simple, configurable, etc. |
+| `product_url_key` - [`String`](#string) | URL key of the base product. |
+| `quantity_canceled` - [`Float`](#float) | The number of canceled items. |
+| `quantity_invoiced` - [`Float`](#float) | The number of invoiced items. |
+| `quantity_ordered` - [`Float`](#float) | The number of units ordered for this item. |
+| `quantity_refunded` - [`Float`](#float) | The number of refunded items. |
+| `quantity_return_requested` - [`Float`](#float) | The requested return quantity of the item. |
+| `quantity_returned` - [`Float`](#float) | The number of returned items. |
+| `quantity_shipped` - [`Float`](#float) | The number of shipped items. |
+| `selected_options` - [`[OrderItemOption]`](#orderitemoption) | The selected options for the base product, such as color or size. |
+| `status` - [`String`](#string) | The status of the order item. |
+
+#### Example
+
+```json
+{
+  "custom_attributes": [CustomAttribute],
+  "discounts": [Discount],
+  "eligible_for_return": true,
+  "entered_options": [OrderItemOption],
+  "gift_message": GiftMessage,
+  "gift_wrapping": GiftWrapping,
+  "id": 4,
+  "parent_sku": "abc123",
+  "prices": OrderItemPrices,
+  "product": ProductInterface,
+  "product_name": "xyz789",
+  "product_sale_price": Money,
+  "product_sku": "abc123",
+  "product_type": "abc123",
+  "product_url_key": "xyz789",
+  "quantity_canceled": 987.65,
+  "quantity_invoiced": 987.65,
+  "quantity_ordered": 987.65,
+  "quantity_refunded": 123.45,
+  "quantity_return_requested": 987.65,
+  "quantity_returned": 123.45,
+  "quantity_shipped": 987.65,
+  "selected_options": [OrderItemOption],
+  "status": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### ConfigurableProduct
+
+Defines basic features of a configurable product and its simple product variants.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `canonical_url` - [`String`](#string) | The relative canonical URL. This value is returned only if the system setting &#x27;Use Canonical Link Meta Tag For Products&#x27; is enabled. |
+| `categories` - [`[CategoryInterface]`](#categoryinterface) | The categories assigned to a product. |
+| `configurable_options` - [`[ConfigurableProductOptions]`](#configurableproductoptions) | An array of options for the configurable product. |
+| `configurable_product_options_selection` - [`ConfigurableProductOptionsSelection`](#configurableproductoptionsselection) | An array of media gallery items and other details about selected configurable product options as well as details about remaining selectable options. |
+| `country_of_manufacture` - [`String`](#string) | The product&#x27;s country of origin. |
+| `crosssell_products` - [`[ProductInterface]`](#productinterface) | Crosssell Products |
+| `custom_attributesV2` - [`ProductCustomAttributes`](#productcustomattributes) | Product custom attributes. |
+| `description` - [`ComplexTextValue`](#complextextvalue) | Detailed information about the product. The value can include simple HTML tags. |
+| `gift_message_available` - [`Boolean!`](#boolean) | Returns a value indicating gift message availability for the product. |
+| `gift_wrapping_available` - [`Boolean!`](#boolean) | Returns a value indicating gift wrapping availability for the product. |
+| `gift_wrapping_price` - [`Money`](#money) | Returns value and currency indicating gift wrapping price for the product. |
+| `image` - [`ProductImage`](#productimage) | The relative path to the main image on the product page. |
+| `is_returnable` - [`String`](#string) | Indicates whether the product can be returned. |
+| `manufacturer` - [`Int`](#int) | A number representing the product&#x27;s manufacturer. |
+| `max_sale_qty` - [`Float`](#float) | Maximum Qty Allowed in Shopping Cart |
+| `media_gallery` - [`[MediaGalleryInterface]`](#mediagalleryinterface) | An array of media gallery objects. |
+| `meta_description` - [`String`](#string) | A brief overview of the product for search results listings, maximum 255 characters. |
+| `meta_keyword` - [`String`](#string) | A comma-separated list of keywords that are visible only to search engines. |
+| `meta_title` - [`String`](#string) | A string that is displayed in the title bar and tab of the browser and in search results lists. |
+| `min_sale_qty` - [`Float`](#float) | Minimum Qty Allowed in Shopping Cart |
+| `name` - [`String`](#string) | The product name. Customers use this name to identify the product. |
+| `new_from_date` - [`String`](#string) | The beginning date for new product listings, and determines if the product is featured as a new product. |
+| `new_to_date` - [`String`](#string) | The end date for new product listings. |
+| `only_x_left_in_stock` - [`Float`](#float) | Product stock only x left count |
+| `options` - [`[CustomizableOptionInterface]`](#customizableoptioninterface) | An array of options for a customizable product. |
+| `options_container` - [`String`](#string) | If the product has multiple options, determines where they appear on the product page. |
+| `price_range` - [`PriceRange!`](#pricerange) | The range of prices for the product |
+| `price_tiers` - [`[TierPrice]`](#tierprice) | An array of &#x60;TierPrice&#x60; objects. |
+| `product_links` - [`[ProductLinksInterface]`](#productlinksinterface) | An array of &#x60;ProductLinks&#x60; objects. |
+| `quantity` - [`Float`](#float) | Quantity of available stock |
+| `related_products` - [`[ProductInterface]`](#productinterface) | An array of products to be displayed in a Related Products block. |
+| `short_description` - [`ComplexTextValue`](#complextextvalue) | A short description of the product. Its use depends on the theme. |
+| `sku` - [`String`](#string) | A number or code assigned to a product to identify the product, options, price, and manufacturer. |
+| `small_image` - [`ProductImage`](#productimage) | The relative path to the small image, which is used on catalog pages. |
+| `special_price` - [`Float`](#float) | The discounted price of the product. |
+| `special_to_date` - [`String`](#string) | The end date for a product with a special price. |
+| `stock_status` - [`ProductStockStatus`](#productstockstatus) | Stock status of the product |
+| `swatch_image` - [`String`](#string) | The file name of a swatch image. |
+| `thumbnail` - [`ProductImage`](#productimage) | The relative path to the product&#x27;s thumbnail image. |
+| `uid` - [`ID!`](#id) | The unique ID for a &#x60;ProductInterface&#x60; object. |
+| `upsell_products` - [`[ProductInterface]`](#productinterface) | Upsell Products |
+| `url_key` - [`String`](#string) | The part of the URL that identifies the product |
+| `variants` - [`[ConfigurableVariant]`](#configurablevariant) | An array of simple product variants. |
+| `weight` - [`Float`](#float) | The weight of the item, in units defined by the store. |
+
+#### Example
+
+```json
+{
+  "canonical_url": "xyz789",
+  "categories": [CategoryInterface],
+  "configurable_options": [ConfigurableProductOptions],
+  "configurable_product_options_selection": ConfigurableProductOptionsSelection,
+  "country_of_manufacture": "xyz789",
+  "crosssell_products": [ProductInterface],
+  "custom_attributesV2": ProductCustomAttributes,
+  "description": ComplexTextValue,
+  "gift_message_available": true,
+  "gift_wrapping_available": false,
+  "gift_wrapping_price": Money,
+  "image": ProductImage,
+  "is_returnable": "xyz789",
+  "manufacturer": 987,
+  "max_sale_qty": 123.45,
+  "media_gallery": [MediaGalleryInterface],
+  "meta_description": "abc123",
+  "meta_keyword": "xyz789",
+  "meta_title": "abc123",
+  "min_sale_qty": 987.65,
+  "name": "xyz789",
+  "new_from_date": "xyz789",
+  "new_to_date": "abc123",
+  "only_x_left_in_stock": 123.45,
+  "options": [CustomizableOptionInterface],
+  "options_container": "xyz789",
+  "price_range": PriceRange,
+  "price_tiers": [TierPrice],
+  "product_links": [ProductLinksInterface],
+  "quantity": 123.45,
+  "related_products": [ProductInterface],
+  "short_description": ComplexTextValue,
+  "sku": "abc123",
+  "small_image": ProductImage,
+  "special_price": 123.45,
+  "special_to_date": "xyz789",
+  "stock_status": "IN_STOCK",
+  "swatch_image": "abc123",
+  "thumbnail": ProductImage,
+  "uid": 4,
+  "upsell_products": [ProductInterface],
+  "url_key": "abc123",
+  "variants": [ConfigurableVariant],
+  "weight": 987.65
+}
+```
+
+<HorizontalLine />
+
+### ConfigurableProductOption
+
+Contains details about configurable product options.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `attribute_code` - [`String!`](#string) | An attribute code that uniquely identifies a configurable option. |
+| `label` - [`String!`](#string) | The display name of the option. |
+| `uid` - [`ID!`](#id) | The unique ID of the configurable option. |
+| `values` - [`[ConfigurableProductOptionValue]`](#configurableproductoptionvalue) | An array of values that are applicable for this option. |
+
+#### Example
+
+```json
+{
+  "attribute_code": "xyz789",
+  "label": "abc123",
+  "uid": 4,
+  "values": [ConfigurableProductOptionValue]
+}
+```
+
+<HorizontalLine />
+
+### ConfigurableProductOptionValue
+
+Defines a value for a configurable product option.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `is_available` - [`Boolean!`](#boolean) | Indicates whether the product is available with this selected option. |
+| `is_use_default` - [`Boolean!`](#boolean) | Indicates whether the value is the default. |
+| `label` - [`String!`](#string) | The display name of the value. |
+| `swatch` - [`SwatchDataInterface`](#swatchdatainterface) | The URL assigned to the thumbnail of the swatch image. |
+| `uid` - [`ID!`](#id) | The unique ID of the value. |
+
+#### Example
+
+```json
+{
+  "is_available": true,
+  "is_use_default": true,
+  "label": "abc123",
+  "swatch": SwatchDataInterface,
+  "uid": "4"
+}
+```
+
+<HorizontalLine />
+
+### ConfigurableProductOptions
+
+Defines configurable attributes for the specified product.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `attribute_code` - [`String`](#string) | A string that identifies the attribute. |
+| `attribute_uid` - [`ID!`](#id) | The unique ID for an &#x60;Attribute&#x60; object. |
+| `label` - [`String`](#string) | A displayed string that describes the configurable product option. |
+| `position` - [`Int`](#int) | A number that indicates the order in which the attribute is displayed. |
+| `uid` - [`ID!`](#id) | The unique ID for a &#x60;ConfigurableProductOptions&#x60; object. |
+| `use_default` - [`Boolean`](#boolean) | Indicates whether the option is the default. |
+| `values` - [`[ConfigurableProductOptionsValues]`](#configurableproductoptionsvalues) | An array that defines the &#x60;value_index&#x60; codes assigned to the configurable product. |
+
+#### Example
+
+```json
+{
+  "attribute_code": "xyz789",
+  "attribute_uid": 4,
+  "label": "abc123",
+  "position": 987,
+  "uid": "4",
+  "use_default": true,
+  "values": [ConfigurableProductOptionsValues]
+}
+```
+
+<HorizontalLine />
+
+### ConfigurableProductOptionsSelection
+
+Contains metadata corresponding to the selected configurable options.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `configurable_options` - [`[ConfigurableProductOption]`](#configurableproductoption) | An array of all possible configurable options. |
+| `media_gallery` - [`[MediaGalleryInterface]`](#mediagalleryinterface) | Product images and videos corresponding to the specified configurable options selection. |
+| `options_available_for_selection` - [`[ConfigurableOptionAvailableForSelection]`](#configurableoptionavailableforselection) | The configurable options available for further selection based on the current selection. |
+| `variant` - [`SimpleProduct`](#simpleproduct) | A variant represented by the specified configurable options selection. The value is expected to be null until selections are made for each configurable option. |
+
+#### Example
+
+```json
+{
+  "configurable_options": [ConfigurableProductOption],
+  "media_gallery": [MediaGalleryInterface],
+  "options_available_for_selection": [
+    ConfigurableOptionAvailableForSelection
+  ],
+  "variant": SimpleProduct
+}
+```
+
+<HorizontalLine />
+
+### ConfigurableProductOptionsValues
+
+Contains the index number assigned to a configurable product option.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `default_label` - [`String`](#string) | The label of the product on the default store. |
+| `label` - [`String`](#string) | The label of the product. |
+| `store_label` - [`String`](#string) | The label of the product on the current store. |
+| `swatch_data` - [`SwatchDataInterface`](#swatchdatainterface) | Swatch data for a configurable product option. |
+| `uid` - [`ID`](#id) | The unique ID for a &#x60;ConfigurableProductOptionsValues&#x60; object. |
+| `use_default_value` - [`Boolean`](#boolean) | Indicates whether to use the default_label. |
+
+#### Example
+
+```json
+{
+  "default_label": "xyz789",
+  "label": "xyz789",
+  "store_label": "xyz789",
+  "swatch_data": SwatchDataInterface,
+  "uid": "4",
+  "use_default_value": true
+}
+```
+
+<HorizontalLine />
+
+### ConfigurableRequisitionListItem
+
+Contains details about configurable products added to a requisition list.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `configurable_options` - [`[SelectedConfigurableOption]`](#selectedconfigurableoption) | Selected configurable options for an item in the requisition list. |
+| `customizable_options` - [`[SelectedCustomizableOption]!`](#selectedcustomizableoption) | Selected custom options for an item in the requisition list. |
+| `product` - [`ProductInterface!`](#productinterface) | Details about a requisition list item. |
+| `quantity` - [`Float!`](#float) | The quantity of the product added to the requisition list. |
+| `sku` - [`String!`](#string) | The product SKU. |
+| `uid` - [`ID!`](#id) | The unique ID of an item in a requisition list. |
+
+#### Example
+
+```json
+{
+  "configurable_options": [SelectedConfigurableOption],
+  "customizable_options": [SelectedCustomizableOption],
+  "product": ProductInterface,
+  "quantity": 987.65,
+  "sku": "xyz789",
+  "uid": 4
+}
+```
+
+<HorizontalLine />
+
+### ConfigurableVariant
+
+Contains all the simple product variants of a configurable product.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `attributes` - [`[ConfigurableAttributeOption]`](#configurableattributeoption) | An array of configurable attribute options. |
+| `product` - [`SimpleProduct`](#simpleproduct) | An array of linked simple products. |
+
+#### Example
+
+```json
+{
+  "attributes": [ConfigurableAttributeOption],
+  "product": SimpleProduct
+}
+```
+
+<HorizontalLine />
+
+### ConfigurableWishlistItem
+
+A configurable product wish list item.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `added_at` - [`String!`](#string) | The date and time the item was added to the wish list. |
+| `configurable_options` - [`[SelectedConfigurableOption]`](#selectedconfigurableoption) | An array of selected configurable options. |
+| `configured_variant` - [`ProductInterface`](#productinterface) | Product details of the selected variant. The value is null if some options are not configured. |
+| `customizable_options` - [`[SelectedCustomizableOption]!`](#selectedcustomizableoption) | Custom options selected for the wish list item. |
+| `description` - [`String`](#string) | The description of the item. |
+| `id` - [`ID!`](#id) | The unique ID for a &#x60;WishlistItemInterface&#x60; object. |
+| `product` - [`ProductInterface!`](#productinterface) | Product details of the wish list item. *(Deprecated: Product information is part of a composable Catalog Service.)* |
+| `quantity` - [`Float!`](#float) | The quantity of this wish list item. |
+
+#### Example
+
+```json
+{
+  "added_at": "abc123",
+  "configurable_options": [SelectedConfigurableOption],
+  "configured_variant": ProductInterface,
+  "customizable_options": [SelectedCustomizableOption],
+  "description": "abc123",
+  "id": "4",
+  "product": ProductInterface,
+  "quantity": 123.45
+}
+```
+
+<HorizontalLine />
+
+### ConfirmCancelOrderInput
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `confirmation_key` - [`String!`](#string) | Confirmation Key to cancel the order. |
+| `order_id` - [`ID!`](#id) | The unique ID of an &#x60;Order&#x60; type. |
+
+#### Example
+
+```json
+{
+  "confirmation_key": "xyz789",
+  "order_id": "4"
+}
+```
+
+<HorizontalLine />
+
+### ConfirmEmailInput
+
+Contains details about a customer email address to confirm.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `confirmation_key` - [`String!`](#string) | The key to confirm the email address. |
+| `email` - [`String!`](#string) | The email address to be confirmed. |
+
+#### Example
+
+```json
+{
+  "confirmation_key": "xyz789",
+  "email": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### ConfirmReturnInput
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `confirmation_key` - [`String!`](#string) | Confirmation Key to return order. |
+| `order_id` - [`ID!`](#id) | The unique ID of an &#x60;Order&#x60; type. |
+
+#### Example
+
+```json
+{
+  "confirmation_key": "abc123",
+  "order_id": 4
+}
+```
+
+<HorizontalLine />
+
+### ConfirmationStatusEnum
+
+List of account confirmation statuses.
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `ACCOUNT_CONFIRMED` | Account confirmed |
+| `ACCOUNT_CONFIRMATION_NOT_REQUIRED` | Account confirmation not required |
+
+#### Example
+
+```json
+""ACCOUNT_CONFIRMED""
+```
+
+<HorizontalLine />
+
+### ContactUsInput
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `comment` - [`String!`](#string) | The shopper&#x27;s comment to the merchant. |
+| `email` - [`String!`](#string) | The email address of the shopper. |
+| `name` - [`String!`](#string) | The full name of the shopper. |
+| `telephone` - [`String`](#string) | The shopper&#x27;s telephone number. |
+
+#### Example
+
+```json
+{
+  "comment": "abc123",
+  "email": "xyz789",
+  "name": "xyz789",
+  "telephone": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### ContactUsOutput
+
+Contains the status of the request.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `status` - [`Boolean!`](#boolean) | Indicates whether the request was successful. |
+
+#### Example
+
+```json
+{"status": false}
+```
+
+<HorizontalLine />
+
+### CopyItemsBetweenRequisitionListsInput
+
+An input object that defines the items in a requisition list to be copied.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `requisitionListItemUids` - [`[ID]!`](#id) | An array of IDs representing products copied from one requisition list to another. |
+
+#### Example
+
+```json
+{"requisitionListItemUids": [4]}
+```
+
+<HorizontalLine />
+
+### CopyItemsFromRequisitionListsOutput
+
+Output of the request to copy items to the destination requisition list.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `requisition_list` - [`RequisitionList`](#requisitionlist) | The destination requisition list after the items were copied. |
+
+#### Example
+
+```json
+{"requisition_list": RequisitionList}
+```
+
+<HorizontalLine />
+
+### CopyProductsBetweenWishlistsOutput
+
+Contains the source and target wish lists after copying products.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `destination_wishlist` - [`Wishlist!`](#wishlist) | The destination wish list containing the copied products. |
+| `source_wishlist` - [`Wishlist!`](#wishlist) | The wish list that the products were copied from. |
+| `user_errors` - [`[WishListUserInputError]!`](#wishlistuserinputerror) | An array of errors encountered while copying products in a wish list. |
+
+#### Example
+
+```json
+{
+  "destination_wishlist": Wishlist,
+  "source_wishlist": Wishlist,
+  "user_errors": [WishListUserInputError]
+}
+```
+
+<HorizontalLine />
+
+### Country
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `available_regions` - [`[Region]`](#region) | An array of regions within a particular country. |
+| `full_name_english` - [`String`](#string) | The name of the country in English. |
+| `full_name_locale` - [`String`](#string) | The name of the country in the current locale. |
+| `id` - [`String`](#string) | The unique ID for a &#x60;Country&#x60; object. |
+| `three_letter_abbreviation` - [`String`](#string) | The three-letter abbreviation of the country, such as USA. |
+| `two_letter_abbreviation` - [`String`](#string) | The two-letter abbreviation of the country, such as US. |
+
+#### Example
+
+```json
+{
+  "available_regions": [Region],
+  "full_name_english": "xyz789",
+  "full_name_locale": "abc123",
+  "id": "xyz789",
+  "three_letter_abbreviation": "abc123",
+  "two_letter_abbreviation": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CountryCodeEnum
+
+The list of country codes.
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `AF` | Afghanistan |
+| `AX` | Åland Islands |
+| `AL` | Albania |
+| `DZ` | Algeria |
+| `AS` | American Samoa |
+| `AD` | Andorra |
+| `AO` | Angola |
+| `AI` | Anguilla |
+| `AQ` | Antarctica |
+| `AG` | Antigua &amp; Barbuda |
+| `AR` | Argentina |
+| `AM` | Armenia |
+| `AW` | Aruba |
+| `AU` | Australia |
+| `AT` | Austria |
+| `AZ` | Azerbaijan |
+| `BS` | Bahamas |
+| `BH` | Bahrain |
+| `BD` | Bangladesh |
+| `BB` | Barbados |
+| `BY` | Belarus |
+| `BE` | Belgium |
+| `BZ` | Belize |
+| `BJ` | Benin |
+| `BM` | Bermuda |
+| `BT` | Bhutan |
+| `BO` | Bolivia |
+| `BA` | Bosnia &amp; Herzegovina |
+| `BW` | Botswana |
+| `BV` | Bouvet Island |
+| `BR` | Brazil |
+| `IO` | British Indian Ocean Territory |
+| `VG` | British Virgin Islands |
+| `BN` | Brunei |
+| `BG` | Bulgaria |
+| `BF` | Burkina Faso |
+| `BI` | Burundi |
+| `KH` | Cambodia |
+| `CM` | Cameroon |
+| `CA` | Canada |
+| `CV` | Cape Verde |
+| `KY` | Cayman Islands |
+| `CF` | Central African Republic |
+| `TD` | Chad |
+| `CL` | Chile |
+| `CN` | China |
+| `CX` | Christmas Island |
+| `CC` | Cocos (Keeling) Islands |
+| `CO` | Colombia |
+| `KM` | Comoros |
+| `CG` | Congo-Brazzaville |
+| `CD` | Congo-Kinshasa |
+| `CK` | Cook Islands |
+| `CR` | Costa Rica |
+| `CI` | Côte d’Ivoire |
+| `HR` | Croatia |
+| `CU` | Cuba |
+| `CY` | Cyprus |
+| `CZ` | Czech Republic |
+| `DK` | Denmark |
+| `DJ` | Djibouti |
+| `DM` | Dominica |
+| `DO` | Dominican Republic |
+| `EC` | Ecuador |
+| `EG` | Egypt |
+| `SV` | El Salvador |
+| `GQ` | Equatorial Guinea |
+| `ER` | Eritrea |
+| `EE` | Estonia |
+| `SZ` | Eswatini |
+| `ET` | Ethiopia |
+| `FK` | Falkland Islands |
+| `FO` | Faroe Islands |
+| `FJ` | Fiji |
+| `FI` | Finland |
+| `FR` | France |
+| `GF` | French Guiana |
+| `PF` | French Polynesia |
+| `TF` | French Southern Territories |
+| `GA` | Gabon |
+| `GM` | Gambia |
+| `GE` | Georgia |
+| `DE` | Germany |
+| `GH` | Ghana |
+| `GI` | Gibraltar |
+| `GR` | Greece |
+| `GL` | Greenland |
+| `GD` | Grenada |
+| `GP` | Guadeloupe |
+| `GU` | Guam |
+| `GT` | Guatemala |
+| `GG` | Guernsey |
+| `GN` | Guinea |
+| `GW` | Guinea-Bissau |
+| `GY` | Guyana |
+| `HT` | Haiti |
+| `HM` | Heard &amp;amp; McDonald Islands |
+| `HN` | Honduras |
+| `HK` | Hong Kong SAR China |
+| `HU` | Hungary |
+| `IS` | Iceland |
+| `IN` | India |
+| `ID` | Indonesia |
+| `IR` | Iran |
+| `IQ` | Iraq |
+| `IE` | Ireland |
+| `IM` | Isle of Man |
+| `IL` | Israel |
+| `IT` | Italy |
+| `JM` | Jamaica |
+| `JP` | Japan |
+| `JE` | Jersey |
+| `JO` | Jordan |
+| `KZ` | Kazakhstan |
+| `KE` | Kenya |
+| `KI` | Kiribati |
+| `KW` | Kuwait |
+| `KG` | Kyrgyzstan |
+| `LA` | Laos |
+| `LV` | Latvia |
+| `LB` | Lebanon |
+| `LS` | Lesotho |
+| `LR` | Liberia |
+| `LY` | Libya |
+| `LI` | Liechtenstein |
+| `LT` | Lithuania |
+| `LU` | Luxembourg |
+| `MO` | Macau SAR China |
+| `MK` | Macedonia |
+| `MG` | Madagascar |
+| `MW` | Malawi |
+| `MY` | Malaysia |
+| `MV` | Maldives |
+| `ML` | Mali |
+| `MT` | Malta |
+| `MH` | Marshall Islands |
+| `MQ` | Martinique |
+| `MR` | Mauritania |
+| `MU` | Mauritius |
+| `YT` | Mayotte |
+| `MX` | Mexico |
+| `FM` | Micronesia |
+| `MD` | Moldova |
+| `MC` | Monaco |
+| `MN` | Mongolia |
+| `ME` | Montenegro |
+| `MS` | Montserrat |
+| `MA` | Morocco |
+| `MZ` | Mozambique |
+| `MM` | Myanmar (Burma) |
+| `NA` | Namibia |
+| `NR` | Nauru |
+| `NP` | Nepal |
+| `NL` | Netherlands |
+| `AN` | Netherlands Antilles |
+| `NC` | New Caledonia |
+| `NZ` | New Zealand |
+| `NI` | Nicaragua |
+| `NE` | Niger |
+| `NG` | Nigeria |
+| `NU` | Niue |
+| `NF` | Norfolk Island |
+| `MP` | Northern Mariana Islands |
+| `KP` | North Korea |
+| `NO` | Norway |
+| `OM` | Oman |
+| `PK` | Pakistan |
+| `PW` | Palau |
+| `PS` | Palestinian Territories |
+| `PA` | Panama |
+| `PG` | Papua New Guinea |
+| `PY` | Paraguay |
+| `PE` | Peru |
+| `PH` | Philippines |
+| `PN` | Pitcairn Islands |
+| `PL` | Poland |
+| `PT` | Portugal |
+| `QA` | Qatar |
+| `RE` | Réunion |
+| `RO` | Romania |
+| `RU` | Russia |
+| `RW` | Rwanda |
+| `WS` | Samoa |
+| `SM` | San Marino |
+| `ST` | São Tomé &amp; Príncipe |
+| `SA` | Saudi Arabia |
+| `SN` | Senegal |
+| `RS` | Serbia |
+| `SC` | Seychelles |
+| `SL` | Sierra Leone |
+| `SG` | Singapore |
+| `SK` | Slovakia |
+| `SI` | Slovenia |
+| `SB` | Solomon Islands |
+| `SO` | Somalia |
+| `ZA` | South Africa |
+| `GS` | South Georgia &amp; South Sandwich Islands |
+| `KR` | South Korea |
+| `ES` | Spain |
+| `LK` | Sri Lanka |
+| `BL` | St. Barthélemy |
+| `SH` | St. Helena |
+| `KN` | St. Kitts &amp; Nevis |
+| `LC` | St. Lucia |
+| `MF` | St. Martin |
+| `PM` | St. Pierre &amp; Miquelon |
+| `VC` | St. Vincent &amp; Grenadines |
+| `SD` | Sudan |
+| `SR` | Suriname |
+| `SJ` | Svalbard &amp; Jan Mayen |
+| `SE` | Sweden |
+| `CH` | Switzerland |
+| `SY` | Syria |
+| `TW` | Taiwan |
+| `TJ` | Tajikistan |
+| `TZ` | Tanzania |
+| `TH` | Thailand |
+| `TL` | Timor-Leste |
+| `TG` | Togo |
+| `TK` | Tokelau |
+| `TO` | Tonga |
+| `TT` | Trinidad &amp; Tobago |
+| `TN` | Tunisia |
+| `TR` | Turkey |
+| `TM` | Turkmenistan |
+| `TC` | Turks &amp; Caicos Islands |
+| `TV` | Tuvalu |
+| `UG` | Uganda |
+| `UA` | Ukraine |
+| `AE` | United Arab Emirates |
+| `GB` | United Kingdom |
+| `US` | United States |
+| `UY` | Uruguay |
+| `UM` | U.S. Outlying Islands |
+| `VI` | U.S. Virgin Islands |
+| `UZ` | Uzbekistan |
+| `VU` | Vanuatu |
+| `VA` | Vatican City |
+| `VE` | Venezuela |
+| `VN` | Vietnam |
+| `WF` | Wallis &amp; Futuna |
+| `EH` | Western Sahara |
+| `YE` | Yemen |
+| `ZM` | Zambia |
+| `ZW` | Zimbabwe |
+
+#### Example
+
+```json
+""AF""
+```
+
+<HorizontalLine />
+
+### CreateCompanyOutput
+
+Contains the response to the request to create a company.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `company` - [`Company!`](#company) | The new company instance. |
+
+#### Example
+
+```json
+{"company": Company}
+```
+
+<HorizontalLine />
+
+### CreateCompanyRoleOutput
+
+Contains the response to the request to create a company role.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `role` - [`CompanyRole!`](#companyrole) | The new company role instance. |
+
+#### Example
+
+```json
+{"role": CompanyRole}
+```
+
+<HorizontalLine />
+
+### CreateCompanyTeamOutput
+
+Contains the response to the request to create a company team.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `team` - [`CompanyTeam!`](#companyteam) | The new company team instance. |
+
+#### Example
+
+```json
+{"team": CompanyTeam}
+```
+
+<HorizontalLine />
+
+### CreateCompanyUserOutput
+
+Contains the response to the request to create a company user.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `user` - [`Customer!`](#customer) | The new company user instance. |
+
+#### Example
+
+```json
+{"user": Customer}
+```
+
+<HorizontalLine />
+
+### CreateCompareListInput
+
+Contains an array of product IDs to use for creating a compare list.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `products` - [`[ID]`](#id) | An array of product IDs to add to the compare list. |
+
+#### Example
+
+```json
+{"products": [4]}
+```
+
+<HorizontalLine />
+
+### CreateGiftRegistryInput
+
+Defines a new gift registry.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `dynamic_attributes` - [`[GiftRegistryDynamicAttributeInput]`](#giftregistrydynamicattributeinput) | Additional attributes specified as a code-value pair. |
+| `event_name` - [`String!`](#string) | The name of the event. |
+| `gift_registry_type_uid` - [`ID!`](#id) | The ID of the selected event type. |
+| `message` - [`String!`](#string) | A message describing the event. |
+| `privacy_settings` - [`GiftRegistryPrivacySettings!`](#giftregistryprivacysettings) | Indicates whether the registry is PRIVATE or PUBLIC. |
+| `registrants` - [`[AddGiftRegistryRegistrantInput]!`](#addgiftregistryregistrantinput) | The list of people who receive notifications about the registry. |
+| `shipping_address` - [`GiftRegistryShippingAddressInput`](#giftregistryshippingaddressinput) | The shipping address for all gift registry items. |
+| `status` - [`GiftRegistryStatus!`](#giftregistrystatus) | Indicates whether the registry is ACTIVE or INACTIVE. |
+
+#### Example
+
+```json
+{
+  "dynamic_attributes": [
+    GiftRegistryDynamicAttributeInput
+  ],
+  "event_name": "abc123",
+  "gift_registry_type_uid": 4,
+  "message": "abc123",
+  "privacy_settings": "PRIVATE",
+  "registrants": [AddGiftRegistryRegistrantInput],
+  "shipping_address": GiftRegistryShippingAddressInput,
+  "status": "ACTIVE"
+}
+```
+
+<HorizontalLine />
+
+### CreateGiftRegistryOutput
+
+Contains the results of a request to create a gift registry.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `gift_registry` - [`GiftRegistry`](#giftregistry) | The newly-created gift registry. |
+
+#### Example
+
+```json
+{"gift_registry": GiftRegistry}
+```
+
+<HorizontalLine />
+
+### CreateGuestCartInput
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `cart_uid` - [`ID`](#id) | Optional client-generated ID |
+
+#### Example
+
+```json
+{"cart_uid": 4}
+```
+
+<HorizontalLine />
+
+### CreateGuestCartOutput
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `cart` - [`Cart`](#cart) | The newly created cart. |
+
+#### Example
+
+```json
+{"cart": Cart}
+```
+
+<HorizontalLine />
+
+### CreatePaymentOrderInput
+
+Contains payment order details that are used while processing the payment order
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `cartId` - [`String!`](#string) | The customer cart ID |
+| `location` - [`PaymentLocation!`](#paymentlocation) | Defines the origin location for that payment request |
+| `methodCode` - [`String!`](#string) | The code for the payment method used in the order |
+| `paymentSource` - [`String!`](#string) | The identifiable payment source for the payment method |
+| `vaultIntent` - [`Boolean`](#boolean) | Indicates whether the payment information should be vaulted |
+
+#### Example
+
+```json
+{
+  "cartId": "xyz789",
+  "location": "PRODUCT_DETAIL",
+  "methodCode": "abc123",
+  "paymentSource": "abc123",
+  "vaultIntent": false
+}
+```
+
+<HorizontalLine />
+
+### CreatePaymentOrderOutput
+
+Contains payment order details that are used while processing the payment order
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `amount` - [`Float`](#float) | The amount of the payment order |
+| `currency_code` - [`String`](#string) | The currency of the payment order |
+| `id` - [`String`](#string) | PayPal order ID |
+| `mp_order_id` - [`String`](#string) | The order ID generated by Payment Services |
+| `status` - [`String`](#string) | The status of the payment order |
+
+#### Example
+
+```json
+{
+  "amount": 123.45,
+  "currency_code": "xyz789",
+  "id": "abc123",
+  "mp_order_id": "abc123",
+  "status": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CreatePurchaseOrderApprovalRuleConditionAmountInput
+
+Specifies the amount and currency to evaluate.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `currency` - [`CurrencyEnum!`](#currencyenum) | Purchase order approval rule condition amount currency. |
+| `value` - [`Float!`](#float) | Purchase order approval rule condition amount value. |
+
+#### Example
+
+```json
+{"currency": "AFN", "value": 987.65}
+```
+
+<HorizontalLine />
+
+### CreatePurchaseOrderApprovalRuleConditionInput
+
+Defines a set of conditions that apply to a rule.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `amount` - [`CreatePurchaseOrderApprovalRuleConditionAmountInput`](#createpurchaseorderapprovalruleconditionamountinput) | The amount to be compared in a purchase order approval rule. This field is mutually exclusive with condition quantity. |
+| `attribute` - [`PurchaseOrderApprovalRuleType!`](#purchaseorderapprovalruletype) | The type of approval rule. |
+| `operator` - [`PurchaseOrderApprovalRuleConditionOperator!`](#purchaseorderapprovalruleconditionoperator) | Defines how to evaluate an amount or quantity in a purchase order. |
+| `quantity` - [`Int`](#int) | The quantity to be compared in a purchase order approval rule. This field is mutually exclusive with condition amount. |
+
+#### Example
+
+```json
+{
+  "amount": CreatePurchaseOrderApprovalRuleConditionAmountInput,
+  "attribute": "GRAND_TOTAL",
+  "operator": "MORE_THAN",
+  "quantity": 123
+}
+```
+
+<HorizontalLine />
+
+### CreateRequisitionListInput
+
+An input object that identifies and describes a new requisition list.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `description` - [`String`](#string) | An optional description of the requisition list. |
+| `name` - [`String!`](#string) | The name assigned to the requisition list. |
+
+#### Example
+
+```json
+{
+  "description": "abc123",
+  "name": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CreateRequisitionListOutput
+
+Output of the request to create a requisition list.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `requisition_list` - [`RequisitionList`](#requisitionlist) | The created requisition list. |
+
+#### Example
+
+```json
+{"requisition_list": RequisitionList}
+```
+
+<HorizontalLine />
+
+### CreateVaultCardPaymentTokenInput
+
+Describe the variables needed to create a vault payment token
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `card_description` - [`String`](#string) | Description of the vaulted card |
+| `setup_token_id` - [`String!`](#string) | The setup token obtained by the createVaultCardSetupToken endpoint |
+
+#### Example
+
+```json
+{
+  "card_description": "xyz789",
+  "setup_token_id": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CreateVaultCardPaymentTokenOutput
+
+The vault token id and information about the payment source
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `payment_source` - [`PaymentSourceOutput!`](#paymentsourceoutput) | The payment source information |
+| `vault_token_id` - [`String!`](#string) | The vault payment token information |
+
+#### Example
+
+```json
+{
+  "payment_source": PaymentSourceOutput,
+  "vault_token_id": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CreateVaultCardSetupTokenInput
+
+Describe the variables needed to create a vault card setup token
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `setup_token` - [`VaultSetupTokenInput!`](#vaultsetuptokeninput) | The setup token information |
+| `three_ds_mode` - [`ThreeDSMode`](#threedsmode) | The 3DS mode |
+
+#### Example
+
+```json
+{
+  "setup_token": VaultSetupTokenInput,
+  "three_ds_mode": "OFF"
+}
+```
+
+<HorizontalLine />
+
+### CreateVaultCardSetupTokenOutput
+
+The setup token id information
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `setup_token` - [`String!`](#string) | The setup token id |
+
+#### Example
+
+```json
+{"setup_token": "xyz789"}
+```
+
+<HorizontalLine />
+
+### CreateWishlistInput
+
+Defines the name and visibility of a new wish list.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `name` - [`String!`](#string) | The name of the new wish list. |
+| `visibility` - [`WishlistVisibilityEnum!`](#wishlistvisibilityenum) | Indicates whether the wish list is public or private. |
+
+#### Example
+
+```json
+{"name": "abc123", "visibility": "PUBLIC"}
+```
+
+<HorizontalLine />
+
+### CreateWishlistOutput
+
+Contains the wish list.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `wishlist` - [`Wishlist!`](#wishlist) | The newly-created wish list |
+
+#### Example
+
+```json
+{"wishlist": Wishlist}
+```
+
+<HorizontalLine />
+
+### CreditMemo
+
+Contains credit memo details.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `comments` - [`[SalesCommentItem]`](#salescommentitem) | Comments on the credit memo. |
+| `custom_attributes` - [`[CustomAttribute]`](#customattribute) | The custom attributes for the credit memo |
+| `id` - [`ID!`](#id) | The unique ID for a &#x60;CreditMemo&#x60; object. |
+| `items` - [`[CreditMemoItemInterface]`](#creditmemoiteminterface) | An array containing details about refunded items. |
+| `number` - [`String!`](#string) | The sequential credit memo number. |
+| `total` - [`CreditMemoTotal`](#creditmemototal) | Details about the total refunded amount. |
+
+#### Example
+
+```json
+{
+  "comments": [SalesCommentItem],
+  "custom_attributes": [CustomAttribute],
+  "id": 4,
+  "items": [CreditMemoItemInterface],
+  "number": "xyz789",
+  "total": CreditMemoTotal
+}
+```
+
+<HorizontalLine />
+
+### CreditMemoCustomAttributesInput
+
+Defines a credit memo item's custom attributes.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `credit_memo_id` - [`String!`](#string) | The credit memo ID. |
+| `custom_attributes` - [`[CustomAttributeInput]`](#customattributeinput) | An array of custom attributes for the credit memo. |
+
+#### Example
+
+```json
+{
+  "credit_memo_id": "abc123",
+  "custom_attributes": [CustomAttributeInput]
+}
+```
+
+<HorizontalLine />
+
+### CreditMemoItem
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `custom_attributes` - [`[CustomAttribute]`](#customattribute) | The custom attributes for the credit memo item |
+| `discounts` - [`[Discount]`](#discount) | Details about the final discount amount for the base product, including discounts on options. |
+| `id` - [`ID!`](#id) | The unique ID for a &#x60;CreditMemoItemInterface&#x60; object. |
+| `order_item` - [`OrderItemInterface`](#orderiteminterface) | The order item the credit memo is applied to. |
+| `product_name` - [`String`](#string) | The name of the base product. |
+| `product_sale_price` - [`Money!`](#money) | The sale price for the base product, including selected options. |
+| `product_sku` - [`String!`](#string) | The SKU of the base product. |
+| `quantity_refunded` - [`Float`](#float) | The number of refunded items. |
+
+#### Example
+
+```json
+{
+  "custom_attributes": [CustomAttribute],
+  "discounts": [Discount],
+  "id": 4,
+  "order_item": OrderItemInterface,
+  "product_name": "abc123",
+  "product_sale_price": Money,
+  "product_sku": "xyz789",
+  "quantity_refunded": 987.65
+}
+```
+
+<HorizontalLine />
+
+### CreditMemoItemCustomAttributesInput
+
+Defines a credit memo's custom attributes.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `credit_memo_id` - [`String!`](#string) | The credit memo ID. |
+| `credit_memo_item_id` - [`String!`](#string) | The credit memo item ID. |
+| `custom_attributes` - [`[CustomAttributeInput]`](#customattributeinput) | An array of custom attributes for the credit memo item. |
+
+#### Example
+
+```json
+{
+  "credit_memo_id": "xyz789",
+  "credit_memo_item_id": "xyz789",
+  "custom_attributes": [CustomAttributeInput]
+}
+```
+
+<HorizontalLine />
+
+### CreditMemoItemInterface
+
+Credit memo item details.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `custom_attributes` - [`[CustomAttribute]`](#customattribute) | The custom attributes for the credit memo item |
+| `discounts` - [`[Discount]`](#discount) | Details about the final discount amount for the base product, including discounts on options. |
+| `id` - [`ID!`](#id) | The unique ID for a &#x60;CreditMemoItemInterface&#x60; object. |
+| `order_item` - [`OrderItemInterface`](#orderiteminterface) | The order item the credit memo is applied to. |
+| `product_name` - [`String`](#string) | The name of the base product. |
+| `product_sale_price` - [`Money!`](#money) | The sale price for the base product, including selected options. |
+| `product_sku` - [`String!`](#string) | The SKU of the base product. |
+| `quantity_refunded` - [`Float`](#float) | The number of refunded items. |
+
+#### Possible Types
+
+| CreditMemoItemInterface Types |
+|----------------|
+| [`BundleCreditMemoItem`](#bundlecreditmemoitem) |
+| [`CreditMemoItem`](#creditmemoitem) |
+| [`DownloadableCreditMemoItem`](#downloadablecreditmemoitem) |
+| [`GiftCardCreditMemoItem`](#giftcardcreditmemoitem) |
+
+#### Example
+
+```json
+{
+  "custom_attributes": [CustomAttribute],
+  "discounts": [Discount],
+  "id": 4,
+  "order_item": OrderItemInterface,
+  "product_name": "xyz789",
+  "product_sale_price": Money,
+  "product_sku": "xyz789",
+  "quantity_refunded": 123.45
+}
+```
+
+<HorizontalLine />
+
+### CreditMemoOutput
+
+Contains details about the credit memo after adding custom attributes to it.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `credit_memo` - [`CreditMemo!`](#creditmemo) | The custom attributes to credit memo have been added. |
+
+#### Example
+
+```json
+{"credit_memo": CreditMemo}
+```
+
+<HorizontalLine />
+
+### CreditMemoTotal
+
+Contains credit memo price details.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `adjustment` - [`Money!`](#money) | An adjustment manually applied to the order. |
+| `base_grand_total` - [`Money!`](#money) | The final base grand total amount in the base currency. |
+| `discounts` - [`[Discount]`](#discount) | The applied discounts to the credit memo. |
+| `grand_total` - [`Money!`](#money) | The final total amount, including shipping, discounts, and taxes. |
+| `shipping_handling` - [`ShippingHandling`](#shippinghandling) | Details about the shipping and handling costs for the credit memo. |
+| `subtotal` - [`Money!`](#money) | The subtotal of the invoice, excluding shipping, discounts, and taxes. |
+| `taxes` - [`[TaxItem]`](#taxitem) | The credit memo tax details. |
+| `total_shipping` - [`Money!`](#money) | The shipping amount for the credit memo. |
+| `total_tax` - [`Money!`](#money) | The amount of tax applied to the credit memo. |
+
+#### Example
+
+```json
+{
+  "adjustment": Money,
+  "base_grand_total": Money,
+  "discounts": [Discount],
+  "grand_total": Money,
+  "shipping_handling": ShippingHandling,
+  "subtotal": Money,
+  "taxes": [TaxItem],
+  "total_shipping": Money,
+  "total_tax": Money
+}
+```
+
+<HorizontalLine />
+
+### Currency
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `available_currency_codes` - [`[String]`](#string) | An array of three-letter currency codes accepted by the store, such as USD and EUR. |
+| `base_currency_code` - [`String`](#string) | The base currency set for the store, such as USD. |
+| `base_currency_symbol` - [`String`](#string) | The symbol for the specified base currency, such as $. |
+| `default_display_currency_code` - [`String`](#string) | The currency that is displayed by default, such as USD. |
+| `default_display_currency_symbol` - [`String`](#string) | The currency symbol that is displayed by default, such as $. |
+| `exchange_rates` - [`[ExchangeRate]`](#exchangerate) | An array of exchange rates for currencies defined in the store. |
+
+#### Example
+
+```json
+{
+  "available_currency_codes": ["abc123"],
+  "base_currency_code": "xyz789",
+  "base_currency_symbol": "xyz789",
+  "default_display_currency_code": "abc123",
+  "default_display_currency_symbol": "xyz789",
+  "exchange_rates": [ExchangeRate]
+}
+```
+
+<HorizontalLine />
+
+### CurrencyEnum
+
+The list of available currency codes.
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `AFN` |  |
+| `ALL` |  |
+| `AZN` |  |
+| `DZD` |  |
+| `AOA` |  |
+| `ARS` |  |
+| `AMD` |  |
+| `AWG` |  |
+| `AUD` |  |
+| `BSD` |  |
+| `BHD` |  |
+| `BDT` |  |
+| `BBD` |  |
+| `BYN` |  |
+| `BZD` |  |
+| `BMD` |  |
+| `BTN` |  |
+| `BOB` |  |
+| `BAM` |  |
+| `BWP` |  |
+| `BRL` |  |
+| `GBP` |  |
+| `BND` |  |
+| `BGN` |  |
+| `BUK` |  |
+| `BIF` |  |
+| `KHR` |  |
+| `CAD` |  |
+| `CVE` |  |
+| `CZK` |  |
+| `KYD` |  |
+| `GQE` |  |
+| `CLP` |  |
+| `CNY` |  |
+| `COP` |  |
+| `KMF` |  |
+| `CDF` |  |
+| `CRC` |  |
+| `HRK` |  |
+| `CUP` |  |
+| `DKK` |  |
+| `DJF` |  |
+| `DOP` |  |
+| `XCD` |  |
+| `EGP` |  |
+| `SVC` |  |
+| `ERN` |  |
+| `EEK` |  |
+| `ETB` |  |
+| `EUR` |  |
+| `FKP` |  |
+| `FJD` |  |
+| `GMD` |  |
+| `GEK` |  |
+| `GEL` |  |
+| `GHS` |  |
+| `GIP` |  |
+| `GTQ` |  |
+| `GNF` |  |
+| `GYD` |  |
+| `HTG` |  |
+| `HNL` |  |
+| `HKD` |  |
+| `HUF` |  |
+| `ISK` |  |
+| `INR` |  |
+| `IDR` |  |
+| `IRR` |  |
+| `IQD` |  |
+| `ILS` |  |
+| `JMD` |  |
+| `JPY` |  |
+| `JOD` |  |
+| `KZT` |  |
+| `KES` |  |
+| `KWD` |  |
+| `KGS` |  |
+| `LAK` |  |
+| `LVL` |  |
+| `LBP` |  |
+| `LSL` |  |
+| `LRD` |  |
+| `LYD` |  |
+| `LTL` |  |
+| `MOP` |  |
+| `MKD` |  |
+| `MGA` |  |
+| `MWK` |  |
+| `MYR` |  |
+| `MVR` |  |
+| `LSM` |  |
+| `MRO` |  |
+| `MUR` |  |
+| `MXN` |  |
+| `MDL` |  |
+| `MNT` |  |
+| `MAD` |  |
+| `MZN` |  |
+| `MMK` |  |
+| `NAD` |  |
+| `NPR` |  |
+| `ANG` |  |
+| `NZD` |  |
+| `NIC` |  |
+| `NGN` |  |
+| `KPW` |  |
+| `NOK` |  |
+| `OMR` |  |
+| `PKR` |  |
+| `PAB` |  |
+| `PGK` |  |
+| `PYG` |  |
+| `PEN` |  |
+| `PHP` |  |
+| `PLN` |  |
+| `QAR` |  |
+| `RHD` |  |
+| `RON` |  |
+| `RUB` |  |
+| `RWF` |  |
+| `SHP` |  |
+| `STD` |  |
+| `SAR` |  |
+| `RSD` |  |
+| `SCR` |  |
+| `SLL` |  |
+| `SGD` |  |
+| `SKK` |  |
+| `SBD` |  |
+| `SOS` |  |
+| `ZAR` |  |
+| `KRW` |  |
+| `LKR` |  |
+| `SDG` |  |
+| `SRD` |  |
+| `SZL` |  |
+| `SEK` |  |
+| `CHF` |  |
+| `SYP` |  |
+| `TWD` |  |
+| `TJS` |  |
+| `TZS` |  |
+| `THB` |  |
+| `TOP` |  |
+| `TTD` |  |
+| `TND` |  |
+| `TMM` |  |
+| `USD` |  |
+| `UGX` |  |
+| `UAH` |  |
+| `AED` |  |
+| `UYU` |  |
+| `UZS` |  |
+| `VUV` |  |
+| `VEB` |  |
+| `VEF` |  |
+| `VND` |  |
+| `CHE` |  |
+| `CHW` |  |
+| `XOF` |  |
+| `WST` |  |
+| `YER` |  |
+| `ZMK` |  |
+| `ZWD` |  |
+| `TRY` |  |
+| `AZM` |  |
+| `ROL` |  |
+| `TRL` |  |
+| `XPF` |  |
+
+#### Example
+
+```json
+""AFN""
+```
+
+<HorizontalLine />
+
+### CustomAttribute
+
+Specifies the custom attribute code and value.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `attribute_code` - [`String`](#string) | The custom attribute code. |
+| `value` - [`String`](#string) | The custom attribute code value. |
+
+#### Example
+
+```json
+{
+  "attribute_code": "xyz789",
+  "value": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### CustomAttributeInput
+
+Defines a custom attribute.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `attribute_code` - [`String!`](#string) | Attribute Code. |
+| `value` - [`String!`](#string) | Attribute Value. |
+
+#### Example
+
+```json
+{
+  "attribute_code": "abc123",
+  "value": "xyz789"
+}
+```
+
+<HorizontalLine />
+
+### CustomAttributeMetadataInterface
+
+An interface containing fields that define the EAV attribute.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `code` - [`ID!`](#id) | The unique identifier for an attribute code. This value should be in lowercase letters without spaces. |
+| `default_value` - [`String`](#string) | Default attribute value. |
+| `entity_type` - [`AttributeEntityTypeEnum!`](#attributeentitytypeenum) | The type of entity that defines the attribute. |
+| `frontend_class` - [`String`](#string) | The frontend class of the attribute. |
+| `frontend_input` - [`AttributeFrontendInputEnum`](#attributefrontendinputenum) | The frontend input type of the attribute. |
+| `is_required` - [`Boolean!`](#boolean) | Whether the attribute value is required. |
+| `is_unique` - [`Boolean!`](#boolean) | Whether the attribute value must be unique. |
+| `label` - [`String`](#string) | The label assigned to the attribute. |
+| `options` - [`[CustomAttributeOptionInterface]!`](#customattributeoptioninterface) | Attribute options. |
+
+#### Possible Types
+
+| CustomAttributeMetadataInterface Types |
+|----------------|
+| [`AttributeMetadata`](#attributemetadata) |
+| [`CatalogAttributeMetadata`](#catalogattributemetadata) |
+| [`CustomerAttributeMetadata`](#customerattributemetadata) |
+| [`ReturnItemAttributeMetadata`](#returnitemattributemetadata) |
+
+#### Example
+
+```json
+{
+  "code": "4",
+  "default_value": "abc123",
+  "entity_type": "CATALOG_PRODUCT",
+  "frontend_class": "xyz789",
+  "frontend_input": "BOOLEAN",
+  "is_required": false,
+  "is_unique": false,
+  "label": "abc123",
+  "options": [CustomAttributeOptionInterface]
+}
+```
+
+<HorizontalLine />
+
+### CustomAttributeOptionInterface
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `is_default` - [`Boolean!`](#boolean) | Is the option value default. |
+| `label` - [`String!`](#string) | The label assigned to the attribute option. |
+| `value` - [`String!`](#string) | The attribute option value. |
+
+#### Possible Types
+
+| CustomAttributeOptionInterface Types |
+|----------------|
+| [`AttributeOptionMetadata`](#attributeoptionmetadata) |
+
+#### Example
+
+```json
+{
+  "is_default": true,
+  "label": "xyz789",
+  "value": "abc123"
+}
+```
+
+<HorizontalLine />
+
+### CustomConfigKeyValue
+
+A simple key value object.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `key` - [`String`](#string) |  |
+| `value` - [`String`](#string) |  |
+
+#### Example
+
+```json
+{
+  "key": "abc123",
+  "value": "abc123"
+}
+```
+
+<HorizontalLine />

@@ -1,12 +1,13 @@
 ---
 title: User Authentication
 description: Learn about User Authentication for REST API in Adobe Commerce as a Cloud Service.
-edition: saas
 keywords:
   - REST
   - Integration
---- 
- 
+---
+
+<Fragment src="../../includes/saas-only.md"/>
+
 # User authentication
 
 User authentication enables Commerce administrators to authenticate through Adobe's Identity Management System (IMS). This authentication flow is specifically designed for scenarios where API operations need to be executed with user-specific permissions. When using this method, all API calls are performed within the context of the authenticated admin user's permissions, as defined in the Adobe Admin Console.
@@ -17,7 +18,7 @@ Adobe provides three types of OAuth credentials for User Authentication with dif
 1. **OAuth Single Page App (SPA)**: For browser-based JavaScript applications
 1. **OAuth Native App**: For device-native applications (iOS, Android, desktop)
 
-Each credential type has specific security considerations and implementation requirements. For detailed implementation guidance, see the [User Authentication Guide](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/).
+Each credential type has specific security considerations and implementation requirements. For detailed implementation guidance, see the [User Authentication Guide](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation).
 
 ## Prerequisites
 
@@ -54,7 +55,7 @@ The Adobe Developer Console provides a straightforward workflow:
 
 ### Step 2. Authorization flow
 
-**Building authorization URL**
+#### Building authorization URL
 
 The authorization URL is used to initiate the authentication process. It includes the client ID, redirect URI, scopes, and a state parameter for security. Here is the example for a web app:
 
@@ -72,7 +73,7 @@ Replace the following placeholders with your values:
   AdobeID,openid,email,profile,additional_info.roles,additional_info.projectedProductContext,commerce.accs
   ```
 
-**Handling authorization response**
+#### Handling authorization response
 
 Redirect handling:
 
@@ -98,18 +99,18 @@ Authorization code to access token:
 1. Make a `POST` request to the token endpoint.
 
    **Request**:
-  
+
    ```http
    POST https://ims-na1.adobelogin.com/ims/token/v3
    Authorization: Basic {{base64(client_id:client_secret)}}
    Content-Type: application/x-www-form-urlencoded
-   
+
    code={{auth_code}}&grant_type=authorization_code
-   
+
    ```
-  
+
    **Response**:
-  
+
    ```json
    {
     "access_token": "{ACCESS_TOKEN}",

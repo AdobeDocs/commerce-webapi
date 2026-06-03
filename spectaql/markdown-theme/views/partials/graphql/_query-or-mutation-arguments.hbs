@@ -1,0 +1,11 @@
+{{#if args}}
+
+#### Arguments
+
+| Name | Description |
+|------|-------------|
+{{#each args}}
+| `{{name}}` - {{{mdTypeLink . codify=true}}} | {{singleLine description}}{{#if defaultValue}} Default: `{{defaultValue}}`{{/if}} |
+{{/each}}
+
+{{/if}}

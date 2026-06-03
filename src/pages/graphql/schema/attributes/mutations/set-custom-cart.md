@@ -1,12 +1,11 @@
 ---
 title: setCustomAttributesOnCart mutation
+description: This mutation is automatically available on Adobe Commerce as a Cloud Service (SaaS) projects. Adobe Commerce on-premises and Cloud infrastructure (PaaS) p...
 ---
-
-import CustomAttributesAvailability from '/src/_includes/graphql/custom-attribute-availability.md'
 
 # setCustomAttributesOnCart mutation
 
-<CustomAttributesAvailability />
+<Fragment src="../../../../includes/graphql/custom-attribute-availability.md"/>
 
 The `setCustomAttributesOnCart` mutation sets custom attributes on a cart. The mutation accepts a cart ID and an array of custom attribute key/value pairs. It returns the updated cart.  All ID values are treated as strings.
 
@@ -30,7 +29,7 @@ mutation {
 
 The `setCustomAttributesOnCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-setCustomAttributesOnCart)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-setCustomAttributesOnCart)
 
 ## Example usage
 

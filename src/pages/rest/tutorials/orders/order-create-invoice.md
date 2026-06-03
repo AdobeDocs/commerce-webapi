@@ -1,16 +1,17 @@
 ---
 title: Step 8. Create an invoice
 description: In this step of the tutorial you will create an invoice
-edition: paas
 keywords:
   - REST
---- 
- 
+---
+
+<Fragment src="../../../includes/paas-only.md"/>
+
 # Step 8. Create an invoice
 
 You create an invoice after you receive payment for an order. In this example, the order was paid offline via a bank transfer. Therefore, you must tell Adobe Commerce that payment for the order has been captured.
 
-### Capture payment
+## Capture payment
 
 This example creates a full invoice. You can create a partial invoice by adding to the payload an array of items to be invoiced.
 
@@ -39,7 +40,7 @@ where `3` is the `orderid`
 
 An invoice `id`, such as `3`.
 
-### View the invoice
+## View the invoice
 
 An invoice is structurally similar to an order, but an order contains more details.
 
@@ -61,8 +62,7 @@ Not applicable
 
 You will use the `order_item_id` values to create a shipment in the next step.
 
-<details>
-      <summary><b>Show code sample</b></summary>
+<Details slots="content" summary="Show code sample" />
 
 ```json
 {
@@ -282,8 +282,6 @@ You will use the `order_item_id` values to create a shipment in the next step.
 }
 ```
 
-</details>
-
-### Verify this step
+## Verify this step
 
 Log in to Admin. Click **Sales** > **Invoices**. The invoice is displayed in the grid. The status is Paid. Then click **Sales** > **Orders**. The status is Processing.

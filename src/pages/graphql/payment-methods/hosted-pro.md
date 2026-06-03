@@ -1,11 +1,12 @@
 ---
 title: PayPal Website Payments Pro Hosted Solution payment method
 description: Learn how to use the GraphQL API mutation for the PayPal Website Payments Pro Hosted payment solution.
-edition: paas
 keywords:
   - GraphQL
   - Payments
 ---
+
+<Fragment src="../../includes/paas-only.md"/>
 
 # PayPal Website Payments Pro Hosted Solution payment method
 
@@ -24,19 +25,15 @@ Pro Hosted Solution Integration Guide](https://www.paypalobjects.com/webstatic/e
 
 The following diagram shows the workflow for placing an order when Website Payments Pro Hosted Solution is the selected payment method.
 
-![PayPal Website Payments Pro Hosted Solution sequence diagram](../../_images/graphql/paypal-hosted-pro.svg)
+![PayPal Website Payments Pro Hosted Solution sequence diagram](../../images/graphql/paypal-hosted-pro.png)
 
-import HostedProWorkflow from '/src/_includes/graphql/payment-methods/hosted-pro-workflow.md'
-
-<HostedProWorkflow />
+<Fragment src="../../includes/graphql/payment-methods/hosted-pro-workflow.md"/>
 
 ## `setPaymentMethodOnCart` mutation
 
 When you set the payment method for a Website Payments Pro Hosted Solution, you must set the `code` attribute to `hosted_pro`. In addition, the payload must contain a `hosted_pro` object, which defines the following attributes:
 
-import HostedProAttributes from '/src/_includes/graphql/payment-methods/hosted-pro-attributes.md'
-
-<HostedProAttributes />
+<Fragment src="../../includes/graphql/payment-methods/hosted-pro-attributes.md"/>
 
 ### Example usage
 

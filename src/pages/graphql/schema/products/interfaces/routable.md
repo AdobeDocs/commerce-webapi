@@ -1,5 +1,6 @@
 ---
 title: RoutableInterface attributes
+description: Some entities are "routable", meaning that they have URLs and can serve as the model for a rendered page. The following implementations of the RoutableInte...
 ---
 
 # RoutableInterface attributes

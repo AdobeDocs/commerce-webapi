@@ -5,9 +5,7 @@ keywords:
   - REST
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../includes/commerce-only.md"/>
 
 # Multiple coupons
 

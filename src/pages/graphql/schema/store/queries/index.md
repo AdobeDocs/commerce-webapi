@@ -1,5 +1,6 @@
 ---
 title: Store queries
+description: The queries in the store schema fetch store configuration data and content blocks.
 ---
 
 # Store queries

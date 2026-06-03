@@ -1,10 +1,9 @@
 ---
 title: deleteWishlist mutation
+description: The deleteWishlist mutation deletes the specified wish list. In Adobe Commerce, you cannot delete the customer's default (first) wish list. This mutation i...
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # deleteWishlist mutation
 
@@ -24,9 +23,9 @@ mutation {
 
 The `deleteWishlist` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-deleteWishlist)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-deleteWishlist)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-deleteWishlist)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-deleteWishlist)
 
 ## Example usage
 

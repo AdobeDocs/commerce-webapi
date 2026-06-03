@@ -1,5 +1,6 @@
 ---
 title: Order interfaces
+description: Use the following interfaces to return details about customer orders:
 ---
 
 # Orders interfaces

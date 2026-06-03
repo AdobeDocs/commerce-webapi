@@ -81,27 +81,27 @@ query {
 
 The `VaultConfigOutput` object contains the following attribute:
 
-Attribute |  Data Type | Description
---- | --- | ---
-`credit_card` | VaultCreditCardConfig | Credit card vault method configuration
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `credit_card` | VaultCreditCardConfig | Credit card vault method configuration |
 
 ### `VaultCreditCardConfig` attributes
 
 The `VaultCreditCardConfig` object provides details about the credit card vault method configuration
 
-Attribute |  Data Type | Description
---- | --- | ---
-`is_vault_enabled` | Boolean | Indicates whether card vaulting is enabled
-`three_ds_mode` | ThreeDSMode | Indicates which 3D Secure authentication mode is in use. The possible values are `OFF`, `SCA_WHEN_REQUIRED`, `SCA_ALWAYS`
-`sdk_params` | [SDKParams] | PayPal parameters required to load the PayPal JavaScript SDK
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `is_vault_enabled` | Boolean | Indicates whether card vaulting is enabled |
+| `three_ds_mode` | ThreeDSMode | Indicates which 3D Secure authentication mode is in use. The possible values are `OFF`, `SCA_WHEN_REQUIRED`, `SCA_ALWAYS` |
+| `sdk_params` | [SDKParams] | PayPal parameters required to load the PayPal JavaScript SDK |
 
 #### `SDKParams` attributes
 
 The `SDKParams` object provides details about the SDK parameters:
 
-Attribute |  Data Type | Description
---- | --- | ---
-`name` | String | The name of the SDK parameter
-`value` | String | The value of the SDK parameter
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `name` | String | The name of the SDK parameter |
+| `value` | String | The value of the SDK parameter |
 
 These values come from [PayPal JavaScript SDK](https://developer.paypal.com/sdk/js/reference/).

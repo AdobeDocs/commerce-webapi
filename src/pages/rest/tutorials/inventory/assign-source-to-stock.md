@@ -1,15 +1,16 @@
 ---
 title: Step 4. Link stocks and sources
 description: In this step of the tutorial you will link stocks and sources together
-edition: paas
 keywords:
   - Inventory
   - REST
 ---
- 
+
+<Fragment src="../../../includes/paas-only.md"/>
+
 # Step 4. Link stocks and sources
 
-This step links the sources we created in [Step 2. Create sources](/rest/tutorials/inventory/create-sources) with the stocks we created in [Step 3. Create stocks](/rest/tutorials/inventory/create-stock/).
+This step links the sources we created in [Step 2. Create sources](/rest/tutorials/inventory/create-sources.md) with the stocks we created in [Step 3. Create stocks](/rest/tutorials/inventory/create-stock.md).
 
 Each stock can be assigned one or more sources. Adobe Commerce uses these associations to calculate the virtual aggregated inventory per product.
 

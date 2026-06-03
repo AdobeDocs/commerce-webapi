@@ -1,0 +1,6 @@
+# Extends the root config and disables MD051 for include fragments in this
+# directory. These files are transcluded into parent pages that contain the
+# referenced headings, so anchor links are valid at render time but unresolvable
+# by the linter in isolation.
+extends: "../../../../../.markdownlint.yml"
+MD051: false

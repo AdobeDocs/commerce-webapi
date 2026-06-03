@@ -1,7 +1,10 @@
 ---
 title: categoryList query
-edition: paas
+description: The categoryList query searches for categories that match the criteria specified in filters. It replaces the deprecated category query, which allowed you t...
+
 ---
+
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # categoryList query
 

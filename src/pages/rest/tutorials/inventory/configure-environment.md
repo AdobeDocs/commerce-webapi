@@ -1,11 +1,12 @@
 ---
 title: Step 1. Configure your environment
 description: In this step of the tutorial you will configure your environment
-edition: paas
 keywords:
   - Inventory
   - REST
---- 
+---
+
+<Fragment src="../../../includes/paas-only.md"/>
 
 # Step 1. Configure your environment
 
@@ -21,12 +22,12 @@ If an order contains one or more physical products, then the customer must eithe
 
 Since we are not actually shipping any products in this tutorial, we do not need to set up an account with a shipping company such as UPS or Federal Express. Instead, we can use the offline delivery methods that are configured by default.
 
-Shipping type | Configuration name | Enabled by default?
---- | --- | ---
-Flat rate | `flatrate` | Yes
-Table rate | `tablerate` | Yes
-Free shipping | `freeshipping` | No
-In-store pickup | `pickup`| No
+| Shipping type | Configuration name | Enabled by default? |
+| --- | --- | --- |
+| Flat rate | `flatrate` | Yes |
+| Table rate | `tablerate` | Yes |
+| Free shipping | `freeshipping` | No |
+| In-store pickup | `pickup`| No |
 
 To change which offline delivery methods are available:
 
@@ -38,13 +39,13 @@ To change which offline delivery methods are available:
 
 Since the Luma store is for demonstration purposes only, it is not set up to handle credit card payments. However, it can simulate any of the following offline payment methods:
 
-Payment type | Configuration name | Enabled by default?
---- | --- | ---
-Check/Money Order | `checkmo` | Yes
-Bank Transfer Payment | `banktransfer` | No
-Cash on Delivery | `cashondelivery` | No
-Purchase Order | `purchaseorder` | No
-Zero Subtotal Checkout | `free` | Yes
+| Payment type | Configuration name | Enabled by default? |
+| --- | --- | --- |
+| Check/Money Order | `checkmo` | Yes |
+| Bank Transfer Payment | `banktransfer` | No |
+| Cash on Delivery | `cashondelivery` | No |
+| Purchase Order | `purchaseorder` | No |
+| Zero Subtotal Checkout | `free` | Yes |
 
 In this tutorial, configure Magento to accept bank transfer payments. To allow bank transfer payments (or any other offline payment method) as a payment method:
 
@@ -62,7 +63,7 @@ This tutorial uses an offline method to calculate distances for shipping and in-
 
    `bin/magento inventory-geonames:import us`
 
-   [Inventory CLI reference](https://experienceleague.adobe.com/docs/commerce-admin/inventory/cli.html#import-geocodes) provides additional information about this command.
+   [Inventory CLI reference](https://experienceleague.adobe.com/en/docs/commerce-admin/inventory/cli#import-geocodes) provides additional information about this command.
 
 ## Deactivate a cart price rule
 

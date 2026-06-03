@@ -1,5 +1,6 @@
 ---
 title: estimateShippingMethods mutation
+description: The estimateShippingMethods mutation returns information about estimated cost of available shipping methods, depending on location.
 ---
 
 # estimateShippingMethods mutation
@@ -21,9 +22,9 @@ mutation {
 
 The `estimateShippingMethods` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-estimateShippingMethods)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-estimateShippingMethods)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-estimateShippingMethods)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-estimateShippingMethods)
 
 ## Example usage
 

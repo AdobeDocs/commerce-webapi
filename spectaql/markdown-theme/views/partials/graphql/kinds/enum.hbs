@@ -1,0 +1,22 @@
+{{#if description}}
+{{{description}}}
+
+{{/if}}
+{{#if enumValues}}
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+{{#each enumValues}}
+| `{{name}}` | {{singleLine description}}{{#if (and deprecationReason (not @root.info.x-hideDeprecationReason))}} *(Deprecated: {{singleLine deprecationReason}})*{{/if}} |
+{{/each}}
+
+{{/if}}
+{{#if example}}
+#### Example
+
+```json
+{{{jsonStringify example}}}
+```
+
+{{/if}}

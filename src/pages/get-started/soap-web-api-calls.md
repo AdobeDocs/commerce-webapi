@@ -1,8 +1,9 @@
 ---
 title: Use SOAP Services
-edition: paas
 description: A description of available SOAP services and their conventions
 ---
+
+<Fragment src="../includes/paas-only.md"/>
 
 # Using SOAP services
 
@@ -18,8 +19,8 @@ To consume several services, you must specify them in the WSDL endpoint URL.
 
 | Service | WSDL endpoint URL | Available services |
 | --------- | ---------- | ------------------------------------------ |
-| customer | http://magentohost/soap?wsdl&services=customerCustomerRepositoryV1 | \Magento\Customer\Api\Data\CustomerInterface |
-| customer, catalogProduct | http://magentohost/soap/custom_store?wsdl&services=customerCustomerRepositoryV1,catalogProductRepositoryV1 | \Magento\Customer\Api\Data\CustomerInterface, \Magento\Catalog\Api\Data\ProductInterface |
+| customer | [http://magentohost/soap?wsdl&services=customerCustomerRepositoryV1](http://magentohost/soap?wsdl&services=customerCustomerRepositoryV1) | \Magento\Customer\Api\Data\CustomerInterface |
+| customer, catalogProduct | [http://magentohost/soap/custom_store?wsdl&services=customerCustomerRepositoryV1,catalogProductRepositoryV1](http://magentohost/soap/custom_store?wsdl&services=customerCustomerRepositoryV1,catalogProductRepositoryV1) | \Magento\Customer\Api\Data\CustomerInterface, \Magento\Catalog\Api\Data\ProductInterface |
 
 The WSDL URL follows the following pattern:
 
@@ -67,7 +68,7 @@ Service names use the following conventions:
 
 ## Authentication
 
-Protected SOAP resources can be accessed using bearer tokens (OAuth access tokens) over HTTP. Access tokens are strings representing an access authorization issued to the client. For more information, see [OAuth-based authentication](./authentication/gs-authentication-oauth.md)
+Protected SOAP resources can be accessed using bearer tokens (OAuth access tokens) over HTTP. Access tokens are strings representing an access authorization issued to the client. For more information, see [OAuth-based authentication](authentication/gs-authentication-oauth.md)
 
 The following PHP script illustrates how to get an access token:
 
@@ -87,8 +88,8 @@ $soapClient = new SoapClient($wsdlUrl, ['version' => SOAP_1_2, 'stream_context' 
 $soapResponse = $soapClient->testModule1AllSoapAndRestV1Item($serviceArgs); ?>
 ```
 
-#### Related topics
+## Related topics
 
-*  [OAuth-based authentication](./authentication/gs-authentication-oauth.md)
+*  [OAuth-based authentication](authentication/gs-authentication-oauth.md)
 *  [Service contracts](https://developer.adobe.com/commerce/php/development/components/service-contracts/)
 *  [SOAP Reference](soap-web-api-calls.md)

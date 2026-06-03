@@ -1,10 +1,9 @@
 ---
 title: applyStoreCreditToCart mutation
+description: The applyStoreCreditToCart mutation applies store credit to the specified cart. Store credit must be enabled on the store to run this mutation.
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # applyStoreCreditToCart mutation
 
@@ -26,9 +25,9 @@ If the amount of available store credit equals or exceeds the grand total of the
 
 The `applyStoreCreditToCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-applyStoreCreditToCart)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-applyStoreCreditToCart)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-applyStoreCreditToCart)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-applyStoreCreditToCart)
 
 ## Example usage
 
@@ -96,8 +95,8 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Could not find a cart with ID \"xxxxx\"` | The ID provided in the `cart_id` field is invalid or the cart does not exist for the customer.
-`The cart isn't active` | The cart with the given cart ID is unavailable, because the items have been purchased and the cart ID becomes inactive.
-`Field ApplyStoreCreditToCartInput.cart_id of required type String! was not provided` | The value specified in the `ApplyStoreCreditToCartInput.cart_id` argument is empty.
+| Error | Description |
+| --- | --- |
+| `Could not find a cart with ID \"xxxxx\"` | The ID provided in the `cart_id` field is invalid or the cart does not exist for the customer. |
+| `The cart isn't active` | The cart with the given cart ID is unavailable, because the items have been purchased and the cart ID becomes inactive. |
+| `Field ApplyStoreCreditToCartInput.cart_id of required type String! was not provided` | The value specified in the `ApplyStoreCreditToCartInput.cart_id` argument is empty. |

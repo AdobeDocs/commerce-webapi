@@ -3,8 +3,7 @@ title: Search using REST endpoints
 description: How to search using REST endpoints with examples
 keywords:
   - REST
---- 
-import * as Vars from '../../../data/vars.js';
+---
 
 # Search using REST endpoints
 
@@ -24,25 +23,25 @@ where:
 *  `value` specifies the value to search for.
 *  `condition_type` is one of the following values:
 
-Condition | Notes
---- | ---
-`eq` | Equals
-`finset` | A value within a set of values
-`from` | The beginning of a range. Must be used with `to`.
-`gt` | Greater than
-`gteq` |  Greater than or equal
-`in` | In. The `value` can contain a comma-separated list of values.
-`like` | Like. The `value` can contain the SQL wildcard characters when `like` is specified.
-`lt` | Less than
-`lteq` | Less than or equal
-`moreq` | More or equal
-`neq` | Not equal
-`nfinset` | A value that is not within a set of values.
-`nin` | Not in. The `value` can contain a comma-separated list of values.
-`nlike` | Not like
-`notnull` | Not null
-`null` | Null
-`to` | The end of a range. Must be used with `from`.
+| Condition | Notes |
+| --- | --- |
+| `eq` | Equals |
+| `finset` | A value within a set of values |
+| `from` | The beginning of a range. Must be used with `to`. |
+| `gt` | Greater than |
+| `gteq` |  Greater than or equal |
+| `in` | In. The `value` can contain a comma-separated list of values. |
+| `like` | Like. The `value` can contain the SQL wildcard characters when `like` is specified. |
+| `lt` | Less than |
+| `lteq` | Less than or equal |
+| `moreq` | More or equal |
+| `neq` | Not equal |
+| `nfinset` | A value that is not within a set of values. |
+| `nin` | Not in. The `value` can contain a comma-separated list of values. |
+| `nlike` | Not like |
+| `notnull` | Not null |
+| `null` | Null |
+| `to` | The end of a range. Must be used with `from`. |
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -61,7 +60,7 @@ The following sections provide examples of each type of search. These examples u
 
 ## Simple search
 
-The <Vars.sitedatavarce/> sample data uses the `category_gear` field to describe the categories for each item listed under Gear on sample store. Each item can be assigned to multiple categories. Electronics are assigned the code 86. The following example returns all gear tagged as electronics.
+The Magento Open Source sample data uses the `category_gear` field to describe the categories for each item listed under Gear on sample store. Each item can be assigned to multiple categories. Electronics are assigned the code 86. The following example returns all gear tagged as electronics.
 
 <CodeBlock slots="heading, code" repeat="2" languages="HTTP, HTTP" />
 
@@ -326,9 +325,13 @@ This example shows how to use search criteria to determine the sort order and at
 
 **Endpoint:**
 
-&#8203;<Edition name="paas" /> `GET https://<host>/rest/<store_code>/V1/orders/`
+<Fragment src="../../includes/paas-only.md"/>
 
-&#8203;<Edition name="saas" /> `GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/orders/`
+`GET https://<host>/rest/<store_code>/V1/orders/`
+
+<Fragment src="../../includes/saas-only.md"/>
+
+`GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/orders/`
 
 **Headers:**
 
@@ -338,11 +341,11 @@ This example shows how to use search criteria to determine the sort order and at
 
 **Parameters:**
 
-Parameter | Value | Description
---- | --- | ---
-searchCriteria[filter_groups][0][filters][0][field] | status | Attribute name to filter
-searchCriteria[filter_groups][0][filters][0][value] | pending | Attribute value to filter
-fields | items[increment_id,entity_id] | Attributes to return in the response. If you do not specify this parameter, all attributes will be returned.
+| Parameter | Value | Description |
+| --- | --- | --- |
+| `searchCriteria[filter_groups][0][filters][0][field]` | status | Attribute name to filter |
+| `searchCriteria[filter_groups][0][filters][0][value]` | pending | Attribute value to filter |
+| `fields` | items[increment_id,entity_id] | Attributes to return in the response. If you do not specify this parameter, all attributes will be returned. |
 
 **Payload:**
 

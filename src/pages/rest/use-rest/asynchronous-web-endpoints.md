@@ -2,19 +2,21 @@
 title: Asynchronous web endpoints
 description: Learn about asynchronous web points, how they are used and how to define store scopes
 contributor_name: comwrap GmbH
-contributor_link: http://comwrap.com/
+contributor_link: https://comwrap.com/en/
 keywords:
   - REST
---- 
-import * as Vars from '../../../data/vars.js';
+---
+
 
 # Asynchronous web endpoints
 
 An asynchronous web endpoint intercepts messages to a Web API and writes them to the message queue. Each time the system accepts such an API request, it generates a UUID identifier. Adobe Commerce includes this UUID when it adds the message to the queue. Then, a consumer reads the messages from the queue and executes them one-by-one.
 
-<InlineAlert variant="success" slots="text"/>
+<InlineAlert variant="success" slots="text1, text2"/>
 
-&#8203;<Edition name="paas" /> Use the `bin/magento queue:consumers:start async.operations.all` command to start the consumer that handles asynchronous and bulk API messages.
+[PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+Use the `bin/magento queue:consumers:start async.operations.all` command to start the consumer that handles asynchronous and bulk API messages.
 
 Commerce supports the following types of asynchronous requests:
 
@@ -29,14 +31,18 @@ GET requests are not supported. Although Commerce does not currently implement a
 
 The route to all asynchronous calls varies between platforms:
 
-&#8203;<Edition name="paas" /> In Adobe Commerce on Cloud and on-premises projects, the route contains the prefix `/async`, added before `/V1` of a standard synchronous endpoint. For example:
+<Fragment src="../../includes/paas-only.md"/>
+
+In Adobe Commerce on Cloud and on-premises projects, the route contains the prefix `/async`, added before `/V1` of a standard synchronous endpoint. For example:
 
 ```http
 POST https://<host>/rest/<store-view-code>/async/V1/products
 PUT https://<host>/rest/<store-view-code>/async/V1/products/:sku
 ```
 
-&#8203;<Edition name="saas" /> In Adobe Commerce as a Cloud Service,  the `/async` segment occurs after the `V1` segment of the route. For example:
+<Fragment src="../../includes/saas-only.md"/>
+
+In Adobe Commerce as a Cloud Service,  the `/async` segment occurs after the `V1` segment of the route. For example:
 
 ```http
 POST https://<server>.api.commerce.adobe.com/<tenant-id>/V1/async/products
@@ -45,21 +51,26 @@ PUT https://<server>.api.commerce.adobe.com/<tenant-id>/V1/async/products/:sku
 
 The response of an asynchronous request contains the following fields:
 
-Field name | Data type | Description
---- | --- | ---
-`bulk_uuid` | String | A generated universally unique identifier.
-`request_items` | Object | An array containing information about the status of the asynchronous request.
-`id` | Integer | A generated ID that identifies the request.
-`data_hash` | String | SHA256 encoded content of incoming message.
-`status` | String | Reserved for future use. Currently, the value is always `accepted`.
-`errors` | Boolean | Reserved for future use. Currently, the value is always `false`. If an error occurs, the system provides all error-related information as a standard `webapi` exception.
+| Field name | Data type | Description |
+| --- | --- | --- |
+| `bulk_uuid` | String | A generated universally unique identifier. |
+| `request_items` | Object | An array containing information about the status of the asynchronous request. |
+| `id` | Integer | A generated ID that identifies the request. |
+| `data_hash` | String | SHA256 encoded content of incoming message. |
+| `status` | String | Reserved for future use. Currently, the value is always `accepted`. |
+| `errors` | Boolean | Reserved for future use. Currently, the value is always `false`. If an error occurs, the system provides all error-related information as a standard `webapi` exception. |
 
 ## Sample usage
 
 The following call asynchronously changes the price of the product that has a `sku` of `24-MB01`:
 
-&#8203;<Edition name="paas" /> `PUT https://<host>/rest/<store-view-code>/async/V1/products/24-MB01`
-&#8203;<Edition name="saas" /> `PUT https://<server>.api.commerce.adobe.com/<tenant-id>/V1/async/products/24-MB01`
+<Fragment src="../../includes/paas-only.md"/>
+
+`PUT https://<host>/rest/<store-view-code>/async/V1/products/24-MB01`
+
+<Fragment src="../../includes/saas-only.md"/>
+
+`PUT https://<server>.api.commerce.adobe.com/<tenant-id>/V1/async/products/24-MB01`
 
 ### Payload
 
@@ -73,7 +84,7 @@ The following call asynchronously changes the price of the product that has a `s
 
 ### Response
 
-Commerce generates a `bulk_uuid` for each asynchronous request. Use the `bulk_uuid` to determine the [operation status](/rest/use-rest/operation-status-endpoints/) of your request.
+Commerce generates a `bulk_uuid` for each asynchronous request. Use the `bulk_uuid` to determine the [operation status](/rest/use-rest/operation-status-endpoints.md) of your request.
 
 ```json
 {
@@ -91,7 +102,7 @@ Commerce generates a `bulk_uuid` for each asynchronous request. Use the `bulk_uu
 
 ## Store scopes
 
-<Edition name="paas" />
+<Fragment src="../../includes/paas-only.md"/>
 
 You can specify a store code (which is labeled in the Admin as store view code) in the route of an asynchronous endpoint so that it operates on a specific store, as shown below:
 
@@ -109,7 +120,9 @@ POST /all/async/V1/products
 PUT /all/async/V1/products/:sku
 ```
 
-&#8203;<Edition name="saas" />In Adobe Commerce as a Cloud Service, you must specify the store code in the `Store` header of the request.
+<Fragment src="../../includes/saas-only.md"/>
+
+In Adobe Commerce as a Cloud Service, you must specify the store code in the `Store` header of the request.
 
 ### Fallback and creating/updating objects when setting store scopes
 
@@ -119,3 +132,7 @@ The following rules apply when you create or update an object, such as a product
 *  If you do not set the store code while updating a product, then by fallback, Commerce updates values for the default store only.
 *  If you include the `all` parameter, then Commerce updates values for all store scopes (in case a particular store doesn't yet have its own value set).
 *  If `<store_code>` parameter is set, then values for only defined store will be updated.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to comwrap GmbH for contributing this topic!](https://comwrap.com/en/)

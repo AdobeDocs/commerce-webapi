@@ -6,15 +6,12 @@ keywords:
   - REST
 ---
 
-import * as Vars from '../../../data/vars.js';
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../includes/commerce-only.md"/>
 
 # B2B integrations
 
-Unlike the standard business-to-consumer model, <Vars.sitedatavarb2b/> (Business to Business) is designed to meet the needs of sellers (Commerce merchants) whose customers are primarily companies—possibly with complex organizational structures and multiple users with various roles and levels of permission.
+Unlike the standard business-to-consumer model, B2B for Adobe Commerce (Business to Business) is designed to meet the needs of sellers (Commerce merchants) whose customers are primarily companies—possibly with complex organizational structures and multiple users with various roles and levels of permission.
 
 There are two basic actors in B2B model:
 
@@ -31,34 +28,34 @@ The seller and a buyer representing a company can negotiate the price of an orde
 
 ## B2B Modules
 
-<p><Vars.sitedatavarb2b/> is a set of modules that are installed on top of <Vars.sitedatavaree/>. The following table lists the modules provided with B2B.</p>
+B2B for Adobe Commerce is a set of modules that are installed on top of Adobe Commerce. The following table lists the modules provided with B2B.
 
-Name | Description | REST enabled?
---- | --- | ---
-B2b | The base module for B2B. It also provides branding elements. | No
-BundleNegotiableQuote | Enables bundle products to be displayed in a negotiable quote in an B2B environment | No
-BundleRequisitionList | Enables bundle products to be displayed in a requisition list | No
-BundleSharedCatalog | Enables bundle products to be added to a shared catalog in an B2B environment. | No
-Company | Allows a seller to create a company account and assign multiple members of the company to the account. | Yes
-CompanyCredit | Adds the Payment on Account payment method for B2B companies. | Yes
-CompanyPayment | Allows a seller to configure which payment methods are available for B2B companies. | No
-ConfigurableNegotiableQuote | Enables configurable products to be displayed in a negotiable quote in an B2B environment | No
-ConfigurableRequisitionList | Enables configurable products to be displayed in a requisition list | No
-ConfigurableSharedCatalog |Enables configurable products to be added to a shared catalog in an B2B environment. | No
-GiftCardNegotiableQuote | Enables gift cards to be displayed in a negotiable quote in an B2B environment | No
-GiftCardRequisitionList | Enables gift cards to be displayed in a requisition list | No
-GiftCardSharedCatalog | Enables gift cards to be added to a shared catalog in an B2B environment. | No
-GroupedRequisitionList | Enables grouped products to be displayed in a requisition list | No
-GroupedSharedCatalog | Enables grouped products to be added to a shared catalog in an B2B environment. | No
-NegotiableQuote | Allows a buyer and a seller (admin user) to negotiate product and/or shipping prices before the buyer places an order. | Yes
-NegotiableQuoteSharedCatalog | Enables the `NegotiableQuote` module to interact with a `SharedCatalog` in an B2B environment. | No
-PurchaseOrder | Allows buyers and seller to create a purchase order. | Yes
-PurchaseOrderRule | Allows creating and enforcing approval rules for purchase orders. | No
-QuickOrder | Allows buyers to create a new order from a list of multiple SKUs. | No
-RequisitionList | Allows a buyer to create multiple lists of frequently-purchased items and use those lists for order placement. | No
-SharedCatalog | Defines the visibility of products and prices in the catalog and in B2B quotes for different company accounts. | Yes
+| Name | Description | REST enabled? |
+| --- | --- | --- |
+| B2b | The base module for B2B. It also provides branding elements. | No |
+| BundleNegotiableQuote | Enables bundle products to be displayed in a negotiable quote in an B2B environment | No |
+| BundleRequisitionList | Enables bundle products to be displayed in a requisition list | No |
+| BundleSharedCatalog | Enables bundle products to be added to a shared catalog in an B2B environment. | No |
+| Company | Allows a seller to create a company account and assign multiple members of the company to the account. | Yes |
+| CompanyCredit | Adds the Payment on Account payment method for B2B companies. | Yes |
+| CompanyPayment | Allows a seller to configure which payment methods are available for B2B companies. | No |
+| ConfigurableNegotiableQuote | Enables configurable products to be displayed in a negotiable quote in an B2B environment | No |
+| ConfigurableRequisitionList | Enables configurable products to be displayed in a requisition list | No |
+| ConfigurableSharedCatalog |Enables configurable products to be added to a shared catalog in an B2B environment. | No |
+| GiftCardNegotiableQuote | Enables gift cards to be displayed in a negotiable quote in an B2B environment | No |
+| GiftCardRequisitionList | Enables gift cards to be displayed in a requisition list | No |
+| GiftCardSharedCatalog | Enables gift cards to be added to a shared catalog in an B2B environment. | No |
+| GroupedRequisitionList | Enables grouped products to be displayed in a requisition list | No |
+| GroupedSharedCatalog | Enables grouped products to be added to a shared catalog in an B2B environment. | No |
+| NegotiableQuote | Allows a buyer and a seller (admin user) to negotiate product and/or shipping prices before the buyer places an order. | Yes |
+| NegotiableQuoteSharedCatalog | Enables the `NegotiableQuote` module to interact with a `SharedCatalog` in an B2B environment. | No |
+| PurchaseOrder | Allows buyers and seller to create a purchase order. | Yes |
+| PurchaseOrderRule | Allows creating and enforcing approval rules for purchase orders. | No |
+| QuickOrder | Allows buyers to create a new order from a list of multiple SKUs. | No |
+| RequisitionList | Allows a buyer to create multiple lists of frequently-purchased items and use those lists for order placement. | No |
+| SharedCatalog | Defines the visibility of products and prices in the catalog and in B2B quotes for different company accounts. | Yes |
 
 ## Related information
 
-- [Install the B2B extension](https://experienceleague.adobe.com/docs/commerce-admin/b2b/install.html)
-- [Getting started with <Vars.sitedatavarb2b/>](https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home)
+- [Install the B2B extension](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/install)
+- [Getting started with B2B for Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home)

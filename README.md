@@ -1,101 +1,103 @@
-# Adobe Commerce Developer Documentation
+# Adobe Commerce Web API Documentation
 
-Welcome! This site contains the latest Adobe Commerce and Magento Open Source developer documentation for ongoing releases of both products. For additional information, see our [Contribution Guide](https://developer.adobe.com/commerce/contributor/).
+This repository contains the code for the [Commerce Web API documentation](https://developer.adobe.com/commerce/webapi/) website. It is built using [Adobe Edge Delivery Services](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/overview) and deployed to [Adobe Developer](https://developer.adobe.com/commerce/webapi/).
 
-## Contributors
+The site covers REST, GraphQL, and SOAP APIs for Adobe Commerce and Magento Open Source, including API reference documentation for multiple release versions.
 
-Our goal is to provide the Adobe Commerce and Magento Open Source communities with comprehensive and quality technical documentation. We believe that to accomplish that goal we need experts from the community to share their knowledge with us and each other. We are thankful to all of our contributors for improving the documentation.
+## Quick start
 
-![Commerce contributors](https://raw.githubusercontent.com/wiki/magento/magento2/images/dev_docs_contributors.png)
+For local development, you need to start three servers:
 
-## Local development
-
-This is a [Gatsby](https://www.gatsbyjs.com/) project that uses the [Adobe I/O Theme](https://github.com/adobe/aio-theme).
-Ensure that your local environment matches the prerequisites described in the Adobe I/O Theme README.
-
-To build the site locally:
-
-1. Clone this repository.
-1. Install project dependencies.
+1. **Content server** (this repo):
 
    ```bash
-   yarn install
+   npm run dev
    ```
 
-1. Launch the project in development mode.
+2. **Code server** ([adp-devsite](https://github.com/AdobeDocs/adp-devsite)):
 
    ```bash
-   yarn dev
+   git clone https://github.com/AdobeDocs/adp-devsite
+   cd adp-devsite
+   npm install
+   npm run dev
    ```
 
-## Components
+3. **Runtime connector** ([devsite-runtime-connector](https://github.com/aemsites/devsite-runtime-connector)):
 
-To achieve specific user experience goals for Commerce documentation, this repo overrides the original [`Edition`](https://github.com/adobe/aio-theme/blob/main/packages/gatsby-theme-aio/src/components/Edition/index.js) component from the upstream [`aio-theme`](https://github.com/adobe/aio-theme/) repo that we use as a dependency.
+   ```bash
+   git clone https://github.com/aemsites/devsite-runtime-connector
+   cd devsite-runtime-connector
+   npm install
+   npm run dev
+   ```
 
-### Edition
+Once all three servers are running, navigate to `http://localhost:3000/commerce/webapi`.
 
-The custom `Edition` component in this repo displays a badge indicating whether a feature or functionality is available in specific Adobe Commerce environments. It has been customized to align with the badges that we use in Experience League docs.
+For common utilities and documentation, see the [centralized README](https://github.com/AdobeDocs/adp-devsite-utils/blob/main/README.md).
 
-#### Usage
+## Testing and linting
 
-```yaml
-# Page-level (metadata)
-edition: saas # For SaaS-only features
-edition: paas # For PaaS-only features
+### Markdown linting
+
+To lint Markdown files before pushing:
+
+```bash
+npm run lint:md
 ```
 
-```md
-<!-- Section-level (inline) -->
-<Edition name="paas" />  <!-- For PaaS-only features -->
-<Edition name="saas" />  <!-- For SaaS-only features -->
+To automatically fix linting errors:
+
+```bash
+npm run lint:md:fix
 ```
 
-## Resources
+### Content validation
 
-See the following resources to learn more about using the theme:
+To check internal and external links, validate front matter, and more:
 
-- [Arranging content structure](https://github.com/adobe/aio-theme#content-structure)
-- [Linking to pages](https://github.com/adobe/aio-theme#links)
-- [Using assets](https://github.com/adobe/aio-theme#assets)
-- [Configuring global navigation](https://github.com/adobe/aio-theme#global-navigation)
-- [Configuring side navigation](https://github.com/adobe/aio-theme#side-navigation)
-- [Using content blocks](https://github.com/adobe/aio-theme#jsx-blocks)
-- [Writing enhanced Markdown](https://github.com/adobe/aio-theme#writing-enhanced-markdown)
-- [Deploying the site](https://github.com/adobe/aio-theme#deploy-to-azure-storage-static-websites) _(Adobe employees only)_
-
-If you have questions, open an issue and ask us. We look forward to hearing from you!
-
-## GraphQL API reference generator
-
-The GraphQL API reference is generated using an open-source tool [SpectaQL](https://github.com/anvilco/spectaql). The data required for the generator is located at the `spectaql` directory:
-
-- `adobe-theme`: [custom theme](https://github.com/anvilco/spectaql/blob/main/examples/themes/README.md).
-- `config.yml`: [configuration file](https://github.com/anvilco/spectaql#yaml-options).
-- `schema.json`: the GraphQL schema extracted from the Adobe Commerce (B2B) instance.
-
-The resulted GraphQL API reference lives in the `static/graphql-api/` directory.
-It is embedded into the `/graphql/reference` page using the `frameSrc` feature on the DevSite.
-
-To rebuild the GraphQL API reference after any updates, run:
-
-```shell
-yarn build:spectaql
+```bash
+npm run lint
 ```
 
-To run SpectaQL in the development mode:
+### TOC validation
 
-```shell
-yarn dev:spectaql
+To validate the table of contents file:
+
+```bash
+npm run test:config
 ```
+
+## GraphQL API reference
+
+The GraphQL API reference is generated using [SpectaQL](https://github.com/anvilco/spectaql). It reads local introspection schema files, applies a custom Markdown-output theme, and writes the result to `src/pages/includes/autogenerated/`. Each generated file is included in the API reference pages via `<Fragment>`.
+
+### Generating the reference
+
+To regenerate all schema versions:
+
+```bash
+npm run generate:graphql-api-docs
+```
+
+To regenerate a specific version:
+
+```bash
+npm run generate:graphql-api-docs:2.4.9
+npm run generate:graphql-api-docs:2.4.8
+npm run generate:graphql-api-docs:2.4.7
+npm run generate:graphql-api-docs:2.4.6
+npm run generate:graphql-api-docs:saas
+```
+
+See [`spectaql/README.md`](spectaql/README.md) for full configuration and script documentation.
 
 ### How to get the schema
 
-The website in the public directory was generated for the Adobe Commerce with B2B instance from GraphQL Schema 'schema.json'. The schema was retrieved using the apollo-cli tool:
+The schema files in `spectaql/` are GraphQL introspection results retrieved from a running Adobe Commerce instance using `apollo-cli`:
 
-```shell
-npx apollo-cli download-schema $ENDPOINT_URL --output schema.json
+```bash
+npx apollo-cli download-schema $ENDPOINT_URL --output schema_X.Y.Z.json
 ```
 
-where `$ENDPOINT_URL` is a placeholder for the endpoint of a URL.
-
-For more information about SpectaQL, refer to <https://github.com/anvilco/spectaql>.
+where `$ENDPOINT_URL` is the GraphQL endpoint of the target Commerce instance. Replace `X.Y.Z` with the appropriate version (for example, `2.4.9`) and place the file in the `spectaql/` directory before regenerating.

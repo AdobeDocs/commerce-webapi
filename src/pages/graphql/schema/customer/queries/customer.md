@@ -1,15 +1,13 @@
 ---
 title: customer query
+description: The customer query returns information about the logged-in customer, store credit history and customer's wishlist.
 ---
-
-import CustomAttributeCustomer from '/src/_includes/graphql/examples/custom-attribute-customer.md'
-import CustomerS3Download from '/src/_includes/graphql/examples/customer-s3-download.md'
 
 # customer query
 
 The `customer` query returns information about the logged-in customer, store credit history and customer's wishlist.
 
-To retrieve information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session).
+To retrieve information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session/).
 
 ## Syntax
 
@@ -19,9 +17,9 @@ To retrieve information about a customer, we recommend you use customer tokens i
 
 The `customer` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-customer)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-customer)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-customer)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-customer)
 
 ## Example usage
 
@@ -89,7 +87,7 @@ The following call returns information about the logged-in customer. Provide the
 
 ### Retrieve custom attributes metadata from a customer
 
-<CustomAttributeCustomer />
+<Fragment src="../../../../includes/graphql/examples/custom-attribute-customer.md"/>
 
 ### Retrieve custom attributes metadata from a customer address
 
@@ -342,7 +340,7 @@ query {
 }
 ```
 
-### Retrieve orders based on scope argument:
+### Retrieve orders based on scope argument
 
 The following query returns all customer orders, across all store view codes. The value of GLOBAL in the scope field overrides the store view code specified in the Store header.
 
@@ -885,7 +883,7 @@ The following query returns the customer's wish lists. Adobe Commerce allows cus
 
 The following example returns information about all purchase orders the company user has made since January 1, 2023.
 
-The [Purchase orders](../../b2b/purchase-order/) topic contains additional examples that query purchase order functionality.
+The [Purchase orders](../../b2b/purchase-order/index.md) topic contains additional examples that query purchase order functionality.
 
 **Request:**
 
@@ -983,7 +981,7 @@ The [Purchase orders](../../b2b/purchase-order/) topic contains additional examp
 
 The following example returns the list of purchase order approval rules.
 
-The [Purchase order approval rules](../../b2b/purchase-order-rule/) topic contains additional examples that query approval rule functionality.
+The [Purchase order approval rules](../../b2b/purchase-order-rule/index.md) topic contains additional examples that query approval rule functionality.
 
 **Request:**
 
@@ -1041,9 +1039,9 @@ The [Purchase order approval rules](../../b2b/purchase-order-rule/) topic contai
 
 ### Retrieve a file uploaded to Amazon S3
 
-<Edition name="saas" />
+<Fragment src="../../../../includes/saas-only.md"/>
 
-< CustomerS3Download />
+<Fragment src="../../../../includes/graphql/examples/customer-s3-download.md"/>
 
 ## Related topics
 

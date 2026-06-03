@@ -1,5 +1,6 @@
 ---
 title: resendConfirmationEmail mutation
+description: The resendConfirmationEmail mutation resends the confirmation email to a customer who has not completed the activation process.
 ---
 
 # resendConfirmationEmail mutation
@@ -16,9 +17,9 @@ The mutation returns `true` if the request was successful. Otherwise, it returns
 
 The `resendConfirmationEmail` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-resendConfirmationEmail)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-resendConfirmationEmail)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-resendConfirmationEmail)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-resendConfirmationEmail)
 
 ## Example usage
 
@@ -44,11 +45,11 @@ mutation ResendConfirmationEmail {
 
 ## Errors
 
-Error | Description
---- | ---
-`There is no user registered with that email address.` | The `email` provided in the input does not belong to a registered customer.
-`There was an error when sending the confirmation email'` | A general error message that appears on some internal system errors. The original error is logged and can be found in the application logs..
-`Confirmation isn't needed.` | The customer with specified `email` is already confirmed.
+| Error | Description |
+| --- | --- |
+| `There is no user registered with that email address.` | The `email` provided in the input does not belong to a registered customer. |
+| `There was an error when sending the confirmation email'` | A general error message that appears on some internal system errors. The original error is logged and can be found in the application logs.. |
+| `Confirmation isn't needed.` | The customer with specified `email` is already confirmed. |
 
 ## Related topic
 

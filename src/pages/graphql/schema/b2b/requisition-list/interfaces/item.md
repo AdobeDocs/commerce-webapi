@@ -1,12 +1,11 @@
 ---
 title: RequisitionListItemInterface attributes and implementations
+description: RequisitionListItemInterface provides details about items in a requisition list. It has the following implementations:
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # RequisitionListItemInterface attributes and implementations
 

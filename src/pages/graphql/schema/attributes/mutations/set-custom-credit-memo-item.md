@@ -1,12 +1,11 @@
 ---
 title: setCustomAttributesOnCreditMemoItem mutation
+description: This mutation is automatically available on Adobe Commerce as a Cloud Service (SaaS) projects. Adobe Commerce on-premises and Cloud infrastructure (PaaS) p...
 ---
-
-import CustomAttributesAvailability from '/src/_includes/graphql/custom-attribute-availability.md'
 
 # setCustomAttributesOnCreditMemoItem mutation
 
-<CustomAttributesAvailability />
+<Fragment src="../../../../includes/graphql/custom-attribute-availability.md"/>
 
 The `setCustomAttributesOnCreditMemoItem` mutation sets custom attributes on a credit memo item. The mutation accepts a credit memo ID, a credit memo item ID, and an array of custom attribute key/value pairs. It returns the updated credit memo item.  All ID values are treated as strings.
 
@@ -28,7 +27,7 @@ mutation {
 
 The `setCustomAttributesOnCreditMemoItem` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-setCustomAttributesOnCreditMemoItem)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-setCustomAttributesOnCreditMemoItem)
 
 ## Example usage
 

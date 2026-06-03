@@ -5,7 +5,7 @@ contributor_name: Goivvy LLC
 contributor_link: https://www.goivvy.com/
 keywords:
   - REST
---- 
+---
 
 # Step 1. Get a list of product images
 
@@ -63,6 +63,10 @@ We will use the image `id` for later steps in this tutorial.
 
 1. Select the product in the search results.
 
-    ![Product](../../../_images/list-product-images.png)
+    ![Product](../../../images/list-product-images.png)
 
 1. Confirm that the number of images in the storefront matches the number of images in your API response.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/)

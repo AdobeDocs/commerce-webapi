@@ -1,5 +1,6 @@
 ---
 title: Orders queries
+description: Retrieves guest order details
 ---
 
 # Orders queries

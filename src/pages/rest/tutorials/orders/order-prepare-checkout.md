@@ -1,11 +1,12 @@
 ---
 title: Step 6. Prepare for checkout
 description: In this step of the tutorial you will prepare for checkout
-edition: paas
 keywords:
   - REST
---- 
- 
+---
+
+<Fragment src="../../../includes/paas-only.md"/>
+
 # Step 6. Prepare for checkout
 
 Now that all the items have been added to the cart, we can prepare the order for checkout. This process includes the following steps:
@@ -13,7 +14,7 @@ Now that all the items have been added to the cart, we can prepare the order for
 *  Estimate shipping costs
 *  Set shipping and billing information
 
-### Estimate shipping costs
+## Estimate shipping costs
 
 Adobe Commerce calculates shipping costs for each shipping method that can be applied to the order. In this tutorial, the `flatrate` ($5 per item) and `tablerate` shipping methods are active.
 
@@ -35,8 +36,7 @@ Use the `V1/guest-carts/<cartId>/estimate-shipping-methods` endpoint to estimate
 
 The payload contains the shipping address.
 
-<details>
-      <summary><b>Show code sample</b></summary>
+<Details slots="content" summary="Show code sample" />
 
 ```json
 {
@@ -60,14 +60,11 @@ The payload contains the shipping address.
 }
 ```
 
-</details>
-
 **Response:**
 
 Note that the cost for the `flatrate` shipping method is $15. The Sprite Yoga Companion Kit bundled product counts as one item. The Advanced Pilates & Yoga item does not have a shipping charge because the customer downloads this item.
 
-<details>
-      <summary><b>Show code sample</b></summary>
+<Details slots="content" summary="Show code sample" />
 
 ```json
 [
@@ -98,8 +95,6 @@ Note that the cost for the `flatrate` shipping method is $15. The Sprite Yoga Co
 ]
 ```
 
-</details>
-
 ### Set shipping and billing information
 
 In this call, you specify the shipping and billing addresses, as well as the selected `carrier_code` and `method_code`. Since the Table Rate shipping method costs only $5, the customer selected this option.
@@ -122,8 +117,7 @@ Use the `V1/guest-carts/<cartId>/shipping-information` endpoint to set the billi
 
 **Payload:**
 
-<details>
-      <summary><b>Show code sample</b></summary>
+<Details slots="content" summary="Show code sample" />
 
 ```json
 {
@@ -164,16 +158,13 @@ Use the `V1/guest-carts/<cartId>/shipping-information` endpoint to set the billi
 }
 ```
 
-</details>
-
 **Response:**
 
 The subtotal of the order is $160, and shipping charges are $5. The grand total is $165.
 
 The available payment methods are `banktransfer` and `checkmo`. The customer will specify a payment method in the next step.
 
-<details>
-      <summary><b>Show code sample</b></summary>
+<Details slots="content" summary="Show code sample" />
 
 ```json
 {
@@ -342,11 +333,9 @@ The available payment methods are `banktransfer` and `checkmo`. The customer wil
 }
 ```
 
-</details>
-
 <InlineAlert variant="info" slots="text"/>
 
-If you tried this call on your own, and the value of the `shipping_amount` parameter is `0`, then you did not deactivate the "Spend $50 or more - shipping is free!" cart price rule. See [Deactivate a cart price rule](/rest/tutorials/orders/order-config-store#deactivate-a-cart-price-rule) for details.
+If you tried this call on your own, and the value of the `shipping_amount` parameter is `0`, then you did not deactivate the "Spend $50 or more - shipping is free!" cart price rule. See [Deactivate a cart price rule](/rest/tutorials/orders/order-config-store.md#deactivate-a-cart-price-rule) for details.
 
 ### Verify this step
 

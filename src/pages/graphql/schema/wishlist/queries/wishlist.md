@@ -1,7 +1,10 @@
 ---
 title: wishlist query
-edition: paas
+description: The wishlist query has been deprecated. Wish list information is now provided by the customer query.
+
 ---
+
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # wishlist query
 

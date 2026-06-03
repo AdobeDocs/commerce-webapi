@@ -47,3 +47,6 @@ local-test.yml
 # yalc
 .yalc
 yalc.lock
+
+linter-report.txt
+tmp

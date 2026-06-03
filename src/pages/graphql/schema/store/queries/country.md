@@ -1,12 +1,13 @@
 ---
 title: country query
+description: Use the country query to retrieve information about a specific country.
 ---
 
 # country query
 
 Use the `country` query to retrieve information about a specific country.
 
-Use the [countries](../../store/queries/countries.md) query to retrieve a list of countries available in the system.
+Use the [countries](countries.md) query to retrieve a list of countries available in the system.
 
 ## Syntax
 
@@ -16,9 +17,9 @@ Use the [countries](../../store/queries/countries.md) query to retrieve a list o
 
 The `country` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/s://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-country)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-country)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-country)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-country)
 
 ## Example usage
 
@@ -103,12 +104,12 @@ query {
 
 ## Related topics
 
-*  [countries query](../../store/queries/countries.md)
-*  [currency query](../../store/queries/currency.md)
+*  [countries query](countries.md)
+*  [currency query](currency.md)
 
 ## Errors
 
-Error | Description
---- | ---
-`Country \"id\" value should be specified"` | The Country ID value must be specified to find the mapped country.
-`The country isn't available` | There is no country mapped to the given country ID.
+| Error | Description |
+| --- | --- |
+| `Country \"id\" value should be specified"` | The Country ID value must be specified to find the mapped country. |
+| `The country isn't available` | There is no country mapped to the given country ID. |

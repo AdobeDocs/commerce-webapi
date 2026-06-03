@@ -1,7 +1,10 @@
 ---
 title: cmsPage query
-edition: paas
+description: The cmsPage query returns information about content pages that were developed with the Adobe Commerce or Magento Open Source Content Management System (CMS).
+
 ---
+
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # cmsPage query
 
@@ -65,10 +68,10 @@ The `content` field may contain HTML markup and CSS styles. Hidden and system el
 
 ## Errors
 
-Error | Description
---- | ---
-`The CMS page with the "XXXX" ID doesn't exist` | The specified CMS page ID is invalid.
-`Page id/identifier should be specified"` | The `identifier` parameter is required for identifying the CMS page.
+| Error | Description |
+| --- | --- |
+| `The CMS page with the "XXXX" ID doesn't exist` | The specified CMS page ID is invalid. |
+| `Page id/identifier should be specified"` | The `identifier` parameter is required for identifying the CMS page. |
 
 ## Related topics
 

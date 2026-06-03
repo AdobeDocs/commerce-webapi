@@ -3,17 +3,18 @@ title: Step 7. Apply a coupon
 description: Learn how to set a apply a coupon to an order with the GraphQL API.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
-edition: paas
 keywords:
   - GraphQL
   - Checkout
 ---
 
+<Fragment src="../../../includes/paas-only.md"/>
+
 # Step 7. Apply a coupon
 
 Use [applyCouponToCart](apply-coupon.md) to apply a discount coupon to the specified `cart_id`.
 
-`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](../../tutorials/checkout/add-product-to-cart.md).
+`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](add-product-to-cart.md).
 
 `{ COUPON_CODE }` is an existing coupon code. It cannot be generated with GraphQL.
 
@@ -128,3 +129,7 @@ mutation {
   }
 }
 ```
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

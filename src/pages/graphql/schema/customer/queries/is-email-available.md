@@ -1,5 +1,6 @@
 ---
 title: isEmailAvailable query
+description: The isEmailAvailable query checks whether the specified email has already been used to create a customer account. As of Commerce 2.4.7, by default the quer...
 ---
 
 # isEmailAvailable query
@@ -16,9 +17,9 @@ When guest checkout logins are enabled, or in versions prior to 2.4.7, a value o
 
 The `isEmailAvailable` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-isEmailAvailable)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-isEmailAvailable)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-isEmailAvailable)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-isEmailAvailable)
 
 ## Example usage
 
@@ -48,10 +49,10 @@ The following example checks whether the email address `customer@example.com` is
 
 ## Errors
 
-Error | Description
---- | ---
-`Email is invalid` | The given email-id is not in a proper format.
-`Field isEmailAvailable.email of required type String! was not provided` | The value specified in the `isEmailAvailable.email` argument is empty.
+| Error | Description |
+| --- | --- |
+| `Email is invalid` | The given email-id is not in a proper format. |
+| `Field isEmailAvailable.email of required type String! was not provided` | The value specified in the `isEmailAvailable.email` argument is empty. |
 
 ## Related topics
 

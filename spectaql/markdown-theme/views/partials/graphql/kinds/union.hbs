@@ -1,0 +1,22 @@
+{{#if description}}
+{{{description}}}
+
+{{/if}}
+{{#if possibleTypes}}
+#### Types
+
+| Union Types |
+|-------------|
+{{#each possibleTypes}}
+| {{{mdTypeLink . codify=true}}} |
+{{/each}}
+
+{{/if}}
+{{#if example}}
+#### Example
+
+```json
+{{{jsonStringify example}}}
+```
+
+{{/if}}

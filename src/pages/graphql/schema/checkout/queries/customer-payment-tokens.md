@@ -1,5 +1,6 @@
 ---
 title: customerPaymentTokens query
+description: When the vault feature is supported by a payment integration and enabled, customers have the option during checkout to save their credit card information....
 ---
 
 # customerPaymentTokens query
@@ -20,9 +21,9 @@ You must specify the customer's authorization token in the header of the call.
 
 The `customerPaymentTokens` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-customerPaymentTokens)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-customerPaymentTokens)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-customerPaymentTokens)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-customerPaymentTokens)
 
 ## Example usage
 
@@ -70,9 +71,9 @@ query {
 
 ## Errors
 
-Error | Description
---- | ---
-`The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table.
+| Error | Description |
+| --- | --- |
+| `The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table. |
 
 ## Related topics
 

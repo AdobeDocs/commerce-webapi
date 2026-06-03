@@ -22,11 +22,9 @@ PayPal Payments Advanced is available in the US and Canada only.
 
 The following diagram shows the workflow for placing an order when Payments Advanced is the selected payment method.
 
-![PayPal Payments Advanced sequence diagram](../../_images/graphql/paypal-payflow-link.svg)
+![PayPal Payments Advanced sequence diagram](../../images/graphql/paypal-payflow-link.png)
 
-import PayflowLinkWorkflow from '/src/_includes/graphql/payment-methods/payflow-link-workflow.md'
-
-<PayflowLinkWorkflow />
+<Fragment src="../../includes/graphql/payment-methods/payflow-link-workflow.md"/>
 
 ## Additional Payment information
 
@@ -34,9 +32,7 @@ import PayflowLinkWorkflow from '/src/_includes/graphql/payment-methods/payflow-
 
 When you set the payment method to PayPal Payments Advanced, you must set the `code` attribute to `payflow_advanced`. In addition, the payload must contain a `payflow_link` object, which defines the following attributes:
 
-import PayflowLinkAttributes from '/src/_includes/graphql/payment-methods/payflow-link-attributes.md'
-
-<PayflowLinkAttributes />
+<Fragment src="../../includes/graphql/payment-methods/payflow-link-attributes.md"/>
 
 ### Example usage
 

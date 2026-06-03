@@ -1,5 +1,6 @@
 ---
 title: guestOrderByToken query
+description: Use the guestOrderByToken query to retrieve guest order details based on token. You can retrieve the token from the CustomerOrder object on the placeOrder...
 ---
 
 # guestOrderByToken query
@@ -15,9 +16,9 @@ You can retrieve the token from the `CustomerOrder` object on the [`placeOrder` 
 
 The `guestOrderByToken` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-guestOrderByToken)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-guestOrderByToken)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-guestOrderByToken)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-guestOrderByToken)
 
 ## Example usage
 

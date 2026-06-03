@@ -4,7 +4,7 @@ description: In this step of the tutorial you will create the personalization op
 keywords:
   - REST
 ---
- 
+
 # Step 5. Create the personalization option
 
 Let's add a text box to the product page that allows the customer to add his name (up to 15 characters) to the back of shirt.
@@ -54,18 +54,18 @@ The `product_sku` is the `sku` of the configurable product. The `sku` specified 
 
 *  Log in to the Luma website and select **Catalog > Products**. Click on the **Champ Tee** configurable product and expand the **Customizable Options** section.
 
-  ![Product page with configurable and simple products](../../../_images/options-section.png)
+  ![Product page with configurable and simple products](../../../images/options-section.png)
 
 *  On the Luma storefront page, search for `Champ`. Then click on the Champ Tee product.
 
-  ![Search results](../../../_images/add-your-name.png)
+  ![Search results](../../../images/add-your-name.png)
 
 <InlineAlert variant="info" slots="text"/>
 
 If the personalization option is not displayed, go to the **Champ Tee** configuration product page in Admin and set  **Stock Status** to **In Stock**.
 
-## Congratulations! You've finished.
+## Congratulations! You've finished
 
 ### Related topics
 
-[Order Processing with REST APIs Tutorial](/rest/tutorials/orders/)
+[Order Processing with REST APIs Tutorial](/rest/tutorials/orders/index.md)

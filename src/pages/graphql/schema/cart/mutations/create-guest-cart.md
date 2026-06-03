@@ -1,5 +1,6 @@
 ---
 title: createGuestCart mutation
+description: The createGuestCart mutation creates an empty shopping cart for a guest shopper. You can allow the system to generate a cart ID, or assign a specific ID.
 ---
 
 # createGuestCart mutation
@@ -20,9 +21,9 @@ mutation {
 
 The `createGuestCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-createGuestCart)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-createGuestCart)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createGuestCart)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createGuestCart)
 
 ## Example usage
 
@@ -90,8 +91,8 @@ The mutation returns a cart using the same `cart_id`.
 
 ## Errors
 
-Error | Description
---- | ---
-`Cart with ID "XXX" already exists.` | The specified cart ID was previously used to create a cart.
-`Cart ID length should to be 32 symbols.` | The cart ID is not the required length.
-`Use 'Query.customerCart' for logged in customer.` | A logged in customer is trying to create a guest customer cart.
+| Error | Description |
+| --- | --- |
+| `Cart with ID "XXX" already exists.` | The specified cart ID was previously used to create a cart. |
+| `Cart ID length should to be 32 symbols.` | The cart ID is not the required length. |
+| `Use 'Query.customerCart' for logged in customer.` | A logged in customer is trying to create a guest customer cart. |

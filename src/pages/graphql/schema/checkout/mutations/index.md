@@ -1,5 +1,6 @@
 ---
 title: Checkout mutations
+description: The checkout mutations create or otherwise manage the payment tokens needed to complete checkout for an online payment method.
 ---
 
 # Checkout mutations

@@ -6,9 +6,9 @@ keywords:
   - REST
 ---
 
-<Hero slots="image, heading, text"/>
+<SuperHero slots="image, heading, text"/>
 
-![Commerce Web APIs](_images/home-bg.jpeg)
+![Commerce Web APIs](images/home-bg.jpeg)
 
 # Commerce Web APIs
 
@@ -19,8 +19,8 @@ The Commerce Web APIs allow you to integrate third-party software and build head
 ## Resources
 
 *  [Extensibility Guide](https://developer.adobe.com/commerce/extensibility/)
-*  [Configuring a Service as a Web API](https://developer.adobe.com/commerce/php/development/components/web-api/services/)
-*  [REST API reference](./rest/reference/index.md)
+*  [Configuring a Service as a Web API](https://developer.adobe.com/commerce/php/development/components/web-api/services)
+*  [REST API reference](rest/reference/index.md)
 
 ## Overview
 
@@ -34,19 +34,19 @@ Use these sections to learn about how to use our web APIs to integrate with thir
 
 ### Sections
 
-[Getting Started](get-started/)
+[Getting Started](get-started/index.md)
 
 The Commerce web API framework provides integrators and developers the means to use web services that communicate with the Adobe Commerce.
 
 <DiscoverBlock slots="link, text"/>
 
-[REST](/rest/)
+[REST](/rest/index.md)
 
 The REST API documentation describes the REST APIs that are available on the latest Adobe Commerce release.
 
 <DiscoverBlock slots="link, text"/>
 
-[GraphQL](./graphql/index.md)
+[GraphQL](graphql/index.md)
 
 GraphQL is a language for querying and manipulating data. It is widely viewed as more powerful, flexible, and efficient than REST for frontend development.
 

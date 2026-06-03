@@ -1,17 +1,18 @@
 ---
 title: Step 11. Run the Source Selection Algorithms
 description: In this step of the tutorial you will run the source selection algorithms
-edition: paas
 keywords:
   - Inventory
   - REST
---- 
- 
+---
+
+<Fragment src="../../../includes/paas-only.md"/>
+
 # Step 11. Run the Source Selection Algorithms
 
-One of the most significant parts of Inventory Management is the Source Selection Algorithm (SSA). The Source Priority SSA analyzes and determines the best match for sources and shipping based on the priorities you specified in [Step 4. Link stocks and sources](/rest/tutorials/inventory/assign-source-to-stock/). The Distance Priority SSA calculates the distance between the sources and the shipping address. Both algorithms also provide a list of source items with quantities to deduct per each source item.
+One of the most significant parts of Inventory Management is the Source Selection Algorithm (SSA). The Source Priority SSA analyzes and determines the best match for sources and shipping based on the priorities you specified in [Step 4. Link stocks and sources](/rest/tutorials/inventory/assign-source-to-stock.md). The Distance Priority SSA calculates the distance between the sources and the shipping address. Both algorithms also provide a list of source items with quantities to deduct per each source item.
 
-For more information about shipping and SSAs, see [About Source Selection Algorithm and Reservations](https://experienceleague.adobe.com/docs/commerce-admin/inventory/basics/selection-reservations.html) in the Adobe Commerce user guide.
+For more information about shipping and SSAs, see [About Source Selection Algorithm and Reservations](https://experienceleague.adobe.com/en/docs/commerce-admin/inventory/basics/selection-reservations) in the Adobe Commerce user guide.
 
 ## Get the list of algorithms
 
@@ -54,11 +55,11 @@ Not applicable
 
 ## Run an SSA
 
-The `POST V1/inventory/source-selection-algorithm-result` endpoint uses the algorithm defined by the `algorithmCode` attribute to calculate the recommended sources and quantities for each item defined in the `items` array. In this example, we'll select the `priority` SSA. [Manage source selection algorithms](/rest/inventory/manage-source-selection/) includes an example using the `distance` priority.
+The `POST V1/inventory/source-selection-algorithm-result` endpoint uses the algorithm defined by the `algorithmCode` attribute to calculate the recommended sources and quantities for each item defined in the `items` array. In this example, we'll select the `priority` SSA. [Manage source selection algorithms](/rest/inventory/manage-source-selection.md) includes an example using the `distance` priority.
 
 This tutorial does not consider complications, such as selling out of products or back ordering. We can ask the SSA to determine the best way to immediately ship all the items ordered (40 items of product `24-WB01` and 20 items of product `24-WB03`). If the `shippable` attribute in the response is `false`, there are not enough salable items to complete a full shipment, but the merchant can still perform a partial shipment.
 
-In [Step 4. Link stocks and sources](/rest/tutorials/inventory/assign-source-to-stock/), we assigned the `priority` value of the Northeast warehouse and West warehouse to be `1` and `2`, respectively. Thus, the `priority` SSA attempts to fulfill the order from the Northeast warehouse first. If the primary source does not have enough of a product in stock, the SSA goes down the prioritized list of sources until the ordered quantity can be found.
+In [Step 4. Link stocks and sources](/rest/tutorials/inventory/assign-source-to-stock.md), we assigned the `priority` value of the Northeast warehouse and West warehouse to be `1` and `2`, respectively. Thus, the `priority` SSA attempts to fulfill the order from the Northeast warehouse first. If the primary source does not have enough of a product in stock, the SSA goes down the prioritized list of sources until the ordered quantity can be found.
 
 **Endpoint:**
 
@@ -97,11 +98,11 @@ In [Step 4. Link stocks and sources](/rest/tutorials/inventory/assign-source-to-
 
 The SSA recommends shipping from the following sources:
 
-Product | Source | Quantity
---- | --- | ---
-`24-WB01` | Northeast warehouse | 35
-`24-WB01` | West warehouse | 5
-`24-WB03` | Northeast warehouse | 20
+| Product | Source | Quantity |
+| --- | --- | --- |
+| `24-WB01` | Northeast warehouse | 35 |
+| `24-WB01` | West warehouse | 5 |
+| `24-WB03` | Northeast warehouse | 20 |
 
 ```json
 {

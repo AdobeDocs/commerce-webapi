@@ -1,11 +1,12 @@
 ---
 title: Create an Integration
 description: Explains how to create an integration.
-edition: paas
 keywords:
   - Integration
   - REST
 ---
+
+<Fragment src="../includes/paas-only.md"/>
 
 # Create an integration
 
@@ -13,11 +14,11 @@ An **integration** enables third-party services to call the Adobe Commerce and M
 
 Implementing a simple integration requires little knowledge of PHP or Commerce internal processes. However, you will need a working knowledge of
 
-*  [Commerce REST or SOAP Web APIs](../get-started/)
-*  [Web API authentication](./authentication/)
-*  [OAuth-based authentication](./authentication/gs-authentication-oauth.md)
+*  [Commerce REST or SOAP Web APIs](index.md)
+*  [Web API authentication](authentication/index.md)
+*  [OAuth-based authentication](authentication/gs-authentication-oauth.md)
 
-Before you begin creating a module, make sure that you have a working installation that meets the [System Requirements](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html).
+Before you begin creating a module, make sure that you have a working installation that meets the [System Requirements](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements).
 
 To create an integration, follow these general steps:
 
@@ -41,23 +42,15 @@ To develop a module, you must:
    mkdir -p app/code/<vendor_name>/<module_name>/Setup
    ```
 
-   For more detailed information, see [Create your component file structure](https://developer.adobe.com/commerce/php/development/build/component-file-structure/).
+   For more detailed information, see [Create your component file structure](https://developer.adobe.com/commerce/php/development/build/component-file-structure).
 
 1. **Define your module configuration file.** The `etc/module.xml` file provides basic information about the module. Change directories to the `etc` directory and create the `module.xml` file. You must specify values for the following attributes:
 
-   <table>
-   <tr>
-   <th>Attribute</th><th>Description</th>
-   </tr>
-   <tr>
-   <td>name</td>
-   <td>A string that uniquely identifies the module.</td>
-   </tr>
-   <tr>
-   <td>setup_version</td>
-   <td>The version of Commerce the component uses</td>
-   </tr>
-   </table>
+   | Attribute | Description |
+   |---|---|
+   | name | A string that uniquely identifies the module. |
+   | setup_version | The version of Commerce the component uses |
+
    The following example shows an example `etc/module.xml` file.
 
    ```xml
@@ -95,10 +88,10 @@ To develop a module, you must:
            }
         }
      }
-     
+
    ```
 
-    For more information, see [Create a component](https://developer.adobe.com/commerce/php/development/build/component-name/).
+    For more information, see [Create a component](https://developer.adobe.com/commerce/php/development/build/component-name).
 
 1. **Create a `registration.php` file** The `registration.php` registers the module with the system. It must be placed in the module's root directory.
 
@@ -233,33 +226,13 @@ The file defines which API resources the integration has access to.
 </integrations>
 ```
 
-<table>
-<tr>
-<th>Element</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>integrations</td>
-<td>Contains one or more integration definitions.</td>
-</tr>
-<tr>
-<td>integration name=""</td>
-<td>Defines an integration. The <inlineCode class="spectrum-Body--sizeS">name</inlineCode> must be specified.</td>
-</tr>
-<tr>
-<td>email</td>
-<td>An email to associate with this integration.</td>
-</tr>
-<tr>
-<td>endpoint_url</td>
-<td><p>Optional. The URL where OAuth credentials can be sent when using OAuth for token exchange. We strongly recommend using <inlineCode class="spectrum-Body--sizeS">https://</inlineCode>.</p>
-<p>See <a href="./authentication/gs-authentication-oauth">OAuth-based authentication</a> for details.</p></td>
-</tr>
-<tr>
-<td>identity_link_url</td>
-<td>Optional. The URL that redirects the user to link their 3rd party account with the Commerce integration.</td>
-</tr>
-</table>
+| Element | Description |
+|---|---|
+| integrations | Contains one or more integration definitions. |
+| integration name="" | Defines an integration. The `name` must be specified. |
+| email | An email to associate with this integration. |
+| endpoint_url | Optional. The URL where OAuth credentials can be sent when using OAuth for token exchange. We strongly recommend using `https://`. \<br/\> See [OAuth-based authentication](./authentication/gs-authentication-oauth.md) for details. |
+| identity_link_url | Optional. The URL that redirects the user to link their 3rd party account with the Commerce integration. |
 
 ## Install your module
 
@@ -311,7 +284,7 @@ The callback page must be able to perform the following tasks:
 
    `POST /oauth/token/request`
 
-   See [Get a request token](./authentication/gs-authentication-oauth.md#get-a-request-token) for more details about this call.
+   See [Get a request token](authentication/gs-authentication-oauth.md#get-a-request-token) for more details about this call.
 
 *  Parse the request token response. The response contains an `oauth_token` and `oauth_token_secret`.
 
@@ -319,7 +292,7 @@ The callback page must be able to perform the following tasks:
 
    `POST /oauth/token/access`
 
-   See [Get an access token](./authentication/gs-authentication-oauth.md#get-an-access-token/) for more details about this call.
+   See [Get an access token](authentication/gs-authentication-oauth.md#get-an-access-token/) for more details about this call.
 
 *  Parse the access token response. The response contains an `oauth_token` and `oauth_token_secret`. These values will be different than those provided in the request token response.
 
@@ -327,8 +300,8 @@ The callback page must be able to perform the following tasks:
 
 ## Related Topics
 
-*  [Web API authentication](./authentication/)
-*  [OAuth-based authentication](./authentication/gs-authentication-oauth.md)
-*  [System Requirements](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)
-*  [Create the module file structure](https://developer.adobe.com/commerce/php/development/build/component-file-structure/)
-*  [Create a component](https://developer.adobe.com/commerce/php/development/build/component-name/)
+*  [Web API authentication](authentication/index.md)
+*  [OAuth-based authentication](authentication/gs-authentication-oauth.md)
+*  [System Requirements](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)
+*  [Create the module file structure](https://developer.adobe.com/commerce/php/development/build/component-file-structure)
+*  [Create a component](https://developer.adobe.com/commerce/php/development/build/component-name)

@@ -10,7 +10,7 @@ keywords:
 
 The Framework and `GraphQl` module `di.xml` files define several security-related configuration values that you should review to ensure they align with types of mutations and queries that you run.
 
-To override these default values, create a custom module and provide a new value in the appropriate [di.xml](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/) file.
+To override these default values, create a custom module and provide a new value in the appropriate [di.xml](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file) file.
 
 ## Input limiting
 
@@ -20,10 +20,10 @@ In GraphQL, you can limit the maximum page size allowed. For information about h
 
 The `GraphQl/etc/di.xml` file contains two arguments that can be overridden to enhance security and prevent performance bottlenecks:
 
-Attribute | Default value | Description
---- | --- | ---
-`queryComplexity` | 300 | Defines the maximum number of fields, objects, and fragments that a query can contain.
-`queryDepth` | 20 | Defines the maximum depth of nodes that query can return.
+| Attribute | Default value | Description |
+| --- | --- | --- |
+| `queryComplexity` | 300 | Defines the maximum number of fields, objects, and fragments that a query can contain. |
+| `queryDepth` | 20 | Defines the maximum depth of nodes that query can return. |
 
 ### Query complexity
 

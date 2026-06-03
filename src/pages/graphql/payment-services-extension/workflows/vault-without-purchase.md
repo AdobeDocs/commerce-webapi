@@ -8,17 +8,17 @@ keywords:
 
 # Vaulting a credit card without a checkout authorization
 
-These steps describe the flow of requests and responses required to [vault a payment method](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/payment-services/payments-checkout/vaulting#vaulting-without-purchase) without the typical checkout authorization with Payment Services enabled.
+These steps describe the flow of requests and responses required to [vault a payment method](https://experienceleague.adobe.com/en/docs/commerce/payment-services/payments-checkout/vaulting#vaulting-without-purchase) without the typical checkout authorization with Payment Services enabled.
 
 ## Workflow
 
-![Payment Services sequence diagram](../../../_images/graphql/payment-services-vault-without-purchase.svg)
+![Payment Services sequence diagram](../../../images/graphql/payment-services-vault-without-purchase.png)
 
-1. Run the [`getVaultConfig`](../../payment-services-extension/queries/get-vault-config.md) query to fetch the vault configuration details for the available payment methods. Attribute `is_vault_enabled` set to `true`.
+1. Run the [`getVaultConfig`](../queries/get-vault-config.md) query to fetch the vault configuration details for the available payment methods. Attribute `is_vault_enabled` set to `true`.
 
 1. Commerce returns the vault configuration details.
 
-1. Run the  [`createVaultCardSetupToken`](../../payment-services-extension/mutations/create-vault-card-setup-token.md) mutation to create a temporary `setup_token` associated to the given payment source.
+1. Run the  [`createVaultCardSetupToken`](../mutations/create-vault-card-setup-token.md) mutation to create a temporary `setup_token` associated to the given payment source.
 
 1. Commerce forwards token request to PayPal.
 
@@ -28,7 +28,7 @@ These steps describe the flow of requests and responses required to [vault a pay
 
 1. PayPal SDK updates the credit card information in the storefront.
 
-1. Run the [`createVaultCardPaymentToken`](../../payment-services-extension/mutations/create-vault-card-payment-token.md) mutation to create a permanent `vault_token_id` and associate it with an optional card description, visible in the storefront.
+1. Run the [`createVaultCardPaymentToken`](../mutations/create-vault-card-payment-token.md) mutation to create a permanent `vault_token_id` and associate it with an optional card description, visible in the storefront.
 
 1. Commerce forwards `setup_token` to PayPal.
 

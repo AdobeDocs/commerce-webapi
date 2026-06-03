@@ -4,8 +4,10 @@ description: Learn how to use the GraphQL API mutation for the PayPal Payflow Pr
 keywords:
   - GraphQL
   - Payments
-edition: paas
+
 ---
+
+<Fragment src="../../includes/paas-only.md"/>
 
 # PayPal Payflow Pro payment method
 
@@ -25,7 +27,7 @@ If the `is_active_payment_token_enabler` attribute is set to `1` (true), in futu
 
 The following diagram shows the workflow for placing an order when Payflow Pro is the selected payment method.
 
-![PayPal Payflow Pro sequence diagram](../../_images/graphql/paypal-payflow-pro.svg)
+![PayPal Payflow Pro sequence diagram](../../images/graphql/paypal-payflow-pro.png)
 
 1. On the checkout page, the customer selects **Credit Card** as the payment method and enters the credit card information as well as the billing and shipping addresses. When the customer clicks **Place Order**, the PWA client uses the [`setPaymentMethodOnCart`](../schema/cart/mutations/set-payment-method.md) mutation to set the payment method to `payflowpro`.
 
@@ -63,21 +65,21 @@ When you set the payment method to Payflow Pro in the [`setPaymentMethodOnCart`]
 
 The `payflowpro` object must contain the following attributes:
 
-Attribute |  Data Type | Description
---- | --- | ---
-`cc_details` | CreditCardDetailsInput! | Required input for credit card related information
-`is_active_payment_token_enabler` | Boolean | States whether details about the customer's credit/debit card should be tokenized for later use. Required only if Vault is enabled for PayPal Payflow Pro payment integration.
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `cc_details` | CreditCardDetailsInput! | Required input for credit card related information |
+| `is_active_payment_token_enabler` | Boolean | States whether details about the customer's credit/debit card should be tokenized for later use. Required only if Vault is enabled for PayPal Payflow Pro payment integration. |
 
 ### CreditCardDetailsInput object
 
 The `CreditCardDetailsInput` object must contain the following attributes:
 
-Attribute |  Data Type | Description
---- | --- | ---
-`cc_exp_month` | Int! | Credit card expiration month
-`cc_exp_year` | Int! | Credit card expiration year
-`cc_last_4` | Int! | Last four digits of the credit card
-`cc_type` | String! | Credit card type
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `cc_exp_month` | Int! | Credit card expiration month |
+| `cc_exp_year` | Int! | Credit card expiration year |
+| `cc_last_4` | Int! | Last four digits of the credit card |
+| `cc_type` | String! | Credit card type |
 
 ### Example usage
 

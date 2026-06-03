@@ -1,5 +1,6 @@
 ---
 title: removeReturnTracking mutation
+description: The removeReturnTracking mutation deletes a customer-entered entry that defines the shipping carrier and tracking number for a return request. Use the cust...
 ---
 
 # removeReturnTracking mutation
@@ -18,9 +19,9 @@ mutation: {
 
 The `removeReturnTracking` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-removeReturnTracking)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-removeReturnTracking)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-removeReturnTracking)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-removeReturnTracking)
 
 ## Example usage
 

@@ -3,11 +3,12 @@ title: Step 4. Set the shipping address
 description: Learn how to set a shipping address for an order with the GraphQL API.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
-edition: paas
 keywords:
   - GraphQL
   - Checkout
 ---
+
+<Fragment src="../../../includes/paas-only.md"/>
 
 # Step 4. Set the shipping address
 
@@ -127,7 +128,7 @@ mutation {
 }
 ```
 
-`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](../../tutorials/checkout/add-product-to-cart.md).
+`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](add-product-to-cart.md).
 
 Note the `available_shipping_methods` in the response. We will use this information in a later step.
 
@@ -138,3 +139,7 @@ Note the `available_shipping_methods` in the response. We will use this informat
 1. Go to Checkout.
 
 1. On the Shipping step, the Shipping Address form contains the address details you entered.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

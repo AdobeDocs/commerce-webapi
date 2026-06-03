@@ -1,5 +1,6 @@
 ---
 title: Checkout
+description: The checkout schema helps complete the customer checkout process by managing and retrieving payment tokens and checkout agreements.
 ---
 
 # Checkout

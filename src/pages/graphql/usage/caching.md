@@ -72,7 +72,7 @@ SHA256(Store ID + Currency + Is-Logged-In + Customer group + Customer tax rate +
 
 The application caches the results of all applicable queries. If you specify the resultant hash as the input value for the `X-Magento-Cache-Id` header of a GraphQL request, then the cached results can be loaded. Although POST requests are not cached, the resultant hashed value provide more opportunities to obtain updated cache IDs.
 
-To define additional factors for computing `X-Magento-Cache-Id` hash values, add a section similar to the following to the [di.xml file](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/) of a custom module. The `argument name` must be set to `idFactorProviders`, with the additional attribute names assigned as `item names`.
+To define additional factors for computing `X-Magento-Cache-Id` hash values, add a section similar to the following to the [di.xml file](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file) of a custom module. The `argument name` must be set to `idFactorProviders`, with the additional attribute names assigned as `item names`.
 
 ```xml
 <type name="Magento\GraphQlCache\Model\CacheId\CacheIdCalculator">
@@ -101,7 +101,7 @@ Adding factors could generate too many unique cache keys, thereby reducing the n
 
 For on-premise installations, we recommend setting up Varnish as a reverse proxy to serve the full page cache in a production environment. The template `vcl` file that ships with each release configures support for GraphQL caching. We recommend that you review the template file each release to determine whether you need to update the `default.vcl` on your system. To view the contents of the latest template file, you can [download a template file from the Admin](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management#full-page-caching) or review the `app/code/Magento/PageCache/etc/varnish6.vcl` file in the codebase.
 
-See [Configure and use Varnish](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/varnish/config-varnish.html) and [Configure Varnish and your web server](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/config-varnish-server.html) for more information.
+See [Configure and use Varnish](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/varnish/config-varnish) and [Configure Varnish and your web server](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/config-varnish-server) for more information.
 
 ## Caching with Fastly
 
@@ -112,7 +112,7 @@ To enable GraphQL caching on Fastly:
 1. Upgrade the Fastly CDN Module for Adobe Commerce and Magento Open Source 2.x to version 1.2.160 or later.
 1. Upload the updated VCL code to the Fastly servers.
 
-[Set up Fastly](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration) describes how to perform both of these tasks.
+[Set up Fastly](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-configuration) describes how to perform both of these tasks.
 
 By default, the Fastly module for Adobe Commerce and Magento Open Source provides the following VCL configuration for caching guest queries:
 
@@ -149,10 +149,10 @@ The `X-Magento-Vary` cache cookie is not supported for GraphQL. The `Store` and 
 
 In developer mode, the application returns several headers that could be useful for debugging caching problems. These headers are not specific to GraphQL.
 
-Header | Description
---- |---
-`X-Magento-Cache-Debug` | HIT (the page was loaded from cache) or MISS (the page was not loaded from cache.
-`X-Magento-Tags` | A list of cache tags that correspond to the catalog, category, or CMS items returned in the query. The application caches these items.
+| Header | Description |
+| --- |--- |
+| `X-Magento-Cache-Debug` | HIT (the page was loaded from cache) or MISS (the page was not loaded from cache. |
+| `X-Magento-Tags` | A list of cache tags that correspond to the catalog, category, or CMS items returned in the query. The application caches these items. |
 
 ## Cache invalidation
 

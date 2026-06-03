@@ -3,8 +3,8 @@ title: REST API Overview
 description: Overview of the Adobe Commerce and Magento Open Source REST API documentation.
 keywords:
   - REST
---- 
- 
+---
+
 # REST API Overview
 
 The REST API documentation describes the REST APIs that are available in Adobe Commerce (PaaS) and Adobe Commerce as a Cloud Service (SaaS).
@@ -19,7 +19,7 @@ The APIs can be used to perform a wide array of tasks. For example:
 
 ## Adobe Commerce
 
-<Edition name="paas" />
+<Fragment src="../includes/paas-only.md"/>
 
 [Adobe Commerce on Cloud](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview?lang=en), Adobe Commerce on-premises, and [Magento Open Source](https://experienceleague.adobe.com/en/docs/commerce-admin/start/guide-overview) all use the same REST API framework. The REST API documentation describes the REST APIs that are available in these versions of Adobe Commerce and Magento Open Source.
 
@@ -43,7 +43,7 @@ The URL for Adobe Commerce REST endpoints is structured as follows:
 
 ## Adobe Commerce as a Cloud Service
 
-<Edition name="saas" />
+<Fragment src="../includes/saas-only.md"/>
 
 The Adobe Commerce as a Cloud Service REST API serves as a critical tool for extending and integrating commerce functionalities, but the endpoints available differ significantly from the REST APIs for Adobe Commerce on Cloud and on-premises deployments.
 
@@ -57,9 +57,9 @@ The [API reference](../reference/rest/saas.md) lists the available endpoints.
 
 ### Authentication
 
-In previous versions of Adobe Commerce, you would use authentication tokens to authorize your requests to the REST API. In Adobe Commerce as a Cloud Service, you must use Adobe Identity Management Service (IMS) to [authenticate your requests](./authentication/index.md).
+In previous versions of Adobe Commerce, you would use authentication tokens to authorize your requests to the REST API. In Adobe Commerce as a Cloud Service, you must use Adobe Identity Management Service (IMS) to [authenticate your requests](authentication/index.md).
 
-The authentication system supports both [interactive user-based workflows](./authentication/user.md) and automated [server-to-server integrations](./authentication/server-to-server.md), ensuring secure and appropriate access for different use cases. Both of these authentication methods require every request to be signed with an IMS Access Token.
+The authentication system supports both [interactive user-based workflows](authentication/user.md) and automated [server-to-server integrations](authentication/server-to-server.md), ensuring secure and appropriate access for different use cases. Both of these authentication methods require every request to be signed with an IMS Access Token.
 
 ### URL structure
 

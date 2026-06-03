@@ -4,8 +4,8 @@ description: Assign and manage sources and stocks using the REST API
 keywords:
   - Inventory
   - REST
---- 
- 
+---
+
 # Link and unlink stocks and sources
 
 In Admin, you can assign (link) sources to a stock when you create the stock. In REST, creating a stock and assigning sources to it are separate steps.
@@ -31,11 +31,11 @@ GET /V1/inventory/stock-source-links
 
 **StockSourceLink parameters:**
 
-Name | Description | Type | Requirements
---- | --- | --- | ---
-`stock_id` | Stock ID | Integer | Required for POST operations
-`source_code` | Source code of the link | String | Required for POST operations
-`priority` | Priority of the link | Integer | Required when linking a stock to a source
+| Name | Description | Type | Requirements |
+| --- | --- | --- | --- |
+| `stock_id` | Stock ID | Integer | Required for POST operations |
+| `source_code` | Source code of the link | String | Required for POST operations |
+| `priority` | Priority of the link | Integer | Required when linking a stock to a source |
 
 ## Link stocks and sources
 
@@ -107,7 +107,7 @@ The `POST /V1/inventory/stock-source-links-delete` endpoint breaks the link betw
 
 The following call returns the link information for `stock_id = 4`.
 
-See [Search using REST APIs](/rest/use-rest/performing-searches/) for information about constructing a search query.
+See [Search using REST APIs](/rest/use-rest/performing-searches.md) for information about constructing a search query.
 
 **Sample Usage:**
 

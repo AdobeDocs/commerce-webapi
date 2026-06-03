@@ -1,8 +1,0 @@
-plugins:
-  - remark-heading-id
-  - remark-validate-links
-  - remark-frontmatter
-  - - remark-lint-frontmatter-schema
-    - schemas:
-        ./.github/linters/metadata.schema.yml:
-          - "!src/pages/graphql/schema/**/*.md"

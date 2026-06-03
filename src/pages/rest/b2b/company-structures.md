@@ -6,15 +6,12 @@ keywords:
   - REST
 ---
 
-import * as Vars from '../../../data/vars.js';
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../includes/commerce-only.md"/>
 
 # Manage company structures
 
-<p><Vars.sitedatavarb2b/> allows company users to be assigned to company teams and hierarchies.</p>
+B2B for Adobe Commerce allows company users to be assigned to company teams and hierarchies.
 
 ## Manage company teams
 
@@ -36,11 +33,11 @@ GET /V1/team/
 
 **Company team parameters:**
 
-Name | Description | Format | Requirements
---- | --- | --- | ---
-`id` | System-generated team ID | integer | Not applicable for create operations.
-`name` | The displayed name of the team | string | Required to create or update a team.
-`description` | An optional description of the team. | string | Optional
+| Name | Description | Format | Requirements |
+| --- | --- | --- | --- |
+| `id` | System-generated team ID | integer | Not applicable for create operations. |
+| `name` | The displayed name of the team | string | Required to create or update a team. |
+| `description` | An optional description of the team. | string | Optional |
 
 ### Create a team
 

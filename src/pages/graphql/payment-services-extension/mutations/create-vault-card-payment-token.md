@@ -76,34 +76,34 @@ mutation {
 
 The `CreateVaultCardPaymentTokenInput` object contains the following input attributes:
 
-Attribute |  Data Type | Description
---- | --- | ---
-`setup_token_id` | String! | The `setup_token` obtained with the `createVaultCardSetupToken` mutation
-`card_description` | String | The description of the vaulted card
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `setup_token_id` | String! | The `setup_token` obtained with the `createVaultCardSetupToken` mutation |
+| `card_description` | String | The description of the vaulted card |
 
 ## Output attributes
 
 The `CreateVaultCardPaymentTokenOutput` object contains the following attributes:
 
-Attribute |  Data Type | Description
---- | --- | ---
-`vault_token_id` | String! | The vault payment token information
-`payment_source` | PaymentSourceOutput! | The payment source information
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `vault_token_id` | String! | The vault payment token information |
+| `payment_source` | PaymentSourceOutput! | The payment source information |
 
 ### `PaymentSourceOutput` attributes
 
 The `PaymentSourceOutput` object describes the payment source information. It contains the following attribute:
 
-Attribute |  Data Type | Description
---- | --- | ---
-`card` | CardPaymentSourceOutput! | The card payment source information.
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `card` | CardPaymentSourceOutput! | The card payment source information. |
 
 ### `CardPaymentSourceOutput` object
 
 The `CardPaymentSourceOutput` object describes the card payment source information
 
-Attribute |  Data Type | Description
---- | --- | ---
-`brand` | String | The brand of the card
-`last_digits` | String | Last digits of the card
-`expiry` | String | The expiry date of the card
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `brand` | String | The brand of the card |
+| `last_digits` | String | Last digits of the card |
+| `expiry` | String | The expiry date of the card |

@@ -1,16 +1,14 @@
 ---
 title: Requisition list (B2B) queries
+description: The following query retrieves a shared requisition list
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # Requisition list (B2B) queries
 
 The following query retrieves a shared requisition list
 
 - [View Shared Requisition List](shared-requisition-list.md)
-  

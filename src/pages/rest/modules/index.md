@@ -9,7 +9,7 @@ keywords:
 
 Review the following modules to learn more about the REST API:
 
-- [Catalog module](./catalog/)
-- [Custom attributes module](./custom-attributes.md/)
-- [ImportCsvApi module](./import/)
-- [Sales module](./sales/)
+- [Catalog module](catalog/index.md)
+- [Custom attributes module](./custom-attributes.md)
+- [ImportCsvApi module](import/index.md)
+- [Sales module](sales/index.md)

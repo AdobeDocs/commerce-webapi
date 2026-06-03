@@ -1,0 +1,8 @@
+{{#unless info.x-hideIntroduction}}
+{{>layout/content/introduction/main}}
+{{/unless}}
+{{#if (nempty items)}}
+{{#each items}}
+{{>layout/content/item}}
+{{/each}}
+{{/if}}

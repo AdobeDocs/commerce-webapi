@@ -1,7 +1,10 @@
 ---
 title: route query
-edition: paas
+description: A merchant can reconfigure (rewrite) the URL to any product, category, or CMS page. When the rewrite goes into effect, any links that point to the previous...
+
 ---
+
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # route query
 

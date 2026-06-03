@@ -1,5 +1,6 @@
 ---
 title: availableStores query
+description: The availableStores query returns configuration information about multiple store views. Use this query to implement a store switcher.
 ---
 
 # availableStores query
@@ -18,9 +19,9 @@ Specify the [Store header](../../../usage/headers.md) to determine the scope of 
 
 The `availableStores` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-availableStores)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-availableStores)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-availableStores)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-availableStores)
 
 ## Example usage
 

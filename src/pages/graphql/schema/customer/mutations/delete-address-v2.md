@@ -1,13 +1,16 @@
 ---
 title: deleteCustomerAddressV2 mutation
-edition: saas
+description: Use the deleteCustomerAddressV2 mutation to delete the specified customer address. It returns a Boolean value that indicates whether the operation was succ...
+
 ---
+
+<Fragment src="../../../../includes/saas-only.md"/>
 
 # deleteCustomerAddressV2 mutation
 
 Use the `deleteCustomerAddressV2` mutation to delete the specified customer address. It returns a Boolean value that indicates whether the operation was successful.
 
-We recommend you use a customer token in the header of your call to delete a customer. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session).
+We recommend you use a customer token in the header of your call to delete a customer. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session/).
 
 <InlineAlert variant="info" slots="text1" />
 
@@ -29,7 +32,7 @@ mutation {
 
 The `deleteCustomerAddressV2` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-deleteCustomerAddressV2)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-deleteCustomerAddressV2)
 
 ## Example usage
 
@@ -57,9 +60,9 @@ mutation {
 
 The `deleteCustomerAddressV2` mutation requires the following input:
 
-Attribute |  Data Type | Description
---- | --- | ---
-`uid` | ID! | The unique ID for a `CustomerAddress` object.
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `uid` | ID! | The unique ID for a `CustomerAddress` object. |
 
 ## Output attributes
 
@@ -67,15 +70,15 @@ The `deleteCustomerAddressV2` mutation returns a Boolean value that indicates wh
 
 ## Errors
 
-Error | Description
---- | ---
-`Address "uid" value must be specified` | The `uid` argument is null or empty.
-`Could not find an address with ID "XXX"` | The customer address specified in the `uid` argument does not exist.
-`Customer Address XXX is set as default billing address and cannot be deleted` | You cannot delete a default billing address.
-`Customer Address XXX is set as default shipping address and cannot be deleted` | You cannot delete a default shipping address.
-`Field "deleteCustomerAddressV2" argument "uid" requires type ID!, found "XXX".` | The specified `uid` argument value has the wrong type.
-`Syntax Error: Expected Name, found )` | The `uid` argument was omitted or does not have a value.
-`The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table.
+| Error | Description |
+| --- | --- |
+| `Address "uid" value must be specified` | The `uid` argument is null or empty. |
+| `Could not find an address with ID "XXX"` | The customer address specified in the `uid` argument does not exist. |
+| `Customer Address XXX is set as default billing address and cannot be deleted` | You cannot delete a default billing address. |
+| `Customer Address XXX is set as default shipping address and cannot be deleted` | You cannot delete a default shipping address. |
+| `Field "deleteCustomerAddressV2" argument "uid" requires type ID!, found "XXX".` | The specified `uid` argument value has the wrong type. |
+| `Syntax Error: Expected Name, found )` | The `uid` argument was omitted or does not have a value. |
+| `The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table. |
 
 ## Related topics
 

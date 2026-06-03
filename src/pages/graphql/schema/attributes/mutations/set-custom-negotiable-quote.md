@@ -1,13 +1,14 @@
 ---
 title: setCustomAttributesOnNegotiableQuote mutation
-edition: saas
+description: This mutation is automatically available on Adobe Commerce as a Cloud Service (SaaS) projects. Adobe Commerce on-premises and Cloud infrastructure (PaaS) p...
+
 ---
 
-import CustomAttributesAvailability from '/src/_includes/graphql/custom-attribute-availability.md'
+<Fragment src="../../../../includes/saas-only.md"/>
 
 # setCustomAttributesOnNegotiableQuote mutation
 
-<CustomAttributesAvailability />
+<Fragment src="../../../../includes/graphql/custom-attribute-availability.md"/>
 
 The `setCustomAttributesOnNegotiableQuote` mutation sets custom attributes on a credit memo item. The mutation accepts a negotiable quote ID and an array of custom attribute key/value pairs. It returns the updated negotiable quote. All ID values are treated as strings.
 

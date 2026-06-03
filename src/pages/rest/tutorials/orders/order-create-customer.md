@@ -1,11 +1,12 @@
 ---
 title: Step 3. Create a customer
 description: In this step of the tutorial you will create a customer
-edition: paas
 keywords:
   - REST
---- 
- 
+---
+
+<Fragment src="../../../includes/paas-only.md"/>
+
 # Step 3. Create a customer
 
 Customers can make purchases in three ways:
@@ -16,7 +17,7 @@ Customers can make purchases in three ways:
 
 This tutorial creates an order by a logged-in user. Adobe Commerce provides additional REST endpoints for handling guest users.
 
-### Create a customer account
+## Create a customer account
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -34,8 +35,7 @@ This example shows a simplified way of creating a customer account. Typically, y
 
 It is recommended that you substitute the value of the `email` parameter with a real email address so that you receive all notifications.
 
-<details>
-      <summary><b>Show code sample</b></summary>
+<Details slots="content" summary="Show code sample" />
 
 ```json
 {
@@ -68,14 +68,11 @@ It is recommended that you substitute the value of the `email` parameter with a 
 }
 ```
 
-</details>
-
 **Response:**
 
 Commerce assigned this user `id` value of `2`.
 
-<details>
-      <summary><b>Show code sample</b></summary>
+<Details slots="content" summary="Show code sample" />
 
 ```json
 {
@@ -118,8 +115,6 @@ Commerce assigned this user `id` value of `2`.
 }
 ```
 
-</details>
-
 You can log in to the Luma store using the username `jdoe@example.com` and password `Password1`.
 
 ### Get the customer's access token
@@ -151,7 +146,7 @@ Commerce returns the customer's access token. This token must be specified in th
 
 `q0u66k8h42yaevtchv09uyy3y9gaj2ap`
 
-### Verify this step
+## Verify this step
 
 1. Log in to the Luma website using the email `jdoe@example.com` and password `Password1`.
 1. Click the account name (Jane) in the upper right corner and select **My Account**.
