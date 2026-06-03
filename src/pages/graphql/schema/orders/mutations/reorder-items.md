@@ -27,9 +27,9 @@ The `reorderItems` mutation will not add any products to the cart if it encounte
 
 The `reorderItems` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-reorderItems)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#reorderitems)
 
-* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-reorderItems)
+* [On-Premises/Cloud](/reference/graphql/index.md#reorderitems)
 
 ## Example usage
 

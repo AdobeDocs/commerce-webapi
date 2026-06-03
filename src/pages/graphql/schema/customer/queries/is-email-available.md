@@ -17,9 +17,9 @@ When guest checkout logins are enabled, or in versions prior to 2.4.7, a value o
 
 The `isEmailAvailable` reference provides detailed information about the types and fields defined in this query.
 
-* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-isEmailAvailable)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#isemailavailable)
 
-* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-isEmailAvailable)
+* [On-Premises/Cloud](/reference/graphql/index.md#isemailavailable)
 
 ## Example usage
 

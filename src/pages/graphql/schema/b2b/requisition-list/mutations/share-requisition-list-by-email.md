@@ -29,7 +29,7 @@ The `shareRequisitionListByEmail` mutation enables B2B customers to share a requ
 
 [//]: # (## Reference)
 [//]: # ()
-[//]: # (The [`shareRequisitionListByEmail`]&#40;https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-shareRequisitionListByEmail&#41; reference provides detailed information about the types and fields defined in this mutation.)
+[//]: # (The [`shareRequisitionListByEmail`]&#40;/reference/graphql/saas/index.md#sharerequisitionlistbyemail&#41; reference provides detailed information about the types and fields defined in this mutation.)
 
 ## Example usage
 

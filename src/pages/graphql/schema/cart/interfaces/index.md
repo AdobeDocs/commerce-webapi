@@ -5,14 +5,14 @@ description: The CartItemInterface has the following implementations:
 
 # CartItemInterface attributes and implementations
 
-The [`CartItemInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CartItemInterface) has the following implementations:
+The [`CartItemInterface`](/reference/graphql/index.md#cartiteminterface) has the following implementations:
 
-*  [BundleCartItem](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-BundleCartItem)
-*  [ConfigurableCartItem](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-ConfigurableCartItem)
-*  [DownloadableCartItem](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-DownloadableCartItem)
-*  [GiftCardCartItem](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-GiftCardCartItem)
-*  [SimpleCartItem](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-SimpleCartItem)
-*  [VirtualCartItem](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-VirtualCartItem)
+*  [BundleCartItem](/reference/graphql/index.md#bundlecartitem)
+*  [ConfigurableCartItem](/reference/graphql/index.md#configurablecartitem)
+*  [DownloadableCartItem](/reference/graphql/index.md#downloadablecartitem)
+*  [GiftCardCartItem](/reference/graphql/index.md#giftcardcartitem)
+*  [SimpleCartItem](/reference/graphql/index.md#simplecartitem)
+*  [VirtualCartItem](/reference/graphql/index.md#virtualcartitem)
 
 ## Example usage
 

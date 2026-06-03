@@ -19,9 +19,9 @@ Specify the [Store header](../../../usage/headers.md) to determine the scope of 
 
 The `availableStores` reference provides detailed information about the types and fields defined in this query.
 
-* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-availableStores)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#availablestores)
 
-* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-availableStores)
+* [On-Premises/Cloud](/reference/graphql/index.md#availablestores)
 
 ## Example usage
 

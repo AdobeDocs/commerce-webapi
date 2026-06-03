@@ -20,7 +20,7 @@ Use the `wishlist` query to retrieve information about a customer's wish list. [
 
 ## Reference
 
-The [`wishlist`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-wishlist) reference provides detailed information about the types and fields defined in this query.
+The [`wishlist`](/reference/graphql/index.md#wishlist) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

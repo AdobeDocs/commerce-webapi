@@ -31,9 +31,9 @@ mutation {
 
 The `updateCompanyTeam` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-updateCompanyTeam)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#updatecompanyteam)
 
-* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateCompanyTeam)
+* [On-Premises/Cloud](/reference/graphql/index.md#updatecompanyteam)
 
 ## Example usage
 

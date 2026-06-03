@@ -24,7 +24,7 @@ This query requires a valid [customer authentication token](../../customer/mutat
 
 ## Reference
 
-The [`isSubscribedProductAlertPrice`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-isSubscribedProductAlertPrice) reference provides detailed information about the types and fields defined in this query.
+The [`isSubscribedProductAlertPrice`](/reference/graphql/saas/index.md#issubscribedproductalertprice) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

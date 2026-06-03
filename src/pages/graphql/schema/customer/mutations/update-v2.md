@@ -23,9 +23,9 @@ As of version 2.4.7, you can use the `custom_attributes` field to define an arra
 
 The `updateCustomerV2` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-updateCustomerV2)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#updatecustomerv2)
 
-* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateCustomerV2)
+* [On-Premises/Cloud](/reference/graphql/index.md#updatecustomerv2)
 
 ## Example usage
 

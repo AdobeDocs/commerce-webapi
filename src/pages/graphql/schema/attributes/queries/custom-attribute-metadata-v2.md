@@ -22,9 +22,9 @@ This new query has several features that were not available in the deprecated qu
 
 The `customAttributeMetadataV2` reference provides detailed information about the types and fields defined in this query.
 
-- [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-customAttributeMetadataV2)
+- [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#customattributemetadatav2)
 
-- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-customAttributeMetadataV2)
+- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](/reference/graphql/index.md#customattributemetadatav2)
 
 ## Example usage
 

@@ -22,7 +22,7 @@ mutation {
 
 ## Reference
 
-The [`unsubscribeProductAlertPriceAll`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-unsubscribeProductAlertPriceAll) reference provides detailed information about the types and fields defined in this mutation.
+The [`unsubscribeProductAlertPriceAll`](/reference/graphql/saas/index.md#unsubscribeproductalertpriceall) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

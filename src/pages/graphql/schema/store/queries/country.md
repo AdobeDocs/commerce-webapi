@@ -17,9 +17,9 @@ Use the [countries](countries.md) query to retrieve a list of countries availabl
 
 The `country` reference provides detailed information about the types and fields defined in this query.
 
-* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-country)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#country)
 
-* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-country)
+* [On-Premises/Cloud](/reference/graphql/index.md#country)
 
 ## Example usage
 

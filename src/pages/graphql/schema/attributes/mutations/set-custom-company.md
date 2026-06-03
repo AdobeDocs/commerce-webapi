@@ -28,7 +28,7 @@ mutation {
 
 ## Reference
 
-The [`setCustomAttributesOnCompany`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-setCustomAttributesOnCompany) reference provides detailed information about the types and fields defined in this mutation.
+The [`setCustomAttributesOnCompany`](/reference/graphql/saas/index.md#setcustomattributesoncompany) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

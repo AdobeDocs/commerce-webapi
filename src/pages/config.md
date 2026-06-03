@@ -12,7 +12,7 @@
     - GraphQL
         - [Guide](/graphql/index.md)
         - [SaaS Reference](/reference/graphql/saas/index.md)
-        - [2.4.9 Reference](/reference/graphql/2-4-9/index.md)
+        - [2.4.9 Reference](/reference/graphql/index.md)
         - [2.4.8 Reference](/reference/graphql/2-4-8/index.md)
         - [2.4.7 Reference](/reference/graphql/2-4-7/index.md)
         - [2.4.6 Reference](/reference/graphql/2-4-6/index.md)
@@ -532,7 +532,7 @@
         - [Step 10: Place the order](/graphql/tutorials/checkout/place-order.md)
     - [Reference](/graphql/reference/index.md)
         - [SaaS](https://developer.adobe.com/commerce/webapi/reference/graphql/saas/)
-        - [2.4.9](https://developer.adobe.com/commerce/webapi/reference/graphql/2.4.9/)
+        - [2.4.9](https://developer.adobe.com/commerce/webapi/reference/graphql/)
         - [2.4.8](https://developer.adobe.com/commerce/webapi/reference/graphql/2.4.8/)
         - [2.4.7](https://developer.adobe.com/commerce/webapi/reference/graphql/2.4.7/)
         - [2.4.6](https://developer.adobe.com/commerce/webapi/reference/graphql/2.4.6/)
