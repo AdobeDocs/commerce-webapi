@@ -27,9 +27,9 @@ mutation {
 
 The `approvePurchaseOrders` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-approvePurchaseOrders)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#approvepurchaseorders)
 
-* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-approvePurchaseOrders)
+* [On-Premises/Cloud](/reference/graphql/index.md#approvepurchaseorders)
 
 ## Example usage
 

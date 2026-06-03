@@ -18,7 +18,7 @@ Use the [`createProductReview` mutation](../mutations/create-review.md) to add a
 
 ## Reference
 
-The [`productReviewRatingsMetadata`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-productReviewRatingsMetadata) reference provides detailed information about the types and fields defined in this query.
+The [`productReviewRatingsMetadata`](/reference/graphql/index.md#productreviewratingsmetadata) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

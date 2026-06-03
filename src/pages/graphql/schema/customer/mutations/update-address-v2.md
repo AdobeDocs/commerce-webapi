@@ -33,7 +33,7 @@ mutation {
 
 The `updateCustomerAddressV2` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-updateCustomerAddressV2)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#updatecustomeraddressv2)
 
 ## Example usage
 

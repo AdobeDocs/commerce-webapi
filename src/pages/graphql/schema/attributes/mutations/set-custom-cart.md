@@ -29,7 +29,7 @@ mutation {
 
 The `setCustomAttributesOnCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-setCustomAttributesOnCart)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#setcustomattributesoncart)
 
 ## Example usage
 

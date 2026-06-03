@@ -15,9 +15,9 @@ The `setBillingAddressOnCart` mutation sets the billing address for a specific c
 
 The `setBillingAddressOnCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-setBillingAddressOnCart)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#setbillingaddressoncart)
 
-* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-setBillingAddressOnCart)
+* [On-Premises/Cloud](/reference/graphql/index.md#setbillingaddressoncart)
 
 ## Example usage
 

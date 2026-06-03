@@ -35,9 +35,9 @@ mutation {
 
 The `createCompanyRole` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-createCompanyRole)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#createcompanyrole)
 
-* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createCompanyRole)
+* [On-Premises/Cloud](/reference/graphql/index.md#createcompanyrole)
 
 ## Example usage
 

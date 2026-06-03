@@ -21,9 +21,9 @@ This query requires a valid [customer authentication token](../../../customer/mu
 
 The `isCompanyAdminEmailAvailable` reference provides detailed information about the types and fields defined in this query.
 
-* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-isCompanyAdminEmailAvailable)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#iscompanyadminemailavailable)
 
-* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-isCompanyAdminEmailAvailable)
+* [On-Premises/Cloud](/reference/graphql/index.md#iscompanyadminemailavailable)
 
 ## Example usage
 

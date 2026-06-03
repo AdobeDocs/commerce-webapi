@@ -42,7 +42,7 @@ categoryList (
 
 ## Reference
 
-The [`categoryList`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-categoryList) reference provides detailed information about the types and fields defined in this query.
+The [`categoryList`](/reference/graphql/index.md#categorylist) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

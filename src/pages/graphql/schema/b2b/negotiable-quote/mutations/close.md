@@ -33,9 +33,9 @@ This mutation requires a valid [customer authentication token](../../../customer
 
 The `closeNegotiableQuotes` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-closeNegotiableQuotes)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#closenegotiablequotes)
 
-* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-closeNegotiableQuotes)
+* [On-Premises/Cloud](/reference/graphql/index.md#closenegotiablequotes)
 
 ## Example usage
 

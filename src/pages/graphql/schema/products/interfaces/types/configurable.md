@@ -7,10 +7,10 @@ description: The ConfigurableProduct data type implements the following interfac
 
 The `ConfigurableProduct` data type implements the following interfaces:
 
--  [ProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-ProductInterface)
--  [PhysicalProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-PhysicalProductInterface)
--  [CustomizableProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CustomizableProductInterface)
--  [RoutableInterface](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-RoutableInterface)
+-  [ProductInterface](/reference/graphql/index.md#productinterface)
+-  [PhysicalProductInterface](/reference/graphql/index.md#physicalproductinterface)
+-  [CustomizableProductInterface](/reference/graphql/index.md#customizableproductinterface)
+-  [RoutableInterface](/reference/graphql/index.md#routableinterface)
 
 Attributes that are specific to configurable products can be used when performing a [`products`](../../queries/products.md) query.
 

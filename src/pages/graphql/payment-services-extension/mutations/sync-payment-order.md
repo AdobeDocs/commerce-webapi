@@ -25,7 +25,7 @@ mutation {
 
 ## Reference
 
-The [`syncPaymentOrder`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-syncPaymentOrder) reference provides detailed information about the types and fields defined in this mutation.
+The [`syncPaymentOrder`](/reference/graphql/index.md#syncpaymentorder) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

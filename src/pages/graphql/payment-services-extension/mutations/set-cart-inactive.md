@@ -25,7 +25,7 @@ mutation {
 
 ## Reference
 
-The [`setCartAsInactive`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-setCartAsInactive) reference provides detailed information about the types and fields defined in this mutation.
+The [`setCartAsInactive`](/reference/graphql/saas/index.md#setcartasinactive) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

@@ -11,23 +11,23 @@ keywords:
 
 `PurchaseOrderApprovalRuleConditionInterface` provides details about the approval rule conditions.
 
-* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-PurchaseOrderApprovalRuleConditionInterface)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#purchaseorderapprovalruleconditioninterface)
 
-* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-PurchaseOrderApprovalRuleConditionInterface)
+* [On-Premises/Cloud](/reference/graphql/index.md#purchaseorderapprovalruleconditioninterface)
 
 It has the following implementations:
 
 *  `PurchaseOrderApprovalRuleConditionAmount`
 
-   * [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-PurchaseOrderApprovalRuleConditionAmount)
+   * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#purchaseorderapprovalruleconditionamount)
 
-   * [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-PurchaseOrderApprovalRuleConditionAmount)
+   * [On-Premises/Cloud](/reference/graphql/index.md#purchaseorderapprovalruleconditionamount)
 
 *  `PurchaseOrderApprovalRuleConditionQuantity`
 
-   * [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-PurchaseOrderApprovalRuleConditionQuantity)
+   * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#purchaseorderapprovalruleconditionquantity)
 
-   * [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-PurchaseOrderApprovalRuleConditionQuantity)
+   * [On-Premises/Cloud](/reference/graphql/index.md#purchaseorderapprovalruleconditionquantity)
 
 ## Example usage
 

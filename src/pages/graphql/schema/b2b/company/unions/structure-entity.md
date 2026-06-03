@@ -19,9 +19,9 @@ The `CompanyStructureEntity` union provides details about a node in a company st
 
 The `CompanyStructureEntity` reference provides detailed information about the types and fields defined in this union.
 
-* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-CompanyStructureEntity)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#companystructureentity)
 
-* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CompanyStructureEntity)
+* [On-Premises/Cloud](/reference/graphql/index.md#companystructureentity)
 
 **Possible types:**
 

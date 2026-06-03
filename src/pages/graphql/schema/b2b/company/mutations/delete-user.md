@@ -33,7 +33,7 @@ mutation {
 
 ## Reference
 
-The [`deleteCompanyUser`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-deleteCompanyUser) reference provides detailed information about the types and fields defined in this mutation.
+The [`deleteCompanyUser`](/reference/graphql/index.md#deletecompanyuser) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

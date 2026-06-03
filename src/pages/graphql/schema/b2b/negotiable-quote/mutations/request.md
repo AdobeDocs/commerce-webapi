@@ -33,9 +33,9 @@ requestNegotiableQuote(
 
 The `requestNegotiableQuote` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-requestNegotiableQuote)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#requestnegotiablequote)
 
-* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-requestNegotiableQuote)
+* [On-Premises/Cloud](/reference/graphql/index.md#requestnegotiablequote)
 
 ## Example usage
 

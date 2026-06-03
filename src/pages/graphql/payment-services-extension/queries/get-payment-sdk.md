@@ -23,7 +23,7 @@ The `getPaymentSDK` query gets the payment PayPal SDK URLs and other related val
 
 ## Reference
 
-The [`getPaymentSDK`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-getPaymentSDK) reference provides detailed information about the types and fields defined in this query.
+The [`getPaymentSDK`](/reference/graphql/index.md#getpaymentsdk) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

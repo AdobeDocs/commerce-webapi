@@ -22,7 +22,7 @@ To return or modify information about a customer, we recommend you use customer 
 
 ## Reference
 
-The [`updateCustomer`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateCustomer) reference provides detailed information about the types and fields defined in this mutation.
+The [`updateCustomer`](/reference/graphql/index.md#updatecustomer) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

@@ -18,7 +18,7 @@ Return the contents of a CMS page:
 
 ## Reference
 
-The [`cmsPage`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-cmsPage) reference provides detailed information about the types and fields defined in this query.
+The [`cmsPage`](/reference/graphql/index.md#cmspage) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

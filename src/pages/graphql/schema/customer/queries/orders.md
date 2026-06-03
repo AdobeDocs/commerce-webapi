@@ -22,7 +22,7 @@ We recommend you use customer tokens in the header of your GraphQL calls. Howeve
 
 ## Reference
 
-The [`customerOrders`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-customerOrders) reference provides detailed information about the types and fields defined in this query.
+The [`customerOrders`](/reference/graphql/index.md#customerorders) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

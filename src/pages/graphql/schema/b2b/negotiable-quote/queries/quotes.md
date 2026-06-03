@@ -29,9 +29,9 @@ This query requires a valid [customer authentication token](../../../customer/mu
 
 The `negotiableQuotes` reference provides detailed information about the types and fields defined in this query.
 
-* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-negotiableQuotes)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#negotiablequotes)
 
-* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-negotiableQuotes)
+* [On-Premises/Cloud](/reference/graphql/index.md#negotiablequotes)
 
 ## Example usage
 

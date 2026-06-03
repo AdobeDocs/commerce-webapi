@@ -27,9 +27,9 @@ mutation {
 
 The `addPurchaseOrderComment` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-addPurchaseOrderComment)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#addpurchaseordercomment)
 
-* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addPurchaseOrderComment)
+* [On-Premises/Cloud](/reference/graphql/index.md#addpurchaseordercomment)
 
 ## Example usage
 

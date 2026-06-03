@@ -18,7 +18,7 @@ See [PayPal Payflow Link payment method](../../../payment-methods/payflow-link.m
 
 ## Reference
 
-The [`getPayflowLinkToken`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-getPayflowLinkToken) reference provides detailed information about the types and fields defined in this query.
+The [`getPayflowLinkToken`](/reference/graphql/index.md#getpayflowlinktoken) reference provides detailed information about the types and fields defined in this query.
 
 ## Example
 

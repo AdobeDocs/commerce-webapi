@@ -31,9 +31,9 @@ mutation {
 
 The `placePurchaseOrder` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-placePurchaseOrder)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#placepurchaseorder)
 
-* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-placePurchaseOrder)
+* [On-Premises/Cloud](/reference/graphql/index.md#placepurchaseorder)
 
 ## Example usage
 

@@ -32,7 +32,7 @@ Each of these payment methods can have a different payment source, for example, 
 
 ## Reference
 
-The [`getPaymentConfig`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-getPaymentConfig) reference provides detailed information about the types and fields defined in this query.
+The [`getPaymentConfig`](/reference/graphql/index.md#getpaymentconfig) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
