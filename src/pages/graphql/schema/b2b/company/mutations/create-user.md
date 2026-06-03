@@ -1,14 +1,13 @@
 ---
 title: createCompanyUser mutation
+description: The createCompanyUser mutation allows an existing company user who is assigned a role that contains the MagentoCompany::usersedit permission to create a ne...
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # createCompanyUser mutation
 
@@ -42,9 +41,9 @@ mutation {
 
 The `createCompanyUser` reference provides detailed information about the types and fields defined in this mutation.
 
-- &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-createCompanyUser)
+- [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-createCompanyUser)
 
-- &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createCompanyUser)
+- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createCompanyUser)
 
 ## Example usage
 
@@ -163,12 +162,16 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Invitation was sent to an existing customer, they will be added to your organization once they accept the invitation.` | The email provided in the `input`.`email` argument belongs to an existing customer. The application sends an invitation to this customer. When the customer accepts the invitation, the customer will be assigned to the company.
-`A customer with the same email already assigned to company.` | The email provided in the `input`.`email` argument belongs to an existing customer, and the customer has already been assigned to the company.
-`"Email" is not a valid email address.` | The value provided in the `input`.`email` argument has an invalid format.
-`Field "createCompanyUser" argument "input" requires type String!, found xxx.` | The value specified in the one of the `input` arguments has an invalid type.
-`Field "xxx" is not defined by type CompanyUserCreateInput.` | The `input`.`xxx` argument is undefined.
-`Required parameters are missing: xxx` | The `input`.`xxx` argument was omitted or contains an empty value.
-`No such entity with roleId = xxx` | The company role with ID `xxx` doesn't exist.
+| Error | Description |
+| --- | --- |
+| `Invitation was sent to an existing customer, they will be added to your organization once they accept the invitation.` | The email provided in the `input`.`email` argument belongs to an existing customer. The application sends an invitation to this customer. When the customer accepts the invitation, the customer will be assigned to the company. |
+| `A customer with the same email already assigned to company.` | The email provided in the `input`.`email` argument belongs to an existing customer, and the customer has already been assigned to the company. |
+| `"Email" is not a valid email address.` | The value provided in the `input`.`email` argument has an invalid format. |
+| `Field "createCompanyUser" argument "input" requires type String!, found xxx.` | The value specified in the one of the `input` arguments has an invalid type. |
+| `Field "xxx" is not defined by type CompanyUserCreateInput.` | The `input`.`xxx` argument is undefined. |
+| `Required parameters are missing: xxx` | The `input`.`xxx` argument was omitted or contains an empty value. |
+| `No such entity with roleId = xxx` | The company role with ID `xxx` doesn't exist. |
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

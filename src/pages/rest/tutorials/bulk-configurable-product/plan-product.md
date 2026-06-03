@@ -2,11 +2,11 @@
 title: Step 1. Plan the product
 description: In this step of the tutorial you will plan and define the product
 contributor_name: comwrap GmbH
-contributor_link: http://comwrap.com/
+contributor_link: https://comwrap.com/en/
 keywords:
   - REST
---- 
- 
+---
+
 # Step 1. Plan the product
 
   To create a configurable product programmatically, you'll need to know the following:
@@ -23,21 +23,21 @@ keywords:
 
  The following table lists the general characteristics of the men's t-shirt we're creating. These items are among those listed on the New Product page in Admin when the Top attribute set is selected.
 
- Characteristic | Description
---- | ---
-Attribute Set | Top
-Product Name | Champ Tee
-SKU | MS-Champ
-Price | 25.00
-Tax Class | Taxable Goods
-Weight | 0.5
-Categories | Men, Tops, Tees
-Visibility | Catalog, Search
-Material | LumaTech
-Pattern | Graphic Print
-Color | Gray
-Size | Configurable in small, medium, or large
-Description | The Champ Tee keeps you cool and dry while you do your thing. Let everyone know who you are by adding your name on the back for only $10.
+ | Characteristic | Description |
+| --- | --- |
+| Attribute Set | Top |
+| Product Name | Champ Tee |
+| SKU | MS-Champ |
+| Price | 25.00 |
+| Tax Class | Taxable Goods |
+| Weight | 0.5 |
+| Categories | Men, Tops, Tees |
+| Visibility | Catalog, Search |
+| Material | LumaTech |
+| Pattern | Graphic Print |
+| Color | Gray |
+| Size | Configurable in small, medium, or large |
+| Description | The Champ Tee keeps you cool and dry while you do your thing. Let everyone know who you are by adding your name on the back for only $10. |
 
  A merchant typically provides the product name, SKU, price, weight, and description. The other characteristics are defined by the system.
 
@@ -103,14 +103,14 @@ searchCriteria[filter_groups][0][filters][0][condition_type]=eq
 
  The response contains almost 3,000 lines. The following table provides a summary of the attributes that are relevant in this tutorial.
 
- Admin label | Selected value | Attribute ID | attribute_code  | Attribute value
---- | --- | --- | --- | ---
-Tax Class | Taxable Goods | 132 | `tax_class_id` | 2
-Visibility | Catalog, Search | 99 | `visibility` | 4
-Material | LumaTech  | 136 | `material` | 148
-Pattern | Graphic Print | 152 | `pattern` | 196
-Color | Gray | 93 | `color` | 52
-Size | Not applicable | 141 | `size` | 168 (small), 169 (medium), 170 (large)
+ | Admin label | Selected value | Attribute ID | attribute_code  | Attribute value |
+| --- | --- | --- | --- | --- |
+| Tax Class | Taxable Goods | 132 | `tax_class_id` | 2 |
+| Visibility | Catalog, Search | 99 | `visibility` | 4 |
+| Material | LumaTech  | 136 | `material` | 148 |
+| Pattern | Graphic Print | 152 | `pattern` | 196 |
+| Color | Gray | 93 | `color` | 52 |
+| Size | Not applicable | 141 | `size` | 168 (small), 169 (medium), 170 (large) |
 
  <InlineAlert variant="warning" slots="text"/>
 
@@ -138,3 +138,7 @@ searchCriteria[filter_groups][0][filters][0][condition_type]=gte
 ## Verify this step
 
  At this point, we're gathering information, so there is nothing to verify.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to comwrap GmbH for contributing this topic!](https://comwrap.com/en/)

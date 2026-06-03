@@ -1,12 +1,11 @@
 ---
 title: setNegotiableQuoteBillingAddress mutation
+description: The setNegotiableQuoteBillingAddress mutation assigns the billing address for the specified negotiable quote. You can assign an address from the company us...
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # setNegotiableQuoteBillingAddress mutation
 
@@ -30,9 +29,9 @@ This query requires a valid [customer authentication token](../../../customer/mu
 
 The `setNegotiableQuoteBillingAddress` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-setNegotiableQuoteBillingAddress)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-setNegotiableQuoteBillingAddress)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-setNegotiableQuoteBillingAddress)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-setNegotiableQuoteBillingAddress)
 
 ## Example usage
 

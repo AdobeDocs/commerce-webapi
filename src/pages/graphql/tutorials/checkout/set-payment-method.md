@@ -3,11 +3,12 @@ title: Step 9. Set the payment method
 description: Learn how to set a payment method for an order with the GraphQL API.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
-edition: paas
 keywords:
   - GraphQL
   - Checkout
 ---
+
+<Fragment src="../../../includes/paas-only.md"/>
 
 # Step 9. Set the payment method
 
@@ -17,7 +18,7 @@ You must always set a payment method for an order.
 
 Use the following `cart` query to determine which payment methods which are available for your order.
 
-`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](../../tutorials/checkout/add-product-to-cart.md).
+`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](add-product-to-cart.md).
 
 For logged-in customers, send the customer's authorization token in the `Authorization` parameter of the header. See [Authorization tokens](../../usage/authorization-tokens.md) for more information.
 
@@ -51,7 +52,7 @@ query {
 }
 ```
 
-### Set payment method on cart
+## Set payment method on cart
 
 Use the `setPaymentMethodOnCart` mutation to set the payment method for your order. The value `checkmo` ("Check / Money order" payment method code) was returned in the query.
 
@@ -101,3 +102,7 @@ If the operation is successful, the response contains the code of the selected p
 1. Go to Checkout.
 
 1. The selected payment method is displayed in the Payment Method section on the Review & Payments step.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

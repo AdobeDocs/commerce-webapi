@@ -4,8 +4,8 @@ description: Configure the low stock notification alert using the admin and REST
 keywords:
   - Inventory
   - REST
---- 
- 
+---
+
 # Manage low-quantity notifications
 
 Low stock notification alert the merchant that the salable quantity of a stock has reached a critical threshold. The Admin allows the merchant to configure low-quantity notifications from several locations:
@@ -36,11 +36,11 @@ POST /V1/inventory/low-quantity-notifications-delete
 
 **sourceItemConfigurations parameters:**
 
-Name | Description | Type | Requirements
---- | --- | --- | ---
-`source_code` | The product's assigned source code  | String | Required to create or delete a threshold
-`notify_stock_qty` | The threshold at which Commerce notifies the merchant that the salable quantity of a product is low. | Float | Required to create a threshold
-`sku` | The SKU of the affected product   | String | Required for to create or delete a threshold
+| Name | Description | Type | Requirements |
+| --- | --- | --- | --- |
+| `source_code` | The product's assigned source code  | String | Required to create or delete a threshold |
+| `notify_stock_qty` | The threshold at which Commerce notifies the merchant that the salable quantity of a product is low. | Float | Required to create a threshold |
+| `sku` | The SKU of the affected product   | String | Required for to create or delete a threshold |
 
 ## Create a low quantity notification
 

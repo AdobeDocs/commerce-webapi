@@ -1,0 +1,32 @@
+{{#if description}}
+{{{description}}}
+
+{{/if}}
+{{#if fields}}
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+{{#each fields}}
+| `{{name}}` - {{{mdTypeLink . codify=true}}} | {{singleLine description}}{{#if (and deprecationReason (not @root.info.x-hideDeprecationReason))}} *(Deprecated: {{singleLine deprecationReason}})*{{/if}} |
+{{/each}}
+
+{{/if}}
+{{#if possibleTypes}}
+#### Possible Types
+
+| {{name}} Types |
+|----------------|
+{{#each possibleTypes}}
+| {{{mdTypeLink . codify=true}}} |
+{{/each}}
+
+{{/if}}
+{{#if example}}
+#### Example
+
+```json
+{{{jsonStringify example}}}
+```
+
+{{/if}}

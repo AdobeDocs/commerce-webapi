@@ -1,0 +1,15 @@
+---
+name: Deploy GitHub Pages preview
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  preview:
+    uses: AdobeDocs/commerce-contributor/.github/workflows/github-pages-preview.yml@main
+    with:
+      branch: ${{ github.ref_name }}

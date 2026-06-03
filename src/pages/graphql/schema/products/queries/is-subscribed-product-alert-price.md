@@ -1,7 +1,10 @@
 ---
 title: isSubscribedProductAlertPrice query
-edition: saas
+description: The isSubscribedProductAlertPrice query checks whether the logged-in customer is subscribed to a price drop alert for the specified product. Use this query...
+
 ---
+
+<Fragment src="../../../../includes/saas-only.md"/>
 
 # isSubscribedProductAlertPrice query
 
@@ -68,11 +71,11 @@ The following example checks whether the logged-in customer is subscribed to a p
 
 ## Errors
 
-Error | Description
---- | ---
-`Customer is not logged in.` | The request does not include a valid customer authentication token.
-`Required parameter "sku" is missing.` | The `sku` field was not provided in the input.
-`Unable to check if subscribed to price alert. No such entity.` | No product exists with the specified SKU.
+| Error | Description |
+| --- | --- |
+| `Customer is not logged in.` | The request does not include a valid customer authentication token. |
+| `Required parameter "sku" is missing.` | The `sku` field was not provided in the input. |
+| `Unable to check if subscribed to price alert. No such entity.` | No product exists with the specified SKU. |
 
 ## Related topics
 

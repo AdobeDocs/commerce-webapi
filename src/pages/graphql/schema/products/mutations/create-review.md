@@ -1,7 +1,10 @@
 ---
 title: createProductReview mutation
-edition: paas
+description: The createProductReview mutation adds a review for the specified product. Use the productReviewRatingsMetadata query to return a list of rating categories...
+
 ---
+
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # createProductReview mutation
 
@@ -90,10 +93,10 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Field nickname of required type String! was not provided.` | The required attribute `nickname` is missing.
-`Field sku of required type String! was not provided.` | The required attribute `sku` is missing.
-`Field summary of required type String! was not provided.` | The required attribute `summary` is missing.
-`Field text of required type String! was not provided.` | The required attribute `text` is missing.
-`Field ratings of required type ProductReviewRatingInput! was not provided.` | The required attribute `ratings` is missing.
+| Error | Description |
+| --- | --- |
+| `Field nickname of required type String! was not provided.` | The required attribute `nickname` is missing. |
+| `Field sku of required type String! was not provided.` | The required attribute `sku` is missing. |
+| `Field summary of required type String! was not provided.` | The required attribute `summary` is missing. |
+| `Field text of required type String! was not provided.` | The required attribute `text` is missing. |
+| `Field ratings of required type ProductReviewRatingInput! was not provided.` | The required attribute `ratings` is missing. |

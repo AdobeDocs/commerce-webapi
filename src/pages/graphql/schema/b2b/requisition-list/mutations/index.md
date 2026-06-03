@@ -1,12 +1,11 @@
 ---
 title: Requisition list (B2B) mutations   
+description: The B2B requisition list mutations allow you to perform the following operations:
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # Requisition list (B2B) mutations
 

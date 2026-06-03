@@ -1,11 +1,12 @@
 ---
 title: Gift Card Account REST Endpoints
 description: Learn how to use Gift Card Account REST APIs to create, update, delete, and query gift card accounts programmatically in Adobe Commerce as a Cloud Service.
-edition: saas
 keywords:
   - REST
   - Integration
 ---
+
+<Fragment src="../../../includes/saas-only.md"/>
 
 # Gift card account API
 

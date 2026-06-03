@@ -1,9 +1,11 @@
 ---
 title: createKlarnaPaymentsSession mutation
+description: The Klarna Vendor Bundled Extension was removed from the Adobe Commerce codebase in version 2.4.4. This mutation is no longer supported.
 contributor_name: Klarna
 contributor_link: https://www.klarna.com/
-edition: paas
 ---
+
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # createKlarnaPaymentsSession mutation
 
@@ -79,9 +81,9 @@ mutation {
 
 The `createKlarnaPaymentsSessionInput` object must contain the following attribute.
 
-Attribute | Data type | Description
---- | --- | ---
-`cart_id` | String! | The masked ID that identifies the shopper's cart
+| Attribute | Data type | Description |
+| --- | --- | --- |
+| `cart_id` | String! | The masked ID that identifies the shopper's cart |
 
 ## Output attributes
 
@@ -89,32 +91,36 @@ Attribute | Data type | Description
 
 The `createKlarnaPaymentsSessionOutput` object can contain the following attributes.
 
-Attribute | Data type | Description
---- | --- | ---
-`client_token` |  String | The payment method client token
-`payment_method_categories` | [Categories] | An array of payment method categories
+| Attribute | Data type | Description |
+| --- | --- | --- |
+| `client_token` |  String | The payment method client token |
+| `payment_method_categories` | [Categories] | An array of payment method categories |
 
 ### Categories attributes
 
 The `Categories` object can contain the following attributes.
 
-Attribute | Data type | Description
---- | --- | ---
-`asset_urls` | [Assets] | The payment method assets
-`identifier` | String! | The payment method identifier
-`name` | String! | The payment method name
+| Attribute | Data type | Description |
+| --- | --- | --- |
+| `asset_urls` | [Assets] | The payment method assets |
+| `identifier` | String! | The payment method identifier |
+| `name` | String! | The payment method name |
 
 ### Assets attributes
 
 The `Assets` object can contain the following attributes.
 
-Attribute | Data type | Description
---- | --- | ---
-`descriptive` | String | The payment method logo URL (descriptive)
-`standard` | String | The payment method logo URL (standard)
+| Attribute | Data type | Description |
+| --- | --- | --- |
+| `descriptive` | String | The payment method logo URL (descriptive) |
+| `standard` | String | The payment method logo URL (standard) |
 
 ## Errors
 
-Error | Description
---- | ---
-`The Klarna payment method is not active.` | The [Klarna](https://experienceleague.adobe.com/docs/commerce-admin/config/sales/payment-methods/payment-methods.html) payment method is disabled in admin.
+| Error | Description |
+| --- | --- |
+| `The Klarna payment method is not active.` | The [Klarna](https://experienceleague.adobe.com/en/docs/commerce-admin/config/sales/payment-methods/payment-methods) payment method is disabled in admin. |
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Klarna for contributing this topic!](https://www.klarna.com/)

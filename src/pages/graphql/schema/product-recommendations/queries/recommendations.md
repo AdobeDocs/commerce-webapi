@@ -22,15 +22,11 @@ The [Commerce API playground](https://experienceleague.adobe.com/developer/comme
 
 You must specify the following HTTP headers to run this query.
 
-import Docs from '/src/_includes/graphql/catalog-service/headers.md'
+<Fragment src="../../../../includes/graphql/catalog-service/headers.md"/>
 
-<Docs />
+### Find the customer group code
 
-###  Find the customer group code
-
-import CustomerGroupCode from '/src/_includes/graphql/customer-group-code.md'
-
-<CustomerGroupCode />
+<Fragment src="../../../../includes/graphql/customer-group-code.md"/>
 
 ## Syntax
 
@@ -166,60 +162,60 @@ recommendations(currentSku: "MP01", pageType: Product) {
 
 ## Input fields
 
-Field | Data type | Description
---- | --- | ---
-`cartSKUs` | [String] | SKUs of the products in the cart.
-`category` | String | The category currently being viewed.
-`currentSKU` | String |  SKU of the product currently being viewed on the product detail page.
-`pageType` | PageType  | An enum indicating the type of page on which recommendations are requested. Possible values are Cart, Category, Checkout, CMS, PageBuilder and Product.
-`userPurchaseHistory` | [PurchaseHistory] | User purchase history with timestamp.
-`userViewHistory` | [ViewHistory] | User view history with timestamp.
+| Field | Data type | Description |
+| --- | --- | --- |
+| `cartSKUs` | [String] | SKUs of the products in the cart. |
+| `category` | String | The category currently being viewed. |
+| `currentSKU` | String |  SKU of the product currently being viewed on the product detail page. |
+| `pageType` | PageType  | An enum indicating the type of page on which recommendations are requested. Possible values are Cart, Category, Checkout, CMS, PageBuilder and Product. |
+| `userPurchaseHistory` | [PurchaseHistory] | User purchase history with timestamp. |
+| `userViewHistory` | [ViewHistory] | User view history with timestamp. |
 
 ### PurchasedHistory
 
-Field | Data type | Description
---- | --- | ---
-`date` | DateTime | Date of purchase
-`items` | [String]! | A list of items purchased
+| Field | Data type | Description |
+| --- | --- | --- |
+| `date` | DateTime | Date of purchase |
+| `items` | [String]! | A list of items purchased |
 
 ### ViewHistory
 
-Field | Data type | Description
---- | --- | ---
-`date` | DateTime | The time the items were viewed
-`sku` | [String]! | A list of SKUs viewed
+| Field | Data type | Description |
+| --- | --- | --- |
+| `date` | DateTime | The time the items were viewed |
+| `sku` | [String]! | A list of SKUs viewed |
 
 ## Output fields
 
 The `Recommendations` object contains details about recommended products for a given SKU. It contains the following attributes.
 
-Attribute |  Data Type | Description
---- | --- | ---
-`results` | [RecommendationUnit] | Array of recommendation units for recommended products
-`totalResults` | Int | Total number of recommendation units for returned recommendation
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `results` | [RecommendationUnit] | Array of recommendation units for recommended products |
+| `totalResults` | Int | Total number of recommendation units for returned recommendation |
 
 ### RecommendationUnit attributes
 
-Attribute |  Data Type | Description
---- | --- | ---
-`displayOrder` | Int | Order in which recommendation units are displayed
-`pageType` | String | Page Type
-`productsView` | [ProductView] | List of product view
-`storefrontLabel` | String | Storefront label to be displayed on the storefront
-`totalProducts` | Int | Total number of products returned for a recommendation
-`typeId` | String | Type of recommendation
-`unitId` | String | Id of the preconfigured unit
-`unitName` | String | Name of the preconfigured unit
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `displayOrder` | Int | Order in which recommendation units are displayed |
+| `pageType` | String | Page Type |
+| `productsView` | [ProductView] | List of product view |
+| `storefrontLabel` | String | Storefront label to be displayed on the storefront |
+| `totalProducts` | Int | Total number of products returned for a recommendation |
+| `typeId` | String | Type of recommendation |
+| `unitId` | String | Id of the preconfigured unit |
+| `unitName` | String | Name of the preconfigured unit |
 
 ### ProductView interface
 
 The `ProductView` return object is an interface that can contain the following fields. It is implemented by the `SimpleProductView` and `ComplexProductView` types. Both these types contain the same set of fields as `ProductView`.
 
-Attribute |  Data Type | Description
---- | --- | ---
-`categories` | [String] | List of categories to which the product belongs
-`rank` | Int | Rank given to a product
-`queryType` | String | Indicates if the product was retrieved from the primary or backup query
-`score` | Float | Score indicating relevance of the product to the recommendation type
-`sku` | String! | The product SKU
-`visibility` | String | Visibility setting of the product
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `categories` | [String] | List of categories to which the product belongs |
+| `rank` | Int | Rank given to a product |
+| `queryType` | String | Indicates if the product was retrieved from the primary or backup query |
+| `score` | Float | Score indicating relevance of the product to the recommendation type |
+| `sku` | String! | The product SKU |
+| `visibility` | String | Visibility setting of the product |

@@ -54,7 +54,7 @@ mutation {
 
 You can now use this token in the Authorization request header field for any queries and mutations.
 
-![GraphQL Authorization Bearer](../../_images/graphql/graphql-authorization.png)
+![GraphQL Authorization Bearer](../../images/graphql/graphql-authorization.png)
 
 You can also [revoke the customer's token](../schema/customer/mutations/revoke-token.md) when the customer logs out or changes their password.
 
@@ -108,3 +108,7 @@ Run the following command to disable session cookies for GraphQL:
 To re-enable these cookies, run:
 
 `bin/magento config:set graphql/session/disable 0`
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

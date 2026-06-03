@@ -1,10 +1,12 @@
 ---
 title: initiateUpload mutation
-edition: saas
+description: The initiateUpload mutation starts the file upload process by generating a presigned URL for uploading a file to an Amazon S3 bucket. This mutation require...
 keywords:
   - REST
   - Integration
 ---
+
+<Fragment src="../../../../includes/saas-only.md"/>
 
 # initiateUpload mutation
 

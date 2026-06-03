@@ -2,35 +2,43 @@
 title: Bulk endpoints
 description: Learn how to combine multiple API calls of the same type into a single request
 contributor_name: comwrap GmbH
-contributor_link: http://comwrap.com/
+contributor_link: https://comwrap.com/en/
 keywords:
   - REST
---- 
- 
+---
+
 # Bulk endpoints
 
 Bulk API endpoints differ from other REST endpoints in that they combine multiple calls of the same type into an array and execute them as a single request. The endpoint handler splits the array into individual entities and writes them as separate messages to the message queue.
 
-&#8203;<Edition name="saas" /> In Adobe Commerce as a Cloud Service, message queues run automatically. There is no need to manage queues or install a message broker.
+<Fragment src="../../includes/saas-only.md"/>
 
-&#8203;<Edition name="paas" /> Cron jobs are the default mechanism for [managing message queues](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues) and starting message queue [consumers](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/consumers), but you can also use external process control systems (like [Supervisor](https://supervisord.readthedocs.io/en/latest/)) to monitor process management. You can use the [`bin/magento queue:consumers:start async.operations.all`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/start-message-queues.html) command to manually start the `async.operations.all` consumer that handles asynchronous and bulk API messages. However, manually starting consumers is not recommended because it requires you to keep your terminal session connected.
+In Adobe Commerce as a Cloud Service, message queues run automatically. There is no need to manage queues or install a message broker.
+
+<Fragment src="../../includes/paas-only.md"/>
+
+Cron jobs are the default mechanism for [managing message queues](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues) and starting message queue [consumers](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/consumers), but you can also use external process control systems (like [Supervisor](https://supervisord.readthedocs.io/en/latest/)) to monitor process management. You can use the [`bin/magento queue:consumers:start async.operations.all`](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/start-message-queues) command to manually start the `async.operations.all` consumer that handles asynchronous and bulk API messages. However, manually starting consumers is not recommended because it requires you to keep your terminal session connected.
 
 <InlineAlert variant="info" slots="text"/>
 
-Before using the Bulk API to process messages, you must install and configure RabbitMQ, which is the default message broker. See [Setup RabbitMQ service](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/rabbitmq) for cloud infrastructure projects and [Message broker](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/rabbitmq.html) for on-premises projects.
+Before using the Bulk API to process messages, you must install and configure RabbitMQ, which is the default message broker. See [Setup RabbitMQ service](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq) for cloud infrastructure projects and [Message broker](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/rabbitmq) for on-premises projects.
 
 ## Routes
 
 The route to bulk calls varies between platforms:
 
-&#8203;<Edition name="paas" /> In Adobe Commerce on Cloud and on-premises projects, the route contains the prefix `/async/bulk`, added before `/V1` of a standard synchronous endpoint. For example:
+<Fragment src="../../includes/paas-only.md"/>
+
+In Adobe Commerce on Cloud and on-premises projects, the route contains the prefix `/async/bulk`, added before `/V1` of a standard synchronous endpoint. For example:
 
 ```http
 POST https://<host>/rest/<store-view-code>/async/bulk/V1/products
 PUT https://<host>/rest/<store-view-code>/async/bulk/V1/products/:sku
 ```
 
-&#8203;<Edition name="saas" /> In Adobe Commerce as a Cloud Service, the `/async/bulk` segment occurs after the `V1` segment of the route. For example:
+<Fragment src="../../includes/saas-only.md"/>
+
+In Adobe Commerce as a Cloud Service, the `/async/bulk` segment occurs after the `V1` segment of the route. For example:
 
 ```http
 POST https://<server>.api.commerce.adobe.com/<tenant-id>/V1/async/bulk/products
@@ -41,12 +49,12 @@ Endpoint routes that contain input parameters require additional changes. For ex
 
 The following table provides several examples:
 
-Platform | Synchronous route | Bulk route
---- | --- | ---
-PaaS | `PUT <path>/V1/products/:sku/media/:entryId` | `PUT <path>/async/bulk/V1/products/bySku/media/byEntryId`
-PaaS | `POST <path>/V1/carts/:quoteId/items` | `POST <path>/async/bulk/V1/carts/byQuoteId/items`
-SaaS | `PUT <path>/V1/products/:sku/media/:entryId` | `PUT <path>/V1/async/bulk/products/bySku/media/byEntryId`
-SaaS | `POST <path>/V1/carts/:quoteId/items` | `POST <path>/V1/async/bulk/carts/byQuoteId/items`
+| Platform | Synchronous route | Bulk route |
+| --- | --- | --- |
+| PaaS | `PUT <path>/V1/products/:sku/media/:entryId` | `PUT <path>/async/bulk/V1/products/bySku/media/byEntryId` |
+| PaaS | `POST <path>/V1/carts/:quoteId/items` | `POST <path>/async/bulk/V1/carts/byQuoteId/items` |
+| SaaS | `PUT <path>/V1/products/:sku/media/:entryId` | `PUT <path>/V1/async/bulk/products/bySku/media/byEntryId` |
+| SaaS | `POST <path>/V1/carts/:quoteId/items` | `POST <path>/V1/async/bulk/carts/byQuoteId/items` |
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -160,7 +168,7 @@ DELETE <server-path>/async/bulk/V1/cmsPage/byPageId
 
 ## Store scopes
 
-<Edition name="paas" />
+<Fragment src="../../includes/paas-only.md"/>
 
 You can specify a store code (which is labeled in the Admin as store view code) in the route of an asynchronous endpoint so that it operates on a specific store, as shown below:
 
@@ -180,7 +188,7 @@ PUT /all/async/bulk/V1/products/bySku
 
 ## Fallback and creating/updating objects when setting store scopes
 
-<Edition name="paas" />
+<Fragment src="../../includes/paas-only.md"/>
 
 When you create or update an object, such as a product, you can specify the store code in the request. If you do not specify a store code, Commerce uses the default store scope.
 The following rules apply when you create or update an object, such as a product.
@@ -189,3 +197,7 @@ The following rules apply when you create or update an object, such as a product
 *  If you do not set the store code while updating a product, then by fallback, Commerce updates values for the default store only.
 *  If you include the `all` parameter, then Commerce updates values for all store scopes (in case a particular store doesn't yet have its own value set).
 *  If `<store_code>` parameter is set, then values for only defined store will be updated.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to comwrap GmbH for contributing this topic!](https://comwrap.com/en/)

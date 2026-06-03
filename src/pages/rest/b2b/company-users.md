@@ -6,15 +6,12 @@ keywords:
   - REST
 ---
 
-import * as Vars from '../../../data/vars.js';
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../includes/commerce-only.md"/>
 
 # Manage company users
 
-A company user is a customer (buyer) that is assigned extended attributes that identify the company the user belongs to. Use the `POST /V1/customers` call, which is included with <Vars.sitedatavarce/> and <Vars.sitedatavaree/>, to create the user. After the user is created, you can use the `PUT /V1/customers/:customer_id` call to set their company data with the `company_attributes` extended attributes.
+A company user is a customer (buyer) that is assigned extended attributes that identify the company the user belongs to. Use the `POST /V1/customers` call, which is included with Magento Open Source and Adobe Commerce, to create the user. After the user is created, you can use the `PUT /V1/customers/:customer_id` call to set their company data with the `company_attributes` extended attributes.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -43,13 +40,13 @@ PUT /V1/customers/:customerId
 
 The following table lists the parameters that can be used to set company data for a user.
 
-Name | Description | Format | Requirements
---- | --- | --- | ---
-`customer_id` | System-generated customer ID. | integer | Not applicable for create operations.
-`company_id` | System-generated company ID. | integer | Required to create or update a company user.
-`job_title` | A string that describes the company user's responsibilities. | string | Required to create or update a company.
-`status` | Indicates whether the company user is active or inactive | integer | `0` - inactive; `1` - active
-`telephone`  |  Telephone number | string | Required to create a company user.
+| Name | Description | Format | Requirements |
+| --- | --- | --- | --- |
+| `customer_id` | System-generated customer ID. | integer | Not applicable for create operations. |
+| `company_id` | System-generated company ID. | integer | Required to create or update a company user. |
+| `job_title` | A string that describes the company user's responsibilities. | string | Required to create or update a company. |
+| `status` | Indicates whether the company user is active or inactive | integer | `0` - inactive; `1` - active |
+| `telephone`  |  Telephone number | string | Required to create a company user. |
 
 ### Create a company user
 
@@ -167,7 +164,7 @@ If you change the `status` to inactive, the account is locked. If the company us
 
 ### Delete a company user
 
-<Edition name="paas" />
+<Fragment src="../../includes/paas-only.md"/>
 
 If the specified company user has child users, the system re-assigns the child users to the parent of the deleted user. The user account is deleted from Commerce with all of its content, except quotes and orders. The user's orders and quotes remain visible to the seller.
 

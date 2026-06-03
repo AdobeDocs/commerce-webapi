@@ -1,1 +1,92 @@
-.github/linters/.markdownlint.yml
+# Markdownlint configuration
+# See https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+
+# Default state for all rules
+default: true
+
+# MD001/heading-increment - replaced by CM001 (component-aware version)
+MD001: false
+
+# CM001/comdox-heading-increment - component-aware replacement for MD001
+CM001: true
+
+# MD003/heading-style - Heading style
+MD003:
+  style: atx
+
+# MD004/ul-style - Unordered list style (allow both asterisk and dash)
+MD004: false
+
+# MD007/ul-indent - Unordered list indentation (disabled for flexibility)
+MD007: false
+
+# MD013/line-length - Line length (disabled for documentation with long URLs)
+MD013: false
+
+# MD024/no-duplicate-heading - Multiple headings with the same content
+MD024: false
+
+# MD025/single-title/single-h1 - Multiple top-level headings in the same document
+MD025:
+  front_matter_title: ""
+
+# MD030/list-marker-space - Spaces after list markers (allow both 1 and 2 spaces)
+MD030: false
+
+# MD033/no-inline-html - Inline HTML (allow Adobe doc components)
+MD033:
+  allowed_elements:
+    - Announcement
+    - Cards
+    - CodeBlock
+    - Details
+    - DiscoverBlock
+    - Edition
+    - Fragment
+    - GetCredential
+    - HeroSimple
+    - HorizontalLine
+    - InlineAlert
+    - RedoclyAPIBlock
+    - Resources
+    - SuperHero
+    - iframe
+
+# MD034/no-bare-urls - Bare URL used
+MD034: false
+
+# MD035/hr-style - Horizontal rule style
+MD035:
+  style: "---"
+
+# MD041/first-line-heading/first-line-h1 - First line in file should be a top level heading
+MD041: false
+
+# MD045/no-alt-text - Images should have alternate text
+MD045: false
+
+# MD046/code-block-style - Code block style
+MD046:
+  style: fenced
+
+# MD048/code-fence-style - Code fence style
+MD048:
+  style: backtick
+
+# MD049/emphasis-style - Emphasis style (allow both)
+MD049: false
+
+# MD050/strong-style - Strong style
+MD050:
+  style: asterisk
+
+# MD051/link-fragments - Link fragments should be valid
+MD051:
+  ignored_pattern: '^aio-api-mesh'
+
+# MD055/table-pipe-style - Require leading and trailing pipes (matches AM023)
+MD055:
+  style: leading_and_trailing
+
+# MD060/table-column-style - Table column style (disabled for flexible formatting)
+MD060: false

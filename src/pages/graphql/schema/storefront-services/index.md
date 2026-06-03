@@ -11,7 +11,7 @@ keywords:
 
 # Adobe Storefront Services GraphQL
 
-Adobe Storefront Services—[Catalog Service](../catalog-service/), [Live Search](../live-search/), and [Product Recommendations](../product-recommendations/)—are SaaS extensions for Adobe Commerce that expose their own GraphQL schemas. These schemas are separate from the [core Commerce GraphQL schema](../index.md) and optimized for fast, read-only storefront rendering.
+Adobe Storefront Services—[Catalog Service](../catalog-service/index.md), [Live Search](../live-search/index.md), and [Product Recommendations](../product-recommendations/index.md)—are SaaS extensions for Adobe Commerce that expose their own GraphQL schemas. These schemas are separate from the [core Commerce GraphQL schema](../index.md) and optimized for fast, read-only storefront rendering.
 
 In Adobe Commerce on cloud and on-premises instances (PaaS), the merchant installs and configures the Storefront Services extensions to enable these GraphQL endpoints. In Adobe Commerce as a Cloud Service (SaaS), the services are included in the platform, and the merchant must configure Live Search and Product Recommendations services.
 
@@ -134,14 +134,14 @@ The Merchandising GraphQL API provides queries that are similar in name to some 
 Adobe Commerce Optimizer also provides additional queries that are not available in Storefront Services:
 
 | Query | Description |
-| --- | --- | --- |
+| --- | --- |
 | `categoryTree` | Retrieves category tree nodes, optionally filtered by slugs and limited by depth. It can return full hierarchy metadata, descriptions, images, and SEO fields.|
 | `navigation` | Returns category-based navigation structure for a given product family. It is intended for rendering storefront menus. |
 | `recommendationsByUnitIds` | Returns recommendation units based on pre-configured unit IDs. This allows merchants to define specific recommendation sets in Commerce Optimizer and retrieve them directly, rather than relying on real-time AI generation. |
 
 ### When to use Commerce Optimizer
 
-Use the [Commerce Optimizer Merchandising GraphQL API](https://developer.adobe.com/commerce/services/optimizer/merchandising-services/using-the-api/) instead of Storefront Services queries when:
+Use the [Commerce Optimizer Merchandising GraphQL API](https://developer.adobe.com/commerce/services/optimizer/merchandising-services/using-the-api) instead of Storefront Services queries when:
 
 - Building on Adobe Commerce Optimizer as a standalone SaaS platform rather than on an Adobe Commerce (PaaS/SaaS) instance.
 - Your storefront needs to serve multiple catalog views or channel-specific product catalogs controlled by Commerce Optimizer policies.

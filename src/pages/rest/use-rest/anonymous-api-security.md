@@ -1,12 +1,13 @@
 ---
 title: Restricting access to anonymous web APIs
 description: How to restrict anonymous access to the REST API
-edition: paas
 keywords:
   - REST
   - Security
---- 
- 
+---
+
+<Fragment src="../../includes/paas-only.md"/>
+
 # Restricting access to anonymous web APIs
 
 Adobe Commerce allows some web APIs to be accessed by unauthenticated (anonymous) users. Many of these APIs allow a customer to have a robust shopping experience on the website without having to log in.
@@ -51,17 +52,13 @@ The following table lists the APIs that are no longer available to an anonymous 
 | Open Source | Store | `/V1/store/websites` | GET |
 | Open Source | Store | `/V1/store/storeConfigs` | GET |
 
-<InlineAlert variant="warning" slots="text"/>
+<InlineAlert variant="warning" slots="text1, text2"/>
 
-<div>
-<p></p>
 Preventing anonymous access to these endpoints could cause third-party integrations to fail. If a third-party integration calls any of these endpoints, it will receive an authentication error instead of the expected response. In this case, you might need to disable this feature.
-<p></p><p></p><p>&nbsp;</p>
-To disable this feature, log in to the Admin panel and navigate to <strong>Stores</strong> &gt; <strong>Settings</strong> &gt; <strong>Configuration</strong> &gt; <strong>Services</strong> &gt; <strong>Magento Web API</strong> &gt; <strong>Web API Security</strong>. Then select <strong>Yes</strong> from the <strong>Allow Anonymous Guest Access</strong> menu.
-</div>
+
+To disable this feature, log in to the Admin panel and navigate to **Stores > Settings > Configuration > Services > Magento Web API > Web API Security**. Then select **Yes** from the **Allow Anonymous Guest Access** menu.
 
 If the list of APIs that are inaccessible to anonymous users must be updated for a third-party extension, an integrator can add to their extension's `di.xml` file to update or replace the functionality defined in the WebapiSecurity module.
-
 The following APIs remain accessible to anonymous users. Most of these must remain accessible to support the checkout and add-to-cart Ajax functionalities.
 
 | Product | Module | API | Action |
@@ -110,4 +107,4 @@ The following APIs remain accessible to anonymous users. Most of these must rema
 | Commerce | GiftCardAccount | `/V1/carts/guest-carts/:cartId/giftCards` | POST |
 | Commerce | GiftCardAccount | `/V1/carts/guest-carts/:cartId/checkGiftCard/:giftCardCode` | GET |
 | Commerce | GiftRegistry | `/V1/guest-giftregistry/:cartId/estimate-shipping-methods` | POST |
-| Commerce | WorldPay | `/V1/worldpay-guest-carts/:cartId/payment-information` | POST
+| Commerce | WorldPay | `/V1/worldpay-guest-carts/:cartId/payment-information` | POST |

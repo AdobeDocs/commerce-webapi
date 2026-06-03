@@ -2,11 +2,11 @@
 title: Create a configurable product using bulk APIs
 description: A tutorial that describes how to create a configurable product using bulk API calls
 contributor_name: comwrap GmbH
-contributor_link: http://comwrap.com/
+contributor_link: https://comwrap.com/en/
 keywords:
   - REST
---- 
- 
+---
+
 # Create a configurable product using bulk APIs
 
 A system integrator can use Adobe Commerce REST bulk APIs to perform actions on a large scale; such as, creating multiple customers and products, changing prices across an inventory, and assigning large groups of products to a specific warehouse, all within a single call.
@@ -17,15 +17,19 @@ A system integrator can use Adobe Commerce REST bulk APIs to perform actions on 
 
  This **4-step tutorial** generally takes **45 minutes**.
 
-### Before you begin
+## Before you begin
 
 *  Install a Commerce instance with sample data. The sample data defines a functional store, called Luma, that sells fitness clothing and accessories.
-*  Install a REST client. You can use any REST client to send calls to Commerce. [Postman](https://www.getpostman.com/) is recommended.
-*  Obtain an admin authorization token. All calls in this tutorial require administrator privileges. See [Generate the admin token](/rest/tutorials/prerequisite-tasks/) for more information.
+*  Install a REST client. You can use any REST client to send calls to Commerce. [Postman](https://www.postman.com/) is recommended.
+*  Obtain an admin authorization token. All calls in this tutorial require administrator privileges. See [Generate the admin token](/rest/tutorials/prerequisite-tasks/index.md) for more information.
 *  Use the `bin/magento queue:consumers:start async.operations.all` command to enable bulk endpoint processing.
 
-### Other resources
+## Other resources
 
 *  [REST Tutorials](../index.md) provides additional information about completing any Commerce REST tutorial.
-*  [Asynchronous web endpoints](/rest/use-rest/asynchronous-web-endpoints/) provides information about how to use the Commerce Asynchronous API
-*  [Bulk endpoints](/rest/use-rest/bulk-endpoints/) provides information about how to use the Commerce Bulk API
+*  [Asynchronous web endpoints](/rest/use-rest/asynchronous-web-endpoints.md) provides information about how to use the Commerce Asynchronous API
+*  [Bulk endpoints](/rest/use-rest/bulk-endpoints.md) provides information about how to use the Commerce Bulk API
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to comwrap GmbH for contributing this topic!](https://comwrap.com/en/)

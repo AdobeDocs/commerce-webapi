@@ -1,5 +1,6 @@
 ---
 title: Attributes queries
+description: The following queries allow you to retrieve details about custom and EAV attributes:
 ---
 
 # Attributes queries

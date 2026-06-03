@@ -5,13 +5,13 @@ contributor_name: Goivvy LLC
 contributor_link: https://www.goivvy.com/magento-optimization-service
 keywords:
   - REST
---- 
- 
+---
+
 # Step 2. Create the simple products
 
 <InlineAlert variant="info" slots="text"/>
 
-Before you run the code, please verify that the attribute values are the same in your installation. See [Get the list of attributes defined in an attribute set](/rest/tutorials/bundle-product/plan-product/#get-the-list-of-attributes-defined-in-an-attribute-searchcriteria ) for more information.
+Before you run the code, please verify that the attribute values are the same in your installation. See [Get the list of attributes defined in an attribute set](/rest/tutorials/bundle-product/plan-product.md#get-the-list-of-attributes-defined-in-an-attribute-searchcriteria) for more information.
 
 We will create four simple products: `RAM 12GB`, `RAM 24GB`, `Monitor 15"` and `Monitor 17"`.
 
@@ -577,8 +577,12 @@ POST http://domain.com/rest/default/V1/products
 
 Log in to the Adobe Commerce Admin Panel and select **Catalog** > **Products** and confirm that your products appear in the grid.
 
-![Simple products](../../../_images/simple-products-admin-grid.png)
+![Simple products](../../../images/simple-products-admin-grid.png)
 
 <InlineAlert variant="info" slots="text"/>
 
 If you do not see your products in the catalog, you can try reindexing and clearing the cache.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/magento-optimization-service)

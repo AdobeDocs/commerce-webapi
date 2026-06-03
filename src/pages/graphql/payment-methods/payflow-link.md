@@ -1,11 +1,12 @@
 ---
 title: PayPal Payflow Link payment method
 description: Learn how to use the GraphQL API mutation for the PayPal Payflow Link payment solution.
-edition: paas
 keywords:
   - GraphQL
   - Payments
 ---
+
+<Fragment src="../../includes/paas-only.md"/>
 
 # PayPal Payflow Link payment method
 
@@ -21,19 +22,15 @@ The Payflow gateway uses a secure token to send non-credit card transaction data
 
 The following diagram shows the workflow for placing an order when Payflow Link is the selected payment method.
 
-![PayPal Payflow Link sequence diagram](../../_images/graphql/paypal-payflow-link.svg)
+![PayPal Payflow Link sequence diagram](../../images/graphql/paypal-payflow-link.png)
 
-import PayflowLinkWorkflow from '/src/_includes/graphql/payment-methods/payflow-link-workflow.md'
-
-<PayflowLinkWorkflow />
+<Fragment src="../../includes/graphql/payment-methods/payflow-link-workflow.md"/>
 
 ## Additional Payment information
 
 When you set the payment method to Payflow Link in the [`setPaymentMethodOnCart`](../schema/cart/mutations/set-payment-method.md) mutation, the `payment_method` object must contain a `payflow_link` object, which defines the following objects:
 
-import PayflowLinkAttributes from '/src/_includes/graphql/payment-methods/payflow-link-attributes.md'
-
-<PayflowLinkAttributes />
+<Fragment src="../../includes/graphql/payment-methods/payflow-link-attributes.md"/>
 
 ### Example usage
 

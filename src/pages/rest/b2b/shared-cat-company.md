@@ -6,9 +6,7 @@ keywords:
   - REST
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../includes/commerce-only.md"/>
 
 # Assign companies to a shared catalog
 
@@ -32,9 +30,9 @@ GET  /V1/sharedCatalog/:sharedCatalogId/companies
 
 Although you can specify other parameters defined within a `categories` object, the `id` is the only one used to assign or unassign a category to a shared catalog.
 
-Name | Description | Format | Requirements
---- | --- | --- | ---
-`id` | The company ID number | integer | Required to assign or unassign a company to a shared catalog
+| Name | Description | Format | Requirements |
+| --- | --- | --- | --- |
+| `id` | The company ID number | integer | Required to assign or unassign a company to a shared catalog |
 
 ## Assign companies to shared catalog
 

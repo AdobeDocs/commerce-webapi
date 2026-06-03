@@ -1,5 +1,6 @@
 ---
 title: setGuestEmailOnCart mutation
+description: For guest customers, you must assign an email to the cart before you place the order.
 ---
 
 # setGuestEmailOnCart mutation
@@ -16,9 +17,9 @@ A logged-in customer specifies an email address when they create an account. The
 
 The `setGuestEmailOnCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-setGuestEmailOnCart)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-setGuestEmailOnCart)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-setGuestEmailOnCart)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-setGuestEmailOnCart)
 
 ## Example usage
 
@@ -55,11 +56,11 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Could not find a cart with ID "XXX"` | The ID specified in the `cart` argument does not exist.
-`Invalid email format` | The value specified in the `email` argument has an incorrect format.
-`Required parameter "cart_id" is missing` | The `cart_id` argument was omitted or contains an empty value.
-`Required parameter "email" is missing` | The `email` argument was omitted or contains an empty value.
-`The current user cannot perform operations on cart "XXX"` | An unauthorized user (guest) tried to set the email address on the customer's cart.
-`The request is not allowed for logged in customers` | An authorized user (customer) is not allowed to use the `setGuestEmailOnCart` mutation.
+| Error | Description |
+| --- | --- |
+| `Could not find a cart with ID "XXX"` | The ID specified in the `cart` argument does not exist. |
+| `Invalid email format` | The value specified in the `email` argument has an incorrect format. |
+| `Required parameter "cart_id" is missing` | The `cart_id` argument was omitted or contains an empty value. |
+| `Required parameter "email" is missing` | The `email` argument was omitted or contains an empty value. |
+| `The current user cannot perform operations on cart "XXX"` | An unauthorized user (guest) tried to set the email address on the customer's cart. |
+| `The request is not allowed for logged in customers` | An authorized user (customer) is not allowed to use the `setGuestEmailOnCart` mutation. |

@@ -1,12 +1,11 @@
 ---
 title: isCompanyUserEmailAvailable query
+description: The isCompanyUserEmailAvailable query checks whether an email is valid for registering a company user. The query returns a false value if the specified ema...
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # isCompanyUserEmailAvailable query
 
@@ -22,9 +21,9 @@ This query requires a valid [customer authentication token](../../../customer/mu
 
 The `isCompanyUserEmailAvailable` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-isCompanyUserEmailAvailable)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-isCompanyUserEmailAvailable)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-isCompanyUserEmailAvailable)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-isCompanyUserEmailAvailable)
 
 ## Example usage
 

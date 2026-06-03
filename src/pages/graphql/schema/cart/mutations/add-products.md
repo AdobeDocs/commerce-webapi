@@ -1,5 +1,6 @@
 ---
 title: addProductsToCart mutation
+description: The addProductsToCart mutation adds any type of product to the shopping cart. It streamlines the process of adding products by allowing you to specify mult...
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
@@ -51,9 +52,9 @@ mutation {
 
 The `addProductsToCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-addProductsToCart)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-addProductsToCart)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addProductsToCart)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addProductsToCart)
 
 ## Example usage
 
@@ -641,10 +642,14 @@ mutation {
 
 ## Errors
 
-Code | Error | Description
---- | --- | ---
-`CART_ID_INVALID` | `Could not find a cart with ID` | The specified cart ID is invalid.
-`PRODUCT_NOT_FOUND` | `Could not find a product with SKU "XXX"` | A product with the SKU specified in the argument `data`.`sku` does not exist.
-`NOT_SALABLE` | `Product that you are trying to add is not available.` | A requested product is not available
-`INSUFFICIENT_STOCK` | `This product is out of stock` | The requested product is out of stock
-`UNDEFINED` | `UNDEFINED` | The error message does not match any error code
+| Code | Error | Description |
+| --- | --- | --- |
+| `CART_ID_INVALID` | `Could not find a cart with ID` | The specified cart ID is invalid. |
+| `PRODUCT_NOT_FOUND` | `Could not find a product with SKU "XXX"` | A product with the SKU specified in the argument `data`.`sku` does not exist. |
+| `NOT_SALABLE` | `Product that you are trying to add is not available.` | A requested product is not available |
+| `INSUFFICIENT_STOCK` | `This product is out of stock` | The requested product is out of stock |
+| `UNDEFINED` | `UNDEFINED` | The error message does not match any error code |
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

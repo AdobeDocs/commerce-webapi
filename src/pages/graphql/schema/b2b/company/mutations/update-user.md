@@ -1,14 +1,13 @@
 ---
 title: updateCompanyUser mutation
+description: Use the updateCompanyUser mutation to update an existing company user.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # updateCompanyUser mutation
 
@@ -34,9 +33,9 @@ mutation {
 
 The `updateCompanyUser` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-updateCompanyUser)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-updateCompanyUser)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateCompanyUser)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateCompanyUser)
 
 ## Example usage
 
@@ -149,8 +148,12 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`You do not have authorization to perform this action.` | The user with the ID provided in the `input`.`id` argument is not assigned to your company.
-`No such entity with roleId = xxx` | The company role with ID `xxx` doesn't exist.
-`A customer with the same email address already exists in an associated website` | The email provided in the `input`.`email` argument belongs to another user.
+| Error | Description |
+| --- | --- |
+| `You do not have authorization to perform this action.` | The user with the ID provided in the `input`.`id` argument is not assigned to your company. |
+| `No such entity with roleId = xxx` | The company role with ID `xxx` doesn't exist. |
+| `A customer with the same email address already exists in an associated website` | The email provided in the `input`.`email` argument belongs to another user. |
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

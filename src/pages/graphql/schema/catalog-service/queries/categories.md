@@ -32,23 +32,17 @@ The `subtree` object allows you to specify how many levels of subcategories to r
 
 ## Endpoints
 
-import StorefrontAPIEndpoints from '/src/_includes/graphql/endpoints.md'
-
-<StorefrontAPIEndpoints />
+<Fragment src="../../../../includes/graphql/endpoints.md"/>
 
 ## Required headers
 
 Specify the following HTTP headers to run this query.
 
-import Headers from '/src/_includes/graphql/catalog-service/headers.md'
-
-<Headers />
+<Fragment src="../../../../includes/graphql/catalog-service/headers.md"/>
 
 ### Find the customer group code
 
-import CustomerGroupCode from '/src/_includes/graphql/customer-group-code.md'
-
-<CustomerGroupCode />
+<Fragment src="../../../../includes/graphql/customer-group-code.md"/>
 
 ## Example usage
 
@@ -204,21 +198,19 @@ categories(ids: ["11"], roles: ["show_in_menu", "active"], subtree: {
 
 ## Input fields
 
-Field | Data type | Description
---- | --- | ---
-`ids` | [String!] | List of category IDs to retrieve. For example, `123`, `456`, or `789`. If using `subtree`, must contain only one ID.
-`roles` | [String!] | List of roles to filter the categories by. Only categories assigned one of the specified roles are returned. For example, `show_on_plp`, `show_in_pdp`, or `show_in_search`.
-`subtree` | [Subtree](#subtree-input) | Limits the response to a subtree of the category hierarchy. Use `startLevel` to set the topmost level (root = 1) and `depth` to control how many levels of subcategories to include.
+| Field | Data type | Description |
+| --- | --- | --- |
+| `ids` | [String!] | List of category IDs to retrieve. For example, `123`, `456`, or `789`. If using `subtree`, must contain only one ID. |
+| `roles` | [String!] | List of roles to filter the categories by. Only categories assigned one of the specified roles are returned. For example, `show_on_plp`, `show_in_pdp`, or `show_in_search`. |
+| `subtree` | [Subtree](#subtree-input) | Limits the response to a subtree of the category hierarchy. Use `startLevel` to set the topmost level (root = 1) and `depth` to control how many levels of subcategories to include. |
 
 ### Subtree input
 
-Field | Data type | Description
---- | --- | ---
-`startLevel` | Int! | The absolute level in the category tree hierarchy to begin retrieving categories from. Level `1` is the root category, level `2` is the first level of children, level `3` is the second, and so on.
-`depth` | Int! | The number of category levels to retrieve below the `startLevel`. For example, a value of `2` returns two levels of subcategories beneath the `startLevel`. Values over 3 may impact performance.
+| Field | Data type | Description |
+| --- | --- | --- |
+| `startLevel` | Int! | The absolute level in the category tree hierarchy to begin retrieving categories from. Level `1` is the root category, level `2` is the first level of children, level `3` is the second, and so on. |
+| `depth` | Int! | The number of category levels to retrieve below the `startLevel`. For example, a value of `2` returns two levels of subcategories beneath the `startLevel`. Values over 3 may impact performance. |
 
 ## Output fields
 
-import Output from '/src/_includes/graphql/catalog-service/categories.md'
-
-<Output />
+<Fragment src="../../../../includes/graphql/catalog-service/categories.md"/>

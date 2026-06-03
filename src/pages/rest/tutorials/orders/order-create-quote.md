@@ -1,11 +1,12 @@
 ---
 title: Step 4. Create a quote
 description: In this step of the tutorial you will create a quote
-edition: paas
 keywords:
   - REST
---- 
- 
+---
+
+<Fragment src="../../../includes/paas-only.md"/>
+
 # Step 4. Create a quote
 
 When a customer adds an item to their shopping cart for the first time, Adobe Commerce creates a quote. Commerce uses a quote to perform tasks such as
@@ -17,7 +18,7 @@ When a customer adds an item to their shopping cart for the first time, Adobe Co
 *  Determine the payment method
 *  Place the order so that the merchant can fulfill it.
 
-### Types of carts
+## Types of carts
 
 Commerce identifies three types of users that can create a shopping cart:
 
@@ -25,7 +26,7 @@ Commerce identifies three types of users that can create a shopping cart:
 *  A logged-in customer. Calls to create a cart and add items must contain the customer's authorization token in the authorization header.
 *  A guest user. These users could be customers who haven't logged in yet, or they could be users who have no intention of creating an account. An anonymous user's cart is called a guest cart.
 
-### Create a cart for a logged-in customer
+## Create a cart for a logged-in customer
 
 All calls for a logged in customer must specify customer's token `q0u66k8h42yaevtchv09uyy3y9gaj2ap` in the header.
 
@@ -55,6 +56,6 @@ The response is the `quoteId: 4`
 
 Some calls refer to this parameter as the `cartId`.
 
-### Verify this step
+## Verify this step
 
 There are no additional verification steps.`quoteId` values are not displayed on the website or in Admin.

@@ -6,11 +6,8 @@ keywords:
   - REST
 ---
 
-import * as Vars from '../../../data/vars.js';
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../includes/commerce-only.md"/>
 
 # Initiate a negotiable quote order by seller
 
@@ -18,7 +15,7 @@ This topic describes how a seller can use REST calls to create a negotiable quot
 
 ## Prerequisites
 
--  You have [installed and enabled](https://experienceleague.adobe.com/docs/commerce-admin/b2b/install.html) <Vars.sitedatavarb2b/>.
+-  You have [installed and enabled](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/install) B2B for Adobe Commerce.
 -  You have [created a company](company-object.md).
 -  You have an integration or [admin authorization token](../tutorials/orders/order-admin-token.md) to make calls on behalf of seller.
 

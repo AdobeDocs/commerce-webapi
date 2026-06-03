@@ -1,10 +1,9 @@
 ---
 title: removeRewardPointsFromCart mutation
+description: The removeRewardPointsFromCart mutation removes all reward points that were previously applied to the customer's cart with the applyRewardPointsToCart muta...
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # removeRewardPointsFromCart mutation
 
@@ -18,9 +17,9 @@ The `removeRewardPointsFromCart` mutation removes all reward points that were pr
 
 The `removeRewardPointsFromCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-removeRewardPointsFromCart)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-removeRewardPointsFromCart)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-removeRewardPointsFromCart)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-removeRewardPointsFromCart)
 
 ## Example usage
 
@@ -87,8 +86,8 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Could not find a cart with ID \"xxxxx\"` | The ID provided in the `cart_id` field is invalid or the cart does not exist for the customer.
-`The cart isn't active` | The cart with the specified cart ID is unavailable, because the items have been purchased and the cart ID becomes inactive.
-`Field removeRewardPointsFromCart.cart_id of required type String! was not provided` | The value specified in the `removeRewardPointsFromCart.cart_id` argument is empty.
+| Error | Description |
+| --- | --- |
+| `Could not find a cart with ID \"xxxxx\"` | The ID provided in the `cart_id` field is invalid or the cart does not exist for the customer. |
+| `The cart isn't active` | The cart with the specified cart ID is unavailable, because the items have been purchased and the cart ID becomes inactive. |
+| `Field removeRewardPointsFromCart.cart_id of required type String! was not provided` | The value specified in the `removeRewardPointsFromCart.cart_id` argument is empty. |

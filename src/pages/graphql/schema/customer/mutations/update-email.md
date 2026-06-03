@@ -1,12 +1,13 @@
 ---
 title: updateCustomerEmail mutation
+description: Use the updateCustomerEmail mutation to change the email address for the logged-in customer.
 ---
 
 # updateCustomerEmail mutation
 
 Use the `updateCustomerEmail` mutation to change the email address for the logged-in customer.
 
-To return or modify information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session).
+To return or modify information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session/).
 
 ## Syntax
 
@@ -16,9 +17,9 @@ To return or modify information about a customer, we recommend you use customer 
 
 The `updateCustomerEmail` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-updateCustomerEmail)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-updateCustomerEmail)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateCustomerEmail)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateCustomerEmail)
 
 ## Example usage
 

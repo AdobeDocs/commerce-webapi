@@ -1,5 +1,6 @@
 ---
 title: ShipmentItemInterface attributes and implementations
+description: ShipmentItemInterface provides details about items in a customer's order history that were shipped. It has the following implementations:
 ---
 
 # ShipmentItemInterface attributes and implementations
@@ -14,9 +15,9 @@ title: ShipmentItemInterface attributes and implementations
 
 The `ShipmentItemInterface` reference provides detailed information about the types and fields defined in this interface.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-ShipmentItemInterface)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-ShipmentItemInterface)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-ShipmentItemInterface)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-ShipmentItemInterface)
 
 ## Example usage
 

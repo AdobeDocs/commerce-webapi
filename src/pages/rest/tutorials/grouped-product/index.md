@@ -3,21 +3,21 @@ title: Create and manage grouped products tutorial
 description: In this tutorial you will create and manage grouped products
 keywords:
   - REST
---- 
- 
+---
+
 # Create and manage grouped products tutorial
 
 A grouped product consists of simple standalone products that are presented as a group. A group can contain variations of a single product or a collection of products that are to be sold together.
 
 This tutorial describes how you can use the Adobe Commerce REST API to create and manage grouped products.
 
-### Before you begin
+## Before you begin
 
 *  Install a Commerce instance with sample data. The sample data defines a functional store, called Luma, that sells fitness clothing and accessories.
 
-*  Install a REST client. You can use any REST client to send calls to Commerce. [Postman](https://www.getpostman.com/) is recommended.
+*  Install a REST client. You can use any REST client to send calls to Commerce. [Postman](https://www.postman.com/) is recommended.
 
-*  Obtain an admin authorization token. All calls in this tutorial require administrator privileges. See [Generate the admin token](/rest/tutorials/prerequisite-tasks/) for more information.
+*  Obtain an admin authorization token. All calls in this tutorial require administrator privileges. See [Generate the admin token](/rest/tutorials/prerequisite-tasks/index.md) for more information.
 
 ### Other resources
 
@@ -213,13 +213,13 @@ You also can use the `DELETE` endpoint to delete a simple product from the group
 1. Select **Catalog > Products**.
 1. Click on the **New Grouped Product** grouped product and expand the **Grouped Products** section.
 
-  ![New grouped product](../../../_images/new-grouped-product.png)
+  ![New grouped product](../../../images/new-grouped-product.png)
 
 ## Add a grouped product to a cart
 
 Customers can now add this grouped products to their carts, as shown below.
 
-Refer to the [Order processing tutorial](/rest/tutorials/orders/) for more information about how to add items to a cart with REST.
+Refer to the [Order processing tutorial](/rest/tutorials/orders/index.md) for more information about how to add items to a cart with REST.
 
 ### Endpoint
 

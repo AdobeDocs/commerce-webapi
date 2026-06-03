@@ -4,8 +4,8 @@ description: Run and use the Source Selection ALgorithm (SSA) and other algorith
 keywords:
   - Inventory
   - REST
---- 
- 
+---
+
 # Manage source selection algorithms
 
 Inventory Management uses the Source Selection Algorithm (SSA) to track the salable quantities of product inventory across all sources and make recommendations for partial and full shipments.
@@ -83,19 +83,19 @@ The `POST V1/inventory/source-selection-algorithm-result` endpoint uses the algo
 
 **inventoryRequest parameters:**
 
-Name | Description | Type | Requirements
---- | --- | --- | ---
-`stock_id` | The ID of the stock | Integer | Required
-`items` | An array containing the SKU and quantity of items in the order |  Array | Required
-`sku` | The SKU of a product to be shipped | String | Required for each item
-`qty` | The quantity of a product to be shipped | Float | Required for each item
-`algorithmCode` | The name of the SSA to implement. For 2.3, this value must be `priority`. | String | Required
-`destination_address` | An extension attribute that defines the shipment address when the Distance Priority SSA is used. | Object | Required for the Distance Priority SSA
-`country` | The country code of the shipping address | String | Required for the Distance Priority SSA
-`postcode` | The postal code of the shipping address | String | Required for the Distance Priority SSA
-`street` | The street address of the shipping address| String | Required for the Distance Priority SSA
-`region` | The region code of the shipping address | String | Required for the Distance Priority SSA
-`city` | The city of the shipping address | String | Required for the Distance Priority SSA
+| Name | Description | Type | Requirements |
+| --- | --- | --- | --- |
+| `stock_id` | The ID of the stock | Integer | Required |
+| `items` | An array containing the SKU and quantity of items in the order |  Array | Required |
+| `sku` | The SKU of a product to be shipped | String | Required for each item |
+| `qty` | The quantity of a product to be shipped | Float | Required for each item |
+| `algorithmCode` | The name of the SSA to implement. For 2.3, this value must be `priority`. | String | Required |
+| `destination_address` | An extension attribute that defines the shipment address when the Distance Priority SSA is used. | Object | Required for the Distance Priority SSA |
+| `country` | The country code of the shipping address | String | Required for the Distance Priority SSA |
+| `postcode` | The postal code of the shipping address | String | Required for the Distance Priority SSA |
+| `street` | The street address of the shipping address| String | Required for the Distance Priority SSA |
+| `region` | The region code of the shipping address | String | Required for the Distance Priority SSA |
+| `city` | The city of the shipping address | String | Required for the Distance Priority SSA |
 
 ### Source Priority Algorithm
 
@@ -254,12 +254,12 @@ The `GET /V1/inventory/get-distance` endpoint calculates the distance between tw
 
 **URL parameters:**
 
-Name | Description
---- | ---
-`source[lat]` | The latitude of the source
-`source[lng]` | The longitude of the source
-`destination[lat]` | The latitude of the destination
-`destination[lng]` | The longitude of the destination
+| Name | Description |
+| --- | --- |
+| `source[lat]` | The latitude of the source |
+| `source[lng]` | The longitude of the source |
+| `destination[lat]` | The latitude of the destination |
+| `destination[lng]` | The longitude of the destination |
 
 **Sample usage:**
 
@@ -279,13 +279,13 @@ The `GET /V1/inventory/get-latlng-from-address` endpoint calculates the latitude
 
 **URL parameters:**
 
-Name | Description
---- | ---
-address[country] | The country code of the shipping address
-address[postcode] | The postal code of the shipping address
-address[street] | The street of the shipping address
-address[region] | The region code of the shipping address
-address[city] | The city of the shipping address
+| Name | Description |
+| --- | --- |
+| address[country] | The country code of the shipping address |
+| address[postcode] | The postal code of the shipping address |
+| address[street] | The street of the shipping address |
+| address[region] | The region code of the shipping address |
+| address[city] | The city of the shipping address |
 
 **Sample usage:**
 

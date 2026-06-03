@@ -1,12 +1,11 @@
 ---
 title: placePurchaseOrder mutation
+description: The placePurchaseOrder mutation places a purchase order using the specified cartid. If the request is successful, the status of the purchase order is ORDER...
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # placePurchaseOrder mutation
 
@@ -32,9 +31,9 @@ mutation {
 
 The `placePurchaseOrder` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-placePurchaseOrder)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-placePurchaseOrder)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-placePurchaseOrder)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-placePurchaseOrder)
 
 ## Example usage
 

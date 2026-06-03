@@ -1,10 +1,9 @@
 ---
 title: removeGiftRegistryRegistrants mutation
+description: The removeGiftRegistryRegistrants mutation removes one or more registrants from the specified gift registry.
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # removeGiftRegistryRegistrants mutation
 
@@ -29,9 +28,9 @@ mutation {
 
 The `removeGiftRegistryRegistrants` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-removeGiftRegistryRegistrants)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-removeGiftRegistryRegistrants)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-removeGiftRegistryRegistrants)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-removeGiftRegistryRegistrants)
 
 ## Example usage
 

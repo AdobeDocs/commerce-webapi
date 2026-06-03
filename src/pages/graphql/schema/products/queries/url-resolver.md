@@ -1,7 +1,10 @@
 ---
 title: urlResolver query
-edition: paas
+description: The urlResolver query has been deprecated. Use the route query instead.
+
 ---
+
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # urlResolver query
 

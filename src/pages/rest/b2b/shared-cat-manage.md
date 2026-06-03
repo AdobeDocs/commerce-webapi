@@ -6,15 +6,12 @@ keywords:
   - REST
 ---
 
-import * as Vars from '../../../data/vars.js';
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../includes/commerce-only.md"/>
 
 # Manage custom shared catalogs
 
-<p><Vars.sitedatavarb2b/> provides two types of shared catalog: public and custom. A public catalog is the default shared catalog. It is automatically displayed to all guest customers and to logged-in customers that are not company users. The seller assigns a custom shared catalog to specific companies as configured by admin. There can only be one public catalog, and it cannot be deleted.</p>
+B2B for Adobe Commerce provides two types of shared catalog: public and custom. A public catalog is the default shared catalog. It is automatically displayed to all guest customers and to logged-in customers that are not company users. The seller assigns a custom shared catalog to specific companies as configured by admin. There can only be one public catalog, and it cannot be deleted.
 
 **Service name:**
 
@@ -32,16 +29,16 @@ GET  /V1/sharedCatalog/
 
 **Shared catalog parameters:**
 
-Name | Description | Format | Requirements
---- | --- | --- | ---
-`id` | The system-generated shared catalog ID number | integer | Required to update a shared catalog. Not applicable for create operations.
-`name` | The display name of the shared catalog. Must be unique | string | Required to create or update a shared catalog.
-`description` | Describes the shared catalog | string | Optional
-`customer_group_id` | A system-generated ID. It cannot be changed. | integer |  0 - Not logged in; 1 - General; 2 - Wholesale; 3 - Retailer
-`type` | Indicates whether this is a custom or public shared catalog. | integer | Required to create or update a shared catalog. 0 - Custom; 1 - Public
-`created_by` | The user ID of the admin who created the shared catalog | integer | Optional
-`store_id`  | The store ID the shared catalog is assigned to | integer | Required to create or update a shared catalog.
-`tax_class_id`  | | integer |  Required to create a shared catalog. 2 - Taxable goods; 3 - Retail Customer
+| Name | Description | Format | Requirements |
+| --- | --- | --- | --- |
+| `id` | The system-generated shared catalog ID number | integer | Required to update a shared catalog. Not applicable for create operations. |
+| `name` | The display name of the shared catalog. Must be unique | string | Required to create or update a shared catalog. |
+| `description` | Describes the shared catalog | string | Optional |
+| `customer_group_id` | A system-generated ID. It cannot be changed. | integer |  0 - Not logged in; 1 - General; 2 - Wholesale; 3 - Retailer |
+| `type` | Indicates whether this is a custom or public shared catalog. | integer | Required to create or update a shared catalog. 0 - Custom; 1 - Public |
+| `created_by` | The user ID of the admin who created the shared catalog | integer | Optional |
+| `store_id`  | The store ID the shared catalog is assigned to | integer | Required to create or update a shared catalog. |
+| `tax_class_id`  | | integer |  Required to create a shared catalog. 2 - Taxable goods; 3 - Retail Customer |
 
 ## Create a custom shared catalog
 

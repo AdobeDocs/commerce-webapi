@@ -10386,7 +10386,7 @@ info:
   title: Adobe Commerce as a Cloud Service
   version: April 2026
   description:
-    "$ref": "../_includes/accs-intro.md"
+    "$ref": "intro/accs-intro.md"
 paths:
   "/V1/addresses/{addressId}":
     delete:

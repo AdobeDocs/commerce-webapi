@@ -1,10 +1,9 @@
 ---
 title: giftRegistryTypeSearch query
+description: The giftRegistryTypeSearch query returns a list of gift registries that match the specified registrant name and, optionally, registry type ID. Use the gift...
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # giftRegistryTypeSearch query
 
@@ -24,9 +23,9 @@ giftRegistryTypeSearch(
 
 The `giftRegistryTypeSearch` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-giftRegistryTypeSearch)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-giftRegistryTypeSearch)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-giftRegistryTypeSearch)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-giftRegistryTypeSearch)
 
 ## Example usage
 
