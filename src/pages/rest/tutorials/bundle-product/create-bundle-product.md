@@ -5,8 +5,8 @@ contributor_name: Goivvy LLC
 contributor_link: https://www.goivvy.com/magento-optimization-service
 keywords:
   - REST
---- 
- 
+---
+
 # Step 3. Create the bundle product
 
 Now we will add the bundle product. We will use two bundle options: `RAM` and `Monitor`.
@@ -299,16 +299,20 @@ POST http://domain.com/rest/default/V1/products
 
 1. On the Luma storefront page, search for `Desktop Computer`. There should be one result.
 
-    ![Search](../../../_images/search-desktop-computer.png)
+    ![Search](../../../images/search-desktop-computer.png)
 
 1. Click on the Desktop Computer product.
 
-    ![Product](../../../_images/site-desktop-computer.png)
+    ![Product](../../../images/site-desktop-computer.png)
 
 1. Customize Desktop Computer and add it to the shopping cart.
 
-    ![Shopping Cart](../../../_images/shopping-cart-desktop-computer.png)
+    ![Shopping Cart](../../../images/shopping-cart-desktop-computer.png)
 
 <InlineAlert variant="info" slots="text"/>
 
 If you do not see the bundle product on the frontend, you can try reindexing and clearing the cache.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/magento-optimization-service)

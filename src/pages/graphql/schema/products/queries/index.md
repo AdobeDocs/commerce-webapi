@@ -1,5 +1,6 @@
 ---
 title: Product queries
+description: This section describes the following queries:
 ---
 
 # Product queries

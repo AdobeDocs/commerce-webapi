@@ -1,5 +1,6 @@
 ---
 title: requestGuestOrderCancel mutation
+description: The requestGuestOrderCancel mutation allows a guest customer to request for cancelling an order, passing the order token and a cancellation reason.
 ---
 
 # requestGuestOrderCancel mutation
@@ -22,9 +23,9 @@ The mutation returns an error if the order cannot be cancelled.
 
 The `requestGuestOrderCancel` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-requestGuestOrderCancel)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-requestGuestOrderCancel)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-requestGuestOrderCancel)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-requestGuestOrderCancel)
 
 ## Example usage
 
@@ -70,4 +71,4 @@ mutation {
 
 ## Related topics
 
- * [order cancellation](/src/pages/graphql/schema/store/queries/store-config.md#query-a-stores-order-cancellation-configuration) configuration example on `storeConfig` page.
+ * [order cancellation](../../store/queries/store-config.md#query-a-stores-order-cancellation-configuration) configuration example on `storeConfig` page.

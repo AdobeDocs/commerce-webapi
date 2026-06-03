@@ -1,7 +1,10 @@
 ---
 title: getPayflowLinkToken query
-edition: paas
+description: The getPayflowLinkToken query retrieves PayPal payment credentials for a PayPal Payflow transaction. You must run this query after you set the payment meth...
+
 ---
+
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # getPayflowLinkToken query
 
@@ -51,6 +54,6 @@ The following example requests a token in a Payflow Link transaction.
 
 ## Errors
 
-Error | Description
---- | ---
-`No such entity with cartId` | An invalid `cartId` was provided
+| Error | Description |
+| --- | --- |
+| `No such entity with cartId` | An invalid `cartId` was provided |

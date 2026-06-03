@@ -1,5 +1,6 @@
 ---
 title: removeProductsFromCompareList mutation
+description: The removeProductsFromCompareList mutation removes products from a comparison list.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
@@ -26,9 +27,9 @@ mutation {
 
 The `removeProductsFromCompareList` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-removeProductsFromCompareList)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-removeProductsFromCompareList)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-removeProductsFromCompareList)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-removeProductsFromCompareList)
 
 ## Example usage
 
@@ -124,3 +125,7 @@ mutation {
 *  [assignCompareListToCustomer mutation](assign-compare-list.md)
 *  [createCompareList mutation](create-compare-list.md)
 *  [deleteCompareList mutation](delete-compare-list.md)
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

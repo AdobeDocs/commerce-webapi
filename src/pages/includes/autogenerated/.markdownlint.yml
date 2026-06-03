@@ -1,0 +1,8 @@
+# Extends the root config and disables rules that don't apply to auto-generated
+# API reference files. MD051 is disabled because these files use intra-set
+# anchor links that resolve correctly at render time but span multiple files,
+# which the linter cannot verify. MD036 is disabled because bold labels such as
+# **Deprecated** are a convention in the generated output format.
+extends: "../../../../.markdownlint.yml"
+MD036: false
+MD051: false

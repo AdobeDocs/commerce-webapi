@@ -1,10 +1,9 @@
 ---
 title: requestGuestReturn mutation
+description: The requestGuestReturn mutation initiates a guest buyer's request to return an item for replacement or refund. A confirmation email is sent to the guest pr...
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # requestGuestReturn mutation
 
@@ -32,9 +31,9 @@ mutation {
 
 The `requestGuestReturn` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-requestGuestReturn)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-requestGuestReturn)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-requestGuestReturn)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-requestGuestReturn)
 
 ## Example usage
 
@@ -137,11 +136,11 @@ mutation{
 
 The `Returns` object contains an array of `Return` objects and pagination information.
 
-Attribute |  Data Type | Description
---- | --- | ---
-`items` | [Return] | A list of return requests
-`page_info` SearchResultPageInfo | Pagination metadata
-`total_count` | Int | The total number of return requests
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `items` | `[Return]` | A list of return requests |
+| `page_info` | `SearchResultPageInfo` | Pagination metadata |
+| `total_count` | `Int` | The total number of return requests |
 
 ## Related topics
 

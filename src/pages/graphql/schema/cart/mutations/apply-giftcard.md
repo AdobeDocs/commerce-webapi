@@ -1,10 +1,9 @@
 ---
 title: applyGiftCardToCart mutation
+description: The applyGiftCardToCart mutation applies a predefined gift card code to the specified cart.
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # applyGiftCardToCart mutation
 
@@ -18,9 +17,9 @@ The `applyGiftCardToCart` mutation applies a predefined gift card code to the sp
 
 The `applyGiftCardToCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-applyGiftCardToCart)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-applyGiftCardToCart)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-applyGiftCardToCart)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-applyGiftCardToCart)
 
 ## Example usage
 
@@ -83,11 +82,11 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`The gift card code couldn't be added. Verify your information and try again.` | The specified `gift_card_code` is incorrect.
-`Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` table.
-`Field ApplyGiftCardToCartInput.gift_card_code of required type String! was not provided.` | The required field `gift_card_code` was not provided.
-`Required parameter \"gift_card_code\" is missing` | The value provided in the field `gift_card_code` is empty.
-`Field ApplyGiftCardToCartInput.cart_id of required type String! was not provided.` | The required field `cart_id` was not provided.
-`Required parameter \"cart_id\" is missing` | The value provided in the field `cart_id` is empty.
+| Error | Description |
+| --- | --- |
+| `The gift card code couldn't be added. Verify your information and try again.` | The specified `gift_card_code` is incorrect. |
+| `Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` table. |
+| `Field ApplyGiftCardToCartInput.gift_card_code of required type String! was not provided.` | The required field `gift_card_code` was not provided. |
+| `Required parameter \"gift_card_code\" is missing` | The value provided in the field `gift_card_code` is empty. |
+| `Field ApplyGiftCardToCartInput.cart_id of required type String! was not provided.` | The required field `cart_id` was not provided. |
+| `Required parameter \"cart_id\" is missing` | The value provided in the field `cart_id` is empty. |

@@ -3,8 +3,8 @@ title: Step 3. Create the simple products
 description: In this step of the tutorial you will create the simple products
 keywords:
   - REST
---- 
- 
+---
+
 # Step 3. Create the simple products
 
 The payloads for creating a simple product and a configurable product are identical, with the following exceptions:
@@ -21,7 +21,7 @@ Although it's not required, the simple product payload also includes `stock_item
 
 <InlineAlert variant="info" slots="text"/>
 
-Before using this code sample, verify that the attribute values are the same in your installation. See [Get the list of attributes defined in an attribute searchCriteria](/rest/tutorials/configurable-product/plan-product/#get-the-list-of-attributes-defined-in-an-attribute-searchcriteria ) for more information.
+Before using this code sample, verify that the attribute values are the same in your installation. See [Get the list of attributes defined in an attribute searchCriteria](/rest/tutorials/configurable-product/plan-product.md#get-the-list-of-attributes-defined-in-an-attribute-searchcriteria) for more information.
 
 **Endpoint:**
 
@@ -92,8 +92,7 @@ Before using this code sample, verify that the attribute values are the same in 
 
 **Response:**
 
-<details>
-      <summary><b>Show code sample</b></summary>
+<Details slots="content" summary="Show code sample" />
 
 ```json
 {
@@ -212,22 +211,20 @@ Before using this code sample, verify that the attribute values are the same in 
 }
 ```
 
-</details>
-
 ## Create the other simple products
 
 Repeat the call with the following changes to the payload:
 
-Attribute | Medium Value | Large Value
---- | ---
-`sku` | MS-Champ-M | MS-Champ-L
-`name` | Champ Tee Medium | Champ Tee Large
-`size` | 169 | 170
+| Attribute | Medium Value | Large Value |
+| --- | --- | --- |
+| `sku` | MS-Champ-M | MS-Champ-L |
+| `name` | Champ Tee Medium | Champ Tee Large |
+| `size` | 169 | 170 |
 
 ## Verify this step
 
-*  Log in to the Luma website and select <b>Catalog > Products</b>. The product appears in the grid.
+*  Log in to the Luma website and select \<b\>Catalog > Products\</b\>. The product appears in the grid.
 
-  ![Product page with configurable and simple products](../../../_images/products-page-all.png)
+  ![Product page with configurable and simple products](../../../images/products-page-all.png)
 
 *  On the Luma storefront page, search for `Champ`. No results are returned.

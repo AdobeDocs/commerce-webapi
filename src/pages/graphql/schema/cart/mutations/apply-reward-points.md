@@ -1,10 +1,9 @@
 ---
 title: applyRewardPointsToCart mutation
+description: The applyRewardPointsToCart mutation applies reward points to the customer's cart. You cannot specify a quantity of reward points. If the reward points bal...
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # applyRewardPointsToCart mutation
 
@@ -20,9 +19,9 @@ Use the [`removeRewardPointsFromCart` mutation](remove-reward-points.md) to undo
 
 The `applyRewardPointsToCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-applyRewardPointsToCart)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-applyRewardPointsToCart)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-applyRewardPointsToCart)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-applyRewardPointsToCart)
 
 ## Example usage
 
@@ -143,7 +142,7 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Required parameter "cart_id" is missing` | The mutation does not contain a `cart_id` argument.
-`Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` table.
+| Error | Description |
+| --- | --- |
+| `Required parameter "cart_id" is missing` | The mutation does not contain a `cart_id` argument. |
+| `Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` table. |

@@ -1,10 +1,9 @@
 ---
 title: Gift registry
+description: Once gift registry functionality is enabled and configured from the Admin, customers use the following workflow to create registries:
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../includes/commerce-only.md"/>
 
 # Gift registry
 

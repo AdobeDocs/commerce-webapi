@@ -4,8 +4,8 @@ description: Make bulk inventory changes using the REST API
 keywords:
   - Inventory
   - REST
---- 
- 
+---
+
 # Inventory mass actions
 
 Adobe Commerce provides several endpoints that allow Multi Source merchants to make quick updates across multiple products. This is helpful for transferring inventory between sources and removing a source without editing each product individually.
@@ -42,12 +42,12 @@ Bulk transfer allows you to specify multiple products, the origin source from wh
 
 **Parameters:**
 
-Name | Description | Type | Requirements
---- | --- | --- | ---
-`skus` | A  comma-separated list of existing SKUs to transfer | Array | Required
-`originSource` | The current source of the SKUs | String | Required
-`destinationSource` | The target source for the SKUs. This source must be already defined. | String | Required
-`unassignFromOrigin` | If `true`, the current source is removed as a source for the products. If `false`, the original source is retained, but the products are marked as being out of stock with a quantity of 0. | Boolean | Required
+| Name | Description | Type | Requirements |
+| --- | --- | --- | --- |
+| `skus` | A  comma-separated list of existing SKUs to transfer | Array | Required |
+| `originSource` | The current source of the SKUs | String | Required |
+| `destinationSource` | The target source for the SKUs. This source must be already defined. | String | Required |
+| `unassignFromOrigin` | If `true`, the current source is removed as a source for the products. If `false`, the original source is retained, but the products are marked as being out of stock with a quantity of 0. | Boolean | Required |
 
 **Sample usage:**
 
@@ -77,13 +77,13 @@ You can use the `V1/inventory/bulk-partial-source-transfer` endpoint to transfer
 
 **Parameters:**
 
-Name | Description | Type | Requirements
---- | --- | --- | ---
-`originSourceCode` | The current source of the products to be transferred | String | Required
-`destinationSourceCode` | The target source. This source must be already defined. | String | Required
-`items` | An array containing a set of products to be transferred | Array | Required
-`sku` | A product to transfer | String | Required
-`qty` | The quantity of the product to transfer | Float | Required
+| Name | Description | Type | Requirements |
+| --- | --- | --- | --- |
+| `originSourceCode` | The current source of the products to be transferred | String | Required |
+| `destinationSourceCode` | The target source. This source must be already defined. | String | Required |
+| `items` | An array containing a set of products to be transferred | Array | Required |
+| `sku` | A product to transfer | String | Required |
+| `qty` | The quantity of the product to transfer | Float | Required |
 
 **Sample usage:**
 
@@ -116,16 +116,16 @@ An empty array
 
 Use the `POST /V1/inventory/bulk-product-source-assign` endpoint to add one or more sources to your products. This endpoint helps when creating and assigning custom sources to your default or custom stocks and preparing new locations and inventory.
 
-After adding new custom sources, you can add inventory quantities per product or for multiple products using the `POST V1/inventory/source-items` endpoint. [Assign products to a source](/rest/modules/inventory/manage-source-items/#assign-products-to-a-source) describes this endpoint.
+After adding new custom sources, you can add inventory quantities per product or for multiple products using the `POST V1/inventory/source-items` endpoint. [Assign products to a source](/rest/inventory/manage-source-items.md#assign-products-to-a-source) describes this endpoint.
 
 The sources are added to the products with an inventory quantity of 0. You can add inventory amounts as available per source.
 
 **Parameters:**
 
-Name | Description | Type | Requirements
---- | --- | --- | ---
-`skus` | A comma-separated list of existing SKUs to assign | Array | Required
-`sourceCodes` | A comma-separated list of existing sources | Array | Required
+| Name | Description | Type | Requirements |
+| --- | --- | --- | --- |
+| `skus` | A comma-separated list of existing SKUs to assign | Array | Required |
+| `sourceCodes` | A comma-separated list of existing sources | Array | Required |
 
 **Sample usage:**
 

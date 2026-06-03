@@ -9,7 +9,7 @@ keywords:
 
 # attributeMetadata query
 
-The `attributeMetadata` query returns a list of product attribute codes that can be used for sorting or filtering in a [`productSearch` query](./product-search.md). The query response can include the attribute name, display label, and a Boolean value that indicates if the attribute has a numeric value that can be used for numeric operations, such as range filters or sorting.
+The `attributeMetadata` query returns a list of product attribute codes that can be used for sorting or filtering in a [`productSearch` query](product-search.md). The query response can include the attribute name, display label, and a Boolean value that indicates if the attribute has a numeric value that can be used for numeric operations, such as range filters or sorting.
 
 ## Syntax
 
@@ -17,17 +17,13 @@ The `attributeMetadata` query returns a list of product attribute codes that can
 
 ## Endpoints
 
-import StorefrontAPIEndpoints from '/src/_includes/graphql/endpoints.md'
-
-<StorefrontAPIEndpoints />
+<Fragment src="../../../../includes/graphql/endpoints.md"/>
 
 ## Required headers
 
 You must specify the following HTTP headers to run this query.
 
-import Docs from '/src/_includes/graphql/live-search-headers.md'
-
-<Docs />
+<Fragment src="../../../../includes/graphql/live-search-headers.md"/>
 
 ## Example usage
 
@@ -149,27 +145,27 @@ The following query returns details about all product attributes that can be use
 
 The `AttributeMetadataResponse` return object can contain the following fields:
 
-Field | Data Type | Description
---- | --- | ---
-`filterableInSearch` | [FilterableInSearchAttribute](#filterableinsearchattribute-data-type) | An array of product attributes that can be used for filtering in a `productSearch` query
-`sortable` | [SortableAttribute](#sortableattribute-data-type) | An array of product attributes that can be used for sorting in a `productSearch` query
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `filterableInSearch` | [FilterableInSearchAttribute](#filterableinsearchattribute-data-type) | An array of product attributes that can be used for filtering in a `productSearch` query |
+| `sortable` | [SortableAttribute](#sortableattribute-data-type) | An array of product attributes that can be used for sorting in a `productSearch` query |
 
 ### FilterableInSearchAttribute data type
 
 The `FilterableInSearchAttribute` data type can contain the following fields:
 
-Field | Data Type | Description
---- | --- | ---
-`attribute` | String! | The unique identifier for an attribute code. This value should be in lowercase letters and without spaces
-`label` | String | The display name assigned to the attribute
-`numeric` | Boolean | Indicates whether this attribute has a numeric value, such as a price or integer that can be used for numeric operations, such as range filters or sorting.
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `attribute` | String! | The unique identifier for an attribute code. This value should be in lowercase letters and without spaces |
+| `label` | String | The display name assigned to the attribute |
+| `numeric` | Boolean | Indicates whether this attribute has a numeric value, such as a price or integer that can be used for numeric operations, such as range filters or sorting. |
 
 ### SortableAttribute data type
 
 The `SortableAttribute` data type can contain the following fields:
 
-Field | Data Type | Description
---- | --- | ---
-`attribute` | String! | The unique identifier for an attribute code. This value should be in lowercase letters and without spaces
-`label` | String | The display name assigned to the attribute
-`numeric` | Boolean | Indicates whether this attribute has a numeric value, such as a price or integer that can be used for numeric operations, such as range filters or sorting.
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `attribute` | String! | The unique identifier for an attribute code. This value should be in lowercase letters and without spaces |
+| `label` | String | The display name assigned to the attribute |
+| `numeric` | Boolean | Indicates whether this attribute has a numeric value, such as a price or integer that can be used for numeric operations, such as range filters or sorting. |

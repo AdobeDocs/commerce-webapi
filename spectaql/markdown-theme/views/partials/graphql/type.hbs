@@ -1,0 +1,19 @@
+
+{{#unless @first}}<HorizontalLine />
+
+{{/unless}}
+### {{name}}
+
+{{#if (equal ./kind "SCALAR")}}
+{{>graphql/kinds/scalar .}}
+{{else if (equal ./kind "OBJECT")}}
+{{>graphql/kinds/object .}}
+{{else if (equal ./kind "ENUM")}}
+{{>graphql/kinds/enum .}}
+{{else if (equal ./kind "INPUT_OBJECT")}}
+{{>graphql/kinds/input-object .}}
+{{else if (equal ./kind "UNION")}}
+{{>graphql/kinds/union .}}
+{{else if (equal ./kind "INTERFACE")}}
+{{>graphql/kinds/interface .}}
+{{/if}}

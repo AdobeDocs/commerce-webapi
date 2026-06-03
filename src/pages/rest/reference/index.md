@@ -9,5 +9,5 @@ keywords:
 
 This comprehensive reference provides detailed documentation for all available REST API endpoints in Adobe Commerce and Magento Open Source. Each endpoint includes complete parameter descriptions, request/response examples, authentication requirements, and error handling information to help developers integrate with the platform effectively.
 
-* &#8203;<Edition name="paas" />[REST API reference](../../reference/rest/paas.md)
-* &#8203;<Edition name="saas" />[REST API reference](../../reference/rest/saas.md)
+* [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [REST API reference](../../reference/rest/paas.md)
+* [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [REST API reference](../../reference/rest/saas.md)

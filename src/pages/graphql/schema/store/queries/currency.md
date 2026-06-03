@@ -1,5 +1,6 @@
 ---
 title: currency query
+description: Use the currency query to return information about the store's currency configuration.
 ---
 
 # currency query
@@ -14,9 +15,9 @@ Use the `currency` query to return information about the store's currency config
 
 The `currency` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-currency)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-currency)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-currency)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-currency)
 
 ## Example usage
 
@@ -71,5 +72,5 @@ query {
 
 ## Related topics
 
-*  [countries query](../../store/queries/countries.md)
-*  [country query](../../store/queries/country.md)
+*  [countries query](countries.md)
+*  [country query](country.md)

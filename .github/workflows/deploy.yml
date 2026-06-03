@@ -1,0 +1,35 @@
+---
+name: Production Deployment
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      env:
+        description: "Select environment to deploy to"
+        type: choice
+        required: true
+        default: "prod"
+        options:
+          - "prod"
+          - "stage & prod"
+      baseSha:
+        description: "Use base SHA commit to deploy from (empty string defaults to last commit before HEAD)"
+        type: string
+        required: false
+        default: ""
+      deployAll:
+        description: "Force deploy all files"
+        type: boolean
+        default: false
+jobs:
+  deployment:
+    name: Deployment
+    if: github.actor != 'adp-devsite-app[bot]' && github.repository != 'AdobeDocs/dev-docs-template'
+    uses: AdobeDocs/adp-devsite-workflow/.github/workflows/deploy-v2.yml@main
+    secrets: inherit
+    with:
+      env: ${{ inputs.env || 'prod' }}
+      baseSha: ${{ inputs.baseSha || '' }}
+      deployAll: ${{ inputs.deployAll || false }}

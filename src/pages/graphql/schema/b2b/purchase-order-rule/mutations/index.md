@@ -1,12 +1,11 @@
 ---
 title: Purchase order approval rule (B2B) mutations   
+description: B2B for Adobe Commerce provides mutations to manage purchase order approval rules:
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # Purchase order approval rule (B2B) mutations
 

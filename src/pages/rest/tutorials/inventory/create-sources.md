@@ -1,12 +1,13 @@
 ---
 title: Step 2. Create sources
 description: In this step of the tutorial you will create sources
-edition: paas
 keywords:
   - Inventory
   - REST
---- 
- 
+---
+
+<Fragment src="../../../includes/paas-only.md"/>
+
 # Step 2. Create sources
 
 **Sources** are the physical locations from which you manage product inventory and ship orders. These locations can include warehouses, brick-and-mortar stores, distribution centers, and drop shippers. Adobe Commerce leverages the quantities and salable quantities per stock and manages inventory amounts automatically for managed products and orders. Virtual and downloadable products can also be assigned to a source.
@@ -19,7 +20,7 @@ For more information about sources, see [Inventory Management overview](https://
 
 <InlineAlert variant="info" slots="text"/>
 
-This step requires an admin token. See [Generate the admin token](/rest/tutorials/prerequisite-tasks/) for more information.
+This step requires an admin token. See [Generate the admin token](/rest/tutorials/prerequisite-tasks/index.md) for more information.
 
 ## Create the first source
 

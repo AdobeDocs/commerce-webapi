@@ -1,12 +1,11 @@
 ---
 title: Company (B2B) mutations
+description: The B2B company mutations allow you to perform the management operations:
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # Company (B2B) mutations
 

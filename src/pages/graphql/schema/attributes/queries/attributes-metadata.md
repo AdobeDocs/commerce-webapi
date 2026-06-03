@@ -1,7 +1,10 @@
 ---
 title: attributesMetadata query
-edition: paas
+description: The attributesMetadata query is available only if you have installed the PWA Metapackage for Magento Open Source Extensions. The query has been deprecated....
+
 ---
+
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # attributesMetadata query
 
@@ -106,14 +109,12 @@ attributesMetadata(
 
 ## Input attributes
 
-Attribute | Data type | Description
---- | --- | ---
-`attributeUids` | [ID!] | An array of attribute IDs to search
-`entityType` | AttributeEntityTypeEnum! | The type of entity to search
-`showSystemAttributes` | Boolean | Indicates whether to also return matching system attributes
+| Attribute | Data type | Description |
+| --- | --- | --- |
+| `attributeUids` | [ID!] | An array of attribute IDs to search |
+| `entityType` | AttributeEntityTypeEnum! | The type of entity to search |
+| `showSystemAttributes` | Boolean | Indicates whether to also return matching system attributes |
 
 ## Output attributes
 
-import AttributeMetadata from '/src/_includes/graphql/attribute-metadata.md'
-
-<AttributeMetadata />
+<Fragment src="../../../../includes/graphql/attribute-metadata.md"/>

@@ -4,8 +4,8 @@ description: Assign products to other sources using the REST API
 keywords:
   - Inventory
   - REST
---- 
- 
+---
+
 # Manage source items
 
 If Adobe Commerce is configured to manage inventory, Commerce assigns all existing products to the default source. Currently, Commerce also assigns newly-created products to the default source. Single Source merchants do not need to manage source items, but Multi Source merchants may need to move products from the default source to a custom source, or move products from one custom source to another.
@@ -28,12 +28,12 @@ GET V1/inventory/source-items
 
 **sourceItems parameters:**
 
-Name | Description | Type | Requirements
---- | --- | --- | ---
-sku | The SKU of an existing product | String | Required to assign or unassign a source
-source_code | The source to assign or unassign | String | Required to assign or unassign a source
-quantity | The total amount of inventory available for this SKU and source | Float | Optional
-status |  Indicates whether the product is out of stock (0) or in stock (1) | Integer | Optional
+| Name | Description | Type | Requirements |
+| --- | --- | --- | --- |
+| sku | The SKU of an existing product | String | Required to assign or unassign a source |
+| source_code | The source to assign or unassign | String | Required to assign or unassign a source |
+| quantity | The total amount of inventory available for this SKU and source | Float | Optional |
+| status |  Indicates whether the product is out of stock (0) or in stock (1) | Integer | Optional |
 
 ## Unassign products from a source
 
@@ -123,7 +123,7 @@ Commerce returns an empty array.
 
 The following call returns all source items for `sku` = `new_product2`.
 
-See [Search using REST APIs](/rest/use-rest/performing-searches/) for information about constructing a search query.
+See [Search using REST APIs](/rest/use-rest/performing-searches.md) for information about constructing a search query.
 
 **Sample Usage:**
 

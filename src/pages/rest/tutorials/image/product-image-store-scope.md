@@ -9,11 +9,11 @@ keywords:
 
 This topic explains how product image gallery inheritance works in a multi-store Adobe Commerce setup and how to control it using the REST API. These behaviours only apply when your installation has multiple store views. In a single-store setup, all requests target the global scope and inheritance does not apply.
 
-If you are new to the product media API, complete the [Add and manage product images tutorial](/rest/tutorials/image/) first.
+If you are new to the product media API, complete the [Add and manage product images tutorial](/rest/tutorials/image/index.md) first.
 
 ## Before you begin
 
-*  An Adobe Commerce instance with at least two store views configured. The examples use `default` and a second store view. See [Add a store view](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-views.html) in the Admin documentation.
+*  An Adobe Commerce instance with at least two store views configured. The examples use `default` and a second store view. See [Add a store view](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-views) in the Admin documentation.
 
 *  A product with images in all store views, where images currently use the default value (the **Use Default Value** checkbox is enabled in Admin) in each store view.
 
@@ -418,7 +418,7 @@ After this call:
 
 ## Related resources
 
-*  [Add and manage product images tutorial](/rest/tutorials/image/)
+*  [Add and manage product images tutorial](/rest/tutorials/image/index.md)
 
 *  [Step 2. Add a new image](new.md)
 

@@ -3,11 +3,12 @@ title: Step 3. Add products to the cart
 description: Learn how to add products to a cart with the GraphQL API.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
-edition: paas
 keywords:
   - GraphQL
   - Checkout
 ---
+
+<Fragment src="../../../includes/paas-only.md"/>
 
 # Step 3. Add products to the cart
 
@@ -31,7 +32,7 @@ If you add a product to the shopping cart as a registered customer, be sure to s
 
 The following mutation adds a simple product into the shopping cart.
 
-Replace `{ CART_ID }` with the unique shopping cart ID from [Step 2. Create empty cart](../../tutorials/checkout/add-product-to-cart.md).
+Replace `{ CART_ID }` with the unique shopping cart ID from [Step 2. Create empty cart](add-product-to-cart.md).
 
 In this example, we will add the Aim Analog Watch (SKU 24-MG04) from the default Luma catalog to the cart. The SKU identifies the product to be added.
 
@@ -165,3 +166,7 @@ The response lists all items currently in the cart, including the just-added vid
 1. Sign in as a customer to the website using the email `john.doe@example.com` and password `b1b2b3l@w+`.
 
 1. Go to the shopping cart. All the items you added are displayed.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

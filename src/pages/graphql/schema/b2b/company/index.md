@@ -1,12 +1,11 @@
 ---
 title: Company (B2B)
+description: The Company component is the key entity within B2B on which all other features are in some way dependent. It allows joining multiple buyers that belong to...
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # Company (B2B)
 

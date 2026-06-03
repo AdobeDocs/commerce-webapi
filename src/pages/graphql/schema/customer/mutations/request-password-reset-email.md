@@ -1,5 +1,6 @@
 ---
 title: requestPasswordResetEmail mutation
+description: The requestPasswordResetEmail mutation triggers the password reset email by the provided email address. Use it to initiate the process to reset the registe...
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
@@ -17,7 +18,7 @@ Otherwise, the mutation returns `false`.
 
 When the customer clicks the `Set a New Password` button, the application sends an email to the customer that contains a URL for resetting their password.
 
-![Reset password email](../../../../_images/graphql/reset-password-email.png)
+![Reset password email](../../../../images/graphql/reset-password-email.png)
 
 The URL has the following format:
 
@@ -35,9 +36,9 @@ Use the value of the token in the `resetPassword` mutation.
 
 The `requestPasswordResetEmail` reference provides detailed information about the types and fields defined in this mutation.
 
-- &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-requestPasswordResetEmail)
+- [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-requestPasswordResetEmail)
 
-- &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-requestPasswordResetEmail)
+- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-requestPasswordResetEmail)
 
 ## Example usage
 
@@ -65,13 +66,17 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Cannot reset the customer's password` | A general error message that appears on some internal system errors. The original error is logged and can be found in the application logs.
-`The account is locked` | You cannot modify a locked customer account.
-`The email address has an invalid format.` | The value provided in the `email` argument has an invalid format.
-`You must specify an email address.` | An empty value is provided in the `email` argument.
+| Error | Description |
+| --- | --- |
+| `Cannot reset the customer's password` | A general error message that appears on some internal system errors. The original error is logged and can be found in the application logs. |
+| `The account is locked` | You cannot modify a locked customer account. |
+| `The email address has an invalid format.` | The value provided in the `email` argument has an invalid format. |
+| `You must specify an email address.` | An empty value is provided in the `email` argument. |
 
 ## Related topics
 
 [resetPassword mutation](reset-password.md)
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

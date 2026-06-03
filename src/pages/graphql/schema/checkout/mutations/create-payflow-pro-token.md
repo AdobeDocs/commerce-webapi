@@ -1,7 +1,10 @@
 ---
 title: createPayflowProToken mutation
-edition: paas
+description: The createPayflowProToken mutation initiates a Payflow Pro transaction and receives a token. The payload must contain the redirect URLs to use when the tra...
+
 ---
+
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # createPayflowProToken mutation
 
@@ -72,11 +75,11 @@ mutation {
 }
 ```
 
-Error | Description
---- | ---
-`Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` table.
-`Field PayflowProTokenInput.cart_id of required type String! was not provided.` | You must specify the `cart_id` attribute.
-`Field PayflowProTokenInput.urls of required type PayflowProUrlInput! was not provided.` | You must specify the `urls` attribute.
-`Field PayflowProUrlInput.return_url of required type String! was not provided.` | You must specify the `return_url` attribute.
-`Field PayflowProUrlInput.error_url of required type String! was not provided.` | You must specify the `error_url` attribute.
-`Field PayflowProUrlInput.cancel_url of required type String! was not provided.` | You must specify the `cancel_url` attribute.
+| Error | Description |
+| --- | --- |
+| `Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` table. |
+| `Field PayflowProTokenInput.cart_id of required type String! was not provided.` | You must specify the `cart_id` attribute. |
+| `Field PayflowProTokenInput.urls of required type PayflowProUrlInput! was not provided.` | You must specify the `urls` attribute. |
+| `Field PayflowProUrlInput.return_url of required type String! was not provided.` | You must specify the `return_url` attribute. |
+| `Field PayflowProUrlInput.error_url of required type String! was not provided.` | You must specify the `error_url` attribute. |
+| `Field PayflowProUrlInput.cancel_url of required type String! was not provided.` | You must specify the `cancel_url` attribute. |

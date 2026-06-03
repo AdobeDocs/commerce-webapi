@@ -1,5 +1,6 @@
 ---
 title: recaptchaV3Config query
+description: The recaptchaV3Config query returns information about the reCaptcha V3 configuration.
 ---
 
 # recaptchaV3Config query
@@ -14,9 +15,9 @@ The `recaptchaV3Config` query returns information about the reCaptcha V3 configu
 
 The `recaptchaV3Config` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-recaptchaV3Config)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-recaptchaV3Config)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-recaptchaV3Config)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-recaptchaV3Config)
 
 ## Example usage
 

@@ -1,5 +1,6 @@
 ---
 title: deletePaymentToken mutation
+description: The deletePaymentToken mutation deletes a payment token from the system. Use the customerPaymentTokens query to retrieve all stored payment methods associa...
 ---
 
 # deletePaymentToken mutation
@@ -26,9 +27,9 @@ mutation {
 
 The `deletePaymentToken` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-deletePaymentToken)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-deletePaymentToken)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-deletePaymentToken)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-deletePaymentToken)
 
 ## Example usage
 
@@ -78,10 +79,10 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Could not find a token using public hash: xxxxxxxx` | The customer token specified in the `public_hash` argument does not exist in the `vault_payment_token` table.
-`The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table.
+| Error | Description |
+| --- | --- |
+| `Could not find a token using public hash: xxxxxxxx` | The customer token specified in the `public_hash` argument does not exist in the `vault_payment_token` table. |
+| `The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table. |
 
 ## Related topics
 

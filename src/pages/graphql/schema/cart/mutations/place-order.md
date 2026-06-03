@@ -1,5 +1,6 @@
 ---
 title: placeOrder mutation
+description: The placeOrder mutation converts the cart into an order and returns an order ID. You cannot manage orders with GraphQL, because orders are part of the back...
 ---
 
 # placeOrder mutation
@@ -22,7 +23,7 @@ As of Commerce 2.4.7, the `PlaceOrderOutput` object can contain `orderV2`, which
 
 <InlineAlert variant="info" slots="text" />
 
-The `placeOrder` mutation runs asynchronously if the `AsyncOrder` module has been enabled. By default, the mutation runs synchronously. [Asynchronous order placement](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/high-throughput-order-processing.html#asynchronous-order-placement) describes the benefits of enabling the module.
+The `placeOrder` mutation runs asynchronously if the `AsyncOrder` module has been enabled. By default, the mutation runs synchronously. [Asynchronous order placement](https://experienceleague.adobe.com/en/docs/commerce-operations/performance-best-practices/high-throughput-order-processing#asynchronous-order-placement) describes the benefits of enabling the module.
 
 ## Syntax
 
@@ -40,9 +41,9 @@ mutation {
 
 The `placeOrder` reference provides detailed information about the types and fields defined in this mutation.
 
-- &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-placeOrder)
+- [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-placeOrder)
 
-- &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-placeOrder)
+- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-placeOrder)
 
 ## Example usage
 
@@ -80,15 +81,15 @@ mutation {
 
 ## Errors
 
-Code | Error | Description
---- | --- | ---
-`CART_NOT_FOUND` | `Could not find a cart with ID` | The specified cart ID is invalid.
-`CART_NOT_ACTIVE` | `The cart isn't active.` | The specified cart ID is not active.
-`GUEST_EMAIL_MISSING` | `Guest email for cart is missing.` | The guest attempted to place an order but did not provide an email address. See [setGuestEmailOnCart](../../cart/mutations/set-guest-email.md) mutation.
-`UNABLE_TO_PLACE_ORDER` | `A server error stopped your order from being placed. Please try to place your order again` | The shopper tried to place an order when no products are in the shopping cart.
-`UNABLE_TO_PLACE_ORDER` | `Some addresses can't be used due to the configurations for specific countries` | The shipping method was not set. See [setShippingMethodsOnCart](set-shipping-method.md) mutation.
-`UNABLE_TO_PLACE_ORDER` | `The shipping method is missing. Select the shipping method and try again` | The shipping method was not set. See [setShippingMethodsOnCart](set-shipping-method.md) mutation.
-`UNABLE_TO_PLACE_ORDER` | `Please check the billing address information` | The billing address was not set. See [setBillingAddressOnCart](../../cart/mutations/set-billing-address.md) mutation.
-`UNABLE_TO_PLACE_ORDER` | `Enter a valid payment method and try again` | The payment method was not set. See [setPaymentMethodOnCart](../../cart/mutations/set-payment-method.md) mutation.
-`UNABLE_TO_PLACE_ORDER` | `Some of the products are out of stock` | One of the products in the shopping cart are currently out of stock.
-`UNDEFINED` | `UNDEFINED` | The error message does not match any error code
+| Code | Error | Description |
+| --- | --- | --- |
+| `CART_NOT_FOUND` | `Could not find a cart with ID` | The specified cart ID is invalid. |
+| `CART_NOT_ACTIVE` | `The cart isn't active.` | The specified cart ID is not active. |
+| `GUEST_EMAIL_MISSING` | `Guest email for cart is missing.` | The guest attempted to place an order but did not provide an email address. See [setGuestEmailOnCart](set-guest-email.md) mutation. |
+| `UNABLE_TO_PLACE_ORDER` | `A server error stopped your order from being placed. Please try to place your order again` | The shopper tried to place an order when no products are in the shopping cart. |
+| `UNABLE_TO_PLACE_ORDER` | `Some addresses can't be used due to the configurations for specific countries` | The shipping method was not set. See [setShippingMethodsOnCart](set-shipping-method.md) mutation. |
+| `UNABLE_TO_PLACE_ORDER` | `The shipping method is missing. Select the shipping method and try again` | The shipping method was not set. See [setShippingMethodsOnCart](set-shipping-method.md) mutation. |
+| `UNABLE_TO_PLACE_ORDER` | `Please check the billing address information` | The billing address was not set. See [setBillingAddressOnCart](set-billing-address.md) mutation. |
+| `UNABLE_TO_PLACE_ORDER` | `Enter a valid payment method and try again` | The payment method was not set. See [setPaymentMethodOnCart](set-payment-method.md) mutation. |
+| `UNABLE_TO_PLACE_ORDER` | `Some of the products are out of stock` | One of the products in the shopping cart are currently out of stock. |
+| `UNDEFINED` | `UNDEFINED` | The error message does not match any error code |

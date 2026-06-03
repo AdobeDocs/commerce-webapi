@@ -1,5 +1,6 @@
 ---
 title: cancelOrder mutation | Commerce Web APIs
+description: The cancelOrder mutation allows a customer to cancel an order, passing its encoded order id and a cancellation reason.
 ---
 
 # cancelOrder mutation
@@ -24,9 +25,9 @@ The mutation returns an error if the order cannot be cancelled.
 
 The `cancelOrder` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-cancelOrder)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-cancelOrder)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-cancelOrder)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-cancelOrder)
 
 ## Example usage
 
@@ -70,4 +71,4 @@ mutation {
 
 ## Related topics
 
- * [order cancellation](/src/pages/graphql/schema/store/queries/store-config.md#query-a-stores-order-cancellation-configuration) configuration example on `storeConfig` page.
+ * [order cancellation](../../store/queries/store-config.md#query-a-stores-order-cancellation-configuration) configuration example on `storeConfig` page.

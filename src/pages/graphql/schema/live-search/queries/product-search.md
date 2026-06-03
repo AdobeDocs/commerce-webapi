@@ -11,7 +11,7 @@ keywords:
 
 This article discusses the `productSearch` query that is available in the Live Search and Catalog Service extension. While similar in structure and functionality, there are differences in what they output.
 
-See [Boundaries and Limits](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/live-search/boundaries-limits) in the *Live Search Guide* for the latest recommendations for creating performant queries.
+See [Boundaries and Limits](https://experienceleague.adobe.com/en/docs/commerce/live-search/boundaries-limits) in the *Live Search Guide* for the latest recommendations for creating performant queries.
 
 ## Syntax
 
@@ -58,7 +58,7 @@ phrase: "pants"
 
 <InlineAlert variant="info" slots="text"/>
 
-Use the [`attributeMetadata` query](./attribute-metadata.md) to return a list of product attributes that can be used to define a filter.
+Use the [`attributeMetadata` query](attribute-metadata.md) to return a list of product attributes that can be used to define a filter.
 
 ### context
 
@@ -163,7 +163,7 @@ Only facets specified in Live Search are returned.
 
 <InlineAlert variant="info" slots="text"/>
 
-Use the [`attributeMetadata` query](./attribute-metadata.md) to return a list of product attributes that can be used to define a filter.
+Use the [`attributeMetadata` query](attribute-metadata.md) to return a list of product attributes that can be used to define a filter.
 
 #### Layered search and expansion of search types
 
@@ -176,7 +176,7 @@ Layered search is available in Live Search 4.6.0 (PaaS) or in the latest version
 The advanced search capabilities are implemented through the `filter` parameter in the `productSearch` query using specific operators:
 
 - **Layered search** - Search within another search context - With this capability, you can undertake up to two layers of search for your search queries. For example:
-  
+
   - **Layer 1 search** - Search for "motor" on `product_attribute_1`.
   - **Layer 2 search** - Search for "part number 123" on `product_attribute_2`. This example searches for "part number 123" within the results for "motor".
 
@@ -349,7 +349,7 @@ The advanced search capabilitiies have the following limitations:
 - You can paginate a maximum of 10,000 products for any `productSearch` query.
 - These new search capabilities are not available in PLP widgets or the Live Search adapter extension.
 
-For additional Live Search boundaries and limits, see [boundaries and limits](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/live-search/boundaries-limits) in the Live Search merchant guide.
+For additional Live Search boundaries and limits, see [boundaries and limits](https://experienceleague.adobe.com/en/docs/commerce/live-search/boundaries-limits) in the Live Search merchant guide.
 
 #### Filtering by categories
 
@@ -473,7 +473,7 @@ The response to the `productSearch` query can contain details about each product
 
 ### Facets
 
-[Facets](https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/live-search-admin/facets/facets.html) provide a method of high-performance filtering that uses multiple dimensions of attribute values as search criteria. Faceted search is similar, but considerably more advanced than the native layered navigation functionality.
+[Facets](https://experienceleague.adobe.com/en/docs/commerce/live-search/live-search-admin/facets/facets) provide a method of high-performance filtering that uses multiple dimensions of attribute values as search criteria. Faceted search is similar, but considerably more advanced than the native layered navigation functionality.
 
 The `facets` object contains details about each facet that affects the search results. By default, Live Search provides static facets for the `categories` and `price` product attributes that are pinned to the top of the Filters list in the storefront. The merchant can also pin other attributes to this list.
 
@@ -524,7 +524,7 @@ The `ProductInterface` object in the Search service GraphQL schema has been depr
 
 <InlineAlert variant="info" slots="text"/>
 
-Use the `ProductView` field instead of the deprecated `product` field to return product details. Catalog Service uses [Catalog Sync](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/data-services/catalog-sync.html) to manage product data, resulting in query responses with less latency than is possible with the `ProductInterface`. With Catalog Service, the structure of the pricing information varies, depending on whether the product is designated as a `SimpleProduct` (simple, downloadable, gift card) or as a `ComplexProduct` (configurable, grouped, or bundle).
+Use the `ProductView` field instead of the deprecated `product` field to return product details. Catalog Service uses [Catalog Sync](https://experienceleague.adobe.com/en/docs/commerce/user-guides/data-services/catalog-sync) to manage product data, resulting in query responses with less latency than is possible with the `ProductInterface`. With Catalog Service, the structure of the pricing information varies, depending on whether the product is designated as a `SimpleProduct` (simple, downloadable, gift card) or as a `ComplexProduct` (configurable, grouped, or bundle).
 
 The following Catalog Service snippet returns relevant information about each item:
 
@@ -606,28 +606,24 @@ The query response can also contain the following top-level fields and objects:
 
 ## Endpoints
 
-import StorefrontAPIEndpoints from '/src/_includes/graphql/endpoints.md'
-
-<StorefrontAPIEndpoints />
+<Fragment src="../../../../includes/graphql/endpoints.md"/>
 
 ## Required headers
 
 You must specify the following HTTP headers to run this query.
 
-Header name| Description
---- | -----
-`Magento-Customer-Group` | (**Catalog Service Only**) Specify the [customer group code](#find-the-customer-group-code) for the API request.
-`Magento-Environment-Id` | This value is displayed at **Stores** > **Configuration** > **Services** > **Magento Services** > **SaaS Environment** or can be obtained by running the `bin/magento config:show services_connector/services_id/environment_id` command.
-`Magento-Store-Code` | The code assigned to the store associated with the active store view. For example, `main_website_store`.
-`Magento-Store-View-Code` | The code assigned to the active store view. For example, `default`.
-`Magento-Website-Code` | The code assigned to the website associated with the active store view. For example, `base`.
-`X-Api-Key` | Set this value to the [unique API key](https://experienceleague.adobe.com/en/docs/commerce/user-guides/integration-services/saas#genapikey) generated for your Commerce environment.
+| Header name| Description |
+| --- | ----- |
+| `Magento-Customer-Group` | (**Catalog Service Only**) Specify the [customer group code](#find-the-customer-group-code) for the API request. |
+| `Magento-Environment-Id` | This value is displayed at **Stores** > **Configuration** > **Services** > **Magento Services** > **SaaS Environment** or can be obtained by running the `bin/magento config:show services_connector/services_id/environment_id` command. |
+| `Magento-Store-Code` | The code assigned to the store associated with the active store view. For example, `main_website_store`. |
+| `Magento-Store-View-Code` | The code assigned to the active store view. For example, `default`. |
+| `Magento-Website-Code` | The code assigned to the website associated with the active store view. For example, `base`. |
+| `X-Api-Key` | Set this value to the [unique API key](https://experienceleague.adobe.com/en/docs/commerce/user-guides/integration-services/saas#genapikey) generated for your Commerce environment. |
 
-###  Find the customer group code
+### Find the customer group code
 
-import CustomerGroupCode from '/src/_includes/graphql/customer-group-code.md'
-
-<CustomerGroupCode />
+<Fragment src="../../../../includes/graphql/customer-group-code.md"/>
 
 ## Example usage
 
@@ -717,8 +713,7 @@ The following example uses the `ProductView` object to return item information. 
 }
 ```
 
-<details>
-<summary><b>Response</b></summary>
+<Details slots="content" summary="Response" />
 
 ```json
 {
@@ -876,69 +871,67 @@ The following example uses the `ProductView` object to return item information. 
 }
 ```
 
-</details>
-
 ## Input fields
 
 The `productSearch` query accepts the following fields as input:
 
-Field | Data Type | Description
---- | --- | ---
-`context` | [[QueryContextInput!]](#querycontextinput-data-type) | Query context that allows customized search results to be returned based on the context passed
-`current_page` | Int | Specifies which page of results to return. Default value: 1
-`filter` | [[SearchClauseInput!]](#searchclauseinput-data-type) | Identifies which attributes to search for and return
-`page_size` | Int | Specifies the maximum number of results to return at once. Default value: 20
-`phrase` | String! | The text to filter on. Can be an empty string.
-`sort` | [[ProductSearchSortInput!]](#productsearchsortinput-data-type) | Specifies which attribute to sort on, and whether to return the results in ascending or descending order
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `context` | [[QueryContextInput!]](#querycontextinput-data-type) | Query context that allows customized search results to be returned based on the context passed |
+| `current_page` | Int | Specifies which page of results to return. Default value: 1 |
+| `filter` | [[SearchClauseInput!]](#searchclauseinput-data-type) | Identifies which attributes to search for and return |
+| `page_size` | Int | Specifies the maximum number of results to return at once. Default value: 20 |
+| `phrase` | String! | The text to filter on. Can be an empty string. |
+| `sort` | [[ProductSearchSortInput!]](#productsearchsortinput-data-type) | Specifies which attribute to sort on, and whether to return the results in ascending or descending order |
 
 ### SearchClauseInput data type
 
 The `SearchClauseInput` object can contain the following fields:
 
-Field | Data Type | Description
---- | --- | ---
-`attribute` | String! | The attribute code of a product attribute
-`eq` | String | A string value to filter on
-`in` | [String] | An array of string values to filter on
-`range` | [SearchRangeInput](#searchrangeinput-data-type) | A range of numeric values to filter on
-`contains` | String | A string that searches for products containing specific attribute values
-`startsWith` | String | A string that searches for products where the attribute value starts with a particular string
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `attribute` | String! | The attribute code of a product attribute |
+| `eq` | String | A string value to filter on |
+| `in` | [String] | An array of string values to filter on |
+| `range` | [SearchRangeInput](#searchrangeinput-data-type) | A range of numeric values to filter on |
+| `contains` | String | A string that searches for products containing specific attribute values |
+| `startsWith` | String | A string that searches for products where the attribute value starts with a particular string |
 
 ### SearchRangeInput data type
 
 The `SearchRangeInput` object can contain the following fields:
 
-Field | Data Type | Description
---- | --- | ---
-`from` | Float | The minimum value to filter on. If not specified, the value of `0` is applied
-`to` | Float | The maximum value to filter on
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `from` | Float | The minimum value to filter on. If not specified, the value of `0` is applied |
+| `to` | Float | The maximum value to filter on |
 
 ### ProductSearchSortInput data type
 
 The `ProductSearchSortInput` object can contain the following fields.
 
-Field | Data Type | Description
---- | --- | ---
-`attribute` | String! | The attribute code of a product attribute
-`direction` | SortEnum! | ASC (ascending) or DESC (descending)
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `attribute` | String! | The attribute code of a product attribute |
+| `direction` | SortEnum! | ASC (ascending) or DESC (descending) |
 
 ### QueryContextInput data type
 
 The `QueryContextInput` object can contain the following fields.
 
-Field | Data Type | Description
---- | --- | ---
-`customerGroup` | String! | The customer group code. For storefront clients, this value is available in the `dataservices_customer_group` cookie.
-`userViewHistory` | [ViewHistoryInput!](#viewhistoryinput-data-type) | List of SKUs with timestamps. Used in "Recommended for you" ranking.
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `customerGroup` | String! | The customer group code. For storefront clients, this value is available in the `dataservices_customer_group` cookie. |
+| `userViewHistory` | [ViewHistoryInput!](#viewhistoryinput-data-type) | List of SKUs with timestamps. Used in "Recommended for you" ranking. |
 
 ### ViewHistoryInput data type
 
 The `ViewHistoryInput` object can contain the following fields.
 
-Field | Data Type | Description
---- | --- | ---
-`dateTime` | String! | Timestamps when the SKU was viewed
-`sku` | String! | The SKU of the view history being requested
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `dateTime` | String! | Timestamps when the SKU was viewed |
+| `sku` | String! | The SKU of the view history being requested |
 
 ## Output fields
 
@@ -946,14 +939,14 @@ The `productSearchResponse` return object can contain the following fields:
 
 ### Common fields
 
-Field | Data Type | Description
---- | --- | ---
-`facets` | [[Aggregation]](#aggregation-data-type) | Provides details about the static and dynamic facets relevant to the search
-`items` | [[ProductSearchItem]](#productsearchitem-data-type) | An array of products returned by the query
-`page_info` | [SearchResultPageInfo](#searchresultpageinfo-data-type) | Contains information for rendering pages of search results
-`related_terms` | [String] | Reserved for future use
-`suggestions` | [String] | An array of product URL keys that are similar to the search query. A maximum of five items are returned. See **Logic used for `suggestions`** to learn more.
-`total_count` | Int | The total number of items returned
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `facets` | [[Aggregation]](#aggregation-data-type) | Provides details about the static and dynamic facets relevant to the search |
+| `items` | [[ProductSearchItem]](#productsearchitem-data-type) | An array of products returned by the query |
+| `page_info` | [SearchResultPageInfo](#searchresultpageinfo-data-type) | Contains information for rendering pages of search results |
+| `related_terms` | [String] | Reserved for future use |
+| `suggestions` | [String] | An array of product URL keys that are similar to the search query. A maximum of five items are returned. See **Logic used for `suggestions`** to learn more. |
+| `total_count` | Int | The total number of items returned |
 
 **Logic used for `suggestions`**
 
@@ -973,69 +966,69 @@ When a search is made, the "suggestion" field is searched using a "prefix" based
 
 #### Aggregation data type
 
-Field | Data Type | Description
---- | --- | ---
-`attribute` | String! | The attribute code of the filter item
-`buckets` | [[Bucket]!](#bucket-data-type) | A container that divides the data into manageable groups. For example, attributes that can have numeric values might have buckets that define price ranges
-`title` | String! | The filter name displayed in layered navigation
-`type` | AggregationType | Identifies the data type as one of the following: `INTELLIGENT`, `PINNED`, or `POPULAR`
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `attribute` | String! | The attribute code of the filter item |
+| `buckets` | [[Bucket]!](#bucket-data-type) | A container that divides the data into manageable groups. For example, attributes that can have numeric values might have buckets that define price ranges |
+| `title` | String! | The filter name displayed in layered navigation |
+| `type` | AggregationType | Identifies the data type as one of the following: `INTELLIGENT`, `PINNED`, or `POPULAR` |
 
 #### Bucket data type
 
 The `Bucket` object defines one field, `title`. However, the object has three implementations that can be used to provide greater detail.
 
-Field | Data Type | Description
---- | --- | ---
-`title` | String! | A human-readable name of a bucket
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `title` | String! | A human-readable name of a bucket |
 
 #### RangeBucket implementation
 
 Implement `RangeBucket` on numeric product fields.
 
-Field | Data Type | Description
---- | --- | ---
-`count` | Int! | The number of items in the bucket
-`from` | Float! | The minimum amount in a price range
-`title` | String! | The display text defining the price range
-`to` | Float | The maximum amount in a price range
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `count` | Int! | The number of items in the bucket |
+| `from` | Float! | The minimum amount in a price range |
+| `title` | String! | The display text defining the price range |
+| `to` | Float | The maximum amount in a price range |
 
 #### ScalarBucket implementation
 
 Implement `ScalarBucket` on string and other scalar product fields.
 
-Field | Data Type | Description
---- | --- | ---
-`count` | Int! | The number of items in the bucket
-`id` | ID! | An identifier that can be used for filtering and may contain non-human readable data
-`title` | String! | The display text that defines the scalar value
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `count` | Int! | The number of items in the bucket |
+| `id` | ID! | An identifier that can be used for filtering and may contain non-human readable data |
+| `title` | String! | The display text that defines the scalar value |
 
 #### StatsBucket implementation
 
 Implement `StatsBucket` to retrieve statistics across multiple buckets.
 
-Field | Data Type | Description
---- | --- | ---
-`max` | Float! | The maximum value
-`min` | Float! | The minimum value
-`title` | String! | The display text defining the bucket
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `max` | Float! | The maximum value |
+| `min` | Float! | The minimum value |
+| `title` | String! | The display text defining the bucket |
 
 #### ProductSearchItem data type
 
 The `ProductSearchItem` data type can contain the following fields:
 
-Field | Data Type | Description
---- | --- | ---
-`appliedQueryRule` | AppliedQueryRule | The query rule type that was applied to this product, if any (in preview mode only, returns null otherwise). Possible values: `BOOST`, `BURY`, and `PIN`
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `appliedQueryRule` | AppliedQueryRule | The query rule type that was applied to this product, if any (in preview mode only, returns null otherwise). Possible values: `BOOST`, `BURY`, and `PIN` |
 
 #### SearchResultPageInfo data type
 
 The `SearchResultPageInfo` data type can contain the following fields:
 
-Field | Data Type | Description
---- | --- | ---
-`current_page` | Int | Specifies which page of results to return
-`page_size` | Int | Specifies the maximum number of items to return
-`total_pages` | Int | Specifies the total number of pages returned
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `current_page` | Int | Specifies which page of results to return |
+| `page_size` | Int | Specifies the maximum number of items to return |
+| `total_pages` | Int | Specifies the total number of pages returned |
 
 ### Live Search fields
 
@@ -1045,6 +1038,256 @@ By default, Live Search uses the `ProductInterface` to return product informatio
 
 ### Catalog Service fields
 
-import Docs2 from '/src/_includes/graphql/catalog-service/product-view.md'
+The `ProductView` return object is an interface that can contain the following fields. It is implemented by the [`SimpleProductView`](#simpleproductview-type) and [`ComplexProductView`](#complexproductview-type) types.
 
-<Docs2 />
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `addToCartAllowed` | Boolean | Indicates whether the product can be added to the cart. |
+| `attributes(roles: [String])` | [`[ProductViewAttribute]`](#productviewattribute-type) | A list of merchant-defined attributes designated for the storefront. |
+| `description` | String | The detailed description of the product. |
+| `externalId`| String | The external ID of the product. |
+| `id` | ID! | The product ID, generated as a composite key, unique per locale. |
+| `images(roles: [String])` | [`[ProductViewImage]`](#productviewimage-type) | A list of images defined for the product. |
+| `inputOptions` | [`[ProductViewInputOption]`](#productviewinputoption-type) | A list of input options the shopper can supply to customize a product. |
+| `inStock` | Boolean | Indicates whether the product is in stock. |
+| `lastModifiedAt` | DateTime | Date and time when the product was last updated. |
+| `links(linkTypes: [String!])` | [`[ProductViewLink]`](#productviewlink-type) | A list of related, corss-sell, or up-sell products. |
+| `lowStock` | Boolean | Indicates whether the product stock is low. |
+| `metaDescription` | String | A brief overview of the product for search results listings. |
+| `metaKeyword` | String | A comma-separated list of keywords that are visible only to search engines. |
+| `metaTitle` | String | A string that is displayed in the title bar and tab of the browser and in search results lists. |
+| `name` | String | Product name. |
+| `shortDescription` | String | A summary of the product. |
+| `sku` | String | Product SKU. |
+| `url` | String | Canonical URL of the product. |
+| `urlKey` | String | URL key of the product. |
+
+### ComplexProductView type
+
+The `ComplexProductView` type represents bundle, configurable, and group products. Complex product prices are returned as a price range, because price values can vary based on selected options. The type implements `ProductView`.
+
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `addToCartAllowed` | Boolean | Indicates whether the product can be added to the cart. |
+| `attributes(roles: [String])` | [`[ProductViewAttribute]`](#productviewattribute-type) | A list of merchant-defined attributes designated for the storefront. |
+| `description` | String | The detailed description of the product. |
+| `externalId`| String | The external ID of the product. |
+| `id` | ID! | The product ID, generated as a composite key, unique per locale. |
+| `images(roles: [String])` | [`[ProductViewImage]`](#productviewimage-type) | A list of images defined for the product. |
+| `inputOptions` | [`[ProductViewInputOption]`](#productviewinputoption-type) | A list of input options the shopper can supply to customize a product. |
+| `inStock` | Boolean | Indicates whether the product is in stock. |
+| `links(linkTypes: [String!])` | [`[ProductViewLink]`](#productviewlink-type) | A list of product links. |
+| `lowStock` | Boolean | Indicates whether the product stock is low. |
+| `metaDescription` | String | A brief overview of the product for search results listings. |
+| `metaKeyword` | String | A comma-separated list of keywords that are visible only to search engines. |
+| `metaTitle` | String | A string that is displayed in the title bar and tab of the browser and in search results lists. |
+| `name` | String | Product name. |
+| `options` | [`[ProductViewOption]`](#productviewoption-type) | A list of selectable options. |
+| `priceRange` | [`ProductViewPriceRange`](#productviewpricerange-type) | A range of possible prices for a complex product. |
+| `shortDescription` | String | A summary of the product. |
+| `sku` | String | Product SKU. |
+| `url` | String | Canonical URL of the product. |
+| `urlKey` | String | URL key of the product. |
+| `videos` | `[ProductViewVideo]`(#productviewvideo-type) | A list of videos linked to the product. |
+
+### Price type
+
+The `Price type` defines the price of a simple product or a part of a price range for a complex product. It can include a list of price adjustments.
+
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `adjustments` | [`[PriceAdjustment]`](#priceadjustment-type) | A list of price adjustments. |
+| `amount` | [`ProductViewMoney`](#productviewmoney-type) | Contains the monetary value and currency code of a product. |
+
+### PriceAdjustment type
+
+The `PriceAdjustment` type specifies the amount and type of a price adjustment. An example code value is `weee`.
+
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `amount` | Float | The amount of the price adjustment. |
+| `code` | String | Identifies the type of price adjustment. |
+
+### ProductViewAttribute type
+
+The `ProductViewAttribute` type is a container for customer-defined attributes that are displayed the storefront.
+
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `label` | String | Label of the attribute. |
+| `name` | String! | Name of an attribute code. |
+| `roles` | [String] | Roles designated for an attribute on the storefront, such as "Show on PLP", "Show in PDP", or "Show in Search". |
+| `value` | JSON | Attribute value, arbitrary of type. |
+
+### ProductViewImage type
+
+The `ProductViewImage` type contains details about a product image.
+
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `label` | String | The display label of the product image. |
+| `roles` | [String] | A list that describes how the image is used. Can be `image`, `small_image`, or `thumbnail`. |
+| `url` | String! | The URL to the product image. |
+
+### ProductViewLink type
+
+The `ProductViewLink` type contains details about product links for related products and cross selling.
+
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `linkTypes` | [String!]! | Types of links for this product. Can be `crosssell`, `related`, and `upsell`. |
+| `product` | `ProductView!` | Details about the product in the link. |
+
+### ProductViewMoney type
+
+The `ProductViewMoney` type defines a monetary value, including a numeric value and a currency code.
+
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `currency` | ProductViewCurrency | A three-letter currency code, such as USD or EUR. |
+| `value` | Float | A number expressing a monetary value. |
+
+### ProductViewInputOption type
+
+Product input options provide details about how a shopper can enter customization details for a product. For example, for product personalization the input options might provide the fields for the shopper to add an image or text for a monogram. The input option can include an associated `markupAmount` that is applied to the product price. For additional information, see [Product settings - Customizable Options](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/products/settings/settings-advanced-custom-options).
+
+| Field | Data Type | Description |
+| -- | -- | -- |
+| `fileExtensions` | String | A comma separated list of accepted file types for the input option if it has an associated file, for example `png, jpg`. |
+| `id` | ID | The ID of the option value. |
+| `imageSize` | [`ProductViewInputOptionImageSize`](#productviewinputoptionimagesize-type) | Dimensions of an image associated with the input option. |
+| `markupAmount` | Float | Amount to add or subtract from the product price when the option is configured. |
+| `range` |[`ProductViewInputOptionRange`](#productviewinputoptionrange-type)| Value limits associated with an input option, for example allowed characters or file size. |
+| `required` | Boolean | Indicates whether the option must be supplied. |
+| `sortOrder` | Int | Indicates the order in which the option is displayed if multiple input options are configured. |
+| `suffix` | String | SKU suffix added to the customized product. |
+| `title` | String | The display name of the option value. |
+| `type` | String | The type of control for entering the input option, for example `textfield`, `textarea`, `date`, `date_time`, `time`, `file`. |
+
+### ProductViewInputOptionRange type
+
+Lists the value range associated with a `[ProductViewInputOption]`. For example, if the input option is a text field, the range represents the number of characters.
+
+| Field | Data Type | Description |
+| -- | -- | -- |
+| `from` | Float | Minimum value accepted for the option input. |
+| `to` | Float | Maximum value accepted for the option input. |
+
+### ProductViewInputOptionImageSize type
+
+Lists the image dimensions for an image associated with a `[ProductViewInputOption]`.
+
+| Field | Data Type | Description |
+| -- | -- | -- |
+| `height` | Int | Height of image provided for an input option. |
+| `width` |  Int | Width of image provided for an input option. |
+
+### ProductViewOption type
+
+Product options provide a way to configure products by making selections of particular option values predefined for the product. Selecting one or many options points to a specific simple product.
+
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `id` | ID | The ID of the option. |
+| `multi` | Boolean | Indicates whether the option allows multiple choices. |
+| `required` | Boolean | Indicates whether the option must be selected. |
+| `title` | String | The display name of the option. |
+| `values` | [`[ProductViewOptionValue!]`](#productviewoptionvalue-interface) | List of available option values. |
+
+### ProductViewOptionValue interface
+
+The `ProductViewOptionValue` interface defines the product fields available to the `ProductViewOptionValueProduct` and `ProductViewOptionValueConfiguration` types.
+
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `id` | ID | The ID of an option value. |
+| `inStock` | Boolean | Indicates if the option is in stock. |
+| `title` | String | The display name of the option value. |
+
+### ProductViewOptionValueConfiguration type
+
+The `ProductViewOptionValueConfiguration` type is an implementation of `ProductViewOptionValue` for configuration values.
+
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `id` | ID | The ID of an option value. |
+| `inStock` | Boolean | Indicates if the option is in stock. |
+| `title` | String | The display name of the option value. |
+
+### ProductViewOptionValueProduct type
+
+The `ProductViewOptionValueProduct` type is an implementation of `ProductViewOptionValue` that adds details about a simple product.
+
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `id` | ID | The ID of an option value. |
+| `inStock` | Boolean | Indicates if the option is in stock. |
+| `isDefault` | Boolean | Indicates whether the option is the default. |
+| `product` | [`SimpleProductView`](#simpleproductview-type) | Details about a simple product. |
+| `quantity` | [`SimpleProductView`](#simpleproductview-type) | Default quantity of an option value. |
+| `title` | String | The display name of the option value. |
+
+### ProductViewOptionValueSwatch type
+
+The `ProductViewOptionValueSwatch` type is an implementation of `ProductViewOptionValue` that adds details about a product swatch.
+
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `id` | ID | The ID of an option value. |
+| `inStock` | Boolean | Indicates if the option is in stock. |
+| `title` | String | The display name of the option value. |
+| `type` | SwatchType | Indicates the type of swatch. Can be `TEXT`, `IMAGE`, `COLOR_HEX`, or `CUSTOM`. |
+| `value` | String | The value of the swatch. |
+
+### ProductViewPrice type
+
+The `ProductViewPrice` type provides the base product price view, inherent for simple products.
+
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `final` | Price | Price value after discounts, excluding personalized promotions. |
+| `regular` | Price | Base product price specified by the merchant. |
+| `roles` | [String] | Determines if the price should be visible or hidden. |
+
+### ProductViewPriceRange type
+
+The `ProductViewPriceRange` type lists the minimum and maximum price of a complex product.
+
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `maximum` | ProductViewPrice | Maximum price. |
+| `minimum` | ProductViewPrice | Minimum price. |
+
+### ProductViewVideo type
+
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `url` | String | The URL to link to the product video. |
+| `description` | String | Description of the product video. |
+| `title` | String | Title of the product video. |
+
+### SimpleProductView type
+
+The `SimpleProductView` type represents all product types, except bundle, configurable, and group. Simple product prices do not contain price ranges. `SimpleProductView` implements `ProductView`.
+
+| Field | Data Type | Description |
+| --- | --- | --- |
+| `addToCartAllowed` | Boolean | Indicates whether the product can be added to the cart. |
+| `attributes(roles: [String])` | [`[ProductViewAttribute]`](#productviewattribute-type) | A list of merchant-defined attributes designated for the storefront. |
+| `description` | String | The detailed description of the product. |
+| `externalId`| String | The external ID of the product. |
+| `id` | ID! | The product ID, generated as a composite key, unique per locale. |
+| `images(roles: [String])` | [`[ProductViewImage]`](#productviewimage-type) | A list of images defined for the product. |
+| `inputOptions` | [`[ProductViewInputOption]`](#productviewinputoption-type) | A list of input options the shopper can supply to customize a product. |
+| `inStock` | Boolean | Indicates whether the product is in stock. |
+| `links(linkTypes: [String!])` | [`[ProductViewLink]`](#productviewlink-type) | A list of product links. |
+| `lowStock` | Boolean | Indicates whether the product stock is low. |
+| `metaDescription` | String | A brief overview of the product for search results listings. |
+| `metaKeyword` | String | A comma-separated list of keywords that are visible only to search engines. |
+| `metaTitle` | String | A string that is displayed in the title bar and tab of the browser and in search results lists. |
+| `name` | String | Product name. |
+| `price` | [`ProductViewPrice`](#productviewprice-type) | Base product price view. |
+| `shortDescription` | String | A summary of the product. |
+| `sku` | String | Product SKU. |
+| `url` | String | Canonical URL of the product. |
+| `urlKey` | String | URL key of the product. |

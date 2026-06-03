@@ -1,5 +1,6 @@
 ---
 title: Product mutations
+description: The product mutations allow you to perform the following operations:
 ---
 
 # Product mutations

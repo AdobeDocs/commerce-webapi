@@ -3,11 +3,12 @@ title: Step 8. Set email on the cart
 description: Learn how to set a an email address for an order with the GraphQL API.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
-edition: paas
 keywords:
   - GraphQL
   - Checkout
 ---
+
+<Fragment src="../../../includes/paas-only.md"/>
 
 # Step 8. Set email on the cart (guest customers only)
 
@@ -17,7 +18,7 @@ Skip this step if you placed the order as a registered customer.
 
 If you place an order as a guest user, you must set a quote email address. Use the `setGuestEmailOnCart` mutation query for that.
 
-`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](../../tutorials/checkout/add-product-to-cart.md).
+`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](add-product-to-cart.md).
 
 **Request:**
 
@@ -51,3 +52,7 @@ mutation {
 ## Verify this step
 
 There are no additional verification steps. `quote`.`customer_email` is displayed for administrator on back-end side.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

@@ -3,8 +3,8 @@ title: Step 2. Create the configurable product
 description: In this step of the tutorial you will create the configurable product
 keywords:
   - REST
---- 
- 
+---
+
 # Step 2. Create the configurable product
 
 We have the information we need to create the Champ Tee configurable product.
@@ -15,16 +15,16 @@ The `visibility` attribute is set to 4, meaning the product can be found by brow
 
 The below table shows the equivalent code for the visibility attribute
 
-Visibility | Code
---- | ---
-`Not Visible Individually` | 1
-`Catalog` | 2
-`Search` | 3
-`Catalog, Search` | 4
+| Visibility | Code |
+| --- | --- |
+| `Not Visible Individually` | 1 |
+| `Catalog` | 2 |
+| `Search` | 3 |
+| `Catalog, Search` | 4 |
 
 <InlineAlert variant="info" slots="text"/>
 
-Before you using this code sample, verify that the attribute values are the same in your installation. See [Get the list of attributes defined in an attribute searchCriteria](/rest/tutorials/configurable-product/plan-product/#get-the-list-of-attributes-defined-in-an-attribute-searchcriteria ) for more information.
+Before you using this code sample, verify that the attribute values are the same in your installation. See [Get the list of attributes defined in an attribute searchCriteria](/rest/tutorials/configurable-product/plan-product.md#get-the-list-of-attributes-defined-in-an-attribute-searchcriteria) for more information.
 
 **Endpoint:**
 
@@ -86,8 +86,7 @@ Before you using this code sample, verify that the attribute values are the same
 
 **Response:**
 
-<details>
-      <summary><b>Show code sample</b></summary>
+<Details slots="content" summary="Show code sample" />
 
 ```json
 {
@@ -208,12 +207,10 @@ Before you using this code sample, verify that the attribute values are the same
 }
 ```
 
-</details>
-
 ## Verify this step
 
 *  Log in to the Luma website and select **Catalog > Products**. The product appears in the grid.
 
-  ![Product page with configurable product](../../../_images/products-page.png)
+  ![Product page with configurable product](../../../images/products-page.png)
 
 *  On the Luma storefront page, search for `Champ`. No results are returned.

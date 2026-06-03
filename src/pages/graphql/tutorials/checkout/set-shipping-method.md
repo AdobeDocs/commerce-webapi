@@ -3,11 +3,12 @@ title: Step 6. Set the delivery method
 description: Learn how to set a shipping method for an order with the GraphQL API.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
-edition: paas
 keywords:
   - GraphQL
   - Checkout
 ---
+
+<Fragment src="../../../includes/paas-only.md"/>
 
 # Step 6. Set the delivery method
 
@@ -17,7 +18,7 @@ The `setShippingMethodsOnCart` mutation defines the delivery methods for your or
 *  `carrier_code`
 *  `method_code`
 
-`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](../../tutorials/checkout/add-product-to-cart.md).
+`{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](add-product-to-cart.md).
 
 The `carrier_code` and `method_code` values come from the response of the `setShippingAddressesOnCart` mutation on the [Set the shipping address](set-shipping-address.md) step.
 
@@ -82,3 +83,7 @@ mutation {
 1. Go to Checkout.
 
 1. The selected delivery method is displayed in the Shipping Methods section on the Shipping step.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

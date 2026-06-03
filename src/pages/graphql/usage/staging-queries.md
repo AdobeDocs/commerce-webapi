@@ -1,10 +1,11 @@
 ---
 title: GraphQL staging queries
 description: Learn how to preview scheduled campaign information.
-edition: paas
 keywords:
   - GraphQL
 ---
+
+<Fragment src="../../includes/paas-only.md"/>
 
 # Staging queries
 
@@ -23,10 +24,10 @@ The `products` query does not support full text search in the context of staging
 
 A staging query requires two specialized headers:
 
-Header name | Description
---- | ---
-`Authorization Bearer: <authorization_token>` | An admin token. Use a 2FA REST endpoint such as  `POST /V1/tfa/provider/google/authenticate` to generate this token.
-`Preview-Version` | A timestamp (seconds since January 1, 1970) that is inside the range of dates of the campaign you are querying.
+| Header name | Description |
+| --- | --- |
+| `Authorization Bearer: <authorization_token>` | An admin token. Use a 2FA REST endpoint such as  `POST /V1/tfa/provider/google/authenticate` to generate this token. |
+| `Preview-Version` | A timestamp (seconds since January 1, 1970) that is inside the range of dates of the campaign you are querying. |
 
 The application returns an authorization error if you specify an invalid token or do not include both headers. If the specified timestamp does not correspond to a date in a scheduled campaign, the query results reflect the current storefront settings.
 
@@ -43,7 +44,7 @@ The following steps describe how to create this example campaign.
 1. Schedule an update named **End of Year Sale Update** for the subcategory that takes effect at a later date. Configure the update so that the **Enable Category** field is set to **Yes**.
 1. Create a catalog sales rule with the following properties:
    *  Set the **Active** switch to **No**.
-   *  In the **Conditions** section, define the condition as **Category is <Subcategory_ID>**.
+   *  In the **Conditions** section, define the condition as **Category is `<Subcategory_ID>`**.
    *  In the **Actions** section, set the **Apply** field to **Apply a percentage of original** and the **Discount Amount** field to **25**.
 1. Schedule an update for the catalog sales rule and assign it to the **End of Year Sale Update**. In this update, set the **Active** switch to **Yes**.
 

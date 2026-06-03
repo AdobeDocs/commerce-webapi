@@ -1,7 +1,10 @@
 ---
 title: customerDownloadableProducts query
-edition: paas
+description: Use the customerDownloadableProducts query to retrieve the list of purchased downloadable products for the logged-in customer.
+
 ---
+
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # customerDownloadableProducts query
 
@@ -64,6 +67,6 @@ The following example returns the list of purchased downloadable products for th
 
 ## Errors
 
-Error | Description
---- | ---
-`The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table.
+| Error | Description |
+| --- | --- |
+| `The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table. |

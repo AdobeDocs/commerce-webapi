@@ -1,12 +1,11 @@
 ---
 title: Negotiable quote (B2B)   
+description: Company users (buyers) and merchants (sellers) use negotiable quotes to manage the negotiation process for an order. Although the negotiation process can b...
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # Negotiable quote (B2B)
 
@@ -18,7 +17,7 @@ Company users (buyers) and merchants (sellers) use negotiable quotes to manage t
 
 * When the buyer and seller agree to terms, the buyer begins the checkout process.
 
-The [_B2B for Adobe Commerce Guide_](https://experienceleague.adobe.com/docs/commerce-admin/b2b/quotes/quotes.html?lang=en) describes the negotiation process in detail.
+The [_B2B for Adobe Commerce Guide_](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/quotes/quotes) describes the negotiation process in detail.
 
 <InlineAlert variant="info" slots="text" />
 

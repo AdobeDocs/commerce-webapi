@@ -1,7 +1,10 @@
 ---
 title: unsubscribeProductAlertPriceAll mutation
-edition: saas
+description: The unsubscribeProductAlertPriceAll mutation removes all price drop alert subscriptions for the logged-in customer across the current website. After callin...
+
 ---
+
+<Fragment src="../../../../includes/saas-only.md"/>
 
 # unsubscribeProductAlertPriceAll mutation
 
@@ -51,10 +54,10 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Customer is not logged in.` | The request does not include a valid customer authentication token.
-`Unable to unsubscribe to all price alerts` | An internal error occurred while removing the subscriptions.
+| Error | Description |
+| --- | --- |
+| `Customer is not logged in.` | The request does not include a valid customer authentication token. |
+| `Unable to unsubscribe to all price alerts` | An internal error occurred while removing the subscriptions. |
 
 ## Related topics
 

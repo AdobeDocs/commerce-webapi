@@ -1,5 +1,6 @@
 ---
 title: assignCustomerToGuestCart mutation
+description: The assignCustomerToGuestCart mutation merges a logged-in customer's shopping cart into the specified guest cart. The mutation inactivates the customer's s...
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
@@ -34,9 +35,9 @@ mutation {
 
 The `assignCustomerToGuestCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-assignCustomerToGuestCart)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-assignCustomerToGuestCart)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-assignCustomerToGuestCart)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-assignCustomerToGuestCart)
 
 ## Example usage
 
@@ -102,10 +103,14 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`The current customer isn't authorized.` | The current customer is not currently logged in.
-`Unable to assign the customer to the guest cart` | The current customer can't be assigned to the provided guest cart.
-`The cart isn't active` | The cart with the specified cart ID is unavailable, because the items have been purchased and the cart ID becomes inactive.
-`Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` table.
-`The current user cannot perform operations on cart "XXX"` | Tried to assign the customer to the customer's cart.
+| Error | Description |
+| --- | --- |
+| `The current customer isn't authorized.` | The current customer is not currently logged in. |
+| `Unable to assign the customer to the guest cart` | The current customer can't be assigned to the provided guest cart. |
+| `The cart isn't active` | The cart with the specified cart ID is unavailable, because the items have been purchased and the cart ID becomes inactive. |
+| `Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` table. |
+| `The current user cannot perform operations on cart "XXX"` | Tried to assign the customer to the customer's cart. |
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

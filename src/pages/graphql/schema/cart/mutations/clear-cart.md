@@ -1,11 +1,12 @@
 ---
 title: clearCart mutation
-edition: paas
+description: The clearCart mutation removes all items from the specified cart.
+
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
+<Fragment src="../../../../includes/paas-only.md"/>
 
-<CommerceOnly />
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # clearCart mutation
 

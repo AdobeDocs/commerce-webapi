@@ -137,3 +137,7 @@ type StoreConfig {
 -  [Define the GraphQL schema for a module](index.md)
 -  [Resolvers](resolvers.md)
 -  [Declarative schema](https://developer.adobe.com/commerce/php/development/components/declarative-schema/)
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Adarsh Manickam for contributing this topic!](https://github.com/drpayyne)

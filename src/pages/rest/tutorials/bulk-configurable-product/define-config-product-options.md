@@ -2,11 +2,11 @@
 title: Step 3. Define configurable product options
 description: In this step of the tutorial you will define the configurable product options
 contributor_name: comwrap GmbH
-contributor_link: http://comwrap.com/
+contributor_link: https://comwrap.com/en/
 keywords:
   - REST
---- 
- 
+---
+
 # Step 3. Define configurable product options
 
   Now that we've created all the Champ Tee products, we need to assign `size` as the configurable attribute and link the simple products to the configurable product.
@@ -17,7 +17,7 @@ keywords:
 
 <InlineAlert variant="warning" slots="text"/>
 
- The `attribute_id` and its value may be different on your installation. Check the values carefully before using them in your calls. To get the correct `attribute_id`, see [Get the list of attributes defined in an attribute searchCriteria](/rest/tutorials/configurable-product/plan-product/#get-the-list-of-attributes-defined-in-an-attribute-searchcriteria ) for more information.
+ The `attribute_id` and its value may be different on your installation. Check the values carefully before using them in your calls. To get the correct `attribute_id`, see [Get the list of attributes defined in an attribute searchCriteria](/rest/tutorials/configurable-product/plan-product.md#get-the-list-of-attributes-defined-in-an-attribute-searchcriteria) for more information.
 
  The value assigned to the `value_index` must be unique within the system.
 
@@ -68,7 +68,7 @@ Now that you have set the configurable attribute to be `sku`, you can link all s
 
  <InlineAlert variant="info" slots="text"/>
 
-Bulk endpoint routes cannot contain input parameters, such as a `sku` value.  You must replace input parameters with a string that begins with `by` and ends with the input parameter name, such as `bySku`. See [`bulk endpoints`](/rest/use-rest/bulk-endpoints/) for more information.
+Bulk endpoint routes cannot contain input parameters, such as a `sku` value.  You must replace input parameters with a string that begins with `by` and ends with the input parameter name, such as `bySku`. See [`bulk endpoints`](/rest/use-rest/bulk-endpoints.md) for more information.
 
  `POST <host>/rest/default/async/bulk/V1/configurable-products/bySku/child`
 
@@ -122,11 +122,11 @@ Bulk endpoint routes cannot contain input parameters, such as a `sku` value.  Yo
 
 *  Log in to the Luma website and select **Catalog > Products**. Click on the **Champ Tee** configurable product and expand the **Configurations** section.
 
-   ![Product page with configurable and simple products](../../../_images/configurations-section.png)
+   ![Product page with configurable and simple products](../../../images/configurations-section.png)
 
 *  On the Luma storefront page, search for `Champ`.
 
-   ![Search results](../../../_images/search-results.png)
+   ![Search results](../../../images/search-results.png)
 
 *  Call `GET <host>/rest/default/V1/products/MS-Champ`. The response includes the `configurable_product_options` and `configurable_product_links` arrays.
 
@@ -160,3 +160,7 @@ Bulk endpoint routes cannot contain input parameters, such as a `sku` value.  Yo
 },
 ...
 ```
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to comwrap GmbH for contributing this topic!](https://comwrap.com/en/)

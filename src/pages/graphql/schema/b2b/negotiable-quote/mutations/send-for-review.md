@@ -1,12 +1,11 @@
 ---
 title: sendNegotiableQuoteForReview mutation
+description: The sendNegotiableQuoteForReview mutation sends the negotiable quote to the seller for review. If the mutation is successful, the buyer cannot modify the q...
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # sendNegotiableQuoteForReview mutation
 
@@ -26,9 +25,9 @@ sendNegotiableQuoteForReview(
 
 The `sendNegotiableQuoteForReview` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-sendNegotiableQuoteForReview)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-sendNegotiableQuoteForReview)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-sendNegotiableQuoteForReview)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-sendNegotiableQuoteForReview)
 
 ## Example usage
 

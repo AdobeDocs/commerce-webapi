@@ -3,8 +3,8 @@ title: Step 4. Define configurable product options
 description: In this step of the tutorial you will define the configurable product options
 keywords:
   - REST
---- 
- 
+---
+
 # Step 4. Define configurable product options
 
 Now that we've created all the Champ Tee products, we need to assign `size` as the configurable attribute and link the simple products to the configurable product.
@@ -65,11 +65,11 @@ The call to link a simple (child) product to the configurable product accepts on
 
 *  Log in to the Luma website and select **Catalog > Products**. Click on the **Champ Tee** configurable product and expand the **Configurations** section.
 
-![Product page with configurable and simple products](../../../_images/configurations-section.png)
+![Product page with configurable and simple products](../../../images/configurations-section.png)
 
 *  On the Luma storefront page, search for `Champ`.
 
-![Search results](../../../_images/search-results.png)
+![Search results](../../../images/search-results.png)
 
 *  Call `GET /V1/products/MS-Champ`. The response includes the `configurable_product_options` and `configurable_product_links` arrays.
 

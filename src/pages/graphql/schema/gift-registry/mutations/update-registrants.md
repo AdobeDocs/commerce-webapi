@@ -1,10 +1,9 @@
 ---
 title: updateGiftRegistryRegistrants mutation
+description: The updateGiftRegistryRegistrants mutation updates properties of one or more registrants of the specified gify registry.
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # updateGiftRegistryRegistrants mutation
 
@@ -29,9 +28,9 @@ mutation {
 
 The `updateGiftRegistryRegistrants` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-updateGiftRegistryRegistrants)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-updateGiftRegistryRegistrants)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateGiftRegistryRegistrants)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateGiftRegistryRegistrants)
 
 ## Example usage
 

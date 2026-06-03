@@ -1,11 +1,12 @@
 ---
 title: Web API Functional Testing
 description: How to implement and run functional tests on Web APIs.
-edition: paas
 keywords:
   - GraphQL
   - REST
 ---
+
+<Fragment src="../includes/paas-only.md"/>
 
 # Web API Functional Testing
 

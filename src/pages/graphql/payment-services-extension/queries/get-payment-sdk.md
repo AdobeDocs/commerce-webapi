@@ -110,24 +110,24 @@ query {
 
 The `getPaymentSDK` query must contain the following attribute:
 
-Attribute |  Data Type | Description
---- | --- | ---
-`location` | PaymentLocation! | The origin location for that payment request. The possible values are PRODUCT_DETAIL, MINICART, CART, CHECKOUT, ADMIN
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `location` | PaymentLocation! | The origin location for that payment request. The possible values are PRODUCT_DETAIL, MINICART, CART, CHECKOUT, ADMIN |
 
 ## Output attributes
 
 The `GetPaymentSDKOutput` object must contain the following attributes:
 
-Attribute |  Data Type | Description
---- | --- | ---
-`code` | String | The payment method code as defined in the payment gateway
-`params` | [SDKParams] | PayPal parameters required to load JS SDK
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `code` | String | The payment method code as defined in the payment gateway |
+| `params` | [SDKParams] | PayPal parameters required to load JS SDK |
 
 ### `SDKParams` object
 
 The `SDKParams` object provides details about the SDK parameters:
 
-Attribute |  Data Type | Description
---- | --- | ---
-`name` | String! | The name of the SDK parameter
-`value` | String! | The value of the SDK parameter
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `name` | String! | The name of the SDK parameter |
+| `value` | String! | The value of the SDK parameter |

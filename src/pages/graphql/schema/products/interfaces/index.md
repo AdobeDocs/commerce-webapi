@@ -1,5 +1,6 @@
 ---
 title: Product interfaces and attributes
+description: Any type that implements ProductInterface contains all the base attributes necessary for the frontend of the product model.
 ---
 
 # Product interfaces and attributes

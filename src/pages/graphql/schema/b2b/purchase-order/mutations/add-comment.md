@@ -1,12 +1,11 @@
 ---
 title: addPurchaseOrderComment mutation
+description: The addPurchaseOrderComment mutation adds a comment to the specified purchase order. The response contains details about the comment.
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # addPurchaseOrderComment mutation
 
@@ -28,9 +27,9 @@ mutation {
 
 The `addPurchaseOrderComment` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-addPurchaseOrderComment)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-addPurchaseOrderComment)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addPurchaseOrderComment)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addPurchaseOrderComment)
 
 ## Example usage
 

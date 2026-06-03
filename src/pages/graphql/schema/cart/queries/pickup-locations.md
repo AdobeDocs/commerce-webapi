@@ -1,5 +1,6 @@
 ---
 title: pickupLocations query
+description: Use the pickupLocations query to retrieve a list of available pickup locations.
 contributor_name: Oleksandr Kravchuk
 contributor_link: https://github.com/swnsma
 ---
@@ -38,9 +39,9 @@ pickupLocations (area: AreaInput filters: PickupLocationFilterInput sort: Pickup
 
 The `pickupLocations` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-pickupLocations)
+* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-pickupLocations)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-pickupLocations)
+* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-pickupLocations)
 
 ## Example usage
 
@@ -131,7 +132,11 @@ For the available Pickup location, the response would look like:
 
 ## Errors
 
-Error | Description
---- | ---
-`Field AreaInput.radius of required type Int! was not provided` | The value specified in the `AreaInput.radius` argument is empty.
-`Field AreaInput.search_term of required type String! was not provided` | The value specified in the `AreaInput.search_term` argument is empty.
+| Error | Description |
+| --- | --- |
+| `Field AreaInput.radius of required type Int! was not provided` | The value specified in the `AreaInput.radius` argument is empty. |
+| `Field AreaInput.search_term of required type String! was not provided` | The value specified in the `AreaInput.search_term` argument is empty. |
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Oleksandr Kravchuk for contributing this topic!](https://github.com/swnsma)

@@ -1,19 +1,22 @@
 ---
 title: generateCustomerToken mutation
-edition: saas
+description: Use the generateCustomerToken mutation to create a new customer token.
+
 ---
+
+<Fragment src="../../../../includes/saas-only.md"/>
 
 # generateCustomerToken mutation
 
 Use the `generateCustomerToken` mutation to create a new customer token.
 
-To return or modify information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session).
+To return or modify information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session/).
 
 ## Using `generateCustomerToken` to log in as a customer
 
-<Edition name="saas" />
+<Fragment src="../../../../includes/saas-only.md"/>
 
-The [Login as Customer](../../../../rest/saas-integrations/login-as-customer/) workflow allows administrators to generate a one-time code (OTC) for a customer, then exchange it for a customer access token. This is useful for support sessions, admin UIs, scripts, or third-party integrations that need to act on behalf of a customer.
+The [Login as Customer](../../../../rest/saas-integrations/login-as-customer/index.md) workflow allows administrators to generate a one-time code (OTC) for a customer, then exchange it for a customer access token. This is useful for support sessions, admin UIs, scripts, or third-party integrations that need to act on behalf of a customer.
 
 To log in as a customer, you must enable the [customer account permission for remote shopping assistance](https://experienceleague.adobe.com/en/docs/commerce-admin/customers/customer-accounts/manage/login-as-customer#customer-account-permission-for-remote-shopping-assistance).
 
@@ -87,12 +90,12 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Specify the "email" value.` | The value specified in the `email` argument is empty.
-`Specify the "password" value.` | The value specified value in the `password` argument is empty.
-`The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.` | Authentication error. The email or password is incorrect, or the customer account is locked.
-`This account isn't confirmed. Verify and try again.` | Authentication error. The email account is not confirmed.
+| Error | Description |
+| --- | --- |
+| `Specify the "email" value.` | The value specified in the `email` argument is empty. |
+| `Specify the "password" value.` | The value specified value in the `password` argument is empty. |
+| `The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.` | Authentication error. The email or password is incorrect, or the customer account is locked. |
+| `This account isn't confirmed. Verify and try again.` | Authentication error. The email account is not confirmed. |
 
 ## Related topics
 
