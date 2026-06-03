@@ -43,7 +43,7 @@ The response is the `quoteId`: 3
 In [Step 5. Reassign products to custom sources](reassign-products-to-another-source.md), we defined the quantities of products `24-WB01` and `24-WB03` for the US source as follows:
 
 | Product | Northeast Warehouse | Brooklyn Store  | Manhattan Store | Long Island Store | West Warehouse | Berkeley Store | Sausalito Store |
-| --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | `24-WB01` | 35 | 10 | 10 | 10 | 15 | 10 | 10 |
 | `24-WB03` | 50 | 0 | 0 | 0 | 10 | 20 | 20 |
 

@@ -216,7 +216,7 @@ Before using this code sample, verify that the attribute values are the same in 
 Repeat the call with the following changes to the payload:
 
 | Attribute | Medium Value | Large Value |
-| --- | --- |
+| --- | --- | --- |
 | `sku` | MS-Champ-M | MS-Champ-L |
 | `name` | Champ Tee Medium | Champ Tee Large |
 | `size` | 169 | 170 |
