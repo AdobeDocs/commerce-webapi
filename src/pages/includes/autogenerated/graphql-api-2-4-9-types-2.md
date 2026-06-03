@@ -3396,7 +3396,7 @@ Lists display settings for the Fixed Product Tax.
 
 The `Float` scalar type represents signed double-precision fractional
 values as specified by
-[IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point). 
+[IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point).
 
 #### Example
 
@@ -5336,7 +5336,7 @@ List of templates/filters applied to customer attribute input.
 ### Int
 
 The `Int` scalar type represents non-fractional signed whole numeric
-values. Int can represent values between -(2^31) and 2^31 - 1. 
+values. Int can represent values between -(2^31) and 2^31 - 1.
 
 #### Example
 
