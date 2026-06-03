@@ -1,24 +1,19 @@
 {
-  "name": "commerce-webapi",
+  "name": "dev-docs-template",
   "version": "1.0.0",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AdobeDocs/commerce-webapi"
+    "url": "https://github.com/AdobeDocs/dev-docs-template"
+  },
+  "author": {
+    "name": "Tim Kim",
+    "url": "https://github.com/timkim"
   },
   "engines": {
     "node": "^24.11.0"
   },
-  "dependencies": {
-    "spectaql": "^3.0.9"
-  },
   "scripts": {
-    "generate:graphql-api-docs": "node scripts/generate-spectaql-md.js",
-    "generate:graphql-api-docs:2.4.6": "node scripts/generate-spectaql-md.js 2.4.6",
-    "generate:graphql-api-docs:2.4.7": "node scripts/generate-spectaql-md.js 2.4.7",
-    "generate:graphql-api-docs:2.4.8": "node scripts/generate-spectaql-md.js 2.4.8",
-    "generate:graphql-api-docs:2.4.9": "node scripts/generate-spectaql-md.js 2.4.9",
-    "generate:graphql-api-docs:saas": "node scripts/generate-spectaql-md.js saas",
     "dev": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils dev",
     "buildNavigation": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils buildNavigation -v",
     "buildRedirections": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils buildRedirections -v",
@@ -32,33 +27,6 @@
     "link:externalLinkOnly": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils runLint --external-links-only -v",
     "link:checkAllLinks": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils runLint --internal-links-only --external-links-only -v",
     "redirectCheck:stage": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils redirectChecker stage --verbose",
-    "redirectCheck:prod": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils redirectChecker prod --verbose",
-    "lint:md": "npx --yes markdownlint-cli2 'src/pages/**/*.md' '*.md'",
-    "lint:md:fix": "npx --yes markdownlint-cli2 --fix 'src/pages/**/*.md' '*.md'",
-    "test": "npx --yes jest",
-    "test:config": "npx --yes jest tests/config.test.js"
-  },
-  "lint": {
-    "skipRules": {
-      "check-frontmatter": {
-        "paths": [
-          "src/pages/includes"
-        ]
-      },
-      "missing-heading": {
-        "paths": [
-          "src/pages/includes"
-        ]
-      }
-    },
-    "skipUrlPatterns": [
-      "https://commercemarketplace.adobe.com/magento-payment-services.html",
-      "https://www.atwix.com/",
-      "https://www.example.com/",
-      "https://www.rightpoint.com/",
-      "https://altairgraphql.dev/",
-      "http://your_app_host/",
-      "http://magentohost/"
-    ]
+    "redirectCheck:prod": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils redirectChecker prod --verbose"
   }
 }
