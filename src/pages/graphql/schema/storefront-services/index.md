@@ -134,7 +134,7 @@ The Merchandising GraphQL API provides queries that are similar in name to some 
 Adobe Commerce Optimizer also provides additional queries that are not available in Storefront Services:
 
 | Query | Description |
-| --- | --- | --- |
+| --- | --- |
 | `categoryTree` | Retrieves category tree nodes, optionally filtered by slugs and limited by depth. It can return full hierarchy metadata, descriptions, images, and SEO fields.|
 | `navigation` | Returns category-based navigation structure for a given product family. It is intended for rendering storefront menus. |
 | `recommendationsByUnitIds` | Returns recommendation units based on pre-configured unit IDs. This allows merchants to define specific recommendation sets in Commerce Optimizer and retrieve them directly, rather than relying on real-time AI generation. |
