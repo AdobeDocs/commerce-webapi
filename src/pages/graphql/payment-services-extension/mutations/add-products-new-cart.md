@@ -33,7 +33,7 @@ addProductsToNewCart(
 
 ## Reference
 
-The [`addProductsToNewCart`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-addProductsToNewCart) reference provides detailed information about the types and fields defined in this mutation.
+The [`addProductsToNewCart`](/reference/graphql/saas/index.md#addproductstonewcart) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -41,7 +41,7 @@ These examples show when the `addProductsToNewCart` mutation returns a successfu
 
 ### Create a new cart (success)
 
-The following example adds a simple product to a new cart successfully, returning a [Cart](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-Cart) object.
+The following example adds a simple product to a new cart successfully, returning a [Cart](/reference/graphql/index.md#cart) object.
 
 **Request:**
 
@@ -83,7 +83,7 @@ mutation {
 
 ### Create a new cart (failure)
 
-The following example fails to create a new cart beccause the `sku` does not exist in the catalog. It returns a [CartUserInputError](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CartUserInputError) object.
+The following example fails to create a new cart beccause the `sku` does not exist in the catalog. It returns a [CartUserInputError](/reference/graphql/index.md#cartuserinputerror) object.
 
 **Request:**
 

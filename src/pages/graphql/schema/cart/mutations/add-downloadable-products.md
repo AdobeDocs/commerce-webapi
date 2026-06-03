@@ -29,7 +29,7 @@ mutation: {
 
 ## Reference
 
-The [`addDownloadableProductsToCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addDownloadableProductsToCart) reference provides detailed information about the types and fields defined in this mutation.
+The [`addDownloadableProductsToCart`](/reference/graphql/index.md#adddownloadableproductstocart) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

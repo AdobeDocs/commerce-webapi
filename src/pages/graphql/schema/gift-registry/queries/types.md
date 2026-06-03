@@ -20,9 +20,9 @@ giftRegistryTypes: [GiftRegistryType]
 
 The `giftRegistryTypes` reference provides detailed information about the types and fields defined in this query.
 
-* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-giftRegistryTypes)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#giftregistrytypes)
 
-* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-giftRegistryTypes)
+* [On-Premises/Cloud](/reference/graphql/index.md#giftregistrytypes)
 
 ## Example usage
 

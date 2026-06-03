@@ -19,9 +19,9 @@ giftRegistryEmailSearch(email: String!): [GiftRegistrySearchResult]
 
 The `giftRegistryEmailSearch` reference provides detailed information about the types and fields defined in this query.
 
-* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-giftRegistryEmailSearch)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#giftregistryemailsearch)
 
-* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-giftRegistryEmailSearch)
+* [On-Premises/Cloud](/reference/graphql/index.md#giftregistryemailsearch)
 
 ## Example usage
 

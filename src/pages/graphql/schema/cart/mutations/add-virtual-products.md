@@ -22,7 +22,7 @@ The `addVirtualProductsToCart` mutation allows you to add multiple virtual produ
 
 ## Reference
 
-The [`addVirtualProductsToCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addVirtualProductsToCart) reference provides detailed information about the types and fields defined in this mutation.
+The [`addVirtualProductsToCart`](/reference/graphql/index.md#addvirtualproductstocart) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

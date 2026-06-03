@@ -22,7 +22,7 @@ mutation {
 
 ## Reference
 
-The [`createBraintreeClientToken`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createBraintreeClientToken) reference provides detailed information about the types and fields defined in this mutation.
+The [`createBraintreeClientToken`](/reference/graphql/index.md#createbraintreeclienttoken) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

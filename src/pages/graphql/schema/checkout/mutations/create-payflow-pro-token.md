@@ -30,7 +30,7 @@ mutation {
 
 ## Reference
 
-The [`createPayflowProToken`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createPayflowProToken) reference provides detailed information about the types and fields defined in this mutation.
+The [`createPayflowProToken`](/reference/graphql/index.md#createpayflowprotoken) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

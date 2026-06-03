@@ -40,7 +40,7 @@ categories(filters: CategoryFilterInput pageSize: Int currentPage: Int): Categor
 
 ## Reference
 
-The [`categories`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-categories) reference provides detailed information about the types and fields defined in this query.
+The [`categories`](/reference/graphql/index.md#categories) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

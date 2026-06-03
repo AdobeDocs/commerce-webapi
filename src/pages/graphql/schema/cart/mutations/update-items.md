@@ -19,9 +19,9 @@ Setting the quantity to `0` removes an item from the cart.
 
 The `updateCartItems` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-updateCartItems)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#updatecartitems)
 
-* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateCartItems)
+* [On-Premises/Cloud](/reference/graphql/index.md#updatecartitems)
 
 ## Example usage
 

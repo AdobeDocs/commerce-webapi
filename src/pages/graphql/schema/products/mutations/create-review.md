@@ -16,7 +16,7 @@ The `createProductReview` mutation adds a review for the specified product. Use 
 
 ## Reference
 
-The [`createProductReview`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createProductReview) reference provides detailed information about the types and fields defined in this mutation.
+The [`createProductReview`](/reference/graphql/index.md#createproductreview) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

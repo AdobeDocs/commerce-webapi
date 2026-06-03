@@ -28,7 +28,7 @@ products(
 
 ## Reference
 
-The [`products`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-products) reference provides detailed information about the types and fields defined in this query.
+The [`products`](/reference/graphql/index.md#products) reference provides detailed information about the types and fields defined in this query.
 
 ## Input attributes
 

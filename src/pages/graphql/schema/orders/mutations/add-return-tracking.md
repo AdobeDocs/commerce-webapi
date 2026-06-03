@@ -19,9 +19,9 @@ mutation: {
 
 The `addReturnTracking` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-addReturnTracking)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#addreturntracking)
 
-* [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addReturnTracking)
+* [On-Premises/Cloud](/reference/graphql/index.md#addreturntracking)
 
 ## Example usage
 

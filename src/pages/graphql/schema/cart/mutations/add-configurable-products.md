@@ -20,7 +20,7 @@ Use the `addConfigurableProductsToCart` mutation to add configurable products to
 
 ## Reference
 
-The [`addConfigurableProductsToCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addConfigurableProductsToCart) reference provides detailed information about the types and fields defined in this mutation.
+The [`addConfigurableProductsToCart`](/reference/graphql/index.md#addconfigurableproductstocart) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

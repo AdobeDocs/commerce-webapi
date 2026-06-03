@@ -28,7 +28,7 @@ category (
 
 ## Reference
 
-The [`category`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-category) reference provides detailed information about the types and fields defined in this query.
+The [`category`](/reference/graphql/index.md#category) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
