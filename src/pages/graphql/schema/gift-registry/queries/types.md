@@ -1,7 +1,6 @@
 ---
 title: giftRegistryTypes query
 description: The giftRegistryTypes query returns a list of available gift registry types.
-contributor_name: Zilker Technology
 ---
 
 <Fragment src="../../../../includes/commerce-only.md"/>
@@ -134,6 +133,6 @@ query{
 }
 ```
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 Thanks to Zilker Technology for contributing this topic!

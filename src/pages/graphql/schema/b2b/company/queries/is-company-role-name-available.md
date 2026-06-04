@@ -1,8 +1,6 @@
 ---
 title: isCompanyRoleNameAvailable query
 description: The isCompanyRoleNameAvailable query checks whether a company role name is valid for creating into a company.
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 keywords:
   - B2B
 ---
@@ -63,6 +61,6 @@ query {
 }
 ```
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

@@ -1,8 +1,6 @@
 ---
 title: addProductsToCart mutation
 description: The addProductsToCart mutation adds any type of product to the shopping cart. It streamlines the process of adding products by allowing you to specify mult...
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 ---
 
 # addProductsToCart mutation
@@ -650,6 +648,6 @@ mutation {
 | `INSUFFICIENT_STOCK` | `This product is out of stock` | The requested product is out of stock |
 | `UNDEFINED` | `UNDEFINED` | The error message does not match any error code |
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

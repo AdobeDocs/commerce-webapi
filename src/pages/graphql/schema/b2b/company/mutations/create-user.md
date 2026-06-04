@@ -1,8 +1,6 @@
 ---
 title: createCompanyUser mutation
 description: The createCompanyUser mutation allows an existing company user who is assigned a role that contains the MagentoCompany::usersedit permission to create a ne...
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 keywords:
   - B2B
 ---
@@ -172,6 +170,6 @@ mutation {
 | `Required parameters are missing: xxx` | The `input`.`xxx` argument was omitted or contains an empty value. |
 | `No such entity with roleId = xxx` | The company role with ID `xxx` doesn't exist. |
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

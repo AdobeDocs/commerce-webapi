@@ -1,8 +1,6 @@
 ---
 title: updateCompanyTeam mutation
 description: Use the updateCompanyTeam mutation to update the company team data.
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 keywords:
   - B2B
 ---
@@ -75,6 +73,6 @@ mutation {
 }
 ```
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

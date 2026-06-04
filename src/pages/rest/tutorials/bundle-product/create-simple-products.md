@@ -1,8 +1,6 @@
 ---
 title: Step 2. Create the simple products
 description: In this step of the tutorial you will create simple products
-contributor_name: Goivvy LLC
-contributor_link: https://www.goivvy.com/magento-optimization-service
 keywords:
   - REST
 ---
@@ -583,6 +581,6 @@ Log in to the Adobe Commerce Admin Panel and select **Catalog** > **Products** a
 
 If you do not see your products in the catalog, you can try reindexing and clearing the cache.
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/magento-optimization-service)

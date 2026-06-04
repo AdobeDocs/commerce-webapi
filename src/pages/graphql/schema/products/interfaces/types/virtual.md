@@ -1,8 +1,6 @@
 ---
 title: Virtual product data types
 description: The VirtualProduct data type implements the following interfaces:
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 ---
 
 # Virtual product data types
@@ -101,6 +99,6 @@ The following query returns information about virtual product.
 
 -  [addVirtualProductsToCart mutation](../../../cart/mutations/add-virtual-products.md)
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

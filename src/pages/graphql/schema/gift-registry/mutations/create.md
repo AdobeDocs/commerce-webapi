@@ -1,7 +1,6 @@
 ---
 title: createGiftRegistry mutation
 description: The createGiftRegistry mutation creates a gift registry for the logged in customer.
-contributor_name: EY
 ---
 
 <Fragment src="../../../../includes/commerce-only.md"/>
@@ -212,6 +211,6 @@ mutation {
 }
 ```
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 Thanks to EY for contributing this topic!

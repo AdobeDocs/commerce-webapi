@@ -1,8 +1,6 @@
 ---
 title: deleteCompanyUser mutation
 description: Use the deleteCompanyUser mutation to deactivate the specified company user.
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 keywords:
   - B2B
 ---
@@ -72,6 +70,6 @@ mutation {
 | `A customer with the same email address already exists in an associated website` | The email provided in the `input`.`email` argument belongs to another user. |
 | `The user XXX is the company admin and cannot be set to inactive. You must set another user as the company admin first.` | The company owner cannot be deactivated. You must set another user as the company admin first. |
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

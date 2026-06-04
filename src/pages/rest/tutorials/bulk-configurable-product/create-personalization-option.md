@@ -1,8 +1,6 @@
 ---
 title: Step 4. Create the personalization option
 description: In this step of the tutorial you will create the personalization option
-contributor_name: comwrap GmbH
-contributor_link: https://comwrap.com/en/
 keywords:
   - REST
 ---
@@ -70,6 +68,6 @@ The `product_sku` is the `sku` of the configurable product. The `sku` specified 
 
 [Order Processing with REST APIs Tutorial](/rest/tutorials/orders/index.md)
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to comwrap GmbH for contributing this topic!](https://comwrap.com/en/)

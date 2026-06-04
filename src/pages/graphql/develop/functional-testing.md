@@ -1,8 +1,6 @@
 ---
 title: GraphQL functional testing
 description: Learn how to use the Adobe Commerce and Magento Open Source test framework to create fixtures, define exceptions, and run finctional tests.
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 keywords:
   - GraphQL
 ---
@@ -361,6 +359,6 @@ To run the `testFunction1` and `testFunction2` tests, which are part of the `my_
 vendor/bin/phpunit -c dev/tests/api-functional/phpunit_graphql.xml --group my_test_group dev/tests/api-functional/testsuite/Magento/GraphQl/MyTest.php
 ```
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

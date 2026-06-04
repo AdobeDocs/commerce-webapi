@@ -1,8 +1,6 @@
 ---
 title: Step 3. Add products to the cart
 description: Learn how to add products to a cart with the GraphQL API.
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 keywords:
   - GraphQL
   - Checkout
@@ -167,6 +165,6 @@ The response lists all items currently in the cart, including the just-added vid
 
 1. Go to the shopping cart. All the items you added are displayed.
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)
