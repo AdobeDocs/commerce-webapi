@@ -8,7 +8,7 @@
 | Input Field | Description |
 |-------------|-------------|
 {{#each inputFields}}
-| `{{name}}` - {{{mdTypeLink . codify=true}}} | {{singleLine description}}{{#if defaultValue}} Default: `{{defaultValue}}`{{/if}}{{#if (and deprecationReason (not @root.info.x-hideDeprecationReason))}} *(Deprecated: {{singleLine deprecationReason}})*{{/if}} |
+| `{{name}}` - {{{mdTypeLink . codify=true}}} | {{{singleLine description}}}{{#if defaultValue}} Default: `{{defaultValue}}`{{/if}}{{#if (and deprecationReason (not @root.info.x-hideDeprecationReason))}} *(Deprecated: {{{singleLine deprecationReason}}})*{{/if}} |
 {{/each}}
 
 {{/if}}
