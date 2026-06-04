@@ -21,7 +21,7 @@ This topic describes how REST calls can be used to place items in a shopping car
 
 ## Prepare the order
 
-The steps in this section are similar to those in the [Order processing tutorial](https://developer.adobe.com/commerce/webapi/rest/tutorials/orders/), except that different products are added to the cart.
+The steps in this section are similar to those in the [Order processing tutorial](/rest/tutorials/orders/index.md), except that different products are added to the cart.
 
 ### Create a shopping cart
 

@@ -19,7 +19,7 @@ This **5-step tutorial** generally takes **45 minutes**.
 
 *  Install a REST client. You can use any REST client to send calls to Commerce. [Postman](https://www.postman.com/) is recommended.
 
-*  [Install and configure RabbitMQ](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/rabbitmq), which is the default message broker for bulk API endpoints.
+*  [Install and configure RabbitMQ](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/message-brokers/rabbitmq), which is the default message broker for bulk API endpoints.
 
 *  Obtain an admin authorization token. All calls in this tutorial require administrator privileges. See [Generate the admin token](/rest/tutorials/prerequisite-tasks/index.md) for more information.
 

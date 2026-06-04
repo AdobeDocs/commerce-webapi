@@ -15,7 +15,7 @@ Contains information about a store's configuration.
 | `allow_printed_card` - [`String`](#string) | Indicates if a printed card can accompany an order. Possible values: 1 (Yes) and 0 (No). |
 | `autocomplete_on_storefront` - [`Boolean`](#boolean) | Indicates whether to enable autocomplete on login and forgot password forms. |
 | `base_currency_code` - [`String`](#string) | The base currency code. |
-| `base_link_url` - [`String`](#string) | A fully-qualified URL that is used to create relative links to the &#x60;base_url&#x60;. |
+| `base_link_url` - [`String`](#string) | A fully-qualified URL that is used to create relative links to the `base_url`. |
 | `base_media_url` - [`String`](#string) | The fully-qualified URL that specifies the location of media files. |
 | `base_static_url` - [`String`](#string) | The fully-qualified URL that specifies the location of static view files. |
 | `base_url` - [`String`](#string) | The store’s fully-qualified base URL. |
@@ -25,8 +25,8 @@ Contains information about a store's configuration.
 | `cart_printed_card` - [`String`](#string) | Indicates if printed card prices are displayed on the Shopping Cart page. Possible values: 1 (Yes) and 0 (No). |
 | `cart_summary_display_quantity` - [`Int`](#int) | checkout/cart_link/use_qty: what to show in the display cart summary, number of items or item quantities. |
 | `catalog_default_sort_by` - [`String`](#string) | The default sort order of the search results list. |
-| `category_fixed_product_tax_display_setting` - [`FixedProductTaxDisplaySettings`](#fixedproducttaxdisplaysettings) | Corresponds to the &#x27;Display Prices In Product Lists&#x27; field in the Admin. It indicates how FPT information is displayed on category pages. |
-| `category_url_suffix` - [`String`](#string) | The suffix applied to category pages, such as &#x60;.htm&#x60; or &#x60;.html&#x60;. |
+| `category_fixed_product_tax_display_setting` - [`FixedProductTaxDisplaySettings`](#fixedproducttaxdisplaysettings) | Corresponds to the 'Display Prices In Product Lists' field in the Admin. It indicates how FPT information is displayed on category pages. |
+| `category_url_suffix` - [`String`](#string) | The suffix applied to category pages, such as `.htm` or `.html`. |
 | `check_money_order_enable_for_specific_countries` - [`Boolean`](#boolean) | Indicates whether only specific countries can use this payment method. |
 | `check_money_order_enabled` - [`Boolean`](#boolean) | Indicates whether the Check/Money Order payment method is enabled. |
 | `check_money_order_make_check_payable_to` - [`String`](#string) | The name of the party to whom the check must be payable. |
@@ -40,7 +40,7 @@ Contains information about a store's configuration.
 | `company_credit_enabled` - [`Boolean!`](#boolean) | Indicates if company credit is enabled. |
 | `company_enabled` - [`Boolean!`](#boolean) | Indicates if B2B company functionality is enabled |
 | `configurable_product_image` - [`ProductImageThumbnail!`](#productimagethumbnail) | checkout/cart/configurable_product_image: which image to use for configurable products. |
-| `configurable_thumbnail_source` - [`String`](#string) | Indicates whether the &#x60;parent&#x60; or child (&#x60;itself&#x60;) thumbnail should be used in the cart for configurable products. |
+| `configurable_thumbnail_source` - [`String`](#string) | Indicates whether the `parent` or child (`itself`) thumbnail should be used in the cart for configurable products. |
 | `contact_enabled` - [`Boolean!`](#boolean) | Indicates whether the Contact Us form in enabled. |
 | `countries_with_required_region` - [`String`](#string) | Extended Config Data - general/region/state_required |
 | `create_account_confirmation` - [`Boolean`](#boolean) | Indicates if the new accounts need confirmation. |
@@ -103,8 +103,8 @@ Contains information about a store's configuration.
 | `orders_invoices_credit_memos_display_subtotal` - [`Int!`](#int) | Configuration data from tax/sales_display/subtotal |
 | `orders_invoices_credit_memos_display_zero_tax` - [`Boolean!`](#boolean) | Configuration data from tax/sales_display/zero_tax |
 | `printed_card_priceV2` - [`Money`](#money) | The default price of a printed card that accompanies an order. |
-| `product_fixed_product_tax_display_setting` - [`FixedProductTaxDisplaySettings`](#fixedproducttaxdisplaysettings) | Corresponds to the &#x27;Display Prices On Product View Page&#x27; field in the Admin. It indicates how FPT information is displayed on product pages. |
-| `product_url_suffix` - [`String`](#string) | The suffix applied to product pages, such as &#x60;.htm&#x60; or &#x60;.html&#x60;. |
+| `product_fixed_product_tax_display_setting` - [`FixedProductTaxDisplaySettings`](#fixedproducttaxdisplaysettings) | Corresponds to the 'Display Prices On Product View Page' field in the Admin. It indicates how FPT information is displayed on product pages. |
+| `product_url_suffix` - [`String`](#string) | The suffix applied to product pages, such as `.htm` or `.html`. |
 | `quickorder_active` - [`Boolean!`](#boolean) | Indicates whether quick order functionality is enabled. |
 | `quote_minimum_amount` - [`Float`](#float) | Minimum order total for quote request. |
 | `quote_minimum_amount_message` - [`String`](#string) | A message that will be shown in the cart when the subtotal (after discount) is lower than the minimum allowed amount. |
@@ -114,11 +114,11 @@ Contains information about a store's configuration.
 | `requisition_list_share_storefront_path` - [`String!`](#string) | Configuration data from btob/requisition_list_sharing/storefront_share_path (route path for share links, no leading or trailing slashes) |
 | `requisition_list_sharing_enabled` - [`Boolean!`](#boolean) | Configuration data from btob/requisition_list_sharing/enabled |
 | `returns_enabled` - [`String!`](#string) | Indicates whether RMA is enabled on the storefront. Possible values: enabled/disabled. |
-| `root_category_uid` - [`ID`](#id) | The unique ID for a &#x60;CategoryInterface&#x60; object. |
-| `sales_fixed_product_tax_display_setting` - [`FixedProductTaxDisplaySettings`](#fixedproducttaxdisplaysettings) | Corresponds to the &#x27;Display Prices In Sales Modules&#x27; field in the Admin. It indicates how FPT information is displayed on cart, checkout, and order pages. |
+| `root_category_uid` - [`ID`](#id) | The unique ID for a `CategoryInterface` object. |
+| `sales_fixed_product_tax_display_setting` - [`FixedProductTaxDisplaySettings`](#fixedproducttaxdisplaysettings) | Corresponds to the 'Display Prices In Sales Modules' field in the Admin. It indicates how FPT information is displayed on cart, checkout, and order pages. |
 | `sales_gift_wrapping` - [`String`](#string) | Indicates if gift wrapping prices are displayed on the Orders page. Possible values: 1 (Yes) and 0 (No). |
 | `sales_printed_card` - [`String`](#string) | Indicates if printed card prices are displayed on the Orders page. Possible values: 1 (Yes) and 0 (No). |
-| `secure_base_link_url` - [`String`](#string) | A secure fully-qualified URL that is used to create relative links to the &#x60;base_url&#x60;. |
+| `secure_base_link_url` - [`String`](#string) | A secure fully-qualified URL that is used to create relative links to the `base_url`. |
 | `secure_base_media_url` - [`String`](#string) | The secure fully-qualified URL that specifies the location of media files. |
 | `secure_base_static_url` - [`String`](#string) | The secure fully-qualified URL that specifies the location of static view files. |
 | `secure_base_url` - [`String`](#string) | The store’s fully-qualified secure base URL. |
@@ -134,7 +134,7 @@ Contains information about a store's configuration.
 | `shopping_cart_display_subtotal` - [`Int`](#int) | Extended Config Data - tax/cart_display/subtotal |
 | `shopping_cart_display_tax_gift_wrapping` - [`TaxWrappingEnum`](#taxwrappingenum) | Extended Config Data - tax/cart_display/gift_wrapping |
 | `shopping_cart_display_zero_tax` - [`Boolean`](#boolean) | Extended Config Data - tax/cart_display/zero_tax |
-| `store_code` - [`ID`](#id) | The unique ID of the store view. In the Admin, this is called the Store View Code. When making a GraphQL call, assign this value to the &#x60;Store&#x60; header to provide the scope. |
+| `store_code` - [`ID`](#id) | The unique ID of the store view. In the Admin, this is called the Store View Code. When making a GraphQL call, assign this value to the `Store` header to provide the scope. |
 | `store_group_code` - [`ID`](#id) | The unique ID assigned to the store group. In the Admin, this is called the Store Name. |
 | `store_group_name` - [`String`](#string) | The label assigned to the store group. |
 | `store_name` - [`String`](#string) | The label assigned to the store view. |
@@ -148,7 +148,7 @@ Contains information about a store's configuration.
 | `zero_subtotal_enable_for_specific_countries` - [`Boolean`](#boolean) | Indicates whether only specific countries can use this payment method. |
 | `zero_subtotal_enabled` - [`Boolean`](#boolean) | Indicates whether the Zero Subtotal payment method is enabled. |
 | `zero_subtotal_new_order_status` - [`String`](#string) | The status of new orders placed using the Zero Subtotal payment method. |
-| `zero_subtotal_payment_action` - [`String`](#string) | When the new order status is &#x27;Processing&#x27;, this can be set to &#x60;authorize_capture&#x60; to automatically invoice all items that have a zero balance. |
+| `zero_subtotal_payment_action` - [`String`](#string) | When the new order status is 'Processing', this can be set to `authorize_capture` to automatically invoice all items that have a zero balance. |
 | `zero_subtotal_payment_from_specific_countries` - [`String`](#string) | A comma-separated list of specific countries allowed to use the Zero Subtotal payment method. |
 | `zero_subtotal_sort_order` - [`Int`](#int) | A number indicating the position of the Zero Subtotal payment method in the list of available payment methods during checkout. |
 | `zero_subtotal_title` - [`String`](#string) | The title of the Zero Subtotal payment method displayed on the storefront. |
@@ -157,90 +157,90 @@ Contains information about a store's configuration.
 
 ```json
 {
-  "allow_company_registration": false,
+  "allow_company_registration": true,
   "allow_gift_receipt": "abc123",
   "allow_gift_wrapping_on_order": "xyz789",
-  "allow_gift_wrapping_on_order_items": "abc123",
+  "allow_gift_wrapping_on_order_items": "xyz789",
   "allow_items": "abc123",
   "allow_order": "xyz789",
-  "allow_printed_card": "abc123",
-  "autocomplete_on_storefront": false,
-  "base_currency_code": "xyz789",
+  "allow_printed_card": "xyz789",
+  "autocomplete_on_storefront": true,
+  "base_currency_code": "abc123",
   "base_link_url": "abc123",
-  "base_media_url": "abc123",
+  "base_media_url": "xyz789",
   "base_static_url": "abc123",
   "base_url": "xyz789",
   "cart_expires_in_days": 987,
   "cart_gift_wrapping": "abc123",
   "cart_merge_preference": "xyz789",
-  "cart_printed_card": "abc123",
+  "cart_printed_card": "xyz789",
   "cart_summary_display_quantity": 123,
   "catalog_default_sort_by": "abc123",
   "category_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
-  "category_url_suffix": "abc123",
+  "category_url_suffix": "xyz789",
   "check_money_order_enable_for_specific_countries": true,
   "check_money_order_enabled": true,
-  "check_money_order_make_check_payable_to": "xyz789",
+  "check_money_order_make_check_payable_to": "abc123",
   "check_money_order_max_order_total": "abc123",
-  "check_money_order_min_order_total": "abc123",
+  "check_money_order_min_order_total": "xyz789",
   "check_money_order_new_order_status": "abc123",
-  "check_money_order_payment_from_specific_countries": "abc123",
-  "check_money_order_send_check_to": "abc123",
-  "check_money_order_sort_order": 987,
-  "check_money_order_title": "xyz789",
-  "company_credit_enabled": false,
-  "company_enabled": false,
+  "check_money_order_payment_from_specific_countries": "xyz789",
+  "check_money_order_send_check_to": "xyz789",
+  "check_money_order_sort_order": 123,
+  "check_money_order_title": "abc123",
+  "company_credit_enabled": true,
+  "company_enabled": true,
   "configurable_product_image": "ITSELF",
-  "configurable_thumbnail_source": "xyz789",
-  "contact_enabled": false,
-  "countries_with_required_region": "abc123",
-  "create_account_confirmation": true,
-  "customer_access_token_lifetime": 987.65,
+  "configurable_thumbnail_source": "abc123",
+  "contact_enabled": true,
+  "countries_with_required_region": "xyz789",
+  "create_account_confirmation": false,
+  "customer_access_token_lifetime": 123.45,
   "default_country": "xyz789",
   "default_display_currency_code": "xyz789",
-  "display_product_prices_in_catalog": 123,
+  "display_product_prices_in_catalog": 987,
   "display_shipping_prices": 123,
   "display_state_if_optional": false,
-  "enable_multiple_wishlists": "xyz789",
+  "enable_multiple_wishlists": "abc123",
   "fixed_product_taxes_apply_tax_to_fpt": true,
-  "fixed_product_taxes_display_prices_in_emails": 987,
-  "fixed_product_taxes_display_prices_in_product_lists": 987,
-  "fixed_product_taxes_display_prices_in_sales_modules": 123,
+  "fixed_product_taxes_display_prices_in_emails": 123,
+  "fixed_product_taxes_display_prices_in_product_lists": 123,
+  "fixed_product_taxes_display_prices_in_sales_modules": 987,
   "fixed_product_taxes_display_prices_on_product_view_page": 987,
   "fixed_product_taxes_enable": false,
-  "fixed_product_taxes_include_fpt_in_subtotal": false,
-  "graphql_share_customer_group": false,
+  "fixed_product_taxes_include_fpt_in_subtotal": true,
+  "graphql_share_customer_group": true,
   "grid_per_page": 123,
-  "grid_per_page_values": "xyz789",
+  "grid_per_page_values": "abc123",
   "grouped_product_image": "ITSELF",
-  "is_checkout_agreements_enabled": true,
-  "is_default_store": true,
+  "is_checkout_agreements_enabled": false,
+  "is_default_store": false,
   "is_default_store_group": false,
-  "is_guest_checkout_enabled": false,
+  "is_guest_checkout_enabled": true,
   "is_negotiable_quote_active": false,
-  "is_one_page_checkout_enabled": false,
+  "is_one_page_checkout_enabled": true,
   "is_requisition_list_active": "abc123",
-  "list_mode": "xyz789",
+  "list_mode": "abc123",
   "list_per_page": 123,
-  "list_per_page_values": "abc123",
+  "list_per_page_values": "xyz789",
   "locale": "xyz789",
   "magento_reward_general_is_enabled": "abc123",
-  "magento_reward_general_is_enabled_on_front": "xyz789",
+  "magento_reward_general_is_enabled_on_front": "abc123",
   "magento_reward_general_min_points_balance": "xyz789",
-  "magento_reward_general_publish_history": "xyz789",
-  "magento_reward_points_invitation_customer": "xyz789",
-  "magento_reward_points_invitation_customer_limit": "abc123",
+  "magento_reward_general_publish_history": "abc123",
+  "magento_reward_points_invitation_customer": "abc123",
+  "magento_reward_points_invitation_customer_limit": "xyz789",
   "magento_reward_points_invitation_order": "xyz789",
   "magento_reward_points_invitation_order_limit": "xyz789",
   "magento_reward_points_newsletter": "xyz789",
-  "magento_reward_points_order": "abc123",
-  "magento_reward_points_register": "abc123",
-  "magento_reward_points_review": "abc123",
+  "magento_reward_points_order": "xyz789",
+  "magento_reward_points_register": "xyz789",
+  "magento_reward_points_review": "xyz789",
   "magento_reward_points_review_limit": "xyz789",
-  "magento_wishlist_general_is_enabled": "abc123",
-  "max_items_in_order_summary": 987,
-  "maximum_number_of_wishlists": "xyz789",
-  "minicart_display": true,
+  "magento_wishlist_general_is_enabled": "xyz789",
+  "max_items_in_order_summary": 123,
+  "maximum_number_of_wishlists": "abc123",
+  "minicart_display": false,
   "minicart_max_items": 987,
   "minimum_password_length": "abc123",
   "newsletter_enabled": false,
@@ -248,10 +248,10 @@ Contains information about a store's configuration.
   "order_cancellation_enabled": false,
   "order_cancellation_reasons": [CancellationReason],
   "orders_invoices_credit_memos_display_full_summary": false,
-  "orders_invoices_credit_memos_display_grandtotal": false,
+  "orders_invoices_credit_memos_display_grandtotal": true,
   "orders_invoices_credit_memos_display_price": 987,
-  "orders_invoices_credit_memos_display_shipping_amount": 123,
-  "orders_invoices_credit_memos_display_subtotal": 123,
+  "orders_invoices_credit_memos_display_shipping_amount": 987,
+  "orders_invoices_credit_memos_display_subtotal": 987,
   "orders_invoices_credit_memos_display_zero_tax": false,
   "printed_card_priceV2": Money,
   "product_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
@@ -261,16 +261,16 @@ Contains information about a store's configuration.
   "quote_minimum_amount_message": "abc123",
   "required_character_classes_number": "xyz789",
   "requisition_list_share_link_validity_days": 123,
-  "requisition_list_share_max_recipients": 123,
-  "requisition_list_share_storefront_path": "xyz789",
-  "requisition_list_sharing_enabled": false,
-  "returns_enabled": "xyz789",
+  "requisition_list_share_max_recipients": 987,
+  "requisition_list_share_storefront_path": "abc123",
+  "requisition_list_sharing_enabled": true,
+  "returns_enabled": "abc123",
   "root_category_uid": 4,
   "sales_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
-  "sales_gift_wrapping": "abc123",
+  "sales_gift_wrapping": "xyz789",
   "sales_printed_card": "abc123",
-  "secure_base_link_url": "xyz789",
-  "secure_base_media_url": "xyz789",
+  "secure_base_link_url": "abc123",
+  "secure_base_media_url": "abc123",
   "secure_base_static_url": "abc123",
   "secure_base_url": "xyz789",
   "share_active_segments": true,
@@ -278,31 +278,31 @@ Contains information about a store's configuration.
   "shopping_assistance_checkbox_title": "abc123",
   "shopping_assistance_checkbox_tooltip": "abc123",
   "shopping_assistance_enabled": false,
-  "shopping_cart_display_full_summary": true,
+  "shopping_cart_display_full_summary": false,
   "shopping_cart_display_grand_total": false,
-  "shopping_cart_display_price": 987,
+  "shopping_cart_display_price": 123,
   "shopping_cart_display_shipping": 123,
   "shopping_cart_display_subtotal": 123,
   "shopping_cart_display_tax_gift_wrapping": "DISPLAY_EXCLUDING_TAX",
-  "shopping_cart_display_zero_tax": false,
-  "store_code": "4",
+  "shopping_cart_display_zero_tax": true,
+  "store_code": 4,
   "store_group_code": 4,
   "store_group_name": "abc123",
-  "store_name": "abc123",
+  "store_name": "xyz789",
   "store_sort_order": 123,
   "timezone": "abc123",
   "title_separator": "xyz789",
-  "use_store_in_url": true,
+  "use_store_in_url": false,
   "website_code": 4,
-  "website_name": "xyz789",
+  "website_name": "abc123",
   "weight_unit": "xyz789",
   "zero_subtotal_enable_for_specific_countries": false,
   "zero_subtotal_enabled": false,
   "zero_subtotal_new_order_status": "abc123",
-  "zero_subtotal_payment_action": "xyz789",
+  "zero_subtotal_payment_action": "abc123",
   "zero_subtotal_payment_from_specific_countries": "abc123",
   "zero_subtotal_sort_order": 123,
-  "zero_subtotal_title": "xyz789"
+  "zero_subtotal_title": "abc123"
 }
 ```
 
@@ -368,17 +368,17 @@ Specifies the quote template properties to update.
 | `min_order_commitment` - [`Int`](#int) | Commitment for minimum orders |
 | `name` - [`String`](#string) | The title assigned to the negotiable quote template. |
 | `reference_document_links` - [`[NegotiableQuoteTemplateReferenceDocumentLinkInput]`](#negotiablequotetemplatereferencedocumentlinkinput) | An array of reference document links to add to the negotiable quote template. |
-| `template_id` - [`ID!`](#id) | The unique ID of a &#x60;NegotiableQuoteTemplate&#x60; object. |
+| `template_id` - [`ID!`](#id) | The unique ID of a `NegotiableQuoteTemplate` object. |
 
 #### Example
 
 ```json
 {
   "attachments": [NegotiableQuoteCommentAttachmentInput],
-  "comment": "xyz789",
-  "max_order_commitment": 123,
+  "comment": "abc123",
+  "max_order_commitment": 987,
   "min_order_commitment": 987,
-  "name": "xyz789",
+  "name": "abc123",
   "reference_document_links": [
     NegotiableQuoteTemplateReferenceDocumentLinkInput
   ],
@@ -435,8 +435,8 @@ Represents the subtree of the categories to retrieve.
 
 | Input Field | Description |
 |-------------|-------------|
-| `depth` - [`Int!`](#int) | The depth of the subcategories to retrieve. For example, a value of &#x60;2&#x60; returns two levels of subcategories beneath the value specified in &#x60;startLevel&#x60;. |
-| `startLevel` - [`Int!`](#int) | The level of the category tree to use as the starting point of the query. For example, &#x60;1&#x60; indicates the topmost category is the starting point. |
+| `depth` - [`Int!`](#int) | The depth of the subcategories to retrieve. For example, a value of `2` returns two levels of subcategories beneath the value specified in `startLevel`. |
+| `startLevel` - [`Int!`](#int) | The level of the category tree to use as the starting point of the query. For example, `1` indicates the topmost category is the starting point. |
 
 #### Example
 
@@ -465,7 +465,7 @@ Represents the subtree of the categories to retrieve.
 #### Example
 
 ```json
-{"value": "xyz789"}
+{"value": "abc123"}
 ```
 
 <HorizontalLine />
@@ -542,7 +542,7 @@ Synchronizes the payment order details
 ```json
 {
   "cartId": "xyz789",
-  "id": "abc123"
+  "id": "xyz789"
 }
 ```
 
@@ -565,8 +565,8 @@ Contains tax item details.
 ```json
 {
   "amount": Money,
-  "rate": 123.45,
-  "title": "xyz789"
+  "rate": 987.65,
+  "title": "abc123"
 }
 ```
 
@@ -601,7 +601,7 @@ Contains tax item details.
 #### Example
 
 ```json
-{"value": "abc123"}
+{"value": "xyz789"}
 ```
 
 <HorizontalLine />
@@ -644,7 +644,7 @@ Defines a price based on the quantity purchased.
 {
   "discount": ProductDiscount,
   "final_price": Money,
-  "quantity": 987.65
+  "quantity": 123.45
 }
 ```
 
@@ -663,7 +663,7 @@ Defines the input schema for unassigning a child company from its parent company
 #### Example
 
 ```json
-{"child_company_id": 4}
+{"child_company_id": "4"}
 ```
 
 <HorizontalLine />
@@ -709,9 +709,9 @@ Contains the response to the request to unassign a child company.
   "storefrontLabel": "abc123",
   "pagePlacement": "xyz789",
   "displayNumber": 123,
-  "pageType": "xyz789",
+  "pageType": "abc123",
   "unitStatus": "xyz789",
-  "typeId": "xyz789",
+  "typeId": "abc123",
   "filterRules": [FilterRuleInput]
 }
 ```
@@ -726,14 +726,14 @@ Modifies the specified items in the cart.
 
 | Input Field | Description |
 |-------------|-------------|
-| `cart_id` - [`String!`](#string) | The unique ID of a &#x60;Cart&#x60; object. |
+| `cart_id` - [`String!`](#string) | The unique ID of a `Cart` object. |
 | `cart_items` - [`[CartItemUpdateInput]!`](#cartitemupdateinput) | An array of items to be updated. |
 
 #### Example
 
 ```json
 {
-  "cart_id": "xyz789",
+  "cart_id": "abc123",
   "cart_items": [CartItemUpdateInput]
 }
 ```
@@ -874,7 +874,7 @@ Defines updates to a `GiftRegistry` object.
   "dynamic_attributes": [
     GiftRegistryDynamicAttributeInput
   ],
-  "event_name": "abc123",
+  "event_name": "xyz789",
   "message": "xyz789",
   "privacy_settings": "PRIVATE",
   "shipping_address": GiftRegistryShippingAddressInput,
@@ -892,7 +892,7 @@ Defines updates to an item in a gift registry.
 
 | Input Field | Description |
 |-------------|-------------|
-| `gift_registry_item_uid` - [`ID!`](#id) | The unique ID of a &#x60;giftRegistryItem&#x60; object. |
+| `gift_registry_item_uid` - [`ID!`](#id) | The unique ID of a `giftRegistryItem` object. |
 | `note` - [`String`](#string) | The updated description of the item. |
 | `quantity` - [`Float!`](#float) | The updated quantity of the gift registry item. |
 
@@ -900,9 +900,9 @@ Defines updates to an item in a gift registry.
 
 ```json
 {
-  "gift_registry_item_uid": "4",
+  "gift_registry_item_uid": 4,
   "note": "abc123",
-  "quantity": 123.45
+  "quantity": 987.65
 }
 ```
 
@@ -955,7 +955,7 @@ Defines updates to an existing registrant.
 | `dynamic_attributes` - [`[GiftRegistryDynamicAttributeInput]`](#giftregistrydynamicattributeinput) | As a result of the update, only the values of provided attributes will be affected. If the attribute is missing in the request, its value will not be changed. |
 | `email` - [`String`](#string) | The updated email address of the registrant. |
 | `firstname` - [`String`](#string) | The updated first name of the registrant. |
-| `gift_registry_registrant_uid` - [`ID!`](#id) | The unique ID of a &#x60;giftRegistryRegistrant&#x60; object. |
+| `gift_registry_registrant_uid` - [`ID!`](#id) | The unique ID of a `giftRegistryRegistrant` object. |
 | `lastname` - [`String`](#string) | The updated last name of the registrant. |
 
 #### Example
@@ -965,10 +965,10 @@ Defines updates to an existing registrant.
   "dynamic_attributes": [
     GiftRegistryDynamicAttributeInput
   ],
-  "email": "xyz789",
+  "email": "abc123",
   "firstname": "xyz789",
   "gift_registry_registrant_uid": 4,
-  "lastname": "abc123"
+  "lastname": "xyz789"
 }
 ```
 
@@ -1019,7 +1019,7 @@ Specifies the items to update.
 | Input Field | Description |
 |-------------|-------------|
 | `items` - [`[NegotiableQuoteItemQuantityInput]!`](#negotiablequoteitemquantityinput) | An array of items to update. |
-| `quote_uid` - [`ID!`](#id) | The unique ID of a &#x60;NegotiableQuote&#x60; object. |
+| `quote_uid` - [`ID!`](#id) | The unique ID of a `NegotiableQuote` object. |
 
 #### Example
 
@@ -1059,14 +1059,14 @@ Specifies the items to update.
 | Input Field | Description |
 |-------------|-------------|
 | `items` - [`[NegotiableQuoteTemplateItemQuantityInput]!`](#negotiablequotetemplateitemquantityinput) | An array of items to update. |
-| `template_id` - [`ID!`](#id) | The unique ID of a &#x60;NegotiableQuoteTemplate&#x60; object. |
+| `template_id` - [`ID!`](#id) | The unique ID of a `NegotiableQuoteTemplate` object. |
 
 #### Example
 
 ```json
 {
   "items": [NegotiableQuoteTemplateItemQuantityInput],
-  "template_id": 4
+  "template_id": "4"
 }
 ```
 
@@ -1114,13 +1114,13 @@ Defines the changes to be made to an approval rule.
 
 ```json
 {
-  "applies_to": [4],
-  "approvers": ["4"],
+  "applies_to": ["4"],
+  "approvers": [4],
   "condition": CreatePurchaseOrderApprovalRuleConditionInput,
-  "description": "xyz789",
+  "description": "abc123",
   "name": "abc123",
   "status": "ENABLED",
-  "uid": 4
+  "uid": "4"
 }
 ```
 
@@ -1141,7 +1141,7 @@ An input object that defines which requistion list characteristics to update.
 
 ```json
 {
-  "description": "xyz789",
+  "description": "abc123",
   "name": "abc123"
 }
 ```
@@ -1167,8 +1167,8 @@ Defines which items in a requisition list to update.
 {
   "entered_options": [EnteredOptionInput],
   "item_id": 4,
-  "quantity": 123.45,
-  "selected_options": ["xyz789"]
+  "quantity": 987.65,
+  "selected_options": ["abc123"]
 }
 ```
 
@@ -1219,7 +1219,7 @@ Contains the name and visibility of an updated wish list.
 | Field Name | Description |
 |------------|-------------|
 | `name` - [`String!`](#string) | The wish list name. |
-| `uid` - [`ID!`](#id) | The unique ID of a &#x60;Wishlist&#x60; object. |
+| `uid` - [`ID!`](#id) | The unique ID of a `Wishlist` object. |
 | `visibility` - [`WishlistVisibilityEnum!`](#wishlistvisibilityenum) | Indicates whether the wish list is public or private. |
 
 #### Example
@@ -1375,7 +1375,7 @@ Defines a customer attribute validation rule.
 ```json
 {
   "name": "DATE_RANGE_MAX",
-  "value": "xyz789"
+  "value": "abc123"
 }
 ```
 
@@ -1465,9 +1465,9 @@ Vault payment inputs
 ```json
 {
   "payment_source": "xyz789",
-  "payments_order_id": "xyz789",
-  "paypal_order_id": "xyz789",
-  "public_hash": "abc123"
+  "payments_order_id": "abc123",
+  "paypal_order_id": "abc123",
+  "public_hash": "xyz789"
 }
 ```
 
@@ -1507,7 +1507,7 @@ User view history
 ```json
 {
   "date": "2007-12-03T10:15:30Z",
-  "sku": "xyz789"
+  "sku": "abc123"
 }
 ```
 
@@ -1529,7 +1529,7 @@ User view history
 ```json
 {
   "dateTime": "2007-12-03T10:15:30Z",
-  "sku": "abc123"
+  "sku": "xyz789"
 }
 ```
 
@@ -1548,29 +1548,29 @@ An implementation for virtual product cart items.
 | `customizable_options` - [`[SelectedCustomizableOption]!`](#selectedcustomizableoption) | An array containing customizable options the shopper selected. |
 | `discount` - [`[Discount]`](#discount) | Contains discount for quote line item. |
 | `errors` - [`[CartItemError]`](#cartitemerror) | An array of errors encountered while loading the cart item |
-| `is_available` - [`Boolean!`](#boolean) | True if requested quantity is less than available stock, false otherwise. *(Deprecated: Use &#x60;is_salable&#x60; instead. It indicates whether the line can be purchased, including backorder configuration.)* |
+| `is_available` - [`Boolean!`](#boolean) | True if requested quantity is less than available stock, false otherwise. *(Deprecated: Use `is_salable` instead. It indicates whether the line can be purchased, including backorder configuration.)* |
 | `is_salable` - [`Boolean!`](#boolean) | True when the item can be purchased and should not block checkout: stock status is in stock and either physical quantity covers the requested quantity or backorders are allowed. |
 | `max_qty` - [`Float`](#float) | Line item max qty in quote template |
 | `min_qty` - [`Float`](#float) | Line item min qty in quote template |
 | `not_available_message` - [`String`](#string) | Shortage or unavailability message for the line; null when the item is salable. |
-| `note_from_buyer` - [`[ItemNote]`](#itemnote) | The buyer&#x27;s quote line item note. |
-| `note_from_seller` - [`[ItemNote]`](#itemnote) | The seller&#x27;s quote line item note. |
+| `note_from_buyer` - [`[ItemNote]`](#itemnote) | The buyer's quote line item note. |
+| `note_from_seller` - [`[ItemNote]`](#itemnote) | The seller's quote line item note. |
 | `prices` - [`CartItemPrices`](#cartitemprices) | Contains details about the price of the item, including taxes and discounts. |
 | `product` - [`ProductInterface!`](#productinterface) | Details about an item in the cart. *(Deprecated: Product information is part of a composable Catalog Service.)* |
 | `quantity` - [`Float!`](#float) | The quantity of this item in the cart. |
-| `uid` - [`ID!`](#id) | The unique ID for a &#x60;CartItemInterface&#x60; object. |
+| `uid` - [`ID!`](#id) | The unique ID for a `CartItemInterface` object. |
 
 #### Example
 
 ```json
 {
-  "backorder_message": "abc123",
+  "backorder_message": "xyz789",
   "custom_attributes": [CustomAttribute],
   "customizable_options": [SelectedCustomizableOption],
   "discount": [Discount],
   "errors": [CartItemError],
-  "is_available": true,
-  "is_salable": false,
+  "is_available": false,
+  "is_salable": true,
   "max_qty": 987.65,
   "min_qty": 987.65,
   "not_available_message": "xyz789",
@@ -1593,9 +1593,9 @@ Defines a virtual product, which is a non-tangible product that does not require
 
 | Field Name | Description |
 |------------|-------------|
-| `canonical_url` - [`String`](#string) | The relative canonical URL. This value is returned only if the system setting &#x27;Use Canonical Link Meta Tag For Products&#x27; is enabled. |
+| `canonical_url` - [`String`](#string) | The relative canonical URL. This value is returned only if the system setting 'Use Canonical Link Meta Tag For Products' is enabled. |
 | `categories` - [`[CategoryInterface]`](#categoryinterface) | The categories assigned to a product. |
-| `country_of_manufacture` - [`String`](#string) | The product&#x27;s country of origin. |
+| `country_of_manufacture` - [`String`](#string) | The product's country of origin. |
 | `crosssell_products` - [`[ProductInterface]`](#productinterface) | Crosssell Products |
 | `custom_attributesV2` - [`ProductCustomAttributes`](#productcustomattributes) | Product custom attributes. |
 | `description` - [`ComplexTextValue`](#complextextvalue) | Detailed information about the product. The value can include simple HTML tags. |
@@ -1604,7 +1604,7 @@ Defines a virtual product, which is a non-tangible product that does not require
 | `gift_wrapping_price` - [`Money`](#money) | Returns value and currency indicating gift wrapping price for the product. |
 | `image` - [`ProductImage`](#productimage) | The relative path to the main image on the product page. |
 | `is_returnable` - [`String`](#string) | Indicates whether the product can be returned. |
-| `manufacturer` - [`Int`](#int) | A number representing the product&#x27;s manufacturer. |
+| `manufacturer` - [`Int`](#int) | A number representing the product's manufacturer. |
 | `max_sale_qty` - [`Float`](#float) | Maximum Qty Allowed in Shopping Cart |
 | `media_gallery` - [`[MediaGalleryInterface]`](#mediagalleryinterface) | An array of media gallery objects. |
 | `meta_description` - [`String`](#string) | A brief overview of the product for search results listings, maximum 255 characters. |
@@ -1618,8 +1618,8 @@ Defines a virtual product, which is a non-tangible product that does not require
 | `options` - [`[CustomizableOptionInterface]`](#customizableoptioninterface) | An array of options for a customizable product. |
 | `options_container` - [`String`](#string) | If the product has multiple options, determines where they appear on the product page. |
 | `price_range` - [`PriceRange!`](#pricerange) | The range of prices for the product |
-| `price_tiers` - [`[TierPrice]`](#tierprice) | An array of &#x60;TierPrice&#x60; objects. |
-| `product_links` - [`[ProductLinksInterface]`](#productlinksinterface) | An array of &#x60;ProductLinks&#x60; objects. |
+| `price_tiers` - [`[TierPrice]`](#tierprice) | An array of `TierPrice` objects. |
+| `product_links` - [`[ProductLinksInterface]`](#productlinksinterface) | An array of `ProductLinks` objects. |
 | `quantity` - [`Float`](#float) | Quantity of available stock |
 | `related_products` - [`[ProductInterface]`](#productinterface) | An array of products to be displayed in a Related Products block. |
 | `short_description` - [`ComplexTextValue`](#complextextvalue) | A short description of the product. Its use depends on the theme. |
@@ -1629,8 +1629,8 @@ Defines a virtual product, which is a non-tangible product that does not require
 | `special_to_date` - [`String`](#string) | The end date for a product with a special price. |
 | `stock_status` - [`ProductStockStatus`](#productstockstatus) | Stock status of the product |
 | `swatch_image` - [`String`](#string) | The file name of a swatch image. |
-| `thumbnail` - [`ProductImage`](#productimage) | The relative path to the product&#x27;s thumbnail image. |
-| `uid` - [`ID!`](#id) | The unique ID for a &#x60;ProductInterface&#x60; object. |
+| `thumbnail` - [`ProductImage`](#productimage) | The relative path to the product's thumbnail image. |
+| `uid` - [`ID!`](#id) | The unique ID for a `ProductInterface` object. |
 | `upsell_products` - [`[ProductInterface]`](#productinterface) | Upsell Products |
 | `url_key` - [`String`](#string) | The part of the URL that identifies the product |
 
@@ -1644,38 +1644,38 @@ Defines a virtual product, which is a non-tangible product that does not require
   "crosssell_products": [ProductInterface],
   "custom_attributesV2": ProductCustomAttributes,
   "description": ComplexTextValue,
-  "gift_message_available": true,
-  "gift_wrapping_available": true,
+  "gift_message_available": false,
+  "gift_wrapping_available": false,
   "gift_wrapping_price": Money,
   "image": ProductImage,
-  "is_returnable": "abc123",
-  "manufacturer": 123,
-  "max_sale_qty": 987.65,
+  "is_returnable": "xyz789",
+  "manufacturer": 987,
+  "max_sale_qty": 123.45,
   "media_gallery": [MediaGalleryInterface],
   "meta_description": "abc123",
   "meta_keyword": "abc123",
-  "meta_title": "abc123",
+  "meta_title": "xyz789",
   "min_sale_qty": 123.45,
-  "name": "abc123",
-  "new_from_date": "abc123",
-  "new_to_date": "xyz789",
-  "only_x_left_in_stock": 123.45,
+  "name": "xyz789",
+  "new_from_date": "xyz789",
+  "new_to_date": "abc123",
+  "only_x_left_in_stock": 987.65,
   "options": [CustomizableOptionInterface],
   "options_container": "xyz789",
   "price_range": PriceRange,
   "price_tiers": [TierPrice],
   "product_links": [ProductLinksInterface],
-  "quantity": 987.65,
+  "quantity": 123.45,
   "related_products": [ProductInterface],
   "short_description": ComplexTextValue,
-  "sku": "abc123",
+  "sku": "xyz789",
   "small_image": ProductImage,
-  "special_price": 123.45,
+  "special_price": 987.65,
   "special_to_date": "abc123",
   "stock_status": "IN_STOCK",
   "swatch_image": "abc123",
   "thumbnail": ProductImage,
-  "uid": 4,
+  "uid": "4",
   "upsell_products": [ProductInterface],
   "url_key": "abc123"
 }
@@ -1703,7 +1703,7 @@ Contains details about virtual products added to a requisition list.
 {
   "customizable_options": [SelectedCustomizableOption],
   "product": ProductInterface,
-  "quantity": 987.65,
+  "quantity": 123.45,
   "sku": "xyz789",
   "uid": 4
 }
@@ -1722,7 +1722,7 @@ Contains a virtual product wish list item.
 | `added_at` - [`String!`](#string) | The date and time the item was added to the wish list. |
 | `customizable_options` - [`[SelectedCustomizableOption]!`](#selectedcustomizableoption) | Custom options selected for the wish list item. |
 | `description` - [`String`](#string) | The description of the item. |
-| `id` - [`ID!`](#id) | The unique ID for a &#x60;WishlistItemInterface&#x60; object. |
+| `id` - [`ID!`](#id) | The unique ID for a `WishlistItemInterface` object. |
 | `product` - [`ProductInterface!`](#productinterface) | Product details of the wish list item. *(Deprecated: Product information is part of a composable Catalog Service.)* |
 | `quantity` - [`Float!`](#float) | The quantity of this wish list item. |
 
@@ -1732,10 +1732,10 @@ Contains a virtual product wish list item.
 {
   "added_at": "xyz789",
   "customizable_options": [SelectedCustomizableOption],
-  "description": "abc123",
-  "id": 4,
+  "description": "xyz789",
+  "id": "4",
   "product": ProductInterface,
-  "quantity": 987.65
+  "quantity": 123.45
 }
 ```
 
@@ -1757,7 +1757,7 @@ An error encountered while performing operations with WishList.
 ```json
 {
   "code": "PRODUCT_NOT_FOUND",
-  "message": "abc123"
+  "message": "xyz789"
 }
 ```
 
@@ -1790,9 +1790,9 @@ Contains a customer wish list.
 
 | Field Name | Description |
 |------------|-------------|
-| `id` - [`ID`](#id) | The unique ID for a &#x60;Wishlist&#x60; object. |
+| `id` - [`ID`](#id) | The unique ID for a `Wishlist` object. |
 | `items_count` - [`Int`](#int) | The number of items in the wish list. |
-| `items_v2` - [`WishlistItems`](#wishlistitems) | An array of items in the customer&#x27;s wish list. |
+| `items_v2` - [`WishlistItems`](#wishlistitems) | An array of items in the customer's wish list. |
 | `name` - [`String`](#string) | The name of the wish list. |
 | `sharing_code` - [`String`](#string) | An encrypted code that Magento uses to link to the wish list. |
 | `updated_at` - [`String`](#string) | The time of the last modification to the wish list. |
@@ -1803,11 +1803,11 @@ Contains a customer wish list.
 ```json
 {
   "id": 4,
-  "items_count": 987,
+  "items_count": 123,
   "items_v2": WishlistItems,
-  "name": "xyz789",
+  "name": "abc123",
   "sharing_code": "xyz789",
-  "updated_at": "abc123",
+  "updated_at": "xyz789",
   "visibility": "PUBLIC"
 }
 ```
@@ -1824,7 +1824,7 @@ Contains details about errors encountered when a customer added wish list items 
 |------------|-------------|
 | `code` - [`WishlistCartUserInputErrorType!`](#wishlistcartuserinputerrortype) | An error code that describes the error encountered. |
 | `message` - [`String!`](#string) | A localized error message. |
-| `wishlistId` - [`ID!`](#id) | The unique ID of the &#x60;Wishlist&#x60; object containing an error. |
+| `wishlistId` - [`ID!`](#id) | The unique ID of the `Wishlist` object containing an error. |
 | `wishlistItemId` - [`ID!`](#id) | The unique ID of the wish list item containing an error. |
 
 #### Example
@@ -1834,7 +1834,7 @@ Contains details about errors encountered when a customer added wish list items 
   "code": "PRODUCT_NOT_FOUND",
   "message": "abc123",
   "wishlistId": 4,
-  "wishlistItemId": 4
+  "wishlistItemId": "4"
 }
 ```
 
@@ -1870,13 +1870,16 @@ Specifies the IDs of items to copy and their quantities.
 
 | Input Field | Description |
 |-------------|-------------|
-| `quantity` - [`Float`](#float) | The quantity of this item to copy to the destination wish list. This value can&#x27;t be greater than the quantity in the source wish list. |
-| `wishlist_item_id` - [`ID!`](#id) | The unique ID of the &#x60;WishlistItemInterface&#x60; object to be copied. |
+| `quantity` - [`Float`](#float) | The quantity of this item to copy to the destination wish list. This value can't be greater than the quantity in the source wish list. |
+| `wishlist_item_id` - [`ID!`](#id) | The unique ID of the `WishlistItemInterface` object to be copied. |
 
 #### Example
 
 ```json
-{"quantity": 987.65, "wishlist_item_id": 4}
+{
+  "quantity": 123.45,
+  "wishlist_item_id": "4"
+}
 ```
 
 <HorizontalLine />
@@ -1900,10 +1903,10 @@ Defines the items to add to a wish list.
 ```json
 {
   "entered_options": [EnteredOptionInput],
-  "parent_sku": "abc123",
+  "parent_sku": "xyz789",
   "quantity": 123.45,
-  "selected_options": [4],
-  "sku": "abc123"
+  "selected_options": ["4"],
+  "sku": "xyz789"
 }
 ```
 
@@ -1920,7 +1923,7 @@ The interface for wish list items.
 | `added_at` - [`String!`](#string) | The date and time the item was added to the wish list. |
 | `customizable_options` - [`[SelectedCustomizableOption]!`](#selectedcustomizableoption) | Custom options selected for the wish list item. |
 | `description` - [`String`](#string) | The description of the item. |
-| `id` - [`ID!`](#id) | The unique ID for a &#x60;WishlistItemInterface&#x60; object. |
+| `id` - [`ID!`](#id) | The unique ID for a `WishlistItemInterface` object. |
 | `product` - [`ProductInterface!`](#productinterface) | Product details of the wish list item. *(Deprecated: Product information is part of a composable Catalog Service.)* |
 | `quantity` - [`Float!`](#float) | The quantity of this wish list item. |
 
@@ -1942,7 +1945,7 @@ The interface for wish list items.
 {
   "added_at": "xyz789",
   "customizable_options": [SelectedCustomizableOption],
-  "description": "xyz789",
+  "description": "abc123",
   "id": 4,
   "product": ProductInterface,
   "quantity": 123.45
@@ -1959,13 +1962,13 @@ Specifies the IDs of the items to move and their quantities.
 
 | Input Field | Description |
 |-------------|-------------|
-| `quantity` - [`Float`](#float) | The quantity of this item to move to the destination wish list. This value can&#x27;t be greater than the quantity in the source wish list. |
-| `wishlist_item_id` - [`ID!`](#id) | The unique ID of the &#x60;WishlistItemInterface&#x60; object to be moved. |
+| `quantity` - [`Float`](#float) | The quantity of this item to move to the destination wish list. This value can't be greater than the quantity in the source wish list. |
+| `wishlist_item_id` - [`ID!`](#id) | The unique ID of the `WishlistItemInterface` object to be moved. |
 
 #### Example
 
 ```json
-{"quantity": 987.65, "wishlist_item_id": 4}
+{"quantity": 123.45, "wishlist_item_id": 4}
 ```
 
 <HorizontalLine />
@@ -1982,7 +1985,7 @@ Defines updates to items in a wish list.
 | `entered_options` - [`[EnteredOptionInput]`](#enteredoptioninput) | An array of options that the customer entered. |
 | `quantity` - [`Float`](#float) | The new amount or number of this item. |
 | `selected_options` - [`[ID]`](#id) | An array of strings corresponding to options the customer selected. |
-| `wishlist_item_id` - [`ID!`](#id) | The unique ID for a &#x60;WishlistItemInterface&#x60; object. |
+| `wishlist_item_id` - [`ID!`](#id) | The unique ID for a `WishlistItemInterface` object. |
 
 #### Example
 
@@ -1990,8 +1993,8 @@ Defines updates to items in a wish list.
 {
   "description": "xyz789",
   "entered_options": [EnteredOptionInput],
-  "quantity": 987.65,
-  "selected_options": ["4"],
+  "quantity": 123.45,
+  "selected_options": [4],
   "wishlist_item_id": 4
 }
 ```
@@ -2074,7 +2077,7 @@ Defines the wish list visibility types.
 ```json
 {
   "key": "xyz789",
-  "message": "abc123",
+  "message": "xyz789",
   "success": true
 }
 ```
@@ -2115,7 +2118,7 @@ Defines the wish list visibility types.
 
 ```json
 {
-  "expires_at": "xyz789",
+  "expires_at": "abc123",
   "key": "abc123",
   "upload_url": "abc123"
 }

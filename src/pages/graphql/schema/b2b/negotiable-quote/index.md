@@ -21,4 +21,4 @@ The [_B2B for Adobe Commerce Guide_](https://experienceleague.adobe.com/en/docs/
 
 <InlineAlert variant="info" slots="text" />
 
-The Adobe Commerce GraphQL APIs provide coverage for buyer actions only. You can use [REST endpoints](https://developer.adobe.com/commerce/webapi/rest/b2b/negotiable-quote/) to integrate seller actions.
+The Adobe Commerce GraphQL APIs provide coverage for buyer actions only. You can use [REST endpoints](/rest/b2b/negotiable-quote.md) to integrate seller actions.

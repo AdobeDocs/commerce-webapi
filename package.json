@@ -58,7 +58,11 @@
       "https://www.rightpoint.com/",
       "https://altairgraphql.dev/",
       "http://your_app_host/",
-      "http://magentohost/"
+      "http://magentohost/",
+      "https://experienceleague.adobe.com/en/docs/commerce/user-guides/integration-services/saas",
+      "https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home",
+      "https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/magento-open-source/2-4-0",
+      "https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-0"
     ]
   }
 }

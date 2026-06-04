@@ -12,7 +12,7 @@ keywords:
 
 This tutorial builds upon the workflow described in the [Order Processing with REST APIs tutorial](/rest/tutorials/orders/index.md). The Order Processing with Inventory Management tutorial provides additional steps that detail how to create stocks and sources, assign products to a custom source, and run the Source Selection Algorithms to recommend shipping options.
 
-For more information about key inventory features, see [Inventory Management overview](https://developer.adobe.com/commerce/webapi/rest/inventory/).
+For more information about key inventory features, see [Inventory Management overview](/rest/inventory/index.md).
 
 This **14-step tutorial** generally takes **1 hour**.
 
