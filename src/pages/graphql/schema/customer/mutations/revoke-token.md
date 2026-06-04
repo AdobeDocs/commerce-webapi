@@ -7,7 +7,7 @@ description: The revokeCustomerToken mutation revokes the customer's token. It r
 
 The `revokeCustomerToken` mutation revokes the customer's token. It returns `true` if the token was successfully revoked.
 
-We recommend you specify a customer token in the header of your call. However, you also can use [session authentication](/get-started/authentication/gs-authentication-session/index.md).
+We recommend you specify a customer token in the header of your call. However, you also can use [session authentication](/get-started/authentication/gs-authentication-session.md).
 
 ## Syntax
 

@@ -11,7 +11,7 @@ This mutation has been deprecated in Adobe Commerce as a Cloud Service and will 
 
 Use the `deleteCustomerAddress` mutation to delete the specified customer address. It returns a Boolean value that indicates whether the operation was successful.
 
-We recommend you use a customer token in the header of your call to delete a customer. However, you also can use [session authentication](/get-started/authentication/gs-authentication-session/index.md).
+We recommend you use a customer token in the header of your call to delete a customer. However, you also can use [session authentication](/get-started/authentication/gs-authentication-session.md).
 
 ## Syntax
 

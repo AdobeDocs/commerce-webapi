@@ -10,7 +10,7 @@ description: Use the updateCustomerAddressV2 mutation to update the customer's a
 
 Use the `updateCustomerAddressV2` mutation to update the customer's address.
 
-To return or modify information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](/get-started/authentication/gs-authentication-session/index.md).
+To return or modify information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](/get-started/authentication/gs-authentication-session.md).
 
 <InlineAlert variant="info" slots="text1" />
 

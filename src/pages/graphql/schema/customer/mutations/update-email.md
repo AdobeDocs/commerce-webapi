@@ -7,7 +7,7 @@ description: Use the updateCustomerEmail mutation to change the email address fo
 
 Use the `updateCustomerEmail` mutation to change the email address for the logged-in customer.
 
-To return or modify information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](/get-started/authentication/gs-authentication-session/index.md).
+To return or modify information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](/get-started/authentication/gs-authentication-session.md).
 
 ## Syntax
 
