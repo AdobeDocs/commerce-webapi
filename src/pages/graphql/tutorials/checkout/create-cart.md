@@ -3,11 +3,12 @@ title: Step 2. Create an empty cart
 description: Learn how to create a cart with the GraphQL API.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
-edition: paas
 keywords:
   - GraphQL
   - Checkout
 ---
+
+<Fragment src="../../../includes/paas-only.md"/>
 
 # Step 2. Create an empty cart
 
@@ -44,7 +45,7 @@ The customer created in the previous step does not have an active cart. The foll
 ```
 
 In the subsequent tutorial steps, the unique shopping cart identifier `pXVxnNg4PFcK1lD60O5evqF7f4SkiRR1` will be listed as `{ CART_ID }`.
-Copy the value of the `id` attribute. Use this value in subsequent steps wherever the { CART_ID } variable is specified.
+Copy the value of the `id` attribute. Use this value in subsequent steps wherever the \{ CART_ID } variable is specified.
 
 ## Create a guest cart
 
@@ -77,8 +78,12 @@ mutation {
 ```
 
 In the subsequent tutorial steps, the unique shopping cart identifier `A7jCcOmUjjCh7MxDIzu1SeqdqETqEa5h` will be listed as `{ CART_ID }`.
-Copy the value of the `id` attribute. Use this value in subsequent steps wherever the { CART_ID } variable is specified.
+Copy the value of the `id` attribute. Use this value in subsequent steps wherever the \{ CART_ID } variable is specified.
 
 ## Verify this step
 
 There are no additional verification steps. The value of `id` is not displayed on the website or in the Admin.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

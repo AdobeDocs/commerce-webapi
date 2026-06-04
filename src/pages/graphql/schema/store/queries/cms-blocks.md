@@ -1,7 +1,10 @@
 ---
 title: cmsBlocks query
-edition: paas
+description: The cmsBlocks query returns information about blocks that were developed with the Adobe Commerce or Magento Open Source Content Management System (CMS).
+
 ---
+
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # cmsBlocks query
 
@@ -15,7 +18,7 @@ Return the contents of one or more CMS blocks:
 
 ## Reference
 
-The [`cmsBlocks`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-cmsBlocks) reference provides detailed information about the types and fields defined in this query.
+The [`cmsBlocks`](/reference/graphql/index.md#cmsblocks) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -59,7 +62,7 @@ The `content` field may contain HTML markup and CSS styles. Hidden and system el
 
 ## Errors
 
-Error | Description
---- | ---
-`The CMS block with the "XXXX" ID doesn't exist` | The specified CMS block ID is invalid.
-`"identifiers" of CMS blocks should be specified"` | The `identifiers` array parameter is required for identifying the CMS blocks.
+| Error | Description |
+| --- | --- |
+| `The CMS block with the "XXXX" ID doesn't exist` | The specified CMS block ID is invalid. |
+| `"identifiers" of CMS blocks should be specified"` | The `identifiers` array parameter is required for identifying the CMS blocks. |

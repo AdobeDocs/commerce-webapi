@@ -1,5 +1,6 @@
 ---
 title: attributesList query
+description: The attributesList query retrieves a list of attributes metadata for a given entitytype.
 ---
 
 # attributesList query
@@ -16,9 +17,9 @@ The possible values for this attribute are populated by the modules introducing 
 
 The `attributesList` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-attributesList)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#attributeslist)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-attributesList)
+* [On-Premises/Cloud](/reference/graphql/index.md#attributeslist)
 
 ## Example usage
 

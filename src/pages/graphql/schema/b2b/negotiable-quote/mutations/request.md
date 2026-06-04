@@ -1,12 +1,11 @@
 ---
 title: requestNegotiableQuote mutation
+description: The requestNegotiableQuote mutation initiates a negotiable quote on behalf of a company user. The company user must add all products to the cart before req...
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # requestNegotiableQuote mutation
 
@@ -34,9 +33,9 @@ requestNegotiableQuote(
 
 The `requestNegotiableQuote` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-requestNegotiableQuote)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#requestnegotiablequote)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-requestNegotiableQuote)
+* [On-Premises/Cloud](/reference/graphql/index.md#requestnegotiablequote)
 
 ## Example usage
 
@@ -205,7 +204,7 @@ mutation {
 
 ### Request a negotiable quote with attachments
 
-<Edition name="saas" />
+<Fragment src="../../../../../includes/saas-only.md"/>
 
 The following example requests a negotiable quote with an attachment. The attachment must be uploaded to Amazon S3 before you can reference it in the mutation. See the [`initiateUpload` mutation](../../../uploads/mutations/initiate-upload.md) and [finishUpload` mutation](../../../uploads/mutations/finish-upload.md)for more information about uploading files.
 

@@ -1,5 +1,6 @@
 ---
 title: addWishlistItemsToCart mutation
+description: The addWishlistItemsToCart mutation moves items from the specified wish list to the customer's cart.
 ---
 
 # addWishlistItemsToCart mutation
@@ -25,9 +26,9 @@ mutation {
 
 The `addWishlistItemsToCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-addWishlistItemsToCart)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#addwishlistitemstocart)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addWishlistItemsToCart)
+* [On-Premises/Cloud](/reference/graphql/index.md#addwishlistitemstocart)
 
 ## Example usage
 
@@ -127,9 +128,9 @@ mutation {
 
 The `WishlistCartUserInputErrorType` field can contain the following values:
 
-Type | Description
---- | ---
-`INSUFFICIENT_STOCK` | The requested quantity of a product is greater than the quantity available
-`NOT_SALABLE` | A requested product is not available
-`PRODUCT_NOT_FOUND` | A product with the specified ID does not exist.
-`UNDEFINED` | The error message does not match any error code
+| Type | Description |
+| --- | --- |
+| `INSUFFICIENT_STOCK` | The requested quantity of a product is greater than the quantity available |
+| `NOT_SALABLE` | A requested product is not available |
+| `PRODUCT_NOT_FOUND` | A product with the specified ID does not exist. |
+| `UNDEFINED` | The error message does not match any error code |

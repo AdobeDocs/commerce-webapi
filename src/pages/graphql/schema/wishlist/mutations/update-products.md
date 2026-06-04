@@ -1,5 +1,6 @@
 ---
 title: updateProductsInWishlist mutation
+description: The updateProductsInWishlist mutation changes the quantity, description and option information for the specified items in the customer's wish list.
 ---
 
 # updateProductsInWishlist mutation
@@ -29,9 +30,9 @@ mutation {
 
 The `updateProductsInWishlist` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-updateProductsInWishlist)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#updateproductsinwishlist)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateProductsInWishlist)
+* [On-Premises/Cloud](/reference/graphql/index.md#updateproductsinwishlist)
 
 ## Example usage
 
@@ -296,7 +297,7 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`The current user cannot perform operations on wishlist` | An unauthorized user (guest) tried to add an item to a wishlist, or an authorized user (customer) tried to add an item to a wishlist of another customer.
-`The wishlist was not found.` | The value provided in the `wishlistId` field is invalid or does not exist for the customer.
+| Error | Description |
+| --- | --- |
+| `The current user cannot perform operations on wishlist` | An unauthorized user (guest) tried to add an item to a wishlist, or an authorized user (customer) tried to add an item to a wishlist of another customer. |
+| `The wishlist was not found.` | The value provided in the `wishlistId` field is invalid or does not exist for the customer. |

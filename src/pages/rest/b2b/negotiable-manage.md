@@ -6,9 +6,7 @@ keywords:
   - REST
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../includes/commerce-only.md"/>
 
 # Manage negotiable quotes
 
@@ -35,24 +33,24 @@ PUT /V1/negotiableQuote/:quoteId/shippingMethod
 
 The following table lists the parameters defined in `CompanyInterface`.
 
-Name | Description | Format | Requirements
---- | --- | --- |---
-`quoteId` | Identifies the target quote for the operation. | integer | Required
-`quoteName` | The name of the quote to be created. | string | Required
-`comment` | The comment to add to the quote. | string | Optional
-`files` | An array of files to add to the quote | array | Optional
+| Name | Description | Format | Requirements |
+| --- | --- | --- |--- |
+| `quoteId` | Identifies the target quote for the operation. | integer | Required |
+| `quoteName` | The name of the quote to be created. | string | Required |
+| `comment` | The comment to add to the quote. | string | Optional |
+| `files` | An array of files to add to the quote | array | Optional |
 
 The buyer or the seller can optionally attach up to 10 files to provide details about the quote. Each file must be converted into base64.
 
 The `files` array contains the following parameters
 
-Name | Description | Format | Requirements
---- | --- | --- |---
-`base64_encoded_data` | A string in base 64 that defines the contents of the added file | string | Required
-`type` | Defines the type of file, such as `text/plain` or `application/pdf`| string | Optional
-`name` | The name of the file to be uploaded, such as `quote.txt` or `quote.pdf`. | string | Required
+| Name | Description | Format | Requirements |
+| --- | --- | --- |--- |
+| `base64_encoded_data` | A string in base 64 that defines the contents of the added file | string | Required |
+| `type` | Defines the type of file, such as `text/plain` or `application/pdf`| string | Optional |
+| `name` | The name of the file to be uploaded, such as `quote.txt` or `quote.pdf`. | string | Required |
 
-### Request a negotiable quote
+## Request a negotiable quote
 
 Before initiating a negotiable quote, the following conditions must be met:
 
@@ -95,7 +93,7 @@ If the negotiable quote requires a shipping address (for negotiation or tax calc
 
 Commerce creates a negotiable quote in the `Created` state.
 
-### Create draft quote for a buyer
+## Create draft quote for a buyer
 
 The `POST /V1/negotiableQuote/draft` request creates an empty negotiable quote for a specific buyer in the `Draft` state. The quote is not visible to the buyer.
 
@@ -125,7 +123,7 @@ After creating the draft quote, use the [`PUT /V1/negotiableQuote/:quoteId`](neg
 `321`  // An integer indicating the new quoteId
 ```
 
-### Submit a negotiable quote
+## Submit a negotiable quote
 
 A negotiable quote can be submitted for review when it is in one of the following system states:
 
@@ -165,11 +163,11 @@ When the negotiable quote is submitted for review:
 // `true`, indicating the request was successful
 ```
 
-### Update a quote
+## Update a quote
 
 Use the `PUT /V1/negotiableQuote/:quoteId` request to update a quote. See [Update a negotiable quote](negotiable-update.md) for use cases.
 
-### Recalculate prices
+## Recalculate prices
 
 The process of completing a negotiable quote can take days, or even longer. During that time, the prices for the items in the quote may have changed directly or indirectly.  For example, someone could have changed prices in the shared catalogs or adjusted price rules, and the prices in the negotiable quote are stale. The `pricesUpdated` request refreshes item prices, taxes, discounts, cart rules in the negotiable quote. Quotes that are locked for the seller will not be updated.
 
@@ -195,7 +193,7 @@ The request can be applied to one or more quotes at the same time.
 // `true`, indicating the request was successful
 ```
 
-### Set the shipping method
+## Set the shipping method
 
 A quote must meet the following conditions to set the shipping method:
 
@@ -222,7 +220,7 @@ A quote must meet the following conditions to set the shipping method:
 // None
 ```
 
-### Decline a quote
+## Decline a quote
 
 The seller can decline a quote in any of the following system states:
 
@@ -261,7 +259,7 @@ Declining a quote removes all custom pricing from the quote. If the buyer places
 
 These tasks are not essential for completing a negotiable quote, but might be useful.
 
-### List all comments for a quote
+## List all comments for a quote
 
 Commerce returns all the comments associated with the specified quote ID. The comments are listed in chronological order, with the oldest comment listed first. A `creator_type` value of `3` indicates the buyer made the comment. If the value is `2`, the seller commented.
 
@@ -358,7 +356,7 @@ Commerce returns all the comments associated with the specified quote ID. The co
 ]
 ```
 
-### Retrieve a negotiable quote attachment
+## Retrieve a negotiable quote attachment
 
 Use the `attachmentContent` request to retrieve the files (in base64 format) attached to a negotiable quote.
 

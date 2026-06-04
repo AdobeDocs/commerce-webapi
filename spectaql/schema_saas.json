@@ -1924,6 +1924,124 @@
       },
       {
         "kind": "OBJECT",
+        "name": "AdminAssistanceAction",
+        "description": "A single admin assistance action performed on behalf of the customer.",
+        "fields": [
+          {
+            "name": "action",
+            "description": "Action identifier, e.g. add_to_cart, place_order.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "date",
+            "description": "When the action occurred.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "details",
+            "description": "Action related details, e.g. product SKUs, order id.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "AdminAssistanceActions",
+        "description": "Paginated admin assistance actions for the customer.",
+        "fields": [
+          {
+            "name": "items",
+            "description": "Admin assistance actions for the current page.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "AdminAssistanceAction",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "page_info",
+            "description": "Contains pagination metadata.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "SearchResultPageInfo",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "total_count",
+            "description": "The total count of admin assistance actions for the customer.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
         "name": "Aggregation",
         "description": "A bucket that contains information for each filterable option",
         "fields": [
@@ -3027,6 +3145,72 @@
             "ofType": null
           }
         ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "AssignChildCompanyInput",
+        "description": "Defines the input schema for assigning a child company to a parent company.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "child_company_id",
+            "description": "The unique ID of the child company.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "parent_company_id",
+            "description": "The unique ID of the parent company.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "AssignChildCompanyOutput",
+        "description": "Contains the response to the request to assign a child company.",
+        "fields": [
+          {
+            "name": "company_hierarchy",
+            "description": "The updated company hierarchy for the parent company.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "CompanyHierarchy",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
         "enumValues": null,
         "possibleTypes": null
       },
@@ -5324,6 +5508,18 @@
             "deprecationReason": null
           },
           {
+            "name": "backorder_message",
+            "description": "Customer-facing hint when the line is salable on notify backorders with insufficient physical quantity; null otherwise.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "bundle_options",
             "description": "An array containing the bundle options the shopper selected.",
             "args": [],
@@ -5448,6 +5644,22 @@
                 "ofType": null
               }
             },
+            "isDeprecated": true,
+            "deprecationReason": "Use `is_salable` instead. It indicates whether the line can be purchased, including backorder configuration."
+          },
+          {
+            "name": "is_salable",
+            "description": "True when the item can be purchased and should not block checkout: stock status is in stock and either physical quantity covers the requested quantity or backorders are allowed.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -5477,7 +5689,7 @@
           },
           {
             "name": "not_available_message",
-            "description": "Message to display when the product is not available with this selected option.",
+            "description": "Shortage or unavailability message for the line; null when the item is salable.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -9272,6 +9484,18 @@
         "description": "An interface for products in a cart.",
         "fields": [
           {
+            "name": "backorder_message",
+            "description": "Customer-facing hint when the line is salable on notify backorders with insufficient physical quantity; null otherwise.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "custom_attributes",
             "description": "The custom attributes for the cart item",
             "args": [],
@@ -9332,6 +9556,22 @@
                 "ofType": null
               }
             },
+            "isDeprecated": true,
+            "deprecationReason": "Use `is_salable` instead. It indicates whether the line can be purchased, including backorder configuration."
+          },
+          {
+            "name": "is_salable",
+            "description": "True when the item can be purchased and should not block checkout: stock status is in stock and either physical quantity covers the requested quantity or backorders are allowed.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -9361,7 +9601,7 @@
           },
           {
             "name": "not_available_message",
-            "description": "Message to display when the product is not available with this selected option.",
+            "description": "Shortage or unavailability message for the line; null when the item is salable.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -11825,6 +12065,18 @@
             "deprecationReason": null
           },
           {
+            "name": "position",
+            "description": "The position of the category in sort order. For example, `1`, `2`, `3` or `10`.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "path",
             "description": "Category path. For example, `/electronics/laptops`, `/clothing/shirts` or `/books/fiction`.",
             "args": [],
@@ -13537,6 +13789,22 @@
             "deprecationReason": null
           },
           {
+            "name": "is_admin",
+            "description": "Indicates whether the company is the admin (parent) company in the returned relation hierarchy.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "legal_name",
             "description": "The full legal name of the company.",
             "args": [],
@@ -14060,6 +14328,49 @@
             "deprecationReason": null
           }
         ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "CompanyHierarchy",
+        "description": "Defines a parent company and its direct child companies.",
+        "fields": [
+          {
+            "name": "children",
+            "description": "An array of direct child companies.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "CompanyBasicInfo",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "parent",
+            "description": "The parent company in the relation hierarchy. Null if the company has no parent.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "CompanyBasicInfo",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
         "possibleTypes": null
       },
       {
@@ -15661,6 +15972,33 @@
       },
       {
         "kind": "OBJECT",
+        "name": "CompletePayByLinkPaymentOutput",
+        "description": "Result of completing a Pay By Link payment.",
+        "fields": [
+          {
+            "name": "order_number",
+            "description": "The increment id of the order whose payment was completed.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
         "name": "ComplexProductView",
         "description": "Represents all product types, except simple products. Complex product prices are returned as a price range, because price values can vary based on selected options.",
         "fields": [
@@ -16243,6 +16581,18 @@
             "deprecationReason": null
           },
           {
+            "name": "backorder_message",
+            "description": "Customer-facing hint when the line is salable on notify backorders with insufficient physical quantity; null otherwise.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "configurable_options",
             "description": "An array containing the configuranle options the shopper selected.",
             "args": [],
@@ -16383,6 +16733,22 @@
                 "ofType": null
               }
             },
+            "isDeprecated": true,
+            "deprecationReason": "Use `is_salable` instead. It indicates whether the line can be purchased, including backorder configuration."
+          },
+          {
+            "name": "is_salable",
+            "description": "True when the item can be purchased and should not block checkout: stock status is in stock and either physical quantity covers the requested quantity or backorders are allowed.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -16412,7 +16778,7 @@
           },
           {
             "name": "not_available_message",
-            "description": "Message to display when the product is not available with this selected option.",
+            "description": "Shortage or unavailability message for the line; null when the item is salable.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -22784,6 +23150,37 @@
         "possibleTypes": null
       },
       {
+        "kind": "INPUT_OBJECT",
+        "name": "CurrentProductInput",
+        "description": "Attributes of the product currently being viewed on PDP",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "sku",
+            "description": "SKU of the current product",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "price",
+            "description": "Resolved display price of the current product (specialPrice ?? regularPrice)",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
         "kind": "OBJECT",
         "name": "CustomAttribute",
         "description": "Specifies the custom attribute code and value.",
@@ -23176,6 +23573,43 @@
             "deprecationReason": null
           },
           {
+            "name": "admin_assistance_actions",
+            "description": "Actions performed by an admin on behalf of the customer (Login as Customer logging).",
+            "args": [
+              {
+                "name": "currentPage",
+                "description": "Specifies which page of results to return. The default value is 1.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "1"
+              },
+              {
+                "name": "pageSize",
+                "description": "Specifies the maximum number of results to return at once. The default value is 20.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "20"
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "AdminAssistanceActions",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "allow_remote_shopping_assistance",
             "description": "Indicates whether the customer has enabled remote shopping assistance.",
             "args": [],
@@ -23212,6 +23646,22 @@
               "ofType": {
                 "kind": "OBJECT",
                 "name": "UserCompaniesOutput",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "company_hierarchy",
+            "description": "The company relation hierarchies for all companies. Only available to the company administrator.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "CompanyHierarchy",
                 "ofType": null
               }
             },
@@ -25357,6 +25807,18 @@
         "name": "CustomerOrder",
         "description": "Contains details about each of the customer's orders.",
         "fields": [
+          {
+            "name": "admin_assisted_order",
+            "description": "Admin user id when the order was placed with assistance (Login as Customer); null if not assisted.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
           {
             "name": "applied_coupons",
             "description": "Coupons applied to the order.",
@@ -28943,6 +29405,18 @@
         "description": "An implementation for downloadable product cart items.",
         "fields": [
           {
+            "name": "backorder_message",
+            "description": "Customer-facing hint when the line is salable on notify backorders with insufficient physical quantity; null otherwise.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "custom_attributes",
             "description": "The custom attributes for the cart item",
             "args": [],
@@ -29023,6 +29497,22 @@
                 "ofType": null
               }
             },
+            "isDeprecated": true,
+            "deprecationReason": "Use `is_salable` instead. It indicates whether the line can be purchased, including backorder configuration."
+          },
+          {
+            "name": "is_salable",
+            "description": "True when the item can be purchased and should not block checkout: stock status is in stock and either physical quantity covers the requested quantity or backorders are allowed.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -29068,7 +29558,7 @@
           },
           {
             "name": "not_available_message",
-            "description": "Message to display when the product is not available with this selected option.",
+            "description": "Shortage or unavailability message for the line; null when the item is salable.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -32594,6 +33084,18 @@
             "deprecationReason": null
           },
           {
+            "name": "backorder_message",
+            "description": "Customer-facing hint when the line is salable on notify backorders with insufficient physical quantity; null otherwise.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "custom_attributes",
             "description": "The custom attributes for the cart item",
             "args": [],
@@ -32698,6 +33200,22 @@
                 "ofType": null
               }
             },
+            "isDeprecated": true,
+            "deprecationReason": "Use `is_salable` instead. It indicates whether the line can be purchased, including backorder configuration."
+          },
+          {
+            "name": "is_salable",
+            "description": "True when the item can be purchased and should not block checkout: stock status is in stock and either physical quantity covers the requested quantity or backorders are allowed.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -32739,7 +33257,7 @@
           },
           {
             "name": "not_available_message",
-            "description": "Message to display when the product is not available with this selected option.",
+            "description": "Shortage or unavailability message for the line; null when the item is salable.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -38168,6 +38686,49 @@
         "possibleTypes": null
       },
       {
+        "kind": "OBJECT",
+        "name": "ImportSharedRequisitionListOutput",
+        "description": "Result of importing a shared requisition list.",
+        "fields": [
+          {
+            "name": "requisition_list",
+            "description": "The imported requisition list for the current customer.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "RequisitionList",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "user_errors",
+            "description": "Validation or import issues.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "ShareRequisitionListUserError",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
         "kind": "INPUT_OBJECT",
         "name": "initiateUploadInput",
         "description": "",
@@ -40900,6 +41461,33 @@
             "deprecationReason": null
           },
           {
+            "name": "assignChildCompany",
+            "description": "Assign a child company to a parent company within the company relation hierarchy.",
+            "args": [
+              {
+                "name": "input",
+                "description": "An input object that defines which companies to relate.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "AssignChildCompanyInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AssignChildCompanyOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "assignCompareListToCustomer",
             "description": "Assign the specified compare list to the logged in customer.",
             "args": [
@@ -41178,6 +41766,47 @@
             "type": {
               "kind": "OBJECT",
               "name": "PlaceOrderOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "completePayByLinkPayment",
+            "description": "Complete a Pay By Link payment for an in-process gateway (Payment Services).",
+            "args": [
+              {
+                "name": "token",
+                "description": "The token issued for the Pay By Link payment.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "payment_method",
+                "description": "The payment method the customer has selected to complete the order.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PaymentMethodInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "CompletePayByLinkPaymentOutput",
               "ofType": null
             },
             "isDeprecated": false,
@@ -42297,7 +42926,7 @@
           },
           {
             "name": "exchangeOtpForCustomerToken",
-            "description": "Exchange a customer's one time password for a customer token.",
+            "description": "Exchange one time login code for customer token.",
             "args": [
               {
                 "name": "email",
@@ -42453,6 +43082,33 @@
             "type": {
               "kind": "OBJECT",
               "name": "GenerateNegotiableQuoteFromTemplateOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "importSharedRequisitionList",
+            "description": "Import a shared requisition list into the current customer account.",
+            "args": [
+              {
+                "name": "token",
+                "description": "The token for the shared requisition list.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "ImportSharedRequisitionListOutput",
               "ofType": null
             },
             "isDeprecated": false,
@@ -44314,6 +44970,60 @@
             "deprecationReason": null
           },
           {
+            "name": "shareRequisitionListByEmail",
+            "description": "Share a requisition list with company colleagues via email using a secure link.",
+            "args": [
+              {
+                "name": "input",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "ShareRequisitionListByEmailInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "ShareRequisitionListByEmailOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "shareRequisitionListByToken",
+            "description": "Share a requisition list by issuing a token for colleagues in the same company. Use the token to build a shareable link on the storefront.",
+            "args": [
+              {
+                "name": "requisitionListUid",
+                "description": "The unique ID of the requisition list.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "ID",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "ShareRequisitionListByTokenOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "submitNegotiableQuoteTemplateForReview",
             "description": "Accept an existing negotiable quote template.",
             "args": [
@@ -44439,6 +45149,33 @@
             "type": {
               "kind": "SCALAR",
               "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "unassignChildCompany",
+            "description": "Unassign a child company from its parent company within the company relation hierarchy.",
+            "args": [
+              {
+                "name": "input",
+                "description": "An input object that defines which company to unassign.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "UnassignChildCompanyInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "UnassignChildCompanyOutput",
               "ofType": null
             },
             "isDeprecated": false,
@@ -51351,6 +52088,423 @@
       },
       {
         "kind": "INPUT_OBJECT",
+        "name": "PayByLinkInput",
+        "description": "Defines optional inputs for the Pay By Link payment method.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "recipient_email",
+            "description": "Email address of the person who should receive the payment link. When omitted, the link is sent to the order customer's email.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PayByLinkOrder",
+        "description": "Read-only projection of the pending order behind a Pay By Link token. Returned by `payByLinkOrder` so the EDS payment page can render the order summary before collecting payment.",
+        "fields": [
+          {
+            "name": "billing_address",
+            "description": "The order's billing address. Read-only on the payment page.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PayByLinkOrderAddress",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "customer_email",
+            "description": "Email address the payment link was sent to.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "expires_at",
+            "description": "UTC `Y-m-d H:i:s` timestamp after which the token is no longer redeemable.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "items",
+            "description": "Top-level line items on the order. Resolve product detail (image, description, variant) from the Catalog Service using `sku`.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "PayByLinkOrderItem",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "shipping_address",
+            "description": "The order's shipping address. Read-only on the payment page.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PayByLinkOrderAddress",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "totals",
+            "description": "Money totals for the order.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "PayByLinkOrderTotals",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PayByLinkOrderAddress",
+        "description": "Read-only address attached to a Pay By Link order.",
+        "fields": [
+          {
+            "name": "city",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "country_code",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "firstname",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "lastname",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "postcode",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "region",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "region_code",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "street",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "telephone",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PayByLinkOrderItem",
+        "description": "A single line item on a Pay By Link order.",
+        "fields": [
+          {
+            "name": "name",
+            "description": "Product name captured on the order at placement time.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "price",
+            "description": "Unit price for the item, including currency.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Money",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "quantity",
+            "description": "Quantity ordered.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Float",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "sku",
+            "description": "SKU captured on the order line. Use this to resolve product detail from the Catalog Service.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PayByLinkOrderTotals",
+        "description": "Order-level money totals.",
+        "fields": [
+          {
+            "name": "grand_total",
+            "description": "Amount the customer will be charged.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Money",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "shipping",
+            "description": "Shipping amount.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Money",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "subtotal",
+            "description": "Sum of line item prices before shipping/tax/discount.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Money",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "tax",
+            "description": "Tax amount.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Money",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
         "name": "PaymentAttributeInput",
         "description": "Defines the payment attribute.",
         "fields": null,
@@ -51742,6 +52896,16 @@
                 "name": "String",
                 "ofType": null
               }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "paybylink",
+            "description": "Pay By Link payment method options.",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "PayByLinkInput",
+              "ofType": null
             },
             "defaultValue": null
           },
@@ -59421,7 +60585,7 @@
           },
           {
             "name": "searchCategory",
-            "description": "Search for categories by name with optional filtering and pagination.",
+            "description": "Search for categories by name with optional filtering and pagination. Results are returned in alphabetical order by category name.",
             "args": [
               {
                 "name": "searchTerm",
@@ -60568,6 +61732,33 @@
             "deprecationReason": null
           },
           {
+            "name": "payByLinkOrder",
+            "description": "Resolves a Pay By Link token to the pending order's summary so the EDS payment page can render it before collecting payment.",
+            "args": [
+              {
+                "name": "token",
+                "description": "The token issued for the Pay By Link payment.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PayByLinkOrder",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "pickupLocations",
             "description": "The pickup locations query searches for locations that match the search request requirements.",
             "args": [
@@ -60723,6 +61914,33 @@
             "deprecationReason": null
           },
           {
+            "name": "sharedRequisitionList",
+            "description": "View a shared requisition list when the receiver is logged in and belongs to the same company as the sender.",
+            "args": [
+              {
+                "name": "token",
+                "description": "The share token which is extracted from the requisition list share link and acts as an identifier for the requisition list.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "SharedRequisitionListOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "storeConfig",
             "description": "Return details about the store's configuration.",
             "args": [],
@@ -60768,6 +61986,16 @@
                 "type": {
                   "kind": "SCALAR",
                   "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "currentProduct",
+                "description": "Current product context from PDP (SKU, price, category, etc.)",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "CurrentProductInput",
                   "ofType": null
                 },
                 "defaultValue": null
@@ -60861,6 +62089,16 @@
                 "type": {
                   "kind": "SCALAR",
                   "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "currentProduct",
+                "description": "Current product context from PDP (SKU, price, category, etc.)",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "CurrentProductInput",
                   "ofType": null
                 },
                 "defaultValue": null
@@ -62035,6 +63273,18 @@
           {
             "name": "unitName",
             "description": "Name of the preconfigured unit",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "userError",
+            "description": "User error message if the unit could not be fully resolved (e.g. required currentSku was not provided)",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -67391,6 +68641,49 @@
         "possibleTypes": null
       },
       {
+        "kind": "OBJECT",
+        "name": "SharedRequisitionListOutput",
+        "description": "Shared requisition list view for a recipient.",
+        "fields": [
+          {
+            "name": "requisition_list",
+            "description": "The sender's requisition list (read-only for the recipient).",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "RequisitionList",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "sender_name",
+            "description": "Display name of the requisition list sender.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
         "kind": "INPUT_OBJECT",
         "name": "ShareGiftRegistryInviteeInput",
         "description": "Defines a gift registry invitee.",
@@ -67493,6 +68786,201 @@
         ],
         "interfaces": null,
         "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "ShareRequisitionListByEmailInput",
+        "description": "An input object that defines which requisition list shared with company users through email.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "customerUids",
+            "description": "An array of IDs representing company users with whom the sender wants to share the requisition list.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "requisitionListUid",
+            "description": "The unique ID of the requisition list.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ShareRequisitionListByEmailOutput",
+        "description": "Result of sharing a requisition list by email.",
+        "fields": [
+          {
+            "name": "sent_count",
+            "description": "Number of notification emails successfully sent.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "user_errors",
+            "description": "Per-email validation or delivery issues.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "ShareRequisitionListUserError",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ShareRequisitionListByTokenOutput",
+        "description": "The result of sharing a requisition list by token.",
+        "fields": [
+          {
+            "name": "token",
+            "description": "Token used to generate a shareable link for the requisition list.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ShareRequisitionListUserError",
+        "description": "An error related to a specific recipient or constraint.",
+        "fields": [
+          {
+            "name": "code",
+            "description": "Machine-readable error code.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "ShareRequisitionListUserErrorCode",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "message",
+            "description": "Human-readable error message.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "ShareRequisitionListUserErrorCode",
+        "description": "Machine-readable error codes for requisition list share-by-email and import operations.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "MAX_RECIPIENTS_EXCEEDED",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "INVALID_EMAIL",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "NOT_COMPANY_USER",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "IMPORT_FAILED",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
         "possibleTypes": null
       },
       {
@@ -67783,6 +69271,18 @@
                 "name": "String",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "tracking_url",
+            "description": "The tracking URL for the shipment. Available for both built-in and custom shipping carriers when a URL template is configured.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -68417,6 +69917,18 @@
             "deprecationReason": null
           },
           {
+            "name": "backorder_message",
+            "description": "Customer-facing hint when the line is salable on notify backorders with insufficient physical quantity; null otherwise.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "custom_attributes",
             "description": "The custom attributes for the cart item",
             "args": [],
@@ -68521,6 +70033,22 @@
                 "ofType": null
               }
             },
+            "isDeprecated": true,
+            "deprecationReason": "Use `is_salable` instead. It indicates whether the line can be purchased, including backorder configuration."
+          },
+          {
+            "name": "is_salable",
+            "description": "True when the item can be purchased and should not block checkout: stock status is in stock and either physical quantity covers the requested quantity or backorders are allowed.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -68550,7 +70078,7 @@
           },
           {
             "name": "not_available_message",
-            "description": "Message to display when the product is not available with this selected option.",
+            "description": "Shortage or unavailability message for the line; null when the item is salable.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -71853,6 +73381,70 @@
             "deprecationReason": null
           },
           {
+            "name": "requisition_list_share_link_validity_days",
+            "description": "Configuration data from btob/requisition_list_sharing/link_validity_days",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "requisition_list_share_max_recipients",
+            "description": "Configuration data from btob/requisition_list_sharing/max_recipients",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "requisition_list_share_storefront_path",
+            "description": "Configuration data from btob/requisition_list_sharing/storefront_share_path (route path for share links, no leading or trailing slashes)",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "requisition_list_sharing_enabled",
+            "description": "Configuration data from btob/requisition_list_sharing/enabled",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "returns_enabled",
             "description": "Indicates whether RMA is enabled on the storefront. Possible values: enabled/disabled.",
             "args": [],
@@ -71983,6 +73575,46 @@
           {
             "name": "share_applied_cart_rule",
             "description": "Configuration data from promo/graphql/share_applied_cart_rule",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "shopping_assistance_checkbox_title",
+            "description": "Configuration data from login_as_customer/general/shopping_assistance_checkbox_title",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "shopping_assistance_checkbox_tooltip",
+            "description": "Configuration data from login_as_customer/general/shopping_assistance_checkbox_tooltip",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "shopping_assistance_enabled",
+            "description": "Configuration data from login_as_customer/general/enabled",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -73063,6 +74695,58 @@
               "kind": "SCALAR",
               "name": "Float",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "UnassignChildCompanyInput",
+        "description": "Defines the input schema for unassigning a child company from its parent company.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "child_company_id",
+            "description": "The unique ID of the child company.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "UnassignChildCompanyOutput",
+        "description": "Contains the response to the request to unassign a child company.",
+        "fields": [
+          {
+            "name": "company_hierarchy",
+            "description": "The updated company relation hierarchy for the current company.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "CompanyHierarchy",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -74741,6 +76425,18 @@
         "description": "An implementation for virtual product cart items.",
         "fields": [
           {
+            "name": "backorder_message",
+            "description": "Customer-facing hint when the line is salable on notify backorders with insufficient physical quantity; null otherwise.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "custom_attributes",
             "description": "The custom attributes for the cart item",
             "args": [],
@@ -74821,6 +76517,22 @@
                 "ofType": null
               }
             },
+            "isDeprecated": true,
+            "deprecationReason": "Use `is_salable` instead. It indicates whether the line can be purchased, including backorder configuration."
+          },
+          {
+            "name": "is_salable",
+            "description": "True when the item can be purchased and should not block checkout: stock status is in stock and either physical quantity covers the requested quantity or backorders are allowed.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -74850,7 +76562,7 @@
           },
           {
             "name": "not_available_message",
-            "description": "Message to display when the product is not available with this selected option.",
+            "description": "Shortage or unavailability message for the line; null when the item is salable.",
             "args": [],
             "type": {
               "kind": "SCALAR",

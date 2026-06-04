@@ -1,12 +1,13 @@
 ---
 title: Step 10. Create an invoice
 description: In this step of the tutorial you will create an invoice
-edition: paas
 keywords:
   - Inventory
   - REST
---- 
- 
+---
+
+<Fragment src="../../../includes/paas-only.md"/>
+
 # Step 10. Create an invoice
 
 You create an invoice after you receive payment for an order. In this example, the order was paid offline via a bank transfer. Therefore, you must tell Adobe Commerce that payment for the order has been captured.
@@ -48,7 +49,7 @@ An invoice `id`, such as `3`.
 
 ## Retrieve the order item IDs
 
-When you create an order, Commerce generates an `order_item_id` for each product. These values will be used in [Step 12. Create a shipment](/rest/tutorials/inventory/create-shipment/).
+When you create an order, Commerce generates an `order_item_id` for each product. These values will be used in [Step 12. Create a shipment](/rest/tutorials/inventory/create-shipment.md).
 
 **Endpoint:**
 

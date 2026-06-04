@@ -1,5 +1,6 @@
 ---
 title: cart query
+description: Use the cart query to retrieve information about a particular cart.
 ---
 
 # cart query
@@ -20,9 +21,9 @@ Cart functionality is defined in the `Quote` module. A Quote represents the cont
 
 The `cart` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-cart)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#cart)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-cart)
+* [On-Premises/Cloud](/reference/graphql/index.md#cart)
 
 ## Sample queries
 
@@ -611,19 +612,19 @@ The following query shows how to retrieve fixed product tax (FPT) information fo
 
 Note that fixed product tax information appears under `cart.items.prices.fixed_product_taxes` rather than in the `applied_taxes` section. The FPT amount is included in the `subtotal_including_tax` and `grand_total` values.
 
-For more details about cart item prices and FPT fields in the schema, see the [CartItemPrices](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CartItemPrices) reference.
+For more details about cart item prices and FPT fields in the schema, see the [CartItemPrices](/reference/graphql/index.md#cartitemprices) reference.
 
 ### Tier price example
 
 In the following example, tier prices has been established for product `24-UG01` and `24-UG05`, as shown in the following table:
 
-Product | Quantity | Fixed/Discount | Amount
---- | --- | --- | --- |
-24-UG01 | 5 | Discount | 5%
-24-UG01 | 10 | Discount | 10%
-24-UG01 | 15 | Discount | 15%
-24-UG05 | 5 | Fixed | $16
-24-UG05 | 10 | Fixed | $11
+| Product | Quantity | Fixed/Discount | Amount |
+| --- | --- | --- | --- |
+| 24-UG01 | 5 | Discount | 5% |
+| 24-UG01 | 10 | Discount | 10% |
+| 24-UG01 | 15 | Discount | 15% |
+| 24-UG05 | 5 | Fixed | $16 |
+| 24-UG05 | 10 | Fixed | $11 |
 
 The cart in the example contains 12 units of `24-UG05` and 8 units of `24-UG-01`, so the price of `24-UG05` is $11, and the price of `24-UG01` is $18.05 (5% off).
 
@@ -810,17 +811,17 @@ query {
 
 ## Input attributes
 
-Attribute |  Data Type | Description
---- | --- | ---
-`cart_id` | String! | A 32-character string that is created when you [create a cart](../mutations/create-empty-cart.md)
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `cart_id` | String! | A 32-character string that is created when you [create a cart](../mutations/create-empty-cart.md) |
 
 ## Errors
 
-Error | Description
---- | ---
-`Could not find a cart with ID \"xxxxx\"` | The ID provided in the `cart_id` field is invalid or the cart does not exist for the customer.
-`The cart isn't active` | The cart with the specified cart ID is unavailable, because the items have been purchased and the cart ID becomes inactive.
-`Field cart.cart_id of required type String! was not provided` | The value specified in the `cart.cart_id` argument is empty.
+| Error | Description |
+| --- | --- |
+| `Could not find a cart with ID \"xxxxx\"` | The ID provided in the `cart_id` field is invalid or the cart does not exist for the customer. |
+| `The cart isn't active` | The cart with the specified cart ID is unavailable, because the items have been purchased and the cart ID becomes inactive. |
+| `Field cart.cart_id of required type String! was not provided` | The value specified in the `cart.cart_id` argument is empty. |
 
 ## Related topics
 

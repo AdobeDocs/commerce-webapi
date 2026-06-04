@@ -1,5 +1,6 @@
 ---
 title: countries query
+description: The countries query returns all countries in which the entity can do business.
 ---
 
 # countries query
@@ -16,9 +17,9 @@ Use the [country](country.md) query if you want to retrieve information about a 
 
 The `countries` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-countries)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#countries)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-countries)
+* [On-Premises/Cloud](/reference/graphql/index.md#countries)
 
 ## Example usage
 

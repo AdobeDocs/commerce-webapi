@@ -1,12 +1,13 @@
 ---
 title: createCustomerAddress mutation
+description: Use the createCustomerAddress mutation to create the customer's address.
 ---
 
 # createCustomerAddress mutation
 
 Use the `createCustomerAddress` mutation to create the customer's address.
 
-To return or modify information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session).
+To return or modify information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](/get-started/authentication/gs-authentication-session.md).
 
 ## Syntax
 
@@ -16,9 +17,9 @@ To return or modify information about a customer, we recommend you use customer 
 
 The `createCustomerAddress` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-createCustomerAddress)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#createcustomeraddress)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createCustomerAddress)
+* [On-Premises/Cloud](/reference/graphql/index.md#createcustomeraddress)
 
 ## Example usage
 
@@ -206,7 +207,7 @@ mutation {
 
 ### Create an address that includes a custom file
 
-<Edition name="saas" />
+<Fragment src="../../../../includes/saas-only.md"/>
 
 The following call creates an address for the specified customer that includes a file that was uploaded to Amazon S3 using the [`initiateUpload` mutation](../../uploads/mutations/initiate-upload.md).
 
@@ -256,14 +257,14 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Expected type CustomerAddressInput!, found "".` | The `input` attribute contains an empty value.
-`"input" value should be specified` | The `input` argument is specified but is empty.
-`Required parameters are missing: firstname` | The `input.firstname` argument was omitted or contains an empty value.
-`"Street Address" cannot contain more than 2 lines.` | The `input.street` argument contains array with more than two elements.
-`Syntax Error: Expected Name, found )` | The `input` argument was omitted.
-`The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table.
+| Error | Description |
+| --- | --- |
+| `Expected type CustomerAddressInput!, found "".` | The `input` attribute contains an empty value. |
+| `"input" value should be specified` | The `input` argument is specified but is empty. |
+| `Required parameters are missing: firstname` | The `input.firstname` argument was omitted or contains an empty value. |
+| `"Street Address" cannot contain more than 2 lines.` | The `input.street` argument contains array with more than two elements. |
+| `Syntax Error: Expected Name, found )` | The `input` argument was omitted. |
+| `The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table. |
 
 ## Related topics
 

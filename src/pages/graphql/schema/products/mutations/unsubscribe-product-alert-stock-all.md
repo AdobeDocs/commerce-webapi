@@ -1,7 +1,10 @@
 ---
 title: unsubscribeProductAlertStockAll mutation
-edition: saas
+description: The unsubscribeProductAlertStockAll mutation removes all stock availability alert subscriptions for the logged-in customer across the current website. Afte...
+
 ---
+
+<Fragment src="../../../../includes/saas-only.md"/>
 
 # unsubscribeProductAlertStockAll mutation
 
@@ -19,7 +22,7 @@ mutation {
 
 ## Reference
 
-The [`unsubscribeProductAlertStockAll`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-unsubscribeProductAlertStockAll) reference provides detailed information about the types and fields defined in this mutation.
+The [`unsubscribeProductAlertStockAll`](/reference/graphql/saas/index.md#unsubscribeproductalertstockall) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -51,10 +54,10 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Customer is not logged in.` | The request does not include a valid customer authentication token.
-`Unable to unsubscribe to all stock alert` | An internal error occurred while removing the subscriptions.
+| Error | Description |
+| --- | --- |
+| `Customer is not logged in.` | The request does not include a valid customer authentication token. |
+| `Unable to unsubscribe to all stock alert` | An internal error occurred while removing the subscriptions. |
 
 ## Related topics
 

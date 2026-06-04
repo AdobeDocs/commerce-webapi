@@ -1,7 +1,10 @@
 ---
 title: unsubscribeProductAlertPrice mutation
-edition: saas
+description: The unsubscribeProductAlertPrice mutation removes the logged-in customer's subscription to a price drop alert for the specified product. After unsubscribin...
+
 ---
+
+<Fragment src="../../../../includes/saas-only.md"/>
 
 # unsubscribeProductAlertPrice mutation
 
@@ -21,7 +24,7 @@ mutation {
 
 ## Reference
 
-The [`unsubscribeProductAlertPrice`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-unsubscribeProductAlertPrice) reference provides detailed information about the types and fields defined in this mutation.
+The [`unsubscribeProductAlertPrice`](/reference/graphql/saas/index.md#unsubscribeproductalertprice) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -57,19 +60,19 @@ mutation {
 
 The `ProductAlertSubscriptionResult` object returns the following attributes:
 
-Attribute | Data type | Description
---- | --- | ---
-`success` | Boolean! | Indicates whether the unsubscription was successful
-`message` | String | A message confirming the unsubscription action
+| Attribute | Data type | Description |
+| --- | --- | --- |
+| `success` | Boolean! | Indicates whether the unsubscription was successful |
+| `message` | String | A message confirming the unsubscription action |
 
 ## Errors
 
-Error | Description
---- | ---
-`Customer is not logged in.` | The request does not include a valid customer authentication token.
-`Required parameter "sku" is missing.` | The `sku` field was not provided in the input.
-`Unable to subscribe to price alert. No such entity.` | No product exists with the specified SKU.
-`Unable to unsubscribe to price alert` | An internal error occurred while removing the subscription.
+| Error | Description |
+| --- | --- |
+| `Customer is not logged in.` | The request does not include a valid customer authentication token. |
+| `Required parameter "sku" is missing.` | The `sku` field was not provided in the input. |
+| `Unable to subscribe to price alert. No such entity.` | No product exists with the specified SKU. |
+| `Unable to unsubscribe to price alert` | An internal error occurred while removing the subscription. |
 
 ## Related topics
 

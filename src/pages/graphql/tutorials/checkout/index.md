@@ -3,11 +3,12 @@ title: GraphQL checkout tutorial
 description: Learn how to place an order with the GraphQL API.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
-edition: paas
 keywords:
   - GraphQL
   - Checkout
 ---
+
+<Fragment src="../../../includes/paas-only.md"/>
 
 # GraphQL checkout tutorial
 
@@ -20,23 +21,27 @@ The **10-step tutorial** generally takes **30 minutes**.
 
 Adobe Commerce and Magento Open Source GraphQL is designed to run queries and perform actions on behalf of a customer. Adobe Commerce and Magento Open Source GraphQL does not perform backend tasks, such as manage invoices or shipments.
 
-### Before you begin
+## Before you begin
 
 Complete the following prerequisites:
 
 -  Install an Adobe Commerce or Magento Open Source instance with sample data.
    The sample data defines a functional store, called Luma, that sells fitness clothing and accessories. The store does not provide any sandbox accounts for testing credit card payments, so transactions will be simulated using an offline payment method.
 
--  Install a GraphQL client. You can use any GraphQL client to send calls to Magento. [Altair](https://altair.sirmuel.design/) is a good example.
+-  Install a GraphQL client. You can use any GraphQL client to send calls to Magento.
 
 -  Learn about GraphQL, how it works, and how to use it. See [Introduction to GraphQL](https://graphql.org/learn/) for details.
 
 -  Know how to generate a customer token. See [Authorization tokens](../../usage/authorization-tokens.md) for details.
 
--  In the Admin, create a [coupon](https://experienceleague.adobe.com/en/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart-coupon#configure-coupon-codes) that will be used in [Step 7. Apply a coupon](../../tutorials/checkout/apply-coupon.md).
+-  In the Admin, create a [coupon](https://experienceleague.adobe.com/en/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart-coupon#configure-coupon-codes) that will be used in [Step 7. Apply a coupon](apply-coupon.md).
 
-### Other resources
+## Other resources
 
--  [Order processing tutorial](https://developer.adobe.com/commerce/webapi/rest/tutorials/orders/) shows a system integrator how REST APIs are used in the lifecycle of an order, including configuring a store and creating a customer; creating quotes, orders, invoices, and shipments; preparing for checkout; and more order-related tasks.
+-  [Order processing tutorial](/rest/tutorials/orders/index.md) shows a system integrator how REST APIs are used in the lifecycle of an order, including configuring a store and creating a customer; creating quotes, orders, invoices, and shipments; preparing for checkout; and more order-related tasks.
 
--  [REST Tutorials](https://developer.adobe.com/commerce/webapi/rest/tutorials/) provides additional information about completing any REST tutorial.
+-  [REST Tutorials](/rest/tutorials/index.md) provides additional information about completing any REST tutorial.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

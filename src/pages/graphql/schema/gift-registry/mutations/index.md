@@ -1,5 +1,6 @@
 ---
 title: Gift registry mutations
+description: Use the gift registry mutations to create and manage gift registries and their contents. The shareGiftRegistry mutation sends an invitation to a list of em...
 ---
 
 # Gift registry mutations

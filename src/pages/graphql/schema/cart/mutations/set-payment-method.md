@@ -1,18 +1,19 @@
 ---
 title: setPaymentMethodOnCart mutation
+description: The setPaymentMethodOnCart mutation defines which payment method to apply to the cart. Adobe Commerce and Magento Open Source GraphQL supports the followin...
 ---
 
 # setPaymentMethodOnCart mutation
 
 The `setPaymentMethodOnCart` mutation defines which payment method to apply to the cart. Adobe Commerce and Magento Open Source GraphQL supports the following offline payment methods:
 
-Title | Code
---- | ---
-Bank Transfer Payment | `banktransfer`
-Cash on Delivery | `cashondelivery`
-Check / Money order | `checkmo`
-No Payment Information Required | `free`
-Purchase Order | `purchaseorder`
+| Title | Code |
+| --- | --- |
+| Bank Transfer Payment | `banktransfer` |
+| Cash on Delivery | `cashondelivery` |
+| Check / Money order | `checkmo` |
+| No Payment Information Required | `free` |
+| Purchase Order | `purchaseorder` |
 
 Supported online payment methods include:
 
@@ -43,9 +44,9 @@ braintree: {
 
 The `setPaymentMethodOnCart` reference provides detailed information about the types and fields defined in this mutation.
 
-- &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-setPaymentMethodOnCart)
+- [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#setpaymentmethodoncart)
 
-- &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-setPaymentMethodOnCart)
+- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](/reference/graphql/index.md#setpaymentmethodoncart)
 
 ## Example usage
 
@@ -140,29 +141,29 @@ The top-level `SetPaymentMethodOnCartInput` object is listed first. All child ob
 
 The `SetPaymentMethodOnCartInput` object must contain the following attributes:
 
-Attribute |  Data Type | Description
---- | --- | ---
-`cart_id` | String! | The unique ID that identifies the customer's cart
-`payment_method` | [PaymentMethodInput!](#paymentmethodinput-attributes) | An object containing the payment method code
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `cart_id` | String! | The unique ID that identifies the customer's cart |
+| `payment_method` | [PaymentMethodInput!](#paymentmethodinput-attributes) | An object containing the payment method code |
 
 ### PaymentMethodInput attributes
 
 The `PaymentMethodInput` object can contain the following attributes:
 
-Attribute |  Data Type | Description
---- | --- | ---
-`code` | String! | The internal name for the payment method
-`purchase_order_number` | String | The purchase order number. Optional for most payment methods
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `code` | String! | The internal name for the payment method |
+| `purchase_order_number` | String | The purchase order number. Optional for most payment methods |
 
 For all online payment methods, the payload must include an object that defines additional information specific to that payment method.
 
 ## Errors
 
-Error | Description
---- | ---
-`Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` table.
-`Required parameter "cart_id" is missing.` | The value specified in the `cart_id` argument is empty.
-`Required parameter "code" for "payment_method" is missing.` | The value specified in the `code` argument is empty.
-`The current user cannot perform operations on cart "XXX"` | An unauthorized user (guest) tried to set a payment method for an order on behalf of an authorized user (customer), or a customer tried to set a payment method for an order on behalf of another customer.
-`The requested Payment Method is not available.` | Specified in the `payment_method` argument payment method is disabled or does not exist.
-`The shipping address is missing. Set the address and try again.` | You ran `setPaymentMethodOnCart` mutation before [setShippingAddressesOnCart](set-shipping-method.md). Set a shipping address first. [GraphQL checkout tutorial](../../../tutorials/checkout/index.md) shows the order placement sequence.
+| Error | Description |
+| --- | --- |
+| `Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` table. |
+| `Required parameter "cart_id" is missing.` | The value specified in the `cart_id` argument is empty. |
+| `Required parameter "code" for "payment_method" is missing.` | The value specified in the `code` argument is empty. |
+| `The current user cannot perform operations on cart "XXX"` | An unauthorized user (guest) tried to set a payment method for an order on behalf of an authorized user (customer), or a customer tried to set a payment method for an order on behalf of another customer. |
+| `The requested Payment Method is not available.` | Specified in the `payment_method` argument payment method is disabled or does not exist. |
+| `The shipping address is missing. Set the address and try again.` | You ran `setPaymentMethodOnCart` mutation before [setShippingAddressesOnCart](set-shipping-method.md). Set a shipping address first. [GraphQL checkout tutorial](../../../tutorials/checkout/index.md) shows the order placement sequence. |

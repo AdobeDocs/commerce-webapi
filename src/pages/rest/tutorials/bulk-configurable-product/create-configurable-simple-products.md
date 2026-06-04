@@ -2,16 +2,16 @@
 title: Step 2. Create the configurable and simple products
 description: In this step of the tutorial you will create the configurable and simple products
 contributor_name: comwrap GmbH
-contributor_link: http://comwrap.com/
+contributor_link: https://comwrap.com/en/
 keywords:
   - REST
---- 
- 
+---
+
 # Step 2. Create the configurable and simple products
 
  By providing configurable and simple product information, you can use the bulk API to create all necessary products with a single call.
 
-### Configurable product
+## Configurable product
 
 Some notes about the configurable product payload example:
 
@@ -19,7 +19,7 @@ Some notes about the configurable product payload example:
 *  The sample payload does not contain the price or the size, as these are defined in the simple products section.
 *  The `visibility` attribute is set to 4, which allows customers to find the product by browsing or searching. Each simple product defined in the payload can override the `visibility` attribute.
 
-### Simple products
+## Simple products
 
  The payloads for creating a simple product and a configurable product are identical, with the following exceptions:
 
@@ -33,7 +33,7 @@ Although it is not required, the simple product payload includes `stock_item` in
 
 <InlineAlert variant="info" slots="text" />
 
-Before you use this code sample, verify that the attribute values are the same in your installation. See [Get the list of attributes defined in an attribute searchCriteria](/rest/tutorials/configurable-product/plan-product/#get-the-list-of-attributes-defined-in-an-attribute-searchcriteria ) for more information.
+Before you use this code sample, verify that the attribute values are the same in your installation. See [Get the list of attributes defined in an attribute searchCriteria](/rest/tutorials/configurable-product/plan-product.md#get-the-list-of-attributes-defined-in-an-attribute-searchcriteria) for more information.
 
 **Endpoint:**
 
@@ -300,12 +300,16 @@ The payload contains both the configurable product and the simple products.
 
  <InlineAlert variant="info" slots="text"/>
 
-For information about response fields, see the [Bulk API](/rest/bulk-endpoints) section. To check the status of operations, see the API for [Bulk operation status endpoints](/rest/use-rest/operation-status-endpoints/).
+For information about response fields, see the [Bulk API](/rest/use-rest/bulk-endpoints.md) section. To check the status of operations, see the API for [Bulk operation status endpoints](/rest/use-rest/operation-status-endpoints.md).
 
 ## Verify this step
 
 *  Log in to the Luma website and select **Catalog > Products**. The product appears in the grid.
 
-   ![Product page with configurable product](../../../_images/products-page.png)
+   ![Product page with configurable product](../../../images/products-page.png)
 
 *  On the Luma storefront page, search for `Champ`. No results are returned.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to comwrap GmbH for contributing this topic!](https://comwrap.com/en/)

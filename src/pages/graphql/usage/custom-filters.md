@@ -88,11 +88,11 @@ In this example, the custom attribute `volume` was assigned to the `bags` attrib
 }
 ```
 
-`label` | `value`
---- | ---
-`Large` | `216`
-`Medium` | `217`
-`Small` | `218`
+| `label` | `value` |
+| --- | --- |
+| `Large` | `216` |
+| `Medium` | `217` |
+| `Small` | `218` |
 
 In this scenario, a [`products`](../schema/products/queries/products.md) search filtered to return items where the `volume` attribute is set to `Large` would be similar to the following:
 

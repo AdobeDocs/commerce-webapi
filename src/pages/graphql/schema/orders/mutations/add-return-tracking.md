@@ -1,5 +1,6 @@
 ---
 title: addReturnTracking mutation
+description: The addReturnTracking mutation adds customer-entered shipping tracking information to the specified return request. Use the availableshippingcarriers objec...
 ---
 
 # addReturnTracking mutation
@@ -18,9 +19,9 @@ mutation: {
 
 The `addReturnTracking` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-addReturnTracking)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#addreturntracking)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addReturnTracking)
+* [On-Premises/Cloud](/reference/graphql/index.md#addreturntracking)
 
 ## Example usage
 

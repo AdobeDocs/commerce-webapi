@@ -1,12 +1,11 @@
 ---
 title: Negotiable quote (B2B) interfaces   
+description: Negotiable quote queries and mutations can access the following interfaces:
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # Negotiable quote (B2B) interfaces
 
@@ -14,30 +13,30 @@ Negotiable quote queries and mutations can access the following interfaces:
 
 * `NegotiableQuoteAddressInterface`
 
-  * &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-NegotiableQuoteAddressInterface)
+  * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#negotiablequoteaddressinterface)
 
-  * &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-NegotiableQuoteAddressInterface)
+  * [On-Premises/Cloud](/reference/graphql/index.md#negotiablequoteaddressinterface)
 
   It is implemented by `NegotiableQuoteShippingAddress`
 
-  * &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-NegotiableQuoteShippingAddress)
+  * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#negotiablequoteshippingaddress)
 
-  * &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-NegotiableQuoteShippingAddress)
+  * [On-Premises/Cloud](/reference/graphql/index.md#negotiablequoteshippingaddress)
 
   and  `NegotiableQuoteBillingAddress`
 
-  * &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-NegotiableQuoteBillingAddress)
+  * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#negotiablequotebillingaddress)
 
-  * &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-NegotiableQuoteBillingAddress)
+  * [On-Premises/Cloud](/reference/graphql/index.md#negotiablequotebillingaddress)
 
 * `NegotiableQuoteUidNonFatalResultInterface`
 
-  * &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-NegotiableQuoteUidNonFatalResultInterface)
+  * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#negotiablequoteuidnonfatalresultinterface)
 
-  * &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-NegotiableQuoteUidNonFatalResultInterface)
+  * [On-Premises/Cloud](/reference/graphql/index.md#negotiablequoteuidnonfatalresultinterface)
 
   It is implemented by `NegotiableQuoteUidOperationSuccess`
-  
-  * &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-NegotiableQuoteUidOperationSuccess)
 
-  * &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-NegotiableQuoteUidOperationSuccess)
+  * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#negotiablequoteuidoperationsuccess)
+
+  * [On-Premises/Cloud](/reference/graphql/index.md#negotiablequoteuidoperationsuccess)

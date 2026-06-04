@@ -1,5 +1,6 @@
 ---
 title: removeProductsFromWishlist mutation
+description: The removeProductsFromWishlist mutation completely removes the specified items from the customer's wish list. Use the updateProductsInWishlist mutation to...
 ---
 
 # removeProductsFromWishlist mutation
@@ -25,9 +26,9 @@ mutation {
 
 The `removeProductsFromWishlist` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-removeProductsFromWishlist)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#removeproductsfromwishlist)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-removeProductsFromWishlist)
+* [On-Premises/Cloud](/reference/graphql/index.md#removeproductsfromwishlist)
 
 ## Example usage
 
@@ -147,7 +148,7 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`The current user cannot perform operations on wishlist` | An unauthorized user (guest) tried to add an item to a wishlist, or an authorized user (customer) tried to add an item to a wishlist of another customer.
-`The wishlist was not found.` | The value provided in the `wishlistId` field is invalid or does not exist for the customer.
+| Error | Description |
+| --- | --- |
+| `The current user cannot perform operations on wishlist` | An unauthorized user (guest) tried to add an item to a wishlist, or an authorized user (customer) tried to add an item to a wishlist of another customer. |
+| `The wishlist was not found.` | The value provided in the `wishlistId` field is invalid or does not exist for the customer. |

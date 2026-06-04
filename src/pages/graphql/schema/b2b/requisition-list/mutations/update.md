@@ -1,14 +1,12 @@
 ---
 title: updateRequisitionList mutation
+description: The updateRequisitionList mutation updates the name and, optionally, the description of a requisition list.
 contributor_name: Zilker Technology
-contributor_link: https://www.ztech.io/
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # updateRequisitionList mutation
 
@@ -16,7 +14,7 @@ The `updateRequisitionList` mutation updates the name and, optionally, the descr
 
 <InlineAlert variant="info" slots="text" />
 
-Use the [storeConfig query](../../../../schema/store/queries/store-config.md) with the `is_requisition_list_active` attribute to determine whether requisition lists are enabled.
+Use the [storeConfig query](../../../store/queries/store-config.md) with the `is_requisition_list_active` attribute to determine whether requisition lists are enabled.
 
 This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
 
@@ -38,9 +36,9 @@ mutation {
 
 The `updateRequisitionList` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-updateRequisitionList)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#updaterequisitionlist)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateRequisitionList)
+* [On-Premises/Cloud](/reference/graphql/index.md#updaterequisitionlist)
 
 ## Example usage
 
@@ -85,3 +83,7 @@ mutation {
 
 *  [createRequisitionList mutation](create.md)
 *  [deleteRequisitionList mutation](delete.md)
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+Thanks to Zilker Technology for contributing this topic!

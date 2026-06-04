@@ -1,5 +1,6 @@
 ---
 title: exchangeExternalCustomerToken mutation
+description: This mutation is part of the Storefront Compatibility Package. It will be added to Adobe Commerce 2.4.9.
 ---
 
 # exchangeExternalCustomerToken mutation
@@ -72,14 +73,14 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`"Email" is not a valid email address.` | The value provided in the `input`.`email` argument has an invalid format.
-`Field CustomerCreateInput.email of required type String! was not provided` | The `input`.`email` argument was omitted.
-`Field CustomerCreateInput.lastname of required type String! was not provided` | The `input`.`lastname` argument was omitted.
-`Field CustomerCreateInput.firstname of required type String! was not provided` | The `input`.`firstname` argument was omitted.
-`Field "xyz" is not defined by type CustomerCreateInput.` | The `input`.`xyz` argument is not defined in the schema.
-`You do not have permission to access this resource.` | The user does not have required permission to use the mutation.
+| Error | Description |
+| --- | --- |
+| `"Email" is not a valid email address.` | The value provided in the `input`.`email` argument has an invalid format. |
+| `Field CustomerCreateInput.email of required type String! was not provided` | The `input`.`email` argument was omitted. |
+| `Field CustomerCreateInput.lastname of required type String! was not provided` | The `input`.`lastname` argument was omitted. |
+| `Field CustomerCreateInput.firstname of required type String! was not provided` | The `input`.`firstname` argument was omitted. |
+| `Field "xyz" is not defined by type CustomerCreateInput.` | The `input`.`xyz` argument is not defined in the schema. |
+| `You do not have permission to access this resource.` | The user does not have required permission to use the mutation. |
 
 ## Related topic
 

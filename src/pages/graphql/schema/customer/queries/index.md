@@ -1,5 +1,6 @@
 ---
 title: Customer queries
+description: Adobe Commerce provides the following customer-related queries:
 ---
 
 # Customer queries

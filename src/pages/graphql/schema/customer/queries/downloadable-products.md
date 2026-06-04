@@ -1,7 +1,10 @@
 ---
 title: customerDownloadableProducts query
-edition: paas
+description: Use the customerDownloadableProducts query to retrieve the list of purchased downloadable products for the logged-in customer.
+
 ---
+
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # customerDownloadableProducts query
 
@@ -13,7 +16,7 @@ Use the `customerDownloadableProducts` query to retrieve the list of purchased d
 
 ## Reference
 
-The [`customerDownloadableProducts`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-customerDownloadableProducts) reference provides detailed information about the types and fields defined in this query.
+The [`customerDownloadableProducts`](/reference/graphql/index.md#customerdownloadableproducts) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -64,6 +67,6 @@ The following example returns the list of purchased downloadable products for th
 
 ## Errors
 
-Error | Description
---- | ---
-`The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table.
+| Error | Description |
+| --- | --- |
+| `The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table. |

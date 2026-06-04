@@ -1,5 +1,6 @@
 ---
 title: InvoiceItemInterface attributes and implementations
+description: InvoiceItemInterface provides details about items in a customer's order history that were invoiced. It has the following implementations:
 ---
 
 # InvoiceItemInterface attributes and implementations
@@ -15,9 +16,9 @@ title: InvoiceItemInterface attributes and implementations
 
 The `InvoiceItemInterface` reference provides detailed information about the types and fields defined in this interface.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-InvoiceItemInterface)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#invoiceiteminterface)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-InvoiceItemInterface)
+* [On-Premises/Cloud](/reference/graphql/index.md#invoiceiteminterface)
 
 ## Example usage
 

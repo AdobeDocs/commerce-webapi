@@ -1,10 +1,9 @@
 ---
 title: addGiftRegistryRegistrants mutation
+description: The addGiftRegistryRegistrants mutation adds a registrant to the specified gift registry.
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # addGiftRegistryRegistrants mutation
 
@@ -29,9 +28,9 @@ mutation {
 
 The `addGiftRegistryRegistrants` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-addGiftRegistryRegistrants)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#addgiftregistryregistrants)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addGiftRegistryRegistrants)
+* [On-Premises/Cloud](/reference/graphql/index.md#addgiftregistryregistrants)
 
 ## Example usage
 

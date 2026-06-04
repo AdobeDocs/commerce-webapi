@@ -1,12 +1,11 @@
 ---
 title: placeOrderForPurchaseOrder mutation
+description: The placeOrderForPurchaseOrder mutation converts an approved purchase order to an order. If the request is successful, the status of the purchase order is...
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # placeOrderForPurchaseOrder mutation
 
@@ -32,9 +31,9 @@ mutation {
 
 The `placeOrderForPurchaseOrder` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-placeOrderForPurchaseOrder)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#placeorderforpurchaseorder)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-placeOrderForPurchaseOrder)
+* [On-Premises/Cloud](/reference/graphql/index.md#placeorderforpurchaseorder)
 
 ## Example usage
 

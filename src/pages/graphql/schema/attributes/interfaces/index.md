@@ -1,30 +1,27 @@
 ---
 title: Attribute Interfaces and Implementations
+description: Adobe Commerce on cloud and on-premises (PaaS) provides the following interfaces to access system attributes and custom attributes defined by the merchant.
 ---
-
-import CustomAttributeCustomer from '/src/_includes/graphql/examples/custom-attribute-customer.md'
-import CustomAttributeFilterProduct from '/src/_includes/graphql/examples/custom-attribute-filter-product.md'
-import CustomerS3Download from '/src/_includes/graphql/examples/customer-s3-download.md'
 
 # Attribute interfaces and implementations
 
 Adobe Commerce on cloud and on-premises (PaaS) provides the following interfaces to access system attributes and custom attributes defined by the merchant.
 
-Interface | Implementations
---- | ---
-[`AttributeSelectedOptionInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-AttributeSelectedOptionInterface) | [`AttributeSelectedOption`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-AttributeSelectedOption)
-[`AttributeValueInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-AttributeValueInterface) | [`AttributeValue`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-AttributeValue) <br/>[`AttributeSelectedOptions`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-AttributeSelectedOptions)
-[`CustomAttributeMetadataInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CustomerAttributeMetadata) | [`AttributeMetadata`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-AttributeMetadata)
-[`CustomAttributeOptionInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CustomAttributeOptionInterface) | [`AttributeOptionMetadata`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-AttributeOptionMetadata).
+| Interface | Implementations |
+| --- | --- |
+| [`AttributeSelectedOptionInterface`](/reference/graphql/index.md#attributeselectedoptioninterface) | [`AttributeSelectedOption`](/reference/graphql/index.md#attributeselectedoption) |
+| [`AttributeValueInterface`](/reference/graphql/index.md#attributevalueinterface) | [`AttributeValue`](/reference/graphql/index.md#attributevalue) \<br/\>[`AttributeSelectedOptions`](/reference/graphql/index.md#attributeselectedoptions) |
+| [`CustomAttributeMetadataInterface`](/reference/graphql/index.md#customerattributemetadata) | [`AttributeMetadata`](/reference/graphql/index.md#attributemetadata) |
+| [`CustomAttributeOptionInterface`](/reference/graphql/index.md#customattributeoptioninterface) | [`AttributeOptionMetadata`](/reference/graphql/index.md#attributeoptionmetadata). |
 
 The following table lists the same interfaces and implementations with links to the **Adobe Commerce as a Cloud Service (SaaS)** GraphQL reference.
 
-Interface | Implementations
---- | ---
-[`AttributeSelectedOptionInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeSelectedOptionInterface) | [`AttributeSelectedOption`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeSelectedOption)
-[`AttributeValueInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeValueInterface) | [`AttributeValue`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeValue) <br/>[`AttributeSelectedOptions`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeSelectedOptions) <br/>[`AttributeFile`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeFile) <br/>[`AttributeImage`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeImage)
-[`CustomAttributeMetadataInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-CustomerAttributeMetadata) | [`AttributeMetadata`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeMetadata)
-[`CustomAttributeOptionInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-CustomAttributeOptionInterface) | [`AttributeOptionMetadata`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#definition-AttributeOptionMetadata).
+| Interface | Implementations |
+| --- | --- |
+| [`AttributeSelectedOptionInterface`](/reference/graphql/saas/index.md#attributeselectedoptioninterface) | [`AttributeSelectedOption`](/reference/graphql/saas/index.md#attributeselectedoption) |
+| [`AttributeValueInterface`](/reference/graphql/saas/index.md#attributevalueinterface) | [`AttributeValue`](/reference/graphql/saas/index.md#attributevalue) \<br/\>[`AttributeSelectedOptions`](/reference/graphql/saas/index.md#attributeselectedoptions) \<br/\>[`AttributeFile`](/reference/graphql/saas/index.md#attributefile) \<br/\>[`AttributeImage`](/reference/graphql/saas/index.md#attributeimage) |
+| [`CustomAttributeMetadataInterface`](/reference/graphql/saas/index.md#customerattributemetadata) | [`AttributeMetadata`](/reference/graphql/saas/index.md#attributemetadata) |
+| [`CustomAttributeOptionInterface`](/reference/graphql/saas/index.md#customattributeoptioninterface) | [`AttributeOptionMetadata`](/reference/graphql/saas/index.md#attributeoptionmetadata). |
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -34,14 +31,14 @@ SaaS provides two additional implementations of the `AttributeValueInterface` in
 
 ### Retrieve custom attributes metadata from a customer
 
-< CustomAttributeCustomer />
+<Fragment src="../../../../includes/graphql/examples/custom-attribute-customer.md" />
 
 ### Filter `custom_attributesV2` of a product
 
-< CustomAttributeFilterProduct />
+<Fragment src="../../../../includes/graphql/examples/custom-attribute-filter-product.md" />
 
 ### Retrieve a file uploaded to Amazon S3
 
-<Edition name="saas" />
+<Fragment src="../../../../includes/saas-only.md"/>
 
-< CustomerS3Download />
+<Fragment src="../../../../includes/graphql/examples/customer-s3-download.md" />

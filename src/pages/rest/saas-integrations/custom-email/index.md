@@ -1,11 +1,12 @@
 ---
 title: Email triggering through REST
 description: Learn how to trigger transactional emails using the REST API for Adobe Commerce as a Cloud Service.
-edition: saas
 keywords:
   - REST
   - Integration
 ---
+
+<Fragment src="../../../includes/saas-only.md"/>
 
 # Email triggering through the REST API
 
@@ -20,6 +21,7 @@ The `V1/custom-email/send` endpoint allows **third-party systems**, such as inte
 -  **Template ID** – Email template ID.
 -  **Recipient email** – The target email address for this request.
 -  **Variables** – (Optional) Custom defined key-value pairs to inject into the template, such as `customer_name` or `order_id`.
+-  **Reply-To email** – (Optional) Email address to set as the `Reply-To` header so that recipient replies are routed to a specific mailbox instead of the template sender.
 
 <InlineAlert variant="info" slots="text" />
 
@@ -32,7 +34,7 @@ The following section explains how to send transactional emails on demand using 
 ### Endpoint
 
 -  **URL** - `POST /rest/V1/custom-email/send`
--  **Authorization** - Only **service-to-service IMS authorization** is supported. The caller must have access to the **Send Custom Email via API** (`Magento_CustomEmailSend::send_custom_email`) resource. Refer to [REST authentication](../../authentication/) for more information.
+-  **Authorization** - Only **service-to-service IMS authorization** is supported. The caller must have access to the **Send Custom Email via API** (`Magento_CustomEmailSend::send_custom_email`) resource. Refer to [REST authentication](../../authentication/index.md) for more information.
 -  **Async usage** (recommended) - Although this endpoint is implemented synchronously, we recommend calling it using the **asynchronous REST API** so that the request is queued and processed by a consumer, avoiding long-lived HTTP connections. In Adobe Commerce as a Cloud Service, you can use the route with `/async` after `V1`, for example: `POST https://<server>.api.commerce.adobe.com/<tenant-id>/V1/async/custom-email/send`.
 
    Refer to [Asynchronous web endpoints](../../use-rest/asynchronous-web-endpoints.md) for more information.
@@ -46,12 +48,15 @@ The following section explains how to send transactional emails on demand using 
 
    If you are not using variables, pass an empty object or omit it. In the email template body and subject, use the variable syntax to reference a variable, for example `var order_id`. The subject also supports the same custom variables and syntax described in [Supported template scenarios](#supported-template-scenarios).
 
+-  **replyToEmail** (string, optional) – Email address to use for the `Reply-To` header of the outgoing email. When set, replies from the recipient are directed to this address instead of the template sender. Must be a valid email format and no longer than 255 characters. If provided, it must not be an empty string. Omit the field (or pass `null`) to use the template sender.
+
 ### Example request
 
 ```json
 {
   "templateId": 5,
   "recipientEmail": "john@example.com",
+  "replyToEmail": "support@example.com",
   "variables": {
     "customer_name": "John",
     "order_id": "100000123",
@@ -62,13 +67,14 @@ The following section explains how to send transactional emails on demand using 
 
 ### Success response (HTTP 200)
 
-The API returns HTTP 200 on successful send.
+The API returns HTTP 200 on successful send. The `reply_to_email` field is only present in the response when a `replyToEmail` value was supplied in the request.
 
 ```json
 {
   "message": "Email accepted for delivery",
   "reference_id": "a1b2c3d4e5f6-1707571800",
   "recipient_email": "john@example.com",
+  "reply_to_email": "support@example.com",
   "template_id": 5,
   "template_code": "order_update_notification"
 }
@@ -83,6 +89,9 @@ The API returns HTTP 200 on successful send.
    -  `"message": "Invalid recipient email format"` – invalid or malformed recipient address
    -  `"message": "Recipient email is required."` – missing or empty `recipientEmail`
    -  `"message": "Template ID must be a positive integer."` – missing, zero, or invalid `templateId`
+   -  `"message": "replyToEmail must not be empty when provided."` – `replyToEmail` was supplied as an empty string
+   -  `"message": "Invalid replyToEmail format."` – invalid or malformed `replyToEmail` address
+   -  `"message": "replyToEmail must not exceed 255 characters."` – `replyToEmail` exceeds the 255-character limit
 
 -  **HTTP 404 – Template not found**
 

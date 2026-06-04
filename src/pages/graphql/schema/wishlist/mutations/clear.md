@@ -1,5 +1,6 @@
 ---
 title: clearWishlist mutation
+description: The clearWishlist mutation removes all items from a wishlist for the logged in customer.
 ---
 
 # clearWishlist mutation
@@ -36,7 +37,7 @@ mutation {
 [//]: # (## Reference)
 
 [//]: # ()
-[//]: # (The [`clearWishlist`]&#40;https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-clearWishlist&#41; reference provides detailed information about the types and fields defined in this mutation.)
+[//]: # (The [`clearWishlist`]&#40;/reference/graphql/index.md#clearwishlist&#41; reference provides detailed information about the types and fields defined in this mutation.)
 
 ## Example usage
 

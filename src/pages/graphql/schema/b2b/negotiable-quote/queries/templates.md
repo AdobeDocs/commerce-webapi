@@ -1,12 +1,11 @@
 ---
 title: negotiableQuoteTemplates query  
+description: The negotiableQuoteTemplates query returns a list of negotiable quote templates that can be viewed by the logged-in customer, including quote templates cre...
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # negotiableQuoteTemplates query
 
@@ -31,9 +30,9 @@ This query requires a valid [customer authentication token](../../../customer/mu
 
 The `negotiableQuoteTemplates` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-negotiableQuoteTemplates)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#negotiablequotetemplates)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-negotiableQuoteTemplates)
+* [On-Premises/Cloud](/reference/graphql/index.md#negotiablequotetemplates)
 
 ## Example usage
 

@@ -17,7 +17,7 @@ Inventory Management features include:
 *  Concurrent checkout protection
 *  Shipment matching algorithms
 
-Merchants install Inventory Management as part of v2.3.x and upgrades with the name `magento/inventory-composer-metapackage`. For details, see [Install and Update Inventory Management](https://experienceleague.adobe.com/docs/commerce-admin/inventory/get-started/install-update.html).
+Merchants install Inventory Management as part of v2.3.x and upgrades with the name `magento/inventory-composer-metapackage`. For details, see [Install and Update Inventory Management](https://experienceleague.adobe.com/en/docs/commerce-admin/inventory/get-started/install-update).
 
 **Magento Community Contribution** – Adobe thanks the many contributors to the [Magento Inventory (was MSI) project](https://github.com/magento/inventory), developing these features as part of the Magento Community Engineering program.
 
@@ -37,7 +37,7 @@ The following terms are important as you work with Inventory Management APIs:
 
 The following diagram illustrates the relationship between source stocks, aggregate stocks, and sales channels:
 
-![Source and aggregate stock](../../_images/inventory-diagram-stock.png)
+![Source and aggregate stock](../../images/inventory-diagram-stock.png)
 
 In this diagram, a bicycle merchant has inventory for a mountain bike in two warehouses and a drop shipper. He has two stocks with configured website sales channels and sources. When a customer shops through the UK website, Magento aggregates bike inventory from the UK warehouse and the drop shipper sources, for a salable quantity of 95. The bike can be shipped from either the warehouse or the drop shipper, but not the NY warehouse. Amazon Marketplace has the same stock, drawing from the same aggregate stock as the UK website.
 

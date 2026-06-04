@@ -1,10 +1,9 @@
 ---
 title: setGiftOptionsOnCart mutation
+description: The setGiftOptionsOnCart mutation allows the buyer to set the following gift options on the cart level:
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # setGiftOptionsOnCart mutation
 
@@ -44,9 +43,9 @@ Gift wrapping is available for simple, configurable, bundle products as well as 
 
 The `setGiftOptionsOnCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-setGiftOptionsOnCart)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#setgiftoptionsoncart)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-setGiftOptionsOnCart)
+* [On-Premises/Cloud](/reference/graphql/index.md#setgiftoptionsoncart)
 
 ## Example usage
 
@@ -181,13 +180,13 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` table.
-`Field SetBillingAddressOnCartInput.cart_id of required type String! was not provided.` | The value specified in the `SetShippingAddressesOnCartInput`.`cart_id` argument is empty.
-`Field CartAddressInput.firstname of required type String! was not provided.` | The value specified in the `shipping_addresses`.`firstname` argument is empty.
-`Field CartAddressInput.lastname of required type String! was not provided.` | The value specified in the `shipping_addresses`.`lastname` argument is empty.
-`Field CartAddressInput.city of required type String! was not provided.` | The value specified in the `shipping_addresses`.`city` argument is empty.
-`Field CartAddressInput.street of required type String! was not provided.` | The value specified in the `shipping_addresses`.`street` argument is empty.
-`Field CartAddressInput.country_code of required type String! was not provided.` | The value specified in the `shipping_addresses`.`country_code` argument is empty.
-`Field SetBillingAddressOnCartInput.billing_address of required type BillingAddressInput! was not provided.` | The `shipping_addresses` input attribute of type `ShippingAddressInput` is missing.
+| Error | Description |
+| --- | --- |
+| `Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` table. |
+| `Field SetBillingAddressOnCartInput.cart_id of required type String! was not provided.` | The value specified in the `SetShippingAddressesOnCartInput`.`cart_id` argument is empty. |
+| `Field CartAddressInput.firstname of required type String! was not provided.` | The value specified in the `shipping_addresses`.`firstname` argument is empty. |
+| `Field CartAddressInput.lastname of required type String! was not provided.` | The value specified in the `shipping_addresses`.`lastname` argument is empty. |
+| `Field CartAddressInput.city of required type String! was not provided.` | The value specified in the `shipping_addresses`.`city` argument is empty. |
+| `Field CartAddressInput.street of required type String! was not provided.` | The value specified in the `shipping_addresses`.`street` argument is empty. |
+| `Field CartAddressInput.country_code of required type String! was not provided.` | The value specified in the `shipping_addresses`.`country_code` argument is empty. |
+| `Field SetBillingAddressOnCartInput.billing_address of required type BillingAddressInput! was not provided.` | The `shipping_addresses` input attribute of type `ShippingAddressInput` is missing. |

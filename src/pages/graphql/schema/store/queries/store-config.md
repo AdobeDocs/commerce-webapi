@@ -1,5 +1,6 @@
 ---
 title: storeConfig query
+description: The storeConfig query defines information about a store's configuration. You can query a non-default store by changing the header in your GraphQL request.
 ---
 
 # storeConfig query
@@ -14,9 +15,9 @@ The `storeConfig` query defines information about a store's configuration. You c
 
 The `storeConfig` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-storeConfig)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#storeconfig)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-storeConfig)
+* [On-Premises/Cloud](/reference/graphql/index.md#storeconfig)
 
 ## Example usage
 

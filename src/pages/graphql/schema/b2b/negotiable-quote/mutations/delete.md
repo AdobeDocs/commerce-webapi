@@ -1,12 +1,11 @@
 ---
 title: deleteNegotiableQuotes mutation
+description: The deleteNegotiableQuotes mutation causes the specified negotiable quotes to be invisible from the Admin or from the storefront. The quotes are still pres...
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # deleteNegotiableQuotes mutation
 
@@ -35,9 +34,9 @@ deleteNegotiableQuotes(
 
 The `deleteNegotiableQuotes` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-deleteNegotiableQuotes)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#deletenegotiablequotes)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-deleteNegotiableQuotes)
+* [On-Premises/Cloud](/reference/graphql/index.md#deletenegotiablequotes)
 
 The [`DeleteNegotiableQuoteOperationResult` union](../unions/index.md) is an output object that provides details about the result of a request to delete a negotiable quote. To return these details, specify fragments on the `DeleteNegotiableQuoteOperationFailure` and `NegotiableQuoteUidOperationSuccess` objects. Specify the `__typename` attribute to distinguish the object types in the response.
 

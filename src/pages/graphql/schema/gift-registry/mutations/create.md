@@ -1,11 +1,10 @@
 ---
 title: createGiftRegistry mutation
+description: The createGiftRegistry mutation creates a gift registry for the logged in customer.
 contributor_name: EY
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # createGiftRegistry mutation
 
@@ -42,9 +41,9 @@ mutation {
 
 The `createGiftRegistry` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-createGiftRegistry)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#creategiftregistry)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createGiftRegistry)
+* [On-Premises/Cloud](/reference/graphql/index.md#creategiftregistry)
 
 ## Example usage
 
@@ -212,3 +211,7 @@ mutation {
   }
 }
 ```
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+Thanks to EY for contributing this topic!

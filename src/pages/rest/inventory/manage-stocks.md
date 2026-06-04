@@ -4,8 +4,8 @@ description: Map your sources to sales channels and link to salable quantities a
 keywords:
   - Inventory
   - REST
---- 
- 
+---
+
 # Manage stocks
 
 Stocks map your sources to sales channels, providing a direct link to salable quantities and inventories.
@@ -32,13 +32,13 @@ GET /V1/inventory/stocks
 
 **StockInterface parameters:**
 
-Name | Description | Type | Requirements
---- | --- | --- | ---
-`stock_id` | An ID generated when a stock is created. | Integer | Required for PUT, DELETE, and GET operations
-`name` | The display name of the stock. | String | Required for POST and PUT operations
-`sales_channels` | Defines the sales channel for this stock. Currently, only websites are supported. | Array | Required for POST operations
-`type` | Defines the type of sales channel. This value must be `website`. | String | Required for POST operations
-`code` | Specifies a valid website code name | String | Required for POST operations
+| Name | Description | Type | Requirements |
+| --- | --- | --- | --- |
+| `stock_id` | An ID generated when a stock is created. | Integer | Required for PUT, DELETE, and GET operations |
+| `name` | The display name of the stock. | String | Required for POST and PUT operations |
+| `sales_channels` | Defines the sales channel for this stock. Currently, only websites are supported. | Array | Required for POST operations |
+| `type` | Defines the type of sales channel. This value must be `website`. | String | Required for POST operations |
+| `code` | Specifies a valid website code name | String | Required for POST operations |
 
 ## Create a stock
 
@@ -154,7 +154,7 @@ Commerce returns an empty array.
 
 The following call returns all stocks whose name contains the string `Stock`.
 
-See [Search using REST APIs](/rest/use-rest/performing-searches/) for information about constructing a search query.
+See [Search using REST APIs](/rest/use-rest/performing-searches.md) for information about constructing a search query.
 
 **Sample Usage:**
 
@@ -166,8 +166,7 @@ None
 
 **Response:**
 
-<details>
-      <summary><b>Show code sample</b></summary>
+<Details slots="content" summary="Show code sample" />
 
 ```json
 {
@@ -213,5 +212,3 @@ None
     "total_count": 2
 }
 ```
-
-</details>

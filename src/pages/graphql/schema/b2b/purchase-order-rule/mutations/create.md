@@ -1,12 +1,11 @@
 ---
 title: createPurchaseOrderApprovalRule mutation
+description: The createPurchaseOrderApprovalRule mutation creates a purchase order approval rule.
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # createPurchaseOrderApprovalRule mutation
 
@@ -40,9 +39,9 @@ mutation {
 
 The `createPurchaseOrderApprovalRule` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-createPurchaseOrderApprovalRule)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#createpurchaseorderapprovalrule)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createPurchaseOrderApprovalRule)
+* [On-Premises/Cloud](/reference/graphql/index.md#createpurchaseorderapprovalrule)
 
 ## Headers
 

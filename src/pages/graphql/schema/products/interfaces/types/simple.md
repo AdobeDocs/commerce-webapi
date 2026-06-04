@@ -1,5 +1,6 @@
 ---
 title: Simple product data types
+description: The SimpleProduct data type implements the following interfaces:
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
@@ -8,10 +9,10 @@ contributor_link: https://www.atwix.com/
 
 The `SimpleProduct` data type implements the following interfaces:
 
--  [ProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-ProductInterface)
--  [PhysicalProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-PhysicalProductInterface)
--  [CustomizableProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CustomizableProductInterface)
--  [RoutableInterface](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-RoutableInterface)
+-  [ProductInterface](/reference/graphql/index.md#productinterface)
+-  [PhysicalProductInterface](/reference/graphql/index.md#physicalproductinterface)
+-  [CustomizableProductInterface](/reference/graphql/index.md#customizableproductinterface)
+-  [RoutableInterface](/reference/graphql/index.md#routableinterface)
 
 Attributes that are specific to the simple products can be used when performing a [`products`](../../queries/products.md) query.
 
@@ -106,3 +107,7 @@ The following query returns information about simple product `24-MB01`, which is
 ## Related topics
 
 -  [addSimpleProductsToCart mutation](../../../cart/mutations/add-simple-products.md)
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

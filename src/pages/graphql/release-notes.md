@@ -9,7 +9,7 @@ keywords:
 
 <InlineAlert variant="info" slots="text" />
 
-As of Adobe Commerce and Magento Open Source 2.4.1, the GraphQL release notes are included in the [Adobe Commerce and Magento Open Source Release Notes](https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html).
+As of Adobe Commerce and Magento Open Source 2.4.1, the GraphQL release notes are included in the [Adobe Commerce and Magento Open Source Release Notes](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/overview).
 
 GraphQL is a flexible and performant API that allows you to build custom front-ends, including headless storefronts, [Progressive Web Apps](https://github.com/magento/pwa-studio) (PWA), and mobile apps for Magento.
 
@@ -21,9 +21,9 @@ To take part and contribute, see the [magento2](https://github.com/magento/magen
 
 -  **Added the [`categories` query](schema/products/queries/categories.md) returns a list of categories that match a specified filter.** This query differs from the `categoryList` query in that it supports pagination.
 
--  **Added the [`pickupLocations` query](schema//cart/queries/pickup-locations.md).** When the Inventory in-store pickup feature is enabled, this query allows the shopper to select a pickup location. The `pickup_location_code` attribute has been added to the [`setShippingAddressesOnCart` mutation](schema/cart/mutations/set-shipping-address.md) to specify which source will serve as the pickup location.
+-  **Added the [`pickupLocations` query](schema/cart/queries/pickup-locations.md).** When the Inventory in-store pickup feature is enabled, this query allows the shopper to select a pickup location. The `pickup_location_code` attribute has been added to the [`setShippingAddressesOnCart` mutation](schema/cart/mutations/set-shipping-address.md) to specify which source will serve as the pickup location.
 
-The [Magento Open Source 2.4.0 Release Notes](https://experienceleague.adobe.com/docs/commerce-operations/release/notes/magento-open-source/2-4-0.html#graphql) and [Adobe Commerce 2.4.0 Release Notes](https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-0.html#graphql) list the bug fixes.
+The [Magento Open Source 2.4.0 Release Notes](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/magento-open-source/2-4-0#graphql) and [Adobe Commerce 2.4.0 Release Notes](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-0#graphql) list the bug fixes.
 
 ## Adobe Commerce and Magento Open Source 2.3.5
 
@@ -47,11 +47,11 @@ The [Magento Open Source 2.4.0 Release Notes](https://experienceleague.adobe.com
 
 The following queries and mutations have been deprecated:
 
-Deprecated entity | Use this instead
---- | ---
-`category` query | `categoryList` query
-`setPaymentMethodOnCartAndPlaceOrder` mutation | Run the `setPaymentMethodOnCart` and `placeOrder` mutations in the same request
-`wishlist` query | `customer` query
+| Deprecated entity | Use this instead |
+| --- | --- |
+| `category` query | `categoryList` query |
+| `setPaymentMethodOnCartAndPlaceOrder` mutation | Run the `setPaymentMethodOnCart` and `placeOrder` mutations in the same request |
+| `wishlist` query | `customer` query |
 
 ## Adobe Commerce and Magento Open Source 2.3.3
 

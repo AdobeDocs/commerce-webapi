@@ -1,5 +1,6 @@
 ---
 title: GraphQL schema
+description: We have reorganized the Adobe Commerce and Magento Open Source GraphQL reference documentation to make it easier to find related queries, mutations, interf...
 ---
 
 # GraphQL schema

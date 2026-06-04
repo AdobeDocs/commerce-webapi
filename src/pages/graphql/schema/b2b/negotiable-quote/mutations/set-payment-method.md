@@ -1,12 +1,11 @@
 ---
 title: setNegotiableQuotePaymentMethod mutation
+description: The setNegotiableQuotePaymentMethod mutation defines which payment method to apply to the cart. The negotiable quote must be in the UPDATED state to succes...
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # setNegotiableQuotePaymentMethod mutation
 
@@ -26,13 +25,13 @@ Supported online payment methods include:
 
 The following offline payment methods are also supported:
 
-Title | Code
---- | ---
-Bank Transfer Payment | `banktransfer`
-Cash on Delivery | `cashondelivery`
-Check / Money order | `checkmo`
-No Payment Information Required | `free`
-Purchase Order | `purchaseorder`
+| Title | Code |
+| --- | --- |
+| Bank Transfer Payment | `banktransfer` |
+| Cash on Delivery | `cashondelivery` |
+| Check / Money order | `checkmo` |
+| No Payment Information Required | `free` |
+| Purchase Order | `purchaseorder` |
 
 This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
 
@@ -50,9 +49,9 @@ This mutation requires a valid [customer authentication token](../../../customer
 
 The `setNegotiableQuotePaymentMethod` reference provides detailed information about the types and fields defined in this mutation.
 
-- &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-setNegotiableQuotePaymentMethod)
+- [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#setnegotiablequotepaymentmethod)
 
-- &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-setNegotiableQuotePaymentMethod)
+- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](/reference/graphql/index.md#setnegotiablequotepaymentmethod)
 
 ## Example usage
 

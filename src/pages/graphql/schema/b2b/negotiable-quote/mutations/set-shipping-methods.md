@@ -1,26 +1,25 @@
 ---
 title: setNegotiableQuoteShippingMethods mutation
+description: The setNegotiableQuoteShippingMethods mutation sets one or more delivery methods on a negotiable quote. By default, the following delivery methods are supp...
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # setNegotiableQuoteShippingMethods mutation
 
 The `setNegotiableQuoteShippingMethods` mutation sets one or more delivery methods on a negotiable quote. By default, the following delivery methods are supported:
 
-Label | Carrier code | Method code
---- | --- | ---
-DHL | dhl | Varies
-Federal Express | fedex | Varies
-Flat Rate | flatrate | flatrate
-Free Shipping | freeshipping | freeshipping
-Best Way | tablerate | bestway
-United Parcel Service | ups | Varies
-United States Postal Service | usps | Varies
+| Label | Carrier code | Method code |
+| --- | --- | --- |
+| DHL | dhl | Varies |
+| Federal Express | fedex | Varies |
+| Flat Rate | flatrate | flatrate |
+| Free Shipping | freeshipping | freeshipping |
+| Best Way | tablerate | bestway |
+| United Parcel Service | ups | Varies |
+| United States Postal Service | usps | Varies |
 
 The negotiable quote must be in the UPDATED state to successfully set a shipping address.
 
@@ -38,9 +37,9 @@ setNegotiableQuoteShippingMethods(
 
 The `setNegotiableQuoteShippingMethods` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-setNegotiableQuoteShippingMethods)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#setnegotiablequoteshippingmethods)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-setNegotiableQuoteShippingMethods)
+* [On-Premises/Cloud](/reference/graphql/index.md#setnegotiablequoteshippingmethods)
 
 ## Example usage
 

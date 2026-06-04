@@ -1,12 +1,11 @@
 ---
 title: rejectPurchaseOrders mutation
+description: The rejectPurchaseOrders mutation rejects one or more purchase orders. The specified purchase orders must have a status of PENDING.
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # rejectPurchaseOrders mutation
 
@@ -28,9 +27,9 @@ mutation {
 
 The `rejectPurchaseOrders` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-rejectPurchaseOrders)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#rejectpurchaseorders)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-rejectPurchaseOrders)
+* [On-Premises/Cloud](/reference/graphql/index.md#rejectpurchaseorders)
 
 ## Example usage
 

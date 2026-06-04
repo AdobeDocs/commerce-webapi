@@ -1,12 +1,11 @@
 ---
 title: validatePurchaseOrders mutation
+description: By default, Adobe Commerce validates purchase orders automatically. However, purchase orders can become stuck in certain circumstances, such as when the me...
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # validatePurchaseOrders mutation
 
@@ -30,9 +29,9 @@ mutation {
 
 The `validatePurchaseOrders` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-validatePurchaseOrders)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#validatepurchaseorders)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-validatePurchaseOrders)
+* [On-Premises/Cloud](/reference/graphql/index.md#validatepurchaseorders)
 
 ## Headers
 

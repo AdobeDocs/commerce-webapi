@@ -1,5 +1,6 @@
 ---
 title: Order mutations
+description: With the exception of the reorderItems mutation, the Orders mutations create and manage returns (RMAs). Use the requestReturn mutation to initiate an RMA....
 ---
 
 # Orders mutations

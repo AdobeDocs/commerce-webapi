@@ -11,8 +11,8 @@ The Adobe Commerce and Magento Open Source GraphQL API provides a flexible, powe
 
 See the following page for the full reference documentation for the Adobe Commerce and Magento Open Source GraphQL API schema:
 
-* &#8203;<Edition name="saas" />[GraphQL API reference](../../reference/graphql/saas/)
-* &#8203;<Edition name="paas" />[2.4.9 GraphQL API reference](../../reference/graphql/2.4.9/)
-* &#8203;<Edition name="paas" />[2.4.8 GraphQL API reference](../../reference/graphql/2.4.8/)
-* &#8203;<Edition name="paas" />[2.4.7 GraphQL API reference](../../reference/graphql/2.4.7/)
-* &#8203;<Edition name="paas" />[2.4.6 GraphQL API reference](../../reference/graphql/2.4.6/)
+* [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [GraphQL API reference](../../reference/graphql/saas/index.md)
+* [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [2.4.9 GraphQL API reference](../../reference/graphql/index.md)
+* [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [2.4.8 GraphQL API reference](../../reference/graphql/2-4-8/index.md)
+* [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [2.4.7 GraphQL API reference](../../reference/graphql/2-4-7/index.md)
+* [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [2.4.6 GraphQL API reference](../../reference/graphql/2-4-6/index.md)

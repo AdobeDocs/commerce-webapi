@@ -1,9 +1,11 @@
 ---
 title: addBundleProductsToCart mutation
+description: We recommend using the addProductsToCart mutation to add any type of product to the cart.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
-edition: paas
 ---
+
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # addBundleProductsToCart mutation
 
@@ -19,7 +21,7 @@ Use the `addBundleProductsToCart` mutation to add bundle products to a specific 
 
 ## Reference
 
-The [`addBundleProductsToCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addBundleProductsToCart) reference provides detailed information about the types and fields defined in this mutation.
+The [`addBundleProductsToCart`](/reference/graphql/index.md#addbundleproductstocart) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -215,12 +217,16 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` database table.
-`Could not find a product with SKU "XXX"` | A simple product with the SKU specified in the `data.sku` argument does not exist.
-`Required parameter "cart_id" is missing` | The `cart_id` argument is omitted or contains an empty value.
+| Error | Description |
+| --- | --- |
+| `Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` database table. |
+| `Could not find a product with SKU "XXX"` | A simple product with the SKU specified in the `data.sku` argument does not exist. |
+| `Required parameter "cart_id" is missing` | The `cart_id` argument is omitted or contains an empty value. |
 
 ## Related topics
 
 -  [Bundle product data types](../../products/interfaces/types/bundle.md)
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

@@ -6,9 +6,7 @@ keywords:
   - REST
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../includes/commerce-only.md"/>
 
 # Assign categories and products to a shared catalog
 
@@ -44,9 +42,9 @@ GET  /V1/sharedCatalog/:id/categories
 
 Although you can specify other parameters defined within a `categories` object, the `id` is the only one used to assign or unassign a category to a shared catalog.
 
-Name | Description | Format | Requirements
---- | --- | --- | ---
-`id` | The category ID number | integer | Required to assign or unassign a category
+| Name | Description | Format | Requirements |
+| --- | --- | --- | --- |
+| `id` | The category ID number | integer | Required to assign or unassign a category |
 
 ### Assign categories to shared catalog
 
@@ -168,9 +166,9 @@ GET  /V1/sharedCatalog/:id/products
 
 Although you can specify other parameters defined within a `products` object, the `sku` is the only one used to assign or unassign a product to a shared catalog.
 
-Name | Description | Format | Requirements
---- | --- | --- | ---
-`sku` | The product's SKU identifier | string | Required to assign or unassign a product to a shared catalog
+| Name | Description | Format | Requirements |
+| --- | --- | --- | --- |
+| `sku` | The product's SKU identifier | string | Required to assign or unassign a product to a shared catalog |
 
 ### Assign products to shared catalog
 

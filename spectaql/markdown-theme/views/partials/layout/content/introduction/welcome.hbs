@@ -1,0 +1,27 @@
+{{#if info.title}}
+# {{info.title}}
+
+{{/if}}
+{{#if info.description}}
+{{{info.description}}}
+{{/if}}
+{{#if (or url server servers)}}
+
+## API endpoint
+
+```text
+{{{generateApiEndpoints}}}
+```
+{{/if}}
+{{#if server.headers}}
+
+## Headers
+
+{{#each server.headers}}{{#unless required}}{{{comment}}}
+{{/unless}}{{/each}}{{/if}}
+{{#if info.version}}
+
+## Version
+
+{{info.version}}
+{{/if}}

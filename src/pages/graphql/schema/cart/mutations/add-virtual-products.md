@@ -1,7 +1,10 @@
 ---
 title: addVirtualProductsToCart mutation
-edition: paas
+description: We recommend using the addProductsToCart mutation to add any type of product to the cart.
+
 ---
+
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # addVirtualProductsToCart mutation
 
@@ -19,7 +22,7 @@ The `addVirtualProductsToCart` mutation allows you to add multiple virtual produ
 
 ## Reference
 
-The [`addVirtualProductsToCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addVirtualProductsToCart) reference provides detailed information about the types and fields defined in this mutation.
+The [`addVirtualProductsToCart`](/reference/graphql/index.md#addvirtualproductstocart) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -106,11 +109,11 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` table.
-`Could not find a product with SKU "YYY"` | A virtual product with the SKU specified in the `data`.`sku` argument does not exist.
-`Required parameter "cart_id" is missing` | The `cart_id` argument was omitted or contains an empty value.
-`Required parameter "cart_items" is missing` | The `cart_items` argument was omitted or contains an empty value.
-`The current user cannot perform operations on cart XXX` | An unauthorized user (guest) tried to add the product into a customer's cart, or an authorized user (customer) tried to add the product into the cart of another customer.
-`The product's required option(s) weren't entered. Make sure the options are entered and try again.` | A virtual product has customizable options that were not specified in the mutation, but are required for adding the product into the cart.
+| Error | Description |
+| --- | --- |
+| `Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` table. |
+| `Could not find a product with SKU "YYY"` | A virtual product with the SKU specified in the `data`.`sku` argument does not exist. |
+| `Required parameter "cart_id" is missing` | The `cart_id` argument was omitted or contains an empty value. |
+| `Required parameter "cart_items" is missing` | The `cart_items` argument was omitted or contains an empty value. |
+| `The current user cannot perform operations on cart XXX` | An unauthorized user (guest) tried to add the product into a customer's cart, or an authorized user (customer) tried to add the product into the cart of another customer. |
+| `The product's required option(s) weren't entered. Make sure the options are entered and try again.` | A virtual product has customizable options that were not specified in the mutation, but are required for adding the product into the cart. |

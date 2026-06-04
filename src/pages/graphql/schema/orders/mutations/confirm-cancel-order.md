@@ -1,5 +1,6 @@
 ---
 title: confirmCancelOrder mutation
+description: The confirmCancelOrder mutation allows a guest shopper to cancel an order by passing its encoded identifier and a confirmation key.
 ---
 
 # confirmCancelOrder mutation
@@ -24,9 +25,9 @@ The mutation returns an error if the order cannot be cancelled.
 
 The `confirmCancelOrder` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-confirmCancelOrder)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#confirmcancelorder)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-confirmCancelOrder)
+* [On-Premises/Cloud](/reference/graphql/index.md#confirmcancelorder)
 
 ## Example usage
 
@@ -72,4 +73,4 @@ mutation {
 
 ## Related topics
 
- * [`storeConfig` query](/src/pages/graphql/schema/store/queries/store-config.md#query-a-stores-order-cancellation-configuration) configuration example on `storeConfig` page.
+ * [`storeConfig` query](../../store/queries/store-config.md#query-a-stores-order-cancellation-configuration) configuration example on `storeConfig` page.

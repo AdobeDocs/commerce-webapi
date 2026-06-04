@@ -29,7 +29,7 @@ mutation {
 
 ## Reference
 
-The [`createVaultCardSetupToken`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createVaultCardSetupToken) reference provides detailed information about the types and fields defined in this mutation.
+The [`createVaultCardSetupToken`](/reference/graphql/index.md#createvaultcardsetuptoken) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -80,61 +80,61 @@ mutation {
 
 The `CreateVaultCardSetupTokenInput` object must contain the following attributes:
 
-Attribute |  Data Type | Description
---- | --- | ---
-`setup_token` | VaultSetupTokenInput! | The setup token information
-`three_ds_mode` | ThreeDSMode | Indicates which 3D Secure authentication mode is in use. The possible values are `OFF`, `SCA_ALWAYS`, `SCA_WHEN_REQUIRED`
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `setup_token` | VaultSetupTokenInput! | The setup token information |
+| `three_ds_mode` | ThreeDSMode | Indicates which 3D Secure authentication mode is in use. The possible values are `OFF`, `SCA_ALWAYS`, `SCA_WHEN_REQUIRED` |
 
 ### `ThreeDSMode` enum values
 
-Value | Description
---- | ---
-`OFF` | No 3D Secure authentication mode is in use
-`SCA_ALWAYS` | Triggers 3D Secure authentication for every transaction, regardless of any SCA requirements
-`SCA_WHEN_REQUIRED` | Returns a 3D Secure authentication when it is a mandate in the region where you operate. This is the default value
+| Value | Description |
+| --- | --- |
+| `OFF` | No 3D Secure authentication mode is in use |
+| `SCA_ALWAYS` | Triggers 3D Secure authentication for every transaction, regardless of any SCA requirements |
+| `SCA_WHEN_REQUIRED` | Returns a 3D Secure authentication when it is a mandate in the region where you operate. This is the default value |
 
 ### `VaultSetupTokenInput` attribute
 
 The `VaultSetupTokenInput` object describes the variables needed to create a vault card setup token. Requires the following attribute:
 
-Attribute |  Data Type | Description
---- | --- | ---
-`payment_source` | PaymentSourceInput! | The payment source of the payment method.
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `payment_source` | PaymentSourceInput! | The payment source of the payment method. |
 
 ### `PaymentSourceInput` attribute
 
 The `PaymentSourceInput` object describes the payment source information of the payment method.
 
-Attribute |  Data Type | Description
---- | --- | ---
-`card` | CardPaymentSourceInput! | The card payment source information.
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `card` | CardPaymentSourceInput! | The card payment source information. |
 
 ### `CardPaymentSourceInput` object
 
 The `CardPaymentSourceInput` object describes the card payment source information.
 
-Attribute |  Data Type | Description
---- | --- | ---
-`billing_address` | BillingAddressPaymentSourceInput! | The billing address of the card
-`name` | String! | The cardholder's name
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `billing_address` | BillingAddressPaymentSourceInput! | The billing address of the card |
+| `name` | String! | The cardholder's name |
 
 ### `BillingAddressPaymentSourceInput` object
 
 The `BillingAddressPaymentSourceInput` object includes the billing address information
 
-Attribute |  Data Type | Description
---- | --- | ---
-`address_line_1` | String | The first line of the address
-`address_line_2` | String | The second line of the address
-`region` | String | The region of the address
-`city` | String | The city of the address
-`postal_code` | String | The postal code of the address
-`country_code` | String! | The country code of the address
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `address_line_1` | String | The first line of the address |
+| `address_line_2` | String | The second line of the address |
+| `region` | String | The region of the address |
+| `city` | String | The city of the address |
+| `postal_code` | String | The postal code of the address |
+| `country_code` | String! | The country code of the address |
 
 ## Output attributes
 
 The `createVaultCardSetupTokenOutput` object contains the following attribute:
 
-Attribute |  Data Type | Description
---- | --- | ---
-`setup_token` | String! | The setup token ID
+| Attribute |  Data Type | Description |
+| --- | --- | --- |
+| `setup_token` | String! | The setup token ID |

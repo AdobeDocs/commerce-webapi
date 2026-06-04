@@ -1,5 +1,6 @@
 ---
 title: reorderItems mutation
+description: The reorderItems mutation allows a logged-in user to add all the products from a previous order into their cart. The Stores > Settings > Sales > Sales > Re...
 ---
 
 # reorderItems mutation
@@ -8,13 +9,13 @@ The `reorderItems` mutation allows a logged-in user to add all the products from
 
 The mutation returns an error if it cannot add a product to the customer's cart:
 
-Error code | Description
---- | ---
-INSUFFICIENT_STOCK | The requested quantity is greater than the available stock.
-NOT_SALABLE | The product is out of stock, disabled, or otherwise prevented from being sold.
-REORDER_NOT_AVAILABLE | Reorders have been disabled.
-PRODUCT_NOT_FOUND | The product has been deleted.
-UNDEFINED | An unknown error occurred.
+| Error code | Description |
+| --- | --- |
+| INSUFFICIENT_STOCK | The requested quantity is greater than the available stock. |
+| NOT_SALABLE | The product is out of stock, disabled, or otherwise prevented from being sold. |
+| REORDER_NOT_AVAILABLE | Reorders have been disabled. |
+| PRODUCT_NOT_FOUND | The product has been deleted. |
+| UNDEFINED | An unknown error occurred. |
 
 The `reorderItems` mutation will not add any products to the cart if it encounters the REORDER_NOT_AVAILABLE error. For any other error code, the mutation will add the product to the cart, if possible, and it will continue adding other products, if applicable.
 
@@ -26,20 +27,20 @@ The `reorderItems` mutation will not add any products to the cart if it encounte
 
 The `reorderItems` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-reorderItems)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#reorderitems)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-reorderItems)
+* [On-Premises/Cloud](/reference/graphql/index.md#reorderitems)
 
 ## Example usage
 
 In the following example, the customer previously created an order containing the following items:
 
-Item Name | SKU | Quantity Ordered
---- | --- | ---
-Aeon Capri | WP07-29-Black | 3
-Dual Handle Cardio Ball | 24-UG07 | 1
-Elisa EverCool Tee | WS06-S-Gray | 1
-Sprite Foam Yoga Brick | 24-WG084 | 1
+| Item Name | SKU | Quantity Ordered |
+| --- | --- | --- |
+| Aeon Capri | WP07-29-Black | 3 |
+| Dual Handle Cardio Ball | 24-UG07 | 1 |
+| Elisa EverCool Tee | WS06-S-Gray | 1 |
+| Sprite Foam Yoga Brick | 24-WG084 | 1 |
 
 The customer wants to reorder these items, but the status of some of these items has changed:
 

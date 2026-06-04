@@ -1,7 +1,10 @@
 ---
 title: createCustomer mutation
-edition: paas
+description: We recommend using the createCustomerV2 mutation to create a customer.
+
 ---
+
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # createCustomer mutation
 
@@ -13,7 +16,7 @@ The `createCustomer` mutation creates a new customer.
 
 In keeping with current security and privacy best practices, if you include the `date_of_birth` input attribute, be sure you are aware of any potential legal and security risks associated with the storage of customers' full date of birth (month, day, year) along with other personal identifiers, such as full name, before collecting or processing such data.
 
-To return or modify information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session).
+To return or modify information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](/get-started/authentication/gs-authentication-session.md).
 
 ## Syntax
 
@@ -21,7 +24,7 @@ To return or modify information about a customer, we recommend you use customer 
 
 ## Reference
 
-The [`createCustomer`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createCustomer) reference provides detailed information about the types and fields defined in this mutation.
+The [`createCustomer`](/reference/graphql/index.md#createcustomer) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -69,13 +72,13 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`A customer with the same email address already exists in an associated website.` | The email provided in the `input`.`email` argument belongs to an existing customer.
-`"Email" is not a valid email address.` | The value provided in the `input`.`email` argument has an invalid format.
-`Field CustomerInput.email of required type String! was not provided` | The `input`.`email` argument was omitted.
-`Field "xxx" is not defined by type CustomerInput.` | The `input`.`xxx` argument is undefined.
-`Required parameters are missing: First Name` | The `input`.`firstname` argument was omitted or contains an empty value.
+| Error | Description |
+| --- | --- |
+| `A customer with the same email address already exists in an associated website.` | The email provided in the `input`.`email` argument belongs to an existing customer. |
+| `"Email" is not a valid email address.` | The value provided in the `input`.`email` argument has an invalid format. |
+| `Field CustomerInput.email of required type String! was not provided` | The `input`.`email` argument was omitted. |
+| `Field "xxx" is not defined by type CustomerInput.` | The `input`.`xxx` argument is undefined. |
+| `Required parameters are missing: First Name` | The `input`.`firstname` argument was omitted or contains an empty value. |
 
 ## Related topics
 

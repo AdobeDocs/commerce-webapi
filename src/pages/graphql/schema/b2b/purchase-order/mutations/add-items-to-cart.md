@@ -1,12 +1,11 @@
 ---
 title: addPurchaseOrderItemsToCart mutation
+description: The addPurchaseOrderItemsToCart mutation adds all purchase order items to the shopping cart. The request must specify a cartid and a purchaseorderuid. If t...
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # addPurchaseOrderItemsToCart mutation
 
@@ -28,9 +27,9 @@ mutation {
 
 The `addPurchaseOrderItemsToCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-addPurchaseOrderItemsToCart)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#addpurchaseorderitemstocart)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addPurchaseOrderItemsToCart)
+* [On-Premises/Cloud](/reference/graphql/index.md#addpurchaseorderitemstocart)
 
 ## Example usage
 

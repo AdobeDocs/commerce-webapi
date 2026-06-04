@@ -1,5 +1,6 @@
 ---
 title: AttributeMetadataInterface
+description: This interface is available only if you have installed the PWA Metapackage for Magento Open Source Extensions. This metapackage has been deprecated.
 ---
 
 # AttributeMetadataInterface
@@ -12,6 +13,4 @@ The `AttributeMetadataInterface` data type defines properties of custom attribut
 
 ## AttributeMetadataInterface object
 
-import AttributeMetadata from '/src/_includes/graphql/attribute-metadata.md'
-
-<AttributeMetadata />
+<Fragment src="../../../../includes/graphql/attribute-metadata.md"/>

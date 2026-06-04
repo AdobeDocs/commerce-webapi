@@ -1,10 +1,9 @@
 ---
 title: copyProductsBetweenWishlists mutation
+description: The copyProductsBetweenWishlists mutation copies the specified quantities of one or more products to a different wish list. The original wish list is uncha...
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # copyProductsBetweenWishlists mutation
 
@@ -32,9 +31,9 @@ mutation {
 
 The `copyProductsBetweenWishlists` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-copyProductsBetweenWishlists)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#copyproductsbetweenwishlists)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-copyProductsBetweenWishlists)
+* [On-Premises/Cloud](/reference/graphql/index.md#copyproductsbetweenwishlists)
 
 ## Example usage
 

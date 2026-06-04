@@ -54,7 +54,7 @@ mutation {
 
 You can now use this token in the Authorization request header field for any queries and mutations.
 
-![GraphQL Authorization Bearer](../../_images/graphql/graphql-authorization.png)
+![GraphQL Authorization Bearer](../../images/graphql/graphql-authorization.png)
 
 You can also [revoke the customer's token](../schema/customer/mutations/revoke-token.md) when the customer logs out or changes their password.
 
@@ -89,7 +89,7 @@ mutation{
 
 In Adobe Commerce and Magento Open Source GraphQL, you specify an admin token only if you need to query products, categories, price rules, or other entities that are scheduled to be in a campaign (staged content). Staging is supported in Adobe Commerce only. See [Staging queries](staging-queries.md) for more information.
 
-Adobe Commerce and Magento Open Source do not provide a GraphQL mutation that generates an admin token. You must use a REST endpoint such as `POST /V1/tfa/provider/google/authenticate` instead. [Generate the admin token](https://developer.adobe.com/commerce/webapi/rest/tutorials/prerequisite-tasks/) shows how to use this endpoint.
+Adobe Commerce and Magento Open Source do not provide a GraphQL mutation that generates an admin token. You must use a REST endpoint such as `POST /V1/tfa/provider/google/authenticate` instead. [Generate the admin token](/rest/tutorials/prerequisite-tasks/index.md) shows how to use this endpoint.
 
 By default, an admin token is valid for 4 hours. You can change these values from Admin by selecting **Stores** > **Settings** > **Configuration** > **Services** > **OAuth** > **Access Token Expiration** > **Admin Token Lifetime**.
 
@@ -108,3 +108,7 @@ Run the following command to disable session cookies for GraphQL:
 To re-enable these cookies, run:
 
 `bin/magento config:set graphql/session/disable 0`
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

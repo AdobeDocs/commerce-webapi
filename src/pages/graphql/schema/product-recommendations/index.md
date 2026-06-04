@@ -12,4 +12,4 @@ Product Recommendations is a service that suggests products based on the browsin
 
 The `recommendations` query returns recommended products based on the provided SKU.
 
-Read more in the [Introduction to Product Recommendations](https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/overview.html).
+Read more in the [Introduction to Product Recommendations](https://experienceleague.adobe.com/en/docs/commerce/product-recommendations/overview).

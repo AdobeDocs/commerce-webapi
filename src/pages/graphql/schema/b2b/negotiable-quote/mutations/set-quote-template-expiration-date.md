@@ -1,13 +1,13 @@
 ---
 title: setQuoteTemplateExpirationDate mutation
-edition: saas
+description: This mutation is part of the B2B Storefront Compatibility Package and is only available on Adobe Commerce as a Cloud Service.
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
+<Fragment src="../../../../../includes/saas-only.md"/>
 
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # setQuoteTemplateExpirationDate mutation
 
@@ -29,7 +29,7 @@ The `setQuoteTemplateExpirationDate` mutation can be used to set an expiration d
 
 ## Reference
 
-The [`setQuoteTemplateExpirationDate`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-setQuoteTemplateExpirationDate) reference provides detailed information about the types and fields defined in this mutation.
+The [`setQuoteTemplateExpirationDate`](/reference/graphql/saas/index.md#setquotetemplateexpirationdate) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

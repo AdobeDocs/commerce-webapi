@@ -17,7 +17,7 @@ You can connect to the Live Search GraphQL endpoint to test sample queries using
 
 -  Through a standalone version of GraphQL Playground, or any other IDE, such as GraphiQL or Postman. In these applications you must specify the endpoint URL and provide a set of HTTP headers for each call.
 
-For instructions on how to install and implement this product, see [Introduction to Live Search](https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/overview.html).
+For instructions on how to install and implement this product, see [Introduction to Live Search](https://experienceleague.adobe.com/en/docs/commerce/live-search/overview).
 
 ## Error Codes
 
@@ -26,7 +26,7 @@ The Live Search queries can return the following error codes when a query encoun
 |**Error Code**|**Description**|
 |---|---|
 |1000 |Catches any other error that is not recognized by the service.|
-|1001 |`index_not_found_exception`<br />Live Search exception message.|
-|1002 |`search_phase_execution_exception`<br />Live Search exception message.|
-|1003 |`mapper_parsing_exception`<br />Live Search exception message.|
-|1004 |`invalid_argument_exception`<br /> The request has an invalid argument.|
+|1001 |`index_not_found_exception`\<br /\>Live Search exception message.|
+|1002 |`search_phase_execution_exception`\<br /\>Live Search exception message.|
+|1003 |`mapper_parsing_exception`\<br /\>Live Search exception message.|
+|1004 |`invalid_argument_exception`\<br /\> The request has an invalid argument.|

@@ -1,7 +1,10 @@
 ---
 title: categoryList query
-edition: paas
+description: The categoryList query searches for categories that match the criteria specified in filters. It replaces the deprecated category query, which allowed you t...
+
 ---
+
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # categoryList query
 
@@ -39,7 +42,7 @@ categoryList (
 
 ## Reference
 
-The [`categoryList`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-categoryList) reference provides detailed information about the types and fields defined in this query.
+The [`categoryList`](/reference/graphql/index.md#categorylist) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

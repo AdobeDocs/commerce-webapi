@@ -11,13 +11,13 @@ keywords:
 
 Adobe Commerce provides two comprehensive GraphQL implementations that serve as the ideal foundation for building next-generation commerce experiences, including [headless storefronts](https://experienceleague.adobe.com/developer/commerce/storefront/get-started/) and sophisticated mobile applications.
 
--  Adobe Commerce on Cloud and on-premises (PaaS) projects can implement the GraphQL schemas that have long been available to Adobe Commerce and Magento Open Source projects. Separate schemas are available for [core and B2B Commerce](../reference/graphql/2.4.8/index.md) functionality and service-based features, including [Catalog Service](./schema/catalog-service/index.md), [Live Search](./schema/live-search/index.md), and [Recommendations](./schema/product-recommendations/index.md). These schemas do not natively interact, but can be integrated with [API Mesh](https://developer.adobe.com/graphql-mesh-gateway/).
+-  Adobe Commerce on Cloud and on-premises (PaaS) projects can implement the GraphQL schemas that have long been available to Adobe Commerce and Magento Open Source projects. Separate schemas are available for [core and B2B Commerce](../reference/graphql/2-4-8/index.md) functionality and service-based features, including [Catalog Service](schema/catalog-service/index.md), [Live Search](schema/live-search/index.md), and [Recommendations](schema/product-recommendations/index.md). These schemas do not natively interact, but can be integrated with [API Mesh](https://developer.adobe.com/graphql-mesh-gateway/).
 
-- [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/reference/graphql/saas/) (SaaS) projects can connect to a supergraph that not only combines and streamlines the schemas available to PaaS projects, but provides instant access to the latest features added in the [Storefront Compatability Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/configuration/storefront-compatibility/v248/) and other sources. Therefore, SaaS projects can take advantage of the latest GraphQL features without needing to wait for a new release.
+- [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md) (SaaS) projects can connect to a supergraph that not only combines and streamlines the schemas available to PaaS projects, but provides instant access to the latest features added in the [Storefront Compatability Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/configuration/storefront-compatibility/v248/) and other sources. Therefore, SaaS projects can take advantage of the latest GraphQL features without needing to wait for a new release.
 
 <InlineAlert variant="info" slots="text"/>
 
-If you are migrating from PaaS to SaaS, be aware that the SaaS schema removes all deprecated queries, mutations, and fields, so you can build new applications without worrying about future deprecations. It also replaces the core `products` and `categories` queries with their service-based equivalents, also named [`products`](./schema/catalog-service/queries/products.md) and [`categories`](./schema/catalog-service/queries/categories.md). The service-based queries are not backward compatible with the core queries, so you must update your applications to use the new queries. For more information, see [Migrate to Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/migration/overview) for general guidelines.
+If you are migrating from PaaS to SaaS, be aware that the SaaS schema removes all deprecated queries, mutations, and fields, so you can build new applications without worrying about future deprecations. It also replaces the core `products` and `categories` queries with their service-based equivalents, also named [`products`](schema/catalog-service/queries/products.md) and [`categories`](schema/catalog-service/queries/categories.md). The service-based queries are not backward compatible with the core queries, so you must update your applications to use the new queries. For more information, see [Migrate to Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/migration/overview) for general guidelines.
 
 ## Why use GraphQL?
 
@@ -35,14 +35,13 @@ Ready to experience the power of Adobe Commerce GraphQL? Here's how to get start
 
    - [GraphiQL](https://github.com/graphql/graphiql)
    - [Altair GraphQL client](https://altairgraphql.dev/)
-   - [Altair Chrome extension](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja)
+   - [Altair Chrome extension](https://chromewebstore.google.com/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja)
    - [Apollo Studio](https://studio.apollographql.com/)
 
 1. Access your GraphQL endpoint. Your Adobe Commerce GraphQL endpoint is available at:
 
-   &#8203;<Edition name="paas" /> `https://<commerce-server>/graphql`
-
-   &#8203;<Edition name="saas" /> `https://<region>-<environment>.api.commerce.adobe.com/<tenantId>/graphql`
+   - [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) `https://<commerce-server>/graphql`
+   - [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) `https://<region>-<environment>.api.commerce.adobe.com/<tenantId>/graphql`
 
 1. Explore the schema. Use the schema browser in your GraphQL IDE or extension to explore the available queries, mutations, and types. This will help you understand the structure of the API and how to construct your requests. You can also use introspection queries to discover the schema programmatically.
 

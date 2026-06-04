@@ -1,12 +1,11 @@
 ---
 title: negotiableQuotes query   
+description: The negotiableQuotes query returns a list of negotiable quotes that can be viewed by the logged-in customer, including quotes created by the customer or by...
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # negotiableQuotes query
 
@@ -30,9 +29,9 @@ This query requires a valid [customer authentication token](../../../customer/mu
 
 The `negotiableQuotes` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-negotiableQuotes)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#negotiablequotes)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-negotiableQuotes)
+* [On-Premises/Cloud](/reference/graphql/index.md#negotiablequotes)
 
 ## Example usage
 
@@ -99,7 +98,7 @@ query {
 
 ### Retrieve attachments associated with comments on quotes
 
-<Edition name="saas" />
+<Fragment src="../../../../../includes/saas-only.md"/>
 
 The following example returns detailed information about all negotiable quotes that are accessible to the company user, including any attachments associated with comments on the quotes.
 

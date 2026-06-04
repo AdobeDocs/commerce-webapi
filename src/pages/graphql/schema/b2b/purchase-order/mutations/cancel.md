@@ -1,12 +1,11 @@
 ---
 title: cancelPurchaseOrders mutation
+description: The cancelPurchaseOrders mutation cancels the specified purchase orders. If the request is successful, the status of each purchase order is CANCELED.
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # cancelPurchaseOrders mutation
 
@@ -28,9 +27,9 @@ mutation {
 
 The `cancelPurchaseOrders` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-cancelPurchaseOrders)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#cancelpurchaseorders)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-cancelPurchaseOrders)
+* [On-Premises/Cloud](/reference/graphql/index.md#cancelpurchaseorders)
 
 ## Example usage
 

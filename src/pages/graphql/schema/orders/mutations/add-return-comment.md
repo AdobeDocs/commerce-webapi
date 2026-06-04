@@ -1,5 +1,6 @@
 ---
 title: addReturnComment mutation
+description: The addReturnComment mutation adds a comment to an existing return request.
 ---
 
 # addReturnComment mutation
@@ -18,9 +19,9 @@ mutation: {
 
 The `addReturnComment` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-addReturnComment)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#addreturncomment)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-addReturnComment)
+* [On-Premises/Cloud](/reference/graphql/index.md#addreturncomment)
 
 ## Example usage
 

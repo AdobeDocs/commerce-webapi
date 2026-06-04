@@ -1,7 +1,10 @@
 ---
 title: isSubscribedProductAlertStock query
-edition: saas
+description: The isSubscribedProductAlertStock query checks whether the logged-in customer is subscribed to a stock availability alert for the specified product. Use th...
+
 ---
+
+<Fragment src="../../../../includes/saas-only.md"/>
 
 # isSubscribedProductAlertStock query
 
@@ -21,7 +24,7 @@ This query requires a valid [customer authentication token](../../customer/mutat
 
 ## Reference
 
-The [`isSubscribedProductAlertStock`](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-isSubscribedProductAlertStock) reference provides detailed information about the types and fields defined in this query.
+The [`isSubscribedProductAlertStock`](/reference/graphql/saas/index.md#issubscribedproductalertstock) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -68,11 +71,11 @@ The following example checks whether the logged-in customer is subscribed to a s
 
 ## Errors
 
-Error | Description
---- | ---
-`Customer is not logged in.` | The request does not include a valid customer authentication token.
-`Required parameter "sku" is missing.` | The `sku` field was not provided in the input.
-`Unable to check if subscribed to stock alert. No such entity.` | No product exists with the specified SKU.
+| Error | Description |
+| --- | --- |
+| `Customer is not logged in.` | The request does not include a valid customer authentication token. |
+| `Required parameter "sku" is missing.` | The `sku` field was not provided in the input. |
+| `Unable to check if subscribed to stock alert. No such entity.` | No product exists with the specified SKU. |
 
 ## Related topics
 

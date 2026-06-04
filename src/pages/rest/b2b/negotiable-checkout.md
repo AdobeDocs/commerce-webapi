@@ -6,11 +6,8 @@ keywords:
   - REST
 ---
 
-import * as Vars from '../../../data/vars.js';
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../includes/commerce-only.md"/>
 
 # Negotiable quote checkout
 
@@ -20,9 +17,9 @@ During the standard checkout process, Adobe Commerce refreshes and recalculates 
 
 The same rule is applied when the quote has the proposed shipping price and the shipping taxes change on the checkout. The buyer pays the updated price, but this does not affect the other quote amounts.
 
-The following diagram illustrates the workflow for <Vars.sitedatavarb2b/> negotiable quote checkouts:
+The following diagram illustrates the workflow for B2B for Adobe Commerce negotiable quote checkouts:
 
-![Checkout process](/../../_images/quote-checkout-process.png)
+![Checkout process](../../images/quote-checkout-process.png)
 
 ## Manage shipping addresses
 

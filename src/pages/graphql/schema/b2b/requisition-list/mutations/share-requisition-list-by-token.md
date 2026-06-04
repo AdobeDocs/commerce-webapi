@@ -1,13 +1,13 @@
 ---
 title: shareRequisitionListByToken mutation
-edition: saas
+description: This mutation is part of the B2B Storefront Compatibility Package and is only available on Adobe Commerce as a Cloud Service.
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
+<Fragment src="../../../../../includes/saas-only.md"/>
 
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # shareRequisitionListByToken mutation
 
@@ -29,7 +29,7 @@ The `shareRequisitionListByToken` mutation enables B2B customers to share a requ
 
 [//]: # (## Reference)
 [//]: # ()
-[//]: # (The [`shareRequisitionListByToken`]&#40;https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-shareRequisitionListByToken&#41; reference provides detailed information about the types and fields defined in this mutation.)
+[//]: # (The [`shareRequisitionListByToken`]&#40;/reference/graphql/saas/index.md#sharerequisitionlistbytoken&#41; reference provides detailed information about the types and fields defined in this mutation.)
 
 ## Example usage
 

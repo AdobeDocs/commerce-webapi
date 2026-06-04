@@ -3,11 +3,12 @@ title: Step 5. Set billing address
 description: Learn how to set a billing address for an order with the GraphQL API.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
-edition: paas
 keywords:
   - GraphQL
   - Checkout
 ---
+
+<Fragment src="../../../includes/paas-only.md"/>
 
 # Step 5. Set billing address
 
@@ -19,7 +20,7 @@ Use the [setBillingAddressOnCart](../../schema/cart/mutations/set-billing-addres
 
 ## Add a billing address to the cart
 
-Similar to the shipping address, add a billing address to the cart. `{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](../../tutorials/checkout/add-product-to-cart.md). The street address is also different, so we can see that different addresses are being created.
+Similar to the shipping address, add a billing address to the cart. `{ CART_ID }` is the unique shopping cart ID from [Step 2. Create empty cart](add-product-to-cart.md). The street address is also different, so we can see that different addresses are being created.
 
 Send the customer's authorization token in the `Authorization` parameter of the header. See [Authorization tokens](../../usage/authorization-tokens.md) for more information.
 
@@ -105,10 +106,14 @@ mutation {
 
 ## Verify this step
 
-Verification is possible after [Step 6: Set the delivery method](../../tutorials/checkout/set-delivery-method.md).
+Verification is possible after [Step 6: Set the delivery method](set-delivery-method.md).
 
 1. Sign in as a customer to the website using the email `john.doe@example.com` and password `b1b2b3l@w+`.
 
 1. Go to Checkout.
 
 1. Go to the Review & Payments step. The Billing Address form is populated with the address details you entered.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

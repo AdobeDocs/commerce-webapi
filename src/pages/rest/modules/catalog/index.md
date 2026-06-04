@@ -1,11 +1,12 @@
 ---
 title: Catalog module
 description: Create and maintain products and categories with the Catalog module.
-edition: paas
 keywords:
   - REST
---- 
- 
+---
+
+<Fragment src="../../../includes/paas-only.md"/>
+
 # Catalog module
 
 The `Catalog` module provides functionality for creating and maintaining products and categories.

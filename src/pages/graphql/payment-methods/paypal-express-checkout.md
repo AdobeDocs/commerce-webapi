@@ -19,21 +19,17 @@ Some alternate PayPal solutions have the same GraphQL workflow when Express Chec
 
 The following diagram shows the workflow for placing an order when PayPal Express Checkout is the selected payment method.
 
-![PayPal Express Checkout sequence diagram](../../_images/graphql/paypal-express-checkout.svg)
+![PayPal Express Checkout sequence diagram](../../images/graphql/paypal-express-checkout.png)
 
 The following steps describe the flow of calls required to complete a typical PayPal Express Checkout authorization. A successful purchase requires that you send three mutations to PayPal, and the buyer must approve the purchase by logging in to PayPal.
 
-import PaypalExpressCheckoutWorkflow from '/src/_includes/graphql/payment-methods/paypal-express-checkout-workflow.md'
-
-<PaypalExpressCheckoutWorkflow />
+<Fragment src="../../includes/graphql/payment-methods/paypal-express-checkout-workflow.md"/>
 
 ## `setPaymentMethodOnCart` mutation
 
 When you set the payment method to Express Checkout, you must set the `code` attribute to `paypal_express`. In addition, the payload must contain a `paypal_express` object, which defines the following attributes:
 
-import PaypalExpressCheckoutAttributes from '/src/_includes/graphql/payment-methods/paypal-express-checkout-attributes.md'
-
-<PaypalExpressCheckoutAttributes />
+<Fragment src="../../includes/graphql/payment-methods/paypal-express-checkout-attributes.md"/>
 
 ### Example usage
 

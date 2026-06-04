@@ -1,5 +1,6 @@
 ---
 title: updateCartItems mutation
+description: The updateCartItems mutation allows you to modify items in the specified cart. You can also replace the current quantity of one or more cart items with the...
 ---
 
 # updateCartItems mutation
@@ -18,9 +19,9 @@ Setting the quantity to `0` removes an item from the cart.
 
 The `updateCartItems` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-updateCartItems)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#updatecartitems)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateCartItems)
+* [On-Premises/Cloud](/reference/graphql/index.md#updatecartitems)
 
 ## Example usage
 
@@ -113,11 +114,11 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Could not find cart item with id: XXX` | The specified `input`.`cart_items`.`cart_item_id` value does not exist in the `quote_item` database table.
-`Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` database table.
-`Required parameter "cart_id" is missing.` | The value specified in the `cart_id` argument is empty.
-`Required parameter "cart_items" is missing.` | The `cart_items` argument is empty, or its value is specified as a non-array value.
-`Required parameter "quantity" for "cart_items" is missing.` | The required `input`.`cart_items`.`quantity` argument must be specified.
-`The current user cannot perform operations on cart "XXX"` | An unauthorized user (guest) tried to update a customer's cart, or an authorized user (customer) tried to update the cart of another customer.
+| Error | Description |
+| --- | --- |
+| `Could not find cart item with id: XXX` | The specified `input`.`cart_items`.`cart_item_id` value does not exist in the `quote_item` database table. |
+| `Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` database table. |
+| `Required parameter "cart_id" is missing.` | The value specified in the `cart_id` argument is empty. |
+| `Required parameter "cart_items" is missing.` | The `cart_items` argument is empty, or its value is specified as a non-array value. |
+| `Required parameter "quantity" for "cart_items" is missing.` | The required `input`.`cart_items`.`quantity` argument must be specified. |
+| `The current user cannot perform operations on cart "XXX"` | An unauthorized user (guest) tried to update a customer's cart, or an authorized user (customer) tried to update the cart of another customer. |

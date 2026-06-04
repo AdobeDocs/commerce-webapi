@@ -1,7 +1,10 @@
 ---
 title: productReviewRatingsMetadata query
-edition: paas
+description: The productReviewRatingsMetadata query returns the active ratings attributes and the values each rating can have. In Luma, these values are one star throug...
+
 ---
+
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # productReviewRatingsMetadata query
 
@@ -15,7 +18,7 @@ Use the [`createProductReview` mutation](../mutations/create-review.md) to add a
 
 ## Reference
 
-The [`productReviewRatingsMetadata`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-productReviewRatingsMetadata) reference provides detailed information about the types and fields defined in this query.
+The [`productReviewRatingsMetadata`](/reference/graphql/index.md#productreviewratingsmetadata) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

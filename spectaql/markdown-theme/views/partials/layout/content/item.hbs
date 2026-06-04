@@ -1,0 +1,23 @@
+{{#unless hideInContent}}
+{{#if makeContentSection}}
+
+## {{name}}
+{{#if description}}
+
+{{{description}}}
+{{/if}}
+{{else}}
+{{#if isQuery}}
+{{>graphql/query}}
+{{else if isMutation}}
+{{>graphql/mutation}}
+{{else if isSubscription}}
+{{>graphql/subscription}}
+{{else if isType}}
+{{>graphql/type}}
+{{/if}}
+{{/if}}
+{{/unless}}
+{{#each items}}
+{{>layout/content/item}}
+{{/each}}

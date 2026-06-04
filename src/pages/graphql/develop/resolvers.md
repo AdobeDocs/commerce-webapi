@@ -11,13 +11,13 @@ A resolver performs GraphQL request processing. In general, it is responsible fo
 
 A GraphQL request is represented by the following arguments, which will be processed by a resolver:
 
-Field | Type | Description
---- | --- | ---
-$field | [`Magento\Framework\GraphQl\Config\Element\Field`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/GraphQl/Config/Element/Field.php) | Fields are used to describe possible values for a type/interface
-$context | [`Magento\Framework\GraphQl\Query\Resolver\ContextInterface`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/GraphQl/Query/Resolver/ContextInterface.php) | Resolver context is used as a shared data extensible object in all resolvers that implement [`ResolverInterface`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/GraphQl/Query/ResolverInterface.php).
-$info | [`Magento\Framework\GraphQl\Schema\Type\ResolveInfo`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/GraphQl/Schema/Type/ResolveInfo.php) | Structure containing information useful for field resolution process.
-$value | array | Contains additional query parameters. `Null` in most cases.
-$args | array | Contains input arguments of query.
+| Field | Type | Description |
+| --- | --- | --- |
+| $field | [`Magento\Framework\GraphQl\Config\Element\Field`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/GraphQl/Config/Element/Field.php) | Fields are used to describe possible values for a type/interface |
+| $context | [`Magento\Framework\GraphQl\Query\Resolver\ContextInterface`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/GraphQl/Query/Resolver/ContextInterface.php) | Resolver context is used as a shared data extensible object in all resolvers that implement [`ResolverInterface`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/GraphQl/Query/ResolverInterface.php). |
+| $info | [`Magento\Framework\GraphQl\Schema\Type\ResolveInfo`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/GraphQl/Schema/Type/ResolveInfo.php) | Structure containing information useful for field resolution process. |
+| $value | array | Contains additional query parameters. `Null` in most cases. |
+| $args | array | Contains input arguments of query. |
 
 A GraphQL resolver must implement one of the following interfaces:
 
@@ -199,7 +199,7 @@ A real example can be found at [\Magento\CatalogGraphQl\Model\Resolver\Product\B
 
 This interface resolves one branch or leaf at a time. It returns [`\Magento\Framework\GraphQl\Query\Resolver\Value`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/GraphQl/Query/Resolver/Value.php) or any type of data (mixed). This value takes in a callable function to its constructor that will be invoked at the latest possible time for the resolver to acquire its data. As a result, a list of items being resolved can be retrieved all at once by establishing a buffer that contains all relevant parent data to filter and fetch for the children list data.
 
-You can view an example inside the [`\Magento\BundleGraphQl\Model\Resolver\BundleItemLinks`](https://github.com/magento/magento2/blob/2.4/app/code/Magento/BundleGraphQl/Model/Resolver/BundleItemLinks.php) resolver. This resolver takes each bundle option ID and its corresponding parent product ID and stores them in a collection's filter buffer (in this case, using the [`\Magento\BundleGraphQl\Model\Resolver\Links\Collection::addIdFilters()`](https://github.com/magento/magento2/blob/2.4/app/code/Magento/BundleGraphQl/Model/Resolver/Links/Collection.php#L62-L70) function). Each resolver then returns a callable that invokes this collection. The collection caches the result of all link entities it fetched for all the option_id/parent_id combinations. This fetch only needs to occur once for the whole `BundleItemLink` list, and each resulting callable that is invoked for every link in the list returns an item from the collections cached result.
+You can view an example inside the [`\Magento\BundleGraphQl\Model\Resolver\BundleItemLinks`](https://github.com/magento/magento2/blob/2.4/app/code/Magento/BundleGraphQl/Model/Resolver/BundleItemLinks.php) resolver. This resolver takes each bundle option ID and its corresponding parent product ID and stores them in a collection's filter buffer (in this case, using the [`\Magento\BundleGraphQl\Model\Resolver\Links\Collection::addIdFilters()`](https://github.com/magento/magento2/blob/2.4/app/code/Magento/BundleGraphQl/Model/Resolver/Links/Collection.php) function). Each resolver then returns a callable that invokes this collection. The collection caches the result of all link entities it fetched for all the option_id/parent_id combinations. This fetch only needs to occur once for the whole `BundleItemLink` list, and each resulting callable that is invoked for every link in the list returns an item from the collections cached result.
 
 A `Value` object wraps a callable object, and you can use [`\Magento\Framework\GraphQl\Query\Resolver\ValueFactory`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/GraphQl/Query/Resolver/ValueFactory.php) to create a value.
 
@@ -215,15 +215,15 @@ type Mutation {
 }
 ```
 
-Syntax option | Description
---- | ---
-`mutationQueryName` | The name of mutation
-`inputParamName` | Input parameters for the mutation (optional)
-`MutationQueryInputType` | The type of input parameter, such as `String`, `Int`, or a custom type, like `MyCustomInput`
-`MutationQueryOutput` | The mutation's result type, such as  `String`, `Int`, or a custom type, like `MyCustomOutput`
-`@resolver(class)` | The class of the resolver
-`@doc(description)` | Describes the purpose of the mutation
-`@deprecated(reason: "description")` | Use `@deprecated` to mark a query, mutation, or attribute as deprecated
+| Syntax option | Description |
+| --- | --- |
+| `mutationQueryName` | The name of mutation |
+| `inputParamName` | Input parameters for the mutation (optional) |
+| `MutationQueryInputType` | The type of input parameter, such as `String`, `Int`, or a custom type, like `MyCustomInput` |
+| `MutationQueryOutput` | The mutation's result type, such as  `String`, `Int`, or a custom type, like `MyCustomOutput` |
+| `@resolver(class)` | The class of the resolver |
+| `@doc(description)` | Describes the purpose of the mutation |
+| `@deprecated(reason: "description")` | Use `@deprecated` to mark a query, mutation, or attribute as deprecated |
 
 ### Resolver class
 

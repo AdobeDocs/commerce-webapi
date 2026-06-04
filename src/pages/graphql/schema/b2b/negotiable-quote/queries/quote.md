@@ -1,12 +1,11 @@
 ---
 title: negotiableQuote query   
+description: The negotiableQuote query retrieves details about the specified negotiable quote. Use the negotiableQuotes query to return a list of valid uid values.
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # negotiableQuote query
 
@@ -24,9 +23,9 @@ negotiableQuote (uid ID!): NegotiableQuote
 
 The `negotiableQuote` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-negotiableQuote)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#negotiablequote)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-negotiableQuote)
+* [On-Premises/Cloud](/reference/graphql/index.md#negotiablequote)
 
 ## Example usage
 

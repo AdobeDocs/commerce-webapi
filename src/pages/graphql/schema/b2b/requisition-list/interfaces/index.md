@@ -1,23 +1,22 @@
 ---
 title: RequisitionListItemInterface attributes and implementations
+description: RequisitionListItemInterface provides details about items in a requisition list. It has the following implementations:
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # RequisitionListItemInterface attributes and implementations
 
-[`RequisitionListItemInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-RequisitionListItemInterface) provides details about items in a requisition list. It has the following implementations:
+[`RequisitionListItemInterface`](/reference/graphql/index.md#requisitionlistiteminterface) provides details about items in a requisition list. It has the following implementations:
 
-*  [`BundleRequisitionListItem`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-BundleRequisitionListItem)
-*  [`ConfigurableRequisitionListItem`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-ConfigurableRequisitionListItem)
-*  [`DownloadableRequisitionListItem`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-DownloadableRequisitionListItem)
-*  [`GiftCardRequisitionListItem`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-GiftCardRequisitionListItem)
-*  [`SimpleRequisitionListItem`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-SimpleRequisitionListItem)
-*  [`VirtualRequisitionListItem`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-VirtualRequisitionListItem)
+*  [`BundleRequisitionListItem`](/reference/graphql/index.md#bundlerequisitionlistitem)
+*  [`ConfigurableRequisitionListItem`](/reference/graphql/index.md#configurablerequisitionlistitem)
+*  [`DownloadableRequisitionListItem`](/reference/graphql/index.md#downloadablerequisitionlistitem)
+*  [`GiftCardRequisitionListItem`](/reference/graphql/index.md#giftcardrequisitionlistitem)
+*  [`SimpleRequisitionListItem`](/reference/graphql/index.md#simplerequisitionlistitem)
+*  [`VirtualRequisitionListItem`](/reference/graphql/index.md#virtualrequisitionlistitem)
 
 <InlineAlert variant="info" slots="text" />
 

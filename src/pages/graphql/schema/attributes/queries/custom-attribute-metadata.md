@@ -1,12 +1,13 @@
 ---
 title: customAttributeMetadata query
+description: The customAttributeMetadata query has been deprecated. Use the customAttributeMetadataV2 query instead.
 ---
 
 # customAttributeMetadata query
 
 <InlineAlert variant="warning" slots="text" />
 
-The `customAttributeMetadata` query has been deprecated. Use the [`customAttributeMetadataV2`](../../attributes/queries/custom-attribute-metadata-v2.md) query instead.
+The `customAttributeMetadata` query has been deprecated. Use the [`customAttributeMetadataV2`](custom-attribute-metadata-v2.md) query instead.
 
 The `customAttributeMetadata` query returns the attribute type, given an attribute code and entity type. All entity attributes can be added to an equivalent GraphQL type, including custom, extension, and EAV (which have precedence set in that order for collisions). The GraphQL query consumer does not have the ability to know a field's attribute type.
 
@@ -20,7 +21,7 @@ The `StorefrontProperties` output object returns information about a product att
 
 The `customAttributeMetadata` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-customAttributeMetadata)
+* [On-Premises/Cloud](/reference/graphql/index.md#customattributemetadata)
 
 ## Example usage
 
@@ -236,11 +237,11 @@ The following query returns the attribute type for various custom and EAV attrib
 
 ## Errors
 
-Error | Description
---- | ---
-`Field "customAttributeMetadata" argument "attributes" of type "[AttributeInput!]!" is required but not provided` | The `attributes` array parameter is required.
-`The attribute with a "xxxx" attributeCode doesn't exist. Verify the attribute and try again` | The given `attribute_code` parameter is invalid.
-`Invalid entity_type specified: "xxxx"` | The given `entity_type` is invalid.
-`Missing attribute_code for the input entity_type: "xxxx"`| There is no value passed for the `attribute_code` parameter for the given `entity_type` parameter.
-`Missing entity_type for the input attribute_code: "xxxx"` | There is no value passed for the `entity_type` parameter for the given `attribute_code` parameter.
-`Missing attribute_code/entity_type for the input Empty AttributeInput` | There are no values passed for both `attribute_code` and `entity_type` parameters.
+| Error | Description |
+| --- | --- |
+| `Field "customAttributeMetadata" argument "attributes" of type "[AttributeInput!]!" is required but not provided` | The `attributes` array parameter is required. |
+| `The attribute with a "xxxx" attributeCode doesn't exist. Verify the attribute and try again` | The given `attribute_code` parameter is invalid. |
+| `Invalid entity_type specified: "xxxx"` | The given `entity_type` is invalid. |
+| `Missing attribute_code for the input entity_type: "xxxx"`| There is no value passed for the `attribute_code` parameter for the given `entity_type` parameter. |
+| `Missing entity_type for the input attribute_code: "xxxx"` | There is no value passed for the `entity_type` parameter for the given `attribute_code` parameter. |
+| `Missing attribute_code/entity_type for the input Empty AttributeInput` | There are no values passed for both `attribute_code` and `entity_type` parameters. |

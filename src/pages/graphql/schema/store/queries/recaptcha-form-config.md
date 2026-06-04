@@ -1,5 +1,6 @@
 ---
 title: recaptchaFormConfig query
+description: The recaptchaFormConfig query returns information about the reCaptcha configuration for the specified form type. To query multiple form types, use the reca...
 ---
 
 # recaptchaFormConfig query
@@ -16,9 +17,9 @@ You can use the [`recaptchaV3Config` query](recaptcha-v3-config.md) to return a 
 
 The `recaptchaFormConfig` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-recaptchaFormConfig)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#recaptchaformconfig)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-recaptchaV3Config)
+* [On-Premises/Cloud](/reference/graphql/index.md#recaptchav3config)
 
 ## Example usage
 

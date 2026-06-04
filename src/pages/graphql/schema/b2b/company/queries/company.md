@@ -1,12 +1,11 @@
 ---
 title: company query
+description: The company query returns details about the user's company. The request must include the customer token of a company user.
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # company query
 
@@ -26,9 +25,9 @@ This query requires a valid [customer authentication token](../../../customer/mu
 
 The `company` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-company)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#company)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-company)
+* [On-Premises/Cloud](/reference/graphql/index.md#company)
 
 ## Example usage
 
@@ -102,7 +101,7 @@ query{
 
 The following query returns the customer's company structure.
 
-<!--- To do: Replace the response after creating a proper structure and add a tree depicting the structure -->
+\<!--- To do: Replace the response after creating a proper structure and add a tree depicting the structure --\>
 
 **Request:**
 

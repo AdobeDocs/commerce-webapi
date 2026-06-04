@@ -1,14 +1,13 @@
 ---
 title: isCompanyRoleNameAvailable query
+description: The isCompanyRoleNameAvailable query checks whether a company role name is valid for creating into a company.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # isCompanyRoleNameAvailable query
 
@@ -34,9 +33,9 @@ This query requires a valid [customer authentication token](../../../customer/mu
 
 The `isCompanyRoleNameAvailable` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-isCompanyRoleNameAvailable)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#iscompanyrolenameavailable)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-isCompanyRoleNameAvailable)
+* [On-Premises/Cloud](/reference/graphql/index.md#iscompanyrolenameavailable)
 
 ## Example usage
 
@@ -63,3 +62,7 @@ query {
   }
 }
 ```
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

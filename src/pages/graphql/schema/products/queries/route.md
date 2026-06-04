@@ -1,7 +1,10 @@
 ---
 title: route query
-edition: paas
+description: A merchant can reconfigure (rewrite) the URL to any product, category, or CMS page. When the rewrite goes into effect, any links that point to the previous...
+
 ---
+
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # route query
 
@@ -15,7 +18,7 @@ The `route` query returns the canonical URL for a specified product, category, o
 
 ## Reference
 
-The [`route`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-route) reference provides detailed information about the types and fields defined in this query.
+The [`route`](/reference/graphql/index.md#route) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

@@ -1,7 +1,10 @@
 ---
 title: urlResolver query
-edition: paas
+description: The urlResolver query has been deprecated. Use the route query instead.
+
 ---
+
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # urlResolver query
 
@@ -19,7 +22,7 @@ The `urlResolver` query returns the canonical URL for a specified product, categ
 
 ## Reference
 
-The [`urlResolver`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-urlResolver) reference provides detailed information about the types and fields defined in this query.
+The [`urlResolver`](/reference/graphql/index.md#urlresolver) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

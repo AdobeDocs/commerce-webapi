@@ -1,5 +1,6 @@
 ---
 title: resetPassword mutation
+description: The resetPassword mutation resets customer password using a reset password token and the customer's email address. Use it to set a new password for the reg...
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
@@ -24,9 +25,9 @@ The reset password token value can also be found in the `customer_entity`.`rp_to
 
 The `resetPassword` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-resetPassword)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#resetpassword)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-resetPassword)
+* [On-Premises/Cloud](/reference/graphql/index.md#resetpassword)
 
 ## Example usage
 
@@ -56,15 +57,19 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Cannot set the customer's password` | A general error message that appears on some internal system errors. The original error is logged and can be found in the application logs.
-`newPassword must be specified` | The `newPassword` argument is empty.
-`resetPasswordToken must be specified` | The `resetPasswordToken` argument is empty.
-`The account is locked` | You cannot modify a locked customer account.
-`The email address has an invalid format.` | The value provided in the `email` argument has an invalid format.
-`You must specify an email address.` | The `email` argument is empty.
+| Error | Description |
+| --- | --- |
+| `Cannot set the customer's password` | A general error message that appears on some internal system errors. The original error is logged and can be found in the application logs. |
+| `newPassword must be specified` | The `newPassword` argument is empty. |
+| `resetPasswordToken must be specified` | The `resetPasswordToken` argument is empty. |
+| `The account is locked` | You cannot modify a locked customer account. |
+| `The email address has an invalid format.` | The value provided in the `email` argument has an invalid format. |
+| `You must specify an email address.` | The `email` argument is empty. |
 
 ## Related topics
 
 * [requestPasswordResetEmail mutation](request-password-reset-email.md)
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

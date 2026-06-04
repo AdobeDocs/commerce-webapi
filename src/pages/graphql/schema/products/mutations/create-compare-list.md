@@ -1,5 +1,6 @@
 ---
 title: createCompareList mutation
+description: The createCompareList mutation creates a new comparison list with products specified in the input attribute.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 ---
@@ -26,9 +27,9 @@ mutation {
 
 The `createCompareList` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-createCompareList)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#createcomparelist)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createCompareList)
+* [On-Premises/Cloud](/reference/graphql/index.md#createcomparelist)
 
 ## Example usage
 
@@ -123,3 +124,7 @@ mutation {
 *  [assignCompareListToCustomer mutation](assign-compare-list.md)
 *  [deleteCompareList mutation](delete-compare-list.md)
 *  [removeProductsFromCompareList mutation](remove-from-compare-list.md)
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

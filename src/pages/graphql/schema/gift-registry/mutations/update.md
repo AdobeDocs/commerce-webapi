@@ -1,10 +1,9 @@
 ---
 title: updateGiftRegistry mutation
+description: The updateGiftRegistry mutation modifies properties of specified gift registry. It does not update the items in a gift registry or registrants. Use the upd...
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # updateGiftRegistry mutation
 
@@ -31,9 +30,9 @@ mutation {
 
 The `updateGiftRegistry` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-updateGiftRegistry)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#updategiftregistry)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateGiftRegistry)
+* [On-Premises/Cloud](/reference/graphql/index.md#updategiftregistry)
 
 ## Example usage
 

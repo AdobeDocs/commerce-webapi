@@ -1,12 +1,13 @@
 ---
 title: revokeCustomerToken mutation
+description: The revokeCustomerToken mutation revokes the customer's token. It returns true if the token was successfully revoked.
 ---
 
 # revokeCustomerToken mutation
 
 The `revokeCustomerToken` mutation revokes the customer's token. It returns `true` if the token was successfully revoked.
 
-We recommend you specify a customer token in the header of your call. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session).
+We recommend you specify a customer token in the header of your call. However, you also can use [session authentication](/get-started/authentication/gs-authentication-session.md).
 
 ## Syntax
 
@@ -22,9 +23,9 @@ mutation {
 
 The `revokeCustomerToken` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-revokeCustomerToken)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#revokecustomertoken)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-revokeCustomerToken)
+* [On-Premises/Cloud](/reference/graphql/index.md#revokecustomertoken)
 
 ## Example usage
 
@@ -54,9 +55,9 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table.
+| Error | Description |
+| --- | --- |
+| `The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table. |
 
 ## Related topics
 

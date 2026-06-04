@@ -1,15 +1,16 @@
 ---
 title: Step 7. Create a cart and add products to it
 description: In this step of the tutorial you will create a card and add products
-edition: paas
 keywords:
   - Inventory
   - REST
---- 
- 
+---
+
+<Fragment src="../../../includes/paas-only.md"/>
+
 # Step 7. Create a cart and add products to it
 
-Next, we'll create a cart and add the items that we modified in [Step 5. Reassign products to custom sources](./reassign-products-to-another-source.md).
+Next, we'll create a cart and add the items that we modified in [Step 5. Reassign products to custom sources](reassign-products-to-another-source.md).
 
 ## Create a cart
 
@@ -39,12 +40,12 @@ The response is the `quoteId`: 3
 
 ## Check for product availability
 
-In [Step 5. Reassign products to custom sources](./reassign-products-to-another-source.md), we defined the quantities of products `24-WB01` and `24-WB03` for the US source as follows:
+In [Step 5. Reassign products to custom sources](reassign-products-to-another-source.md), we defined the quantities of products `24-WB01` and `24-WB03` for the US source as follows:
 
-Product | Northeast Warehouse | Brooklyn Store  | Manhattan Store | Long Island Store | West Warehouse | Berkeley Store | Sausalito Store
---- | --- | --- | ---
-`24-WB01` | 35 | 10 | 10 | 10 | 15 | 10 | 10
-`24-WB03` | 50 | 0 | 0 | 0 | 10 | 20 | 20
+| Product | Northeast Warehouse | Brooklyn Store  | Manhattan Store | Long Island Store | West Warehouse | Berkeley Store | Sausalito Store |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `24-WB01` | 35 | 10 | 10 | 10 | 15 | 10 | 10 |
+| `24-WB03` | 50 | 0 | 0 | 0 | 10 | 20 | 20 |
 
 Later in this step, we'll order 40 `24-WB01` items and 20 `24-WB03` items. We can see that we have enough salable items for both products, but let's check programmatically.
 

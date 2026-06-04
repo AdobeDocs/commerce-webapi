@@ -1,11 +1,12 @@
 ---
 title: clearCart mutation
-edition: paas
+description: The clearCart mutation removes all items from the specified cart.
+
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
+<Fragment src="../../../../includes/paas-only.md"/>
 
-<CommerceOnly />
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # clearCart mutation
 
@@ -23,7 +24,7 @@ mutation {
 
 ## Reference
 
-The [`clearCart`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-clearCart) reference provides detailed information about the types and fields defined in this mutation.
+The [`clearCart`](/reference/graphql/index.md#clearcart) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

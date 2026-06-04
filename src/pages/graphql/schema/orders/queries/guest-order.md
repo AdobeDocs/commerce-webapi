@@ -1,5 +1,6 @@
 ---
 title: guestOrder query
+description: Use the guestOrder query to retrieve details about an order placed by a guest or customer who is not logged in. To retrieve this information, the guest mus...
 ---
 
 # guestOrder query
@@ -14,9 +15,9 @@ Use the `guestOrder` query to retrieve details about an order placed by a guest 
 
 The `guestOrder` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-guestOrder)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#guestorder)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-guestOrder)
+* [On-Premises/Cloud](/reference/graphql/index.md#guestorder)
 
 ## Example usage
 

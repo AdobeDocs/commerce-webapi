@@ -1,17 +1,20 @@
 ---
 title: customerOrders query
-edition: paas
+description: The customerOrders query has been deprecated. Specify the orders object in the customer query instead.
+
 ---
+
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # customerOrders query
 
 <InlineAlert variant="warning" slots="text" />
 
-The `customerOrders` query has been deprecated. Specify the `orders` object in the [`customer`](../../customer/queries/customer.md) query instead.
+The `customerOrders` query has been deprecated. Specify the `orders` object in the [`customer`](customer.md) query instead.
 
 The Sales module performs a wide variety of functions, including order, invoice, and shipment management. However, most of these functions are performed on the backend, and the customer does not have access to this information. By returning a list of customer orders, the `customerOrders` query allows a customer to retrieve their order histories.
 
-We recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session).
+We recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](/get-started/authentication/gs-authentication-session.md).
 
 ## Syntax
 
@@ -19,7 +22,7 @@ We recommend you use customer tokens in the header of your GraphQL calls. Howeve
 
 ## Reference
 
-The [`customerOrders`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-customerOrders) reference provides detailed information about the types and fields defined in this query.
+The [`customerOrders`](/reference/graphql/index.md#customerorders) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -70,6 +73,6 @@ The following query returns the order history of the logged in customer.
 
 ## Errors
 
-Error | Description
---- | ---
-`The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table.
+| Error | Description |
+| --- | --- |
+| `The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table. |

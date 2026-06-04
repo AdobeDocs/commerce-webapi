@@ -8,7 +8,7 @@ keywords:
 
 # Vault a card during a checkout authorization
 
-These steps describe the flow of requests and responses required to [vault a credit card](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/payment-services/payments-checkout/vaulting#vaulting-a-payment-method-during-checkout) during a typical checkout authorization with Payment Services enabled.
+These steps describe the flow of requests and responses required to [vault a credit card](https://experienceleague.adobe.com/en/docs/commerce/payment-services/payments-checkout/vaulting#vaulting-a-payment-method-during-checkout) during a typical checkout authorization with Payment Services enabled.
 
 The following conditions must be true to vault a card during checkout:
 
@@ -17,9 +17,9 @@ The following conditions must be true to vault a card during checkout:
 
 ## Workflow
 
-![Payment Services sequence diagram](../../../_images/graphql/payment-services-vault-with-purchase.svg)
+![Payment Services sequence diagram](../../../images/graphql/payment-services-vault-with-purchase.png)
 
-1. Run the [`getPaymentConfig`](../../payment-services-extension/queries/get-payment-config.md) query to fetch the payment configuration needed to render details of hosted fields.
+1. Run the [`getPaymentConfig`](../queries/get-payment-config.md) query to fetch the payment configuration needed to render details of hosted fields.
 
 1. Commerce returns the payment configuration information.
 
@@ -27,7 +27,7 @@ The following conditions must be true to vault a card during checkout:
 
 1. Adobe Commerce returns a `Cart` object.
 
-1. Run the [`createPaymentOrder`](../../payment-services-extension/mutations/create-payment-order.md) mutation with `vaultIntent` set to `true` to begin the authorization process.
+1. Run the [`createPaymentOrder`](../mutations/create-payment-order.md) mutation with `vaultIntent` set to `true` to begin the authorization process.
 
 1. Commerce forwards the request to PayPal.
 
@@ -35,11 +35,11 @@ The following conditions must be true to vault a card during checkout:
 
 1. Adobe Commerce generates a `order_id` and forwards the value in the `mp_order_id` field and the PayPal response in the `id` field.
 
-1. Run [`setPaymentMethodOnCart`](../../schema/cart/mutations/set-payment-method.md) again with [`is_active_payment_token_enabler`](https://developer.adobe.com/commerce/webapi/graphql/payment-services-extension/workflows/checkout/#setpaymentmethodoncartinput-object) set to `true`. This indicates whether a customer-entered credit/debit card should be tokenized for later usage.
+1. Run [`setPaymentMethodOnCart`](../../schema/cart/mutations/set-payment-method.md) again with [`is_active_payment_token_enabler`](/graphql/payment-services-extension/workflows/checkout.md#setpaymentmethodoncartinput-object) set to `true`. This indicates whether a customer-entered credit/debit card should be tokenized for later usage.
 
 1. Adobe Commerce returns a token.
 
-1. (Optional) If hosted fields and the Signifyd integration are enabled, run the [`getPaymentOrder`](../../payment-services-extension/queries/get-payment-order.md) query.
+1. (Optional) If hosted fields and the Signifyd integration are enabled, run the [`getPaymentOrder`](../queries/get-payment-order.md) query.
 
 1. (Optional) Adobe Commerce returns details about the payment order.
 
@@ -57,7 +57,7 @@ The following conditions must be true to vault a card during checkout:
 
 ## Additional information
 
-It is only possible to vault configuration details for hosted fields. See [`getPaymentConfig`](../../payment-services-extension/queries/get-payment-config.md) query for more information.
+It is only possible to vault configuration details for hosted fields. See [`getPaymentConfig`](../queries/get-payment-config.md) query for more information.
 
 ### `setPaymentMethodOnCart` mutation example
 

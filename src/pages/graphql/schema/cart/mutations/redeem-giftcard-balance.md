@@ -1,10 +1,9 @@
 ---
 title: redeemGiftCardBalanceAsStoreCredit mutation
+description: The redeemGiftCardBalanceAsStoreCredit mutation converts the entire balance of a gift card to store credit. The gift card must be redeemable and cannot hav...
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # redeemGiftCardBalanceAsStoreCredit mutation
 
@@ -30,9 +29,9 @@ mutation {
 
 The `redeemGiftCardBalanceAsStoreCredit` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-redeemGiftCardBalanceAsStoreCredit)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#redeemgiftcardbalanceasstorecredit)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-redeemGiftCardBalanceAsStoreCredit)
+* [On-Premises/Cloud](/reference/graphql/index.md#redeemgiftcardbalanceasstorecredit)
 
 ## Example usage
 
@@ -76,7 +75,7 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Gift card not found` | The specified `gift_card_code` value does not exist in the `giftcardaccount` table or the amount has been already redeemed.
-`Field GiftCardAccountInput.gift_card_code of required type String! was not provided` | The value specified in the `GiftCardAccountInput.gift_card_code` argument is empty.
+| Error | Description |
+| --- | --- |
+| `Gift card not found` | The specified `gift_card_code` value does not exist in the `giftcardaccount` table or the amount has been already redeemed. |
+| `Field GiftCardAccountInput.gift_card_code of required type String! was not provided` | The value specified in the `GiftCardAccountInput.gift_card_code` argument is empty. |

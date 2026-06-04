@@ -1,10 +1,9 @@
 ---
 title: Gift card product data types
+description: The GiftCardProduct data type defines properties of a gift card, including the minimum and maximum values and an array that contains the current and past v...
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # Gift card product data types
 
@@ -12,10 +11,10 @@ The `GiftCardProduct` data type defines properties of a gift card, including the
 
 It implements the following interfaces:
 
--  [ProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-ProductInterface)
--  [PhysicalProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-PhysicalProductInterface)
--  [CustomizableProductInterface](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-CustomizableProductInterface)
--  [RoutableInterface](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-RoutableInterface)
+-  [ProductInterface](/reference/graphql/index.md#productinterface)
+-  [PhysicalProductInterface](/reference/graphql/index.md#physicalproductinterface)
+-  [CustomizableProductInterface](/reference/graphql/index.md#customizableproductinterface)
+-  [RoutableInterface](/reference/graphql/index.md#routableinterface)
 
 ## Sample query
 

@@ -1,31 +1,32 @@
 ---
 title: Token-Based Authentication
 description: How to use token-based authentication in web APIs.
-edition: paas
 keywords:
   - REST
   - Security
 ---
 
+<Fragment src="../../includes/paas-only.md"/>
+
 # Token-based authentication
 
 <InlineAlert variant="info" slots="text"/>
 
-This topic is for Platform-as-a-Service (PaaS) customers only. Adobe Commerce Cloud Services customers must refer to [REST Authentication](https://developer.adobe.com/commerce/services/cloud/guides/rest/authentication/) for details on authentication.
+This topic is for Platform-as-a-Service (PaaS) customers only. Adobe Commerce Cloud Services customers must refer to [REST Authentication](/rest/authentication/index.md) for details on authentication.
 
 To make a web API call from a client such as a mobile application, you must supply an *access token* on the call. The token acts like an electronic key that lets you access the API.
 
 Adobe Commerce and Magento Open Source issue the following types of access tokens:
 
-Token type | Description | Default lifetime
---- | --- | ---
-Integration | The merchant determines which Commerce resources the integration can access. | Indefinite. It lasts until it is manually revoked.
-Admin | The merchant determines which Commerce resources an admin user has access to. | 4 hours
-Customer | Commerce grants access to resources with the `anonymous` or `self` permission. Merchants cannot edit these settings. | 1 hour
+| Token type | Description | Default lifetime |
+| --- | --- | --- |
+| Integration | The merchant determines which Commerce resources the integration can access. | Indefinite. It lasts until it is manually revoked. |
+| Admin | The merchant determines which Commerce resources an admin user has access to. | 4 hours |
+| Customer | Commerce grants access to resources with the `anonymous` or `self` permission. Merchants cannot edit these settings. | 1 hour |
 
 ## Integration tokens
 
-When a merchant creates and activates an integration, Commerce generates a consumer key, consumer secret, access token, and access token secret. All of these entities are used for [OAuth-based authentication](./gs-authentication-oauth.md).
+When a merchant creates and activates an integration, Commerce generates a consumer key, consumer secret, access token, and access token secret. All of these entities are used for [OAuth-based authentication](gs-authentication-oauth.md).
 
 In previous versions of Commerce, the access token could be used on its own for token-based authentication. This behavior has been disabled by default due to the security implications of a never-expiring access token. Namely, if the access token is compromised it provides undetected persistent access to a store.
 
@@ -35,12 +36,11 @@ However, while it is not recommended, this behavior can be restored in the Admin
 bin/magento config:set oauth/consumer/enable_integration_as_bearer 1
 ```
 
-If you are trying to upgrade from a previous version and need to update your integration implementation to properly utilize the OAuth workflow, review [OAuth-based Authentication](./gs-authentication-oauth.md). Otherwise, you can partially update your integration to simply store and utilize all four credentials to sign your requests.
+If you are trying to upgrade from a previous version and need to update your integration implementation to properly utilize the OAuth workflow, review [OAuth-based Authentication](gs-authentication-oauth.md). Otherwise, you can partially update your integration to simply store and utilize all four credentials to sign your requests.
 
 There is a comprehensive guide for this on the OAuth-based authentication page, but can also be done in isolation without supporting the entire OAuth workflow. For example, in the following script the four credentials are used to create a new CMS page without using external libraries or implementing the full OAuth handshake.
-<p></p>
-<details>
-      <summary><b>standalone-oauth.php </b></summary>
+
+<Details slots="content" summary="standalone-oauth.php" />
 
 ```php
 <?php
@@ -160,23 +160,21 @@ $request->headers[] = $oauthSigner->sign(
 echo send($request);
 ```
 
-</details>
-
 ## Admin and customer access tokens
 
 Commerce provides a separate token service for administrators and customers. When you request a token from one of these services, the service returns a unique access token in exchange for an account's username and password.
 
-The web API framework allows *guest users* to access resources that are configured with the permission level of anonymous. Guest users are users who the framework cannot authenticate through existing authentication mechanisms. As a guest user, you do not need to, but you can, specify a token in a web API call for a resource with anonymous permission. [Restricting access to anonymous web APIs](https://developer.adobe.com/commerce/webapi/rest/use-rest/anonymous-api-security/) contains a list of APIs that do not require a token.
+The web API framework allows *guest users* to access resources that are configured with the permission level of anonymous. Guest users are users who the framework cannot authenticate through existing authentication mechanisms. As a guest user, you do not need to, but you can, specify a token in a web API call for a resource with anonymous permission. [Restricting access to anonymous web APIs](/rest/use-rest/anonymous-api-security.md) contains a list of APIs that do not require a token.
 
-The following table lists endpoints and services that can be used to get an authentication token. Admin accounts must be authenticated with a [two factor authentication](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication/) provider. Some providers may require multiple calls.
+The following table lists endpoints and services that can be used to get an authentication token. Admin accounts must be authenticated with a [two factor authentication](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication) provider. Some providers may require multiple calls.
 
-Token type |REST| SOAP
----|---|---
-Admin with Google Authenticator | `POST /V1/tfa/provider/google/authenticate` | `twoFactorAuthGoogleAuthenticateV1`
-Admin with Duo Security | `POST /V1/tfa/provider/duo-security/authenticate` | `twoFactorAuthDuoAuthenticateV1`
-Admin with Authy | `POST /V1/tfa/provider/authy/authenticate` | `twoFactorAuthAuthyAuthenticateV1`
-Admin with U2F | `POST /V1/tfa/provider/u2fkey/verify` | `twoFactorAuthU2fKeyAuthenticateV1`
-Customer | `POST /V1/integration/customer/token` | `integrationCustomerTokenServiceV1`
+| Token type |REST| SOAP |
+| ---|---|--- |
+| Admin with Google Authenticator | `POST /V1/tfa/provider/google/authenticate` | `twoFactorAuthGoogleAuthenticateV1` |
+| Admin with Duo Security | `POST /V1/tfa/provider/duo-security/authenticate` | `twoFactorAuthDuoAuthenticateV1` |
+| Admin with Authy | `POST /V1/tfa/provider/authy/authenticate` | `twoFactorAuthAuthyAuthenticateV1` |
+| Admin with U2F | `POST /V1/tfa/provider/u2fkey/verify` | `twoFactorAuthU2fKeyAuthenticateV1` |
+| Customer | `POST /V1/integration/customer/token` | `integrationCustomerTokenServiceV1` |
 
 For most web API calls, you supply this token in the `Authorization` request header with the `Bearer` HTTP authorization scheme to prove your identity. By default, an admin token is valid for 4 hours, while a customer token is valid for 1 hour. You can change these values from Admin by selecting **Stores** > **Settings** > **Configuration** > **Services** > **OAuth** > **Access Token Expiration**.
 
@@ -198,17 +196,17 @@ No dependency exists between IMS access token lifetime and Commerce session life
 
 A access token request contains three basic elements:
 
-Component | Specifies
---- | ---
-Endpoint |  A combination of the *server* that fulfills the request, the web service, and the `resource` against which the request is being made.<br/><br/>For example, in the `POST <host>/rest/<store_code>/V1/integration/customer/token` endpoint:<br/>The server is `magento.host/index.php/`,<br/> the web service is `rest`.<br/> and the resource is `/V1/integration/customer/token`.
-Content type | The content type of the request body. Set this value to either `"Content-Type:application/json"` or `"Content-Type:application/xml"`.
-Credentials | The username and password for a Commerce account.<br/><br/>To specify these credentials in a JSON request body, include code similar to the following in the call: <br/><br/>`{"username":"<USER-NAME>", "password":"<PASSWORD>"}`<br/><br/>To specify these credentials in XML, include code similar to the following in the call:<br/><br/>`<login><username>customer1</username><password>customer1pw</password></login>`
+| Component | Specifies |
+| --- | --- |
+| Endpoint |  A combination of the *server* that fulfills the request, the web service, and the `resource` against which the request is being made.\<br/\>\<br/\>For example, in the `POST <host>/rest/<store_code>/V1/integration/customer/token` endpoint:\<br/\>The server is `magento.host/index.php/`,\<br/\> the web service is `rest`.\<br/\> and the resource is `/V1/integration/customer/token`. |
+| Content type | The content type of the request body. Set this value to either `"Content-Type:application/json"` or `"Content-Type:application/xml"`. |
+| Credentials | The username and password for a Commerce account.\<br/\>\<br/\>To specify these credentials in a JSON request body, include code similar to the following in the call: \<br/\>\<br/\>`{"username":"<USER-NAME>", "password":"<PASSWORD>"}`\<br/\>\<br/\>To specify these credentials in XML, include code similar to the following in the call:\<br/\>\<br/\>`<login><username>customer1</username><password>customer1pw</password></login>` |
 
 ### Examples
 
 The following image shows a token request for the admin account using a REST client:
 
-![REST client](../../_images/gs_auth_token1.png)
+![REST client](../../images/gs-auth-token1.png)
 
 The following example uses the `curl` command to request a token for a customer account:
 
@@ -259,6 +257,6 @@ For example, to make a web API call with a customer token:
 
 [Construct a request](../gs-web-api-request.md)
 
-[Configure services as web APIs](https://developer.adobe.com/commerce/php/development/components/web-api/services/)
+[Configure services as web APIs](https://developer.adobe.com/commerce/php/development/components/web-api/services)
 
-[Restricting access to anonymous web APIs](https://developer.adobe.com/commerce/webapi/rest/use-rest/anonymous-api-security/)
+[Restricting access to anonymous web APIs](/rest/use-rest/anonymous-api-security.md)

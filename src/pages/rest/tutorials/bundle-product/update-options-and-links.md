@@ -3,8 +3,8 @@ title: Step 4. Update bundle product options and option links
 description: In this step, you will pdate store-specific bundle product option and option links.
 keywords:
   - REST
---- 
- 
+---
+
 # Step 4. Update product options or option links (optional)
 
 Updating bundle product options or option links requires the following steps:

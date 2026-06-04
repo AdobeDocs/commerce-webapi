@@ -1,18 +1,17 @@
 ---
 title: placeNegotiableQuoteOrder mutation
+description: This mutation has been deprecated in Adobe Commerce as a Cloud Service. Use the placeNegotiableQuoteOrderV2 mutation instead.
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # placeNegotiableQuoteOrder mutation
 
 <InlineAlert variant="warning" slots="text" />
 
-This mutation has been deprecated in Adobe Commerce as a Cloud Service. Use the [placeNegotiableQuoteOrderV2 mutation](./place-order-v2.md) instead.
+This mutation has been deprecated in Adobe Commerce as a Cloud Service. Use the [placeNegotiableQuoteOrderV2 mutation](place-order-v2.md) instead.
 
 The `placeNegotiableQuoteOrder` mutation converts a negotiable quote into an order and returns an order ID.
 
@@ -52,9 +51,9 @@ mutation {
 
 The `placeNegotiableQuoteOrder` reference provides detailed information about the types and fields defined in this mutation.
 
-- &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-placeNegotiableQuoteOrder)
+- [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#placenegotiablequoteorder)
 
-- &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-placeNegotiableQuoteOrder)
+- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](/reference/graphql/index.md#placenegotiablequoteorder)
 
 ## Example usage
 

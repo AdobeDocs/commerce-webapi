@@ -1,12 +1,11 @@
 ---
 title: Company (B2B) queries
+description: The company query returns full details about the specified company. The isCompanyAdminEmailAvailable, isCompanyEmailAvailable, isCompanyRoleNameAvailable,...
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # Company (B2B) queries
 

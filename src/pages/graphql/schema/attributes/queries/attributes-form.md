@@ -1,5 +1,6 @@
 ---
 title: attributesForm query
+description: The attributesForm query retrieves EAV attributes associated with customer and customer address frontend forms.
 ---
 
 # attributesForm query
@@ -33,9 +34,9 @@ You cannot query on the Admin Checkout form.
 
 The `attributesForm` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-attributesForm)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#attributesform)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-attributesForm)
+* [On-Premises/Cloud](/reference/graphql/index.md#attributesform)
 
 ## Example usage
 

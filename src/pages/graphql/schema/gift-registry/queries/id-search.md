@@ -1,10 +1,9 @@
 ---
 title: giftRegistryIdSearch query
+description: The giftRegistryIdSearch query returns a list of gift registries that match the specified registry ID. The ID is included in the email the application send...
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # giftRegistryIdSearch query
 
@@ -20,9 +19,9 @@ giftRegistryIdSearch(giftRegistryUid: String!): [GiftRegistrySearchResult]
 
 The `giftRegistryIdSearch` reference provides detailed information about the types and fields defined in this query.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#query-giftRegistryIdSearch)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#giftregistryidsearch)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-giftRegistryIdSearch)
+* [On-Premises/Cloud](/reference/graphql/index.md#giftregistryidsearch)
 
 ## Example usage
 

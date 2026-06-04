@@ -1,7 +1,10 @@
 ---
 title: category query
-edition: paas
+description: The category query has been deprecated. Use the categories query instead.
+
 ---
+
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # category query
 
@@ -25,7 +28,7 @@ category (
 
 ## Reference
 
-The [`category`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-category) reference provides detailed information about the types and fields defined in this query.
+The [`category`](/reference/graphql/index.md#category) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -210,7 +213,7 @@ The following query returns breadcrumb information about the women's `Tops` cate
 
 ## Errors
 
-Error | Description
---- | ---
-`Category doesn't exist` | The specified category ID value does not exist.
-`Field "category" argument "id" requires type Int, found "XXX"` | The specified `id` argument value has the wrong type.
+| Error | Description |
+| --- | --- |
+| `Category doesn't exist` | The specified category ID value does not exist. |
+| `Field "category" argument "id" requires type Int, found "XXX"` | The specified `id` argument value has the wrong type. |

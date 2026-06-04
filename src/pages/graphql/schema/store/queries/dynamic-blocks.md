@@ -1,7 +1,10 @@
 ---
 title: dynamicBlocks query
-edition: paas
+description: The dynamicBlocks query returns a list of dynamic blocks that have been placed in a Dynamic Blocks Rotator inline widget and meet the specified criteria.
+
 ---
+
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # dynamicBlocks query
 
@@ -25,17 +28,17 @@ Adobe Commerce and Magento Open Source GraphQL supports the **Display all instea
 
 The following input fields are available only if specialized modules have been installed:
 
-Field | Type | Description
---- | --- | ---
-`audience_id` field | FilterEqualTypeInput | The Audience ID for this block. Available in the `magento/audiences` module only.
-`cart_id` | String | The unique ID that identifies the customer's cart. Available in the `magento2-pwa-commerce` module only.
-`product_uid` | ID | The unique ID of the currently viewed product. Available in the `magento2-pwa-commerce` module only.
+| Field | Type | Description |
+| --- | --- | --- |
+| `audience_id` field | FilterEqualTypeInput | The Audience ID for this block. Available in the `magento/audiences` module only. |
+| `cart_id` | String | The unique ID that identifies the customer's cart. Available in the `magento2-pwa-commerce` module only. |
+| `product_uid` | ID | The unique ID of the currently viewed product. Available in the `magento2-pwa-commerce` module only. |
 
 If the `magento/audiences` module is installed, the following field can be returned:
 
-Field | Type | Description
---- | --- | ---
-`DynamicBlocks.audience_id` | [ID] | An array of Audience IDs for this block. Available in the `magento/audiences` module only.
+| Field | Type | Description |
+| --- | --- | --- |
+| `DynamicBlocks.audience_id` | [ID] | An array of Audience IDs for this block. Available in the `magento/audiences` module only. |
 
 ## Syntax
 
@@ -49,7 +52,7 @@ dynamicBlocks(
 
 ## Reference
 
-The [`dynamicBlocks`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#query-dynamicBlocks) reference provides detailed information about the types and fields defined in this query.
+The [`dynamicBlocks`](/reference/graphql/index.md#dynamicblocks) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -113,7 +116,7 @@ The following query returns all dynamic blocks of type `SPECIFIED`. The returned
 
 **cmsPage query response:**
 
-The following code illustrates the definition of the dynamic block with the `uid` of `MQ==`, as returned by the [`cmsPage` query](../../store/queries/cms-page.md). The response has been reformatted for readability.
+The following code illustrates the definition of the dynamic block with the `uid` of `MQ==`, as returned by the [`cmsPage` query](cms-page.md). The response has been reformatted for readability.
 
 ```html
 <div class=\"widget block block-banners\"

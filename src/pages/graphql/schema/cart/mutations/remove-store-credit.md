@@ -1,10 +1,9 @@
 ---
 title: removeStoreCreditFromCart mutation
+description: The removeStoreCreditFromCart mutation removes store credit previously applied to the specified cart with the applyStoreCreditToCart mutation. The applicat...
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # removeStoreCreditFromCart mutation
 
@@ -20,9 +19,9 @@ Store credit must be enabled on the store to run this mutation.
 
 The `removeStoreCreditFromCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-removeStoreCreditFromCart)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#removestorecreditfromcart)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-removeStoreCreditFromCart)
+* [On-Premises/Cloud](/reference/graphql/index.md#removestorecreditfromcart)
 
 ## Example usage
 
@@ -88,7 +87,7 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Please specify a valid customer.` | The mutation requires a valid authorization token.
-`Required parameter "cart_id" is missing` | The value specified in `cart_id` is empty.
+| Error | Description |
+| --- | --- |
+| `Please specify a valid customer.` | The mutation requires a valid authorization token. |
+| `Required parameter "cart_id" is missing` | The value specified in `cart_id` is empty. |

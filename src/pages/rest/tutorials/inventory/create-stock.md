@@ -1,12 +1,13 @@
 ---
 title: Step 3. Create stocks
 description: In this step of the tutorial you will create stocks
-edition: paas
 keywords:
   - Inventory
   - REST
---- 
- 
+---
+
+<Fragment src="../../../includes/paas-only.md"/>
+
 # Step 3. Create stocks
 
 This step guides through the process for creating **stock**. Stock represents a virtual, aggregated inventory of products for sources of your sales channels. Each stock maps sales channels with sources to determine available inventories and salable quantities.
@@ -15,7 +16,7 @@ A sales channel can only be assigned to one stock.
 
 The `stock_id` of the default stock is `1`.  You cannot delete or add sources to the default stock, but you can perform these actions with custom stocks.
 
-For more information about stock, see [Inventory Management overview](https://developer.adobe.com/commerce/webapi/rest/inventory/).
+For more information about stock, see [Inventory Management overview](/rest/inventory/index.md).
 
 ## Create the stock
 

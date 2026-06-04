@@ -1,14 +1,13 @@
 ---
 title: updateCompanyTeam mutation
+description: Use the updateCompanyTeam mutation to update the company team data.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # updateCompanyTeam mutation
 
@@ -32,9 +31,9 @@ mutation {
 
 The `updateCompanyTeam` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-updateCompanyTeam)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#updatecompanyteam)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateCompanyTeam)
+* [On-Premises/Cloud](/reference/graphql/index.md#updatecompanyteam)
 
 ## Example usage
 
@@ -75,3 +74,7 @@ mutation {
   }
 }
 ```
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

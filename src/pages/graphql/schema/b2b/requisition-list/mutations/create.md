@@ -1,14 +1,12 @@
 ---
 title: createRequisitionList mutation
+description: The createRequisitionList mutation creates a requisition list for the logged in customer.
 contributor_name: Zilker Technology
-contributor_link: https://www.ztech.io/
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # createRequisitionList mutation
 
@@ -16,7 +14,7 @@ The `createRequisitionList` mutation creates a requisition list for the logged i
 
 <InlineAlert variant="info" slots="text" />
 
-Use the [`storeConfig` query](../../../../schema/store/queries/store-config.md) with the `is_requisition_list_active` attribute to determine whether requisition lists are enabled.
+Use the [`storeConfig` query](../../../store/queries/store-config.md) with the `is_requisition_list_active` attribute to determine whether requisition lists are enabled.
 
 This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md).
 
@@ -37,9 +35,9 @@ mutation {
 
 The `createRequisitionList` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-createRequisitionList)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#createrequisitionlist)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createRequisitionList)
+* [On-Premises/Cloud](/reference/graphql/index.md#createrequisitionlist)
 
 ## Example usage
 
@@ -78,3 +76,7 @@ mutation {
   }
 }
 ```
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+Thanks to Zilker Technology for contributing this topic!

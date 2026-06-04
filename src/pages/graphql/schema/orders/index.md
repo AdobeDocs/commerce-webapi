@@ -1,6 +1,6 @@
 ---
 title: Orders
-description:
+description: The Orders mutations primarily manage returns, although the reorderItems mutation enables a customer to place the contents of a previous order into their c...
 ---
 
 # Orders

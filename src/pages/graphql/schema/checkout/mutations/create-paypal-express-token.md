@@ -1,7 +1,10 @@
 ---
 title: createPaypalExpressToken mutation
-edition: paas
+description: The createPaypalExpressToken mutation begins the authorization process for the following payment methods:
+
 ---
+
+<Fragment src="../../../../includes/paas-only.md"/>
 
 # createPaypalExpressToken mutation
 
@@ -29,7 +32,7 @@ mutation {
 
 ## Reference
 
-The [`createPaypalExpressToken`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-createPaypalExpressToken) reference provides detailed information about the types and fields defined in this mutation.
+The [`createPaypalExpressToken`](/reference/graphql/index.md#createpaypalexpresstoken) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -75,11 +78,11 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Required parameter "cart_id" is missing` | The mutation does not contain a `cart_id` argument.
-`Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` table.
-`Field PaypalExpressTokenInput.code of required type String! was not provided.` | The required attribute `code` is missing.
-`The requested Payment Method is not available.` | The payment method is not configured.
-`Field PaypalExpressUrlsInput.cancel_url of required type String! was not provided.` | The required attribute `cancel_url` is missing.
-`Field PaypalExpressUrlsInput.return_url of required type String! was not provided.` | The required attribute `return_url` is missing.
+| Error | Description |
+| --- | --- |
+| `Required parameter "cart_id" is missing` | The mutation does not contain a `cart_id` argument. |
+| `Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` table. |
+| `Field PaypalExpressTokenInput.code of required type String! was not provided.` | The required attribute `code` is missing. |
+| `The requested Payment Method is not available.` | The payment method is not configured. |
+| `Field PaypalExpressUrlsInput.cancel_url of required type String! was not provided.` | The required attribute `cancel_url` is missing. |
+| `Field PaypalExpressUrlsInput.return_url of required type String! was not provided.` | The required attribute `return_url` is missing. |

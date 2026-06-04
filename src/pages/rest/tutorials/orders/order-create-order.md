@@ -1,16 +1,17 @@
 ---
 title: Step 7. Create an order
 description: In this step of the tutorial you will create an order
-edition: paas
 keywords:
   - REST
---- 
- 
+---
+
+<Fragment src="../../../includes/paas-only.md"/>
+
 # Step 7. Create an order
 
 The shopping cart contains three items totaling $108. The shipping charges are $10, making the grand total $118. We're now ready to convert the quote to an order.
 
-### Send payment information
+## Send payment information
 
 When you submit payment information, Adobe Commerce creates an order and sends an order confirmation to the customer. Since we are using an offline payment method in this tutorial, we do not need to provide detailed payment information. The endpoint used in this example requires only the payment method and billing address information.
 
@@ -58,7 +59,7 @@ You must include the `email` attribute in the payload at the same level as `paym
 
 An `orderID`, such as `3`.
 
-### Review the order as an admin
+## Review the order as an admin
 
 When you request an order object, the response contains full details about the order, including customer information, payment details, as well as totals and subtotals for the order and each individual item.
 
@@ -80,8 +81,7 @@ Not applicable
 
 **Response:**
 
-<details>
-      <summary><b>Show code sample</b></summary>
+<Details slots="content" summary="Show code sample" />
 
 ```json
 {
@@ -322,9 +322,7 @@ Not applicable
 }
 ```
 
-</details>
-
-### Verify this step
+## Verify this step
 
 1. Log in to the Luma store as the customer. The dashboard shows the order.
 1. Log in to Admin. Click **Sales** > **Orders**. The order is displayed in the grid. Its status is Pending.

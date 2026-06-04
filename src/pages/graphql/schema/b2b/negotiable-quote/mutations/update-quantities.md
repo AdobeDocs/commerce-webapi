@@ -1,12 +1,11 @@
 ---
 title: updateNegotiableQuoteQuantities mutation
+description: The updateNegotiableQuoteQuantities mutation changes the quantity of one or more products in an active negotiable quote.
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../../includes/commerce-only.md"/>
 
 # updateNegotiableQuoteQuantities mutation
 
@@ -30,9 +29,9 @@ updateNegotiableQuoteQuantities(
 
 The `updateNegotiableQuoteQuantities` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-updateNegotiableQuoteQuantities)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#updatenegotiablequotequantities)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-updateNegotiableQuoteQuantities)
+* [On-Premises/Cloud](/reference/graphql/index.md#updatenegotiablequotequantities)
 
 ## Example usage
 

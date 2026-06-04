@@ -1,0 +1,76 @@
+{
+  "OBJECT": {
+    "Query": {
+      "fields": {
+        "categoryTree": {
+          "documentation": { "undocumented": true }
+        },
+        "navigation": {
+          "documentation": { "undocumented": true }
+        },
+        "searchCategory": {
+          "documentation": { "undocumented": true }
+        },
+        "recommendationsByUnitIds": {
+          "documentation": { "undocumented": true }
+        },
+        "payByLinkOrder": {
+          "documentation": { "undocumented": true }
+        }
+      }
+    },
+    "Mutation": {
+      "fields": {
+        "completePayByLinkPayment": {
+          "documentation": { "undocumented": true }
+        }
+      }
+    },
+    "CategoryTreeView": {
+      "documentation": { "undocumented": true }
+    },
+    "CategoryNavigationView": {
+      "documentation": { "undocumented": true }
+    },
+    "CategoryProductView": {
+      "documentation": { "undocumented": true }
+    },
+    "SearchCategoryResultPage": {
+      "documentation": { "undocumented": true }
+    },
+    "CategoryMetaTags": {
+      "documentation": { "undocumented": true }
+    },
+    "CategoryImage": {
+      "documentation": { "undocumented": true }
+    },
+    "PageInfo": {
+      "documentation": { "undocumented": true }
+    },
+    "PayByLinkOrder": {
+      "documentation": { "undocumented": true }
+    },
+    "PayByLinkOrderAddress": {
+      "documentation": { "undocumented": true }
+    },
+    "PayByLinkOrderItem": {
+      "documentation": { "undocumented": true }
+    },
+    "PayByLinkOrderTotals": {
+      "documentation": { "undocumented": true }
+    },
+    "CompletePayByLinkPaymentOutput": {
+      "documentation": { "undocumented": true }
+    }
+  },
+  "INPUT_OBJECT": {
+    "PayByLinkInput": {
+      "documentation": { "undocumented": true }
+    }
+  },
+  "INTERFACE": {
+    "CategoryViewV2": {
+      "documentation": { "undocumented": true }
+    }
+  }
+}

@@ -5,8 +5,8 @@ contributor_name: Goivvy LLC
 contributor_link: https://www.goivvy.com/magento-optimization-service
 keywords:
   - REST
---- 
- 
+---
+
 # Create a bundle product tutorial
 
 This tutorial shows a way to use Adobe Commerce REST APIs to create a _bundle product_. A bundle product is a "create your own" type of product.
@@ -15,10 +15,14 @@ In this tutorial, we will create a desktop computer by bundling a processor, mon
 
 This **3-step tutorial** generally takes **40 minutes**.
 
-### Before you begin
+## Before you begin
 
 *  Install a Commerce instance with sample data.
 
 *  Install a REST client. We will use Postman in this tutorial.
 
 *  Generate an admin authorization token. All calls in this tutorial require administrator privileges.
+
+<Edition slots="text" backgroundcolor="blue"/>
+
+[Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/magento-optimization-service)

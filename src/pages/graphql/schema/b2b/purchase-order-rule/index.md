@@ -1,12 +1,11 @@
 ---
 title: Purchase order approval rules (B2B)   
+description: In a typical implementation of purchase orders, a company admin or manager with sufficient permissions sets up approval rules that enforce company policies...
 keywords:
   - B2B
 ---
 
-import CommerceOnly from '/src/_includes/commerce-only.md'
-
-<CommerceOnly />
+<Fragment src="../../../../includes/commerce-only.md"/>
 
 # Purchase order approval rules (B2B)
 
@@ -15,7 +14,7 @@ In a typical implementation of purchase orders, a company admin or manager with 
 Adobe Commerce provides multiple mutations that define and validate approval rules. However, there are no top-level queries to return lists of rules or purchase orders awaiting approval.
 The [`customer` query](../../customer/queries/customer.md) now returns details about purchase orders and approval rules.
 
-The [Purchase order approval rules](https://experienceleague.adobe.com/docs/commerce-admin/b2b/purchase-orders/account-dashboard-approval-rules.html) topic in the _B2B for Adobe Commerce Guide_ provides additional information about setting up approval rules.
+The [Purchase order approval rules](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/purchase-orders/account-dashboard-approval-rules) topic in the _B2B for Adobe Commerce Guide_ provides additional information about setting up approval rules.
 
 The following examples demonstrate `customer` queries that return information about approval rules.
 
@@ -85,7 +84,7 @@ The following example returns the list of purchase order approval rules.
 
 ## Get approval rule details
 
-The `purchase_order_approval_rule` query returns information about the specified approval rule. To retrieve details about the amount or quantity required to trigger an approval rule, you must specify the implementations of the [`PurchaseOrderApprovalRuleConditionInterface`](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#definition-PurchaseOrderApprovalRuleConditionInterface).
+The `purchase_order_approval_rule` query returns information about the specified approval rule. To retrieve details about the amount or quantity required to trigger an approval rule, you must specify the implementations of the [`PurchaseOrderApprovalRuleConditionInterface`](/reference/graphql/index.md#purchaseorderapprovalruleconditioninterface).
 
 The following example returns information about the purchase order approval rule.
 
@@ -227,7 +226,7 @@ The following example returns the approval history of purchase orders made by th
 
 ## Return approval rule metadata
 
-The following example returns the metadata necessary to render the form for [creating or editing an approval rule](https://experienceleague.adobe.com/docs/commerce-admin/b2b/purchase-orders/account-dashboard-approval-rules.html#approval-rule-setup).
+The following example returns the metadata necessary to render the form for [creating or editing an approval rule](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/purchase-orders/account-dashboard-approval-rules#approval-rule-setup).
 
 **Request:**
 

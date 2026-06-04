@@ -1,5 +1,6 @@
 ---
 title: mergeCarts mutation
+description: The mergeCarts mutation transfers the contents of a guest cart into the cart of a logged-in customer. This mutation must be run on behalf of a logged-in cu...
 ---
 
 # mergeCarts mutation
@@ -32,9 +33,9 @@ mutation {
 
 The `mergeCarts` reference provides detailed information about the types and fields defined in this mutation.
 
-* &#8203;<Edition name="saas" /> [Adobe Commerce as a Cloud Service](https://developer.adobe.com/commerce/webapi/graphql-api/saas/index.html#mutation-mergeCarts)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#mergecarts)
 
-* &#8203;<Edition name="paas" /> [On-Premises/Cloud](https://developer.adobe.com/commerce/webapi/graphql-api/index.html#mutation-mergeCarts)
+* [On-Premises/Cloud](/reference/graphql/index.md#mergecarts)
 
 ## Example usage
 
@@ -173,10 +174,10 @@ mutation {
 
 ## Errors
 
-Error | Description
---- | ---
-`Current user does not have an active cart.` | The `mergeCarts` mutation deactivates the guest cart specified in the `source_cart_id` after merging. The guest cannot make any further operations with it.
-`Required parameter "source_cart_id" is missing` | The `source_cart_id` attribute contains an empty value.
-`The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table, or you tried to merge two guest carts.
-`The current user cannot perform operations on cart` | The authorized customer tried to merge a guest cart into the cart of another customer.
-`Could not create empty cart for customer` | The system could not create an empty cart for the logged-in customer
+| Error | Description |
+| --- | --- |
+| `Current user does not have an active cart.` | The `mergeCarts` mutation deactivates the guest cart specified in the `source_cart_id` after merging. The guest cannot make any further operations with it. |
+| `Required parameter "source_cart_id" is missing` | The `source_cart_id` attribute contains an empty value. |
+| `The current customer isn't authorized.` | The current customer is not currently logged in, or the customer's token does not exist in the `oauth_token` table, or you tried to merge two guest carts. |
+| `The current user cannot perform operations on cart` | The authorized customer tried to merge a guest cart into the cart of another customer. |
+| `Could not create empty cart for customer` | The system could not create an empty cart for the logged-in customer |
