@@ -10384,7 +10384,7 @@ definitions:
 host: https://<server>.api.commerce.adobe.com/<tenant-id>
 info:
   title: Adobe Commerce as a Cloud Service
-  version: April 2026
+  version: May 2026
   description:
     "$ref": "intro/accs-intro.md"
 paths:
