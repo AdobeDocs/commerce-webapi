@@ -35,7 +35,7 @@ The following conditions must be true to vault a card during checkout:
 
 1. Adobe Commerce generates a `order_id` and forwards the value in the `mp_order_id` field and the PayPal response in the `id` field.
 
-1. Run [`setPaymentMethodOnCart`](../../schema/cart/mutations/set-payment-method.md) again with [`is_active_payment_token_enabler`](https://developer.adobe.com/commerce/webapi/graphql/payment-services-extension/workflows/checkout/#setpaymentmethodoncartinput-object) set to `true`. This indicates whether a customer-entered credit/debit card should be tokenized for later usage.
+1. Run [`setPaymentMethodOnCart`](../../schema/cart/mutations/set-payment-method.md) again with [`is_active_payment_token_enabler`](/graphql/payment-services-extension/workflows/checkout.md#setpaymentmethodoncartinput-object) set to `true`. This indicates whether a customer-entered credit/debit card should be tokenized for later usage.
 
 1. Adobe Commerce returns a token.
 

@@ -11,7 +11,7 @@ This mutation has been deprecated in Adobe Commerce as a Cloud Service and will 
 
 Use the `updateCustomerAddress` mutation to update the customer's address.
 
-To return or modify information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session/).
+To return or modify information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](/get-started/authentication/gs-authentication-session/index.md).
 
 ## Syntax
 

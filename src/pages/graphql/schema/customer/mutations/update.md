@@ -14,7 +14,7 @@ We recommend using the [updateCustomerV2 mutation](update-v2.md) to update a cus
 
 The `updateCustomer` mutation updates the customer's personal information.
 
-To return or modify information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-session/).
+To return or modify information about a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, you also can use [session authentication](/get-started/authentication/gs-authentication-session/index.md).
 
 ## Syntax
 

@@ -28,7 +28,7 @@ Complete the following prerequisites:
 -  Install an Adobe Commerce or Magento Open Source instance with sample data.
    The sample data defines a functional store, called Luma, that sells fitness clothing and accessories. The store does not provide any sandbox accounts for testing credit card payments, so transactions will be simulated using an offline payment method.
 
--  Install a GraphQL client. You can use any GraphQL client to send calls to Magento. [Altair](https://altair.sirmuel.design/) is a good example.
+-  Install a GraphQL client. You can use any GraphQL client to send calls to Magento.
 
 -  Learn about GraphQL, how it works, and how to use it. See [Introduction to GraphQL](https://graphql.org/learn/) for details.
 
@@ -38,9 +38,9 @@ Complete the following prerequisites:
 
 ## Other resources
 
--  [Order processing tutorial](https://developer.adobe.com/commerce/webapi/rest/tutorials/orders/) shows a system integrator how REST APIs are used in the lifecycle of an order, including configuring a store and creating a customer; creating quotes, orders, invoices, and shipments; preparing for checkout; and more order-related tasks.
+-  [Order processing tutorial](/rest/tutorials/orders/index.md) shows a system integrator how REST APIs are used in the lifecycle of an order, including configuring a store and creating a customer; creating quotes, orders, invoices, and shipments; preparing for checkout; and more order-related tasks.
 
--  [REST Tutorials](https://developer.adobe.com/commerce/webapi/rest/tutorials/) provides additional information about completing any REST tutorial.
+-  [REST Tutorials](/rest/tutorials/index.md) provides additional information about completing any REST tutorial.
 
 <Edition slots="text" backgroundcolor="blue"/>
 

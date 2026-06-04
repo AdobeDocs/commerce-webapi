@@ -12,7 +12,7 @@ keywords:
 
 <InlineAlert variant="info" slots="text"/>
 
-This topic is for Platform-as-a-Service (PaaS) customers only. Adobe Commerce Cloud Services customers must refer to [REST Authentication](https://developer.adobe.com/commerce/webapi/rest/authentication/) for details on authentication.
+This topic is for Platform-as-a-Service (PaaS) customers only. Adobe Commerce Cloud Services customers must refer to [REST Authentication](/rest/authentication/index.md) for details on authentication.
 
 As a customer, you log in to the storefront with your customer credentials. As an admin, you log in to the Admin with your admin credentials.
 

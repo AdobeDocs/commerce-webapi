@@ -10,7 +10,7 @@ keywords:
 
 The Adobe Commerce and Magento Open Source web API framework provides integrators and developers the means to use web services that communicate with the application. Key features include:
 
-*  Support for [GraphQL](../graphql/index.md), [REST](https://developer.adobe.com/commerce/webapi/rest/) (Representational State Transfer) and [SOAP](soap-web-api-calls.md) (Simple Object Access Protocol).
+*  Support for [GraphQL](../graphql/index.md), [REST](/rest/index.md) (Representational State Transfer) and [SOAP](soap-web-api-calls.md) (Simple Object Access Protocol).
 
 *  Three types of [authentication](authentication/index.md):
    *  Third-party applications authenticate with [OAuth 1.0a](authentication/gs-authentication-oauth.md).
