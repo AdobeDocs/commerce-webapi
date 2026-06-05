@@ -1,7 +1,6 @@
 ---
 title: clearCustomerCart mutation
 description: The clearCustomerCart mutation clears the customer's cart. B2B requisition lists must be enabled to execute this mutation.
-contributor_name: EY
 keywords:
   - B2B
 ---
@@ -66,6 +65,6 @@ mutation {
 }
 ```
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 Thanks to EY for contributing this topic!

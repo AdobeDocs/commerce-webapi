@@ -1,8 +1,6 @@
 ---
 title: updateCompanyStructure mutation
 description: Use the updateCompanyStructure mutation to change the parent node of a company team.
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 keywords:
   - B2B
 ---
@@ -110,6 +108,6 @@ mutation {
 }
 ```
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

@@ -1,8 +1,6 @@
 ---
 title: setPaymentMethodAndPlaceOrder mutation
 description: The setPaymentMethodAndPlaceOrder mutation has been deprecated. Use the setPaymentMethodOnCart and placeOrder mutations instead. You can run the two method...
-contributor_name: Something Digital (now Rightpoint)
-contributor_link: https://www.rightpoint.com/
 ---
 
 <Fragment src="../../../../includes/paas-only.md"/>
@@ -94,6 +92,6 @@ mutation {
 | `The requested Payment Method is not available.` | The payment method specified in the `payment_method` argument is disabled or does not exist. |
 | `Unable to place order: Some of the products are out of stock.` | Some of the products in a cart are out of stock. |
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Something Digital (now Rightpoint) for contributing this topic!](https://www.rightpoint.com/)

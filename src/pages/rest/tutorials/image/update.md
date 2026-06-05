@@ -1,8 +1,6 @@
 ---
 title: Step 3. Update an image 
 description: We will learn how to update an existing image 
-contributor_name: Goivvy LLC
-contributor_link: https://www.goivvy.com/
 keywords:
   - REST
 ---
@@ -79,6 +77,6 @@ Refresh the `MJ03` product page and see if the existing image was updated.
 
 ![Updated Image](../../../images/update-image-frontend.png)
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/)

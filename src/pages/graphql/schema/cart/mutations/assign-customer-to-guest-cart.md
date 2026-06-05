@@ -1,8 +1,6 @@
 ---
 title: assignCustomerToGuestCart mutation
 description: The assignCustomerToGuestCart mutation merges a logged-in customer's shopping cart into the specified guest cart. The mutation inactivates the customer's s...
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 ---
 
 # assignCustomerToGuestCart mutation
@@ -111,6 +109,6 @@ mutation {
 | `Could not find a cart with ID "XXX"` | The specified `cart_id` value does not exist in the `quote_id_mask` table. |
 | `The current user cannot perform operations on cart "XXX"` | Tried to assign the customer to the customer's cart. |
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

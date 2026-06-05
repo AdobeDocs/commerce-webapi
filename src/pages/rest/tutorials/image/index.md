@@ -1,8 +1,6 @@
 ---
 title: Manage product images tutorial
 description: We will learn how to add, list, update and delete product images.
-contributor_name: Goivvy LLC
-contributor_link: https://www.goivvy.com/
 keywords:
   - REST
 ---
@@ -33,6 +31,6 @@ This **4-step tutorial** generally takes **30 minutes**.
 
 *  Generate an [admin access token](../../../get-started/authentication/gs-authentication-token.md), which will we will use to make image managing API calls.
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/)

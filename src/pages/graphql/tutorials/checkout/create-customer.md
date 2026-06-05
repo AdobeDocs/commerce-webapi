@@ -1,8 +1,6 @@
 ---
 title: Step 1. Create a customer
 description: Learn how to create a customer with the GraphQL API.
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 keywords:
   - GraphQL
   - Checkout
@@ -97,6 +95,6 @@ The name of the header is `Authorization` and the value is `Bearer <token>`.
 
 Sign in as a customer to the website using the email `john.doe@example.com` and password `b1b2b3l@w+`. You should be successfully logged in.
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

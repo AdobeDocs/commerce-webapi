@@ -1,8 +1,6 @@
 ---
 title: Step 8. Set email on the cart
 description: Learn how to set a an email address for an order with the GraphQL API.
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 keywords:
   - GraphQL
   - Checkout
@@ -53,6 +51,6 @@ mutation {
 
 There are no additional verification steps. `quote`.`customer_email` is displayed for administrator on back-end side.
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

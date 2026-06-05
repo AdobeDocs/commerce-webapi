@@ -1,8 +1,6 @@
 ---
 title: Asynchronous web endpoints
 description: Learn about asynchronous web points, how they are used and how to define store scopes
-contributor_name: comwrap GmbH
-contributor_link: https://comwrap.com/en/
 keywords:
   - REST
 ---
@@ -133,6 +131,6 @@ The following rules apply when you create or update an object, such as a product
 *  If you include the `all` parameter, then Commerce updates values for all store scopes (in case a particular store doesn't yet have its own value set).
 *  If `<store_code>` parameter is set, then values for only defined store will be updated.
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to comwrap GmbH for contributing this topic!](https://comwrap.com/en/)

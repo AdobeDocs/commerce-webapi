@@ -1,8 +1,6 @@
 ---
 title: Step 2. Add a new image 
 description: We will learn how to add a new image to a product.
-contributor_name: Goivvy LLC
-contributor_link: https://www.goivvy.com/
 keywords:
   - REST
 ---
@@ -74,6 +72,6 @@ Refresh the `MJ03` product page and see if your new image was added.
 
 ![New Product Image](../../../images/api-frontend-new-image.png)
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/)

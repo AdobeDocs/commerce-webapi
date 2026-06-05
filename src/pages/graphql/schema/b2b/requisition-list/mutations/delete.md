@@ -1,7 +1,6 @@
 ---
 title: deleteRequisitionList mutation
 description: The deleteRequisitionList mutation deletes a requisition list of the logged in customer. The response can include any remaining requisition lists.
-contributor_name: Zilker Technology
 keywords:
   - B2B
 ---
@@ -87,6 +86,6 @@ mutation {
 *  [createRequisitionList mutation](create.md)
 *  [updateRequisitionList mutation](update.md)
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 Thanks to Zilker Technology for contributing this topic!

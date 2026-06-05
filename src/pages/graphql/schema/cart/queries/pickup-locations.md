@@ -1,8 +1,6 @@
 ---
 title: pickupLocations query
 description: Use the pickupLocations query to retrieve a list of available pickup locations.
-contributor_name: Oleksandr Kravchuk
-contributor_link: https://github.com/swnsma
 ---
 
 # pickupLocations query
@@ -137,6 +135,6 @@ For the available Pickup location, the response would look like:
 | `Field AreaInput.radius of required type Int! was not provided` | The value specified in the `AreaInput.radius` argument is empty. |
 | `Field AreaInput.search_term of required type String! was not provided` | The value specified in the `AreaInput.search_term` argument is empty. |
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Oleksandr Kravchuk for contributing this topic!](https://github.com/swnsma)

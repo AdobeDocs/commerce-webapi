@@ -1,8 +1,6 @@
 ---
 title: Step 2. Create an empty cart
 description: Learn how to create a cart with the GraphQL API.
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 keywords:
   - GraphQL
   - Checkout
@@ -84,6 +82,6 @@ Copy the value of the `id` attribute. Use this value in subsequent steps whereve
 
 There are no additional verification steps. The value of `id` is not displayed on the website or in the Admin.
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

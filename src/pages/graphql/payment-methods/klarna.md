@@ -1,8 +1,6 @@
 ---
 title: Klarna payment method
 description: Learn how to use the GraphQL API mutation for the Klarna payment solution.
-contributor_name: Klarna
-contributor_link: https://www.klarna.com/
 keywords:
   - GraphQL
   - Payments
@@ -141,6 +139,6 @@ mutation {
 }
 ```
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Klarna for contributing this topic!](https://www.klarna.com/)

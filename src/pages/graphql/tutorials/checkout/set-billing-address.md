@@ -1,8 +1,6 @@
 ---
 title: Step 5. Set billing address
 description: Learn how to set a billing address for an order with the GraphQL API.
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 keywords:
   - GraphQL
   - Checkout
@@ -114,6 +112,6 @@ Verification is possible after [Step 6: Set the delivery method](set-delivery-me
 
 1. Go to the Review & Payments step. The Billing Address form is populated with the address details you entered.
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

@@ -1,8 +1,6 @@
 ---
 title: updateCompanyRole mutation
 description: Use the updateCompanyRole mutation to update the company role and permissions.
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 keywords:
   - B2B
 ---
@@ -175,6 +173,6 @@ mutation {
 | `Unable to set "allow" for the resource because its parent resource(s) is set to "deny".` | To allow permission for the company role, you must allow all the permissions of the parent tree. |
 | `No such entity with roleId = xxx` | The company role with ID `xxx` doesn't exist. |
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

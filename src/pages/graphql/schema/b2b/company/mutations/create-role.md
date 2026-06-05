@@ -1,8 +1,6 @@
 ---
 title: createCompanyRole mutation
 description: The createCompanyRole mutation defines a new company role. To create a role, you must provide an array of permissions that determine which resources the us...
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 keywords:
   - B2B
 ---
@@ -134,6 +132,6 @@ mutation {
 | `User role with this name already exists. Enter a different name to save this role.` | The company cannot have multiple company roles with the same name. |
 | `Unable to set "allow" for the resource because its parent resource(s) is set to "deny".` | To allow permission for the company role, you must allow all the permissions of the parent tree. |
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

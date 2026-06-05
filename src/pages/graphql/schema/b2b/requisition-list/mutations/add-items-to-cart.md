@@ -1,7 +1,6 @@
 ---
 title: addRequisitionListItemsToCart mutation
 description: The addRequisitionListItemsToCart mutation adds requisition list items to the cart. The requisition list does not change after adding items to the cart.
-contributor_name: EY
 keywords:
   - B2B
 ---
@@ -108,6 +107,6 @@ mutation {
 }
 ```
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 Thanks to EY for contributing this topic!

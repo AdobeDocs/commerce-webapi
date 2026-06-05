@@ -1,8 +1,6 @@
 ---
 title: addProductsToCompareList mutation
 description: The addProductsToCompareList mutation adds products to the comparison list.
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 ---
 
 # addProductsToCompareList mutation
@@ -146,6 +144,6 @@ mutation {
 *  [deleteCompareList mutation](delete-compare-list.md)
 *  [removeProductsFromCompareList mutation](remove-from-compare-list.md)
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

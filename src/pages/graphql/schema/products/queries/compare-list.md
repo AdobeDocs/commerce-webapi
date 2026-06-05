@@ -1,8 +1,6 @@
 ---
 title: compareList query
 description: The compareList query retrieves information about a list of products so that the shopper can compare those products.
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 ---
 
 # compareList query
@@ -117,6 +115,6 @@ The following query returns the information about products in the comparison lis
 *  [deleteCompareList mutation](../mutations/delete-compare-list.md)
 *  [removeProductsFromCompareList mutation](../mutations/remove-from-compare-list.md)
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

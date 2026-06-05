@@ -1,8 +1,6 @@
 ---
 title: Debugging GraphQL queries
 description: Learn how to use PhpStorm and Xdebug to debug GraphQL API queries.
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 keywords:
   - GraphQL
 ---
@@ -35,6 +33,6 @@ As a result, Xdebug within the PHP execution attempts to make a connection to an
 *  [GraphQL request headers](../usage/headers.md)
 *  [Exception handling](exceptions.md)
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

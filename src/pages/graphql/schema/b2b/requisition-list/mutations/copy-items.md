@@ -1,7 +1,6 @@
 ---
 title: copyItemsBetweenRequisitionLists mutation
 description: The copyItemsBetweenRequisitionLists mutation copies items from one requisition list to another.
-contributor_name: EY
 keywords:
   - B2B
 ---
@@ -87,6 +86,6 @@ mutation {
 *  [moveItemsBetweenRequisitionLists mutation](move-items.md)
 *  [deleteRequisitionListItems mutation](delete.md)
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 Thanks to EY for contributing this topic!
