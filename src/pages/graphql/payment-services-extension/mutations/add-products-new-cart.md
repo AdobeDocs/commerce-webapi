@@ -7,7 +7,7 @@ description: This mutation creates a new cart in Payment Services, supporting gu
 
 <InlineAlert variant="info" slots="text" />
 
-This mutation is available automatically on Adobe Commerce as a Cloud Service. On Adobe Commerce on Cloud and on-premises instances, you must install [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.10.0 or higher to use this query.
+This mutation is available automatically on Adobe Commerce as a Cloud Service. On Adobe Commerce on Cloud and on-premises instances, you must install [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.10.0 or higher to use this mutation.
 
 The `addProductsToNewCart` mutation always creates a new cart for the shopper then adds the specified products to that cart. This contrasts with the `addProductsToCart` mutation, which requires you to specify an existing cart ID as input.
 

@@ -7,7 +7,7 @@ description: This mutation creates a payment order for later processing when Pay
 
 <InlineAlert variant="info" slots="text" />
 
-This mutation is available automatically on Adobe Commerce as a Cloud Service. On Adobe Commerce on Cloud and on-premises instances, you must install [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.10.0 or higher to use this query.
+This mutation is available automatically on Adobe Commerce as a Cloud Service. On Adobe Commerce on Cloud and on-premises instances, you must install [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.10.0 or higher to use this mutation.
 
 The `createPaymentOrder` mutation creates a payment order for later processing with Payment Services enabled.
 

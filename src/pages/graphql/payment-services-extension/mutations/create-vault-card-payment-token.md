@@ -7,7 +7,7 @@ description: This mutation stores a permanent payment token for later purchases.
 
 <InlineAlert variant="info" slots="text" />
 
-This mutation is available automatically on Adobe Commerce as a Cloud Service. On Adobe Commerce on Cloud and on-premises instances, you must install [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.10.0 or higher to use this query.
+This mutation is available automatically on Adobe Commerce as a Cloud Service. On Adobe Commerce on Cloud and on-premises instances, you must install [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.10.0 or higher to use this mutation.
 
 The `createVaultCardPaymentToken` mutation creates a permanent `vault_token_id` and associates an optional card description, visible in the storefront.
 

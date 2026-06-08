@@ -7,7 +7,7 @@ description: This mutation synchronizes the payment order details for the PayPal
 
 <InlineAlert variant="info" slots="text" />
 
-This mutation is available automatically on Adobe Commerce as a Cloud Service. On Adobe Commerce on Cloud and on-premises instances, you must install [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.10.0 or higher to use this query.
+This mutation is available automatically on Adobe Commerce as a Cloud Service. On Adobe Commerce on Cloud and on-premises instances, you must install [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.10.0 or higher to use this mutation.
 
 The `syncPaymentOrder` mutation synchronizes the payment order details for the PayPal Smart Buttons and Apple Pay payment methods. This mutation updates the quote with the shipping, billing, email, and phone number details. It returns a Boolean value indicating whether the synchronization was successful.
 

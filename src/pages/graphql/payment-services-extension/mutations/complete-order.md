@@ -7,7 +7,7 @@ description: This mutation synchronizes order details before you run the `placeO
 
 <InlineAlert variant="info" slots="text" />
 
-This mutation is available automatically on Adobe Commerce as a Cloud Service. On Adobe Commerce on Cloud and on-premises instances, you must install [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.10.0 or higher to use this query.
+This mutation is available automatically on Adobe Commerce as a Cloud Service. On Adobe Commerce on Cloud and on-premises instances, you must install [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.10.0 or higher to use this mutation.
 
 The `completeOrder` mutation synchronizes order details before you run the `placeOrder` mutation.
 
