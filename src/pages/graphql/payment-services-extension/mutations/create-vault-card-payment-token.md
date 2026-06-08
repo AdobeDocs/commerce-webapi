@@ -7,7 +7,7 @@ description: This mutation stores a permanent payment token for later purchases.
 
 <InlineAlert variant="info" slots="text" />
 
-This mutation is available only if you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.10.0 or higher.
+This mutation is available automatically on Adobe Commerce as a Cloud Service. On Adobe Commerce on Cloud and on-premises instances, you must install [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.10.0 or higher to use this query.
 
 The `createVaultCardPaymentToken` mutation creates a permanent `vault_token_id` and associates an optional card description, visible in the storefront.
 
@@ -25,7 +25,7 @@ mutation {
 
 ## Reference
 
-The [`createVaultCardPaymentToken`](/reference/graphql/index.md#createvaultcardpaymenttoken) reference provides detailed information about the types and fields defined in this mutation.
+The [`createVaultCardPaymentToken`](/reference/graphql/saas/index.md#createvaultcardpaymenttoken) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -71,39 +71,3 @@ mutation {
     }
 } 
 ```
-
-## Input attributes
-
-The `CreateVaultCardPaymentTokenInput` object contains the following input attributes:
-
-| Attribute |  Data Type | Description |
-| --- | --- | --- |
-| `setup_token_id` | String! | The `setup_token` obtained with the `createVaultCardSetupToken` mutation |
-| `card_description` | String | The description of the vaulted card |
-
-## Output attributes
-
-The `CreateVaultCardPaymentTokenOutput` object contains the following attributes:
-
-| Attribute |  Data Type | Description |
-| --- | --- | --- |
-| `vault_token_id` | String! | The vault payment token information |
-| `payment_source` | PaymentSourceOutput! | The payment source information |
-
-### `PaymentSourceOutput` attributes
-
-The `PaymentSourceOutput` object describes the payment source information. It contains the following attribute:
-
-| Attribute |  Data Type | Description |
-| --- | --- | --- |
-| `card` | CardPaymentSourceOutput! | The card payment source information. |
-
-### `CardPaymentSourceOutput` object
-
-The `CardPaymentSourceOutput` object describes the card payment source information
-
-| Attribute |  Data Type | Description |
-| --- | --- | --- |
-| `brand` | String | The brand of the card |
-| `last_digits` | String | Last digits of the card |
-| `expiry` | String | The expiry date of the card |

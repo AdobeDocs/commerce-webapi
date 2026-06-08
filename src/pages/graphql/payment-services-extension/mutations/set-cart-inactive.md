@@ -7,7 +7,7 @@ description: This mutation marks a cart as inactive in Payment Services, helping
 
 <InlineAlert variant="info" slots="text" />
 
-This mutation is available only if you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.12.0 or higher.
+This mutation is available automatically on Adobe Commerce as a Cloud Service. On Adobe Commerce on Cloud and on-premises instances, you must install [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.10.0 or higher to use this query.
 
 The `setCartAsInactive` mutation sets a specific `cartId` as inactive. Use this mutation when a payment error occurs, or when a shopper cancels a payment flow, after the [`addProductsToNewCart`](add-products-new-cart.md) mutation returns a `cartId`. This mutation helps prevent a customer having multiple active carts created with the [`addProductsToNewCart`](add-products-new-cart.md) mutation.
 
