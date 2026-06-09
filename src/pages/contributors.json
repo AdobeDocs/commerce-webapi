@@ -401,63 +401,64 @@
     {
       "page": "/graphql/payment-services-extension/mutations/add-products-new-cart",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
+        "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/38460853?v=4"
       ],
-      "lastUpdated": "6/3/2026"
+      "lastUpdated": "6/8/2026"
     },
     {
       "page": "/graphql/payment-services-extension/mutations/complete-order",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/38460853?v=4"
       ],
-      "lastUpdated": "11/4/2025"
+      "lastUpdated": "6/8/2026"
     },
     {
       "page": "/graphql/payment-services-extension/mutations/create-payment-order",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
+        "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/38460853?v=4"
       ],
-      "lastUpdated": "6/3/2026"
+      "lastUpdated": "6/8/2026"
     },
     {
       "page": "/graphql/payment-services-extension/mutations/create-vault-card-payment-token",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
+        "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/38460853?v=4"
       ],
-      "lastUpdated": "6/3/2026"
+      "lastUpdated": "6/8/2026"
     },
     {
       "page": "/graphql/payment-services-extension/mutations/create-vault-card-setup-token",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
+        "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/38460853?v=4"
       ],
-      "lastUpdated": "6/3/2026"
+      "lastUpdated": "6/8/2026"
     },
     {
       "page": "/graphql/payment-services-extension/mutations/set-cart-inactive",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
+        "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/38460853?v=4"
       ],
-      "lastUpdated": "6/3/2026"
+      "lastUpdated": "6/8/2026"
     },
     {
       "page": "/graphql/payment-services-extension/mutations/sync-payment-order",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
+        "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/38460853?v=4"
       ],
-      "lastUpdated": "6/3/2026"
+      "lastUpdated": "6/8/2026"
     },
     {
       "page": "/graphql/payment-services-extension/queries/",
@@ -470,38 +471,38 @@
     {
       "page": "/graphql/payment-services-extension/queries/get-payment-config",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
+        "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/38460853?v=4"
       ],
-      "lastUpdated": "6/3/2026"
+      "lastUpdated": "6/8/2026"
     },
     {
       "page": "/graphql/payment-services-extension/queries/get-payment-order",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
+        "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/38460853?v=4"
       ],
-      "lastUpdated": "6/3/2026"
+      "lastUpdated": "6/8/2026"
     },
     {
       "page": "/graphql/payment-services-extension/queries/get-payment-sdk",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
+        "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/38460853?v=4"
       ],
-      "lastUpdated": "6/3/2026"
+      "lastUpdated": "6/8/2026"
     },
     {
       "page": "/graphql/payment-services-extension/queries/get-vault-config",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
+        "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/38460853?v=4"
       ],
-      "lastUpdated": "6/3/2026"
+      "lastUpdated": "6/8/2026"
     },
     {
       "page": "/graphql/payment-services-extension/workflows/",
