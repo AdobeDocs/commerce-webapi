@@ -1,7 +1,6 @@
 ---
 title: updateRequisitionList mutation
 description: The updateRequisitionList mutation updates the name and, optionally, the description of a requisition list.
-contributor_name: Zilker Technology
 keywords:
   - B2B
 ---
@@ -84,6 +83,6 @@ mutation {
 *  [createRequisitionList mutation](create.md)
 *  [deleteRequisitionList mutation](delete.md)
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 Thanks to Zilker Technology for contributing this topic!

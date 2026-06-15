@@ -1,8 +1,6 @@
 ---
 title: Bulk operation status endpoints
 description: Track the status of bulk endpoints
-contributor_name: comwrap GmbH
-contributor_link: https://www.comwrap.com/en/
 keywords:
   - REST
 ---
@@ -179,6 +177,6 @@ The `GET /V1/bulk/:bulkUuid/detailed-status` endpoint returns detailed informati
 }
 ```
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to comwrap GmbH for contributing this topic!](https://www.comwrap.com/en/)

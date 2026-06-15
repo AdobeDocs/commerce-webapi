@@ -8,3 +8,4 @@ jobs:
     uses: AdobeDocs/commerce-contributor/.github/workflows/validate-pr.yml@main
     with:
       base_ref: ${{ github.event.pull_request.base.ref }}
+      pr_number: ${{ github.event.pull_request.number }}

@@ -1,8 +1,6 @@
 ---
 title: deleteCompareList mutation
 description: The deleteCompareList mutation deletes the specified comparison list. Run this mutation in the following circumstances:
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 ---
 
 # deleteCompareList mutation
@@ -68,6 +66,6 @@ mutation {
 *  [createCompareList mutation](create-compare-list.md)
 *  [removeProductsFromCompareList mutation](remove-from-compare-list.md)
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

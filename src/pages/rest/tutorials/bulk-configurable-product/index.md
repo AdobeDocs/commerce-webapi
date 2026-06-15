@@ -1,8 +1,6 @@
 ---
 title: Create a configurable product using bulk APIs
 description: A tutorial that describes how to create a configurable product using bulk API calls
-contributor_name: comwrap GmbH
-contributor_link: https://comwrap.com/en/
 keywords:
   - REST
 ---
@@ -30,6 +28,6 @@ A system integrator can use Adobe Commerce REST bulk APIs to perform actions on 
 *  [Asynchronous web endpoints](/rest/use-rest/asynchronous-web-endpoints.md) provides information about how to use the Commerce Asynchronous API
 *  [Bulk endpoints](/rest/use-rest/bulk-endpoints.md) provides information about how to use the Commerce Bulk API
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to comwrap GmbH for contributing this topic!](https://comwrap.com/en/)

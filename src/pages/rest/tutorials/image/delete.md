@@ -1,8 +1,6 @@
 ---
 title: Step 4. Delete an image 
 description: We will learn how to delete an existing image.
-contributor_name: Goivvy LLC
-contributor_link: https://www.goivvy.com/
 keywords:
   - REST
 ---
@@ -37,6 +35,6 @@ Refresh the `MJ03` product page and see if your image was deleted.
 
 You can re-run this call to verify that the image can no longer be found. You should receive the following message: `No image with the provided ID was found. Verify the ID and try again`.
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/)

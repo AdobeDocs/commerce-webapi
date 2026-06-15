@@ -1,7 +1,6 @@
 ---
 title: generateCustomerTokenAsAdmin mutation
 description: The generateCustomerTokenAsAdmin mutation generates a new customer token as an admin so that an administrator can perform remote shopping assistance on beh...
-contributor_name: EY 
 ---
 
 # generateCustomerTokenAsAdmin mutation
@@ -57,6 +56,6 @@ mutation{
 *  [customer query](../queries/customer.md)
 *  [revokeCustomerToken mutation](revoke-token.md)
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 Thanks to EY for contributing this topic!

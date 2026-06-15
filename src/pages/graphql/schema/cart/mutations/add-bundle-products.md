@@ -1,8 +1,6 @@
 ---
 title: addBundleProductsToCart mutation
 description: We recommend using the addProductsToCart mutation to add any type of product to the cart.
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 ---
 
 <Fragment src="../../../../includes/paas-only.md"/>
@@ -227,6 +225,6 @@ mutation {
 
 -  [Bundle product data types](../../products/interfaces/types/bundle.md)
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

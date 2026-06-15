@@ -1,8 +1,6 @@
 ---
 title: In-Store Pickup
 description: Retrieve a list or search for pickup locations using the REST API
-contributor_name: Oleksandr Kravchuk
-contributor_link: https://github.com/swnsma
 keywords:
   - Inventory
   - REST
@@ -154,6 +152,6 @@ Commerce returns an array with success status and an array of error messages for
 }
 ```
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Oleksandr Kravchuk for contributing this topic!](https://github.com/swnsma)

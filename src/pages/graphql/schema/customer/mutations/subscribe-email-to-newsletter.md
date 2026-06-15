@@ -1,8 +1,6 @@
 ---
 title: subscribeEmailToNewsletter mutation
 description: The subscribeEmailToNewsletter mutation allows guests and registered customers to sign up to receive newsletters. It can return a value of NOTACTIVE or SUB...
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 ---
 
 # subscribeEmailToNewsletter mutation
@@ -60,6 +58,6 @@ mutation {
 | `This email address is already subscribed.` | The email address provided in the `email` argument is already subscribed. |
 | `You must specify an email address to subscribe to a newsletter.`| The `email` argument is empty. |
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

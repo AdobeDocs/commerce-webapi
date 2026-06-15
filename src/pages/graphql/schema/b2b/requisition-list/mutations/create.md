@@ -1,7 +1,6 @@
 ---
 title: createRequisitionList mutation
 description: The createRequisitionList mutation creates a requisition list for the logged in customer.
-contributor_name: Zilker Technology
 keywords:
   - B2B
 ---
@@ -77,6 +76,6 @@ mutation {
 }
 ```
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 Thanks to Zilker Technology for contributing this topic!

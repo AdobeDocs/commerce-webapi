@@ -1,7 +1,6 @@
 ---
 title: giftRegistry query
 description: The giftRegistry query retrieves details about the specified gift registry. Use the customer query to return a list of valid uid values.
-contributor_name: EY
 ---
 
 <Fragment src="../../../../includes/commerce-only.md"/>
@@ -205,6 +204,6 @@ query{
 }
 ```
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 Thanks to EY for contributing this topic!

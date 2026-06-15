@@ -1,8 +1,6 @@
 ---
 title: Simple product data types
 description: The SimpleProduct data type implements the following interfaces:
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 ---
 
 # Simple product data types
@@ -108,6 +106,6 @@ The following query returns information about simple product `24-MB01`, which is
 
 -  [addSimpleProductsToCart mutation](../../../cart/mutations/add-simple-products.md)
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

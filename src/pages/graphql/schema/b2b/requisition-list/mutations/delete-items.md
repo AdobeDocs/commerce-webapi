@@ -1,7 +1,6 @@
 ---
 title: deleteRequisitionListItems mutation
 description: The deleteRequisitionListItems mutation removes items from the specified requisition list for the logged in customer.
-contributor_name: EY
 keywords:
   - B2B
 ---
@@ -79,6 +78,6 @@ mutation {
 *  [updateRequisitionList mutation](update.md)
 *  [deleteRequisitionList mutation](delete.md)
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 Thanks to EY for contributing this topic!

@@ -7,7 +7,7 @@ description: This mutation synchronizes order details before you run the `placeO
 
 <InlineAlert variant="info" slots="text" />
 
-This mutation is available only if you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.12.0 or higher.
+This mutation is available automatically on Adobe Commerce as a Cloud Service. On Adobe Commerce on Cloud and on-premises instances, you must install [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.10.0 or higher to use this mutation.
 
 The `completeOrder` mutation synchronizes order details before you run the `placeOrder` mutation.
 
@@ -41,6 +41,10 @@ mutation {
   }
 }
 ```
+
+## Reference
+
+The [`completeOrder`](/reference/graphql/saas/index.md#completeorder) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -79,45 +83,3 @@ mutation {
   }
 }
 ```
-
-## Input attributes
-
-### CompleteOrderInput
-
-| Field | Type | Description |
-|-------|------|--------------|
-| `cartId` | String! | The unique identifier of the shopping cart (quote). |
-| `id` | String! | The payment, checkout, or transaction identifier tied to the order. |
-
-## Output attributes
-
-### CompleteOrderOutput
-
-| Field | Type | Description |
-|-------|------|--------------|
-| `errors` | Error! | List of error objects. The array is empty if there are no errors. |
-| `orderV2` | OrderV2 | Contains minimal order details if successful. |
-
-### OrderV2 object
-
-| Field | Type | Description |
-|-------|------|--------------|
-| `number` | String | The order number assigned by the system. |
-| `token` | String | A token that can be used to retrieve the order, especially for guest checkouts. |
-
-### Error object
-
-| Field | Type | Description |
-|-------|------|--------------|
-| `code` | String | A machine-readable error code. |
-| `message` | String | A human-readable message describing the error. |
-
-#### Possible error codes
-
-| Code | Description |
-|------|--------------|
-| `CART_NOT_FOUND` | The provided cart ID does not exist. |
-| `CART_NOT_ACTIVE` | The cart is not active (already converted or expired). |
-| `GUEST_EMAIL_MISSING` | A guest cart does not have an email address assigned. |
-| `PAYMENT_ID_INVALID` | The provided payment or transaction ID is invalid. |
-| `UNABLE_TO_COMPLETE_ORDER` | A general error occurred while finalizing the order (for example, missing information or out-of-stock items). |

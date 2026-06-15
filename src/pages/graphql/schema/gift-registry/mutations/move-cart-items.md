@@ -1,8 +1,6 @@
 ---
 title: moveCartItemsToGiftRegistry mutation
 description: The moveCartItemsToGiftRegistry mutation moves all items from the cart to a gift registry.
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 ---
 
 <Fragment src="../../../../includes/commerce-only.md"/>
@@ -104,6 +102,6 @@ mutation {
 }
 ```
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

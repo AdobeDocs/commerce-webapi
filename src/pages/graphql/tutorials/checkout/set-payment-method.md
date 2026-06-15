@@ -1,8 +1,6 @@
 ---
 title: Step 9. Set the payment method
 description: Learn how to set a payment method for an order with the GraphQL API.
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 keywords:
   - GraphQL
   - Checkout
@@ -103,6 +101,6 @@ If the operation is successful, the response contains the code of the selected p
 
 1. The selected payment method is displayed in the Payment Method section on the Review & Payments step.
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

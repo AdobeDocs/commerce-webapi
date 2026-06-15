@@ -1,8 +1,6 @@
 ---
 title: updateCompanyUser mutation
 description: Use the updateCompanyUser mutation to update an existing company user.
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 keywords:
   - B2B
 ---
@@ -154,6 +152,6 @@ mutation {
 | `No such entity with roleId = xxx` | The company role with ID `xxx` doesn't exist. |
 | `A customer with the same email address already exists in an associated website` | The email provided in the `input`.`email` argument belongs to another user. |
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

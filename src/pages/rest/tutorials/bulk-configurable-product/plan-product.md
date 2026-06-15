@@ -1,8 +1,6 @@
 ---
 title: Step 1. Plan the product
 description: In this step of the tutorial you will plan and define the product
-contributor_name: comwrap GmbH
-contributor_link: https://comwrap.com/en/
 keywords:
   - REST
 ---
@@ -139,6 +137,6 @@ searchCriteria[filter_groups][0][filters][0][condition_type]=gte
 
  At this point, we're gathering information, so there is nothing to verify.
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to comwrap GmbH for contributing this topic!](https://comwrap.com/en/)

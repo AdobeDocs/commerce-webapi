@@ -1,8 +1,6 @@
 ---
 title: createKlarnaPaymentsSession mutation
 description: The Klarna Vendor Bundled Extension was removed from the Adobe Commerce codebase in version 2.4.4. This mutation is no longer supported.
-contributor_name: Klarna
-contributor_link: https://www.klarna.com/
 ---
 
 <Fragment src="../../../../includes/paas-only.md"/>
@@ -121,6 +119,6 @@ The `Assets` object can contain the following attributes.
 | --- | --- |
 | `The Klarna payment method is not active.` | The [Klarna](https://experienceleague.adobe.com/en/docs/commerce-admin/config/sales/payment-methods/payment-methods) payment method is disabled in admin. |
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Klarna for contributing this topic!](https://www.klarna.com/)

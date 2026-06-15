@@ -1,8 +1,6 @@
 ---
 title: Search for products with the /search endpoint
 description: Search for products using the /search endpoints
-contributor_name: comwrap GmbH
-contributor_link: https://www.comwrap.com/en/
 keywords:
   - REST
 ---
@@ -151,6 +149,6 @@ searchCriteria[filterGroups][0][filters][0][condition_type]=eq
 
 [Search using REST](/rest/use-rest/performing-searches.md) provides examples that can be used to search for products.
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to comwrap GmbH for contributing this topic!](https://www.comwrap.com/en/)

@@ -1,8 +1,6 @@
 ---
 title: Step 1. Plan the product
 description: In this step of the tutorial you will plan the product
-contributor_name: Goivvy LLC
-contributor_link: https://www.goivvy.com/magento-optimization-service
 keywords:
   - REST
 ---
@@ -198,6 +196,6 @@ We can see from the above response that the `id` for `What's New` is equal to `3
 
 Since we are only gathering information, there is nothing to verify.
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/magento-optimization-service)

@@ -1,8 +1,6 @@
 ---
 title: GraphQL authorization
 description: Learn how to authorize GraphQL API calls using tokens. 
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 keywords:
   - GraphQL
   - Security
@@ -109,6 +107,6 @@ To re-enable these cookies, run:
 
 `bin/magento config:set graphql/session/disable 0`
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

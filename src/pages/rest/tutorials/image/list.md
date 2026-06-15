@@ -1,8 +1,6 @@
 ---
 title: Step 1. Getting a list of product images 
 description: We will learn how to get a list of all product images.
-contributor_name: Goivvy LLC
-contributor_link: https://www.goivvy.com/
 keywords:
   - REST
 ---
@@ -67,6 +65,6 @@ We will use the image `id` for later steps in this tutorial.
 
 1. Confirm that the number of images in the storefront matches the number of images in your API response.
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Goivvy LLC for contributing this topic!](https://www.goivvy.com/)

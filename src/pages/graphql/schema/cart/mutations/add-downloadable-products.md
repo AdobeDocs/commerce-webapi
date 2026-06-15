@@ -1,8 +1,6 @@
 ---
 title: addDownloadableProductsToCart mutation
 description: We recommend using the addProductsToCart mutation to add any type of product to the cart.
-contributor_name: Atwix
-contributor_link: https://www.atwix.com/
 ---
 
 <Fragment src="../../../../includes/paas-only.md"/>
@@ -253,6 +251,6 @@ mutation {
 | `Required parameter "cart_items" is missing` | The `cart_items` argument is empty or is not of type `array`. |
 | `Please specify product link(s).` | You tried to add a downloadable product in which the `Links can be purchased separately` option is enabled, but you did not specify individual product links. |
 
-<Edition slots="text" backgroundcolor="blue"/>
+<Edition slots="text" backgroundcolor="gray"/>
 
 [Thanks to Atwix for contributing this topic!](https://www.atwix.com/)

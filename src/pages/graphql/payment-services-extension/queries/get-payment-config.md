@@ -7,7 +7,7 @@ description: This query returns the payment configuration details from locations
 
 <InlineAlert variant="info" slots="text" />
 
-This query is available only if you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.3.0 or higher.
+This query is available automatically on Adobe Commerce as a Cloud Service. On Adobe Commerce on Cloud and on-premises instances, you must install [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.10.0 or higher to use this query.
 
 The `getPaymentConfig` query returns the payment configuration details from locations in the storefront and Admin where the payment method can be set.
 
@@ -32,7 +32,7 @@ Each of these payment methods can have a different payment source, for example, 
 
 ## Reference
 
-The [`getPaymentConfig`](/reference/graphql/index.md#getpaymentconfig) reference provides detailed information about the types and fields defined in this query.
+The [`getPaymentConfig`](/reference/graphql/saas/index.md#getpaymentconfig) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
@@ -253,148 +253,10 @@ The following example runs the `getPaymentConfig` query for a `location: CHECKOU
 }
 ```
 
-## Input attributes
+## Related information
 
-The `getPaymentConfig` query requires the following input attribute:
+[Payment options](https://experienceleague.adobe.com/en/docs/commerce/payment-services/payments-checkout/payments-options)
 
-| Attribute |  Data Type | Description |
-| --- | --- | --- |
-| `location` | PaymentLocation! | The origin location for that payment request. The possible values are `PRODUCT_DETAIL`, `MINICART`, `CART`, `CHECKOUT`, `ADMIN` |
+[Google Pay API request object options](https://developers.google.com/pay/api/web/reference/request-objects)
 
-## Output attributes
-
-The `PaymentConfigOutput` contains details about each configured payment method:
-
-| Attribute |  Data Type | Description |
-| --- | --- | --- |
-| `ApplePayConfig` | String! | Apple Pay payment method configuration |
-| `GooglePayConfig` | String! | Google Pay payment method configuration |
-| `HostedFieldsConfig` | String! | PayPal Hosted fields payment method configuration |
-| `SmartButtonsConfig` | String! | PayPal Smart Buttons payment method configuration |
-
-Each of these output attributes implements the `PaymentConfigItem` interface.
-
-## `PaymentConfigItem` interface
-
-The `PaymentConfigItem` interface contains the fields that are common to all the payment methods. This interface contains the following attributes:
-
-| Attribute |  Data Type | Description |
-| --- | --- | --- |
-| `code` | String | The payment method code as defined in the payment gateway |
-| `is_visible` | Boolean | Indicates whether the payment method is shown |
-| `payment_intent` | String | Defines the payment intent. The possible values are `Authorize` or `Capture` |
-| `sdk_params` | SDKParams | PayPal parameters required to load the PayPal JavaScript SDK |
-| `sort_order` | String | The relative order the payment method is displayed on the checkout page |
-| `title` | String! | The display name of the payment method |
-
-This interface also has the following implementations:
-
-* ApplePayConfig
-* GooglePayConfig
-* HostedFieldsConfig
-* SmartButtonsConfig
-
-Each implementation contains objects with specific attributes for each of these payment methods.
-
-### `ApplePayConfig` attributes
-
-The `ApplePayConfig` payment method configuration has a `button_styles` object containing the following attributes:
-
-| Attribute | Data Type | Description |
-| --- | --- | --- |
-| `color` | String | The button color |
-| `height` | Int | The button height in pixels |
-| `label` | String | The button label |
-| `layout` | String | The button layout |
-| `shape` | String | The button shape |
-| `tagline` | Boolean | Indicates whether the tagline is displayed |
-| `use_default_height` | Boolean | Defines if button uses default height. If the value is `False`, the value of `height` is used |
-
-See [Payment options](https://experienceleague.adobe.com/en/docs/commerce/payment-services/payments-checkout/payments-options) for more information.
-
-### `GooglePayConfig` attributes
-
-The `GooglePayConfig` payment method configuration contains the following attributes:
-
-| Attribute |  Data Type | Description |
-| --- | --- | --- |
-| `code` | String | The payment method code as defined in the payment gateway |
-| `is_visible` | Boolean | Indicates whether the payment method is shown |
-| `payment_intent` | String | Defines the payment intent. The possible values are `Authorize` or `Capture` |
-| `payment_source` | String | The identifiable payment source for the payment method |
-| `sdk_params` | SDKParams | PayPal parameters required to load the PayPal JavaScript SDK |
-| `sort_order` | String | The relative order the payment method is displayed on the checkout page |
-| `title` | String! | The display name of the payment method |
-
-The possible values for `payment_source` are credit card (`cc`), PayPal (`paypal`), Google Pay (`googlepay`), and Apple Pay (`applepay`), depending on the payment method.
-
-The `GooglePayConfig` payment method configuration also has a `button_styles` object containing the following attributes:
-
-| Attribute | Data Type | Description |
-| --- | --- | --- |
-| `color` | String | The button color |
-| `height` | Int | The button height in pixels |
-| `type` | String | Defines the button type. The possible values are `buy`, `checkout`, `order`, `pay`, and `plain` |
-
-See [Google Pay API request object options](https://developers.google.com/pay/api/web/reference/request-objects) documentation for more information.
-
-### `HostedFieldsConfig` attributes
-
-The `HostedFieldsConfig` payment method configuration contains the following attributes:
-
-| Attribute |  Data Type | Description |
-| --- | --- | --- |
-| `cc_vault_code` | String | The vault payment method code. Hosted fields only works with credit cards (cc) |
-| `is_vault_enabled` | Boolean | Indicates whether card vaulting is enabled |
-| `payment_source` | String | The identifiable payment source for the payment method |
-| `requires_card_details` | Boolean | Indicates whether card and bin details are required. This value is true when the Signifyd integration is enabled for hosted fields |
-| `three_ds_mode` | ThreeDSMode | Indicates which 3D Secure authentication mode is in use. The possible values are `OFF`, `SCA_WHEN_REQUIRED`, `SCA_ALWAYS` |
-
-**Note:** The `three_ds` attribute is deprecated. The `HostedFieldsConfig` payment method configuration currently uses a `three_ds_mode` attribute instead.
-
-### `SmartButtonsConfig` attributes
-
-The `SmartButtonsConfig` payment method configuration contains the following attributes:
-
-| Attribute |  Data Type | Description |
-| --- | --- | --- |
-| `button_styles` | ButtonStyles | The styles for the PayPal Smart Button configuration |
-| `display_message` | Boolean | Indicates whether the PayPal Pay Later message is shown |
-| `display_venmo` | Boolean | Defines if the Venmo option is shown |
-| `message_styles` | MessageStyles | The message styles for the PayPal Pay Later configuration |
-
-See [Payment options](https://experienceleague.adobe.com/en/docs/commerce/payment-services/payments-checkout/payments-options) for more information.
-
-#### `ButtonStyles` object
-
-The `SmartButtonsConfig` payment method configuration has a `ButtonStyles` object containing the following attributes:
-
-| Attribute | Data Type | Description |
-| --- | --- | --- |
-| `color` | String | The button color |
-| `height` | Int | The button height in pixels |
-| `label` | String | The button label |
-| `layout` | String | The button layout |
-| `shape` | String | The button shape |
-| `tagline` | Boolean | Indicates whether to display the PayPal tagline |
-| `use_default_height` | Boolean | Defines if button uses default height. If the value is `False`, the value of `height` is used |
-
-#### `MessageStyles` object
-
-The `SmartButtonsConfig` payment method configuration has a `MessageStyles` object containing the following attributes:
-
-| Attribute | Data Type | Description |
-| --- | --- | --- |
-| `layout` | String | The message layout |
-| `logo` | String | The message logo |
-
-#### `SDKParams` attributes
-
-The `SDKParams` object provides details about the SDK parameters:
-
-| Attribute |  Data Type | Description |
-| --- | --- | --- |
-| `name` | String | The name of the SDK parameter |
-| `value` | String | The value of the SDK parameter |
-
-These values come from [PayPal JavaScript SDK](https://developer.paypal.com/sdk/js/reference/).
+[PayPal JavaScript SDK](https://developer.paypal.com/sdk/js/reference/)
