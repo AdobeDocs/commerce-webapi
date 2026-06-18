@@ -50,7 +50,7 @@ These steps describe the use case when a shopper adds a product to the cart on a
 
 These steps describe the use case when a shopper cancels the payment process on the PDP.
 
-![Payment Services sequence diagram](../../../images/graphql/payment-services-pdp-cartinactive.png)
+![Payment Services sequence diagram](../../../images/graphql/payment-services-pdp-cartinactive.svg)
 
 1. Run the [`getPaymentConfig`](../queries/get-payment-config.md) query to fetch the payment configuration needed to render details about PayPal components, such as hosted fields, smart buttons, and Apple Pay.
 
