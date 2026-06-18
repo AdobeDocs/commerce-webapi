@@ -25,7 +25,7 @@ From a GraphQL integration standpoint, this payment method is identical to the [
 
 The following diagram shows the workflow for placing an order when `payflow_express` is the specified payment method.
 
-![PayPal Express Checkout sequence diagram](../../images/graphql/paypal-express-checkout.png)
+![PayPal Express Checkout sequence diagram](../../images/graphql/paypal-express-checkout.svg)
 
 The following steps describe the flow of calls required to complete a typical PayPal Express Checkout authorization. A successful purchase requires that you send three mutations to PayPal, and the buyer must approve the purchase by logging in to PayPal.
 

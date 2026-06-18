@@ -12,7 +12,7 @@ These steps describe the flow of requests and responses required to [vault a pay
 
 ## Workflow
 
-![Payment Services sequence diagram](../../../images/graphql/payment-services-vault-without-purchase.png)
+![Payment Services sequence diagram](../../../images/graphql/payment-services-vault-without-purchase.svg)
 
 1. Run the [`getVaultConfig`](../queries/get-vault-config.md) query to fetch the vault configuration details for the available payment methods. Attribute `is_vault_enabled` set to `true`.
 

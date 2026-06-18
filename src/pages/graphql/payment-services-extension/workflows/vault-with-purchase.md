@@ -17,7 +17,7 @@ The following conditions must be true to vault a card during checkout:
 
 ## Workflow
 
-![Payment Services sequence diagram](../../../images/graphql/payment-services-vault-with-purchase.png)
+![Payment Services sequence diagram](../../../images/graphql/payment-services-vault-with-purchase.svg)
 
 1. Run the [`getPaymentConfig`](../queries/get-payment-config.md) query to fetch the payment configuration needed to render details of hosted fields.
 
