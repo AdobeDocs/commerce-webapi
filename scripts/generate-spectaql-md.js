@@ -28,6 +28,18 @@ const TYPE_LETTER_RANGES = [
 
 const TYPES_HEADER = '## Types\n\n';
 
+// Normalize SpectaQL Markdown for markdownlint: collapse excess blank lines and
+// strip trailing whitespace from each line (MD009; SpectaQL often emits single
+// trailing spaces on table rows and wrapped scalar descriptions).
+function sanitizeMarkdown(content) {
+  return content
+    .split('\n')
+    .map(line => line.replace(/[ \t]+$/, ''))
+    .join('\n')
+    .replace(/\n{3,}/g, '\n\n')
+    .trimEnd() + '\n';
+}
+
 // Reads spectaql.targetDir and spectaql.targetFile from a config YAML and
 // returns the resolved absolute path of the output file.
 function outputFileFor(configRelPath) {
@@ -252,7 +264,7 @@ for (const schema of toRun) {
   // Read the monolithic output, collapse excess blank lines, then delete it —
   // it will be replaced by the split chunk files below.
   const raw = fs.readFileSync(outputFile, 'utf8');
-  const content = raw.replace(/\n{3,}/g, '\n\n').trimEnd() + '\n';
+  const content = sanitizeMarkdown(raw);
   fs.unlinkSync(outputFile);
 
   const sections = parseSections(content);
