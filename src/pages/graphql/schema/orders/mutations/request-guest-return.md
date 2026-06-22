@@ -33,7 +33,7 @@ The `requestGuestReturn` reference provides detailed information about the types
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#requestguestreturn)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#requestguestreturn)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#requestguestreturn)
 
 ## Example usage
 

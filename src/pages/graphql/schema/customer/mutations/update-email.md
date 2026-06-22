@@ -19,7 +19,7 @@ The `updateCustomerEmail` reference provides detailed information about the type
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#updatecustomeremail)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#updatecustomeremail)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#updatecustomeremail)
 
 ## Example usage
 

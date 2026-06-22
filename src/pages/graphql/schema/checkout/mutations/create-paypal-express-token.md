@@ -32,7 +32,7 @@ mutation {
 
 ## Reference
 
-The [`createPaypalExpressToken`](/reference/graphql/index.md#createpaypalexpresstoken) reference provides detailed information about the types and fields defined in this mutation.
+The [`createPaypalExpressToken`](/reference/graphql/latest/index.md#createpaypalexpresstoken) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

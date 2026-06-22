@@ -41,7 +41,7 @@ These examples show when the `addProductsToNewCart` mutation returns a successfu
 
 ### Create a new cart (success)
 
-The following example adds a simple product to a new cart successfully, returning a [Cart](/reference/graphql/index.md#cart) object.
+The following example adds a simple product to a new cart successfully, returning a [Cart](/reference/graphql/latest/index.md#cart) object.
 
 **Request:**
 
@@ -83,7 +83,7 @@ mutation {
 
 ### Create a new cart (failure)
 
-The following example fails to create a new cart beccause the `sku` does not exist in the catalog. It returns a [CartUserInputError](/reference/graphql/index.md#cartuserinputerror) object.
+The following example fails to create a new cart beccause the `sku` does not exist in the catalog. It returns a [CartUserInputError](/reference/graphql/latest/index.md#cartuserinputerror) object.
 
 **Request:**
 

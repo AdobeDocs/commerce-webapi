@@ -30,7 +30,7 @@ The `moveCartItemsToGiftRegistry` reference provides detailed information about 
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#movecartitemstogiftregistry)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#movecartitemstogiftregistry)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#movecartitemstogiftregistry)
 
 ## Example usage
 

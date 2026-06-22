@@ -27,7 +27,7 @@ The `confirmCancelOrder` reference provides detailed information about the types
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#confirmcancelorder)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#confirmcancelorder)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#confirmcancelorder)
 
 ## Example usage
 

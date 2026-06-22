@@ -23,7 +23,7 @@ The `createCustomerV2` reference provides detailed information about the types a
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#createcustomerv2)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#createcustomerv2)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#createcustomerv2)
 
 ## Example usage
 

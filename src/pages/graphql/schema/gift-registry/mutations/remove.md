@@ -23,7 +23,7 @@ The `removeGiftRegistry` reference provides detailed information about the types
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#removegiftregistry)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#removegiftregistry)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#removegiftregistry)
 
 ## Example usage
 

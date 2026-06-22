@@ -57,7 +57,7 @@ mutation {
 
 ## Reference
 
-The [`generateCustomerToken`](/reference/graphql/index.md#generatecustomertoken) reference provides detailed information about the types and fields defined in this mutation.
+The [`generateCustomerToken`](/reference/graphql/latest/index.md#generatecustomertoken) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

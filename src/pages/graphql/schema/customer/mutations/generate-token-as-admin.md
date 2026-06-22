@@ -21,7 +21,7 @@ The `generateCustomerTokenAsAdmin` reference provides detailed information about
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#generatecustomertokenasadmin)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#generatecustomertokenasadmin)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#generatecustomertokenasadmin)
 
 ## Example usage
 

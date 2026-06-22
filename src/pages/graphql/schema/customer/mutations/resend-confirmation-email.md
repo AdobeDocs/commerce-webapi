@@ -19,7 +19,7 @@ The `resendConfirmationEmail` reference provides detailed information about the 
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#resendconfirmationemail)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#resendconfirmationemail)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#resendconfirmationemail)
 
 ## Example usage
 

@@ -36,7 +36,7 @@ The `addRequisitionListItemsToCart` reference provides detailed information abou
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#addrequisitionlistitemstocart)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#addrequisitionlistitemstocart)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#addrequisitionlistitemstocart)
 
 ## Example usage
 

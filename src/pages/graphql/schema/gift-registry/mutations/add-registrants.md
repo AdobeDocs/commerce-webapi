@@ -30,7 +30,7 @@ The `addGiftRegistryRegistrants` reference provides detailed information about t
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#addgiftregistryregistrants)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#addgiftregistryregistrants)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#addgiftregistryregistrants)
 
 ## Example usage
 

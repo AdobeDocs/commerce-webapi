@@ -17,7 +17,7 @@ The `storeConfig` reference provides detailed information about the types and fi
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#storeconfig)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#storeconfig)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#storeconfig)
 
 ## Example usage
 

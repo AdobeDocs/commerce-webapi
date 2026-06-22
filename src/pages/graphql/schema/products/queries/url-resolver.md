@@ -22,7 +22,7 @@ The `urlResolver` query returns the canonical URL for a specified product, categ
 
 ## Reference
 
-The [`urlResolver`](/reference/graphql/index.md#urlresolver) reference provides detailed information about the types and fields defined in this query.
+The [`urlResolver`](/reference/graphql/latest/index.md#urlresolver) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

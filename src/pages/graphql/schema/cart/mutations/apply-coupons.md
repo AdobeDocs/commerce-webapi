@@ -21,7 +21,7 @@ The `applyCouponsToCart` reference provides detailed information about the types
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#applycouponstocart)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#applycouponstocart)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#applycouponstocart)
 
 ## Example usage
 

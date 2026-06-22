@@ -31,7 +31,7 @@ The `updateNegotiableQuoteQuantities` reference provides detailed information ab
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#updatenegotiablequotequantities)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#updatenegotiablequotequantities)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#updatenegotiablequotequantities)
 
 ## Example usage
 

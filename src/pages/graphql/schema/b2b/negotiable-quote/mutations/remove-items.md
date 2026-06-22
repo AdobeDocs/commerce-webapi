@@ -31,7 +31,7 @@ The `removeNegotiableQuoteItems` reference provides detailed information about t
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#removenegotiablequoteitems)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#removenegotiablequoteitems)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#removenegotiablequoteitems)
 
 ## Example usage
 

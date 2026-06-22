@@ -31,7 +31,7 @@ The `setNegotiableQuoteShippingAddress` reference provides detailed information 
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#setnegotiablequoteshippingaddress)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#setnegotiablequoteshippingaddress)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#setnegotiablequoteshippingaddress)
 
 ## Example usage
 

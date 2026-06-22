@@ -21,7 +21,7 @@ The `giftRegistryEmailSearch` reference provides detailed information about the 
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#giftregistryemailsearch)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#giftregistryemailsearch)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#giftregistryemailsearch)
 
 ## Example usage
 

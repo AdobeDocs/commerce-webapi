@@ -19,7 +19,7 @@ The `removeCouponsFromCart` reference provides detailed information about the ty
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#removecouponsfromcart)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#removecouponsfromcart)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#removecouponsfromcart)
 
 ## Example usage
 

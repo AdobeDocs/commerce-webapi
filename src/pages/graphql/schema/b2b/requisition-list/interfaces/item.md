@@ -9,14 +9,14 @@ keywords:
 
 # RequisitionListItemInterface attributes and implementations
 
-[`RequisitionListItemInterface`](/reference/graphql/index.md#requisitionlistiteminterface) provides details about items in a requisition list. It has the following implementations:
+[`RequisitionListItemInterface`](/reference/graphql/latest/index.md#requisitionlistiteminterface) provides details about items in a requisition list. It has the following implementations:
 
-*  [`BundleRequisitionListItem`](/reference/graphql/index.md#bundlerequisitionlistitem)
-*  [`ConfigurableRequisitionListItem`](/reference/graphql/index.md#configurablerequisitionlistitem)
-*  [`DownloadableRequisitionListItem`](/reference/graphql/index.md#downloadablerequisitionlistitem)
-*  [`GiftCardRequisitionListItem`](/reference/graphql/index.md#giftcardrequisitionlistitem)
-*  [`SimpleRequisitionListItem`](/reference/graphql/index.md#simplerequisitionlistitem)
-*  [`VirtualRequisitionListItem`](/reference/graphql/index.md#virtualrequisitionlistitem)
+*  [`BundleRequisitionListItem`](/reference/graphql/latest/index.md#bundlerequisitionlistitem)
+*  [`ConfigurableRequisitionListItem`](/reference/graphql/latest/index.md#configurablerequisitionlistitem)
+*  [`DownloadableRequisitionListItem`](/reference/graphql/latest/index.md#downloadablerequisitionlistitem)
+*  [`GiftCardRequisitionListItem`](/reference/graphql/latest/index.md#giftcardrequisitionlistitem)
+*  [`SimpleRequisitionListItem`](/reference/graphql/latest/index.md#simplerequisitionlistitem)
+*  [`VirtualRequisitionListItem`](/reference/graphql/latest/index.md#virtualrequisitionlistitem)
 
 <InlineAlert variant="info" slots="text" />
 

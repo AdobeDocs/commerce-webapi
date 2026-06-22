@@ -18,7 +18,7 @@ The `CreditMemoItemInterface` reference provides detailed information about the 
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#creditmemoiteminterface)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#creditmemoiteminterface)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#creditmemoiteminterface)
 
 ## Example usage
 

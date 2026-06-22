@@ -24,7 +24,7 @@ To add a simple or grouped product to a cart, you must provide the cart ID, the 
 
 ## Reference
 
-The [`addSimpleProductsToCart`](/reference/graphql/index.md#addsimpleproductstocart) reference provides detailed information about the types and fields defined in this mutation.
+The [`addSimpleProductsToCart`](/reference/graphql/latest/index.md#addsimpleproductstocart) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

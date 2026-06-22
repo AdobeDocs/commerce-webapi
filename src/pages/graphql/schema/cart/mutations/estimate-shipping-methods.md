@@ -24,7 +24,7 @@ The `estimateShippingMethods` reference provides detailed information about the 
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#estimateshippingmethods)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#estimateshippingmethods)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#estimateshippingmethods)
 
 ## Example usage
 

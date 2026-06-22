@@ -28,7 +28,7 @@ The `addWishlistItemsToCart` reference provides detailed information about the t
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#addwishlistitemstocart)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#addwishlistitemstocart)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#addwishlistitemstocart)
 
 ## Example usage
 

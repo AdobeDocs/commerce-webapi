@@ -41,7 +41,7 @@ The `createPurchaseOrderApprovalRule` reference provides detailed information ab
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#createpurchaseorderapprovalrule)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#createpurchaseorderapprovalrule)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#createpurchaseorderapprovalrule)
 
 ## Headers
 

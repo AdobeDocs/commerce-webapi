@@ -19,7 +19,7 @@ The `applyGiftCardToCart` reference provides detailed information about the type
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#applygiftcardtocart)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#applygiftcardtocart)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#applygiftcardtocart)
 
 ## Example usage
 

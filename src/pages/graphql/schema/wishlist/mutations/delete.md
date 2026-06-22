@@ -25,7 +25,7 @@ The `deleteWishlist` reference provides detailed information about the types and
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#deletewishlist)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#deletewishlist)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#deletewishlist)
 
 ## Example usage
 

@@ -24,7 +24,7 @@ To return or modify information about a customer, we recommend you use customer 
 
 ## Reference
 
-The [`createCustomer`](/reference/graphql/index.md#createcustomer) reference provides detailed information about the types and fields defined in this mutation.
+The [`createCustomer`](/reference/graphql/latest/index.md#createcustomer) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

@@ -39,7 +39,7 @@ The `pickupLocations` reference provides detailed information about the types an
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#pickuplocations)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#pickuplocations)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#pickuplocations)
 
 ## Example usage
 

@@ -18,7 +18,7 @@ The `InvoiceItemInterface` reference provides detailed information about the typ
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#invoiceiteminterface)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#invoiceiteminterface)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#invoiceiteminterface)
 
 ## Example usage
 

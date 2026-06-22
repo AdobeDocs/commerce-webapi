@@ -36,7 +36,7 @@ The `updateRequisitionListItems` reference provides detailed information about t
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#updaterequisitionlistitems)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#updaterequisitionlistitems)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#updaterequisitionlistitems)
 
 ## Example usage
 

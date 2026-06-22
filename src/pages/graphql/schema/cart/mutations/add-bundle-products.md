@@ -19,7 +19,7 @@ Use the `addBundleProductsToCart` mutation to add bundle products to a specific 
 
 ## Reference
 
-The [`addBundleProductsToCart`](/reference/graphql/index.md#addbundleproductstocart) reference provides detailed information about the types and fields defined in this mutation.
+The [`addBundleProductsToCart`](/reference/graphql/latest/index.md#addbundleproductstocart) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

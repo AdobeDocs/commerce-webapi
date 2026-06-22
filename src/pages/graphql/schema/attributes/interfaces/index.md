@@ -9,10 +9,10 @@ Adobe Commerce on cloud and on-premises (PaaS) provides the following interfaces
 
 | Interface | Implementations |
 | --- | --- |
-| [`AttributeSelectedOptionInterface`](/reference/graphql/index.md#attributeselectedoptioninterface) | [`AttributeSelectedOption`](/reference/graphql/index.md#attributeselectedoption) |
-| [`AttributeValueInterface`](/reference/graphql/index.md#attributevalueinterface) | [`AttributeValue`](/reference/graphql/index.md#attributevalue) \<br/\>[`AttributeSelectedOptions`](/reference/graphql/index.md#attributeselectedoptions) |
-| [`CustomAttributeMetadataInterface`](/reference/graphql/index.md#customerattributemetadata) | [`AttributeMetadata`](/reference/graphql/index.md#attributemetadata) |
-| [`CustomAttributeOptionInterface`](/reference/graphql/index.md#customattributeoptioninterface) | [`AttributeOptionMetadata`](/reference/graphql/index.md#attributeoptionmetadata). |
+| [`AttributeSelectedOptionInterface`](/reference/graphql/latest/index.md#attributeselectedoptioninterface) | [`AttributeSelectedOption`](/reference/graphql/latest/index.md#attributeselectedoption) |
+| [`AttributeValueInterface`](/reference/graphql/latest/index.md#attributevalueinterface) | [`AttributeValue`](/reference/graphql/latest/index.md#attributevalue) \<br/\>[`AttributeSelectedOptions`](/reference/graphql/latest/index.md#attributeselectedoptions) |
+| [`CustomAttributeMetadataInterface`](/reference/graphql/latest/index.md#customerattributemetadata) | [`AttributeMetadata`](/reference/graphql/latest/index.md#attributemetadata) |
+| [`CustomAttributeOptionInterface`](/reference/graphql/latest/index.md#customattributeoptioninterface) | [`AttributeOptionMetadata`](/reference/graphql/latest/index.md#attributeoptionmetadata). |
 
 The following table lists the same interfaces and implementations with links to the **Adobe Commerce as a Cloud Service (SaaS)** GraphQL reference.
 

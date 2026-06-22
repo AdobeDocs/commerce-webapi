@@ -35,7 +35,7 @@ The `deleteRequisitionList` reference provides detailed information about the ty
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#deleterequisitionlist)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#deleterequisitionlist)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#deleterequisitionlist)
 
 ## Example usage
 

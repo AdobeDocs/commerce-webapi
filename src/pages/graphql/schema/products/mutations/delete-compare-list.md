@@ -28,7 +28,7 @@ The `deleteCompareList` reference provides detailed information about the types 
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#deletecomparelist)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#deletecomparelist)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#deletecomparelist)
 
 ## Example usage
 

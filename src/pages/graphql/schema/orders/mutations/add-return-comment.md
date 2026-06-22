@@ -21,7 +21,7 @@ The `addReturnComment` reference provides detailed information about the types a
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#addreturncomment)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#addreturncomment)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#addreturncomment)
 
 ## Example usage
 

@@ -17,7 +17,7 @@ The `subscribeEmailToNewsletter` reference provides detailed information about t
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#subscribeemailtonewsletter)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#subscribeemailtonewsletter)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#subscribeemailtonewsletter)
 
 ## Example usage
 

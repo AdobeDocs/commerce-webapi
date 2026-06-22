@@ -15,28 +15,28 @@ Negotiable quote queries and mutations can access the following interfaces:
 
   * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#negotiablequoteaddressinterface)
 
-  * [On-Premises/Cloud](/reference/graphql/index.md#negotiablequoteaddressinterface)
+  * [On-Premises/Cloud](/reference/graphql/latest/index.md#negotiablequoteaddressinterface)
 
   It is implemented by `NegotiableQuoteShippingAddress`
 
   * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#negotiablequoteshippingaddress)
 
-  * [On-Premises/Cloud](/reference/graphql/index.md#negotiablequoteshippingaddress)
+  * [On-Premises/Cloud](/reference/graphql/latest/index.md#negotiablequoteshippingaddress)
 
   and  `NegotiableQuoteBillingAddress`
 
   * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#negotiablequotebillingaddress)
 
-  * [On-Premises/Cloud](/reference/graphql/index.md#negotiablequotebillingaddress)
+  * [On-Premises/Cloud](/reference/graphql/latest/index.md#negotiablequotebillingaddress)
 
 * `NegotiableQuoteUidNonFatalResultInterface`
 
   * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#negotiablequoteuidnonfatalresultinterface)
 
-  * [On-Premises/Cloud](/reference/graphql/index.md#negotiablequoteuidnonfatalresultinterface)
+  * [On-Premises/Cloud](/reference/graphql/latest/index.md#negotiablequoteuidnonfatalresultinterface)
 
   It is implemented by `NegotiableQuoteUidOperationSuccess`
 
   * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#negotiablequoteuidoperationsuccess)
 
-  * [On-Premises/Cloud](/reference/graphql/index.md#negotiablequoteuidoperationsuccess)
+  * [On-Premises/Cloud](/reference/graphql/latest/index.md#negotiablequoteuidoperationsuccess)

@@ -17,7 +17,7 @@ The `setBillingAddressOnCart` reference provides detailed information about the 
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#setbillingaddressoncart)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#setbillingaddressoncart)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#setbillingaddressoncart)
 
 ## Example usage
 

@@ -5,7 +5,7 @@ description: The DownloadableProduct data type implements ProductInterface and C
 
 # Downloadable product data types
 
-The `DownloadableProduct` data type implements [`ProductInterface`](/reference/graphql/index.md#productinterface) and [`CustomizableProductInterface`](/reference/graphql/index.md#customizableproductinterface). As a result, attributes that are specific to downloadable products can be used when performing a [`products`](../../queries/products.md) query. It also implements [RoutableInterface](/reference/graphql/index.md#routableinterface).
+The `DownloadableProduct` data type implements [`ProductInterface`](/reference/graphql/latest/index.md#productinterface) and [`CustomizableProductInterface`](/reference/graphql/latest/index.md#customizableproductinterface). As a result, attributes that are specific to downloadable products can be used when performing a [`products`](../../queries/products.md) query. It also implements [RoutableInterface](/reference/graphql/latest/index.md#routableinterface).
 
 ## Sample query
 

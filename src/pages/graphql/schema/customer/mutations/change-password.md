@@ -19,7 +19,7 @@ The `changeCustomerPassword` reference provides detailed information about the t
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#changecustomerpassword)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#changecustomerpassword)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#changecustomerpassword)
 
 ## Example usage
 

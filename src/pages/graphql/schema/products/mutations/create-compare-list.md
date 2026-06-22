@@ -27,7 +27,7 @@ The `createCompareList` reference provides detailed information about the types 
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#createcomparelist)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#createcomparelist)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#createcomparelist)
 
 ## Example usage
 

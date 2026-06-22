@@ -31,7 +31,7 @@ The `updateCompanyStructure` reference provides detailed information about the t
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#updatecompanystructure)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#updatecompanystructure)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#updatecompanystructure)
 
 ## Example usage
 

@@ -21,7 +21,7 @@ The `removeReturnTracking` reference provides detailed information about the typ
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#removereturntracking)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#removereturntracking)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#removereturntracking)
 
 ## Example usage
 

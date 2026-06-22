@@ -36,7 +36,7 @@ The `createRequisitionList` reference provides detailed information about the ty
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#createrequisitionlist)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#createrequisitionlist)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#createrequisitionlist)
 
 ## Example usage
 

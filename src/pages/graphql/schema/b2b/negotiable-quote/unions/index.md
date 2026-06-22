@@ -19,7 +19,7 @@ The `CloseNegotiableQuoteError` union provides details about failed attempts to 
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#closenegotiablequoteerror)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#closenegotiablequoteerror)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#closenegotiablequoteerror)
 
 **Possible types:**
 
@@ -37,7 +37,7 @@ The `CloseNegotiableQuoteOperationResult` union provides details about the resul
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#closenegotiablequoteoperationresult)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#closenegotiablequoteoperationresult)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#closenegotiablequoteoperationresult)
 
 **Possible types:**
 
@@ -54,7 +54,7 @@ The `CompanyStructureEntity` union provides details about a node in a company st
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#companystructureentity)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#companystructureentity)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#companystructureentity)
 
 **Possible types:**
 
@@ -71,7 +71,7 @@ The `DeleteNegotiableQuoteError` union provides details about failed attempts to
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#deletenegotiablequoteerror)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#deletenegotiablequoteerror)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#deletenegotiablequoteerror)
 
 **Possible types:**
 
@@ -89,7 +89,7 @@ The `DeleteNegotiableQuoteOperationResult` union provides details about the resu
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#deletenegotiablequoteoperationresult)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#deletenegotiablequoteoperationresult)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#deletenegotiablequoteoperationresult)
 
 **Possible types:**
 

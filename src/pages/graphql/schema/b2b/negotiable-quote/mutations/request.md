@@ -35,7 +35,7 @@ The `requestNegotiableQuote` reference provides detailed information about the t
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#requestnegotiablequote)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#requestnegotiablequote)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#requestnegotiablequote)
 
 ## Example usage
 

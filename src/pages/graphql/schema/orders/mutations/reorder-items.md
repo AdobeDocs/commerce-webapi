@@ -29,7 +29,7 @@ The `reorderItems` reference provides detailed information about the types and f
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#reorderitems)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#reorderitems)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#reorderitems)
 
 ## Example usage
 

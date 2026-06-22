@@ -35,7 +35,7 @@ The `assignCustomerToGuestCart` reference provides detailed information about th
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#assigncustomertoguestcart)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#assigncustomertoguestcart)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#assigncustomertoguestcart)
 
 ## Example usage
 

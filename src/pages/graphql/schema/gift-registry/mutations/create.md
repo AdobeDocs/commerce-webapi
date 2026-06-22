@@ -42,7 +42,7 @@ The `createGiftRegistry` reference provides detailed information about the types
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#creategiftregistry)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#creategiftregistry)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#creategiftregistry)
 
 ## Example usage
 

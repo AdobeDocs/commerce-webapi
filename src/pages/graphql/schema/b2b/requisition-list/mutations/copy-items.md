@@ -37,7 +37,7 @@ The `copyItemsBetweenRequisitionLists` reference provides detailed information a
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#copyitemsbetweenrequisitionlists)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#copyitemsbetweenrequisitionlists)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#copyitemsbetweenrequisitionlists)
 
 ## Example usage
 

@@ -5,7 +5,7 @@ description: The GroupedProduct data type implements ProductInterface and Physic
 
 # Grouped product data types
 
-The `GroupedProduct` data type implements [ProductInterface](/reference/graphql/index.md#productinterface) and [PhysicalProductInterface](/reference/graphql/index.md#physicalproductinterface). As a result, attributes that are specific to grouped products can be used when performing a [products](../../queries/products.md) query. It also implements [RoutableInterface](/reference/graphql/index.md#routableinterface).
+The `GroupedProduct` data type implements [ProductInterface](/reference/graphql/latest/index.md#productinterface) and [PhysicalProductInterface](/reference/graphql/latest/index.md#physicalproductinterface). As a result, attributes that are specific to grouped products can be used when performing a [products](../../queries/products.md) query. It also implements [RoutableInterface](/reference/graphql/latest/index.md#routableinterface).
 
 ## Sample query
 

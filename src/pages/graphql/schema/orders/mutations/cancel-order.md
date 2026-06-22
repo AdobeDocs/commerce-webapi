@@ -27,7 +27,7 @@ The `cancelOrder` reference provides detailed information about the types and fi
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#cancelorder)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#cancelorder)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#cancelorder)
 
 ## Example usage
 

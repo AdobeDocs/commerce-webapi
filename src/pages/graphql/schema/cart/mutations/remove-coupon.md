@@ -17,7 +17,7 @@ The `removeCouponFromCart` reference provides detailed information about the typ
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#removecouponfromcart)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#removecouponfromcart)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#removecouponfromcart)
 
 ## Example usage
 

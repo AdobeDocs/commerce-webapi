@@ -19,7 +19,7 @@ The `setGuestEmailOnCart` reference provides detailed information about the type
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#setguestemailoncart)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#setguestemailoncart)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#setguestemailoncart)
 
 ## Example usage
 

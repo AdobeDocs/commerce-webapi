@@ -35,7 +35,7 @@ The `createWishlist` reference provides detailed information about the types and
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#createwishlist)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#createwishlist)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#createwishlist)
 
 ## Example usage
 

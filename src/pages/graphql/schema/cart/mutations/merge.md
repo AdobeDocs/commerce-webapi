@@ -35,7 +35,7 @@ The `mergeCarts` reference provides detailed information about the types and fie
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#mergecarts)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#mergecarts)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#mergecarts)
 
 ## Example usage
 

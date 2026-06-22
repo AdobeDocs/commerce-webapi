@@ -28,7 +28,7 @@ The `removeProductsFromWishlist` reference provides detailed information about t
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#removeproductsfromwishlist)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#removeproductsfromwishlist)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#removeproductsfromwishlist)
 
 ## Example usage
 

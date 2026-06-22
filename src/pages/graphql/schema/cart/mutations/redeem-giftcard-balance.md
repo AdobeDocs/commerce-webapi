@@ -31,7 +31,7 @@ The `redeemGiftCardBalanceAsStoreCredit` reference provides detailed information
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#redeemgiftcardbalanceasstorecredit)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#redeemgiftcardbalanceasstorecredit)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#redeemgiftcardbalanceasstorecredit)
 
 ## Example usage
 

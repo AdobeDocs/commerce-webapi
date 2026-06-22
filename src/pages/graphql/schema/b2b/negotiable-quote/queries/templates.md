@@ -32,7 +32,7 @@ The `negotiableQuoteTemplates` reference provides detailed information about the
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#negotiablequotetemplates)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#negotiablequotetemplates)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#negotiablequotetemplates)
 
 ## Example usage
 

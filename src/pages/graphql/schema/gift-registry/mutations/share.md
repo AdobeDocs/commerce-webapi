@@ -31,7 +31,7 @@ The `shareGiftRegistry` reference provides detailed information about the types 
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#sharegiftregistry)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#sharegiftregistry)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#sharegiftregistry)
 
 ## Example usage
 

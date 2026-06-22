@@ -29,7 +29,7 @@ The `addPurchaseOrderComment` reference provides detailed information about the 
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#addpurchaseordercomment)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#addpurchaseordercomment)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#addpurchaseordercomment)
 
 ## Example usage
 

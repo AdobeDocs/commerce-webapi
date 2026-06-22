@@ -31,7 +31,7 @@ The `validatePurchaseOrders` reference provides detailed information about the t
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#validatepurchaseorders)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#validatepurchaseorders)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#validatepurchaseorders)
 
 ## Headers
 

@@ -35,7 +35,7 @@ The `createCompanyTeam` reference provides detailed information about the types 
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#createcompanyteam)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#createcompanyteam)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#createcompanyteam)
 
 ## Example usage
 

@@ -19,7 +19,7 @@ The `customer` reference provides detailed information about the types and field
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#customer)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#customer)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#customer)
 
 ## Example usage
 

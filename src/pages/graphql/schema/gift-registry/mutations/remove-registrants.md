@@ -30,7 +30,7 @@ The `removeGiftRegistryRegistrants` reference provides detailed information abou
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#removegiftregistryregistrants)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#removegiftregistryregistrants)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#removegiftregistryregistrants)
 
 ## Example usage
 

@@ -42,7 +42,7 @@ mutation {
 
 ## Reference
 
-The [`setPaymentMethodAndPlaceOrder`](/reference/graphql/index.md#setpaymentmethodandplaceorder) reference provides detailed information about the types and fields defined in this mutation.
+The [`setPaymentMethodAndPlaceOrder`](/reference/graphql/latest/index.md#setpaymentmethodandplaceorder) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

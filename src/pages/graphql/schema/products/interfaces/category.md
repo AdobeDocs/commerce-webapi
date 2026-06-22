@@ -5,4 +5,4 @@ description: CategoryInterface defines attributes that can be returned in the ca
 
 # CategoryInterface attributes
 
-[`CategoryInterface`](/reference/graphql/index.md#categoryinterface) defines attributes that can be returned in the [`categoryList` query](../queries/category-list.md), [`categories` query](../queries/categories.md), and the [`products` query](../queries/products.md).
+[`CategoryInterface`](/reference/graphql/latest/index.md#categoryinterface) defines attributes that can be returned in the [`categoryList` query](../queries/category-list.md), [`categories` query](../queries/categories.md), and the [`products` query](../queries/products.md).

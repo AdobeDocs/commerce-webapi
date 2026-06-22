@@ -29,7 +29,7 @@ The `cancelPurchaseOrders` reference provides detailed information about the typ
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#cancelpurchaseorders)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#cancelpurchaseorders)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#cancelpurchaseorders)
 
 ## Example usage
 

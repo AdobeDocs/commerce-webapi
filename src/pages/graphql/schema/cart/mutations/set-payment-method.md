@@ -46,7 +46,7 @@ The `setPaymentMethodOnCart` reference provides detailed information about the t
 
 - [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#setpaymentmethodoncart)
 
-- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](/reference/graphql/index.md#setpaymentmethodoncart)
+- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](/reference/graphql/latest/index.md#setpaymentmethodoncart)
 
 ## Example usage
 

@@ -41,7 +41,7 @@ The `updateCompanyRole` reference provides detailed information about the types 
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#updatecompanyrole)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#updatecompanyrole)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#updatecompanyrole)
 
 ## Example usage
 

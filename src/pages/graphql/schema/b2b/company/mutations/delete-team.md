@@ -31,7 +31,7 @@ The `deleteCompanyTeam` reference provides detailed information about the types 
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#deletecompanyteam)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#deletecompanyteam)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#deletecompanyteam)
 
 ## Example usage
 

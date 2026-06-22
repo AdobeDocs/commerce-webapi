@@ -21,7 +21,7 @@ The `WishlistItemInterface` reference provides detailed information about the ty
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#wishlistiteminterface)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#wishlistiteminterface)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#wishlistiteminterface)
 
 ## Example usage
 

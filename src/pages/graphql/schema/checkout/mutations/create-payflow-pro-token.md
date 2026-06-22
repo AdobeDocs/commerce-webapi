@@ -30,7 +30,7 @@ mutation {
 
 ## Reference
 
-The [`createPayflowProToken`](/reference/graphql/index.md#createpayflowprotoken) reference provides detailed information about the types and fields defined in this mutation.
+The [`createPayflowProToken`](/reference/graphql/latest/index.md#createpayflowprotoken) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

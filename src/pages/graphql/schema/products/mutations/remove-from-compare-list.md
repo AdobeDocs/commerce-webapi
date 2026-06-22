@@ -27,7 +27,7 @@ The `removeProductsFromCompareList` reference provides detailed information abou
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#removeproductsfromcomparelist)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#removeproductsfromcomparelist)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#removeproductsfromcomparelist)
 
 ## Example usage
 

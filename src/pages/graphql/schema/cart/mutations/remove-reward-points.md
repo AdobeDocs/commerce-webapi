@@ -19,7 +19,7 @@ The `removeRewardPointsFromCart` reference provides detailed information about t
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#removerewardpointsfromcart)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#removerewardpointsfromcart)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#removerewardpointsfromcart)
 
 ## Example usage
 

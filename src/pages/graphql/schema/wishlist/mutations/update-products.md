@@ -32,7 +32,7 @@ The `updateProductsInWishlist` reference provides detailed information about the
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#updateproductsinwishlist)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#updateproductsinwishlist)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#updateproductsinwishlist)
 
 ## Example usage
 

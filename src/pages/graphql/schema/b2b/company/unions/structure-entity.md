@@ -21,7 +21,7 @@ The `CompanyStructureEntity` reference provides detailed information about the t
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#companystructureentity)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#companystructureentity)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#companystructureentity)
 
 **Possible types:**
 

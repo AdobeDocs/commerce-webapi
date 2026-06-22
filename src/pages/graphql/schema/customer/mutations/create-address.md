@@ -19,7 +19,7 @@ The `createCustomerAddress` reference provides detailed information about the ty
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#createcustomeraddress)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#createcustomeraddress)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#createcustomeraddress)
 
 ## Example usage
 

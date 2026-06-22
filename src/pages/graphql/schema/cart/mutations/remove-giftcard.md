@@ -19,7 +19,7 @@ The `removeGiftCardFromCart` reference provides detailed information about the t
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#removegiftcardfromcart)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#removegiftcardfromcart)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#removegiftcardfromcart)
 
 ## Example usage
 

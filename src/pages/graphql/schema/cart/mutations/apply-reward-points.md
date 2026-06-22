@@ -21,7 +21,7 @@ The `applyRewardPointsToCart` reference provides detailed information about the 
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#applyrewardpointstocart)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#applyrewardpointstocart)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#applyrewardpointstocart)
 
 ## Example usage
 

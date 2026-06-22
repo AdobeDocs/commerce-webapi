@@ -24,7 +24,7 @@ The `estimateTotals` reference provides detailed information about the types and
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#estimatetotals)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#estimatetotals)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#estimatetotals)
 
 ## Example usage
 

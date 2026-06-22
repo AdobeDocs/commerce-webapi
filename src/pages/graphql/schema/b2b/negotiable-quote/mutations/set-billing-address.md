@@ -31,7 +31,7 @@ The `setNegotiableQuoteBillingAddress` reference provides detailed information a
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#setnegotiablequotebillingaddress)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#setnegotiablequotebillingaddress)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#setnegotiablequotebillingaddress)
 
 ## Example usage
 

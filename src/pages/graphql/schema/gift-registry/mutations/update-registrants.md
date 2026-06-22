@@ -30,7 +30,7 @@ The `updateGiftRegistryRegistrants` reference provides detailed information abou
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#updategiftregistryregistrants)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#updategiftregistryregistrants)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#updategiftregistryregistrants)
 
 ## Example usage
 

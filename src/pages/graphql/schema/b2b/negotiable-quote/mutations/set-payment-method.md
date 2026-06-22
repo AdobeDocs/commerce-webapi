@@ -51,7 +51,7 @@ The `setNegotiableQuotePaymentMethod` reference provides detailed information ab
 
 - [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#setnegotiablequotepaymentmethod)
 
-- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](/reference/graphql/index.md#setnegotiablequotepaymentmethod)
+- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](/reference/graphql/latest/index.md#setnegotiablequotepaymentmethod)
 
 ## Example usage
 

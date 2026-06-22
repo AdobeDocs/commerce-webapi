@@ -39,7 +39,7 @@ The `setNegotiableQuoteShippingMethods` reference provides detailed information 
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#setnegotiablequoteshippingmethods)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#setnegotiablequoteshippingmethods)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#setnegotiablequoteshippingmethods)
 
 ## Example usage
 

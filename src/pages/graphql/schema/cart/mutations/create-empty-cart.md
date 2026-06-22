@@ -28,7 +28,7 @@ mutation {
 
 ## Reference
 
-The [`createEmptyCart`](/reference/graphql/index.md#createemptycart) reference provides detailed information about the types and fields defined in this mutation.
+The [`createEmptyCart`](/reference/graphql/latest/index.md#createemptycart) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

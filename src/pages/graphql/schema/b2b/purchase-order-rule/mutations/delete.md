@@ -33,7 +33,7 @@ The `deletePurchaseOrderApprovalRule` reference provides detailed information ab
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#deletepurchaseorderapprovalrule)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#deletepurchaseorderapprovalrule)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#deletepurchaseorderapprovalrule)
 
 ## Headers
 

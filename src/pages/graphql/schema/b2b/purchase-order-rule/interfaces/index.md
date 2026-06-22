@@ -13,7 +13,7 @@ keywords:
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#purchaseorderapprovalruleconditioninterface)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#purchaseorderapprovalruleconditioninterface)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#purchaseorderapprovalruleconditioninterface)
 
 It has the following implementations:
 
@@ -21,13 +21,13 @@ It has the following implementations:
 
    * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#purchaseorderapprovalruleconditionamount)
 
-   * [On-Premises/Cloud](/reference/graphql/index.md#purchaseorderapprovalruleconditionamount)
+   * [On-Premises/Cloud](/reference/graphql/latest/index.md#purchaseorderapprovalruleconditionamount)
 
 *  `PurchaseOrderApprovalRuleConditionQuantity`
 
    * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#purchaseorderapprovalruleconditionquantity)
 
-   * [On-Premises/Cloud](/reference/graphql/index.md#purchaseorderapprovalruleconditionquantity)
+   * [On-Premises/Cloud](/reference/graphql/latest/index.md#purchaseorderapprovalruleconditionquantity)
 
 ## Example usage
 

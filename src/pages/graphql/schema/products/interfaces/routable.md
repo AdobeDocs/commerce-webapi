@@ -5,7 +5,7 @@ description: Some entities are "routable", meaning that they have URLs and can s
 
 # RoutableInterface attributes
 
-Some entities are "routable", meaning that they have URLs and can serve as the model for a rendered page. The following implementations of the [`RoutableInterface`](/reference/graphql/index.md#routableinterface) allow you to return details in the [`route` query](../queries/route.md). `RoutableUrl` is returned when the URL is not linked to an entity.
+Some entities are "routable", meaning that they have URLs and can serve as the model for a rendered page. The following implementations of the [`RoutableInterface`](/reference/graphql/latest/index.md#routableinterface) allow you to return details in the [`route` query](../queries/route.md). `RoutableUrl` is returned when the URL is not linked to an entity.
 
 *  [BundleProduct](types/bundle.md)
 *  [CategoryTree](../queries/category-list.md#return-the-category-tree-of-a-top-level-category)

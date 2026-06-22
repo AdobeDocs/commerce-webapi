@@ -29,7 +29,7 @@ The `addPurchaseOrderItemsToCart` reference provides detailed information about 
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#addpurchaseorderitemstocart)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#addpurchaseorderitemstocart)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#addpurchaseorderitemstocart)
 
 ## Example usage
 

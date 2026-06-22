@@ -21,7 +21,7 @@ The `removeStoreCreditFromCart` reference provides detailed information about th
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#removestorecreditfromcart)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#removestorecreditfromcart)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#removestorecreditfromcart)
 
 ## Example usage
 

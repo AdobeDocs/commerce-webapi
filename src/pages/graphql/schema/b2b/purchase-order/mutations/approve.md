@@ -29,7 +29,7 @@ The `approvePurchaseOrders` reference provides detailed information about the ty
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#approvepurchaseorders)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#approvepurchaseorders)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#approvepurchaseorders)
 
 ## Example usage
 

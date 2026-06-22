@@ -17,7 +17,7 @@ The `contactUs` reference provides detailed information about the types and fiel
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#contactus)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#contactus)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#contactus)
 
 ## Example usage
 

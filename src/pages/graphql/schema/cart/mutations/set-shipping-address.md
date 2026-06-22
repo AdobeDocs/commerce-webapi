@@ -20,7 +20,7 @@ The `setShippingAddressesOnCart` reference provides detailed information about t
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#setshippingaddressesoncart)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#setshippingaddressesoncart)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#setshippingaddressesoncart)
 
 ## Example usage
 

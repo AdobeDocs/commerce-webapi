@@ -37,7 +37,7 @@ The `moveItemsBetweenRequisitionLists` reference provides detailed information a
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#moveitemsbetweenrequisitionlists)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#moveitemsbetweenrequisitionlists)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#moveitemsbetweenrequisitionlists)
 
 ## Example usage
 

@@ -29,7 +29,7 @@ The `rejectPurchaseOrders` reference provides detailed information about the typ
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#rejectpurchaseorders)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#rejectpurchaseorders)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#rejectpurchaseorders)
 
 ## Example usage
 

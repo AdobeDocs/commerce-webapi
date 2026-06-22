@@ -31,7 +31,7 @@ The `setShippingMethodsOnCart` reference provides detailed information about the
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#setshippingmethodsoncart)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#setshippingmethodsoncart)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#setshippingmethodsoncart)
 
 ## Example usage
 

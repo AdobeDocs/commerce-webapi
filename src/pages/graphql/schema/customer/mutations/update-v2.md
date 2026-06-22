@@ -25,7 +25,7 @@ The `updateCustomerV2` reference provides detailed information about the types a
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#updatecustomerv2)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#updatecustomerv2)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#updatecustomerv2)
 
 ## Example usage
 

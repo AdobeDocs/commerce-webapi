@@ -31,7 +31,7 @@ mutation {
 
 ## Reference
 
-The [`deleteCompanyUser`](/reference/graphql/index.md#deletecompanyuser) reference provides detailed information about the types and fields defined in this mutation.
+The [`deleteCompanyUser`](/reference/graphql/latest/index.md#deletecompanyuser) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
