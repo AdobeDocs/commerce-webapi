@@ -2,7 +2,7 @@
     - /commerce/webapi/
 
 - pages:
-    - [Commerce](https://developer.adobe.com/commerce/docs)
+    - [Commerce](https://developer.adobe.com/commerce/docs/)
     - [Web APIs](/index.md)
     - [Get Started](/get-started/index.md)
     - REST
