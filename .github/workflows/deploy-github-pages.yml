@@ -10,6 +10,6 @@ permissions:
 
 jobs:
   preview:
-    uses: AdobeDocs/commerce-contributor/.github/workflows/github-pages-preview.yml@ds_COMDOX-1736
+    uses: AdobeDocs/commerce-contributor/.github/workflows/github-pages-preview.yml@main
     with:
       branch: ${{ github.ref_name }}
