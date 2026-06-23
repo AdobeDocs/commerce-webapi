@@ -108,13 +108,14 @@
     {
       "page": "/get-started/create-integration",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/22196227?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/98363870?v=4"
       ],
-      "lastUpdated": "6/2/2026"
+      "lastUpdated": "6/20/2026"
     },
     {
       "page": "/get-started/gs-curl",
