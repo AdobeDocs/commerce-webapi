@@ -35,9 +35,9 @@ mutation {
 
 The `moveItemsBetweenRequisitionLists` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#moveitemsbetweenrequisitionlists)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#moveitemsbetweenrequisitionlists)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#moveitemsbetweenrequisitionlists)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#moveitemsbetweenrequisitionlists)
 
 ## Example usage
 

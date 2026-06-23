@@ -21,9 +21,9 @@ mutation {
 
 The `confirmReturn` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#confirmreturn)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#confirmreturn)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#confirmreturn)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#confirmreturn)
 
 ## Example usage
 

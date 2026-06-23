@@ -16,7 +16,7 @@ Use the `customerDownloadableProducts` query to retrieve the list of purchased d
 
 ## Reference
 
-The [`customerDownloadableProducts`](/reference/graphql/latest/index.md#customerdownloadableproducts) reference provides detailed information about the types and fields defined in this query.
+The [`customerDownloadableProducts`](/reference/graphql/latest/types-c-e.md#customerdownloadableproducts) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

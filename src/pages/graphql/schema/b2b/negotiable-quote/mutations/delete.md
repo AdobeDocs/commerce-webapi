@@ -34,9 +34,9 @@ deleteNegotiableQuotes(
 
 The `deleteNegotiableQuotes` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#deletenegotiablequotes)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#deletenegotiablequotes)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#deletenegotiablequotes)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#deletenegotiablequotes)
 
 The [`DeleteNegotiableQuoteOperationResult` union](../unions/index.md) is an output object that provides details about the result of a request to delete a negotiable quote. To return these details, specify fragments on the `DeleteNegotiableQuoteOperationFailure` and `NegotiableQuoteUidOperationSuccess` objects. Specify the `__typename` attribute to distinguish the object types in the response.
 

@@ -37,9 +37,9 @@ setNegotiableQuoteShippingMethods(
 
 The `setNegotiableQuoteShippingMethods` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#setnegotiablequoteshippingmethods)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#setnegotiablequoteshippingmethods)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#setnegotiablequoteshippingmethods)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#setnegotiablequoteshippingmethods)
 
 ## Example usage
 

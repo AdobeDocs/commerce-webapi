@@ -19,9 +19,9 @@ Store credit must be enabled on the store to run this mutation.
 
 The `removeStoreCreditFromCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#removestorecreditfromcart)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#removestorecreditfromcart)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#removestorecreditfromcart)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#removestorecreditfromcart)
 
 ## Example usage
 

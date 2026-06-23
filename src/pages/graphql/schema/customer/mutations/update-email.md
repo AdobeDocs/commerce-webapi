@@ -17,9 +17,9 @@ To return or modify information about a customer, we recommend you use customer 
 
 The `updateCustomerEmail` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#updatecustomeremail)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#updatecustomeremail)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#updatecustomeremail)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#updatecustomeremail)
 
 ## Example usage
 

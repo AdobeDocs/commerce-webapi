@@ -25,9 +25,9 @@ If the amount of available store credit equals or exceeds the grand total of the
 
 The `applyStoreCreditToCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#applystorecredittocart)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#applystorecredittocart)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#applystorecredittocart)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#applystorecredittocart)
 
 ## Example usage
 

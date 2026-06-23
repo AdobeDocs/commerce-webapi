@@ -28,9 +28,9 @@ mutation {
 
 The `removeGiftRegistryRegistrants` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#removegiftregistryregistrants)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#removegiftregistryregistrants)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#removegiftregistryregistrants)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#removegiftregistryregistrants)
 
 ## Example usage
 

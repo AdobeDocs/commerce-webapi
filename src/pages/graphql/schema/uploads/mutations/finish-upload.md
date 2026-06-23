@@ -24,7 +24,7 @@ mutation {
 
 ## Reference
 
-The [`finishUpload`](/reference/graphql/saas/index.md#finishupload) reference provides detailed information about the types and fields defined in this mutation.
+The [`finishUpload`](/reference/graphql/saas/mutations.md#finishupload) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

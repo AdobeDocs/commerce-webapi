@@ -41,9 +41,9 @@ mutation {
 
 The `placeOrder` reference provides detailed information about the types and fields defined in this mutation.
 
-- [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#placeorder)
+- [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#placeorder)
 
-- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](/reference/graphql/latest/index.md#placeorder)
+- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](/reference/graphql/latest/mutations.md#placeorder)
 
 ## Example usage
 

@@ -23,9 +23,9 @@ mutation {
 
 The `deleteWishlist` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#deletewishlist)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#deletewishlist)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#deletewishlist)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#deletewishlist)
 
 ## Example usage
 

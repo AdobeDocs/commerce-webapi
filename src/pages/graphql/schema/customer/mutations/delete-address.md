@@ -29,9 +29,9 @@ mutation {
 
 The `deleteCustomerAddress` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#deletecustomeraddress)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#deletecustomeraddress)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#deletecustomeraddress)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#deletecustomeraddress)
 
 ## Example usage
 

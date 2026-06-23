@@ -17,9 +17,9 @@ The mutation returns `true` if the request was successful. Otherwise, it returns
 
 The `resendConfirmationEmail` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#resendconfirmationemail)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#resendconfirmationemail)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#resendconfirmationemail)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#resendconfirmationemail)
 
 ## Example usage
 

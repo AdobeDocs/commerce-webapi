@@ -34,9 +34,9 @@ mutation {
 
 The `updateRequisitionListItems` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#updaterequisitionlistitems)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#updaterequisitionlistitems)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#updaterequisitionlistitems)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#updaterequisitionlistitems)
 
 ## Example usage
 

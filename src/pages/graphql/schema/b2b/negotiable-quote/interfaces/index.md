@@ -13,30 +13,30 @@ Negotiable quote queries and mutations can access the following interfaces:
 
 * `NegotiableQuoteAddressInterface`
 
-  * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#negotiablequoteaddressinterface)
+  * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/types-k-p.md#negotiablequoteaddressinterface)
 
-  * [On-Premises/Cloud](/reference/graphql/latest/index.md#negotiablequoteaddressinterface)
+  * [On-Premises/Cloud](/reference/graphql/latest/types-k-p.md#negotiablequoteaddressinterface)
 
   It is implemented by `NegotiableQuoteShippingAddress`
 
-  * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#negotiablequoteshippingaddress)
+  * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/types-k-p.md#negotiablequoteshippingaddress)
 
-  * [On-Premises/Cloud](/reference/graphql/latest/index.md#negotiablequoteshippingaddress)
+  * [On-Premises/Cloud](/reference/graphql/latest/types-k-p.md#negotiablequoteshippingaddress)
 
   and  `NegotiableQuoteBillingAddress`
 
-  * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#negotiablequotebillingaddress)
+  * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/types-k-p.md#negotiablequotebillingaddress)
 
-  * [On-Premises/Cloud](/reference/graphql/latest/index.md#negotiablequotebillingaddress)
+  * [On-Premises/Cloud](/reference/graphql/latest/types-k-p.md#negotiablequotebillingaddress)
 
 * `NegotiableQuoteUidNonFatalResultInterface`
 
-  * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#negotiablequoteuidnonfatalresultinterface)
+  * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/types-k-p.md#negotiablequoteuidnonfatalresultinterface)
 
-  * [On-Premises/Cloud](/reference/graphql/latest/index.md#negotiablequoteuidnonfatalresultinterface)
+  * [On-Premises/Cloud](/reference/graphql/latest/types-k-p.md#negotiablequoteuidnonfatalresultinterface)
 
   It is implemented by `NegotiableQuoteUidOperationSuccess`
 
-  * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#negotiablequoteuidoperationsuccess)
+  * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/types-k-p.md#negotiablequoteuidoperationsuccess)
 
-  * [On-Premises/Cloud](/reference/graphql/latest/index.md#negotiablequoteuidoperationsuccess)
+  * [On-Premises/Cloud](/reference/graphql/latest/types-k-p.md#negotiablequoteuidoperationsuccess)

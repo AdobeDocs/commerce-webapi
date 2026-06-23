@@ -23,9 +23,9 @@ The mutation returns an error if the order cannot be cancelled.
 
 The `requestGuestOrderCancel` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#requestguestordercancel)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#requestguestordercancel)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#requestguestordercancel)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#requestguestordercancel)
 
 ## Example usage
 

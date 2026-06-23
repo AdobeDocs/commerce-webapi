@@ -17,9 +17,9 @@ The `giftCardAccount` query returns information for a specific gift card.
 
 The `giftCardAccount` reference provides detailed information about the types and fields defined in this query.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#giftcardaccount)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/types-f-i.md#giftcardaccount)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#giftcardaccount)
+* [On-Premises/Cloud](/reference/graphql/latest/types-f-i.md#giftcardaccount)
 
 ## Example usage
 

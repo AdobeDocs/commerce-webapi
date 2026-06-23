@@ -33,9 +33,9 @@ mutation {
 
 The `createCompanyTeam` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#createcompanyteam)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#createcompanyteam)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#createcompanyteam)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#createcompanyteam)
 
 ## Example usage
 

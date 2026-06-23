@@ -19,9 +19,9 @@ description: WishlistItemInterface provides details about items in a wish list. 
 
 The `WishlistItemInterface` reference provides detailed information about the types and fields defined in this interface.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#wishlistiteminterface)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/types-t-z.md#wishlistiteminterface)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#wishlistiteminterface)
+* [On-Premises/Cloud](/reference/graphql/latest/types-t-z.md#wishlistiteminterface)
 
 ## Example usage
 

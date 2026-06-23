@@ -28,9 +28,9 @@ mutation {
 
 The `updateGiftRegistryRegistrants` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#updategiftregistryregistrants)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#updategiftregistryregistrants)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#updategiftregistryregistrants)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#updategiftregistryregistrants)
 
 ## Example usage
 

@@ -15,9 +15,9 @@ description: ShipmentItemInterface provides details about items in a customer's 
 
 The `ShipmentItemInterface` reference provides detailed information about the types and fields defined in this interface.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#shipmentiteminterface)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/types-q-s.md#shipmentiteminterface)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#shipmentiteminterface)
+* [On-Premises/Cloud](/reference/graphql/latest/types-q-s.md#shipmentiteminterface)
 
 ## Example usage
 

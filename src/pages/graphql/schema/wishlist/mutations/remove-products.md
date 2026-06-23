@@ -26,9 +26,9 @@ mutation {
 
 The `removeProductsFromWishlist` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#removeproductsfromwishlist)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#removeproductsfromwishlist)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#removeproductsfromwishlist)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#removeproductsfromwishlist)
 
 ## Example usage
 

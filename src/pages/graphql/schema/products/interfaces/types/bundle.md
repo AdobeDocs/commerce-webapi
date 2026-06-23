@@ -5,12 +5,12 @@ description: The BundleProduct data type implements the following interfaces:
 
 # Bundle product data types
 
-The [`BundleProduct`](/reference/graphql/latest/index.md#bundleproduct) data type implements the following interfaces:
+The [`BundleProduct`](/reference/graphql/latest/types-a-b.md#bundleproduct) data type implements the following interfaces:
 
--  [ProductInterface](/reference/graphql/latest/index.md#productinterface)
--  [PhysicalProductInterface](/reference/graphql/latest/index.md#physicalproductinterface)
--  [CustomizableProductInterface](/reference/graphql/latest/index.md#customizableproductinterface)
--  [RoutableInterface](/reference/graphql/latest/index.md#routableinterface)
+-  [ProductInterface](/reference/graphql/latest/types-k-p.md#productinterface)
+-  [PhysicalProductInterface](/reference/graphql/latest/types-k-p.md#physicalproductinterface)
+-  [CustomizableProductInterface](/reference/graphql/latest/types-c-e.md#customizableproductinterface)
+-  [RoutableInterface](/reference/graphql/latest/types-q-s.md#routableinterface)
 
 Attributes that are specific to bundle products can be used when performing a [`products`](../../queries/products.md) query.
 

@@ -25,9 +25,9 @@ mutation {
 
 The `addProductsToCompareList` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#addproductstocomparelist)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#addproductstocomparelist)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#addproductstocomparelist)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#addproductstocomparelist)
 
 ## Example usage
 

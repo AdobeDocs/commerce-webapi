@@ -18,9 +18,9 @@ The `setShippingAddressesOnCart` mutation sets one or more shipping addresses on
 
 The `setShippingAddressesOnCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#setshippingaddressesoncart)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#setshippingaddressesoncart)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#setshippingaddressesoncart)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#setshippingaddressesoncart)
 
 ## Example usage
 

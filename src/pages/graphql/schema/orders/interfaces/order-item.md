@@ -16,9 +16,9 @@ description: OrderItemInterface provides details about items in a customer's ord
 
 The `OrderItemInterface` reference provides detailed information about the types and fields defined in this interface.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#orderiteminterface)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/types-k-p.md#orderiteminterface)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#orderiteminterface)
+* [On-Premises/Cloud](/reference/graphql/latest/types-k-p.md#orderiteminterface)
 
 ## Example usage
 

@@ -49,9 +49,9 @@ This mutation requires a valid [customer authentication token](../../../customer
 
 The `setNegotiableQuotePaymentMethod` reference provides detailed information about the types and fields defined in this mutation.
 
-- [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#setnegotiablequotepaymentmethod)
+- [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#setnegotiablequotepaymentmethod)
 
-- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](/reference/graphql/latest/index.md#setnegotiablequotepaymentmethod)
+- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](/reference/graphql/latest/mutations.md#setnegotiablequotepaymentmethod)
 
 ## Example usage
 

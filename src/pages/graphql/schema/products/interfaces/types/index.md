@@ -5,17 +5,17 @@ description: Adobe Commerce and Magento Open Source provides multiple product ty
 
 # Product interface implementations
 
-Adobe Commerce and Magento Open Source provides multiple product types, and most of these product types have specialized attributes that are not defined in the [`ProductInterface`(/reference/graphql/latest/index.md#productinterface)].
+Adobe Commerce and Magento Open Source provides multiple product types, and most of these product types have specialized attributes that are not defined in the [`ProductInterface`(/reference/graphql/latest/types-k-p.md#productinterface)].
 
 | Product type | Implements | Has product-specific attributes? |
 | --- | --- | --- |
-| [BundleProduct](bundle.md) | ProductInterface, [PhysicalProductInterface](/reference/graphql/latest/index.md#productinterface), [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md) | Yes |
-| [ConfigurableProduct](configurable.md) | [ProductInterface](/reference/graphql/latest/index.md#productinterface), [PhysicalProductInterface](/reference/graphql/latest/index.md#productinterface), [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md) | Yes |
-| [DownloadableProduct](downloadable.md) | [ProductInterface](/reference/graphql/latest/index.md#productinterface),  [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md)  | Yes |
-| [GiftCardProduct](gift-card.md) | [ProductInterface](/reference/graphql/latest/index.md#productinterface),  [PhysicalProductInterface](/reference/graphql/latest/index.md#productinterface), [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md)| Yes |
-| [GroupedProduct](grouped.md) | [ProductInterface](/reference/graphql/latest/index.md#productinterface), [PhysicalProductInterface](/reference/graphql/latest/index.md#productinterface), [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md) | Yes |
-| [SimpleProduct](simple.md) | [ProductInterface](/reference/graphql/latest/index.md#productinterface), [PhysicalProductInterface](/reference/graphql/latest/index.md#productinterface), [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md) | No |
-| [VirtualProduct](virtual.md) | [ProductInterface](/reference/graphql/latest/index.md#productinterface),  [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md) | No |
+| [BundleProduct](bundle.md) | ProductInterface, [PhysicalProductInterface](/reference/graphql/latest/types-k-p.md#productinterface), [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md) | Yes |
+| [ConfigurableProduct](configurable.md) | [ProductInterface](/reference/graphql/latest/types-k-p.md#productinterface), [PhysicalProductInterface](/reference/graphql/latest/types-k-p.md#productinterface), [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md) | Yes |
+| [DownloadableProduct](downloadable.md) | [ProductInterface](/reference/graphql/latest/types-k-p.md#productinterface),  [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md)  | Yes |
+| [GiftCardProduct](gift-card.md) | [ProductInterface](/reference/graphql/latest/types-k-p.md#productinterface),  [PhysicalProductInterface](/reference/graphql/latest/types-k-p.md#productinterface), [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md)| Yes |
+| [GroupedProduct](grouped.md) | [ProductInterface](/reference/graphql/latest/types-k-p.md#productinterface), [PhysicalProductInterface](/reference/graphql/latest/types-k-p.md#productinterface), [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md) | Yes |
+| [SimpleProduct](simple.md) | [ProductInterface](/reference/graphql/latest/types-k-p.md#productinterface), [PhysicalProductInterface](/reference/graphql/latest/types-k-p.md#productinterface), [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md) | No |
+| [VirtualProduct](virtual.md) | [ProductInterface](/reference/graphql/latest/types-k-p.md#productinterface),  [CustomizableProductInterface](../customizable-option.md), [RoutableInterface](../routable.md) | No |
 
 ## Query for product-specific attributes
 

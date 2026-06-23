@@ -29,9 +29,9 @@ This query requires a valid [customer authentication token](../../../customer/mu
 
 The `setNegotiableQuoteShippingAddress` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#setnegotiablequoteshippingaddress)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#setnegotiablequoteshippingaddress)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#setnegotiablequoteshippingaddress)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#setnegotiablequoteshippingaddress)
 
 ## Example usage
 

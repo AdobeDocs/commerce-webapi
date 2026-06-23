@@ -18,7 +18,7 @@ Use the [`createProductReview` mutation](../mutations/create-review.md) to add a
 
 ## Reference
 
-The [`productReviewRatingsMetadata`](/reference/graphql/latest/index.md#productreviewratingsmetadata) reference provides detailed information about the types and fields defined in this query.
+The [`productReviewRatingsMetadata`](/reference/graphql/latest/types-k-p.md#productreviewratingsmetadata) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

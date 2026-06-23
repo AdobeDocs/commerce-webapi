@@ -25,9 +25,9 @@ mutation {
 
 The `removeProductsFromCompareList` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#removeproductsfromcomparelist)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#removeproductsfromcomparelist)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#removeproductsfromcomparelist)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#removeproductsfromcomparelist)
 
 ## Example usage
 

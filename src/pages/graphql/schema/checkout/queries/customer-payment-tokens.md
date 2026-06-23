@@ -21,9 +21,9 @@ You must specify the customer's authorization token in the header of the call.
 
 The `customerPaymentTokens` reference provides detailed information about the types and fields defined in this query.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#customerpaymenttokens)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/types-c-e.md#customerpaymenttokens)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#customerpaymenttokens)
+* [On-Premises/Cloud](/reference/graphql/latest/types-c-e.md#customerpaymenttokens)
 
 ## Example usage
 

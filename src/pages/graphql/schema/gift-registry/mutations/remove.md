@@ -21,9 +21,9 @@ removeGiftRegistry ( giftRegistryUid ID! ) RemoveGiftRegistryOutput
 
 The `removeGiftRegistry` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#removegiftregistry)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#removegiftregistry)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#removegiftregistry)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#removegiftregistry)
 
 ## Example usage
 

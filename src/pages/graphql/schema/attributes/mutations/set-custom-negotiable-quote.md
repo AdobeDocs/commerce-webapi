@@ -28,7 +28,7 @@ mutation {
 
 ## Reference
 
-The [`setCustomAttributesOnNegotiableQuote`](/reference/graphql/saas/index.md#setcustomattributesonnegotiablequote) reference provides detailed information about the types and fields defined in this mutation.
+The [`setCustomAttributesOnNegotiableQuote`](/reference/graphql/saas/mutations.md#setcustomattributesonnegotiablequote) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

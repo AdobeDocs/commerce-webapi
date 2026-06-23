@@ -28,7 +28,7 @@ products(
 
 ## Reference
 
-The [`products`](/reference/graphql/latest/index.md#products) reference provides detailed information about the types and fields defined in this query.
+The [`products`](/reference/graphql/latest/types-k-p.md#products) reference provides detailed information about the types and fields defined in this query.
 
 ## Input attributes
 

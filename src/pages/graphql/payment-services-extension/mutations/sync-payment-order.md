@@ -25,7 +25,7 @@ mutation {
 
 ## Reference
 
-The [`syncPaymentOrder`](/reference/graphql/saas/index.md#syncpaymentorder) reference provides detailed information about the types and fields defined in this mutation.
+The [`syncPaymentOrder`](/reference/graphql/saas/mutations.md#syncpaymentorder) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

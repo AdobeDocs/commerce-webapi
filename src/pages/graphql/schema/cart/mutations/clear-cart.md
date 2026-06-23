@@ -24,7 +24,7 @@ mutation {
 
 ## Reference
 
-The [`clearCart`](/reference/graphql/latest/index.md#clearcart) reference provides detailed information about the types and fields defined in this mutation.
+The [`clearCart`](/reference/graphql/latest/mutations.md#clearcart) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

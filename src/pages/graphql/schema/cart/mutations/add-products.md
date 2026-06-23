@@ -50,9 +50,9 @@ mutation {
 
 The `addProductsToCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#addproductstocart)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#addproductstocart)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#addproductstocart)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#addproductstocart)
 
 ## Example usage
 

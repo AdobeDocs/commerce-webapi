@@ -22,7 +22,7 @@ The `addVirtualProductsToCart` mutation allows you to add multiple virtual produ
 
 ## Reference
 
-The [`addVirtualProductsToCart`](/reference/graphql/latest/index.md#addvirtualproductstocart) reference provides detailed information about the types and fields defined in this mutation.
+The [`addVirtualProductsToCart`](/reference/graphql/latest/mutations.md#addvirtualproductstocart) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

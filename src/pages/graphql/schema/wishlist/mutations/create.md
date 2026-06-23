@@ -33,9 +33,9 @@ mutation {
 
 The `createWishlist` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#createwishlist)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#createwishlist)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#createwishlist)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#createwishlist)
 
 ## Example usage
 

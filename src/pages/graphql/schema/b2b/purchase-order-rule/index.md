@@ -84,7 +84,7 @@ The following example returns the list of purchase order approval rules.
 
 ## Get approval rule details
 
-The `purchase_order_approval_rule` query returns information about the specified approval rule. To retrieve details about the amount or quantity required to trigger an approval rule, you must specify the implementations of the [`PurchaseOrderApprovalRuleConditionInterface`](/reference/graphql/latest/index.md#purchaseorderapprovalruleconditioninterface).
+The `purchase_order_approval_rule` query returns information about the specified approval rule. To retrieve details about the amount or quantity required to trigger an approval rule, you must specify the implementations of the [`PurchaseOrderApprovalRuleConditionInterface`](/reference/graphql/latest/types-k-p.md#purchaseorderapprovalruleconditioninterface).
 
 The following example returns information about the purchase order approval rule.
 

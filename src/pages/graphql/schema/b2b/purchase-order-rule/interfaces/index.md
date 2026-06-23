@@ -11,23 +11,23 @@ keywords:
 
 `PurchaseOrderApprovalRuleConditionInterface` provides details about the approval rule conditions.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#purchaseorderapprovalruleconditioninterface)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/types-k-p.md#purchaseorderapprovalruleconditioninterface)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#purchaseorderapprovalruleconditioninterface)
+* [On-Premises/Cloud](/reference/graphql/latest/types-k-p.md#purchaseorderapprovalruleconditioninterface)
 
 It has the following implementations:
 
 *  `PurchaseOrderApprovalRuleConditionAmount`
 
-   * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#purchaseorderapprovalruleconditionamount)
+   * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/types-k-p.md#purchaseorderapprovalruleconditionamount)
 
-   * [On-Premises/Cloud](/reference/graphql/latest/index.md#purchaseorderapprovalruleconditionamount)
+   * [On-Premises/Cloud](/reference/graphql/latest/types-k-p.md#purchaseorderapprovalruleconditionamount)
 
 *  `PurchaseOrderApprovalRuleConditionQuantity`
 
-   * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#purchaseorderapprovalruleconditionquantity)
+   * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/types-k-p.md#purchaseorderapprovalruleconditionquantity)
 
-   * [On-Premises/Cloud](/reference/graphql/latest/index.md#purchaseorderapprovalruleconditionquantity)
+   * [On-Premises/Cloud](/reference/graphql/latest/types-k-p.md#purchaseorderapprovalruleconditionquantity)
 
 ## Example usage
 

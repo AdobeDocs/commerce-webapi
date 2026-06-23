@@ -23,9 +23,9 @@ negotiableQuote (uid ID!): NegotiableQuote
 
 The `negotiableQuote` reference provides detailed information about the types and fields defined in this query.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#negotiablequote)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/types-k-p.md#negotiablequote)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#negotiablequote)
+* [On-Premises/Cloud](/reference/graphql/latest/types-k-p.md#negotiablequote)
 
 ## Example usage
 

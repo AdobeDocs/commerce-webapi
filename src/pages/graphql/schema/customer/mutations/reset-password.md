@@ -23,9 +23,9 @@ The reset password token value can also be found in the `customer_entity`.`rp_to
 
 The `resetPassword` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#resetpassword)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#resetpassword)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#resetpassword)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#resetpassword)
 
 ## Example usage
 

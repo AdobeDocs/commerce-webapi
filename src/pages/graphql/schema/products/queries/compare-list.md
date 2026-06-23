@@ -19,9 +19,9 @@ compareList(
 
 The `compareList` reference provides detailed information about the types and fields defined in this query.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#comparelist)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/types-c-e.md#comparelist)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#comparelist)
+* [On-Premises/Cloud](/reference/graphql/latest/types-c-e.md#comparelist)
 
 ## Example usage
 

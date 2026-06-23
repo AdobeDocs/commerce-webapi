@@ -15,9 +15,9 @@ Use the `currency` query to return information about the store's currency config
 
 The `currency` reference provides detailed information about the types and fields defined in this query.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#currency)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/types-c-e.md#currency)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#currency)
+* [On-Premises/Cloud](/reference/graphql/latest/types-c-e.md#currency)
 
 ## Example usage
 

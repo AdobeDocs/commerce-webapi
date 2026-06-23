@@ -29,9 +29,9 @@ Do not run the `setShippingMethodsOnCart` mutation on in-store pickup orders. In
 
 The `setShippingMethodsOnCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#setshippingmethodsoncart)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#setshippingmethodsoncart)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#setshippingmethodsoncart)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#setshippingmethodsoncart)
 
 ## Example usage
 

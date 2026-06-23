@@ -26,9 +26,9 @@ mutation {
 
 The `addWishlistItemsToCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#addwishlistitemstocart)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#addwishlistitemstocart)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#addwishlistitemstocart)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#addwishlistitemstocart)
 
 ## Example usage
 

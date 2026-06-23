@@ -17,9 +17,9 @@ The `removeRewardPointsFromCart` mutation removes all reward points that were pr
 
 The `removeRewardPointsFromCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#removerewardpointsfromcart)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#removerewardpointsfromcart)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#removerewardpointsfromcart)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#removerewardpointsfromcart)
 
 ## Example usage
 

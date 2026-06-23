@@ -33,9 +33,9 @@ mutation {
 
 The `deleteRequisitionList` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#deleterequisitionlist)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#deleterequisitionlist)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#deleterequisitionlist)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#deleterequisitionlist)
 
 ## Example usage
 

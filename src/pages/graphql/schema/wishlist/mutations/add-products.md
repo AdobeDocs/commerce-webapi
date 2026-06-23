@@ -36,9 +36,9 @@ To determine whether wish lists are enabled, specify the `magento_wishlist_gener
 
 The `addProductsToWishlist` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#addproductstowishlist)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#addproductstowishlist)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#addproductstowishlist)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#addproductstowishlist)
 
 ## Example usage
 

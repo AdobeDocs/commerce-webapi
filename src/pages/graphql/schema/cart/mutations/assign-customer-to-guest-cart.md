@@ -33,9 +33,9 @@ mutation {
 
 The `assignCustomerToGuestCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#assigncustomertoguestcart)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#assigncustomertoguestcart)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#assigncustomertoguestcart)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#assigncustomertoguestcart)
 
 ## Example usage
 

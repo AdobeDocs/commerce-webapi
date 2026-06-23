@@ -31,7 +31,7 @@ See [PayPal Payflow Pro payment method](../../../payment-methods/payflow-pro.md)
 
 ## Reference
 
-The [`handlePayflowProResponse`](/reference/graphql/latest/index.md#handlepayflowproresponse) reference provides detailed information about the types and fields defined in this mutation.
+The [`handlePayflowProResponse`](/reference/graphql/latest/mutations.md#handlepayflowproresponse) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

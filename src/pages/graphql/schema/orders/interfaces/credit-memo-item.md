@@ -16,9 +16,9 @@ description: CreditMemoItemInterface provides details about items in a customer'
 
 The `CreditMemoItemInterface` reference provides detailed information about the types and fields defined in this interface.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#creditmemoiteminterface)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/types-c-e.md#creditmemoiteminterface)
 
-* [On-Premises/Cloud](/reference/graphql/latest/index.md#creditmemoiteminterface)
+* [On-Premises/Cloud](/reference/graphql/latest/types-c-e.md#creditmemoiteminterface)
 
 ## Example usage
 
