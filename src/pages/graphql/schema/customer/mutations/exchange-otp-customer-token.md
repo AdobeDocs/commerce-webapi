@@ -19,7 +19,7 @@ Upon successful exchange, the module invalidates the OTP so it cannot be reused.
 
 ## Reference
 
-The [`exchangeOtpForCustomerToken`](/reference/graphql/saas/index.md#exchangeotpforcustomertoken) reference provides detailed information about the types and fields defined in this mutation.
+The [`exchangeOtpForCustomerToken`](/reference/graphql/saas/mutations.md#exchangeotpforcustomertoken) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

@@ -51,7 +51,7 @@ mutation {
 
 ## Reference
 
-The [`placeNegotiableQuoteOrderV2`](/reference/graphql/saas/index.md#placenegotiablequoteorderv2) reference provides detailed information about the types and fields defined in this mutation.
+The [`placeNegotiableQuoteOrderV2`](/reference/graphql/saas/mutations.md#placenegotiablequoteorderv2) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

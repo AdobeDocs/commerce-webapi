@@ -17,9 +17,9 @@ To return or modify information about a customer, we recommend you use customer 
 
 The `changeCustomerPassword` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#changecustomerpassword)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#changecustomerpassword)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#changecustomerpassword)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#changecustomerpassword)
 
 ## Example usage
 

@@ -27,7 +27,7 @@ mutation {
 
 The `setCustomAttributesOnInvoice` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#setcustomattributesoninvoice)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#setcustomattributesoninvoice)
 
 ## Example usage
 

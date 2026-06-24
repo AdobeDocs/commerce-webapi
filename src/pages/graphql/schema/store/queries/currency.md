@@ -17,7 +17,7 @@ The `currency` reference provides detailed information about the types and field
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#currency)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#currency)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#currency)
 
 ## Example usage
 

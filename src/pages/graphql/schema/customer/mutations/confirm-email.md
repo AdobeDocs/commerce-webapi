@@ -15,9 +15,9 @@ The `confirmEmail` mutation completes the customer activation process by confirm
 
 The `confirmEmail` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#confirmemail)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#confirmemail)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#confirmemail)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#confirmemail)
 
 ## Example usage
 

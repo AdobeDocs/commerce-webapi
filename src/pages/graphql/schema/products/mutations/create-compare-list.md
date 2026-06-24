@@ -25,9 +25,9 @@ mutation {
 
 The `createCompareList` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#createcomparelist)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#createcomparelist)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#createcomparelist)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#createcomparelist)
 
 ## Example usage
 

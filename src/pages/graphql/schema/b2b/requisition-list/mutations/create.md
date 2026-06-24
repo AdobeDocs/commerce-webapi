@@ -34,9 +34,9 @@ mutation {
 
 The `createRequisitionList` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#createrequisitionlist)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#createrequisitionlist)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#createrequisitionlist)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#createrequisitionlist)
 
 ## Example usage
 

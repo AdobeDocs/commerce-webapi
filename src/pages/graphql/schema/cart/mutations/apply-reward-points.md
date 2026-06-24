@@ -19,9 +19,9 @@ Use the [`removeRewardPointsFromCart` mutation](remove-reward-points.md) to undo
 
 The `applyRewardPointsToCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#applyrewardpointstocart)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#applyrewardpointstocart)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#applyrewardpointstocart)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#applyrewardpointstocart)
 
 ## Example usage
 

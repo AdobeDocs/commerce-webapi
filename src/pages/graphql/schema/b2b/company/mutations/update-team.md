@@ -29,9 +29,9 @@ mutation {
 
 The `updateCompanyTeam` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#updatecompanyteam)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#updatecompanyteam)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#updatecompanyteam)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#updatecompanyteam)
 
 ## Example usage
 

@@ -25,9 +25,9 @@ mutation {
 
 The `assignCompareListToCustomer` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#assigncomparelisttocustomer)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#assigncomparelisttocustomer)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#assigncomparelisttocustomer)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#assigncomparelisttocustomer)
 
 ## Example usage
 

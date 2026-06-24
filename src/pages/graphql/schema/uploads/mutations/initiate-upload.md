@@ -36,7 +36,7 @@ mutation {
 
 ## Reference
 
-The [`initiateUpload`](/reference/graphql/saas/index.md#initiateupload) reference provides detailed information about the types and fields defined in this mutation.
+The [`initiateUpload`](/reference/graphql/saas/mutations.md#initiateupload) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

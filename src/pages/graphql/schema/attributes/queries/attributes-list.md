@@ -19,7 +19,7 @@ The `attributesList` reference provides detailed information about the types and
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#attributeslist)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#attributeslist)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#attributeslist)
 
 ## Example usage
 

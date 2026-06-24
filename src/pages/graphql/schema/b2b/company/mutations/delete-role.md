@@ -31,9 +31,9 @@ mutation {
 
 The `deleteCompanyRole` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#deletecompanyrole)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#deletecompanyrole)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#deletecompanyrole)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#deletecompanyrole)
 
 ## Example usage
 

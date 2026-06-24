@@ -27,9 +27,9 @@ mutation {
 
 The `deletePaymentToken` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#deletepaymenttoken)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#deletepaymenttoken)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#deletepaymenttoken)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#deletepaymenttoken)
 
 ## Example usage
 

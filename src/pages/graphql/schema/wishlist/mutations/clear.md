@@ -37,7 +37,7 @@ mutation {
 [//]: # (## Reference)
 
 [//]: # ()
-[//]: # (The [`clearWishlist`]&#40;/reference/graphql/index.md#clearwishlist&#41; reference provides detailed information about the types and fields defined in this mutation.)
+[//]: # (The [`clearWishlist`]&#40;/reference/graphql/latest/mutations.md#clearwishlist&#41; reference provides detailed information about the types and fields defined in this mutation.)
 
 ## Example usage
 

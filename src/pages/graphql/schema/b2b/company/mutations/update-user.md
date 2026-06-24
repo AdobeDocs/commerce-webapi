@@ -31,9 +31,9 @@ mutation {
 
 The `updateCompanyUser` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#updatecompanyuser)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#updatecompanyuser)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#updatecompanyuser)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#updatecompanyuser)
 
 ## Example usage
 

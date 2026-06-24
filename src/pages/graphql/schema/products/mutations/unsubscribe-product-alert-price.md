@@ -24,7 +24,7 @@ mutation {
 
 ## Reference
 
-The [`unsubscribeProductAlertPrice`](/reference/graphql/saas/index.md#unsubscribeproductalertprice) reference provides detailed information about the types and fields defined in this mutation.
+The [`unsubscribeProductAlertPrice`](/reference/graphql/saas/mutations.md#unsubscribeproductalertprice) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

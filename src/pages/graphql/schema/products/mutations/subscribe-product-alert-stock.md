@@ -24,7 +24,7 @@ mutation {
 
 ## Reference
 
-The [`subscribeProductAlertStock`](/reference/graphql/saas/index.md#subscribeproductalertstock) reference provides detailed information about the types and fields defined in this mutation.
+The [`subscribeProductAlertStock`](/reference/graphql/saas/mutations.md#subscribeproductalertstock) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

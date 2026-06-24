@@ -19,7 +19,7 @@ The `isEmailAvailable` reference provides detailed information about the types a
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#isemailavailable)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#isemailavailable)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#isemailavailable)
 
 ## Example usage
 

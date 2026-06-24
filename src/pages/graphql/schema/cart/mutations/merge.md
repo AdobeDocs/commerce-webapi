@@ -33,9 +33,9 @@ mutation {
 
 The `mergeCarts` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#mergecarts)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#mergecarts)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#mergecarts)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#mergecarts)
 
 ## Example usage
 

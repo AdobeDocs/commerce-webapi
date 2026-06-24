@@ -15,9 +15,9 @@ The `removeItemFromCart` mutation deletes the entire quantity of a specified ite
 
 The `removeItemFromCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#removeitemfromcart)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#removeitemfromcart)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#removeitemfromcart)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#removeitemfromcart)
 
 ## Example usage
 

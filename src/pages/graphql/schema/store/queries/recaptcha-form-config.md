@@ -19,7 +19,7 @@ The `recaptchaFormConfig` reference provides detailed information about the type
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#recaptchaformconfig)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#recaptchav3config)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#recaptchav3config)
 
 ## Example usage
 

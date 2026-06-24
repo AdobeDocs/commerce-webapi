@@ -19,9 +19,9 @@ mutation {generateCustomerTokenAsAdmin(input: GenerateCustomerTokenAsAdminInput!
 
 The `generateCustomerTokenAsAdmin` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#generatecustomertokenasadmin)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#generatecustomertokenasadmin)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#generatecustomertokenasadmin)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#generatecustomertokenasadmin)
 
 ## Example usage
 

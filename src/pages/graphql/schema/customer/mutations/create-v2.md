@@ -21,9 +21,9 @@ As of version 2.4.7, you can use the `custom_attributes` field to define an arra
 
 The `createCustomerV2` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#createcustomerv2)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#createcustomerv2)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#createcustomerv2)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#createcustomerv2)
 
 ## Example usage
 
