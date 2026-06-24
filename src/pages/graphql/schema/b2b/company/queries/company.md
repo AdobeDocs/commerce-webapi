@@ -25,9 +25,9 @@ This query requires a valid [customer authentication token](../../../customer/mu
 
 The `company` reference provides detailed information about the types and fields defined in this query.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/types-c-e.md#company)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#company)
 
-* [On-Premises/Cloud](/reference/graphql/latest/types-c-e.md#company)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#company)
 
 ## Example usage
 

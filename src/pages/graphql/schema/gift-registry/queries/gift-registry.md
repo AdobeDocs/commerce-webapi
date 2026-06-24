@@ -21,9 +21,9 @@ giftRegistry(uid: ID!): GiftRegistry
 
 The `giftRegistry` reference provides detailed information about the types and fields defined in this query.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/types-f-i.md#giftregistry)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#giftregistry)
 
-* [On-Premises/Cloud](/reference/graphql/latest/types-f-i.md#giftregistry)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#giftregistry)
 
 ## Example usage
 

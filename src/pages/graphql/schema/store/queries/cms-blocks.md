@@ -18,7 +18,7 @@ Return the contents of one or more CMS blocks:
 
 ## Reference
 
-The [`cmsBlocks`](/reference/graphql/latest/types-c-e.md#cmsblocks) reference provides detailed information about the types and fields defined in this query.
+The [`cmsBlocks`](/reference/graphql/latest/index.md#cmsblocks) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

@@ -15,9 +15,9 @@ The `storeConfig` query defines information about a store's configuration. You c
 
 The `storeConfig` reference provides detailed information about the types and fields defined in this query.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/types-q-s.md#storeconfig)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#storeconfig)
 
-* [On-Premises/Cloud](/reference/graphql/latest/types-q-s.md#storeconfig)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#storeconfig)
 
 ## Example usage
 

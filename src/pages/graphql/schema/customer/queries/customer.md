@@ -17,9 +17,9 @@ To retrieve information about a customer, we recommend you use customer tokens i
 
 The `customer` reference provides detailed information about the types and fields defined in this query.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/types-c-e.md#customer)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#customer)
 
-* [On-Premises/Cloud](/reference/graphql/latest/types-c-e.md#customer)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#customer)
 
 ## Example usage
 

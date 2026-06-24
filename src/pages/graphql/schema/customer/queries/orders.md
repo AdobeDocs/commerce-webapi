@@ -22,7 +22,7 @@ We recommend you use customer tokens in the header of your GraphQL calls. Howeve
 
 ## Reference
 
-The [`customerOrders`](/reference/graphql/latest/types-c-e.md#customerorders) reference provides detailed information about the types and fields defined in this query.
+The [`customerOrders`](/reference/graphql/latest/index.md#customerorders) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
