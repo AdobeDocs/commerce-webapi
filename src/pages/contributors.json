@@ -21,7 +21,7 @@
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/get-started/",
@@ -406,7 +406,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/38460853?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/payment-services-extension/mutations/complete-order",
@@ -415,7 +415,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/38460853?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/payment-services-extension/mutations/create-payment-order",
@@ -424,7 +424,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/38460853?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/payment-services-extension/mutations/create-vault-card-payment-token",
@@ -433,7 +433,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/38460853?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/payment-services-extension/mutations/create-vault-card-setup-token",
@@ -442,7 +442,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/38460853?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/payment-services-extension/mutations/set-cart-inactive",
@@ -451,7 +451,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/38460853?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/payment-services-extension/mutations/sync-payment-order",
@@ -460,7 +460,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/38460853?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/payment-services-extension/queries/",
@@ -576,7 +576,7 @@
         "https://avatars.githubusercontent.com/u/98363870?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/release-notes",
@@ -615,7 +615,7 @@
         "https://avatars.githubusercontent.com/u/98363870?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/attributes/mutations/",
@@ -633,7 +633,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/attributes/mutations/set-custom-cart-item",
@@ -642,7 +642,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/attributes/mutations/set-custom-company",
@@ -651,7 +651,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/attributes/mutations/set-custom-credit-memo",
@@ -660,7 +660,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/attributes/mutations/set-custom-credit-memo-item",
@@ -669,7 +669,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/attributes/mutations/set-custom-invoice",
@@ -678,7 +678,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/attributes/mutations/set-custom-invoice-item",
@@ -687,7 +687,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/attributes/mutations/set-custom-negotiable-quote",
@@ -696,7 +696,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/attributes/queries/",
@@ -719,7 +719,7 @@
         "https://avatars.githubusercontent.com/u/2188119?v=4",
         "https://avatars.githubusercontent.com/u/1092519?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/attributes/queries/attributes-list",
@@ -732,7 +732,7 @@
         "https://avatars.githubusercontent.com/u/1092519?v=4",
         "https://avatars.githubusercontent.com/u/2188119?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/attributes/queries/attributes-metadata",
@@ -766,7 +766,7 @@
         "https://avatars.githubusercontent.com/u/2188119?v=4",
         "https://avatars.githubusercontent.com/u/16324697?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/company/",
@@ -796,7 +796,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/108055538?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/company/mutations/create",
@@ -807,7 +807,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/1667889?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/company/mutations/create-role",
@@ -817,7 +817,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/company/mutations/create-team",
@@ -827,7 +827,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/company/mutations/create-user",
@@ -837,7 +837,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/company/mutations/delete-role",
@@ -847,7 +847,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/company/mutations/delete-team",
@@ -857,7 +857,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/company/mutations/delete-user",
@@ -867,7 +867,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/company/mutations/unassign-child-company",
@@ -876,7 +876,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/108055538?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/company/mutations/update",
@@ -886,7 +886,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/company/mutations/update-role",
@@ -896,7 +896,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/company/mutations/update-structure",
@@ -906,7 +906,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/company/mutations/update-team",
@@ -916,7 +916,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/company/mutations/update-user",
@@ -926,7 +926,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/company/queries/",
@@ -958,7 +958,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/company/queries/is-company-email-available",
@@ -968,7 +968,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/company/queries/is-company-role-name-available",
@@ -978,7 +978,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/company/queries/is-company-user-email-available",
@@ -988,7 +988,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/company/unions/",
@@ -1008,7 +1008,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/negotiable-quote/",
@@ -1028,7 +1028,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/negotiable-quote/mutations/",
@@ -1049,7 +1049,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/negotiable-quote/mutations/delete",
@@ -1059,7 +1059,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/negotiable-quote/mutations/place-order",
@@ -1069,7 +1069,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/negotiable-quote/mutations/place-order-v2",
@@ -1078,7 +1078,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/negotiable-quote/mutations/remove-items",
@@ -1088,7 +1088,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/negotiable-quote/mutations/request",
@@ -1098,7 +1098,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/negotiable-quote/mutations/send-for-review",
@@ -1108,7 +1108,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/negotiable-quote/mutations/set-billing-address",
@@ -1118,7 +1118,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/negotiable-quote/mutations/set-payment-method",
@@ -1128,7 +1128,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/negotiable-quote/mutations/set-quote-template-expiration-date",
@@ -1138,7 +1138,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/108055538?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/negotiable-quote/mutations/set-shipping-address",
@@ -1148,7 +1148,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/negotiable-quote/mutations/set-shipping-methods",
@@ -1158,7 +1158,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/negotiable-quote/mutations/update-quantities",
@@ -1168,7 +1168,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/negotiable-quote/queries/",
@@ -1199,7 +1199,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/negotiable-quote/queries/templates",
@@ -1208,7 +1208,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/negotiable-quote/unions/",
@@ -1218,7 +1218,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/purchase-order-rule/",
@@ -1229,7 +1229,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/2028541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/purchase-order-rule/interfaces/",
@@ -1241,7 +1241,7 @@
         "https://avatars.githubusercontent.com/u/98363870?v=4",
         "https://avatars.githubusercontent.com/u/2028541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/purchase-order-rule/mutations/",
@@ -1263,7 +1263,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/2028541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/purchase-order-rule/mutations/delete",
@@ -1274,7 +1274,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/2028541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/purchase-order-rule/mutations/update",
@@ -1285,7 +1285,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/2028541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/purchase-order-rule/mutations/validate",
@@ -1296,7 +1296,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/2028541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/purchase-order/",
@@ -1330,7 +1330,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/2028541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/purchase-order/mutations/add-items-to-cart",
@@ -1342,7 +1342,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/2028541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/purchase-order/mutations/approve",
@@ -1353,7 +1353,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/2028541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/purchase-order/mutations/cancel",
@@ -1364,7 +1364,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/2028541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/purchase-order/mutations/place-order",
@@ -1376,7 +1376,7 @@
         "https://avatars.githubusercontent.com/u/6391769?v=4",
         "https://avatars.githubusercontent.com/u/2028541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/purchase-order/mutations/place-purchase-order",
@@ -1387,7 +1387,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/6391769?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/purchase-order/mutations/reject",
@@ -1398,7 +1398,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/2028541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/requisition-list/",
@@ -1419,7 +1419,7 @@
         "https://avatars.githubusercontent.com/u/98363870?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/requisition-list/interfaces/item",
@@ -1430,7 +1430,7 @@
         "https://avatars.githubusercontent.com/u/98363870?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/requisition-list/mutations/",
@@ -1452,7 +1452,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/requisition-list/mutations/add-products",
@@ -1462,7 +1462,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/requisition-list/mutations/clear-customer-cart",
@@ -1472,7 +1472,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/requisition-list/mutations/copy-items",
@@ -1482,7 +1482,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/requisition-list/mutations/create",
@@ -1492,7 +1492,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/requisition-list/mutations/delete",
@@ -1502,7 +1502,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/requisition-list/mutations/delete-items",
@@ -1512,7 +1512,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/requisition-list/mutations/import-shared-requisition-list",
@@ -1522,7 +1522,7 @@
         "https://avatars.githubusercontent.com/u/108055538?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/requisition-list/mutations/move-items",
@@ -1532,7 +1532,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/requisition-list/mutations/share-requisition-list-by-email",
@@ -1541,7 +1541,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/108055538?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/requisition-list/mutations/share-requisition-list-by-token",
@@ -1550,7 +1550,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/108055538?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/requisition-list/mutations/update",
@@ -1560,7 +1560,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/requisition-list/mutations/update-items",
@@ -1570,7 +1570,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/b2b/requisition-list/queries/",
@@ -1611,7 +1611,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/",
@@ -1633,7 +1633,7 @@
         "https://avatars.githubusercontent.com/u/2188119?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/add-configurable-products",
@@ -1644,7 +1644,7 @@
         "https://avatars.githubusercontent.com/u/2188119?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/add-downloadable-products",
@@ -1655,7 +1655,7 @@
         "https://avatars.githubusercontent.com/u/2188119?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/add-products",
@@ -1668,7 +1668,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/30629803?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/add-simple-products",
@@ -1679,7 +1679,7 @@
         "https://avatars.githubusercontent.com/u/2188119?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/add-virtual-products",
@@ -1690,7 +1690,7 @@
         "https://avatars.githubusercontent.com/u/2188119?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/apply-coupon",
@@ -1701,7 +1701,7 @@
         "https://avatars.githubusercontent.com/u/2188119?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/apply-coupons",
@@ -1712,7 +1712,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/2188119?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/apply-giftcard",
@@ -1722,7 +1722,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/apply-reward-points",
@@ -1733,7 +1733,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/2188119?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/apply-store-credit",
@@ -1743,7 +1743,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/assign-customer-to-guest-cart",
@@ -1754,7 +1754,7 @@
         "https://avatars.githubusercontent.com/u/2188119?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/clear-cart",
@@ -1765,7 +1765,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/2188119?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/create-empty-cart",
@@ -1776,7 +1776,7 @@
         "https://avatars.githubusercontent.com/u/2188119?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/create-guest-cart",
@@ -1788,7 +1788,7 @@
         "https://avatars.githubusercontent.com/u/98363870?v=4",
         "https://avatars.githubusercontent.com/u/2188119?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/estimate-shipping-methods",
@@ -1798,7 +1798,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/3187617?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/estimate-totals",
@@ -1808,7 +1808,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/3187617?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/merge",
@@ -1819,7 +1819,7 @@
         "https://avatars.githubusercontent.com/u/2188119?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/place-order",
@@ -1831,7 +1831,7 @@
         "https://avatars.githubusercontent.com/u/16324697?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/redeem-giftcard-balance",
@@ -1841,7 +1841,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/remove-coupon",
@@ -1852,7 +1852,7 @@
         "https://avatars.githubusercontent.com/u/2188119?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/remove-coupons",
@@ -1863,7 +1863,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/2188119?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/remove-giftcard",
@@ -1873,7 +1873,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/remove-item",
@@ -1884,7 +1884,7 @@
         "https://avatars.githubusercontent.com/u/2188119?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/remove-reward-points",
@@ -1894,7 +1894,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/remove-store-credit",
@@ -1904,7 +1904,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/set-billing-address",
@@ -1916,7 +1916,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/3187617?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/set-gift-options",
@@ -1927,7 +1927,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/2188119?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/set-guest-email",
@@ -1937,7 +1937,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/set-payment-method",
@@ -1947,7 +1947,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/set-payment-place-order",
@@ -1957,7 +1957,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/set-shipping-address",
@@ -1968,7 +1968,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/3187617?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/set-shipping-method",
@@ -1978,7 +1978,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/update-items",
@@ -1989,7 +1989,7 @@
         "https://avatars.githubusercontent.com/u/2188119?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/queries/",
@@ -2000,7 +2000,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/cart/queries/cart",
@@ -2114,7 +2114,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/checkout/mutations/create-klarna-payments-session",
@@ -2134,7 +2134,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/checkout/mutations/create-paypal-express-token",
@@ -2144,7 +2144,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/checkout/mutations/delete-payment-token",
@@ -2154,7 +2154,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/checkout/mutations/handle-payflow-pro-response",
@@ -2164,7 +2164,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/checkout/queries/",
@@ -2185,7 +2185,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/checkout/queries/customer-payment-tokens",
@@ -2205,7 +2205,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/checkout/queries/get-payflow-link-token",
@@ -2215,7 +2215,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/",
@@ -2226,7 +2226,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/mutations/",
@@ -2247,7 +2247,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/mutations/change-password",
@@ -2257,7 +2257,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/mutations/confirm-email",
@@ -2268,7 +2268,7 @@
         "https://avatars.githubusercontent.com/u/108055538?v=4",
         "https://avatars.githubusercontent.com/u/2188119?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/mutations/create",
@@ -2278,7 +2278,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/mutations/create-address",
@@ -2289,7 +2289,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/1092519?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/mutations/create-v2",
@@ -2300,7 +2300,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/1092519?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/mutations/delete-address",
@@ -2310,7 +2310,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/mutations/delete-address-v2",
@@ -2320,7 +2320,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/161452743?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/mutations/exchange-external-customer-token",
@@ -2339,7 +2339,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/mutations/generate-token",
@@ -2350,7 +2350,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/mutations/generate-token-as-admin",
@@ -2360,7 +2360,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/mutations/request-password-reset-email",
@@ -2370,7 +2370,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/mutations/resend-confirmation-email",
@@ -2380,7 +2380,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/108055538?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/mutations/reset-password",
@@ -2390,7 +2390,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/mutations/revoke-token",
@@ -2400,7 +2400,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/mutations/send-email-to-friend",
@@ -2410,7 +2410,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/mutations/subscribe-email-to-newsletter",
@@ -2420,7 +2420,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/mutations/update",
@@ -2430,7 +2430,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/mutations/update-address",
@@ -2441,7 +2441,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/1092519?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/mutations/update-address-v2",
@@ -2451,7 +2451,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/161452743?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/mutations/update-email",
@@ -2461,7 +2461,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/mutations/update-v2",
@@ -2472,7 +2472,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/1092519?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/queries/",
@@ -2492,7 +2492,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/queries/customer",
@@ -2554,7 +2554,7 @@
         "https://avatars.githubusercontent.com/u/11199531?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/customer/queries/orders",
@@ -2593,7 +2593,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/gift-registry/mutations/create",
@@ -2603,7 +2603,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/gift-registry/mutations/move-cart-items",
@@ -2613,7 +2613,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/gift-registry/mutations/remove",
@@ -2623,7 +2623,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/gift-registry/mutations/remove-items",
@@ -2633,7 +2633,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/gift-registry/mutations/remove-registrants",
@@ -2643,7 +2643,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/gift-registry/mutations/share",
@@ -2653,7 +2653,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/gift-registry/mutations/update",
@@ -2663,7 +2663,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/gift-registry/mutations/update-items",
@@ -2673,7 +2673,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/gift-registry/mutations/update-registrants",
@@ -2683,7 +2683,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/gift-registry/queries/",
@@ -2702,7 +2702,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/gift-registry/queries/gift-registry",
@@ -2722,7 +2722,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/gift-registry/queries/type-search",
@@ -2732,7 +2732,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/gift-registry/queries/types",
@@ -2742,7 +2742,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/live-search/",
@@ -2811,7 +2811,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/orders/interfaces/invoice-item",
@@ -2821,7 +2821,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/orders/interfaces/order-item",
@@ -2831,7 +2831,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/orders/interfaces/shipment-item",
@@ -2841,7 +2841,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/orders/mutations/",
@@ -2860,7 +2860,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/orders/mutations/add-return-tracking",
@@ -2870,7 +2870,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/orders/mutations/cancel-order",
@@ -2882,7 +2882,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/1092519?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/orders/mutations/confirm-cancel-order",
@@ -2892,7 +2892,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/108055538?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/orders/mutations/confirm-return",
@@ -2903,7 +2903,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/2188119?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/orders/mutations/remove-return-tracking",
@@ -2913,7 +2913,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/orders/mutations/reorder-items",
@@ -2924,7 +2924,7 @@
         "https://avatars.githubusercontent.com/u/2188119?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/orders/mutations/request-guest-order-cancel",
@@ -2934,7 +2934,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/108055538?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/orders/mutations/request-guest-return",
@@ -2945,7 +2945,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/2188119?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/orders/mutations/request-return",
@@ -2956,7 +2956,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/39598117?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/orders/queries/",
@@ -2975,7 +2975,7 @@
         "https://avatars.githubusercontent.com/u/161452743?v=4",
         "https://avatars.githubusercontent.com/u/16324697?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/orders/queries/guest-order-by-token",
@@ -2985,7 +2985,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/16324697?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/product-recommendations/",
@@ -3035,7 +3035,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/interfaces/attribute-metadata",
@@ -3057,7 +3057,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/1092519?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/interfaces/category",
@@ -3068,7 +3068,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/interfaces/customizable-option",
@@ -3079,7 +3079,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/interfaces/pwa-implementations",
@@ -3101,7 +3101,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/8973208?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/interfaces/types/",
@@ -3112,7 +3112,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/interfaces/types/bundle",
@@ -3123,7 +3123,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/interfaces/types/configurable",
@@ -3134,7 +3134,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/interfaces/types/downloadable",
@@ -3145,7 +3145,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/interfaces/types/gift-card",
@@ -3156,7 +3156,7 @@
         "https://avatars.githubusercontent.com/u/98363870?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/interfaces/types/grouped",
@@ -3167,7 +3167,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/interfaces/types/simple",
@@ -3178,7 +3178,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/interfaces/types/virtual",
@@ -3189,7 +3189,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/mutations/",
@@ -3208,7 +3208,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/mutations/assign-compare-list",
@@ -3218,7 +3218,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/mutations/create-compare-list",
@@ -3228,7 +3228,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/mutations/create-review",
@@ -3238,7 +3238,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/mutations/delete-compare-list",
@@ -3248,7 +3248,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/mutations/remove-from-compare-list",
@@ -3258,7 +3258,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/mutations/subscribe-product-alert-price",
@@ -3267,7 +3267,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/mutations/subscribe-product-alert-stock",
@@ -3276,7 +3276,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/mutations/unsubscribe-product-alert-price",
@@ -3285,7 +3285,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/mutations/unsubscribe-product-alert-price-all",
@@ -3294,7 +3294,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/mutations/unsubscribe-product-alert-stock",
@@ -3312,7 +3312,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/queries/",
@@ -3332,7 +3332,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/queries/category",
@@ -3342,7 +3342,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/queries/category-list",
@@ -3352,7 +3352,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/queries/compare-list",
@@ -3414,7 +3414,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/111579196?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/products/queries/url-resolver",
@@ -3424,7 +3424,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/store/",
@@ -3453,7 +3453,7 @@
         "https://avatars.githubusercontent.com/u/98363870?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/store/queries/",
@@ -3473,7 +3473,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/store/queries/cms-blocks",
@@ -3505,7 +3505,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/store/queries/country",
@@ -3548,7 +3548,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/3187617?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/store/queries/recaptcha-form-configs",
@@ -3568,7 +3568,7 @@
         "https://avatars.githubusercontent.com/u/98363870?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/store/queries/store-config",
@@ -3608,7 +3608,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/uploads/mutations/initiate-upload",
@@ -3617,7 +3617,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/wishlist/",
@@ -3645,7 +3645,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/wishlist/mutations/",
@@ -3664,7 +3664,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/wishlist/mutations/add-products",
@@ -3674,7 +3674,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/wishlist/mutations/clear",
@@ -3683,7 +3683,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/108055538?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/wishlist/mutations/copy-products",
@@ -3693,7 +3693,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/wishlist/mutations/create",
@@ -3703,7 +3703,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/wishlist/mutations/delete",
@@ -3713,7 +3713,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/wishlist/mutations/move-products",
@@ -3723,7 +3723,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/wishlist/mutations/remove-products",
@@ -3733,7 +3733,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/wishlist/mutations/update",
@@ -3743,7 +3743,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/wishlist/mutations/update-products",
@@ -3753,7 +3753,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/graphql/schema/wishlist/queries/",
@@ -4019,7 +4019,7 @@
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-6-queries",
@@ -4027,49 +4027,49 @@
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-6-types-a-b",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-6-types-c-e",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-6-types-f-i",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-6-types-k-p",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-6-types-q-s",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-6-types-t-z",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-7-mutations",
@@ -4077,7 +4077,7 @@
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-7-queries",
@@ -4085,49 +4085,49 @@
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-7-types-a-b",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-7-types-c-e",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-7-types-f-i",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-7-types-k-p",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-7-types-q-s",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-7-types-t-z",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-8-mutations",
@@ -4135,7 +4135,7 @@
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-8-queries",
@@ -4143,49 +4143,49 @@
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-8-types-a-b",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-8-types-c-e",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-8-types-f-i",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-8-types-k-p",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-8-types-q-s",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-8-types-t-z",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-9-mutations",
@@ -4193,7 +4193,7 @@
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-9-queries",
@@ -4201,49 +4201,49 @@
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-9-types-a-b",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-9-types-c-e",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-9-types-f-i",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/23/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-9-types-k-p",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-9-types-q-s",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-2-4-9-types-t-z",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-saas-mutations",
@@ -4251,7 +4251,7 @@
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-saas-queries",
@@ -4259,49 +4259,49 @@
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-saas-types-a-b",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-saas-types-c-e",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-saas-types-f-i",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-saas-types-k-p",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-saas-types-q-s",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/autogenerated/graphql-api-saas-types-t-z",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/includes/commerce-only",
@@ -4508,56 +4508,56 @@
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/2-4-6/mutations",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/2-4-6/types-a-b",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/2-4-6/types-c-e",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/2-4-6/types-f-i",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/2-4-6/types-k-p",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/2-4-6/types-q-s",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/2-4-6/types-t-z",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/2-4-7/",
@@ -4565,56 +4565,56 @@
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/2-4-7/mutations",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/2-4-7/types-a-b",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/2-4-7/types-c-e",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/2-4-7/types-f-i",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/2-4-7/types-k-p",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/2-4-7/types-q-s",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/2-4-7/types-t-z",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/2-4-8/",
@@ -4622,112 +4622,112 @@
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/2-4-8/mutations",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/2-4-8/types-a-b",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/2-4-8/types-c-e",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/2-4-8/types-f-i",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/2-4-8/types-k-p",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/2-4-8/types-q-s",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/2-4-8/types-t-z",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/latest/",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/latest/mutations",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/latest/types-a-b",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/latest/types-c-e",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/latest/types-f-i",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/latest/types-k-p",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/latest/types-q-s",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/latest/types-t-z",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/saas/",
@@ -4736,56 +4736,56 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/98363870?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/saas/mutations",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/saas/types-a-b",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/saas/types-c-e",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/saas/types-f-i",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/saas/types-k-p",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/saas/types-q-s",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/graphql/saas/types-t-z",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "6/22/2026"
+      "lastUpdated": "6/24/2026"
     },
     {
       "page": "/reference/rest/paas",
