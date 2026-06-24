@@ -84,7 +84,7 @@ In order to always present shoppers with the latest available payment options pr
 
 The following diagram describes the workflow:
 
-![Klarna payments cart updates sequence diagram](../../images/graphql/klarna-payments-cart-updates.svg)
+![Klarna payments cart updates sequence diagram](../../images/graphql/klarna-payments-cart-updates.png)
 
 ## setPaymentMethodOnCart mutation
 
