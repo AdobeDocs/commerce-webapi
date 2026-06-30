@@ -110,6 +110,10 @@ By default, any one of these arrays can include up to 20 items, but you can chan
 
 ## Input limit for REST endpoints
 
+<Fragment src="../includes/saas-only.md"/>
+
+In Adobe Commerce as a Cloud Service, Bulk API limits are determined by the **Maximum Entities per Bulk Request** setting in the [Store Configuration](https://experienceleague.adobe.com/en/docs/commerce-admin/config/general/bulk-api).
+
 <Fragment src="../includes/paas-only.md"/>
 
 Some REST endpoints can contain a high number of elements, and developers need a way to set the limit for each endpoint. The limit for a specific REST endpoint can be set in the `webapi.xml` configuration file for synchronous requests and `webapi_async.xml` for asynchronous requests.
