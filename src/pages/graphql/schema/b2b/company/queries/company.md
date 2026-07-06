@@ -384,3 +384,131 @@ query{
   }
 }
 ```
+
+### Return the company addresses and config
+
+The following query returns a list of company's addresses and a config object related to addresses.
+
+**Request:**
+
+```graphql
+query{
+  company{
+    id
+      config {
+          address_book_enabled
+          address_book_custom_shipping_address_enabled
+      }
+      addresses(pageSize: 20, currentPage: 1) {
+          total_count
+          page_info {
+              page_size
+              current_page
+              total_pages
+          }
+          items {
+              id
+              nickname
+              company_id
+              address_type
+              is_default
+              firstname
+              lastname
+              company
+              street
+              city
+              country_code
+              region_id
+              region {
+                  region_id
+                  region
+                  region_code
+              }
+              postcode
+              telephone
+              fax
+              vat_id
+              custom_attributes {
+                  code
+                  ... on AttributeValue {
+                      value
+                  }
+              }
+          }
+      }
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "company": {
+      "config": {
+        "address_book_enabled": true,
+        "address_book_custom_shipping_address_enabled": true
+      },
+      "addresses": {
+        "total_count": 2,
+        "page_info": {
+          "page_size": 20,
+          "current_page": 1,
+          "total_pages": 1
+        },
+        "items": [
+          {
+            "id": "MTI=",
+            "nickname": "HQ Billing",
+            "company_id": "Mw==",
+            "address_type": "BILLING",
+            "is_default": true,
+            "firstname": "John",
+            "lastname": "Doe",
+            "company": "Acme Corp",
+            "street": ["123 Main St"],
+            "city": "Austin",
+            "country_code": "US",
+            "region_id": 57,
+            "region": {
+              "region_id": 57,
+              "region": "Texas",
+              "region_code": "TX"
+            },
+            "postcode": "78701",
+            "telephone": "5551234567",
+            "fax": null,
+            "vat_id": "US123456789",
+            "custom_attributes": []
+          },
+          {
+            "id": "MTM=",
+            "nickname": "Warehouse",
+            "company_id": "Mw==",
+            "address_type": "SHIPPING",
+            "is_default": false,
+            "firstname": "Jane",
+            "lastname": "Smith",
+            "company": "Acme Corp",
+            "street": ["456 Oak Ave"],
+            "city": "Dallas",
+            "country_code": "US",
+            "region_id": 57,
+            "region": {
+              "region_id": 57,
+              "region": "Texas",
+              "region_code": "TX"
+            },
+            "postcode": "75201",
+            "telephone": "5559876543",
+            "fax": null,
+            "vat_id": null,
+            "custom_attributes": []
+          }
+        ]
+      }
+    }
+  }
+}
+```

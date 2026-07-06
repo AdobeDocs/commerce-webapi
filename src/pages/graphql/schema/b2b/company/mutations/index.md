@@ -17,3 +17,10 @@ The B2B company mutations allow you to perform the management operations:
 * Move the position of a company team in the company hierarchy.
 * Create, update, and delete company roles.
 * Assign and unassign a company to a company hierarchy.
+
+# Company Address Book mutations
+
+The company address book mutations allow you to perform the company address management operations:
+
+* Create, update and delete a company address.
+* Set default company billing or shipping address.
