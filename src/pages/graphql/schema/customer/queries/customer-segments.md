@@ -1,6 +1,7 @@
 ---
 title: customerSegments query
 description: Provides the encoded ID of customer segments assigned to the logged-in customer or guest shopper.
+ee_only: true
 ---
 
 # customerSegments query
