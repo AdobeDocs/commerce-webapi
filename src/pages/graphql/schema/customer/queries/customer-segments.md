@@ -9,7 +9,7 @@ description: Provides the encoded ID of customer segments assigned to the logged
 
 This query was created for the [Storefront Compatibility Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/configuration/storefront-compatibility/v248/) and is now available on Adobe Commerce 2.4.9.
 
-The `customerSegments` query provides the eencoded ID of customer segments assigned to the logged-in customer or guest shopper.
+The `customerSegments` query provides the encoded ID of customer segments assigned to the logged-in customer or guest shopper.
 
 To retrieve customer segments for a customer, we recommend you use customer tokens in the header of your GraphQL calls. However, in case of guest information, token should not be passed.
 
