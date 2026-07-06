@@ -11,7 +11,7 @@ This mutation requires a valid [customer authentication token](../../customer/mu
 
 <InlineAlert variant="info" slots="text1" />
 
-This mutation is part of the [Storefront Compatibility Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/configuration/storefront-compatibility/v248/). It will be added to Adobe Commerce 2.4.9.
+This mutation was created for the [Storefront Compatibility Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/configuration/storefront-compatibility/v248/) and is now available on Adobe Commerce 2.4.9.
 
 ## Syntax
 
