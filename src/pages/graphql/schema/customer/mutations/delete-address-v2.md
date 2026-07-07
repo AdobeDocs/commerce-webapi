@@ -1,7 +1,6 @@
 ---
 title: deleteCustomerAddressV2 mutation
-description: Use the deleteCustomerAddressV2 mutation to delete the specified customer address. It returns a Boolean value that indicates whether the operation was succ...
-
+description: Deletes the specified customer address.
 ---
 
 <Fragment src="../../../../includes/saas-only.md"/>
@@ -14,7 +13,7 @@ We recommend you use a customer token in the header of your call to delete a cus
 
 <InlineAlert variant="info" slots="text1" />
 
-This mutation is part of the [Storefront Compatibility Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/configuration/storefront-compatibility/v248/). It will be added to Adobe Commerce 2.4.9.
+This mutation was created for the [Storefront Compatibility Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/configuration/storefront-compatibility/v248/) and is now available on Adobe Commerce 2.4.9.
 
 ## Syntax
 
