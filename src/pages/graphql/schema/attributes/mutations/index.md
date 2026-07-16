@@ -17,18 +17,18 @@ The following mutations allow you to set custom attributes:
 
 * [`setCustomAttributesOnCart`](set-custom-cart.md)
 * [`setCustomAttributesOnCartItem`](set-custom-cart-item.md)
-* [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [`setCustomAttributesOnCompany`](set-custom-company.md)
+* [`setCustomAttributesOnCompany`](set-custom-company.md)
 * [`setCustomAttributesOnCreditMemo`](set-custom-credit-memo.md)
 * [`setCustomAttributesOnCreditMemoItem`](set-custom-credit-memo-item.md)
 * [`setCustomAttributesOnInvoice`](set-custom-invoice.md)
 * [`setCustomAttributesOnInvoiceItem`](set-custom-invoice-item.md)
-* [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [`setCustomAttributesOnNegotiableQuote`](set-custom-negotiable-quote.md)
+* [`setCustomAttributesOnNegotiableQuote`](set-custom-negotiable-quote.md)
 
 The following entities now support custom attributes:
 
 * `Cart`
 * `CartItemInterface`
-* [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) `Company`
+* `Company`
 * `CreditMemo`
 * `CreditMemoItem`
 * `CreditMemoItemInterface`
@@ -36,7 +36,7 @@ The following entities now support custom attributes:
 * `Invoice`
 * `InvoiceItem`
 * `InvoiceItemInterface`
-* [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) `NegotiableQuote`
+* `NegotiableQuote`
 * `Order`
 * `OrderItem`
 * `OrderItemInterface`

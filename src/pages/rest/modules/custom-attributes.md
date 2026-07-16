@@ -109,8 +109,6 @@ curl -i -X PUT \
 
 ### Company
 
-<Fragment src="../../includes/saas-only.md"/>
-
 The `POST V1/company/setCustomAttributes` endpoint allows you to set custom attributes on a company. The request body must include the `company_id` and an array of `custom_attributes`.
 
 ```curl
@@ -253,8 +251,6 @@ curl -i -X POST \
 If an order item has custom attributes, they will be returned as part of the order item object in responses to requests like `GET /V1/orders/items/{id}`.
 
 ### Negotiable Quote
-
-<Fragment src="../../includes/saas-only.md"/>
 
 The `POST /V1/negotiableQuote/setCustomAttributes` endpoint allows you to set custom attributes on a negotiable quote. The request body must include the `quote_id` and an array of `custom_attributes`.
 
