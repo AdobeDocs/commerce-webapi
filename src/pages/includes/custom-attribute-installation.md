@@ -16,11 +16,24 @@ To install custom attributes in Adobe Commerce:
    composer require magento/out-of-process-custom-attributes=^0.2.0  --with-dependencies
    ```
 
+   To add support for B2B entities (companies and negotiable quotes), also install the B2B modules. This metapackage depends on the base metapackage, which Composer installs automatically.
+
+   ```bash
+   composer require magento/out-of-process-custom-attributes-b2b --with-dependencies
+   ```
+
 1. Enable the new modules:
 
    ```bash
    bin/magento module:enable Magento_CustomAttributeSerializable
    bin/magento module:enable Magento_CustomAttributeSerializableGraphQl
+   ```
+
+   If you installed the B2B modules, enable them as well:
+
+   ```bash
+   bin/magento module:enable Magento_CustomAttributeSerializableB2b
+   bin/magento module:enable Magento_CustomAttributeSerializableB2bGraphQl
    ```
 
 1. For on-premises installations, run the following command to upgrade Adobe Commerce and clear the cache.

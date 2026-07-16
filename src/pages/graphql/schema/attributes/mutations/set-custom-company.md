@@ -40,7 +40,7 @@ The following example sets two custom attributes on a company.
 mutation {
   setCustomAttributesOnCompany(
     input: {
-      company_id: "MQ=="
+      id: "MQ=="
       custom_attributes: [
         {
           attribute_code: "attribute_one"
