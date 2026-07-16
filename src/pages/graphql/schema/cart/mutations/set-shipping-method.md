@@ -19,7 +19,7 @@ The `setShippingMethodsOnCart` mutation sets one or more delivery methods on a c
 
 <InlineAlert variant="info" slots="text" />
 
-Do not run the `setShippingMethodsOnCart` mutation on in-store pickup orders. Instead, specify the `pickup_location_code` attribute in the [`setShippingAddressesOnCart` mutation](set-shipping-address.md).
+When `pickup_location_code` is set via `setShippingAddressesOnCart` mutation for in-store pickup orders and the customer later switches to home delivery with `setShippingMethodsOnCart` mutation, the pickup location is cleared from the cart. The customer must call `setShippingAddressesOnCart` mutation again with a valid home delivery address before placing the order.
 
 ## Syntax
 

@@ -1973,12 +1973,14 @@
     {
       "page": "/graphql/schema/cart/mutations/set-shipping-method",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/6391769?v=4",
+        "https://avatars.githubusercontent.com/u/54864601?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/24/2026"
+      "lastUpdated": "7/15/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/update-items",
