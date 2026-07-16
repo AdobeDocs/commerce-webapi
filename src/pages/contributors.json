@@ -620,11 +620,12 @@
     {
       "page": "/graphql/schema/attributes/mutations/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/18550571?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/1/2026"
+      "lastUpdated": "7/16/2026"
     },
     {
       "page": "/graphql/schema/attributes/mutations/set-custom-cart",
@@ -648,11 +649,12 @@
     {
       "page": "/graphql/schema/attributes/mutations/set-custom-company",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/18550571?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/24/2026"
+      "lastUpdated": "7/16/2026"
     },
     {
       "page": "/graphql/schema/attributes/mutations/set-custom-credit-memo",
@@ -693,11 +695,12 @@
     {
       "page": "/graphql/schema/attributes/mutations/set-custom-negotiable-quote",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/18550571?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/24/2026"
+      "lastUpdated": "7/16/2026"
     },
     {
       "page": "/graphql/schema/attributes/queries/",
@@ -4320,10 +4323,11 @@
     {
       "page": "/includes/custom-attribute-installation",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/18550571?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/2/2026"
+      "lastUpdated": "7/16/2026"
     },
     {
       "page": "/includes/graphql/attribute-metadata",
@@ -5212,13 +5216,13 @@
     {
       "page": "/rest/modules/custom-attributes",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/18550571?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/6404095?v=4",
-        "https://avatars.githubusercontent.com/u/18550571?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/2/2026"
+      "lastUpdated": "7/16/2026"
     },
     {
       "page": "/rest/modules/import/",
