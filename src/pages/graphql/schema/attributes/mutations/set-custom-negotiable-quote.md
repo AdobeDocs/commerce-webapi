@@ -10,7 +10,7 @@ description: This mutation is automatically available on Adobe Commerce as a Clo
 
 <Fragment src="../../../../includes/graphql/custom-attribute-availability.md"/>
 
-The `setCustomAttributesOnNegotiableQuote` mutation sets custom attributes on a credit memo item. The mutation accepts a negotiable quote ID and an array of custom attribute key/value pairs. It returns the updated negotiable quote. All ID values are treated as strings.
+The `setCustomAttributesOnNegotiableQuote` mutation sets custom attributes on a negotiable quote. The mutation accepts a negotiable quote ID and an array of custom attribute key/value pairs. It returns the updated negotiable quote. All ID values are treated as strings.
 
 To remove a custom attribute, rerun the mutation without the previously applied custom attribute.
 
@@ -40,7 +40,7 @@ The following example sets two custom attributes on a negotiable quote.
 mutation {
   setCustomAttributesOnNegotiableQuote(
     input: {
-      negotiable_quote_id: "xCA4wSZEHsb5QbFiKfoq5k1Dk8vIPBgb"
+      quote_uid: "xCA4wSZEHsb5QbFiKfoq5k1Dk8vIPBgb"
       custom_attributes: [
         {
           attribute_code: "attribute_one"
@@ -53,8 +53,8 @@ mutation {
       ]
     }
   ) {
-    negotiable_quote {
-      id
+    quote {
+      uid
       custom_attributes {
         attribute_code
         value
@@ -70,8 +70,8 @@ mutation {
 {
   "data": {
     "setCustomAttributesOnNegotiableQuote": {
-      "negotiable_quote": {
-        "id": "xCA4wSZEHsb5QbFiKfoq5k1Dk8vIPBgb",
+      "quote": {
+        "uid": "xCA4wSZEHsb5QbFiKfoq5k1Dk8vIPBgb",
         "custom_attributes": [
           {
             "attribute_code": "attribute_one",
