@@ -18,7 +18,7 @@ See [Boundaries and Limits](https://experienceleague.adobe.com/en/docs/commerce/
 ```graphql
 productSearch(
     phrase: String!
-    context: QueryContextInput!
+    context: QueryContextInput
     current_page: Int = 1
     page_size: Int = 20
     sort: [ProductSearchSortInput!]
@@ -37,7 +37,7 @@ The Catalog Service `productSearch` query uses Live Search to return details abo
 The `productSearch` query accepts the following fields as input:
 
 - `phrase` - The string of text to search for. This field is required but an empty string may be used if only filtering by `category` or `categoryPath`.
-- `context` - (Live Search only) Query context that allows customized search results to be returned based on the customer group passed. This is used to get the view history of a SKU.
+- `context` - (Live Search only) Optional query context that allows customized search results to be returned based on the customer group or shopper view history passed. If no context is provided, the request uses the Not Logged In customer group.
 - `current_page` and `page_size`- These optional fields allow the search results to be broken down into smaller groups so that a limited number of items are returned at a time. The default value of `page_size` is `20`, and the default value for `current_page` is `1`. In the response, counting starts at page one.
 - `sort` - An object that defines one or more product attributes to use to sort the search results. The default sortable product attributes in Luma are `price`, `name`, and `position`. A product's position is assigned within a category.
 - `filter` - An object that defines one or more product attributes or categories used to narrow the search results. In the Luma theme, the `sku`, `price`, and `size` attributes are among the product attributes that can be used to filter query results.
@@ -457,11 +457,11 @@ filter: [
     in: ["Catalog", "Catalog, Search"]
   },
   {
-    attribute:"categoryPath",
-    eq: ["women/bottoms-women"]
+    attribute: "categoryPath",
+    eq: "women/bottoms-women"
   },
   {
-    attribute:"categories",
+    attribute: "categories",
     in: ["women/bottoms-women/pants-women"]
   }
 ]
@@ -481,7 +481,15 @@ Dynamic facets appear only when relevant, and the selection changes according to
 
 Intelligent dynamic facets measure the frequency that an attribute appears in the results list and its prevalence throughout the catalog. Live Search uses this information to determine the order of returned products. This makes it possible to return two types of dynamic facets: Those that are most significant, followed by those that are most popular.
 
-The `buckets` subobject divides the data into manageable groups. For the `price` and similar numeric attributes, each bucket defines a price range and counts the items within that price range. Meanwhile, the buckets associated with the `categories` attribute list details about each category a product is a member of. The contents of dynamic facet buckets vary.
+The `buckets` array divides the data into manageable groups. For the `price` and similar numeric attributes, each bucket defines a price range and counts the items within that price range. Meanwhile, the buckets associated with the `categories` attribute list details about each category a product is a member of. The contents of dynamic facet buckets vary.
+
+The `buckets` array is polymorphic. Use `__typename` or a type-specific fragment, such as `... on RangeBucket` or `... on StatsBucket`, to identify which [bucket implementation](#bucket-data-type) was returned for each entry.
+
+For numeric attributes, such as `price` or a rating attribute, `buckets` can contain both a `RangeBucket` and a `StatsBucket`. The `RangeBucket.from` and `RangeBucket.to` values can reflect the facet's configured or slider bounds rather than the minimum and maximum values actually present in the filtered results.
+
+<InlineAlert variant="info" slots="text"/>
+
+When a `StatsBucket` is returned alongside a `RangeBucket` for the same facet, use `StatsBucket.min` and `StatsBucket.max` to determine the actual minimum and maximum values of the filtered result set. Do not infer these values from `RangeBucket.from` and `RangeBucket.to` alone.
 
 The following snippet returns all information about the applicable facets for a search:
 
@@ -921,7 +929,7 @@ The `QueryContextInput` object can contain the following fields.
 
 | Field | Data Type | Description |
 | --- | --- | --- |
-| `customerGroup` | String! | The customer group code. For storefront clients, this value is available in the `dataservices_customer_group` cookie. |
+| `customerGroup` | String | The customer group code. For storefront clients, this value is available in the `dataservices_customer_group` cookie. |
 | `userViewHistory` | [ViewHistoryInput!](#viewhistoryinput-data-type) | List of SKUs with timestamps. Used in "Recommended for you" ranking. |
 
 ### ViewHistoryInput data type
@@ -1010,7 +1018,7 @@ Implement `StatsBucket` to retrieve statistics across multiple buckets.
 | --- | --- | --- |
 | `max` | Float! | The maximum value |
 | `min` | Float! | The minimum value |
-| `title` | String! | The display text defining the bucket |
+| `title` | String! | The display text defining the bucket. This value can be an empty string. |
 
 #### ProductSearchItem data type
 
