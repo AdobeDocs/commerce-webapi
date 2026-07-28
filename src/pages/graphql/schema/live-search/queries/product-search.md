@@ -481,11 +481,11 @@ Dynamic facets appear only when relevant, and the selection changes according to
 
 Intelligent dynamic facets measure the frequency that an attribute appears in the results list and its prevalence throughout the catalog. Live Search uses this information to determine the order of returned products. This makes it possible to return two types of dynamic facets: Those that are most significant, followed by those that are most popular.
 
-The `buckets` array divides the data into manageable groups. For the `price` and similar numeric attributes, each bucket defines a price range and counts the items within that price range. Meanwhile, the buckets associated with the `categories` attribute list details about each category a product is a member of. The contents of dynamic facet buckets vary.
+The `buckets` array divides the data into manageable groups. For the `price` and similar numeric attributes, each bucket defines a price range and counts the items within that price range. The buckets associated with the `categories` attribute list details about each category a product is a member of. The contents of dynamic facet buckets vary.
 
 The `buckets` array is polymorphic. Use `__typename` or a type-specific fragment, such as `... on RangeBucket` or `... on StatsBucket`, to identify which [bucket implementation](#bucket-data-type) was returned for each entry.
 
-For numeric attributes, such as `price` or a rating attribute, `buckets` can contain both a `RangeBucket` and a `StatsBucket`. The `RangeBucket.from` and `RangeBucket.to` values can reflect the facet's configured or slider bounds rather than the minimum and maximum values actually present in the filtered results.
+For numeric attributes, such as `price` or a rating attribute, `buckets` can contain both a `RangeBucket` and a `StatsBucket`. The `RangeBucket.from` and `RangeBucket.to` values can reflect the facet's configured bounds or slider bounds rather than the minimum and maximum values actually present in the filtered results.
 
 <InlineAlert variant="info" slots="text"/>
 
