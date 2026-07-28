@@ -24,7 +24,7 @@ This feature is experimental and must be enabled by Adobe. To request access, co
 
 The `orderChain` endpoints extend the standard order management endpoints, so each request and response body matches its standard `/V1/order/{id}/...` counterpart.
 
-| Method | Endpoint | Description | ACL resource |
+| Method | Endpoint | Description | Role resource |
 | --- | --- | --- | --- |
 | `POST` | `/V1/orderChain/{orderId}/invoice` | Create an invoice for the order, resolving the items to invoice across the order chain. | `Magento_Sales::invoice` |
 | `POST` | `/V1/orderChain/{id}/cancel` | Cancel the current order in the chain. | `Magento_Sales::cancel` |
@@ -34,6 +34,169 @@ The `orderChain` endpoints extend the standard order management endpoints, so ea
 | `POST` | `/V1/orderChain/{id}/comments` | Add a comment to the order. | `Magento_Sales::comment` |
 | `GET` | `/V1/orderChain/{id}/comments` | Retrieve the order comments. | `Magento_Sales::actions_view` |
 | `GET` | `/V1/orderChain/{id}/statuses` | Retrieve the current order status. | `Magento_Sales::actions_view` |
+
+### Order chain examples
+
+The following examples call each `orderChain` endpoint using order ID `42`. When the specified order is part of a chain, Commerce automatically resolves the request to the latest order in that chain.
+
+#### Example: create an invoice
+
+Request:
+
+```http
+POST /rest/V1/orderChain/42/invoice
+```
+
+Request body:
+
+```json
+{
+  "items": [
+    {
+      "order_item_id": 3,
+      "qty": 1
+    }
+  ],
+  "notify": true,
+  "comment": {
+    "comment": "Invoice created after payment confirmation.",
+    "is_visible_on_front": 1
+  }
+}
+```
+
+The response returns the ID of the new invoice:
+
+```json
+31
+```
+
+#### Example: cancel an order
+
+Request:
+
+```http
+POST /rest/V1/orderChain/42/cancel
+```
+
+The response confirms the cancellation:
+
+```json
+true
+```
+
+#### Example: place an order on hold
+
+Request:
+
+```http
+POST /rest/V1/orderChain/42/hold
+```
+
+The response confirms the hold:
+
+```json
+true
+```
+
+#### Example: release an order from hold
+
+Request:
+
+```http
+POST /rest/V1/orderChain/42/unhold
+```
+
+The response confirms the order was released from hold:
+
+```json
+true
+```
+
+#### Example: send an order email
+
+Request:
+
+```http
+POST /rest/V1/orderChain/42/emails
+```
+
+The response confirms the notification was sent:
+
+```json
+true
+```
+
+#### Example: add a comment to an order
+
+Request:
+
+```http
+POST /rest/V1/orderChain/42/comments
+```
+
+Request body:
+
+```json
+{
+  "statusHistory": {
+    "comment": "Contacted the customer to confirm the delivery window.",
+    "is_customer_notified": 1,
+    "is_visible_on_front": 1,
+    "parent_id": 42,
+    "status": "processing"
+  }
+}
+```
+
+The response confirms the comment was added:
+
+```json
+true
+```
+
+#### Example: retrieve order comments
+
+Request:
+
+```http
+GET /rest/V1/orderChain/42/comments
+```
+
+The response returns the comments for every order in the chain:
+
+```json
+{
+  "items": [
+    {
+      "comment": "Contacted the customer to confirm the delivery window.",
+      "created_at": "2026-07-20 14:32:10",
+      "entity_id": 12,
+      "entity_name": "order",
+      "is_customer_notified": 1,
+      "is_visible_on_front": 1,
+      "parent_id": 42,
+      "status": "processing"
+    }
+  ],
+  "search_criteria": {},
+  "total_count": 1
+}
+```
+
+#### Example: retrieve the order status
+
+Request:
+
+```http
+GET /rest/V1/orderChain/42/statuses
+```
+
+The response returns the status of the latest order in the chain:
+
+```json
+"processing"
+```
 
 ### Filter order documents by original order ID
 
@@ -66,6 +229,8 @@ This feature is disabled by default and must be enabled by Adobe. To request acc
 Both endpoints require the `Magento_Sales::actions_edit` role resource.
 
 ### Edit an order
+
+To edit an existing order:
 
 1. Call `POST /V1/orders/{orderId}/edit/start`.
 

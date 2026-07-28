@@ -113,6 +113,8 @@ Use the `template_id` returned by these endpoints with `POST /V1/custom-email/se
 
 ### List custom email templates
 
+Use the following endpoint to list all custom email templates.
+
 #### Endpoint
 
 -  **URL** - `GET /rest/V1/custom-email/templates`
@@ -160,6 +162,8 @@ GET /rest/V1/custom-email/templates?searchCriteria[pageSize]=20&searchCriteria[c
 
 ### Retrieve a custom email template
 
+Use the following endpoint to retrieve a single custom email template by its ID.
+
 #### Endpoint
 
 -  **URL** - `GET /rest/V1/custom-email/templates/{id}`
@@ -199,6 +203,8 @@ GET /rest/V1/custom-email/templates/5
    Returned when no custom template matches the given `id`.
 
 ### Create a custom email template
+
+Use the following endpoint to create a new custom email template.
 
 #### Endpoint
 
