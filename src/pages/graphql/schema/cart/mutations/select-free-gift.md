@@ -5,6 +5,9 @@ description: The selectFreeGiftForCart mutation defines the product that a shopp
 
 # selectFreeGiftForCart mutation
 
+<InlineAlert variant="info" slots="text1" />
+This mutation is part of the Storefront Compatibility Package and is only available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview).
+
 The `selectFreeGiftForCart` mutation defines the product that a shopper has selected as a free gift. This mutation is applicable only when a Free Gift cart price rule has been applied to the cart and the rule requires the shopper to choose a gift SKU before placing the order.
 
 Some Free Gift rules add a gift to the cart automatically. Other rules offer multiple SKUs, or a product with configurable or bundle options, and require the shopper to make a selection. Use the following [`Cart`](../queries/cart.md) fields to determine whether a selection is needed and which products are eligible:
