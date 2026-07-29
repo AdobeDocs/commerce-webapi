@@ -1,6 +1,6 @@
 ---
 title: Email triggering through REST
-description: Learn how to trigger transactional emails using the REST API for Adobe Commerce as a Cloud Service.
+description: Learn how to trigger transactional emails and manage custom email templates using the REST API for Adobe Commerce as a Cloud Service.
 keywords:
   - REST
   - Integration
@@ -96,6 +96,169 @@ The API returns HTTP 200 on successful send. The `reply_to_email` field is only 
 -  **HTTP 404 – Template not found**
 
    Example: `"message": "Email template with ID \"999\" does not exist."`
+
+## Manage custom email templates
+
+Use the following endpoints to list, retrieve, and create custom email templates from the REST API.
+
+| Method | Endpoint | Description |
+| --- | --- | --- |
+| `GET` | `/V1/custom-email/templates` | List custom email templates, returning each template's ID, code, subject, and type. |
+| `GET` | `/V1/custom-email/templates/{id}` | Retrieve a single template, including its body and styles. |
+| `POST` | `/V1/custom-email/templates` | Create a custom email template and return its server-assigned ID. |
+
+<InlineAlert variant="info" slots="text" />
+
+Use the `template_id` returned by these endpoints with `POST /V1/custom-email/send` instead of looking up the ID manually.
+
+### List custom email templates
+
+Use the following endpoint to list all custom email templates.
+
+#### Endpoint
+
+-  **URL** - `GET /rest/V1/custom-email/templates`
+
+The endpoint accepts standard `searchCriteria` parameters for pagination, sorting, and filtering. When filtering on `template_type`, filter against the raw numeric column (`1` for text, `2` for HTML) rather than the label in the response.
+
+#### Response fields
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `template_id` | integer | Usable as-is with `POST /V1/custom-email/send`. |
+| `template_code` | string | Template name. |
+| `template_subject` | string | Template subject, as raw, unrendered directive source. |
+| `template_type` | string | `html` or `text`. |
+| `added_at` | string | Creation timestamp. |
+| `modified_at` | string | Last-modified timestamp. |
+
+#### Example request
+
+```http
+GET /rest/V1/custom-email/templates?searchCriteria[pageSize]=20&searchCriteria[currentPage]=1
+```
+
+#### Example response (HTTP 200)
+
+```json
+{
+  "items": [
+    {
+      "template_id": 5,
+      "template_code": "Abandoned Cart Reminder",
+      "template_subject": "You left something behind",
+      "template_type": "html",
+      "added_at": "2026-06-01 12:34:56",
+      "modified_at": "2026-06-02 09:10:11"
+    }
+  ],
+  "search_criteria": {
+    "page_size": 20,
+    "current_page": 1
+  },
+  "total_count": 1
+}
+```
+
+### Retrieve a custom email template
+
+Use the following endpoint to retrieve a single custom email template by its ID.
+
+#### Endpoint
+
+-  **URL** - `GET /rest/V1/custom-email/templates/{id}`
+
+The response includes every field from the list response, plus:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `template_text` | string | Raw, unrendered template body. Directives such as `{{var}}` and `{{trans}}` are preserved, so the value can be sent back verbatim when creating another template. |
+| `template_styles` | string | CSS for the template. Empty string for text templates. |
+
+#### Example request
+
+```http
+GET /rest/V1/custom-email/templates/5
+```
+
+#### Example response (HTTP 200)
+
+```json
+{
+  "template_id": 5,
+  "template_code": "Abandoned Cart Reminder",
+  "template_subject": "{{trans \"You left something behind\"}}",
+  "template_type": "html",
+  "template_text": "{{template config_path=\"design/email/header_template\"}}...",
+  "template_styles": "",
+  "added_at": "2026-06-01 12:34:56",
+  "modified_at": "2026-06-02 09:10:11"
+}
+```
+
+#### Error responses
+
+-  **HTTP 404 – Template not found**
+
+   Returned when no custom template matches the given `id`.
+
+### Create a custom email template
+
+Use the following endpoint to create a new custom email template.
+
+#### Endpoint
+
+-  **URL** - `POST /rest/V1/custom-email/templates`
+
+<InlineAlert variant="info" slots="text" />
+
+Commerce returns HTTP 200 (not 201) on success, consistent with other Commerce REST endpoints.
+
+#### Request body
+
+Wrap the template fields in a `template` object.
+
+-  **template_code** (string, required) – Unique template name. Maximum 150 characters.
+-  **template_subject** (string, required) – Maximum 200 characters. May contain directive syntax, as described in [Supported template scenarios](#supported-template-scenarios).
+-  **template_text** (string, required) – Raw template body. Directives are stored as-is and are not rendered at creation time.
+-  **template_type** (string, optional) – `html` (default) or `text`.
+-  **template_styles** (string, optional) – CSS for the template. Ignored, and forced to an empty string, when `template_type` is `text`.
+
+The API ignores any value supplied for `template_id`, `added_at`, or `modified_at`, Commerce assigns these automatically.
+
+<InlineAlert variant="info" slots="text" />
+
+The API does not accept `template_sender_name`, `template_sender_email`, `orig_template_code`, or `orig_template_variables`. These fields are either inert for email templates or used only by the Admin template editor.
+
+#### Example request
+
+```json
+{
+  "template": {
+    "template_code": "Abandoned Cart Reminder",
+    "template_subject": "You left something behind",
+    "template_text": "<p>Hi {{var customer.name}}, your cart misses you.</p>",
+    "template_styles": ".greeting { color: #333; }",
+    "template_type": "html"
+  }
+}
+```
+
+#### Success response (HTTP 200)
+
+The response returns the created template in the same shape as [Retrieve a custom email template](#retrieve-a-custom-email-template), including the server-assigned `template_id`.
+
+#### Error responses
+
+-  **HTTP 400 – Validation error**
+
+   Returned for a missing required field, a value that exceeds its length limit, or an invalid `template_type`.
+
+-  **HTTP 409 – Duplicate template code**
+
+   Returned when a custom template with the same `template_code` already exists. Commerce does not create a duplicate row.
+
+   Example: `"message": "A custom email template with code \"my_code\" already exists."`
 
 ## Supported template scenarios
 
