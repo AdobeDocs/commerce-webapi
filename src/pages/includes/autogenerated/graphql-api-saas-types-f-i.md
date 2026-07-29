@@ -19,14 +19,14 @@
 
 ```json
 {
-  "code": "xyz789",
-  "is_visible": true,
+  "code": "abc123",
+  "is_visible": false,
   "payment_intent": "xyz789",
-  "payment_source": "xyz789",
+  "payment_source": "abc123",
   "sdk_params": [SDKParams],
-  "sort_order": "abc123",
+  "sort_order": "xyz789",
   "three_ds_mode": "OFF",
-  "title": "abc123"
+  "title": "xyz789"
 }
 ```
 
@@ -93,7 +93,7 @@ Defines a filter that matches the input exactly.
 ```json
 {
   "eq": "abc123",
-  "in": ["abc123"]
+  "in": ["xyz789"]
 }
 ```
 
@@ -130,7 +130,7 @@ Defines a filter that performs a fuzzy search.
 #### Example
 
 ```json
-{"match": "xyz789", "match_type": "FULL"}
+{"match": "abc123", "match_type": "FULL"}
 ```
 
 <HorizontalLine />
@@ -150,7 +150,7 @@ Defines a filter that matches a range of values, such as prices or dates.
 
 ```json
 {
-  "from": "abc123",
+  "from": "xyz789",
   "to": "xyz789"
 }
 ```
@@ -214,8 +214,8 @@ Defines a filter for an input string.
 ```json
 {
   "eq": "xyz789",
-  "in": ["xyz789"],
-  "match": "abc123"
+  "in": ["abc123"],
+  "match": "xyz789"
 }
 ```
 
@@ -249,19 +249,19 @@ Defines the comparison operators that can be used in a filter.
 ```json
 {
   "eq": "xyz789",
-  "from": "abc123",
+  "from": "xyz789",
   "gt": "abc123",
   "gteq": "xyz789",
-  "in": ["abc123"],
-  "like": "abc123",
+  "in": ["xyz789"],
+  "like": "xyz789",
   "lt": "xyz789",
-  "lteq": "abc123",
-  "moreq": "xyz789",
-  "neq": "abc123",
-  "nin": ["abc123"],
+  "lteq": "xyz789",
+  "moreq": "abc123",
+  "neq": "xyz789",
+  "nin": ["xyz789"],
   "notnull": "abc123",
-  "null": "xyz789",
-  "to": "xyz789"
+  "null": "abc123",
+  "to": "abc123"
 }
 ```
 
@@ -284,9 +284,9 @@ Contains product attributes that can be used for filtering in a `productSearch` 
 
 ```json
 {
-  "attribute": "abc123",
+  "attribute": "xyz789",
   "frontendInput": "xyz789",
-  "label": "xyz789",
+  "label": "abc123",
   "numeric": true
 }
 ```
@@ -309,7 +309,7 @@ A single FPT that can be applied to a product price.
 ```json
 {
   "amount": Money,
-  "label": "xyz789"
+  "label": "abc123"
 }
 ```
 
@@ -344,7 +344,7 @@ The `Float` scalar type represents signed double-precision fractional values as 
 #### Example
 
 ```json
-987.65
+123.45
 ```
 
 <HorizontalLine />
@@ -380,7 +380,7 @@ Contains the generated customer token.
 #### Example
 
 ```json
-{"customer_token": "xyz789"}
+{"customer_token": "abc123"}
 ```
 
 <HorizontalLine />
@@ -457,7 +457,7 @@ Contains details about the gift card account.
 {
   "balance": Money,
   "code": "xyz789",
-  "expiration_date": "abc123"
+  "expiration_date": "xyz789"
 }
 ```
 
@@ -499,10 +499,10 @@ Contains the value of a gift card, the website that generated the card, and rela
 
 ```json
 {
-  "attribute_id": 987,
-  "uid": "4",
-  "value": 123.45,
-  "website_id": 123,
+  "attribute_id": 123,
+  "uid": 4,
+  "value": 987.65,
+  "website_id": 987,
   "website_value": 987.65
 }
 ```
@@ -549,24 +549,24 @@ Contains details about a gift card that has been added to a cart.
 {
   "amount": Money,
   "available_gift_wrapping": [GiftWrapping],
-  "backorder_message": "abc123",
+  "backorder_message": "xyz789",
   "custom_attributes": [CustomAttribute],
   "customizable_options": [SelectedCustomizableOption],
   "discount": [Discount],
   "errors": [CartItemError],
   "gift_message": GiftMessage,
   "gift_wrapping": GiftWrapping,
-  "is_available": false,
-  "is_salable": true,
-  "max_qty": 123.45,
+  "is_available": true,
+  "is_salable": false,
+  "max_qty": 987.65,
   "message": "xyz789",
-  "min_qty": 123.45,
-  "not_available_message": "xyz789",
+  "min_qty": 987.65,
+  "not_available_message": "abc123",
   "note_from_buyer": [ItemNote],
   "note_from_seller": [ItemNote],
   "prices": CartItemPrices,
   "product": ProductInterface,
-  "quantity": 123.45,
+  "quantity": 987.65,
   "recipient_email": "abc123",
   "recipient_name": "abc123",
   "sender_email": "abc123",
@@ -602,10 +602,10 @@ Contains details about a gift card that has been added to a cart.
   "gift_card": GiftCardItem,
   "id": "4",
   "order_item": OrderItemInterface,
-  "product_name": "abc123",
+  "product_name": "xyz789",
   "product_sale_price": Money,
-  "product_sku": "abc123",
-  "quantity_refunded": 987.65
+  "product_sku": "xyz789",
+  "quantity_refunded": 123.45
 }
 ```
 
@@ -636,10 +636,10 @@ Contains details about a gift card that has been added to a cart.
   "gift_card": GiftCardItem,
   "id": "4",
   "order_item": OrderItemInterface,
-  "product_name": "xyz789",
+  "product_name": "abc123",
   "product_sale_price": Money,
   "product_sku": "abc123",
-  "quantity_invoiced": 987.65
+  "quantity_invoiced": 123.45
 }
 ```
 
@@ -664,10 +664,10 @@ Contains details about a gift card.
 ```json
 {
   "message": "abc123",
-  "recipient_email": "xyz789",
-  "recipient_name": "xyz789",
-  "sender_email": "abc123",
-  "sender_name": "xyz789"
+  "recipient_email": "abc123",
+  "recipient_name": "abc123",
+  "sender_email": "xyz789",
+  "sender_name": "abc123"
 }
 ```
 
@@ -697,7 +697,7 @@ Contains details about the sender, recipient, and amount of a gift card.
   "custom_giftcard_amount": Money,
   "message": "xyz789",
   "recipient_email": "xyz789",
-  "recipient_name": "abc123",
+  "recipient_name": "xyz789",
   "sender_email": "xyz789",
   "sender_name": "abc123"
 }
@@ -742,28 +742,28 @@ Contains details about the sender, recipient, and amount of a gift card.
 {
   "custom_attributes": [CustomAttribute],
   "discounts": [Discount],
-  "eligible_for_return": true,
+  "eligible_for_return": false,
   "entered_options": [OrderItemOption],
   "gift_card": GiftCardItem,
   "gift_message": GiftMessage,
   "gift_wrapping": GiftWrapping,
-  "id": 4,
+  "id": "4",
   "prices": OrderItemPrices,
   "product": ProductInterface,
   "product_name": "abc123",
   "product_sale_price": Money,
-  "product_sku": "xyz789",
-  "product_type": "abc123",
-  "product_url_key": "abc123",
+  "product_sku": "abc123",
+  "product_type": "xyz789",
+  "product_url_key": "xyz789",
   "quantity_canceled": 987.65,
   "quantity_invoiced": 987.65,
   "quantity_ordered": 987.65,
-  "quantity_refunded": 123.45,
+  "quantity_refunded": 987.65,
   "quantity_return_requested": 987.65,
   "quantity_returned": 987.65,
   "quantity_shipped": 987.65,
   "selected_options": [OrderItemOption],
-  "status": "xyz789"
+  "status": "abc123"
 }
 ```
 
@@ -834,56 +834,56 @@ Defines properties of a gift card.
 ```json
 {
   "allow_message": true,
-  "allow_open_amount": false,
+  "allow_open_amount": true,
   "canonical_url": "abc123",
   "categories": [CategoryInterface],
-  "country_of_manufacture": "xyz789",
+  "country_of_manufacture": "abc123",
   "crosssell_products": [ProductInterface],
   "custom_attributesV2": ProductCustomAttributes,
   "description": ComplexTextValue,
   "gift_card_options": [CustomizableOptionInterface],
-  "gift_message_available": false,
+  "gift_message_available": true,
   "gift_wrapping_available": false,
   "gift_wrapping_price": Money,
   "giftcard_amounts": [GiftCardAmounts],
   "giftcard_type": "VIRTUAL",
   "image": ProductImage,
-  "is_redeemable": true,
+  "is_redeemable": false,
   "is_returnable": "xyz789",
-  "lifetime": 123,
+  "lifetime": 987,
   "manufacturer": 123,
   "max_sale_qty": 123.45,
   "media_gallery": [MediaGalleryInterface],
-  "message_max_length": 987,
-  "meta_description": "xyz789",
+  "message_max_length": 123,
+  "meta_description": "abc123",
   "meta_keyword": "abc123",
-  "meta_title": "xyz789",
-  "min_sale_qty": 123.45,
-  "name": "xyz789",
+  "meta_title": "abc123",
+  "min_sale_qty": 987.65,
+  "name": "abc123",
   "new_from_date": "abc123",
-  "new_to_date": "abc123",
+  "new_to_date": "xyz789",
   "only_x_left_in_stock": 987.65,
   "open_amount_max": 987.65,
-  "open_amount_min": 123.45,
+  "open_amount_min": 987.65,
   "options": [CustomizableOptionInterface],
   "options_container": "xyz789",
   "price_range": PriceRange,
   "price_tiers": [TierPrice],
   "product_links": [ProductLinksInterface],
-  "quantity": 123.45,
+  "quantity": 987.65,
   "related_products": [ProductInterface],
   "short_description": ComplexTextValue,
-  "sku": "xyz789",
+  "sku": "abc123",
   "small_image": ProductImage,
-  "special_price": 987.65,
-  "special_to_date": "abc123",
+  "special_price": 123.45,
+  "special_to_date": "xyz789",
   "stock_status": "IN_STOCK",
-  "swatch_image": "xyz789",
+  "swatch_image": "abc123",
   "thumbnail": ProductImage,
-  "uid": "4",
+  "uid": 4,
   "upsell_products": [ProductInterface],
-  "url_key": "abc123",
-  "weight": 123.45
+  "url_key": "xyz789",
+  "weight": 987.65
 }
 ```
 
@@ -913,7 +913,7 @@ Contains details about gift cards added to a requisition list.
   "product": ProductInterface,
   "quantity": 123.45,
   "sku": "xyz789",
-  "uid": "4"
+  "uid": 4
 }
 ```
 
@@ -938,12 +938,12 @@ Contains details about gift cards added to a requisition list.
 ```json
 {
   "gift_card": GiftCardItem,
-  "id": 4,
+  "id": "4",
   "order_item": OrderItemInterface,
-  "product_name": "xyz789",
+  "product_name": "abc123",
   "product_sale_price": Money,
   "product_sku": "xyz789",
-  "quantity_shipped": 123.45
+  "quantity_shipped": 987.65
 }
 ```
 
@@ -989,13 +989,13 @@ A single gift card added to a wish list.
 
 ```json
 {
-  "added_at": "abc123",
+  "added_at": "xyz789",
   "customizable_options": [SelectedCustomizableOption],
-  "description": "abc123",
+  "description": "xyz789",
   "gift_card_options": GiftCardOptions,
   "id": "4",
   "product": ProductInterface,
-  "quantity": 123.45
+  "quantity": 987.65
 }
 ```
 
@@ -1019,7 +1019,7 @@ Contains the text of a gift message, its sender, and recipient
 {
   "from": "xyz789",
   "message": "xyz789",
-  "to": "abc123"
+  "to": "xyz789"
 }
 ```
 
@@ -1042,8 +1042,8 @@ Defines a gift message.
 ```json
 {
   "from": "xyz789",
-  "message": "abc123",
-  "to": "xyz789"
+  "message": "xyz789",
+  "to": "abc123"
 }
 ```
 
@@ -1104,11 +1104,11 @@ Contains details about a gift registry.
 
 ```json
 {
-  "created_at": "abc123",
+  "created_at": "xyz789",
   "dynamic_attributes": [GiftRegistryDynamicAttribute],
   "event_name": "xyz789",
   "items": [GiftRegistryItemInterface],
-  "message": "xyz789",
+  "message": "abc123",
   "owner_name": "abc123",
   "privacy_settings": "PRIVATE",
   "registrants": [GiftRegistryRegistrant],
@@ -1136,10 +1136,10 @@ Contains details about a gift registry.
 
 ```json
 {
-  "code": 4,
+  "code": "4",
   "group": "EVENT_INFORMATION",
-  "label": "abc123",
-  "value": "abc123"
+  "label": "xyz789",
+  "value": "xyz789"
 }
 ```
 
@@ -1182,10 +1182,7 @@ Defines a dynamic attribute.
 #### Example
 
 ```json
-{
-  "code": "4",
-  "value": "abc123"
-}
+{"code": 4, "value": "xyz789"}
 ```
 
 <HorizontalLine />
@@ -1212,7 +1209,7 @@ Defines a dynamic attribute.
 ```json
 {
   "code": 4,
-  "label": "abc123",
+  "label": "xyz789",
   "value": "xyz789"
 }
 ```
@@ -1236,12 +1233,12 @@ Defines a dynamic attribute.
 
 ```json
 {
-  "attribute_group": "xyz789",
-  "code": 4,
-  "input_type": "xyz789",
+  "attribute_group": "abc123",
+  "code": "4",
+  "input_type": "abc123",
   "is_required": true,
-  "label": "xyz789",
-  "sort_order": 123
+  "label": "abc123",
+  "sort_order": 987
 }
 ```
 
@@ -1270,12 +1267,12 @@ Defines a dynamic attribute.
 
 ```json
 {
-  "attribute_group": "abc123",
-  "code": "4",
-  "input_type": "abc123",
+  "attribute_group": "xyz789",
+  "code": 4,
+  "input_type": "xyz789",
   "is_required": true,
   "label": "xyz789",
-  "sort_order": 987
+  "sort_order": 123
 }
 ```
 
@@ -1299,11 +1296,11 @@ Defines a dynamic attribute.
 ```json
 {
   "created_at": "abc123",
-  "note": "xyz789",
+  "note": "abc123",
   "product": ProductInterface,
   "quantity": 123.45,
-  "quantity_fulfilled": 987.65,
-  "uid": "4"
+  "quantity_fulfilled": 123.45,
+  "uid": 4
 }
 ```
 
@@ -1333,7 +1330,7 @@ Defines a dynamic attribute.
 ```json
 {
   "created_at": "abc123",
-  "note": "abc123",
+  "note": "xyz789",
   "product": ProductInterface,
   "quantity": 123.45,
   "quantity_fulfilled": 123.45,
@@ -1390,10 +1387,10 @@ Contains details about an error that occurred when processing a gift registry it
 ```json
 {
   "code": "OUT_OF_STOCK",
-  "gift_registry_item_uid": "4",
-  "gift_registry_uid": 4,
+  "gift_registry_item_uid": 4,
+  "gift_registry_uid": "4",
   "message": "abc123",
-  "product_uid": 4
+  "product_uid": "4"
 }
 ```
 
@@ -1486,7 +1483,7 @@ Contains details about a registrant.
   "email": "xyz789",
   "firstname": "xyz789",
   "lastname": "xyz789",
-  "uid": 4
+  "uid": "4"
 }
 ```
 
@@ -1506,9 +1503,9 @@ Contains details about a registrant.
 
 ```json
 {
-  "code": "4",
+  "code": 4,
   "label": "abc123",
-  "value": "xyz789"
+  "value": "abc123"
 }
 ```
 
@@ -1536,7 +1533,7 @@ Contains the results of a gift registry search.
   "event_date": "xyz789",
   "event_title": "abc123",
   "gift_registry_uid": 4,
-  "location": "xyz789",
+  "location": "abc123",
   "name": "xyz789",
   "type": "abc123"
 }
@@ -1561,7 +1558,7 @@ Defines a shipping address for a gift registry. Specify either `address_data` or
 ```json
 {
   "address_data": CustomerAddressInput,
-  "address_id": "4",
+  "address_id": 4,
   "customer_address_uid": 4
 }
 ```
@@ -1606,8 +1603,8 @@ Contains details about a gift registry type.
   "dynamic_attributes_metadata": [
     GiftRegistryDynamicAttributeMetadataInterface
   ],
-  "label": "abc123",
-  "uid": 4
+  "label": "xyz789",
+  "uid": "4"
 }
 ```
 
@@ -1630,10 +1627,10 @@ Contains details about the selected or available gift wrapping options.
 
 ```json
 {
-  "design": "abc123",
+  "design": "xyz789",
   "image": GiftWrappingImage,
   "price": Money,
-  "uid": 4
+  "uid": "4"
 }
 ```
 
@@ -1654,7 +1651,7 @@ Points to an image associated with a gift wrapping option.
 
 ```json
 {
-  "label": "xyz789",
+  "label": "abc123",
   "url": "abc123"
 }
 ```
@@ -1677,7 +1674,7 @@ Points to an image associated with a gift wrapping option.
 {
   "color": "abc123",
   "height": 987,
-  "type": "abc123"
+  "type": "xyz789"
 }
 ```
 
@@ -1691,6 +1688,7 @@ Points to an image associated with a gift wrapping option.
 |------------|-------------|
 | `button_styles` - [`GooglePayButtonStyles`](#googlepaybuttonstyles) | The styles for the GooglePay Button configuration |
 | `code` - [`String`](#string) | The payment method code as defined in the payment gateway |
+| `google_pay_mode` - [`GooglePayMode`](#googlepaymode) | Google Pay mode |
 | `is_visible` - [`Boolean`](#boolean) | Indicates whether the payment method is displayed |
 | `payment_intent` - [`String`](#string) | Defines the payment intent (Authorize or Capture |
 | `payment_source` - [`String`](#string) | The payment source for the payment method |
@@ -1705,13 +1703,14 @@ Points to an image associated with a gift wrapping option.
 {
   "button_styles": GooglePayButtonStyles,
   "code": "abc123",
+  "google_pay_mode": "TEST",
   "is_visible": false,
   "payment_intent": "abc123",
-  "payment_source": "abc123",
+  "payment_source": "xyz789",
   "sdk_params": [SDKParams],
   "sort_order": "xyz789",
   "three_ds_mode": "OFF",
-  "title": "abc123"
+  "title": "xyz789"
 }
 ```
 
@@ -1734,9 +1733,28 @@ Google Pay inputs
 ```json
 {
   "payment_source": "xyz789",
-  "payments_order_id": "xyz789",
+  "payments_order_id": "abc123",
   "paypal_order_id": "abc123"
 }
+```
+
+<HorizontalLine />
+
+### GooglePayMode
+
+Google Pay mode.
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `TEST` |  |
+| `PRODUCTION` |  |
+
+#### Example
+
+```json
+""TEST""
 ```
 
 <HorizontalLine />
@@ -1807,17 +1825,17 @@ Defines a grouped product, which consists of simple standalone products that are
   "image": ProductImage,
   "is_returnable": "abc123",
   "items": [GroupedProductItem],
-  "manufacturer": 987,
-  "max_sale_qty": 987.65,
+  "manufacturer": 123,
+  "max_sale_qty": 123.45,
   "media_gallery": [MediaGalleryInterface],
-  "meta_description": "xyz789",
-  "meta_keyword": "abc123",
-  "meta_title": "xyz789",
+  "meta_description": "abc123",
+  "meta_keyword": "xyz789",
+  "meta_title": "abc123",
   "min_sale_qty": 123.45,
   "name": "abc123",
-  "new_from_date": "xyz789",
-  "new_to_date": "xyz789",
-  "only_x_left_in_stock": 987.65,
+  "new_from_date": "abc123",
+  "new_to_date": "abc123",
+  "only_x_left_in_stock": 123.45,
   "options_container": "xyz789",
   "price_range": PriceRange,
   "price_tiers": [TierPrice],
@@ -1825,17 +1843,17 @@ Defines a grouped product, which consists of simple standalone products that are
   "quantity": 987.65,
   "related_products": [ProductInterface],
   "short_description": ComplexTextValue,
-  "sku": "abc123",
+  "sku": "xyz789",
   "small_image": ProductImage,
-  "special_price": 123.45,
-  "special_to_date": "xyz789",
+  "special_price": 987.65,
+  "special_to_date": "abc123",
   "stock_status": "IN_STOCK",
-  "swatch_image": "xyz789",
+  "swatch_image": "abc123",
   "thumbnail": ProductImage,
-  "uid": "4",
+  "uid": 4,
   "upsell_products": [ProductInterface],
-  "url_key": "abc123",
-  "weight": 123.45
+  "url_key": "xyz789",
+  "weight": 987.65
 }
 ```
 
@@ -1857,9 +1875,9 @@ Contains information about an individual grouped product item.
 
 ```json
 {
-  "position": 123,
+  "position": 987,
   "product": ProductInterface,
-  "qty": 123.45
+  "qty": 987.65
 }
 ```
 
@@ -1886,7 +1904,7 @@ A grouped product wish list item.
 {
   "added_at": "xyz789",
   "customizable_options": [SelectedCustomizableOption],
-  "description": "xyz789",
+  "description": "abc123",
   "id": "4",
   "product": ProductInterface,
   "quantity": 987.65
@@ -1910,8 +1928,8 @@ Input to retrieve a guest order based on token.
 
 ```json
 {
-  "reason": "abc123",
-  "token": "abc123"
+  "reason": "xyz789",
+  "token": "xyz789"
 }
 ```
 
@@ -1933,9 +1951,9 @@ Input to retrieve an order based on details.
 
 ```json
 {
-  "email": "abc123",
-  "lastname": "abc123",
-  "number": "abc123"
+  "email": "xyz789",
+  "lastname": "xyz789",
+  "number": "xyz789"
 }
 ```
 
@@ -1957,9 +1975,9 @@ An object that provides highlighted text for matched words
 
 ```json
 {
-  "attribute": "abc123",
+  "attribute": "xyz789",
   "matched_words": ["xyz789"],
-  "value": "abc123"
+  "value": "xyz789"
 }
 ```
 
@@ -1984,10 +2002,10 @@ Item note data that is added to the negotiable quote history object.
 
 ```json
 {
-  "created_at": "xyz789",
+  "created_at": "abc123",
   "creator_name": "xyz789",
   "creator_type": "xyz789",
-  "item_id": 123,
+  "item_id": 987,
   "note": "abc123",
   "product_name": "xyz789"
 }
@@ -2017,11 +2035,11 @@ Item note data that is added to the negotiable quote history object.
 
 ```json
 {
-  "cc_vault_code": "abc123",
-  "code": "xyz789",
+  "cc_vault_code": "xyz789",
+  "code": "abc123",
   "is_vault_enabled": false,
   "is_visible": true,
-  "payment_intent": "abc123",
+  "payment_intent": "xyz789",
   "payment_source": "xyz789",
   "requires_card_details": true,
   "sdk_params": [SDKParams],
@@ -2055,15 +2073,15 @@ Hosted Fields payment inputs
 
 ```json
 {
-  "cardBin": "xyz789",
-  "cardExpiryMonth": "abc123",
+  "cardBin": "abc123",
+  "cardExpiryMonth": "xyz789",
   "cardExpiryYear": "abc123",
   "cardLast4": "xyz789",
-  "holderName": "abc123",
-  "is_active_payment_token_enabler": true,
+  "holderName": "xyz789",
+  "is_active_payment_token_enabler": false,
   "payment_source": "xyz789",
   "payments_order_id": "abc123",
-  "paypal_order_id": "xyz789"
+  "paypal_order_id": "abc123"
 }
 ```
 
@@ -2192,7 +2210,7 @@ Contains an error message when an internal error occurred.
 #### Example
 
 ```json
-{"message": "abc123"}
+{"message": "xyz789"}
 ```
 
 <HorizontalLine />
@@ -2218,9 +2236,9 @@ Contains invoice details.
 {
   "comments": [SalesCommentItem],
   "custom_attributes": [CustomAttribute],
-  "id": 4,
+  "id": "4",
   "items": [InvoiceItemInterface],
-  "number": "xyz789",
+  "number": "abc123",
   "total": InvoiceTotal
 }
 ```
@@ -2243,7 +2261,7 @@ Defines an invoice custom attributes.
 ```json
 {
   "custom_attributes": [CustomAttributeInput],
-  "invoice_id": "abc123"
+  "invoice_id": "xyz789"
 }
 ```
 
@@ -2270,12 +2288,12 @@ Defines an invoice custom attributes.
 {
   "custom_attributes": [CustomAttribute],
   "discounts": [Discount],
-  "id": 4,
+  "id": "4",
   "order_item": OrderItemInterface,
-  "product_name": "abc123",
+  "product_name": "xyz789",
   "product_sale_price": Money,
   "product_sku": "xyz789",
-  "quantity_invoiced": 123.45
+  "quantity_invoiced": 987.65
 }
 ```
 
@@ -2298,8 +2316,8 @@ Defines an invoice item custom attributes.
 ```json
 {
   "custom_attributes": [CustomAttributeInput],
-  "invoice_id": "xyz789",
-  "invoice_item_id": "xyz789"
+  "invoice_id": "abc123",
+  "invoice_item_id": "abc123"
 }
 ```
 
@@ -2337,11 +2355,11 @@ Contains detailes about invoiced items.
 {
   "custom_attributes": [CustomAttribute],
   "discounts": [Discount],
-  "id": "4",
+  "id": 4,
   "order_item": OrderItemInterface,
   "product_name": "abc123",
   "product_sale_price": Money,
-  "product_sku": "xyz789",
+  "product_sku": "abc123",
   "quantity_invoiced": 123.45
 }
 ```
@@ -2467,7 +2485,7 @@ Contains the response of a company user email validation query.
 #### Example
 
 ```json
-{"is_email_available": false}
+{"is_email_available": true}
 ```
 
 <HorizontalLine />
@@ -2485,7 +2503,7 @@ Contains the result of the `isEmailAvailable` query.
 #### Example
 
 ```json
-{"is_email_available": true}
+{"is_email_available": false}
 ```
 
 <HorizontalLine />
@@ -2536,7 +2554,7 @@ Contains the result of the `isEmailAvailable` query.
 #### Example
 
 ```json
-{"isSubscribed": true, "message": "abc123"}
+{"isSubscribed": true, "message": "xyz789"}
 ```
 
 <HorizontalLine />
@@ -2562,9 +2580,9 @@ The note object for quote line item.
 ```json
 {
   "created_at": "abc123",
-  "creator_id": 987,
-  "creator_name": "abc123",
-  "creator_type": 987,
+  "creator_id": 123,
+  "creator_name": "xyz789",
+  "creator_type": 123,
   "negotiable_quote_item_uid": "4",
   "note": "xyz789",
   "note_uid": "4"
@@ -2589,8 +2607,8 @@ A list of options of the selected bundle product.
 
 ```json
 {
-  "label": "xyz789",
-  "uid": "4",
+  "label": "abc123",
+  "uid": 4,
   "values": [ItemSelectedBundleOptionValue]
 }
 ```
@@ -2618,8 +2636,8 @@ A list of values for the selected bundle product.
   "price": Money,
   "product_name": "abc123",
   "product_sku": "xyz789",
-  "quantity": 123.45,
-  "uid": 4
+  "quantity": 987.65,
+  "uid": "4"
 }
 ```
 
@@ -2650,7 +2668,7 @@ A JSON scalar
 
 ```json
 {
-  "key": "abc123",
+  "key": "xyz789",
   "media_resource_type": "NEGOTIABLE_QUOTE_ATTACHMENT"
 }
 ```
@@ -2673,7 +2691,7 @@ A JSON scalar
 {
   "key": "abc123",
   "message": "abc123",
-  "success": true
+  "success": false
 }
 ```
 
@@ -2692,7 +2710,7 @@ A JSON scalar
 
 ```json
 {
-  "key": "abc123",
+  "key": "xyz789",
   "media_resource_type": "NEGOTIABLE_QUOTE_ATTACHMENT"
 }
 ```
@@ -2713,7 +2731,7 @@ A JSON scalar
 
 ```json
 {
-  "expires_at": "abc123",
+  "expires_at": "xyz789",
   "key": "xyz789",
   "upload_url": "xyz789"
 }

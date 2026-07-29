@@ -13,7 +13,7 @@ Specifies the quote template id to accept quote template.
 #### Example
 
 ```json
-{"template_id": 4}
+{"template_id": "4"}
 ```
 
 <HorizontalLine />
@@ -96,7 +96,7 @@ Defines a new registrant.
   ],
   "email": "xyz789",
   "firstname": "xyz789",
-  "lastname": "xyz789"
+  "lastname": "abc123"
 }
 ```
 
@@ -156,10 +156,7 @@ Contains products to add to an existing compare list.
 #### Example
 
 ```json
-{
-  "products": ["4"],
-  "uid": "4"
-}
+{"products": ["4"], "uid": 4}
 ```
 
 <HorizontalLine />
@@ -282,9 +279,9 @@ Defines the purchase order and cart to act on.
 
 ```json
 {
-  "cart_id": "abc123",
+  "cart_id": "xyz789",
   "purchase_order_uid": "4",
-  "replace_existing_cart_items": false
+  "replace_existing_cart_items": true
 }
 ```
 
@@ -372,7 +369,7 @@ Defines a return comment.
 
 ```json
 {
-  "comment_text": "abc123",
+  "comment_text": "xyz789",
   "return_uid": "4"
 }
 ```
@@ -413,8 +410,8 @@ Defines tracking information to be added to the return.
 
 ```json
 {
-  "carrier_uid": "4",
-  "return_uid": "4",
+  "carrier_uid": 4,
+  "return_uid": 4,
   "tracking_number": "abc123"
 }
 ```
@@ -462,7 +459,7 @@ Contains the resultant wish list and any error information.
   "add_wishlist_items_to_cart_user_errors": [
     WishlistCartUserInputError
   ],
-  "status": false,
+  "status": true,
   "wishlist": Wishlist
 }
 ```
@@ -487,7 +484,7 @@ A single admin assistance action performed on behalf of the customer.
 {
   "action": "abc123",
   "date": "abc123",
-  "details": "xyz789"
+  "details": "abc123"
 }
 ```
 
@@ -511,7 +508,7 @@ Paginated admin assistance actions for the customer.
 {
   "items": [AdminAssistanceAction],
   "page_info": SearchResultPageInfo,
-  "total_count": 123
+  "total_count": 987
 }
 ```
 
@@ -536,7 +533,7 @@ A bucket that contains information for each filterable option
 {
   "attribute": "abc123",
   "buckets": [Bucket],
-  "title": "abc123",
+  "title": "xyz789",
   "type": "INTELLIGENT"
 }
 ```
@@ -583,13 +580,13 @@ Identifies the data type of the aggregation
 ```json
 {
   "button_styles": ButtonStyles,
-  "code": "abc123",
-  "is_visible": true,
-  "payment_intent": "xyz789",
-  "payment_source": "xyz789",
+  "code": "xyz789",
+  "is_visible": false,
+  "payment_intent": "abc123",
+  "payment_source": "abc123",
   "sdk_params": [SDKParams],
-  "sort_order": "xyz789",
-  "title": "abc123"
+  "sort_order": "abc123",
+  "title": "xyz789"
 }
 ```
 
@@ -611,9 +608,9 @@ Apple Pay inputs
 
 ```json
 {
-  "payment_source": "xyz789",
-  "payments_order_id": "abc123",
-  "paypal_order_id": "abc123"
+  "payment_source": "abc123",
+  "payments_order_id": "xyz789",
+  "paypal_order_id": "xyz789"
 }
 ```
 
@@ -829,8 +826,8 @@ Defines the input required to run the `applyGiftCardToCart` mutation.
 
 ```json
 {
-  "cart_id": "abc123",
-  "gift_card_code": "xyz789"
+  "cart_id": "xyz789",
+  "gift_card_code": "abc123"
 }
 ```
 
@@ -870,7 +867,7 @@ Contains applied gift cards with gift card code and amount.
 ```json
 {
   "applied_balance": Money,
-  "code": "abc123"
+  "code": "xyz789"
 }
 ```
 
@@ -971,7 +968,7 @@ Contains information about an asset image.
   "disabled": true,
   "label": "abc123",
   "position": 123,
-  "url": "xyz789"
+  "url": "abc123"
 }
 ```
 
@@ -1019,10 +1016,7 @@ Defines the input schema for assigning a child company to a parent company.
 #### Example
 
 ```json
-{
-  "child_company_id": 4,
-  "parent_company_id": "4"
-}
+{"child_company_id": 4, "parent_company_id": 4}
 ```
 
 <HorizontalLine />
@@ -1059,7 +1053,7 @@ Contains the results of the request to assign a compare list.
 #### Example
 
 ```json
-{"compare_list": CompareList, "result": false}
+{"compare_list": CompareList, "result": true}
 ```
 
 <HorizontalLine />
@@ -1101,10 +1095,10 @@ List of all entity types. Populated by the modules introducing EAV entities.
 
 ```json
 {
-  "attribute_type": "abc123",
-  "code": 4,
-  "url": "xyz789",
-  "value": "abc123"
+  "attribute_type": "xyz789",
+  "code": "4",
+  "url": "abc123",
+  "value": "xyz789"
 }
 ```
 
@@ -1135,13 +1129,13 @@ An input object that specifies the filters used for attributes.
 
 ```json
 {
-  "is_comparable": false,
-  "is_filterable": true,
-  "is_filterable_in_search": false,
+  "is_comparable": true,
+  "is_filterable": false,
+  "is_filterable_in_search": true,
   "is_html_allowed_on_front": false,
-  "is_searchable": false,
-  "is_used_for_customer_segment": true,
-  "is_used_for_price_rules": false,
+  "is_searchable": true,
+  "is_used_for_customer_segment": false,
+  "is_used_for_price_rules": true,
   "is_used_for_promo_rules": false,
   "is_visible_in_advanced_search": true,
   "is_visible_on_front": false,
@@ -1200,7 +1194,7 @@ EAV attribute frontend input types.
 
 ```json
 {
-  "attribute_type": "abc123",
+  "attribute_type": "xyz789",
   "code": 4,
   "url": "xyz789",
   "value": "xyz789"
@@ -1224,7 +1218,7 @@ Defines the attribute characteristics to search for the `attribute_code` and `en
 
 ```json
 {
-  "attribute_code": "xyz789",
+  "attribute_code": "abc123",
   "entity_type": "xyz789"
 }
 ```
@@ -1244,7 +1238,7 @@ Specifies selected option for a select or multiselect attribute value.
 #### Example
 
 ```json
-{"value": "abc123"}
+{"value": "xyz789"}
 ```
 
 <HorizontalLine />
@@ -1276,9 +1270,9 @@ Base EAV implementation of CustomAttributeMetadataInterface.
   "entity_type": "CATALOG_PRODUCT",
   "frontend_class": "xyz789",
   "frontend_input": "BOOLEAN",
-  "is_required": false,
-  "is_unique": false,
-  "label": "abc123",
+  "is_required": true,
+  "is_unique": true,
+  "label": "xyz789",
   "options": [CustomAttributeOptionInterface]
 }
 ```
@@ -1300,7 +1294,7 @@ Attribute metadata retrieval error.
 
 ```json
 {
-  "message": "xyz789",
+  "message": "abc123",
   "type": "ENTITY_NOT_FOUND"
 }
 ```
@@ -1366,9 +1360,9 @@ Base EAV implementation of CustomAttributeOptionInterface.
 
 ```json
 {
-  "is_default": false,
-  "label": "abc123",
-  "value": "xyz789"
+  "is_default": true,
+  "label": "xyz789",
+  "value": "abc123"
 }
 ```
 
@@ -1388,7 +1382,7 @@ Base EAV implementation of CustomAttributeOptionInterface.
 ```json
 {
   "label": "abc123",
-  "value": "abc123"
+  "value": "xyz789"
 }
 ```
 
@@ -1413,7 +1407,7 @@ Base EAV implementation of CustomAttributeOptionInterface.
 
 ```json
 {
-  "label": "abc123",
+  "label": "xyz789",
   "value": "abc123"
 }
 ```
@@ -1456,9 +1450,9 @@ Base EAV implementation of CustomAttributeOptionInterface.
 
 ```json
 {
-  "attribute_type": "xyz789",
-  "code": 4,
-  "value": "abc123"
+  "attribute_type": "abc123",
+  "code": "4",
+  "value": "xyz789"
 }
 ```
 
@@ -1510,7 +1504,10 @@ Specifies the value for attribute.
 #### Example
 
 ```json
-{"attribute_type": "xyz789", "code": 4}
+{
+  "attribute_type": "xyz789",
+  "code": "4"
+}
 ```
 
 <HorizontalLine />
@@ -1559,6 +1556,22 @@ Metadata of EAV attributes.
 
 <HorizontalLine />
 
+### AuthenticationResult
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `liability_shift` - [`LiabilityShift`](#liabilityshift) | Liability Shift |
+
+#### Example
+
+```json
+{"liability_shift": "NO"}
+```
+
+<HorizontalLine />
+
 ### AvailableCurrency
 
 Defines the code and symbol of a currency that can be used for purchase orders.
@@ -1573,7 +1586,7 @@ Defines the code and symbol of a currency that can be used for purchase orders.
 #### Example
 
 ```json
-{"code": "AFN", "symbol": "abc123"}
+{"code": "AFN", "symbol": "xyz789"}
 ```
 
 <HorizontalLine />
@@ -1595,8 +1608,8 @@ Describes a payment method that the shopper can use to pay for the order.
 
 ```json
 {
-  "code": "abc123",
-  "is_deferred": false,
+  "code": "xyz789",
+  "is_deferred": true,
   "oope_payment_method_config": OopePaymentMethodConfig,
   "title": "abc123"
 }
@@ -1629,9 +1642,9 @@ Contains details about the possible shipping methods and carriers.
 {
   "additional_data": [ShippingAdditionalData],
   "amount": Money,
-  "available": true,
-  "carrier_code": "abc123",
-  "carrier_title": "xyz789",
+  "available": false,
+  "carrier_code": "xyz789",
+  "carrier_title": "abc123",
   "error_message": "xyz789",
   "method_code": "xyz789",
   "method_title": "xyz789",
@@ -1679,10 +1692,10 @@ Defines the billing address.
 ```json
 {
   "address": CartAddressInput,
-  "customer_address_id": 123,
+  "customer_address_id": 987,
   "customer_address_uid": "4",
   "same_as_shipping": true,
-  "use_for_shipping": true
+  "use_for_shipping": false
 }
 ```
 
@@ -1707,12 +1720,12 @@ The billing address information
 
 ```json
 {
-  "address_line_1": "xyz789",
+  "address_line_1": "abc123",
   "address_line_2": "xyz789",
   "city": "abc123",
   "country_code": "xyz789",
   "postal_code": "xyz789",
-  "region": "abc123"
+  "region": "xyz789"
 }
 ```
 
@@ -1749,8 +1762,8 @@ Contains details about the billing address.
 
 ```json
 {
-  "city": "abc123",
-  "company": "xyz789",
+  "city": "xyz789",
+  "company": "abc123",
   "country": CartAddressCountry,
   "custom_attributes": [AttributeValueInterface],
   "customer_address_uid": 4,
@@ -1762,9 +1775,9 @@ Contains details about the billing address.
   "postcode": "xyz789",
   "prefix": "abc123",
   "region": CartAddressRegion,
-  "street": ["abc123"],
-  "suffix": "abc123",
-  "telephone": "abc123",
+  "street": ["xyz789"],
+  "suffix": "xyz789",
+  "telephone": "xyz789",
   "uid": "4",
   "vat_id": "abc123"
 }
@@ -1775,12 +1788,6 @@ Contains details about the billing address.
 ### Boolean
 
 The `Boolean` scalar type represents `true` or `false`.
-
-#### Example
-
-```json
-true
-```
 
 <HorizontalLine />
 
@@ -1805,7 +1812,7 @@ Contains details about an individual category that comprises a breadcrumb.
   "category_level": 123,
   "category_name": "xyz789",
   "category_uid": "4",
-  "category_url_key": "abc123",
+  "category_url_key": "xyz789",
   "category_url_path": "abc123"
 }
 ```
@@ -1835,7 +1842,7 @@ An interface for bucket contents
 #### Example
 
 ```json
-{"title": "xyz789"}
+{"title": "abc123"}
 ```
 
 <HorizontalLine />
@@ -1874,7 +1881,7 @@ An implementation for bundle product cart items.
 ```json
 {
   "available_gift_wrapping": [GiftWrapping],
-  "backorder_message": "abc123",
+  "backorder_message": "xyz789",
   "bundle_options": [SelectedBundleOption],
   "custom_attributes": [CustomAttribute],
   "customizable_options": [SelectedCustomizableOption],
@@ -1885,13 +1892,13 @@ An implementation for bundle product cart items.
   "is_available": false,
   "is_salable": true,
   "max_qty": 987.65,
-  "min_qty": 987.65,
+  "min_qty": 123.45,
   "not_available_message": "abc123",
   "note_from_buyer": [ItemNote],
   "note_from_seller": [ItemNote],
   "prices": CartItemPrices,
   "product": ProductInterface,
-  "quantity": 987.65,
+  "quantity": 123.45,
   "uid": 4
 }
 ```
@@ -1925,10 +1932,10 @@ Defines bundle product options for `CreditMemoItemInterface`.
   "discounts": [Discount],
   "id": 4,
   "order_item": OrderItemInterface,
-  "product_name": "abc123",
+  "product_name": "xyz789",
   "product_sale_price": Money,
   "product_sku": "xyz789",
-  "quantity_refunded": 987.65
+  "quantity_refunded": 123.45
 }
 ```
 
@@ -1961,9 +1968,9 @@ Defines bundle product options for `InvoiceItemInterface`.
   "discounts": [Discount],
   "id": "4",
   "order_item": OrderItemInterface,
-  "product_name": "abc123",
+  "product_name": "xyz789",
   "product_sale_price": Money,
-  "product_sku": "abc123",
+  "product_sku": "xyz789",
   "quantity_invoiced": 987.65
 }
 ```
@@ -1992,12 +1999,12 @@ Defines an individual item within a bundle product.
 ```json
 {
   "options": [BundleItemOption],
-  "position": 123,
+  "position": 987,
   "price_range": PriceRange,
-  "required": false,
-  "sku": "xyz789",
-  "title": "abc123",
-  "type": "abc123",
+  "required": true,
+  "sku": "abc123",
+  "title": "xyz789",
+  "type": "xyz789",
   "uid": 4
 }
 ```
@@ -2026,15 +2033,15 @@ Defines the characteristics that comprise a specific bundle item and its options
 
 ```json
 {
-  "can_change_quantity": false,
-  "is_default": true,
+  "can_change_quantity": true,
+  "is_default": false,
   "label": "abc123",
-  "position": 987,
+  "position": 123,
   "price": 123.45,
   "price_type": "FIXED",
   "product": ProductInterface,
   "quantity": 987.65,
-  "uid": 4
+  "uid": "4"
 }
 ```
 
@@ -2092,17 +2099,17 @@ Defines bundle product options for `OrderItemInterface`.
   "product_name": "abc123",
   "product_sale_price": Money,
   "product_sku": "abc123",
-  "product_type": "abc123",
+  "product_type": "xyz789",
   "product_url_key": "abc123",
-  "quantity_canceled": 987.65,
+  "quantity_canceled": 123.45,
   "quantity_invoiced": 123.45,
-  "quantity_ordered": 123.45,
+  "quantity_ordered": 987.65,
   "quantity_refunded": 987.65,
-  "quantity_return_requested": 987.65,
+  "quantity_return_requested": 123.45,
   "quantity_returned": 123.45,
-  "quantity_shipped": 123.45,
+  "quantity_shipped": 987.65,
   "selected_options": [OrderItemOption],
-  "status": "xyz789"
+  "status": "abc123"
 }
 ```
 
@@ -2169,40 +2176,40 @@ Defines basic features of a bundle product and contains multiple BundleItems.
 
 ```json
 {
-  "canonical_url": "abc123",
+  "canonical_url": "xyz789",
   "categories": [CategoryInterface],
-  "country_of_manufacture": "xyz789",
+  "country_of_manufacture": "abc123",
   "crosssell_products": [ProductInterface],
   "custom_attributesV2": ProductCustomAttributes,
   "description": ComplexTextValue,
   "dynamic_price": false,
   "dynamic_sku": false,
-  "dynamic_weight": false,
-  "gift_message_available": false,
-  "gift_wrapping_available": true,
+  "dynamic_weight": true,
+  "gift_message_available": true,
+  "gift_wrapping_available": false,
   "gift_wrapping_price": Money,
   "image": ProductImage,
-  "is_returnable": "xyz789",
+  "is_returnable": "abc123",
   "items": [BundleItem],
   "manufacturer": 987,
-  "max_sale_qty": 123.45,
+  "max_sale_qty": 987.65,
   "media_gallery": [MediaGalleryInterface],
-  "meta_description": "abc123",
-  "meta_keyword": "xyz789",
+  "meta_description": "xyz789",
+  "meta_keyword": "abc123",
   "meta_title": "abc123",
-  "min_sale_qty": 123.45,
+  "min_sale_qty": 987.65,
   "name": "xyz789",
   "new_from_date": "xyz789",
-  "new_to_date": "xyz789",
-  "only_x_left_in_stock": 123.45,
+  "new_to_date": "abc123",
+  "only_x_left_in_stock": 987.65,
   "options": [CustomizableOptionInterface],
-  "options_container": "xyz789",
+  "options_container": "abc123",
   "price_details": PriceDetails,
   "price_range": PriceRange,
   "price_tiers": [TierPrice],
   "price_view": "PRICE_RANGE",
   "product_links": [ProductLinksInterface],
-  "quantity": 123.45,
+  "quantity": 987.65,
   "related_products": [ProductInterface],
   "ship_bundle_items": "TOGETHER",
   "short_description": ComplexTextValue,
@@ -2211,12 +2218,12 @@ Defines basic features of a bundle product and contains multiple BundleItems.
   "special_price": 123.45,
   "special_to_date": "abc123",
   "stock_status": "IN_STOCK",
-  "swatch_image": "xyz789",
+  "swatch_image": "abc123",
   "thumbnail": ProductImage,
-  "uid": "4",
+  "uid": 4,
   "upsell_products": [ProductInterface],
-  "url_key": "xyz789",
-  "weight": 123.45
+  "url_key": "abc123",
+  "weight": 987.65
 }
 ```
 
@@ -2244,7 +2251,7 @@ Contains details about bundle products added to a requisition list.
   "bundle_options": [SelectedBundleOption],
   "customizable_options": [SelectedCustomizableOption],
   "product": ProductInterface,
-  "quantity": 123.45,
+  "quantity": 987.65,
   "sku": "xyz789",
   "uid": "4"
 }
@@ -2273,9 +2280,9 @@ Defines bundle product options for `ShipmentItemInterface`.
 ```json
 {
   "bundle_options": [ItemSelectedBundleOption],
-  "id": "4",
+  "id": 4,
   "order_item": OrderItemInterface,
-  "product_name": "xyz789",
+  "product_name": "abc123",
   "product_sale_price": Money,
   "product_sku": "xyz789",
   "quantity_shipped": 987.65
@@ -2308,9 +2315,9 @@ Defines bundle product options for `WishlistItemInterface`.
   "bundle_options": [SelectedBundleOption],
   "customizable_options": [SelectedCustomizableOption],
   "description": "xyz789",
-  "id": 4,
+  "id": "4",
   "product": ProductInterface,
-  "quantity": 987.65
+  "quantity": 123.45
 }
 ```
 
@@ -2334,11 +2341,11 @@ Defines bundle product options for `WishlistItemInterface`.
 
 ```json
 {
-  "color": "abc123",
-  "height": 987,
+  "color": "xyz789",
+  "height": 123,
   "label": "xyz789",
-  "layout": "abc123",
-  "shape": "abc123",
+  "layout": "xyz789",
+  "shape": "xyz789",
   "tagline": false,
   "use_default_height": false
 }
