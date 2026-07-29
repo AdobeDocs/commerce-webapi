@@ -155,6 +155,7 @@
         - [Custom email](/rest/saas-integrations/custom-email/index.md)
         - [Gift card accounts](/rest/saas-integrations/gift-card-accounts/index.md)
         - [Login as Customer](/rest/saas-integrations/login-as-customer/index.md)
+        - [Order management](/rest/saas-integrations/order-management/index.md)
         - [S3 uploads](/rest/saas-integrations/s3-uploads/index.md)
     - [Introduction](/graphql/index.md)
     - [Usage](/graphql/usage/index.md)
