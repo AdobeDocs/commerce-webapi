@@ -929,7 +929,7 @@ The `QueryContextInput` object can contain the following fields.
 
 | Field | Data Type | Description |
 | --- | --- | --- |
-| `customerGroup` | String | The customer group code. For storefront clients, this value is available in the `dataservices_customer_group` cookie. |
+| `customerGroup` | String! | The customer group code. For storefront clients, this value is available in the `dataservices_customer_group` cookie. |
 | `userViewHistory` | [ViewHistoryInput!](#viewhistoryinput-data-type) | List of SKUs with timestamps. Used in "Recommended for you" ranking. |
 
 ### ViewHistoryInput data type
