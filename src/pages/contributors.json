@@ -1,7 +1,7 @@
 {
-  "total": 614,
+  "total": 622,
   "offset": 0,
-  "limit": 614,
+  "limit": 622,
   "data": [
     {
       "page": "/",
@@ -18,10 +18,11 @@
     {
       "page": "/config",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/108055538?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "7/27/2026"
+      "lastUpdated": "7/29/2026"
     },
     {
       "page": "/get-started/",
@@ -785,13 +786,13 @@
     {
       "page": "/graphql/schema/b2b/company/mutations/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/11652541?v=4",
+        "https://avatars.githubusercontent.com/u/108055538?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/108055538?v=4",
-        "https://avatars.githubusercontent.com/u/13662379?v=4",
-        "https://avatars.githubusercontent.com/u/11652541?v=4"
+        "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/1/2026"
+      "lastUpdated": "7/31/2026"
     },
     {
       "page": "/graphql/schema/b2b/company/mutations/assign-child-company",
@@ -812,6 +813,14 @@
         "https://avatars.githubusercontent.com/u/1667889?v=4"
       ],
       "lastUpdated": "6/24/2026"
+    },
+    {
+      "page": "/graphql/schema/b2b/company/mutations/create-address",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/11652541?v=4",
+        "https://avatars.githubusercontent.com/u/108055538?v=4"
+      ],
+      "lastUpdated": "7/31/2026"
     },
     {
       "page": "/graphql/schema/b2b/company/mutations/create-role",
@@ -844,6 +853,13 @@
       "lastUpdated": "6/24/2026"
     },
     {
+      "page": "/graphql/schema/b2b/company/mutations/delete-address",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/108055538?v=4"
+      ],
+      "lastUpdated": "7/6/2026"
+    },
+    {
       "page": "/graphql/schema/b2b/company/mutations/delete-role",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4",
@@ -874,6 +890,14 @@
       "lastUpdated": "6/24/2026"
     },
     {
+      "page": "/graphql/schema/b2b/company/mutations/set-default-address",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/11652541?v=4",
+        "https://avatars.githubusercontent.com/u/108055538?v=4"
+      ],
+      "lastUpdated": "7/31/2026"
+    },
+    {
       "page": "/graphql/schema/b2b/company/mutations/unassign-child-company",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4",
@@ -891,6 +915,14 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
       "lastUpdated": "6/24/2026"
+    },
+    {
+      "page": "/graphql/schema/b2b/company/mutations/update-address",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/11652541?v=4",
+        "https://avatars.githubusercontent.com/u/108055538?v=4"
+      ],
+      "lastUpdated": "7/31/2026"
     },
     {
       "page": "/graphql/schema/b2b/company/mutations/update-role",
@@ -945,14 +977,15 @@
     {
       "page": "/graphql/schema/b2b/company/queries/company",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/11652541?v=4",
+        "https://avatars.githubusercontent.com/u/108055538?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/97607802?v=4",
         "https://avatars.githubusercontent.com/u/11199531?v=4"
       ],
-      "lastUpdated": "6/24/2026"
+      "lastUpdated": "7/31/2026"
     },
     {
       "page": "/graphql/schema/b2b/company/queries/is-company-admin-email-available",
@@ -1913,6 +1946,7 @@
     {
       "page": "/graphql/schema/cart/mutations/set-billing-address",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/161452743?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
@@ -1920,7 +1954,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/3187617?v=4"
       ],
-      "lastUpdated": "6/24/2026"
+      "lastUpdated": "7/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/set-gift-options",
@@ -1966,13 +2000,14 @@
     {
       "page": "/graphql/schema/cart/mutations/set-shipping-address",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/161452743?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/3187617?v=4"
       ],
-      "lastUpdated": "6/24/2026"
+      "lastUpdated": "7/24/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/set-shipping-method",
@@ -4885,13 +4920,14 @@
     {
       "page": "/rest/b2b/company",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/108055538?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/98363870?v=4"
       ],
-      "lastUpdated": "6/1/2026"
+      "lastUpdated": "7/29/2026"
     },
     {
       "page": "/rest/b2b/company-credit",
@@ -4906,13 +4942,14 @@
     {
       "page": "/rest/b2b/company-object",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/108055538?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/98363870?v=4"
       ],
-      "lastUpdated": "6/1/2026"
+      "lastUpdated": "7/29/2026"
     },
     {
       "page": "/rest/b2b/company-structures",
@@ -4937,6 +4974,14 @@
       "lastUpdated": "6/2/2026"
     },
     {
+      "page": "/rest/b2b/create-address",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/11652541?v=4",
+        "https://avatars.githubusercontent.com/u/108055538?v=4"
+      ],
+      "lastUpdated": "7/31/2026"
+    },
+    {
       "page": "/rest/b2b/credit-manage",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4",
@@ -4946,6 +4991,14 @@
         "https://avatars.githubusercontent.com/u/98363870?v=4"
       ],
       "lastUpdated": "6/1/2026"
+    },
+    {
+      "page": "/rest/b2b/delete-address",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/11652541?v=4",
+        "https://avatars.githubusercontent.com/u/108055538?v=4"
+      ],
+      "lastUpdated": "7/31/2026"
     },
     {
       "page": "/rest/b2b/extensions",
@@ -5049,6 +5102,14 @@
       "lastUpdated": "6/2/2026"
     },
     {
+      "page": "/rest/b2b/set-default-address",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/11652541?v=4",
+        "https://avatars.githubusercontent.com/u/108055538?v=4"
+      ],
+      "lastUpdated": "7/31/2026"
+    },
+    {
       "page": "/rest/b2b/shared-cat-company",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4",
@@ -5088,6 +5149,14 @@
         "https://avatars.githubusercontent.com/u/98363870?v=4"
       ],
       "lastUpdated": "6/2/2026"
+    },
+    {
+      "page": "/rest/b2b/update-address",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/11652541?v=4",
+        "https://avatars.githubusercontent.com/u/108055538?v=4"
+      ],
+      "lastUpdated": "7/31/2026"
     },
     {
       "page": "/rest/inventory/",
