@@ -10,11 +10,11 @@ keywords:
 
 # Delete a company address
 
-This endpoint deletes an existing company address using the `deleteById` operation of the `companyAddressRepositoryV1` service.
-
 <InlineAlert variant="info" slots="text" />
 
 This endpoint is part of the B2B Storefront Compatibility Package and is only available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview). Requests require an admin or integration token whose role includes the `Magento_CompanyAddressStorefrontCompatibility::delete` ACL resource.
+
+This endpoint deletes an existing company address using the `deleteById` operation of the `companyAddressRepositoryV1` service.
 
 **Service Name:**
 
