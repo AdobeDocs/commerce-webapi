@@ -21,6 +21,8 @@ The `setBillingAddressOnCart` reference provides detailed information about the 
 
 ## Example usage
 
+### Create a new billing address
+
 The following example creates a new billing address for a specific cart.
 
 **Request:**
@@ -115,6 +117,158 @@ mutation {
 }
 ```
 
+### Assign an existing customer address
+
+The following example assigns a billing address from the customer's address book by specifying the `customer_address_uid` value. This value is a UID-encoded reference to the address, not the raw `id` value. This field requires a valid [customer authentication token](../../customer/mutations/generate-token.md); guests cannot use `customer_address_uid`.
+
+**Request:**
+
+```graphql
+mutation {
+  setBillingAddressOnCart(
+    input: {
+      cart_id: "4JQaNVJokOpFxrykGVvYrjhiNv9qt31C"
+      billing_address: {
+        customer_address_uid: "MQ=="
+      }
+    }
+  ) {
+    cart {
+      billing_address {
+        firstname
+        lastname
+        street
+        city
+        region {
+          code
+          label
+        }
+        postcode
+        telephone
+        country {
+          code
+          label
+        }
+        uid
+      }
+    }
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "setBillingAddressOnCart": {
+      "cart": {
+        "billing_address": {
+          "firstname": "Jane",
+          "lastname": "Doe",
+          "street": [
+            "123 Main Street"
+          ],
+          "city": "Austin",
+          "region": {
+            "code": "TX",
+            "label": "Texas"
+          },
+          "postcode": "78758",
+          "telephone": "5551234567",
+          "country": {
+            "code": "US",
+            "label": "US"
+          },
+          "uid": "MQ=="
+        }
+      }
+    }
+  }
+}
+```
+
+### Assign a company address (B2B)
+
+<Edition slots="text" backgroundcolor="green"/>
+
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
+
+<InlineAlert variant="info" slots="text1"/>
+
+The `company_address_id` field is part of the B2B Storefront Compatibility Package and is available with [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview), and with [Adobe Commerce Optimizer](https://experienceleague.adobe.com/en/docs/commerce/aco-optimizer-connector/overview) on Adobe Commerce on cloud infrastructure or on-premises. The field references the **company** address book, not the customer's personal address book, and is available only to an authenticated B2B company user whose company has the company address book feature enabled (`is_company_address_book_enabled`); guests cannot use this field. `company_address_id` is a GraphQL-only field with no REST equivalent. Like `customer_address_uid`, the value is a UID-encoded reference, not a raw integer.
+
+The following example assigns a billing address from the company's address book by specifying the `company_address_id` value returned by the [`createCompanyAddress`](../../b2b/company/mutations/create-address.md) mutation.
+
+**Request:**
+
+```graphql
+mutation {
+  setBillingAddressOnCart(
+    input: {
+      cart_id: "4JQaNVJokOpFxrykGVvYrjhiNv9qt31C"
+      billing_address: {
+        company_address_id: "MjAy"
+      }
+    }
+  ) {
+    cart {
+      billing_address {
+        firstname
+        lastname
+        company
+        street
+        city
+        region {
+          code
+          label
+        }
+        postcode
+        telephone
+        country {
+          code
+          label
+        }
+        company_address_id
+      }
+    }
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "setBillingAddressOnCart": {
+      "cart": {
+        "billing_address": {
+          "firstname": "John",
+          "lastname": "Doe",
+          "company": "Company name",
+          "street": [
+            "123 Main St"
+          ],
+          "city": "Austin",
+          "region": {
+            "code": "TX",
+            "label": "Texas"
+          },
+          "postcode": "78701",
+          "telephone": "5551234567",
+          "country": {
+            "code": "US",
+            "label": "US"
+          },
+          "company_address_id": "MjAy"
+        }
+      }
+    }
+  }
+}
+```
+
 ## Errors
 
 | Error | Description |
@@ -129,3 +283,4 @@ mutation {
 | `Could not use the "use_for_shipping" option, because multiple shipping addresses have already been set.` | The `use_for_shipping` flag was provided, but the cart already has multiple shipping addresses. |
 | `The current customer isn't authorized.` | An unauthorized user (guest) tried to set a billing address on behalf of an authorized user (customer), or a customer tried to set a billing address on behalf of another customer. |
 | `An error occurred while processing the billing address.` | The billing address could not be validated. One or more required fields may be missing or invalid. |
+| `Company address book is not enabled for this company.` | The `company_address_id` field was specified, but the customer's company does not have `is_company_address_book_enabled` set. |
