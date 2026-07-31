@@ -53,7 +53,7 @@ The following table lists the parameters defined in `CompanyAddressInterface`.
 | `vat_id` | VAT identification number | string | Optional |
 | `custom_attributes` | Custom EAV attributes for company addresses | Array[Object] | Optional |
 
-## Create a company address (billing)
+## Create a company billing address
 
 The following example creates a billing address for company `2`.
 
@@ -113,7 +113,7 @@ The following example creates a billing address for company `2`.
 }
 ```
 
-## Create a company address (shipping)
+## Create a company shipping address
 
 The following example creates a shipping address for the same company.
 
