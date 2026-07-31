@@ -10,11 +10,15 @@ keywords:
 
 # Create a company address
 
-This endpoint creates a new billing or shipping address for a company using the `saveForCompany` operation of the `companyAddressRepositoryV1` service.
-
 <InlineAlert variant="info" slots="text" />
 
 This endpoint is part of the B2B Storefront Compatibility Package and is only available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview). Requests require an admin or integration token whose role includes the `Magento_CompanyAddressStorefrontCompatibility::add` ACL resource.
+
+This endpoint creates a new billing or shipping address for a company using the `saveForCompany` operation of the `companyAddressRepositoryV1` service.
+
+The company address book must be enabled for the company (`is_company_address_book_enabled`), or the request fails with `400 Bad Request` and the message `Company address book is not enabled for this company.`
+
+Missing required fields (for example, `firstname`) return `400 Bad Request` with a message identifying the missing field.
 
 **Service Name:**
 
@@ -34,7 +38,7 @@ The following table lists the parameters defined in `CompanyAddressInterface`.
 | --- | --- | --- | --- |
 | `company_address_id` | System-generated address ID | integer | Read only. Omit on create. |
 | `company_id` | The ID of the company the address belongs to | integer | Optional. Derived from the `:companyId` path parameter. |
-| `type` | `1` - Billing\<br/\>`2` - Shipping | integer | Required to create an address. |
+| `type` | `1` - Billing\<br/\>`2` - Shipping | integer | Required to create an address. The value cannot be changed afterward.|
 | `nickname` | A friendly label for the address | string | Optional |
 | `firstname` | Contact first name | string | Required |
 | `lastname` | Contact last name | string | Required |
@@ -172,9 +176,3 @@ The following example creates a shipping address for the same company.
   "custom_attributes": []
 }
 ```
-
-## Notes
-
-- `type` is required when creating an address and cannot be changed afterward.
-- The company address book must be enabled for the company (`is_company_address_book_enabled`), or the request fails with `400 Bad Request` and the message `Company address book is not enabled for this company.`
-- Missing required fields (e.g. `firstname`) return `400 Bad Request` with a message identifying the missing field.
