@@ -99,4 +99,5 @@ mutation UpdateCompanyAddress {
   }
 }
 ```
+
 Clearing default via `is_default`: false on an address that is currently default requires set-default ACL (same as setDefaultCompanyAddress).

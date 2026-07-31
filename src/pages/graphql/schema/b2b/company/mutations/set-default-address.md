@@ -65,7 +65,8 @@ mutation SetDefaultCompanyAddress {
     }
   }
 }
-```
+
+
 **Response (Shipping):**
 
 ```json
@@ -92,4 +93,4 @@ After setting defaults, you can read them from the Company type:
         default_shipping_address { id address_type is_default }
     }
 }
-```
+``

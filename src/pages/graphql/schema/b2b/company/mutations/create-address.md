@@ -251,5 +251,3 @@ mutation CreateCompanyAddress {
 | `Company context is required.` | Missing `X-Adobe-Company` header |
 | `Company address book is not enabled for this company.` | Address book disabled for company |
 | `You do not have authorization to perform this action.` | Missing add or set-default ACL |
-
-
