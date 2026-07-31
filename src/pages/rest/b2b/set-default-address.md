@@ -10,11 +10,11 @@ keywords:
 
 # Set a company address as default
 
-This endpoint sets a company address as the default billing or shipping address for its company, using the `setDefaultByAddressId` operation of the `companyDefaultAddressManagementV1` service. The address type (billing or shipping) is determined by the address itself, so the same endpoint is used for both.
-
 <InlineAlert variant="info" slots="text" />
 
 This endpoint is part of the B2B Storefront Compatibility Package and is only available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview). Requests require an admin or integration token whose role includes the `Magento_CompanyAddressStorefrontCompatibility::default` ACL resource.
+
+This endpoint sets a company address as the default billing or shipping address for its company, using the `setDefaultByAddressId` operation of the `companyDefaultAddressManagementV1` service. The address type (billing or shipping) is determined by the address itself, so the same endpoint is used for both.
 
 **Service Name:**
 
