@@ -7,16 +7,16 @@
 | Field Name | Description |
 |------------|-------------|
 | `code` - [`String`](#string) | The two-letter code for the region, such as TX for Texas. |
-| `id` - [`Int`](types-f-i.md#int) | The unique ID for a `Region` object. |
+| `id` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | The unique ID for a `Region` object. |
 | `name` - [`String`](#string) | The name of the region, such as Texas. |
 
 #### Example
 
 ```json
 {
-  "code": "abc123",
+  "code": "xyz789",
   "id": 987,
-  "name": "abc123"
+  "name": "xyz789"
 }
 ```
 
@@ -35,7 +35,7 @@ Specifies the cart from which to remove a coupon.
 #### Example
 
 ```json
-{"cart_id": "xyz789"}
+{"cart_id": "abc123"}
 ```
 
 <HorizontalLine />
@@ -48,7 +48,7 @@ Contains details about the cart after removing a coupon.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart`](types-c-e.md#cart) | The cart after removing a coupon. |
+| `cart` - [`Cart`](/reference/graphql/2-4-6/types-c-e.md#cart) | The cart after removing a coupon. |
 
 #### Example
 
@@ -73,7 +73,7 @@ Defines the input required to run the `removeGiftCardFromCart` mutation.
 
 ```json
 {
-  "cart_id": "abc123",
+  "cart_id": "xyz789",
   "gift_card_code": "abc123"
 }
 ```
@@ -88,7 +88,7 @@ Defines the possible output for the `removeGiftCardFromCart` mutation.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart!`](types-c-e.md#cart) | The contents of the specified shopping cart. |
+| `cart` - [`Cart!`](/reference/graphql/2-4-6/types-c-e.md#cart) | The contents of the specified shopping cart. |
 
 #### Example
 
@@ -106,7 +106,7 @@ Contains the results of a request to remove an item from a gift registry.
 
 | Field Name | Description |
 |------------|-------------|
-| `gift_registry` - [`GiftRegistry`](types-f-i.md#giftregistry) | The gift registry after removing items. |
+| `gift_registry` - [`GiftRegistry`](/reference/graphql/2-4-6/types-f-i.md#giftregistry) | The gift registry after removing items. |
 
 #### Example
 
@@ -124,12 +124,12 @@ Contains the results of a request to delete a gift registry.
 
 | Field Name | Description |
 |------------|-------------|
-| `success` - [`Boolean!`](types-a-b.md#boolean) | Indicates whether the gift registry was successfully deleted. |
+| `success` - [`Boolean!`](/reference/graphql/2-4-6/types-a-b.md#boolean) | Indicates whether the gift registry was successfully deleted. |
 
 #### Example
 
 ```json
-{"success": false}
+{"success": true}
 ```
 
 <HorizontalLine />
@@ -142,7 +142,7 @@ Contains the results of a request to delete a registrant.
 
 | Field Name | Description |
 |------------|-------------|
-| `gift_registry` - [`GiftRegistry`](types-f-i.md#giftregistry) | The gift registry after deleting registrants. |
+| `gift_registry` - [`GiftRegistry`](/reference/graphql/2-4-6/types-f-i.md#giftregistry) | The gift registry after deleting registrants. |
 
 #### Example
 
@@ -161,15 +161,15 @@ Specifies which items to remove from the cart.
 | Input Field | Description |
 |-------------|-------------|
 | `cart_id` - [`String!`](#string) | The unique ID of a `Cart` object. |
-| `cart_item_id` - [`Int`](types-f-i.md#int) | Deprecated. Use `cart_item_uid` instead. |
-| `cart_item_uid` - [`ID`](types-f-i.md#id) | Required field. The unique ID for a `CartItemInterface` object. |
+| `cart_item_id` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | Deprecated. Use `cart_item_uid` instead. |
+| `cart_item_uid` - [`ID`](/reference/graphql/2-4-6/types-f-i.md#id) | Required field. The unique ID for a `CartItemInterface` object. |
 
 #### Example
 
 ```json
 {
   "cart_id": "xyz789",
-  "cart_item_id": 987,
+  "cart_item_id": 123,
   "cart_item_uid": 4
 }
 ```
@@ -184,7 +184,7 @@ Contains details about the cart after removing an item.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart!`](types-c-e.md#cart) | The cart after removing an item. |
+| `cart` - [`Cart!`](/reference/graphql/2-4-6/types-c-e.md#cart) | The cart after removing an item. |
 
 #### Example
 
@@ -202,16 +202,13 @@ Defines the items to remove from the specified negotiable quote.
 
 | Input Field | Description |
 |-------------|-------------|
-| `quote_item_uids` - [`[ID]!`](types-f-i.md#id) | An array of IDs indicating which items to remove from the negotiable quote. |
-| `quote_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
+| `quote_item_uids` - [`[ID]!`](/reference/graphql/2-4-6/types-f-i.md#id) | An array of IDs indicating which items to remove from the negotiable quote. |
+| `quote_uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
 
 #### Example
 
 ```json
-{
-  "quote_item_uids": ["4"],
-  "quote_uid": "4"
-}
+{"quote_item_uids": [4], "quote_uid": 4}
 ```
 
 <HorizontalLine />
@@ -224,7 +221,7 @@ Contains the negotiable quote.
 
 | Field Name | Description |
 |------------|-------------|
-| `quote` - [`NegotiableQuote`](types-k-p.md#negotiablequote) | The negotiable quote after removing items. |
+| `quote` - [`NegotiableQuote`](/reference/graphql/2-4-6/types-k-p.md#negotiablequote) | The negotiable quote after removing items. |
 
 #### Example
 
@@ -242,13 +239,13 @@ Defines which products to remove from a compare list.
 
 | Input Field | Description |
 |-------------|-------------|
-| `products` - [`[ID]!`](types-f-i.md#id) | An array of product IDs to remove from the compare list. |
-| `uid` - [`ID!`](types-f-i.md#id) | The unique identifier of the compare list to modify. |
+| `products` - [`[ID]!`](/reference/graphql/2-4-6/types-f-i.md#id) | An array of product IDs to remove from the compare list. |
+| `uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique identifier of the compare list to modify. |
 
 #### Example
 
 ```json
-{"products": ["4"], "uid": 4}
+{"products": [4], "uid": "4"}
 ```
 
 <HorizontalLine />
@@ -261,8 +258,8 @@ Contains the customer's wish list and any errors encountered.
 
 | Field Name | Description |
 |------------|-------------|
-| `user_errors` - [`[WishListUserInputError]!`](types-t-z.md#wishlistuserinputerror) | An array of errors encountered while deleting products from a wish list. |
-| `wishlist` - [`Wishlist!`](types-t-z.md#wishlist) | Contains the wish list with after items were successfully deleted. |
+| `user_errors` - [`[WishListUserInputError]!`](/reference/graphql/2-4-6/types-t-z.md#wishlistuserinputerror) | An array of errors encountered while deleting products from a wish list. |
+| `wishlist` - [`Wishlist!`](/reference/graphql/2-4-6/types-t-z.md#wishlist) | Contains the wish list with after items were successfully deleted. |
 
 #### Example
 
@@ -283,7 +280,7 @@ Defines the tracking information to delete.
 
 | Input Field | Description |
 |-------------|-------------|
-| `return_shipping_tracking_uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `ReturnShippingTracking` object. |
+| `return_shipping_tracking_uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for a `ReturnShippingTracking` object. |
 
 #### Example
 
@@ -319,7 +316,7 @@ Contains the customer cart.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart!`](types-c-e.md#cart) | The customer cart after reward points are removed. |
+| `cart` - [`Cart!`](/reference/graphql/2-4-6/types-c-e.md#cart) | The customer cart after reward points are removed. |
 
 #### Example
 
@@ -342,7 +339,7 @@ Defines the input required to run the `removeStoreCreditFromCart` mutation.
 #### Example
 
 ```json
-{"cart_id": "abc123"}
+{"cart_id": "xyz789"}
 ```
 
 <HorizontalLine />
@@ -355,7 +352,7 @@ Defines the possible output for the `removeStoreCreditFromCart` mutation.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart!`](types-c-e.md#cart) | The contents of the specified shopping cart. |
+| `cart` - [`Cart!`](/reference/graphql/2-4-6/types-c-e.md#cart) | The contents of the specified shopping cart. |
 
 #### Example
 
@@ -373,8 +370,8 @@ Contains the cart and any errors after adding products.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart!`](types-c-e.md#cart) | Detailed information about the customer's cart. |
-| `userInputErrors` - [`[CheckoutUserInputError]!`](types-c-e.md#checkoutuserinputerror) | An array of reordering errors. |
+| `cart` - [`Cart!`](/reference/graphql/2-4-6/types-c-e.md#cart) | Detailed information about the customer's cart. |
+| `userInputErrors` - [`[CheckoutUserInputError]!`](/reference/graphql/2-4-6/types-c-e.md#checkoutuserinputerror) | An array of reordering errors. |
 
 #### Example
 
@@ -395,8 +392,8 @@ Defines properties of a negotiable quote request.
 
 | Input Field | Description |
 |-------------|-------------|
-| `cart_id` - [`ID!`](types-f-i.md#id) | The cart ID of the buyer requesting a new negotiable quote. |
-| `comment` - [`NegotiableQuoteCommentInput!`](types-k-p.md#negotiablequotecommentinput) | Comments the buyer entered to describe the request. |
+| `cart_id` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The cart ID of the buyer requesting a new negotiable quote. |
+| `comment` - [`NegotiableQuoteCommentInput!`](/reference/graphql/2-4-6/types-k-p.md#negotiablequotecommentinput) | Comments the buyer entered to describe the request. |
 | `quote_name` - [`String!`](#string) | The name the buyer assigned to the negotiable quote request. |
 
 #### Example
@@ -405,7 +402,7 @@ Defines properties of a negotiable quote request.
 {
   "cart_id": 4,
   "comment": NegotiableQuoteCommentInput,
-  "quote_name": "xyz789"
+  "quote_name": "abc123"
 }
 ```
 
@@ -419,7 +416,7 @@ Contains the `NegotiableQuote` object generated when a buyer requests a negotiab
 
 | Field Name | Description |
 |------------|-------------|
-| `quote` - [`NegotiableQuote`](types-k-p.md#negotiablequote) | Details about the negotiable quote. |
+| `quote` - [`NegotiableQuote`](/reference/graphql/2-4-6/types-k-p.md#negotiablequote) | Details about the negotiable quote. |
 
 #### Example
 
@@ -440,14 +437,14 @@ Contains information needed to start a return request.
 | `comment_text` - [`String`](#string) | Text the buyer entered that describes the reason for the refund request. |
 | `contact_email` - [`String`](#string) | The email address the buyer enters to receive notifications about the status of the return. |
 | `items` - [`[RequestReturnItemInput]!`](#requestreturniteminput) | An array of items to be returned. |
-| `order_uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `Order` object. |
+| `order_uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for a `Order` object. |
 
 #### Example
 
 ```json
 {
-  "comment_text": "abc123",
-  "contact_email": "abc123",
+  "comment_text": "xyz789",
+  "contact_email": "xyz789",
   "items": [RequestReturnItemInput],
   "order_uid": "4"
 }
@@ -463,9 +460,9 @@ Contains details about an item to be returned.
 
 | Input Field | Description |
 |-------------|-------------|
-| `entered_custom_attributes` - [`[EnteredCustomAttributeInput]`](types-c-e.md#enteredcustomattributeinput) | Details about a custom attribute that was entered. |
-| `order_item_uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `OrderItemInterface` object. |
-| `quantity_to_return` - [`Float!`](types-f-i.md#float) | The quantity of the item to be returned. |
+| `entered_custom_attributes` - [`[EnteredCustomAttributeInput]`](/reference/graphql/2-4-6/types-c-e.md#enteredcustomattributeinput) | Details about a custom attribute that was entered. |
+| `order_item_uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for a `OrderItemInterface` object. |
+| `quantity_to_return` - [`Float!`](/reference/graphql/2-4-6/types-f-i.md#float) | The quantity of the item to be returned. |
 | `selected_custom_attributes` - [`[SelectedCustomAttributeInput]`](#selectedcustomattributeinput) | An array of selected custom option IDs associated with the item to be returned. For example, the IDs for the selected color and size of a configurable product. |
 
 #### Example
@@ -517,21 +514,21 @@ Defines the contents of a requisition list.
 |------------|-------------|
 | `description` - [`String`](#string) | Optional text that describes the requisition list. |
 | `items` - [`RequistionListItems`](#requistionlistitems) | An array of products added to the requisition list. |
-| `items_count` - [`Int!`](types-f-i.md#int) | The number of items in the list. |
+| `items_count` - [`Int!`](/reference/graphql/2-4-6/types-f-i.md#int) | The number of items in the list. |
 | `name` - [`String!`](#string) | The requisition list name. |
-| `uid` - [`ID!`](types-f-i.md#id) | The unique requisition list ID. |
+| `uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique requisition list ID. |
 | `updated_at` - [`String`](#string) | The time of the last modification of the requisition list. |
 
 #### Example
 
 ```json
 {
-  "description": "xyz789",
+  "description": "abc123",
   "items": RequistionListItems,
   "items_count": 123,
-  "name": "abc123",
+  "name": "xyz789",
   "uid": 4,
-  "updated_at": "abc123"
+  "updated_at": "xyz789"
 }
 ```
 
@@ -545,8 +542,8 @@ Defines requisition list filters.
 
 | Input Field | Description |
 |-------------|-------------|
-| `name` - [`FilterMatchTypeInput`](types-f-i.md#filtermatchtypeinput) | Filter by the display name of the requisition list. |
-| `uids` - [`FilterEqualTypeInput`](types-f-i.md#filterequaltypeinput) | Filter requisition lists by one or more requisition list IDs. |
+| `name` - [`FilterMatchTypeInput`](/reference/graphql/2-4-6/types-f-i.md#filtermatchtypeinput) | Filter by the display name of the requisition list. |
+| `uids` - [`FilterEqualTypeInput`](/reference/graphql/2-4-6/types-f-i.md#filterequaltypeinput) | Filter requisition lists by one or more requisition list IDs. |
 
 #### Example
 
@@ -568,20 +565,20 @@ The interface for requisition list items.
 | Field Name | Description |
 |------------|-------------|
 | `customizable_options` - [`[SelectedCustomizableOption]!`](#selectedcustomizableoption) | Selected custom options for an item in the requisition list. |
-| `product` - [`ProductInterface!`](types-k-p.md#productinterface) | Details about a requisition list item. |
-| `quantity` - [`Float!`](types-f-i.md#float) | The amount added. |
-| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for the requisition list item. |
+| `product` - [`ProductInterface!`](/reference/graphql/2-4-6/types-k-p.md#productinterface) | Details about a requisition list item. |
+| `quantity` - [`Float!`](/reference/graphql/2-4-6/types-f-i.md#float) | The amount added. |
+| `uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for the requisition list item. |
 
 #### Possible Types
 
 | RequisitionListItemInterface Types |
 |----------------|
 | [`SimpleRequisitionListItem`](#simplerequisitionlistitem) |
-| [`VirtualRequisitionListItem`](types-t-z.md#virtualrequisitionlistitem) |
-| [`DownloadableRequisitionListItem`](types-c-e.md#downloadablerequisitionlistitem) |
-| [`BundleRequisitionListItem`](types-a-b.md#bundlerequisitionlistitem) |
-| [`ConfigurableRequisitionListItem`](types-c-e.md#configurablerequisitionlistitem) |
-| [`GiftCardRequisitionListItem`](types-f-i.md#giftcardrequisitionlistitem) |
+| [`VirtualRequisitionListItem`](/reference/graphql/2-4-6/types-t-z.md#virtualrequisitionlistitem) |
+| [`DownloadableRequisitionListItem`](/reference/graphql/2-4-6/types-c-e.md#downloadablerequisitionlistitem) |
+| [`BundleRequisitionListItem`](/reference/graphql/2-4-6/types-a-b.md#bundlerequisitionlistitem) |
+| [`ConfigurableRequisitionListItem`](/reference/graphql/2-4-6/types-c-e.md#configurablerequisitionlistitem) |
+| [`GiftCardRequisitionListItem`](/reference/graphql/2-4-6/types-f-i.md#giftcardrequisitionlistitem) |
 
 #### Example
 
@@ -590,7 +587,7 @@ The interface for requisition list items.
   "customizable_options": [SelectedCustomizableOption],
   "product": ProductInterface,
   "quantity": 123.45,
-  "uid": "4"
+  "uid": 4
 }
 ```
 
@@ -604,9 +601,9 @@ Defines the items to add.
 
 | Input Field | Description |
 |-------------|-------------|
-| `entered_options` - [`[EnteredOptionInput]`](types-c-e.md#enteredoptioninput) | Entered option IDs. |
+| `entered_options` - [`[EnteredOptionInput]`](/reference/graphql/2-4-6/types-c-e.md#enteredoptioninput) | Entered option IDs. |
 | `parent_sku` - [`String`](#string) | For configurable products, the SKU of the parent product. |
-| `quantity` - [`Float`](types-f-i.md#float) | The quantity of the product to add. |
+| `quantity` - [`Float`](/reference/graphql/2-4-6/types-f-i.md#float) | The quantity of the product to add. |
 | `selected_options` - [`[String]`](#string) | Selected option IDs. |
 | `sku` - [`String!`](#string) | The product SKU. |
 
@@ -615,8 +612,8 @@ Defines the items to add.
 ```json
 {
   "entered_options": [EnteredOptionInput],
-  "parent_sku": "xyz789",
-  "quantity": 987.65,
+  "parent_sku": "abc123",
+  "quantity": 123.45,
   "selected_options": ["abc123"],
   "sku": "xyz789"
 }
@@ -634,7 +631,7 @@ Defines customer requisition lists.
 |------------|-------------|
 | `items` - [`[RequisitionList]`](#requisitionlist) | An array of requisition lists. |
 | `page_info` - [`SearchResultPageInfo`](#searchresultpageinfo) | Pagination metadata. |
-| `total_count` - [`Int`](types-f-i.md#int) | The number of returned requisition lists. |
+| `total_count` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | The number of returned requisition lists. |
 
 #### Example
 
@@ -642,7 +639,7 @@ Defines customer requisition lists.
 {
   "items": [RequisitionList],
   "page_info": SearchResultPageInfo,
-  "total_count": 987
+  "total_count": 123
 }
 ```
 
@@ -658,7 +655,7 @@ Contains an array of items added to a requisition list.
 |------------|-------------|
 | `items` - [`[RequisitionListItemInterface]!`](#requisitionlistiteminterface) | An array of items in the requisition list. |
 | `page_info` - [`SearchResultPageInfo`](#searchresultpageinfo) | Pagination metadata. |
-| `total_pages` - [`Int!`](types-f-i.md#int) | The number of pages returned. |
+| `total_pages` - [`Int!`](/reference/graphql/2-4-6/types-f-i.md#int) | The number of pages returned. |
 
 #### Example
 
@@ -686,10 +683,10 @@ Contains details about a return.
 | `customer` - [`ReturnCustomer!`](#returncustomer) | Data from the customer who created the return request. |
 | `items` - [`[ReturnItem]`](#returnitem) | A list of items being returned. |
 | `number` - [`String!`](#string) | A human-readable return number. |
-| `order` - [`CustomerOrder`](types-c-e.md#customerorder) | The order associated with the return. |
+| `order` - [`CustomerOrder`](/reference/graphql/2-4-6/types-c-e.md#customerorder) | The order associated with the return. |
 | `shipping` - [`ReturnShipping`](#returnshipping) | Shipping information for the return. |
 | `status` - [`ReturnStatus`](#returnstatus) | The status of the return request. |
-| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `Return` object. |
+| `uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for a `Return` object. |
 
 #### Example
 
@@ -704,7 +701,7 @@ Contains details about a return.
   "order": CustomerOrder,
   "shipping": ReturnShipping,
   "status": "PENDING",
-  "uid": "4"
+  "uid": 4
 }
 ```
 
@@ -721,7 +718,7 @@ Contains details about a return comment.
 | `author_name` - [`String!`](#string) | The name or author who posted the comment. |
 | `created_at` - [`String!`](#string) | The date and time the comment was posted. |
 | `text` - [`String!`](#string) | The contents of the comment. |
-| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `ReturnComment` object. |
+| `uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for a `ReturnComment` object. |
 
 #### Example
 
@@ -729,8 +726,8 @@ Contains details about a return comment.
 {
   "author_name": "xyz789",
   "created_at": "xyz789",
-  "text": "xyz789",
-  "uid": 4
+  "text": "abc123",
+  "uid": "4"
 }
 ```
 
@@ -745,15 +742,15 @@ Contains details about a `ReturnCustomerAttribute` object.
 | Field Name | Description |
 |------------|-------------|
 | `label` - [`String!`](#string) | A description of the attribute. |
-| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `ReturnCustomAttribute` object. |
+| `uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for a `ReturnCustomAttribute` object. |
 | `value` - [`String!`](#string) | A JSON-encoded value of the attribute. |
 
 #### Example
 
 ```json
 {
-  "label": "abc123",
-  "uid": "4",
+  "label": "xyz789",
+  "uid": 4,
   "value": "xyz789"
 }
 ```
@@ -776,9 +773,9 @@ The customer information for the return.
 
 ```json
 {
-  "email": "abc123",
-  "firstname": "abc123",
-  "lastname": "abc123"
+  "email": "xyz789",
+  "firstname": "xyz789",
+  "lastname": "xyz789"
 }
 ```
 
@@ -793,11 +790,11 @@ Contains details about a product being returned.
 | Field Name | Description |
 |------------|-------------|
 | `custom_attributes` - [`[ReturnCustomAttribute]`](#returncustomattribute) | Return item custom attributes that are visible on the storefront. |
-| `order_item` - [`OrderItemInterface!`](types-k-p.md#orderiteminterface) | Provides access to the product being returned, including information about selected and entered options. |
-| `quantity` - [`Float!`](types-f-i.md#float) | The quantity of the item the merchant authorized to be returned. |
-| `request_quantity` - [`Float!`](types-f-i.md#float) | The quantity of the item requested to be returned. |
+| `order_item` - [`OrderItemInterface!`](/reference/graphql/2-4-6/types-k-p.md#orderiteminterface) | Provides access to the product being returned, including information about selected and entered options. |
+| `quantity` - [`Float!`](/reference/graphql/2-4-6/types-f-i.md#float) | The quantity of the item the merchant authorized to be returned. |
+| `request_quantity` - [`Float!`](/reference/graphql/2-4-6/types-f-i.md#float) | The quantity of the item requested to be returned. |
 | `status` - [`ReturnItemStatus!`](#returnitemstatus) | The return status of the item. |
-| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `ReturnItem` object. |
+| `uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for a `ReturnItem` object. |
 
 #### Example
 
@@ -806,9 +803,9 @@ Contains details about a product being returned.
   "custom_attributes": [ReturnCustomAttribute],
   "order_item": OrderItemInterface,
   "quantity": 123.45,
-  "request_quantity": 987.65,
+  "request_quantity": 123.45,
   "status": "PENDING",
-  "uid": 4
+  "uid": "4"
 }
 ```
 
@@ -867,7 +864,7 @@ Contains details about the shipping address used for receiving returned items.
 |------------|-------------|
 | `city` - [`String!`](#string) | The city for product returns. |
 | `contact_name` - [`String`](#string) | The merchant's contact person. |
-| `country` - [`Country!`](types-c-e.md#country) | An object that defines the country for product returns. |
+| `country` - [`Country!`](/reference/graphql/2-4-6/types-c-e.md#country) | An object that defines the country for product returns. |
 | `postcode` - [`String!`](#string) | The postal code for product returns. |
 | `region` - [`Region!`](#region) | An object that defines the state or province for product returns. |
 | `street` - [`[String]!`](#string) | The street address for product returns. |
@@ -880,10 +877,10 @@ Contains details about the shipping address used for receiving returned items.
   "city": "abc123",
   "contact_name": "xyz789",
   "country": Country,
-  "postcode": "abc123",
+  "postcode": "xyz789",
   "region": Region,
-  "street": ["xyz789"],
-  "telephone": "xyz789"
+  "street": ["abc123"],
+  "telephone": "abc123"
 }
 ```
 
@@ -898,7 +895,7 @@ Contains details about the carrier on a return.
 | Field Name | Description |
 |------------|-------------|
 | `label` - [`String!`](#string) | A description of the shipping carrier. |
-| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `ReturnShippingCarrier` object assigned to the shipping carrier. |
+| `uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for a `ReturnShippingCarrier` object assigned to the shipping carrier. |
 
 #### Example
 
@@ -919,7 +916,7 @@ Contains shipping and tracking details.
 | `carrier` - [`ReturnShippingCarrier!`](#returnshippingcarrier) | Contains details of a shipping carrier. |
 | `status` - [`ReturnShippingTrackingStatus`](#returnshippingtrackingstatus) | Details about the status of a shipment. |
 | `tracking_number` - [`String!`](#string) | A tracking number assigned by the carrier. |
-| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `ReturnShippingTracking` object assigned to the tracking item. |
+| `uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for a `ReturnShippingTracking` object assigned to the tracking item. |
 
 #### Example
 
@@ -928,7 +925,7 @@ Contains shipping and tracking details.
   "carrier": ReturnShippingCarrier,
   "status": ReturnShippingTrackingStatus,
   "tracking_number": "xyz789",
-  "uid": "4"
+  "uid": 4
 }
 ```
 
@@ -948,7 +945,7 @@ Contains the status of a shipment.
 #### Example
 
 ```json
-{"text": "abc123", "type": "INFORMATION"}
+{"text": "xyz789", "type": "INFORMATION"}
 ```
 
 <HorizontalLine />
@@ -1007,7 +1004,7 @@ Contains a list of customer return requests.
 |------------|-------------|
 | `items` - [`[Return]`](#return) | A list of return requests. |
 | `page_info` - [`SearchResultPageInfo`](#searchresultpageinfo) | Pagination metadata. |
-| `total_count` - [`Int`](types-f-i.md#int) | The total number of return requests. |
+| `total_count` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | The total number of return requests. |
 
 #### Example
 
@@ -1015,7 +1012,7 @@ Contains a list of customer return requests.
 {
   "items": [Return],
   "page_info": SearchResultPageInfo,
-  "total_count": 987
+  "total_count": 123
 }
 ```
 
@@ -1029,7 +1026,7 @@ Contains the result of a request to revoke a customer token.
 
 | Field Name | Description |
 |------------|-------------|
-| `result` - [`Boolean!`](types-a-b.md#boolean) | The result of a request to revoke a customer token. |
+| `result` - [`Boolean!`](/reference/graphql/2-4-6/types-a-b.md#boolean) | The result of a request to revoke a customer token. |
 
 #### Example
 
@@ -1071,13 +1068,13 @@ Contains details about a customer's reward points.
 
 | Field Name | Description |
 |------------|-------------|
-| `money` - [`Money!`](types-k-p.md#money) | The reward points amount in store currency. |
-| `points` - [`Float!`](types-f-i.md#float) | The reward points amount in points. |
+| `money` - [`Money!`](/reference/graphql/2-4-6/types-k-p.md#money) | The reward points amount in store currency. |
+| `points` - [`Float!`](/reference/graphql/2-4-6/types-f-i.md#float) | The reward points amount in points. |
 
 #### Example
 
 ```json
-{"money": Money, "points": 987.65}
+{"money": Money, "points": 123.45}
 ```
 
 <HorizontalLine />
@@ -1093,16 +1090,16 @@ Contain details about the reward points transaction.
 | `balance` - [`RewardPointsAmount`](#rewardpointsamount) | The award points balance after the completion of the transaction. |
 | `change_reason` - [`String!`](#string) | The reason the balance changed. |
 | `date` - [`String!`](#string) | The date of the transaction. |
-| `points_change` - [`Float!`](types-f-i.md#float) | The number of points added or deducted in the transaction. |
+| `points_change` - [`Float!`](/reference/graphql/2-4-6/types-f-i.md#float) | The number of points added or deducted in the transaction. |
 
 #### Example
 
 ```json
 {
   "balance": RewardPointsAmount,
-  "change_reason": "abc123",
+  "change_reason": "xyz789",
   "date": "abc123",
-  "points_change": 123.45
+  "points_change": 987.65
 }
 ```
 
@@ -1138,13 +1135,13 @@ Contains details about customer's reward points rate.
 
 | Field Name | Description |
 |------------|-------------|
-| `currency_amount` - [`Float!`](types-f-i.md#float) | The money value for the exchange rate. For earnings, this is the amount spent to earn the specified points. For redemption, this is the amount of money the number of points represents. |
-| `points` - [`Float!`](types-f-i.md#float) | The number of points for an exchange rate. For earnings, this is the number of points earned. For redemption, this is the number of points needed for redemption. |
+| `currency_amount` - [`Float!`](/reference/graphql/2-4-6/types-f-i.md#float) | The money value for the exchange rate. For earnings, this is the amount spent to earn the specified points. For redemption, this is the amount of money the number of points represents. |
+| `points` - [`Float!`](/reference/graphql/2-4-6/types-f-i.md#float) | The number of points for an exchange rate. For earnings, this is the number of points earned. For redemption, this is the number of points needed for redemption. |
 
 #### Example
 
 ```json
-{"currency_amount": 123.45, "points": 987.65}
+{"currency_amount": 123.45, "points": 123.45}
 ```
 
 <HorizontalLine />
@@ -1196,23 +1193,23 @@ Routable entities serve as the model for a rendered page.
 
 | Field Name | Description |
 |------------|-------------|
-| `redirect_code` - [`Int!`](types-f-i.md#int) | Contains 0 when there is no redirect error. A value of 301 indicates the URL of the requested resource has been changed permanently, while a value of 302 indicates a temporary redirect. |
+| `redirect_code` - [`Int!`](/reference/graphql/2-4-6/types-f-i.md#int) | Contains 0 when there is no redirect error. A value of 301 indicates the URL of the requested resource has been changed permanently, while a value of 302 indicates a temporary redirect. |
 | `relative_url` - [`String`](#string) | The internal relative URL. If the specified URL is a redirect, the query returns the redirected URL, not the original. |
-| `type` - [`UrlRewriteEntityTypeEnum`](types-t-z.md#urlrewriteentitytypeenum) | One of PRODUCT, CATEGORY, or CMS_PAGE. |
+| `type` - [`UrlRewriteEntityTypeEnum`](/reference/graphql/2-4-6/types-t-z.md#urlrewriteentitytypeenum) | One of PRODUCT, CATEGORY, or CMS_PAGE. |
 
 #### Possible Types
 
 | RoutableInterface Types |
 |----------------|
-| [`CmsPage`](types-c-e.md#cmspage) |
-| [`CategoryTree`](types-c-e.md#categorytree) |
-| [`VirtualProduct`](types-t-z.md#virtualproduct) |
+| [`CmsPage`](/reference/graphql/2-4-6/types-c-e.md#cmspage) |
+| [`CategoryTree`](/reference/graphql/2-4-6/types-c-e.md#categorytree) |
+| [`VirtualProduct`](/reference/graphql/2-4-6/types-t-z.md#virtualproduct) |
 | [`SimpleProduct`](#simpleproduct) |
-| [`DownloadableProduct`](types-c-e.md#downloadableproduct) |
-| [`BundleProduct`](types-a-b.md#bundleproduct) |
-| [`GiftCardProduct`](types-f-i.md#giftcardproduct) |
-| [`GroupedProduct`](types-f-i.md#groupedproduct) |
-| [`ConfigurableProduct`](types-c-e.md#configurableproduct) |
+| [`DownloadableProduct`](/reference/graphql/2-4-6/types-c-e.md#downloadableproduct) |
+| [`BundleProduct`](/reference/graphql/2-4-6/types-a-b.md#bundleproduct) |
+| [`GiftCardProduct`](/reference/graphql/2-4-6/types-f-i.md#giftcardproduct) |
+| [`GroupedProduct`](/reference/graphql/2-4-6/types-f-i.md#groupedproduct) |
+| [`ConfigurableProduct`](/reference/graphql/2-4-6/types-c-e.md#configurableproduct) |
 
 #### Example
 
@@ -1242,7 +1239,7 @@ Contains details about a comment.
 ```json
 {
   "message": "abc123",
-  "timestamp": "abc123"
+  "timestamp": "xyz789"
 }
 ```
 
@@ -1276,14 +1273,14 @@ Provides navigation for the query response.
 
 | Field Name | Description |
 |------------|-------------|
-| `current_page` - [`Int`](types-f-i.md#int) | The specific page to return. |
-| `page_size` - [`Int`](types-f-i.md#int) | The maximum number of items to return per page of results. |
-| `total_pages` - [`Int`](types-f-i.md#int) | The total number of pages in the response. |
+| `current_page` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | The specific page to return. |
+| `page_size` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | The maximum number of items to return per page of results. |
+| `total_pages` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | The total number of pages in the response. |
 
 #### Example
 
 ```json
-{"current_page": 987, "page_size": 123, "total_pages": 123}
+{"current_page": 123, "page_size": 987, "total_pages": 123}
 ```
 
 <HorizontalLine />
@@ -1301,7 +1298,7 @@ A string that contains search suggestion
 #### Example
 
 ```json
-{"search": "abc123"}
+{"search": "xyz789"}
 ```
 
 <HorizontalLine />
@@ -1314,17 +1311,17 @@ Contains details about a selected bundle option.
 
 | Field Name | Description |
 |------------|-------------|
-| `id` - [`Int!`](types-f-i.md#int) |  *(Deprecated: Use `uid` instead)* |
+| `id` - [`Int!`](/reference/graphql/2-4-6/types-f-i.md#int) |  *(Deprecated: Use `uid` instead)* |
 | `label` - [`String!`](#string) | The display name of the selected bundle product option. |
 | `type` - [`String!`](#string) | The type of selected bundle product option. |
-| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `SelectedBundleOption` object |
+| `uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for a `SelectedBundleOption` object |
 | `values` - [`[SelectedBundleOptionValue]!`](#selectedbundleoptionvalue) | An array of selected bundle option values. |
 
 #### Example
 
 ```json
 {
-  "id": 987,
+  "id": 123,
   "label": "abc123",
   "type": "abc123",
   "uid": 4,
@@ -1342,19 +1339,19 @@ Contains details about a value for a selected bundle option.
 
 | Field Name | Description |
 |------------|-------------|
-| `id` - [`Int!`](types-f-i.md#int) | Use `uid` instead |
+| `id` - [`Int!`](/reference/graphql/2-4-6/types-f-i.md#int) | Use `uid` instead |
 | `label` - [`String!`](#string) | The display name of the value for the selected bundle product option. |
-| `price` - [`Float!`](types-f-i.md#float) | The price of the value for the selected bundle product option. |
-| `quantity` - [`Float!`](types-f-i.md#float) | The quantity of the value for the selected bundle product option. |
-| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `SelectedBundleOptionValue` object |
+| `price` - [`Float!`](/reference/graphql/2-4-6/types-f-i.md#float) | The price of the value for the selected bundle product option. |
+| `quantity` - [`Float!`](/reference/graphql/2-4-6/types-f-i.md#float) | The quantity of the value for the selected bundle product option. |
+| `uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for a `SelectedBundleOptionValue` object |
 
 #### Example
 
 ```json
 {
-  "id": 123,
+  "id": 987,
   "label": "xyz789",
-  "price": 987.65,
+  "price": 123.45,
   "quantity": 987.65,
   "uid": "4"
 }
@@ -1370,23 +1367,23 @@ Contains details about a selected configurable option.
 
 | Field Name | Description |
 |------------|-------------|
-| `configurable_product_option_uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `ConfigurableProductOptions` object. |
-| `configurable_product_option_value_uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `ConfigurableProductOptionsValues` object. |
-| `id` - [`Int!`](types-f-i.md#int) |  *(Deprecated: Use `SelectedConfigurableOption.configurable_product_option_uid` instead.)* |
+| `configurable_product_option_uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for a `ConfigurableProductOptions` object. |
+| `configurable_product_option_value_uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for a `ConfigurableProductOptionsValues` object. |
+| `id` - [`Int!`](/reference/graphql/2-4-6/types-f-i.md#int) |  *(Deprecated: Use `SelectedConfigurableOption.configurable_product_option_uid` instead.)* |
 | `option_label` - [`String!`](#string) | The display text for the option. |
-| `value_id` - [`Int!`](types-f-i.md#int) |  *(Deprecated: Use `SelectedConfigurableOption.configurable_product_option_value_uid` instead.)* |
+| `value_id` - [`Int!`](/reference/graphql/2-4-6/types-f-i.md#int) |  *(Deprecated: Use `SelectedConfigurableOption.configurable_product_option_value_uid` instead.)* |
 | `value_label` - [`String!`](#string) | The display name of the selected configurable option. |
 
 #### Example
 
 ```json
 {
-  "configurable_product_option_uid": 4,
+  "configurable_product_option_uid": "4",
   "configurable_product_option_value_uid": 4,
   "id": 123,
   "option_label": "xyz789",
   "value_id": 123,
-  "value_label": "abc123"
+  "value_label": "xyz789"
 }
 ```
 
@@ -1401,7 +1398,7 @@ Contains details about an attribute the buyer selected.
 | Input Field | Description |
 |-------------|-------------|
 | `attribute_code` - [`String!`](#string) | A string that identifies the selected attribute. |
-| `value` - [`ID!`](types-f-i.md#id) | The unique ID for a `CustomAttribute` object of a selected custom attribute. |
+| `value` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for a `CustomAttribute` object of a selected custom attribute. |
 
 #### Example
 
@@ -1422,11 +1419,11 @@ Identifies a customized product that has been placed in a cart.
 
 | Field Name | Description |
 |------------|-------------|
-| `customizable_option_uid` - [`ID!`](types-f-i.md#id) | The unique ID for a specific `CustomizableOptionInterface` object, such as a `CustomizableFieldOption`, `CustomizableFileOption`, or `CustomizableAreaOption` object. |
-| `id` - [`Int!`](types-f-i.md#int) |  *(Deprecated: Use `SelectedCustomizableOption.customizable_option_uid` instead.)* |
-| `is_required` - [`Boolean!`](types-a-b.md#boolean) | Indicates whether the customizable option is required. |
+| `customizable_option_uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for a specific `CustomizableOptionInterface` object, such as a `CustomizableFieldOption`, `CustomizableFileOption`, or `CustomizableAreaOption` object. |
+| `id` - [`Int!`](/reference/graphql/2-4-6/types-f-i.md#int) |  *(Deprecated: Use `SelectedCustomizableOption.customizable_option_uid` instead.)* |
+| `is_required` - [`Boolean!`](/reference/graphql/2-4-6/types-a-b.md#boolean) | Indicates whether the customizable option is required. |
 | `label` - [`String!`](#string) | The display name of the selected customizable option. |
-| `sort_order` - [`Int!`](types-f-i.md#int) | A value indicating the order to display this option. |
+| `sort_order` - [`Int!`](/reference/graphql/2-4-6/types-f-i.md#int) | A value indicating the order to display this option. |
 | `type` - [`String!`](#string) | The type of `CustomizableOptionInterface` object. |
 | `values` - [`[SelectedCustomizableOptionValue]!`](#selectedcustomizableoptionvalue) | An array of selectable values. |
 
@@ -1435,10 +1432,10 @@ Identifies a customized product that has been placed in a cart.
 ```json
 {
   "customizable_option_uid": "4",
-  "id": 123,
+  "id": 987,
   "is_required": false,
-  "label": "abc123",
-  "sort_order": 987,
+  "label": "xyz789",
+  "sort_order": 123,
   "type": "abc123",
   "values": [SelectedCustomizableOptionValue]
 }
@@ -1454,10 +1451,10 @@ Identifies the value of the selected customized option.
 
 | Field Name | Description |
 |------------|-------------|
-| `customizable_option_value_uid` - [`ID!`](types-f-i.md#id) | The unique ID for a value object that corresponds to the object represented by the `customizable_option_uid` attribute. |
-| `id` - [`Int!`](types-f-i.md#int) |  *(Deprecated: Use `SelectedCustomizableOptionValue.customizable_option_value_uid` instead.)* |
+| `customizable_option_value_uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for a value object that corresponds to the object represented by the `customizable_option_uid` attribute. |
+| `id` - [`Int!`](/reference/graphql/2-4-6/types-f-i.md#int) |  *(Deprecated: Use `SelectedCustomizableOptionValue.customizable_option_value_uid` instead.)* |
 | `label` - [`String!`](#string) | The display name of the selected value. |
-| `price` - [`CartItemSelectedOptionValuePrice!`](types-c-e.md#cartitemselectedoptionvalueprice) | The price of the selected customizable value. |
+| `price` - [`CartItemSelectedOptionValuePrice!`](/reference/graphql/2-4-6/types-c-e.md#cartitemselectedoptionvalueprice) | The price of the selected customizable value. |
 | `value` - [`String!`](#string) | The text identifying the selected value. |
 
 #### Example
@@ -1465,8 +1462,8 @@ Identifies the value of the selected customized option.
 ```json
 {
   "customizable_option_value_uid": "4",
-  "id": 987,
-  "label": "abc123",
+  "id": 123,
+  "label": "xyz789",
   "price": CartItemSelectedOptionValuePrice,
   "value": "xyz789"
 }
@@ -1490,7 +1487,7 @@ Describes the payment method the shopper selected.
 
 ```json
 {
-  "code": "abc123",
+  "code": "xyz789",
   "purchase_order_number": "abc123",
   "title": "abc123"
 }
@@ -1506,14 +1503,14 @@ Contains details about the selected shipping method and carrier.
 
 | Field Name | Description |
 |------------|-------------|
-| `amount` - [`Money!`](types-k-p.md#money) | The cost of shipping using this shipping method. |
-| `base_amount` - [`Money`](types-k-p.md#money) |  *(Deprecated: The field should not be used on the storefront.)* |
+| `amount` - [`Money!`](/reference/graphql/2-4-6/types-k-p.md#money) | The cost of shipping using this shipping method. |
+| `base_amount` - [`Money`](/reference/graphql/2-4-6/types-k-p.md#money) |  *(Deprecated: The field should not be used on the storefront.)* |
 | `carrier_code` - [`String!`](#string) | A string that identifies a commercial carrier or an offline shipping method. |
 | `carrier_title` - [`String!`](#string) | The label for the carrier code. |
 | `method_code` - [`String!`](#string) | A shipping method code associated with a carrier. |
 | `method_title` - [`String!`](#string) | The label for the method code. |
-| `price_excl_tax` - [`Money!`](types-k-p.md#money) | The cost of shipping using this shipping method, excluding tax. |
-| `price_incl_tax` - [`Money!`](types-k-p.md#money) | The cost of shipping using this shipping method, including tax. |
+| `price_excl_tax` - [`Money!`](/reference/graphql/2-4-6/types-k-p.md#money) | The cost of shipping using this shipping method, excluding tax. |
+| `price_incl_tax` - [`Money!`](/reference/graphql/2-4-6/types-k-p.md#money) | The cost of shipping using this shipping method, including tax. |
 
 #### Example
 
@@ -1540,7 +1537,7 @@ Defines the referenced product and the email sender and recipients.
 
 | Input Field | Description |
 |-------------|-------------|
-| `product_id` - [`Int!`](types-f-i.md#int) | The ID of the product that the sender is referencing. |
+| `product_id` - [`Int!`](/reference/graphql/2-4-6/types-f-i.md#int) | The ID of the product that the sender is referencing. |
 | `recipients` - [`[SendEmailToFriendRecipientInput]!`](#sendemailtofriendrecipientinput) | An array containing information about each recipient. |
 | `sender` - [`SendEmailToFriendSenderInput!`](#sendemailtofriendsenderinput) | Information about the customer and the content of the message. |
 
@@ -1593,8 +1590,8 @@ An output object that contains information about the recipient.
 
 ```json
 {
-  "email": "abc123",
-  "name": "abc123"
+  "email": "xyz789",
+  "name": "xyz789"
 }
 ```
 
@@ -1616,7 +1613,7 @@ Contains details about a recipient.
 ```json
 {
   "email": "abc123",
-  "name": "abc123"
+  "name": "xyz789"
 }
 ```
 
@@ -1639,8 +1636,8 @@ An output object that contains information about the sender.
 ```json
 {
   "email": "xyz789",
-  "message": "abc123",
-  "name": "xyz789"
+  "message": "xyz789",
+  "name": "abc123"
 }
 ```
 
@@ -1678,13 +1675,13 @@ Contains details about the configuration of the Email to a Friend feature.
 
 | Field Name | Description |
 |------------|-------------|
-| `enabled_for_customers` - [`Boolean!`](types-a-b.md#boolean) | Indicates whether the Email to a Friend feature is enabled. |
-| `enabled_for_guests` - [`Boolean!`](types-a-b.md#boolean) | Indicates whether the Email to a Friend feature is enabled for guests. |
+| `enabled_for_customers` - [`Boolean!`](/reference/graphql/2-4-6/types-a-b.md#boolean) | Indicates whether the Email to a Friend feature is enabled. |
+| `enabled_for_guests` - [`Boolean!`](/reference/graphql/2-4-6/types-a-b.md#boolean) | Indicates whether the Email to a Friend feature is enabled for guests. |
 
 #### Example
 
 ```json
-{"enabled_for_customers": true, "enabled_for_guests": true}
+{"enabled_for_customers": false, "enabled_for_guests": false}
 ```
 
 <HorizontalLine />
@@ -1697,8 +1694,8 @@ Specifies which negotiable quote to send for review.
 
 | Input Field | Description |
 |-------------|-------------|
-| `comment` - [`NegotiableQuoteCommentInput`](types-k-p.md#negotiablequotecommentinput) | A comment for the seller to review. |
-| `quote_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
+| `comment` - [`NegotiableQuoteCommentInput`](/reference/graphql/2-4-6/types-k-p.md#negotiablequotecommentinput) | A comment for the seller to review. |
+| `quote_uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
 
 #### Example
 
@@ -1716,7 +1713,7 @@ Contains the negotiable quote.
 
 | Field Name | Description |
 |------------|-------------|
-| `quote` - [`NegotiableQuote`](types-k-p.md#negotiablequote) | The negotiable quote after sending for seller review. |
+| `quote` - [`NegotiableQuote`](/reference/graphql/2-4-6/types-k-p.md#negotiablequote) | The negotiable quote after sending for seller review. |
 
 #### Example
 
@@ -1734,7 +1731,7 @@ Sets the billing address.
 
 | Input Field | Description |
 |-------------|-------------|
-| `billing_address` - [`BillingAddressInput!`](types-a-b.md#billingaddressinput) | The billing address. |
+| `billing_address` - [`BillingAddressInput!`](/reference/graphql/2-4-6/types-a-b.md#billingaddressinput) | The billing address. |
 | `cart_id` - [`String!`](#string) | The unique ID of a `Cart` object. |
 
 #### Example
@@ -1742,7 +1739,7 @@ Sets the billing address.
 ```json
 {
   "billing_address": BillingAddressInput,
-  "cart_id": "abc123"
+  "cart_id": "xyz789"
 }
 ```
 
@@ -1756,7 +1753,7 @@ Contains details about the cart after setting the billing address.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart!`](types-c-e.md#cart) | The cart after setting the billing address. |
+| `cart` - [`Cart!`](/reference/graphql/2-4-6/types-c-e.md#cart) | The cart after setting the billing address. |
 
 #### Example
 
@@ -1775,20 +1772,20 @@ Defines the gift options applied to the cart.
 | Input Field | Description |
 |-------------|-------------|
 | `cart_id` - [`String!`](#string) | The unique ID that identifies the shopper's cart. |
-| `gift_message` - [`GiftMessageInput`](types-f-i.md#giftmessageinput) | Gift message details for the cart. |
-| `gift_receipt_included` - [`Boolean!`](types-a-b.md#boolean) | Whether customer requested gift receipt for the cart. |
-| `gift_wrapping_id` - [`ID`](types-f-i.md#id) | The unique ID for a `GiftWrapping` object to be used for the cart. |
-| `printed_card_included` - [`Boolean!`](types-a-b.md#boolean) | Whether customer requested printed card for the cart. |
+| `gift_message` - [`GiftMessageInput`](/reference/graphql/2-4-6/types-f-i.md#giftmessageinput) | Gift message details for the cart. |
+| `gift_receipt_included` - [`Boolean!`](/reference/graphql/2-4-6/types-a-b.md#boolean) | Whether customer requested gift receipt for the cart. |
+| `gift_wrapping_id` - [`ID`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for a `GiftWrapping` object to be used for the cart. |
+| `printed_card_included` - [`Boolean!`](/reference/graphql/2-4-6/types-a-b.md#boolean) | Whether customer requested printed card for the cart. |
 
 #### Example
 
 ```json
 {
-  "cart_id": "xyz789",
+  "cart_id": "abc123",
   "gift_message": GiftMessageInput,
   "gift_receipt_included": false,
-  "gift_wrapping_id": 4,
-  "printed_card_included": false
+  "gift_wrapping_id": "4",
+  "printed_card_included": true
 }
 ```
 
@@ -1802,7 +1799,7 @@ Contains the cart after gift options have been applied.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart!`](types-c-e.md#cart) | The modified cart object. |
+| `cart` - [`Cart!`](/reference/graphql/2-4-6/types-c-e.md#cart) | The modified cart object. |
 
 #### Example
 
@@ -1842,7 +1839,7 @@ Contains details about the cart after setting the email of a guest.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart!`](types-c-e.md#cart) | The cart after setting the guest email. |
+| `cart` - [`Cart!`](/reference/graphql/2-4-6/types-c-e.md#cart) | The cart after setting the guest email. |
 
 #### Example
 
@@ -1860,15 +1857,15 @@ Sets the billing address.
 
 | Input Field | Description |
 |-------------|-------------|
-| `billing_address` - [`NegotiableQuoteBillingAddressInput!`](types-k-p.md#negotiablequotebillingaddressinput) | The billing address to be added. |
-| `quote_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
+| `billing_address` - [`NegotiableQuoteBillingAddressInput!`](/reference/graphql/2-4-6/types-k-p.md#negotiablequotebillingaddressinput) | The billing address to be added. |
+| `quote_uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
 
 #### Example
 
 ```json
 {
   "billing_address": NegotiableQuoteBillingAddressInput,
-  "quote_uid": "4"
+  "quote_uid": 4
 }
 ```
 
@@ -1882,7 +1879,7 @@ Contains the negotiable quote.
 
 | Field Name | Description |
 |------------|-------------|
-| `quote` - [`NegotiableQuote`](types-k-p.md#negotiablequote) | The negotiable quote after assigning a billing address. |
+| `quote` - [`NegotiableQuote`](/reference/graphql/2-4-6/types-k-p.md#negotiablequote) | The negotiable quote after assigning a billing address. |
 
 #### Example
 
@@ -1900,8 +1897,8 @@ Defines the payment method of the specified negotiable quote.
 
 | Input Field | Description |
 |-------------|-------------|
-| `payment_method` - [`NegotiableQuotePaymentMethodInput!`](types-k-p.md#negotiablequotepaymentmethodinput) | The payment method to be assigned to the negotiable quote. |
-| `quote_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
+| `payment_method` - [`NegotiableQuotePaymentMethodInput!`](/reference/graphql/2-4-6/types-k-p.md#negotiablequotepaymentmethodinput) | The payment method to be assigned to the negotiable quote. |
+| `quote_uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
 
 #### Example
 
@@ -1922,7 +1919,7 @@ Contains details about the negotiable quote after setting the payment method.
 
 | Field Name | Description |
 |------------|-------------|
-| `quote` - [`NegotiableQuote`](types-k-p.md#negotiablequote) | The updated negotiable quote. |
+| `quote` - [`NegotiableQuote`](/reference/graphql/2-4-6/types-k-p.md#negotiablequote) | The updated negotiable quote. |
 
 #### Example
 
@@ -1940,15 +1937,15 @@ Defines the shipping address to assign to the negotiable quote.
 
 | Input Field | Description |
 |-------------|-------------|
-| `customer_address_id` - [`ID`](types-f-i.md#id) | The unique ID of a `CustomerAddress` object. |
-| `quote_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
-| `shipping_addresses` - [`[NegotiableQuoteShippingAddressInput]`](types-k-p.md#negotiablequoteshippingaddressinput) | An array of shipping addresses to apply to the negotiable quote. |
+| `customer_address_id` - [`ID`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID of a `CustomerAddress` object. |
+| `quote_uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
+| `shipping_addresses` - [`[NegotiableQuoteShippingAddressInput]`](/reference/graphql/2-4-6/types-k-p.md#negotiablequoteshippingaddressinput) | An array of shipping addresses to apply to the negotiable quote. |
 
 #### Example
 
 ```json
 {
-  "customer_address_id": 4,
+  "customer_address_id": "4",
   "quote_uid": "4",
   "shipping_addresses": [
     NegotiableQuoteShippingAddressInput
@@ -1966,7 +1963,7 @@ Contains the negotiable quote.
 
 | Field Name | Description |
 |------------|-------------|
-| `quote` - [`NegotiableQuote`](types-k-p.md#negotiablequote) | The negotiable quote after assigning a shipping address. |
+| `quote` - [`NegotiableQuote`](/reference/graphql/2-4-6/types-k-p.md#negotiablequote) | The negotiable quote after assigning a shipping address. |
 
 #### Example
 
@@ -1984,14 +1981,14 @@ Defines the shipping method to apply to the negotiable quote.
 
 | Input Field | Description |
 |-------------|-------------|
-| `quote_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
+| `quote_uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
 | `shipping_methods` - [`[ShippingMethodInput]!`](#shippingmethodinput) | An array of shipping methods to apply to the negotiable quote. |
 
 #### Example
 
 ```json
 {
-  "quote_uid": 4,
+  "quote_uid": "4",
   "shipping_methods": [ShippingMethodInput]
 }
 ```
@@ -2006,7 +2003,7 @@ Contains the negotiable quote.
 
 | Field Name | Description |
 |------------|-------------|
-| `quote` - [`NegotiableQuote`](types-k-p.md#negotiablequote) | The negotiable quote after applying shipping methods. |
+| `quote` - [`NegotiableQuote`](/reference/graphql/2-4-6/types-k-p.md#negotiablequote) | The negotiable quote after applying shipping methods. |
 
 #### Example
 
@@ -2025,7 +2022,7 @@ Applies a payment method to the quote.
 | Input Field | Description |
 |-------------|-------------|
 | `cart_id` - [`String!`](#string) | The unique ID of a `Cart` object. |
-| `payment_method` - [`PaymentMethodInput!`](types-k-p.md#paymentmethodinput) | The payment method data to apply to the cart. |
+| `payment_method` - [`PaymentMethodInput!`](/reference/graphql/2-4-6/types-k-p.md#paymentmethodinput) | The payment method data to apply to the cart. |
 
 #### Example
 
@@ -2047,7 +2044,7 @@ Applies a payment method to the cart.
 | Input Field | Description |
 |-------------|-------------|
 | `cart_id` - [`String!`](#string) | The unique ID of a `Cart` object. |
-| `payment_method` - [`PaymentMethodInput!`](types-k-p.md#paymentmethodinput) | The payment method data to apply to the cart. |
+| `payment_method` - [`PaymentMethodInput!`](/reference/graphql/2-4-6/types-k-p.md#paymentmethodinput) | The payment method data to apply to the cart. |
 
 #### Example
 
@@ -2068,7 +2065,7 @@ Contains details about the cart after setting the payment method.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart!`](types-c-e.md#cart) | The cart after setting the payment method. |
+| `cart` - [`Cart!`](/reference/graphql/2-4-6/types-c-e.md#cart) | The cart after setting the payment method. |
 
 #### Example
 
@@ -2108,7 +2105,7 @@ Contains details about the cart after setting the shipping addresses.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart!`](types-c-e.md#cart) | The cart after setting the shipping addresses. |
+| `cart` - [`Cart!`](/reference/graphql/2-4-6/types-c-e.md#cart) | The cart after setting the shipping addresses. |
 
 #### Example
 
@@ -2133,7 +2130,7 @@ Applies one or shipping methods to the cart.
 
 ```json
 {
-  "cart_id": "xyz789",
+  "cart_id": "abc123",
   "shipping_methods": [ShippingMethodInput]
 }
 ```
@@ -2148,7 +2145,7 @@ Contains details about the cart after setting the shipping methods.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart!`](types-c-e.md#cart) | The cart after setting the shipping methods. |
+| `cart` - [`Cart!`](/reference/graphql/2-4-6/types-c-e.md#cart) | The cart after setting the shipping methods. |
 
 #### Example
 
@@ -2173,8 +2170,8 @@ Defines a gift registry invitee.
 
 ```json
 {
-  "email": "xyz789",
-  "name": "xyz789"
+  "email": "abc123",
+  "name": "abc123"
 }
 ```
 
@@ -2188,7 +2185,7 @@ Contains the results of a request to share a gift registry.
 
 | Field Name | Description |
 |------------|-------------|
-| `is_shared` - [`Boolean!`](types-a-b.md#boolean) | Indicates whether the gift registry was successfully shared. |
+| `is_shared` - [`Boolean!`](/reference/graphql/2-4-6/types-a-b.md#boolean) | Indicates whether the gift registry was successfully shared. |
 
 #### Example
 
@@ -2214,7 +2211,7 @@ Defines the sender of an invitation to view a gift registry.
 ```json
 {
   "message": "xyz789",
-  "name": "xyz789"
+  "name": "abc123"
 }
 ```
 
@@ -2245,12 +2242,12 @@ Defines whether bundle items must be shipped together.
 
 | Field Name | Description |
 |------------|-------------|
-| `id` - [`ID!`](types-f-i.md#id) | The unique ID for a `ShipmentItemInterface` object. |
-| `order_item` - [`OrderItemInterface`](types-k-p.md#orderiteminterface) | The order item associated with the shipment item. |
+| `id` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for a `ShipmentItemInterface` object. |
+| `order_item` - [`OrderItemInterface`](/reference/graphql/2-4-6/types-k-p.md#orderiteminterface) | The order item associated with the shipment item. |
 | `product_name` - [`String`](#string) | The name of the base product. |
-| `product_sale_price` - [`Money!`](types-k-p.md#money) | The sale price for the base product. |
+| `product_sale_price` - [`Money!`](/reference/graphql/2-4-6/types-k-p.md#money) | The sale price for the base product. |
 | `product_sku` - [`String!`](#string) | The SKU of the base product. |
-| `quantity_shipped` - [`Float!`](types-f-i.md#float) | The number of shipped items. |
+| `quantity_shipped` - [`Float!`](/reference/graphql/2-4-6/types-f-i.md#float) | The number of shipped items. |
 
 #### Example
 
@@ -2258,7 +2255,7 @@ Defines whether bundle items must be shipped together.
 {
   "id": 4,
   "order_item": OrderItemInterface,
-  "product_name": "xyz789",
+  "product_name": "abc123",
   "product_sale_price": Money,
   "product_sku": "abc123",
   "quantity_shipped": 987.65
@@ -2275,19 +2272,19 @@ Order shipment item details.
 
 | Field Name | Description |
 |------------|-------------|
-| `id` - [`ID!`](types-f-i.md#id) | The unique ID for a `ShipmentItemInterface` object. |
-| `order_item` - [`OrderItemInterface`](types-k-p.md#orderiteminterface) | The order item associated with the shipment item. |
+| `id` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for a `ShipmentItemInterface` object. |
+| `order_item` - [`OrderItemInterface`](/reference/graphql/2-4-6/types-k-p.md#orderiteminterface) | The order item associated with the shipment item. |
 | `product_name` - [`String`](#string) | The name of the base product. |
-| `product_sale_price` - [`Money!`](types-k-p.md#money) | The sale price for the base product. |
+| `product_sale_price` - [`Money!`](/reference/graphql/2-4-6/types-k-p.md#money) | The sale price for the base product. |
 | `product_sku` - [`String!`](#string) | The SKU of the base product. |
-| `quantity_shipped` - [`Float!`](types-f-i.md#float) | The number of shipped items. |
+| `quantity_shipped` - [`Float!`](/reference/graphql/2-4-6/types-f-i.md#float) | The number of shipped items. |
 
 #### Possible Types
 
 | ShipmentItemInterface Types |
 |----------------|
-| [`BundleShipmentItem`](types-a-b.md#bundleshipmentitem) |
-| [`GiftCardShipmentItem`](types-f-i.md#giftcardshipmentitem) |
+| [`BundleShipmentItem`](/reference/graphql/2-4-6/types-a-b.md#bundleshipmentitem) |
+| [`GiftCardShipmentItem`](/reference/graphql/2-4-6/types-f-i.md#giftcardshipmentitem) |
 | [`ShipmentItem`](#shipmentitem) |
 
 #### Example
@@ -2298,8 +2295,8 @@ Order shipment item details.
   "order_item": OrderItemInterface,
   "product_name": "xyz789",
   "product_sale_price": Money,
-  "product_sku": "abc123",
-  "quantity_shipped": 123.45
+  "product_sku": "xyz789",
+  "quantity_shipped": 987.65
 }
 ```
 
@@ -2321,7 +2318,7 @@ Contains order shipment tracking details.
 
 ```json
 {
-  "carrier": "xyz789",
+  "carrier": "abc123",
   "number": "xyz789",
   "title": "abc123"
 }
@@ -2337,8 +2334,8 @@ Defines a single shipping address.
 
 | Input Field | Description |
 |-------------|-------------|
-| `address` - [`CartAddressInput`](types-c-e.md#cartaddressinput) | Defines a shipping address. |
-| `customer_address_id` - [`Int`](types-f-i.md#int) | An ID from the customer's address book that uniquely identifies the address to be used for shipping. |
+| `address` - [`CartAddressInput`](/reference/graphql/2-4-6/types-c-e.md#cartaddressinput) | Defines a shipping address. |
+| `customer_address_id` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | An ID from the customer's address book that uniquely identifies the address to be used for shipping. |
 | `customer_notes` - [`String`](#string) | Text provided by the shopper. |
 | `pickup_location_code` - [`String`](#string) | The code of Pickup Location which will be used for In-Store Pickup. |
 
@@ -2348,7 +2345,7 @@ Defines a single shipping address.
 {
   "address": CartAddressInput,
   "customer_address_id": 123,
-  "customer_notes": "abc123",
+  "customer_notes": "xyz789",
   "pickup_location_code": "abc123"
 }
 ```
@@ -2363,19 +2360,19 @@ Contains shipping addresses and methods.
 
 | Field Name | Description |
 |------------|-------------|
-| `available_shipping_methods` - [`[AvailableShippingMethod]`](types-a-b.md#availableshippingmethod) | An array that lists the shipping methods that can be applied to the cart. |
-| `cart_items` - [`[CartItemQuantity]`](types-c-e.md#cartitemquantity) |  *(Deprecated: Use `cart_items_v2` instead.)* |
-| `cart_items_v2` - [`[CartItemInterface]`](types-c-e.md#cartiteminterface) | An array that lists the items in the cart. |
+| `available_shipping_methods` - [`[AvailableShippingMethod]`](/reference/graphql/2-4-6/types-a-b.md#availableshippingmethod) | An array that lists the shipping methods that can be applied to the cart. |
+| `cart_items` - [`[CartItemQuantity]`](/reference/graphql/2-4-6/types-c-e.md#cartitemquantity) |  *(Deprecated: Use `cart_items_v2` instead.)* |
+| `cart_items_v2` - [`[CartItemInterface]`](/reference/graphql/2-4-6/types-c-e.md#cartiteminterface) | An array that lists the items in the cart. |
 | `city` - [`String!`](#string) | The city specified for the billing or shipping address. |
 | `company` - [`String`](#string) | The company specified for the billing or shipping address. |
-| `country` - [`CartAddressCountry!`](types-c-e.md#cartaddresscountry) | An object containing the country label and code. |
+| `country` - [`CartAddressCountry!`](/reference/graphql/2-4-6/types-c-e.md#cartaddresscountry) | An object containing the country label and code. |
 | `customer_notes` - [`String`](#string) | Text provided by the shopper. |
 | `firstname` - [`String!`](#string) | The first name of the customer or guest. |
-| `items_weight` - [`Float`](types-f-i.md#float) |  *(Deprecated: This information should not be exposed on the frontend.)* |
+| `items_weight` - [`Float`](/reference/graphql/2-4-6/types-f-i.md#float) |  *(Deprecated: This information should not be exposed on the frontend.)* |
 | `lastname` - [`String!`](#string) | The last name of the customer or guest. |
 | `pickup_location_code` - [`String`](#string) |  |
 | `postcode` - [`String`](#string) | The ZIP or postal code of the billing or shipping address. |
-| `region` - [`CartAddressRegion`](types-c-e.md#cartaddressregion) | An object containing the region label and code. |
+| `region` - [`CartAddressRegion`](/reference/graphql/2-4-6/types-c-e.md#cartaddressregion) | An object containing the region label and code. |
 | `selected_shipping_method` - [`SelectedShippingMethod`](#selectedshippingmethod) | An object that describes the selected shipping method. |
 | `street` - [`[String]!`](#string) | An array containing the street for the billing or shipping address. |
 | `telephone` - [`String`](#string) | The telephone number for the billing or shipping address. |
@@ -2390,20 +2387,20 @@ Contains shipping addresses and methods.
   "cart_items": [CartItemQuantity],
   "cart_items_v2": [CartItemInterface],
   "city": "abc123",
-  "company": "xyz789",
+  "company": "abc123",
   "country": CartAddressCountry,
-  "customer_notes": "abc123",
-  "firstname": "xyz789",
+  "customer_notes": "xyz789",
+  "firstname": "abc123",
   "items_weight": 123.45,
   "lastname": "abc123",
-  "pickup_location_code": "abc123",
+  "pickup_location_code": "xyz789",
   "postcode": "xyz789",
   "region": CartAddressRegion,
   "selected_shipping_method": SelectedShippingMethod,
   "street": ["abc123"],
   "telephone": "xyz789",
   "uid": "xyz789",
-  "vat_id": "xyz789"
+  "vat_id": "abc123"
 }
 ```
 
@@ -2417,7 +2414,7 @@ Defines an individual shipping discount. This discount can be applied to shippin
 
 | Field Name | Description |
 |------------|-------------|
-| `amount` - [`Money!`](types-k-p.md#money) | The amount of the discount. |
+| `amount` - [`Money!`](/reference/graphql/2-4-6/types-k-p.md#money) | The amount of the discount. |
 
 #### Example
 
@@ -2435,11 +2432,11 @@ Contains details about shipping and handling costs.
 
 | Field Name | Description |
 |------------|-------------|
-| `amount_excluding_tax` - [`Money`](types-k-p.md#money) | The shipping amount, excluding tax. |
-| `amount_including_tax` - [`Money`](types-k-p.md#money) | The shipping amount, including tax. |
+| `amount_excluding_tax` - [`Money`](/reference/graphql/2-4-6/types-k-p.md#money) | The shipping amount, excluding tax. |
+| `amount_including_tax` - [`Money`](/reference/graphql/2-4-6/types-k-p.md#money) | The shipping amount, including tax. |
 | `discounts` - [`[ShippingDiscount]`](#shippingdiscount) | The applied discounts to the shipping. |
-| `taxes` - [`[TaxItem]`](types-t-z.md#taxitem) | Details about taxes applied for shipping. |
-| `total_amount` - [`Money!`](types-k-p.md#money) | The total amount for shipping. |
+| `taxes` - [`[TaxItem]`](/reference/graphql/2-4-6/types-t-z.md#taxitem) | Details about taxes applied for shipping. |
+| `total_amount` - [`Money!`](/reference/graphql/2-4-6/types-k-p.md#money) | The total amount for shipping. |
 
 #### Example
 
@@ -2470,7 +2467,7 @@ Defines the shipping carrier and method.
 
 ```json
 {
-  "carrier_code": "xyz789",
+  "carrier_code": "abc123",
   "method_code": "abc123"
 }
 ```
@@ -2485,16 +2482,16 @@ An implementation for simple product cart items.
 
 | Field Name | Description |
 |------------|-------------|
-| `available_gift_wrapping` - [`[GiftWrapping]!`](types-f-i.md#giftwrapping) | The list of available gift wrapping options for the cart item. |
+| `available_gift_wrapping` - [`[GiftWrapping]!`](/reference/graphql/2-4-6/types-f-i.md#giftwrapping) | The list of available gift wrapping options for the cart item. |
 | `customizable_options` - [`[SelectedCustomizableOption]!`](#selectedcustomizableoption) | An array containing the customizable options the shopper selected. |
-| `errors` - [`[CartItemError]`](types-c-e.md#cartitemerror) | An array of errors encountered while loading the cart item |
-| `gift_message` - [`GiftMessage`](types-f-i.md#giftmessage) | The entered gift message for the cart item |
-| `gift_wrapping` - [`GiftWrapping`](types-f-i.md#giftwrapping) | The selected gift wrapping for the cart item. |
+| `errors` - [`[CartItemError]`](/reference/graphql/2-4-6/types-c-e.md#cartitemerror) | An array of errors encountered while loading the cart item |
+| `gift_message` - [`GiftMessage`](/reference/graphql/2-4-6/types-f-i.md#giftmessage) | The entered gift message for the cart item |
+| `gift_wrapping` - [`GiftWrapping`](/reference/graphql/2-4-6/types-f-i.md#giftwrapping) | The selected gift wrapping for the cart item. |
 | `id` - [`String!`](#string) |  *(Deprecated: Use `uid` instead.)* |
-| `prices` - [`CartItemPrices`](types-c-e.md#cartitemprices) | Contains details about the price of the item, including taxes and discounts. |
-| `product` - [`ProductInterface!`](types-k-p.md#productinterface) | Details about an item in the cart. |
-| `quantity` - [`Float!`](types-f-i.md#float) | The quantity of this item in the cart. |
-| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `CartItemInterface` object. |
+| `prices` - [`CartItemPrices`](/reference/graphql/2-4-6/types-c-e.md#cartitemprices) | Contains details about the price of the item, including taxes and discounts. |
+| `product` - [`ProductInterface!`](/reference/graphql/2-4-6/types-k-p.md#productinterface) | Details about an item in the cart. |
+| `quantity` - [`Float!`](/reference/graphql/2-4-6/types-f-i.md#float) | The quantity of this item in the cart. |
+| `uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for a `CartItemInterface` object. |
 
 #### Example
 
@@ -2508,8 +2505,8 @@ An implementation for simple product cart items.
   "id": "abc123",
   "prices": CartItemPrices,
   "product": ProductInterface,
-  "quantity": 123.45,
-  "uid": 4
+  "quantity": 987.65,
+  "uid": "4"
 }
 ```
 
@@ -2524,83 +2521,83 @@ Defines a simple product, which is tangible and is usually sold in single units 
 | Field Name | Description |
 |------------|-------------|
 | `activity` - [`String`](#string) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
-| `attribute_set_id` - [`Int`](types-f-i.md#int) | The attribute set assigned to the product. *(Deprecated: The field should not be used on the storefront.)* |
+| `attribute_set_id` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | The attribute set assigned to the product. *(Deprecated: The field should not be used on the storefront.)* |
 | `canonical_url` - [`String`](#string) | The relative canonical URL. This value is returned only if the system setting 'Use Canonical Link Meta Tag For Products' is enabled. |
-| `categories` - [`[CategoryInterface]`](types-c-e.md#categoryinterface) | The categories assigned to a product. |
+| `categories` - [`[CategoryInterface]`](/reference/graphql/2-4-6/types-c-e.md#categoryinterface) | The categories assigned to a product. |
 | `category_gear` - [`String`](#string) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
 | `climate` - [`String`](#string) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
 | `collar` - [`String`](#string) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
-| `color` - [`Int`](types-f-i.md#int) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
+| `color` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
 | `country_of_manufacture` - [`String`](#string) | The product's country of origin. |
 | `created_at` - [`String`](#string) | Timestamp indicating when the product was created. *(Deprecated: The field should not be used on the storefront.)* |
-| `crosssell_products` - [`[ProductInterface]`](types-k-p.md#productinterface) | An array of cross-sell products. |
-| `description` - [`ComplexTextValue`](types-c-e.md#complextextvalue) | Detailed information about the product. The value can include simple HTML tags. |
-| `eco_collection` - [`Int`](types-f-i.md#int) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
-| `erin_recommends` - [`Int`](types-f-i.md#int) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
+| `crosssell_products` - [`[ProductInterface]`](/reference/graphql/2-4-6/types-k-p.md#productinterface) | An array of cross-sell products. |
+| `description` - [`ComplexTextValue`](/reference/graphql/2-4-6/types-c-e.md#complextextvalue) | Detailed information about the product. The value can include simple HTML tags. |
+| `eco_collection` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
+| `erin_recommends` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
 | `features_bags` - [`String`](#string) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
-| `format` - [`Int`](types-f-i.md#int) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
+| `format` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
 | `gender` - [`String`](#string) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
 | `gift_message_available` - [`String`](#string) | Indicates whether a gift message is available. |
-| `id` - [`Int`](types-f-i.md#int) | The ID number assigned to the product. *(Deprecated: Use the `uid` field instead.)* |
-| `image` - [`ProductImage`](types-k-p.md#productimage) | The relative path to the main image on the product page. |
+| `id` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | The ID number assigned to the product. *(Deprecated: Use the `uid` field instead.)* |
+| `image` - [`ProductImage`](/reference/graphql/2-4-6/types-k-p.md#productimage) | The relative path to the main image on the product page. |
 | `is_returnable` - [`String`](#string) | Indicates whether the product can be returned. |
-| `manufacturer` - [`Int`](types-f-i.md#int) | A number representing the product's manufacturer. *(Deprecated: Use the `custom_attributes` field instead.)* |
+| `manufacturer` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | A number representing the product's manufacturer. *(Deprecated: Use the `custom_attributes` field instead.)* |
 | `material` - [`String`](#string) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
-| `media_gallery` - [`[MediaGalleryInterface]`](types-k-p.md#mediagalleryinterface) | An array of media gallery objects. |
-| `media_gallery_entries` - [`[MediaGalleryEntry]`](types-k-p.md#mediagalleryentry) | An array of MediaGalleryEntry objects. *(Deprecated: Use `media_gallery` instead.)* |
+| `media_gallery` - [`[MediaGalleryInterface]`](/reference/graphql/2-4-6/types-k-p.md#mediagalleryinterface) | An array of media gallery objects. |
+| `media_gallery_entries` - [`[MediaGalleryEntry]`](/reference/graphql/2-4-6/types-k-p.md#mediagalleryentry) | An array of MediaGalleryEntry objects. *(Deprecated: Use `media_gallery` instead.)* |
 | `meta_description` - [`String`](#string) | A brief overview of the product for search results listings, maximum 255 characters. |
 | `meta_keyword` - [`String`](#string) | A comma-separated list of keywords that are visible only to search engines. |
 | `meta_title` - [`String`](#string) | A string that is displayed in the title bar and tab of the browser and in search results lists. |
 | `name` - [`String`](#string) | The product name. Customers use this name to identify the product. |
-| `new` - [`Int`](types-f-i.md#int) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
+| `new` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
 | `new_from_date` - [`String`](#string) | The beginning date for new product listings, and determines if the product is featured as a new product. |
 | `new_to_date` - [`String`](#string) | The end date for new product listings. |
-| `only_x_left_in_stock` - [`Float`](types-f-i.md#float) | Product stock only x left count |
-| `options` - [`[CustomizableOptionInterface]`](types-c-e.md#customizableoptioninterface) | An array of options for a customizable product. |
+| `only_x_left_in_stock` - [`Float`](/reference/graphql/2-4-6/types-f-i.md#float) | Product stock only x left count |
+| `options` - [`[CustomizableOptionInterface]`](/reference/graphql/2-4-6/types-c-e.md#customizableoptioninterface) | An array of options for a customizable product. |
 | `options_container` - [`String`](#string) | If the product has multiple options, determines where they appear on the product page. |
 | `pattern` - [`String`](#string) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
-| `performance_fabric` - [`Int`](types-f-i.md#int) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
-| `price` - [`ProductPrices`](types-k-p.md#productprices) | Indicates the price of an item. *(Deprecated: Use `price_range` for product price information.)* |
-| `price_range` - [`PriceRange!`](types-k-p.md#pricerange) | The range of prices for the product |
-| `price_tiers` - [`[TierPrice]`](types-t-z.md#tierprice) | An array of `TierPrice` objects. |
-| `product_links` - [`[ProductLinksInterface]`](types-k-p.md#productlinksinterface) | An array of `ProductLinks` objects. |
-| `purpose` - [`Int`](types-f-i.md#int) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
-| `rating_summary` - [`Float!`](types-f-i.md#float) | The average of all the ratings given to the product. |
-| `redirect_code` - [`Int!`](types-f-i.md#int) | Contains 0 when there is no redirect error. A value of 301 indicates the URL of the requested resource has been changed permanently, while a value of 302 indicates a temporary redirect. |
-| `related_products` - [`[ProductInterface]`](types-k-p.md#productinterface) | An array of related products. |
+| `performance_fabric` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
+| `price` - [`ProductPrices`](/reference/graphql/2-4-6/types-k-p.md#productprices) | Indicates the price of an item. *(Deprecated: Use `price_range` for product price information.)* |
+| `price_range` - [`PriceRange!`](/reference/graphql/2-4-6/types-k-p.md#pricerange) | The range of prices for the product |
+| `price_tiers` - [`[TierPrice]`](/reference/graphql/2-4-6/types-t-z.md#tierprice) | An array of `TierPrice` objects. |
+| `product_links` - [`[ProductLinksInterface]`](/reference/graphql/2-4-6/types-k-p.md#productlinksinterface) | An array of `ProductLinks` objects. |
+| `purpose` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
+| `rating_summary` - [`Float!`](/reference/graphql/2-4-6/types-f-i.md#float) | The average of all the ratings given to the product. |
+| `redirect_code` - [`Int!`](/reference/graphql/2-4-6/types-f-i.md#int) | Contains 0 when there is no redirect error. A value of 301 indicates the URL of the requested resource has been changed permanently, while a value of 302 indicates a temporary redirect. |
+| `related_products` - [`[ProductInterface]`](/reference/graphql/2-4-6/types-k-p.md#productinterface) | An array of related products. |
 | `relative_url` - [`String`](#string) | The internal relative URL. If the specified URL is a redirect, the query returns the redirected URL, not the original. |
-| `review_count` - [`Int!`](types-f-i.md#int) | The total count of all the reviews given to the product. |
-| `reviews` - [`ProductReviews!`](types-k-p.md#productreviews) | The list of products reviews. |
-| `sale` - [`Int`](types-f-i.md#int) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
-| `short_description` - [`ComplexTextValue`](types-c-e.md#complextextvalue) | A short description of the product. Its use depends on the theme. |
-| `size` - [`Int`](types-f-i.md#int) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
+| `review_count` - [`Int!`](/reference/graphql/2-4-6/types-f-i.md#int) | The total count of all the reviews given to the product. |
+| `reviews` - [`ProductReviews!`](/reference/graphql/2-4-6/types-k-p.md#productreviews) | The list of products reviews. |
+| `sale` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
+| `short_description` - [`ComplexTextValue`](/reference/graphql/2-4-6/types-c-e.md#complextextvalue) | A short description of the product. Its use depends on the theme. |
+| `size` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
 | `sku` - [`String`](#string) | A number or code assigned to a product to identify the product, options, price, and manufacturer. |
 | `sleeve` - [`String`](#string) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
-| `small_image` - [`ProductImage`](types-k-p.md#productimage) | The relative path to the small image, which is used on catalog pages. |
+| `small_image` - [`ProductImage`](/reference/graphql/2-4-6/types-k-p.md#productimage) | The relative path to the small image, which is used on catalog pages. |
 | `special_from_date` - [`String`](#string) | The beginning date that a product has a special price. *(Deprecated: The field should not be used on the storefront.)* |
-| `special_price` - [`Float`](types-f-i.md#float) | The discounted price of the product. |
+| `special_price` - [`Float`](/reference/graphql/2-4-6/types-f-i.md#float) | The discounted price of the product. |
 | `special_to_date` - [`String`](#string) | The end date for a product with a special price. |
-| `staged` - [`Boolean!`](types-a-b.md#boolean) | Indicates whether the product is staged for a future campaign. |
-| `stock_status` - [`ProductStockStatus`](types-k-p.md#productstockstatus) | Stock status of the product |
+| `staged` - [`Boolean!`](/reference/graphql/2-4-6/types-a-b.md#boolean) | Indicates whether the product is staged for a future campaign. |
+| `stock_status` - [`ProductStockStatus`](/reference/graphql/2-4-6/types-k-p.md#productstockstatus) | Stock status of the product |
 | `strap_bags` - [`String`](#string) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
 | `style_bags` - [`String`](#string) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
 | `style_bottom` - [`String`](#string) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
 | `style_general` - [`String`](#string) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
 | `swatch_image` - [`String`](#string) | The file name of a swatch image. |
-| `thumbnail` - [`ProductImage`](types-k-p.md#productimage) | The relative path to the product's thumbnail image. |
-| `tier_price` - [`Float`](types-f-i.md#float) | The price when tier pricing is in effect and the items purchased threshold has been reached. *(Deprecated: Use `price_tiers` for product tier price information.)* |
-| `tier_prices` - [`[ProductTierPrices]`](types-k-p.md#producttierprices) | An array of ProductTierPrices objects. *(Deprecated: Use `price_tiers` for product tier price information.)* |
-| `type` - [`UrlRewriteEntityTypeEnum`](types-t-z.md#urlrewriteentitytypeenum) | One of PRODUCT, CATEGORY, or CMS_PAGE. |
+| `thumbnail` - [`ProductImage`](/reference/graphql/2-4-6/types-k-p.md#productimage) | The relative path to the product's thumbnail image. |
+| `tier_price` - [`Float`](/reference/graphql/2-4-6/types-f-i.md#float) | The price when tier pricing is in effect and the items purchased threshold has been reached. *(Deprecated: Use `price_tiers` for product tier price information.)* |
+| `tier_prices` - [`[ProductTierPrices]`](/reference/graphql/2-4-6/types-k-p.md#producttierprices) | An array of ProductTierPrices objects. *(Deprecated: Use `price_tiers` for product tier price information.)* |
+| `type` - [`UrlRewriteEntityTypeEnum`](/reference/graphql/2-4-6/types-t-z.md#urlrewriteentitytypeenum) | One of PRODUCT, CATEGORY, or CMS_PAGE. |
 | `type_id` - [`String`](#string) | One of simple, virtual, bundle, downloadable, grouped, or configurable. *(Deprecated: Use `__typename` instead.)* |
-| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `ProductInterface` object. |
+| `uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for a `ProductInterface` object. |
 | `updated_at` - [`String`](#string) | Timestamp indicating when the product was updated. *(Deprecated: The field should not be used on the storefront.)* |
-| `upsell_products` - [`[ProductInterface]`](types-k-p.md#productinterface) | An array of up-sell products. |
+| `upsell_products` - [`[ProductInterface]`](/reference/graphql/2-4-6/types-k-p.md#productinterface) | An array of up-sell products. |
 | `url_key` - [`String`](#string) | The part of the URL that identifies the product |
 | `url_path` - [`String`](#string) |  *(Deprecated: Use product's `canonical_url` or url rewrites instead)* |
-| `url_rewrites` - [`[UrlRewrite]`](types-t-z.md#urlrewrite) | URL rewrites list |
+| `url_rewrites` - [`[UrlRewrite]`](/reference/graphql/2-4-6/types-t-z.md#urlrewrite) | URL rewrites list |
 | `url_suffix` - [`String`](#string) | The part of the product URL that is appended after the url key |
-| `websites` - [`[Website]`](types-t-z.md#website) | An array of websites in which the product is available. *(Deprecated: The field should not be used on the storefront.)* |
-| `weight` - [`Float`](types-f-i.md#float) | The weight of the item, in units defined by the store. |
+| `websites` - [`[Website]`](/reference/graphql/2-4-6/types-t-z.md#website) | An array of websites in which the product is available. *(Deprecated: The field should not be used on the storefront.)* |
+| `weight` - [`Float`](/reference/graphql/2-4-6/types-f-i.md#float) | The weight of the item, in units defined by the store. |
 
 #### Example
 
@@ -2608,18 +2605,18 @@ Defines a simple product, which is tangible and is usually sold in single units 
 {
   "activity": "xyz789",
   "attribute_set_id": 123,
-  "canonical_url": "abc123",
+  "canonical_url": "xyz789",
   "categories": [CategoryInterface],
-  "category_gear": "abc123",
-  "climate": "abc123",
-  "collar": "abc123",
+  "category_gear": "xyz789",
+  "climate": "xyz789",
+  "collar": "xyz789",
   "color": 987,
   "country_of_manufacture": "abc123",
   "created_at": "abc123",
   "crosssell_products": [ProductInterface],
   "description": ComplexTextValue,
-  "eco_collection": 987,
-  "erin_recommends": 987,
+  "eco_collection": 123,
+  "erin_recommends": 123,
   "features_bags": "abc123",
   "format": 987,
   "gender": "xyz789",
@@ -2627,46 +2624,46 @@ Defines a simple product, which is tangible and is usually sold in single units 
   "id": 987,
   "image": ProductImage,
   "is_returnable": "xyz789",
-  "manufacturer": 987,
-  "material": "abc123",
+  "manufacturer": 123,
+  "material": "xyz789",
   "media_gallery": [MediaGalleryInterface],
   "media_gallery_entries": [MediaGalleryEntry],
   "meta_description": "abc123",
   "meta_keyword": "xyz789",
   "meta_title": "abc123",
   "name": "abc123",
-  "new": 987,
+  "new": 123,
   "new_from_date": "xyz789",
-  "new_to_date": "abc123",
-  "only_x_left_in_stock": 123.45,
+  "new_to_date": "xyz789",
+  "only_x_left_in_stock": 987.65,
   "options": [CustomizableOptionInterface],
   "options_container": "xyz789",
-  "pattern": "xyz789",
+  "pattern": "abc123",
   "performance_fabric": 987,
   "price": ProductPrices,
   "price_range": PriceRange,
   "price_tiers": [TierPrice],
   "product_links": [ProductLinksInterface],
-  "purpose": 987,
-  "rating_summary": 987.65,
+  "purpose": 123,
+  "rating_summary": 123.45,
   "redirect_code": 987,
   "related_products": [ProductInterface],
-  "relative_url": "abc123",
-  "review_count": 123,
+  "relative_url": "xyz789",
+  "review_count": 987,
   "reviews": ProductReviews,
-  "sale": 123,
+  "sale": 987,
   "short_description": ComplexTextValue,
   "size": 123,
-  "sku": "abc123",
-  "sleeve": "abc123",
+  "sku": "xyz789",
+  "sleeve": "xyz789",
   "small_image": ProductImage,
-  "special_from_date": "abc123",
+  "special_from_date": "xyz789",
   "special_price": 987.65,
-  "special_to_date": "xyz789",
+  "special_to_date": "abc123",
   "staged": false,
   "stock_status": "IN_STOCK",
   "strap_bags": "abc123",
-  "style_bags": "xyz789",
+  "style_bags": "abc123",
   "style_bottom": "abc123",
   "style_general": "xyz789",
   "swatch_image": "xyz789",
@@ -2676,12 +2673,12 @@ Defines a simple product, which is tangible and is usually sold in single units 
   "type": "CMS_PAGE",
   "type_id": "abc123",
   "uid": 4,
-  "updated_at": "xyz789",
+  "updated_at": "abc123",
   "upsell_products": [ProductInterface],
   "url_key": "abc123",
-  "url_path": "xyz789",
+  "url_path": "abc123",
   "url_rewrites": [UrlRewrite],
-  "url_suffix": "abc123",
+  "url_suffix": "xyz789",
   "websites": [Website],
   "weight": 123.45
 }
@@ -2697,8 +2694,8 @@ Defines a single product to add to the cart.
 
 | Input Field | Description |
 |-------------|-------------|
-| `customizable_options` - [`[CustomizableOptionInput]`](types-c-e.md#customizableoptioninput) | An array that defines customizable options for the product. |
-| `data` - [`CartItemInput!`](types-c-e.md#cartiteminput) | An object containing the `sku`, `quantity`, and other relevant information about the product. |
+| `customizable_options` - [`[CustomizableOptionInput]`](/reference/graphql/2-4-6/types-c-e.md#customizableoptioninput) | An array that defines customizable options for the product. |
+| `data` - [`CartItemInput!`](/reference/graphql/2-4-6/types-c-e.md#cartiteminput) | An object containing the `sku`, `quantity`, and other relevant information about the product. |
 
 #### Example
 
@@ -2720,9 +2717,9 @@ Contains details about simple products added to a requisition list.
 | Field Name | Description |
 |------------|-------------|
 | `customizable_options` - [`[SelectedCustomizableOption]!`](#selectedcustomizableoption) | Selected custom options for an item in the requisition list. |
-| `product` - [`ProductInterface!`](types-k-p.md#productinterface) | Details about a requisition list item. |
-| `quantity` - [`Float!`](types-f-i.md#float) | The amount added. |
-| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for the requisition list item. |
+| `product` - [`ProductInterface!`](/reference/graphql/2-4-6/types-k-p.md#productinterface) | Details about a requisition list item. |
+| `quantity` - [`Float!`](/reference/graphql/2-4-6/types-f-i.md#float) | The amount added. |
+| `uid` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for the requisition list item. |
 
 #### Example
 
@@ -2731,7 +2728,7 @@ Contains details about simple products added to a requisition list.
   "customizable_options": [SelectedCustomizableOption],
   "product": ProductInterface,
   "quantity": 987.65,
-  "uid": "4"
+  "uid": 4
 }
 ```
 
@@ -2748,9 +2745,9 @@ Contains a simple product wish list item.
 | `added_at` - [`String!`](#string) | The date and time the item was added to the wish list. |
 | `customizable_options` - [`[SelectedCustomizableOption]!`](#selectedcustomizableoption) | Custom options selected for the wish list item. |
 | `description` - [`String`](#string) | The description of the item. |
-| `id` - [`ID!`](types-f-i.md#id) | The unique ID for a `WishlistItemInterface` object. |
-| `product` - [`ProductInterface`](types-k-p.md#productinterface) | Product details of the wish list item. |
-| `quantity` - [`Float!`](types-f-i.md#float) | The quantity of this wish list item. |
+| `id` - [`ID!`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for a `WishlistItemInterface` object. |
+| `product` - [`ProductInterface`](/reference/graphql/2-4-6/types-k-p.md#productinterface) | Product details of the wish list item. |
+| `quantity` - [`Float!`](/reference/graphql/2-4-6/types-f-i.md#float) | The quantity of this wish list item. |
 
 #### Example
 
@@ -2758,7 +2755,7 @@ Contains a simple product wish list item.
 {
   "added_at": "abc123",
   "customizable_options": [SelectedCustomizableOption],
-  "description": "xyz789",
+  "description": "abc123",
   "id": "4",
   "product": ProductInterface,
   "quantity": 987.65
@@ -2801,7 +2798,7 @@ Defines a possible sort field.
 
 ```json
 {
-  "label": "abc123",
+  "label": "xyz789",
   "value": "xyz789"
 }
 ```
@@ -2846,7 +2843,7 @@ Contains information about a store's configuration.
 | `allow_items` - [`String`](#string) | The value of the Allow Gift Messages for Order Items option |
 | `allow_order` - [`String`](#string) | The value of the Allow Gift Messages on Order Level option |
 | `allow_printed_card` - [`String`](#string) | Indicates if a printed card can accompany an order. Possible values: 1 (Yes) and 0 (No). |
-| `autocomplete_on_storefront` - [`Boolean`](types-a-b.md#boolean) | Indicates whether to enable autocomplete on login and forgot password forms. |
+| `autocomplete_on_storefront` - [`Boolean`](/reference/graphql/2-4-6/types-a-b.md#boolean) | Indicates whether to enable autocomplete on login and forgot password forms. |
 | `base_currency_code` - [`String`](#string) | The base currency code. |
 | `base_link_url` - [`String`](#string) | A fully-qualified URL that is used to create relative links to the `base_url`. |
 | `base_media_url` - [`String`](#string) | The fully-qualified URL that specifies the location of media files. |
@@ -2856,17 +2853,17 @@ Contains information about a store's configuration.
 | `cart_gift_wrapping` - [`String`](#string) | Indicates if gift wrapping prices are displayed on the Shopping Cart page. Possible values: 1 (Yes) and 0 (No). |
 | `cart_printed_card` - [`String`](#string) | Indicates if printed card prices are displayed on the Shopping Cart page. Possible values: 1 (Yes) and 0 (No). |
 | `catalog_default_sort_by` - [`String`](#string) | The default sort order of the search results list. |
-| `category_fixed_product_tax_display_setting` - [`FixedProductTaxDisplaySettings`](types-f-i.md#fixedproducttaxdisplaysettings) | Corresponds to the 'Display Prices In Product Lists' field in the Admin. It indicates how FPT information is displayed on category pages. |
+| `category_fixed_product_tax_display_setting` - [`FixedProductTaxDisplaySettings`](/reference/graphql/2-4-6/types-f-i.md#fixedproducttaxdisplaysettings) | Corresponds to the 'Display Prices In Product Lists' field in the Admin. It indicates how FPT information is displayed on category pages. |
 | `category_url_suffix` - [`String`](#string) | The suffix applied to category pages, such as `.htm` or `.html`. |
-| `check_money_order_enable_for_specific_countries` - [`Boolean`](types-a-b.md#boolean) | Indicates whether only specific countries can use this payment method. |
-| `check_money_order_enabled` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the Check/Money Order payment method is enabled. |
+| `check_money_order_enable_for_specific_countries` - [`Boolean`](/reference/graphql/2-4-6/types-a-b.md#boolean) | Indicates whether only specific countries can use this payment method. |
+| `check_money_order_enabled` - [`Boolean`](/reference/graphql/2-4-6/types-a-b.md#boolean) | Indicates whether the Check/Money Order payment method is enabled. |
 | `check_money_order_make_check_payable_to` - [`String`](#string) | The name of the party to whom the check must be payable. |
 | `check_money_order_max_order_total` - [`String`](#string) | The maximum order amount required to qualify for the Check/Money Order payment method. |
 | `check_money_order_min_order_total` - [`String`](#string) | The minimum order amount required to qualify for the Check/Money Order payment method. |
 | `check_money_order_new_order_status` - [`String`](#string) | The status of new orders placed using the Check/Money Order payment method. |
 | `check_money_order_payment_from_specific_countries` - [`String`](#string) | A comma-separated list of specific countries allowed to use the Check/Money Order payment method. |
 | `check_money_order_send_check_to` - [`String`](#string) | The full street address or PO Box where the checks are mailed. |
-| `check_money_order_sort_order` - [`Int`](types-f-i.md#int) | A number indicating the position of the Check/Money Order payment method in the list of available payment methods during checkout. |
+| `check_money_order_sort_order` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | A number indicating the position of the Check/Money Order payment method in the list of available payment methods during checkout. |
 | `check_money_order_title` - [`String`](#string) | The title of the Check/Money Order payment method displayed on the storefront. |
 | `cms_home_page` - [`String`](#string) | The name of the CMS page that identifies the home page for the store. |
 | `cms_no_cookies` - [`String`](#string) | A specific CMS page that displays when cookies are not enabled for the browser. |
@@ -2878,26 +2875,26 @@ Contains information about a store's configuration.
 | `default_display_currency_code` - [`String`](#string) | The default display currency code. |
 | `default_keywords` - [`String`](#string) | A series of keywords that describe your store, each separated by a comma. |
 | `default_title` - [`String`](#string) | The title that appears at the title bar of each page when viewed in a browser. |
-| `demonotice` - [`Int`](types-f-i.md#int) | Controls the display of the demo store notice at the top of the page. Options: 0 (No) or 1 (Yes). |
+| `demonotice` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | Controls the display of the demo store notice at the top of the page. Options: 0 (No) or 1 (Yes). |
 | `enable_multiple_wishlists` - [`String`](#string) | Indicates whether customers can have multiple wish lists. Possible values: 1 (Yes) and 0 (No). |
 | `front` - [`String`](#string) | The landing page that is associated with the base URL. |
-| `grid_per_page` - [`Int`](types-f-i.md#int) | The default number of products per page in Grid View. |
+| `grid_per_page` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | The default number of products per page in Grid View. |
 | `grid_per_page_values` - [`String`](#string) | A list of numbers that define how many products can be displayed in Grid View. |
 | `head_includes` - [`String`](#string) | Scripts that must be included in the HTML before the closing `<head>` tag. |
 | `head_shortcut_icon` - [`String`](#string) | The small graphic image (favicon) that appears in the address bar and tab of the browser. |
 | `header_logo_src` - [`String`](#string) | The path to the logo that appears in the header. |
-| `id` - [`Int`](types-f-i.md#int) | The ID number assigned to the store. *(Deprecated: Use `store_code` instead.)* |
-| `is_default_store` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the store view has been designated as the default within the store group. |
-| `is_default_store_group` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the store group has been designated as the default within the website. |
-| `is_negotiable_quote_active` - [`Boolean`](types-a-b.md#boolean) | Indicates whether negotiable quote functionality is enabled. |
+| `id` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | The ID number assigned to the store. *(Deprecated: Use `store_code` instead.)* |
+| `is_default_store` - [`Boolean`](/reference/graphql/2-4-6/types-a-b.md#boolean) | Indicates whether the store view has been designated as the default within the store group. |
+| `is_default_store_group` - [`Boolean`](/reference/graphql/2-4-6/types-a-b.md#boolean) | Indicates whether the store group has been designated as the default within the website. |
+| `is_negotiable_quote_active` - [`Boolean`](/reference/graphql/2-4-6/types-a-b.md#boolean) | Indicates whether negotiable quote functionality is enabled. |
 | `is_requisition_list_active` - [`String`](#string) | Indicates whether requisition lists are enabled. Possible values: 1 (Yes) and 0 (No). |
 | `list_mode` - [`String`](#string) | The format of the search results list. |
-| `list_per_page` - [`Int`](types-f-i.md#int) | The default number of products per page in List View. |
+| `list_per_page` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | The default number of products per page in List View. |
 | `list_per_page_values` - [`String`](#string) | A list of numbers that define how many products can be displayed in List View. |
 | `locale` - [`String`](#string) | The store locale. |
 | `logo_alt` - [`String`](#string) | The Alt text that is associated with the logo. |
-| `logo_height` - [`Int`](types-f-i.md#int) | The height of the logo image, in pixels. |
-| `logo_width` - [`Int`](types-f-i.md#int) | The width of the logo image, in pixels. |
+| `logo_height` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | The height of the logo image, in pixels. |
+| `logo_width` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | The width of the logo image, in pixels. |
 | `magento_reward_general_is_enabled` - [`String`](#string) | Indicates whether reward points functionality is enabled. Possible values: 1 (Enabled) and 0 (Disabled). |
 | `magento_reward_general_is_enabled_on_front` - [`String`](#string) | Indicates whether reward points functionality is enabled on the storefront. Possible values: 1 (Enabled) and 0 (Disabled). |
 | `magento_reward_general_min_points_balance` - [`String`](#string) | The minimum point balance customers must have before they can redeem them. A null value indicates no minimum. |
@@ -2917,14 +2914,14 @@ Contains information about a store's configuration.
 | `no_route` - [`String`](#string) | The default page that displays when a 404 'Page not Found' error occurs. |
 | `payment_payflowpro_cc_vault_active` - [`String`](#string) | Payflow Pro vault status. |
 | `printed_card_price` - [`String`](#string) | The default price of a printed card that accompanies an order. |
-| `product_fixed_product_tax_display_setting` - [`FixedProductTaxDisplaySettings`](types-f-i.md#fixedproducttaxdisplaysettings) | Corresponds to the 'Display Prices On Product View Page' field in the Admin. It indicates how FPT information is displayed on product pages. |
+| `product_fixed_product_tax_display_setting` - [`FixedProductTaxDisplaySettings`](/reference/graphql/2-4-6/types-f-i.md#fixedproducttaxdisplaysettings) | Corresponds to the 'Display Prices On Product View Page' field in the Admin. It indicates how FPT information is displayed on product pages. |
 | `product_reviews_enabled` - [`String`](#string) | Indicates whether product reviews are enabled. Possible values: 1 (Yes) and 0 (No). |
 | `product_url_suffix` - [`String`](#string) | The suffix applied to product pages, such as `.htm` or `.html`. |
 | `required_character_classes_number` - [`String`](#string) | The number of different character classes (lowercase, uppercase, digits, special characters) required in a password. |
 | `returns_enabled` - [`String!`](#string) | Indicates whether RMA is enabled on the storefront. Possible values: enabled/disabled. |
-| `root_category_id` - [`Int`](types-f-i.md#int) | The ID of the root category. *(Deprecated: Use `root_category_uid` instead.)* |
-| `root_category_uid` - [`ID`](types-f-i.md#id) | The unique ID for a `CategoryInterface` object. |
-| `sales_fixed_product_tax_display_setting` - [`FixedProductTaxDisplaySettings`](types-f-i.md#fixedproducttaxdisplaysettings) | Corresponds to the 'Display Prices In Sales Modules' field in the Admin. It indicates how FPT information is displayed on cart, checkout, and order pages. |
+| `root_category_id` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | The ID of the root category. *(Deprecated: Use `root_category_uid` instead.)* |
+| `root_category_uid` - [`ID`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for a `CategoryInterface` object. |
+| `sales_fixed_product_tax_display_setting` - [`FixedProductTaxDisplaySettings`](/reference/graphql/2-4-6/types-f-i.md#fixedproducttaxdisplaysettings) | Corresponds to the 'Display Prices In Sales Modules' field in the Admin. It indicates how FPT information is displayed on cart, checkout, and order pages. |
 | `sales_gift_wrapping` - [`String`](#string) | Indicates if gift wrapping prices are displayed on the Orders page. Possible values: 1 (Yes) and 0 (No). |
 | `sales_printed_card` - [`String`](#string) | Indicates if printed card prices are displayed on the Orders page. Possible values: 1 (Yes) and 0 (No). |
 | `secure_base_link_url` - [`String`](#string) | A secure fully-qualified URL that is used to create relative links to the `base_url`. |
@@ -2932,149 +2929,149 @@ Contains information about a store's configuration.
 | `secure_base_static_url` - [`String`](#string) | The secure fully-qualified URL that specifies the location of static view files. |
 | `secure_base_url` - [`String`](#string) | The store’s fully-qualified secure base URL. |
 | `send_friend` - [`SendFriendConfiguration`](#sendfriendconfiguration) | Email to a Friend configuration. |
-| `show_cms_breadcrumbs` - [`Int`](types-f-i.md#int) | Indicates whether a breadcrumb trail appears on all CMS pages in the catalog. 0 (No) or 1 (Yes). |
-| `store_code` - [`ID`](types-f-i.md#id) | The unique ID of the store view. In the Admin, this is called the Store View Code. When making a GraphQL call, assign this value to the `Store` header to provide the scope. |
-| `store_group_code` - [`ID`](types-f-i.md#id) | The unique ID assigned to the store group. In the Admin, this is called the Store Name. |
+| `show_cms_breadcrumbs` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | Indicates whether a breadcrumb trail appears on all CMS pages in the catalog. 0 (No) or 1 (Yes). |
+| `store_code` - [`ID`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID of the store view. In the Admin, this is called the Store View Code. When making a GraphQL call, assign this value to the `Store` header to provide the scope. |
+| `store_group_code` - [`ID`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID assigned to the store group. In the Admin, this is called the Store Name. |
 | `store_group_name` - [`String`](#string) | The label assigned to the store group. |
 | `store_name` - [`String`](#string) | The label assigned to the store view. |
-| `store_sort_order` - [`Int`](types-f-i.md#int) | The store view sort order. |
+| `store_sort_order` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | The store view sort order. |
 | `timezone` - [`String`](#string) | The time zone of the store. |
 | `title_prefix` - [`String`](#string) | A prefix that appears before the title to create a two- or three-part title. |
 | `title_separator` - [`String`](#string) | The character that separates the category name and subcategory in the browser title bar. |
 | `title_suffix` - [`String`](#string) | A suffix that appears after the title to create a two- or three-part title. |
-| `use_store_in_url` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the store code should be used in the URL. |
-| `website_code` - [`ID`](types-f-i.md#id) | The unique ID for the website. |
-| `website_id` - [`Int`](types-f-i.md#int) | The ID number assigned to the website store. *(Deprecated: The field should not be used on the storefront.)* |
+| `use_store_in_url` - [`Boolean`](/reference/graphql/2-4-6/types-a-b.md#boolean) | Indicates whether the store code should be used in the URL. |
+| `website_code` - [`ID`](/reference/graphql/2-4-6/types-f-i.md#id) | The unique ID for the website. |
+| `website_id` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | The ID number assigned to the website store. *(Deprecated: The field should not be used on the storefront.)* |
 | `website_name` - [`String`](#string) | The label assigned to the website. |
 | `weight_unit` - [`String`](#string) | The unit of weight. |
 | `welcome` - [`String`](#string) | Text that appears in the header of the page and includes the name of the logged in customer. |
-| `zero_subtotal_enable_for_specific_countries` - [`Boolean`](types-a-b.md#boolean) | Indicates whether only specific countries can use this payment method. |
-| `zero_subtotal_enabled` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the Zero Subtotal payment method is enabled. |
+| `zero_subtotal_enable_for_specific_countries` - [`Boolean`](/reference/graphql/2-4-6/types-a-b.md#boolean) | Indicates whether only specific countries can use this payment method. |
+| `zero_subtotal_enabled` - [`Boolean`](/reference/graphql/2-4-6/types-a-b.md#boolean) | Indicates whether the Zero Subtotal payment method is enabled. |
 | `zero_subtotal_new_order_status` - [`String`](#string) | The status of new orders placed using the Zero Subtotal payment method. |
 | `zero_subtotal_payment_action` - [`String`](#string) | When the new order status is 'Processing', this can be set to `authorize_capture` to automatically invoice all items that have a zero balance. |
 | `zero_subtotal_payment_from_specific_countries` - [`String`](#string) | A comma-separated list of specific countries allowed to use the Zero Subtotal payment method. |
-| `zero_subtotal_sort_order` - [`Int`](types-f-i.md#int) | A number indicating the position of the Zero Subtotal payment method in the list of available payment methods during checkout. |
+| `zero_subtotal_sort_order` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | A number indicating the position of the Zero Subtotal payment method in the list of available payment methods during checkout. |
 | `zero_subtotal_title` - [`String`](#string) | The title of the Zero Subtotal payment method displayed on the storefront. |
 
 #### Example
 
 ```json
 {
-  "absolute_footer": "abc123",
-  "allow_gift_receipt": "abc123",
+  "absolute_footer": "xyz789",
+  "allow_gift_receipt": "xyz789",
   "allow_gift_wrapping_on_order": "xyz789",
-  "allow_gift_wrapping_on_order_items": "xyz789",
-  "allow_guests_to_write_product_reviews": "abc123",
-  "allow_items": "xyz789",
-  "allow_order": "xyz789",
-  "allow_printed_card": "abc123",
-  "autocomplete_on_storefront": false,
+  "allow_gift_wrapping_on_order_items": "abc123",
+  "allow_guests_to_write_product_reviews": "xyz789",
+  "allow_items": "abc123",
+  "allow_order": "abc123",
+  "allow_printed_card": "xyz789",
+  "autocomplete_on_storefront": true,
   "base_currency_code": "abc123",
   "base_link_url": "xyz789",
-  "base_media_url": "xyz789",
+  "base_media_url": "abc123",
   "base_static_url": "abc123",
-  "base_url": "abc123",
+  "base_url": "xyz789",
   "braintree_cc_vault_active": "xyz789",
   "cart_gift_wrapping": "xyz789",
-  "cart_printed_card": "abc123",
-  "catalog_default_sort_by": "xyz789",
+  "cart_printed_card": "xyz789",
+  "catalog_default_sort_by": "abc123",
   "category_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
-  "category_url_suffix": "xyz789",
+  "category_url_suffix": "abc123",
   "check_money_order_enable_for_specific_countries": false,
   "check_money_order_enabled": true,
   "check_money_order_make_check_payable_to": "xyz789",
   "check_money_order_max_order_total": "xyz789",
-  "check_money_order_min_order_total": "abc123",
+  "check_money_order_min_order_total": "xyz789",
   "check_money_order_new_order_status": "abc123",
   "check_money_order_payment_from_specific_countries": "xyz789",
-  "check_money_order_send_check_to": "abc123",
-  "check_money_order_sort_order": 123,
+  "check_money_order_send_check_to": "xyz789",
+  "check_money_order_sort_order": 987,
   "check_money_order_title": "abc123",
   "cms_home_page": "xyz789",
   "cms_no_cookies": "xyz789",
-  "cms_no_route": "abc123",
-  "code": "abc123",
-  "configurable_thumbnail_source": "xyz789",
+  "cms_no_route": "xyz789",
+  "code": "xyz789",
+  "configurable_thumbnail_source": "abc123",
   "copyright": "abc123",
   "default_description": "abc123",
   "default_display_currency_code": "xyz789",
-  "default_keywords": "xyz789",
-  "default_title": "abc123",
+  "default_keywords": "abc123",
+  "default_title": "xyz789",
   "demonotice": 123,
-  "enable_multiple_wishlists": "xyz789",
+  "enable_multiple_wishlists": "abc123",
   "front": "xyz789",
   "grid_per_page": 987,
   "grid_per_page_values": "xyz789",
   "head_includes": "xyz789",
-  "head_shortcut_icon": "xyz789",
-  "header_logo_src": "abc123",
-  "id": 123,
-  "is_default_store": false,
-  "is_default_store_group": true,
-  "is_negotiable_quote_active": true,
-  "is_requisition_list_active": "xyz789",
+  "head_shortcut_icon": "abc123",
+  "header_logo_src": "xyz789",
+  "id": 987,
+  "is_default_store": true,
+  "is_default_store_group": false,
+  "is_negotiable_quote_active": false,
+  "is_requisition_list_active": "abc123",
   "list_mode": "xyz789",
   "list_per_page": 123,
-  "list_per_page_values": "abc123",
+  "list_per_page_values": "xyz789",
   "locale": "abc123",
-  "logo_alt": "abc123",
-  "logo_height": 987,
+  "logo_alt": "xyz789",
+  "logo_height": 123,
   "logo_width": 987,
   "magento_reward_general_is_enabled": "xyz789",
   "magento_reward_general_is_enabled_on_front": "xyz789",
-  "magento_reward_general_min_points_balance": "xyz789",
-  "magento_reward_general_publish_history": "abc123",
-  "magento_reward_points_invitation_customer": "abc123",
+  "magento_reward_general_min_points_balance": "abc123",
+  "magento_reward_general_publish_history": "xyz789",
+  "magento_reward_points_invitation_customer": "xyz789",
   "magento_reward_points_invitation_customer_limit": "abc123",
-  "magento_reward_points_invitation_order": "abc123",
+  "magento_reward_points_invitation_order": "xyz789",
   "magento_reward_points_invitation_order_limit": "abc123",
-  "magento_reward_points_newsletter": "xyz789",
+  "magento_reward_points_newsletter": "abc123",
   "magento_reward_points_order": "xyz789",
-  "magento_reward_points_register": "xyz789",
+  "magento_reward_points_register": "abc123",
   "magento_reward_points_review": "xyz789",
   "magento_reward_points_review_limit": "abc123",
-  "magento_wishlist_general_is_enabled": "abc123",
+  "magento_wishlist_general_is_enabled": "xyz789",
   "maximum_number_of_wishlists": "abc123",
   "minimum_password_length": "abc123",
-  "no_route": "xyz789",
+  "no_route": "abc123",
   "payment_payflowpro_cc_vault_active": "abc123",
   "printed_card_price": "xyz789",
   "product_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
   "product_reviews_enabled": "xyz789",
   "product_url_suffix": "xyz789",
-  "required_character_classes_number": "xyz789",
+  "required_character_classes_number": "abc123",
   "returns_enabled": "xyz789",
-  "root_category_id": 987,
+  "root_category_id": 123,
   "root_category_uid": "4",
   "sales_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
-  "sales_gift_wrapping": "abc123",
-  "sales_printed_card": "abc123",
-  "secure_base_link_url": "xyz789",
+  "sales_gift_wrapping": "xyz789",
+  "sales_printed_card": "xyz789",
+  "secure_base_link_url": "abc123",
   "secure_base_media_url": "abc123",
   "secure_base_static_url": "abc123",
   "secure_base_url": "xyz789",
   "send_friend": SendFriendConfiguration,
   "show_cms_breadcrumbs": 987,
-  "store_code": 4,
-  "store_group_code": 4,
+  "store_code": "4",
+  "store_group_code": "4",
   "store_group_name": "abc123",
   "store_name": "abc123",
   "store_sort_order": 987,
-  "timezone": "abc123",
-  "title_prefix": "abc123",
+  "timezone": "xyz789",
+  "title_prefix": "xyz789",
   "title_separator": "abc123",
-  "title_suffix": "abc123",
+  "title_suffix": "xyz789",
   "use_store_in_url": false,
   "website_code": 4,
-  "website_id": 987,
-  "website_name": "abc123",
-  "weight_unit": "abc123",
-  "welcome": "xyz789",
+  "website_id": 123,
+  "website_name": "xyz789",
+  "weight_unit": "xyz789",
+  "welcome": "abc123",
   "zero_subtotal_enable_for_specific_countries": true,
-  "zero_subtotal_enabled": true,
-  "zero_subtotal_new_order_status": "xyz789",
-  "zero_subtotal_payment_action": "xyz789",
-  "zero_subtotal_payment_from_specific_countries": "abc123",
+  "zero_subtotal_enabled": false,
+  "zero_subtotal_new_order_status": "abc123",
+  "zero_subtotal_payment_action": "abc123",
+  "zero_subtotal_payment_from_specific_countries": "xyz789",
   "zero_subtotal_sort_order": 987,
   "zero_subtotal_title": "abc123"
 }
@@ -3090,11 +3087,11 @@ Indicates where an attribute can be displayed.
 
 | Field Name | Description |
 |------------|-------------|
-| `position` - [`Int`](types-f-i.md#int) | The relative position of the attribute in the layered navigation block. |
-| `use_in_layered_navigation` - [`UseInLayeredNavigationOptions`](types-t-z.md#useinlayerednavigationoptions) | Indicates whether the attribute is filterable with results, without results, or not at all. |
-| `use_in_product_listing` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the attribute is displayed in product listings. |
-| `use_in_search_results_layered_navigation` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the attribute can be used in layered navigation on search results pages. |
-| `visible_on_catalog_pages` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the attribute is displayed on product pages. |
+| `position` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | The relative position of the attribute in the layered navigation block. |
+| `use_in_layered_navigation` - [`UseInLayeredNavigationOptions`](/reference/graphql/2-4-6/types-t-z.md#useinlayerednavigationoptions) | Indicates whether the attribute is filterable with results, without results, or not at all. |
+| `use_in_product_listing` - [`Boolean`](/reference/graphql/2-4-6/types-a-b.md#boolean) | Indicates whether the attribute is displayed in product listings. |
+| `use_in_search_results_layered_navigation` - [`Boolean`](/reference/graphql/2-4-6/types-a-b.md#boolean) | Indicates whether the attribute can be used in layered navigation on search results pages. |
+| `visible_on_catalog_pages` - [`Boolean`](/reference/graphql/2-4-6/types-a-b.md#boolean) | Indicates whether the attribute is displayed on product pages. |
 
 #### Example
 
@@ -3102,8 +3099,8 @@ Indicates where an attribute can be displayed.
 {
   "position": 987,
   "use_in_layered_navigation": "NO",
-  "use_in_product_listing": true,
-  "use_in_search_results_layered_navigation": true,
+  "use_in_product_listing": false,
+  "use_in_search_results_layered_navigation": false,
   "visible_on_catalog_pages": false
 }
 ```
@@ -3119,7 +3116,7 @@ represent free-form human-readable text.
 #### Example
 
 ```json
-"xyz789"
+"abc123"
 ```
 
 <HorizontalLine />
@@ -3179,7 +3176,7 @@ Describes the swatch type and a value.
 ```json
 {
   "type": "abc123",
-  "value": "abc123"
+  "value": "xyz789"
 }
 ```
 
@@ -3197,9 +3194,9 @@ Describes the swatch type and a value.
 
 | SwatchDataInterface Types |
 |----------------|
-| [`ImageSwatchData`](types-f-i.md#imageswatchdata) |
-| [`TextSwatchData`](types-t-z.md#textswatchdata) |
-| [`ColorSwatchData`](types-c-e.md#colorswatchdata) |
+| [`ImageSwatchData`](/reference/graphql/2-4-6/types-f-i.md#imageswatchdata) |
+| [`TextSwatchData`](/reference/graphql/2-4-6/types-t-z.md#textswatchdata) |
+| [`ColorSwatchData`](/reference/graphql/2-4-6/types-c-e.md#colorswatchdata) |
 
 #### Example
 
@@ -3215,7 +3212,7 @@ Describes the swatch type and a value.
 
 | Field Name | Description |
 |------------|-------------|
-| `items_count` - [`Int`](types-f-i.md#int) | The count of items per filter. *(Deprecated: Use `AggregationOption.count` instead.)* |
+| `items_count` - [`Int`](/reference/graphql/2-4-6/types-f-i.md#int) | The count of items per filter. *(Deprecated: Use `AggregationOption.count` instead.)* |
 | `label` - [`String`](#string) | The label for a filter. *(Deprecated: Use `AggregationOption.label` instead.)* |
 | `swatch_data` - [`SwatchData`](#swatchdata) | Data required to render a swatch filter item. |
 | `value_string` - [`String`](#string) | The value of a filter request variable to be used in query. *(Deprecated: Use `AggregationOption.value` instead.)* |
@@ -3224,7 +3221,7 @@ Describes the swatch type and a value.
 
 ```json
 {
-  "items_count": 123,
+  "items_count": 987,
   "label": "abc123",
   "swatch_data": SwatchData,
   "value_string": "abc123"

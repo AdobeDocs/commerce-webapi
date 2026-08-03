@@ -8,9 +8,9 @@ Contains tax item details.
 
 | Field Name | Description |
 |------------|-------------|
-| `amount` - [`Money!`](types-k-p.md#money) | The amount of tax applied to the item. |
-| `rate` - [`Float!`](types-f-i.md#float) | The rate used to calculate the tax. |
-| `title` - [`String!`](types-q-s.md#string) | A title that describes the tax. |
+| `amount` - [`Money!`](/reference/graphql/saas/types-k-p.md#money) | The amount of tax applied to the item. |
+| `rate` - [`Float!`](/reference/graphql/saas/types-f-i.md#float) | The rate used to calculate the tax. |
+| `title` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | A title that describes the tax. |
 
 #### Example
 
@@ -18,7 +18,7 @@ Contains tax item details.
 {
   "amount": Money,
   "rate": 987.65,
-  "title": "abc123"
+  "title": "xyz789"
 }
 ```
 
@@ -48,7 +48,7 @@ Contains tax item details.
 
 | Field Name | Description |
 |------------|-------------|
-| `value` - [`String`](types-q-s.md#string) | The value can be represented as color (HEX code), image link, or text. |
+| `value` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The value can be represented as color (HEX code), image link, or text. |
 
 #### Example
 
@@ -86,9 +86,9 @@ Defines a price based on the quantity purchased.
 
 | Field Name | Description |
 |------------|-------------|
-| `discount` - [`ProductDiscount`](types-k-p.md#productdiscount) | The price discount that this tier represents. |
-| `final_price` - [`Money`](types-k-p.md#money) | The price of the product at this tier. |
-| `quantity` - [`Float`](types-f-i.md#float) | The minimum number of items that must be purchased to qualify for this price tier. |
+| `discount` - [`ProductDiscount`](/reference/graphql/saas/types-k-p.md#productdiscount) | The price discount that this tier represents. |
+| `final_price` - [`Money`](/reference/graphql/saas/types-k-p.md#money) | The price of the product at this tier. |
+| `quantity` - [`Float`](/reference/graphql/saas/types-f-i.md#float) | The minimum number of items that must be purchased to qualify for this price tier. |
 
 #### Example
 
@@ -96,7 +96,7 @@ Defines a price based on the quantity purchased.
 {
   "discount": ProductDiscount,
   "final_price": Money,
-  "quantity": 123.45
+  "quantity": 987.65
 }
 ```
 
@@ -110,7 +110,7 @@ Defines the input schema for unassigning a child company from its parent company
 
 | Input Field | Description |
 |-------------|-------------|
-| `child_company_id` - [`ID!`](types-f-i.md#id) | The unique ID of the child company. |
+| `child_company_id` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the child company. |
 
 #### Example
 
@@ -128,7 +128,7 @@ Contains the response to the request to unassign a child company.
 
 | Field Name | Description |
 |------------|-------------|
-| `company_hierarchy` - [`CompanyHierarchy!`](types-c-e.md#companyhierarchy) | The updated company relation hierarchy for the current company. |
+| `company_hierarchy` - [`CompanyHierarchy!`](/reference/graphql/saas/types-c-e.md#companyhierarchy) | The updated company relation hierarchy for the current company. |
 
 #### Example
 
@@ -144,25 +144,25 @@ Contains the response to the request to unassign a child company.
 
 | Input Field | Description |
 |-------------|-------------|
-| `unitName` - [`String`](types-q-s.md#string) |  |
-| `storefrontLabel` - [`String`](types-q-s.md#string) |  |
-| `pagePlacement` - [`String`](types-q-s.md#string) |  |
-| `displayNumber` - [`Int`](types-f-i.md#int) |  |
-| `pageType` - [`String`](types-q-s.md#string) |  |
-| `unitStatus` - [`String`](types-q-s.md#string) |  |
-| `typeId` - [`String`](types-q-s.md#string) |  |
-| `filterRules` - [`[FilterRuleInput]`](types-f-i.md#filterruleinput) |  |
+| `unitName` - [`String`](/reference/graphql/saas/types-q-s.md#string) |  |
+| `storefrontLabel` - [`String`](/reference/graphql/saas/types-q-s.md#string) |  |
+| `pagePlacement` - [`String`](/reference/graphql/saas/types-q-s.md#string) |  |
+| `displayNumber` - [`Int`](/reference/graphql/saas/types-f-i.md#int) |  |
+| `pageType` - [`String`](/reference/graphql/saas/types-q-s.md#string) |  |
+| `unitStatus` - [`String`](/reference/graphql/saas/types-q-s.md#string) |  |
+| `typeId` - [`String`](/reference/graphql/saas/types-q-s.md#string) |  |
+| `filterRules` - [`[FilterRuleInput]`](/reference/graphql/saas/types-f-i.md#filterruleinput) |  |
 
 #### Example
 
 ```json
 {
-  "unitName": "xyz789",
+  "unitName": "abc123",
   "storefrontLabel": "xyz789",
   "pagePlacement": "xyz789",
   "displayNumber": 123,
   "pageType": "abc123",
-  "unitStatus": "abc123",
+  "unitStatus": "xyz789",
   "typeId": "xyz789",
   "filterRules": [FilterRuleInput]
 }
@@ -178,14 +178,14 @@ Modifies the specified items in the cart.
 
 | Input Field | Description |
 |-------------|-------------|
-| `cart_id` - [`String!`](types-q-s.md#string) | The unique ID of a `Cart` object. |
-| `cart_items` - [`[CartItemUpdateInput]!`](types-c-e.md#cartitemupdateinput) | An array of items to be updated. |
+| `cart_id` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The unique ID of a `Cart` object. |
+| `cart_items` - [`[CartItemUpdateInput]!`](/reference/graphql/saas/types-c-e.md#cartitemupdateinput) | An array of items to be updated. |
 
 #### Example
 
 ```json
 {
-  "cart_id": "xyz789",
+  "cart_id": "abc123",
   "cart_items": [CartItemUpdateInput]
 }
 ```
@@ -200,8 +200,8 @@ Contains details about the cart after updating items.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart!`](types-c-e.md#cart) | The cart after updating products. |
-| `errors` - [`[CartUserInputError]!`](types-c-e.md#cartuserinputerror) | Contains errors encountered while updating an item to the cart. |
+| `cart` - [`Cart!`](/reference/graphql/saas/types-c-e.md#cart) | The cart after updating products. |
+| `errors` - [`[CartUserInputError]!`](/reference/graphql/saas/types-c-e.md#cartuserinputerror) | Contains errors encountered while updating an item to the cart. |
 
 #### Example
 
@@ -222,7 +222,7 @@ Contains the response to the request to update the company.
 
 | Field Name | Description |
 |------------|-------------|
-| `company` - [`Company!`](types-c-e.md#company) | The updated company instance. |
+| `company` - [`Company!`](/reference/graphql/saas/types-c-e.md#company) | The updated company instance. |
 
 #### Example
 
@@ -240,7 +240,7 @@ Contains the response to the request to update the company role.
 
 | Field Name | Description |
 |------------|-------------|
-| `role` - [`CompanyRole!`](types-c-e.md#companyrole) | The updated company role instance. |
+| `role` - [`CompanyRole!`](/reference/graphql/saas/types-c-e.md#companyrole) | The updated company role instance. |
 
 #### Example
 
@@ -258,7 +258,7 @@ Contains the response to the request to update the company structure.
 
 | Field Name | Description |
 |------------|-------------|
-| `company` - [`Company!`](types-c-e.md#company) | The updated company instance. |
+| `company` - [`Company!`](/reference/graphql/saas/types-c-e.md#company) | The updated company instance. |
 
 #### Example
 
@@ -276,7 +276,7 @@ Contains the response to the request to update a company team.
 
 | Field Name | Description |
 |------------|-------------|
-| `team` - [`CompanyTeam!`](types-c-e.md#companyteam) | The updated company team instance. |
+| `team` - [`CompanyTeam!`](/reference/graphql/saas/types-c-e.md#companyteam) | The updated company team instance. |
 
 #### Example
 
@@ -294,7 +294,7 @@ Contains the response to the request to update the company user.
 
 | Field Name | Description |
 |------------|-------------|
-| `user` - [`Customer!`](types-c-e.md#customer) | The updated company user instance. |
+| `user` - [`Customer!`](/reference/graphql/saas/types-c-e.md#customer) | The updated company user instance. |
 
 #### Example
 
@@ -312,12 +312,12 @@ Defines updates to a `GiftRegistry` object.
 
 | Input Field | Description |
 |-------------|-------------|
-| `dynamic_attributes` - [`[GiftRegistryDynamicAttributeInput]`](types-f-i.md#giftregistrydynamicattributeinput) | Additional attributes specified as a code-value pair. Unspecified dynamic attributes are not changed. |
-| `event_name` - [`String`](types-q-s.md#string) | The updated name of the event. |
-| `message` - [`String`](types-q-s.md#string) | The updated message describing the event. |
-| `privacy_settings` - [`GiftRegistryPrivacySettings`](types-f-i.md#giftregistryprivacysettings) | Indicates whether the gift registry is PRIVATE or PUBLIC. |
-| `shipping_address` - [`GiftRegistryShippingAddressInput`](types-f-i.md#giftregistryshippingaddressinput) | The updated shipping address for all gift registry items. |
-| `status` - [`GiftRegistryStatus`](types-f-i.md#giftregistrystatus) | Indicates whether the gift registry is ACTIVE or INACTIVE. |
+| `dynamic_attributes` - [`[GiftRegistryDynamicAttributeInput]`](/reference/graphql/saas/types-f-i.md#giftregistrydynamicattributeinput) | Additional attributes specified as a code-value pair. Unspecified dynamic attributes are not changed. |
+| `event_name` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The updated name of the event. |
+| `message` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The updated message describing the event. |
+| `privacy_settings` - [`GiftRegistryPrivacySettings`](/reference/graphql/saas/types-f-i.md#giftregistryprivacysettings) | Indicates whether the gift registry is PRIVATE or PUBLIC. |
+| `shipping_address` - [`GiftRegistryShippingAddressInput`](/reference/graphql/saas/types-f-i.md#giftregistryshippingaddressinput) | The updated shipping address for all gift registry items. |
+| `status` - [`GiftRegistryStatus`](/reference/graphql/saas/types-f-i.md#giftregistrystatus) | Indicates whether the gift registry is ACTIVE or INACTIVE. |
 
 #### Example
 
@@ -344,16 +344,16 @@ Defines updates to an item in a gift registry.
 
 | Input Field | Description |
 |-------------|-------------|
-| `gift_registry_item_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `giftRegistryItem` object. |
-| `note` - [`String`](types-q-s.md#string) | The updated description of the item. |
-| `quantity` - [`Float!`](types-f-i.md#float) | The updated quantity of the gift registry item. |
+| `gift_registry_item_uid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of a `giftRegistryItem` object. |
+| `note` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The updated description of the item. |
+| `quantity` - [`Float!`](/reference/graphql/saas/types-f-i.md#float) | The updated quantity of the gift registry item. |
 
 #### Example
 
 ```json
 {
   "gift_registry_item_uid": "4",
-  "note": "xyz789",
+  "note": "abc123",
   "quantity": 123.45
 }
 ```
@@ -368,7 +368,7 @@ Contains the results of a request to update gift registry items.
 
 | Field Name | Description |
 |------------|-------------|
-| `gift_registry` - [`GiftRegistry`](types-f-i.md#giftregistry) | The gift registry after updating updating items. |
+| `gift_registry` - [`GiftRegistry`](/reference/graphql/saas/types-f-i.md#giftregistry) | The gift registry after updating updating items. |
 
 #### Example
 
@@ -386,7 +386,7 @@ Contains the results of a request to update a gift registry.
 
 | Field Name | Description |
 |------------|-------------|
-| `gift_registry` - [`GiftRegistry`](types-f-i.md#giftregistry) | The updated gift registry. |
+| `gift_registry` - [`GiftRegistry`](/reference/graphql/saas/types-f-i.md#giftregistry) | The updated gift registry. |
 
 #### Example
 
@@ -404,11 +404,11 @@ Defines updates to an existing registrant.
 
 | Input Field | Description |
 |-------------|-------------|
-| `dynamic_attributes` - [`[GiftRegistryDynamicAttributeInput]`](types-f-i.md#giftregistrydynamicattributeinput) | As a result of the update, only the values of provided attributes will be affected. If the attribute is missing in the request, its value will not be changed. |
-| `email` - [`String`](types-q-s.md#string) | The updated email address of the registrant. |
-| `firstname` - [`String`](types-q-s.md#string) | The updated first name of the registrant. |
-| `gift_registry_registrant_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `giftRegistryRegistrant` object. |
-| `lastname` - [`String`](types-q-s.md#string) | The updated last name of the registrant. |
+| `dynamic_attributes` - [`[GiftRegistryDynamicAttributeInput]`](/reference/graphql/saas/types-f-i.md#giftregistrydynamicattributeinput) | As a result of the update, only the values of provided attributes will be affected. If the attribute is missing in the request, its value will not be changed. |
+| `email` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The updated email address of the registrant. |
+| `firstname` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The updated first name of the registrant. |
+| `gift_registry_registrant_uid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of a `giftRegistryRegistrant` object. |
+| `lastname` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The updated last name of the registrant. |
 
 #### Example
 
@@ -420,7 +420,7 @@ Defines updates to an existing registrant.
   "email": "abc123",
   "firstname": "abc123",
   "gift_registry_registrant_uid": 4,
-  "lastname": "xyz789"
+  "lastname": "abc123"
 }
 ```
 
@@ -434,7 +434,7 @@ Contains the results a request to update registrants.
 
 | Field Name | Description |
 |------------|-------------|
-| `gift_registry` - [`GiftRegistry`](types-f-i.md#giftregistry) | The gift registry after updating registrants. |
+| `gift_registry` - [`GiftRegistry`](/reference/graphql/saas/types-f-i.md#giftregistry) | The gift registry after updating registrants. |
 
 #### Example
 
@@ -452,7 +452,7 @@ Contains the updated negotiable quote.
 
 | Field Name | Description |
 |------------|-------------|
-| `quote` - [`NegotiableQuote`](types-k-p.md#negotiablequote) | The updated negotiable quote. |
+| `quote` - [`NegotiableQuote`](/reference/graphql/saas/types-k-p.md#negotiablequote) | The updated negotiable quote. |
 
 #### Example
 
@@ -470,8 +470,8 @@ Specifies the items to update.
 
 | Input Field | Description |
 |-------------|-------------|
-| `items` - [`[NegotiableQuoteItemQuantityInput]!`](types-k-p.md#negotiablequoteitemquantityinput) | An array of items to update. |
-| `quote_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
+| `items` - [`[NegotiableQuoteItemQuantityInput]!`](/reference/graphql/saas/types-k-p.md#negotiablequoteitemquantityinput) | An array of items to update. |
+| `quote_uid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
 
 #### Example
 
@@ -492,7 +492,7 @@ Contains the updated negotiable quote template.
 
 | Field Name | Description |
 |------------|-------------|
-| `quote_template` - [`NegotiableQuoteTemplate`](types-k-p.md#negotiablequotetemplate) | The updated negotiable quote template. |
+| `quote_template` - [`NegotiableQuoteTemplate`](/reference/graphql/saas/types-k-p.md#negotiablequotetemplate) | The updated negotiable quote template. |
 
 #### Example
 
@@ -510,8 +510,8 @@ Specifies the items to update.
 
 | Input Field | Description |
 |-------------|-------------|
-| `items` - [`[NegotiableQuoteTemplateItemQuantityInput]!`](types-k-p.md#negotiablequotetemplateitemquantityinput) | An array of items to update. |
-| `template_id` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuoteTemplate` object. |
+| `items` - [`[NegotiableQuoteTemplateItemQuantityInput]!`](/reference/graphql/saas/types-k-p.md#negotiablequotetemplateitemquantityinput) | An array of items to update. |
+| `template_id` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of a `NegotiableQuoteTemplate` object. |
 
 #### Example
 
@@ -554,22 +554,22 @@ Defines the changes to be made to an approval rule.
 
 | Input Field | Description |
 |-------------|-------------|
-| `applies_to` - [`[ID]`](types-f-i.md#id) | An updated list of company user role IDs to which this purchase order approval rule should be applied. When an empty array is provided, the rule is applied to all user roles in the system, including those created in the future. |
-| `approvers` - [`[ID]`](types-f-i.md#id) | An updated list of B2B user roles that can approve this purchase order approval rule. |
-| `condition` - [`CreatePurchaseOrderApprovalRuleConditionInput`](types-c-e.md#createpurchaseorderapprovalruleconditioninput) | The updated condition of the purchase order approval rule. |
-| `description` - [`String`](types-q-s.md#string) | The updated approval rule description. |
-| `name` - [`String`](types-q-s.md#string) | The updated approval rule name. |
-| `status` - [`PurchaseOrderApprovalRuleStatus`](types-k-p.md#purchaseorderapprovalrulestatus) | The updated status of the purchase order approval rule. |
-| `uid` - [`ID!`](types-f-i.md#id) | Unique identifier for the purchase order approval rule. |
+| `applies_to` - [`[ID]`](/reference/graphql/saas/types-f-i.md#id) | An updated list of company user role IDs to which this purchase order approval rule should be applied. When an empty array is provided, the rule is applied to all user roles in the system, including those created in the future. |
+| `approvers` - [`[ID]`](/reference/graphql/saas/types-f-i.md#id) | An updated list of B2B user roles that can approve this purchase order approval rule. |
+| `condition` - [`CreatePurchaseOrderApprovalRuleConditionInput`](/reference/graphql/saas/types-c-e.md#createpurchaseorderapprovalruleconditioninput) | The updated condition of the purchase order approval rule. |
+| `description` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The updated approval rule description. |
+| `name` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The updated approval rule name. |
+| `status` - [`PurchaseOrderApprovalRuleStatus`](/reference/graphql/saas/types-k-p.md#purchaseorderapprovalrulestatus) | The updated status of the purchase order approval rule. |
+| `uid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | Unique identifier for the purchase order approval rule. |
 
 #### Example
 
 ```json
 {
-  "applies_to": [4],
-  "approvers": ["4"],
+  "applies_to": ["4"],
+  "approvers": [4],
   "condition": CreatePurchaseOrderApprovalRuleConditionInput,
-  "description": "xyz789",
+  "description": "abc123",
   "name": "xyz789",
   "status": "ENABLED",
   "uid": 4
@@ -586,8 +586,8 @@ An input object that defines which requistion list characteristics to update.
 
 | Input Field | Description |
 |-------------|-------------|
-| `description` - [`String`](types-q-s.md#string) | The updated description of the requisition list. |
-| `name` - [`String!`](types-q-s.md#string) | The new name of the requisition list. |
+| `description` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The updated description of the requisition list. |
+| `name` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The new name of the requisition list. |
 
 #### Example
 
@@ -608,17 +608,17 @@ Defines which items in a requisition list to update.
 
 | Input Field | Description |
 |-------------|-------------|
-| `entered_options` - [`[EnteredOptionInput]`](types-c-e.md#enteredoptioninput) | An array of customer-entered options. |
-| `item_id` - [`ID!`](types-f-i.md#id) | The ID of the requisition list item to update. |
-| `quantity` - [`Float`](types-f-i.md#float) | The new quantity of the item. |
-| `selected_options` - [`[String]`](types-q-s.md#string) | An array of selected option IDs. |
+| `entered_options` - [`[EnteredOptionInput]`](/reference/graphql/saas/types-c-e.md#enteredoptioninput) | An array of customer-entered options. |
+| `item_id` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The ID of the requisition list item to update. |
+| `quantity` - [`Float`](/reference/graphql/saas/types-f-i.md#float) | The new quantity of the item. |
+| `selected_options` - [`[String]`](/reference/graphql/saas/types-q-s.md#string) | An array of selected option IDs. |
 
 #### Example
 
 ```json
 {
   "entered_options": [EnteredOptionInput],
-  "item_id": 4,
+  "item_id": "4",
   "quantity": 123.45,
   "selected_options": ["abc123"]
 }
@@ -634,7 +634,7 @@ Output of the request to update items in the specified requisition list.
 
 | Field Name | Description |
 |------------|-------------|
-| `requisition_list` - [`RequisitionList`](types-q-s.md#requisitionlist) | The requisition list after updating items. |
+| `requisition_list` - [`RequisitionList`](/reference/graphql/saas/types-q-s.md#requisitionlist) | The requisition list after updating items. |
 
 #### Example
 
@@ -652,7 +652,7 @@ Output of the request to rename the requisition list.
 
 | Field Name | Description |
 |------------|-------------|
-| `requisition_list` - [`RequisitionList`](types-q-s.md#requisitionlist) | The renamed requisition list. |
+| `requisition_list` - [`RequisitionList`](/reference/graphql/saas/types-q-s.md#requisitionlist) | The renamed requisition list. |
 
 #### Example
 
@@ -670,8 +670,8 @@ Contains the name and visibility of an updated wish list.
 
 | Field Name | Description |
 |------------|-------------|
-| `name` - [`String!`](types-q-s.md#string) | The wish list name. |
-| `uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `Wishlist` object. |
+| `name` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The wish list name. |
+| `uid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of a `Wishlist` object. |
 | `visibility` - [`WishlistVisibilityEnum!`](#wishlistvisibilityenum) | Indicates whether the wish list is public or private. |
 
 #### Example
@@ -679,7 +679,7 @@ Contains the name and visibility of an updated wish list.
 ```json
 {
   "name": "abc123",
-  "uid": "4",
+  "uid": 4,
   "visibility": "PUBLIC"
 }
 ```
@@ -694,16 +694,16 @@ Defines the input for returning matching companies the customer is assigned to.
 
 | Input Field | Description |
 |-------------|-------------|
-| `currentPage` - [`Int`](types-f-i.md#int) | Specifies which page of results to return. The default value is 1. |
-| `pageSize` - [`Int`](types-f-i.md#int) | Specifies the maximum number of results to return at once. This attribute is optional. |
-| `sort` - [`[CompaniesSortInput]`](types-c-e.md#companiessortinput) | Defines the sorting of the results. |
+| `currentPage` - [`Int`](/reference/graphql/saas/types-f-i.md#int) | Specifies which page of results to return. The default value is 1. |
+| `pageSize` - [`Int`](/reference/graphql/saas/types-f-i.md#int) | Specifies the maximum number of results to return at once. This attribute is optional. |
+| `sort` - [`[CompaniesSortInput]`](/reference/graphql/saas/types-c-e.md#companiessortinput) | Defines the sorting of the results. |
 
 #### Example
 
 ```json
 {
-  "currentPage": 987,
-  "pageSize": 123,
+  "currentPage": 123,
+  "pageSize": 987,
   "sort": [CompaniesSortInput]
 }
 ```
@@ -718,8 +718,8 @@ An object that contains a list of companies customer is assigned to.
 
 | Field Name | Description |
 |------------|-------------|
-| `items` - [`[CompanyBasicInfo]!`](types-c-e.md#companybasicinfo) | An array of companies customer is assigned to. |
-| `page_info` - [`SearchResultPageInfo!`](types-q-s.md#searchresultpageinfo) | Provides navigation for the query response. |
+| `items` - [`[CompanyBasicInfo]!`](/reference/graphql/saas/types-c-e.md#companybasicinfo) | An array of companies customer is assigned to. |
+| `page_info` - [`SearchResultPageInfo!`](/reference/graphql/saas/types-q-s.md#searchresultpageinfo) | Provides navigation for the query response. |
 
 #### Example
 
@@ -740,7 +740,7 @@ Contains details about a failed validation attempt.
 
 | Field Name | Description |
 |------------|-------------|
-| `message` - [`String!`](types-q-s.md#string) | The returned error message. |
+| `message` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The returned error message. |
 | `type` - [`ValidatePurchaseOrderErrorType!`](#validatepurchaseordererrortype) | Error type. |
 
 #### Example
@@ -779,7 +779,7 @@ Defines the purchase orders to be validated.
 
 | Input Field | Description |
 |-------------|-------------|
-| `purchase_order_uids` - [`[ID]!`](types-f-i.md#id) | An array of the purchase order IDs. |
+| `purchase_order_uids` - [`[ID]!`](/reference/graphql/saas/types-f-i.md#id) | An array of the purchase order IDs. |
 
 #### Example
 
@@ -798,7 +798,7 @@ Contains the results of validation attempts.
 | Field Name | Description |
 |------------|-------------|
 | `errors` - [`[ValidatePurchaseOrderError]!`](#validatepurchaseordererror) | An array of error messages encountered while performing the operation. |
-| `purchase_orders` - [`[PurchaseOrder]!`](types-k-p.md#purchaseorder) | An array of the purchase orders in the request. |
+| `purchase_orders` - [`[PurchaseOrder]!`](/reference/graphql/saas/types-k-p.md#purchaseorder) | An array of the purchase orders in the request. |
 
 #### Example
 
@@ -820,7 +820,7 @@ Defines a customer attribute validation rule.
 | Field Name | Description |
 |------------|-------------|
 | `name` - [`ValidationRuleEnum`](#validationruleenum) | Validation rule name applied to a customer attribute. |
-| `value` - [`String`](types-q-s.md#string) | Validation rule value. |
+| `value` - [`String`](/reference/graphql/saas/types-q-s.md#string) | Validation rule value. |
 
 #### Example
 
@@ -883,8 +883,8 @@ Retrieves the vault configuration
 
 | Field Name | Description |
 |------------|-------------|
-| `is_vault_enabled` - [`Boolean`](types-a-b.md#boolean) | Is vault enabled |
-| `sdk_params` - [`[SDKParams]`](types-q-s.md#sdkparams) | The parameters required to load the Paypal JS SDK |
+| `is_vault_enabled` - [`Boolean`](/reference/graphql/saas/types-a-b.md#boolean) | Is vault enabled |
+| `sdk_params` - [`[SDKParams]`](/reference/graphql/saas/types-q-s.md#sdkparams) | The parameters required to load the Paypal JS SDK |
 | `three_ds_mode` - [`ThreeDSMode`](#threedsmode) | 3DS mode |
 
 #### Example
@@ -907,18 +907,18 @@ Vault payment inputs
 
 | Input Field | Description |
 |-------------|-------------|
-| `payment_source` - [`String`](types-q-s.md#string) | The payment source for the payment method |
-| `payments_order_id` - [`String`](types-q-s.md#string) | The payment services order ID |
-| `paypal_order_id` - [`String`](types-q-s.md#string) | PayPal order ID |
-| `public_hash` - [`String`](types-q-s.md#string) | The public hash of the token. |
+| `payment_source` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The payment source for the payment method |
+| `payments_order_id` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The payment services order ID |
+| `paypal_order_id` - [`String`](/reference/graphql/saas/types-q-s.md#string) | PayPal order ID |
+| `public_hash` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The public hash of the token. |
 
 #### Example
 
 ```json
 {
-  "payment_source": "xyz789",
+  "payment_source": "abc123",
   "payments_order_id": "abc123",
-  "paypal_order_id": "xyz789",
+  "paypal_order_id": "abc123",
   "public_hash": "xyz789"
 }
 ```
@@ -933,7 +933,7 @@ The payment source information
 
 | Input Field | Description |
 |-------------|-------------|
-| `payment_source` - [`PaymentSourceInput!`](types-k-p.md#paymentsourceinput) | The payment source information |
+| `payment_source` - [`PaymentSourceInput!`](/reference/graphql/saas/types-k-p.md#paymentsourceinput) | The payment source information |
 
 #### Example
 
@@ -951,15 +951,15 @@ User view history
 
 | Input Field | Description |
 |-------------|-------------|
-| `date` - [`DateTime`](types-c-e.md#datetime) |  |
-| `sku` - [`String`](types-q-s.md#string) |  |
+| `date` - [`DateTime`](/reference/graphql/saas/types-c-e.md#datetime) |  |
+| `sku` - [`String`](/reference/graphql/saas/types-q-s.md#string) |  |
 
 #### Example
 
 ```json
 {
   "date": "2007-12-03T10:15:30Z",
-  "sku": "abc123"
+  "sku": "xyz789"
 }
 ```
 
@@ -973,8 +973,8 @@ User view history
 
 | Input Field | Description |
 |-------------|-------------|
-| `dateTime` - [`DateTime`](types-c-e.md#datetime) |  |
-| `sku` - [`String!`](types-q-s.md#string) |  |
+| `dateTime` - [`DateTime`](/reference/graphql/saas/types-c-e.md#datetime) |  |
+| `sku` - [`String!`](/reference/graphql/saas/types-q-s.md#string) |  |
 
 #### Example
 
@@ -995,42 +995,42 @@ An implementation for virtual product cart items.
 
 | Field Name | Description |
 |------------|-------------|
-| `backorder_message` - [`String`](types-q-s.md#string) | Customer-facing hint when the line is salable on notify backorders with insufficient physical quantity; null otherwise. |
-| `custom_attributes` - [`[CustomAttribute]`](types-c-e.md#customattribute) | The custom attributes for the cart item |
-| `customizable_options` - [`[SelectedCustomizableOption]!`](types-q-s.md#selectedcustomizableoption) | An array containing customizable options the shopper selected. |
-| `discount` - [`[Discount]`](types-c-e.md#discount) | Contains discount for quote line item. |
-| `errors` - [`[CartItemError]`](types-c-e.md#cartitemerror) | An array of errors encountered while loading the cart item |
-| `is_available` - [`Boolean!`](types-a-b.md#boolean) | True if requested quantity is less than available stock, false otherwise. *(Deprecated: Use `is_salable` instead. It indicates whether the line can be purchased, including backorder configuration.)* |
-| `is_salable` - [`Boolean!`](types-a-b.md#boolean) | True when the item can be purchased and should not block checkout: stock status is in stock and either physical quantity covers the requested quantity or backorders are allowed. |
-| `max_qty` - [`Float`](types-f-i.md#float) | Line item max qty in quote template |
-| `min_qty` - [`Float`](types-f-i.md#float) | Line item min qty in quote template |
-| `not_available_message` - [`String`](types-q-s.md#string) | Shortage or unavailability message for the line; null when the item is salable. |
-| `note_from_buyer` - [`[ItemNote]`](types-f-i.md#itemnote) | The buyer's quote line item note. |
-| `note_from_seller` - [`[ItemNote]`](types-f-i.md#itemnote) | The seller's quote line item note. |
-| `prices` - [`CartItemPrices`](types-c-e.md#cartitemprices) | Contains details about the price of the item, including taxes and discounts. |
-| `product` - [`ProductInterface!`](types-k-p.md#productinterface) | Details about an item in the cart. *(Deprecated: Product information is part of a composable Catalog Service.)* |
-| `quantity` - [`Float!`](types-f-i.md#float) | The quantity of this item in the cart. |
-| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `CartItemInterface` object. |
+| `backorder_message` - [`String`](/reference/graphql/saas/types-q-s.md#string) | Customer-facing hint when the line is salable on notify backorders with insufficient physical quantity; null otherwise. |
+| `custom_attributes` - [`[CustomAttribute]`](/reference/graphql/saas/types-c-e.md#customattribute) | The custom attributes for the cart item |
+| `customizable_options` - [`[SelectedCustomizableOption]!`](/reference/graphql/saas/types-q-s.md#selectedcustomizableoption) | An array containing customizable options the shopper selected. |
+| `discount` - [`[Discount]`](/reference/graphql/saas/types-c-e.md#discount) | Contains discount for quote line item. |
+| `errors` - [`[CartItemError]`](/reference/graphql/saas/types-c-e.md#cartitemerror) | An array of errors encountered while loading the cart item |
+| `is_available` - [`Boolean!`](/reference/graphql/saas/types-a-b.md#boolean) | True if requested quantity is less than available stock, false otherwise. *(Deprecated: Use `is_salable` instead. It indicates whether the line can be purchased, including backorder configuration.)* |
+| `is_salable` - [`Boolean!`](/reference/graphql/saas/types-a-b.md#boolean) | True when the item can be purchased and should not block checkout: stock status is in stock and either physical quantity covers the requested quantity or backorders are allowed. |
+| `max_qty` - [`Float`](/reference/graphql/saas/types-f-i.md#float) | Line item max qty in quote template |
+| `min_qty` - [`Float`](/reference/graphql/saas/types-f-i.md#float) | Line item min qty in quote template |
+| `not_available_message` - [`String`](/reference/graphql/saas/types-q-s.md#string) | Shortage or unavailability message for the line; null when the item is salable. |
+| `note_from_buyer` - [`[ItemNote]`](/reference/graphql/saas/types-f-i.md#itemnote) | The buyer's quote line item note. |
+| `note_from_seller` - [`[ItemNote]`](/reference/graphql/saas/types-f-i.md#itemnote) | The seller's quote line item note. |
+| `prices` - [`CartItemPrices`](/reference/graphql/saas/types-c-e.md#cartitemprices) | Contains details about the price of the item, including taxes and discounts. |
+| `product` - [`ProductInterface!`](/reference/graphql/saas/types-k-p.md#productinterface) | Details about an item in the cart. *(Deprecated: Product information is part of a composable Catalog Service.)* |
+| `quantity` - [`Float!`](/reference/graphql/saas/types-f-i.md#float) | The quantity of this item in the cart. |
+| `uid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID for a `CartItemInterface` object. |
 
 #### Example
 
 ```json
 {
-  "backorder_message": "abc123",
+  "backorder_message": "xyz789",
   "custom_attributes": [CustomAttribute],
   "customizable_options": [SelectedCustomizableOption],
   "discount": [Discount],
   "errors": [CartItemError],
-  "is_available": true,
+  "is_available": false,
   "is_salable": false,
   "max_qty": 123.45,
   "min_qty": 123.45,
-  "not_available_message": "abc123",
+  "not_available_message": "xyz789",
   "note_from_buyer": [ItemNote],
   "note_from_seller": [ItemNote],
   "prices": CartItemPrices,
   "product": ProductInterface,
-  "quantity": 987.65,
+  "quantity": 123.45,
   "uid": "4"
 }
 ```
@@ -1045,54 +1045,54 @@ Defines a virtual product, which is a non-tangible product that does not require
 
 | Field Name | Description |
 |------------|-------------|
-| `canonical_url` - [`String`](types-q-s.md#string) | The relative canonical URL. This value is returned only if the system setting 'Use Canonical Link Meta Tag For Products' is enabled. |
-| `categories` - [`[CategoryInterface]`](types-c-e.md#categoryinterface) | The categories assigned to a product. |
-| `country_of_manufacture` - [`String`](types-q-s.md#string) | The product's country of origin. |
-| `crosssell_products` - [`[ProductInterface]`](types-k-p.md#productinterface) | Crosssell Products |
-| `custom_attributesV2` - [`ProductCustomAttributes`](types-k-p.md#productcustomattributes) | Product custom attributes. |
-| `description` - [`ComplexTextValue`](types-c-e.md#complextextvalue) | Detailed information about the product. The value can include simple HTML tags. |
-| `gift_message_available` - [`Boolean!`](types-a-b.md#boolean) | Returns a value indicating gift message availability for the product. |
-| `gift_wrapping_available` - [`Boolean!`](types-a-b.md#boolean) | Returns a value indicating gift wrapping availability for the product. |
-| `gift_wrapping_price` - [`Money`](types-k-p.md#money) | Returns value and currency indicating gift wrapping price for the product. |
-| `image` - [`ProductImage`](types-k-p.md#productimage) | The relative path to the main image on the product page. |
-| `is_returnable` - [`String`](types-q-s.md#string) | Indicates whether the product can be returned. |
-| `manufacturer` - [`Int`](types-f-i.md#int) | A number representing the product's manufacturer. |
-| `max_sale_qty` - [`Float`](types-f-i.md#float) | Maximum Qty Allowed in Shopping Cart |
-| `media_gallery` - [`[MediaGalleryInterface]`](types-k-p.md#mediagalleryinterface) | An array of media gallery objects. |
-| `meta_description` - [`String`](types-q-s.md#string) | A brief overview of the product for search results listings, maximum 255 characters. |
-| `meta_keyword` - [`String`](types-q-s.md#string) | A comma-separated list of keywords that are visible only to search engines. |
-| `meta_title` - [`String`](types-q-s.md#string) | A string that is displayed in the title bar and tab of the browser and in search results lists. |
-| `min_sale_qty` - [`Float`](types-f-i.md#float) | Minimum Qty Allowed in Shopping Cart |
-| `name` - [`String`](types-q-s.md#string) | The product name. Customers use this name to identify the product. |
-| `new_from_date` - [`String`](types-q-s.md#string) | The beginning date for new product listings, and determines if the product is featured as a new product. |
-| `new_to_date` - [`String`](types-q-s.md#string) | The end date for new product listings. |
-| `only_x_left_in_stock` - [`Float`](types-f-i.md#float) | Product stock only x left count |
-| `options` - [`[CustomizableOptionInterface]`](types-c-e.md#customizableoptioninterface) | An array of options for a customizable product. |
-| `options_container` - [`String`](types-q-s.md#string) | If the product has multiple options, determines where they appear on the product page. |
-| `price_range` - [`PriceRange!`](types-k-p.md#pricerange) | The range of prices for the product |
+| `canonical_url` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The relative canonical URL. This value is returned only if the system setting 'Use Canonical Link Meta Tag For Products' is enabled. |
+| `categories` - [`[CategoryInterface]`](/reference/graphql/saas/types-c-e.md#categoryinterface) | The categories assigned to a product. |
+| `country_of_manufacture` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The product's country of origin. |
+| `crosssell_products` - [`[ProductInterface]`](/reference/graphql/saas/types-k-p.md#productinterface) | Crosssell Products |
+| `custom_attributesV2` - [`ProductCustomAttributes`](/reference/graphql/saas/types-k-p.md#productcustomattributes) | Product custom attributes. |
+| `description` - [`ComplexTextValue`](/reference/graphql/saas/types-c-e.md#complextextvalue) | Detailed information about the product. The value can include simple HTML tags. |
+| `gift_message_available` - [`Boolean!`](/reference/graphql/saas/types-a-b.md#boolean) | Returns a value indicating gift message availability for the product. |
+| `gift_wrapping_available` - [`Boolean!`](/reference/graphql/saas/types-a-b.md#boolean) | Returns a value indicating gift wrapping availability for the product. |
+| `gift_wrapping_price` - [`Money`](/reference/graphql/saas/types-k-p.md#money) | Returns value and currency indicating gift wrapping price for the product. |
+| `image` - [`ProductImage`](/reference/graphql/saas/types-k-p.md#productimage) | The relative path to the main image on the product page. |
+| `is_returnable` - [`String`](/reference/graphql/saas/types-q-s.md#string) | Indicates whether the product can be returned. |
+| `manufacturer` - [`Int`](/reference/graphql/saas/types-f-i.md#int) | A number representing the product's manufacturer. |
+| `max_sale_qty` - [`Float`](/reference/graphql/saas/types-f-i.md#float) | Maximum Qty Allowed in Shopping Cart |
+| `media_gallery` - [`[MediaGalleryInterface]`](/reference/graphql/saas/types-k-p.md#mediagalleryinterface) | An array of media gallery objects. |
+| `meta_description` - [`String`](/reference/graphql/saas/types-q-s.md#string) | A brief overview of the product for search results listings, maximum 255 characters. |
+| `meta_keyword` - [`String`](/reference/graphql/saas/types-q-s.md#string) | A comma-separated list of keywords that are visible only to search engines. |
+| `meta_title` - [`String`](/reference/graphql/saas/types-q-s.md#string) | A string that is displayed in the title bar and tab of the browser and in search results lists. |
+| `min_sale_qty` - [`Float`](/reference/graphql/saas/types-f-i.md#float) | Minimum Qty Allowed in Shopping Cart |
+| `name` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The product name. Customers use this name to identify the product. |
+| `new_from_date` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The beginning date for new product listings, and determines if the product is featured as a new product. |
+| `new_to_date` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The end date for new product listings. |
+| `only_x_left_in_stock` - [`Float`](/reference/graphql/saas/types-f-i.md#float) | Product stock only x left count |
+| `options` - [`[CustomizableOptionInterface]`](/reference/graphql/saas/types-c-e.md#customizableoptioninterface) | An array of options for a customizable product. |
+| `options_container` - [`String`](/reference/graphql/saas/types-q-s.md#string) | If the product has multiple options, determines where they appear on the product page. |
+| `price_range` - [`PriceRange!`](/reference/graphql/saas/types-k-p.md#pricerange) | The range of prices for the product |
 | `price_tiers` - [`[TierPrice]`](#tierprice) | An array of `TierPrice` objects. |
-| `product_links` - [`[ProductLinksInterface]`](types-k-p.md#productlinksinterface) | An array of `ProductLinks` objects. |
-| `quantity` - [`Float`](types-f-i.md#float) | Quantity of available stock |
-| `related_products` - [`[ProductInterface]`](types-k-p.md#productinterface) | An array of products to be displayed in a Related Products block. |
-| `short_description` - [`ComplexTextValue`](types-c-e.md#complextextvalue) | A short description of the product. Its use depends on the theme. |
-| `sku` - [`String`](types-q-s.md#string) | A number or code assigned to a product to identify the product, options, price, and manufacturer. |
-| `small_image` - [`ProductImage`](types-k-p.md#productimage) | The relative path to the small image, which is used on catalog pages. |
-| `special_price` - [`Float`](types-f-i.md#float) | The discounted price of the product. |
-| `special_to_date` - [`String`](types-q-s.md#string) | The end date for a product with a special price. |
-| `stock_status` - [`ProductStockStatus`](types-k-p.md#productstockstatus) | Stock status of the product |
-| `swatch_image` - [`String`](types-q-s.md#string) | The file name of a swatch image. |
-| `thumbnail` - [`ProductImage`](types-k-p.md#productimage) | The relative path to the product's thumbnail image. |
-| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `ProductInterface` object. |
-| `upsell_products` - [`[ProductInterface]`](types-k-p.md#productinterface) | Upsell Products |
-| `url_key` - [`String`](types-q-s.md#string) | The part of the URL that identifies the product |
+| `product_links` - [`[ProductLinksInterface]`](/reference/graphql/saas/types-k-p.md#productlinksinterface) | An array of `ProductLinks` objects. |
+| `quantity` - [`Float`](/reference/graphql/saas/types-f-i.md#float) | Quantity of available stock |
+| `related_products` - [`[ProductInterface]`](/reference/graphql/saas/types-k-p.md#productinterface) | An array of products to be displayed in a Related Products block. |
+| `short_description` - [`ComplexTextValue`](/reference/graphql/saas/types-c-e.md#complextextvalue) | A short description of the product. Its use depends on the theme. |
+| `sku` - [`String`](/reference/graphql/saas/types-q-s.md#string) | A number or code assigned to a product to identify the product, options, price, and manufacturer. |
+| `small_image` - [`ProductImage`](/reference/graphql/saas/types-k-p.md#productimage) | The relative path to the small image, which is used on catalog pages. |
+| `special_price` - [`Float`](/reference/graphql/saas/types-f-i.md#float) | The discounted price of the product. |
+| `special_to_date` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The end date for a product with a special price. |
+| `stock_status` - [`ProductStockStatus`](/reference/graphql/saas/types-k-p.md#productstockstatus) | Stock status of the product |
+| `swatch_image` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The file name of a swatch image. |
+| `thumbnail` - [`ProductImage`](/reference/graphql/saas/types-k-p.md#productimage) | The relative path to the product's thumbnail image. |
+| `uid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID for a `ProductInterface` object. |
+| `upsell_products` - [`[ProductInterface]`](/reference/graphql/saas/types-k-p.md#productinterface) | Upsell Products |
+| `url_key` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The part of the URL that identifies the product |
 
 #### Example
 
 ```json
 {
-  "canonical_url": "abc123",
+  "canonical_url": "xyz789",
   "categories": [CategoryInterface],
-  "country_of_manufacture": "abc123",
+  "country_of_manufacture": "xyz789",
   "crosssell_products": [ProductInterface],
   "custom_attributesV2": ProductCustomAttributes,
   "description": ComplexTextValue,
@@ -1100,32 +1100,32 @@ Defines a virtual product, which is a non-tangible product that does not require
   "gift_wrapping_available": true,
   "gift_wrapping_price": Money,
   "image": ProductImage,
-  "is_returnable": "xyz789",
+  "is_returnable": "abc123",
   "manufacturer": 987,
-  "max_sale_qty": 123.45,
+  "max_sale_qty": 987.65,
   "media_gallery": [MediaGalleryInterface],
   "meta_description": "xyz789",
-  "meta_keyword": "abc123",
-  "meta_title": "xyz789",
-  "min_sale_qty": 987.65,
-  "name": "abc123",
+  "meta_keyword": "xyz789",
+  "meta_title": "abc123",
+  "min_sale_qty": 123.45,
+  "name": "xyz789",
   "new_from_date": "abc123",
   "new_to_date": "xyz789",
   "only_x_left_in_stock": 123.45,
   "options": [CustomizableOptionInterface],
-  "options_container": "abc123",
+  "options_container": "xyz789",
   "price_range": PriceRange,
   "price_tiers": [TierPrice],
   "product_links": [ProductLinksInterface],
   "quantity": 987.65,
   "related_products": [ProductInterface],
   "short_description": ComplexTextValue,
-  "sku": "xyz789",
+  "sku": "abc123",
   "small_image": ProductImage,
   "special_price": 123.45,
-  "special_to_date": "xyz789",
+  "special_to_date": "abc123",
   "stock_status": "IN_STOCK",
-  "swatch_image": "abc123",
+  "swatch_image": "xyz789",
   "thumbnail": ProductImage,
   "uid": "4",
   "upsell_products": [ProductInterface],
@@ -1143,11 +1143,11 @@ Contains details about virtual products added to a requisition list.
 
 | Field Name | Description |
 |------------|-------------|
-| `customizable_options` - [`[SelectedCustomizableOption]!`](types-q-s.md#selectedcustomizableoption) | Selected custom options for an item in the requisition list. |
-| `product` - [`ProductInterface!`](types-k-p.md#productinterface) | Details about a requisition list item. *(Deprecated: Product information is part of a composable Catalog Service.)* |
-| `quantity` - [`Float!`](types-f-i.md#float) | The amount added. |
-| `sku` - [`String!`](types-q-s.md#string) | The product SKU. |
-| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for the requisition list item. |
+| `customizable_options` - [`[SelectedCustomizableOption]!`](/reference/graphql/saas/types-q-s.md#selectedcustomizableoption) | Selected custom options for an item in the requisition list. |
+| `product` - [`ProductInterface!`](/reference/graphql/saas/types-k-p.md#productinterface) | Details about a requisition list item. *(Deprecated: Product information is part of a composable Catalog Service.)* |
+| `quantity` - [`Float!`](/reference/graphql/saas/types-f-i.md#float) | The amount added. |
+| `sku` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The product SKU. |
+| `uid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID for the requisition list item. |
 
 #### Example
 
@@ -1156,7 +1156,7 @@ Contains details about virtual products added to a requisition list.
   "customizable_options": [SelectedCustomizableOption],
   "product": ProductInterface,
   "quantity": 987.65,
-  "sku": "abc123",
+  "sku": "xyz789",
   "uid": 4
 }
 ```
@@ -1171,12 +1171,12 @@ Contains a virtual product wish list item.
 
 | Field Name | Description |
 |------------|-------------|
-| `added_at` - [`String!`](types-q-s.md#string) | The date and time the item was added to the wish list. |
-| `customizable_options` - [`[SelectedCustomizableOption]!`](types-q-s.md#selectedcustomizableoption) | Custom options selected for the wish list item. |
-| `description` - [`String`](types-q-s.md#string) | The description of the item. |
-| `id` - [`ID!`](types-f-i.md#id) | The unique ID for a `WishlistItemInterface` object. |
-| `product` - [`ProductInterface!`](types-k-p.md#productinterface) | Product details of the wish list item. *(Deprecated: Product information is part of a composable Catalog Service.)* |
-| `quantity` - [`Float!`](types-f-i.md#float) | The quantity of this wish list item. |
+| `added_at` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The date and time the item was added to the wish list. |
+| `customizable_options` - [`[SelectedCustomizableOption]!`](/reference/graphql/saas/types-q-s.md#selectedcustomizableoption) | Custom options selected for the wish list item. |
+| `description` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The description of the item. |
+| `id` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID for a `WishlistItemInterface` object. |
+| `product` - [`ProductInterface!`](/reference/graphql/saas/types-k-p.md#productinterface) | Product details of the wish list item. *(Deprecated: Product information is part of a composable Catalog Service.)* |
+| `quantity` - [`Float!`](/reference/graphql/saas/types-f-i.md#float) | The quantity of this wish list item. |
 
 #### Example
 
@@ -1185,7 +1185,7 @@ Contains a virtual product wish list item.
   "added_at": "xyz789",
   "customizable_options": [SelectedCustomizableOption],
   "description": "abc123",
-  "id": 4,
+  "id": "4",
   "product": ProductInterface,
   "quantity": 123.45
 }
@@ -1202,14 +1202,14 @@ An error encountered while performing operations with WishList.
 | Field Name | Description |
 |------------|-------------|
 | `code` - [`WishListUserInputErrorType!`](#wishlistuserinputerrortype) | A wish list-specific error code. |
-| `message` - [`String!`](types-q-s.md#string) | A localized error message. |
+| `message` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | A localized error message. |
 
 #### Example
 
 ```json
 {
   "code": "PRODUCT_NOT_FOUND",
-  "message": "abc123"
+  "message": "xyz789"
 }
 ```
 
@@ -1242,24 +1242,24 @@ Contains a customer wish list.
 
 | Field Name | Description |
 |------------|-------------|
-| `id` - [`ID`](types-f-i.md#id) | The unique ID for a `Wishlist` object. |
-| `items_count` - [`Int`](types-f-i.md#int) | The number of items in the wish list. |
+| `id` - [`ID`](/reference/graphql/saas/types-f-i.md#id) | The unique ID for a `Wishlist` object. |
+| `items_count` - [`Int`](/reference/graphql/saas/types-f-i.md#int) | The number of items in the wish list. |
 | `items_v2` - [`WishlistItems`](#wishlistitems) | An array of items in the customer's wish list. |
-| `name` - [`String`](types-q-s.md#string) | The name of the wish list. |
-| `sharing_code` - [`String`](types-q-s.md#string) | An encrypted code that Magento uses to link to the wish list. |
-| `updated_at` - [`String`](types-q-s.md#string) | The time of the last modification to the wish list. |
+| `name` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The name of the wish list. |
+| `sharing_code` - [`String`](/reference/graphql/saas/types-q-s.md#string) | An encrypted code that Magento uses to link to the wish list. |
+| `updated_at` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The time of the last modification to the wish list. |
 | `visibility` - [`WishlistVisibilityEnum!`](#wishlistvisibilityenum) | Indicates whether the wish list is public or private. |
 
 #### Example
 
 ```json
 {
-  "id": 4,
-  "items_count": 987,
+  "id": "4",
+  "items_count": 123,
   "items_v2": WishlistItems,
   "name": "xyz789",
-  "sharing_code": "abc123",
-  "updated_at": "abc123",
+  "sharing_code": "xyz789",
+  "updated_at": "xyz789",
   "visibility": "PUBLIC"
 }
 ```
@@ -1275,9 +1275,9 @@ Contains details about errors encountered when a customer added wish list items 
 | Field Name | Description |
 |------------|-------------|
 | `code` - [`WishlistCartUserInputErrorType!`](#wishlistcartuserinputerrortype) | An error code that describes the error encountered. |
-| `message` - [`String!`](types-q-s.md#string) | A localized error message. |
-| `wishlistId` - [`ID!`](types-f-i.md#id) | The unique ID of the `Wishlist` object containing an error. |
-| `wishlistItemId` - [`ID!`](types-f-i.md#id) | The unique ID of the wish list item containing an error. |
+| `message` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | A localized error message. |
+| `wishlistId` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the `Wishlist` object containing an error. |
+| `wishlistItemId` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the wish list item containing an error. |
 
 #### Example
 
@@ -1286,7 +1286,7 @@ Contains details about errors encountered when a customer added wish list items 
   "code": "PRODUCT_NOT_FOUND",
   "message": "xyz789",
   "wishlistId": "4",
-  "wishlistItemId": "4"
+  "wishlistItemId": 4
 }
 ```
 
@@ -1322,8 +1322,8 @@ Specifies the IDs of items to copy and their quantities.
 
 | Input Field | Description |
 |-------------|-------------|
-| `quantity` - [`Float`](types-f-i.md#float) | The quantity of this item to copy to the destination wish list. This value can't be greater than the quantity in the source wish list. |
-| `wishlist_item_id` - [`ID!`](types-f-i.md#id) | The unique ID of the `WishlistItemInterface` object to be copied. |
+| `quantity` - [`Float`](/reference/graphql/saas/types-f-i.md#float) | The quantity of this item to copy to the destination wish list. This value can't be greater than the quantity in the source wish list. |
+| `wishlist_item_id` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the `WishlistItemInterface` object to be copied. |
 
 #### Example
 
@@ -1344,20 +1344,20 @@ Defines the items to add to a wish list.
 
 | Input Field | Description |
 |-------------|-------------|
-| `entered_options` - [`[EnteredOptionInput]`](types-c-e.md#enteredoptioninput) | An array of options that the customer entered. |
-| `parent_sku` - [`String`](types-q-s.md#string) | For complex product types, the SKU of the parent product. |
-| `quantity` - [`Float!`](types-f-i.md#float) | The amount or number of items to add. |
-| `selected_options` - [`[ID]`](types-f-i.md#id) | An array of strings corresponding to options the customer selected. |
-| `sku` - [`String!`](types-q-s.md#string) | The SKU of the product to add. For complex product types, specify the child product SKU. |
+| `entered_options` - [`[EnteredOptionInput]`](/reference/graphql/saas/types-c-e.md#enteredoptioninput) | An array of options that the customer entered. |
+| `parent_sku` - [`String`](/reference/graphql/saas/types-q-s.md#string) | For complex product types, the SKU of the parent product. |
+| `quantity` - [`Float!`](/reference/graphql/saas/types-f-i.md#float) | The amount or number of items to add. |
+| `selected_options` - [`[ID]`](/reference/graphql/saas/types-f-i.md#id) | An array of strings corresponding to options the customer selected. |
+| `sku` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The SKU of the product to add. For complex product types, specify the child product SKU. |
 
 #### Example
 
 ```json
 {
   "entered_options": [EnteredOptionInput],
-  "parent_sku": "abc123",
-  "quantity": 123.45,
-  "selected_options": [4],
+  "parent_sku": "xyz789",
+  "quantity": 987.65,
+  "selected_options": ["4"],
   "sku": "xyz789"
 }
 ```
@@ -1372,23 +1372,23 @@ The interface for wish list items.
 
 | Field Name | Description |
 |------------|-------------|
-| `added_at` - [`String!`](types-q-s.md#string) | The date and time the item was added to the wish list. |
-| `customizable_options` - [`[SelectedCustomizableOption]!`](types-q-s.md#selectedcustomizableoption) | Custom options selected for the wish list item. |
-| `description` - [`String`](types-q-s.md#string) | The description of the item. |
-| `id` - [`ID!`](types-f-i.md#id) | The unique ID for a `WishlistItemInterface` object. |
-| `product` - [`ProductInterface!`](types-k-p.md#productinterface) | Product details of the wish list item. *(Deprecated: Product information is part of a composable Catalog Service.)* |
-| `quantity` - [`Float!`](types-f-i.md#float) | The quantity of this wish list item. |
+| `added_at` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The date and time the item was added to the wish list. |
+| `customizable_options` - [`[SelectedCustomizableOption]!`](/reference/graphql/saas/types-q-s.md#selectedcustomizableoption) | Custom options selected for the wish list item. |
+| `description` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The description of the item. |
+| `id` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID for a `WishlistItemInterface` object. |
+| `product` - [`ProductInterface!`](/reference/graphql/saas/types-k-p.md#productinterface) | Product details of the wish list item. *(Deprecated: Product information is part of a composable Catalog Service.)* |
+| `quantity` - [`Float!`](/reference/graphql/saas/types-f-i.md#float) | The quantity of this wish list item. |
 
 #### Possible Types
 
 | WishlistItemInterface Types |
 |----------------|
-| [`BundleWishlistItem`](types-a-b.md#bundlewishlistitem) |
-| [`ConfigurableWishlistItem`](types-c-e.md#configurablewishlistitem) |
-| [`DownloadableWishlistItem`](types-c-e.md#downloadablewishlistitem) |
-| [`GiftCardWishlistItem`](types-f-i.md#giftcardwishlistitem) |
-| [`GroupedProductWishlistItem`](types-f-i.md#groupedproductwishlistitem) |
-| [`SimpleWishlistItem`](types-q-s.md#simplewishlistitem) |
+| [`BundleWishlistItem`](/reference/graphql/saas/types-a-b.md#bundlewishlistitem) |
+| [`ConfigurableWishlistItem`](/reference/graphql/saas/types-c-e.md#configurablewishlistitem) |
+| [`DownloadableWishlistItem`](/reference/graphql/saas/types-c-e.md#downloadablewishlistitem) |
+| [`GiftCardWishlistItem`](/reference/graphql/saas/types-f-i.md#giftcardwishlistitem) |
+| [`GroupedProductWishlistItem`](/reference/graphql/saas/types-f-i.md#groupedproductwishlistitem) |
+| [`SimpleWishlistItem`](/reference/graphql/saas/types-q-s.md#simplewishlistitem) |
 | [`VirtualWishlistItem`](#virtualwishlistitem) |
 
 #### Example
@@ -1397,8 +1397,8 @@ The interface for wish list items.
 {
   "added_at": "xyz789",
   "customizable_options": [SelectedCustomizableOption],
-  "description": "xyz789",
-  "id": 4,
+  "description": "abc123",
+  "id": "4",
   "product": ProductInterface,
   "quantity": 123.45
 }
@@ -1414,13 +1414,16 @@ Specifies the IDs of the items to move and their quantities.
 
 | Input Field | Description |
 |-------------|-------------|
-| `quantity` - [`Float`](types-f-i.md#float) | The quantity of this item to move to the destination wish list. This value can't be greater than the quantity in the source wish list. |
-| `wishlist_item_id` - [`ID!`](types-f-i.md#id) | The unique ID of the `WishlistItemInterface` object to be moved. |
+| `quantity` - [`Float`](/reference/graphql/saas/types-f-i.md#float) | The quantity of this item to move to the destination wish list. This value can't be greater than the quantity in the source wish list. |
+| `wishlist_item_id` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the `WishlistItemInterface` object to be moved. |
 
 #### Example
 
 ```json
-{"quantity": 123.45, "wishlist_item_id": 4}
+{
+  "quantity": 987.65,
+  "wishlist_item_id": "4"
+}
 ```
 
 <HorizontalLine />
@@ -1433,11 +1436,11 @@ Defines updates to items in a wish list.
 
 | Input Field | Description |
 |-------------|-------------|
-| `description` - [`String`](types-q-s.md#string) | Customer-entered comments about the item. |
-| `entered_options` - [`[EnteredOptionInput]`](types-c-e.md#enteredoptioninput) | An array of options that the customer entered. |
-| `quantity` - [`Float`](types-f-i.md#float) | The new amount or number of this item. |
-| `selected_options` - [`[ID]`](types-f-i.md#id) | An array of strings corresponding to options the customer selected. |
-| `wishlist_item_id` - [`ID!`](types-f-i.md#id) | The unique ID for a `WishlistItemInterface` object. |
+| `description` - [`String`](/reference/graphql/saas/types-q-s.md#string) | Customer-entered comments about the item. |
+| `entered_options` - [`[EnteredOptionInput]`](/reference/graphql/saas/types-c-e.md#enteredoptioninput) | An array of options that the customer entered. |
+| `quantity` - [`Float`](/reference/graphql/saas/types-f-i.md#float) | The new amount or number of this item. |
+| `selected_options` - [`[ID]`](/reference/graphql/saas/types-f-i.md#id) | An array of strings corresponding to options the customer selected. |
+| `wishlist_item_id` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID for a `WishlistItemInterface` object. |
 
 #### Example
 
@@ -1446,7 +1449,7 @@ Defines updates to items in a wish list.
   "description": "abc123",
   "entered_options": [EnteredOptionInput],
   "quantity": 123.45,
-  "selected_options": [4],
+  "selected_options": ["4"],
   "wishlist_item_id": 4
 }
 ```
@@ -1462,7 +1465,7 @@ Contains an array of items in a wish list.
 | Field Name | Description |
 |------------|-------------|
 | `items` - [`[WishlistItemInterface]!`](#wishlistiteminterface) | A list of items in the wish list. |
-| `page_info` - [`SearchResultPageInfo`](types-q-s.md#searchresultpageinfo) | Contains pagination metadata. |
+| `page_info` - [`SearchResultPageInfo`](/reference/graphql/saas/types-q-s.md#searchresultpageinfo) | Contains pagination metadata. |
 
 #### Example
 
