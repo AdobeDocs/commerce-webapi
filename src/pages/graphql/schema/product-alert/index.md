@@ -9,10 +9,6 @@ Product alerts allow logged-in customers to subscribe to receive notifications w
 
 These mutations and queries require a valid [customer authentication token](../customer/mutations/generate-token.md).
 
-<InlineAlert variant="info" slots="text1" />
-
-These mutations and queries were created for the [Storefront Compatibility Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/configuration/storefront-compatibility/v248/) and are now available on Adobe Commerce 2.4.9.
-
 ## Mutations
 
 - [subscribeProductAlertStock mutation](mutations/subscribe-stock.md) — Subscribe to a back-in-stock alert for a product.

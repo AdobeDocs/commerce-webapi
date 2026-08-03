@@ -9,10 +9,6 @@ The `isSubscribedProductAlertStock` query returns whether the logged-in customer
 
 This query requires a valid [customer authentication token](../../customer/mutations/generate-token.md).
 
-<InlineAlert variant="info" slots="text1" />
-
-This query was created for the [Storefront Compatibility Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/configuration/storefront-compatibility/v248/) and is now available on Adobe Commerce 2.4.9.
-
 ## Syntax
 
 ```graphql

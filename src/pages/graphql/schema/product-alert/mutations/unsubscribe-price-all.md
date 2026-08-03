@@ -9,10 +9,6 @@ The `unsubscribeProductAlertPriceAll` mutation removes all of the logged-in cust
 
 This mutation requires a valid [customer authentication token](../../customer/mutations/generate-token.md).
 
-<InlineAlert variant="info" slots="text1" />
-
-This mutation was created for the [Storefront Compatibility Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/configuration/storefront-compatibility/v248/) and is now available on Adobe Commerce 2.4.9.
-
 ## Syntax
 
 ```graphql
