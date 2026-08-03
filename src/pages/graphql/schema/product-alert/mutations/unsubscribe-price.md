@@ -9,6 +9,8 @@ The `unsubscribeProductAlertPrice` mutation removes the logged-in customer's pri
 
 This mutation requires a valid [customer authentication token](../../customer/mutations/generate-token.md).
 
+<InlineAlert variant="info" slots="text1" />
+
 This mutation is part of the Storefront Compatibility Package and is only available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview) and [PaaS(With ACO License)](https://experienceleague.adobe.com/en/docs/commerce/optimizer/get-started).
 
 ## Syntax
