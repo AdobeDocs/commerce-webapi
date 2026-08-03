@@ -27,17 +27,17 @@ Sets quote item note.
 
 | Input Field | Description |
 |-------------|-------------|
-| `item_id` - [`ID!`](#id) | The unique ID of a `CartLineItem` object. |
+| `item_id` - [`ID!`](types-f-i.md#id) | The unique ID of a `CartLineItem` object. |
 | `note` - [`String`](#string) | The note text to be added. |
-| `templateId` - [`ID!`](#id) | The unique ID of a `NegotiableQuoteTemplate` object. |
+| `templateId` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuoteTemplate` object. |
 
 #### Example
 
 ```json
 {
-  "item_id": 4,
-  "note": "xyz789",
-  "templateId": 4
+  "item_id": "4",
+  "note": "abc123",
+  "templateId": "4"
 }
 ```
 
@@ -76,9 +76,9 @@ Contains reCAPTCHA V3-Invisible configuration details.
 | `badge_position` - [`String!`](#string) | The position of the invisible reCAPTCHA badge on each page. |
 | `failure_message` - [`String!`](#string) | The message that appears to the user if validation fails. |
 | `forms` - [`[ReCaptchaFormEnum]!`](#recaptchaformenum) | A list of forms on the storefront that have been configured to use reCAPTCHA V3. |
-| `is_enabled` - [`Boolean!`](#boolean) | Return whether recaptcha is enabled or not |
+| `is_enabled` - [`Boolean!`](types-a-b.md#boolean) | Return whether recaptcha is enabled or not |
 | `language_code` - [`String`](#string) | A two-character code that specifies the language that is used for Google reCAPTCHA text and messaging. |
-| `minimum_score` - [`Float!`](#float) | The minimum score that identifies a user interaction as a potential risk. |
+| `minimum_score` - [`Float!`](types-f-i.md#float) | The minimum score that identifies a user interaction as a potential risk. |
 | `website_key` - [`String!`](#string) | The website key generated when the Google reCAPTCHA account was registered. |
 
 #### Example
@@ -86,12 +86,12 @@ Contains reCAPTCHA V3-Invisible configuration details.
 ```json
 {
   "badge_position": "xyz789",
-  "failure_message": "abc123",
+  "failure_message": "xyz789",
   "forms": ["PLACE_ORDER"],
-  "is_enabled": false,
-  "language_code": "xyz789",
-  "minimum_score": 123.45,
-  "website_key": "abc123"
+  "is_enabled": true,
+  "language_code": "abc123",
+  "minimum_score": 987.65,
+  "website_key": "xyz789"
 }
 ```
 
@@ -129,7 +129,7 @@ Contains reCAPTCHA V3-Invisible configuration details.
 | Field Name | Description |
 |------------|-------------|
 | `code` - [`String`](#string) | The two-letter code for the region, such as TX for Texas. |
-| `id` - [`Int`](#int) | The unique ID for a `Region` object. |
+| `id` - [`Int`](types-f-i.md#int) | The unique ID for a `Region` object. |
 | `name` - [`String`](#string) | The name of the region, such as Texas. |
 
 #### Example
@@ -137,7 +137,7 @@ Contains reCAPTCHA V3-Invisible configuration details.
 ```json
 {
   "code": "xyz789",
-  "id": 987,
+  "id": 123,
   "name": "xyz789"
 }
 ```
@@ -170,7 +170,7 @@ Contains details about the cart after removing a coupon.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart`](#cart) | The cart after removing a coupon. |
+| `cart` - [`Cart`](types-c-e.md#cart) | The cart after removing a coupon. |
 
 #### Example
 
@@ -196,7 +196,7 @@ Remove coupons from the cart.
 ```json
 {
   "cart_id": "xyz789",
-  "coupon_codes": ["xyz789"]
+  "coupon_codes": ["abc123"]
 }
 ```
 
@@ -217,8 +217,8 @@ Defines the input required to run the `removeGiftCardFromCart` mutation.
 
 ```json
 {
-  "cart_id": "abc123",
-  "gift_card_code": "xyz789"
+  "cart_id": "xyz789",
+  "gift_card_code": "abc123"
 }
 ```
 
@@ -232,7 +232,7 @@ Defines the possible output for the `removeGiftCardFromCart` mutation.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart!`](#cart) | The contents of the specified shopping cart. |
+| `cart` - [`Cart!`](types-c-e.md#cart) | The contents of the specified shopping cart. |
 
 #### Example
 
@@ -250,7 +250,7 @@ Contains the results of a request to remove an item from a gift registry.
 
 | Field Name | Description |
 |------------|-------------|
-| `gift_registry` - [`GiftRegistry`](#giftregistry) | The gift registry after removing items. |
+| `gift_registry` - [`GiftRegistry`](types-f-i.md#giftregistry) | The gift registry after removing items. |
 
 #### Example
 
@@ -268,7 +268,7 @@ Contains the results of a request to delete a gift registry.
 
 | Field Name | Description |
 |------------|-------------|
-| `success` - [`Boolean!`](#boolean) | Indicates whether the gift registry was successfully deleted. |
+| `success` - [`Boolean!`](types-a-b.md#boolean) | Indicates whether the gift registry was successfully deleted. |
 
 #### Example
 
@@ -286,7 +286,7 @@ Contains the results of a request to delete a registrant.
 
 | Field Name | Description |
 |------------|-------------|
-| `gift_registry` - [`GiftRegistry`](#giftregistry) | The gift registry after deleting registrants. |
+| `gift_registry` - [`GiftRegistry`](types-f-i.md#giftregistry) | The gift registry after deleting registrants. |
 
 #### Example
 
@@ -305,15 +305,15 @@ Specifies which items to remove from the cart.
 | Input Field | Description |
 |-------------|-------------|
 | `cart_id` - [`String!`](#string) | The unique ID of a `Cart` object. |
-| `cart_item_id` - [`Int`](#int) | Deprecated. Use `cart_item_uid` instead. |
-| `cart_item_uid` - [`ID`](#id) | Required field. The unique ID for a `CartItemInterface` object. |
+| `cart_item_id` - [`Int`](types-f-i.md#int) | Deprecated. Use `cart_item_uid` instead. |
+| `cart_item_uid` - [`ID`](types-f-i.md#id) | Required field. The unique ID for a `CartItemInterface` object. |
 
 #### Example
 
 ```json
 {
-  "cart_id": "abc123",
-  "cart_item_id": 123,
+  "cart_id": "xyz789",
+  "cart_item_id": 987,
   "cart_item_uid": 4
 }
 ```
@@ -328,7 +328,7 @@ Contains details about the cart after removing an item.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart!`](#cart) | The cart after removing an item. |
+| `cart` - [`Cart!`](types-c-e.md#cart) | The cart after removing an item. |
 
 #### Example
 
@@ -346,16 +346,13 @@ Defines the items to remove from the specified negotiable quote.
 
 | Input Field | Description |
 |-------------|-------------|
-| `quote_item_uids` - [`[ID]!`](#id) | An array of IDs indicating which items to remove from the negotiable quote. |
-| `quote_uid` - [`ID!`](#id) | The unique ID of a `NegotiableQuote` object. |
+| `quote_item_uids` - [`[ID]!`](types-f-i.md#id) | An array of IDs indicating which items to remove from the negotiable quote. |
+| `quote_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
 
 #### Example
 
 ```json
-{
-  "quote_item_uids": ["4"],
-  "quote_uid": "4"
-}
+{"quote_item_uids": [4], "quote_uid": 4}
 ```
 
 <HorizontalLine />
@@ -368,7 +365,7 @@ Contains the negotiable quote.
 
 | Field Name | Description |
 |------------|-------------|
-| `quote` - [`NegotiableQuote`](#negotiablequote) | The negotiable quote after removing items. |
+| `quote` - [`NegotiableQuote`](types-k-p.md#negotiablequote) | The negotiable quote after removing items. |
 
 #### Example
 
@@ -386,16 +383,13 @@ Defines the items to remove from the specified negotiable quote.
 
 | Input Field | Description |
 |-------------|-------------|
-| `item_uids` - [`[ID]!`](#id) | An array of IDs indicating which items to remove from the negotiable quote. |
-| `template_id` - [`ID!`](#id) | The unique ID of a `NegotiableQuoteTemplate` object. |
+| `item_uids` - [`[ID]!`](types-f-i.md#id) | An array of IDs indicating which items to remove from the negotiable quote. |
+| `template_id` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuoteTemplate` object. |
 
 #### Example
 
 ```json
-{
-  "item_uids": ["4"],
-  "template_id": "4"
-}
+{"item_uids": [4], "template_id": 4}
 ```
 
 <HorizontalLine />
@@ -408,8 +402,8 @@ Defines which products to remove from a compare list.
 
 | Input Field | Description |
 |-------------|-------------|
-| `products` - [`[ID]!`](#id) | An array of product IDs to remove from the compare list. |
-| `uid` - [`ID!`](#id) | The unique identifier of the compare list to modify. |
+| `products` - [`[ID]!`](types-f-i.md#id) | An array of product IDs to remove from the compare list. |
+| `uid` - [`ID!`](types-f-i.md#id) | The unique identifier of the compare list to modify. |
 
 #### Example
 
@@ -430,8 +424,8 @@ Contains the customer's wish list and any errors encountered.
 
 | Field Name | Description |
 |------------|-------------|
-| `user_errors` - [`[WishListUserInputError]!`](#wishlistuserinputerror) | An array of errors encountered while deleting products from a wish list. |
-| `wishlist` - [`Wishlist!`](#wishlist) | Contains the wish list with after items were successfully deleted. |
+| `user_errors` - [`[WishListUserInputError]!`](types-t-z.md#wishlistuserinputerror) | An array of errors encountered while deleting products from a wish list. |
+| `wishlist` - [`Wishlist!`](types-t-z.md#wishlist) | Contains the wish list with after items were successfully deleted. |
 
 #### Example
 
@@ -452,12 +446,12 @@ Defines the tracking information to delete.
 
 | Input Field | Description |
 |-------------|-------------|
-| `return_shipping_tracking_uid` - [`ID!`](#id) | The unique ID for a `ReturnShippingTracking` object. |
+| `return_shipping_tracking_uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `ReturnShippingTracking` object. |
 
 #### Example
 
 ```json
-{"return_shipping_tracking_uid": 4}
+{"return_shipping_tracking_uid": "4"}
 ```
 
 <HorizontalLine />
@@ -488,7 +482,7 @@ Contains the customer cart.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart!`](#cart) | The customer cart after reward points are removed. |
+| `cart` - [`Cart!`](types-c-e.md#cart) | The customer cart after reward points are removed. |
 
 #### Example
 
@@ -524,7 +518,7 @@ Defines the possible output for the `removeStoreCreditFromCart` mutation.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart!`](#cart) | The contents of the specified shopping cart. |
+| `cart` - [`Cart!`](types-c-e.md#cart) | The contents of the specified shopping cart. |
 
 #### Example
 
@@ -544,14 +538,14 @@ Sets new name for a negotiable quote.
 |-------------|-------------|
 | `quote_comment` - [`String`](#string) | The reason for the quote name change specified by the buyer. |
 | `quote_name` - [`String!`](#string) | The new quote name the buyer specified to the negotiable quote request. |
-| `quote_uid` - [`ID!`](#id) | The cart ID of the buyer requesting a new negotiable quote. |
+| `quote_uid` - [`ID!`](types-f-i.md#id) | The cart ID of the buyer requesting a new negotiable quote. |
 
 #### Example
 
 ```json
 {
   "quote_comment": "abc123",
-  "quote_name": "abc123",
+  "quote_name": "xyz789",
   "quote_uid": "4"
 }
 ```
@@ -566,7 +560,7 @@ Contains the updated negotiable quote.
 
 | Field Name | Description |
 |------------|-------------|
-| `quote` - [`NegotiableQuote`](#negotiablequote) | The negotiable quote after updating the name. |
+| `quote` - [`NegotiableQuote`](types-k-p.md#negotiablequote) | The negotiable quote after updating the name. |
 
 #### Example
 
@@ -584,8 +578,8 @@ Contains the cart and any errors after adding products.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart!`](#cart) | Detailed information about the customer's cart. |
-| `userInputErrors` - [`[CheckoutUserInputError]!`](#checkoutuserinputerror) | An array of reordering errors. |
+| `cart` - [`Cart!`](types-c-e.md#cart) | Detailed information about the customer's cart. |
+| `userInputErrors` - [`[CheckoutUserInputError]!`](types-c-e.md#checkoutuserinputerror) | An array of reordering errors. |
 
 #### Example
 
@@ -606,19 +600,19 @@ Defines properties of a negotiable quote request.
 
 | Input Field | Description |
 |-------------|-------------|
-| `cart_id` - [`ID!`](#id) | The cart ID of the buyer requesting a new negotiable quote. |
-| `comment` - [`NegotiableQuoteCommentInput!`](#negotiablequotecommentinput) | Comments the buyer entered to describe the request. |
-| `is_draft` - [`Boolean`](#boolean) | Flag indicating if quote is draft or not. |
+| `cart_id` - [`ID!`](types-f-i.md#id) | The cart ID of the buyer requesting a new negotiable quote. |
+| `comment` - [`NegotiableQuoteCommentInput!`](types-k-p.md#negotiablequotecommentinput) | Comments the buyer entered to describe the request. |
+| `is_draft` - [`Boolean`](types-a-b.md#boolean) | Flag indicating if quote is draft or not. |
 | `quote_name` - [`String!`](#string) | The name the buyer assigned to the negotiable quote request. |
 
 #### Example
 
 ```json
 {
-  "cart_id": 4,
+  "cart_id": "4",
   "comment": NegotiableQuoteCommentInput,
   "is_draft": false,
-  "quote_name": "abc123"
+  "quote_name": "xyz789"
 }
 ```
 
@@ -632,7 +626,7 @@ Contains the `NegotiableQuote` object generated when a buyer requests a negotiab
 
 | Field Name | Description |
 |------------|-------------|
-| `quote` - [`NegotiableQuote`](#negotiablequote) | Details about the negotiable quote. |
+| `quote` - [`NegotiableQuote`](types-k-p.md#negotiablequote) | Details about the negotiable quote. |
 
 #### Example
 
@@ -650,7 +644,7 @@ Defines properties of a negotiable quote template request.
 
 | Input Field | Description |
 |-------------|-------------|
-| `cart_id` - [`ID!`](#id) | The cart ID of the quote to create the new negotiable quote template from. |
+| `cart_id` - [`ID!`](types-f-i.md#id) | The cart ID of the quote to create the new negotiable quote template from. |
 
 #### Example
 
@@ -671,13 +665,13 @@ Contains information needed to start a return request.
 | `comment_text` - [`String`](#string) | Text the buyer entered that describes the reason for the refund request. |
 | `contact_email` - [`String`](#string) | The email address the buyer enters to receive notifications about the status of the return. |
 | `items` - [`[RequestReturnItemInput]!`](#requestreturniteminput) | An array of items to be returned. |
-| `order_uid` - [`ID!`](#id) | The unique ID for a `Order` object. |
+| `order_uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `Order` object. |
 
 #### Example
 
 ```json
 {
-  "comment_text": "xyz789",
+  "comment_text": "abc123",
   "contact_email": "xyz789",
   "items": [RequestReturnItemInput],
   "order_uid": "4"
@@ -694,9 +688,9 @@ Contains details about an item to be returned.
 
 | Input Field | Description |
 |-------------|-------------|
-| `entered_custom_attributes` - [`[EnteredCustomAttributeInput]`](#enteredcustomattributeinput) | Details about a custom attribute that was entered. |
-| `order_item_uid` - [`ID!`](#id) | The unique ID for a `OrderItemInterface` object. |
-| `quantity_to_return` - [`Float!`](#float) | The quantity of the item to be returned. |
+| `entered_custom_attributes` - [`[EnteredCustomAttributeInput]`](types-c-e.md#enteredcustomattributeinput) | Details about a custom attribute that was entered. |
+| `order_item_uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `OrderItemInterface` object. |
+| `quantity_to_return` - [`Float!`](types-f-i.md#float) | The quantity of the item to be returned. |
 | `selected_custom_attributes` - [`[SelectedCustomAttributeInput]`](#selectedcustomattributeinput) | An array of selected custom option IDs associated with the item to be returned. For example, the IDs for the selected color and size of a configurable product. |
 
 #### Example
@@ -707,7 +701,7 @@ Contains details about an item to be returned.
     EnteredCustomAttributeInput
   ],
   "order_item_uid": "4",
-  "quantity_to_return": 987.65,
+  "quantity_to_return": 123.45,
   "selected_custom_attributes": [
     SelectedCustomAttributeInput
   ]
@@ -748,20 +742,20 @@ Defines the contents of a requisition list.
 |------------|-------------|
 | `description` - [`String`](#string) | Optional text that describes the requisition list. |
 | `items` - [`RequistionListItems`](#requistionlistitems) | An array of products added to the requisition list. |
-| `items_count` - [`Int!`](#int) | The number of items in the list. |
+| `items_count` - [`Int!`](types-f-i.md#int) | The number of items in the list. |
 | `name` - [`String!`](#string) | The requisition list name. |
-| `uid` - [`ID!`](#id) | The unique requisition list ID. |
+| `uid` - [`ID!`](types-f-i.md#id) | The unique requisition list ID. |
 | `updated_at` - [`String`](#string) | The time of the last modification of the requisition list. |
 
 #### Example
 
 ```json
 {
-  "description": "xyz789",
+  "description": "abc123",
   "items": RequistionListItems,
   "items_count": 987,
   "name": "abc123",
-  "uid": 4,
+  "uid": "4",
   "updated_at": "abc123"
 }
 ```
@@ -776,8 +770,8 @@ Defines requisition list filters.
 
 | Input Field | Description |
 |-------------|-------------|
-| `name` - [`FilterMatchTypeInput`](#filtermatchtypeinput) | Filter by the display name of the requisition list. |
-| `uids` - [`FilterEqualTypeInput`](#filterequaltypeinput) | Filter requisition lists by one or more requisition list IDs. |
+| `name` - [`FilterMatchTypeInput`](types-f-i.md#filtermatchtypeinput) | Filter by the display name of the requisition list. |
+| `uids` - [`FilterEqualTypeInput`](types-f-i.md#filterequaltypeinput) | Filter requisition lists by one or more requisition list IDs. |
 
 #### Example
 
@@ -799,20 +793,20 @@ The interface for requisition list items.
 | Field Name | Description |
 |------------|-------------|
 | `customizable_options` - [`[SelectedCustomizableOption]!`](#selectedcustomizableoption) | Selected custom options for an item in the requisition list. |
-| `product` - [`ProductInterface!`](#productinterface) | Details about a requisition list item. |
-| `quantity` - [`Float!`](#float) | The amount added. |
-| `uid` - [`ID!`](#id) | The unique ID for the requisition list item. |
+| `product` - [`ProductInterface!`](types-k-p.md#productinterface) | Details about a requisition list item. |
+| `quantity` - [`Float!`](types-f-i.md#float) | The amount added. |
+| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for the requisition list item. |
 
 #### Possible Types
 
 | RequisitionListItemInterface Types |
 |----------------|
 | [`SimpleRequisitionListItem`](#simplerequisitionlistitem) |
-| [`VirtualRequisitionListItem`](#virtualrequisitionlistitem) |
-| [`DownloadableRequisitionListItem`](#downloadablerequisitionlistitem) |
-| [`BundleRequisitionListItem`](#bundlerequisitionlistitem) |
-| [`ConfigurableRequisitionListItem`](#configurablerequisitionlistitem) |
-| [`GiftCardRequisitionListItem`](#giftcardrequisitionlistitem) |
+| [`VirtualRequisitionListItem`](types-t-z.md#virtualrequisitionlistitem) |
+| [`DownloadableRequisitionListItem`](types-c-e.md#downloadablerequisitionlistitem) |
+| [`BundleRequisitionListItem`](types-a-b.md#bundlerequisitionlistitem) |
+| [`ConfigurableRequisitionListItem`](types-c-e.md#configurablerequisitionlistitem) |
+| [`GiftCardRequisitionListItem`](types-f-i.md#giftcardrequisitionlistitem) |
 
 #### Example
 
@@ -820,8 +814,8 @@ The interface for requisition list items.
 {
   "customizable_options": [SelectedCustomizableOption],
   "product": ProductInterface,
-  "quantity": 987.65,
-  "uid": "4"
+  "quantity": 123.45,
+  "uid": 4
 }
 ```
 
@@ -835,9 +829,9 @@ Defines the items to add.
 
 | Input Field | Description |
 |-------------|-------------|
-| `entered_options` - [`[EnteredOptionInput]`](#enteredoptioninput) | Entered option IDs. |
+| `entered_options` - [`[EnteredOptionInput]`](types-c-e.md#enteredoptioninput) | Entered option IDs. |
 | `parent_sku` - [`String`](#string) | For configurable products, the SKU of the parent product. |
-| `quantity` - [`Float`](#float) | The quantity of the product to add. |
+| `quantity` - [`Float`](types-f-i.md#float) | The quantity of the product to add. |
 | `selected_options` - [`[String]`](#string) | Selected option IDs. |
 | `sku` - [`String!`](#string) | The product SKU. |
 
@@ -848,7 +842,7 @@ Defines the items to add.
   "entered_options": [EnteredOptionInput],
   "parent_sku": "xyz789",
   "quantity": 123.45,
-  "selected_options": ["xyz789"],
+  "selected_options": ["abc123"],
   "sku": "xyz789"
 }
 ```
@@ -865,7 +859,7 @@ Defines customer requisition lists.
 |------------|-------------|
 | `items` - [`[RequisitionList]`](#requisitionlist) | An array of requisition lists. |
 | `page_info` - [`SearchResultPageInfo`](#searchresultpageinfo) | Pagination metadata. |
-| `total_count` - [`Int`](#int) | The number of returned requisition lists. |
+| `total_count` - [`Int`](types-f-i.md#int) | The number of returned requisition lists. |
 
 #### Example
 
@@ -873,7 +867,7 @@ Defines customer requisition lists.
 {
   "items": [RequisitionList],
   "page_info": SearchResultPageInfo,
-  "total_count": 987
+  "total_count": 123
 }
 ```
 
@@ -889,7 +883,7 @@ Contains an array of items added to a requisition list.
 |------------|-------------|
 | `items` - [`[RequisitionListItemInterface]!`](#requisitionlistiteminterface) | An array of items in the requisition list. |
 | `page_info` - [`SearchResultPageInfo`](#searchresultpageinfo) | Pagination metadata. |
-| `total_pages` - [`Int!`](#int) | The number of pages returned. |
+| `total_pages` - [`Int!`](types-f-i.md#int) | The number of pages returned. |
 
 #### Example
 
@@ -917,10 +911,10 @@ Contains details about a return.
 | `customer` - [`ReturnCustomer!`](#returncustomer) | Data from the customer who created the return request. |
 | `items` - [`[ReturnItem]`](#returnitem) | A list of items being returned. |
 | `number` - [`String!`](#string) | A human-readable return number. |
-| `order` - [`CustomerOrder`](#customerorder) | The order associated with the return. |
+| `order` - [`CustomerOrder`](types-c-e.md#customerorder) | The order associated with the return. |
 | `shipping` - [`ReturnShipping`](#returnshipping) | Shipping information for the return. |
 | `status` - [`ReturnStatus`](#returnstatus) | The status of the return request. |
-| `uid` - [`ID!`](#id) | The unique ID for a `Return` object. |
+| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `Return` object. |
 
 #### Example
 
@@ -928,10 +922,10 @@ Contains details about a return.
 {
   "available_shipping_carriers": [ReturnShippingCarrier],
   "comments": [ReturnComment],
-  "created_at": "abc123",
+  "created_at": "xyz789",
   "customer": ReturnCustomer,
   "items": [ReturnItem],
-  "number": "xyz789",
+  "number": "abc123",
   "order": CustomerOrder,
   "shipping": ReturnShipping,
   "status": "PENDING",
@@ -952,15 +946,15 @@ Contains details about a return comment.
 | `author_name` - [`String!`](#string) | The name or author who posted the comment. |
 | `created_at` - [`String!`](#string) | The date and time the comment was posted. |
 | `text` - [`String!`](#string) | The contents of the comment. |
-| `uid` - [`ID!`](#id) | The unique ID for a `ReturnComment` object. |
+| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `ReturnComment` object. |
 
 #### Example
 
 ```json
 {
-  "author_name": "abc123",
-  "created_at": "xyz789",
-  "text": "xyz789",
+  "author_name": "xyz789",
+  "created_at": "abc123",
+  "text": "abc123",
   "uid": "4"
 }
 ```
@@ -976,7 +970,7 @@ Contains details about a `ReturnCustomerAttribute` object.
 | Field Name | Description |
 |------------|-------------|
 | `label` - [`String!`](#string) | A description of the attribute. |
-| `uid` - [`ID!`](#id) | The unique ID for a `ReturnCustomAttribute` object. |
+| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `ReturnCustomAttribute` object. |
 | `value` - [`String!`](#string) | A JSON-encoded value of the attribute. |
 
 #### Example
@@ -985,7 +979,7 @@ Contains details about a `ReturnCustomerAttribute` object.
 {
   "label": "xyz789",
   "uid": 4,
-  "value": "abc123"
+  "value": "xyz789"
 }
 ```
 
@@ -1007,9 +1001,9 @@ The customer information for the return.
 
 ```json
 {
-  "email": "abc123",
-  "firstname": "xyz789",
-  "lastname": "abc123"
+  "email": "xyz789",
+  "firstname": "abc123",
+  "lastname": "xyz789"
 }
 ```
 
@@ -1024,12 +1018,12 @@ Contains details about a product being returned.
 | Field Name | Description |
 |------------|-------------|
 | `custom_attributes` - [`[ReturnCustomAttribute]`](#returncustomattribute) | Return item custom attributes that are visible on the storefront. *(Deprecated: Use custom_attributesV2 instead.)* |
-| `custom_attributesV2` - [`[AttributeValueInterface]`](#attributevalueinterface) | Custom attributes that are visible on the storefront. |
-| `order_item` - [`OrderItemInterface!`](#orderiteminterface) | Provides access to the product being returned, including information about selected and entered options. |
-| `quantity` - [`Float!`](#float) | The quantity of the item the merchant authorized to be returned. |
-| `request_quantity` - [`Float!`](#float) | The quantity of the item requested to be returned. |
+| `custom_attributesV2` - [`[AttributeValueInterface]`](types-a-b.md#attributevalueinterface) | Custom attributes that are visible on the storefront. |
+| `order_item` - [`OrderItemInterface!`](types-k-p.md#orderiteminterface) | Provides access to the product being returned, including information about selected and entered options. |
+| `quantity` - [`Float!`](types-f-i.md#float) | The quantity of the item the merchant authorized to be returned. |
+| `request_quantity` - [`Float!`](types-f-i.md#float) | The quantity of the item requested to be returned. |
 | `status` - [`ReturnItemStatus!`](#returnitemstatus) | The return status of the item. |
-| `uid` - [`ID!`](#id) | The unique ID for a `ReturnItem` object. |
+| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `ReturnItem` object. |
 
 #### Example
 
@@ -1055,31 +1049,31 @@ Return Item attribute metadata.
 
 | Field Name | Description |
 |------------|-------------|
-| `code` - [`ID!`](#id) | The unique identifier for an attribute code. This value should be in lowercase letters without spaces. |
+| `code` - [`ID!`](types-f-i.md#id) | The unique identifier for an attribute code. This value should be in lowercase letters without spaces. |
 | `default_value` - [`String`](#string) | Default attribute value. |
-| `entity_type` - [`AttributeEntityTypeEnum!`](#attributeentitytypeenum) | The type of entity that defines the attribute. |
+| `entity_type` - [`AttributeEntityTypeEnum!`](types-a-b.md#attributeentitytypeenum) | The type of entity that defines the attribute. |
 | `frontend_class` - [`String`](#string) | The frontend class of the attribute. |
-| `frontend_input` - [`AttributeFrontendInputEnum`](#attributefrontendinputenum) | The frontend input type of the attribute. |
-| `input_filter` - [`InputFilterEnum`](#inputfilterenum) | The template used for the input of the attribute (e.g., 'date'). |
-| `is_required` - [`Boolean!`](#boolean) | Whether the attribute value is required. |
-| `is_unique` - [`Boolean!`](#boolean) | Whether the attribute value must be unique. |
+| `frontend_input` - [`AttributeFrontendInputEnum`](types-a-b.md#attributefrontendinputenum) | The frontend input type of the attribute. |
+| `input_filter` - [`InputFilterEnum`](types-f-i.md#inputfilterenum) | The template used for the input of the attribute (e.g., 'date'). |
+| `is_required` - [`Boolean!`](types-a-b.md#boolean) | Whether the attribute value is required. |
+| `is_unique` - [`Boolean!`](types-a-b.md#boolean) | Whether the attribute value must be unique. |
 | `label` - [`String`](#string) | The label assigned to the attribute. |
-| `multiline_count` - [`Int`](#int) | The number of lines of the attribute value. |
-| `options` - [`[CustomAttributeOptionInterface]!`](#customattributeoptioninterface) | Attribute options. |
-| `sort_order` - [`Int`](#int) | The position of the attribute in the form. |
-| `validate_rules` - [`[ValidationRule]`](#validationrule) | The validation rules of the attribute value. |
+| `multiline_count` - [`Int`](types-f-i.md#int) | The number of lines of the attribute value. |
+| `options` - [`[CustomAttributeOptionInterface]!`](types-c-e.md#customattributeoptioninterface) | Attribute options. |
+| `sort_order` - [`Int`](types-f-i.md#int) | The position of the attribute in the form. |
+| `validate_rules` - [`[ValidationRule]`](types-t-z.md#validationrule) | The validation rules of the attribute value. |
 
 #### Example
 
 ```json
 {
-  "code": 4,
+  "code": "4",
   "default_value": "xyz789",
   "entity_type": "CATALOG_PRODUCT",
-  "frontend_class": "abc123",
+  "frontend_class": "xyz789",
   "frontend_input": "BOOLEAN",
   "input_filter": "NONE",
-  "is_required": false,
+  "is_required": true,
   "is_unique": true,
   "label": "abc123",
   "multiline_count": 987,
@@ -1144,7 +1138,7 @@ Contains details about the shipping address used for receiving returned items.
 |------------|-------------|
 | `city` - [`String!`](#string) | The city for product returns. |
 | `contact_name` - [`String`](#string) | The merchant's contact person. |
-| `country` - [`Country!`](#country) | An object that defines the country for product returns. |
+| `country` - [`Country!`](types-c-e.md#country) | An object that defines the country for product returns. |
 | `postcode` - [`String!`](#string) | The postal code for product returns. |
 | `region` - [`Region!`](#region) | An object that defines the state or province for product returns. |
 | `street` - [`[String]!`](#string) | The street address for product returns. |
@@ -1154,13 +1148,13 @@ Contains details about the shipping address used for receiving returned items.
 
 ```json
 {
-  "city": "abc123",
-  "contact_name": "xyz789",
+  "city": "xyz789",
+  "contact_name": "abc123",
   "country": Country,
   "postcode": "abc123",
   "region": Region,
   "street": ["xyz789"],
-  "telephone": "abc123"
+  "telephone": "xyz789"
 }
 ```
 
@@ -1175,13 +1169,13 @@ Contains details about the carrier on a return.
 | Field Name | Description |
 |------------|-------------|
 | `label` - [`String!`](#string) | A description of the shipping carrier. |
-| `uid` - [`ID!`](#id) | The unique ID for a `ReturnShippingCarrier` object assigned to the shipping carrier. |
+| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `ReturnShippingCarrier` object assigned to the shipping carrier. |
 
 #### Example
 
 ```json
 {
-  "label": "xyz789",
+  "label": "abc123",
   "uid": "4"
 }
 ```
@@ -1199,7 +1193,7 @@ Contains shipping and tracking details.
 | `carrier` - [`ReturnShippingCarrier!`](#returnshippingcarrier) | Contains details of a shipping carrier. |
 | `status` - [`ReturnShippingTrackingStatus`](#returnshippingtrackingstatus) | Details about the status of a shipment. |
 | `tracking_number` - [`String!`](#string) | A tracking number assigned by the carrier. |
-| `uid` - [`ID!`](#id) | The unique ID for a `ReturnShippingTracking` object assigned to the tracking item. |
+| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `ReturnShippingTracking` object assigned to the tracking item. |
 
 #### Example
 
@@ -1208,7 +1202,7 @@ Contains shipping and tracking details.
   "carrier": ReturnShippingCarrier,
   "status": ReturnShippingTrackingStatus,
   "tracking_number": "abc123",
-  "uid": 4
+  "uid": "4"
 }
 ```
 
@@ -1228,7 +1222,7 @@ Contains the status of a shipment.
 #### Example
 
 ```json
-{"text": "abc123", "type": "INFORMATION"}
+{"text": "xyz789", "type": "INFORMATION"}
 ```
 
 <HorizontalLine />
@@ -1287,7 +1281,7 @@ Contains a list of customer return requests.
 |------------|-------------|
 | `items` - [`[Return]`](#return) | A list of return requests. |
 | `page_info` - [`SearchResultPageInfo`](#searchresultpageinfo) | Pagination metadata. |
-| `total_count` - [`Int`](#int) | The total number of return requests. |
+| `total_count` - [`Int`](types-f-i.md#int) | The total number of return requests. |
 
 #### Example
 
@@ -1295,7 +1289,7 @@ Contains a list of customer return requests.
 {
   "items": [Return],
   "page_info": SearchResultPageInfo,
-  "total_count": 123
+  "total_count": 987
 }
 ```
 
@@ -1309,12 +1303,12 @@ Contains the result of a request to revoke a customer token.
 
 | Field Name | Description |
 |------------|-------------|
-| `result` - [`Boolean!`](#boolean) | The result of a request to revoke a customer token. |
+| `result` - [`Boolean!`](types-a-b.md#boolean) | The result of a request to revoke a customer token. |
 
 #### Example
 
 ```json
-{"result": false}
+{"result": true}
 ```
 
 <HorizontalLine />
@@ -1351,13 +1345,13 @@ Contains details about a customer's reward points.
 
 | Field Name | Description |
 |------------|-------------|
-| `money` - [`Money!`](#money) | The reward points amount in store currency. |
-| `points` - [`Float!`](#float) | The reward points amount in points. |
+| `money` - [`Money!`](types-k-p.md#money) | The reward points amount in store currency. |
+| `points` - [`Float!`](types-f-i.md#float) | The reward points amount in points. |
 
 #### Example
 
 ```json
-{"money": Money, "points": 123.45}
+{"money": Money, "points": 987.65}
 ```
 
 <HorizontalLine />
@@ -1373,14 +1367,14 @@ Contain details about the reward points transaction.
 | `balance` - [`RewardPointsAmount`](#rewardpointsamount) | The award points balance after the completion of the transaction. |
 | `change_reason` - [`String!`](#string) | The reason the balance changed. |
 | `date` - [`String!`](#string) | The date of the transaction. |
-| `points_change` - [`Float!`](#float) | The number of points added or deducted in the transaction. |
+| `points_change` - [`Float!`](types-f-i.md#float) | The number of points added or deducted in the transaction. |
 
 #### Example
 
 ```json
 {
   "balance": RewardPointsAmount,
-  "change_reason": "xyz789",
+  "change_reason": "abc123",
   "date": "xyz789",
   "points_change": 987.65
 }
@@ -1418,8 +1412,8 @@ Contains details about customer's reward points rate.
 
 | Field Name | Description |
 |------------|-------------|
-| `currency_amount` - [`Float!`](#float) | The money value for the exchange rate. For earnings, this is the amount spent to earn the specified points. For redemption, this is the amount of money the number of points represents. |
-| `points` - [`Float!`](#float) | The number of points for an exchange rate. For earnings, this is the number of points earned. For redemption, this is the number of points needed for redemption. |
+| `currency_amount` - [`Float!`](types-f-i.md#float) | The money value for the exchange rate. For earnings, this is the amount spent to earn the specified points. For redemption, this is the amount of money the number of points represents. |
+| `points` - [`Float!`](types-f-i.md#float) | The number of points for an exchange rate. For earnings, this is the number of points earned. For redemption, this is the number of points needed for redemption. |
 
 #### Example
 
@@ -1476,23 +1470,23 @@ Routable entities serve as the model for a rendered page.
 
 | Field Name | Description |
 |------------|-------------|
-| `redirect_code` - [`Int!`](#int) | Contains 0 when there is no redirect error. A value of 301 indicates the URL of the requested resource has been changed permanently, while a value of 302 indicates a temporary redirect. |
+| `redirect_code` - [`Int!`](types-f-i.md#int) | Contains 0 when there is no redirect error. A value of 301 indicates the URL of the requested resource has been changed permanently, while a value of 302 indicates a temporary redirect. |
 | `relative_url` - [`String`](#string) | The internal relative URL. If the specified URL is a redirect, the query returns the redirected URL, not the original. |
-| `type` - [`UrlRewriteEntityTypeEnum`](#urlrewriteentitytypeenum) | One of PRODUCT, CATEGORY, or CMS_PAGE. |
+| `type` - [`UrlRewriteEntityTypeEnum`](types-t-z.md#urlrewriteentitytypeenum) | One of PRODUCT, CATEGORY, or CMS_PAGE. |
 
 #### Possible Types
 
 | RoutableInterface Types |
 |----------------|
-| [`CmsPage`](#cmspage) |
-| [`CategoryTree`](#categorytree) |
-| [`VirtualProduct`](#virtualproduct) |
+| [`CmsPage`](types-c-e.md#cmspage) |
+| [`CategoryTree`](types-c-e.md#categorytree) |
+| [`VirtualProduct`](types-t-z.md#virtualproduct) |
 | [`SimpleProduct`](#simpleproduct) |
-| [`ConfigurableProduct`](#configurableproduct) |
-| [`DownloadableProduct`](#downloadableproduct) |
-| [`BundleProduct`](#bundleproduct) |
-| [`GiftCardProduct`](#giftcardproduct) |
-| [`GroupedProduct`](#groupedproduct) |
+| [`ConfigurableProduct`](types-c-e.md#configurableproduct) |
+| [`DownloadableProduct`](types-c-e.md#downloadableproduct) |
+| [`BundleProduct`](types-a-b.md#bundleproduct) |
+| [`GiftCardProduct`](types-f-i.md#giftcardproduct) |
+| [`GroupedProduct`](types-f-i.md#groupedproduct) |
 | [`RoutableUrl`](#routableurl) |
 
 #### Example
@@ -1515,16 +1509,16 @@ Default implementation of RoutableInterface. This type is returned when the URL 
 
 | Field Name | Description |
 |------------|-------------|
-| `redirect_code` - [`Int!`](#int) | Contains 0 when there is no redirect error. A value of 301 indicates the URL of the requested resource has been changed permanently, while a value of 302 indicates a temporary redirect. |
+| `redirect_code` - [`Int!`](types-f-i.md#int) | Contains 0 when there is no redirect error. A value of 301 indicates the URL of the requested resource has been changed permanently, while a value of 302 indicates a temporary redirect. |
 | `relative_url` - [`String`](#string) | The internal relative URL. If the specified URL is a redirect, the query returns the redirected URL, not the original. |
-| `type` - [`UrlRewriteEntityTypeEnum`](#urlrewriteentitytypeenum) | One of PRODUCT, CATEGORY, or CMS_PAGE. |
+| `type` - [`UrlRewriteEntityTypeEnum`](types-t-z.md#urlrewriteentitytypeenum) | One of PRODUCT, CATEGORY, or CMS_PAGE. |
 
 #### Example
 
 ```json
 {
   "redirect_code": 987,
-  "relative_url": "xyz789",
+  "relative_url": "abc123",
   "type": "CMS_PAGE"
 }
 ```
@@ -1546,7 +1540,7 @@ Defines the name and value of a SDK parameter
 
 ```json
 {
-  "name": "xyz789",
+  "name": "abc123",
   "value": "xyz789"
 }
 ```
@@ -1569,7 +1563,7 @@ Contains details about a comment.
 ```json
 {
   "message": "abc123",
-  "timestamp": "abc123"
+  "timestamp": "xyz789"
 }
 ```
 
@@ -1603,14 +1597,14 @@ Provides navigation for the query response.
 
 | Field Name | Description |
 |------------|-------------|
-| `current_page` - [`Int`](#int) | The specific page to return. |
-| `page_size` - [`Int`](#int) | The maximum number of items to return per page of results. |
-| `total_pages` - [`Int`](#int) | The total number of pages in the response. |
+| `current_page` - [`Int`](types-f-i.md#int) | The specific page to return. |
+| `page_size` - [`Int`](types-f-i.md#int) | The maximum number of items to return per page of results. |
+| `total_pages` - [`Int`](types-f-i.md#int) | The total number of pages in the response. |
 
 #### Example
 
 ```json
-{"current_page": 123, "page_size": 987, "total_pages": 123}
+{"current_page": 123, "page_size": 123, "total_pages": 123}
 ```
 
 <HorizontalLine />
@@ -1628,7 +1622,7 @@ A string that contains search suggestion
 #### Example
 
 ```json
-{"search": "abc123"}
+{"search": "xyz789"}
 ```
 
 <HorizontalLine />
@@ -1641,10 +1635,10 @@ Contains details about a selected bundle option.
 
 | Field Name | Description |
 |------------|-------------|
-| `id` - [`Int!`](#int) |  *(Deprecated: Use `uid` instead)* |
+| `id` - [`Int!`](types-f-i.md#int) |  *(Deprecated: Use `uid` instead)* |
 | `label` - [`String!`](#string) | The display name of the selected bundle product option. |
 | `type` - [`String!`](#string) | The type of selected bundle product option. |
-| `uid` - [`ID!`](#id) | The unique ID for a `SelectedBundleOption` object |
+| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `SelectedBundleOption` object |
 | `values` - [`[SelectedBundleOptionValue]!`](#selectedbundleoptionvalue) | An array of selected bundle option values. |
 
 #### Example
@@ -1653,7 +1647,7 @@ Contains details about a selected bundle option.
 {
   "id": 123,
   "label": "xyz789",
-  "type": "xyz789",
+  "type": "abc123",
   "uid": 4,
   "values": [SelectedBundleOptionValue]
 }
@@ -1669,20 +1663,20 @@ Contains details about a value for a selected bundle option.
 
 | Field Name | Description |
 |------------|-------------|
-| `id` - [`Int!`](#int) | Use `uid` instead |
+| `id` - [`Int!`](types-f-i.md#int) | Use `uid` instead |
 | `label` - [`String!`](#string) | The display name of the value for the selected bundle product option. |
-| `price` - [`Float!`](#float) | The price of the value for the selected bundle product option. |
-| `quantity` - [`Float!`](#float) | The quantity of the value for the selected bundle product option. |
-| `uid` - [`ID!`](#id) | The unique ID for a `SelectedBundleOptionValue` object |
+| `price` - [`Float!`](types-f-i.md#float) | The price of the value for the selected bundle product option. |
+| `quantity` - [`Float!`](types-f-i.md#float) | The quantity of the value for the selected bundle product option. |
+| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `SelectedBundleOptionValue` object |
 
 #### Example
 
 ```json
 {
   "id": 123,
-  "label": "xyz789",
-  "price": 123.45,
-  "quantity": 123.45,
+  "label": "abc123",
+  "price": 987.65,
+  "quantity": 987.65,
   "uid": "4"
 }
 ```
@@ -1697,11 +1691,11 @@ Contains details about a selected configurable option.
 
 | Field Name | Description |
 |------------|-------------|
-| `configurable_product_option_uid` - [`ID!`](#id) | The unique ID for a `ConfigurableProductOptions` object. |
-| `configurable_product_option_value_uid` - [`ID!`](#id) | The unique ID for a `ConfigurableProductOptionsValues` object. |
-| `id` - [`Int!`](#int) |  *(Deprecated: Use `SelectedConfigurableOption.configurable_product_option_uid` instead.)* |
+| `configurable_product_option_uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `ConfigurableProductOptions` object. |
+| `configurable_product_option_value_uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `ConfigurableProductOptionsValues` object. |
+| `id` - [`Int!`](types-f-i.md#int) |  *(Deprecated: Use `SelectedConfigurableOption.configurable_product_option_uid` instead.)* |
 | `option_label` - [`String!`](#string) | The display text for the option. |
-| `value_id` - [`Int!`](#int) |  *(Deprecated: Use `SelectedConfigurableOption.configurable_product_option_value_uid` instead.)* |
+| `value_id` - [`Int!`](types-f-i.md#int) |  *(Deprecated: Use `SelectedConfigurableOption.configurable_product_option_value_uid` instead.)* |
 | `value_label` - [`String!`](#string) | The display name of the selected configurable option. |
 
 #### Example
@@ -1709,10 +1703,10 @@ Contains details about a selected configurable option.
 ```json
 {
   "configurable_product_option_uid": "4",
-  "configurable_product_option_value_uid": "4",
-  "id": 123,
+  "configurable_product_option_value_uid": 4,
+  "id": 987,
   "option_label": "xyz789",
-  "value_id": 987,
+  "value_id": 123,
   "value_label": "abc123"
 }
 ```
@@ -1728,12 +1722,15 @@ Contains details about an attribute the buyer selected.
 | Input Field | Description |
 |-------------|-------------|
 | `attribute_code` - [`String!`](#string) | A string that identifies the selected attribute. |
-| `value` - [`ID!`](#id) | The unique ID for a `CustomAttribute` object of a selected custom attribute. |
+| `value` - [`ID!`](types-f-i.md#id) | The unique ID for a `CustomAttribute` object of a selected custom attribute. |
 
 #### Example
 
 ```json
-{"attribute_code": "xyz789", "value": 4}
+{
+  "attribute_code": "abc123",
+  "value": "4"
+}
 ```
 
 <HorizontalLine />
@@ -1746,11 +1743,11 @@ Identifies a customized product that has been placed in a cart.
 
 | Field Name | Description |
 |------------|-------------|
-| `customizable_option_uid` - [`ID!`](#id) | The unique ID for a specific `CustomizableOptionInterface` object, such as a `CustomizableFieldOption`, `CustomizableFileOption`, or `CustomizableAreaOption` object. |
-| `id` - [`Int!`](#int) |  *(Deprecated: Use `SelectedCustomizableOption.customizable_option_uid` instead.)* |
-| `is_required` - [`Boolean!`](#boolean) | Indicates whether the customizable option is required. |
+| `customizable_option_uid` - [`ID!`](types-f-i.md#id) | The unique ID for a specific `CustomizableOptionInterface` object, such as a `CustomizableFieldOption`, `CustomizableFileOption`, or `CustomizableAreaOption` object. |
+| `id` - [`Int!`](types-f-i.md#int) |  *(Deprecated: Use `SelectedCustomizableOption.customizable_option_uid` instead.)* |
+| `is_required` - [`Boolean!`](types-a-b.md#boolean) | Indicates whether the customizable option is required. |
 | `label` - [`String!`](#string) | The display name of the selected customizable option. |
-| `sort_order` - [`Int!`](#int) | A value indicating the order to display this option. |
+| `sort_order` - [`Int!`](types-f-i.md#int) | A value indicating the order to display this option. |
 | `type` - [`String!`](#string) | The type of `CustomizableOptionInterface` object. |
 | `values` - [`[SelectedCustomizableOptionValue]!`](#selectedcustomizableoptionvalue) | An array of selectable values. |
 
@@ -1759,11 +1756,11 @@ Identifies a customized product that has been placed in a cart.
 ```json
 {
   "customizable_option_uid": 4,
-  "id": 987,
-  "is_required": false,
-  "label": "abc123",
-  "sort_order": 123,
-  "type": "abc123",
+  "id": 123,
+  "is_required": true,
+  "label": "xyz789",
+  "sort_order": 987,
+  "type": "xyz789",
   "values": [SelectedCustomizableOptionValue]
 }
 ```
@@ -1778,17 +1775,17 @@ Identifies the value of the selected customized option.
 
 | Field Name | Description |
 |------------|-------------|
-| `customizable_option_value_uid` - [`ID!`](#id) | The unique ID for a value object that corresponds to the object represented by the `customizable_option_uid` attribute. |
-| `id` - [`Int!`](#int) |  *(Deprecated: Use `SelectedCustomizableOptionValue.customizable_option_value_uid` instead.)* |
+| `customizable_option_value_uid` - [`ID!`](types-f-i.md#id) | The unique ID for a value object that corresponds to the object represented by the `customizable_option_uid` attribute. |
+| `id` - [`Int!`](types-f-i.md#int) |  *(Deprecated: Use `SelectedCustomizableOptionValue.customizable_option_value_uid` instead.)* |
 | `label` - [`String!`](#string) | The display name of the selected value. |
-| `price` - [`CartItemSelectedOptionValuePrice!`](#cartitemselectedoptionvalueprice) | The price of the selected customizable value. |
+| `price` - [`CartItemSelectedOptionValuePrice!`](types-c-e.md#cartitemselectedoptionvalueprice) | The price of the selected customizable value. |
 | `value` - [`String!`](#string) | The text identifying the selected value. |
 
 #### Example
 
 ```json
 {
-  "customizable_option_value_uid": "4",
+  "customizable_option_value_uid": 4,
   "id": 987,
   "label": "abc123",
   "price": CartItemSelectedOptionValuePrice,
@@ -1814,9 +1811,9 @@ Describes the payment method the shopper selected.
 
 ```json
 {
-  "code": "abc123",
+  "code": "xyz789",
   "purchase_order_number": "xyz789",
-  "title": "abc123"
+  "title": "xyz789"
 }
 ```
 
@@ -1830,14 +1827,14 @@ Contains details about the selected shipping method and carrier.
 
 | Field Name | Description |
 |------------|-------------|
-| `amount` - [`Money!`](#money) | The cost of shipping using this shipping method. |
-| `base_amount` - [`Money`](#money) |  *(Deprecated: The field should not be used on the storefront.)* |
+| `amount` - [`Money!`](types-k-p.md#money) | The cost of shipping using this shipping method. |
+| `base_amount` - [`Money`](types-k-p.md#money) |  *(Deprecated: The field should not be used on the storefront.)* |
 | `carrier_code` - [`String!`](#string) | A string that identifies a commercial carrier or an offline shipping method. |
 | `carrier_title` - [`String!`](#string) | The label for the carrier code. |
 | `method_code` - [`String!`](#string) | A shipping method code associated with a carrier. |
 | `method_title` - [`String!`](#string) | The label for the method code. |
-| `price_excl_tax` - [`Money!`](#money) | The cost of shipping using this shipping method, excluding tax. |
-| `price_incl_tax` - [`Money!`](#money) | The cost of shipping using this shipping method, including tax. |
+| `price_excl_tax` - [`Money!`](types-k-p.md#money) | The cost of shipping using this shipping method, excluding tax. |
+| `price_incl_tax` - [`Money!`](types-k-p.md#money) | The cost of shipping using this shipping method, including tax. |
 
 #### Example
 
@@ -1864,7 +1861,7 @@ Defines the referenced product and the email sender and recipients.
 
 | Input Field | Description |
 |-------------|-------------|
-| `product_id` - [`Int!`](#int) | The ID of the product that the sender is referencing. |
+| `product_id` - [`Int!`](types-f-i.md#int) | The ID of the product that the sender is referencing. |
 | `recipients` - [`[SendEmailToFriendRecipientInput]!`](#sendemailtofriendrecipientinput) | An array containing information about each recipient. |
 | `sender` - [`SendEmailToFriendSenderInput!`](#sendemailtofriendsenderinput) | Information about the customer and the content of the message. |
 
@@ -1872,7 +1869,7 @@ Defines the referenced product and the email sender and recipients.
 
 ```json
 {
-  "product_id": 987,
+  "product_id": 123,
   "recipients": [SendEmailToFriendRecipientInput],
   "sender": SendEmailToFriendSenderInput
 }
@@ -1939,7 +1936,7 @@ Contains details about a recipient.
 
 ```json
 {
-  "email": "xyz789",
+  "email": "abc123",
   "name": "xyz789"
 }
 ```
@@ -1964,7 +1961,7 @@ An output object that contains information about the sender.
 {
   "email": "abc123",
   "message": "abc123",
-  "name": "xyz789"
+  "name": "abc123"
 }
 ```
 
@@ -1986,7 +1983,7 @@ Contains details about the sender.
 
 ```json
 {
-  "email": "abc123",
+  "email": "xyz789",
   "message": "abc123",
   "name": "abc123"
 }
@@ -2002,13 +1999,13 @@ Contains details about the configuration of the Email to a Friend feature.
 
 | Field Name | Description |
 |------------|-------------|
-| `enabled_for_customers` - [`Boolean!`](#boolean) | Indicates whether the Email to a Friend feature is enabled. |
-| `enabled_for_guests` - [`Boolean!`](#boolean) | Indicates whether the Email to a Friend feature is enabled for guests. |
+| `enabled_for_customers` - [`Boolean!`](types-a-b.md#boolean) | Indicates whether the Email to a Friend feature is enabled. |
+| `enabled_for_guests` - [`Boolean!`](types-a-b.md#boolean) | Indicates whether the Email to a Friend feature is enabled for guests. |
 
 #### Example
 
 ```json
-{"enabled_for_customers": true, "enabled_for_guests": false}
+{"enabled_for_customers": true, "enabled_for_guests": true}
 ```
 
 <HorizontalLine />
@@ -2021,16 +2018,13 @@ Specifies which negotiable quote to send for review.
 
 | Input Field | Description |
 |-------------|-------------|
-| `comment` - [`NegotiableQuoteCommentInput`](#negotiablequotecommentinput) | A comment for the seller to review. |
-| `quote_uid` - [`ID!`](#id) | The unique ID of a `NegotiableQuote` object. |
+| `comment` - [`NegotiableQuoteCommentInput`](types-k-p.md#negotiablequotecommentinput) | A comment for the seller to review. |
+| `quote_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
 
 #### Example
 
 ```json
-{
-  "comment": NegotiableQuoteCommentInput,
-  "quote_uid": "4"
-}
+{"comment": NegotiableQuoteCommentInput, "quote_uid": 4}
 ```
 
 <HorizontalLine />
@@ -2043,7 +2037,7 @@ Contains the negotiable quote.
 
 | Field Name | Description |
 |------------|-------------|
-| `quote` - [`NegotiableQuote`](#negotiablequote) | The negotiable quote after sending for seller review. |
+| `quote` - [`NegotiableQuote`](types-k-p.md#negotiablequote) | The negotiable quote after sending for seller review. |
 
 #### Example
 
@@ -2061,7 +2055,7 @@ Sets the billing address.
 
 | Input Field | Description |
 |-------------|-------------|
-| `billing_address` - [`BillingAddressInput!`](#billingaddressinput) | The billing address. |
+| `billing_address` - [`BillingAddressInput!`](types-a-b.md#billingaddressinput) | The billing address. |
 | `cart_id` - [`String!`](#string) | The unique ID of a `Cart` object. |
 
 #### Example
@@ -2069,7 +2063,7 @@ Sets the billing address.
 ```json
 {
   "billing_address": BillingAddressInput,
-  "cart_id": "abc123"
+  "cart_id": "xyz789"
 }
 ```
 
@@ -2083,7 +2077,7 @@ Contains details about the cart after setting the billing address.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart!`](#cart) | The cart after setting the billing address. |
+| `cart` - [`Cart!`](types-c-e.md#cart) | The cart after setting the billing address. |
 
 #### Example
 
@@ -2102,18 +2096,18 @@ Defines the gift options applied to the cart.
 | Input Field | Description |
 |-------------|-------------|
 | `cart_id` - [`String!`](#string) | The unique ID that identifies the shopper's cart. |
-| `gift_message` - [`GiftMessageInput`](#giftmessageinput) | Gift message details for the cart. |
-| `gift_receipt_included` - [`Boolean!`](#boolean) | Whether customer requested gift receipt for the cart. |
-| `gift_wrapping_id` - [`ID`](#id) | The unique ID for a `GiftWrapping` object to be used for the cart. |
-| `printed_card_included` - [`Boolean!`](#boolean) | Whether customer requested printed card for the cart. |
+| `gift_message` - [`GiftMessageInput`](types-f-i.md#giftmessageinput) | Gift message details for the cart. |
+| `gift_receipt_included` - [`Boolean!`](types-a-b.md#boolean) | Whether customer requested gift receipt for the cart. |
+| `gift_wrapping_id` - [`ID`](types-f-i.md#id) | The unique ID for a `GiftWrapping` object to be used for the cart. |
+| `printed_card_included` - [`Boolean!`](types-a-b.md#boolean) | Whether customer requested printed card for the cart. |
 
 #### Example
 
 ```json
 {
-  "cart_id": "xyz789",
+  "cart_id": "abc123",
   "gift_message": GiftMessageInput,
-  "gift_receipt_included": true,
+  "gift_receipt_included": false,
   "gift_wrapping_id": 4,
   "printed_card_included": false
 }
@@ -2129,7 +2123,7 @@ Contains the cart after gift options have been applied.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart!`](#cart) | The modified cart object. |
+| `cart` - [`Cart!`](types-c-e.md#cart) | The modified cart object. |
 
 #### Example
 
@@ -2169,7 +2163,7 @@ Contains details about the cart after setting the email of a guest.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart!`](#cart) | The cart after setting the guest email. |
+| `cart` - [`Cart!`](types-c-e.md#cart) | The cart after setting the guest email. |
 
 #### Example
 
@@ -2187,7 +2181,7 @@ Contains the updated negotiable quote.
 
 | Field Name | Description |
 |------------|-------------|
-| `quote` - [`NegotiableQuote`](#negotiablequote) | The negotiable quote after sending for seller review. |
+| `quote` - [`NegotiableQuote`](types-k-p.md#negotiablequote) | The negotiable quote after sending for seller review. |
 
 #### Example
 
@@ -2205,15 +2199,15 @@ Sets the billing address.
 
 | Input Field | Description |
 |-------------|-------------|
-| `billing_address` - [`NegotiableQuoteBillingAddressInput!`](#negotiablequotebillingaddressinput) | The billing address to be added. |
-| `quote_uid` - [`ID!`](#id) | The unique ID of a `NegotiableQuote` object. |
+| `billing_address` - [`NegotiableQuoteBillingAddressInput!`](types-k-p.md#negotiablequotebillingaddressinput) | The billing address to be added. |
+| `quote_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
 
 #### Example
 
 ```json
 {
   "billing_address": NegotiableQuoteBillingAddressInput,
-  "quote_uid": "4"
+  "quote_uid": 4
 }
 ```
 
@@ -2227,7 +2221,7 @@ Contains the negotiable quote.
 
 | Field Name | Description |
 |------------|-------------|
-| `quote` - [`NegotiableQuote`](#negotiablequote) | The negotiable quote after assigning a billing address. |
+| `quote` - [`NegotiableQuote`](types-k-p.md#negotiablequote) | The negotiable quote after assigning a billing address. |
 
 #### Example
 
@@ -2245,15 +2239,15 @@ Defines the payment method of the specified negotiable quote.
 
 | Input Field | Description |
 |-------------|-------------|
-| `payment_method` - [`NegotiableQuotePaymentMethodInput!`](#negotiablequotepaymentmethodinput) | The payment method to be assigned to the negotiable quote. |
-| `quote_uid` - [`ID!`](#id) | The unique ID of a `NegotiableQuote` object. |
+| `payment_method` - [`NegotiableQuotePaymentMethodInput!`](types-k-p.md#negotiablequotepaymentmethodinput) | The payment method to be assigned to the negotiable quote. |
+| `quote_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
 
 #### Example
 
 ```json
 {
   "payment_method": NegotiableQuotePaymentMethodInput,
-  "quote_uid": 4
+  "quote_uid": "4"
 }
 ```
 
@@ -2267,7 +2261,7 @@ Contains details about the negotiable quote after setting the payment method.
 
 | Field Name | Description |
 |------------|-------------|
-| `quote` - [`NegotiableQuote`](#negotiablequote) | The updated negotiable quote. |
+| `quote` - [`NegotiableQuote`](types-k-p.md#negotiablequote) | The updated negotiable quote. |
 
 #### Example
 
@@ -2285,15 +2279,15 @@ Defines the shipping address to assign to the negotiable quote.
 
 | Input Field | Description |
 |-------------|-------------|
-| `customer_address_id` - [`ID`](#id) | The unique ID of a `CustomerAddress` object. |
-| `quote_uid` - [`ID!`](#id) | The unique ID of a `NegotiableQuote` object. |
-| `shipping_addresses` - [`[NegotiableQuoteShippingAddressInput]`](#negotiablequoteshippingaddressinput) | An array of shipping addresses to apply to the negotiable quote. |
+| `customer_address_id` - [`ID`](types-f-i.md#id) | The unique ID of a `CustomerAddress` object. |
+| `quote_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
+| `shipping_addresses` - [`[NegotiableQuoteShippingAddressInput]`](types-k-p.md#negotiablequoteshippingaddressinput) | An array of shipping addresses to apply to the negotiable quote. |
 
 #### Example
 
 ```json
 {
-  "customer_address_id": "4",
+  "customer_address_id": 4,
   "quote_uid": "4",
   "shipping_addresses": [
     NegotiableQuoteShippingAddressInput
@@ -2311,7 +2305,7 @@ Contains the negotiable quote.
 
 | Field Name | Description |
 |------------|-------------|
-| `quote` - [`NegotiableQuote`](#negotiablequote) | The negotiable quote after assigning a shipping address. |
+| `quote` - [`NegotiableQuote`](types-k-p.md#negotiablequote) | The negotiable quote after assigning a shipping address. |
 
 #### Example
 
@@ -2329,7 +2323,7 @@ Defines the shipping method to apply to the negotiable quote.
 
 | Input Field | Description |
 |-------------|-------------|
-| `quote_uid` - [`ID!`](#id) | The unique ID of a `NegotiableQuote` object. |
+| `quote_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
 | `shipping_methods` - [`[ShippingMethodInput]!`](#shippingmethodinput) | An array of shipping methods to apply to the negotiable quote. |
 
 #### Example
@@ -2351,7 +2345,7 @@ Contains the negotiable quote.
 
 | Field Name | Description |
 |------------|-------------|
-| `quote` - [`NegotiableQuote`](#negotiablequote) | The negotiable quote after applying shipping methods. |
+| `quote` - [`NegotiableQuote`](types-k-p.md#negotiablequote) | The negotiable quote after applying shipping methods. |
 
 #### Example
 
@@ -2369,8 +2363,8 @@ Defines the shipping address to assign to the negotiable quote template.
 
 | Input Field | Description |
 |-------------|-------------|
-| `shipping_address` - [`NegotiableQuoteTemplateShippingAddressInput!`](#negotiablequotetemplateshippingaddressinput) | A shipping adadress to apply to the negotiable quote template. |
-| `template_id` - [`ID!`](#id) | The unique ID of a `NegotiableQuote` object. |
+| `shipping_address` - [`NegotiableQuoteTemplateShippingAddressInput!`](types-k-p.md#negotiablequotetemplateshippingaddressinput) | A shipping adadress to apply to the negotiable quote template. |
+| `template_id` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
 
 #### Example
 
@@ -2392,7 +2386,7 @@ Applies a payment method to the quote.
 | Input Field | Description |
 |-------------|-------------|
 | `cart_id` - [`String!`](#string) | The unique ID of a `Cart` object. |
-| `payment_method` - [`PaymentMethodInput!`](#paymentmethodinput) | The payment method data to apply to the cart. |
+| `payment_method` - [`PaymentMethodInput!`](types-k-p.md#paymentmethodinput) | The payment method data to apply to the cart. |
 
 #### Example
 
@@ -2414,13 +2408,13 @@ Applies a payment method to the cart.
 | Input Field | Description |
 |-------------|-------------|
 | `cart_id` - [`String!`](#string) | The unique ID of a `Cart` object. |
-| `payment_method` - [`PaymentMethodInput!`](#paymentmethodinput) | The payment method data to apply to the cart. |
+| `payment_method` - [`PaymentMethodInput!`](types-k-p.md#paymentmethodinput) | The payment method data to apply to the cart. |
 
 #### Example
 
 ```json
 {
-  "cart_id": "xyz789",
+  "cart_id": "abc123",
   "payment_method": PaymentMethodInput
 }
 ```
@@ -2435,7 +2429,7 @@ Contains details about the cart after setting the payment method.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart!`](#cart) | The cart after setting the payment method. |
+| `cart` - [`Cart!`](types-c-e.md#cart) | The cart after setting the payment method. |
 
 #### Example
 
@@ -2460,7 +2454,7 @@ Specifies an array of addresses to use for shipping.
 
 ```json
 {
-  "cart_id": "xyz789",
+  "cart_id": "abc123",
   "shipping_addresses": [ShippingAddressInput]
 }
 ```
@@ -2475,7 +2469,7 @@ Contains details about the cart after setting the shipping addresses.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart!`](#cart) | The cart after setting the shipping addresses. |
+| `cart` - [`Cart!`](types-c-e.md#cart) | The cart after setting the shipping addresses. |
 
 #### Example
 
@@ -2500,7 +2494,7 @@ Applies one or shipping methods to the cart.
 
 ```json
 {
-  "cart_id": "abc123",
+  "cart_id": "xyz789",
   "shipping_methods": [ShippingMethodInput]
 }
 ```
@@ -2515,7 +2509,7 @@ Contains details about the cart after setting the shipping methods.
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart!`](#cart) | The cart after setting the shipping methods. |
+| `cart` - [`Cart!`](types-c-e.md#cart) | The cart after setting the shipping methods. |
 
 #### Example
 
@@ -2541,7 +2535,7 @@ Defines a gift registry invitee.
 ```json
 {
   "email": "xyz789",
-  "name": "abc123"
+  "name": "xyz789"
 }
 ```
 
@@ -2555,12 +2549,12 @@ Contains the results of a request to share a gift registry.
 
 | Field Name | Description |
 |------------|-------------|
-| `is_shared` - [`Boolean!`](#boolean) | Indicates whether the gift registry was successfully shared. |
+| `is_shared` - [`Boolean!`](types-a-b.md#boolean) | Indicates whether the gift registry was successfully shared. |
 
 #### Example
 
 ```json
-{"is_shared": false}
+{"is_shared": true}
 ```
 
 <HorizontalLine />
@@ -2581,7 +2575,7 @@ Defines the sender of an invitation to view a gift registry.
 ```json
 {
   "message": "xyz789",
-  "name": "abc123"
+  "name": "xyz789"
 }
 ```
 
@@ -2612,12 +2606,12 @@ Defines whether bundle items must be shipped together.
 
 | Field Name | Description |
 |------------|-------------|
-| `id` - [`ID!`](#id) | The unique ID for a `ShipmentItemInterface` object. |
-| `order_item` - [`OrderItemInterface`](#orderiteminterface) | The order item associated with the shipment item. |
+| `id` - [`ID!`](types-f-i.md#id) | The unique ID for a `ShipmentItemInterface` object. |
+| `order_item` - [`OrderItemInterface`](types-k-p.md#orderiteminterface) | The order item associated with the shipment item. |
 | `product_name` - [`String`](#string) | The name of the base product. |
-| `product_sale_price` - [`Money!`](#money) | The sale price for the base product. |
+| `product_sale_price` - [`Money!`](types-k-p.md#money) | The sale price for the base product. |
 | `product_sku` - [`String!`](#string) | The SKU of the base product. |
-| `quantity_shipped` - [`Float!`](#float) | The number of shipped items. |
+| `quantity_shipped` - [`Float!`](types-f-i.md#float) | The number of shipped items. |
 
 #### Example
 
@@ -2627,8 +2621,8 @@ Defines whether bundle items must be shipped together.
   "order_item": OrderItemInterface,
   "product_name": "abc123",
   "product_sale_price": Money,
-  "product_sku": "xyz789",
-  "quantity_shipped": 987.65
+  "product_sku": "abc123",
+  "quantity_shipped": 123.45
 }
 ```
 
@@ -2642,19 +2636,19 @@ Order shipment item details.
 
 | Field Name | Description |
 |------------|-------------|
-| `id` - [`ID!`](#id) | The unique ID for a `ShipmentItemInterface` object. |
-| `order_item` - [`OrderItemInterface`](#orderiteminterface) | The order item associated with the shipment item. |
+| `id` - [`ID!`](types-f-i.md#id) | The unique ID for a `ShipmentItemInterface` object. |
+| `order_item` - [`OrderItemInterface`](types-k-p.md#orderiteminterface) | The order item associated with the shipment item. |
 | `product_name` - [`String`](#string) | The name of the base product. |
-| `product_sale_price` - [`Money!`](#money) | The sale price for the base product. |
+| `product_sale_price` - [`Money!`](types-k-p.md#money) | The sale price for the base product. |
 | `product_sku` - [`String!`](#string) | The SKU of the base product. |
-| `quantity_shipped` - [`Float!`](#float) | The number of shipped items. |
+| `quantity_shipped` - [`Float!`](types-f-i.md#float) | The number of shipped items. |
 
 #### Possible Types
 
 | ShipmentItemInterface Types |
 |----------------|
-| [`BundleShipmentItem`](#bundleshipmentitem) |
-| [`GiftCardShipmentItem`](#giftcardshipmentitem) |
+| [`BundleShipmentItem`](types-a-b.md#bundleshipmentitem) |
+| [`GiftCardShipmentItem`](types-f-i.md#giftcardshipmentitem) |
 | [`ShipmentItem`](#shipmentitem) |
 
 #### Example
@@ -2663,7 +2657,7 @@ Order shipment item details.
 {
   "id": "4",
   "order_item": OrderItemInterface,
-  "product_name": "abc123",
+  "product_name": "xyz789",
   "product_sale_price": Money,
   "product_sku": "xyz789",
   "quantity_shipped": 987.65
@@ -2689,8 +2683,8 @@ Contains order shipment tracking details.
 ```json
 {
   "carrier": "abc123",
-  "number": "abc123",
-  "title": "abc123"
+  "number": "xyz789",
+  "title": "xyz789"
 }
 ```
 
@@ -2704,8 +2698,8 @@ Defines a single shipping address.
 
 | Input Field | Description |
 |-------------|-------------|
-| `address` - [`CartAddressInput`](#cartaddressinput) | Defines a shipping address. |
-| `customer_address_id` - [`Int`](#int) | An ID from the customer's address book that uniquely identifies the address to be used for shipping. |
+| `address` - [`CartAddressInput`](types-c-e.md#cartaddressinput) | Defines a shipping address. |
+| `customer_address_id` - [`Int`](types-f-i.md#int) | An ID from the customer's address book that uniquely identifies the address to be used for shipping. |
 | `customer_notes` - [`String`](#string) | Text provided by the shopper. |
 | `pickup_location_code` - [`String`](#string) | The code of Pickup Location which will be used for In-Store Pickup. |
 
@@ -2715,7 +2709,7 @@ Defines a single shipping address.
 {
   "address": CartAddressInput,
   "customer_address_id": 123,
-  "customer_notes": "xyz789",
+  "customer_notes": "abc123",
   "pickup_location_code": "xyz789"
 }
 ```
@@ -2730,23 +2724,23 @@ Contains shipping addresses and methods.
 
 | Field Name | Description |
 |------------|-------------|
-| `available_shipping_methods` - [`[AvailableShippingMethod]`](#availableshippingmethod) | An array that lists the shipping methods that can be applied to the cart. |
-| `cart_items` - [`[CartItemQuantity]`](#cartitemquantity) |  *(Deprecated: Use `cart_items_v2` instead.)* |
-| `cart_items_v2` - [`[CartItemInterface]`](#cartiteminterface) | An array that lists the items in the cart. |
+| `available_shipping_methods` - [`[AvailableShippingMethod]`](types-a-b.md#availableshippingmethod) | An array that lists the shipping methods that can be applied to the cart. |
+| `cart_items` - [`[CartItemQuantity]`](types-c-e.md#cartitemquantity) |  *(Deprecated: Use `cart_items_v2` instead.)* |
+| `cart_items_v2` - [`[CartItemInterface]`](types-c-e.md#cartiteminterface) | An array that lists the items in the cart. |
 | `city` - [`String!`](#string) | The city specified for the billing or shipping address. |
 | `company` - [`String`](#string) | The company specified for the billing or shipping address. |
-| `country` - [`CartAddressCountry!`](#cartaddresscountry) | An object containing the country label and code. |
-| `custom_attributes` - [`[AttributeValueInterface]!`](#attributevalueinterface) | The custom attribute values of the billing or shipping address. |
+| `country` - [`CartAddressCountry!`](types-c-e.md#cartaddresscountry) | An object containing the country label and code. |
+| `custom_attributes` - [`[AttributeValueInterface]!`](types-a-b.md#attributevalueinterface) | The custom attribute values of the billing or shipping address. |
 | `customer_notes` - [`String`](#string) | Text provided by the shopper. |
 | `fax` - [`String`](#string) | The customer's fax number. |
 | `firstname` - [`String!`](#string) | The first name of the customer or guest. |
-| `items_weight` - [`Float`](#float) |  *(Deprecated: This information should not be exposed on the frontend.)* |
+| `items_weight` - [`Float`](types-f-i.md#float) |  *(Deprecated: This information should not be exposed on the frontend.)* |
 | `lastname` - [`String!`](#string) | The last name of the customer or guest. |
 | `middlename` - [`String`](#string) | The middle name of the person associated with the billing/shipping address. |
 | `pickup_location_code` - [`String`](#string) |  |
 | `postcode` - [`String`](#string) | The ZIP or postal code of the billing or shipping address. |
 | `prefix` - [`String`](#string) | An honorific, such as Dr., Mr., or Mrs. |
-| `region` - [`CartAddressRegion`](#cartaddressregion) | An object containing the region label and code. |
+| `region` - [`CartAddressRegion`](types-c-e.md#cartaddressregion) | An object containing the region label and code. |
 | `selected_shipping_method` - [`SelectedShippingMethod`](#selectedshippingmethod) | An object that describes the selected shipping method. |
 | `street` - [`[String]!`](#string) | An array containing the street for the billing or shipping address. |
 | `suffix` - [`String`](#string) | A value such as Sr., Jr., or III. |
@@ -2761,26 +2755,26 @@ Contains shipping addresses and methods.
   "available_shipping_methods": [AvailableShippingMethod],
   "cart_items": [CartItemQuantity],
   "cart_items_v2": [CartItemInterface],
-  "city": "xyz789",
+  "city": "abc123",
   "company": "xyz789",
   "country": CartAddressCountry,
   "custom_attributes": [AttributeValueInterface],
-  "customer_notes": "xyz789",
+  "customer_notes": "abc123",
   "fax": "abc123",
-  "firstname": "xyz789",
+  "firstname": "abc123",
   "items_weight": 123.45,
   "lastname": "xyz789",
   "middlename": "xyz789",
   "pickup_location_code": "abc123",
   "postcode": "xyz789",
-  "prefix": "abc123",
+  "prefix": "xyz789",
   "region": CartAddressRegion,
   "selected_shipping_method": SelectedShippingMethod,
-  "street": ["xyz789"],
+  "street": ["abc123"],
   "suffix": "xyz789",
-  "telephone": "abc123",
+  "telephone": "xyz789",
   "uid": "abc123",
-  "vat_id": "xyz789"
+  "vat_id": "abc123"
 }
 ```
 
@@ -2794,7 +2788,7 @@ Defines an individual shipping discount. This discount can be applied to shippin
 
 | Field Name | Description |
 |------------|-------------|
-| `amount` - [`Money!`](#money) | The amount of the discount. |
+| `amount` - [`Money!`](types-k-p.md#money) | The amount of the discount. |
 
 #### Example
 
@@ -2812,11 +2806,11 @@ Contains details about shipping and handling costs.
 
 | Field Name | Description |
 |------------|-------------|
-| `amount_excluding_tax` - [`Money`](#money) | The shipping amount, excluding tax. |
-| `amount_including_tax` - [`Money`](#money) | The shipping amount, including tax. |
+| `amount_excluding_tax` - [`Money`](types-k-p.md#money) | The shipping amount, excluding tax. |
+| `amount_including_tax` - [`Money`](types-k-p.md#money) | The shipping amount, including tax. |
 | `discounts` - [`[ShippingDiscount]`](#shippingdiscount) | The applied discounts to the shipping. |
-| `taxes` - [`[TaxItem]`](#taxitem) | Details about taxes applied for shipping. |
-| `total_amount` - [`Money!`](#money) | The total amount for shipping. |
+| `taxes` - [`[TaxItem]`](types-t-z.md#taxitem) | Details about taxes applied for shipping. |
+| `total_amount` - [`Money!`](types-k-p.md#money) | The total amount for shipping. |
 
 #### Example
 
@@ -2848,7 +2842,7 @@ Defines the shipping carrier and method.
 ```json
 {
   "carrier_code": "xyz789",
-  "method_code": "abc123"
+  "method_code": "xyz789"
 }
 ```
 
@@ -2862,22 +2856,22 @@ An implementation for simple product cart items.
 
 | Field Name | Description |
 |------------|-------------|
-| `available_gift_wrapping` - [`[GiftWrapping]!`](#giftwrapping) | The list of available gift wrapping options for the cart item. |
+| `available_gift_wrapping` - [`[GiftWrapping]!`](types-f-i.md#giftwrapping) | The list of available gift wrapping options for the cart item. |
 | `customizable_options` - [`[SelectedCustomizableOption]!`](#selectedcustomizableoption) | An array containing the customizable options the shopper selected. |
-| `discount` - [`[Discount]`](#discount) | Contains discount for quote line item. |
-| `errors` - [`[CartItemError]`](#cartitemerror) | An array of errors encountered while loading the cart item |
-| `gift_message` - [`GiftMessage`](#giftmessage) | The entered gift message for the cart item |
-| `gift_wrapping` - [`GiftWrapping`](#giftwrapping) | The selected gift wrapping for the cart item. |
+| `discount` - [`[Discount]`](types-c-e.md#discount) | Contains discount for quote line item. |
+| `errors` - [`[CartItemError]`](types-c-e.md#cartitemerror) | An array of errors encountered while loading the cart item |
+| `gift_message` - [`GiftMessage`](types-f-i.md#giftmessage) | The entered gift message for the cart item |
+| `gift_wrapping` - [`GiftWrapping`](types-f-i.md#giftwrapping) | The selected gift wrapping for the cart item. |
 | `id` - [`String!`](#string) |  *(Deprecated: Use `uid` instead.)* |
-| `is_available` - [`Boolean!`](#boolean) | True if requested quantity is less than available stock, false otherwise. |
-| `max_qty` - [`Float`](#float) | Line item max qty in quote template |
-| `min_qty` - [`Float`](#float) | Line item min qty in quote template |
-| `note_from_buyer` - [`[ItemNote]`](#itemnote) | The buyer's quote line item note. |
-| `note_from_seller` - [`[ItemNote]`](#itemnote) | The seller's quote line item note. |
-| `prices` - [`CartItemPrices`](#cartitemprices) | Contains details about the price of the item, including taxes and discounts. |
-| `product` - [`ProductInterface!`](#productinterface) | Details about an item in the cart. |
-| `quantity` - [`Float!`](#float) | The quantity of this item in the cart. |
-| `uid` - [`ID!`](#id) | The unique ID for a `CartItemInterface` object. |
+| `is_available` - [`Boolean!`](types-a-b.md#boolean) | True if requested quantity is less than available stock, false otherwise. |
+| `max_qty` - [`Float`](types-f-i.md#float) | Line item max qty in quote template |
+| `min_qty` - [`Float`](types-f-i.md#float) | Line item min qty in quote template |
+| `note_from_buyer` - [`[ItemNote]`](types-f-i.md#itemnote) | The buyer's quote line item note. |
+| `note_from_seller` - [`[ItemNote]`](types-f-i.md#itemnote) | The seller's quote line item note. |
+| `prices` - [`CartItemPrices`](types-c-e.md#cartitemprices) | Contains details about the price of the item, including taxes and discounts. |
+| `product` - [`ProductInterface!`](types-k-p.md#productinterface) | Details about an item in the cart. |
+| `quantity` - [`Float!`](types-f-i.md#float) | The quantity of this item in the cart. |
+| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `CartItemInterface` object. |
 
 #### Example
 
@@ -2889,10 +2883,10 @@ An implementation for simple product cart items.
   "errors": [CartItemError],
   "gift_message": GiftMessage,
   "gift_wrapping": GiftWrapping,
-  "id": "xyz789",
-  "is_available": true,
+  "id": "abc123",
+  "is_available": false,
   "max_qty": 987.65,
-  "min_qty": 123.45,
+  "min_qty": 987.65,
   "note_from_buyer": [ItemNote],
   "note_from_seller": [ItemNote],
   "prices": CartItemPrices,
@@ -2912,125 +2906,125 @@ Defines a simple product, which is tangible and is usually sold in single units 
 
 | Field Name | Description |
 |------------|-------------|
-| `attribute_set_id` - [`Int`](#int) | The attribute set assigned to the product. *(Deprecated: The field should not be used on the storefront.)* |
+| `attribute_set_id` - [`Int`](types-f-i.md#int) | The attribute set assigned to the product. *(Deprecated: The field should not be used on the storefront.)* |
 | `canonical_url` - [`String`](#string) | The relative canonical URL. This value is returned only if the system setting 'Use Canonical Link Meta Tag For Products' is enabled. |
-| `categories` - [`[CategoryInterface]`](#categoryinterface) | The categories assigned to a product. |
-| `color` - [`Int`](#int) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
+| `categories` - [`[CategoryInterface]`](types-c-e.md#categoryinterface) | The categories assigned to a product. |
+| `color` - [`Int`](types-f-i.md#int) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
 | `country_of_manufacture` - [`String`](#string) | The product's country of origin. |
 | `created_at` - [`String`](#string) | Timestamp indicating when the product was created. *(Deprecated: The field should not be used on the storefront.)* |
-| `crosssell_products` - [`[ProductInterface]`](#productinterface) | An array of cross-sell products. |
-| `custom_attributesV2` - [`ProductCustomAttributes`](#productcustomattributes) | Product custom attributes. |
-| `description` - [`ComplexTextValue`](#complextextvalue) | Detailed information about the product. The value can include simple HTML tags. |
+| `crosssell_products` - [`[ProductInterface]`](types-k-p.md#productinterface) | An array of cross-sell products. |
+| `custom_attributesV2` - [`ProductCustomAttributes`](types-k-p.md#productcustomattributes) | Product custom attributes. |
+| `description` - [`ComplexTextValue`](types-c-e.md#complextextvalue) | Detailed information about the product. The value can include simple HTML tags. |
 | `gift_message_available` - [`String`](#string) | Indicates whether a gift message is available. |
-| `id` - [`Int`](#int) | The ID number assigned to the product. *(Deprecated: Use the `uid` field instead.)* |
-| `image` - [`ProductImage`](#productimage) | The relative path to the main image on the product page. |
+| `id` - [`Int`](types-f-i.md#int) | The ID number assigned to the product. *(Deprecated: Use the `uid` field instead.)* |
+| `image` - [`ProductImage`](types-k-p.md#productimage) | The relative path to the main image on the product page. |
 | `is_returnable` - [`String`](#string) | Indicates whether the product can be returned. |
-| `manufacturer` - [`Int`](#int) | A number representing the product's manufacturer. *(Deprecated: Use the `custom_attributes` field instead.)* |
-| `media_gallery` - [`[MediaGalleryInterface]`](#mediagalleryinterface) | An array of media gallery objects. |
-| `media_gallery_entries` - [`[MediaGalleryEntry]`](#mediagalleryentry) | An array of MediaGalleryEntry objects. *(Deprecated: Use `media_gallery` instead.)* |
+| `manufacturer` - [`Int`](types-f-i.md#int) | A number representing the product's manufacturer. *(Deprecated: Use the `custom_attributes` field instead.)* |
+| `media_gallery` - [`[MediaGalleryInterface]`](types-k-p.md#mediagalleryinterface) | An array of media gallery objects. |
+| `media_gallery_entries` - [`[MediaGalleryEntry]`](types-k-p.md#mediagalleryentry) | An array of MediaGalleryEntry objects. *(Deprecated: Use `media_gallery` instead.)* |
 | `meta_description` - [`String`](#string) | A brief overview of the product for search results listings, maximum 255 characters. |
 | `meta_keyword` - [`String`](#string) | A comma-separated list of keywords that are visible only to search engines. |
 | `meta_title` - [`String`](#string) | A string that is displayed in the title bar and tab of the browser and in search results lists. |
 | `name` - [`String`](#string) | The product name. Customers use this name to identify the product. |
 | `new_from_date` - [`String`](#string) | The beginning date for new product listings, and determines if the product is featured as a new product. |
 | `new_to_date` - [`String`](#string) | The end date for new product listings. |
-| `only_x_left_in_stock` - [`Float`](#float) | Product stock only x left count |
-| `options` - [`[CustomizableOptionInterface]`](#customizableoptioninterface) | An array of options for a customizable product. |
+| `only_x_left_in_stock` - [`Float`](types-f-i.md#float) | Product stock only x left count |
+| `options` - [`[CustomizableOptionInterface]`](types-c-e.md#customizableoptioninterface) | An array of options for a customizable product. |
 | `options_container` - [`String`](#string) | If the product has multiple options, determines where they appear on the product page. |
-| `price` - [`ProductPrices`](#productprices) | Indicates the price of an item. *(Deprecated: Use `price_range` for product price information.)* |
-| `price_range` - [`PriceRange!`](#pricerange) | The range of prices for the product |
-| `price_tiers` - [`[TierPrice]`](#tierprice) | An array of `TierPrice` objects. |
-| `product_links` - [`[ProductLinksInterface]`](#productlinksinterface) | An array of `ProductLinks` objects. |
-| `rating_summary` - [`Float!`](#float) | The average of all the ratings given to the product. |
-| `redirect_code` - [`Int!`](#int) | Contains 0 when there is no redirect error. A value of 301 indicates the URL of the requested resource has been changed permanently, while a value of 302 indicates a temporary redirect. |
-| `related_products` - [`[ProductInterface]`](#productinterface) | An array of related products. |
+| `price` - [`ProductPrices`](types-k-p.md#productprices) | Indicates the price of an item. *(Deprecated: Use `price_range` for product price information.)* |
+| `price_range` - [`PriceRange!`](types-k-p.md#pricerange) | The range of prices for the product |
+| `price_tiers` - [`[TierPrice]`](types-t-z.md#tierprice) | An array of `TierPrice` objects. |
+| `product_links` - [`[ProductLinksInterface]`](types-k-p.md#productlinksinterface) | An array of `ProductLinks` objects. |
+| `rating_summary` - [`Float!`](types-f-i.md#float) | The average of all the ratings given to the product. |
+| `redirect_code` - [`Int!`](types-f-i.md#int) | Contains 0 when there is no redirect error. A value of 301 indicates the URL of the requested resource has been changed permanently, while a value of 302 indicates a temporary redirect. |
+| `related_products` - [`[ProductInterface]`](types-k-p.md#productinterface) | An array of related products. |
 | `relative_url` - [`String`](#string) | The internal relative URL. If the specified URL is a redirect, the query returns the redirected URL, not the original. |
-| `review_count` - [`Int!`](#int) | The total count of all the reviews given to the product. |
-| `reviews` - [`ProductReviews!`](#productreviews) | The list of products reviews. |
-| `short_description` - [`ComplexTextValue`](#complextextvalue) | A short description of the product. Its use depends on the theme. |
+| `review_count` - [`Int!`](types-f-i.md#int) | The total count of all the reviews given to the product. |
+| `reviews` - [`ProductReviews!`](types-k-p.md#productreviews) | The list of products reviews. |
+| `short_description` - [`ComplexTextValue`](types-c-e.md#complextextvalue) | A short description of the product. Its use depends on the theme. |
 | `sku` - [`String`](#string) | A number or code assigned to a product to identify the product, options, price, and manufacturer. |
-| `small_image` - [`ProductImage`](#productimage) | The relative path to the small image, which is used on catalog pages. |
+| `small_image` - [`ProductImage`](types-k-p.md#productimage) | The relative path to the small image, which is used on catalog pages. |
 | `special_from_date` - [`String`](#string) | The beginning date that a product has a special price. *(Deprecated: The field should not be used on the storefront.)* |
-| `special_price` - [`Float`](#float) | The discounted price of the product. |
+| `special_price` - [`Float`](types-f-i.md#float) | The discounted price of the product. |
 | `special_to_date` - [`String`](#string) | The end date for a product with a special price. |
-| `staged` - [`Boolean!`](#boolean) | Indicates whether the product is staged for a future campaign. |
-| `stock_status` - [`ProductStockStatus`](#productstockstatus) | Stock status of the product |
+| `staged` - [`Boolean!`](types-a-b.md#boolean) | Indicates whether the product is staged for a future campaign. |
+| `stock_status` - [`ProductStockStatus`](types-k-p.md#productstockstatus) | Stock status of the product |
 | `swatch_image` - [`String`](#string) | The file name of a swatch image. |
-| `thumbnail` - [`ProductImage`](#productimage) | The relative path to the product's thumbnail image. |
-| `tier_price` - [`Float`](#float) | The price when tier pricing is in effect and the items purchased threshold has been reached. *(Deprecated: Use `price_tiers` for product tier price information.)* |
-| `tier_prices` - [`[ProductTierPrices]`](#producttierprices) | An array of ProductTierPrices objects. *(Deprecated: Use `price_tiers` for product tier price information.)* |
-| `type` - [`UrlRewriteEntityTypeEnum`](#urlrewriteentitytypeenum) | One of PRODUCT, CATEGORY, or CMS_PAGE. |
+| `thumbnail` - [`ProductImage`](types-k-p.md#productimage) | The relative path to the product's thumbnail image. |
+| `tier_price` - [`Float`](types-f-i.md#float) | The price when tier pricing is in effect and the items purchased threshold has been reached. *(Deprecated: Use `price_tiers` for product tier price information.)* |
+| `tier_prices` - [`[ProductTierPrices]`](types-k-p.md#producttierprices) | An array of ProductTierPrices objects. *(Deprecated: Use `price_tiers` for product tier price information.)* |
+| `type` - [`UrlRewriteEntityTypeEnum`](types-t-z.md#urlrewriteentitytypeenum) | One of PRODUCT, CATEGORY, or CMS_PAGE. |
 | `type_id` - [`String`](#string) | One of simple, virtual, bundle, downloadable, grouped, or configurable. *(Deprecated: Use `__typename` instead.)* |
-| `uid` - [`ID!`](#id) | The unique ID for a `ProductInterface` object. |
+| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `ProductInterface` object. |
 | `updated_at` - [`String`](#string) | Timestamp indicating when the product was updated. *(Deprecated: The field should not be used on the storefront.)* |
-| `upsell_products` - [`[ProductInterface]`](#productinterface) | An array of up-sell products. |
+| `upsell_products` - [`[ProductInterface]`](types-k-p.md#productinterface) | An array of up-sell products. |
 | `url_key` - [`String`](#string) | The part of the URL that identifies the product |
 | `url_path` - [`String`](#string) |  *(Deprecated: Use product's `canonical_url` or url rewrites instead)* |
-| `url_rewrites` - [`[UrlRewrite]`](#urlrewrite) | URL rewrites list |
+| `url_rewrites` - [`[UrlRewrite]`](types-t-z.md#urlrewrite) | URL rewrites list |
 | `url_suffix` - [`String`](#string) | The part of the product URL that is appended after the url key |
-| `websites` - [`[Website]`](#website) | An array of websites in which the product is available. *(Deprecated: The field should not be used on the storefront.)* |
-| `weight` - [`Float`](#float) | The weight of the item, in units defined by the store. |
+| `websites` - [`[Website]`](types-t-z.md#website) | An array of websites in which the product is available. *(Deprecated: The field should not be used on the storefront.)* |
+| `weight` - [`Float`](types-f-i.md#float) | The weight of the item, in units defined by the store. |
 
 #### Example
 
 ```json
 {
   "attribute_set_id": 987,
-  "canonical_url": "abc123",
+  "canonical_url": "xyz789",
   "categories": [CategoryInterface],
-  "color": 987,
-  "country_of_manufacture": "abc123",
+  "color": 123,
+  "country_of_manufacture": "xyz789",
   "created_at": "abc123",
   "crosssell_products": [ProductInterface],
   "custom_attributesV2": ProductCustomAttributes,
   "description": ComplexTextValue,
   "gift_message_available": "xyz789",
-  "id": 123,
+  "id": 987,
   "image": ProductImage,
-  "is_returnable": "abc123",
+  "is_returnable": "xyz789",
   "manufacturer": 987,
   "media_gallery": [MediaGalleryInterface],
   "media_gallery_entries": [MediaGalleryEntry],
   "meta_description": "abc123",
   "meta_keyword": "abc123",
-  "meta_title": "xyz789",
-  "name": "abc123",
-  "new_from_date": "xyz789",
-  "new_to_date": "xyz789",
-  "only_x_left_in_stock": 123.45,
+  "meta_title": "abc123",
+  "name": "xyz789",
+  "new_from_date": "abc123",
+  "new_to_date": "abc123",
+  "only_x_left_in_stock": 987.65,
   "options": [CustomizableOptionInterface],
   "options_container": "xyz789",
   "price": ProductPrices,
   "price_range": PriceRange,
   "price_tiers": [TierPrice],
   "product_links": [ProductLinksInterface],
-  "rating_summary": 123.45,
-  "redirect_code": 987,
+  "rating_summary": 987.65,
+  "redirect_code": 123,
   "related_products": [ProductInterface],
-  "relative_url": "abc123",
+  "relative_url": "xyz789",
   "review_count": 987,
   "reviews": ProductReviews,
   "short_description": ComplexTextValue,
   "sku": "xyz789",
   "small_image": ProductImage,
-  "special_from_date": "xyz789",
+  "special_from_date": "abc123",
   "special_price": 123.45,
   "special_to_date": "xyz789",
-  "staged": true,
+  "staged": false,
   "stock_status": "IN_STOCK",
   "swatch_image": "xyz789",
   "thumbnail": ProductImage,
-  "tier_price": 987.65,
+  "tier_price": 123.45,
   "tier_prices": [ProductTierPrices],
   "type": "CMS_PAGE",
   "type_id": "xyz789",
-  "uid": "4",
-  "updated_at": "abc123",
+  "uid": 4,
+  "updated_at": "xyz789",
   "upsell_products": [ProductInterface],
-  "url_key": "abc123",
-  "url_path": "abc123",
+  "url_key": "xyz789",
+  "url_path": "xyz789",
   "url_rewrites": [UrlRewrite],
-  "url_suffix": "abc123",
+  "url_suffix": "xyz789",
   "websites": [Website],
   "weight": 987.65
 }
@@ -3046,8 +3040,8 @@ Defines a single product to add to the cart.
 
 | Input Field | Description |
 |-------------|-------------|
-| `customizable_options` - [`[CustomizableOptionInput]`](#customizableoptioninput) | An array that defines customizable options for the product. |
-| `data` - [`CartItemInput!`](#cartiteminput) | An object containing the `sku`, `quantity`, and other relevant information about the product. |
+| `customizable_options` - [`[CustomizableOptionInput]`](types-c-e.md#customizableoptioninput) | An array that defines customizable options for the product. |
+| `data` - [`CartItemInput!`](types-c-e.md#cartiteminput) | An object containing the `sku`, `quantity`, and other relevant information about the product. |
 
 #### Example
 
@@ -3069,9 +3063,9 @@ Contains details about simple products added to a requisition list.
 | Field Name | Description |
 |------------|-------------|
 | `customizable_options` - [`[SelectedCustomizableOption]!`](#selectedcustomizableoption) | Selected custom options for an item in the requisition list. |
-| `product` - [`ProductInterface!`](#productinterface) | Details about a requisition list item. |
-| `quantity` - [`Float!`](#float) | The amount added. |
-| `uid` - [`ID!`](#id) | The unique ID for the requisition list item. |
+| `product` - [`ProductInterface!`](types-k-p.md#productinterface) | Details about a requisition list item. |
+| `quantity` - [`Float!`](types-f-i.md#float) | The amount added. |
+| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for the requisition list item. |
 
 #### Example
 
@@ -3080,7 +3074,7 @@ Contains details about simple products added to a requisition list.
   "customizable_options": [SelectedCustomizableOption],
   "product": ProductInterface,
   "quantity": 123.45,
-  "uid": "4"
+  "uid": 4
 }
 ```
 
@@ -3097,20 +3091,20 @@ Contains a simple product wish list item.
 | `added_at` - [`String!`](#string) | The date and time the item was added to the wish list. |
 | `customizable_options` - [`[SelectedCustomizableOption]!`](#selectedcustomizableoption) | Custom options selected for the wish list item. |
 | `description` - [`String`](#string) | The description of the item. |
-| `id` - [`ID!`](#id) | The unique ID for a `WishlistItemInterface` object. |
-| `product` - [`ProductInterface`](#productinterface) | Product details of the wish list item. |
-| `quantity` - [`Float!`](#float) | The quantity of this wish list item. |
+| `id` - [`ID!`](types-f-i.md#id) | The unique ID for a `WishlistItemInterface` object. |
+| `product` - [`ProductInterface`](types-k-p.md#productinterface) | Product details of the wish list item. |
+| `quantity` - [`Float!`](types-f-i.md#float) | The quantity of this wish list item. |
 
 #### Example
 
 ```json
 {
-  "added_at": "abc123",
+  "added_at": "xyz789",
   "customizable_options": [SelectedCustomizableOption],
-  "description": "abc123",
-  "id": "4",
+  "description": "xyz789",
+  "id": 4,
   "product": ProductInterface,
-  "quantity": 987.65
+  "quantity": 123.45
 }
 ```
 
@@ -3146,12 +3140,12 @@ Smart button payment inputs
 
 | Field Name | Description |
 |------------|-------------|
-| `button_styles` - [`ButtonStyles`](#buttonstyles) | The styles for the PayPal Smart Button configuration |
+| `button_styles` - [`ButtonStyles`](types-a-b.md#buttonstyles) | The styles for the PayPal Smart Button configuration |
 | `code` - [`String`](#string) | The payment method code as defined in the payment gateway |
-| `display_message` - [`Boolean`](#boolean) | Indicates whether to display the PayPal Pay Later message |
-| `display_venmo` - [`Boolean`](#boolean) | Indicates whether to display Venmo |
-| `is_visible` - [`Boolean`](#boolean) | Indicates whether the payment method is displayed |
-| `message_styles` - [`MessageStyles`](#messagestyles) | Contains details about the styles for the PayPal Pay Later message |
+| `display_message` - [`Boolean`](types-a-b.md#boolean) | Indicates whether to display the PayPal Pay Later message |
+| `display_venmo` - [`Boolean`](types-a-b.md#boolean) | Indicates whether to display Venmo |
+| `is_visible` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the payment method is displayed |
+| `message_styles` - [`MessageStyles`](types-k-p.md#messagestyles) | Contains details about the styles for the PayPal Pay Later message |
 | `payment_intent` - [`String`](#string) | Defines the payment intent (Authorize or Capture |
 | `sdk_params` - [`[SDKParams]`](#sdkparams) | The PayPal parameters required to load the JS SDK |
 | `sort_order` - [`String`](#string) | The relative order the payment method is displayed on the checkout page |
@@ -3162,15 +3156,15 @@ Smart button payment inputs
 ```json
 {
   "button_styles": ButtonStyles,
-  "code": "xyz789",
-  "display_message": true,
+  "code": "abc123",
+  "display_message": false,
   "display_venmo": false,
-  "is_visible": true,
+  "is_visible": false,
   "message_styles": MessageStyles,
   "payment_intent": "abc123",
   "sdk_params": [SDKParams],
-  "sort_order": "xyz789",
-  "title": "xyz789"
+  "sort_order": "abc123",
+  "title": "abc123"
 }
 ```
 
@@ -3211,7 +3205,7 @@ Defines a possible sort field.
 ```json
 {
   "label": "abc123",
-  "value": "xyz789"
+  "value": "abc123"
 }
 ```
 
@@ -3305,27 +3299,27 @@ Contains information about a store's configuration.
 | `allow_items` - [`String`](#string) | The value of the Allow Gift Messages for Order Items option |
 | `allow_order` - [`String`](#string) | The value of the Allow Gift Messages on Order Level option |
 | `allow_printed_card` - [`String`](#string) | Indicates if a printed card can accompany an order. Possible values: 1 (Yes) and 0 (No). |
-| `autocomplete_on_storefront` - [`Boolean`](#boolean) | Indicates whether to enable autocomplete on login and forgot password forms. |
+| `autocomplete_on_storefront` - [`Boolean`](types-a-b.md#boolean) | Indicates whether to enable autocomplete on login and forgot password forms. |
 | `base_currency_code` - [`String`](#string) | The base currency code. |
 | `base_link_url` - [`String`](#string) | A fully-qualified URL that is used to create relative links to the `base_url`. |
 | `base_media_url` - [`String`](#string) | The fully-qualified URL that specifies the location of media files. |
 | `base_static_url` - [`String`](#string) | The fully-qualified URL that specifies the location of static view files. |
 | `base_url` - [`String`](#string) | The store’s fully-qualified base URL. |
-| `braintree_3dsecure_allowspecific` - [`Boolean`](#boolean) | Braintree 3D Secure, should 3D Secure be used for specific countries. |
-| `braintree_3dsecure_always_request_3ds` - [`Boolean`](#boolean) | Braintree 3D Secure, always request 3D Secure flag. |
+| `braintree_3dsecure_allowspecific` - [`Boolean`](types-a-b.md#boolean) | Braintree 3D Secure, should 3D Secure be used for specific countries. |
+| `braintree_3dsecure_always_request_3ds` - [`Boolean`](types-a-b.md#boolean) | Braintree 3D Secure, always request 3D Secure flag. |
 | `braintree_3dsecure_specificcountry` - [`String`](#string) | Braintree 3D Secure, the specific countries to use 3D Secure in, to be used if allow specific is status is enabled. |
 | `braintree_3dsecure_threshold_amount` - [`String`](#string) | Braintree 3D Secure, threshold above which 3D Secure should be requested. |
-| `braintree_3dsecure_verify_3dsecure` - [`Boolean`](#boolean) | Braintree 3D Secure enabled/active status. |
-| `braintree_ach_direct_debit_vault_active` - [`Boolean`](#boolean) | Braintree ACH vault status. |
+| `braintree_3dsecure_verify_3dsecure` - [`Boolean`](types-a-b.md#boolean) | Braintree 3D Secure enabled/active status. |
+| `braintree_ach_direct_debit_vault_active` - [`Boolean`](types-a-b.md#boolean) | Braintree ACH vault status. |
 | `braintree_applepay_merchant_name` - [`String`](#string) | Braintree Apple Pay merchant name. |
-| `braintree_applepay_vault_active` - [`Boolean`](#boolean) | Braintree Apple Pay vault status. |
+| `braintree_applepay_vault_active` - [`Boolean`](types-a-b.md#boolean) | Braintree Apple Pay vault status. |
 | `braintree_cc_vault_active` - [`String`](#string) | Braintree cc vault status. |
-| `braintree_cc_vault_cvv` - [`Boolean`](#boolean) | Braintree cc vault CVV re-verification enabled status. |
+| `braintree_cc_vault_cvv` - [`Boolean`](types-a-b.md#boolean) | Braintree cc vault CVV re-verification enabled status. |
 | `braintree_environment` - [`String`](#string) | Braintree environment. |
 | `braintree_googlepay_btn_color` - [`String`](#string) | Braintree Google Pay button color. |
 | `braintree_googlepay_cctypes` - [`String`](#string) | Braintree Google Pay Card types supported. |
 | `braintree_googlepay_merchant_id` - [`String`](#string) | Braintree Google Pay merchant ID. |
-| `braintree_googlepay_vault_active` - [`Boolean`](#boolean) | Braintree Google Pay vault status. |
+| `braintree_googlepay_vault_active` - [`Boolean`](types-a-b.md#boolean) | Braintree Google Pay vault status. |
 | `braintree_local_payment_allowed_methods` - [`String`](#string) | Braintree Local Payment Methods allowed payment methods. |
 | `braintree_local_payment_fallback_button_text` - [`String`](#string) | Braintree Local Payment Methods fallback button text. |
 | `braintree_local_payment_redirect_on_fail` - [`String`](#string) | Braintree Local Payment Methods redirect URL on failed payment. |
@@ -3333,116 +3327,116 @@ Contains information about a store's configuration.
 | `braintree_paypal_button_location_cart_type_credit_color` - [`String`](#string) | Braintree PayPal Credit mini-cart & cart button style color. |
 | `braintree_paypal_button_location_cart_type_credit_label` - [`String`](#string) | Braintree PayPal Credit mini-cart & cart button style label. |
 | `braintree_paypal_button_location_cart_type_credit_shape` - [`String`](#string) | Braintree PayPal Credit mini-cart & cart button style shape. |
-| `braintree_paypal_button_location_cart_type_credit_show` - [`Boolean`](#boolean) | Braintree PayPal Credit mini-cart & cart button show status. |
+| `braintree_paypal_button_location_cart_type_credit_show` - [`Boolean`](types-a-b.md#boolean) | Braintree PayPal Credit mini-cart & cart button show status. |
 | `braintree_paypal_button_location_cart_type_messaging_layout` - [`String`](#string) | Braintree PayPal Pay Later messaging mini-cart & cart style layout. |
 | `braintree_paypal_button_location_cart_type_messaging_logo` - [`String`](#string) | Braintree PayPal Pay Later messaging mini-cart & cart style logo. |
 | `braintree_paypal_button_location_cart_type_messaging_logo_position` - [`String`](#string) | Braintree PayPal Pay Later messaging mini-cart & cart style logo position. |
-| `braintree_paypal_button_location_cart_type_messaging_show` - [`Boolean`](#boolean) | Braintree PayPal Pay Later messaging mini-cart & cart show status. |
+| `braintree_paypal_button_location_cart_type_messaging_show` - [`Boolean`](types-a-b.md#boolean) | Braintree PayPal Pay Later messaging mini-cart & cart show status. |
 | `braintree_paypal_button_location_cart_type_messaging_text_color` - [`String`](#string) | Braintree PayPal Pay Later messaging checkout style text color. |
 | `braintree_paypal_button_location_cart_type_paylater_color` - [`String`](#string) | Braintree PayPal Pay Later mini-cart & cart button style color. |
 | `braintree_paypal_button_location_cart_type_paylater_label` - [`String`](#string) | Braintree PayPal Pay Later mini-cart & cart button style label. |
 | `braintree_paypal_button_location_cart_type_paylater_shape` - [`String`](#string) | Braintree PayPal Pay Later mini-cart & cart button style shape. |
-| `braintree_paypal_button_location_cart_type_paylater_show` - [`Boolean`](#boolean) | Braintree PayPal Pay Later mini-cart & cart button show status. |
+| `braintree_paypal_button_location_cart_type_paylater_show` - [`Boolean`](types-a-b.md#boolean) | Braintree PayPal Pay Later mini-cart & cart button show status. |
 | `braintree_paypal_button_location_cart_type_paypal_color` - [`String`](#string) | Braintree PayPal mini-cart & cart button style color. |
 | `braintree_paypal_button_location_cart_type_paypal_label` - [`String`](#string) | Braintree PayPal mini-cart & cart button style label. |
 | `braintree_paypal_button_location_cart_type_paypal_shape` - [`String`](#string) | Braintree PayPal mini-cart & cart button style shape. |
-| `braintree_paypal_button_location_cart_type_paypal_show` - [`Boolean`](#boolean) | Braintree PayPal mini-cart & cart button show. |
+| `braintree_paypal_button_location_cart_type_paypal_show` - [`Boolean`](types-a-b.md#boolean) | Braintree PayPal mini-cart & cart button show. |
 | `braintree_paypal_button_location_checkout_type_credit_color` - [`String`](#string) | Braintree PayPal Credit checkout button style color. |
 | `braintree_paypal_button_location_checkout_type_credit_label` - [`String`](#string) | Braintree PayPal Credit checkout button style label. |
 | `braintree_paypal_button_location_checkout_type_credit_shape` - [`String`](#string) | Braintree PayPal Credit checkout button style shape. |
-| `braintree_paypal_button_location_checkout_type_credit_show` - [`Boolean`](#boolean) | Braintree PayPal Credit checkout button show status. |
+| `braintree_paypal_button_location_checkout_type_credit_show` - [`Boolean`](types-a-b.md#boolean) | Braintree PayPal Credit checkout button show status. |
 | `braintree_paypal_button_location_checkout_type_messaging_layout` - [`String`](#string) | Braintree PayPal Pay Later messaging checkout style layout. |
 | `braintree_paypal_button_location_checkout_type_messaging_logo` - [`String`](#string) | Braintree PayPal Pay Later messaging checkout style logo. |
 | `braintree_paypal_button_location_checkout_type_messaging_logo_position` - [`String`](#string) | Braintree PayPal Pay Later messaging checkout style logo position. |
-| `braintree_paypal_button_location_checkout_type_messaging_show` - [`Boolean`](#boolean) | Braintree PayPal Pay Later messaging checkout show status. |
+| `braintree_paypal_button_location_checkout_type_messaging_show` - [`Boolean`](types-a-b.md#boolean) | Braintree PayPal Pay Later messaging checkout show status. |
 | `braintree_paypal_button_location_checkout_type_messaging_text_color` - [`String`](#string) | Braintree PayPal Pay Later messaging checkout style text color. |
 | `braintree_paypal_button_location_checkout_type_paylater_color` - [`String`](#string) | Braintree PayPal Pay Later checkout button style color. |
 | `braintree_paypal_button_location_checkout_type_paylater_label` - [`String`](#string) | Braintree PayPal Pay Later checkout button style label. |
 | `braintree_paypal_button_location_checkout_type_paylater_shape` - [`String`](#string) | Braintree PayPal Pay Later checkout button style shape. |
-| `braintree_paypal_button_location_checkout_type_paylater_show` - [`Boolean`](#boolean) | Braintree PayPal Pay Later checkout button show status. |
+| `braintree_paypal_button_location_checkout_type_paylater_show` - [`Boolean`](types-a-b.md#boolean) | Braintree PayPal Pay Later checkout button show status. |
 | `braintree_paypal_button_location_checkout_type_paypal_color` - [`String`](#string) | Braintree PayPal checkout button style color. |
 | `braintree_paypal_button_location_checkout_type_paypal_label` - [`String`](#string) | Braintree PayPal checkout button style label. |
 | `braintree_paypal_button_location_checkout_type_paypal_shape` - [`String`](#string) | Braintree PayPal checkout button style shape. |
-| `braintree_paypal_button_location_checkout_type_paypal_show` - [`Boolean`](#boolean) | Braintree PayPal checkout button show. |
+| `braintree_paypal_button_location_checkout_type_paypal_show` - [`Boolean`](types-a-b.md#boolean) | Braintree PayPal checkout button show. |
 | `braintree_paypal_button_location_productpage_type_credit_color` - [`String`](#string) | Braintree PayPal Credit PDP button style color. |
 | `braintree_paypal_button_location_productpage_type_credit_label` - [`String`](#string) | Braintree PayPal Credit PDP button style label. |
 | `braintree_paypal_button_location_productpage_type_credit_shape` - [`String`](#string) | Braintree PayPal Credit PDP button style shape. |
-| `braintree_paypal_button_location_productpage_type_credit_show` - [`Boolean`](#boolean) | Braintree PayPal Credit PDP button show status. |
+| `braintree_paypal_button_location_productpage_type_credit_show` - [`Boolean`](types-a-b.md#boolean) | Braintree PayPal Credit PDP button show status. |
 | `braintree_paypal_button_location_productpage_type_messaging_layout` - [`String`](#string) | Braintree PayPal Pay Later messaging PDP style layout. |
 | `braintree_paypal_button_location_productpage_type_messaging_logo` - [`String`](#string) | Braintree PayPal Pay Later messaging PDP style logo. |
 | `braintree_paypal_button_location_productpage_type_messaging_logo_position` - [`String`](#string) | Braintree PayPal Pay Later messaging PDP style logo position. |
-| `braintree_paypal_button_location_productpage_type_messaging_show` - [`Boolean`](#boolean) | Braintree PayPal Pay Later messaging PDP show status. |
+| `braintree_paypal_button_location_productpage_type_messaging_show` - [`Boolean`](types-a-b.md#boolean) | Braintree PayPal Pay Later messaging PDP show status. |
 | `braintree_paypal_button_location_productpage_type_messaging_text_color` - [`String`](#string) | Braintree PayPal Pay Later messaging PDP style text color. |
 | `braintree_paypal_button_location_productpage_type_paylater_color` - [`String`](#string) | Braintree PayPal Pay Later PDP button style color. |
 | `braintree_paypal_button_location_productpage_type_paylater_label` - [`String`](#string) | Braintree PayPal Pay Later PDP button style label. |
 | `braintree_paypal_button_location_productpage_type_paylater_shape` - [`String`](#string) | Braintree PayPal Pay Later PDP button style shape. |
-| `braintree_paypal_button_location_productpage_type_paylater_show` - [`Boolean`](#boolean) | Braintree PayPal Pay Later PDP button show status. |
+| `braintree_paypal_button_location_productpage_type_paylater_show` - [`Boolean`](types-a-b.md#boolean) | Braintree PayPal Pay Later PDP button show status. |
 | `braintree_paypal_button_location_productpage_type_paypal_color` - [`String`](#string) | Braintree PayPal PDP button style color. |
 | `braintree_paypal_button_location_productpage_type_paypal_label` - [`String`](#string) | Braintree PayPal PDP button style label. |
 | `braintree_paypal_button_location_productpage_type_paypal_shape` - [`String`](#string) | Braintree PayPal PDP button style shape. |
-| `braintree_paypal_button_location_productpage_type_paypal_show` - [`Boolean`](#boolean) | Braintree PayPal PDP button show. |
+| `braintree_paypal_button_location_productpage_type_paypal_show` - [`Boolean`](types-a-b.md#boolean) | Braintree PayPal PDP button show. |
 | `braintree_paypal_credit_uk_merchant_name` - [`String`](#string) | Braintree PayPal Credit Merchant Name on the FCA Register. |
-| `braintree_paypal_display_on_shopping_cart` - [`Boolean`](#boolean) | Should display Braintree PayPal in mini-cart & cart? |
+| `braintree_paypal_display_on_shopping_cart` - [`Boolean`](types-a-b.md#boolean) | Should display Braintree PayPal in mini-cart & cart? |
 | `braintree_paypal_merchant_country` - [`String`](#string) | Braintree PayPal merchant's country. |
 | `braintree_paypal_merchant_name_override` - [`String`](#string) | Braintree PayPal override for Merchant Name. |
-| `braintree_paypal_require_billing_address` - [`Boolean`](#boolean) | Does Braintree PayPal require the customer's billing address? |
-| `braintree_paypal_send_cart_line_items` - [`Boolean`](#boolean) | Does Braintree PayPal require the order line items? |
-| `braintree_paypal_vault_active` - [`Boolean`](#boolean) | Braintree PayPal vault status. |
-| `cart_expires_in_days` - [`Int`](#int) | Extended Config Data - checkout/cart/delete_quote_after |
+| `braintree_paypal_require_billing_address` - [`Boolean`](types-a-b.md#boolean) | Does Braintree PayPal require the customer's billing address? |
+| `braintree_paypal_send_cart_line_items` - [`Boolean`](types-a-b.md#boolean) | Does Braintree PayPal require the order line items? |
+| `braintree_paypal_vault_active` - [`Boolean`](types-a-b.md#boolean) | Braintree PayPal vault status. |
+| `cart_expires_in_days` - [`Int`](types-f-i.md#int) | Extended Config Data - checkout/cart/delete_quote_after |
 | `cart_gift_wrapping` - [`String`](#string) | Indicates if gift wrapping prices are displayed on the Shopping Cart page. Possible values: 1 (Yes) and 0 (No). |
 | `cart_printed_card` - [`String`](#string) | Indicates if printed card prices are displayed on the Shopping Cart page. Possible values: 1 (Yes) and 0 (No). |
-| `cart_summary_display_quantity` - [`Int`](#int) | Extended Config Data - checkout/cart_link/use_qty |
+| `cart_summary_display_quantity` - [`Int`](types-f-i.md#int) | Extended Config Data - checkout/cart_link/use_qty |
 | `catalog_default_sort_by` - [`String`](#string) | The default sort order of the search results list. |
-| `category_fixed_product_tax_display_setting` - [`FixedProductTaxDisplaySettings`](#fixedproducttaxdisplaysettings) | Corresponds to the 'Display Prices In Product Lists' field in the Admin. It indicates how FPT information is displayed on category pages. |
+| `category_fixed_product_tax_display_setting` - [`FixedProductTaxDisplaySettings`](types-f-i.md#fixedproducttaxdisplaysettings) | Corresponds to the 'Display Prices In Product Lists' field in the Admin. It indicates how FPT information is displayed on category pages. |
 | `category_url_suffix` - [`String`](#string) | The suffix applied to category pages, such as `.htm` or `.html`. |
-| `check_money_order_enable_for_specific_countries` - [`Boolean`](#boolean) | Indicates whether only specific countries can use this payment method. |
-| `check_money_order_enabled` - [`Boolean`](#boolean) | Indicates whether the Check/Money Order payment method is enabled. |
+| `check_money_order_enable_for_specific_countries` - [`Boolean`](types-a-b.md#boolean) | Indicates whether only specific countries can use this payment method. |
+| `check_money_order_enabled` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the Check/Money Order payment method is enabled. |
 | `check_money_order_make_check_payable_to` - [`String`](#string) | The name of the party to whom the check must be payable. |
 | `check_money_order_max_order_total` - [`String`](#string) | The maximum order amount required to qualify for the Check/Money Order payment method. |
 | `check_money_order_min_order_total` - [`String`](#string) | The minimum order amount required to qualify for the Check/Money Order payment method. |
 | `check_money_order_new_order_status` - [`String`](#string) | The status of new orders placed using the Check/Money Order payment method. |
 | `check_money_order_payment_from_specific_countries` - [`String`](#string) | A comma-separated list of specific countries allowed to use the Check/Money Order payment method. |
 | `check_money_order_send_check_to` - [`String`](#string) | The full street address or PO Box where the checks are mailed. |
-| `check_money_order_sort_order` - [`Int`](#int) | A number indicating the position of the Check/Money Order payment method in the list of available payment methods during checkout. |
+| `check_money_order_sort_order` - [`Int`](types-f-i.md#int) | A number indicating the position of the Check/Money Order payment method in the list of available payment methods during checkout. |
 | `check_money_order_title` - [`String`](#string) | The title of the Check/Money Order payment method displayed on the storefront. |
 | `cms_home_page` - [`String`](#string) | The name of the CMS page that identifies the home page for the store. |
 | `cms_no_cookies` - [`String`](#string) | A specific CMS page that displays when cookies are not enabled for the browser. |
 | `cms_no_route` - [`String`](#string) | A specific CMS page that displays when a 404 'Page Not Found' error occurs. |
 | `code` - [`String`](#string) | A code assigned to the store to identify it. *(Deprecated: Use `store_code` instead.)* |
 | `configurable_thumbnail_source` - [`String`](#string) | Indicates whether the `parent` or child (`itself`) thumbnail should be used in the cart for configurable products. |
-| `contact_enabled` - [`Boolean!`](#boolean) | Indicates whether the Contact Us form in enabled. |
+| `contact_enabled` - [`Boolean!`](types-a-b.md#boolean) | Indicates whether the Contact Us form in enabled. |
 | `copyright` - [`String`](#string) | The copyright statement that appears at the bottom of each page. |
 | `countries_with_required_region` - [`String`](#string) | Extended Config Data - general/region/state_required |
-| `create_account_confirmation` - [`Boolean`](#boolean) | Indicates if the new accounts need confirmation. |
-| `customer_access_token_lifetime` - [`Float`](#float) | Customer access token lifetime. |
+| `create_account_confirmation` - [`Boolean`](types-a-b.md#boolean) | Indicates if the new accounts need confirmation. |
+| `customer_access_token_lifetime` - [`Float`](types-f-i.md#float) | Customer access token lifetime. |
 | `default_country` - [`String`](#string) | Extended Config Data - general/country/default |
 | `default_description` - [`String`](#string) | The description that provides a summary of your site for search engine listings. It should not be more than 160 characters in length. |
 | `default_display_currency_code` - [`String`](#string) | The default display currency code. |
 | `default_keywords` - [`String`](#string) | A series of keywords that describe your store, each separated by a comma. |
 | `default_title` - [`String`](#string) | The title that appears at the title bar of each page when viewed in a browser. |
-| `demonotice` - [`Int`](#int) | Controls the display of the demo store notice at the top of the page. Options: 0 (No) or 1 (Yes). |
-| `display_state_if_optional` - [`Boolean`](#boolean) | Extended Config Data - general/region/display_all |
+| `demonotice` - [`Int`](types-f-i.md#int) | Controls the display of the demo store notice at the top of the page. Options: 0 (No) or 1 (Yes). |
+| `display_state_if_optional` - [`Boolean`](types-a-b.md#boolean) | Extended Config Data - general/region/display_all |
 | `enable_multiple_wishlists` - [`String`](#string) | Indicates whether customers can have multiple wish lists. Possible values: 1 (Yes) and 0 (No). |
 | `front` - [`String`](#string) | The landing page that is associated with the base URL. |
-| `grid_per_page` - [`Int`](#int) | The default number of products per page in Grid View. |
+| `grid_per_page` - [`Int`](types-f-i.md#int) | The default number of products per page in Grid View. |
 | `grid_per_page_values` - [`String`](#string) | A list of numbers that define how many products can be displayed in Grid View. |
 | `head_includes` - [`String`](#string) | Scripts that must be included in the HTML before the closing `<head>` tag. |
 | `head_shortcut_icon` - [`String`](#string) | The small graphic image (favicon) that appears in the address bar and tab of the browser. |
 | `header_logo_src` - [`String`](#string) | The path to the logo that appears in the header. |
-| `id` - [`Int`](#int) | The ID number assigned to the store. *(Deprecated: Use `store_code` instead.)* |
-| `is_default_store` - [`Boolean`](#boolean) | Indicates whether the store view has been designated as the default within the store group. |
-| `is_default_store_group` - [`Boolean`](#boolean) | Indicates whether the store group has been designated as the default within the website. |
-| `is_guest_checkout_enabled` - [`Boolean`](#boolean) | Extended Config Data - checkout/options/guest_checkout |
-| `is_negotiable_quote_active` - [`Boolean`](#boolean) | Indicates whether negotiable quote functionality is enabled. |
-| `is_one_page_checkout_enabled` - [`Boolean`](#boolean) | Extended Config Data - checkout/options/onepage_checkout_enabled |
+| `id` - [`Int`](types-f-i.md#int) | The ID number assigned to the store. *(Deprecated: Use `store_code` instead.)* |
+| `is_default_store` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the store view has been designated as the default within the store group. |
+| `is_default_store_group` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the store group has been designated as the default within the website. |
+| `is_guest_checkout_enabled` - [`Boolean`](types-a-b.md#boolean) | Extended Config Data - checkout/options/guest_checkout |
+| `is_negotiable_quote_active` - [`Boolean`](types-a-b.md#boolean) | Indicates whether negotiable quote functionality is enabled. |
+| `is_one_page_checkout_enabled` - [`Boolean`](types-a-b.md#boolean) | Extended Config Data - checkout/options/onepage_checkout_enabled |
 | `is_requisition_list_active` - [`String`](#string) | Indicates whether requisition lists are enabled. Possible values: 1 (Yes) and 0 (No). |
 | `list_mode` - [`String`](#string) | The format of the search results list. |
-| `list_per_page` - [`Int`](#int) | The default number of products per page in List View. |
+| `list_per_page` - [`Int`](types-f-i.md#int) | The default number of products per page in List View. |
 | `list_per_page_values` - [`String`](#string) | A list of numbers that define how many products can be displayed in List View. |
 | `locale` - [`String`](#string) | The store locale. |
 | `logo_alt` - [`String`](#string) | The Alt text that is associated with the logo. |
-| `logo_height` - [`Int`](#int) | The height of the logo image, in pixels. |
-| `logo_width` - [`Int`](#int) | The width of the logo image, in pixels. |
+| `logo_height` - [`Int`](types-f-i.md#int) | The height of the logo image, in pixels. |
+| `logo_width` - [`Int`](types-f-i.md#int) | The width of the logo image, in pixels. |
 | `magento_reward_general_is_enabled` - [`String`](#string) | Indicates whether reward points functionality is enabled. Possible values: 1 (Enabled) and 0 (Disabled). |
 | `magento_reward_general_is_enabled_on_front` - [`String`](#string) | Indicates whether reward points functionality is enabled on the storefront. Possible values: 1 (Enabled) and 0 (Disabled). |
 | `magento_reward_general_min_points_balance` - [`String`](#string) | The minimum point balance customers must have before they can redeem them. A null value indicates no minimum. |
@@ -3457,27 +3451,27 @@ Contains information about a store's configuration.
 | `magento_reward_points_review` - [`String`](#string) | The number of points for writing a review. |
 | `magento_reward_points_review_limit` - [`String`](#string) | The maximum number of reviews that will qualify for the rewards. A null value indicates no limit. |
 | `magento_wishlist_general_is_enabled` - [`String`](#string) | Indicates whether wishlists are enabled (1) or disabled (0). |
-| `max_items_in_order_summary` - [`Int`](#int) | Extended Config Data - checkout/options/max_items_display_count |
+| `max_items_in_order_summary` - [`Int`](types-f-i.md#int) | Extended Config Data - checkout/options/max_items_display_count |
 | `maximum_number_of_wishlists` - [`String`](#string) | If multiple wish lists are enabled, the maximum number of wish lists the customer can have. |
-| `minicart_display` - [`Boolean`](#boolean) | Extended Config Data - checkout/sidebar/display |
-| `minicart_max_items` - [`Int`](#int) | Extended Config Data - checkout/sidebar/count |
+| `minicart_display` - [`Boolean`](types-a-b.md#boolean) | Extended Config Data - checkout/sidebar/display |
+| `minicart_max_items` - [`Int`](types-f-i.md#int) | Extended Config Data - checkout/sidebar/count |
 | `minimum_password_length` - [`String`](#string) | The minimum number of characters required for a valid password. |
-| `newsletter_enabled` - [`Boolean!`](#boolean) | Indicates whether newsletters are enabled. |
+| `newsletter_enabled` - [`Boolean!`](types-a-b.md#boolean) | Indicates whether newsletters are enabled. |
 | `no_route` - [`String`](#string) | The default page that displays when a 404 'Page not Found' error occurs. |
 | `optional_zip_countries` - [`String`](#string) | Extended Config Data - general/country/optional_zip_countries |
-| `order_cancellation_enabled` - [`Boolean!`](#boolean) | Indicates whether orders can be cancelled by customers or not. |
-| `order_cancellation_reasons` - [`[CancellationReason]!`](#cancellationreason) | An array containing available cancellation reasons. |
+| `order_cancellation_enabled` - [`Boolean!`](types-a-b.md#boolean) | Indicates whether orders can be cancelled by customers or not. |
+| `order_cancellation_reasons` - [`[CancellationReason]!`](types-c-e.md#cancellationreason) | An array containing available cancellation reasons. |
 | `payment_payflowpro_cc_vault_active` - [`String`](#string) | Payflow Pro vault status. |
 | `printed_card_price` - [`String`](#string) | The default price of a printed card that accompanies an order. |
-| `product_fixed_product_tax_display_setting` - [`FixedProductTaxDisplaySettings`](#fixedproducttaxdisplaysettings) | Corresponds to the 'Display Prices On Product View Page' field in the Admin. It indicates how FPT information is displayed on product pages. |
+| `product_fixed_product_tax_display_setting` - [`FixedProductTaxDisplaySettings`](types-f-i.md#fixedproducttaxdisplaysettings) | Corresponds to the 'Display Prices On Product View Page' field in the Admin. It indicates how FPT information is displayed on product pages. |
 | `product_reviews_enabled` - [`String`](#string) | Indicates whether product reviews are enabled. Possible values: 1 (Yes) and 0 (No). |
 | `product_url_suffix` - [`String`](#string) | The suffix applied to product pages, such as `.htm` or `.html`. |
-| `quickorder_active` - [`Boolean!`](#boolean) | Indicates whether quick order functionality is enabled. |
+| `quickorder_active` - [`Boolean!`](types-a-b.md#boolean) | Indicates whether quick order functionality is enabled. |
 | `required_character_classes_number` - [`String`](#string) | The number of different character classes (lowercase, uppercase, digits, special characters) required in a password. |
 | `returns_enabled` - [`String!`](#string) | Indicates whether RMA is enabled on the storefront. Possible values: enabled/disabled. |
-| `root_category_id` - [`Int`](#int) | The ID of the root category. *(Deprecated: Use `root_category_uid` instead.)* |
-| `root_category_uid` - [`ID`](#id) | The unique ID for a `CategoryInterface` object. |
-| `sales_fixed_product_tax_display_setting` - [`FixedProductTaxDisplaySettings`](#fixedproducttaxdisplaysettings) | Corresponds to the 'Display Prices In Sales Modules' field in the Admin. It indicates how FPT information is displayed on cart, checkout, and order pages. |
+| `root_category_id` - [`Int`](types-f-i.md#int) | The ID of the root category. *(Deprecated: Use `root_category_uid` instead.)* |
+| `root_category_uid` - [`ID`](types-f-i.md#id) | The unique ID for a `CategoryInterface` object. |
+| `sales_fixed_product_tax_display_setting` - [`FixedProductTaxDisplaySettings`](types-f-i.md#fixedproducttaxdisplaysettings) | Corresponds to the 'Display Prices In Sales Modules' field in the Admin. It indicates how FPT information is displayed on cart, checkout, and order pages. |
 | `sales_gift_wrapping` - [`String`](#string) | Indicates if gift wrapping prices are displayed on the Orders page. Possible values: 1 (Yes) and 0 (No). |
 | `sales_printed_card` - [`String`](#string) | Indicates if printed card prices are displayed on the Orders page. Possible values: 1 (Yes) and 0 (No). |
 | `secure_base_link_url` - [`String`](#string) | A secure fully-qualified URL that is used to create relative links to the `base_url`. |
@@ -3485,35 +3479,35 @@ Contains information about a store's configuration.
 | `secure_base_static_url` - [`String`](#string) | The secure fully-qualified URL that specifies the location of static view files. |
 | `secure_base_url` - [`String`](#string) | The store’s fully-qualified secure base URL. |
 | `send_friend` - [`SendFriendConfiguration`](#sendfriendconfiguration) | Email to a Friend configuration. |
-| `shopping_cart_display_full_summary` - [`Boolean`](#boolean) | Extended Config Data - tax/cart_display/full_summary |
-| `shopping_cart_display_grand_total` - [`Boolean`](#boolean) | Extended Config Data - tax/cart_display/grandtotal |
-| `shopping_cart_display_price` - [`Int`](#int) | Extended Config Data - tax/cart_display/price |
-| `shopping_cart_display_shipping` - [`Int`](#int) | Extended Config Data - tax/cart_display/shipping |
-| `shopping_cart_display_subtotal` - [`Int`](#int) | Extended Config Data - tax/cart_display/subtotal |
-| `shopping_cart_display_tax_gift_wrapping` - [`TaxWrappingEnum`](#taxwrappingenum) | Extended Config Data - tax/cart_display/gift_wrapping |
-| `shopping_cart_display_zero_tax` - [`Boolean`](#boolean) | Extended Config Data - tax/cart_display/zero_tax |
-| `show_cms_breadcrumbs` - [`Int`](#int) | Indicates whether a breadcrumb trail appears on all CMS pages in the catalog. 0 (No) or 1 (Yes). |
-| `store_code` - [`ID`](#id) | The unique ID of the store view. In the Admin, this is called the Store View Code. When making a GraphQL call, assign this value to the `Store` header to provide the scope. |
-| `store_group_code` - [`ID`](#id) | The unique ID assigned to the store group. In the Admin, this is called the Store Name. |
+| `shopping_cart_display_full_summary` - [`Boolean`](types-a-b.md#boolean) | Extended Config Data - tax/cart_display/full_summary |
+| `shopping_cart_display_grand_total` - [`Boolean`](types-a-b.md#boolean) | Extended Config Data - tax/cart_display/grandtotal |
+| `shopping_cart_display_price` - [`Int`](types-f-i.md#int) | Extended Config Data - tax/cart_display/price |
+| `shopping_cart_display_shipping` - [`Int`](types-f-i.md#int) | Extended Config Data - tax/cart_display/shipping |
+| `shopping_cart_display_subtotal` - [`Int`](types-f-i.md#int) | Extended Config Data - tax/cart_display/subtotal |
+| `shopping_cart_display_tax_gift_wrapping` - [`TaxWrappingEnum`](types-t-z.md#taxwrappingenum) | Extended Config Data - tax/cart_display/gift_wrapping |
+| `shopping_cart_display_zero_tax` - [`Boolean`](types-a-b.md#boolean) | Extended Config Data - tax/cart_display/zero_tax |
+| `show_cms_breadcrumbs` - [`Int`](types-f-i.md#int) | Indicates whether a breadcrumb trail appears on all CMS pages in the catalog. 0 (No) or 1 (Yes). |
+| `store_code` - [`ID`](types-f-i.md#id) | The unique ID of the store view. In the Admin, this is called the Store View Code. When making a GraphQL call, assign this value to the `Store` header to provide the scope. |
+| `store_group_code` - [`ID`](types-f-i.md#id) | The unique ID assigned to the store group. In the Admin, this is called the Store Name. |
 | `store_group_name` - [`String`](#string) | The label assigned to the store group. |
 | `store_name` - [`String`](#string) | The label assigned to the store view. |
-| `store_sort_order` - [`Int`](#int) | The store view sort order. |
+| `store_sort_order` - [`Int`](types-f-i.md#int) | The store view sort order. |
 | `timezone` - [`String`](#string) | The time zone of the store. |
 | `title_prefix` - [`String`](#string) | A prefix that appears before the title to create a two- or three-part title. |
 | `title_separator` - [`String`](#string) | The character that separates the category name and subcategory in the browser title bar. |
 | `title_suffix` - [`String`](#string) | A suffix that appears after the title to create a two- or three-part title. |
-| `use_store_in_url` - [`Boolean`](#boolean) | Indicates whether the store code should be used in the URL. |
-| `website_code` - [`ID`](#id) | The unique ID for the website. |
-| `website_id` - [`Int`](#int) | The ID number assigned to the website store. *(Deprecated: The field should not be used on the storefront.)* |
+| `use_store_in_url` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the store code should be used in the URL. |
+| `website_code` - [`ID`](types-f-i.md#id) | The unique ID for the website. |
+| `website_id` - [`Int`](types-f-i.md#int) | The ID number assigned to the website store. *(Deprecated: The field should not be used on the storefront.)* |
 | `website_name` - [`String`](#string) | The label assigned to the website. |
 | `weight_unit` - [`String`](#string) | The unit of weight. |
 | `welcome` - [`String`](#string) | Text that appears in the header of the page and includes the name of the logged in customer. |
-| `zero_subtotal_enable_for_specific_countries` - [`Boolean`](#boolean) | Indicates whether only specific countries can use this payment method. |
-| `zero_subtotal_enabled` - [`Boolean`](#boolean) | Indicates whether the Zero Subtotal payment method is enabled. |
+| `zero_subtotal_enable_for_specific_countries` - [`Boolean`](types-a-b.md#boolean) | Indicates whether only specific countries can use this payment method. |
+| `zero_subtotal_enabled` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the Zero Subtotal payment method is enabled. |
 | `zero_subtotal_new_order_status` - [`String`](#string) | The status of new orders placed using the Zero Subtotal payment method. |
 | `zero_subtotal_payment_action` - [`String`](#string) | When the new order status is 'Processing', this can be set to `authorize_capture` to automatically invoice all items that have a zero balance. |
 | `zero_subtotal_payment_from_specific_countries` - [`String`](#string) | A comma-separated list of specific countries allowed to use the Zero Subtotal payment method. |
-| `zero_subtotal_sort_order` - [`Int`](#int) | A number indicating the position of the Zero Subtotal payment method in the list of available payment methods during checkout. |
+| `zero_subtotal_sort_order` - [`Int`](types-f-i.md#int) | A number indicating the position of the Zero Subtotal payment method in the list of available payment methods during checkout. |
 | `zero_subtotal_title` - [`String`](#string) | The title of the Zero Subtotal payment method displayed on the storefront. |
 
 #### Example
@@ -3526,125 +3520,125 @@ Contains information about a store's configuration.
   "allow_gift_wrapping_on_order_items": "xyz789",
   "allow_guests_to_write_product_reviews": "xyz789",
   "allow_items": "xyz789",
-  "allow_order": "abc123",
-  "allow_printed_card": "xyz789",
-  "autocomplete_on_storefront": true,
-  "base_currency_code": "xyz789",
-  "base_link_url": "abc123",
-  "base_media_url": "abc123",
+  "allow_order": "xyz789",
+  "allow_printed_card": "abc123",
+  "autocomplete_on_storefront": false,
+  "base_currency_code": "abc123",
+  "base_link_url": "xyz789",
+  "base_media_url": "xyz789",
   "base_static_url": "abc123",
-  "base_url": "abc123",
+  "base_url": "xyz789",
   "braintree_3dsecure_allowspecific": false,
   "braintree_3dsecure_always_request_3ds": true,
   "braintree_3dsecure_specificcountry": "xyz789",
   "braintree_3dsecure_threshold_amount": "abc123",
-  "braintree_3dsecure_verify_3dsecure": false,
-  "braintree_ach_direct_debit_vault_active": false,
+  "braintree_3dsecure_verify_3dsecure": true,
+  "braintree_ach_direct_debit_vault_active": true,
   "braintree_applepay_merchant_name": "abc123",
-  "braintree_applepay_vault_active": false,
-  "braintree_cc_vault_active": "xyz789",
-  "braintree_cc_vault_cvv": true,
-  "braintree_environment": "abc123",
-  "braintree_googlepay_btn_color": "xyz789",
-  "braintree_googlepay_cctypes": "xyz789",
-  "braintree_googlepay_merchant_id": "abc123",
+  "braintree_applepay_vault_active": true,
+  "braintree_cc_vault_active": "abc123",
+  "braintree_cc_vault_cvv": false,
+  "braintree_environment": "xyz789",
+  "braintree_googlepay_btn_color": "abc123",
+  "braintree_googlepay_cctypes": "abc123",
+  "braintree_googlepay_merchant_id": "xyz789",
   "braintree_googlepay_vault_active": false,
-  "braintree_local_payment_allowed_methods": "xyz789",
+  "braintree_local_payment_allowed_methods": "abc123",
   "braintree_local_payment_fallback_button_text": "abc123",
-  "braintree_local_payment_redirect_on_fail": "xyz789",
-  "braintree_merchant_account_id": "abc123",
-  "braintree_paypal_button_location_cart_type_credit_color": "xyz789",
-  "braintree_paypal_button_location_cart_type_credit_label": "abc123",
+  "braintree_local_payment_redirect_on_fail": "abc123",
+  "braintree_merchant_account_id": "xyz789",
+  "braintree_paypal_button_location_cart_type_credit_color": "abc123",
+  "braintree_paypal_button_location_cart_type_credit_label": "xyz789",
   "braintree_paypal_button_location_cart_type_credit_shape": "abc123",
-  "braintree_paypal_button_location_cart_type_credit_show": false,
+  "braintree_paypal_button_location_cart_type_credit_show": true,
   "braintree_paypal_button_location_cart_type_messaging_layout": "xyz789",
-  "braintree_paypal_button_location_cart_type_messaging_logo": "xyz789",
-  "braintree_paypal_button_location_cart_type_messaging_logo_position": "abc123",
-  "braintree_paypal_button_location_cart_type_messaging_show": false,
-  "braintree_paypal_button_location_cart_type_messaging_text_color": "abc123",
+  "braintree_paypal_button_location_cart_type_messaging_logo": "abc123",
+  "braintree_paypal_button_location_cart_type_messaging_logo_position": "xyz789",
+  "braintree_paypal_button_location_cart_type_messaging_show": true,
+  "braintree_paypal_button_location_cart_type_messaging_text_color": "xyz789",
   "braintree_paypal_button_location_cart_type_paylater_color": "abc123",
   "braintree_paypal_button_location_cart_type_paylater_label": "xyz789",
   "braintree_paypal_button_location_cart_type_paylater_shape": "abc123",
-  "braintree_paypal_button_location_cart_type_paylater_show": false,
+  "braintree_paypal_button_location_cart_type_paylater_show": true,
   "braintree_paypal_button_location_cart_type_paypal_color": "abc123",
-  "braintree_paypal_button_location_cart_type_paypal_label": "xyz789",
+  "braintree_paypal_button_location_cart_type_paypal_label": "abc123",
   "braintree_paypal_button_location_cart_type_paypal_shape": "abc123",
-  "braintree_paypal_button_location_cart_type_paypal_show": false,
+  "braintree_paypal_button_location_cart_type_paypal_show": true,
   "braintree_paypal_button_location_checkout_type_credit_color": "abc123",
-  "braintree_paypal_button_location_checkout_type_credit_label": "abc123",
+  "braintree_paypal_button_location_checkout_type_credit_label": "xyz789",
   "braintree_paypal_button_location_checkout_type_credit_shape": "xyz789",
-  "braintree_paypal_button_location_checkout_type_credit_show": false,
+  "braintree_paypal_button_location_checkout_type_credit_show": true,
   "braintree_paypal_button_location_checkout_type_messaging_layout": "abc123",
-  "braintree_paypal_button_location_checkout_type_messaging_logo": "abc123",
-  "braintree_paypal_button_location_checkout_type_messaging_logo_position": "xyz789",
+  "braintree_paypal_button_location_checkout_type_messaging_logo": "xyz789",
+  "braintree_paypal_button_location_checkout_type_messaging_logo_position": "abc123",
   "braintree_paypal_button_location_checkout_type_messaging_show": false,
   "braintree_paypal_button_location_checkout_type_messaging_text_color": "abc123",
-  "braintree_paypal_button_location_checkout_type_paylater_color": "xyz789",
+  "braintree_paypal_button_location_checkout_type_paylater_color": "abc123",
   "braintree_paypal_button_location_checkout_type_paylater_label": "xyz789",
-  "braintree_paypal_button_location_checkout_type_paylater_shape": "xyz789",
-  "braintree_paypal_button_location_checkout_type_paylater_show": false,
-  "braintree_paypal_button_location_checkout_type_paypal_color": "abc123",
+  "braintree_paypal_button_location_checkout_type_paylater_shape": "abc123",
+  "braintree_paypal_button_location_checkout_type_paylater_show": true,
+  "braintree_paypal_button_location_checkout_type_paypal_color": "xyz789",
   "braintree_paypal_button_location_checkout_type_paypal_label": "abc123",
   "braintree_paypal_button_location_checkout_type_paypal_shape": "abc123",
-  "braintree_paypal_button_location_checkout_type_paypal_show": false,
+  "braintree_paypal_button_location_checkout_type_paypal_show": true,
   "braintree_paypal_button_location_productpage_type_credit_color": "xyz789",
-  "braintree_paypal_button_location_productpage_type_credit_label": "xyz789",
+  "braintree_paypal_button_location_productpage_type_credit_label": "abc123",
   "braintree_paypal_button_location_productpage_type_credit_shape": "abc123",
   "braintree_paypal_button_location_productpage_type_credit_show": false,
-  "braintree_paypal_button_location_productpage_type_messaging_layout": "abc123",
+  "braintree_paypal_button_location_productpage_type_messaging_layout": "xyz789",
   "braintree_paypal_button_location_productpage_type_messaging_logo": "abc123",
   "braintree_paypal_button_location_productpage_type_messaging_logo_position": "abc123",
-  "braintree_paypal_button_location_productpage_type_messaging_show": true,
+  "braintree_paypal_button_location_productpage_type_messaging_show": false,
   "braintree_paypal_button_location_productpage_type_messaging_text_color": "xyz789",
   "braintree_paypal_button_location_productpage_type_paylater_color": "abc123",
-  "braintree_paypal_button_location_productpage_type_paylater_label": "abc123",
-  "braintree_paypal_button_location_productpage_type_paylater_shape": "abc123",
-  "braintree_paypal_button_location_productpage_type_paylater_show": false,
+  "braintree_paypal_button_location_productpage_type_paylater_label": "xyz789",
+  "braintree_paypal_button_location_productpage_type_paylater_shape": "xyz789",
+  "braintree_paypal_button_location_productpage_type_paylater_show": true,
   "braintree_paypal_button_location_productpage_type_paypal_color": "xyz789",
   "braintree_paypal_button_location_productpage_type_paypal_label": "xyz789",
-  "braintree_paypal_button_location_productpage_type_paypal_shape": "xyz789",
+  "braintree_paypal_button_location_productpage_type_paypal_shape": "abc123",
   "braintree_paypal_button_location_productpage_type_paypal_show": false,
-  "braintree_paypal_credit_uk_merchant_name": "abc123",
+  "braintree_paypal_credit_uk_merchant_name": "xyz789",
   "braintree_paypal_display_on_shopping_cart": false,
   "braintree_paypal_merchant_country": "xyz789",
   "braintree_paypal_merchant_name_override": "xyz789",
-  "braintree_paypal_require_billing_address": true,
-  "braintree_paypal_send_cart_line_items": true,
-  "braintree_paypal_vault_active": false,
-  "cart_expires_in_days": 987,
-  "cart_gift_wrapping": "xyz789",
-  "cart_printed_card": "xyz789",
-  "cart_summary_display_quantity": 123,
-  "catalog_default_sort_by": "xyz789",
+  "braintree_paypal_require_billing_address": false,
+  "braintree_paypal_send_cart_line_items": false,
+  "braintree_paypal_vault_active": true,
+  "cart_expires_in_days": 123,
+  "cart_gift_wrapping": "abc123",
+  "cart_printed_card": "abc123",
+  "cart_summary_display_quantity": 987,
+  "catalog_default_sort_by": "abc123",
   "category_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
-  "category_url_suffix": "abc123",
-  "check_money_order_enable_for_specific_countries": true,
-  "check_money_order_enabled": true,
-  "check_money_order_make_check_payable_to": "xyz789",
-  "check_money_order_max_order_total": "xyz789",
+  "category_url_suffix": "xyz789",
+  "check_money_order_enable_for_specific_countries": false,
+  "check_money_order_enabled": false,
+  "check_money_order_make_check_payable_to": "abc123",
+  "check_money_order_max_order_total": "abc123",
   "check_money_order_min_order_total": "abc123",
-  "check_money_order_new_order_status": "xyz789",
+  "check_money_order_new_order_status": "abc123",
   "check_money_order_payment_from_specific_countries": "abc123",
-  "check_money_order_send_check_to": "abc123",
+  "check_money_order_send_check_to": "xyz789",
   "check_money_order_sort_order": 123,
   "check_money_order_title": "xyz789",
-  "cms_home_page": "xyz789",
+  "cms_home_page": "abc123",
   "cms_no_cookies": "xyz789",
   "cms_no_route": "xyz789",
   "code": "abc123",
-  "configurable_thumbnail_source": "abc123",
+  "configurable_thumbnail_source": "xyz789",
   "contact_enabled": false,
   "copyright": "xyz789",
-  "countries_with_required_region": "xyz789",
+  "countries_with_required_region": "abc123",
   "create_account_confirmation": false,
   "customer_access_token_lifetime": 987.65,
-  "default_country": "xyz789",
-  "default_description": "abc123",
+  "default_country": "abc123",
+  "default_description": "xyz789",
   "default_display_currency_code": "xyz789",
-  "default_keywords": "xyz789",
-  "default_title": "abc123",
-  "demonotice": 987,
-  "display_state_if_optional": true,
+  "default_keywords": "abc123",
+  "default_title": "xyz789",
+  "demonotice": 123,
+  "display_state_if_optional": false,
   "enable_multiple_wishlists": "xyz789",
   "front": "abc123",
   "grid_per_page": 987,
@@ -3652,9 +3646,9 @@ Contains information about a store's configuration.
   "head_includes": "abc123",
   "head_shortcut_icon": "abc123",
   "header_logo_src": "xyz789",
-  "id": 987,
+  "id": 123,
   "is_default_store": true,
-  "is_default_store_group": false,
+  "is_default_store_group": true,
   "is_guest_checkout_enabled": false,
   "is_negotiable_quote_active": true,
   "is_one_page_checkout_enabled": true,
@@ -3662,82 +3656,82 @@ Contains information about a store's configuration.
   "list_mode": "xyz789",
   "list_per_page": 123,
   "list_per_page_values": "abc123",
-  "locale": "abc123",
-  "logo_alt": "xyz789",
-  "logo_height": 123,
+  "locale": "xyz789",
+  "logo_alt": "abc123",
+  "logo_height": 987,
   "logo_width": 987,
   "magento_reward_general_is_enabled": "abc123",
-  "magento_reward_general_is_enabled_on_front": "abc123",
+  "magento_reward_general_is_enabled_on_front": "xyz789",
   "magento_reward_general_min_points_balance": "abc123",
   "magento_reward_general_publish_history": "abc123",
-  "magento_reward_points_invitation_customer": "abc123",
-  "magento_reward_points_invitation_customer_limit": "abc123",
+  "magento_reward_points_invitation_customer": "xyz789",
+  "magento_reward_points_invitation_customer_limit": "xyz789",
   "magento_reward_points_invitation_order": "abc123",
-  "magento_reward_points_invitation_order_limit": "xyz789",
+  "magento_reward_points_invitation_order_limit": "abc123",
   "magento_reward_points_newsletter": "xyz789",
-  "magento_reward_points_order": "xyz789",
-  "magento_reward_points_register": "abc123",
+  "magento_reward_points_order": "abc123",
+  "magento_reward_points_register": "xyz789",
   "magento_reward_points_review": "abc123",
   "magento_reward_points_review_limit": "abc123",
-  "magento_wishlist_general_is_enabled": "abc123",
-  "max_items_in_order_summary": 987,
-  "maximum_number_of_wishlists": "xyz789",
+  "magento_wishlist_general_is_enabled": "xyz789",
+  "max_items_in_order_summary": 123,
+  "maximum_number_of_wishlists": "abc123",
   "minicart_display": true,
-  "minicart_max_items": 123,
-  "minimum_password_length": "xyz789",
+  "minicart_max_items": 987,
+  "minimum_password_length": "abc123",
   "newsletter_enabled": true,
-  "no_route": "abc123",
+  "no_route": "xyz789",
   "optional_zip_countries": "xyz789",
-  "order_cancellation_enabled": true,
+  "order_cancellation_enabled": false,
   "order_cancellation_reasons": [CancellationReason],
-  "payment_payflowpro_cc_vault_active": "xyz789",
-  "printed_card_price": "abc123",
+  "payment_payflowpro_cc_vault_active": "abc123",
+  "printed_card_price": "xyz789",
   "product_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
-  "product_reviews_enabled": "abc123",
-  "product_url_suffix": "abc123",
+  "product_reviews_enabled": "xyz789",
+  "product_url_suffix": "xyz789",
   "quickorder_active": true,
   "required_character_classes_number": "xyz789",
-  "returns_enabled": "abc123",
-  "root_category_id": 123,
+  "returns_enabled": "xyz789",
+  "root_category_id": 987,
   "root_category_uid": 4,
   "sales_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
   "sales_gift_wrapping": "abc123",
   "sales_printed_card": "xyz789",
-  "secure_base_link_url": "xyz789",
-  "secure_base_media_url": "abc123",
+  "secure_base_link_url": "abc123",
+  "secure_base_media_url": "xyz789",
   "secure_base_static_url": "xyz789",
-  "secure_base_url": "xyz789",
+  "secure_base_url": "abc123",
   "send_friend": SendFriendConfiguration,
   "shopping_cart_display_full_summary": false,
   "shopping_cart_display_grand_total": false,
   "shopping_cart_display_price": 987,
-  "shopping_cart_display_shipping": 987,
+  "shopping_cart_display_shipping": 123,
   "shopping_cart_display_subtotal": 987,
   "shopping_cart_display_tax_gift_wrapping": "DISPLAY_EXCLUDING_TAX",
   "shopping_cart_display_zero_tax": true,
   "show_cms_breadcrumbs": 123,
   "store_code": 4,
   "store_group_code": "4",
-  "store_group_name": "xyz789",
+  "store_group_name": "abc123",
   "store_name": "xyz789",
-  "store_sort_order": 987,
-  "timezone": "xyz789",
-  "title_prefix": "xyz789",
+  "store_sort_order": 123,
+  "timezone": "abc123",
+  "title_prefix": "abc123",
   "title_separator": "abc123",
-  "title_suffix": "xyz789",
+  "title_suffix": "abc123",
   "use_store_in_url": true,
-  "website_code": 4,
-  "website_id": 123,
+  "website_code": "4",
+  "website_id": 987,
   "website_name": "abc123",
   "weight_unit": "abc123",
-  "welcome": "abc123",
+  "welcome": "xyz789",
   "zero_subtotal_enable_for_specific_countries": true,
-  "zero_subtotal_enabled": false,
+  "zero_subtotal_enabled": true,
   "zero_subtotal_new_order_status": "xyz789",
-  "zero_subtotal_payment_action": "abc123",
-  "zero_subtotal_payment_from_specific_countries": "abc123",
+  "zero_subtotal_payment_action": "xyz789",
+  "zero_subtotal_payment_from_specific_countries": "xyz789",
   "zero_subtotal_sort_order": 987,
-  "zero_subtotal_title": "xyz789"
+  "zero_subtotal_title": "abc123"
 }
 ```
 
@@ -3751,11 +3745,11 @@ Indicates where an attribute can be displayed.
 
 | Field Name | Description |
 |------------|-------------|
-| `position` - [`Int`](#int) | The relative position of the attribute in the layered navigation block. |
-| `use_in_layered_navigation` - [`UseInLayeredNavigationOptions`](#useinlayerednavigationoptions) | Indicates whether the attribute is filterable with results, without results, or not at all. |
-| `use_in_product_listing` - [`Boolean`](#boolean) | Indicates whether the attribute is displayed in product listings. |
-| `use_in_search_results_layered_navigation` - [`Boolean`](#boolean) | Indicates whether the attribute can be used in layered navigation on search results pages. |
-| `visible_on_catalog_pages` - [`Boolean`](#boolean) | Indicates whether the attribute is displayed on product pages. |
+| `position` - [`Int`](types-f-i.md#int) | The relative position of the attribute in the layered navigation block. |
+| `use_in_layered_navigation` - [`UseInLayeredNavigationOptions`](types-t-z.md#useinlayerednavigationoptions) | Indicates whether the attribute is filterable with results, without results, or not at all. |
+| `use_in_product_listing` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the attribute is displayed in product listings. |
+| `use_in_search_results_layered_navigation` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the attribute can be used in layered navigation on search results pages. |
+| `visible_on_catalog_pages` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the attribute is displayed on product pages. |
 
 #### Example
 
@@ -3763,8 +3757,8 @@ Indicates where an attribute can be displayed.
 {
   "position": 987,
   "use_in_layered_navigation": "NO",
-  "use_in_product_listing": false,
-  "use_in_search_results_layered_navigation": false,
+  "use_in_product_listing": true,
+  "use_in_search_results_layered_navigation": true,
   "visible_on_catalog_pages": true
 }
 ```
@@ -3794,18 +3788,18 @@ Specifies the quote template properties to update.
 | Input Field | Description |
 |-------------|-------------|
 | `comment` - [`String`](#string) | A comment for the seller to review. |
-| `max_order_commitment` - [`Int`](#int) | Commitment for maximum orders |
-| `min_order_commitment` - [`Int`](#int) | Commitment for minimum orders |
+| `max_order_commitment` - [`Int`](types-f-i.md#int) | Commitment for maximum orders |
+| `min_order_commitment` - [`Int`](types-f-i.md#int) | Commitment for minimum orders |
 | `name` - [`String`](#string) | The title assigned to the negotiable quote template. |
-| `template_id` - [`ID!`](#id) | The unique ID of a `NegotiableQuoteTemplate` object. |
+| `template_id` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuoteTemplate` object. |
 
 #### Example
 
 ```json
 {
   "comment": "xyz789",
-  "max_order_commitment": 987,
-  "min_order_commitment": 123,
+  "max_order_commitment": 123,
+  "min_order_commitment": 987,
   "name": "xyz789",
   "template_id": "4"
 }
@@ -3867,7 +3861,7 @@ Describes the swatch type and a value.
 
 ```json
 {
-  "type": "xyz789",
+  "type": "abc123",
   "value": "xyz789"
 }
 ```
@@ -3886,9 +3880,9 @@ Describes the swatch type and a value.
 
 | SwatchDataInterface Types |
 |----------------|
-| [`ImageSwatchData`](#imageswatchdata) |
-| [`TextSwatchData`](#textswatchdata) |
-| [`ColorSwatchData`](#colorswatchdata) |
+| [`ImageSwatchData`](types-f-i.md#imageswatchdata) |
+| [`TextSwatchData`](types-t-z.md#textswatchdata) |
+| [`ColorSwatchData`](types-c-e.md#colorswatchdata) |
 
 #### Example
 
@@ -3939,7 +3933,7 @@ Swatch attribute metadata input types.
 
 | Field Name | Description |
 |------------|-------------|
-| `items_count` - [`Int`](#int) | The count of items per filter. *(Deprecated: Use `AggregationOption.count` instead.)* |
+| `items_count` - [`Int`](types-f-i.md#int) | The count of items per filter. *(Deprecated: Use `AggregationOption.count` instead.)* |
 | `label` - [`String`](#string) | The label for a filter. *(Deprecated: Use `AggregationOption.label` instead.)* |
 | `swatch_data` - [`SwatchData`](#swatchdata) | Data required to render a swatch filter item. |
 | `value_string` - [`String`](#string) | The value of a filter request variable to be used in query. *(Deprecated: Use `AggregationOption.value` instead.)* |
@@ -3995,7 +3989,7 @@ Synchronizes the payment order details
 ```json
 {
   "cartId": "xyz789",
-  "id": "abc123"
+  "id": "xyz789"
 }
 ```
 

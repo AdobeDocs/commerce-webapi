@@ -20,13 +20,13 @@ For header information, refer to [GraphQL headers](https://developer.adobe.com/c
 
 Retrieve EAV attributes associated to a frontend form. Use countries query provided by DirectoryGraphQl module to retrieve region_id and country_id attribute options.
 
-**Response:** [`AttributesFormOutput!`](#attributesformoutput)
+**Response:** [`AttributesFormOutput!`](types-a-b.md#attributesformoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `formCode` - [`String!`](#string) | Form code. |
+| `formCode` - [`String!`](types-q-s.md#string) | Form code. |
 
 #### Example
 
@@ -48,7 +48,7 @@ query attributesForm($formCode: String!) {
 ##### Variables
 
 ```json
-{"formCode": "xyz789"}
+{"formCode": "abc123"}
 ```
 
 ##### Response
@@ -70,14 +70,14 @@ query attributesForm($formCode: String!) {
 
 Returns a list of attributes metadata for a given entity type.
 
-**Response:** [`AttributesMetadataOutput`](#attributesmetadataoutput)
+**Response:** [`AttributesMetadataOutput`](types-a-b.md#attributesmetadataoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `entityType` - [`AttributeEntityTypeEnum!`](#attributeentitytypeenum) | Entity type. |
-| `filters` - [`AttributeFilterInput`](#attributefilterinput) | Identifies which filter inputs to search for and return. |
+| `entityType` - [`AttributeEntityTypeEnum!`](types-a-b.md#attributeentitytypeenum) | Entity type. |
+| `filters` - [`AttributeFilterInput`](types-a-b.md#attributefilterinput) | Identifies which filter inputs to search for and return. |
 
 #### Example
 
@@ -130,13 +130,13 @@ query attributesList(
 
 Get a list of available store views and their config information.
 
-**Response:** [`[StoreConfig]`](#storeconfig)
+**Response:** [`[StoreConfig]`](types-q-s.md#storeconfig)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `useCurrentGroup` - [`Boolean`](#boolean) | Filter store views by the current store group. |
+| `useCurrentGroup` - [`Boolean`](types-a-b.md#boolean) | Filter store views by the current store group. |
 
 #### Example
 
@@ -384,221 +384,221 @@ query availableStores($useCurrentGroup: Boolean) {
   "data": {
     "availableStores": [
       {
-        "absolute_footer": "abc123",
+        "absolute_footer": "xyz789",
         "allow_gift_receipt": "abc123",
-        "allow_gift_wrapping_on_order": "abc123",
+        "allow_gift_wrapping_on_order": "xyz789",
         "allow_gift_wrapping_on_order_items": "xyz789",
         "allow_guests_to_write_product_reviews": "xyz789",
         "allow_items": "xyz789",
         "allow_order": "xyz789",
         "allow_printed_card": "xyz789",
-        "autocomplete_on_storefront": true,
-        "base_currency_code": "abc123",
-        "base_link_url": "xyz789",
-        "base_media_url": "xyz789",
-        "base_static_url": "xyz789",
+        "autocomplete_on_storefront": false,
+        "base_currency_code": "xyz789",
+        "base_link_url": "abc123",
+        "base_media_url": "abc123",
+        "base_static_url": "abc123",
         "base_url": "abc123",
         "braintree_3dsecure_allowspecific": true,
         "braintree_3dsecure_always_request_3ds": true,
-        "braintree_3dsecure_specificcountry": "xyz789",
+        "braintree_3dsecure_specificcountry": "abc123",
         "braintree_3dsecure_threshold_amount": "abc123",
         "braintree_3dsecure_verify_3dsecure": true,
-        "braintree_ach_direct_debit_vault_active": false,
-        "braintree_applepay_merchant_name": "xyz789",
-        "braintree_applepay_vault_active": false,
+        "braintree_ach_direct_debit_vault_active": true,
+        "braintree_applepay_merchant_name": "abc123",
+        "braintree_applepay_vault_active": true,
         "braintree_cc_vault_active": "xyz789",
-        "braintree_cc_vault_cvv": true,
+        "braintree_cc_vault_cvv": false,
         "braintree_environment": "xyz789",
         "braintree_googlepay_btn_color": "xyz789",
-        "braintree_googlepay_cctypes": "abc123",
+        "braintree_googlepay_cctypes": "xyz789",
         "braintree_googlepay_merchant_id": "xyz789",
-        "braintree_googlepay_vault_active": true,
+        "braintree_googlepay_vault_active": false,
         "braintree_local_payment_allowed_methods": "abc123",
-        "braintree_local_payment_fallback_button_text": "abc123",
-        "braintree_local_payment_redirect_on_fail": "xyz789",
-        "braintree_merchant_account_id": "xyz789",
+        "braintree_local_payment_fallback_button_text": "xyz789",
+        "braintree_local_payment_redirect_on_fail": "abc123",
+        "braintree_merchant_account_id": "abc123",
         "braintree_paypal_button_location_cart_type_credit_color": "xyz789",
-        "braintree_paypal_button_location_cart_type_credit_label": "xyz789",
+        "braintree_paypal_button_location_cart_type_credit_label": "abc123",
         "braintree_paypal_button_location_cart_type_credit_shape": "xyz789",
-        "braintree_paypal_button_location_cart_type_credit_show": true,
+        "braintree_paypal_button_location_cart_type_credit_show": false,
         "braintree_paypal_button_location_cart_type_messaging_layout": "abc123",
-        "braintree_paypal_button_location_cart_type_messaging_logo": "xyz789",
+        "braintree_paypal_button_location_cart_type_messaging_logo": "abc123",
         "braintree_paypal_button_location_cart_type_messaging_logo_position": "abc123",
         "braintree_paypal_button_location_cart_type_messaging_show": true,
         "braintree_paypal_button_location_cart_type_messaging_text_color": "xyz789",
-        "braintree_paypal_button_location_cart_type_paylater_color": "abc123",
-        "braintree_paypal_button_location_cart_type_paylater_label": "abc123",
+        "braintree_paypal_button_location_cart_type_paylater_color": "xyz789",
+        "braintree_paypal_button_location_cart_type_paylater_label": "xyz789",
         "braintree_paypal_button_location_cart_type_paylater_shape": "xyz789",
-        "braintree_paypal_button_location_cart_type_paylater_show": false,
+        "braintree_paypal_button_location_cart_type_paylater_show": true,
         "braintree_paypal_button_location_cart_type_paypal_color": "xyz789",
         "braintree_paypal_button_location_cart_type_paypal_label": "abc123",
-        "braintree_paypal_button_location_cart_type_paypal_shape": "xyz789",
+        "braintree_paypal_button_location_cart_type_paypal_shape": "abc123",
         "braintree_paypal_button_location_cart_type_paypal_show": true,
-        "braintree_paypal_button_location_checkout_type_credit_color": "abc123",
-        "braintree_paypal_button_location_checkout_type_credit_label": "xyz789",
+        "braintree_paypal_button_location_checkout_type_credit_color": "xyz789",
+        "braintree_paypal_button_location_checkout_type_credit_label": "abc123",
         "braintree_paypal_button_location_checkout_type_credit_shape": "abc123",
-        "braintree_paypal_button_location_checkout_type_credit_show": false,
-        "braintree_paypal_button_location_checkout_type_messaging_layout": "abc123",
-        "braintree_paypal_button_location_checkout_type_messaging_logo": "abc123",
+        "braintree_paypal_button_location_checkout_type_credit_show": true,
+        "braintree_paypal_button_location_checkout_type_messaging_layout": "xyz789",
+        "braintree_paypal_button_location_checkout_type_messaging_logo": "xyz789",
         "braintree_paypal_button_location_checkout_type_messaging_logo_position": "abc123",
-        "braintree_paypal_button_location_checkout_type_messaging_show": false,
-        "braintree_paypal_button_location_checkout_type_messaging_text_color": "xyz789",
-        "braintree_paypal_button_location_checkout_type_paylater_color": "abc123",
+        "braintree_paypal_button_location_checkout_type_messaging_show": true,
+        "braintree_paypal_button_location_checkout_type_messaging_text_color": "abc123",
+        "braintree_paypal_button_location_checkout_type_paylater_color": "xyz789",
         "braintree_paypal_button_location_checkout_type_paylater_label": "abc123",
         "braintree_paypal_button_location_checkout_type_paylater_shape": "xyz789",
-        "braintree_paypal_button_location_checkout_type_paylater_show": true,
+        "braintree_paypal_button_location_checkout_type_paylater_show": false,
         "braintree_paypal_button_location_checkout_type_paypal_color": "xyz789",
-        "braintree_paypal_button_location_checkout_type_paypal_label": "abc123",
+        "braintree_paypal_button_location_checkout_type_paypal_label": "xyz789",
         "braintree_paypal_button_location_checkout_type_paypal_shape": "xyz789",
         "braintree_paypal_button_location_checkout_type_paypal_show": true,
-        "braintree_paypal_button_location_productpage_type_credit_color": "xyz789",
+        "braintree_paypal_button_location_productpage_type_credit_color": "abc123",
         "braintree_paypal_button_location_productpage_type_credit_label": "abc123",
         "braintree_paypal_button_location_productpage_type_credit_shape": "xyz789",
         "braintree_paypal_button_location_productpage_type_credit_show": true,
         "braintree_paypal_button_location_productpage_type_messaging_layout": "abc123",
         "braintree_paypal_button_location_productpage_type_messaging_logo": "abc123",
         "braintree_paypal_button_location_productpage_type_messaging_logo_position": "xyz789",
-        "braintree_paypal_button_location_productpage_type_messaging_show": true,
-        "braintree_paypal_button_location_productpage_type_messaging_text_color": "xyz789",
+        "braintree_paypal_button_location_productpage_type_messaging_show": false,
+        "braintree_paypal_button_location_productpage_type_messaging_text_color": "abc123",
         "braintree_paypal_button_location_productpage_type_paylater_color": "abc123",
-        "braintree_paypal_button_location_productpage_type_paylater_label": "abc123",
-        "braintree_paypal_button_location_productpage_type_paylater_shape": "xyz789",
+        "braintree_paypal_button_location_productpage_type_paylater_label": "xyz789",
+        "braintree_paypal_button_location_productpage_type_paylater_shape": "abc123",
         "braintree_paypal_button_location_productpage_type_paylater_show": false,
-        "braintree_paypal_button_location_productpage_type_paypal_color": "xyz789",
-        "braintree_paypal_button_location_productpage_type_paypal_label": "xyz789",
+        "braintree_paypal_button_location_productpage_type_paypal_color": "abc123",
+        "braintree_paypal_button_location_productpage_type_paypal_label": "abc123",
         "braintree_paypal_button_location_productpage_type_paypal_shape": "xyz789",
-        "braintree_paypal_button_location_productpage_type_paypal_show": true,
-        "braintree_paypal_credit_uk_merchant_name": "abc123",
+        "braintree_paypal_button_location_productpage_type_paypal_show": false,
+        "braintree_paypal_credit_uk_merchant_name": "xyz789",
         "braintree_paypal_display_on_shopping_cart": true,
-        "braintree_paypal_merchant_country": "xyz789",
+        "braintree_paypal_merchant_country": "abc123",
         "braintree_paypal_merchant_name_override": "abc123",
         "braintree_paypal_require_billing_address": true,
-        "braintree_paypal_send_cart_line_items": false,
+        "braintree_paypal_send_cart_line_items": true,
         "braintree_paypal_vault_active": false,
         "cart_expires_in_days": 123,
         "cart_gift_wrapping": "xyz789",
-        "cart_printed_card": "abc123",
+        "cart_printed_card": "xyz789",
         "cart_summary_display_quantity": 987,
         "catalog_default_sort_by": "abc123",
         "category_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
         "category_url_suffix": "xyz789",
         "check_money_order_enable_for_specific_countries": false,
         "check_money_order_enabled": false,
-        "check_money_order_make_check_payable_to": "xyz789",
-        "check_money_order_max_order_total": "abc123",
+        "check_money_order_make_check_payable_to": "abc123",
+        "check_money_order_max_order_total": "xyz789",
         "check_money_order_min_order_total": "abc123",
         "check_money_order_new_order_status": "xyz789",
         "check_money_order_payment_from_specific_countries": "abc123",
-        "check_money_order_send_check_to": "xyz789",
-        "check_money_order_sort_order": 987,
-        "check_money_order_title": "abc123",
-        "cms_home_page": "xyz789",
+        "check_money_order_send_check_to": "abc123",
+        "check_money_order_sort_order": 123,
+        "check_money_order_title": "xyz789",
+        "cms_home_page": "abc123",
         "cms_no_cookies": "xyz789",
         "cms_no_route": "abc123",
         "code": "abc123",
-        "configurable_thumbnail_source": "xyz789",
+        "configurable_thumbnail_source": "abc123",
         "contact_enabled": true,
-        "copyright": "xyz789",
+        "copyright": "abc123",
         "countries_with_required_region": "xyz789",
         "create_account_confirmation": false,
         "customer_access_token_lifetime": 987.65,
         "default_country": "xyz789",
-        "default_description": "abc123",
+        "default_description": "xyz789",
         "default_display_currency_code": "xyz789",
         "default_keywords": "xyz789",
         "default_title": "abc123",
         "demonotice": 123,
-        "display_state_if_optional": false,
-        "enable_multiple_wishlists": "xyz789",
+        "display_state_if_optional": true,
+        "enable_multiple_wishlists": "abc123",
         "front": "xyz789",
-        "grid_per_page": 123,
-        "grid_per_page_values": "abc123",
+        "grid_per_page": 987,
+        "grid_per_page_values": "xyz789",
         "head_includes": "xyz789",
-        "head_shortcut_icon": "xyz789",
+        "head_shortcut_icon": "abc123",
         "header_logo_src": "xyz789",
         "id": 123,
-        "is_default_store": false,
+        "is_default_store": true,
         "is_default_store_group": false,
-        "is_guest_checkout_enabled": true,
-        "is_negotiable_quote_active": true,
+        "is_guest_checkout_enabled": false,
+        "is_negotiable_quote_active": false,
         "is_one_page_checkout_enabled": true,
-        "is_requisition_list_active": "xyz789",
-        "list_mode": "xyz789",
+        "is_requisition_list_active": "abc123",
+        "list_mode": "abc123",
         "list_per_page": 123,
         "list_per_page_values": "xyz789",
-        "locale": "xyz789",
-        "logo_alt": "xyz789",
+        "locale": "abc123",
+        "logo_alt": "abc123",
         "logo_height": 123,
-        "logo_width": 123,
+        "logo_width": 987,
         "magento_reward_general_is_enabled": "abc123",
-        "magento_reward_general_is_enabled_on_front": "abc123",
+        "magento_reward_general_is_enabled_on_front": "xyz789",
         "magento_reward_general_min_points_balance": "abc123",
-        "magento_reward_general_publish_history": "xyz789",
-        "magento_reward_points_invitation_customer": "xyz789",
-        "magento_reward_points_invitation_customer_limit": "abc123",
-        "magento_reward_points_invitation_order": "abc123",
+        "magento_reward_general_publish_history": "abc123",
+        "magento_reward_points_invitation_customer": "abc123",
+        "magento_reward_points_invitation_customer_limit": "xyz789",
+        "magento_reward_points_invitation_order": "xyz789",
         "magento_reward_points_invitation_order_limit": "xyz789",
         "magento_reward_points_newsletter": "abc123",
-        "magento_reward_points_order": "xyz789",
-        "magento_reward_points_register": "abc123",
+        "magento_reward_points_order": "abc123",
+        "magento_reward_points_register": "xyz789",
         "magento_reward_points_review": "abc123",
         "magento_reward_points_review_limit": "xyz789",
-        "magento_wishlist_general_is_enabled": "xyz789",
+        "magento_wishlist_general_is_enabled": "abc123",
         "max_items_in_order_summary": 123,
         "maximum_number_of_wishlists": "xyz789",
-        "minicart_display": true,
+        "minicart_display": false,
         "minicart_max_items": 987,
-        "minimum_password_length": "abc123",
-        "newsletter_enabled": false,
+        "minimum_password_length": "xyz789",
+        "newsletter_enabled": true,
         "no_route": "abc123",
-        "optional_zip_countries": "xyz789",
+        "optional_zip_countries": "abc123",
         "order_cancellation_enabled": false,
         "order_cancellation_reasons": [
           CancellationReason
         ],
         "payment_payflowpro_cc_vault_active": "xyz789",
-        "printed_card_price": "abc123",
+        "printed_card_price": "xyz789",
         "product_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
         "product_reviews_enabled": "xyz789",
         "product_url_suffix": "xyz789",
         "quickorder_active": true,
-        "required_character_classes_number": "abc123",
+        "required_character_classes_number": "xyz789",
         "returns_enabled": "abc123",
         "root_category_id": 123,
-        "root_category_uid": "4",
+        "root_category_uid": 4,
         "sales_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
         "sales_gift_wrapping": "abc123",
-        "sales_printed_card": "xyz789",
-        "secure_base_link_url": "abc123",
+        "sales_printed_card": "abc123",
+        "secure_base_link_url": "xyz789",
         "secure_base_media_url": "abc123",
-        "secure_base_static_url": "abc123",
+        "secure_base_static_url": "xyz789",
         "secure_base_url": "xyz789",
         "send_friend": SendFriendConfiguration,
         "shopping_cart_display_full_summary": true,
         "shopping_cart_display_grand_total": true,
         "shopping_cart_display_price": 987,
-        "shopping_cart_display_shipping": 987,
+        "shopping_cart_display_shipping": 123,
         "shopping_cart_display_subtotal": 987,
         "shopping_cart_display_tax_gift_wrapping": "DISPLAY_EXCLUDING_TAX",
         "shopping_cart_display_zero_tax": false,
-        "show_cms_breadcrumbs": 123,
-        "store_code": "4",
+        "show_cms_breadcrumbs": 987,
+        "store_code": 4,
         "store_group_code": "4",
         "store_group_name": "abc123",
         "store_name": "abc123",
         "store_sort_order": 987,
         "timezone": "xyz789",
         "title_prefix": "abc123",
-        "title_separator": "xyz789",
+        "title_separator": "abc123",
         "title_suffix": "xyz789",
         "use_store_in_url": true,
-        "website_code": "4",
+        "website_code": 4,
         "website_id": 123,
         "website_name": "abc123",
-        "weight_unit": "xyz789",
+        "weight_unit": "abc123",
         "welcome": "xyz789",
         "zero_subtotal_enable_for_specific_countries": false,
-        "zero_subtotal_enabled": false,
+        "zero_subtotal_enabled": true,
         "zero_subtotal_new_order_status": "xyz789",
         "zero_subtotal_payment_action": "xyz789",
         "zero_subtotal_payment_from_specific_countries": "xyz789",
@@ -616,13 +616,13 @@ query availableStores($useCurrentGroup: Boolean) {
 
 Return information about the specified shopping cart.
 
-**Response:** [`Cart`](#cart)
+**Response:** [`Cart`](types-c-e.md#cart)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `cart_id` - [`String!`](#string) | The unique ID of the cart to query. |
+| `cart_id` - [`String!`](types-q-s.md#string) | The unique ID of the cart to query. |
 
 #### Example
 
@@ -708,16 +708,16 @@ query cart($cart_id: String!) {
         AvailablePaymentMethod
       ],
       "billing_address": BillingCartAddress,
-      "email": "abc123",
+      "email": "xyz789",
       "gift_message": GiftMessage,
       "gift_receipt_included": false,
       "gift_wrapping": GiftWrapping,
-      "id": "4",
-      "is_virtual": true,
+      "id": 4,
+      "is_virtual": false,
       "items": [CartItemInterface],
       "itemsV2": CartItems,
       "prices": CartPrices,
-      "printed_card_included": false,
+      "printed_card_included": true,
       "selected_payment_method": SelectedPaymentMethod,
       "shipping_addresses": [ShippingCartAddress],
       "total_quantity": 123.45
@@ -732,15 +732,15 @@ query cart($cart_id: String!) {
 
 Return a list of categories that match the specified filter.
 
-**Response:** [`CategoryResult`](#categoryresult)
+**Response:** [`CategoryResult`](types-c-e.md#categoryresult)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `filters` - [`CategoryFilterInput`](#categoryfilterinput) | Identifies which Category filter inputs to search for and return. |
-| `pageSize` - [`Int`](#int) | Specifies the maximum number of results to return at once. The default value is 20. Default: `20` |
-| `currentPage` - [`Int`](#int) | Specifies which page of results to return. The default value is 1. Default: `1` |
+| `filters` - [`CategoryFilterInput`](types-c-e.md#categoryfilterinput) | Identifies which Category filter inputs to search for and return. |
+| `pageSize` - [`Int`](types-f-i.md#int) | Specifies the maximum number of results to return at once. The default value is 20. Default: `20` |
+| `currentPage` - [`Int`](types-f-i.md#int) | Specifies which page of results to return. The default value is 1. Default: `1` |
 
 #### Example
 
@@ -802,13 +802,13 @@ Use `categories` instead.
 
 Search for categories that match the criteria specified in the `search` and `filter` attributes.
 
-**Response:** [`CategoryTree`](#categorytree)
+**Response:** [`CategoryTree`](types-c-e.md#categorytree)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `id` - [`Int`](#int) | The category ID to use as the root of the search. |
+| `id` - [`Int`](types-f-i.md#int) | The category ID to use as the root of the search. |
 
 #### Example
 
@@ -878,43 +878,43 @@ query category($id: Int) {
 {
   "data": {
     "category": {
-      "automatic_sorting": "xyz789",
+      "automatic_sorting": "abc123",
       "available_sort_by": ["abc123"],
       "breadcrumbs": [Breadcrumb],
       "canonical_url": "xyz789",
       "children": [CategoryTree],
-      "children_count": "abc123",
+      "children_count": "xyz789",
       "cms_block": CmsBlock,
       "created_at": "abc123",
-      "custom_layout_update_file": "xyz789",
-      "default_sort_by": "abc123",
-      "description": "abc123",
+      "custom_layout_update_file": "abc123",
+      "default_sort_by": "xyz789",
+      "description": "xyz789",
       "display_mode": "xyz789",
       "filter_price_range": 987.65,
-      "id": 123,
+      "id": 987,
       "image": "abc123",
       "include_in_menu": 987,
-      "is_anchor": 987,
-      "landing_page": 123,
-      "level": 987,
+      "is_anchor": 123,
+      "landing_page": 987,
+      "level": 123,
       "meta_description": "xyz789",
-      "meta_keywords": "xyz789",
+      "meta_keywords": "abc123",
       "meta_title": "xyz789",
-      "name": "xyz789",
+      "name": "abc123",
       "path": "xyz789",
-      "path_in_store": "abc123",
-      "position": 123,
+      "path_in_store": "xyz789",
+      "position": 987,
       "product_count": 123,
       "products": CategoryProducts,
       "redirect_code": 987,
       "relative_url": "xyz789",
-      "staged": false,
+      "staged": true,
       "type": "CMS_PAGE",
       "uid": 4,
       "updated_at": "xyz789",
       "url_key": "abc123",
-      "url_path": "xyz789",
-      "url_suffix": "xyz789"
+      "url_path": "abc123",
+      "url_suffix": "abc123"
     }
   }
 }
@@ -930,15 +930,15 @@ Use `categories` instead.
 
 Return an array of categories based on the specified filters.
 
-**Response:** [`[CategoryTree]`](#categorytree)
+**Response:** [`[CategoryTree]`](types-c-e.md#categorytree)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `filters` - [`CategoryFilterInput`](#categoryfilterinput) | Identifies which Category filter inputs to search for and return. |
-| `pageSize` - [`Int`](#int) | Specifies the maximum number of results to return at once. The default value is 20. Default: `20` |
-| `currentPage` - [`Int`](#int) | Specifies which page of results to return. The default value is 1. Default: `1` |
+| `filters` - [`CategoryFilterInput`](types-c-e.md#categoryfilterinput) | Identifies which Category filter inputs to search for and return. |
+| `pageSize` - [`Int`](types-f-i.md#int) | Specifies the maximum number of results to return at once. The default value is 20. Default: `20` |
+| `currentPage` - [`Int`](types-f-i.md#int) | Specifies which page of results to return. The default value is 1. Default: `1` |
 
 #### Example
 
@@ -1022,41 +1022,41 @@ query categoryList(
     "categoryList": [
       {
         "automatic_sorting": "xyz789",
-        "available_sort_by": ["xyz789"],
+        "available_sort_by": ["abc123"],
         "breadcrumbs": [Breadcrumb],
         "canonical_url": "xyz789",
         "children": [CategoryTree],
         "children_count": "xyz789",
         "cms_block": CmsBlock,
-        "created_at": "xyz789",
+        "created_at": "abc123",
         "custom_layout_update_file": "abc123",
-        "default_sort_by": "abc123",
+        "default_sort_by": "xyz789",
         "description": "abc123",
-        "display_mode": "abc123",
+        "display_mode": "xyz789",
         "filter_price_range": 123.45,
         "id": 987,
-        "image": "abc123",
+        "image": "xyz789",
         "include_in_menu": 123,
-        "is_anchor": 987,
-        "landing_page": 123,
+        "is_anchor": 123,
+        "landing_page": 987,
         "level": 987,
         "meta_description": "xyz789",
-        "meta_keywords": "xyz789",
+        "meta_keywords": "abc123",
         "meta_title": "abc123",
-        "name": "xyz789",
-        "path": "abc123",
-        "path_in_store": "xyz789",
+        "name": "abc123",
+        "path": "xyz789",
+        "path_in_store": "abc123",
         "position": 123,
-        "product_count": 987,
+        "product_count": 123,
         "products": CategoryProducts,
-        "redirect_code": 123,
-        "relative_url": "xyz789",
+        "redirect_code": 987,
+        "relative_url": "abc123",
         "staged": false,
         "type": "CMS_PAGE",
         "uid": "4",
         "updated_at": "abc123",
         "url_key": "abc123",
-        "url_path": "abc123",
+        "url_path": "xyz789",
         "url_suffix": "abc123"
       }
     ]
@@ -1070,7 +1070,7 @@ query categoryList(
 
 Return Terms and Conditions configuration information.
 
-**Response:** [`[CheckoutAgreement]`](#checkoutagreement)
+**Response:** [`[CheckoutAgreement]`](types-c-e.md#checkoutagreement)
 
 #### Example
 
@@ -1097,13 +1097,13 @@ query checkoutAgreements {
   "data": {
     "checkoutAgreements": [
       {
-        "agreement_id": 123,
-        "checkbox_text": "abc123",
-        "content": "xyz789",
-        "content_height": "xyz789",
-        "is_html": true,
+        "agreement_id": 987,
+        "checkbox_text": "xyz789",
+        "content": "abc123",
+        "content_height": "abc123",
+        "is_html": false,
         "mode": "AUTO",
-        "name": "abc123"
+        "name": "xyz789"
       }
     ]
   }
@@ -1116,13 +1116,13 @@ query checkoutAgreements {
 
 Return information about CMS blocks.
 
-**Response:** [`CmsBlocks`](#cmsblocks)
+**Response:** [`CmsBlocks`](types-c-e.md#cmsblocks)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `identifiers` - [`[String]`](#string) | An array of CMS block IDs. |
+| `identifiers` - [`[String]`](types-q-s.md#string) | An array of CMS block IDs. |
 
 #### Example
 
@@ -1141,7 +1141,7 @@ query cmsBlocks($identifiers: [String]) {
 ##### Variables
 
 ```json
-{"identifiers": ["xyz789"]}
+{"identifiers": ["abc123"]}
 ```
 
 ##### Response
@@ -1156,14 +1156,14 @@ query cmsBlocks($identifiers: [String]) {
 
 Return details about a CMS page.
 
-**Response:** [`CmsPage`](#cmspage)
+**Response:** [`CmsPage`](types-c-e.md#cmspage)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `id` - [`Int`](#int) | The ID of the CMS page. |
-| `identifier` - [`String`](#string) | The identifier of the CMS page. |
+| `id` - [`Int`](types-f-i.md#int) | The ID of the CMS page. |
+| `identifier` - [`String`](types-q-s.md#string) | The identifier of the CMS page. |
 
 #### Example
 
@@ -1197,7 +1197,7 @@ query cmsPage(
 ##### Variables
 
 ```json
-{"id": 987, "identifier": "xyz789"}
+{"id": 123, "identifier": "abc123"}
 ```
 
 ##### Response
@@ -1207,15 +1207,15 @@ query cmsPage(
   "data": {
     "cmsPage": {
       "content": "abc123",
-      "content_heading": "xyz789",
+      "content_heading": "abc123",
       "identifier": "abc123",
-      "meta_description": "abc123",
-      "meta_keywords": "abc123",
-      "meta_title": "xyz789",
+      "meta_description": "xyz789",
+      "meta_keywords": "xyz789",
+      "meta_title": "abc123",
       "page_layout": "abc123",
       "redirect_code": 123,
-      "relative_url": "abc123",
-      "title": "xyz789",
+      "relative_url": "xyz789",
+      "title": "abc123",
       "type": "CMS_PAGE",
       "url_key": "abc123"
     }
@@ -1229,7 +1229,7 @@ query cmsPage(
 
 Return detailed information about the customer's company within the current company context.
 
-**Response:** [`Company`](#company)
+**Response:** [`Company`](types-c-e.md#company)
 
 #### Example
 
@@ -1296,9 +1296,9 @@ query company {
       "credit": CompanyCredit,
       "credit_history": CompanyCreditHistory,
       "email": "xyz789",
-      "id": 4,
+      "id": "4",
       "legal_address": CompanyLegalAddress,
-      "legal_name": "abc123",
+      "legal_name": "xyz789",
       "name": "xyz789",
       "payment_methods": ["abc123"],
       "reseller_id": "xyz789",
@@ -1321,13 +1321,13 @@ query company {
 
 Return products that have been added to the specified compare list.
 
-**Response:** [`CompareList`](#comparelist)
+**Response:** [`CompareList`](types-c-e.md#comparelist)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `uid` - [`ID!`](#id) | The unique ID of the compare list to be queried. |
+| `uid` - [`ID!`](types-f-i.md#id) | The unique ID of the compare list to be queried. |
 
 #### Example
 
@@ -1361,9 +1361,9 @@ query compareList($uid: ID!) {
   "data": {
     "compareList": {
       "attributes": [ComparableAttribute],
-      "item_count": 123,
+      "item_count": 987,
       "items": [ComparableItem],
-      "uid": "4"
+      "uid": 4
     }
   }
 }
@@ -1375,7 +1375,7 @@ query compareList($uid: ID!) {
 
 The countries query provides information for all countries.
 
-**Response:** [`[Country]`](#country)
+**Response:** [`[Country]`](types-c-e.md#country)
 
 #### Example
 
@@ -1405,10 +1405,10 @@ query countries {
       {
         "available_regions": [Region],
         "full_name_english": "abc123",
-        "full_name_locale": "xyz789",
-        "id": "abc123",
+        "full_name_locale": "abc123",
+        "id": "xyz789",
         "three_letter_abbreviation": "abc123",
-        "two_letter_abbreviation": "abc123"
+        "two_letter_abbreviation": "xyz789"
       }
     ]
   }
@@ -1421,13 +1421,13 @@ query countries {
 
 The countries query provides information for a single country.
 
-**Response:** [`Country`](#country)
+**Response:** [`Country`](types-c-e.md#country)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `id` - [`String`](#string) |  |
+| `id` - [`String`](types-q-s.md#string) |  |
 
 #### Example
 
@@ -1463,9 +1463,9 @@ query country($id: String) {
       "available_regions": [Region],
       "full_name_english": "xyz789",
       "full_name_locale": "xyz789",
-      "id": "xyz789",
+      "id": "abc123",
       "three_letter_abbreviation": "xyz789",
-      "two_letter_abbreviation": "abc123"
+      "two_letter_abbreviation": "xyz789"
     }
   }
 }
@@ -1477,7 +1477,7 @@ query country($id: String) {
 
 Return information about the store's currency.
 
-**Response:** [`Currency`](#currency)
+**Response:** [`Currency`](types-c-e.md#currency)
 
 #### Example
 
@@ -1512,9 +1512,9 @@ query currency {
       "base_currency_code": "abc123",
       "base_currency_symbol": "xyz789",
       "default_display_currecy_code": "abc123",
-      "default_display_currecy_symbol": "xyz789",
-      "default_display_currency_code": "xyz789",
-      "default_display_currency_symbol": "xyz789",
+      "default_display_currecy_symbol": "abc123",
+      "default_display_currency_code": "abc123",
+      "default_display_currency_symbol": "abc123",
       "exchange_rates": [ExchangeRate]
     }
   }
@@ -1531,13 +1531,13 @@ Use `customAttributeMetadataV2` query instead.
 
 Return the attribute type, given an attribute code and entity type.
 
-**Response:** [`CustomAttributeMetadata`](#customattributemetadata)
+**Response:** [`CustomAttributeMetadata`](types-c-e.md#customattributemetadata)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `attributes` - [`[AttributeInput!]!`](#attributeinput) | An input object that specifies the attribute code and entity type to search. |
+| `attributes` - [`[AttributeInput!]!`](types-a-b.md#attributeinput) | An input object that specifies the attribute code and entity type to search. |
 
 #### Example
 
@@ -1575,13 +1575,13 @@ query customAttributeMetadata($attributes: [AttributeInput!]!) {
 
 Retrieve EAV attributes metadata.
 
-**Response:** [`AttributesMetadataOutput!`](#attributesmetadataoutput)
+**Response:** [`AttributesMetadataOutput!`](types-a-b.md#attributesmetadataoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `attributes` - [`[AttributeInput!]`](#attributeinput) |  |
+| `attributes` - [`[AttributeInput!]`](types-a-b.md#attributeinput) |  |
 
 #### Example
 
@@ -1625,7 +1625,7 @@ query customAttributeMetadataV2($attributes: [AttributeInput!]) {
 
 Return detailed information about a customer account.
 
-**Response:** [`Customer`](#customer)
+**Response:** [`Customer`](types-c-e.md#customer)
 
 #### Example
 
@@ -1737,35 +1737,35 @@ query customer {
   "data": {
     "customer": {
       "addresses": [CustomerAddress],
-      "allow_remote_shopping_assistance": false,
+      "allow_remote_shopping_assistance": true,
       "companies": UserCompaniesOutput,
       "compare_list": CompareList,
       "confirmation_status": "ACCOUNT_CONFIRMED",
-      "created_at": "xyz789",
+      "created_at": "abc123",
       "custom_attributes": [AttributeValueInterface],
-      "date_of_birth": "abc123",
-      "default_billing": "xyz789",
-      "default_shipping": "abc123",
-      "dob": "abc123",
+      "date_of_birth": "xyz789",
+      "default_billing": "abc123",
+      "default_shipping": "xyz789",
+      "dob": "xyz789",
       "email": "abc123",
-      "firstname": "xyz789",
-      "gender": 123,
+      "firstname": "abc123",
+      "gender": 987,
       "gift_registries": [GiftRegistry],
       "gift_registry": GiftRegistry,
-      "group_id": 123,
-      "id": 123,
+      "group_id": 987,
+      "id": 987,
       "is_subscribed": false,
       "job_title": "xyz789",
-      "lastname": "xyz789",
-      "middlename": "abc123",
+      "lastname": "abc123",
+      "middlename": "xyz789",
       "orders": CustomerOrders,
-      "prefix": "xyz789",
+      "prefix": "abc123",
       "purchase_order": PurchaseOrder,
       "purchase_order_approval_rule": PurchaseOrderApprovalRule,
       "purchase_order_approval_rule_metadata": PurchaseOrderApprovalRuleMetadata,
       "purchase_order_approval_rules": PurchaseOrderApprovalRules,
       "purchase_orders": PurchaseOrders,
-      "purchase_orders_enabled": true,
+      "purchase_orders_enabled": false,
       "requisition_lists": RequisitionLists,
       "return": Return,
       "returns": Returns,
@@ -1774,11 +1774,11 @@ query customer {
       "role": CompanyRole,
       "status": "ACTIVE",
       "store_credit": CustomerStoreCredit,
-      "structure_id": "4",
-      "suffix": "xyz789",
-      "taxvat": "xyz789",
+      "structure_id": 4,
+      "suffix": "abc123",
+      "taxvat": "abc123",
       "team": CompanyTeam,
-      "telephone": "xyz789",
+      "telephone": "abc123",
       "wishlist": Wishlist,
       "wishlist_v2": Wishlist,
       "wishlists": [Wishlist]
@@ -1793,7 +1793,7 @@ query customer {
 
 Return information about the customer's shopping cart.
 
-**Response:** [`Cart!`](#cart)
+**Response:** [`Cart!`](types-c-e.md#cart)
 
 #### Example
 
@@ -1873,19 +1873,19 @@ query customerCart {
         AvailablePaymentMethod
       ],
       "billing_address": BillingCartAddress,
-      "email": "xyz789",
+      "email": "abc123",
       "gift_message": GiftMessage,
-      "gift_receipt_included": false,
+      "gift_receipt_included": true,
       "gift_wrapping": GiftWrapping,
-      "id": "4",
-      "is_virtual": false,
+      "id": 4,
+      "is_virtual": true,
       "items": [CartItemInterface],
       "itemsV2": CartItems,
       "prices": CartPrices,
       "printed_card_included": true,
       "selected_payment_method": SelectedPaymentMethod,
       "shipping_addresses": [ShippingCartAddress],
-      "total_quantity": 123.45
+      "total_quantity": 987.65
     }
   }
 }
@@ -1897,7 +1897,7 @@ query customerCart {
 
 Return a list of downloadable products the customer has purchased.
 
-**Response:** [`CustomerDownloadableProducts`](#customerdownloadableproducts)
+**Response:** [`CustomerDownloadableProducts`](types-c-e.md#customerdownloadableproducts)
 
 #### Example
 
@@ -1933,7 +1933,7 @@ query customerDownloadableProducts {
 
 Use the `customer` query instead.
 
-**Response:** [`CustomerOrders`](#customerorders)
+**Response:** [`CustomerOrders`](types-c-e.md#customerorders)
 
 #### Example
 
@@ -1961,7 +1961,7 @@ query customerOrders {
     "customerOrders": {
       "items": [CustomerOrder],
       "page_info": SearchResultPageInfo,
-      "total_count": 123
+      "total_count": 987
     }
   }
 }
@@ -1973,7 +1973,7 @@ query customerOrders {
 
 Return a list of customer payment tokens stored in the vault.
 
-**Response:** [`CustomerPaymentTokens`](#customerpaymenttokens)
+**Response:** [`CustomerPaymentTokens`](types-c-e.md#customerpaymenttokens)
 
 #### Example
 
@@ -2005,15 +2005,15 @@ query customerPaymentTokens {
 
 Return a list of dynamic blocks filtered by type, location, or UIDs.
 
-**Response:** [`DynamicBlocks!`](#dynamicblocks)
+**Response:** [`DynamicBlocks!`](types-c-e.md#dynamicblocks)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`DynamicBlocksFilterInput`](#dynamicblocksfilterinput) | Defines the filter for returning matching dynamic blocks. |
-| `pageSize` - [`Int`](#int) | The maximum number of results to return at once. The default is 20. Default: `20` |
-| `currentPage` - [`Int`](#int) | The page of results to return. The default is 1. Default: `1` |
+| `input` - [`DynamicBlocksFilterInput`](types-c-e.md#dynamicblocksfilterinput) | Defines the filter for returning matching dynamic blocks. |
+| `pageSize` - [`Int`](types-f-i.md#int) | The maximum number of results to return at once. The default is 20. Default: `20` |
+| `currentPage` - [`Int`](types-f-i.md#int) | The page of results to return. The default is 1. Default: `1` |
 
 #### Example
 
@@ -2059,7 +2059,7 @@ query dynamicBlocks(
     "dynamicBlocks": {
       "items": [DynamicBlock],
       "page_info": SearchResultPageInfo,
-      "total_count": 123
+      "total_count": 987
     }
   }
 }
@@ -2071,13 +2071,13 @@ query dynamicBlocks(
 
 Retrieve the secure PayPal URL for a Payments Pro Hosted Solution transaction.
 
-**Response:** [`HostedProUrl`](#hostedprourl)
+**Response:** [`HostedProUrl`](types-f-i.md#hostedprourl)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`HostedProUrlInput!`](#hostedprourlinput) | An input object that specifies the cart ID. |
+| `input` - [`HostedProUrlInput!`](types-f-i.md#hostedprourlinput) | An input object that specifies the cart ID. |
 
 #### Example
 
@@ -2115,13 +2115,13 @@ query getHostedProUrl($input: HostedProUrlInput!) {
 
 Retrieve payment credentials for a transaction. Use this query for Payflow Link and Payments Advanced payment methods.
 
-**Response:** [`PayflowLinkToken`](#payflowlinktoken)
+**Response:** [`PayflowLinkToken`](types-k-p.md#payflowlinktoken)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`PayflowLinkTokenInput!`](#payflowlinktokeninput) | An input object that defines the requirements to receive a payment token. |
+| `input` - [`PayflowLinkTokenInput!`](types-k-p.md#payflowlinktokeninput) | An input object that defines the requirements to receive a payment token. |
 
 #### Example
 
@@ -2153,7 +2153,7 @@ query getPayflowLinkToken($input: PayflowLinkTokenInput!) {
       "mode": "TEST",
       "paypal_url": "abc123",
       "secure_token": "abc123",
-      "secure_token_id": "xyz789"
+      "secure_token_id": "abc123"
     }
   }
 }
@@ -2165,13 +2165,13 @@ query getPayflowLinkToken($input: PayflowLinkTokenInput!) {
 
 Retrieves the payment configuration for a given location
 
-**Response:** [`PaymentConfigOutput`](#paymentconfigoutput)
+**Response:** [`PaymentConfigOutput`](types-k-p.md#paymentconfigoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `location` - [`PaymentLocation!`](#paymentlocation) | Defines the origin location for that payment request |
+| `location` - [`PaymentLocation!`](types-k-p.md#paymentlocation) | Defines the origin location for that payment request |
 
 #### Example
 
@@ -2223,14 +2223,14 @@ query getPaymentConfig($location: PaymentLocation!) {
 
 Retrieves the payment details for the order
 
-**Response:** [`PaymentOrderOutput`](#paymentorderoutput)
+**Response:** [`PaymentOrderOutput`](types-k-p.md#paymentorderoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `cartId` - [`String!`](#string) | The customer cart ID |
-| `id` - [`String!`](#string) | PayPal order ID |
+| `cartId` - [`String!`](types-q-s.md#string) | The customer cart ID |
+| `id` - [`String!`](types-q-s.md#string) | PayPal order ID |
 
 #### Example
 
@@ -2259,8 +2259,8 @@ query getPaymentOrder(
 
 ```json
 {
-  "cartId": "abc123",
-  "id": "abc123"
+  "cartId": "xyz789",
+  "id": "xyz789"
 }
 ```
 
@@ -2271,7 +2271,7 @@ query getPaymentOrder(
   "data": {
     "getPaymentOrder": {
       "id": "xyz789",
-      "mp_order_id": "abc123",
+      "mp_order_id": "xyz789",
       "payment_source_details": PaymentSourceDetails,
       "status": "abc123"
     }
@@ -2285,13 +2285,13 @@ query getPaymentOrder(
 
 Gets the payment SDK urls and values
 
-**Response:** [`GetPaymentSDKOutput`](#getpaymentsdkoutput)
+**Response:** [`GetPaymentSDKOutput`](types-f-i.md#getpaymentsdkoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `location` - [`PaymentLocation!`](#paymentlocation) | Defines the origin location for that payment request |
+| `location` - [`PaymentLocation!`](types-k-p.md#paymentlocation) | Defines the origin location for that payment request |
 
 #### Example
 
@@ -2329,13 +2329,13 @@ query getPaymentSDK($location: PaymentLocation!) {
 
 Return details about a specific gift card.
 
-**Response:** [`GiftCardAccount`](#giftcardaccount)
+**Response:** [`GiftCardAccount`](types-f-i.md#giftcardaccount)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`GiftCardAccountInput!`](#giftcardaccountinput) | An input object that specifies the gift card code. |
+| `input` - [`GiftCardAccountInput!`](types-f-i.md#giftcardaccountinput) | An input object that specifies the gift card code. |
 
 #### Example
 
@@ -2367,7 +2367,7 @@ query giftCardAccount($input: GiftCardAccountInput!) {
     "giftCardAccount": {
       "balance": Money,
       "code": "abc123",
-      "expiration_date": "abc123"
+      "expiration_date": "xyz789"
     }
   }
 }
@@ -2379,13 +2379,13 @@ query giftCardAccount($input: GiftCardAccountInput!) {
 
 Return the specified gift registry. Some details will not be available to guests.
 
-**Response:** [`GiftRegistry`](#giftregistry)
+**Response:** [`GiftRegistry`](types-f-i.md#giftregistry)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `giftRegistryUid` - [`ID!`](#id) | The unique ID of the registry to search for. |
+| `giftRegistryUid` - [`ID!`](types-f-i.md#id) | The unique ID of the registry to search for. |
 
 #### Example
 
@@ -2432,20 +2432,20 @@ query giftRegistry($giftRegistryUid: ID!) {
 {
   "data": {
     "giftRegistry": {
-      "created_at": "abc123",
+      "created_at": "xyz789",
       "dynamic_attributes": [
         GiftRegistryDynamicAttribute
       ],
       "event_name": "xyz789",
       "items": [GiftRegistryItemInterface],
       "message": "abc123",
-      "owner_name": "xyz789",
+      "owner_name": "abc123",
       "privacy_settings": "PRIVATE",
       "registrants": [GiftRegistryRegistrant],
       "shipping_address": CustomerAddress,
       "status": "ACTIVE",
       "type": GiftRegistryType,
-      "uid": "4"
+      "uid": 4
     }
   }
 }
@@ -2457,13 +2457,13 @@ query giftRegistry($giftRegistryUid: ID!) {
 
 Search for gift registries by specifying a registrant email address.
 
-**Response:** [`[GiftRegistrySearchResult]`](#giftregistrysearchresult)
+**Response:** [`[GiftRegistrySearchResult]`](types-f-i.md#giftregistrysearchresult)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `email` - [`String!`](#string) | The registrant's email. |
+| `email` - [`String!`](types-q-s.md#string) | The registrant's email. |
 
 #### Example
 
@@ -2485,7 +2485,7 @@ query giftRegistryEmailSearch($email: String!) {
 ##### Variables
 
 ```json
-{"email": "xyz789"}
+{"email": "abc123"}
 ```
 
 ##### Response
@@ -2496,10 +2496,10 @@ query giftRegistryEmailSearch($email: String!) {
     "giftRegistryEmailSearch": [
       {
         "event_date": "xyz789",
-        "event_title": "abc123",
+        "event_title": "xyz789",
         "gift_registry_uid": "4",
         "location": "xyz789",
-        "name": "xyz789",
+        "name": "abc123",
         "type": "xyz789"
       }
     ]
@@ -2513,13 +2513,13 @@ query giftRegistryEmailSearch($email: String!) {
 
 Search for gift registries by specifying a registry URL key.
 
-**Response:** [`[GiftRegistrySearchResult]`](#giftregistrysearchresult)
+**Response:** [`[GiftRegistrySearchResult]`](types-f-i.md#giftregistrysearchresult)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `giftRegistryUid` - [`ID!`](#id) | The unique ID of the gift registry. |
+| `giftRegistryUid` - [`ID!`](types-f-i.md#id) | The unique ID of the gift registry. |
 
 #### Example
 
@@ -2541,7 +2541,7 @@ query giftRegistryIdSearch($giftRegistryUid: ID!) {
 ##### Variables
 
 ```json
-{"giftRegistryUid": "4"}
+{"giftRegistryUid": 4}
 ```
 
 ##### Response
@@ -2553,10 +2553,10 @@ query giftRegistryIdSearch($giftRegistryUid: ID!) {
       {
         "event_date": "xyz789",
         "event_title": "abc123",
-        "gift_registry_uid": "4",
-        "location": "abc123",
-        "name": "xyz789",
-        "type": "xyz789"
+        "gift_registry_uid": 4,
+        "location": "xyz789",
+        "name": "abc123",
+        "type": "abc123"
       }
     ]
   }
@@ -2569,15 +2569,15 @@ query giftRegistryIdSearch($giftRegistryUid: ID!) {
 
 Search for gift registries by specifying the registrant name and registry type ID.
 
-**Response:** [`[GiftRegistrySearchResult]`](#giftregistrysearchresult)
+**Response:** [`[GiftRegistrySearchResult]`](types-f-i.md#giftregistrysearchresult)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `firstName` - [`String!`](#string) | The first name of the registrant. |
-| `lastName` - [`String!`](#string) | The last name of the registrant. |
-| `giftRegistryTypeUid` - [`ID`](#id) | The type UID of the registry. |
+| `firstName` - [`String!`](types-q-s.md#string) | The first name of the registrant. |
+| `lastName` - [`String!`](types-q-s.md#string) | The last name of the registrant. |
+| `giftRegistryTypeUid` - [`ID`](types-f-i.md#id) | The type UID of the registry. |
 
 #### Example
 
@@ -2608,8 +2608,8 @@ query giftRegistryTypeSearch(
 
 ```json
 {
-  "firstName": "xyz789",
-  "lastName": "abc123",
+  "firstName": "abc123",
+  "lastName": "xyz789",
   "giftRegistryTypeUid": 4
 }
 ```
@@ -2621,10 +2621,10 @@ query giftRegistryTypeSearch(
   "data": {
     "giftRegistryTypeSearch": [
       {
-        "event_date": "xyz789",
+        "event_date": "abc123",
         "event_title": "xyz789",
         "gift_registry_uid": 4,
-        "location": "abc123",
+        "location": "xyz789",
         "name": "abc123",
         "type": "xyz789"
       }
@@ -2639,7 +2639,7 @@ query giftRegistryTypeSearch(
 
 Get a list of available gift registry types.
 
-**Response:** [`[GiftRegistryType]`](#giftregistrytype)
+**Response:** [`[GiftRegistryType]`](types-f-i.md#giftregistrytype)
 
 #### Example
 
@@ -2667,8 +2667,8 @@ query giftRegistryTypes {
         "dynamic_attributes_metadata": [
           GiftRegistryDynamicAttributeMetadataInterface
         ],
-        "label": "xyz789",
-        "uid": 4
+        "label": "abc123",
+        "uid": "4"
       }
     ]
   }
@@ -2681,13 +2681,13 @@ query giftRegistryTypes {
 
 Retrieve guest order details based on number, email and postcode.
 
-**Response:** [`CustomerOrder!`](#customerorder)
+**Response:** [`CustomerOrder!`](types-c-e.md#customerorder)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`OrderInformationInput!`](#orderinformationinput) |  |
+| `input` - [`OrderInformationInput!`](types-k-p.md#orderinformationinput) |  |
 
 #### Example
 
@@ -2770,29 +2770,29 @@ query guestOrder($input: OrderInformationInput!) {
     "guestOrder": {
       "applied_coupons": [AppliedCoupon],
       "billing_address": OrderAddress,
-      "carrier": "abc123",
+      "carrier": "xyz789",
       "comments": [SalesCommentItem],
-      "created_at": "xyz789",
+      "created_at": "abc123",
       "credit_memos": [CreditMemo],
-      "email": "xyz789",
+      "email": "abc123",
       "gift_message": GiftMessage,
-      "gift_receipt_included": true,
+      "gift_receipt_included": false,
       "gift_wrapping": GiftWrapping,
-      "grand_total": 987.65,
+      "grand_total": 123.45,
       "id": "4",
-      "increment_id": "abc123",
+      "increment_id": "xyz789",
       "invoices": [Invoice],
       "items": [OrderItemInterface],
       "items_eligible_for_return": [OrderItemInterface],
       "number": "xyz789",
-      "order_date": "xyz789",
-      "order_number": "abc123",
+      "order_date": "abc123",
+      "order_number": "xyz789",
       "payment_methods": [OrderPaymentMethod],
       "printed_card_included": false,
       "returns": Returns,
       "shipments": [OrderShipment],
       "shipping_address": OrderAddress,
-      "shipping_method": "xyz789",
+      "shipping_method": "abc123",
       "status": "abc123",
       "token": "abc123",
       "total": OrderTotal
@@ -2807,13 +2807,13 @@ query guestOrder($input: OrderInformationInput!) {
 
 Retrieve guest order details based on token.
 
-**Response:** [`CustomerOrder!`](#customerorder)
+**Response:** [`CustomerOrder!`](types-c-e.md#customerorder)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`OrderTokenInput!`](#ordertokeninput) |  |
+| `input` - [`OrderTokenInput!`](types-k-p.md#ordertokeninput) |  |
 
 #### Example
 
@@ -2900,18 +2900,18 @@ query guestOrderByToken($input: OrderTokenInput!) {
       "comments": [SalesCommentItem],
       "created_at": "abc123",
       "credit_memos": [CreditMemo],
-      "email": "abc123",
+      "email": "xyz789",
       "gift_message": GiftMessage,
       "gift_receipt_included": false,
       "gift_wrapping": GiftWrapping,
       "grand_total": 123.45,
-      "id": 4,
+      "id": "4",
       "increment_id": "xyz789",
       "invoices": [Invoice],
       "items": [OrderItemInterface],
       "items_eligible_for_return": [OrderItemInterface],
       "number": "xyz789",
-      "order_date": "abc123",
+      "order_date": "xyz789",
       "order_number": "xyz789",
       "payment_methods": [OrderPaymentMethod],
       "printed_card_included": false,
@@ -2919,7 +2919,7 @@ query guestOrderByToken($input: OrderTokenInput!) {
       "shipments": [OrderShipment],
       "shipping_address": OrderAddress,
       "shipping_method": "xyz789",
-      "status": "xyz789",
+      "status": "abc123",
       "token": "xyz789",
       "total": OrderTotal
     }
@@ -2933,13 +2933,13 @@ query guestOrderByToken($input: OrderTokenInput!) {
 
 Check whether the specified email can be used to register a company admin.
 
-**Response:** [`IsCompanyAdminEmailAvailableOutput`](#iscompanyadminemailavailableoutput)
+**Response:** [`IsCompanyAdminEmailAvailableOutput`](types-f-i.md#iscompanyadminemailavailableoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `email` - [`String!`](#string) |  |
+| `email` - [`String!`](types-q-s.md#string) |  |
 
 #### Example
 
@@ -2971,13 +2971,13 @@ query isCompanyAdminEmailAvailable($email: String!) {
 
 Check whether the specified email can be used to register a new company.
 
-**Response:** [`IsCompanyEmailAvailableOutput`](#iscompanyemailavailableoutput)
+**Response:** [`IsCompanyEmailAvailableOutput`](types-f-i.md#iscompanyemailavailableoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `email` - [`String!`](#string) |  |
+| `email` - [`String!`](types-q-s.md#string) |  |
 
 #### Example
 
@@ -2994,13 +2994,13 @@ query isCompanyEmailAvailable($email: String!) {
 ##### Variables
 
 ```json
-{"email": "xyz789"}
+{"email": "abc123"}
 ```
 
 ##### Response
 
 ```json
-{"data": {"isCompanyEmailAvailable": {"is_email_available": false}}}
+{"data": {"isCompanyEmailAvailable": {"is_email_available": true}}}
 ```
 
 <HorizontalLine />
@@ -3009,13 +3009,13 @@ query isCompanyEmailAvailable($email: String!) {
 
 Check whether the specified role name is valid for the company.
 
-**Response:** [`IsCompanyRoleNameAvailableOutput`](#iscompanyrolenameavailableoutput)
+**Response:** [`IsCompanyRoleNameAvailableOutput`](types-f-i.md#iscompanyrolenameavailableoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `name` - [`String!`](#string) |  |
+| `name` - [`String!`](types-q-s.md#string) |  |
 
 #### Example
 
@@ -3038,7 +3038,7 @@ query isCompanyRoleNameAvailable($name: String!) {
 ##### Response
 
 ```json
-{"data": {"isCompanyRoleNameAvailable": {"is_role_name_available": false}}}
+{"data": {"isCompanyRoleNameAvailable": {"is_role_name_available": true}}}
 ```
 
 <HorizontalLine />
@@ -3047,13 +3047,13 @@ query isCompanyRoleNameAvailable($name: String!) {
 
 Check whether the specified email can be used to register a company user.
 
-**Response:** [`IsCompanyUserEmailAvailableOutput`](#iscompanyuseremailavailableoutput)
+**Response:** [`IsCompanyUserEmailAvailableOutput`](types-f-i.md#iscompanyuseremailavailableoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `email` - [`String!`](#string) |  |
+| `email` - [`String!`](types-q-s.md#string) |  |
 
 #### Example
 
@@ -3070,7 +3070,7 @@ query isCompanyUserEmailAvailable($email: String!) {
 ##### Variables
 
 ```json
-{"email": "abc123"}
+{"email": "xyz789"}
 ```
 
 ##### Response
@@ -3085,13 +3085,13 @@ query isCompanyUserEmailAvailable($email: String!) {
 
 Check whether the specified email has already been used to create a customer account.
 
-**Response:** [`IsEmailAvailableOutput`](#isemailavailableoutput)
+**Response:** [`IsEmailAvailableOutput`](types-f-i.md#isemailavailableoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `email` - [`String!`](#string) | The email address to check. |
+| `email` - [`String!`](types-q-s.md#string) | The email address to check. |
 
 #### Example
 
@@ -3108,7 +3108,7 @@ query isEmailAvailable($email: String!) {
 ##### Variables
 
 ```json
-{"email": "abc123"}
+{"email": "xyz789"}
 ```
 
 ##### Response
@@ -3123,13 +3123,13 @@ query isEmailAvailable($email: String!) {
 
 Retrieve the specified negotiable quote.
 
-**Response:** [`NegotiableQuote`](#negotiablequote)
+**Response:** [`NegotiableQuote`](types-k-p.md#negotiablequote)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `uid` - [`ID!`](#id) |  |
+| `uid` - [`ID!`](types-f-i.md#id) |  |
 
 #### Example
 
@@ -3196,7 +3196,7 @@ query negotiableQuote($uid: ID!) {
       "buyer": NegotiableQuoteUser,
       "comments": [NegotiableQuoteComment],
       "created_at": "xyz789",
-      "email": "xyz789",
+      "email": "abc123",
       "history": [NegotiableQuoteHistoryEntry],
       "is_virtual": true,
       "items": [CartItemInterface],
@@ -3207,9 +3207,9 @@ query negotiableQuote($uid: ID!) {
         NegotiableQuoteShippingAddress
       ],
       "status": "SUBMITTED",
-      "total_quantity": 123.45,
+      "total_quantity": 987.65,
       "uid": 4,
-      "updated_at": "abc123"
+      "updated_at": "xyz789"
     }
   }
 }
@@ -3221,13 +3221,13 @@ query negotiableQuote($uid: ID!) {
 
 Retrieve the specified negotiable quote template.
 
-**Response:** [`NegotiableQuoteTemplate`](#negotiablequotetemplate)
+**Response:** [`NegotiableQuoteTemplate`](types-k-p.md#negotiablequotetemplate)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `templateId` - [`ID!`](#id) |  |
+| `templateId` - [`ID!`](types-f-i.md#id) |  |
 
 #### Example
 
@@ -3273,7 +3273,7 @@ query negotiableQuoteTemplate($templateId: ID!) {
 ##### Variables
 
 ```json
-{"templateId": "4"}
+{"templateId": 4}
 ```
 
 ##### Response
@@ -3284,20 +3284,20 @@ query negotiableQuoteTemplate($templateId: ID!) {
     "negotiableQuoteTemplate": {
       "buyer": NegotiableQuoteUser,
       "comments": [NegotiableQuoteComment],
-      "expiration_date": "abc123",
+      "expiration_date": "xyz789",
       "history": [NegotiableQuoteHistoryEntry],
       "is_min_max_qty_used": false,
-      "is_virtual": false,
+      "is_virtual": true,
       "items": [CartItemInterface],
       "max_order_commitment": 123,
-      "min_order_commitment": 123,
-      "name": "abc123",
+      "min_order_commitment": 987,
+      "name": "xyz789",
       "notifications": [QuoteTemplateNotificationMessage],
       "prices": CartPrices,
       "shipping_addresses": [
         NegotiableQuoteShippingAddress
       ],
-      "status": "xyz789",
+      "status": "abc123",
       "template_id": "4",
       "total_quantity": 987.65
     }
@@ -3311,16 +3311,16 @@ query negotiableQuoteTemplate($templateId: ID!) {
 
 Return a list of negotiable quote templates that can be viewed by the logged-in customer.
 
-**Response:** [`NegotiableQuoteTemplatesOutput`](#negotiablequotetemplatesoutput)
+**Response:** [`NegotiableQuoteTemplatesOutput`](types-k-p.md#negotiablequotetemplatesoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `filter` - [`NegotiableQuoteTemplateFilterInput`](#negotiablequotetemplatefilterinput) | The filter to use to determine which negotiable quote templates to return. |
-| `pageSize` - [`Int`](#int) | The maximum number of results to return at once. The default value is 20. Default: `20` |
-| `currentPage` - [`Int`](#int) | The page of results to return. The default value is 1. Default: `1` |
-| `sort` - [`NegotiableQuoteTemplateSortInput`](#negotiablequotetemplatesortinput) | The field to use for sorting results. |
+| `filter` - [`NegotiableQuoteTemplateFilterInput`](types-k-p.md#negotiablequotetemplatefilterinput) | The filter to use to determine which negotiable quote templates to return. |
+| `pageSize` - [`Int`](types-f-i.md#int) | The maximum number of results to return at once. The default value is 20. Default: `20` |
+| `currentPage` - [`Int`](types-f-i.md#int) | The page of results to return. The default value is 1. Default: `1` |
+| `sort` - [`NegotiableQuoteTemplateSortInput`](types-k-p.md#negotiablequotetemplatesortinput) | The field to use for sorting results. |
 
 #### Example
 
@@ -3385,16 +3385,16 @@ query negotiableQuoteTemplates(
 
 Return a list of negotiable quotes that can be viewed by the logged-in customer.
 
-**Response:** [`NegotiableQuotesOutput`](#negotiablequotesoutput)
+**Response:** [`NegotiableQuotesOutput`](types-k-p.md#negotiablequotesoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `filter` - [`NegotiableQuoteFilterInput`](#negotiablequotefilterinput) | The filter to use to determine which negotiable quotes to return. |
-| `pageSize` - [`Int`](#int) | The maximum number of results to return at once. The default value is 20. Default: `20` |
-| `currentPage` - [`Int`](#int) | The page of results to return. The default value is 1. Default: `1` |
-| `sort` - [`NegotiableQuoteSortInput`](#negotiablequotesortinput) | The field to use for sorting results. |
+| `filter` - [`NegotiableQuoteFilterInput`](types-k-p.md#negotiablequotefilterinput) | The filter to use to determine which negotiable quotes to return. |
+| `pageSize` - [`Int`](types-f-i.md#int) | The maximum number of results to return at once. The default value is 20. Default: `20` |
+| `currentPage` - [`Int`](types-f-i.md#int) | The page of results to return. The default value is 1. Default: `1` |
+| `sort` - [`NegotiableQuoteSortInput`](types-k-p.md#negotiablequotesortinput) | The field to use for sorting results. |
 
 #### Example
 
@@ -3459,18 +3459,18 @@ query negotiableQuotes(
 
 The pickup locations query searches for locations that match the search request requirements.
 
-**Response:** [`PickupLocations`](#pickuplocations)
+**Response:** [`PickupLocations`](types-k-p.md#pickuplocations)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `area` - [`AreaInput`](#areainput) | Perform search by location using radius and search term. |
-| `filters` - [`PickupLocationFilterInput`](#pickuplocationfilterinput) | Apply filters by attributes. |
-| `sort` - [`PickupLocationSortInput`](#pickuplocationsortinput) | Specifies which attribute to sort on, and whether to return the results in ascending or descending order. |
-| `pageSize` - [`Int`](#int) | The maximum number of pickup locations to return at once. The attribute is optional. Default: `20` |
-| `currentPage` - [`Int`](#int) | Specifies which page of results to return. The default value is 1. Default: `1` |
-| `productsInfo` - [`[ProductInfoInput]`](#productinfoinput) | Information about products which should be delivered. |
+| `area` - [`AreaInput`](types-a-b.md#areainput) | Perform search by location using radius and search term. |
+| `filters` - [`PickupLocationFilterInput`](types-k-p.md#pickuplocationfilterinput) | Apply filters by attributes. |
+| `sort` - [`PickupLocationSortInput`](types-k-p.md#pickuplocationsortinput) | Specifies which attribute to sort on, and whether to return the results in ascending or descending order. |
+| `pageSize` - [`Int`](types-f-i.md#int) | The maximum number of pickup locations to return at once. The attribute is optional. Default: `20` |
+| `currentPage` - [`Int`](types-f-i.md#int) | Specifies which page of results to return. The default value is 1. Default: `1` |
+| `productsInfo` - [`[ProductInfoInput]`](types-k-p.md#productinfoinput) | Information about products which should be delivered. |
 
 #### Example
 
@@ -3525,7 +3525,7 @@ query pickupLocations(
     "pickupLocations": {
       "items": [PickupLocation],
       "page_info": SearchResultPageInfo,
-      "total_count": 987
+      "total_count": 123
     }
   }
 }
@@ -3537,7 +3537,7 @@ query pickupLocations(
 
 Return the active ratings attributes and the values each rating can have.
 
-**Response:** [`ProductReviewRatingsMetadata!`](#productreviewratingsmetadata)
+**Response:** [`ProductReviewRatingsMetadata!`](types-k-p.md#productreviewratingsmetadata)
 
 #### Example
 
@@ -3571,17 +3571,17 @@ query productReviewRatingsMetadata {
 
 Search for products that match the criteria specified in the `search` and `filter` attributes.
 
-**Response:** [`Products`](#products)
+**Response:** [`Products`](types-k-p.md#products)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `search` - [`String`](#string) | One or more keywords to use in a full-text search. |
-| `filter` - [`ProductAttributeFilterInput`](#productattributefilterinput) | The product attributes to search for and return. |
-| `pageSize` - [`Int`](#int) | The maximum number of results to return at once. The default value is 20. Default: `20` |
-| `currentPage` - [`Int`](#int) | The page of results to return. The default value is 1. Default: `1` |
-| `sort` - [`ProductAttributeSortInput`](#productattributesortinput) | Specifies which attributes to sort on, and whether to return the results in ascending or descending order. |
+| `search` - [`String`](types-q-s.md#string) | One or more keywords to use in a full-text search. |
+| `filter` - [`ProductAttributeFilterInput`](types-k-p.md#productattributefilterinput) | The product attributes to search for and return. |
+| `pageSize` - [`Int`](types-f-i.md#int) | The maximum number of results to return at once. The default value is 20. Default: `20` |
+| `currentPage` - [`Int`](types-f-i.md#int) | The page of results to return. The default value is 1. Default: `1` |
+| `sort` - [`ProductAttributeSortInput`](types-k-p.md#productattributesortinput) | Specifies which attributes to sort on, and whether to return the results in ascending or descending order. |
 
 #### Example
 
@@ -3629,7 +3629,7 @@ query products(
 
 ```json
 {
-  "search": "xyz789",
+  "search": "abc123",
   "filter": ProductAttributeFilterInput,
   "pageSize": 20,
   "currentPage": 1,
@@ -3661,7 +3661,7 @@ query products(
 
 Returns details about Google reCAPTCHA V3-Invisible configuration.
 
-**Response:** [`ReCaptchaConfigurationV3`](#recaptchaconfigurationv3)
+**Response:** [`ReCaptchaConfigurationV3`](types-q-s.md#recaptchaconfigurationv3)
 
 #### Example
 
@@ -3692,7 +3692,7 @@ query recaptchaV3Config {
       "forms": ["PLACE_ORDER"],
       "is_enabled": true,
       "language_code": "abc123",
-      "minimum_score": 987.65,
+      "minimum_score": 123.45,
       "website_key": "abc123"
     }
   }
@@ -3705,13 +3705,13 @@ query recaptchaV3Config {
 
 Return the full details for a specified product, category, or CMS page.
 
-**Response:** [`RoutableInterface`](#routableinterface)
+**Response:** [`RoutableInterface`](types-q-s.md#routableinterface)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `url` - [`String!`](#string) | A `url_key` appended by the `url_suffix, if one exists. |
+| `url` - [`String!`](types-q-s.md#string) | A `url_key` appended by the `url_suffix, if one exists. |
 
 #### Example
 
@@ -3730,7 +3730,7 @@ query route($url: String!) {
 ##### Variables
 
 ```json
-{"url": "xyz789"}
+{"url": "abc123"}
 ```
 
 ##### Response
@@ -3740,7 +3740,7 @@ query route($url: String!) {
   "data": {
     "route": {
       "redirect_code": 987,
-      "relative_url": "xyz789",
+      "relative_url": "abc123",
       "type": "CMS_PAGE"
     }
   }
@@ -3753,7 +3753,7 @@ query route($url: String!) {
 
 Return details about the store's configuration.
 
-**Response:** [`StoreConfig`](#storeconfig)
+**Response:** [`StoreConfig`](types-q-s.md#storeconfig)
 
 #### Example
 
@@ -3994,24 +3994,24 @@ query storeConfig {
 {
   "data": {
     "storeConfig": {
-      "absolute_footer": "abc123",
+      "absolute_footer": "xyz789",
       "allow_gift_receipt": "abc123",
       "allow_gift_wrapping_on_order": "abc123",
       "allow_gift_wrapping_on_order_items": "abc123",
-      "allow_guests_to_write_product_reviews": "abc123",
+      "allow_guests_to_write_product_reviews": "xyz789",
       "allow_items": "xyz789",
-      "allow_order": "abc123",
-      "allow_printed_card": "xyz789",
+      "allow_order": "xyz789",
+      "allow_printed_card": "abc123",
       "autocomplete_on_storefront": true,
-      "base_currency_code": "abc123",
-      "base_link_url": "xyz789",
+      "base_currency_code": "xyz789",
+      "base_link_url": "abc123",
       "base_media_url": "abc123",
       "base_static_url": "abc123",
       "base_url": "xyz789",
       "braintree_3dsecure_allowspecific": true,
       "braintree_3dsecure_always_request_3ds": false,
-      "braintree_3dsecure_specificcountry": "xyz789",
-      "braintree_3dsecure_threshold_amount": "xyz789",
+      "braintree_3dsecure_specificcountry": "abc123",
+      "braintree_3dsecure_threshold_amount": "abc123",
       "braintree_3dsecure_verify_3dsecure": false,
       "braintree_ach_direct_debit_vault_active": true,
       "braintree_applepay_merchant_name": "xyz789",
@@ -4019,199 +4019,199 @@ query storeConfig {
       "braintree_cc_vault_active": "xyz789",
       "braintree_cc_vault_cvv": true,
       "braintree_environment": "xyz789",
-      "braintree_googlepay_btn_color": "xyz789",
-      "braintree_googlepay_cctypes": "xyz789",
-      "braintree_googlepay_merchant_id": "abc123",
-      "braintree_googlepay_vault_active": false,
+      "braintree_googlepay_btn_color": "abc123",
+      "braintree_googlepay_cctypes": "abc123",
+      "braintree_googlepay_merchant_id": "xyz789",
+      "braintree_googlepay_vault_active": true,
       "braintree_local_payment_allowed_methods": "abc123",
-      "braintree_local_payment_fallback_button_text": "xyz789",
+      "braintree_local_payment_fallback_button_text": "abc123",
       "braintree_local_payment_redirect_on_fail": "abc123",
       "braintree_merchant_account_id": "xyz789",
       "braintree_paypal_button_location_cart_type_credit_color": "abc123",
       "braintree_paypal_button_location_cart_type_credit_label": "abc123",
       "braintree_paypal_button_location_cart_type_credit_shape": "abc123",
       "braintree_paypal_button_location_cart_type_credit_show": false,
-      "braintree_paypal_button_location_cart_type_messaging_layout": "xyz789",
+      "braintree_paypal_button_location_cart_type_messaging_layout": "abc123",
       "braintree_paypal_button_location_cart_type_messaging_logo": "abc123",
-      "braintree_paypal_button_location_cart_type_messaging_logo_position": "abc123",
+      "braintree_paypal_button_location_cart_type_messaging_logo_position": "xyz789",
       "braintree_paypal_button_location_cart_type_messaging_show": false,
-      "braintree_paypal_button_location_cart_type_messaging_text_color": "abc123",
-      "braintree_paypal_button_location_cart_type_paylater_color": "abc123",
-      "braintree_paypal_button_location_cart_type_paylater_label": "abc123",
+      "braintree_paypal_button_location_cart_type_messaging_text_color": "xyz789",
+      "braintree_paypal_button_location_cart_type_paylater_color": "xyz789",
+      "braintree_paypal_button_location_cart_type_paylater_label": "xyz789",
       "braintree_paypal_button_location_cart_type_paylater_shape": "abc123",
-      "braintree_paypal_button_location_cart_type_paylater_show": true,
-      "braintree_paypal_button_location_cart_type_paypal_color": "abc123",
-      "braintree_paypal_button_location_cart_type_paypal_label": "abc123",
+      "braintree_paypal_button_location_cart_type_paylater_show": false,
+      "braintree_paypal_button_location_cart_type_paypal_color": "xyz789",
+      "braintree_paypal_button_location_cart_type_paypal_label": "xyz789",
       "braintree_paypal_button_location_cart_type_paypal_shape": "xyz789",
-      "braintree_paypal_button_location_cart_type_paypal_show": false,
-      "braintree_paypal_button_location_checkout_type_credit_color": "abc123",
+      "braintree_paypal_button_location_cart_type_paypal_show": true,
+      "braintree_paypal_button_location_checkout_type_credit_color": "xyz789",
       "braintree_paypal_button_location_checkout_type_credit_label": "abc123",
-      "braintree_paypal_button_location_checkout_type_credit_shape": "xyz789",
+      "braintree_paypal_button_location_checkout_type_credit_shape": "abc123",
       "braintree_paypal_button_location_checkout_type_credit_show": false,
-      "braintree_paypal_button_location_checkout_type_messaging_layout": "xyz789",
+      "braintree_paypal_button_location_checkout_type_messaging_layout": "abc123",
       "braintree_paypal_button_location_checkout_type_messaging_logo": "xyz789",
-      "braintree_paypal_button_location_checkout_type_messaging_logo_position": "abc123",
+      "braintree_paypal_button_location_checkout_type_messaging_logo_position": "xyz789",
       "braintree_paypal_button_location_checkout_type_messaging_show": true,
       "braintree_paypal_button_location_checkout_type_messaging_text_color": "abc123",
       "braintree_paypal_button_location_checkout_type_paylater_color": "abc123",
       "braintree_paypal_button_location_checkout_type_paylater_label": "abc123",
       "braintree_paypal_button_location_checkout_type_paylater_shape": "xyz789",
-      "braintree_paypal_button_location_checkout_type_paylater_show": true,
+      "braintree_paypal_button_location_checkout_type_paylater_show": false,
       "braintree_paypal_button_location_checkout_type_paypal_color": "abc123",
       "braintree_paypal_button_location_checkout_type_paypal_label": "abc123",
-      "braintree_paypal_button_location_checkout_type_paypal_shape": "xyz789",
+      "braintree_paypal_button_location_checkout_type_paypal_shape": "abc123",
       "braintree_paypal_button_location_checkout_type_paypal_show": true,
       "braintree_paypal_button_location_productpage_type_credit_color": "xyz789",
       "braintree_paypal_button_location_productpage_type_credit_label": "xyz789",
       "braintree_paypal_button_location_productpage_type_credit_shape": "abc123",
       "braintree_paypal_button_location_productpage_type_credit_show": true,
-      "braintree_paypal_button_location_productpage_type_messaging_layout": "xyz789",
-      "braintree_paypal_button_location_productpage_type_messaging_logo": "abc123",
-      "braintree_paypal_button_location_productpage_type_messaging_logo_position": "abc123",
-      "braintree_paypal_button_location_productpage_type_messaging_show": true,
+      "braintree_paypal_button_location_productpage_type_messaging_layout": "abc123",
+      "braintree_paypal_button_location_productpage_type_messaging_logo": "xyz789",
+      "braintree_paypal_button_location_productpage_type_messaging_logo_position": "xyz789",
+      "braintree_paypal_button_location_productpage_type_messaging_show": false,
       "braintree_paypal_button_location_productpage_type_messaging_text_color": "abc123",
-      "braintree_paypal_button_location_productpage_type_paylater_color": "xyz789",
-      "braintree_paypal_button_location_productpage_type_paylater_label": "xyz789",
-      "braintree_paypal_button_location_productpage_type_paylater_shape": "abc123",
-      "braintree_paypal_button_location_productpage_type_paylater_show": false,
+      "braintree_paypal_button_location_productpage_type_paylater_color": "abc123",
+      "braintree_paypal_button_location_productpage_type_paylater_label": "abc123",
+      "braintree_paypal_button_location_productpage_type_paylater_shape": "xyz789",
+      "braintree_paypal_button_location_productpage_type_paylater_show": true,
       "braintree_paypal_button_location_productpage_type_paypal_color": "xyz789",
       "braintree_paypal_button_location_productpage_type_paypal_label": "xyz789",
-      "braintree_paypal_button_location_productpage_type_paypal_shape": "xyz789",
-      "braintree_paypal_button_location_productpage_type_paypal_show": true,
-      "braintree_paypal_credit_uk_merchant_name": "abc123",
-      "braintree_paypal_display_on_shopping_cart": true,
-      "braintree_paypal_merchant_country": "abc123",
+      "braintree_paypal_button_location_productpage_type_paypal_shape": "abc123",
+      "braintree_paypal_button_location_productpage_type_paypal_show": false,
+      "braintree_paypal_credit_uk_merchant_name": "xyz789",
+      "braintree_paypal_display_on_shopping_cart": false,
+      "braintree_paypal_merchant_country": "xyz789",
       "braintree_paypal_merchant_name_override": "xyz789",
       "braintree_paypal_require_billing_address": true,
-      "braintree_paypal_send_cart_line_items": false,
+      "braintree_paypal_send_cart_line_items": true,
       "braintree_paypal_vault_active": false,
-      "cart_expires_in_days": 123,
-      "cart_gift_wrapping": "abc123",
-      "cart_printed_card": "xyz789",
-      "cart_summary_display_quantity": 123,
-      "catalog_default_sort_by": "xyz789",
+      "cart_expires_in_days": 987,
+      "cart_gift_wrapping": "xyz789",
+      "cart_printed_card": "abc123",
+      "cart_summary_display_quantity": 987,
+      "catalog_default_sort_by": "abc123",
       "category_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
-      "category_url_suffix": "abc123",
+      "category_url_suffix": "xyz789",
       "check_money_order_enable_for_specific_countries": true,
-      "check_money_order_enabled": true,
-      "check_money_order_make_check_payable_to": "abc123",
-      "check_money_order_max_order_total": "xyz789",
-      "check_money_order_min_order_total": "abc123",
-      "check_money_order_new_order_status": "abc123",
+      "check_money_order_enabled": false,
+      "check_money_order_make_check_payable_to": "xyz789",
+      "check_money_order_max_order_total": "abc123",
+      "check_money_order_min_order_total": "xyz789",
+      "check_money_order_new_order_status": "xyz789",
       "check_money_order_payment_from_specific_countries": "abc123",
       "check_money_order_send_check_to": "abc123",
       "check_money_order_sort_order": 123,
-      "check_money_order_title": "abc123",
+      "check_money_order_title": "xyz789",
       "cms_home_page": "xyz789",
       "cms_no_cookies": "xyz789",
       "cms_no_route": "xyz789",
-      "code": "abc123",
-      "configurable_thumbnail_source": "xyz789",
+      "code": "xyz789",
+      "configurable_thumbnail_source": "abc123",
       "contact_enabled": true,
-      "copyright": "xyz789",
-      "countries_with_required_region": "xyz789",
+      "copyright": "abc123",
+      "countries_with_required_region": "abc123",
       "create_account_confirmation": true,
       "customer_access_token_lifetime": 123.45,
-      "default_country": "xyz789",
-      "default_description": "xyz789",
-      "default_display_currency_code": "abc123",
-      "default_keywords": "xyz789",
-      "default_title": "abc123",
-      "demonotice": 123,
+      "default_country": "abc123",
+      "default_description": "abc123",
+      "default_display_currency_code": "xyz789",
+      "default_keywords": "abc123",
+      "default_title": "xyz789",
+      "demonotice": 987,
       "display_state_if_optional": true,
-      "enable_multiple_wishlists": "xyz789",
-      "front": "xyz789",
+      "enable_multiple_wishlists": "abc123",
+      "front": "abc123",
       "grid_per_page": 987,
       "grid_per_page_values": "xyz789",
-      "head_includes": "abc123",
-      "head_shortcut_icon": "xyz789",
+      "head_includes": "xyz789",
+      "head_shortcut_icon": "abc123",
       "header_logo_src": "xyz789",
-      "id": 987,
+      "id": 123,
       "is_default_store": true,
-      "is_default_store_group": true,
-      "is_guest_checkout_enabled": false,
-      "is_negotiable_quote_active": true,
-      "is_one_page_checkout_enabled": false,
-      "is_requisition_list_active": "abc123",
-      "list_mode": "abc123",
-      "list_per_page": 123,
-      "list_per_page_values": "xyz789",
+      "is_default_store_group": false,
+      "is_guest_checkout_enabled": true,
+      "is_negotiable_quote_active": false,
+      "is_one_page_checkout_enabled": true,
+      "is_requisition_list_active": "xyz789",
+      "list_mode": "xyz789",
+      "list_per_page": 987,
+      "list_per_page_values": "abc123",
       "locale": "xyz789",
-      "logo_alt": "abc123",
-      "logo_height": 123,
+      "logo_alt": "xyz789",
+      "logo_height": 987,
       "logo_width": 987,
       "magento_reward_general_is_enabled": "xyz789",
-      "magento_reward_general_is_enabled_on_front": "abc123",
-      "magento_reward_general_min_points_balance": "xyz789",
+      "magento_reward_general_is_enabled_on_front": "xyz789",
+      "magento_reward_general_min_points_balance": "abc123",
       "magento_reward_general_publish_history": "abc123",
       "magento_reward_points_invitation_customer": "xyz789",
       "magento_reward_points_invitation_customer_limit": "abc123",
-      "magento_reward_points_invitation_order": "abc123",
-      "magento_reward_points_invitation_order_limit": "xyz789",
-      "magento_reward_points_newsletter": "abc123",
+      "magento_reward_points_invitation_order": "xyz789",
+      "magento_reward_points_invitation_order_limit": "abc123",
+      "magento_reward_points_newsletter": "xyz789",
       "magento_reward_points_order": "xyz789",
-      "magento_reward_points_register": "xyz789",
-      "magento_reward_points_review": "abc123",
+      "magento_reward_points_register": "abc123",
+      "magento_reward_points_review": "xyz789",
       "magento_reward_points_review_limit": "abc123",
-      "magento_wishlist_general_is_enabled": "xyz789",
+      "magento_wishlist_general_is_enabled": "abc123",
       "max_items_in_order_summary": 987,
       "maximum_number_of_wishlists": "xyz789",
       "minicart_display": true,
-      "minicart_max_items": 987,
+      "minicart_max_items": 123,
       "minimum_password_length": "xyz789",
-      "newsletter_enabled": true,
+      "newsletter_enabled": false,
       "no_route": "abc123",
-      "optional_zip_countries": "xyz789",
-      "order_cancellation_enabled": true,
+      "optional_zip_countries": "abc123",
+      "order_cancellation_enabled": false,
       "order_cancellation_reasons": [CancellationReason],
-      "payment_payflowpro_cc_vault_active": "abc123",
+      "payment_payflowpro_cc_vault_active": "xyz789",
       "printed_card_price": "abc123",
       "product_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
-      "product_reviews_enabled": "abc123",
-      "product_url_suffix": "xyz789",
-      "quickorder_active": true,
+      "product_reviews_enabled": "xyz789",
+      "product_url_suffix": "abc123",
+      "quickorder_active": false,
       "required_character_classes_number": "xyz789",
       "returns_enabled": "abc123",
-      "root_category_id": 987,
-      "root_category_uid": 4,
+      "root_category_id": 123,
+      "root_category_uid": "4",
       "sales_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
       "sales_gift_wrapping": "abc123",
-      "sales_printed_card": "abc123",
-      "secure_base_link_url": "xyz789",
+      "sales_printed_card": "xyz789",
+      "secure_base_link_url": "abc123",
       "secure_base_media_url": "abc123",
-      "secure_base_static_url": "xyz789",
-      "secure_base_url": "xyz789",
+      "secure_base_static_url": "abc123",
+      "secure_base_url": "abc123",
       "send_friend": SendFriendConfiguration,
-      "shopping_cart_display_full_summary": false,
-      "shopping_cart_display_grand_total": true,
-      "shopping_cart_display_price": 987,
-      "shopping_cart_display_shipping": 987,
-      "shopping_cart_display_subtotal": 987,
+      "shopping_cart_display_full_summary": true,
+      "shopping_cart_display_grand_total": false,
+      "shopping_cart_display_price": 123,
+      "shopping_cart_display_shipping": 123,
+      "shopping_cart_display_subtotal": 123,
       "shopping_cart_display_tax_gift_wrapping": "DISPLAY_EXCLUDING_TAX",
       "shopping_cart_display_zero_tax": true,
-      "show_cms_breadcrumbs": 123,
+      "show_cms_breadcrumbs": 987,
       "store_code": "4",
-      "store_group_code": 4,
+      "store_group_code": "4",
       "store_group_name": "abc123",
-      "store_name": "abc123",
-      "store_sort_order": 123,
-      "timezone": "abc123",
+      "store_name": "xyz789",
+      "store_sort_order": 987,
+      "timezone": "xyz789",
       "title_prefix": "abc123",
       "title_separator": "xyz789",
       "title_suffix": "abc123",
       "use_store_in_url": false,
-      "website_code": 4,
-      "website_id": 123,
-      "website_name": "xyz789",
-      "weight_unit": "abc123",
-      "welcome": "abc123",
-      "zero_subtotal_enable_for_specific_countries": false,
+      "website_code": "4",
+      "website_id": 987,
+      "website_name": "abc123",
+      "weight_unit": "xyz789",
+      "welcome": "xyz789",
+      "zero_subtotal_enable_for_specific_countries": true,
       "zero_subtotal_enabled": true,
       "zero_subtotal_new_order_status": "xyz789",
-      "zero_subtotal_payment_action": "abc123",
-      "zero_subtotal_payment_from_specific_countries": "abc123",
-      "zero_subtotal_sort_order": 123,
-      "zero_subtotal_title": "abc123"
+      "zero_subtotal_payment_action": "xyz789",
+      "zero_subtotal_payment_from_specific_countries": "xyz789",
+      "zero_subtotal_sort_order": 987,
+      "zero_subtotal_title": "xyz789"
     }
   }
 }
@@ -4227,13 +4227,13 @@ Use the `route` query instead.
 
 Return the relative URL for a specified product, category or CMS page.
 
-**Response:** [`EntityUrl`](#entityurl)
+**Response:** [`EntityUrl`](types-c-e.md#entityurl)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `url` - [`String!`](#string) | A `url_key` appended by the `url_suffix, if one exists. |
+| `url` - [`String!`](types-q-s.md#string) | A `url_key` appended by the `url_suffix, if one exists. |
 
 #### Example
 
@@ -4255,7 +4255,7 @@ query urlResolver($url: String!) {
 ##### Variables
 
 ```json
-{"url": "abc123"}
+{"url": "xyz789"}
 ```
 
 ##### Response
@@ -4266,9 +4266,9 @@ query urlResolver($url: String!) {
     "urlResolver": {
       "canonical_url": "abc123",
       "entity_uid": "4",
-      "id": 987,
-      "redirectCode": 123,
-      "relative_url": "xyz789",
+      "id": 123,
+      "redirectCode": 987,
+      "relative_url": "abc123",
       "type": "CMS_PAGE"
     }
   }
@@ -4285,7 +4285,7 @@ Moved under `Customer.wishlist`.
 
 Return the contents of a customer's wish list.
 
-**Response:** [`WishlistOutput`](#wishlistoutput)
+**Response:** [`WishlistOutput`](types-t-z.md#wishlistoutput)
 
 #### Example
 
@@ -4312,10 +4312,10 @@ query wishlist {
   "data": {
     "wishlist": {
       "items": [WishlistItem],
-      "items_count": 987,
+      "items_count": 123,
       "name": "xyz789",
-      "sharing_code": "abc123",
-      "updated_at": "abc123"
+      "sharing_code": "xyz789",
+      "updated_at": "xyz789"
     }
   }
 }

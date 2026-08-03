@@ -8,8 +8,8 @@ Contains a key-value pair.
 
 | Field Name | Description |
 |------------|-------------|
-| `name` - [`String`](#string) | The name part of the key/value pair. |
-| `value` - [`String`](#string) | The value part of the key/value pair. |
+| `name` - [`String`](types-q-s.md#string) | The name part of the key/value pair. |
+| `value` - [`String`](types-q-s.md#string) | The value part of the key/value pair. |
 
 #### Example
 
@@ -31,17 +31,17 @@ Contains information for rendering layered navigation.
 | Field Name | Description |
 |------------|-------------|
 | `filter_items` - [`[LayerFilterItemInterface]`](#layerfilteriteminterface) | An array of filter items. *(Deprecated: Use `Aggregation.options` instead.)* |
-| `filter_items_count` - [`Int`](#int) | The count of filter items in filter group. *(Deprecated: Use `Aggregation.count` instead.)* |
-| `name` - [`String`](#string) | The name of a layered navigation filter. *(Deprecated: Use `Aggregation.label` instead.)* |
-| `request_var` - [`String`](#string) | The request variable name for a filter query. *(Deprecated: Use `Aggregation.attribute_code` instead.)* |
+| `filter_items_count` - [`Int`](types-f-i.md#int) | The count of filter items in filter group. *(Deprecated: Use `Aggregation.count` instead.)* |
+| `name` - [`String`](types-q-s.md#string) | The name of a layered navigation filter. *(Deprecated: Use `Aggregation.label` instead.)* |
+| `request_var` - [`String`](types-q-s.md#string) | The request variable name for a filter query. *(Deprecated: Use `Aggregation.attribute_code` instead.)* |
 
 #### Example
 
 ```json
 {
   "filter_items": [LayerFilterItemInterface],
-  "filter_items_count": 987,
-  "name": "xyz789",
+  "filter_items_count": 123,
+  "name": "abc123",
   "request_var": "xyz789"
 }
 ```
@@ -54,15 +54,15 @@ Contains information for rendering layered navigation.
 
 | Field Name | Description |
 |------------|-------------|
-| `items_count` - [`Int`](#int) | The count of items per filter. *(Deprecated: Use `AggregationOption.count` instead.)* |
-| `label` - [`String`](#string) | The label for a filter. *(Deprecated: Use `AggregationOption.label` instead.)* |
-| `value_string` - [`String`](#string) | The value of a filter request variable to be used in query. *(Deprecated: Use `AggregationOption.value` instead.)* |
+| `items_count` - [`Int`](types-f-i.md#int) | The count of items per filter. *(Deprecated: Use `AggregationOption.count` instead.)* |
+| `label` - [`String`](types-q-s.md#string) | The label for a filter. *(Deprecated: Use `AggregationOption.label` instead.)* |
+| `value_string` - [`String`](types-q-s.md#string) | The value of a filter request variable to be used in query. *(Deprecated: Use `AggregationOption.value` instead.)* |
 
 #### Example
 
 ```json
 {
-  "items_count": 987,
+  "items_count": 123,
   "label": "xyz789",
   "value_string": "xyz789"
 }
@@ -76,24 +76,24 @@ Contains information for rendering layered navigation.
 
 | Field Name | Description |
 |------------|-------------|
-| `items_count` - [`Int`](#int) | The count of items per filter. *(Deprecated: Use `AggregationOption.count` instead.)* |
-| `label` - [`String`](#string) | The label for a filter. *(Deprecated: Use `AggregationOption.label` instead.)* |
-| `value_string` - [`String`](#string) | The value of a filter request variable to be used in query. *(Deprecated: Use `AggregationOption.value` instead.)* |
+| `items_count` - [`Int`](types-f-i.md#int) | The count of items per filter. *(Deprecated: Use `AggregationOption.count` instead.)* |
+| `label` - [`String`](types-q-s.md#string) | The label for a filter. *(Deprecated: Use `AggregationOption.label` instead.)* |
+| `value_string` - [`String`](types-q-s.md#string) | The value of a filter request variable to be used in query. *(Deprecated: Use `AggregationOption.value` instead.)* |
 
 #### Possible Types
 
 | LayerFilterItemInterface Types |
 |----------------|
 | [`LayerFilterItem`](#layerfilteritem) |
-| [`SwatchLayerFilterItem`](#swatchlayerfilteritem) |
+| [`SwatchLayerFilterItem`](types-q-s.md#swatchlayerfilteritem) |
 
 #### Example
 
 ```json
 {
-  "items_count": 123,
+  "items_count": 987,
   "label": "xyz789",
-  "value_string": "abc123"
+  "value_string": "xyz789"
 }
 ```
 
@@ -107,16 +107,16 @@ Sets quote item note.
 
 | Input Field | Description |
 |-------------|-------------|
-| `note` - [`String`](#string) | The note text to be added. |
-| `quote_item_uid` - [`ID!`](#id) | The unique ID of a `CartLineItem` object. |
-| `quote_uid` - [`ID!`](#id) | The unique ID of a `NegotiableQuote` object. |
+| `note` - [`String`](types-q-s.md#string) | The note text to be added. |
+| `quote_item_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `CartLineItem` object. |
+| `quote_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
 
 #### Example
 
 ```json
 {
-  "note": "xyz789",
-  "quote_item_uid": "4",
+  "note": "abc123",
+  "quote_item_uid": 4,
   "quote_uid": "4"
 }
 ```
@@ -132,14 +132,14 @@ Defines characteristics about images and videos associated with a specific produ
 | Field Name | Description |
 |------------|-------------|
 | `content` - [`ProductMediaGalleryEntriesContent`](#productmediagalleryentriescontent) | Details about the content of the media gallery item. |
-| `disabled` - [`Boolean`](#boolean) | Indicates whether the image is hidden from view. |
-| `file` - [`String`](#string) | The path of the image on the server. |
-| `id` - [`Int`](#int) | The identifier assigned to the object. *(Deprecated: Use `uid` instead.)* |
-| `label` - [`String`](#string) | The alt text displayed on the storefront when the user points to the image. |
-| `media_type` - [`String`](#string) | Either `image` or `video`. |
-| `position` - [`Int`](#int) | The media item's position after it has been sorted. |
-| `types` - [`[String]`](#string) | Array of image types. It can have the following values: image, small_image, thumbnail. |
-| `uid` - [`ID!`](#id) | The unique ID for a `MediaGalleryEntry` object. |
+| `disabled` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the image is hidden from view. |
+| `file` - [`String`](types-q-s.md#string) | The path of the image on the server. |
+| `id` - [`Int`](types-f-i.md#int) | The identifier assigned to the object. *(Deprecated: Use `uid` instead.)* |
+| `label` - [`String`](types-q-s.md#string) | The alt text displayed on the storefront when the user points to the image. |
+| `media_type` - [`String`](types-q-s.md#string) | Either `image` or `video`. |
+| `position` - [`Int`](types-f-i.md#int) | The media item's position after it has been sorted. |
+| `types` - [`[String]`](types-q-s.md#string) | Array of image types. It can have the following values: image, small_image, thumbnail. |
+| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `MediaGalleryEntry` object. |
 | `video_content` - [`ProductMediaGalleryEntriesVideoContent`](#productmediagalleryentriesvideocontent) | Details about the content of a video item. |
 
 #### Example
@@ -147,14 +147,14 @@ Defines characteristics about images and videos associated with a specific produ
 ```json
 {
   "content": ProductMediaGalleryEntriesContent,
-  "disabled": true,
+  "disabled": false,
   "file": "xyz789",
   "id": 987,
   "label": "abc123",
-  "media_type": "xyz789",
+  "media_type": "abc123",
   "position": 987,
   "types": ["xyz789"],
-  "uid": 4,
+  "uid": "4",
   "video_content": ProductMediaGalleryEntriesVideoContent
 }
 ```
@@ -169,11 +169,11 @@ Contains basic information about a product image or video.
 
 | Field Name | Description |
 |------------|-------------|
-| `disabled` - [`Boolean`](#boolean) | Indicates whether the image is hidden from view. |
-| `label` - [`String`](#string) | The label of the product image or video. |
-| `position` - [`Int`](#int) | The media item's position after it has been sorted. |
-| `types` - [`[String]`](#string) | Array of image types. It can have the following values: image, small_image, thumbnail. |
-| `url` - [`String`](#string) | The URL of the product image or video. |
+| `disabled` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the image is hidden from view. |
+| `label` - [`String`](types-q-s.md#string) | The label of the product image or video. |
+| `position` - [`Int`](types-f-i.md#int) | The media item's position after it has been sorted. |
+| `types` - [`[String]`](types-q-s.md#string) | Array of image types. It can have the following values: image, small_image, thumbnail. |
+| `url` - [`String`](types-q-s.md#string) | The URL of the product image or video. |
 
 #### Possible Types
 
@@ -186,10 +186,10 @@ Contains basic information about a product image or video.
 
 ```json
 {
-  "disabled": false,
-  "label": "abc123",
-  "position": 987,
-  "types": ["xyz789"],
+  "disabled": true,
+  "label": "xyz789",
+  "position": 123,
+  "types": ["abc123"],
   "url": "xyz789"
 }
 ```
@@ -202,12 +202,12 @@ Contains basic information about a product image or video.
 
 | Field Name | Description |
 |------------|-------------|
-| `type` - [`String`](#string) | The type of logo for the PayPal Pay Later messaging |
+| `type` - [`String`](types-q-s.md#string) | The type of logo for the PayPal Pay Later messaging |
 
 #### Example
 
 ```json
-{"type": "abc123"}
+{"type": "xyz789"}
 ```
 
 <HorizontalLine />
@@ -218,14 +218,14 @@ Contains basic information about a product image or video.
 
 | Field Name | Description |
 |------------|-------------|
-| `layout` - [`String`](#string) | The message layout |
+| `layout` - [`String`](types-q-s.md#string) | The message layout |
 | `logo` - [`MessageStyleLogo`](#messagestylelogo) | The message logo |
 
 #### Example
 
 ```json
 {
-  "layout": "xyz789",
+  "layout": "abc123",
   "logo": MessageStyleLogo
 }
 ```
@@ -240,13 +240,13 @@ Defines a monetary value, including a numeric value and a currency code.
 
 | Field Name | Description |
 |------------|-------------|
-| `currency` - [`CurrencyEnum`](#currencyenum) | A three-letter currency code, such as USD or EUR. |
-| `value` - [`Float`](#float) | A number expressing a monetary value. |
+| `currency` - [`CurrencyEnum`](types-c-e.md#currencyenum) | A three-letter currency code, such as USD or EUR. |
+| `value` - [`Float`](types-f-i.md#float) | A number expressing a monetary value. |
 
 #### Example
 
 ```json
-{"currency": "AFN", "value": 123.45}
+{"currency": "AFN", "value": 987.65}
 ```
 
 <HorizontalLine />
@@ -259,9 +259,9 @@ Contains the customer's gift registry and any errors encountered.
 
 | Field Name | Description |
 |------------|-------------|
-| `gift_registry` - [`GiftRegistry`](#giftregistry) | The gift registry. |
-| `status` - [`Boolean!`](#boolean) | Indicates whether the attempt to move the cart items to the gift registry was successful. |
-| `user_errors` - [`[GiftRegistryItemsUserError]!`](#giftregistryitemsusererror) | An array of errors encountered while moving items from the cart to the gift registry. |
+| `gift_registry` - [`GiftRegistry`](types-f-i.md#giftregistry) | The gift registry. |
+| `status` - [`Boolean!`](types-a-b.md#boolean) | Indicates whether the attempt to move the cart items to the gift registry was successful. |
+| `user_errors` - [`[GiftRegistryItemsUserError]!`](types-f-i.md#giftregistryitemsusererror) | An array of errors encountered while moving items from the cart to the gift registry. |
 
 #### Example
 
@@ -283,12 +283,12 @@ An input object that defines the items in a requisition list to be moved.
 
 | Input Field | Description |
 |-------------|-------------|
-| `requisitionListItemUids` - [`[ID]!`](#id) | An array of IDs representing products moved from one requisition list to another. |
+| `requisitionListItemUids` - [`[ID]!`](types-f-i.md#id) | An array of IDs representing products moved from one requisition list to another. |
 
 #### Example
 
 ```json
-{"requisitionListItemUids": ["4"]}
+{"requisitionListItemUids": [4]}
 ```
 
 <HorizontalLine />
@@ -301,8 +301,8 @@ Output of the request to move items to another requisition list.
 
 | Field Name | Description |
 |------------|-------------|
-| `destination_requisition_list` - [`RequisitionList`](#requisitionlist) | The destination requisition list after moving items. |
-| `source_requisition_list` - [`RequisitionList`](#requisitionlist) | The source requisition list after moving items. |
+| `destination_requisition_list` - [`RequisitionList`](types-q-s.md#requisitionlist) | The destination requisition list after moving items. |
+| `source_requisition_list` - [`RequisitionList`](types-q-s.md#requisitionlist) | The source requisition list after moving items. |
 
 #### Example
 
@@ -323,17 +323,17 @@ Move Line Item to Requisition List.
 
 | Input Field | Description |
 |-------------|-------------|
-| `quote_item_uid` - [`ID!`](#id) | The unique ID of a `CartLineItem` object. |
-| `quote_uid` - [`ID!`](#id) | The unique ID of a `NegotiableQuote` object. |
-| `requisition_list_uid` - [`ID!`](#id) | The unique ID of a requisition list. |
+| `quote_item_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `CartLineItem` object. |
+| `quote_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
+| `requisition_list_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a requisition list. |
 
 #### Example
 
 ```json
 {
   "quote_item_uid": "4",
-  "quote_uid": 4,
-  "requisition_list_uid": 4
+  "quote_uid": "4",
+  "requisition_list_uid": "4"
 }
 ```
 
@@ -365,9 +365,9 @@ Contains the source and target wish lists after moving products.
 
 | Field Name | Description |
 |------------|-------------|
-| `destination_wishlist` - [`Wishlist!`](#wishlist) | The destination wish list after receiving products moved from the source wish list. |
-| `source_wishlist` - [`Wishlist!`](#wishlist) | The source wish list after moving products from it. |
-| `user_errors` - [`[WishListUserInputError]!`](#wishlistuserinputerror) | An array of errors encountered while moving products to a wish list. |
+| `destination_wishlist` - [`Wishlist!`](types-t-z.md#wishlist) | The destination wish list after receiving products moved from the source wish list. |
+| `source_wishlist` - [`Wishlist!`](types-t-z.md#wishlist) | The source wish list after moving products from it. |
+| `user_errors` - [`[WishListUserInputError]!`](types-t-z.md#wishlistuserinputerror) | An array of errors encountered while moving products to a wish list. |
 
 #### Example
 
@@ -389,23 +389,23 @@ Contains details about a negotiable quote.
 
 | Field Name | Description |
 |------------|-------------|
-| `available_payment_methods` - [`[AvailablePaymentMethod]`](#availablepaymentmethod) | An array of payment methods that can be applied to the negotiable quote. |
+| `available_payment_methods` - [`[AvailablePaymentMethod]`](types-a-b.md#availablepaymentmethod) | An array of payment methods that can be applied to the negotiable quote. |
 | `billing_address` - [`NegotiableQuoteBillingAddress`](#negotiablequotebillingaddress) | The billing address applied to the negotiable quote. |
 | `buyer` - [`NegotiableQuoteUser!`](#negotiablequoteuser) | The first and last name of the buyer. |
 | `comments` - [`[NegotiableQuoteComment]`](#negotiablequotecomment) | A list of comments made by the buyer and seller. |
-| `created_at` - [`String`](#string) | Timestamp indicating when the negotiable quote was created. |
-| `email` - [`String`](#string) | The email address of the company user. |
+| `created_at` - [`String`](types-q-s.md#string) | Timestamp indicating when the negotiable quote was created. |
+| `email` - [`String`](types-q-s.md#string) | The email address of the company user. |
 | `history` - [`[NegotiableQuoteHistoryEntry]`](#negotiablequotehistoryentry) | A list of status and price changes for the negotiable quote. |
-| `is_virtual` - [`Boolean!`](#boolean) | Indicates whether the negotiable quote contains only virtual products. |
-| `items` - [`[CartItemInterface]`](#cartiteminterface) | The list of items in the negotiable quote. |
-| `name` - [`String!`](#string) | The title assigned to the negotiable quote. |
-| `prices` - [`CartPrices`](#cartprices) | A set of subtotals and totals applied to the negotiable quote. |
-| `selected_payment_method` - [`SelectedPaymentMethod`](#selectedpaymentmethod) | The payment method that was applied to the negotiable quote. |
+| `is_virtual` - [`Boolean!`](types-a-b.md#boolean) | Indicates whether the negotiable quote contains only virtual products. |
+| `items` - [`[CartItemInterface]`](types-c-e.md#cartiteminterface) | The list of items in the negotiable quote. |
+| `name` - [`String!`](types-q-s.md#string) | The title assigned to the negotiable quote. |
+| `prices` - [`CartPrices`](types-c-e.md#cartprices) | A set of subtotals and totals applied to the negotiable quote. |
+| `selected_payment_method` - [`SelectedPaymentMethod`](types-q-s.md#selectedpaymentmethod) | The payment method that was applied to the negotiable quote. |
 | `shipping_addresses` - [`[NegotiableQuoteShippingAddress]!`](#negotiablequoteshippingaddress) | A list of shipping addresses applied to the negotiable quote. |
 | `status` - [`NegotiableQuoteStatus!`](#negotiablequotestatus) | The status of the negotiable quote. |
-| `total_quantity` - [`Float!`](#float) | The total number of items in the negotiable quote. |
-| `uid` - [`ID!`](#id) | The unique ID of a `NegotiableQuote` object. |
-| `updated_at` - [`String`](#string) | Timestamp indicating when the negotiable quote was updated. |
+| `total_quantity` - [`Float!`](types-f-i.md#float) | The total number of items in the negotiable quote. |
+| `uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
+| `updated_at` - [`String`](types-q-s.md#string) | Timestamp indicating when the negotiable quote was updated. |
 
 #### Example
 
@@ -415,19 +415,19 @@ Contains details about a negotiable quote.
   "billing_address": NegotiableQuoteBillingAddress,
   "buyer": NegotiableQuoteUser,
   "comments": [NegotiableQuoteComment],
-  "created_at": "abc123",
+  "created_at": "xyz789",
   "email": "xyz789",
   "history": [NegotiableQuoteHistoryEntry],
-  "is_virtual": false,
+  "is_virtual": true,
   "items": [CartItemInterface],
-  "name": "abc123",
+  "name": "xyz789",
   "prices": CartPrices,
   "selected_payment_method": SelectedPaymentMethod,
   "shipping_addresses": [NegotiableQuoteShippingAddress],
   "status": "SUBMITTED",
   "total_quantity": 123.45,
   "uid": 4,
-  "updated_at": "xyz789"
+  "updated_at": "abc123"
 }
 ```
 
@@ -441,15 +441,15 @@ Defines the company's country.
 
 | Field Name | Description |
 |------------|-------------|
-| `code` - [`String!`](#string) | The address country code. |
-| `label` - [`String!`](#string) | The display name of the region. |
+| `code` - [`String!`](types-q-s.md#string) | The address country code. |
+| `label` - [`String!`](types-q-s.md#string) | The display name of the region. |
 
 #### Example
 
 ```json
 {
   "code": "xyz789",
-  "label": "abc123"
+  "label": "xyz789"
 }
 ```
 
@@ -463,17 +463,17 @@ Defines the billing or shipping address to be applied to the cart.
 
 | Input Field | Description |
 |-------------|-------------|
-| `city` - [`String!`](#string) | The city specified for the billing or shipping address. |
-| `company` - [`String`](#string) | The company name. |
-| `country_code` - [`String!`](#string) | The country code and label for the billing or shipping address. |
-| `firstname` - [`String!`](#string) | The first name of the company user. |
-| `lastname` - [`String!`](#string) | The last name of the company user. |
-| `postcode` - [`String`](#string) | The ZIP or postal code of the billing or shipping address. |
-| `region` - [`String`](#string) | A string that defines the state or province of the billing or shipping address. |
-| `region_id` - [`Int`](#int) | An integer that defines the state or province of the billing or shipping address. |
-| `save_in_address_book` - [`Boolean`](#boolean) | Determines whether to save the address in the customer's address book. The default value is true. |
-| `street` - [`[String]!`](#string) | An array containing the street for the billing or shipping address. |
-| `telephone` - [`String`](#string) | The telephone number for the billing or shipping address. |
+| `city` - [`String!`](types-q-s.md#string) | The city specified for the billing or shipping address. |
+| `company` - [`String`](types-q-s.md#string) | The company name. |
+| `country_code` - [`String!`](types-q-s.md#string) | The country code and label for the billing or shipping address. |
+| `firstname` - [`String!`](types-q-s.md#string) | The first name of the company user. |
+| `lastname` - [`String!`](types-q-s.md#string) | The last name of the company user. |
+| `postcode` - [`String`](types-q-s.md#string) | The ZIP or postal code of the billing or shipping address. |
+| `region` - [`String`](types-q-s.md#string) | A string that defines the state or province of the billing or shipping address. |
+| `region_id` - [`Int`](types-f-i.md#int) | An integer that defines the state or province of the billing or shipping address. |
+| `save_in_address_book` - [`Boolean`](types-a-b.md#boolean) | Determines whether to save the address in the customer's address book. The default value is true. |
+| `street` - [`[String]!`](types-q-s.md#string) | An array containing the street for the billing or shipping address. |
+| `telephone` - [`String`](types-q-s.md#string) | The telephone number for the billing or shipping address. |
 
 #### Example
 
@@ -482,11 +482,11 @@ Defines the billing or shipping address to be applied to the cart.
   "city": "abc123",
   "company": "abc123",
   "country_code": "xyz789",
-  "firstname": "xyz789",
+  "firstname": "abc123",
   "lastname": "abc123",
-  "postcode": "xyz789",
-  "region": "abc123",
-  "region_id": 123,
+  "postcode": "abc123",
+  "region": "xyz789",
+  "region_id": 987,
   "save_in_address_book": true,
   "street": ["abc123"],
   "telephone": "xyz789"
@@ -501,15 +501,15 @@ Defines the billing or shipping address to be applied to the cart.
 
 | Field Name | Description |
 |------------|-------------|
-| `city` - [`String!`](#string) | The company's city or town. |
-| `company` - [`String`](#string) | The company name associated with the shipping/billing address. |
+| `city` - [`String!`](types-q-s.md#string) | The company's city or town. |
+| `company` - [`String`](types-q-s.md#string) | The company name associated with the shipping/billing address. |
 | `country` - [`NegotiableQuoteAddressCountry!`](#negotiablequoteaddresscountry) | The company's country. |
-| `firstname` - [`String!`](#string) | The first name of the company user. |
-| `lastname` - [`String!`](#string) | The last name of the company user. |
-| `postcode` - [`String`](#string) | The company's ZIP or postal code. |
+| `firstname` - [`String!`](types-q-s.md#string) | The first name of the company user. |
+| `lastname` - [`String!`](types-q-s.md#string) | The last name of the company user. |
+| `postcode` - [`String`](types-q-s.md#string) | The company's ZIP or postal code. |
 | `region` - [`NegotiableQuoteAddressRegion`](#negotiablequoteaddressregion) | An object containing the region name, region code, and region ID. |
-| `street` - [`[String]!`](#string) | An array of strings that define the street number and name. |
-| `telephone` - [`String`](#string) | The customer's telephone number. |
+| `street` - [`[String]!`](types-q-s.md#string) | An array of strings that define the street number and name. |
+| `telephone` - [`String`](types-q-s.md#string) | The customer's telephone number. |
 
 #### Possible Types
 
@@ -522,14 +522,14 @@ Defines the billing or shipping address to be applied to the cart.
 
 ```json
 {
-  "city": "xyz789",
-  "company": "xyz789",
+  "city": "abc123",
+  "company": "abc123",
   "country": NegotiableQuoteAddressCountry,
-  "firstname": "xyz789",
+  "firstname": "abc123",
   "lastname": "xyz789",
-  "postcode": "xyz789",
+  "postcode": "abc123",
   "region": NegotiableQuoteAddressRegion,
-  "street": ["xyz789"],
+  "street": ["abc123"],
   "telephone": "abc123"
 }
 ```
@@ -544,17 +544,17 @@ Defines the company's state or province.
 
 | Field Name | Description |
 |------------|-------------|
-| `code` - [`String`](#string) | The address region code. |
-| `label` - [`String`](#string) | The display name of the region. |
-| `region_id` - [`Int`](#int) | The unique ID for a pre-defined region. |
+| `code` - [`String`](types-q-s.md#string) | The address region code. |
+| `label` - [`String`](types-q-s.md#string) | The display name of the region. |
+| `region_id` - [`Int`](types-f-i.md#int) | The unique ID for a pre-defined region. |
 
 #### Example
 
 ```json
 {
-  "code": "xyz789",
-  "label": "xyz789",
-  "region_id": 987
+  "code": "abc123",
+  "label": "abc123",
+  "region_id": 123
 }
 ```
 
@@ -566,15 +566,15 @@ Defines the company's state or province.
 
 | Field Name | Description |
 |------------|-------------|
-| `city` - [`String!`](#string) | The company's city or town. |
-| `company` - [`String`](#string) | The company name associated with the shipping/billing address. |
+| `city` - [`String!`](types-q-s.md#string) | The company's city or town. |
+| `company` - [`String`](types-q-s.md#string) | The company name associated with the shipping/billing address. |
 | `country` - [`NegotiableQuoteAddressCountry!`](#negotiablequoteaddresscountry) | The company's country. |
-| `firstname` - [`String!`](#string) | The first name of the company user. |
-| `lastname` - [`String!`](#string) | The last name of the company user. |
-| `postcode` - [`String`](#string) | The company's ZIP or postal code. |
+| `firstname` - [`String!`](types-q-s.md#string) | The first name of the company user. |
+| `lastname` - [`String!`](types-q-s.md#string) | The last name of the company user. |
+| `postcode` - [`String`](types-q-s.md#string) | The company's ZIP or postal code. |
 | `region` - [`NegotiableQuoteAddressRegion`](#negotiablequoteaddressregion) | An object containing the region name, region code, and region ID. |
-| `street` - [`[String]!`](#string) | An array of strings that define the street number and name. |
-| `telephone` - [`String`](#string) | The customer's telephone number. |
+| `street` - [`[String]!`](types-q-s.md#string) | An array of strings that define the street number and name. |
+| `telephone` - [`String`](types-q-s.md#string) | The customer's telephone number. |
 
 #### Example
 
@@ -585,10 +585,10 @@ Defines the company's state or province.
   "country": NegotiableQuoteAddressCountry,
   "firstname": "abc123",
   "lastname": "xyz789",
-  "postcode": "xyz789",
+  "postcode": "abc123",
   "region": NegotiableQuoteAddressRegion,
-  "street": ["xyz789"],
-  "telephone": "abc123"
+  "street": ["abc123"],
+  "telephone": "xyz789"
 }
 ```
 
@@ -603,9 +603,9 @@ Defines the billing address.
 | Input Field | Description |
 |-------------|-------------|
 | `address` - [`NegotiableQuoteAddressInput`](#negotiablequoteaddressinput) | Defines a billing address. |
-| `customer_address_uid` - [`ID`](#id) | The unique ID of a `CustomerAddress` object. |
-| `same_as_shipping` - [`Boolean`](#boolean) | Indicates whether to set the billing address to be the same as the existing shipping address on the negotiable quote. |
-| `use_for_shipping` - [`Boolean`](#boolean) | Indicates whether to set the shipping address to be the same as this billing address. |
+| `customer_address_uid` - [`ID`](types-f-i.md#id) | The unique ID of a `CustomerAddress` object. |
+| `same_as_shipping` - [`Boolean`](types-a-b.md#boolean) | Indicates whether to set the billing address to be the same as the existing shipping address on the negotiable quote. |
+| `use_for_shipping` - [`Boolean`](types-a-b.md#boolean) | Indicates whether to set the shipping address to be the same as this billing address. |
 
 #### Example
 
@@ -613,7 +613,7 @@ Defines the billing address.
 {
   "address": NegotiableQuoteAddressInput,
   "customer_address_uid": 4,
-  "same_as_shipping": false,
+  "same_as_shipping": true,
   "use_for_shipping": true
 }
 ```
@@ -629,17 +629,17 @@ Contains a single plain text comment from either the buyer or seller.
 | Field Name | Description |
 |------------|-------------|
 | `author` - [`NegotiableQuoteUser!`](#negotiablequoteuser) | The first and last name of the commenter. |
-| `created_at` - [`String!`](#string) | Timestamp indicating when the comment was created. |
+| `created_at` - [`String!`](types-q-s.md#string) | Timestamp indicating when the comment was created. |
 | `creator_type` - [`NegotiableQuoteCommentCreatorType!`](#negotiablequotecommentcreatortype) | Indicates whether a buyer or seller commented. |
-| `text` - [`String!`](#string) | The plain text comment. |
-| `uid` - [`ID!`](#id) | The unique ID of a `NegotiableQuoteComment` object. |
+| `text` - [`String!`](types-q-s.md#string) | The plain text comment. |
+| `uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuoteComment` object. |
 
 #### Example
 
 ```json
 {
   "author": NegotiableQuoteUser,
-  "created_at": "xyz789",
+  "created_at": "abc123",
   "creator_type": "BUYER",
   "text": "xyz789",
   "uid": "4"
@@ -673,7 +673,7 @@ Contains the commend provided by the buyer.
 
 | Input Field | Description |
 |-------------|-------------|
-| `comment` - [`String!`](#string) | The comment provided by the buyer. |
+| `comment` - [`String!`](types-q-s.md#string) | The comment provided by the buyer. |
 
 #### Example
 
@@ -691,15 +691,15 @@ Contains custom log entries added by third-party extensions.
 
 | Field Name | Description |
 |------------|-------------|
-| `new_value` - [`String!`](#string) | The new entry content. |
-| `old_value` - [`String`](#string) | The previous entry in the custom log. |
-| `title` - [`String!`](#string) | The title of the custom log entry. |
+| `new_value` - [`String!`](types-q-s.md#string) | The new entry content. |
+| `old_value` - [`String`](types-q-s.md#string) | The previous entry in the custom log. |
+| `title` - [`String!`](types-q-s.md#string) | The title of the custom log entry. |
 
 #### Example
 
 ```json
 {
-  "new_value": "xyz789",
+  "new_value": "abc123",
   "old_value": "xyz789",
   "title": "abc123"
 }
@@ -715,8 +715,8 @@ Defines a filter to limit the negotiable quotes to return.
 
 | Input Field | Description |
 |-------------|-------------|
-| `ids` - [`FilterEqualTypeInput`](#filterequaltypeinput) | Filter by the ID of one or more negotiable quotes. |
-| `name` - [`FilterMatchTypeInput`](#filtermatchtypeinput) | Filter by the negotiable quote name. |
+| `ids` - [`FilterEqualTypeInput`](types-f-i.md#filterequaltypeinput) | Filter by the ID of one or more negotiable quotes. |
+| `name` - [`FilterMatchTypeInput`](types-f-i.md#filtermatchtypeinput) | Filter by the negotiable quote name. |
 
 #### Example
 
@@ -767,7 +767,7 @@ Contains a comment submitted by a seller or buyer.
 
 | Field Name | Description |
 |------------|-------------|
-| `comment` - [`String!`](#string) | A plain text comment submitted by a seller or buyer. |
+| `comment` - [`String!`](types-q-s.md#string) | A plain text comment submitted by a seller or buyer. |
 
 #### Example
 
@@ -788,8 +788,8 @@ Contains details about a change for a negotiable quote.
 | `author` - [`NegotiableQuoteUser!`](#negotiablequoteuser) | The person who made a change in the status of the negotiable quote. |
 | `change_type` - [`NegotiableQuoteHistoryEntryChangeType!`](#negotiablequotehistoryentrychangetype) | An enum that describes the why the entry in the negotiable quote history changed status. |
 | `changes` - [`NegotiableQuoteHistoryChanges`](#negotiablequotehistorychanges) | The set of changes in the negotiable quote. |
-| `created_at` - [`String`](#string) | Timestamp indicating when the negotiable quote entry was created. |
-| `uid` - [`ID!`](#id) | The unique ID of a `NegotiableQuoteHistoryEntry` object. |
+| `created_at` - [`String`](types-q-s.md#string) | Timestamp indicating when the negotiable quote entry was created. |
+| `uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuoteHistoryEntry` object. |
 
 #### Example
 
@@ -832,15 +832,15 @@ Contains a new expiration date and the previous date.
 
 | Field Name | Description |
 |------------|-------------|
-| `new_expiration` - [`String`](#string) | The expiration date after the change. The value will be 'null' if not set. |
-| `old_expiration` - [`String`](#string) | The previous expiration date. The value will be 'null' if not previously set. |
+| `new_expiration` - [`String`](types-q-s.md#string) | The expiration date after the change. The value will be 'null' if not set. |
+| `old_expiration` - [`String`](types-q-s.md#string) | The previous expiration date. The value will be 'null' if not previously set. |
 
 #### Example
 
 ```json
 {
   "new_expiration": "xyz789",
-  "old_expiration": "xyz789"
+  "old_expiration": "abc123"
 }
 ```
 
@@ -854,14 +854,14 @@ Contains lists of products that have been removed from the catalog and negotiabl
 
 | Field Name | Description |
 |------------|-------------|
-| `products_removed_from_catalog` - [`[ID]`](#id) | A list of product IDs the seller removed from the catalog. |
+| `products_removed_from_catalog` - [`[ID]`](types-f-i.md#id) | A list of product IDs the seller removed from the catalog. |
 | `products_removed_from_quote` - [`[ProductInterface]`](#productinterface) | A list of products removed from the negotiable quote by either the buyer or the seller. |
 
 #### Example
 
 ```json
 {
-  "products_removed_from_catalog": [4],
+  "products_removed_from_catalog": ["4"],
   "products_removed_from_quote": [ProductInterface]
 }
 ```
@@ -935,7 +935,7 @@ An error indicating that an operation was attempted on a negotiable quote in an 
 
 | Field Name | Description |
 |------------|-------------|
-| `message` - [`String!`](#string) | The returned error message. |
+| `message` - [`String!`](types-q-s.md#string) | The returned error message. |
 
 #### Example
 
@@ -953,13 +953,13 @@ Specifies the updated quantity of an item.
 
 | Input Field | Description |
 |-------------|-------------|
-| `quantity` - [`Float!`](#float) | The new quantity of the negotiable quote item. |
-| `quote_item_uid` - [`ID!`](#id) | The unique ID of a `CartItemInterface` object. |
+| `quantity` - [`Float!`](types-f-i.md#float) | The new quantity of the negotiable quote item. |
+| `quote_item_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `CartItemInterface` object. |
 
 #### Example
 
 ```json
-{"quantity": 123.45, "quote_item_uid": 4}
+{"quantity": 987.65, "quote_item_uid": 4}
 ```
 
 <HorizontalLine />
@@ -972,8 +972,8 @@ Defines the payment method to be applied to the negotiable quote.
 
 | Input Field | Description |
 |-------------|-------------|
-| `code` - [`String!`](#string) | Payment method code |
-| `purchase_order_number` - [`String`](#string) | The purchase order number. Optional for most payment methods. |
+| `code` - [`String!`](types-q-s.md#string) | Payment method code |
+| `purchase_order_number` - [`String`](types-q-s.md#string) | The purchase order number. Optional for most payment methods. |
 
 #### Example
 
@@ -994,10 +994,10 @@ Contains a reference document link for a negotiable quote template.
 
 | Field Name | Description |
 |------------|-------------|
-| `document_identifier` - [`String`](#string) | The identifier of the reference document. |
-| `document_name` - [`String!`](#string) | The title of the reference document. |
-| `link_id` - [`ID!`](#id) | The unique ID of a reference document link. |
-| `reference_document_url` - [`String!`](#string) | The URL of the reference document. |
+| `document_identifier` - [`String`](types-q-s.md#string) | The identifier of the reference document. |
+| `document_name` - [`String!`](types-q-s.md#string) | The title of the reference document. |
+| `link_id` - [`ID!`](types-f-i.md#id) | The unique ID of a reference document link. |
+| `reference_document_url` - [`String!`](types-q-s.md#string) | The URL of the reference document. |
 
 #### Example
 
@@ -1005,8 +1005,8 @@ Contains a reference document link for a negotiable quote template.
 {
   "document_identifier": "xyz789",
   "document_name": "abc123",
-  "link_id": "4",
-  "reference_document_url": "xyz789"
+  "link_id": 4,
+  "reference_document_url": "abc123"
 }
 ```
 
@@ -1018,17 +1018,17 @@ Contains a reference document link for a negotiable quote template.
 
 | Field Name | Description |
 |------------|-------------|
-| `available_shipping_methods` - [`[AvailableShippingMethod]`](#availableshippingmethod) | An array of shipping methods available to the buyer. |
-| `city` - [`String!`](#string) | The company's city or town. |
-| `company` - [`String`](#string) | The company name associated with the shipping/billing address. |
+| `available_shipping_methods` - [`[AvailableShippingMethod]`](types-a-b.md#availableshippingmethod) | An array of shipping methods available to the buyer. |
+| `city` - [`String!`](types-q-s.md#string) | The company's city or town. |
+| `company` - [`String`](types-q-s.md#string) | The company name associated with the shipping/billing address. |
 | `country` - [`NegotiableQuoteAddressCountry!`](#negotiablequoteaddresscountry) | The company's country. |
-| `firstname` - [`String!`](#string) | The first name of the company user. |
-| `lastname` - [`String!`](#string) | The last name of the company user. |
-| `postcode` - [`String`](#string) | The company's ZIP or postal code. |
+| `firstname` - [`String!`](types-q-s.md#string) | The first name of the company user. |
+| `lastname` - [`String!`](types-q-s.md#string) | The last name of the company user. |
+| `postcode` - [`String`](types-q-s.md#string) | The company's ZIP or postal code. |
 | `region` - [`NegotiableQuoteAddressRegion`](#negotiablequoteaddressregion) | An object containing the region name, region code, and region ID. |
-| `selected_shipping_method` - [`SelectedShippingMethod`](#selectedshippingmethod) | The selected shipping method. |
-| `street` - [`[String]!`](#string) | An array of strings that define the street number and name. |
-| `telephone` - [`String`](#string) | The customer's telephone number. |
+| `selected_shipping_method` - [`SelectedShippingMethod`](types-q-s.md#selectedshippingmethod) | The selected shipping method. |
+| `street` - [`[String]!`](types-q-s.md#string) | An array of strings that define the street number and name. |
+| `telephone` - [`String`](types-q-s.md#string) | The customer's telephone number. |
 
 #### Example
 
@@ -1036,15 +1036,15 @@ Contains a reference document link for a negotiable quote template.
 {
   "available_shipping_methods": [AvailableShippingMethod],
   "city": "xyz789",
-  "company": "xyz789",
+  "company": "abc123",
   "country": NegotiableQuoteAddressCountry,
   "firstname": "xyz789",
   "lastname": "xyz789",
   "postcode": "abc123",
   "region": NegotiableQuoteAddressRegion,
   "selected_shipping_method": SelectedShippingMethod,
-  "street": ["abc123"],
-  "telephone": "xyz789"
+  "street": ["xyz789"],
+  "telephone": "abc123"
 }
 ```
 
@@ -1059,15 +1059,15 @@ Defines shipping addresses for the negotiable quote.
 | Input Field | Description |
 |-------------|-------------|
 | `address` - [`NegotiableQuoteAddressInput`](#negotiablequoteaddressinput) | A shipping address. |
-| `customer_address_uid` - [`ID`](#id) | An ID from the company user's address book that uniquely identifies the address to be used for shipping. |
-| `customer_notes` - [`String`](#string) | Text provided by the company user. |
+| `customer_address_uid` - [`ID`](types-f-i.md#id) | An ID from the company user's address book that uniquely identifies the address to be used for shipping. |
+| `customer_notes` - [`String`](types-q-s.md#string) | Text provided by the company user. |
 
 #### Example
 
 ```json
 {
   "address": NegotiableQuoteAddressInput,
-  "customer_address_uid": 4,
+  "customer_address_uid": "4",
   "customer_notes": "abc123"
 }
 ```
@@ -1082,7 +1082,7 @@ Defines the field to use to sort a list of negotiable quotes.
 
 | Input Field | Description |
 |-------------|-------------|
-| `sort_direction` - [`SortEnum!`](#sortenum) | Whether to return results in ascending or descending order. |
+| `sort_direction` - [`SortEnum!`](types-q-s.md#sortenum) | Whether to return results in ascending or descending order. |
 | `sort_field` - [`NegotiableQuoteSortableField!`](#negotiablequotesortablefield) | The specified sort field. |
 
 #### Example
@@ -1145,21 +1145,21 @@ Contains details about a negotiable quote template.
 |------------|-------------|
 | `buyer` - [`NegotiableQuoteUser!`](#negotiablequoteuser) | The first and last name of the buyer. |
 | `comments` - [`[NegotiableQuoteComment]`](#negotiablequotecomment) | A list of comments made by the buyer and seller. |
-| `expiration_date` - [`String!`](#string) | The expiration period of the negotiable quote template. |
+| `expiration_date` - [`String!`](types-q-s.md#string) | The expiration period of the negotiable quote template. |
 | `history` - [`[NegotiableQuoteHistoryEntry]`](#negotiablequotehistoryentry) | A list of status and price changes for the negotiable quote template. |
-| `is_min_max_qty_used` - [`Boolean!`](#boolean) | Indicates whether the minimum and maximum quantity settings are used. |
-| `is_virtual` - [`Boolean!`](#boolean) | Indicates whether the negotiable quote template contains only virtual products. |
-| `items` - [`[CartItemInterface]`](#cartiteminterface) | The list of items in the negotiable quote template. |
-| `max_order_commitment` - [`Int!`](#int) | Commitment for maximum orders |
-| `min_order_commitment` - [`Int!`](#int) | Commitment for minimum orders |
-| `name` - [`String!`](#string) | The title assigned to the negotiable quote template. |
-| `notifications` - [`[QuoteTemplateNotificationMessage]`](#quotetemplatenotificationmessage) | A list of notifications for the negotiable quote template. |
-| `prices` - [`CartPrices`](#cartprices) | A set of subtotals and totals applied to the negotiable quote template. |
+| `is_min_max_qty_used` - [`Boolean!`](types-a-b.md#boolean) | Indicates whether the minimum and maximum quantity settings are used. |
+| `is_virtual` - [`Boolean!`](types-a-b.md#boolean) | Indicates whether the negotiable quote template contains only virtual products. |
+| `items` - [`[CartItemInterface]`](types-c-e.md#cartiteminterface) | The list of items in the negotiable quote template. |
+| `max_order_commitment` - [`Int!`](types-f-i.md#int) | Commitment for maximum orders |
+| `min_order_commitment` - [`Int!`](types-f-i.md#int) | Commitment for minimum orders |
+| `name` - [`String!`](types-q-s.md#string) | The title assigned to the negotiable quote template. |
+| `notifications` - [`[QuoteTemplateNotificationMessage]`](types-q-s.md#quotetemplatenotificationmessage) | A list of notifications for the negotiable quote template. |
+| `prices` - [`CartPrices`](types-c-e.md#cartprices) | A set of subtotals and totals applied to the negotiable quote template. |
 | `reference_document_links` - [`[NegotiableQuoteReferenceDocumentLink]`](#negotiablequotereferencedocumentlink) | A list of reference document links for the negotiable quote template. |
 | `shipping_addresses` - [`[NegotiableQuoteShippingAddress]!`](#negotiablequoteshippingaddress) | A list of shipping addresses applied to the negotiable quote template. |
-| `status` - [`String!`](#string) | The status of the negotiable quote template. |
-| `template_id` - [`ID!`](#id) | The unique ID of a `NegotiableQuoteTemplate` object. |
-| `total_quantity` - [`Float!`](#float) | The total number of items in the negotiable quote template. |
+| `status` - [`String!`](types-q-s.md#string) | The status of the negotiable quote template. |
+| `template_id` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuoteTemplate` object. |
+| `total_quantity` - [`Float!`](types-f-i.md#float) | The total number of items in the negotiable quote template. |
 
 #### Example
 
@@ -1167,13 +1167,13 @@ Contains details about a negotiable quote template.
 {
   "buyer": NegotiableQuoteUser,
   "comments": [NegotiableQuoteComment],
-  "expiration_date": "xyz789",
+  "expiration_date": "abc123",
   "history": [NegotiableQuoteHistoryEntry],
-  "is_min_max_qty_used": true,
+  "is_min_max_qty_used": false,
   "is_virtual": false,
   "items": [CartItemInterface],
   "max_order_commitment": 123,
-  "min_order_commitment": 987,
+  "min_order_commitment": 123,
   "name": "xyz789",
   "notifications": [QuoteTemplateNotificationMessage],
   "prices": CartPrices,
@@ -1181,8 +1181,8 @@ Contains details about a negotiable quote template.
     NegotiableQuoteReferenceDocumentLink
   ],
   "shipping_addresses": [NegotiableQuoteShippingAddress],
-  "status": "abc123",
-  "template_id": "4",
+  "status": "xyz789",
+  "template_id": 4,
   "total_quantity": 123.45
 }
 ```
@@ -1197,8 +1197,8 @@ Defines a filter to limit the negotiable quotes to return.
 
 | Input Field | Description |
 |-------------|-------------|
-| `state` - [`FilterEqualTypeInput`](#filterequaltypeinput) | Filter by state of one or more negotiable quote templates. |
-| `status` - [`FilterEqualTypeInput`](#filterequaltypeinput) | Filter by status of one or more negotiable quote templates. |
+| `state` - [`FilterEqualTypeInput`](types-f-i.md#filterequaltypeinput) | Filter by state of one or more negotiable quote templates. |
+| `status` - [`FilterEqualTypeInput`](types-f-i.md#filterequaltypeinput) | Filter by status of one or more negotiable quote templates. |
 
 #### Example
 
@@ -1219,21 +1219,21 @@ Contains data for a negotiable quote template in a grid.
 
 | Field Name | Description |
 |------------|-------------|
-| `activated_at` - [`String!`](#string) | The date and time the negotiable quote template was activated. |
-| `company_name` - [`String!`](#string) | Company name the quote template is assigned to |
-| `expiration_date` - [`String!`](#string) | The expiration period of the negotiable quote template. |
-| `is_min_max_qty_used` - [`Boolean!`](#boolean) | Indicates whether the minimum and maximum quantity settings are used. |
-| `last_shared_at` - [`String!`](#string) | The date and time the negotiable quote template was last shared. |
-| `max_order_commitment` - [`Int!`](#int) | Commitment for maximum orders |
-| `min_negotiated_grand_total` - [`Float!`](#float) | The minimum negotiated grand total of the negotiable quote template. |
-| `min_order_commitment` - [`Int!`](#int) | Commitment for minimum orders |
-| `name` - [`String!`](#string) | The title assigned to the negotiable quote template. |
-| `orders_placed` - [`Int!`](#int) | The number of orders placed for the negotiable quote template. |
-| `sales_rep_name` - [`String!`](#string) | The first and last name of the sales representative. |
-| `state` - [`String!`](#string) | State of the negotiable quote template. |
-| `status` - [`String!`](#string) | The status of the negotiable quote template. |
-| `submitted_by` - [`String!`](#string) | The first and last name of the buyer. |
-| `template_id` - [`ID!`](#id) | The unique ID of a `NegotiableQuoteTemplate` object. |
+| `activated_at` - [`String!`](types-q-s.md#string) | The date and time the negotiable quote template was activated. |
+| `company_name` - [`String!`](types-q-s.md#string) | Company name the quote template is assigned to |
+| `expiration_date` - [`String!`](types-q-s.md#string) | The expiration period of the negotiable quote template. |
+| `is_min_max_qty_used` - [`Boolean!`](types-a-b.md#boolean) | Indicates whether the minimum and maximum quantity settings are used. |
+| `last_shared_at` - [`String!`](types-q-s.md#string) | The date and time the negotiable quote template was last shared. |
+| `max_order_commitment` - [`Int!`](types-f-i.md#int) | Commitment for maximum orders |
+| `min_negotiated_grand_total` - [`Float!`](types-f-i.md#float) | The minimum negotiated grand total of the negotiable quote template. |
+| `min_order_commitment` - [`Int!`](types-f-i.md#int) | Commitment for minimum orders |
+| `name` - [`String!`](types-q-s.md#string) | The title assigned to the negotiable quote template. |
+| `orders_placed` - [`Int!`](types-f-i.md#int) | The number of orders placed for the negotiable quote template. |
+| `sales_rep_name` - [`String!`](types-q-s.md#string) | The first and last name of the sales representative. |
+| `state` - [`String!`](types-q-s.md#string) | State of the negotiable quote template. |
+| `status` - [`String!`](types-q-s.md#string) | The status of the negotiable quote template. |
+| `submitted_by` - [`String!`](types-q-s.md#string) | The first and last name of the buyer. |
+| `template_id` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuoteTemplate` object. |
 
 #### Example
 
@@ -1241,19 +1241,19 @@ Contains data for a negotiable quote template in a grid.
 {
   "activated_at": "abc123",
   "company_name": "xyz789",
-  "expiration_date": "xyz789",
-  "is_min_max_qty_used": false,
-  "last_shared_at": "abc123",
-  "max_order_commitment": 123,
+  "expiration_date": "abc123",
+  "is_min_max_qty_used": true,
+  "last_shared_at": "xyz789",
+  "max_order_commitment": 987,
   "min_negotiated_grand_total": 987.65,
-  "min_order_commitment": 987,
+  "min_order_commitment": 123,
   "name": "abc123",
   "orders_placed": 987,
-  "sales_rep_name": "abc123",
-  "state": "xyz789",
-  "status": "xyz789",
-  "submitted_by": "xyz789",
-  "template_id": 4
+  "sales_rep_name": "xyz789",
+  "state": "abc123",
+  "status": "abc123",
+  "submitted_by": "abc123",
+  "template_id": "4"
 }
 ```
 
@@ -1267,10 +1267,10 @@ Specifies the updated quantity of an item.
 
 | Input Field | Description |
 |-------------|-------------|
-| `item_id` - [`ID!`](#id) | The unique ID of a `CartItemInterface` object. |
-| `max_qty` - [`Float`](#float) | The new max quantity of the negotiable quote template item. Only used if is_min_max_qty_used is true on the template. |
-| `min_qty` - [`Float`](#float) | The new min quantity of the negotiable quote template item. Only used if is_min_max_qty_used is true on the template. |
-| `quantity` - [`Float!`](#float) | The new quantity of the negotiable quote item. |
+| `item_id` - [`ID!`](types-f-i.md#id) | The unique ID of a `CartItemInterface` object. |
+| `max_qty` - [`Float`](types-f-i.md#float) | The new max quantity of the negotiable quote template item. Only used if is_min_max_qty_used is true on the template. |
+| `min_qty` - [`Float`](types-f-i.md#float) | The new min quantity of the negotiable quote template item. Only used if is_min_max_qty_used is true on the template. |
+| `quantity` - [`Float!`](types-f-i.md#float) | The new quantity of the negotiable quote item. |
 
 #### Example
 
@@ -1278,8 +1278,8 @@ Specifies the updated quantity of an item.
 {
   "item_id": "4",
   "max_qty": 123.45,
-  "min_qty": 987.65,
-  "quantity": 123.45
+  "min_qty": 123.45,
+  "quantity": 987.65
 }
 ```
 
@@ -1293,18 +1293,18 @@ Defines the reference document link to add to a negotiable quote template.
 
 | Input Field | Description |
 |-------------|-------------|
-| `document_identifier` - [`String`](#string) | The identifier of the reference document. |
-| `document_name` - [`String!`](#string) | The title of the reference document. |
-| `link_id` - [`ID`](#id) | The unique ID of a `NegotiableQuoteReferenceDocumentLink` object. |
-| `reference_document_url` - [`String!`](#string) | The URL of the reference document. |
+| `document_identifier` - [`String`](types-q-s.md#string) | The identifier of the reference document. |
+| `document_name` - [`String!`](types-q-s.md#string) | The title of the reference document. |
+| `link_id` - [`ID`](types-f-i.md#id) | The unique ID of a `NegotiableQuoteReferenceDocumentLink` object. |
+| `reference_document_url` - [`String!`](types-q-s.md#string) | The URL of the reference document. |
 
 #### Example
 
 ```json
 {
   "document_identifier": "abc123",
-  "document_name": "abc123",
-  "link_id": 4,
+  "document_name": "xyz789",
+  "link_id": "4",
   "reference_document_url": "xyz789"
 }
 ```
@@ -1320,16 +1320,16 @@ Defines shipping addresses for the negotiable quote template.
 | Input Field | Description |
 |-------------|-------------|
 | `address` - [`NegotiableQuoteAddressInput`](#negotiablequoteaddressinput) | A shipping address. |
-| `customer_address_uid` - [`ID`](#id) | An ID from the company user's address book that uniquely identifies the address to be used for shipping. |
-| `customer_notes` - [`String`](#string) | Text provided by the company user. |
+| `customer_address_uid` - [`ID`](types-f-i.md#id) | An ID from the company user's address book that uniquely identifies the address to be used for shipping. |
+| `customer_notes` - [`String`](types-q-s.md#string) | Text provided by the company user. |
 
 #### Example
 
 ```json
 {
   "address": NegotiableQuoteAddressInput,
-  "customer_address_uid": 4,
-  "customer_notes": "xyz789"
+  "customer_address_uid": "4",
+  "customer_notes": "abc123"
 }
 ```
 
@@ -1343,7 +1343,7 @@ Defines the field to use to sort a list of negotiable quotes.
 
 | Input Field | Description |
 |-------------|-------------|
-| `sort_direction` - [`SortEnum!`](#sortenum) | Whether to return results in ascending or descending order. |
+| `sort_direction` - [`SortEnum!`](types-q-s.md#sortenum) | Whether to return results in ascending or descending order. |
 | `sort_field` - [`NegotiableQuoteTemplateSortableField!`](#negotiablequotetemplatesortablefield) | The specified sort field. |
 
 #### Example
@@ -1380,9 +1380,9 @@ Contains a list of negotiable templates that match the specified filter.
 | Field Name | Description |
 |------------|-------------|
 | `items` - [`[NegotiableQuoteTemplateGridItem]!`](#negotiablequotetemplategriditem) | A list of negotiable quote templates |
-| `page_info` - [`SearchResultPageInfo!`](#searchresultpageinfo) | Contains pagination metadata |
-| `sort_fields` - [`SortFields`](#sortfields) | Contains the default sort field and all available sort fields. |
-| `total_count` - [`Int!`](#int) | The number of negotiable quote templates returned |
+| `page_info` - [`SearchResultPageInfo!`](types-q-s.md#searchresultpageinfo) | Contains pagination metadata |
+| `sort_fields` - [`SortFields`](types-q-s.md#sortfields) | Contains the default sort field and all available sort fields. |
+| `total_count` - [`Int!`](types-f-i.md#int) | The number of negotiable quote templates returned |
 
 #### Example
 
@@ -1391,7 +1391,7 @@ Contains a list of negotiable templates that match the specified filter.
   "items": [NegotiableQuoteTemplateGridItem],
   "page_info": SearchResultPageInfo,
   "sort_fields": SortFields,
-  "total_count": 987
+  "total_count": 123
 }
 ```
 
@@ -1403,7 +1403,7 @@ Contains a list of negotiable templates that match the specified filter.
 
 | Field Name | Description |
 |------------|-------------|
-| `quote_uid` - [`ID!`](#id) | The unique ID of a `NegotiableQuote` object. |
+| `quote_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
 
 #### Possible Types
 
@@ -1414,7 +1414,7 @@ Contains a list of negotiable templates that match the specified filter.
 #### Example
 
 ```json
-{"quote_uid": "4"}
+{"quote_uid": 4}
 ```
 
 <HorizontalLine />
@@ -1427,7 +1427,7 @@ Contains details about a successful operation on a negotiable quote.
 
 | Field Name | Description |
 |------------|-------------|
-| `quote_uid` - [`ID!`](#id) | The unique ID of a `NegotiableQuote` object. |
+| `quote_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
 
 #### Example
 
@@ -1445,8 +1445,8 @@ A limited view of a Buyer or Seller in the negotiable quote process.
 
 | Field Name | Description |
 |------------|-------------|
-| `firstname` - [`String!`](#string) | The first name of the buyer or seller making a change. |
-| `lastname` - [`String!`](#string) | The buyer's or seller's last name. |
+| `firstname` - [`String!`](types-q-s.md#string) | The first name of the buyer or seller making a change. |
+| `lastname` - [`String!`](types-q-s.md#string) | The buyer's or seller's last name. |
 
 #### Example
 
@@ -1468,9 +1468,9 @@ Contains a list of negotiable that match the specified filter.
 | Field Name | Description |
 |------------|-------------|
 | `items` - [`[NegotiableQuote]!`](#negotiablequote) | A list of negotiable quotes |
-| `page_info` - [`SearchResultPageInfo!`](#searchresultpageinfo) | Contains pagination metadata |
-| `sort_fields` - [`SortFields`](#sortfields) | Contains the default sort field and all available sort fields. |
-| `total_count` - [`Int!`](#int) | The number of negotiable quotes returned |
+| `page_info` - [`SearchResultPageInfo!`](types-q-s.md#searchresultpageinfo) | Contains pagination metadata |
+| `sort_fields` - [`SortFields`](types-q-s.md#sortfields) | Contains the default sort field and all available sort fields. |
+| `total_count` - [`Int!`](types-f-i.md#int) | The number of negotiable quotes returned |
 
 #### Example
 
@@ -1493,14 +1493,14 @@ Contains an error message when an invalid UID was specified.
 
 | Field Name | Description |
 |------------|-------------|
-| `message` - [`String!`](#string) | The returned error message. |
-| `uid` - [`ID!`](#id) | The specified invalid unique ID of an object. |
+| `message` - [`String!`](types-q-s.md#string) | The returned error message. |
+| `uid` - [`ID!`](types-f-i.md#id) | The specified invalid unique ID of an object. |
 
 #### Example
 
 ```json
 {
-  "message": "xyz789",
+  "message": "abc123",
   "uid": "4"
 }
 ```
@@ -1515,12 +1515,12 @@ Specifies the quote template id to open quote template.
 
 | Input Field | Description |
 |-------------|-------------|
-| `template_id` - [`ID!`](#id) | The unique ID of a `NegotiableQuoteTemplate` object. |
+| `template_id` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuoteTemplate` object. |
 
 #### Example
 
 ```json
-{"template_id": "4"}
+{"template_id": 4}
 ```
 
 <HorizontalLine />
@@ -1533,15 +1533,15 @@ Contains the order ID.
 
 | Field Name | Description |
 |------------|-------------|
-| `order_id` - [`String`](#string) |  *(Deprecated: Use `order_number` instead.)* |
-| `order_number` - [`String!`](#string) | The unique ID for an `Order` object. |
+| `order_id` - [`String`](types-q-s.md#string) |  *(Deprecated: Use `order_number` instead.)* |
+| `order_number` - [`String!`](types-q-s.md#string) | The unique ID for an `Order` object. |
 
 #### Example
 
 ```json
 {
-  "order_id": "abc123",
-  "order_number": "xyz789"
+  "order_id": "xyz789",
+  "order_number": "abc123"
 }
 ```
 
@@ -1575,41 +1575,41 @@ Contains detailed information about an order's billing and shipping addresses.
 
 | Field Name | Description |
 |------------|-------------|
-| `city` - [`String!`](#string) | The city or town. |
-| `company` - [`String`](#string) | The customer's company. |
-| `country_code` - [`CountryCodeEnum`](#countrycodeenum) | The customer's country. |
-| `custom_attributesV2` - [`[AttributeValueInterface]!`](#attributevalueinterface) | Custom attributes assigned to the customer address. |
-| `fax` - [`String`](#string) | The fax number. |
-| `firstname` - [`String!`](#string) | The first name of the person associated with the shipping/billing address. |
-| `lastname` - [`String!`](#string) | The family name of the person associated with the shipping/billing address. |
-| `middlename` - [`String`](#string) | The middle name of the person associated with the shipping/billing address. |
-| `postcode` - [`String`](#string) | The customer's ZIP or postal code. |
-| `prefix` - [`String`](#string) | An honorific, such as Dr., Mr., or Mrs. |
-| `region` - [`String`](#string) | The state or province name. |
-| `region_id` - [`ID`](#id) | The unique ID for a `Region` object of a pre-defined region. |
-| `street` - [`[String]!`](#string) | An array of strings that define the street number and name. |
-| `suffix` - [`String`](#string) | A value such as Sr., Jr., or III. |
-| `telephone` - [`String`](#string) | The telephone number. |
-| `vat_id` - [`String`](#string) | The customer's Value-added tax (VAT) number (for corporate customers). |
+| `city` - [`String!`](types-q-s.md#string) | The city or town. |
+| `company` - [`String`](types-q-s.md#string) | The customer's company. |
+| `country_code` - [`CountryCodeEnum`](types-c-e.md#countrycodeenum) | The customer's country. |
+| `custom_attributesV2` - [`[AttributeValueInterface]!`](types-a-b.md#attributevalueinterface) | Custom attributes assigned to the customer address. |
+| `fax` - [`String`](types-q-s.md#string) | The fax number. |
+| `firstname` - [`String!`](types-q-s.md#string) | The first name of the person associated with the shipping/billing address. |
+| `lastname` - [`String!`](types-q-s.md#string) | The family name of the person associated with the shipping/billing address. |
+| `middlename` - [`String`](types-q-s.md#string) | The middle name of the person associated with the shipping/billing address. |
+| `postcode` - [`String`](types-q-s.md#string) | The customer's ZIP or postal code. |
+| `prefix` - [`String`](types-q-s.md#string) | An honorific, such as Dr., Mr., or Mrs. |
+| `region` - [`String`](types-q-s.md#string) | The state or province name. |
+| `region_id` - [`ID`](types-f-i.md#id) | The unique ID for a `Region` object of a pre-defined region. |
+| `street` - [`[String]!`](types-q-s.md#string) | An array of strings that define the street number and name. |
+| `suffix` - [`String`](types-q-s.md#string) | A value such as Sr., Jr., or III. |
+| `telephone` - [`String`](types-q-s.md#string) | The telephone number. |
+| `vat_id` - [`String`](types-q-s.md#string) | The customer's Value-added tax (VAT) number (for corporate customers). |
 
 #### Example
 
 ```json
 {
-  "city": "abc123",
-  "company": "abc123",
+  "city": "xyz789",
+  "company": "xyz789",
   "country_code": "AF",
   "custom_attributesV2": [AttributeValueInterface],
   "fax": "abc123",
-  "firstname": "xyz789",
-  "lastname": "abc123",
-  "middlename": "xyz789",
-  "postcode": "abc123",
+  "firstname": "abc123",
+  "lastname": "xyz789",
+  "middlename": "abc123",
+  "postcode": "xyz789",
   "prefix": "abc123",
-  "region": "abc123",
+  "region": "xyz789",
   "region_id": "4",
-  "street": ["xyz789"],
-  "suffix": "abc123",
+  "street": ["abc123"],
+  "suffix": "xyz789",
   "telephone": "abc123",
   "vat_id": "abc123"
 }
@@ -1623,20 +1623,20 @@ Contains detailed information about an order's billing and shipping addresses.
 
 | Field Name | Description |
 |------------|-------------|
-| `firstname` - [`String!`](#string) | First name of the customer |
-| `lastname` - [`String`](#string) | Last name of the customer |
-| `middlename` - [`String`](#string) | Middle name of the customer |
-| `prefix` - [`String`](#string) | Prefix of the customer |
-| `suffix` - [`String`](#string) | Suffix of the customer |
+| `firstname` - [`String!`](types-q-s.md#string) | First name of the customer |
+| `lastname` - [`String`](types-q-s.md#string) | Last name of the customer |
+| `middlename` - [`String`](types-q-s.md#string) | Middle name of the customer |
+| `prefix` - [`String`](types-q-s.md#string) | Prefix of the customer |
+| `suffix` - [`String`](types-q-s.md#string) | Suffix of the customer |
 
 #### Example
 
 ```json
 {
-  "firstname": "xyz789",
+  "firstname": "abc123",
   "lastname": "abc123",
   "middlename": "xyz789",
-  "prefix": "xyz789",
+  "prefix": "abc123",
   "suffix": "abc123"
 }
 ```
@@ -1649,28 +1649,28 @@ Contains detailed information about an order's billing and shipping addresses.
 
 | Field Name | Description |
 |------------|-------------|
-| `discounts` - [`[Discount]`](#discount) | The final discount information for the product. |
-| `eligible_for_return` - [`Boolean`](#boolean) | Indicates whether the order item is eligible to be in a return request. |
+| `discounts` - [`[Discount]`](types-c-e.md#discount) | The final discount information for the product. |
+| `eligible_for_return` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the order item is eligible to be in a return request. |
 | `entered_options` - [`[OrderItemOption]`](#orderitemoption) | The entered option for the base product, such as a logo or image. |
-| `gift_message` - [`GiftMessage`](#giftmessage) | The selected gift message for the order item |
-| `gift_wrapping` - [`GiftWrapping`](#giftwrapping) | The selected gift wrapping for the order item. |
-| `id` - [`ID!`](#id) | The unique ID for an `OrderItemInterface` object. |
+| `gift_message` - [`GiftMessage`](types-f-i.md#giftmessage) | The selected gift message for the order item |
+| `gift_wrapping` - [`GiftWrapping`](types-f-i.md#giftwrapping) | The selected gift wrapping for the order item. |
+| `id` - [`ID!`](types-f-i.md#id) | The unique ID for an `OrderItemInterface` object. |
 | `prices` - [`OrderItemPrices`](#orderitemprices) | Contains details about the price of the item, including taxes and discounts. |
 | `product` - [`ProductInterface`](#productinterface) | The ProductInterface object, which contains details about the base product |
-| `product_name` - [`String`](#string) | The name of the base product. |
+| `product_name` - [`String`](types-q-s.md#string) | The name of the base product. |
 | `product_sale_price` - [`Money!`](#money) | The sale price of the base product, including selected options. |
-| `product_sku` - [`String!`](#string) | The SKU of the base product. |
-| `product_type` - [`String`](#string) | The type of product, such as simple, configurable, etc. |
-| `product_url_key` - [`String`](#string) | URL key of the base product. |
-| `quantity_canceled` - [`Float`](#float) | The number of canceled items. |
-| `quantity_invoiced` - [`Float`](#float) | The number of invoiced items. |
-| `quantity_ordered` - [`Float`](#float) | The number of units ordered for this item. |
-| `quantity_refunded` - [`Float`](#float) | The number of refunded items. |
-| `quantity_return_requested` - [`Float`](#float) | The requested return quantity of the item. |
-| `quantity_returned` - [`Float`](#float) | The number of returned items. |
-| `quantity_shipped` - [`Float`](#float) | The number of shipped items. |
+| `product_sku` - [`String!`](types-q-s.md#string) | The SKU of the base product. |
+| `product_type` - [`String`](types-q-s.md#string) | The type of product, such as simple, configurable, etc. |
+| `product_url_key` - [`String`](types-q-s.md#string) | URL key of the base product. |
+| `quantity_canceled` - [`Float`](types-f-i.md#float) | The number of canceled items. |
+| `quantity_invoiced` - [`Float`](types-f-i.md#float) | The number of invoiced items. |
+| `quantity_ordered` - [`Float`](types-f-i.md#float) | The number of units ordered for this item. |
+| `quantity_refunded` - [`Float`](types-f-i.md#float) | The number of refunded items. |
+| `quantity_return_requested` - [`Float`](types-f-i.md#float) | The requested return quantity of the item. |
+| `quantity_returned` - [`Float`](types-f-i.md#float) | The number of returned items. |
+| `quantity_shipped` - [`Float`](types-f-i.md#float) | The number of shipped items. |
 | `selected_options` - [`[OrderItemOption]`](#orderitemoption) | The selected options for the base product, such as color or size. |
-| `status` - [`String`](#string) | The status of the order item. |
+| `status` - [`String`](types-q-s.md#string) | The status of the order item. |
 
 #### Example
 
@@ -1681,20 +1681,20 @@ Contains detailed information about an order's billing and shipping addresses.
   "entered_options": [OrderItemOption],
   "gift_message": GiftMessage,
   "gift_wrapping": GiftWrapping,
-  "id": "4",
+  "id": 4,
   "prices": OrderItemPrices,
   "product": ProductInterface,
-  "product_name": "abc123",
+  "product_name": "xyz789",
   "product_sale_price": Money,
   "product_sku": "abc123",
   "product_type": "abc123",
   "product_url_key": "abc123",
   "quantity_canceled": 123.45,
-  "quantity_invoiced": 987.65,
-  "quantity_ordered": 123.45,
+  "quantity_invoiced": 123.45,
+  "quantity_ordered": 987.65,
   "quantity_refunded": 123.45,
-  "quantity_return_requested": 987.65,
-  "quantity_returned": 987.65,
+  "quantity_return_requested": 123.45,
+  "quantity_returned": 123.45,
   "quantity_shipped": 123.45,
   "selected_options": [OrderItemOption],
   "status": "abc123"
@@ -1711,37 +1711,37 @@ Order item details.
 
 | Field Name | Description |
 |------------|-------------|
-| `discounts` - [`[Discount]`](#discount) | The final discount information for the product. |
-| `eligible_for_return` - [`Boolean`](#boolean) | Indicates whether the order item is eligible to be in a return request. |
+| `discounts` - [`[Discount]`](types-c-e.md#discount) | The final discount information for the product. |
+| `eligible_for_return` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the order item is eligible to be in a return request. |
 | `entered_options` - [`[OrderItemOption]`](#orderitemoption) | The entered option for the base product, such as a logo or image. |
-| `gift_message` - [`GiftMessage`](#giftmessage) | The selected gift message for the order item |
-| `gift_wrapping` - [`GiftWrapping`](#giftwrapping) | The selected gift wrapping for the order item. |
-| `id` - [`ID!`](#id) | The unique ID for an `OrderItemInterface` object. |
+| `gift_message` - [`GiftMessage`](types-f-i.md#giftmessage) | The selected gift message for the order item |
+| `gift_wrapping` - [`GiftWrapping`](types-f-i.md#giftwrapping) | The selected gift wrapping for the order item. |
+| `id` - [`ID!`](types-f-i.md#id) | The unique ID for an `OrderItemInterface` object. |
 | `prices` - [`OrderItemPrices`](#orderitemprices) | Contains details about the price of the item, including taxes and discounts. |
 | `product` - [`ProductInterface`](#productinterface) | The ProductInterface object, which contains details about the base product |
-| `product_name` - [`String`](#string) | The name of the base product. |
+| `product_name` - [`String`](types-q-s.md#string) | The name of the base product. |
 | `product_sale_price` - [`Money!`](#money) | The sale price of the base product, including selected options. |
-| `product_sku` - [`String!`](#string) | The SKU of the base product. |
-| `product_type` - [`String`](#string) | The type of product, such as simple, configurable, etc. |
-| `product_url_key` - [`String`](#string) | URL key of the base product. |
-| `quantity_canceled` - [`Float`](#float) | The number of canceled items. |
-| `quantity_invoiced` - [`Float`](#float) | The number of invoiced items. |
-| `quantity_ordered` - [`Float`](#float) | The number of units ordered for this item. |
-| `quantity_refunded` - [`Float`](#float) | The number of refunded items. |
-| `quantity_return_requested` - [`Float`](#float) | The requested return quantity of the item. |
-| `quantity_returned` - [`Float`](#float) | The number of returned items. |
-| `quantity_shipped` - [`Float`](#float) | The number of shipped items. |
+| `product_sku` - [`String!`](types-q-s.md#string) | The SKU of the base product. |
+| `product_type` - [`String`](types-q-s.md#string) | The type of product, such as simple, configurable, etc. |
+| `product_url_key` - [`String`](types-q-s.md#string) | URL key of the base product. |
+| `quantity_canceled` - [`Float`](types-f-i.md#float) | The number of canceled items. |
+| `quantity_invoiced` - [`Float`](types-f-i.md#float) | The number of invoiced items. |
+| `quantity_ordered` - [`Float`](types-f-i.md#float) | The number of units ordered for this item. |
+| `quantity_refunded` - [`Float`](types-f-i.md#float) | The number of refunded items. |
+| `quantity_return_requested` - [`Float`](types-f-i.md#float) | The requested return quantity of the item. |
+| `quantity_returned` - [`Float`](types-f-i.md#float) | The number of returned items. |
+| `quantity_shipped` - [`Float`](types-f-i.md#float) | The number of shipped items. |
 | `selected_options` - [`[OrderItemOption]`](#orderitemoption) | The selected options for the base product, such as color or size. |
-| `status` - [`String`](#string) | The status of the order item. |
+| `status` - [`String`](types-q-s.md#string) | The status of the order item. |
 
 #### Possible Types
 
 | OrderItemInterface Types |
 |----------------|
-| [`ConfigurableOrderItem`](#configurableorderitem) |
-| [`DownloadableOrderItem`](#downloadableorderitem) |
-| [`BundleOrderItem`](#bundleorderitem) |
-| [`GiftCardOrderItem`](#giftcardorderitem) |
+| [`ConfigurableOrderItem`](types-c-e.md#configurableorderitem) |
+| [`DownloadableOrderItem`](types-c-e.md#downloadableorderitem) |
+| [`BundleOrderItem`](types-a-b.md#bundleorderitem) |
+| [`GiftCardOrderItem`](types-f-i.md#giftcardorderitem) |
 | [`OrderItem`](#orderitem) |
 
 #### Example
@@ -1756,14 +1756,14 @@ Order item details.
   "id": 4,
   "prices": OrderItemPrices,
   "product": ProductInterface,
-  "product_name": "xyz789",
+  "product_name": "abc123",
   "product_sale_price": Money,
-  "product_sku": "abc123",
-  "product_type": "abc123",
+  "product_sku": "xyz789",
+  "product_type": "xyz789",
   "product_url_key": "xyz789",
-  "quantity_canceled": 123.45,
+  "quantity_canceled": 987.65,
   "quantity_invoiced": 123.45,
-  "quantity_ordered": 123.45,
+  "quantity_ordered": 987.65,
   "quantity_refunded": 987.65,
   "quantity_return_requested": 123.45,
   "quantity_returned": 987.65,
@@ -1783,14 +1783,14 @@ Represents order item options like selected or entered.
 
 | Field Name | Description |
 |------------|-------------|
-| `label` - [`String!`](#string) | The name of the option. |
-| `value` - [`String!`](#string) | The value of the option. |
+| `label` - [`String!`](types-q-s.md#string) | The name of the option. |
+| `value` - [`String!`](types-q-s.md#string) | The value of the option. |
 
 #### Example
 
 ```json
 {
-  "label": "abc123",
+  "label": "xyz789",
   "value": "abc123"
 }
 ```
@@ -1803,8 +1803,8 @@ Represents order item options like selected or entered.
 
 | Field Name | Description |
 |------------|-------------|
-| `discounts` - [`[Discount]`](#discount) | An array of discounts to be applied to the cart item. |
-| `fixed_product_taxes` - [`[FixedProductTax]!`](#fixedproducttax) |  |
+| `discounts` - [`[Discount]`](types-c-e.md#discount) | An array of discounts to be applied to the cart item. |
+| `fixed_product_taxes` - [`[FixedProductTax]!`](types-f-i.md#fixedproducttax) |  |
 | `original_price` - [`Money`](#money) | The original price of the item. |
 | `original_price_including_tax` - [`Money`](#money) | The original price of the item including tax. |
 | `original_row_total` - [`Money!`](#money) | The value of the original price multiplied by the quantity of the item. |
@@ -1844,8 +1844,8 @@ Contains details about the payment method used to pay for the order.
 | Field Name | Description |
 |------------|-------------|
 | `additional_data` - [`[KeyValue]`](#keyvalue) | Additional data per payment method type. |
-| `name` - [`String!`](#string) | The label that describes the payment method. |
-| `type` - [`String!`](#string) | The payment method code that indicates how the order was paid for. |
+| `name` - [`String!`](types-q-s.md#string) | The label that describes the payment method. |
+| `type` - [`String!`](types-q-s.md#string) | The payment method code that indicates how the order was paid for. |
 
 #### Example
 
@@ -1853,7 +1853,7 @@ Contains details about the payment method used to pay for the order.
 {
   "additional_data": [KeyValue],
   "name": "abc123",
-  "type": "xyz789"
+  "type": "abc123"
 }
 ```
 
@@ -1867,18 +1867,18 @@ Contains order shipment details.
 
 | Field Name | Description |
 |------------|-------------|
-| `comments` - [`[SalesCommentItem]`](#salescommentitem) | Comments added to the shipment. |
-| `id` - [`ID!`](#id) | The unique ID for a `OrderShipment` object. |
-| `items` - [`[ShipmentItemInterface]`](#shipmentiteminterface) | An array of items included in the shipment. |
-| `number` - [`String!`](#string) | The sequential credit shipment number. |
-| `tracking` - [`[ShipmentTracking]`](#shipmenttracking) | An array of shipment tracking details. |
+| `comments` - [`[SalesCommentItem]`](types-q-s.md#salescommentitem) | Comments added to the shipment. |
+| `id` - [`ID!`](types-f-i.md#id) | The unique ID for a `OrderShipment` object. |
+| `items` - [`[ShipmentItemInterface]`](types-q-s.md#shipmentiteminterface) | An array of items included in the shipment. |
+| `number` - [`String!`](types-q-s.md#string) | The sequential credit shipment number. |
+| `tracking` - [`[ShipmentTracking]`](types-q-s.md#shipmenttracking) | An array of shipment tracking details. |
 
 #### Example
 
 ```json
 {
   "comments": [SalesCommentItem],
-  "id": "4",
+  "id": 4,
   "items": [ShipmentItemInterface],
   "number": "abc123",
   "tracking": [ShipmentTracking]
@@ -1895,7 +1895,7 @@ Input to retrieve an order based on token.
 
 | Input Field | Description |
 |-------------|-------------|
-| `token` - [`String!`](#string) | Order token. |
+| `token` - [`String!`](types-q-s.md#string) | Order token. |
 
 #### Example
 
@@ -1914,15 +1914,15 @@ Contains details about the sales total amounts used to calculate the final price
 | Field Name | Description |
 |------------|-------------|
 | `base_grand_total` - [`Money!`](#money) | The final base grand total amount in the base currency. |
-| `discounts` - [`[Discount]`](#discount) | The applied discounts to the order. |
-| `gift_options` - [`GiftOptionsPrices`](#giftoptionsprices) |  |
+| `discounts` - [`[Discount]`](types-c-e.md#discount) | The applied discounts to the order. |
+| `gift_options` - [`GiftOptionsPrices`](types-f-i.md#giftoptionsprices) |  |
 | `grand_total` - [`Money!`](#money) | The final total amount, including shipping, discounts, and taxes. |
 | `grand_total_excl_tax` - [`Money!`](#money) | The grand total of the order, excluding taxes. |
-| `shipping_handling` - [`ShippingHandling`](#shippinghandling) | Details about the shipping and handling costs for the order. |
+| `shipping_handling` - [`ShippingHandling`](types-q-s.md#shippinghandling) | Details about the shipping and handling costs for the order. |
 | `subtotal` - [`Money!`](#money) | The subtotal of the order, excluding shipping, discounts, and taxes. *(Deprecated: Use subtotal_excl_tax field instead)* |
 | `subtotal_excl_tax` - [`Money!`](#money) | The subtotal of the order, excluding taxes. |
 | `subtotal_incl_tax` - [`Money!`](#money) | The subtotal of the order, including taxes. |
-| `taxes` - [`[TaxItem]`](#taxitem) | The order tax details. |
+| `taxes` - [`[TaxItem]`](types-t-z.md#taxitem) | The order tax details. |
 | `total_giftcard` - [`Money`](#money) | The gift card balance applied to the order. |
 | `total_reward_points` - [`Money`](#money) | The total reward points applied to the order. |
 | `total_shipping` - [`Money!`](#money) | The shipping amount for the order. |
@@ -1961,14 +1961,14 @@ Contains required input for Payflow Express Checkout payments.
 
 | Input Field | Description |
 |-------------|-------------|
-| `payer_id` - [`String!`](#string) | The unique ID of the PayPal user. |
-| `token` - [`String!`](#string) | The token returned by the createPaypalExpressToken mutation. |
+| `payer_id` - [`String!`](types-q-s.md#string) | The unique ID of the PayPal user. |
+| `token` - [`String!`](types-q-s.md#string) | The token returned by the createPaypalExpressToken mutation. |
 
 #### Example
 
 ```json
 {
-  "payer_id": "xyz789",
+  "payer_id": "abc123",
   "token": "xyz789"
 }
 ```
@@ -1983,17 +1983,17 @@ A set of relative URLs that PayPal uses in response to various actions during th
 
 | Input Field | Description |
 |-------------|-------------|
-| `cancel_url` - [`String!`](#string) | The relative URL of the page that PayPal redirects to when the buyer cancels the transaction in order to choose a different payment method. If the full URL to this page is https://www.example.com/paypal/action/cancel.html, the relative URL is paypal/action/cancel.html. |
-| `error_url` - [`String!`](#string) | The relative URL of the transaction error page that PayPal redirects to upon payment error. If the full URL to this page is https://www.example.com/paypal/action/error.html, the relative URL is paypal/action/error.html. |
-| `return_url` - [`String!`](#string) | The relative URL of the order confirmation page that PayPal redirects to when the payment is successful and additional confirmation is not needed. If the full URL to this page is https://www.example.com/paypal/action/return.html, the relative URL is paypal/action/return.html. |
+| `cancel_url` - [`String!`](types-q-s.md#string) | The relative URL of the page that PayPal redirects to when the buyer cancels the transaction in order to choose a different payment method. If the full URL to this page is https://www.example.com/paypal/action/cancel.html, the relative URL is paypal/action/cancel.html. |
+| `error_url` - [`String!`](types-q-s.md#string) | The relative URL of the transaction error page that PayPal redirects to upon payment error. If the full URL to this page is https://www.example.com/paypal/action/error.html, the relative URL is paypal/action/error.html. |
+| `return_url` - [`String!`](types-q-s.md#string) | The relative URL of the order confirmation page that PayPal redirects to when the payment is successful and additional confirmation is not needed. If the full URL to this page is https://www.example.com/paypal/action/return.html, the relative URL is paypal/action/return.html. |
 
 #### Example
 
 ```json
 {
-  "cancel_url": "xyz789",
+  "cancel_url": "abc123",
   "error_url": "abc123",
-  "return_url": "xyz789"
+  "return_url": "abc123"
 }
 ```
 
@@ -2027,9 +2027,9 @@ Contains information used to generate PayPal iframe for transaction. Applies to 
 | Field Name | Description |
 |------------|-------------|
 | `mode` - [`PayflowLinkMode`](#payflowlinkmode) | The mode for the Payflow transaction. |
-| `paypal_url` - [`String`](#string) | The PayPal URL used for requesting a Payflow form. |
-| `secure_token` - [`String`](#string) | The secure token generated by PayPal. |
-| `secure_token_id` - [`String`](#string) | The secure token ID generated by PayPal. |
+| `paypal_url` - [`String`](types-q-s.md#string) | The PayPal URL used for requesting a Payflow form. |
+| `secure_token` - [`String`](types-q-s.md#string) | The secure token generated by PayPal. |
+| `secure_token_id` - [`String`](types-q-s.md#string) | The secure token ID generated by PayPal. |
 
 #### Example
 
@@ -2038,7 +2038,7 @@ Contains information used to generate PayPal iframe for transaction. Applies to 
   "mode": "TEST",
   "paypal_url": "xyz789",
   "secure_token": "abc123",
-  "secure_token_id": "abc123"
+  "secure_token_id": "xyz789"
 }
 ```
 
@@ -2052,12 +2052,12 @@ Contains information required to fetch payment token information for the Payflow
 
 | Input Field | Description |
 |-------------|-------------|
-| `cart_id` - [`String!`](#string) | The unique ID that identifies the customer's cart. |
+| `cart_id` - [`String!`](types-q-s.md#string) | The unique ID that identifies the customer's cart. |
 
 #### Example
 
 ```json
-{"cart_id": "abc123"}
+{"cart_id": "xyz789"}
 ```
 
 <HorizontalLine />
@@ -2070,8 +2070,8 @@ Contains input for the Payflow Pro and Payments Pro payment methods.
 
 | Input Field | Description |
 |-------------|-------------|
-| `cc_details` - [`CreditCardDetailsInput!`](#creditcarddetailsinput) | Required input for credit card related information. |
-| `is_active_payment_token_enabler` - [`Boolean`](#boolean) | Indicates whether details about the shopper's credit/debit card should be tokenized for later usage. Required only if Vault is enabled for the PayPal Payflow Pro payment integration. |
+| `cc_details` - [`CreditCardDetailsInput!`](types-c-e.md#creditcarddetailsinput) | Required input for credit card related information. |
+| `is_active_payment_token_enabler` - [`Boolean`](types-a-b.md#boolean) | Indicates whether details about the shopper's credit/debit card should be tokenized for later usage. Required only if Vault is enabled for the PayPal Payflow Pro payment integration. |
 
 #### Example
 
@@ -2092,14 +2092,14 @@ Input required to complete payment. Applies to Payflow Pro and Payments Pro paym
 
 | Input Field | Description |
 |-------------|-------------|
-| `cart_id` - [`String!`](#string) | The unique ID that identifies the shopper's cart. |
-| `paypal_payload` - [`String!`](#string) | The payload returned from PayPal. |
+| `cart_id` - [`String!`](types-q-s.md#string) | The unique ID that identifies the shopper's cart. |
+| `paypal_payload` - [`String!`](types-q-s.md#string) | The payload returned from PayPal. |
 
 #### Example
 
 ```json
 {
-  "cart_id": "xyz789",
+  "cart_id": "abc123",
   "paypal_payload": "xyz789"
 }
 ```
@@ -2112,7 +2112,7 @@ Input required to complete payment. Applies to Payflow Pro and Payments Pro paym
 
 | Field Name | Description |
 |------------|-------------|
-| `cart` - [`Cart!`](#cart) | The cart with the updated selected payment method. |
+| `cart` - [`Cart!`](types-c-e.md#cart) | The cart with the updated selected payment method. |
 
 #### Example
 
@@ -2130,7 +2130,7 @@ Contains input required to fetch payment token information for the Payflow Pro a
 
 | Input Field | Description |
 |-------------|-------------|
-| `cart_id` - [`String!`](#string) | The unique ID that identifies the shopper's cart. |
+| `cart_id` - [`String!`](types-q-s.md#string) | The unique ID that identifies the shopper's cart. |
 | `urls` - [`PayflowProUrlInput!`](#payflowprourlinput) | A set of relative URLs that PayPal uses for callback. |
 
 #### Example
@@ -2152,17 +2152,17 @@ Contains a set of relative URLs that PayPal uses in response to various actions 
 
 | Input Field | Description |
 |-------------|-------------|
-| `cancel_url` - [`String!`](#string) | The relative URL of the page that PayPal redirects to when the buyer cancels the transaction in order to choose a different payment method. If the full URL to this page is https://www.example.com/paypal/action/cancel.html, the relative URL is paypal/action/cancel.html. |
-| `error_url` - [`String!`](#string) | The relative URL of the transaction error page that PayPal redirects to upon payment error. If the full URL to this page is https://www.example.com/paypal/action/error.html, the relative URL is paypal/action/error.html. |
-| `return_url` - [`String!`](#string) | The relative URL of the final confirmation page that PayPal redirects to upon payment success. If the full URL to this page is https://www.example.com/paypal/action/return.html, the relative URL is paypal/action/return.html. |
+| `cancel_url` - [`String!`](types-q-s.md#string) | The relative URL of the page that PayPal redirects to when the buyer cancels the transaction in order to choose a different payment method. If the full URL to this page is https://www.example.com/paypal/action/cancel.html, the relative URL is paypal/action/cancel.html. |
+| `error_url` - [`String!`](types-q-s.md#string) | The relative URL of the transaction error page that PayPal redirects to upon payment error. If the full URL to this page is https://www.example.com/paypal/action/error.html, the relative URL is paypal/action/error.html. |
+| `return_url` - [`String!`](types-q-s.md#string) | The relative URL of the final confirmation page that PayPal redirects to upon payment success. If the full URL to this page is https://www.example.com/paypal/action/return.html, the relative URL is paypal/action/return.html. |
 
 #### Example
 
 ```json
 {
-  "cancel_url": "abc123",
+  "cancel_url": "xyz789",
   "error_url": "abc123",
-  "return_url": "abc123"
+  "return_url": "xyz789"
 }
 ```
 
@@ -2176,33 +2176,33 @@ Contains payment fields that are common to all types of payment methods.
 
 | Field Name | Description |
 |------------|-------------|
-| `code` - [`String`](#string) | The payment method code as defined in the payment gateway |
-| `is_visible` - [`Boolean`](#boolean) | Indicates whether the payment method is displayed |
-| `payment_intent` - [`String`](#string) | Defines the payment intent (Authorize or Capture |
-| `sdk_params` - [`[SDKParams]`](#sdkparams) | The PayPal parameters required to load the JS SDK |
-| `sort_order` - [`String`](#string) | The relative order the payment method is displayed on the checkout page |
-| `title` - [`String`](#string) | The name displayed for the payment method |
+| `code` - [`String`](types-q-s.md#string) | The payment method code as defined in the payment gateway |
+| `is_visible` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the payment method is displayed |
+| `payment_intent` - [`String`](types-q-s.md#string) | Defines the payment intent (Authorize or Capture |
+| `sdk_params` - [`[SDKParams]`](types-q-s.md#sdkparams) | The PayPal parameters required to load the JS SDK |
+| `sort_order` - [`String`](types-q-s.md#string) | The relative order the payment method is displayed on the checkout page |
+| `title` - [`String`](types-q-s.md#string) | The name displayed for the payment method |
 
 #### Possible Types
 
 | PaymentConfigItem Types |
 |----------------|
-| [`HostedFieldsConfig`](#hostedfieldsconfig) |
-| [`SmartButtonsConfig`](#smartbuttonsconfig) |
-| [`ApplePayConfig`](#applepayconfig) |
-| [`GooglePayConfig`](#googlepayconfig) |
-| [`FastlaneConfig`](#fastlaneconfig) |
+| [`HostedFieldsConfig`](types-f-i.md#hostedfieldsconfig) |
+| [`SmartButtonsConfig`](types-q-s.md#smartbuttonsconfig) |
+| [`ApplePayConfig`](types-a-b.md#applepayconfig) |
+| [`GooglePayConfig`](types-f-i.md#googlepayconfig) |
+| [`FastlaneConfig`](types-f-i.md#fastlaneconfig) |
 
 #### Example
 
 ```json
 {
-  "code": "xyz789",
-  "is_visible": true,
-  "payment_intent": "abc123",
+  "code": "abc123",
+  "is_visible": false,
+  "payment_intent": "xyz789",
   "sdk_params": [SDKParams],
   "sort_order": "abc123",
-  "title": "abc123"
+  "title": "xyz789"
 }
 ```
 
@@ -2216,11 +2216,11 @@ Retrieves the payment configuration for a given location
 
 | Field Name | Description |
 |------------|-------------|
-| `apple_pay` - [`ApplePayConfig`](#applepayconfig) | ApplePay payment method configuration |
-| `fastlane` - [`FastlaneConfig`](#fastlaneconfig) | Fastlane payment method configuration |
-| `google_pay` - [`GooglePayConfig`](#googlepayconfig) | GooglePay payment method configuration |
-| `hosted_fields` - [`HostedFieldsConfig`](#hostedfieldsconfig) | Hosted fields payment method configuration |
-| `smart_buttons` - [`SmartButtonsConfig`](#smartbuttonsconfig) | Smart Buttons payment method configuration |
+| `apple_pay` - [`ApplePayConfig`](types-a-b.md#applepayconfig) | ApplePay payment method configuration |
+| `fastlane` - [`FastlaneConfig`](types-f-i.md#fastlaneconfig) | Fastlane payment method configuration |
+| `google_pay` - [`GooglePayConfig`](types-f-i.md#googlepayconfig) | GooglePay payment method configuration |
+| `hosted_fields` - [`HostedFieldsConfig`](types-f-i.md#hostedfieldsconfig) | Hosted fields payment method configuration |
+| `smart_buttons` - [`SmartButtonsConfig`](types-q-s.md#smartbuttonsconfig) | Smart Buttons payment method configuration |
 
 #### Example
 
@@ -2267,28 +2267,28 @@ Defines the payment method.
 
 | Input Field | Description |
 |-------------|-------------|
-| `braintree` - [`BraintreeInput`](#braintreeinput) |  |
-| `braintree_ach_direct_debit` - [`BraintreeInput`](#braintreeinput) |  |
-| `braintree_ach_direct_debit_vault` - [`BraintreeVaultInput`](#braintreevaultinput) |  |
-| `braintree_applepay_vault` - [`BraintreeVaultInput`](#braintreevaultinput) |  |
-| `braintree_cc_vault` - [`BraintreeCcVaultInput`](#braintreeccvaultinput) |  |
-| `braintree_googlepay_vault` - [`BraintreeVaultInput`](#braintreevaultinput) |  |
-| `braintree_paypal` - [`BraintreeInput`](#braintreeinput) |  |
-| `braintree_paypal_vault` - [`BraintreeVaultInput`](#braintreevaultinput) |  |
-| `code` - [`String!`](#string) | The internal name for the payment method. |
-| `hosted_pro` - [`HostedProInput`](#hostedproinput) | Required input for PayPal Hosted pro payments. |
+| `braintree` - [`BraintreeInput`](types-a-b.md#braintreeinput) |  |
+| `braintree_ach_direct_debit` - [`BraintreeInput`](types-a-b.md#braintreeinput) |  |
+| `braintree_ach_direct_debit_vault` - [`BraintreeVaultInput`](types-a-b.md#braintreevaultinput) |  |
+| `braintree_applepay_vault` - [`BraintreeVaultInput`](types-a-b.md#braintreevaultinput) |  |
+| `braintree_cc_vault` - [`BraintreeCcVaultInput`](types-a-b.md#braintreeccvaultinput) |  |
+| `braintree_googlepay_vault` - [`BraintreeVaultInput`](types-a-b.md#braintreevaultinput) |  |
+| `braintree_paypal` - [`BraintreeInput`](types-a-b.md#braintreeinput) |  |
+| `braintree_paypal_vault` - [`BraintreeVaultInput`](types-a-b.md#braintreevaultinput) |  |
+| `code` - [`String!`](types-q-s.md#string) | The internal name for the payment method. |
+| `hosted_pro` - [`HostedProInput`](types-f-i.md#hostedproinput) | Required input for PayPal Hosted pro payments. |
 | `payflow_express` - [`PayflowExpressInput`](#payflowexpressinput) | Required input for Payflow Express Checkout payments. |
 | `payflow_link` - [`PayflowLinkInput`](#payflowlinkinput) | Required input for PayPal Payflow Link and Payments Advanced payments. |
 | `payflowpro` - [`PayflowProInput`](#payflowproinput) | Required input for PayPal Payflow Pro and Payment Pro payments. |
-| `payflowpro_cc_vault` - [`VaultTokenInput`](#vaulttokeninput) | Required input for PayPal Payflow Pro vault payments. |
-| `payment_services_paypal_apple_pay` - [`ApplePayMethodInput`](#applepaymethodinput) | Required input for Apple Pay button |
-| `payment_services_paypal_fastlane` - [`FastlaneMethodInput`](#fastlanemethodinput) | Required input for fastlane |
-| `payment_services_paypal_google_pay` - [`GooglePayMethodInput`](#googlepaymethodinput) | Required input for Google Pay button |
-| `payment_services_paypal_hosted_fields` - [`HostedFieldsInput`](#hostedfieldsinput) | Required input for Hosted Fields |
-| `payment_services_paypal_smart_buttons` - [`SmartButtonMethodInput`](#smartbuttonmethodinput) | Required input for Smart buttons |
-| `payment_services_paypal_vault` - [`VaultMethodInput`](#vaultmethodinput) | Required input for vault |
+| `payflowpro_cc_vault` - [`VaultTokenInput`](types-t-z.md#vaulttokeninput) | Required input for PayPal Payflow Pro vault payments. |
+| `payment_services_paypal_apple_pay` - [`ApplePayMethodInput`](types-a-b.md#applepaymethodinput) | Required input for Apple Pay button |
+| `payment_services_paypal_fastlane` - [`FastlaneMethodInput`](types-f-i.md#fastlanemethodinput) | Required input for fastlane |
+| `payment_services_paypal_google_pay` - [`GooglePayMethodInput`](types-f-i.md#googlepaymethodinput) | Required input for Google Pay button |
+| `payment_services_paypal_hosted_fields` - [`HostedFieldsInput`](types-f-i.md#hostedfieldsinput) | Required input for Hosted Fields |
+| `payment_services_paypal_smart_buttons` - [`SmartButtonMethodInput`](types-q-s.md#smartbuttonmethodinput) | Required input for Smart buttons |
+| `payment_services_paypal_vault` - [`VaultMethodInput`](types-t-z.md#vaultmethodinput) | Required input for vault |
 | `paypal_express` - [`PaypalExpressInput`](#paypalexpressinput) | Required input for Express Checkout and Payments Standard payments. |
-| `purchase_order_number` - [`String`](#string) | The purchase order number. Optional for most payment methods. |
+| `purchase_order_number` - [`String`](types-q-s.md#string) | The purchase order number. Optional for most payment methods. |
 
 #### Example
 
@@ -2302,7 +2302,7 @@ Defines the payment method.
   "braintree_googlepay_vault": BraintreeVaultInput,
   "braintree_paypal": BraintreeInput,
   "braintree_paypal_vault": BraintreeVaultInput,
-  "code": "xyz789",
+  "code": "abc123",
   "hosted_pro": HostedProInput,
   "payflow_express": PayflowExpressInput,
   "payflow_link": PayflowLinkInput,
@@ -2315,7 +2315,7 @@ Defines the payment method.
   "payment_services_paypal_smart_buttons": SmartButtonMethodInput,
   "payment_services_paypal_vault": VaultMethodInput,
   "paypal_express": PaypalExpressInput,
-  "purchase_order_number": "abc123"
+  "purchase_order_number": "xyz789"
 }
 ```
 
@@ -2329,19 +2329,19 @@ Contains the payment order details
 
 | Field Name | Description |
 |------------|-------------|
-| `id` - [`String`](#string) | PayPal order ID |
-| `mp_order_id` - [`String`](#string) | The order ID generated by Payment Services |
+| `id` - [`String`](types-q-s.md#string) | PayPal order ID |
+| `mp_order_id` - [`String`](types-q-s.md#string) | The order ID generated by Payment Services |
 | `payment_source_details` - [`PaymentSourceDetails`](#paymentsourcedetails) | Details about the card used on the order |
-| `status` - [`String`](#string) | The status of the payment order |
+| `status` - [`String`](types-q-s.md#string) | The status of the payment order |
 
 #### Example
 
 ```json
 {
   "id": "xyz789",
-  "mp_order_id": "xyz789",
+  "mp_order_id": "abc123",
   "payment_source_details": PaymentSourceDetails,
-  "status": "abc123"
+  "status": "xyz789"
 }
 ```
 
@@ -2353,14 +2353,14 @@ Contains the payment order details
 
 | Field Name | Description |
 |------------|-------------|
-| `code` - [`String`](#string) | The payment method code used in the order |
-| `params` - [`[SDKParams]`](#sdkparams) | The payment SDK parameters |
+| `code` - [`String`](types-q-s.md#string) | The payment method code used in the order |
+| `params` - [`[SDKParams]`](types-q-s.md#sdkparams) | The payment SDK parameters |
 
 #### Example
 
 ```json
 {
-  "code": "xyz789",
+  "code": "abc123",
   "params": [SDKParams]
 }
 ```
@@ -2373,7 +2373,7 @@ Contains the payment order details
 
 | Field Name | Description |
 |------------|-------------|
-| `card` - [`Card`](#card) | Details about the card used on the order |
+| `card` - [`Card`](types-c-e.md#card) | Details about the card used on the order |
 
 #### Example
 
@@ -2391,7 +2391,7 @@ The payment source information
 
 | Input Field | Description |
 |-------------|-------------|
-| `card` - [`CardPaymentSourceInput!`](#cardpaymentsourceinput) | The card payment source information |
+| `card` - [`CardPaymentSourceInput!`](types-c-e.md#cardpaymentsourceinput) | The card payment source information |
 
 #### Example
 
@@ -2409,7 +2409,7 @@ The payment source information
 
 | Field Name | Description |
 |------------|-------------|
-| `card` - [`CardPaymentSourceOutput!`](#cardpaymentsourceoutput) | The card payment source information |
+| `card` - [`CardPaymentSourceOutput!`](types-c-e.md#cardpaymentsourceoutput) | The card payment source information |
 
 #### Example
 
@@ -2427,18 +2427,18 @@ The stored payment method available to the customer.
 
 | Field Name | Description |
 |------------|-------------|
-| `details` - [`String`](#string) | A description of the stored account details. |
-| `payment_method_code` - [`String!`](#string) | The payment method code associated with the token. |
-| `public_hash` - [`String!`](#string) | The public hash of the token. |
+| `details` - [`String`](types-q-s.md#string) | A description of the stored account details. |
+| `payment_method_code` - [`String!`](types-q-s.md#string) | The payment method code associated with the token. |
+| `public_hash` - [`String!`](types-q-s.md#string) | The public hash of the token. |
 | `type` - [`PaymentTokenTypeEnum!`](#paymenttokentypeenum) | Specifies the payment token type. |
 
 #### Example
 
 ```json
 {
-  "details": "abc123",
+  "details": "xyz789",
   "payment_method_code": "abc123",
-  "public_hash": "abc123",
+  "public_hash": "xyz789",
   "type": "card"
 }
 ```
@@ -2472,15 +2472,15 @@ Contains required input for Express Checkout and Payments Standard payments.
 
 | Input Field | Description |
 |-------------|-------------|
-| `payer_id` - [`String!`](#string) | The unique ID of the PayPal user. |
-| `token` - [`String!`](#string) | The token returned by the `createPaypalExpressToken` mutation. |
+| `payer_id` - [`String!`](types-q-s.md#string) | The unique ID of the PayPal user. |
+| `token` - [`String!`](types-q-s.md#string) | The token returned by the `createPaypalExpressToken` mutation. |
 
 #### Example
 
 ```json
 {
-  "payer_id": "abc123",
-  "token": "abc123"
+  "payer_id": "xyz789",
+  "token": "xyz789"
 }
 ```
 
@@ -2494,18 +2494,18 @@ Defines the attributes required to receive a payment token for Express Checkout 
 
 | Input Field | Description |
 |-------------|-------------|
-| `cart_id` - [`String!`](#string) | The unique ID that identifies the customer's cart. |
-| `code` - [`String!`](#string) | The payment method code. |
-| `express_button` - [`Boolean`](#boolean) | Indicates whether the buyer selected the quick checkout button. The default value is false. |
+| `cart_id` - [`String!`](types-q-s.md#string) | The unique ID that identifies the customer's cart. |
+| `code` - [`String!`](types-q-s.md#string) | The payment method code. |
+| `express_button` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the buyer selected the quick checkout button. The default value is false. |
 | `urls` - [`PaypalExpressUrlsInput!`](#paypalexpressurlsinput) | A set of relative URLs that PayPal uses in response to various actions during the authorization process. |
-| `use_paypal_credit` - [`Boolean`](#boolean) | Indicates whether the buyer clicked the PayPal credit button. The default value is false. |
+| `use_paypal_credit` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the buyer clicked the PayPal credit button. The default value is false. |
 
 #### Example
 
 ```json
 {
-  "cart_id": "abc123",
-  "code": "xyz789",
+  "cart_id": "xyz789",
+  "code": "abc123",
   "express_button": true,
   "urls": PaypalExpressUrlsInput,
   "use_paypal_credit": true
@@ -2523,7 +2523,7 @@ Contains the token returned by PayPal and a set of URLs that allow the buyer to 
 | Field Name | Description |
 |------------|-------------|
 | `paypal_urls` - [`PaypalExpressUrlList`](#paypalexpressurllist) | A set of URLs that allow the buyer to authorize payment and adjust checkout details. |
-| `token` - [`String`](#string) | The token returned by PayPal. |
+| `token` - [`String`](types-q-s.md#string) | The token returned by PayPal. |
 
 #### Example
 
@@ -2544,8 +2544,8 @@ Contains a set of URLs that allow the buyer to authorize payment and adjust chec
 
 | Field Name | Description |
 |------------|-------------|
-| `edit` - [`String`](#string) | The PayPal URL that allows the buyer to edit their checkout details. |
-| `start` - [`String`](#string) | The URL to the PayPal login page. |
+| `edit` - [`String`](types-q-s.md#string) | The PayPal URL that allows the buyer to edit their checkout details. |
+| `start` - [`String`](types-q-s.md#string) | The URL to the PayPal login page. |
 
 #### Example
 
@@ -2566,10 +2566,10 @@ Contains a set of relative URLs that PayPal uses in response to various actions 
 
 | Input Field | Description |
 |-------------|-------------|
-| `cancel_url` - [`String!`](#string) | The relative URL of the page that PayPal redirects to when the buyer cancels the transaction in order to choose a different payment method. If the full URL to this page is https://www.example.com/paypal/action/cancel.html, the relative URL is paypal/action/cancel.html. |
-| `pending_url` - [`String`](#string) | The relative URL of the page that PayPal redirects to when the payment has been put on hold for additional review. This condition mostly applies to ACH transactions, and is not applicable to most PayPal solutions. If the full URL to this page is https://www.example.com/paypal/action/success_pending.html, the relative URL is paypal/action/success_pending.html. |
-| `return_url` - [`String!`](#string) | The relative URL of the final confirmation page that PayPal redirects to upon payment success. If the full URL to this page is https://www.example.com/paypal/action/return.html, the relative URL is paypal/action/return.html. |
-| `success_url` - [`String`](#string) | The relative URL of the order confirmation page that PayPal redirects to when the payment is successful and additional confirmation is not needed. Not applicable to most PayPal solutions. If the full URL to this page is https://www.example.com/paypal/action/success.html, the relative URL is paypal/action/success.html. |
+| `cancel_url` - [`String!`](types-q-s.md#string) | The relative URL of the page that PayPal redirects to when the buyer cancels the transaction in order to choose a different payment method. If the full URL to this page is https://www.example.com/paypal/action/cancel.html, the relative URL is paypal/action/cancel.html. |
+| `pending_url` - [`String`](types-q-s.md#string) | The relative URL of the page that PayPal redirects to when the payment has been put on hold for additional review. This condition mostly applies to ACH transactions, and is not applicable to most PayPal solutions. If the full URL to this page is https://www.example.com/paypal/action/success_pending.html, the relative URL is paypal/action/success_pending.html. |
+| `return_url` - [`String!`](types-q-s.md#string) | The relative URL of the final confirmation page that PayPal redirects to upon payment success. If the full URL to this page is https://www.example.com/paypal/action/return.html, the relative URL is paypal/action/return.html. |
+| `success_url` - [`String`](types-q-s.md#string) | The relative URL of the order confirmation page that PayPal redirects to when the payment is successful and additional confirmation is not needed. Not applicable to most PayPal solutions. If the full URL to this page is https://www.example.com/paypal/action/success.html, the relative URL is paypal/action/success.html. |
 
 #### Example
 
@@ -2578,7 +2578,7 @@ Contains a set of relative URLs that PayPal uses in response to various actions 
   "cancel_url": "xyz789",
   "pending_url": "abc123",
   "return_url": "xyz789",
-  "success_url": "xyz789"
+  "success_url": "abc123"
 }
 ```
 
@@ -2592,17 +2592,17 @@ Contains attributes specific to tangible products.
 
 | Field Name | Description |
 |------------|-------------|
-| `weight` - [`Float`](#float) | The weight of the item, in units defined by the store. |
+| `weight` - [`Float`](types-f-i.md#float) | The weight of the item, in units defined by the store. |
 
 #### Possible Types
 
 | PhysicalProductInterface Types |
 |----------------|
-| [`SimpleProduct`](#simpleproduct) |
-| [`ConfigurableProduct`](#configurableproduct) |
-| [`BundleProduct`](#bundleproduct) |
-| [`GiftCardProduct`](#giftcardproduct) |
-| [`GroupedProduct`](#groupedproduct) |
+| [`SimpleProduct`](types-q-s.md#simpleproduct) |
+| [`ConfigurableProduct`](types-c-e.md#configurableproduct) |
+| [`BundleProduct`](types-a-b.md#bundleproduct) |
+| [`GiftCardProduct`](types-f-i.md#giftcardproduct) |
+| [`GroupedProduct`](types-f-i.md#groupedproduct) |
 
 #### Example
 
@@ -2620,41 +2620,41 @@ Defines Pickup Location information.
 
 | Field Name | Description |
 |------------|-------------|
-| `city` - [`String`](#string) |  |
-| `contact_name` - [`String`](#string) |  |
-| `country_id` - [`String`](#string) |  |
-| `description` - [`String`](#string) |  |
-| `email` - [`String`](#string) |  |
-| `fax` - [`String`](#string) |  |
-| `latitude` - [`Float`](#float) |  |
-| `longitude` - [`Float`](#float) |  |
-| `name` - [`String`](#string) |  |
-| `phone` - [`String`](#string) |  |
-| `pickup_location_code` - [`String`](#string) |  |
-| `postcode` - [`String`](#string) |  |
-| `region` - [`String`](#string) |  |
-| `region_id` - [`Int`](#int) |  |
-| `street` - [`String`](#string) |  |
+| `city` - [`String`](types-q-s.md#string) |  |
+| `contact_name` - [`String`](types-q-s.md#string) |  |
+| `country_id` - [`String`](types-q-s.md#string) |  |
+| `description` - [`String`](types-q-s.md#string) |  |
+| `email` - [`String`](types-q-s.md#string) |  |
+| `fax` - [`String`](types-q-s.md#string) |  |
+| `latitude` - [`Float`](types-f-i.md#float) |  |
+| `longitude` - [`Float`](types-f-i.md#float) |  |
+| `name` - [`String`](types-q-s.md#string) |  |
+| `phone` - [`String`](types-q-s.md#string) |  |
+| `pickup_location_code` - [`String`](types-q-s.md#string) |  |
+| `postcode` - [`String`](types-q-s.md#string) |  |
+| `region` - [`String`](types-q-s.md#string) |  |
+| `region_id` - [`Int`](types-f-i.md#int) |  |
+| `street` - [`String`](types-q-s.md#string) |  |
 
 #### Example
 
 ```json
 {
   "city": "xyz789",
-  "contact_name": "abc123",
+  "contact_name": "xyz789",
   "country_id": "xyz789",
-  "description": "abc123",
+  "description": "xyz789",
   "email": "abc123",
   "fax": "xyz789",
   "latitude": 123.45,
   "longitude": 987.65,
-  "name": "xyz789",
-  "phone": "xyz789",
+  "name": "abc123",
+  "phone": "abc123",
   "pickup_location_code": "xyz789",
   "postcode": "xyz789",
   "region": "xyz789",
-  "region_id": 987,
-  "street": "xyz789"
+  "region_id": 123,
+  "street": "abc123"
 }
 ```
 
@@ -2668,14 +2668,14 @@ PickupLocationFilterInput defines the list of attributes and filters for the sea
 
 | Input Field | Description |
 |-------------|-------------|
-| `city` - [`FilterTypeInput`](#filtertypeinput) | Filter by city. |
-| `country_id` - [`FilterTypeInput`](#filtertypeinput) | Filter by country. |
-| `name` - [`FilterTypeInput`](#filtertypeinput) | Filter by pickup location name. |
-| `pickup_location_code` - [`FilterTypeInput`](#filtertypeinput) | Filter by pickup location code. |
-| `postcode` - [`FilterTypeInput`](#filtertypeinput) | Filter by postcode. |
-| `region` - [`FilterTypeInput`](#filtertypeinput) | Filter by region. |
-| `region_id` - [`FilterTypeInput`](#filtertypeinput) | Filter by region id. |
-| `street` - [`FilterTypeInput`](#filtertypeinput) | Filter by street. |
+| `city` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | Filter by city. |
+| `country_id` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | Filter by country. |
+| `name` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | Filter by pickup location name. |
+| `pickup_location_code` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | Filter by pickup location code. |
+| `postcode` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | Filter by postcode. |
+| `region` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | Filter by region. |
+| `region_id` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | Filter by region id. |
+| `street` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | Filter by street. |
 
 #### Example
 
@@ -2702,22 +2702,22 @@ PickupLocationSortInput specifies attribute to use for sorting search results an
 
 | Input Field | Description |
 |-------------|-------------|
-| `city` - [`SortEnum`](#sortenum) | City where pickup location is placed. |
-| `contact_name` - [`SortEnum`](#sortenum) | Name of the contact person. |
-| `country_id` - [`SortEnum`](#sortenum) | Id of the country in two letters. |
-| `description` - [`SortEnum`](#sortenum) | Description of the pickup location. |
-| `distance` - [`SortEnum`](#sortenum) | Distance to the address, requested by distance filter. Applicable only with distance filter. If distance sort order is present, all other sort orders will be ignored. |
-| `email` - [`SortEnum`](#sortenum) | Contact email of the pickup location. |
-| `fax` - [`SortEnum`](#sortenum) | Contact fax of the pickup location. |
-| `latitude` - [`SortEnum`](#sortenum) | Geographic latitude where pickup location is placed. |
-| `longitude` - [`SortEnum`](#sortenum) | Geographic longitude where pickup location is placed. |
-| `name` - [`SortEnum`](#sortenum) | The pickup location name. Customer use this to identify the pickup location. |
-| `phone` - [`SortEnum`](#sortenum) | Contact phone number of the pickup location. |
-| `pickup_location_code` - [`SortEnum`](#sortenum) | A code assigned to pickup location to identify the source. |
-| `postcode` - [`SortEnum`](#sortenum) | Postcode where pickup location is placed. |
-| `region` - [`SortEnum`](#sortenum) | Name of the region. |
-| `region_id` - [`SortEnum`](#sortenum) | Id of the region. |
-| `street` - [`SortEnum`](#sortenum) | Street where pickup location is placed. |
+| `city` - [`SortEnum`](types-q-s.md#sortenum) | City where pickup location is placed. |
+| `contact_name` - [`SortEnum`](types-q-s.md#sortenum) | Name of the contact person. |
+| `country_id` - [`SortEnum`](types-q-s.md#sortenum) | Id of the country in two letters. |
+| `description` - [`SortEnum`](types-q-s.md#sortenum) | Description of the pickup location. |
+| `distance` - [`SortEnum`](types-q-s.md#sortenum) | Distance to the address, requested by distance filter. Applicable only with distance filter. If distance sort order is present, all other sort orders will be ignored. |
+| `email` - [`SortEnum`](types-q-s.md#sortenum) | Contact email of the pickup location. |
+| `fax` - [`SortEnum`](types-q-s.md#sortenum) | Contact fax of the pickup location. |
+| `latitude` - [`SortEnum`](types-q-s.md#sortenum) | Geographic latitude where pickup location is placed. |
+| `longitude` - [`SortEnum`](types-q-s.md#sortenum) | Geographic longitude where pickup location is placed. |
+| `name` - [`SortEnum`](types-q-s.md#sortenum) | The pickup location name. Customer use this to identify the pickup location. |
+| `phone` - [`SortEnum`](types-q-s.md#sortenum) | Contact phone number of the pickup location. |
+| `pickup_location_code` - [`SortEnum`](types-q-s.md#sortenum) | A code assigned to pickup location to identify the source. |
+| `postcode` - [`SortEnum`](types-q-s.md#sortenum) | Postcode where pickup location is placed. |
+| `region` - [`SortEnum`](types-q-s.md#sortenum) | Name of the region. |
+| `region_id` - [`SortEnum`](types-q-s.md#sortenum) | Id of the region. |
+| `street` - [`SortEnum`](types-q-s.md#sortenum) | Street where pickup location is placed. |
 
 #### Example
 
@@ -2753,8 +2753,8 @@ Top level object returned in a pickup locations search.
 | Field Name | Description |
 |------------|-------------|
 | `items` - [`[PickupLocation]`](#pickuplocation) | An array of pickup locations that match the specific search request. |
-| `page_info` - [`SearchResultPageInfo`](#searchresultpageinfo) | An object that includes the page_info and currentPage values specified in the query. |
-| `total_count` - [`Int`](#int) | The number of products returned. |
+| `page_info` - [`SearchResultPageInfo`](types-q-s.md#searchresultpageinfo) | An object that includes the page_info and currentPage values specified in the query. |
+| `total_count` - [`Int`](types-f-i.md#int) | The number of products returned. |
 
 #### Example
 
@@ -2762,7 +2762,7 @@ Top level object returned in a pickup locations search.
 {
   "items": [PickupLocation],
   "page_info": SearchResultPageInfo,
-  "total_count": 987
+  "total_count": 123
 }
 ```
 
@@ -2776,12 +2776,12 @@ Specifies the negotiable quote to convert to an order.
 
 | Input Field | Description |
 |-------------|-------------|
-| `quote_uid` - [`ID!`](#id) | The unique ID of a `NegotiableQuote` object. |
+| `quote_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a `NegotiableQuote` object. |
 
 #### Example
 
 ```json
-{"quote_uid": "4"}
+{"quote_uid": 4}
 ```
 
 <HorizontalLine />
@@ -2813,14 +2813,14 @@ An error encountered while placing an order.
 | Field Name | Description |
 |------------|-------------|
 | `code` - [`PlaceOrderErrorCodes!`](#placeordererrorcodes) | An error code that is specific to place order. |
-| `message` - [`String!`](#string) | A localized error message. |
+| `message` - [`String!`](types-q-s.md#string) | A localized error message. |
 
 #### Example
 
 ```json
 {
   "code": "CART_NOT_FOUND",
-  "message": "xyz789"
+  "message": "abc123"
 }
 ```
 
@@ -2854,12 +2854,12 @@ Specifies the purchase order to convert to an order.
 
 | Input Field | Description |
 |-------------|-------------|
-| `purchase_order_uid` - [`ID!`](#id) | The unique ID of a purchase order. |
+| `purchase_order_uid` - [`ID!`](types-f-i.md#id) | The unique ID of a purchase order. |
 
 #### Example
 
 ```json
-{"purchase_order_uid": 4}
+{"purchase_order_uid": "4"}
 ```
 
 <HorizontalLine />
@@ -2872,7 +2872,7 @@ Contains the results of the request to place an order.
 
 | Field Name | Description |
 |------------|-------------|
-| `order` - [`CustomerOrder!`](#customerorder) | Placed order. |
+| `order` - [`CustomerOrder!`](types-c-e.md#customerorder) | Placed order. |
 
 #### Example
 
@@ -2890,12 +2890,12 @@ Specifies the quote to be converted to an order.
 
 | Input Field | Description |
 |-------------|-------------|
-| `cart_id` - [`String!`](#string) | The unique ID of a `Cart` object. |
+| `cart_id` - [`String!`](types-q-s.md#string) | The unique ID of a `Cart` object. |
 
 #### Example
 
 ```json
-{"cart_id": "abc123"}
+{"cart_id": "xyz789"}
 ```
 
 <HorizontalLine />
@@ -2910,7 +2910,7 @@ Contains the results of the request to place an order.
 |------------|-------------|
 | `errors` - [`[PlaceOrderError]`](#placeordererror) | An array of place order errors. |
 | `order` - [`Order`](#order) | The ID of the order. *(Deprecated: Use `orderV2` instead.)* |
-| `orderV2` - [`CustomerOrder`](#customerorder) | Full order information. |
+| `orderV2` - [`CustomerOrder`](types-c-e.md#customerorder) | Full order information. |
 
 #### Example
 
@@ -2932,7 +2932,7 @@ Specifies the quote to be converted to a purchase order.
 
 | Input Field | Description |
 |-------------|-------------|
-| `cart_id` - [`String!`](#string) | The unique ID of a `Cart` object. |
+| `cart_id` - [`String!`](types-q-s.md#string) | The unique ID of a `Cart` object. |
 
 #### Example
 
@@ -3053,15 +3053,15 @@ Can be used to retrieve the main price details in case of bundle product
 
 | Field Name | Description |
 |------------|-------------|
-| `discount_percentage` - [`Float`](#float) | The percentage of discount applied to the main product price |
-| `main_final_price` - [`Float`](#float) | The final price after applying the discount to the main product |
-| `main_price` - [`Float`](#float) | The regular price of the main product |
+| `discount_percentage` - [`Float`](types-f-i.md#float) | The percentage of discount applied to the main product price |
+| `main_final_price` - [`Float`](types-f-i.md#float) | The final price after applying the discount to the main product |
+| `main_price` - [`Float`](types-f-i.md#float) | The regular price of the main product |
 
 #### Example
 
 ```json
 {
-  "discount_percentage": 123.45,
+  "discount_percentage": 987.65,
   "main_final_price": 987.65,
   "main_price": 123.45
 }
@@ -3138,15 +3138,15 @@ Contains a product attribute code and value.
 
 | Field Name | Description |
 |------------|-------------|
-| `code` - [`String!`](#string) | The unique identifier for a product attribute code. |
-| `value` - [`String!`](#string) | The display value of the attribute. |
+| `code` - [`String!`](types-q-s.md#string) | The unique identifier for a product attribute code. |
+| `value` - [`String!`](types-q-s.md#string) | The display value of the attribute. |
 
 #### Example
 
 ```json
 {
-  "code": "xyz789",
-  "value": "abc123"
+  "code": "abc123",
+  "value": "xyz789"
 }
 ```
 
@@ -3160,15 +3160,15 @@ Defines the filters to be used in the search. A filter contains at least one att
 
 | Input Field | Description |
 |-------------|-------------|
-| `category_id` - [`FilterEqualTypeInput`](#filterequaltypeinput) | Deprecated: use `category_uid` to filter product by category ID. |
-| `category_uid` - [`FilterEqualTypeInput`](#filterequaltypeinput) | Filter product by the unique ID for a `CategoryInterface` object. |
-| `category_url_path` - [`FilterEqualTypeInput`](#filterequaltypeinput) | Filter product by category URL path. |
-| `description` - [`FilterMatchTypeInput`](#filtermatchtypeinput) | Attribute label: Description |
-| `name` - [`FilterMatchTypeInput`](#filtermatchtypeinput) | Attribute label: Product Name |
-| `price` - [`FilterRangeTypeInput`](#filterrangetypeinput) | Attribute label: Price |
-| `short_description` - [`FilterMatchTypeInput`](#filtermatchtypeinput) | Attribute label: Short Description |
-| `sku` - [`FilterEqualTypeInput`](#filterequaltypeinput) | Attribute label: SKU |
-| `url_key` - [`FilterEqualTypeInput`](#filterequaltypeinput) | The part of the URL that identifies the product |
+| `category_id` - [`FilterEqualTypeInput`](types-f-i.md#filterequaltypeinput) | Deprecated: use `category_uid` to filter product by category ID. |
+| `category_uid` - [`FilterEqualTypeInput`](types-f-i.md#filterequaltypeinput) | Filter product by the unique ID for a `CategoryInterface` object. |
+| `category_url_path` - [`FilterEqualTypeInput`](types-f-i.md#filterequaltypeinput) | Filter product by category URL path. |
+| `description` - [`FilterMatchTypeInput`](types-f-i.md#filtermatchtypeinput) | Attribute label: Description |
+| `name` - [`FilterMatchTypeInput`](types-f-i.md#filtermatchtypeinput) | Attribute label: Product Name |
+| `price` - [`FilterRangeTypeInput`](types-f-i.md#filterrangetypeinput) | Attribute label: Price |
+| `short_description` - [`FilterMatchTypeInput`](types-f-i.md#filtermatchtypeinput) | Attribute label: Short Description |
+| `sku` - [`FilterEqualTypeInput`](types-f-i.md#filterequaltypeinput) | Attribute label: SKU |
+| `url_key` - [`FilterEqualTypeInput`](types-f-i.md#filterequaltypeinput) | The part of the URL that identifies the product |
 
 #### Example
 
@@ -3196,10 +3196,10 @@ Specifies the attribute to use for sorting search results and indicates whether 
 
 | Input Field | Description |
 |-------------|-------------|
-| `name` - [`SortEnum`](#sortenum) | Attribute label: Product Name |
-| `position` - [`SortEnum`](#sortenum) | Sort by the position assigned to each product. |
-| `price` - [`SortEnum`](#sortenum) | Attribute label: Price |
-| `relevance` - [`SortEnum`](#sortenum) | Sort by the search relevance score (default). |
+| `name` - [`SortEnum`](types-q-s.md#sortenum) | Attribute label: Product Name |
+| `position` - [`SortEnum`](types-q-s.md#sortenum) | Sort by the position assigned to each product. |
+| `price` - [`SortEnum`](types-q-s.md#sortenum) | Attribute label: Price |
+| `relevance` - [`SortEnum`](types-q-s.md#sortenum) | Sort by the search relevance score (default). |
 
 #### Example
 
@@ -3217,8 +3217,8 @@ Product custom attributes
 
 | Field Name | Description |
 |------------|-------------|
-| `errors` - [`[AttributeMetadataError]!`](#attributemetadataerror) | Errors when retrieving custom attributes metadata. |
-| `items` - [`[AttributeValueInterface]!`](#attributevalueinterface) | Requested custom attributes |
+| `errors` - [`[AttributeMetadataError]!`](types-a-b.md#attributemetadataerror) | Errors when retrieving custom attributes metadata. |
+| `items` - [`[AttributeValueInterface]!`](types-a-b.md#attributevalueinterface) | Requested custom attributes |
 
 #### Example
 
@@ -3239,13 +3239,13 @@ Contains the discount applied to a product price.
 
 | Field Name | Description |
 |------------|-------------|
-| `amount_off` - [`Float`](#float) | The actual value of the discount. |
-| `percent_off` - [`Float`](#float) | The discount expressed a percentage. |
+| `amount_off` - [`Float`](types-f-i.md#float) | The actual value of the discount. |
+| `percent_off` - [`Float`](types-f-i.md#float) | The discount expressed a percentage. |
 
 #### Example
 
 ```json
-{"amount_off": 987.65, "percent_off": 123.45}
+{"amount_off": 123.45, "percent_off": 123.45}
 ```
 
 <HorizontalLine />
@@ -3258,45 +3258,45 @@ ProductFilterInput is deprecated, use @ProductAttributeFilterInput instead. Prod
 
 | Input Field | Description |
 |-------------|-------------|
-| `category_id` - [`FilterTypeInput`](#filtertypeinput) | The category ID the product belongs to. |
-| `country_of_manufacture` - [`FilterTypeInput`](#filtertypeinput) | The product's country of origin. |
-| `created_at` - [`FilterTypeInput`](#filtertypeinput) | The timestamp indicating when the product was created. |
-| `custom_layout` - [`FilterTypeInput`](#filtertypeinput) | The name of a custom layout. |
-| `custom_layout_update` - [`FilterTypeInput`](#filtertypeinput) | XML code that is applied as a layout update to the product page. |
-| `description` - [`FilterTypeInput`](#filtertypeinput) | Detailed information about the product. The value can include simple HTML tags. |
-| `gift_message_available` - [`FilterTypeInput`](#filtertypeinput) | Indicates whether a gift message is available. |
-| `has_options` - [`FilterTypeInput`](#filtertypeinput) | Indicates whether additional attributes have been created for the product. |
-| `image` - [`FilterTypeInput`](#filtertypeinput) | The relative path to the main image on the product page. |
-| `image_label` - [`FilterTypeInput`](#filtertypeinput) | The label assigned to a product image. |
-| `is_returnable` - [`FilterTypeInput`](#filtertypeinput) | Indicates whether the product can be returned. |
-| `manufacturer` - [`FilterTypeInput`](#filtertypeinput) | A number representing the product's manufacturer. |
-| `max_price` - [`FilterTypeInput`](#filtertypeinput) | The numeric maximal price of the product. Do not include the currency code. |
-| `meta_description` - [`FilterTypeInput`](#filtertypeinput) | A brief overview of the product for search results listings, maximum 255 characters. |
-| `meta_keyword` - [`FilterTypeInput`](#filtertypeinput) | A comma-separated list of keywords that are visible only to search engines. |
-| `meta_title` - [`FilterTypeInput`](#filtertypeinput) | A string that is displayed in the title bar and tab of the browser and in search results lists. |
-| `min_price` - [`FilterTypeInput`](#filtertypeinput) | The numeric minimal price of the product. Do not include the currency code. |
-| `name` - [`FilterTypeInput`](#filtertypeinput) | The product name. Customers use this name to identify the product. |
-| `news_from_date` - [`FilterTypeInput`](#filtertypeinput) | The beginning date for new product listings, and determines if the product is featured as a new product. |
-| `news_to_date` - [`FilterTypeInput`](#filtertypeinput) | The end date for new product listings. |
-| `options_container` - [`FilterTypeInput`](#filtertypeinput) | If the product has multiple options, determines where they appear on the product page. |
+| `category_id` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | The category ID the product belongs to. |
+| `country_of_manufacture` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | The product's country of origin. |
+| `created_at` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | The timestamp indicating when the product was created. |
+| `custom_layout` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | The name of a custom layout. |
+| `custom_layout_update` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | XML code that is applied as a layout update to the product page. |
+| `description` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | Detailed information about the product. The value can include simple HTML tags. |
+| `gift_message_available` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | Indicates whether a gift message is available. |
+| `has_options` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | Indicates whether additional attributes have been created for the product. |
+| `image` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | The relative path to the main image on the product page. |
+| `image_label` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | The label assigned to a product image. |
+| `is_returnable` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | Indicates whether the product can be returned. |
+| `manufacturer` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | A number representing the product's manufacturer. |
+| `max_price` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | The numeric maximal price of the product. Do not include the currency code. |
+| `meta_description` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | A brief overview of the product for search results listings, maximum 255 characters. |
+| `meta_keyword` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | A comma-separated list of keywords that are visible only to search engines. |
+| `meta_title` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | A string that is displayed in the title bar and tab of the browser and in search results lists. |
+| `min_price` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | The numeric minimal price of the product. Do not include the currency code. |
+| `name` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | The product name. Customers use this name to identify the product. |
+| `news_from_date` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | The beginning date for new product listings, and determines if the product is featured as a new product. |
+| `news_to_date` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | The end date for new product listings. |
+| `options_container` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | If the product has multiple options, determines where they appear on the product page. |
 | `or` - [`ProductFilterInput`](#productfilterinput) | The keyword required to perform a logical OR comparison. |
-| `price` - [`FilterTypeInput`](#filtertypeinput) | The price of an item. |
-| `required_options` - [`FilterTypeInput`](#filtertypeinput) | Indicates whether the product has required options. |
-| `short_description` - [`FilterTypeInput`](#filtertypeinput) | A short description of the product. Its use depends on the theme. |
-| `sku` - [`FilterTypeInput`](#filtertypeinput) | A number or code assigned to a product to identify the product, options, price, and manufacturer. |
-| `small_image` - [`FilterTypeInput`](#filtertypeinput) | The relative path to the small image, which is used on catalog pages. |
-| `small_image_label` - [`FilterTypeInput`](#filtertypeinput) | The label assigned to a product's small image. |
-| `special_from_date` - [`FilterTypeInput`](#filtertypeinput) | The beginning date that a product has a special price. |
-| `special_price` - [`FilterTypeInput`](#filtertypeinput) | The discounted price of the product. Do not include the currency code. |
-| `special_to_date` - [`FilterTypeInput`](#filtertypeinput) | The end date that a product has a special price. |
-| `swatch_image` - [`FilterTypeInput`](#filtertypeinput) | The file name of a swatch image. |
-| `thumbnail` - [`FilterTypeInput`](#filtertypeinput) | The relative path to the product's thumbnail image. |
-| `thumbnail_label` - [`FilterTypeInput`](#filtertypeinput) | The label assigned to a product's thumbnail image. |
-| `tier_price` - [`FilterTypeInput`](#filtertypeinput) | The price when tier pricing is in effect and the items purchased threshold has been reached. |
-| `updated_at` - [`FilterTypeInput`](#filtertypeinput) | The timestamp indicating when the product was updated. |
-| `url_key` - [`FilterTypeInput`](#filtertypeinput) | The part of the URL that identifies the product |
-| `url_path` - [`FilterTypeInput`](#filtertypeinput) |  |
-| `weight` - [`FilterTypeInput`](#filtertypeinput) | The weight of the item, in units defined by the store. |
+| `price` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | The price of an item. |
+| `required_options` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | Indicates whether the product has required options. |
+| `short_description` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | A short description of the product. Its use depends on the theme. |
+| `sku` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | A number or code assigned to a product to identify the product, options, price, and manufacturer. |
+| `small_image` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | The relative path to the small image, which is used on catalog pages. |
+| `small_image_label` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | The label assigned to a product's small image. |
+| `special_from_date` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | The beginning date that a product has a special price. |
+| `special_price` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | The discounted price of the product. Do not include the currency code. |
+| `special_to_date` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | The end date that a product has a special price. |
+| `swatch_image` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | The file name of a swatch image. |
+| `thumbnail` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | The relative path to the product's thumbnail image. |
+| `thumbnail_label` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | The label assigned to a product's thumbnail image. |
+| `tier_price` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | The price when tier pricing is in effect and the items purchased threshold has been reached. |
+| `updated_at` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | The timestamp indicating when the product was updated. |
+| `url_key` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | The part of the URL that identifies the product |
+| `url_path` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) |  |
+| `weight` - [`FilterTypeInput`](types-f-i.md#filtertypeinput) | The weight of the item, in units defined by the store. |
 
 #### Example
 
@@ -3354,11 +3354,11 @@ Contains product image information, including the image URL and label.
 
 | Field Name | Description |
 |------------|-------------|
-| `disabled` - [`Boolean`](#boolean) | Indicates whether the image is hidden from view. |
-| `label` - [`String`](#string) | The label of the product image or video. |
-| `position` - [`Int`](#int) | The media item's position after it has been sorted. |
-| `types` - [`[String]`](#string) | Array of image types. It can have the following values: image, small_image, thumbnail. |
-| `url` - [`String`](#string) | The URL of the product image or video. |
+| `disabled` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the image is hidden from view. |
+| `label` - [`String`](types-q-s.md#string) | The label of the product image or video. |
+| `position` - [`Int`](types-f-i.md#int) | The media item's position after it has been sorted. |
+| `types` - [`[String]`](types-q-s.md#string) | Array of image types. It can have the following values: image, small_image, thumbnail. |
+| `url` - [`String`](types-q-s.md#string) | The URL of the product image or video. |
 
 #### Example
 
@@ -3368,7 +3368,7 @@ Contains product image information, including the image URL and label.
   "label": "abc123",
   "position": 987,
   "types": ["xyz789"],
-  "url": "xyz789"
+  "url": "abc123"
 }
 ```
 
@@ -3399,12 +3399,12 @@ Product Information used for Pickup Locations search.
 
 | Input Field | Description |
 |-------------|-------------|
-| `sku` - [`String!`](#string) | Product SKU. |
+| `sku` - [`String!`](types-q-s.md#string) | Product SKU. |
 
 #### Example
 
 ```json
-{"sku": "xyz789"}
+{"sku": "abc123"}
 ```
 
 <HorizontalLine />
@@ -3417,94 +3417,94 @@ Contains fields that are common to all types of products.
 
 | Field Name | Description |
 |------------|-------------|
-| `attribute_set_id` - [`Int`](#int) | The attribute set assigned to the product. *(Deprecated: The field should not be used on the storefront.)* |
-| `canonical_url` - [`String`](#string) | The relative canonical URL. This value is returned only if the system setting 'Use Canonical Link Meta Tag For Products' is enabled. |
-| `categories` - [`[CategoryInterface]`](#categoryinterface) | The categories assigned to a product. |
-| `color` - [`Int`](#int) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
-| `country_of_manufacture` - [`String`](#string) | The product's country of origin. |
-| `created_at` - [`String`](#string) | Timestamp indicating when the product was created. *(Deprecated: The field should not be used on the storefront.)* |
+| `attribute_set_id` - [`Int`](types-f-i.md#int) | The attribute set assigned to the product. *(Deprecated: The field should not be used on the storefront.)* |
+| `canonical_url` - [`String`](types-q-s.md#string) | The relative canonical URL. This value is returned only if the system setting 'Use Canonical Link Meta Tag For Products' is enabled. |
+| `categories` - [`[CategoryInterface]`](types-c-e.md#categoryinterface) | The categories assigned to a product. |
+| `color` - [`Int`](types-f-i.md#int) |  *(Deprecated: Use the `custom_attributes` field instead.)* |
+| `country_of_manufacture` - [`String`](types-q-s.md#string) | The product's country of origin. |
+| `created_at` - [`String`](types-q-s.md#string) | Timestamp indicating when the product was created. *(Deprecated: The field should not be used on the storefront.)* |
 | `crosssell_products` - [`[ProductInterface]`](#productinterface) | An array of cross-sell products. |
 | `custom_attributesV2` - [`ProductCustomAttributes`](#productcustomattributes) | Product custom attributes. |
-| `description` - [`ComplexTextValue`](#complextextvalue) | Detailed information about the product. The value can include simple HTML tags. |
-| `gift_message_available` - [`Boolean!`](#boolean) | Returns a value indicating gift message availability for the product. |
-| `gift_wrapping_available` - [`Boolean!`](#boolean) | Returns a value indicating gift wrapping availability for the product. |
+| `description` - [`ComplexTextValue`](types-c-e.md#complextextvalue) | Detailed information about the product. The value can include simple HTML tags. |
+| `gift_message_available` - [`Boolean!`](types-a-b.md#boolean) | Returns a value indicating gift message availability for the product. |
+| `gift_wrapping_available` - [`Boolean!`](types-a-b.md#boolean) | Returns a value indicating gift wrapping availability for the product. |
 | `gift_wrapping_price` - [`Money`](#money) | Returns value and currency indicating gift wrapping price for the product. |
-| `id` - [`Int`](#int) | The ID number assigned to the product. *(Deprecated: Use the `uid` field instead.)* |
+| `id` - [`Int`](types-f-i.md#int) | The ID number assigned to the product. *(Deprecated: Use the `uid` field instead.)* |
 | `image` - [`ProductImage`](#productimage) | The relative path to the main image on the product page. |
-| `is_returnable` - [`String`](#string) | Indicates whether the product can be returned. |
-| `manufacturer` - [`Int`](#int) | A number representing the product's manufacturer. *(Deprecated: Use the `custom_attributes` field instead.)* |
-| `max_sale_qty` - [`Float`](#float) | Maximum Qty Allowed in Shopping Cart |
+| `is_returnable` - [`String`](types-q-s.md#string) | Indicates whether the product can be returned. |
+| `manufacturer` - [`Int`](types-f-i.md#int) | A number representing the product's manufacturer. *(Deprecated: Use the `custom_attributes` field instead.)* |
+| `max_sale_qty` - [`Float`](types-f-i.md#float) | Maximum Qty Allowed in Shopping Cart |
 | `media_gallery` - [`[MediaGalleryInterface]`](#mediagalleryinterface) | An array of media gallery objects. |
 | `media_gallery_entries` - [`[MediaGalleryEntry]`](#mediagalleryentry) | An array of MediaGalleryEntry objects. *(Deprecated: Use `media_gallery` instead.)* |
-| `meta_description` - [`String`](#string) | A brief overview of the product for search results listings, maximum 255 characters. |
-| `meta_keyword` - [`String`](#string) | A comma-separated list of keywords that are visible only to search engines. |
-| `meta_title` - [`String`](#string) | A string that is displayed in the title bar and tab of the browser and in search results lists. |
-| `min_sale_qty` - [`Float`](#float) | Minimum Qty Allowed in Shopping Cart |
-| `name` - [`String`](#string) | The product name. Customers use this name to identify the product. |
-| `new_from_date` - [`String`](#string) | The beginning date for new product listings, and determines if the product is featured as a new product. |
-| `new_to_date` - [`String`](#string) | The end date for new product listings. |
-| `only_x_left_in_stock` - [`Float`](#float) | Product stock only x left count |
-| `options_container` - [`String`](#string) | If the product has multiple options, determines where they appear on the product page. |
+| `meta_description` - [`String`](types-q-s.md#string) | A brief overview of the product for search results listings, maximum 255 characters. |
+| `meta_keyword` - [`String`](types-q-s.md#string) | A comma-separated list of keywords that are visible only to search engines. |
+| `meta_title` - [`String`](types-q-s.md#string) | A string that is displayed in the title bar and tab of the browser and in search results lists. |
+| `min_sale_qty` - [`Float`](types-f-i.md#float) | Minimum Qty Allowed in Shopping Cart |
+| `name` - [`String`](types-q-s.md#string) | The product name. Customers use this name to identify the product. |
+| `new_from_date` - [`String`](types-q-s.md#string) | The beginning date for new product listings, and determines if the product is featured as a new product. |
+| `new_to_date` - [`String`](types-q-s.md#string) | The end date for new product listings. |
+| `only_x_left_in_stock` - [`Float`](types-f-i.md#float) | Product stock only x left count |
+| `options_container` - [`String`](types-q-s.md#string) | If the product has multiple options, determines where they appear on the product page. |
 | `price` - [`ProductPrices`](#productprices) | Indicates the price of an item. *(Deprecated: Use `price_range` for product price information.)* |
 | `price_range` - [`PriceRange!`](#pricerange) | The range of prices for the product |
-| `price_tiers` - [`[TierPrice]`](#tierprice) | An array of `TierPrice` objects. |
+| `price_tiers` - [`[TierPrice]`](types-t-z.md#tierprice) | An array of `TierPrice` objects. |
 | `product_links` - [`[ProductLinksInterface]`](#productlinksinterface) | An array of `ProductLinks` objects. |
-| `quantity` - [`Float`](#float) | Amount of available stock |
-| `rating_summary` - [`Float!`](#float) | The average of all the ratings given to the product. |
+| `quantity` - [`Float`](types-f-i.md#float) | Amount of available stock |
+| `rating_summary` - [`Float!`](types-f-i.md#float) | The average of all the ratings given to the product. |
 | `related_products` - [`[ProductInterface]`](#productinterface) | An array of related products. |
-| `review_count` - [`Int!`](#int) | The total count of all the reviews given to the product. |
+| `review_count` - [`Int!`](types-f-i.md#int) | The total count of all the reviews given to the product. |
 | `reviews` - [`ProductReviews!`](#productreviews) | The list of products reviews. |
-| `short_description` - [`ComplexTextValue`](#complextextvalue) | A short description of the product. Its use depends on the theme. |
-| `sku` - [`String`](#string) | A number or code assigned to a product to identify the product, options, price, and manufacturer. |
+| `short_description` - [`ComplexTextValue`](types-c-e.md#complextextvalue) | A short description of the product. Its use depends on the theme. |
+| `sku` - [`String`](types-q-s.md#string) | A number or code assigned to a product to identify the product, options, price, and manufacturer. |
 | `small_image` - [`ProductImage`](#productimage) | The relative path to the small image, which is used on catalog pages. |
-| `special_from_date` - [`String`](#string) | The beginning date that a product has a special price. *(Deprecated: The field should not be used on the storefront.)* |
-| `special_price` - [`Float`](#float) | The discounted price of the product. |
-| `special_to_date` - [`String`](#string) | The end date for a product with a special price. |
-| `staged` - [`Boolean!`](#boolean) | Indicates whether the product is staged for a future campaign. |
+| `special_from_date` - [`String`](types-q-s.md#string) | The beginning date that a product has a special price. *(Deprecated: The field should not be used on the storefront.)* |
+| `special_price` - [`Float`](types-f-i.md#float) | The discounted price of the product. |
+| `special_to_date` - [`String`](types-q-s.md#string) | The end date for a product with a special price. |
+| `staged` - [`Boolean!`](types-a-b.md#boolean) | Indicates whether the product is staged for a future campaign. |
 | `stock_status` - [`ProductStockStatus`](#productstockstatus) | Stock status of the product |
-| `swatch_image` - [`String`](#string) | The file name of a swatch image. |
+| `swatch_image` - [`String`](types-q-s.md#string) | The file name of a swatch image. |
 | `thumbnail` - [`ProductImage`](#productimage) | The relative path to the product's thumbnail image. |
-| `tier_price` - [`Float`](#float) | The price when tier pricing is in effect and the items purchased threshold has been reached. *(Deprecated: Use `price_tiers` for product tier price information.)* |
+| `tier_price` - [`Float`](types-f-i.md#float) | The price when tier pricing is in effect and the items purchased threshold has been reached. *(Deprecated: Use `price_tiers` for product tier price information.)* |
 | `tier_prices` - [`[ProductTierPrices]`](#producttierprices) | An array of ProductTierPrices objects. *(Deprecated: Use `price_tiers` for product tier price information.)* |
-| `type_id` - [`String`](#string) | One of simple, virtual, bundle, downloadable, grouped, or configurable. *(Deprecated: Use `__typename` instead.)* |
-| `uid` - [`ID!`](#id) | The unique ID for a `ProductInterface` object. |
-| `updated_at` - [`String`](#string) | Timestamp indicating when the product was updated. *(Deprecated: The field should not be used on the storefront.)* |
+| `type_id` - [`String`](types-q-s.md#string) | One of simple, virtual, bundle, downloadable, grouped, or configurable. *(Deprecated: Use `__typename` instead.)* |
+| `uid` - [`ID!`](types-f-i.md#id) | The unique ID for a `ProductInterface` object. |
+| `updated_at` - [`String`](types-q-s.md#string) | Timestamp indicating when the product was updated. *(Deprecated: The field should not be used on the storefront.)* |
 | `upsell_products` - [`[ProductInterface]`](#productinterface) | An array of up-sell products. |
-| `url_key` - [`String`](#string) | The part of the URL that identifies the product |
-| `url_path` - [`String`](#string) |  *(Deprecated: Use product's `canonical_url` or url rewrites instead)* |
-| `url_rewrites` - [`[UrlRewrite]`](#urlrewrite) | URL rewrites list |
-| `url_suffix` - [`String`](#string) | The part of the product URL that is appended after the url key |
-| `websites` - [`[Website]`](#website) | An array of websites in which the product is available. *(Deprecated: The field should not be used on the storefront.)* |
+| `url_key` - [`String`](types-q-s.md#string) | The part of the URL that identifies the product |
+| `url_path` - [`String`](types-q-s.md#string) |  *(Deprecated: Use product's `canonical_url` or url rewrites instead)* |
+| `url_rewrites` - [`[UrlRewrite]`](types-t-z.md#urlrewrite) | URL rewrites list |
+| `url_suffix` - [`String`](types-q-s.md#string) | The part of the product URL that is appended after the url key |
+| `websites` - [`[Website]`](types-t-z.md#website) | An array of websites in which the product is available. *(Deprecated: The field should not be used on the storefront.)* |
 
 #### Possible Types
 
 | ProductInterface Types |
 |----------------|
-| [`VirtualProduct`](#virtualproduct) |
-| [`SimpleProduct`](#simpleproduct) |
-| [`ConfigurableProduct`](#configurableproduct) |
-| [`DownloadableProduct`](#downloadableproduct) |
-| [`BundleProduct`](#bundleproduct) |
-| [`GiftCardProduct`](#giftcardproduct) |
-| [`GroupedProduct`](#groupedproduct) |
+| [`VirtualProduct`](types-t-z.md#virtualproduct) |
+| [`SimpleProduct`](types-q-s.md#simpleproduct) |
+| [`ConfigurableProduct`](types-c-e.md#configurableproduct) |
+| [`DownloadableProduct`](types-c-e.md#downloadableproduct) |
+| [`BundleProduct`](types-a-b.md#bundleproduct) |
+| [`GiftCardProduct`](types-f-i.md#giftcardproduct) |
+| [`GroupedProduct`](types-f-i.md#groupedproduct) |
 
 #### Example
 
 ```json
 {
   "attribute_set_id": 987,
-  "canonical_url": "abc123",
+  "canonical_url": "xyz789",
   "categories": [CategoryInterface],
-  "color": 987,
-  "country_of_manufacture": "abc123",
+  "color": 123,
+  "country_of_manufacture": "xyz789",
   "created_at": "xyz789",
   "crosssell_products": [ProductInterface],
   "custom_attributesV2": ProductCustomAttributes,
   "description": ComplexTextValue,
-  "gift_message_available": false,
+  "gift_message_available": true,
   "gift_wrapping_available": false,
   "gift_wrapping_price": Money,
-  "id": 123,
+  "id": 987,
   "image": ProductImage,
   "is_returnable": "abc123",
   "manufacturer": 987,
@@ -3512,14 +3512,14 @@ Contains fields that are common to all types of products.
   "media_gallery": [MediaGalleryInterface],
   "media_gallery_entries": [MediaGalleryEntry],
   "meta_description": "abc123",
-  "meta_keyword": "xyz789",
+  "meta_keyword": "abc123",
   "meta_title": "abc123",
-  "min_sale_qty": 987.65,
-  "name": "abc123",
+  "min_sale_qty": 123.45,
+  "name": "xyz789",
   "new_from_date": "xyz789",
-  "new_to_date": "xyz789",
-  "only_x_left_in_stock": 123.45,
-  "options_container": "xyz789",
+  "new_to_date": "abc123",
+  "only_x_left_in_stock": 987.65,
+  "options_container": "abc123",
   "price": ProductPrices,
   "price_range": PriceRange,
   "price_tiers": [TierPrice],
@@ -3532,23 +3532,23 @@ Contains fields that are common to all types of products.
   "short_description": ComplexTextValue,
   "sku": "abc123",
   "small_image": ProductImage,
-  "special_from_date": "abc123",
-  "special_price": 123.45,
-  "special_to_date": "xyz789",
+  "special_from_date": "xyz789",
+  "special_price": 987.65,
+  "special_to_date": "abc123",
   "staged": true,
   "stock_status": "IN_STOCK",
   "swatch_image": "xyz789",
   "thumbnail": ProductImage,
   "tier_price": 123.45,
   "tier_prices": [ProductTierPrices],
-  "type_id": "abc123",
+  "type_id": "xyz789",
   "uid": "4",
   "updated_at": "xyz789",
   "upsell_products": [ProductInterface],
   "url_key": "abc123",
   "url_path": "xyz789",
   "url_rewrites": [UrlRewrite],
-  "url_suffix": "abc123",
+  "url_suffix": "xyz789",
   "websites": [Website]
 }
 ```
@@ -3563,21 +3563,21 @@ An implementation of `ProductLinksInterface`.
 
 | Field Name | Description |
 |------------|-------------|
-| `link_type` - [`String`](#string) | One of related, associated, upsell, or crosssell. |
-| `linked_product_sku` - [`String`](#string) | The SKU of the linked product. |
-| `linked_product_type` - [`String`](#string) | The type of linked product (simple, virtual, bundle, downloadable, grouped, configurable). |
-| `position` - [`Int`](#int) | The position within the list of product links. |
-| `sku` - [`String`](#string) | The identifier of the linked product. |
+| `link_type` - [`String`](types-q-s.md#string) | One of related, associated, upsell, or crosssell. |
+| `linked_product_sku` - [`String`](types-q-s.md#string) | The SKU of the linked product. |
+| `linked_product_type` - [`String`](types-q-s.md#string) | The type of linked product (simple, virtual, bundle, downloadable, grouped, configurable). |
+| `position` - [`Int`](types-f-i.md#int) | The position within the list of product links. |
+| `sku` - [`String`](types-q-s.md#string) | The identifier of the linked product. |
 
 #### Example
 
 ```json
 {
-  "link_type": "xyz789",
-  "linked_product_sku": "xyz789",
-  "linked_product_type": "abc123",
-  "position": 987,
-  "sku": "xyz789"
+  "link_type": "abc123",
+  "linked_product_sku": "abc123",
+  "linked_product_type": "xyz789",
+  "position": 123,
+  "sku": "abc123"
 }
 ```
 
@@ -3591,11 +3591,11 @@ Contains information about linked products, including the link type and product 
 
 | Field Name | Description |
 |------------|-------------|
-| `link_type` - [`String`](#string) | One of related, associated, upsell, or crosssell. |
-| `linked_product_sku` - [`String`](#string) | The SKU of the linked product. |
-| `linked_product_type` - [`String`](#string) | The type of linked product (simple, virtual, bundle, downloadable, grouped, configurable). |
-| `position` - [`Int`](#int) | The position within the list of product links. |
-| `sku` - [`String`](#string) | The identifier of the linked product. |
+| `link_type` - [`String`](types-q-s.md#string) | One of related, associated, upsell, or crosssell. |
+| `linked_product_sku` - [`String`](types-q-s.md#string) | The SKU of the linked product. |
+| `linked_product_type` - [`String`](types-q-s.md#string) | The type of linked product (simple, virtual, bundle, downloadable, grouped, configurable). |
+| `position` - [`Int`](types-f-i.md#int) | The position within the list of product links. |
+| `sku` - [`String`](types-q-s.md#string) | The identifier of the linked product. |
 
 #### Possible Types
 
@@ -3610,8 +3610,8 @@ Contains information about linked products, including the link type and product 
   "link_type": "abc123",
   "linked_product_sku": "xyz789",
   "linked_product_type": "xyz789",
-  "position": 987,
-  "sku": "xyz789"
+  "position": 123,
+  "sku": "abc123"
 }
 ```
 
@@ -3625,15 +3625,15 @@ Contains an image in base64 format and basic information about the image.
 
 | Field Name | Description |
 |------------|-------------|
-| `base64_encoded_data` - [`String`](#string) | The image in base64 format. |
-| `name` - [`String`](#string) | The file name of the image. |
-| `type` - [`String`](#string) | The MIME type of the file, such as image/png. |
+| `base64_encoded_data` - [`String`](types-q-s.md#string) | The image in base64 format. |
+| `name` - [`String`](types-q-s.md#string) | The file name of the image. |
+| `type` - [`String`](types-q-s.md#string) | The MIME type of the file, such as image/png. |
 
 #### Example
 
 ```json
 {
-  "base64_encoded_data": "xyz789",
+  "base64_encoded_data": "abc123",
   "name": "xyz789",
   "type": "xyz789"
 }
@@ -3649,12 +3649,12 @@ Contains a link to a video file and basic information about the video.
 
 | Field Name | Description |
 |------------|-------------|
-| `media_type` - [`String`](#string) | Must be external-video. |
-| `video_description` - [`String`](#string) | A description of the video. |
-| `video_metadata` - [`String`](#string) | Optional data about the video. |
-| `video_provider` - [`String`](#string) | Describes the video source. |
-| `video_title` - [`String`](#string) | The title of the video. |
-| `video_url` - [`String`](#string) | The URL to the video. |
+| `media_type` - [`String`](types-q-s.md#string) | Must be external-video. |
+| `video_description` - [`String`](types-q-s.md#string) | A description of the video. |
+| `video_metadata` - [`String`](types-q-s.md#string) | Optional data about the video. |
+| `video_provider` - [`String`](types-q-s.md#string) | Describes the video source. |
+| `video_title` - [`String`](types-q-s.md#string) | The title of the video. |
+| `video_url` - [`String`](types-q-s.md#string) | The URL to the video. |
 
 #### Example
 
@@ -3681,7 +3681,7 @@ Represents a product price.
 |------------|-------------|
 | `discount` - [`ProductDiscount`](#productdiscount) | The price discount. Represents the difference between the regular and final price. |
 | `final_price` - [`Money!`](#money) | The final price of the product after applying discounts. |
-| `fixed_product_taxes` - [`[FixedProductTax]`](#fixedproducttax) | An array of the multiple Fixed Product Taxes that can be applied to a product price. |
+| `fixed_product_taxes` - [`[FixedProductTax]`](types-f-i.md#fixedproducttax) | An array of the multiple Fixed Product Taxes that can be applied to a product price. |
 | `regular_price` - [`Money!`](#money) | The regular price of the product. |
 
 #### Example
@@ -3729,13 +3729,13 @@ Contains details of a product review.
 
 | Field Name | Description |
 |------------|-------------|
-| `average_rating` - [`Float!`](#float) | The average of all ratings for this product. |
-| `created_at` - [`String!`](#string) | The date the review was created. |
-| `nickname` - [`String!`](#string) | The customer's nickname. Defaults to the customer name, if logged in. |
+| `average_rating` - [`Float!`](types-f-i.md#float) | The average of all ratings for this product. |
+| `created_at` - [`String!`](types-q-s.md#string) | The date the review was created. |
+| `nickname` - [`String!`](types-q-s.md#string) | The customer's nickname. Defaults to the customer name, if logged in. |
 | `product` - [`ProductInterface!`](#productinterface) | The reviewed product. |
 | `ratings_breakdown` - [`[ProductReviewRating]!`](#productreviewrating) | An array of ratings by rating category, such as quality, price, and value. |
-| `summary` - [`String!`](#string) | The summary (title) of the review. |
-| `text` - [`String!`](#string) | The review text. |
+| `summary` - [`String!`](types-q-s.md#string) | The summary (title) of the review. |
+| `text` - [`String!`](types-q-s.md#string) | The review text. |
 
 #### Example
 
@@ -3746,8 +3746,8 @@ Contains details of a product review.
   "nickname": "xyz789",
   "product": ProductInterface,
   "ratings_breakdown": [ProductReviewRating],
-  "summary": "abc123",
-  "text": "xyz789"
+  "summary": "xyz789",
+  "text": "abc123"
 }
 ```
 
@@ -3761,15 +3761,15 @@ Contains data about a single aspect of a product review.
 
 | Field Name | Description |
 |------------|-------------|
-| `name` - [`String!`](#string) | The label assigned to an aspect of a product that is being rated, such as quality or price. |
-| `value` - [`String!`](#string) | The rating value given by customer. By default, possible values range from 1 to 5. |
+| `name` - [`String!`](types-q-s.md#string) | The label assigned to an aspect of a product that is being rated, such as quality or price. |
+| `value` - [`String!`](types-q-s.md#string) | The rating value given by customer. By default, possible values range from 1 to 5. |
 
 #### Example
 
 ```json
 {
-  "name": "abc123",
-  "value": "xyz789"
+  "name": "xyz789",
+  "value": "abc123"
 }
 ```
 
@@ -3783,15 +3783,15 @@ Contains the reviewer's rating for a single aspect of a review.
 
 | Input Field | Description |
 |-------------|-------------|
-| `id` - [`String!`](#string) | An encoded rating ID. |
-| `value_id` - [`String!`](#string) | An encoded rating value ID. |
+| `id` - [`String!`](types-q-s.md#string) | An encoded rating ID. |
+| `value_id` - [`String!`](types-q-s.md#string) | An encoded rating value ID. |
 
 #### Example
 
 ```json
 {
   "id": "abc123",
-  "value_id": "xyz789"
+  "value_id": "abc123"
 }
 ```
 
@@ -3805,8 +3805,8 @@ Contains details about a single aspect of a product review.
 
 | Field Name | Description |
 |------------|-------------|
-| `id` - [`String!`](#string) | An encoded rating ID. |
-| `name` - [`String!`](#string) | The label assigned to an aspect of a product that is being rated, such as quality or price. |
+| `id` - [`String!`](types-q-s.md#string) | An encoded rating ID. |
+| `name` - [`String!`](types-q-s.md#string) | The label assigned to an aspect of a product that is being rated, such as quality or price. |
 | `values` - [`[ProductReviewRatingValueMetadata]!`](#productreviewratingvaluemetadata) | List of product review ratings sorted by position. |
 
 #### Example
@@ -3829,8 +3829,8 @@ Contains details about a single value in a product review.
 
 | Field Name | Description |
 |------------|-------------|
-| `value` - [`String!`](#string) | A ratings scale, such as the number of stars awarded. |
-| `value_id` - [`String!`](#string) | An encoded rating value ID. |
+| `value` - [`String!`](types-q-s.md#string) | A ratings scale, such as the number of stars awarded. |
+| `value_id` - [`String!`](types-q-s.md#string) | An encoded rating value ID. |
 
 #### Example
 
@@ -3870,7 +3870,7 @@ Contains an array of product reviews.
 | Field Name | Description |
 |------------|-------------|
 | `items` - [`[ProductReview]!`](#productreview) | An array of product reviews. |
-| `page_info` - [`SearchResultPageInfo!`](#searchresultpageinfo) | Metadata for pagination rendering. |
+| `page_info` - [`SearchResultPageInfo!`](types-q-s.md#searchresultpageinfo) | Metadata for pagination rendering. |
 
 #### Example
 
@@ -3910,21 +3910,21 @@ Deprecated. Use `TierPrice` instead. Defines a tier price, which is a quantity d
 
 | Field Name | Description |
 |------------|-------------|
-| `customer_group_id` - [`String`](#string) | The ID of the customer group. *(Deprecated: Not relevant for the storefront.)* |
-| `percentage_value` - [`Float`](#float) | The percentage discount of the item. *(Deprecated: Use `TierPrice.discount` instead.)* |
-| `qty` - [`Float`](#float) | The number of items that must be purchased to qualify for tier pricing. *(Deprecated: Use `TierPrice.quantity` instead.)* |
-| `value` - [`Float`](#float) | The price of the fixed price item. *(Deprecated: Use `TierPrice.final_price` instead.)* |
-| `website_id` - [`Float`](#float) | The ID assigned to the website. *(Deprecated: Not relevant for the storefront.)* |
+| `customer_group_id` - [`String`](types-q-s.md#string) | The ID of the customer group. *(Deprecated: Not relevant for the storefront.)* |
+| `percentage_value` - [`Float`](types-f-i.md#float) | The percentage discount of the item. *(Deprecated: Use `TierPrice.discount` instead.)* |
+| `qty` - [`Float`](types-f-i.md#float) | The number of items that must be purchased to qualify for tier pricing. *(Deprecated: Use `TierPrice.quantity` instead.)* |
+| `value` - [`Float`](types-f-i.md#float) | The price of the fixed price item. *(Deprecated: Use `TierPrice.final_price` instead.)* |
+| `website_id` - [`Float`](types-f-i.md#float) | The ID assigned to the website. *(Deprecated: Not relevant for the storefront.)* |
 
 #### Example
 
 ```json
 {
-  "customer_group_id": "xyz789",
+  "customer_group_id": "abc123",
   "percentage_value": 123.45,
-  "qty": 987.65,
+  "qty": 123.45,
   "value": 123.45,
-  "website_id": 987.65
+  "website_id": 123.45
 }
 ```
 
@@ -3938,21 +3938,21 @@ Contains information about a product video.
 
 | Field Name | Description |
 |------------|-------------|
-| `disabled` - [`Boolean`](#boolean) | Indicates whether the image is hidden from view. |
-| `label` - [`String`](#string) | The label of the product image or video. |
-| `position` - [`Int`](#int) | The media item's position after it has been sorted. |
-| `types` - [`[String]`](#string) | Array of image types. It can have the following values: image, small_image, thumbnail. |
-| `url` - [`String`](#string) | The URL of the product image or video. |
+| `disabled` - [`Boolean`](types-a-b.md#boolean) | Indicates whether the image is hidden from view. |
+| `label` - [`String`](types-q-s.md#string) | The label of the product image or video. |
+| `position` - [`Int`](types-f-i.md#int) | The media item's position after it has been sorted. |
+| `types` - [`[String]`](types-q-s.md#string) | Array of image types. It can have the following values: image, small_image, thumbnail. |
+| `url` - [`String`](types-q-s.md#string) | The URL of the product image or video. |
 | `video_content` - [`ProductMediaGalleryEntriesVideoContent`](#productmediagalleryentriesvideocontent) | Contains a `ProductMediaGalleryEntriesVideoContent` object. |
 
 #### Example
 
 ```json
 {
-  "disabled": false,
-  "label": "abc123",
-  "position": 123,
-  "types": ["abc123"],
+  "disabled": true,
+  "label": "xyz789",
+  "position": 987,
+  "types": ["xyz789"],
   "url": "abc123",
   "video_content": ProductMediaGalleryEntriesVideoContent
 }
@@ -3968,13 +3968,13 @@ Contains the results of a `products` query.
 
 | Field Name | Description |
 |------------|-------------|
-| `aggregations` - [`[Aggregation]`](#aggregation) | A bucket that contains the attribute code and label for each filterable option. |
+| `aggregations` - [`[Aggregation]`](types-a-b.md#aggregation) | A bucket that contains the attribute code and label for each filterable option. |
 | `filters` - [`[LayerFilter]`](#layerfilter) | Layered navigation filters array. *(Deprecated: Use `aggregations` instead.)* |
 | `items` - [`[ProductInterface]`](#productinterface) | An array of products that match the specified search criteria. |
-| `page_info` - [`SearchResultPageInfo`](#searchresultpageinfo) | An object that includes the page_info and currentPage values specified in the query. |
-| `sort_fields` - [`SortFields`](#sortfields) | An object that includes the default sort field and all available sort fields. |
-| `suggestions` - [`[SearchSuggestion]`](#searchsuggestion) | An array of search suggestions for case when search query have no results. |
-| `total_count` - [`Int`](#int) | The number of products that are marked as visible. By default, in complex products, parent products are visible, but their child products are not. |
+| `page_info` - [`SearchResultPageInfo`](types-q-s.md#searchresultpageinfo) | An object that includes the page_info and currentPage values specified in the query. |
+| `sort_fields` - [`SortFields`](types-q-s.md#sortfields) | An object that includes the default sort field and all available sort fields. |
+| `suggestions` - [`[SearchSuggestion]`](types-q-s.md#searchsuggestion) | An array of search suggestions for case when search query have no results. |
+| `total_count` - [`Int`](types-f-i.md#int) | The number of products that are marked as visible. By default, in complex products, parent products are visible, but their child products are not. |
 
 #### Example
 
@@ -4003,15 +4003,15 @@ Contains details about a purchase order.
 | `approval_flow` - [`[PurchaseOrderRuleApprovalFlow]!`](#purchaseorderruleapprovalflow) | The approval flows for each applied rules. |
 | `available_actions` - [`[PurchaseOrderAction]!`](#purchaseorderaction) | Purchase order actions available to the customer. Can be used to display action buttons on the client. |
 | `comments` - [`[PurchaseOrderComment]!`](#purchaseordercomment) | The set of comments applied to the purchase order. |
-| `created_at` - [`String!`](#string) | The date the purchase order was created. |
-| `created_by` - [`Customer`](#customer) | The company user who created the purchase order. |
+| `created_at` - [`String!`](types-q-s.md#string) | The date the purchase order was created. |
+| `created_by` - [`Customer`](types-c-e.md#customer) | The company user who created the purchase order. |
 | `history_log` - [`[PurchaseOrderHistoryItem]!`](#purchaseorderhistoryitem) | The log of the events related to the purchase order. |
-| `number` - [`String!`](#string) | The purchase order number. |
-| `order` - [`CustomerOrder`](#customerorder) | The reference to the order placed based on the purchase order. |
-| `quote` - [`Cart`](#cart) | The quote related to the purchase order. |
+| `number` - [`String!`](types-q-s.md#string) | The purchase order number. |
+| `order` - [`CustomerOrder`](types-c-e.md#customerorder) | The reference to the order placed based on the purchase order. |
+| `quote` - [`Cart`](types-c-e.md#cart) | The quote related to the purchase order. |
 | `status` - [`PurchaseOrderStatus!`](#purchaseorderstatus) | The current status of the purchase order. |
-| `uid` - [`ID!`](#id) | A unique identifier for the purchase order. |
-| `updated_at` - [`String!`](#string) | The date the purchase order was last updated. |
+| `uid` - [`ID!`](types-f-i.md#id) | A unique identifier for the purchase order. |
+| `updated_at` - [`String!`](types-q-s.md#string) | The date the purchase order was last updated. |
 
 #### Example
 
@@ -4020,10 +4020,10 @@ Contains details about a purchase order.
   "approval_flow": [PurchaseOrderRuleApprovalFlow],
   "available_actions": ["REJECT"],
   "comments": [PurchaseOrderComment],
-  "created_at": "xyz789",
+  "created_at": "abc123",
   "created_by": Customer,
   "history_log": [PurchaseOrderHistoryItem],
-  "number": "xyz789",
+  "number": "abc123",
   "order": CustomerOrder,
   "quote": Cart,
   "status": "PENDING",
@@ -4062,13 +4062,13 @@ Contains details about a failed action.
 
 | Field Name | Description |
 |------------|-------------|
-| `message` - [`String!`](#string) | The returned error message. |
+| `message` - [`String!`](types-q-s.md#string) | The returned error message. |
 | `type` - [`PurchaseOrderErrorType!`](#purchaseordererrortype) | The error type. |
 
 #### Example
 
 ```json
-{"message": "abc123", "type": "NOT_FOUND"}
+{"message": "xyz789", "type": "NOT_FOUND"}
 ```
 
 <HorizontalLine />
@@ -4081,19 +4081,19 @@ Contains details about a single event in the approval flow of the purchase order
 
 | Field Name | Description |
 |------------|-------------|
-| `message` - [`String`](#string) | A formatted message. |
-| `name` - [`String`](#string) | The approver name. |
-| `role` - [`String`](#string) | The approver role. |
+| `message` - [`String`](types-q-s.md#string) | A formatted message. |
+| `name` - [`String`](types-q-s.md#string) | The approver name. |
+| `role` - [`String`](types-q-s.md#string) | The approver role. |
 | `status` - [`PurchaseOrderApprovalFlowItemStatus`](#purchaseorderapprovalflowitemstatus) | The status related to the event. |
-| `updated_at` - [`String`](#string) | The date and time the event was updated. |
+| `updated_at` - [`String`](types-q-s.md#string) | The date and time the event was updated. |
 
 #### Example
 
 ```json
 {
-  "message": "xyz789",
+  "message": "abc123",
   "name": "abc123",
-  "role": "xyz789",
+  "role": "abc123",
   "status": "PENDING",
   "updated_at": "xyz789"
 }
@@ -4127,16 +4127,16 @@ Contains details about a purchase order approval rule.
 
 | Field Name | Description |
 |------------|-------------|
-| `applies_to_roles` - [`[CompanyRole]!`](#companyrole) | The name of the user(s) affected by the the purchase order approval rule. |
-| `approver_roles` - [`[CompanyRole]!`](#companyrole) | The name of the user who needs to approve purchase orders that trigger the approval rule. |
+| `applies_to_roles` - [`[CompanyRole]!`](types-c-e.md#companyrole) | The name of the user(s) affected by the the purchase order approval rule. |
+| `approver_roles` - [`[CompanyRole]!`](types-c-e.md#companyrole) | The name of the user who needs to approve purchase orders that trigger the approval rule. |
 | `condition` - [`PurchaseOrderApprovalRuleConditionInterface`](#purchaseorderapprovalruleconditioninterface) | Condition which triggers the approval rule. |
-| `created_at` - [`String!`](#string) | The date the purchase order rule was created. |
-| `created_by` - [`String!`](#string) | The name of the user who created the purchase order approval rule. |
-| `description` - [`String`](#string) | Description of the purchase order approval rule. |
-| `name` - [`String!`](#string) | The name of the purchase order approval rule. |
+| `created_at` - [`String!`](types-q-s.md#string) | The date the purchase order rule was created. |
+| `created_by` - [`String!`](types-q-s.md#string) | The name of the user who created the purchase order approval rule. |
+| `description` - [`String`](types-q-s.md#string) | Description of the purchase order approval rule. |
+| `name` - [`String!`](types-q-s.md#string) | The name of the purchase order approval rule. |
 | `status` - [`PurchaseOrderApprovalRuleStatus!`](#purchaseorderapprovalrulestatus) | The status of the purchase order approval rule. |
-| `uid` - [`ID!`](#id) | The unique identifier for the purchase order approval rule. |
-| `updated_at` - [`String!`](#string) | The date the purchase order rule was last updated. |
+| `uid` - [`ID!`](types-f-i.md#id) | The unique identifier for the purchase order approval rule. |
+| `updated_at` - [`String!`](types-q-s.md#string) | The date the purchase order rule was last updated. |
 
 #### Example
 
@@ -4146,9 +4146,9 @@ Contains details about a purchase order approval rule.
   "approver_roles": [CompanyRole],
   "condition": PurchaseOrderApprovalRuleConditionInterface,
   "created_at": "abc123",
-  "created_by": "abc123",
-  "description": "abc123",
-  "name": "abc123",
+  "created_by": "xyz789",
+  "description": "xyz789",
+  "name": "xyz789",
   "status": "ENABLED",
   "uid": "4",
   "updated_at": "xyz789"
@@ -4236,12 +4236,12 @@ Contains approval rule condition details, including the quantity to be evaluated
 |------------|-------------|
 | `attribute` - [`PurchaseOrderApprovalRuleType`](#purchaseorderapprovalruletype) | The type of purchase order approval rule. |
 | `operator` - [`PurchaseOrderApprovalRuleConditionOperator`](#purchaseorderapprovalruleconditionoperator) | The operator to be used for evaluating the approval rule condition. |
-| `quantity` - [`Int`](#int) | The quantity to be used for evaluation of the approval rule condition. |
+| `quantity` - [`Int`](types-f-i.md#int) | The quantity to be used for evaluation of the approval rule condition. |
 
 #### Example
 
 ```json
-{"attribute": "GRAND_TOTAL", "operator": "MORE_THAN", "quantity": 987}
+{"attribute": "GRAND_TOTAL", "operator": "MORE_THAN", "quantity": 123}
 ```
 
 <HorizontalLine />
@@ -4254,11 +4254,11 @@ Defines a new purchase order approval rule.
 
 | Input Field | Description |
 |-------------|-------------|
-| `applies_to` - [`[ID]!`](#id) | A list of company user role IDs to which this purchase order approval rule should be applied. When an empty array is provided, the rule is applied to all user roles in the system, including those created in the future. |
-| `approvers` - [`[ID]!`](#id) | A list of B2B user roles that can approve this purchase order approval rule. |
-| `condition` - [`CreatePurchaseOrderApprovalRuleConditionInput!`](#createpurchaseorderapprovalruleconditioninput) | The condition of the purchase order approval rule. |
-| `description` - [`String`](#string) | A summary of the purpose of the purchase order approval rule. |
-| `name` - [`String!`](#string) | The purchase order approval rule name. |
+| `applies_to` - [`[ID]!`](types-f-i.md#id) | A list of company user role IDs to which this purchase order approval rule should be applied. When an empty array is provided, the rule is applied to all user roles in the system, including those created in the future. |
+| `approvers` - [`[ID]!`](types-f-i.md#id) | A list of B2B user roles that can approve this purchase order approval rule. |
+| `condition` - [`CreatePurchaseOrderApprovalRuleConditionInput!`](types-c-e.md#createpurchaseorderapprovalruleconditioninput) | The condition of the purchase order approval rule. |
+| `description` - [`String`](types-q-s.md#string) | A summary of the purpose of the purchase order approval rule. |
+| `name` - [`String!`](types-q-s.md#string) | The purchase order approval rule name. |
 | `status` - [`PurchaseOrderApprovalRuleStatus!`](#purchaseorderapprovalrulestatus) | The status of the purchase order approval rule. |
 
 #### Example
@@ -4284,9 +4284,9 @@ Contains metadata that can be used to render rule edit forms.
 
 | Field Name | Description |
 |------------|-------------|
-| `available_applies_to` - [`[CompanyRole]!`](#companyrole) | A list of B2B user roles that the rule can be applied to. |
-| `available_condition_currencies` - [`[AvailableCurrency]!`](#availablecurrency) | A list of currencies that can be used to create approval rules based on amounts, for example shipping cost rules. |
-| `available_requires_approval_from` - [`[CompanyRole]!`](#companyrole) | A list of B2B user roles that can be specified as approvers for the approval rules. |
+| `available_applies_to` - [`[CompanyRole]!`](types-c-e.md#companyrole) | A list of B2B user roles that the rule can be applied to. |
+| `available_condition_currencies` - [`[AvailableCurrency]!`](types-a-b.md#availablecurrency) | A list of currencies that can be used to create approval rules based on amounts, for example shipping cost rules. |
+| `available_requires_approval_from` - [`[CompanyRole]!`](types-c-e.md#companyrole) | A list of B2B user roles that can be specified as approvers for the approval rules. |
 
 #### Example
 
@@ -4344,8 +4344,8 @@ Contains the approval rules that the customer can see.
 | Field Name | Description |
 |------------|-------------|
 | `items` - [`[PurchaseOrderApprovalRule]!`](#purchaseorderapprovalrule) | A list of purchase order approval rules visible to the customer. |
-| `page_info` - [`SearchResultPageInfo`](#searchresultpageinfo) | Result pagination details. |
-| `total_count` - [`Int`](#int) | The total number of purchase order approval rules visible to the customer. |
+| `page_info` - [`SearchResultPageInfo`](types-q-s.md#searchresultpageinfo) | Result pagination details. |
+| `total_count` - [`Int`](types-f-i.md#int) | The total number of purchase order approval rules visible to the customer. |
 
 #### Example
 
@@ -4353,7 +4353,7 @@ Contains the approval rules that the customer can see.
 {
   "items": [PurchaseOrderApprovalRule],
   "page_info": SearchResultPageInfo,
-  "total_count": 123
+  "total_count": 987
 }
 ```
 
@@ -4367,19 +4367,19 @@ Contains details about a comment.
 
 | Field Name | Description |
 |------------|-------------|
-| `author` - [`Customer`](#customer) | The user who left the comment. |
-| `created_at` - [`String!`](#string) | The date and time when the comment was created. |
-| `text` - [`String!`](#string) | The text of the comment. |
-| `uid` - [`ID!`](#id) | A unique identifier of the comment. |
+| `author` - [`Customer`](types-c-e.md#customer) | The user who left the comment. |
+| `created_at` - [`String!`](types-q-s.md#string) | The date and time when the comment was created. |
+| `text` - [`String!`](types-q-s.md#string) | The text of the comment. |
+| `uid` - [`ID!`](types-f-i.md#id) | A unique identifier of the comment. |
 
 #### Example
 
 ```json
 {
   "author": Customer,
-  "created_at": "xyz789",
-  "text": "xyz789",
-  "uid": "4"
+  "created_at": "abc123",
+  "text": "abc123",
+  "uid": 4
 }
 ```
 
@@ -4413,19 +4413,19 @@ Contains details about a status change.
 
 | Field Name | Description |
 |------------|-------------|
-| `activity` - [`String!`](#string) | The activity type of the event. |
-| `created_at` - [`String!`](#string) | The date and time when the event happened. |
-| `message` - [`String!`](#string) | The message representation of the event. |
-| `uid` - [`ID!`](#id) | A unique identifier of the purchase order history item. |
+| `activity` - [`String!`](types-q-s.md#string) | The activity type of the event. |
+| `created_at` - [`String!`](types-q-s.md#string) | The date and time when the event happened. |
+| `message` - [`String!`](types-q-s.md#string) | The message representation of the event. |
+| `uid` - [`ID!`](types-f-i.md#id) | A unique identifier of the purchase order history item. |
 
 #### Example
 
 ```json
 {
   "activity": "abc123",
-  "created_at": "abc123",
-  "message": "abc123",
-  "uid": "4"
+  "created_at": "xyz789",
+  "message": "xyz789",
+  "uid": 4
 }
 ```
 
@@ -4440,7 +4440,7 @@ Contains details about approval roles applied to the purchase order and status c
 | Field Name | Description |
 |------------|-------------|
 | `events` - [`[PurchaseOrderApprovalFlowEvent]!`](#purchaseorderapprovalflowevent) | The approval flow event related to the rule. |
-| `rule_name` - [`String!`](#string) | The name of the applied rule. |
+| `rule_name` - [`String!`](types-q-s.md#string) | The name of the applied rule. |
 
 #### Example
 
@@ -4486,8 +4486,8 @@ Contains a list of purchase orders.
 | Field Name | Description |
 |------------|-------------|
 | `items` - [`[PurchaseOrder]!`](#purchaseorder) | Purchase orders matching the search criteria. |
-| `page_info` - [`SearchResultPageInfo`](#searchresultpageinfo) | Page information of search result's current page. |
-| `total_count` - [`Int`](#int) | Total number of purchase orders found matching the search criteria. |
+| `page_info` - [`SearchResultPageInfo`](types-q-s.md#searchresultpageinfo) | Page information of search result's current page. |
+| `total_count` - [`Int`](types-f-i.md#int) | Total number of purchase orders found matching the search criteria. |
 
 #### Example
 
@@ -4509,7 +4509,7 @@ Defines which purchase orders to act on.
 
 | Input Field | Description |
 |-------------|-------------|
-| `purchase_order_uids` - [`[ID]!`](#id) | An array of purchase order UIDs. |
+| `purchase_order_uids` - [`[ID]!`](types-f-i.md#id) | An array of purchase order UIDs. |
 
 #### Example
 
@@ -4549,18 +4549,18 @@ Defines the criteria to use to filter the list of purchase orders.
 
 | Input Field | Description |
 |-------------|-------------|
-| `company_purchase_orders` - [`Boolean`](#boolean) | Include only purchase orders made by subordinate company users. |
-| `created_date` - [`FilterRangeTypeInput`](#filterrangetypeinput) | Filter by the creation date of the purchase order. |
-| `require_my_approval` - [`Boolean`](#boolean) | Include only purchase orders that are waiting for the customer’s approval. |
+| `company_purchase_orders` - [`Boolean`](types-a-b.md#boolean) | Include only purchase orders made by subordinate company users. |
+| `created_date` - [`FilterRangeTypeInput`](types-f-i.md#filterrangetypeinput) | Filter by the creation date of the purchase order. |
+| `require_my_approval` - [`Boolean`](types-a-b.md#boolean) | Include only purchase orders that are waiting for the customer’s approval. |
 | `status` - [`PurchaseOrderStatus`](#purchaseorderstatus) | Filter by the status of the purchase order. |
 
 #### Example
 
 ```json
 {
-  "company_purchase_orders": true,
+  "company_purchase_orders": false,
   "created_date": FilterRangeTypeInput,
-  "require_my_approval": true,
+  "require_my_approval": false,
   "status": "PENDING"
 }
 ```

@@ -4,13 +4,13 @@
 
 Add one or more bundle products to the specified cart. We recommend using `addProductsToCart` instead.
 
-**Response:** [`AddBundleProductsToCartOutput`](#addbundleproductstocartoutput)
+**Response:** [`AddBundleProductsToCartOutput`](types-a-b.md#addbundleproductstocartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`AddBundleProductsToCartInput`](#addbundleproductstocartinput) | An input object that defines which bundle products to add to the cart. |
+| `input` - [`AddBundleProductsToCartInput`](types-a-b.md#addbundleproductstocartinput) | An input object that defines which bundle products to add to the cart. |
 
 #### Example
 
@@ -44,13 +44,13 @@ mutation addBundleProductsToCart($input: AddBundleProductsToCartInput) {
 
 Add one or more configurable products to the specified cart. We recommend using `addProductsToCart` instead.
 
-**Response:** [`AddConfigurableProductsToCartOutput`](#addconfigurableproductstocartoutput)
+**Response:** [`AddConfigurableProductsToCartOutput`](types-a-b.md#addconfigurableproductstocartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`AddConfigurableProductsToCartInput`](#addconfigurableproductstocartinput) | An input object that defines which configurable products to add to the cart. |
+| `input` - [`AddConfigurableProductsToCartInput`](types-a-b.md#addconfigurableproductstocartinput) | An input object that defines which configurable products to add to the cart. |
 
 #### Example
 
@@ -88,13 +88,13 @@ mutation addConfigurableProductsToCart($input: AddConfigurableProductsToCartInpu
 
 Add one or more downloadable products to the specified cart. We recommend using `addProductsToCart` instead.
 
-**Response:** [`AddDownloadableProductsToCartOutput`](#adddownloadableproductstocartoutput)
+**Response:** [`AddDownloadableProductsToCartOutput`](types-a-b.md#adddownloadableproductstocartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`AddDownloadableProductsToCartInput`](#adddownloadableproductstocartinput) | An input object that defines which downloadable products to add to the cart. |
+| `input` - [`AddDownloadableProductsToCartInput`](types-a-b.md#adddownloadableproductstocartinput) | An input object that defines which downloadable products to add to the cart. |
 
 #### Example
 
@@ -132,14 +132,14 @@ mutation addDownloadableProductsToCart($input: AddDownloadableProductsToCartInpu
 
 Add registrants to the specified gift registry.
 
-**Response:** [`AddGiftRegistryRegistrantsOutput`](#addgiftregistryregistrantsoutput)
+**Response:** [`AddGiftRegistryRegistrantsOutput`](types-a-b.md#addgiftregistryregistrantsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `giftRegistryUid` - [`ID!`](#id) | The unique ID of the gift registry. |
-| `registrants` - [`[AddGiftRegistryRegistrantInput!]!`](#addgiftregistryregistrantinput) | An array registrants to add. |
+| `giftRegistryUid` - [`ID!`](types-f-i.md#id) | The unique ID of the gift registry. |
+| `registrants` - [`[AddGiftRegistryRegistrantInput!]!`](types-a-b.md#addgiftregistryregistrantinput) | An array registrants to add. |
 
 #### Example
 
@@ -165,7 +165,7 @@ mutation addGiftRegistryRegistrants(
 
 ```json
 {
-  "giftRegistryUid": "4",
+  "giftRegistryUid": 4,
   "registrants": [AddGiftRegistryRegistrantInput]
 }
 ```
@@ -188,14 +188,14 @@ mutation addGiftRegistryRegistrants(
 
 Add any type of product to the cart.
 
-**Response:** [`AddProductsToCartOutput`](#addproductstocartoutput)
+**Response:** [`AddProductsToCartOutput`](types-a-b.md#addproductstocartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `cartId` - [`String!`](#string) | The cart ID of the shopper. |
-| `cartItems` - [`[CartItemInput!]!`](#cartiteminput) | An array that defines the products to add to the cart. |
+| `cartId` - [`String!`](types-q-s.md#string) | The cart ID of the shopper. |
+| `cartItems` - [`[CartItemInput!]!`](types-c-e.md#cartiteminput) | An array that defines the products to add to the cart. |
 
 #### Example
 
@@ -248,13 +248,13 @@ mutation addProductsToCart(
 
 Add products to the specified compare list.
 
-**Response:** [`CompareList`](#comparelist)
+**Response:** [`CompareList`](types-c-e.md#comparelist)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`AddProductsToCompareListInput`](#addproductstocomparelistinput) | An input object that defines which products to add to an existing compare list. |
+| `input` - [`AddProductsToCompareListInput`](types-a-b.md#addproductstocomparelistinput) | An input object that defines which products to add to an existing compare list. |
 
 #### Example
 
@@ -290,7 +290,7 @@ mutation addProductsToCompareList($input: AddProductsToCompareListInput) {
       "attributes": [ComparableAttribute],
       "item_count": 987,
       "items": [ComparableItem],
-      "uid": "4"
+      "uid": 4
     }
   }
 }
@@ -302,14 +302,14 @@ mutation addProductsToCompareList($input: AddProductsToCompareListInput) {
 
 Add items to the specified requisition list.
 
-**Response:** [`AddProductsToRequisitionListOutput`](#addproductstorequisitionlistoutput)
+**Response:** [`AddProductsToRequisitionListOutput`](types-a-b.md#addproductstorequisitionlistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `requisitionListUid` - [`ID!`](#id) | The unique ID of the requisition list. |
-| `requisitionListItems` - [`[RequisitionListItemsInput!]!`](#requisitionlistitemsinput) | An array of products to be added to the requisition list. |
+| `requisitionListUid` - [`ID!`](types-f-i.md#id) | The unique ID of the requisition list. |
+| `requisitionListItems` - [`[RequisitionListItemsInput!]!`](types-q-s.md#requisitionlistitemsinput) | An array of products to be added to the requisition list. |
 
 #### Example
 
@@ -335,7 +335,7 @@ mutation addProductsToRequisitionList(
 
 ```json
 {
-  "requisitionListUid": 4,
+  "requisitionListUid": "4",
   "requisitionListItems": [RequisitionListItemsInput]
 }
 ```
@@ -358,14 +358,14 @@ mutation addProductsToRequisitionList(
 
 Add one or more products to the specified wish list. This mutation supports all product types.
 
-**Response:** [`AddProductsToWishlistOutput`](#addproductstowishlistoutput)
+**Response:** [`AddProductsToWishlistOutput`](types-a-b.md#addproductstowishlistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `wishlistId` - [`ID!`](#id) | The ID of a wish list. |
-| `wishlistItems` - [`[WishlistItemInput!]!`](#wishlistiteminput) | An array of products to add to the wish list. |
+| `wishlistId` - [`ID!`](types-f-i.md#id) | The ID of a wish list. |
+| `wishlistItems` - [`[WishlistItemInput!]!`](types-t-z.md#wishlistiteminput) | An array of products to add to the wish list. |
 
 #### Example
 
@@ -418,13 +418,13 @@ mutation addProductsToWishlist(
 
 Add a comment to an existing purchase order.
 
-**Response:** [`AddPurchaseOrderCommentOutput`](#addpurchaseordercommentoutput)
+**Response:** [`AddPurchaseOrderCommentOutput`](types-a-b.md#addpurchaseordercommentoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`AddPurchaseOrderCommentInput!`](#addpurchaseordercommentinput) |  |
+| `input` - [`AddPurchaseOrderCommentInput!`](types-a-b.md#addpurchaseordercommentinput) |  |
 
 #### Example
 
@@ -464,13 +464,13 @@ mutation addPurchaseOrderComment($input: AddPurchaseOrderCommentInput!) {
 
 Add purchase order items to the shopping cart.
 
-**Response:** [`AddProductsToCartOutput`](#addproductstocartoutput)
+**Response:** [`AddProductsToCartOutput`](types-a-b.md#addproductstocartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`AddPurchaseOrderItemsToCartInput!`](#addpurchaseorderitemstocartinput) |  |
+| `input` - [`AddPurchaseOrderItemsToCartInput!`](types-a-b.md#addpurchaseorderitemstocartinput) |  |
 
 #### Example
 
@@ -514,14 +514,14 @@ mutation addPurchaseOrderItemsToCart($input: AddPurchaseOrderItemsToCartInput!) 
 
 Add items in the requisition list to the customer's cart.
 
-**Response:** [`AddRequisitionListItemsToCartOutput`](#addrequisitionlistitemstocartoutput)
+**Response:** [`AddRequisitionListItemsToCartOutput`](types-a-b.md#addrequisitionlistitemstocartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `requisitionListUid` - [`ID!`](#id) | The unique ID of the requisition list. |
-| `requisitionListItemUids` - [`[ID!]`](#id) | An array of UIDs presenting products to be added to the cart. If no UIDs are specified, all items in the requisition list will be added to the cart. |
+| `requisitionListUid` - [`ID!`](types-f-i.md#id) | The unique ID of the requisition list. |
+| `requisitionListItemUids` - [`[ID!]`](types-f-i.md#id) | An array of UIDs presenting products to be added to the cart. If no UIDs are specified, all items in the requisition list will be added to the cart. |
 
 #### Example
 
@@ -550,7 +550,10 @@ mutation addRequisitionListItemsToCart(
 ##### Variables
 
 ```json
-{"requisitionListUid": 4, "requisitionListItemUids": [4]}
+{
+  "requisitionListUid": "4",
+  "requisitionListItemUids": ["4"]
+}
 ```
 
 ##### Response
@@ -563,7 +566,7 @@ mutation addRequisitionListItemsToCart(
         AddRequisitionListItemToCartUserError
       ],
       "cart": Cart,
-      "status": false
+      "status": true
     }
   }
 }
@@ -575,13 +578,13 @@ mutation addRequisitionListItemsToCart(
 
 Add a comment to an existing return.
 
-**Response:** [`AddReturnCommentOutput`](#addreturncommentoutput)
+**Response:** [`AddReturnCommentOutput`](types-a-b.md#addreturncommentoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`AddReturnCommentInput!`](#addreturncommentinput) | An input object that defines a return comment. |
+| `input` - [`AddReturnCommentInput!`](types-a-b.md#addreturncommentinput) | An input object that defines a return comment. |
 
 #### Example
 
@@ -615,13 +618,13 @@ mutation addReturnComment($input: AddReturnCommentInput!) {
 
 Add tracking information to the return.
 
-**Response:** [`AddReturnTrackingOutput`](#addreturntrackingoutput)
+**Response:** [`AddReturnTrackingOutput`](types-a-b.md#addreturntrackingoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`AddReturnTrackingInput!`](#addreturntrackinginput) | An input object that defines tracking information. |
+| `input` - [`AddReturnTrackingInput!`](types-a-b.md#addreturntrackinginput) | An input object that defines tracking information. |
 
 #### Example
 
@@ -665,13 +668,13 @@ mutation addReturnTracking($input: AddReturnTrackingInput!) {
 
 Add one or more simple products to the specified cart. We recommend using `addProductsToCart` instead.
 
-**Response:** [`AddSimpleProductsToCartOutput`](#addsimpleproductstocartoutput)
+**Response:** [`AddSimpleProductsToCartOutput`](types-a-b.md#addsimpleproductstocartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`AddSimpleProductsToCartInput`](#addsimpleproductstocartinput) | An input object that defines which simple products to add to the cart. |
+| `input` - [`AddSimpleProductsToCartInput`](types-a-b.md#addsimpleproductstocartinput) | An input object that defines which simple products to add to the cart. |
 
 #### Example
 
@@ -705,13 +708,13 @@ mutation addSimpleProductsToCart($input: AddSimpleProductsToCartInput) {
 
 Add one or more virtual products to the specified cart. We recommend using `addProductsToCart` instead.
 
-**Response:** [`AddVirtualProductsToCartOutput`](#addvirtualproductstocartoutput)
+**Response:** [`AddVirtualProductsToCartOutput`](types-a-b.md#addvirtualproductstocartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`AddVirtualProductsToCartInput`](#addvirtualproductstocartinput) | An input object that defines which virtual products to add to the cart. |
+| `input` - [`AddVirtualProductsToCartInput`](types-a-b.md#addvirtualproductstocartinput) | An input object that defines which virtual products to add to the cart. |
 
 #### Example
 
@@ -745,14 +748,14 @@ mutation addVirtualProductsToCart($input: AddVirtualProductsToCartInput) {
 
 Add items in the specified wishlist to the customer's cart.
 
-**Response:** [`AddWishlistItemsToCartOutput`](#addwishlistitemstocartoutput)
+**Response:** [`AddWishlistItemsToCartOutput`](types-a-b.md#addwishlistitemstocartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `wishlistId` - [`ID!`](#id) | The unique ID of the wish list |
-| `wishlistItemIds` - [`[ID!]`](#id) | An array of IDs representing products to be added to the cart. If no IDs are specified, all items in the wishlist will be added to the cart |
+| `wishlistId` - [`ID!`](types-f-i.md#id) | The unique ID of the wish list |
+| `wishlistItemIds` - [`[ID!]`](types-f-i.md#id) | An array of IDs representing products to be added to the cart. If no IDs are specified, all items in the wishlist will be added to the cart |
 
 #### Example
 
@@ -781,7 +784,10 @@ mutation addWishlistItemsToCart(
 ##### Variables
 
 ```json
-{"wishlistId": 4, "wishlistItemIds": ["4"]}
+{
+  "wishlistId": "4",
+  "wishlistItemIds": ["4"]
+}
 ```
 
 ##### Response
@@ -806,13 +812,13 @@ mutation addWishlistItemsToCart(
 
 Apply a pre-defined coupon code to the specified cart.
 
-**Response:** [`ApplyCouponToCartOutput`](#applycoupontocartoutput)
+**Response:** [`ApplyCouponToCartOutput`](types-a-b.md#applycoupontocartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`ApplyCouponToCartInput`](#applycoupontocartinput) | An input object that defines the coupon code to apply to the cart. |
+| `input` - [`ApplyCouponToCartInput`](types-a-b.md#applycoupontocartinput) | An input object that defines the coupon code to apply to the cart. |
 
 #### Example
 
@@ -846,13 +852,13 @@ mutation applyCouponToCart($input: ApplyCouponToCartInput) {
 
 Apply a pre-defined gift card code to the specified cart.
 
-**Response:** [`ApplyGiftCardToCartOutput`](#applygiftcardtocartoutput)
+**Response:** [`ApplyGiftCardToCartOutput`](types-a-b.md#applygiftcardtocartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`ApplyGiftCardToCartInput`](#applygiftcardtocartinput) | An input object that specifies the gift card code and cart. |
+| `input` - [`ApplyGiftCardToCartInput`](types-a-b.md#applygiftcardtocartinput) | An input object that specifies the gift card code and cart. |
 
 #### Example
 
@@ -886,13 +892,13 @@ mutation applyGiftCardToCart($input: ApplyGiftCardToCartInput) {
 
 Apply all available points, up to the cart total. Partial redemption is not available.
 
-**Response:** [`ApplyRewardPointsToCartOutput`](#applyrewardpointstocartoutput)
+**Response:** [`ApplyRewardPointsToCartOutput`](types-a-b.md#applyrewardpointstocartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `cartId` - [`ID!`](#id) |  |
+| `cartId` - [`ID!`](types-f-i.md#id) |  |
 
 #### Example
 
@@ -926,13 +932,13 @@ mutation applyRewardPointsToCart($cartId: ID!) {
 
 Apply store credit to the specified cart.
 
-**Response:** [`ApplyStoreCreditToCartOutput`](#applystorecredittocartoutput)
+**Response:** [`ApplyStoreCreditToCartOutput`](types-a-b.md#applystorecredittocartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`ApplyStoreCreditToCartInput!`](#applystorecredittocartinput) | An input object that specifies the cart ID. |
+| `input` - [`ApplyStoreCreditToCartInput!`](types-a-b.md#applystorecredittocartinput) | An input object that specifies the cart ID. |
 
 #### Example
 
@@ -966,13 +972,13 @@ mutation applyStoreCreditToCart($input: ApplyStoreCreditToCartInput!) {
 
 Approve purchase orders.
 
-**Response:** [`PurchaseOrdersActionOutput`](#purchaseordersactionoutput)
+**Response:** [`PurchaseOrdersActionOutput`](types-k-p.md#purchaseordersactionoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`PurchaseOrdersActionInput!`](#purchaseordersactioninput) |  |
+| `input` - [`PurchaseOrdersActionInput!`](types-k-p.md#purchaseordersactioninput) |  |
 
 #### Example
 
@@ -1016,13 +1022,13 @@ mutation approvePurchaseOrders($input: PurchaseOrdersActionInput!) {
 
 Assign the specified compare list to the logged in customer.
 
-**Response:** [`AssignCompareListToCustomerOutput`](#assigncomparelisttocustomeroutput)
+**Response:** [`AssignCompareListToCustomerOutput`](types-a-b.md#assigncomparelisttocustomeroutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `uid` - [`ID!`](#id) | The unique ID of the compare list to be assigned. |
+| `uid` - [`ID!`](types-f-i.md#id) | The unique ID of the compare list to be assigned. |
 
 #### Example
 
@@ -1042,7 +1048,7 @@ mutation assignCompareListToCustomer($uid: ID!) {
 ##### Variables
 
 ```json
-{"uid": "4"}
+{"uid": 4}
 ```
 
 ##### Response
@@ -1052,7 +1058,7 @@ mutation assignCompareListToCustomer($uid: ID!) {
   "data": {
     "assignCompareListToCustomer": {
       "compare_list": CompareList,
-      "result": false
+      "result": true
     }
   }
 }
@@ -1064,13 +1070,13 @@ mutation assignCompareListToCustomer($uid: ID!) {
 
 Assign a logged-in customer to the specified guest shopping cart.
 
-**Response:** [`Cart!`](#cart)
+**Response:** [`Cart!`](types-c-e.md#cart)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `cart_id` - [`String!`](#string) |  |
+| `cart_id` - [`String!`](types-q-s.md#string) |  |
 
 #### Example
 
@@ -1134,7 +1140,7 @@ mutation assignCustomerToGuestCart($cart_id: String!) {
 ##### Variables
 
 ```json
-{"cart_id": "abc123"}
+{"cart_id": "xyz789"}
 ```
 
 ##### Response
@@ -1153,7 +1159,7 @@ mutation assignCustomerToGuestCart($cart_id: String!) {
         AvailablePaymentMethod
       ],
       "billing_address": BillingCartAddress,
-      "email": "abc123",
+      "email": "xyz789",
       "gift_message": GiftMessage,
       "gift_receipt_included": false,
       "gift_wrapping": GiftWrapping,
@@ -1161,10 +1167,10 @@ mutation assignCustomerToGuestCart($cart_id: String!) {
       "is_virtual": true,
       "items": [CartItemInterface],
       "prices": CartPrices,
-      "printed_card_included": true,
+      "printed_card_included": false,
       "selected_payment_method": SelectedPaymentMethod,
       "shipping_addresses": [ShippingCartAddress],
-      "total_quantity": 987.65
+      "total_quantity": 123.45
     }
   }
 }
@@ -1176,13 +1182,13 @@ mutation assignCustomerToGuestCart($cart_id: String!) {
 
 Cancel purchase orders.
 
-**Response:** [`PurchaseOrdersActionOutput`](#purchaseordersactionoutput)
+**Response:** [`PurchaseOrdersActionOutput`](types-k-p.md#purchaseordersactionoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`PurchaseOrdersActionInput!`](#purchaseordersactioninput) |  |
+| `input` - [`PurchaseOrdersActionInput!`](types-k-p.md#purchaseordersactioninput) |  |
 
 #### Example
 
@@ -1226,14 +1232,14 @@ mutation cancelPurchaseOrders($input: PurchaseOrdersActionInput!) {
 
 Change the password for the logged-in customer.
 
-**Response:** [`Customer`](#customer)
+**Response:** [`Customer`](types-c-e.md#customer)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `currentPassword` - [`String!`](#string) | The customer's original password. |
-| `newPassword` - [`String!`](#string) | The customer's updated password. |
+| `currentPassword` - [`String!`](types-q-s.md#string) | The customer's original password. |
+| `newPassword` - [`String!`](types-q-s.md#string) | The customer's updated password. |
 
 #### Example
 
@@ -1342,7 +1348,7 @@ mutation changeCustomerPassword(
 ```json
 {
   "currentPassword": "abc123",
-  "newPassword": "xyz789"
+  "newPassword": "abc123"
 }
 ```
 
@@ -1356,21 +1362,21 @@ mutation changeCustomerPassword(
       "allow_remote_shopping_assistance": false,
       "compare_list": CompareList,
       "created_at": "abc123",
-      "date_of_birth": "xyz789",
+      "date_of_birth": "abc123",
       "default_billing": "xyz789",
       "default_shipping": "abc123",
       "dob": "abc123",
-      "email": "xyz789",
+      "email": "abc123",
       "firstname": "xyz789",
-      "gender": 123,
+      "gender": 987,
       "gift_registries": [GiftRegistry],
       "gift_registry": GiftRegistry,
       "group_id": 987,
-      "id": 123,
+      "id": 987,
       "is_subscribed": true,
-      "job_title": "xyz789",
-      "lastname": "xyz789",
-      "middlename": "xyz789",
+      "job_title": "abc123",
+      "lastname": "abc123",
+      "middlename": "abc123",
       "orders": CustomerOrders,
       "prefix": "abc123",
       "purchase_order": PurchaseOrder,
@@ -1387,9 +1393,9 @@ mutation changeCustomerPassword(
       "role": CompanyRole,
       "status": "ACTIVE",
       "store_credit": CustomerStoreCredit,
-      "structure_id": "4",
-      "suffix": "abc123",
-      "taxvat": "xyz789",
+      "structure_id": 4,
+      "suffix": "xyz789",
+      "taxvat": "abc123",
       "team": CompanyTeam,
       "telephone": "xyz789",
       "wishlist": Wishlist,
@@ -1406,13 +1412,13 @@ mutation changeCustomerPassword(
 
 Remove all items from the specified cart.
 
-**Response:** [`ClearCustomerCartOutput`](#clearcustomercartoutput)
+**Response:** [`ClearCustomerCartOutput`](types-c-e.md#clearcustomercartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `cartUid` - [`String!`](#string) | The masked ID of the cart. |
+| `cartUid` - [`String!`](types-q-s.md#string) | The masked ID of the cart. |
 
 #### Example
 
@@ -1432,7 +1438,7 @@ mutation clearCustomerCart($cartUid: String!) {
 ##### Variables
 
 ```json
-{"cartUid": "xyz789"}
+{"cartUid": "abc123"}
 ```
 
 ##### Response
@@ -1451,13 +1457,13 @@ mutation clearCustomerCart($cartUid: String!) {
 
 Mark a negotiable quote as closed. The negotiable quote is still visible on the storefront.
 
-**Response:** [`CloseNegotiableQuotesOutput`](#closenegotiablequotesoutput)
+**Response:** [`CloseNegotiableQuotesOutput`](types-c-e.md#closenegotiablequotesoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CloseNegotiableQuotesInput!`](#closenegotiablequotesinput) | An input object that closes a negotiable quote. |
+| `input` - [`CloseNegotiableQuotesInput!`](types-c-e.md#closenegotiablequotesinput) | An input object that closes a negotiable quote. |
 
 #### Example
 
@@ -1514,15 +1520,15 @@ mutation closeNegotiableQuotes($input: CloseNegotiableQuotesInput!) {
 
 Copy items from one requisition list to another.
 
-**Response:** [`CopyItemsFromRequisitionListsOutput`](#copyitemsfromrequisitionlistsoutput)
+**Response:** [`CopyItemsFromRequisitionListsOutput`](types-c-e.md#copyitemsfromrequisitionlistsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `sourceRequisitionListUid` - [`ID!`](#id) | The unique ID of the source requisition list. |
-| `destinationRequisitionListUid` - [`ID`](#id) | The unique ID of the destination requisition list. If null, a new requisition list will be created. |
-| `requisitionListItem` - [`CopyItemsBetweenRequisitionListsInput`](#copyitemsbetweenrequisitionlistsinput) | The list of products to copy. |
+| `sourceRequisitionListUid` - [`ID!`](types-f-i.md#id) | The unique ID of the source requisition list. |
+| `destinationRequisitionListUid` - [`ID`](types-f-i.md#id) | The unique ID of the destination requisition list. If null, a new requisition list will be created. |
+| `requisitionListItem` - [`CopyItemsBetweenRequisitionListsInput`](types-c-e.md#copyitemsbetweenrequisitionlistsinput) | The list of products to copy. |
 
 #### Example
 
@@ -1550,8 +1556,8 @@ mutation copyItemsBetweenRequisitionLists(
 
 ```json
 {
-  "sourceRequisitionListUid": 4,
-  "destinationRequisitionListUid": 4,
+  "sourceRequisitionListUid": "4",
+  "destinationRequisitionListUid": "4",
   "requisitionListItem": CopyItemsBetweenRequisitionListsInput
 }
 ```
@@ -1574,15 +1580,15 @@ mutation copyItemsBetweenRequisitionLists(
 
 Copy products from one wish list to another. The original wish list is unchanged.
 
-**Response:** [`CopyProductsBetweenWishlistsOutput`](#copyproductsbetweenwishlistsoutput)
+**Response:** [`CopyProductsBetweenWishlistsOutput`](types-c-e.md#copyproductsbetweenwishlistsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `sourceWishlistUid` - [`ID!`](#id) | The ID of the original wish list. |
-| `destinationWishlistUid` - [`ID!`](#id) | The ID of the target wish list. |
-| `wishlistItems` - [`[WishlistItemCopyInput!]!`](#wishlistitemcopyinput) | An array of items to copy. |
+| `sourceWishlistUid` - [`ID!`](types-f-i.md#id) | The ID of the original wish list. |
+| `destinationWishlistUid` - [`ID!`](types-f-i.md#id) | The ID of the target wish list. |
+| `wishlistItems` - [`[WishlistItemCopyInput!]!`](types-t-z.md#wishlistitemcopyinput) | An array of items to copy. |
 
 #### Example
 
@@ -1616,8 +1622,8 @@ mutation copyProductsBetweenWishlists(
 
 ```json
 {
-  "sourceWishlistUid": "4",
-  "destinationWishlistUid": "4",
+  "sourceWishlistUid": 4,
+  "destinationWishlistUid": 4,
   "wishlistItems": [WishlistItemCopyInput]
 }
 ```
@@ -1642,7 +1648,7 @@ mutation copyProductsBetweenWishlists(
 
 Creates Client Token for Braintree Javascript SDK initialization.
 
-**Response:** [`String!`](#string)
+**Response:** [`String!`](types-q-s.md#string)
 
 #### Example
 
@@ -1659,7 +1665,7 @@ mutation createBraintreeClientToken {
 ```json
 {
   "data": {
-    "createBraintreeClientToken": "abc123"
+    "createBraintreeClientToken": "xyz789"
   }
 }
 ```
@@ -1670,13 +1676,13 @@ mutation createBraintreeClientToken {
 
 Create a company at the request of either a customer or a guest.
 
-**Response:** [`CreateCompanyOutput`](#createcompanyoutput)
+**Response:** [`CreateCompanyOutput`](types-c-e.md#createcompanyoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CompanyCreateInput!`](#companycreateinput) |  |
+| `input` - [`CompanyCreateInput!`](types-c-e.md#companycreateinput) |  |
 
 #### Example
 
@@ -1710,13 +1716,13 @@ mutation createCompany($input: CompanyCreateInput!) {
 
 Create a new company role.
 
-**Response:** [`CreateCompanyRoleOutput`](#createcompanyroleoutput)
+**Response:** [`CreateCompanyRoleOutput`](types-c-e.md#createcompanyroleoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CompanyRoleCreateInput!`](#companyrolecreateinput) |  |
+| `input` - [`CompanyRoleCreateInput!`](types-c-e.md#companyrolecreateinput) |  |
 
 #### Example
 
@@ -1750,13 +1756,13 @@ mutation createCompanyRole($input: CompanyRoleCreateInput!) {
 
 Create a new team for the authenticated customer's company.
 
-**Response:** [`CreateCompanyTeamOutput`](#createcompanyteamoutput)
+**Response:** [`CreateCompanyTeamOutput`](types-c-e.md#createcompanyteamoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CompanyTeamCreateInput!`](#companyteamcreateinput) |  |
+| `input` - [`CompanyTeamCreateInput!`](types-c-e.md#companyteamcreateinput) |  |
 
 #### Example
 
@@ -1790,13 +1796,13 @@ mutation createCompanyTeam($input: CompanyTeamCreateInput!) {
 
 Create a new company user at the request of an existing customer.
 
-**Response:** [`CreateCompanyUserOutput`](#createcompanyuseroutput)
+**Response:** [`CreateCompanyUserOutput`](types-c-e.md#createcompanyuseroutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CompanyUserCreateInput!`](#companyusercreateinput) |  |
+| `input` - [`CompanyUserCreateInput!`](types-c-e.md#companyusercreateinput) |  |
 
 #### Example
 
@@ -1830,13 +1836,13 @@ mutation createCompanyUser($input: CompanyUserCreateInput!) {
 
 Create a new compare list. The compare list is saved for logged in customers.
 
-**Response:** [`CompareList`](#comparelist)
+**Response:** [`CompareList`](types-c-e.md#comparelist)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CreateCompareListInput`](#createcomparelistinput) |  |
+| `input` - [`CreateCompareListInput`](types-c-e.md#createcomparelistinput) |  |
 
 #### Example
 
@@ -1884,13 +1890,13 @@ mutation createCompareList($input: CreateCompareListInput) {
 
 Use `createCustomerV2` instead.
 
-**Response:** [`CustomerOutput`](#customeroutput)
+**Response:** [`CustomerOutput`](types-c-e.md#customeroutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CustomerInput!`](#customerinput) | An input object that defines the customer to be created. |
+| `input` - [`CustomerInput!`](types-c-e.md#customerinput) | An input object that defines the customer to be created. |
 
 #### Example
 
@@ -1924,13 +1930,13 @@ mutation createCustomer($input: CustomerInput!) {
 
 Create a billing or shipping address for a customer or guest.
 
-**Response:** [`CustomerAddress`](#customeraddress)
+**Response:** [`CustomerAddress`](types-c-e.md#customeraddress)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CustomerAddressInput!`](#customeraddressinput) |  |
+| `input` - [`CustomerAddressInput!`](types-c-e.md#customeraddressinput) |  |
 
 #### Example
 
@@ -1989,22 +1995,22 @@ mutation createCustomerAddress($input: CustomerAddressInput!) {
       "country_id": "xyz789",
       "custom_attributes": [CustomerAddressAttribute],
       "customer_id": 123,
-      "default_billing": false,
-      "default_shipping": true,
+      "default_billing": true,
+      "default_shipping": false,
       "extension_attributes": [CustomerAddressAttribute],
       "fax": "xyz789",
-      "firstname": "xyz789",
-      "id": 123,
+      "firstname": "abc123",
+      "id": 987,
       "lastname": "abc123",
-      "middlename": "abc123",
+      "middlename": "xyz789",
       "postcode": "xyz789",
       "prefix": "xyz789",
       "region": CustomerAddressRegion,
       "region_id": 987,
-      "street": ["xyz789"],
+      "street": ["abc123"],
       "suffix": "xyz789",
       "telephone": "xyz789",
-      "vat_id": "abc123"
+      "vat_id": "xyz789"
     }
   }
 }
@@ -2016,13 +2022,13 @@ mutation createCustomerAddress($input: CustomerAddressInput!) {
 
 Create a customer account.
 
-**Response:** [`CustomerOutput`](#customeroutput)
+**Response:** [`CustomerOutput`](types-c-e.md#customeroutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CustomerCreateInput!`](#customercreateinput) | An input object that defines the customer to be created. |
+| `input` - [`CustomerCreateInput!`](types-c-e.md#customercreateinput) | An input object that defines the customer to be created. |
 
 #### Example
 
@@ -2056,13 +2062,13 @@ mutation createCustomerV2($input: CustomerCreateInput!) {
 
 Create an empty shopping cart for a guest or logged in user
 
-**Response:** [`String`](#string)
+**Response:** [`String`](types-q-s.md#string)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`createEmptyCartInput`](#createemptycartinput) | An optional input object that assigns the specified ID to the cart. |
+| `input` - [`createEmptyCartInput`](types-c-e.md#createemptycartinput) | An optional input object that assigns the specified ID to the cart. |
 
 #### Example
 
@@ -2092,13 +2098,13 @@ mutation createEmptyCart($input: createEmptyCartInput) {
 
 Create a gift registry on behalf of the customer.
 
-**Response:** [`CreateGiftRegistryOutput`](#creategiftregistryoutput)
+**Response:** [`CreateGiftRegistryOutput`](types-c-e.md#creategiftregistryoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `giftRegistry` - [`CreateGiftRegistryInput!`](#creategiftregistryinput) | An input object that defines a new gift registry. |
+| `giftRegistry` - [`CreateGiftRegistryInput!`](types-c-e.md#creategiftregistryinput) | An input object that defines a new gift registry. |
 
 #### Example
 
@@ -2136,13 +2142,13 @@ mutation createGiftRegistry($giftRegistry: CreateGiftRegistryInput!) {
 
 Initiate a transaction and receive a token. Use this mutation for Payflow Pro and Payments Pro payment methods
 
-**Response:** [`CreatePayflowProTokenOutput`](#createpayflowprotokenoutput)
+**Response:** [`CreatePayflowProTokenOutput`](types-c-e.md#createpayflowprotokenoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`PayflowProTokenInput!`](#payflowprotokeninput) | An input object that defines the requirements to fetch payment token information. |
+| `input` - [`PayflowProTokenInput!`](types-k-p.md#payflowprotokeninput) | An input object that defines the requirements to fetch payment token information. |
 
 #### Example
 
@@ -2172,7 +2178,7 @@ mutation createPayflowProToken($input: PayflowProTokenInput!) {
 {
   "data": {
     "createPayflowProToken": {
-      "response_message": "abc123",
+      "response_message": "xyz789",
       "result": 123,
       "result_code": 987,
       "secure_token": "abc123",
@@ -2188,13 +2194,13 @@ mutation createPayflowProToken($input: PayflowProTokenInput!) {
 
 Initiate an Express Checkout transaction and receive a token. Use this mutation for Express Checkout and Payments Standard payment methods.
 
-**Response:** [`PaypalExpressTokenOutput`](#paypalexpresstokenoutput)
+**Response:** [`PaypalExpressTokenOutput`](types-k-p.md#paypalexpresstokenoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`PaypalExpressTokenInput!`](#paypalexpresstokeninput) | An input object that defines the requirements to receive a payment token. |
+| `input` - [`PaypalExpressTokenInput!`](types-k-p.md#paypalexpresstokeninput) | An input object that defines the requirements to receive a payment token. |
 
 #### Example
 
@@ -2224,7 +2230,7 @@ mutation createPaypalExpressToken($input: PaypalExpressTokenInput!) {
   "data": {
     "createPaypalExpressToken": {
       "paypal_urls": PaypalExpressUrlList,
-      "token": "abc123"
+      "token": "xyz789"
     }
   }
 }
@@ -2236,13 +2242,13 @@ mutation createPaypalExpressToken($input: PaypalExpressTokenInput!) {
 
 Create a product review for the specified product.
 
-**Response:** [`CreateProductReviewOutput!`](#createproductreviewoutput)
+**Response:** [`CreateProductReviewOutput!`](types-c-e.md#createproductreviewoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CreateProductReviewInput!`](#createproductreviewinput) | An input object that contains the details necessary to create a product review. |
+| `input` - [`CreateProductReviewInput!`](types-c-e.md#createproductreviewinput) | An input object that contains the details necessary to create a product review. |
 
 #### Example
 
@@ -2280,13 +2286,13 @@ mutation createProductReview($input: CreateProductReviewInput!) {
 
 Create a purchase order approval rule.
 
-**Response:** [`PurchaseOrderApprovalRule`](#purchaseorderapprovalrule)
+**Response:** [`PurchaseOrderApprovalRule`](types-k-p.md#purchaseorderapprovalrule)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`PurchaseOrderApprovalRuleInput!`](#purchaseorderapprovalruleinput) |  |
+| `input` - [`PurchaseOrderApprovalRuleInput!`](types-k-p.md#purchaseorderapprovalruleinput) |  |
 
 #### Example
 
@@ -2330,12 +2336,12 @@ mutation createPurchaseOrderApprovalRule($input: PurchaseOrderApprovalRuleInput!
       "applies_to_roles": [CompanyRole],
       "approver_roles": [CompanyRole],
       "condition": PurchaseOrderApprovalRuleConditionInterface,
-      "created_at": "xyz789",
-      "created_by": "xyz789",
+      "created_at": "abc123",
+      "created_by": "abc123",
       "description": "xyz789",
-      "name": "xyz789",
+      "name": "abc123",
       "status": "ENABLED",
-      "uid": "4",
+      "uid": 4,
       "updated_at": "abc123"
     }
   }
@@ -2348,13 +2354,13 @@ mutation createPurchaseOrderApprovalRule($input: PurchaseOrderApprovalRuleInput!
 
 Create an empty requisition list.
 
-**Response:** [`CreateRequisitionListOutput`](#createrequisitionlistoutput)
+**Response:** [`CreateRequisitionListOutput`](types-c-e.md#createrequisitionlistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CreateRequisitionListInput`](#createrequisitionlistinput) |  |
+| `input` - [`CreateRequisitionListInput`](types-c-e.md#createrequisitionlistinput) |  |
 
 #### Example
 
@@ -2394,13 +2400,13 @@ mutation createRequisitionList($input: CreateRequisitionListInput) {
 
 Create a new wish list.
 
-**Response:** [`CreateWishlistOutput`](#createwishlistoutput)
+**Response:** [`CreateWishlistOutput`](types-c-e.md#createwishlistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CreateWishlistInput!`](#createwishlistinput) | An input object that defines a new wish list. |
+| `input` - [`CreateWishlistInput!`](types-c-e.md#createwishlistinput) | An input object that defines a new wish list. |
 
 #### Example
 
@@ -2434,13 +2440,13 @@ mutation createWishlist($input: CreateWishlistInput!) {
 
 Delete the specified company role.
 
-**Response:** [`DeleteCompanyRoleOutput`](#deletecompanyroleoutput)
+**Response:** [`DeleteCompanyRoleOutput`](types-c-e.md#deletecompanyroleoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `id` - [`ID!`](#id) |  |
+| `id` - [`ID!`](types-f-i.md#id) |  |
 
 #### Example
 
@@ -2472,13 +2478,13 @@ mutation deleteCompanyRole($id: ID!) {
 
 Delete the specified company team.
 
-**Response:** [`DeleteCompanyTeamOutput`](#deletecompanyteamoutput)
+**Response:** [`DeleteCompanyTeamOutput`](types-c-e.md#deletecompanyteamoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `id` - [`ID!`](#id) |  |
+| `id` - [`ID!`](types-f-i.md#id) |  |
 
 #### Example
 
@@ -2495,13 +2501,13 @@ mutation deleteCompanyTeam($id: ID!) {
 ##### Variables
 
 ```json
-{"id": "4"}
+{"id": 4}
 ```
 
 ##### Response
 
 ```json
-{"data": {"deleteCompanyTeam": {"success": false}}}
+{"data": {"deleteCompanyTeam": {"success": true}}}
 ```
 
 <HorizontalLine />
@@ -2510,13 +2516,13 @@ mutation deleteCompanyTeam($id: ID!) {
 
 Delete the specified company user.
 
-**Response:** [`DeleteCompanyUserOutput`](#deletecompanyuseroutput)
+**Response:** [`DeleteCompanyUserOutput`](types-c-e.md#deletecompanyuseroutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `id` - [`ID!`](#id) |  |
+| `id` - [`ID!`](types-f-i.md#id) |  |
 
 #### Example
 
@@ -2539,7 +2545,7 @@ mutation deleteCompanyUser($id: ID!) {
 ##### Response
 
 ```json
-{"data": {"deleteCompanyUser": {"success": true}}}
+{"data": {"deleteCompanyUser": {"success": false}}}
 ```
 
 <HorizontalLine />
@@ -2548,13 +2554,13 @@ mutation deleteCompanyUser($id: ID!) {
 
 Delete the specified compare list.
 
-**Response:** [`DeleteCompareListOutput`](#deletecomparelistoutput)
+**Response:** [`DeleteCompareListOutput`](types-c-e.md#deletecomparelistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `uid` - [`ID!`](#id) | The unique ID of the compare list to be deleted. |
+| `uid` - [`ID!`](types-f-i.md#id) | The unique ID of the compare list to be deleted. |
 
 #### Example
 
@@ -2571,13 +2577,13 @@ mutation deleteCompareList($uid: ID!) {
 ##### Variables
 
 ```json
-{"uid": 4}
+{"uid": "4"}
 ```
 
 ##### Response
 
 ```json
-{"data": {"deleteCompareList": {"result": true}}}
+{"data": {"deleteCompareList": {"result": false}}}
 ```
 
 <HorizontalLine />
@@ -2586,7 +2592,7 @@ mutation deleteCompareList($uid: ID!) {
 
 Delete customer account
 
-**Response:** [`Boolean`](#boolean)
+**Response:** [`Boolean`](types-a-b.md#boolean)
 
 #### Example
 
@@ -2601,7 +2607,7 @@ mutation deleteCustomer {
 ##### Response
 
 ```json
-{"data": {"deleteCustomer": true}}
+{"data": {"deleteCustomer": false}}
 ```
 
 <HorizontalLine />
@@ -2610,13 +2616,13 @@ mutation deleteCustomer {
 
 Delete the billing or shipping address of a customer.
 
-**Response:** [`Boolean`](#boolean)
+**Response:** [`Boolean`](types-a-b.md#boolean)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `id` - [`Int!`](#int) | The ID of the customer address to be deleted. |
+| `id` - [`Int!`](types-f-i.md#int) | The ID of the customer address to be deleted. |
 
 #### Example
 
@@ -2637,7 +2643,7 @@ mutation deleteCustomerAddress($id: Int!) {
 ##### Response
 
 ```json
-{"data": {"deleteCustomerAddress": true}}
+{"data": {"deleteCustomerAddress": false}}
 ```
 
 <HorizontalLine />
@@ -2646,13 +2652,13 @@ mutation deleteCustomerAddress($id: Int!) {
 
 Delete a negotiable quote. The negotiable quote will not be displayed on the storefront.
 
-**Response:** [`DeleteNegotiableQuotesOutput`](#deletenegotiablequotesoutput)
+**Response:** [`DeleteNegotiableQuotesOutput`](types-c-e.md#deletenegotiablequotesoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`DeleteNegotiableQuotesInput!`](#deletenegotiablequotesinput) | An input object that deletes a negotiable quote. |
+| `input` - [`DeleteNegotiableQuotesInput!`](types-c-e.md#deletenegotiablequotesinput) | An input object that deletes a negotiable quote. |
 
 #### Example
 
@@ -2705,13 +2711,13 @@ mutation deleteNegotiableQuotes($input: DeleteNegotiableQuotesInput!) {
 
 Delete a customer's payment token.
 
-**Response:** [`DeletePaymentTokenOutput`](#deletepaymenttokenoutput)
+**Response:** [`DeletePaymentTokenOutput`](types-c-e.md#deletepaymenttokenoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `public_hash` - [`String!`](#string) | The reusable payment token securely stored in the vault. |
+| `public_hash` - [`String!`](types-q-s.md#string) | The reusable payment token securely stored in the vault. |
 
 #### Example
 
@@ -2731,7 +2737,7 @@ mutation deletePaymentToken($public_hash: String!) {
 ##### Variables
 
 ```json
-{"public_hash": "xyz789"}
+{"public_hash": "abc123"}
 ```
 
 ##### Response
@@ -2741,7 +2747,7 @@ mutation deletePaymentToken($public_hash: String!) {
   "data": {
     "deletePaymentToken": {
       "customerPaymentTokens": CustomerPaymentTokens,
-      "result": false
+      "result": true
     }
   }
 }
@@ -2753,13 +2759,13 @@ mutation deletePaymentToken($public_hash: String!) {
 
 Delete existing purchase order approval rules.
 
-**Response:** [`DeletePurchaseOrderApprovalRuleOutput`](#deletepurchaseorderapprovalruleoutput)
+**Response:** [`DeletePurchaseOrderApprovalRuleOutput`](types-c-e.md#deletepurchaseorderapprovalruleoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`DeletePurchaseOrderApprovalRuleInput!`](#deletepurchaseorderapprovalruleinput) |  |
+| `input` - [`DeletePurchaseOrderApprovalRuleInput!`](types-c-e.md#deletepurchaseorderapprovalruleinput) |  |
 
 #### Example
 
@@ -2799,13 +2805,13 @@ mutation deletePurchaseOrderApprovalRule($input: DeletePurchaseOrderApprovalRule
 
 Delete a requisition list.
 
-**Response:** [`DeleteRequisitionListOutput`](#deleterequisitionlistoutput)
+**Response:** [`DeleteRequisitionListOutput`](types-c-e.md#deleterequisitionlistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `requisitionListUid` - [`ID!`](#id) | The unique ID of the requisition list. |
+| `requisitionListUid` - [`ID!`](types-f-i.md#id) | The unique ID of the requisition list. |
 
 #### Example
 
@@ -2825,7 +2831,7 @@ mutation deleteRequisitionList($requisitionListUid: ID!) {
 ##### Variables
 
 ```json
-{"requisitionListUid": "4"}
+{"requisitionListUid": 4}
 ```
 
 ##### Response
@@ -2835,7 +2841,7 @@ mutation deleteRequisitionList($requisitionListUid: ID!) {
   "data": {
     "deleteRequisitionList": {
       "requisition_lists": RequisitionLists,
-      "status": false
+      "status": true
     }
   }
 }
@@ -2847,14 +2853,14 @@ mutation deleteRequisitionList($requisitionListUid: ID!) {
 
 Delete items from a requisition list.
 
-**Response:** [`DeleteRequisitionListItemsOutput`](#deleterequisitionlistitemsoutput)
+**Response:** [`DeleteRequisitionListItemsOutput`](types-c-e.md#deleterequisitionlistitemsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `requisitionListUid` - [`ID!`](#id) | The unique ID of the requisition list. |
-| `requisitionListItemUids` - [`[ID!]!`](#id) | An array of UIDs representing products to be removed from the requisition list. |
+| `requisitionListUid` - [`ID!`](types-f-i.md#id) | The unique ID of the requisition list. |
+| `requisitionListItemUids` - [`[ID!]!`](types-f-i.md#id) | An array of UIDs representing products to be removed from the requisition list. |
 
 #### Example
 
@@ -2879,7 +2885,10 @@ mutation deleteRequisitionListItems(
 ##### Variables
 
 ```json
-{"requisitionListUid": 4, "requisitionListItemUids": [4]}
+{
+  "requisitionListUid": "4",
+  "requisitionListItemUids": ["4"]
+}
 ```
 
 ##### Response
@@ -2900,13 +2909,13 @@ mutation deleteRequisitionListItems(
 
 Delete the specified wish list. You cannot delete the customer's default (first) wish list.
 
-**Response:** [`DeleteWishlistOutput`](#deletewishlistoutput)
+**Response:** [`DeleteWishlistOutput`](types-c-e.md#deletewishlistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `wishlistId` - [`ID!`](#id) | The ID of the wish list to delete. |
+| `wishlistId` - [`ID!`](types-f-i.md#id) | The ID of the wish list to delete. |
 
 #### Example
 
@@ -2948,14 +2957,14 @@ mutation deleteWishlist($wishlistId: ID!) {
 
 Generate a token for specified customer.
 
-**Response:** [`CustomerToken`](#customertoken)
+**Response:** [`CustomerToken`](types-c-e.md#customertoken)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `email` - [`String!`](#string) | The customer's email address. |
-| `password` - [`String!`](#string) | The customer's password. |
+| `email` - [`String!`](types-q-s.md#string) | The customer's email address. |
+| `password` - [`String!`](types-q-s.md#string) | The customer's password. |
 
 #### Example
 
@@ -2980,7 +2989,7 @@ mutation generateCustomerToken(
 ```json
 {
   "email": "xyz789",
-  "password": "xyz789"
+  "password": "abc123"
 }
 ```
 
@@ -2990,7 +2999,7 @@ mutation generateCustomerToken(
 {
   "data": {
     "generateCustomerToken": {
-      "token": "abc123"
+      "token": "xyz789"
     }
   }
 }
@@ -3002,13 +3011,13 @@ mutation generateCustomerToken(
 
 Request a customer token so that an administrator can perform remote shopping assistance.
 
-**Response:** [`GenerateCustomerTokenAsAdminOutput`](#generatecustomertokenasadminoutput)
+**Response:** [`GenerateCustomerTokenAsAdminOutput`](types-f-i.md#generatecustomertokenasadminoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`GenerateCustomerTokenAsAdminInput!`](#generatecustomertokenasadmininput) | An input object that defines the customer email address. |
+| `input` - [`GenerateCustomerTokenAsAdminInput!`](types-f-i.md#generatecustomertokenasadmininput) | An input object that defines the customer email address. |
 
 #### Example
 
@@ -3046,13 +3055,13 @@ mutation generateCustomerTokenAsAdmin($input: GenerateCustomerTokenAsAdminInput!
 
 Handle a payment response and save the payment in Quote. Use this mutation for Payflow Pro and Payments Pro payment methods.
 
-**Response:** [`PayflowProResponseOutput`](#payflowproresponseoutput)
+**Response:** [`PayflowProResponseOutput`](types-k-p.md#payflowproresponseoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`PayflowProResponseInput!`](#payflowproresponseinput) | An input object that includes the payload returned by PayPal and the cart ID. |
+| `input` - [`PayflowProResponseInput!`](types-k-p.md#payflowproresponseinput) | An input object that includes the payload returned by PayPal and the cart ID. |
 
 #### Example
 
@@ -3086,14 +3095,14 @@ mutation handlePayflowProResponse($input: PayflowProResponseInput!) {
 
 Transfer the contents of a guest cart into the cart of a logged-in customer.
 
-**Response:** [`Cart!`](#cart)
+**Response:** [`Cart!`](types-c-e.md#cart)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `source_cart_id` - [`String!`](#string) | The guest's cart ID before they login. |
-| `destination_cart_id` - [`String`](#string) | The cart ID after the guest logs in. |
+| `source_cart_id` - [`String!`](types-q-s.md#string) | The guest's cart ID before they login. |
+| `destination_cart_id` - [`String`](types-q-s.md#string) | The cart ID after the guest logs in. |
 
 #### Example
 
@@ -3165,7 +3174,7 @@ mutation mergeCarts(
 ```json
 {
   "source_cart_id": "xyz789",
-  "destination_cart_id": "xyz789"
+  "destination_cart_id": "abc123"
 }
 ```
 
@@ -3187,9 +3196,9 @@ mutation mergeCarts(
       "billing_address": BillingCartAddress,
       "email": "xyz789",
       "gift_message": GiftMessage,
-      "gift_receipt_included": true,
+      "gift_receipt_included": false,
       "gift_wrapping": GiftWrapping,
-      "id": 4,
+      "id": "4",
       "is_virtual": true,
       "items": [CartItemInterface],
       "prices": CartPrices,
@@ -3208,14 +3217,14 @@ mutation mergeCarts(
 
 Move all items from the cart to a gift registry.
 
-**Response:** [`MoveCartItemsToGiftRegistryOutput`](#movecartitemstogiftregistryoutput)
+**Response:** [`MoveCartItemsToGiftRegistryOutput`](types-k-p.md#movecartitemstogiftregistryoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `cartUid` - [`ID!`](#id) | The unique ID of the cart containing items to be moved to a gift registry. |
-| `giftRegistryUid` - [`ID!`](#id) | The unique ID of the target gift registry. |
+| `cartUid` - [`ID!`](types-f-i.md#id) | The unique ID of the cart containing items to be moved to a gift registry. |
+| `giftRegistryUid` - [`ID!`](types-f-i.md#id) | The unique ID of the target gift registry. |
 
 #### Example
 
@@ -3244,7 +3253,7 @@ mutation moveCartItemsToGiftRegistry(
 ##### Variables
 
 ```json
-{"cartUid": 4, "giftRegistryUid": "4"}
+{"cartUid": 4, "giftRegistryUid": 4}
 ```
 
 ##### Response
@@ -3254,7 +3263,7 @@ mutation moveCartItemsToGiftRegistry(
   "data": {
     "moveCartItemsToGiftRegistry": {
       "gift_registry": GiftRegistry,
-      "status": false,
+      "status": true,
       "user_errors": [GiftRegistryItemsUserError]
     }
   }
@@ -3267,15 +3276,15 @@ mutation moveCartItemsToGiftRegistry(
 
 Move Items from one requisition list to another.
 
-**Response:** [`MoveItemsBetweenRequisitionListsOutput`](#moveitemsbetweenrequisitionlistsoutput)
+**Response:** [`MoveItemsBetweenRequisitionListsOutput`](types-k-p.md#moveitemsbetweenrequisitionlistsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `sourceRequisitionListUid` - [`ID!`](#id) | The unique ID of the source requisition list. |
-| `destinationRequisitionListUid` - [`ID`](#id) | The unique ID of the destination requisition list. If null, a new requisition list will be created. |
-| `requisitionListItem` - [`MoveItemsBetweenRequisitionListsInput`](#moveitemsbetweenrequisitionlistsinput) | The list of products to move. |
+| `sourceRequisitionListUid` - [`ID!`](types-f-i.md#id) | The unique ID of the source requisition list. |
+| `destinationRequisitionListUid` - [`ID`](types-f-i.md#id) | The unique ID of the destination requisition list. If null, a new requisition list will be created. |
+| `requisitionListItem` - [`MoveItemsBetweenRequisitionListsInput`](types-k-p.md#moveitemsbetweenrequisitionlistsinput) | The list of products to move. |
 
 #### Example
 
@@ -3306,8 +3315,8 @@ mutation moveItemsBetweenRequisitionLists(
 
 ```json
 {
-  "sourceRequisitionListUid": "4",
-  "destinationRequisitionListUid": "4",
+  "sourceRequisitionListUid": 4,
+  "destinationRequisitionListUid": 4,
   "requisitionListItem": MoveItemsBetweenRequisitionListsInput
 }
 ```
@@ -3331,15 +3340,15 @@ mutation moveItemsBetweenRequisitionLists(
 
 Move products from one wish list to another.
 
-**Response:** [`MoveProductsBetweenWishlistsOutput`](#moveproductsbetweenwishlistsoutput)
+**Response:** [`MoveProductsBetweenWishlistsOutput`](types-k-p.md#moveproductsbetweenwishlistsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `sourceWishlistUid` - [`ID!`](#id) | The ID of the original wish list. |
-| `destinationWishlistUid` - [`ID!`](#id) | The ID of the target wish list. |
-| `wishlistItems` - [`[WishlistItemMoveInput!]!`](#wishlistitemmoveinput) | An array of items to move. |
+| `sourceWishlistUid` - [`ID!`](types-f-i.md#id) | The ID of the original wish list. |
+| `destinationWishlistUid` - [`ID!`](types-f-i.md#id) | The ID of the target wish list. |
+| `wishlistItems` - [`[WishlistItemMoveInput!]!`](types-t-z.md#wishlistitemmoveinput) | An array of items to move. |
 
 #### Example
 
@@ -3374,7 +3383,7 @@ mutation moveProductsBetweenWishlists(
 ```json
 {
   "sourceWishlistUid": "4",
-  "destinationWishlistUid": 4,
+  "destinationWishlistUid": "4",
   "wishlistItems": [WishlistItemMoveInput]
 }
 ```
@@ -3399,13 +3408,13 @@ mutation moveProductsBetweenWishlists(
 
 Convert a negotiable quote into an order.
 
-**Response:** [`PlaceNegotiableQuoteOrderOutput`](#placenegotiablequoteorderoutput)
+**Response:** [`PlaceNegotiableQuoteOrderOutput`](types-k-p.md#placenegotiablequoteorderoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`PlaceNegotiableQuoteOrderInput!`](#placenegotiablequoteorderinput) | An input object that specifies the negotiable quote. |
+| `input` - [`PlaceNegotiableQuoteOrderInput!`](types-k-p.md#placenegotiablequoteorderinput) | An input object that specifies the negotiable quote. |
 
 #### Example
 
@@ -3439,13 +3448,13 @@ mutation placeNegotiableQuoteOrder($input: PlaceNegotiableQuoteOrderInput!) {
 
 Convert the quote into an order.
 
-**Response:** [`PlaceOrderOutput`](#placeorderoutput)
+**Response:** [`PlaceOrderOutput`](types-k-p.md#placeorderoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`PlaceOrderInput`](#placeorderinput) | An input object that defines the shopper's cart ID. |
+| `input` - [`PlaceOrderInput`](types-k-p.md#placeorderinput) | An input object that defines the shopper's cart ID. |
 
 #### Example
 
@@ -3479,13 +3488,13 @@ mutation placeOrder($input: PlaceOrderInput) {
 
 Convert the purchase order into an order.
 
-**Response:** [`PlaceOrderForPurchaseOrderOutput`](#placeorderforpurchaseorderoutput)
+**Response:** [`PlaceOrderForPurchaseOrderOutput`](types-k-p.md#placeorderforpurchaseorderoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`PlaceOrderForPurchaseOrderInput!`](#placeorderforpurchaseorderinput) |  |
+| `input` - [`PlaceOrderForPurchaseOrderInput!`](types-k-p.md#placeorderforpurchaseorderinput) |  |
 
 #### Example
 
@@ -3523,13 +3532,13 @@ mutation placeOrderForPurchaseOrder($input: PlaceOrderForPurchaseOrderInput!) {
 
 Place a purchase order.
 
-**Response:** [`PlacePurchaseOrderOutput`](#placepurchaseorderoutput)
+**Response:** [`PlacePurchaseOrderOutput`](types-k-p.md#placepurchaseorderoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`PlacePurchaseOrderInput!`](#placepurchaseorderinput) |  |
+| `input` - [`PlacePurchaseOrderInput!`](types-k-p.md#placepurchaseorderinput) |  |
 
 #### Example
 
@@ -3569,13 +3578,13 @@ mutation placePurchaseOrder($input: PlacePurchaseOrderInput!) {
 
 Redeem a gift card for store credit.
 
-**Response:** [`GiftCardAccount`](#giftcardaccount)
+**Response:** [`GiftCardAccount`](types-f-i.md#giftcardaccount)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`GiftCardAccountInput!`](#giftcardaccountinput) | An input object that specifies the gift card code to redeem. |
+| `input` - [`GiftCardAccountInput!`](types-f-i.md#giftcardaccountinput) | An input object that specifies the gift card code to redeem. |
 
 #### Example
 
@@ -3619,13 +3628,13 @@ mutation redeemGiftCardBalanceAsStoreCredit($input: GiftCardAccountInput!) {
 
 Reject purchase orders.
 
-**Response:** [`PurchaseOrdersActionOutput`](#purchaseordersactionoutput)
+**Response:** [`PurchaseOrdersActionOutput`](types-k-p.md#purchaseordersactionoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`PurchaseOrdersActionInput!`](#purchaseordersactioninput) |  |
+| `input` - [`PurchaseOrdersActionInput!`](types-k-p.md#purchaseordersactioninput) |  |
 
 #### Example
 
@@ -3669,13 +3678,13 @@ mutation rejectPurchaseOrders($input: PurchaseOrdersActionInput!) {
 
 Remove a previously-applied coupon from the cart. The cart must contain at least one item in order to remove the coupon.
 
-**Response:** [`RemoveCouponFromCartOutput`](#removecouponfromcartoutput)
+**Response:** [`RemoveCouponFromCartOutput`](types-q-s.md#removecouponfromcartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`RemoveCouponFromCartInput`](#removecouponfromcartinput) | An input object that defines which coupon code to remove from the cart. |
+| `input` - [`RemoveCouponFromCartInput`](types-q-s.md#removecouponfromcartinput) | An input object that defines which coupon code to remove from the cart. |
 
 #### Example
 
@@ -3709,13 +3718,13 @@ mutation removeCouponFromCart($input: RemoveCouponFromCartInput) {
 
 Removes a gift card from the cart.
 
-**Response:** [`RemoveGiftCardFromCartOutput`](#removegiftcardfromcartoutput)
+**Response:** [`RemoveGiftCardFromCartOutput`](types-q-s.md#removegiftcardfromcartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`RemoveGiftCardFromCartInput`](#removegiftcardfromcartinput) | An input object that specifies which gift card code to remove from the cart. |
+| `input` - [`RemoveGiftCardFromCartInput`](types-q-s.md#removegiftcardfromcartinput) | An input object that specifies which gift card code to remove from the cart. |
 
 #### Example
 
@@ -3749,13 +3758,13 @@ mutation removeGiftCardFromCart($input: RemoveGiftCardFromCartInput) {
 
 Delete the specified gift registry.
 
-**Response:** [`RemoveGiftRegistryOutput`](#removegiftregistryoutput)
+**Response:** [`RemoveGiftRegistryOutput`](types-q-s.md#removegiftregistryoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `giftRegistryUid` - [`ID!`](#id) | The unique ID of the gift registry to delete. |
+| `giftRegistryUid` - [`ID!`](types-f-i.md#id) | The unique ID of the gift registry to delete. |
 
 #### Example
 
@@ -3772,13 +3781,13 @@ mutation removeGiftRegistry($giftRegistryUid: ID!) {
 ##### Variables
 
 ```json
-{"giftRegistryUid": 4}
+{"giftRegistryUid": "4"}
 ```
 
 ##### Response
 
 ```json
-{"data": {"removeGiftRegistry": {"success": false}}}
+{"data": {"removeGiftRegistry": {"success": true}}}
 ```
 
 <HorizontalLine />
@@ -3787,14 +3796,14 @@ mutation removeGiftRegistry($giftRegistryUid: ID!) {
 
 Delete the specified items from a gift registry.
 
-**Response:** [`RemoveGiftRegistryItemsOutput`](#removegiftregistryitemsoutput)
+**Response:** [`RemoveGiftRegistryItemsOutput`](types-q-s.md#removegiftregistryitemsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `giftRegistryUid` - [`ID!`](#id) | The unique ID of the gift registry. |
-| `itemsUid` - [`[ID!]!`](#id) | An array of item IDs to remove from the gift registry. |
+| `giftRegistryUid` - [`ID!`](types-f-i.md#id) | The unique ID of the gift registry. |
+| `itemsUid` - [`[ID!]!`](types-f-i.md#id) | An array of item IDs to remove from the gift registry. |
 
 #### Example
 
@@ -3819,7 +3828,7 @@ mutation removeGiftRegistryItems(
 ##### Variables
 
 ```json
-{"giftRegistryUid": 4, "itemsUid": [4]}
+{"giftRegistryUid": 4, "itemsUid": ["4"]}
 ```
 
 ##### Response
@@ -3840,14 +3849,14 @@ mutation removeGiftRegistryItems(
 
 Removes registrants from a gift registry.
 
-**Response:** [`RemoveGiftRegistryRegistrantsOutput`](#removegiftregistryregistrantsoutput)
+**Response:** [`RemoveGiftRegistryRegistrantsOutput`](types-q-s.md#removegiftregistryregistrantsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `giftRegistryUid` - [`ID!`](#id) | The unique ID of the gift registry. |
-| `registrantsUid` - [`[ID!]!`](#id) | An array of registrant IDs to remove. |
+| `giftRegistryUid` - [`ID!`](types-f-i.md#id) | The unique ID of the gift registry. |
+| `registrantsUid` - [`[ID!]!`](types-f-i.md#id) | An array of registrant IDs to remove. |
 
 #### Example
 
@@ -3874,7 +3883,7 @@ mutation removeGiftRegistryRegistrants(
 ```json
 {
   "giftRegistryUid": "4",
-  "registrantsUid": ["4"]
+  "registrantsUid": [4]
 }
 ```
 
@@ -3896,13 +3905,13 @@ mutation removeGiftRegistryRegistrants(
 
 Delete the entire quantity of a specified item from the cart. If you remove all items from the cart, the cart continues to exist.
 
-**Response:** [`RemoveItemFromCartOutput`](#removeitemfromcartoutput)
+**Response:** [`RemoveItemFromCartOutput`](types-q-s.md#removeitemfromcartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`RemoveItemFromCartInput`](#removeitemfromcartinput) | An input object that defines which products to remove from the cart. |
+| `input` - [`RemoveItemFromCartInput`](types-q-s.md#removeitemfromcartinput) | An input object that defines which products to remove from the cart. |
 
 #### Example
 
@@ -3936,13 +3945,13 @@ mutation removeItemFromCart($input: RemoveItemFromCartInput) {
 
 Remove one or more products from a negotiable quote.
 
-**Response:** [`RemoveNegotiableQuoteItemsOutput`](#removenegotiablequoteitemsoutput)
+**Response:** [`RemoveNegotiableQuoteItemsOutput`](types-q-s.md#removenegotiablequoteitemsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`RemoveNegotiableQuoteItemsInput!`](#removenegotiablequoteitemsinput) | An input object that removes one or more items from a negotiable quote. |
+| `input` - [`RemoveNegotiableQuoteItemsInput!`](types-q-s.md#removenegotiablequoteitemsinput) | An input object that removes one or more items from a negotiable quote. |
 
 #### Example
 
@@ -3982,13 +3991,13 @@ mutation removeNegotiableQuoteItems($input: RemoveNegotiableQuoteItemsInput!) {
 
 Remove products from the specified compare list.
 
-**Response:** [`CompareList`](#comparelist)
+**Response:** [`CompareList`](types-c-e.md#comparelist)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`RemoveProductsFromCompareListInput`](#removeproductsfromcomparelistinput) | An input object that defines which products to remove from a compare list. |
+| `input` - [`RemoveProductsFromCompareListInput`](types-q-s.md#removeproductsfromcomparelistinput) | An input object that defines which products to remove from a compare list. |
 
 #### Example
 
@@ -4036,14 +4045,14 @@ mutation removeProductsFromCompareList($input: RemoveProductsFromCompareListInpu
 
 Remove one or more products from the specified wish list.
 
-**Response:** [`RemoveProductsFromWishlistOutput`](#removeproductsfromwishlistoutput)
+**Response:** [`RemoveProductsFromWishlistOutput`](types-q-s.md#removeproductsfromwishlistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `wishlistId` - [`ID!`](#id) | The ID of a wish list. |
-| `wishlistItemsIds` - [`[ID!]!`](#id) | An array of item IDs representing products to be removed. |
+| `wishlistId` - [`ID!`](types-f-i.md#id) | The ID of a wish list. |
+| `wishlistItemsIds` - [`[ID!]!`](types-f-i.md#id) | An array of item IDs representing products to be removed. |
 
 #### Example
 
@@ -4071,10 +4080,7 @@ mutation removeProductsFromWishlist(
 ##### Variables
 
 ```json
-{
-  "wishlistId": "4",
-  "wishlistItemsIds": ["4"]
-}
+{"wishlistId": 4, "wishlistItemsIds": [4]}
 ```
 
 ##### Response
@@ -4096,13 +4102,13 @@ mutation removeProductsFromWishlist(
 
 Remove a tracked shipment from a return.
 
-**Response:** [`RemoveReturnTrackingOutput`](#removereturntrackingoutput)
+**Response:** [`RemoveReturnTrackingOutput`](types-q-s.md#removereturntrackingoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`RemoveReturnTrackingInput!`](#removereturntrackinginput) | An input object that removes tracking information. |
+| `input` - [`RemoveReturnTrackingInput!`](types-q-s.md#removereturntrackinginput) | An input object that removes tracking information. |
 
 #### Example
 
@@ -4136,13 +4142,13 @@ mutation removeReturnTracking($input: RemoveReturnTrackingInput!) {
 
 Cancel the application of reward points to the cart.
 
-**Response:** [`RemoveRewardPointsFromCartOutput`](#removerewardpointsfromcartoutput)
+**Response:** [`RemoveRewardPointsFromCartOutput`](types-q-s.md#removerewardpointsfromcartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `cartId` - [`ID!`](#id) |  |
+| `cartId` - [`ID!`](types-f-i.md#id) |  |
 
 #### Example
 
@@ -4161,7 +4167,7 @@ mutation removeRewardPointsFromCart($cartId: ID!) {
 ##### Variables
 
 ```json
-{"cartId": 4}
+{"cartId": "4"}
 ```
 
 ##### Response
@@ -4176,13 +4182,13 @@ mutation removeRewardPointsFromCart($cartId: ID!) {
 
 Remove store credit that has been applied to the specified cart.
 
-**Response:** [`RemoveStoreCreditFromCartOutput`](#removestorecreditfromcartoutput)
+**Response:** [`RemoveStoreCreditFromCartOutput`](types-q-s.md#removestorecreditfromcartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`RemoveStoreCreditFromCartInput!`](#removestorecreditfromcartinput) | An input object that specifies the cart ID. |
+| `input` - [`RemoveStoreCreditFromCartInput!`](types-q-s.md#removestorecreditfromcartinput) | An input object that specifies the cart ID. |
 
 #### Example
 
@@ -4216,13 +4222,13 @@ mutation removeStoreCreditFromCart($input: RemoveStoreCreditFromCartInput!) {
 
 Add all products from a customer's previous order to the cart.
 
-**Response:** [`ReorderItemsOutput`](#reorderitemsoutput)
+**Response:** [`ReorderItemsOutput`](types-q-s.md#reorderitemsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `orderNumber` - [`String!`](#string) |  |
+| `orderNumber` - [`String!`](types-q-s.md#string) |  |
 
 #### Example
 
@@ -4244,7 +4250,7 @@ mutation reorderItems($orderNumber: String!) {
 ##### Variables
 
 ```json
-{"orderNumber": "xyz789"}
+{"orderNumber": "abc123"}
 ```
 
 ##### Response
@@ -4266,13 +4272,13 @@ mutation reorderItems($orderNumber: String!) {
 
 Request a new negotiable quote on behalf of the buyer.
 
-**Response:** [`RequestNegotiableQuoteOutput`](#requestnegotiablequoteoutput)
+**Response:** [`RequestNegotiableQuoteOutput`](types-q-s.md#requestnegotiablequoteoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`RequestNegotiableQuoteInput!`](#requestnegotiablequoteinput) | An input object that contains a request to initiate a negotiable quote. |
+| `input` - [`RequestNegotiableQuoteInput!`](types-q-s.md#requestnegotiablequoteinput) | An input object that contains a request to initiate a negotiable quote. |
 
 #### Example
 
@@ -4310,13 +4316,13 @@ mutation requestNegotiableQuote($input: RequestNegotiableQuoteInput!) {
 
 Request an email with a reset password token for the registered customer identified by the specified email.
 
-**Response:** [`Boolean`](#boolean)
+**Response:** [`Boolean`](types-a-b.md#boolean)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `email` - [`String!`](#string) | The customer's email address. |
+| `email` - [`String!`](types-q-s.md#string) | The customer's email address. |
 
 #### Example
 
@@ -4331,7 +4337,7 @@ mutation requestPasswordResetEmail($email: String!) {
 ##### Variables
 
 ```json
-{"email": "abc123"}
+{"email": "xyz789"}
 ```
 
 ##### Response
@@ -4346,13 +4352,13 @@ mutation requestPasswordResetEmail($email: String!) {
 
 Initiates a buyer's request to return items for replacement or refund.
 
-**Response:** [`RequestReturnOutput`](#requestreturnoutput)
+**Response:** [`RequestReturnOutput`](types-q-s.md#requestreturnoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`RequestReturnInput!`](#requestreturninput) | An input object that contains the fields needed to start a return request. |
+| `input` - [`RequestReturnInput!`](types-q-s.md#requestreturninput) | An input object that contains the fields needed to start a return request. |
 
 #### Example
 
@@ -4396,15 +4402,15 @@ mutation requestReturn($input: RequestReturnInput!) {
 
 Reset a customer's password using the reset password token that the customer received in an email after requesting it using `requestPasswordResetEmail`.
 
-**Response:** [`Boolean`](#boolean)
+**Response:** [`Boolean`](types-a-b.md#boolean)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `email` - [`String!`](#string) | The customer's email address. |
-| `resetPasswordToken` - [`String!`](#string) | A runtime token generated by the `requestPasswordResetEmail` mutation. |
-| `newPassword` - [`String!`](#string) | The customer's new password. |
+| `email` - [`String!`](types-q-s.md#string) | The customer's email address. |
+| `resetPasswordToken` - [`String!`](types-q-s.md#string) | A runtime token generated by the `requestPasswordResetEmail` mutation. |
+| `newPassword` - [`String!`](types-q-s.md#string) | The customer's new password. |
 
 #### Example
 
@@ -4428,7 +4434,7 @@ mutation resetPassword(
 
 ```json
 {
-  "email": "abc123",
+  "email": "xyz789",
   "resetPasswordToken": "xyz789",
   "newPassword": "xyz789"
 }
@@ -4437,7 +4443,7 @@ mutation resetPassword(
 ##### Response
 
 ```json
-{"data": {"resetPassword": false}}
+{"data": {"resetPassword": true}}
 ```
 
 <HorizontalLine />
@@ -4446,7 +4452,7 @@ mutation resetPassword(
 
 Revoke the customer token.
 
-**Response:** [`RevokeCustomerTokenOutput`](#revokecustomertokenoutput)
+**Response:** [`RevokeCustomerTokenOutput`](types-q-s.md#revokecustomertokenoutput)
 
 #### Example
 
@@ -4472,13 +4478,13 @@ mutation revokeCustomerToken {
 
 Send a message on behalf of a customer to the specified email addresses.
 
-**Response:** [`SendEmailToFriendOutput`](#sendemailtofriendoutput)
+**Response:** [`SendEmailToFriendOutput`](types-q-s.md#sendemailtofriendoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SendEmailToFriendInput`](#sendemailtofriendinput) | An input object that defines sender, recipients, and product. |
+| `input` - [`SendEmailToFriendInput`](types-q-s.md#sendemailtofriendinput) | An input object that defines sender, recipients, and product. |
 
 #### Example
 
@@ -4522,13 +4528,13 @@ mutation sendEmailToFriend($input: SendEmailToFriendInput) {
 
 Send the negotiable quote to the seller for review.
 
-**Response:** [`SendNegotiableQuoteForReviewOutput`](#sendnegotiablequoteforreviewoutput)
+**Response:** [`SendNegotiableQuoteForReviewOutput`](types-q-s.md#sendnegotiablequoteforreviewoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SendNegotiableQuoteForReviewInput!`](#sendnegotiablequoteforreviewinput) | An input object that sends a request for the merchant to review a negotiable quote. |
+| `input` - [`SendNegotiableQuoteForReviewInput!`](types-q-s.md#sendnegotiablequoteforreviewinput) | An input object that sends a request for the merchant to review a negotiable quote. |
 
 #### Example
 
@@ -4568,13 +4574,13 @@ mutation sendNegotiableQuoteForReview($input: SendNegotiableQuoteForReviewInput!
 
 Set the billing address on a specific cart.
 
-**Response:** [`SetBillingAddressOnCartOutput`](#setbillingaddressoncartoutput)
+**Response:** [`SetBillingAddressOnCartOutput`](types-q-s.md#setbillingaddressoncartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SetBillingAddressOnCartInput`](#setbillingaddressoncartinput) | An input object that defines the billing address to be assigned to the cart. |
+| `input` - [`SetBillingAddressOnCartInput`](types-q-s.md#setbillingaddressoncartinput) | An input object that defines the billing address to be assigned to the cart. |
 
 #### Example
 
@@ -4608,13 +4614,13 @@ mutation setBillingAddressOnCart($input: SetBillingAddressOnCartInput) {
 
 Set gift options, including gift messages, gift wrapping, gift receipts, and printed cards.
 
-**Response:** [`SetGiftOptionsOnCartOutput`](#setgiftoptionsoncartoutput)
+**Response:** [`SetGiftOptionsOnCartOutput`](types-q-s.md#setgiftoptionsoncartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SetGiftOptionsOnCartInput`](#setgiftoptionsoncartinput) | An input object that defines the selected gift options. |
+| `input` - [`SetGiftOptionsOnCartInput`](types-q-s.md#setgiftoptionsoncartinput) | An input object that defines the selected gift options. |
 
 #### Example
 
@@ -4648,13 +4654,13 @@ mutation setGiftOptionsOnCart($input: SetGiftOptionsOnCartInput) {
 
 Assign the email address of a guest to the cart.
 
-**Response:** [`SetGuestEmailOnCartOutput`](#setguestemailoncartoutput)
+**Response:** [`SetGuestEmailOnCartOutput`](types-q-s.md#setguestemailoncartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SetGuestEmailOnCartInput`](#setguestemailoncartinput) | An input object that defines a guest email address. |
+| `input` - [`SetGuestEmailOnCartInput`](types-q-s.md#setguestemailoncartinput) | An input object that defines a guest email address. |
 
 #### Example
 
@@ -4688,13 +4694,13 @@ mutation setGuestEmailOnCart($input: SetGuestEmailOnCartInput) {
 
 Assign a billing address to a negotiable quote.
 
-**Response:** [`SetNegotiableQuoteBillingAddressOutput`](#setnegotiablequotebillingaddressoutput)
+**Response:** [`SetNegotiableQuoteBillingAddressOutput`](types-q-s.md#setnegotiablequotebillingaddressoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SetNegotiableQuoteBillingAddressInput!`](#setnegotiablequotebillingaddressinput) | An input object that defines the billing address to be assigned to a negotiable quote. |
+| `input` - [`SetNegotiableQuoteBillingAddressInput!`](types-q-s.md#setnegotiablequotebillingaddressinput) | An input object that defines the billing address to be assigned to a negotiable quote. |
 
 #### Example
 
@@ -4734,13 +4740,13 @@ mutation setNegotiableQuoteBillingAddress($input: SetNegotiableQuoteBillingAddre
 
 Set the payment method on a negotiable quote.
 
-**Response:** [`SetNegotiableQuotePaymentMethodOutput`](#setnegotiablequotepaymentmethodoutput)
+**Response:** [`SetNegotiableQuotePaymentMethodOutput`](types-q-s.md#setnegotiablequotepaymentmethodoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SetNegotiableQuotePaymentMethodInput!`](#setnegotiablequotepaymentmethodinput) | An input object that defines the payment method for the specified negotiable quote. |
+| `input` - [`SetNegotiableQuotePaymentMethodInput!`](types-q-s.md#setnegotiablequotepaymentmethodinput) | An input object that defines the payment method for the specified negotiable quote. |
 
 #### Example
 
@@ -4780,13 +4786,13 @@ mutation setNegotiableQuotePaymentMethod($input: SetNegotiableQuotePaymentMethod
 
 Assign a previously-defined address as the shipping address for a negotiable quote.
 
-**Response:** [`SetNegotiableQuoteShippingAddressOutput`](#setnegotiablequoteshippingaddressoutput)
+**Response:** [`SetNegotiableQuoteShippingAddressOutput`](types-q-s.md#setnegotiablequoteshippingaddressoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SetNegotiableQuoteShippingAddressInput!`](#setnegotiablequoteshippingaddressinput) | An input object that defines the shipping address to be assigned to a negotiable quote. |
+| `input` - [`SetNegotiableQuoteShippingAddressInput!`](types-q-s.md#setnegotiablequoteshippingaddressinput) | An input object that defines the shipping address to be assigned to a negotiable quote. |
 
 #### Example
 
@@ -4826,13 +4832,13 @@ mutation setNegotiableQuoteShippingAddress($input: SetNegotiableQuoteShippingAdd
 
 Assign the shipping methods on the negotiable quote.
 
-**Response:** [`SetNegotiableQuoteShippingMethodsOutput`](#setnegotiablequoteshippingmethodsoutput)
+**Response:** [`SetNegotiableQuoteShippingMethodsOutput`](types-q-s.md#setnegotiablequoteshippingmethodsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SetNegotiableQuoteShippingMethodsInput!`](#setnegotiablequoteshippingmethodsinput) | An input object that defines the shipping methods to be assigned to a negotiable quote. |
+| `input` - [`SetNegotiableQuoteShippingMethodsInput!`](types-q-s.md#setnegotiablequoteshippingmethodsinput) | An input object that defines the shipping methods to be assigned to a negotiable quote. |
 
 #### Example
 
@@ -4876,13 +4882,13 @@ Should use setPaymentMethodOnCart and placeOrder mutations in single request.
 
 Set the cart payment method and convert the cart into an order.
 
-**Response:** [`PlaceOrderOutput`](#placeorderoutput)
+**Response:** [`PlaceOrderOutput`](types-k-p.md#placeorderoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SetPaymentMethodAndPlaceOrderInput`](#setpaymentmethodandplaceorderinput) |  |
+| `input` - [`SetPaymentMethodAndPlaceOrderInput`](types-q-s.md#setpaymentmethodandplaceorderinput) |  |
 
 #### Example
 
@@ -4920,13 +4926,13 @@ mutation setPaymentMethodAndPlaceOrder($input: SetPaymentMethodAndPlaceOrderInpu
 
 Apply a payment method to the cart.
 
-**Response:** [`SetPaymentMethodOnCartOutput`](#setpaymentmethodoncartoutput)
+**Response:** [`SetPaymentMethodOnCartOutput`](types-q-s.md#setpaymentmethodoncartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SetPaymentMethodOnCartInput`](#setpaymentmethodoncartinput) | An input object that defines which payment method to apply to the cart. |
+| `input` - [`SetPaymentMethodOnCartInput`](types-q-s.md#setpaymentmethodoncartinput) | An input object that defines which payment method to apply to the cart. |
 
 #### Example
 
@@ -4960,13 +4966,13 @@ mutation setPaymentMethodOnCart($input: SetPaymentMethodOnCartInput) {
 
 Set one or more shipping addresses on a specific cart.
 
-**Response:** [`SetShippingAddressesOnCartOutput`](#setshippingaddressesoncartoutput)
+**Response:** [`SetShippingAddressesOnCartOutput`](types-q-s.md#setshippingaddressesoncartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SetShippingAddressesOnCartInput`](#setshippingaddressesoncartinput) | An input object that defines one or more shipping addresses to be assigned to the cart. |
+| `input` - [`SetShippingAddressesOnCartInput`](types-q-s.md#setshippingaddressesoncartinput) | An input object that defines one or more shipping addresses to be assigned to the cart. |
 
 #### Example
 
@@ -5000,13 +5006,13 @@ mutation setShippingAddressesOnCart($input: SetShippingAddressesOnCartInput) {
 
 Set one or more delivery methods on a cart.
 
-**Response:** [`SetShippingMethodsOnCartOutput`](#setshippingmethodsoncartoutput)
+**Response:** [`SetShippingMethodsOnCartOutput`](types-q-s.md#setshippingmethodsoncartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SetShippingMethodsOnCartInput`](#setshippingmethodsoncartinput) | An input object that applies one or more shipping methods to the cart. |
+| `input` - [`SetShippingMethodsOnCartInput`](types-q-s.md#setshippingmethodsoncartinput) | An input object that applies one or more shipping methods to the cart. |
 
 #### Example
 
@@ -5040,15 +5046,15 @@ mutation setShippingMethodsOnCart($input: SetShippingMethodsOnCartInput) {
 
 Send an email about the gift registry to a list of invitees.
 
-**Response:** [`ShareGiftRegistryOutput`](#sharegiftregistryoutput)
+**Response:** [`ShareGiftRegistryOutput`](types-q-s.md#sharegiftregistryoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `giftRegistryUid` - [`ID!`](#id) | The unique ID of the gift registry. |
-| `sender` - [`ShareGiftRegistrySenderInput!`](#sharegiftregistrysenderinput) | The sender's email address and gift message. |
-| `invitees` - [`[ShareGiftRegistryInviteeInput!]!`](#sharegiftregistryinviteeinput) | An array containing invitee names and email addresses. |
+| `giftRegistryUid` - [`ID!`](types-f-i.md#id) | The unique ID of the gift registry. |
+| `sender` - [`ShareGiftRegistrySenderInput!`](types-q-s.md#sharegiftregistrysenderinput) | The sender's email address and gift message. |
+| `invitees` - [`[ShareGiftRegistryInviteeInput!]!`](types-q-s.md#sharegiftregistryinviteeinput) | An array containing invitee names and email addresses. |
 
 #### Example
 
@@ -5092,13 +5098,13 @@ mutation shareGiftRegistry(
 
 Subscribe the specified email to the store's newsletter.
 
-**Response:** [`SubscribeEmailToNewsletterOutput`](#subscribeemailtonewsletteroutput)
+**Response:** [`SubscribeEmailToNewsletterOutput`](types-q-s.md#subscribeemailtonewsletteroutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `email` - [`String!`](#string) | The email address that will receive the store's newsletter. |
+| `email` - [`String!`](types-q-s.md#string) | The email address that will receive the store's newsletter. |
 
 #### Example
 
@@ -5130,13 +5136,13 @@ mutation subscribeEmailToNewsletter($email: String!) {
 
 Modify items in the cart.
 
-**Response:** [`UpdateCartItemsOutput`](#updatecartitemsoutput)
+**Response:** [`UpdateCartItemsOutput`](types-t-z.md#updatecartitemsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`UpdateCartItemsInput`](#updatecartitemsinput) | An input object that defines products to be updated. |
+| `input` - [`UpdateCartItemsInput`](types-t-z.md#updatecartitemsinput) | An input object that defines products to be updated. |
 
 #### Example
 
@@ -5170,13 +5176,13 @@ mutation updateCartItems($input: UpdateCartItemsInput) {
 
 Update company information.
 
-**Response:** [`UpdateCompanyOutput`](#updatecompanyoutput)
+**Response:** [`UpdateCompanyOutput`](types-t-z.md#updatecompanyoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CompanyUpdateInput!`](#companyupdateinput) |  |
+| `input` - [`CompanyUpdateInput!`](types-c-e.md#companyupdateinput) |  |
 
 #### Example
 
@@ -5210,13 +5216,13 @@ mutation updateCompany($input: CompanyUpdateInput!) {
 
 Update company role information.
 
-**Response:** [`UpdateCompanyRoleOutput`](#updatecompanyroleoutput)
+**Response:** [`UpdateCompanyRoleOutput`](types-t-z.md#updatecompanyroleoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CompanyRoleUpdateInput!`](#companyroleupdateinput) |  |
+| `input` - [`CompanyRoleUpdateInput!`](types-c-e.md#companyroleupdateinput) |  |
 
 #### Example
 
@@ -5250,13 +5256,13 @@ mutation updateCompanyRole($input: CompanyRoleUpdateInput!) {
 
 Change the parent node of a company team.
 
-**Response:** [`UpdateCompanyStructureOutput`](#updatecompanystructureoutput)
+**Response:** [`UpdateCompanyStructureOutput`](types-t-z.md#updatecompanystructureoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CompanyStructureUpdateInput!`](#companystructureupdateinput) |  |
+| `input` - [`CompanyStructureUpdateInput!`](types-c-e.md#companystructureupdateinput) |  |
 
 #### Example
 
@@ -5290,13 +5296,13 @@ mutation updateCompanyStructure($input: CompanyStructureUpdateInput!) {
 
 Update company team data.
 
-**Response:** [`UpdateCompanyTeamOutput`](#updatecompanyteamoutput)
+**Response:** [`UpdateCompanyTeamOutput`](types-t-z.md#updatecompanyteamoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CompanyTeamUpdateInput!`](#companyteamupdateinput) |  |
+| `input` - [`CompanyTeamUpdateInput!`](types-c-e.md#companyteamupdateinput) |  |
 
 #### Example
 
@@ -5330,13 +5336,13 @@ mutation updateCompanyTeam($input: CompanyTeamUpdateInput!) {
 
 Update an existing company user.
 
-**Response:** [`UpdateCompanyUserOutput`](#updatecompanyuseroutput)
+**Response:** [`UpdateCompanyUserOutput`](types-t-z.md#updatecompanyuseroutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CompanyUserUpdateInput!`](#companyuserupdateinput) |  |
+| `input` - [`CompanyUserUpdateInput!`](types-c-e.md#companyuserupdateinput) |  |
 
 #### Example
 
@@ -5370,13 +5376,13 @@ mutation updateCompanyUser($input: CompanyUserUpdateInput!) {
 
 Use `updateCustomerV2` instead.
 
-**Response:** [`CustomerOutput`](#customeroutput)
+**Response:** [`CustomerOutput`](types-c-e.md#customeroutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CustomerInput!`](#customerinput) | An input object that defines the customer characteristics to update. |
+| `input` - [`CustomerInput!`](types-c-e.md#customerinput) | An input object that defines the customer characteristics to update. |
 
 #### Example
 
@@ -5410,14 +5416,14 @@ mutation updateCustomer($input: CustomerInput!) {
 
 Update the billing or shipping address of a customer or guest.
 
-**Response:** [`CustomerAddress`](#customeraddress)
+**Response:** [`CustomerAddress`](types-c-e.md#customeraddress)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `id` - [`Int!`](#int) | The ID assigned to the customer address. |
-| `input` - [`CustomerAddressInput`](#customeraddressinput) | An input object that contains changes to the customer address. |
+| `id` - [`Int!`](types-f-i.md#int) | The ID assigned to the customer address. |
+| `input` - [`CustomerAddressInput`](types-c-e.md#customeraddressinput) | An input object that contains changes to the customer address. |
 
 #### Example
 
@@ -5467,7 +5473,7 @@ mutation updateCustomerAddress(
 ##### Variables
 
 ```json
-{"id": 987, "input": CustomerAddressInput}
+{"id": 123, "input": CustomerAddressInput}
 ```
 
 ##### Response
@@ -5476,26 +5482,26 @@ mutation updateCustomerAddress(
 {
   "data": {
     "updateCustomerAddress": {
-      "city": "abc123",
+      "city": "xyz789",
       "company": "xyz789",
       "country_code": "AF",
       "country_id": "abc123",
       "custom_attributes": [CustomerAddressAttribute],
-      "customer_id": 987,
-      "default_billing": false,
-      "default_shipping": true,
+      "customer_id": 123,
+      "default_billing": true,
+      "default_shipping": false,
       "extension_attributes": [CustomerAddressAttribute],
       "fax": "abc123",
       "firstname": "abc123",
       "id": 123,
-      "lastname": "abc123",
+      "lastname": "xyz789",
       "middlename": "xyz789",
-      "postcode": "abc123",
-      "prefix": "xyz789",
+      "postcode": "xyz789",
+      "prefix": "abc123",
       "region": CustomerAddressRegion,
-      "region_id": 987,
+      "region_id": 123,
       "street": ["xyz789"],
-      "suffix": "abc123",
+      "suffix": "xyz789",
       "telephone": "abc123",
       "vat_id": "xyz789"
     }
@@ -5509,14 +5515,14 @@ mutation updateCustomerAddress(
 
 Change the email address for the logged-in customer.
 
-**Response:** [`CustomerOutput`](#customeroutput)
+**Response:** [`CustomerOutput`](types-c-e.md#customeroutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `email` - [`String!`](#string) | The customer's email address. |
-| `password` - [`String!`](#string) | The customer's password. |
+| `email` - [`String!`](types-q-s.md#string) | The customer's email address. |
+| `password` - [`String!`](types-q-s.md#string) | The customer's password. |
 
 #### Example
 
@@ -5542,8 +5548,8 @@ mutation updateCustomerEmail(
 
 ```json
 {
-  "email": "xyz789",
-  "password": "abc123"
+  "email": "abc123",
+  "password": "xyz789"
 }
 ```
 
@@ -5559,13 +5565,13 @@ mutation updateCustomerEmail(
 
 Update the customer's personal information.
 
-**Response:** [`CustomerOutput`](#customeroutput)
+**Response:** [`CustomerOutput`](types-c-e.md#customeroutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CustomerUpdateInput!`](#customerupdateinput) | An input object that defines the customer characteristics to update. |
+| `input` - [`CustomerUpdateInput!`](types-c-e.md#customerupdateinput) | An input object that defines the customer characteristics to update. |
 
 #### Example
 
@@ -5599,14 +5605,14 @@ mutation updateCustomerV2($input: CustomerUpdateInput!) {
 
 Update the specified gift registry.
 
-**Response:** [`UpdateGiftRegistryOutput`](#updategiftregistryoutput)
+**Response:** [`UpdateGiftRegistryOutput`](types-t-z.md#updategiftregistryoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `giftRegistryUid` - [`ID!`](#id) | The unique ID of an existing gift registry. |
-| `giftRegistry` - [`UpdateGiftRegistryInput!`](#updategiftregistryinput) | An input object that defines which fields to update. |
+| `giftRegistryUid` - [`ID!`](types-f-i.md#id) | The unique ID of an existing gift registry. |
+| `giftRegistry` - [`UpdateGiftRegistryInput!`](types-t-z.md#updategiftregistryinput) | An input object that defines which fields to update. |
 
 #### Example
 
@@ -5632,7 +5638,7 @@ mutation updateGiftRegistry(
 
 ```json
 {
-  "giftRegistryUid": "4",
+  "giftRegistryUid": 4,
   "giftRegistry": UpdateGiftRegistryInput
 }
 ```
@@ -5653,14 +5659,14 @@ mutation updateGiftRegistry(
 
 Update the specified items in the gift registry.
 
-**Response:** [`UpdateGiftRegistryItemsOutput`](#updategiftregistryitemsoutput)
+**Response:** [`UpdateGiftRegistryItemsOutput`](types-t-z.md#updategiftregistryitemsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `giftRegistryUid` - [`ID!`](#id) | The unique ID of the gift registry. |
-| `items` - [`[UpdateGiftRegistryItemInput!]!`](#updategiftregistryiteminput) | An array of items to be updated. |
+| `giftRegistryUid` - [`ID!`](types-f-i.md#id) | The unique ID of the gift registry. |
+| `items` - [`[UpdateGiftRegistryItemInput!]!`](types-t-z.md#updategiftregistryiteminput) | An array of items to be updated. |
 
 #### Example
 
@@ -5686,7 +5692,7 @@ mutation updateGiftRegistryItems(
 
 ```json
 {
-  "giftRegistryUid": "4",
+  "giftRegistryUid": 4,
   "items": [UpdateGiftRegistryItemInput]
 }
 ```
@@ -5709,14 +5715,14 @@ mutation updateGiftRegistryItems(
 
 Modify the properties of one or more gift registry registrants.
 
-**Response:** [`UpdateGiftRegistryRegistrantsOutput`](#updategiftregistryregistrantsoutput)
+**Response:** [`UpdateGiftRegistryRegistrantsOutput`](types-t-z.md#updategiftregistryregistrantsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `giftRegistryUid` - [`ID!`](#id) | The unique ID of the gift registry. |
-| `registrants` - [`[UpdateGiftRegistryRegistrantInput!]!`](#updategiftregistryregistrantinput) | An array of registrants to update. |
+| `giftRegistryUid` - [`ID!`](types-f-i.md#id) | The unique ID of the gift registry. |
+| `registrants` - [`[UpdateGiftRegistryRegistrantInput!]!`](types-t-z.md#updategiftregistryregistrantinput) | An array of registrants to update. |
 
 #### Example
 
@@ -5742,7 +5748,7 @@ mutation updateGiftRegistryRegistrants(
 
 ```json
 {
-  "giftRegistryUid": 4,
+  "giftRegistryUid": "4",
   "registrants": [UpdateGiftRegistryRegistrantInput]
 }
 ```
@@ -5765,13 +5771,13 @@ mutation updateGiftRegistryRegistrants(
 
 Change the quantity of one or more items in an existing negotiable quote.
 
-**Response:** [`UpdateNegotiableQuoteItemsQuantityOutput`](#updatenegotiablequoteitemsquantityoutput)
+**Response:** [`UpdateNegotiableQuoteItemsQuantityOutput`](types-t-z.md#updatenegotiablequoteitemsquantityoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`UpdateNegotiableQuoteQuantitiesInput!`](#updatenegotiablequotequantitiesinput) | An input object that changes the quantity of one or more items in a negotiable quote. |
+| `input` - [`UpdateNegotiableQuoteQuantitiesInput!`](types-t-z.md#updatenegotiablequotequantitiesinput) | An input object that changes the quantity of one or more items in a negotiable quote. |
 
 #### Example
 
@@ -5811,14 +5817,14 @@ mutation updateNegotiableQuoteQuantities($input: UpdateNegotiableQuoteQuantities
 
 Update one or more products in the specified wish list.
 
-**Response:** [`UpdateProductsInWishlistOutput`](#updateproductsinwishlistoutput)
+**Response:** [`UpdateProductsInWishlistOutput`](types-t-z.md#updateproductsinwishlistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `wishlistId` - [`ID!`](#id) | The ID of a wish list. |
-| `wishlistItems` - [`[WishlistItemUpdateInput!]!`](#wishlistitemupdateinput) | An array of items to be updated. |
+| `wishlistId` - [`ID!`](types-f-i.md#id) | The ID of a wish list. |
+| `wishlistItems` - [`[WishlistItemUpdateInput!]!`](types-t-z.md#wishlistitemupdateinput) | An array of items to be updated. |
 
 #### Example
 
@@ -5847,7 +5853,7 @@ mutation updateProductsInWishlist(
 
 ```json
 {
-  "wishlistId": 4,
+  "wishlistId": "4",
   "wishlistItems": [WishlistItemUpdateInput]
 }
 ```
@@ -5871,13 +5877,13 @@ mutation updateProductsInWishlist(
 
 Update existing purchase order approval rules.
 
-**Response:** [`PurchaseOrderApprovalRule`](#purchaseorderapprovalrule)
+**Response:** [`PurchaseOrderApprovalRule`](types-k-p.md#purchaseorderapprovalrule)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`UpdatePurchaseOrderApprovalRuleInput!`](#updatepurchaseorderapprovalruleinput) |  |
+| `input` - [`UpdatePurchaseOrderApprovalRuleInput!`](types-t-z.md#updatepurchaseorderapprovalruleinput) |  |
 
 #### Example
 
@@ -5921,10 +5927,10 @@ mutation updatePurchaseOrderApprovalRule($input: UpdatePurchaseOrderApprovalRule
       "applies_to_roles": [CompanyRole],
       "approver_roles": [CompanyRole],
       "condition": PurchaseOrderApprovalRuleConditionInterface,
-      "created_at": "xyz789",
+      "created_at": "abc123",
       "created_by": "abc123",
-      "description": "abc123",
-      "name": "xyz789",
+      "description": "xyz789",
+      "name": "abc123",
       "status": "ENABLED",
       "uid": 4,
       "updated_at": "xyz789"
@@ -5939,14 +5945,14 @@ mutation updatePurchaseOrderApprovalRule($input: UpdatePurchaseOrderApprovalRule
 
 Rename a requisition list and change its description.
 
-**Response:** [`UpdateRequisitionListOutput`](#updaterequisitionlistoutput)
+**Response:** [`UpdateRequisitionListOutput`](types-t-z.md#updaterequisitionlistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `requisitionListUid` - [`ID!`](#id) | The unique ID of the requisition list. |
-| `input` - [`UpdateRequisitionListInput`](#updaterequisitionlistinput) |  |
+| `requisitionListUid` - [`ID!`](types-f-i.md#id) | The unique ID of the requisition list. |
+| `input` - [`UpdateRequisitionListInput`](types-t-z.md#updaterequisitionlistinput) |  |
 
 #### Example
 
@@ -5995,14 +6001,14 @@ mutation updateRequisitionList(
 
 Update items in a requisition list.
 
-**Response:** [`UpdateRequisitionListItemsOutput`](#updaterequisitionlistitemsoutput)
+**Response:** [`UpdateRequisitionListItemsOutput`](types-t-z.md#updaterequisitionlistitemsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `requisitionListUid` - [`ID!`](#id) | The unique ID of the requisition list. |
-| `requisitionListItems` - [`[UpdateRequisitionListItemsInput!]!`](#updaterequisitionlistitemsinput) | Items to be updated in the requisition list. |
+| `requisitionListUid` - [`ID!`](types-f-i.md#id) | The unique ID of the requisition list. |
+| `requisitionListItems` - [`[UpdateRequisitionListItemsInput!]!`](types-t-z.md#updaterequisitionlistitemsinput) | Items to be updated in the requisition list. |
 
 #### Example
 
@@ -6028,7 +6034,7 @@ mutation updateRequisitionListItems(
 
 ```json
 {
-  "requisitionListUid": 4,
+  "requisitionListUid": "4",
   "requisitionListItems": [
     UpdateRequisitionListItemsInput
   ]
@@ -6053,15 +6059,15 @@ mutation updateRequisitionListItems(
 
 Change the name and visibility of the specified wish list.
 
-**Response:** [`UpdateWishlistOutput`](#updatewishlistoutput)
+**Response:** [`UpdateWishlistOutput`](types-t-z.md#updatewishlistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `wishlistId` - [`ID!`](#id) | The ID of the wish list to update. |
-| `name` - [`String`](#string) | The name assigned to the wish list. |
-| `visibility` - [`WishlistVisibilityEnum`](#wishlistvisibilityenum) | Indicates the visibility of the wish list. |
+| `wishlistId` - [`ID!`](types-f-i.md#id) | The ID of the wish list to update. |
+| `name` - [`String`](types-q-s.md#string) | The name assigned to the wish list. |
+| `visibility` - [`WishlistVisibilityEnum`](types-t-z.md#wishlistvisibilityenum) | Indicates the visibility of the wish list. |
 
 #### Example
 
@@ -6101,7 +6107,7 @@ mutation updateWishlist(
 {
   "data": {
     "updateWishlist": {
-      "name": "abc123",
+      "name": "xyz789",
       "uid": "4",
       "visibility": "PUBLIC"
     }
@@ -6115,13 +6121,13 @@ mutation updateWishlist(
 
 Validate purchase orders.
 
-**Response:** [`ValidatePurchaseOrdersOutput`](#validatepurchaseordersoutput)
+**Response:** [`ValidatePurchaseOrdersOutput`](types-t-z.md#validatepurchaseordersoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`ValidatePurchaseOrdersInput!`](#validatepurchaseordersinput) |  |
+| `input` - [`ValidatePurchaseOrdersInput!`](types-t-z.md#validatepurchaseordersinput) |  |
 
 #### Example
 
