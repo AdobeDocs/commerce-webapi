@@ -59,6 +59,19 @@ definitions:
     - apply_fee_on_last_invoice
     - apply_fee_on_last_creditmemo
     type: object
+  adobe-assets-integration-data-alt-text-item-interface:
+    description: Alt text item interface. DTO for per-store-view alt text label.
+    properties:
+      store_code:
+        description: Store view code
+        type: string
+      value:
+        description: Alt text value
+        type: string
+    required:
+    - store_code
+    - value
+    type: object
   adobe-assets-integration-data-asset-image-interface:
     description: Asset image data interface
     properties:
@@ -96,6 +109,11 @@ definitions:
   adobe-assets-integration-data-image-item-interface:
     description: Image item Interface. Dto to receive an import image asset.
     properties:
+      alt_texts:
+        description: Alt texts per store view
+        items:
+          "$ref": "#/definitions/adobe-assets-integration-data-alt-text-item-interface"
+        type: array
       asset_id:
         description: Asset ID
         type: string
@@ -118,6 +136,31 @@ definitions:
     - asset_id
     - roles
     - url
+    - alt_texts
+    type: object
+  adobe-assets-integration-data-sync-asset-sku-mapping-interface:
+    description: Per-SKU mapping data within a syncAsset request.
+    properties:
+      alt_texts:
+        description: Alt texts
+        items:
+          "$ref": "#/definitions/adobe-assets-integration-data-alt-text-item-interface"
+        type: array
+      position:
+        description: Position
+        type: integer
+      roles:
+        description: Roles
+        items:
+          type: string
+        type: array
+      sku:
+        description: SKU
+        type: string
+    required:
+    - sku
+    - roles
+    - alt_texts
     type: object
   adobe-assets-integration-data-video-item-interface:
     description: Video item Interface. Dto to receive an import video asset.
@@ -2255,6 +2298,11 @@ definitions:
       id:
         description: Id field
         type: string
+      installed:
+        description: If the extension is installed
+        type: boolean
+    required:
+    - installed
     type: object
   company-credit-data-credit-balance-options-interface:
     description: Credit balance data transfer object interface.
@@ -2842,6 +2890,9 @@ definitions:
       reference_id:
         description: Reference ID for this send request.
         type: string
+      reply_to_email:
+        description: Reply to email address used for this email (if any).
+        type: string
       template_code:
         description: Code (name) from the template record.
         type: string
@@ -2854,6 +2905,93 @@ definitions:
     - recipient_email
     - template_id
     - template_code
+    type: object
+  custom-email-template-data-email-template-detail-interface:
+    description: Full custom email template DTO returned by the single-resource (detail)
+      read. Extends the lean list DTO with the heavy content fields (template_text,
+      template_styles) that the list endpoint deliberately omits. The WebAPI serializer
+      renders fields from the declared return type, so exposing these here — and only
+      here — keeps GET /V1/custom-email/templates a summary while GET /V1/custom-email/templates/{id}
+      returns the complete template.
+    properties:
+      added_at:
+        description: Timestamp.
+        type: string
+      modified_at:
+        description: Modification timestamp.
+        type: string
+      template_code:
+        description: Code (name).
+        type: string
+      template_id:
+        description: ID (usable with custom-email/send).
+        type: integer
+      template_styles:
+        description: Styles (CSS). Empty for plain-text templates.
+        type: string
+      template_subject:
+        description: Subject.
+        type: string
+      template_text:
+        description: Content (raw stored body, markup intact; not rendered).
+        type: string
+      template_type:
+        description: Content type ("html" or "text").
+        type: string
+    required:
+    - template_text
+    - template_styles
+    - template_id
+    - template_code
+    - template_subject
+    - template_type
+    type: object
+  custom-email-template-data-email-template-interface:
+    description: Custom email template DTO. Represents a row from the email_template
+      table (a user-created custom template). The template_id is usable as-is with
+      POST /V1/custom-email/send.
+    properties:
+      added_at:
+        description: Timestamp.
+        type: string
+      modified_at:
+        description: Modification timestamp.
+        type: string
+      template_code:
+        description: Code (name).
+        type: string
+      template_id:
+        description: ID (usable with custom-email/send).
+        type: integer
+      template_subject:
+        description: Subject.
+        type: string
+      template_type:
+        description: Content type ("html" or "text").
+        type: string
+    required:
+    - template_id
+    - template_code
+    - template_subject
+    - template_type
+    type: object
+  custom-email-template-data-email-template-search-results-interface:
+    description: Search results for custom email templates.
+    properties:
+      items:
+        description: Templates list.
+        items:
+          "$ref": "#/definitions/custom-email-template-data-email-template-interface"
+        type: array
+      search_criteria:
+        "$ref": "#/definitions/framework-search-criteria-interface"
+      total_count:
+        description: Total count.
+        type: integer
+    required:
+    - items
+    - search_criteria
+    - total_count
     type: object
   customer-data-address-extension-interface:
     description: ExtensionInterface class for @see \Magento\Customer\Api\Data\AddressInterface
@@ -4820,6 +4958,15 @@ definitions:
     - source_selection_items
     - shippable
     type: object
+  login-as-customer-storefront-compatibility-data-one-time-login-code-response-interface:
+    description: Response containing the one-time password for customer login.
+    properties:
+      otp:
+        description: The one-time password.
+        type: string
+    required:
+    - otp
+    type: object
   negotiable-quote-data-attachment-content-extension-interface:
     description: ExtensionInterface class for @see \Magento\NegotiableQuote\Api\Data\AttachmentContentInterface
     type: object
@@ -5383,15 +5530,6 @@ definitions:
     - default
     - visible_on_front
     type: object
-  otp-rest-data-otp-response-interface:
-    description: Response containing the one-time password for customer login.
-    properties:
-      otp:
-        description: The one-time password.
-        type: string
-    required:
-    - otp
-    type: object
   out-of-process-observability-data-subscription-header-interface:
     description: Observability Subscription Header data interface
     properties:
@@ -5810,6 +5948,8 @@ definitions:
         type: array
       negotiable_quote_item:
         "$ref": "#/definitions/negotiable-quote-data-negotiable-quote-item-interface"
+      nominated_source_code:
+        type: string
     type: object
   quote-data-cart-item-interface:
     description: Interface CartItemInterface
@@ -7617,6 +7757,8 @@ definitions:
         items:
           "$ref": "#/definitions/tax-data-order-tax-item-interface"
         type: array
+      admin_assisted_order:
+        type: integer
       applied_taxes:
         items:
           "$ref": "#/definitions/tax-data-order-tax-details-applied-tax-interface"
@@ -8258,6 +8400,8 @@ definitions:
         items:
           "$ref": "#/definitions/tax-data-order-tax-item-interface"
         type: array
+      nominated_source_code:
+        type: string
     type: object
   sales-data-order-item-interface:
     description: Order item interface. An order is a document that a web store issues
@@ -10384,9 +10528,9 @@ definitions:
 host: https://<server>.api.commerce.adobe.com/<tenant-id>
 info:
   title: Adobe Commerce as a Cloud Service
-  version: May 2026
+  version: July 2026
   description:
-    "$ref": "intro/accs-intro.md"
+    "$ref": intro/accs-intro.md
 paths:
   "/V1/addresses/{addressId}":
     delete:
@@ -10471,7 +10615,9 @@ paths:
       consumes:
       - application/json
       - application/xml
-      description: Saving the selected extensions to database.
+      description: Saving the selected extensions to database. If an extension already
+        exists for the given extension_name and extension_workspace, it is updated
+        instead of failing.
       operationId: PostV1AdminuisdkExtension
       parameters:
       - in: body
@@ -15932,6 +16078,10 @@ paths:
             recipientEmail:
               description: Recipient email address
               type: string
+            replyToEmail:
+              description: Optional Reply-To email address; omit or pass null to use
+                the template sender
+              type: string
             templateId:
               description: Email template ID
               type: integer
@@ -15966,15 +16116,149 @@ paths:
       tags:
       - custom-email/send
       summary: custom-email/send
+  "/V1/custom-email/templates":
+    get:
+      consumes:
+      - application/json
+      - application/xml
+      description: Retrieve custom email templates matching the given search criteria.
+      operationId: GetV1CustomemailTemplates
+      parameters:
+      - description: Field
+        in: query
+        name: searchCriteria[filterGroups][0][filters][0][field]
+        type: string
+      - description: Value
+        in: query
+        name: searchCriteria[filterGroups][0][filters][0][value]
+        type: string
+      - description: Condition type
+        in: query
+        name: searchCriteria[filterGroups][0][filters][0][conditionType]
+        type: string
+      - description: Sorting field.
+        in: query
+        name: searchCriteria[sortOrders][0][field]
+        type: string
+      - description: Sorting direction.
+        in: query
+        name: searchCriteria[sortOrders][0][direction]
+        type: string
+      - description: Page size.
+        in: query
+        name: searchCriteria[pageSize]
+        type: integer
+      - description: Current page.
+        in: query
+        name: searchCriteria[currentPage]
+        type: integer
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/custom-email-template-data-email-template-search-results-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - custom-email/templates
+      summary: custom-email/templates
+    post:
+      consumes:
+      - application/json
+      - application/xml
+      description: Create a custom email template. Server-assigned fields (template_id,
+        added_at, modified_at) and the strict-mode flag (is_legacy = 0) are set by
+        the service; any value supplied for them is ignored. The template_code must
+        be unique. Returns the persisted template, including its server-assigned template_id
+        (usable as-is with POST /V1/custom-email/send).
+      operationId: PostV1CustomemailTemplates
+      parameters:
+      - in: body
+        name: PostV1CustomemailTemplatesBody
+        schema:
+          properties:
+            template:
+              "$ref": "#/definitions/custom-email-template-data-email-template-detail-interface"
+          required:
+          - template
+          type: object
+          xml:
+            name: request
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/custom-email-template-data-email-template-detail-interface"
+        '400':
+          description: 400 Bad Request
+          schema:
+            "$ref": "#/definitions/error-response"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - custom-email/templates
+      summary: custom-email/templates
+  "/V1/custom-email/templates/{templateId}":
+    get:
+      consumes:
+      - application/json
+      - application/xml
+      description: Retrieve a single custom email template by id, including its content
+        and styles.
+      operationId: GetV1CustomemailTemplatesTemplateId
+      parameters:
+      - in: path
+        name: templateId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/custom-email-template-data-email-template-detail-interface"
+        '400':
+          description: 400 Bad Request
+          schema:
+            "$ref": "#/definitions/error-response"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - custom-email/templates/{templateId}
+      summary: custom-email/templates/{templateId}
   "/V1/customer/{customerId}/otp":
     post:
       consumes:
       - application/json
       - application/xml
-      description: Generate a one-time password for the customer identified by ID.
-        The OTP can be used with the exchangeOtpForCustomerToken GraphQL mutation.
-        Returns a successful response even when the customer does not exist (prevents
-        user enumeration).
+      description: Generate a one-time code for the customer. The code is used as
+        the password with generateCustomerToken / one-time exchange flow.
       operationId: PostV1CustomerCustomerIdOtp
       parameters:
       - in: path
@@ -15986,6 +16270,8 @@ paths:
         schema:
           properties:
             reason:
+              description: Human-readable audit reason; omitted or blank (after trim)
+                uses {@see self::DEFAULT_GENERATE_OTP_AUDIT_REASON}.
               type: string
           type: object
           xml:
@@ -15997,7 +16283,7 @@ paths:
         '200':
           description: 200 Success.
           schema:
-            "$ref": "#/definitions/otp-rest-data-otp-response-interface"
+            "$ref": "#/definitions/login-as-customer-storefront-compatibility-data-one-time-login-code-response-interface"
         '401':
           description: 401 Unauthorized
           schema:
@@ -22657,6 +22943,293 @@ paths:
       tags:
       - order/{orderId}/ship
       summary: order/{orderId}/ship
+  "/V1/orderChain/{id}/cancel":
+    post:
+      consumes:
+      - application/json
+      - application/xml
+      description: Cancels a specified order.
+      operationId: PostV1OrderChainIdCancel
+      parameters:
+      - description: The order ID.
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            type: boolean
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - orderChain/{id}/cancel
+      summary: orderChain/{id}/cancel
+  "/V1/orderChain/{id}/comments":
+    get:
+      consumes:
+      - application/json
+      - application/xml
+      description: Lists comments for a specified order.
+      operationId: GetV1OrderChainIdComments
+      parameters:
+      - description: The order ID.
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/sales-data-order-status-history-search-result-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - orderChain/{id}/comments
+      summary: orderChain/{id}/comments
+    post:
+      consumes:
+      - application/json
+      - application/xml
+      description: Adds a comment to a specified order.
+      operationId: PostV1OrderChainIdComments
+      parameters:
+      - description: The order ID.
+        in: path
+        name: id
+        required: true
+        type: integer
+      - in: body
+        name: PostV1OrderChainIdCommentsBody
+        schema:
+          properties:
+            statusHistory:
+              "$ref": "#/definitions/sales-data-order-status-history-interface"
+          required:
+          - statusHistory
+          type: object
+          xml:
+            name: request
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            type: boolean
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - orderChain/{id}/comments
+      summary: orderChain/{id}/comments
+  "/V1/orderChain/{id}/emails":
+    post:
+      consumes:
+      - application/json
+      - application/xml
+      description: Emails a user a specified order.
+      operationId: PostV1OrderChainIdEmails
+      parameters:
+      - description: The order ID.
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            type: boolean
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - orderChain/{id}/emails
+      summary: orderChain/{id}/emails
+  "/V1/orderChain/{id}/hold":
+    post:
+      consumes:
+      - application/json
+      - application/xml
+      description: Holds a specified order.
+      operationId: PostV1OrderChainIdHold
+      parameters:
+      - description: The order ID.
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            type: boolean
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - orderChain/{id}/hold
+      summary: orderChain/{id}/hold
+  "/V1/orderChain/{id}/statuses":
+    get:
+      consumes:
+      - application/json
+      - application/xml
+      description: Gets the status for a specified order.
+      operationId: GetV1OrderChainIdStatuses
+      parameters:
+      - description: The order ID.
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            description: Order status.
+            type: string
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - orderChain/{id}/statuses
+      summary: orderChain/{id}/statuses
+  "/V1/orderChain/{id}/unhold":
+    post:
+      consumes:
+      - application/json
+      - application/xml
+      description: Releases a specified order from hold status.
+      operationId: PostV1OrderChainIdUnhold
+      parameters:
+      - description: The order ID.
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            type: boolean
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - orderChain/{id}/unhold
+      summary: orderChain/{id}/unhold
+  "/V1/orderChain/{orderId}/invoice":
+    post:
+      consumes:
+      - application/json
+      - application/xml
+      description: ''
+      operationId: PostV1OrderChainOrderIdInvoice
+      parameters:
+      - in: path
+        name: orderId
+        required: true
+        type: integer
+      - in: body
+        name: PostV1OrderChainOrderIdInvoiceBody
+        schema:
+          properties:
+            appendComment:
+              type: boolean
+            arguments:
+              "$ref": "#/definitions/sales-data-invoice-creation-arguments-interface"
+            capture:
+              type: boolean
+            comment:
+              "$ref": "#/definitions/sales-data-invoice-comment-creation-interface"
+            items:
+              items:
+                "$ref": "#/definitions/sales-data-invoice-item-creation-interface"
+              type: array
+            notify:
+              type: boolean
+          type: object
+          xml:
+            name: request
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            type: integer
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - orderChain/{orderId}/invoice
+      summary: orderChain/{orderId}/invoice
   "/V1/orders":
     get:
       consumes:
@@ -22720,6 +23293,7 @@ paths:
       consumes:
       - application/json
       - application/xml
+      deprecated: true
       description: Performs persist operations for a specified order.
       operationId: PostV1Orders
       parameters:
@@ -22758,6 +23332,7 @@ paths:
       consumes:
       - application/json
       - application/xml
+      deprecated: true
       description: Performs persist operations for a specified order.
       operationId: PutV1OrdersCreate
       parameters:
@@ -23149,6 +23724,107 @@ paths:
       tags:
       - orders/{id}/unhold
       summary: orders/{id}/unhold
+  "/V1/orders/{orderId}/edit/start":
+    post:
+      consumes:
+      - application/json
+      - application/xml
+      description: Copy an existing order into a new admin quote and return the quote
+        ID. Items, addresses, shipping method, and coupon code are copied from the
+        original order. The resulting quote is an inactive admin quote (isSuperMode)
+        that can be modified via the standard cart REST APIs before submission.
+      operationId: PostV1OrdersOrderIdEditStart
+      parameters:
+      - in: path
+        name: orderId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            description: The quote ID to use for further modifications and for submitEdit
+            type: integer
+        '400':
+          description: 400 Bad Request
+          schema:
+            "$ref": "#/definitions/error-response"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - orders/{orderId}/edit/start
+      summary: orders/{orderId}/edit/start
+  "/V1/orders/{orderId}/edit/submit":
+    post:
+      consumes:
+      - application/json
+      - application/xml
+      description: 'Submit an edited quote as a new order, replacing the original
+        order. The quote must have a payment method set before calling this (use PUT
+        /V1/carts/:quoteId/selected-payment-method). On success:   - A new order is
+        created from the quote   - The original order is cancelled   - The two orders
+        are linked via relation_parent_id / relation_child_id   - The new order gets
+        an increment ID of the form {originalIncrement}-{n}'
+      operationId: PostV1OrdersOrderIdEditSubmit
+      parameters:
+      - description: The original order being edited
+        in: path
+        name: orderId
+        required: true
+        type: integer
+      - in: body
+        name: PostV1OrdersOrderIdEditSubmitBody
+        schema:
+          properties:
+            quoteId:
+              description: The quote ID returned by startEdit
+              type: integer
+          required:
+          - quoteId
+          type: object
+          xml:
+            name: request
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            description: The new order ID
+            type: integer
+        '400':
+          description: 400 Bad Request
+          schema:
+            "$ref": "#/definitions/error-response"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - orders/{orderId}/edit/submit
+      summary: orders/{orderId}/edit/submit
   "/V1/orders/{parent_id}":
     put:
       consumes:
@@ -24614,12 +25290,12 @@ paths:
       - application/json
       - application/xml
       responses:
-        '401':
-          description: 401 Unauthorized
+        '400':
+          description: 400 Bad Request
           schema:
             "$ref": "#/definitions/error-response"
-        '500':
-          description: Internal Server error
+        '401':
+          description: 401 Unauthorized
           schema:
             "$ref": "#/definitions/error-response"
         default:
@@ -24674,6 +25350,10 @@ paths:
         name: PostV1ProductsExternalmediaImageBody
         schema:
           properties:
+            altTexts:
+              items:
+                "$ref": "#/definitions/adobe-assets-integration-data-alt-text-item-interface"
+              type: array
             assetId:
               type: string
             position:
@@ -24838,6 +25518,58 @@ paths:
       tags:
       - products/external-media/remove-by-sku
       summary: products/external-media/remove-by-sku
+  "/V1/products/external-media/sync-asset":
+    post:
+      consumes:
+      - application/json
+      - application/xml
+      description: 'POST to sync an asset: removes stale SKU mappings and imports
+        current ones in a single atomic call. Replaces the three-call sequence: getSku
+        + removeByAssetIdAndSku + importImage/importVideo.'
+      operationId: PostV1ProductsExternalmediaSyncasset
+      parameters:
+      - in: body
+        name: PostV1ProductsExternalmediaSyncassetBody
+        schema:
+          properties:
+            assetId:
+              type: string
+            deliveryUrl:
+              description: CDN delivery URL; used as image URL or as video thumbnail
+                URL
+              type: string
+            skus:
+              items:
+                "$ref": "#/definitions/adobe-assets-integration-data-sync-asset-sku-mapping-interface"
+              type: array
+            videoPlayerUrl:
+              description: Set for video assets; null for images
+              type: string
+          required:
+          - assetId
+          - deliveryUrl
+          type: object
+          xml:
+            name: request
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '400':
+          description: 400 Bad Request
+          schema:
+            "$ref": "#/definitions/error-response"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - products/external-media/sync-asset
+      summary: products/external-media/sync-asset
   "/V1/products/external-media/version":
     get:
       consumes:
@@ -30141,6 +30873,8 @@ tags:
 - name: creditmemo/refund
 - name: creditmemos
 - name: custom-email/send
+- name: custom-email/templates
+- name: custom-email/templates/{templateId}
 - name: customer/{customerId}/otp
 - name: customerGroups
 - name: customerGroups/{id}
@@ -30268,6 +31002,13 @@ tags:
 - name: order/{orderId}/refund
 - name: order/{orderId}/ship
 - name: order/notify-orders-are-ready-for-pickup
+- name: orderChain/{id}/cancel
+- name: orderChain/{id}/comments
+- name: orderChain/{id}/emails
+- name: orderChain/{id}/hold
+- name: orderChain/{id}/statuses
+- name: orderChain/{id}/unhold
+- name: orderChain/{orderId}/invoice
 - name: orders
 - name: orders/{id}
 - name: orders/{id}/cancel
@@ -30276,6 +31017,8 @@ tags:
 - name: orders/{id}/hold
 - name: orders/{id}/statuses
 - name: orders/{id}/unhold
+- name: orders/{orderId}/edit/start
+- name: orders/{orderId}/edit/submit
 - name: orders/{parent_id}
 - name: orders/create
 - name: orders/items
@@ -30330,6 +31073,7 @@ tags:
 - name: products/external-media/remove-by-asset-id
 - name: products/external-media/remove-by-asset-id-and-sku
 - name: products/external-media/remove-by-sku
+- name: products/external-media/sync-asset
 - name: products/external-media/version
 - name: products/external-media/video
 - name: products/links/{type}/attributes
@@ -30548,6 +31292,8 @@ x-tagGroups:
 - name: custom email
   tags:
   - custom-email/send
+  - custom-email/templates
+  - custom-email/templates/{templateId}
 - name: customer
   tags:
   - customer/{customerId}/otp
@@ -30725,6 +31471,15 @@ x-tagGroups:
   - order/{orderId}/invoice
   - order/{orderId}/refund
   - order/{orderId}/ship
+- name: orderChain
+  tags:
+  - orderChain/{id}/cancel
+  - orderChain/{id}/comments
+  - orderChain/{id}/emails
+  - orderChain/{id}/hold
+  - orderChain/{id}/statuses
+  - orderChain/{id}/unhold
+  - orderChain/{orderId}/invoice
 - name: orders
   tags:
   - orders
@@ -30738,6 +31493,8 @@ x-tagGroups:
   - orders/{id}/hold
   - orders/{id}/statuses
   - orders/{id}/unhold
+  - orders/{orderId}/edit/start
+  - orders/{orderId}/edit/submit
   - orders/{parent_id}
 - name: products
   tags:
@@ -30773,6 +31530,7 @@ x-tagGroups:
   - products/external-media/remove-by-asset-id
   - products/external-media/remove-by-asset-id-and-sku
   - products/external-media/remove-by-sku
+  - products/external-media/sync-asset
   - products/external-media/version
   - products/external-media/video
   - products/links/types

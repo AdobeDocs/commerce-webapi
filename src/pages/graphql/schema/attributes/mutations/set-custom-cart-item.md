@@ -42,7 +42,7 @@ mutation {
   setCustomAttributesOnCartItem(
     input: {
       cart_id: "8k0Q4MpH2IGahWrTRtqM61YV2MtLPApz"
-      cart_item_id: "2"
+      cart_item_id: "MTQ="
       custom_attributes: [
         { 
           attribute_code: "first_attribute", 
@@ -57,9 +57,12 @@ mutation {
   ) {
     cart {
       id
-      custom_attributes {
-        attribute_code
-        value
+      items {
+        uid
+        custom_attributes {
+          attribute_code
+          value
+        }
       }
     }
   }
@@ -74,14 +77,19 @@ mutation {
     "setCustomAttributesOnCartItem": {
       "cart": {
         "id": "8k0Q4MpH2IGahWrTRtqM61YV2MtLPApz",
-        "custom_attributes": [
+        "items": [
           {
-            "attribute_code": "first_attribute",
-            "value": "value_one"
-          }
-          {
-            "attribute_code": "second_attribute",
-            "value": "value_twp"
+            "uid": "MTU=",
+            "custom_attributes": [
+              {
+                "attribute_code": "first_attribute",
+                "value": "value_one"
+              },
+              {
+                "attribute_code": "second_attribute",
+                "value": "value_twp"
+              }
+            ]
           }
         ]
       }
