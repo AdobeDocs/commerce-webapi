@@ -4,9 +4,11 @@ description: The subscribeProductAlertPrice mutation subscribes the logged-in cu
 
 ---
 
-<Fragment src="../../../../includes/saas-only.md"/>
-
 # subscribeProductAlertPrice mutation
+
+<InlineAlert variant="info" slots="text1"/>
+
+This mutation is part of the Storefront Compatibility Package and is available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview) and [Adobe Commerce Optimizer](https://experienceleague.adobe.com/en/docs/commerce/aco-optimizer-connector/overview) on Adobe Commerce on Cloud or on-premises.
 
 The `subscribeProductAlertPrice` mutation subscribes the logged-in customer to a price drop alert for the specified product. When the product price decreases, the customer receives an email notification.
 

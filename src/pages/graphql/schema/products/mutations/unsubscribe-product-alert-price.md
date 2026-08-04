@@ -4,9 +4,11 @@ description: The unsubscribeProductAlertPrice mutation removes the logged-in cus
 
 ---
 
-<Fragment src="../../../../includes/saas-only.md"/>
-
 # unsubscribeProductAlertPrice mutation
+
+<InlineAlert variant="info" slots="text1"/>
+
+This mutation is part of the Storefront Compatibility Package and is available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview) and [Adobe Commerce Optimizer](https://experienceleague.adobe.com/en/docs/commerce/aco-optimizer-connector/overview) on Adobe Commerce on Cloud or on-premises.
 
 The `unsubscribeProductAlertPrice` mutation removes the logged-in customer's subscription to a price drop alert for the specified product. After unsubscribing, the customer no longer receives email notifications when the product price decreases.
 

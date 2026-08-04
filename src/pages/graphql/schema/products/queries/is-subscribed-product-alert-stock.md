@@ -4,9 +4,11 @@ description: The isSubscribedProductAlertStock query checks whether the logged-i
 
 ---
 
-<Fragment src="../../../../includes/saas-only.md"/>
-
 # isSubscribedProductAlertStock query
+
+<InlineAlert variant="info" slots="text1"/>
+
+This query is part of the Storefront Compatibility Package and is available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview) and [Adobe Commerce Optimizer](https://experienceleague.adobe.com/en/docs/commerce/aco-optimizer-connector/overview) on Adobe Commerce on Cloud or on-premises.
 
 The `isSubscribedProductAlertStock` query checks whether the logged-in customer is subscribed to a stock availability alert for the specified product. Use this query to determine whether to show a subscribe or unsubscribe option in the storefront UI.
 

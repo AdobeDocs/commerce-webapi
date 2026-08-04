@@ -4,9 +4,11 @@ description: The subscribeProductAlertStock mutation subscribes the logged-in cu
 
 ---
 
-<Fragment src="../../../../includes/saas-only.md"/>
-
 # subscribeProductAlertStock mutation
+
+<InlineAlert variant="info" slots="text1"/>
+
+This mutation is part of the Storefront Compatibility Package and is available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview) and [Adobe Commerce Optimizer](https://experienceleague.adobe.com/en/docs/commerce/aco-optimizer-connector/overview) on Adobe Commerce on Cloud or on-premises.
 
 The `subscribeProductAlertStock` mutation subscribes the logged-in customer to a stock availability alert for the specified product. When the product comes back in stock, the customer receives an email notification.
 
