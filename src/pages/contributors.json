@@ -1,7 +1,7 @@
 {
-  "total": 622,
+  "total": 624,
   "offset": 0,
-  "limit": 622,
+  "limit": 624,
   "data": [
     {
       "page": "/",
@@ -3307,56 +3307,56 @@
     {
       "page": "/graphql/schema/products/mutations/subscribe-product-alert-price",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/11652541?v=4"
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/24/2026"
+      "lastUpdated": "8/5/2026"
     },
     {
       "page": "/graphql/schema/products/mutations/subscribe-product-alert-stock",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/11652541?v=4"
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/24/2026"
+      "lastUpdated": "8/5/2026"
     },
     {
       "page": "/graphql/schema/products/mutations/unsubscribe-product-alert-price",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/11652541?v=4"
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/24/2026"
+      "lastUpdated": "8/5/2026"
     },
     {
       "page": "/graphql/schema/products/mutations/unsubscribe-product-alert-price-all",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/11652541?v=4"
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/24/2026"
+      "lastUpdated": "8/5/2026"
     },
     {
       "page": "/graphql/schema/products/mutations/unsubscribe-product-alert-stock",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/11652541?v=4"
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/3/2026"
+      "lastUpdated": "8/5/2026"
     },
     {
       "page": "/graphql/schema/products/mutations/unsubscribe-product-alert-stock-all",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/11652541?v=4"
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/24/2026"
+      "lastUpdated": "8/5/2026"
     },
     {
       "page": "/graphql/schema/products/queries/",
@@ -3411,20 +3411,20 @@
     {
       "page": "/graphql/schema/products/queries/is-subscribed-product-alert-price",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/11652541?v=4"
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/3/2026"
+      "lastUpdated": "8/5/2026"
     },
     {
       "page": "/graphql/schema/products/queries/is-subscribed-product-alert-stock",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/11652541?v=4"
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/3/2026"
+      "lastUpdated": "8/5/2026"
     },
     {
       "page": "/graphql/schema/products/queries/product-review-ratings-metadata",
@@ -4547,6 +4547,20 @@
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
       "lastUpdated": "6/2/2026"
+    },
+    {
+      "page": "/includes/scp-mutation",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/11652541?v=4"
+      ],
+      "lastUpdated": "8/5/2026"
+    },
+    {
+      "page": "/includes/scp-query",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/11652541?v=4"
+      ],
+      "lastUpdated": "8/5/2026"
     },
     {
       "page": "/reference/graphql/2-4-6/",
