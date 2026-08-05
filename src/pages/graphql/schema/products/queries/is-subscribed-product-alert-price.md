@@ -4,9 +4,9 @@ description: The isSubscribedProductAlertPrice query checks whether the logged-i
 
 ---
 
-<Fragment src="../../../../includes/saas-only.md"/>
-
 # isSubscribedProductAlertPrice query
+
+<Fragment src="/includes/scp-query.md" />
 
 The `isSubscribedProductAlertPrice` query checks whether the logged-in customer is subscribed to a price drop alert for the specified product. Use this query to determine whether to show a subscribe or unsubscribe option in the storefront UI.
 
