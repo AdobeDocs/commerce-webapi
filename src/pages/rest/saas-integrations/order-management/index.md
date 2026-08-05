@@ -18,9 +18,9 @@ These two capabilities work together: editing an order produces a chain of linke
 
 When you edit an order, Commerce cancels the original order and creates a new child order that is linked to its predecessor by the original order's increment ID. Across multiple edits, these orders form an order chain. The order chain endpoints let integrations act on an order using its ID and automatically resolve the operation across the full chain of edited orders, so you do not have to track the latest child order yourself.
 
-<InlineAlert variant="important" slots="text" />
+<InlineAlert variant="warning" slots="text" />
 
-This feature is experimental and must be enabled by Adobe. To request access, contact your Adobe Commerce Customer Success Manager or create a support ticket.
+This feature is experimental and is disabled by default. This feature is subject to change based on future development. To request access, contact your Adobe Commerce Customer Success Manager or create a support ticket.
 
 The `orderChain` endpoints extend the standard order management endpoints, so each request and response body matches its standard `/V1/order/{id}/...` counterpart.
 
@@ -217,9 +217,9 @@ GET /V1/invoices?searchCriteria[filterGroups][0][filters][0][field]=order_origin
 
 The following REST endpoints replicate the Commerce Admin **Edit Order** feature, allowing integrations to edit an existing order programmatically. Editing an order copies it into a new cart, then submits the modified cart as a new order that replaces the original.
 
-<InlineAlert variant="important" slots="text" />
+<InlineAlert variant="warning" slots="text" />
 
-This feature is disabled by default and must be enabled by Adobe. To request access, contact your Adobe Commerce Customer Success Manager or create a support ticket.
+This feature is experimental and is disabled by default. This feature is subject to change based on future development. To request access, contact your Adobe Commerce Customer Success Manager or create a support ticket.
 
 | Method | Endpoint | Description |
 | --- | --- | --- |
