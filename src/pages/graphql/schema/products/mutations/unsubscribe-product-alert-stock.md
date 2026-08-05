@@ -6,9 +6,7 @@ description: The unsubscribeProductAlertStock mutation removes the logged-in cus
 
 # unsubscribeProductAlertStock mutation
 
-<InlineAlert variant="info" slots="text1"/>
-
-This mutation is part of the Storefront Compatibility Package and is available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview) and [Adobe Commerce Optimizer](https://experienceleague.adobe.com/en/docs/commerce/aco-optimizer-connector/overview) on Adobe Commerce on Cloud or on-premises.
+<Fragment src="/includes/scp-mutation.md" />
 
 The `unsubscribeProductAlertStock` mutation removes the logged-in customer's subscription to a stock availability alert for the specified product. After unsubscribing, the customer no longer receives email notifications when the product comes back in stock.
 
