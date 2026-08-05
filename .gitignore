@@ -5,6 +5,7 @@
 .vscode
 .cursor
 .claude
+.scout
 
 # environment variables
 .env
