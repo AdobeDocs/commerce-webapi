@@ -4,13 +4,13 @@
 
 Accept invitation to the company.
 
-**Response:** [`CompanyInvitationOutput`](#companyinvitationoutput)
+**Response:** [`CompanyInvitationOutput`](/reference/graphql/saas/types-c-e.md#companyinvitationoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CompanyInvitationInput!`](#companyinvitationinput) |  |
+| `input` - [`CompanyInvitationInput!`](/reference/graphql/saas/types-c-e.md#companyinvitationinput) |  |
 
 #### Example
 
@@ -42,13 +42,13 @@ mutation acceptCompanyInvitation($input: CompanyInvitationInput!) {
 
 Update an existing negotiable quote template.
 
-**Response:** [`NegotiableQuoteTemplate`](#negotiablequotetemplate)
+**Response:** [`NegotiableQuoteTemplate`](/reference/graphql/saas/types-k-p.md#negotiablequotetemplate)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`AcceptNegotiableQuoteTemplateInput!`](#acceptnegotiablequotetemplateinput) | An input object that contains the data to update a negotiable quote template. |
+| `input` - [`AcceptNegotiableQuoteTemplateInput!`](/reference/graphql/saas/types-a-b.md#acceptnegotiablequotetemplateinput) | An input object that contains the data to update a negotiable quote template. |
 
 #### Example
 
@@ -115,30 +115,30 @@ mutation acceptNegotiableQuoteTemplate($input: AcceptNegotiableQuoteTemplateInpu
     "acceptNegotiableQuoteTemplate": {
       "buyer": NegotiableQuoteUser,
       "comments": [NegotiableQuoteComment],
-      "created_at": "abc123",
-      "expiration_date": "abc123",
+      "created_at": "xyz789",
+      "expiration_date": "xyz789",
       "history": [NegotiableQuoteHistoryEntry],
       "historyV2": [NegotiableQuoteTemplateHistoryEntry],
-      "is_min_max_qty_used": false,
-      "is_virtual": false,
+      "is_min_max_qty_used": true,
+      "is_virtual": true,
       "items": [CartItemInterface],
-      "max_order_commitment": 123,
-      "min_order_commitment": 123,
+      "max_order_commitment": 987,
+      "min_order_commitment": 987,
       "name": "abc123",
       "notifications": [QuoteTemplateNotificationMessage],
       "prices": CartPrices,
       "reference_document_links": [
         NegotiableQuoteReferenceDocumentLink
       ],
-      "sales_rep_name": "xyz789",
+      "sales_rep_name": "abc123",
       "shipping_addresses": [
         NegotiableQuoteShippingAddress
       ],
-      "status": "abc123",
+      "status": "xyz789",
       "template_id": 4,
       "total_quantity": 123.45,
-      "uid": 4,
-      "updated_at": "abc123"
+      "uid": "4",
+      "updated_at": "xyz789"
     }
   }
 }
@@ -150,13 +150,13 @@ mutation acceptNegotiableQuoteTemplate($input: AcceptNegotiableQuoteTemplateInpu
 
 Add one or more downloadable products to the specified cart. We recommend using `addProductsToCart` instead.
 
-**Response:** [`AddDownloadableProductsToCartOutput`](#adddownloadableproductstocartoutput)
+**Response:** [`AddDownloadableProductsToCartOutput`](/reference/graphql/saas/types-a-b.md#adddownloadableproductstocartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`AddDownloadableProductsToCartInput`](#adddownloadableproductstocartinput) | An input object that defines which downloadable products to add to the cart. |
+| `input` - [`AddDownloadableProductsToCartInput`](/reference/graphql/saas/types-a-b.md#adddownloadableproductstocartinput) | An input object that defines which downloadable products to add to the cart. |
 
 #### Example
 
@@ -194,14 +194,14 @@ mutation addDownloadableProductsToCart($input: AddDownloadableProductsToCartInpu
 
 Add registrants to the specified gift registry.
 
-**Response:** [`AddGiftRegistryRegistrantsOutput`](#addgiftregistryregistrantsoutput)
+**Response:** [`AddGiftRegistryRegistrantsOutput`](/reference/graphql/saas/types-a-b.md#addgiftregistryregistrantsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `giftRegistryUid` - [`ID!`](#id) | The unique ID of the gift registry. |
-| `registrants` - [`[AddGiftRegistryRegistrantInput!]!`](#addgiftregistryregistrantinput) | An array registrants to add. |
+| `giftRegistryUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the gift registry. |
+| `registrants` - [`[AddGiftRegistryRegistrantInput!]!`](/reference/graphql/saas/types-a-b.md#addgiftregistryregistrantinput) | An array registrants to add. |
 
 #### Example
 
@@ -250,14 +250,14 @@ mutation addGiftRegistryRegistrants(
 
 Add any type of product to the cart.
 
-**Response:** [`AddProductsToCartOutput`](#addproductstocartoutput)
+**Response:** [`AddProductsToCartOutput`](/reference/graphql/saas/types-a-b.md#addproductstocartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `cartId` - [`String!`](#string) | The cart ID of the shopper. |
-| `cartItems` - [`[CartItemInput!]!`](#cartiteminput) | An array that defines the products to add to the cart. |
+| `cartId` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The cart ID of the shopper. |
+| `cartItems` - [`[CartItemInput!]!`](/reference/graphql/saas/types-c-e.md#cartiteminput) | An array that defines the products to add to the cart. |
 
 #### Example
 
@@ -286,7 +286,7 @@ mutation addProductsToCart(
 
 ```json
 {
-  "cartId": "xyz789",
+  "cartId": "abc123",
   "cartItems": [CartItemInput]
 }
 ```
@@ -310,13 +310,13 @@ mutation addProductsToCart(
 
 Add products to the specified compare list.
 
-**Response:** [`CompareList`](#comparelist)
+**Response:** [`CompareList`](/reference/graphql/saas/types-c-e.md#comparelist)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`AddProductsToCompareListInput`](#addproductstocomparelistinput) | An input object that defines which products to add to an existing compare list. |
+| `input` - [`AddProductsToCompareListInput`](/reference/graphql/saas/types-a-b.md#addproductstocomparelistinput) | An input object that defines which products to add to an existing compare list. |
 
 #### Example
 
@@ -352,7 +352,7 @@ mutation addProductsToCompareList($input: AddProductsToCompareListInput) {
       "attributes": [ComparableAttribute],
       "item_count": 987,
       "items": [ComparableItem],
-      "uid": "4"
+      "uid": 4
     }
   }
 }
@@ -364,13 +364,13 @@ mutation addProductsToCompareList($input: AddProductsToCompareListInput) {
 
 Creates a new cart and add any type of product to it
 
-**Response:** [`AddProductsToNewCartOutput`](#addproductstonewcartoutput)
+**Response:** [`AddProductsToNewCartOutput`](/reference/graphql/saas/types-a-b.md#addproductstonewcartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `cartItems` - [`[CartItemInput!]!`](#cartiteminput) | An array that defines the products to add to the new cart |
+| `cartItems` - [`[CartItemInput!]!`](/reference/graphql/saas/types-c-e.md#cartiteminput) | An array that defines the products to add to the new cart |
 
 #### Example
 
@@ -414,14 +414,14 @@ mutation addProductsToNewCart($cartItems: [CartItemInput!]!) {
 
 Add items to the specified requisition list.
 
-**Response:** [`AddProductsToRequisitionListOutput`](#addproductstorequisitionlistoutput)
+**Response:** [`AddProductsToRequisitionListOutput`](/reference/graphql/saas/types-a-b.md#addproductstorequisitionlistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `requisitionListUid` - [`ID!`](#id) | The unique ID of the requisition list. |
-| `requisitionListItems` - [`[RequisitionListItemsInput!]!`](#requisitionlistitemsinput) | An array of products to be added to the requisition list. |
+| `requisitionListUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the requisition list. |
+| `requisitionListItems` - [`[RequisitionListItemsInput!]!`](/reference/graphql/saas/types-q-s.md#requisitionlistitemsinput) | An array of products to be added to the requisition list. |
 
 #### Example
 
@@ -447,7 +447,7 @@ mutation addProductsToRequisitionList(
 
 ```json
 {
-  "requisitionListUid": 4,
+  "requisitionListUid": "4",
   "requisitionListItems": [RequisitionListItemsInput]
 }
 ```
@@ -470,14 +470,14 @@ mutation addProductsToRequisitionList(
 
 Add one or more products to the specified wish list. This mutation supports all product types.
 
-**Response:** [`AddProductsToWishlistOutput`](#addproductstowishlistoutput)
+**Response:** [`AddProductsToWishlistOutput`](/reference/graphql/saas/types-a-b.md#addproductstowishlistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `wishlistId` - [`ID!`](#id) | The ID of a wish list. |
-| `wishlistItems` - [`[WishlistItemInput!]!`](#wishlistiteminput) | An array of products to add to the wish list. |
+| `wishlistId` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The ID of a wish list. |
+| `wishlistItems` - [`[WishlistItemInput!]!`](/reference/graphql/saas/types-t-z.md#wishlistiteminput) | An array of products to add to the wish list. |
 
 #### Example
 
@@ -505,7 +505,10 @@ mutation addProductsToWishlist(
 ##### Variables
 
 ```json
-{"wishlistId": 4, "wishlistItems": [WishlistItemInput]}
+{
+  "wishlistId": "4",
+  "wishlistItems": [WishlistItemInput]
+}
 ```
 
 ##### Response
@@ -527,13 +530,13 @@ mutation addProductsToWishlist(
 
 Add a comment to an existing purchase order.
 
-**Response:** [`AddPurchaseOrderCommentOutput`](#addpurchaseordercommentoutput)
+**Response:** [`AddPurchaseOrderCommentOutput`](/reference/graphql/saas/types-a-b.md#addpurchaseordercommentoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`AddPurchaseOrderCommentInput!`](#addpurchaseordercommentinput) |  |
+| `input` - [`AddPurchaseOrderCommentInput!`](/reference/graphql/saas/types-a-b.md#addpurchaseordercommentinput) |  |
 
 #### Example
 
@@ -573,13 +576,13 @@ mutation addPurchaseOrderComment($input: AddPurchaseOrderCommentInput!) {
 
 Add purchase order items to the shopping cart.
 
-**Response:** [`AddProductsToCartOutput`](#addproductstocartoutput)
+**Response:** [`AddProductsToCartOutput`](/reference/graphql/saas/types-a-b.md#addproductstocartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`AddPurchaseOrderItemsToCartInput!`](#addpurchaseorderitemstocartinput) |  |
+| `input` - [`AddPurchaseOrderItemsToCartInput!`](/reference/graphql/saas/types-a-b.md#addpurchaseorderitemstocartinput) |  |
 
 #### Example
 
@@ -623,14 +626,14 @@ mutation addPurchaseOrderItemsToCart($input: AddPurchaseOrderItemsToCartInput!) 
 
 Add items in the requisition list to the customer's cart.
 
-**Response:** [`AddRequisitionListItemsToCartOutput`](#addrequisitionlistitemstocartoutput)
+**Response:** [`AddRequisitionListItemsToCartOutput`](/reference/graphql/saas/types-a-b.md#addrequisitionlistitemstocartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `requisitionListUid` - [`ID!`](#id) | The unique ID of the requisition list. |
-| `requisitionListItemUids` - [`[ID!]`](#id) | An array of UIDs presenting products to be added to the cart. If no UIDs are specified, all items in the requisition list will be added to the cart. |
+| `requisitionListUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the requisition list. |
+| `requisitionListItemUids` - [`[ID!]`](/reference/graphql/saas/types-f-i.md#id) | An array of UIDs presenting products to be added to the cart. If no UIDs are specified, all items in the requisition list will be added to the cart. |
 
 #### Example
 
@@ -660,8 +663,8 @@ mutation addRequisitionListItemsToCart(
 
 ```json
 {
-  "requisitionListUid": 4,
-  "requisitionListItemUids": ["4"]
+  "requisitionListUid": "4",
+  "requisitionListItemUids": [4]
 }
 ```
 
@@ -687,13 +690,13 @@ mutation addRequisitionListItemsToCart(
 
 Add a comment to an existing return.
 
-**Response:** [`AddReturnCommentOutput`](#addreturncommentoutput)
+**Response:** [`AddReturnCommentOutput`](/reference/graphql/saas/types-a-b.md#addreturncommentoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`AddReturnCommentInput!`](#addreturncommentinput) | An input object that defines a return comment. |
+| `input` - [`AddReturnCommentInput!`](/reference/graphql/saas/types-a-b.md#addreturncommentinput) | An input object that defines a return comment. |
 
 #### Example
 
@@ -727,13 +730,13 @@ mutation addReturnComment($input: AddReturnCommentInput!) {
 
 Add tracking information to the return.
 
-**Response:** [`AddReturnTrackingOutput`](#addreturntrackingoutput)
+**Response:** [`AddReturnTrackingOutput`](/reference/graphql/saas/types-a-b.md#addreturntrackingoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`AddReturnTrackingInput!`](#addreturntrackinginput) | An input object that defines tracking information. |
+| `input` - [`AddReturnTrackingInput!`](/reference/graphql/saas/types-a-b.md#addreturntrackinginput) | An input object that defines tracking information. |
 
 #### Example
 
@@ -777,14 +780,14 @@ mutation addReturnTracking($input: AddReturnTrackingInput!) {
 
 Add items in the specified wishlist to the customer's cart.
 
-**Response:** [`AddWishlistItemsToCartOutput`](#addwishlistitemstocartoutput)
+**Response:** [`AddWishlistItemsToCartOutput`](/reference/graphql/saas/types-a-b.md#addwishlistitemstocartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `wishlistId` - [`ID!`](#id) | The unique ID of the wish list |
-| `wishlistItemIds` - [`[ID!]`](#id) | An array of IDs representing products to be added to the cart. If no IDs are specified, all items in the wishlist will be added to the cart |
+| `wishlistId` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the wish list |
+| `wishlistItemIds` - [`[ID!]`](/reference/graphql/saas/types-f-i.md#id) | An array of IDs representing products to be added to the cart. If no IDs are specified, all items in the wishlist will be added to the cart |
 
 #### Example
 
@@ -813,10 +816,7 @@ mutation addWishlistItemsToCart(
 ##### Variables
 
 ```json
-{
-  "wishlistId": "4",
-  "wishlistItemIds": ["4"]
-}
+{"wishlistId": 4, "wishlistItemIds": [4]}
 ```
 
 ##### Response
@@ -841,13 +841,13 @@ mutation addWishlistItemsToCart(
 
 Apply a pre-defined coupon code to the specified cart.
 
-**Response:** [`ApplyCouponToCartOutput`](#applycoupontocartoutput)
+**Response:** [`ApplyCouponToCartOutput`](/reference/graphql/saas/types-a-b.md#applycoupontocartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`ApplyCouponToCartInput`](#applycoupontocartinput) | An input object that defines the coupon code to apply to the cart. |
+| `input` - [`ApplyCouponToCartInput`](/reference/graphql/saas/types-a-b.md#applycoupontocartinput) | An input object that defines the coupon code to apply to the cart. |
 
 #### Example
 
@@ -881,13 +881,13 @@ mutation applyCouponToCart($input: ApplyCouponToCartInput) {
 
 Apply a pre-defined coupon code to the specified cart.
 
-**Response:** [`ApplyCouponToCartOutput`](#applycoupontocartoutput)
+**Response:** [`ApplyCouponToCartOutput`](/reference/graphql/saas/types-a-b.md#applycoupontocartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`ApplyCouponsToCartInput`](#applycouponstocartinput) | An input object that defines the coupon code to apply to the cart. |
+| `input` - [`ApplyCouponsToCartInput`](/reference/graphql/saas/types-a-b.md#applycouponstocartinput) | An input object that defines the coupon code to apply to the cart. |
 
 #### Example
 
@@ -921,13 +921,13 @@ mutation applyCouponsToCart($input: ApplyCouponsToCartInput) {
 
 Apply a pre-defined gift card code to the specified cart.
 
-**Response:** [`ApplyGiftCardToCartOutput`](#applygiftcardtocartoutput)
+**Response:** [`ApplyGiftCardToCartOutput`](/reference/graphql/saas/types-a-b.md#applygiftcardtocartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`ApplyGiftCardToCartInput`](#applygiftcardtocartinput) | An input object that specifies the gift card code and cart. |
+| `input` - [`ApplyGiftCardToCartInput`](/reference/graphql/saas/types-a-b.md#applygiftcardtocartinput) | An input object that specifies the gift card code and cart. |
 
 #### Example
 
@@ -961,13 +961,13 @@ mutation applyGiftCardToCart($input: ApplyGiftCardToCartInput) {
 
 Apply all available points, up to the cart total. Partial redemption is not available.
 
-**Response:** [`ApplyRewardPointsToCartOutput`](#applyrewardpointstocartoutput)
+**Response:** [`ApplyRewardPointsToCartOutput`](/reference/graphql/saas/types-a-b.md#applyrewardpointstocartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `cartId` - [`ID!`](#id) |  |
+| `cartId` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) |  |
 
 #### Example
 
@@ -986,7 +986,7 @@ mutation applyRewardPointsToCart($cartId: ID!) {
 ##### Variables
 
 ```json
-{"cartId": 4}
+{"cartId": "4"}
 ```
 
 ##### Response
@@ -1001,13 +1001,13 @@ mutation applyRewardPointsToCart($cartId: ID!) {
 
 Apply store credit to the specified cart.
 
-**Response:** [`ApplyStoreCreditToCartOutput`](#applystorecredittocartoutput)
+**Response:** [`ApplyStoreCreditToCartOutput`](/reference/graphql/saas/types-a-b.md#applystorecredittocartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`ApplyStoreCreditToCartInput!`](#applystorecredittocartinput) | An input object that specifies the cart ID. |
+| `input` - [`ApplyStoreCreditToCartInput!`](/reference/graphql/saas/types-a-b.md#applystorecredittocartinput) | An input object that specifies the cart ID. |
 
 #### Example
 
@@ -1041,13 +1041,13 @@ mutation applyStoreCreditToCart($input: ApplyStoreCreditToCartInput!) {
 
 Approve purchase orders.
 
-**Response:** [`PurchaseOrdersActionOutput`](#purchaseordersactionoutput)
+**Response:** [`PurchaseOrdersActionOutput`](/reference/graphql/saas/types-k-p.md#purchaseordersactionoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`PurchaseOrdersActionInput!`](#purchaseordersactioninput) |  |
+| `input` - [`PurchaseOrdersActionInput!`](/reference/graphql/saas/types-k-p.md#purchaseordersactioninput) |  |
 
 #### Example
 
@@ -1091,13 +1091,13 @@ mutation approvePurchaseOrders($input: PurchaseOrdersActionInput!) {
 
 Assign a child company to a parent company within the company relation hierarchy.
 
-**Response:** [`AssignChildCompanyOutput`](#assignchildcompanyoutput)
+**Response:** [`AssignChildCompanyOutput`](/reference/graphql/saas/types-a-b.md#assignchildcompanyoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`AssignChildCompanyInput!`](#assignchildcompanyinput) | An input object that defines which companies to relate. |
+| `input` - [`AssignChildCompanyInput!`](/reference/graphql/saas/types-a-b.md#assignchildcompanyinput) | An input object that defines which companies to relate. |
 
 #### Example
 
@@ -1137,13 +1137,13 @@ mutation assignChildCompany($input: AssignChildCompanyInput!) {
 
 Assign the specified compare list to the logged in customer.
 
-**Response:** [`AssignCompareListToCustomerOutput`](#assigncomparelisttocustomeroutput)
+**Response:** [`AssignCompareListToCustomerOutput`](/reference/graphql/saas/types-a-b.md#assigncomparelisttocustomeroutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `uid` - [`ID!`](#id) | The unique ID of the compare list to be assigned. |
+| `uid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the compare list to be assigned. |
 
 #### Example
 
@@ -1173,7 +1173,7 @@ mutation assignCompareListToCustomer($uid: ID!) {
   "data": {
     "assignCompareListToCustomer": {
       "compare_list": CompareList,
-      "result": true
+      "result": false
     }
   }
 }
@@ -1185,13 +1185,13 @@ mutation assignCompareListToCustomer($uid: ID!) {
 
 Assign a logged-in customer to the specified guest shopping cart.
 
-**Response:** [`Cart!`](#cart)
+**Response:** [`Cart!`](/reference/graphql/saas/types-c-e.md#cart)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `cart_id` - [`String!`](#string) |  |
+| `cart_id` - [`String!`](/reference/graphql/saas/types-q-s.md#string) |  |
 
 #### Example
 
@@ -1277,19 +1277,19 @@ mutation assignCustomerToGuestCart($cart_id: String!) {
       ],
       "billing_address": BillingCartAddress,
       "custom_attributes": [CustomAttribute],
-      "email": "xyz789",
+      "email": "abc123",
       "gift_message": GiftMessage,
       "gift_receipt_included": true,
       "gift_wrapping": GiftWrapping,
       "id": "4",
-      "is_virtual": true,
+      "is_virtual": false,
       "itemsV2": CartItems,
       "prices": CartPrices,
       "printed_card_included": false,
       "rules": [CartRuleStorefront],
       "selected_payment_method": SelectedPaymentMethod,
       "shipping_addresses": [ShippingCartAddress],
-      "total_quantity": 123.45
+      "total_quantity": 987.65
     }
   }
 }
@@ -1301,13 +1301,13 @@ mutation assignCustomerToGuestCart($cart_id: String!) {
 
 Cancel a negotiable quote template
 
-**Response:** [`NegotiableQuoteTemplate`](#negotiablequotetemplate)
+**Response:** [`NegotiableQuoteTemplate`](/reference/graphql/saas/types-k-p.md#negotiablequotetemplate)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CancelNegotiableQuoteTemplateInput!`](#cancelnegotiablequotetemplateinput) | An input object that cancels a negotiable quote template. |
+| `input` - [`CancelNegotiableQuoteTemplateInput!`](/reference/graphql/saas/types-c-e.md#cancelnegotiablequotetemplateinput) | An input object that cancels a negotiable quote template. |
 
 #### Example
 
@@ -1375,14 +1375,14 @@ mutation cancelNegotiableQuoteTemplate($input: CancelNegotiableQuoteTemplateInpu
       "buyer": NegotiableQuoteUser,
       "comments": [NegotiableQuoteComment],
       "created_at": "xyz789",
-      "expiration_date": "xyz789",
+      "expiration_date": "abc123",
       "history": [NegotiableQuoteHistoryEntry],
       "historyV2": [NegotiableQuoteTemplateHistoryEntry],
       "is_min_max_qty_used": false,
-      "is_virtual": false,
+      "is_virtual": true,
       "items": [CartItemInterface],
       "max_order_commitment": 987,
-      "min_order_commitment": 123,
+      "min_order_commitment": 987,
       "name": "abc123",
       "notifications": [QuoteTemplateNotificationMessage],
       "prices": CartPrices,
@@ -1393,10 +1393,10 @@ mutation cancelNegotiableQuoteTemplate($input: CancelNegotiableQuoteTemplateInpu
       "shipping_addresses": [
         NegotiableQuoteShippingAddress
       ],
-      "status": "abc123",
+      "status": "xyz789",
       "template_id": 4,
-      "total_quantity": 123.45,
-      "uid": 4,
+      "total_quantity": 987.65,
+      "uid": "4",
       "updated_at": "abc123"
     }
   }
@@ -1409,13 +1409,13 @@ mutation cancelNegotiableQuoteTemplate($input: CancelNegotiableQuoteTemplateInpu
 
 Cancel the specified customer order.
 
-**Response:** [`CancelOrderOutput`](#cancelorderoutput)
+**Response:** [`CancelOrderOutput`](/reference/graphql/saas/types-c-e.md#cancelorderoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CancelOrderInput!`](#cancelorderinput) |  |
+| `input` - [`CancelOrderInput!`](/reference/graphql/saas/types-c-e.md#cancelorderinput) |  |
 
 #### Example
 
@@ -1447,7 +1447,7 @@ mutation cancelOrder($input: CancelOrderInput!) {
 {
   "data": {
     "cancelOrder": {
-      "error": "abc123",
+      "error": "xyz789",
       "errorV2": CancelOrderError,
       "order": CustomerOrder
     }
@@ -1461,13 +1461,13 @@ mutation cancelOrder($input: CancelOrderInput!) {
 
 Cancel purchase orders.
 
-**Response:** [`PurchaseOrdersActionOutput`](#purchaseordersactionoutput)
+**Response:** [`PurchaseOrdersActionOutput`](/reference/graphql/saas/types-k-p.md#purchaseordersactionoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`PurchaseOrdersActionInput!`](#purchaseordersactioninput) |  |
+| `input` - [`PurchaseOrdersActionInput!`](/reference/graphql/saas/types-k-p.md#purchaseordersactioninput) |  |
 
 #### Example
 
@@ -1511,14 +1511,14 @@ mutation cancelPurchaseOrders($input: PurchaseOrdersActionInput!) {
 
 Change the password for the logged-in customer.
 
-**Response:** [`Customer`](#customer)
+**Response:** [`Customer`](/reference/graphql/saas/types-c-e.md#customer)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `currentPassword` - [`String!`](#string) | The customer's original password. |
-| `newPassword` - [`String!`](#string) | The customer's updated password. |
+| `currentPassword` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The customer's original password. |
+| `newPassword` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The customer's updated password. |
 
 #### Example
 
@@ -1641,8 +1641,8 @@ mutation changeCustomerPassword(
 
 ```json
 {
-  "currentPassword": "abc123",
-  "newPassword": "xyz789"
+  "currentPassword": "xyz789",
+  "newPassword": "abc123"
 }
 ```
 
@@ -1655,27 +1655,27 @@ mutation changeCustomerPassword(
       "addresses": [CustomerAddress],
       "addressesV2": CustomerAddresses,
       "admin_assistance_actions": AdminAssistanceActions,
-      "allow_remote_shopping_assistance": true,
+      "allow_remote_shopping_assistance": false,
       "companies": UserCompaniesOutput,
       "company_hierarchy": [CompanyHierarchy],
       "compare_list": CompareList,
       "confirmation_status": "ACCOUNT_CONFIRMED",
-      "created_at": "xyz789",
+      "created_at": "abc123",
       "custom_attributes": [AttributeValueInterface],
       "date_of_birth": "xyz789",
       "default_billing": "xyz789",
-      "default_shipping": "abc123",
+      "default_shipping": "xyz789",
       "email": "xyz789",
       "firstname": "xyz789",
-      "gender": 987,
+      "gender": 123,
       "gift_registries": [GiftRegistry],
       "gift_registry": GiftRegistry,
       "group": CustomerGroupStorefront,
-      "id": 4,
+      "id": "4",
       "is_subscribed": false,
-      "job_title": "abc123",
-      "lastname": "abc123",
-      "middlename": "abc123",
+      "job_title": "xyz789",
+      "lastname": "xyz789",
+      "middlename": "xyz789",
       "orders": CustomerOrders,
       "prefix": "abc123",
       "purchase_order": PurchaseOrder,
@@ -1693,9 +1693,9 @@ mutation changeCustomerPassword(
       "segments": [CustomerSegmentStorefront],
       "status": "ACTIVE",
       "store_credit": CustomerStoreCredit,
-      "structure_id": "4",
-      "suffix": "abc123",
-      "taxvat": "abc123",
+      "structure_id": 4,
+      "suffix": "xyz789",
+      "taxvat": "xyz789",
       "team": CompanyTeam,
       "telephone": "abc123",
       "wishlist_v2": Wishlist,
@@ -1711,13 +1711,13 @@ mutation changeCustomerPassword(
 
 Remove all items from the specified cart.
 
-**Response:** [`ClearCustomerCartOutput`](#clearcustomercartoutput)
+**Response:** [`ClearCustomerCartOutput`](/reference/graphql/saas/types-c-e.md#clearcustomercartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `cartUid` - [`String!`](#string) | The masked ID of the cart. |
+| `cartUid` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The masked ID of the cart. |
 
 #### Example
 
@@ -1745,7 +1745,7 @@ mutation clearCustomerCart($cartUid: String!) {
 ```json
 {
   "data": {
-    "clearCustomerCart": {"cart": Cart, "status": true}
+    "clearCustomerCart": {"cart": Cart, "status": false}
   }
 }
 ```
@@ -1756,13 +1756,13 @@ mutation clearCustomerCart($cartUid: String!) {
 
 Remove all the products from the specified wish list.
 
-**Response:** [`RemoveProductsFromWishlistOutput`](#removeproductsfromwishlistoutput)
+**Response:** [`RemoveProductsFromWishlistOutput`](/reference/graphql/saas/types-q-s.md#removeproductsfromwishlistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `wishlistId` - [`ID!`](#id) | The ID of a wish list. |
+| `wishlistId` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The ID of a wish list. |
 
 #### Example
 
@@ -1806,13 +1806,13 @@ mutation clearWishlist($wishlistId: ID!) {
 
 Mark a negotiable quote as closed. The negotiable quote is still visible on the storefront.
 
-**Response:** [`CloseNegotiableQuotesOutput`](#closenegotiablequotesoutput)
+**Response:** [`CloseNegotiableQuotesOutput`](/reference/graphql/saas/types-c-e.md#closenegotiablequotesoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CloseNegotiableQuotesInput!`](#closenegotiablequotesinput) | An input object that closes a negotiable quote. |
+| `input` - [`CloseNegotiableQuotesInput!`](/reference/graphql/saas/types-c-e.md#closenegotiablequotesinput) | An input object that closes a negotiable quote. |
 
 #### Example
 
@@ -1865,13 +1865,13 @@ mutation closeNegotiableQuotes($input: CloseNegotiableQuotesInput!) {
 
 Synchronizes order details and place the order
 
-**Response:** [`PlaceOrderOutput`](#placeorderoutput)
+**Response:** [`PlaceOrderOutput`](/reference/graphql/saas/types-k-p.md#placeorderoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CompleteOrderInput`](#completeorderinput) | Describes the variables needed to complete or place the order |
+| `input` - [`CompleteOrderInput`](/reference/graphql/saas/types-c-e.md#completeorderinput) | Describes the variables needed to complete or place the order |
 
 #### Example
 
@@ -1915,13 +1915,13 @@ mutation completeOrder($input: CompleteOrderInput) {
 
 Cancel the specified guest customer order.
 
-**Response:** [`CancelOrderOutput`](#cancelorderoutput)
+**Response:** [`CancelOrderOutput`](/reference/graphql/saas/types-c-e.md#cancelorderoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`ConfirmCancelOrderInput!`](#confirmcancelorderinput) |  |
+| `input` - [`ConfirmCancelOrderInput!`](/reference/graphql/saas/types-c-e.md#confirmcancelorderinput) |  |
 
 #### Example
 
@@ -1967,13 +1967,13 @@ mutation confirmCancelOrder($input: ConfirmCancelOrderInput!) {
 
 Confirms the email address for a customer.
 
-**Response:** [`CustomerOutput`](#customeroutput)
+**Response:** [`CustomerOutput`](/reference/graphql/saas/types-c-e.md#customeroutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`ConfirmEmailInput!`](#confirmemailinput) | An input object to identify the customer to confirm the email. |
+| `input` - [`ConfirmEmailInput!`](/reference/graphql/saas/types-c-e.md#confirmemailinput) | An input object to identify the customer to confirm the email. |
 
 #### Example
 
@@ -2007,13 +2007,13 @@ mutation confirmEmail($input: ConfirmEmailInput!) {
 
 Confirm the return.
 
-**Response:** [`RequestReturnOutput`](#requestreturnoutput)
+**Response:** [`RequestReturnOutput`](/reference/graphql/saas/types-q-s.md#requestreturnoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`ConfirmReturnInput!`](#confirmreturninput) |  |
+| `input` - [`ConfirmReturnInput!`](/reference/graphql/saas/types-c-e.md#confirmreturninput) |  |
 
 #### Example
 
@@ -2057,13 +2057,13 @@ mutation confirmReturn($input: ConfirmReturnInput!) {
 
 Send a 'Contact Us' email to the merchant.
 
-**Response:** [`ContactUsOutput`](#contactusoutput)
+**Response:** [`ContactUsOutput`](/reference/graphql/saas/types-c-e.md#contactusoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`ContactUsInput!`](#contactusinput) | An input object that defines shopper information. |
+| `input` - [`ContactUsInput!`](/reference/graphql/saas/types-c-e.md#contactusinput) | An input object that defines shopper information. |
 
 #### Example
 
@@ -2095,15 +2095,15 @@ mutation contactUs($input: ContactUsInput!) {
 
 Copy items from one requisition list to another.
 
-**Response:** [`CopyItemsFromRequisitionListsOutput`](#copyitemsfromrequisitionlistsoutput)
+**Response:** [`CopyItemsFromRequisitionListsOutput`](/reference/graphql/saas/types-c-e.md#copyitemsfromrequisitionlistsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `sourceRequisitionListUid` - [`ID!`](#id) | The unique ID of the source requisition list. |
-| `destinationRequisitionListUid` - [`ID`](#id) | The unique ID of the destination requisition list. If null, a new requisition list will be created. |
-| `requisitionListItem` - [`CopyItemsBetweenRequisitionListsInput`](#copyitemsbetweenrequisitionlistsinput) | The list of products to copy. |
+| `sourceRequisitionListUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the source requisition list. |
+| `destinationRequisitionListUid` - [`ID`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the destination requisition list. If null, a new requisition list will be created. |
+| `requisitionListItem` - [`CopyItemsBetweenRequisitionListsInput`](/reference/graphql/saas/types-c-e.md#copyitemsbetweenrequisitionlistsinput) | The list of products to copy. |
 
 #### Example
 
@@ -2131,8 +2131,8 @@ mutation copyItemsBetweenRequisitionLists(
 
 ```json
 {
-  "sourceRequisitionListUid": "4",
-  "destinationRequisitionListUid": "4",
+  "sourceRequisitionListUid": 4,
+  "destinationRequisitionListUid": 4,
   "requisitionListItem": CopyItemsBetweenRequisitionListsInput
 }
 ```
@@ -2155,15 +2155,15 @@ mutation copyItemsBetweenRequisitionLists(
 
 Copy products from one wish list to another. The original wish list is unchanged.
 
-**Response:** [`CopyProductsBetweenWishlistsOutput`](#copyproductsbetweenwishlistsoutput)
+**Response:** [`CopyProductsBetweenWishlistsOutput`](/reference/graphql/saas/types-c-e.md#copyproductsbetweenwishlistsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `sourceWishlistUid` - [`ID!`](#id) | The ID of the original wish list. |
-| `destinationWishlistUid` - [`ID!`](#id) | The ID of the target wish list. |
-| `wishlistItems` - [`[WishlistItemCopyInput!]!`](#wishlistitemcopyinput) | An array of items to copy. |
+| `sourceWishlistUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The ID of the original wish list. |
+| `destinationWishlistUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The ID of the target wish list. |
+| `wishlistItems` - [`[WishlistItemCopyInput!]!`](/reference/graphql/saas/types-t-z.md#wishlistitemcopyinput) | An array of items to copy. |
 
 #### Example
 
@@ -2198,7 +2198,7 @@ mutation copyProductsBetweenWishlists(
 ```json
 {
   "sourceWishlistUid": 4,
-  "destinationWishlistUid": "4",
+  "destinationWishlistUid": 4,
   "wishlistItems": [WishlistItemCopyInput]
 }
 ```
@@ -2223,13 +2223,13 @@ mutation copyProductsBetweenWishlists(
 
 Create a company at the request of either a customer or a guest.
 
-**Response:** [`CreateCompanyOutput`](#createcompanyoutput)
+**Response:** [`CreateCompanyOutput`](/reference/graphql/saas/types-c-e.md#createcompanyoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CompanyCreateInput!`](#companycreateinput) |  |
+| `input` - [`CompanyCreateInput!`](/reference/graphql/saas/types-c-e.md#companycreateinput) |  |
 
 #### Example
 
@@ -2263,13 +2263,13 @@ mutation createCompany($input: CompanyCreateInput!) {
 
 Create a new company role.
 
-**Response:** [`CreateCompanyRoleOutput`](#createcompanyroleoutput)
+**Response:** [`CreateCompanyRoleOutput`](/reference/graphql/saas/types-c-e.md#createcompanyroleoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CompanyRoleCreateInput!`](#companyrolecreateinput) |  |
+| `input` - [`CompanyRoleCreateInput!`](/reference/graphql/saas/types-c-e.md#companyrolecreateinput) |  |
 
 #### Example
 
@@ -2303,13 +2303,13 @@ mutation createCompanyRole($input: CompanyRoleCreateInput!) {
 
 Create a new team for the customer's company within the current company context.
 
-**Response:** [`CreateCompanyTeamOutput`](#createcompanyteamoutput)
+**Response:** [`CreateCompanyTeamOutput`](/reference/graphql/saas/types-c-e.md#createcompanyteamoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CompanyTeamCreateInput!`](#companyteamcreateinput) |  |
+| `input` - [`CompanyTeamCreateInput!`](/reference/graphql/saas/types-c-e.md#companyteamcreateinput) |  |
 
 #### Example
 
@@ -2343,13 +2343,13 @@ mutation createCompanyTeam($input: CompanyTeamCreateInput!) {
 
 Create a new company user at the request of an existing customer.
 
-**Response:** [`CreateCompanyUserOutput`](#createcompanyuseroutput)
+**Response:** [`CreateCompanyUserOutput`](/reference/graphql/saas/types-c-e.md#createcompanyuseroutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CompanyUserCreateInput!`](#companyusercreateinput) |  |
+| `input` - [`CompanyUserCreateInput!`](/reference/graphql/saas/types-c-e.md#companyusercreateinput) |  |
 
 #### Example
 
@@ -2383,13 +2383,13 @@ mutation createCompanyUser($input: CompanyUserCreateInput!) {
 
 Create a new compare list. The compare list is saved for logged in customers.
 
-**Response:** [`CompareList`](#comparelist)
+**Response:** [`CompareList`](/reference/graphql/saas/types-c-e.md#comparelist)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CreateCompareListInput`](#createcomparelistinput) |  |
+| `input` - [`CreateCompareListInput`](/reference/graphql/saas/types-c-e.md#createcomparelistinput) |  |
 
 #### Example
 
@@ -2425,7 +2425,7 @@ mutation createCompareList($input: CreateCompareListInput) {
       "attributes": [ComparableAttribute],
       "item_count": 987,
       "items": [ComparableItem],
-      "uid": "4"
+      "uid": 4
     }
   }
 }
@@ -2437,13 +2437,13 @@ mutation createCompareList($input: CreateCompareListInput) {
 
 Create a billing or shipping address for a customer or guest.
 
-**Response:** [`CustomerAddress`](#customeraddress)
+**Response:** [`CustomerAddress`](/reference/graphql/saas/types-c-e.md#customeraddress)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CustomerAddressInput!`](#customeraddressinput) |  |
+| `input` - [`CustomerAddressInput!`](/reference/graphql/saas/types-c-e.md#customeraddressinput) |  |
 
 #### Example
 
@@ -2495,27 +2495,27 @@ mutation createCustomerAddress($input: CustomerAddressInput!) {
 {
   "data": {
     "createCustomerAddress": {
-      "city": "abc123",
+      "city": "xyz789",
       "company": "xyz789",
       "country_code": "AF",
       "custom_attributesV2": [AttributeValueInterface],
-      "default_billing": true,
-      "default_shipping": true,
+      "default_billing": false,
+      "default_shipping": false,
       "extension_attributes": [CustomerAddressAttribute],
-      "fax": "abc123",
-      "firstname": "xyz789",
+      "fax": "xyz789",
+      "firstname": "abc123",
       "id": 123,
       "lastname": "xyz789",
-      "middlename": "xyz789",
+      "middlename": "abc123",
       "postcode": "xyz789",
-      "prefix": "xyz789",
+      "prefix": "abc123",
       "region": CustomerAddressRegion,
       "region_id": 123,
       "street": ["abc123"],
-      "suffix": "xyz789",
-      "telephone": "abc123",
-      "uid": "4",
-      "vat_id": "abc123"
+      "suffix": "abc123",
+      "telephone": "xyz789",
+      "uid": 4,
+      "vat_id": "xyz789"
     }
   }
 }
@@ -2527,13 +2527,13 @@ mutation createCustomerAddress($input: CustomerAddressInput!) {
 
 Create a customer account.
 
-**Response:** [`CustomerOutput`](#customeroutput)
+**Response:** [`CustomerOutput`](/reference/graphql/saas/types-c-e.md#customeroutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CustomerCreateInput!`](#customercreateinput) | An input object that defines the customer to be created. |
+| `input` - [`CustomerCreateInput!`](/reference/graphql/saas/types-c-e.md#customercreateinput) | An input object that defines the customer to be created. |
 
 #### Example
 
@@ -2567,13 +2567,13 @@ mutation createCustomerV2($input: CustomerCreateInput!) {
 
 Create a gift registry on behalf of the customer.
 
-**Response:** [`CreateGiftRegistryOutput`](#creategiftregistryoutput)
+**Response:** [`CreateGiftRegistryOutput`](/reference/graphql/saas/types-c-e.md#creategiftregistryoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `giftRegistry` - [`CreateGiftRegistryInput!`](#creategiftregistryinput) | An input object that defines a new gift registry. |
+| `giftRegistry` - [`CreateGiftRegistryInput!`](/reference/graphql/saas/types-c-e.md#creategiftregistryinput) | An input object that defines a new gift registry. |
 
 #### Example
 
@@ -2611,13 +2611,13 @@ mutation createGiftRegistry($giftRegistry: CreateGiftRegistryInput!) {
 
 Create a new shopping cart
 
-**Response:** [`CreateGuestCartOutput`](#createguestcartoutput)
+**Response:** [`CreateGuestCartOutput`](/reference/graphql/saas/types-c-e.md#createguestcartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CreateGuestCartInput`](#createguestcartinput) |  |
+| `input` - [`CreateGuestCartInput`](/reference/graphql/saas/types-c-e.md#createguestcartinput) |  |
 
 #### Example
 
@@ -2651,13 +2651,13 @@ mutation createGuestCart($input: CreateGuestCartInput) {
 
 Creates a payment order for further payment processing
 
-**Response:** [`CreatePaymentOrderOutput`](#createpaymentorderoutput)
+**Response:** [`CreatePaymentOrderOutput`](/reference/graphql/saas/types-c-e.md#createpaymentorderoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CreatePaymentOrderInput!`](#createpaymentorderinput) | Contains payment order details that are used while processing the payment order |
+| `input` - [`CreatePaymentOrderInput!`](/reference/graphql/saas/types-c-e.md#createpaymentorderinput) | Contains payment order details that are used while processing the payment order |
 
 #### Example
 
@@ -2687,9 +2687,9 @@ mutation createPaymentOrder($input: CreatePaymentOrderInput!) {
 {
   "data": {
     "createPaymentOrder": {
-      "amount": 123.45,
-      "currency_code": "abc123",
-      "id": "xyz789",
+      "amount": 987.65,
+      "currency_code": "xyz789",
+      "id": "abc123",
       "mp_order_id": "abc123",
       "status": "xyz789"
     }
@@ -2703,13 +2703,13 @@ mutation createPaymentOrder($input: CreatePaymentOrderInput!) {
 
 Create a purchase order approval rule.
 
-**Response:** [`PurchaseOrderApprovalRule`](#purchaseorderapprovalrule)
+**Response:** [`PurchaseOrderApprovalRule`](/reference/graphql/saas/types-k-p.md#purchaseorderapprovalrule)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`PurchaseOrderApprovalRuleInput!`](#purchaseorderapprovalruleinput) |  |
+| `input` - [`PurchaseOrderApprovalRuleInput!`](/reference/graphql/saas/types-k-p.md#purchaseorderapprovalruleinput) |  |
 
 #### Example
 
@@ -2754,8 +2754,8 @@ mutation createPurchaseOrderApprovalRule($input: PurchaseOrderApprovalRuleInput!
       "approver_roles": [CompanyRole],
       "condition": PurchaseOrderApprovalRuleConditionInterface,
       "created_at": "abc123",
-      "created_by": "xyz789",
-      "description": "abc123",
+      "created_by": "abc123",
+      "description": "xyz789",
       "name": "xyz789",
       "status": "ENABLED",
       "uid": 4,
@@ -2771,13 +2771,13 @@ mutation createPurchaseOrderApprovalRule($input: PurchaseOrderApprovalRuleInput!
 
 Create an empty requisition list.
 
-**Response:** [`CreateRequisitionListOutput`](#createrequisitionlistoutput)
+**Response:** [`CreateRequisitionListOutput`](/reference/graphql/saas/types-c-e.md#createrequisitionlistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CreateRequisitionListInput`](#createrequisitionlistinput) |  |
+| `input` - [`CreateRequisitionListInput`](/reference/graphql/saas/types-c-e.md#createrequisitionlistinput) |  |
 
 #### Example
 
@@ -2817,13 +2817,13 @@ mutation createRequisitionList($input: CreateRequisitionListInput) {
 
 Creates a vault payment token
 
-**Response:** [`CreateVaultCardPaymentTokenOutput`](#createvaultcardpaymenttokenoutput)
+**Response:** [`CreateVaultCardPaymentTokenOutput`](/reference/graphql/saas/types-c-e.md#createvaultcardpaymenttokenoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CreateVaultCardPaymentTokenInput!`](#createvaultcardpaymenttokeninput) | Describe the variables needed to create a vault card payment token |
+| `input` - [`CreateVaultCardPaymentTokenInput!`](/reference/graphql/saas/types-c-e.md#createvaultcardpaymenttokeninput) | Describe the variables needed to create a vault card payment token |
 
 #### Example
 
@@ -2865,13 +2865,13 @@ mutation createVaultCardPaymentToken($input: CreateVaultCardPaymentTokenInput!) 
 
 Creates a vault card setup token
 
-**Response:** [`CreateVaultCardSetupTokenOutput`](#createvaultcardsetuptokenoutput)
+**Response:** [`CreateVaultCardSetupTokenOutput`](/reference/graphql/saas/types-c-e.md#createvaultcardsetuptokenoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CreateVaultCardSetupTokenInput!`](#createvaultcardsetuptokeninput) | Describe the variables needed to create a vault card setup token |
+| `input` - [`CreateVaultCardSetupTokenInput!`](/reference/graphql/saas/types-c-e.md#createvaultcardsetuptokeninput) | Describe the variables needed to create a vault card setup token |
 
 #### Example
 
@@ -2897,7 +2897,7 @@ mutation createVaultCardSetupToken($input: CreateVaultCardSetupTokenInput!) {
 {
   "data": {
     "createVaultCardSetupToken": {
-      "setup_token": "abc123"
+      "setup_token": "xyz789"
     }
   }
 }
@@ -2909,13 +2909,13 @@ mutation createVaultCardSetupToken($input: CreateVaultCardSetupTokenInput!) {
 
 Create a new wish list.
 
-**Response:** [`CreateWishlistOutput`](#createwishlistoutput)
+**Response:** [`CreateWishlistOutput`](/reference/graphql/saas/types-c-e.md#createwishlistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CreateWishlistInput!`](#createwishlistinput) | An input object that defines a new wish list. |
+| `input` - [`CreateWishlistInput!`](/reference/graphql/saas/types-c-e.md#createwishlistinput) | An input object that defines a new wish list. |
 
 #### Example
 
@@ -2949,13 +2949,13 @@ mutation createWishlist($input: CreateWishlistInput!) {
 
 Delete the specified company role.
 
-**Response:** [`DeleteCompanyRoleOutput`](#deletecompanyroleoutput)
+**Response:** [`DeleteCompanyRoleOutput`](/reference/graphql/saas/types-c-e.md#deletecompanyroleoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `id` - [`ID!`](#id) |  |
+| `id` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) |  |
 
 #### Example
 
@@ -2978,7 +2978,7 @@ mutation deleteCompanyRole($id: ID!) {
 ##### Response
 
 ```json
-{"data": {"deleteCompanyRole": {"success": true}}}
+{"data": {"deleteCompanyRole": {"success": false}}}
 ```
 
 <HorizontalLine />
@@ -2987,13 +2987,13 @@ mutation deleteCompanyRole($id: ID!) {
 
 Delete the specified company team.
 
-**Response:** [`DeleteCompanyTeamOutput`](#deletecompanyteamoutput)
+**Response:** [`DeleteCompanyTeamOutput`](/reference/graphql/saas/types-c-e.md#deletecompanyteamoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `id` - [`ID!`](#id) |  |
+| `id` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) |  |
 
 #### Example
 
@@ -3016,7 +3016,7 @@ mutation deleteCompanyTeam($id: ID!) {
 ##### Response
 
 ```json
-{"data": {"deleteCompanyTeam": {"success": true}}}
+{"data": {"deleteCompanyTeam": {"success": false}}}
 ```
 
 <HorizontalLine />
@@ -3025,13 +3025,13 @@ mutation deleteCompanyTeam($id: ID!) {
 
 Delete the specified company user.
 
-**Response:** [`DeleteCompanyUserOutput`](#deletecompanyuseroutput)
+**Response:** [`DeleteCompanyUserOutput`](/reference/graphql/saas/types-c-e.md#deletecompanyuseroutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `id` - [`ID!`](#id) |  |
+| `id` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) |  |
 
 #### Example
 
@@ -3054,7 +3054,7 @@ mutation deleteCompanyUserV2($id: ID!) {
 ##### Response
 
 ```json
-{"data": {"deleteCompanyUserV2": {"success": false}}}
+{"data": {"deleteCompanyUserV2": {"success": true}}}
 ```
 
 <HorizontalLine />
@@ -3063,13 +3063,13 @@ mutation deleteCompanyUserV2($id: ID!) {
 
 Delete the specified compare list.
 
-**Response:** [`DeleteCompareListOutput`](#deletecomparelistoutput)
+**Response:** [`DeleteCompareListOutput`](/reference/graphql/saas/types-c-e.md#deletecomparelistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `uid` - [`ID!`](#id) | The unique ID of the compare list to be deleted. |
+| `uid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the compare list to be deleted. |
 
 #### Example
 
@@ -3101,7 +3101,7 @@ mutation deleteCompareList($uid: ID!) {
 
 Delete customer account
 
-**Response:** [`Boolean`](#boolean)
+**Response:** [`Boolean`](/reference/graphql/saas/types-a-b.md#boolean)
 
 #### Example
 
@@ -3129,13 +3129,13 @@ Use `deleteCustomerAddressV2` instead.
 
 Delete the billing or shipping address of a customer.
 
-**Response:** [`Boolean`](#boolean)
+**Response:** [`Boolean`](/reference/graphql/saas/types-a-b.md#boolean)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `id` - [`Int!`](#int) | The ID of the customer address to be deleted. |
+| `id` - [`Int!`](/reference/graphql/saas/types-f-i.md#int) | The ID of the customer address to be deleted. |
 
 #### Example
 
@@ -3165,13 +3165,13 @@ mutation deleteCustomerAddress($id: Int!) {
 
 Delete the billing or shipping address of a customer.
 
-**Response:** [`Boolean`](#boolean)
+**Response:** [`Boolean`](/reference/graphql/saas/types-a-b.md#boolean)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `uid` - [`ID!`](#id) | The unique ID of the customer address to be deleted. |
+| `uid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the customer address to be deleted. |
 
 #### Example
 
@@ -3186,7 +3186,7 @@ mutation deleteCustomerAddressV2($uid: ID!) {
 ##### Variables
 
 ```json
-{"uid": "4"}
+{"uid": 4}
 ```
 
 ##### Response
@@ -3201,13 +3201,13 @@ mutation deleteCustomerAddressV2($uid: ID!) {
 
 Delete a negotiable quote template
 
-**Response:** [`Boolean!`](#boolean)
+**Response:** [`Boolean!`](/reference/graphql/saas/types-a-b.md#boolean)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`DeleteNegotiableQuoteTemplateInput!`](#deletenegotiablequotetemplateinput) | An input object that cancels a negotiable quote template. |
+| `input` - [`DeleteNegotiableQuoteTemplateInput!`](/reference/graphql/saas/types-c-e.md#deletenegotiablequotetemplateinput) | An input object that cancels a negotiable quote template. |
 
 #### Example
 
@@ -3228,7 +3228,7 @@ mutation deleteNegotiableQuoteTemplate($input: DeleteNegotiableQuoteTemplateInpu
 ##### Response
 
 ```json
-{"data": {"deleteNegotiableQuoteTemplate": false}}
+{"data": {"deleteNegotiableQuoteTemplate": true}}
 ```
 
 <HorizontalLine />
@@ -3237,13 +3237,13 @@ mutation deleteNegotiableQuoteTemplate($input: DeleteNegotiableQuoteTemplateInpu
 
 Delete a negotiable quote. The negotiable quote will not be displayed on the storefront.
 
-**Response:** [`DeleteNegotiableQuotesOutput`](#deletenegotiablequotesoutput)
+**Response:** [`DeleteNegotiableQuotesOutput`](/reference/graphql/saas/types-c-e.md#deletenegotiablequotesoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`DeleteNegotiableQuotesInput!`](#deletenegotiablequotesinput) | An input object that deletes a negotiable quote. |
+| `input` - [`DeleteNegotiableQuotesInput!`](/reference/graphql/saas/types-c-e.md#deletenegotiablequotesinput) | An input object that deletes a negotiable quote. |
 
 #### Example
 
@@ -3296,13 +3296,13 @@ mutation deleteNegotiableQuotes($input: DeleteNegotiableQuotesInput!) {
 
 Delete a customer's payment token.
 
-**Response:** [`DeletePaymentTokenOutput`](#deletepaymenttokenoutput)
+**Response:** [`DeletePaymentTokenOutput`](/reference/graphql/saas/types-c-e.md#deletepaymenttokenoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `public_hash` - [`String!`](#string) | The reusable payment token securely stored in the vault. |
+| `public_hash` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The reusable payment token securely stored in the vault. |
 
 #### Example
 
@@ -3332,7 +3332,7 @@ mutation deletePaymentToken($public_hash: String!) {
   "data": {
     "deletePaymentToken": {
       "customerPaymentTokens": CustomerPaymentTokens,
-      "result": false
+      "result": true
     }
   }
 }
@@ -3344,13 +3344,13 @@ mutation deletePaymentToken($public_hash: String!) {
 
 Delete existing purchase order approval rules.
 
-**Response:** [`DeletePurchaseOrderApprovalRuleOutput`](#deletepurchaseorderapprovalruleoutput)
+**Response:** [`DeletePurchaseOrderApprovalRuleOutput`](/reference/graphql/saas/types-c-e.md#deletepurchaseorderapprovalruleoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`DeletePurchaseOrderApprovalRuleInput!`](#deletepurchaseorderapprovalruleinput) |  |
+| `input` - [`DeletePurchaseOrderApprovalRuleInput!`](/reference/graphql/saas/types-c-e.md#deletepurchaseorderapprovalruleinput) |  |
 
 #### Example
 
@@ -3390,13 +3390,13 @@ mutation deletePurchaseOrderApprovalRule($input: DeletePurchaseOrderApprovalRule
 
 Delete a requisition list.
 
-**Response:** [`DeleteRequisitionListOutput`](#deleterequisitionlistoutput)
+**Response:** [`DeleteRequisitionListOutput`](/reference/graphql/saas/types-c-e.md#deleterequisitionlistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `requisitionListUid` - [`ID!`](#id) | The unique ID of the requisition list. |
+| `requisitionListUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the requisition list. |
 
 #### Example
 
@@ -3416,7 +3416,7 @@ mutation deleteRequisitionList($requisitionListUid: ID!) {
 ##### Variables
 
 ```json
-{"requisitionListUid": 4}
+{"requisitionListUid": "4"}
 ```
 
 ##### Response
@@ -3426,7 +3426,7 @@ mutation deleteRequisitionList($requisitionListUid: ID!) {
   "data": {
     "deleteRequisitionList": {
       "requisition_lists": RequisitionLists,
-      "status": false
+      "status": true
     }
   }
 }
@@ -3438,14 +3438,14 @@ mutation deleteRequisitionList($requisitionListUid: ID!) {
 
 Delete items from a requisition list.
 
-**Response:** [`DeleteRequisitionListItemsOutput`](#deleterequisitionlistitemsoutput)
+**Response:** [`DeleteRequisitionListItemsOutput`](/reference/graphql/saas/types-c-e.md#deleterequisitionlistitemsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `requisitionListUid` - [`ID!`](#id) | The unique ID of the requisition list. |
-| `requisitionListItemUids` - [`[ID!]!`](#id) | An array of UIDs representing products to be removed from the requisition list. |
+| `requisitionListUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the requisition list. |
+| `requisitionListItemUids` - [`[ID!]!`](/reference/graphql/saas/types-f-i.md#id) | An array of UIDs representing products to be removed from the requisition list. |
 
 #### Example
 
@@ -3470,7 +3470,10 @@ mutation deleteRequisitionListItems(
 ##### Variables
 
 ```json
-{"requisitionListUid": 4, "requisitionListItemUids": [4]}
+{
+  "requisitionListUid": 4,
+  "requisitionListItemUids": ["4"]
+}
 ```
 
 ##### Response
@@ -3491,13 +3494,13 @@ mutation deleteRequisitionListItems(
 
 Delete the specified wish list. You cannot delete the customer's default (first) wish list.
 
-**Response:** [`DeleteWishlistOutput`](#deletewishlistoutput)
+**Response:** [`DeleteWishlistOutput`](/reference/graphql/saas/types-c-e.md#deletewishlistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `wishlistId` - [`ID!`](#id) | The ID of the wish list to delete. |
+| `wishlistId` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The ID of the wish list to delete. |
 
 #### Example
 
@@ -3526,7 +3529,7 @@ mutation deleteWishlist($wishlistId: ID!) {
 {
   "data": {
     "deleteWishlist": {
-      "status": false,
+      "status": true,
       "wishlists": [Wishlist]
     }
   }
@@ -3539,13 +3542,13 @@ mutation deleteWishlist($wishlistId: ID!) {
 
 Negotiable Quote resulting from duplication operation.
 
-**Response:** [`DuplicateNegotiableQuoteOutput`](#duplicatenegotiablequoteoutput)
+**Response:** [`DuplicateNegotiableQuoteOutput`](/reference/graphql/saas/types-c-e.md#duplicatenegotiablequoteoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`DuplicateNegotiableQuoteInput!`](#duplicatenegotiablequoteinput) | An input object that defines ID of the quote to be duplicated. |
+| `input` - [`DuplicateNegotiableQuoteInput!`](/reference/graphql/saas/types-c-e.md#duplicatenegotiablequoteinput) | An input object that defines ID of the quote to be duplicated. |
 
 #### Example
 
@@ -3583,13 +3586,13 @@ mutation duplicateNegotiableQuote($input: DuplicateNegotiableQuoteInput!) {
 
 Estimate shipping method(s) for cart based on address
 
-**Response:** [`[AvailableShippingMethod]`](#availableshippingmethod)
+**Response:** [`[AvailableShippingMethod]`](/reference/graphql/saas/types-a-b.md#availableshippingmethod)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`EstimateTotalsInput!`](#estimatetotalsinput) | An input object that specifies details for estimation of available shipping methods |
+| `input` - [`EstimateTotalsInput!`](/reference/graphql/saas/types-c-e.md#estimatetotalsinput) | An input object that specifies details for estimation of available shipping methods |
 
 #### Example
 
@@ -3640,7 +3643,7 @@ mutation estimateShippingMethods($input: EstimateTotalsInput!) {
         "carrier_title": "xyz789",
         "error_message": "abc123",
         "method_code": "abc123",
-        "method_title": "xyz789",
+        "method_title": "abc123",
         "price_excl_tax": Money,
         "price_incl_tax": Money
       }
@@ -3655,13 +3658,13 @@ mutation estimateShippingMethods($input: EstimateTotalsInput!) {
 
 Estimate totals for cart based on the address
 
-**Response:** [`EstimateTotalsOutput!`](#estimatetotalsoutput)
+**Response:** [`EstimateTotalsOutput!`](/reference/graphql/saas/types-c-e.md#estimatetotalsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`EstimateTotalsInput!`](#estimatetotalsinput) | An input object that specifies details for cart totals estimation |
+| `input` - [`EstimateTotalsInput!`](/reference/graphql/saas/types-c-e.md#estimatetotalsinput) | An input object that specifies details for cart totals estimation |
 
 #### Example
 
@@ -3695,13 +3698,13 @@ mutation estimateTotals($input: EstimateTotalsInput!) {
 
 Generate a token for specified customer.
 
-**Response:** [`ExchangeExternalCustomerTokenOutput`](#exchangeexternalcustomertokenoutput)
+**Response:** [`ExchangeExternalCustomerTokenOutput`](/reference/graphql/saas/types-c-e.md#exchangeexternalcustomertokenoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`ExchangeExternalCustomerTokenInput`](#exchangeexternalcustomertokeninput) | Contains details about external customer. |
+| `input` - [`ExchangeExternalCustomerTokenInput`](/reference/graphql/saas/types-c-e.md#exchangeexternalcustomertokeninput) | Contains details about external customer. |
 
 #### Example
 
@@ -3743,14 +3746,14 @@ mutation exchangeExternalCustomerToken($input: ExchangeExternalCustomerTokenInpu
 
 Exchange one time login code for customer token.
 
-**Response:** [`CustomerToken`](#customertoken)
+**Response:** [`CustomerToken`](/reference/graphql/saas/types-c-e.md#customertoken)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `email` - [`String!`](#string) | The customer's email address. |
-| `otp` - [`String!`](#string) | The customer's OTP. |
+| `email` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The customer's email address. |
+| `otp` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The customer's OTP. |
 
 #### Example
 
@@ -3775,7 +3778,7 @@ mutation exchangeOtpForCustomerToken(
 ```json
 {
   "email": "xyz789",
-  "otp": "xyz789"
+  "otp": "abc123"
 }
 ```
 
@@ -3785,7 +3788,7 @@ mutation exchangeOtpForCustomerToken(
 {
   "data": {
     "exchangeOtpForCustomerToken": {
-      "token": "abc123"
+      "token": "xyz789"
     }
   }
 }
@@ -3795,13 +3798,13 @@ mutation exchangeOtpForCustomerToken(
 
 ### finishUpload
 
-**Response:** [`finishUploadOutput`](#finishuploadoutput)
+**Response:** [`finishUploadOutput`](/reference/graphql/saas/types-f-i.md#finishuploadoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`finishUploadInput!`](#finishuploadinput) |  |
+| `input` - [`finishUploadInput!`](/reference/graphql/saas/types-f-i.md#finishuploadinput) |  |
 
 #### Example
 
@@ -3829,9 +3832,9 @@ mutation finishUpload($input: finishUploadInput!) {
 {
   "data": {
     "finishUpload": {
-      "key": "xyz789",
+      "key": "abc123",
       "message": "abc123",
-      "success": false
+      "success": true
     }
   }
 }
@@ -3843,14 +3846,14 @@ mutation finishUpload($input: finishUploadInput!) {
 
 Generate a token for specified customer.
 
-**Response:** [`CustomerToken`](#customertoken)
+**Response:** [`CustomerToken`](/reference/graphql/saas/types-c-e.md#customertoken)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `email` - [`String!`](#string) | The customer's email address. |
-| `password` - [`String!`](#string) | The customer's password. |
+| `email` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The customer's email address. |
+| `password` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The customer's password. |
 
 #### Example
 
@@ -3874,8 +3877,8 @@ mutation generateCustomerToken(
 
 ```json
 {
-  "email": "xyz789",
-  "password": "xyz789"
+  "email": "abc123",
+  "password": "abc123"
 }
 ```
 
@@ -3885,7 +3888,7 @@ mutation generateCustomerToken(
 {
   "data": {
     "generateCustomerToken": {
-      "token": "xyz789"
+      "token": "abc123"
     }
   }
 }
@@ -3897,13 +3900,13 @@ mutation generateCustomerToken(
 
 Request a customer token so that an administrator can perform remote shopping assistance.
 
-**Response:** [`GenerateCustomerTokenAsAdminOutput`](#generatecustomertokenasadminoutput)
+**Response:** [`GenerateCustomerTokenAsAdminOutput`](/reference/graphql/saas/types-f-i.md#generatecustomertokenasadminoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`GenerateCustomerTokenAsAdminInput!`](#generatecustomertokenasadmininput) | An input object that defines the customer email address. |
+| `input` - [`GenerateCustomerTokenAsAdminInput!`](/reference/graphql/saas/types-f-i.md#generatecustomertokenasadmininput) | An input object that defines the customer email address. |
 
 #### Example
 
@@ -3941,13 +3944,13 @@ mutation generateCustomerTokenAsAdmin($input: GenerateCustomerTokenAsAdminInput!
 
 Generate a negotiable quote from an accept quote template.
 
-**Response:** [`GenerateNegotiableQuoteFromTemplateOutput`](#generatenegotiablequotefromtemplateoutput)
+**Response:** [`GenerateNegotiableQuoteFromTemplateOutput`](/reference/graphql/saas/types-f-i.md#generatenegotiablequotefromtemplateoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`GenerateNegotiableQuoteFromTemplateInput!`](#generatenegotiablequotefromtemplateinput) | An input object that contains the data to generate a negotiable quote from quote template. |
+| `input` - [`GenerateNegotiableQuoteFromTemplateInput!`](/reference/graphql/saas/types-f-i.md#generatenegotiablequotefromtemplateinput) | An input object that contains the data to generate a negotiable quote from quote template. |
 
 #### Example
 
@@ -3985,13 +3988,13 @@ mutation generateNegotiableQuoteFromTemplate($input: GenerateNegotiableQuoteFrom
 
 Import a shared requisition list into the current customer account.
 
-**Response:** [`ImportSharedRequisitionListOutput`](#importsharedrequisitionlistoutput)
+**Response:** [`ImportSharedRequisitionListOutput`](/reference/graphql/saas/types-f-i.md#importsharedrequisitionlistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `token` - [`String!`](#string) | The token for the shared requisition list. |
+| `token` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The token for the shared requisition list. |
 
 #### Example
 
@@ -4033,13 +4036,13 @@ mutation importSharedRequisitionList($token: String!) {
 
 ### initiateUpload
 
-**Response:** [`initiateUploadOutput`](#initiateuploadoutput)
+**Response:** [`initiateUploadOutput`](/reference/graphql/saas/types-f-i.md#initiateuploadoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`initiateUploadInput!`](#initiateuploadinput) |  |
+| `input` - [`initiateUploadInput!`](/reference/graphql/saas/types-f-i.md#initiateuploadinput) |  |
 
 #### Example
 
@@ -4081,14 +4084,14 @@ mutation initiateUpload($input: initiateUploadInput!) {
 
 Transfer the contents of a guest cart into the cart of a logged-in customer.
 
-**Response:** [`Cart!`](#cart)
+**Response:** [`Cart!`](/reference/graphql/saas/types-c-e.md#cart)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `source_cart_id` - [`String!`](#string) | The guest's cart ID before they login. |
-| `destination_cart_id` - [`String`](#string) | The cart ID after the guest logs in. |
+| `source_cart_id` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The guest's cart ID before they login. |
+| `destination_cart_id` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The cart ID after the guest logs in. |
 
 #### Example
 
@@ -4191,11 +4194,11 @@ mutation mergeCarts(
       "is_virtual": true,
       "itemsV2": CartItems,
       "prices": CartPrices,
-      "printed_card_included": true,
+      "printed_card_included": false,
       "rules": [CartRuleStorefront],
       "selected_payment_method": SelectedPaymentMethod,
       "shipping_addresses": [ShippingCartAddress],
-      "total_quantity": 123.45
+      "total_quantity": 987.65
     }
   }
 }
@@ -4207,14 +4210,14 @@ mutation mergeCarts(
 
 Move all items from the cart to a gift registry.
 
-**Response:** [`MoveCartItemsToGiftRegistryOutput`](#movecartitemstogiftregistryoutput)
+**Response:** [`MoveCartItemsToGiftRegistryOutput`](/reference/graphql/saas/types-k-p.md#movecartitemstogiftregistryoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `cartUid` - [`ID!`](#id) | The unique ID of the cart containing items to be moved to a gift registry. |
-| `giftRegistryUid` - [`ID!`](#id) | The unique ID of the target gift registry. |
+| `cartUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the cart containing items to be moved to a gift registry. |
+| `giftRegistryUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the target gift registry. |
 
 #### Example
 
@@ -4269,15 +4272,15 @@ mutation moveCartItemsToGiftRegistry(
 
 Move Items from one requisition list to another.
 
-**Response:** [`MoveItemsBetweenRequisitionListsOutput`](#moveitemsbetweenrequisitionlistsoutput)
+**Response:** [`MoveItemsBetweenRequisitionListsOutput`](/reference/graphql/saas/types-k-p.md#moveitemsbetweenrequisitionlistsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `sourceRequisitionListUid` - [`ID!`](#id) | The unique ID of the source requisition list. |
-| `destinationRequisitionListUid` - [`ID`](#id) | The unique ID of the destination requisition list. If null, a new requisition list will be created. |
-| `requisitionListItem` - [`MoveItemsBetweenRequisitionListsInput`](#moveitemsbetweenrequisitionlistsinput) | The list of products to move. |
+| `sourceRequisitionListUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the source requisition list. |
+| `destinationRequisitionListUid` - [`ID`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the destination requisition list. If null, a new requisition list will be created. |
+| `requisitionListItem` - [`MoveItemsBetweenRequisitionListsInput`](/reference/graphql/saas/types-k-p.md#moveitemsbetweenrequisitionlistsinput) | The list of products to move. |
 
 #### Example
 
@@ -4309,7 +4312,7 @@ mutation moveItemsBetweenRequisitionLists(
 ```json
 {
   "sourceRequisitionListUid": 4,
-  "destinationRequisitionListUid": 4,
+  "destinationRequisitionListUid": "4",
   "requisitionListItem": MoveItemsBetweenRequisitionListsInput
 }
 ```
@@ -4333,13 +4336,13 @@ mutation moveItemsBetweenRequisitionLists(
 
 Move negotiable quote item to requisition list.
 
-**Response:** [`MoveLineItemToRequisitionListOutput`](#movelineitemtorequisitionlistoutput)
+**Response:** [`MoveLineItemToRequisitionListOutput`](/reference/graphql/saas/types-k-p.md#movelineitemtorequisitionlistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`MoveLineItemToRequisitionListInput!`](#movelineitemtorequisitionlistinput) | An input object that defines the quote item and requisition list moved to. |
+| `input` - [`MoveLineItemToRequisitionListInput!`](/reference/graphql/saas/types-k-p.md#movelineitemtorequisitionlistinput) | An input object that defines the quote item and requisition list moved to. |
 
 #### Example
 
@@ -4379,15 +4382,15 @@ mutation moveLineItemToRequisitionList($input: MoveLineItemToRequisitionListInpu
 
 Move products from one wish list to another.
 
-**Response:** [`MoveProductsBetweenWishlistsOutput`](#moveproductsbetweenwishlistsoutput)
+**Response:** [`MoveProductsBetweenWishlistsOutput`](/reference/graphql/saas/types-k-p.md#moveproductsbetweenwishlistsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `sourceWishlistUid` - [`ID!`](#id) | The ID of the original wish list. |
-| `destinationWishlistUid` - [`ID!`](#id) | The ID of the target wish list. |
-| `wishlistItems` - [`[WishlistItemMoveInput!]!`](#wishlistitemmoveinput) | An array of items to move. |
+| `sourceWishlistUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The ID of the original wish list. |
+| `destinationWishlistUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The ID of the target wish list. |
+| `wishlistItems` - [`[WishlistItemMoveInput!]!`](/reference/graphql/saas/types-t-z.md#wishlistitemmoveinput) | An array of items to move. |
 
 #### Example
 
@@ -4422,7 +4425,7 @@ mutation moveProductsBetweenWishlists(
 ```json
 {
   "sourceWishlistUid": "4",
-  "destinationWishlistUid": 4,
+  "destinationWishlistUid": "4",
   "wishlistItems": [WishlistItemMoveInput]
 }
 ```
@@ -4447,13 +4450,13 @@ mutation moveProductsBetweenWishlists(
 
 Open an existing negotiable quote template.
 
-**Response:** [`NegotiableQuoteTemplate`](#negotiablequotetemplate)
+**Response:** [`NegotiableQuoteTemplate`](/reference/graphql/saas/types-k-p.md#negotiablequotetemplate)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`OpenNegotiableQuoteTemplateInput!`](#opennegotiablequotetemplateinput) | An input object that contains the data to open a negotiable quote template. |
+| `input` - [`OpenNegotiableQuoteTemplateInput!`](/reference/graphql/saas/types-k-p.md#opennegotiablequotetemplateinput) | An input object that contains the data to open a negotiable quote template. |
 
 #### Example
 
@@ -4520,30 +4523,30 @@ mutation openNegotiableQuoteTemplate($input: OpenNegotiableQuoteTemplateInput!) 
     "openNegotiableQuoteTemplate": {
       "buyer": NegotiableQuoteUser,
       "comments": [NegotiableQuoteComment],
-      "created_at": "abc123",
-      "expiration_date": "xyz789",
+      "created_at": "xyz789",
+      "expiration_date": "abc123",
       "history": [NegotiableQuoteHistoryEntry],
       "historyV2": [NegotiableQuoteTemplateHistoryEntry],
-      "is_min_max_qty_used": true,
-      "is_virtual": true,
+      "is_min_max_qty_used": false,
+      "is_virtual": false,
       "items": [CartItemInterface],
-      "max_order_commitment": 123,
+      "max_order_commitment": 987,
       "min_order_commitment": 123,
-      "name": "xyz789",
+      "name": "abc123",
       "notifications": [QuoteTemplateNotificationMessage],
       "prices": CartPrices,
       "reference_document_links": [
         NegotiableQuoteReferenceDocumentLink
       ],
-      "sales_rep_name": "xyz789",
+      "sales_rep_name": "abc123",
       "shipping_addresses": [
         NegotiableQuoteShippingAddress
       ],
       "status": "abc123",
       "template_id": "4",
       "total_quantity": 987.65,
-      "uid": "4",
-      "updated_at": "xyz789"
+      "uid": 4,
+      "updated_at": "abc123"
     }
   }
 }
@@ -4559,13 +4562,13 @@ Use placeNegotiableQuoteOrderV2 instead.
 
 Convert a negotiable quote into an order.
 
-**Response:** [`PlaceNegotiableQuoteOrderOutput`](#placenegotiablequoteorderoutput)
+**Response:** [`PlaceNegotiableQuoteOrderOutput`](/reference/graphql/saas/types-k-p.md#placenegotiablequoteorderoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`PlaceNegotiableQuoteOrderInput!`](#placenegotiablequoteorderinput) | An input object that specifies the negotiable quote. |
+| `input` - [`PlaceNegotiableQuoteOrderInput!`](/reference/graphql/saas/types-k-p.md#placenegotiablequoteorderinput) | An input object that specifies the negotiable quote. |
 
 #### Example
 
@@ -4599,13 +4602,13 @@ mutation placeNegotiableQuoteOrder($input: PlaceNegotiableQuoteOrderInput!) {
 
 Convert a negotiable quote into an order.
 
-**Response:** [`PlaceNegotiableQuoteOrderOutputV2`](#placenegotiablequoteorderoutputv2)
+**Response:** [`PlaceNegotiableQuoteOrderOutputV2`](/reference/graphql/saas/types-k-p.md#placenegotiablequoteorderoutputv2)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`PlaceNegotiableQuoteOrderInput!`](#placenegotiablequoteorderinput) | An input object that specifies the negotiable quote. |
+| `input` - [`PlaceNegotiableQuoteOrderInput!`](/reference/graphql/saas/types-k-p.md#placenegotiablequoteorderinput) | An input object that specifies the negotiable quote. |
 
 #### Example
 
@@ -4649,13 +4652,13 @@ mutation placeNegotiableQuoteOrderV2($input: PlaceNegotiableQuoteOrderInput!) {
 
 Convert the quote into an order.
 
-**Response:** [`PlaceOrderOutput`](#placeorderoutput)
+**Response:** [`PlaceOrderOutput`](/reference/graphql/saas/types-k-p.md#placeorderoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`PlaceOrderInput`](#placeorderinput) | An input object that defines the shopper's cart ID. |
+| `input` - [`PlaceOrderInput`](/reference/graphql/saas/types-k-p.md#placeorderinput) | An input object that defines the shopper's cart ID. |
 
 #### Example
 
@@ -4699,13 +4702,13 @@ mutation placeOrder($input: PlaceOrderInput) {
 
 Convert the purchase order into an order.
 
-**Response:** [`PlaceOrderForPurchaseOrderOutput`](#placeorderforpurchaseorderoutput)
+**Response:** [`PlaceOrderForPurchaseOrderOutput`](/reference/graphql/saas/types-k-p.md#placeorderforpurchaseorderoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`PlaceOrderForPurchaseOrderInput!`](#placeorderforpurchaseorderinput) |  |
+| `input` - [`PlaceOrderForPurchaseOrderInput!`](/reference/graphql/saas/types-k-p.md#placeorderforpurchaseorderinput) |  |
 
 #### Example
 
@@ -4743,13 +4746,13 @@ mutation placeOrderForPurchaseOrder($input: PlaceOrderForPurchaseOrderInput!) {
 
 Place a purchase order.
 
-**Response:** [`PlacePurchaseOrderOutput`](#placepurchaseorderoutput)
+**Response:** [`PlacePurchaseOrderOutput`](/reference/graphql/saas/types-k-p.md#placepurchaseorderoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`PlacePurchaseOrderInput!`](#placepurchaseorderinput) |  |
+| `input` - [`PlacePurchaseOrderInput!`](/reference/graphql/saas/types-k-p.md#placepurchaseorderinput) |  |
 
 #### Example
 
@@ -4789,13 +4792,13 @@ mutation placePurchaseOrder($input: PlacePurchaseOrderInput!) {
 
 Redeem a gift card for store credit.
 
-**Response:** [`GiftCardAccount`](#giftcardaccount)
+**Response:** [`GiftCardAccount`](/reference/graphql/saas/types-f-i.md#giftcardaccount)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`GiftCardAccountInput!`](#giftcardaccountinput) | An input object that specifies the gift card code to redeem. |
+| `input` - [`GiftCardAccountInput!`](/reference/graphql/saas/types-f-i.md#giftcardaccountinput) | An input object that specifies the gift card code to redeem. |
 
 #### Example
 
@@ -4826,7 +4829,7 @@ mutation redeemGiftCardBalanceAsStoreCredit($input: GiftCardAccountInput!) {
   "data": {
     "redeemGiftCardBalanceAsStoreCredit": {
       "balance": Money,
-      "code": "abc123",
+      "code": "xyz789",
       "expiration_date": "xyz789"
     }
   }
@@ -4839,13 +4842,13 @@ mutation redeemGiftCardBalanceAsStoreCredit($input: GiftCardAccountInput!) {
 
 Reject purchase orders.
 
-**Response:** [`PurchaseOrdersActionOutput`](#purchaseordersactionoutput)
+**Response:** [`PurchaseOrdersActionOutput`](/reference/graphql/saas/types-k-p.md#purchaseordersactionoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`PurchaseOrdersActionInput!`](#purchaseordersactioninput) |  |
+| `input` - [`PurchaseOrdersActionInput!`](/reference/graphql/saas/types-k-p.md#purchaseordersactioninput) |  |
 
 #### Example
 
@@ -4889,13 +4892,13 @@ mutation rejectPurchaseOrders($input: PurchaseOrdersActionInput!) {
 
 Remove a previously-applied coupon from the cart. The cart must contain at least one item in order to remove the coupon.
 
-**Response:** [`RemoveCouponFromCartOutput`](#removecouponfromcartoutput)
+**Response:** [`RemoveCouponFromCartOutput`](/reference/graphql/saas/types-q-s.md#removecouponfromcartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`RemoveCouponFromCartInput`](#removecouponfromcartinput) | An input object that defines which coupon code to remove from the cart. |
+| `input` - [`RemoveCouponFromCartInput`](/reference/graphql/saas/types-q-s.md#removecouponfromcartinput) | An input object that defines which coupon code to remove from the cart. |
 
 #### Example
 
@@ -4929,13 +4932,13 @@ mutation removeCouponFromCart($input: RemoveCouponFromCartInput) {
 
 Remove a previously-applied coupon from the cart. The cart must contain at least one item in order to remove the coupon.
 
-**Response:** [`RemoveCouponFromCartOutput`](#removecouponfromcartoutput)
+**Response:** [`RemoveCouponFromCartOutput`](/reference/graphql/saas/types-q-s.md#removecouponfromcartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`RemoveCouponsFromCartInput`](#removecouponsfromcartinput) | An input object that defines which coupon code to remove from the cart. |
+| `input` - [`RemoveCouponsFromCartInput`](/reference/graphql/saas/types-q-s.md#removecouponsfromcartinput) | An input object that defines which coupon code to remove from the cart. |
 
 #### Example
 
@@ -4969,13 +4972,13 @@ mutation removeCouponsFromCart($input: RemoveCouponsFromCartInput) {
 
 Removes a gift card from the cart.
 
-**Response:** [`RemoveGiftCardFromCartOutput`](#removegiftcardfromcartoutput)
+**Response:** [`RemoveGiftCardFromCartOutput`](/reference/graphql/saas/types-q-s.md#removegiftcardfromcartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`RemoveGiftCardFromCartInput`](#removegiftcardfromcartinput) | An input object that specifies which gift card code to remove from the cart. |
+| `input` - [`RemoveGiftCardFromCartInput`](/reference/graphql/saas/types-q-s.md#removegiftcardfromcartinput) | An input object that specifies which gift card code to remove from the cart. |
 
 #### Example
 
@@ -5009,13 +5012,13 @@ mutation removeGiftCardFromCart($input: RemoveGiftCardFromCartInput) {
 
 Delete the specified gift registry.
 
-**Response:** [`RemoveGiftRegistryOutput`](#removegiftregistryoutput)
+**Response:** [`RemoveGiftRegistryOutput`](/reference/graphql/saas/types-q-s.md#removegiftregistryoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `giftRegistryUid` - [`ID!`](#id) | The unique ID of the gift registry to delete. |
+| `giftRegistryUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the gift registry to delete. |
 
 #### Example
 
@@ -5032,7 +5035,7 @@ mutation removeGiftRegistry($giftRegistryUid: ID!) {
 ##### Variables
 
 ```json
-{"giftRegistryUid": "4"}
+{"giftRegistryUid": 4}
 ```
 
 ##### Response
@@ -5047,14 +5050,14 @@ mutation removeGiftRegistry($giftRegistryUid: ID!) {
 
 Delete the specified items from a gift registry.
 
-**Response:** [`RemoveGiftRegistryItemsOutput`](#removegiftregistryitemsoutput)
+**Response:** [`RemoveGiftRegistryItemsOutput`](/reference/graphql/saas/types-q-s.md#removegiftregistryitemsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `giftRegistryUid` - [`ID!`](#id) | The unique ID of the gift registry. |
-| `itemsUid` - [`[ID!]!`](#id) | An array of item IDs to remove from the gift registry. |
+| `giftRegistryUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the gift registry. |
+| `itemsUid` - [`[ID!]!`](/reference/graphql/saas/types-f-i.md#id) | An array of item IDs to remove from the gift registry. |
 
 #### Example
 
@@ -5103,14 +5106,14 @@ mutation removeGiftRegistryItems(
 
 Removes registrants from a gift registry.
 
-**Response:** [`RemoveGiftRegistryRegistrantsOutput`](#removegiftregistryregistrantsoutput)
+**Response:** [`RemoveGiftRegistryRegistrantsOutput`](/reference/graphql/saas/types-q-s.md#removegiftregistryregistrantsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `giftRegistryUid` - [`ID!`](#id) | The unique ID of the gift registry. |
-| `registrantsUid` - [`[ID!]!`](#id) | An array of registrant IDs to remove. |
+| `giftRegistryUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the gift registry. |
+| `registrantsUid` - [`[ID!]!`](/reference/graphql/saas/types-f-i.md#id) | An array of registrant IDs to remove. |
 
 #### Example
 
@@ -5159,13 +5162,13 @@ mutation removeGiftRegistryRegistrants(
 
 Delete the entire quantity of a specified item from the cart. If you remove all items from the cart, the cart continues to exist.
 
-**Response:** [`RemoveItemFromCartOutput`](#removeitemfromcartoutput)
+**Response:** [`RemoveItemFromCartOutput`](/reference/graphql/saas/types-q-s.md#removeitemfromcartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`RemoveItemFromCartInput`](#removeitemfromcartinput) | An input object that defines which products to remove from the cart. |
+| `input` - [`RemoveItemFromCartInput`](/reference/graphql/saas/types-q-s.md#removeitemfromcartinput) | An input object that defines which products to remove from the cart. |
 
 #### Example
 
@@ -5199,13 +5202,13 @@ mutation removeItemFromCart($input: RemoveItemFromCartInput) {
 
 Remove one or more products from a negotiable quote.
 
-**Response:** [`RemoveNegotiableQuoteItemsOutput`](#removenegotiablequoteitemsoutput)
+**Response:** [`RemoveNegotiableQuoteItemsOutput`](/reference/graphql/saas/types-q-s.md#removenegotiablequoteitemsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`RemoveNegotiableQuoteItemsInput!`](#removenegotiablequoteitemsinput) | An input object that removes one or more items from a negotiable quote. |
+| `input` - [`RemoveNegotiableQuoteItemsInput!`](/reference/graphql/saas/types-q-s.md#removenegotiablequoteitemsinput) | An input object that removes one or more items from a negotiable quote. |
 
 #### Example
 
@@ -5245,13 +5248,13 @@ mutation removeNegotiableQuoteItems($input: RemoveNegotiableQuoteItemsInput!) {
 
 Remove one or more products from a negotiable quote template.
 
-**Response:** [`NegotiableQuoteTemplate`](#negotiablequotetemplate)
+**Response:** [`NegotiableQuoteTemplate`](/reference/graphql/saas/types-k-p.md#negotiablequotetemplate)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`RemoveNegotiableQuoteTemplateItemsInput!`](#removenegotiablequotetemplateitemsinput) | An input object that removes one or more items from a negotiable quote template. |
+| `input` - [`RemoveNegotiableQuoteTemplateItemsInput!`](/reference/graphql/saas/types-q-s.md#removenegotiablequotetemplateitemsinput) | An input object that removes one or more items from a negotiable quote template. |
 
 #### Example
 
@@ -5323,11 +5326,11 @@ mutation removeNegotiableQuoteTemplateItems($input: RemoveNegotiableQuoteTemplat
       "history": [NegotiableQuoteHistoryEntry],
       "historyV2": [NegotiableQuoteTemplateHistoryEntry],
       "is_min_max_qty_used": true,
-      "is_virtual": true,
+      "is_virtual": false,
       "items": [CartItemInterface],
-      "max_order_commitment": 987,
+      "max_order_commitment": 123,
       "min_order_commitment": 123,
-      "name": "xyz789",
+      "name": "abc123",
       "notifications": [QuoteTemplateNotificationMessage],
       "prices": CartPrices,
       "reference_document_links": [
@@ -5338,10 +5341,10 @@ mutation removeNegotiableQuoteTemplateItems($input: RemoveNegotiableQuoteTemplat
         NegotiableQuoteShippingAddress
       ],
       "status": "abc123",
-      "template_id": "4",
+      "template_id": 4,
       "total_quantity": 123.45,
-      "uid": "4",
-      "updated_at": "abc123"
+      "uid": 4,
+      "updated_at": "xyz789"
     }
   }
 }
@@ -5353,13 +5356,13 @@ mutation removeNegotiableQuoteTemplateItems($input: RemoveNegotiableQuoteTemplat
 
 Remove products from the specified compare list.
 
-**Response:** [`CompareList`](#comparelist)
+**Response:** [`CompareList`](/reference/graphql/saas/types-c-e.md#comparelist)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`RemoveProductsFromCompareListInput`](#removeproductsfromcomparelistinput) | An input object that defines which products to remove from a compare list. |
+| `input` - [`RemoveProductsFromCompareListInput`](/reference/graphql/saas/types-q-s.md#removeproductsfromcomparelistinput) | An input object that defines which products to remove from a compare list. |
 
 #### Example
 
@@ -5395,7 +5398,7 @@ mutation removeProductsFromCompareList($input: RemoveProductsFromCompareListInpu
       "attributes": [ComparableAttribute],
       "item_count": 123,
       "items": [ComparableItem],
-      "uid": "4"
+      "uid": 4
     }
   }
 }
@@ -5407,14 +5410,14 @@ mutation removeProductsFromCompareList($input: RemoveProductsFromCompareListInpu
 
 Remove one or more products from the specified wish list.
 
-**Response:** [`RemoveProductsFromWishlistOutput`](#removeproductsfromwishlistoutput)
+**Response:** [`RemoveProductsFromWishlistOutput`](/reference/graphql/saas/types-q-s.md#removeproductsfromwishlistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `wishlistId` - [`ID!`](#id) | The ID of a wish list. |
-| `wishlistItemsIds` - [`[ID!]!`](#id) | An array of item IDs representing products to be removed. |
+| `wishlistId` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The ID of a wish list. |
+| `wishlistItemsIds` - [`[ID!]!`](/reference/graphql/saas/types-f-i.md#id) | An array of item IDs representing products to be removed. |
 
 #### Example
 
@@ -5442,7 +5445,10 @@ mutation removeProductsFromWishlist(
 ##### Variables
 
 ```json
-{"wishlistId": "4", "wishlistItemsIds": [4]}
+{
+  "wishlistId": "4",
+  "wishlistItemsIds": ["4"]
+}
 ```
 
 ##### Response
@@ -5464,13 +5470,13 @@ mutation removeProductsFromWishlist(
 
 Remove a tracked shipment from a return.
 
-**Response:** [`RemoveReturnTrackingOutput`](#removereturntrackingoutput)
+**Response:** [`RemoveReturnTrackingOutput`](/reference/graphql/saas/types-q-s.md#removereturntrackingoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`RemoveReturnTrackingInput!`](#removereturntrackinginput) | An input object that removes tracking information. |
+| `input` - [`RemoveReturnTrackingInput!`](/reference/graphql/saas/types-q-s.md#removereturntrackinginput) | An input object that removes tracking information. |
 
 #### Example
 
@@ -5504,13 +5510,13 @@ mutation removeReturnTracking($input: RemoveReturnTrackingInput!) {
 
 Cancel the application of reward points to the cart.
 
-**Response:** [`RemoveRewardPointsFromCartOutput`](#removerewardpointsfromcartoutput)
+**Response:** [`RemoveRewardPointsFromCartOutput`](/reference/graphql/saas/types-q-s.md#removerewardpointsfromcartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `cartId` - [`ID!`](#id) |  |
+| `cartId` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) |  |
 
 #### Example
 
@@ -5529,7 +5535,7 @@ mutation removeRewardPointsFromCart($cartId: ID!) {
 ##### Variables
 
 ```json
-{"cartId": 4}
+{"cartId": "4"}
 ```
 
 ##### Response
@@ -5544,13 +5550,13 @@ mutation removeRewardPointsFromCart($cartId: ID!) {
 
 Remove store credit that has been applied to the specified cart.
 
-**Response:** [`RemoveStoreCreditFromCartOutput`](#removestorecreditfromcartoutput)
+**Response:** [`RemoveStoreCreditFromCartOutput`](/reference/graphql/saas/types-q-s.md#removestorecreditfromcartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`RemoveStoreCreditFromCartInput!`](#removestorecreditfromcartinput) | An input object that specifies the cart ID. |
+| `input` - [`RemoveStoreCreditFromCartInput!`](/reference/graphql/saas/types-q-s.md#removestorecreditfromcartinput) | An input object that specifies the cart ID. |
 
 #### Example
 
@@ -5584,13 +5590,13 @@ mutation removeStoreCreditFromCart($input: RemoveStoreCreditFromCartInput!) {
 
 Rename negotiable quote.
 
-**Response:** [`RenameNegotiableQuoteOutput`](#renamenegotiablequoteoutput)
+**Response:** [`RenameNegotiableQuoteOutput`](/reference/graphql/saas/types-q-s.md#renamenegotiablequoteoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`RenameNegotiableQuoteInput!`](#renamenegotiablequoteinput) | An input object that defines the quote item name and comment. |
+| `input` - [`RenameNegotiableQuoteInput!`](/reference/graphql/saas/types-q-s.md#renamenegotiablequoteinput) | An input object that defines the quote item name and comment. |
 
 #### Example
 
@@ -5628,13 +5634,13 @@ mutation renameNegotiableQuote($input: RenameNegotiableQuoteInput!) {
 
 Add all products from a customer's previous order to the cart.
 
-**Response:** [`ReorderItemsOutput`](#reorderitemsoutput)
+**Response:** [`ReorderItemsOutput`](/reference/graphql/saas/types-q-s.md#reorderitemsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `orderNumber` - [`String!`](#string) |  |
+| `orderNumber` - [`String!`](/reference/graphql/saas/types-q-s.md#string) |  |
 
 #### Example
 
@@ -5678,13 +5684,13 @@ mutation reorderItems($orderNumber: String!) {
 
 Request to cancel specified guest order.
 
-**Response:** [`CancelOrderOutput`](#cancelorderoutput)
+**Response:** [`CancelOrderOutput`](/reference/graphql/saas/types-c-e.md#cancelorderoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`GuestOrderCancelInput!`](#guestordercancelinput) |  |
+| `input` - [`GuestOrderCancelInput!`](/reference/graphql/saas/types-f-i.md#guestordercancelinput) |  |
 
 #### Example
 
@@ -5716,7 +5722,7 @@ mutation requestGuestOrderCancel($input: GuestOrderCancelInput!) {
 {
   "data": {
     "requestGuestOrderCancel": {
-      "error": "xyz789",
+      "error": "abc123",
       "errorV2": CancelOrderError,
       "order": CustomerOrder
     }
@@ -5728,13 +5734,13 @@ mutation requestGuestOrderCancel($input: GuestOrderCancelInput!) {
 
 ### requestGuestReturn
 
-**Response:** [`RequestReturnOutput`](#requestreturnoutput)
+**Response:** [`RequestReturnOutput`](/reference/graphql/saas/types-q-s.md#requestreturnoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`RequestGuestReturnInput!`](#requestguestreturninput) | An input object that contains the fields needed to start a return request for guest. |
+| `input` - [`RequestGuestReturnInput!`](/reference/graphql/saas/types-q-s.md#requestguestreturninput) | An input object that contains the fields needed to start a return request for guest. |
 
 #### Example
 
@@ -5778,13 +5784,13 @@ mutation requestGuestReturn($input: RequestGuestReturnInput!) {
 
 Request a new negotiable quote on behalf of the buyer.
 
-**Response:** [`RequestNegotiableQuoteOutput`](#requestnegotiablequoteoutput)
+**Response:** [`RequestNegotiableQuoteOutput`](/reference/graphql/saas/types-q-s.md#requestnegotiablequoteoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`RequestNegotiableQuoteInput!`](#requestnegotiablequoteinput) | An input object that contains a request to initiate a negotiable quote. |
+| `input` - [`RequestNegotiableQuoteInput!`](/reference/graphql/saas/types-q-s.md#requestnegotiablequoteinput) | An input object that contains a request to initiate a negotiable quote. |
 
 #### Example
 
@@ -5822,13 +5828,13 @@ mutation requestNegotiableQuote($input: RequestNegotiableQuoteInput!) {
 
 Request a new negotiable quote on behalf of the buyer.
 
-**Response:** [`NegotiableQuoteTemplate`](#negotiablequotetemplate)
+**Response:** [`NegotiableQuoteTemplate`](/reference/graphql/saas/types-k-p.md#negotiablequotetemplate)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`RequestNegotiableQuoteTemplateInput!`](#requestnegotiablequotetemplateinput) | An input object that contains a request to initiate a negotiable quote template. |
+| `input` - [`RequestNegotiableQuoteTemplateInput!`](/reference/graphql/saas/types-q-s.md#requestnegotiablequotetemplateinput) | An input object that contains a request to initiate a negotiable quote template. |
 
 #### Example
 
@@ -5900,9 +5906,9 @@ mutation requestNegotiableQuoteTemplateFromQuote($input: RequestNegotiableQuoteT
       "history": [NegotiableQuoteHistoryEntry],
       "historyV2": [NegotiableQuoteTemplateHistoryEntry],
       "is_min_max_qty_used": true,
-      "is_virtual": false,
+      "is_virtual": true,
       "items": [CartItemInterface],
-      "max_order_commitment": 987,
+      "max_order_commitment": 123,
       "min_order_commitment": 987,
       "name": "xyz789",
       "notifications": [QuoteTemplateNotificationMessage],
@@ -5910,15 +5916,15 @@ mutation requestNegotiableQuoteTemplateFromQuote($input: RequestNegotiableQuoteT
       "reference_document_links": [
         NegotiableQuoteReferenceDocumentLink
       ],
-      "sales_rep_name": "xyz789",
+      "sales_rep_name": "abc123",
       "shipping_addresses": [
         NegotiableQuoteShippingAddress
       ],
-      "status": "abc123",
+      "status": "xyz789",
       "template_id": 4,
       "total_quantity": 987.65,
-      "uid": 4,
-      "updated_at": "xyz789"
+      "uid": "4",
+      "updated_at": "abc123"
     }
   }
 }
@@ -5930,13 +5936,13 @@ mutation requestNegotiableQuoteTemplateFromQuote($input: RequestNegotiableQuoteT
 
 Request an email with a reset password token for the registered customer identified by the specified email.
 
-**Response:** [`Boolean`](#boolean)
+**Response:** [`Boolean`](/reference/graphql/saas/types-a-b.md#boolean)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `email` - [`String!`](#string) | The customer's email address. |
+| `email` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The customer's email address. |
 
 #### Example
 
@@ -5966,13 +5972,13 @@ mutation requestPasswordResetEmail($email: String!) {
 
 Initiates a buyer's request to return items for replacement or refund.
 
-**Response:** [`RequestReturnOutput`](#requestreturnoutput)
+**Response:** [`RequestReturnOutput`](/reference/graphql/saas/types-q-s.md#requestreturnoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`RequestReturnInput!`](#requestreturninput) | An input object that contains the fields needed to start a return request. |
+| `input` - [`RequestReturnInput!`](/reference/graphql/saas/types-q-s.md#requestreturninput) | An input object that contains the fields needed to start a return request. |
 
 #### Example
 
@@ -6016,13 +6022,13 @@ mutation requestReturn($input: RequestReturnInput!) {
 
 Resends the confirmation email to a customer.
 
-**Response:** [`Boolean`](#boolean)
+**Response:** [`Boolean`](/reference/graphql/saas/types-a-b.md#boolean)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `email` - [`String!`](#string) | The email address to send the confirmation email to. |
+| `email` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The email address to send the confirmation email to. |
 
 #### Example
 
@@ -6043,7 +6049,7 @@ mutation resendConfirmationEmail($email: String!) {
 ##### Response
 
 ```json
-{"data": {"resendConfirmationEmail": false}}
+{"data": {"resendConfirmationEmail": true}}
 ```
 
 <HorizontalLine />
@@ -6052,15 +6058,15 @@ mutation resendConfirmationEmail($email: String!) {
 
 Reset a customer's password using the reset password token that the customer received in an email after requesting it using `requestPasswordResetEmail`.
 
-**Response:** [`Boolean`](#boolean)
+**Response:** [`Boolean`](/reference/graphql/saas/types-a-b.md#boolean)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `email` - [`String!`](#string) | The customer's email address. |
-| `resetPasswordToken` - [`String!`](#string) | A runtime token generated by the `requestPasswordResetEmail` mutation. |
-| `newPassword` - [`String!`](#string) | The customer's new password. |
+| `email` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The customer's email address. |
+| `resetPasswordToken` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | A runtime token generated by the `requestPasswordResetEmail` mutation. |
+| `newPassword` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The customer's new password. |
 
 #### Example
 
@@ -6085,7 +6091,7 @@ mutation resetPassword(
 ```json
 {
   "email": "xyz789",
-  "resetPasswordToken": "xyz789",
+  "resetPasswordToken": "abc123",
   "newPassword": "abc123"
 }
 ```
@@ -6093,7 +6099,7 @@ mutation resetPassword(
 ##### Response
 
 ```json
-{"data": {"resetPassword": false}}
+{"data": {"resetPassword": true}}
 ```
 
 <HorizontalLine />
@@ -6102,7 +6108,7 @@ mutation resetPassword(
 
 Revoke the customer token.
 
-**Response:** [`RevokeCustomerTokenOutput`](#revokecustomertokenoutput)
+**Response:** [`RevokeCustomerTokenOutput`](/reference/graphql/saas/types-q-s.md#revokecustomertokenoutput)
 
 #### Example
 
@@ -6119,7 +6125,7 @@ mutation revokeCustomerToken {
 ##### Response
 
 ```json
-{"data": {"revokeCustomerToken": {"result": false}}}
+{"data": {"revokeCustomerToken": {"result": true}}}
 ```
 
 <HorizontalLine />
@@ -6128,13 +6134,13 @@ mutation revokeCustomerToken {
 
 Send the negotiable quote to the seller for review.
 
-**Response:** [`SendNegotiableQuoteForReviewOutput`](#sendnegotiablequoteforreviewoutput)
+**Response:** [`SendNegotiableQuoteForReviewOutput`](/reference/graphql/saas/types-q-s.md#sendnegotiablequoteforreviewoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SendNegotiableQuoteForReviewInput!`](#sendnegotiablequoteforreviewinput) | An input object that sends a request for the merchant to review a negotiable quote. |
+| `input` - [`SendNegotiableQuoteForReviewInput!`](/reference/graphql/saas/types-q-s.md#sendnegotiablequoteforreviewinput) | An input object that sends a request for the merchant to review a negotiable quote. |
 
 #### Example
 
@@ -6174,13 +6180,13 @@ mutation sendNegotiableQuoteForReview($input: SendNegotiableQuoteForReviewInput!
 
 Set the billing address on a specific cart.
 
-**Response:** [`SetBillingAddressOnCartOutput`](#setbillingaddressoncartoutput)
+**Response:** [`SetBillingAddressOnCartOutput`](/reference/graphql/saas/types-q-s.md#setbillingaddressoncartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SetBillingAddressOnCartInput`](#setbillingaddressoncartinput) | An input object that defines the billing address to be assigned to the cart. |
+| `input` - [`SetBillingAddressOnCartInput`](/reference/graphql/saas/types-q-s.md#setbillingaddressoncartinput) | An input object that defines the billing address to be assigned to the cart. |
 
 #### Example
 
@@ -6214,13 +6220,13 @@ mutation setBillingAddressOnCart($input: SetBillingAddressOnCartInput) {
 
 Sets the cart as inactive
 
-**Response:** [`SetCartAsInactiveOutput`](#setcartasinactiveoutput)
+**Response:** [`SetCartAsInactiveOutput`](/reference/graphql/saas/types-q-s.md#setcartasinactiveoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `cartId` - [`String!`](#string) | The customer cart ID |
+| `cartId` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The customer cart ID |
 
 #### Example
 
@@ -6238,7 +6244,7 @@ mutation setCartAsInactive($cartId: String!) {
 ##### Variables
 
 ```json
-{"cartId": "xyz789"}
+{"cartId": "abc123"}
 ```
 
 ##### Response
@@ -6247,8 +6253,8 @@ mutation setCartAsInactive($cartId: String!) {
 {
   "data": {
     "setCartAsInactive": {
-      "error": "abc123",
-      "success": true
+      "error": "xyz789",
+      "success": false
     }
   }
 }
@@ -6260,13 +6266,13 @@ mutation setCartAsInactive($cartId: String!) {
 
 Add custom attributes to the cart.
 
-**Response:** [`AddCustomAttributesToCartItemOutput`](#addcustomattributestocartitemoutput)
+**Response:** [`AddCustomAttributesToCartItemOutput`](/reference/graphql/saas/types-a-b.md#addcustomattributestocartitemoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CartCustomAttributesInput`](#cartcustomattributesinput) |  |
+| `input` - [`CartCustomAttributesInput`](/reference/graphql/saas/types-c-e.md#cartcustomattributesinput) |  |
 
 #### Example
 
@@ -6300,13 +6306,13 @@ mutation setCustomAttributesOnCart($input: CartCustomAttributesInput) {
 
 Add custom attributes to item in the cart.
 
-**Response:** [`AddCustomAttributesToCartItemOutput`](#addcustomattributestocartitemoutput)
+**Response:** [`AddCustomAttributesToCartItemOutput`](/reference/graphql/saas/types-a-b.md#addcustomattributestocartitemoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CartItemCustomAttributesInput`](#cartitemcustomattributesinput) |  |
+| `input` - [`CartItemCustomAttributesInput`](/reference/graphql/saas/types-c-e.md#cartitemcustomattributesinput) |  |
 
 #### Example
 
@@ -6344,13 +6350,13 @@ mutation setCustomAttributesOnCartItem($input: CartItemCustomAttributesInput) {
 
 Add custom attributes to company.
 
-**Response:** [`SetCustomAttributesOnCompanyOutput`](#setcustomattributesoncompanyoutput)
+**Response:** [`SetCustomAttributesOnCompanyOutput`](/reference/graphql/saas/types-q-s.md#setcustomattributesoncompanyoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SetCustomAttributesOnCompanyInput!`](#setcustomattributesoncompanyinput) | An input object that defines the custom attributes to be assigned to a company. |
+| `input` - [`SetCustomAttributesOnCompanyInput!`](/reference/graphql/saas/types-q-s.md#setcustomattributesoncompanyinput) | An input object that defines the custom attributes to be assigned to a company. |
 
 #### Example
 
@@ -6388,13 +6394,13 @@ mutation setCustomAttributesOnCompany($input: SetCustomAttributesOnCompanyInput!
 
 Add custom attributes to the credit memo.
 
-**Response:** [`CreditMemoOutput`](#creditmemooutput)
+**Response:** [`CreditMemoOutput`](/reference/graphql/saas/types-c-e.md#creditmemooutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CreditMemoCustomAttributesInput`](#creditmemocustomattributesinput) |  |
+| `input` - [`CreditMemoCustomAttributesInput`](/reference/graphql/saas/types-c-e.md#creditmemocustomattributesinput) |  |
 
 #### Example
 
@@ -6434,13 +6440,13 @@ mutation setCustomAttributesOnCreditMemo($input: CreditMemoCustomAttributesInput
 
 Add custom attributes to the credit memo item.
 
-**Response:** [`CreditMemoOutput`](#creditmemooutput)
+**Response:** [`CreditMemoOutput`](/reference/graphql/saas/types-c-e.md#creditmemooutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CreditMemoItemCustomAttributesInput`](#creditmemoitemcustomattributesinput) |  |
+| `input` - [`CreditMemoItemCustomAttributesInput`](/reference/graphql/saas/types-c-e.md#creditmemoitemcustomattributesinput) |  |
 
 #### Example
 
@@ -6480,13 +6486,13 @@ mutation setCustomAttributesOnCreditMemoItem($input: CreditMemoItemCustomAttribu
 
 Add custom attributes to the invoice.
 
-**Response:** [`InvoiceOutput`](#invoiceoutput)
+**Response:** [`InvoiceOutput`](/reference/graphql/saas/types-f-i.md#invoiceoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`InvoiceCustomAttributesInput`](#invoicecustomattributesinput) |  |
+| `input` - [`InvoiceCustomAttributesInput`](/reference/graphql/saas/types-f-i.md#invoicecustomattributesinput) |  |
 
 #### Example
 
@@ -6524,13 +6530,13 @@ mutation setCustomAttributesOnInvoice($input: InvoiceCustomAttributesInput) {
 
 Add custom attributes to the invoice item.
 
-**Response:** [`InvoiceOutput`](#invoiceoutput)
+**Response:** [`InvoiceOutput`](/reference/graphql/saas/types-f-i.md#invoiceoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`InvoiceItemCustomAttributesInput`](#invoiceitemcustomattributesinput) |  |
+| `input` - [`InvoiceItemCustomAttributesInput`](/reference/graphql/saas/types-f-i.md#invoiceitemcustomattributesinput) |  |
 
 #### Example
 
@@ -6570,13 +6576,13 @@ mutation setCustomAttributesOnInvoiceItem($input: InvoiceItemCustomAttributesInp
 
 Add custom attributes to a negotiable quote.
 
-**Response:** [`SetCustomAttributesOnNegotiableQuoteOutput`](#setcustomattributesonnegotiablequoteoutput)
+**Response:** [`SetCustomAttributesOnNegotiableQuoteOutput`](/reference/graphql/saas/types-q-s.md#setcustomattributesonnegotiablequoteoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SetCustomAttributesOnNegotiableQuoteInput!`](#setcustomattributesonnegotiablequoteinput) | An input object that defines the custom attributes to be assigned to a negotiable quote. |
+| `input` - [`SetCustomAttributesOnNegotiableQuoteInput!`](/reference/graphql/saas/types-q-s.md#setcustomattributesonnegotiablequoteinput) | An input object that defines the custom attributes to be assigned to a negotiable quote. |
 
 #### Example
 
@@ -6616,13 +6622,13 @@ mutation setCustomAttributesOnNegotiableQuote($input: SetCustomAttributesOnNegot
 
 Set gift options, including gift messages, gift wrapping, gift receipts, and printed cards.
 
-**Response:** [`SetGiftOptionsOnCartOutput`](#setgiftoptionsoncartoutput)
+**Response:** [`SetGiftOptionsOnCartOutput`](/reference/graphql/saas/types-q-s.md#setgiftoptionsoncartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SetGiftOptionsOnCartInput`](#setgiftoptionsoncartinput) | An input object that defines the selected gift options. |
+| `input` - [`SetGiftOptionsOnCartInput`](/reference/graphql/saas/types-q-s.md#setgiftoptionsoncartinput) | An input object that defines the selected gift options. |
 
 #### Example
 
@@ -6656,13 +6662,13 @@ mutation setGiftOptionsOnCart($input: SetGiftOptionsOnCartInput) {
 
 Assign the email address of a guest to the cart.
 
-**Response:** [`SetGuestEmailOnCartOutput`](#setguestemailoncartoutput)
+**Response:** [`SetGuestEmailOnCartOutput`](/reference/graphql/saas/types-q-s.md#setguestemailoncartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SetGuestEmailOnCartInput`](#setguestemailoncartinput) | An input object that defines a guest email address. |
+| `input` - [`SetGuestEmailOnCartInput`](/reference/graphql/saas/types-q-s.md#setguestemailoncartinput) | An input object that defines a guest email address. |
 
 #### Example
 
@@ -6696,13 +6702,13 @@ mutation setGuestEmailOnCart($input: SetGuestEmailOnCartInput) {
 
 Add buyer's note to a negotiable quote item.
 
-**Response:** [`SetLineItemNoteOutput`](#setlineitemnoteoutput)
+**Response:** [`SetLineItemNoteOutput`](/reference/graphql/saas/types-q-s.md#setlineitemnoteoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`LineItemNoteInput!`](#lineitemnoteinput) | An input object that defines the quote item note. |
+| `input` - [`LineItemNoteInput!`](/reference/graphql/saas/types-k-p.md#lineitemnoteinput) | An input object that defines the quote item note. |
 
 #### Example
 
@@ -6736,13 +6742,13 @@ mutation setLineItemNote($input: LineItemNoteInput!) {
 
 Assign a billing address to a negotiable quote.
 
-**Response:** [`SetNegotiableQuoteBillingAddressOutput`](#setnegotiablequotebillingaddressoutput)
+**Response:** [`SetNegotiableQuoteBillingAddressOutput`](/reference/graphql/saas/types-q-s.md#setnegotiablequotebillingaddressoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SetNegotiableQuoteBillingAddressInput!`](#setnegotiablequotebillingaddressinput) | An input object that defines the billing address to be assigned to a negotiable quote. |
+| `input` - [`SetNegotiableQuoteBillingAddressInput!`](/reference/graphql/saas/types-q-s.md#setnegotiablequotebillingaddressinput) | An input object that defines the billing address to be assigned to a negotiable quote. |
 
 #### Example
 
@@ -6782,13 +6788,13 @@ mutation setNegotiableQuoteBillingAddress($input: SetNegotiableQuoteBillingAddre
 
 Set the payment method on a negotiable quote.
 
-**Response:** [`SetNegotiableQuotePaymentMethodOutput`](#setnegotiablequotepaymentmethodoutput)
+**Response:** [`SetNegotiableQuotePaymentMethodOutput`](/reference/graphql/saas/types-q-s.md#setnegotiablequotepaymentmethodoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SetNegotiableQuotePaymentMethodInput!`](#setnegotiablequotepaymentmethodinput) | An input object that defines the payment method for the specified negotiable quote. |
+| `input` - [`SetNegotiableQuotePaymentMethodInput!`](/reference/graphql/saas/types-q-s.md#setnegotiablequotepaymentmethodinput) | An input object that defines the payment method for the specified negotiable quote. |
 
 #### Example
 
@@ -6828,13 +6834,13 @@ mutation setNegotiableQuotePaymentMethod($input: SetNegotiableQuotePaymentMethod
 
 Assign a previously-defined address as the shipping address for a negotiable quote.
 
-**Response:** [`SetNegotiableQuoteShippingAddressOutput`](#setnegotiablequoteshippingaddressoutput)
+**Response:** [`SetNegotiableQuoteShippingAddressOutput`](/reference/graphql/saas/types-q-s.md#setnegotiablequoteshippingaddressoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SetNegotiableQuoteShippingAddressInput!`](#setnegotiablequoteshippingaddressinput) | An input object that defines the shipping address to be assigned to a negotiable quote. |
+| `input` - [`SetNegotiableQuoteShippingAddressInput!`](/reference/graphql/saas/types-q-s.md#setnegotiablequoteshippingaddressinput) | An input object that defines the shipping address to be assigned to a negotiable quote. |
 
 #### Example
 
@@ -6874,13 +6880,13 @@ mutation setNegotiableQuoteShippingAddress($input: SetNegotiableQuoteShippingAdd
 
 Assign the shipping methods on the negotiable quote.
 
-**Response:** [`SetNegotiableQuoteShippingMethodsOutput`](#setnegotiablequoteshippingmethodsoutput)
+**Response:** [`SetNegotiableQuoteShippingMethodsOutput`](/reference/graphql/saas/types-q-s.md#setnegotiablequoteshippingmethodsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SetNegotiableQuoteShippingMethodsInput!`](#setnegotiablequoteshippingmethodsinput) | An input object that defines the shipping methods to be assigned to a negotiable quote. |
+| `input` - [`SetNegotiableQuoteShippingMethodsInput!`](/reference/graphql/saas/types-q-s.md#setnegotiablequoteshippingmethodsinput) | An input object that defines the shipping methods to be assigned to a negotiable quote. |
 
 #### Example
 
@@ -6920,13 +6926,13 @@ mutation setNegotiableQuoteShippingMethods($input: SetNegotiableQuoteShippingMet
 
 Assign a previously-defined address as the shipping address for a negotiable quote template.
 
-**Response:** [`NegotiableQuoteTemplate`](#negotiablequotetemplate)
+**Response:** [`NegotiableQuoteTemplate`](/reference/graphql/saas/types-k-p.md#negotiablequotetemplate)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SetNegotiableQuoteTemplateShippingAddressInput!`](#setnegotiablequotetemplateshippingaddressinput) | An input object that defines the shipping address to be assigned to a negotiable quote template. |
+| `input` - [`SetNegotiableQuoteTemplateShippingAddressInput!`](/reference/graphql/saas/types-q-s.md#setnegotiablequotetemplateshippingaddressinput) | An input object that defines the shipping address to be assigned to a negotiable quote template. |
 
 #### Example
 
@@ -6993,28 +6999,28 @@ mutation setNegotiableQuoteTemplateShippingAddress($input: SetNegotiableQuoteTem
     "setNegotiableQuoteTemplateShippingAddress": {
       "buyer": NegotiableQuoteUser,
       "comments": [NegotiableQuoteComment],
-      "created_at": "abc123",
-      "expiration_date": "abc123",
+      "created_at": "xyz789",
+      "expiration_date": "xyz789",
       "history": [NegotiableQuoteHistoryEntry],
       "historyV2": [NegotiableQuoteTemplateHistoryEntry],
       "is_min_max_qty_used": false,
       "is_virtual": false,
       "items": [CartItemInterface],
-      "max_order_commitment": 987,
-      "min_order_commitment": 987,
+      "max_order_commitment": 123,
+      "min_order_commitment": 123,
       "name": "xyz789",
       "notifications": [QuoteTemplateNotificationMessage],
       "prices": CartPrices,
       "reference_document_links": [
         NegotiableQuoteReferenceDocumentLink
       ],
-      "sales_rep_name": "abc123",
+      "sales_rep_name": "xyz789",
       "shipping_addresses": [
         NegotiableQuoteShippingAddress
       ],
       "status": "xyz789",
       "template_id": 4,
-      "total_quantity": 987.65,
+      "total_quantity": 123.45,
       "uid": 4,
       "updated_at": "abc123"
     }
@@ -7028,13 +7034,13 @@ mutation setNegotiableQuoteTemplateShippingAddress($input: SetNegotiableQuoteTem
 
 Apply a payment method to the cart.
 
-**Response:** [`SetPaymentMethodOnCartOutput`](#setpaymentmethodoncartoutput)
+**Response:** [`SetPaymentMethodOnCartOutput`](/reference/graphql/saas/types-q-s.md#setpaymentmethodoncartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SetPaymentMethodOnCartInput`](#setpaymentmethodoncartinput) | An input object that defines which payment method to apply to the cart. |
+| `input` - [`SetPaymentMethodOnCartInput`](/reference/graphql/saas/types-q-s.md#setpaymentmethodoncartinput) | An input object that defines which payment method to apply to the cart. |
 
 #### Example
 
@@ -7068,13 +7074,13 @@ mutation setPaymentMethodOnCart($input: SetPaymentMethodOnCartInput) {
 
 Set expiration date to a negotiable quote template.
 
-**Response:** [`NegotiableQuoteTemplate`](#negotiablequotetemplate)
+**Response:** [`NegotiableQuoteTemplate`](/reference/graphql/saas/types-k-p.md#negotiablequotetemplate)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`QuoteTemplateExpirationDateInput!`](#quotetemplateexpirationdateinput) | An input object that defines the quote template expiration date. |
+| `input` - [`QuoteTemplateExpirationDateInput!`](/reference/graphql/saas/types-q-s.md#quotetemplateexpirationdateinput) | An input object that defines the quote template expiration date. |
 
 #### Example
 
@@ -7141,30 +7147,30 @@ mutation setQuoteTemplateExpirationDate($input: QuoteTemplateExpirationDateInput
     "setQuoteTemplateExpirationDate": {
       "buyer": NegotiableQuoteUser,
       "comments": [NegotiableQuoteComment],
-      "created_at": "xyz789",
+      "created_at": "abc123",
       "expiration_date": "abc123",
       "history": [NegotiableQuoteHistoryEntry],
       "historyV2": [NegotiableQuoteTemplateHistoryEntry],
-      "is_min_max_qty_used": false,
+      "is_min_max_qty_used": true,
       "is_virtual": false,
       "items": [CartItemInterface],
       "max_order_commitment": 987,
-      "min_order_commitment": 123,
+      "min_order_commitment": 987,
       "name": "xyz789",
       "notifications": [QuoteTemplateNotificationMessage],
       "prices": CartPrices,
       "reference_document_links": [
         NegotiableQuoteReferenceDocumentLink
       ],
-      "sales_rep_name": "abc123",
+      "sales_rep_name": "xyz789",
       "shipping_addresses": [
         NegotiableQuoteShippingAddress
       ],
-      "status": "xyz789",
-      "template_id": "4",
-      "total_quantity": 123.45,
+      "status": "abc123",
+      "template_id": 4,
+      "total_quantity": 987.65,
       "uid": 4,
-      "updated_at": "abc123"
+      "updated_at": "xyz789"
     }
   }
 }
@@ -7176,13 +7182,13 @@ mutation setQuoteTemplateExpirationDate($input: QuoteTemplateExpirationDateInput
 
 Add buyer's note to a negotiable quote template item.
 
-**Response:** [`NegotiableQuoteTemplate`](#negotiablequotetemplate)
+**Response:** [`NegotiableQuoteTemplate`](/reference/graphql/saas/types-k-p.md#negotiablequotetemplate)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`QuoteTemplateLineItemNoteInput!`](#quotetemplatelineitemnoteinput) | An input object that defines the quote template item note. |
+| `input` - [`QuoteTemplateLineItemNoteInput!`](/reference/graphql/saas/types-q-s.md#quotetemplatelineitemnoteinput) | An input object that defines the quote template item note. |
 
 #### Example
 
@@ -7249,29 +7255,29 @@ mutation setQuoteTemplateLineItemNote($input: QuoteTemplateLineItemNoteInput!) {
     "setQuoteTemplateLineItemNote": {
       "buyer": NegotiableQuoteUser,
       "comments": [NegotiableQuoteComment],
-      "created_at": "abc123",
+      "created_at": "xyz789",
       "expiration_date": "abc123",
       "history": [NegotiableQuoteHistoryEntry],
       "historyV2": [NegotiableQuoteTemplateHistoryEntry],
-      "is_min_max_qty_used": true,
+      "is_min_max_qty_used": false,
       "is_virtual": false,
       "items": [CartItemInterface],
-      "max_order_commitment": 123,
-      "min_order_commitment": 987,
-      "name": "xyz789",
+      "max_order_commitment": 987,
+      "min_order_commitment": 123,
+      "name": "abc123",
       "notifications": [QuoteTemplateNotificationMessage],
       "prices": CartPrices,
       "reference_document_links": [
         NegotiableQuoteReferenceDocumentLink
       ],
-      "sales_rep_name": "xyz789",
+      "sales_rep_name": "abc123",
       "shipping_addresses": [
         NegotiableQuoteShippingAddress
       ],
-      "status": "xyz789",
-      "template_id": 4,
+      "status": "abc123",
+      "template_id": "4",
       "total_quantity": 123.45,
-      "uid": 4,
+      "uid": "4",
       "updated_at": "xyz789"
     }
   }
@@ -7284,13 +7290,13 @@ mutation setQuoteTemplateLineItemNote($input: QuoteTemplateLineItemNoteInput!) {
 
 Set one or more shipping addresses on a specific cart.
 
-**Response:** [`SetShippingAddressesOnCartOutput`](#setshippingaddressesoncartoutput)
+**Response:** [`SetShippingAddressesOnCartOutput`](/reference/graphql/saas/types-q-s.md#setshippingaddressesoncartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SetShippingAddressesOnCartInput`](#setshippingaddressesoncartinput) | An input object that defines one or more shipping addresses to be assigned to the cart. |
+| `input` - [`SetShippingAddressesOnCartInput`](/reference/graphql/saas/types-q-s.md#setshippingaddressesoncartinput) | An input object that defines one or more shipping addresses to be assigned to the cart. |
 
 #### Example
 
@@ -7324,13 +7330,13 @@ mutation setShippingAddressesOnCart($input: SetShippingAddressesOnCartInput) {
 
 Set one or more delivery methods on a cart.
 
-**Response:** [`SetShippingMethodsOnCartOutput`](#setshippingmethodsoncartoutput)
+**Response:** [`SetShippingMethodsOnCartOutput`](/reference/graphql/saas/types-q-s.md#setshippingmethodsoncartoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SetShippingMethodsOnCartInput`](#setshippingmethodsoncartinput) | An input object that applies one or more shipping methods to the cart. |
+| `input` - [`SetShippingMethodsOnCartInput`](/reference/graphql/saas/types-q-s.md#setshippingmethodsoncartinput) | An input object that applies one or more shipping methods to the cart. |
 
 #### Example
 
@@ -7364,15 +7370,15 @@ mutation setShippingMethodsOnCart($input: SetShippingMethodsOnCartInput) {
 
 Send an email about the gift registry to a list of invitees.
 
-**Response:** [`ShareGiftRegistryOutput`](#sharegiftregistryoutput)
+**Response:** [`ShareGiftRegistryOutput`](/reference/graphql/saas/types-q-s.md#sharegiftregistryoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `giftRegistryUid` - [`ID!`](#id) | The unique ID of the gift registry. |
-| `sender` - [`ShareGiftRegistrySenderInput!`](#sharegiftregistrysenderinput) | The sender's email address and gift message. |
-| `invitees` - [`[ShareGiftRegistryInviteeInput!]!`](#sharegiftregistryinviteeinput) | An array containing invitee names and email addresses. |
+| `giftRegistryUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the gift registry. |
+| `sender` - [`ShareGiftRegistrySenderInput!`](/reference/graphql/saas/types-q-s.md#sharegiftregistrysenderinput) | The sender's email address and gift message. |
+| `invitees` - [`[ShareGiftRegistryInviteeInput!]!`](/reference/graphql/saas/types-q-s.md#sharegiftregistryinviteeinput) | An array containing invitee names and email addresses. |
 
 #### Example
 
@@ -7407,7 +7413,7 @@ mutation shareGiftRegistry(
 ##### Response
 
 ```json
-{"data": {"shareGiftRegistry": {"is_shared": true}}}
+{"data": {"shareGiftRegistry": {"is_shared": false}}}
 ```
 
 <HorizontalLine />
@@ -7416,13 +7422,13 @@ mutation shareGiftRegistry(
 
 Share a requisition list with company colleagues via email using a secure link.
 
-**Response:** [`ShareRequisitionListByEmailOutput`](#sharerequisitionlistbyemailoutput)
+**Response:** [`ShareRequisitionListByEmailOutput`](/reference/graphql/saas/types-q-s.md#sharerequisitionlistbyemailoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`ShareRequisitionListByEmailInput!`](#sharerequisitionlistbyemailinput) |  |
+| `input` - [`ShareRequisitionListByEmailInput!`](/reference/graphql/saas/types-q-s.md#sharerequisitionlistbyemailinput) |  |
 
 #### Example
 
@@ -7464,13 +7470,13 @@ mutation shareRequisitionListByEmail($input: ShareRequisitionListByEmailInput!) 
 
 Share a requisition list by issuing a token for colleagues in the same company. Use the token to build a shareable link on the storefront.
 
-**Response:** [`ShareRequisitionListByTokenOutput`](#sharerequisitionlistbytokenoutput)
+**Response:** [`ShareRequisitionListByTokenOutput`](/reference/graphql/saas/types-q-s.md#sharerequisitionlistbytokenoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `requisitionListUid` - [`ID!`](#id) | The unique ID of the requisition list. |
+| `requisitionListUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the requisition list. |
 
 #### Example
 
@@ -7496,7 +7502,7 @@ mutation shareRequisitionListByToken($requisitionListUid: ID!) {
 {
   "data": {
     "shareRequisitionListByToken": {
-      "token": "xyz789"
+      "token": "abc123"
     }
   }
 }
@@ -7508,13 +7514,13 @@ mutation shareRequisitionListByToken($requisitionListUid: ID!) {
 
 Accept an existing negotiable quote template.
 
-**Response:** [`NegotiableQuoteTemplate`](#negotiablequotetemplate)
+**Response:** [`NegotiableQuoteTemplate`](/reference/graphql/saas/types-k-p.md#negotiablequotetemplate)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SubmitNegotiableQuoteTemplateForReviewInput!`](#submitnegotiablequotetemplateforreviewinput) | An input object that contains the data to update a negotiable quote template. |
+| `input` - [`SubmitNegotiableQuoteTemplateForReviewInput!`](/reference/graphql/saas/types-q-s.md#submitnegotiablequotetemplateforreviewinput) | An input object that contains the data to update a negotiable quote template. |
 
 #### Example
 
@@ -7581,16 +7587,16 @@ mutation submitNegotiableQuoteTemplateForReview($input: SubmitNegotiableQuoteTem
     "submitNegotiableQuoteTemplateForReview": {
       "buyer": NegotiableQuoteUser,
       "comments": [NegotiableQuoteComment],
-      "created_at": "abc123",
+      "created_at": "xyz789",
       "expiration_date": "xyz789",
       "history": [NegotiableQuoteHistoryEntry],
       "historyV2": [NegotiableQuoteTemplateHistoryEntry],
       "is_min_max_qty_used": false,
       "is_virtual": true,
       "items": [CartItemInterface],
-      "max_order_commitment": 987,
+      "max_order_commitment": 123,
       "min_order_commitment": 987,
-      "name": "xyz789",
+      "name": "abc123",
       "notifications": [QuoteTemplateNotificationMessage],
       "prices": CartPrices,
       "reference_document_links": [
@@ -7602,8 +7608,8 @@ mutation submitNegotiableQuoteTemplateForReview($input: SubmitNegotiableQuoteTem
       ],
       "status": "abc123",
       "template_id": 4,
-      "total_quantity": 123.45,
-      "uid": "4",
+      "total_quantity": 987.65,
+      "uid": 4,
       "updated_at": "abc123"
     }
   }
@@ -7616,13 +7622,13 @@ mutation submitNegotiableQuoteTemplateForReview($input: SubmitNegotiableQuoteTem
 
 Subscribe the specified email to the store's newsletter.
 
-**Response:** [`SubscribeEmailToNewsletterOutput`](#subscribeemailtonewsletteroutput)
+**Response:** [`SubscribeEmailToNewsletterOutput`](/reference/graphql/saas/types-q-s.md#subscribeemailtonewsletteroutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `email` - [`String!`](#string) | The email address that will receive the store's newsletter. |
+| `email` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The email address that will receive the store's newsletter. |
 
 #### Example
 
@@ -7639,7 +7645,7 @@ mutation subscribeEmailToNewsletter($email: String!) {
 ##### Variables
 
 ```json
-{"email": "abc123"}
+{"email": "xyz789"}
 ```
 
 ##### Response
@@ -7654,13 +7660,13 @@ mutation subscribeEmailToNewsletter($email: String!) {
 
 Subscribe logged-in customer to price alert for a product.
 
-**Response:** [`ProductAlertSubscriptionResult`](#productalertsubscriptionresult)
+**Response:** [`ProductAlertSubscriptionResult`](/reference/graphql/saas/types-k-p.md#productalertsubscriptionresult)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`ProductAlertPriceInput!`](#productalertpriceinput) |  |
+| `input` - [`ProductAlertPriceInput!`](/reference/graphql/saas/types-k-p.md#productalertpriceinput) |  |
 
 #### Example
 
@@ -7688,7 +7694,7 @@ mutation subscribeProductAlertPrice($input: ProductAlertPriceInput!) {
   "data": {
     "subscribeProductAlertPrice": {
       "message": "abc123",
-      "success": false
+      "success": true
     }
   }
 }
@@ -7700,13 +7706,13 @@ mutation subscribeProductAlertPrice($input: ProductAlertPriceInput!) {
 
 Subscribe logged-in customer to stock alert for a product.
 
-**Response:** [`ProductAlertSubscriptionResult`](#productalertsubscriptionresult)
+**Response:** [`ProductAlertSubscriptionResult`](/reference/graphql/saas/types-k-p.md#productalertsubscriptionresult)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`ProductAlertStockInput!`](#productalertstockinput) |  |
+| `input` - [`ProductAlertStockInput!`](/reference/graphql/saas/types-k-p.md#productalertstockinput) |  |
 
 #### Example
 
@@ -7733,7 +7739,7 @@ mutation subscribeProductAlertStock($input: ProductAlertStockInput!) {
 {
   "data": {
     "subscribeProductAlertStock": {
-      "message": "xyz789",
+      "message": "abc123",
       "success": false
     }
   }
@@ -7746,13 +7752,13 @@ mutation subscribeProductAlertStock($input: ProductAlertStockInput!) {
 
 Synchronizes the payment order details for further payment processing
 
-**Response:** [`Boolean`](#boolean)
+**Response:** [`Boolean`](/reference/graphql/saas/types-a-b.md#boolean)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`SyncPaymentOrderInput`](#syncpaymentorderinput) | Describes the variables needed to synchronize the payment order details |
+| `input` - [`SyncPaymentOrderInput`](/reference/graphql/saas/types-q-s.md#syncpaymentorderinput) | Describes the variables needed to synchronize the payment order details |
 
 #### Example
 
@@ -7782,13 +7788,13 @@ mutation syncPaymentOrder($input: SyncPaymentOrderInput) {
 
 Unassign a child company from its parent company within the company relation hierarchy.
 
-**Response:** [`UnassignChildCompanyOutput`](#unassignchildcompanyoutput)
+**Response:** [`UnassignChildCompanyOutput`](/reference/graphql/saas/types-t-z.md#unassignchildcompanyoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`UnassignChildCompanyInput!`](#unassignchildcompanyinput) | An input object that defines which company to unassign. |
+| `input` - [`UnassignChildCompanyInput!`](/reference/graphql/saas/types-t-z.md#unassignchildcompanyinput) | An input object that defines which company to unassign. |
 
 #### Example
 
@@ -7828,13 +7834,13 @@ mutation unassignChildCompany($input: UnassignChildCompanyInput!) {
 
 Unsubscribe logged-in customer to price alert for a product.
 
-**Response:** [`ProductAlertSubscriptionResult`](#productalertsubscriptionresult)
+**Response:** [`ProductAlertSubscriptionResult`](/reference/graphql/saas/types-k-p.md#productalertsubscriptionresult)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`ProductAlertPriceInput!`](#productalertpriceinput) |  |
+| `input` - [`ProductAlertPriceInput!`](/reference/graphql/saas/types-k-p.md#productalertpriceinput) |  |
 
 #### Example
 
@@ -7862,7 +7868,7 @@ mutation unsubscribeProductAlertPrice($input: ProductAlertPriceInput!) {
   "data": {
     "unsubscribeProductAlertPrice": {
       "message": "xyz789",
-      "success": false
+      "success": true
     }
   }
 }
@@ -7874,7 +7880,7 @@ mutation unsubscribeProductAlertPrice($input: ProductAlertPriceInput!) {
 
 Unsubscribe logged-in customer to price alert for all product.
 
-**Response:** [`ProductAlertSubscriptionResult`](#productalertsubscriptionresult)
+**Response:** [`ProductAlertSubscriptionResult`](/reference/graphql/saas/types-k-p.md#productalertsubscriptionresult)
 
 #### Example
 
@@ -7896,7 +7902,7 @@ mutation unsubscribeProductAlertPriceAll {
   "data": {
     "unsubscribeProductAlertPriceAll": {
       "message": "abc123",
-      "success": false
+      "success": true
     }
   }
 }
@@ -7908,13 +7914,13 @@ mutation unsubscribeProductAlertPriceAll {
 
 Unsubscribe logged-in customer to stock alert for a product.
 
-**Response:** [`ProductAlertSubscriptionResult`](#productalertsubscriptionresult)
+**Response:** [`ProductAlertSubscriptionResult`](/reference/graphql/saas/types-k-p.md#productalertsubscriptionresult)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`ProductAlertStockInput!`](#productalertstockinput) |  |
+| `input` - [`ProductAlertStockInput!`](/reference/graphql/saas/types-k-p.md#productalertstockinput) |  |
 
 #### Example
 
@@ -7954,7 +7960,7 @@ mutation unsubscribeProductAlertStock($input: ProductAlertStockInput!) {
 
 Unsubscribe logged-in customer to stock alert for all product.
 
-**Response:** [`ProductAlertSubscriptionResult`](#productalertsubscriptionresult)
+**Response:** [`ProductAlertSubscriptionResult`](/reference/graphql/saas/types-k-p.md#productalertsubscriptionresult)
 
 #### Example
 
@@ -7976,7 +7982,7 @@ mutation unsubscribeProductAlertStockAll {
   "data": {
     "unsubscribeProductAlertStockAll": {
       "message": "xyz789",
-      "success": false
+      "success": true
     }
   }
 }
@@ -7988,13 +7994,13 @@ mutation unsubscribeProductAlertStockAll {
 
 Modify items in the cart.
 
-**Response:** [`UpdateCartItemsOutput`](#updatecartitemsoutput)
+**Response:** [`UpdateCartItemsOutput`](/reference/graphql/saas/types-t-z.md#updatecartitemsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`UpdateCartItemsInput`](#updatecartitemsinput) | An input object that defines products to be updated. |
+| `input` - [`UpdateCartItemsInput`](/reference/graphql/saas/types-t-z.md#updatecartitemsinput) | An input object that defines products to be updated. |
 
 #### Example
 
@@ -8038,13 +8044,13 @@ mutation updateCartItems($input: UpdateCartItemsInput) {
 
 Update company information.
 
-**Response:** [`UpdateCompanyOutput`](#updatecompanyoutput)
+**Response:** [`UpdateCompanyOutput`](/reference/graphql/saas/types-t-z.md#updatecompanyoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CompanyUpdateInput!`](#companyupdateinput) |  |
+| `input` - [`CompanyUpdateInput!`](/reference/graphql/saas/types-c-e.md#companyupdateinput) |  |
 
 #### Example
 
@@ -8078,13 +8084,13 @@ mutation updateCompany($input: CompanyUpdateInput!) {
 
 Update company role information.
 
-**Response:** [`UpdateCompanyRoleOutput`](#updatecompanyroleoutput)
+**Response:** [`UpdateCompanyRoleOutput`](/reference/graphql/saas/types-t-z.md#updatecompanyroleoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CompanyRoleUpdateInput!`](#companyroleupdateinput) |  |
+| `input` - [`CompanyRoleUpdateInput!`](/reference/graphql/saas/types-c-e.md#companyroleupdateinput) |  |
 
 #### Example
 
@@ -8118,13 +8124,13 @@ mutation updateCompanyRole($input: CompanyRoleUpdateInput!) {
 
 Change the parent node of a company team within the current company context.
 
-**Response:** [`UpdateCompanyStructureOutput`](#updatecompanystructureoutput)
+**Response:** [`UpdateCompanyStructureOutput`](/reference/graphql/saas/types-t-z.md#updatecompanystructureoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CompanyStructureUpdateInput!`](#companystructureupdateinput) |  |
+| `input` - [`CompanyStructureUpdateInput!`](/reference/graphql/saas/types-c-e.md#companystructureupdateinput) |  |
 
 #### Example
 
@@ -8158,13 +8164,13 @@ mutation updateCompanyStructure($input: CompanyStructureUpdateInput!) {
 
 Update company team data.
 
-**Response:** [`UpdateCompanyTeamOutput`](#updatecompanyteamoutput)
+**Response:** [`UpdateCompanyTeamOutput`](/reference/graphql/saas/types-t-z.md#updatecompanyteamoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CompanyTeamUpdateInput!`](#companyteamupdateinput) |  |
+| `input` - [`CompanyTeamUpdateInput!`](/reference/graphql/saas/types-c-e.md#companyteamupdateinput) |  |
 
 #### Example
 
@@ -8198,13 +8204,13 @@ mutation updateCompanyTeam($input: CompanyTeamUpdateInput!) {
 
 Update an existing company user.
 
-**Response:** [`UpdateCompanyUserOutput`](#updatecompanyuseroutput)
+**Response:** [`UpdateCompanyUserOutput`](/reference/graphql/saas/types-t-z.md#updatecompanyuseroutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CompanyUserUpdateInput!`](#companyuserupdateinput) |  |
+| `input` - [`CompanyUserUpdateInput!`](/reference/graphql/saas/types-c-e.md#companyuserupdateinput) |  |
 
 #### Example
 
@@ -8242,14 +8248,14 @@ Use `updateCustomerAddressV2` instead.
 
 Update the billing or shipping address of a customer or guest.
 
-**Response:** [`CustomerAddress`](#customeraddress)
+**Response:** [`CustomerAddress`](/reference/graphql/saas/types-c-e.md#customeraddress)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `id` - [`Int!`](#int) | The ID assigned to the customer address. |
-| `input` - [`CustomerAddressInput`](#customeraddressinput) | An input object that contains changes to the customer address. |
+| `id` - [`Int!`](/reference/graphql/saas/types-f-i.md#int) | The ID assigned to the customer address. |
+| `input` - [`CustomerAddressInput`](/reference/graphql/saas/types-c-e.md#customeraddressinput) | An input object that contains changes to the customer address. |
 
 #### Example
 
@@ -8298,7 +8304,7 @@ mutation updateCustomerAddress(
 ##### Variables
 
 ```json
-{"id": 987, "input": CustomerAddressInput}
+{"id": 123, "input": CustomerAddressInput}
 ```
 
 ##### Response
@@ -8307,26 +8313,26 @@ mutation updateCustomerAddress(
 {
   "data": {
     "updateCustomerAddress": {
-      "city": "xyz789",
-      "company": "abc123",
+      "city": "abc123",
+      "company": "xyz789",
       "country_code": "AF",
       "custom_attributesV2": [AttributeValueInterface],
       "default_billing": false,
-      "default_shipping": true,
+      "default_shipping": false,
       "extension_attributes": [CustomerAddressAttribute],
-      "fax": "xyz789",
+      "fax": "abc123",
       "firstname": "xyz789",
       "id": 987,
       "lastname": "abc123",
-      "middlename": "abc123",
-      "postcode": "xyz789",
-      "prefix": "abc123",
+      "middlename": "xyz789",
+      "postcode": "abc123",
+      "prefix": "xyz789",
       "region": CustomerAddressRegion,
       "region_id": 123,
-      "street": ["xyz789"],
-      "suffix": "abc123",
+      "street": ["abc123"],
+      "suffix": "xyz789",
       "telephone": "xyz789",
-      "uid": "4",
+      "uid": 4,
       "vat_id": "abc123"
     }
   }
@@ -8339,14 +8345,14 @@ mutation updateCustomerAddress(
 
 Update the billing or shipping address of a customer or guest.
 
-**Response:** [`CustomerAddress`](#customeraddress)
+**Response:** [`CustomerAddress`](/reference/graphql/saas/types-c-e.md#customeraddress)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `uid` - [`ID!`](#id) | The unique ID of the customer address. |
-| `input` - [`CustomerAddressInput`](#customeraddressinput) | An input object that contains changes to the customer address. |
+| `uid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the customer address. |
+| `input` - [`CustomerAddressInput`](/reference/graphql/saas/types-c-e.md#customeraddressinput) | An input object that contains changes to the customer address. |
 
 #### Example
 
@@ -8407,25 +8413,25 @@ mutation updateCustomerAddressV2(
 {
   "data": {
     "updateCustomerAddressV2": {
-      "city": "abc123",
+      "city": "xyz789",
       "company": "abc123",
       "country_code": "AF",
       "custom_attributesV2": [AttributeValueInterface],
-      "default_billing": false,
+      "default_billing": true,
       "default_shipping": false,
       "extension_attributes": [CustomerAddressAttribute],
-      "fax": "xyz789",
+      "fax": "abc123",
       "firstname": "xyz789",
       "id": 987,
       "lastname": "abc123",
       "middlename": "xyz789",
-      "postcode": "abc123",
-      "prefix": "abc123",
+      "postcode": "xyz789",
+      "prefix": "xyz789",
       "region": CustomerAddressRegion,
-      "region_id": 987,
-      "street": ["xyz789"],
+      "region_id": 123,
+      "street": ["abc123"],
       "suffix": "xyz789",
-      "telephone": "abc123",
+      "telephone": "xyz789",
       "uid": 4,
       "vat_id": "xyz789"
     }
@@ -8439,14 +8445,14 @@ mutation updateCustomerAddressV2(
 
 Change the email address for the logged-in customer.
 
-**Response:** [`CustomerOutput`](#customeroutput)
+**Response:** [`CustomerOutput`](/reference/graphql/saas/types-c-e.md#customeroutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `email` - [`String!`](#string) | The customer's email address. |
-| `password` - [`String!`](#string) | The customer's password. |
+| `email` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The customer's email address. |
+| `password` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The customer's password. |
 
 #### Example
 
@@ -8489,13 +8495,13 @@ mutation updateCustomerEmail(
 
 Update the customer's personal information.
 
-**Response:** [`CustomerOutput`](#customeroutput)
+**Response:** [`CustomerOutput`](/reference/graphql/saas/types-c-e.md#customeroutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`CustomerUpdateInput!`](#customerupdateinput) | An input object that defines the customer characteristics to update. |
+| `input` - [`CustomerUpdateInput!`](/reference/graphql/saas/types-c-e.md#customerupdateinput) | An input object that defines the customer characteristics to update. |
 
 #### Example
 
@@ -8529,14 +8535,14 @@ mutation updateCustomerV2($input: CustomerUpdateInput!) {
 
 Update the specified gift registry.
 
-**Response:** [`UpdateGiftRegistryOutput`](#updategiftregistryoutput)
+**Response:** [`UpdateGiftRegistryOutput`](/reference/graphql/saas/types-t-z.md#updategiftregistryoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `giftRegistryUid` - [`ID!`](#id) | The unique ID of an existing gift registry. |
-| `giftRegistry` - [`UpdateGiftRegistryInput!`](#updategiftregistryinput) | An input object that defines which fields to update. |
+| `giftRegistryUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of an existing gift registry. |
+| `giftRegistry` - [`UpdateGiftRegistryInput!`](/reference/graphql/saas/types-t-z.md#updategiftregistryinput) | An input object that defines which fields to update. |
 
 #### Example
 
@@ -8562,7 +8568,7 @@ mutation updateGiftRegistry(
 
 ```json
 {
-  "giftRegistryUid": "4",
+  "giftRegistryUid": 4,
   "giftRegistry": UpdateGiftRegistryInput
 }
 ```
@@ -8583,14 +8589,14 @@ mutation updateGiftRegistry(
 
 Update the specified items in the gift registry.
 
-**Response:** [`UpdateGiftRegistryItemsOutput`](#updategiftregistryitemsoutput)
+**Response:** [`UpdateGiftRegistryItemsOutput`](/reference/graphql/saas/types-t-z.md#updategiftregistryitemsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `giftRegistryUid` - [`ID!`](#id) | The unique ID of the gift registry. |
-| `items` - [`[UpdateGiftRegistryItemInput!]!`](#updategiftregistryiteminput) | An array of items to be updated. |
+| `giftRegistryUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the gift registry. |
+| `items` - [`[UpdateGiftRegistryItemInput!]!`](/reference/graphql/saas/types-t-z.md#updategiftregistryiteminput) | An array of items to be updated. |
 
 #### Example
 
@@ -8639,14 +8645,14 @@ mutation updateGiftRegistryItems(
 
 Modify the properties of one or more gift registry registrants.
 
-**Response:** [`UpdateGiftRegistryRegistrantsOutput`](#updategiftregistryregistrantsoutput)
+**Response:** [`UpdateGiftRegistryRegistrantsOutput`](/reference/graphql/saas/types-t-z.md#updategiftregistryregistrantsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `giftRegistryUid` - [`ID!`](#id) | The unique ID of the gift registry. |
-| `registrants` - [`[UpdateGiftRegistryRegistrantInput!]!`](#updategiftregistryregistrantinput) | An array of registrants to update. |
+| `giftRegistryUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the gift registry. |
+| `registrants` - [`[UpdateGiftRegistryRegistrantInput!]!`](/reference/graphql/saas/types-t-z.md#updategiftregistryregistrantinput) | An array of registrants to update. |
 
 #### Example
 
@@ -8672,7 +8678,7 @@ mutation updateGiftRegistryRegistrants(
 
 ```json
 {
-  "giftRegistryUid": 4,
+  "giftRegistryUid": "4",
   "registrants": [UpdateGiftRegistryRegistrantInput]
 }
 ```
@@ -8695,13 +8701,13 @@ mutation updateGiftRegistryRegistrants(
 
 Change the quantity of one or more items in an existing negotiable quote.
 
-**Response:** [`UpdateNegotiableQuoteItemsQuantityOutput`](#updatenegotiablequoteitemsquantityoutput)
+**Response:** [`UpdateNegotiableQuoteItemsQuantityOutput`](/reference/graphql/saas/types-t-z.md#updatenegotiablequoteitemsquantityoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`UpdateNegotiableQuoteQuantitiesInput!`](#updatenegotiablequotequantitiesinput) | An input object that changes the quantity of one or more items in a negotiable quote. |
+| `input` - [`UpdateNegotiableQuoteQuantitiesInput!`](/reference/graphql/saas/types-t-z.md#updatenegotiablequotequantitiesinput) | An input object that changes the quantity of one or more items in a negotiable quote. |
 
 #### Example
 
@@ -8741,13 +8747,13 @@ mutation updateNegotiableQuoteQuantities($input: UpdateNegotiableQuoteQuantities
 
 Change the quantity of one or more items in an existing negotiable quote template.
 
-**Response:** [`UpdateNegotiableQuoteTemplateItemsQuantityOutput`](#updatenegotiablequotetemplateitemsquantityoutput)
+**Response:** [`UpdateNegotiableQuoteTemplateItemsQuantityOutput`](/reference/graphql/saas/types-t-z.md#updatenegotiablequotetemplateitemsquantityoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`UpdateNegotiableQuoteTemplateQuantitiesInput!`](#updatenegotiablequotetemplatequantitiesinput) | An input object that changes the quantity of one or more items in a negotiable quote template. |
+| `input` - [`UpdateNegotiableQuoteTemplateQuantitiesInput!`](/reference/graphql/saas/types-t-z.md#updatenegotiablequotetemplatequantitiesinput) | An input object that changes the quantity of one or more items in a negotiable quote template. |
 
 #### Example
 
@@ -8787,14 +8793,14 @@ mutation updateNegotiableQuoteTemplateQuantities($input: UpdateNegotiableQuoteTe
 
 Update one or more products in the specified wish list.
 
-**Response:** [`UpdateProductsInWishlistOutput`](#updateproductsinwishlistoutput)
+**Response:** [`UpdateProductsInWishlistOutput`](/reference/graphql/saas/types-t-z.md#updateproductsinwishlistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `wishlistId` - [`ID!`](#id) | The ID of a wish list. |
-| `wishlistItems` - [`[WishlistItemUpdateInput!]!`](#wishlistitemupdateinput) | An array of items to be updated. |
+| `wishlistId` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The ID of a wish list. |
+| `wishlistItems` - [`[WishlistItemUpdateInput!]!`](/reference/graphql/saas/types-t-z.md#wishlistitemupdateinput) | An array of items to be updated. |
 
 #### Example
 
@@ -8823,7 +8829,7 @@ mutation updateProductsInWishlist(
 
 ```json
 {
-  "wishlistId": 4,
+  "wishlistId": "4",
   "wishlistItems": [WishlistItemUpdateInput]
 }
 ```
@@ -8847,13 +8853,13 @@ mutation updateProductsInWishlist(
 
 Update existing purchase order approval rules.
 
-**Response:** [`PurchaseOrderApprovalRule`](#purchaseorderapprovalrule)
+**Response:** [`PurchaseOrderApprovalRule`](/reference/graphql/saas/types-k-p.md#purchaseorderapprovalrule)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`UpdatePurchaseOrderApprovalRuleInput!`](#updatepurchaseorderapprovalruleinput) |  |
+| `input` - [`UpdatePurchaseOrderApprovalRuleInput!`](/reference/graphql/saas/types-t-z.md#updatepurchaseorderapprovalruleinput) |  |
 
 #### Example
 
@@ -8897,12 +8903,12 @@ mutation updatePurchaseOrderApprovalRule($input: UpdatePurchaseOrderApprovalRule
       "applies_to_roles": [CompanyRole],
       "approver_roles": [CompanyRole],
       "condition": PurchaseOrderApprovalRuleConditionInterface,
-      "created_at": "abc123",
-      "created_by": "abc123",
+      "created_at": "xyz789",
+      "created_by": "xyz789",
       "description": "xyz789",
       "name": "abc123",
       "status": "ENABLED",
-      "uid": 4,
+      "uid": "4",
       "updated_at": "abc123"
     }
   }
@@ -8915,14 +8921,14 @@ mutation updatePurchaseOrderApprovalRule($input: UpdatePurchaseOrderApprovalRule
 
 Rename a requisition list and change its description.
 
-**Response:** [`UpdateRequisitionListOutput`](#updaterequisitionlistoutput)
+**Response:** [`UpdateRequisitionListOutput`](/reference/graphql/saas/types-t-z.md#updaterequisitionlistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `requisitionListUid` - [`ID!`](#id) | The unique ID of the requisition list. |
-| `input` - [`UpdateRequisitionListInput`](#updaterequisitionlistinput) |  |
+| `requisitionListUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the requisition list. |
+| `input` - [`UpdateRequisitionListInput`](/reference/graphql/saas/types-t-z.md#updaterequisitionlistinput) |  |
 
 #### Example
 
@@ -8971,14 +8977,14 @@ mutation updateRequisitionList(
 
 Update items in a requisition list.
 
-**Response:** [`UpdateRequisitionListItemsOutput`](#updaterequisitionlistitemsoutput)
+**Response:** [`UpdateRequisitionListItemsOutput`](/reference/graphql/saas/types-t-z.md#updaterequisitionlistitemsoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `requisitionListUid` - [`ID!`](#id) | The unique ID of the requisition list. |
-| `requisitionListItems` - [`[UpdateRequisitionListItemsInput!]!`](#updaterequisitionlistitemsinput) | Items to be updated in the requisition list. |
+| `requisitionListUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the requisition list. |
+| `requisitionListItems` - [`[UpdateRequisitionListItemsInput!]!`](/reference/graphql/saas/types-t-z.md#updaterequisitionlistitemsinput) | Items to be updated in the requisition list. |
 
 #### Example
 
@@ -9029,15 +9035,15 @@ mutation updateRequisitionListItems(
 
 Change the name and visibility of the specified wish list.
 
-**Response:** [`UpdateWishlistOutput`](#updatewishlistoutput)
+**Response:** [`UpdateWishlistOutput`](/reference/graphql/saas/types-t-z.md#updatewishlistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `wishlistId` - [`ID!`](#id) | The ID of the wish list to update. |
-| `name` - [`String`](#string) | The name assigned to the wish list. |
-| `visibility` - [`WishlistVisibilityEnum`](#wishlistvisibilityenum) | Indicates the visibility of the wish list. |
+| `wishlistId` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The ID of the wish list to update. |
+| `name` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The name assigned to the wish list. |
+| `visibility` - [`WishlistVisibilityEnum`](/reference/graphql/saas/types-t-z.md#wishlistvisibilityenum) | Indicates the visibility of the wish list. |
 
 #### Example
 
@@ -9091,13 +9097,13 @@ mutation updateWishlist(
 
 Validate purchase orders.
 
-**Response:** [`ValidatePurchaseOrdersOutput`](#validatepurchaseordersoutput)
+**Response:** [`ValidatePurchaseOrdersOutput`](/reference/graphql/saas/types-t-z.md#validatepurchaseordersoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`ValidatePurchaseOrdersInput!`](#validatepurchaseordersinput) |  |
+| `input` - [`ValidatePurchaseOrdersInput!`](/reference/graphql/saas/types-t-z.md#validatepurchaseordersinput) |  |
 
 #### Example
 
