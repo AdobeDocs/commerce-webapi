@@ -5,15 +5,11 @@ keywords:
   - B2B
 ---
 
-<Fragment src="../../../../../includes/saas-only.md"/>
-
-<Fragment src="../../../../../includes/commerce-only.md"/>
+<Fragment src="/includes/commerce-only.md"/>
 
 # sharedRequisitionList query
 
-<InlineAlert variant="info" slots="text1" />
-
-This query is part of the B2B Storefront Compatibility Package and is only available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview).
+<Fragment src="/includes/scp-b2b-query.md" />
 
 The `sharedRequisitionList` query uses a token to retrieve a shared requisition list. The response can contain the `sender_name` and `requisition_list` object.
 

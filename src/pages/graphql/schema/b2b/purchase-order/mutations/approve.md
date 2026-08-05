@@ -5,7 +5,7 @@ keywords:
   - B2B
 ---
 
-<Fragment src="../../../../../includes/commerce-only.md"/>
+<Fragment src="/includes/commerce-only.md"/>
 
 # approvePurchaseOrders mutation
 
