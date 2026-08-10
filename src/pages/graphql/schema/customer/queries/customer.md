@@ -592,6 +592,60 @@ These topics contain examples with fragments and provide even more details:
 }
 ```
 
+### Search a customer's order history
+
+The following example uses the `search` filter to return orders matching a term against the order number or an item's product name or SKU. `search` is combined with other filters, such as `status`, using AND logic. The matched item is included in the response to show why the order matched the search term.
+
+**Request:**
+
+```graphql
+{
+  customer {
+    orders(filter: {search: "shirt", status: {eq: "complete"}}) {
+      total_count
+      items {
+        id
+        number
+        order_date
+        status
+        items {
+          product_name
+          product_sku
+        }
+      }
+    }
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "customer": {
+      "orders": {
+        "total_count": 1,
+        "items": [
+          {
+            "id": "MQ==",
+            "number": "000000001",
+            "order_date": "2020-11-14 22:25:48",
+            "status": "Complete",
+            "items": [
+              {
+                "product_name": "Aria Flannel Shirt",
+                "product_sku": "MS12-M-Blue"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
 ### Retrieve the store credit history
 
 The following example returns the store credit history for the logged-in user.
