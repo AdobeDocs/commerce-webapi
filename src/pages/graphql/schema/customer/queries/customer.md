@@ -594,6 +594,8 @@ These topics contain examples with fragments and provide even more details:
 
 ### Search a customer's order history
 
+<Fragment src="../includes/saas-only.md"/>
+
 The following example uses the `search` filter to return orders matching a term against the order number or an item's product name or SKU. `search` is combined with other filters, such as `status`, using AND logic. The matched item is included in the response to show why the order matched the search term.
 
 **Request:**
