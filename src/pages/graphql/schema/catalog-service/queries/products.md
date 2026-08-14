@@ -1023,7 +1023,7 @@ The `ProductViewOptionValueProduct` type is an implementation of `ProductViewOpt
 | `isDefault` | Boolean | Indicates whether the option is the default. |
 | `product` | [`SimpleProductView`](#simpleproductview-type) | Details about a simple product. |
 | `quantity` | [`SimpleProductView`](#simpleproductview-type) | Default quantity of an option value. |
-| `title` | String | The display name of the option value. |
+| `title` | String | The display name of the option value. If the associated `product` is indexed, this returns the product's name; otherwise it falls back to the option value's configured title. |
 
 ### ProductViewOptionValueSwatch type
 
