@@ -20,18 +20,18 @@ The Catalog Service query requires one or more SKU values as input. The query is
 
 Use the Live Search [`productSearch` query](../../live-search/queries/product-search.md) to return product listing page content.
 
-The `ProductView` output object is significantly different than the core `products` query `Products` output object. Key differences include:
+The `ProductView` output object is different than the core `products` query `Products` output object. Key differences include:
 
 * Products are either simple or complex. Simple, virtual, downloadable, and gift card products map to `SimpleProductView`. All other product types map to `ComplexProductView`.
 
   * Simple products have defined prices.
-  * Complex products have price ranges. Since complex products are comprised of multiple simple products, they have access to simple product prices.
+  * Complex products have price ranges. Because complex products are comprised of multiple simple products, they have access to simple product prices.
 
 * Both simple and complex products can have merchant-defined input options that allow shoppers to customize a product by adding text, date, an image, or a file, for example adding text for engraving. These options can have an associated markup that is applied to the product price. These options are exposed in a top-level `inputOptions` container `[ProductViewInputOption]`.
 
-*  Merchant-defined attributes are exposed in a top-level `attributes` container `[ProductViewAttribute]` and indicate their storefront roles. Roles include Show on PDP, Show on PLP, and Show on Search Results.
+*  Merchant-defined attributes are exposed in a top-level `attributes` container `[ProductViewAttribute]` and indicate their storefront roles. Roles include PDP, PLP, and Search Results display.
 
-*  Images are also accessible as a top-level container and can be filtered by their role. An image can have an `image`, `small_image`, or `thumbnail` role.
+*  Images are also accessible as a top-level container, and you can filter them by their role. An image can have an `image`, `small_image`, or `thumbnail` role.
 
 ## Syntax
 
@@ -45,7 +45,7 @@ products(skus: [String]): [ProductView]
 
 ## Required headers
 
-You must specify the following HTTP headers to run this query.
+Specify the following HTTP headers to run this query.
 
 <Fragment src="../../../../includes/graphql/catalog-service/headers.md"/>
 
@@ -55,7 +55,7 @@ You must specify the following HTTP headers to run this query.
 
 ## Example usage
 
-The [Commerce API playground](https://experienceleague.adobe.com/developer/commerce/storefront/playgrounds/commerce-services/) provides a sample `products` query that you can run against a live instance of Adobe Commerce with Luma sample data. Note that the responses may vary, depending on the configuration of the Commerce instance.
+The [Commerce API playground](https://experienceleague.adobe.com/developer/commerce/storefront/playgrounds/commerce-services/) provides a sample `products` query that you can run against a live instance of Adobe Commerce with Luma sample data. Note that the responses vary, depending on the configuration of the Commerce instance.
 
 ### Return details about a simple product
 
@@ -836,7 +836,7 @@ query {
 
 ## Output fields
 
-The `ProductView` return object is an interface that can contain the following fields. It is implemented by the [`SimpleProductView`](#simpleproductview-type) and [`ComplexProductView`](#complexproductview-type) types.
+The `ProductView` return object is an interface that can contain the following fields. The [`SimpleProductView`](#simpleproductview-type) and [`ComplexProductView`](#complexproductview-type) types implement it.
 
 | Field | Data Type | Description |
 | --- | --- | --- |
@@ -908,7 +908,7 @@ The `PriceAdjustment` type specifies the amount and type of a price adjustment. 
 
 ### ProductViewAttribute type
 
-The `ProductViewAttribute` type is a container for customer-defined attributes that are displayed the storefront.
+The `ProductViewAttribute` type is a container for customer-defined attributes that are displayed on the storefront.
 
 | Field | Data Type | Description |
 | --- | --- | --- |
@@ -947,7 +947,7 @@ The `ProductViewMoney` type defines a monetary value, including a numeric value 
 
 ### ProductViewInputOption type
 
-Product input options provide details about how a shopper can enter customization details for a product. For example, for product personalization the input options might provide the fields for the shopper to add an image or text for a monogram. The input option can include an associated `markupAmount` that is applied to the product price. For additional information, see [Product settings - Customizable Options](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/products/settings/settings-advanced-custom-options).
+Product input options provide details about how a shopper can enter customization details for a product. For example, for product personalization the input options provide the fields for the shopper to add an image or text for a monogram. The input option can include an associated `markupAmount` that is applied to the product price. For additional information, see [Product settings - Customizable Options](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/products/settings/settings-advanced-custom-options).
 
 | Field | Data Type | Description |
 | -- | -- | -- |
