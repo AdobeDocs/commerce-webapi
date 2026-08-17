@@ -344,8 +344,8 @@ The advanced search capabilities have the following limitations:
 - You can specify a maximum of six attributes to be enabled for **Contains** and six attributes to be enabled for **Starts with**.
 - Each aggregation returns a maximum of 1000 facets.
 - `startsWith` `startsWith` `startsWith` and `contains` both require a minimum of two characters in the search.
-- `startsWith` `startsWith` `startsWith` allows a maximum of 10 characters for search.
-- `contains` `contains` allows a maximum of 10 characters for search in the API query and up to the first 50 characters are indexed for a true `contains` search. However, if more than 10 characters are passed in, the search results are returned for an autocomplete search result and not a true `contains` search. Autocomplete search is enabled on the entire attribute string, not just the first 50 characters.
+- `startsWith` allows a maximum of 10 characters for search.
+- `contains` allows a maximum of 10 characters for search in the API query and up to the first 50 characters are indexed for a true `contains` search. However, if more than 10 characters are passed in, the search results are returned for an autocomplete search result and not a true `contains` search. Autocomplete search is enabled on the entire attribute string, not just the first 50 characters.
 - You can paginate a maximum of 10,000 products for any `productSearch` query.
 - These new search capabilities are not available in PLP widgets or the Live Search adapter extension.
 
@@ -371,7 +371,7 @@ For search merchandising rules to apply, the `productSearch` query sorts by rele
 
 This example shows how to filter returned facets when browsing a category page.
 
-`categoryPath` `categoryPath` performs strict filtering, meaning that the facets returned are limited to the immediate children of the current category page.
+`categoryPath` performs strict filtering, meaning that the facets returned are limited to the immediate children of the current category page.
 
 The following snippet corresponds to a shopper selecting **Women** > **Bottoms**.
 
@@ -432,7 +432,7 @@ In this example, the system returns products sorted by relevance.
 
 #### categories
 
-`categories` `categories` can be used as a filter in a query when a category facet is selected in the layered navigation.
+`categories` can be used as a filter in a query when a category facet is selected in the layered navigation.
 This filter does not result in strict filtering when used by itself.
 
 ```graphql
