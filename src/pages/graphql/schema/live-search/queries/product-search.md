@@ -189,9 +189,9 @@ The advanced search capabilities are implemented through the `filter` parameter 
 
 - **contains search indexation** -Search an attribute using contains indexation. This new capability allows:
 
-    - Searching for a query within a larger string. For example, if a shopper searches for the product number "PE-123" in the string "HAPE-123."
+    - Searching for a query within a larger string. For example, if a shopper searches for the product number "PE-123" in the string "HAPE-123".
 
-        - Note: This search type is different from the existing [phrase search](#phrase), which performs an autocomplete search. For example, if your product attribute value is "outdoor pants," a phrase search returns a response for "out pan," but does not return a response for "oor ants." A contains search, however, does return a response for "oor ants."
+        - Note: This search type is different from the existing [phrase search](#phrase), which performs an autocomplete search. For example, if your product attribute value is "outdoor pants," a phrase search returns a response for "out pan," but does not return a response for "oor ants". A contains search, however, does return a response for "oor ants".
 
 ##### Examples
 
@@ -230,7 +230,7 @@ The Live Search Product Listing Page (PLP) and popover widgets do not support la
 
 ##### startsWith condition example
 
-The following example shows how you can search the "manufacturer" product attribute using a `startsWith` value of "Sieme."
+The following example shows how you can search the "manufacturer" product attribute using a `startsWith` value of "Sieme".
 
 ```graphql
 filter: [
@@ -243,7 +243,7 @@ filter: [
 
 ##### contains condition example
 
-The following example shows how you can search the "manufacturer" product attribute using a `contains` value of "auto." The result of this query matches manufacturers named "ABC Auto Company" and "ABCauto" for example.
+The following example shows how you can search the "manufacturer" product attribute using a `contains` value of "auto". The result of this query matches manufacturers named "ABC Auto Company" and "ABCauto" for example.
 
 ```graphql
 filter: [  
@@ -357,7 +357,7 @@ The `categories` and `categoryPath` filters in the Admin filter results. They ar
 
 `categories` is preferred when selecting from a category filter. Filtering on `categories` with "women/bottoms-women" and the phrase `pants`, the category facets returned are "promotions/pants-all," "women/bottoms-women/pants-women," and similar.
 
-`categoryPath` is preferred when browsing by category. `categoryPath` returns the immediate subcategories of the category path being filtered. Filtering on `categoryPath` with "women/bottoms-women," the category facets returned are its children such as "women/bottoms-women/pants-women" and "women/bottoms-women/shorts-women."
+`categoryPath` is preferred when browsing by category. `categoryPath` returns the immediate subcategories of the category path being filtered. Filtering on `categoryPath` with "women/bottoms-women," the category facets returned are its children such as "women/bottoms-women/pants-women" and "women/bottoms-women/shorts-women".
 
 A `phrase` attribute is required but is an empty string if you are filtering by `category` or `categoryPath`.
 
@@ -365,7 +365,7 @@ Pinned categories are always returned, regardless of the filtered category.
 
 <InlineAlert variant="info" slots="text"/>
 
-For search merchandising rules to apply, the `productSearch` query sorts by relevance or passes no sort variables at all. For category merchandising rules to apply, the `productSearch` query sorts by `position`, filters on `categoryPath` for browsing a category page (otherwise, no category rules apply), and `phrase` is "empty."
+For search merchandising rules to apply, the `productSearch` query sorts by relevance or passes no sort variables at all. For category merchandising rules to apply, the `productSearch` query sorts by `position`, filters on `categoryPath` for browsing a category page (otherwise, no category rules apply), and `phrase` is "empty".
 
 #### categoryPath
 
@@ -448,7 +448,7 @@ filter: [
 ]
 ```
 
-Category filters can be used together. Here, the shopper navigates to "Womens -> Bottoms" and filters on "pants." This query returns both "Pants" and "Shorts" as facets in the layered navigation.
+Category filters can be used together. Here, the shopper navigates to "Womens -> Bottoms" and filters on "pants". This query returns both "Pants" and "Shorts" as facets in the layered navigation.
 
 ```graphql
 filter: [
