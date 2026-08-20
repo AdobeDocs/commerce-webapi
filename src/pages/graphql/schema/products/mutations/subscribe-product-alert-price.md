@@ -4,9 +4,9 @@ description: The subscribeProductAlertPrice mutation subscribes the logged-in cu
 
 ---
 
-<Fragment src="../../../../includes/saas-only.md"/>
-
 # subscribeProductAlertPrice mutation
+
+<Fragment src="/includes/scp-mutation.md" />
 
 The `subscribeProductAlertPrice` mutation subscribes the logged-in customer to a price drop alert for the specified product. When the product price decreases, the customer receives an email notification.
 

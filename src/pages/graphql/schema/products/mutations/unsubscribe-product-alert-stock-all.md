@@ -4,9 +4,9 @@ description: The unsubscribeProductAlertStockAll mutation removes all stock avai
 
 ---
 
-<Fragment src="../../../../includes/saas-only.md"/>
-
 # unsubscribeProductAlertStockAll mutation
+
+<Fragment src="/includes/scp-mutation.md" />
 
 The `unsubscribeProductAlertStockAll` mutation removes all stock availability alert subscriptions for the logged-in customer across the current website. After calling this mutation, the customer no longer receives any stock alert email notifications.
 
