@@ -161,6 +161,7 @@
         - [Login as Customer](/rest/saas-integrations/login-as-customer/index.md)
         - [Order management](/rest/saas-integrations/order-management/index.md)
         - [S3 uploads](/rest/saas-integrations/s3-uploads/index.md)
+        - [System configuration](/rest/saas-integrations/system-config/index.md)
     - [Introduction](/graphql/index.md)
     - [Usage](/graphql/usage/index.md)
         - [Authorization](/graphql/usage/authorization-tokens.md)
