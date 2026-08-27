@@ -1,6 +1,7 @@
 ---
 title: Live Search
-description: Learn how Live Search implements GraphQL.
+description: Explore the Live Search GraphQL schema, learn how to query catalog data through its endpoint, test requests, and troubleshoot common error codes.
+
 keywords:
   - GraphQL
   - Services
