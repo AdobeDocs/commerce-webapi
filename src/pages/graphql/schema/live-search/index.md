@@ -7,7 +7,7 @@ keywords:
   - Search
 ---
 
-# Live Search
+# Live Search GraphQL Schema Reference
 
 Live Search is a set of standalone packages for Adobe Commerce that replaces the standard search capabilities. It provides GraphQL functionality that is currently separate from the built-in GraphQL functionality provided in Adobe Commerce and Magento Open Source. Live Search GraphQL requires connecting to a different endpoint and specifying a different set of HTTP headers.
 
