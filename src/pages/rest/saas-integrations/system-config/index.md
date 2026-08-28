@@ -20,7 +20,7 @@ These endpoints are designed for:
 
 ## Sync configuration from sandbox to production
 
-This API endpoint allows you to easily copy configuration values from one environment to another. This section provides a generalized overview of how you could copy values that you were testing in your sandbox environment to production. For details about these endpoints, see:
+This section provides a generalized overview of how you could copy values that you were testing in your sandbox environment to production. For details about these endpoints, see:
 
 - [Retrieve configuration values](#retrieve-configuration-values)
 - [Update configuration values](#update-configuration-values)
@@ -71,7 +71,7 @@ Returns configuration items that match the given search criteria. Only paths vis
 
 <InlineAlert variant="info" slots="text" />
 
-A `path` filter returns exactly the paths you request, so `pageSize` and `currentPage` are ignored. Without a `path` filter, the endpoint falls back to the legacy behavior of returning up to 500 paths.
+A `path` filter returns exactly the paths you request, so `pageSize` and `currentPage` are ignored. Without a `path` filter, the endpoint returns all available configuration paths.
 
 #### Example: retrieve a single configuration path
 
