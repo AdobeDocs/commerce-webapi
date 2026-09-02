@@ -7,15 +7,11 @@ description: Use the sourceAvailability query to check per-source inventory avai
 
 # sourceAvailability query
 
-Use the `sourceAvailability` query to check per-source inventory availability for one or more SKUs. The query reports availability only for the inventory sources assigned and enabled for the current sales channel's stock, and computes availability the same way the order-placement guard does, so a storefront read never disagrees with what checkout allows.
+Use the `sourceAvailability` query to check per-source inventory availability for one or more SKUs. The query reports availability only for the inventory sources assigned and enabled for the current sales channel's stock, so a storefront read never disagrees with what checkout allows.
 
-A merchant admin must enable this query before it returns data. Go to **Stores** > Configuration > **Catalog** > **Inventory** > **Per-Source Availability (Storefront)** and set **Enable sourceAvailability GraphQL Query** to **Yes**. The query is disabled by default because it discloses which sources stock a SKU, and returns an error while disabled.
+An admin must enable this query before it returns data. Go to **Stores** > Configuration > **Catalog** > **Inventory** > **Per-Source Availability (Storefront)** and set **Enable `sourceAvailability` GraphQL Query** to **Yes**. The query is disabled by default because it discloses which sources stock a SKU, and returns an error while disabled.
 
-Requesting a `source_codes` value that is not assigned to the current sales channel does not return an error. The unrecognized code is silently dropped from the response so its existence is never disclosed.
-
-<InlineAlert variant="info" slots="text" />
-
-The exact `available_qty` value is returned only when it is at or below the merchant's storefront display threshold (`cataloginventory/options/stock_threshold_qty`). Above the threshold, `available_qty` is `null` and `is_in_stock` is the only reliable signal. The threshold defaults to `0`, so by default every positive quantity is masked and `is_in_stock` is the authoritative field to check.
+The exact `available_qty` value is returned only when it is at or below the store's **Only X left Threshold** setting. Above the threshold, `available_qty` is `null` and `is_in_stock` is the only reliable signal. This threshold defaults to `0`, so by default every positive quantity is masked and `is_in_stock` is the authoritative field to check. To change it, go to **Stores** > Configuration > **Catalog** > **Inventory** > **Stock Options** and set **Only X left Threshold**.
 
 ## Syntax
 
@@ -93,4 +89,4 @@ The following query checks availability for a single SKU at two named sources.
 | `Parameter "skus" may contain at most 100 entries.` | The `skus` argument contains more than 100 entries. |
 | `Parameter "source_codes" must be a list of source codes.` | The `source_codes` argument was provided as a non-list value. |
 | `Parameter "source_codes" may contain at most 100 entries.` | The `source_codes` argument contains more than 100 entries. |
-| `The per-source availability query is not enabled for this store.` | A merchant admin has not enabled the query for the current store. |
+| `The per-source availability query is not enabled for this store.` | An admin has not enabled the query for the current store. |
