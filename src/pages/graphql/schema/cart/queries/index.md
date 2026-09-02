@@ -8,3 +8,5 @@ description: The cart query returns the content of the shopper's cart. Adobe Com
 The [`cart`](cart.md) query returns the content of the shopper's cart. Adobe Commerce returns the [`Cart`](/reference/graphql/latest/types-c-e.md#cart) object. This object is also returned by numerous mutations, including those that add products to the cart and prepare a cart for checkout.
 
 When Inventory Management is installed and configured, you can use the [`pickupLocations`](pickup-locations.md) query to help a shopper determine whether their order can be picked up at a physical location. This query is most useful when the shopper has selected one or more items for purchase.
+
+Use the [`sourceAvailability`](source-availability.md) query to check per-source inventory availability for one or more SKUs before nominating a source on a cart item.
