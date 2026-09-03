@@ -113,7 +113,7 @@ Use the following endpoints to list, retrieve, create, update, and delete custom
 
 Use the `template_id` returned by these endpoints with `POST /V1/custom-email/send` instead of looking up the ID manually.
 
-### Template object
+### Template object parameters
 
 The `template` object represents a custom email template. Create and update requests wrap these fields in a `template` object, while list and retrieve responses return the same fields at the top level of the response.
 
@@ -140,7 +140,7 @@ The endpoint accepts standard `searchCriteria` parameters for pagination, sortin
 
 #### Response fields
 
-The response includes the [template object](#template-object) fields, except `template_text` and `template_styles`.
+The response includes the [template object](#template-object-parameters) fields, except `template_text` and `template_styles`.
 
 #### Example request
 
@@ -178,7 +178,7 @@ Use the following endpoint to retrieve a single custom email template by its ID.
 
 -  **URL** - `GET /rest/V1/custom-email/templates/{id}`
 
-The response includes all [template object](#template-object) fields, including `template_text` and `template_styles`.
+The response includes all [template object](#template-object-parameters) fields, including `template_text` and `template_styles`.
 
 #### Example request
 
@@ -221,7 +221,7 @@ Commerce returns HTTP 200 (not 201) on success, consistent with other Commerce R
 
 #### Request body
 
-Wrap the template fields in a `template` object. See [Template object](#template-object) for the full field definitions.
+Wrap the template fields in a `template` object. See [Template object](#template-object-parameters) for the full field definitions.
 
 -  **Required** - `template_code`, `template_subject`, and `template_text`
 -  **Optional** - `template_type` and `template_styles`
@@ -274,7 +274,7 @@ The `{id}` in the URL identifies the template to update. A `template_id` supplie
 
 #### Request body
 
-Wrap the fields to change in a `template` object. The request accepts the same [template object](#template-object) fields as create, with these differences:
+Wrap the fields to change in a `template` object. The request accepts the same [template object](#template-object-parameters) fields as create, with these differences:
 
 -  All fields are **optional**. This is a **partial update**, so only the fields present in the request body are changed. Fields that are not included keep their previous value.
 -  `template_code` is excluded from its own uniqueness check, so keeping the existing code is allowed.
