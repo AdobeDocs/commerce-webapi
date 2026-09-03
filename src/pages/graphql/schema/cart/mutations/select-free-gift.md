@@ -223,6 +223,7 @@ mutation {
   }
 }
 ```
+
 **Response:**
 
 ```json
