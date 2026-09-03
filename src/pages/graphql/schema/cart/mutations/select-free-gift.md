@@ -20,6 +20,14 @@ After the shopper selects a gift, the mutation adds the product to the cart as a
 
 `mutation: {selectFreeGiftForCart(input: SelectFreeGiftForCartInput!): SelectFreeGiftForCartOutput}`
 
+## Reference
+
+The `selectFreeGiftForCart` reference provides detailed information about the types and fields defined in this mutation.
+
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#selectFreeGiftForCart)
+
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#selectFreeGiftForCart)
+
 ## Example usage
 
 The following examples show how to determine which Free Gift rules require a selection and how to select a gift SKU for a rule.
@@ -215,27 +223,59 @@ mutation {
   }
 }
 ```
+**Response:**
 
-## Input attributes
-
-The `SelectFreeGiftForCartInput` object must contain the following attributes.
-
-| Attribute | Data Type | Description |
-| --- | --- | --- |
-| `cart_id` | String! | The masked ID of the shopper's cart. |
-| `rule_id` | Int! | The identifier of the Free Gift rule the selection is for. Must be a rule that is currently applied to the cart and pending selection. |
-| `sku` | String! | The SKU of the gift product to add. Must be one of the rule's configured SKUs. |
-| `quantity` | Int | Overrides the rule's configured gift quantity. Must be a positive integer no greater than the rule's `gift_qty`. Defaults to the rule's `gift_qty`. |
-| `entered_options` | [[EnteredOptionInput!]](../../products/interfaces/index.md) | An array of custom option values entered by the shopper, such as text inputs. |
-| `selected_options` | [ID!] | An array of UIDs that identify selected option values, such as configurable variants or bundle selections. |
-
-## Output attributes
-
-The `SelectFreeGiftForCartOutput` object contains the `Cart` object.
-
-| Attribute | Data Type | Description |
-| --- | --- | --- |
-| `cart` | [Cart!](../queries/cart.md) | The cart after adding the selected free-gift product. |
+```json
+{
+  "data": {
+    "selectFreeGiftForCart": {
+      "cart": {
+        "has_available_free_gifts": false,
+        "itemsV2": {
+          "items": [
+            {
+              "uid": "Mg==",
+              "quantity": 1,
+              "is_free_gift": false,
+              "product": {
+                "sku": "WSH12",
+                "name": "Gwen Drawstring Bike Short"
+              },
+              "prices": {
+                "price": {
+                  "value": 32,
+                  "currency": "USD"
+                }
+              }
+            },
+            {
+              "uid": "Mjc=",
+              "quantity": 1,
+              "is_free_gift": true,
+              "product": {
+                "sku": "WSH12",
+                "name": "Gwen Drawstring Bike Short"
+              },
+              "prices": {
+                "price": {
+                  "value": 0,
+                  "currency": "USD"
+                }
+              }
+            }
+          ],
+          "total_count": 2,
+          "page_info": {
+            "page_size": 20,
+            "current_page": 1,
+            "total_pages": 1
+          }
+        }
+      }
+    }
+  }
+}
+```
 
 ## Errors
 

@@ -8,7 +8,7 @@ description: Adobe Commerce as a Cloud Service (SaaS) does not support this cate
 
 # categories query
 
-<InlineAlert variant="important" slots="text" />
+<InlineAlert variant="warning" slots="text" />
 
 Adobe Commerce as a Cloud Service (SaaS) does not support this `categories` query. Use the Catalog Service [`categories` query](../../catalog-service/queries/categories.md) instead. If you are migrating from PaaS to SaaS, you must update your applications to use the Catalog Service query.
 

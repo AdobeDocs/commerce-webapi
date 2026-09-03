@@ -5,13 +5,11 @@ keywords:
   - B2B
 ---
 
-<Fragment src="../../../../../includes/commerce-only.md"/>
+<Fragment src="/includes/commerce-only.md"/>
 
 # setDefaultCompanyAddress mutation
 
-<InlineAlert variant="info" slots="text1" />
-
-This mutation is part of the B2B Storefront Compatibility Package and is only available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview).
+<Fragment src="/includes/scp-b2b-mutation.md" />
 
 The `setDefaultCompanyAddress` mutation allows a company admin or user who is assigned a role that contains the `Magento_CompanyAddressStorefrontCompatibility::default` permission to set a company address based on the provided address UID as the default billing or shipping address for the company.
 
