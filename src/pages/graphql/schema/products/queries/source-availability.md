@@ -7,9 +7,13 @@ description: Use the sourceAvailability query to check per-source inventory avai
 
 # sourceAvailability query
 
-Use the `sourceAvailability` query to check per-source inventory availability for one or more SKUs. The query reports availability only for the inventory sources assigned and enabled for the current sales channel's stock, so a storefront read never disagrees with what checkout allows.
+Use the `sourceAvailability` query to check per-source inventory availability for one or more SKUs. The query reports availability only for the storefront-visible inventory sources that are enabled and assigned to the current sales channel's stock, so a storefront read never discloses a source the merchant has not opted in and never disagrees with what checkout allows.
 
-An admin must enable this query before it returns data. Go to **Stores** > Configuration > **Catalog** > **Inventory** > **Per-Source Availability (Storefront)** and set **Enable `sourceAvailability` GraphQL Query** to **Yes**. The query is disabled by default because it discloses which sources stock a SKU, and returns an error while disabled.
+Availability is gated at two levels, and both are off by default because they disclose which sources stock a SKU:
+
+- **Store level.** Go to **Stores** > Configuration > **Catalog** > **Inventory** > **Per-Source Availability (Storefront)** and set **Enable `sourceAvailability` GraphQL Query** to **Yes**. While this setting is off, the query returns an error.
+
+- **Source level.** Each inventory source has a **Visible on Storefront** flag that is off by default. A source's stock is never returned until a merchant enables it. To set it, go to **Stores** > Inventory > **Sources**, edit a source, and turn on **Visible on Storefront**.
 
 The exact `available_qty` value is returned only when it is at or below the store's **Only X left Threshold** setting. Above the threshold, `available_qty` is `null` and `is_in_stock` is the only reliable signal. This threshold defaults to `0`, so by default every positive quantity is masked and `is_in_stock` is the authoritative field to check. To change it, go to **Stores** > Configuration > **Catalog** > **Inventory** > **Stock Options** and set **Only X left Threshold**.
 
@@ -22,7 +26,7 @@ sourceAvailability (skus: [String!]! source_codes: [String!] only_in_stock: Bool
 | Argument | Description |
 | --- | --- |
 | `skus` | The product SKUs to report availability for. Required. Accepts up to 100 entries. |
-| `source_codes` | Restricts the report to these inventory sources. Accepts up to 100 entries. When omitted, the query reports every source assigned to the current sales channel's stock. |
+| `source_codes` | Restricts the report to these inventory sources. Accepts up to 100 entries. When omitted, the query reports every storefront-visible source assigned to the current sales channel's stock. Only storefront-visible sources are reported. A requested source that is not storefront-visible, or not assigned to the current sales channel's stock, is silently omitted. |
 | `only_in_stock` | When `true`, omits sources where the SKU is not salable. Defaults to `false`. |
 
 ## Reference
