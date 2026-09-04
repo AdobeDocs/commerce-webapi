@@ -230,6 +230,7 @@
                 - [removeItemFromCart](/graphql/schema/cart/mutations/remove-item.md)
                 - [removeRewardPointsFromCart](/graphql/schema/cart/mutations/remove-reward-points.md)
                 - [removeStoreCreditFromCart](/graphql/schema/cart/mutations/remove-store-credit.md)
+                - [selectFreeGiftForCart](/graphql/schema/cart/mutations/select-free-gift.md)
                 - [setBillingAddressOnCart](/graphql/schema/cart/mutations/set-billing-address.md)
                 - [setGiftOptionsOnCart](/graphql/schema/cart/mutations/set-gift-options.md)
                 - [setGuestEmailOnCart](/graphql/schema/cart/mutations/set-guest-email.md)
