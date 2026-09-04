@@ -16,6 +16,7 @@ This section describes the following queries:
 * [`productReviewRatingsMetadata`](product-review-ratings-metadata.md)
 * [`products`](products.md)
 * [`route`](route.md)
+* [`sourceAvailability`](source-availability.md)
 * [`urlResolver`](url-resolver.md)
 
 <InlineAlert variant="warning" slots="text" />
