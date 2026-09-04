@@ -23,9 +23,9 @@ The `sharedRequisitionList` query uses a token to retrieve a shared requisition 
 }
 ```
 
-[//]: # (## Reference)
-[//]: # ()
-[//]: # (The [`sharedRequisitionList`]&#40;/reference/graphql/saas/index.md#sharedrequisitionlist&#41; reference provides detailed information about the types and fields defined in this query.)
+## Reference
+
+The [`sharedRequisitionList`](/reference/graphql/saas/index.md#sharedrequisitionlist) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 
