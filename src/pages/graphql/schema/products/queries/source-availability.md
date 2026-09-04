@@ -23,6 +23,8 @@ The exact `available_qty` value is returned only when it is at or below the stor
 sourceAvailability (skus: [String!]! source_codes: [String!] only_in_stock: Boolean): [SkuSourceAvailability!]!
 ```
 
+The query accepts the following arguments:
+
 | Argument | Description |
 | --- | --- |
 | `skus` | Required. The product SKUs to report availability for. Accepts up to 100 entries. |
