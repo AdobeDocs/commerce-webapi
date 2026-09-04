@@ -25,7 +25,7 @@ sourceAvailability (skus: [String!]! source_codes: [String!] only_in_stock: Bool
 
 | Argument | Description |
 | --- | --- |
-| `skus` | The product SKUs to report availability for. Required. Accepts up to 100 entries. |
+| `skus` | Required. The product SKUs to report availability for. Accepts up to 100 entries. |
 | `source_codes` | Restricts the report to these inventory sources. Accepts up to 100 entries. When omitted, the query reports every storefront-visible source assigned to the current sales channel's stock. Only storefront-visible sources are reported. A requested source that is not storefront-visible, or not assigned to the current sales channel's stock, is silently omitted. |
 | `only_in_stock` | When `true`, omits sources where the SKU is not salable. Defaults to `false`. |
 
