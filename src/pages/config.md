@@ -385,6 +385,7 @@
                 - [products](/graphql/schema/products/queries/products.md)
                 - [productReviewRatingsMetadata](/graphql/schema/products/queries/product-review-ratings-metadata.md)
                 - [route](/graphql/schema/products/queries/route.md)
+                - [sourceAvailability](/graphql/schema/products/queries/source-availability.md)
                 - [urlResolver](/graphql/schema/products/queries/url-resolver.md)
             - [Mutations](/graphql/schema/products/mutations/index.md)
                 - [addProductsToCompareList](/graphql/schema/products/mutations/add-products-to-compare-list.md)
