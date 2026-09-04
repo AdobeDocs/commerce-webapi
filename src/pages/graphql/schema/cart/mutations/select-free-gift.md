@@ -22,7 +22,7 @@ After the shopper selects a gift, the mutation adds the product to the cart as a
 
 ## Reference
 
-The [`selectFreeGiftForCart`](/reference/graphql/saas/index.md#selectfreegiftforcart) reference provides detailed information about the types and fields defined in this query.
+The [`selectFreeGiftForCart`](/reference/graphql/saas/index.md#selectfreegiftforcart) reference provides detailed information about the types and fields defined in this mutation.
 
 \<!-- Available in PaaS on 2.4.10
 The `selectFreeGiftForCart` reference provides detailed information about the types and fields defined in this mutation.
