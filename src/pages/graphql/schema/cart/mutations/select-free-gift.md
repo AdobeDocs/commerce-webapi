@@ -20,13 +20,16 @@ After the shopper selects a gift, the mutation adds the product to the cart as a
 
 `mutation: {selectFreeGiftForCart(input: SelectFreeGiftForCartInput!): SelectFreeGiftForCartOutput}`
 
-\<!-- ## Reference
+## Reference
 
+The [`selectFreeGiftForCart`](/reference/graphql/saas/index.md#selectfreegiftforcart) reference provides detailed information about the types and fields defined in this query.
+
+\<!-- Available in PaaS on 2.4.10
 The `selectFreeGiftForCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#selectFreeGiftForCart)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#selectfreegiftforcart)
 
-* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#selectFreeGiftForCart) --\>
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#selectfreegiftforcart) --\>
 
 ## Example usage
 
