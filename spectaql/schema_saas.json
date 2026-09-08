@@ -3048,6 +3048,22 @@
             "deprecationReason": null
           },
           {
+            "name": "types",
+            "description": "Array of image types. It can have the following values: image, small_image, thumbnail.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "url",
             "description": "The URL of the product image or video.",
             "args": [],
@@ -3120,6 +3136,22 @@
               "kind": "SCALAR",
               "name": "Int",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "types",
+            "description": "Array of image types. It can have the following values: image, small_image, thumbnail.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -4642,6 +4674,11 @@
           },
           {
             "kind": "OBJECT",
+            "name": "GiftCartAttributeValue",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
             "name": "ProductAttributeFile",
             "ofType": null
           }
@@ -4694,6 +4731,105 @@
           {
             "name": "symbol",
             "description": "Currency symbol, for example $.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "AvailableFreeGift",
+        "description": "A free-gift cart price rule that has not yet had a gift added because the customer must choose between multiple SKUs and/or product options.",
+        "fields": [
+          {
+            "name": "available_skus",
+            "description": "SKUs configured on the rule that resolved to a salable product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "gift_qty",
+            "description": "Quantity of the chosen gift product to be added.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "products",
+            "description": "Product details for the configured gift SKUs (parents for configurable/bundle), so the storefront picker can render without an extra round-trip.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "INTERFACE",
+                  "name": "ProductInterface",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "rule_id",
+            "description": "Identifier of the cart price rule offering the gift.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "rule_label",
+            "description": "Storefront-facing label for this rule (per-store label when set, otherwise description or a default).",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -4989,6 +5125,16 @@
             "defaultValue": null
           },
           {
+            "name": "company_address_id",
+            "description": "UID of a company address to use for billing.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "customer_address_id",
             "description": "An ID from the customer's address book that uniquely identifies the address to be used for billing.",
             "type": {
@@ -5136,6 +5282,18 @@
             "type": {
               "kind": "SCALAR",
               "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "company_address_id",
+            "description": "UID of the company address referenced by this cart address, if any.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
               "ofType": null
             },
             "isDeprecated": false,
@@ -5671,6 +5829,22 @@
             "deprecationReason": "Use `is_salable` instead. It indicates whether the line can be purchased, including backorder configuration."
           },
           {
+            "name": "is_free_gift",
+            "description": "True if this line item was added by a Free Gift cart price rule.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "is_salable",
             "description": "True when the item can be purchased and should not block checkout: stock status is in stock and either physical quantity covers the requested quantity or backorders are allowed.",
             "args": [],
@@ -5706,6 +5880,38 @@
               "kind": "SCALAR",
               "name": "Float",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nominated_source",
+            "description": "The source currently nominated for this cart item, with its live availability snapshot. Null when no source is nominated, or when the nominated source no longer resolves or is disabled (see nominated_source_errors).",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "SourceAvailability",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nominated_source_errors",
+            "description": "Live validation errors for this item's current nomination: UNKNOWN_SOURCE if the source no longer exists, SOURCE_DISABLED if it exists but is disabled, NOT_ENOUGH_QTY if available quantity has since dropped below the item's quantity. Empty when there is no nomination or it is still valid. SKU_SOURCE_CONFLICT never appears here — it is enforced only by the setNominatedSourceOnCartItems write path and cannot occur on an already-persisted cart.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "NominatedSourceError",
+                  "ofType": null
+                }
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -6496,6 +6702,18 @@
                 "name": "OrderItemOption",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "free_gift_label",
+            "description": "The discount rule label for free gift items. Null if the item is not a free gift.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -8388,6 +8606,26 @@
             "deprecationReason": null
           },
           {
+            "name": "available_free_gifts",
+            "description": "Free-gift rules applied to the cart that still need a SKU selection from the customer.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "AvailableFreeGift",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "available_gift_wrappings",
             "description": "The list of available gift wrapping options for the cart.",
             "args": [],
@@ -8499,6 +8737,22 @@
               "kind": "OBJECT",
               "name": "GiftWrapping",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "has_available_free_gifts",
+            "description": "True if any applied free-gift rule requires the customer to choose a SKU before placing the order.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -8907,9 +9161,13 @@
             "name": "telephone",
             "description": "The telephone number for the billing or shipping address.",
             "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
             },
             "defaultValue": null
           },
@@ -8956,6 +9214,18 @@
             "type": {
               "kind": "SCALAR",
               "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "company_address_id",
+            "description": "UID of the company address referenced by this cart address, if any.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
               "ofType": null
             },
             "isDeprecated": false,
@@ -9595,6 +9865,22 @@
             "deprecationReason": "Use `is_salable` instead. It indicates whether the line can be purchased, including backorder configuration."
           },
           {
+            "name": "is_free_gift",
+            "description": "True if this line item was added by a Free Gift cart price rule.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "is_salable",
             "description": "True when the item can be purchased and should not block checkout: stock status is in stock and either physical quantity covers the requested quantity or backorders are allowed.",
             "args": [],
@@ -9630,6 +9916,38 @@
               "kind": "SCALAR",
               "name": "Float",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nominated_source",
+            "description": "The source currently nominated for this cart item, with its live availability snapshot. Null when no source is nominated, or when the nominated source no longer resolves or is disabled (see nominated_source_errors).",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "SourceAvailability",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nominated_source_errors",
+            "description": "Live validation errors for this item's current nomination: UNKNOWN_SOURCE if the source no longer exists, SOURCE_DISABLED if it exists but is disabled, NOT_ENOUGH_QTY if available quantity has since dropped below the item's quantity. Empty when there is no nomination or it is still valid. SKU_SOURCE_CONFLICT never appears here — it is enforced only by the setNominatedSourceOnCartItems write path and cannot occur on an already-persisted cart.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "NominatedSourceError",
+                  "ofType": null
+                }
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -11436,6 +11754,22 @@
             "deprecationReason": null
           },
           {
+            "name": "attributes",
+            "description": "A list of merchant-defined attributes designated for the storefront.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "CategoryViewAttribute",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "children",
             "description": "The direct child categories for building nested navigation menus.",
             "args": [],
@@ -11535,6 +11869,37 @@
             },
             "isDeprecated": false,
             "deprecationReason": null
+          },
+          {
+            "name": "attributes",
+            "description": "A list of merchant-defined attributes designated for the storefront.",
+            "args": [
+              {
+                "name": "names",
+                "description": null,
+                "type": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "CategoryViewAttribute",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
           }
         ],
         "inputFields": null,
@@ -11545,6 +11910,45 @@
             "ofType": null
           }
         ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "CategorySortInput",
+        "description": "The input used for sorting the categories based on an attribute, including the direction order.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "attribute",
+            "description": "The attribute value. For example: 'color', 'size' or 'material'.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "direction",
+            "description": "The sorting direction that can be either ascending or descending. For example: 'ASC' or 'DESC'.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "SortDirectionEnum",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
         "enumValues": null,
         "possibleTypes": null
       },
@@ -11915,6 +12319,22 @@
             "deprecationReason": null
           },
           {
+            "name": "attributes",
+            "description": "A list of merchant-defined attributes designated for the storefront.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "CategoryViewAttribute",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "description",
             "description": "A detailed description of the category.",
             "args": [],
@@ -12237,6 +12657,73 @@
         "possibleTypes": null
       },
       {
+        "kind": "OBJECT",
+        "name": "CategoryViewAttribute",
+        "description": "A container for customer-defined attributes that are displayed the storefront.",
+        "fields": [
+          {
+            "name": "name",
+            "description": "Name of an attribute code. For example, `color`, `size` or `material`.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "label",
+            "description": "Label of the attribute.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "dataType",
+            "description": "Data type of the attribute. For example 'TEXT', 'INTEGER' etc.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "value",
+            "description": "Attribute value, arbitrary of type. For example, `red`, `blue` or `green`.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "JSON",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
         "kind": "INTERFACE",
         "name": "CategoryViewInterface",
         "description": "Base interface defining essential category fields shared across all category views.",
@@ -12404,6 +12891,22 @@
               "ofType": {
                 "kind": "SCALAR",
                 "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "attributes",
+            "description": "A list of merchant-defined attributes designated for the storefront.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "CategoryViewAttribute",
                 "ofType": null
               }
             },
@@ -12676,6 +13179,148 @@
             "deprecationReason": null
           }
         ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ClearCartError",
+        "description": "Contains details about errors encountered when a customer clear cart.",
+        "fields": [
+          {
+            "name": "message",
+            "description": "A localized error message",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "type",
+            "description": "A cart-specific error type.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "ClearCartErrorType",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "ClearCartErrorType",
+        "description": "",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "NOT_FOUND",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "UNAUTHORISED",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "INACTIVE",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "UNDEFINED",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "ClearCartInput",
+        "description": "Assigns a specific `cart_id` to the empty cart.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "uid",
+            "description": "The unique ID of a `Cart` object.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ClearCartOutput",
+        "description": "Output of the request to clear the customer cart.",
+        "fields": [
+          {
+            "name": "cart",
+            "description": "The cart after clear cart items.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "Cart",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "errors",
+            "description": "An array of errors encountered while clearing the cart item",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ClearCartError",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
         "possibleTypes": null
       },
       {
@@ -13074,6 +13719,43 @@
             "deprecationReason": null
           },
           {
+            "name": "addresses",
+            "description": "A paginated list of company addresses assigned to the company.",
+            "args": [
+              {
+                "name": "pageSize",
+                "description": "The maximum number of results to return at once. The default value is 20.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "20"
+              },
+              {
+                "name": "currentPage",
+                "description": "The page of results to return. The default value is 1.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "1"
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "CompanyAddresses",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "available_payment_methods",
             "description": "Available payment methods for the company with proper B2B configuration and company-specific filtering.",
             "args": [],
@@ -13113,6 +13795,22 @@
               "kind": "OBJECT",
               "name": "Customer",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "config",
+            "description": "Company address book configuration settings.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "CompanyConfig",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -13192,6 +13890,30 @@
                 "name": "CustomAttribute",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "default_billing_address",
+            "description": "The company's default billing address, if set.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "CompanyAddress",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "default_shipping_address",
+            "description": "The company's default shipping address, if set.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "CompanyAddress",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -13593,6 +14315,818 @@
       },
       {
         "kind": "OBJECT",
+        "name": "CompanyAddress",
+        "description": "",
+        "fields": [
+          {
+            "name": "address_type",
+            "description": "The address type: BILLING or SHIPPING.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "CompanyAddressTypeEnum",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "city",
+            "description": "The city.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "company",
+            "description": "The company name.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "company_id",
+            "description": "The unique ID of the company that owns the address.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "country_code",
+            "description": "The two-letter country code representing the company's country.",
+            "args": [],
+            "type": {
+              "kind": "ENUM",
+              "name": "CountryCodeEnum",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "custom_attributes",
+            "description": null,
+            "args": [
+              {
+                "name": "attributeCodes",
+                "description": null,
+                "type": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "SCALAR",
+                      "name": "ID",
+                      "ofType": null
+                    }
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "INTERFACE",
+                  "name": "AttributeValueInterface",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "extension_attributes",
+            "description": "Extension attributes for the company address.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "CustomerAddressAttribute",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fax",
+            "description": "The fax number.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "firstname",
+            "description": "The first name.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "id",
+            "description": "The unique ID for a `CompanyAddress` object.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "is_default",
+            "description": "Indicates whether the address is the default for its type.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "lastname",
+            "description": "The last name.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "middlename",
+            "description": "The middle name.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nickname",
+            "description": "Optional nickname for the address.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "postcode",
+            "description": "The postal code.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "prefix",
+            "description": "The name prefix.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "region",
+            "description": "An object containing the region name, region code, and region ID.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "CustomerAddressRegion",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "region_id",
+            "description": "The unique ID for a pre-defined region.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "street",
+            "description": "Street lines of the address.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "suffix",
+            "description": "The name suffix.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "telephone",
+            "description": "The telephone number.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vat_id",
+            "description": "The VAT ID.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "CompanyAddresses",
+        "description": "Contains a paginated list of company addresses.",
+        "fields": [
+          {
+            "name": "items",
+            "description": "An array of company addresses.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "CompanyAddress",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "page_info",
+            "description": "Pagination metadata.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "SearchResultPageInfo",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "total_count",
+            "description": "The number of objects returned.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "CompanyAddressInput",
+        "description": "Defines the input schema for creating a company address.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "address_type",
+            "description": "The address type.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "CompanyAddressTypeEnum",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "city",
+            "description": "The city.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "company",
+            "description": "The company name.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_code",
+            "description": "The two-letter code representing the company's country.",
+            "type": {
+              "kind": "ENUM",
+              "name": "CountryCodeEnum",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "custom_attributes",
+            "description": "Custom attributes assigned to the company address.",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "AttributeValueInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "fax",
+            "description": "The fax number.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "firstname",
+            "description": "The first name.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "is_default",
+            "description": "Whether the address is the default for its type.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "lastname",
+            "description": "The last name.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "middlename",
+            "description": "The middle name.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "nickname",
+            "description": "Optional nickname for the address.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "postcode",
+            "description": "The postal code.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "prefix",
+            "description": "The name prefix.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "region",
+            "description": "An object containing the region name, region code, and region ID.",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "CustomerAddressRegionInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "street",
+            "description": "Street lines.",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "suffix",
+            "description": "The name suffix.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "telephone",
+            "description": "The telephone number.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "vat_id",
+            "description": "The VAT ID.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "CompanyAddressTypeEnum",
+        "description": "",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "BILLING",
+            "description": "Billing address.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "SHIPPING",
+            "description": "Shipping address.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "CompanyAddressUpdateInput",
+        "description": "Defines the input schema for updating a company address. The address type cannot be changed once an address is created.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "city",
+            "description": "The city.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "company",
+            "description": "The company name.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "country_code",
+            "description": "The two-letter code representing the company's country.",
+            "type": {
+              "kind": "ENUM",
+              "name": "CountryCodeEnum",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "custom_attributes",
+            "description": "Custom attributes assigned to the company address.",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "AttributeValueInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "fax",
+            "description": "The fax number.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "firstname",
+            "description": "The first name.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "is_default",
+            "description": "Whether the address is the default for its type.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "lastname",
+            "description": "The last name.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "middlename",
+            "description": "The middle name.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "nickname",
+            "description": "Optional nickname for the address.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "postcode",
+            "description": "The postal code.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "prefix",
+            "description": "The name prefix.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "region",
+            "description": "An object containing the region name, region code, and region ID.",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "CustomerAddressRegionInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "street",
+            "description": "Street lines.",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "suffix",
+            "description": "The name suffix.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "telephone",
+            "description": "The telephone number.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "vat_id",
+            "description": "The VAT ID.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
         "name": "CompanyAdmin",
         "description": "Contains details about the company administrator.",
         "fields": [
@@ -13887,6 +15421,49 @@
               "kind": "ENUM",
               "name": "CompanyStatusEnum",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "CompanyConfig",
+        "description": "Company address book configuration settings.",
+        "fields": [
+          {
+            "name": "address_book_custom_shipping_address_enabled",
+            "description": "Indicates whether custom shipping address entry is allowed when the company address book is enabled.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "address_book_enabled",
+            "description": "Indicates whether the company address book is enabled.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -16323,6 +17900,22 @@
             "deprecationReason": "This field is deprecated and will be removed."
           },
           {
+            "name": "externalIds",
+            "description": "External Ids",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ExternalId",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "url",
             "description": "Canonical URL of the product.",
             "args": [],
@@ -16383,7 +17976,7 @@
           },
           {
             "name": "categories",
-            "description": "A list of categories in which the product is present.",
+            "description": "A list of categories in which the product is present. Available only for Commerce deployments using Adobe Commerce Optimizer.",
             "args": [
               {
                 "name": "family",
@@ -16761,6 +18354,22 @@
             "deprecationReason": "Use `is_salable` instead. It indicates whether the line can be purchased, including backorder configuration."
           },
           {
+            "name": "is_free_gift",
+            "description": "True if this line item was added by a Free Gift cart price rule.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "is_salable",
             "description": "True when the item can be purchased and should not block checkout: stock status is in stock and either physical quantity covers the requested quantity or backorders are allowed.",
             "args": [],
@@ -16796,6 +18405,38 @@
               "kind": "SCALAR",
               "name": "Float",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nominated_source",
+            "description": "The source currently nominated for this cart item, with its live availability snapshot. Null when no source is nominated, or when the nominated source no longer resolves or is disabled (see nominated_source_errors).",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "SourceAvailability",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nominated_source_errors",
+            "description": "Live validation errors for this item's current nomination: UNKNOWN_SOURCE if the source no longer exists, SOURCE_DISABLED if it exists but is disabled, NOT_ENOUGH_QTY if available quantity has since dropped below the item's quantity. Empty when there is no nomination or it is still valid. SKU_SOURCE_CONFLICT never appears here — it is enforced only by the setNominatedSourceOnCartItems write path and cannot occur on an already-persisted cart.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "NominatedSourceError",
+                  "ofType": null
+                }
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -17024,6 +18665,18 @@
                 "name": "OrderItemOption",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "free_gift_label",
+            "description": "The discount rule label for free gift items. Null if the item is not a free gift.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -20894,6 +22547,65 @@
         "possibleTypes": null
       },
       {
+        "kind": "OBJECT",
+        "name": "CreatePaymentLinkOutput",
+        "description": "Result of createPaymentLink.",
+        "fields": [
+          {
+            "name": "expiresAt",
+            "description": "UTC expiry timestamp of the link.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "payUrl",
+            "description": "The absolute payment link URL.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "token",
+            "description": "The payment link token.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
         "kind": "INPUT_OBJECT",
         "name": "CreatePaymentOrderInput",
         "description": "Contains payment order details that are used while processing the payment order",
@@ -23907,8 +25619,8 @@
                 "ofType": null
               }
             },
-            "isDeprecated": true,
-            "deprecationReason": "`id` is not needed as part of `Customer`, because on the server side, it can be identified based on the customer token used for authentication. There is no need to know customer ID on the client side."
+            "isDeprecated": false,
+            "deprecationReason": null
           },
           {
             "name": "is_subscribed",
@@ -26437,6 +28149,16 @@
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "FilterRangeTypeInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "search",
+            "description": "Searches orders by order number, product name, or SKU.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
               "ofType": null
             },
             "defaultValue": null
@@ -29525,6 +31247,22 @@
             "deprecationReason": "Use `is_salable` instead. It indicates whether the line can be purchased, including backorder configuration."
           },
           {
+            "name": "is_free_gift",
+            "description": "True if this line item was added by a Free Gift cart price rule.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "is_salable",
             "description": "True when the item can be purchased and should not block checkout: stock status is in stock and either physical quantity covers the requested quantity or backorders are allowed.",
             "args": [],
@@ -29576,6 +31314,38 @@
               "kind": "SCALAR",
               "name": "Float",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nominated_source",
+            "description": "The source currently nominated for this cart item, with its live availability snapshot. Null when no source is nominated, or when the nominated source no longer resolves or is disabled (see nominated_source_errors).",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "SourceAvailability",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nominated_source_errors",
+            "description": "Live validation errors for this item's current nomination: UNKNOWN_SOURCE if the source no longer exists, SOURCE_DISABLED if it exists but is disabled, NOT_ENOUGH_QTY if available quantity has since dropped below the item's quantity. Empty when there is no nomination or it is still valid. SKU_SOURCE_CONFLICT never appears here — it is enforced only by the setNominatedSourceOnCartItems write path and cannot occur on an already-persisted cart.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "NominatedSourceError",
+                  "ofType": null
+                }
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -30138,6 +31908,18 @@
                 "name": "OrderItemOption",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "free_gift_label",
+            "description": "The discount rule label for free gift items. Null if the item is not a free gift.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -31952,6 +33734,41 @@
       },
       {
         "kind": "OBJECT",
+        "name": "ExternalId",
+        "description": "Represents an external identifier with its origin system",
+        "fields": [
+          {
+            "name": "id",
+            "description": "The external identifier value",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "origin",
+            "description": "The origin system of the external identifier",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
         "name": "FastlaneConfig",
         "description": "",
         "fields": [
@@ -33228,6 +35045,22 @@
             "deprecationReason": "Use `is_salable` instead. It indicates whether the line can be purchased, including backorder configuration."
           },
           {
+            "name": "is_free_gift",
+            "description": "True if this line item was added by a Free Gift cart price rule.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "is_salable",
             "description": "True when the item can be purchased and should not block checkout: stock status is in stock and either physical quantity covers the requested quantity or backorders are allowed.",
             "args": [],
@@ -33275,6 +35108,38 @@
               "kind": "SCALAR",
               "name": "Float",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nominated_source",
+            "description": "The source currently nominated for this cart item, with its live availability snapshot. Null when no source is nominated, or when the nominated source no longer resolves or is disabled (see nominated_source_errors).",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "SourceAvailability",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nominated_source_errors",
+            "description": "Live validation errors for this item's current nomination: UNKNOWN_SOURCE if the source no longer exists, SOURCE_DISABLED if it exists but is disabled, NOT_ENOUGH_QTY if available quantity has since dropped below the item's quantity. Empty when there is no nomination or it is still valid. SKU_SOURCE_CONFLICT never appears here — it is enforced only by the setNominatedSourceOnCartItems write path and cannot occur on an already-persisted cart.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "NominatedSourceError",
+                  "ofType": null
+                }
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -33968,6 +35833,18 @@
                 "name": "OrderItemOption",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "free_gift_label",
+            "description": "The discount rule label for free gift items. Null if the item is not a free gift.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -35336,6 +37213,71 @@
           {
             "kind": "INTERFACE",
             "name": "WishlistItemInterface",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "GiftCartAttributeValue",
+        "description": "Gift card custom attribute value containing array data.",
+        "fields": [
+          {
+            "name": "attribute_type",
+            "description": "Attribute type code.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "code",
+            "description": "The attribute code.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "options",
+            "description": "Array of gift card attribute option values.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "AttributeValueInterface",
             "ofType": null
           }
         ],
@@ -39846,11 +41788,11 @@
       {
         "kind": "OBJECT",
         "name": "IsProductAlertSubscriptionResult",
-        "description": "",
+        "description": "Response returned when checking whether a customer is subscribed to a product alert.",
         "fields": [
           {
             "name": "isSubscribed",
-            "description": null,
+            "description": "Indicates whether the customer is currently subscribed to the alert.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -39866,7 +41808,7 @@
           },
           {
             "name": "message",
-            "description": null,
+            "description": "A human-readable message describing the current subscription status.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -40414,6 +42356,22 @@
               "kind": "SCALAR",
               "name": "Int",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "types",
+            "description": "Array of image types. It can have the following values: image, small_image, thumbnail.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -41756,6 +43714,37 @@
             "deprecationReason": null
           },
           {
+            "name": "clearCart",
+            "description": "Remove all items from the specified cart.",
+            "args": [
+              {
+                "name": "input",
+                "description": "An input object that defines cart ID of the shopper.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "ClearCartInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ClearCartOutput",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "clearCustomerCart",
             "description": "Remove all items from the specified cart.",
             "args": [
@@ -42105,6 +44094,33 @@
             "deprecationReason": null
           },
           {
+            "name": "createCompanyAddress",
+            "description": "Create a new company address.",
+            "args": [
+              {
+                "name": "input",
+                "description": "An input object that defines the company address to create.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "CompanyAddressInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "CompanyAddress",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "createCompanyRole",
             "description": "Create a new company role.",
             "args": [
@@ -42313,6 +44329,43 @@
             "deprecationReason": null
           },
           {
+            "name": "createPaymentLink",
+            "description": "Mint a Pay By Link payment link against a guest clone of the cart.",
+            "args": [
+              {
+                "name": "cartId",
+                "description": "Masked id of the cart to mint a payment link for.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "recipientEmail",
+                "description": "Optional override for the email the link is sent to; defaults to the cart customer email.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "CreatePaymentLinkOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "createPaymentOrder",
             "description": "Creates a payment order for further payment processing",
             "args": [
@@ -42465,6 +44518,33 @@
             "type": {
               "kind": "OBJECT",
               "name": "CreateWishlistOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "deleteCompanyAddress",
+            "description": "Delete a company address.",
+            "args": [
+              {
+                "name": "id",
+                "description": "The ID of the company address to delete.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "ID",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
               "ofType": null
             },
             "isDeprecated": false,
@@ -44354,6 +46434,33 @@
             "deprecationReason": null
           },
           {
+            "name": "selectFreeGiftForCart",
+            "description": "Defines the product that a shopper has selected as a free gift. This mutations is applicable only if a Free Gift cart price rule has been applied to the cart.",
+            "args": [
+              {
+                "name": "input",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "SelectFreeGiftForCartInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "SelectFreeGiftForCartOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "sendNegotiableQuoteForReview",
             "description": "Send the negotiable quote to the seller for review.",
             "args": [
@@ -44623,6 +46730,33 @@
             "deprecationReason": null
           },
           {
+            "name": "setDefaultCompanyAddress",
+            "description": "Set a company address as the default billing or shipping address for the company.",
+            "args": [
+              {
+                "name": "id",
+                "description": "The ID of the company address to set as default for its type.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "ID",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "CompanyAddress",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "setGiftOptionsOnCart",
             "description": "Set gift options, including gift messages, gift wrapping, gift receipts, and printed cards.",
             "args": [
@@ -44825,6 +46959,33 @@
             "type": {
               "kind": "OBJECT",
               "name": "NegotiableQuoteTemplate",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "setNominatedSourceOnCartItems",
+            "description": "Sets (or clears) the nominated inventory source on one or more cart items. The single canonical write path for nominated_source_code.",
+            "args": [
+              {
+                "name": "input",
+                "description": "The cart and the per-item source nominations to apply or clear.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "SetNominatedSourceOnCartItemsInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "SetNominatedSourceOnCartItemsOutput",
               "ofType": null
             },
             "isDeprecated": false,
@@ -45230,7 +47391,7 @@
           },
           {
             "name": "unsubscribeProductAlertPrice",
-            "description": "Unsubscribe logged-in customer to price alert for a product.",
+            "description": "Unsubscribe logged-in customer from price alert for a product.",
             "args": [
               {
                 "name": "input",
@@ -45257,7 +47418,7 @@
           },
           {
             "name": "unsubscribeProductAlertPriceAll",
-            "description": "Unsubscribe logged-in customer to price alert for all product.",
+            "description": "Unsubscribe logged-in customer from price alerts for all products.",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -45269,7 +47430,7 @@
           },
           {
             "name": "unsubscribeProductAlertStock",
-            "description": "Unsubscribe logged-in customer to stock alert for a product.",
+            "description": "Unsubscribe logged-in customer from stock alert for a product.",
             "args": [
               {
                 "name": "input",
@@ -45296,7 +47457,7 @@
           },
           {
             "name": "unsubscribeProductAlertStockAll",
-            "description": "Unsubscribe logged-in customer to stock alert for all product.",
+            "description": "Unsubscribe logged-in customer from stock alerts for all products.",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -45351,6 +47512,74 @@
             "type": {
               "kind": "OBJECT",
               "name": "UpdateCompanyOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "updateCompanyAddress",
+            "description": "Update an existing company address.",
+            "args": [
+              {
+                "name": "id",
+                "description": "The ID of the company address to update.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "ID",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "input",
+                "description": "An input object that defines changes to the company address.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "CompanyAddressUpdateInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "CompanyAddress",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "updateCompanyConfig",
+            "description": "Update company configuration for the current company context.",
+            "args": [
+              {
+                "name": "input",
+                "description": "An input object that defines company configuration changes.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "UpdateCompanyConfigInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "UpdateCompanyConfigOutput",
               "ofType": null
             },
             "isDeprecated": false,
@@ -46674,6 +48903,18 @@
             "deprecationReason": null
           },
           {
+            "name": "company_address_id",
+            "description": "The unique ID of the company address referenced by this negotiable quote address, if any.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "country",
             "description": "The company's country.",
             "args": [],
@@ -46979,6 +49220,18 @@
             "deprecationReason": null
           },
           {
+            "name": "company_address_id",
+            "description": "The unique ID of the company address referenced by this negotiable quote address, if any.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "country",
             "description": "The company's country.",
             "args": [],
@@ -47210,6 +49463,16 @@
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "NegotiableQuoteAddressInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "company_address_id",
+            "description": "The unique ID of a company address to use as the billing address. Requires the company's address book to be enabled.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
               "ofType": null
             },
             "defaultValue": null
@@ -48227,6 +50490,18 @@
             "deprecationReason": null
           },
           {
+            "name": "company_address_id",
+            "description": "The unique ID of the company address referenced by this negotiable quote address, if any.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "country",
             "description": "The company's country.",
             "args": [],
@@ -48470,6 +50745,16 @@
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "NegotiableQuoteAddressInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "company_address_id",
+            "description": "The unique ID of a company address to use as the shipping address. Requires the company's address book to be enabled.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
               "ofType": null
             },
             "defaultValue": null
@@ -49803,6 +52088,16 @@
             "defaultValue": null
           },
           {
+            "name": "company_address_id",
+            "description": "The unique ID of a company address to use as the shipping address. Requires the company's address book to be enabled.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "customer_address_uid",
             "description": "An ID from the company user's address book that uniquely identifies the address to be used for shipping.",
             "type": {
@@ -50141,8 +52436,49 @@
             "description": "",
             "isDeprecated": false,
             "deprecationReason": null
+          },
+          {
+            "name": "SKU_SOURCE_CONFLICT",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
           }
         ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "NominatedSourceItemInput",
+        "description": "A single cart item's source nomination.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "cart_item_uid",
+            "description": "The unique ID of the cart item to nominate a source for.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "source_code",
+            "description": "The inventory source code to nominate. A null or empty value clears the nomination.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
         "possibleTypes": null
       },
       {
@@ -50526,6 +52862,18 @@
             "deprecationReason": null
           },
           {
+            "name": "company_address_id",
+            "description": "UID of the company address referenced by this order address, if any.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "country_code",
             "description": "The customer's country.",
             "args": [],
@@ -50867,7 +53215,7 @@
           },
           {
             "name": "postcode",
-            "description": "",
+            "description": "Order billing address postcode",
             "type": {
               "kind": "SCALAR",
               "name": "String",
@@ -50941,6 +53289,18 @@
                 "name": "OrderItemOption",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "free_gift_label",
+            "description": "The discount rule label for free gift items. Null if the item is not a free gift.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -51262,6 +53622,18 @@
                 "name": "OrderItemOption",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "free_gift_label",
+            "description": "The discount rule label for free gift items. Null if the item is not a free gift.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -52262,6 +54634,33 @@
             "deprecationReason": null
           }
         ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PayByLinkCartOutput",
+        "description": "Result of payByLinkCart.",
+        "fields": [
+          {
+            "name": "masked_cart_id",
+            "description": "Masked id of the guest cart to resume the standard checkout against.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
         "possibleTypes": null
       },
       {
@@ -53823,16 +56222,12 @@
             "description": "An array of place order errors.",
             "args": [],
             "type": {
-              "kind": "NON_NULL",
+              "kind": "LIST",
               "name": null,
               "ofType": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "OBJECT",
-                  "name": "PlaceOrderError",
-                  "ofType": null
-                }
+                "kind": "OBJECT",
+                "name": "PlaceOrderError",
+                "ofType": null
               }
             },
             "isDeprecated": false,
@@ -54123,12 +56518,12 @@
       {
         "kind": "INPUT_OBJECT",
         "name": "ProductAlertPriceInput",
-        "description": "",
+        "description": "Input to identify a product by SKU for a price alert subscription.",
         "fields": null,
         "inputFields": [
           {
             "name": "sku",
-            "description": "",
+            "description": "The SKU of the product to subscribe to price alerts for.",
             "type": {
               "kind": "NON_NULL",
               "name": null,
@@ -54148,12 +56543,12 @@
       {
         "kind": "INPUT_OBJECT",
         "name": "ProductAlertStockInput",
-        "description": "",
+        "description": "Input to identify a product by SKU for a stock alert subscription.",
         "fields": null,
         "inputFields": [
           {
             "name": "sku",
-            "description": "",
+            "description": "The SKU of the product to subscribe to stock alerts for.",
             "type": {
               "kind": "NON_NULL",
               "name": null,
@@ -54173,11 +56568,11 @@
       {
         "kind": "OBJECT",
         "name": "ProductAlertSubscriptionResult",
-        "description": "",
+        "description": "Response returned after a product alert subscribe or unsubscribe mutation.",
         "fields": [
           {
             "name": "message",
-            "description": null,
+            "description": "A human-readable message describing the result of the subscription action.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -54189,7 +56584,7 @@
           },
           {
             "name": "success",
-            "description": null,
+            "description": "Indicates whether the subscription action was successful.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -54452,6 +56847,22 @@
               "kind": "SCALAR",
               "name": "Int",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "types",
+            "description": "Array of image types. It can have the following values: image, small_image, thumbnail.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -55860,6 +58271,22 @@
             "deprecationReason": null
           },
           {
+            "name": "types",
+            "description": "Array of image types. It can have the following values: image, small_image, thumbnail.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "url",
             "description": "The URL of the product image or video.",
             "args": [],
@@ -56169,6 +58596,22 @@
             "deprecationReason": "This field is deprecated and will be removed."
           },
           {
+            "name": "externalIds",
+            "description": "External Ids",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ExternalId",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "url",
             "description": "Canonical URL of the product.",
             "args": [],
@@ -56229,11 +58672,11 @@
           },
           {
             "name": "categories",
-            "description": "A list of categories in which the product is present.",
+            "description": "A list of categories in which the product is present. Available only for Commerce deployments using Adobe Commerce Optimizer.",
             "args": [
               {
                 "name": "family",
-                "description": "The product family to filter the categories by. For example, 'clothing', 'electronics' or 'books'",
+                "description": "The product family to filter the categories by. For example, 'clothing', 'electronics' or 'books'.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "String",
@@ -60056,7 +62499,7 @@
         "fields": [
           {
             "name": "products",
-            "description": "Search for products that match the specified SKU values. In Adobe Commerce as a Cloud Service, this query replaces the `products` query defined in the Commerce Foundation.",
+            "description": "Search for products that match the specified SKU values. Available only for deployments using the Catalog or Live Search service with Adobe Commerce.",
             "args": [
               {
                 "name": "skus",
@@ -60201,7 +62644,7 @@
           },
           {
             "name": "categories",
-            "description": "Return category views by IDs, with optional role filters and subtree scopes. In Adobe Commerce as a Cloud Service, this query replaces the `categories` query defined in the Commerce Foundation.",
+            "description": "Return category views by IDs, with optional role filters and subtree scopes. Available only for deployments using the Catalog or Live Search service with Adobe Commerce. For Adobe Commerce Optimizer, use the `categoryTree` query instead. See [categoryTree query examples](https://developer.adobe.com/commerce/services/optimizer/merchandising-services/categories-storefront-implementation#categorytree-query-examples).",
             "args": [
               {
                 "name": "ids",
@@ -60259,12 +62702,12 @@
                 "ofType": null
               }
             },
-            "isDeprecated": true,
-            "deprecationReason": "This field is deprecated and will be removed."
+            "isDeprecated": false,
+            "deprecationReason": null
           },
           {
             "name": "navigation",
-            "description": "Retrieves the navigation tree for a given product family.",
+            "description": "Retrieves the navigation tree for a given product family. Available only for Commerce deployments using Adobe Commerce Optimizer.",
             "args": [
               {
                 "name": "family",
@@ -60277,6 +62720,16 @@
                     "name": "String",
                     "ofType": null
                   }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "sort",
+                "description": "The sorting criterion used for sorting the result list of categories queries",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "CategorySortInput",
+                  "ofType": null
                 },
                 "defaultValue": null
               }
@@ -60295,7 +62748,7 @@
           },
           {
             "name": "categoryTree",
-            "description": "Retrieves category tree nodes, optionally filtered by family, slugs and limited by depth.",
+            "description": "Retrieves category tree nodes, optionally filtered by family, slugs and limited by depth. Available for Commerce deployments using Adobe Commerce Optimizer or Adobe Commerce as a Cloud Service.",
             "args": [
               {
                 "name": "family",
@@ -60350,7 +62803,7 @@
           },
           {
             "name": "searchCategory",
-            "description": "Search for categories by name with optional filtering and pagination. Results are returned in alphabetical order by category name.",
+            "description": "Search for categories by name with optional filtering and pagination. Results are returned in alphabetical order by category name. Available only for Commerce deployments using Adobe Commerce Optimizer.",
             "args": [
               {
                 "name": "searchTerm",
@@ -61497,6 +63950,33 @@
             "deprecationReason": null
           },
           {
+            "name": "payByLinkCart",
+            "description": "Resolve a Pay By Link token to the masked id of the guest cart to resume checkout against.",
+            "args": [
+              {
+                "name": "token",
+                "description": "The Pay By Link token from the emailed link.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PayByLinkCartOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "pickupLocations",
             "description": "The pickup locations query searches for locations that match the search request requirements.",
             "args": [
@@ -61679,6 +64159,77 @@
             "deprecationReason": null
           },
           {
+            "name": "sourceAvailability",
+            "description": "Per-source availability for one or more SKUs, scoped to the storefront-visible sources of the current sales channel's stock. Availability is computed identically to the order-placement guard.",
+            "args": [
+              {
+                "name": "skus",
+                "description": "The product SKUs to report availability for.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "LIST",
+                    "name": null,
+                    "ofType": {
+                      "kind": "NON_NULL",
+                      "name": null,
+                      "ofType": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                      }
+                    }
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "source_codes",
+                "description": "Restrict the report to these inventory sources. Only sources flagged storefront-visible are ever reported; a requested source that is not storefront-visible, or not assigned to the current sales channel's stock, is silently omitted. When omitted, every storefront-visible source assigned to the current sales channel's stock is reported.",
+                "type": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "SCALAR",
+                      "name": "String",
+                      "ofType": null
+                    }
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "only_in_stock",
+                "description": "When true, omit sources where the SKU is not salable.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Boolean",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "SkuSourceAvailability",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "storeConfig",
             "description": "Return details about the store's configuration.",
             "args": [],
@@ -61817,6 +64368,95 @@
                         "ofType": null
                       }
                     }
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "currentSku",
+                "description": "SKU of the product currently being viewed on PDP",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "currentProduct",
+                "description": "Current product context from PDP (SKU, price, category, etc.)",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "CurrentProductInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "userPurchaseHistory",
+                "description": "User purchase history with timestamp",
+                "type": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "PurchaseHistory",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "userViewHistory",
+                "description": "User view history with timestamp",
+                "type": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "ViewHistory",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "cartSkus",
+                "description": "SKUs of products in the cart",
+                "type": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "Recommendations",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "recommendationsByUnits",
+            "description": null,
+            "args": [
+              {
+                "name": "selector",
+                "description": "Selector of preconfigured units",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "UnitSelector",
+                    "ofType": null
                   }
                 },
                 "defaultValue": null
@@ -62837,6 +65477,12 @@
             "description": "",
             "isDeprecated": false,
             "deprecationReason": null
+          },
+          {
+            "name": "COMPANY_CREATE",
+            "description": "Create new company account form.",
+            "isDeprecated": false,
+            "deprecationReason": null
           }
         ],
         "possibleTypes": null
@@ -63011,6 +65657,18 @@
           {
             "name": "unitName",
             "description": "Name of the preconfigured unit",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "label",
+            "description": "Label of the preconfigured unit",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -64312,8 +66970,8 @@
               "name": "RequistionListItems",
               "ofType": null
             },
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Deprecated. Use requisition_list_items instead. Will be removed in a future release."
           },
           {
             "name": "items_count",
@@ -64343,6 +67001,39 @@
                 "name": "String",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "requisition_list_items",
+            "description": "An array of products added to the requisition list.",
+            "args": [
+              {
+                "name": "currentPage",
+                "description": "The page of results to return. The default value is 1.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "1"
+              },
+              {
+                "name": "pageSize",
+                "description": "The maximum number of results to return. The default value is 1.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "20"
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "RequisitionListItems",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -64537,6 +67228,65 @@
             "ofType": null
           }
         ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "RequisitionListItems",
+        "description": "Contains an array of items added to a requisition list.",
+        "fields": [
+          {
+            "name": "items",
+            "description": "An array of items in the requisition list.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "INTERFACE",
+                  "name": "RequisitionListItemInterface",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "page_info",
+            "description": "Pagination metadata.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "SearchResultPageInfo",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "total_pages",
+            "description": "The number of pages returned.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
       },
       {
         "kind": "INPUT_OBJECT",
@@ -64735,7 +67485,7 @@
       {
         "kind": "OBJECT",
         "name": "RequistionListItems",
-        "description": "Contains an array of items added to a requisition list.",
+        "description": "Deprecated. Use RequisitionListItems via requisition_list_items. Will be removed in a future release.",
         "fields": [
           {
             "name": "items",
@@ -67451,6 +70201,124 @@
       },
       {
         "kind": "INPUT_OBJECT",
+        "name": "SelectFreeGiftForCartInput",
+        "description": "",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "cart_id",
+            "description": "Masked ID of the shopper's cart.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "entered_options",
+            "description": "Custom option values entered by the customer, such as text inputs.",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "EnteredOptionInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "quantity",
+            "description": "Override the rule's configured gift quantity. Must be a positive integer no greater than the rule's gift_qty. Defaults to the rule's gift_qty.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "rule_id",
+            "description": "Identifier of the free-gift rule the selection is for. Must be currently applied to the cart and pending selection.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "selected_options",
+            "description": "UIDs of selected option values, such as configurable variants or bundle selections.",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "sku",
+            "description": "SKU of the gift product to add. Must be one of the rule's configured SKUs.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "SelectFreeGiftForCartOutput",
+        "description": "",
+        "fields": [
+          {
+            "name": "cart",
+            "description": "The cart after adding the selected free-gift product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Cart",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
         "name": "SendNegotiableQuoteForReviewInput",
         "description": "Specifies which negotiable quote to send for review.",
         "fields": null,
@@ -68213,6 +71081,96 @@
           }
         ],
         "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "SetNominatedSourceOnCartItemsInput",
+        "description": "Input for the setNominatedSourceOnCartItems mutation.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "cart_id",
+            "description": "The masked ID of the cart.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "items",
+            "description": "The per-item source nominations to apply or clear.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "NominatedSourceItemInput",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "SetNominatedSourceOnCartItemsOutput",
+        "description": "Result of the setNominatedSourceOnCartItems mutation.",
+        "fields": [
+          {
+            "name": "cart",
+            "description": "The updated cart.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Cart",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "rejected_items",
+            "description": "The cart items whose nomination was rejected, each with a reason. Empty when all nominations were applied or cleared.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "RejectedNomination",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
         "enumValues": null,
         "possibleTypes": null
       },
@@ -69166,6 +72124,16 @@
             "defaultValue": null
           },
           {
+            "name": "company_address_id",
+            "description": "UID of a company address to use for shipping.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "customer_address_id",
             "description": "An ID from the customer's address book that uniquely identifies the address to be used for shipping.",
             "type": {
@@ -69270,6 +72238,18 @@
             "type": {
               "kind": "SCALAR",
               "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "company_address_id",
+            "description": "UID of the company address referenced by this cart address, if any.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
               "ofType": null
             },
             "isDeprecated": false,
@@ -69858,6 +72838,22 @@
             "deprecationReason": "Use `is_salable` instead. It indicates whether the line can be purchased, including backorder configuration."
           },
           {
+            "name": "is_free_gift",
+            "description": "True if this line item was added by a Free Gift cart price rule.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "is_salable",
             "description": "True when the item can be purchased and should not block checkout: stock status is in stock and either physical quantity covers the requested quantity or backorders are allowed.",
             "args": [],
@@ -69893,6 +72889,38 @@
               "kind": "SCALAR",
               "name": "Float",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nominated_source",
+            "description": "The source currently nominated for this cart item, with its live availability snapshot. Null when no source is nominated, or when the nominated source no longer resolves or is disabled (see nominated_source_errors).",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "SourceAvailability",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nominated_source_errors",
+            "description": "Live validation errors for this item's current nomination: UNKNOWN_SOURCE if the source no longer exists, SOURCE_DISABLED if it exists but is disabled, NOT_ENOUGH_QTY if available quantity has since dropped below the item's quantity. Empty when there is no nomination or it is still valid. SKU_SOURCE_CONFLICT never appears here — it is enforced only by the setNominatedSourceOnCartItems write path and cannot occur on an already-persisted cart.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "NominatedSourceError",
+                  "ofType": null
+                }
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -70866,7 +73894,7 @@
           },
           {
             "name": "externalId",
-            "description": "External Id. For example, `123`, `456` or `789`.",
+            "description": "External Id",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -70875,6 +73903,22 @@
             },
             "isDeprecated": true,
             "deprecationReason": "This field is deprecated and will be removed."
+          },
+          {
+            "name": "externalIds",
+            "description": "External Ids",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ExternalId",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
           },
           {
             "name": "url",
@@ -70937,7 +73981,7 @@
           },
           {
             "name": "categories",
-            "description": "A list of categories in which the product is present. Categories are used to group products by category. ",
+            "description": "A list of categories in which the product is present. Available only for Commerce deployments using Adobe Commerce Optimizer.",
             "args": [
               {
                 "name": "family",
@@ -71217,6 +74261,53 @@
         "possibleTypes": null
       },
       {
+        "kind": "OBJECT",
+        "name": "SkuSourceAvailability",
+        "description": "Per-source availability for a single SKU across the sources of the current sales channel's stock.",
+        "fields": [
+          {
+            "name": "sku",
+            "description": "The product SKU the availability applies to.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "sources",
+            "description": "Availability at each reported source.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "SourceAvailability",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
         "kind": "INPUT_OBJECT",
         "name": "SmartButtonMethodInput",
         "description": "Smart button payment inputs",
@@ -71471,6 +74562,29 @@
         "inputFields": null,
         "interfaces": [],
         "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "SortDirectionEnum",
+        "description": "The available sort options for category queries.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "ASC",
+            "description": "Sort categories in ascending order.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "DESC",
+            "description": "Sort categories in descending order.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
         "possibleTypes": null
       },
       {
@@ -71917,27 +75031,23 @@
       {
         "kind": "OBJECT",
         "name": "SourceAvailability",
-        "description": "Per-source availability for a SKU.",
+        "description": "Availability of a SKU at a single inventory source.",
         "fields": [
           {
             "name": "available_qty",
-            "description": "Quantity available at the source, net of open source-level reservations.",
+            "description": "Saleable quantity at the source, net of open source-level reservations. The exact value is returned only when it is at or below the merchant's storefront display threshold (cataloginventory/options/stock_threshold_qty); above the threshold it is null and only is_in_stock is meaningful. That threshold defaults to 0, so by default every positive quantity is masked to null and is_in_stock is the authoritative signal.",
             "args": [],
             "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "Float",
-                "ofType": null
-              }
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "is_salable",
-            "description": "Whether the SKU is salable at the source.",
+            "name": "is_in_stock",
+            "description": "Whether the SKU is salable at the source (available quantity greater than zero).",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -72748,13 +75858,9 @@
             "description": "Configuration data from customer/account_information/graphql_share_customer_group",
             "args": [],
             "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "Boolean",
-                "ofType": null
-              }
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -73324,6 +76430,54 @@
             "deprecationReason": null
           },
           {
+            "name": "persistent_enabled",
+            "description": "Configuration data from persistent/options/enabled",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "persistent_options_wishlist",
+            "description": "Configuration data from persistent/options/wishlist",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "persistent_shopping_cart",
+            "description": "Configuration data from persistent/options/shopping_cart",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "printed_card_priceV2",
             "description": "The default price of a printed card that accompanies an order.",
             "args": [],
@@ -73331,6 +76485,22 @@
               "kind": "OBJECT",
               "name": "Money",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "product_alert_allow_stock",
+            "description": "Indicates whether back-in-stock (Notify Me) product alerts are enabled. Configuration data from catalog/productalert/allow_stock.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -73592,13 +76762,9 @@
             "description": "Configuration data from customer/magento_customersegment/share_active_segments",
             "args": [],
             "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "Boolean",
-                "ofType": null
-              }
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -73608,11 +76774,23 @@
             "description": "Configuration data from promo/graphql/share_applied_cart_rule",
             "args": [],
             "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "share_customer_accounts_scope",
+            "description": "Configuration data from customer/account_share/scope. 0 = Global, 1 = Per Website",
+            "args": [],
+            "type": {
               "kind": "NON_NULL",
               "name": null,
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Boolean",
+                "name": "Int",
                 "ofType": null
               }
             },
@@ -74885,6 +78063,53 @@
       },
       {
         "kind": "INPUT_OBJECT",
+        "name": "UnitSelector",
+        "description": "Provide either rec unit ids or labels to retrieve rec units",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "unitIds",
+            "description": "List unit IDs of preconfigured units",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "labels",
+            "description": "List of labels of the preconfigured unit",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
         "name": "UpdateCartItemsInput",
         "description": "Modifies the specified items in the cart.",
         "fields": null,
@@ -74963,6 +78188,60 @@
                   "ofType": null
                 }
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "UpdateCompanyConfigInput",
+        "description": "Defines the input schema for updating company configuration.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "address_book_enabled",
+            "description": "Indicates whether the company address book is enabled.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "custom_shipping_address_enabled",
+            "description": "Indicates whether custom shipping address entry is allowed when the company address book is enabled.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "UpdateCompanyConfigOutput",
+        "description": "Contains the response to the request to update company configuration.",
+        "fields": [
+          {
+            "name": "company",
+            "description": "The updated company.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "Company",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -76548,6 +79827,22 @@
             "deprecationReason": "Use `is_salable` instead. It indicates whether the line can be purchased, including backorder configuration."
           },
           {
+            "name": "is_free_gift",
+            "description": "True if this line item was added by a Free Gift cart price rule.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "is_salable",
             "description": "True when the item can be purchased and should not block checkout: stock status is in stock and either physical quantity covers the requested quantity or backorders are allowed.",
             "args": [],
@@ -76583,6 +79878,38 @@
               "kind": "SCALAR",
               "name": "Float",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nominated_source",
+            "description": "The source currently nominated for this cart item, with its live availability snapshot. Null when no source is nominated, or when the nominated source no longer resolves or is disabled (see nominated_source_errors).",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "SourceAvailability",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nominated_source_errors",
+            "description": "Live validation errors for this item's current nomination: UNKNOWN_SOURCE if the source no longer exists, SOURCE_DISABLED if it exists but is disabled, NOT_ENOUGH_QTY if available quantity has since dropped below the item's quantity. Empty when there is no nomination or it is still valid. SKU_SOURCE_CONFLICT never appears here — it is enforced only by the setNominatedSourceOnCartItems write path and cannot occur on an already-persisted cart.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "NominatedSourceError",
+                  "ofType": null
+                }
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -77688,6 +81015,12 @@
             "deprecationReason": null
           },
           {
+            "name": "REQUIRED_PARAMETER_MISSING",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "NOT_SALABLE",
             "description": "",
             "isDeprecated": false,
@@ -77701,12 +81034,6 @@
           },
           {
             "name": "UNDEFINED",
-            "description": "",
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "REQUIRED_PARAMETER_MISSING",
             "description": "",
             "isDeprecated": false,
             "deprecationReason": null
