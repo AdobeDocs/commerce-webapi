@@ -28,6 +28,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`updateCompanyAddress`](/reference/graphql/saas/mutations.md#updatecompanyaddress) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 ### Update a company address

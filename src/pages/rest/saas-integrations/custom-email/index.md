@@ -14,7 +14,7 @@ Previously, you could only send emails when events were triggered, such as durin
 
 <InlineAlert variant="info" slots="text" />
 
-Currently, only newly created, custom templates can be sent. Predefined and system templates are not supported.
+Currently, only customer-created custom templates can be sent. Predefined and system templates are not supported.
 
 The `V1/custom-email/send` endpoint allows **third-party systems**, such as integrations and external services, to send emails on demand by specifying:
 
@@ -99,17 +99,34 @@ The API returns HTTP 200 on successful send. The `reply_to_email` field is only 
 
 ## Manage custom email templates
 
-Use the following endpoints to list, retrieve, and create custom email templates from the REST API.
+Use the following endpoints to list, retrieve, create, update, and delete custom email templates from the REST API.
 
 | Method | Endpoint | Description |
 | --- | --- | --- |
 | `GET` | `/V1/custom-email/templates` | List custom email templates, returning each template's ID, code, subject, and type. |
 | `GET` | `/V1/custom-email/templates/{id}` | Retrieve a single template, including its body and styles. |
 | `POST` | `/V1/custom-email/templates` | Create a custom email template and return its server-assigned ID. |
+| `PUT` | `/V1/custom-email/templates/{id}` | Update an existing custom email template. |
+| `DELETE` | `/V1/custom-email/templates/{id}` | Delete a custom email template. |
 
 <InlineAlert variant="info" slots="text" />
 
 Use the `template_id` returned by these endpoints with `POST /V1/custom-email/send` instead of looking up the ID manually.
+
+### Template object parameters
+
+The `template` object represents a custom email template. Create and update requests wrap these fields in a `template` object, while list and retrieve responses return the same fields at the top level of the response.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `template_id` | integer | Server-assigned identifier. Use it as-is with `POST /V1/custom-email/send`. Read-only, and ignored if supplied in a request body. |
+| `template_code` | string | Unique template name. Maximum 150 characters. |
+| `template_subject` | string | Template subject, stored as raw, unrendered directive source. Maximum 200 characters. Supports the directive syntax described in [Supported template scenarios](#supported-template-scenarios). |
+| `template_text` | string | Raw, unrendered template body. Directives such as `{{var}}` and `{{trans}}` are stored as-is and preserved verbatim. Not returned by the list endpoint. |
+| `template_type` | string | `html` or `text`. Defaults to `html` on create. Switching to `text` forces `template_styles` to an empty string. |
+| `template_styles` | string | CSS for the template. Empty string for text templates. Not returned by the list endpoint. |
+| `added_at` | string | Creation timestamp. Read-only. |
+| `modified_at` | string | Last-modified timestamp. Read-only. |
 
 ### List custom email templates
 
@@ -123,14 +140,7 @@ The endpoint accepts standard `searchCriteria` parameters for pagination, sortin
 
 #### Response fields
 
-| Field | Type | Description |
-| --- | --- | --- |
-| `template_id` | integer | Usable as-is with `POST /V1/custom-email/send`. |
-| `template_code` | string | Template name. |
-| `template_subject` | string | Template subject, as raw, unrendered directive source. |
-| `template_type` | string | `html` or `text`. |
-| `added_at` | string | Creation timestamp. |
-| `modified_at` | string | Last-modified timestamp. |
+The response includes the [template object](#template-object-parameters) fields, except `template_text` and `template_styles`.
 
 #### Example request
 
@@ -168,12 +178,7 @@ Use the following endpoint to retrieve a single custom email template by its ID.
 
 -  **URL** - `GET /rest/V1/custom-email/templates/{id}`
 
-The response includes every field from the list response, plus:
-
-| Field | Type | Description |
-| --- | --- | --- |
-| `template_text` | string | Raw, unrendered template body. Directives such as `{{var}}` and `{{trans}}` are preserved, so the value can be sent back verbatim when creating another template. |
-| `template_styles` | string | CSS for the template. Empty string for text templates. |
+The response includes all [template object](#template-object-parameters) fields, including `template_text` and `template_styles`.
 
 #### Example request
 
@@ -216,15 +221,12 @@ Commerce returns HTTP 200 (not 201) on success, consistent with other Commerce R
 
 #### Request body
 
-Wrap the template fields in a `template` object.
+Wrap the template fields in a `template` object. See [Template object](#template-object-parameters) for the full field definitions.
 
--  **template_code** (string, required) – Unique template name. Maximum 150 characters.
--  **template_subject** (string, required) – Maximum 200 characters. May contain directive syntax, as described in [Supported template scenarios](#supported-template-scenarios).
--  **template_text** (string, required) – Raw template body. Directives are stored as-is and are not rendered at creation time.
--  **template_type** (string, optional) – `html` (default) or `text`.
--  **template_styles** (string, optional) – CSS for the template. Ignored, and forced to an empty string, when `template_type` is `text`.
-
-The API ignores any value supplied for `template_id`, `added_at`, or `modified_at`, Commerce assigns these automatically.
+-  **Required** - `template_code`, `template_subject`, and `template_text`
+-  **Optional** - `template_type` and `template_styles`
+-  **Read-only** - `template_id`, `added_at`, and `modified_at`
+   -  Commerce assigns these automatically and ignores any supplied values.
 
 <InlineAlert variant="info" slots="text" />
 
@@ -259,6 +261,82 @@ The response returns the created template in the same shape as [Retrieve a custo
    Returned when a custom template with the same `template_code` already exists. Commerce does not create a duplicate row.
 
    Example: `"message": "A custom email template with code \"my_code\" already exists."`
+
+### Update a custom email template
+
+Use the following endpoint to update an existing custom email template by its ID.
+
+#### Endpoint
+
+-  **URL** - `PUT /rest/V1/custom-email/templates/{id}`
+
+The `{id}` in the URL identifies the template to update. A `template_id` supplied in the request body is ignored.
+
+#### Request body
+
+Wrap the fields to change in a `template` object. The request accepts the same [template object](#template-object-parameters) fields as create, with these differences:
+
+-  All fields are **optional**. This is a **partial update**, so only the fields present in the request body are changed. Fields that are not included keep their previous value.
+-  `template_code` is excluded from its own uniqueness check, so keeping the existing code is allowed.
+
+<InlineAlert variant="info" slots="text" />
+
+Included fields cannot contain empty values. Sending an empty `template_code`, `template_subject`, or `template_text` returns an **HTTP 400** error. To leave a field unchanged, do not include it.
+
+#### Example request
+
+```json
+{
+  "template": {
+    "template_subject": "You *still* left something behind",
+    "template_text": "<p>Hi {{var customer.name}}, your cart really misses you.</p>"
+  }
+}
+```
+
+#### Success response (HTTP 200)
+
+The response returns the updated template in the same shape as [Retrieve a custom email template](#retrieve-a-custom-email-template).
+
+#### Error responses
+
+-  **HTTP 400 – Validation error**
+
+   Returned for an over-length value, an invalid `template_type`, or a required field that was supplied as an empty value.
+
+-  **HTTP 404 – Template not found**
+
+   Returned when no custom template matches the given `id`.
+
+-  **HTTP 409 – Duplicate template code**
+
+   Returned when the new `template_code` collides with another existing template.
+
+   Example: `"message": "A custom email template with code \"my_code\" already exists."`
+
+### Delete a custom email template
+
+Use the following endpoint to delete a custom email template by its ID.
+
+#### Endpoint
+
+-  **URL** - `DELETE /rest/V1/custom-email/templates/{id}`
+
+#### Success response (HTTP 200)
+
+The API returns `true` in the response body on successful deletion.
+
+#### Error responses
+
+-  **HTTP 404 – Template not found**
+
+   Returned when no custom template matches the given `id`.
+
+-  **HTTP 409 – Template in use**
+
+   Returned when the template is currently referenced by store configuration, for example assigned as the template for a Sales Email under **Stores** > _Configuration_ > **Sales** > **Sales Emails**. Clear or reassign the configuration, then try the delete call again.
+
+   Example: `"message": "The custom email template with id \"5\" is currently in use and cannot be deleted."`
 
 ## Supported template scenarios
 

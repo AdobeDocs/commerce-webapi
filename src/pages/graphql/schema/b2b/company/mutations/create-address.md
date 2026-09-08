@@ -27,6 +27,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`createCompanyAddress`](/reference/graphql/saas/mutations.md#createcompanyaddress) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 ### Create a company address (type: billing)

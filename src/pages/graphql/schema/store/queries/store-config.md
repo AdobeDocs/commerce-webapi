@@ -223,6 +223,42 @@ The following query returns information about the store's customer configuration
 }
 ```
 
+### Query a store's persistent cart and account sharing configuration
+
+<Fragment src="../../includes/saas-only.md"/>
+
+The following query returns the store's persistent shopping cart settings (**Stores** > Settings > **Configuration** > **Customers** > **Persistent Shopping Cart**) and the account sharing scope (**Stores** > Settings > **Configuration** > **Customers** > **Customer Configuration** > **Account Sharing Options** > **Share Customer Accounts**).
+
+The `share_customer_accounts_scope` field returns `0` when customer accounts are shared globally across all stores and `1` when accounts are scoped per website.
+
+**Request:**
+
+```graphql
+{
+    storeConfig {
+        persistent_enabled
+        persistent_shopping_cart
+        persistent_options_wishlist
+        share_customer_accounts_scope
+    }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "storeConfig": {
+      "persistent_enabled": true,
+      "persistent_shopping_cart": true,
+      "persistent_options_wishlist": false,
+      "share_customer_accounts_scope": 0
+    }
+  }
+}
+```
+
 ### Query a store's access token expiration configuration
 
 The following query returns the value of the **Stores** > Settings > **Configuration** > **Services** > **OAuth** > **Access Token Expiration** > **Customer Token Lifetime (hours)** field.

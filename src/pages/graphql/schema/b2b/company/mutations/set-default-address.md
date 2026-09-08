@@ -27,6 +27,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`setDefaultCompanyAddress`](/reference/graphql/saas/mutations.md#setdefaultcompanyaddress) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 ### Set a company address as default (BILLING/SHIPPING)
