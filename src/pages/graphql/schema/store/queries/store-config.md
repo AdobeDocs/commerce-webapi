@@ -21,7 +21,7 @@ The `storeConfig` reference provides detailed information about the types and fi
 
 ## Example usage
 
-The [Commerce API playground](https://experienceleague.adobe.com/developer/commerce/storefront/playgrounds/commerce-services/) provides a sample `storeConfig` query that you can run against a live instance of Adobe Commerce with Luma sample data. Note that the responses may vary, depending on the configuration of the Commerce instance.
+The [Commerce API playground](https://experienceleague.adobe.com/en/tools/commerce-storefront/playgrounds/commerce-services/) provides a sample `storeConfig` query that you can run against a live instance of Adobe Commerce with Luma sample data. Note that the responses may vary, depending on the configuration of the Commerce instance.
 
 ### Query a store's configuration
 
