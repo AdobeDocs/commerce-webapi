@@ -8,7 +8,7 @@ keywords:
 
 # Catalog Service GraphQL Schema for Adobe Commerce
 
-The Catalog Service extension for Adobe Commerce contributes to a services-only GraphQL schema that contains queries that return specialized catalog data that is not available in the built-in GraphQL functionality provided in Adobe Commerce and Magento Open Source. The queries in this schema allow Commerce merchants to quickly and fully render product-related content on the storefront, including product detail pages and product list pages.
+The Catalog Service for Adobe Commerce contributes to a services-only GraphQL schema that contains queries that return specialized catalog data that is not available in the built-in GraphQL functionality provided in Adobe Commerce and Magento Open Source. The queries in this schema allow Commerce merchants to quickly and fully render product-related content on the storefront, including product detail pages and product list pages.
 
 You can optionally implement [API Mesh for Adobe Developer App Builder](https://developer.adobe.com/graphql-mesh-gateway/) to integrate the core and Catalog Service GraphQL schemas with private and third-party APIs, as well as other software interfaces. The mesh can be configured to ensure that calls routed to each endpoint contain the correct authorization information in the headers.
 
