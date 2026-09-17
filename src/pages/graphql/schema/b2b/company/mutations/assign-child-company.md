@@ -23,9 +23,9 @@ The `assignChildCompany` mutation allows company administrators to assign a chil
 }
 ```
 
-[//]: # (## Reference)
-[//]: # ()
-[//]: # (The [`assignChildCompany`]&#40;/reference/graphql/saas/mutations.md#assignchildcompany&#41; reference provides detailed information about the types and fields defined in this mutation.)
+## Reference
+
+The [`assignChildCompany`](/reference/graphql/saas/mutations.md#assignchildcompany) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

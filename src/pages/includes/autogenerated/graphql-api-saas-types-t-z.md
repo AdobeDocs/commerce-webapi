@@ -17,8 +17,8 @@ Contains tax item details.
 ```json
 {
   "amount": Money,
-  "rate": 987.65,
-  "title": "xyz789"
+  "rate": 123.45,
+  "title": "abc123"
 }
 ```
 
@@ -157,14 +157,36 @@ Contains the response to the request to unassign a child company.
 
 ```json
 {
-  "unitName": "abc123",
-  "storefrontLabel": "xyz789",
+  "unitName": "xyz789",
+  "storefrontLabel": "abc123",
   "pagePlacement": "xyz789",
   "displayNumber": 123,
-  "pageType": "abc123",
-  "unitStatus": "xyz789",
-  "typeId": "xyz789",
+  "pageType": "xyz789",
+  "unitStatus": "abc123",
+  "typeId": "abc123",
   "filterRules": [FilterRuleInput]
+}
+```
+
+<HorizontalLine />
+
+### UnitSelector
+
+Provide either rec unit ids or labels to retrieve rec units
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `unitIds` - [`[String!]`](/reference/graphql/saas/types-q-s.md#string) | List unit IDs of preconfigured units |
+| `labels` - [`[String!]`](/reference/graphql/saas/types-q-s.md#string) | List of labels of the preconfigured unit |
+
+#### Example
+
+```json
+{
+  "unitIds": ["xyz789"],
+  "labels": ["abc123"]
 }
 ```
 
@@ -185,7 +207,7 @@ Modifies the specified items in the cart.
 
 ```json
 {
-  "cart_id": "abc123",
+  "cart_id": "xyz789",
   "cart_items": [CartItemUpdateInput]
 }
 ```
@@ -210,6 +232,43 @@ Contains details about the cart after updating items.
   "cart": Cart,
   "errors": [CartUserInputError]
 }
+```
+
+<HorizontalLine />
+
+### UpdateCompanyConfigInput
+
+Defines the input schema for updating company configuration.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `address_book_enabled` - [`Boolean`](/reference/graphql/saas/types-a-b.md#boolean) | Indicates whether the company address book is enabled. |
+| `custom_shipping_address_enabled` - [`Boolean`](/reference/graphql/saas/types-a-b.md#boolean) | Indicates whether custom shipping address entry is allowed when the company address book is enabled. |
+
+#### Example
+
+```json
+{"address_book_enabled": false, "custom_shipping_address_enabled": true}
+```
+
+<HorizontalLine />
+
+### UpdateCompanyConfigOutput
+
+Contains the response to the request to update company configuration.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `company` - [`Company`](/reference/graphql/saas/types-c-e.md#company) | The updated company. |
+
+#### Example
+
+```json
+{"company": Company}
 ```
 
 <HorizontalLine />
@@ -327,7 +386,7 @@ Defines updates to a `GiftRegistry` object.
     GiftRegistryDynamicAttributeInput
   ],
   "event_name": "abc123",
-  "message": "abc123",
+  "message": "xyz789",
   "privacy_settings": "PRIVATE",
   "shipping_address": GiftRegistryShippingAddressInput,
   "status": "ACTIVE"
@@ -353,8 +412,8 @@ Defines updates to an item in a gift registry.
 ```json
 {
   "gift_registry_item_uid": "4",
-  "note": "abc123",
-  "quantity": 123.45
+  "note": "xyz789",
+  "quantity": 987.65
 }
 ```
 
@@ -417,9 +476,9 @@ Defines updates to an existing registrant.
   "dynamic_attributes": [
     GiftRegistryDynamicAttributeInput
   ],
-  "email": "abc123",
-  "firstname": "abc123",
-  "gift_registry_registrant_uid": 4,
+  "email": "xyz789",
+  "firstname": "xyz789",
+  "gift_registry_registrant_uid": "4",
   "lastname": "abc123"
 }
 ```
@@ -566,8 +625,8 @@ Defines the changes to be made to an approval rule.
 
 ```json
 {
-  "applies_to": ["4"],
-  "approvers": [4],
+  "applies_to": [4],
+  "approvers": ["4"],
   "condition": CreatePurchaseOrderApprovalRuleConditionInput,
   "description": "abc123",
   "name": "xyz789",
@@ -618,9 +677,9 @@ Defines which items in a requisition list to update.
 ```json
 {
   "entered_options": [EnteredOptionInput],
-  "item_id": "4",
+  "item_id": 4,
   "quantity": 123.45,
-  "selected_options": ["abc123"]
+  "selected_options": ["xyz789"]
 }
 ```
 
@@ -679,7 +738,7 @@ Contains the name and visibility of an updated wish list.
 ```json
 {
   "name": "abc123",
-  "uid": 4,
+  "uid": "4",
   "visibility": "PUBLIC"
 }
 ```
@@ -703,7 +762,7 @@ Defines the input for returning matching companies the customer is assigned to.
 ```json
 {
   "currentPage": 123,
-  "pageSize": 987,
+  "pageSize": 123,
   "sort": [CompaniesSortInput]
 }
 ```
@@ -746,7 +805,7 @@ Contains details about a failed validation attempt.
 #### Example
 
 ```json
-{"message": "abc123", "type": "NOT_FOUND"}
+{"message": "xyz789", "type": "NOT_FOUND"}
 ```
 
 <HorizontalLine />
@@ -784,7 +843,7 @@ Defines the purchase orders to be validated.
 #### Example
 
 ```json
-{"purchase_order_uids": ["4"]}
+{"purchase_order_uids": [4]}
 ```
 
 <HorizontalLine />
@@ -827,7 +886,7 @@ Defines a customer attribute validation rule.
 ```json
 {
   "name": "DATE_RANGE_MAX",
-  "value": "abc123"
+  "value": "xyz789"
 }
 ```
 
@@ -959,7 +1018,7 @@ User view history
 ```json
 {
   "date": "2007-12-03T10:15:30Z",
-  "sku": "xyz789"
+  "sku": "abc123"
 }
 ```
 
@@ -1001,9 +1060,12 @@ An implementation for virtual product cart items.
 | `discount` - [`[Discount]`](/reference/graphql/saas/types-c-e.md#discount) | Contains discount for quote line item. |
 | `errors` - [`[CartItemError]`](/reference/graphql/saas/types-c-e.md#cartitemerror) | An array of errors encountered while loading the cart item |
 | `is_available` - [`Boolean!`](/reference/graphql/saas/types-a-b.md#boolean) | True if requested quantity is less than available stock, false otherwise. *(Deprecated: Use `is_salable` instead. It indicates whether the line can be purchased, including backorder configuration.)* |
+| `is_free_gift` - [`Boolean!`](/reference/graphql/saas/types-a-b.md#boolean) | True if this line item was added by a Free Gift cart price rule. |
 | `is_salable` - [`Boolean!`](/reference/graphql/saas/types-a-b.md#boolean) | True when the item can be purchased and should not block checkout: stock status is in stock and either physical quantity covers the requested quantity or backorders are allowed. |
 | `max_qty` - [`Float`](/reference/graphql/saas/types-f-i.md#float) | Line item max qty in quote template |
 | `min_qty` - [`Float`](/reference/graphql/saas/types-f-i.md#float) | Line item min qty in quote template |
+| `nominated_source` - [`SourceAvailability`](/reference/graphql/saas/types-q-s.md#sourceavailability) | The source currently nominated for this cart item, with its live availability snapshot. Null when no source is nominated, or when the nominated source no longer resolves or is disabled (see nominated_source_errors). |
+| `nominated_source_errors` - [`[NominatedSourceError]!`](/reference/graphql/saas/types-k-p.md#nominatedsourceerror) | Live validation errors for this item's current nomination: UNKNOWN_SOURCE if the source no longer exists, SOURCE_DISABLED if it exists but is disabled, NOT_ENOUGH_QTY if available quantity has since dropped below the item's quantity. Empty when there is no nomination or it is still valid. SKU_SOURCE_CONFLICT never appears here — it is enforced only by the setNominatedSourceOnCartItems write path and cannot occur on an already-persisted cart. |
 | `not_available_message` - [`String`](/reference/graphql/saas/types-q-s.md#string) | Shortage or unavailability message for the line; null when the item is salable. |
 | `note_from_buyer` - [`[ItemNote]`](/reference/graphql/saas/types-f-i.md#itemnote) | The buyer's quote line item note. |
 | `note_from_seller` - [`[ItemNote]`](/reference/graphql/saas/types-f-i.md#itemnote) | The seller's quote line item note. |
@@ -1016,22 +1078,25 @@ An implementation for virtual product cart items.
 
 ```json
 {
-  "backorder_message": "xyz789",
+  "backorder_message": "abc123",
   "custom_attributes": [CustomAttribute],
   "customizable_options": [SelectedCustomizableOption],
   "discount": [Discount],
   "errors": [CartItemError],
-  "is_available": false,
-  "is_salable": false,
-  "max_qty": 123.45,
+  "is_available": true,
+  "is_free_gift": false,
+  "is_salable": true,
+  "max_qty": 987.65,
   "min_qty": 123.45,
-  "not_available_message": "xyz789",
+  "nominated_source": SourceAvailability,
+  "nominated_source_errors": [NominatedSourceError],
+  "not_available_message": "abc123",
   "note_from_buyer": [ItemNote],
   "note_from_seller": [ItemNote],
   "prices": CartItemPrices,
   "product": ProductInterface,
-  "quantity": 123.45,
-  "uid": "4"
+  "quantity": 987.65,
+  "uid": 4
 }
 ```
 
@@ -1092,7 +1157,7 @@ Defines a virtual product, which is a non-tangible product that does not require
 {
   "canonical_url": "xyz789",
   "categories": [CategoryInterface],
-  "country_of_manufacture": "xyz789",
+  "country_of_manufacture": "abc123",
   "crosssell_products": [ProductInterface],
   "custom_attributesV2": ProductCustomAttributes,
   "description": ComplexTextValue,
@@ -1100,18 +1165,18 @@ Defines a virtual product, which is a non-tangible product that does not require
   "gift_wrapping_available": true,
   "gift_wrapping_price": Money,
   "image": ProductImage,
-  "is_returnable": "abc123",
-  "manufacturer": 987,
+  "is_returnable": "xyz789",
+  "manufacturer": 123,
   "max_sale_qty": 987.65,
   "media_gallery": [MediaGalleryInterface],
-  "meta_description": "xyz789",
+  "meta_description": "abc123",
   "meta_keyword": "xyz789",
-  "meta_title": "abc123",
+  "meta_title": "xyz789",
   "min_sale_qty": 123.45,
   "name": "xyz789",
-  "new_from_date": "abc123",
-  "new_to_date": "xyz789",
-  "only_x_left_in_stock": 123.45,
+  "new_from_date": "xyz789",
+  "new_to_date": "abc123",
+  "only_x_left_in_stock": 987.65,
   "options": [CustomizableOptionInterface],
   "options_container": "xyz789",
   "price_range": PriceRange,
@@ -1122,12 +1187,12 @@ Defines a virtual product, which is a non-tangible product that does not require
   "short_description": ComplexTextValue,
   "sku": "abc123",
   "small_image": ProductImage,
-  "special_price": 123.45,
+  "special_price": 987.65,
   "special_to_date": "abc123",
   "stock_status": "IN_STOCK",
   "swatch_image": "xyz789",
   "thumbnail": ProductImage,
-  "uid": "4",
+  "uid": 4,
   "upsell_products": [ProductInterface],
   "url_key": "abc123"
 }
@@ -1155,8 +1220,8 @@ Contains details about virtual products added to a requisition list.
 {
   "customizable_options": [SelectedCustomizableOption],
   "product": ProductInterface,
-  "quantity": 987.65,
-  "sku": "xyz789",
+  "quantity": 123.45,
+  "sku": "abc123",
   "uid": 4
 }
 ```
@@ -1182,12 +1247,12 @@ Contains a virtual product wish list item.
 
 ```json
 {
-  "added_at": "xyz789",
+  "added_at": "abc123",
   "customizable_options": [SelectedCustomizableOption],
-  "description": "abc123",
-  "id": "4",
+  "description": "xyz789",
+  "id": 4,
   "product": ProductInterface,
-  "quantity": 123.45
+  "quantity": 987.65
 }
 ```
 
@@ -1257,7 +1322,7 @@ Contains a customer wish list.
   "id": "4",
   "items_count": 123,
   "items_v2": WishlistItems,
-  "name": "xyz789",
+  "name": "abc123",
   "sharing_code": "xyz789",
   "updated_at": "xyz789",
   "visibility": "PUBLIC"
@@ -1284,9 +1349,9 @@ Contains details about errors encountered when a customer added wish list items 
 ```json
 {
   "code": "PRODUCT_NOT_FOUND",
-  "message": "xyz789",
+  "message": "abc123",
   "wishlistId": "4",
-  "wishlistItemId": 4
+  "wishlistItemId": "4"
 }
 ```
 
@@ -1301,10 +1366,10 @@ A list of possible error types.
 | Enum Value | Description |
 |------------|-------------|
 | `PRODUCT_NOT_FOUND` |  |
+| `REQUIRED_PARAMETER_MISSING` |  |
 | `NOT_SALABLE` |  |
 | `INSUFFICIENT_STOCK` |  |
 | `UNDEFINED` |  |
-| `REQUIRED_PARAMETER_MISSING` |  |
 
 #### Example
 
@@ -1329,7 +1394,7 @@ Specifies the IDs of items to copy and their quantities.
 
 ```json
 {
-  "quantity": 987.65,
+  "quantity": 123.45,
   "wishlist_item_id": "4"
 }
 ```
@@ -1357,7 +1422,7 @@ Defines the items to add to a wish list.
   "entered_options": [EnteredOptionInput],
   "parent_sku": "xyz789",
   "quantity": 987.65,
-  "selected_options": ["4"],
+  "selected_options": [4],
   "sku": "xyz789"
 }
 ```
@@ -1400,7 +1465,7 @@ The interface for wish list items.
   "description": "abc123",
   "id": "4",
   "product": ProductInterface,
-  "quantity": 123.45
+  "quantity": 987.65
 }
 ```
 
@@ -1420,10 +1485,7 @@ Specifies the IDs of the items to move and their quantities.
 #### Example
 
 ```json
-{
-  "quantity": 987.65,
-  "wishlist_item_id": "4"
-}
+{"quantity": 123.45, "wishlist_item_id": 4}
 ```
 
 <HorizontalLine />
@@ -1446,11 +1508,11 @@ Defines updates to items in a wish list.
 
 ```json
 {
-  "description": "abc123",
+  "description": "xyz789",
   "entered_options": [EnteredOptionInput],
   "quantity": 123.45,
   "selected_options": ["4"],
-  "wishlist_item_id": 4
+  "wishlist_item_id": "4"
 }
 ```
 

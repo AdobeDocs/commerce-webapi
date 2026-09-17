@@ -23,9 +23,9 @@ The `unassignChildCompany` mutation allows company administrators to unassign a 
 }
 ```
 
-[//]: # (## Reference)
-[//]: # ()
-[//]: # (The [`unassignChildCompany`]&#40;/reference/graphql/saas/mutations.md#unassignchildcompany&#41; reference provides detailed information about the types and fields defined in this mutation.)
+## Reference
+
+The [`unassignChildCompany`](/reference/graphql/saas/mutations.md#unassignchildcompany) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

@@ -146,6 +146,11 @@ definitions:
         items:
           "$ref": "#/definitions/adobe-assets-integration-data-alt-text-item-interface"
         type: array
+      hidden_store_views:
+        description: Store view codes this asset should be hidden from
+        items:
+          type: string
+        type: array
       position:
         description: Position
         type: integer
@@ -1471,6 +1476,13 @@ definitions:
     type: object
   catalog-data-product-custom-option-extension-interface:
     description: ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductCustomOptionInterface
+    properties:
+      group:
+        type: string
+      option_uids:
+        items:
+          "$ref": "#/definitions/catalog-product-custom-option-uid-data-option-uid-interface"
+        type: array
     type: object
   catalog-data-product-custom-option-interface:
     description: ''
@@ -2092,6 +2104,31 @@ definitions:
     - orders
     - limit
     type: object
+  catalog-product-custom-option-uid-data-option-uid-interface:
+    description: 'A single add-to-cart UID entry for a customizable option. For selectable
+      options (drop_down/radio/checkbox/multiple) there is one entry per value, and
+      option_type_id identifies which value the uid belongs to. For entered options
+      (field/area/file/date/date_time/time) there is a single entry whose uid applies
+      to the option itself; option_type_id is null on the object and, because the
+      REST output processor omits null values, is absent from the serialized response
+      rather than present as null. The sibling "group" extension attribute on the
+      option classifies it as one of four groups: "select" (drop_down/radio/checkbox/multiple),
+      "text" (field/area), "file" (file), or "date" (date/date_time/time). It is the
+      selectable-vs-entered discriminator: "select" means option_uids holds one entry
+      per value, each carrying that value''s option_type_id (correlate a value to
+      its uid by matching option_type_id), while "text"/"file"/"date" mean option_uids
+      holds a single option-level entry.'
+    properties:
+      option_type_id:
+        description: Value id this uid belongs to; present only for selectable options
+          and absent for entered options.
+        type: integer
+      uid:
+        description: Base64 add-to-cart uid.
+        type: string
+    required:
+    - uid
+    type: object
   checkout-agreements-data-agreement-extension-interface:
     description: ExtensionInterface class for @see \Magento\CheckoutAgreements\Api\Data\AgreementInterface
     type: object
@@ -2203,6 +2240,17 @@ definitions:
     required:
     - address
     type: object
+  commerce-backend-uix-data-admin-ui-sdk-config-result-interface:
+    description: Response DTO returned by the Admin UI SDK configuration update endpoint
+      (PUT /V1/adminuisdk/config). Carries a single boolean reflecting whether the
+      Admin UI SDK is enabled after the configuration change has been persisted.
+    properties:
+      enabled:
+        description: True when the Admin UI SDK is enabled after the update
+        type: boolean
+    required:
+    - enabled
+    type: object
   commerce-backend-uix-data-app-management-validation-result-interface:
     description: App Management User Validation Result Interface
     properties:
@@ -2280,6 +2328,21 @@ definitions:
     - error_message
     - request_timestamp
     type: object
+  commerce-backend-uix-data-permission-check-result-interface:
+    description: Response DTO returned by the Admin UI SDK permission check endpoint
+      (POST /V1/adminuisdk/permission/check). Carries a single boolean indicating
+      whether the authenticated admin user holds the requested ACL resource. A false
+      value means either the resource is not registered through any SDK extension
+      point or the user's role does not grant it — callers must not distinguish between
+      the two cases.
+    properties:
+      allowed:
+        description: True when the current user is authorized for the requested ACL
+          resource.
+        type: boolean
+    required:
+    - allowed
+    type: object
   commerce-backend-uix-data-selected-extension-data-interface:
     description: Defines the selected extensions table data model
     properties:
@@ -2303,6 +2366,111 @@ definitions:
         type: boolean
     required:
     - installed
+    type: object
+  company-address-storefront-compatibility-data-company-address-extension-interface:
+    description: Extension attributes for company address.
+    type: object
+  company-address-storefront-compatibility-data-company-address-interface:
+    description: Company address data interface.
+    properties:
+      city:
+        description: City.
+        type: string
+      company:
+        description: Company name.
+        type: string
+      company_address_id:
+        description: Company address ID.
+        type: integer
+      company_id:
+        description: Company ID.
+        type: integer
+      country_id:
+        description: Country ID.
+        type: string
+      custom_attributes:
+        description: Custom attributes values.
+        items:
+          "$ref": "#/definitions/framework-attribute-interface"
+        type: array
+      extension_attributes:
+        "$ref": "#/definitions/company-address-storefront-compatibility-data-company-address-extension-interface"
+      fax:
+        description: Fax.
+        type: string
+      firstname:
+        description: First name.
+        type: string
+      increment_id:
+        description: Increment ID.
+        type: string
+      lastname:
+        description: Last name.
+        type: string
+      middlename:
+        description: Middle name.
+        type: string
+      nickname:
+        description: Nickname.
+        type: string
+      postcode:
+        description: Postcode.
+        type: string
+      prefix:
+        description: Prefix.
+        type: string
+      region:
+        "$ref": "#/definitions/customer-data-region-interface"
+      region_id:
+        description: Region ID.
+        type: integer
+      street:
+        description: Street lines.
+        items:
+          type: string
+        type: array
+      suffix:
+        description: Suffix.
+        type: string
+      telephone:
+        description: Telephone.
+        type: string
+      type:
+        description: Address type.
+        type: integer
+      vat_id:
+        description: VAT ID.
+        type: string
+      vat_is_valid:
+        description: VAT validity flag.
+        type: integer
+      vat_request_date:
+        description: VAT request date.
+        type: string
+      vat_request_id:
+        description: VAT request ID.
+        type: string
+      vat_request_success:
+        description: VAT request success flag.
+        type: integer
+    type: object
+  company-address-storefront-compatibility-data-company-address-search-results-interface:
+    description: ''
+    properties:
+      items:
+        description: Company addresses list.
+        items:
+          "$ref": "#/definitions/company-address-storefront-compatibility-data-company-address-interface"
+        type: array
+      search_criteria:
+        "$ref": "#/definitions/framework-search-criteria-interface"
+      total_count:
+        description: Total count.
+        type: integer
+    required:
+    - items
+    - search_criteria
+    - total_count
     type: object
   company-credit-data-credit-balance-options-interface:
     description: Credit balance data transfer object interface.
@@ -2542,6 +2710,10 @@ definitions:
         type: string
       available_shipping_methods:
         type: string
+      is_company_address_book_enabled:
+        type: boolean
+      is_custom_shipping_address_allowed:
+        type: boolean
       is_purchase_order_enabled:
         type: boolean
       quote_config:
@@ -2690,7 +2862,7 @@ definitions:
         type: integer
     type: object
   company-data-permission-interface:
-    description: Permission interface.
+    description: Permission management
     properties:
       id:
         description: Id.
@@ -2755,7 +2927,7 @@ definitions:
     description: ExtensionInterface class for @see \Magento\Company\Api\Data\TeamInterface
     type: object
   company-data-team-interface:
-    description: Team interface
+    description: Team custom attributes management
     properties:
       custom_attributes:
         description: Custom attributes values.
@@ -3157,6 +3329,10 @@ definitions:
   customer-data-customer-extension-interface:
     description: ExtensionInterface class for @see \Magento\Customer\Api\Data\CustomerInterface
     properties:
+      all_company_attributes:
+        items:
+          "$ref": "#/definitions/company-data-company-customer-interface"
+        type: array
       assistance_allowed:
         type: integer
       company_attributes:
@@ -4428,6 +4604,8 @@ definitions:
       parser
     properties:
       carrier_links:
+        description: Carrier links for the source as an array of SourceCarrierLinkInterface
+          objects or null.
         items:
           "$ref": "#/definitions/inventory-api-data-source-carrier-link-interface"
         type: array
@@ -4552,6 +4730,8 @@ definitions:
       ExtensionInterface class for @see \Magento\InventoryApi\Api\Data\StockInterface'
     properties:
       sales_channels:
+        description: Stock extension attributes like sales channels for a stock entity
+          as an array of SalesChannelInterface.
         items:
           "$ref": "#/definitions/inventory-sales-api-data-sales-channel-interface"
         type: array
@@ -4634,8 +4814,10 @@ definitions:
     description: Specifies item and quantity for partial inventory transfer.
     properties:
       qty:
+        description: The quantity of the partial inventory transfer item.
         type: number
       sku:
+        description: The SKU of the partial inventory transfer item.
         type: string
     required:
     - sku
@@ -4714,7 +4896,8 @@ definitions:
     type: object
   inventory-low-quantity-notification-api-data-source-item-configuration-interface:
     description: Represents a Source Item Configuration object Used fully qualified
-      namespaces in annotations for proper work of WebApi request parser
+      namespaces in annotations for proper work of WebApi request parser phpcs:disable
+      Generic.Files.LineLength.TooLong
     properties:
       extension_attributes:
         "$ref": "#/definitions/inventory-low-quantity-notification-api-data-source-item-configuration-extension-interface"
@@ -4785,10 +4968,14 @@ definitions:
     description: ''
     properties:
       code:
+        description: The error code related to product salability, returning it as
+          a string value.
         type: string
       extension_attributes:
         "$ref": "#/definitions/inventory-sales-api-data-product-salability-error-extension-interface"
       message:
+        description: The error message related to product salability, returning it
+          as a string value.
         type: string
     required:
     - code
@@ -4801,12 +4988,14 @@ definitions:
     description: Represents result of service Magento\InventorySalesApi\Api\IsProductSalableForRequestedQtyInterface::execute
     properties:
       errors:
+        description: A list of errors related to product salability.
         items:
           "$ref": "#/definitions/inventory-sales-api-data-product-salability-error-interface"
         type: array
       extension_attributes:
         "$ref": "#/definitions/inventory-sales-api-data-product-salable-result-extension-interface"
       salable:
+        description: If the product is salable based on its availability and conditions.
         type: boolean
     required:
     - salable
@@ -4902,12 +5091,15 @@ definitions:
     description: Data Interface representing particular Source Selection Algorithm
     properties:
       code:
+        description: The code of the Source Selection Algorithm as a string.
         type: string
       description:
+        description: The description of the Source Selection Algorithm as a string.
         type: string
       extension_attributes:
         "$ref": "#/definitions/inventory-source-selection-api-data-source-selection-algorithm-extension-interface"
       title:
+        description: The title of the Source Selection Algorithm as a string.
         type: string
     required:
     - code
@@ -4949,8 +5141,11 @@ definitions:
       extension_attributes:
         "$ref": "#/definitions/inventory-source-selection-api-data-source-selection-result-extension-interface"
       shippable:
+        description: If the source selection result is eligible for shipping.
         type: boolean
       source_selection_items:
+        description: The list of source selection items representing how product quantities
+          are deducted from sources.
         items:
           "$ref": "#/definitions/inventory-source-selection-api-data-source-selection-item-interface"
         type: array
@@ -5751,6 +5946,8 @@ definitions:
   quote-data-address-extension-interface:
     description: ExtensionInterface class for @see \Magento\Quote\Api\Data\AddressInterface
     properties:
+      company_address_id:
+        type: integer
       discounts:
         items:
           "$ref": "#/definitions/sales-rule-data-rule-discount-interface"
@@ -9528,6 +9725,9 @@ definitions:
     type: object
   sales-rule-data-condition-extension-interface:
     description: ExtensionInterface class for @see \Magento\SalesRule\Api\Data\ConditionInterface
+    properties:
+      attribute_scope:
+        type: string
     type: object
   sales-rule-data-condition-interface:
     description: Interface ConditionInterface
@@ -9716,6 +9916,12 @@ definitions:
   sales-rule-data-rule-extension-interface:
     description: ExtensionInterface class for @see \Magento\SalesRule\Api\Data\RuleInterface
     properties:
+      gift_discount_type:
+        type: string
+      gift_qty:
+        type: integer
+      gift_sku:
+        type: string
       reward_points_delta:
         type: integer
     type: object
@@ -10076,6 +10282,85 @@ definitions:
     - code
     - name
     - default_group_id
+    type: object
+  system-config-rest-data-system-config-item-interface:
+    description: System configuration item (path + value + scope) for API
+    properties:
+      path:
+        description: Path (e.g. general/locale/code)
+        type: string
+      scope:
+        description: 'Type: default, website, store'
+        type: string
+      scope_code:
+        description: Code (website code or store code); null for default scope
+        type: string
+      value:
+        description: Value (scalar or array for multi-value fields)
+        type: string
+    required:
+    - path
+    - value
+    - scope
+    type: object
+  system-config-rest-data-system-config-search-results-interface:
+    description: Search results for a system configuration GET request
+    properties:
+      items:
+        description: Items matching the search criteria
+        items:
+          "$ref": "#/definitions/system-config-rest-data-system-config-item-interface"
+        type: array
+      search_criteria:
+        "$ref": "#/definitions/framework-search-criteria-interface"
+      total_count:
+        description: Total count.
+        type: integer
+    required:
+    - items
+    - search_criteria
+    - total_count
+    type: object
+  system-config-rest-data-system-config-update-error-interface:
+    description: A configuration item from a PUT request that was not persisted, with
+      the reason why
+    properties:
+      message:
+        description: Reason the item was not persisted (never includes the submitted
+          value)
+        type: string
+      path:
+        description: Path that was rejected
+        type: string
+      scope:
+        description: 'Type the item was submitted at: default, website, store'
+        type: string
+      scope_code:
+        description: Code the item was submitted at; null for default scope
+        type: string
+    required:
+    - path
+    - scope
+    - message
+    type: object
+  system-config-rest-data-system-config-update-result-interface:
+    description: 'Outcome of a system configuration PUT request: every submitted item
+      is accounted for in either items (persisted) or errors (rejected, with a reason)
+      — never both, never neither'
+    properties:
+      errors:
+        description: That were rejected, with the reason for each
+        items:
+          "$ref": "#/definitions/system-config-rest-data-system-config-update-error-interface"
+        type: array
+      items:
+        description: That were successfully persisted
+        items:
+          "$ref": "#/definitions/system-config-rest-data-system-config-item-interface"
+        type: array
+    required:
+    - items
+    - errors
     type: object
   tax-data-applied-tax-rate-extension-interface:
     description: ExtensionInterface class for @see \Magento\Tax\Api\Data\AppliedTaxRateInterface
@@ -10528,7 +10813,7 @@ definitions:
 host: https://<server>.api.commerce.adobe.com/<tenant-id>
 info:
   title: Adobe Commerce as a Cloud Service
-  version: July 2026
+  version: September 2026
   description:
     "$ref": intro/accs-intro.md
 paths:
@@ -10610,6 +10895,45 @@ paths:
       tags:
       - adminuisdk/appmanagement/validate
       summary: adminuisdk/appmanagement/validate
+  "/V1/adminuisdk/config":
+    put:
+      consumes:
+      - application/json
+      - application/xml
+      description: Enables or disables the Admin UI SDK and returns the resulting
+        state
+      operationId: PutV1AdminuisdkConfig
+      parameters:
+      - in: body
+        name: PutV1AdminuisdkConfigBody
+        schema:
+          properties:
+            enableAdminUiSdk:
+              type: boolean
+          required:
+          - enableAdminUiSdk
+          type: object
+          xml:
+            name: request
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/commerce-backend-uix-data-admin-ui-sdk-config-result-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - adminuisdk/config
+      summary: adminuisdk/config
   "/V1/adminuisdk/extension":
     post:
       consumes:
@@ -10773,6 +11097,49 @@ paths:
       tags:
       - adminuisdk/orderviewbutton/{request_id}
       summary: adminuisdk/orderviewbutton/{request_id}
+  "/V1/adminuisdk/permission/check":
+    post:
+      consumes:
+      - application/json
+      - application/xml
+      description: Checks if the user has permissions for Admin UI SDK ACL resource
+        registered by an extension point
+      operationId: PostV1AdminuisdkPermissionCheck
+      parameters:
+      - in: body
+        name: PostV1AdminuisdkPermissionCheckBody
+        schema:
+          properties:
+            resource:
+              type: string
+          required:
+          - resource
+          type: object
+          xml:
+            name: request
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/commerce-backend-uix-data-permission-check-result-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - adminuisdk/permission/check
+      summary: adminuisdk/permission/check
   "/V1/adobe_io_events/check_configuration":
     get:
       consumes:
@@ -11044,6 +11411,151 @@ paths:
       tags:
       - adobestock/search
       summary: adobestock/search
+  "/V1/attributeMetadata/companyAddress":
+    get:
+      consumes:
+      - application/json
+      - application/xml
+      description: Get all attribute metadata.
+      operationId: GetV1AttributeMetadataCompanyAddress
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            items:
+              "$ref": "#/definitions/customer-data-attribute-metadata-interface"
+            type: array
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - attributeMetadata/companyAddress
+      summary: attributeMetadata/companyAddress
+  "/V1/attributeMetadata/companyAddress/attribute/{attributeCode}":
+    get:
+      consumes:
+      - application/json
+      - application/xml
+      description: Retrieve attribute metadata.
+      operationId: GetV1AttributeMetadataCompanyAddressAttributeAttributeCode
+      parameters:
+      - in: path
+        name: attributeCode
+        required: true
+        type: string
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/customer-data-attribute-metadata-interface"
+        '400':
+          description: 400 Bad Request
+          schema:
+            "$ref": "#/definitions/error-response"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - attributeMetadata/companyAddress/attribute/{attributeCode}
+      summary: attributeMetadata/companyAddress/attribute/{attributeCode}
+  "/V1/attributeMetadata/companyAddress/custom":
+    get:
+      consumes:
+      - application/json
+      - application/xml
+      description: Get custom attributes metadata for the given data interface.
+      operationId: GetV1AttributeMetadataCompanyAddressCustom
+      parameters:
+      - in: query
+        name: dataInterfaceName
+        required: false
+        type: string
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            items:
+              "$ref": "#/definitions/customer-data-attribute-metadata-interface"
+            type: array
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - attributeMetadata/companyAddress/custom
+      summary: attributeMetadata/companyAddress/custom
+  "/V1/attributeMetadata/companyAddress/form/{formCode}":
+    get:
+      consumes:
+      - application/json
+      - application/xml
+      description: Retrieve all attributes filtered by form code
+      operationId: GetV1AttributeMetadataCompanyAddressFormFormCode
+      parameters:
+      - in: path
+        name: formCode
+        required: true
+        type: string
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            items:
+              "$ref": "#/definitions/customer-data-attribute-metadata-interface"
+            type: array
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - attributeMetadata/companyAddress/form/{formCode}
+      summary: attributeMetadata/companyAddress/form/{formCode}
   "/V1/attributeMetadata/customer":
     get:
       consumes:
@@ -12173,6 +12685,68 @@ paths:
       tags:
       - carts/{cartId}
       summary: carts/{cartId}
+  "/V1/carts/{cartId}/balance/apply":
+    post:
+      consumes:
+      - application/json
+      - application/xml
+      description: Apply store credit
+      operationId: PostV1CartsCartIdBalanceApply
+      parameters:
+      - in: path
+        name: cartId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            type: boolean
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - carts/{cartId}/balance/apply
+      summary: carts/{cartId}/balance/apply
+  "/V1/carts/{cartId}/balance/unapply":
+    delete:
+      consumes:
+      - application/json
+      - application/xml
+      description: Remove store credit from cart
+      operationId: DeleteV1CartsCartIdBalanceUnapply
+      parameters:
+      - in: path
+        name: cartId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            type: boolean
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - carts/{cartId}/balance/unapply
+      summary: carts/{cartId}/balance/unapply
   "/V1/carts/{cartId}/billing-address":
     get:
       consumes:
@@ -13906,6 +14480,225 @@ paths:
       tags:
       - categories/{id}
       summary: categories/{id}
+  "/V1/companies/{companyId}/billingAddress":
+    get:
+      consumes:
+      - application/json
+      - application/xml
+      description: Retrieve the default billing company address for a company.
+      operationId: GetV1CompaniesCompanyIdBillingAddress
+      parameters:
+      - in: path
+        name: companyId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/company-address-storefront-compatibility-data-company-address-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - companies/{companyId}/billingAddress
+      summary: companies/{companyId}/billingAddress
+  "/V1/companies/{companyId}/shippingAddress":
+    get:
+      consumes:
+      - application/json
+      - application/xml
+      description: Retrieve the default shipping company address for a company.
+      operationId: GetV1CompaniesCompanyIdShippingAddress
+      parameters:
+      - in: path
+        name: companyId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/company-address-storefront-compatibility-data-company-address-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - companies/{companyId}/shippingAddress
+      summary: companies/{companyId}/shippingAddress
+  "/V1/company-address/{addressId}":
+    delete:
+      consumes:
+      - application/json
+      - application/xml
+      description: Delete company address by ID.
+      operationId: DeleteV1CompanyaddressAddressId
+      parameters:
+      - in: path
+        name: addressId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            type: boolean
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - company-address/{addressId}
+      summary: company-address/{addressId}
+    get:
+      consumes:
+      - application/json
+      - application/xml
+      description: Retrieve company address by ID.
+      operationId: GetV1CompanyaddressAddressId
+      parameters:
+      - in: path
+        name: addressId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/company-address-storefront-compatibility-data-company-address-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - company-address/{addressId}
+      summary: company-address/{addressId}
+    put:
+      consumes:
+      - application/json
+      - application/xml
+      description: Update an existing company address.
+      operationId: PutV1CompanyaddressAddressId
+      parameters:
+      - in: path
+        name: addressId
+        required: true
+        type: integer
+      - in: body
+        name: PutV1CompanyaddressAddressIdBody
+        schema:
+          properties:
+            companyAddress:
+              "$ref": "#/definitions/company-address-storefront-compatibility-data-company-address-interface"
+          required:
+          - companyAddress
+          type: object
+          xml:
+            name: request
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/company-address-storefront-compatibility-data-company-address-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - company-address/{addressId}
+      summary: company-address/{addressId}
+  "/V1/company-addresses/{addressId}/default":
+    put:
+      consumes:
+      - application/json
+      - application/xml
+      description: Set a company address as the default for its address type.
+      operationId: PutV1CompanyaddressesAddressIdDefault
+      parameters:
+      - in: path
+        name: addressId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/company-address-storefront-compatibility-data-company-address-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - company-addresses/{addressId}/default
+      summary: company-addresses/{addressId}/default
   "/V1/company/":
     get:
       consumes:
@@ -14514,6 +15307,115 @@ paths:
       tags:
       - company/{companyId}
       summary: company/{companyId}
+  "/V1/company/{companyId}/address":
+    post:
+      consumes:
+      - application/json
+      - application/xml
+      description: Create a company address for the given company.
+      operationId: PostV1CompanyCompanyIdAddress
+      parameters:
+      - in: path
+        name: companyId
+        required: true
+        type: integer
+      - in: body
+        name: PostV1CompanyCompanyIdAddressBody
+        schema:
+          properties:
+            companyAddress:
+              "$ref": "#/definitions/company-address-storefront-compatibility-data-company-address-interface"
+          required:
+          - companyAddress
+          type: object
+          xml:
+            name: request
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/company-address-storefront-compatibility-data-company-address-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - company/{companyId}/address
+      summary: company/{companyId}/address
+  "/V1/company/{companyId}/addresses":
+    get:
+      consumes:
+      - application/json
+      - application/xml
+      description: Retrieve company addresses for the given company.
+      operationId: GetV1CompanyCompanyIdAddresses
+      parameters:
+      - in: path
+        name: companyId
+        required: true
+        type: integer
+      - description: Field
+        in: query
+        name: searchCriteria[filterGroups][0][filters][0][field]
+        type: string
+      - description: Value
+        in: query
+        name: searchCriteria[filterGroups][0][filters][0][value]
+        type: string
+      - description: Condition type
+        in: query
+        name: searchCriteria[filterGroups][0][filters][0][conditionType]
+        type: string
+      - description: Sorting field.
+        in: query
+        name: searchCriteria[sortOrders][0][field]
+        type: string
+      - description: Sorting direction.
+        in: query
+        name: searchCriteria[sortOrders][0][direction]
+        type: string
+      - description: Page size.
+        in: query
+        name: searchCriteria[pageSize]
+        type: integer
+      - description: Current page.
+        in: query
+        name: searchCriteria[currentPage]
+        type: integer
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/company-address-storefront-compatibility-data-company-address-search-results-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - company/{companyId}/addresses
+      summary: company/{companyId}/addresses
   "/V1/company/{parentId}/relations":
     post:
       consumes:
@@ -16177,9 +17079,10 @@ paths:
       - application/xml
       description: Create a custom email template. Server-assigned fields (template_id,
         added_at, modified_at) and the strict-mode flag (is_legacy = 0) are set by
-        the service; any value supplied for them is ignored. The template_code must
-        be unique. Returns the persisted template, including its server-assigned template_id
-        (usable as-is with POST /V1/custom-email/send).
+        the service; any value supplied for them is ignored — create always assigns
+        a fresh template_id (use updateById to modify an existing template). The template_code
+        must be unique. Returns the persisted template, including its server-assigned
+        template_id (usable as-is with POST /V1/custom-email/send).
       operationId: PostV1CustomemailTemplates
       parameters:
       - in: body
@@ -16217,6 +17120,44 @@ paths:
       - custom-email/templates
       summary: custom-email/templates
   "/V1/custom-email/templates/{templateId}":
+    delete:
+      consumes:
+      - application/json
+      - application/xml
+      description: Delete a custom email template by id. A template that is currently
+        referenced by store configuration (e.g. assigned as a Sales email) cannot
+        be deleted; the attempt is rejected as a 409 Conflict, mirroring the Admin
+        behaviour. The template_id is matched against the current tenant's database
+        only.
+      operationId: DeleteV1CustomemailTemplatesTemplateId
+      parameters:
+      - in: path
+        name: templateId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            type: boolean
+        '400':
+          description: 400 Bad Request
+          schema:
+            "$ref": "#/definitions/error-response"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - custom-email/templates/{templateId}
+      summary: custom-email/templates/{templateId}
     get:
       consumes:
       - application/json
@@ -16229,6 +17170,56 @@ paths:
         name: templateId
         required: true
         type: integer
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/custom-email-template-data-email-template-detail-interface"
+        '400':
+          description: 400 Bad Request
+          schema:
+            "$ref": "#/definitions/error-response"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - custom-email/templates/{templateId}
+      summary: custom-email/templates/{templateId}
+    put:
+      consumes:
+      - application/json
+      - application/xml
+      description: 'Update an existing custom email template by id. Partial (PATCH-like)
+        update: only the fields present in the request are changed; omitted fields
+        keep their stored value. template_code is mutable but must remain unique across
+        templates. The strict-mode flag (is_legacy = 0) is enforced. The templateId
+        is matched against the current tenant''s database only, so a foreign id yields
+        a 404 (no cross-tenant update). Returns the updated template.'
+      operationId: PutV1CustomemailTemplatesTemplateId
+      parameters:
+      - in: path
+        name: templateId
+        required: true
+        type: integer
+      - in: body
+        name: PutV1CustomemailTemplatesTemplateIdBody
+        schema:
+          properties:
+            template:
+              "$ref": "#/definitions/custom-email-template-data-email-template-detail-interface"
+          required:
+          - template
+          type: object
+          xml:
+            name: request
       produces:
       - application/json
       - application/xml
@@ -16814,6 +17805,10 @@ paths:
           description: 200 Success.
           schema:
             "$ref": "#/definitions/customer-data-address-interface"
+        '400':
+          description: 400 Bad Request
+          schema:
+            "$ref": "#/definitions/error-response"
         '401':
           description: 401 Unauthorized
           schema:
@@ -19616,7 +20611,8 @@ paths:
       consumes:
       - application/json
       - application/xml
-      description: ''
+      description: Save an array of SourceItemConfigurationInterface objects passed
+        as parameter.
       operationId: PostV1InventoryLowquantitynotification
       parameters:
       - in: body
@@ -19863,7 +20859,8 @@ paths:
       consumes:
       - application/json
       - application/xml
-      description: ''
+      description: Returns a list of registered Source Selection Algorithm (SSA) data
+        interfaces available in the system.
       operationId: GetV1InventorySourceselectionalgorithmlist
       produces:
       - application/json
@@ -19891,7 +20888,8 @@ paths:
       consumes:
       - application/json
       - application/xml
-      description: ''
+      description: Executes the source selection service using the provided inventory
+        request and algorithm code.
       operationId: PostV1InventorySourceselectionalgorithmresult
       parameters:
       - in: body
@@ -25356,6 +26354,10 @@ paths:
               type: array
             assetId:
               type: string
+            hiddenStoreViews:
+              items:
+                type: string
+              type: array
             position:
               type: integer
             roles:
@@ -29469,6 +30471,134 @@ paths:
       tags:
       - store/websites
       summary: store/websites
+  "/V1/system/config":
+    get:
+      consumes:
+      - application/json
+      - application/xml
+      description: 'Get system configuration values matching the given search criteria
+        Standard Magento search: $searchCriteria''s pageSize/currentPage drive real
+        offset/limit pagination (0/unset pageSize preserves the legacy behavior of
+        returning up to 500 paths with no paging); a "path" filter (single "eq" value
+        or comma-separated "in" list) restricts the result to those specific paths
+        instead of every allowed/visible one, in which case pageSize/ currentPage
+        are ignored since the caller already controls the exact set requested — the
+        returned pageSize/currentPage/totalCount then all reflect that single page.
+        The result''s echoed-back searchCriteria reflects the pageSize/currentPage
+        actually applied.'
+      operationId: GetV1SystemConfig
+      parameters:
+      - description: Field
+        in: query
+        name: searchCriteria[filterGroups][0][filters][0][field]
+        type: string
+      - description: Value
+        in: query
+        name: searchCriteria[filterGroups][0][filters][0][value]
+        type: string
+      - description: Condition type
+        in: query
+        name: searchCriteria[filterGroups][0][filters][0][conditionType]
+        type: string
+      - description: Sorting field.
+        in: query
+        name: searchCriteria[sortOrders][0][field]
+        type: string
+      - description: Sorting direction.
+        in: query
+        name: searchCriteria[sortOrders][0][direction]
+        type: string
+      - description: Page size.
+        in: query
+        name: searchCriteria[pageSize]
+        type: integer
+      - description: Current page.
+        in: query
+        name: searchCriteria[currentPage]
+        type: integer
+      - description: 'Scope type: default, website, store'
+        in: query
+        name: scope
+        required: false
+        type: string
+      - description: Website code or store code; null for default scope
+        in: query
+        name: scopeCode
+        required: false
+        type: string
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/system-config-rest-data-system-config-search-results-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - system/config
+      summary: system/config
+    put:
+      consumes:
+      - application/json
+      - application/xml
+      description: 'Update system configuration with multiple options at once Every
+        submitted item is accounted for in the returned result — either persisted
+        (SystemConfigUpdateResultInterface::getItems()) or rejected with a reason
+        (SystemConfigUpdateResultInterface::getErrors()): a restricted path, a path
+        not found in system.xml/not visible for the given scope/not allowed by ACL,
+        an invalid scope code, or a value rejected by a declarative field rule. Saving
+        behavior otherwise matches admin UI save. Persisting one (section, scope)
+        group is independent of another — one group failing to save does not prevent
+        an unrelated group in the same request from being saved. This never throws
+        for a per-item validation problem; an exception here means a genuinely unexpected
+        failure (e.g. a database error).'
+      operationId: PutV1SystemConfig
+      parameters:
+      - in: body
+        name: PutV1SystemConfigBody
+        schema:
+          properties:
+            items:
+              description: Configuration items to save
+              items:
+                "$ref": "#/definitions/system-config-rest-data-system-config-item-interface"
+              type: array
+          required:
+          - items
+          type: object
+          xml:
+            name: request
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/system-config-rest-data-system-config-update-result-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - system/config
+      summary: system/config
   "/V1/taxClasses":
     post:
       consumes:
@@ -30767,15 +31897,21 @@ swagger: '2.0'
 tags:
 - name: addresses/{addressId}
 - name: adminuisdk/appmanagement/validate
+- name: adminuisdk/config
 - name: adminuisdk/extension
 - name: adminuisdk/extension/{workspace_name}/{extension_name}
 - name: adminuisdk/massaction/{request_id}
 - name: adminuisdk/orderviewbutton/{request_id}
+- name: adminuisdk/permission/check
 - name: adobe_io_events/check_configuration
 - name: adobestock/asset/{id}
 - name: adobestock/asset/list
 - name: adobestock/asset/search
 - name: adobestock/search
+- name: attributeMetadata/companyAddress
+- name: attributeMetadata/companyAddress/attribute/{attributeCode}
+- name: attributeMetadata/companyAddress/custom
+- name: attributeMetadata/companyAddress/form/{formCode}
 - name: attributeMetadata/customer
 - name: attributeMetadata/customer/attribute/{attributeCode}
 - name: attributeMetadata/customer/custom
@@ -30799,6 +31935,8 @@ tags:
 - name: bundle-products/options/types
 - name: carts/
 - name: carts/{cartId}
+- name: carts/{cartId}/balance/apply
+- name: carts/{cartId}/balance/unapply
 - name: carts/{cartId}/billing-address
 - name: carts/{cartId}/coupons
 - name: carts/{cartId}/coupons/{couponCode}
@@ -30834,8 +31972,14 @@ tags:
 - name: categories/attributes/{attributeCode}
 - name: categories/attributes/{attributeCode}/options
 - name: categories/list
+- name: companies/{companyId}/billingAddress
+- name: companies/{companyId}/shippingAddress
+- name: company-address/{addressId}
+- name: company-addresses/{addressId}/default
 - name: company/
 - name: company/{companyId}
+- name: company/{companyId}/address
+- name: company/{companyId}/addresses
 - name: company/{parentId}/relations
 - name: company/{parentId}/relations/{companyId}
 - name: company/assignRoles
@@ -31132,6 +32276,7 @@ tags:
 - name: store/storeGroups
 - name: store/storeViews
 - name: store/websites
+- name: system/config
 - name: taxClasses
 - name: taxClasses/{classId}
 - name: taxClasses/{taxClassId}
@@ -31158,10 +32303,12 @@ x-tagGroups:
 - name: adminuisdk
   tags:
   - adminuisdk/appmanagement/validate
+  - adminuisdk/config
   - adminuisdk/extension
   - adminuisdk/extension/{workspace_name}/{extension_name}
   - adminuisdk/massaction/{request_id}
   - adminuisdk/orderviewbutton/{request_id}
+  - adminuisdk/permission/check
 - name: adobe_io_events
   tags:
   - adobe_io_events/check_configuration
@@ -31173,6 +32320,10 @@ x-tagGroups:
   - adobestock/search
 - name: attributeMetadata
   tags:
+  - attributeMetadata/companyAddress
+  - attributeMetadata/companyAddress/attribute/{attributeCode}
+  - attributeMetadata/companyAddress/custom
+  - attributeMetadata/companyAddress/form/{formCode}
   - attributeMetadata/customer
   - attributeMetadata/customer/attribute/{attributeCode}
   - attributeMetadata/customer/custom
@@ -31205,6 +32356,8 @@ x-tagGroups:
   - carts/licence/list
   - carts/search
   - carts/{cartId}
+  - carts/{cartId}/balance/apply
+  - carts/{cartId}/balance/unapply
   - carts/{cartId}/billing-address
   - carts/{cartId}/coupons
   - carts/{cartId}/coupons/deleteByCodes
@@ -31239,6 +32392,16 @@ x-tagGroups:
   - categories/{categoryId}/products
   - categories/{categoryId}/products/{sku}
   - categories/{id}
+- name: companies
+  tags:
+  - companies/{companyId}/billingAddress
+  - companies/{companyId}/shippingAddress
+- name: company address
+  tags:
+  - company-address/{addressId}
+- name: company addresses
+  tags:
+  - company-addresses/{addressId}/default
 - name: company
   tags:
   - company/
@@ -31250,6 +32413,8 @@ x-tagGroups:
   - company/role/{roleId}/users
   - company/setCustomAttributes
   - company/{companyId}
+  - company/{companyId}/address
+  - company/{companyId}/addresses
   - company/{parentId}/relations
   - company/{parentId}/relations/{companyId}
 - name: companyCredits
@@ -31625,6 +32790,9 @@ x-tagGroups:
   - store/storeGroups
   - store/storeViews
   - store/websites
+- name: system
+  tags:
+  - system/config
 - name: taxClasses
   tags:
   - taxClasses

@@ -23,9 +23,9 @@ The `importSharedRequisitionList` mutation allows recipients within the same com
 }
 ```
 
-[//]: # (## Reference)
-[//]: # ()
-[//]: # (The [`importSharedRequisitionList`]&#40;/reference/graphql/saas/mutations.md#importsharedrequisitionlist&#41; reference provides detailed information about the types and fields defined in this mutation.)
+## Reference
+
+The [`importSharedRequisitionList`](/reference/graphql/saas/mutations.md#importsharedrequisitionlist) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

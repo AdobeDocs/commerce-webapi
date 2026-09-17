@@ -8,7 +8,7 @@ ee_only: true
 
 <InlineAlert variant="info" slots="text" />
 
-This mutation was created for the [Storefront Compatibility Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/configuration/storefront-compatibility/v248/) and is now available on Adobe Commerce 2.4.9.
+This mutation was created for the [Storefront Compatibility Package](https://experienceleague.adobe.com/en/tools/commerce-storefront/setup/configuration/storefront-compatibility/v248/) and is now available on Adobe Commerce 2.4.9.
 
 The `exchangeExternalCustomerToken` mutation provides the capability for social login authentication using App Builder. With integration token credentials, it allows a shopper to log in. If the shopper does not have an account, the mutation creates one.. It returns a customer authentication token.
 

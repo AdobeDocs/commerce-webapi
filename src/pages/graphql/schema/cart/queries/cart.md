@@ -27,7 +27,7 @@ The `cart` reference provides detailed information about the types and fields de
 
 ## Sample queries
 
-The [Commerce API playground](https://experienceleague.adobe.com/developer/commerce/storefront/playgrounds/commerce-services/) provides a sample `cart` query that you can run against a live instance of Adobe Commerce with Luma sample data.
+The [Commerce API playground](https://experienceleague.adobe.com/en/tools/commerce-storefront/playgrounds/commerce-services/) provides a sample `cart` query that you can run against a live instance of Adobe Commerce with Luma sample data.
 
 You can convert the hardcoded `cart_id` values in the following sample queries to a [variable](../../../usage/index.md#query-variables) and run them in the API playground. Note that the responses may vary, depending on the configuration of the Commerce instance.
 
