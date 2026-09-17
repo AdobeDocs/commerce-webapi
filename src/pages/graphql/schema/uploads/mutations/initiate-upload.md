@@ -17,6 +17,8 @@ The `initiateUpload` mutation starts the file upload process by generating a pre
 * `CUSTOMER_ATTRIBUTE_FILE`
 * `CUSTOMER_ATTRIBUTE_IMAGE`
 * `NEGOTIABLE_QUOTE_ATTACHMENT`
+* `RMA_ATTRIBUTE_FILE`
+* `RMA_ATTRIBUTE_IMAGE`
 
 When you call this mutation, Commerce uses the AWS SDK to create a presigned URL that allows the client to upload the file directly to a temporary location in the S3 bucket. The presigned URL is valid for a limited time, specified by the `expires_at` field in the response.
 
@@ -115,3 +117,40 @@ mutation {
   }
 }
 ```
+
+### Initiate an upload for a return item image attribute
+
+Use the `RMA_ATTRIBUTE_IMAGE` and `RMA_ATTRIBUTE_FILE` resource types to attach an image or a file to a return request. Commerce stores these uploads under the `rma_item/` media path.
+
+The following mutation initiates an upload for an image named `damage.png`.
+
+**Request:**
+
+```graphql
+mutation {
+  initiateUpload(input: {
+    key: "damage.png",
+    media_resource_type: RMA_ATTRIBUTE_IMAGE
+  }) {
+    upload_url
+    key
+    expires_at
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "initiateUpload": {
+      "upload_url": "https://example.com/<temp-location>?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=<value>...",
+      "key": "damage_32cb1fe50dab390be841461e.png",
+      "expires_at": "1757440423"
+    }
+  }
+}
+```
+
+After you call the [`finishUpload` mutation](finish-upload.md) with the same key, assign the key to a return item custom attribute in the [`requestReturn` mutation](../../orders/mutations/request-return.md#request-a-return-with-an-image-attachment).
