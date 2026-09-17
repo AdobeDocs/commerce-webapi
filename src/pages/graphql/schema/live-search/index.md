@@ -1,13 +1,14 @@
 ---
 title: Live Search
-description: Learn how Live Search implements GraphQL.
+description: Explore the Live Search GraphQL schema, learn how to query catalog data through its endpoint, test requests, and troubleshoot common error codes.
+
 keywords:
   - GraphQL
   - Services
   - Search
 ---
 
-# Live Search
+# Live Search GraphQL Schema Reference
 
 Live Search is a set of standalone packages for Adobe Commerce that replaces the standard search capabilities. It provides GraphQL functionality that is currently separate from the built-in GraphQL functionality provided in Adobe Commerce and Magento Open Source. Live Search GraphQL requires connecting to a different endpoint and specifying a different set of HTTP headers.
 
@@ -17,7 +18,7 @@ You can connect to the Live Search GraphQL endpoint to test sample queries using
 
 -  Through a standalone version of GraphQL Playground, or any other IDE, such as GraphiQL or Postman. In these applications you must specify the endpoint URL and provide a set of HTTP headers for each call.
 
-For instructions on how to install and implement this product, see [Introduction to Live Search](https://experienceleague.adobe.com/en/docs/commerce/live-search/overview).
+For instructions on how to install, implement, and use the Live Search service, see [Introduction to Live Search](https://experienceleague.adobe.com/en/docs/commerce/live-search/overview).
 
 ## Error Codes
 
