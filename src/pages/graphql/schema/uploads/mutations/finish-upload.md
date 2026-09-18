@@ -2,7 +2,7 @@
 title: finishUpload mutation
 description: The finishUpload mutation completes the file upload process initiated by the initiateUpload mutation. The finishUpload mutation requires the unique key gen...
 keywords:
-  - REST
+  - GraphQL
   - Integration
 ---
 
@@ -81,7 +81,7 @@ The following mutation finalizes an upload for a file with a key value of `test-
 mutation {
   finishUpload(input: {
     key: "test-document1_32cb1fe50dab390be841461e.txt",
-    media_resource_type: "NEGOTIABLE_QUOTE_ATTACHMENT"
+    media_resource_type: NEGOTIABLE_QUOTE_ATTACHMENT
   }) {
     success
     key
@@ -95,9 +95,42 @@ mutation {
 ```json
 {
   "data": {
-    "finishUploadOutput": {
+    "finishUpload": {
       "success": true,
       "key": "test-document1_32cb1fe50dab390be841461e.txt",
+      "message": "File upload confirmed successfully."
+    }
+  }
+}
+```
+
+### Finalize an upload for an RMA (return) item image
+
+The following mutation finalizes an upload for an image with a key value of `damage_d4bb0cef2cac42c61b8d72f1.png`.
+
+**Request:**
+
+```graphql
+mutation {
+  finishUpload(input: {
+    key: "damage_d4bb0cef2cac42c61b8d72f1.png",
+    media_resource_type: RMA_ATTRIBUTE_IMAGE
+  }) {
+    success
+    key
+    message
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "finishUpload": {
+      "success": true,
+      "key": "damage_d4bb0cef2cac42c61b8d72f1.png",
       "message": "File upload confirmed successfully."
     }
   }
