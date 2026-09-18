@@ -76,10 +76,10 @@ The `$input` variable contains:
 ```json
 {
   "data": {
-    "initiateUploadOutput": {
-        "upload_url": "https://<bucket>.s3.<region>.amazonaws.com/<temp-location>?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=<value>...",
-        "key": "customer/attribute/<hashed-key>",
-        "expires_at": "2024-09-30T12:34:56Z"
+    "initiateUpload": {
+        "upload_url": "https://<bucket>.s3.<region>.amazonaws.com/<tenant-id>/example_106d42b2ee34de81db31d958.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=<value>...",
+        "key": "example_106d42b2ee34de81db31d958.png",
+        "expires_at": "1789433073"
     }
   }
 }
