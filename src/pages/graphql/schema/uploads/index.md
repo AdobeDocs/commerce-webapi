@@ -2,7 +2,7 @@
 title: Upload files to Amazon S3
 description: Learn how to manage file and image uploads using GraphQL mutations.
 keywords:
-  - REST
+  - GraphQL
   - Integration
 ---
 
@@ -16,7 +16,7 @@ Uploading files is a multi-step process, as shown in the following diagram:
 
 ![Upload files](../../../images/upload-file.png)
 
-1. **Inititiate the upload**: The shopper clicks an **Upload File** button on the storefront. The Javascript code on the page uses the [`initiateUpload` mutation](mutations/initiate-upload.md) to start the upload process. The mutation specifies the file name provided by the shopper. Commerce uses the AWS SDK to generate the URL to which the file will be uploaded.
+1. **Initiate the upload**: The shopper clicks an **Upload File** button on the storefront. The Javascript code on the page uses the [`initiateUpload` mutation](mutations/initiate-upload.md) to start the upload process. The mutation specifies the file name provided by the shopper. Commerce uses the AWS SDK to generate the URL to which the file will be uploaded.
 
 1. **Receive the response**: The response from the `initiateUpload` mutation includes a presigned URL, a unique key for the file, and an expiration time for the URL. The client code extracts these values from the response.
 
@@ -42,7 +42,12 @@ Uploading files is a multi-step process, as shown in the following diagram:
 
 ## Add the uploaded file to an entity
 
-Your Adobe Commerce instance must define a customer custom attribute that has an input type of `file` or `image`. Navigate to **Stores** > **Attributes** > **Customer** in the Admin and click **Add Attribute**. Your custom attribute must have the following properties:
+Your Adobe Commerce instance must define a custom attribute that has an input type of `file` or `image`. Presigned uploads are supported for the following entities, each managed under **Stores** > **Attributes** in the Admin:
+
+* **Customer** and **Customer Address** attributes.
+* **RMA (return) item** attributes (**Returns**).
+
+Your custom attribute must have the following properties:
 
 * **Attribute Code**: A unique identifier for the attribute, such as `profile_picture`.
 
@@ -50,7 +55,11 @@ Your Adobe Commerce instance must define a customer custom attribute that has an
 
 * **Maximum File Size**: The default file size limit on S3 is 16 MB (16777216 bytes).
 
-Once the custom attribute is created, you can use the key returned by the `finishUpload` mutation to set the value of the attribute when creating or updating a customer. For example, if the custom attribute code is `profile_picture`, you would include it in the input of the `createCustomerV2` mutation as follows:
+Once the custom attribute is created, use the key returned by the `finishUpload` mutation as the attribute value when you create or update the entity. Set the value to the returned hashed key, not a URL or full S3 path.
+
+### Add a file to a customer
+
+If the customer custom attribute code is `profile_picture`, include it in the input of the `createCustomerV2` mutation:
 
 ```graphql
 mutation {
@@ -60,12 +69,12 @@ mutation {
       firstname: "John"
       lastname: "Doe"
       password: "wzB43LF4svFd"
-            custom_attributes: [
-                {
-                    attribute_code: "profile-picture"
-                    value: "cat_106d42b2ee34de81db31d958.jpg"
-                }
-            ]
+      custom_attributes: [
+        {
+          attribute_code: "profile_picture"
+          value: "cat_106d42b2ee34de81db31d958.jpg"
+        }
+      ]
     }
   ) {
     customer {
@@ -73,8 +82,73 @@ mutation {
       firstname
       lastname
     }
+  }
+}
+```
+
+### Add a file to a customer address
+
+Include the attribute in the `custom_attributesV2` input of the `createCustomerAddress` mutation. This mutation requires a customer token. The response returns the presigned GET `url` for the uploaded file.
+
+```graphql
+mutation {
+  createCustomerAddress(
+    input: {
+      firstname: "John"
+      lastname: "Doe"
+      street: ["123 Main St"]
+      city: "Montgomery"
+      region: { region_id: 1 }
+      postcode: "12345"
+      country_code: US
+      telephone: "1234567890"
+      custom_attributesV2: [
+        { attribute_code: "customer_address_image", value: "3_71e56be9494280b9d8b5d491.png" }
+      ]
+    }
+  ) {
+    id
+    custom_attributesV2 {
+      code
+      ... on AttributeImage { value url }
+      ... on AttributeFile { value url }
     }
   }
+}
+```
+
+### Add a file to an RMA (return) item
+
+Bind the uploaded key to a return item's file or image attribute through the `entered_custom_attributes` input of the `requestReturn` mutation. This mutation requires a customer token. The response returns the presigned GET `url` for the uploaded file.
+
+```graphql
+mutation {
+  requestReturn(
+    input: {
+      order_uid: "<order-uid>"
+      items: [
+        {
+          order_item_uid: "<order-item-uid>"
+          quantity_to_return: 1
+          entered_custom_attributes: [
+            { attribute_code: "return_image", value: "damage_d4bb0cef2cac42c61b8d72f1.png" }
+          ]
+        }
+      ]
+    }
+  ) {
+    return {
+      uid
+      items {
+        custom_attributesV2 {
+          code
+          ... on AttributeImage { value url }
+          ... on AttributeFile { value url }
+        }
+      }
+    }
+  }
+}
 ```
 
 [Attribute interfaces and implementations](../attributes/interfaces/index.md) provides an example of how to retrieve a file uploaded to Amazon S3.
