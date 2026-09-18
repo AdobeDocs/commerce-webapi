@@ -38,7 +38,7 @@ Uploading files is a multi-step process, as shown in the following diagram:
 
 Use the `POST V1/media/initiate-upload` endpoint to start the file upload process by generating a presigned URL for uploading a file to an Amazon S3 bucket. This endpoint requires the file name (`key`) and media resource type (`media_resource_type`) as input parameters. The `key` value cannot contain slashes.
 
-The REST endpoint is an admin/backend API (it requires the `Magento_S3PresignedUploadRest::manage_media` ACL resource) and is used to upload catalog media. The following media resource types are supported:
+The REST endpoint is an admin or backend API, which requires the `Magento_S3PresignedUploadRest::manage_media` ACL resource, that allows you to upload catalog media. The following media resource types are supported:
 
 * `CATEGORY_IMAGE` — a category image.
 * `PRODUCT_FILE_ATTRIBUTE` — a product custom attribute of input type file.
@@ -89,7 +89,7 @@ curl --request POST \
 
 ## Add the uploaded file to an entity
 
-Your Adobe Commerce instance must define the target attribute. Assign the returned key (the filename only, not a URL or full S3 path) to the entity's attribute when you create or update it.
+Your Adobe Commerce instance must define the target attribute. Assign the returned key, filename only, to the entity's attribute when you create or update it. Do not include the URL or path.
 
 ### Add an image to a category
 

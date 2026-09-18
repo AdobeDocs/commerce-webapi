@@ -45,7 +45,7 @@ Uploading files is a multi-step process, as shown in the following diagram:
 Your Adobe Commerce instance must define a custom attribute that has an input type of `file` or `image`. Presigned uploads are supported for the following entities, each managed under **Stores** > **Attributes** in the Admin:
 
 * **Customer** and **Customer Address** attributes.
-* **RMA (return) item** attributes (**Returns**).
+* **Returns** attributes (return/RMA items).
 
 Your custom attribute must have the following properties:
 
@@ -117,9 +117,9 @@ mutation {
 }
 ```
 
-### Add a file to an RMA (return) item
+### Add a file to a Return Merchandise Authorization (RMA) item
 
-Bind the uploaded key to a return item's file or image attribute through the `entered_custom_attributes` input of the `requestReturn` mutation. This mutation requires a customer token. The response returns the presigned GET `url` for the uploaded file.
+Assign the uploaded key to a return item's file or image attribute through the `entered_custom_attributes` input of the `requestReturn` mutation. This mutation requires a customer token. The response returns the presigned GET `url` for the uploaded file.
 
 ```graphql
 mutation {
