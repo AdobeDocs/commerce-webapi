@@ -16,13 +16,13 @@ Uploading files is a multi-step process, as shown in the following diagram:
 
 ![Upload files](../../../images/upload-file.png)
 
-1. **Initiate the upload**: An admin or integration calls the `POST V1/media/initiate-upload` endpoint to start the upload process, specifying the file name. Commerce uses the AWS SDK to generate the URL to which the file will be uploaded.
+1.  **Initiate the upload**: An admin or integration starts the upload by calling the `POST V1/media/initiate-upload` endpoint with the file name. Commerce then uses the AWS SDK to generate a URL for uploading the file.
 
 1. **Receive the response**: The response from the `initiate-upload` call includes a presigned URL, a unique key for the file, and an expiration time for the URL. The client code extracts these values from the response.
 
-1. **Upload the file**: The client code uses the presigned URL to upload the file directly to an Amazon S3 bucket. This is done using a standard HTTP PUT request. The file is uploaded to a temporary location in the S3 bucket. For more information, see [PutObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html).
+1. **Upload the file**: The client uploads the file to a temporary S3 location using the presigned URL and an HTTP PUT request. For more information, see [PutObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html).
 
-1. **Finalize the upload**: After the file is successfully uploaded to S3, the client code calls the `POST V1/media/finish-upload` endpoint to complete the upload process. The call includes the unique key received from the `initiate-upload` response.
+1. **Finalize the upload**: After uploading the file to S3, the client calls `POST V1/media/finish-upload` using the unique key returned by `initiate-upload`.
 
 1. **Perform validation**: Commerce uses a HEAD request on S3 Temporary to validate the key and size.
 

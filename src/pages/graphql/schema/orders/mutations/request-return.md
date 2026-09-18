@@ -147,7 +147,7 @@ mutation{
 
 <InlineAlert variant="info" slots="text1"/>
 
-Attaching files and images to a return request requires an `rma_item` attribute with an input type of **File (attachment)** or **Image file**, and the attribute must be visible on the storefront.
+Attaching files and images to a return request requires an `rma_item` attribute with an input type of **File (attachment)** or **Image file**. The storefront properties for the `rma_item` attribute must be configured to be visible on the storefront.
 
 To attach a file or an image to a returned item upload it and assign the resulting key to a return item custom attribute:
 
