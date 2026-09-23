@@ -11,7 +11,7 @@ keywords:
 
 <Fragment src="/includes/scp-b2b-query.md" />
 
-The `publicRequisitionList` query uses a share token to retrieve a requisition list that its owner has marked public. Unlike [`sharedRequisitionList`](shared-requisition-list.md), this query does not require the requester to be a customer authenticated in the same company as the list owner. The response can contain the `sender_name` and `requisition_list` object.
+The `publicRequisitionList` query uses a share token to retrieve a requisition list that its owner has marked public. Unlike [`sharedRequisitionList`](shared-requisition-list.md), this query does not require the requester to be a customer authenticated in the same company as the list owner—anyone with a valid share link or token can access the public requisition list. The response can contain the `sender_name` and `requisition_list` object.
 
 <InlineAlert variant="info" slots="text" />
 

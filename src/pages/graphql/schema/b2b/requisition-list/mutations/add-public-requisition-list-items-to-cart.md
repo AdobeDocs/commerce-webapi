@@ -15,7 +15,7 @@ The `addPublicRequisitionListItemsToCart` mutation adds items from a public requ
 
 <InlineAlert variant="info" slots="text" />
 
-This mutation does not require a customer authentication token. Guests must supply a `cart_id` obtained from the [`createGuestCart`](../../../cart/mutations/create-guest-cart.md) mutation.
+A customer authentication token is optional. Guests must supply the `cart_id` of a guest cart obtained from the [`createGuestCart`](../../../cart/mutations/create-guest-cart.md) mutation. When a valid customer authentication token is provided, the mutation operates on that customer's own cart instead, and catalog-permission checks (including shared catalog grants) are evaluated against the authenticated customer's own customer group rather than the guest group.
 
 ## Syntax
 
@@ -32,6 +32,8 @@ This mutation does not require a customer authentication token. Guests must supp
 The [`addPublicRequisitionListItemsToCart`](/reference/graphql/saas/mutations.md#addpublicrequisitionlistitemstocart) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
+
+### Add items to a guest cart
 
 The following example adds two items from a public requisition list to a guest cart.
 
@@ -76,6 +78,68 @@ mutation AddPublicRequisitionListItemsToCart {
             "product": {
               "sku": "Augusta",
               "name": "Augusta"
+            }
+          }
+        ]
+      },
+      "user_errors": []
+    }
+  }
+}
+```
+
+### Add items to a logged-in customer's cart
+
+The following example adds two items from a public requisition list to the cart of an authenticated customer. Send the customer's [authentication token](../../../customer/mutations/generate-token.md) in the `Authorization` header, and specify the `cart_id` of that customer's own cart. Because the caller is authenticated, catalog-permission checks (including shared catalog grants) are evaluated against this customer's own customer group instead of the guest group.
+
+**Request:**
+
+```graphql
+mutation AddPublicRequisitionListItemsToCart {
+    addPublicRequisitionListItemsToCart(
+        input: {
+            token: "qEJD2aUhmYnf1jNoaOtlo7XwBP8BRof5GhF0L5kbdJxYMZ13OlFvy2VFy33NnUCp"
+            cart_id: "8Zn6VYaFAyO7WYlj9NLPTolKk3G4dh1o"
+            item_uids: ["NDEw", "NDEx"]
+        }
+    ) {
+        cart {
+            items {
+                uid
+                product {
+                    sku
+                    name
+                }
+            }
+        }
+        user_errors {
+            code
+            message
+        }
+    }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "addPublicRequisitionListItemsToCart": {
+      "cart": {
+        "items": [
+          {
+            "uid": "OA==",
+            "product": {
+              "sku": "Augusta",
+              "name": "Augusta"
+            }
+          },
+          {
+            "uid": "OQ==",
+            "product": {
+              "sku": "24-WB03",
+              "name": "Driven Backpack"
             }
           }
         ]

@@ -12,4 +12,4 @@ keywords:
 The following queries retrieve a shared requisition list
 
 - [View Shared Requisition List](shared-requisition-list.md)
-- [View a Public Requisition List](public-requisition-list.md)
+- [View Public Requisition List](public-requisition-list.md)
