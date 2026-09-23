@@ -3165,6 +3165,70 @@ definitions:
     - search_criteria
     - total_count
     type: object
+  customer-company-data-company-role-interface:
+    description: A company role assigned to a customer, as returned by the companyRoles
+      REST endpoint.
+    properties:
+      company_id:
+        description: The id of the company the role belongs to.
+        type: integer
+      id:
+        description: The role id.
+        type: integer
+      permissions:
+        description: The ACL permissions granted by the role.
+        items:
+          "$ref": "#/definitions/customer-company-data-company-role-permission-interface"
+        type: array
+      role_name:
+        description: The role name.
+        type: string
+    required:
+    - id
+    - company_id
+    - role_name
+    - permissions
+    type: object
+  customer-company-data-company-role-permission-interface:
+    description: A single ACL permission entry within a company role, as returned
+      by the companyRoles REST endpoint. Deliberately omits `role_id` (present on
+      the underlying `Magento\Company\Api\Data\PermissionInterface`) since it's redundant
+      with the enclosing `CompanyRoleInterface::getId()`, and omits its own permission
+      id since no caller identifies a permission entry by id — `resource_id` already
+      does that within a role.
+    properties:
+      permission:
+        description: The permission value ("allow" or "deny").
+        type: string
+      resource_id:
+        description: The ACL resource id the permission applies to.
+        type: string
+    required:
+    - resource_id
+    - permission
+    type: object
+  customer-company-data-company-role-search-results-interface:
+    description: Search results wrapper for the companyRoles REST endpoint. Left untyped
+      (no native return/param types), matching vendor's own `SearchResultsInterface`
+      and every `*SearchResultsInterface` in Commerce core — required for compatibility
+      with `Magento\Framework\Api\SearchResults`, whose inherited `getItems()`/`setItems()`
+      predate PHP return types.
+    properties:
+      items:
+        description: Company roles.
+        items:
+          "$ref": "#/definitions/customer-company-data-company-role-interface"
+        type: array
+      search_criteria:
+        "$ref": "#/definitions/framework-search-criteria-interface"
+      total_count:
+        description: Total count.
+        type: integer
+    required:
+    - items
+    - search_criteria
+    - total_count
+    type: object
   customer-data-address-extension-interface:
     description: ExtensionInterface class for @see \Magento\Customer\Api\Data\AddressInterface
     type: object
@@ -18408,6 +18472,83 @@ paths:
       tags:
       - customers/{customerId}/companies/{companyId}
       summary: customers/{customerId}/companies/{companyId}
+  "/V1/customers/{customerId}/companyRoles":
+    get:
+      consumes:
+      - application/json
+      - application/xml
+      description: 'Get the company roles assigned to the given customer, filtered/paged
+        per $searchCriteria. Returns one entry per company assignment in which the
+        customer holds a role — not one per company assignment: a company the customer
+        is assigned to but holds no role in contributes no entry at all. Returns an
+        empty result when the customer is not a member of any company, holds no role
+        in any of them, or when none of their companies/roles match $searchCriteria''s
+        filters. Supported filter fields: `company_id`, `company_name` (restrict which
+        companies are considered), and `resource_id`, `permission` (restrict each
+        matching role''s permissions — a role left with no permissions after that
+        narrowing is dropped from the result entirely). A single filter group (its
+        filters are OR''d together) must not mix company fields with permission fields
+        — throws otherwise. Supported condition types: `eq` and `in` on every field,
+        plus `like` (SQL-style `%`/`_` wildcards) on `company_name`. Sortable fields:
+        `id`, `company_id`, `role_name` — applied to the result items themselves,
+        after filtering and before paging (there''s no sortable field within `permissions`).'
+      operationId: GetV1CustomersCustomerIdCompanyRoles
+      parameters:
+      - in: path
+        name: customerId
+        required: true
+        type: integer
+      - description: Field
+        in: query
+        name: searchCriteria[filterGroups][0][filters][0][field]
+        type: string
+      - description: Value
+        in: query
+        name: searchCriteria[filterGroups][0][filters][0][value]
+        type: string
+      - description: Condition type
+        in: query
+        name: searchCriteria[filterGroups][0][filters][0][conditionType]
+        type: string
+      - description: Sorting field.
+        in: query
+        name: searchCriteria[sortOrders][0][field]
+        type: string
+      - description: Sorting direction.
+        in: query
+        name: searchCriteria[sortOrders][0][direction]
+        type: string
+      - description: Page size.
+        in: query
+        name: searchCriteria[pageSize]
+        type: integer
+      - description: Current page.
+        in: query
+        name: searchCriteria[currentPage]
+        type: integer
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/customer-company-data-company-role-search-results-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - customers/{customerId}/companyRoles
+      summary: customers/{customerId}/companyRoles
   "/V1/customers/{customerId}/confirm":
     get:
       consumes:
@@ -32033,6 +32174,7 @@ tags:
 - name: customers/{customerId}/carts
 - name: customers/{customerId}/companies
 - name: customers/{customerId}/companies/{companyId}
+- name: customers/{customerId}/companyRoles
 - name: customers/{customerId}/confirm
 - name: customers/{customerId}/permissions/readonly
 - name: customers/{customerId}/shippingAddress
@@ -32487,6 +32629,7 @@ x-tagGroups:
   - customers/{customerId}/carts
   - customers/{customerId}/companies
   - customers/{customerId}/companies/{companyId}
+  - customers/{customerId}/companyRoles
   - customers/{customerId}/confirm
   - customers/{customerId}/permissions/readonly
   - customers/{customerId}/shippingAddress
