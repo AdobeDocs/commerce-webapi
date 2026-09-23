@@ -530,6 +530,8 @@
             - [createVaultCardSetupToken](/graphql/payment-services-extension/mutations/create-vault-card-setup-token.md)
             - [setCartAsInactive](/graphql/payment-services-extension/mutations/set-cart-inactive.md)
             - [syncPaymentOrder](/graphql/payment-services-extension/mutations/sync-payment-order.md)
+    - [SaaS integrations](/graphql/saas-integrations/index.md)
+        - [Source-level inventory reservations](/graphql/saas-integrations/source-inventory-reservations/index.md)
     - [Tutorial](/graphql/tutorials/index.md)
         - [GraphQL checkout tutorial](/graphql/tutorials/checkout/index.md)
         - [Step 1: Create a customer](/graphql/tutorials/checkout/create-customer.md)
