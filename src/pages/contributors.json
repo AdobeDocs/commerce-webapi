@@ -1135,12 +1135,13 @@
     {
       "page": "/graphql/schema/b2b/negotiable-quote/mutations/request",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/6827593?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/24/2026"
+      "lastUpdated": "9/18/2026"
     },
     {
       "page": "/graphql/schema/b2b/negotiable-quote/mutations/send-for-review",
@@ -3014,13 +3015,14 @@
     {
       "page": "/graphql/schema/orders/mutations/request-return",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/98363870?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/39598117?v=4"
       ],
-      "lastUpdated": "6/24/2026"
+      "lastUpdated": "9/23/2026"
     },
     {
       "page": "/graphql/schema/orders/queries/",
@@ -3667,29 +3669,32 @@
     {
       "page": "/graphql/schema/uploads/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/6827593?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/2/2026"
+      "lastUpdated": "9/18/2026"
     },
     {
       "page": "/graphql/schema/uploads/mutations/finish-upload",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/6827593?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/24/2026"
+      "lastUpdated": "9/18/2026"
     },
     {
       "page": "/graphql/schema/uploads/mutations/initiate-upload",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/6827593?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "6/24/2026"
+      "lastUpdated": "9/18/2026"
     },
     {
       "page": "/graphql/schema/wishlist/",
@@ -5447,10 +5452,12 @@
     {
       "page": "/rest/saas-integrations/s3-uploads/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/98363870?v=4",
+        "https://avatars.githubusercontent.com/u/6827593?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/2/2026"
+      "lastUpdated": "9/23/2026"
     },
     {
       "page": "/rest/saas-integrations/system-config/",
