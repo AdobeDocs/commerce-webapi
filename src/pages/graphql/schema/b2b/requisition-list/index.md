@@ -12,3 +12,21 @@ keywords:
 Requisition lists are similar to wish lists, except they are used in the context of B2B transactions. Using a requisition list saves time for buyers who frequently purchase products on a continuing basis. Items are added to the shopping cart directly from the requisition list. Customers can maintain multiple lists to streamline their workflow. For example, they can create lists that focus on products from different vendors, buyers, teams, or campaigns. Requisition lists are available for both logged-in users and guests.
 
 The [_B2B for Adobe Commerce_](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/requisition-lists/requisition-lists) guide describes requisition lists in detail.
+
+## Public requisition list sharing
+
+<Fragment src="/includes/scp-b2b-query.md" />
+
+The B2B Storefront Compatibility Package adds the following fields to the [`RequisitionList`](/reference/graphql/saas/index.md#requisitionlist) object so a requisition list can be shared publicly, without requiring the recipient to be a customer in the same company as the list owner:
+
+* `is_public`
+* `token`
+
+It also adds an `is_public` field to the [`CreateRequisitionListInput`](/reference/graphql/saas/index.md#createrequisitionlistinput) and [`UpdateRequisitionListInput`](/reference/graphql/saas/index.md#updaterequisitionlistinput) objects used by the [`createRequisitionList`](mutations/create.md) and [`updateRequisitionList`](mutations/update.md) mutations, and the following fields to [`StoreConfig`](/reference/graphql/saas/index.md#storeconfig):
+
+* `requisition_list_public_sharing_enabled`
+* `requisition_list_public_share_link_validity_days`
+* `requisition_list_public_share_max_recipients`
+* `requisition_list_public_share_storefront_path`
+
+Use these fields together with the [`publicRequisitionList`](queries/public-requisition-list.md) query and the [`sharePublicRequisitionList`](mutations/share-public-requisition-list.md) and [`addPublicRequisitionListItemsToCart`](mutations/add-public-requisition-list-items-to-cart.md) mutations to let customers generate and share a public link to a requisition list.

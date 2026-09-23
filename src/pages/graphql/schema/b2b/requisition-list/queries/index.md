@@ -9,6 +9,7 @@ keywords:
 
 # Requisition list (B2B) queries
 
-The following query retrieves a shared requisition list
+The following queries retrieve a shared requisition list
 
 - [View Shared Requisition List](shared-requisition-list.md)
+- [View a Public Requisition List](public-requisition-list.md)
