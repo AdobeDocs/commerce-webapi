@@ -24,3 +24,4 @@ The company address book mutations allow you to perform the company address mana
 
 * Create, update and delete a company address.
 * Set default company billing or shipping address.
+* [Update company address book configuration](update-company-config.md).
