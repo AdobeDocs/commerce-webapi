@@ -274,6 +274,7 @@
                 - [setDefaultCompanyAddress](/graphql/schema/b2b/company/mutations/set-default-address.md)
                 - [updateCompany](/graphql/schema/b2b/company/mutations/update.md)
                 - [updateCompanyAddress](/graphql/schema/b2b/company/mutations/update-address.md)
+                - [updateCompanyConfig](/graphql/schema/b2b/company/mutations/update-company-config.md)
                 - [unassignChildCompany](/graphql/schema/b2b/company/mutations/unassign-child-company.md)
                 - [updateCompanyRole](/graphql/schema/b2b/company/mutations/update-role.md)
                 - [updateCompanyStructure](/graphql/schema/b2b/company/mutations/update-structure.md)
