@@ -15,6 +15,7 @@ This section describes the following queries:
 * [`isSubscribedProductAlertStock`](is-subscribed-product-alert-stock.md)
 * [`productReviewRatingsMetadata`](product-review-ratings-metadata.md)
 * [`products`](products.md)
+* [`reviews`](reviews.md)
 * [`route`](route.md)
 * [`sourceAvailability`](source-availability.md)
 * [`urlResolver`](url-resolver.md)
