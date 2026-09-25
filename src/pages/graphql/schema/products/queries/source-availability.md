@@ -11,7 +11,7 @@ Use the `sourceAvailability` query to check per-source inventory availability fo
 
 Availability is gated at two levels, and both are off by default because they disclose which sources stock a SKU:
 
-- **Store level.** Go to **Stores** > Configuration > **Catalog** > **Inventory** > **Per-Source Availability (Storefront)** and set **Enable `sourceAvailability` GraphQL Query** to **Yes**. While this setting is off, the query returns an error.
+- **Store level.** Go to **Stores** > Configuration > **Catalog** > **Inventory** > **Per-Source Availability (Storefront)** and set **Enable `sourceAvailability` GraphQL Query** to **Yes**. While this setting is off, the query does not return source availability, but can still return `is_salable` information.
 
 - **Source level.** Each inventory source has a **Visible on Storefront** flag that is off by default. A source's stock is never returned until a merchant enables it. To set it, go to **Stores** > Inventory > **Sources**, edit a source, and turn on **Visible on Storefront**.
 
