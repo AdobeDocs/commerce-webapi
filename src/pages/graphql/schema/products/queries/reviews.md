@@ -3,9 +3,9 @@ title: reviews query
 description: The reviews query returns the approved reviews for a product specified by SKU. It is a standalone root query for the storefront compatibility layer.
 ---
 
-<Fragment src="../../../../includes/saas-only.md"/>
-
 # reviews query
+
+<Fragment src="/includes/scp-query.md" />
 
 The `reviews` query returns the approved reviews for the product specified by its SKU, along with pagination metadata.
 
