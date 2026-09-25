@@ -89,7 +89,7 @@ curl --request POST \
 
 ## Add the uploaded file to an entity
 
-Your Adobe Commerce instance must define the target attribute. Assign the returned key, filename only, to the entity's attribute when you create or update it. Do not include the URL or path.
+Your Adobe Commerce instance must define the target attribute. Assign the returned key, filename only, to the attribute when you create or update it. Do not include the URL or path.
 
 ### Add an image to a category
 
