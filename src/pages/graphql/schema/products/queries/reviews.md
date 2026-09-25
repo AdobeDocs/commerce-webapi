@@ -13,43 +13,17 @@ Unlike the native `reviews` field on `ProductInterface`, which requires querying
 
 Use the [`createProductReview` mutation](../mutations/create-review.md) to add a product review, and the [`productReviewRatingsMetadata` query](product-review-ratings-metadata.md) to return the list of rating categories and possible values.
 
+<InlineAlert variant="info" slots="text" />
+
+Review text fields (`nickname`, `summary`, and `text`) are stored as untrusted plain text and are not sanitized on write. Clients must render these fields as text or apply context-appropriate output encoding to prevent cross-site scripting (XSS).
+
 ## Syntax
 
 `reviews(sku: String!, pageSize: Int = 20, currentPage: Int = 1): ProductReviews`
 
-## Input attributes
-
-The `reviews` query accepts the following attributes.
-
-Attribute | Data Type | Description
---- | --- | ---
-`sku` | String! | The SKU of the product to return reviews for
-`pageSize` | Int | The maximum number of results to return at once. The default value is 20
-`currentPage` | Int | The page of results to return. The default value is 1
-
-## Output attributes
-
-The query returns a `ProductReviews` object.
-
-Attribute | Data Type | Description
---- | --- | ---
-`items` | [ProductReview] | An array of product reviews
-`page_info` | SearchResultPageInfo | Metadata that describes the returned page of results
-
-Each `ProductReview` object contains the following commonly requested fields. See the [`createProductReview` mutation](../mutations/create-review.md) for the full type.
-
-Attribute | Data Type | Description
---- | --- | ---
-`average_rating` | Float! | The average rating for the product review
-`created_at` | String! | The date the review was created
-`nickname` | String! | The customer's nickname
-`ratings_breakdown` | [ProductReviewRating] | An array of ratings by rating category, such as quality, price, and value
-`summary` | String! | The summary (title) of the review
-`text` | String! | The review text
-
-<InlineAlert variant="info" slots="text" />
-
-Review text fields (`nickname`, `summary`, and `text`) are stored as untrusted plain text and are not sanitized on write. Clients must render these fields as text or apply context-appropriate output encoding to prevent cross-site scripting (XSS).
+[//]: # (## Reference)
+[//]: # ()
+[//]: # (The [`reviews`]&#40;/reference/graphql/saas/index.md#reviews&#41; reference provides detailed information about the types and fields defined in this query.)
 
 ## Example usage
 
