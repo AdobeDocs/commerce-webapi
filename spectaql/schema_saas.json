@@ -7451,6 +7451,22 @@
             "deprecationReason": null
           },
           {
+            "name": "rating_summary",
+            "description": "The average of all the ratings given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Float",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "related_products",
             "description": "An array of products to be displayed in a Related Products block.",
             "args": [],
@@ -7460,6 +7476,59 @@
               "ofType": {
                 "kind": "INTERFACE",
                 "name": "ProductInterface",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "review_count",
+            "description": "The total count of all the reviews given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "reviews",
+            "description": "The list of products reviews.",
+            "args": [
+              {
+                "name": "pageSize",
+                "description": "The maximum number of results to return at once. The default is 20.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "20"
+              },
+              {
+                "name": "currentPage",
+                "description": "The page of results to return. The default is 1.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "1"
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProductReviews",
                 "ofType": null
               }
             },
@@ -19385,6 +19454,22 @@
             "deprecationReason": null
           },
           {
+            "name": "rating_summary",
+            "description": "The average of all the ratings given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Float",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "related_products",
             "description": "An array of products to be displayed in a Related Products block.",
             "args": [],
@@ -19394,6 +19479,59 @@
               "ofType": {
                 "kind": "INTERFACE",
                 "name": "ProductInterface",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "review_count",
+            "description": "The total count of all the reviews given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "reviews",
+            "description": "The list of products reviews.",
+            "args": [
+              {
+                "name": "pageSize",
+                "description": "The maximum number of results to return at once. The default is 20.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "20"
+              },
+              {
+                "name": "currentPage",
+                "description": "The page of results to return. The default is 1.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "1"
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProductReviews",
                 "ofType": null
               }
             },
@@ -22755,6 +22893,118 @@
       },
       {
         "kind": "INPUT_OBJECT",
+        "name": "CreateProductReviewInput",
+        "description": "Defines a new product review.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "nickname",
+            "description": "The customer's nickname. Defaults to the customer name, if logged in.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "ratings",
+            "description": "The ratings details by category. For example, Price: 5 stars, Quality: 4 stars, etc.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "ProductReviewRatingInput",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "sku",
+            "description": "The SKU of the reviewed product.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "summary",
+            "description": "The summary (title) of the review.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "text",
+            "description": "The review text.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "CreateProductReviewOutput",
+        "description": "Contains the completed product review.",
+        "fields": [
+          {
+            "name": "review",
+            "description": "Product review details.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProductReview",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
         "name": "CreatePurchaseOrderApprovalRuleConditionAmountInput",
         "description": "Specifies the amount and currency to evaluate.",
         "fields": null,
@@ -26028,6 +26278,43 @@
               "kind": "OBJECT",
               "name": "Returns",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "reviews",
+            "description": "Contains the customer's product reviews.",
+            "args": [
+              {
+                "name": "pageSize",
+                "description": "The maximum number of results to return at once. The default value is 20.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "20"
+              },
+              {
+                "name": "currentPage",
+                "description": "The page of results to return. The default value is 1.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "1"
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProductReviews",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -32625,6 +32912,22 @@
             "deprecationReason": null
           },
           {
+            "name": "rating_summary",
+            "description": "The average of all the ratings given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Float",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "related_products",
             "description": "An array of products to be displayed in a Related Products block.",
             "args": [],
@@ -32634,6 +32937,59 @@
               "ofType": {
                 "kind": "INTERFACE",
                 "name": "ProductInterface",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "review_count",
+            "description": "The total count of all the reviews given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "reviews",
+            "description": "The list of products reviews.",
+            "args": [
+              {
+                "name": "pageSize",
+                "description": "The maximum number of results to return at once. The default is 20.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "20"
+              },
+              {
+                "name": "currentPage",
+                "description": "The page of results to return. The default is 1.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "1"
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProductReviews",
                 "ofType": null
               }
             },
@@ -36638,6 +36994,22 @@
             "deprecationReason": null
           },
           {
+            "name": "rating_summary",
+            "description": "The average of all the ratings given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Float",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "related_products",
             "description": "An array of products to be displayed in a Related Products block.",
             "args": [],
@@ -36647,6 +37019,59 @@
               "ofType": {
                 "kind": "INTERFACE",
                 "name": "ProductInterface",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "review_count",
+            "description": "The total count of all the reviews given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "reviews",
+            "description": "The list of products reviews.",
+            "args": [
+              {
+                "name": "pageSize",
+                "description": "The maximum number of results to return at once. The default is 20.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "20"
+              },
+              {
+                "name": "currentPage",
+                "description": "The page of results to return. The default is 1.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "1"
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProductReviews",
                 "ofType": null
               }
             },
@@ -39781,6 +40206,22 @@
             "deprecationReason": null
           },
           {
+            "name": "rating_summary",
+            "description": "The average of all the ratings given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Float",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "related_products",
             "description": "An array of products to be displayed in a Related Products block.",
             "args": [],
@@ -39790,6 +40231,59 @@
               "ofType": {
                 "kind": "INTERFACE",
                 "name": "ProductInterface",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "review_count",
+            "description": "The total count of all the reviews given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "reviews",
+            "description": "The list of products reviews.",
+            "args": [
+              {
+                "name": "pageSize",
+                "description": "The maximum number of results to return at once. The default is 20.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "20"
+              },
+              {
+                "name": "currentPage",
+                "description": "The page of results to return. The default is 1.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "1"
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProductReviews",
                 "ofType": null
               }
             },
@@ -42452,6 +42946,18 @@
             "description": "Customer image resource type for customer address",
             "isDeprecated": false,
             "deprecationReason": null
+          },
+          {
+            "name": "RMA_ATTRIBUTE_FILE",
+            "description": "RMA return item file resource type",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "RMA_ATTRIBUTE_IMAGE",
+            "description": "RMA return item image resource type",
+            "isDeprecated": false,
+            "deprecationReason": null
           }
         ],
         "possibleTypes": null
@@ -44388,6 +44894,37 @@
               "kind": "OBJECT",
               "name": "CreatePaymentOrderOutput",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "createProductReview",
+            "description": "Create a product review for the specified product.",
+            "args": [
+              {
+                "name": "input",
+                "description": "An input object that contains the details necessary to create a product review.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "CreateProductReviewInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "CreateProductReviewOutput",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -57312,6 +57849,22 @@
             "deprecationReason": null
           },
           {
+            "name": "rating_summary",
+            "description": "The average of all the ratings given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Float",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "related_products",
             "description": "An array of products to be displayed in a Related Products block.",
             "args": [],
@@ -57321,6 +57874,59 @@
               "ofType": {
                 "kind": "INTERFACE",
                 "name": "ProductInterface",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "review_count",
+            "description": "The total count of all the reviews given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "reviews",
+            "description": "The list of products reviews.",
+            "args": [
+              {
+                "name": "pageSize",
+                "description": "The maximum number of results to return at once. The default is 20.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "20"
+              },
+              {
+                "name": "currentPage",
+                "description": "The page of results to return. The default is 1.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "1"
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProductReviews",
                 "ofType": null
               }
             },
@@ -57946,6 +58552,399 @@
               "ofType": {
                 "kind": "OBJECT",
                 "name": "Money",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ProductReview",
+        "description": "Contains details of a product review.",
+        "fields": [
+          {
+            "name": "average_rating",
+            "description": "The average of all ratings for this product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Float",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "created_at",
+            "description": "The date the review was created.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nickname",
+            "description": "The customer's nickname. Defaults to the customer name, if logged in.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "product",
+            "description": "The reviewed product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INTERFACE",
+                "name": "ProductInterface",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "ratings_breakdown",
+            "description": "An array of ratings by rating category, such as quality, price, and value.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "ProductReviewRating",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "summary",
+            "description": "The summary (title) of the review.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "text",
+            "description": "The review text.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ProductReviewRating",
+        "description": "Contains data about a single aspect of a product review.",
+        "fields": [
+          {
+            "name": "name",
+            "description": "The label assigned to an aspect of a product that is being rated, such as quality or price.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "value",
+            "description": "The rating value given by customer. By default, possible values range from 1 to 5.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "ProductReviewRatingInput",
+        "description": "Contains the reviewer's rating for a single aspect of a review.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "id",
+            "description": "An encoded rating ID.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "value_id",
+            "description": "An encoded rating value ID.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ProductReviewRatingMetadata",
+        "description": "Contains details about a single aspect of a product review.",
+        "fields": [
+          {
+            "name": "id",
+            "description": "An encoded rating ID.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "name",
+            "description": "The label assigned to an aspect of a product that is being rated, such as quality or price.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "values",
+            "description": "List of product review ratings sorted by position.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "ProductReviewRatingValueMetadata",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ProductReviewRatingsMetadata",
+        "description": "Contains an array of metadata about each aspect of a product review.",
+        "fields": [
+          {
+            "name": "items",
+            "description": "An array of product reviews sorted by position.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "ProductReviewRatingMetadata",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ProductReviewRatingValueMetadata",
+        "description": "Contains details about a single value in a product review.",
+        "fields": [
+          {
+            "name": "value",
+            "description": "A ratings scale, such as the number of stars awarded.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "value_id",
+            "description": "An encoded rating value ID.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ProductReviews",
+        "description": "Contains an array of product reviews.",
+        "fields": [
+          {
+            "name": "items",
+            "description": "An array of product reviews.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "ProductReview",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "page_info",
+            "description": "Metadata for pagination rendering.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "SearchResultPageInfo",
                 "ofType": null
               }
             },
@@ -64049,6 +65048,22 @@
               "kind": "OBJECT",
               "name": "PickupLocations",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "productReviewRatingsMetadata",
+            "description": "Return the active ratings attributes and the values each rating can have.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProductReviewRatingsMetadata",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -73430,6 +74445,22 @@
             "deprecationReason": null
           },
           {
+            "name": "rating_summary",
+            "description": "The average of all the ratings given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Float",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "related_products",
             "description": "An array of products to be displayed in a Related Products block.",
             "args": [],
@@ -73439,6 +74470,59 @@
               "ofType": {
                 "kind": "INTERFACE",
                 "name": "ProductInterface",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "review_count",
+            "description": "The total count of all the reviews given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "reviews",
+            "description": "The list of products reviews.",
+            "args": [
+              {
+                "name": "pageSize",
+                "description": "The maximum number of results to return at once. The default is 20.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "20"
+              },
+              {
+                "name": "currentPage",
+                "description": "The page of results to return. The default is 1.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "1"
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProductReviews",
                 "ofType": null
               }
             },
@@ -75062,6 +76146,30 @@
             "deprecationReason": null
           },
           {
+            "name": "is_pickup_location_active",
+            "description": "Whether the source is an active in-store pickup location.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "name",
+            "description": "Display name of the source, for labelling a store or warehouse.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "sku",
             "description": "The product SKU the availability applies to.",
             "args": [],
@@ -75212,6 +76320,18 @@
           {
             "name": "allow_gift_wrapping_on_order_items",
             "description": "Indicates whether gift wrapping can be added for individual order items. Possible values: 1 (Yes) and 0 (No).",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "allow_guests_to_write_product_reviews",
+            "description": "Indicates whether guest users can write product reviews. Possible values: 1 (Yes) and 0 (No).",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -76512,6 +77632,18 @@
             "type": {
               "kind": "ENUM",
               "name": "FixedProductTaxDisplaySettings",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "product_reviews_enabled",
+            "description": "Indicates whether product reviews are enabled. Possible values: 1 (Yes) and 0 (No).",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
               "ofType": null
             },
             "isDeprecated": false,
@@ -80419,6 +81551,22 @@
             "deprecationReason": null
           },
           {
+            "name": "rating_summary",
+            "description": "The average of all the ratings given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Float",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "related_products",
             "description": "An array of products to be displayed in a Related Products block.",
             "args": [],
@@ -80428,6 +81576,59 @@
               "ofType": {
                 "kind": "INTERFACE",
                 "name": "ProductInterface",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "review_count",
+            "description": "The total count of all the reviews given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "reviews",
+            "description": "The list of products reviews.",
+            "args": [
+              {
+                "name": "pageSize",
+                "description": "The maximum number of results to return at once. The default is 20.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "20"
+              },
+              {
+                "name": "currentPage",
+                "description": "The page of results to return. The default is 1.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "1"
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProductReviews",
                 "ofType": null
               }
             },
