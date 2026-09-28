@@ -1,25 +1,23 @@
 ---
-title: Source-Level Inventory Reservations
-description: Nominate an inventory source on cart items, read per-source availability, and track reservations.
+title: setNominatedSourceOnCartItems mutation
+description: Learn how to use the setNominatedSourceOnCartItems mutation to set or clear the nominated inventory source on cart items before checkout.
 keywords:
   - GraphQL
   - Integration
   - Inventory
 ---
 
-<Fragment src="../../../includes/saas-only.md"/>
+<Fragment src="../../../../includes/saas-only.md"/>
 
-# Source-level inventory reservations
+# setNominatedSourceOnCartItems mutation
 
-Source-level inventory reservations allow shoppers and backends commit a cart line to inventory sources before checkout, such as a store for pickup, a preferred warehouse, or a ship-from-store location. Use this feature to build buy online, pick up in store (BOPIS) and other nominated-source experiences.
+The `setNominatedSourceOnCartItems` mutation is the single canonical write path for a nomination. Specify a `source_code` to set a nomination, or `null` or an empty string to clear it.
 
-Inventory Management holds stock at the stock level and selects a source only at shipment. Source-level reservations keep the inventory hold, the order placement guard, and the physical deduction aligned to the nominated source. Cart items without a nomination are unaffected. They continue to use native Inventory Management, which creates a stock-level reservation and selects a source at shipment through the source selection algorithm.
+Domain validation failures are returned for each item in `rejected_items`, which allows valid nominations in the same request to succeed. An invalid or foreign `cart_item_uid`, or any other malformed input, fails the entire operation with a GraphQL input error before any nomination is written.
 
-Storefront interaction uses the following:
+## Reference
 
-- Mutation - [`setNominatedSourceOnCartItems`](#nominate-a-source-on-cart-items) sets or clears the nominated source on cart items.
-- Query - [`sourceAvailability`](#read-availability-and-saleability) reports saleability per SKU and availability per source.
-- Cart item fields - [`nominated_source` and `nominated_source_errors`](#read-nomination-fields-on-cart-items) report the live state of a nomination on any cart item.
+The [`setNominatedSourceOnCartItems`](/reference/graphql/saas/mutations.md#setnominatedsourceoncartitems) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Configure the storefront query
 
@@ -27,7 +25,7 @@ By default, this inventory information is not accessible on the storefront. To e
 
 ### Enable the per-source availability query
 
-The per-source portion of the `sourceAvailability` query is disabled by default because it discloses which sources stock a SKU. Enable it for each store view.
+The per-source portion of the [`sourceAvailability` query](../../products/queries/source-availability.md) is disabled by default because it discloses which sources stock a SKU. Enable it for each store view.
 
 1. In the Admin, go to **Stores** > Settings > **Configuration** > **Catalog** > **Inventory** > **Per-Source Availability (Storefront)**.
 
@@ -49,27 +47,7 @@ A source is reported on the storefront only when it is assigned to the stock of 
 
 For more information, see [Add a source](https://experienceleague.adobe.com/en/docs/commerce-admin/inventory/sources/sources-add) in the _Adobe Commerce Admin Systems Guide_.
 
-## Review nominated sources in the Admin
-
-After orders begin to carry nominations, you can review each nomination and receive early validation in the Admin:
-
-- **Sales** > **Orders** > _[order]_ > **Items Ordered** - Each nominated line displays a **Nominated source** label. Lines without a nomination are unchanged.
-
-- **Ship** > **Source Selection** - On a multi-source order, each nominated line displays its nominated source, so you can ship the item from the correct location.
-
-- **Ship** > **Source Selection validation** - Before submission, nominated lines are validated against the source that is selected for deduction. A mismatch returns an inline error that names each SKU and its required source.
-
-<InlineAlert variant="info" slots="text" />
-
-Authoritative shipment enforcement occurs outside the Admin and rejects a deduction from the wrong source for non-Admin callers, such as REST clients and asynchronous consumers.
-
-## Nominate a source on cart items
-
-The `setNominatedSourceOnCartItems` mutation is the single canonical write path for a nomination. Specify a `source_code` to set a nomination, or `null` or an empty string to clear it.
-
-Domain validation failures are returned for each item in `rejected_items`, which allows valid nominations in the same request to succeed. An invalid or foreign `cart_item_uid`, or any other malformed input, fails the entire operation with a GraphQL input error before any nomination is written.
-
-### Get the cart item UID
+## Get the cart item UID
 
 The mutation requires the masked cart ID and the UID of each cart item to nominate. Create a cart with the `createGuestCart` mutation or retrieve one with the `customerCart` query, add products to it, and then query the cart items.
 
@@ -106,7 +84,7 @@ query GetCartItems($cartId: String!) {
 }
 ```
 
-### Set the nominated source
+## Set the nominated source
 
 The following mutation nominates the `store_nyc_001` source for one cart item.
 
@@ -172,7 +150,7 @@ mutation SetSource($cartId: String!) {
 
 Setting a `pickup_location_code` with the `setShippingAddressesOnCart` mutation automatically nominates that location as the source for every cart item. In-store pickup reuses this write path internally, so no separate call is required.
 
-### Handle rejected items
+## Handle rejected items
 
 When a nomination fails domain validation, the item is returned in `rejected_items` and the remaining nominations in the request are applied. The following response shows one item that does not have the necessary quantity available at the selected source.
 
@@ -204,9 +182,23 @@ The `code` field returns one of the following `NominatedSourceErrorCode` values.
 | `NOT_ENOUGH_QTY` | The available quantity at the source is less than the quantity of the item. |
 | `SKU_SOURCE_CONFLICT` | The same SKU is already nominated to a different source on another cart line. A cart supports one nominated source per SKU. |
 
+## Review nominated sources in the Admin
+
+After orders begin to carry nominations, you can review each nomination and receive early validation in the Admin:
+
+- **Sales** > **Orders** > _[order]_ > **Items Ordered** - Each nominated line displays a **Nominated source** label. Lines without a nomination are unchanged.
+
+- **Ship** > **Source Selection** - On a multi-source order, each nominated line displays its nominated source, so you can ship the item from the correct location.
+
+- **Ship** > **Source Selection validation** - Before submission, nominated lines are validated against the source that is selected for deduction. A mismatch returns an inline error that names each SKU and its required source.
+
+<InlineAlert variant="info" slots="text" />
+
+Authoritative shipment enforcement occurs outside the Admin and rejects a deduction from the wrong source for non-Admin callers, such as REST clients and asynchronous consumers.
+
 ## Read availability and saleability
 
-The `sourceAvailability` query returns a SKU-level saleability assessment for each requested SKU. When per-source disclosure is enabled, the query also returns per-source availability, which is calculated the same way as the order placement guard, as physical quantity net of open source-level reservations.
+The [`sourceAvailability` query](../../products/queries/source-availability.md) returns a SKU-level saleability assessment for each requested SKU. When per-source disclosure is enabled, the query also returns per-source availability, which is calculated the same way as the order placement guard, as physical quantity net of open source-level reservations.
 
 A request accepts a maximum of 100 `skus` values and, when supplied, a maximum of 100 `source_codes` values. Consider splitting larger lists into batches that stay within both limits.
 
@@ -254,7 +246,7 @@ query Availability {
 }
 ```
 
-For the full argument and type reference, see the [`sourceAvailability`](../../schema/products/queries/source-availability.md) query.
+For the full argument and type reference, see the [`sourceAvailability`](../../products/queries/source-availability.md) query.
 
 ### Gate Add to Cart on is_saleable
 
@@ -300,7 +292,7 @@ After an order that contains nominations is placed, the reservation lifecycle ru
 
 ## Related documentation
 
-- [`sourceAvailability` query](../../schema/products/queries/source-availability.md)
+- [`sourceAvailability` query](../../products/queries/source-availability.md)
 - [`setNominatedSourceOnCartItems` mutation reference](/reference/graphql/saas/mutations.md#setnominatedsourceoncartitems)
 - [Add a source](https://experienceleague.adobe.com/en/docs/commerce-admin/inventory/sources/sources-add)
 - [Global options](https://experienceleague.adobe.com/en/docs/commerce-admin/inventory/configuration/global-options)
