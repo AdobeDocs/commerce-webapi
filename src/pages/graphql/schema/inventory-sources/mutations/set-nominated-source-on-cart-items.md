@@ -25,7 +25,7 @@ By default, this inventory information is not accessible on the storefront. To e
 
 ### Enable the per-source availability query
 
-The per-source portion of the [`sourceAvailability` query](../../products/queries/source-availability.md) is disabled by default because it discloses which sources stock a SKU. Enable it for each store view.
+The per-source portion of the [`sourceAvailability` query](../queries/source-availability.md) is disabled by default because it discloses which sources stock a SKU. Enable it for each store view.
 
 1. In the Admin, go to **Stores** > Settings > **Configuration** > **Catalog** > **Inventory** > **Per-Source Availability (Storefront)**.
 
@@ -198,7 +198,7 @@ Authoritative shipment enforcement occurs outside the Admin and rejects a deduct
 
 ## Read availability and saleability
 
-The [`sourceAvailability` query](../../products/queries/source-availability.md) returns a SKU-level saleability assessment for each requested SKU. When per-source disclosure is enabled, the query also returns per-source availability, which is calculated the same way as the order placement guard, as physical quantity net of open source-level reservations.
+The [`sourceAvailability` query](../queries/source-availability.md) returns a SKU-level saleability assessment for each requested SKU. When per-source disclosure is enabled, the query also returns per-source availability, which is calculated the same way as the order placement guard, as physical quantity net of open source-level reservations.
 
 A request accepts a maximum of 100 `skus` values and, when supplied, a maximum of 100 `source_codes` values. Consider splitting larger lists into batches that stay within both limits.
 
@@ -246,7 +246,7 @@ query Availability {
 }
 ```
 
-For the full argument and type reference, see the [`sourceAvailability`](../../products/queries/source-availability.md) query.
+For the full argument and type reference, see the [`sourceAvailability`](../queries/source-availability.md) query.
 
 ### Gate Add to Cart on is_saleable
 
@@ -292,7 +292,7 @@ After an order that contains nominations is placed, the reservation lifecycle ru
 
 ## Related documentation
 
-- [`sourceAvailability` query](../../products/queries/source-availability.md)
+- [`sourceAvailability` query](../queries/source-availability.md)
 - [`setNominatedSourceOnCartItems` mutation reference](/reference/graphql/saas/mutations.md#setnominatedsourceoncartitems)
 - [Add a source](https://experienceleague.adobe.com/en/docs/commerce-admin/inventory/sources/sources-add)
 - [Global options](https://experienceleague.adobe.com/en/docs/commerce-admin/inventory/configuration/global-options)
