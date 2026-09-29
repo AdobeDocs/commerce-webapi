@@ -11,7 +11,7 @@ keywords:
 
 <Fragment src="/includes/scp-b2b-mutation.md" />
 
-The `addPublicRequisitionListItemsToCart` mutation adds items from a public requisition list, identified by its share token, to a cart. Omit `item_uids` to add every item in the list to the cart. Items that the caller is not permitted to view or purchase are skipped and reported as `RESTRICTED_PRODUCT` errors rather than failing the entire request.
+The `addPublicRequisitionListItemsToCart` mutation adds items from a public requisition list, identified by its share token, to a cart. Omit `item_uids` to add every item in the list to the cart. Items that the caller is not permitted to view or purchase are skipped and reported as `RESTRICTED_PRODUCT` errors, rather than failing the entire request.
 
 <InlineAlert variant="info" slots="text" />
 
