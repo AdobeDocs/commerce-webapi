@@ -390,6 +390,7 @@
                 - [isSubscribedProductAlertStock](/graphql/schema/products/queries/is-subscribed-product-alert-stock.md)
                 - [products](/graphql/schema/products/queries/products.md)
                 - [productReviewRatingsMetadata](/graphql/schema/products/queries/product-review-ratings-metadata.md)
+                - [reviews](/graphql/schema/products/queries/reviews.md)
                 - [route](/graphql/schema/products/queries/route.md)
                 - [urlResolver](/graphql/schema/products/queries/url-resolver.md)
             - [Mutations](/graphql/schema/products/mutations/index.md)
