@@ -336,7 +336,7 @@
         - [Inventory sources](/graphql/schema/inventory-sources/index.md)
             - [Queries](/graphql/schema/inventory-sources/queries/index.md)
                 - [pickupLocations](/graphql/schema/inventory-sources/queries/pickup-locations.md)
-                - [sourceAvailability](/graphql/schema/products/queries/source-availability.md)
+                - [sourceAvailability](/graphql/schema/inventory-sources/queries/source-availability.md)
             - [Mutations](/graphql/schema/inventory-sources/mutations/index.md)
                 - [setNominatedSourceOnCartItems](/graphql/schema/inventory-sources/mutations/set-nominated-source-on-cart-items.md)
         - [Negotiable quotes (B2B)](/graphql/schema/b2b/negotiable-quote/index.md)
