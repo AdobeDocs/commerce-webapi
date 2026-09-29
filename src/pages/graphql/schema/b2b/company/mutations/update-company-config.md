@@ -11,7 +11,12 @@ keywords:
 
 <Fragment src="/includes/scp-b2b-mutation.md" />
 
-The `updateCompanyConfig` mutation updates configuration settings for the current company context. Currently, this mutation supports the company address book settings: whether the company address book is enabled, and whether custom shipping addresses can be entered at checkout when the address book is enabled. Disabling the address book also disables custom shipping address entry, even if `custom_shipping_address_enabled` is set to `true` in the same request.
+The `updateCompanyConfig` mutation updates configuration settings for the current company context. This mutation supports the following company address book settings:
+
+* Whether the company address book is enabled.
+* Whether custom shipping addresses can be entered at checkout when the address book is enabled.
+
+Disabling the address book also disables the custom shipping address setting, even if `custom_shipping_address_enabled` is set to `true` in the same request.
 
 This mutation requires a valid [customer authentication token](../../../customer/mutations/generate-token.md) for a company admin or a company user assigned a role with the `Magento_CompanyStorefrontCompatibility::manage_config` (**Manage Company Configuration**) permission.
 
@@ -76,7 +81,7 @@ mutation UpdateCompanyConfig {
 
 ### Disable the company address book
 
-The following example disables the company address book. Custom shipping address entry is disabled as well, even though `custom_shipping_address_enabled` is not specified in the request.
+The following example disables the company address book. The custom shipping address entry is disabled as well, although `custom_shipping_address_enabled` is not specified in the request.
 
 **Request:**
 
