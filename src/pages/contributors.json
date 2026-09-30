@@ -1,7 +1,7 @@
 {
-  "total": 634,
+  "total": 640,
   "offset": 0,
-  "limit": 634,
+  "limit": 640,
   "data": [
     {
       "page": "/",
@@ -18,10 +18,10 @@
     {
       "page": "/config",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/98363870?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/108055538?v=4",
         "https://avatars.githubusercontent.com/u/71978509?v=4",
-        "https://avatars.githubusercontent.com/u/98363870?v=4",
         "https://avatars.githubusercontent.com/u/107539737?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
@@ -590,7 +590,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/1/2026"
+      "lastUpdated": "9/28/2026"
     },
     {
       "page": "/graphql/schema/",
@@ -2094,7 +2094,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/24/2026"
+      "lastUpdated": "9/28/2026"
     },
     {
       "page": "/graphql/schema/cart/queries/cart",
@@ -2843,6 +2843,36 @@
       "lastUpdated": "6/24/2026"
     },
     {
+      "page": "/graphql/schema/inventory-sources/",
+      "avatars": [],
+      "lastUpdated": "9/29/2026"
+    },
+    {
+      "page": "/graphql/schema/inventory-sources/mutations/",
+      "avatars": [],
+      "lastUpdated": "9/30/2026"
+    },
+    {
+      "page": "/graphql/schema/inventory-sources/mutations/set-nominated-source-on-cart-items",
+      "avatars": [],
+      "lastUpdated": "9/29/2026"
+    },
+    {
+      "page": "/graphql/schema/inventory-sources/queries/",
+      "avatars": [],
+      "lastUpdated": "9/30/2026"
+    },
+    {
+      "page": "/graphql/schema/inventory-sources/queries/pickup-locations",
+      "avatars": [],
+      "lastUpdated": "9/28/2026"
+    },
+    {
+      "page": "/graphql/schema/inventory-sources/queries/source-availability",
+      "avatars": [],
+      "lastUpdated": "9/29/2026"
+    },
+    {
       "page": "/graphql/schema/live-search/",
       "avatars": [
         "https://avatars.githubusercontent.com/u/6391769?v=4",
@@ -3419,13 +3449,14 @@
     {
       "page": "/graphql/schema/products/queries/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/98363870?v=4",
         "https://avatars.githubusercontent.com/u/71978509?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/161452743?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "9/23/2026"
+      "lastUpdated": "9/29/2026"
     },
     {
       "page": "/graphql/schema/products/queries/categories",
@@ -5297,7 +5328,7 @@
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/4/2026"
+      "lastUpdated": "9/28/2026"
     },
     {
       "page": "/rest/inventory/link-stocks-sources",
