@@ -15,9 +15,7 @@ The [_B2B for Adobe Commerce_](https://experienceleague.adobe.com/en/docs/commer
 
 ## Public requisition list sharing
 
-<Fragment src="/includes/scp-b2b-query.md" />
-
-The B2B Storefront Compatibility Package adds the following fields to the [`RequisitionList`](/reference/graphql/saas/index.md#requisitionlist) object so a requisition list can be shared publicly, without requiring the recipient to be a customer in the same company as the list owner:
+The [B2B Storefront Compatibility Package](https://experienceleague.adobe.com/en/tools/commerce-storefront/setup/configuration/storefront-compatibility/b2b/) adds the following fields to the [`RequisitionList`](/reference/graphql/saas/index.md#requisitionlist) object so a requisition list can be shared publicly, without requiring the recipient to be a customer in the same company as the list owner:
 
 * `is_public`
 * `token`
