@@ -28,7 +28,7 @@ category (
 
 ## Reference
 
-The [`category`](/reference/graphql/index.md#category) reference provides detailed information about the types and fields defined in this query.
+The [`category`](/reference/graphql/latest/index.md#category) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

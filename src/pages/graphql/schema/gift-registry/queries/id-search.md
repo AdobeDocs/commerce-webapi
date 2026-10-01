@@ -21,7 +21,7 @@ The `giftRegistryIdSearch` reference provides detailed information about the typ
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#giftregistryidsearch)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#giftregistryidsearch)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#giftregistryidsearch)
 
 ## Example usage
 

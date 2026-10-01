@@ -31,9 +31,9 @@ mutation {
 
 The `requestGuestReturn` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#requestguestreturn)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#requestguestreturn)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#requestguestreturn)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#requestguestreturn)
 
 ## Example usage
 

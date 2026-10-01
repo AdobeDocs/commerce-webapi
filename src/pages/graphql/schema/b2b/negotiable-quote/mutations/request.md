@@ -33,9 +33,9 @@ requestNegotiableQuote(
 
 The `requestNegotiableQuote` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#requestnegotiablequote)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#requestnegotiablequote)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#requestnegotiablequote)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#requestnegotiablequote)
 
 ## Example usage
 
@@ -206,7 +206,7 @@ mutation {
 
 <Fragment src="../../../../../includes/saas-only.md"/>
 
-The following example requests a negotiable quote with an attachment. The attachment must be uploaded to Amazon S3 before you can reference it in the mutation. See the [`initiateUpload` mutation](../../../uploads/mutations/initiate-upload.md) and [finishUpload` mutation](../../../uploads/mutations/finish-upload.md)for more information about uploading files.
+The following example requests a negotiable quote with an attachment. The attachment must be uploaded to Amazon S3 before you can reference it in the mutation. See the [`initiateUpload` mutation](../../../uploads/mutations/initiate-upload.md) and [`finishUpload` mutation](../../../uploads/mutations/finish-upload.md) for more information about uploading files.
 
 **Request:**
 

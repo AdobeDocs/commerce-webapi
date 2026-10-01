@@ -17,7 +17,7 @@ The `recaptchaV3Config` reference provides detailed information about the types 
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#recaptchav3config)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#recaptchav3config)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#recaptchav3config)
 
 ## Example usage
 

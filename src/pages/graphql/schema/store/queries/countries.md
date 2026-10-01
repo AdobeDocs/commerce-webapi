@@ -19,7 +19,7 @@ The `countries` reference provides detailed information about the types and fiel
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#countries)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#countries)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#countries)
 
 ## Example usage
 

@@ -7,7 +7,7 @@ keywords:
 
 # Custom attributes
 
-<InlineAlert variant="important" slots="text" />
+<InlineAlert variant="warning" slots="text" />
 
 This functionality is automatically available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview) (SaaS) projects. Adobe Commerce on-premises and Cloud infrastructure (PaaS) projects can [install separate modules](#install-custom-attribute-support) to provide this functionality.
 
@@ -23,7 +23,7 @@ The following sections describe the REST endpoints that support custom attribute
 
 ### Cart
 
-<InlineAlert variant="important" slots="text" />
+<InlineAlert variant="warning" slots="text" />
 
 Adobe Commerce as a Cloud Service does not support REST endpoints that modify the cart on behalf of a customer or guest user. Use the GraphQL [`setCustomAttributesOnCart` mutation](../../graphql/schema/attributes/mutations/set-custom-cart.md) and the [`setCustomAttributesOnCartItem` mutation](../../graphql/schema/attributes/mutations/set-custom-cart-item.md) instead for these types of users. Admin users can use the REST endpoints to set custom attributes on the cart and cart items.
 
@@ -108,8 +108,6 @@ curl -i -X PUT \
 ```
 
 ### Company
-
-<Fragment src="../../includes/saas-only.md"/>
 
 The `POST V1/company/setCustomAttributes` endpoint allows you to set custom attributes on a company. The request body must include the `company_id` and an array of `custom_attributes`.
 
@@ -253,8 +251,6 @@ curl -i -X POST \
 If an order item has custom attributes, they will be returned as part of the order item object in responses to requests like `GET /V1/orders/items/{id}`.
 
 ### Negotiable Quote
-
-<Fragment src="../../includes/saas-only.md"/>
 
 The `POST /V1/negotiableQuote/setCustomAttributes` endpoint allows you to set custom attributes on a negotiable quote. The request body must include the `quote_id` and an array of `custom_attributes`.
 

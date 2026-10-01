@@ -4,9 +4,9 @@ description: The subscribeProductAlertPrice mutation subscribes the logged-in cu
 
 ---
 
-<Fragment src="../../../../includes/saas-only.md"/>
-
 # subscribeProductAlertPrice mutation
+
+<Fragment src="/includes/scp-mutation.md" />
 
 The `subscribeProductAlertPrice` mutation subscribes the logged-in customer to a price drop alert for the specified product. When the product price decreases, the customer receives an email notification.
 
@@ -24,7 +24,7 @@ mutation {
 
 ## Reference
 
-The [`subscribeProductAlertPrice`](/reference/graphql/saas/index.md#subscribeproductalertprice) reference provides detailed information about the types and fields defined in this mutation.
+The [`subscribeProductAlertPrice`](/reference/graphql/saas/mutations.md#subscribeproductalertprice) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

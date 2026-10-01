@@ -19,7 +19,7 @@ The `giftCardAccount` reference provides detailed information about the types an
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#giftcardaccount)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#giftcardaccount)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#giftcardaccount)
 
 ## Example usage
 

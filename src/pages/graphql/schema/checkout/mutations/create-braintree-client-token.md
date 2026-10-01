@@ -20,7 +20,7 @@ mutation {
 
 ## Reference
 
-The [`createBraintreeClientToken`](/reference/graphql/index.md#createbraintreeclienttoken) reference provides detailed information about the types and fields defined in this mutation.
+The [`createBraintreeClientToken`](/reference/graphql/latest/mutations.md#createbraintreeclienttoken) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

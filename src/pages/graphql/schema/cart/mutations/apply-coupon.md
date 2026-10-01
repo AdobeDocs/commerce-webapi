@@ -15,9 +15,9 @@ The `applyCouponToCart` mutation applies a predefined coupon code to the specifi
 
 The `applyCouponToCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#applycoupontocart)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#applycoupontocart)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#applycoupontocart)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#applycoupontocart)
 
 ## Example usage
 

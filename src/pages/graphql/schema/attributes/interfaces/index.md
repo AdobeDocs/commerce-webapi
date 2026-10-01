@@ -9,19 +9,19 @@ Adobe Commerce on cloud and on-premises (PaaS) provides the following interfaces
 
 | Interface | Implementations |
 | --- | --- |
-| [`AttributeSelectedOptionInterface`](/reference/graphql/index.md#attributeselectedoptioninterface) | [`AttributeSelectedOption`](/reference/graphql/index.md#attributeselectedoption) |
-| [`AttributeValueInterface`](/reference/graphql/index.md#attributevalueinterface) | [`AttributeValue`](/reference/graphql/index.md#attributevalue) \<br/\>[`AttributeSelectedOptions`](/reference/graphql/index.md#attributeselectedoptions) |
-| [`CustomAttributeMetadataInterface`](/reference/graphql/index.md#customerattributemetadata) | [`AttributeMetadata`](/reference/graphql/index.md#attributemetadata) |
-| [`CustomAttributeOptionInterface`](/reference/graphql/index.md#customattributeoptioninterface) | [`AttributeOptionMetadata`](/reference/graphql/index.md#attributeoptionmetadata). |
+| [`AttributeSelectedOptionInterface`](/reference/graphql/latest/types-a-b.md#attributeselectedoptioninterface) | [`AttributeSelectedOption`](/reference/graphql/latest/types-a-b.md#attributeselectedoption) |
+| [`AttributeValueInterface`](/reference/graphql/latest/types-a-b.md#attributevalueinterface) | [`AttributeValue`](/reference/graphql/latest/types-a-b.md#attributevalue) \<br/\>[`AttributeSelectedOptions`](/reference/graphql/latest/types-a-b.md#attributeselectedoptions) |
+| [`CustomAttributeMetadataInterface`](/reference/graphql/latest/types-c-e.md#customerattributemetadata) | [`AttributeMetadata`](/reference/graphql/latest/types-a-b.md#attributemetadata) |
+| [`CustomAttributeOptionInterface`](/reference/graphql/latest/types-c-e.md#customattributeoptioninterface) | [`AttributeOptionMetadata`](/reference/graphql/latest/types-a-b.md#attributeoptionmetadata). |
 
 The following table lists the same interfaces and implementations with links to the **Adobe Commerce as a Cloud Service (SaaS)** GraphQL reference.
 
 | Interface | Implementations |
 | --- | --- |
-| [`AttributeSelectedOptionInterface`](/reference/graphql/saas/index.md#attributeselectedoptioninterface) | [`AttributeSelectedOption`](/reference/graphql/saas/index.md#attributeselectedoption) |
-| [`AttributeValueInterface`](/reference/graphql/saas/index.md#attributevalueinterface) | [`AttributeValue`](/reference/graphql/saas/index.md#attributevalue) \<br/\>[`AttributeSelectedOptions`](/reference/graphql/saas/index.md#attributeselectedoptions) \<br/\>[`AttributeFile`](/reference/graphql/saas/index.md#attributefile) \<br/\>[`AttributeImage`](/reference/graphql/saas/index.md#attributeimage) |
-| [`CustomAttributeMetadataInterface`](/reference/graphql/saas/index.md#customerattributemetadata) | [`AttributeMetadata`](/reference/graphql/saas/index.md#attributemetadata) |
-| [`CustomAttributeOptionInterface`](/reference/graphql/saas/index.md#customattributeoptioninterface) | [`AttributeOptionMetadata`](/reference/graphql/saas/index.md#attributeoptionmetadata). |
+| [`AttributeSelectedOptionInterface`](/reference/graphql/saas/types-a-b.md#attributeselectedoptioninterface) | [`AttributeSelectedOption`](/reference/graphql/saas/types-a-b.md#attributeselectedoption) |
+| [`AttributeValueInterface`](/reference/graphql/saas/types-a-b.md#attributevalueinterface) | [`AttributeValue`](/reference/graphql/saas/types-a-b.md#attributevalue) \<br/\>[`AttributeSelectedOptions`](/reference/graphql/saas/types-a-b.md#attributeselectedoptions) \<br/\>[`AttributeFile`](/reference/graphql/saas/types-a-b.md#attributefile) \<br/\>[`AttributeImage`](/reference/graphql/saas/types-a-b.md#attributeimage) |
+| [`CustomAttributeMetadataInterface`](/reference/graphql/saas/types-c-e.md#customerattributemetadata) | [`AttributeMetadata`](/reference/graphql/saas/types-a-b.md#attributemetadata) |
+| [`CustomAttributeOptionInterface`](/reference/graphql/saas/types-c-e.md#customattributeoptioninterface) | [`AttributeOptionMetadata`](/reference/graphql/saas/types-a-b.md#attributeoptionmetadata). |
 
 <InlineAlert variant="info" slots="text"/>
 

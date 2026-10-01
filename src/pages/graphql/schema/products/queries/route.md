@@ -18,7 +18,7 @@ The `route` query returns the canonical URL for a specified product, category, o
 
 ## Reference
 
-The [`route`](/reference/graphql/index.md#route) reference provides detailed information about the types and fields defined in this query.
+The [`route`](/reference/graphql/latest/index.md#route) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

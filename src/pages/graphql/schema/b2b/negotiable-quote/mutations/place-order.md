@@ -51,9 +51,9 @@ mutation {
 
 The `placeNegotiableQuoteOrder` reference provides detailed information about the types and fields defined in this mutation.
 
-- [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#placenegotiablequoteorder)
+- [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#placenegotiablequoteorder)
 
-- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](/reference/graphql/index.md#placenegotiablequoteorder)
+- [PaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) [On-Premises/Cloud](/reference/graphql/latest/mutations.md#placenegotiablequoteorder)
 
 ## Example usage
 

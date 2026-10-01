@@ -23,7 +23,7 @@ The `isCompanyEmailAvailable` reference provides detailed information about the 
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#iscompanyemailavailable)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#iscompanyemailavailable)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#iscompanyemailavailable)
 
 ## Example usage
 

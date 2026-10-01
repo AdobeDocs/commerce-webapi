@@ -20,7 +20,7 @@ SaaS
 
 Return a list of product attribute codes that can be used for sorting or filtering in a `productSearch` query
 
-**Response:** [`AttributeMetadataResponse!`](#attributemetadataresponse)
+**Response:** [`AttributeMetadataResponse!`](/reference/graphql/saas/types-a-b.md#attributemetadataresponse)
 
 #### Example
 
@@ -58,13 +58,13 @@ query attributeMetadata {
 
 Retrieve EAV attributes associated to a frontend form. Use countries query provided by DirectoryGraphQl module to retrieve region_id and country_id attribute options.
 
-**Response:** [`AttributesFormOutput!`](#attributesformoutput)
+**Response:** [`AttributesFormOutput!`](/reference/graphql/saas/types-a-b.md#attributesformoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `formCode` - [`String!`](#string) | Form code. |
+| `formCode` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | Form code. |
 
 #### Example
 
@@ -86,7 +86,7 @@ query attributesForm($formCode: String!) {
 ##### Variables
 
 ```json
-{"formCode": "xyz789"}
+{"formCode": "abc123"}
 ```
 
 ##### Response
@@ -108,14 +108,14 @@ query attributesForm($formCode: String!) {
 
 Returns a list of attributes metadata for a given entity type.
 
-**Response:** [`AttributesMetadataOutput`](#attributesmetadataoutput)
+**Response:** [`AttributesMetadataOutput`](/reference/graphql/saas/types-a-b.md#attributesmetadataoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `entityType` - [`AttributeEntityTypeEnum!`](#attributeentitytypeenum) | Entity type. |
-| `filters` - [`AttributeFilterInput`](#attributefilterinput) | Identifies which filter inputs to search for and return. |
+| `entityType` - [`AttributeEntityTypeEnum!`](/reference/graphql/saas/types-a-b.md#attributeentitytypeenum) | Entity type. |
+| `filters` - [`AttributeFilterInput`](/reference/graphql/saas/types-a-b.md#attributefilterinput) | Identifies which filter inputs to search for and return. |
 
 #### Example
 
@@ -168,13 +168,13 @@ query attributesList(
 
 Get a list of available store views and their config information.
 
-**Response:** [`[StoreConfig]`](#storeconfig)
+**Response:** [`[StoreConfig]`](/reference/graphql/saas/types-q-s.md#storeconfig)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `useCurrentGroup` - [`Boolean`](#boolean) | Filter store views by the current store group. |
+| `useCurrentGroup` - [`Boolean`](/reference/graphql/saas/types-a-b.md#boolean) | Filter store views by the current store group. |
 
 #### Example
 
@@ -187,6 +187,7 @@ query availableStores($useCurrentGroup: Boolean) {
     allow_gift_receipt
     allow_gift_wrapping_on_order
     allow_gift_wrapping_on_order_items
+    allow_guests_to_write_product_reviews
     allow_items
     allow_order
     allow_printed_card
@@ -281,10 +282,15 @@ query availableStores($useCurrentGroup: Boolean) {
     orders_invoices_credit_memos_display_shipping_amount
     orders_invoices_credit_memos_display_subtotal
     orders_invoices_credit_memos_display_zero_tax
+    persistent_enabled
+    persistent_options_wishlist
+    persistent_shopping_cart
     printed_card_priceV2 {
       ...MoneyFragment
     }
+    product_alert_allow_stock
     product_fixed_product_tax_display_setting
+    product_reviews_enabled
     product_url_suffix
     quickorder_active
     quote_minimum_amount
@@ -305,6 +311,7 @@ query availableStores($useCurrentGroup: Boolean) {
     secure_base_url
     share_active_segments
     share_applied_cart_rule
+    share_customer_accounts_scope
     shopping_assistance_checkbox_title
     shopping_assistance_checkbox_tooltip
     shopping_assistance_enabled
@@ -340,7 +347,7 @@ query availableStores($useCurrentGroup: Boolean) {
 ##### Variables
 
 ```json
-{"useCurrentGroup": false}
+{"useCurrentGroup": true}
 ```
 
 ##### Response
@@ -353,91 +360,92 @@ query availableStores($useCurrentGroup: Boolean) {
         "allow_company_registration": true,
         "allow_gift_receipt": "abc123",
         "allow_gift_wrapping_on_order": "xyz789",
-        "allow_gift_wrapping_on_order_items": "xyz789",
+        "allow_gift_wrapping_on_order_items": "abc123",
+        "allow_guests_to_write_product_reviews": "xyz789",
         "allow_items": "abc123",
         "allow_order": "abc123",
         "allow_printed_card": "abc123",
-        "autocomplete_on_storefront": true,
+        "autocomplete_on_storefront": false,
         "base_currency_code": "xyz789",
-        "base_link_url": "abc123",
-        "base_media_url": "xyz789",
-        "base_static_url": "xyz789",
+        "base_link_url": "xyz789",
+        "base_media_url": "abc123",
+        "base_static_url": "abc123",
         "base_url": "abc123",
-        "cart_expires_in_days": 987,
+        "cart_expires_in_days": 123,
         "cart_gift_wrapping": "xyz789",
-        "cart_merge_preference": "xyz789",
-        "cart_printed_card": "xyz789",
-        "cart_summary_display_quantity": 987,
+        "cart_merge_preference": "abc123",
+        "cart_printed_card": "abc123",
+        "cart_summary_display_quantity": 123,
         "catalog_default_sort_by": "abc123",
         "category_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
         "category_url_suffix": "abc123",
         "check_money_order_enable_for_specific_countries": false,
         "check_money_order_enabled": false,
-        "check_money_order_make_check_payable_to": "xyz789",
+        "check_money_order_make_check_payable_to": "abc123",
         "check_money_order_max_order_total": "abc123",
-        "check_money_order_min_order_total": "abc123",
-        "check_money_order_new_order_status": "abc123",
+        "check_money_order_min_order_total": "xyz789",
+        "check_money_order_new_order_status": "xyz789",
         "check_money_order_payment_from_specific_countries": "abc123",
-        "check_money_order_send_check_to": "xyz789",
+        "check_money_order_send_check_to": "abc123",
         "check_money_order_sort_order": 123,
         "check_money_order_title": "xyz789",
         "company_credit_enabled": true,
         "company_enabled": true,
         "configurable_product_image": "ITSELF",
         "configurable_thumbnail_source": "xyz789",
-        "contact_enabled": true,
-        "countries_with_required_region": "xyz789",
-        "create_account_confirmation": false,
+        "contact_enabled": false,
+        "countries_with_required_region": "abc123",
+        "create_account_confirmation": true,
         "customer_access_token_lifetime": 987.65,
-        "default_country": "abc123",
-        "default_display_currency_code": "xyz789",
+        "default_country": "xyz789",
+        "default_display_currency_code": "abc123",
         "display_product_prices_in_catalog": 123,
         "display_shipping_prices": 987,
         "display_state_if_optional": false,
-        "enable_multiple_wishlists": "xyz789",
-        "fixed_product_taxes_apply_tax_to_fpt": true,
+        "enable_multiple_wishlists": "abc123",
+        "fixed_product_taxes_apply_tax_to_fpt": false,
         "fixed_product_taxes_display_prices_in_emails": 987,
         "fixed_product_taxes_display_prices_in_product_lists": 987,
         "fixed_product_taxes_display_prices_in_sales_modules": 987,
         "fixed_product_taxes_display_prices_on_product_view_page": 123,
-        "fixed_product_taxes_enable": false,
+        "fixed_product_taxes_enable": true,
         "fixed_product_taxes_include_fpt_in_subtotal": false,
         "graphql_share_customer_group": false,
         "grid_per_page": 123,
-        "grid_per_page_values": "xyz789",
+        "grid_per_page_values": "abc123",
         "grouped_product_image": "ITSELF",
-        "is_checkout_agreements_enabled": false,
-        "is_default_store": true,
+        "is_checkout_agreements_enabled": true,
+        "is_default_store": false,
         "is_default_store_group": true,
-        "is_guest_checkout_enabled": false,
+        "is_guest_checkout_enabled": true,
         "is_negotiable_quote_active": false,
         "is_one_page_checkout_enabled": false,
         "is_requisition_list_active": "abc123",
         "list_mode": "abc123",
-        "list_per_page": 123,
-        "list_per_page_values": "xyz789",
+        "list_per_page": 987,
+        "list_per_page_values": "abc123",
         "locale": "abc123",
         "magento_reward_general_is_enabled": "xyz789",
         "magento_reward_general_is_enabled_on_front": "xyz789",
-        "magento_reward_general_min_points_balance": "xyz789",
-        "magento_reward_general_publish_history": "xyz789",
+        "magento_reward_general_min_points_balance": "abc123",
+        "magento_reward_general_publish_history": "abc123",
         "magento_reward_points_invitation_customer": "abc123",
-        "magento_reward_points_invitation_customer_limit": "xyz789",
+        "magento_reward_points_invitation_customer_limit": "abc123",
         "magento_reward_points_invitation_order": "abc123",
-        "magento_reward_points_invitation_order_limit": "xyz789",
+        "magento_reward_points_invitation_order_limit": "abc123",
         "magento_reward_points_newsletter": "abc123",
-        "magento_reward_points_order": "abc123",
-        "magento_reward_points_register": "abc123",
-        "magento_reward_points_review": "abc123",
-        "magento_reward_points_review_limit": "xyz789",
+        "magento_reward_points_order": "xyz789",
+        "magento_reward_points_register": "xyz789",
+        "magento_reward_points_review": "xyz789",
+        "magento_reward_points_review_limit": "abc123",
         "magento_wishlist_general_is_enabled": "xyz789",
         "max_items_in_order_summary": 123,
-        "maximum_number_of_wishlists": "xyz789",
+        "maximum_number_of_wishlists": "abc123",
         "minicart_display": true,
-        "minicart_max_items": 123,
-        "minimum_password_length": "xyz789",
-        "newsletter_enabled": true,
-        "optional_zip_countries": "abc123",
+        "minicart_max_items": 987,
+        "minimum_password_length": "abc123",
+        "newsletter_enabled": false,
+        "optional_zip_countries": "xyz789",
         "order_cancellation_enabled": true,
         "order_cancellation_reasons": [
           CancellationReason
@@ -446,54 +454,60 @@ query availableStores($useCurrentGroup: Boolean) {
         "orders_invoices_credit_memos_display_grandtotal": true,
         "orders_invoices_credit_memos_display_price": 987,
         "orders_invoices_credit_memos_display_shipping_amount": 987,
-        "orders_invoices_credit_memos_display_subtotal": 123,
+        "orders_invoices_credit_memos_display_subtotal": 987,
         "orders_invoices_credit_memos_display_zero_tax": false,
+        "persistent_enabled": true,
+        "persistent_options_wishlist": false,
+        "persistent_shopping_cart": false,
         "printed_card_priceV2": Money,
+        "product_alert_allow_stock": true,
         "product_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
+        "product_reviews_enabled": "xyz789",
         "product_url_suffix": "xyz789",
         "quickorder_active": true,
-        "quote_minimum_amount": 123.45,
-        "quote_minimum_amount_message": "xyz789",
-        "required_character_classes_number": "abc123",
-        "requisition_list_share_link_validity_days": 123,
+        "quote_minimum_amount": 987.65,
+        "quote_minimum_amount_message": "abc123",
+        "required_character_classes_number": "xyz789",
+        "requisition_list_share_link_validity_days": 987,
         "requisition_list_share_max_recipients": 987,
         "requisition_list_share_storefront_path": "abc123",
         "requisition_list_sharing_enabled": true,
-        "returns_enabled": "abc123",
-        "root_category_uid": 4,
+        "returns_enabled": "xyz789",
+        "root_category_uid": "4",
         "sales_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
         "sales_gift_wrapping": "xyz789",
         "sales_printed_card": "xyz789",
         "secure_base_link_url": "abc123",
         "secure_base_media_url": "xyz789",
         "secure_base_static_url": "abc123",
-        "secure_base_url": "abc123",
-        "share_active_segments": true,
-        "share_applied_cart_rule": false,
-        "shopping_assistance_checkbox_title": "xyz789",
+        "secure_base_url": "xyz789",
+        "share_active_segments": false,
+        "share_applied_cart_rule": true,
+        "share_customer_accounts_scope": 123,
+        "shopping_assistance_checkbox_title": "abc123",
         "shopping_assistance_checkbox_tooltip": "xyz789",
-        "shopping_assistance_enabled": false,
+        "shopping_assistance_enabled": true,
         "shopping_cart_display_full_summary": true,
         "shopping_cart_display_grand_total": false,
-        "shopping_cart_display_price": 987,
-        "shopping_cart_display_shipping": 987,
+        "shopping_cart_display_price": 123,
+        "shopping_cart_display_shipping": 123,
         "shopping_cart_display_subtotal": 123,
         "shopping_cart_display_tax_gift_wrapping": "DISPLAY_EXCLUDING_TAX",
-        "shopping_cart_display_zero_tax": false,
-        "store_code": "4",
-        "store_group_code": "4",
-        "store_group_name": "xyz789",
-        "store_name": "xyz789",
+        "shopping_cart_display_zero_tax": true,
+        "store_code": 4,
+        "store_group_code": 4,
+        "store_group_name": "abc123",
+        "store_name": "abc123",
         "store_sort_order": 123,
-        "timezone": "abc123",
+        "timezone": "xyz789",
         "title_separator": "xyz789",
         "use_store_in_url": true,
         "website_code": 4,
         "website_name": "xyz789",
         "weight_unit": "xyz789",
-        "zero_subtotal_enable_for_specific_countries": true,
-        "zero_subtotal_enabled": true,
-        "zero_subtotal_new_order_status": "xyz789",
+        "zero_subtotal_enable_for_specific_countries": false,
+        "zero_subtotal_enabled": false,
+        "zero_subtotal_new_order_status": "abc123",
         "zero_subtotal_payment_action": "xyz789",
         "zero_subtotal_payment_from_specific_countries": "abc123",
         "zero_subtotal_sort_order": 123,
@@ -510,13 +524,13 @@ query availableStores($useCurrentGroup: Boolean) {
 
 Return information about the specified shopping cart.
 
-**Response:** [`Cart`](#cart)
+**Response:** [`Cart`](/reference/graphql/saas/types-c-e.md#cart)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `cart_id` - [`String!`](#string) | The unique ID of the cart to query. |
+| `cart_id` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The unique ID of the cart to query. |
 
 #### Example
 
@@ -536,6 +550,9 @@ query cart($cart_id: String!) {
     }
     applied_store_credit {
       ...AppliedStoreCreditFragment
+    }
+    available_free_gifts {
+      ...AvailableFreeGiftFragment
     }
     available_gift_wrappings {
       ...GiftWrappingFragment
@@ -557,6 +574,7 @@ query cart($cart_id: String!) {
     gift_wrapping {
       ...GiftWrappingFragment
     }
+    has_available_free_gifts
     id
     is_virtual
     itemsV2 {
@@ -596,6 +614,7 @@ query cart($cart_id: String!) {
       "applied_gift_cards": [AppliedGiftCard],
       "applied_reward_points": RewardPointsAmount,
       "applied_store_credit": AppliedStoreCredit,
+      "available_free_gifts": [AvailableFreeGift],
       "available_gift_wrappings": [GiftWrapping],
       "available_payment_methods": [
         AvailablePaymentMethod
@@ -604,10 +623,11 @@ query cart($cart_id: String!) {
       "custom_attributes": [CustomAttribute],
       "email": "abc123",
       "gift_message": GiftMessage,
-      "gift_receipt_included": false,
+      "gift_receipt_included": true,
       "gift_wrapping": GiftWrapping,
+      "has_available_free_gifts": false,
       "id": 4,
-      "is_virtual": true,
+      "is_virtual": false,
       "itemsV2": CartItems,
       "prices": CartPrices,
       "printed_card_included": true,
@@ -624,21 +644,17 @@ query cart($cart_id: String!) {
 
 ### categories
 
-*Deprecated*
+Return category views by IDs, with optional role filters and subtree scopes. Available only for deployments using the Catalog or Live Search service with Adobe Commerce. For Adobe Commerce Optimizer, use the `categoryTree` query instead. See [categoryTree query examples](https://developer.adobe.com/commerce/services/optimizer/merchandising-services/categories-storefront-implementation#categorytree-query-examples).
 
-This field is deprecated and will be removed.
-
-Return category views by IDs, with optional role filters and subtree scopes. In Adobe Commerce as a Cloud Service, this query replaces the `categories` query defined in the Commerce Foundation.
-
-**Response:** [`[CategoryView]`](#categoryview)
+**Response:** [`[CategoryView]`](/reference/graphql/saas/types-c-e.md#categoryview)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `ids` - [`[String!]`](#string) | List of category IDs to retrieve. For example, `123`, `456` or `789`. |
-| `roles` - [`[String!]`](#string) | List of roles to filter the categories by. For example, `show_on_plp`, `show_in_pdp` or `show_in_search`. |
-| `subtree` - [`Subtree`](#subtree) | Subtree of the categories to retrieve. `startLevel` uses absolute category levels (root = 1). For example, `depth: 1`, `startLevel: 1`. |
+| `ids` - [`[String!]`](/reference/graphql/saas/types-q-s.md#string) | List of category IDs to retrieve. For example, `123`, `456` or `789`. |
+| `roles` - [`[String!]`](/reference/graphql/saas/types-q-s.md#string) | List of roles to filter the categories by. For example, `show_on_plp`, `show_in_pdp` or `show_in_search`. |
+| `subtree` - [`Subtree`](/reference/graphql/saas/types-q-s.md#subtree) | Subtree of the categories to retrieve. `startLevel` uses absolute category levels (root = 1). For example, `depth: 1`, `startLevel: 1`. |
 
 #### Example
 
@@ -677,7 +693,7 @@ query categories(
 
 ```json
 {
-  "ids": ["xyz789"],
+  "ids": ["abc123"],
   "roles": ["abc123"],
   "subtree": Subtree
 }
@@ -691,18 +707,18 @@ query categories(
     "categories": [
       {
         "availableSortBy": ["xyz789"],
-        "children": ["abc123"],
-        "defaultSortBy": "abc123",
-        "id": 4,
+        "children": ["xyz789"],
+        "defaultSortBy": "xyz789",
+        "id": "4",
         "level": 987,
-        "name": "xyz789",
-        "parentId": "abc123",
-        "position": 987,
+        "name": "abc123",
+        "parentId": "xyz789",
+        "position": 123,
         "path": "xyz789",
         "roles": ["xyz789"],
         "urlKey": "xyz789",
-        "urlPath": "abc123",
-        "count": 987,
+        "urlPath": "xyz789",
+        "count": 123,
         "title": "abc123"
       }
     ]
@@ -716,7 +732,7 @@ query categories(
 
 Return Terms and Conditions configuration information.
 
-**Response:** [`[CheckoutAgreement]`](#checkoutagreement)
+**Response:** [`[CheckoutAgreement]`](/reference/graphql/saas/types-c-e.md#checkoutagreement)
 
 #### Example
 
@@ -743,9 +759,9 @@ query checkoutAgreements {
   "data": {
     "checkoutAgreements": [
       {
-        "agreement_id": 987,
+        "agreement_id": 123,
         "checkbox_text": "xyz789",
-        "content": "abc123",
+        "content": "xyz789",
         "content_height": "abc123",
         "is_html": false,
         "mode": "AUTO",
@@ -762,7 +778,7 @@ query checkoutAgreements {
 
 Provide necessary information to build headless storefront when Adobe Commerce is connected to Commerce Optimizer.
 
-**Response:** [`CommerceOptimizerContext!`](#commerceoptimizercontext)
+**Response:** [`CommerceOptimizerContext!`](/reference/graphql/saas/types-c-e.md#commerceoptimizercontext)
 
 #### Example
 
@@ -779,13 +795,7 @@ query commerceOptimizer {
 ##### Response
 
 ```json
-{
-  "data": {
-    "commerceOptimizer": {
-      "priceBookId": "4"
-    }
-  }
-}
+{"data": {"commerceOptimizer": {"priceBookId": 4}}}
 ```
 
 <HorizontalLine />
@@ -794,7 +804,7 @@ query commerceOptimizer {
 
 Return detailed information about the customer's company within the current company context.
 
-**Response:** [`Company`](#company)
+**Response:** [`Company`](/reference/graphql/saas/types-c-e.md#company)
 
 #### Example
 
@@ -806,6 +816,9 @@ query company {
     acl_resources {
       ...CompanyAclResourceFragment
     }
+    addresses {
+      ...CompanyAddressesFragment
+    }
     available_payment_methods {
       ...AvailablePaymentMethodFragment
     }
@@ -815,6 +828,9 @@ query company {
     company_admin {
       ...CustomerFragment
     }
+    config {
+      ...CompanyConfigFragment
+    }
     credit {
       ...CompanyCreditFragment
     }
@@ -823,6 +839,12 @@ query company {
     }
     custom_attributes {
       ...CustomAttributeFragment
+    }
+    default_billing_address {
+      ...CompanyAddressFragment
+    }
+    default_shipping_address {
+      ...CompanyAddressFragment
     }
     email
     id
@@ -867,6 +889,7 @@ query company {
   "data": {
     "company": {
       "acl_resources": [CompanyAclResource],
+      "addresses": CompanyAddresses,
       "available_payment_methods": [
         AvailablePaymentMethod
       ],
@@ -874,16 +897,19 @@ query company {
         CompanyAvailableShippingMethod
       ],
       "company_admin": Customer,
+      "config": CompanyConfig,
       "credit": CompanyCredit,
       "credit_history": CompanyCreditHistory,
       "custom_attributes": [CustomAttribute],
+      "default_billing_address": CompanyAddress,
+      "default_shipping_address": CompanyAddress,
       "email": "abc123",
-      "id": 4,
+      "id": "4",
       "legal_address": CompanyLegalAddress,
-      "legal_name": "xyz789",
-      "name": "xyz789",
+      "legal_name": "abc123",
+      "name": "abc123",
       "payment_methods": ["xyz789"],
-      "reseller_id": "xyz789",
+      "reseller_id": "abc123",
       "role": CompanyRole,
       "roles": CompanyRoles,
       "sales_representative": CompanySalesRepresentative,
@@ -892,7 +918,7 @@ query company {
       "team": CompanyTeam,
       "user": Customer,
       "users": CompanyUsers,
-      "vat_tax_id": "xyz789"
+      "vat_tax_id": "abc123"
     }
   }
 }
@@ -904,13 +930,13 @@ query company {
 
 Return products that have been added to the specified compare list.
 
-**Response:** [`CompareList`](#comparelist)
+**Response:** [`CompareList`](/reference/graphql/saas/types-c-e.md#comparelist)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `uid` - [`ID!`](#id) | The unique ID of the compare list to be queried. |
+| `uid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the compare list to be queried. |
 
 #### Example
 
@@ -944,9 +970,9 @@ query compareList($uid: ID!) {
   "data": {
     "compareList": {
       "attributes": [ComparableAttribute],
-      "item_count": 123,
+      "item_count": 987,
       "items": [ComparableItem],
-      "uid": "4"
+      "uid": 4
     }
   }
 }
@@ -958,7 +984,7 @@ query compareList($uid: ID!) {
 
 The countries query provides information for all countries.
 
-**Response:** [`[Country]`](#country)
+**Response:** [`[Country]`](/reference/graphql/saas/types-c-e.md#country)
 
 #### Example
 
@@ -987,11 +1013,11 @@ query countries {
     "countries": [
       {
         "available_regions": [Region],
-        "full_name_english": "xyz789",
-        "full_name_locale": "xyz789",
+        "full_name_english": "abc123",
+        "full_name_locale": "abc123",
         "id": "abc123",
         "three_letter_abbreviation": "xyz789",
-        "two_letter_abbreviation": "abc123"
+        "two_letter_abbreviation": "xyz789"
       }
     ]
   }
@@ -1004,13 +1030,13 @@ query countries {
 
 The countries query provides information for a single country.
 
-**Response:** [`Country`](#country)
+**Response:** [`Country`](/reference/graphql/saas/types-c-e.md#country)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `id` - [`String`](#string) |  |
+| `id` - [`String`](/reference/graphql/saas/types-q-s.md#string) |  |
 
 #### Example
 
@@ -1044,9 +1070,9 @@ query country($id: String) {
   "data": {
     "country": {
       "available_regions": [Region],
-      "full_name_english": "abc123",
+      "full_name_english": "xyz789",
       "full_name_locale": "abc123",
-      "id": "abc123",
+      "id": "xyz789",
       "three_letter_abbreviation": "xyz789",
       "two_letter_abbreviation": "xyz789"
     }
@@ -1060,7 +1086,7 @@ query country($id: String) {
 
 Return information about the store's currency.
 
-**Response:** [`Currency`](#currency)
+**Response:** [`Currency`](/reference/graphql/saas/types-c-e.md#currency)
 
 #### Example
 
@@ -1088,11 +1114,11 @@ query currency {
   "data": {
     "currency": {
       "available_currency_codes": [
-        "xyz789"
+        "abc123"
       ],
       "base_currency_code": "abc123",
-      "base_currency_symbol": "abc123",
-      "default_display_currency_code": "abc123",
+      "base_currency_symbol": "xyz789",
+      "default_display_currency_code": "xyz789",
       "default_display_currency_symbol": "abc123",
       "exchange_rates": [ExchangeRate]
     }
@@ -1106,13 +1132,13 @@ query currency {
 
 Retrieve EAV attributes metadata.
 
-**Response:** [`AttributesMetadataOutput!`](#attributesmetadataoutput)
+**Response:** [`AttributesMetadataOutput!`](/reference/graphql/saas/types-a-b.md#attributesmetadataoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `attributes` - [`[AttributeInput!]`](#attributeinput) |  |
+| `attributes` - [`[AttributeInput!]`](/reference/graphql/saas/types-a-b.md#attributeinput) |  |
 
 #### Example
 
@@ -1156,7 +1182,7 @@ query customAttributeMetadataV2($attributes: [AttributeInput!]) {
 
 Return detailed information about a customer account.
 
-**Response:** [`Customer`](#customer)
+**Response:** [`Customer`](/reference/graphql/saas/types-c-e.md#customer)
 
 #### Example
 
@@ -1239,6 +1265,9 @@ query customer {
     returns {
       ...ReturnsFragment
     }
+    reviews {
+      ...ProductReviewsFragment
+    }
     reward_points {
       ...RewardPointsFragment
     }
@@ -1283,34 +1312,35 @@ query customer {
       "company_hierarchy": [CompanyHierarchy],
       "compare_list": CompareList,
       "confirmation_status": "ACCOUNT_CONFIRMED",
-      "created_at": "xyz789",
+      "created_at": "abc123",
       "custom_attributes": [AttributeValueInterface],
       "date_of_birth": "xyz789",
-      "default_billing": "abc123",
+      "default_billing": "xyz789",
       "default_shipping": "xyz789",
-      "email": "xyz789",
+      "email": "abc123",
       "firstname": "xyz789",
       "gender": 123,
       "gift_registries": [GiftRegistry],
       "gift_registry": GiftRegistry,
       "group": CustomerGroupStorefront,
       "id": "4",
-      "is_subscribed": true,
-      "job_title": "abc123",
+      "is_subscribed": false,
+      "job_title": "xyz789",
       "lastname": "xyz789",
-      "middlename": "xyz789",
+      "middlename": "abc123",
       "orders": CustomerOrders,
-      "prefix": "abc123",
+      "prefix": "xyz789",
       "purchase_order": PurchaseOrder,
       "purchase_order_approval_rule": PurchaseOrderApprovalRule,
       "purchase_order_approval_rule_metadata": PurchaseOrderApprovalRuleMetadata,
       "purchase_order_approval_rules": PurchaseOrderApprovalRules,
       "purchase_orders": PurchaseOrders,
-      "purchase_orders_enabled": false,
+      "purchase_orders_enabled": true,
       "quote_enabled": false,
       "requisition_lists": RequisitionLists,
       "return": Return,
       "returns": Returns,
+      "reviews": ProductReviews,
       "reward_points": RewardPoints,
       "role": CompanyRole,
       "segments": [CustomerSegmentStorefront],
@@ -1318,7 +1348,7 @@ query customer {
       "store_credit": CustomerStoreCredit,
       "structure_id": "4",
       "suffix": "xyz789",
-      "taxvat": "abc123",
+      "taxvat": "xyz789",
       "team": CompanyTeam,
       "telephone": "xyz789",
       "wishlist_v2": Wishlist,
@@ -1334,7 +1364,7 @@ query customer {
 
 Return information about the customer's shopping cart.
 
-**Response:** [`Cart!`](#cart)
+**Response:** [`Cart!`](/reference/graphql/saas/types-c-e.md#cart)
 
 #### Example
 
@@ -1354,6 +1384,9 @@ query customerCart {
     }
     applied_store_credit {
       ...AppliedStoreCreditFragment
+    }
+    available_free_gifts {
+      ...AvailableFreeGiftFragment
     }
     available_gift_wrappings {
       ...GiftWrappingFragment
@@ -1375,6 +1408,7 @@ query customerCart {
     gift_wrapping {
       ...GiftWrappingFragment
     }
+    has_available_free_gifts
     id
     is_virtual
     itemsV2 {
@@ -1408,16 +1442,18 @@ query customerCart {
       "applied_gift_cards": [AppliedGiftCard],
       "applied_reward_points": RewardPointsAmount,
       "applied_store_credit": AppliedStoreCredit,
+      "available_free_gifts": [AvailableFreeGift],
       "available_gift_wrappings": [GiftWrapping],
       "available_payment_methods": [
         AvailablePaymentMethod
       ],
       "billing_address": BillingCartAddress,
       "custom_attributes": [CustomAttribute],
-      "email": "xyz789",
+      "email": "abc123",
       "gift_message": GiftMessage,
-      "gift_receipt_included": false,
+      "gift_receipt_included": true,
       "gift_wrapping": GiftWrapping,
+      "has_available_free_gifts": false,
       "id": 4,
       "is_virtual": false,
       "itemsV2": CartItems,
@@ -1426,7 +1462,7 @@ query customerCart {
       "rules": [CartRuleStorefront],
       "selected_payment_method": SelectedPaymentMethod,
       "shipping_addresses": [ShippingCartAddress],
-      "total_quantity": 123.45
+      "total_quantity": 987.65
     }
   }
 }
@@ -1438,7 +1474,7 @@ query customerCart {
 
 Return a list of downloadable products the customer has purchased.
 
-**Response:** [`CustomerDownloadableProducts`](#customerdownloadableproducts)
+**Response:** [`CustomerDownloadableProducts`](/reference/graphql/saas/types-c-e.md#customerdownloadableproducts)
 
 #### Example
 
@@ -1472,7 +1508,7 @@ query customerDownloadableProducts {
 
 Provides Customer Group assigned to the Customer or Guest.
 
-**Response:** [`CustomerGroupStorefront!`](#customergroupstorefront)
+**Response:** [`CustomerGroupStorefront!`](/reference/graphql/saas/types-c-e.md#customergroupstorefront)
 
 #### Example
 
@@ -1489,7 +1525,7 @@ query customerGroup {
 ##### Response
 
 ```json
-{"data": {"customerGroup": {"uid": "4"}}}
+{"data": {"customerGroup": {"uid": 4}}}
 ```
 
 <HorizontalLine />
@@ -1498,7 +1534,7 @@ query customerGroup {
 
 Return a list of customer payment tokens stored in the vault.
 
-**Response:** [`CustomerPaymentTokens`](#customerpaymenttokens)
+**Response:** [`CustomerPaymentTokens`](/reference/graphql/saas/types-c-e.md#customerpaymenttokens)
 
 #### Example
 
@@ -1530,13 +1566,13 @@ query customerPaymentTokens {
 
 Customer segments associated with the current customer or guest/visitor.
 
-**Response:** [`[CustomerSegmentStorefront]`](#customersegmentstorefront)
+**Response:** [`[CustomerSegmentStorefront]`](/reference/graphql/saas/types-c-e.md#customersegmentstorefront)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `cartId` - [`String!`](#string) | The unique ID of the cart to query. |
+| `cartId` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The unique ID of the cart to query. |
 
 #### Example
 
@@ -1553,7 +1589,7 @@ query customerSegments($cartId: String!) {
 ##### Variables
 
 ```json
-{"cartId": "xyz789"}
+{"cartId": "abc123"}
 ```
 
 ##### Response
@@ -1572,13 +1608,13 @@ query customerSegments($cartId: String!) {
 
 Retrieves the payment configuration for a given location
 
-**Response:** [`PaymentConfigOutput`](#paymentconfigoutput)
+**Response:** [`PaymentConfigOutput`](/reference/graphql/saas/types-k-p.md#paymentconfigoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `location` - [`PaymentLocation!`](#paymentlocation) | Defines the origin location for that payment request |
+| `location` - [`PaymentLocation!`](/reference/graphql/saas/types-k-p.md#paymentlocation) | Defines the origin location for that payment request |
 
 #### Example
 
@@ -1634,14 +1670,14 @@ query getPaymentConfig($location: PaymentLocation!) {
 
 Retrieves the payment details for the order
 
-**Response:** [`PaymentOrderOutput`](#paymentorderoutput)
+**Response:** [`PaymentOrderOutput`](/reference/graphql/saas/types-k-p.md#paymentorderoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `cartId` - [`String!`](#string) | The customer cart ID |
-| `id` - [`String!`](#string) | PayPal order ID |
+| `cartId` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The customer cart ID |
+| `id` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | PayPal order ID |
 
 #### Example
 
@@ -1670,7 +1706,7 @@ query getPaymentOrder(
 
 ```json
 {
-  "cartId": "xyz789",
+  "cartId": "abc123",
   "id": "abc123"
 }
 ```
@@ -1681,8 +1717,8 @@ query getPaymentOrder(
 {
   "data": {
     "getPaymentOrder": {
-      "id": "abc123",
-      "mp_order_id": "xyz789",
+      "id": "xyz789",
+      "mp_order_id": "abc123",
       "payment_source_details": PaymentSourceDetails,
       "status": "xyz789"
     }
@@ -1696,13 +1732,13 @@ query getPaymentOrder(
 
 Gets the payment SDK urls and values
 
-**Response:** [`GetPaymentSDKOutput`](#getpaymentsdkoutput)
+**Response:** [`GetPaymentSDKOutput`](/reference/graphql/saas/types-f-i.md#getpaymentsdkoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `location` - [`PaymentLocation!`](#paymentlocation) | Defines the origin location for that payment request |
+| `location` - [`PaymentLocation!`](/reference/graphql/saas/types-k-p.md#paymentlocation) | Defines the origin location for that payment request |
 
 #### Example
 
@@ -1740,7 +1776,7 @@ query getPaymentSDK($location: PaymentLocation!) {
 
 Retrieves the vault configuration
 
-**Response:** [`VaultConfigOutput`](#vaultconfigoutput)
+**Response:** [`VaultConfigOutput`](/reference/graphql/saas/types-t-z.md#vaultconfigoutput)
 
 #### Example
 
@@ -1774,13 +1810,13 @@ query getVaultConfig {
 
 Return details about a specific gift card.
 
-**Response:** [`GiftCardAccount`](#giftcardaccount)
+**Response:** [`GiftCardAccount`](/reference/graphql/saas/types-f-i.md#giftcardaccount)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`GiftCardAccountInput!`](#giftcardaccountinput) | An input object that specifies the gift card code. |
+| `input` - [`GiftCardAccountInput!`](/reference/graphql/saas/types-f-i.md#giftcardaccountinput) | An input object that specifies the gift card code. |
 
 #### Example
 
@@ -1824,13 +1860,13 @@ query giftCardAccount($input: GiftCardAccountInput!) {
 
 Return the specified gift registry. Some details will not be available to guests.
 
-**Response:** [`GiftRegistry`](#giftregistry)
+**Response:** [`GiftRegistry`](/reference/graphql/saas/types-f-i.md#giftregistry)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `giftRegistryUid` - [`ID!`](#id) | The unique ID of the registry to search for. |
+| `giftRegistryUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the registry to search for. |
 
 #### Example
 
@@ -1881,10 +1917,10 @@ query giftRegistry($giftRegistryUid: ID!) {
       "dynamic_attributes": [
         GiftRegistryDynamicAttribute
       ],
-      "event_name": "xyz789",
+      "event_name": "abc123",
       "items": [GiftRegistryItemInterface],
       "message": "xyz789",
-      "owner_name": "abc123",
+      "owner_name": "xyz789",
       "privacy_settings": "PRIVATE",
       "registrants": [GiftRegistryRegistrant],
       "shipping_address": CustomerAddress,
@@ -1902,13 +1938,13 @@ query giftRegistry($giftRegistryUid: ID!) {
 
 Search for gift registries by specifying a registrant email address.
 
-**Response:** [`[GiftRegistrySearchResult]`](#giftregistrysearchresult)
+**Response:** [`[GiftRegistrySearchResult]`](/reference/graphql/saas/types-f-i.md#giftregistrysearchresult)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `email` - [`String!`](#string) | The registrant's email. |
+| `email` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The registrant's email. |
 
 #### Example
 
@@ -1941,10 +1977,10 @@ query giftRegistryEmailSearch($email: String!) {
     "giftRegistryEmailSearch": [
       {
         "event_date": "xyz789",
-        "event_title": "abc123",
-        "gift_registry_uid": "4",
+        "event_title": "xyz789",
+        "gift_registry_uid": 4,
         "location": "abc123",
-        "name": "abc123",
+        "name": "xyz789",
         "type": "abc123"
       }
     ]
@@ -1958,13 +1994,13 @@ query giftRegistryEmailSearch($email: String!) {
 
 Search for gift registries by specifying a registry URL key.
 
-**Response:** [`[GiftRegistrySearchResult]`](#giftregistrysearchresult)
+**Response:** [`[GiftRegistrySearchResult]`](/reference/graphql/saas/types-f-i.md#giftregistrysearchresult)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `giftRegistryUid` - [`ID!`](#id) | The unique ID of the gift registry. |
+| `giftRegistryUid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The unique ID of the gift registry. |
 
 #### Example
 
@@ -1997,11 +2033,11 @@ query giftRegistryIdSearch($giftRegistryUid: ID!) {
     "giftRegistryIdSearch": [
       {
         "event_date": "xyz789",
-        "event_title": "abc123",
+        "event_title": "xyz789",
         "gift_registry_uid": 4,
         "location": "abc123",
-        "name": "abc123",
-        "type": "xyz789"
+        "name": "xyz789",
+        "type": "abc123"
       }
     ]
   }
@@ -2014,15 +2050,15 @@ query giftRegistryIdSearch($giftRegistryUid: ID!) {
 
 Search for gift registries by specifying the registrant name and registry type ID.
 
-**Response:** [`[GiftRegistrySearchResult]`](#giftregistrysearchresult)
+**Response:** [`[GiftRegistrySearchResult]`](/reference/graphql/saas/types-f-i.md#giftregistrysearchresult)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `firstName` - [`String!`](#string) | The first name of the registrant. |
-| `lastName` - [`String!`](#string) | The last name of the registrant. |
-| `giftRegistryTypeUid` - [`ID`](#id) | The type UID of the registry. |
+| `firstName` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The first name of the registrant. |
+| `lastName` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The last name of the registrant. |
+| `giftRegistryTypeUid` - [`ID`](/reference/graphql/saas/types-f-i.md#id) | The type UID of the registry. |
 
 #### Example
 
@@ -2055,7 +2091,7 @@ query giftRegistryTypeSearch(
 {
   "firstName": "abc123",
   "lastName": "xyz789",
-  "giftRegistryTypeUid": "4"
+  "giftRegistryTypeUid": 4
 }
 ```
 
@@ -2067,11 +2103,11 @@ query giftRegistryTypeSearch(
     "giftRegistryTypeSearch": [
       {
         "event_date": "abc123",
-        "event_title": "xyz789",
+        "event_title": "abc123",
         "gift_registry_uid": 4,
         "location": "xyz789",
-        "name": "xyz789",
-        "type": "abc123"
+        "name": "abc123",
+        "type": "xyz789"
       }
     ]
   }
@@ -2084,7 +2120,7 @@ query giftRegistryTypeSearch(
 
 Get a list of available gift registry types.
 
-**Response:** [`[GiftRegistryType]`](#giftregistrytype)
+**Response:** [`[GiftRegistryType]`](/reference/graphql/saas/types-f-i.md#giftregistrytype)
 
 #### Example
 
@@ -2126,13 +2162,13 @@ query giftRegistryTypes {
 
 Retrieve guest order details based on number, email and billing last name.
 
-**Response:** [`CustomerOrder!`](#customerorder)
+**Response:** [`CustomerOrder!`](/reference/graphql/saas/types-c-e.md#customerorder)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`GuestOrderInformationInput!`](#guestorderinformationinput) |  |
+| `input` - [`GuestOrderInformationInput!`](/reference/graphql/saas/types-f-i.md#guestorderinformationinput) |  |
 
 #### Example
 
@@ -2230,22 +2266,22 @@ query guestOrder($input: GuestOrderInformationInput!) {
       "applied_gift_cards": [ApplyGiftCardToOrder],
       "available_actions": ["REORDER"],
       "billing_address": OrderAddress,
-      "carrier": "xyz789",
+      "carrier": "abc123",
       "comments": [SalesCommentItem],
       "credit_memos": [CreditMemo],
       "custom_attributes": [CustomAttribute],
       "customer_info": OrderCustomerInfo,
-      "email": "abc123",
+      "email": "xyz789",
       "gift_message": GiftMessage,
-      "gift_receipt_included": true,
+      "gift_receipt_included": false,
       "gift_wrapping": GiftWrapping,
-      "id": 4,
+      "id": "4",
       "invoices": [Invoice],
       "is_virtual": true,
       "items": [OrderItemInterface],
       "items_eligible_for_return": [OrderItemInterface],
       "negotiable_quote": NegotiableQuote,
-      "number": "abc123",
+      "number": "xyz789",
       "order_date": "xyz789",
       "order_status_change_date": "xyz789",
       "payment_methods": [OrderPaymentMethod],
@@ -2253,9 +2289,9 @@ query guestOrder($input: GuestOrderInformationInput!) {
       "returns": Returns,
       "shipments": [OrderShipment],
       "shipping_address": OrderAddress,
-      "shipping_method": "abc123",
+      "shipping_method": "xyz789",
       "status": "xyz789",
-      "token": "abc123",
+      "token": "xyz789",
       "total": OrderTotal
     }
   }
@@ -2268,13 +2304,13 @@ query guestOrder($input: GuestOrderInformationInput!) {
 
 Retrieve guest order details based on token.
 
-**Response:** [`CustomerOrder!`](#customerorder)
+**Response:** [`CustomerOrder!`](/reference/graphql/saas/types-c-e.md#customerorder)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`OrderTokenInput!`](#ordertokeninput) |  |
+| `input` - [`OrderTokenInput!`](/reference/graphql/saas/types-k-p.md#ordertokeninput) |  |
 
 #### Example
 
@@ -2372,7 +2408,7 @@ query guestOrderByToken($input: OrderTokenInput!) {
       "applied_gift_cards": [ApplyGiftCardToOrder],
       "available_actions": ["REORDER"],
       "billing_address": OrderAddress,
-      "carrier": "xyz789",
+      "carrier": "abc123",
       "comments": [SalesCommentItem],
       "credit_memos": [CreditMemo],
       "custom_attributes": [CustomAttribute],
@@ -2388,15 +2424,15 @@ query guestOrderByToken($input: OrderTokenInput!) {
       "items_eligible_for_return": [OrderItemInterface],
       "negotiable_quote": NegotiableQuote,
       "number": "abc123",
-      "order_date": "xyz789",
+      "order_date": "abc123",
       "order_status_change_date": "abc123",
       "payment_methods": [OrderPaymentMethod],
       "printed_card_included": true,
       "returns": Returns,
       "shipments": [OrderShipment],
       "shipping_address": OrderAddress,
-      "shipping_method": "xyz789",
-      "status": "abc123",
+      "shipping_method": "abc123",
+      "status": "xyz789",
       "token": "abc123",
       "total": OrderTotal
     }
@@ -2410,13 +2446,13 @@ query guestOrderByToken($input: OrderTokenInput!) {
 
 Check whether the specified email can be used to register a company admin.
 
-**Response:** [`IsCompanyAdminEmailAvailableOutput`](#iscompanyadminemailavailableoutput)
+**Response:** [`IsCompanyAdminEmailAvailableOutput`](/reference/graphql/saas/types-f-i.md#iscompanyadminemailavailableoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `email` - [`String!`](#string) |  |
+| `email` - [`String!`](/reference/graphql/saas/types-q-s.md#string) |  |
 
 #### Example
 
@@ -2433,7 +2469,7 @@ query isCompanyAdminEmailAvailable($email: String!) {
 ##### Variables
 
 ```json
-{"email": "abc123"}
+{"email": "xyz789"}
 ```
 
 ##### Response
@@ -2448,13 +2484,13 @@ query isCompanyAdminEmailAvailable($email: String!) {
 
 Check whether the specified email can be used to register a new company.
 
-**Response:** [`IsCompanyEmailAvailableOutput`](#iscompanyemailavailableoutput)
+**Response:** [`IsCompanyEmailAvailableOutput`](/reference/graphql/saas/types-f-i.md#iscompanyemailavailableoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `email` - [`String!`](#string) |  |
+| `email` - [`String!`](/reference/graphql/saas/types-q-s.md#string) |  |
 
 #### Example
 
@@ -2486,13 +2522,13 @@ query isCompanyEmailAvailable($email: String!) {
 
 Check whether the specified role name is valid for the company.
 
-**Response:** [`IsCompanyRoleNameAvailableOutput`](#iscompanyrolenameavailableoutput)
+**Response:** [`IsCompanyRoleNameAvailableOutput`](/reference/graphql/saas/types-f-i.md#iscompanyrolenameavailableoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `name` - [`String!`](#string) |  |
+| `name` - [`String!`](/reference/graphql/saas/types-q-s.md#string) |  |
 
 #### Example
 
@@ -2509,13 +2545,13 @@ query isCompanyRoleNameAvailable($name: String!) {
 ##### Variables
 
 ```json
-{"name": "abc123"}
+{"name": "xyz789"}
 ```
 
 ##### Response
 
 ```json
-{"data": {"isCompanyRoleNameAvailable": {"is_role_name_available": false}}}
+{"data": {"isCompanyRoleNameAvailable": {"is_role_name_available": true}}}
 ```
 
 <HorizontalLine />
@@ -2524,13 +2560,13 @@ query isCompanyRoleNameAvailable($name: String!) {
 
 Check whether the specified email can be used to register a company user.
 
-**Response:** [`IsCompanyUserEmailAvailableOutput`](#iscompanyuseremailavailableoutput)
+**Response:** [`IsCompanyUserEmailAvailableOutput`](/reference/graphql/saas/types-f-i.md#iscompanyuseremailavailableoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `email` - [`String!`](#string) |  |
+| `email` - [`String!`](/reference/graphql/saas/types-q-s.md#string) |  |
 
 #### Example
 
@@ -2553,7 +2589,7 @@ query isCompanyUserEmailAvailable($email: String!) {
 ##### Response
 
 ```json
-{"data": {"isCompanyUserEmailAvailable": {"is_email_available": true}}}
+{"data": {"isCompanyUserEmailAvailable": {"is_email_available": false}}}
 ```
 
 <HorizontalLine />
@@ -2562,13 +2598,13 @@ query isCompanyUserEmailAvailable($email: String!) {
 
 Check whether the specified email has already been used to create a customer account.
 
-**Response:** [`IsEmailAvailableOutput`](#isemailavailableoutput)
+**Response:** [`IsEmailAvailableOutput`](/reference/graphql/saas/types-f-i.md#isemailavailableoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `email` - [`String!`](#string) | The email address to check. |
+| `email` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The email address to check. |
 
 #### Example
 
@@ -2600,13 +2636,13 @@ query isEmailAvailable($email: String!) {
 
 Check if logged-in customer is subscribed to price alert for a product.
 
-**Response:** [`IsProductAlertSubscriptionResult!`](#isproductalertsubscriptionresult)
+**Response:** [`IsProductAlertSubscriptionResult!`](/reference/graphql/saas/types-f-i.md#isproductalertsubscriptionresult)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`ProductAlertPriceInput!`](#productalertpriceinput) |  |
+| `input` - [`ProductAlertPriceInput!`](/reference/graphql/saas/types-k-p.md#productalertpriceinput) |  |
 
 #### Example
 
@@ -2646,13 +2682,13 @@ query isSubscribedProductAlertPrice($input: ProductAlertPriceInput!) {
 
 Check if logged-in customer is subscribed to stock alert for a product.
 
-**Response:** [`IsProductAlertSubscriptionResult!`](#isproductalertsubscriptionresult)
+**Response:** [`IsProductAlertSubscriptionResult!`](/reference/graphql/saas/types-f-i.md#isproductalertsubscriptionresult)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `input` - [`ProductAlertStockInput!`](#productalertstockinput) |  |
+| `input` - [`ProductAlertStockInput!`](/reference/graphql/saas/types-k-p.md#productalertstockinput) |  |
 
 #### Example
 
@@ -2692,13 +2728,13 @@ query isSubscribedProductAlertStock($input: ProductAlertStockInput!) {
 
 Retrieve the specified negotiable quote.
 
-**Response:** [`NegotiableQuote`](#negotiablequote)
+**Response:** [`NegotiableQuote`](/reference/graphql/saas/types-k-p.md#negotiablequote)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `uid` - [`ID!`](#id) |  |
+| `uid` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) |  |
 
 #### Example
 
@@ -2759,7 +2795,7 @@ query negotiableQuote($uid: ID!) {
 ##### Variables
 
 ```json
-{"uid": 4}
+{"uid": "4"}
 ```
 
 ##### Response
@@ -2777,14 +2813,14 @@ query negotiableQuote($uid: ID!) {
       "created_at": "xyz789",
       "custom_attributes": [CustomAttribute],
       "email": "abc123",
-      "expiration_date": "abc123",
+      "expiration_date": "xyz789",
       "history": [NegotiableQuoteHistoryEntry],
-      "is_virtual": false,
+      "is_virtual": true,
       "items": [CartItemInterface],
       "name": "abc123",
       "order": CustomerOrder,
       "prices": CartPrices,
-      "sales_rep_name": "xyz789",
+      "sales_rep_name": "abc123",
       "selected_payment_method": SelectedPaymentMethod,
       "shipping_addresses": [
         NegotiableQuoteShippingAddress
@@ -2793,7 +2829,7 @@ query negotiableQuote($uid: ID!) {
       "template_id": 4,
       "template_name": "xyz789",
       "total_quantity": 987.65,
-      "uid": 4,
+      "uid": "4",
       "updated_at": "xyz789"
     }
   }
@@ -2806,13 +2842,13 @@ query negotiableQuote($uid: ID!) {
 
 Retrieve the specified negotiable quote template.
 
-**Response:** [`NegotiableQuoteTemplate`](#negotiablequotetemplate)
+**Response:** [`NegotiableQuoteTemplate`](/reference/graphql/saas/types-k-p.md#negotiablequotetemplate)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `templateId` - [`ID!`](#id) |  |
+| `templateId` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) |  |
 
 #### Example
 
@@ -2868,7 +2904,7 @@ query negotiableQuoteTemplate($templateId: ID!) {
 ##### Variables
 
 ```json
-{"templateId": 4}
+{"templateId": "4"}
 ```
 
 ##### Response
@@ -2879,28 +2915,28 @@ query negotiableQuoteTemplate($templateId: ID!) {
     "negotiableQuoteTemplate": {
       "buyer": NegotiableQuoteUser,
       "comments": [NegotiableQuoteComment],
-      "created_at": "xyz789",
+      "created_at": "abc123",
       "expiration_date": "abc123",
       "history": [NegotiableQuoteHistoryEntry],
       "historyV2": [NegotiableQuoteTemplateHistoryEntry],
-      "is_min_max_qty_used": false,
+      "is_min_max_qty_used": true,
       "is_virtual": false,
       "items": [CartItemInterface],
       "max_order_commitment": 987,
-      "min_order_commitment": 987,
+      "min_order_commitment": 123,
       "name": "abc123",
       "notifications": [QuoteTemplateNotificationMessage],
       "prices": CartPrices,
       "reference_document_links": [
         NegotiableQuoteReferenceDocumentLink
       ],
-      "sales_rep_name": "abc123",
+      "sales_rep_name": "xyz789",
       "shipping_addresses": [
         NegotiableQuoteShippingAddress
       ],
       "status": "xyz789",
       "template_id": "4",
-      "total_quantity": 987.65,
+      "total_quantity": 123.45,
       "uid": 4,
       "updated_at": "xyz789"
     }
@@ -2914,16 +2950,16 @@ query negotiableQuoteTemplate($templateId: ID!) {
 
 Return a list of negotiable quote templates that can be viewed by the logged-in customer.
 
-**Response:** [`NegotiableQuoteTemplatesOutput`](#negotiablequotetemplatesoutput)
+**Response:** [`NegotiableQuoteTemplatesOutput`](/reference/graphql/saas/types-k-p.md#negotiablequotetemplatesoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `filter` - [`NegotiableQuoteTemplateFilterInput`](#negotiablequotetemplatefilterinput) | The filter to use to determine which negotiable quote templates to return. |
-| `pageSize` - [`Int`](#int) | The maximum number of results to return at once. The default value is 20. Default: `20` |
-| `currentPage` - [`Int`](#int) | The page of results to return. The default value is 1. Default: `1` |
-| `sort` - [`NegotiableQuoteTemplateSortInput`](#negotiablequotetemplatesortinput) | The field to use for sorting results. |
+| `filter` - [`NegotiableQuoteTemplateFilterInput`](/reference/graphql/saas/types-k-p.md#negotiablequotetemplatefilterinput) | The filter to use to determine which negotiable quote templates to return. |
+| `pageSize` - [`Int`](/reference/graphql/saas/types-f-i.md#int) | The maximum number of results to return at once. The default value is 20. Default: `20` |
+| `currentPage` - [`Int`](/reference/graphql/saas/types-f-i.md#int) | The page of results to return. The default value is 1. Default: `1` |
+| `sort` - [`NegotiableQuoteTemplateSortInput`](/reference/graphql/saas/types-k-p.md#negotiablequotetemplatesortinput) | The field to use for sorting results. |
 
 #### Example
 
@@ -2976,7 +3012,7 @@ query negotiableQuoteTemplates(
       "items": [NegotiableQuoteTemplateGridItem],
       "page_info": SearchResultPageInfo,
       "sort_fields": SortFields,
-      "total_count": 123
+      "total_count": 987
     }
   }
 }
@@ -2988,16 +3024,16 @@ query negotiableQuoteTemplates(
 
 Return a list of negotiable quotes that can be viewed by the logged-in customer.
 
-**Response:** [`NegotiableQuotesOutput`](#negotiablequotesoutput)
+**Response:** [`NegotiableQuotesOutput`](/reference/graphql/saas/types-k-p.md#negotiablequotesoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `filter` - [`NegotiableQuoteFilterInput`](#negotiablequotefilterinput) | The filter to use to determine which negotiable quotes to return. |
-| `pageSize` - [`Int`](#int) | The maximum number of results to return at once. The default value is 20. Default: `20` |
-| `currentPage` - [`Int`](#int) | The page of results to return. The default value is 1. Default: `1` |
-| `sort` - [`NegotiableQuoteSortInput`](#negotiablequotesortinput) | The field to use for sorting results. |
+| `filter` - [`NegotiableQuoteFilterInput`](/reference/graphql/saas/types-k-p.md#negotiablequotefilterinput) | The filter to use to determine which negotiable quotes to return. |
+| `pageSize` - [`Int`](/reference/graphql/saas/types-f-i.md#int) | The maximum number of results to return at once. The default value is 20. Default: `20` |
+| `currentPage` - [`Int`](/reference/graphql/saas/types-f-i.md#int) | The page of results to return. The default value is 1. Default: `1` |
+| `sort` - [`NegotiableQuoteSortInput`](/reference/graphql/saas/types-k-p.md#negotiablequotesortinput) | The field to use for sorting results. |
 
 #### Example
 
@@ -3050,7 +3086,51 @@ query negotiableQuotes(
       "items": [NegotiableQuote],
       "page_info": SearchResultPageInfo,
       "sort_fields": SortFields,
-      "total_count": 123
+      "total_count": 987
+    }
+  }
+}
+```
+
+<HorizontalLine />
+
+### payByLinkCart
+
+Resolve a Pay By Link token to the masked id of the guest cart to resume checkout against.
+
+**Response:** [`PayByLinkCartOutput`](/reference/graphql/saas/types-k-p.md#paybylinkcartoutput)
+
+#### Arguments
+
+| Name | Description |
+|------|-------------|
+| `token` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The Pay By Link token from the emailed link. |
+
+#### Example
+
+##### Query
+
+```graphql
+query payByLinkCart($token: String!) {
+  payByLinkCart(token: $token) {
+    masked_cart_id
+  }
+}
+```
+
+##### Variables
+
+```json
+{"token": "xyz789"}
+```
+
+##### Response
+
+```json
+{
+  "data": {
+    "payByLinkCart": {
+      "masked_cart_id": "xyz789"
     }
   }
 }
@@ -3062,18 +3142,18 @@ query negotiableQuotes(
 
 The pickup locations query searches for locations that match the search request requirements.
 
-**Response:** [`PickupLocations`](#pickuplocations)
+**Response:** [`PickupLocations`](/reference/graphql/saas/types-k-p.md#pickuplocations)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `area` - [`AreaInput`](#areainput) | Perform search by location using radius and search term. |
-| `filters` - [`PickupLocationFilterInput`](#pickuplocationfilterinput) | Apply filters by attributes. |
-| `sort` - [`PickupLocationSortInput`](#pickuplocationsortinput) | Specifies which attribute to sort on, and whether to return the results in ascending or descending order. |
-| `pageSize` - [`Int`](#int) | The maximum number of pickup locations to return at once. The attribute is optional. Default: `20` |
-| `currentPage` - [`Int`](#int) | Specifies which page of results to return. The default value is 1. Default: `1` |
-| `productsInfo` - [`[ProductInfoInput]`](#productinfoinput) | Information about products which should be delivered. |
+| `area` - [`AreaInput`](/reference/graphql/saas/types-a-b.md#areainput) | Perform search by location using radius and search term. |
+| `filters` - [`PickupLocationFilterInput`](/reference/graphql/saas/types-k-p.md#pickuplocationfilterinput) | Apply filters by attributes. |
+| `sort` - [`PickupLocationSortInput`](/reference/graphql/saas/types-k-p.md#pickuplocationsortinput) | Specifies which attribute to sort on, and whether to return the results in ascending or descending order. |
+| `pageSize` - [`Int`](/reference/graphql/saas/types-f-i.md#int) | The maximum number of pickup locations to return at once. The attribute is optional. Default: `20` |
+| `currentPage` - [`Int`](/reference/graphql/saas/types-f-i.md#int) | Specifies which page of results to return. The default value is 1. Default: `1` |
+| `productsInfo` - [`[ProductInfoInput]`](/reference/graphql/saas/types-k-p.md#productinfoinput) | Information about products which should be delivered. |
 
 #### Example
 
@@ -3136,22 +3216,56 @@ query pickupLocations(
 
 <HorizontalLine />
 
+### productReviewRatingsMetadata
+
+Return the active ratings attributes and the values each rating can have.
+
+**Response:** [`ProductReviewRatingsMetadata!`](/reference/graphql/saas/types-k-p.md#productreviewratingsmetadata)
+
+#### Example
+
+##### Query
+
+```graphql
+query productReviewRatingsMetadata {
+  productReviewRatingsMetadata {
+    items {
+      ...ProductReviewRatingMetadataFragment
+    }
+  }
+}
+```
+
+##### Response
+
+```json
+{
+  "data": {
+    "productReviewRatingsMetadata": {
+      "items": [ProductReviewRatingMetadata]
+    }
+  }
+}
+```
+
+<HorizontalLine />
+
 ### productSearch
 
 Search products using Live Search
 
-**Response:** [`ProductSearchResponse!`](#productsearchresponse)
+**Response:** [`ProductSearchResponse!`](/reference/graphql/saas/types-k-p.md#productsearchresponse)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `context` - [`QueryContextInput`](#querycontextinput) | The query context |
-| `current_page` - [`Int`](#int) | Specifies which page of results to return. The default value is 1 Default: `1` |
-| `filter` - [`[SearchClauseInput!]`](#searchclauseinput) | Identifies product attributes and conditions to filter on |
-| `page_size` - [`Int`](#int) | The maximum number of results to return at once Default: `20` |
-| `phrase` - [`String!`](#string) | Phrase to search for in product catalog |
-| `sort` - [`[ProductSearchSortInput!]`](#productsearchsortinput) | Attributes and direction to sort on |
+| `context` - [`QueryContextInput`](/reference/graphql/saas/types-q-s.md#querycontextinput) | The query context |
+| `current_page` - [`Int`](/reference/graphql/saas/types-f-i.md#int) | Specifies which page of results to return. The default value is 1 Default: `1` |
+| `filter` - [`[SearchClauseInput!]`](/reference/graphql/saas/types-q-s.md#searchclauseinput) | Identifies product attributes and conditions to filter on |
+| `page_size` - [`Int`](/reference/graphql/saas/types-f-i.md#int) | The maximum number of results to return at once Default: `20` |
+| `phrase` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | Phrase to search for in product catalog |
+| `sort` - [`[ProductSearchSortInput!]`](/reference/graphql/saas/types-k-p.md#productsearchsortinput) | Attributes and direction to sort on |
 
 #### Example
 
@@ -3201,7 +3315,7 @@ query productSearch(
   "current_page": 1,
   "filter": [SearchClauseInput],
   "page_size": 20,
-  "phrase": "xyz789",
+  "phrase": "abc123",
   "sort": [ProductSearchSortInput]
 }
 ```
@@ -3215,9 +3329,9 @@ query productSearch(
       "facets": [Aggregation],
       "items": [ProductSearchItem],
       "page_info": SearchResultPageInfo,
-      "related_terms": ["abc123"],
+      "related_terms": ["xyz789"],
       "suggestions": ["abc123"],
-      "total_count": 987,
+      "total_count": 123,
       "warnings": [ProductSearchWarning]
     }
   }
@@ -3228,15 +3342,15 @@ query productSearch(
 
 ### products
 
-Search for products that match the specified SKU values. In Adobe Commerce as a Cloud Service, this query replaces the `products` query defined in the Commerce Foundation.
+Search for products that match the specified SKU values. Available only for deployments using the Catalog or Live Search service with Adobe Commerce.
 
-**Response:** [`[ProductView]`](#productview)
+**Response:** [`[ProductView]`](/reference/graphql/saas/types-k-p.md#productview)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `skus` - [`[String]`](#string) | List of SKUs to search for. For example, `123`, `456` or `789`. |
+| `skus` - [`[String]`](/reference/graphql/saas/types-q-s.md#string) | List of SKUs to search for. For example, `123`, `456` or `789`. |
 
 #### Example
 
@@ -3270,6 +3384,9 @@ query products($skus: [String]) {
     }
     sku
     externalId
+    externalIds {
+      ...ExternalIdFragment
+    }
     url
     urlKey
     links {
@@ -3284,7 +3401,7 @@ query products($skus: [String]) {
 ##### Variables
 
 ```json
-{"skus": ["xyz789"]}
+{"skus": ["abc123"]}
 ```
 
 ##### Response
@@ -3295,24 +3412,25 @@ query products($skus: [String]) {
     "products": [
       {
         "addToCartAllowed": false,
-        "inStock": true,
-        "lowStock": true,
+        "inStock": false,
+        "lowStock": false,
         "attributes": [ProductViewAttribute],
         "description": "abc123",
         "id": 4,
         "images": [ProductViewImage],
         "videos": [ProductViewVideo],
         "lastModifiedAt": "2007-12-03T10:15:30Z",
-        "metaDescription": "abc123",
-        "metaKeyword": "xyz789",
-        "metaTitle": "abc123",
-        "name": "abc123",
-        "shortDescription": "xyz789",
+        "metaDescription": "xyz789",
+        "metaKeyword": "abc123",
+        "metaTitle": "xyz789",
+        "name": "xyz789",
+        "shortDescription": "abc123",
         "inputOptions": [ProductViewInputOption],
-        "sku": "xyz789",
+        "sku": "abc123",
         "externalId": "xyz789",
-        "url": "xyz789",
-        "urlKey": "abc123",
+        "externalIds": [ExternalId],
+        "url": "abc123",
+        "urlKey": "xyz789",
         "links": [ProductViewLink],
         "queryType": "abc123",
         "visibility": "abc123"
@@ -3326,13 +3444,13 @@ query products($skus: [String]) {
 
 ### recaptchaFormConfig
 
-**Response:** [`ReCaptchaConfigOutput`](#recaptchaconfigoutput)
+**Response:** [`ReCaptchaConfigOutput`](/reference/graphql/saas/types-q-s.md#recaptchaconfigoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `formType` - [`ReCaptchaFormEnum!`](#recaptchaformenum) |  |
+| `formType` - [`ReCaptchaFormEnum!`](/reference/graphql/saas/types-q-s.md#recaptchaformenum) |  |
 
 #### Example
 
@@ -3374,13 +3492,13 @@ query recaptchaFormConfig($formType: ReCaptchaFormEnum!) {
 
 Returns reCAPTCHA configuration details for multiple form types in a single request.
 
-**Response:** [`[ReCaptchaFormConfigItem]`](#recaptchaformconfigitem)
+**Response:** [`[ReCaptchaFormConfigItem]`](/reference/graphql/saas/types-q-s.md#recaptchaformconfigitem)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `formTypes` - [`[ReCaptchaFormEnum!]!`](#recaptchaformenum) |  |
+| `formTypes` - [`[ReCaptchaFormEnum!]!`](/reference/graphql/saas/types-q-s.md#recaptchaformenum) |  |
 
 #### Example
 
@@ -3426,7 +3544,7 @@ query recaptchaFormConfigs($formTypes: [ReCaptchaFormEnum!]!) {
 
 Returns details about Google reCAPTCHA V3-Invisible configuration.
 
-**Response:** [`ReCaptchaConfigurationV3`](#recaptchaconfigurationv3)
+**Response:** [`ReCaptchaConfigurationV3`](/reference/graphql/saas/types-q-s.md#recaptchaconfigurationv3)
 
 #### Example
 
@@ -3454,13 +3572,13 @@ query recaptchaV3Config {
   "data": {
     "recaptchaV3Config": {
       "badge_position": "abc123",
-      "failure_message": "xyz789",
+      "failure_message": "abc123",
       "forms": ["PLACE_ORDER"],
       "is_enabled": false,
-      "language_code": "abc123",
-      "minimum_score": 123.45,
-      "theme": "xyz789",
-      "website_key": "xyz789"
+      "language_code": "xyz789",
+      "minimum_score": 987.65,
+      "theme": "abc123",
+      "website_key": "abc123"
     }
   }
 }
@@ -3472,20 +3590,20 @@ query recaptchaV3Config {
 
 Get Recommendations
 
-**Response:** [`Recommendations`](#recommendations)
+**Response:** [`Recommendations`](/reference/graphql/saas/types-q-s.md#recommendations)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `cartSkus` - [`[String]`](#string) | SKUs of products in the cart |
-| `category` - [`String`](#string) | Category currently being viewed |
-| `currentSku` - [`String`](#string) | SKU of the product currently being viewed on PDP |
-| `currentProduct` - [`CurrentProductInput`](#currentproductinput) | Current product context from PDP (SKU, price, category, etc.) |
-| `pageType` - [`PageType`](#pagetype) | Type of page on which recommendations are requested |
-| `userPurchaseHistory` - [`[PurchaseHistory]`](#purchasehistory) | User purchase history with timestamp |
-| `userViewHistory` - [`[ViewHistory]`](#viewhistory) | User view history with timestamp |
-| `config` - [`UnitConfigInput`](#unitconfiginput) | Optional unit configuration |
+| `cartSkus` - [`[String]`](/reference/graphql/saas/types-q-s.md#string) | SKUs of products in the cart |
+| `category` - [`String`](/reference/graphql/saas/types-q-s.md#string) | Category currently being viewed |
+| `currentSku` - [`String`](/reference/graphql/saas/types-q-s.md#string) | SKU of the product currently being viewed on PDP |
+| `currentProduct` - [`CurrentProductInput`](/reference/graphql/saas/types-c-e.md#currentproductinput) | Current product context from PDP (SKU, price, category, etc.) |
+| `pageType` - [`PageType`](/reference/graphql/saas/types-k-p.md#pagetype) | Type of page on which recommendations are requested |
+| `userPurchaseHistory` - [`[PurchaseHistory]`](/reference/graphql/saas/types-k-p.md#purchasehistory) | User purchase history with timestamp |
+| `userViewHistory` - [`[ViewHistory]`](/reference/graphql/saas/types-t-z.md#viewhistory) | User view history with timestamp |
+| `config` - [`UnitConfigInput`](/reference/graphql/saas/types-t-z.md#unitconfiginput) | Optional unit configuration |
 
 #### Example
 
@@ -3550,18 +3668,90 @@ query recommendations(
 
 <HorizontalLine />
 
-### refineProduct
+### recommendationsByUnits
 
-Narrow down the results of a `products` query that was run against a complex product. Specify option IDs and SKUs to refine the product.
-
-**Response:** [`ProductView`](#productview)
+**Response:** [`Recommendations`](/reference/graphql/saas/types-q-s.md#recommendations)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `optionIds` - [`[String!]!`](#string) | List of option IDs to refine the product by. For example, `123`, `456` or `789`. |
-| `sku` - [`String!`](#string) | SKU of the product to refine. For example, `RF903`, `DG90-54` or `789-001`. |
+| `selector` - [`UnitSelector!`](/reference/graphql/saas/types-t-z.md#unitselector) | Selector of preconfigured units |
+| `currentSku` - [`String`](/reference/graphql/saas/types-q-s.md#string) | SKU of the product currently being viewed on PDP |
+| `currentProduct` - [`CurrentProductInput`](/reference/graphql/saas/types-c-e.md#currentproductinput) | Current product context from PDP (SKU, price, category, etc.) |
+| `userPurchaseHistory` - [`[PurchaseHistory]`](/reference/graphql/saas/types-k-p.md#purchasehistory) | User purchase history with timestamp |
+| `userViewHistory` - [`[ViewHistory]`](/reference/graphql/saas/types-t-z.md#viewhistory) | User view history with timestamp |
+| `cartSkus` - [`[String]`](/reference/graphql/saas/types-q-s.md#string) | SKUs of products in the cart |
+
+#### Example
+
+##### Query
+
+```graphql
+query recommendationsByUnits(
+  $selector: UnitSelector!,
+  $currentSku: String,
+  $currentProduct: CurrentProductInput,
+  $userPurchaseHistory: [PurchaseHistory],
+  $userViewHistory: [ViewHistory],
+  $cartSkus: [String]
+) {
+  recommendationsByUnits(
+    selector: $selector,
+    currentSku: $currentSku,
+    currentProduct: $currentProduct,
+    userPurchaseHistory: $userPurchaseHistory,
+    userViewHistory: $userViewHistory,
+    cartSkus: $cartSkus
+  ) {
+    results {
+      ...RecommendationUnitFragment
+    }
+    totalResults
+  }
+}
+```
+
+##### Variables
+
+```json
+{
+  "selector": UnitSelector,
+  "currentSku": "xyz789",
+  "currentProduct": CurrentProductInput,
+  "userPurchaseHistory": [PurchaseHistory],
+  "userViewHistory": [ViewHistory],
+  "cartSkus": ["abc123"]
+}
+```
+
+##### Response
+
+```json
+{
+  "data": {
+    "recommendationsByUnits": {
+      "results": [RecommendationUnit],
+      "totalResults": 987
+    }
+  }
+}
+```
+
+<HorizontalLine />
+
+### refineProduct
+
+Narrow down the results of a `products` query that was run against a complex product. Specify option IDs and SKUs to refine the product.
+
+**Response:** [`ProductView`](/reference/graphql/saas/types-k-p.md#productview)
+
+#### Arguments
+
+| Name | Description |
+|------|-------------|
+| `optionIds` - [`[String!]!`](/reference/graphql/saas/types-q-s.md#string) | List of option IDs to refine the product by. For example, `123`, `456` or `789`. |
+| `sku` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | SKU of the product to refine. For example, `RF903`, `DG90-54` or `789-001`. |
 
 #### Example
 
@@ -3601,6 +3791,9 @@ query refineProduct(
     }
     sku
     externalId
+    externalIds {
+      ...ExternalIdFragment
+    }
     url
     urlKey
     links {
@@ -3627,12 +3820,12 @@ query refineProduct(
 {
   "data": {
     "refineProduct": {
-      "addToCartAllowed": true,
+      "addToCartAllowed": false,
       "inStock": true,
-      "lowStock": false,
+      "lowStock": true,
       "attributes": [ProductViewAttribute],
       "description": "xyz789",
-      "id": "4",
+      "id": 4,
       "images": [ProductViewImage],
       "videos": [ProductViewVideo],
       "lastModifiedAt": "2007-12-03T10:15:30Z",
@@ -3642,12 +3835,13 @@ query refineProduct(
       "name": "xyz789",
       "shortDescription": "xyz789",
       "inputOptions": [ProductViewInputOption],
-      "sku": "xyz789",
+      "sku": "abc123",
       "externalId": "abc123",
+      "externalIds": [ExternalId],
       "url": "xyz789",
-      "urlKey": "xyz789",
+      "urlKey": "abc123",
       "links": [ProductViewLink],
-      "queryType": "xyz789",
+      "queryType": "abc123",
       "visibility": "xyz789"
     }
   }
@@ -3660,13 +3854,13 @@ query refineProduct(
 
 View a shared requisition list when the receiver is logged in and belongs to the same company as the sender.
 
-**Response:** [`SharedRequisitionListOutput`](#sharedrequisitionlistoutput)
+**Response:** [`SharedRequisitionListOutput`](/reference/graphql/saas/types-q-s.md#sharedrequisitionlistoutput)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `token` - [`String!`](#string) | The share token which is extracted from the requisition list share link and acts as an identifier for the requisition list. |
+| `token` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The share token which is extracted from the requisition list share link and acts as an identifier for the requisition list. |
 
 #### Example
 
@@ -3704,11 +3898,75 @@ query sharedRequisitionList($token: String!) {
 
 <HorizontalLine />
 
+### sourceAvailability
+
+Per-source availability for one or more SKUs, scoped to the storefront-visible sources of the current sales channel's stock. Availability is computed identically to the order-placement guard.
+
+**Response:** [`[SkuSourceAvailability]!`](/reference/graphql/saas/types-q-s.md#skusourceavailability)
+
+#### Arguments
+
+| Name | Description |
+|------|-------------|
+| `skus` - [`[String!]!`](/reference/graphql/saas/types-q-s.md#string) | The product SKUs to report availability for. |
+| `source_codes` - [`[String!]`](/reference/graphql/saas/types-q-s.md#string) | Restrict the report to these inventory sources. Only sources flagged storefront-visible are ever reported; a requested source that is not storefront-visible, or not assigned to the current sales channel's stock, is silently omitted. When omitted, every storefront-visible source assigned to the current sales channel's stock is reported. |
+| `only_in_stock` - [`Boolean`](/reference/graphql/saas/types-a-b.md#boolean) | When true, omit sources where the SKU is not salable. |
+
+#### Example
+
+##### Query
+
+```graphql
+query sourceAvailability(
+  $skus: [String!]!,
+  $source_codes: [String!],
+  $only_in_stock: Boolean
+) {
+  sourceAvailability(
+    skus: $skus,
+    source_codes: $source_codes,
+    only_in_stock: $only_in_stock
+  ) {
+    sku
+    sources {
+      ...SourceAvailabilityFragment
+    }
+  }
+}
+```
+
+##### Variables
+
+```json
+{
+  "skus": ["abc123"],
+  "source_codes": ["xyz789"],
+  "only_in_stock": true
+}
+```
+
+##### Response
+
+```json
+{
+  "data": {
+    "sourceAvailability": [
+      {
+        "sku": "abc123",
+        "sources": [SourceAvailability]
+      }
+    ]
+  }
+}
+```
+
+<HorizontalLine />
+
 ### storeConfig
 
 Return details about the store's configuration.
 
-**Response:** [`StoreConfig`](#storeconfig)
+**Response:** [`StoreConfig`](/reference/graphql/saas/types-q-s.md#storeconfig)
 
 #### Example
 
@@ -3721,6 +3979,7 @@ query storeConfig {
     allow_gift_receipt
     allow_gift_wrapping_on_order
     allow_gift_wrapping_on_order_items
+    allow_guests_to_write_product_reviews
     allow_items
     allow_order
     allow_printed_card
@@ -3815,10 +4074,15 @@ query storeConfig {
     orders_invoices_credit_memos_display_shipping_amount
     orders_invoices_credit_memos_display_subtotal
     orders_invoices_credit_memos_display_zero_tax
+    persistent_enabled
+    persistent_options_wishlist
+    persistent_shopping_cart
     printed_card_priceV2 {
       ...MoneyFragment
     }
+    product_alert_allow_stock
     product_fixed_product_tax_display_setting
+    product_reviews_enabled
     product_url_suffix
     quickorder_active
     quote_minimum_amount
@@ -3839,6 +4103,7 @@ query storeConfig {
     secure_base_url
     share_active_segments
     share_applied_cart_rule
+    share_customer_accounts_scope
     shopping_assistance_checkbox_title
     shopping_assistance_checkbox_tooltip
     shopping_assistance_enabled
@@ -3879,149 +4144,156 @@ query storeConfig {
     "storeConfig": {
       "allow_company_registration": false,
       "allow_gift_receipt": "xyz789",
-      "allow_gift_wrapping_on_order": "xyz789",
-      "allow_gift_wrapping_on_order_items": "xyz789",
+      "allow_gift_wrapping_on_order": "abc123",
+      "allow_gift_wrapping_on_order_items": "abc123",
+      "allow_guests_to_write_product_reviews": "xyz789",
       "allow_items": "abc123",
-      "allow_order": "xyz789",
-      "allow_printed_card": "xyz789",
+      "allow_order": "abc123",
+      "allow_printed_card": "abc123",
       "autocomplete_on_storefront": true,
       "base_currency_code": "abc123",
-      "base_link_url": "abc123",
-      "base_media_url": "xyz789",
-      "base_static_url": "abc123",
-      "base_url": "xyz789",
-      "cart_expires_in_days": 987,
-      "cart_gift_wrapping": "abc123",
-      "cart_merge_preference": "abc123",
-      "cart_printed_card": "abc123",
+      "base_link_url": "xyz789",
+      "base_media_url": "abc123",
+      "base_static_url": "xyz789",
+      "base_url": "abc123",
+      "cart_expires_in_days": 123,
+      "cart_gift_wrapping": "xyz789",
+      "cart_merge_preference": "xyz789",
+      "cart_printed_card": "xyz789",
       "cart_summary_display_quantity": 123,
       "catalog_default_sort_by": "abc123",
       "category_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
       "category_url_suffix": "xyz789",
       "check_money_order_enable_for_specific_countries": true,
-      "check_money_order_enabled": true,
+      "check_money_order_enabled": false,
       "check_money_order_make_check_payable_to": "xyz789",
-      "check_money_order_max_order_total": "abc123",
+      "check_money_order_max_order_total": "xyz789",
       "check_money_order_min_order_total": "abc123",
       "check_money_order_new_order_status": "xyz789",
       "check_money_order_payment_from_specific_countries": "xyz789",
-      "check_money_order_send_check_to": "abc123",
+      "check_money_order_send_check_to": "xyz789",
       "check_money_order_sort_order": 987,
       "check_money_order_title": "xyz789",
-      "company_credit_enabled": false,
+      "company_credit_enabled": true,
       "company_enabled": true,
       "configurable_product_image": "ITSELF",
       "configurable_thumbnail_source": "xyz789",
-      "contact_enabled": true,
-      "countries_with_required_region": "abc123",
-      "create_account_confirmation": false,
-      "customer_access_token_lifetime": 123.45,
-      "default_country": "abc123",
-      "default_display_currency_code": "xyz789",
-      "display_product_prices_in_catalog": 123,
+      "contact_enabled": false,
+      "countries_with_required_region": "xyz789",
+      "create_account_confirmation": true,
+      "customer_access_token_lifetime": 987.65,
+      "default_country": "xyz789",
+      "default_display_currency_code": "abc123",
+      "display_product_prices_in_catalog": 987,
       "display_shipping_prices": 987,
-      "display_state_if_optional": false,
-      "enable_multiple_wishlists": "abc123",
+      "display_state_if_optional": true,
+      "enable_multiple_wishlists": "xyz789",
       "fixed_product_taxes_apply_tax_to_fpt": true,
       "fixed_product_taxes_display_prices_in_emails": 987,
-      "fixed_product_taxes_display_prices_in_product_lists": 123,
+      "fixed_product_taxes_display_prices_in_product_lists": 987,
       "fixed_product_taxes_display_prices_in_sales_modules": 987,
-      "fixed_product_taxes_display_prices_on_product_view_page": 123,
-      "fixed_product_taxes_enable": true,
+      "fixed_product_taxes_display_prices_on_product_view_page": 987,
+      "fixed_product_taxes_enable": false,
       "fixed_product_taxes_include_fpt_in_subtotal": false,
       "graphql_share_customer_group": false,
-      "grid_per_page": 987,
-      "grid_per_page_values": "abc123",
+      "grid_per_page": 123,
+      "grid_per_page_values": "xyz789",
       "grouped_product_image": "ITSELF",
       "is_checkout_agreements_enabled": false,
       "is_default_store": true,
-      "is_default_store_group": false,
-      "is_guest_checkout_enabled": false,
-      "is_negotiable_quote_active": false,
+      "is_default_store_group": true,
+      "is_guest_checkout_enabled": true,
+      "is_negotiable_quote_active": true,
       "is_one_page_checkout_enabled": true,
-      "is_requisition_list_active": "abc123",
-      "list_mode": "abc123",
-      "list_per_page": 123,
-      "list_per_page_values": "xyz789",
-      "locale": "abc123",
-      "magento_reward_general_is_enabled": "abc123",
-      "magento_reward_general_is_enabled_on_front": "abc123",
+      "is_requisition_list_active": "xyz789",
+      "list_mode": "xyz789",
+      "list_per_page": 987,
+      "list_per_page_values": "abc123",
+      "locale": "xyz789",
+      "magento_reward_general_is_enabled": "xyz789",
+      "magento_reward_general_is_enabled_on_front": "xyz789",
       "magento_reward_general_min_points_balance": "xyz789",
       "magento_reward_general_publish_history": "xyz789",
-      "magento_reward_points_invitation_customer": "xyz789",
-      "magento_reward_points_invitation_customer_limit": "abc123",
+      "magento_reward_points_invitation_customer": "abc123",
+      "magento_reward_points_invitation_customer_limit": "xyz789",
       "magento_reward_points_invitation_order": "xyz789",
-      "magento_reward_points_invitation_order_limit": "xyz789",
-      "magento_reward_points_newsletter": "xyz789",
+      "magento_reward_points_invitation_order_limit": "abc123",
+      "magento_reward_points_newsletter": "abc123",
       "magento_reward_points_order": "abc123",
-      "magento_reward_points_register": "xyz789",
+      "magento_reward_points_register": "abc123",
       "magento_reward_points_review": "abc123",
-      "magento_reward_points_review_limit": "xyz789",
-      "magento_wishlist_general_is_enabled": "abc123",
+      "magento_reward_points_review_limit": "abc123",
+      "magento_wishlist_general_is_enabled": "xyz789",
       "max_items_in_order_summary": 123,
-      "maximum_number_of_wishlists": "xyz789",
-      "minicart_display": false,
+      "maximum_number_of_wishlists": "abc123",
+      "minicart_display": true,
       "minicart_max_items": 123,
       "minimum_password_length": "xyz789",
-      "newsletter_enabled": false,
+      "newsletter_enabled": true,
       "optional_zip_countries": "xyz789",
-      "order_cancellation_enabled": true,
+      "order_cancellation_enabled": false,
       "order_cancellation_reasons": [CancellationReason],
-      "orders_invoices_credit_memos_display_full_summary": true,
-      "orders_invoices_credit_memos_display_grandtotal": false,
-      "orders_invoices_credit_memos_display_price": 987,
-      "orders_invoices_credit_memos_display_shipping_amount": 987,
+      "orders_invoices_credit_memos_display_full_summary": false,
+      "orders_invoices_credit_memos_display_grandtotal": true,
+      "orders_invoices_credit_memos_display_price": 123,
+      "orders_invoices_credit_memos_display_shipping_amount": 123,
       "orders_invoices_credit_memos_display_subtotal": 123,
       "orders_invoices_credit_memos_display_zero_tax": false,
+      "persistent_enabled": false,
+      "persistent_options_wishlist": false,
+      "persistent_shopping_cart": false,
       "printed_card_priceV2": Money,
+      "product_alert_allow_stock": true,
       "product_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
+      "product_reviews_enabled": "abc123",
       "product_url_suffix": "abc123",
       "quickorder_active": false,
-      "quote_minimum_amount": 123.45,
-      "quote_minimum_amount_message": "abc123",
+      "quote_minimum_amount": 987.65,
+      "quote_minimum_amount_message": "xyz789",
       "required_character_classes_number": "abc123",
-      "requisition_list_share_link_validity_days": 123,
-      "requisition_list_share_max_recipients": 123,
+      "requisition_list_share_link_validity_days": 987,
+      "requisition_list_share_max_recipients": 987,
       "requisition_list_share_storefront_path": "abc123",
-      "requisition_list_sharing_enabled": false,
-      "returns_enabled": "abc123",
+      "requisition_list_sharing_enabled": true,
+      "returns_enabled": "xyz789",
       "root_category_uid": 4,
       "sales_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
       "sales_gift_wrapping": "xyz789",
-      "sales_printed_card": "abc123",
-      "secure_base_link_url": "xyz789",
+      "sales_printed_card": "xyz789",
+      "secure_base_link_url": "abc123",
       "secure_base_media_url": "abc123",
       "secure_base_static_url": "abc123",
-      "secure_base_url": "xyz789",
+      "secure_base_url": "abc123",
       "share_active_segments": false,
       "share_applied_cart_rule": false,
-      "shopping_assistance_checkbox_title": "abc123",
+      "share_customer_accounts_scope": 123,
+      "shopping_assistance_checkbox_title": "xyz789",
       "shopping_assistance_checkbox_tooltip": "xyz789",
-      "shopping_assistance_enabled": true,
-      "shopping_cart_display_full_summary": false,
-      "shopping_cart_display_grand_total": true,
+      "shopping_assistance_enabled": false,
+      "shopping_cart_display_full_summary": true,
+      "shopping_cart_display_grand_total": false,
       "shopping_cart_display_price": 123,
       "shopping_cart_display_shipping": 987,
-      "shopping_cart_display_subtotal": 987,
+      "shopping_cart_display_subtotal": 123,
       "shopping_cart_display_tax_gift_wrapping": "DISPLAY_EXCLUDING_TAX",
-      "shopping_cart_display_zero_tax": false,
+      "shopping_cart_display_zero_tax": true,
       "store_code": 4,
       "store_group_code": 4,
-      "store_group_name": "abc123",
+      "store_group_name": "xyz789",
       "store_name": "xyz789",
       "store_sort_order": 987,
       "timezone": "xyz789",
       "title_separator": "abc123",
-      "use_store_in_url": true,
+      "use_store_in_url": false,
       "website_code": 4,
-      "website_name": "xyz789",
-      "weight_unit": "xyz789",
+      "website_name": "abc123",
+      "weight_unit": "abc123",
       "zero_subtotal_enable_for_specific_countries": false,
       "zero_subtotal_enabled": true,
-      "zero_subtotal_new_order_status": "abc123",
-      "zero_subtotal_payment_action": "xyz789",
+      "zero_subtotal_new_order_status": "xyz789",
+      "zero_subtotal_payment_action": "abc123",
       "zero_subtotal_payment_from_specific_countries": "abc123",
-      "zero_subtotal_sort_order": 987,
+      "zero_subtotal_sort_order": 123,
       "zero_subtotal_title": "abc123"
     }
   }
@@ -4032,16 +4304,16 @@ query storeConfig {
 
 ### variants
 
-**Response:** [`ProductViewVariantResults`](#productviewvariantresults)
+**Response:** [`ProductViewVariantResults`](/reference/graphql/saas/types-k-p.md#productviewvariantresults)
 
 #### Arguments
 
 | Name | Description |
 |------|-------------|
-| `sku` - [`String!`](#string) | SKU of the product to get variants for. For example, `UR123`, `MZ456` or `KS789`. |
-| `optionIds` - [`[String!]`](#string) | List of option IDs to get variants for. For example, `123`, `456` or `789`. |
-| `pageSize` - [`Int`](#int) | Page size for pagination. For example, `10` for a page size of 10 or `20` for a page size of 20. |
-| `cursor` - [`String`](#string) | Pagination cursor. For example, `123` for the first variant, `456` for the second variant. |
+| `sku` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | SKU of the product to get variants for. For example, `UR123`, `MZ456` or `KS789`. |
+| `optionIds` - [`[String!]`](/reference/graphql/saas/types-q-s.md#string) | List of option IDs to get variants for. For example, `123`, `456` or `789`. |
+| `pageSize` - [`Int`](/reference/graphql/saas/types-f-i.md#int) | Page size for pagination. For example, `10` for a page size of 10 or `20` for a page size of 20. |
+| `cursor` - [`String`](/reference/graphql/saas/types-q-s.md#string) | Pagination cursor. For example, `123` for the first variant, `456` for the second variant. |
 
 #### Example
 
@@ -4072,10 +4344,10 @@ query variants(
 
 ```json
 {
-  "sku": "abc123",
+  "sku": "xyz789",
   "optionIds": ["xyz789"],
-  "pageSize": 123,
-  "cursor": "abc123"
+  "pageSize": 987,
+  "cursor": "xyz789"
 }
 ```
 
@@ -4086,7 +4358,7 @@ query variants(
   "data": {
     "variants": {
       "variants": [ProductViewVariant],
-      "cursor": "abc123"
+      "cursor": "xyz789"
     }
   }
 }

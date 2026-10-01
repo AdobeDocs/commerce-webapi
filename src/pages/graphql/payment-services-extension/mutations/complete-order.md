@@ -44,7 +44,7 @@ mutation {
 
 ## Reference
 
-The [`completeOrder`](/reference/graphql/saas/index.md#completeorder) reference provides detailed information about the types and fields defined in this mutation.
+The [`completeOrder`](/reference/graphql/saas/mutations.md#completeorder) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

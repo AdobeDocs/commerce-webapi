@@ -8,7 +8,7 @@ description: Adobe Commerce as a Cloud Service (SaaS) does not support this prod
 
 # products query
 
-<InlineAlert variant="important" slots="text" />
+<InlineAlert variant="warning" slots="text" />
 
 Adobe Commerce as a Cloud Service (SaaS) does not support this `products` query. Use the Catalog Service [`products` query](../../catalog-service/queries/products.md) instead. If you are migrating from PaaS to SaaS, you must update your applications to use the Catalog Service query.
 
@@ -28,7 +28,7 @@ products(
 
 ## Reference
 
-The [`products`](/reference/graphql/index.md#products) reference provides detailed information about the types and fields defined in this query.
+The [`products`](/reference/graphql/latest/index.md#products) reference provides detailed information about the types and fields defined in this query.
 
 ## Input attributes
 

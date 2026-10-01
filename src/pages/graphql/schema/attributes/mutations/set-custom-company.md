@@ -28,7 +28,7 @@ mutation {
 
 ## Reference
 
-The [`setCustomAttributesOnCompany`](/reference/graphql/saas/index.md#setcustomattributesoncompany) reference provides detailed information about the types and fields defined in this mutation.
+The [`setCustomAttributesOnCompany`](/reference/graphql/saas/mutations.md#setcustomattributesoncompany) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
@@ -40,7 +40,7 @@ The following example sets two custom attributes on a company.
 mutation {
   setCustomAttributesOnCompany(
     input: {
-      company_id: "MQ=="
+      id: "MQ=="
       custom_attributes: [
         {
           attribute_code: "attribute_one"

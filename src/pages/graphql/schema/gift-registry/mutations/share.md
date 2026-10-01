@@ -29,9 +29,9 @@ mutation {
 
 The `shareGiftRegistry` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#sharegiftregistry)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#sharegiftregistry)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#sharegiftregistry)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#sharegiftregistry)
 
 ## Example usage
 

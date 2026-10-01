@@ -5,15 +5,11 @@ keywords:
   - B2B
 ---
 
-<Fragment src="../../../../../includes/saas-only.md"/>
-
-<Fragment src="../../../../../includes/commerce-only.md"/>
+<Fragment src="/includes/commerce-only.md"/>
 
 # shareRequisitionListByToken mutation
 
-<InlineAlert variant="info" slots="text1" />
-
-This mutation is part of the B2B Storefront Compatibility Package and is only available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview).
+<Fragment src="/includes/scp-b2b-mutation.md" />
 
 The `shareRequisitionListByToken` mutation enables B2B customers to share a requisition list with colleagues within the same company using a shareable link generated on the storefront. The mutation requires `requisitionListUid` as an input parameter. This mutation returns the token assigned to the shared requisition list.
 
@@ -27,9 +23,9 @@ The `shareRequisitionListByToken` mutation enables B2B customers to share a requ
 }
 ```
 
-[//]: # (## Reference)
-[//]: # ()
-[//]: # (The [`shareRequisitionListByToken`]&#40;/reference/graphql/saas/index.md#sharerequisitionlistbytoken&#41; reference provides detailed information about the types and fields defined in this mutation.)
+## Reference
+
+The [`shareRequisitionListByToken`](/reference/graphql/saas/mutations.md#sharerequisitionlistbytoken) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

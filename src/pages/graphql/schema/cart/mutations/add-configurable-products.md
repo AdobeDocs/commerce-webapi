@@ -20,7 +20,7 @@ Use the `addConfigurableProductsToCart` mutation to add configurable products to
 
 ## Reference
 
-The [`addConfigurableProductsToCart`](/reference/graphql/index.md#addconfigurableproductstocart) reference provides detailed information about the types and fields defined in this mutation.
+The [`addConfigurableProductsToCart`](/reference/graphql/latest/mutations.md#addconfigurableproductstocart) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

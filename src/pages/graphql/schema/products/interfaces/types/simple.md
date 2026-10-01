@@ -7,10 +7,10 @@ description: The SimpleProduct data type implements the following interfaces:
 
 The `SimpleProduct` data type implements the following interfaces:
 
--  [ProductInterface](/reference/graphql/index.md#productinterface)
--  [PhysicalProductInterface](/reference/graphql/index.md#physicalproductinterface)
--  [CustomizableProductInterface](/reference/graphql/index.md#customizableproductinterface)
--  [RoutableInterface](/reference/graphql/index.md#routableinterface)
+-  [ProductInterface](/reference/graphql/latest/types-k-p.md#productinterface)
+-  [PhysicalProductInterface](/reference/graphql/latest/types-k-p.md#physicalproductinterface)
+-  [CustomizableProductInterface](/reference/graphql/latest/types-c-e.md#customizableproductinterface)
+-  [RoutableInterface](/reference/graphql/latest/types-q-s.md#routableinterface)
 
 Attributes that are specific to the simple products can be used when performing a [`products`](../../queries/products.md) query.
 

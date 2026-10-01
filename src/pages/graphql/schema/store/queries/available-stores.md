@@ -21,7 +21,7 @@ The `availableStores` reference provides detailed information about the types an
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#availablestores)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#availablestores)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#availablestores)
 
 ## Example usage
 

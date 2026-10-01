@@ -21,7 +21,7 @@ The `compareList` reference provides detailed information about the types and fi
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#comparelist)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#comparelist)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#comparelist)
 
 ## Example usage
 

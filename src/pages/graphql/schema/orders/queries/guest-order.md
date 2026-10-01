@@ -17,7 +17,7 @@ The `guestOrder` reference provides detailed information about the types and fie
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#guestorder)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#guestorder)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#guestorder)
 
 ## Example usage
 

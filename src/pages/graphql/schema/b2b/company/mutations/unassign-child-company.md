@@ -5,15 +5,11 @@ keywords:
   - B2B
 ---
 
-<Fragment src="../../../../../includes/saas-only.md"/>
-
-<Fragment src="../../../../../includes/commerce-only.md"/>
+<Fragment src="/includes/commerce-only.md"/>
 
 # unassignChildCompany mutation
 
-<InlineAlert variant="info" slots="text1" />
-
-This mutation is part of the B2B Storefront Compatibility Package and is only available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview).
+<Fragment src="/includes/scp-b2b-mutation.md" />
 
 The `unassignChildCompany` mutation allows company administrators to unassign a child company from a parent company within the company hierarchy. This mutation requires `child_company_id` as unique IDs of the child company as parameters. This mutation returns a `company_hierarchy` object if successful.
 
@@ -27,9 +23,9 @@ The `unassignChildCompany` mutation allows company administrators to unassign a 
 }
 ```
 
-[//]: # (## Reference)
-[//]: # ()
-[//]: # (The [`unassignChildCompany`]&#40;/reference/graphql/saas/index.md#unassignchildcompany&#41; reference provides detailed information about the types and fields defined in this mutation.)
+## Reference
+
+The [`unassignChildCompany`](/reference/graphql/saas/mutations.md#unassignchildcompany) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

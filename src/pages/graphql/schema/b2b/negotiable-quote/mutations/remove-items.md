@@ -29,9 +29,9 @@ This mutation requires a valid [customer authentication token](../../../customer
 
 The `removeNegotiableQuoteItems` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#removenegotiablequoteitems)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#removenegotiablequoteitems)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#removenegotiablequoteitems)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#removenegotiablequoteitems)
 
 ## Example usage
 

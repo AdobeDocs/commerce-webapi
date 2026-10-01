@@ -5,14 +5,14 @@ description: The CartItemInterface has the following implementations:
 
 # CartItemInterface attributes and implementations
 
-The [`CartItemInterface`](/reference/graphql/index.md#cartiteminterface) has the following implementations:
+The [`CartItemInterface`](/reference/graphql/latest/types-c-e.md#cartiteminterface) has the following implementations:
 
-*  [BundleCartItem](/reference/graphql/index.md#bundlecartitem)
-*  [ConfigurableCartItem](/reference/graphql/index.md#configurablecartitem)
-*  [DownloadableCartItem](/reference/graphql/index.md#downloadablecartitem)
-*  [GiftCardCartItem](/reference/graphql/index.md#giftcardcartitem)
-*  [SimpleCartItem](/reference/graphql/index.md#simplecartitem)
-*  [VirtualCartItem](/reference/graphql/index.md#virtualcartitem)
+*  [BundleCartItem](/reference/graphql/latest/types-a-b.md#bundlecartitem)
+*  [ConfigurableCartItem](/reference/graphql/latest/types-c-e.md#configurablecartitem)
+*  [DownloadableCartItem](/reference/graphql/latest/types-c-e.md#downloadablecartitem)
+*  [GiftCardCartItem](/reference/graphql/latest/types-f-i.md#giftcardcartitem)
+*  [SimpleCartItem](/reference/graphql/latest/types-q-s.md#simplecartitem)
+*  [VirtualCartItem](/reference/graphql/latest/types-t-z.md#virtualcartitem)
 
 ## Example usage
 

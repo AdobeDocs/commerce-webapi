@@ -29,7 +29,7 @@ mutation {
 
 ## Reference
 
-The [`createVaultCardSetupToken`](/reference/graphql/saas/index.md#createvaultcardsetuptoken) reference provides detailed information about the types and fields defined in this mutation.
+The [`createVaultCardSetupToken`](/reference/graphql/saas/mutations.md#createvaultcardsetuptoken) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

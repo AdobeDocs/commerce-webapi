@@ -18,7 +18,7 @@ The `guestOrderByToken` reference provides detailed information about the types 
 
 * [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#guestorderbytoken)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#guestorderbytoken)
+* [On-Premises/Cloud](/reference/graphql/latest/index.md#guestorderbytoken)
 
 ## Example usage
 

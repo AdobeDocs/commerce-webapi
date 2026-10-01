@@ -31,9 +31,9 @@ mutation {
 
 The `updatePurchaseOrderApprovalRule` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#updatepurchaseorderapprovalrule)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#updatepurchaseorderapprovalrule)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#updatepurchaseorderapprovalrule)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#updatepurchaseorderapprovalrule)
 
 ## Headers
 

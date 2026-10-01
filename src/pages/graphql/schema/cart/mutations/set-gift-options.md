@@ -43,9 +43,9 @@ Gift wrapping is available for simple, configurable, bundle products as well as 
 
 The `setGiftOptionsOnCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#setgiftoptionsoncart)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#setgiftoptionsoncart)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#setgiftoptionsoncart)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#setgiftoptionsoncart)
 
 ## Example usage
 

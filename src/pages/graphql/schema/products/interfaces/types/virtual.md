@@ -7,9 +7,9 @@ description: The VirtualProduct data type implements the following interfaces:
 
 The `VirtualProduct` data type implements the following interfaces:
 
--  [ProductInterface](/reference/graphql/index.md#productinterface)
--  [CustomizableProductInterface](/reference/graphql/index.md#customizableproductinterface)
--  [RoutableInterface](/reference/graphql/index.md#routableinterface)
+-  [ProductInterface](/reference/graphql/latest/types-k-p.md#productinterface)
+-  [CustomizableProductInterface](/reference/graphql/latest/types-c-e.md#customizableproductinterface)
+-  [RoutableInterface](/reference/graphql/latest/types-q-s.md#routableinterface)
 
 Attributes that are specific to the virtual products can be used when performing a [`products`](../../queries/products.md) query.
 

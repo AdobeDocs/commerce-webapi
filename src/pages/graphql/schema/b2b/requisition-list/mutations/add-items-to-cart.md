@@ -34,9 +34,9 @@ mutation {
 
 The `addRequisitionListItemsToCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#addrequisitionlistitemstocart)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#addrequisitionlistitemstocart)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#addrequisitionlistitemstocart)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#addrequisitionlistitemstocart)
 
 ## Example usage
 

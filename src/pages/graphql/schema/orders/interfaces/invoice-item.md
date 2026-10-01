@@ -16,9 +16,9 @@ description: InvoiceItemInterface provides details about items in a customer's o
 
 The `InvoiceItemInterface` reference provides detailed information about the types and fields defined in this interface.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#invoiceiteminterface)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/types-f-i.md#invoiceiteminterface)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#invoiceiteminterface)
+* [On-Premises/Cloud](/reference/graphql/latest/types-f-i.md#invoiceiteminterface)
 
 ## Example usage
 

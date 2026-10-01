@@ -27,9 +27,9 @@ mutation {
 
 The `rejectPurchaseOrders` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#rejectpurchaseorders)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#rejectpurchaseorders)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#rejectpurchaseorders)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#rejectpurchaseorders)
 
 ## Example usage
 

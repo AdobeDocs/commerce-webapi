@@ -27,7 +27,7 @@ mutation: {
 
 ## Reference
 
-The [`addDownloadableProductsToCart`](/reference/graphql/index.md#adddownloadableproductstocart) reference provides detailed information about the types and fields defined in this mutation.
+The [`addDownloadableProductsToCart`](/reference/graphql/latest/mutations.md#adddownloadableproductstocart) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

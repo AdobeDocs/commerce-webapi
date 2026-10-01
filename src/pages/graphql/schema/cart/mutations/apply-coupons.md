@@ -19,9 +19,9 @@ The `type` field of the `ApplyCouponsToCartInput` object must be set to either `
 
 The `applyCouponsToCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#applycouponstocart)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#applycouponstocart)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#applycouponstocart)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#applycouponstocart)
 
 ## Example usage
 

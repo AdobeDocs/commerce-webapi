@@ -15,9 +15,9 @@ The `contactUs` mutation submits the contents of the Contact Us form.
 
 The `contactUs` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#contactus)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#contactus)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#contactus)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#contactus)
 
 ## Example usage
 

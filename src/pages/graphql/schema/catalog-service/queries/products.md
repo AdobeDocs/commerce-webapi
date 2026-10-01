@@ -55,7 +55,7 @@ You must specify the following HTTP headers to run this query.
 
 ## Example usage
 
-The [Commerce API playground](https://experienceleague.adobe.com/developer/commerce/storefront/playgrounds/commerce-services/) provides a sample `products` query that you can run against a live instance of Adobe Commerce with Luma sample data. Note that the responses may vary, depending on the configuration of the Commerce instance.
+The [Commerce API playground](https://experienceleague.adobe.com/en/tools/commerce-storefront/playgrounds/commerce-services/) provides a sample `products` query that you can run against a live instance of Adobe Commerce with Luma sample data. Note that the responses may vary, depending on the configuration of the Commerce instance.
 
 ### Return details about a simple product
 

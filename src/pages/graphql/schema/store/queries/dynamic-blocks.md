@@ -52,7 +52,7 @@ dynamicBlocks(
 
 ## Reference
 
-The [`dynamicBlocks`](/reference/graphql/index.md#dynamicblocks) reference provides detailed information about the types and fields defined in this query.
+The [`dynamicBlocks`](/reference/graphql/latest/index.md#dynamicblocks) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

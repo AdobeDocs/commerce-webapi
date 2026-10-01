@@ -16,7 +16,7 @@ The `getHostedProUrl` query is required to complete a transaction when the [PayP
 
 ## Reference
 
-The [`getHostedProUrl`](/reference/graphql/index.md#gethostedprourl) reference provides detailed information about the types and fields defined in this query.
+The [`getHostedProUrl`](/reference/graphql/latest/index.md#gethostedprourl) reference provides detailed information about the types and fields defined in this query.
 
 ## Example usage
 

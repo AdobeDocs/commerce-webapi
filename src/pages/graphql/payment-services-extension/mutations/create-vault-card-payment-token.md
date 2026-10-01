@@ -25,7 +25,7 @@ mutation {
 
 ## Reference
 
-The [`createVaultCardPaymentToken`](/reference/graphql/saas/index.md#createvaultcardpaymenttoken) reference provides detailed information about the types and fields defined in this mutation.
+The [`createVaultCardPaymentToken`](/reference/graphql/saas/mutations.md#createvaultcardpaymenttoken) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

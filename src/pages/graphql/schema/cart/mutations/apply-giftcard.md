@@ -17,9 +17,9 @@ The `applyGiftCardToCart` mutation applies a predefined gift card code to the sp
 
 The `applyGiftCardToCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#applygiftcardtocart)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#applygiftcardtocart)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#applygiftcardtocart)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#applygiftcardtocart)
 
 ## Example usage
 

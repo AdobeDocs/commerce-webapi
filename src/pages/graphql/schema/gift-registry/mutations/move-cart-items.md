@@ -28,9 +28,9 @@ mutation {
 
 The `moveCartItemsToGiftRegistry` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#movecartitemstogiftregistry)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#movecartitemstogiftregistry)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#movecartitemstogiftregistry)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#movecartitemstogiftregistry)
 
 ## Example usage
 

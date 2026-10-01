@@ -28,7 +28,7 @@ mutation {
 
 ## Reference
 
-The [`sendEmailToFriend`](/reference/graphql/index.md#sendemailtofriend) reference provides detailed information about the types and fields defined in this mutation.
+The [`sendEmailToFriend`](/reference/graphql/latest/mutations.md#sendemailtofriend) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

@@ -34,7 +34,7 @@ mutation {
 
 ## Reference
 
-The [`createPaymentOrder`](/reference/graphql/saas/index.md#createpaymentorder) reference provides detailed information about the types and fields defined in this mutation.
+The [`createPaymentOrder`](/reference/graphql/saas/mutations.md#createpaymentorder) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 

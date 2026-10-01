@@ -25,9 +25,9 @@ The mutation returns an error if the order cannot be cancelled.
 
 The `confirmCancelOrder` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#confirmcancelorder)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#confirmcancelorder)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#confirmcancelorder)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#confirmcancelorder)
 
 ## Example usage
 

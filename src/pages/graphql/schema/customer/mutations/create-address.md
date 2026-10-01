@@ -17,9 +17,9 @@ To return or modify information about a customer, we recommend you use customer 
 
 The `createCustomerAddress` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#createcustomeraddress)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#createcustomeraddress)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#createcustomeraddress)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#createcustomeraddress)
 
 ## Example usage
 

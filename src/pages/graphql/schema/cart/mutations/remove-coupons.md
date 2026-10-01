@@ -17,9 +17,9 @@ The `removeCouponsFromCart` mutation removes previously-applied coupons from the
 
 The `removeCouponsFromCart` reference provides detailed information about the types and fields defined in this mutation.
 
-* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/index.md#removecouponsfromcart)
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#removecouponsfromcart)
 
-* [On-Premises/Cloud](/reference/graphql/index.md#removecouponsfromcart)
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#removecouponsfromcart)
 
 ## Example usage
 
