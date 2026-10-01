@@ -29,7 +29,7 @@ Content-Type: application/json
 Store: all
 ```
 
-Do not include `/rest` or a store view code in the URL. The `Store` header specifies the request scope, while the rule's `website_ids` specifies the websites where the discount applies. Include `website_ids` in the rule payload.
+Do not include `/rest` or a store view code in the URL. The `Store` header specifies the request scope, while the rule's `website_ids` specifies the websites where the discount applies. Include `website_ids` when creating a rule. On update, omit it or send `null` to preserve the existing websites.
 
 ## REST API reference
 
@@ -92,17 +92,17 @@ Use option values, not option labels, in conditions for select and multiselect a
 
 ## Rule fields
 
-Create and update requests wrap the rule fields in a `rule` object. The following requirements and defaults apply when creating a rule. Updates preserve omitted or null fields.
+Create and update requests wrap the rule fields in a `rule` object. Defaults apply when creating a rule. On update, omitted or null fields preserve their existing values.
 
 | Field | Type | Description |
 | --- | --- | --- |
 | `rule_id` | Integer | The generated rule ID returned by the API. For updates, use the ID in the URL. |
-| `name` | String | Required. Must not be blank. |
+| `name` | String | Required on create; optional on update. Must not be blank. |
 | `description` | String | Optional rule description. |
-| `website_ids` | Integer array | Required. A nonempty list of existing storefront website IDs. Website ID `0` is not supported. |
-| `customer_group_ids` | Integer array | Required. A nonempty list of existing customer group IDs. |
-| `simple_action` | String | Required. One of the four supported discount actions. |
-| `discount_amount` | Number | Required. Must be nonnegative. Percentage actions accept values from 0 to 100. |
+| `website_ids` | Integer array | Required on create; optional on update. A nonempty list of existing storefront website IDs. Website ID `0` is not supported. |
+| `customer_group_ids` | Integer array | Required on create; optional on update. A nonempty list of existing customer group IDs. |
+| `simple_action` | String | Required on create; optional on update. One of the four supported discount actions. |
+| `discount_amount` | Number | Required on create; optional on update. Must be nonnegative. Percentage actions accept values from 0 to 100. |
 | `is_active` | Integer | `0` for inactive or `1` for active. Defaults to `0`. |
 | `stop_rules_processing` | Integer | `1` prevents subsequent rules from applying to matching products. `0` allows further rule processing. Defaults to `1`. |
 | `sort_order` | Integer | Nonnegative rule priority. Lower values have higher priority. Defaults to `0`. |
