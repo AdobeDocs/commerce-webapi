@@ -12,13 +12,13 @@ keywords:
 
 Use these REST endpoints to create, retrieve, update, delete, and search catalog price rules in Adobe Commerce as a Cloud Service. Rules apply product discounts to the specified websites and customer groups and support nested conditions.
 
-## Authentication and scope
+## Authentication
 
-Authenticate each request with an Adobe Identity Management Service (IMS) access token. The associated Admin role must include the `Magento_CatalogRule::promo_catalog` Access Control List (ACL) resource. Customer and guest access is not supported.
+These endpoints require an [IMS access token](../../authentication/index.md). Your Admin role must include `Magento_CatalogRule::promo_catalog`.
 
-See [REST authentication](../../authentication/index.md) for user and server-to-server authentication, and [REST API overview](../../index.md) for the SaaS URL format.
+## Website scope
 
-The `Store` header specifies the request scope. The rule's `website_ids` specifies the websites where the discount applies. Include `website_ids` when creating a rule. On update, omit it or send `null` to preserve the existing websites.
+Set the rule's target websites with `website_ids`. The `Store` header controls the REST request scope. See the [REST API overview](../../index.md) for URL and header details.
 
 ## REST API reference
 
