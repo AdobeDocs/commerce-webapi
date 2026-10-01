@@ -156,6 +156,7 @@
         - [Multicoupon](/rest/modules/multicoupon/index.md)
         - [Sales refunds](/rest/modules/sales/index.md)
     - [SaaS integrations](/rest/saas-integrations/index.md)
+        - [Company roles](/rest/saas-integrations/company-roles/index.md)
         - [Custom email](/rest/saas-integrations/custom-email/index.md)
         - [Gift card accounts](/rest/saas-integrations/gift-card-accounts/index.md)
         - [Login as Customer](/rest/saas-integrations/login-as-customer/index.md)
