@@ -10,30 +10,17 @@ keywords:
 
 # Catalog price rule API
 
-The catalog price rule REST API lets integrations manage product discounts without creating or editing each rule in the Admin. Use the API to discover supported conditions, create rules, and manage existing rules with the same nested condition logic available in the Admin.
-
-Catalog price rules apply to products for the specified websites and customer groups. For cart price rules, which apply discounts during checkout, use the [salesRules API](https://adobe-commerce-saas.redoc.ly/tag/salesRules/). The two APIs use different condition payloads.
+Use these REST endpoints to create, retrieve, update, delete, and search catalog price rules in Adobe Commerce as a Cloud Service. Rules apply product discounts to the specified websites and customer groups and support nested conditions.
 
 ## Authentication and scope
 
 Authenticate each request with an Adobe Identity Management Service (IMS) access token. The associated Admin role must include the `Magento_CatalogRule::promo_catalog` Access Control List (ACL) resource. Customer and guest access is not supported.
 
-See [REST authentication](../../authentication/index.md) for user and server-to-server authentication.
+See [REST authentication](../../authentication/index.md) for user and server-to-server authentication, and [REST API overview](../../index.md) for the SaaS URL format.
 
-Use the Adobe Commerce as a Cloud Service URL structure:
-
-```http
-GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/catalogPriceRules/metadata
-Authorization: Bearer <IMS_ACCESS_TOKEN>
-Content-Type: application/json
-Store: all
-```
-
-Do not include `/rest` or a store view code in the URL. The `Store` header specifies the request scope, while the rule's `website_ids` specifies the websites where the discount applies. Include `website_ids` when creating a rule. On update, omit it or send `null` to preserve the existing websites.
+The `Store` header specifies the request scope. The rule's `website_ids` specifies the websites where the discount applies. Include `website_ids` when creating a rule. On update, omit it or send `null` to preserve the existing websites.
 
 ## REST API reference
-
-All six endpoints require the `Magento_CatalogRule::promo_catalog` ACL resource.
 
 | Method | Endpoint | Description |
 | --- | --- | --- |
@@ -44,7 +31,7 @@ All six endpoints require the `Magento_CatalogRule::promo_catalog` ACL resource.
 | `PUT` | `/V1/catalogPriceRules/{ruleId}` | Update a rule. |
 | `DELETE` | `/V1/catalogPriceRules/{ruleId}` | Delete a rule. |
 
-## Discover available conditions
+### Discover available conditions
 
 Before creating a rule, retrieve the metadata:
 
@@ -52,7 +39,7 @@ Before creating a rule, retrieve the metadata:
 GET /V1/catalogPriceRules/metadata
 ```
 
-The response contains `simple_actions`, the supported discount actions, and `condition_attributes`, the attributes that can be used in rule conditions. Each attribute includes its `attribute_code`, `label`, `input_type`, supported `operators`, and a `value_source` endpoint when values must be retrieved separately.
+The response lists supported discount actions and condition attributes, including their operators and value-source endpoints.
 
 The following response excerpt shows the category condition:
 
@@ -76,7 +63,7 @@ The following response excerpt shows the category condition:
 }
 ```
 
-The available product attributes depend on the instance's attribute configuration. Use the returned metadata instead of assuming that an attribute or operator is supported.
+Available attributes depend on your instance's configuration. Use the attributes and operators returned by the metadata endpoint.
 
 Retrieve the IDs needed for rule scope and condition values using the following endpoints. These endpoints have their own permission requirements.
 
@@ -90,7 +77,7 @@ Retrieve the IDs needed for rule scope and condition values using the following 
 
 Use option values, not option labels, in conditions for select and multiselect attributes.
 
-## Rule fields
+### Rule fields
 
 Create and update requests wrap the rule fields in a `rule` object. Defaults apply when creating a rule. On update, omitted or null fields preserve their existing values.
 
@@ -110,7 +97,7 @@ Create and update requests wrap the rule fields in a `rule` object. Defaults app
 | `to_date` | String | Optional end date or UTC datetime. Must not precede `from_date`. |
 | `condition` | Object | Optional root condition group containing leaf conditions or nested groups. Omitting it on create targets all products within the rule's website and customer group scope. |
 
-### Discount actions
+#### Discount actions
 
 The `simple_action` determines how `discount_amount` changes the price:
 
@@ -121,7 +108,7 @@ The `simple_action` determines how `discount_amount` changes the price:
 | `to_percent` | Set the price to the specified percentage. | An amount of `20` produces a price of 20. |
 | `to_fixed` | Set the price to the specified fixed amount. | An amount of `20` produces a price of 20. |
 
-### Schedule dates
+#### Schedule dates
 
 Both `from_date` and `to_date` accept:
 
@@ -130,7 +117,7 @@ Both `from_date` and `to_date` accept:
 
 Schedule values are stored and returned as UTC datetimes. To clear an existing schedule boundary in an update, send an empty string for that field. Omitting the field or sending `null` preserves its current value.
 
-## Create a rule
+### Create a rule
 
 The following request creates an inactive rule that reduces prices by 10 percent for products in category `12`, on website `1`, for customer group `1`. Replace these IDs with existing values from your instance.
 
@@ -144,7 +131,6 @@ Request body:
 {
   "rule": {
     "name": "Category discount",
-    "description": "Ten percent off products in the selected category.",
     "website_ids": [1],
     "customer_group_ids": [1],
     "simple_action": "by_percent",
@@ -164,37 +150,26 @@ Request body:
 }
 ```
 
-The response returns the saved rule object, including its generated `rule_id` and default values:
+The response returns the saved rule object. This excerpt shows the generated ID and default values:
 
 ```json
 {
   "rule_id": 42,
   "name": "Category discount",
-  "description": "Ten percent off products in the selected category.",
   "is_active": 0,
-  "website_ids": [1],
-  "customer_group_ids": [1],
-  "simple_action": "by_percent",
   "discount_amount": 10,
   "stop_rules_processing": 1,
-  "sort_order": 0,
-  "condition": {
-    "aggregator": "all",
-    "match": true,
-    "conditions": [
-      {
-        "attribute_code": "category_ids",
-        "operator": "==",
-        "value": "12"
-      }
-    ]
-  }
+  "sort_order": 0
 }
 ```
 
 Review the saved rule before activating it with `is_active: 1`. You can also set `is_active` explicitly when creating a rule.
 
-## Build nested conditions
+<InlineAlert variant="info" slots="text" />
+
+Rule changes may take time to appear in storefront prices.
+
+### Build nested conditions
 
 The `condition` object is a root group. Each group has a `conditions` array containing leaf conditions, nested groups, or both.
 
@@ -249,7 +224,9 @@ Condition trees support up to 10 levels and 100 total nodes, including the root 
 
 Use only operators returned for the attribute by the metadata endpoint. Where an operator supports multiple values, supply a comma-separated string, such as `"12,13"`, rather than a JSON array. Scalar operators for structured values require a single value. The `<=>` operator means "is undefined" and does not require a value.
 
-## Retrieve and update a rule
+Boolean condition values use `"0"` or `"1"`. Date condition values accept `YYYY-MM-DD` or `YYYY-MM-DD HH:MM:SS`.
+
+### Retrieve and update a rule
 
 Retrieve a rule by its ID:
 
@@ -278,6 +255,8 @@ Request body:
 
 The response returns the updated rule object. The API validates the combined existing and requested values. For example, updating `discount_amount` to `150` on a `by_percent` rule fails even when `simple_action` is omitted.
 
+Updates that activate a rule or leave it active also validate its existing conditions. If a referenced category, attribute set, or option has been removed, correct the condition before saving.
+
 If you provide `condition`, it replaces the entire condition tree. Omitting `condition` or sending `null` preserves the existing tree. To remove all product conditions, send an empty root group:
 
 ```json
@@ -294,17 +273,15 @@ If you provide `condition`, it replaces the entire condition tree. Omitting `con
 
 An empty root group makes the rule apply to all products within its website and customer group scope. It is not a way to disable the rule. To disable it, set `is_active` to `0`.
 
-## Search rules
+### Search rules
 
-Use `/V1/catalogPriceRules/search`, not the collection URL, to list and filter rules. The following request finds active rules, sorts them by ID, and returns the first page of 20 results:
+Use `/V1/catalogPriceRules/search` to list and filter rules. The following request returns the first page of 20 active rules:
 
 ```text
 GET /V1/catalogPriceRules/search
     ?searchCriteria[filterGroups][0][filters][0][field]=is_active
     &searchCriteria[filterGroups][0][filters][0][value]=1
     &searchCriteria[filterGroups][0][filters][0][conditionType]=eq
-    &searchCriteria[sortOrders][0][field]=rule_id
-    &searchCriteria[sortOrders][0][direction]=ASC
     &searchCriteria[pageSize]=20
     &searchCriteria[currentPage]=1
 ```
@@ -321,7 +298,7 @@ Increase `searchCriteria[currentPage]` to retrieve subsequent pages. An omitted 
 
 See [Search using REST endpoints](../../use-rest/performing-searches.md) for filter groups, comparison operators, sorting, and pagination.
 
-## Delete a rule
+### Delete a rule
 
 ```http
 DELETE /V1/catalogPriceRules/42
@@ -333,20 +310,9 @@ The response confirms deletion:
 true
 ```
 
-## Validation
+## Error handling
 
-Invalid rule input returns HTTP `400`. Validation checks required fields, discount actions and amounts, flags, schedule dates, and the existence of referenced websites and customer groups.
-
-Conditions are checked against the metadata's allowed attributes and operators. Referenced categories, product attribute sets, and option values must be valid. Boolean condition values use `"0"` or `"1"`, and date condition values accept `YYYY-MM-DD` or `YYYY-MM-DD HH:MM:SS`.
-
-A supplied root `condition` must be an object with a `conditions` array. Malformed nodes, empty nested groups, and condition trees that exceed the depth or node limits are rejected.
-
-Updates that activate a rule or keep it active also validate its existing conditions. If a referenced category, attribute set, or option has been removed, correct the condition before activating or updating the rule.
-
-Retrieving, updating, or deleting a nonexistent rule returns HTTP `404`.
-
-## Storefront price updates
-
-Only active rules within their schedule affect storefront prices for the specified websites and customer groups.
-
-Price updates are asynchronous. A successful create, update, or delete response confirms the rule operation, not that storefront prices have already changed. Allow time for the price update to complete before checking prices through Catalog Service GraphQL, using the applicable customer group context.
+| Status code | Condition |
+| --- | --- |
+| `400` | Invalid rule input, including malformed conditions or invalid references. |
+| `404` | The requested rule does not exist. |
