@@ -28,6 +28,20 @@ Use the `upload_url` from the response to PUT the file directly to S3. See [Uplo
 
 After the file is successfully uploaded, use the [`finishUpload` mutation](finish-upload.md) to complete the upload process.
 
+## reCAPTCHA validation
+
+Guest shoppers can call the `initiateUpload` mutation without a customer token, for example, to attach an image to a guest return. To limit automated upload requests, merchants can require Google reCAPTCHA validation on this mutation. This setting is disabled by default. To enable it, set [**Enable for Presigned Upload**](https://experienceleague.adobe.com/en/docs/commerce-admin/config/security/google-recaptcha-storefront) in **Stores** > **Configuration** > **Security** > **Google reCAPTCHA Storefront** > **Storefront**.
+
+When the setting is enabled, each `initiateUpload` request must include a valid reCAPTCHA token in the `X-ReCaptcha` HTTP header:
+
+```text
+X-ReCaptcha: <reCAPTCHA-token>
+```
+
+If the token is missing or invalid, the request fails and Commerce does not issue a presigned URL. The `finishUpload` mutation does not require a reCAPTCHA token because it can only complete an upload that `initiateUpload` started.
+
+For more information about reCAPTCHA headers, see [Protected mutations](../../../usage/protected-mutations.md).
+
 ## Syntax
 
 ```graphql
