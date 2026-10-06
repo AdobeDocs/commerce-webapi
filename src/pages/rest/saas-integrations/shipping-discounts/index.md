@@ -14,6 +14,20 @@ The custom shipping discounts let an administrator or integration apply an arbit
 
 If a discount fits a rule-based pattern, use a [cart price rule](https://experienceleague.adobe.com/en/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart) instead.
 
+## How Commerce applies the discount
+
+Commerce reapplies the custom shipping discount each time it recalculates the cart totals, so the discount persists when the cart changes. The following rules apply:
+
+- The applied amount never exceeds the remaining shipping amount. If a cart price rule already discounts shipping, the custom discount applies only to the shipping amount that remains. In this case, `applied_amount` is less than `amount`.
+- The cart totals (`GET /V1/carts/:cartId/totals`) include a separate **Shipping Discount** total segment with the `admin_shipping_discount` code.
+- The discount is added to the cart and order discount amount, with the **Shipping Discount** label in the discount description. The **Shipping & Handling** amount continues to show the full shipping amount before the discount.
+
+## Apply a shipping discount during an order edit
+
+You can apply a custom shipping discount when you [edit an order](../order-management/index.md#edit-orders). Call `POST /V1/carts/:cartId/shipping-discount` with the cart ID that `POST /V1/orders/{orderId}/edit/start` returns, then submit the edit. If order edit history comments are enabled, Commerce adds a comment to the replacement order when the edit applies, changes, or removes a custom shipping discount. The comment shows the applied amount, which can be less than the requested amount.
+
+When you edit an order that already has a custom shipping discount, Commerce carries the discount forward to the new edit cart. The discount remains on the order across subsequent edits until you remove it with `DELETE /V1/carts/:cartId/shipping-discount`.
+
 ## Endpoints
 
 | Method | Endpoint | Description |
@@ -109,20 +123,6 @@ curl -X DELETE "https://<host>/rest/V1/carts/42/shipping-discount" \
 ```
 
 A successful request returns HTTP status `200`.
-
-## How Commerce applies the discount
-
-Commerce reapplies the custom shipping discount each time it recalculates the cart totals, so the discount persists when the cart changes. The following rules apply:
-
-- The applied amount never exceeds the remaining shipping amount. If a cart price rule already discounts shipping, the custom discount applies only to the shipping amount that remains. In this case, `applied_amount` is less than `amount`.
-- The cart totals (`GET /V1/carts/:cartId/totals`) include a separate **Shipping Discount** total segment with the `admin_shipping_discount` code.
-- The discount is added to the cart and order discount amount, with the **Shipping Discount** label in the discount description. The **Shipping & Handling** amount continues to show the full shipping amount before the discount.
-
-## Apply a shipping discount during an order edit
-
-You can apply a custom shipping discount when you [edit an order](../order-management/index.md#edit-orders). Call `POST /V1/carts/:cartId/shipping-discount` with the cart ID that `POST /V1/orders/{orderId}/edit/start` returns, then submit the edit. If order edit history comments are enabled, Commerce adds a comment to the replacement order when the edit applies, changes, or removes a custom shipping discount. The comment shows the applied amount, which can be less than the requested amount.
-
-When you edit an order that already has a custom shipping discount, Commerce carries the discount forward to the new edit cart. The discount remains on the order across subsequent edits until you remove it with `DELETE /V1/carts/:cartId/shipping-discount`.
 
 ## Errors
 
