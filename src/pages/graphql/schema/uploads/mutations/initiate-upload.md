@@ -30,7 +30,9 @@ After the file is successfully uploaded, use the [`finishUpload` mutation](finis
 
 ## reCAPTCHA validation
 
-Guest shoppers can call the `initiateUpload` mutation without a customer token, for example, to attach an image to a guest return. To limit automated upload requests, merchants can require Google reCAPTCHA validation on this mutation. This setting is disabled by default. To enable it, set [**Enable for Presigned Upload**](https://experienceleague.adobe.com/en/docs/commerce-admin/config/security/google-recaptcha-storefront) in **Stores** > **Configuration** > **Security** > **Google reCAPTCHA Storefront** > **Storefront**.
+You can call the `initiateUpload` for many reasons, for example to attach an image to a return. To limit automated upload requests, merchants can require Google reCAPTCHA validation on this mutation. This setting is disabled by default. To enable it, set [**Enable for Presigned Upload**](https://experienceleague.adobe.com/en/docs/commerce-admin/config/security/google-recaptcha-storefront) in **Stores** > **Configuration** > **Security** > **Google reCAPTCHA Storefront** > **Storefront**.
+
+When working with guest shoppers, call the `initiateUpload` mutation without a customer token.
 
 When the setting is enabled, each `initiateUpload` request must include a valid reCAPTCHA token in the `X-ReCaptcha` HTTP header:
 
