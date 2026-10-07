@@ -24,7 +24,7 @@ All requests that include `custom_price` require an admin or integration [bearer
 ## Limitations
 
 *  **Bundle products with dynamic pricing** — Not supported, because the price is calculated from the prices of their child products. Bundle products with fixed pricing are supported.
-*  **B2B negotiable quotes** — Not supported. Use the negotiable quote API to set negotiated prices.
+*  **B2B negotiable quotes** — Not supported. Use [`PUT /V1/negotiableQuote/:quoteId`](../../b2b/negotiable-update.md) to set negotiated prices.
 
 ## REST API reference
 
@@ -46,12 +46,7 @@ The `custom_price` attribute is part of the `extension_attributes` object of the
 
 ### Add an item at a custom price
 
-Adds a new item to the cart and applies the custom price to each unit.
-
-| Item | Value |
-|---|---|
-| **Method** | `POST` |
-| **URL** | `/V1/carts/:cartId/items` |
+`POST /V1/carts/:cartId/items` adds a new item to the cart and applies the custom price to each unit.
 
 **Request body:**
 
@@ -74,12 +69,11 @@ Returns the cart item with the applied price in `extension_attributes.custom_pri
 
 ### Change the price of an existing cart item
 
-Changes the price of a cart line. Use `GET /V1/carts/:cartId/items` to find the `item_id` of the line.
+`PUT /V1/carts/:cartId/items/:itemId` changes the price of a cart line. Use `GET /V1/carts/:cartId/items` to find the `item_id` of the line.
 
-| Item | Value |
-|---|---|
-| **Method** | `PUT` |
-| **URL** | `/V1/carts/:cartId/items/:itemId` |
+<InlineAlert variant="info" slots="text" />
+
+If you add a product that is already in the cart with a `custom_price` but without an `item_id`, the request is rejected and the existing cart line is left unchanged. To add units to an existing line at a new price, send its `item_id` with the new total quantity.
 
 **Request body:**
 
@@ -101,16 +95,9 @@ Changes the price of a cart line. Use `GET /V1/carts/:cartId/items` to find the 
 
 Returns the cart item with the applied price in `extension_attributes.custom_price`.
 
-<InlineAlert variant="info" slots="text" />
-
-If you add a product that is already in the cart with a `custom_price` but without an `item_id`, the request is rejected and the existing cart line is left unchanged. To add units to an existing line at a new price, send its `item_id` with the new total quantity.
-
 ### Retrieve custom prices
 
-| Item | Value |
-|---|---|
-| **Method** | `GET` |
-| **URL** | `/V1/carts/:cartId/items` or `/V1/carts/:cartId` |
+`GET /V1/carts/:cartId/items` and `GET /V1/carts/:cartId` return the `custom_price` for each cart item.
 
 **Response (200):**
 
