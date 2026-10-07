@@ -23,32 +23,19 @@ Requests are tenant-scoped. The endpoint resolves companies and roles from the a
 
 ## REST API reference
 
-| Method | URL | Description |
-|--------|-----|-------------|
-| GET | `/V1/customers/:customerId/companyRoles` | Retrieve the company roles assigned to a customer |
+`GET /V1/customers/:customerId/companyRoles` retrieves the company roles assigned to a customer.
 
 ### Retrieve company roles for a customer
 
-Returns one entry for each company assignment the customer has a role in.
-
-| Item | Value |
-|---|---|
-| **Method** | `GET` |
-| **URL** | `/V1/customers/:customerId/companyRoles` |
-
-The endpoint returns an empty `items` array in the following cases:
-
--  The customer is not a member of any company.
--  The customer is a member of a company but does not have a role.
--  No company or role matches the search criteria.
-
-If the customer holds a role in some companies but not others, the companies where the customer does not have a role are not included.
-
-Company Administrator roles return an empty `permissions` array.
+`GET /V1/customers/:customerId/companyRoles` returns one entry for each company assignment the customer has a role in.
 
 <InlineAlert variant="info" slots="text" />
 
 The `searchCriteria` parameter is required, all of its subfields are optional.
+
+If the customer holds a role in some companies but not others, the companies where the customer does not have a role are not included.
+
+Company Administrator roles return an empty `permissions` array.
 
 To retrieve every role without paging, use `searchCriteria[pageSize]=0`.
 
@@ -91,6 +78,12 @@ A single filter group cannot mix company fields with permission fields. A reques
 
 #### Response fields
 
+The endpoint returns an empty `items` array in the following cases:
+
+-  The customer is not a member of any company.
+-  The customer is a member of a company but does not have a role.
+-  No company or role matches the search criteria.
+
 The response is a search results object with the following fields.
 
 | Field | Type | Description |
@@ -123,7 +116,11 @@ Each object in the `permissions` array contains the following fields.
 | 401 | Unauthorized. The request is missing a valid bearer token, or the token lacks the `Magento_CustomerCompany::company_roles_view` resource. |
 | 404 | The `customerId` does not match an existing customer. |
 
-### Example: retrieve all roles for a customer
+### Examples
+
+The following examples demonstrate how to retrieve company roles for a customer.
+
+#### Retrieve all roles for a customer
 
 ```text
 GET /V1/customers/5/companyRoles?searchCriteria[pageSize]=0
@@ -161,7 +158,7 @@ GET /V1/customers/5/companyRoles?searchCriteria[pageSize]=0
 
 The `Approver` role grants no permissions, so its `permissions` array is empty.
 
-### Example: filter by company
+#### Filter by company
 
 The following request returns the roles the customer holds in companies `1` and `3`, sorted by company ID:
 
@@ -174,7 +171,7 @@ GET /V1/customers/5/companyRoles
     &searchCriteria[sortOrders][0][direction]=ASC
 ```
 
-### Example: filter by company name
+#### Filter by company name
 
 The following request returns the roles the customer holds in companies whose name starts with `Adobe`:
 
@@ -185,7 +182,7 @@ GET /V1/customers/5/companyRoles
     &searchCriteria[filterGroups][0][filters][0][conditionType]=like
 ```
 
-### Example: filter by permission
+#### Filter by permission
 
 Company fields and permission fields must occupy separate filter groups. The following request returns only the roles that grant the `Magento_Company::view` permission, and each returned role lists only that permission:
 
