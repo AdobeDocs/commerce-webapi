@@ -11,7 +11,7 @@ keywords:
 
 # `companyRoles` API
 
-The `companyRoles` REST endpoint returns every role a single customer holds, across all companies the customer is assigned to. Each returned role includes the permissions for that role. This allows you to retrieve all of a customer's permissions with one request, instead of querying each company assignment separately.
+The `GET /V1/customers/:customerId/companyRoles` REST endpoint returns every role a single customer holds, across all companies the customer is assigned to. Each returned role includes the permissions for that role. This allows you to retrieve all of a customer's permissions with one request, instead of querying each company assignment separately.
 
 For more information on company permissions, see [Manage company roles](../../b2b/roles.md).
 
