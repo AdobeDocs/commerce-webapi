@@ -1,7 +1,7 @@
 {
-  "total": 643,
+  "total": 644,
   "offset": 0,
-  "limit": 643,
+  "limit": 644,
   "data": [
     {
       "page": "/",
@@ -27,7 +27,7 @@
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "10/7/2026"
+      "lastUpdated": "10/8/2026"
     },
     {
       "page": "/get-started/",
@@ -5493,7 +5493,7 @@
         "https://avatars.githubusercontent.com/u/16409901?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "10/7/2026"
+      "lastUpdated": "10/8/2026"
     },
     {
       "page": "/rest/saas-integrations/cart-custom-price/",
@@ -5506,6 +5506,13 @@
         "https://avatars.githubusercontent.com/u/16409901?v=4"
       ],
       "lastUpdated": "10/2/2026"
+    },
+    {
+      "page": "/rest/saas-integrations/company-roles/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/98363870?v=4"
+      ],
+      "lastUpdated": "10/7/2026"
     },
     {
       "page": "/rest/saas-integrations/custom-email/",
