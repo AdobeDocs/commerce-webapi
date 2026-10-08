@@ -1455,6 +1455,106 @@
       },
       {
         "kind": "INPUT_OBJECT",
+        "name": "AddPublicRequisitionListItemsToCartInput",
+        "description": "An input object that identifies the public requisition list, the target cart, and which items to add.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "cart_id",
+            "description": "The masked ID of the target cart. Obtain a guest cart ID via the createGuestCart mutation.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "item_uids",
+            "description": "UIDs of specific requisition list items to add. When omitted, every item in the list is added.",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "token",
+            "description": "The public token identifying the requisition list.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "AddPublicRequisitionListItemsToCartOutput",
+        "description": "Contains the updated cart and any errors encountered while adding items.",
+        "fields": [
+          {
+            "name": "cart",
+            "description": "The updated cart.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Cart",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "user_errors",
+            "description": "Errors encountered, e.g. NOT_PUBLIC, INVALID_TOKEN, or RESTRICTED_PRODUCT. Empty array means the operation succeeded. Items rejected as RESTRICTED_PRODUCT (outside the caller's shared catalog) are skipped rather than failing the whole request.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "PublicRequisitionListUserError",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
         "name": "AddPurchaseOrderCommentInput",
         "description": "Contains the comment to be added to a purchase order.",
         "fields": null,
@@ -4240,6 +4340,45 @@
         "possibleTypes": null
       },
       {
+        "kind": "INPUT_OBJECT",
+        "name": "AttributeRangeOperatorInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "attributeName",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "value",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "RangeValueInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
         "kind": "OBJECT",
         "name": "AttributeSelectedOption",
         "description": "",
@@ -4501,6 +4640,53 @@
         ],
         "inputFields": null,
         "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "AttributeStringOperatorInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "attributeName",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "values",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  }
+                }
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
         "enumValues": null,
         "possibleTypes": null
       },
@@ -23118,6 +23304,16 @@
             "defaultValue": null
           },
           {
+            "name": "is_public",
+            "description": "Indicates whether the requisition list is publicly shareable. Optional; defaults to false (private) when omitted.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "name",
             "description": "The name assigned to the requisition list.",
             "type": {
@@ -34326,6 +34522,12 @@
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
+          },
+          {
+            "name": "ATTRIBUTE",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
           }
         ],
         "possibleTypes": null
@@ -43665,6 +43867,33 @@
             "deprecationReason": null
           },
           {
+            "name": "addPublicRequisitionListItemsToCart",
+            "description": "Add items from a public requisition list (identified by token) to a cart. Does not require authentication; guests must supply a cart_id obtained via createGuestCart. Omit item_uids to add every item in the list.",
+            "args": [
+              {
+                "name": "input",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "AddPublicRequisitionListItemsToCartInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AddPublicRequisitionListItemsToCartOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "addPurchaseOrderComment",
             "description": "Add a comment to an existing purchase order.",
             "args": [
@@ -47709,6 +47938,33 @@
             "type": {
               "kind": "OBJECT",
               "name": "ShareGiftRegistryOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "sharePublicRequisitionList",
+            "description": "Email the requisition list's public share link (existing token, reused) to one or more email addresses. Fails with a user error if the list has not been marked public. Only the list owner may call this mutation.",
+            "args": [
+              {
+                "name": "input",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "SharePublicRequisitionListInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "SharePublicRequisitionListOutput",
               "ofType": null
             },
             "isDeprecated": false,
@@ -53300,6 +53556,26 @@
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "StringOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "attributeStringOperator",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "AttributeStringOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "attributeRangeOperator",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "AttributeRangeOperatorInput",
               "ofType": null
             },
             "defaultValue": null
@@ -61936,6 +62212,169 @@
         "possibleTypes": null
       },
       {
+        "kind": "OBJECT",
+        "name": "PublicRequisitionListOutput",
+        "description": "Contains a public requisition list and its owner's display name.",
+        "fields": [
+          {
+            "name": "requisition_list",
+            "description": "The shared requisition list and its items.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "RequisitionList",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "sender_name",
+            "description": "Display name of the requisition list owner (sender).",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PublicRequisitionListUserError",
+        "description": "Contains error details for a failed public requisition list operation.",
+        "fields": [
+          {
+            "name": "code",
+            "description": "An error code identifying the failure type.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "PublicRequisitionListUserErrorCode",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "message",
+            "description": "A localized error message.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "PublicRequisitionListUserErrorCode",
+        "description": "Error codes for public requisition list operations.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "NOT_PUBLIC",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "INVALID_TOKEN",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "RESTRICTED_PRODUCT",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "MAX_RECIPIENTS_EXCEEDED",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "RATE_LIMIT_EXCEEDED",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "INVALID_EMAIL",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "UNAVAILABLE_SKU",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "OPTIONS_UPDATED",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "OUT_OF_STOCK",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "LOW_QUANTITY",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "UNKNOWN_ERROR",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
         "kind": "INPUT_OBJECT",
         "name": "PurchaseHistory",
         "description": "User purchase history",
@@ -65069,6 +65508,33 @@
             "deprecationReason": null
           },
           {
+            "name": "publicRequisitionList",
+            "description": "Return a requisition list marked public, identified by its token. Throws a GraphQL error if the token is invalid or the list is no longer public. Does not require authentication.",
+            "args": [
+              {
+                "name": "token",
+                "description": "The public token identifying the requisition list.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "ID",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PublicRequisitionListOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "recaptchaFormConfig",
             "description": null,
             "args": [
@@ -65147,6 +65613,53 @@
             "deprecationReason": null
           },
           {
+            "name": "reviews",
+            "description": "Return the approved reviews for the specified product SKU. Standalone root query, not a Federation extension on ProductView, since a plain root field does not need @key / _entities.",
+            "args": [
+              {
+                "name": "sku",
+                "description": "The SKU of the product to return reviews for.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "pageSize",
+                "description": "The maximum number of results to return at once. The default is 20.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "20"
+              },
+              {
+                "name": "currentPage",
+                "description": "The page of results to return. The default is 1.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "1"
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "ProductReviews",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "sharedRequisitionList",
             "description": "View a shared requisition list when the receiver is logged in and belongs to the same company as the sender.",
             "args": [
@@ -65175,11 +65688,11 @@
           },
           {
             "name": "sourceAvailability",
-            "description": "Per-source availability for one or more SKUs, scoped to the storefront-visible sources of the current sales channel's stock. Availability is computed identically to the order-placement guard.",
+            "description": "Per-source availability for one or more SKUs, scoped to the storefront-visible sources of the current sales channel's stock. Availability is computed identically to the order-placement guard. Only SKUs of products the shopper may see in the current website's catalog are reported.",
             "args": [
               {
                 "name": "skus",
-                "description": "The product SKUs to report availability for.",
+                "description": "The product SKUs to report availability for. A SKU that matches no product, whose product is not assigned to the current website or is disabled in the current store, or that the shopper's customer group may not see in the catalog (B2B shared catalog assignment or category permissions) is silently omitted from the response.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -67956,6 +68469,22 @@
             "deprecationReason": null
           },
           {
+            "name": "is_public",
+            "description": "Indicates whether this requisition list is currently publicly shareable. Defaults to false.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "items",
             "description": "An array of products added to the requisition list.",
             "args": [
@@ -68048,6 +68577,18 @@
             "type": {
               "kind": "OBJECT",
               "name": "RequisitionListItems",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "token",
+            "description": "The list's public share token. Only resolved for the authenticated owner querying their own list; null for all other viewers, even when is_public is true.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
               "ofType": null
             },
             "isDeprecated": false,
@@ -72584,6 +73125,96 @@
       },
       {
         "kind": "INPUT_OBJECT",
+        "name": "SharePublicRequisitionListInput",
+        "description": "An input object that identifies the requisition list to share and the email addresses to send it to.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "emails",
+            "description": "One or more recipient email addresses. Not limited to registered customers.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "requisition_list_uid",
+            "description": "The unique UID of the requisition list to share.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "SharePublicRequisitionListOutput",
+        "description": "Contains the number of emails successfully sent and any errors encountered.",
+        "fields": [
+          {
+            "name": "sent_count",
+            "description": "Number of emails successfully sent.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "user_errors",
+            "description": "Errors encountered, e.g. NOT_PUBLIC when the list has not been marked public.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "PublicRequisitionListUserError",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
         "name": "ShareRequisitionListByEmailInput",
         "description": "An input object that defines which requisition list shared with company users through email.",
         "fields": null,
@@ -75350,6 +75981,34 @@
         "description": "Per-source availability for a single SKU across the sources of the current sales channel's stock.",
         "fields": [
           {
+            "name": "backorder_message",
+            "description": "Customer-facing pre-order notice, populated only when the SKU is saleable solely because notify-mode backorders are enabled and salable quantity is depleted (net of open reservations and the out-of-stock threshold); null otherwise (salable quantity remaining, silent backorders, or not saleable).",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "is_saleable",
+            "description": "Whether the SKU can be purchased right now, backorders considered: true when it is in stock, or out of stock with backorders enabled. This is the authoritative Add to Cart gate — gate on this, not on the per-source is_in_stock (which is a physical-inventory statement). Returned for every reported SKU regardless of whether per-source disclosure is enabled for the store; an unknown SKU, or one hidden from the shopper's catalog, is not reported at all.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "sku",
             "description": "The product SKU the availability applies to.",
             "args": [],
@@ -75367,7 +76026,7 @@
           },
           {
             "name": "sources",
-            "description": "Availability at each reported source.",
+            "description": "Availability at each reported source. Empty when per-source disclosure is not enabled for the store (cataloginventory/source_availability/storefront_enabled off); is_saleable and backorder_message are still returned.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -77709,6 +78368,70 @@
               "kind": "SCALAR",
               "name": "String",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "requisition_list_public_share_link_validity_days",
+            "description": "Configuration data from btob/requisition_list_public_sharing/link_validity_days",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "requisition_list_public_share_max_recipients",
+            "description": "Configuration data from btob/requisition_list_public_sharing/max_recipients",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "requisition_list_public_share_storefront_path",
+            "description": "Configuration data from btob/requisition_list_public_sharing/storefront_share_path (route path for public share links, no leading or trailing slashes)",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "requisition_list_public_sharing_enabled",
+            "description": "Configuration data from btob/requisition_list_public_sharing/enabled",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -80065,6 +80788,16 @@
             "type": {
               "kind": "SCALAR",
               "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "is_public",
+            "description": "Indicates whether the requisition list is publicly shareable. Optional; pass true to make the list public or false to make it private again. When omitted, the current value is left unchanged.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
               "ofType": null
             },
             "defaultValue": null
