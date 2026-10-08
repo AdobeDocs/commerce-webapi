@@ -11,6 +11,7 @@ Review the following topics to learn more about REST APIs available only on Adob
 
 - [Cart item custom price](cart-custom-price/index.md)
 - [Catalog price rules](catalog-price-rules/index.md)
+- [Company roles](company-roles/index.md)
 - [Custom email](custom-email/index.md)
 - [Gift card accounts](gift-card-accounts/index.md)
 - [Login as Customer](login-as-customer/index.md)
