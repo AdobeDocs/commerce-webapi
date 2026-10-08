@@ -57,6 +57,7 @@ The following table lists the forms and mutations that can be configured to requ
 | Enable for Checkout/Placing Order | `setPaymentMethodOnCart`, `setPaymentMethodAndPlaceOrder` |
 | Enable for Coupon Codes | `applyCouponToCart` |
 | Enable for Resend Confirmation Email | `resendConfirmationEmail` |
+| Enable for Presigned Upload | [SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions) `initiateUpload` |
 
 ## Related topics
 
