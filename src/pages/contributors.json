@@ -1,7 +1,7 @@
 {
-  "total": 640,
+  "total": 643,
   "offset": 0,
-  "limit": 640,
+  "limit": 643,
   "data": [
     {
       "page": "/",
@@ -19,6 +19,7 @@
       "page": "/config",
       "avatars": [
         "https://avatars.githubusercontent.com/u/98363870?v=4",
+        "https://avatars.githubusercontent.com/u/16409901?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/108055538?v=4",
         "https://avatars.githubusercontent.com/u/71978509?v=4",
@@ -26,7 +27,7 @@
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "9/29/2026"
+      "lastUpdated": "10/7/2026"
     },
     {
       "page": "/get-started/",
@@ -50,7 +51,7 @@
         "https://avatars.githubusercontent.com/u/33117931?v=4",
         "https://avatars.githubusercontent.com/u/98363870?v=4"
       ],
-      "lastUpdated": "6/2/2026"
+      "lastUpdated": "6/4/2026"
     },
     {
       "page": "/get-started/authentication/",
@@ -3768,7 +3769,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "9/18/2026"
+      "lastUpdated": "10/6/2026"
     },
     {
       "page": "/graphql/schema/wishlist/",
@@ -4137,7 +4138,7 @@
         "https://avatars.githubusercontent.com/u/47639523?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/1/2026"
+      "lastUpdated": "10/2/2026"
     },
     {
       "page": "/graphql/usage/security-configuration",
@@ -5488,10 +5489,23 @@
     {
       "page": "/rest/saas-integrations/",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/98363870?v=4"
+        "https://avatars.githubusercontent.com/u/98363870?v=4",
+        "https://avatars.githubusercontent.com/u/16409901?v=4",
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "8/26/2026"
+      "lastUpdated": "10/7/2026"
+    },
+    {
+      "page": "/rest/saas-integrations/cart-custom-price/",
+      "avatars": [],
+      "lastUpdated": "10/7/2026"
+    },
+    {
+      "page": "/rest/saas-integrations/catalog-price-rules/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/16409901?v=4"
+      ],
+      "lastUpdated": "10/2/2026"
     },
     {
       "page": "/rest/saas-integrations/custom-email/",
@@ -5532,6 +5546,11 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
       "lastUpdated": "9/23/2026"
+    },
+    {
+      "page": "/rest/saas-integrations/shipping-discounts/",
+      "avatars": [],
+      "lastUpdated": "10/6/2026"
     },
     {
       "page": "/rest/saas-integrations/system-config/",
@@ -6135,7 +6154,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/98363870?v=4"
       ],
-      "lastUpdated": "6/4/2026"
+      "lastUpdated": "10/6/2026"
     },
     {
       "page": "/rest/use-rest/operation-status-endpoints",
