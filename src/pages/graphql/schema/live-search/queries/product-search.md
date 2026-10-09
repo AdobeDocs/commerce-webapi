@@ -36,9 +36,9 @@ The Catalog Service `productSearch` query uses Live Search to return details abo
 
 The `productSearch` query accepts the following fields as input:
 
-- `phrase` - The string of text to search for. This field is required but an empty string may be used if only filtering by `category` or `categoryPath`.
-- `context` - (Live Search only) Query context that allows customized search results to be returned based on the customer group passed. This is used to get the view history of a SKU.
-- `current_page` and `page_size`- These optional fields allow the search results to be broken down into smaller groups so that a limited number of items are returned at a time. The default value of `page_size` is `20`, and the default value for `current_page` is `1`. In the response, counting starts at page one.
+- `phrase` - The string of text to search for. This field is required but an empty string is used if only filtering by `category` or `categoryPath`.
+- `context` - (Live Search only) Query context that allows customized search results to be returned based on the customer group passed. This query is used to get the view history of a SKU.
+- `current_page` `current_page` `current_page` and `page_size`- These optional fields allow the search results to be broken down into smaller groups so that a limited number of items are returned at a time. The default value of `page_size` is `20`, and the default value for `current_page` is `1`. In the response, counting starts at page one.
 - `sort` - An object that defines one or more product attributes to use to sort the search results. The default sortable product attributes in Luma are `price`, `name`, and `position`. A product's position is assigned within a category.
 - `filter` - An object that defines one or more product attributes or categories used to narrow the search results. In the Luma theme, the `sku`, `price`, and `size` attributes are among the product attributes that can be used to filter query results.
 
@@ -98,7 +98,7 @@ current_page: 5
 
 ### page_size
 
-When you run a query, you do not know in advance how many items the query will return. The query could return a few items, or it could return hundreds. The `page_size` field determines how many items to return at one time. If you use the default value of 20, and the query returns 97 items, the results are stored in four pages containing 20 items each, and one page containing 17 items.
+When you run a query, you do not know the number of items the query returns. The query returns a few items, or it returns hundreds. The `page_size` field determines how many items to return at one time. If you use the default value of 20, and the query returns 97 items, the results are divided into four pages containing 20 items each, and one page containing 17 items.
 
 The following example sets the page size to 10:
 
@@ -108,9 +108,9 @@ page_size: 10
 
 ### sort
 
-The `sort` field allows you to specify one or more product attributes to be used to sort the results. If you specify more than one attribute, Live Search sorts by the first field listed. If any items have the same value, those items are sorted by the secondary field. The value for each field can be set to either `ASC` or `DESC`.
+The `sort` field allows you to specify one or more product attributes to be used to sort the results. If you specify more than one attribute, Live Search sorts by the first field listed. If any items have the same value, the secondary field sorts those items. The value for each field can be set to either `ASC` or `DESC`.
 
-The following example causes the query to filter first by `price`, and then by `name`:
+The following example filters the query by `price` and `name`:
 
 ```graphql
 sort: [
@@ -167,7 +167,7 @@ Use the [`attributeMetadata` query](attribute-metadata.md) to return a list of p
 
 #### Layered search and expansion of search types
 
-Layered search, or search within a search, is an attribute-based filtering system that extends the traditional search functionality to include additional search parameters. These additional search parameters allow more precise and flexible product discovery. See the [merchant documentation](https://experienceleague.adobe.com/en/docs/commerce/live-search/workspace#layered-search-and-expansion-of-search-types) to learn how to update the search types in the Admin to enable layered search.
+Layered search, or search within a search, is an attribute-based filtering system that extends the traditional search functionality to include additional search parameters. These additional search parameters allow more precise and flexible product discovery. To learn how to update the search types in the Admin to enable layered search, see the [merchant documentation](https://experienceleague.adobe.com/en/docs/commerce/live-search/workspace#layered-search-and-expansion-of-search-types).
 
 <InlineAlert variant="info" slots="text" />
 
@@ -191,11 +191,11 @@ The advanced search capabilities are implemented through the `filter` parameter 
 
     - Searching for a query within a larger string. For example, if a shopper searches for the product number "PE-123" in the string "HAPE-123".
 
-        - Note: This search type is different from the existing [phrase search](#phrase), which performs an autocomplete search. For example, if your product attribute value is "outdoor pants", a phrase search returns a response for "out pan", but does not return a response for "oor ants". A contains search, however, does return a response for "oor ants".
+        - Note: This search type is different from the existing [phrase search](#phrase), which performs an autocomplete search. For example, if your product attribute value is "outdoor pants," a phrase search returns a response for "out pan," but does not return a response for "oor ants". A contains search, however, does return a response for "oor ants".
 
 ##### Examples
 
-Learn how to implement these new search capabilities in your Live Search API by following the examples below. First, review the requirements to ensure proper configuration.
+Implement these new search capabilities in your Live Search API by following the examples below. First, review the requirements to ensure proper configuration.
 
 **Frontend support:**
 
@@ -217,7 +217,7 @@ The Live Search Product Listing Page (PLP) and popover widgets do not support la
 
 **Performance considerations:**
 
-- `startsWith` and `contains` searches are optimized for performance through specialized indexing.
+- `startsWith` `startsWith` and `contains` searches are optimized for performance through specialized indexing.
 - Both `startsWith` and `contains` searches require a minimum of two characters.
 - A search term is limited to 10 characters or less.
 - For the **Contains** indexation, string length is limited to 50 characters or less.
@@ -225,25 +225,25 @@ The Live Search Product Listing Page (PLP) and popover widgets do not support la
 **Error handling:**
 
 - 500 error returned if an attribute is not set to `filterableInSearch: true`.
-- Invalid attribute codes will result in no matches.
-- Exceeding character limits will fall back to autocomplete search.
+- Invalid attribute codes result in no matches.
+- Exceeding character limits falls back to autocomplete search.
 
 ##### startsWith condition example
 
 The following example shows how you can search the "manufacturer" product attribute using a `startsWith` value of "Sieme".
 
 ```graphql
-filter: [  
-  {  
-    attribute: "manufacturer",  
-    startsWith: "Sieme"  
-  }  
+filter: [
+  {
+    attribute: "manufacturer",
+    startsWith: "Sieme"
+  }
 ]
 ```
 
 ##### contains condition example
 
-The following example shows how you can search the "manufacturer" product attribute using a `contains` value of "auto". The result of this query would match manufacturers named "ABC Auto Company" and "ABCauto" for example.
+The following example shows how you can search the "manufacturer" product attribute using a `contains` value of "auto". The result of this query matches manufacturers named "ABC Auto Company" and "ABCauto" for example.
 
 ```graphql
 filter: [  
@@ -256,7 +256,7 @@ filter: [
 
 ##### endsWith filter example
 
-To search an attribute value using `endsWith`, you must reverse the attribute value when you ingest the data. Then, you can use the `startsWith` condition on the specific attribute. In the following example, the part number is actually: `PN-5763`.
+To search an attribute value using `endsWith`, you must reverse the attribute value when you ingest the data. Then, you can use the `startsWith` condition on the specific attribute. In the following example, the part number is: `PN-5763`.
 
 ```graphql
 filter: [  
@@ -339,13 +339,13 @@ productSearch(
 
 ##### Limitations
 
-The advanced search capabilitiies have the following limitations:
+The advanced search capabilities have the following limitations:
 
 - You can specify a maximum of six attributes to be enabled for **Contains** and six attributes to be enabled for **Starts with**.
 - Each aggregation returns a maximum of 1000 facets.
-- `startsWith` and `contains` both require a minimum of two characters in the search.
+- `startsWith` `startsWith` `startsWith` and `contains` both require a minimum of two characters in the search.
 - `startsWith` allows a maximum of 10 characters for search.
-- `contains` allows a maximum of 10 characters for search in the API query and up to the first 50 characters are indexed for a true `contains` search. However, if more than 10 characters are passed in, the search results are returned for an autocomplete search result and not a true `contains` search. In this situation, the autocomplete search is enabled on the entire attribute string and not just the first 50 characters.
+- `contains` allows a maximum of 10 characters for search in the API query and up to the first 50 characters are indexed for a true `contains` search. However, if more than 10 characters are passed in, the search results are returned for an autocomplete search result and not a true `contains` search. Autocomplete search is enabled on the entire attribute string, not just the first 50 characters.
 - You can paginate a maximum of 10,000 products for any `productSearch` query.
 - These new search capabilities are not available in PLP widgets or the Live Search adapter extension.
 
@@ -353,19 +353,19 @@ For additional Live Search boundaries and limits, see [boundaries and limits](ht
 
 #### Filtering by categories
 
-Results can be filtered by categories defined in the Admin with the `categories` and `categoryPath` filters. They are slightly different in the type of facets returned:
+The `categories` and `categoryPath` filters in the Admin filter results. They are slightly different in the type of facets returned:
 
-`categories` is preferred when selecting from a category filter. Filtering on `categories` with "women/bottoms-women" and the phrase `pants`, the category facets returned are "promotions/pants-all", "women/bottoms-women/pants-women", and similar.
+`categories` is preferred when selecting from a category filter. Filtering on `categories` with "women/bottoms-women" and the phrase `pants`, the category facets returned are "promotions/pants-all," "women/bottoms-women/pants-women," and similar.
 
-`categoryPath` is preferred when browsing by category. `categoryPath` returns the immediate subcategories of the category path being filtered. Filtering on `categoryPath` with "women/bottoms-women", the category facets returned are its children such as "women/bottoms-women/pants-women" and "women/bottoms-women/shorts-women".
+`categoryPath` is preferred when browsing by category. `categoryPath` returns the immediate subcategories of the category path being filtered. Filtering on `categoryPath` with "women/bottoms-women," the category facets returned are its children such as "women/bottoms-women/pants-women" and "women/bottoms-women/shorts-women".
 
-A `phrase` attribute is required but it may be an empty string if you are filtering by `category` or `categoryPath`.
+A `phrase` attribute is required but is an empty string if you are filtering by `category` or `categoryPath`.
 
 Pinned categories are always returned, regardless of the filtered category.
 
 <InlineAlert variant="info" slots="text"/>
 
-For search merchandising rules to apply correctly, the `productSearch` query should sort by relevance or pass no sort variables at all. For category merchandising rules to apply correctly, the `productSearch` query should sort by `position`, filter on `categoryPath` for browsing a category page (otherwise, no category rules will be applied), and `phrase` should be "empty".
+For search merchandising rules to apply, the `productSearch` query sorts by relevance or passes no sort variables at all. For category merchandising rules to apply, the `productSearch` query sorts by `position`, filters on `categoryPath` for browsing a category page (otherwise, no category rules apply), and `phrase` is "empty".
 
 #### categoryPath
 
@@ -433,7 +433,7 @@ In this example, the system returns products sorted by relevance.
 #### categories
 
 `categories` can be used as a filter in a query when a category facet is selected in the layered navigation.
-This does not result in strict filtering when used by itself.
+This filter does not result in strict filtering when used by itself.
 
 ```graphql
 filter: [
@@ -477,7 +477,7 @@ The response to the `productSearch` query can contain details about each product
 
 The `facets` object contains details about each facet that affects the search results. By default, Live Search provides static facets for the `categories` and `price` product attributes that are pinned to the top of the Filters list in the storefront. The merchant can also pin other attributes to this list.
 
-Dynamic facets appear only when relevant, and the selection changes according to the products returned. In the storefront Filters list, dynamic facets appear in alphabetic order after any pinned facets. To streamline search results, facets are set to `dynamic` by default.
+Dynamic facets appear only when relevant, and the selection changes according to the products returned. In the storefront Filters list, dynamic facets appear in alphabetic order after any pinned facets. By default, Live Search sets facets to `dynamic` to streamline search results.
 
 Intelligent dynamic facets measure the frequency that an attribute appears in the results list and its prevalence throughout the catalog. Live Search uses this information to determine the order of returned products. This makes it possible to return two types of dynamic facets: Those that are most significant, followed by those that are most popular.
 
@@ -485,7 +485,7 @@ The `buckets` array divides the data into manageable groups. For the `price` and
 
 The `buckets` array is polymorphic. Use `__typename` or a type-specific fragment, such as `... on RangeBucket` or `... on StatsBucket`, to identify which [bucket implementation](#bucket-data-type) was returned for each entry.
 
-For numeric attributes, such as `price` or a rating attribute, `buckets` can contain both a `RangeBucket` and a `StatsBucket`. The `RangeBucket.from` and `RangeBucket.to` values can reflect the facet's configured bounds or slider bounds rather than the minimum and maximum values actually present in the filtered results.
+For numeric attributes, such as `price` or a rating attribute, `buckets` can contain both a `RangeBucket` and a `StatsBucket`. The `RangeBucket.from` and `RangeBucket.to` values reflect the facet's configured bounds or slider bounds rather than the minimum and maximum values present in the filtered results.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -618,7 +618,7 @@ The query response can also contain the following top-level fields and objects:
 
 ## Required headers
 
-You must specify the following HTTP headers to run this query.
+Specify the following HTTP headers to run this query.
 
 | Header name| Description |
 | --- | ----- |
@@ -959,18 +959,18 @@ The `productSearchResponse` return object can contain the following fields:
 **Logic used for `suggestions`**
 
 - Data from name and category path fields are used.
-- Name: `Supernova Sport Pant` will be stored in three phrases:
+- Name: `Supernova Sport Pant` is stored in three phrases:
   - `Supernova Sport Pant`
   - `Sport Pant`
   - `Pant`
-- Category path: tokenized by /, so "products/electronics/mobiles-and-accessories" will be stored as:
+- Category path: tokenized by /, so "products/electronics/mobiles-and-accessories" is stored as:
   - `products`
   - `electronics`
   - `mobiles-and-accessories`
 
 When a search is made, the "suggestion" field is searched using a "prefix" based search and the matching phrases are returned.
 
-**Example** - If "sport" is searched, then "sport pant" will be one suggestion.
+**Example** - If "sport" is searched, then "sport pant" is one suggestion.
 
 #### Aggregation data type
 
@@ -1012,7 +1012,7 @@ Implement `ScalarBucket` on string and other scalar product fields.
 
 #### StatsBucket implementation
 
-Implement `StatsBucket` to retrieve statistics across multiple buckets.
+To retrieve statistics across multiple buckets, implement `StatsBucket`.
 
 | Field | Data Type | Description |
 | --- | --- | --- |
@@ -1046,7 +1046,7 @@ By default, Live Search uses the `ProductInterface` to return product informatio
 
 ### Catalog Service fields
 
-The `ProductView` return object is an interface that can contain the following fields. It is implemented by the [`SimpleProductView`](#simpleproductview-type) and [`ComplexProductView`](#complexproductview-type) types.
+The `ProductView` return object is an interface that can contain the following fields. The [`SimpleProductView`](#simpleproductview-type) and [`ComplexProductView`](#complexproductview-type) types implement it.
 
 | Field | Data Type | Description |
 | --- | --- | --- |
@@ -1118,7 +1118,7 @@ The `PriceAdjustment` type specifies the amount and type of a price adjustment. 
 
 ### ProductViewAttribute type
 
-The `ProductViewAttribute` type is a container for customer-defined attributes that are displayed the storefront.
+The `ProductViewAttribute` type is a container for customer-defined attributes that are displayed on the storefront.
 
 | Field | Data Type | Description |
 | --- | --- | --- |
@@ -1157,7 +1157,7 @@ The `ProductViewMoney` type defines a monetary value, including a numeric value 
 
 ### ProductViewInputOption type
 
-Product input options provide details about how a shopper can enter customization details for a product. For example, for product personalization the input options might provide the fields for the shopper to add an image or text for a monogram. The input option can include an associated `markupAmount` that is applied to the product price. For additional information, see [Product settings - Customizable Options](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/products/settings/settings-advanced-custom-options).
+Product input options provide details about how a shopper can enter customization details for a product. For example, for product personalization the input options provide the fields for the shopper to add an image or text for a monogram. The input option can include an associated `markupAmount` that is applied to the product price. For additional information, see [Product settings - Customizable Options](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/products/settings/settings-advanced-custom-options).
 
 | Field | Data Type | Description |
 | -- | -- | -- |
@@ -1233,7 +1233,7 @@ The `ProductViewOptionValueProduct` type is an implementation of `ProductViewOpt
 | `isDefault` | Boolean | Indicates whether the option is the default. |
 | `product` | [`SimpleProductView`](#simpleproductview-type) | Details about a simple product. |
 | `quantity` | [`SimpleProductView`](#simpleproductview-type) | Default quantity of an option value. |
-| `title` | String | The display name of the option value. |
+| `title` | String | The display name of the option value. If the associated `product` is indexed, this returns the product's name; otherwise it falls back to the option value's configured title. |
 
 ### ProductViewOptionValueSwatch type
 
