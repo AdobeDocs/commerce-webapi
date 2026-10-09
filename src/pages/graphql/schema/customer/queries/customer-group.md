@@ -7,7 +7,7 @@ description: Provides the encoded ID of a customer group assigned to the logged-
 
 <InlineAlert variant="info" slots="text" />
 
-This query was created for the [Storefront Compatibility Package](https://experienceleague.adobe.com/developer/commerce/storefront/setup/configuration/storefront-compatibility/v248/) and is now available on Adobe Commerce 2.4.9.
+This query was created for the [Storefront Compatibility Package](https://experienceleague.adobe.com/en/tools/commerce-storefront/setup/configuration/storefront-compatibility/v248/) and is now available on Adobe Commerce 2.4.9.
 
 The `customerGroup` query provides encoded ID of a customer group assigned to the logged-in customer or guest shopper.
 

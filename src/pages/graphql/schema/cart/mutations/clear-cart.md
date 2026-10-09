@@ -4,8 +4,6 @@ description: The clearCart mutation removes all items from the specified cart.
 
 ---
 
-<Fragment src="../../../../includes/paas-only.md"/>
-
 <Fragment src="../../../../includes/commerce-only.md"/>
 
 # clearCart mutation
@@ -24,7 +22,11 @@ mutation {
 
 ## Reference
 
-The [`clearCart`](/reference/graphql/latest/mutations.md#clearcart) reference provides detailed information about the types and fields defined in this mutation.
+The `clearCart` reference provides detailed information about the types and fields defined in this mutation.
+
+* [Adobe Commerce as a Cloud Service](/reference/graphql/saas/mutations.md#clearcart)
+
+* [On-Premises/Cloud](/reference/graphql/latest/mutations.md#clearcart)
 
 ## Example usage
 

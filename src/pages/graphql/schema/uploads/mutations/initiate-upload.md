@@ -17,6 +17,8 @@ The `initiateUpload` mutation starts the file upload process by generating a pre
 * `CUSTOMER_ATTRIBUTE_FILE`
 * `CUSTOMER_ATTRIBUTE_IMAGE`
 * `NEGOTIABLE_QUOTE_ATTACHMENT`
+* `RMA_ATTRIBUTE_FILE`
+* `RMA_ATTRIBUTE_IMAGE`
 
 When you call this mutation, Commerce uses the AWS SDK to create a presigned URL that allows the client to upload the file directly to a temporary location in the S3 bucket. The presigned URL is valid for a limited time, specified by the `expires_at` field in the response.
 
@@ -25,6 +27,22 @@ The response includes the presigned URL, a unique key for the file, and an expir
 Use the `upload_url` from the response to PUT the file directly to S3. See [Upload files to Amazon S3](../index.md) for an example curl.
 
 After the file is successfully uploaded, use the [`finishUpload` mutation](finish-upload.md) to complete the upload process.
+
+## reCAPTCHA validation
+
+You can call the `initiateUpload` for many reasons, for example to attach an image to a return. To limit automated upload requests, merchants can require Google reCAPTCHA validation on this mutation. This setting is disabled by default. To enable it, set [**Enable for Presigned Upload**](https://experienceleague.adobe.com/en/docs/commerce-admin/config/security/google-recaptcha-storefront) in **Stores** > **Configuration** > **Security** > **Google reCAPTCHA Storefront** > **Storefront**.
+
+When working with guest shoppers, call the `initiateUpload` mutation without a customer token.
+
+When the setting is enabled, each `initiateUpload` request must include a valid reCAPTCHA token in the `X-ReCaptcha` HTTP header:
+
+```text
+X-ReCaptcha: <reCAPTCHA-token>
+```
+
+If the token is missing or invalid, the request fails and Commerce does not issue a presigned URL. The `finishUpload` mutation does not require a reCAPTCHA token because it can only complete an upload that `initiateUpload` started.
+
+For more information about reCAPTCHA headers, see [Protected mutations](../../../usage/protected-mutations.md).
 
 ## Syntax
 
@@ -74,10 +92,10 @@ The `$input` variable contains:
 ```json
 {
   "data": {
-    "initiateUploadOutput": {
-        "upload_url": "https://<bucket>.s3.<region>.amazonaws.com/<temp-location>?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=<value>...",
-        "key": "customer/attribute/<hashed-key>",
-        "expires_at": "2024-09-30T12:34:56Z"
+    "initiateUpload": {
+        "upload_url": "https://<bucket>.s3.<region>.amazonaws.com/<tenant-id>/example_106d42b2ee34de81db31d958.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=<value>...",
+        "key": "example_106d42b2ee34de81db31d958.png",
+        "expires_at": "1789433073"
     }
   }
 }
@@ -115,3 +133,40 @@ mutation {
   }
 }
 ```
+
+### Initiate an upload for a return item image attribute
+
+Use the `RMA_ATTRIBUTE_IMAGE` and `RMA_ATTRIBUTE_FILE` resource types to attach an image or a file to a return request. Commerce stores these uploads under the `rma_item/` media path.
+
+The following mutation initiates an upload for an image named `damage.png`.
+
+**Request:**
+
+```graphql
+mutation {
+  initiateUpload(input: {
+    key: "damage.png",
+    media_resource_type: RMA_ATTRIBUTE_IMAGE
+  }) {
+    upload_url
+    key
+    expires_at
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "initiateUpload": {
+      "upload_url": "https://example.com/<temp-location>?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=<value>...",
+      "key": "damage_32cb1fe50dab390be841461e.png",
+      "expires_at": "1757440423"
+    }
+  }
+}
+```
+
+After you call the [`finishUpload` mutation](finish-upload.md) with the same key, assign the key to a return item custom attribute in the [`requestReturn` mutation](../../orders/mutations/request-return.md#request-a-return-with-an-image-attachment).

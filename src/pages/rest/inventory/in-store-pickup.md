@@ -28,7 +28,7 @@ POST /V1/order/notify-orders-are-ready-for-pickup
 
 <InlineAlert variant="info" slots="text" />
 
-Adobe Commerce as a Cloud Service does not support the `GET /V1/inventory/in-store-pickup/pickup-locations` endpoint. Use the [`pickupLocations` query](../../graphql/schema/cart/queries/pickup-locations.md) instead.
+Adobe Commerce as a Cloud Service does not support the `GET /V1/inventory/in-store-pickup/pickup-locations` endpoint. Use the [`pickupLocations` query](../../graphql/schema/inventory-sources/queries/pickup-locations.md) instead.
 
 The `GET /V1/inventory/in-store-pickup/pickup-locations` endpoint searches for and filters on pickup locations, allowing the shopper to quickly narrow the results. The endpoint does not require authentication.
 

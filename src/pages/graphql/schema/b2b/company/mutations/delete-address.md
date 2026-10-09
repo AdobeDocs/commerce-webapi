@@ -27,6 +27,10 @@ mutation {
 }
 ```
 
+## Reference
+
+The [`deleteCompanyAddress`](/reference/graphql/saas/mutations.md#deletecompanyaddress) reference provides detailed information about the types and fields defined in this mutation.
+
 ## Example usage
 
 ### Delete a company address

@@ -201,7 +201,7 @@ Implement these new search capabilities in your Live Search API by following the
 
 Layered search is available on the following architectures:
 
-- Commerce Optimizer [Product Discovery drop-ins](https://experienceleague.adobe.com/developer/commerce/storefront/dropins/product-discovery/functions/)
+- Commerce Optimizer [Product Discovery drop-ins](https://experienceleague.adobe.com/en/tools/commerce-storefront/dropins/product-discovery/functions/)
 - Live Search (headless)
 
 <InlineAlert variant="info" slots="text" />
