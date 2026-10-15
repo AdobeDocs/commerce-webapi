@@ -2164,13 +2164,14 @@
     {
       "page": "/graphql/schema/catalog-service/queries/products",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/6391769?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/45772453?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "10/9/2026"
     },
     {
       "page": "/graphql/schema/catalog-service/queries/refine-product",
@@ -2906,15 +2907,15 @@
     {
       "page": "/graphql/schema/live-search/queries/product-search",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/6391769?v=4",
+        "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/45772211?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/45772453?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "10/9/2026"
     },
     {
       "page": "/graphql/schema/orders/",
