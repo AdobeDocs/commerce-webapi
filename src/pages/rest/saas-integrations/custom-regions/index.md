@@ -20,6 +20,10 @@ These endpoints are designed for:
 *  Third-party integrations that load region lists from external systems, such as ERP and address-validation services
 *  Automated workflows that create every region for a country in a single request
 
+<InlineAlert variant="info" slots="text"/>
+
+The default predefined regions cannot be modified or deleted.
+
 ## Authentication
 
 All endpoints require an admin or integration [bearer token](../../authentication/index.md). The token must belong to a role that includes the **Manage Country Regions** (`Magento_DirectoryRegionRestApi::country_region`) permission.
