@@ -20,6 +20,8 @@ The `initiateUpload` mutation starts the file upload process by generating a pre
 * `RMA_ATTRIBUTE_FILE`
 * `RMA_ATTRIBUTE_IMAGE`
 
+You can also supply an optional `checksum_sha256` value so that Amazon S3 validates the integrity of the uploaded file. See [Checksum validation](#checksum-validation).
+
 When you call this mutation, Commerce uses the AWS SDK to create a presigned URL that allows the client to upload the file directly to a temporary location in the S3 bucket. The presigned URL is valid for a limited time, specified by the `expires_at` field in the response.
 
 The response includes the presigned URL, a unique key for the file, and an expiration time for the URL. The `key` is a hashed value that uniquely identifies the file in the S3 bucket. The client uses the presigned URL to upload the file using a standard HTTP PUT request.
@@ -27,6 +29,24 @@ The response includes the presigned URL, a unique key for the file, and an expir
 Use the `upload_url` from the response to PUT the file directly to S3. See [Upload files to Amazon S3](../index.md) for an example curl.
 
 After the file is successfully uploaded, use the [`finishUpload` mutation](finish-upload.md) to complete the upload process.
+
+## Checksum validation
+
+To confirm that the file Amazon S3 receives matches the file the client sent, include the optional `checksum_sha256` field in the `initiateUpload` input. Checksum validation is opt-in. If you omit the field, the upload process does not change.
+
+The `checksum_sha256` value must be the Base64-encoded raw 32-byte SHA-256 digest of the file. Do not use the hexadecimal digest that most checksum tools display by default. The client must compute the value from the file before it calls the mutation. For example:
+
+```bash
+openssl dgst -sha256 -binary example.png | base64
+```
+
+When you supply a checksum, the upload process changes as follows:
+
+* Commerce signs the checksum into the presigned URL. If the value is not a valid Base64-encoded SHA-256 digest, the mutation returns the error `Invalid checksum value. Expected a base64-encoded SHA-256 digest.`
+* The client must send the same value in the `x-amz-checksum-sha256` header of the PUT request to the `upload_url`.
+* Amazon S3 rejects the upload if the bytes it receives do not match the checksum. The file is not stored.
+
+The `finishUpload` mutation does not revalidate the checksum. It performs the same validation as it does for an upload without a checksum.
 
 ## reCAPTCHA validation
 
@@ -58,7 +78,7 @@ The [`initiateUpload`](/reference/graphql/saas/mutations.md#initiateupload) refe
 
 ## Example usage
 
-The following examples show how to initiate an upload different types of files.
+The following examples show how to initiate uploads for different types of files and how to supply a checksum.
 
 ### Initiate an upload for a customer attribute file
 
@@ -99,6 +119,49 @@ The `$input` variable contains:
     }
   }
 }
+```
+
+### Initiate an upload with a checksum
+
+The following mutation initiates an upload for a file named `example.png` and supplies the Base64-encoded SHA-256 digest of the file.
+
+**Request:**
+
+```graphql
+mutation {
+  initiateUpload(input: {
+    key: "example.png",
+    media_resource_type: CUSTOMER_ATTRIBUTE_FILE,
+    checksum_sha256: "UNhY4JhezH9gQYqvDMWrWH9CwlcKiECVqejMrND2VFw="
+  }) {
+    upload_url
+    key
+    expires_at
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "initiateUpload": {
+      "upload_url": "https://<bucket>.s3.<region>.amazonaws.com/<tenant-id>/example_5f2b1c9e8a7d6e4f3c2b1a09.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=<value>...",
+      "key": "example_5f2b1c9e8a7d6e4f3c2b1a09.png",
+      "expires_at": "1789433073"
+    }
+  }
+}
+```
+
+When you upload the file, send the same checksum in the `x-amz-checksum-sha256` header:
+
+```bash
+curl --fail --show-error --silent -X PUT \
+  --header 'x-amz-checksum-sha256: UNhY4JhezH9gQYqvDMWrWH9CwlcKiECVqejMrND2VFw=' \
+  --data-binary @./example.png \
+  '<upload_url>'
 ```
 
 ### Initiate an upload for a negotiable quote attachment
