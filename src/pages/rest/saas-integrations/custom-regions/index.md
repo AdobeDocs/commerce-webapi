@@ -10,7 +10,7 @@ keywords:
 
 # Custom regions
 
-The custom regions REST endpoints let's you manage a country's regions, such as states or provinces, for countries that are not covered by the default region data. Use this API to add the regions a country needs, so customers can select a region from a list.
+The `/V1/directory/countries/:countryId/regions` REST endpoints allow you to create and manage custom regions, such as states or provinces, for countries in which this data is not predefined in Adobe Commerce.
 
 Each custom region receives a `region_id`, so you can use it in customer addresses, checkout, shipping, and tax rules.
 
