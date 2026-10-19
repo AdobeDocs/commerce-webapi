@@ -34,7 +34,7 @@ The query accepts the following argument:
 
 ## Reference
 
-<!-- The [`stockAvailability`](/reference/graphql/saas/index.md#stockavailability) reference provides detailed information about the types and fields defined in this query. -->
+[//]: # (The [`stockAvailability`](/reference/graphql/saas/index.md#stockavailability) reference provides detailed information about the types and fields defined in this query.)
 
 The `stockAvailability` reference provides detailed information about the types and fields defined in this query.
 
