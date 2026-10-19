@@ -34,7 +34,7 @@ After the file is successfully uploaded, use the [`finishUpload` mutation](finis
 
 To confirm that the file Amazon S3 receives matches the file the client sent, include the optional `checksum_sha256` field in the `initiateUpload` input. Checksum validation is opt-in. If you omit the field, the upload process does not change.
 
-The `checksum_sha256` value must be the Base64-encoded raw 32-byte SHA-256 digest of the file. Do not use the hexadecimal digest that most checksum tools display by default. The client must compute the value from the file before it calls the mutation. For example:
+The `checksum_sha256` value must be the Base64-encoded raw 32-byte SHA-256 digest of the file. Do not use hexadecimal. The client must compute the value from the file before it calls the mutation. For example:
 
 ```bash
 openssl dgst -sha256 -binary example.png | base64
@@ -44,9 +44,7 @@ When you supply a checksum, the upload process changes as follows:
 
 * Commerce signs the checksum into the presigned URL. If the value is not a valid Base64-encoded SHA-256 digest, the mutation returns the error `Invalid checksum value. Expected a base64-encoded SHA-256 digest.`
 * The client must send the same value in the `x-amz-checksum-sha256` header of the PUT request to the `upload_url`.
-* Amazon S3 rejects the upload if the bytes it receives do not match the checksum. The file is not stored.
-
-The `finishUpload` mutation does not revalidate the checksum. It performs the same validation as it does for an upload without a checksum.
+* Amazon S3 rejects the upload if the checksums do not match. The file is not stored.
 
 ## reCAPTCHA validation
 
@@ -132,7 +130,7 @@ mutation {
   initiateUpload(input: {
     key: "example.png",
     media_resource_type: CUSTOMER_ATTRIBUTE_FILE,
-    checksum_sha256: "UNhY4JhezH9gQYqvDMWrWH9CwlcKiECVqejMrND2VFw="
+    checksum_sha256: "ABCY4JhezH9gQYqvDMWrWH9CwlcKiECVqejMrND2VFw="
   }) {
     upload_url
     key
@@ -159,7 +157,7 @@ When you upload the file, send the same checksum in the `x-amz-checksum-sha256` 
 
 ```bash
 curl --fail --show-error --silent -X PUT \
-  --header 'x-amz-checksum-sha256: UNhY4JhezH9gQYqvDMWrWH9CwlcKiECVqejMrND2VFw=' \
+  --header 'x-amz-checksum-sha256: ABCY4JhezH9gQYqvDMWrWH9CwlcKiECVqejMrND2VFw=' \
   --data-binary @./example.png \
   '<upload_url>'
 ```
