@@ -13,4 +13,6 @@ The [`pickupLocations`](pickup-locations.md) query returns the pickup locations 
 
 <Fragment src="../../../../includes/saas-only.md"/>
 
-The [`sourceAvailability`](source-availability.md) query returns a SKU-level availability for each requested SKU.
+The [`sourceAvailability`](source-availability.md) query returns per-source availability for each requested SKU.
+
+The [`stockAvailability`](stock-availability.md) query returns the stock-level salable quantity and Add to Cart eligibility for up to 100 SKUs.
