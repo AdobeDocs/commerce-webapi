@@ -160,6 +160,7 @@
         - [Catalog price rules](/rest/saas-integrations/catalog-price-rules/index.md)
         - [Company roles](/rest/saas-integrations/company-roles/index.md)
         - [Custom email](/rest/saas-integrations/custom-email/index.md)
+        - [Custom regions](/rest/saas-integrations/custom-regions/index.md)
         - [Gift card accounts](/rest/saas-integrations/gift-card-accounts/index.md)
         - [Login as Customer](/rest/saas-integrations/login-as-customer/index.md)
         - [Order management](/rest/saas-integrations/order-management/index.md)
