@@ -20,39 +20,7 @@ The query returns only SKUs that the shopper can see in the current website's ca
 - The product is not assigned to the current website, or is disabled in the current store.
 - The shopper's customer group cannot see the product because of B2B shared catalog assignments or category permissions.
 
-## Syntax
-
-```graphql
-stockAvailability(skus: [String!]!): [StockAvailability!]!
-```
-
-The query accepts the following argument:
-
-| Argument | Description |
-| --- | --- |
-| `skus` | Required. The product SKUs to report availability for. Accepts up to 100 entries. |
-
-## Reference
-
-[//]: # (The [`stockAvailability`](/reference/graphql/saas/index.md#stockavailability) reference provides detailed information about the types and fields defined in this query.)
-
-The `stockAvailability` reference provides detailed information about the types and fields defined in this query.
-
-## Output attributes
-
-The `StockAvailability` object contains the following attributes:
-
-| Attribute | Data type | Description |
-| --- | --- | --- |
-| `sku` | String! | The product SKU that the availability applies to. |
-| `salable_qty` | Float | The quantity that can be purchased right now. This value is the physical quantity across the stock's sources, net of every open reservation and the out-of-stock threshold. |
-| `is_in_stock` | Boolean! | Whether the smallest valid purchase can be fulfilled from stock on hand, excluding any backorder allowance. `false` for a SKU that is purchasable only through backorders. For a SKU whose stock is not tracked, or for a composite parent, this value equals `is_salable`. |
-| `is_salable` | Boolean! | Whether the SKU can be added to the cart right now in its smallest valid purchase quantity, with backorders considered. This field is the authoritative Add to Cart gate. |
-| `backorder_message` | String | A customer-facing pre-order notice. Populated only when the SKU is salable solely because backorders with customer notification are enabled, meaning the SKU is salable but not in stock. `null` otherwise. |
-
-The smallest valid purchase quantity is the SKU's minimum sale quantity, rounded up to its quantity increment. By default, it is one unit.
-
-### Salability
+## Salability
 
 The `is_salable` value matches the cart's Add to Cart validation:
 
@@ -61,7 +29,7 @@ The `is_salable` value matches the cart's Add to Cart validation:
 - For a composite parent, it respects the parent's own stock status. A configurable product whose parent is set to **Out of Stock** is not salable, even when its children are in stock.
 - It is `true` for a SKU whose stock is not tracked. On a custom stock, the SKU must also be assigned to one of the stock's sources.
 
-### Choose a field for the storefront
+## Choose a field for the storefront
 
 Use the following table to choose which field drives each storefront element:
 
@@ -72,11 +40,19 @@ Use the following table to choose which field drives each storefront element:
 | Show an **In stock** or ships-now label | `is_in_stock` |
 | Show an **Only X left** badge | `salable_qty`, only when `is_in_stock` is `true` and the SKU has no negative out-of-stock threshold. Otherwise, show `backorder_message` or the stock state. |
 
+## Syntax
+
+```graphql
+stockAvailability(skus: [String!]!): [StockAvailability!]!
+```
+
+## Reference
+
+[//]: # (The [`stockAvailability`](/reference/graphql/saas/index.md#stockavailability) reference provides detailed information about the types and fields defined in this query.)
+
+The `stockAvailability` reference provides detailed information about the types and fields defined in this query.
+
 ## Example usage
-
-The following examples show how to check stock-level availability.
-
-### Check availability for multiple SKUs
 
 The following query checks availability for a simple product and a configurable product. In this example, the store's **Only X left Threshold** is set to `5`, and the configurable product's parent is set to **Out of Stock**.
 
