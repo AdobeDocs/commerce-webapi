@@ -1,7 +1,7 @@
 {
-  "total": 644,
+  "total": 645,
   "offset": 0,
-  "limit": 644,
+  "limit": 645,
   "data": [
     {
       "page": "/",
@@ -27,7 +27,7 @@
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "10/8/2026"
+      "lastUpdated": "10/19/2026"
     },
     {
       "page": "/get-started/",
@@ -3770,7 +3770,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "10/6/2026"
+      "lastUpdated": "10/19/2026"
     },
     {
       "page": "/graphql/schema/wishlist/",
@@ -5494,7 +5494,7 @@
         "https://avatars.githubusercontent.com/u/16409901?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "10/8/2026"
+      "lastUpdated": "10/19/2026"
     },
     {
       "page": "/rest/saas-integrations/cart-custom-price/",
@@ -5525,6 +5525,13 @@
       "lastUpdated": "9/3/2026"
     },
     {
+      "page": "/rest/saas-integrations/custom-regions/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/98363870?v=4"
+      ],
+      "lastUpdated": "10/19/2026"
+    },
+    {
       "page": "/rest/saas-integrations/gift-card-accounts/",
       "avatars": [
         "https://avatars.githubusercontent.com/u/12731225?v=4",
@@ -5553,7 +5560,7 @@
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "9/23/2026"
+      "lastUpdated": "10/19/2026"
     },
     {
       "page": "/rest/saas-integrations/shipping-discounts/",
