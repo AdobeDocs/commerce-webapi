@@ -31,7 +31,7 @@ The per-source portion of the [`sourceAvailability` query](../queries/source-ava
 
 1. Set **Enable `sourceAvailability` GraphQL Query** to `Yes` and save the configuration.
 
-While this setting is disabled, the `sources` list in the query response is empty.
+While this setting is disabled, the `sourceAvailability` query returns an empty list. The [`stockAvailability` query](../queries/stock-availability.md) does not disclose sources and is not affected by this setting.
 
 For more information, see [Global options](https://experienceleague.adobe.com/en/docs/commerce-admin/inventory/configuration/global-options) and [Inventory configuration](https://experienceleague.adobe.com/en/docs/commerce-admin/config/catalog/inventory#per-source-availability-storefront).
 
@@ -198,18 +198,26 @@ Authoritative shipment enforcement occurs outside the Admin and rejects a deduct
 
 ## Read availability and saleability
 
-The [`sourceAvailability` query](../queries/source-availability.md) returns a SKU-level saleability assessment for each requested SKU. When per-source disclosure is enabled, the query also returns per-source availability, which is calculated the same way as the order placement guard, as physical quantity net of open source-level reservations.
+Two queries report availability, and you can request both in a single GraphQL request:
 
-A request accepts a maximum of 100 `skus` values and, when supplied, a maximum of 100 `source_codes` values. Consider splitting larger lists into batches that stay within both limits.
+- The [`stockAvailability` query](../queries/stock-availability.md) returns the stock-level salable quantity and Add to Cart eligibility for each requested SKU. It accounts for every open reservation, including orders placed without a nominated source.
+- The [`sourceAvailability` query](../queries/source-availability.md) returns per-source availability when per-source disclosure is enabled. Per-source availability is calculated the same way as the order placement guard, as physical quantity net of open source-level reservations.
+
+Each query accepts a maximum of 100 `skus` values. The `sourceAvailability` query also accepts a maximum of 100 `source_codes` values. Consider splitting larger lists into batches that stay within these limits.
 
 **Request:**
 
 ```graphql
 query Availability {
+  stockAvailability(skus: ["24-MB01"]) {
+    sku
+    salable_qty
+    is_in_stock
+    is_salable           # authoritative Add to Cart gate (backorders considered)
+    backorder_message    # pre-order notice, or null
+  }
   sourceAvailability(skus: ["24-MB01"], only_in_stock: true) {
     sku
-    is_saleable          # authoritative Add-to-Cart gate (backorders considered)
-    backorder_message    # pre-order notice, or null
     sources {
       source_code
       name
@@ -226,11 +234,18 @@ query Availability {
 ```json
 {
   "data": {
+    "stockAvailability": [
+      {
+        "sku": "24-MB01",
+        "salable_qty": null,
+        "is_in_stock": true,
+        "is_salable": true,
+        "backorder_message": null
+      }
+    ],
     "sourceAvailability": [
       {
         "sku": "24-MB01",
-        "is_saleable": true,
-        "backorder_message": null,
         "sources": [
           {
             "source_code": "store_nyc_001",
@@ -246,25 +261,25 @@ query Availability {
 }
 ```
 
-For the full argument and type reference, see the [`sourceAvailability`](../queries/source-availability.md) query.
+For the full argument and type reference, see the [`stockAvailability`](../queries/stock-availability.md) and [`sourceAvailability`](../queries/source-availability.md) queries.
 
-### Gate Add to Cart on is_saleable
+### Gate Add to Cart on is_salable
 
-Use `is_saleable`, not `is_in_stock`, to determine whether a shopper can add a product to the cart. The `is_saleable` field is the authoritative purchase-eligibility signal and accounts for backorders. It is `true` when the SKU is physically in stock, or when the SKU is out of stock but backorders are enabled, which indicates a pre-order.
+Use the `stockAvailability` `is_salable` field, not `is_in_stock`, to determine whether a shopper can add a product to the cart. The `is_salable` field is the authoritative purchase-eligibility signal and accounts for backorders, the minimum sale quantity, and quantity increments. It is `true` when the SKU is in stock, or when the SKU is out of stock but backorders are enabled, which indicates a pre-order.
 
-The per-source `is_in_stock` field is a physical-inventory statement about a single source. It can be `false` for a SKU that remains purchasable through backorder, so gating the **Add to Cart** button on it incorrectly hides pre-order products. The `is_saleable` field is returned for every SKU, regardless of the per-source disclosure setting for the store.
+The per-source `is_in_stock` field is a physical-inventory statement about a single source. It can be `false` for a SKU that remains purchasable through backorder, so gating the **Add to Cart** button on it incorrectly hides pre-order products. The `stockAvailability` query returns `is_salable` for every visible SKU, regardless of the per-source disclosure setting for the store.
 
 ### Identify pre-order products
 
-The `backorder_message` field only populates when the SKU is saleable solely because notify-mode backorders are enabled and the salable quantity is depleted. Salable quantity is the physical quantity minus open reservations and the configured out-of-stock threshold. The field is `null` when salable quantity remains, when backorders are silent, or when the SKU is not saleable. Use the presence of a message to render a pre-order label next to the Add to Cart button.
+The `stockAvailability` `backorder_message` field only populates when the SKU is salable solely because notify-mode backorders are enabled, meaning the SKU is salable but not in stock. The field is `null` when the SKU is in stock, when backorders are silent, or when the SKU is not salable. Use the presence of a message to render a pre-order label next to the Add to Cart button.
 
-### Interpret `available_qty`
+### Interpret quantities
 
-The `available_qty` field returns an exact quantity only when the quantity is at or below the **Only X left Threshold** setting. Above the threshold, the field returns `null`. The threshold defaults to `0`, so by default every positive quantity is masked and the boolean fields carry the information.
+The `available_qty` and `salable_qty` fields return an exact quantity only when the quantity is at or below the **Only X left Threshold** setting. Above the threshold, the fields return `null`. The threshold defaults to `0`, so by default every positive quantity is masked and the boolean fields carry the information.
 
 ### Control source visibility
 
-The `sources` list only populates when per-source disclosure is enabled, and it is narrowed to the storefront-visible sources in the stock of the current sales channel. When disclosure is disabled, the list is empty, but `is_saleable` and `backorder_message` are still returned.
+The `sourceAvailability` query returns results only when per-source disclosure is enabled, and the `sources` list is narrowed to the storefront-visible sources in the stock of the current sales channel. When disclosure is disabled, the query returns an empty list. Use `stockAvailability` for per-SKU availability on those stores.
 
 Specify `source_codes` to restrict the report to named sources. A requested source that is not visible on the storefront, or that is not assigned to the stock of the sales channel, is silently omitted. Omit `only_in_stock`, which defaults to `false`, to include out-of-stock sources.
 
@@ -293,6 +308,7 @@ After an order that contains nominations is placed, the reservation lifecycle ru
 ## Related documentation
 
 - [`sourceAvailability` query](../queries/source-availability.md)
+- [`stockAvailability` query](../queries/stock-availability.md)
 - [`setNominatedSourceOnCartItems` mutation reference](/reference/graphql/saas/mutations.md#setnominatedsourceoncartitems)
 - [Add a source](https://experienceleague.adobe.com/en/docs/commerce-admin/inventory/sources/sources-add)
 - [Global options](https://experienceleague.adobe.com/en/docs/commerce-admin/inventory/configuration/global-options)
