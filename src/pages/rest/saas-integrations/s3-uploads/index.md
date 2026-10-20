@@ -16,11 +16,11 @@ Uploading files is a multi-step process, as shown in the following diagram:
 
 ![Upload files](../../../images/upload-file.png)
 
-1.  **Initiate the upload**: An admin or integration starts the upload by calling the `POST V1/media/initiate-upload` endpoint with the file name. Commerce then uses the AWS SDK to generate a URL for uploading the file.
+1.  **Initiate the upload**: An admin or integration starts the upload by calling the `POST V1/media/initiate-upload` endpoint with the file name. To validate file integrity, you can alternatively call the `POST V1/media/initiate-upload-with-checksum` endpoint and include a SHA-256 checksum of the file. Commerce then uses the AWS SDK to generate a URL for uploading the file.
 
 1. **Receive the response**: The response from the `initiate-upload` call includes a presigned URL, a unique key for the file, and an expiration time for the URL. The client code extracts these values from the response.
 
-1. **Upload the file**: The client uploads the file to a temporary S3 location using the presigned URL and an HTTP PUT request. For more information, see [PutObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html).
+1. **Upload the file**: The client uploads the file to a temporary S3 location using the presigned URL and an HTTP PUT request. If you supplied a checksum, the request must include it in the `x-amz-checksum-sha256` header. For more information, see [PutObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html).
 
 1. **Finalize the upload**: After uploading the file to S3, the client calls `POST V1/media/finish-upload` using the unique key returned by `initiate-upload`.
 
@@ -62,12 +62,49 @@ curl --request POST \
 }'
 ```
 
+### Initiate the upload with a checksum
+
+Use the `POST V1/media/initiate-upload-with-checksum` endpoint to validate the integrity of the uploaded file. This endpoint accepts the same parameters as `POST V1/media/initiate-upload` and has a required `checksumSha256` parameter.
+
+The `checksumSha256` value must be the Base64-encoded raw 32-byte SHA-256 digest of the file. Do not use hexadecimal digests. The client must compute the value from the file before it calls the endpoint. For example:
+
+```bash
+openssl dgst -sha256 -binary 1.png | base64
+```
+
+```bash
+curl --request POST \
+  --url https://<server>.commerce.adobe.com/<tenant-id>/V1/media/initiate-upload-with-checksum \
+  --header 'Authorization: Bearer <ACCESS_TOKEN>' \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "key": "1.png",
+    "media_resource_type": "CATEGORY_IMAGE",
+    "checksumSha256": "UNhY4JhezH9gQYqvDMWrWH9CwlcKiECVqejMrND2VFw="
+}'
+```
+
+When you supply a checksum, the upload process changes as follows:
+
+* Commerce signs the checksum into the presigned URL. If the value is not a valid Base64-encoded SHA-256 digest, the request fails with the error `Invalid checksum value. Expected a base64-encoded SHA-256 digest.`
+* The client must send the same value in the `x-amz-checksum-sha256` header of the PUT request to the presigned URL.
+* Amazon S3 rejects the upload if the checksums do not match. The file is not stored.
+
 ## Upload the file to S3
 
 The following curl command demonstrates how to upload a file using the presigned URL returned by the `POST V1/media/initiate-upload` call:
 
 ```bash
    curl --fail --show-error --silent -X PUT --data-binary @./cat.jpg 'https://<bucket>.s3.<region>.amazonaws.com/<path-to-temp-file>?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=<token>&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=<value>&X-Amz-Date=<value>&X-Amz-SignedHeaders=host&X-Amz-Expires=<value>&X-Amz-Signature=<value>...'
+```
+
+If you initiated the upload with a checksum, send the same value in the `x-amz-checksum-sha256` header:
+
+```bash
+curl --fail --show-error --silent -X PUT \
+  --header 'x-amz-checksum-sha256: UNhY4JhezH9gQYqvDMWrWH9CwlcKiECVqejMrND2VFw=' \
+  --data-binary @./1.png \
+  '<presigned-url>'
 ```
 
 ## Finish the upload
