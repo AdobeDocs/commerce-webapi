@@ -17,7 +17,7 @@ Inventory Management holds stock at the stock level and selects a source only at
 
 Storefront interaction uses the following:
 
-- Mutation - [`setNominatedSourceOnCartItems`](mutations/set-nominated-source-on-cart-items.md) sets or clears the nominated source on cart items.
-- Query - [`sourceAvailability`](mutations/set-nominated-source-on-cart-items.md#read-availability-and-saleability) reports availability per source.
-- Query - [`stockAvailability`](queries/stock-availability.md) reports the stock-level salable quantity and Add to Cart eligibility per SKU.
-- Cart item fields - [`nominated_source` and `nominated_source_errors`](mutations/set-nominated-source-on-cart-items.md#read-nomination-fields-on-cart-items) report the live state of a nomination on any cart item.
+- [`setNominatedSourceOnCartItems` mutation](mutations/set-nominated-source-on-cart-items.md) sets or clears the nominated source on cart items.
+- [`sourceAvailability` query](mutations/set-nominated-source-on-cart-items.md#read-availability-and-saleability) reports availability per source.
+- [`stockAvailability` query](queries/stock-availability.md) reports the stock-level salable quantity and Add to Cart eligibility per SKU.
+- [`nominated_source` and `nominated_source_errors` cart item fields](mutations/set-nominated-source-on-cart-items.md#read-nomination-fields-on-cart-items) report the live state of a nomination on any cart item.
