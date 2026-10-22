@@ -2854,6 +2854,10 @@ definitions:
   company-data-company-extension-interface:
     description: ExtensionInterface class for @see \Magento\Company\Api\Data\CompanyInterface
     properties:
+      aco_catalog_view_ids:
+        items:
+          type: string
+        type: array
       applicable_payment_method:
         type: integer
       applicable_shipping_method:
@@ -3883,6 +3887,93 @@ definitions:
     - id
     - code
     - name
+    type: object
+  directory-region-rest-api-data-region-create-request-interface:
+    description: 'Writable fields accepted when creating a region. Deliberately excludes
+      region_id, country_id, and system: region_id is assigned by the database, country_id
+      comes from the countryId URL segment, and system is always server-computed.
+      Magento''s webapi framework resolves setters strictly against this interface,
+      so sending any of those three fields in a request body is rejected with a 400
+      InputException ("... is not supported") rather than being accepted and applied.'
+    properties:
+      code:
+        description: Region code, e.g. "CA".
+        type: string
+      default_name:
+        description: Default (fallback) region name.
+        type: string
+      locale_names:
+        description: Locale-specific name overrides.
+        items:
+          "$ref": "#/definitions/directory-region-rest-api-data-region-locale-name-interface"
+        type: array
+    required:
+    - code
+    - default_name
+    type: object
+  directory-region-rest-api-data-region-data-interface:
+    description: Represents a country region backed by core's directory_country_region
+      table.
+    properties:
+      code:
+        description: Region code, e.g. "CA".
+        type: string
+      country_id:
+        description: Two-letter (ISO 3166-1 alpha-2) country id, e.g. "US".
+        type: string
+      default_name:
+        description: Default (fallback) region name.
+        type: string
+      locale_names:
+        description: Locale-specific name overrides. Always populated as an array
+          (including empty) in responses.
+        items:
+          "$ref": "#/definitions/directory-region-rest-api-data-region-locale-name-interface"
+        type: array
+      region_id:
+        description: Region id. Null for a region not yet persisted.
+        type: integer
+      system:
+        description: This region is a Magento system-seeded region (true) or was created
+          by a tenant via this API (false).
+        type: boolean
+    required:
+    - locale_names
+    - country_id
+    - system
+    - code
+    - default_name
+    type: object
+  directory-region-rest-api-data-region-locale-name-interface:
+    description: Represents a single locale-specific display name for a country region.
+    properties:
+      locale:
+        description: Locale code, e.g. "en_US".
+        type: string
+      name:
+        description: The localized region name.
+        type: string
+    required:
+    - locale
+    - name
+    type: object
+  directory-region-rest-api-data-region-search-result-interface:
+    description: Search results interface for country region list operations.
+    properties:
+      items:
+        description: The list of regions.
+        items:
+          "$ref": "#/definitions/directory-region-rest-api-data-region-data-interface"
+        type: array
+      search_criteria:
+        "$ref": "#/definitions/framework-search-criteria-interface"
+      total_count:
+        description: Total count.
+        type: integer
+    required:
+    - items
+    - search_criteria
+    - total_count
     type: object
   downloadable-data-downloadable-option-interface:
     description: Downloadable Option
@@ -19416,6 +19507,219 @@ paths:
       tags:
       - directory/countries/{countryId}
       summary: directory/countries/{countryId}
+  "/V1/directory/countries/{countryId}/regions":
+    get:
+      consumes:
+      - application/json
+      - application/xml
+      description: Retrieve regions belonging to the given country, matching search
+        criteria. $searchCriteria is optional; when omitted, all regions for the country
+        are returned unfiltered.
+      operationId: GetV1DirectoryCountriesCountryIdRegions
+      parameters:
+      - description: two-letter (ISO 3166-1 alpha-2) country id, e.g. "US"
+        in: path
+        name: countryId
+        required: true
+        type: string
+      - description: Field
+        in: query
+        name: searchCriteria[filterGroups][0][filters][0][field]
+        type: string
+      - description: Value
+        in: query
+        name: searchCriteria[filterGroups][0][filters][0][value]
+        type: string
+      - description: Condition type
+        in: query
+        name: searchCriteria[filterGroups][0][filters][0][conditionType]
+        type: string
+      - description: Sorting field.
+        in: query
+        name: searchCriteria[sortOrders][0][field]
+        type: string
+      - description: Sorting direction.
+        in: query
+        name: searchCriteria[sortOrders][0][direction]
+        type: string
+      - description: Page size.
+        in: query
+        name: searchCriteria[pageSize]
+        type: integer
+      - description: Current page.
+        in: query
+        name: searchCriteria[currentPage]
+        type: integer
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/directory-region-rest-api-data-region-search-result-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - directory/countries/{countryId}/regions
+      summary: directory/countries/{countryId}/regions
+    post:
+      consumes:
+      - application/json
+      - application/xml
+      description: 'Create one or more regions under the given country in a single
+        atomic operation. All-or-nothing: the whole payload is validated before anything
+        is written, and every region is persisted in one transaction, so a failure
+        anywhere leaves no rows behind. Validation failures are reported together
+        in one InputException, each naming the offending payload position (e.g. `regions[3].code`).
+        Region codes must be unique within the country *and* within the payload. The
+        number of regions accepted per call is capped.'
+      operationId: PostV1DirectoryCountriesCountryIdRegions
+      parameters:
+      - description: two-letter (ISO 3166-1 alpha-2) country id, e.g. "US"
+        in: path
+        name: countryId
+        required: true
+        type: string
+      - in: body
+        name: PostV1DirectoryCountriesCountryIdRegionsBody
+        schema:
+          properties:
+            regions:
+              items:
+                "$ref": "#/definitions/directory-region-rest-api-data-region-create-request-interface"
+              type: array
+          required:
+          - regions
+          type: object
+          xml:
+            name: request
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            description: in payload order
+            items:
+              "$ref": "#/definitions/directory-region-rest-api-data-region-data-interface"
+            type: array
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - directory/countries/{countryId}/regions
+      summary: directory/countries/{countryId}/regions
+  "/V1/directory/countries/{countryId}/regions/{regionId}":
+    delete:
+      consumes:
+      - application/json
+      - application/xml
+      description: Delete a region belonging to the given country. Cascades to its
+        locale names.
+      operationId: DeleteV1DirectoryCountriesCountryIdRegionsRegionId
+      parameters:
+      - description: two-letter (ISO 3166-1 alpha-2) country id, e.g. "US"
+        in: path
+        name: countryId
+        required: true
+        type: string
+      - in: path
+        name: regionId
+        required: true
+        type: integer
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            type: boolean
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - directory/countries/{countryId}/regions/{regionId}
+      summary: directory/countries/{countryId}/regions/{regionId}
+    put:
+      consumes:
+      - application/json
+      - application/xml
+      description: 'Update an existing region belonging to the given country. Locale
+        names use replace semantics: the provided array fully replaces the existing
+        set of locale-name rows for the region. A region cannot be moved to a different
+        country through this operation.'
+      operationId: PutV1DirectoryCountriesCountryIdRegionsRegionId
+      parameters:
+      - description: two-letter (ISO 3166-1 alpha-2) country id, e.g. "US"
+        in: path
+        name: countryId
+        required: true
+        type: string
+      - in: path
+        name: regionId
+        required: true
+        type: integer
+      - in: body
+        name: PutV1DirectoryCountriesCountryIdRegionsRegionIdBody
+        schema:
+          properties:
+            region:
+              "$ref": "#/definitions/directory-region-rest-api-data-region-create-request-interface"
+          required:
+          - region
+          type: object
+          xml:
+            name: request
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/directory-region-rest-api-data-region-data-interface"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        '500':
+          description: Internal Server error
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - directory/countries/{countryId}/regions/{regionId}
+      summary: directory/countries/{countryId}/regions/{regionId}
   "/V1/eav/attribute-sets":
     post:
       consumes:
@@ -22667,6 +22971,59 @@ paths:
       tags:
       - media/initiate-upload
       summary: media/initiate-upload
+  "/V1/media/initiate-upload-with-checksum":
+    post:
+      consumes:
+      - application/json
+      - application/xml
+      description: Generate a presigned S3 URL for direct upload, with a client-supplied
+        integrity checksum. $checksumSha256 must be the base64-encoded SHA-256 digest
+        the client computed from the file itself, *before* calling this method - we
+        never compute or invent a value on the client's behalf, since we don't have
+        the file. That exact value is signed into the presigned URL; Amazon S3 rejects
+        the upload outright if the bytes it actually receives don't match it.
+      operationId: PostV1MediaInitiateuploadwithchecksum
+      parameters:
+      - in: body
+        name: PostV1MediaInitiateuploadwithchecksumBody
+        schema:
+          properties:
+            checksumSha256:
+              type: string
+            key:
+              type: string
+            mediaResourceType:
+              type: string
+          required:
+          - key
+          - mediaResourceType
+          - checksumSha256
+          type: object
+          xml:
+            name: request
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            "$ref": "#/definitions/s3-presigned-upload-data-initiate-upload-response-interface"
+        '400':
+          description: 400 Bad Request
+          schema:
+            "$ref": "#/definitions/error-response"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - media/initiate-upload-with-checksum
+      summary: media/initiate-upload-with-checksum
   "/V1/modules":
     get:
       consumes:
@@ -32801,6 +33158,8 @@ tags:
 - name: customerSegments/search
 - name: directory/countries
 - name: directory/countries/{countryId}
+- name: directory/countries/{countryId}/regions
+- name: directory/countries/{countryId}/regions/{regionId}
 - name: eav/attribute-sets
 - name: eav/attribute-sets/{attributeSetId}
 - name: eav/attribute-sets/list
@@ -32863,6 +33222,7 @@ tags:
 - name: invoices/comments
 - name: media/finish-upload
 - name: media/initiate-upload
+- name: media/initiate-upload-with-checksum
 - name: modules
 - name: negotiable-cart-item-note
 - name: negotiable-cart-item-note/{noteId}
@@ -33260,6 +33620,8 @@ x-tagGroups:
   tags:
   - directory/countries
   - directory/countries/{countryId}
+  - directory/countries/{countryId}/regions
+  - directory/countries/{countryId}/regions/{regionId}
 - name: eav
   tags:
   - eav/attribute-sets
@@ -33342,6 +33704,7 @@ x-tagGroups:
   tags:
   - media/finish-upload
   - media/initiate-upload
+  - media/initiate-upload-with-checksum
 - name: modules
   tags:
   - modules
