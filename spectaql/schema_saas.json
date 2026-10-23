@@ -9416,13 +9416,9 @@
             "name": "telephone",
             "description": "The telephone number for the billing or shipping address.",
             "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
             },
             "defaultValue": null
           },
@@ -11398,6 +11394,45 @@
             "ofType": null
           }
         ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "CatalogViewContext",
+        "description": "",
+        "fields": [
+          {
+            "name": "accessToken",
+            "description": "RS256-signed access token (exp-only) authorizing the catalog view scope. Null when issuance is disabled or no active signing key is available.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "catalogViewId",
+            "description": "ACO Catalog View id for the company's entitled catalog view.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
         "enumValues": null,
         "possibleTypes": null
       },
@@ -14038,6 +14073,18 @@
                 "name": "CompanyAvailableShippingMethod",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "catalogViewContext",
+            "description": "ACO catalog-view runtime context (view id + signed access token) for this company. Null when the company has no entitled catalog view or the caller is not an authenticated company customer.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "CatalogViewContext",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -18008,6 +18055,22 @@
               "ofType": {
                 "kind": "OBJECT",
                 "name": "ProductViewVideo",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "gallery",
+            "description": "A list of all images and videos defined for the product, ordered as a single media gallery.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "UNION",
+                "name": "ProductViewMedia",
                 "ofType": null
               }
             },
@@ -25808,6 +25871,33 @@
             "deprecationReason": null
           },
           {
+            "name": "chain_totals",
+            "description": "Aggregated sales totals across every order in the order-edit chain identified by the `original_number` filter. Requires the `original_number.eq` filter; the `in` condition is not supported here. Returns null if the chain doesn't exist, is empty, or doesn't belong to the current customer.",
+            "args": [
+              {
+                "name": "filter",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "CustomerChainTotalsFilterInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "OrderChainTotal",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "companies",
             "description": "An object that contains a list of companies user is assigned to.",
             "args": [
@@ -27620,6 +27710,31 @@
       },
       {
         "kind": "INPUT_OBJECT",
+        "name": "CustomerChainTotalsFilterInput",
+        "description": "Filter input for customer chain totals.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "original_number",
+            "description": "Filter by any order number in an order-edit chain (the original order or one of its edited children) to return the full chain totals.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "FilterEqualTypeInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
         "name": "CustomerCreateInput",
         "description": "An input object for creating a customer.",
         "fields": null,
@@ -27795,6 +27910,42 @@
           {
             "name": "download_url",
             "description": "The fully qualified URL to the download file.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "file_extension",
+            "description": "The extension of the downloadable file, in lower case and without the leading dot. Null if unknown.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "file_name",
+            "description": "The name of the downloadable file, including its extension. Null if unknown.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "mime_type",
+            "description": "The MIME type of the downloadable file, such as `audio/mpeg` or `application/pdf`. Null if unknown.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -28632,6 +28783,16 @@
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "FilterRangeTypeInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "original_number",
+            "description": "Filter by any order number in an order-edit chain (the original order or one of its edited children) to return the full chain.",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "FilterEqualTypeInput",
               "ofType": null
             },
             "defaultValue": null
@@ -41432,6 +41593,16 @@
         "fields": null,
         "inputFields": [
           {
+            "name": "checksum_sha256",
+            "description": "Optional base64-encoded SHA-256 digest of the file, computed by the client before calling this mutation; when set, Amazon S3 rejects the upload if the received bytes don't match it",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "key",
             "description": "The name of the file to be uploaded, cannot contain slashes",
             "type": {
@@ -53905,6 +54076,161 @@
       },
       {
         "kind": "OBJECT",
+        "name": "OrderChainTotal",
+        "description": "Aggregated sales totals across every order in an order-edit chain.",
+        "fields": [
+          {
+            "name": "grand_total",
+            "description": "The sum of grand total across every order in the chain, net of canceled amounts.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Money",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "order_count",
+            "description": "The number of orders included in the chain aggregation.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "subtotal",
+            "description": "The sum of subtotal across every order in the chain, net of canceled subtotal amounts.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Money",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "total_canceled",
+            "description": "The sum of the amount canceled across every order in the chain.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Money",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "total_discounted",
+            "description": "The total discount amount across every order in the chain, net of canceled discount amounts (non-negative).",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Money",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "total_invoiced",
+            "description": "The sum of the amount invoiced across every order in the chain.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Money",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "total_refunded",
+            "description": "The sum of the amount refunded across every order in the chain.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Money",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "total_shipping",
+            "description": "The sum of shipping amount across every order in the chain, net of canceled shipping amounts.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Money",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "total_tax",
+            "description": "The sum of tax amount across every order in the chain, net of canceled tax amounts.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Money",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
         "name": "OrderCustomerInfo",
         "description": "",
         "fields": [
@@ -59759,6 +60085,22 @@
             "deprecationReason": null
           },
           {
+            "name": "gallery",
+            "description": "A list of all images and videos defined for the product, ordered as a single media gallery.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "UNION",
+                "name": "ProductViewMedia",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "lastModifiedAt",
             "description": "Date and time when the product was last updated.",
             "args": [],
@@ -61421,6 +61763,27 @@
         "interfaces": [],
         "enumValues": null,
         "possibleTypes": null
+      },
+      {
+        "kind": "UNION",
+        "name": "ProductViewMedia",
+        "description": "A single entry in the product media gallery. The entry can be either an image or a video.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "ProductViewImage",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "ProductViewVideo",
+            "ofType": null
+          }
+        ]
       },
       {
         "kind": "OBJECT",
@@ -65688,11 +66051,11 @@
           },
           {
             "name": "sourceAvailability",
-            "description": "Per-source availability for one or more SKUs, scoped to the storefront-visible sources of the current sales channel's stock. Availability is computed identically to the order-placement guard. Only SKUs of products the shopper may see in the current website's catalog are reported.",
+            "description": "Per-source availability for one or more SKUs, scoped to the storefront-visible sources of the current sales channel's stock. Availability is computed identically to the order-placement guard. Only SKUs of products the shopper may see in the current website's catalog are reported. Per-source availability is a physical snapshot, not a purchasable-quantity limit: use stockAvailability for the salable quantity and the Add to Cart gate. Returns an empty list when per-source disclosure is not enabled for the store (cataloginventory/source_availability/storefront_enabled off).",
             "args": [
               {
                 "name": "skus",
-                "description": "The product SKUs to report availability for. A SKU that matches no product, whose product is not assigned to the current website or is disabled in the current store, or that the shopper's customer group may not see in the catalog (B2B shared catalog assignment or category permissions) is silently omitted from the response.",
+                "description": "The product SKUs to report availability for, at most 100. A SKU that matches no product, whose product is not assigned to the current website or is disabled in the current store, or that the shopper's customer group may not see in the catalog (B2B shared catalog assignment or category permissions) is silently omitted from the response.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -65750,6 +66113,49 @@
                 "ofType": {
                   "kind": "OBJECT",
                   "name": "SkuSourceAvailability",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "stockAvailability",
+            "description": "Stock-level salable quantity and purchase eligibility for one or more SKUs, evaluated against the current sales channel's stock. Read directly from the inventory and reservation tables, so it is strongly consistent with what the cart enforces at add-to-cart and order placement, and accounts for every open reservation — including orders placed without a nominated source, which per-source availability cannot attribute to any one source. Can be combined with sourceAvailability in a single request. Only SKUs of products the shopper may see in the current website's catalog are reported.",
+            "args": [
+              {
+                "name": "skus",
+                "description": "The product SKUs to report availability for, at most 100. A SKU that matches no product, whose product is not assigned to the current website or is disabled in the current store, or that the shopper's customer group may not see in the catalog (B2B shared catalog assignment or category permissions) is silently omitted from the response.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "LIST",
+                    "name": null,
+                    "ofType": {
+                      "kind": "NON_NULL",
+                      "name": null,
+                      "ofType": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                      }
+                    }
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "StockAvailability",
                   "ofType": null
                 }
               }
@@ -75496,6 +75902,22 @@
             "deprecationReason": null
           },
           {
+            "name": "gallery",
+            "description": "A list of all images and videos defined for the product, ordered as a single media gallery.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "UNION",
+                "name": "ProductViewMedia",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "inputOptions",
             "description": "A list of input options. For example, a text field, a number field or a date field.",
             "args": [],
@@ -75981,34 +76403,6 @@
         "description": "Per-source availability for a single SKU across the sources of the current sales channel's stock.",
         "fields": [
           {
-            "name": "backorder_message",
-            "description": "Customer-facing pre-order notice, populated only when the SKU is saleable solely because notify-mode backorders are enabled and salable quantity is depleted (net of open reservations and the out-of-stock threshold); null otherwise (salable quantity remaining, silent backorders, or not saleable).",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "is_saleable",
-            "description": "Whether the SKU can be purchased right now, backorders considered: true when it is in stock, or out of stock with backorders enabled. This is the authoritative Add to Cart gate — gate on this, not on the per-source is_in_stock (which is a physical-inventory statement). Returned for every reported SKU regardless of whether per-source disclosure is enabled for the store; an unknown SKU, or one hidden from the shopper's catalog, is not reported at all.",
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "Boolean",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "sku",
             "description": "The product SKU the availability applies to.",
             "args": [],
@@ -76026,7 +76420,7 @@
           },
           {
             "name": "sources",
-            "description": "Availability at each reported source. Empty when per-source disclosure is not enabled for the store (cataloginventory/source_availability/storefront_enabled off); is_saleable and backorder_message are still returned.",
+            "description": "Availability at each reported source.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -76928,6 +77322,89 @@
             "ofType": null
           }
         ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "StockAvailability",
+        "description": "Stock-level availability of a single SKU in the current sales channel's stock.",
+        "fields": [
+          {
+            "name": "backorder_message",
+            "description": "Customer-facing pre-order notice, populated only when the SKU is salable solely because notify-mode backorders are enabled — it is salable but not in stock; null otherwise (in stock, silent backorders, or not salable).",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "is_in_stock",
+            "description": "Whether the smallest valid purchase (the minimum sale quantity, rounded up to the quantity increment; one unit by default) can be fulfilled from stock on hand, excluding any backorder allowance. False for a SKU that is purchasable only through backorders. For a SKU whose stock is not tracked, or a composite parent, equal to is_salable.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "is_salable",
+            "description": "Whether the SKU can be added to the cart right now in its smallest valid purchase quantity (the minimum sale quantity, rounded up to the quantity increment; one unit by default), backorders considered. This is the authoritative Add to Cart gate. Respects the merchant's stock status override, and for a composite parent (configurable, bundle, grouped) the parent's own stock status: a parent set Out of Stock is not salable even when its children are in stock. True for a SKU whose stock is not tracked (Manage Stock disabled), except that on a custom stock a SKU must be assigned to one of the stock's sources to be salable.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "salable_qty",
+            "description": "Quantity that can be purchased right now: physical quantity across the stock's sources, net of every open reservation and the out-of-stock threshold; the figure the cart enforces. With a negative out-of-stock threshold (backorders allowed down to a limit) it includes that backorder allowance, so it can exceed the physical stock; do not use it as an on-hand count, such as an only-X-left badge. is_in_stock tells whether a purchase can ship from stock on hand. The exact value is returned only when it is at or below the merchant's storefront display threshold (cataloginventory/options/stock_threshold_qty). Null above that threshold, when the SKU's stock is not tracked, or for a composite parent (configurable, bundle, grouped).",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "sku",
+            "description": "The product SKU the availability applies to.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
         "enumValues": null,
         "possibleTypes": null
       },
