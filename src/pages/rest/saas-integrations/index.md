@@ -19,4 +19,5 @@ Review the following topics to learn more about REST APIs available only on Adob
 - [Order management](order-management/index.md)
 - [S3 uploads](s3-uploads/index.md)
 - [Shipping discounts](shipping-discounts/index.md)
+- [Store credit](store-credit/index.md)
 - [System configuration](system-config/index.md)

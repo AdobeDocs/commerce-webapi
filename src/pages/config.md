@@ -166,6 +166,7 @@
         - [Order management](/rest/saas-integrations/order-management/index.md)
         - [S3 uploads](/rest/saas-integrations/s3-uploads/index.md)
         - [Shipping discounts](/rest/saas-integrations/shipping-discounts/index.md)
+        - [Store credit](/rest/saas-integrations/store-credit/index.md)
         - [System configuration](/rest/saas-integrations/system-config/index.md)
     - [Introduction](/graphql/index.md)
     - [Usage](/graphql/usage/index.md)
