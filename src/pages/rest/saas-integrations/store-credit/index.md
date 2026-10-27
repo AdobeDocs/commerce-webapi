@@ -10,17 +10,17 @@ keywords:
 
 # Store credit
 
-Adobe Commerce as a Cloud Service has a separate role resource for spending a customer's store credit. Admin users and integrations need the **Can Spend Store Credit** (`Magento_CustomerBalance::spend_balance`) resource to apply store credit to a cart and to place an order for a cart that already has store credit applied.
+Adobe Commerce as a Cloud Service has a separate role resource for using a customer's store credit. Admin users and integrations need the **Can Spend Store Credit** (`Magento_CustomerBalance::spend_balance`) resource to apply store credit to a cart and to place an order for a cart that already has store credit applied.
 
-In the role and integration editors, the resource is under **Sales** > **Operations** > **Orders** > **Actions** > **Create** > **Can Spend Store Credit**.
+This role is available in the [user role](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/user-accounts/permissions-user-roles) and [integration resources](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/integrations) under **Sales** > **Operations** > **Orders** > **Actions** > **Create** > **Can Spend Store Credit**.
 
-The **Manage Store Credit Balances** (`Magento_CustomerBalance::manage_balance`) resource controls viewing and updating store credit balances in the Admin. The endpoints on this page do not use it. For the Admin behavior of both resources, see [Apply store credit](https://experienceleague.adobe.com/en/docs/commerce-admin/customers/customer-accounts/store-credit/store-credit-using) in the _Admin Guide_.
+The [**Manage Store Credit Balances** (`Magento_CustomerBalance::manage_balance`)](https://experienceleague.adobe.com/en/docs/commerce-admin/customers/customer-accounts/store-credit/store-credit-using) resource allows users to view and update the store credit balances in the Admin. The following endpoints do not use it.
 
 ## Authentication
 
-The endpoints on this page require an admin or integration [bearer token](../../authentication/index.md).
+The following endpoints require an admin or integration [bearer token](../../authentication/index.md).
 
-Customers apply their own store credit with the `applyStoreCreditToCart` GraphQL mutation and place the order with the `placeOrder` mutation. These requests do not check the role resources on this page.
+Customers apply their own store credit with the `applyStoreCreditToCart` GraphQL mutation and place the order with the `placeOrder` mutation, which do not require access to these resources.
 
 ## REST API reference
 
@@ -31,7 +31,7 @@ Customers apply their own store credit with the `applyStoreCreditToCart` GraphQL
 
 ### Apply store credit to a cart
 
-`POST /V1/carts/:cartId/balance/apply` applies the store credit balance of the cart's customer, up to the cart total. The request has no body.
+`POST /V1/carts/:cartId/balance/apply` applies the customer cart's store credit balance, up to the cart total. The request has no body.
 
 **Response (200):**
 
@@ -39,7 +39,7 @@ Customers apply their own store credit with the `applyStoreCreditToCart` GraphQL
 true
 ```
 
-### Place an order for a cart that has store credit applied
+### Place an order for a cart with with store credit
 
 Store credit can be applied to a cart by the customer on the storefront or by another admin user or integration. Commerce deducts it from the customer's balance when the order is placed, so `PUT /V1/carts/:cartId/order` requires `Magento_CustomerBalance::spend_balance` whenever the cart has store credit applied. Without the resource, the request returns `401`.
 
@@ -62,5 +62,3 @@ When the role includes `Magento_Cart::manage` but not `Magento_CustomerBalance::
 |---|---|
 | `POST /V1/carts/:cartId/balance/apply` | `Magento_Cart::manage, Magento_CustomerBalance::spend_balance` |
 | `PUT /V1/carts/:cartId/order` for a cart that has store credit applied | `Magento_CustomerBalance::spend_balance` |
-
-If the role does not include `Magento_Cart::manage`, the request is rejected before store credit is checked. The `resources` value is then `Magento_Cart::manage` for the order request, and the same as in the table for the apply request.
