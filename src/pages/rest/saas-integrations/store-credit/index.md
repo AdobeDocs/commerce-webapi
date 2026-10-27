@@ -12,7 +12,7 @@ keywords:
 
 Adobe Commerce as a Cloud Service has a separate role resource for using a customer's store credit. Admin users and integrations need the **Can Spend Store Credit** (`Magento_CustomerBalance::spend_balance`) resource to apply store credit to a cart and to place an order for a cart that already has store credit applied.
 
-This role is available in the [user role](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/user-accounts/permissions-user-roles) and [integration resources](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/integrations) under **Sales** > **Operations** > **Orders** > **Actions** > **Create** > **Can Spend Store Credit**.
+This resource is available in the [user role](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/user-accounts/permissions-user-roles) and [integration resources](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/integrations) under **Sales** > **Operations** > **Orders** > **Actions** > **Create** > **Can Spend Store Credit**.
 
 The [**Manage Store Credit Balances** (`Magento_CustomerBalance::manage_balance`)](https://experienceleague.adobe.com/en/docs/commerce-admin/customers/customer-accounts/store-credit/store-credit-using) resource allows users to view and update the store credit balances in the Admin. The following endpoints do not use it.
 
@@ -39,7 +39,7 @@ Customers apply their own store credit with the `applyStoreCreditToCart` GraphQL
 true
 ```
 
-### Place an order for a cart with with store credit
+### Place an order for a cart with store credit
 
 Store credit can be applied to a cart by the customer on the storefront or by another admin user or integration. Commerce deducts it from the customer's balance when the order is placed, so `PUT /V1/carts/:cartId/order` requires `Magento_CustomerBalance::spend_balance` whenever the cart has store credit applied. Without the resource, the request returns `401`.
 
