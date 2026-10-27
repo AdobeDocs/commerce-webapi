@@ -23,6 +23,7 @@ The cart mutations allow you to perform the following operations:
   * [`clearCart`](clear-cart.md)
   * [`addVirtualProductsToCart`](add-virtual-products.md)
   * [`removeItemFromCart`](remove-item.md)
+  * [`selectFreeGiftForCart`](select-free-gift.md)
   * [`setGiftOptionsOnCart`](set-gift-options.md)
   * [`updateCartItems`](update-items.md)
 

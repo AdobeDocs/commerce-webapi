@@ -5,15 +5,11 @@ keywords:
   - B2B
 ---
 
-<Fragment src="../../../../../includes/saas-only.md"/>
-
-<Fragment src="../../../../../includes/commerce-only.md"/>
+<Fragment src="/includes/commerce-only.md"/>
 
 # placeNegotiableQuoteOrderV2 mutation
 
-<InlineAlert variant="info" slots="text1" />
-
-This mutation is part of the B2B Storefront Compatibility Package and is only available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview).
+<Fragment src="/includes/scp-b2b-mutation.md" />
 
 The `placeNegotiableQuoteOrderV2` mutation converts a negotiable quote into an order and returns the full order object.
 

@@ -18,7 +18,7 @@ Contains tax item details.
 {
   "amount": Money,
   "rate": 987.65,
-  "title": "xyz789"
+  "title": "abc123"
 }
 ```
 
@@ -96,7 +96,7 @@ Defines a price based on the quantity purchased.
 {
   "discount": ProductDiscount,
   "final_price": Money,
-  "quantity": 987.65
+  "quantity": 123.45
 }
 ```
 
@@ -115,7 +115,7 @@ Defines the input schema for unassigning a child company from its parent company
 #### Example
 
 ```json
-{"child_company_id": 4}
+{"child_company_id": "4"}
 ```
 
 <HorizontalLine />
@@ -159,12 +159,34 @@ Contains the response to the request to unassign a child company.
 {
   "unitName": "abc123",
   "storefrontLabel": "xyz789",
-  "pagePlacement": "xyz789",
+  "pagePlacement": "abc123",
   "displayNumber": 123,
   "pageType": "abc123",
-  "unitStatus": "xyz789",
-  "typeId": "xyz789",
+  "unitStatus": "abc123",
+  "typeId": "abc123",
   "filterRules": [FilterRuleInput]
+}
+```
+
+<HorizontalLine />
+
+### UnitSelector
+
+Provide either rec unit ids or labels to retrieve rec units
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `unitIds` - [`[String!]`](/reference/graphql/saas/types-q-s.md#string) | List unit IDs of preconfigured units |
+| `labels` - [`[String!]`](/reference/graphql/saas/types-q-s.md#string) | List of labels of the preconfigured unit |
+
+#### Example
+
+```json
+{
+  "unitIds": ["xyz789"],
+  "labels": ["abc123"]
 }
 ```
 
@@ -210,6 +232,43 @@ Contains details about the cart after updating items.
   "cart": Cart,
   "errors": [CartUserInputError]
 }
+```
+
+<HorizontalLine />
+
+### UpdateCompanyConfigInput
+
+Defines the input schema for updating company configuration.
+
+#### Input Fields
+
+| Input Field | Description |
+|-------------|-------------|
+| `address_book_enabled` - [`Boolean`](/reference/graphql/saas/types-a-b.md#boolean) | Indicates whether the company address book is enabled. |
+| `custom_shipping_address_enabled` - [`Boolean`](/reference/graphql/saas/types-a-b.md#boolean) | Indicates whether custom shipping address entry is allowed when the company address book is enabled. |
+
+#### Example
+
+```json
+{"address_book_enabled": false, "custom_shipping_address_enabled": false}
+```
+
+<HorizontalLine />
+
+### UpdateCompanyConfigOutput
+
+Contains the response to the request to update company configuration.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `company` - [`Company`](/reference/graphql/saas/types-c-e.md#company) | The updated company. |
+
+#### Example
+
+```json
+{"company": Company}
 ```
 
 <HorizontalLine />
@@ -327,7 +386,7 @@ Defines updates to a `GiftRegistry` object.
     GiftRegistryDynamicAttributeInput
   ],
   "event_name": "abc123",
-  "message": "abc123",
+  "message": "xyz789",
   "privacy_settings": "PRIVATE",
   "shipping_address": GiftRegistryShippingAddressInput,
   "status": "ACTIVE"
@@ -353,8 +412,8 @@ Defines updates to an item in a gift registry.
 ```json
 {
   "gift_registry_item_uid": "4",
-  "note": "abc123",
-  "quantity": 123.45
+  "note": "xyz789",
+  "quantity": 987.65
 }
 ```
 
@@ -478,7 +537,7 @@ Specifies the items to update.
 ```json
 {
   "items": [NegotiableQuoteItemQuantityInput],
-  "quote_uid": "4"
+  "quote_uid": 4
 }
 ```
 
@@ -567,12 +626,12 @@ Defines the changes to be made to an approval rule.
 ```json
 {
   "applies_to": ["4"],
-  "approvers": [4],
+  "approvers": ["4"],
   "condition": CreatePurchaseOrderApprovalRuleConditionInput,
   "description": "abc123",
   "name": "xyz789",
   "status": "ENABLED",
-  "uid": 4
+  "uid": "4"
 }
 ```
 
@@ -587,6 +646,7 @@ An input object that defines which requistion list characteristics to update.
 | Input Field | Description |
 |-------------|-------------|
 | `description` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The updated description of the requisition list. |
+| `is_public` - [`Boolean`](/reference/graphql/saas/types-a-b.md#boolean) | Indicates whether the requisition list is publicly shareable. Optional; pass true to make the list public or false to make it private again. When omitted, the current value is left unchanged. |
 | `name` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The new name of the requisition list. |
 
 #### Example
@@ -594,6 +654,7 @@ An input object that defines which requistion list characteristics to update.
 ```json
 {
   "description": "abc123",
+  "is_public": false,
   "name": "abc123"
 }
 ```
@@ -619,8 +680,8 @@ Defines which items in a requisition list to update.
 {
   "entered_options": [EnteredOptionInput],
   "item_id": "4",
-  "quantity": 123.45,
-  "selected_options": ["abc123"]
+  "quantity": 987.65,
+  "selected_options": ["xyz789"]
 }
 ```
 
@@ -679,7 +740,7 @@ Contains the name and visibility of an updated wish list.
 ```json
 {
   "name": "abc123",
-  "uid": 4,
+  "uid": "4",
   "visibility": "PUBLIC"
 }
 ```
@@ -746,7 +807,7 @@ Contains details about a failed validation attempt.
 #### Example
 
 ```json
-{"message": "abc123", "type": "NOT_FOUND"}
+{"message": "xyz789", "type": "NOT_FOUND"}
 ```
 
 <HorizontalLine />
@@ -916,10 +977,10 @@ Vault payment inputs
 
 ```json
 {
-  "payment_source": "abc123",
-  "payments_order_id": "abc123",
+  "payment_source": "xyz789",
+  "payments_order_id": "xyz789",
   "paypal_order_id": "abc123",
-  "public_hash": "xyz789"
+  "public_hash": "abc123"
 }
 ```
 
@@ -959,7 +1020,7 @@ User view history
 ```json
 {
   "date": "2007-12-03T10:15:30Z",
-  "sku": "xyz789"
+  "sku": "abc123"
 }
 ```
 
@@ -1001,9 +1062,12 @@ An implementation for virtual product cart items.
 | `discount` - [`[Discount]`](/reference/graphql/saas/types-c-e.md#discount) | Contains discount for quote line item. |
 | `errors` - [`[CartItemError]`](/reference/graphql/saas/types-c-e.md#cartitemerror) | An array of errors encountered while loading the cart item |
 | `is_available` - [`Boolean!`](/reference/graphql/saas/types-a-b.md#boolean) | True if requested quantity is less than available stock, false otherwise. *(Deprecated: Use `is_salable` instead. It indicates whether the line can be purchased, including backorder configuration.)* |
+| `is_free_gift` - [`Boolean!`](/reference/graphql/saas/types-a-b.md#boolean) | True if this line item was added by a Free Gift cart price rule. |
 | `is_salable` - [`Boolean!`](/reference/graphql/saas/types-a-b.md#boolean) | True when the item can be purchased and should not block checkout: stock status is in stock and either physical quantity covers the requested quantity or backorders are allowed. |
 | `max_qty` - [`Float`](/reference/graphql/saas/types-f-i.md#float) | Line item max qty in quote template |
 | `min_qty` - [`Float`](/reference/graphql/saas/types-f-i.md#float) | Line item min qty in quote template |
+| `nominated_source` - [`SourceAvailability`](/reference/graphql/saas/types-q-s.md#sourceavailability) | The source currently nominated for this cart item, with its live availability snapshot. Null when no source is nominated, or when the nominated source no longer resolves or is disabled (see nominated_source_errors). |
+| `nominated_source_errors` - [`[NominatedSourceError]!`](/reference/graphql/saas/types-k-p.md#nominatedsourceerror) | Live validation errors for this item's current nomination: UNKNOWN_SOURCE if the source no longer exists, SOURCE_DISABLED if it exists but is disabled, NOT_ENOUGH_QTY if available quantity has since dropped below the item's quantity. Empty when there is no nomination or it is still valid. SKU_SOURCE_CONFLICT never appears here — it is enforced only by the setNominatedSourceOnCartItems write path and cannot occur on an already-persisted cart. |
 | `not_available_message` - [`String`](/reference/graphql/saas/types-q-s.md#string) | Shortage or unavailability message for the line; null when the item is salable. |
 | `note_from_buyer` - [`[ItemNote]`](/reference/graphql/saas/types-f-i.md#itemnote) | The buyer's quote line item note. |
 | `note_from_seller` - [`[ItemNote]`](/reference/graphql/saas/types-f-i.md#itemnote) | The seller's quote line item note. |
@@ -1016,21 +1080,24 @@ An implementation for virtual product cart items.
 
 ```json
 {
-  "backorder_message": "xyz789",
+  "backorder_message": "abc123",
   "custom_attributes": [CustomAttribute],
   "customizable_options": [SelectedCustomizableOption],
   "discount": [Discount],
   "errors": [CartItemError],
   "is_available": false,
-  "is_salable": false,
+  "is_free_gift": true,
+  "is_salable": true,
   "max_qty": 123.45,
   "min_qty": 123.45,
-  "not_available_message": "xyz789",
+  "nominated_source": SourceAvailability,
+  "nominated_source_errors": [NominatedSourceError],
+  "not_available_message": "abc123",
   "note_from_buyer": [ItemNote],
   "note_from_seller": [ItemNote],
   "prices": CartItemPrices,
   "product": ProductInterface,
-  "quantity": 123.45,
+  "quantity": 987.65,
   "uid": "4"
 }
 ```
@@ -1073,7 +1140,10 @@ Defines a virtual product, which is a non-tangible product that does not require
 | `price_tiers` - [`[TierPrice]`](#tierprice) | An array of `TierPrice` objects. |
 | `product_links` - [`[ProductLinksInterface]`](/reference/graphql/saas/types-k-p.md#productlinksinterface) | An array of `ProductLinks` objects. |
 | `quantity` - [`Float`](/reference/graphql/saas/types-f-i.md#float) | Quantity of available stock |
+| `rating_summary` - [`Float!`](/reference/graphql/saas/types-f-i.md#float) | The average of all the ratings given to the product. |
 | `related_products` - [`[ProductInterface]`](/reference/graphql/saas/types-k-p.md#productinterface) | An array of products to be displayed in a Related Products block. |
+| `review_count` - [`Int!`](/reference/graphql/saas/types-f-i.md#int) | The total count of all the reviews given to the product. |
+| `reviews` - [`ProductReviews!`](/reference/graphql/saas/types-k-p.md#productreviews) | The list of products reviews. |
 | `short_description` - [`ComplexTextValue`](/reference/graphql/saas/types-c-e.md#complextextvalue) | A short description of the product. Its use depends on the theme. |
 | `sku` - [`String`](/reference/graphql/saas/types-q-s.md#string) | A number or code assigned to a product to identify the product, options, price, and manufacturer. |
 | `small_image` - [`ProductImage`](/reference/graphql/saas/types-k-p.md#productimage) | The relative path to the small image, which is used on catalog pages. |
@@ -1090,22 +1160,22 @@ Defines a virtual product, which is a non-tangible product that does not require
 
 ```json
 {
-  "canonical_url": "xyz789",
+  "canonical_url": "abc123",
   "categories": [CategoryInterface],
   "country_of_manufacture": "xyz789",
   "crosssell_products": [ProductInterface],
   "custom_attributesV2": ProductCustomAttributes,
   "description": ComplexTextValue,
   "gift_message_available": true,
-  "gift_wrapping_available": true,
+  "gift_wrapping_available": false,
   "gift_wrapping_price": Money,
   "image": ProductImage,
-  "is_returnable": "abc123",
+  "is_returnable": "xyz789",
   "manufacturer": 987,
-  "max_sale_qty": 987.65,
+  "max_sale_qty": 123.45,
   "media_gallery": [MediaGalleryInterface],
-  "meta_description": "xyz789",
-  "meta_keyword": "xyz789",
+  "meta_description": "abc123",
+  "meta_keyword": "abc123",
   "meta_title": "abc123",
   "min_sale_qty": 123.45,
   "name": "xyz789",
@@ -1113,12 +1183,15 @@ Defines a virtual product, which is a non-tangible product that does not require
   "new_to_date": "xyz789",
   "only_x_left_in_stock": 123.45,
   "options": [CustomizableOptionInterface],
-  "options_container": "xyz789",
+  "options_container": "abc123",
   "price_range": PriceRange,
   "price_tiers": [TierPrice],
   "product_links": [ProductLinksInterface],
   "quantity": 987.65,
+  "rating_summary": 123.45,
   "related_products": [ProductInterface],
+  "review_count": 987,
+  "reviews": ProductReviews,
   "short_description": ComplexTextValue,
   "sku": "abc123",
   "small_image": ProductImage,
@@ -1127,7 +1200,7 @@ Defines a virtual product, which is a non-tangible product that does not require
   "stock_status": "IN_STOCK",
   "swatch_image": "xyz789",
   "thumbnail": ProductImage,
-  "uid": "4",
+  "uid": 4,
   "upsell_products": [ProductInterface],
   "url_key": "abc123"
 }
@@ -1155,7 +1228,7 @@ Contains details about virtual products added to a requisition list.
 {
   "customizable_options": [SelectedCustomizableOption],
   "product": ProductInterface,
-  "quantity": 987.65,
+  "quantity": 123.45,
   "sku": "xyz789",
   "uid": 4
 }
@@ -1185,9 +1258,9 @@ Contains a virtual product wish list item.
   "added_at": "xyz789",
   "customizable_options": [SelectedCustomizableOption],
   "description": "abc123",
-  "id": "4",
+  "id": 4,
   "product": ProductInterface,
-  "quantity": 123.45
+  "quantity": 987.65
 }
 ```
 
@@ -1284,9 +1357,9 @@ Contains details about errors encountered when a customer added wish list items 
 ```json
 {
   "code": "PRODUCT_NOT_FOUND",
-  "message": "xyz789",
-  "wishlistId": "4",
-  "wishlistItemId": 4
+  "message": "abc123",
+  "wishlistId": 4,
+  "wishlistItemId": "4"
 }
 ```
 
@@ -1301,10 +1374,10 @@ A list of possible error types.
 | Enum Value | Description |
 |------------|-------------|
 | `PRODUCT_NOT_FOUND` |  |
+| `REQUIRED_PARAMETER_MISSING` |  |
 | `NOT_SALABLE` |  |
 | `INSUFFICIENT_STOCK` |  |
 | `UNDEFINED` |  |
-| `REQUIRED_PARAMETER_MISSING` |  |
 
 #### Example
 
@@ -1356,7 +1429,7 @@ Defines the items to add to a wish list.
 {
   "entered_options": [EnteredOptionInput],
   "parent_sku": "xyz789",
-  "quantity": 987.65,
+  "quantity": 123.45,
   "selected_options": ["4"],
   "sku": "xyz789"
 }
@@ -1395,10 +1468,10 @@ The interface for wish list items.
 
 ```json
 {
-  "added_at": "xyz789",
+  "added_at": "abc123",
   "customizable_options": [SelectedCustomizableOption],
-  "description": "abc123",
-  "id": "4",
+  "description": "xyz789",
+  "id": 4,
   "product": ProductInterface,
   "quantity": 123.45
 }
@@ -1420,10 +1493,7 @@ Specifies the IDs of the items to move and their quantities.
 #### Example
 
 ```json
-{
-  "quantity": 987.65,
-  "wishlist_item_id": "4"
-}
+{"quantity": 123.45, "wishlist_item_id": 4}
 ```
 
 <HorizontalLine />
@@ -1446,10 +1516,10 @@ Defines updates to items in a wish list.
 
 ```json
 {
-  "description": "abc123",
+  "description": "xyz789",
   "entered_options": [EnteredOptionInput],
   "quantity": 123.45,
-  "selected_options": ["4"],
+  "selected_options": [4],
   "wishlist_item_id": 4
 }
 ```

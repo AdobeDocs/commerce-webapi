@@ -4,9 +4,9 @@ description: The isSubscribedProductAlertStock query checks whether the logged-i
 
 ---
 
-<Fragment src="../../../../includes/saas-only.md"/>
-
 # isSubscribedProductAlertStock query
+
+<Fragment src="/includes/scp-query.md" />
 
 The `isSubscribedProductAlertStock` query checks whether the logged-in customer is subscribed to a stock availability alert for the specified product. Use this query to determine whether to show a subscribe or unsubscribe option in the storefront UI.
 

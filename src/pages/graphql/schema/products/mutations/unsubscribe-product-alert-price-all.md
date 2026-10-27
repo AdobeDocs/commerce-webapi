@@ -4,9 +4,9 @@ description: The unsubscribeProductAlertPriceAll mutation removes all price drop
 
 ---
 
-<Fragment src="../../../../includes/saas-only.md"/>
-
 # unsubscribeProductAlertPriceAll mutation
+
+<Fragment src="/includes/scp-mutation.md" />
 
 The `unsubscribeProductAlertPriceAll` mutation removes all price drop alert subscriptions for the logged-in customer across the current website. After calling this mutation, the customer no longer receives any price alert email notifications.
 

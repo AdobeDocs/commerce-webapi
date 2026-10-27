@@ -5,13 +5,11 @@ keywords:
   - B2B
 ---
 
-<Fragment src="../../../../../includes/commerce-only.md"/>
+<Fragment src="/includes/commerce-only.md"/>
 
 # updateCompanyAddress mutation
 
-<InlineAlert variant="info" slots="text1" />
-
-This mutation is part of the B2B Storefront Compatibility Package and is only available on [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview).
+<Fragment src="/includes/scp-b2b-mutation.md" />
 
 The `updateCompanyAddress` mutation allows a company admin or user who is assigned a role that contains the `Magento_CompanyAddressStorefrontCompatibility::edit` permission to update an existing company address.
 
@@ -29,6 +27,10 @@ mutation {
     }
 }
 ```
+
+## Reference
+
+The [`updateCompanyAddress`](/reference/graphql/saas/mutations.md#updatecompanyaddress) reference provides detailed information about the types and fields defined in this mutation.
 
 ## Example usage
 
