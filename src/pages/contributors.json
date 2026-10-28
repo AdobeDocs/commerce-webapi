@@ -1,7 +1,7 @@
 {
-  "total": 646,
+  "total": 647,
   "offset": 0,
-  "limit": 646,
+  "limit": 647,
   "data": [
     {
       "page": "/",
@@ -18,8 +18,8 @@
     {
       "page": "/config",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/98363870?v=4",
         "https://avatars.githubusercontent.com/u/16409901?v=4",
+        "https://avatars.githubusercontent.com/u/98363870?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/108055538?v=4",
         "https://avatars.githubusercontent.com/u/71978509?v=4",
@@ -27,7 +27,7 @@
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "10/20/2026"
+      "lastUpdated": "10/26/2026"
     },
     {
       "page": "/get-started/",
@@ -5502,11 +5502,11 @@
     {
       "page": "/rest/saas-integrations/",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/98363870?v=4",
         "https://avatars.githubusercontent.com/u/16409901?v=4",
+        "https://avatars.githubusercontent.com/u/98363870?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "10/19/2026"
+      "lastUpdated": "10/26/2026"
     },
     {
       "page": "/rest/saas-integrations/cart-custom-price/",
@@ -5578,6 +5578,13 @@
       "page": "/rest/saas-integrations/shipping-discounts/",
       "avatars": [],
       "lastUpdated": "10/6/2026"
+    },
+    {
+      "page": "/rest/saas-integrations/store-credit/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/16409901?v=4"
+      ],
+      "lastUpdated": "10/27/2026"
     },
     {
       "page": "/rest/saas-integrations/system-config/",
