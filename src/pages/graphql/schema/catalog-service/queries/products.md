@@ -31,7 +31,7 @@ The `ProductView` output object is significantly different than the core `produc
 
 *  Merchant-defined attributes are exposed in a top-level `attributes` container `[ProductViewAttribute]` and indicate their storefront roles. Roles include Show on PDP, Show on PLP, and Show on Search Results.
 
-*  Images are also accessible as a top-level container and can be filtered by their role. An image can have an `image`, `small_image`, or `thumbnail` role.
+*  Images are also accessible as a top-level container and can be filtered by their role. An image can have a standard role (`image`, `small_image`, `thumbnail`, or `swatch_image`) or a merchant-defined custom role.
 
 ## Syntax
 
@@ -924,7 +924,7 @@ The `ProductViewImage` type contains details about a product image.
 | Field | Data Type | Description |
 | --- | --- | --- |
 | `label` | String | The display label of the product image. |
-| `roles` | [String] | A list that describes how the image is used. Can be `image`, `small_image`, or `thumbnail`. |
+| `roles` | [String] | A list that describes how the image is used. Includes the standard roles (`image`, `small_image`, `thumbnail`, `swatch_image`) and any merchant-defined custom role values, such as `lifestyle_image`. |
 | `url` | String! | The URL to the product image. |
 
 ### ProductViewLink type
