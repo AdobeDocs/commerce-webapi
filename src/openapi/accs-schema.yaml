@@ -7413,6 +7413,8 @@ definitions:
         type: string
       gw_tax_amount:
         type: string
+      refund_to_store_credit_amount:
+        type: number
     type: object
   sales-data-creditmemo-interface:
     description: Credit memo interface. After a customer places and pays for an order
@@ -11164,7 +11166,7 @@ definitions:
 host: https://<server>.api.commerce.adobe.com/<tenant-id>
 info:
   title: Adobe Commerce as a Cloud Service
-  version: October 2026
+  version: November 2026
   description:
     "$ref": intro/accs-intro.md
 paths:

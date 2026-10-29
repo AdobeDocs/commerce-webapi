@@ -6503,6 +6503,18 @@
             },
             "isDeprecated": false,
             "deprecationReason": null
+          },
+          {
+            "name": "tax_amount",
+            "description": "The tax amount recorded for this invoice item in the order currency.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "Money",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
           }
         ],
         "inputFields": null,
@@ -12074,6 +12086,18 @@
             },
             "isDeprecated": false,
             "deprecationReason": null
+          },
+          {
+            "name": "lastModifiedAt",
+            "description": "Best-effort indication of when the category data was updated. Null when unavailable.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
           }
         ],
         "inputFields": null,
@@ -12187,6 +12211,18 @@
                 "name": "CategoryViewAttribute",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "lastModifiedAt",
+            "description": "Best-effort indication of when the category data was updated. Null when unavailable.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -12703,6 +12739,18 @@
             },
             "isDeprecated": false,
             "deprecationReason": null
+          },
+          {
+            "name": "lastModifiedAt",
+            "description": "Best-effort indication of when the category data was updated. Null when unavailable.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
           }
         ],
         "inputFields": null,
@@ -13199,6 +13247,18 @@
                 "name": "CategoryViewAttribute",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "lastModifiedAt",
+            "description": "Best-effort indication of when the category data was updated. Null when unavailable.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -32411,6 +32471,18 @@
             },
             "isDeprecated": false,
             "deprecationReason": null
+          },
+          {
+            "name": "tax_amount",
+            "description": "The tax amount recorded for this invoice item in the order currency.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "Money",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
           }
         ],
         "inputFields": null,
@@ -36308,6 +36380,18 @@
             "type": {
               "kind": "SCALAR",
               "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "tax_amount",
+            "description": "The tax amount recorded for this invoice item in the order currency.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "Money",
               "ofType": null
             },
             "isDeprecated": false,
@@ -41915,6 +41999,22 @@
             "deprecationReason": null
           },
           {
+            "name": "status",
+            "description": "The current status of the invoice.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "total",
             "description": "Invoice total amount details.",
             "args": [],
@@ -42087,6 +42187,18 @@
             "type": {
               "kind": "SCALAR",
               "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "tax_amount",
+            "description": "The tax amount recorded for this invoice item in the order currency.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "Money",
               "ofType": null
             },
             "isDeprecated": false,
@@ -42273,6 +42385,18 @@
             "type": {
               "kind": "SCALAR",
               "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "tax_amount",
+            "description": "The tax amount recorded for this invoice item in the order currency.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "Money",
               "ofType": null
             },
             "isDeprecated": false,
@@ -65977,7 +66101,7 @@
           },
           {
             "name": "reviews",
-            "description": "Return the approved reviews for the specified product SKU. Standalone root query, not a Federation extension on ProductView, since a plain root field does not need @key / _entities.",
+            "description": "Return the approved reviews for the specified product SKU. Standalone root query, not a Federation extension on ProductView, since a plain root field does not need @key / _entities. Review text fields (nickname, summary, text) are stored as untrusted plain text and are not sanitized on write; clients must render them as text or apply context-appropriate output encoding to prevent XSS.",
             "args": [
               {
                 "name": "sku",
