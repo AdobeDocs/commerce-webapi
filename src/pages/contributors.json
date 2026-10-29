@@ -3380,12 +3380,13 @@
     {
       "page": "/graphql/schema/products/mutations/create-review",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/6391769?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/24/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/graphql/schema/products/mutations/delete-compare-list",
@@ -3534,12 +3535,13 @@
     {
       "page": "/graphql/schema/products/queries/product-review-ratings-metadata",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/6391769?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "6/24/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/graphql/schema/products/queries/products",
