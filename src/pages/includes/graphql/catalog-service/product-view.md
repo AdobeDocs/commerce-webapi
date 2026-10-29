@@ -92,7 +92,7 @@ The `ProductViewImage` type contains details about a product image.
 | Field | Data Type | Description |
 | --- | --- | --- |
 | `label` | String | The display label of the product image. |
-| `roles` | [String] | A list that describes how the image is used. Can be `image`, `small_image`, or `thumbnail`. |
+| `roles` | [String] | A list that describes how the image is used. Includes the standard roles (`image`, `small_image`, `thumbnail`, `swatch_image`) and any merchant-defined custom role values, such as `lifestyle_image`. |
 | `url` | String! | The URL to the product image. |
 
 ### ProductViewLink type

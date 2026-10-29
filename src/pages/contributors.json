@@ -2155,18 +2155,19 @@
     {
       "page": "/graphql/schema/catalog-service/queries/product-variants",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/6391769?v=4",
         "https://avatars.githubusercontent.com/u/9741905?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4"
       ],
-      "lastUpdated": "10/7/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/graphql/schema/catalog-service/queries/products",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/45772211?v=4",
         "https://avatars.githubusercontent.com/u/6391769?v=4",
+        "https://avatars.githubusercontent.com/u/45772211?v=4",
         "https://avatars.githubusercontent.com/u/9741905?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
@@ -2174,18 +2175,19 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/45772453?v=4"
       ],
-      "lastUpdated": "10/15/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/graphql/schema/catalog-service/queries/refine-product",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/6391769?v=4",
         "https://avatars.githubusercontent.com/u/9741905?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4"
       ],
-      "lastUpdated": "10/7/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/graphql/schema/checkout/",
@@ -2926,7 +2928,7 @@
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/45772453?v=4"
       ],
-      "lastUpdated": "10/9/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/graphql/schema/orders/",
@@ -4528,11 +4530,12 @@
     {
       "page": "/includes/graphql/catalog-service/product-view",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/6391769?v=4",
         "https://avatars.githubusercontent.com/u/9741905?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "10/7/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/includes/graphql/custom-attribute-availability",
