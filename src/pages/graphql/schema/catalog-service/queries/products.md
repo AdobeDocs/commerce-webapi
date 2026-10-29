@@ -42,7 +42,6 @@ When product reviews are enabled, the `products` query returns review summary da
 | `ac_review_count` | The number of approved product reviews. |
 | `ac_rating_summary` | The average rating for approved product reviews, expressed as a value from 0 to 100. Storefronts can convert this value to a star rating. |
 
-
 The product feed updates when review summaries change. Product reviews are disabled by default. Only approved reviews contribute to the review count and rating summary.
 
 The existing `attributes` selection in the product query requests these attributes along with other product attributes:
