@@ -16,13 +16,13 @@ Uploading files is a multi-step process, as shown in the following diagram:
 
 ![Upload files](../../../images/upload-file.png)
 
-1. **Initiate the upload**: The shopper clicks an **Upload File** button on the storefront. The JavaScript code on the page uses the `POST V1/media/initiate-upload` endpoint to start the upload process. The call specifies the file name provided by the shopper. Commerce uses the AWS SDK to generate the URL to which the file will be uploaded.
+1.  **Initiate the upload**: An admin or integration starts the upload by calling the `POST V1/media/initiate-upload` endpoint with the file name. To validate file integrity, you can alternatively call the `POST V1/media/initiate-upload-with-checksum` endpoint and include a SHA-256 checksum of the file. Commerce then uses the AWS SDK to generate a URL for uploading the file.
 
 1. **Receive the response**: The response from the `initiate-upload` call includes a presigned URL, a unique key for the file, and an expiration time for the URL. The client code extracts these values from the response.
 
-1. **Upload the file**: The client code uses the presigned URL to upload the file directly to an Amazon S3 bucket. This is done using a standard HTTP PUT request. The file is uploaded to a temporary location in the S3 bucket. [](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html)
+1. **Upload the file**: The client uploads the file to a temporary S3 location using the presigned URL and an HTTP PUT request. If you supplied a checksum, the request must include it in the `x-amz-checksum-sha256` header. For more information, see [PutObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html).
 
-1. **Finalize the upload**: After the file is successfully uploaded to S3, the client code calls the `POST V1/media/finish-upload` endpoint to complete the upload process. The mutation includes the unique key received from the `initiate-upload` response.
+1. **Finalize the upload**: After uploading the file to S3, the client calls `POST V1/media/finish-upload` using the unique key returned by `initiate-upload`.
 
 1. **Perform validation**: Commerce uses a HEAD request on S3 Temporary to validate the key and size.
 
@@ -36,14 +36,16 @@ Uploading files is a multi-step process, as shown in the following diagram:
 
 ## Initiate the upload
 
-Use the `POST V1/media/initiate-upload` endpoint to start the file upload process by generating a presigned URL for uploading a file to an Amazon S3 bucket. This endpoint requires the file name (`key`) and media resource type (`media_resource_type`) as input parameters. The `key` value cannot contain slashes. The following media resource type are supported:
+Use the `POST V1/media/initiate-upload` endpoint to start the file upload process by generating a presigned URL for uploading a file to an Amazon S3 bucket. This endpoint requires the file name (`key`) and media resource type (`media_resource_type`) as input parameters. The `key` value cannot contain slashes.
 
-* `CATEGORY_IMAGE`
-* `CUSTOMER_ATTRIBUTE_ADDRESS_FILE`
-* `CUSTOMER_ATTRIBUTE_ADDRESS_IMAGE`
-* `CUSTOMER_ATTRIBUTE_FILE`
-* `CUSTOMER_ATTRIBUTE_IMAGE`
-* `NEGOTIABLE_QUOTE_ATTACHMENT`
+The REST endpoint is an admin or backend API, which requires the `Magento_S3PresignedUploadRest::manage_media` ACL resource, that allows you to upload catalog media. The following media resource types are supported:
+
+* `CATEGORY_IMAGE` — a category image.
+* `PRODUCT_FILE_ATTRIBUTE` — a product custom attribute of input type file.
+
+<InlineAlert variant="info" slots="text" />
+
+Storefront uploads for customer, customer address, RMA (return), and negotiable-quote attributes use the GraphQL [`initiateUpload`](../../../graphql/schema/uploads/mutations/initiate-upload.md) and [`finishUpload`](../../../graphql/schema/uploads/mutations/finish-upload.md) mutations instead. See [Upload files to Amazon S3](../../../graphql/schema/uploads/index.md) in the GraphQL documentation.
 
 When you call this endpoint, Commerce uses the AWS SDK to create a presigned URL that allows the client to upload the file directly to a temporary location in the S3 bucket. The presigned URL is valid for a limited time, specified by the `expires_at` field in the response.
 
@@ -60,12 +62,49 @@ curl --request POST \
 }'
 ```
 
+### Initiate the upload with a checksum
+
+Use the `POST V1/media/initiate-upload-with-checksum` endpoint to validate the integrity of the uploaded file. This endpoint accepts the same parameters as `POST V1/media/initiate-upload` and has a required `checksumSha256` parameter.
+
+The `checksumSha256` value must be the Base64-encoded raw 32-byte SHA-256 digest of the file. Do not use hexadecimal digests. The client must compute the value from the file before it calls the endpoint. For example:
+
+```bash
+openssl dgst -sha256 -binary 1.png | base64
+```
+
+```bash
+curl --request POST \
+  --url https://<server>.commerce.adobe.com/<tenant-id>/V1/media/initiate-upload-with-checksum \
+  --header 'Authorization: Bearer <ACCESS_TOKEN>' \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "key": "1.png",
+    "media_resource_type": "CATEGORY_IMAGE",
+    "checksumSha256": "UNhY4JhezH9gQYqvDMWrWH9CwlcKiECVqejMrND2VFw="
+}'
+```
+
+When you supply a checksum, the upload process changes as follows:
+
+* Commerce signs the checksum into the presigned URL. If the value is not a valid Base64-encoded SHA-256 digest, the request fails with the error `Invalid checksum value. Expected a base64-encoded SHA-256 digest.`
+* The client must send the same value in the `x-amz-checksum-sha256` header of the PUT request to the presigned URL.
+* Amazon S3 rejects the upload if the checksums do not match. The file is not stored.
+
 ## Upload the file to S3
 
 The following curl command demonstrates how to upload a file using the presigned URL returned by the `POST V1/media/initiate-upload` call:
 
 ```bash
    curl --fail --show-error --silent -X PUT --data-binary @./cat.jpg 'https://<bucket>.s3.<region>.amazonaws.com/<path-to-temp-file>?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=<token>&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=<value>&X-Amz-Date=<value>&X-Amz-SignedHeaders=host&X-Amz-Expires=<value>&X-Amz-Signature=<value>...'
+```
+
+If you initiated the upload with a checksum, send the same value in the `x-amz-checksum-sha256` header:
+
+```bash
+curl --fail --show-error --silent -X PUT \
+  --header 'x-amz-checksum-sha256: UNhY4JhezH9gQYqvDMWrWH9CwlcKiECVqejMrND2VFw=' \
+  --data-binary @./1.png \
+  '<presigned-url>'
 ```
 
 ## Finish the upload
@@ -82,32 +121,52 @@ curl --request POST \
   --data '{
     "key": "<KEY_FROM_INITIATION>",
     "media_resource_type": "CATEGORY_IMAGE"
-  }
+  }'
 ```
 
 ## Add the uploaded file to an entity
 
-Your Adobe Commerce instance must define the target attribute. For REST (CATEGORY_IMAGE), assign the returned key to the category image attribute when creating the category.
+Your Adobe Commerce instance must define the target attribute. Assign the returned key, filename only, to the attribute when you create or update it. Do not include the URL or path.
 
-Example:
+### Add an image to a category
+
+For `CATEGORY_IMAGE`, assign the returned key to the category `image` attribute when you create the category:
 
 ```json
 {
-    "category": {
-        "parent_id": "2",
+  "category": {
+    "parent_id": "2",
     "name": "One",
     "is_active": true,
     "include_in_menu": true,
-        "custom_attributes": [
-            {
-                "attribute_code": "image",
-                "value": "1_7aa0b2d63f6d3dbf0290bb31.png"
-            },
-            {
-                "attribute_code": "description",
-                "value": "<p>test description one<\/p>"
-            }
-        ]
-    }
+    "custom_attributes": [
+      {
+        "attribute_code": "image",
+        "value": "1_7aa0b2d63f6d3dbf0290bb31.png"
+      },
+      {
+        "attribute_code": "description",
+        "value": "<p>test description one<\/p>"
+      }
+    ]
+  }
+}
+```
+
+### Add a file to a product
+
+For `PRODUCT_FILE_ATTRIBUTE`, assign the returned key to the product's file attribute. Set the value to the filename only (the key returned from `finish-upload`):
+
+```json
+{
+  "product": {
+    "sku": "24-MB01",
+    "custom_attributes": [
+      {
+        "attribute_code": "spec_sheet",
+        "value": "manual_d35edd0d729fe160eac99295.pdf"
+      }
+    ]
+  }
 }
 ```

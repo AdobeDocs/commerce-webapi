@@ -27,7 +27,9 @@ The B2B requisition list mutations allow you to perform the following operations
     - [Share requisition list with a token](share-requisition-list-by-token.md)
     - [Share requisition list by email](share-requisition-list-by-email.md)
     - [Import shared requisition list](import-shared-requisition-list.md)
+    - [Share a public requisition list by email](share-public-requisition-list.md)
 
 - Manage the cart
   - [Add requisition list items to the cart](add-items-to-cart.md)
+  - [Add public requisition list items to the cart](add-public-requisition-list-items-to-cart.md)
   - [Clear the cart](clear-customer-cart.md)

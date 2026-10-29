@@ -1455,6 +1455,106 @@
       },
       {
         "kind": "INPUT_OBJECT",
+        "name": "AddPublicRequisitionListItemsToCartInput",
+        "description": "An input object that identifies the public requisition list, the target cart, and which items to add.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "cart_id",
+            "description": "The masked ID of the target cart. Obtain a guest cart ID via the createGuestCart mutation.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "item_uids",
+            "description": "UIDs of specific requisition list items to add. When omitted, every item in the list is added.",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "token",
+            "description": "The public token identifying the requisition list.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "AddPublicRequisitionListItemsToCartOutput",
+        "description": "Contains the updated cart and any errors encountered while adding items.",
+        "fields": [
+          {
+            "name": "cart",
+            "description": "The updated cart.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Cart",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "user_errors",
+            "description": "Errors encountered, e.g. NOT_PUBLIC, INVALID_TOKEN, or RESTRICTED_PRODUCT. Empty array means the operation succeeded. Items rejected as RESTRICTED_PRODUCT (outside the caller's shared catalog) are skipped rather than failing the whole request.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "PublicRequisitionListUserError",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
         "name": "AddPurchaseOrderCommentInput",
         "description": "Contains the comment to be added to a purchase order.",
         "fields": null,
@@ -4240,6 +4340,45 @@
         "possibleTypes": null
       },
       {
+        "kind": "INPUT_OBJECT",
+        "name": "AttributeRangeOperatorInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "attributeName",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "value",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "RangeValueInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
         "kind": "OBJECT",
         "name": "AttributeSelectedOption",
         "description": "",
@@ -4501,6 +4640,53 @@
         ],
         "inputFields": null,
         "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "AttributeStringOperatorInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "attributeName",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "values",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  }
+                }
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
         "enumValues": null,
         "possibleTypes": null
       },
@@ -7451,6 +7637,22 @@
             "deprecationReason": null
           },
           {
+            "name": "rating_summary",
+            "description": "The average of all the ratings given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Float",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "related_products",
             "description": "An array of products to be displayed in a Related Products block.",
             "args": [],
@@ -7460,6 +7662,59 @@
               "ofType": {
                 "kind": "INTERFACE",
                 "name": "ProductInterface",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "review_count",
+            "description": "The total count of all the reviews given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "reviews",
+            "description": "The list of products reviews.",
+            "args": [
+              {
+                "name": "pageSize",
+                "description": "The maximum number of results to return at once. The default is 20.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "20"
+              },
+              {
+                "name": "currentPage",
+                "description": "The page of results to return. The default is 1.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "1"
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProductReviews",
                 "ofType": null
               }
             },
@@ -9161,13 +9416,9 @@
             "name": "telephone",
             "description": "The telephone number for the billing or shipping address.",
             "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
             },
             "defaultValue": null
           },
@@ -11143,6 +11394,45 @@
             "ofType": null
           }
         ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "CatalogViewContext",
+        "description": "",
+        "fields": [
+          {
+            "name": "accessToken",
+            "description": "RS256-signed access token (exp-only) authorizing the catalog view scope. Null when issuance is disabled or no active signing key is available.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "catalogViewId",
+            "description": "ACO Catalog View id for the company's entitled catalog view.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
         "enumValues": null,
         "possibleTypes": null
       },
@@ -13783,6 +14073,18 @@
                 "name": "CompanyAvailableShippingMethod",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "catalogViewContext",
+            "description": "ACO catalog-view runtime context (view id + signed access token) for this company. Null when the company has no entitled catalog view or the caller is not an authenticated company customer.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "CatalogViewContext",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -17760,6 +18062,22 @@
             "deprecationReason": null
           },
           {
+            "name": "gallery",
+            "description": "A list of all images and videos defined for the product, ordered as a single media gallery.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "UNION",
+                "name": "ProductViewMedia",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "lastModifiedAt",
             "description": "Date and time when the product was last updated.",
             "args": [],
@@ -19385,6 +19703,22 @@
             "deprecationReason": null
           },
           {
+            "name": "rating_summary",
+            "description": "The average of all the ratings given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Float",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "related_products",
             "description": "An array of products to be displayed in a Related Products block.",
             "args": [],
@@ -19394,6 +19728,59 @@
               "ofType": {
                 "kind": "INTERFACE",
                 "name": "ProductInterface",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "review_count",
+            "description": "The total count of all the reviews given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "reviews",
+            "description": "The list of products reviews.",
+            "args": [
+              {
+                "name": "pageSize",
+                "description": "The maximum number of results to return at once. The default is 20.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "20"
+              },
+              {
+                "name": "currentPage",
+                "description": "The page of results to return. The default is 1.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "1"
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProductReviews",
                 "ofType": null
               }
             },
@@ -22755,6 +23142,118 @@
       },
       {
         "kind": "INPUT_OBJECT",
+        "name": "CreateProductReviewInput",
+        "description": "Defines a new product review.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "nickname",
+            "description": "The customer's nickname. Defaults to the customer name, if logged in.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "ratings",
+            "description": "The ratings details by category. For example, Price: 5 stars, Quality: 4 stars, etc.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "ProductReviewRatingInput",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "sku",
+            "description": "The SKU of the reviewed product.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "summary",
+            "description": "The summary (title) of the review.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "text",
+            "description": "The review text.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "CreateProductReviewOutput",
+        "description": "Contains the completed product review.",
+        "fields": [
+          {
+            "name": "review",
+            "description": "Product review details.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProductReview",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
         "name": "CreatePurchaseOrderApprovalRuleConditionAmountInput",
         "description": "Specifies the amount and currency to evaluate.",
         "fields": null,
@@ -22863,6 +23362,16 @@
             "type": {
               "kind": "SCALAR",
               "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "is_public",
+            "description": "Indicates whether the requisition list is publicly shareable. Optional; defaults to false (private) when omitted.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
               "ofType": null
             },
             "defaultValue": null
@@ -25362,6 +25871,33 @@
             "deprecationReason": null
           },
           {
+            "name": "chain_totals",
+            "description": "Aggregated sales totals across every order in the order-edit chain identified by the `original_number` filter. Requires the `original_number.eq` filter; the `in` condition is not supported here. Returns null if the chain doesn't exist, is empty, or doesn't belong to the current customer.",
+            "args": [
+              {
+                "name": "filter",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "CustomerChainTotalsFilterInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "OrderChainTotal",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "companies",
             "description": "An object that contains a list of companies user is assigned to.",
             "args": [
@@ -26028,6 +26564,43 @@
               "kind": "OBJECT",
               "name": "Returns",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "reviews",
+            "description": "Contains the customer's product reviews.",
+            "args": [
+              {
+                "name": "pageSize",
+                "description": "The maximum number of results to return at once. The default value is 20.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "20"
+              },
+              {
+                "name": "currentPage",
+                "description": "The page of results to return. The default value is 1.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "1"
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProductReviews",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -27137,6 +27710,31 @@
       },
       {
         "kind": "INPUT_OBJECT",
+        "name": "CustomerChainTotalsFilterInput",
+        "description": "Filter input for customer chain totals.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "original_number",
+            "description": "Filter by any order number in an order-edit chain (the original order or one of its edited children) to return the full chain totals.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "FilterEqualTypeInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
         "name": "CustomerCreateInput",
         "description": "An input object for creating a customer.",
         "fields": null,
@@ -27312,6 +27910,42 @@
           {
             "name": "download_url",
             "description": "The fully qualified URL to the download file.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "file_extension",
+            "description": "The extension of the downloadable file, in lower case and without the leading dot. Null if unknown.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "file_name",
+            "description": "The name of the downloadable file, including its extension. Null if unknown.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "mime_type",
+            "description": "The MIME type of the downloadable file, such as `audio/mpeg` or `application/pdf`. Null if unknown.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -28149,6 +28783,16 @@
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "FilterRangeTypeInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "original_number",
+            "description": "Filter by any order number in an order-edit chain (the original order or one of its edited children) to return the full chain.",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "FilterEqualTypeInput",
               "ofType": null
             },
             "defaultValue": null
@@ -32625,6 +33269,22 @@
             "deprecationReason": null
           },
           {
+            "name": "rating_summary",
+            "description": "The average of all the ratings given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Float",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "related_products",
             "description": "An array of products to be displayed in a Related Products block.",
             "args": [],
@@ -32634,6 +33294,59 @@
               "ofType": {
                 "kind": "INTERFACE",
                 "name": "ProductInterface",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "review_count",
+            "description": "The total count of all the reviews given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "reviews",
+            "description": "The list of products reviews.",
+            "args": [
+              {
+                "name": "pageSize",
+                "description": "The maximum number of results to return at once. The default is 20.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "20"
+              },
+              {
+                "name": "currentPage",
+                "description": "The page of results to return. The default is 1.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "1"
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProductReviews",
                 "ofType": null
               }
             },
@@ -33967,6 +34680,12 @@
           },
           {
             "name": "VISIBILITY",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "ATTRIBUTE",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -36638,6 +37357,22 @@
             "deprecationReason": null
           },
           {
+            "name": "rating_summary",
+            "description": "The average of all the ratings given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Float",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "related_products",
             "description": "An array of products to be displayed in a Related Products block.",
             "args": [],
@@ -36647,6 +37382,59 @@
               "ofType": {
                 "kind": "INTERFACE",
                 "name": "ProductInterface",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "review_count",
+            "description": "The total count of all the reviews given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "reviews",
+            "description": "The list of products reviews.",
+            "args": [
+              {
+                "name": "pageSize",
+                "description": "The maximum number of results to return at once. The default is 20.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "20"
+              },
+              {
+                "name": "currentPage",
+                "description": "The page of results to return. The default is 1.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "1"
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProductReviews",
                 "ofType": null
               }
             },
@@ -39781,6 +40569,22 @@
             "deprecationReason": null
           },
           {
+            "name": "rating_summary",
+            "description": "The average of all the ratings given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Float",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "related_products",
             "description": "An array of products to be displayed in a Related Products block.",
             "args": [],
@@ -39790,6 +40594,59 @@
               "ofType": {
                 "kind": "INTERFACE",
                 "name": "ProductInterface",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "review_count",
+            "description": "The total count of all the reviews given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "reviews",
+            "description": "The list of products reviews.",
+            "args": [
+              {
+                "name": "pageSize",
+                "description": "The maximum number of results to return at once. The default is 20.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "20"
+              },
+              {
+                "name": "currentPage",
+                "description": "The page of results to return. The default is 1.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "1"
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProductReviews",
                 "ofType": null
               }
             },
@@ -40735,6 +41592,16 @@
         "description": "",
         "fields": null,
         "inputFields": [
+          {
+            "name": "checksum_sha256",
+            "description": "Optional base64-encoded SHA-256 digest of the file, computed by the client before calling this mutation; when set, Amazon S3 rejects the upload if the received bytes don't match it",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
           {
             "name": "key",
             "description": "The name of the file to be uploaded, cannot contain slashes",
@@ -42452,6 +43319,18 @@
             "description": "Customer image resource type for customer address",
             "isDeprecated": false,
             "deprecationReason": null
+          },
+          {
+            "name": "RMA_ATTRIBUTE_FILE",
+            "description": "RMA return item file resource type",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "RMA_ATTRIBUTE_IMAGE",
+            "description": "RMA return item image resource type",
+            "isDeprecated": false,
+            "deprecationReason": null
           }
         ],
         "possibleTypes": null
@@ -43153,6 +44032,33 @@
             "type": {
               "kind": "OBJECT",
               "name": "AddProductsToWishlistOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "addPublicRequisitionListItemsToCart",
+            "description": "Add items from a public requisition list (identified by token) to a cart. Does not require authentication; guests must supply a cart_id obtained via createGuestCart. Omit item_uids to add every item in the list.",
+            "args": [
+              {
+                "name": "input",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "AddPublicRequisitionListItemsToCartInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AddPublicRequisitionListItemsToCartOutput",
               "ofType": null
             },
             "isDeprecated": false,
@@ -44388,6 +45294,37 @@
               "kind": "OBJECT",
               "name": "CreatePaymentOrderOutput",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "createProductReview",
+            "description": "Create a product review for the specified product.",
+            "args": [
+              {
+                "name": "input",
+                "description": "An input object that contains the details necessary to create a product review.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "CreateProductReviewInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "CreateProductReviewOutput",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -47172,6 +48109,33 @@
             "type": {
               "kind": "OBJECT",
               "name": "ShareGiftRegistryOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "sharePublicRequisitionList",
+            "description": "Email the requisition list's public share link (existing token, reused) to one or more email addresses. Fails with a user error if the list has not been marked public. Only the list owner may call this mutation.",
+            "args": [
+              {
+                "name": "input",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "SharePublicRequisitionListInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "SharePublicRequisitionListOutput",
               "ofType": null
             },
             "isDeprecated": false,
@@ -52766,6 +53730,26 @@
               "ofType": null
             },
             "defaultValue": null
+          },
+          {
+            "name": "attributeStringOperator",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "AttributeStringOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "attributeRangeOperator",
+            "description": null,
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "AttributeRangeOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
           }
         ],
         "interfaces": null,
@@ -53080,6 +54064,161 @@
               "kind": "SCALAR",
               "name": "String",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "OrderChainTotal",
+        "description": "Aggregated sales totals across every order in an order-edit chain.",
+        "fields": [
+          {
+            "name": "grand_total",
+            "description": "The sum of grand total across every order in the chain, net of canceled amounts.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Money",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "order_count",
+            "description": "The number of orders included in the chain aggregation.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "subtotal",
+            "description": "The sum of subtotal across every order in the chain, net of canceled subtotal amounts.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Money",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "total_canceled",
+            "description": "The sum of the amount canceled across every order in the chain.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Money",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "total_discounted",
+            "description": "The total discount amount across every order in the chain, net of canceled discount amounts (non-negative).",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Money",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "total_invoiced",
+            "description": "The sum of the amount invoiced across every order in the chain.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Money",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "total_refunded",
+            "description": "The sum of the amount refunded across every order in the chain.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Money",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "total_shipping",
+            "description": "The sum of shipping amount across every order in the chain, net of canceled shipping amounts.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Money",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "total_tax",
+            "description": "The sum of tax amount across every order in the chain, net of canceled tax amounts.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Money",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -57312,6 +58451,22 @@
             "deprecationReason": null
           },
           {
+            "name": "rating_summary",
+            "description": "The average of all the ratings given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Float",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "related_products",
             "description": "An array of products to be displayed in a Related Products block.",
             "args": [],
@@ -57321,6 +58476,59 @@
               "ofType": {
                 "kind": "INTERFACE",
                 "name": "ProductInterface",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "review_count",
+            "description": "The total count of all the reviews given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "reviews",
+            "description": "The list of products reviews.",
+            "args": [
+              {
+                "name": "pageSize",
+                "description": "The maximum number of results to return at once. The default is 20.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "20"
+              },
+              {
+                "name": "currentPage",
+                "description": "The page of results to return. The default is 1.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "1"
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProductReviews",
                 "ofType": null
               }
             },
@@ -57960,6 +59168,399 @@
       },
       {
         "kind": "OBJECT",
+        "name": "ProductReview",
+        "description": "Contains details of a product review.",
+        "fields": [
+          {
+            "name": "average_rating",
+            "description": "The average of all ratings for this product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Float",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "created_at",
+            "description": "The date the review was created.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nickname",
+            "description": "The customer's nickname. Defaults to the customer name, if logged in.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "product",
+            "description": "The reviewed product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "INTERFACE",
+                "name": "ProductInterface",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "ratings_breakdown",
+            "description": "An array of ratings by rating category, such as quality, price, and value.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "ProductReviewRating",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "summary",
+            "description": "The summary (title) of the review.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "text",
+            "description": "The review text.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ProductReviewRating",
+        "description": "Contains data about a single aspect of a product review.",
+        "fields": [
+          {
+            "name": "name",
+            "description": "The label assigned to an aspect of a product that is being rated, such as quality or price.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "value",
+            "description": "The rating value given by customer. By default, possible values range from 1 to 5.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "ProductReviewRatingInput",
+        "description": "Contains the reviewer's rating for a single aspect of a review.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "id",
+            "description": "An encoded rating ID.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "value_id",
+            "description": "An encoded rating value ID.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ProductReviewRatingMetadata",
+        "description": "Contains details about a single aspect of a product review.",
+        "fields": [
+          {
+            "name": "id",
+            "description": "An encoded rating ID.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "name",
+            "description": "The label assigned to an aspect of a product that is being rated, such as quality or price.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "values",
+            "description": "List of product review ratings sorted by position.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "ProductReviewRatingValueMetadata",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ProductReviewRatingsMetadata",
+        "description": "Contains an array of metadata about each aspect of a product review.",
+        "fields": [
+          {
+            "name": "items",
+            "description": "An array of product reviews sorted by position.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "ProductReviewRatingMetadata",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ProductReviewRatingValueMetadata",
+        "description": "Contains details about a single value in a product review.",
+        "fields": [
+          {
+            "name": "value",
+            "description": "A ratings scale, such as the number of stars awarded.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "value_id",
+            "description": "An encoded rating value ID.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ProductReviews",
+        "description": "Contains an array of product reviews.",
+        "fields": [
+          {
+            "name": "items",
+            "description": "An array of product reviews.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "ProductReview",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "page_info",
+            "description": "Metadata for pagination rendering.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "SearchResultPageInfo",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
         "name": "ProductSearchItem",
         "description": "A single product returned by the query",
         "fields": [
@@ -58477,6 +60078,22 @@
               "ofType": {
                 "kind": "OBJECT",
                 "name": "ProductViewVideo",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "gallery",
+            "description": "A list of all images and videos defined for the product, ordered as a single media gallery.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "UNION",
+                "name": "ProductViewMedia",
                 "ofType": null
               }
             },
@@ -60148,6 +61765,27 @@
         "possibleTypes": null
       },
       {
+        "kind": "UNION",
+        "name": "ProductViewMedia",
+        "description": "A single entry in the product media gallery. The entry can be either an image or a video.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": [
+          {
+            "kind": "OBJECT",
+            "name": "ProductViewImage",
+            "ofType": null
+          },
+          {
+            "kind": "OBJECT",
+            "name": "ProductViewVideo",
+            "ofType": null
+          }
+        ]
+      },
+      {
         "kind": "OBJECT",
         "name": "ProductViewMoney",
         "description": "Defines a monetary value, including a numeric value and a currency code.",
@@ -60934,6 +62572,169 @@
         "inputFields": null,
         "interfaces": [],
         "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PublicRequisitionListOutput",
+        "description": "Contains a public requisition list and its owner's display name.",
+        "fields": [
+          {
+            "name": "requisition_list",
+            "description": "The shared requisition list and its items.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "RequisitionList",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "sender_name",
+            "description": "Display name of the requisition list owner (sender).",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PublicRequisitionListUserError",
+        "description": "Contains error details for a failed public requisition list operation.",
+        "fields": [
+          {
+            "name": "code",
+            "description": "An error code identifying the failure type.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "PublicRequisitionListUserErrorCode",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "message",
+            "description": "A localized error message.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "PublicRequisitionListUserErrorCode",
+        "description": "Error codes for public requisition list operations.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "NOT_PUBLIC",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "INVALID_TOKEN",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "RESTRICTED_PRODUCT",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "MAX_RECIPIENTS_EXCEEDED",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "RATE_LIMIT_EXCEEDED",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "INVALID_EMAIL",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "UNAVAILABLE_SKU",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "OPTIONS_UPDATED",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "OUT_OF_STOCK",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "LOW_QUANTITY",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "UNKNOWN_ERROR",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
         "possibleTypes": null
       },
       {
@@ -64054,6 +65855,49 @@
             "deprecationReason": null
           },
           {
+            "name": "productReviewRatingsMetadata",
+            "description": "Return the active ratings attributes and the values each rating can have.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProductReviewRatingsMetadata",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "publicRequisitionList",
+            "description": "Return a requisition list marked public, identified by its token. Throws a GraphQL error if the token is invalid or the list is no longer public. Does not require authentication.",
+            "args": [
+              {
+                "name": "token",
+                "description": "The public token identifying the requisition list.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "ID",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PublicRequisitionListOutput",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "recaptchaFormConfig",
             "description": null,
             "args": [
@@ -64132,6 +65976,53 @@
             "deprecationReason": null
           },
           {
+            "name": "reviews",
+            "description": "Return the approved reviews for the specified product SKU. Standalone root query, not a Federation extension on ProductView, since a plain root field does not need @key / _entities.",
+            "args": [
+              {
+                "name": "sku",
+                "description": "The SKU of the product to return reviews for.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "pageSize",
+                "description": "The maximum number of results to return at once. The default is 20.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "20"
+              },
+              {
+                "name": "currentPage",
+                "description": "The page of results to return. The default is 1.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "1"
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "ProductReviews",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "sharedRequisitionList",
             "description": "View a shared requisition list when the receiver is logged in and belongs to the same company as the sender.",
             "args": [
@@ -64160,11 +66051,11 @@
           },
           {
             "name": "sourceAvailability",
-            "description": "Per-source availability for one or more SKUs, scoped to the storefront-visible sources of the current sales channel's stock. Availability is computed identically to the order-placement guard.",
+            "description": "Per-source availability for one or more SKUs, scoped to the storefront-visible sources of the current sales channel's stock. Availability is computed identically to the order-placement guard. Only SKUs of products the shopper may see in the current website's catalog are reported. Per-source availability is a physical snapshot, not a purchasable-quantity limit: use stockAvailability for the salable quantity and the Add to Cart gate. Returns an empty list when per-source disclosure is not enabled for the store (cataloginventory/source_availability/storefront_enabled off).",
             "args": [
               {
                 "name": "skus",
-                "description": "The product SKUs to report availability for.",
+                "description": "The product SKUs to report availability for, at most 100. A SKU that matches no product, whose product is not assigned to the current website or is disabled in the current store, or that the shopper's customer group may not see in the catalog (B2B shared catalog assignment or category permissions) is silently omitted from the response.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -64222,6 +66113,49 @@
                 "ofType": {
                   "kind": "OBJECT",
                   "name": "SkuSourceAvailability",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "stockAvailability",
+            "description": "Stock-level salable quantity and purchase eligibility for one or more SKUs, evaluated against the current sales channel's stock. Read directly from the inventory and reservation tables, so it is strongly consistent with what the cart enforces at add-to-cart and order placement, and accounts for every open reservation — including orders placed without a nominated source, which per-source availability cannot attribute to any one source. Can be combined with sourceAvailability in a single request. Only SKUs of products the shopper may see in the current website's catalog are reported.",
+            "args": [
+              {
+                "name": "skus",
+                "description": "The product SKUs to report availability for, at most 100. A SKU that matches no product, whose product is not assigned to the current website or is disabled in the current store, or that the shopper's customer group may not see in the catalog (B2B shared catalog assignment or category permissions) is silently omitted from the response.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "LIST",
+                    "name": null,
+                    "ofType": {
+                      "kind": "NON_NULL",
+                      "name": null,
+                      "ofType": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                      }
+                    }
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "StockAvailability",
                   "ofType": null
                 }
               }
@@ -66941,6 +68875,22 @@
             "deprecationReason": null
           },
           {
+            "name": "is_public",
+            "description": "Indicates whether this requisition list is currently publicly shareable. Defaults to false.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "items",
             "description": "An array of products added to the requisition list.",
             "args": [
@@ -67033,6 +68983,18 @@
             "type": {
               "kind": "OBJECT",
               "name": "RequisitionListItems",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "token",
+            "description": "The list's public share token. Only resolved for the authenticated owner querying their own list; null for all other viewers, even when is_public is true.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
               "ofType": null
             },
             "isDeprecated": false,
@@ -71569,6 +73531,96 @@
       },
       {
         "kind": "INPUT_OBJECT",
+        "name": "SharePublicRequisitionListInput",
+        "description": "An input object that identifies the requisition list to share and the email addresses to send it to.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "emails",
+            "description": "One or more recipient email addresses. Not limited to registered customers.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "requisition_list_uid",
+            "description": "The unique UID of the requisition list to share.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "SharePublicRequisitionListOutput",
+        "description": "Contains the number of emails successfully sent and any errors encountered.",
+        "fields": [
+          {
+            "name": "sent_count",
+            "description": "Number of emails successfully sent.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "user_errors",
+            "description": "Errors encountered, e.g. NOT_PUBLIC when the list has not been marked public.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "PublicRequisitionListUserError",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
         "name": "ShareRequisitionListByEmailInput",
         "description": "An input object that defines which requisition list shared with company users through email.",
         "fields": null,
@@ -73430,6 +75482,22 @@
             "deprecationReason": null
           },
           {
+            "name": "rating_summary",
+            "description": "The average of all the ratings given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Float",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "related_products",
             "description": "An array of products to be displayed in a Related Products block.",
             "args": [],
@@ -73439,6 +75507,59 @@
               "ofType": {
                 "kind": "INTERFACE",
                 "name": "ProductInterface",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "review_count",
+            "description": "The total count of all the reviews given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "reviews",
+            "description": "The list of products reviews.",
+            "args": [
+              {
+                "name": "pageSize",
+                "description": "The maximum number of results to return at once. The default is 20.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "20"
+              },
+              {
+                "name": "currentPage",
+                "description": "The page of results to return. The default is 1.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "1"
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProductReviews",
                 "ofType": null
               }
             },
@@ -73774,6 +75895,22 @@
               "ofType": {
                 "kind": "OBJECT",
                 "name": "ProductViewVideo",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "gallery",
+            "description": "A list of all images and videos defined for the product, ordered as a single media gallery.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "UNION",
+                "name": "ProductViewMedia",
                 "ofType": null
               }
             },
@@ -75062,6 +77199,30 @@
             "deprecationReason": null
           },
           {
+            "name": "is_pickup_location_active",
+            "description": "Whether the source is an active in-store pickup location.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "name",
+            "description": "Display name of the source, for labelling a store or warehouse.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "sku",
             "description": "The product SKU the availability applies to.",
             "args": [],
@@ -75166,6 +77327,89 @@
       },
       {
         "kind": "OBJECT",
+        "name": "StockAvailability",
+        "description": "Stock-level availability of a single SKU in the current sales channel's stock.",
+        "fields": [
+          {
+            "name": "backorder_message",
+            "description": "Customer-facing pre-order notice, populated only when the SKU is salable solely because notify-mode backorders are enabled — it is salable but not in stock; null otherwise (in stock, silent backorders, or not salable).",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "is_in_stock",
+            "description": "Whether the smallest valid purchase (the minimum sale quantity, rounded up to the quantity increment; one unit by default) can be fulfilled from stock on hand, excluding any backorder allowance. False for a SKU that is purchasable only through backorders. For a SKU whose stock is not tracked, or a composite parent, equal to is_salable.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "is_salable",
+            "description": "Whether the SKU can be added to the cart right now in its smallest valid purchase quantity (the minimum sale quantity, rounded up to the quantity increment; one unit by default), backorders considered. This is the authoritative Add to Cart gate. Respects the merchant's stock status override, and for a composite parent (configurable, bundle, grouped) the parent's own stock status: a parent set Out of Stock is not salable even when its children are in stock. True for a SKU whose stock is not tracked (Manage Stock disabled), except that on a custom stock a SKU must be assigned to one of the stock's sources to be salable.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "salable_qty",
+            "description": "Quantity that can be purchased right now: physical quantity across the stock's sources, net of every open reservation and the out-of-stock threshold; the figure the cart enforces. With a negative out-of-stock threshold (backorders allowed down to a limit) it includes that backorder allowance, so it can exceed the physical stock; do not use it as an on-hand count, such as an only-X-left badge. is_in_stock tells whether a purchase can ship from stock on hand. The exact value is returned only when it is at or below the merchant's storefront display threshold (cataloginventory/options/stock_threshold_qty). Null above that threshold, when the SKU's stock is not tracked, or for a composite parent (configurable, bundle, grouped).",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "sku",
+            "description": "The product SKU the availability applies to.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
         "name": "StoreConfig",
         "description": "Contains information about a store's configuration.",
         "fields": [
@@ -75212,6 +77456,18 @@
           {
             "name": "allow_gift_wrapping_on_order_items",
             "description": "Indicates whether gift wrapping can be added for individual order items. Possible values: 1 (Yes) and 0 (No).",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "allow_guests_to_write_product_reviews",
+            "description": "Indicates whether guest users can write product reviews. Possible values: 1 (Yes) and 0 (No).",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -76518,6 +78774,18 @@
             "deprecationReason": null
           },
           {
+            "name": "product_reviews_enabled",
+            "description": "Indicates whether product reviews are enabled. Possible values: 1 (Yes) and 0 (No).",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "product_url_suffix",
             "description": "The suffix applied to product pages, such as `.htm` or `.html`.",
             "args": [],
@@ -76577,6 +78845,70 @@
               "kind": "SCALAR",
               "name": "String",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "requisition_list_public_share_link_validity_days",
+            "description": "Configuration data from btob/requisition_list_public_sharing/link_validity_days",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "requisition_list_public_share_max_recipients",
+            "description": "Configuration data from btob/requisition_list_public_sharing/max_recipients",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "requisition_list_public_share_storefront_path",
+            "description": "Configuration data from btob/requisition_list_public_sharing/storefront_share_path (route path for public share links, no leading or trailing slashes)",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "requisition_list_public_sharing_enabled",
+            "description": "Configuration data from btob/requisition_list_public_sharing/enabled",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -78938,6 +81270,16 @@
             "defaultValue": null
           },
           {
+            "name": "is_public",
+            "description": "Indicates whether the requisition list is publicly shareable. Optional; pass true to make the list public or false to make it private again. When omitted, the current value is left unchanged.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "name",
             "description": "The new name of the requisition list.",
             "type": {
@@ -80419,6 +82761,22 @@
             "deprecationReason": null
           },
           {
+            "name": "rating_summary",
+            "description": "The average of all the ratings given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Float",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "related_products",
             "description": "An array of products to be displayed in a Related Products block.",
             "args": [],
@@ -80428,6 +82786,59 @@
               "ofType": {
                 "kind": "INTERFACE",
                 "name": "ProductInterface",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "review_count",
+            "description": "The total count of all the reviews given to the product.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "reviews",
+            "description": "The list of products reviews.",
+            "args": [
+              {
+                "name": "pageSize",
+                "description": "The maximum number of results to return at once. The default is 20.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "20"
+              },
+              {
+                "name": "currentPage",
+                "description": "The page of results to return. The default is 1.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": "1"
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProductReviews",
                 "ofType": null
               }
             },

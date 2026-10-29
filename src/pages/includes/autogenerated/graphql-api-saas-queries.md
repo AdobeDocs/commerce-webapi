@@ -86,7 +86,7 @@ query attributesForm($formCode: String!) {
 ##### Variables
 
 ```json
-{"formCode": "abc123"}
+{"formCode": "xyz789"}
 ```
 
 ##### Response
@@ -187,6 +187,7 @@ query availableStores($useCurrentGroup: Boolean) {
     allow_gift_receipt
     allow_gift_wrapping_on_order
     allow_gift_wrapping_on_order_items
+    allow_guests_to_write_product_reviews
     allow_items
     allow_order
     allow_printed_card
@@ -289,11 +290,16 @@ query availableStores($useCurrentGroup: Boolean) {
     }
     product_alert_allow_stock
     product_fixed_product_tax_display_setting
+    product_reviews_enabled
     product_url_suffix
     quickorder_active
     quote_minimum_amount
     quote_minimum_amount_message
     required_character_classes_number
+    requisition_list_public_share_link_validity_days
+    requisition_list_public_share_max_recipients
+    requisition_list_public_share_storefront_path
+    requisition_list_public_sharing_enabled
     requisition_list_share_link_validity_days
     requisition_list_share_max_recipients
     requisition_list_share_storefront_path
@@ -359,154 +365,160 @@ query availableStores($useCurrentGroup: Boolean) {
         "allow_gift_receipt": "abc123",
         "allow_gift_wrapping_on_order": "abc123",
         "allow_gift_wrapping_on_order_items": "abc123",
+        "allow_guests_to_write_product_reviews": "xyz789",
         "allow_items": "xyz789",
-        "allow_order": "xyz789",
+        "allow_order": "abc123",
         "allow_printed_card": "abc123",
-        "autocomplete_on_storefront": true,
+        "autocomplete_on_storefront": false,
         "base_currency_code": "abc123",
-        "base_link_url": "abc123",
-        "base_media_url": "xyz789",
+        "base_link_url": "xyz789",
+        "base_media_url": "abc123",
         "base_static_url": "xyz789",
-        "base_url": "abc123",
-        "cart_expires_in_days": 123,
+        "base_url": "xyz789",
+        "cart_expires_in_days": 987,
         "cart_gift_wrapping": "xyz789",
         "cart_merge_preference": "xyz789",
         "cart_printed_card": "abc123",
         "cart_summary_display_quantity": 123,
-        "catalog_default_sort_by": "xyz789",
+        "catalog_default_sort_by": "abc123",
         "category_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
-        "category_url_suffix": "xyz789",
-        "check_money_order_enable_for_specific_countries": false,
-        "check_money_order_enabled": true,
+        "category_url_suffix": "abc123",
+        "check_money_order_enable_for_specific_countries": true,
+        "check_money_order_enabled": false,
         "check_money_order_make_check_payable_to": "abc123",
         "check_money_order_max_order_total": "xyz789",
-        "check_money_order_min_order_total": "abc123",
-        "check_money_order_new_order_status": "xyz789",
+        "check_money_order_min_order_total": "xyz789",
+        "check_money_order_new_order_status": "abc123",
         "check_money_order_payment_from_specific_countries": "abc123",
-        "check_money_order_send_check_to": "xyz789",
+        "check_money_order_send_check_to": "abc123",
         "check_money_order_sort_order": 987,
-        "check_money_order_title": "abc123",
-        "company_credit_enabled": true,
+        "check_money_order_title": "xyz789",
+        "company_credit_enabled": false,
         "company_enabled": false,
         "configurable_product_image": "ITSELF",
-        "configurable_thumbnail_source": "xyz789",
+        "configurable_thumbnail_source": "abc123",
         "contact_enabled": true,
-        "countries_with_required_region": "abc123",
+        "countries_with_required_region": "xyz789",
         "create_account_confirmation": true,
-        "customer_access_token_lifetime": 987.65,
-        "default_country": "abc123",
+        "customer_access_token_lifetime": 123.45,
+        "default_country": "xyz789",
         "default_display_currency_code": "abc123",
-        "display_product_prices_in_catalog": 987,
+        "display_product_prices_in_catalog": 123,
         "display_shipping_prices": 987,
         "display_state_if_optional": true,
-        "enable_multiple_wishlists": "abc123",
+        "enable_multiple_wishlists": "xyz789",
         "fixed_product_taxes_apply_tax_to_fpt": false,
         "fixed_product_taxes_display_prices_in_emails": 123,
         "fixed_product_taxes_display_prices_in_product_lists": 987,
         "fixed_product_taxes_display_prices_in_sales_modules": 987,
         "fixed_product_taxes_display_prices_on_product_view_page": 123,
-        "fixed_product_taxes_enable": true,
+        "fixed_product_taxes_enable": false,
         "fixed_product_taxes_include_fpt_in_subtotal": true,
         "graphql_share_customer_group": false,
         "grid_per_page": 123,
-        "grid_per_page_values": "xyz789",
+        "grid_per_page_values": "abc123",
         "grouped_product_image": "ITSELF",
-        "is_checkout_agreements_enabled": false,
-        "is_default_store": true,
+        "is_checkout_agreements_enabled": true,
+        "is_default_store": false,
         "is_default_store_group": false,
         "is_guest_checkout_enabled": false,
-        "is_negotiable_quote_active": false,
+        "is_negotiable_quote_active": true,
         "is_one_page_checkout_enabled": false,
         "is_requisition_list_active": "xyz789",
         "list_mode": "abc123",
-        "list_per_page": 987,
-        "list_per_page_values": "abc123",
+        "list_per_page": 123,
+        "list_per_page_values": "xyz789",
         "locale": "xyz789",
-        "magento_reward_general_is_enabled": "abc123",
+        "magento_reward_general_is_enabled": "xyz789",
         "magento_reward_general_is_enabled_on_front": "xyz789",
-        "magento_reward_general_min_points_balance": "xyz789",
+        "magento_reward_general_min_points_balance": "abc123",
         "magento_reward_general_publish_history": "xyz789",
         "magento_reward_points_invitation_customer": "abc123",
-        "magento_reward_points_invitation_customer_limit": "abc123",
+        "magento_reward_points_invitation_customer_limit": "xyz789",
         "magento_reward_points_invitation_order": "abc123",
-        "magento_reward_points_invitation_order_limit": "abc123",
-        "magento_reward_points_newsletter": "abc123",
+        "magento_reward_points_invitation_order_limit": "xyz789",
+        "magento_reward_points_newsletter": "xyz789",
         "magento_reward_points_order": "xyz789",
-        "magento_reward_points_register": "xyz789",
+        "magento_reward_points_register": "abc123",
         "magento_reward_points_review": "xyz789",
-        "magento_reward_points_review_limit": "xyz789",
+        "magento_reward_points_review_limit": "abc123",
         "magento_wishlist_general_is_enabled": "abc123",
         "max_items_in_order_summary": 987,
         "maximum_number_of_wishlists": "abc123",
         "minicart_display": true,
         "minicart_max_items": 987,
-        "minimum_password_length": "xyz789",
+        "minimum_password_length": "abc123",
         "newsletter_enabled": false,
         "optional_zip_countries": "abc123",
-        "order_cancellation_enabled": false,
+        "order_cancellation_enabled": true,
         "order_cancellation_reasons": [
           CancellationReason
         ],
         "orders_invoices_credit_memos_display_full_summary": false,
-        "orders_invoices_credit_memos_display_grandtotal": true,
-        "orders_invoices_credit_memos_display_price": 987,
+        "orders_invoices_credit_memos_display_grandtotal": false,
+        "orders_invoices_credit_memos_display_price": 123,
         "orders_invoices_credit_memos_display_shipping_amount": 987,
         "orders_invoices_credit_memos_display_subtotal": 123,
-        "orders_invoices_credit_memos_display_zero_tax": true,
-        "persistent_enabled": true,
-        "persistent_options_wishlist": false,
+        "orders_invoices_credit_memos_display_zero_tax": false,
+        "persistent_enabled": false,
+        "persistent_options_wishlist": true,
         "persistent_shopping_cart": true,
         "printed_card_priceV2": Money,
-        "product_alert_allow_stock": false,
+        "product_alert_allow_stock": true,
         "product_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
+        "product_reviews_enabled": "abc123",
         "product_url_suffix": "abc123",
-        "quickorder_active": false,
-        "quote_minimum_amount": 123.45,
+        "quickorder_active": true,
+        "quote_minimum_amount": 987.65,
         "quote_minimum_amount_message": "abc123",
-        "required_character_classes_number": "abc123",
-        "requisition_list_share_link_validity_days": 987,
+        "required_character_classes_number": "xyz789",
+        "requisition_list_public_share_link_validity_days": 987,
+        "requisition_list_public_share_max_recipients": 987,
+        "requisition_list_public_share_storefront_path": "xyz789",
+        "requisition_list_public_sharing_enabled": true,
+        "requisition_list_share_link_validity_days": 123,
         "requisition_list_share_max_recipients": 123,
         "requisition_list_share_storefront_path": "xyz789",
-        "requisition_list_sharing_enabled": false,
+        "requisition_list_sharing_enabled": true,
         "returns_enabled": "xyz789",
-        "root_category_uid": 4,
+        "root_category_uid": "4",
         "sales_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
-        "sales_gift_wrapping": "abc123",
-        "sales_printed_card": "abc123",
+        "sales_gift_wrapping": "xyz789",
+        "sales_printed_card": "xyz789",
         "secure_base_link_url": "abc123",
-        "secure_base_media_url": "abc123",
+        "secure_base_media_url": "xyz789",
         "secure_base_static_url": "abc123",
         "secure_base_url": "xyz789",
-        "share_active_segments": false,
+        "share_active_segments": true,
         "share_applied_cart_rule": true,
         "share_customer_accounts_scope": 123,
         "shopping_assistance_checkbox_title": "xyz789",
         "shopping_assistance_checkbox_tooltip": "abc123",
-        "shopping_assistance_enabled": true,
-        "shopping_cart_display_full_summary": true,
-        "shopping_cart_display_grand_total": false,
-        "shopping_cart_display_price": 987,
-        "shopping_cart_display_shipping": 987,
-        "shopping_cart_display_subtotal": 987,
+        "shopping_assistance_enabled": false,
+        "shopping_cart_display_full_summary": false,
+        "shopping_cart_display_grand_total": true,
+        "shopping_cart_display_price": 123,
+        "shopping_cart_display_shipping": 123,
+        "shopping_cart_display_subtotal": 123,
         "shopping_cart_display_tax_gift_wrapping": "DISPLAY_EXCLUDING_TAX",
-        "shopping_cart_display_zero_tax": true,
-        "store_code": "4",
+        "shopping_cart_display_zero_tax": false,
+        "store_code": 4,
         "store_group_code": "4",
         "store_group_name": "xyz789",
         "store_name": "abc123",
-        "store_sort_order": 123,
+        "store_sort_order": 987,
         "timezone": "xyz789",
-        "title_separator": "xyz789",
-        "use_store_in_url": true,
+        "title_separator": "abc123",
+        "use_store_in_url": false,
         "website_code": "4",
-        "website_name": "xyz789",
+        "website_name": "abc123",
         "weight_unit": "xyz789",
         "zero_subtotal_enable_for_specific_countries": true,
-        "zero_subtotal_enabled": false,
+        "zero_subtotal_enabled": true,
         "zero_subtotal_new_order_status": "abc123",
-        "zero_subtotal_payment_action": "xyz789",
+        "zero_subtotal_payment_action": "abc123",
         "zero_subtotal_payment_from_specific_countries": "xyz789",
-        "zero_subtotal_sort_order": 987,
+        "zero_subtotal_sort_order": 123,
         "zero_subtotal_title": "xyz789"
       }
     ]
@@ -597,7 +609,7 @@ query cart($cart_id: String!) {
 ##### Variables
 
 ```json
-{"cart_id": "xyz789"}
+{"cart_id": "abc123"}
 ```
 
 ##### Response
@@ -619,14 +631,14 @@ query cart($cart_id: String!) {
       "custom_attributes": [CustomAttribute],
       "email": "abc123",
       "gift_message": GiftMessage,
-      "gift_receipt_included": true,
+      "gift_receipt_included": false,
       "gift_wrapping": GiftWrapping,
       "has_available_free_gifts": true,
-      "id": "4",
-      "is_virtual": true,
+      "id": 4,
+      "is_virtual": false,
       "itemsV2": CartItems,
       "prices": CartPrices,
-      "printed_card_included": true,
+      "printed_card_included": false,
       "rules": [CartRuleStorefront],
       "selected_payment_method": SelectedPaymentMethod,
       "shipping_addresses": [ShippingCartAddress],
@@ -689,8 +701,8 @@ query categories(
 
 ```json
 {
-  "ids": ["xyz789"],
-  "roles": ["xyz789"],
+  "ids": ["abc123"],
+  "roles": ["abc123"],
   "subtree": Subtree
 }
 ```
@@ -702,20 +714,20 @@ query categories(
   "data": {
     "categories": [
       {
-        "availableSortBy": ["xyz789"],
+        "availableSortBy": ["abc123"],
         "children": ["xyz789"],
         "defaultSortBy": "xyz789",
         "id": 4,
-        "level": 987,
-        "name": "xyz789",
-        "parentId": "xyz789",
-        "position": 987,
+        "level": 123,
+        "name": "abc123",
+        "parentId": "abc123",
+        "position": 123,
         "path": "xyz789",
         "roles": ["abc123"],
         "urlKey": "xyz789",
-        "urlPath": "xyz789",
+        "urlPath": "abc123",
         "count": 987,
-        "title": "xyz789"
+        "title": "abc123"
       }
     ]
   }
@@ -755,13 +767,13 @@ query checkoutAgreements {
   "data": {
     "checkoutAgreements": [
       {
-        "agreement_id": 987,
-        "checkbox_text": "xyz789",
-        "content": "abc123",
+        "agreement_id": 123,
+        "checkbox_text": "abc123",
+        "content": "xyz789",
         "content_height": "abc123",
         "is_html": true,
         "mode": "AUTO",
-        "name": "abc123"
+        "name": "xyz789"
       }
     ]
   }
@@ -826,6 +838,9 @@ query company {
     }
     available_shipping_methods {
       ...CompanyAvailableShippingMethodFragment
+    }
+    catalogViewContext {
+      ...CatalogViewContextFragment
     }
     company_admin {
       ...CustomerFragment
@@ -898,6 +913,7 @@ query company {
       "available_shipping_methods": [
         CompanyAvailableShippingMethod
       ],
+      "catalogViewContext": CatalogViewContext,
       "company_admin": Customer,
       "config": CompanyConfig,
       "credit": CompanyCredit,
@@ -905,11 +921,11 @@ query company {
       "custom_attributes": [CustomAttribute],
       "default_billing_address": CompanyAddress,
       "default_shipping_address": CompanyAddress,
-      "email": "abc123",
-      "id": 4,
+      "email": "xyz789",
+      "id": "4",
       "legal_address": CompanyLegalAddress,
-      "legal_name": "abc123",
-      "name": "xyz789",
+      "legal_name": "xyz789",
+      "name": "abc123",
       "payment_methods": ["xyz789"],
       "reseller_id": "abc123",
       "role": CompanyRole,
@@ -920,7 +936,7 @@ query company {
       "team": CompanyTeam,
       "user": Customer,
       "users": CompanyUsers,
-      "vat_tax_id": "xyz789"
+      "vat_tax_id": "abc123"
     }
   }
 }
@@ -974,7 +990,7 @@ query compareList($uid: ID!) {
       "attributes": [ComparableAttribute],
       "item_count": 987,
       "items": [ComparableItem],
-      "uid": "4"
+      "uid": 4
     }
   }
 }
@@ -1017,7 +1033,7 @@ query countries {
         "available_regions": [Region],
         "full_name_english": "abc123",
         "full_name_locale": "abc123",
-        "id": "xyz789",
+        "id": "abc123",
         "three_letter_abbreviation": "xyz789",
         "two_letter_abbreviation": "abc123"
       }
@@ -1072,11 +1088,11 @@ query country($id: String) {
   "data": {
     "country": {
       "available_regions": [Region],
-      "full_name_english": "abc123",
-      "full_name_locale": "abc123",
+      "full_name_english": "xyz789",
+      "full_name_locale": "xyz789",
       "id": "abc123",
-      "three_letter_abbreviation": "xyz789",
-      "two_letter_abbreviation": "abc123"
+      "three_letter_abbreviation": "abc123",
+      "two_letter_abbreviation": "xyz789"
     }
   }
 }
@@ -1116,11 +1132,11 @@ query currency {
   "data": {
     "currency": {
       "available_currency_codes": [
-        "xyz789"
+        "abc123"
       ],
       "base_currency_code": "abc123",
       "base_currency_symbol": "abc123",
-      "default_display_currency_code": "xyz789",
+      "default_display_currency_code": "abc123",
       "default_display_currency_symbol": "xyz789",
       "exchange_rates": [ExchangeRate]
     }
@@ -1203,6 +1219,9 @@ query customer {
       ...AdminAssistanceActionsFragment
     }
     allow_remote_shopping_assistance
+    chain_totals {
+      ...OrderChainTotalFragment
+    }
     companies {
       ...UserCompaniesOutputFragment
     }
@@ -1267,6 +1286,9 @@ query customer {
     returns {
       ...ReturnsFragment
     }
+    reviews {
+      ...ProductReviewsFragment
+    }
     reward_points {
       ...RewardPointsFragment
     }
@@ -1307,24 +1329,25 @@ query customer {
       "addressesV2": CustomerAddresses,
       "admin_assistance_actions": AdminAssistanceActions,
       "allow_remote_shopping_assistance": true,
+      "chain_totals": OrderChainTotal,
       "companies": UserCompaniesOutput,
       "company_hierarchy": [CompanyHierarchy],
       "compare_list": CompareList,
       "confirmation_status": "ACCOUNT_CONFIRMED",
-      "created_at": "xyz789",
+      "created_at": "abc123",
       "custom_attributes": [AttributeValueInterface],
       "date_of_birth": "abc123",
       "default_billing": "xyz789",
-      "default_shipping": "abc123",
-      "email": "xyz789",
-      "firstname": "abc123",
+      "default_shipping": "xyz789",
+      "email": "abc123",
+      "firstname": "xyz789",
       "gender": 123,
       "gift_registries": [GiftRegistry],
       "gift_registry": GiftRegistry,
       "group": CustomerGroupStorefront,
       "id": "4",
       "is_subscribed": false,
-      "job_title": "abc123",
+      "job_title": "xyz789",
       "lastname": "xyz789",
       "middlename": "abc123",
       "orders": CustomerOrders,
@@ -1334,18 +1357,19 @@ query customer {
       "purchase_order_approval_rule_metadata": PurchaseOrderApprovalRuleMetadata,
       "purchase_order_approval_rules": PurchaseOrderApprovalRules,
       "purchase_orders": PurchaseOrders,
-      "purchase_orders_enabled": true,
+      "purchase_orders_enabled": false,
       "quote_enabled": true,
       "requisition_lists": RequisitionLists,
       "return": Return,
       "returns": Returns,
+      "reviews": ProductReviews,
       "reward_points": RewardPoints,
       "role": CompanyRole,
       "segments": [CustomerSegmentStorefront],
       "status": "ACTIVE",
       "store_credit": CustomerStoreCredit,
-      "structure_id": 4,
-      "suffix": "abc123",
+      "structure_id": "4",
+      "suffix": "xyz789",
       "taxvat": "abc123",
       "team": CompanyTeam,
       "telephone": "xyz789",
@@ -1460,7 +1484,7 @@ query customerCart {
       "rules": [CartRuleStorefront],
       "selected_payment_method": SelectedPaymentMethod,
       "shipping_addresses": [ShippingCartAddress],
-      "total_quantity": 123.45
+      "total_quantity": 987.65
     }
   }
 }
@@ -1523,7 +1547,7 @@ query customerGroup {
 ##### Response
 
 ```json
-{"data": {"customerGroup": {"uid": "4"}}}
+{"data": {"customerGroup": {"uid": 4}}}
 ```
 
 <HorizontalLine />
@@ -1593,11 +1617,7 @@ query customerSegments($cartId: String!) {
 ##### Response
 
 ```json
-{
-  "data": {
-    "customerSegments": [{"uid": "4"}]
-  }
-}
+{"data": {"customerSegments": [{"uid": 4}]}}
 ```
 
 <HorizontalLine />
@@ -1705,7 +1725,7 @@ query getPaymentOrder(
 ```json
 {
   "cartId": "abc123",
-  "id": "abc123"
+  "id": "xyz789"
 }
 ```
 
@@ -1716,9 +1736,9 @@ query getPaymentOrder(
   "data": {
     "getPaymentOrder": {
       "id": "xyz789",
-      "mp_order_id": "abc123",
+      "mp_order_id": "xyz789",
       "payment_source_details": PaymentSourceDetails,
-      "status": "abc123"
+      "status": "xyz789"
     }
   }
 }
@@ -1846,7 +1866,7 @@ query giftCardAccount($input: GiftCardAccountInput!) {
     "giftCardAccount": {
       "balance": Money,
       "code": "xyz789",
-      "expiration_date": "xyz789"
+      "expiration_date": "abc123"
     }
   }
 }
@@ -1902,7 +1922,7 @@ query giftRegistry($giftRegistryUid: ID!) {
 ##### Variables
 
 ```json
-{"giftRegistryUid": "4"}
+{"giftRegistryUid": 4}
 ```
 
 ##### Response
@@ -1915,7 +1935,7 @@ query giftRegistry($giftRegistryUid: ID!) {
       "dynamic_attributes": [
         GiftRegistryDynamicAttribute
       ],
-      "event_name": "abc123",
+      "event_name": "xyz789",
       "items": [GiftRegistryItemInterface],
       "message": "xyz789",
       "owner_name": "xyz789",
@@ -1924,7 +1944,7 @@ query giftRegistry($giftRegistryUid: ID!) {
       "shipping_address": CustomerAddress,
       "status": "ACTIVE",
       "type": GiftRegistryType,
-      "uid": "4"
+      "uid": 4
     }
   }
 }
@@ -1964,7 +1984,7 @@ query giftRegistryEmailSearch($email: String!) {
 ##### Variables
 
 ```json
-{"email": "abc123"}
+{"email": "xyz789"}
 ```
 
 ##### Response
@@ -1974,10 +1994,10 @@ query giftRegistryEmailSearch($email: String!) {
   "data": {
     "giftRegistryEmailSearch": [
       {
-        "event_date": "abc123",
-        "event_title": "abc123",
+        "event_date": "xyz789",
+        "event_title": "xyz789",
         "gift_registry_uid": "4",
-        "location": "abc123",
+        "location": "xyz789",
         "name": "abc123",
         "type": "xyz789"
       }
@@ -2030,12 +2050,12 @@ query giftRegistryIdSearch($giftRegistryUid: ID!) {
   "data": {
     "giftRegistryIdSearch": [
       {
-        "event_date": "abc123",
-        "event_title": "xyz789",
-        "gift_registry_uid": 4,
+        "event_date": "xyz789",
+        "event_title": "abc123",
+        "gift_registry_uid": "4",
         "location": "abc123",
         "name": "xyz789",
-        "type": "xyz789"
+        "type": "abc123"
       }
     ]
   }
@@ -2102,8 +2122,8 @@ query giftRegistryTypeSearch(
       {
         "event_date": "xyz789",
         "event_title": "xyz789",
-        "gift_registry_uid": "4",
-        "location": "xyz789",
+        "gift_registry_uid": 4,
+        "location": "abc123",
         "name": "xyz789",
         "type": "xyz789"
       }
@@ -2264,30 +2284,30 @@ query guestOrder($input: GuestOrderInformationInput!) {
       "applied_gift_cards": [ApplyGiftCardToOrder],
       "available_actions": ["REORDER"],
       "billing_address": OrderAddress,
-      "carrier": "abc123",
+      "carrier": "xyz789",
       "comments": [SalesCommentItem],
       "credit_memos": [CreditMemo],
       "custom_attributes": [CustomAttribute],
       "customer_info": OrderCustomerInfo,
-      "email": "abc123",
+      "email": "xyz789",
       "gift_message": GiftMessage,
-      "gift_receipt_included": true,
+      "gift_receipt_included": false,
       "gift_wrapping": GiftWrapping,
       "id": "4",
       "invoices": [Invoice],
-      "is_virtual": true,
+      "is_virtual": false,
       "items": [OrderItemInterface],
       "items_eligible_for_return": [OrderItemInterface],
       "negotiable_quote": NegotiableQuote,
-      "number": "abc123",
+      "number": "xyz789",
       "order_date": "abc123",
-      "order_status_change_date": "abc123",
+      "order_status_change_date": "xyz789",
       "payment_methods": [OrderPaymentMethod],
-      "printed_card_included": false,
+      "printed_card_included": true,
       "returns": Returns,
       "shipments": [OrderShipment],
       "shipping_address": OrderAddress,
-      "shipping_method": "xyz789",
+      "shipping_method": "abc123",
       "status": "xyz789",
       "token": "xyz789",
       "total": OrderTotal
@@ -2401,12 +2421,12 @@ query guestOrderByToken($input: OrderTokenInput!) {
 {
   "data": {
     "guestOrderByToken": {
-      "admin_assisted_order": 987,
+      "admin_assisted_order": 123,
       "applied_coupons": [AppliedCoupon],
       "applied_gift_cards": [ApplyGiftCardToOrder],
       "available_actions": ["REORDER"],
       "billing_address": OrderAddress,
-      "carrier": "abc123",
+      "carrier": "xyz789",
       "comments": [SalesCommentItem],
       "credit_memos": [CreditMemo],
       "custom_attributes": [CustomAttribute],
@@ -2417,7 +2437,7 @@ query guestOrderByToken($input: OrderTokenInput!) {
       "gift_wrapping": GiftWrapping,
       "id": 4,
       "invoices": [Invoice],
-      "is_virtual": false,
+      "is_virtual": true,
       "items": [OrderItemInterface],
       "items_eligible_for_return": [OrderItemInterface],
       "negotiable_quote": NegotiableQuote,
@@ -2429,9 +2449,9 @@ query guestOrderByToken($input: OrderTokenInput!) {
       "returns": Returns,
       "shipments": [OrderShipment],
       "shipping_address": OrderAddress,
-      "shipping_method": "xyz789",
+      "shipping_method": "abc123",
       "status": "abc123",
-      "token": "abc123",
+      "token": "xyz789",
       "total": OrderTotal
     }
   }
@@ -2467,13 +2487,13 @@ query isCompanyAdminEmailAvailable($email: String!) {
 ##### Variables
 
 ```json
-{"email": "abc123"}
+{"email": "xyz789"}
 ```
 
 ##### Response
 
 ```json
-{"data": {"isCompanyAdminEmailAvailable": {"is_email_available": false}}}
+{"data": {"isCompanyAdminEmailAvailable": {"is_email_available": true}}}
 ```
 
 <HorizontalLine />
@@ -2549,7 +2569,7 @@ query isCompanyRoleNameAvailable($name: String!) {
 ##### Response
 
 ```json
-{"data": {"isCompanyRoleNameAvailable": {"is_role_name_available": false}}}
+{"data": {"isCompanyRoleNameAvailable": {"is_role_name_available": true}}}
 ```
 
 <HorizontalLine />
@@ -2581,13 +2601,13 @@ query isCompanyUserEmailAvailable($email: String!) {
 ##### Variables
 
 ```json
-{"email": "abc123"}
+{"email": "xyz789"}
 ```
 
 ##### Response
 
 ```json
-{"data": {"isCompanyUserEmailAvailable": {"is_email_available": false}}}
+{"data": {"isCompanyUserEmailAvailable": {"is_email_available": true}}}
 ```
 
 <HorizontalLine />
@@ -2619,13 +2639,13 @@ query isEmailAvailable($email: String!) {
 ##### Variables
 
 ```json
-{"email": "xyz789"}
+{"email": "abc123"}
 ```
 
 ##### Response
 
 ```json
-{"data": {"isEmailAvailable": {"is_email_available": true}}}
+{"data": {"isEmailAvailable": {"is_email_available": false}}}
 ```
 
 <HorizontalLine />
@@ -2668,7 +2688,7 @@ query isSubscribedProductAlertPrice($input: ProductAlertPriceInput!) {
   "data": {
     "isSubscribedProductAlertPrice": {
       "isSubscribed": true,
-      "message": "abc123"
+      "message": "xyz789"
     }
   }
 }
@@ -2713,8 +2733,8 @@ query isSubscribedProductAlertStock($input: ProductAlertStockInput!) {
 {
   "data": {
     "isSubscribedProductAlertStock": {
-      "isSubscribed": true,
-      "message": "abc123"
+      "isSubscribed": false,
+      "message": "xyz789"
     }
   }
 }
@@ -2793,7 +2813,7 @@ query negotiableQuote($uid: ID!) {
 ##### Variables
 
 ```json
-{"uid": "4"}
+{"uid": 4}
 ```
 
 ##### Response
@@ -2813,7 +2833,7 @@ query negotiableQuote($uid: ID!) {
       "email": "abc123",
       "expiration_date": "xyz789",
       "history": [NegotiableQuoteHistoryEntry],
-      "is_virtual": false,
+      "is_virtual": true,
       "items": [CartItemInterface],
       "name": "abc123",
       "order": CustomerOrder,
@@ -2825,7 +2845,7 @@ query negotiableQuote($uid: ID!) {
       ],
       "status": "SUBMITTED",
       "template_id": 4,
-      "template_name": "abc123",
+      "template_name": "xyz789",
       "total_quantity": 123.45,
       "uid": 4,
       "updated_at": "xyz789"
@@ -2902,7 +2922,7 @@ query negotiableQuoteTemplate($templateId: ID!) {
 ##### Variables
 
 ```json
-{"templateId": 4}
+{"templateId": "4"}
 ```
 
 ##### Response
@@ -2917,25 +2937,25 @@ query negotiableQuoteTemplate($templateId: ID!) {
       "expiration_date": "abc123",
       "history": [NegotiableQuoteHistoryEntry],
       "historyV2": [NegotiableQuoteTemplateHistoryEntry],
-      "is_min_max_qty_used": false,
+      "is_min_max_qty_used": true,
       "is_virtual": true,
       "items": [CartItemInterface],
       "max_order_commitment": 123,
       "min_order_commitment": 987,
-      "name": "abc123",
+      "name": "xyz789",
       "notifications": [QuoteTemplateNotificationMessage],
       "prices": CartPrices,
       "reference_document_links": [
         NegotiableQuoteReferenceDocumentLink
       ],
-      "sales_rep_name": "abc123",
+      "sales_rep_name": "xyz789",
       "shipping_addresses": [
         NegotiableQuoteShippingAddress
       ],
-      "status": "xyz789",
-      "template_id": 4,
+      "status": "abc123",
+      "template_id": "4",
       "total_quantity": 123.45,
-      "uid": 4,
+      "uid": "4",
       "updated_at": "xyz789"
     }
   }
@@ -3084,7 +3104,7 @@ query negotiableQuotes(
       "items": [NegotiableQuote],
       "page_info": SearchResultPageInfo,
       "sort_fields": SortFields,
-      "total_count": 987
+      "total_count": 123
     }
   }
 }
@@ -3119,7 +3139,7 @@ query payByLinkCart($token: String!) {
 ##### Variables
 
 ```json
-{"token": "abc123"}
+{"token": "xyz789"}
 ```
 
 ##### Response
@@ -3128,7 +3148,7 @@ query payByLinkCart($token: String!) {
 {
   "data": {
     "payByLinkCart": {
-      "masked_cart_id": "abc123"
+      "masked_cart_id": "xyz789"
     }
   }
 }
@@ -3206,7 +3226,41 @@ query pickupLocations(
     "pickupLocations": {
       "items": [PickupLocation],
       "page_info": SearchResultPageInfo,
-      "total_count": 987
+      "total_count": 123
+    }
+  }
+}
+```
+
+<HorizontalLine />
+
+### productReviewRatingsMetadata
+
+Return the active ratings attributes and the values each rating can have.
+
+**Response:** [`ProductReviewRatingsMetadata!`](/reference/graphql/saas/types-k-p.md#productreviewratingsmetadata)
+
+#### Example
+
+##### Query
+
+```graphql
+query productReviewRatingsMetadata {
+  productReviewRatingsMetadata {
+    items {
+      ...ProductReviewRatingMetadataFragment
+    }
+  }
+}
+```
+
+##### Response
+
+```json
+{
+  "data": {
+    "productReviewRatingsMetadata": {
+      "items": [ProductReviewRatingMetadata]
     }
   }
 }
@@ -3279,7 +3333,7 @@ query productSearch(
   "current_page": 1,
   "filter": [SearchClauseInput],
   "page_size": 20,
-  "phrase": "xyz789",
+  "phrase": "abc123",
   "sort": [ProductSearchSortInput]
 }
 ```
@@ -3293,8 +3347,8 @@ query productSearch(
       "facets": [Aggregation],
       "items": [ProductSearchItem],
       "page_info": SearchResultPageInfo,
-      "related_terms": ["abc123"],
-      "suggestions": ["xyz789"],
+      "related_terms": ["xyz789"],
+      "suggestions": ["abc123"],
       "total_count": 987,
       "warnings": [ProductSearchWarning]
     }
@@ -3336,6 +3390,14 @@ query products($skus: [String]) {
     }
     videos {
       ...ProductViewVideoFragment
+    }
+    gallery {
+      ... on ProductViewImage {
+        ...ProductViewImageFragment
+      }
+      ... on ProductViewVideo {
+        ...ProductViewVideoFragment
+      }
     }
     lastModifiedAt
     metaDescription
@@ -3380,26 +3442,75 @@ query products($skus: [String]) {
         "lowStock": true,
         "attributes": [ProductViewAttribute],
         "description": "xyz789",
-        "id": 4,
+        "id": "4",
         "images": [ProductViewImage],
         "videos": [ProductViewVideo],
+        "gallery": [ProductViewImage],
         "lastModifiedAt": "2007-12-03T10:15:30Z",
-        "metaDescription": "xyz789",
+        "metaDescription": "abc123",
         "metaKeyword": "abc123",
         "metaTitle": "abc123",
         "name": "xyz789",
-        "shortDescription": "xyz789",
+        "shortDescription": "abc123",
         "inputOptions": [ProductViewInputOption],
         "sku": "abc123",
         "externalId": "abc123",
         "externalIds": [ExternalId],
         "url": "xyz789",
-        "urlKey": "abc123",
+        "urlKey": "xyz789",
         "links": [ProductViewLink],
-        "queryType": "xyz789",
+        "queryType": "abc123",
         "visibility": "abc123"
       }
     ]
+  }
+}
+```
+
+<HorizontalLine />
+
+### publicRequisitionList
+
+Return a requisition list marked public, identified by its token. Throws a GraphQL error if the token is invalid or the list is no longer public. Does not require authentication.
+
+**Response:** [`PublicRequisitionListOutput`](/reference/graphql/saas/types-k-p.md#publicrequisitionlistoutput)
+
+#### Arguments
+
+| Name | Description |
+|------|-------------|
+| `token` - [`ID!`](/reference/graphql/saas/types-f-i.md#id) | The public token identifying the requisition list. |
+
+#### Example
+
+##### Query
+
+```graphql
+query publicRequisitionList($token: ID!) {
+  publicRequisitionList(token: $token) {
+    requisition_list {
+      ...RequisitionListFragment
+    }
+    sender_name
+  }
+}
+```
+
+##### Variables
+
+```json
+{"token": "4"}
+```
+
+##### Response
+
+```json
+{
+  "data": {
+    "publicRequisitionList": {
+      "requisition_list": RequisitionList,
+      "sender_name": "xyz789"
+    }
   }
 }
 ```
@@ -3444,7 +3555,7 @@ query recaptchaFormConfig($formType: ReCaptchaFormEnum!) {
   "data": {
     "recaptchaFormConfig": {
       "configurations": ReCaptchaConfiguration,
-      "is_enabled": true
+      "is_enabled": false
     }
   }
 }
@@ -3495,7 +3606,7 @@ query recaptchaFormConfigs($formTypes: [ReCaptchaFormEnum!]!) {
       {
         "configurations": ReCaptchaConfiguration,
         "form_type": "PLACE_ORDER",
-        "is_enabled": false
+        "is_enabled": true
       }
     ]
   }
@@ -3535,13 +3646,13 @@ query recaptchaV3Config {
 {
   "data": {
     "recaptchaV3Config": {
-      "badge_position": "abc123",
-      "failure_message": "xyz789",
+      "badge_position": "xyz789",
+      "failure_message": "abc123",
       "forms": ["PLACE_ORDER"],
       "is_enabled": false,
       "language_code": "abc123",
       "minimum_score": 123.45,
-      "theme": "abc123",
+      "theme": "xyz789",
       "website_key": "abc123"
     }
   }
@@ -3606,7 +3717,7 @@ query recommendations(
 
 ```json
 {
-  "cartSkus": ["abc123"],
+  "cartSkus": ["xyz789"],
   "category": "abc123",
   "currentSku": "abc123",
   "currentProduct": CurrentProductInput,
@@ -3624,7 +3735,7 @@ query recommendations(
   "data": {
     "recommendations": {
       "results": [RecommendationUnit],
-      "totalResults": 123
+      "totalResults": 987
     }
   }
 }
@@ -3681,11 +3792,11 @@ query recommendationsByUnits(
 ```json
 {
   "selector": UnitSelector,
-  "currentSku": "xyz789",
+  "currentSku": "abc123",
   "currentProduct": CurrentProductInput,
   "userPurchaseHistory": [PurchaseHistory],
   "userViewHistory": [ViewHistory],
-  "cartSkus": ["abc123"]
+  "cartSkus": ["xyz789"]
 }
 ```
 
@@ -3744,6 +3855,14 @@ query refineProduct(
     videos {
       ...ProductViewVideoFragment
     }
+    gallery {
+      ... on ProductViewImage {
+        ...ProductViewImageFragment
+      }
+      ... on ProductViewVideo {
+        ...ProductViewVideoFragment
+      }
+    }
     lastModifiedAt
     metaDescription
     metaKeyword
@@ -3773,8 +3892,8 @@ query refineProduct(
 
 ```json
 {
-  "optionIds": ["abc123"],
-  "sku": "abc123"
+  "optionIds": ["xyz789"],
+  "sku": "xyz789"
 }
 ```
 
@@ -3784,29 +3903,94 @@ query refineProduct(
 {
   "data": {
     "refineProduct": {
-      "addToCartAllowed": true,
-      "inStock": false,
+      "addToCartAllowed": false,
+      "inStock": true,
       "lowStock": true,
       "attributes": [ProductViewAttribute],
       "description": "abc123",
-      "id": "4",
+      "id": 4,
       "images": [ProductViewImage],
       "videos": [ProductViewVideo],
+      "gallery": [ProductViewImage],
       "lastModifiedAt": "2007-12-03T10:15:30Z",
       "metaDescription": "xyz789",
-      "metaKeyword": "abc123",
+      "metaKeyword": "xyz789",
       "metaTitle": "xyz789",
-      "name": "abc123",
-      "shortDescription": "xyz789",
+      "name": "xyz789",
+      "shortDescription": "abc123",
       "inputOptions": [ProductViewInputOption],
       "sku": "xyz789",
       "externalId": "xyz789",
       "externalIds": [ExternalId],
-      "url": "xyz789",
+      "url": "abc123",
       "urlKey": "abc123",
       "links": [ProductViewLink],
-      "queryType": "abc123",
+      "queryType": "xyz789",
       "visibility": "xyz789"
+    }
+  }
+}
+```
+
+<HorizontalLine />
+
+### reviews
+
+Return the approved reviews for the specified product SKU. Standalone root query, not a Federation extension on ProductView, since a plain root field does not need @key / _entities.
+
+**Response:** [`ProductReviews`](/reference/graphql/saas/types-k-p.md#productreviews)
+
+#### Arguments
+
+| Name | Description |
+|------|-------------|
+| `sku` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The SKU of the product to return reviews for. |
+| `pageSize` - [`Int`](/reference/graphql/saas/types-f-i.md#int) | The maximum number of results to return at once. The default is 20. Default: `20` |
+| `currentPage` - [`Int`](/reference/graphql/saas/types-f-i.md#int) | The page of results to return. The default is 1. Default: `1` |
+
+#### Example
+
+##### Query
+
+```graphql
+query reviews(
+  $sku: String!,
+  $pageSize: Int,
+  $currentPage: Int
+) {
+  reviews(
+    sku: $sku,
+    pageSize: $pageSize,
+    currentPage: $currentPage
+  ) {
+    items {
+      ...ProductReviewFragment
+    }
+    page_info {
+      ...SearchResultPageInfoFragment
+    }
+  }
+}
+```
+
+##### Variables
+
+```json
+{
+  "sku": "xyz789",
+  "pageSize": 20,
+  "currentPage": 1
+}
+```
+
+##### Response
+
+```json
+{
+  "data": {
+    "reviews": {
+      "items": [ProductReview],
+      "page_info": SearchResultPageInfo
     }
   }
 }
@@ -3854,7 +4038,7 @@ query sharedRequisitionList($token: String!) {
   "data": {
     "sharedRequisitionList": {
       "requisition_list": RequisitionList,
-      "sender_name": "xyz789"
+      "sender_name": "abc123"
     }
   }
 }
@@ -3864,7 +4048,7 @@ query sharedRequisitionList($token: String!) {
 
 ### sourceAvailability
 
-Per-source availability for one or more SKUs, scoped to the storefront-visible sources of the current sales channel's stock. Availability is computed identically to the order-placement guard.
+Per-source availability for one or more SKUs, scoped to the storefront-visible sources of the current sales channel's stock. Availability is computed identically to the order-placement guard. Only SKUs of products the shopper may see in the current website's catalog are reported. Per-source availability is a physical snapshot, not a purchasable-quantity limit: use stockAvailability for the salable quantity and the Add to Cart gate. Returns an empty list when per-source disclosure is not enabled for the store (cataloginventory/source_availability/storefront_enabled off).
 
 **Response:** [`[SkuSourceAvailability]!`](/reference/graphql/saas/types-q-s.md#skusourceavailability)
 
@@ -3872,7 +4056,7 @@ Per-source availability for one or more SKUs, scoped to the storefront-visible s
 
 | Name | Description |
 |------|-------------|
-| `skus` - [`[String!]!`](/reference/graphql/saas/types-q-s.md#string) | The product SKUs to report availability for. |
+| `skus` - [`[String!]!`](/reference/graphql/saas/types-q-s.md#string) | The product SKUs to report availability for, at most 100. A SKU that matches no product, whose product is not assigned to the current website or is disabled in the current store, or that the shopper's customer group may not see in the catalog (B2B shared catalog assignment or category permissions) is silently omitted from the response. |
 | `source_codes` - [`[String!]`](/reference/graphql/saas/types-q-s.md#string) | Restrict the report to these inventory sources. Only sources flagged storefront-visible are ever reported; a requested source that is not storefront-visible, or not assigned to the current sales channel's stock, is silently omitted. When omitted, every storefront-visible source assigned to the current sales channel's stock is reported. |
 | `only_in_stock` - [`Boolean`](/reference/graphql/saas/types-a-b.md#boolean) | When true, omit sources where the SKU is not salable. |
 
@@ -3903,8 +4087,8 @@ query sourceAvailability(
 
 ```json
 {
-  "skus": ["xyz789"],
-  "source_codes": ["abc123"],
+  "skus": ["abc123"],
+  "source_codes": ["xyz789"],
   "only_in_stock": false
 }
 ```
@@ -3916,8 +4100,62 @@ query sourceAvailability(
   "data": {
     "sourceAvailability": [
       {
-        "sku": "abc123",
+        "sku": "xyz789",
         "sources": [SourceAvailability]
+      }
+    ]
+  }
+}
+```
+
+<HorizontalLine />
+
+### stockAvailability
+
+Stock-level salable quantity and purchase eligibility for one or more SKUs, evaluated against the current sales channel's stock. Read directly from the inventory and reservation tables, so it is strongly consistent with what the cart enforces at add-to-cart and order placement, and accounts for every open reservation — including orders placed without a nominated source, which per-source availability cannot attribute to any one source. Can be combined with sourceAvailability in a single request. Only SKUs of products the shopper may see in the current website's catalog are reported.
+
+**Response:** [`[StockAvailability]!`](/reference/graphql/saas/types-q-s.md#stockavailability)
+
+#### Arguments
+
+| Name | Description |
+|------|-------------|
+| `skus` - [`[String!]!`](/reference/graphql/saas/types-q-s.md#string) | The product SKUs to report availability for, at most 100. A SKU that matches no product, whose product is not assigned to the current website or is disabled in the current store, or that the shopper's customer group may not see in the catalog (B2B shared catalog assignment or category permissions) is silently omitted from the response. |
+
+#### Example
+
+##### Query
+
+```graphql
+query stockAvailability($skus: [String!]!) {
+  stockAvailability(skus: $skus) {
+    backorder_message
+    is_in_stock
+    is_salable
+    salable_qty
+    sku
+  }
+}
+```
+
+##### Variables
+
+```json
+{"skus": ["xyz789"]}
+```
+
+##### Response
+
+```json
+{
+  "data": {
+    "stockAvailability": [
+      {
+        "backorder_message": "abc123",
+        "is_in_stock": false,
+        "is_salable": false,
+        "salable_qty": 123.45,
+        "sku": "abc123"
       }
     ]
   }
@@ -3943,6 +4181,7 @@ query storeConfig {
     allow_gift_receipt
     allow_gift_wrapping_on_order
     allow_gift_wrapping_on_order_items
+    allow_guests_to_write_product_reviews
     allow_items
     allow_order
     allow_printed_card
@@ -4045,11 +4284,16 @@ query storeConfig {
     }
     product_alert_allow_stock
     product_fixed_product_tax_display_setting
+    product_reviews_enabled
     product_url_suffix
     quickorder_active
     quote_minimum_amount
     quote_minimum_amount_message
     required_character_classes_number
+    requisition_list_public_share_link_validity_days
+    requisition_list_public_share_max_recipients
+    requisition_list_public_share_storefront_path
+    requisition_list_public_sharing_enabled
     requisition_list_share_link_validity_days
     requisition_list_share_max_recipients
     requisition_list_share_storefront_path
@@ -4105,32 +4349,33 @@ query storeConfig {
   "data": {
     "storeConfig": {
       "allow_company_registration": false,
-      "allow_gift_receipt": "abc123",
+      "allow_gift_receipt": "xyz789",
       "allow_gift_wrapping_on_order": "xyz789",
       "allow_gift_wrapping_on_order_items": "abc123",
-      "allow_items": "abc123",
+      "allow_guests_to_write_product_reviews": "abc123",
+      "allow_items": "xyz789",
       "allow_order": "xyz789",
-      "allow_printed_card": "xyz789",
-      "autocomplete_on_storefront": true,
+      "allow_printed_card": "abc123",
+      "autocomplete_on_storefront": false,
       "base_currency_code": "abc123",
-      "base_link_url": "abc123",
+      "base_link_url": "xyz789",
       "base_media_url": "abc123",
-      "base_static_url": "xyz789",
-      "base_url": "abc123",
+      "base_static_url": "abc123",
+      "base_url": "xyz789",
       "cart_expires_in_days": 123,
       "cart_gift_wrapping": "abc123",
-      "cart_merge_preference": "xyz789",
+      "cart_merge_preference": "abc123",
       "cart_printed_card": "xyz789",
-      "cart_summary_display_quantity": 123,
-      "catalog_default_sort_by": "xyz789",
+      "cart_summary_display_quantity": 987,
+      "catalog_default_sort_by": "abc123",
       "category_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
       "category_url_suffix": "xyz789",
-      "check_money_order_enable_for_specific_countries": false,
-      "check_money_order_enabled": true,
-      "check_money_order_make_check_payable_to": "xyz789",
+      "check_money_order_enable_for_specific_countries": true,
+      "check_money_order_enabled": false,
+      "check_money_order_make_check_payable_to": "abc123",
       "check_money_order_max_order_total": "abc123",
-      "check_money_order_min_order_total": "abc123",
-      "check_money_order_new_order_status": "xyz789",
+      "check_money_order_min_order_total": "xyz789",
+      "check_money_order_new_order_status": "abc123",
       "check_money_order_payment_from_specific_countries": "abc123",
       "check_money_order_send_check_to": "abc123",
       "check_money_order_sort_order": 987,
@@ -4144,117 +4389,122 @@ query storeConfig {
       "create_account_confirmation": false,
       "customer_access_token_lifetime": 123.45,
       "default_country": "abc123",
-      "default_display_currency_code": "abc123",
+      "default_display_currency_code": "xyz789",
       "display_product_prices_in_catalog": 123,
-      "display_shipping_prices": 123,
-      "display_state_if_optional": false,
+      "display_shipping_prices": 987,
+      "display_state_if_optional": true,
       "enable_multiple_wishlists": "xyz789",
       "fixed_product_taxes_apply_tax_to_fpt": true,
       "fixed_product_taxes_display_prices_in_emails": 987,
-      "fixed_product_taxes_display_prices_in_product_lists": 123,
-      "fixed_product_taxes_display_prices_in_sales_modules": 123,
-      "fixed_product_taxes_display_prices_on_product_view_page": 123,
-      "fixed_product_taxes_enable": true,
+      "fixed_product_taxes_display_prices_in_product_lists": 987,
+      "fixed_product_taxes_display_prices_in_sales_modules": 987,
+      "fixed_product_taxes_display_prices_on_product_view_page": 987,
+      "fixed_product_taxes_enable": false,
       "fixed_product_taxes_include_fpt_in_subtotal": false,
-      "graphql_share_customer_group": true,
-      "grid_per_page": 987,
+      "graphql_share_customer_group": false,
+      "grid_per_page": 123,
       "grid_per_page_values": "xyz789",
       "grouped_product_image": "ITSELF",
       "is_checkout_agreements_enabled": false,
-      "is_default_store": false,
+      "is_default_store": true,
       "is_default_store_group": false,
-      "is_guest_checkout_enabled": true,
-      "is_negotiable_quote_active": false,
-      "is_one_page_checkout_enabled": false,
-      "is_requisition_list_active": "xyz789",
+      "is_guest_checkout_enabled": false,
+      "is_negotiable_quote_active": true,
+      "is_one_page_checkout_enabled": true,
+      "is_requisition_list_active": "abc123",
       "list_mode": "xyz789",
       "list_per_page": 123,
-      "list_per_page_values": "abc123",
+      "list_per_page_values": "xyz789",
       "locale": "xyz789",
-      "magento_reward_general_is_enabled": "abc123",
+      "magento_reward_general_is_enabled": "xyz789",
       "magento_reward_general_is_enabled_on_front": "abc123",
       "magento_reward_general_min_points_balance": "xyz789",
-      "magento_reward_general_publish_history": "abc123",
+      "magento_reward_general_publish_history": "xyz789",
       "magento_reward_points_invitation_customer": "xyz789",
-      "magento_reward_points_invitation_customer_limit": "xyz789",
+      "magento_reward_points_invitation_customer_limit": "abc123",
       "magento_reward_points_invitation_order": "xyz789",
-      "magento_reward_points_invitation_order_limit": "xyz789",
+      "magento_reward_points_invitation_order_limit": "abc123",
       "magento_reward_points_newsletter": "xyz789",
       "magento_reward_points_order": "xyz789",
-      "magento_reward_points_register": "abc123",
-      "magento_reward_points_review": "xyz789",
+      "magento_reward_points_register": "xyz789",
+      "magento_reward_points_review": "abc123",
       "magento_reward_points_review_limit": "xyz789",
       "magento_wishlist_general_is_enabled": "abc123",
       "max_items_in_order_summary": 987,
       "maximum_number_of_wishlists": "abc123",
       "minicart_display": false,
       "minicart_max_items": 987,
-      "minimum_password_length": "xyz789",
+      "minimum_password_length": "abc123",
       "newsletter_enabled": false,
-      "optional_zip_countries": "abc123",
-      "order_cancellation_enabled": false,
+      "optional_zip_countries": "xyz789",
+      "order_cancellation_enabled": true,
       "order_cancellation_reasons": [CancellationReason],
       "orders_invoices_credit_memos_display_full_summary": false,
       "orders_invoices_credit_memos_display_grandtotal": false,
       "orders_invoices_credit_memos_display_price": 123,
       "orders_invoices_credit_memos_display_shipping_amount": 123,
-      "orders_invoices_credit_memos_display_subtotal": 123,
+      "orders_invoices_credit_memos_display_subtotal": 987,
       "orders_invoices_credit_memos_display_zero_tax": true,
-      "persistent_enabled": false,
+      "persistent_enabled": true,
       "persistent_options_wishlist": true,
-      "persistent_shopping_cart": true,
+      "persistent_shopping_cart": false,
       "printed_card_priceV2": Money,
       "product_alert_allow_stock": false,
       "product_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
-      "product_url_suffix": "abc123",
-      "quickorder_active": true,
+      "product_reviews_enabled": "abc123",
+      "product_url_suffix": "xyz789",
+      "quickorder_active": false,
       "quote_minimum_amount": 987.65,
       "quote_minimum_amount_message": "abc123",
       "required_character_classes_number": "abc123",
-      "requisition_list_share_link_validity_days": 987,
+      "requisition_list_public_share_link_validity_days": 123,
+      "requisition_list_public_share_max_recipients": 123,
+      "requisition_list_public_share_storefront_path": "xyz789",
+      "requisition_list_public_sharing_enabled": true,
+      "requisition_list_share_link_validity_days": 123,
       "requisition_list_share_max_recipients": 987,
       "requisition_list_share_storefront_path": "abc123",
       "requisition_list_sharing_enabled": false,
-      "returns_enabled": "abc123",
+      "returns_enabled": "xyz789",
       "root_category_uid": "4",
       "sales_fixed_product_tax_display_setting": "INCLUDE_FPT_WITHOUT_DETAILS",
       "sales_gift_wrapping": "xyz789",
-      "sales_printed_card": "abc123",
+      "sales_printed_card": "xyz789",
       "secure_base_link_url": "xyz789",
       "secure_base_media_url": "xyz789",
       "secure_base_static_url": "xyz789",
-      "secure_base_url": "abc123",
+      "secure_base_url": "xyz789",
       "share_active_segments": true,
-      "share_applied_cart_rule": false,
+      "share_applied_cart_rule": true,
       "share_customer_accounts_scope": 123,
       "shopping_assistance_checkbox_title": "xyz789",
       "shopping_assistance_checkbox_tooltip": "xyz789",
-      "shopping_assistance_enabled": false,
+      "shopping_assistance_enabled": true,
       "shopping_cart_display_full_summary": false,
-      "shopping_cart_display_grand_total": false,
+      "shopping_cart_display_grand_total": true,
       "shopping_cart_display_price": 123,
-      "shopping_cart_display_shipping": 987,
-      "shopping_cart_display_subtotal": 123,
+      "shopping_cart_display_shipping": 123,
+      "shopping_cart_display_subtotal": 987,
       "shopping_cart_display_tax_gift_wrapping": "DISPLAY_EXCLUDING_TAX",
-      "shopping_cart_display_zero_tax": false,
+      "shopping_cart_display_zero_tax": true,
       "store_code": "4",
       "store_group_code": "4",
       "store_group_name": "xyz789",
       "store_name": "xyz789",
-      "store_sort_order": 987,
+      "store_sort_order": 123,
       "timezone": "abc123",
-      "title_separator": "xyz789",
-      "use_store_in_url": false,
+      "title_separator": "abc123",
+      "use_store_in_url": true,
       "website_code": "4",
-      "website_name": "abc123",
+      "website_name": "xyz789",
       "weight_unit": "xyz789",
       "zero_subtotal_enable_for_specific_countries": false,
       "zero_subtotal_enabled": false,
       "zero_subtotal_new_order_status": "abc123",
-      "zero_subtotal_payment_action": "xyz789",
+      "zero_subtotal_payment_action": "abc123",
       "zero_subtotal_payment_from_specific_countries": "abc123",
-      "zero_subtotal_sort_order": 123,
-      "zero_subtotal_title": "abc123"
+      "zero_subtotal_sort_order": 987,
+      "zero_subtotal_title": "xyz789"
     }
   }
 }
@@ -4304,9 +4554,9 @@ query variants(
 
 ```json
 {
-  "sku": "xyz789",
-  "optionIds": ["abc123"],
-  "pageSize": 987,
+  "sku": "abc123",
+  "optionIds": ["xyz789"],
+  "pageSize": 123,
   "cursor": "xyz789"
 }
 ```

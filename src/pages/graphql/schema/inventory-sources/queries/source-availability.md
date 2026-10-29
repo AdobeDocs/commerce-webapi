@@ -11,11 +11,13 @@ Use the `sourceAvailability` query to check per-source inventory availability fo
 
 Availability is gated at two levels, and both are off by default because they disclose which sources stock a SKU:
 
-- **Store level.** Go to **Stores** > Configuration > **Catalog** > **Inventory** > **Per-Source Availability (Storefront)** and set **Enable `sourceAvailability` GraphQL Query** to **Yes**. While this setting is off, the query returns an error.
+- **Store level.** Go to **Stores** > Configuration > **Catalog** > **Inventory** > **Per-Source Availability (Storefront)** and set **Enable `sourceAvailability` GraphQL Query** to **Yes**. While this setting is off, the query returns an empty list.
 
 - **Source level.** Each inventory source has a **Visible on Storefront** flag that is off by default. A source's stock is never returned until a merchant enables it. To set it, go to **Stores** > Inventory > **Sources**, edit a source, and turn on **Visible on Storefront**.
 
 The exact `available_qty` value is returned only when it is at or below the store's **Only X left Threshold** setting. Above the threshold, `available_qty` is `null` and `is_in_stock` is the only reliable signal. This threshold defaults to `0`, so by default every positive quantity is masked and `is_in_stock` is the authoritative field to check. To change it, go to **Stores** > Configuration > **Catalog** > **Inventory** > **Stock Options** and set **Only X left Threshold**.
+
+Per-source availability is a snapshot, not a purchasable-quantity limit. It cannot account for orders placed without a nominated source. For the salable quantity and the Add to Cart decision, use the [`stockAvailability`](stock-availability.md) query, which you can request in the same GraphQL request.
 
 ## Syntax
 
@@ -95,4 +97,3 @@ The following query checks availability for a single SKU at two named sources.
 | `Parameter "skus" may contain at most 100 entries.` | The `skus` argument contains more than 100 entries. |
 | `Parameter "source_codes" must be a list of source codes.` | The `source_codes` argument was provided as a non-list value. |
 | `Parameter "source_codes" may contain at most 100 entries.` | The `source_codes` argument contains more than 100 entries. |
-| `The per-source availability query is not enabled for this store.` | An admin has not enabled the query for the current store. |
