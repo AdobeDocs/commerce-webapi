@@ -29,9 +29,35 @@ The `ProductView` output object is different than the core `products` query `Pro
 
 * Both simple and complex products can have merchant-defined input options that allow shoppers to customize a product by adding text, date, an image, or a file, for example adding text for engraving. These options can have an associated markup that is applied to the product price. These options are exposed in a top-level `inputOptions` container `[ProductViewInputOption]`.
 
-*  Merchant-defined attributes are exposed in a top-level `attributes` container `[ProductViewAttribute]` and indicate their storefront roles. Roles include PDP, PLP, and Search Results display.
+*  Merchant-defined attributes are exposed in a top-level `attributes` container `[ProductViewAttribute]` and indicate their storefront roles. Roles include PDP, PLP, and Search Results display. Attributes include merchant-defined attributes and, when product reviews are enabled, the system [product review attributes](#product-review-attributes) `ac_review_count` and `ac_rating_summary`.
 
 *  Images are also accessible as a top-level container, and you can filter them by their role. An image can have an `image`, `small_image`, or `thumbnail` role.
+
+## Product review attributes
+
+When product reviews are enabled, the `products` query returns review summary data in the `attributes` field on `ProductView`. These are system product attributes, not top-level fields on `ProductView`.
+
+| Attribute | Description |
+|---|---|
+| `ac_review_count` | The number of approved product reviews. |
+| `ac_rating_summary` | The average rating for approved product reviews, expressed as a value from 0 to 100. Storefronts can convert this value to a star rating. |
+
+{style="table-layout:auto"}
+
+The product feed updates when review summaries change. Product reviews are disabled by default. Only approved reviews contribute to the review count and rating summary.
+
+The existing `attributes` selection in the product query requests these attributes along with other product attributes:
+
+```graphql
+attributes(roles: []) {
+  name
+  label
+  value
+  roles
+}
+```
+
+To retrieve the list of approved reviews rather than product-level review summary attributes, use the [`reviews` query](../../products/queries/reviews.md).
 
 ## Syntax
 

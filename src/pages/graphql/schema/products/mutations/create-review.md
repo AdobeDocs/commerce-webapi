@@ -4,8 +4,6 @@ description: The createProductReview mutation adds a review for the specified pr
 
 ---
 
-<Fragment src="../../../../includes/paas-only.md"/>
-
 # createProductReview mutation
 
 The `createProductReview` mutation adds a review for the specified product. Use the [`productReviewRatingsMetadata` query](../queries/product-review-ratings-metadata.md) to return a list of rating categories and possible values.
