@@ -35,7 +35,7 @@ The `ProductView` output object is different than the core `products` query `Pro
 
 ## Product review attributes
 
-When product reviews are enabled, the `products` query returns review summary data in the `attributes` field on `ProductView`. These are system product attributes, not top-level fields on `ProductView`.
+When product reviews are enabled, the `products` query returns review summary data in the  `ProductView.attributes` field. These are system product attributes, not top-level fields on `ProductView`.
 
 | Attribute | Description |
 |---|---|
