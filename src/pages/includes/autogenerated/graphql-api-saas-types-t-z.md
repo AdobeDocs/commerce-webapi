@@ -17,8 +17,8 @@ Contains tax item details.
 ```json
 {
   "amount": Money,
-  "rate": 987.65,
-  "title": "abc123"
+  "rate": 123.45,
+  "title": "xyz789"
 }
 ```
 
@@ -157,9 +157,9 @@ Contains the response to the request to unassign a child company.
 
 ```json
 {
-  "unitName": "abc123",
+  "unitName": "xyz789",
   "storefrontLabel": "xyz789",
-  "pagePlacement": "abc123",
+  "pagePlacement": "xyz789",
   "displayNumber": 123,
   "pageType": "abc123",
   "unitStatus": "abc123",
@@ -186,7 +186,7 @@ Provide either rec unit ids or labels to retrieve rec units
 ```json
 {
   "unitIds": ["xyz789"],
-  "labels": ["abc123"]
+  "labels": ["xyz789"]
 }
 ```
 
@@ -250,7 +250,7 @@ Defines the input schema for updating company configuration.
 #### Example
 
 ```json
-{"address_book_enabled": false, "custom_shipping_address_enabled": false}
+{"address_book_enabled": true, "custom_shipping_address_enabled": false}
 ```
 
 <HorizontalLine />
@@ -385,8 +385,8 @@ Defines updates to a `GiftRegistry` object.
   "dynamic_attributes": [
     GiftRegistryDynamicAttributeInput
   ],
-  "event_name": "abc123",
-  "message": "xyz789",
+  "event_name": "xyz789",
+  "message": "abc123",
   "privacy_settings": "PRIVATE",
   "shipping_address": GiftRegistryShippingAddressInput,
   "status": "ACTIVE"
@@ -412,8 +412,8 @@ Defines updates to an item in a gift registry.
 ```json
 {
   "gift_registry_item_uid": "4",
-  "note": "xyz789",
-  "quantity": 987.65
+  "note": "abc123",
+  "quantity": 123.45
 }
 ```
 
@@ -477,9 +477,9 @@ Defines updates to an existing registrant.
     GiftRegistryDynamicAttributeInput
   ],
   "email": "abc123",
-  "firstname": "abc123",
+  "firstname": "xyz789",
   "gift_registry_registrant_uid": 4,
-  "lastname": "abc123"
+  "lastname": "xyz789"
 }
 ```
 
@@ -577,7 +577,7 @@ Specifies the items to update.
 ```json
 {
   "items": [NegotiableQuoteTemplateItemQuantityInput],
-  "template_id": 4
+  "template_id": "4"
 }
 ```
 
@@ -631,7 +631,7 @@ Defines the changes to be made to an approval rule.
   "description": "abc123",
   "name": "xyz789",
   "status": "ENABLED",
-  "uid": "4"
+  "uid": 4
 }
 ```
 
@@ -655,7 +655,7 @@ An input object that defines which requistion list characteristics to update.
 {
   "description": "abc123",
   "is_public": false,
-  "name": "abc123"
+  "name": "xyz789"
 }
 ```
 
@@ -740,7 +740,7 @@ Contains the name and visibility of an updated wish list.
 ```json
 {
   "name": "abc123",
-  "uid": "4",
+  "uid": 4,
   "visibility": "PUBLIC"
 }
 ```
@@ -807,7 +807,7 @@ Contains details about a failed validation attempt.
 #### Example
 
 ```json
-{"message": "xyz789", "type": "NOT_FOUND"}
+{"message": "abc123", "type": "NOT_FOUND"}
 ```
 
 <HorizontalLine />
@@ -888,7 +888,7 @@ Defines a customer attribute validation rule.
 ```json
 {
   "name": "DATE_RANGE_MAX",
-  "value": "abc123"
+  "value": "xyz789"
 }
 ```
 
@@ -952,7 +952,7 @@ Retrieves the vault configuration
 
 ```json
 {
-  "is_vault_enabled": false,
+  "is_vault_enabled": true,
   "sdk_params": [SDKParams],
   "three_ds_mode": "OFF"
 }
@@ -977,9 +977,9 @@ Vault payment inputs
 
 ```json
 {
-  "payment_source": "xyz789",
-  "payments_order_id": "xyz789",
-  "paypal_order_id": "abc123",
+  "payment_source": "abc123",
+  "payments_order_id": "abc123",
+  "paypal_order_id": "xyz789",
   "public_hash": "abc123"
 }
 ```
@@ -1042,7 +1042,7 @@ User view history
 ```json
 {
   "dateTime": "2007-12-03T10:15:30Z",
-  "sku": "abc123"
+  "sku": "xyz789"
 }
 ```
 
@@ -1086,19 +1086,19 @@ An implementation for virtual product cart items.
   "discount": [Discount],
   "errors": [CartItemError],
   "is_available": false,
-  "is_free_gift": true,
-  "is_salable": true,
-  "max_qty": 123.45,
+  "is_free_gift": false,
+  "is_salable": false,
+  "max_qty": 987.65,
   "min_qty": 123.45,
   "nominated_source": SourceAvailability,
   "nominated_source_errors": [NominatedSourceError],
-  "not_available_message": "abc123",
+  "not_available_message": "xyz789",
   "note_from_buyer": [ItemNote],
   "note_from_seller": [ItemNote],
   "prices": CartItemPrices,
   "product": ProductInterface,
   "quantity": 987.65,
-  "uid": "4"
+  "uid": 4
 }
 ```
 
@@ -1160,9 +1160,9 @@ Defines a virtual product, which is a non-tangible product that does not require
 
 ```json
 {
-  "canonical_url": "abc123",
+  "canonical_url": "xyz789",
   "categories": [CategoryInterface],
-  "country_of_manufacture": "xyz789",
+  "country_of_manufacture": "abc123",
   "crosssell_products": [ProductInterface],
   "custom_attributesV2": ProductCustomAttributes,
   "description": ComplexTextValue,
@@ -1170,17 +1170,17 @@ Defines a virtual product, which is a non-tangible product that does not require
   "gift_wrapping_available": false,
   "gift_wrapping_price": Money,
   "image": ProductImage,
-  "is_returnable": "xyz789",
-  "manufacturer": 987,
+  "is_returnable": "abc123",
+  "manufacturer": 123,
   "max_sale_qty": 123.45,
   "media_gallery": [MediaGalleryInterface],
-  "meta_description": "abc123",
-  "meta_keyword": "abc123",
-  "meta_title": "abc123",
-  "min_sale_qty": 123.45,
-  "name": "xyz789",
+  "meta_description": "xyz789",
+  "meta_keyword": "xyz789",
+  "meta_title": "xyz789",
+  "min_sale_qty": 987.65,
+  "name": "abc123",
   "new_from_date": "abc123",
-  "new_to_date": "xyz789",
+  "new_to_date": "abc123",
   "only_x_left_in_stock": 123.45,
   "options": [CustomizableOptionInterface],
   "options_container": "abc123",
@@ -1188,21 +1188,21 @@ Defines a virtual product, which is a non-tangible product that does not require
   "price_tiers": [TierPrice],
   "product_links": [ProductLinksInterface],
   "quantity": 987.65,
-  "rating_summary": 123.45,
+  "rating_summary": 987.65,
   "related_products": [ProductInterface],
   "review_count": 987,
   "reviews": ProductReviews,
   "short_description": ComplexTextValue,
-  "sku": "abc123",
+  "sku": "xyz789",
   "small_image": ProductImage,
-  "special_price": 123.45,
+  "special_price": 987.65,
   "special_to_date": "abc123",
   "stock_status": "IN_STOCK",
-  "swatch_image": "xyz789",
+  "swatch_image": "abc123",
   "thumbnail": ProductImage,
   "uid": 4,
   "upsell_products": [ProductInterface],
-  "url_key": "abc123"
+  "url_key": "xyz789"
 }
 ```
 
@@ -1228,9 +1228,9 @@ Contains details about virtual products added to a requisition list.
 {
   "customizable_options": [SelectedCustomizableOption],
   "product": ProductInterface,
-  "quantity": 123.45,
-  "sku": "xyz789",
-  "uid": 4
+  "quantity": 987.65,
+  "sku": "abc123",
+  "uid": "4"
 }
 ```
 
@@ -1255,12 +1255,12 @@ Contains a virtual product wish list item.
 
 ```json
 {
-  "added_at": "xyz789",
+  "added_at": "abc123",
   "customizable_options": [SelectedCustomizableOption],
   "description": "abc123",
   "id": 4,
   "product": ProductInterface,
-  "quantity": 987.65
+  "quantity": 123.45
 }
 ```
 
@@ -1282,7 +1282,7 @@ An error encountered while performing operations with WishList.
 ```json
 {
   "code": "PRODUCT_NOT_FOUND",
-  "message": "xyz789"
+  "message": "abc123"
 }
 ```
 
@@ -1327,10 +1327,10 @@ Contains a customer wish list.
 
 ```json
 {
-  "id": "4",
+  "id": 4,
   "items_count": 123,
   "items_v2": WishlistItems,
-  "name": "xyz789",
+  "name": "abc123",
   "sharing_code": "xyz789",
   "updated_at": "xyz789",
   "visibility": "PUBLIC"
@@ -1429,7 +1429,7 @@ Defines the items to add to a wish list.
 {
   "entered_options": [EnteredOptionInput],
   "parent_sku": "xyz789",
-  "quantity": 123.45,
+  "quantity": 987.65,
   "selected_options": ["4"],
   "sku": "xyz789"
 }
@@ -1468,12 +1468,12 @@ The interface for wish list items.
 
 ```json
 {
-  "added_at": "abc123",
+  "added_at": "xyz789",
   "customizable_options": [SelectedCustomizableOption],
   "description": "xyz789",
   "id": 4,
   "product": ProductInterface,
-  "quantity": 123.45
+  "quantity": 987.65
 }
 ```
 
@@ -1518,9 +1518,9 @@ Defines updates to items in a wish list.
 {
   "description": "xyz789",
   "entered_options": [EnteredOptionInput],
-  "quantity": 123.45,
+  "quantity": 987.65,
   "selected_options": [4],
-  "wishlist_item_id": 4
+  "wishlist_item_id": "4"
 }
 ```
 
