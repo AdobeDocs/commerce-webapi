@@ -417,7 +417,7 @@ The following example adds a simple product to the cart and applies custom cart 
 
 **Request:**
 
-graphql
+```graphql
 mutation AddWithAttributes($cartId: String!, $sku: String!) {
   addProductsToCart(
     cartId: $cartId
