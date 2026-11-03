@@ -413,7 +413,7 @@ mutation {
 
 ### Add a simple product and apply custom cart attributes
 
-The following example adds a simple product to the cart and applies custom cart attributes. The custom attributes are specified as an array of key/value pairs with the `custom_attributes` field in the `CartItemInput`.
+The following example adds a simple product to the cart and applies custom cart attributes. The custom attributes are specified as an array of key/value pairs with the `custom_attributes` field in the `CartItemInput`. Applying custom cart attributes when adding a product to the cart allows you to bypass running the [`setCustomAttributesOnCart` mutation](../../attributes/mutations/set-custom-cart.md).
 
 **Request:**
 
