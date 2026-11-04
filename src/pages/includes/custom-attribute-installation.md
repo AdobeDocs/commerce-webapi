@@ -13,7 +13,7 @@ To install custom attributes in Adobe Commerce:
 1. Run the following command to install the modules:
 
    ```bash
-   composer require magento/out-of-process-custom-attributes=^0.6.0  --with-dependencies
+   composer require magento/out-of-process-custom-attributes=^0.8.0  --with-dependencies
    ```
 
    To add support for B2B entities (companies and negotiable quotes), also install the B2B modules. This metapackage depends on the base metapackage, which Composer installs automatically.
