@@ -413,7 +413,7 @@ mutation {
 
 ### Add a simple product and apply custom cart attributes
 
-The following example adds a simple product to the cart and applies custom cart attributes. The custom attributes are specified as an array of key/value pairs with the `custom_attributes` field in the `CartItemInput`. Applying custom cart attributes when adding a product to the cart allows you to bypass running the [`setCustomAttributesOnCart` mutation](../../attributes/mutations/set-custom-cart.md).
+The following example adds a simple product to the cart and applies custom cart attributes. The custom attributes are specified as an array of key/value pairs with the `custom_attributes` field in the `CartItemInput`. Applying custom cart attributes when adding a product to the cart allows you to bypass running the [`setCustomAttributesOnCart` mutation](../../attributes/mutations/set-custom-cart.md). This feature is available on Adobe Commerce as a Cloud Service (SaaS) projects and on Adobe Commerce on-premises and Cloud infrastructure (PaaS) projects with version 0.8.0 or higher of the `magento/out-of-process-custom-attributes` [module installed](../../attributes/mutations/index.md#install-custom-attribute-support).
 
 **Request:**
 
