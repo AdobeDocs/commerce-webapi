@@ -1,6 +1,6 @@
 ---
 title: updateCompanyAddress mutation
-description: The updateCompanyAddress mutation allows a company admin or user who is assigned a role that contains the Magento_CompanyAddressStorefrontCompatibility::edit permission to update an existing company address.
+description: Update a company address with the updateCompanyAddress GraphQL mutation in Adobe Commerce. Learn about required permissions, input fields, and error responses.
 keywords:
   - B2B
 ---

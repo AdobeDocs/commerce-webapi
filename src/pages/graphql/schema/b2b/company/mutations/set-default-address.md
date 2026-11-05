@@ -1,6 +1,6 @@
 ---
 title: setDefaultCompanyAddress mutation
-description: The setDefaultCompanyAddress mutation allows a company admin or user who is assigned a role that contains the Magento_CompanyAddressStorefrontCompatibility::default permission to set a company address based on the provided address UID as the default billing or shipping address for the company.
+description: Set a default company billing or shipping address with the setDefaultCompanyAddress GraphQL mutation in Adobe Commerce. Review permissions and input fields.
 keywords:
   - B2B
 ---

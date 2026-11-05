@@ -1,6 +1,6 @@
 ---
 title: deleteCompanyAddress mutation
-description: The deleteCompanyAddress mutation allows a company admin or user who is assigned a role that contains the Magento_CompanyAddressStorefrontCompatibility::delete permission to delete an existing company address.
+description: Delete a company address with the deleteCompanyAddress GraphQL mutation in Adobe Commerce. Learn about required permissions, input fields, and error responses.
 keywords:
   - B2B
 ---
