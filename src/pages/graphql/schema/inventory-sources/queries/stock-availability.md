@@ -6,7 +6,7 @@ keywords:
   - Inventory
 ---
 
-<Fragment src="../../../../_includes/saas-only.md"/>
+<Fragment src="/_includes/saas-only.md"/>
 
 # stockAvailability query
 

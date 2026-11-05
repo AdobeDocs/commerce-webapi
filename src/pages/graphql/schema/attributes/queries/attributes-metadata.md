@@ -4,7 +4,7 @@ description: The attributesMetadata query is available only if you have installe
 
 ---
 
-<Fragment src="../../../../_includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # attributesMetadata query
 
@@ -117,4 +117,4 @@ attributesMetadata(
 
 ## Output attributes
 
-<Fragment src="../../../../_includes/graphql/attribute-metadata.md"/>
+<Fragment src="/_includes/graphql/attribute-metadata.md"/>

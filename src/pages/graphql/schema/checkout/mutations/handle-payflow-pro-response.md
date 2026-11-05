@@ -4,7 +4,7 @@ description: The handlePayflowProResponse mutation sends the silent post data th
 
 ---
 
-<Fragment src="../../../../_includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # handlePayflowProResponse mutation
 

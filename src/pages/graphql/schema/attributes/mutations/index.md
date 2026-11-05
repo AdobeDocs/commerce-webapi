@@ -45,4 +45,4 @@ The following entities now support custom attributes:
 
 ## Install custom attribute support
 
-<Fragment src="../../../../_includes/custom-attribute-installation.md"/>
+<Fragment src="/_includes/custom-attribute-installation.md"/>

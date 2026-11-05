@@ -4,7 +4,7 @@ description: The createPayflowProToken mutation initiates a Payflow Pro transact
 
 ---
 
-<Fragment src="../../../../_includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # createPayflowProToken mutation
 

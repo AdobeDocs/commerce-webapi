@@ -6,7 +6,7 @@ keywords:
   - REST
 ---
 
-<Fragment src="../../../_includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # Step 6. Create a customer and generate a customer token
 

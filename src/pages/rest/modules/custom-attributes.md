@@ -277,4 +277,4 @@ curl -i -X POST \
 
 ## Install custom attribute support
 
-<Fragment src="../../_includes/custom-attribute-installation.md"/>
+<Fragment src="/_includes/custom-attribute-installation.md"/>

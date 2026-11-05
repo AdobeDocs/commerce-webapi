@@ -1,4 +1,4 @@
-<Fragment src="paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 ### Prerequisites
 

@@ -4,7 +4,7 @@ description: The clearCart mutation removes all items from the specified cart.
 
 ---
 
-<Fragment src="../../../../_includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # clearCart mutation
 

@@ -3,7 +3,7 @@ title: updateGiftRegistryRegistrants mutation
 description: The updateGiftRegistryRegistrants mutation updates properties of one or more registrants of the specified gify registry.
 ---
 
-<Fragment src="../../../../_includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # updateGiftRegistryRegistrants mutation
 

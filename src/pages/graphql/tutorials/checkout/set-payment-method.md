@@ -6,7 +6,7 @@ keywords:
   - Checkout
 ---
 
-<Fragment src="../../../_includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # Step 9. Set the payment method
 

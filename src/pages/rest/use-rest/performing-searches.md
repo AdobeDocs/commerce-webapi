@@ -325,11 +325,11 @@ This example shows how to use search criteria to determine the sort order and at
 
 **Endpoint:**
 
-<Fragment src="../../_includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 `GET https://<host>/rest/<store_code>/V1/orders/`
 
-<Fragment src="../../_includes/saas-only.md"/>
+<Fragment src="/_includes/saas-only.md"/>
 
 `GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/orders/`
 

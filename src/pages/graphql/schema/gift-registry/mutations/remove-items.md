@@ -3,7 +3,7 @@ title: removeGiftRegistryItems mutation
 description: The removeGiftRegistryItems mutation removes one or more items from the specified gift registry.
 ---
 
-<Fragment src="../../../../_includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # removeGiftRegistryItems mutation
 

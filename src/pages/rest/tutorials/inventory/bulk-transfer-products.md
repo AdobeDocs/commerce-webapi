@@ -6,7 +6,7 @@ keywords:
   - REST
 ---
 
-<Fragment src="../../../_includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # Step 13. Bulk transfer products
 

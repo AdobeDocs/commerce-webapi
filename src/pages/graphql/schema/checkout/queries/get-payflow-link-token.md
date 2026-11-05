@@ -4,7 +4,7 @@ description: The getPayflowLinkToken query retrieves PayPal payment credentials 
 
 ---
 
-<Fragment src="../../../../_includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # getPayflowLinkToken query
 

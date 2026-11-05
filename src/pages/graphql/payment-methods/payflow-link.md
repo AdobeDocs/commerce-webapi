@@ -6,7 +6,7 @@ keywords:
   - Payments
 ---
 
-<Fragment src="../../_includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # PayPal Payflow Link payment method
 
@@ -24,13 +24,13 @@ The following diagram shows the workflow for placing an order when Payflow Link 
 
 ![PayPal Payflow Link sequence diagram](../../images/graphql/paypal-payflow-link.png)
 
-<Fragment src="../../_includes/graphql/payment-methods/payflow-link-workflow.md"/>
+<Fragment src="/_includes/graphql/payment-methods/payflow-link-workflow.md"/>
 
 ## Additional Payment information
 
 When you set the payment method to Payflow Link in the [`setPaymentMethodOnCart`](../schema/cart/mutations/set-payment-method.md) mutation, the `payment_method` object must contain a `payflow_link` object, which defines the following objects:
 
-<Fragment src="../../_includes/graphql/payment-methods/payflow-link-attributes.md"/>
+<Fragment src="/_includes/graphql/payment-methods/payflow-link-attributes.md"/>
 
 ### Example usage
 

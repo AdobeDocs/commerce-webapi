@@ -5,9 +5,9 @@ keywords:
   - B2B
 ---
 
-<Fragment src="../../../../../_includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
-<Fragment src="../../../../../_includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # deleteCompanyUser mutation
 

@@ -3,7 +3,7 @@ title: Use SOAP Services
 description: A description of available SOAP services and their conventions
 ---
 
-<Fragment src="../_includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # Using SOAP services
 

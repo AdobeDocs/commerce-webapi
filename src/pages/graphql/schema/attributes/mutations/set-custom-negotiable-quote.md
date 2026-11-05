@@ -4,11 +4,11 @@ description: This mutation is automatically available on Adobe Commerce as a Clo
 
 ---
 
-<Fragment src="../../../../_includes/saas-only.md"/>
+<Fragment src="/_includes/saas-only.md"/>
 
 # setCustomAttributesOnNegotiableQuote mutation
 
-<Fragment src="../../../../_includes/graphql/custom-attribute-availability.md"/>
+<Fragment src="/_includes/graphql/custom-attribute-availability.md"/>
 
 The `setCustomAttributesOnNegotiableQuote` mutation sets custom attributes on a negotiable quote. The mutation accepts a negotiable quote ID and an array of custom attribute key/value pairs. It returns the updated negotiable quote. All ID values are treated as strings.
 

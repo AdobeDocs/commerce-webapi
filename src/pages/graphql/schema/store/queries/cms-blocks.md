@@ -4,7 +4,7 @@ description: The cmsBlocks query returns information about blocks that were deve
 
 ---
 
-<Fragment src="../../../../_includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # cmsBlocks query
 

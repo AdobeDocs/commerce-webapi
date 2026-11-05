@@ -3,7 +3,7 @@ title: Gift registry
 description: Once gift registry functionality is enabled and configured from the Admin, customers use the following workflow to create registries:
 ---
 
-<Fragment src="../../../_includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # Gift registry
 

@@ -4,7 +4,7 @@ description: The dynamicBlocks query returns a list of dynamic blocks that have 
 
 ---
 
-<Fragment src="../../../../_includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # dynamicBlocks query
 

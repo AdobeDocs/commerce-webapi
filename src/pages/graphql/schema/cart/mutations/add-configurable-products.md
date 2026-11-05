@@ -4,7 +4,7 @@ description: We recommend using the addProductsToCart mutation to add any type o
 
 ---
 
-<Fragment src="../../../../_includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # addConfigurableProductsToCart mutation
 

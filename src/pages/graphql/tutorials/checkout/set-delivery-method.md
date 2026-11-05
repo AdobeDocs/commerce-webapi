@@ -6,7 +6,7 @@ keywords:
   - Checkout
 ---
 
-<Fragment src="../../../_includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # Step 6. Set the delivery method
 

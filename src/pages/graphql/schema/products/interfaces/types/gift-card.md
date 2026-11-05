@@ -3,7 +3,7 @@ title: Gift card product data types
 description: The GiftCardProduct data type defines properties of a gift card, including the minimum and maximum values and an array that contains the current and past v...
 ---
 
-<Fragment src="../../../../../_includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # Gift card product data types
 

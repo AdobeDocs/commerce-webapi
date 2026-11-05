@@ -6,7 +6,7 @@ keywords:
   - Security
 ---
 
-<Fragment src="../_includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # Rate limiting
 

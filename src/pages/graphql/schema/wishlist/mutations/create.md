@@ -3,7 +3,7 @@ title: createWishlist mutation
 description: The createWishlist mutation creates a wish list for the logged in customer. Adobe Commerce allows customers to have multiple wish lists.
 ---
 
-<Fragment src="../../../../_includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # createWishlist mutation
 

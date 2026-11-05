@@ -26,17 +26,17 @@ variants(sku: String!, optionIds: [String!], pageSize: Int, cursor: String): Pro
 
 ## Endpoints
 
-<Fragment src="../../../../_includes/graphql/endpoints.md"/>
+<Fragment src="/_includes/graphql/endpoints.md"/>
 
 ## Required headers
 
 You must specify the following HTTP headers to run this query.
 
-<Fragment src="../../../../_includes/graphql/catalog-service/headers.md"/>
+<Fragment src="/_includes/graphql/catalog-service/headers.md"/>
 
 ### Find the customer group code
 
-<Fragment src="../../../../_includes/graphql/customer-group-code.md"/>
+<Fragment src="/_includes/graphql/customer-group-code.md"/>
 
 ## Example usage
 

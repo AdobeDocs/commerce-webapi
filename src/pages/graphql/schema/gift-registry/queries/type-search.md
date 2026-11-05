@@ -3,7 +3,7 @@ title: giftRegistryTypeSearch query
 description: The giftRegistryTypeSearch query returns a list of gift registries that match the specified registrant name and, optionally, registry type ID. Use the gift...
 ---
 
-<Fragment src="../../../../_includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # giftRegistryTypeSearch query
 

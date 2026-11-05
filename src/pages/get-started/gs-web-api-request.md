@@ -100,7 +100,7 @@ This JSON-formatted request body includes a `customer` object with the customer 
 
 ## Construct a request
 
-<Fragment src="../_includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 This example shows you how to construct a REST web API call to create an account.
 
@@ -137,7 +137,7 @@ This example shows you how to construct a REST web API call to create an account
 
 ### Customers Search API request example
 
-<Fragment src="../_includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 The following example builds a Customers Search request based on search criteria. It returns a list of customers that match given search criteria.
 

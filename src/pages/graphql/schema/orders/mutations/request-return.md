@@ -3,7 +3,7 @@ title: requestReturn mutation
 description: The requestReturn mutation initiates a buyer's request to return an item for replacement or refund. The merchant subsequently decides whether to accept or...
 ---
 
-<Fragment src="../../../../_includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # requestReturn mutation
 

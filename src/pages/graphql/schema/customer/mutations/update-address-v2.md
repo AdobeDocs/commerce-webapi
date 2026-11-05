@@ -4,7 +4,7 @@ description: Use the updateCustomerAddressV2 mutation to update the customer's a
 
 ---
 
-<Fragment src="../../../../_includes/saas-only.md"/>
+<Fragment src="/_includes/saas-only.md"/>
 
 # updateCustomerAddressV2 mutation
 

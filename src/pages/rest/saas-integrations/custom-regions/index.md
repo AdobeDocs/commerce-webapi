@@ -6,7 +6,7 @@ keywords:
   - Integration
 ---
 
-<Fragment src="../../../_includes/saas-only.md"/>
+<Fragment src="/_includes/saas-only.md"/>
 
 # Custom regions
 

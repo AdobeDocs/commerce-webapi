@@ -4,7 +4,7 @@ description: The categoryList query searches for categories that match the crite
 
 ---
 
-<Fragment src="../../../../_includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # categoryList query
 

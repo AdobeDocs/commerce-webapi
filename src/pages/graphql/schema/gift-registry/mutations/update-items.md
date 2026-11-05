@@ -3,7 +3,7 @@ title: updateGiftRegistryItems mutation
 description: The updateGiftRegistryItems mutation modifies the requested quantity of an item in the specified gift registry. It can also change the description of the i...
 ---
 
-<Fragment src="../../../../_includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # updateGiftRegistryItems mutation
 

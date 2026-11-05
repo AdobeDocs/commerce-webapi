@@ -3,7 +3,7 @@ title: applyRewardPointsToCart mutation
 description: The applyRewardPointsToCart mutation applies reward points to the customer's cart. You cannot specify a quantity of reward points. If the reward points bal...
 ---
 
-<Fragment src="../../../../_includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # applyRewardPointsToCart mutation
 

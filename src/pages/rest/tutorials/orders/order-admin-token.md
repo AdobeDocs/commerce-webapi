@@ -5,7 +5,7 @@ keywords:
   - REST
 ---
 
-<Fragment src="../../../_includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # Step 2. Get the admin token
 

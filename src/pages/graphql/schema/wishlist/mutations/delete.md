@@ -3,7 +3,7 @@ title: deleteWishlist mutation
 description: The deleteWishlist mutation deletes the specified wish list. In Adobe Commerce, you cannot delete the customer's default (first) wish list. This mutation i...
 ---
 
-<Fragment src="../../../../_includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # deleteWishlist mutation
 

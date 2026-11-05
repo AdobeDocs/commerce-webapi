@@ -4,7 +4,7 @@ description: The getHostedProUrl query is required to complete a transaction whe
 
 ---
 
-<Fragment src="../../../../_includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # getHostedProUrl query
 

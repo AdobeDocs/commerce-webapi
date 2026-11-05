@@ -5,7 +5,7 @@ description: This mutation is automatically available on Adobe Commerce as a Clo
 
 # setCustomAttributesOnInvoiceItem mutation
 
-<Fragment src="../../../../_includes/graphql/custom-attribute-availability.md"/>
+<Fragment src="/_includes/graphql/custom-attribute-availability.md"/>
 
 The `setCustomAttributesOnInvoiceItem` mutation sets custom attributes on an invoice item. The mutation accepts a invoice ID, invoice item ID, and an array of custom attribute key/value pairs. It returns the updated invoice.
 

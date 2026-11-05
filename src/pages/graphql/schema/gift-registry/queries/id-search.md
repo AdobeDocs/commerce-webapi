@@ -3,7 +3,7 @@ title: giftRegistryIdSearch query
 description: The giftRegistryIdSearch query returns a list of gift registries that match the specified registry ID. The ID is included in the email the application send...
 ---
 
-<Fragment src="../../../../_includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # giftRegistryIdSearch query
 

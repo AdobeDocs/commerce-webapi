@@ -5,7 +5,7 @@ description: This mutation is automatically available on Adobe Commerce as a Clo
 
 # setCustomAttributesOnCreditMemo mutation
 
-<Fragment src="../../../../_includes/graphql/custom-attribute-availability.md"/>
+<Fragment src="/_includes/graphql/custom-attribute-availability.md"/>
 
 The `setCustomAttributesOnCreditMemo` mutation sets custom attributes on a credit memo. The mutation accepts a credit memo ID and an array of custom attribute key/value pairs. It returns the updated credit memo. All ID values are treated as strings.
 

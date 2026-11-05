@@ -3,7 +3,7 @@ title: updateGiftRegistry mutation
 description: The updateGiftRegistry mutation modifies properties of specified gift registry. It does not update the items in a gift registry or registrants. Use the upd...
 ---
 
-<Fragment src="../../../../_includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # updateGiftRegistry mutation
 
