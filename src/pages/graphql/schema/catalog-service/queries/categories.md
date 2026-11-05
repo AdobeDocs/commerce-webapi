@@ -8,6 +8,8 @@ keywords:
 
 # categories query
 
+<Fragment src="../../../../includes/graphql/merchandising.md"/>
+
 The `categories` query returns category data. If the `subtree` input object is specified, the query returns details about subcategories.
 
 ## Syntax

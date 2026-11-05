@@ -8,6 +8,8 @@ keywords:
 
 # products query
 
+<Fragment src="../../../../includes/graphql/merchandising.md"/>
+
 The Catalog Service for Adobe Commerce `products` query returns details about the SKUs specified as input. Although this query has the same name as the [`products` query](/graphql/schema/products/queries/products.md) that is provided with core Adobe Commerce and Magento Open Source, there are some differences.
 
 The Catalog Service query requires one or more SKU values as input. The query is primarily designed to retrieve information to render the following types of content:

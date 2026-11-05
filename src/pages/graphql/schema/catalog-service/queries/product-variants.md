@@ -8,6 +8,8 @@ keywords:
 
 # variants query
 
+<Fragment src="../../../../includes/graphql/merchandising.md"/>
+
 The `variants` query returns details about all variations of a product.
 
 The `variants` query is useful for showing variant images on product detail (PDP) or product listing (PLP) pages without submitting multiple API requests.
