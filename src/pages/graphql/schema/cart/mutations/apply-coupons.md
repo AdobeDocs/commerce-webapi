@@ -3,7 +3,7 @@ title: applyCouponsToCart mutation
 description: The applyCouponsToCart mutation applies one or more predefined coupon codes to the specified cart. Valid coupon codes are defined in cart price rules.
 ---
 
-<Fragment src="../../../../includes/commerce-only.md"/>
+<Fragment src="../../../../_includes/commerce-only.md"/>
 
 # applyCouponsToCart mutation
 

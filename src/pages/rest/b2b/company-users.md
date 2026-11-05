@@ -7,7 +7,7 @@ keywords:
 ---
 
 
-<Fragment src="../../includes/commerce-only.md"/>
+<Fragment src="../../_includes/commerce-only.md"/>
 
 # Manage company users
 
@@ -164,7 +164,7 @@ If you change the `status` to inactive, the account is locked. If the company us
 
 ### Delete a company user
 
-<Fragment src="../../includes/paas-only.md"/>
+<Fragment src="../../_includes/paas-only.md"/>
 
 If the specified company user has child users, the system re-assigns the child users to the parent of the deleted user. The user account is deleted from Commerce with all of its content, except quotes and orders. The user's orders and quotes remain visible to the seller.
 

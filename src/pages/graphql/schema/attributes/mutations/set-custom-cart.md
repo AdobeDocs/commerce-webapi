@@ -5,7 +5,7 @@ description: This mutation is automatically available on Adobe Commerce as a Clo
 
 # setCustomAttributesOnCart mutation
 
-<Fragment src="../../../../includes/graphql/custom-attribute-availability.md"/>
+<Fragment src="../../../../_includes/graphql/custom-attribute-availability.md"/>
 
 The `setCustomAttributesOnCart` mutation sets custom attributes on a cart. The mutation accepts a cart ID and an array of custom attribute key/value pairs. It returns the updated cart.  All ID values are treated as strings.
 

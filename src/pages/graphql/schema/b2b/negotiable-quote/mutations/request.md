@@ -5,7 +5,7 @@ keywords:
   - B2B
 ---
 
-<Fragment src="../../../../../includes/commerce-only.md"/>
+<Fragment src="../../../../../_includes/commerce-only.md"/>
 
 # requestNegotiableQuote mutation
 
@@ -204,7 +204,7 @@ mutation {
 
 ### Request a negotiable quote with attachments
 
-<Fragment src="../../../../../includes/saas-only.md"/>
+<Fragment src="../../../../../_includes/saas-only.md"/>
 
 The following example requests a negotiable quote with an attachment. The attachment must be uploaded to Amazon S3 before you can reference it in the mutation. See the [`initiateUpload` mutation](../../../uploads/mutations/initiate-upload.md) and [`finishUpload` mutation](../../../uploads/mutations/finish-upload.md) for more information about uploading files.
 

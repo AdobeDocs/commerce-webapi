@@ -5,7 +5,7 @@ keywords:
   - REST
 ---
 
-<Fragment src="../../../includes/paas-only.md"/>
+<Fragment src="../../../_includes/paas-only.md"/>
 
 # Step 9. Create a shipment
 

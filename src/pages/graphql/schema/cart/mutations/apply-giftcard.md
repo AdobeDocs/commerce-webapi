@@ -3,7 +3,7 @@ title: applyGiftCardToCart mutation
 description: The applyGiftCardToCart mutation applies a predefined gift card code to the specified cart.
 ---
 
-<Fragment src="../../../../includes/commerce-only.md"/>
+<Fragment src="../../../../_includes/commerce-only.md"/>
 
 # applyGiftCardToCart mutation
 

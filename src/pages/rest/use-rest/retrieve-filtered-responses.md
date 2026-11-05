@@ -26,11 +26,11 @@ The following examples use Luma sample data, which is available in PaaS environm
 
 The following example returns only the `sku`, `price`, and `name` for the specified product:
 
-<Fragment src="../../includes/paas-only.md"/>
+<Fragment src="../../_includes/paas-only.md"/>
 
 `GET https://<host>/rest/<store_code>/V1/products/24-MB01?fields=sku,price,name`
 
-<Fragment src="../../includes/saas-only.md"/>
+<Fragment src="../../_includes/saas-only.md"/>
 
 `GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/products/24-MB01?fields=sku,price,name`
 
@@ -46,11 +46,11 @@ The following example returns only the `sku`, `price`, and `name` for the specif
 
 The following example returns only the customer first name, last name, and the entire `billing_address` object from a specified order. Do not include brackets `[]` after an object name when you want to return all of the object's contents.
 
-<Fragment src="../../includes/paas-only.md"/>
+<Fragment src="../../_includes/paas-only.md"/>
 
 `GET https://<host>/rest/<store_code>/V1/orders/2?fields=billing_address,customer_firstname,customer_lastname`
 
-<Fragment src="../../includes/saas-only.md"/>
+<Fragment src="../../_includes/saas-only.md"/>
 
 `GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/orders/2?fields=billing_address,customer_firstname,customer_lastname`
 
@@ -82,11 +82,11 @@ The following example returns only the customer first name, last name, and the e
 
 The following example returns only the `name`, `qty`, and `sku` fields defined in an `items` object from a specified shipment:
 
-<Fragment src="../../includes/paas-only.md"/>
+<Fragment src="../../_includes/paas-only.md"/>
 
 `GET https://<host>/rest/<store_code>/V1/shipment/2?fields=items[name,qty,sku]`
 
-<Fragment src="../../includes/saas-only.md"/>
+<Fragment src="../../_includes/saas-only.md"/>
 
 `GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/shipment/2?fields=items[name,qty,sku]`
 
@@ -108,11 +108,11 @@ This example returns only the following:
 *  The entire `category_links` object, which is defined in `extension_attributes`
 *  The `item_id` and `qty` fields of the `stock_item` object, which is also defined in `extension_attributes`
 
-<Fragment src="../../includes/paas-only.md"/>
+<Fragment src="../../_includes/paas-only.md"/>
 
 `GET https://<host>/rest/<store_code>/V1/products/MT12?fields=name,sku,extension_attributes[category_links,stock_item[item_id,qty]]`
 
-<Fragment src="../../includes/saas-only.md"/>
+<Fragment src="../../_includes/saas-only.md"/>
 
 `GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/products/MT12?fields=name,sku,extension_attributes[category_links,stock_item[item_id,qty]]`
 
@@ -137,11 +137,11 @@ This example returns only the following:
 
 The following POST operation and payload creates a catalog category named `New Category`. Commerce returns only the `id`, `parent_id`, and `name` attributes
 
-<Fragment src="../../includes/paas-only.md"/>
+<Fragment src="../../_includes/paas-only.md"/>
 
 `POST https://<host>/rest/<store_code>/V1/categories?fields=id,parent_id,name`
 
-<Fragment src="../../includes/saas-only.md"/>
+<Fragment src="../../_includes/saas-only.md"/>
 
 `POST https://<server>.api.commerce.adobe.com/<tenant-id>/V1/categories?fields=id,parent_id,name`
 
@@ -172,11 +172,11 @@ The [`searchCriteria` query parameter](performing-searches.md) allows you to sea
 
 The following query returns only the `sku` and `name` parameters for product items whose `category_gear` attribute includes the value `86`.
 
-<Fragment src="../../includes/paas-only.md"/>
+<Fragment src="../../_includes/paas-only.md"/>
 
 `GET https://<host>/rest/<store_code>/V1/products/?searchCriteria[filter_groups][0][filters][0][field]=category_gear&searchCriteria[filter_groups][0][filters][0][value]=86&searchCriteria[filter_groups][0][filters][0][condition_type]=finset&fields=items[sku,name]`
 
-<Fragment src="../../includes/saas-only.md"/>
+<Fragment src="../../_includes/saas-only.md"/>
 
 `GET https://<server>.api.commerce.adobe.com/<tenant-id>//V1/products/?searchCriteria[filter_groups][0][filters][0][field]=category_gear&searchCriteria[filter_groups][0][filters][0][value]=86&searchCriteria[filter_groups][0][filters][0][condition_type]=finset&fields=items[sku,name]`
 

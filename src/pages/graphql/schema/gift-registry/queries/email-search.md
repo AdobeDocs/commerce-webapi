@@ -3,7 +3,7 @@ title: giftRegistryEmailSearch query
 description: The giftRegistryEmailSearch query returns a list of gift registries that match the specified registrant email address. The query does not return registries...
 ---
 
-<Fragment src="../../../../includes/commerce-only.md"/>
+<Fragment src="../../../../_includes/commerce-only.md"/>
 
 # giftRegistryEmailSearch query
 

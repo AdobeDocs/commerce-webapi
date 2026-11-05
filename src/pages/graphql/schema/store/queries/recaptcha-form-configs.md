@@ -4,7 +4,7 @@ description: The recaptchaFormConfigs query returns reCAPTCHA configuration deta
 
 ---
 
-<Fragment src="../../../../includes/saas-only.md"/>
+<Fragment src="../../../../_includes/saas-only.md"/>
 
 # recaptchaFormConfigs query
 

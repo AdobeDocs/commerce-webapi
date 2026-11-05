@@ -7,7 +7,7 @@ keywords:
 
 ---
 
-<Fragment src="../../includes/paas-only.md"/>
+<Fragment src="../../_includes/paas-only.md"/>
 
 # PayPal Payflow Pro payment method
 

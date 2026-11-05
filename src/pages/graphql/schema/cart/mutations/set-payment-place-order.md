@@ -3,7 +3,7 @@ title: setPaymentMethodAndPlaceOrder mutation
 description: The setPaymentMethodAndPlaceOrder mutation has been deprecated. Use the setPaymentMethodOnCart and placeOrder mutations instead. You can run the two method...
 ---
 
-<Fragment src="../../../../includes/paas-only.md"/>
+<Fragment src="../../../../_includes/paas-only.md"/>
 
 # setPaymentMethodAndPlaceOrder mutation
 

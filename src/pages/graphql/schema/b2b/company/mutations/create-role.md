@@ -5,13 +5,13 @@ keywords:
   - B2B
 ---
 
-<Fragment src="../../../../../includes/commerce-only.md"/>
+<Fragment src="../../../../../_includes/commerce-only.md"/>
 
 # createCompanyRole mutation
 
 The `createCompanyRole` mutation defines a new company role. To create a role, you must provide an array of permissions that determine which resources the user can access.
 
-<Fragment src="../../../../../includes/graphql/b2b-roles.md"/>
+<Fragment src="../../../../../_includes/graphql/b2b-roles.md"/>
 
 Also, you can get the list of all resources defined within the company using the [`company`](../queries/company.md) query.
 

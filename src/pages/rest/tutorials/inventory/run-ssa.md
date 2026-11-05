@@ -6,7 +6,7 @@ keywords:
   - REST
 ---
 
-<Fragment src="../../../includes/paas-only.md"/>
+<Fragment src="../../../_includes/paas-only.md"/>
 
 # Step 11. Run the Source Selection Algorithms
 

@@ -6,7 +6,7 @@ keywords:
   - Checkout
 ---
 
-<Fragment src="../../../includes/paas-only.md"/>
+<Fragment src="../../../_includes/paas-only.md"/>
 
 # Step 8. Set email on the cart (guest customers only)
 

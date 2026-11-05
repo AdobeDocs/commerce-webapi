@@ -3,7 +3,7 @@ title: sourceAvailability query
 description: Use the sourceAvailability query to check per-source inventory availability for one or more SKUs, scoped to the current sales channel's assigned stock sources.
 ---
 
-<Fragment src="../../../../includes/saas-only.md"/>
+<Fragment src="../../../../_includes/saas-only.md"/>
 
 # sourceAvailability query
 

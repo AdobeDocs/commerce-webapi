@@ -4,7 +4,7 @@ description: We recommend using the createCustomerV2 mutation to create a custom
 
 ---
 
-<Fragment src="../../../../includes/paas-only.md"/>
+<Fragment src="../../../../_includes/paas-only.md"/>
 
 # createCustomer mutation
 

@@ -225,7 +225,7 @@ The following query returns information about the store's customer configuration
 
 ### Query a store's persistent cart and account sharing configuration
 
-<Fragment src="../../includes/saas-only.md"/>
+<Fragment src="../../_includes/saas-only.md"/>
 
 The following query returns the store's persistent shopping cart settings (**Stores** > Settings > **Configuration** > **Customers** > **Persistent Shopping Cart**) and the account sharing scope (**Stores** > Settings > **Configuration** > **Customers** > **Customer Configuration** > **Account Sharing Options** > **Share Customer Accounts**).
 

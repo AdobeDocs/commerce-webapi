@@ -3,7 +3,7 @@ title: addGiftRegistryRegistrants mutation
 description: The addGiftRegistryRegistrants mutation adds a registrant to the specified gift registry.
 ---
 
-<Fragment src="../../../../includes/commerce-only.md"/>
+<Fragment src="../../../../_includes/commerce-only.md"/>
 
 # addGiftRegistryRegistrants mutation
 

@@ -3,7 +3,7 @@ title: shareGiftRegistry mutation
 description: The shareGiftRegistry mutation sends an invitation to a list email addresses to shop from the customer's gift registry.
 ---
 
-<Fragment src="../../../../includes/commerce-only.md"/>
+<Fragment src="../../../../_includes/commerce-only.md"/>
 
 # shareGiftRegistry mutation
 

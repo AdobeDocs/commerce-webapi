@@ -5,11 +5,11 @@ keywords:
   - B2B
 ---
 
-<Fragment src="../../../../../includes/commerce-only.md"/>
+<Fragment src="../../../../../_includes/commerce-only.md"/>
 
 # publicRequisitionList query
 
-<Fragment src="/includes/scp-b2b-query.md" />
+<Fragment src="/_includes/scp-b2b-query.md" />
 
 The `publicRequisitionList` query uses a share token to retrieve a requisition list that its owner has marked public. Unlike [`sharedRequisitionList`](shared-requisition-list.md), this query does not require the requester to be a customer authenticated in the same company as the list owner. Anyone with a valid share link or token can access the public requisition list. The response can contain the `sender_name` and `requisition_list` object.
 

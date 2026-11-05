@@ -4,7 +4,7 @@ description: Use the customerDownloadableProducts query to retrieve the list of 
 
 ---
 
-<Fragment src="../../../../includes/paas-only.md"/>
+<Fragment src="../../../../_includes/paas-only.md"/>
 
 # customerDownloadableProducts query
 

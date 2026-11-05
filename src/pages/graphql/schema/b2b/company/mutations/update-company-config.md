@@ -5,11 +5,11 @@ keywords:
   - B2B
 ---
 
-<Fragment src="/includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # updateCompanyConfig mutation
 
-<Fragment src="/includes/scp-b2b-mutation.md" />
+<Fragment src="/_includes/scp-b2b-mutation.md" />
 
 The `updateCompanyConfig` mutation updates configuration settings for the current company context. This mutation supports the following company address book settings:
 

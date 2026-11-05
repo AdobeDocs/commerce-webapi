@@ -5,11 +5,11 @@ keywords:
   - B2B
 ---
 
-<Fragment src="../../../../../includes/commerce-only.md"/>
+<Fragment src="../../../../../_includes/commerce-only.md"/>
 
 # sharePublicRequisitionList mutation
 
-<Fragment src="/includes/scp-b2b-mutation.md" />
+<Fragment src="/_includes/scp-b2b-mutation.md" />
 
 The `sharePublicRequisitionList` mutation emails the share link for a public requisition list to one or more recipients. Recipients could be registered customers or guests. The mutation requires `requisition_list_uid` and an array of `emails` as input parameters. This mutation returns a `sent_count` which shows the number of emails successfully sent, and `user_errors`, if any.
 

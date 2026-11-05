@@ -4,7 +4,7 @@ description: Adobe Commerce as a Cloud Service (SaaS) does not support this cate
 
 ---
 
-<Fragment src="../../../../includes/paas-only.md"/>
+<Fragment src="../../../../_includes/paas-only.md"/>
 
 # categories query
 

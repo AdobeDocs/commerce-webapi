@@ -4,7 +4,7 @@ description: We recommend using the updateCustomerV2 mutation to update a custom
 
 ---
 
-<Fragment src="../../../../includes/paas-only.md"/>
+<Fragment src="../../../../_includes/paas-only.md"/>
 
 # updateCustomer mutation
 

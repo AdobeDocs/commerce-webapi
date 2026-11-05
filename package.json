@@ -13,6 +13,8 @@
     "spectaql": "^3.0.9"
   },
   "scripts": {
+    "helper:render": "cd _helper && bundle exec rake render",
+    "helper:whatsnew": "cd _helper && bundle exec rake whatsnew",
     "generate:graphql-api-docs": "node scripts/generate-spectaql-md.js",
     "generate:graphql-api-docs:2.4.6": "node scripts/generate-spectaql-md.js 2.4.6",
     "generate:graphql-api-docs:2.4.7": "node scripts/generate-spectaql-md.js 2.4.7",
@@ -42,12 +44,12 @@
     "skipRules": {
       "check-frontmatter": {
         "paths": [
-          "src/pages/includes"
+          "src/pages/_includes"
         ]
       },
       "missing-heading": {
         "paths": [
-          "src/pages/includes"
+          "src/pages/_includes"
         ]
       }
     },

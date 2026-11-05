@@ -4,7 +4,7 @@ description: The cmsPage query returns information about content pages that were
 
 ---
 
-<Fragment src="../../../../includes/paas-only.md"/>
+<Fragment src="../../../../_includes/paas-only.md"/>
 
 # cmsPage query
 

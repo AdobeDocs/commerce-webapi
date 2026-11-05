@@ -1,0 +1,225 @@
+---
+title: What's new
+description: This section contains the changes made in the last 60 days. We exclude
+  all minor updates, such as copy editing, from this list.
+updated: Thu Nov 5 12:10:33 2026
+entries:
+- description: The `ProductViewImage` type in the Catalog Service GraphQL API now
+    returns custom image roles, in addition to the standard `image`, `small_image`,
+    `thumbnail`, and `swatch_image` roles. Merchants can define their own roles in
+    AEM Assets, and storefronts can query them to display the right image in the right
+    context, such as a lifestyle shot or a size chart. See [product queries](https://developer.adobe.com/commerce/webapi/graphql/schema/catalog-service/queries/)
+    for details.
+  versions: ''
+  type: technical
+  date: '2026-10-29'
+  link: https://github.com/AdobeDocs/commerce-webapi/pull/635
+  merge_commit: bc938edea6b66ea14680a3ac0bb6880a9387f4e3
+  contributor: meker12
+  labels:
+  - technical
+- description: Updated the [REST](https://developer.adobe.com/commerce/webapi/reference/rest/saas)
+    and [GraphQL](https://developer.adobe.com/commerce/webapi/reference/graphql/saas/)
+    schemas for Adobe Commerce as a Cloud Service.
+  versions: ''
+  type: major-update
+  date: '2026-10-29'
+  link: https://github.com/AdobeDocs/commerce-webapi/pull/637
+  merge_commit: '09a3b1744e51c5449a0d2d10694b01cf9edab0cf'
+  contributor: jhadobe
+  labels:
+  - major-update
+- description: Updated the `products` query to add new `ac_review_count` and `ac_rating_summary`
+    system attributes, returned in `ProductView.attributes` when product reviews are
+    enabled. See [Product review attributes](https://developer.adobe.com/commerce/webapi/graphql/schema/catalog-service/queries/products/#product-review-attributes).
+  versions: ''
+  type: technical
+  date: '2026-10-29'
+  link: https://github.com/AdobeDocs/commerce-webapi/pull/636
+  merge_commit: d548d80889ed800ffae49c7269a3e3e1adb85be5
+  contributor: meker12
+  labels:
+  - technical
+- description: Added [Store credit](https://developer.adobe.com/commerce/webapi/rest/saas-integrations/store-credit),
+    which describes the role resources that admin and integration callers need to
+    apply store credit to a cart and to place an order with it.
+  versions: ''
+  type: new-topic
+  date: '2026-10-28'
+  link: https://github.com/AdobeDocs/commerce-webapi/pull/633
+  merge_commit: 217d66fd97ca5c8f20be405a87bc075f1d790c79
+  contributor: kuflower
+  labels:
+  - new-topic
+- description: Updated the [REST](https://developer.adobe.com/commerce/webapi/reference/rest/saas)
+    and [GraphQL](https://developer.adobe.com/commerce/webapi/reference/graphql/saas/)
+    schemas for Adobe Commerce as a Cloud Service.
+  versions: ''
+  type: major-update
+  date: '2026-10-23'
+  link: https://github.com/AdobeDocs/commerce-webapi/pull/632
+  merge_commit: 0f0e242d41918896d6e77d448a7d9915e3e7dc04
+  contributor: jhadobe
+  labels:
+  - major-update
+- description: Added [stockAvailability query](https://developer.adobe.com/commerce/webapi/graphql/schema/inventory-sources/queries/stock-availability),
+    which returns stock-level availability for up to 100 SKUs.
+  versions: ''
+  type: new-topic
+  date: '2026-10-20'
+  link: https://github.com/AdobeDocs/commerce-webapi/pull/631
+  merge_commit: 0a3d49e5d3454bdb300fb5b9cc94af7f943b7452
+  contributor: jhadobe
+  labels:
+  - new-topic
+- description: Added optional checksum validation for presigned uploads to the GraphQL
+    [initiateUpload mutation](https://developer.adobe.com/commerce/webapi/graphql/schema/uploads/mutations/initiate-upload#checksum-validation)
+    and the REST [S3 upload endpoints](https://developer.adobe.com/commerce/webapi/rest/saas-integrations/s3-uploads#initiate-the-upload-with-a-checksum).
+  versions: ''
+  type: technical
+  date: '2026-10-19'
+  link: https://github.com/AdobeDocs/commerce-webapi/pull/630
+  merge_commit: 03da9f0a19fe6506f1194b9edf0c314db016201a
+  contributor: jhadobe
+  labels:
+  - technical
+- description: Added [Custom regions](https://developer.adobe.com/commerce/webapi/rest/saas-integrations/custom-regions),
+    which describes REST endpoints for managing custom regions for countries not covered
+    by the default region data.
+  versions: ''
+  type: new-topic
+  date: '2026-10-19'
+  link: https://github.com/AdobeDocs/commerce-webapi/pull/629
+  merge_commit: e7763c1c225f32e77eb00ae7d966418bc4e3a087
+  contributor: jhadobe
+  labels:
+  - new-topic
+- description: Updated Adobe Commerce Admin documentation for the October Adobe Commerce
+    as a Cloud Service release:<br/>- Updated [Bulk endpoints](https://developer.adobe.com/commerce/webapi/rest/use-rest/bulk-endpoints)
+    and [API security](https://developer.adobe.com/commerce/webapi/get-started/api-security#input-limit-for-rest-endpoints)
+    to explain that the Maximum Entities per Bulk Request Store Configuration setting
+    controls Bulk API limits in Adobe Commerce as a Cloud Service.<br/>- Added [Catalog
+    price rules](https://developer.adobe.com/commerce/webapi/rest/saas-integrations/catalog-price-rules),
+    which explains how to manage catalog price rules with REST APIs in Adobe Commerce
+    as a Cloud Service.<br/>- Documented optional reCAPTCHA validation for the [initiateUpload
+    mutation](https://developer.adobe.com/commerce/webapi/graphql/schema/uploads/mutations/initiate-upload#recaptcha-validation).<br/>-
+    Added [Custom shipping discounts](https://developer.adobe.com/commerce/webapi/rest/saas-integrations/shipping-discounts),
+    which describes how to apply, retrieve, and remove a custom shipping discount
+    on a cart with the admin REST API.<br/>- Added [Cart item custom price API](https://developer.adobe.com/commerce/webapi/rest/saas-integrations/cart-custom-price),
+    which describes how admin and integration callers can set a custom price on cart
+    items.
+  versions: ''
+  type: major-update, new-topic
+  date: '2026-10-08'
+  link: https://github.com/AdobeDocs/commerce-webapi/pull/626
+  merge_commit: 6129cd1970547c403b9edb7ac9b0ef3087d8c97d
+  contributor: jhadobe
+  labels:
+  - major-update
+  - new-topic
+- description: Updated the [REST](https://developer.adobe.com/commerce/webapi/reference/rest/saas)
+    and [GraphQL](https://developer.adobe.com/commerce/webapi/reference/graphql/saas/)
+    schemas for Adobe Commerce as a Cloud Service.
+  versions: ''
+  type: major-update
+  date: '2026-10-08'
+  link: https://github.com/AdobeDocs/commerce-webapi/pull/628
+  merge_commit: 1aaa6516c5d104dce5ffc75f4eded6cd8844d32b
+  contributor: jhadobe
+  labels:
+  - major-update
+- description: Added a [Company roles](https://developer.adobe.com/commerce/webapi/rest/saas-integrations/company-roles)
+    page, which documents a REST endpoint that returns all of a customer's company
+    roles and permissions in one request.
+  versions: ''
+  type: new-topic
+  date: '2026-10-08'
+  link: https://github.com/AdobeDocs/commerce-webapi/pull/622
+  merge_commit: 3d6ee6a4f7fdca679a62c7b627cc68ee644354f0
+  contributor: jhadobe
+  labels:
+  - new-topic
+- description: Adobe Commerce as a Cloud Service now supports [source-level inventory
+    reservations](https://developer.adobe.com/commerce/webapi/graphql/saas-integrations/source-inventory-reservations).
+  versions: ''
+  type: new-topic
+  date: '2026-09-30'
+  link: https://github.com/AdobeDocs/commerce-webapi/pull/619
+  merge_commit: a09416d69f627abe179ab22af33ca2971d1de823
+  contributor: jhadobe
+  labels:
+  - new-topic
+- description: Added support for public requisition lists with the [publicRequisitionList](https://developer.adobe.com/commerce/webapi/graphql/schema/b2b/requisition-list/queries/public-requisition-list/)
+    query, [addPublicRequisitionListItemsToCart](https://developer.adobe.com/commerce/webapi/graphql/schema/b2b/requisition-list/mutations/add-public-requisition-list-items-to-cart/)
+    mutation, and [sharePublicRequisitionList](https://developer.adobe.com/commerce/webapi/graphql/schema/b2b/requisition-list/mutations/share-public-requisition-list/)
+    mutation.
+  versions: ''
+  type: major-update, new-topic
+  date: '2026-09-29'
+  link: https://github.com/AdobeDocs/commerce-webapi/pull/617
+  merge_commit: 25cebdb596e9e1c02c6d4fa3067548c6a6f44529
+  contributor: cod40403
+  labels:
+  - major-update
+  - new-topic
+- description: Added the [`reviews`](https://developer.adobe.com/commerce/webapi/graphql/schema/products/queries/reviews/)
+    query.
+  versions: ''
+  type: new-topic
+  date: '2026-09-29'
+  link: https://github.com/AdobeDocs/commerce-webapi/pull/618
+  merge_commit: ce7df4ce70ff2bbb77efc577b2fba270afbbb0ae
+  contributor: aminakhyat
+  labels:
+  - new-topic
+- description: Updated the [REST](https://developer.adobe.com/commerce/webapi/reference/rest/saas)
+    and [GraphQL](https://developer.adobe.com/commerce/webapi/reference/graphql/saas/)
+    schemas for Adobe Commerce as a Cloud Service.
+  versions: ''
+  type: major-update
+  date: '2026-09-23'
+  link: https://github.com/AdobeDocs/commerce-webapi/pull/616
+  merge_commit: 40b7155b23a43eeb97be9536af6706f5c89453eb
+  contributor: jhadobe
+  labels:
+  - major-update
+- description: Customers can now upload files and images when submitting a return
+    request through the storefront [requestReturn](https://developer.adobe.com/commerce/webapi/graphql/schema/orders/mutations/request-return#request-a-return-with-an-image-attachment)
+    GraphQL mutation.
+  versions: ''
+  type: major-update
+  date: '2026-09-23'
+  link: https://github.com/AdobeDocs/commerce-webapi/pull/613
+  merge_commit: 79566a16311fabeccf61a7629ba6b4632f9e8210
+  contributor: jhadobe
+  labels:
+  - major-update
+- description: Added multiple changes as part of the Adobe Commerce as a Cloud Service
+    September release:<br/>- Added [System configuration](https://developer.adobe.com/commerce/webapi/rest/saas-integrations/system-config),
+    which covers the `/V1/system/config` REST endpoint that syncs configurations between
+    Adobe Commerce as a Cloud Service environments.<br/>- Added a [storeConfig query
+    example](https://developer.adobe.com/commerce/webapi/graphql/schema/store/queries/store-config/#query-a-stores-persistent-cart-and-account-sharing-configuration)
+    documenting the new persistent shopping cart and customer account sharing fields
+    (`persistent_enabled`, `persistent_shopping_cart`, `persistent_options_wishlist`,
+    `share_customer_accounts_scope`).<br/>- Updated [Email triggering through the
+    REST API](https://developer.adobe.com/commerce/webapi/rest/saas-integrations/custom-email/)
+    with new `PUT` and `DELETE /V1/custom-email/templates/{id}` endpoints for updating
+    and deleting custom email templates.<br/>- Added [sourceAvailability query](https://developer.adobe.com/commerce/webapi/graphql/schema/products/queries/source-availability)
+    documentation for reading per-source inventory availability by SKU, scoped to
+    the current sales channel.<br/>- Added the [selectFreeGiftForCart mutation](https://developer.adobe.com/commerce/webapi/graphql/schema/cart/mutations/select-free-gift),
+    which lets shoppers select a gift SKU when a Free Gift cart price rule requires
+    a choice, including support for configurable and bundle gift products.<br/>- Added
+    a `search` field to `CustomerOrdersFilterInput` on the [customer query](https://developer.adobe.com/commerce/webapi/graphql/schema/customer/queries/customer),
+    letting a signed-in customer search their order history by order number, product
+    name, or SKU.<br/>- Updated the [REST](https://developer.adobe.com/commerce/webapi/reference/rest/saas)
+    and [GraphQL](https://developer.adobe.com/commerce/webapi/reference/graphql/saas/)
+    schemas for Adobe Commerce as a Cloud Service.
+  versions: ''
+  type: new-topic
+  date: '2026-09-08'
+  link: https://github.com/AdobeDocs/commerce-webapi/pull/610
+  merge_commit: c003c54dd914a7014399525e13ec70f3a283636c
+  contributor: jhadobe
+  labels:
+  - new-topic
+  - hold for release

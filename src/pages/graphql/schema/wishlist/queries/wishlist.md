@@ -4,7 +4,7 @@ description: The wishlist query has been deprecated. Wish list information is no
 
 ---
 
-<Fragment src="../../../../includes/paas-only.md"/>
+<Fragment src="../../../../_includes/paas-only.md"/>
 
 # wishlist query
 

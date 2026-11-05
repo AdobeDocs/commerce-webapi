@@ -11,7 +11,7 @@ keywords:
 
 The [`pickupLocations`](pickup-locations.md) query returns the pickup locations that are available to the shopper. Filter the results by area, or by attributes such as country, region, city, street, name, and pickup location code.
 
-<Fragment src="../../../../includes/saas-only.md"/>
+<Fragment src="../../../../_includes/saas-only.md"/>
 
 The [`sourceAvailability`](source-availability.md) query returns per-source availability for each requested SKU.
 

@@ -6,7 +6,7 @@ description: The subscribeProductAlertStock mutation subscribes the logged-in cu
 
 # subscribeProductAlertStock mutation
 
-<Fragment src="/includes/scp-mutation.md" />
+<Fragment src="/_includes/scp-mutation.md" />
 
 The `subscribeProductAlertStock` mutation subscribes the logged-in customer to a stock availability alert for the specified product. When the product comes back in stock, the customer receives an email notification.
 

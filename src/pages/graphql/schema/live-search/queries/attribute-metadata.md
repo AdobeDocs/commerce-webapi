@@ -17,13 +17,13 @@ The `attributeMetadata` query returns a list of product attribute codes that can
 
 ## Endpoints
 
-<Fragment src="../../../../includes/graphql/endpoints.md"/>
+<Fragment src="../../../../_includes/graphql/endpoints.md"/>
 
 ## Required headers
 
 You must specify the following HTTP headers to run this query.
 
-<Fragment src="../../../../includes/graphql/live-search-headers.md"/>
+<Fragment src="../../../../_includes/graphql/live-search-headers.md"/>
 
 ## Example usage
 

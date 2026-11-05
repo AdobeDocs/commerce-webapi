@@ -5,7 +5,7 @@ description: The reviews query returns the approved reviews for a product specif
 
 # reviews query
 
-<Fragment src="/includes/scp-query.md" />
+<Fragment src="/_includes/scp-query.md" />
 
 The `reviews` query returns the approved reviews for the product specified by its SKU, along with pagination metadata.
 

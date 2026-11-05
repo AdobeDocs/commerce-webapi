@@ -3,7 +3,7 @@ title: copyProductsBetweenWishlists mutation
 description: The copyProductsBetweenWishlists mutation copies the specified quantities of one or more products to a different wish list. The original wish list is uncha...
 ---
 
-<Fragment src="../../../../includes/commerce-only.md"/>
+<Fragment src="../../../../_includes/commerce-only.md"/>
 
 # copyProductsBetweenWishlists mutation
 

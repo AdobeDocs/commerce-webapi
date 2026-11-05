@@ -3,7 +3,7 @@ title: giftRegistry query
 description: The giftRegistry query retrieves details about the specified gift registry. Use the customer query to return a list of valid uid values.
 ---
 
-<Fragment src="../../../../includes/commerce-only.md"/>
+<Fragment src="../../../../_includes/commerce-only.md"/>
 
 # giftRegistry query
 

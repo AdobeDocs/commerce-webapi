@@ -3,7 +3,7 @@ title: createGiftRegistry mutation
 description: The createGiftRegistry mutation creates a gift registry for the logged in customer.
 ---
 
-<Fragment src="../../../../includes/commerce-only.md"/>
+<Fragment src="../../../../_includes/commerce-only.md"/>
 
 # createGiftRegistry mutation
 

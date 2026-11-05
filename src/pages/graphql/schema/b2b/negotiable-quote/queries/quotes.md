@@ -5,7 +5,7 @@ keywords:
   - B2B
 ---
 
-<Fragment src="../../../../../includes/commerce-only.md"/>
+<Fragment src="../../../../../_includes/commerce-only.md"/>
 
 # negotiableQuotes query
 
@@ -98,7 +98,7 @@ query {
 
 ### Retrieve attachments associated with comments on quotes
 
-<Fragment src="../../../../../includes/saas-only.md"/>
+<Fragment src="../../../../../_includes/saas-only.md"/>
 
 The following example returns detailed information about all negotiable quotes that are accessible to the company user, including any attachments associated with comments on the quotes.
 

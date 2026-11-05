@@ -3,7 +3,7 @@ title: deleteCustomerAddressV2 mutation
 description: Deletes the specified customer address.
 ---
 
-<Fragment src="../../../../includes/saas-only.md"/>
+<Fragment src="../../../../_includes/saas-only.md"/>
 
 # deleteCustomerAddressV2 mutation
 

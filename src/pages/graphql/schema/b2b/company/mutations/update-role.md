@@ -5,7 +5,7 @@ keywords:
   - B2B
 ---
 
-<Fragment src="../../../../../includes/commerce-only.md"/>
+<Fragment src="../../../../../_includes/commerce-only.md"/>
 
 # updateCompanyRole mutation
 
@@ -13,7 +13,7 @@ Use the `updateCompanyRole` mutation to update the company role and permissions.
 
 You can get the role ID and the list of all resources defined within the company using the [`company`](../queries/company.md) query.
 
-<Fragment src="../../../../../includes/graphql/b2b-roles.md"/>
+<Fragment src="../../../../../_includes/graphql/b2b-roles.md"/>
 
 You can change or add permissions to the company role using the `permissions` attribute.
 

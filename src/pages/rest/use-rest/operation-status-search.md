@@ -25,14 +25,14 @@ You can specify any of the following fields to filter on operation statuses:
 
 The following call returns bulk operations that contain an error that cannot be retried.
 
-<Fragment src="../../includes/paas-only.md"/>
+<Fragment src="../../_includes/paas-only.md"/>
 
 `GET <host>/rest/<store_code>/V1/bulk/?
 searchCriteria[filter_groups][0][filters][0][field]=status&
 searchCriteria[filter_groups][0][filters][0][value]=3&
 searchCriteria[filter_groups][0][filters][0][condition_type]=eq`
 
-<Fragment src="../../includes/saas-only.md"/>
+<Fragment src="../../_includes/saas-only.md"/>
 
 `GET https://<server>.api.commerce.adobe.com/<tenant-id>/V1/bulk/?
 searchCriteria[filter_groups][0][filters][0][field]=status&
