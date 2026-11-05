@@ -54,6 +54,10 @@
       }
     },
     "skipUrlPatterns": [
+      "https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/set-up.html",
+      "https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html",
+      "https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html",
+      "https://www.iso.org/iso-3166-country-codes.html",
       "https://commercemarketplace.adobe.com/magento-payment-services.html",
       "https://www.atwix.com/",
       "https://www.example.com/",
