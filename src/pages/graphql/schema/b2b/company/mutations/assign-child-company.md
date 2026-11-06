@@ -5,11 +5,11 @@ keywords:
   - B2B
 ---
 
-<Fragment src="/includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # assignChildCompany mutation
 
-<Fragment src="/includes/scp-b2b-mutation.md" />
+<Fragment src="/_includes/scp-b2b-mutation.md" />
 
 The `assignChildCompany` mutation allows company administrators to assign a child company to a parent company within the company hierarchy. This mutation requires `parentId` and `childId` as unique IDs of the companies as parameters. This mutation returns a `company_hierarchy` object if successful.
 

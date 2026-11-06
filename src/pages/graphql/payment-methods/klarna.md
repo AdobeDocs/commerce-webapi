@@ -6,7 +6,7 @@ keywords:
   - Payments
 ---
 
-<Fragment src="../../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # Klarna payment method
 

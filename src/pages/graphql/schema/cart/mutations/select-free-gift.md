@@ -5,7 +5,7 @@ description: The selectFreeGiftForCart mutation defines the product that a shopp
 
 # selectFreeGiftForCart mutation
 
-<Fragment src="/includes/scp-mutation.md" />
+<Fragment src="/_includes/scp-mutation.md" />
 
 The `selectFreeGiftForCart` mutation defines the product that a shopper has selected as a free gift. This mutation is applicable only when a Free Gift cart price rule has been applied to the cart and the rule requires the shopper to choose a gift SKU before placing the order.
 

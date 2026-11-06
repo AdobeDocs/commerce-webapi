@@ -6,7 +6,7 @@ keywords:
   - Integration
 ---
 
-<Fragment src="../../../includes/saas-only.md"/>
+<Fragment src="/_includes/saas-only.md"/>
 
 # Catalog price rules
 

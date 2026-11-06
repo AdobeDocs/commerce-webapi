@@ -3,7 +3,7 @@ title: removeRewardPointsFromCart mutation
 description: The removeRewardPointsFromCart mutation removes all reward points that were previously applied to the customer's cart with the applyRewardPointsToCart muta...
 ---
 
-<Fragment src="../../../../includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # removeRewardPointsFromCart mutation
 

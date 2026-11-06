@@ -5,11 +5,11 @@ keywords:
   - B2B
 ---
 
-<Fragment src="/includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # shareRequisitionListByToken mutation
 
-<Fragment src="/includes/scp-b2b-mutation.md" />
+<Fragment src="/_includes/scp-b2b-mutation.md" />
 
 The `shareRequisitionListByToken` mutation enables B2B customers to share a requisition list with colleagues within the same company using a shareable link generated on the storefront. The mutation requires `requisitionListUid` as an input parameter. This mutation returns the token assigned to the shared requisition list.
 

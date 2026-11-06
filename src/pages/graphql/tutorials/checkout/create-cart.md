@@ -6,7 +6,7 @@ keywords:
   - Checkout
 ---
 
-<Fragment src="../../../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # Step 2. Create an empty cart
 

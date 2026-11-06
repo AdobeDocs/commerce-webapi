@@ -3,7 +3,7 @@ title: removeStoreCreditFromCart mutation
 description: The removeStoreCreditFromCart mutation removes store credit previously applied to the specified cart with the applyStoreCreditToCart mutation. The applicat...
 ---
 
-<Fragment src="../../../../includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # removeStoreCreditFromCart mutation
 

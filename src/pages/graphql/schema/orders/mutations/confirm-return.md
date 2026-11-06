@@ -3,7 +3,7 @@ title: confirmReturn mutation
 description: The confirmReturn mutation confirms a return request from a guest customer. The merchant subsequently decides whether to accept or reject the request.
 ---
 
-<Fragment src="../../../../includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # confirmReturn mutation
 

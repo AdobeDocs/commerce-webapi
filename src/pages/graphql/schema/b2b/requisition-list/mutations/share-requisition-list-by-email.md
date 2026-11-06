@@ -5,11 +5,11 @@ keywords:
   - B2B
 ---
 
-<Fragment src="/includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # shareRequisitionListByEmail mutation
 
-<Fragment src="/includes/scp-b2b-mutation.md" />
+<Fragment src="/_includes/scp-b2b-mutation.md" />
 
 The `shareRequisitionListByEmail` mutation enables B2B customers to share a requisition list with colleagues within the same company in an email. The mutation requires `requisitionListUid` and an array of `customerUids` as input parameters. This mutation returns a `sent_count` which shows the count of emails the list has been shared to, and `user_errors`, if any.
 

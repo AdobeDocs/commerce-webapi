@@ -3,7 +3,7 @@ title: moveCartItemsToGiftRegistry mutation
 description: The moveCartItemsToGiftRegistry mutation moves all items from the cart to a gift registry.
 ---
 
-<Fragment src="../../../../includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # moveCartItemsToGiftRegistry mutation
 

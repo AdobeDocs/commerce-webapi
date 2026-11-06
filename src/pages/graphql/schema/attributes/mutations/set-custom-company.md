@@ -4,11 +4,11 @@ description: This mutation is automatically available on Adobe Commerce as a Clo
 
 ---
 
-<Fragment src="../../../../includes/saas-only.md"/>
+<Fragment src="/_includes/saas-only.md"/>
 
 # setCustomAttributesOnCompany mutation
 
-<Fragment src="../../../../includes/graphql/custom-attribute-availability.md"/>
+<Fragment src="/_includes/graphql/custom-attribute-availability.md"/>
 
 The `setCustomAttributesOnCompany` mutation sets custom attributes on a company. The mutation accepts a company ID and an array of custom attribute key/value pairs. It returns the updated `Company` object.  All ID values are treated as strings.
 

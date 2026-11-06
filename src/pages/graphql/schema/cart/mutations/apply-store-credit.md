@@ -3,7 +3,7 @@ title: applyStoreCreditToCart mutation
 description: The applyStoreCreditToCart mutation applies store credit to the specified cart. Store credit must be enabled on the store to run this mutation.
 ---
 
-<Fragment src="../../../../includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # applyStoreCreditToCart mutation
 

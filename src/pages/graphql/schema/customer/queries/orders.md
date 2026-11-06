@@ -4,7 +4,7 @@ description: The customerOrders query has been deprecated. Specify the orders ob
 
 ---
 
-<Fragment src="../../../../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # customerOrders query
 

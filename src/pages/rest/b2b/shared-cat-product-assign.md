@@ -6,7 +6,7 @@ keywords:
   - REST
 ---
 
-<Fragment src="../../includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # Assign categories and products to a shared catalog
 

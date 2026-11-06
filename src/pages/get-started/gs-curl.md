@@ -5,7 +5,7 @@ keywords:
   - REST
 ---
 
-<Fragment src="../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # Using cURL to run requests
 

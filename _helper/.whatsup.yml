@@ -1,0 +1,30 @@
+# Parameters for a GitHub search query
+---
+base_branch: main
+
+# The list of repositories to scan for pull requests
+repos:
+  - AdobeDocs/commerce-webapi
+
+# Labels also will be used as a 'type' value in the output file
+labels:
+  required:
+    - new-topic
+    - major-update
+  optional:
+    - technical
+    - feedback
+    - release-notes
+
+# Format of output file
+output_format:
+  - yaml
+#  - markdown
+
+# The phrase that is used as a separator in the pull request description.
+# All the lines that follows this phrase are captured as 'description' for this PR's entry in the resulted data file.
+magic_word: whatsnew
+
+# An organization to check a contributor for membership.
+# Values: 'true', 'false', empty if not configured.
+# membership: AdobeDocs

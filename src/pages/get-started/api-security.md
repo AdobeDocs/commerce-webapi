@@ -36,7 +36,7 @@ In addition, the Admin provides a configuration setting for limiting session siz
 
 To enable these input limiting features from the Admin, go to **Stores** > Settings > **Configuration** > **Services** > **Web Api Limits** or **GraphQL Input Limits** and set **Enable Input Limits** to **Yes**.
 
-<Fragment src="../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 To enable with the CLI, run one or both of the following commands:
 
@@ -50,7 +50,7 @@ bin/magento config:set graphql/validation/input_limit_enabled 1
 
 ## Maximum parameter inputs
 
-<Fragment src="../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 The `EntityArrayValidator` class constructor limits the number of objects that can be given to inputs that represent arrays of objects. For example, the `PUT /V1/guest-carts/{cartId}/collect-totals` endpoint contains the input parameter `additionalData->extension_attributes->gift_messages`, which represents a list of gift message information objects.
 
@@ -110,11 +110,11 @@ By default, any one of these arrays can include up to 20 items, but you can chan
 
 ## Input limit for REST endpoints
 
-<Fragment src="../includes/saas-only.md"/>
+<Fragment src="/_includes/saas-only.md"/>
 
 In Adobe Commerce as a Cloud Service, Bulk API limits are determined by the **Maximum Entities per Bulk Request** setting in the [Store Configuration](https://experienceleague.adobe.com/en/docs/commerce-admin/config/general/bulk-api).
 
-<Fragment src="../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 Some REST endpoints can contain a high number of elements, and developers need a way to set the limit for each endpoint. The limit for a specific REST endpoint can be set in the `webapi.xml` configuration file for synchronous requests and `webapi_async.xml` for asynchronous requests.
 To do this, assign a value for the `<data input-array-size-limit/>` attribute within a `<route>` definition. The value for `input-array-size-limit` must be a non-negative integer.
@@ -148,7 +148,7 @@ bin/magento cache:clean config
 
 ## Values by default for REST endpoints
 
-<Fragment src="../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 If you need to change the default limits for REST endpoints, then edit the `webapi` section of the `<magento_root>/app/etc/env.php` file as follows:
 
@@ -177,7 +177,7 @@ The maximum page size setting controls the pagination of various web API respons
 
 The Default Page Size setting controls the pagination of various web API responses. You can change the default value of `20` in the Admin by selecting **Stores** > Settings > **Configuration** > **Services** > **Web API Input Limits** > **Default Page Size**.
 
-<Fragment src="../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 To change the value from the CLI, run the following command:
 

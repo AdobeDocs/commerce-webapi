@@ -4,7 +4,7 @@ description: The urlResolver query has been deprecated. Use the route query inst
 
 ---
 
-<Fragment src="../../../../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # urlResolver query
 

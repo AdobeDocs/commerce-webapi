@@ -5,7 +5,7 @@ keywords:
   - REST
 ---
 
-<Fragment src="../../../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # Step 5. Add items to the cart
 

@@ -1,0 +1,6 @@
+# frozen_string_literal: true
+
+require 'dotenv/load'
+
+# Load the Adobe Comdox EXL Rake Tasks gem
+require 'adobe-comdox-exl-rake-tasks'
