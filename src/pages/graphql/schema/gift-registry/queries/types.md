@@ -3,7 +3,7 @@ title: giftRegistryTypes query
 description: The giftRegistryTypes query returns a list of available gift registry types.
 ---
 
-<Fragment src="../../../../includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # giftRegistryTypes query
 

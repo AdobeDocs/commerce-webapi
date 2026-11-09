@@ -32,17 +32,17 @@ The `subtree` object allows you to specify how many levels of subcategories to r
 
 ## Endpoints
 
-<Fragment src="../../../../includes/graphql/endpoints.md"/>
+<Fragment src="/_includes/graphql/endpoints.md"/>
 
 ## Required headers
 
 Specify the following HTTP headers to run this query.
 
-<Fragment src="../../../../includes/graphql/catalog-service/headers.md"/>
+<Fragment src="/_includes/graphql/catalog-service/headers.md"/>
 
 ### Find the customer group code
 
-<Fragment src="../../../../includes/graphql/customer-group-code.md"/>
+<Fragment src="/_includes/graphql/customer-group-code.md"/>
 
 ## Example usage
 
@@ -213,4 +213,4 @@ categories(ids: ["11"], roles: ["show_in_menu", "active"], subtree: {
 
 ## Output fields
 
-<Fragment src="../../../../includes/graphql/catalog-service/categories.md"/>
+<Fragment src="/_includes/graphql/catalog-service/categories.md"/>

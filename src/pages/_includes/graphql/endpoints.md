@@ -1,11 +1,11 @@
-<Fragment src="../paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 | Environment | Endpoint    |
 |------------ | ----------: |
 | **Testing**    | `https://catalog-service-sandbox.adobe.io/graphql` |
 | **Production** | `https://catalog-service.adobe.io/graphql` |
 
-<Fragment src="../saas-only.md"/>
+<Fragment src="/_includes/saas-only.md"/>
 
 |  Environment | Endpoint |
 | ------------ | --------:|

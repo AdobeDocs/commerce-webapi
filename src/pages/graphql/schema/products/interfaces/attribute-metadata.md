@@ -13,4 +13,4 @@ The `AttributeMetadataInterface` data type defines properties of custom attribut
 
 ## AttributeMetadataInterface object
 
-<Fragment src="../../../../includes/graphql/attribute-metadata.md"/>
+<Fragment src="/_includes/graphql/attribute-metadata.md"/>

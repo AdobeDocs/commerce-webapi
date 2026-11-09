@@ -5,7 +5,7 @@ keywords:
   - REST
 ---
 
-<Fragment src="../../includes/saas-only.md"/>
+<Fragment src="/_includes/saas-only.md"/>
 
 # REST endpoints for Adobe Commerce as a Cloud Service
 

@@ -100,7 +100,7 @@ This JSON-formatted request body includes a `customer` object with the customer 
 
 ## Construct a request
 
-<Fragment src="../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 This example shows you how to construct a REST web API call to create an account.
 
@@ -123,7 +123,7 @@ This example shows you how to construct a REST web API call to create an account
 
    Open the [AccountManagementInterface.php](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Customer/Api/AccountManagementInterface.php) file and find the `createAccount` method, as follows:
 
-   ```php?start_inline=1
+   ```php
    public function createAccount(
         \Magento\Customer\Api\Data\CustomerInterface $customer,
         $password = null,
@@ -137,13 +137,13 @@ This example shows you how to construct a REST web API call to create an account
 
 ### Customers Search API request example
 
-<Fragment src="../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 The following example builds a Customers Search request based on search criteria. It returns a list of customers that match given search criteria.
 
 1. Prepare `Authorization`, `Accept` and `Content-Type` headers to be passed to a request object. Use the Authorization token returned by the token service.
 
-   ```php?start_inline=1
+   ```php
    $token = 'token';
    $httpHeaders = new \Zend\Http\Headers();
    $httpHeaders->addHeaders([
@@ -159,7 +159,7 @@ The following example builds a Customers Search request based on search criteria
 
    The following example finds customers whose first name contains "ver" or whose last name contains "Costello".
 
-    ```php?start_inline=1
+    ```php
     $request = new \Zend\Http\Request();
     $request->setHeaders($httpHeaders);
     $request->setUri('http://magento.ll/rest/V1/customers/search');
@@ -193,7 +193,7 @@ The following example builds a Customers Search request based on search criteria
 
 1. Prepare a HTTP Curl client object and pass the request object to `Client::send()` method.
 
-   ```php?start_inline=1
+   ```php
    $client = new \Zend\Http\Client();
    $options = [
       'adapter'   => 'Zend\Http\Client\Adapter\Curl',

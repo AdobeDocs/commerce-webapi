@@ -7,7 +7,7 @@ keywords:
 ---
 
 
-<Fragment src="../../includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # Manage company roles
 

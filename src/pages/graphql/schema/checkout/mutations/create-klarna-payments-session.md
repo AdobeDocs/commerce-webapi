@@ -3,7 +3,7 @@ title: createKlarnaPaymentsSession mutation
 description: The Klarna Vendor Bundled Extension was removed from the Adobe Commerce codebase in version 2.4.4. This mutation is no longer supported.
 ---
 
-<Fragment src="../../../../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # createKlarnaPaymentsSession mutation
 

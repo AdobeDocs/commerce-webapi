@@ -1,0 +1,27 @@
+---
+---
+{%- assign whatsnew = site.data.whats-new %}
+{{ whatsnew.description }}
+
+{%- assign this_days_ago = 60 | times: 86400 %}
+{%- assign date_this_days_ago = "now" | date: "%s" | minus: this_days_ago %}
+{%- assign entries = whatsnew.entries | sort: "date" | reverse %}
+{%- assign has_recent_entries = false %}
+
+{%- for entry in entries %}
+{%- assign entry_date_int = entry.date | date: "%s" | abs %}
+{%- if entry_date_int > date_this_days_ago %}
+{%- unless has_recent_entries %}
+
+| Description | Type |  Date |
+|---|---|---|
+{%- endunless %}
+{%- assign has_recent_entries = true %}
+| {{ entry.description | replace: '<br/>', '\<br/\>' }} | {{ entry.type | replace: "-", " " | capitalize }} | [{{ entry.date | date: '%B %-e, %Y'}}]({{ entry.link }}) |
+{%- endif %}
+{%- endfor %}
+
+{%- unless has_recent_entries %}
+
+**No significant documentation updates so far.**
+{%- endunless %}

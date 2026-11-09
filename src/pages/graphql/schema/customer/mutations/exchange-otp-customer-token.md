@@ -4,7 +4,7 @@ description: The exchangeOtpForCustomerToken mutation allows you to specify a sh
 
 ---
 
-<Fragment src="../../../../includes/saas-only.md"/>
+<Fragment src="/_includes/saas-only.md"/>
 
 # exchangeOtpForCustomerToken mutation
 

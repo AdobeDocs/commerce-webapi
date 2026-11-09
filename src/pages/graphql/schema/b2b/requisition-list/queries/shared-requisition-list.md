@@ -5,11 +5,11 @@ keywords:
   - B2B
 ---
 
-<Fragment src="../../../../../includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # sharedRequisitionList query
 
-<Fragment src="/includes/scp-b2b-query.md" />
+<Fragment src="/_includes/scp-b2b-query.md" />
 
 The `sharedRequisitionList` query uses a token to retrieve a shared requisition list. The response can contain the `sender_name` and `requisition_list` object.
 

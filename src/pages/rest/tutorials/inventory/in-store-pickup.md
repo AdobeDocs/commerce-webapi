@@ -6,7 +6,7 @@ keywords:
   - REST
 ---
 
-<Fragment src="../../../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # Step 14. Create an order for in-store pickup (optional)
 

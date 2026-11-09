@@ -3,7 +3,7 @@ title: giftCardAccount query
 description: The giftCardAccount query returns information for a specific gift card.
 ---
 
-<Fragment src="../../../../includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # giftCardAccount query
 

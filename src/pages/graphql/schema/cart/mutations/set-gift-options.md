@@ -3,7 +3,7 @@ title: setGiftOptionsOnCart mutation
 description: The setGiftOptionsOnCart mutation allows the buyer to set the following gift options on the cart level:
 ---
 
-<Fragment src="../../../../includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # setGiftOptionsOnCart mutation
 

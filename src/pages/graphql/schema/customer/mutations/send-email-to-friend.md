@@ -4,7 +4,7 @@ description: Use the sendEmailToFriend mutation to allow the application send a 
 
 ---
 
-<Fragment src="../../../../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # sendEmailToFriend mutation
 

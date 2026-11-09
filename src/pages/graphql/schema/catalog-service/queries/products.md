@@ -20,18 +20,42 @@ The Catalog Service query requires one or more SKU values as input. The query is
 
 Use the Live Search [`productSearch` query](../../live-search/queries/product-search.md) to return product listing page content.
 
-The `ProductView` output object is significantly different than the core `products` query `Products` output object. Key differences include:
+The `ProductView` output object is different than the core `products` query `Products` output object. Key differences include:
 
 * Products are either simple or complex. Simple, virtual, downloadable, and gift card products map to `SimpleProductView`. All other product types map to `ComplexProductView`.
 
   * Simple products have defined prices.
-  * Complex products have price ranges. Since complex products are comprised of multiple simple products, they have access to simple product prices.
+  * Complex products have price ranges. Because complex products are comprised of multiple simple products, they have access to simple product prices.
 
 * Both simple and complex products can have merchant-defined input options that allow shoppers to customize a product by adding text, date, an image, or a file, for example adding text for engraving. These options can have an associated markup that is applied to the product price. These options are exposed in a top-level `inputOptions` container `[ProductViewInputOption]`.
 
-*  Merchant-defined attributes are exposed in a top-level `attributes` container `[ProductViewAttribute]` and indicate their storefront roles. Roles include Show on PDP, Show on PLP, and Show on Search Results.
+*  Merchant-defined attributes are exposed in a top-level `attributes` container `[ProductViewAttribute]` and indicate their storefront roles. Roles include PDP, PLP, and Search Results display. Attributes include merchant-defined attributes and, when product reviews are enabled, the system [product review attributes](#product-review-attributes) `ac_review_count` and `ac_rating_summary`.
 
-*  Images are also accessible as a top-level container and can be filtered by their role. An image can have an `image`, `small_image`, or `thumbnail` role.
+*  Images are also accessible as a top-level container, and you can filter them by their role. An image can have an `image`, `small_image`, or `thumbnail` role.
+
+## Product review attributes
+
+When product reviews are enabled, the `products` query returns review summary data in the  `ProductView.attributes` field. These are system product attributes, not top-level fields on `ProductView`.
+
+| Attribute | Description |
+|---|---|
+| `ac_review_count` | The number of approved product reviews. |
+| `ac_rating_summary` | The average rating for approved product reviews, expressed as a value from 0 to 100. Storefronts can convert this value to a star rating. |
+
+The product feed updates when review summaries change. Product reviews are disabled by default. Only approved reviews contribute to the review count and rating summary.
+
+The existing `attributes` selection in the product query requests these attributes along with other product attributes:
+
+```graphql
+attributes(roles: []) {
+  name
+  label
+  value
+  roles
+}
+```
+
+To retrieve the list of approved reviews rather than product-level review summary attributes, use the [`reviews` query](../../products/queries/reviews.md).
 
 ## Syntax
 
@@ -41,21 +65,17 @@ products(skus: [String]): [ProductView]
 
 ## Endpoints
 
-<Fragment src="../../../../includes/graphql/endpoints.md"/>
+<Fragment src="/_includes/graphql/endpoints.md"/>
 
 ## Required headers
 
-You must specify the following HTTP headers to run this query.
+Specify the following HTTP headers to run this query.
 
-<Fragment src="../../../../includes/graphql/catalog-service/headers.md"/>
+<Fragment src="/_includes/graphql/catalog-service/headers.md"/>
 
 ### Find the customer group code
 
-<Fragment src="../../../../includes/graphql/customer-group-code.md"/>
-
-## Example usage
-
-The [Commerce API playground](https://experienceleague.adobe.com/en/tools/commerce-storefront/playgrounds/commerce-services/) provides a sample `products` query that you can run against a live instance of Adobe Commerce with Luma sample data. Note that the responses may vary, depending on the configuration of the Commerce instance.
+<Fragment src="/_includes/graphql/customer-group-code.md"/>
 
 ### Return details about a simple product
 
@@ -836,7 +856,7 @@ query {
 
 ## Output fields
 
-The `ProductView` return object is an interface that can contain the following fields. It is implemented by the [`SimpleProductView`](#simpleproductview-type) and [`ComplexProductView`](#complexproductview-type) types.
+The `ProductView` return object is an interface that can contain the following fields. The [`SimpleProductView`](#simpleproductview-type) and [`ComplexProductView`](#complexproductview-type) types implement it.
 
 | Field | Data Type | Description |
 | --- | --- | --- |
@@ -845,6 +865,7 @@ The `ProductView` return object is an interface that can contain the following f
 | `description` | String | The detailed description of the product. |
 | `externalId`| String | The external ID of the product. |
 | `id` | ID! | The product ID, generated as a composite key, unique per locale. |
+| `gallery` | [`[ProductViewMedia]`](#productviewmedia-union) | A single ordered list containing all images and videos defined for the product. |
 | `images(roles: [String])` | [`[ProductViewImage]`](#productviewimage-type) | A list of images defined for the product. |
 | `inputOptions` | [`[ProductViewInputOption]`](#productviewinputoption-type) | A list of input options the shopper can supply to customize a product. |
 | `inStock` | Boolean | Indicates whether the product is in stock. |
@@ -871,6 +892,7 @@ The `ComplexProductView` type represents bundle, configurable, and group product
 | `description` | String | The detailed description of the product. |
 | `externalId`| String | The external ID of the product. |
 | `id` | ID! | The product ID, generated as a composite key, unique per locale. |
+| `gallery` | [`[ProductViewMedia]`](#productviewmedia-union) | A single ordered list containing all images and videos defined for the product. |
 | `images(roles: [String])` | [`[ProductViewImage]`](#productviewimage-type) | A list of images defined for the product. |
 | `inputOptions` | [`[ProductViewInputOption]`](#productviewinputoption-type) | A list of input options the shopper can supply to customize a product. |
 | `inStock` | Boolean | Indicates whether the product is in stock. |
@@ -908,7 +930,7 @@ The `PriceAdjustment` type specifies the amount and type of a price adjustment. 
 
 ### ProductViewAttribute type
 
-The `ProductViewAttribute` type is a container for customer-defined attributes that are displayed the storefront.
+The `ProductViewAttribute` type is a container for customer-defined attributes that are displayed on the storefront.
 
 | Field | Data Type | Description |
 | --- | --- | --- |
@@ -917,6 +939,10 @@ The `ProductViewAttribute` type is a container for customer-defined attributes t
 | `roles` | [String] | Roles designated for an attribute on the storefront, such as "Show on PLP", "Show in PDP", or "Show in Search". |
 | `value` | JSON | Attribute value, arbitrary of type. |
 
+### ProductViewMedia union
+
+The `ProductViewMedia` union represents an entry in the ordered product media gallery. Use inline fragments on `ProductViewImage` and `ProductViewVideo` to retrieve fields for each media type. Entries are returned in resolved display order, and clients should preserve that order.
+
 ### ProductViewImage type
 
 The `ProductViewImage` type contains details about a product image.
@@ -924,7 +950,7 @@ The `ProductViewImage` type contains details about a product image.
 | Field | Data Type | Description |
 | --- | --- | --- |
 | `label` | String | The display label of the product image. |
-| `roles` | [String] | A list that describes how the image is used. Can be `image`, `small_image`, or `thumbnail`. |
+| `roles` | [String] | A list that describes how the image is used. Includes the standard roles (`image`, `small_image`, `thumbnail`, `swatch_image`) and any merchant-defined custom role values, such as `lifestyle_image`. |
 | `url` | String! | The URL to the product image. |
 
 ### ProductViewLink type
@@ -947,7 +973,7 @@ The `ProductViewMoney` type defines a monetary value, including a numeric value 
 
 ### ProductViewInputOption type
 
-Product input options provide details about how a shopper can enter customization details for a product. For example, for product personalization the input options might provide the fields for the shopper to add an image or text for a monogram. The input option can include an associated `markupAmount` that is applied to the product price. For additional information, see [Product settings - Customizable Options](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/products/settings/settings-advanced-custom-options).
+Product input options provide details about how a shopper can enter customization details for a product. For example, for product personalization the input options provide the fields for the shopper to add an image or text for a monogram. The input option can include an associated `markupAmount` that is applied to the product price. For additional information, see [Product settings - Customizable Options](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/products/settings/settings-advanced-custom-options).
 
 | Field | Data Type | Description |
 | -- | -- | -- |
@@ -1023,7 +1049,7 @@ The `ProductViewOptionValueProduct` type is an implementation of `ProductViewOpt
 | `isDefault` | Boolean | Indicates whether the option is the default. |
 | `product` | [`SimpleProductView`](#simpleproductview-type) | Details about a simple product. |
 | `quantity` | [`SimpleProductView`](#simpleproductview-type) | Default quantity of an option value. |
-| `title` | String | The display name of the option value. |
+| `title` | String | The display name of the option value. If the associated `product` is indexed, this returns the product's name; otherwise it falls back to the option value's configured title. |
 
 ### ProductViewOptionValueSwatch type
 
@@ -1075,6 +1101,7 @@ The `SimpleProductView` type represents all product types, except bundle, config
 | `description` | String | The detailed description of the product. |
 | `externalId`| String | The external ID of the product. |
 | `id` | ID! | The product ID, generated as a composite key, unique per locale. |
+| `gallery` | [`[ProductViewMedia]`](#productviewmedia-union) | A single ordered list containing all images and videos defined for the product. |
 | `images(roles: [String])` | [`[ProductViewImage]`](#productviewimage-type) | A list of images defined for the product. |
 | `inputOptions` | [`[ProductViewInputOption]`](#productviewinputoption-type) | A list of input options the shopper can supply to customize a product. |
 | `inStock` | Boolean | Indicates whether the product is in stock. |

@@ -4,7 +4,7 @@ description: A merchant can reconfigure (rewrite) the URL to any product, catego
 
 ---
 
-<Fragment src="../../../../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # route query
 

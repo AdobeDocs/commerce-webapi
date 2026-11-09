@@ -6,7 +6,7 @@ keywords:
   - Payments
 ---
 
-<Fragment src="../../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # PayPal Website Payments Pro Hosted Solution payment method
 
@@ -27,13 +27,13 @@ The following diagram shows the workflow for placing an order when Website Payme
 
 ![PayPal Website Payments Pro Hosted Solution sequence diagram](../../images/graphql/paypal-hosted-pro.png)
 
-<Fragment src="../../includes/graphql/payment-methods/hosted-pro-workflow.md"/>
+<Fragment src="/_includes/graphql/payment-methods/hosted-pro-workflow.md"/>
 
 ## `setPaymentMethodOnCart` mutation
 
 When you set the payment method for a Website Payments Pro Hosted Solution, you must set the `code` attribute to `hosted_pro`. In addition, the payload must contain a `hosted_pro` object, which defines the following attributes:
 
-<Fragment src="../../includes/graphql/payment-methods/hosted-pro-attributes.md"/>
+<Fragment src="/_includes/graphql/payment-methods/hosted-pro-attributes.md"/>
 
 ### Example usage
 

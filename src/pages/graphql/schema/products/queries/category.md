@@ -4,7 +4,7 @@ description: The category query has been deprecated. Use the categories query in
 
 ---
 
-<Fragment src="../../../../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # category query
 

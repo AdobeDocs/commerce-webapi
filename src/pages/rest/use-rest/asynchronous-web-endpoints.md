@@ -29,7 +29,7 @@ GET requests are not supported. Although Commerce does not currently implement a
 
 The route to all asynchronous calls varies between platforms:
 
-<Fragment src="../../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 In Adobe Commerce on Cloud and on-premises projects, the route contains the prefix `/async`, added before `/V1` of a standard synchronous endpoint. For example:
 
@@ -38,7 +38,7 @@ POST https://<host>/rest/<store-view-code>/async/V1/products
 PUT https://<host>/rest/<store-view-code>/async/V1/products/:sku
 ```
 
-<Fragment src="../../includes/saas-only.md"/>
+<Fragment src="/_includes/saas-only.md"/>
 
 In Adobe Commerce as a Cloud Service,  the `/async` segment occurs after the `V1` segment of the route. For example:
 
@@ -62,11 +62,11 @@ The response of an asynchronous request contains the following fields:
 
 The following call asynchronously changes the price of the product that has a `sku` of `24-MB01`:
 
-<Fragment src="../../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 `PUT https://<host>/rest/<store-view-code>/async/V1/products/24-MB01`
 
-<Fragment src="../../includes/saas-only.md"/>
+<Fragment src="/_includes/saas-only.md"/>
 
 `PUT https://<server>.api.commerce.adobe.com/<tenant-id>/V1/async/products/24-MB01`
 
@@ -100,7 +100,7 @@ Commerce generates a `bulk_uuid` for each asynchronous request. Use the `bulk_uu
 
 ## Store scopes
 
-<Fragment src="../../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 You can specify a store code (which is labeled in the Admin as store view code) in the route of an asynchronous endpoint so that it operates on a specific store, as shown below:
 
@@ -118,7 +118,7 @@ POST /all/async/V1/products
 PUT /all/async/V1/products/:sku
 ```
 
-<Fragment src="../../includes/saas-only.md"/>
+<Fragment src="/_includes/saas-only.md"/>
 
 In Adobe Commerce as a Cloud Service, you must specify the store code in the `Store` header of the request.
 

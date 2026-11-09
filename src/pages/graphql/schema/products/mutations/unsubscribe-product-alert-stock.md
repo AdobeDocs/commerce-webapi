@@ -6,7 +6,7 @@ description: The unsubscribeProductAlertStock mutation removes the logged-in cus
 
 # unsubscribeProductAlertStock mutation
 
-<Fragment src="/includes/scp-mutation.md" />
+<Fragment src="/_includes/scp-mutation.md" />
 
 The `unsubscribeProductAlertStock` mutation removes the logged-in customer's subscription to a stock availability alert for the specified product. After unsubscribing, the customer no longer receives email notifications when the product comes back in stock.
 

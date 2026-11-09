@@ -4,8 +4,6 @@ description: The productReviewRatingsMetadata query returns the active ratings a
 
 ---
 
-<Fragment src="../../../../includes/paas-only.md"/>
-
 # productReviewRatingsMetadata query
 
 The `productReviewRatingsMetadata` query returns the active ratings attributes and the values each rating can have. In Luma, these values are one star through five stars.

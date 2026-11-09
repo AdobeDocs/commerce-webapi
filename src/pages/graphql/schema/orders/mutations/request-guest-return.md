@@ -3,7 +3,7 @@ title: requestGuestReturn mutation
 description: The requestGuestReturn mutation initiates a guest buyer's request to return an item for replacement or refund. A confirmation email is sent to the guest pr...
 ---
 
-<Fragment src="../../../../includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # requestGuestReturn mutation
 

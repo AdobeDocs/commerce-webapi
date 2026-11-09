@@ -20,17 +20,17 @@ refineProduct(sku: String!, optionIds: [String!]!): ProductView
 
 ## Endpoints
 
-<Fragment src="../../../../includes/graphql/endpoints.md"/>
+<Fragment src="/_includes/graphql/endpoints.md"/>
 
 ## Required headers
 
 You must specify the following HTTP headers to run this query.
 
-<Fragment src="../../../../includes/graphql/catalog-service/headers.md"/>
+<Fragment src="/_includes/graphql/catalog-service/headers.md"/>
 
 ### Find the customer group code
 
-<Fragment src="../../../../includes/graphql/customer-group-code.md"/>
+<Fragment src="/_includes/graphql/customer-group-code.md"/>
 
 ## Example usage
 
@@ -289,6 +289,7 @@ The `ProductView` return object is an interface that can contain the following f
 | `description` | String | The detailed description of the product. |
 | `externalId`| String | The external ID of the product. |
 | `id` | ID! | The product ID, generated as a composite key, unique per locale. |
+| `gallery` | [`[ProductViewMedia]`](#productviewmedia-union) | A single ordered list containing all images and videos defined for the product. |
 | `images(roles: [String])` | [`[ProductViewImage]`](#productviewimage-type) | A list of images defined for the product. |
 | `inputOptions` | [`[ProductViewInputOption]`](#productviewinputoption-type) | A list of input options the shopper can supply to customize a product. |
 | `inStock` | Boolean | Indicates whether the product is in stock. |
@@ -315,6 +316,7 @@ The `ComplexProductView` type represents bundle, configurable, and group product
 | `description` | String | The detailed description of the product. |
 | `externalId`| String | The external ID of the product. |
 | `id` | ID! | The product ID, generated as a composite key, unique per locale. |
+| `gallery` | [`[ProductViewMedia]`](#productviewmedia-union) | A single ordered list containing all images and videos defined for the product. |
 | `images(roles: [String])` | [`[ProductViewImage]`](#productviewimage-type) | A list of images defined for the product. |
 | `inputOptions` | [`[ProductViewInputOption]`](#productviewinputoption-type) | A list of input options the shopper can supply to customize a product. |
 | `inStock` | Boolean | Indicates whether the product is in stock. |
@@ -361,6 +363,10 @@ The `ProductViewAttribute` type is a container for customer-defined attributes t
 | `roles` | [String] | Roles designated for an attribute on the storefront, such as "Show on PLP", "Show in PDP", or "Show in Search". |
 | `value` | JSON | Attribute value, arbitrary of type. |
 
+### ProductViewMedia union
+
+The `ProductViewMedia` union represents an entry in the ordered product media gallery. Use inline fragments on `ProductViewImage` and `ProductViewVideo` to retrieve fields for each media type. Entries are returned in resolved display order, and clients should preserve that order.
+
 ### ProductViewImage type
 
 The `ProductViewImage` type contains details about a product image.
@@ -368,7 +374,7 @@ The `ProductViewImage` type contains details about a product image.
 | Field | Data Type | Description |
 | --- | --- | --- |
 | `label` | String | The display label of the product image. |
-| `roles` | [String] | A list that describes how the image is used. Can be `image`, `small_image`, or `thumbnail`. |
+| `roles` | [String] | A list that describes how the image is used. Includes the standard roles (`image`, `small_image`, `thumbnail`, `swatch_image`) and any merchant-defined custom role values, such as `lifestyle_image`. |
 | `url` | String! | The URL to the product image. |
 
 ### ProductViewLink type
@@ -519,6 +525,7 @@ The `SimpleProductView` type represents all product types, except bundle, config
 | `description` | String | The detailed description of the product. |
 | `externalId`| String | The external ID of the product. |
 | `id` | ID! | The product ID, generated as a composite key, unique per locale. |
+| `gallery` | [`[ProductViewMedia]`](#productviewmedia-union) | A single ordered list containing all images and videos defined for the product. |
 | `images(roles: [String])` | [`[ProductViewImage]`](#productviewimage-type) | A list of images defined for the product. |
 | `inputOptions` | [`[ProductViewInputOption]`](#productviewinputoption-type) | A list of input options the shopper can supply to customize a product. |
 | `inStock` | Boolean | Indicates whether the product is in stock. |

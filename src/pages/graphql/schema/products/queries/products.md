@@ -4,7 +4,7 @@ description: Adobe Commerce as a Cloud Service (SaaS) does not support this prod
 
 ---
 
-<Fragment src="../../../../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # products query
 
@@ -1530,7 +1530,7 @@ In this example, the `description` attribute has been enabled by setting the **S
 
 ### Retrieve related products, up-sells, and cross-sells
 
-<Fragment src="../../../../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 The following query shows how to get related products, up-sells, and cross-sells for a product:
 

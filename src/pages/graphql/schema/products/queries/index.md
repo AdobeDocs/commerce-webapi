@@ -17,7 +17,6 @@ This section describes the following queries:
 * [`products`](products.md)
 * [`reviews`](reviews.md)
 * [`route`](route.md)
-* [`sourceAvailability`](source-availability.md)
 * [`urlResolver`](url-resolver.md)
 
 <InlineAlert variant="warning" slots="text" />

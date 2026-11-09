@@ -5,11 +5,11 @@ keywords:
   - B2B
 ---
 
-<Fragment src="/includes/commerce-only.md"/>
+<Fragment src="/_includes/commerce-only.md"/>
 
 # placeNegotiableQuoteOrderV2 mutation
 
-<Fragment src="/includes/scp-b2b-mutation.md" />
+<Fragment src="/_includes/scp-b2b-mutation.md" />
 
 The `placeNegotiableQuoteOrderV2` mutation converts a negotiable quote into an order and returns the full order object.
 

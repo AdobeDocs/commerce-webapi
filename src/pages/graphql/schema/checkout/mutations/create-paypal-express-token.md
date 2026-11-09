@@ -4,7 +4,7 @@ description: The createPaypalExpressToken mutation begins the authorization proc
 
 ---
 
-<Fragment src="../../../../includes/paas-only.md"/>
+<Fragment src="/_includes/paas-only.md"/>
 
 # createPaypalExpressToken mutation
 

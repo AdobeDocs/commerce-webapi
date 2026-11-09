@@ -87,7 +87,7 @@ The following call returns information about the logged-in customer. Provide the
 
 ### Retrieve custom attributes metadata from a customer
 
-<Fragment src="../../../../includes/graphql/examples/custom-attribute-customer.md"/>
+<Fragment src="/_includes/graphql/examples/custom-attribute-customer.md"/>
 
 ### Retrieve custom attributes metadata from a customer address
 
@@ -594,7 +594,7 @@ These topics contain examples with fragments and provide even more details:
 
 ### Search a customer's order history
 
-<Fragment src="../includes/saas-only.md"/>
+<Fragment src="/_includes/saas-only.md"/>
 
 The following example uses the `search` filter to return orders matching a term against the order number or an item's product name or SKU. `search` is combined with other filters, such as `status`, using AND logic. The matched item is included in the response to show why the order matched the search term.
 
@@ -1095,9 +1095,9 @@ The [Purchase order approval rules](../../b2b/purchase-order-rule/index.md) topi
 
 ### Retrieve a file uploaded to Amazon S3
 
-<Fragment src="../../../../includes/saas-only.md"/>
+<Fragment src="/_includes/saas-only.md"/>
 
-<Fragment src="../../../../includes/graphql/examples/customer-s3-download.md"/>
+<Fragment src="/_includes/graphql/examples/customer-s3-download.md"/>
 
 ## Related topics
 
