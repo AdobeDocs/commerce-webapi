@@ -277,3 +277,18 @@ The response returns the ID of the new order:
 ```json
 55
 ```
+
+## Shipping address requirement for new orders
+
+Adobe Commerce as a Cloud Service requires a shipping address for new non-virtual orders that you create through the `POST /V1/orders` and `PUT /V1/orders/create` endpoints. This requirement prevents orders without shipping information from causing order email failures.
+
+Commerce rejects requests when an order is not virtual and does not include a shipping address. This rule applies to digital orders that explicitly set `is_virtual` to `0`. If a new order does not set `is_virtual`, Commerce infers the value from its items. Orders that contain both physical and digital items require a shipping address.
+
+Use one of the following methods to create an order without a shipping address:
+
+*  Set `is_virtual` to `1` when the order contains only digital products.
+*  Place the order from a cart using the `PUT /V1/carts/:cartId/order` endpoint.
+
+The requirement does not apply to updates of existing orders.
+
+To resend a failed order email, add the correct shipping address through REST, then retry the email.

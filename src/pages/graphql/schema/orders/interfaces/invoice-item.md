@@ -20,6 +20,33 @@ The `InvoiceItemInterface` reference provides detailed information about the typ
 
 * [On-Premises/Cloud](/reference/graphql/latest/types-f-i.md#invoiceiteminterface)
 
+## Invoice item row totals
+
+<Fragment src="/_includes/saas-only.md"/>
+
+When using Adobe Commerce as a Cloud Service,`InvoiceItemInterface` includes the following field:
+
+| Field | Type | Description |
+|---|---|---|
+| `row_total` | Money | The stored row subtotal excluding tax and before discount, as printed in the invoice PDF |
+
+Commerce returns the row total stored on the invoice item instead of recalculating it from the unit price and invoiced quantity. For partial invoices, Commerce can prorate and round the stored amount, which means the stored amount can differ from the product price multiplied by the invoiced quantity.
+
+The following query fragment returns the row total for each invoice item:
+
+```graphql
+invoices {
+  items {
+    product_sku
+    quantity_invoiced
+    row_total {
+      value
+      currency
+    }
+  }
+}
+```
+
 ## Example usage
 
 The following query returns invoice details about order ID `000000005`. The `BundleOrderItem` and `DownloadableOrderItem` fragments return item-specific information.
