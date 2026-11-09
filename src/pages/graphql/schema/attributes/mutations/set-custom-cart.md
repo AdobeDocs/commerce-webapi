@@ -15,7 +15,7 @@ To remove a custom attribute, rerun the mutation without the previously applied 
 
 <InlineAlert variant="info" slots="text" />
 
-On Adobe Commerce as a Cloud Service (SaaS) projects, you can use the [`addProductsToCart` mutation](../../cart/mutations/add-products.md) to directly apply custom attributes to items in the cart. To do this, specify an array of custom attribute key/value pairs with the `CartItemInput.custom_attributes` field. On Adobe Commerce on-premises and Cloud infrastructure (PaaS) projects, you can [install version 0.8.0 or higher of the `magento/out-of-process-custom-attributes` module](../mutations/index.md#install-custom-attribute-support) to achieve the same functionality.
+You can apply custom attributes directly to cart items when adding products with the [`addProductsToCart` mutation](../../cart/mutations/add-products.md) mutation by passing an array of attribute code/value pairs in `CartItemInput.custom_attributes`. This feature is automatically available on Adobe Commerce as a Cloud Service (SaaS). On Adobe Commerce on-premises and on cloud infrastructure (PaaS), install version 0.7.0 or later of the [`magento/out-of-process-custom-attributes` module](../mutations/index.md#install-custom-attribute-support) module to use it.
 
 ## Syntax
 
