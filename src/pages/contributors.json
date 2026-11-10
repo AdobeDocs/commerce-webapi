@@ -537,9 +537,10 @@
     {
       "page": "/_includes/templated/whats-new",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/48562208?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "11/5/2026"
+      "lastUpdated": "11/10/2026"
     },
     {
       "page": "/config",
