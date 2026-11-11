@@ -8,6 +8,10 @@ keywords:
 
 # Instantiate the Payment Services SDK
 
+<InlineAlert variant="warning" slots="text"/>
+
+The Payment Services SDK is version 0.x (pre-1.0) and is under active development.
+
 Start with an instance of the `PaymentServicesSDK` class, which is defined by the SDK's JavaScript bundle on a CDN. Load the bundle with `loadPaymentServicesSDK` from the npm package, or with a script tag. Then instantiate the class with the configuration for your Commerce deployment.
 
 See the [SDK requirements](index.md#requirements) before you begin.

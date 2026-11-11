@@ -8,6 +8,10 @@ keywords:
 
 # Payment Services SDK payment lifecycle
 
+<InlineAlert variant="warning" slots="text"/>
+
+The Payment Services SDK is version 0.x (pre-1.0) and is under active development.
+
 Payment methods follow the same lifecycle: initialize, check availability, render, start the payment, and complete the order.
 
 These examples assume that you have [instantiated the SDK](instantiating-the-sdk.md). The functions `getCartId`, `placeOrder`, `handleError`, and `isCheckoutFormValid` represent your application's cart, order-placement, error-display, and validation logic. They are not SDK APIs.
