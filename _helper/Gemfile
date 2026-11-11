@@ -5,5 +5,5 @@
 
 source 'https://rubygems.org'
 
-gem 'adobe-comdox-exl-rake-tasks', git: 'https://github.com/commerce-docs/adobe-comdox-exl-rake-tasks', tag: 'v0.6.0'
+gem 'adobe-comdox-exl-rake-tasks', git: 'https://github.com/commerce-docs/adobe-comdox-exl-rake-tasks', tag: 'v0.6.1'
 gem 'whatsup_github', git: 'https://github.com/commerce-docs/whatsup_github', tag: 'v2.1.1'
