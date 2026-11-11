@@ -54,7 +54,7 @@ GraphQL is a language for querying and manipulating data. It is widely viewed as
 
 [Payment Services SDK](payment-services-sdk/index.md)
 
-Learn about the JavaScript SDK for rendering Payment Services payment methods on custom frontends without Commerce Storefront or drop-ins. Review the future-release requirements and unverified ACCS compatibility before adopting the SDK.
+Learn how to render Payment Services payment methods on custom frontends without Commerce Storefront or drop-ins using the JavaScript SDK.
 
 ## Contributing to this documentation
 

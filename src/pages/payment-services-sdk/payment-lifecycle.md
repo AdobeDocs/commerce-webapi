@@ -72,7 +72,7 @@ if (sdk.Payment.GooglePay.isAvailable()) {
 }
 ```
 
-This example describes a non-virtual cart. Set `isVirtual` according to your cart. The Google Pay address options are specific to Google Pay; do not assume that other payment methods accept the same configuration.
+This example describes a non-virtual cart. Set `isVirtual` according to your cart. The Google Pay address options are specific to Google Pay.
 
 If rendering fails before setup completes, the returned promise rejects. Errors after setup are passed to `onError`. Handle both paths.
 
@@ -108,7 +108,7 @@ Apple Pay, Google Pay, and PayPal also call `onStart`, but later. Apple Pay and 
 
 ## Complete the order
 
-When the shopper approves payment, the SDK calls `onSuccess` with a success event. The SDK does not place the order. Your application must place the order for `event.cartId`, for example with the [`placeOrder` GraphQL mutation](../graphql/schema/cart/mutations/place-order.md) on a supported Commerce deployment.
+When the shopper approves payment, the SDK calls `onSuccess` with a success event. The SDK does not place the order. Your application must place the order for `event.cartId`, for example with the [`placeOrder` GraphQL mutation](../graphql/schema/cart/mutations/place-order.md).
 
 Return the order-placement promise from `onSuccess`, or use an `async` callback and await it, as in the rendering example. The SDK waits for the promise and passes a rejection to `onError`. While waiting, it keeps the Apple Pay or Google Pay payment sheet or the PayPal window open where possible.
 
@@ -118,7 +118,7 @@ For the API-level checkout sequence, see the [Payment Services checkout workflow
 
 ## Handle errors
 
-`onError` receives a `PaymentMethodError`. Its `code` property identifies the error so that your application can handle it programmatically and display an appropriate message to the shopper. Consult the types shipped with your selected SDK version for available error codes; do not assume that error codes remain unchanged across breaking releases.
+`onError` receives a `PaymentMethodError`. Its `code` property identifies the error so that your application can handle it programmatically and display an appropriate message to the shopper. Consult the types shipped with your SDK version for available error codes.
 
 ## Remove a payment method
 

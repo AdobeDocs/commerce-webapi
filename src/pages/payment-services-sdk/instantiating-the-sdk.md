@@ -10,7 +10,7 @@ keywords:
 
 Start with an instance of the `PaymentServicesSDK` class, which is defined by the SDK's JavaScript bundle on a CDN. Load the bundle with `loadPaymentServicesSDK` from the npm package, or with a script tag. Then instantiate the class with the configuration for your Commerce deployment.
 
-Before using these examples, review the [release, support, and deployment requirements](index.md). In particular, ACCS endpoints and authentication have not been verified by the source documentation.
+See the [SDK requirements](index.md#requirements) before you begin.
 
 ## Load with the npm package
 
@@ -31,17 +31,17 @@ const sdk = new PaymentServicesSDK({
 })
 ```
 
-Replace the example endpoint with the GraphQL endpoint for your supported Commerce deployment. Loading or initializing the SDK can fail; handle rejected promises in your application's initialization error handling.
+Replace the example endpoint with your Commerce GraphQL endpoint. Handle rejected loading or initialization promises in your application's initialization error handling.
 
 ## Load with a script tag
 
-Alternatively, add the bundle to your page. The source documentation specifies this URL format for the future release:
+Alternatively, add the bundle to your page:
 
 ```html
 <script src="https://commerce-payments-sdk.adobe.io/v0/{minor}/PaymentSDK.js"></script>
 ```
 
-Replace `{minor}` with the minor version you intend to use. Confirm that the selected version is available before using this URL. The script adds the SDK class to `window`.
+Replace `{minor}` with the SDK minor version. The script adds the SDK class to `window`.
 
 ```js
 const sdk = new window.PaymentServicesSDK({
@@ -51,7 +51,7 @@ const sdk = new window.PaymentServicesSDK({
 
 ## Versioning
 
-A bundle URL does not receive breaking changes. In version 0.x, the URL includes the minor version: `v0/{minor}/PaymentSDK.js` receives patch releases for that minor version. The source documentation describes a major-version-only URL, such as `v1/PaymentSDK.js`, for version 1.0 onward; this is not confirmation that version 1.0 is available.
+In version 0.x, minor releases can introduce breaking changes; patch releases do not. The bundle URL includes the minor version: `v0/{minor}/PaymentSDK.js` receives patch releases for that minor version without breaking changes.
 
 By default, `npm install` saves the version with a caret (`^`). For version 0.x, this accepts only patch releases of the same minor version.
 
@@ -69,7 +69,7 @@ const sdk = new PaymentServicesSDK({
 })
 ```
 
-Storefronts served by Adobe Commerce itself can instead rely on its session cookie. For that case, the source documentation requires `gqlApiUrl` to be the store's base URL followed by `graphql`, such as `/default/graphql`, so that the browser sends the cookie. Do not assume that session-cookie authentication applies to a separately hosted custom frontend or to ACCS.
+Storefronts served by Adobe Commerce itself can instead rely on its session cookie. Set `gqlApiUrl` to the store's base URL followed by `graphql`, such as `/default/graphql`, so that the browser sends the cookie. For separately hosted custom frontends, provide the shopper's customer token through `getCustomerToken`.
 
 ## TypeScript types
 

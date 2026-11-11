@@ -18,24 +18,16 @@ ACCS compatibility is not verified by the SDK source documentation. Its requirem
 
 The SDK sends GraphQL requests to Adobe Commerce on behalf of the shopper to create a payment for the shopper's cart. After the shopper approves the payment, your storefront must place the order. The SDK does not replace your cart, checkout, or order-placement logic.
 
-## Release status and support
-
-<InlineAlert variant="warning" slots="text"/>
-
-This documentation describes a future release. The SDK source documentation identifies the SDK as version 0.x and under active development. Until version 1.0, minor versions can contain breaking changes; patch versions do not. It also states that SDK versions are not actively maintained and no support should be expected. Confirm the release and support status before adopting the SDK.
-
 ## Requirements
-
-The source documentation lists these requirements:
 
 * Adobe Commerce with the Payment Services extension, version 2.17 or later.
 * Payment Services configured in the Commerce Admin, with the payment methods you want to render enabled.
 
-These extension requirements do not establish ACCS compatibility. For Payment Services onboarding and configuration, see the [Payment Services guide](https://experienceleague.adobe.com/en/docs/commerce/payment-services/guide-overview).
+For Payment Services onboarding and configuration, see the [Payment Services guide](https://experienceleague.adobe.com/en/docs/commerce/payment-services/guide-overview).
 
 ## Integration steps
 
-1. [Load and instantiate the SDK](instantiating-the-sdk.md) with the GraphQL endpoint and shopper authentication for your supported Commerce deployment.
+1. [Load and instantiate the SDK](instantiating-the-sdk.md) with your Commerce GraphQL endpoint and shopper authentication.
 1. [Initialize and render payment methods](payment-lifecycle.md) for a storefront location.
 1. Handle approval, cancellation, and errors in your frontend.
 1. Place the order after payment approval.
@@ -47,4 +39,4 @@ Use the SDK to render payment controls and manage the payment interaction. Your 
 
 The [Payment Services GraphQL workflows](../graphql/payment-services-extension/workflows/index.md) describe the underlying API integrations, including [checkout](../graphql/payment-services-extension/workflows/checkout.md), [minicart](../graphql/payment-services-extension/workflows/minicart.md), and [product detail page smart buttons](../graphql/payment-services-extension/workflows/cart-pdp.md). They are API-level workflows, not additional steps to run alongside every SDK call. Their extension version requirements differ from the SDK requirements.
 
-The SDK also exposes credit card vaulting types. See the [vaulting workflows](../graphql/payment-services-extension/workflows/vault-without-purchase.md) for the API-level process and [TypeScript imports](instantiating-the-sdk.md#typescript-types) for the SDK's vault entry point. These references do not establish ACCS vaulting support.
+The SDK also exposes credit card vaulting types. See the [vaulting workflows](../graphql/payment-services-extension/workflows/vault-without-purchase.md) for the API-level process and [TypeScript imports](instantiating-the-sdk.md#typescript-types) for the SDK's vault entry point.
