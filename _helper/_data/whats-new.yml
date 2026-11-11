@@ -2,7 +2,7 @@
 title: What's new
 description: This section contains the changes made in the last 60 days. We exclude
   all minor updates, such as copy editing, from this list.
-updated: Thu Nov 5 12:10:33 2026
+updated: Tue Nov 10 16:51:00 2026
 entries:
 - description: The `ProductViewImage` type in the Catalog Service GraphQL API now
     returns custom image roles, in addition to the standard `image`, `small_image`,
