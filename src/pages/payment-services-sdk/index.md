@@ -12,6 +12,8 @@ keywords:
 
 The Payment Services SDK is version 0.x (pre-1.0) and is under active development.
 
+See the [Payment Services SDK alpha documentation](https://git.corp.adobe.com/pages/magento-payments/payments-js-sdk/alpha/) for the published SDK reference.
+
 The Payment Services JavaScript SDK renders [Adobe Commerce Payment Services](https://experienceleague.adobe.com/en/docs/commerce/payment-services/guide-overview) payment methods on a storefront: credit card fields, Apple Pay, Google Pay, and PayPal buttons. It can also save (vault) credit cards for later use.
 
 This guide is intended for developers building custom frontends without Edge Delivery Services Commerce Storefront or drop-ins, including Adobe Commerce as a Cloud Service (ACCS) customers evaluating a custom integration.
