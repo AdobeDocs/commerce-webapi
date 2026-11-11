@@ -312,9 +312,10 @@
     {
       "page": "/_includes/custom-attribute-installation",
       "avatars": [
+        "https://avatars.githubusercontent.com/in/1143301?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4"
       ],
-      "lastUpdated": "11/5/2026"
+      "lastUpdated": "11/9/2026"
     },
     {
       "page": "/_includes/graphql/attribute-metadata",
@@ -1165,11 +1166,12 @@
     {
       "page": "/graphql/schema/attributes/mutations/set-custom-cart",
       "avatars": [
+        "https://avatars.githubusercontent.com/in/1143301?v=4",
+        "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/11652541?v=4"
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "11/5/2026"
+      "lastUpdated": "11/9/2026"
     },
     {
       "page": "/graphql/schema/attributes/mutations/set-custom-cart-item",
@@ -2280,15 +2282,15 @@
     {
       "page": "/graphql/schema/cart/mutations/add-products",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/12731225?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/11652541?v=4",
         "https://avatars.githubusercontent.com/u/111579196?v=4",
         "https://avatars.githubusercontent.com/u/2188119?v=4",
         "https://avatars.githubusercontent.com/u/13662379?v=4",
         "https://avatars.githubusercontent.com/u/30629803?v=4"
       ],
-      "lastUpdated": "6/24/2026"
+      "lastUpdated": "11/4/2026"
     },
     {
       "page": "/graphql/schema/cart/mutations/add-simple-products",
