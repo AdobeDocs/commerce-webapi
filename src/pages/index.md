@@ -12,7 +12,7 @@ keywords:
 
 # Commerce Web APIs
 
-The Commerce Web APIs allow you to integrate third-party software and build headless applications for Adobe Commerce. The Web API documentation is divided into three guides: REST, GraphQL, and Getting Started.
+The Commerce Web APIs allow you to integrate third-party software and build headless applications for Adobe Commerce. This documentation covers REST, GraphQL, Getting Started, and the Payment Services SDK.
 
 <Resources slots="heading, links"/>
 
@@ -49,6 +49,12 @@ The REST API documentation describes the REST APIs that are available on the lat
 [GraphQL](graphql/index.md)
 
 GraphQL is a language for querying and manipulating data. It is widely viewed as more powerful, flexible, and efficient than REST for frontend development.
+
+<DiscoverBlock slots="link, text"/>
+
+[Payment Services SDK](payment-services-sdk/index.md)
+
+Learn about the JavaScript SDK for rendering Payment Services payment methods on custom frontends without Commerce Storefront or drop-ins. Review the future-release requirements and unverified ACCS compatibility before adopting the SDK.
 
 ## Contributing to this documentation
 

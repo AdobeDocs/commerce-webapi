@@ -12,6 +12,8 @@ keywords:
 
 These steps describe the flow of requests and responses required to complete a typical [checkout](../../tutorials/checkout/index.md) authorization with Payment Services enabled.
 
+If you use the [Payment Services SDK](../../../payment-services-sdk/index.md), follow its [payment lifecycle](../../../payment-services-sdk/payment-lifecycle.md) instead of manually duplicating the payment requests managed by the SDK. Your application must still place the order after payment approval. The SDK has separate release and deployment requirements, and ACCS compatibility is unverified.
+
 ## Checkout workflow
 
 ![Payment Services sequence diagram](../../../images/graphql/payment-services.png)
