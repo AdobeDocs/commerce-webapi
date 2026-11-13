@@ -1,7 +1,7 @@
 {
-  "total": 648,
+  "total": 646,
   "offset": 0,
-  "limit": 648,
+  "limit": 646,
   "data": [
     {
       "page": "/",
@@ -2651,16 +2651,6 @@
       "lastUpdated": "9/11/2026"
     },
     {
-      "page": "/graphql/schema/cart/queries/pickup-locations",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/12731225?v=4",
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/11652541?v=4",
-        "https://avatars.githubusercontent.com/u/13662379?v=4"
-      ],
-      "lastUpdated": "6/24/2026"
-    },
-    {
       "page": "/graphql/schema/catalog-service/",
       "avatars": [
         "https://avatars.githubusercontent.com/u/6391769?v=4",
@@ -4124,13 +4114,6 @@
         "https://avatars.githubusercontent.com/u/111579196?v=4"
       ],
       "lastUpdated": "11/5/2026"
-    },
-    {
-      "page": "/graphql/schema/products/queries/source-availability",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/98363870?v=4"
-      ],
-      "lastUpdated": "9/4/2026"
     },
     {
       "page": "/graphql/schema/products/queries/url-resolver",
