@@ -10,6 +10,8 @@ keywords:
 
 The workflows described in this section provide detailed guides on various processes and workflows related to the Payment Services extension. These guides help you understand and implement different features and functionalities provided by the extension, ensuring seamless integration and optimal usage of Payment Services.
 
+For an SDK-managed payment interaction on a custom frontend, see the [Payment Services SDK payment lifecycle](../../../payment-services-sdk/payment-lifecycle.md). The SDK performs payment-related GraphQL requests, but your frontend still prepares the cart and places the order.
+
 If you have installed [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.3.0 or higher, check the following workflows:
 
 * [Checkout](checkout.md)---This workflow describes the flow of requests and responses required to complete a typical checkout authorization with the Payment Services extension enabled.
