@@ -13,6 +13,10 @@ When the quote is converted to an order, the custom attributes are copied to the
 
 To remove a custom attribute, rerun the mutation without the previously applied custom attribute.
 
+<InlineAlert variant="info" slots="text" />
+
+You can apply custom attributes directly to cart items when adding products with the [`addProductsToCart` mutation](../../cart/mutations/add-products.md) mutation by passing an array of attribute code/value pairs in `CartItemInput.custom_attributes`. This feature is automatically available on Adobe Commerce as a Cloud Service (SaaS). On Adobe Commerce on-premises and on cloud infrastructure (PaaS), install version 0.7.0 or later of the [`magento/out-of-process-custom-attributes` module](../mutations/index.md#install-custom-attribute-support) module to use it.
+
 ## Syntax
 
 ```graphql

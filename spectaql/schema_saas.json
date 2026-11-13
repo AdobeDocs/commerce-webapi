@@ -6505,6 +6505,18 @@
             "deprecationReason": null
           },
           {
+            "name": "row_total",
+            "description": "The stored row subtotal excluding tax and before discount, as printed in the invoice PDF.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "Money",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "tax_amount",
             "description": "The tax amount recorded for this invoice item in the order currency.",
             "args": [],
@@ -9976,6 +9988,20 @@
         "fields": null,
         "inputFields": [
           {
+            "name": "custom_attributes",
+            "description": "An array of custom attributes to set on the cart item when it is added to the cart. Supported only by the `addProductsToCart` mutation; ignored by other mutations that use `CartItemInput`, such as `addProductsToNewCart` and the deprecated product-specific add-to-cart mutations.",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "CustomAttributeInput",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
             "name": "entered_options",
             "description": "An array of entered options for the base product, such as personalization text.",
             "type": {
@@ -11644,6 +11670,18 @@
         "description": "Contains the full set of attributes that can be returned in a category search.",
         "fields": [
           {
+            "name": "asset_role_image",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "available_sort_by",
             "description": null,
             "args": [],
@@ -12086,18 +12124,6 @@
             },
             "isDeprecated": false,
             "deprecationReason": null
-          },
-          {
-            "name": "lastModifiedAt",
-            "description": "Best-effort indication of when the category data was updated. Null when unavailable.",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "DateTime",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
           }
         ],
         "inputFields": null,
@@ -12214,18 +12240,6 @@
             },
             "isDeprecated": false,
             "deprecationReason": null
-          },
-          {
-            "name": "lastModifiedAt",
-            "description": "Best-effort indication of when the category data was updated. Null when unavailable.",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "DateTime",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
           }
         ],
         "inputFields": null,
@@ -12283,6 +12297,18 @@
         "name": "CategoryTree",
         "description": "Contains the hierarchy of categories.",
         "fields": [
+          {
+            "name": "asset_role_image",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
           {
             "name": "available_sort_by",
             "description": null,
@@ -12736,18 +12762,6 @@
                 "name": "String",
                 "ofType": null
               }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "lastModifiedAt",
-            "description": "Best-effort indication of when the category data was updated. Null when unavailable.",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "DateTime",
-              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -13247,18 +13261,6 @@
                 "name": "CategoryViewAttribute",
                 "ofType": null
               }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "lastModifiedAt",
-            "description": "Best-effort indication of when the category data was updated. Null when unavailable.",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "DateTime",
-              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -32473,6 +32475,18 @@
             "deprecationReason": null
           },
           {
+            "name": "row_total",
+            "description": "The stored row subtotal excluding tax and before discount, as printed in the invoice PDF.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "Money",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "tax_amount",
             "description": "The tax amount recorded for this invoice item in the order currency.",
             "args": [],
@@ -36380,6 +36394,18 @@
             "type": {
               "kind": "SCALAR",
               "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "row_total",
+            "description": "The stored row subtotal excluding tax and before discount, as printed in the invoice PDF.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "Money",
               "ofType": null
             },
             "isDeprecated": false,
@@ -42193,6 +42219,18 @@
             "deprecationReason": null
           },
           {
+            "name": "row_total",
+            "description": "The stored row subtotal excluding tax and before discount, as printed in the invoice PDF.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "Money",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "tax_amount",
             "description": "The tax amount recorded for this invoice item in the order currency.",
             "args": [],
@@ -42385,6 +42423,18 @@
             "type": {
               "kind": "SCALAR",
               "name": "Float",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "row_total",
+            "description": "The stored row subtotal excluding tax and before discount, as printed in the invoice PDF.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "Money",
               "ofType": null
             },
             "isDeprecated": false,
@@ -59356,8 +59406,8 @@
                 "ofType": null
               }
             },
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Product information is part of a composable Catalog Service."
           },
           {
             "name": "ratings_breakdown",

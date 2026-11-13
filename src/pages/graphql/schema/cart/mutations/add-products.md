@@ -411,6 +411,80 @@ mutation {
 }
 ```
 
+### Add a simple product and apply custom cart attributes
+
+The following example adds a simple product to the cart and applies custom cart attributes. The custom attributes are specified as an array of key/value pairs with the `custom_attributes` field in the `CartItemInput`. Applying custom cart attributes when adding a product to the cart allows you to bypass running the [`setCustomAttributesOnCart` mutation](../../attributes/mutations/set-custom-cart.md). This feature is available on Adobe Commerce as a Cloud Service (SaaS) projects and on Adobe Commerce on-premises and Cloud infrastructure (PaaS) projects with version 0.8.0 or higher of the `magento/out-of-process-custom-attributes` [module installed](../../attributes/mutations/index.md#install-custom-attribute-support).
+
+**Request:**
+
+```graphql
+mutation AddWithAttributes($cartId: String!, $sku: String!) {
+  addProductsToCart(
+    cartId: $cartId
+    cartItems: [{
+      sku: $sku
+      quantity: 1
+      custom_attributes: [
+        { attribute_code: "gift_message", value: "Happy birthday!" }
+        { attribute_code: "external_line_id", value: "line-001" }
+      ]
+    }]
+  ) {
+    cart {
+      itemsV2 {
+        items {
+          uid
+          quantity
+          custom_attributes {
+            attribute_code
+            value
+          }
+        }
+      }
+    }
+    user_errors {
+      code
+      message
+    }
+  }
+}
+```
+
+**Response:**
+
+```json
+{
+  "data": {
+    "addProductsToCart": {
+      "cart": {
+        "itemsV2": {
+          "items": [
+            {
+              "uid": "MQ==",
+              "quantity": 1,
+              "custom_attributes": [
+                {
+                  "attribute_code": "gift_message",
+                  "value": "Happy birthday!"
+                },
+                {
+                  "attribute_code": "external_line_id",
+                  "value": "line-001"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "user_errors": []
+    }
+  },
+  "extensions": {
+    "request-id": "ab788a7b-30c4-42eb-a8d2-8a3914553e08"
+  }
+}
+```
+
 ## Add a bundle product with selected options to a cart
 
 The following example adds the Sprite Yoga Companion Kit bundle product to the cart. The bundle product is comprised of four simple products, and the selected simple products are specified with a value in the `selected_options` array. Use the `products` query to determine these UID values. Note that each UID value is an encoded value representing the following string:
