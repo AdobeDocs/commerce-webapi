@@ -19,6 +19,8 @@ It provides powerful tools to give you the insight and control needed for creati
 
 ## Payment Services GraphQL
 
+For a JavaScript integration that renders payment controls on a custom frontend, see the [Payment Services SDK](../../payment-services-sdk/index.md).
+
 [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.3.0 and higher provides enhanced payment method capabilities. With this extension, you can implement the following payment methods:
 
 * Apple Pay with PayPal
@@ -26,6 +28,106 @@ It provides powerful tools to give you the insight and control needed for creati
 * PayPal Hosted Fields
 * PayPal Smart Buttons
 * Credit card vaulting
+
+## Payment method availability
+
+<InlineAlert variant="info" slots="text" />
+
+Payment Services 2.18.0 and later returns only enabled Payment Services methods in the [`cart` query](../schema/cart/queries/cart.md). Both Payment Services and the individual method must be enabled. Other payment eligibility requirements for the cart also apply.
+
+Display settings control where an enabled method appears. They do not determine whether the method is returned in `available_payment_methods`. For headless and Edge Delivery Services storefronts, use:
+
+* `available_payment_methods` to identify the methods available for the cart.
+* `is_visible` from [`getPaymentConfig`](queries/get-payment-config.md) to determine which methods to display at the requested location.
+
+See [Payment Services configuration](https://experienceleague.adobe.com/en/docs/commerce/payment-services/configure/configure-admin#control-payment-method-availability) to configure individual methods. For extension upgrade instructions for Adobe Commerce on Cloud, on-premises, and Magento Open Source, see [Upgrade the extension](https://experienceleague.adobe.com/en/docs/commerce/payment-services/get-started/install#upgrade-the-extension).
+
+### Query available methods
+
+Replace `YOUR_CART_ID` with the ID of a cart that is ready for checkout. Use the `Store` header to specify the store view.
+
+```graphql
+query {
+  cart(cart_id: "YOUR_CART_ID") {
+    available_payment_methods {
+      code
+      title
+    }
+  }
+}
+```
+
+The following sample responses assume that Fastlane, Local Payment Methods, credit card vaulting, and other payment providers are disabled. The methods use their default titles. The returned methods and their order depend on your store configuration and cart.
+
+### Enabled methods are returned
+
+With Payment Services, Credit Card Fields, PayPal payment buttons, Apple Pay, and Google Pay enabled, the query returns:
+
+```json
+{
+  "data": {
+    "cart": {
+      "available_payment_methods": [
+        {
+          "code": "payment_services_paypal_hosted_fields",
+          "title": "Credit Card"
+        },
+        {
+          "code": "payment_services_paypal_smart_buttons",
+          "title": "PayPal"
+        },
+        {
+          "code": "payment_services_paypal_apple_pay",
+          "title": "Apple Pay"
+        },
+        {
+          "code": "payment_services_paypal_google_pay",
+          "title": "Google Pay"
+        }
+      ]
+    }
+  }
+}
+```
+
+### Disabled methods are omitted
+
+With Apple Pay and Google Pay disabled, the same query returns only Credit Card Fields and PayPal Smart Buttons:
+
+```json
+{
+  "data": {
+    "cart": {
+      "available_payment_methods": [
+        {
+          "code": "payment_services_paypal_hosted_fields",
+          "title": "Credit Card"
+        },
+        {
+          "code": "payment_services_paypal_smart_buttons",
+          "title": "PayPal"
+        }
+      ]
+    }
+  }
+}
+```
+
+### Payment Services is disabled
+
+When Payment Services is disabled, no Payment Services methods are returned, regardless of the individual method settings:
+
+```json
+{
+  "data": {
+    "cart": {
+      "available_payment_methods": []
+    }
+  }
+}
+```
+
+This example returns an empty array because no other payment providers are enabled. Available methods from other providers can still be returned when Payment Services is disabled.
 
 ## Credit card vaulting
 
