@@ -19,8 +19,6 @@ It provides powerful tools to give you the insight and control needed for creati
 
 ## Payment Services GraphQL
 
-For a JavaScript integration that renders payment controls on a custom frontend, see the [Payment Services SDK](../../payment-services-sdk/index.md).
-
 [Payment Services for Adobe Commerce](https://commercemarketplace.adobe.com/magento-payment-services.html) 2.3.0 and higher provides enhanced payment method capabilities. With this extension, you can implement the following payment methods:
 
 * Apple Pay with PayPal
@@ -40,7 +38,7 @@ Display settings control where an enabled method appears. They do not determine 
 * `available_payment_methods` to identify the methods available for the cart.
 * `is_visible` from [`getPaymentConfig`](queries/get-payment-config.md) to determine which methods to display at the requested location.
 
-See [Payment Services configuration](https://experienceleague.adobe.com/en/docs/commerce/payment-services/configure/configure-admin#control-payment-method-availability) to configure individual methods. For extension upgrade instructions for Adobe Commerce on Cloud, on-premises, and Magento Open Source, see [Upgrade the extension](https://experienceleague.adobe.com/en/docs/commerce/payment-services/get-started/install#upgrade-the-extension).
+See [Payment Services configuration](https://experienceleague.adobe.com/en/docs/commerce/payment-services/configure/configure-admin) to configure individual methods. For extension upgrade instructions for Adobe Commerce on Cloud, on-premises, and Magento Open Source, see [Upgrade the extension](https://experienceleague.adobe.com/en/docs/commerce/payment-services/get-started/install#upgrade-the-extension).
 
 ### Query available methods
 
