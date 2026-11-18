@@ -20,6 +20,14 @@ The query can return details about the following supported payment methods in [P
 
 Each of these payment methods can have a different payment source, for example, `hosted_fields` only works with credit cards.
 
+## Availability and location visibility
+
+In Payment Services 2.18.0 and later, use `cart.available_payment_methods` to identify the methods available for a cart. Use `is_visible` from `getPaymentConfig` to determine whether to display a method at the requested location. A returned configuration field does not indicate that the method is available.
+
+Disabling a method excludes it from `available_payment_methods` and sets its `is_visible` value to `false`, regardless of its display settings. Hiding an enabled method at one location does not remove it from `available_payment_methods`.
+
+See [Payment method availability](../index.md#payment-method-availability) in the Payment Services overview for version requirements and sample requests and responses.
+
 ## Syntax
 
 ```graphql
