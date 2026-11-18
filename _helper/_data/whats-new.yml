@@ -1,9 +1,46 @@
 ---
 title: What's new
-description: This section contains the changes made in the last 60 days. Minor
-  updates, such as copy editing, are excluded from this list.
-updated: Tue Nov 10 16:51:00 2026
+description: This section contains the changes made in the last 60 days. Minor updates,
+  such as copy editing, are excluded from this list.
+updated: Fri Nov 13 16:48:42 2026
 entries:
+- description: You can now apply custom attributes in the [`addProductsToCart` mutation](https://developer.adobe.com/commerce/webapi/graphql/schema/cart/mutations/add-products)
+    by specifying the `CartItemInput.custom_attributes` field and an array of key/value
+    pairs.
+  versions: ''
+  type: technical
+  date: '2026-11-11'
+  link: https://github.com/AdobeDocs/commerce-webapi/pull/639
+  merge_commit: 9dba1fee18b595f26c7702cb75243dd04cbc512e
+  contributor: keharper
+  labels:
+  - technical
+- description: Documented the following Adobe Commerce as a Cloud Service updates:<br/>-
+    New non-virtual orders created through REST now require a [shipping address](https://developer.adobe.com/commerce/webapi/rest/saas-integrations/order-management/#shipping-address-requirement-for-new-orders).<br/>-
+    Added the [`GET /V1/customers/:customerId/balance`](https://developer.adobe.com/commerce/webapi/rest/saas-integrations/store-credit/#retrieve-a-customers-store-credit-balance)
+    endpoint to retrieve a customer's store credit balance.<br/>- Added the [`asset_role_image`](https://developer.adobe.com/commerce/webapi/graphql/schema/products/interfaces/category#aem-assets-category-images)
+    field to `CategoryInterface` and `CategoryTree`.<br/>- Added the `row_total` field
+    to [`InvoiceItemInterface`](https://developer.adobe.com/commerce/webapi/graphql/schema/orders/interfaces/invoice-item#invoice-item-row-totals).
+  versions: ''
+  type: major-update
+  date: '2026-11-11'
+  link: https://github.com/AdobeDocs/commerce-webapi/pull/641
+  merge_commit: b9f646b18f7a7d0577699a3078f388bafa095550
+  contributor: jhadobe
+  labels:
+  - major-update
+  - hold for release
+- description: Updated the [REST](https://developer.adobe.com/commerce/webapi/reference/rest/saas)
+    and [GraphQL](https://developer.adobe.com/commerce/webapi/reference/graphql/saas/)
+    schemas for Adobe Commerce as a Cloud Service.
+  versions: ''
+  type: major-update
+  date: '2026-11-11'
+  link: https://github.com/AdobeDocs/commerce-webapi/pull/644
+  merge_commit: 3b8ea0f5080a05de4ae869537a1d59630e9d151c
+  contributor: jhadobe
+  labels:
+  - major-update
 - description: The `ProductViewImage` type in the Catalog Service GraphQL API now
     returns custom image roles, in addition to the standard `image`, `small_image`,
     `thumbnail`, and `swatch_image` roles. Merchants can define their own roles in

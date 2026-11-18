@@ -14,6 +14,6 @@ You can optionally implement [API Mesh for Adobe Developer App Builder](https://
 
 For instructions on how to install, implement, and use the Catalog Service, see the [Catalog Service Guide](https://experienceleague.adobe.com/en/docs/commerce/catalog-service/overview).
 
->[!NOTE]
->
->If your Commerce instance uses Live Search or Product Recommendations, the Catalog Service is installed and updated automatically when you onboard or update those services. If you are using Adobe Commerce as a Cloud Service, the latest version of the Catalog Service metapackage is available in your environment. To begin using the service, see [Getting started with the Catalog Service](https://experienceleague.adobe.com/en/docs/commerce/catalog-service/get-started).
+<InlineAlert variant="info" slots="text"/>
+
+If your Commerce instance uses Live Search or Product Recommendations, the Catalog Service is installed and updated automatically when you onboard or update those services. If you are using Adobe Commerce as a Cloud Service, the latest version of the Catalog Service metapackage is available in your environment. To begin using the service, see [Getting started with the Catalog Service](https://experienceleague.adobe.com/en/docs/commerce/catalog-service/get-started).
