@@ -250,6 +250,30 @@ curl -i -X POST \
 
 If an order item has custom attributes, they will be returned as part of the order item object in responses to requests like `GET /V1/orders/items/{id}`.
 
+<Fragment src="/_includes/saas-only.md"/>
+
+The `POST /V1/orders/{orderId}/customAttributes` endpoint allows you to add or update custom attributes on already existing orders. The request body must include an array of `customAttributes`.
+
+```curl
+curl -i -X POST \
+   -H "Content-Type:application/json" \
+   -H "Authorization:Bearer <TOKEN>" \
+   -d \
+'{
+  "customAttributes":[
+    {
+       "attribute_code": "attr_one",
+       "value": "value_one"
+    },
+    {
+       "attribute_code": "attr_two",
+       "value": "value_two"
+    }
+  ]
+}' \
+ 'https://<COMMERCE_URL>/rest/all/V1/orders/{orderId}/customAttributes'
+```
+
 ### Negotiable Quote
 
 The `POST /V1/negotiableQuote/setCustomAttributes` endpoint allows you to set custom attributes on a negotiable quote. The request body must include the `quote_id` and an array of `custom_attributes`.
