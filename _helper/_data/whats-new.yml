@@ -2,7 +2,7 @@
 title: What's new
 description: This section contains the changes made in the last 60 days. Minor updates,
   such as copy editing, are excluded from this list.
-updated: Fri Nov 13 16:48:42 2026
+updated: Fri Nov 20 15:05:49 2026
 entries:
 - description: You can now apply custom attributes in the [`addProductsToCart` mutation](https://developer.adobe.com/commerce/webapi/graphql/schema/cart/mutations/add-products)
     by specifying the `CartItemInput.custom_attributes` field and an array of key/value
