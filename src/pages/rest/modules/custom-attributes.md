@@ -250,8 +250,6 @@ curl -i -X POST \
 
 If an order item has custom attributes, they will be returned as part of the order item object in responses to requests like `GET /V1/orders/items/{id}`.
 
-<Fragment src="/_includes/saas-only.md"/>
-
 The `POST /V1/orders/{orderId}/customAttributes` endpoint allows you to add or update custom attributes on already existing orders. The request body must include an array of `customAttributes`.
 
 ```curl
