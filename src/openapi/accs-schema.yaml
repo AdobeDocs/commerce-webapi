@@ -25887,6 +25887,57 @@ paths:
       tags:
       - orders/{id}/unhold
       summary: orders/{id}/unhold
+  "/V1/orders/{orderId}/customAttributes":
+    post:
+      consumes:
+      - application/json
+      - application/xml
+      description: 'Add or update custom attributes of an existing order. Attributes
+        are upserted by attribute_code: attributes already stored on the order and
+        not present in the request are kept. Sending an empty value for an existing
+        attribute_code removes that attribute.'
+      operationId: PostV1OrdersOrderIdCustomAttributes
+      parameters:
+      - in: path
+        name: orderId
+        required: true
+        type: integer
+      - in: body
+        name: PostV1OrdersOrderIdCustomAttributesBody
+        schema:
+          properties:
+            customAttributes:
+              items:
+                "$ref": "#/definitions/framework-attribute-interface"
+              type: array
+          required:
+          - customAttributes
+          type: object
+          xml:
+            name: request
+      produces:
+      - application/json
+      - application/xml
+      responses:
+        '200':
+          description: 200 Success.
+          schema:
+            type: boolean
+        '400':
+          description: 400 Bad Request
+          schema:
+            "$ref": "#/definitions/error-response"
+        '401':
+          description: 401 Unauthorized
+          schema:
+            "$ref": "#/definitions/error-response"
+        default:
+          description: Unexpected error
+          schema:
+            "$ref": "#/definitions/error-response"
+      tags:
+      - orders/{orderId}/customAttributes
+      summary: orders/{orderId}/customAttributes
   "/V1/orders/{orderId}/edit/start":
     post:
       consumes:
@@ -33337,6 +33388,7 @@ tags:
 - name: orders/{id}/hold
 - name: orders/{id}/statuses
 - name: orders/{id}/unhold
+- name: orders/{orderId}/customAttributes
 - name: orders/{orderId}/edit/start
 - name: orders/{orderId}/edit/submit
 - name: orders/{parent_id}
@@ -33847,6 +33899,7 @@ x-tagGroups:
   - orders/{id}/hold
   - orders/{id}/statuses
   - orders/{id}/unhold
+  - orders/{orderId}/customAttributes
   - orders/{orderId}/edit/start
   - orders/{orderId}/edit/submit
   - orders/{parent_id}
