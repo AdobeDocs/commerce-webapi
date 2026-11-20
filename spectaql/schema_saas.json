@@ -26653,6 +26653,16 @@
                   "ofType": null
                 },
                 "defaultValue": "1"
+              },
+              {
+                "name": "filter",
+                "description": "Filters the customer's reviews.",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "CustomerReviewsFilterInput",
+                  "ofType": null
+                },
+                "defaultValue": null
               }
             ],
             "type": {
@@ -29001,6 +29011,35 @@
         ],
         "inputFields": null,
         "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "CustomerReviewsFilterInput",
+        "description": "Defines the filters for customer reviews.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "status",
+            "description": "Include reviews matching any listed status. Omit or pass null for all statuses; an empty list returns no reviews.",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "ENUM",
+                  "name": "ProductReviewStatus",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
         "enumValues": null,
         "possibleTypes": null
       },
@@ -49486,6 +49525,18 @@
             "deprecationReason": null
           },
           {
+            "name": "created_by",
+            "description": "The quote creator display name. For seller-created quotes, includes the creator name followed by 'for' and the buyer name.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "custom_attributes",
             "description": "The custom attributes for the negotiable quote",
             "args": [],
@@ -52184,6 +52235,18 @@
             "deprecationReason": null
           },
           {
+            "name": "created_by",
+            "description": "The template creator display name. For seller-created templates, includes the creator name followed by 'for' and the buyer name.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "expiration_date",
             "description": "The expiration period of the negotiable quote template.",
             "args": [],
@@ -52573,6 +52636,18 @@
                 "name": "String",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "created_by",
+            "description": "The template creator display name. For seller-created templates, includes the creator name followed by 'for' and the buyer name.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -53972,13 +54047,13 @@
             "deprecationReason": null
           },
           {
-            "name": "CANCEL",
+            "name": "RETURN",
             "description": "",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "RETURN",
+            "name": "CANCEL",
             "description": "",
             "isDeprecated": false,
             "deprecationReason": null
@@ -59511,6 +59586,49 @@
         "possibleTypes": null
       },
       {
+        "kind": "OBJECT",
+        "name": "ProductReviewRatingBucket",
+        "description": "",
+        "fields": [
+          {
+            "name": "count",
+            "description": "The number of rating votes with this star value.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "value",
+            "description": "The star value of the votes, from 1 to 5.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
         "kind": "INPUT_OBJECT",
         "name": "ProductReviewRatingInput",
         "description": "Contains the reviewer's rating for a single aspect of a review.",
@@ -59726,11 +59844,143 @@
             },
             "isDeprecated": false,
             "deprecationReason": null
+          },
+          {
+            "name": "stats",
+            "description": "Rating statistics for the whole product, independent of pagination. Null for customer review lists.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "ProductReviewStats",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "total_count",
+            "description": "The total number of reviews matching this list, independent of pagination. Includes reviews without rating votes. Unlike stats.review_count, it describes the list, not the whole product.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
           }
         ],
         "inputFields": null,
         "interfaces": [],
         "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ProductReviewStats",
+        "description": "Review and rating vote statistics of a product in the requested store.",
+        "fields": [
+          {
+            "name": "rating_summary",
+            "description": "The average rating as a percentage from 0 to 100, calculated over every approved rating vote of the product. It matches the ac_rating_summary product attribute, which can lag while the catalog feed syncs. It is 0 when there are no votes.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Float",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "rating_votes_count",
+            "description": "The number of rating votes in ratings_distribution, which is the sum of its counts. A review casts one vote per rating dimension, so this can exceed review_count. Use it as the denominator for histogram percentages.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "ratings_distribution",
+            "description": "Approved rating vote counts by star value, ordered from 5 to 1. Each vote is counted once. The weighted average of the buckets approximates rating_summary / 20: each vote's percentage is rounded to a star bucket, while rating_summary is calculated from the original percentages and rounded separately. Always returns five buckets, with zero counts when there are no votes or product reviews are disabled.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "ProductReviewRatingBucket",
+                  "ofType": null
+                }
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "review_count",
+            "description": "The number of approved reviews of the product, including reviews without rating votes. It matches the ac_review_count product attribute, which can lag while the catalog feed syncs.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "ProductReviewStatus",
+        "description": "The moderation status of a product review.",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "APPROVED",
+            "description": "Reviews approved by the merchant.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "PENDING",
+            "description": "Reviews awaiting moderation.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "NOT_APPROVED",
+            "description": "Reviews not approved by the merchant.",
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
         "possibleTypes": null
       },
       {
@@ -69724,6 +69974,22 @@
               "ofType": {
                 "kind": "SCALAR",
                 "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "custom_attributes",
+            "description": "The custom attributes for the return",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "CustomAttribute",
                 "ofType": null
               }
             },
