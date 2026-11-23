@@ -58,9 +58,9 @@ Sets quote item note.
 
 ```json
 {
-  "note": "xyz789",
-  "quote_item_uid": 4,
-  "quote_uid": 4
+  "note": "abc123",
+  "quote_item_uid": "4",
+  "quote_uid": "4"
 }
 ```
 
@@ -93,10 +93,10 @@ Contains basic information about a product image or video.
 
 ```json
 {
-  "disabled": true,
-  "label": "xyz789",
+  "disabled": false,
+  "label": "abc123",
   "position": 123,
-  "types": ["xyz789"],
+  "types": ["abc123"],
   "url": "xyz789"
 }
 ```
@@ -199,7 +199,7 @@ Contains the customer's gift registry and any errors encountered.
 ```json
 {
   "gift_registry": GiftRegistry,
-  "status": false,
+  "status": true,
   "user_errors": [GiftRegistryItemsUserError]
 }
 ```
@@ -219,7 +219,7 @@ An input object that defines the items in a requisition list to be moved.
 #### Example
 
 ```json
-{"requisitionListItemUids": [4]}
+{"requisitionListItemUids": ["4"]}
 ```
 
 <HorizontalLine />
@@ -262,7 +262,7 @@ Move Line Item to Requisition List.
 
 ```json
 {
-  "quote_item_uid": 4,
+  "quote_item_uid": "4",
   "quote_uid": "4",
   "requisition_list_uid": 4
 }
@@ -325,6 +325,7 @@ Contains details about a negotiable quote.
 | `buyer` - [`NegotiableQuoteUser!`](#negotiablequoteuser) | The first and last name of the buyer. |
 | `comments` - [`[NegotiableQuoteComment]`](#negotiablequotecomment) | A list of comments made by the buyer and seller. |
 | `created_at` - [`String`](/reference/graphql/saas/types-q-s.md#string) | Timestamp indicating when the negotiable quote was created. |
+| `created_by` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The quote creator display name. For seller-created quotes, includes the creator name followed by 'for' and the buyer name. |
 | `custom_attributes` - [`[CustomAttribute]`](/reference/graphql/saas/types-c-e.md#customattribute) | The custom attributes for the negotiable quote |
 | `email` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The email address of the company user. |
 | `expiration_date` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The expiration period of the negotiable quote. |
@@ -353,13 +354,14 @@ Contains details about a negotiable quote.
   "buyer": NegotiableQuoteUser,
   "comments": [NegotiableQuoteComment],
   "created_at": "xyz789",
+  "created_by": "abc123",
   "custom_attributes": [CustomAttribute],
   "email": "abc123",
-  "expiration_date": "abc123",
+  "expiration_date": "xyz789",
   "history": [NegotiableQuoteHistoryEntry],
-  "is_virtual": true,
+  "is_virtual": false,
   "items": [CartItemInterface],
-  "name": "xyz789",
+  "name": "abc123",
   "order": CustomerOrder,
   "prices": CartPrices,
   "sales_rep_name": "abc123",
@@ -367,10 +369,10 @@ Contains details about a negotiable quote.
   "shipping_addresses": [NegotiableQuoteShippingAddress],
   "status": "SUBMITTED",
   "template_id": 4,
-  "template_name": "xyz789",
-  "total_quantity": 987.65,
-  "uid": "4",
-  "updated_at": "abc123"
+  "template_name": "abc123",
+  "total_quantity": 123.45,
+  "uid": 4,
+  "updated_at": "xyz789"
 }
 ```
 
@@ -391,7 +393,7 @@ Defines the company's country.
 
 ```json
 {
-  "code": "xyz789",
+  "code": "abc123",
   "label": "abc123"
 }
 ```
@@ -432,19 +434,19 @@ Defines the billing or shipping address to be applied to the cart.
   "company": "abc123",
   "country_code": "abc123",
   "custom_attributes": [AttributeValueInput],
-  "fax": "abc123",
-  "firstname": "abc123",
-  "lastname": "abc123",
-  "middlename": "abc123",
+  "fax": "xyz789",
+  "firstname": "xyz789",
+  "lastname": "xyz789",
+  "middlename": "xyz789",
   "postcode": "abc123",
   "prefix": "xyz789",
   "region": "xyz789",
-  "region_id": 123,
+  "region_id": 987,
   "save_in_address_book": true,
   "street": ["abc123"],
-  "suffix": "xyz789",
+  "suffix": "abc123",
   "telephone": "xyz789",
-  "vat_id": "xyz789"
+  "vat_id": "abc123"
 }
 ```
 
@@ -486,15 +488,15 @@ Defines the billing or shipping address to be applied to the cart.
 
 ```json
 {
-  "city": "xyz789",
+  "city": "abc123",
   "company": "abc123",
-  "company_address_id": 4,
+  "company_address_id": "4",
   "country": NegotiableQuoteAddressCountry,
   "custom_attributes": [AttributeValueInterface],
   "customer_address_uid": "4",
-  "fax": "xyz789",
-  "firstname": "abc123",
-  "lastname": "xyz789",
+  "fax": "abc123",
+  "firstname": "xyz789",
+  "lastname": "abc123",
   "middlename": "abc123",
   "postcode": "abc123",
   "prefix": "xyz789",
@@ -525,9 +527,9 @@ Defines the company's state or province.
 
 ```json
 {
-  "code": "xyz789",
-  "label": "abc123",
-  "region_id": 123
+  "code": "abc123",
+  "label": "xyz789",
+  "region_id": 987
 }
 ```
 
@@ -563,23 +565,23 @@ Defines the company's state or province.
 ```json
 {
   "city": "xyz789",
-  "company": "xyz789",
+  "company": "abc123",
   "company_address_id": 4,
   "country": NegotiableQuoteAddressCountry,
   "custom_attributes": [AttributeValueInterface],
   "customer_address_uid": 4,
-  "fax": "xyz789",
-  "firstname": "abc123",
+  "fax": "abc123",
+  "firstname": "xyz789",
   "lastname": "abc123",
-  "middlename": "abc123",
-  "postcode": "xyz789",
+  "middlename": "xyz789",
+  "postcode": "abc123",
   "prefix": "xyz789",
   "region": NegotiableQuoteAddressRegion,
-  "street": ["xyz789"],
-  "suffix": "abc123",
+  "street": ["abc123"],
+  "suffix": "xyz789",
   "telephone": "abc123",
-  "uid": 4,
-  "vat_id": "abc123"
+  "uid": "4",
+  "vat_id": "xyz789"
 }
 ```
 
@@ -605,9 +607,9 @@ Defines the billing address.
 {
   "address": NegotiableQuoteAddressInput,
   "company_address_id": 4,
-  "customer_address_uid": 4,
-  "same_as_shipping": true,
-  "use_for_shipping": true
+  "customer_address_uid": "4",
+  "same_as_shipping": false,
+  "use_for_shipping": false
 }
 ```
 
@@ -636,7 +638,7 @@ Contains a single plain text comment from either the buyer or seller.
   "author": NegotiableQuoteUser,
   "created_at": "xyz789",
   "creator_type": "BUYER",
-  "text": "xyz789",
+  "text": "abc123",
   "uid": 4
 }
 ```
@@ -658,8 +660,8 @@ Negotiable quote comment file attachment.
 
 ```json
 {
-  "name": "xyz789",
-  "url": "abc123"
+  "name": "abc123",
+  "url": "xyz789"
 }
 ```
 
@@ -716,7 +718,7 @@ Contains the commend provided by the buyer.
 ```json
 {
   "attachments": [NegotiableQuoteCommentAttachmentInput],
-  "comment": "abc123"
+  "comment": "xyz789"
 }
 ```
 
@@ -738,8 +740,8 @@ Contains custom log entries added by third-party extensions.
 
 ```json
 {
-  "new_value": "xyz789",
-  "old_value": "abc123",
+  "new_value": "abc123",
+  "old_value": "xyz789",
   "title": "xyz789"
 }
 ```
@@ -840,7 +842,7 @@ Contains details about a change for a negotiable quote.
   "changes": NegotiableQuoteHistoryChanges,
   "created_at": "xyz789",
   "item_note": HistoryItemNoteData,
-  "uid": 4
+  "uid": "4"
 }
 ```
 
@@ -880,8 +882,8 @@ Contains a new expiration date and the previous date.
 
 ```json
 {
-  "new_expiration": "abc123",
-  "old_expiration": "xyz789"
+  "new_expiration": "xyz789",
+  "old_expiration": "abc123"
 }
 ```
 
@@ -902,7 +904,7 @@ Contains lists of products that have been removed from the catalog and negotiabl
 
 ```json
 {
-  "products_removed_from_catalog": ["4"],
+  "products_removed_from_catalog": [4],
   "products_removed_from_quote": [ProductInterface]
 }
 ```
@@ -981,7 +983,7 @@ An error indicating that an operation was attempted on a negotiable quote in an 
 #### Example
 
 ```json
-{"message": "xyz789"}
+{"message": "abc123"}
 ```
 
 <HorizontalLine />
@@ -1000,7 +1002,7 @@ Specifies the updated quantity of an item.
 #### Example
 
 ```json
-{"quantity": 987.65, "quote_item_uid": 4}
+{"quantity": 123.45, "quote_item_uid": 4}
 ```
 
 <HorizontalLine />
@@ -1020,8 +1022,8 @@ Defines the payment method to be applied to the negotiable quote.
 
 ```json
 {
-  "code": "xyz789",
-  "purchase_order_number": "xyz789"
+  "code": "abc123",
+  "purchase_order_number": "abc123"
 }
 ```
 
@@ -1086,24 +1088,24 @@ Contains a reference document link for a negotiable quote template.
 {
   "available_shipping_methods": [AvailableShippingMethod],
   "city": "xyz789",
-  "company": "xyz789",
+  "company": "abc123",
   "company_address_id": "4",
   "country": NegotiableQuoteAddressCountry,
   "custom_attributes": [AttributeValueInterface],
   "customer_address_uid": 4,
-  "fax": "abc123",
-  "firstname": "xyz789",
+  "fax": "xyz789",
+  "firstname": "abc123",
   "lastname": "abc123",
   "middlename": "xyz789",
   "postcode": "abc123",
   "prefix": "abc123",
   "region": NegotiableQuoteAddressRegion,
   "selected_shipping_method": SelectedShippingMethod,
-  "street": ["xyz789"],
-  "suffix": "xyz789",
-  "telephone": "xyz789",
-  "uid": 4,
-  "vat_id": "xyz789"
+  "street": ["abc123"],
+  "suffix": "abc123",
+  "telephone": "abc123",
+  "uid": "4",
+  "vat_id": "abc123"
 }
 ```
 
@@ -1127,7 +1129,7 @@ Defines shipping addresses for the negotiable quote.
 ```json
 {
   "address": NegotiableQuoteAddressInput,
-  "company_address_id": 4,
+  "company_address_id": "4",
   "customer_address_uid": "4",
   "customer_notes": "abc123"
 }
@@ -1207,6 +1209,7 @@ Contains details about a negotiable quote template.
 | `buyer` - [`NegotiableQuoteUser!`](#negotiablequoteuser) | The first and last name of the buyer. |
 | `comments` - [`[NegotiableQuoteComment]`](#negotiablequotecomment) | A list of comments made by the buyer and seller. |
 | `created_at` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | Timestamp indicating when the negotiable quote template was created. |
+| `created_by` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The template creator display name. For seller-created templates, includes the creator name followed by 'for' and the buyer name. |
 | `expiration_date` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The expiration period of the negotiable quote template. |
 | `history` - [`[NegotiableQuoteHistoryEntry]`](#negotiablequotehistoryentry) | A list of status and price changes for the negotiable quote template. |
 | `historyV2` - [`[NegotiableQuoteTemplateHistoryEntry]`](#negotiablequotetemplatehistoryentry) |  |
@@ -1234,14 +1237,15 @@ Contains details about a negotiable quote template.
   "buyer": NegotiableQuoteUser,
   "comments": [NegotiableQuoteComment],
   "created_at": "abc123",
-  "expiration_date": "abc123",
+  "created_by": "abc123",
+  "expiration_date": "xyz789",
   "history": [NegotiableQuoteHistoryEntry],
   "historyV2": [NegotiableQuoteTemplateHistoryEntry],
   "is_min_max_qty_used": false,
   "is_virtual": false,
   "items": [CartItemInterface],
-  "max_order_commitment": 123,
-  "min_order_commitment": 123,
+  "max_order_commitment": 987,
+  "min_order_commitment": 987,
   "name": "xyz789",
   "notifications": [QuoteTemplateNotificationMessage],
   "prices": CartPrices,
@@ -1250,11 +1254,11 @@ Contains details about a negotiable quote template.
   ],
   "sales_rep_name": "abc123",
   "shipping_addresses": [NegotiableQuoteShippingAddress],
-  "status": "xyz789",
-  "template_id": "4",
-  "total_quantity": 987.65,
-  "uid": "4",
-  "updated_at": "abc123"
+  "status": "abc123",
+  "template_id": 4,
+  "total_quantity": 123.45,
+  "uid": 4,
+  "updated_at": "xyz789"
 }
 ```
 
@@ -1293,6 +1297,7 @@ Contains data for a negotiable quote template in a grid.
 | `activated_at` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The date and time the negotiable quote template was activated. |
 | `company_name` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | Company name the quote template is assigned to |
 | `created_at` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | Timestamp indicating when the negotiable quote template was created. |
+| `created_by` - [`String`](/reference/graphql/saas/types-q-s.md#string) | The template creator display name. For seller-created templates, includes the creator name followed by 'for' and the buyer name. |
 | `expiration_date` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | The expiration period of the negotiable quote template. |
 | `is_min_max_qty_used` - [`Boolean!`](/reference/graphql/saas/types-a-b.md#boolean) | Indicates whether the minimum and maximum quantity settings are used. |
 | `last_ordered_at` - [`String!`](/reference/graphql/saas/types-q-s.md#string) | Timestamp indicating when the last negotiable quote template order was placed. |
@@ -1315,26 +1320,27 @@ Contains data for a negotiable quote template in a grid.
 
 ```json
 {
-  "activated_at": "abc123",
+  "activated_at": "xyz789",
   "company_name": "abc123",
-  "created_at": "xyz789",
-  "expiration_date": "abc123",
-  "is_min_max_qty_used": true,
-  "last_ordered_at": "abc123",
+  "created_at": "abc123",
+  "created_by": "abc123",
+  "expiration_date": "xyz789",
+  "is_min_max_qty_used": false,
+  "last_ordered_at": "xyz789",
   "last_shared_at": "xyz789",
-  "max_order_commitment": 987,
+  "max_order_commitment": 123,
   "min_negotiated_grand_total": 123.45,
-  "min_order_commitment": 987,
+  "min_order_commitment": 123,
   "name": "xyz789",
-  "orders_placed": 123,
+  "orders_placed": 987,
   "prices": CartPrices,
   "sales_rep_name": "xyz789",
   "state": "abc123",
   "status": "xyz789",
-  "submitted_by": "xyz789",
-  "template_id": "4",
+  "submitted_by": "abc123",
+  "template_id": 4,
   "uid": 4,
-  "updated_at": "abc123"
+  "updated_at": "xyz789"
 }
 ```
 
@@ -1391,8 +1397,8 @@ Contains details about a change for a negotiable quote template.
   "author": NegotiableQuoteUser,
   "change_type": "CREATED",
   "changes": NegotiableQuoteTemplateHistoryChanges,
-  "created_at": "xyz789",
-  "uid": 4
+  "created_at": "abc123",
+  "uid": "4"
 }
 ```
 
@@ -1413,8 +1419,8 @@ Lists a new status change applied to a negotiable quote template and the previou
 
 ```json
 {
-  "new_status": "xyz789",
-  "old_status": "xyz789"
+  "new_status": "abc123",
+  "old_status": "abc123"
 }
 ```
 
@@ -1454,7 +1460,7 @@ Specifies the updated quantity of an item.
 #### Example
 
 ```json
-{"item_id": 4, "max_qty": 987.65, "min_qty": 987.65, "quantity": 987.65}
+{"item_id": 4, "max_qty": 123.45, "min_qty": 123.45, "quantity": 987.65}
 ```
 
 <HorizontalLine />
@@ -1478,7 +1484,7 @@ Defines the reference document link to add to a negotiable quote template.
 {
   "document_identifier": "xyz789",
   "document_name": "abc123",
-  "link_id": "4",
+  "link_id": 4,
   "reference_document_url": "xyz789"
 }
 ```
@@ -1503,9 +1509,9 @@ Defines shipping addresses for the negotiable quote template.
 ```json
 {
   "address": NegotiableQuoteAddressInput,
-  "company_address_id": "4",
+  "company_address_id": 4,
   "customer_address_uid": "4",
-  "customer_notes": "xyz789"
+  "customer_notes": "abc123"
 }
 ```
 
@@ -1567,7 +1573,7 @@ Contains a list of negotiable templates that match the specified filter.
   "items": [NegotiableQuoteTemplateGridItem],
   "page_info": SearchResultPageInfo,
   "sort_fields": SortFields,
-  "total_count": 987
+  "total_count": 123
 }
 ```
 
@@ -1628,7 +1634,7 @@ A limited view of a Buyer or Seller in the negotiable quote process.
 
 ```json
 {
-  "firstname": "xyz789",
+  "firstname": "abc123",
   "lastname": "xyz789"
 }
 ```
@@ -1655,7 +1661,7 @@ Contains a list of negotiable that match the specified filter.
   "items": [NegotiableQuote],
   "page_info": SearchResultPageInfo,
   "sort_fields": SortFields,
-  "total_count": 987
+  "total_count": 123
 }
 ```
 
@@ -1675,7 +1681,10 @@ Contains an error message when an invalid UID was specified.
 #### Example
 
 ```json
-{"message": "abc123", "uid": 4}
+{
+  "message": "abc123",
+  "uid": "4"
+}
 ```
 
 <HorizontalLine />
@@ -1696,7 +1705,7 @@ Error wrapper describing the nomination state of a cart item.
 ```json
 {
   "code": "UNKNOWN_SOURCE",
-  "message": "abc123"
+  "message": "xyz789"
 }
 ```
 
@@ -1739,7 +1748,7 @@ A single cart item's source nomination.
 ```json
 {
   "cart_item_uid": "4",
-  "source_code": "xyz789"
+  "source_code": "abc123"
 }
 ```
 
@@ -1836,7 +1845,7 @@ Specifies the quote template id to open quote template.
 #### Example
 
 ```json
-{"template_id": "4"}
+{"template_id": 4}
 ```
 
 <HorizontalLine />
@@ -1884,7 +1893,7 @@ Contains the order ID.
 #### Example
 
 ```json
-{"order_number": "xyz789"}
+{"order_number": "abc123"}
 ```
 
 <HorizontalLine />
@@ -1898,8 +1907,8 @@ The list of available order actions.
 | Enum Value | Description |
 |------------|-------------|
 | `REORDER` |  |
-| `CANCEL` |  |
 | `RETURN` |  |
+| `CANCEL` |  |
 
 #### Example
 
@@ -1940,17 +1949,17 @@ Contains detailed information about an order's billing and shipping addresses.
 ```json
 {
   "city": "abc123",
-  "company": "abc123",
+  "company": "xyz789",
   "company_address_id": 4,
   "country_code": "AF",
   "custom_attributesV2": [AttributeValueInterface],
-  "fax": "xyz789",
-  "firstname": "abc123",
-  "lastname": "xyz789",
+  "fax": "abc123",
+  "firstname": "xyz789",
+  "lastname": "abc123",
   "middlename": "xyz789",
-  "postcode": "abc123",
-  "prefix": "xyz789",
-  "region": "abc123",
+  "postcode": "xyz789",
+  "prefix": "abc123",
+  "region": "xyz789",
   "region_id": "4",
   "street": ["abc123"],
   "suffix": "xyz789",
@@ -2013,11 +2022,11 @@ Aggregated sales totals across every order in an order-edit chain.
 
 ```json
 {
-  "firstname": "abc123",
-  "lastname": "xyz789",
-  "middlename": "abc123",
-  "prefix": "abc123",
-  "suffix": "abc123"
+  "firstname": "xyz789",
+  "lastname": "abc123",
+  "middlename": "xyz789",
+  "prefix": "xyz789",
+  "suffix": "xyz789"
 }
 ```
 
@@ -2065,20 +2074,20 @@ Aggregated sales totals across every order in an order-edit chain.
   "free_gift_label": "abc123",
   "gift_message": GiftMessage,
   "gift_wrapping": GiftWrapping,
-  "id": "4",
+  "id": 4,
   "prices": OrderItemPrices,
   "product": ProductInterface,
-  "product_name": "abc123",
+  "product_name": "xyz789",
   "product_sale_price": Money,
   "product_sku": "xyz789",
   "product_type": "abc123",
-  "product_url_key": "abc123",
+  "product_url_key": "xyz789",
   "quantity_canceled": 123.45,
-  "quantity_invoiced": 123.45,
+  "quantity_invoiced": 987.65,
   "quantity_ordered": 987.65,
-  "quantity_refunded": 123.45,
-  "quantity_return_requested": 123.45,
-  "quantity_returned": 987.65,
+  "quantity_refunded": 987.65,
+  "quantity_return_requested": 987.65,
+  "quantity_returned": 123.45,
   "quantity_shipped": 123.45,
   "selected_options": [OrderItemOption],
   "status": "abc123"
@@ -2136,28 +2145,28 @@ Order item details.
 {
   "custom_attributes": [CustomAttribute],
   "discounts": [Discount],
-  "eligible_for_return": true,
+  "eligible_for_return": false,
   "entered_options": [OrderItemOption],
-  "free_gift_label": "xyz789",
+  "free_gift_label": "abc123",
   "gift_message": GiftMessage,
   "gift_wrapping": GiftWrapping,
   "id": 4,
   "prices": OrderItemPrices,
   "product": ProductInterface,
-  "product_name": "xyz789",
+  "product_name": "abc123",
   "product_sale_price": Money,
-  "product_sku": "xyz789",
-  "product_type": "xyz789",
+  "product_sku": "abc123",
+  "product_type": "abc123",
   "product_url_key": "abc123",
   "quantity_canceled": 123.45,
-  "quantity_invoiced": 987.65,
+  "quantity_invoiced": 123.45,
   "quantity_ordered": 987.65,
-  "quantity_refunded": 987.65,
-  "quantity_return_requested": 987.65,
+  "quantity_refunded": 123.45,
+  "quantity_return_requested": 123.45,
   "quantity_returned": 987.65,
   "quantity_shipped": 987.65,
   "selected_options": [OrderItemOption],
-  "status": "abc123"
+  "status": "xyz789"
 }
 ```
 
@@ -2178,8 +2187,8 @@ Represents order item options like selected or entered.
 
 ```json
 {
-  "label": "abc123",
-  "value": "abc123"
+  "label": "xyz789",
+  "value": "xyz789"
 }
 ```
 
@@ -2241,7 +2250,7 @@ Contains details about the payment method used to pay for the order.
 {
   "additional_data": [KeyValue],
   "name": "xyz789",
-  "type": "xyz789"
+  "type": "abc123"
 }
 ```
 
@@ -2266,9 +2275,9 @@ Contains order shipment details.
 ```json
 {
   "comments": [SalesCommentItem],
-  "id": "4",
+  "id": 4,
   "items": [ShipmentItemInterface],
-  "number": "abc123",
+  "number": "xyz789",
   "tracking": [ShipmentTracking]
 }
 ```
@@ -2375,7 +2384,7 @@ Result of payByLinkCart.
 #### Example
 
 ```json
-{"masked_cart_id": "xyz789"}
+{"masked_cart_id": "abc123"}
 ```
 
 <HorizontalLine />
@@ -2431,12 +2440,12 @@ Contains payment fields that are common to all types of payment methods.
 
 ```json
 {
-  "code": "abc123",
+  "code": "xyz789",
   "is_visible": true,
-  "payment_intent": "abc123",
+  "payment_intent": "xyz789",
   "sdk_params": [SDKParams],
   "sort_order": "abc123",
-  "title": "xyz789"
+  "title": "abc123"
 }
 ```
 
@@ -2516,7 +2525,7 @@ Defines the payment method.
 ```json
 {
   "additional_data": [PaymentAttributeInput],
-  "code": "abc123",
+  "code": "xyz789",
   "payment_services_paypal_apple_pay": ApplePayMethodInput,
   "payment_services_paypal_fastlane": FastlaneMethodInput,
   "payment_services_paypal_google_pay": GooglePayMethodInput,
@@ -2546,10 +2555,10 @@ Contains the payment order details
 
 ```json
 {
-  "id": "xyz789",
-  "mp_order_id": "abc123",
+  "id": "abc123",
+  "mp_order_id": "xyz789",
   "payment_source_details": PaymentSourceDetails,
-  "status": "abc123"
+  "status": "xyz789"
 }
 ```
 
@@ -2568,7 +2577,7 @@ Contains the payment order details
 
 ```json
 {
-  "code": "xyz789",
+  "code": "abc123",
   "params": [SDKParams]
 }
 ```
@@ -2728,20 +2737,20 @@ Defines Pickup Location information.
 
 ```json
 {
-  "city": "xyz789",
-  "contact_name": "xyz789",
-  "country_id": "xyz789",
-  "description": "xyz789",
-  "email": "xyz789",
-  "fax": "xyz789",
+  "city": "abc123",
+  "contact_name": "abc123",
+  "country_id": "abc123",
+  "description": "abc123",
+  "email": "abc123",
+  "fax": "abc123",
   "latitude": 987.65,
-  "longitude": 123.45,
+  "longitude": 987.65,
   "name": "xyz789",
-  "phone": "xyz789",
+  "phone": "abc123",
   "pickup_location_code": "abc123",
-  "postcode": "xyz789",
-  "region": "abc123",
-  "region_id": 987,
+  "postcode": "abc123",
+  "region": "xyz789",
+  "region_id": 123,
   "street": "xyz789"
 }
 ```
@@ -2850,7 +2859,7 @@ Top level object returned in a pickup locations search.
 {
   "items": [PickupLocation],
   "page_info": SearchResultPageInfo,
-  "total_count": 987
+  "total_count": 123
 }
 ```
 
@@ -2869,7 +2878,7 @@ Specifies the negotiable quote to convert to an order.
 #### Example
 
 ```json
-{"quote_uid": "4"}
+{"quote_uid": 4}
 ```
 
 <HorizontalLine />
@@ -2930,7 +2939,7 @@ An error encountered while placing an order.
 ```json
 {
   "code": "CART_NOT_FOUND",
-  "message": "abc123"
+  "message": "xyz789"
 }
 ```
 
@@ -2969,7 +2978,7 @@ Specifies the purchase order to convert to an order.
 #### Example
 
 ```json
-{"purchase_order_uid": 4}
+{"purchase_order_uid": "4"}
 ```
 
 <HorizontalLine />
@@ -3045,7 +3054,7 @@ Specifies the quote to be converted to a purchase order.
 #### Example
 
 ```json
-{"cart_id": "xyz789"}
+{"cart_id": "abc123"}
 ```
 
 <HorizontalLine />
@@ -3104,7 +3113,7 @@ Specifies the amount and type of price adjustment.
 #### Example
 
 ```json
-{"amount": 987.65, "code": "abc123"}
+{"amount": 123.45, "code": "abc123"}
 ```
 
 <HorizontalLine />
@@ -3126,8 +3135,8 @@ Can be used to retrieve the main price details in case of bundle product
 ```json
 {
   "discount_percentage": 123.45,
-  "main_final_price": 123.45,
-  "main_price": 123.45
+  "main_final_price": 987.65,
+  "main_price": 987.65
 }
 ```
 
@@ -3207,7 +3216,7 @@ Input to identify a product by SKU for a price alert subscription.
 #### Example
 
 ```json
-{"sku": "xyz789"}
+{"sku": "abc123"}
 ```
 
 <HorizontalLine />
@@ -3244,7 +3253,7 @@ Response returned after a product alert subscribe or unsubscribe mutation.
 #### Example
 
 ```json
-{"message": "abc123", "success": false}
+{"message": "abc123", "success": true}
 ```
 
 <HorizontalLine />
@@ -3289,7 +3298,7 @@ Contains a product attribute code and value.
   "attribute_type": "xyz789",
   "code": "4",
   "url": "xyz789",
-  "value": "xyz789"
+  "value": "abc123"
 }
 ```
 
@@ -3355,10 +3364,10 @@ Contains product image information, including the image URL and label.
 ```json
 {
   "disabled": false,
-  "label": "abc123",
-  "position": 123,
+  "label": "xyz789",
+  "position": 987,
   "types": ["abc123"],
-  "url": "xyz789"
+  "url": "abc123"
 }
 ```
 
@@ -3394,7 +3403,7 @@ Product Information used for Pickup Locations search.
 #### Example
 
 ```json
-{"sku": "abc123"}
+{"sku": "xyz789"}
 ```
 
 <HorizontalLine />
@@ -3468,24 +3477,24 @@ Contains fields that are common to all types of products.
 {
   "canonical_url": "abc123",
   "categories": [CategoryInterface],
-  "country_of_manufacture": "xyz789",
+  "country_of_manufacture": "abc123",
   "crosssell_products": [ProductInterface],
   "custom_attributesV2": ProductCustomAttributes,
   "description": ComplexTextValue,
   "gift_message_available": false,
-  "gift_wrapping_available": false,
+  "gift_wrapping_available": true,
   "gift_wrapping_price": Money,
   "image": ProductImage,
-  "is_returnable": "abc123",
+  "is_returnable": "xyz789",
   "manufacturer": 987,
-  "max_sale_qty": 123.45,
+  "max_sale_qty": 987.65,
   "media_gallery": [MediaGalleryInterface],
-  "meta_description": "abc123",
+  "meta_description": "xyz789",
   "meta_keyword": "abc123",
   "meta_title": "xyz789",
-  "min_sale_qty": 123.45,
+  "min_sale_qty": 987.65,
   "name": "abc123",
-  "new_from_date": "xyz789",
+  "new_from_date": "abc123",
   "new_to_date": "xyz789",
   "only_x_left_in_stock": 123.45,
   "options_container": "abc123",
@@ -3500,14 +3509,14 @@ Contains fields that are common to all types of products.
   "short_description": ComplexTextValue,
   "sku": "xyz789",
   "small_image": ProductImage,
-  "special_price": 987.65,
-  "special_to_date": "xyz789",
+  "special_price": 123.45,
+  "special_to_date": "abc123",
   "stock_status": "IN_STOCK",
-  "swatch_image": "xyz789",
+  "swatch_image": "abc123",
   "thumbnail": ProductImage,
   "uid": 4,
   "upsell_products": [ProductInterface],
-  "url_key": "abc123"
+  "url_key": "xyz789"
 }
 ```
 
@@ -3535,7 +3544,7 @@ An implementation of `ProductLinksInterface`.
   "linked_product_sku": "abc123",
   "linked_product_type": "abc123",
   "position": 123,
-  "sku": "xyz789"
+  "sku": "abc123"
 }
 ```
 
@@ -3568,7 +3577,7 @@ Contains information about linked products, including the link type and product 
   "link_type": "xyz789",
   "linked_product_sku": "xyz789",
   "linked_product_type": "xyz789",
-  "position": 987,
+  "position": 123,
   "sku": "abc123"
 }
 ```
@@ -3593,7 +3602,7 @@ Contains basic information about the image asset.
 {
   "asset_id": "xyz789",
   "media_type": "abc123",
-  "media_url": "abc123"
+  "media_url": "xyz789"
 }
 ```
 
@@ -3615,8 +3624,8 @@ Contains basic information about the video asset.
 
 ```json
 {
-  "media_type": "abc123",
-  "video_asset_id": "xyz789",
+  "media_type": "xyz789",
+  "video_asset_id": "abc123",
   "video_media_url": "abc123"
 }
 ```
@@ -3642,10 +3651,10 @@ Contains a link to a video file and basic information about the video.
 
 ```json
 {
-  "media_type": "xyz789",
+  "media_type": "abc123",
   "video_description": "xyz789",
   "video_metadata": "abc123",
-  "video_provider": "abc123",
+  "video_provider": "xyz789",
   "video_title": "abc123",
   "video_url": "xyz789"
 }
@@ -3700,12 +3709,12 @@ Contains details of a product review.
 ```json
 {
   "average_rating": 123.45,
-  "created_at": "xyz789",
-  "nickname": "abc123",
+  "created_at": "abc123",
+  "nickname": "xyz789",
   "product": ProductInterface,
   "ratings_breakdown": [ProductReviewRating],
   "summary": "xyz789",
-  "text": "abc123"
+  "text": "xyz789"
 }
 ```
 
@@ -3727,8 +3736,25 @@ Contains data about a single aspect of a product review.
 ```json
 {
   "name": "xyz789",
-  "value": "abc123"
+  "value": "xyz789"
 }
+```
+
+<HorizontalLine />
+
+### ProductReviewRatingBucket
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `count` - [`Int!`](/reference/graphql/saas/types-f-i.md#int) | The number of rating votes with this star value. |
+| `value` - [`Int!`](/reference/graphql/saas/types-f-i.md#int) | The star value of the votes, from 1 to 5. |
+
+#### Example
+
+```json
+{"count": 987, "value": 987}
 ```
 
 <HorizontalLine />
@@ -3771,7 +3797,7 @@ Contains details about a single aspect of a product review.
 
 ```json
 {
-  "id": "abc123",
+  "id": "xyz789",
   "name": "abc123",
   "values": [ProductReviewRatingValueMetadata]
 }
@@ -3819,6 +3845,52 @@ Contains an array of metadata about each aspect of a product review.
 
 <HorizontalLine />
 
+### ProductReviewStats
+
+Review and rating vote statistics of a product in the requested store.
+
+#### Fields
+
+| Field Name | Description |
+|------------|-------------|
+| `rating_summary` - [`Float!`](/reference/graphql/saas/types-f-i.md#float) | The average rating as a percentage from 0 to 100, calculated over every approved rating vote of the product. It matches the ac_rating_summary product attribute, which can lag while the catalog feed syncs. It is 0 when there are no votes. |
+| `rating_votes_count` - [`Int!`](/reference/graphql/saas/types-f-i.md#int) | The number of rating votes in ratings_distribution, which is the sum of its counts. A review casts one vote per rating dimension, so this can exceed review_count. Use it as the denominator for histogram percentages. |
+| `ratings_distribution` - [`[ProductReviewRatingBucket]!`](#productreviewratingbucket) | Approved rating vote counts by star value, ordered from 5 to 1. Each vote is counted once. The weighted average of the buckets approximates rating_summary / 20: each vote's percentage is rounded to a star bucket, while rating_summary is calculated from the original percentages and rounded separately. Always returns five buckets, with zero counts when there are no votes or product reviews are disabled. |
+| `review_count` - [`Int!`](/reference/graphql/saas/types-f-i.md#int) | The number of approved reviews of the product, including reviews without rating votes. It matches the ac_review_count product attribute, which can lag while the catalog feed syncs. |
+
+#### Example
+
+```json
+{
+  "rating_summary": 123.45,
+  "rating_votes_count": 987,
+  "ratings_distribution": [ProductReviewRatingBucket],
+  "review_count": 987
+}
+```
+
+<HorizontalLine />
+
+### ProductReviewStatus
+
+The moderation status of a product review.
+
+#### Values
+
+| Enum Value | Description |
+|------------|-------------|
+| `APPROVED` | Reviews approved by the merchant. |
+| `PENDING` | Reviews awaiting moderation. |
+| `NOT_APPROVED` | Reviews not approved by the merchant. |
+
+#### Example
+
+```json
+""APPROVED""
+```
+
+<HorizontalLine />
+
 ### ProductReviews
 
 Contains an array of product reviews.
@@ -3829,13 +3901,17 @@ Contains an array of product reviews.
 |------------|-------------|
 | `items` - [`[ProductReview]!`](#productreview) | An array of product reviews. |
 | `page_info` - [`SearchResultPageInfo!`](/reference/graphql/saas/types-q-s.md#searchresultpageinfo) | Metadata for pagination rendering. |
+| `stats` - [`ProductReviewStats`](#productreviewstats) | Rating statistics for the whole product, independent of pagination. Null for customer review lists. |
+| `total_count` - [`Int`](/reference/graphql/saas/types-f-i.md#int) | The total number of reviews matching this list, independent of pagination. Includes reviews without rating votes. Unlike stats.review_count, it describes the list, not the whole product. |
 
 #### Example
 
 ```json
 {
   "items": [ProductReview],
-  "page_info": SearchResultPageInfo
+  "page_info": SearchResultPageInfo,
+  "stats": ProductReviewStats,
+  "total_count": 987
 }
 ```
 
@@ -3888,9 +3964,9 @@ Contains the output of a `productSearch` query
   "facets": [Aggregation],
   "items": [ProductSearchItem],
   "page_info": SearchResultPageInfo,
-  "related_terms": ["abc123"],
+  "related_terms": ["xyz789"],
   "suggestions": ["xyz789"],
-  "total_count": 987,
+  "total_count": 123,
   "warnings": [ProductSearchWarning]
 }
 ```
@@ -3931,7 +4007,7 @@ Structured warning with code and message for easier client handling
 
 ```json
 {
-  "code": "abc123",
+  "code": "xyz789",
   "message": "xyz789"
 }
 ```
@@ -4035,23 +4111,23 @@ Defines the product fields available to the SimpleProductView and ComplexProduct
   "inStock": true,
   "lowStock": false,
   "attributes": [ProductViewAttribute],
-  "description": "abc123",
+  "description": "xyz789",
   "id": 4,
   "images": [ProductViewImage],
   "videos": [ProductViewVideo],
   "gallery": [ProductViewImage],
   "lastModifiedAt": "2007-12-03T10:15:30Z",
   "metaDescription": "abc123",
-  "metaKeyword": "xyz789",
+  "metaKeyword": "abc123",
   "metaTitle": "xyz789",
   "name": "xyz789",
-  "shortDescription": "abc123",
+  "shortDescription": "xyz789",
   "inputOptions": [ProductViewInputOption],
-  "sku": "abc123",
+  "sku": "xyz789",
   "externalId": "abc123",
   "externalIds": [ExternalId],
   "url": "xyz789",
-  "urlKey": "xyz789",
+  "urlKey": "abc123",
   "links": [ProductViewLink],
   "queryType": "xyz789",
   "visibility": "abc123"
@@ -4078,7 +4154,7 @@ A container for customer-defined attributes that are displayed the storefront.
 ```json
 {
   "label": "xyz789",
-  "name": "abc123",
+  "name": "xyz789",
   "roles": ["xyz789"],
   "value": {}
 }
@@ -4289,9 +4365,9 @@ Contains details about a product image.
 
 ```json
 {
-  "label": "xyz789",
-  "roles": ["abc123"],
-  "url": "abc123"
+  "label": "abc123",
+  "roles": ["xyz789"],
+  "url": "xyz789"
 }
 ```
 
@@ -4324,7 +4400,7 @@ Product options provide a way to configure products by making selections of part
   "title": "xyz789",
   "required": true,
   "type": "xyz789",
-  "markupAmount": 123.45,
+  "markupAmount": 987.65,
   "suffix": "xyz789",
   "sortOrder": 987,
   "range": ProductViewInputOptionRange,
@@ -4368,7 +4444,7 @@ Lists the value range associated with a `ProductViewInputOption`. For example, i
 #### Example
 
 ```json
-{"from": 123.45, "to": 123.45}
+{"from": 123.45, "to": 987.65}
 ```
 
 <HorizontalLine />
@@ -4428,7 +4504,7 @@ Defines a monetary value, including a numeric value and a currency code.
 #### Example
 
 ```json
-{"currency": "AED", "value": 123.45}
+{"currency": "AED", "value": 987.65}
 ```
 
 <HorizontalLine />
@@ -4451,7 +4527,7 @@ Product options provide a way to configure products by making selections of part
 
 ```json
 {
-  "id": 4,
+  "id": "4",
   "multi": true,
   "required": true,
   "title": "abc123",
@@ -4485,7 +4561,7 @@ Defines the product fields available to the ProductViewOptionValueProduct and Pr
 
 ```json
 {
-  "id": 4,
+  "id": "4",
   "title": "abc123",
   "inStock": true
 }
@@ -4537,11 +4613,11 @@ An implementation of ProductViewOptionValue that adds details about a simple pro
 
 ```json
 {
-  "id": "4",
+  "id": 4,
   "isDefault": true,
   "product": SimpleProductView,
   "quantity": 987.65,
-  "canEditQuantity": false,
+  "canEditQuantity": true,
   "title": "abc123",
   "inStock": false
 }
@@ -4568,10 +4644,10 @@ An implementation of ProductViewOptionValueSwatch for swatches.
 ```json
 {
   "id": "4",
-  "title": "xyz789",
+  "title": "abc123",
   "type": "TEXT",
-  "value": "xyz789",
-  "inStock": true
+  "value": "abc123",
+  "inStock": false
 }
 ```
 
@@ -4696,7 +4772,7 @@ Minimum quantity (inclusive) required to activate this tier price. For example, 
 #### Example
 
 ```json
-{"gte": 987.65, "lt": 123.45}
+{"gte": 123.45, "lt": 987.65}
 ```
 
 <HorizontalLine />
@@ -4739,7 +4815,7 @@ Represents the results of a product variant search.
 ```json
 {
   "variants": [ProductViewVariant],
-  "cursor": "abc123"
+  "cursor": "xyz789"
 }
 ```
 
@@ -4763,9 +4839,9 @@ Contains details about a product video. For example, a video of the product bein
 ```json
 {
   "preview": ProductViewImage,
-  "url": "xyz789",
+  "url": "abc123",
   "description": "xyz789",
-  "title": "abc123"
+  "title": "xyz789"
 }
 ```
 
@@ -4807,7 +4883,7 @@ Contains error details for a failed public requisition list operation.
 #### Example
 
 ```json
-{"code": "NOT_PUBLIC", "message": "xyz789"}
+{"code": "NOT_PUBLIC", "message": "abc123"}
 ```
 
 <HorizontalLine />
@@ -4893,7 +4969,7 @@ Contains details about a purchase order.
   "created_at": "xyz789",
   "created_by": Customer,
   "history_log": [PurchaseOrderHistoryItem],
-  "number": "abc123",
+  "number": "xyz789",
   "order": CustomerOrder,
   "quote": Cart,
   "status": "PENDING",
@@ -4938,7 +5014,7 @@ Contains details about a failed action.
 #### Example
 
 ```json
-{"message": "xyz789", "type": "NOT_FOUND"}
+{"message": "abc123", "type": "NOT_FOUND"}
 ```
 
 <HorizontalLine />
@@ -4961,11 +5037,11 @@ Contains details about a single event in the approval flow of the purchase order
 
 ```json
 {
-  "message": "xyz789",
+  "message": "abc123",
   "name": "xyz789",
-  "role": "abc123",
+  "role": "xyz789",
   "status": "PENDING",
-  "updated_at": "abc123"
+  "updated_at": "xyz789"
 }
 ```
 
@@ -5018,7 +5094,7 @@ Contains details about a purchase order approval rule.
   "created_at": "xyz789",
   "created_by": "abc123",
   "description": "xyz789",
-  "name": "xyz789",
+  "name": "abc123",
   "status": "ENABLED",
   "uid": "4",
   "updated_at": "abc123"
@@ -5111,7 +5187,7 @@ Contains approval rule condition details, including the quantity to be evaluated
 #### Example
 
 ```json
-{"attribute": "GRAND_TOTAL", "operator": "MORE_THAN", "quantity": 123}
+{"attribute": "GRAND_TOTAL", "operator": "MORE_THAN", "quantity": 987}
 ```
 
 <HorizontalLine />
@@ -5138,8 +5214,8 @@ Defines a new purchase order approval rule.
   "applies_to": [4],
   "approvers": [4],
   "condition": CreatePurchaseOrderApprovalRuleConditionInput,
-  "description": "xyz789",
-  "name": "abc123",
+  "description": "abc123",
+  "name": "xyz789",
   "status": "ENABLED"
 }
 ```
@@ -5247,9 +5323,9 @@ Contains details about a comment.
 ```json
 {
   "author": Customer,
-  "created_at": "abc123",
-  "text": "abc123",
-  "uid": "4"
+  "created_at": "xyz789",
+  "text": "xyz789",
+  "uid": 4
 }
 ```
 
@@ -5384,7 +5460,7 @@ Defines which purchase orders to act on.
 #### Example
 
 ```json
-{"purchase_order_uids": [4]}
+{"purchase_order_uids": ["4"]}
 ```
 
 <HorizontalLine />
@@ -5431,8 +5507,8 @@ Defines the criteria to use to filter the list of purchase orders.
 {
   "company_purchase_orders": false,
   "created_date": FilterRangeTypeInput,
-  "my_approvals": true,
-  "require_my_approval": true,
+  "my_approvals": false,
+  "require_my_approval": false,
   "status": "PENDING"
 }
 ```
