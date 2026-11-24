@@ -331,6 +331,8 @@ To set the override, include the following entry in `rmaDataObject.custom_attrib
 }
 ```
 
+The `return_address` object contains the following fields:
+
 | Field | Required | Description |
 |---|---|---|
 | `street` | Yes | Street address as a string or an array of address lines. |
