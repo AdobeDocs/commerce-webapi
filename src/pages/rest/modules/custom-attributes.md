@@ -301,6 +301,8 @@ curl -i -X POST \
 
 Use return custom attributes to store integration details, such as a warehouse reference, on a return merchandise authorization (RMA). Return custom attributes are available by default in Adobe Commerce as a Cloud Service (SaaS). On Adobe Commerce on cloud infrastructure (PaaS) and on-premises, [install](#install-custom-attribute-support) version `0.8.0` or later of `magento/out-of-process-custom-attributes` to use them.
 
+#### Set or update return attributes
+
 To set or update attributes on a return, use `POST /V1/returns` or `PUT /V1/returns/{id}`. Add the `custom_attributes` array to `rmaDataObject`, not to an item in the return. The following example shows only the fields for setting custom attributes. Include the other fields required by the endpoint in your request.
 
 ```json
