@@ -297,6 +297,63 @@ curl -i -X POST \
  'http://<COMMERCE_URL>/rest/all/V1/negotiableQuote/setCustomAttributes'
 ```
 
+### Returns
+
+Use return custom attributes to store integration details, such as a warehouse reference, on a return merchandise authorization (RMA). Return custom attributes are available by default in Adobe Commerce as a Cloud Service (SaaS). On Adobe Commerce on cloud infrastructure (PaaS) and on-premises, [install](#install-custom-attribute-support) version `0.8.0` or later of `magento/out-of-process-custom-attributes` to use them.
+
+#### Set or update return attributes
+
+To set or update attributes on a return, use `POST /V1/returns` or `PUT /V1/returns/{id}`. Add the `custom_attributes` array to `rmaDataObject`, not to an item in the return. The following example shows only the fields for setting custom attributes. Include the other fields required by the endpoint in your request.
+
+```json
+{
+  "rmaDataObject": {
+    "custom_attributes": [
+      {
+        "attribute_code": "warehouse_reference",
+        "value": "WH-01"
+      }
+    ]
+  }
+}
+```
+
+Use `GET /V1/returns/{id}` to read the attributes of a single return or `GET /V1/returns` to read them in a list of returns. Both return the values in `custom_attributes`.
+
+#### Override the return address (SaaS only)
+
+In Adobe Commerce as a Cloud Service, `return_address` is a reserved attribute that overrides the store's configured return address for one return. The PaaS and on-premises metapackage adds support for storing custom attributes but does not enable this override.
+
+To set the override, include the following entry in `rmaDataObject.custom_attributes` when you create or update a return. Encode the address object as a JSON string in `value`.
+
+```json
+{
+  "attribute_code": "return_address",
+  "value": "{\"contact_name\":\"Returns Department\",\"street\":[\"100 Example Avenue\",\"Dock 2\"],\"city\":\"Austin\",\"region_code\":\"TX\",\"postcode\":\"78701\",\"country_id\":\"US\",\"telephone\":\"512-555-0142\"}"
+}
+```
+
+The `return_address` object contains the following fields:
+
+| Field | Required | Description |
+|---|---|---|
+| `street` | Yes | Street address as a string or an array of address lines. |
+| `city` | Yes | City or locality. |
+| `postcode` | Yes | Postal code as a string. |
+| `country_id` | Yes | Country code recognized by Adobe Commerce, such as `US`. |
+| `region_id`, `region_code`, or `region` | No | State or province as an Adobe Commerce region ID, a code such as `TX`, or a name such as `Texas`. |
+| `contact_name` | No | Name of the return recipient. |
+| `telephone` | No | Phone number of the return recipient. |
+
+Adobe Commerce uses the override in the following places:
+
+* The **Return Address** section of the existing return in the Admin.
+* New and authorized return emails and the printed return.
+* The GraphQL `Return.shipping.address` field.
+* Shipping rate requests and the recipient address on return shipping labels created in the Admin.
+
+If `return_address` is missing, cannot be parsed, or does not contain a complete address with a recognized country code, Adobe Commerce uses the store's configured return address. The **New Return** page in the Admin still shows the configured address. You cannot edit the override directly in the Admin.
+
 ## Install custom attribute support
 
 <Fragment src="/_includes/custom-attribute-installation.md"/>
