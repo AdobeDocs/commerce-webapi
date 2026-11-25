@@ -16,8 +16,12 @@
         - [2.4.8 Reference](/reference/graphql/2-4-8/index.md)
         - [2.4.7 Reference](/reference/graphql/2-4-7/index.md)
         - [2.4.6 Reference](/reference/graphql/2-4-6/index.md)
+    - [Payment Services SDK](/payment-services-sdk/index.md)
 
 - subPages:
+    - [Payment Services SDK](/payment-services-sdk/index.md)
+        - [Instantiate the SDK](/payment-services-sdk/instantiating-the-sdk.md)
+        - [Payment lifecycle](/payment-services-sdk/payment-lifecycle.md)
     - [Introduction](/get-started/index.md)
     - API Security header
     - [Input limiting](/get-started/api-security.md)
