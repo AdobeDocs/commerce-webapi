@@ -68,5 +68,7 @@ mutation {
 ## Related topics
 
 *  [`isSubscribedProductAlertStock` query](../queries/is-subscribed-product-alert-stock.md)
+*  [`customerProductAlertStockSubscriptions` query](../queries/customer-product-alert-stock-subscriptions.md)
 *  [`subscribeProductAlertStock` mutation](subscribe-product-alert-stock.md)
 *  [`unsubscribeProductAlertStockAll` mutation](unsubscribe-product-alert-stock-all.md)
+*  [`unsubscribeProductAlertStockById` mutation](unsubscribe-product-alert-stock-by-id.md)

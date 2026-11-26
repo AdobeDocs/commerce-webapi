@@ -79,6 +79,7 @@ The following example checks whether the logged-in customer is subscribed to a s
 
 ## Related topics
 
+*  [`customerProductAlertStockSubscriptions` query](customer-product-alert-stock-subscriptions.md)
 *  [`isSubscribedProductAlertPrice` query](is-subscribed-product-alert-price.md)
 *  [`subscribeProductAlertStock` mutation](../mutations/subscribe-product-alert-stock.md)
 *  [`unsubscribeProductAlertStock` mutation](../mutations/unsubscribe-product-alert-stock.md)

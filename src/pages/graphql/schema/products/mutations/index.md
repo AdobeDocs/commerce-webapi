@@ -26,4 +26,5 @@ The product mutations allow you to perform the following operations:
   * [`unsubscribeProductAlertPrice`](unsubscribe-product-alert-price.md)
   * [`unsubscribeProductAlertPriceAll`](unsubscribe-product-alert-price-all.md)
   * [`unsubscribeProductAlertStock`](unsubscribe-product-alert-stock.md)
+  * [`unsubscribeProductAlertStockById`](unsubscribe-product-alert-stock-by-id.md)
   * [`unsubscribeProductAlertStockAll`](unsubscribe-product-alert-stock-all.md)
