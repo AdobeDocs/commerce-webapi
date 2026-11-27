@@ -2,8 +2,30 @@
 title: What's new
 description: This section contains the changes made in the last 60 days. Minor updates,
   such as copy editing, are excluded from this list.
-updated: Fri Nov 20 15:05:49 2026
+updated: Fri Nov 27 15:05:56 2026
 entries:
+- description: Updated the [REST](https://developer.adobe.com/commerce/webapi/reference/rest/saas)
+    and [GraphQL](https://developer.adobe.com/commerce/webapi/reference/graphql/saas/)
+    schemas for Adobe Commerce as a Cloud Service.
+  versions: ''
+  type: major-update
+  date: '2026-11-20'
+  link: https://github.com/AdobeDocs/commerce-webapi/pull/651
+  merge_commit: e215c99a9b31ae2404a68c6adbbd88f4ee0268bf
+  contributor: jhadobe
+  labels:
+  - major-update
+- description: Added the [`POST /V1/orders/:orderId/customAttributes`](https://developer.adobe.com/commerce/webapi/rest/modules/custom-attributes#order)
+    REST endpoint for Adobe Commerce as a Cloud Service, which adds or updates custom
+    attributes for existing orders.
+  versions: ''
+  type: major-update
+  date: '2026-11-20'
+  link: https://github.com/AdobeDocs/commerce-webapi/pull/653
+  merge_commit: 289ea4cb04a9ad050f4a4e9e80eed9e6b60668f2
+  contributor: jhadobe
+  labels:
+  - major-update
 - description: You can now apply custom attributes in the [`addProductsToCart` mutation](https://developer.adobe.com/commerce/webapi/graphql/schema/cart/mutations/add-products)
     by specifying the `CartItemInput.custom_attributes` field and an array of key/value
     pairs.
